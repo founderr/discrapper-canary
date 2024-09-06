@@ -4,14 +4,14 @@ n.d(t, {
     }
 });
 var i = n(735250),
-    a = n(470079),
-    s = n(481060),
+    s = n(470079),
+    a = n(481060),
     l = n(689938),
     r = n(44729),
     o = n(560580);
 function c(e) {
     let { header: t, description: n, onDismiss: c, buttons: u, dismissible: d = !0 } = e,
-        h = a.useCallback(() => {
+        h = s.useCallback(() => {
             null == c || c();
         }, [c]);
     return (0, i.jsxs)('div', {
@@ -27,12 +27,12 @@ function c(e) {
                     }),
                     (0, i.jsxs)('div', {
                         children: [
-                            (0, i.jsx)(s.Heading, {
+                            (0, i.jsx)(a.Heading, {
                                 variant: 'heading-md/semibold',
                                 color: 'text-primary',
                                 children: t
                             }),
-                            (0, i.jsx)(s.Text, {
+                            (0, i.jsx)(a.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'text-primary',
                                 children: n
@@ -49,9 +49,9 @@ function c(e) {
                         : u.map((e, t) => {
                               var n;
                               return (0, i.jsx)(
-                                  s.Button,
+                                  a.Button,
                                   {
-                                      size: null !== (n = e.size) && void 0 !== n ? n : s.Button.Sizes.SMALL,
+                                      size: null !== (n = e.size) && void 0 !== n ? n : a.Button.Sizes.SMALL,
                                       color: e.color,
                                       'aria-label': e.text,
                                       onClick: e.onclick,
@@ -63,12 +63,12 @@ function c(e) {
                           })
             }),
             d
-                ? (0, i.jsx)(s.Clickable, {
+                ? (0, i.jsx)(a.Clickable, {
                       className: r.closeButton,
                       onClick: h,
                       role: 'button',
                       'aria-label': l.Z.Messages.DISMISS,
-                      children: (0, i.jsx)(s.XSmallIcon, {
+                      children: (0, i.jsx)(a.XSmallIcon, {
                           size: 'md',
                           color: 'currentColor',
                           className: r.closeButton

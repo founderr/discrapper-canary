@@ -37,8 +37,8 @@ var a,
     I = n(13245),
     m = n(287734),
     T = n(579806),
-    g = n(887278),
-    S = n(490029),
+    S = n(887278),
+    g = n(490029),
     A = n(710845),
     N = n(594190),
     O = n(454991),
@@ -46,8 +46,8 @@ var a,
     v = n(48481),
     C = n(314897),
     y = n(77498),
-    L = n(355863),
-    D = n(449224),
+    D = n(355863),
+    L = n(449224),
     b = n(626135),
     M = n(866119),
     P = n(671999),
@@ -152,7 +152,7 @@ async function ei(e) {
     J = 'attach.getOverlayModule';
     let n = await eu();
     (J = 'attach.transitionOverlayPIDStatus'), en(e, 'ATTACHING'), (J = 'attach.attachToProcess');
-    let r = await g.YT(e);
+    let r = await S.YT(e);
     null == r ? ((J = 'attach.transitionOverlayPIDStatus (CONNECTING)'), en(e, 'CONNECTING', 'ATTACHING'), (J = 'attach.reconcileHostProcess'), await er(n), n.connectProcess(e)) : ((J = 'attach.transitionOverlayPIDStatus (HOOK_FAILED)'), en(e, 'HOOK_FAILED', 'ATTACHING'), $.warn('Could not hook to pid='.concat(e, ', error=').concat(r)));
 }
 async function ea(e) {
@@ -162,7 +162,7 @@ async function ea(e) {
     }
     J = 'detach.getOverlayModule';
     let t = await eu();
-    (J = 'detach.transitionOverlayPIDStatus'), en(e, null), e !== w.Js && ((J = 'detach.cancelAttachToProcess'), g.pn(e), (J = 'detach.disconnectProcess'), t.disconnectProcess(e)), (J = 'detach.reconcileHostProcess'), await er(t);
+    (J = 'detach.transitionOverlayPIDStatus'), en(e, null), e !== w.Js && ((J = 'detach.cancelAttachToProcess'), S.pn(e), (J = 'detach.disconnectProcess'), t.disconnectProcess(e)), (J = 'detach.reconcileHostProcess'), await er(t);
 }
 async function es(e) {
     var t;
@@ -268,7 +268,7 @@ function ed() {
     null === T.Z || void 0 === T.Z || null === (t = T.Z.window) || void 0 === t || t.close(null === T.Z || void 0 === T.Z ? void 0 : null === (e = T.Z.globalOverlay) || void 0 === e ? void 0 : e.WINDOW_KEY), (W = null);
 }
 function e_(e) {
-    let t = D.Z.getGameForPID(e);
+    let t = L.Z.getGameForPID(e);
     I.Z.setAssociatedGame(null != W ? W : -1, e, t);
 }
 let eE = (() => {
@@ -327,7 +327,7 @@ function eT(e, t, n) {
             success: t,
             ...n
         };
-    (0, p.te)(w.qU, L.Z.getDefaultLayout(w.qU), {
+    (0, p.te)(w.qU, D.Z.getDefaultLayout(w.qU), {
         width: n.graphics_width,
         height: n.graphics_height
     }),
@@ -335,11 +335,11 @@ function eT(e, t, n) {
         $.info('Overlay connection to '.concat(e, ' ').concat(t ? 'succeeded' : 'failed'), s),
         t ? en(e, 'CONNECTED', 'CONNECTING') : en(e, 'CONNECT_FAILED', 'CONNECTING');
 }
-function eg() {
+function eS() {
     let e = C.default.getToken(),
         t = C.default.getId();
     if (null != e)
-        S.lW({
+        g.lW({
             type: x.BmY.DISPATCH,
             pid: null,
             token: null,
@@ -352,7 +352,7 @@ function eg() {
             ]
         });
 }
-async function eS(e) {
+async function eg(e) {
     let t = await eu();
     null != j &&
         j !== w.Js &&
@@ -366,8 +366,8 @@ function eA(e) {
     if (e) {
         let t = N.ZP.getVisibleGame(),
             n = null == t ? null : N.ZP.getGameOverlayStatus(t);
-        (null == n ? void 0 : n.overlayMethod) === G.gl.OutOfProcess ? eS(e) : setTimeout(() => eS(e), 200);
-    } else eS(e);
+        (null == n ? void 0 : n.overlayMethod) === G.gl.OutOfProcess ? eg(e) : setTimeout(() => eg(e), 200);
+    } else eg(e);
 }
 let eN = null;
 function eO(e, t, n) {
@@ -407,7 +407,7 @@ function eC() {
         return;
     }
     V.size > 0 &&
-        (S.lW({
+        (g.lW({
             type: x.BmY.DISPATCH,
             pid: null,
             token: null,
@@ -418,22 +418,22 @@ function eC() {
 function ey(e) {
     return null != e && (0, M.y)(e, K);
 }
-function eL(e) {
+function eD(e) {
     switch ((0, e.type)) {
         case x.BmY.CONNECT:
             let t = C.default.getToken();
             if (null == t) break;
-            (0, p.te)(w.qU, L.Z.getDefaultLayout(w.qU)),
+            (0, p.te)(w.qU, D.Z.getDefaultLayout(w.qU)),
                 Promise.all([(0, R.Z)(t, e.pid), _.ZP.PersistedStore.getAllStates()]).then((t) => {
                     let [n, r] = t,
                         { pid: i, token: a } = e;
-                    S.lW({
+                    g.lW({
                         type: x.BmY.STORAGE_SYNC,
                         pid: i,
                         token: a,
                         states: r
                     }),
-                        S.lW({
+                        g.lW({
                             type: x.BmY.DISPATCH,
                             pid: i,
                             token: a,
@@ -453,9 +453,9 @@ function eL(e) {
             $.info('[overlay data received]', e.payload);
     }
 }
-class eD extends (s = _.ZP.Store) {
+class eL extends (s = _.ZP.Store) {
     initialize() {
-        if (!(!G.iP || __OVERLAY__)) this.waitFor(N.ZP, C.default), S.sr(eL, ey), C.default.addChangeListener(eg), eh(O.v.enabled, O.v.legacyEnabled), E.Z.addInterceptor(ev);
+        if (!(!G.iP || __OVERLAY__)) this.waitFor(N.ZP, C.default), g.sr(eD, ey), C.default.addChangeListener(eS), eh(O.v.enabled, O.v.legacyEnabled), E.Z.addInterceptor(ev);
     }
     isInputLocked(e) {
         return !z.has(e);
@@ -480,7 +480,7 @@ class eD extends (s = _.ZP.Store) {
     }
 }
 (c = 'OverlayBridgeStore'),
-    (u = 'displayName') in (l = eD)
+    (u = 'displayName') in (l = eL)
         ? Object.defineProperty(l, u, {
               value: c,
               enumerable: !0,
@@ -488,7 +488,7 @@ class eD extends (s = _.ZP.Store) {
               writable: !0
           })
         : (l[u] = c);
-let eb = new eD(
+let eb = new eL(
     E.Z,
     __OVERLAY__
         ? {
@@ -561,7 +561,7 @@ let eb = new eD(
                   let { port: t } = e;
                   K = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
                   let n = new URLSearchParams();
-                  n.append('build_id', '074db7ba8f85d500e22d750e7d4e9bd130605756'), n.append('rpc', String(t)), n.append('rpc_auth_token', K), (r = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(n.toString()));
+                  n.append('build_id', 'f945d242e4f90995c84c33bc9b01330d8f491ce3'), n.append('rpc', String(t)), n.append('rpc_auth_token', K), (r = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(n.toString()));
               },
               OVERLAY_CALL_PRIVATE_CHANNEL: function (e) {
                   let { channelId: t, ring: n } = e;

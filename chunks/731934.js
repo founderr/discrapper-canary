@@ -13,11 +13,11 @@ var s = n(735250),
     T = n(485664),
     I = n(880257),
     R = n(631885),
-    C = n(895328),
-    g = n(568671),
+    g = n(895328),
+    C = n(568671),
     N = n(419821),
-    p = n(367515),
-    m = n(250285),
+    m = n(367515),
+    p = n(250285),
     A = n(292352),
     f = n(134612),
     S = n(689938),
@@ -124,7 +124,7 @@ function P() {
                         className: M.marginBottom20,
                         children: S.Z.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_DESCRIPTION_TEEN.format({ link: 'https://support.discord.com/hc/articles/14155060633623' })
                     }),
-                    e ? null : (0, s.jsx)(g.Z, {})
+                    e ? null : (0, s.jsx)(C.Z, {})
                 ]
             }),
             (0, s.jsx)('img', {
@@ -148,11 +148,11 @@ function v(e) {
                 return null == i
                     ? null
                     : (0, s.jsx)(
-                          m.Z,
+                          p.Z,
                           {
                               userId: i.id,
                               isLast: l,
-                              children: () => (t === A.ne.ACTIVE ? (0, s.jsx)(N.u, { user: i }) : (0, s.jsx)(p.B, { user: i }))
+                              children: () => (t === A.ne.ACTIVE ? (0, s.jsx)(N.u, { user: i }) : (0, s.jsx)(m.B, { user: i }))
                           },
                           i.id
                       );
@@ -237,7 +237,7 @@ let L = () => {
                               }),
                               (0, s.jsx)('div', {
                                   className: h.box,
-                                  children: (0, s.jsx)(C.Z, { text: S.Z.Messages.FAMILY_CENTER_ACCEPTED_REQUESTS_EMPTY_DESCRIPTION })
+                                  children: (0, s.jsx)(g.Z, { text: S.Z.Messages.FAMILY_CENTER_ACCEPTED_REQUESTS_EMPTY_DESCRIPTION })
                               })
                           ]
                       })
@@ -286,7 +286,7 @@ let L = () => {
                   ]
               });
     },
-    B = () => {
+    U = () => {
         let e = (0, R.mq)(A.ne.PENDING),
             t = (0, E.o)(S.Z.Messages.FAMILY_CENTER_PENDING_REQUESTS_TITLE_TEEN.format({ count: e.length }), S.Z.Messages.FAMILY_CENTER_PENDING_REQUESTS_TITLE_PARENT.format({ count: e.length }));
         return 0 === e.length
@@ -301,6 +301,6 @@ t.Z = () => {
     let e = (0, I.Z)();
     return (0, s.jsxs)('div', {
         className: h.container,
-        children: [e ? (0, s.jsx)(b, {}) : (0, s.jsx)(P, {}), (0, s.jsx)(L, {}), (0, s.jsx)(B, {}), (0, s.jsx)(Z, {}), (0, s.jsx)(D, {})]
+        children: [e ? (0, s.jsx)(b, {}) : (0, s.jsx)(P, {}), (0, s.jsx)(L, {}), (0, s.jsx)(U, {}), (0, s.jsx)(Z, {}), (0, s.jsx)(D, {})]
     });
 };

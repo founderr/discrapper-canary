@@ -21,8 +21,8 @@ var r = n(735250),
     I = n(997945),
     m = n(401460),
     T = n(441319),
-    g = n(981631),
-    S = n(526761),
+    S = n(981631),
+    g = n(526761),
     A = n(689938),
     N = n(435880);
 function O(e) {
@@ -35,12 +35,12 @@ function O(e) {
                 disable: !C
             }
         ),
-        L = i.useRef(null);
-    (0, h.Z)(L, S.h1.CUSTOM_APP_ICONS);
-    let D = (0, d.Dt)(),
+        D = i.useRef(null);
+    (0, h.Z)(D, g.h1.CUSTOM_APP_ICONS);
+    let L = (0, d.Dt)(),
         b = (0, l.useRadioGroup)({
             orientation: 'horizontal',
-            labelledBy: D
+            labelledBy: L
         }),
         M = (e) => {
             if (y && !O && e !== I.aH.DEFAULT) {
@@ -50,8 +50,8 @@ function O(e) {
                         (0, r.jsx)(e, {
                             analyticsSource: c.Z.APP_ICON_SELECTOR,
                             analyticsLocation: {
-                                section: g.jXE.SETTINGS_APPEARANCE_APP_ICON_PICKER,
-                                object: g.qAy.BUTTON_ICON
+                                section: S.jXE.SETTINGS_APPEARANCE_APP_ICON_PICKER,
+                                object: S.qAy.BUTTON_ICON
                             },
                             ...t
                         });
@@ -64,7 +64,7 @@ function O(e) {
             });
         };
     return (0, r.jsx)('div', {
-        ref: L,
+        ref: D,
         children: (0, r.jsx)('div', {
             ...b,
             className: N.__invalid_container,

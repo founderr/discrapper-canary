@@ -15,8 +15,8 @@ var r = n(735250),
     I = n(246946),
     m = n(340895),
     T = n(557177),
-    g = n(918559),
-    S = n(871465);
+    S = n(918559),
+    g = n(871465);
 let A = {
         transform: 'scale(0.7)',
         opacity: 0
@@ -29,7 +29,7 @@ t.Z = i.memo(function () {
     let e = (0, l.Wu)([m.Z, p.Z, c.ZP], () =>
             m.Z.getIncomingCalls().filter((e) => {
                 let { channel: t } = e,
-                    n = c.ZP.getConnectedActivityChannelId() === t.id && p.Z.getVoiceChannelId() !== t.id && c.ZP.getActivityPanelMode() === g.Ez.PANEL;
+                    n = c.ZP.getConnectedActivityChannelId() === t.id && p.Z.getVoiceChannelId() !== t.id && c.ZP.getActivityPanelMode() === S.Ez.PANEL;
                 return p.Z.getChannelId() !== t.id || n;
             })
         ),
@@ -42,7 +42,7 @@ t.Z = i.memo(function () {
         C = i.useRef(!1),
         y = (0, o.Z)(() => {
             let e = 'call_ringing';
-            return a && !O ? (0, T.tu)(_.Z.ringtone, e) : v === S.YC.CLASSIC ? (0, T.tu)(500 !== s().random(1, 1000) ? 'call_ringing' : s().sample(['call_ringing_beat', 'call_ringing_snow_halation']), e) : (0, T.uk)('call_ringing', v);
+            return a && !O ? (0, T.tu)(_.Z.ringtone, e) : v === g.YC.CLASSIC ? (0, T.tu)(500 !== s().random(1, 1000) ? 'call_ringing' : s().sample(['call_ringing_beat', 'call_ringing_snow_halation']), e) : (0, T.uk)('call_ringing', v);
         }, [v, O, a]);
     return (
         i.useEffect(

@@ -13,18 +13,18 @@ t.Z = {
     createChannel(e) {
         let { guildId: t, type: n, name: E, permissionOverwrites: f = [], bitrate: h, userLimit: p, parentId: I, skuId: m, branchId: T } = e;
         a.Z.dispatch({ type: 'CREATE_CHANNEL_MODAL_SUBMIT' });
-        let g = {
+        let S = {
             type: n,
             name: E,
             permission_overwrites: f
         };
-        if ((null != h && h !== d.epw && (g.bitrate = h), null != p && p > 0 && (g.user_limit = p), null != I && (g.parent_id = I), n === d.d4z.GUILD_STORE)) {
+        if ((null != h && h !== d.epw && (S.bitrate = h), null != p && p > 0 && (S.user_limit = p), null != I && (S.parent_id = I), n === d.d4z.GUILD_STORE)) {
             if (null == m) throw Error('Unexpected missing SKU');
-            (g.sku_id = m), (g.branch_id = T);
+            (S.sku_id = m), (S.branch_id = T);
         }
         return u.Z.post({
             url: d.ANM.GUILD_CHANNELS(t),
-            body: g,
+            body: S,
             oldFormErrors: !0,
             trackedActionData: {
                 event: r.NetworkActionNames.CHANNEL_CREATE,

@@ -12,7 +12,7 @@ t.Z = function (e) {
         I = (0, o.Hg)(d),
         m = i ? (0, o.vc)(d, 'LT') : (0, o.Y4)(d),
         T = i ? (0, l.Z)(m) : null,
-        g = p ? u.Z.Messages.MESSAGE_EDITED_TIMESTAMP_A11Y_LABEL.format({ timeFormatted: I }) : I;
+        S = p ? u.Z.Messages.MESSAGE_EDITED_TIMESTAMP_A11Y_LABEL.format({ timeFormatted: I }) : I;
     return (0, r.jsx)('span', {
         className: a()(n, T, {
             [c.timestamp]: !0,
@@ -22,7 +22,7 @@ t.Z = function (e) {
         }),
         children: (0, r.jsx)(s.Tooltip, {
             text: (0, o.vc)(d, 'LLLL'),
-            'aria-label': g,
+            'aria-label': S,
             tooltipClassName: c.timestampTooltip,
             delay: 750,
             children: (e) =>

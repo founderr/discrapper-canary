@@ -16,8 +16,8 @@ var r,
     I = n(70956),
     m = n(373228),
     T = n(378233);
-let g = 2,
-    S = new Map(),
+let S = 2,
+    g = new Map(),
     A = new Map(),
     N = null,
     O = [],
@@ -27,12 +27,12 @@ let g = 2,
     y = (e, t) => {
         C = new Map(C.set(e, t));
     },
-    L = I.Z.Millis.HOUR,
-    D = async () => {
-        if (0 !== g) return;
+    D = I.Z.Millis.HOUR,
+    L = async () => {
+        if (0 !== S) return;
         let e = c.Z.database();
         if (null == e) return;
-        g = 2;
+        S = 2;
         let t = await (0, d.gs)('StickerStore.loadSavedGuildStickers', () => o.Z.timeAsync('\uD83D\uDCBE', 'loadSavedGuildStickers', () => _.Z.getAsync(e)));
         if (null != t)
             u.Z.dispatch({
@@ -104,7 +104,7 @@ let g = 2,
         }
     },
     P = (e, t, n) => {
-        S.set(e.id, e);
+        g.set(e.id, e);
         let r = [...O];
         if (t) {
             let t = r.findIndex((t) => t.id === e.id);
@@ -130,25 +130,25 @@ class x extends (r = l.ZP.Store) {
         this.waitFor(c.Z, h.Z, p.Z);
     }
     get isLoaded() {
-        return 0 !== g;
+        return 0 !== S;
     }
     get loadState() {
-        return g;
+        return S;
     }
     get stickerMetadata() {
-        return D(), null == N && ((N = new Map()), U()), N;
+        return L(), null == N && ((N = new Map()), U()), N;
     }
     get hasLoadedStickerPacks() {
-        return null != R && R + L > Date.now();
+        return null != R && R + D > Date.now();
     }
     get isFetchingStickerPacks() {
         return v;
     }
     getStickerById(e) {
-        return !A.has(e) && D(), A.get(e);
+        return !A.has(e) && L(), A.get(e);
     }
     getStickerPack(e) {
-        return S.get(e);
+        return g.get(e);
     }
     getPremiumPacks() {
         return O;
@@ -160,13 +160,13 @@ class x extends (r = l.ZP.Store) {
         return C;
     }
     getAllStickersIterator() {
-        return D(), A.values();
+        return L(), A.values();
     }
     getAllGuildStickers() {
-        return D(), C;
+        return L(), C;
     }
     getStickersByGuildId(e) {
-        return D(), C.get(e);
+        return L(), C.get(e);
     }
 }
 (s = 'StickersStore'),
@@ -180,15 +180,15 @@ class x extends (r = l.ZP.Store) {
         : (i[a] = s),
     (t.Z = new x(u.Z, {
         BACKGROUND_SYNC: () => {
-            (N = null), (A = new Map()), (C = new Map()), (g = 0);
+            (N = null), (A = new Map()), (C = new Map()), (S = 0);
         },
         CONNECTION_OPEN: (e) => {
             let { guilds: t } = e;
-            (N = null), (A = new Map()), (C = new Map()), t.forEach(w), (g = t.every((e) => null != e.stickers) ? 1 : 0);
+            (N = null), (A = new Map()), (C = new Map()), t.forEach(w), (S = t.every((e) => null != e.stickers) ? 1 : 0);
         },
         GUILD_CREATE: function (e) {
             let { guild: t } = e;
-            if (!f.Z.isLurking(t.id)) w(t), 1 === g && null == t.stickers && null != t.stickerUpdates && (g = 0);
+            if (!f.Z.isLurking(t.id)) w(t), 1 === S && null == t.stickers && null != t.stickerUpdates && (S = 0);
         },
         GUILD_DELETE: function (e) {
             var t;
@@ -200,7 +200,7 @@ class x extends (r = l.ZP.Store) {
                 (C = new Map(C));
         },
         LOGOUT: () => {
-            (g = 0), (O = []), A.clear(), S.clear(), (N = null), C.clear(), (C = new Map(C)), (v = !1), (R = null);
+            (S = 0), (O = []), A.clear(), g.clear(), (N = null), C.clear(), (C = new Map(C)), (v = !1), (R = null);
         },
         STICKER_PACKS_FETCH_START: () => {
             v = !0;

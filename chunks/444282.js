@@ -22,19 +22,19 @@ var r = n(735250),
 function m(e) {
     let { channelId: t, option: n, keyboardModeEnabled: a } = e,
         m = i.useRef(null),
-        [T, g] = i.useState(!1),
-        S = _.Z.getUpload(t, n.name, d.d.SlashCommand),
+        [T, S] = i.useState(!1),
+        g = _.Z.getUpload(t, n.name, d.d.SlashCommand),
         A = i.useRef(null),
         N = i.useCallback(() => {
-            g(!0);
+            S(!0);
         }, []),
         O = i.useCallback(() => {
-            g(!1);
+            S(!1);
         }, []),
         R = i.useCallback(
             (e) => {
                 var r;
-                g(!1);
+                S(!1);
                 let i = {
                     id: n.name,
                     file: null === (r = e.dataTransfer) || void 0 === r ? void 0 : r.files[0],
@@ -52,16 +52,16 @@ function m(e) {
     return (i.useEffect(() => {
         let e = A.current;
         return (
-            null == S && (null == e || e.addEventListener('dragover', N, !1), null == e || e.addEventListener('dragleave', O, !1), null == e || e.addEventListener('drop', R, !1)),
+            null == g && (null == e || e.addEventListener('dragover', N, !1), null == e || e.addEventListener('dragleave', O, !1), null == e || e.addEventListener('drop', R, !1)),
             () => {
                 null == e || e.removeEventListener('dragover', N, !1), null == e || e.removeEventListener('dragleave', O, !1), null == e || e.removeEventListener('drop', R, !1);
             }
         );
-    }, [S, N, O, R]),
-    null != S)
+    }, [g, N, O, R]),
+    null != g)
         ? (0, r.jsx)(f.Z, {
               channelId: t,
-              upload: S,
+              upload: g,
               keyboardModeEnabled: a,
               draftType: d.d.SlashCommand,
               label: (0, r.jsxs)(i.Fragment, {
@@ -75,7 +75,7 @@ function m(e) {
                           tag: 'span',
                           variant: 'text-md/normal',
                           color: 'text-brand',
-                          children: S.filename
+                          children: g.filename
                       })
                   ]
               }),

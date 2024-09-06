@@ -5,13 +5,13 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(120356),
-    s = n.n(a),
+var s = n(120356),
+    a = n.n(s),
     l = n(134433),
     r = n(814915);
 function o(e) {
     let t,
-        { className: n, children: a, verified: o, roleColor: c, roleName: u } = e;
+        { className: n, children: s, verified: o, roleColor: c, roleName: u } = e;
     return (
         (t = o
             ? (0, i.jsx)(l.Z, {
@@ -24,8 +24,8 @@ function o(e) {
                   style: { backgroundColor: c }
               })),
         (0, i.jsxs)('div', {
-            className: s()(n, r.role),
-            children: [t, u, a]
+            className: a()(n, r.role),
+            children: [t, u, s]
         })
     );
 }

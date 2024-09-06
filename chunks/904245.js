@@ -16,8 +16,8 @@ var r = n(278074),
     I = n(830121),
     m = n(710845),
     T = n(163268),
-    g = n(38618),
-    S = n(687516),
+    S = n(38618),
+    g = n(687516),
     A = n(539573),
     N = n(826581),
     O = n(409059),
@@ -25,8 +25,8 @@ var r = n(278074),
     v = n(366980),
     C = n(779832),
     y = n(786761),
-    L = n(459618),
-    D = n(541288),
+    D = n(459618),
+    L = n(541288),
     b = n(3148),
     M = n(48854),
     P = n(785359),
@@ -102,7 +102,7 @@ function ep(e) {
             let r = j.Z.getLastActiveStream();
             if (null != r && r.channelId === t.id) {
                 (e = el.dAT.STREAM), (n.destination_user_id = r.ownerId);
-                let t = (0, S.L2)(r, X.Z);
+                let t = (0, g.L2)(r, X.Z);
                 n.application_id = null != t ? t.id : null;
             }
         }
@@ -356,7 +356,7 @@ let eI = {
         fetchMessages(e) {
             let { channelId: t, before: n, after: r, limit: a, jump: l, focus: u, isPreload: c, skipLocalFetch: d, truncate: _ } = e,
                 E = K.Z.getChannel(t),
-                f = g.Z.isConnectedOrOverlay(),
+                f = S.Z.isConnectedOrOverlay(),
                 h = Date.now();
             if (null != E && E.type === el.d4z.GUILD_STORE) return !1;
             if (t === eu.V) return;
@@ -434,7 +434,7 @@ let eI = {
                                         hasMoreAfter: E,
                                         limit: a,
                                         jump: l,
-                                        isStale: !f || g.Z.lastTimeConnectedChanged() >= h,
+                                        isStale: !f || S.Z.lastTimeConnectedChanged() >= h,
                                         truncate: _
                                     });
                             }),
@@ -469,7 +469,7 @@ let eI = {
                 return;
             }
             if ((e_.log('fetched '.concat(E.messages.length, ' messages from local database (channel_id: ').concat(e, ', remote_fetch_completed: ').concat(i.completed, ')')), Y.Z.addLocalMessages(e, E.messages.length), !i.completed && E.messages.length > 0)) {
-                let t = E.messages.length >= r && E.connectionId === g.Z.lastTimeConnectedChanged();
+                let t = E.messages.length >= r && E.connectionId === S.Z.lastTimeConnectedChanged();
                 s.Z.dispatch({
                     type: 'LOCAL_MESSAGES_LOADED',
                     guildId: a.guild_id,
@@ -584,7 +584,7 @@ let eI = {
                 ...i,
                 nonce: o
             }),
-            L.Z.recordMessageSendAttempt(e, o),
+            D.Z.recordMessageSendAttempt(e, o),
             q.Z.isReady(e))
                 ? s()
                 : r && e !== eu.V
@@ -675,7 +675,7 @@ let eI = {
                 })
                 .then(
                     (n) => (
-                        D.Z.donateSentMessage(n.body.content, e),
+                        L.Z.donateSentMessage(n.body.content, e),
                         em.receiveMessage(e, n.body),
                         s.Z.dispatch({
                             type: 'STICKER_TRACK_USAGE',
@@ -725,7 +725,7 @@ let eI = {
                 );
             let c = t.content,
                 { invalidEmojis: d, validNonShortcutEmojis: _, tts: m = !1 } = t,
-                { activityAction: T, location: g, suggestedInvite: S, stickerIds: R, messageReference: v, allowedMentions: C, poll: y, contentInventoryEntry: U } = n,
+                { activityAction: T, location: S, suggestedInvite: g, stickerIds: R, messageReference: v, allowedMentions: C, poll: y, contentInventoryEntry: U } = n,
                 F = null !== (i = n.flags) && void 0 !== i ? i : 0,
                 [Z, Y] = (0, H.Z)(c);
             Z && ((c = Y), (F = (0, en.pj)(F, el.iLy.SUPPRESS_NOTIFICATIONS)));
@@ -792,7 +792,7 @@ let eI = {
                             (o) => {
                                 let d = Date.now() - i;
                                 if (o.ok) {
-                                    D.Z.donateSentMessage(c, e),
+                                    L.Z.donateSentMessage(c, e),
                                         em.receiveMessage(e, o.body, !0, {
                                             sendAnalytics: {
                                                 duration: d,
@@ -812,7 +812,7 @@ let eI = {
                                             joinRequestUserId: n
                                         });
                                     }
-                                    L.Z.recordMessageSendApiResponse(q);
+                                    D.Z.recordMessageSendApiResponse(q);
                                     s.Z.dispatch({
                                         type: 'SLOWMODE_RESET_COOLDOWN',
                                         slowmodeType: J.S.SendMessage,
@@ -880,8 +880,8 @@ let eI = {
                                             content: c,
                                             channelId: e,
                                             messageId: o.body.id,
-                                            location: null != g ? g : 'chat_input',
-                                            suggested: S
+                                            location: null != S ? S : 'chat_input',
+                                            suggested: g
                                         }),
                                         !(function (e, t, n, r, i) {
                                             (0, er.Q_)(e).forEach((e) => {
@@ -897,7 +897,7 @@ let eI = {
                                                         automatic_send: i
                                                     });
                                             });
-                                        })(c, e, o.body.id, null != g ? g : 'chat_input', !!n.isGiftLinkSentOnBehalfOfUser),
+                                        })(c, e, o.body.id, null != S ? S : 'chat_input', !!n.isGiftLinkSentOnBehalfOfUser),
                                         t(o);
                                 } else {
                                     var m;

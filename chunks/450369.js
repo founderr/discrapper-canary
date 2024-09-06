@@ -4,51 +4,51 @@ n.d(t, {
     }
 });
 var i = n(735250),
-    a = n(470079),
-    s = n(512722),
-    l = n.n(s),
+    s = n(470079),
+    a = n(512722),
+    l = n.n(a),
     r = n(442837),
     o = n(481060),
     c = n(475179),
     u = n(239091),
     d = n(872810),
     h = n(40851),
-    p = n(358221),
-    m = n(258609),
+    m = n(358221),
+    p = n(258609),
     _ = n(569545),
     f = n(382182),
     E = n(352978),
-    C = n(184301),
-    g = n(347475),
+    g = n(184301),
+    C = n(347475),
     I = n(199902),
     x = n(430824),
     T = n(496675),
-    N = n(979651),
-    S = n(88751),
-    v = n(252132),
-    Z = n(248400),
-    A = n(981631),
+    S = n(979651),
+    v = n(88751),
+    N = n(252132),
+    A = n(248400),
+    Z = n(981631),
     M = n(354459),
     b = n(711612);
 let R = 16 / 9,
     L = (e) => {
-        let { stageParticipant: t, rtcParticipant: n, channel: s, guildId: l, user: r, width: c, isModerator: u, onContextMenu: d, inPopout: h } = e,
-            { reducedMotion: p } = a.useContext(o.AccessibilityPreferencesContext),
-            { blocked: m, id: _ } = t;
+        let { stageParticipant: t, rtcParticipant: n, channel: a, guildId: l, user: r, width: c, isModerator: u, onContextMenu: d, inPopout: h } = e,
+            { reducedMotion: m } = s.useContext(o.AccessibilityPreferencesContext),
+            { blocked: p, id: _ } = t;
         return (0, i.jsx)(o.Popout, {
             preload:
                 null == n
                     ? void 0
                     : () =>
-                          (0, C.Z)(n.user, {
-                              guildId: s.guild_id,
-                              channelId: s.id
+                          (0, g.Z)(n.user, {
+                              guildId: a.guild_id,
+                              channelId: a.id
                           }),
             renderPopout: (e) =>
-                (0, i.jsx)(g.Z, {
+                (0, i.jsx)(C.Z, {
                     ...e,
                     guildId: l,
-                    channelId: s.id,
+                    channelId: a.id,
                     userId: r.id
                 }),
             position: 'right',
@@ -58,74 +58,74 @@ let R = 16 / 9,
                     onContextMenu: (e) => d(n, e),
                     ...e,
                     children: (0, i.jsx)(
-                        v.Z,
+                        N.Z,
                         {
                             participant: n,
                             aspectRatio: R,
-                            blocked: m,
-                            channel: s,
+                            blocked: p,
+                            channel: a,
                             className: b.tile,
                             inCall: !0,
                             inPopout: h,
                             paused: !1,
-                            pulseSpeakingIndicator: !p.enabled,
+                            pulseSpeakingIndicator: !m.enabled,
                             width: c,
-                            children: u && (0, i.jsx)(Z.Z, {})
+                            children: u && (0, i.jsx)(A.Z, {})
                         },
                         _
                     )
                 })
         });
     },
-    j = (e) => {
-        let { stageParticipant: t, rtcParticipant: n, channel: s, width: l, isModerator: u, onContextMenu: h, inPopout: C } = e,
-            { reducedMotion: g } = a.useContext(o.AccessibilityPreferencesContext),
-            { id: S, blocked: L } = t,
-            j = (0, r.Wu)([I.Z], () => I.Z.getAllActiveStreams(), []),
-            { selectedParticipant: O, largeStream: P } = (0, r.cj)([p.Z], () => ({
-                selectedParticipant: null != s ? p.Z.getSelectedParticipant(s.id) : null,
-                largeStream: null != s && p.Z.getStageStreamSize(s.id)
+    P = (e) => {
+        let { stageParticipant: t, rtcParticipant: n, channel: a, width: l, isModerator: u, onContextMenu: h, inPopout: g } = e,
+            { reducedMotion: C } = s.useContext(o.AccessibilityPreferencesContext),
+            { id: v, blocked: L } = t,
+            P = (0, r.Wu)([I.Z], () => I.Z.getAllActiveStreams(), []),
+            { selectedParticipant: j, largeStream: O } = (0, r.cj)([m.Z], () => ({
+                selectedParticipant: null != a ? m.Z.getSelectedParticipant(a.id) : null,
+                largeStream: null != a && m.Z.getStageStreamSize(a.id)
             })),
-            y = a.useCallback(
+            y = s.useCallback(
                 (e, t) => {
-                    if (e.type === M.fO.STREAM && 0 === j.filter((t) => (0, _.V9)(t) === e.id && t.state !== A.jm8.ENDED).length) {
-                        if (!(0, f.p9)(s, N.Z, x.Z, T.Z, m.Z)[0]) return;
+                    if (e.type === M.fO.STREAM && 0 === P.filter((t) => (0, _.V9)(t) === e.id && t.state !== Z.jm8.ENDED).length) {
+                        if (!(0, f.p9)(a, S.Z, x.Z, T.Z, p.Z)[0]) return;
                         (0, d.rn)((0, _.my)(e.id), { forceMultiple: t.shiftKey });
                     }
-                    (null == O ? void 0 : O.id) === e.id ? (P ? (c.Z.selectParticipant(s.id, null), c.Z.updateStageStreamSize(s.id, !1)) : c.Z.updateStageStreamSize(s.id, !0)) : (c.Z.updateStageStreamSize(s.id, !1), c.Z.selectParticipant(s.id, e.id));
+                    (null == j ? void 0 : j.id) === e.id ? (O ? (c.Z.selectParticipant(a.id, null), c.Z.updateStageStreamSize(a.id, !1)) : c.Z.updateStageStreamSize(a.id, !0)) : (c.Z.updateStageStreamSize(a.id, !1), c.Z.selectParticipant(a.id, e.id));
                 },
-                [j, s, O, P]
+                [P, a, j, O]
             );
         return (0, i.jsx)(
-            v.Z,
+            N.Z,
             {
                 participant: n,
                 aspectRatio: R,
                 fit: n.type === M.fO.USER ? E.L.COVER : void 0,
                 blocked: L,
-                channel: s,
+                channel: a,
                 className: b.tile,
                 inCall: !0,
-                inPopout: C,
+                inPopout: g,
                 onClick: y,
                 onContextMenu: h,
                 paused: !1,
-                pulseSpeakingIndicator: !g.enabled,
+                pulseSpeakingIndicator: !C.enabled,
                 width: l,
-                children: u && n.type === M.fO.USER && (0, i.jsx)(Z.Z, {})
+                children: u && n.type === M.fO.USER && (0, i.jsx)(A.Z, {})
             },
-            S
+            v
         );
     };
-t.Z = a.memo(function (e) {
+t.Z = s.memo(function (e) {
     var t;
-    let { participant: a, channel: s, width: o } = e,
+    let { participant: s, channel: a, width: o } = e,
         c = (0, h.bp)(),
-        d = s.getGuildId();
+        d = a.getGuildId();
     l()(null != d, 'Channel cannot be guildless');
-    let { user: m } = a,
-        _ = (0, r.e7)([p.Z], () => p.Z.getParticipant(s.id, a.id), [s.id, a.id]),
-        f = (0, r.e7)([S.ZP], () => S.ZP.isModerator(m.id, s.id), [s.id, m.id]);
+    let { user: p } = s,
+        _ = (0, r.e7)([m.Z], () => m.Z.getParticipant(a.id, s.id), [a.id, s.id]),
+        f = (0, r.e7)([v.ZP], () => v.ZP.isModerator(p.id, a.id), [a.id, p.id]);
     if (null == _ || _.type === M.fO.ACTIVITY) return null;
     let E = (e, t) => {
             switch (e.type) {
@@ -155,9 +155,9 @@ t.Z = a.memo(function (e) {
                             return (t) =>
                                 (0, i.jsx)(e, {
                                     ...t,
-                                    user: m,
+                                    user: p,
                                     guildId: d,
-                                    channel: s,
+                                    channel: a,
                                     showMediaItems: !0,
                                     showStageChannelItems: !0,
                                     showChatItems: !1
@@ -167,30 +167,30 @@ t.Z = a.memo(function (e) {
                     );
             }
         },
-        C = _.type === M.fO.USER && !(null === (t = _.voiceState) || void 0 === t ? void 0 : t.selfVideo);
+        g = _.type === M.fO.USER && !(null === (t = _.voiceState) || void 0 === t ? void 0 : t.selfVideo);
     return (0, i.jsx)(i.Fragment, {
-        children: C
+        children: g
             ? (0, i.jsx)(L, {
-                  stageParticipant: a,
+                  stageParticipant: s,
                   rtcParticipant: _,
-                  channel: s,
+                  channel: a,
                   guildId: d,
-                  user: m,
+                  user: p,
                   width: o,
                   isModerator: f,
                   onContextMenu: E,
-                  inPopout: c === A.IlC.POPOUT
+                  inPopout: c === Z.IlC.POPOUT
               })
-            : (0, i.jsx)(j, {
-                  stageParticipant: a,
+            : (0, i.jsx)(P, {
+                  stageParticipant: s,
                   rtcParticipant: _,
-                  channel: s,
+                  channel: a,
                   guildId: d,
-                  user: m,
+                  user: p,
                   width: o,
                   isModerator: f,
                   onContextMenu: E,
-                  inPopout: c === A.IlC.POPOUT
+                  inPopout: c === Z.IlC.POPOUT
               })
     });
 });

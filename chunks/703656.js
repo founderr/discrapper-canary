@@ -16,7 +16,7 @@ n.d(t, {
         return m;
     },
     dL: function () {
-        return g;
+        return S;
     },
     eH: function () {
         return y;
@@ -28,7 +28,7 @@ n.d(t, {
         return C;
     },
     s1: function () {
-        return S;
+        return g;
     },
     uL: function () {
         return I;
@@ -88,10 +88,10 @@ function m(e, t, n, r) {
 function T() {
     return null != i && u.H.has(i);
 }
-function g(e, t, n) {
+function S(e, t, n) {
     !p(e, 'replace') && (d.log('Replacing route with '.concat(e)), 'string' == typeof e ? r.replace(e, t) : r.replace(e), (i = n));
 }
-function S() {
+function g() {
     return r;
 }
 function A() {

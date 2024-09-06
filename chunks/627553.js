@@ -4,12 +4,12 @@ n.d(t, {
     }
 });
 var i = n(735250),
-    a = n(470079),
-    s = n(772848),
+    s = n(470079),
+    a = n(772848),
     l = n(325767);
 function r(e) {
     let { width: t = 16, height: n = 16, color: r = 'currentColor', foreground: o, background: c, ...u } = e,
-        d = a.useRef((0, s.Z)());
+        d = s.useRef((0, a.Z)());
     return (0, i.jsxs)('svg', {
         ...(0, l.Z)(u),
         width: t,

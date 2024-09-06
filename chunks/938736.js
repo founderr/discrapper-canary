@@ -18,16 +18,16 @@ n.d(t, {
         return E;
     },
     TW: function () {
-        return C;
+        return g;
     },
     bD: function () {
         return R;
     },
     pn: function () {
-        return g;
+        return C;
     },
     uv: function () {
-        return m;
+        return p;
     },
     vx: function () {
         return N;
@@ -68,12 +68,12 @@ let u = '40%',
         let a = (0, s.e7)([i.Z], () => i.Z.getIsEligibleToSendReferrals());
         return t && a;
     },
-    C = (e) => {
-        let t = m(e);
+    g = (e) => {
+        let t = p(e);
         return null != t && t !== d.g2L.NOT_ELIGIBLE;
     },
-    g = (e) => {
-        let t = C(e),
+    C = (e) => {
+        let t = g(e),
             n = R('PremiumManagementSettings'),
             a = (0, s.e7)([i.Z], () => i.Z.getRecipientStatus());
         if (!t) return !1;
@@ -81,17 +81,17 @@ let u = '40%',
         return !0;
     },
     N = (e) => {
-        let t = p(e),
+        let t = m(e),
             n = (0, r.wE)(a.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR);
         return t && !n;
     },
-    p = (e) => {
+    m = (e) => {
         let { enabled: t } = o.g.useExperiment({ location: e }, { autoTrackExposure: !1 }),
             { enabled: n } = l.$.useExperiment({ location: e }, { autoTrackExposure: !0 }),
             a = (0, s.e7)([i.Z], () => i.Z.getIsSenderEligibleForIncentive());
         return t && n && a;
     },
-    m = (e) => {
+    p = (e) => {
         let { enabled: t } = o.g.useExperiment({ location: e }, { autoTrackExposure: !1 }),
             { enabled: n } = l.$.useExperiment({ location: e }, { autoTrackExposure: !0 }),
             a = (0, s.e7)([i.Z], () => i.Z.getIsFetchingReferralIncentiveEligibility()),
@@ -99,7 +99,7 @@ let u = '40%',
         return a ? d.g2L.NOT_ELIGIBLE : n && t ? r : d.g2L.NOT_ELIGIBLE;
     },
     A = (e) => {
-        let t = m(e);
+        let t = p(e);
         return t === d.g2L.COOLDOWN || t === d.g2L.UNAPPLIED || t === d.g2L.QUALIFIED;
     },
     f = (e) => {
@@ -108,7 +108,7 @@ let u = '40%',
         return t && !n;
     },
     S = (e) => {
-        let t = C(e),
+        let t = g(e),
             n = R(e),
             s = (0, r.wE)(a.z.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE);
         return !t && n && !s;

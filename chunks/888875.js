@@ -16,15 +16,15 @@ var r = n(392711),
     I = n(526761),
     m = n(674563);
 let T = 10 + Math.random() * (10 * E.Z.Millis.SECOND),
-    g = 2 * E.Z.Millis.HOUR + Math.floor(Math.random() * (10 * E.Z.Millis.MINUTE)),
-    S = null,
+    S = 2 * E.Z.Millis.HOUR + Math.floor(Math.random() * (10 * E.Z.Millis.MINUTE)),
+    g = null,
     A = !1;
 class N extends s.Z {
     _initialize() {
         f.DZ.beforeSendCallbacks.push({
             hasChanges: () => !1,
             processProto: () => {
-                y(g, !1);
+                y(S, !1);
             }
         }),
             f.DZ.beforeSendCallbacks.push({
@@ -89,19 +89,19 @@ function O() {
     (A = !0), y(T, !0);
 }
 function R(e) {
-    A && 'active' !== e.state && (clearTimeout(S), (S = null), C(!1));
+    A && 'active' !== e.state && (clearTimeout(g), (g = null), C(!1));
 }
 function v() {
-    A && (clearTimeout(S), (S = null), C(!1));
+    A && (clearTimeout(g), (g = null), C(!1));
 }
 async function C(e) {
-    y(g, !1),
+    y(S, !1),
         !h.Z.hasLoaded(I.yP.FRECENCY_AND_FAVORITES_SETTINGS) && (d.Z.hasPendingUsage() || u.ZP.hasPendingUsage() || o.ZP.hasPendingUsage() || l.Z.hasPendingUsage() || (_.Z.hasPendingUsage() && !e)) && ((0, f.T6)(), await f.DZ.loadIfNecessary()),
         i().forEach(f.aj, (e) => {
             e.markDirtyIfHasPendingChange();
         });
 }
 function y(e, t) {
-    null != S && clearTimeout(S), (S = setTimeout(() => C(t), e));
+    null != g && clearTimeout(g), (g = setTimeout(() => C(t), e));
 }
 t.Z = new N();

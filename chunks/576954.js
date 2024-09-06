@@ -4,8 +4,8 @@ n.d(t, {
     }
 });
 var i = n(735250),
-    a = n(470079),
-    s = n(286379),
+    s = n(470079),
+    a = n(286379),
     l = n(481060),
     r = n(194359),
     o = n(797614),
@@ -13,22 +13,22 @@ var i = n(735250),
     u = n(359119),
     d = n(473092),
     h = n(177342),
-    p = n(134612),
-    m = n(981631),
+    m = n(134612),
+    p = n(981631),
     _ = n(689938);
 function f(e) {
     let { channelId: t, warningId: f, senderId: E } = e,
-        C = a.useCallback(() => {
+        g = s.useCallback(() => {
             (0, c.T)(t, [f]);
         }, [t, f]),
-        g = a.useCallback(
+        C = s.useCallback(
             (e) => () => {
                 r.Z.addRelationship({
                     userId: E,
-                    context: { location: p.zr },
-                    type: m.OGo.BLOCKED
+                    context: { location: m.zr },
+                    type: p.OGo.BLOCKED
                 }),
-                    C(),
+                    g(),
                     (0, l.showToast)((0, l.createToast)(_.Z.Messages.STRANGER_DANGER_BLOCK_CONFIRM, l.ToastType.SUCCESS)),
                     (0, d.qc)({
                         channelId: t,
@@ -38,25 +38,25 @@ function f(e) {
                         cta: e
                     });
             },
-            [C, t, f, E]
+            [g, t, f, E]
         );
-    a.useEffect(() => {
-        (0, d.MC)(m.rMx.SAFETY_WARNING_VIEWED, {
+    s.useEffect(() => {
+        (0, d.MC)(p.rMx.SAFETY_WARNING_VIEWED, {
             channelId: t,
             warningId: f,
             senderId: E,
             warningType: u.pj.STRANGER_DANGER
         }),
-            o.Z.increment({ name: s.V.SAFETY_WARNING_VIEW });
+            o.Z.increment({ name: a.V.SAFETY_WARNING_VIEW });
     }, [t, f, E]);
     let I = () => {
             (0, l.openModalLazy)(async () => {
                 let { default: e } = await n.e('95226').then(n.bind(n, 816960));
                 return (n) => {
-                    let { transitionState: a, onClose: s } = n;
+                    let { transitionState: s, onClose: a } = n;
                     return (0, i.jsx)(e, {
-                        transitionState: a,
-                        onClose: s,
+                        transitionState: s,
+                        onClose: a,
                         channelId: t,
                         warningId: f,
                         senderId: E,
@@ -67,22 +67,22 @@ function f(e) {
                 };
             });
         },
-        x = (e, a, s) => {
+        x = (e, s, a) => {
             (0, l.openModalLazy)(async () => {
                 let { default: l } = await n.e('68747').then(n.bind(n, 744373));
                 return (n) =>
                     (0, i.jsx)(l, {
                         ...n,
                         userId: E,
-                        confirmBlock: g(e),
+                        confirmBlock: C(e),
                         onCancel: () => {
-                            null == s || s(),
+                            null == a || a(),
                                 (0, d.qc)({
                                     channelId: t,
                                     warningId: f,
                                     senderId: E,
                                     warningType: u.pj.STRANGER_DANGER,
-                                    cta: a
+                                    cta: s
                                 });
                         }
                     });
@@ -95,7 +95,7 @@ function f(e) {
         warningType: u.pj.STRANGER_DANGER,
         header: _.Z.Messages.STRANGER_DANGER_BANNER_HEADER,
         description: _.Z.Messages.STRANGER_DANGER_BANNER_DESCRIPTION,
-        onDismiss: C,
+        onDismiss: g,
         buttons: [
             {
                 text: _.Z.Messages.STRANGER_DANGER_BANNER_MORE_TIPS,

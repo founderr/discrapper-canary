@@ -27,22 +27,22 @@ t.Z = (e) => {
         b = (0, u.Z)(R),
         [y, I] = o.useState(null),
         [M, O] = o.useState(null),
-        U = o.useRef(
+        k = o.useRef(
             new l.qA({
                 gravity: 0,
                 wind: 0
             })
         ),
-        k = (0, l.uR)(y, M),
+        U = (0, l.uR)(y, M),
         L = o.useCallback(() => {
             if (j) return;
             let e = E.current,
                 t = B.current;
-            if (null != t && null != e && k.isReady) {
+            if (null != t && null != e && U.isReady) {
                 var n, s, o, r;
                 let { x: a, y: l } = e.getBoundingClientRect(),
                     { x: i, y: c } = t.getBoundingClientRect();
-                k.createMultipleConfetti(
+                U.createMultipleConfetti(
                     ((n = a - i),
                     (s = l - c),
                     (o = e.clientHeight),
@@ -89,11 +89,11 @@ t.Z = (e) => {
                     100
                 );
             }
-        }, [E, B, k, j]),
-        Z = (0, u.Z)(S);
+        }, [E, B, U, j]),
+        q = (0, u.Z)(S);
     return (o.useEffect(() => {
-        v && S && !Z && (A(), L());
-    }, [S, v, A, L, Z]),
+        v && S && !q && (A(), L());
+    }, [S, v, A, L, q]),
     o.useEffect(() => {
         v &&
             !R &&
@@ -103,8 +103,8 @@ t.Z = (e) => {
             }, 200);
     }, [v, b, R, A, L]),
     o.useEffect(() => {
-        if (!!k.isReady) !N.current && v && (A(), L()), (N.current = v);
-    }, [v, N, L, A, k]),
+        if (!!U.isReady) !N.current && v && (A(), L()), (N.current = v);
+    }, [v, N, L, A, U]),
     j)
         ? null
         : (0, s.jsxs)('div', {
@@ -134,7 +134,7 @@ t.Z = (e) => {
                           (0, s.jsx)(l.O_, {
                               ref: I,
                               className: _.confetti,
-                              environment: U.current
+                              environment: k.current
                           }),
                           (0, s.jsx)(l.Ji, {
                               ref: O,

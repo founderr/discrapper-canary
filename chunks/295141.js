@@ -6,7 +6,7 @@ n.d(t, {
         return f;
     },
     LB: function () {
-        return g;
+        return S;
     },
     MI: function () {
         return T;
@@ -39,7 +39,7 @@ n.d(t, {
         return h;
     },
     j8: function () {
-        return S;
+        return g;
     },
     nU: function () {
         return u;
@@ -197,14 +197,14 @@ let o = async (e, t) => {
             throw new i.Hx(e);
         }
     },
-    g = async (e, t, n) => {
+    S = async (e, t, n) => {
         try {
             return (await r.tn.get({ url: a.ANM.GUILD_ROLE_SUBSCRIPTION_TRIAL_ELIGIBILITY(e, t, n) })).body;
         } catch (e) {
             throw new i.Hx(e);
         }
     },
-    S = async function (e) {
+    g = async function (e) {
         let { signal: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
         try {
             return (

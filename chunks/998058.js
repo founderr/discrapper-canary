@@ -1,17 +1,17 @@
-n.d(a, {
+t.d(n, {
     i: function () {
         return i;
     }
 });
-var t = n(544891),
-    r = n(570140),
-    s = n(881052),
-    o = n(981631);
+var a = t(544891),
+    r = t(570140),
+    s = t(881052),
+    o = t(981631);
 let i = async (e) => {
     try {
-        var a;
-        let n = await t.tn.get({ url: o.ANM.SIMILAR_GAMES(e) }),
-            s = (null !== (a = n.body.similar_games) && void 0 !== a ? a : []).filter((a) => a !== e);
+        var n;
+        let t = await a.tn.get({ url: o.ANM.SIMILAR_GAMES(e) }),
+            s = (null !== (n = t.body.similar_games) && void 0 !== n ? n : []).filter((n) => n !== e);
         r.Z.dispatch({
             type: 'GAME_PROFILE_GET_SIMILAR_GAMES_SUCCESS',
             applicationId: e,

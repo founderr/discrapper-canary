@@ -13,11 +13,11 @@ var s = n(735250),
     T = n(15640),
     I = n(594174),
     R = n(78839),
-    C = n(74538),
-    g = n(775412),
+    g = n(74538),
+    C = n(775412),
     N = n(104494),
-    p = n(639119),
-    m = n(230916),
+    m = n(639119),
+    p = n(230916),
     A = n(248042),
     f = n(823188),
     S = n(21023),
@@ -38,7 +38,7 @@ let D = () => {
             colorOptions: f.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL
         });
     },
-    B = () =>
+    U = () =>
         (0, s.jsx)('div', {
             className: b.mostPopularPill,
             children: (0, s.jsx)(c.Heading, {
@@ -47,19 +47,19 @@ let D = () => {
                 children: O.Z.Messages.MOST_POPULAR
             })
         }),
-    j = (e) => {
+    B = (e) => {
         let t,
             { premiumType: n } = e,
             a = (0, _.ZP)();
         t = n === x.p9.TIER_0 ? ((0, o.wj)(a) ? P : v) : (0, o.wj)(a) ? L : Z;
-        let r = (0, C.Px)(n);
+        let r = (0, g.Px)(n);
         return (0, s.jsx)('img', {
             src: t,
             className: b.logo,
             alt: r
         });
     },
-    U = (e) => {
+    j = (e) => {
         let { label: t, column1: n, column2: a } = e;
         return (0, s.jsxs)('tr', {
             className: i()(b.headerRow, b.rowBottomBorder, b.topBorderRadius),
@@ -117,9 +117,9 @@ t.Z = (e) => {
     var t;
     let n,
         { className: r, hideCTAs: P = !1, headingOverride: v, hidePill: L = !1, selectedPlanColumnClassName: Z, selectedPlanTier: y = x.p9.TIER_2 } = e,
-        { analyticsLocations: k } = (0, E.ZP)(u.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
-        w = (0, l.e7)([R.ZP], () => R.ZP.hasFetchedSubscriptions()),
-        H = (0, T.V)(),
+        { analyticsLocations: w } = (0, E.ZP)(u.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
+        H = (0, l.e7)([R.ZP], () => R.ZP.hasFetchedSubscriptions()),
+        k = (0, T.V)(),
         F = 'PlanComparisonTable';
     (0, d.j)({
         location: F + ' auto on',
@@ -132,27 +132,27 @@ t.Z = (e) => {
     let V = (0, _.ZP)(),
         W = (0, o.ap)(V),
         K = (0, l.e7)([I.default], () => I.default.getCurrentUser()),
-        Y = (0, C.M5)(K, x.p9.TIER_2),
-        z = (0, p.N)(),
+        Y = (0, g.M5)(K, x.p9.TIER_2),
+        z = (0, m.N)(),
         Q = null == z ? void 0 : null === (t = z.subscription_trial) || void 0 === t ? void 0 : t.sku_id,
-        q = (0, g.rT)(),
+        q = (0, C.rT)(),
         J = (0, N.Ng)(),
         X = null != J && (0, N.Wp)(J, x.Si.TIER_2),
-        $ = (0, m.A)(x.Xh.PREMIUM_MONTH_TIER_2),
-        ee = ''.concat($, '/').concat((0, C.eP)(x.rV.MONTH)),
-        et = (0, C.CY)(x.Xh.PREMIUM_MONTH_TIER_0),
-        en = (0, C.CY)(x.Xh.PREMIUM_MONTH_TIER_2),
+        $ = (0, p.A)(x.Xh.PREMIUM_MONTH_TIER_2),
+        ee = ''.concat($, '/').concat((0, g.eP)(x.rV.MONTH)),
+        et = (0, g.CY)(x.Xh.PREMIUM_MONTH_TIER_0),
+        en = (0, g.CY)(x.Xh.PREMIUM_MONTH_TIER_2),
         es = (0, S.n)(et, en, X, ee),
         ea = (0, A.Vi)();
-    if (!w || !H) return null;
+    if (!H || !k) return null;
     let er = {
         label: (0, s.jsx)(c.Heading, {
             className: b.__invalid_textColor,
             variant: 'heading-lg/extrabold',
             children: O.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_HEADER
         }),
-        column1: (0, s.jsx)(j, { premiumType: x.p9.TIER_0 }),
-        column2: (0, s.jsx)(j, { premiumType: x.p9.TIER_2 })
+        column1: (0, s.jsx)(B, { premiumType: x.p9.TIER_0 }),
+        column2: (0, s.jsx)(B, { premiumType: x.p9.TIER_2 })
     };
     P
         ? es.push({
@@ -229,10 +229,10 @@ t.Z = (e) => {
                 })
               : ea
                 ? (0, s.jsx)(D, {})
-                : (0, s.jsx)(B, {}));
+                : (0, s.jsx)(U, {}));
     let ei = Q === x.Si.TIER_0 || q === x.p9.TIER_0 || y === x.p9.TIER_0;
     return (0, s.jsx)(E.Gt, {
-        value: k,
+        value: w,
         children: (0, s.jsxs)('div', {
             className: i()(b.root, r),
             'data-testid': 'v2-marketing-page-comparison-table',
@@ -255,7 +255,7 @@ t.Z = (e) => {
                         (0, s.jsxs)('table', {
                             className: b.table,
                             children: [
-                                (0, s.jsx)('thead', { children: (0, s.jsx)(U, { ...er }) }),
+                                (0, s.jsx)('thead', { children: (0, s.jsx)(j, { ...er }) }),
                                 (0, s.jsx)('tbody', {
                                     children: es.map((e, t) =>
                                         (0, a.createElement)(G, {

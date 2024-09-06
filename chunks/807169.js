@@ -3,13 +3,13 @@ n.d(t, {
         return I;
     },
     Vh: function () {
-        return g;
+        return S;
     },
     k: function () {
         return p;
     },
     ny: function () {
-        return S;
+        return g;
     }
 });
 var r = n(470079),
@@ -28,10 +28,10 @@ var r = n(470079),
 function p(e, t) {
     var n, r, i, a, s;
     let E;
-    let h = S((E = e instanceof u.Sf && e.isThread() ? (null !== (i = d.Z.getChannel(e.parent_id)) && void 0 !== i ? i : e) : e)),
+    let h = g((E = e instanceof u.Sf && e.isThread() ? (null !== (i = d.Z.getChannel(e.parent_id)) && void 0 !== i ? i : e) : e)),
         p = l.xM.getSetting(),
         I = c.default.getId(),
-        g = null !== (a = null === (n = f.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) && void 0 !== a && a,
+        S = null !== (a = null === (n = f.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) && void 0 !== a && a,
         A = null != h && null !== (s = null === (r = _.ZP.getMember(h, I)) || void 0 === r ? void 0 : r.roles) && void 0 !== s ? s : [],
         N = o.Z.isViewingRoles(h),
         { computedPermissions: O, hasBaseAccessPermissions: R, hasSendMessagesPermission: v } = T(E, e instanceof u.Sf && e.isThread());
@@ -44,7 +44,7 @@ function p(e, t) {
         computedPermissions: O,
         hasBaseAccessPermissions: R,
         hasSendMessagesPermission: v,
-        allowNsfw: m(E, g, p)
+        allowNsfw: m(E, S, p)
     };
 }
 function I(e, t) {
@@ -55,7 +55,7 @@ function I(e, t) {
             }
             return e;
         }, [e]),
-        i = S(n),
+        i = g(n),
         s = l.xM.useSetting(),
         E = (0, a.e7)([c.default], () => c.default.getId()),
         h = (0, a.e7)([f.default], () => {
@@ -103,9 +103,9 @@ function T(e, t) {
         }
     );
 }
-function g(e, t) {
+function S(e, t) {
     return e instanceof u.Sf && null == e.guild_id ? (e.type === h.d4z.DM && e.getRecipientId() === t ? s.D.BOT_DM : s.D.PRIVATE_CHANNEL) : s.D.GUILD;
 }
-function S(e) {
+function g(e) {
     return e instanceof u.Sf ? e.guild_id : e.id;
 }

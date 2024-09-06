@@ -58,7 +58,7 @@ function B(e) {
 t.Z = a.memo(function e(t) {
     var n;
     let a;
-    let { channel: s, message: o, compact: b = !1, className: U, onContextMenu: k, onClick: G, disableInteraction: F = !1, hasThread: w, treatSpam: V } = t,
+    let { channel: s, message: o, compact: b = !1, className: U, onContextMenu: k, onClick: F, disableInteraction: G = !1, hasThread: w, treatSpam: V } = t,
         H = D.OBS.has(o.type) ? o.messageReference : void 0,
         Y = (0, l.e7)([I.Z], () => I.Z.getMessageByReference(H)),
         W = (0, l.e7)([T.Z], () => (o.type === D.uaV.THREAD_STARTER_MESSAGE && Y.state === I.Y.LOADED ? T.Z.getChannel(Y.message.channel_id) : null)),
@@ -106,7 +106,7 @@ t.Z = a.memo(function e(t) {
                 compact: b,
                 className: r()(U, {
                     [y.ephemeral]: (0, N.yE)(o.flags, D.iLy.EPHEMERAL),
-                    [y.disableInteraction]: F,
+                    [y.disableInteraction]: G,
                     [y.groupStart]: t.isGroupStart
                 }),
                 childrenRepliedMessage: (0, P.Z)(o, s, H, Y, b),
@@ -143,7 +143,7 @@ t.Z = a.memo(function e(t) {
                 childrenMessageContent: (0, M.Z)(t, ee),
                 childrenSystemMessage: (0, L.Z)(t),
                 onContextMenu: k,
-                onClick: G,
+                onClick: F,
                 hasThread: !1 !== w && null != ei && o.hasFlag(D.iLy.HAS_THREAD),
                 hasReply: o.type === D.uaV.REPLY,
                 isSystemMessage: (0, p.Z)(o),

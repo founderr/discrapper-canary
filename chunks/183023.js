@@ -33,8 +33,8 @@ var r = n(735250),
     I = n(686546),
     m = n(111028),
     T = n(738774),
-    g = n(785896),
-    S = n(231053),
+    S = n(785896),
+    g = n(231053),
     A = n(944386),
     N = n(565138),
     O = n(372769),
@@ -42,8 +42,8 @@ var r = n(735250),
     v = n(687476),
     C = n(761966),
     y = n(563927),
-    L = n(98278),
-    D = n(197115),
+    D = n(98278),
+    L = n(197115),
     b = n(703656),
     M = n(944486),
     P = n(914010),
@@ -224,7 +224,7 @@ let W = () => ({
                 joinedEmojiSourceGuildRecord: c,
                 emoji: d,
                 isFetching: _
-            } = (0, g.i)({
+            } = (0, S.i)({
                 emojiId: t.emojiId,
                 refreshPositionKey: i
             });
@@ -248,7 +248,7 @@ let W = () => ({
     },
     Q = (e) => {
         var t, n, a;
-        let { node: u, sourceType: I, expressionSourceApplication: g, expressionSourceGuild: N, joinedEmojiSourceGuildRecord: O, closePopout: y, onToggleShowMoreEmojis: b, guildEmoji: M, demoMode: x = !1, nonce: G } = e,
+        let { node: u, sourceType: I, expressionSourceApplication: S, expressionSourceGuild: N, joinedEmojiSourceGuildRecord: O, closePopout: y, onToggleShowMoreEmojis: b, guildEmoji: M, demoMode: x = !1, nonce: G } = e,
             K = (0, l.e7)([U.default], () => U.default.getCurrentUser()),
             q = (0, l.e7)([P.Z], () => P.Z.getGuildId()),
             Q = k.ZP.isPremium(K),
@@ -293,7 +293,7 @@ let W = () => ({
         let eo = P.Z.getGuildId(),
             el = (0, B.a)({
                 sourceType: I,
-                expressionSourceApplication: g,
+                expressionSourceApplication: S,
                 isPremium: Q,
                 hasJoinedEmojiSourceGuild: J,
                 isRoleSubscriptionEmoji: en,
@@ -308,7 +308,7 @@ let W = () => ({
                             location_page: et.page,
                             location_section: et.section
                         }),
-                        (0, L.z)();
+                        (0, D.z)();
                 }
             }),
             eu = J && er && !ea && ((Q && en) || !Q),
@@ -369,7 +369,7 @@ let W = () => ({
                                 ]
                             }),
                             eE
-                                ? (0, r.jsx)(D.Z, {
+                                ? (0, r.jsx)(L.Z, {
                                       className: j.ctaButton,
                                       subscriptionTier: Z.Si.TIER_2,
                                       size: c.Button.Sizes.SMALL,
@@ -416,7 +416,7 @@ let W = () => ({
                                     children: J ? Y.Z.Messages.EMOJI_POPOUT_JOINED_GUILD_EMOJI_DESCRIPTION : Y.Z.Messages.EMOJI_POPOUT_UNJOINED_GUILD_EMOJI_DESCRIPTION
                                 }),
                                 (0, r.jsx)(z, {
-                                    expressionSourceGuild: null != N ? N : S.JO.createFromGuildRecord(O),
+                                    expressionSourceGuild: null != N ? N : g.JO.createFromGuildRecord(O),
                                     hasJoinedExpressionSourceGuild: J,
                                     isDisplayingJoinGuildButtonInPopout: e_
                                 }),
@@ -501,7 +501,7 @@ let W = () => ({
                     (d === B.$.GET_PREMIUM
                         ? (0, r.jsxs)(r.Fragment, {
                               children: [
-                                  (0, r.jsx)(D.Z, {
+                                  (0, r.jsx)(L.Z, {
                                       subscriptionTier: Z.Si.TIER_2,
                                       buttonText: s.text,
                                       className: j.ctaButton,

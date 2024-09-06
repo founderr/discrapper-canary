@@ -15,7 +15,7 @@ var i = n(120356),
     d = n(689938),
     _ = n(728714);
 function E(e) {
-    let { user: t, profileType: n, usernameIcon: i, tags: E, nickname: f, nicknameIcons: h, pronouns: p, className: I, isTryItOut: m, onOpenProfile: T, nicknameVariant: g = 'heading-lg/bold', pronounsVariant: S = 'text-sm/medium' } = e,
+    let { user: t, profileType: n, usernameIcon: i, tags: E, nickname: f, nicknameIcons: h, pronouns: p, className: I, isTryItOut: m, onOpenProfile: T, nicknameVariant: S = 'heading-lg/bold', pronounsVariant: g = 'text-sm/medium' } = e,
         A = {
             [_.biteSize]: n === c.y0.BITE_SIZE,
             [_.fullSize]: n === c.y0.FULL_SIZE,
@@ -40,7 +40,7 @@ function E(e) {
                     N(
                         (0, r.jsx)(s.Heading, {
                             className: a()(_.nickname, A),
-                            variant: g,
+                            variant: S,
                             children: f
                         })
                     ),
@@ -86,7 +86,7 @@ function E(e) {
                                     text: d.Z.Messages.USER_PROFILE_PRONOUNS,
                                     delay: c.vB,
                                     children: (0, r.jsx)(s.Text, {
-                                        variant: S,
+                                        variant: g,
                                         className: _.pronounsText,
                                         color: 'header-primary',
                                         children: p

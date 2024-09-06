@@ -31,7 +31,7 @@ var f = n(538605),
                     c = l.y;
                 void 0 !== u && void 0 !== c && ((i[s] = u), (a[s] = c));
             }
-            return g([n(e.x, i), n(e.y, a)], { stopTogether: !1 });
+            return S([n(e.x, i), n(e.y, a)], { stopTogether: !1 });
         }
         return null;
     },
@@ -66,7 +66,7 @@ var f = n(538605),
             }
         };
     },
-    g = function (e, t) {
+    S = function (e, t) {
         var n = 0,
             r = {},
             i = !(t && !1 === t.stopTogether),
@@ -95,7 +95,7 @@ var f = n(538605),
             };
         return a;
     },
-    S = function (e) {
+    g = function (e) {
         return m(new s(0), {
             toValue: 0,
             delay: e,
@@ -143,13 +143,13 @@ e.exports = {
         for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
         return new d(e, n);
     },
-    delay: S,
+    delay: g,
     sequence: T,
-    parallel: g,
+    parallel: S,
     stagger: function (e, t) {
-        return g(
+        return S(
             t.map(function (t, n) {
-                return T([S(e * n), t]);
+                return T([g(e * n), t]);
             })
         );
     },

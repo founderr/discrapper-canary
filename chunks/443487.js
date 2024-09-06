@@ -1,6 +1,6 @@
 n.d(t, {
     F9: function () {
-        return g;
+        return S;
     },
     Zb: function () {
         return I;
@@ -12,7 +12,7 @@ n.d(t, {
         return m;
     },
     ll: function () {
-        return S;
+        return g;
     }
 });
 var r = n(735250);
@@ -83,11 +83,11 @@ function T(e) {
         })
     });
 }
-function g(e) {
+function S(e) {
     let { guildId: t, channelId: n, entry: i, maxAvatars: a = 3 } = e,
         l = i.author_id,
         p = (0, s.e7)([d.default], () => d.default.getUser(l)),
-        { displayParticipants: I, participant1: m, participant2: g, numOtherParticipants: S } = (0, E.Z)(i, a),
+        { displayParticipants: I, participant1: m, participant2: S, numOtherParticipants: g } = (0, E.Z)(i, a),
         A = (0, s.e7)([u.ZP], () => u.ZP.getMember(t, l)),
         N = (0, s.e7)(
             [c.Z],
@@ -115,7 +115,7 @@ function g(e) {
                 className: h.userName,
                 'aria-hidden': !0
             }),
-            S > 0
+            g > 0
                 ? (0, r.jsx)('div', {
                       className: h.additionalParticipantBadge,
                       'aria-hidden': !0,
@@ -123,15 +123,15 @@ function g(e) {
                           variant: 'text-xxs/medium',
                           color: 'text-normal',
                           className: h.additionalParticipantBadgeText,
-                          children: ['+', S]
+                          children: ['+', g]
                       })
                   })
                 : null,
             (0, r.jsx)(o.HiddenVisually, {
                 children: f.Z.Messages.CONTENT_INVENTORY_ENTRY_USERS_V2.format({
                     user0: _.ZP.getName(t, n, m),
-                    user1: _.ZP.getName(t, n, g),
-                    countOthers: S,
+                    user1: _.ZP.getName(t, n, S),
+                    countOthers: g,
                     name0Hook: (e, t) => (0, r.jsx)('span', { children: e }, t),
                     name1Hook: (e, t) => (0, r.jsx)('span', { children: e }, t),
                     countOthersHook: (e, t) => (0, r.jsx)('span', { children: e }, t)
@@ -140,7 +140,7 @@ function g(e) {
         ]
     });
 }
-function S(e) {
+function g(e) {
     let { children: t } = e;
     return (0, r.jsx)(o.Heading, {
         color: 'text-normal',

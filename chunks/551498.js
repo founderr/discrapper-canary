@@ -5,8 +5,8 @@ n.d(t, {
 }),
     n(47120);
 var i,
-    a,
-    s = n(735250),
+    s,
+    a = n(735250),
     l = n(470079),
     r = n(120356),
     o = n.n(r),
@@ -14,42 +14,42 @@ var i,
     u = n(566898),
     d = n(259580),
     h = n(831864);
-((a = i || (i = {}))[(a.MutualFriendsList = 0)] = 'MutualFriendsList'), (a[(a.MutualGuildList = 1)] = 'MutualGuildList');
+((s = i || (i = {}))[(s.MutualFriendsList = 0)] = 'MutualFriendsList'), (s[(s.MutualGuildList = 1)] = 'MutualGuildList');
 t.Z = (e) => {
-    let { header: t, children: n, itemType: i = 1, isLoadingHeader: a, isLoadingContents: r, loadingContentsCount: p = 0, className: m, onExpand: _, onHover: f, onFocus: E } = e,
-        [C, g] = l.useState(!0),
-        I = (0, s.jsx)('div', {
+    let { header: t, children: n, itemType: i = 1, isLoadingHeader: s, isLoadingContents: r, loadingContentsCount: m = 0, className: p, onExpand: _, onHover: f, onFocus: E } = e,
+        [g, C] = l.useState(!0),
+        I = (0, a.jsx)('div', {
             className: h.iconWrapper,
-            children: (0, s.jsx)(d.Z, { direction: C ? d.Z.Directions.RIGHT : d.Z.Directions.DOWN })
+            children: (0, a.jsx)(d.Z, { direction: g ? d.Z.Directions.RIGHT : d.Z.Directions.DOWN })
         });
-    return (0, s.jsxs)('div', {
-        className: m,
+    return (0, a.jsxs)('div', {
+        className: p,
         children: [
-            (0, s.jsx)(c.Button, {
+            (0, a.jsx)(c.Button, {
                 className: h.collapseBtn,
                 innerClassName: h.collapseBtnContent,
                 color: c.ButtonColors.CUSTOM,
                 onMouseEnter: f,
                 onFocus: E,
                 onClick: () => {
-                    g(!C), C && (null == _ || _());
+                    C(!g), g && (null == _ || _());
                 },
-                children: a
-                    ? (0, s.jsxs)(s.Fragment, {
+                children: s
+                    ? (0, a.jsxs)(a.Fragment, {
                           children: [
-                              (0, s.jsx)(u.ZT, {
+                              (0, a.jsx)(u.ZT, {
                                   width: 34,
                                   opacity: 0.08
                               }),
-                              (0, s.jsx)(u.ZT, {
+                              (0, a.jsx)(u.ZT, {
                                   width: 135,
                                   opacity: 0.08
                               })
                           ]
                       })
-                    : (0, s.jsxs)(s.Fragment, {
+                    : (0, a.jsxs)(a.Fragment, {
                           children: [
-                              (0, s.jsx)(c.Text, {
+                              (0, a.jsx)(c.Text, {
                                   variant: 'text-sm/medium',
                                   children: t
                               }),
@@ -57,11 +57,11 @@ t.Z = (e) => {
                           ]
                       })
             }),
-            (0, s.jsx)('ul', {
-                className: o()(h.connectionList, { [h.isCollapsed]: C }),
+            (0, a.jsx)('ul', {
+                className: o()(h.connectionList, { [h.isCollapsed]: g }),
                 children: r
-                    ? Array.from({ length: p }).map((e, t) =>
-                          (0, s.jsxs)(
+                    ? Array.from({ length: m }).map((e, t) =>
+                          (0, a.jsxs)(
                               'div',
                               {
                                   className: o()({
@@ -69,11 +69,11 @@ t.Z = (e) => {
                                       [h.mutualGuildItem]: 1 === i
                                   }),
                                   children: [
-                                      (0, s.jsx)(u.ZT, {
+                                      (0, a.jsx)(u.ZT, {
                                           width: 34,
                                           opacity: 0.08
                                       }),
-                                      (0, s.jsx)(u.ZT, {
+                                      (0, a.jsx)(u.ZT, {
                                           width: 135,
                                           opacity: 0.08
                                       })

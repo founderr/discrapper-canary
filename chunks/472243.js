@@ -22,21 +22,21 @@ var i = n(120356),
     m = n(847943);
 function T(e) {
     var t, n, i, T;
-    let { type: g, textValue: S, maxCharacterCount: A, showRemainingCharsAfterCount: N, className: O } = e,
+    let { type: S, textValue: g, maxCharacterCount: A, showRemainingCharsAfterCount: N, className: O } = e,
         R = (0, s.e7)([_.default], () => E.ZP.canUseIncreasedMessageLength(_.default.getCurrentUser())),
         v = (0, c.Z)(),
         C = null != A ? A : v,
         y = null !== (T = null != N ? N : A) && void 0 !== T ? T : v / 10,
-        L = S.length,
-        D = null != g.upsellLongMessages && (null != L ? L : 0) > h.J6R && R,
-        b = null != g.upsellLongMessages && !R,
+        D = g.length,
+        L = null != S.upsellLongMessages && (null != D ? D : 0) > h.J6R && R,
+        b = null != S.upsellLongMessages && !R,
         M = (null === (n = (0, d.N)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === p.Si.TIER_2,
-        P = C - L,
+        P = C - D,
         U = P > y,
         w = P < 0 && M,
         x = 0 === P ? I.Z.Messages.CHARACTER_COUNT_AT_LIMIT : P > 0 ? I.Z.Messages.CHARACTER_COUNT_CLOSE_TO_LIMIT.format({ count: P }) : I.Z.Messages.CHARACTER_COUNT_OVER_LIMIT,
         { analyticsLocations: G } = (0, u.ZP)(l.Z.CHARACTER_COUNT);
-    return (D && P >= 0) || !U || (b && !U)
+    return (L && P >= 0) || !U || (b && !U)
         ? (0, r.jsx)(u.Gt, {
               value: G,
               children: (0, r.jsxs)('div', {
@@ -45,7 +45,7 @@ function T(e) {
                       (0, r.jsxs)('div', {
                           className: m.flairContainer,
                           children: [
-                              D && P >= 0
+                              L && P >= 0
                                   ? (0, r.jsx)(o.Tooltip, {
                                         text: I.Z.Messages.PREMIUM_MESSAGE_LENGTH_CHATBOX_FLAIR.format({ maxLength: C }),
                                         position: 'top',
@@ -76,7 +76,7 @@ function T(e) {
                       b && !U
                           ? (0, r.jsx)(f.Z, {
                                 className: m.upsell,
-                                iconOnly: (null === (i = g.upsellLongMessages) || void 0 === i ? void 0 : i.iconOnly) || !1,
+                                iconOnly: (null === (i = S.upsellLongMessages) || void 0 === i ? void 0 : i.iconOnly) || !1,
                                 remaining: P
                             })
                           : null

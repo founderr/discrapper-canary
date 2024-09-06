@@ -8,12 +8,12 @@ n.d(t, {
 }),
     n(47120);
 var i = n(470079),
-    a = n(392711);
-let s = (e) => e,
+    s = n(392711);
+let a = (e) => e,
     l = function (e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
-            a = arguments.length > 3 ? arguments[3] : void 0,
-            l = r(s, t, n, a),
+            s = arguments.length > 3 ? arguments[3] : void 0,
+            l = r(a, t, n, s),
             o = i.useRef(e);
         return (
             i.useEffect(() => {
@@ -25,18 +25,18 @@ let s = (e) => e,
     },
     r = function (e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
-            s = arguments.length > 3 ? arguments[3] : void 0,
-            l = i.useRef((0, a.throttle)(e, t, s));
+            a = arguments.length > 3 ? arguments[3] : void 0,
+            l = i.useRef((0, s.throttle)(e, t, a));
         return (
             i.useEffect(
                 () => (
-                    (l.current = (0, a.throttle)(e, t, s)),
+                    (l.current = (0, s.throttle)(e, t, a)),
                     () => {
                         var e;
                         null === (e = l.current) || void 0 === e || e.cancel();
                     }
                 ),
-                [e, t, s, ...n]
+                [e, t, a, ...n]
             ),
             l.current
         );

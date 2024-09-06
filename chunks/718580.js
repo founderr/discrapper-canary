@@ -38,7 +38,7 @@ function I(e) {
 }
 function m(e) {
     var t, n, I, m, T;
-    let { contentDisplay: g, fadeInOut: S = !1, ...A } = e,
+    let { contentDisplay: S, fadeInOut: g = !1, ...A } = e,
         N = {},
         { analyticsLocations: O } = (0, E.ZP)();
     i.Children.forEach(A.children, (e, t) => {
@@ -53,15 +53,15 @@ function m(e) {
         v = (0, d.Z)(A.activeSlide);
     let C = null !== (t = A.directionOverride) && void 0 !== t ? t : ((m = null != v ? N[v] : null), (T = N[R]), null == m ? null : m.index > T.index ? 'backwards' : m.index < T.index ? 'forwards' : null),
         { reducedMotion: y } = i.useContext(l.S),
-        L = i.useContext(_.Z),
-        D = N[R].impressionName,
+        D = i.useContext(_.Z),
+        L = N[R].impressionName,
         b = {
             ...N[R].impressionProperties,
             location_stack: O
         };
-    L({
+    D({
         type: s.ImpressionTypes.MODAL,
-        name: D,
+        name: L,
         properties: b,
         _stackContext: { isSlide: !0 }
     });
@@ -123,7 +123,7 @@ function m(e) {
                     ref: t === R ? M : null,
                     style: {
                         position: 'absolute',
-                        display: g,
+                        display: S,
                         flexDirection: 'column',
                         backfaceVisibility: 'hidden',
                         width: o.tq ? '100%' : B,
@@ -133,7 +133,7 @@ function m(e) {
                             : {
                                   left: e.value.to(p('left', k)),
                                   right: e.value.to(p('right', k)),
-                                  ...(S && s)
+                                  ...(g && s)
                               })
                     },
                     children: N[t].children

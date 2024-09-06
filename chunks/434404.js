@@ -15,8 +15,8 @@ var r = n(990547),
     I = n(573261),
     m = n(999382),
     T = n(981631),
-    g = n(308083),
-    S = n(689938);
+    S = n(308083),
+    g = n(689938);
 let A = new o.Z('GuildSettingsActionCreators'),
     N = {
         init(e, t, n, r) {
@@ -98,8 +98,8 @@ let A = new o.Z('GuildSettingsActionCreators'),
                     }),
                 {
                     modalProps: {
-                        title: S.Z.Messages.GUILD_SECURITY_REQ_MFA_LABEL,
-                        actionText: r ? S.Z.Messages.GUILD_SECURITY_REQ_MFA_TURN_OFF : S.Z.Messages.GUILD_SECURITY_REQ_MFA_TURN_ON
+                        title: g.Z.Messages.GUILD_SECURITY_REQ_MFA_LABEL,
+                        actionText: r ? g.Z.Messages.GUILD_SECURITY_REQ_MFA_TURN_OFF : g.Z.Messages.GUILD_SECURITY_REQ_MFA_TURN_ON
                     },
                     checkEnabled: !1
                 }
@@ -155,9 +155,9 @@ let A = new o.Z('GuildSettingsActionCreators'),
                 });
         },
         saveGuild(e, t) {
-            let { name: n, description: r, icon: s, splash: o, banner: u, homeHeader: c, afkChannelId: d, afkTimeout: _, systemChannelId: E, verificationLevel: f, defaultMessageNotifications: h, explicitContentFilter: p, features: I, systemChannelFlags: m, preferredLocale: S, rulesChannelId: N, safetyAlertsChannelId: O, discoverySplash: R, publicUpdatesChannelId: v, premiumProgressBarEnabled: C, clan: y } = t,
-                L = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-                D = {
+            let { name: n, description: r, icon: s, splash: o, banner: u, homeHeader: c, afkChannelId: d, afkTimeout: _, systemChannelId: E, verificationLevel: f, defaultMessageNotifications: h, explicitContentFilter: p, features: I, systemChannelFlags: m, preferredLocale: g, rulesChannelId: N, safetyAlertsChannelId: O, discoverySplash: R, publicUpdatesChannelId: v, premiumProgressBarEnabled: C, clan: y } = t,
+                D = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+                L = {
                     name: n,
                     description: r,
                     icon: s,
@@ -165,7 +165,7 @@ let A = new o.Z('GuildSettingsActionCreators'),
                     banner: u,
                     home_header: c,
                     features: I,
-                    preferred_locale: S,
+                    preferred_locale: g,
                     afk_channel_id: d,
                     afk_timeout: _,
                     system_channel_id: E,
@@ -178,15 +178,15 @@ let A = new o.Z('GuildSettingsActionCreators'),
                     public_updates_channel_id: v,
                     safety_alerts_channel_id: O,
                     ...(null != C ? { premium_progress_bar_enabled: C } : null),
-                    clan: null != y ? (0, g.A9)(y) : y
+                    clan: null != y ? (0, S.A9)(y) : y
                 };
             return (
                 a.Z.dispatch({ type: 'GUILD_SETTINGS_SUBMIT' }),
                 i.tn
                     .patch({
                         url: T.ANM.GUILD(e),
-                        query: { for_discovery: L.isForDiscovery },
-                        body: D,
+                        query: { for_discovery: D.isForDiscovery },
+                        body: L,
                         oldFormErrors: !0
                     })
                     .then(
@@ -204,7 +204,7 @@ let A = new o.Z('GuildSettingsActionCreators'),
                                     errors: e.body
                                 }),
                                 A.error('Failed to save guild settings', { errors: e.body }),
-                                L.throwErr)
+                                D.throwErr)
                             )
                                 throw e.body;
                         }
@@ -245,8 +245,8 @@ let A = new o.Z('GuildSettingsActionCreators'),
                     }),
                 {
                     modalProps: {
-                        title: S.Z.Messages.TRANSFER_OWNERSHIP,
-                        actionText: S.Z.Messages.TRANSFER_OWNERSHIP
+                        title: g.Z.Messages.TRANSFER_OWNERSHIP,
+                        actionText: g.Z.Messages.TRANSFER_OWNERSHIP
                     },
                     checkEnabled: !1
                 }
@@ -276,8 +276,8 @@ let A = new o.Z('GuildSettingsActionCreators'),
                     }),
                 {
                     modalProps: {
-                        title: S.Z.Messages.DELETE_SERVER_TITLE.format({ name: t }),
-                        actionText: S.Z.Messages.DELETE_SERVER,
+                        title: g.Z.Messages.DELETE_SERVER_TITLE.format({ name: t }),
+                        actionText: g.Z.Messages.DELETE_SERVER,
                         disallowBackupCodes: !0
                     },
                     checkEnabled: !1

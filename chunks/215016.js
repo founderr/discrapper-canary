@@ -24,8 +24,8 @@ var r = n(735250),
     I = n(29909),
     m = n(132748),
     T = n(981631),
-    g = n(689938),
-    S = n(891883);
+    S = n(689938),
+    g = n(891883);
 function A(e, t, n) {
     return (
         t in e
@@ -60,7 +60,7 @@ function y(e, t, n, i) {
             : (0, r.jsx)(
                   'div',
                   {
-                      className: S.placeholder,
+                      className: g.placeholder,
                       style: {
                           animationDelay: ''.concat(75 * t, 'ms'),
                           ...n
@@ -69,11 +69,11 @@ function y(e, t, n, i) {
                   i
               );
 }
-function L(e, t) {
+function D(e, t) {
     var n, r;
     return e > 0 ? '' : null !== (r = null === (n = R[t]) || void 0 === n ? void 0 : n.id) && void 0 !== r ? r : '';
 }
-function D(e) {
+function L(e) {
     return e === c.EO.VIDEO;
 }
 class b extends i.PureComponent {
@@ -112,7 +112,7 @@ class b extends i.PureComponent {
                   src: e,
                   width: t,
                   height: n,
-                  className: S.gif,
+                  className: g.gif,
                   alt: ''
               })
             : null;
@@ -125,14 +125,14 @@ class b extends i.PureComponent {
             innerRef: (e) => {
                 this.ref = e;
             },
-            className: S.result,
+            className: g.result,
             'data-focused': a,
             onClick: this.handleClick,
             style: {
                 backgroundColor: o ? void 0 : s,
                 ...i
             },
-            children: [D(n) ? null : this.renderGIF(), null != t ? t(e) : null]
+            children: [L(n) ? null : this.renderGIF(), null != t ? t(e) : null]
         });
     }
     constructor(e) {
@@ -153,7 +153,7 @@ class b extends i.PureComponent {
             color: null == n ? l().sample(N) : n,
             loaded: !1
         }),
-            !D(t) && ((this._image = r.getElement()), (this._image.onload = () => this.setState({ loaded: !0 })), (this._image.src = e.src));
+            !L(t) && ((this._image = r.getElement()), (this._image.onload = () => this.setState({ loaded: !0 })), (this._image.src = e.src));
     }
 }
 class M extends i.PureComponent {
@@ -181,35 +181,35 @@ class M extends i.PureComponent {
     renderEmptyFavorite(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         return (0, r.jsx)('div', {
-            className: S.emptyHint,
+            className: g.emptyHint,
             children:
                 null != e
                     ? (0, r.jsxs)('div', {
-                          className: S.emptyHintCard,
+                          className: g.emptyHintCard,
                           children: [
                               t
                                   ? (0, r.jsx)(_.StarIcon, {
                                         size: 'xs',
                                         color: 'currentColor',
-                                        className: S.emptyHintFavorite
+                                        className: g.emptyHintFavorite
                                     })
                                   : null,
                               (0, r.jsx)('div', {
-                                  className: S.emptyHintText,
+                                  className: g.emptyHintText,
                                   children: e
                               })
                           ]
                       })
-                    : (0, r.jsx)('div', { className: S.emptyHintSpacer })
+                    : (0, r.jsx)('div', { className: g.emptyHintSpacer })
         });
     }
     renderEmptyFavorites() {
         return (0, r.jsx)(_.Scroller, {
-            className: S.results,
+            className: g.results,
             fade: !0,
             children: (0, r.jsxs)('div', {
-                className: S.emptyHints,
-                children: [this.renderEmptyFavorite(g.Z.Messages.NO_GIF_FAVORITES_HOW_TO_FAVORITE, !0), this.renderEmptyFavorite(g.Z.Messages.NO_GIF_FAVORITES_WHERE_TO_FAVORITE), this.renderEmptyFavorite(g.Z.Messages.NO_GIF_FAVORITES_GO_FAVORITE), Array.from({ length: 15 }).map((e, t) => (0, r.jsx)(i.Fragment, { children: this.renderEmptyFavorite() }, t)), this.renderEmptyFavorite(g.Z.Messages.NO_GIF_FAVORITES_FLAVOR_FAVORITE_PLEASE), Array.from({ length: 16 }).map((e, t) => (0, r.jsx)(i.Fragment, { children: this.renderEmptyFavorite() }, t)), this.renderEmptyFavorite(g.Z.Messages.NO_GIF_FAVORITES_FLAVOR_STILL_HERE)]
+                className: g.emptyHints,
+                children: [this.renderEmptyFavorite(S.Z.Messages.NO_GIF_FAVORITES_HOW_TO_FAVORITE, !0), this.renderEmptyFavorite(S.Z.Messages.NO_GIF_FAVORITES_WHERE_TO_FAVORITE), this.renderEmptyFavorite(S.Z.Messages.NO_GIF_FAVORITES_GO_FAVORITE), Array.from({ length: 15 }).map((e, t) => (0, r.jsx)(i.Fragment, { children: this.renderEmptyFavorite() }, t)), this.renderEmptyFavorite(S.Z.Messages.NO_GIF_FAVORITES_FLAVOR_FAVORITE_PLEASE), Array.from({ length: 16 }).map((e, t) => (0, r.jsx)(i.Fragment, { children: this.renderEmptyFavorite() }, t)), this.renderEmptyFavorite(S.Z.Messages.NO_GIF_FAVORITES_FLAVOR_STILL_HERE)]
             })
         });
     }
@@ -219,8 +219,8 @@ class M extends i.PureComponent {
             ? i === T.wI2.FAVORITES
                 ? this.renderEmptyFavorites()
                 : (0, r.jsx)(h.Z, {
-                      message: g.Z.Messages.NO_GIF_SEARCH_RESULTS,
-                      className: S.noResults
+                      message: S.Z.Messages.NO_GIF_SEARCH_RESULTS,
+                      className: g.noResults
                   })
             : (0, r.jsx)(
                   f.Z,
@@ -287,7 +287,7 @@ class M extends i.PureComponent {
                               onClick: this.handleClickItem,
                               renderExtras: () =>
                                   (0, r.jsx)(I.Z, {
-                                      className: S.favButton,
+                                      className: g.favButton,
                                       ...s
                                   }),
                               focused: v(s) === a,
@@ -314,18 +314,18 @@ class M extends i.PureComponent {
                     ? (0, r.jsx)(
                           'div',
                           {
-                              className: S.endContainer,
+                              className: g.endContainer,
                               style: t,
                               children:
                                   s.length > 0
                                       ? (0, r.jsxs)(i.Fragment, {
                                             children: [
                                                 (0, r.jsx)('div', {
-                                                    className: S.endText,
-                                                    children: g.Z.Messages.GIF_PICKER_RELATED_SEARCH
+                                                    className: g.endText,
+                                                    children: S.Z.Messages.GIF_PICKER_RELATED_SEARCH
                                                 }),
                                                 (0, r.jsx)('div', {
-                                                    className: S.searchSuggestions,
+                                                    className: g.searchSuggestions,
                                                     children: s.map((e) =>
                                                         (0, r.jsx)(
                                                             _.Button,
@@ -333,7 +333,7 @@ class M extends i.PureComponent {
                                                                 look: _.Button.Looks.OUTLINED,
                                                                 color: _.Button.Colors.PRIMARY,
                                                                 size: _.Button.Sizes.SMALL,
-                                                                className: S.searchSuggestion,
+                                                                className: g.searchSuggestion,
                                                                 onClick: () => {
                                                                     a(e);
                                                                 },
@@ -358,11 +358,11 @@ class M extends i.PureComponent {
                           _.MasonryList,
                           {
                               fade: !0,
-                              className: s()(S.results, i),
+                              className: s()(g.results, i),
                               sections: [R.length],
                               columns: e,
                               itemGutter: 12,
-                              getItemKey: L,
+                              getItemKey: D,
                               getItemHeight: C,
                               renderItem: y,
                               chunkSize: 128
@@ -375,7 +375,7 @@ class M extends i.PureComponent {
                               ref: this._masonryRef,
                               fade: !0,
                               itemGutter: 12,
-                              className: s()(S.results, i),
+                              className: s()(g.results, i),
                               columns: e,
                               sections: [a.length, 0],
                               getItemKey: this.getItemKey,
@@ -416,7 +416,7 @@ function P() {
                 new u.w(
                     () => {
                         let e = t.createElement('video');
-                        return (e.className = S.gif), (e.autoplay = !0), (e.loop = !0), (e.muted = !0), (e.preload = 'auto'), (e.controls = !1), e;
+                        return (e.className = g.gif), (e.autoplay = !0), (e.loop = !0), (e.muted = !0), (e.preload = 'auto'), (e.controls = !1), e;
                     },
                     (e) => {
                         (e.src = ''), (e.oncanplay = null);

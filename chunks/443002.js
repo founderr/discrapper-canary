@@ -16,8 +16,8 @@ var r = n(735250),
     I = n(362948),
     m = n(245004),
     T = n(383881),
-    g = n(981631),
-    S = n(689938),
+    S = n(981631),
+    g = n(689938),
     A = n(827842);
 t.Z = function (e) {
     let { analyticsLocation: t, guild: n, onClose: N } = e,
@@ -25,10 +25,10 @@ t.Z = function (e) {
         v = i.useRef(!1),
         C = (0, a.Z)(() => Date.now()),
         { analyticsLocations: y } = (0, u.ZP)(),
-        L = i.useCallback(() => {
+        D = i.useCallback(() => {
             N(),
-                c.default.track(g.rMx.MODAL_DISMISSED, {
-                    type: g.ZY5.PREMIUM_GUILD_USER_MODAL,
+                c.default.track(S.rMx.MODAL_DISMISSED, {
+                    type: S.ZY5.PREMIUM_GUILD_USER_MODAL,
                     location_stack: y,
                     location_section: t.section,
                     location_object: t.object,
@@ -36,12 +36,12 @@ t.Z = function (e) {
                     duration_open_ms: Date.now() - C
                 });
         }, [N, t, y, C, n.id]),
-        D = i.useCallback(
+        L = i.useCallback(
             (e) => {
                 e &&
                     !v.current &&
-                    (c.default.track(g.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
-                        type: g.ZY5.PREMIUM_GUILD_USER_MODAL,
+                    (c.default.track(S.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
+                        type: S.ZY5.PREMIUM_GUILD_USER_MODAL,
                         location_stack: y,
                         location_section: t.section,
                         location_object: t.object,
@@ -53,8 +53,8 @@ t.Z = function (e) {
         );
     return (
         i.useEffect(() => {
-            c.default.track(g.rMx.OPEN_MODAL, {
-                type: g.ZY5.PREMIUM_GUILD_USER_MODAL,
+            c.default.track(S.rMx.OPEN_MODAL, {
+                type: S.ZY5.PREMIUM_GUILD_USER_MODAL,
                 location_stack: y,
                 location_section: t.section,
                 location_object: t.object,
@@ -63,7 +63,7 @@ t.Z = function (e) {
         }, [n.id, t, y]),
         i.useEffect(() => {
             function e(e) {
-                'Escape' === e.key && L();
+                'Escape' === e.key && D();
             }
             return (
                 window.addEventListener('keydown', e),
@@ -71,14 +71,14 @@ t.Z = function (e) {
                     window.removeEventListener('keydown', e);
                 }
             );
-        }, [L]),
+        }, [D]),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)('div', {
                     className: A.closeIconWrapper,
                     children: (0, r.jsx)(l.Z, {
                         className: A.closeIcon,
-                        closeAction: L,
+                        closeAction: D,
                         keybind: 'ESC',
                         variant: l.Z.Variants.SOLID
                     })
@@ -96,11 +96,11 @@ t.Z = function (e) {
                                             className: A.heading,
                                             color: 'always-white',
                                             variant: 'display-lg',
-                                            children: S.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_HEADING
+                                            children: g.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_HEADING
                                         }),
                                         (0, r.jsx)(_.Z, {
                                             guild: n,
-                                            closeLayer: L,
+                                            closeLayer: D,
                                             onCtaVisibilityChange: R
                                         }),
                                         (0, r.jsx)(h.Z, { guild: n }),
@@ -133,7 +133,7 @@ t.Z = function (e) {
                             ]
                         }),
                         (0, r.jsx)(s.$, {
-                            onChange: D,
+                            onChange: L,
                             children: (0, r.jsx)('div', { className: A.persistentCtaSpacer })
                         })
                     ]
@@ -141,7 +141,7 @@ t.Z = function (e) {
                 (0, r.jsx)(f.Z, {
                     guild: n,
                     isVisible: !O,
-                    closeLayer: L
+                    closeLayer: D
                 })
             ]
         })

@@ -10,7 +10,7 @@ n.r(t),
             return d;
         },
         addExtraAnalyticsDecorator: function () {
-            return S;
+            return g;
         },
         debugLogEvent: function () {
             return y;
@@ -28,7 +28,7 @@ n.r(t),
             return v;
         },
         trackNetworkAction: function () {
-            return D;
+            return L;
         }
     }),
     n(653041),
@@ -50,9 +50,9 @@ var r = n(470079),
 let I = r.createContext({ location: {} }),
     m = {},
     T = performance.now(),
-    g = [];
-function S(e) {
-    g.push(e);
+    S = [];
+function g(e) {
+    S.push(e);
 }
 let A = {
     [f.rMx.APP_OPENED]: {
@@ -281,18 +281,18 @@ function C(e) {
     let o = _.Z.getProcessUptime();
     null != o && (s.uptime_process_renderer = Math.floor(o));
     let { utmSource: l, utmMedium: u, utmCampaign: c, utmContent: d } = m;
-    return (s.utm_source = null !== (t = s.utm_source) && void 0 !== t ? t : l), (s.utm_medium = null !== (n = s.utm_medium) && void 0 !== n ? n : u), (s.utm_campaign = null !== (r = s.utm_campaign) && void 0 !== r ? r : c), (s.utm_content = null !== (i = s.utm_content) && void 0 !== i ? i : d), g.forEach((e) => e(s)), s;
+    return (s.utm_source = null !== (t = s.utm_source) && void 0 !== t ? t : l), (s.utm_medium = null !== (n = s.utm_medium) && void 0 !== n ? n : u), (s.utm_campaign = null !== (r = s.utm_campaign) && void 0 !== r ? r : c), (s.utm_content = null !== (i = s.utm_content) && void 0 !== i ? i : d), S.forEach((e) => e(s)), s;
 }
 function y(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     c.default.isLoggingAnalyticsEvents && console.info('AnalyticsUtils.track(...):', e, t), n ? l.Hj('Analytics', e, t) : l.Hj('Analytics', e);
 }
-let L = (0, a.trackMaker)({
+let D = (0, a.trackMaker)({
     analyticEventConfigs: A,
     dispatcher: s.Z,
     TRACK_ACTION_NAME: 'TRACK'
 });
-function D(e, t) {
+function L(e, t) {
     let n = C({
         location: (0, o.k$)(),
         ...t
@@ -302,7 +302,7 @@ function D(e, t) {
         ...t
     }),
         y(e, n),
-        L(e, n);
+        D(e, n);
 }
 function b() {
     return (0, i.Z)();

@@ -18,10 +18,10 @@ n.d(t, {
         return A;
     },
     k0: function () {
-        return S;
+        return g;
     },
     km: function () {
-        return g;
+        return S;
     },
     no: function () {
         return f;
@@ -216,6 +216,6 @@ function p(e, t) {
 let I = [p(720), p(1080), p(1440), p(0, () => d.Z.Messages.SCREENSHARE_SOURCE)],
     m = [p(720), p(1080), p(1440)],
     T = (e) => (0 === e ? d.Z.Messages.SCREENSHARE_SOURCE : d.Z.Messages.SCREENSHARE_RESOLUTION_ABBREVIATED.format({ resolution: e })),
-    g = [p(480, () => T(480)), p(720, () => T(720)), p(1080, () => T(1080)), p(1440, () => T(1440)), p(0, () => T(0))],
-    S = [p(15), p(30), p(60)],
+    S = [p(480, () => T(480)), p(720, () => T(720)), p(1080, () => T(1080)), p(1440, () => T(1440)), p(0, () => T(0))],
+    g = [p(15), p(30), p(60)],
     A = [p(15, () => d.Z.Messages.STREAM_FPS_OPTION.format({ value: 15 })), p(30, () => d.Z.Messages.STREAM_FPS_OPTION.format({ value: 30 })), p(60, () => d.Z.Messages.STREAM_FPS_OPTION.format({ value: 60 }))];

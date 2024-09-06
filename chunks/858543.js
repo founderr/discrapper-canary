@@ -1,9 +1,9 @@
 n.d(t, {
     DM: function () {
-        return g;
+        return f;
     },
     ZP: function () {
-        return f;
+        return g;
     }
 });
 var i = n(735250);
@@ -14,18 +14,18 @@ var s = n(120356),
     l = n(481060),
     r = n(109434),
     c = n(456269),
-    u = n(479099),
-    d = n(176505),
+    d = n(479099),
+    u = n(176505),
     h = n(689938),
     m = n(643432),
     p = n(915767);
-function g(e) {
+function f(e) {
     let { channel: t, isNew: n } = e,
         i = (0, c.eV)(t),
         s = i.slice(void 0, 3),
         o = i.slice(3),
         a = i.length > 3 ? i.length - 3 : 0,
-        l = t.hasFlag(d.zZ.PINNED),
+        l = t.hasFlag(u.zZ.PINNED),
         r = s.length > 0 || l || n;
     return {
         shownTags: s,
@@ -36,19 +36,19 @@ function g(e) {
         forumPostContainsTags: i.length > 0
     };
 }
-function f(e) {
+function g(e) {
     let { channel: t, isNew: n, tagsClassName: s, className: c } = e,
         {
-            shownTags: d,
-            remainingTags: f,
-            moreTagsCount: T,
-            isPinned: _,
+            shownTags: u,
+            remainingTags: g,
+            moreTagsCount: _,
+            isPinned: T,
             shouldRenderTagsRow: v
-        } = g({
+        } = f({
             channel: t,
             isNew: n
         }),
-        { tagFilter: b } = (0, r.H)(t.id);
+        { tagFilter: E } = (0, r.H)(t.id);
     return v
         ? (0, i.jsxs)('div', {
               className: o()(p.tags, c),
@@ -60,7 +60,7 @@ function f(e) {
                             text: h.Z.Messages.NEW
                         })
                       : null,
-                  _ &&
+                  T &&
                       (0, i.jsx)('div', {
                           className: p.pinIcon,
                           children: (0, i.jsx)(l.Tooltip, {
@@ -75,22 +75,22 @@ function f(e) {
                                   })
                           })
                       }),
-                  d.map((e) =>
+                  u.map((e) =>
                       (0, i.jsx)(
-                          u.Z,
+                          d.Z,
                           {
                               tag: e,
-                              size: u.Z.Sizes.SMALL,
-                              className: o()(s, { [p.tagFiltered]: b.has(e.id) })
+                              size: d.Z.Sizes.SMALL,
+                              className: o()(s, { [p.tagFiltered]: E.has(e.id) })
                           },
                           e.id
                       )
                   ),
-                  T > 0
-                      ? (0, i.jsx)(u.f, {
-                            tags: f,
-                            count: T,
-                            size: u.Z.Sizes.SMALL
+                  _ > 0
+                      ? (0, i.jsx)(d.f, {
+                            tags: g,
+                            count: _,
+                            size: d.Z.Sizes.SMALL
                         })
                       : null
               ]

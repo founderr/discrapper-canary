@@ -71,7 +71,7 @@ function h(e) {
             (function e(t, n, i) {
                 var s, u, _, E, h, I, m, T;
                 if (!f(t.type)) return null;
-                let { includeEmojiSrc: g } = n;
+                let { includeEmojiSrc: S } = n;
                 switch (t.type) {
                     case r.re.ACTION_ROW: {
                         let a = t.components
@@ -89,7 +89,7 @@ function h(e) {
                         };
                     }
                     case r.re.BUTTON: {
-                        let e = null != t.emoji ? d(t.emoji, g) : void 0;
+                        let e = null != t.emoji ? d(t.emoji, S) : void 0;
                         return {
                             type: r.re.BUTTON,
                             id: p(i),
@@ -114,7 +114,7 @@ function h(e) {
                                 value: e.value,
                                 default: e.default,
                                 description: e.description,
-                                emoji: null != e.emoji ? d(e.emoji, g) : void 0
+                                emoji: null != e.emoji ? d(e.emoji, S) : void 0
                             })),
                             placeholder: null !== (s = t.placeholder) && void 0 !== s ? s : c.Z.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER,
                             minValues: t.min_values,

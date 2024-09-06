@@ -20,26 +20,26 @@ var a,
     u = t(399606),
     C = t(215569),
     g = t(481060),
-    T = t(749210),
-    p = t(852860),
-    h = t(607070),
+    h = t(749210),
+    T = t(852860),
+    p = t(607070),
     m = t(725803),
     I = t(313201),
     U = t(76535),
     f = t(215388),
     v = t(674180),
-    q = t(884858),
-    E = t(695346),
+    E = t(884858),
+    q = t(695346),
     N = t(430824),
     D = t(937615),
     O = t(73346),
-    R = t(506071),
-    x = t(587123),
-    L = t(240864),
-    b = t(863663),
+    x = t(506071),
+    R = t(587123),
+    b = t(240864),
+    L = t(863663),
     P = t(923400),
-    V = t(623488),
-    _ = t(152980),
+    _ = t(623488),
+    V = t(152980),
     S = t(120651),
     Z = t(871388),
     j = t(412110),
@@ -53,8 +53,8 @@ var a,
     z = t(774328);
 let Q = (0, I.hQ)(),
     k = (0, I.hQ)(),
-    H = (0, I.hQ)();
-function y(e) {
+    y = (0, I.hQ)();
+function H(e) {
     let { text: A, onChange: t, value: a, disabled: n, warning: s } = e,
         o = (0, I.Dt)(),
         i = n ? 'text-muted' : 'text-normal';
@@ -119,76 +119,76 @@ function w(e) {
 }
 function J(e) {
     var A, a, n, o, l, i, I, U;
-    let { guildId: q, productId: Y, transitionState: J, onClose: ee } = e,
+    let { guildId: E, productId: Y, transitionState: J, onClose: ee } = e,
         [eA, et] = s.useState(Y),
-        ea = (0, u.e7)([L.Z], () => (null == eA ? null : L.Z.getGuildProduct(eA)), [eA]),
+        ea = (0, u.e7)([b.Z], () => (null == eA ? null : b.Z.getGuildProduct(eA)), [eA]),
         en = (null == ea ? void 0 : ea.published) === !0,
-        { application: er } = (0, m.Z)(q, W.wW.GUILD_ROLE_SUBSCRIPTIONS),
+        { application: er } = (0, m.Z)(E, W.wW.GUILD_ROLE_SUBSCRIPTIONS),
         es = P.M['0'],
-        eo = (0, u.e7)([h.Z], () => h.Z.useReducedMotion),
-        el = E.QK.useSetting(),
-        ei = (0, R.n)(),
+        eo = (0, u.e7)([p.Z], () => p.Z.useReducedMotion),
+        el = q.QK.useSetting(),
+        ei = (0, x.n)(),
         ed = s.useCallback(() => {
             var e;
             return (null == ea ? void 0 : null === (e = ea.image_asset) || void 0 === e ? void 0 : e.application_id) == null ? es.data : (0, O._W)(ea.image_asset.application_id, ea.image_asset, 600, ei && el ? void 0 : 'webp');
         }, [es, ea, ei, el]),
-        { shouldRestrictUpdatingCreatorMonetizationSettings: ec } = (0, v.gX)(q);
+        { shouldRestrictUpdatingCreatorMonetizationSettings: ec } = (0, v.gX)(E);
     s.useEffect(() => {
         ec && (ee(), (0, Z.B)(X.Z.Messages.CREATOR_MONETIZATION_RESTRICTED_GUILD_CANNOT_EDIT_PRODUCT_TITLE, X.Z.Messages.CREATOR_MONETIZATION_RESTRICTED_GUILD_CANNOT_EDIT_PRODUCT_BODY));
     }, [ec, ee]);
     let [eu, eC] = s.useState(null !== (n = null == ea ? void 0 : ea.name) && void 0 !== n ? n : ''),
-        [eg, eT] = s.useState(null !== (o = null == ea ? void 0 : ea.description) && void 0 !== o ? o : ''),
-        [ep, eh] = s.useState(null !== (l = null == ea ? void 0 : ea.price_tier) && void 0 !== l ? l : void 0),
+        [eg, eh] = s.useState(null !== (o = null == ea ? void 0 : ea.description) && void 0 !== o ? o : ''),
+        [eT, ep] = s.useState(null !== (l = null == ea ? void 0 : ea.price_tier) && void 0 !== l ? l : void 0),
         [em, eI] = s.useState(ed),
         [eU, ef] = s.useState(null !== (i = null == ea ? void 0 : null === (A = ea.image_asset) || void 0 === A ? void 0 : A.filename) && void 0 !== i ? i : es.name),
-        [ev, eq] = s.useState(!1),
-        [eE, eN] = s.useState(),
-        eD = s.useMemo(() => (null != ep ? (0, D.T4)(ep, K.pKx.USD) : void 0), [ep]),
-        [eO, eR] = s.useState(!0),
-        { changesSaving: ex, saveError: eL, saveProductWithAttachments: eb, hasUnsavedAttachmentChanges: eP, cancelUnusedUploads: eV } = (0, x.P)(),
-        e_ = (null == ea ? void 0 : ea.attachments) != null && (null == ea ? void 0 : ea.attachments.length) > 0,
-        eS = null != eL ? eL : eE,
-        eZ = null != ex && 'published' in ex,
-        ej = null != ex && !eZ,
+        [ev, eE] = s.useState(!1),
+        [eq, eN] = s.useState(),
+        eD = s.useMemo(() => (null != eT ? (0, D.T4)(eT, K.pKx.USD) : void 0), [eT]),
+        [eO, ex] = s.useState(!0),
+        { changesSaving: eR, saveError: eb, saveProductWithAttachments: eL, hasUnsavedAttachmentChanges: eP, cancelUnusedUploads: e_ } = (0, R.P)(),
+        eV = (null == ea ? void 0 : ea.attachments) != null && (null == ea ? void 0 : ea.attachments.length) > 0,
+        eS = null != eb ? eb : eq,
+        eZ = null != eR && 'published' in eR,
+        ej = null != eR && !eZ,
         eF = null !== (I = null == ea ? void 0 : ea.role_id) && void 0 !== I ? I : null,
         [eM, eG] = s.useState(),
         eB = null != eM || null != eF,
-        eK = (0, u.e7)([N.Z], () => (null != eF && null !== eM ? N.Z.getRole(q, eF) : null != eM ? eM : void 0), [eM, eF, q]),
+        eK = (0, u.e7)([N.Z], () => (null != eF && null !== eM ? N.Z.getRole(E, eF) : null != eM ? eM : void 0), [eM, eF, E]),
         eW = '';
     eB && eO ? (eW = X.Z.Messages.GUILD_PRODUCT_CARD_TYPE_DOWNLOADABLE_AND_ROLE) : eB ? (eW = X.Z.Messages.GUILD_PRODUCT_CARD_TYPE_ROLE) : eO && (eW = X.Z.Messages.GUILD_PRODUCT_CARD_TYPE_DOWNLOADABLE);
     let eX = () => {
-            eR(!1), eV();
+            ex(!1), e_();
         },
         [ez, eQ] = s.useState(),
         {
             changes: ek,
-            hasUnsavedChanges: eH,
-            canSaveForDraft: ey,
+            hasUnsavedChanges: ey,
+            canSaveForDraft: eH,
             canSaveForPublished: eY,
             canPublishOrUnpublish: ew
         } = s.useMemo(
             () =>
-                (0, b.fG)({
+                (0, L.fG)({
                     guildProductListing: ea,
                     name: eu,
-                    priceTier: ep,
+                    priceTier: eT,
                     description: eg,
                     image: em,
                     imageName: eU,
                     isImageChanged: ev,
                     newRoleParams: eM,
-                    hasSavedAttachments: e_,
+                    hasSavedAttachments: eV,
                     hasUnsavedAttachmentChanges: eP
                 }),
-            [ea, eu, ep, eg, em, eU, ev, eM, e_, eP]
+            [ea, eu, eT, eg, em, eU, ev, eM, eV, eP]
         ),
         eJ = s.useMemo(
             () =>
-                eH || null == ez || 'publish' === ez || null != eS
+                ey || null == ez || 'publish' === ez || null != eS
                     ? null
                     : (0, r.jsx)(g.SlideIn, {
                           className: z.successNotice,
-                          children: (0, r.jsx)(p.Z, {
+                          children: (0, r.jsx)(T.Z, {
                               message: (0, r.jsxs)('div', {
                                   className: z.successNoticeMessage,
                                   children: [
@@ -207,10 +207,10 @@ function J(e) {
                               onResetText: X.Z.Messages.GUILD_PRODUCT_EDIT_NOTICE_BAR_DISMISS
                           })
                       }),
-            [eS, eH, ez]
+            [eS, ey, ez]
         ),
         e$ = s.useCallback(() => {
-            eH
+            ey
                 ? (0, S.Z)({
                       title: X.Z.Messages.GUILD_PRODUCT_EDIT_MODAL_WARNING_UNSAVED_CHANGES_TITLE,
                       body: X.Z.Messages.GUILD_PRODUCT_EDIT_MODAL_WARNING_UNSAVED_CHANGES_BODY,
@@ -221,27 +221,27 @@ function J(e) {
                       }
                   })
                 : ee();
-        }, [ee, eH]);
+        }, [ee, ey]);
     s.useEffect(() => {
         (0, g.updateModal)(
             B.Yz,
             (e) =>
                 (0, r.jsx)($, {
-                    guildId: q,
+                    guildId: E,
                     productId: eA,
                     ...e
                 }),
             e$
         );
-    }, [q, e$, eA]);
+    }, [E, e$, eA]);
     let e0 = async (e) => {
-        let A = (0, b.pM)({ newRoleParams: eM });
+        let A = (0, L.pM)({ newRoleParams: eM });
         if ((eN(A), null != A)) return;
-        let t = await eb(e);
-        if ((eq(!1), null != t)) {
-            if ((null != e.name && eC(t.name), null != e.description && eT(t.description), null != eM)) {
+        let t = await eL(e);
+        if ((eE(!1), null != t)) {
+            if ((null != e.name && eC(t.name), null != e.description && eh(t.description), null != eM)) {
                 let e = t.role_id;
-                d()(null != e, 'Cannot update role without role ID'), await T.Z.updateRole(q, e, eM);
+                d()(null != e, 'Cannot update role without role ID'), await h.Z.updateRole(E, e, eM);
             }
             eG(void 0), et(t.id), 'published' in e && !0 === e.published && ee();
         }
@@ -249,12 +249,12 @@ function J(e) {
     s.useEffect(() => {
         if (null != eS) {
             var e;
-            (0, j.V)(eS, q, null == er ? void 0 : null === (e = er.team) || void 0 === e ? void 0 : e.id);
+            (0, j.V)(eS, E, null == er ? void 0 : null === (e = er.team) || void 0 === e ? void 0 : e.id);
         }
-    }, [eS, q, er]),
+    }, [eS, E, er]),
         s.useEffect(() => {
-            eH && eQ(void 0);
-        }, [eH]);
+            ey && eQ(void 0);
+        }, [ey]);
     let e1 = s.useRef(null);
     return (0, r.jsxs)(g.ModalRoot, {
         transitionState: J,
@@ -320,12 +320,12 @@ function J(e) {
                                     title: X.Z.Messages.GUILD_PRODUCT_EDIT_MODAL_DESCRIPTION_LABEL,
                                     tag: 'label',
                                     error: null == eS ? void 0 : eS.getFirstFieldErrorMessage('description'),
-                                    htmlFor: H,
+                                    htmlFor: y,
                                     children: (0, r.jsx)(f.Z, {
-                                        id: H,
+                                        id: y,
                                         className: z.descriptionArea,
                                         value: eg,
-                                        onChange: eT,
+                                        onChange: eh,
                                         maxLength: 1500,
                                         placeholder: X.Z.Messages.GUILD_PRODUCT_EDIT_MODAL_DESCRIPTION_PLACEHOLDER,
                                         showCharacterCount: eg.length > 0,
@@ -338,9 +338,9 @@ function J(e) {
                                     tag: 'label',
                                     error: null == eS ? void 0 : eS.getFirstFieldErrorMessage('price_tier'),
                                     children: (0, r.jsx)(w, {
-                                        guildId: q,
-                                        selectedPriceTier: ep,
-                                        setPriceTier: eh
+                                        guildId: E,
+                                        selectedPriceTier: eT,
+                                        setPriceTier: ep
                                     })
                                 }),
                                 (0, r.jsxs)(g.FormItem, {
@@ -364,7 +364,7 @@ function J(e) {
                                             onChange: (e, A) => {
                                                 if (null != e) {
                                                     var t;
-                                                    eI(e), ef(A), eq(e.startsWith('data:') || A !== (null == ea ? void 0 : null === (t = ea.image_asset) || void 0 === t ? void 0 : t.filename));
+                                                    eI(e), ef(A), eE(e.startsWith('data:') || A !== (null == ea ? void 0 : null === (t = ea.image_asset) || void 0 === t ? void 0 : t.filename));
                                                 }
                                             }
                                         })
@@ -374,7 +374,7 @@ function J(e) {
                                     ? (0, r.jsx)(g.FormItem, {
                                           title: X.Z.Messages.GUILD_PRODUCT_EDIT_MODAL_ATTACHMENTS_LABEL,
                                           error: null == eS ? void 0 : eS.getFirstFieldErrorMessage('attachments'),
-                                          children: (0, r.jsx)(_.s, {
+                                          children: (0, r.jsx)(V.s, {
                                               onFileAdded: () => {
                                                   var e;
                                                   null === (e = e1.current) ||
@@ -389,10 +389,10 @@ function J(e) {
                                     : null,
                                 eB
                                     ? (0, r.jsx)(G.ZP, {
-                                          error: null !== (U = null == eS ? void 0 : eS.getFirstFieldErrorMessage(b.NB)) && void 0 !== U ? U : void 0,
+                                          error: null !== (U = null == eS ? void 0 : eS.getFirstFieldErrorMessage(L.NB)) && void 0 !== U ? U : void 0,
                                           newRoleParams: eM,
                                           setNewRoleParams: eG,
-                                          guildId: q,
+                                          guildId: E,
                                           listingRoleId: eF,
                                           productId: eA
                                       })
@@ -433,7 +433,7 @@ function J(e) {
                                     children: X.Z.Messages.GUILD_PRODUCT_EDIT_MODAL_CARD_PREVIEW_DESCRIPTION
                                 }),
                                 (0, r.jsx)(g.Spacer, { size: 16 }),
-                                (0, r.jsx)(V.Z, {
+                                (0, r.jsx)(_.Z, {
                                     imageUrl: em,
                                     name: '' === eu ? X.Z.Messages.GUILD_PRODUCT_CARD_EMPTY_NAME : eu,
                                     description: '' === eg ? X.Z.Messages.GUILD_PRODUCT_CARD_EMPTY_DESCRIPTION : eg,
@@ -461,7 +461,7 @@ function J(e) {
                         (0, r.jsxs)('div', {
                             className: z.footerActionLeftButtons,
                             children: [
-                                (0, r.jsx)(y, {
+                                (0, r.jsx)(H, {
                                     text: X.Z.Messages.GUILD_PRODUCT_SETTINGS_INCLUDE_ROLE_TOGGLE_LABEL,
                                     value: eB,
                                     onChange: (e) => {
@@ -470,12 +470,12 @@ function J(e) {
                                     warning: null === eM ? (0, r.jsx)(G.aN, {}) : void 0,
                                     disabled: null != eF
                                 }),
-                                (0, r.jsx)(y, {
+                                (0, r.jsx)(H, {
                                     text: X.Z.Messages.GUILD_PRODUCT_SETTINGS_INCLUDE_ATTACHMENTS_TOGGLE_LABEL,
                                     value: eO,
                                     onChange: (e) => {
                                         e
-                                            ? eR(!0)
+                                            ? ex(!0)
                                             : eP
                                               ? (0, g.openModalLazy)(async () => {
                                                     let { ConfirmModal: e } = await Promise.resolve().then(t.bind(t, 481060));
@@ -494,7 +494,7 @@ function J(e) {
                                                 })
                                               : eX();
                                     },
-                                    disabled: e_
+                                    disabled: eV
                                 })
                             ]
                         }),
@@ -513,10 +513,10 @@ function J(e) {
                                 : (0, r.jsx)(r.Fragment, {
                                       children: (0, r.jsx)(g.Button, {
                                           color: g.Button.Colors.PRIMARY,
-                                          disabled: !ey,
+                                          disabled: !eH,
                                           submitting: ej,
                                           onClick: () => {
-                                              d()(ey, 'cannot save changes without name or price tier'), eQ('draft'), e0(ek);
+                                              d()(eH, 'cannot save changes without name or price tier'), eQ('draft'), e0(ek);
                                           },
                                           children: X.Z.Messages.GUILD_PRODUCT_EDIT_MODAL_SAVE_DRAFT_BUTTON
                                       })
@@ -535,10 +535,10 @@ function J(e) {
 }
 function $(e) {
     var A;
-    return (0, r.jsx)(x.W, {
+    return (0, r.jsx)(R.W, {
         guildId: e.guildId,
         editSkuId: null !== (A = e.productId) && void 0 !== A ? A : void 0,
-        onFileSizeError: () => (0, q.Z)(B.ve),
+        onFileSizeError: () => (0, E.Z)(B.ve),
         children: (0, r.jsx)(J, { ...e })
     });
 }

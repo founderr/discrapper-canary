@@ -1,6 +1,6 @@
 var i,
-    a,
     s,
+    a,
     l,
     r,
     o,
@@ -14,14 +14,14 @@ class h extends (o = c.ZP.Store) {
     }
 }
 (l = 'ChannelFollowerStatsStore'),
-    (s = 'displayName') in (a = h)
-        ? Object.defineProperty(a, s, {
+    (a = 'displayName') in (s = h)
+        ? Object.defineProperty(s, a, {
               value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (a[s] = l),
+        : (s[a] = l),
     (t.Z = new h(u.Z, {
         CONNECTION_OPEN: function () {
             d = {};

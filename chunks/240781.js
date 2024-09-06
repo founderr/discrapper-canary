@@ -34,7 +34,7 @@ let T = [
             showStatus: !0
         }
     ],
-    g = (e) => {
+    S = (e) => {
         let { purchase: t } = e,
             n = (0, o.e7)([_.default], () => _.default.locale),
             i = (0, u.qS)(t),
@@ -96,13 +96,13 @@ let T = [
 t.Z = (e) => {
     let { user: t, guildId: n, avatarDecorationOverride: i, className: _ } = e,
         f = (0, o.e7)([E.Z], () => E.Z.getStatus(t.id)),
-        { product: S, purchase: A } = (0, c.Z)(null == i ? void 0 : i.skuId),
+        { product: g, purchase: A } = (0, c.Z)(null == i ? void 0 : i.skuId),
         N = h.ZP.canUseCollectibles(t),
         O = (0, u.qS)(A),
-        R = (0, u.G1)(S),
+        R = (0, u.G1)(g),
         v = !N && O,
         C = (0, d.Mu)('ProfileEffectDescription', !R || N);
-    return null != S && (null == A || v)
+    return null != g && (null == A || v)
         ? (0, r.jsxs)('div', {
               className: a()(m.modalPreview, m.shopPreviewContainer, _),
               children: [
@@ -119,7 +119,7 @@ t.Z = (e) => {
                       children: [
                           (0, r.jsx)(l.Text, {
                               variant: 'text-sm/semibold',
-                              children: S.name
+                              children: g.name
                           }),
                           (0, r.jsx)(l.Text, {
                               variant: 'text-sm/normal',
@@ -172,7 +172,7 @@ t.Z = (e) => {
                           })
                       ]
                   }),
-                  null != A && (0, r.jsx)(g, { purchase: A })
+                  null != A && (0, r.jsx)(S, { purchase: A })
               ]
           });
 };

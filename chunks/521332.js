@@ -38,9 +38,9 @@ function p(e) {
 function I(e) {
     let { settingsUpsells: t, channelId: n, onModalClose: i, reportId: u, reportType: I, reportSubType: m } = e,
         T = (0, a.e7)([c.Z], () => c.Z.getChannel(n)),
-        g = (0, d.jc)(t, null == T ? void 0 : T.type),
-        S = (0, _.i_)(I, m, u);
-    return 0 === g.length
+        S = (0, d.jc)(t, null == T ? void 0 : T.type),
+        g = (0, _.i_)(I, m, u);
+    return 0 === S.length
         ? null
         : (0, r.jsxs)('div', {
               className: h.container,
@@ -52,7 +52,7 @@ function I(e) {
                   }),
                   (0, r.jsx)('div', {
                       className: h.upsellsContainer,
-                      children: g.map((e, n) => {
+                      children: S.map((e, n) => {
                           let { getTitle: i, getDescription: a, onApply: s } = e;
                           return (0, r.jsx)(
                               p,
@@ -60,7 +60,7 @@ function I(e) {
                                   title: i(),
                                   description: a(),
                                   onButtonClick: s,
-                                  trackSettingsUpsellsAction: S(t[n])
+                                  trackSettingsUpsellsAction: g(t[n])
                               },
                               n
                           );

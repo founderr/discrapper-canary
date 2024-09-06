@@ -1,6 +1,6 @@
 n.d(t, {
     AH: function () {
-        return g;
+        return S;
     },
     CS: function () {
         return p;
@@ -9,10 +9,10 @@ n.d(t, {
         return y;
     },
     OR: function () {
-        return L;
+        return D;
     },
     QB: function () {
-        return S;
+        return g;
     },
     T0: function () {
         return C;
@@ -164,7 +164,7 @@ async function T(e) {
         });
     }
 }
-async function g(e, t) {
+async function S(e, t) {
     if (
         (null != t.questContentCTA &&
             (0, l._3)({
@@ -197,7 +197,7 @@ async function g(e, t) {
         }
     }
 }
-async function S(e, t, n) {
+async function g(e, t, n) {
     if (!c.Z.isClaimingReward(e)) {
         a.Z.dispatch({
             type: 'QUESTS_CLAIM_REWARD_BEGIN',
@@ -357,7 +357,7 @@ function y(e) {
         questId: e
     });
 }
-function L(e, t) {
+function D(e, t) {
     a.Z.dispatch({
         type: 'QUESTS_SELECT_TASK_PLATFORM',
         questId: e,

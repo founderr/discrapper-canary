@@ -1,28 +1,28 @@
 n.d(t, {
     Z: function () {
-        return u;
+        return c;
     }
 });
-var r = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(710845),
+var s = n(710845),
     a = n(620662),
-    s = n(915863),
-    o = n(981631),
-    l = n(689938);
-function u(e) {
-    let { activity: t, user: n, look: u, color: c, onAction: d } = e;
-    return (0, a.Z)(t, o.xjy.INSTANCE)
-        ? (0, r.jsx)(
-              s.Z,
+    l = n(915863),
+    r = n(981631),
+    o = n(689938);
+function c(e) {
+    let { activity: t, user: n, look: c, color: u, onAction: d } = e;
+    return (0, a.Z)(t, r.xjy.INSTANCE)
+        ? (0, i.jsx)(
+              l.Z,
               {
-                  look: u,
-                  color: c,
+                  look: c,
+                  color: u,
                   onClick: () => {
-                      null == d || d(), new i.Z('UserActivityActions').log('notify', n.id, t);
+                      null == d || d(), new s.Z('UserActivityActions').log('notify', n.id, t);
                   },
                   fullWidth: !0,
-                  children: l.Z.Messages.USER_ACTIVITY_ACTION_NOTIFY_ME
+                  children: o.Z.Messages.USER_ACTIVITY_ACTION_NOTIFY_ME
               },
               'notify'
           )

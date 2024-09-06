@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return S;
     }
 }),
     n(47120);
@@ -34,7 +34,7 @@ function I(e, t, n) {
 let m = (e) => {
     let { children: t, close: n, onUnmount: o, target: u, rect: E, position: f, align: h, impressionName: I, impressionProperties: m } = e,
         T = i.useRef(null),
-        g = i.useMemo(() => ({ current: u }), [u]);
+        S = i.useMemo(() => ({ current: u }), [u]);
     i.useEffect(() => {
         var e, t;
         let r = (0, a.findDOMNode)(T.current);
@@ -53,12 +53,12 @@ let m = (e) => {
             }
         );
     }, [n]);
-    let S = i.useRef(o);
-    i.useEffect(() => void (S.current = o)),
+    let g = i.useRef(o);
+    i.useEffect(() => void (g.current = o)),
         i.useEffect(
             () => () => {
                 var e;
-                return null === (e = S.current) || void 0 === e ? void 0 : e.call(S);
+                return null === (e = g.current) || void 0 === e ? void 0 : e.call(g);
             },
             []
         ),
@@ -81,7 +81,7 @@ let m = (e) => {
     return (0, r.jsx)(_.W5, {
         onMount: N,
         onUnmount: O,
-        targetRef: g,
+        targetRef: S,
         overrideTargetRect: E,
         position: null != f ? f : 'right',
         align: null != h ? h : 'top',
@@ -155,7 +155,7 @@ class T extends i.PureComponent {
             });
     }
 }
-function g() {
+function S() {
     let {
             contextMenu: e,
             version: t,

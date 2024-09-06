@@ -1,88 +1,88 @@
 n.d(t, {
     b6: function () {
-        return E;
+        return m;
     },
     j3: function () {
-        return f;
+        return p;
     },
     xC: function () {
-        return h;
+        return _;
     }
 }),
     n(47120);
-var r = n(866442),
-    i = n(503438),
+var i = n(866442),
+    s = n(503438),
     a = n(420660),
-    s = n(168631),
-    o = n(621853),
-    l = n(981631),
-    u = n(689938);
-let c = (e) => (''.concat(e).length < 13 ? 1000 * e : e),
+    l = n(168631),
+    r = n(621853),
+    o = n(981631),
+    c = n(689938);
+let u = (e) => (''.concat(e).length < 13 ? 1000 * e : e),
     d = (e) => {
         let t = Date.now() / 1000;
         return null != e.end
-            ? _(t, c(e.end) / 1000)
+            ? h(t, u(e.end) / 1000)
             : null != e.start
-              ? _(c(e.start) / 1000, t)
+              ? h(u(e.start) / 1000, t)
               : {
                     hours: 0,
                     minutes: 0,
                     seconds: 0
                 };
     },
-    _ = (e, t) => {
+    h = (e, t) => {
         let n = Math.max(t - e, 0),
-            r = Math.floor(n) % 60,
-            i = Math.floor(n / 60) % 60;
+            i = Math.floor(n) % 60,
+            s = Math.floor(n / 60) % 60;
         return {
             hours: Math.floor(n / 3600) % 24,
-            minutes: i,
-            seconds: r
+            minutes: s,
+            seconds: i
         };
     },
-    E = (e) => {
+    m = (e) => {
         let t = d(e);
         return t.hours > 0 ? ''.concat(t.hours, ' hours') : t.minutes > 0 ? ''.concat(t.minutes, ' minutes') : ''.concat(t.seconds, ' seconds');
     },
-    f = (e, t) => {
+    p = (e, t) => {
         var n;
-        let i = o.Z.getUserProfile(e.id),
-            [a, l] = null !== (n = null == i ? void 0 : i.themeColors) && void 0 !== n ? n : [],
-            u = (0, s.V3)(a),
-            c = null != l ? (0, r.Rf)(l) : t;
+        let s = r.Z.getUserProfile(e.id),
+            [a, o] = null !== (n = null == s ? void 0 : s.themeColors) && void 0 !== n ? n : [],
+            c = (0, l.V3)(a),
+            u = null != o ? (0, i.Rf)(o) : t;
         return {
-            color: c,
-            theme: c === t ? 'dark' : u
+            color: u,
+            theme: u === t ? 'dark' : c
         };
     },
-    h = (e, t) =>
-        (0, i.Z)(t)
-            ? u.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_SPOTIFY.format({
+    _ = (e, t) =>
+        (0, s.Z)(t)
+            ? c.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_SPOTIFY.format({
                   username: e.username,
                   song: t.details,
                   artist: t.state
               })
-            : t.type === l.IIU.PLAYING
-              ? u.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING.format({
+            : t.type === o.IIU.PLAYING
+              ? c.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING.format({
                     username: e.username,
                     activity: t.name
                 })
-              : t.type === l.IIU.WATCHING
-                ? u.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_WATCHING.format({
+              : t.type === o.IIU.WATCHING
+                ? c.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_WATCHING.format({
                       username: e.username,
                       activity: t.name
                   })
-                : t.type === l.IIU.LISTENING
-                  ? u.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_LISTENING.format({
+                : t.type === o.IIU.LISTENING
+                  ? c.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_LISTENING.format({
                         username: e.username,
                         activity: t.name
                     })
-                  : (0, a.Z)(t) || t.type === l.IIU.STREAMING
-                    ? u.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_STREAMING.format({
+                  : (0, a.Z)(t) || t.type === o.IIU.STREAMING
+                    ? c.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_STREAMING.format({
                           username: e.username,
                           activity: t.name
                       })
-                    : u.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_BASE.format({
+                    : c.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_BASE.format({
                           username: e.username,
                           activity: t.name
                       });

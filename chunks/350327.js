@@ -9,13 +9,13 @@ n.d(t, {
         return I;
     },
     Xz: function () {
-        return S;
+        return g;
     },
     Z: function () {
         return E;
     },
     c_: function () {
-        return g;
+        return S;
     },
     f4: function () {
         return A;
@@ -127,14 +127,14 @@ function T(e) {
         themeColors: e
     });
 }
-function g(e) {
+function S(e) {
     i.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR',
         avatar: e
     }),
         _(d.QP.ANIMATED_AVATAR);
 }
-function S(e) {
+function g(e) {
     i.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR_DECORATION',
         avatarDecoration: e

@@ -1,6 +1,6 @@
 n.d(t, {
     k: function () {
-        return g;
+        return C;
     }
 });
 var s,
@@ -51,7 +51,7 @@ let u = {
         SMALL: d.flexGutterSmall,
         LARGE: d.flexGutterLarge
     };
-class C extends (s = i.PureComponent) {
+class g extends (s = i.PureComponent) {
     render() {
         let { children: e, className: t, shrink: n, grow: s, basis: a, style: l, wrap: c, ..._ } = this.props,
             u = {
@@ -81,12 +81,12 @@ class C extends (s = i.PureComponent) {
         });
     }
 }
-_(C, 'defaultProps', {
+_(g, 'defaultProps', {
     className: d.flexChild,
     style: {},
     wrap: !1
 });
-class g extends (a = i.PureComponent) {
+class C extends (a = i.PureComponent) {
     render() {
         let { children: e, className: t, direction: n, justify: s, align: a, wrap: i, shrink: l, grow: c, basis: _, style: u, gutter: E, ...T } = this.props,
             I = {
@@ -103,13 +103,13 @@ class g extends (a = i.PureComponent) {
         });
     }
 }
-_(g, 'Child', C),
-    _(g, 'Direction', u),
-    _(g, 'Align', I),
-    _(g, 'Justify', E),
-    _(g, 'Wrap', T),
-    _(g, 'Gutter', R),
-    _(g, 'defaultProps', {
+_(C, 'Child', g),
+    _(C, 'Direction', u),
+    _(C, 'Align', I),
+    _(C, 'Justify', E),
+    _(C, 'Wrap', T),
+    _(C, 'Gutter', R),
+    _(C, 'defaultProps', {
         direction: u.HORIZONTAL,
         justify: E.START,
         align: I.STRETCH,

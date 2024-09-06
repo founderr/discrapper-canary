@@ -21,7 +21,7 @@ n.d(t, {
         return N;
     },
     cl: function () {
-        return g;
+        return S;
     },
     g9: function () {
         return p;
@@ -210,15 +210,15 @@ function m(e, t) {
 function T(e) {
     return e.reduce((e, t) => (null == t ? e : t.results.length + e), 0);
 }
-function g(e) {
+function S(e) {
     return null == e ? '' : e.map((e) => e.getFullMatch()).join('');
 }
-let S = new a.ZP();
+let g = new a.ZP();
 function A(e) {
-    return S.tokenize(e);
+    return g.tokenize(e);
 }
 function N() {
-    return S.clearCache();
+    return g.clearCache();
 }
 function O(e) {
     return null != e ? E[e] : null;
@@ -229,9 +229,9 @@ function R(e, t) {
 }
 function v() {
     (0, s.Pe)(),
-        S.reset(),
+        g.reset(),
         i()(s.ZP).forOwn((e, t) =>
-            S.addRule({
+            g.addRule({
                 type: t,
                 ...e
             })

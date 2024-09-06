@@ -1,7 +1,7 @@
 var i = n(735250);
 n(470079);
-var a = n(481060),
-    s = n(671533),
+var s = n(481060),
+    a = n(671533),
     l = n(400251),
     r = n(689938),
     o = n(125803),
@@ -9,11 +9,11 @@ var a = n(481060),
     u = n(176480);
 t.Z = (e) => {
     let t,
-        { searchQuery: n, setSearchQuery: d, mostRecentQuery: h, handleClearSearch: p, handleSearchKeyPress: m, handleCreateOrAddGuild: _, searchResults: f, searchFetching: E } = e;
+        { searchQuery: n, setSearchQuery: d, mostRecentQuery: h, handleClearSearch: m, handleSearchKeyPress: p, handleCreateOrAddGuild: _, searchResults: f, searchFetching: E } = e;
     if (E)
         t = (0, i.jsx)('div', {
             className: o.pageContainer,
-            children: (0, i.jsx)(a.Spinner, { className: o.spinner })
+            children: (0, i.jsx)(s.Spinner, { className: o.spinner })
         });
     else if (0 === f.length) {
         let e =
@@ -21,7 +21,7 @@ t.Z = (e) => {
                 ? r.Z.Messages.DIRECTORY_SEARCH_NO_RESULTS_SUBTITLE.format({
                       addServerHook: function (e, t) {
                           return (0, i.jsx)(
-                              a.Anchor,
+                              s.Anchor,
                               {
                                   onClick: _,
                                   children: e
@@ -39,13 +39,13 @@ t.Z = (e) => {
                     alt: '',
                     src: u
                 }),
-                (0, i.jsx)(a.Heading, {
+                (0, i.jsx)(s.Heading, {
                     variant: 'heading-xl/semibold',
                     color: 'header-primary',
                     className: c.emptySearchTitle,
                     children: r.Z.Messages.DIRECTORY_SEARCH_NO_RESULTS_TITLE
                 }),
-                (0, i.jsx)(a.Text, {
+                (0, i.jsx)(s.Text, {
                     variant: 'text-md/normal',
                     color: 'header-secondary',
                     className: c.emptySearchSubtitle,
@@ -60,7 +60,7 @@ t.Z = (e) => {
         });
     return (0, i.jsx)('div', {
         className: o.pageContainer,
-        children: (0, i.jsxs)(a.ScrollerAuto, {
+        children: (0, i.jsxs)(s.ScrollerAuto, {
             className: o.scroller,
             children: [
                 (0, i.jsxs)('div', {
@@ -69,12 +69,12 @@ t.Z = (e) => {
                         (0, i.jsxs)('div', {
                             className: c.headerTitleWrapper,
                             children: [
-                                (0, i.jsx)(a.Clickable, {
-                                    onClick: p,
+                                (0, i.jsx)(s.Clickable, {
+                                    onClick: m,
                                     className: c.arrow,
-                                    children: (0, i.jsx)(s.Z, { direction: s.Z.Directions.LEFT })
+                                    children: (0, i.jsx)(a.Z, { direction: a.Z.Directions.LEFT })
                                 }),
-                                (0, i.jsx)(a.Heading, {
+                                (0, i.jsx)(s.Heading, {
                                     variant: 'heading-xl/semibold',
                                     className: c.searchPageTitle,
                                     children: r.Z.Messages.DIRECTORY_SEARCH_RESULTS_HEADER.format({
@@ -84,15 +84,15 @@ t.Z = (e) => {
                                 })
                             ]
                         }),
-                        (0, i.jsx)(a.SearchBox, {
+                        (0, i.jsx)(s.SearchBox, {
                             searchTerm: n,
                             className: c.searchPageBox,
                             inputClassName: c.searchPageInput,
                             label: r.Z.Messages.DIRECTORY_SEARCH_PLACEHOLDER,
                             placeholder: r.Z.Messages.DIRECTORY_SEARCH_PLACEHOLDER,
                             onChange: d,
-                            onClear: p,
-                            onKeyPress: m,
+                            onClear: m,
+                            onKeyPress: p,
                             cta: null != n && n.length > 0 ? r.Z.Messages.GUILD_DISCOVERY_SEARCH_ENTER_CTA : null
                         })
                     ]

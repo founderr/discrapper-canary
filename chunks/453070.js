@@ -1,6 +1,6 @@
 n.d(t, {
     Go: function () {
-        return L;
+        return D;
     },
     LZ: function () {
         return b;
@@ -9,7 +9,7 @@ n.d(t, {
         return A;
     },
     RJ: function () {
-        return D;
+        return L;
     },
     Sd: function () {
         return U;
@@ -50,8 +50,8 @@ var r = n(470079),
     I = n(926491),
     m = n(373228),
     T = n(378233),
-    g = n(981631),
-    S = n(689938);
+    S = n(981631),
+    g = n(689938);
 let A = (e) => {
         v();
         let t = (0, i.e7)([I.Z], () => I.Z.hasLoadedStickerPacks);
@@ -73,7 +73,7 @@ let A = (e) => {
                 h = [],
                 p = 0,
                 I = 0,
-                g = 0;
+                S = 0;
             if (0 !== s) {
                 let r = function (t, n) {
                     let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
@@ -96,7 +96,7 @@ let A = (e) => {
                                 gridSectionIndex: I,
                                 rowIndex: p,
                                 columnIndex: t,
-                                visibleRowIndex: g,
+                                visibleRowIndex: S,
                                 category: n
                             }));
                         I > A &&
@@ -106,13 +106,13 @@ let A = (e) => {
                             l.push({
                                 type: m.al.CREATE_STICKER,
                                 guild_id: i.id,
-                                name: S.Z.Messages.STICKER_PICKER_CREATE_STICKER_TITLE,
+                                name: g.Z.Messages.STICKER_PICKER_CREATE_STICKER_TITLE,
                                 gridSectionIndex: I,
                                 rowIndex: p,
                                 columnIndex: l.length,
-                                visibleRowIndex: g
+                                visibleRowIndex: S
                             }),
-                            !r && (g++, h.push(l), E.push(l.length)),
+                            !r && (S++, h.push(l), E.push(l.length)),
                             p++;
                     }
                     I++;
@@ -192,7 +192,7 @@ let A = (e) => {
                       }),
                     null != s &&
                         !E.BT({
-                            permission: g.Plq.USE_EXTERNAL_EMOJIS,
+                            permission: S.Plq.USE_EXTERNAL_EMOJIS,
                             user: s,
                             context: e
                         }) &&
@@ -202,12 +202,12 @@ let A = (e) => {
         }, [t, n, s, e]);
     },
     y = [];
-function L() {
+function D() {
     var e, t;
     return null !== (t = null === (e = (0, o.D)().favoriteStickers) || void 0 === e ? void 0 : e.stickerIds) && void 0 !== t ? t : y;
 }
-function D() {
-    let e = L();
+function L() {
+    let e = D();
     return (0, i.Wu)([I.Z], () => e.map((e) => I.Z.getStickerById(e)).filter((e) => null != e && (!(0, T.J8)(e) || (0, T.V9)(e))), [e]);
 }
 function b() {
@@ -220,7 +220,7 @@ function b() {
     return (0, i.Wu)([I.Z], () => e.map((e) => I.Z.getStickerById(e)).filter((e) => void 0 !== e), [e]);
 }
 let M = (e) => {
-        let t = D(),
+        let t = L(),
             { packs: n, frequentlyUsedStickers: a } = (0, i.cj)(
                 [I.Z, p.Z],
                 () => ({
@@ -237,7 +237,7 @@ let M = (e) => {
                 l = {
                     type: m.Ih.FAVORITE,
                     id: m.Ih.FAVORITE,
-                    name: S.Z.Messages.CATEGORY_FAVORITE,
+                    name: g.Z.Messages.CATEGORY_FAVORITE,
                     stickers: t
                 };
             return [
@@ -245,7 +245,7 @@ let M = (e) => {
                 {
                     type: m.Ih.RECENT,
                     id: m.Ih.RECENT,
-                    name: S.Z.Messages.STICKER_CATEGORY_RECENT,
+                    name: g.Z.Messages.STICKER_CATEGORY_RECENT,
                     stickers:
                         null !==
                             (r =

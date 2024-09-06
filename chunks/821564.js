@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(442837),
-    s = n(481060),
+var s = n(442837),
+    a = n(481060),
     l = n(846027),
     r = n(131951),
     o = n(358085),
@@ -14,10 +14,10 @@ var a = n(442837),
     u = n(689938);
 function d() {
     let e = !o.isPlatformEmbedded,
-        t = (0, a.e7)([r.Z], () => r.Z.getMode()),
+        t = (0, s.e7)([r.Z], () => r.Z.getMode()),
         n = (e, n) =>
             (0, i.jsx)(
-                s.MenuRadioItem,
+                a.MenuRadioItem,
                 {
                     id: e,
                     group: 'input-modes',

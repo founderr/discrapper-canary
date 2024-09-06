@@ -4,8 +4,8 @@ n.d(t, {
     }
 });
 var i = n(442837),
-    a = n(199902),
-    s = n(314897),
+    s = n(199902),
+    a = n(314897),
     l = n(858340),
     r = n(959457),
     o = n(557457),
@@ -16,11 +16,11 @@ function d(e) {
         n = e.stream.guildId,
         d = e.stream.ownerId;
     return (0, i.e7)(
-        [r.Z, l.Z, s.default, a.Z],
+        [r.Z, l.Z, a.default, s.Z],
         () => {
             if (null == d) return null;
-            let e = d === s.default.getId();
-            if (!e && null == a.Z.getActiveStreamForUser(d, n)) return null;
+            let e = d === a.default.getId();
+            if (!e && null == s.Z.getActiveStreamForUser(d, n)) return null;
             let i = e && null != l.Z.getHookError(u.K3D.SOUND);
             return (0, c.Z)(r.Z.getQuality(), r.Z.getStatsHistory(n, d, e), i, t);
         },

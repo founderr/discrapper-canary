@@ -18,7 +18,7 @@ n.d(t, {
         return _;
     },
     YJ: function () {
-        return g;
+        return S;
     },
     iV: function () {
         return f;
@@ -138,6 +138,6 @@ function T(e) {
         ackedId: e
     });
 }
-function g() {
+function S() {
     r.Z.dispatch({ type: 'MESSAGE_REQUEST_CLEAR_ACK' });
 }

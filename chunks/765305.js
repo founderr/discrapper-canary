@@ -3,13 +3,13 @@ n.d(t, {
         return O;
     },
     Fc: function () {
-        return L;
+        return D;
     },
     Ku: function () {
         return N;
     },
     VF: function () {
-        return D;
+        return L;
     },
     WX: function () {
         return i;
@@ -24,7 +24,7 @@ n.d(t, {
         return o;
     },
     gG: function () {
-        return S;
+        return g;
     },
     gv: function () {
         return u;
@@ -51,7 +51,7 @@ n.d(t, {
         return a;
     },
     wm: function () {
-        return g;
+        return S;
     },
     zV: function () {
         return b;
@@ -78,8 +78,8 @@ var r,
     I = n(70956),
     m = n(981631);
 let T = 100,
-    g = 1000,
-    S = 100,
+    S = 1000,
+    g = 100,
     A = 'Guild Events Modal',
     N = '-1';
 ((c = r || (r = {}))[(c.SCHEDULED = 1)] = 'SCHEDULED'), (c[(c.ACTIVE = 2)] = 'ACTIVE'), (c[(c.COMPLETED = 3)] = 'COMPLETED'), (c[(c.CANCELED = 4)] = 'CANCELED');
@@ -93,7 +93,7 @@ let R = {
     C = new Set([1, 2]);
 ((f = o || (o = {}))[(f.EVENT_INFO = 0)] = 'EVENT_INFO'), (f[(f.RSVP_LIST = 1)] = 'RSVP_LIST');
 let y = 100,
-    L = 2 * I.Z.Millis.DAY,
-    D = 12 * I.Z.Millis.HOUR,
+    D = 2 * I.Z.Millis.DAY,
+    L = 12 * I.Z.Millis.HOUR,
     b = 4;
 ((h = l || (l = {})).NEW_EVENT = 'Upcoming Event Notice'), (h.EVENT_STARTING_SOON = 'Event Starting Soon Notice'), ((p = u || (u = {}))[(p.UNINTERESTED = 0)] = 'UNINTERESTED'), (p[(p.INTERESTED = 1)] = 'INTERESTED');

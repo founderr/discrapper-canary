@@ -21,13 +21,13 @@ var i = n(120356),
     I = n(939039),
     m = n(117795),
     T = n(358085),
-    g = n(998502),
-    S = n(689938),
+    S = n(998502),
+    g = n(689938),
     A = n(949011);
-let N = (e) => g.ZP.close(e),
-    O = (e) => g.ZP.minimize(e),
+let N = (e) => S.ZP.close(e),
+    O = (e) => S.ZP.minimize(e),
     R = (e, t) => {
-        (0, T.isMac)() && !t.altKey ? g.ZP.fullscreen(e) : g.ZP.maximize(e);
+        (0, T.isMac)() && !t.altKey ? S.ZP.fullscreen(e) : S.ZP.maximize(e);
     },
     v = (e) => {
         let { windowKey: t, themeOverride: n, hasOpenLayer: i } = e;
@@ -44,21 +44,21 @@ let N = (e) => g.ZP.close(e),
                         (0, r.jsx)(o.Clickable, {
                             className: A.winButtonClose,
                             onClick: () => N(t),
-                            'aria-label': S.Z.Messages.TITLE_BAR_CLOSE_WINDOW,
+                            'aria-label': g.Z.Messages.TITLE_BAR_CLOSE_WINDOW,
                             tabIndex: -1,
                             children: (0, r.jsx)(E.Z, {})
                         }),
                         (0, r.jsx)(o.Clickable, {
                             className: A.winButtonMinMax,
                             onClick: (e) => R(t, e),
-                            'aria-label': S.Z.Messages.TITLE_BAR_MAXIMIZE_WINDOW,
+                            'aria-label': g.Z.Messages.TITLE_BAR_MAXIMIZE_WINDOW,
                             tabIndex: -1,
                             children: (0, r.jsx)(h.Z, {})
                         }),
                         (0, r.jsx)(o.Clickable, {
                             className: A.winButtonMinMax,
                             onClick: () => O(t),
-                            'aria-label': S.Z.Messages.TITLE_BAR_MINIMIZE_WINDOW,
+                            'aria-label': g.Z.Messages.TITLE_BAR_MINIMIZE_WINDOW,
                             tabIndex: -1,
                             children: (0, r.jsx)(I.Z, {})
                         })
@@ -73,7 +73,7 @@ let N = (e) => g.ZP.close(e),
             children: (e) =>
                 (0, r.jsxs)(o.Clickable, {
                     className: a()(i ? A.typeMacOSWithFrame : A.typeMacOS, t ? A.focused : A.unfocused, e, { [A.withBackgroundOverride]: !l }),
-                    onDoubleClick: () => g.ZP.maximize(n),
+                    onDoubleClick: () => S.ZP.maximize(n),
                     tabIndex: -1,
                     children: [
                         u.Z.window.USE_OSX_NATIVE_TRAFFIC_LIGHTS
@@ -84,21 +84,21 @@ let N = (e) => g.ZP.close(e),
                                       (0, r.jsx)(o.Clickable, {
                                           className: A.macButtonClose,
                                           onClick: () => N(n),
-                                          'aria-label': S.Z.Messages.TITLE_BAR_CLOSE_WINDOW,
+                                          'aria-label': g.Z.Messages.TITLE_BAR_CLOSE_WINDOW,
                                           tabIndex: -1,
                                           children: (0, r.jsx)(f.Z, { color: '#4c0000' })
                                       }),
                                       (0, r.jsx)(o.Clickable, {
                                           className: A.macButtonMinimize,
                                           onClick: () => O(n),
-                                          'aria-label': S.Z.Messages.TITLE_BAR_MINIMIZE_WINDOW,
+                                          'aria-label': g.Z.Messages.TITLE_BAR_MINIMIZE_WINDOW,
                                           tabIndex: -1,
                                           children: (0, r.jsx)(m.Z, { color: '#975500' })
                                       }),
                                       (0, r.jsx)(o.Clickable, {
                                           className: A.macButtonMaximize,
                                           onClick: (e) => R(n, e),
-                                          'aria-label': S.Z.Messages.TITLE_BAR_FULLSCREEN_WINDOW,
+                                          'aria-label': g.Z.Messages.TITLE_BAR_FULLSCREEN_WINDOW,
                                           tabIndex: -1,
                                           children: (0, r.jsx)(p.Z, { color: '#006500' })
                                       })

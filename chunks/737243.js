@@ -4,27 +4,27 @@ n.d(t, {
     }
 });
 var i = n(735250),
-    a = n(470079),
-    s = n(442837),
+    s = n(470079),
+    a = n(442837),
     l = n(699516),
     r = n(697451),
     o = n(348238);
-let c = a.memo(function (e) {
+let c = s.memo(function (e) {
     var t;
-    let { message: n, channel: c, compact: u = !1, interactionUsernameProfile: d, interactionAvatarProfile: h, interactionData: p, setPopout: m } = e,
-        _ = (0, s.e7)([l.Z], () => l.Z.isBlockedForMessage(n), [n]),
+    let { message: n, channel: c, compact: u = !1, interactionUsernameProfile: d, interactionAvatarProfile: h, interactionData: m, setPopout: p } = e,
+        _ = (0, a.e7)([l.Z], () => l.Z.isBlockedForMessage(n), [n]),
         f = (0, o.wq)(null === (t = n.interaction) || void 0 === t ? void 0 : t.user.id, c.id),
-        E = (0, o.Nk)(n.interaction, c, d, m),
-        C = (0, o.NU)(h, m),
-        g = (0, o.Xn)(p, m),
-        I = a.useCallback(
+        E = (0, o.Nk)(n.interaction, c, d, p),
+        g = (0, o.NU)(h, p),
+        C = (0, o.Xn)(m, p),
+        I = s.useCallback(
             () =>
-                m({
+                p({
                     interactionUsernameProfile: !1,
                     interactionAvatarProfile: !1,
                     interactionData: !1
                 }),
-            [m]
+            [p]
         );
     return (0, i.jsx)(r.Z, {
         message: n,
@@ -33,21 +33,21 @@ let c = a.memo(function (e) {
         isInteractionUserBlocked: _,
         showAvatarPopout: h,
         showUsernamePopout: d,
-        showDataPopout: p,
-        onClickAvatar: C,
+        showDataPopout: m,
+        onClickAvatar: g,
         onClickUsername: E,
-        onClickCommand: g,
+        onClickCommand: C,
         onUserContextMenu: f,
         onPopoutRequestClose: I
     });
 });
 function u(e, t, n) {
-    let { message: a, channel: s, compact: l } = e,
+    let { message: s, channel: a, compact: l } = e,
         { interactionUsernameProfile: r, interactionAvatarProfile: o, interactionData: u } = n;
-    return null != a.interaction && '' !== a.interaction.displayName
+    return null != s.interaction && '' !== s.interaction.displayName
         ? (0, i.jsx)(c, {
-              message: a,
-              channel: s,
+              message: s,
+              channel: a,
               compact: l,
               setPopout: t,
               interactionUsernameProfile: r,

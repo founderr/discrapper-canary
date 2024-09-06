@@ -45,9 +45,9 @@ e.exports = function (e, t, n, r, i) {
     t.copy(E, 0, 0, t.length);
     for (var f = 0, h = d[i], p = Math.ceil(r / h), I = 1; I <= p; I++) {
         E.writeUInt32BE(I, t.length);
-        for (var m = a.run(E, a.ipad1), T = m, g = 1; g < n; g++) {
+        for (var m = a.run(E, a.ipad1), T = m, S = 1; S < n; S++) {
             T = a.run(T, a.ipad2);
-            for (var S = 0; S < h; S++) m[S] ^= T[S];
+            for (var g = 0; g < h; g++) m[g] ^= T[g];
         }
         m.copy(c, f), (f += h);
     }

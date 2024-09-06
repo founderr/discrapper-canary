@@ -25,8 +25,8 @@ function _(e) {
         I = e.placement,
         m = e.variation,
         T = e.offsets,
-        g = e.position,
-        S = e.gpuAcceleration,
+        S = e.position,
+        g = e.gpuAcceleration,
         A = e.adaptive,
         N = e.roundOffsets,
         O = e.isFixed,
@@ -34,7 +34,7 @@ function _(e) {
         v = void 0 === R ? 0 : R,
         C = T.y,
         y = void 0 === C ? 0 : C,
-        L =
+        D =
             'function' == typeof N
                 ? N({
                       x: v,
@@ -44,8 +44,8 @@ function _(e) {
                       x: v,
                       y: y
                   };
-    (v = L.x), (y = L.y);
-    var D = T.hasOwnProperty('x'),
+    (v = D.x), (y = D.y);
+    var L = T.hasOwnProperty('x'),
         b = T.hasOwnProperty('y'),
         M = r.t$,
         P = r.we,
@@ -54,10 +54,10 @@ function _(e) {
         var w = (0, i.Z)(h),
             x = 'clientHeight',
             G = 'clientWidth';
-        w === (0, a.Z)(h) && ((w = (0, s.Z)(h)), 'static' !== (0, o.Z)(w).position && 'absolute' === g && ((x = 'scrollHeight'), (G = 'scrollWidth')));
-        (I === r.we || ((I === r.t$ || I === r.F2) && m === r.ut)) && ((P = r.I), (y -= (O && w === U && U.visualViewport ? U.visualViewport.height : w[x]) - p.height), (y *= S ? 1 : -1)), (I === r.t$ || ((I === r.we || I === r.I) && m === r.ut)) && ((M = r.F2), (v -= (O && w === U && U.visualViewport ? U.visualViewport.width : w[G]) - p.width), (v *= S ? 1 : -1));
+        w === (0, a.Z)(h) && ((w = (0, s.Z)(h)), 'static' !== (0, o.Z)(w).position && 'absolute' === S && ((x = 'scrollHeight'), (G = 'scrollWidth')));
+        (I === r.we || ((I === r.t$ || I === r.F2) && m === r.ut)) && ((P = r.I), (y -= (O && w === U && U.visualViewport ? U.visualViewport.height : w[x]) - p.height), (y *= g ? 1 : -1)), (I === r.t$ || ((I === r.we || I === r.I) && m === r.ut)) && ((M = r.F2), (v -= (O && w === U && U.visualViewport ? U.visualViewport.width : w[G]) - p.width), (v *= g ? 1 : -1));
     }
-    var k = Object.assign({ position: g }, A && d);
+    var k = Object.assign({ position: S }, A && d);
     var B =
         !0 === N
             ? ((t = {
@@ -76,7 +76,7 @@ function _(e) {
                   x: v,
                   y: y
               };
-    return ((v = B.x), (y = B.y), S) ? Object.assign({}, k, (((f = {})[P] = b ? '0' : ''), (f[M] = D ? '0' : ''), (f.transform = 1 >= (U.devicePixelRatio || 1) ? 'translate(' + v + 'px, ' + y + 'px)' : 'translate3d(' + v + 'px, ' + y + 'px, 0)'), f)) : Object.assign({}, k, (((E = {})[P] = b ? y + 'px' : ''), (E[M] = D ? v + 'px' : ''), (E.transform = ''), E));
+    return ((v = B.x), (y = B.y), g) ? Object.assign({}, k, (((f = {})[P] = b ? '0' : ''), (f[M] = L ? '0' : ''), (f.transform = 1 >= (U.devicePixelRatio || 1) ? 'translate(' + v + 'px, ' + y + 'px)' : 'translate3d(' + v + 'px, ' + y + 'px, 0)'), f)) : Object.assign({}, k, (((E = {})[P] = b ? y + 'px' : ''), (E[M] = L ? v + 'px' : ''), (E.transform = ''), E));
 }
 t.Z = {
     name: 'computeStyles',

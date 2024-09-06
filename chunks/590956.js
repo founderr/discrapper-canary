@@ -1,6 +1,6 @@
 n.d(t, {
     Y: function () {
-        return g;
+        return S;
     },
     c: function () {
         return T;
@@ -47,7 +47,7 @@ let T = (e) => {
                     shouldShow: !_,
                     onTooltipShow: () => {
                         o &&
-                            S({
+                            g({
                                 emojiNode: n,
                                 isCustomEmoji: !1
                             });
@@ -83,10 +83,10 @@ let T = (e) => {
               })
             : I();
     },
-    g = (e) => {
+    S = (e) => {
         let { node: t, isInteracting: n, tooltipPosition: a = f.b_.position, enableClick: c = !0 } = e,
             [I, T] = i.useState(String(Date.now())),
-            [g, A] = i.useState(!1),
+            [S, A] = i.useState(!1),
             [N, O] = i.useState(!1),
             R = function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
@@ -110,7 +110,7 @@ let T = (e) => {
                     onTooltipShow: () => {
                         A(!0),
                             c &&
-                                (S({
+                                (g({
                                     emojiNode: t,
                                     isCustomEmoji: !0,
                                     nonce: v
@@ -131,7 +131,7 @@ let T = (e) => {
                                   }
                                 : void 0,
                             onMouseLeave: () => {
-                                g && (_.default.track(h.rMx.CLOSE_POPOUT, { nonce: v }), A(!1));
+                                S && (_.default.track(h.rMx.CLOSE_POPOUT, { nonce: v }), A(!1));
                             },
                             tag: 'span',
                             className: s()(m.emojiContainer, { [m.emojiContainerClickable]: c }),
@@ -160,7 +160,7 @@ let T = (e) => {
               })
             : C();
     },
-    S = (e) => {
+    g = (e) => {
         let { emojiNode: t, isCustomEmoji: n, nonce: r } = e;
         c.ZP.trackWithMetadata(h.rMx.EXPRESSION_TOOLTIP_VIEWED, {
             type: I.cd.EMOJI_IN_MESSAGE_HOVER,

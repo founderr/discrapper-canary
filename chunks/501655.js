@@ -28,8 +28,8 @@ var r,
     I = n(5192),
     m = n(88751),
     T = n(427679),
-    g = n(590415),
-    S = n(974609),
+    S = n(590415),
+    g = n(974609),
     A = n(981631);
 function N(e, t, n) {
     return (
@@ -65,12 +65,12 @@ function R(e) {
     return null == r ? t.id : ''.concat(Date.parse(r)).concat(t.id);
 }
 function v(e) {
-    return e === g.xO.REQUESTED_TO_SPEAK || e === g.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
+    return e === S.xO.REQUESTED_TO_SPEAK || e === S.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
 }
 function C(e) {
     let { speaker: t, role: n, rtsState: r, blocked: i, isFriend: a } = e,
         s = [];
-    return v(r) && s.push('ALL_REQUESTED_TO_SPEAK'), r === g.xO.REQUESTED_TO_SPEAK && s.push('REQUESTED_TO_SPEAK_ONLY'), t ? s.push('SPEAKER') : (null != n ? s.push(n.id) : s.push('NO_ROLE'), s.push('AUDIENCE')), i && s.push('BLOCKED'), a && s.push('FRIEND'), s;
+    return v(r) && s.push('ALL_REQUESTED_TO_SPEAK'), r === S.xO.REQUESTED_TO_SPEAK && s.push('REQUESTED_TO_SPEAK_ONLY'), t ? s.push('SPEAKER') : (null != n ? s.push(n.id) : s.push('NO_ROLE'), s.push('AUDIENCE')), i && s.push('BLOCKED'), a && s.push('FRIEND'), s;
 }
 ((a = r || (r = {})).SPEAKER = 'SPEAKER'), (a.AUDIENCE = 'AUDIENCE'), (a.NO_ROLE = 'NO_ROLE'), (a.ALL_REQUESTED_TO_SPEAK = 'ALL_REQUESTED_TO_SPEAK'), (a.REQUESTED_TO_SPEAK_ONLY = 'REQUESTED_TO_SPEAK_ONLY'), (a.BLOCKED = 'BLOCKED'), (a.FRIEND = 'FRIEND'), (a.SELECTED = 'SELECTED'), (a.MEDIA = 'MEDIA'), ((s = i || (i = {})).VOICE = 'VOICE'), (s.STREAM = 'STREAM');
 class y {
@@ -87,7 +87,7 @@ class y {
                 user: o,
                 userNick: I.ZP.getName(this.guildId, this.channelId, o),
                 voiceState: s,
-                role: (0, S.H)(this.guildId, e),
+                role: (0, g.H)(this.guildId, e),
                 speaker: m.ZP.isSpeaker(e, this.channelId),
                 member: null != this.guildId ? E.ZP.getMember(this.guildId, e) : null,
                 blocked: f.Z.getRelationships()[o.id] === A.OGo.BLOCKED,
@@ -98,7 +98,7 @@ class y {
                 ...d,
                 type: 'VOICE',
                 id: o.id,
-                rtsState: (0, g.gf)(s)
+                rtsState: (0, S.gf)(s)
             };
         a.push(N);
         let O = null !== (r = c.Z.getStreamForUser(e, this.guildId)) && void 0 !== r ? r : c.Z.getActiveStreamForUser(e, this.guildId);
@@ -108,7 +108,7 @@ class y {
                 ...d,
                 id: e,
                 type: 'STREAM',
-                rtsState: g.xO.NONE
+                rtsState: S.xO.NONE
             }),
                 a.push(i);
         }

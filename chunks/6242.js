@@ -7,8 +7,8 @@ n.d(t, {
     }
 });
 var i = n(818083),
-    a = n(594174),
-    s = n(74538),
+    s = n(594174),
+    a = n(74538),
     l = n(474936);
 let r = (0, i.B)({
     kind: 'user',
@@ -30,10 +30,10 @@ let r = (0, i.B)({
     ]
 });
 function o(e, t) {
-    return (0, s.I5)(e, l.p9.TIER_2) || t;
+    return (0, a.I5)(e, l.p9.TIER_2) || t;
 }
 function c(e) {
-    let t = a.default.getCurrentUser();
+    let t = s.default.getCurrentUser();
     return r.getCurrentConfig(
         { location: 'get_hd_streaming_viewer_config' },
         {

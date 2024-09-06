@@ -17,8 +17,8 @@ function d(e) {
         p = (0, l.ZP)(),
         I = ''.concat(n, 'px'),
         [m, T] = i.useState(!1),
-        [g, S] = i.useState(!1),
-        A = null == E || g;
+        [S, g] = i.useState(!1),
+        A = null == E || S;
     if (null == t || (m && A))
         return (0, r.jsx)(o.UnknownGameIcon, {
             size: 'custom',
@@ -52,7 +52,7 @@ function d(e) {
                     src: m && null != E ? E : t,
                     'aria-hidden': f,
                     alt: null != _ ? _ : f ? void 0 : u.Z.Messages.APPLICATION_ICON_NO_NAME_A11Y_LABEL,
-                    onError: (e) => (m ? S(!0) : T(!0))
+                    onError: (e) => (m ? g(!0) : T(!0))
                 })
         },
         'content-image'

@@ -39,11 +39,11 @@ let T = {
     SIZE_32: 32,
     SIZE_56: 56
 };
-function g(e, t) {
+function S(e, t) {
     let n = e instanceof f.Z ? e : null != e ? e.user : null;
     return null != n ? n.id : 'user-'.concat(t);
 }
-class S extends (r = a.PureComponent) {
+class g extends (r = a.PureComponent) {
     renderUsers() {
         let { users: e, max: t, renderUser: n = this.defaultRenderUser, size: r, extraDetail: a } = this.props,
             s = [],
@@ -62,7 +62,7 @@ class S extends (r = a.PureComponent) {
                               className: I.avatarContainer,
                               children: o
                           },
-                          g(null !== (c = e[u]) && void 0 !== c ? c : null, u)
+                          S(null !== (c = e[u]) && void 0 !== c ? c : null, u)
                       )
                     : (0, i.jsx)(
                           d.ZP,
@@ -73,7 +73,7 @@ class S extends (r = a.PureComponent) {
                               mask: d.ZP.Masks.VOICE_USER_SUMMARY_ITEM,
                               children: o
                           },
-                          g(e[u], u)
+                          S(e[u], u)
                       )
             ),
                 u++;
@@ -198,7 +198,7 @@ class S extends (r = a.PureComponent) {
             });
     }
 }
-m(S, 'defaultProps', {
+m(g, 'defaultProps', {
     max: 10,
     renderMoreUsers: function (e) {
         return (0, i.jsx)('div', {
@@ -210,4 +210,4 @@ m(S, 'defaultProps', {
     showDefaultAvatarsForNullUsers: !1,
     size: T.SIZE_24
 }),
-    (t.Z = S);
+    (t.Z = g);

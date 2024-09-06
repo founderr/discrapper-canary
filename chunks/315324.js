@@ -23,7 +23,7 @@ let h = 3;
 function p(e) {
     let { user: t, guild: n, channel: p, onAction: I, onClose: m } = e,
         { profileType: T } = (0, _.z)(),
-        g = (0, i.Wu)([d.ZP], () =>
+        S = (0, i.Wu)([d.ZP], () =>
             d.ZP.getVoiceStatesForChannel(p).map((e) => {
                 let { user: t } = e;
                 return t;
@@ -65,7 +65,7 @@ function p(e) {
                 ]
             }),
             (0, r.jsx)(l.Z, {
-                users: g,
+                users: S,
                 guildId: n.id,
                 channelId: p.id,
                 maxUsers: h,

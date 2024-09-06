@@ -4,67 +4,67 @@ n.d(t, {
     }
 });
 var i = n(735250),
-    a = n(470079),
-    s = n(392711),
-    l = n.n(s),
+    s = n(470079),
+    a = n(392711),
+    l = n.n(a),
     r = n(442837),
     o = n(570140),
     c = n(239091),
     u = n(561472),
     d = n(367907),
     h = n(731429),
-    p = n(188471),
-    m = n(933557),
+    m = n(188471),
+    p = n(933557),
     _ = n(287746),
     f = n(541716),
     E = n(665149),
-    C = n(910611),
-    g = n(359110),
+    g = n(910611),
+    C = n(359110),
     I = n(592125),
     x = n(703558),
     T = n(430824),
-    N = n(979651),
-    S = n(664342),
-    v = n(124368),
-    Z = n(981631),
-    A = n(689938),
+    S = n(979651),
+    v = n(664342),
+    N = n(124368),
+    A = n(981631),
+    Z = n(689938),
     M = n(437996);
 function b(e) {
-    let { channelId: t, baseChannelId: s, channelViewSource: b = 'Split View' } = e,
+    let { channelId: t, baseChannelId: a, channelViewSource: b = 'Split View' } = e,
         R = (0, r.e7)([I.Z], () => I.Z.getChannel(t)),
         L = (0, r.e7)([T.Z], () => T.Z.getGuild(null == R ? void 0 : R.getGuildId())),
-        j = (0, m.ZP)(R);
+        P = (0, p.ZP)(R);
     (function (e) {
-        let t = (0, r.e7)([N.Z], () => null != e && !l().isEmpty(N.Z.getVoiceStatesForChannel(e.id)));
-        a.useEffect(() => {
+        let t = (0, r.e7)([S.Z], () => null != e && !l().isEmpty(S.Z.getVoiceStatesForChannel(e.id)));
+        s.useEffect(() => {
             t &&
                 null != e &&
                 (o.Z.dispatch({
                     type: 'SIDEBAR_CLOSE',
                     baseChannelId: e.parent_id
                 }),
-                (0, g.ad)(e, { source: v.on.VOICE_AUTO_OPEN }));
+                (0, C.ad)(e, { source: N.on.VOICE_AUTO_OPEN }));
         }, [t, e]);
     })(R);
-    let O = a.useRef(!1);
+    let j = s.useRef(!1);
     if (
-        (a.useEffect(() => {
-            if (null == R || O.current) return;
-            O.current = !0;
+        (s.useEffect(() => {
+            if (null == R || j.current) return;
+            j.current = !0;
             let e = (0, h.K)(I.Z.getChannel(R.id), !0);
-            (0, d.yw)(Z.rMx.CHANNEL_OPENED, {
+            (0, d.yw)(A.rMx.CHANNEL_OPENED, {
                 ...e,
                 ...(0, d.$H)(R.id),
                 channel_view: b
             }),
-                (0, p.a)(Z.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: R.id });
+                (0, m.a)(A.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: R.id });
         }, [R, b]),
         null == R || null == L)
     )
         return null;
-    let P = (0, i.jsx)(S.Z, {
+    let O = (0, i.jsx)(v.Z, {
         channel: R,
-        baseChannelId: s
+        baseChannelId: a
     });
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -73,11 +73,11 @@ function b(e) {
                 draftType: x.d.ChannelMessage
             }),
             (0, i.jsx)(E.ZP, {
-                toolbar: P,
-                'aria-label': A.Z.Messages.THREAD_HEADER_BAR_A11Y_LABEL,
-                children: (0, C.ud)({
+                toolbar: O,
+                'aria-label': Z.Z.Messages.THREAD_HEADER_BAR_A11Y_LABEL,
+                children: (0, g.ud)({
                     channel: R,
-                    channelName: j,
+                    channelName: P,
                     guild: L,
                     inSidebar: !0,
                     handleContextMenu: function (e) {
@@ -91,7 +91,7 @@ function b(e) {
                         });
                     },
                     handleClick: function () {
-                        if (null != R) (0, g.Kh)(R.id);
+                        if (null != R) (0, C.Kh)(R.id);
                     }
                 })
             }),

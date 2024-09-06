@@ -15,15 +15,15 @@ var r = n(735250),
     I = n(709586),
     m = n(626135),
     T = n(524444),
-    g = n(981631),
-    S = n(176505),
+    S = n(981631),
+    g = n(176505),
     A = n(689938),
     N = n(157732);
 t.Z = (e) => {
     let { roleIcon: t, guild: n } = e,
         { name: O } = t;
     i.useEffect(() => {
-        m.default.track(g.rMx.OPEN_POPOUT, {
+        m.default.track(S.rMx.OPEN_POPOUT, {
             type: 'Role Icon Popout',
             guild_id: n.id,
             ...(0, o.v_)(f.Z.getChannel(p.Z.getChannelId(n.id)))
@@ -37,14 +37,14 @@ t.Z = (e) => {
             src: null == t.src ? t.src : (0, c.o)(t.src, 40),
             size: 40
         },
-        L = v
+        D = v
             ? () => {
-                  (0, E.uL)(g.Z5c.CHANNEL(n.id, S.oC.ROLE_SUBSCRIPTIONS));
+                  (0, E.uL)(S.Z5c.CHANNEL(n.id, g.oC.ROLE_SUBSCRIPTIONS));
               }
             : () => {
                   (0, d.f)({
                       guildId: n.id,
-                      location: { section: g.jXE.ROLE_ICON_POPOUT }
+                      location: { section: S.jXE.ROLE_ICON_POPOUT }
                   });
               };
     return (0, r.jsx)(s.Dialog, {
@@ -86,7 +86,7 @@ t.Z = (e) => {
                         className: N.ctaButton,
                         innerClassName: N.ctaButtonContent,
                         fullWidth: !0,
-                        onClick: L,
+                        onClick: D,
                         autoFocus: !0,
                         children: [
                             (0, r.jsx)(I.Z, {

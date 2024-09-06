@@ -43,7 +43,7 @@ function f(e) {
                     analyticsLocations: p
                 })
         }),
-        g = (0, c.Z)({
+        S = (0, c.Z)({
             user: t,
             guildId: n,
             location: I,
@@ -54,7 +54,7 @@ function f(e) {
                     analyticsLocations: p
                 })
         }),
-        S = (0, c.T)({
+        g = (0, c.T)({
             user: t,
             guildId: n,
             location: I,
@@ -67,7 +67,7 @@ function f(e) {
         }),
         A = [
             [f, m],
-            [T, g, S],
+            [T, S, g],
             [
                 (0, o.Z)({
                     id: t.id,

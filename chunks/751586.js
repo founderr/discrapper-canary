@@ -24,7 +24,7 @@ var r = n(735250),
     I = n(981631),
     m = n(689938),
     T = n(227611);
-function g(e) {
+function S(e) {
     let { onClose: t } = e,
         n = i.useRef(null);
     return (0, r.jsx)('div', {
@@ -41,7 +41,7 @@ function g(e) {
         })
     });
 }
-let S = (e) => {
+let g = (e) => {
     let { children: t, hasMediaControls: n, isObscured: a, src: o } = e,
         [l, u] = i.useState(!1),
         _ = i.useRef(o);
@@ -95,7 +95,7 @@ function A(e) {
 }
 function N(e) {
     let { src: t, original: n, placeholder: a, width: s, height: l, animated: u, children: c, responsive: d, renderLinkComponent: f, renderForwardComponent: p, maxWidth: m, maxHeight: N, shouldAnimate: O, onClose: R, shouldHideMediaOptions: v = !1, obscure: C = !1, ...y } = e,
-        { width: L, height: D } = (0, E.zp)(s, l),
+        { width: D, height: L } = (0, E.zp)(s, l),
         b = o.tq && null != R;
     i.useEffect(() => {
         if (null != R)
@@ -114,8 +114,8 @@ function N(e) {
     return (0, r.jsxs)('div', {
         className: T.wrapper,
         children: [
-            b ? (0, r.jsx)(g, { onClose: R }) : null,
-            (0, r.jsx)(S, {
+            b ? (0, r.jsx)(S, { onClose: R }) : null,
+            (0, r.jsx)(g, {
                 isObscured: C,
                 src: t,
                 children: (e) =>
@@ -127,8 +127,8 @@ function N(e) {
                             shouldLink: !1,
                             width: s,
                             height: l,
-                            maxWidth: L,
-                            maxHeight: D,
+                            maxWidth: D,
+                            maxHeight: L,
                             children: c,
                             animated: !e && u,
                             autoPlay: !e,
@@ -161,8 +161,8 @@ function O(e) {
     return (0, r.jsxs)('div', {
         className: s()(T.wrapper, T.videoWrapper),
         children: [
-            m ? (0, r.jsx)(g, { onClose: a }) : null,
-            (0, r.jsx)(S, {
+            m ? (0, r.jsx)(S, { onClose: a }) : null,
+            (0, r.jsx)(g, {
                 hasMediaControls: !0,
                 isObscured: d,
                 src: t,

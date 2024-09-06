@@ -1,66 +1,66 @@
-t.d(n, {
+n.d(t, {
     CR: function () {
-        return E;
+        return x;
     },
     UU: function () {
-        return _;
+        return h;
     },
     jE: function () {
         return d;
     }
 }),
-    t(627494),
-    t(757143);
-var a = t(884439),
-    l = t(55000),
-    i = t(693824),
-    r = t(690725),
-    s = t(561308),
-    o = t(737583),
-    u = t(169040),
-    c = t(689938);
+    n(627494),
+    n(757143);
+var l = n(884439),
+    a = n(55000),
+    i = n(693824),
+    r = n(690725),
+    s = n(561308),
+    o = n(737583),
+    u = n(169040),
+    c = n(689938);
 let d = (e) => {
-        let { timestamp: n } = e;
+        let { timestamp: t } = e;
         return [
             {
                 iconPath: u.mb,
-                text: n
+                text: t
             }
         ];
     },
-    _ = (e) => {
-        var n;
-        let t = null === (n = (0, s.PJ)(e, a.N.AGGREGATE_COUNT)) || void 0 === n ? void 0 : n.count;
-        return null == t
+    h = (e) => {
+        var t;
+        let n = null === (t = (0, s.PJ)(e, l.N.AGGREGATE_COUNT)) || void 0 === t ? void 0 : t.count;
+        return null == n
             ? []
             : [
                   {
                       iconPath: u.eF,
-                      text: c.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_ARTIST_TRACKS_THIS_WEEK.format({ count: t })
+                      text: c.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_ARTIST_TRACKS_THIS_WEEK.format({ count: n })
                   }
               ];
     },
     m = (e) => {
-        let { avatarSrc: n, mediaImageSrc: t } = e;
+        let { avatarSrc: t, mediaImageSrc: n } = e;
         return {
-            AvatarImage: n,
-            ...(null != t && { MediaImage: t })
+            AvatarImage: t,
+            ...(null != n && { MediaImage: n })
         };
     },
-    E = async (e) => {
-        let { user: n, channel: t, mediaImageSrc: a, artist: s, description: c, colors: d, badges: _ } = e,
-            E = m({
-                avatarSrc: n.getAvatarURL(t.guild_id, 128),
-                mediaImageSrc: a
+    x = async (e) => {
+        let { user: t, channel: n, mediaImageSrc: l, artist: s, description: c, colors: d, badges: h } = e,
+            x = m({
+                avatarSrc: t.getAvatarURL(n.guild_id, 128),
+                mediaImageSrc: l
             }),
-            T = s.replaceAll(/[^a-zA-Z0-9 ]/g, '').replaceAll(' ', '-');
+            E = s.replaceAll(/[^a-zA-Z0-9 ]/g, '').replaceAll(' ', '-');
         return await (0, r.f)({
-            assetsToLoad: E,
+            assetsToLoad: x,
             drawImage: (e) => {
-                (function (e, n) {
-                    let t = n.map((e, n) => ({
+                (function (e, t) {
+                    let n = t.map((e, t) => ({
                         color: e,
-                        stop: n
+                        stop: t
                     }));
                     e.setSize(
                         {
@@ -70,7 +70,7 @@ let d = (e) => {
                         4
                     ),
                         e.drawRoundedGradientRect(
-                            t,
+                            n,
                             {
                                 x: 0,
                                 y: u.bg
@@ -103,7 +103,7 @@ let d = (e) => {
                             { fillMode: i.JU.Contain }
                         ) === i.vP.Failure &&
                             e.drawPath(
-                                l.Cv,
+                                a.Cv,
                                 {
                                     x: u.sB,
                                     y: u.sB
@@ -126,7 +126,7 @@ let d = (e) => {
                             50
                         );
                     })(e),
-                    (function (e, n) {
+                    (function (e, t) {
                         e.setColor('white'),
                             e.setFont({
                                 size: 16,
@@ -135,7 +135,7 @@ let d = (e) => {
                                 truncate: i.GX.Wrap
                             }),
                             e.drawText(
-                                n,
+                                t,
                                 {
                                     x: u.Iq,
                                     y: 64,
@@ -147,7 +147,7 @@ let d = (e) => {
                     })(e, c),
                     (0, o.J)({
                         canvas: e,
-                        badges: _,
+                        badges: h,
                         startPosition: u.Iq,
                         maxWidth: u.kC
                     });
@@ -155,9 +155,9 @@ let d = (e) => {
             exportConfigs: {
                 format: i.kH.CloudUpload,
                 quality: 1,
-                fileName: 'user-reacting-to-'.concat(T, '.png').toLowerCase(),
+                fileName: 'user-reacting-to-'.concat(E, '.png').toLowerCase(),
                 fileType: 'png',
-                channelId: t.id
+                channelId: n.id
             }
         });
     };

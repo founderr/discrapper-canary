@@ -15,7 +15,7 @@ n.d(t, {
         return f;
     },
     ZC: function () {
-        return S;
+        return g;
     },
     kr: function () {
         return h;
@@ -24,7 +24,7 @@ n.d(t, {
         return I;
     },
     tq: function () {
-        return g;
+        return S;
     }
 }),
     n(789020),
@@ -89,7 +89,7 @@ async function m(e) {
 function T(e, t) {
     return null != t.outboundRedemptionUrlFormat ? t.outboundRedemptionUrlFormat.replace('{code}', encodeURIComponent(e)) : t.outboundRedemptionPageLink;
 }
-function g() {
+function S() {
     let e = c.Z.lastSeenOutboundPromotionStartDate,
         t = c.Z.outboundPromotions,
         n = c.Z.consumedInboundPromotionId,
@@ -118,7 +118,7 @@ function g() {
             }))
     );
 }
-function S(e) {
+function g(e) {
     return !(0, u.isIOS)() || !(0, l.yE)(e.flags, d.TD.IS_BLOCKED_IOS);
 }
 function A(e) {

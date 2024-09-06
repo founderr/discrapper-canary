@@ -1,7 +1,7 @@
 let r;
 n.d(t, {
     xk: function () {
-        return S;
+        return g;
     }
 }),
     n(47120),
@@ -23,9 +23,9 @@ var h = n(570140),
     I = n(314897),
     m = n(230307),
     T = n(981631),
-    g = n(731455);
+    S = n(731455);
 ((s = i || (i = {})).UNSET = 'unset'), (s.FETCHING = 'fetching'), (s.FAILED = 'failed'), (s.SUCCEEDED = 'succeeded');
-let S = {
+let g = {
         guilds: [],
         total: 0,
         offset: 0,
@@ -34,20 +34,20 @@ let S = {
         isFirstLoad: !0
     },
     A = {
-        [T.Lcj.FEATURED]: { ...S },
-        [T.Lcj.GAMES_YOU_PLAY]: { ...S },
-        [T.Lcj.MISC]: { ...S },
+        [T.Lcj.FEATURED]: { ...g },
+        [T.Lcj.GAMES_YOU_PLAY]: { ...g },
+        [T.Lcj.MISC]: { ...g },
         [T.Lcj.SEARCH]: {},
-        [g.Hk]: { ...S }
+        [S.Hk]: { ...g }
     },
     N = '',
     O = !1,
     R = 'unset',
     v = null,
-    C = g.Hk,
+    C = S.Hk,
     y = null,
-    L = [],
-    D = (0, p.P)(),
+    D = [],
+    L = (0, p.P)(),
     b = !1;
 function M(e) {
     return {
@@ -101,10 +101,10 @@ class P extends (a = f.ZP.Store) {
         return null === (t = A[T.Lcj.SEARCH][e]) || void 0 === t ? void 0 : t.resultCounts;
     }
     getSeenGuildIds() {
-        return L;
+        return D;
     }
     getLoadId() {
-        return D;
+        return L;
     }
     getIsReady() {
         return b;
@@ -137,7 +137,7 @@ class P extends (a = f.ZP.Store) {
         },
         GUILD_DISCOVERY_FETCH_SUCCESS: function (e) {
             let { guilds: t, section: n, total: r, offset: i, limit: a } = e;
-            (O = !1), (v = Date.now()), (D = (0, p.P)());
+            (O = !1), (v = Date.now()), (L = (0, p.P)());
             let s = E().map(t, M);
             A = {
                 ...A,
@@ -157,7 +157,7 @@ class P extends (a = f.ZP.Store) {
                 (A = {
                     ...A,
                     [t]: {
-                        ...S,
+                        ...g,
                         loading: !1
                     }
                 });
@@ -168,7 +168,7 @@ class P extends (a = f.ZP.Store) {
                 (A = {
                     ...A,
                     [t]: {
-                        ...S,
+                        ...g,
                         ...A[t],
                         loading: !0
                     }
@@ -181,7 +181,7 @@ class P extends (a = f.ZP.Store) {
             A = {
                 ...A,
                 [t]: {
-                    ...S,
+                    ...g,
                     guilds: r,
                     loading: !1,
                     isFirstLoad: !1
@@ -194,7 +194,7 @@ class P extends (a = f.ZP.Store) {
                 (A = {
                     ...A,
                     [t]: {
-                        ...S,
+                        ...g,
                         loading: !1
                     }
                 });
@@ -276,7 +276,7 @@ class P extends (a = f.ZP.Store) {
             if (null != n) {
                 var a;
                 let e = null !== (a = n['categories.id']) && void 0 !== a ? a : {};
-                delete e[g.o3],
+                delete e[S.o3],
                     (i = Object.entries(e)
                         .map((e) => {
                             let [t, n] = e;
@@ -291,7 +291,7 @@ class P extends (a = f.ZP.Store) {
                     ...A[T.Lcj.SEARCH],
                     [r]: {
                         ...A[T.Lcj.SEARCH][r],
-                        resultCounts: [[g.Hk, Math.min(g.lA, t)], ...i]
+                        resultCounts: [[S.Hk, Math.min(S.lA, t)], ...i]
                     }
                 }
             };
@@ -311,10 +311,10 @@ class P extends (a = f.ZP.Store) {
         },
         GUILD_DISCOVERY_GUILD_SEEN: function (e) {
             let { guildId: t } = e;
-            !L.includes(t) && L.push(t);
+            !D.includes(t) && D.push(t);
         },
         GUILD_DISCOVERY_CLEAR_SEEN_GUILDS: function () {
-            L = [];
+            D = [];
         },
         GUILD_DISCOVERY_CATEGORY_FETCH_SUCCESS: function (e) {
             let { forClanDiscovery: t } = e;

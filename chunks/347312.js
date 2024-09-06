@@ -22,11 +22,11 @@ let p = f.e3 / 1000,
     I = 6,
     m = 2,
     T = [0, 0, 0, 0, 0];
-function g(e) {
+function S(e) {
     let { showAll: t, currentTime: n, duration: r, numSegments: i } = e;
     return t ? i : Math.max(0, Math.round((n / r) * i));
 }
-function S(e) {
+function g(e) {
     var t, n, r, i, a;
     let { context: s, devicePixelRatio: o, canvasHeight: l, segmentValue: u, segmentIndex: c, constrainMin: d } = e,
         _ = d ? (24 - m) * u + m : 24 * u;
@@ -49,8 +49,8 @@ function N(e, t, n, r) {
 }
 function O(e) {
     let { className: t, waveform: n, currentTime: a, duration: d, played: m, playing: O, onDrag: R, onDragStart: v, onDragEnd: C } = e,
-        { ref: y, width: L } = (0, u.Z)(),
-        D = i.useMemo(() => {
+        { ref: y, width: D } = (0, u.Z)(),
+        L = i.useMemo(() => {
             var e;
             let t;
             return Math.floor(((t = (e = d) <= p ? 40 : e >= 45 ? 294 : ((Math.min(e, 45) - p) / (45 - p)) * 254 + 40) + 4) / I) * I - 4;
@@ -95,7 +95,7 @@ function O(e) {
                     ? e
                     : T;
             }, [n, r]);
-        })(n, L),
+        })(n, D),
         P = i.useRef(m),
         U = i.useRef(O),
         w = i.useRef(null),
@@ -127,7 +127,7 @@ function O(e) {
             };
         })(m, O);
     i.useEffect(() => {
-        let e = g({
+        let e = S({
             showAll: !m,
             currentTime: a,
             duration: d,
@@ -138,7 +138,7 @@ function O(e) {
         i.useEffect(() => {
             let e = b.current;
             if (null == e) return;
-            let t = g({
+            let t = S({
                 showAll: !m,
                 currentTime: a,
                 duration: d,
@@ -168,7 +168,7 @@ function O(e) {
                     let [l, u] = N(G, k, n, w.current);
                     (s = s || u), (i.fillStyle = l);
                     for (let e = 0; e < M.length; e++)
-                        S({
+                        g({
                             context: i,
                             devicePixelRatio: x,
                             canvasHeight: o,
@@ -186,7 +186,7 @@ function O(e) {
                             n = Math.max(t.getCurrentValue(), M[e] - 0.1);
                         i.beginPath(),
                             (i.fillStyle = t.isReset ? c : _),
-                            S({
+                            g({
                                 context: i,
                                 devicePixelRatio: x,
                                 canvasHeight: o,
@@ -203,7 +203,7 @@ function O(e) {
                     null != e && cancelAnimationFrame(e);
                 }
             );
-        }, [y, x, M, L, a, d, m, O, G, k, B, F, V, H]);
+        }, [y, x, M, D, a, d, m, O, G, k, B, F, V, H]);
     let [, Z] = (0, c.Z)({
         ref: y,
         onDrag: R,
@@ -213,9 +213,9 @@ function O(e) {
     return (0, r.jsx)('canvas', {
         onMouseDown: Z,
         className: s()(h.canvas, t),
-        style: { width: D },
+        style: { width: L },
         ref: y,
         height: 32 * window.devicePixelRatio,
-        width: (null != L ? L : 0) * window.devicePixelRatio
+        width: (null != D ? D : 0) * window.devicePixelRatio
     });
 }

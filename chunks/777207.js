@@ -40,10 +40,10 @@ let _ = Object.fromEntries(Object.keys(u.Z.colors).map((e) => [l()(e), e])),
                     n = 'white';
                     break;
                 default:
-                    var g;
-                    n = null === (g = u.Z.colors[_[f]]) || void 0 === g ? void 0 : g.css;
+                    var S;
+                    n = null === (S = u.Z.colors[_[f]]) || void 0 === S ? void 0 : S.css;
             }
-        let S = {
+        let g = {
             color: n,
             ...T,
             ...I.style
@@ -62,7 +62,7 @@ let _ = Object.fromEntries(Object.keys(u.Z.colors).map((e) => [l()(e), e])),
                 l
             ),
             ...I,
-            style: Object.values(S).filter(Boolean).length > 0 ? S : void 0,
+            style: Object.values(g).filter(Boolean).length > 0 ? g : void 0,
             'data-text-variant': i
         });
     });

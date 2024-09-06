@@ -6,8 +6,8 @@ n.d(t, {
     n(47120),
     n(773603);
 var i = n(470079),
-    a = n(442837),
-    s = n(693546),
+    s = n(442837),
+    a = n(693546),
     l = n(826581),
     r = n(937111),
     o = n(430824),
@@ -16,11 +16,11 @@ var i = n(470079),
     d = n(981631);
 function h(e) {
     let [t, n] = i.useState(!1),
-        [h, p] = i.useState(!1),
-        m = u.default.cast(e),
-        { joinRequest: _, guild: f } = (0, a.cj)([l.Z, r.Z, o.Z, c.Z], () => {
+        [h, m] = i.useState(!1),
+        p = u.default.cast(e),
+        { joinRequest: _, guild: f } = (0, s.cj)([l.Z, r.Z, o.Z, c.Z], () => {
             var e;
-            let t = l.Z.getRequest(m);
+            let t = l.Z.getRequest(p);
             if (null == t)
                 return {
                     joinRequest: null,
@@ -36,15 +36,15 @@ function h(e) {
         });
     return (
         i.useEffect(() => {
-            null == f && !h && (p(!0), s.Z.fetchRequestToJoinGuilds());
+            null == f && !h && (m(!0), a.Z.fetchRequestToJoinGuilds());
         }, [f, h]),
         i.useEffect(() => {
             null == _ &&
                 (n(!0),
-                s.Z.fetchGuildJoinRequest(m).finally(() => {
+                a.Z.fetchGuildJoinRequest(p).finally(() => {
                     n(!1);
                 }));
-        }, [_, m]),
+        }, [_, p]),
         {
             loading: t,
             joinRequest: _,

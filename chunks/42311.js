@@ -5,15 +5,15 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(120356),
-    s = n.n(a),
+var s = n(120356),
+    a = n.n(s),
     l = n(481060),
     r = n(626786),
     o = n(55043);
 function c(e) {
-    let { className: t, roleColor: n, roleName: a, hasRemoveIcon: c = !1, onClick: u, disabled: d = !1, verified: h = !1 } = e;
+    let { className: t, roleColor: n, roleName: s, hasRemoveIcon: c = !1, onClick: u, disabled: d = !1, verified: h = !1 } = e;
     return (0, i.jsx)(l.Button, {
-        className: s()(t, o.button),
+        className: a()(t, o.button),
         look: l.Button.Looks.BLANK,
         size: l.Button.Sizes.NONE,
         onClick: u,
@@ -21,7 +21,7 @@ function c(e) {
         children: (0, i.jsx)(r.Z, {
             className: o.role,
             roleColor: n,
-            roleName: a,
+            roleName: s,
             verified: h,
             children:
                 c &&

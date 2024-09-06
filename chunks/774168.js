@@ -1,21 +1,21 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return m;
     }
 }),
     n(47120);
 var i = n(735250),
-    a = n(470079),
-    s = n(120356),
-    l = n.n(s),
+    s = n(470079),
+    a = n(120356),
+    l = n.n(a),
     r = n(772848),
     o = n(960259),
     c = n(481060),
     u = n(481051),
     d = n(600907);
 function h(e) {
-    let { width: t = 24, height: n = 24, isBadged: s = !1, isTyping: l = !1 } = e,
-        [u] = a.useState(() => (0, r.Z)()),
+    let { width: t = 24, height: n = 24, isBadged: a = !1, isTyping: l = !1 } = e,
+        [u] = s.useState(() => (0, r.Z)()),
         d = (0, o.bW)().enabled;
     return (0, i.jsxs)('svg', {
         width: t,
@@ -41,7 +41,7 @@ function h(e) {
                                     fill: 'black'
                                 })
                             }),
-                        s &&
+                        a &&
                             (0, i.jsx)('circle', {
                                 cx: '20',
                                 cy: '19',
@@ -69,23 +69,23 @@ function h(e) {
         ]
     });
 }
-function p(e) {
+function m(e) {
     var t;
-    let { className: n, unreadCount: a, mentionCount: s, isTyping: r, canBadge: o } = e,
-        c = null != s && s > 0,
-        p = null !== (t = c ? s : a) && void 0 !== t ? t : 0,
-        m = o && null != a && a > 0;
+    let { className: n, unreadCount: s, mentionCount: a, isTyping: r, canBadge: o } = e,
+        c = null != a && a > 0,
+        m = null !== (t = c ? a : s) && void 0 !== t ? t : 0,
+        p = o && null != s && s > 0;
     return (0, i.jsxs)('div', {
         className: l()(d.chatIcon, n),
         children: [
             (0, i.jsx)(h, {
-                isBadged: m,
+                isBadged: p,
                 isTyping: r
             }),
-            m &&
+            p &&
                 (0, i.jsx)(u.Z, {
                     hasMentions: c,
-                    truncatedCount: p > 99 ? '99+' : p,
+                    truncatedCount: m > 99 ? '99+' : m,
                     className: d.badge
                 })
         ]

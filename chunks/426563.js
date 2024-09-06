@@ -20,8 +20,8 @@ var r = n(526167),
     I = n(910826),
     m = n(307244),
     T = n(669730),
-    g = n(666828),
-    S = n(131999),
+    S = n(666828),
+    g = n(131999),
     A = n(185672),
     N = n(235731);
 function O() {
@@ -33,8 +33,8 @@ t.Z = {
     DEFAULT_GROUP_DM_AVATARS: [d, _, E, f, h, p, I, m],
     BOT_AVATARS: {
         clyde: A,
-        nitro: g,
-        nitro_wumpus: S
+        nitro: S,
+        nitro_wumpus: g
     },
     DEFAULT_CHANNEL_ICON: T,
     canUseWebp: function () {

@@ -29,7 +29,7 @@ function o(e) {
     let { focusPath: h } = _,
         [p, I] = r.useState(!1),
         [m, T] = r.useState(!1),
-        [{ onItemFocusMemoizer: g, onItemMouseEnterMemoizer: S }] = r.useState(() => ({
+        [{ onItemFocusMemoizer: S, onItemMouseEnterMemoizer: g }] = r.useState(() => ({
             onItemFocusMemoizer: new s.$o((e) => () => {
                 I(!0),
                     E({
@@ -130,7 +130,7 @@ function o(e) {
             },
             [t, h, v, _.focusIndex, m]
         ),
-        L = r.useCallback(
+        D = r.useCallback(
             (e) => {
                 let { path: n, hasSubmenu: r = !1, navigable: i = !0, role: a = 'menuitem' } = e,
                     o = n.join('--');
@@ -144,21 +144,21 @@ function o(e) {
                     role: a,
                     id: (0, s.qR)(t, o),
                     tabIndex: -1,
-                    onFocus: i ? g.get(o) : () => {},
-                    onMouseEnter: i ? S.get(o) : () => {}
+                    onFocus: i ? S.get(o) : () => {},
+                    onMouseEnter: i ? g.get(o) : () => {}
                 };
             },
-            [t, v, g, S]
+            [t, v, S, g]
         );
     return r.useMemo(
         () => ({
             dispatch: f,
             getContainerProps: C,
             getSubmenuProps: y,
-            getItemProps: L,
+            getItemProps: D,
             isFocused: v,
             isUsingKeyboardNavigation: m
         }),
-        [f, C, y, L, v, m]
+        [f, C, y, D, v, m]
     );
 }

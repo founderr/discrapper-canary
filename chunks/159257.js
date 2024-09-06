@@ -32,18 +32,18 @@ function _(e, t, n) {
         { addGlobalListener: p, removeGlobalListener: I } = (0, r.xi)(),
         m = (0, a.useRef)(null),
         T = 'rtl' === h,
-        g = (0, a.useRef)(null),
-        { moveProps: S } = (0, s.r_)({
+        S = (0, a.useRef)(null),
+        { moveProps: g } = (0, s.r_)({
             onMoveStart() {
-                g.current = null;
+                S.current = null;
             },
             onMove({ deltaX: e, deltaY: r }) {
                 let { height: a, width: s } = n.current.getBoundingClientRect(),
                     o = f ? a : s;
-                null == g.current && (g.current = t.getThumbPercent(m.current) * o);
+                null == S.current && (S.current = t.getThumbPercent(m.current) * o);
                 let l = f ? r : e;
-                if (((f || T) && (l = -l), (g.current += l), null != m.current && n.current)) {
-                    let e = (0, i.uZ)(g.current / o, 0, 1);
+                if (((f || T) && (l = -l), (S.current += l), null != m.current && n.current)) {
+                    let e = (0, i.uZ)(S.current / o, 0, 1);
                     t.setThumbPercent(m.current, e);
                 }
             },
@@ -97,7 +97,7 @@ function _(e, t, n) {
                         touchAction: 'none'
                     }
                 },
-                S
+                g
             ),
             outputProps: {
                 htmlFor: t.values.map((e, n) => d(t, n)).join(' '),
@@ -109,8 +109,8 @@ function _(e, t, n) {
 function E(e, t) {
     var n;
     let { index: _ = 0, isRequired: E, validationState: f, isInvalid: h, trackRef: p, inputRef: I, orientation: m = t.orientation, name: T } = e,
-        g = e.isDisabled || t.isDisabled,
-        S = 'vertical' === m,
+        S = e.isDisabled || t.isDisabled,
+        g = 'vertical' === m,
         { direction: A } = (0, l.bU)(),
         { addGlobalListener: N, removeGlobalListener: O } = (0, r.xi)(),
         R = c.get(t),
@@ -120,13 +120,13 @@ function E(e, t) {
             'aria-labelledby': `${R.id} ${null !== (n = e['aria-labelledby']) && void 0 !== n ? n : ''}`.trim()
         }),
         y = t.values[_],
-        L = (0, a.useCallback)(() => {
+        D = (0, a.useCallback)(() => {
             I.current && (0, r.Ao)(I.current);
         }, [I]),
-        D = t.focusedThumb === _;
+        L = t.focusedThumb === _;
     (0, a.useEffect)(() => {
-        D && L();
-    }, [D, L]);
+        L && D();
+    }, [L, D]);
     let b = 'rtl' === A,
         M = (0, a.useRef)(null),
         { keyboardProps: P } = (0, s.v5)({
@@ -159,18 +159,18 @@ function E(e, t) {
             onMove({ deltaX: e, deltaY: n, pointerType: r, shiftKey: a }) {
                 let { getThumbPercent: s, setThumbPercent: o, decrementThumb: l, incrementThumb: u, step: c, pageSize: d } = t,
                     { width: E, height: f } = p.current.getBoundingClientRect(),
-                    h = S ? f : E;
+                    h = g ? f : E;
                 if ((null == M.current && (M.current = s(_) * h), 'keyboard' === r)) (e > 0 && b) || (e < 0 && !b) || n > 0 ? l(_, a ? d : c) : u(_, a ? d : c);
                 else {
-                    let t = S ? n : e;
-                    (S || b) && (t = -t), (M.current += t), o(_, (0, i.uZ)(M.current / h, 0, 1));
+                    let t = g ? n : e;
+                    (g || b) && (t = -t), (M.current += t), o(_, (0, i.uZ)(M.current / h, 0, 1));
                 }
             },
             onMoveEnd() {
                 t.setThumbDragging(_, !1);
             }
         });
-    t.setThumbEditable(_, !g);
+    t.setThumbEditable(_, !S);
     let { focusableProps: w } = (0, u.kc)(
             (0, r.dG)(e, {
                 onFocus: () => t.setFocusedThumb(_),
@@ -180,15 +180,15 @@ function E(e, t) {
         ),
         x = (0, a.useRef)(void 0),
         G = (e) => {
-            L(), (x.current = e), t.setThumbDragging(_, !0), N(window, 'mouseup', k, !1), N(window, 'touchend', k, !1), N(window, 'pointerup', k, !1);
+            D(), (x.current = e), t.setThumbDragging(_, !0), N(window, 'mouseup', k, !1), N(window, 'touchend', k, !1), N(window, 'pointerup', k, !1);
         },
         k = (e) => {
             var n, r;
-            (null !== (r = e.pointerId) && void 0 !== r ? r : null === (n = e.changedTouches) || void 0 === n ? void 0 : n[0].identifier) === x.current && (L(), t.setThumbDragging(_, !1), O(window, 'mouseup', k, !1), O(window, 'touchend', k, !1), O(window, 'pointerup', k, !1));
+            (null !== (r = e.pointerId) && void 0 !== r ? r : null === (n = e.changedTouches) || void 0 === n ? void 0 : n[0].identifier) === x.current && (D(), t.setThumbDragging(_, !1), O(window, 'mouseup', k, !1), O(window, 'touchend', k, !1), O(window, 'pointerup', k, !1));
         },
         B = t.getThumbPercent(_);
-    (S || 'rtl' === A) && (B = 1 - B);
-    let F = g
+    (g || 'rtl' === A) && (B = 1 - B);
+    let F = S
         ? {}
         : (0, r.dG)(P, U, {
               onMouseDown: (e) => {
@@ -208,13 +208,13 @@ function E(e, t) {
         {
             inputProps: (0, r.dG)(w, C, {
                 type: 'range',
-                tabIndex: g ? void 0 : 0,
+                tabIndex: S ? void 0 : 0,
                 min: t.getThumbMinValue(_),
                 max: t.getThumbMaxValue(_),
                 step: t.step,
                 value: y,
                 name: T,
-                disabled: g,
+                disabled: S,
                 'aria-orientation': m,
                 'aria-valuetext': t.getThumbValueLabel(_),
                 'aria-required': E || void 0,
@@ -230,15 +230,15 @@ function E(e, t) {
                 ...F,
                 style: {
                     position: 'absolute',
-                    [S ? 'top' : 'left']: `${100 * B}%`,
+                    [g ? 'top' : 'left']: `${100 * B}%`,
                     transform: 'translate(-50%, -50%)',
                     touchAction: 'none'
                 }
             },
             labelProps: v,
             isDragging: t.isThumbDragging(_),
-            isDisabled: g,
-            isFocused: D
+            isDisabled: S,
+            isFocused: L
         }
     );
 }

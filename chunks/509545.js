@@ -16,7 +16,7 @@ let f = {},
     I = new Set(),
     m = {},
     T = {};
-function g(e) {
+function S(e) {
     let t = e.skuId;
     f[e.id] = e;
     let n = e.prices[_.tuJ.DEFAULT];
@@ -30,9 +30,9 @@ function g(e) {
     let i = h[t];
     null != i ? i.add(e.id) : (h[t] = new Set([e.id]));
 }
-function S() {
+function g() {
     [E.GP[E.Xh.NONE_MONTH], E.GP[E.Xh.NONE_YEAR], E.GP[E.Xh.NONE_3_MONTH], E.GP[E.Xh.NONE_6_MONTH]].forEach((e) =>
-        g(
+        S(
             u.ZP.createFromServer({
                 id: e.id,
                 name: e.name,
@@ -49,11 +49,11 @@ function S() {
     );
 }
 function A(e) {
-    g(u.ZP.createFromServer(e));
+    S(u.ZP.createFromServer(e));
 }
-S();
+g();
 function N() {
-    (0, c.Ti)(f), (0, c.Ti)(h), p.clear(), I.clear(), (0, c.Ti)(m), (0, c.Ti)(T), S();
+    (0, c.Ti)(f), (0, c.Ti)(h), p.clear(), I.clear(), (0, c.Ti)(m), (0, c.Ti)(T), g();
 }
 let O = [E.rV.DAY, E.rV.MONTH, E.rV.YEAR];
 class R extends (r = o.ZP.Store) {

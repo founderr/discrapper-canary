@@ -6,7 +6,7 @@ n.d(t, {
         return T;
     },
     rR: function () {
-        return g;
+        return S;
     }
 }),
     n(47120);
@@ -53,7 +53,7 @@ function T() {
         (e) => e.name
     ]);
 }
-function g(e) {
+function S(e) {
     let [t, n] = r.useState(!1);
     function i(e) {
         let { key: t } = e;

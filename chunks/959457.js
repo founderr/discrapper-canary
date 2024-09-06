@@ -15,8 +15,8 @@ var a,
     I = n(444852),
     m = n(569545),
     T = n(687516),
-    g = n(139656),
-    S = n(358085),
+    S = n(139656),
+    g = n(358085),
     A = n(199902),
     N = n(314897),
     O = n(592125),
@@ -24,8 +24,8 @@ var a,
     v = n(158776),
     C = n(19780),
     y = n(981631),
-    L = n(65154);
-let D = {},
+    D = n(65154);
+let L = {},
     b = {},
     M = {},
     P = {},
@@ -44,7 +44,7 @@ function k(e) {
         e
             .filter((e) => {
                 let { connection: t } = e;
-                return t.context === L.Yn.STREAM;
+                return t.context === D.Yn.STREAM;
             })
             .forEach((e) => {
                 let { stats: t } = e;
@@ -59,7 +59,7 @@ function B() {
 }
 class F extends (a = E.ZP.Store) {
     getActiveStreamKey() {
-        return (0, g.Z)(R.Z) ? i : null;
+        return (0, S.Z)(R.Z) ? i : null;
     }
     getRTCConnections() {
         return w;
@@ -71,7 +71,7 @@ class F extends (a = E.ZP.Store) {
         return w[e];
     }
     getStatsHistory(e, t, n) {
-        if (!(0, g.Z)(R.Z) || null == t) return null;
+        if (!(0, S.Z)(R.Z) || null == t) return null;
         if (n) {
             let n = A.Z.getActiveStreamForUser(t, e);
             if (null == n || 0 === A.Z.getViewerIds(n).length) return null;
@@ -110,7 +110,7 @@ class F extends (a = E.ZP.Store) {
         );
     }
     getQuality() {
-        if (!(0, g.Z)(R.Z)) return y.IE4.UNKNOWN;
+        if (!(0, S.Z)(R.Z)) return y.IE4.UNKNOWN;
         let e = this.getActiveStreamKey(),
             t = null != e ? w[e] : null;
         return null != t ? t.quality : y.IE4.UNKNOWN;
@@ -202,7 +202,7 @@ class F extends (a = E.ZP.Store) {
                               ownerId: N.default.getId()
                           });
                       if (
-                          ((D[o] = i),
+                          ((L[o] = i),
                           _().forEach(w, (e) => {
                               let { analyticsContext: t } = e;
                               t.setActionContext(i);
@@ -223,7 +223,7 @@ class F extends (a = E.ZP.Store) {
                   },
                   STREAM_STOP: function (e) {
                       let { appContext: t, streamKey: n } = e;
-                      (D[n] = t),
+                      (L[n] = t),
                           _().forEach(w, (e) => {
                               let { analyticsContext: n } = e;
                               n.setActionContext(t);
@@ -248,7 +248,7 @@ class F extends (a = E.ZP.Store) {
                                   streamSourceType: (function (e) {
                                       var t, n, r;
                                       if (null == e) return 'unknown';
-                                      if (S.isPlatformEmbedded || (null === (t = platform) || void 0 === t ? void 0 : t.name) === 'Chrome') {
+                                      if (g.isPlatformEmbedded || (null === (t = platform) || void 0 === t ? void 0 : t.name) === 'Chrome') {
                                           if (e.startsWith('web-contents-media-stream:')) return 'tab';
                                           if (e.startsWith('window:')) return 'window';
                                           else if (e.startsWith('screen:')) return 'screen';
@@ -256,7 +256,7 @@ class F extends (a = E.ZP.Store) {
                                       else if ((null === (r = platform) || void 0 === r ? void 0 : r.name) === 'Safari') return 'window';
                                       return 'unknown';
                                   })(P[t]),
-                                  actionContext: D[t],
+                                  actionContext: L[t],
                                   numViewers: null != s ? s.length : 0,
                                   isBroadcast: _
                               });

@@ -29,10 +29,10 @@ var r = n(512722),
     I = n(979651),
     m = n(585483),
     T = n(124368),
-    g = n(981631),
-    S = n(176505);
+    S = n(981631),
+    g = n(176505);
 function A(e, t, n) {
-    u.UI.dispatch(g.CkL.POPOUT_CLOSE);
+    u.UI.dispatch(S.CkL.POPOUT_CLOSE);
     let r = !s().isEmpty(I.Z.getVoiceStatesForChannel(e.id));
     if (t || !f.vF.getSetting() || __OVERLAY__ || r) {
         o.Z.dispatch({
@@ -44,22 +44,22 @@ function A(e, t, n) {
     }
     i()(null != e.parent_id, 'all threads must have parents');
     let a = p.Z.getChannelId();
-    e.parent_id !== a && !(0, S.ME)(a) && (0, E.Kh)(e.parent_id),
-        (0, _.uL)(g.Z5c.CHANNEL_THREAD_VIEW((0, d.e)(e), (0, S.ME)(a) ? S.oC.GUILD_HOME : e.parent_id, e.id), e.isForumPost() ? { source: T.on.FORUM } : void 0),
+    e.parent_id !== a && !(0, g.ME)(a) && (0, E.Kh)(e.parent_id),
+        (0, _.uL)(S.Z5c.CHANNEL_THREAD_VIEW((0, d.e)(e), (0, g.ME)(a) ? g.oC.GUILD_HOME : e.parent_id, e.id), e.isForumPost() ? { source: T.on.FORUM } : void 0),
         setTimeout(() => {
-            m.S.dispatch(g.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: e.id });
+            m.S.dispatch(S.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: e.id });
         }, 0);
 }
 function N(e, t, n) {
     if (
         (i()(!e.isForumLikeChannel(), 'cannot open thread creation sidebar in forums'),
         i()(!__OVERLAY__, 'Cannot create threads in the overlay.'),
-        (0, c.yw)(g.rMx.THREAD_CREATION_STARTED, {
+        (0, c.yw)(S.rMx.THREAD_CREATION_STARTED, {
             location: n,
             channel_id: e.id,
             guild_id: e.guild_id
         }),
-        u.UI.dispatch(g.CkL.POPOUT_CLOSE),
+        u.UI.dispatch(S.CkL.POPOUT_CLOSE),
         p.Z.getChannelId() !== e.id && (0, E.Kh)(e.id),
         '' === h.Z.getDraft(e.id, h.d.FirstThreadMessage))
     ) {
@@ -76,7 +76,7 @@ function N(e, t, n) {
     }, 0);
 }
 function O(e, t) {
-    (0, _.uL)(g.Z5c.CHANNEL(e, (0, S.ME)(t) ? S.oC.GUILD_HOME : t)),
+    (0, _.uL)(S.Z5c.CHANNEL(e, (0, g.ME)(t) ? g.oC.GUILD_HOME : t)),
         o.Z.dispatch({
             type: 'SIDEBAR_CLOSE',
             baseChannelId: t

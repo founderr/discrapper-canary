@@ -3,7 +3,7 @@ n.d(t, {
         return R;
     },
     t: function () {
-        return g;
+        return S;
     }
 }),
     n(47120),
@@ -37,7 +37,7 @@ function m(e, t, n) {
     );
 }
 let T = new WeakMap();
-function g(e, t) {
+function S(e, t) {
     if (e.contains(t)) return !0;
     let n = (0, f.Z)(t, I.layer);
     for (; null != n; ) {
@@ -48,7 +48,7 @@ function g(e, t) {
     }
     return !1;
 }
-function S(e) {
+function g(e) {
     let { positionKey: t, position: n, align: r } = e;
     return null != t ? t : ''.concat(n, ':').concat(r);
 }
@@ -283,7 +283,7 @@ class R extends (r = a.Component) {
     }
     componentDidUpdate(e, t) {
         if (
-            ((S(e) !== S(this.props) ||
+            ((g(e) !== g(this.props) ||
                 !(function (e, t) {
                     let n = O(e),
                         r = O(t);

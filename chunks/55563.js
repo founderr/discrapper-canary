@@ -28,10 +28,10 @@ function T(e) {
         !I.has(e.application_id) && I.set(e.application_id, new Set()),
         I.get(e.application_id).add(e.id);
 }
-function g(e) {
+function S(e) {
     T(e);
 }
-function S(e) {
+function g(e) {
     T(e.sku), null != e.child_skus && e.child_skus.forEach((e) => T(e)), null != e.alternative_skus && e.alternative_skus.forEach((e) => T(e));
 }
 function A(e) {
@@ -90,11 +90,11 @@ class R extends (i = l.yh) {
         },
         STORE_LISTINGS_FETCH_SUCCESS: function (e) {
             let { storeListings: t } = e;
-            for (let e of t) S(e);
+            for (let e of t) g(e);
         },
         STORE_LISTING_FETCH_SUCCESS: function (e) {
             let { storeListing: t } = e;
-            S(t);
+            g(t);
         },
         GIFT_CODE_RESOLVE_SUCCESS: function (e) {
             let { giftCode: t } = e;

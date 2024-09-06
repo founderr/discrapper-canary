@@ -3,7 +3,7 @@ n.d(t, {
         return I;
     },
     So: function () {
-        return g;
+        return S;
     },
     mc: function () {
         return T;
@@ -48,7 +48,7 @@ function m(e) {
 function T(e, t) {
     return e === f.LY.RESOLUTION_720 && t !== f.ws.FPS_60;
 }
-function g(e) {
+function S(e) {
     let { activated: t } = (0, u.k)(e);
     return t;
 }

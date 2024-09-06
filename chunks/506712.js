@@ -33,7 +33,7 @@ function d(e, t, n, r, i) {
             var t;
             return Number(null !== (t = e.num_three_month_opens) && void 0 !== t ? t : 0);
         }),
-        g = [
+        S = [
             m,
             T,
             _('six month', r, f, (e) => {
@@ -42,21 +42,21 @@ function d(e, t, n, r, i) {
             }),
             I
         ],
-        S = 0,
+        g = 0,
         A = 0;
     f.forEach((e) => {
         var t;
-        S++, (A += null !== (t = Number(e.num_messages)) && void 0 !== t ? t : 0);
+        g++, (A += null !== (t = Number(e.num_messages)) && void 0 !== t ? t : 0);
     });
     let N = '\n**Pain**:\n- Everyones: '
             .concat(c.XR[null !== (o = h.everyones) && void 0 !== o ? o : 0], '\n- Messages: ')
             .concat(c.XR[null !== (u = h.messages) && void 0 !== u ? u : 0], '\n- Size: ')
             .concat(p, '\n**Remote**:\n- Channels: ')
-            .concat(S, '\n- AllVisits: ')
-            .concat(g.map((e) => e.totalOpensAcrossAllServers).join(' / '), '\n- GuildVisits: ')
-            .concat(g.map((e) => e.guildOpens).join(' / '), '\n- Biggest Channel (abs): ')
-            .concat(g.map((e) => e.biggestChannel).join(' / '), '\n- Biggest Channel (%): ')
-            .concat(g.map((e) => e.biggestChannelFormatted).join(' / '), '\n- Sent Msgs: ')
+            .concat(g, '\n- AllVisits: ')
+            .concat(S.map((e) => e.totalOpensAcrossAllServers).join(' / '), '\n- GuildVisits: ')
+            .concat(S.map((e) => e.guildOpens).join(' / '), '\n- Biggest Channel (abs): ')
+            .concat(S.map((e) => e.biggestChannel).join(' / '), '\n- Biggest Channel (%): ')
+            .concat(S.map((e) => e.biggestChannelFormatted).join(' / '), '\n- Sent Msgs: ')
             .concat(A, '\n'),
         O = T.guildOpens >= 0.02 * T.totalOpensAcrossAllServers,
         R = (null !== (d = I.guildOpens) && void 0 !== d ? d : 0) > 0;

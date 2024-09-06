@@ -28,8 +28,8 @@ var i = n(735250),
     v = n(58755);
 t.Z = a.memo(function (e) {
     var t, n;
-    let { message: a, compact: s = !1, className: L, onContextMenu: Z, onClick: P, hideSimpleEmbedContent: b = !0, channel: D, isGroupStart: j, animateAvatar: U, subscribeToComponentDispatch: y, renderThreadAccessory: B, trackAnnouncementViews: k = !1, ...G } = e,
-        F = a.type === M.uaV.POLL_RESULT || (null !== (t = e.disableInteraction) && void 0 !== t && t),
+    let { message: a, compact: s = !1, className: L, onContextMenu: Z, onClick: P, hideSimpleEmbedContent: b = !0, channel: D, isGroupStart: j, animateAvatar: U, subscribeToComponentDispatch: y, renderThreadAccessory: B, trackAnnouncementViews: k = !1, ...F } = e,
+        G = a.type === M.uaV.POLL_RESULT || (null !== (t = e.disableInteraction) && void 0 !== t && t),
         w = a.isFirstMessageInForumPost(D),
         V = (0, u.A)((null !== (n = a.editedTimestamp) && void 0 !== n ? n : a.timestamp).valueOf()),
         { content: H, hasSpoilerEmbeds: Y } = (0, C.Z)(a, {
@@ -61,9 +61,9 @@ t.Z = a.memo(function (e) {
         compact: s,
         className: r()(L, {
             [v.ephemeral]: (0, I.yE)(a.flags, M.iLy.EPHEMERAL),
-            [v.disableInteraction]: F
+            [v.disableInteraction]: G
         }),
-        disableInteraction: F,
+        disableInteraction: G,
         childrenRepliedMessage: (0, x.Z)(a, D, W, K, s),
         childrenExecutedCommand: (0, O.Z)(a, D, s),
         childrenHeader: (0, A.Z)({
@@ -76,7 +76,7 @@ t.Z = a.memo(function (e) {
         childrenMessageContent: (0, S.Z)(e, H),
         childrenSystemMessage: (0, R.Z)({
             ...e,
-            disableInteraction: F
+            disableInteraction: G
         }),
         onContextMenu: Z,
         onClick: P,
@@ -86,6 +86,6 @@ t.Z = a.memo(function (e) {
         'aria-describedby': et,
         messageRef: $,
         ...z,
-        ...G
+        ...F
     });
 });

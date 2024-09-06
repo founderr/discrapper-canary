@@ -24,7 +24,7 @@ function d(e, t, n) {
         });
     return (0, i.forwardRef)(function (n, E) {
         var f;
-        let { onScroll: h, dir: p = 'ltr', sections: I, columns: m, getItemKey: T, getItemHeight: g, getSectionHeight: S, chunkSize: A, renderSection: N, renderItem: O, getSectionProps: R, itemGutter: v, removeEdgeItemGutters: C, sectionGutter: y, padding: L, paddingVertical: D, paddingHorizontal: b, fade: M = !1, className: P, style: U, maxContentWidth: w, renderAccessory: x, onItemVisibilityChange: G, ...k } = n,
+        let { onScroll: h, dir: p = 'ltr', sections: I, columns: m, getItemKey: T, getItemHeight: S, getSectionHeight: g, chunkSize: A, renderSection: N, renderItem: O, getSectionProps: R, itemGutter: v, removeEdgeItemGutters: C, sectionGutter: y, padding: D, paddingVertical: L, paddingHorizontal: b, fade: M = !1, className: P, style: U, maxContentWidth: w, renderAccessory: x, onItemVisibilityChange: G, ...k } = n,
             B = i.useRef(null),
             F = i.useRef(null),
             V = i.useRef({}),
@@ -49,14 +49,14 @@ function d(e, t, n) {
             sections: I,
             columns: m,
             getItemKey: T,
-            getItemHeight: g,
-            getSectionHeight: S,
+            getItemHeight: S,
+            getSectionHeight: g,
             chunkSize: A,
             itemGutter: v,
             removeEdgeItemGutters: C,
             sectionGutter: y,
-            padding: L,
-            paddingVertical: D,
+            padding: D,
+            paddingVertical: L,
             paddingHorizontal: b,
             getScrollerState: W,
             dir: p,

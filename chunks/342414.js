@@ -13,11 +13,11 @@ var a = n(120356),
     T = n(823188),
     I = n(184176),
     R = n(938736),
-    C = n(386733),
-    g = n(689938),
+    g = n(386733),
+    C = n(689938),
     N = n(636013),
-    p = n(872905),
-    m = n(578478);
+    m = n(872905),
+    p = n(578478);
 let A = (e) => {
         let { className: t, inTrial: n } = e;
         return (0, s.jsx)(s.Fragment, {
@@ -26,7 +26,7 @@ let A = (e) => {
                 'data-testid': 'subscriber-nitro-home-hero-header',
                 children: [
                     (0, s.jsx)('img', {
-                        src: p,
+                        src: m,
                         alt: '',
                         className: N.headerArt
                     }),
@@ -34,20 +34,20 @@ let A = (e) => {
                         className: N.content,
                         children: [
                             (0, s.jsx)(T.Cy, {
-                                text: g.Z.Messages.PREMIUM_TIER_CARD_TRIAL_ACTIVATED,
+                                text: C.Z.Messages.PREMIUM_TIER_CARD_TRIAL_ACTIVATED,
                                 className: r()(N.trialPill, { [N.hidden]: !n }),
                                 colorOptions: T.VE.PREMIUM_TIER_2_WHITE_FILL
                             }),
                             (0, s.jsx)(l.Heading, {
                                 variant: 'display-lg',
                                 color: 'always-white',
-                                children: g.Z.Messages.SUBSCRIBER_NITRO_HOME_TITLE_ONE_LINE
+                                children: C.Z.Messages.SUBSCRIBER_NITRO_HOME_TITLE_ONE_LINE
                             }),
                             (0, s.jsx)('div', {
                                 className: N.buttonContainer,
                                 children: (0, s.jsx)(E.Z, {
                                     color: l.ButtonColors.BRAND,
-                                    buttonText: g.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_HEADING,
+                                    buttonText: C.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_HEADING,
                                     className: N.button,
                                     isGift: !0
                                 })
@@ -65,7 +65,7 @@ let A = (e) => {
         return (0, s.jsxs)(s.Fragment, {
             children: [
                 (0, s.jsx)('img', {
-                    src: m,
+                    src: p,
                     alt: '',
                     className: N.headerArtV2
                 }),
@@ -76,26 +76,26 @@ let A = (e) => {
                         className: N.contentV2,
                         children: [
                             (0, s.jsx)(T.Cy, {
-                                text: g.Z.Messages.PREMIUM_TIER_CARD_TRIAL_ACTIVATED,
+                                text: C.Z.Messages.PREMIUM_TIER_CARD_TRIAL_ACTIVATED,
                                 className: r()(N.trialPill, { [N.hidden]: !t }),
                                 colorOptions: T.VE.PREMIUM_TIER_2_WHITE_FILL
                             }),
                             (0, s.jsx)(l.Heading, {
                                 variant: 'display-lg',
                                 color: 'always-white',
-                                children: g.Z.Messages.SUBSCRIBER_NITRO_HOME_TITLE_ONE_LINE
+                                children: C.Z.Messages.SUBSCRIBER_NITRO_HOME_TITLE_ONE_LINE
                             }),
                             i &&
                                 (0, s.jsx)('div', {
                                     className: N.buttonContainer,
                                     children: (0, s.jsx)(E.Z, {
                                         color: l.ButtonColors.BRAND,
-                                        buttonText: g.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_HEADING,
+                                        buttonText: C.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_HEADING,
                                         className: N.button,
                                         isGift: !0
                                     })
                                 }),
-                            (0, s.jsx)(C.Z, {})
+                            (0, s.jsx)(g.Z, {})
                         ]
                     })
                 })
@@ -106,7 +106,7 @@ let A = (e) => {
         (0, s.jsxs)(s.Fragment, {
             children: [
                 (0, s.jsx)('img', {
-                    src: m,
+                    src: p,
                     alt: '',
                     className: N.headerArtV2
                 }),
@@ -121,7 +121,7 @@ let A = (e) => {
                                 children: (0, s.jsx)(l.Heading, {
                                     variant: 'display-lg',
                                     color: 'always-white',
-                                    children: g.Z.Messages.SUBSCRIBER_NITRO_HOME_TITLE_ONE_LINE
+                                    children: C.Z.Messages.SUBSCRIBER_NITRO_HOME_TITLE_ONE_LINE
                                 })
                             }),
                             (0, s.jsx)(I.Z, {})

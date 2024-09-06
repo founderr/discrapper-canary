@@ -9,7 +9,7 @@ n.d(t, {
         return d;
     },
     Zx: function () {
-        return g;
+        return S;
     },
     _9: function () {
         return f;
@@ -197,7 +197,7 @@ async function T(e) {
         throw e;
     }
 }
-async function g(e) {
+async function S(e) {
     try {
         await r.tn.post({ url: l.ANM.JOIN_WUMPUS_FEEDBACK_SQUAD(e) });
     } catch (e) {

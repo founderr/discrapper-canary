@@ -5,8 +5,8 @@ n.d(t, {
 }),
     n(653041);
 var i = n(735250),
-    a = n(470079),
-    s = n(442837),
+    s = n(470079),
+    a = n(442837),
     l = n(704215),
     r = n(890977),
     o = n(605236),
@@ -14,9 +14,9 @@ var i = n(735250),
     u = n(375954),
     d = n(921944);
 function h(e) {
-    let { children: t, enabled: n, animationContainerClassName: h, glowClassName: p, trinketsClassName: m } = e,
-        _ = (0, s.e7)([u.Z], () => u.Z.hasCurrentUserSentMessageSinceAppStart()),
-        f = a.useMemo(() => {
+    let { children: t, enabled: n, animationContainerClassName: h, glowClassName: m, trinketsClassName: p } = e,
+        _ = (0, a.e7)([u.Z], () => u.Z.hasCurrentUserSentMessageSinceAppStart()),
+        f = s.useMemo(() => {
             let e = [];
             return _ && n && e.push(l.z.ACTIVITIES_CHAT_BUTTON_NUX_V2), e;
         }, [_, n]),
@@ -30,8 +30,8 @@ function h(e) {
             if (n === l.z.ACTIVITIES_CHAT_BUTTON_NUX_V2)
                 return (0, i.jsx)(r.b, {
                     animationContainerClassName: h,
-                    glowClassName: p,
-                    trinketsClassName: m,
+                    glowClassName: m,
+                    trinketsClassName: p,
                     onMount: E,
                     children: t
                 });

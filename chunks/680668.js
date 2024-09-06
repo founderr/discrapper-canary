@@ -42,7 +42,7 @@ function h(e) {
         S.premiumTier = e;
     }
     let k = b ? p : g,
-        G = (0, _.e)({
+        F = (0, _.e)({
             isVoiceChannel: j,
             isOwnInvite: x,
             isGuest: y,
@@ -104,7 +104,7 @@ function h(e) {
             children: [
                 (0, i.jsx)(l.Z.GuildSplash, { guild: S }),
                 (0, i.jsx)(l.Z.Header, {
-                    text: G,
+                    text: F,
                     extra: C
                 }),
                 (0, i.jsxs)(l.Z.Body, {

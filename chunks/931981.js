@@ -1,6 +1,6 @@
 n.d(t, {
     V: function () {
-        return g;
+        return S;
     },
     e: function () {
         return m;
@@ -61,7 +61,7 @@ let I = new p(s.Z, {}),
         let t = l.Z.getChannel(e);
         null != t && t.isPrivate() && !h.has(t.getRecipientId()) && (h.add(t.getRecipientId()), I.emitChange());
     },
-    g = () =>
+    S = () =>
         (0, i.jsxs)('div', {
             className: E.bar,
             children: [_.Z.Messages.STAFF_PTO_NOTICE, (0, i.jsx)(o.B, { onClick: T })]

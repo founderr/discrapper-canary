@@ -42,8 +42,8 @@ let d = (e) => {
                 currency: h.currency
             }),
             T = null == I ? void 0 : null === (_ = I.invoiceItems) || void 0 === _ ? void 0 : null === (d = _.find((t) => t.subscriptionPlanId === e)) || void 0 === d ? void 0 : null === (n = d.discounts) || void 0 === n ? void 0 : null === (t = n.find((e) => e.type === r.eW.SUBSCRIPTION_PLAN)) || void 0 === t ? void 0 : t.amount,
-            g = (0, s.aS)(e, !1, !1, h);
-        return (0, o.T4)(g.amount - (null != T ? T : 0), g.currency);
+            S = (0, s.aS)(e, !1, !1, h);
+        return (0, o.T4)(S.amount - (null != T ? T : 0), S.currency);
     },
     _ = (e, t, n) => {
         var u, d, _, E;
@@ -73,7 +73,7 @@ let d = (e) => {
                 currency: p.currency,
                 userDiscountOfferId: null == n ? void 0 : n.id
             }),
-            g = null == m ? void 0 : null === (E = m.invoiceItems) || void 0 === E ? void 0 : null === (_ = E.find((e) => e.subscriptionPlanId === t)) || void 0 === _ ? void 0 : null === (d = _.discounts) || void 0 === d ? void 0 : null === (u = d.find((e) => e.type === r.eW.SUBSCRIPTION_PLAN)) || void 0 === u ? void 0 : u.amount,
-            S = (0, s.aS)(t, !1, !1, p);
-        return (0, o.T4)(S.amount - (null != g ? g : 0), S.currency);
+            S = null == m ? void 0 : null === (E = m.invoiceItems) || void 0 === E ? void 0 : null === (_ = E.find((e) => e.subscriptionPlanId === t)) || void 0 === _ ? void 0 : null === (d = _.discounts) || void 0 === d ? void 0 : null === (u = d.find((e) => e.type === r.eW.SUBSCRIPTION_PLAN)) || void 0 === u ? void 0 : u.amount,
+            g = (0, s.aS)(t, !1, !1, p);
+        return (0, o.T4)(g.amount - (null != S ? S : 0), g.currency);
     };

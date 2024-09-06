@@ -18,8 +18,8 @@ t.Z = function (e) {
         { currentPreviewRef: a } = i.useContext(_.Z),
         I = (0, o.e7)([E.Z], () => E.Z.getSoundById(t)),
         m = (null == I ? void 0 : I.emojiId) != null || (null == I ? void 0 : I.emojiName) != null,
-        [T, g] = i.useState(!1),
-        S = (0, c.P)('soundmoji_chat_mention'),
+        [T, S] = i.useState(!1),
+        g = (0, c.P)('soundmoji_chat_mention'),
         A = i.useCallback(() => {
             var e;
             null == I && (0, d.w)();
@@ -28,17 +28,17 @@ t.Z = function (e) {
                 (a.current = n),
                 (n.currentTime = 0),
                 (n.volume = (0, h.Z)(null !== (e = null == I ? void 0 : I.volume) && void 0 !== e ? e : 0.5)),
-                g(!0),
+                S(!0),
                 n.play(),
                 n.addEventListener(
                     'ended',
                     () => {
-                        g(!1);
+                        S(!1);
                     },
                     { once: !0 }
                 );
-        }, [t, I, a, g]);
-    return S
+        }, [t, I, a, S]);
+    return g
         ? null == I
             ? (0, r.jsxs)(l.Clickable, {
                   title: 'Risky Click',

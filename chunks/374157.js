@@ -154,14 +154,14 @@ function* u(e) {
     let p = a.bN.range(e, _),
         [I, m] = a.M8.edges(p),
         T = a.bN.richValue(e),
-        g = f ? -1 : 1,
-        S = null !== (r = null === (t = I.path) || void 0 === t ? void 0 : t[0]) && void 0 !== r ? r : 0,
+        S = f ? -1 : 1,
+        g = null !== (r = null === (t = I.path) || void 0 === t ? void 0 : t[0]) && void 0 !== r ? r : 0,
         A = null !== (i = null === (n = m.path) || void 0 === n ? void 0 : n[0]) && void 0 !== i ? i : T.length - 1,
-        N = f ? S : A,
-        O = f ? A : S;
+        N = f ? g : A,
+        O = f ? A : g;
     for (;;) {
         let t = T[O],
-            n = null !== (u = O === S ? (null === (s = I.path) || void 0 === s ? void 0 : s[1]) : null) && void 0 !== u ? u : 0,
+            n = null !== (u = O === g ? (null === (s = I.path) || void 0 === s ? void 0 : s[1]) : null) && void 0 !== u ? u : 0,
             r = null !== (c = O === A ? (null === (o = m.path) || void 0 === o ? void 0 : o[1]) : null) && void 0 !== c ? c : t.children.length - 1,
             i = f ? r : n,
             _ = f ? n : r,
@@ -196,9 +196,9 @@ function* u(e) {
                 }
             }
             if (E === _) break;
-            E += g;
+            E += S;
         }
         if (O === N) break;
-        O += g;
+        O += S;
     }
 }

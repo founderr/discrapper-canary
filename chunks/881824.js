@@ -6,7 +6,7 @@ n.d(t, {
         return f;
     },
     Gy: function () {
-        return g;
+        return S;
     },
     R5: function () {
         return T;
@@ -119,7 +119,7 @@ function T(e, t) {
                       })(e);
             })(e);
 }
-function g(e, t) {
+function S(e, t) {
     return (
         (0, i.ZD)(async () => {
             let { default: i } = await n.e('65045').then(n.bind(n, 143782));

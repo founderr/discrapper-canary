@@ -13,11 +13,11 @@ var s = n(735250),
     T = n(785681),
     I = n(985002),
     R = n(858719),
-    C = n(780985),
-    g = n(880257),
+    g = n(780985),
+    C = n(880257),
     N = n(631885),
-    p = n(240351),
-    m = n(792258),
+    m = n(240351),
+    p = n(792258),
     A = n(657825),
     f = n(198952),
     S = n(329242),
@@ -50,18 +50,18 @@ function v(e) {
         n = a.useCallback(() => {
             (0, o.showToast)((0, o.createToast)(O.Z.Messages.FAMILY_CENTER_ERROR_GENERIC_TOAST, o.ToastType.FAILURE));
         }, []),
-        r = (0, g.Z)(),
+        r = (0, C.Z)(),
         l = (0, R.ws)(t),
         c = (0, R.C7)(t),
         { loadMore: _, isMoreLoading: T } = (0, I.G)({ onError: n }),
-        C = M.tx.get(t),
-        [N, p] = a.useState(M.iB),
+        g = M.tx.get(t),
+        [N, m] = a.useState(M.iB),
         f = (0, E.Xi)({ location: 'family_center_activity_section_web' }),
         S = a.useCallback(() => {
-            p((e) => e + M.iB), _(t);
+            m((e) => e + M.iB), _(t);
         }, [t, _]);
-    i()(C, 'No text for action type');
-    let h = C.sectionHeader(c),
+    i()(g, 'No text for action type');
+    let h = g.sectionHeader(c),
         x = a.useCallback(
             (e) => {
                 let { row: t } = e,
@@ -72,15 +72,15 @@ function v(e) {
                           {
                               userId: n.entity_id,
                               timestamp: d.default.extractTimestamp(n.event_id),
-                              timestampFormatter: C.timestampFormatter
+                              timestampFormatter: g.timestampFormatter
                           },
                           n.event_id
                       )
                     : (0, u.f0)(n)
-                      ? (0, s.jsx)(m.Z, { guildId: n.entity_id }, n.event_id)
+                      ? (0, s.jsx)(p.Z, { guildId: n.entity_id }, n.event_id)
                       : void 0;
             },
-            [l, C.timestampFormatter]
+            [l, g.timestampFormatter]
         ),
         P = a.useCallback(
             () =>
@@ -92,17 +92,17 @@ function v(e) {
                             color: 'header-secondary',
                             children: h
                         }),
-                        void 0 !== C.sectionDescription
+                        void 0 !== g.sectionDescription
                             ? (0, s.jsx)(o.Text, {
                                   className: b.sectionDescription,
                                   variant: 'text-md/medium',
                                   color: 'text-muted',
-                                  children: C.sectionDescription(null != r && r, f)
+                                  children: g.sectionDescription(null != r && r, f)
                               })
                             : null
                     ]
                 }),
-            [h, C, r, f]
+            [h, g, r, f]
         );
     if (0 === l.length) return null;
     let v = l.slice(0, N);
@@ -136,7 +136,7 @@ function v(e) {
     });
 }
 let L = () => {
-        let e = (0, g.Z)(),
+        let e = (0, C.Z)(),
             t = (0, N.mq)(M.ne.ACTIVE),
             n = (0, T.o)(O.Z.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_PREFACE_TEEN.format({ activeLinks: t.length }), O.Z.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_PREFACE_PARENT),
             a = (0, u.Qr)(!!e),
@@ -164,7 +164,7 @@ let L = () => {
     },
     Z = (e) => {
         let { userId: t, subText: n, avatarSize: a = o.AvatarSizes.SIZE_40 } = e,
-            r = (0, C.I)(t);
+            r = (0, g.I)(t);
         return void 0 === r
             ? null
             : (0, s.jsxs)('div', {
@@ -221,9 +221,9 @@ let L = () => {
             options: r
         });
     },
-    B = (e) => {
+    U = (e) => {
         let { userId: t } = e,
-            n = (0, g.Z)(),
+            n = (0, C.Z)(),
             a = (0, N.mq)(M.ne.ACTIVE),
             r = (0, u.Qr)(!!n),
             i = (0, N.Rd)(r);
@@ -252,7 +252,7 @@ t.Z = (e) => {
                 children: [
                     (0, s.jsx)('div', {
                         className: b.header,
-                        children: (0, s.jsx)(B, { userId: t.id })
+                        children: (0, s.jsx)(U, { userId: t.id })
                     }),
                     (0, s.jsxs)('div', {
                         className: b.content,
@@ -262,7 +262,7 @@ t.Z = (e) => {
                                 children: n.map((e) => {
                                     let [t, n] = e;
                                     return (0, s.jsx)(
-                                        p.Z,
+                                        m.Z,
                                         {
                                             displayType: t,
                                             header: n.tooltipHeader()

@@ -5,13 +5,13 @@ n.d(t, {
 }),
     n(733860);
 var i = n(392711),
-    a = n.n(i),
-    s = n(823379);
+    s = n.n(i),
+    a = n(823379);
 function l(e, t) {
-    return a()(e)
+    return s()(e)
         .map(t.getUser)
         .unshift(t.getCurrentUser())
-        .filter(s.lm)
+        .filter(a.lm)
         .sortBy((e) => e.username.toLowerCase())
         .value();
 }

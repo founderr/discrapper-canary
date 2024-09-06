@@ -16,11 +16,11 @@ let f = {},
     I = null,
     m = null,
     T = 'lastChangeLogDate',
-    g = null,
     S = null,
+    g = null,
     A = new Set();
 function N() {
-    g = d.l4.getSetting();
+    S = d.l4.getSetting();
 }
 class O extends (r = o.ZP.Store) {
     initialize() {
@@ -28,7 +28,7 @@ class O extends (r = o.ZP.Store) {
         let e = l.K.get(T);
         if (null != e)
             try {
-                S = new Date(e);
+                g = new Date(e);
             } catch {
                 l.K.remove(T);
             }
@@ -54,17 +54,17 @@ class O extends (r = o.ZP.Store) {
         return I;
     }
     lastSeenChangelogId() {
-        return g;
+        return S;
     }
     lastSeenChangelogDate() {
-        return S;
+        return g;
     }
     getStateForDebugging() {
         return {
             changelogConfig: m,
             loadedChangelogs: h,
-            lastSeenChangelogId: g,
-            lastSeenChangelogDate: S
+            lastSeenChangelogId: S,
+            lastSeenChangelogDate: g
         };
     }
     isLocked() {
@@ -120,6 +120,6 @@ class O extends (r = o.ZP.Store) {
         },
         CHANGE_LOG_MARK_SEEN: function (e) {
             let { changelogDate: t } = e;
-            (S = new Date(t)), l.K.set(T, t);
+            (g = new Date(t)), l.K.set(T, t);
         }
     }));

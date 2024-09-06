@@ -17,8 +17,8 @@ var r = n(735250),
     d = n(686546),
     _ = n(648914);
 let E = (e) => {
-        let { className: t, iconClassName: n, children: i, selected: a = !1, disabled: o = !1, showBadge: l = !1, badgePosition: c = 'bottom', color: E, foreground: f, background: h, icon: p, onClick: I, onContextMenu: m, tooltip: T = null, tooltipColor: g, tooltipPosition: S = 'bottom', tooltipDisabled: A, hideOnClick: N = !0, role: O, 'aria-label': R, 'aria-hidden': v, 'aria-checked': C, 'aria-expanded': y, 'aria-haspopup': L } = e,
-            D = (0, r.jsx)(p, {
+        let { className: t, iconClassName: n, children: i, selected: a = !1, disabled: o = !1, showBadge: l = !1, badgePosition: c = 'bottom', color: E, foreground: f, background: h, icon: p, onClick: I, onContextMenu: m, tooltip: T = null, tooltipColor: S, tooltipPosition: g = 'bottom', tooltipDisabled: A, hideOnClick: N = !0, role: O, 'aria-label': R, 'aria-hidden': v, 'aria-checked': C, 'aria-expanded': y, 'aria-haspopup': D } = e,
+            L = (0, r.jsx)(p, {
                 x: 0,
                 y: 0,
                 width: 24,
@@ -34,12 +34,12 @@ let E = (e) => {
             null == b && 'string' == typeof T && (b = T),
             (0, r.jsx)(u.Tooltip, {
                 text: T,
-                color: g,
-                position: S,
+                color: S,
+                position: g,
                 hideOnClick: N,
                 shouldShow: !A,
                 children: (e) => {
-                    let { onMouseEnter: T, onMouseLeave: g, onFocus: S, onBlur: A } = e;
+                    let { onMouseEnter: T, onMouseLeave: S, onFocus: g, onBlur: A } = e;
                     return null == I
                         ? (0, r.jsx)('div', {
                               className: s()(t, [_.iconWrapper]),
@@ -55,8 +55,8 @@ let E = (e) => {
                                   color: null != E ? E : 'currentColor',
                                   'aria-hidden': v,
                                   onMouseEnter: T,
-                                  onMouseLeave: g,
-                                  onFocus: S,
+                                  onMouseLeave: S,
+                                  onFocus: g,
                                   onBlur: A
                               })
                           })
@@ -65,8 +65,8 @@ let E = (e) => {
                               onClick: o ? void 0 : I,
                               onContextMenu: o ? void 0 : m,
                               onMouseEnter: T,
-                              onMouseLeave: g,
-                              onFocus: S,
+                              onMouseLeave: S,
+                              onFocus: g,
                               onBlur: A,
                               className: s()(t, {
                                   [_.iconWrapper]: !0,
@@ -77,16 +77,16 @@ let E = (e) => {
                               'aria-label': b,
                               'aria-hidden': v,
                               'aria-checked': C,
-                              'aria-haspopup': L,
+                              'aria-haspopup': D,
                               'aria-expanded': y,
                               tabIndex: o || null == I ? -1 : 0,
                               children: [
                                   l
                                       ? (0, r.jsx)(d.ZP, {
                                             mask: 'top' === c ? d.ZP.Masks.HEADER_BAR_BADGE_TOP : d.ZP.Masks.HEADER_BAR_BADGE_BOTTOM,
-                                            children: D
+                                            children: L
                                         })
-                                      : D,
+                                      : L,
                                   l ? (0, r.jsx)('span', { className: s()(_.iconBadge, 'top' === c ? _.iconBadgeTop : _.iconBadgeBottom) }) : null,
                                   i
                               ]
@@ -101,8 +101,8 @@ let E = (e) => {
     },
     h = (e) => {
         let { className: t, innerClassName: n, children: a, childrenBottom: d, toolbar: E, onDoubleClick: f, 'aria-label': h, 'aria-labelledby': p, role: I, scrollable: m, transparent: T = !1 } = e,
-            g = i.useRef(null),
-            S = i.useContext(c.Z);
+            S = i.useRef(null),
+            g = i.useContext(c.Z);
         return (0, r.jsx)('section', {
             className: s()(t, _.container, {
                 [_.themed]: !T,
@@ -112,9 +112,9 @@ let E = (e) => {
             'aria-label': h,
             'aria-labelledby': p,
             role: I,
-            ref: g,
+            ref: S,
             children: (0, r.jsxs)(u.FocusRingScope, {
-                containerRef: g,
+                containerRef: S,
                 children: [
                     (0, r.jsxs)('div', {
                         className: _.upperContainer,
@@ -123,9 +123,9 @@ let E = (e) => {
                                 className: s()(_.children, n, { [_.scrollable]: m }),
                                 onDoubleClick: f,
                                 children: [
-                                    l.tq && null != S
+                                    l.tq && null != g
                                         ? (0, r.jsx)(o.r, {
-                                              onClick: S,
+                                              onClick: g,
                                               className: _.hamburger
                                           })
                                         : null,

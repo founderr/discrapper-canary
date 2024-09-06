@@ -24,19 +24,19 @@ t.Z = {
             m = (0, o.Z)(I),
             T = [d.t$, d.F2].indexOf(I) >= 0 ? 'height' : 'width';
         if (!!h && !!p) {
-            var g = ((t = f.padding), (n = _), (t = 'function' == typeof t ? t(Object.assign({}, n.rects, { placement: n.placement })) : t), (0, u.Z)('number' != typeof t ? t : (0, c.Z)(t, d.mv))),
-                S = (0, i.Z)(h),
+            var S = ((t = f.padding), (n = _), (t = 'function' == typeof t ? t(Object.assign({}, n.rects, { placement: n.placement })) : t), (0, u.Z)('number' != typeof t ? t : (0, c.Z)(t, d.mv))),
+                g = (0, i.Z)(h),
                 A = 'y' === m ? d.we : d.t$,
                 N = 'y' === m ? d.I : d.F2,
                 O = _.rects.reference[T] + _.rects.reference[m] - p[m] - _.rects.popper[T],
                 R = p[m] - _.rects.reference[m],
                 v = (0, s.Z)(h),
                 C = v ? ('y' === m ? v.clientHeight || 0 : v.clientWidth || 0) : 0,
-                y = g[A],
-                L = C - S[T] - g[N],
-                D = C / 2 - S[T] / 2 + (O / 2 - R / 2),
-                b = (0, l.u)(y, D, L);
-            _.modifiersData[E] = (((a = {})[m] = b), (a.centerOffset = b - D), a);
+                y = S[A],
+                D = C - g[T] - S[N],
+                L = C / 2 - g[T] / 2 + (O / 2 - R / 2),
+                b = (0, l.u)(y, L, D);
+            _.modifiersData[E] = (((a = {})[m] = b), (a.centerOffset = b - L), a);
         }
     },
     effect: function (e) {

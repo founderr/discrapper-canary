@@ -1,4 +1,4 @@
-n.d(a, {
+t.d(n, {
     A: function () {
         return o;
     },
@@ -6,12 +6,12 @@ n.d(a, {
         return s;
     }
 });
-var t = n(433517);
+var a = t(433517);
 let r = 'GameFollowSurveyModal';
 function s() {
     var e;
-    return (null === (e = t.K.get(r)) || void 0 === e ? void 0 : e.hasInteractedWithSurvey) !== !0;
+    return (null === (e = a.K.get(r)) || void 0 === e ? void 0 : e.hasInteractedWithSurvey) !== !0;
 }
 function o() {
-    return t.K.set(r, { hasInteractedWithSurvey: !0 });
+    return a.K.set(r, { hasInteractedWithSurvey: !0 });
 }

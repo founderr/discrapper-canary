@@ -55,8 +55,8 @@ let m = new c.h((e) => {
         return null != n && i.push(n), i.push(p.GUILD_EVENT(t)), null != r && i.push(p.CHANNEL_EVENT(r)), P(e) && (i.push(p.EVENT_ACTIVE), i.push(p.GUILD_EVENT_ACTIVE(t)), null != r && i.push(p.CHANNEL_EVENT_ACTIVE(r))), U(e) && (i.push(p.EVENT_UPCOMING), i.push(p.GUILD_EVENT_UPCOMING(t)), null != r && i.push(p.CHANNEL_EVENT_UPCOMING(r))), i;
     }, I),
     T = 0,
-    g = [],
-    S = 'SERIES',
+    S = [],
+    g = 'SERIES',
     A = {},
     N = {};
 function O(e) {
@@ -67,7 +67,7 @@ function R(e) {
     m.delete(e), delete A[e], t && delete N[e], (T += 1);
 }
 function v(e) {
-    return null != e ? e : S;
+    return null != e ? e : g;
 }
 function C(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
@@ -83,7 +83,7 @@ function C(e) {
                 let r = v(e.guild_scheduled_event_exception_id),
                     i = null !== (n = null === (t = N[e.guild_scheduled_event_id]) || void 0 === t ? void 0 : t[r]) && void 0 !== n ? n : 0,
                     a = (null != e.guild_scheduled_event_exception_id && e.response === h.gv.UNINTERESTED) || (null == e.guild_scheduled_event_exception_id && e.response === h.gv.INTERESTED) ? 1 : -1;
-                L(e.guild_scheduled_event_id, e.guild_scheduled_event_exception_id, i + a);
+                D(e.guild_scheduled_event_id, e.guild_scheduled_event_exception_id, i + a);
             })(e),
         n && (T += 1);
 }
@@ -100,15 +100,15 @@ function y(e) {
             let r = v(e.guild_scheduled_event_exception_id),
                 i = null !== (n = null === (t = N[e.guild_scheduled_event_id]) || void 0 === t ? void 0 : t[r]) && void 0 !== n ? n : 0,
                 a = (null != e.guild_scheduled_event_exception_id && e.response === h.gv.UNINTERESTED) || (null == e.guild_scheduled_event_exception_id && e.response === h.gv.INTERESTED) ? -1 : 1;
-            L(e.guild_scheduled_event_id, e.guild_scheduled_event_exception_id, i + a);
+            D(e.guild_scheduled_event_id, e.guild_scheduled_event_exception_id, i + a);
         })(e),
         a && (T += 1));
 }
-function L(e, t, n) {
+function D(e, t, n) {
     let r = v(t);
     null == N[e] && (N[e] = {}), (N[e][r] = n);
 }
-function D(e, t) {
+function L(e, t) {
     m.values(p.GUILD_EVENT(e)).forEach((e) => R(e.id, t));
 }
 function b(e) {
@@ -177,7 +177,7 @@ class G extends (r = u.ZP.Store) {
     getUserCount(e, t) {
         var n, r, i, a;
         if (null == e) return 0;
-        let s = null !== (i = null === (n = N[e]) || void 0 === n ? void 0 : n[S]) && void 0 !== i ? i : 0;
+        let s = null !== (i = null === (n = N[e]) || void 0 === n ? void 0 : n[g]) && void 0 !== i ? i : 0;
         return null == t ? s : s - (null !== (a = null === (r = N[e]) || void 0 === r ? void 0 : r[t]) && void 0 !== a ? a : 0);
     }
     hasUserCount(e, t) {
@@ -210,15 +210,15 @@ class G extends (r = u.ZP.Store) {
     (t.ZP = new G(d.Z, {
         CONNECTION_OPEN: function (e) {
             let { guilds: t } = e;
-            return m.clear(), (T = 0), (A = {}), (N = {}), g.forEach(O), t.forEach((e) => e.guild_scheduled_events.forEach((e) => O(e))), !0;
+            return m.clear(), (T = 0), (A = {}), (N = {}), S.forEach(O), t.forEach((e) => e.guild_scheduled_events.forEach((e) => O(e))), !0;
         },
         GUILD_CREATE: function (e) {
             let { guild: t } = e;
-            return D(t.id, !1), t.guild_scheduled_events.forEach((e) => O(e)), !0;
+            return L(t.id, !1), t.guild_scheduled_events.forEach((e) => O(e)), !0;
         },
         GUILD_DELETE: function (e) {
             let { guild: t } = e;
-            return D(t.id, !0), !0;
+            return L(t.id, !0), !0;
         },
         FETCH_GUILD_EVENT: function (e) {
             let { guildScheduledEvent: t } = e;
@@ -280,9 +280,9 @@ class G extends (r = u.ZP.Store) {
         },
         GUILD_SCHEDULED_EVENT_USER_COUNTS_FETCH_SUCCESS: function (e) {
             let { eventId: t, counts: n } = e;
-            L(t, null, n.eventCount),
+            D(t, null, n.eventCount),
                 f.default.forEachKey(n.recurrenceCounts, (e) => {
-                    L(t, e, n.eventCount - n.recurrenceCounts[e]);
+                    D(t, e, n.eventCount - n.recurrenceCounts[e]);
                 });
         },
         INVITE_RESOLVE_SUCCESS: function (e) {

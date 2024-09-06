@@ -22,22 +22,22 @@ t.Z = {
             I = n.boundary,
             m = n.rootBoundary,
             T = n.altBoundary,
-            g = n.padding,
-            S = n.tether,
-            A = void 0 === S || S,
+            S = n.padding,
+            g = n.tether,
+            A = void 0 === g || g,
             N = n.tetherOffset,
             O = void 0 === N ? 0 : N,
             R = (0, c.Z)(t, {
                 boundary: I,
                 rootBoundary: m,
-                padding: g,
+                padding: S,
                 altBoundary: T
             }),
             v = (0, i.Z)(t.placement),
             C = (0, d.Z)(t.placement),
             y = !C,
-            L = (0, a.Z)(v),
-            D = (0, s.Z)(L),
+            D = (0, a.Z)(v),
+            L = (0, s.Z)(D),
             b = t.modifiersData.popperOffsets,
             M = t.rects.reference,
             P = t.rects.popper,
@@ -63,10 +63,10 @@ t.Z = {
         if (!!b) {
             if (void 0 === h || h) {
                 var k,
-                    B = 'y' === L ? r.we : r.t$,
-                    F = 'y' === L ? r.I : r.F2,
-                    V = 'y' === L ? 'height' : 'width',
-                    H = b[L],
+                    B = 'y' === D ? r.we : r.t$,
+                    F = 'y' === D ? r.I : r.F2,
+                    V = 'y' === D ? 'height' : 'width',
+                    H = b[D],
                     Z = H + R[B],
                     Y = H - R[F],
                     j = A ? -P[V] / 2 : 0,
@@ -87,25 +87,25 @@ t.Z = {
                     ee = y ? M[V] / 2 - j - J - X - w.mainAxis : W - J - X - w.mainAxis,
                     et = y ? -M[V] / 2 + j + J + $ + w.mainAxis : K + J + $ + w.mainAxis,
                     en = t.elements.arrow && (0, u.Z)(t.elements.arrow),
-                    er = en ? ('y' === L ? en.clientTop || 0 : en.clientLeft || 0) : 0,
-                    ei = null != (k = null == x ? void 0 : x[L]) ? k : 0,
+                    er = en ? ('y' === D ? en.clientTop || 0 : en.clientLeft || 0) : 0,
+                    ei = null != (k = null == x ? void 0 : x[D]) ? k : 0,
                     ea = (0, o.u)(A ? (0, E.VV)(Z, H + ee - ei - er) : Z, H, A ? (0, E.Fp)(Y, H + et - ei) : Y);
-                (b[L] = ea), (G[L] = ea - H);
+                (b[D] = ea), (G[D] = ea - H);
             }
             if (void 0 !== p && p) {
                 var es,
-                    eo = 'x' === L ? r.we : r.t$,
-                    el = 'x' === L ? r.I : r.F2,
-                    eu = b[D],
-                    ec = 'y' === D ? 'height' : 'width',
+                    eo = 'x' === D ? r.we : r.t$,
+                    el = 'x' === D ? r.I : r.F2,
+                    eu = b[L],
+                    ec = 'y' === L ? 'height' : 'width',
                     ed = eu + R[eo],
                     e_ = eu - R[el],
                     eE = -1 !== [r.we, r.t$].indexOf(v),
-                    ef = null != (es = null == x ? void 0 : x[D]) ? es : 0,
+                    ef = null != (es = null == x ? void 0 : x[L]) ? es : 0,
                     eh = eE ? ed : eu - M[ec] - P[ec] - ef + w.altAxis,
                     ep = eE ? eu + M[ec] + P[ec] - ef - w.altAxis : e_,
                     eI = A && eE ? (0, o.q)(eh, eu, ep) : (0, o.u)(A ? eh : ed, eu, A ? ep : e_);
-                (b[D] = eI), (G[D] = eI - eu);
+                (b[L] = eI), (G[L] = eI - eu);
             }
             t.modifiersData[f] = G;
         }

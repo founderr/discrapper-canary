@@ -16,8 +16,8 @@ var r = n(735250),
     I = n(114250),
     m = n(315263),
     T = n(40851),
-    g = n(607070),
-    S = n(899663),
+    S = n(607070),
+    g = n(899663),
     A = n(793903),
     N = n(213609),
     O = n(613413),
@@ -25,8 +25,8 @@ var r = n(735250),
     v = n(327943),
     C = n(907459),
     y = n(559407),
-    L = n(556766),
-    D = n(514361),
+    D = n(556766),
+    L = n(514361),
     b = n(724145),
     M = n(260035),
     P = n(482215),
@@ -87,8 +87,8 @@ t.Z = function (e) {
         _ = (0, K.getPlatform)(),
         m = u.tq || u.Em,
         W = (0, c.e7)([H.Z], () => (H.Z.darkSidebar ? en.BRd.DARK : void 0)),
-        q = (0, c.e7)([g.Z], () => (g.Z.useForcedColors ? 'yes' : 'no')),
-        [et, eo, el] = (0, c.Wu)([D.Z], () => [D.Z.isEditorOpen, D.Z.isCoachmark, D.Z.isPreview]),
+        q = (0, c.e7)([S.Z], () => (S.Z.useForcedColors ? 'yes' : 'no')),
+        [et, eo, el] = (0, c.Wu)([L.Z], () => [L.Z.isEditorOpen, L.Z.isCoachmark, L.Z.isPreview]),
         [eu, ec] = (0, c.Wu)([v.Z], () => [v.Z.isEditorOpen, v.Z.isUpsellPreview]),
         ed = (0, c.e7)([Y.Z], () => Y.Z.getLayers().includes(en.S9g.USER_SETTINGS)),
         e_ = (0, c.e7)([j.default], () => z.ZP.canUseClientThemes(j.default.getCurrentUser())),
@@ -115,20 +115,20 @@ t.Z = function (e) {
             }));
     }, [eI, em, ep, a]);
     let eT = i.useRef(document.body),
-        eg = (eE && !eo) || em,
-        eS = eu && !ed && !em,
+        eS = (eE && !eo) || em,
+        eg = eu && !ed && !em,
         eA = el || ec,
         { enabled: eN } = F.Z.useExperiment(
             { location: 'AppSkeleton' },
             {
-                autoTrackExposure: eA && (eg || eS),
+                autoTrackExposure: eA && (eS || eg),
                 disable: !eA
             }
         );
     return (0, r.jsx)(
         V.Z,
         {
-            children: (0, r.jsx)(S.Z, {
+            children: (0, r.jsx)(g.Z, {
                 children: (0, r.jsxs)(E.RedesignIconContextProvider, {
                     children: [
                         (0, r.jsx)(Q.Z, { skipsSettingDefaultPageTitle: n }),
@@ -192,19 +192,19 @@ t.Z = function (e) {
                                                                     })
                                                                 })
                                                             }),
-                                                            (0, r.jsx)(L.Z, {}),
+                                                            (0, r.jsx)(D.Z, {}),
                                                             (0, r.jsx)(h.Z, {}),
-                                                            eg && !eN && (0, r.jsx)(b.Z, { markAsDismissed: ep }),
-                                                            eS &&
+                                                            eS && !eN && (0, r.jsx)(b.Z, { markAsDismissed: ep }),
+                                                            eg &&
                                                                 !eN &&
                                                                 (0, r.jsx)(C.Z, {
                                                                     isCoachmark: eI,
                                                                     markAsDismissed: ep
                                                                 }),
-                                                            (eg || eS) &&
+                                                            (eS || eg) &&
                                                                 eN &&
                                                                 (0, r.jsx)(Z.Z, {
-                                                                    initialTab: eS ? Z._.APP_ICONS : Z._.CLIENT_THEMES,
+                                                                    initialTab: eg ? Z._.APP_ICONS : Z._.CLIENT_THEMES,
                                                                     markAsDismissed: ep
                                                                 }),
                                                             (0, r.jsx)(U.Z, { mobile: m })

@@ -13,11 +13,11 @@ var s = n(735250),
     T = n(626135),
     I = n(915296),
     R = n(103433),
-    C = n(166021),
-    g = n(32173),
+    g = n(166021),
+    C = n(32173),
     N = n(391110),
-    p = n(75077),
-    m = n(981631),
+    m = n(75077),
+    p = n(981631),
     A = n(689938),
     f = n(396001),
     S = n(865215);
@@ -26,7 +26,7 @@ t.Z = (e) => {
         n,
         { isAllPerksVisible: r, setIsAllPerksVisible: h, previousComponent: M, isFullScreen: x } = e,
         O = a.useRef(null),
-        b = Object.entries((0, g.Z)()).reduce((e, t) => {
+        b = Object.entries((0, C.Z)()).reduce((e, t) => {
             let [n, s] = t;
             return !1 !== s.canReveal && 'upcomingDropUntimed' !== s.name && (e[n] = s), e;
         }, {}),
@@ -34,14 +34,14 @@ t.Z = (e) => {
         { analyticsLocations: v } = (0, u.ZP)(_.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
         [L, Z] = a.useState(!1),
         D = (0, E.ZP)('perks-discoverability'),
-        B = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
-        j = (0, p.mN)();
+        U = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
+        B = (0, m.mN)();
     return (
         P === I.mJ.DEFAULT ? ((t = A.Z.Messages.MARKETING_PAGE_CAROUSEL_TITLE), (n = A.Z.Messages.NITRO_HOME_ENJOY_UPDATED_DISCORD)) : ((t = A.Z.Messages.NITRO_HOME_ENJOY_UPDATED_DISCORD), (n = A.Z.Messages.MARKETING_PAGE_CAROUSEL_TITLE)),
         (0, s.jsx)(c.AdvancedScrollerAuto, {
             className: i()(f.allPerksScroller, {
                 [f.open]: r,
-                [f.openCloseReduceMotion]: B
+                [f.openCloseReduceMotion]: U
             }),
             ref: O,
             children: (0, s.jsx)('div', {
@@ -53,7 +53,7 @@ t.Z = (e) => {
                             className: f.heroHeading,
                             onBackClick: () => {
                                 h(!1),
-                                    T.default.track(m.rMx.NITRO_HOME_NAVIGATION, {
+                                    T.default.track(p.rMx.NITRO_HOME_NAVIGATION, {
                                         current_component: N.MQ.SEE_ALL,
                                         next_component: M,
                                         interaction_component: 'Back Button'
@@ -69,14 +69,14 @@ t.Z = (e) => {
                                     className: f.heading,
                                     children: t
                                 }),
-                                (0, s.jsx)(C.Z, {
+                                (0, s.jsx)(g.Z, {
                                     className: f.cardCarousel,
-                                    cards: (0, p.sP)({
+                                    cards: (0, m.sP)({
                                         perksCards: b,
                                         variant: N.R0.CARD_CAROUSEL_FIRST_ROW,
                                         shopMarketingVariation: D,
                                         tileOrderVariant: P,
-                                        isPremiumSubscriber: j,
+                                        isPremiumSubscriber: B,
                                         isFullScreen: x
                                     }),
                                     cardType: N.R0.CARD_CAROUSEL_FIRST_ROW
@@ -87,14 +87,14 @@ t.Z = (e) => {
                                     className: f.heading,
                                     children: n
                                 }),
-                                (0, s.jsx)(C.Z, {
+                                (0, s.jsx)(g.Z, {
                                     className: f.cardCarousel,
-                                    cards: (0, p.sP)({
+                                    cards: (0, m.sP)({
                                         perksCards: b,
                                         variant: N.R0.CARD_CAROUSEL_SECOND_ROW,
                                         shopMarketingVariation: D,
                                         tileOrderVariant: P,
-                                        isPremiumSubscriber: j,
+                                        isPremiumSubscriber: B,
                                         isFullScreen: x
                                     }),
                                     cardType: N.R0.CARD_CAROUSEL_SECOND_ROW
@@ -105,14 +105,14 @@ t.Z = (e) => {
                                     className: f.heading,
                                     children: A.Z.Messages.NITRO_HOME_SHOW_UP_HOW_YOU_WANT
                                 }),
-                                (0, s.jsx)(C.Z, {
+                                (0, s.jsx)(g.Z, {
                                     className: f.cardCarousel,
-                                    cards: (0, p.sP)({
+                                    cards: (0, m.sP)({
                                         perksCards: b,
                                         variant: N.R0.CARD_CAROUSEL_THIRD_ROW,
                                         shopMarketingVariation: D,
                                         tileOrderVariant: P,
-                                        isPremiumSubscriber: j,
+                                        isPremiumSubscriber: B,
                                         isFullScreen: x
                                     }),
                                     cardType: N.R0.CARD_CAROUSEL_THIRD_ROW
@@ -122,7 +122,7 @@ t.Z = (e) => {
                         (0, s.jsx)('div', { className: f.footerSpacing }),
                         (0, s.jsx)(o.$, {
                             onChange: (e) => {
-                                e && !L && (T.default.track(m.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: v }), Z(!0));
+                                e && !L && (T.default.track(p.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: v }), Z(!0));
                             },
                             children: (0, s.jsx)('div', { className: f.bottomOfPageVisibilitySensor })
                         }),

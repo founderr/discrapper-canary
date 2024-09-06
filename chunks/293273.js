@@ -16,8 +16,8 @@ var r,
     I = n(406066),
     m = n(768419),
     T = n(695346),
-    g = n(581883),
-    S = n(199902),
+    S = n(581883),
+    g = n(199902),
     A = n(272053),
     N = n(77498),
     O = n(981631);
@@ -42,7 +42,7 @@ function C() {
     let a = h.ZP.getVisibleGame(),
         s = null != a && null != a.name && i.has(a.name),
         o = null != a && a.isLauncher,
-        u = S.Z.getCurrentUserActiveStream();
+        u = g.Z.getCurrentUserActiveStream();
     if (null != a && null != a.name && !(s || (o && !(null != u)))) {
         var d, _;
         e.push({
@@ -58,13 +58,13 @@ function C() {
             type: O.IIU.LISTENING,
             ...E
         });
-    let g = p.Z.getCurrentHangStatus();
-    if (null != g) {
+    let S = p.Z.getCurrentHangStatus();
+    if (null != S) {
         let t = p.Z.getCustomHangStatus();
         e.push({
             type: O.IIU.HANG_STATUS,
             name: 'Hang Status',
-            state: g,
+            state: S,
             details: null == t ? void 0 : t.status,
             emoji: null == t ? void 0 : t.emoji
         });
@@ -73,7 +73,7 @@ function C() {
 }
 class y extends (r = d.ZP.Store) {
     initialize() {
-        this.waitFor(h.ZP, E.ZP, A.Z, S.Z, m.Z, g.Z, p.Z, N.Z), this.syncWith([I.Z, p.Z], () => C());
+        this.waitFor(h.ZP, E.ZP, A.Z, g.Z, m.Z, S.Z, p.Z, N.Z), this.syncWith([I.Z, p.Z], () => C());
     }
     getActivities() {
         return R;

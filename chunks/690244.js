@@ -44,8 +44,8 @@ var f = function () {
               }
             : null),
     T = {},
-    g = 'undefined' != typeof Uint8Array && m ? m(Uint8Array) : r,
-    S = {
+    S = 'undefined' != typeof Uint8Array && m ? m(Uint8Array) : r,
+    g = {
         __proto__: null,
         '%AggregateError%': 'undefined' == typeof AggregateError ? r : AggregateError,
         '%Array%': Array,
@@ -103,7 +103,7 @@ var f = function () {
         '%Symbol%': p ? Symbol : r,
         '%SyntaxError%': l,
         '%ThrowTypeError%': h,
-        '%TypedArray%': g,
+        '%TypedArray%': S,
         '%TypeError%': u,
         '%Uint8Array%': 'undefined' == typeof Uint8Array ? r : Uint8Array,
         '%Uint8ClampedArray%': 'undefined' == typeof Uint8ClampedArray ? r : Uint8ClampedArray,
@@ -119,7 +119,7 @@ if (m)
         null.error;
     } catch (e) {
         var A = m(m(e));
-        S['%Error.prototype%'] = A;
+        g['%Error.prototype%'] = A;
     }
 var N = function e(t) {
         var n;
@@ -133,7 +133,7 @@ var N = function e(t) {
             var i = e('%AsyncGenerator%');
             i && m && (n = m(i.prototype));
         }
-        return (S[t] = n), n;
+        return (g[t] = n), n;
     },
     O = {
         __proto__: null,
@@ -193,20 +193,20 @@ var N = function e(t) {
     v = n(706165),
     C = R.call(Function.call, Array.prototype.concat),
     y = R.call(Function.apply, Array.prototype.splice),
-    L = R.call(Function.call, String.prototype.replace),
-    D = R.call(Function.call, String.prototype.slice),
+    D = R.call(Function.call, String.prototype.replace),
+    L = R.call(Function.call, String.prototype.slice),
     b = R.call(Function.call, RegExp.prototype.exec),
     M = /[^%.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|%$))/g,
     P = /\\(\\)?/g,
     U = function (e) {
-        var t = D(e, 0, 1),
-            n = D(e, -1);
+        var t = L(e, 0, 1),
+            n = L(e, -1);
         if ('%' === t && '%' !== n) throw new l('invalid intrinsic syntax, expected closing `%`');
         if ('%' === n && '%' !== t) throw new l('invalid intrinsic syntax, expected opening `%`');
         var r = [];
         return (
-            L(e, M, function (e, t, n, i) {
-                r[r.length] = n ? L(i, P, '$1') : t || e;
+            D(e, M, function (e, t, n, i) {
+                r[r.length] = n ? D(i, P, '$1') : t || e;
             }),
             r
         );
@@ -214,8 +214,8 @@ var N = function e(t) {
     w = function (e, t) {
         var n,
             r = e;
-        if ((v(O, r) && (r = '%' + (n = O[r])[0] + '%'), v(S, r))) {
-            var i = S[r];
+        if ((v(O, r) && (r = '%' + (n = O[r])[0] + '%'), v(g, r))) {
+            var i = g[r];
             if ((i === T && (i = N(r)), void 0 === i && !t)) throw new u('intrinsic ' + e + ' exists, but is not available. Please file an issue!');
             return {
                 alias: n,
@@ -239,10 +239,10 @@ e.exports = function (e, t) {
     c && ((r = c[0]), y(n, C([0, 1], c)));
     for (var d = 1, _ = !0; d < n.length; d += 1) {
         var f = n[d],
-            h = D(f, 0, 1),
-            p = D(f, -1);
+            h = L(f, 0, 1),
+            p = L(f, -1);
         if (('"' === h || "'" === h || '`' === h || '"' === p || "'" === p || '`' === p) && h !== p) throw new l('property names with quotes must have matching quotes');
-        if ((('constructor' === f || !_) && (o = !0), (r += '.' + f), v(S, (a = '%' + r + '%')))) s = S[a];
+        if ((('constructor' === f || !_) && (o = !0), (r += '.' + f), v(g, (a = '%' + r + '%')))) s = g[a];
         else if (null != s) {
             if (!(f in s)) {
                 if (!t) throw new u('base intrinsic for ' + e + ' exists, but the property is not available.');
@@ -252,7 +252,7 @@ e.exports = function (e, t) {
                 var I = E(s, f);
                 s = (_ = !!I) && 'get' in I && !('originalValue' in I.get) ? I.get : s[f];
             } else (_ = v(s, f)), (s = s[f]);
-            _ && !o && (S[a] = s);
+            _ && !o && (g[a] = s);
         }
     }
     return s;

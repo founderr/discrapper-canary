@@ -1,47 +1,47 @@
 n.d(t, {
     Z: function () {
-        return v;
+        return N;
     }
 }),
     n(47120);
 var i = n(735250),
-    a = n(470079),
-    s = n(392711),
-    l = n.n(s),
+    s = n(470079),
+    a = n(392711),
+    l = n.n(a),
     r = n(442837),
     o = n(481060),
     c = n(32750),
     u = n(109764),
     d = n(323597),
     h = n(438536),
-    p = n(251746),
-    m = n(193987),
+    m = n(251746),
+    p = n(193987),
     _ = n(933793),
     f = n(13736),
     E = n(732393),
-    C = n(137591),
-    g = n(299206),
+    g = n(137591),
+    C = n(299206),
     I = n(665149),
     x = n(695346),
     T = n(979651),
-    N = n(488131),
-    S = n(689938);
-function v(e) {
+    S = n(488131),
+    v = n(689938);
+function N(e) {
     let { channel: t } = e,
-        [n, s] = a.useState(!1);
+        [n, a] = s.useState(!1);
     function l() {
-        s((e) => !e);
+        a((e) => !e);
     }
-    let r = S.Z.Messages.MORE;
+    let r = v.Z.Messages.MORE;
     return (0, i.jsx)(o.Popout, {
         shouldShow: n,
         animation: o.Popout.Animation.NONE,
         position: 'bottom',
         align: 'right',
         autoInvert: !1,
-        onRequestClose: () => s(!1),
+        onRequestClose: () => a(!1),
         renderPopout: function (e) {
-            return (0, i.jsx)(Z, {
+            return (0, i.jsx)(A, {
                 ...e,
                 channel: t
             });
@@ -59,54 +59,54 @@ function v(e) {
         }
     });
 }
-function Z(e) {
-    let { channel: t, closePopout: n, onSelect: a } = e,
-        s = (0, c.Z)(t),
-        I = (0, m.Z)(t),
-        v = (0, E.Z)(t.id),
-        Z = (0, f.Z)(t),
-        A = (0, g.Z)({
+function A(e) {
+    let { channel: t, closePopout: n, onSelect: s } = e,
+        a = (0, c.Z)(t),
+        I = (0, p.Z)(t),
+        N = (0, E.Z)(t.id),
+        A = (0, f.Z)(t),
+        Z = (0, C.Z)({
             id: t.id,
-            label: S.Z.Messages.COPY_ID_THREAD
+            label: v.Z.Messages.COPY_ID_THREAD
         }),
         M = (0, u.Z)(t),
         b = (0, d.Z)(t),
         R = (0, h.Z)(t, 'Toolbar Overflow'),
         L = (0, _.Z)(t),
-        j = (0, p.Z)(t),
-        O = (0, C.Z)(t),
-        P = x.vF.useSetting(),
+        P = (0, m.Z)(t),
+        j = (0, g.Z)(t),
+        O = x.vF.useSetting(),
         y = (0, r.e7)([T.Z], () => !l().isEmpty(T.Z.getVoiceStatesForChannel(t.id)));
     return (0, i.jsxs)(o.Menu, {
         navId: 'thread-context',
         onClose: n,
-        'aria-label': S.Z.Messages.THREAD_ACTIONS_MENU_LABEL,
-        onSelect: a,
+        'aria-label': v.Z.Messages.THREAD_ACTIONS_MENU_LABEL,
+        onSelect: s,
         children: [
             (0, i.jsxs)(o.MenuGroup, {
-                children: [R, j]
+                children: [R, P]
             }),
             (0, i.jsxs)(o.MenuGroup, {
                 children: [
-                    Z,
+                    A,
                     L,
-                    v,
-                    P && !y
+                    N,
+                    O && !y
                         ? (0, i.jsx)(o.MenuItem, {
                               id: 'open',
-                              label: S.Z.Messages.OPEN_IN_SPLIT_VIEW,
+                              label: v.Z.Messages.OPEN_IN_SPLIT_VIEW,
                               action: function () {
-                                  (0, N.ok)(t);
+                                  (0, S.ok)(t);
                               }
                           })
                         : null
                 ]
             }),
             (0, i.jsxs)(o.MenuGroup, {
-                children: [O, s, I, b]
+                children: [j, a, I, b]
             }),
             (0, i.jsxs)(o.MenuGroup, {
-                children: [M, A]
+                children: [M, Z]
             })
         ]
     });

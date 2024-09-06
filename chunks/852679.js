@@ -17,7 +17,7 @@ var i = n(481060),
     _ = n(689938);
 let E = 'guild-boost-purchase-modal';
 async function f(e) {
-    let { analyticsLocations: t, analyticsLocation: f, analyticsSourceLocation: h, guildId: p, closeLayer: I, onCloseModal: m, totalNumberOfSlotsToAssign: T = 1, disablePremiumUpsell: g, onSubscriptionConfirmation: S, inPopout: A, applicationId: N } = e,
+    let { analyticsLocations: t, analyticsLocation: f, analyticsSourceLocation: h, guildId: p, closeLayer: I, onCloseModal: m, totalNumberOfSlotsToAssign: T = 1, disablePremiumUpsell: S, onSubscriptionConfirmation: g, inPopout: A, applicationId: N } = e,
         O = A ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT,
         R = l.ZP.getPremiumTypeSubscription();
     if (null != R && R.isPurchasedExternally && null != R.paymentGateway) {
@@ -48,8 +48,8 @@ async function f(e) {
                     guildId: p,
                     totalNumberOfSlotsToAssign: T,
                     closeGuildPerksModal: I,
-                    disablePremiumUpsell: g,
-                    onSubscriptionConfirmation: S,
+                    disablePremiumUpsell: S,
+                    onSubscriptionConfirmation: g,
                     applicationId: N
                 });
             };

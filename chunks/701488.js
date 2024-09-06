@@ -42,7 +42,7 @@ n.d(t, {
         return r;
     },
     MO: function () {
-        return L;
+        return D;
     },
     OF: function () {
         return ei;
@@ -96,7 +96,7 @@ n.d(t, {
         return U;
     },
     js: function () {
-        return D;
+        return L;
     },
     l4: function () {
         return G;
@@ -141,8 +141,8 @@ var r,
     I,
     m,
     T,
-    g,
-    S = n(911969),
+    S,
+    g = n(911969),
     A = n(981631);
 let N = 160,
     O = /^https?:\/\/(?:www\.)?(twitch\.tv\/(.+)|youtube.com\/watch\?v=)/,
@@ -150,8 +150,8 @@ let N = 160,
     v = '773336526917861400',
     C = '880218832743055411',
     y = '1050941315912835122',
-    L = '1070087967294631976',
-    D = '1007373802981822582',
+    D = '1070087967294631976',
+    L = '1007373802981822582',
     b = '1039835161136746497',
     M = '852509694341283871',
     P = '903769130790969345',
@@ -175,14 +175,14 @@ let N = 160,
         LARGE: 160
     },
     Q = ['in_development', 'activities_team', 'employee_release'],
-    X = [Z, '235088799074484224', D, '1067803140071620628', '1194351737264406548', '1245041113882955918', '1245040907732910201', '1245040436427489471', '1208090049871351890', '1235205910863806484', '1220052815590723654', '1222080278672179220', '1227719606223765687'];
+    X = [Z, '235088799074484224', L, '1067803140071620628', '1194351737264406548', '1245041113882955918', '1245040907732910201', '1245040436427489471', '1208090049871351890', '1235205910863806484', '1220052815590723654', '1222080278672179220', '1227719606223765687'];
 ((_ = r || (r = {})).ADS = 'ADS'), (_.FAILED_LOAD = 'FAILED_LOAD'), (_.LAGGING = 'LAGGING'), (_.CONFUSING = 'CONFUSING'), (_.NOT_FUN = 'NOT_FUN'), (_.OTHER = 'OTHER'), ((E = i || (i = {}))[(E.PLAY = 0)] = 'PLAY'), (E[(E.SPECTATE = 1)] = 'SPECTATE'), ((f = a || (a = {})).DESKTOP = 'desktop'), (f.MOBILE = 'mobile'), ((h = s || (s = {})).BETRAYAL_MARKETING_TOOLTIP = 'BETRAYAL_MARKETING_TOOLTIP'), (h.FISHINGTON_MARKETING_TOOLTIP = 'FISHINGTON_MARKETING_TOOLTIP'), (h.POKER_MARKETING_TOOLTIP = 'POKER_MARKETING_TOOLTIP'), (h.YOUTUBE_MARKETING_TOOLTIP = 'YOUTUBE_MARKETING_TOOLTIP'), ((p = o || (o = {}))[(p.UNLOCKED = 1)] = 'UNLOCKED'), (p[(p.PORTRAIT = 2)] = 'PORTRAIT'), (p[(p.LANDSCAPE = 3)] = 'LANDSCAPE'), ((I = l || (l = {}))[(I.DIRECTORY = 0)] = 'DIRECTORY'), (I[(I.SELECT_CHANNEL = 1)] = 'SELECT_CHANNEL'), (I[(I.DETAIL_PAGE = 2)] = 'DETAIL_PAGE');
 let $ = 'activity-shelf',
     J = new Set(['755600276941176913', C, y, U]),
     ee = new Set([C, y, U]);
-((m = u || (u = {})).DISCORD_TURNS_8 = 'DISCORD_TURNS_8'), (m.GDM_ACTIVITIES = 'GDM_ACTIVITIES'), (m.PUTT_PARTY = 'PUTT_PARTY'), (m.JAMSPACE_OLD = 'JAMSPACE'), (m.JAMSPACE = 'JAMSPACE2'), (m.POKER = 'POKER'), (m.FREE = 'FREE'), ((T = c || (c = {}))[(T.PORTRAIT = 0)] = 'PORTRAIT'), (T[(T.LANDSCAPE = 1)] = 'LANDSCAPE'), ((g = d || (d = {}))[(g.FOCUSED = 0)] = 'FOCUSED'), (g[(g.PIP = 1)] = 'PIP'), (g[(g.GRID = 2)] = 'GRID');
+((m = u || (u = {})).DISCORD_TURNS_8 = 'DISCORD_TURNS_8'), (m.GDM_ACTIVITIES = 'GDM_ACTIVITIES'), (m.PUTT_PARTY = 'PUTT_PARTY'), (m.JAMSPACE_OLD = 'JAMSPACE'), (m.JAMSPACE = 'JAMSPACE2'), (m.POKER = 'POKER'), (m.FREE = 'FREE'), ((T = c || (c = {}))[(T.PORTRAIT = 0)] = 'PORTRAIT'), (T[(T.LANDSCAPE = 1)] = 'LANDSCAPE'), ((S = d || (d = {}))[(S.FOCUSED = 0)] = 'FOCUSED'), (S[(S.PIP = 1)] = 'PIP'), (S[(S.GRID = 2)] = 'GRID');
 let et = {
-        label_type: S.ww.NONE,
+        label_type: g.ww.NONE,
         release_phase: '',
         label_until: null
     },
@@ -192,11 +192,11 @@ let et = {
         legacy_responsive_aspect_ratio: !1,
         default_orientation_lock_state: 1,
         tablet_default_orientation_lock_state: 1,
-        supported_platforms: [S.C3.WEB],
+        supported_platforms: [g.C3.WEB],
         client_platform_config: {
-            [S.C3.WEB]: et,
-            [S.C3.IOS]: et,
-            [S.C3.ANDROID]: et
+            [g.C3.WEB]: et,
+            [g.C3.IOS]: et,
+            [g.C3.ANDROID]: et
         },
         has_csp_exception: !1,
         displays_advertisements: !1

@@ -6,7 +6,7 @@ n.d(t, {
         return T;
     },
     pn: function () {
-        return g;
+        return S;
     }
 }),
     n(411104);
@@ -85,7 +85,7 @@ function T(e, t) {
         });
     });
 }
-function g(e) {
+function S(e) {
     return m().then((t) => {
         t.cancelAttachToProcess(e);
     });

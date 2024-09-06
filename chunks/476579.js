@@ -15,8 +15,8 @@ var r = n(161581),
     I = n(144748),
     m = n(276321),
     T = n(537443).f,
-    g = n(692994),
-    S = n(175440),
+    S = n(692994),
+    g = n(175440),
     A = n(865312),
     N = n(644659),
     O = o.PROPER,
@@ -24,8 +24,8 @@ var r = n(161581),
     v = 'ArrayBuffer',
     C = 'DataView',
     y = 'prototype',
-    L = 'Wrong index',
-    D = N.getterFor(v),
+    D = 'Wrong index',
+    L = N.getterFor(v),
     b = N.getterFor(C),
     M = N.set,
     P = r[v],
@@ -36,7 +36,7 @@ var r = n(161581),
     k = Object.prototype,
     B = r.Array,
     F = r.RangeError,
-    V = i(g),
+    V = i(S),
     H = i([].reverse),
     Z = p.pack,
     Y = p.unpack,
@@ -69,10 +69,10 @@ var r = n(161581),
     $ = function (e, t, n, r) {
         var i = b(e),
             a = h(n);
-        if (a + t > i.byteLength) throw F(L);
+        if (a + t > i.byteLength) throw F(D);
         var s = i.bytes,
             o = a + i.byteOffset,
-            l = S(s, o, o + t);
+            l = g(s, o, o + t);
         return r ? l : H(l);
     },
     J = function (e, t, n, r, i, a) {
@@ -80,7 +80,7 @@ var r = n(161581),
             o = h(n),
             l = r(+i),
             u = !!a;
-        if (o + t > s.byteLength) throw F(L);
+        if (o + t > s.byteLength) throw F(D);
         for (var c = s.bytes, d = o + s.byteOffset, _ = 0; _ < t; _++) c[d + _] = l[u ? _ : t - _ - 1];
     };
 if (s) {
@@ -133,7 +133,7 @@ if (s) {
     })[y]),
         (G = (x = function (e, t, n) {
             _(this, G), _(e, w);
-            var r = D(e),
+            var r = L(e),
                 i = r.byteLength,
                 s = E(t);
             if (s < 0 || s > i) throw F('Wrong offset');
@@ -147,7 +147,7 @@ if (s) {
             }),
                 !a && ((this.buffer = e), (this.byteLength = n), (this.byteOffset = s));
         })[y]),
-        a && (X(U, 'byteLength', D), X(x, 'buffer', b), X(x, 'byteLength', b), X(x, 'byteOffset', b)),
+        a && (X(U, 'byteLength', L), X(x, 'buffer', b), X(x, 'byteLength', b), X(x, 'byteOffset', b)),
         c(G, {
             getInt8: function (e) {
                 return ($(this, 1, e)[0] << 24) >> 24;

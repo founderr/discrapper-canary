@@ -23,17 +23,17 @@ function d(e, t, n) {
 class _ extends (r = a.Component) {
     render() {
         let { autoFocus: e, label: t, placeholder: n, searchTerm: r, inputClassName: a, className: s, onChange: d, onFocus: _, onBlur: E, onKeyPress: f, autoComplete: h, forwardedRef: p, closeIconClassName: I, searchIconClassName: m, cta: T } = this.props,
-            g = null != r && r.length > 0,
-            S = null != p ? p : this._textInputRef;
+            S = null != r && r.length > 0,
+            g = null != p ? p : this._textInputRef;
         return (0, i.jsx)(l.FocusRing, {
-            focusTarget: S,
+            focusTarget: g,
             ringTarget: this._containerRef,
             children: (0, i.jsxs)('div', {
                 className: o()(c.searchBox, s),
                 ref: this._containerRef,
                 children: [
                     (0, i.jsx)(l.TextInput, {
-                        inputRef: S,
+                        inputRef: g,
                         focusProps: { enabled: !1 },
                         name: 'search',
                         maxLength: 100,
@@ -43,7 +43,7 @@ class _ extends (r = a.Component) {
                         onFocus: _,
                         onBlur: E,
                         onKeyPress: f,
-                        value: g ? r : '',
+                        value: S ? r : '',
                         placeholder: n,
                         autoFocus: e,
                         'aria-label': t,
@@ -57,7 +57,7 @@ class _ extends (r = a.Component) {
                               children: T
                           })
                         : null,
-                    g
+                    S
                         ? (0, i.jsx)(l.Clickable, {
                               onClick: this.handleClear,
                               className: c.clear,

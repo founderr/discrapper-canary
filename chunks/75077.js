@@ -1,6 +1,6 @@
 n.d(t, {
     BS: function () {
-        return p;
+        return m;
     },
     Op: function () {
         return M;
@@ -9,7 +9,7 @@ n.d(t, {
         return A;
     },
     k3: function () {
-        return g;
+        return C;
     },
     mN: function () {
         return x;
@@ -18,7 +18,7 @@ n.d(t, {
         return h;
     },
     t2: function () {
-        return m;
+        return p;
     },
     vZ: function () {
         return N;
@@ -40,15 +40,15 @@ var s = n(278074),
     T = n(391110),
     I = n(474936),
     R = n(735825),
-    C = n(689938);
-let g = (e) => {
+    g = n(689938);
+let C = (e) => {
         switch (e) {
             case R.EB.PENDING:
-                return C.Z.Messages.NITRO_HOME_REWARDING_LOCKED_STATE_TITLE;
+                return g.Z.Messages.NITRO_HOME_REWARDING_LOCKED_STATE_TITLE;
             case R.EB.REDEEMABLE:
-                return C.Z.Messages.NITRO_HOME_REWARDING_REDEEMABLE_STATE_TITLE;
+                return g.Z.Messages.NITRO_HOME_REWARDING_REDEEMABLE_STATE_TITLE;
             case R.EB.REDEEMED:
-                return C.Z.Messages.NITRO_HOME_REWARDING_REDEEMED_LABEL;
+                return g.Z.Messages.NITRO_HOME_REWARDING_REDEEMED_LABEL;
             default:
                 return '';
         }
@@ -56,36 +56,36 @@ let g = (e) => {
     N = (e, t, n) => {
         switch (e) {
             case R.EB.PENDING:
-                return t === R.Ft.FREE_GUILD_BOOST_1_MONTH ? C.Z.Messages.NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_1_MONTH_VARIANT : C.Z.Messages.NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_3_MONTHS_VARIANT;
+                return t === R.Ft.FREE_GUILD_BOOST_1_MONTH ? g.Z.Messages.NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_1_MONTH_VARIANT : g.Z.Messages.NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_3_MONTHS_VARIANT;
             case R.EB.REDEEMABLE:
-                if (t === R.Ft.FREE_GUILD_BOOST_1_MONTH) return n ? C.Z.Messages.NITRO_HOME_REWARDING_FREE_BOOST_REDEEMABLE_STATE_SUBTITLE_BACKFILL_VARIANT : C.Z.Messages.NITRO_HOME_REWARDING_FREE_BOOST_REDEEMABLE_STATE_SUBTITLE_1_MONTH_VARIANT;
-                return C.Z.Messages.NITRO_HOME_REWARDING_FREE_BOOST_REDEEMABLE_STATE_SUBTITLE_3_MONTHS_VARIANT;
+                if (t === R.Ft.FREE_GUILD_BOOST_1_MONTH) return n ? g.Z.Messages.NITRO_HOME_REWARDING_FREE_BOOST_REDEEMABLE_STATE_SUBTITLE_BACKFILL_VARIANT : g.Z.Messages.NITRO_HOME_REWARDING_FREE_BOOST_REDEEMABLE_STATE_SUBTITLE_1_MONTH_VARIANT;
+                return g.Z.Messages.NITRO_HOME_REWARDING_FREE_BOOST_REDEEMABLE_STATE_SUBTITLE_3_MONTHS_VARIANT;
             case R.EB.REDEEMED:
-                return C.Z.Messages.NITRO_HOME_REWARDING_REDEEMED_STATE_SUBTITLE;
+                return g.Z.Messages.NITRO_HOME_REWARDING_REDEEMED_STATE_SUBTITLE;
             default:
                 return;
         }
     },
-    p = (e) => {
+    m = (e) => {
         switch (e) {
             case R.EB.PENDING:
-                return C.Z.Messages.NITRO_HOME_REWARDING_LOCKED_STATE_DESCRIPTION;
+                return g.Z.Messages.NITRO_HOME_REWARDING_LOCKED_STATE_DESCRIPTION;
             case R.EB.REDEEMABLE:
                 return;
             case R.EB.REDEEMED:
-                return C.Z.Messages.NITRO_HOME_REWARDING_REDEEMED_STATE_DESCRIPTION;
+                return g.Z.Messages.NITRO_HOME_REWARDING_REDEEMED_STATE_DESCRIPTION;
             default:
                 return;
         }
     };
-function m(e, t) {
+function p(e, t) {
     switch (e) {
         case R.EB.PENDING:
-            return null != t ? C.Z.Messages.NITRO_HOME_REWARDING_TENURE_BOOST_AVAILABLE_DATE.format({ days: t }) : '';
+            return null != t ? g.Z.Messages.NITRO_HOME_REWARDING_TENURE_BOOST_AVAILABLE_DATE.format({ days: t }) : '';
         case R.EB.REDEEMABLE:
-            return C.Z.Messages.REDEEM;
+            return g.Z.Messages.REDEEM;
         case R.EB.REDEEMED:
-            return C.Z.Messages.NITRO_HOME_REWARDING_REDEEMED_LABEL;
+            return g.Z.Messages.NITRO_HOME_REWARDING_REDEEMED_LABEL;
         default:
             return '';
     }
@@ -106,8 +106,8 @@ let A = (e, t, n) => ((0, r.wj)(e) ? t : n),
             { enabled: T } = _.r.getCurrentConfig({ location: f }, { autoTrackExposure: !1 }),
             { enabled: I } = d.C.getCurrentConfig({ location: f }, { autoTrackExposure: !1 }),
             R = u && !T && !I,
-            C = O();
-        return null != n.freeBoost && !0 === a && o({ card: n.freeBoost }), null != n.shyProject && o({ card: n.shyProject }), s && C ? (0 === t.length && c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })) : s && !C && (R || null != n.shyProject ? R && o({ card: n.referralProgram }) : c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })), o({ card: n.earlyAccess }), c(), o({ card: n.unlimitedSuperReactions }), t;
+            g = O();
+        return null != n.tenureBadge && o({ card: n.tenureBadge }), null != n.freeBoost && !0 === a && o({ card: n.freeBoost }), null != n.shyProject && o({ card: n.shyProject }), s && g ? (0 === t.length && c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })) : s && !g && (R || null != n.shyProject ? R && o({ card: n.referralProgram }) : c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })), o({ card: n.earlyAccess }), c(), o({ card: n.unlimitedSuperReactions }), t;
     },
     h = (e) => {
         let { perksCards: t, variant: n, shopMarketingVariation: a, isFullScreen: r, showTenureCard: i, tileOrderVariant: l, isPremiumSubscriber: o } = e,
@@ -197,16 +197,16 @@ let A = (e, t, n) => ((0, r.wj)(e) ? t : n),
         if (e)
             return s
                 ? {
-                      title: C.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_TITLE_SUB,
-                      subtitle: C.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_SUBTITLE_SUB
+                      title: g.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_TITLE_SUB,
+                      subtitle: g.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_SUBTITLE_SUB
                   }
                 : {
-                      title: C.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_TITLE_NON_SUB,
-                      subtitle: C.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_SUBTITLE_NON_SUB
+                      title: g.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_TITLE_NON_SUB,
+                      subtitle: g.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_SUBTITLE_NON_SUB
                   };
         return {
-            title: C.Z.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_TITLE,
-            subtitle: C.Z.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_SUBTITLE
+            title: g.Z.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_TITLE,
+            subtitle: g.Z.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_SUBTITLE
         };
     },
     x = () => {

@@ -13,8 +13,8 @@ n.d(t, {
     }
 });
 var i,
-    a,
-    s = n(539573),
+    s,
+    a = n(539573),
     l = n(689938);
 function r(e, t) {
     return {
@@ -32,10 +32,10 @@ function u() {
     return r(0, l.Z.Messages.FORM_THREAD_STARTER_MESSAGE_REQUIRED_ERROR);
 }
 function d(e, t) {
-    return r(1, (0, s.$q)(e, null == t ? void 0 : t.id));
+    return r(1, (0, a.$q)(e, null == t ? void 0 : t.id));
 }
 function h(e, t) {
     var n;
     return null == e || (0 === e.type && null != t.content && t.content.trim().length > 0) ? null : null !== (n = e.message) && void 0 !== n ? n : null;
 }
-((i = a || (a = {}))[(i.EmptyContent = 0)] = 'EmptyContent'), (i[(i.AutomodViolation = 1)] = 'AutomodViolation');
+((i = s || (s = {}))[(i.EmptyContent = 0)] = 'EmptyContent'), (i[(i.AutomodViolation = 1)] = 'AutomodViolation');

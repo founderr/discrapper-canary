@@ -22,8 +22,8 @@ var r = n(729594),
     I = n(336197),
     m = n(977156),
     T = n(540709),
-    g = n(881706),
-    S = n(701190),
+    S = n(881706),
+    g = n(701190),
     A = n(944486),
     N = n(914010),
     O = n(771845),
@@ -32,7 +32,7 @@ var r = n(729594),
 n(782568);
 var C = n(981631),
     y = n(46140);
-async function L(e, t) {
+async function D(e, t) {
     await s.Z.dispatch({
         type: 'INVITE_MODAL_OPEN',
         invite: e,
@@ -40,21 +40,21 @@ async function L(e, t) {
         context: C.IlC.APP
     });
 }
-async function D(e) {
+async function L(e) {
     var t;
-    let n = S.Z.getInvite(e.code);
+    let n = g.Z.getInvite(e.code);
     if (null == n) {
         let { invite: t } = await o.Z.resolveInvite(e.code, 'Markdown Link');
         n = t;
     }
     if (null == n) return;
     if (n.state === C.r2o.EXPIRED || n.state === C.r2o.BANNED || n.state === C.r2o.ERROR) {
-        await L(n, e.code);
+        await D(n, e.code);
         return;
     }
     let r = O.ZP.getFlattenedGuildIds(),
         i = null == n ? void 0 : null === (t = n.guild) || void 0 === t ? void 0 : t.id;
-    null != i && r.includes(i) ? o.Z.transitionToInviteSync(n) : await L(n, e.code);
+    null != i && r.includes(i) ? o.Z.transitionToInviteSync(n) : await D(n, e.code);
 }
 let b = {
     skipExtensionCheck: void 0,
@@ -63,7 +63,7 @@ let b = {
 function M(e) {
     let { skipExtensionCheck: t, analyticsLocations: s } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : b,
         o = (0, _.zO)(e);
-    if (null != o && (o.type === d.g.INVITE || o.type === d.g.EMBEDDED_ACTIVITY_INVITE)) return (e) => (null == e || e.preventDefault(), D(o), !0);
+    if (null != o && (o.type === d.g.INVITE || o.type === d.g.EMBEDDED_ACTIVITY_INVITE)) return (e) => (null == e || e.preventDefault(), L(o), !0);
     if (null != o && o.type === d.g.APP_DIRECTORY_PROFILE)
         return (e) => {
             var t;
@@ -119,11 +119,11 @@ function M(e) {
                 }),
             !0
         );
-    let { path: S, hostname: O = '', host: L, query: M, hash: P } = r.parse(e),
-        U = v.Z.isDiscordHostname(O) || v.Z.isDiscordLocalhost(L, O);
-    if (U && (null == S ? void 0 : S.startsWith('/application-directory'))) {
+    let { path: g, hostname: O = '', host: D, query: M, hash: P } = r.parse(e),
+        U = v.Z.isDiscordHostname(O) || v.Z.isDiscordLocalhost(D, O);
+    if (U && (null == g ? void 0 : g.startsWith('/application-directory'))) {
         let e;
-        let t = S.split('/'),
+        let t = g.split('/'),
             [, , r, a] = t;
         5 === t.length && (e = t[4]);
         let s = null != r && (0, u.BH)(r) ? r : void 0;
@@ -162,17 +162,17 @@ function M(e) {
             );
         };
     }
-    if (null != S && U && v.Z.isAppRoute(S)) {
+    if (null != g && U && v.Z.isAppRoute(g)) {
         let e = {};
-        return null != M && (e.search = M), null != P && (e.hash = P), (t) => (null == t || t.preventDefault(), (0, I.Z)(S, Object.keys(e).length > 0 ? e : null), !0);
+        return null != M && (e.search = M), null != P && (e.hash = P), (t) => (null == t || t.preventDefault(), (0, I.Z)(g, Object.keys(e).length > 0 ? e : null), !0);
     }
-    if (null != S && U) {
+    if (null != g && U) {
         let { getOAuth2AuthorizeProps: t, openOAuth2ModalWithCreateGuildModal: r } = n(69580),
             i = t(e);
         if (null != i) return (e) => (null == e || e.preventDefault(), r(i), !0);
     }
-    let w = (0, p.Ao)(S);
-    if (null != S && U && null != w)
+    let w = (0, p.Ao)(g);
+    if (null != g && U && null != w)
         return (e) => {
             null == e || e.preventDefault();
             let t = N.Z.getGuildId();
@@ -180,9 +180,9 @@ function M(e) {
             let n = f.ZP.getGuildScheduledEvent(w.guildEventId);
             return null != n && (0, E.bO)({ eventId: n.id }), !0;
         };
-    if (U && (null == S ? void 0 : S.startsWith('/settings/'))) {
+    if (U && (null == g ? void 0 : g.startsWith('/settings/'))) {
         let { default: e } = n(357269),
-            t = e(S);
+            t = e(g);
         if (null != t)
             return (e) => (
                 null == e || e.preventDefault(),
@@ -194,5 +194,5 @@ function M(e) {
                 !0
             );
     }
-    if (!t && null != (0, g.v)(e)) return (t) => (null == t || t.preventDefault(), T.Z.show(e), !0);
+    if (!t && null != (0, S.v)(e)) return (t) => (null == t || t.preventDefault(), T.Z.show(e), !0);
 }

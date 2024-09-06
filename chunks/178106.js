@@ -28,8 +28,8 @@ function m(e, t, n) {
     );
 }
 let T = [],
-    g = new (o())({ max: p.zb }),
-    S = new c.ZP({
+    S = new (o())({ max: p.zb }),
+    g = new c.ZP({
         computeBonus: () => 100,
         computeWeight: (e) => {
             let t = 1;
@@ -43,7 +43,7 @@ function A() {
     var e, t;
     if (!N()) return;
     let n = null === (e = d.Z.frecencyWithoutFetchingLatest.playedSoundFrecency) || void 0 === e ? void 0 : e.playedSounds;
-    S.overwriteHistory(
+    g.overwriteHistory(
         ((t = null != n ? n : {}),
         a().mapValues(t, (e) => ({
             ...e,
@@ -60,11 +60,11 @@ function N() {
 }
 class O extends (r = l.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(_.default, f.Z), (null == e ? void 0 : e.recentlyHeardCache) != null && g.load(e.recentlyHeardCache), (null == e ? void 0 : e.playedEventsPendingFlush) != null && (T = e.playedEventsPendingFlush), this.syncWith([d.Z], A);
+        this.waitFor(_.default, f.Z), (null == e ? void 0 : e.recentlyHeardCache) != null && S.load(e.recentlyHeardCache), (null == e ? void 0 : e.playedEventsPendingFlush) != null && (T = e.playedEventsPendingFlush), this.syncWith([d.Z], A);
     }
     getState() {
         return {
-            recentlyHeardCache: g.dump(),
+            recentlyHeardCache: S.dump(),
             playedEventsPendingFlush: T
         };
     }
@@ -72,13 +72,13 @@ class O extends (r = l.ZP.PersistedStore) {
         return T.length > 0;
     }
     get playedSoundHistory() {
-        return S.usageHistory;
+        return g.usageHistory;
     }
     get recentlyHeardSoundIds() {
-        return g.values();
+        return S.values();
     }
     get frecentlyPlayedSounds() {
-        return S.frequently;
+        return g.frequently;
     }
 }
 m(O, 'displayName', 'SoundboardEventStore'),
@@ -90,12 +90,12 @@ m(O, 'displayName', 'SoundboardEventStore'),
             let r = t.soundId.toString();
             n === h.YQ.SOUNDBOARD &&
                 (function (e) {
-                    S.track(e),
+                    g.track(e),
                         T.push({
                             key: e,
                             timestamp: Date.now()
                         }),
-                        S.compute();
+                        g.compute();
                 })(r);
         },
         GUILD_SOUNDBOARD_SOUND_PLAY_START: function (e) {
@@ -117,7 +117,7 @@ m(O, 'displayName', 'SoundboardEventStore'),
                     return !1;
                 })(i) &&
                 (function (e) {
-                    g.set(e, e);
+                    S.set(e, e);
                 })(i);
         },
         USER_SETTINGS_PROTO_UPDATE: function (e) {

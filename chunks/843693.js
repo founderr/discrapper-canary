@@ -30,7 +30,7 @@ let m = new Set(),
             return ''.concat(n, '-').concat(t);
         }
     ),
-    g = new l.h(
+    S = new l.h(
         function (e) {
             let {
                 messageId: t,
@@ -48,7 +48,7 @@ let m = new Set(),
             return ''.concat(n, '-').concat(r, '-').concat(t);
         }
     ),
-    S = (e) => {
+    g = (e) => {
         let { userId: t, channelId: n } = e;
         return ''.concat(t, '-').concat(n);
     };
@@ -61,7 +61,7 @@ class N extends (r = o.ZP.Store) {
     }
     getComboScore(e, t) {
         let n = T.get(
-            S({
+            g({
                 userId: e,
                 channelId: t
             })
@@ -70,7 +70,7 @@ class N extends (r = o.ZP.Store) {
     }
     getUserCombo(e, t) {
         return T.get(
-            S({
+            g({
                 userId: e,
                 channelId: t
             })
@@ -83,11 +83,11 @@ class N extends (r = o.ZP.Store) {
     }
     getMessageCombo(e) {
         var t;
-        let n = g.get(e);
+        let n = S.get(e);
         return null !== (t = null == n ? void 0 : n.combo) && void 0 !== t ? t : void 0;
     }
     getMostRecentMessageCombo(e) {
-        let t = g.values(e);
+        let t = S.values(e);
         return t[t.length - 1];
     }
     getUserComboShakeIntensity(e, t, n, r) {
@@ -111,7 +111,7 @@ let O = new N(c.Z, {
         !(function e(t) {
             var n, r, i, a, s, o;
             let l = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-                c = T.get(S(t)),
+                c = T.get(g(t)),
                 d = {
                     ...c,
                     ...t,
@@ -119,12 +119,12 @@ let O = new N(c.Z, {
                     multiplier: Math.min(null !== (a = null !== (i = t.multiplier) && void 0 !== i ? i : null == c ? void 0 : c.multiplier) && void 0 !== a ? a : 1, 7),
                     decayInterval: null !== (s = null == c ? void 0 : c.decayInterval) && void 0 !== s ? s : new u.Xp()
                 };
-            T.set(S(t), d),
+            T.set(g(t), d),
                 l &&
                     (null === (o = d.decayInterval) ||
                         void 0 === o ||
                         o.start(1000, () => {
-                            let t = T.get(S(d));
+                            let t = T.get(g(d));
                             if (null != t) {
                                 let r = d.multiplier !== t.multiplier && d.value !== t.value;
                                 if (t.value <= 0 || r) {
@@ -151,7 +151,7 @@ let O = new N(c.Z, {
         var t;
         let { comboMessage: n } = e;
         if (!f.Z.isEnabled()) return !1;
-        (t = n), g.set(t.messageId, t);
+        (t = n), S.set(t.messageId, t);
     },
     MESSAGE_CREATE: function (e) {
         var t, n;
@@ -163,7 +163,7 @@ let O = new N(c.Z, {
         let o = d.default.getId();
         if (!A(null == a ? void 0 : a.id, o, s, m)) return !1;
         let l = T.get(
-            S({
+            g({
                 userId: null !== (t = null == a ? void 0 : a.id) && void 0 !== t ? t : '???',
                 channelId: r
             })

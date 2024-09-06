@@ -6,10 +6,10 @@ n.d(t, {
         return b;
     },
     k: function () {
-        return D;
+        return L;
     },
     l2: function () {
-        return L;
+        return D;
     }
 });
 var r = n(913527),
@@ -29,8 +29,8 @@ var r = n(913527),
     I = n(104494),
     m = n(639119),
     T = n(921022),
-    g = n(748770),
-    S = n(725727),
+    S = n(748770),
+    g = n(725727),
     A = n(1844),
     N = n(474936),
     O = n(981631),
@@ -58,7 +58,7 @@ function v(e) {
 function C() {
     var e;
     let { paymentsBlocked: t } = o.Z.useExperiment({ location: '153d31_1' }, { autoTrackExposure: !1 }),
-        { promotion: n } = (0, S.mq)(),
+        { promotion: n } = (0, g.mq)(),
         { enabled: r } = (0, p.ZP)(),
         { mostRecentSubscription: i, premiumSubscription: s } = (0, a.cj)([c.ZP], () => ({
             mostRecentSubscription: c.ZP.getMostRecentPremiumTypeSubscription(),
@@ -69,10 +69,10 @@ function C() {
         d = new Date(null !== (e = null == n ? void 0 : n.endDate) && void 0 !== e ? e : 0).valueOf(),
         _ = Date.now(),
         E = _ > d,
-        { enabled: g } = (0, f.Z)();
+        { enabled: S } = (0, f.Z)();
     (0, T.Z)({
         delay: E ? -1 : d - _,
-        disable: g
+        disable: S
     });
     let A =
             !v({
@@ -110,12 +110,12 @@ async function y() {
         mostRecentSubscription: l
     });
 }
-async function L() {
+async function D() {
     if (!(await y())) return;
     let e = A.Z.bogoPromotion;
-    if (!(null != e && new Date(e.endDate).valueOf() >= Date.now())) await (0, g.L9)();
+    if (!(null != e && new Date(e.endDate).valueOf() >= Date.now())) await (0, S.L9)();
 }
-async function D() {
+async function L() {
     let e = A.Z.bogoPromotion,
         t = null != e && new Date(e.endDate).valueOf() >= Date.now() && new Date(e.startDate).valueOf() <= Date.now(),
         n = await y(),

@@ -24,9 +24,9 @@ function p(e) {
             return c.Z.getChannel(null === (e = _.Z.getVoiceStateForUser(I)) || void 0 === e ? void 0 : e.channelId);
         }),
         T = null == m ? void 0 : m.isPrivate(),
-        g = (0, i.e7)([d.Z], () => d.Z.can(f.Plq.CREATE_INSTANT_INVITE, m));
-    if (null == m || T || !g || t.bot) return null;
-    let S = async () => {
+        S = (0, i.e7)([d.Z], () => d.Z.can(f.Plq.CREATE_INSTANT_INVITE, m));
+    if (null == m || T || !S || t.bot) return null;
+    let g = async () => {
         await o.Z.createInvite(
             null == m ? void 0 : m.id,
             {
@@ -50,6 +50,6 @@ function p(e) {
         fullWidth: !0,
         color: a.Button.Colors.BRAND,
         className: n,
-        onClick: S
+        onClick: g
     });
 }

@@ -86,7 +86,7 @@ function i() {
                             'throw' === u.type && ((i = I), (r.method = 'throw'), (r.arg = u.arg));
                         }
                     };
-                })(e, r, new D(i || []))
+                })(e, r, new L(i || []))
             }),
             a
         );
@@ -110,8 +110,8 @@ function i() {
         I = 'completed',
         m = {};
     function T() {}
-    function g() {}
     function S() {}
+    function g() {}
     var A = {};
     _(A, u, function () {
         return this;
@@ -119,7 +119,7 @@ function i() {
     var N = Object.getPrototypeOf,
         O = N && N(N(b([])));
     O && O !== a && s.call(O, u) && (A = O);
-    var R = (S.prototype = T.prototype = Object.create(A));
+    var R = (g.prototype = T.prototype = Object.create(A));
     function v(e) {
         ['next', 'throw', 'return'].forEach(function (t) {
             _(e, t, function (e) {
@@ -168,11 +168,11 @@ function i() {
         var t = { tryLoc: e[0] };
         1 in e && (t.catchLoc = e[1]), 2 in e && ((t.finallyLoc = e[2]), (t.afterLoc = e[3])), this.tryEntries.push(t);
     }
-    function L(e) {
+    function D(e) {
         var t = e.completion || {};
         (t.type = 'normal'), delete t.arg, (e.completion = t);
     }
-    function D(e) {
+    function L(e) {
         (this.tryEntries = [{ tryLoc: 'root' }]), e.forEach(y, this), this.reset(!0);
     }
     function b(e) {
@@ -192,22 +192,22 @@ function i() {
         throw TypeError(r(e) + ' is not iterable');
     }
     return (
-        (g.prototype = S),
+        (S.prototype = g),
         o(R, 'constructor', {
-            value: S,
-            configurable: !0
-        }),
-        o(S, 'constructor', {
             value: g,
             configurable: !0
         }),
-        (g.displayName = _(S, d, 'GeneratorFunction')),
+        o(g, 'constructor', {
+            value: S,
+            configurable: !0
+        }),
+        (S.displayName = _(g, d, 'GeneratorFunction')),
         (n.isGeneratorFunction = function (e) {
             var t = 'function' == typeof e && e.constructor;
-            return !!t && (t === g || 'GeneratorFunction' === (t.displayName || t.name));
+            return !!t && (t === S || 'GeneratorFunction' === (t.displayName || t.name));
         }),
         (n.mark = function (e) {
-            return Object.setPrototypeOf ? Object.setPrototypeOf(e, S) : ((e.__proto__ = S), _(e, d, 'GeneratorFunction')), (e.prototype = Object.create(R)), e;
+            return Object.setPrototypeOf ? Object.setPrototypeOf(e, g) : ((e.__proto__ = g), _(e, d, 'GeneratorFunction')), (e.prototype = Object.create(R)), e;
         }),
         (n.awrap = function (e) {
             return { __await: e };
@@ -250,10 +250,10 @@ function i() {
             );
         }),
         (n.values = b),
-        (D.prototype = {
-            constructor: D,
+        (L.prototype = {
+            constructor: L,
             reset: function (e) {
-                if (((this.prev = 0), (this.next = 0), (this.sent = this._sent = t), (this.done = !1), (this.delegate = null), (this.method = 'next'), (this.arg = t), this.tryEntries.forEach(L), !e)) for (var n in this) 't' === n.charAt(0) && s.call(this, n) && !isNaN(+n.slice(1)) && (this[n] = t);
+                if (((this.prev = 0), (this.next = 0), (this.sent = this._sent = t), (this.done = !1), (this.delegate = null), (this.method = 'next'), (this.arg = t), this.tryEntries.forEach(D), !e)) for (var n in this) 't' === n.charAt(0) && s.call(this, n) && !isNaN(+n.slice(1)) && (this[n] = t);
             },
             stop: function () {
                 this.done = !0;
@@ -305,7 +305,7 @@ function i() {
             finish: function (e) {
                 for (var t = this.tryEntries.length - 1; t >= 0; --t) {
                     var n = this.tryEntries[t];
-                    if (n.finallyLoc === e) return this.complete(n.completion, n.afterLoc), L(n), m;
+                    if (n.finallyLoc === e) return this.complete(n.completion, n.afterLoc), D(n), m;
                 }
             },
             catch: function (e) {
@@ -315,7 +315,7 @@ function i() {
                         var r = n.completion;
                         if ('throw' === r.type) {
                             var i = r.arg;
-                            L(n);
+                            D(n);
                         }
                         return i;
                     }

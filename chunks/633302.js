@@ -46,8 +46,8 @@ let u = null,
     },
     m = ['\uD83C\uDFFB', '\uD83C\uDFFC', '\uD83C\uDFFD', '\uD83C\uDFFE', '\uD83C\uDFFF'],
     T = /^:([^\s:]+?(?:::skin-tone-\d)?):/,
-    g = n(523558),
-    S = /[\u200d\ud800-\udfff\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff\ufe0e\ufe0f\u270b\u2b50\u2728\u26a1\u26c5\u26c4\u2614\u2615\u26bd\u26be\u26f3\u26f5\u2693\u26fd\u26f2\u26fa\u26ea\u231a\u23f0\u231b\u23f3\u26ce\u2648\u2649\u264a\u264b\u264c\u264d\u264e\u264f\u2650\u2651\u2652\u2653\u270a\u274c\u2b55\u26d4\u2757\u2755\u2753\u2754\u2705\u274e\u267f\u23e9\u23ea\u23eb\u23ec\u2795\u2796\u2797\u27b0\u27bf\u26aa\u26ab\u25fe\u25fd\u2b1b\u2b1c\u26a7]/,
+    S = n(523558),
+    g = /[\u200d\ud800-\udfff\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff\ufe0e\ufe0f\u270b\u2b50\u2728\u26a1\u26c5\u26c4\u2614\u2615\u26bd\u26be\u26f3\u26f5\u2693\u26fd\u26f2\u26fa\u26ea\u231a\u23f0\u231b\u23f3\u26ce\u2648\u2649\u264a\u264b\u264c\u264d\u264e\u264f\u2650\u2651\u2652\u2653\u270a\u274c\u2b55\u26d4\u2757\u2755\u2753\u2754\u2705\u274e\u267f\u23e9\u23ea\u23eb\u23ec\u2795\u2796\u2797\u27b0\u27bf\u26aa\u26ab\u25fe\u25fd\u2b1b\u2b1c\u26a7]/,
     A = /\ud83c[\udffb-\udfff](?=\ud83c[\udffb-\udfff])|(?:[^\ud800-\udfff][\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]?|[\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]|(?:\ud83c[\udde6-\uddff]){2}|[\ud800-\udbff][\udc00-\udfff]|[\ud800-\udfff])[\ufe0e\ufe0f]?(?:[\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]|\ud83c[\udffb-\udfff])?(?:\u200d(?:[^\ud800-\udfff]|(?:\ud83c[\udde6-\uddff]){2}|[\ud800-\udbff][\udc00-\udfff])[\ufe0e\ufe0f]?(?:[\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]|\ud83c[\udffb-\udfff])?)*/g;
 for (let e = 0; e < m.length; e++) {
     let t = m[e];
@@ -170,10 +170,10 @@ function v(e) {
 }
 let C = String.fromCodePoint(917631),
     y = String.fromCodePoint(127988),
-    L = /^[\u{E0061}-\u{E007A}]$/u;
-function D(e, t) {
+    D = /^[\u{E0061}-\u{E007A}]$/u;
+function L(e, t) {
     var n;
-    if (!0 !== t && !S.test(e))
+    if (!0 !== t && !g.test(e))
         return [
             {
                 type: 'text',
@@ -187,7 +187,7 @@ function D(e, t) {
         let t = a[e];
         if (null != r && '' !== r) {
             if (t === C) (t = r + t), (r = '');
-            else if (L.test(t)) {
+            else if (D.test(t)) {
                 r += t;
                 continue;
             } else i.push(v(r)), (r = '');
@@ -235,15 +235,15 @@ t.ZP = {
         return e.replace(T, (e, t) => b(t, e));
     },
     maybeTranslateSurrogatesToInlineEmoji: function (e) {
-        if (!S.test(e)) return null;
-        let t = D(e, !0)
+        if (!g.test(e)) return null;
+        let t = L(e, !0)
             .map((e) => ('text' === e.type ? e.text : e.emojiName))
             .join('');
         return t === e ? null : t;
     },
-    findInlineEmojisFromSurrogates: D,
+    findInlineEmojisFromSurrogates: L,
     translateSurrogatesToInlineEmoji: function (e) {
-        return D(e)
+        return L(e)
             .map((e) => ('text' === e.type ? e.text : e.emojiName))
             .join('');
     },
@@ -253,7 +253,7 @@ t.ZP = {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
             n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : '',
             r = n;
-        return Object.prototype.hasOwnProperty.call(g, e) && (r = g[e]), t ? ':'.concat(r, ':') : r;
+        return Object.prototype.hasOwnProperty.call(S, e) && (r = S[e]), t ? ':'.concat(r, ':') : r;
     },
     convertSurrogateToBase: function (e) {
         return R(

@@ -18,21 +18,21 @@ var a,
 ((n = a || (a = {})).DANGER = 'danger'), (n.WARNING = 'warning');
 function d(e) {
     let { transitionState: A, onClose: t, title: a, body: n, cta: d, closeLabel: c, onConfirm: u, iconVariant: C = 'warning' } = e,
-        [g, T] = s.useState(!1),
-        p = async () => {
-            T(!0);
+        [g, h] = s.useState(!1),
+        T = async () => {
+            h(!0);
             try {
                 await u(), t();
             } finally {
-                T(!1);
+                h(!1);
             }
         },
-        h = null != a ? a : l.Z.Messages.GUILD_PRODUCT_SETTINGS_WARNING_MODAL_TITLE;
+        p = null != a ? a : l.Z.Messages.GUILD_PRODUCT_SETTINGS_WARNING_MODAL_TITLE;
     return (0, r.jsxs)(o.ModalRoot, {
         className: i.__invalid_container,
         size: o.ModalSize.DYNAMIC,
         transitionState: A,
-        'aria-label': h,
+        'aria-label': p,
         children: [
             (0, r.jsxs)(o.ModalContent, {
                 className: i.content,
@@ -61,7 +61,7 @@ function d(e) {
                             (0, r.jsx)(o.Heading, {
                                 variant: 'heading-xl/semibold',
                                 color: 'header-primary',
-                                children: h
+                                children: p
                             })
                         ]
                     }),
@@ -78,7 +78,7 @@ function d(e) {
                 children: [
                     (0, r.jsx)(o.Button, {
                         color: o.Button.Colors.BRAND,
-                        onClick: p,
+                        onClick: T,
                         submitting: g,
                         children: d
                     }),

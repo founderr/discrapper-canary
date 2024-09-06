@@ -20,11 +20,11 @@ let d = (e) => {
                 link: o.s
             })
         ),
-        [T, g] = i.useState(''),
-        [S, A] = i.useState('');
+        [T, S] = i.useState(''),
+        [g, A] = i.useState('');
     i.useEffect(() => {
         var e;
-        g(null !== (e = null == p ? void 0 : p.value) && void 0 !== e ? e : '');
+        S(null !== (e = null == p ? void 0 : p.value) && void 0 !== e ? e : '');
     }, [p]);
     let N = i.useCallback(
         (e) => {
@@ -37,7 +37,7 @@ let d = (e) => {
                   }))
                 : null != e &&
                   (A(''),
-                  g(e),
+                  S(e),
                   h({
                       value: e,
                       isValid: !0
@@ -67,7 +67,7 @@ let d = (e) => {
                 maxLength: E,
                 onChange: N,
                 value: T,
-                error: S,
+                error: g,
                 rows: _,
                 placeholder: d,
                 autoFocus: !0

@@ -16,8 +16,8 @@ var r = n(913527),
     I = n(709054),
     m = n(839627),
     T = n(802098),
-    g = n(128014),
-    S = n(163379),
+    S = n(128014),
+    g = n(163379),
     A = n(596401),
     N = n(981631),
     O = n(930441);
@@ -81,7 +81,7 @@ class C extends c.Z {
                             r = null;
                         for (var [i, { min_version: a }] of Object.entries(e)) a <= t && a > n && ((n = a), (r = i));
                         return r;
-                    })(i, (0, g.b)());
+                    })(i, (0, S.b)());
                 if (
                     (a.Z.dispatch({
                         type: 'CHANGE_LOG_SET_CONFIG',
@@ -105,7 +105,7 @@ class C extends c.Z {
                         s.Z.markChangelogAsSeen(o, d.date);
                         return;
                     }
-                    !T.Z.isLocked() && new Date(d.date) > new Date(c) && (0, S.Z)();
+                    !T.Z.isLocked() && new Date(d.date) > new Date(c) && (0, g.Z)();
                 }
             });
     }

@@ -36,9 +36,9 @@ function T(e, t, n) {
         this.updater.enqueueForceUpdate(this, e, 'forceUpdate');
     }),
     (m.prototype = I.prototype);
-var g = (T.prototype = new m());
-(g.constructor = T), h(g, I.prototype), (g.isPureReactComponent = !0);
-var S = Array.isArray,
+var S = (T.prototype = new m());
+(S.constructor = T), h(S, I.prototype), (S.isPureReactComponent = !0);
+var g = Array.isArray,
     A = Object.prototype.hasOwnProperty,
     N = { current: null },
     O = {
@@ -87,7 +87,7 @@ function y(e, t) {
               }))
         : t.toString(36);
 }
-function L(e, t, i) {
+function D(e, t, i) {
     if (null == e) return e;
     var a = [],
         s = 0;
@@ -117,7 +117,7 @@ function L(e, t, i) {
                 return (
                     (o = o((_ = t))),
                     (t = '' === s ? '.' + y(_, 0) : s),
-                    S(o)
+                    g(o)
                         ? ((a = ''),
                           null != t && (a = t.replace(C, '$&/') + '/'),
                           e(o, i, a, '', function (e) {
@@ -139,7 +139,7 @@ function L(e, t, i) {
                     1
                 );
             }
-            if (((_ = 0), (s = '' === s ? '.' : s + ':'), S(t)))
+            if (((_ = 0), (s = '' === s ? '.' : s + ':'), g(t)))
                 for (var f = 0; f < t.length; f++) {
                     var h = s + y((d = t[f]), f);
                     _ += e(d, i, a, h, o);
@@ -155,7 +155,7 @@ function L(e, t, i) {
         a
     );
 }
-function D(e) {
+function L(e) {
     if (-1 === e._status) {
         var t = e._result;
         (t = t()).then(
@@ -174,9 +174,9 @@ function D(e) {
 var b = { current: null },
     M = { transition: null };
 (t.Children = {
-    map: L,
+    map: D,
     forEach: function (e, t, n) {
-        L(
+        D(
             e,
             function () {
                 t.apply(this, arguments);
@@ -187,7 +187,7 @@ var b = { current: null },
     count: function (e) {
         var t = 0;
         return (
-            L(e, function () {
+            D(e, function () {
                 t++;
             }),
             t
@@ -195,7 +195,7 @@ var b = { current: null },
     },
     toArray: function (e) {
         return (
-            L(e, function (e) {
+            D(e, function (e) {
                 return e;
             }) || []
         );
@@ -282,7 +282,7 @@ var b = { current: null },
                 _status: -1,
                 _result: e
             },
-            _init: D
+            _init: L
         };
     }),
     (t.memo = function (e, t) {

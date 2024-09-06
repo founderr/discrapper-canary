@@ -15,8 +15,8 @@ let E = _.QZA.CLOSED,
     I = {},
     m = {},
     T = null,
-    g = null,
-    S = !1,
+    S = null,
+    g = !1,
     A = !1,
     N = null,
     O = null,
@@ -24,10 +24,10 @@ let E = _.QZA.CLOSED,
     v = [],
     C = null,
     y = null;
-function L(e) {
+function D(e) {
     var t, n, r, i, a, s;
     let o = d.default.getCurrentUser();
-    if (null == o) return D();
+    if (null == o) return L();
     (h = null !== (t = e.section) && void 0 !== t ? t : h),
         (C = null !== (n = e.section) && void 0 !== n ? n : h),
         null != e.subsection && null != h && (p[h] = e.subsection),
@@ -35,7 +35,7 @@ function L(e) {
         (A = !!e.openWithoutBackstack),
         (E = _.QZA.OPEN),
         (m = {}),
-        (g = {
+        (S = {
             ...(T = {
                 [_.oAB.ACCOUNT]: {
                     userId: o.id,
@@ -54,8 +54,8 @@ function L(e) {
         (v = null !== (a = e.analyticsLocations) && void 0 !== a ? a : []),
         (y = null !== (s = e.impressionSource) && void 0 !== s ? s : null);
 }
-function D() {
-    (E = _.QZA.CLOSED), (S = !1), (T = null), (C = null), (g = null), (f = null), (h = null), (p = {}), (I = {}), (O = null), (R = null), (v = []), (y = null);
+function L() {
+    (E = _.QZA.CLOSED), (g = !1), (T = null), (C = null), (S = null), (f = null), (h = null), (p = {}), (I = {}), (O = null), (R = null), (v = []), (y = null);
 }
 function b() {
     (E = _.QZA.OPEN), (m = {});
@@ -65,10 +65,10 @@ class M extends (s = u.ZP.Store) {
         this.waitFor(d.default);
     }
     hasChanges() {
-        return null != g && null != T && (!!this.isOpen() || N === _.cII.USER_SETTINGS) && !l().isEqual(g, T);
+        return null != S && null != T && (!!this.isOpen() || N === _.cII.USER_SETTINGS) && !l().isEqual(S, T);
     }
     isOpen() {
-        return S;
+        return g;
     }
     getPreviousSection() {
         return f;
@@ -91,7 +91,7 @@ class M extends (s = u.ZP.Store) {
             section: h,
             subsection: null != h ? p[h] : null,
             scrollPosition: null != h ? I[h] : null,
-            settings: g,
+            settings: S,
             errors: m,
             hasChanges: this.hasChanges(),
             openWithoutBackstack: A,
@@ -116,11 +116,11 @@ class M extends (s = u.ZP.Store) {
         : (r[i] = a),
     (t.Z = new M(c.Z, {
         USER_SETTINGS_MODAL_OPEN: function (e) {
-            (S = !0), L(e);
+            (g = !0), D(e);
         },
-        USER_SETTINGS_MODAL_INIT: L,
-        USER_SETTINGS_MODAL_CLOSE: D,
-        LOGOUT: D,
+        USER_SETTINGS_MODAL_INIT: D,
+        USER_SETTINGS_MODAL_CLOSE: L,
+        LOGOUT: L,
         USER_SETTINGS_MODAL_SUBMIT: function () {
             E = _.QZA.SUBMITTING;
         },
@@ -143,9 +143,9 @@ class M extends (s = u.ZP.Store) {
         },
         USER_SETTINGS_MODAL_UPDATE_ACCOUNT: function (e) {
             let { settings: t } = e;
-            null == g && (g = {});
-            let n = g[_.oAB.ACCOUNT];
-            g[_.oAB.ACCOUNT] = {
+            null == S && (S = {});
+            let n = S[_.oAB.ACCOUNT];
+            S[_.oAB.ACCOUNT] = {
                 ...n,
                 ...t
             };
@@ -155,7 +155,7 @@ class M extends (s = u.ZP.Store) {
             let e = d.default.getCurrentUser();
             b(),
                 null != e &&
-                    (g = {
+                    (S = {
                         ...(T = {
                             [_.oAB.ACCOUNT]: {
                                 userId: e.id,
@@ -175,7 +175,7 @@ class M extends (s = u.ZP.Store) {
                 (N = e.tab),
                 null == h &&
                     N === _.cII.USER_SETTINGS &&
-                    L({
+                    D({
                         type: 'USER_SETTINGS_MODAL_INIT',
                         section: null,
                         subsection: null,

@@ -1,7 +1,7 @@
 var i = n(735250);
 n(470079);
-var a = n(481060),
-    s = n(493683),
+var s = n(481060),
+    a = n(493683),
     l = n(599059),
     r = n(762914),
     o = n(933557),
@@ -12,15 +12,15 @@ var a = n(481060),
 t.Z = (e) => {
     let { channel: t } = e,
         n = (0, o.ZP)(t),
-        p = (0, r.Dd)(t.id),
-        m = (0, c.m$)({
+        m = (0, r.Dd)(t.id),
+        p = (0, c.m$)({
             channelId: t.id,
             location: 'ChannelName'
         });
     return (0, i.jsx)('div', {
         className: h.container,
         onDoubleClick: (e) => e.stopPropagation(),
-        children: p
+        children: m
             ? (0, i.jsx)('div', {
                   className: h.channelName,
                   children: n
@@ -35,18 +35,18 @@ t.Z = (e) => {
                           autoComplete: 'off',
                           value: null != n ? n : '',
                           onBlur: (e) => {
-                              n !== e.currentTarget.value && s.Z.setName(t.id, e.currentTarget.value);
+                              n !== e.currentTarget.value && a.Z.setName(t.id, e.currentTarget.value);
                           }
                       }),
-                      m &&
-                          (0, i.jsx)(a.Tooltip, {
+                      p &&
+                          (0, i.jsx)(s.Tooltip, {
                               text: d.Z.Messages.E2EE_CALL_VERIFIED_TOOLTIP,
                               children: (e) =>
-                                  (0, i.jsx)(a.ShieldLockIcon, {
+                                  (0, i.jsx)(s.ShieldLockIcon, {
                                       ...e,
                                       size: 'xs',
                                       'aria-label': d.Z.Messages.E2EE_CALL_VERIFIED_A11Y,
-                                      color: a.tokens.colors.INTERACTIVE_NORMAL
+                                      color: s.tokens.colors.INTERACTIVE_NORMAL
                                   })
                           })
                   ]

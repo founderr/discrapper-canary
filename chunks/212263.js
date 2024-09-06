@@ -16,8 +16,8 @@ var r = n(735250),
     I = n(165583),
     m = n(197115),
     T = n(631771),
-    g = n(609218),
-    S = n(210887),
+    S = n(609218),
+    g = n(210887),
     A = n(626135),
     N = n(176354),
     O = n(74538),
@@ -25,14 +25,14 @@ var r = n(735250),
     v = n(149203),
     C = n(981631),
     y = n(185923),
-    L = n(474936),
-    D = n(689938),
+    D = n(474936),
+    L = n(689938),
     b = n(900566);
 t.Z = (e) => {
     var t, a;
     let M,
         { onLearnMore: P, onClose: U, channel: w, emojiDescriptor: x, pickerIntention: G, analyticsLocation: k, containerContext: B } = e,
-        F = (0, o.e7)([S.Z], () => S.Z.theme) === C.BRd.LIGHT ? 'light' : 'dark',
+        F = (0, o.e7)([g.Z], () => g.Z.theme) === C.BRd.LIGHT ? 'light' : 'dark',
         [V, H] = i.useState(!1),
         Z = () => {
             (0, R.A3)(w), (0, f.z)(), P();
@@ -51,7 +51,7 @@ t.Z = (e) => {
                 disable: z
             }
         );
-    M = G === y.Hz.REACTION ? L.cd.EMOJI_PICKER_REACTION_EMOJI_CLICKED : null == x ? L.cd.EMOJI_PICKER_FLOATING_UPSELL : x.subCategory === v.t0.TOP_GUILD_EMOJI ? L.cd.EMOJI_PICKER_TOP_SERVER_EMOJI_CLICKED : x.subCategory === v.t0.NEWLY_ADDED_EMOJI ? L.cd.EMOJI_PICKER_NEWLY_ADDED_EMOJI_CLICKED : L.cd.EMOJI_PICKER_EMOJI_CLICKED;
+    M = G === y.Hz.REACTION ? D.cd.EMOJI_PICKER_REACTION_EMOJI_CLICKED : null == x ? D.cd.EMOJI_PICKER_FLOATING_UPSELL : x.subCategory === v.t0.TOP_GUILD_EMOJI ? D.cd.EMOJI_PICKER_TOP_SERVER_EMOJI_CLICKED : x.subCategory === v.t0.NEWLY_ADDED_EMOJI ? D.cd.EMOJI_PICKER_NEWLY_ADDED_EMOJI_CLICKED : D.cd.EMOJI_PICKER_EMOJI_CLICKED;
     let J = null != x ? x.emoji : void 0,
         ee = null != J && J.animated,
         et = null != J && !N.ZP.isInternalEmojiForGuildId(J, null == w ? void 0 : w.getGuildId()),
@@ -68,7 +68,7 @@ t.Z = (e) => {
                     object: en
                 },
                 location_stack: Q,
-                sku_id: (0, O.Wz)(O.ZP.getSkuIdForPremiumType(L.p9.TIER_2))
+                sku_id: (0, O.Wz)(O.ZP.getSkuIdForPremiumType(D.p9.TIER_2))
             });
     }, [k, Q, q, ee, et, M, en, X]);
     let er = (0, o.e7)([E.Z], () => E.Z.affinities),
@@ -78,15 +78,15 @@ t.Z = (e) => {
     }, [ei]);
     let ea = er.length > 1 && $;
     return X
-        ? (0, r.jsx)(g.Z, {
+        ? (0, r.jsx)(S.Z, {
               containerContext: B,
               image: {
                   url: j,
                   width: 220,
                   height: 132
               },
-              title: D.Z.Messages.EMOJI_PICKER_PREMIUM_UPSELL_TITLE_V2,
-              description: D.Z.Messages.EMOJI_PICKER_PREMIUM_UPSELL_DESCRIPTION_V2,
+              title: L.Z.Messages.EMOJI_PICKER_PREMIUM_UPSELL_TITLE_V2,
+              description: L.Z.Messages.EMOJI_PICKER_PREMIUM_UPSELL_DESCRIPTION_V2,
               enableSocialProof: ea,
               analyticsLocationSection: C.jXE.EMOJI_UPSELL_POPOUT,
               onClose: U,
@@ -98,7 +98,7 @@ t.Z = (e) => {
                       object: en
                   },
                   location_stack: Q,
-                  sku_id: (0, O.Wz)(O.ZP.getSkuIdForPremiumType(L.p9.TIER_2)),
+                  sku_id: (0, O.Wz)(O.ZP.getSkuIdForPremiumType(D.p9.TIER_2)),
                   has_search_query: null != q && '' !== q,
                   is_animated: ee
               }
@@ -109,18 +109,18 @@ t.Z = (e) => {
                   (0, r.jsx)(l.Clickable, {
                       className: b.premiumPromoClose,
                       onClick: U,
-                      children: D.Z.Messages.CLOSE
+                      children: L.Z.Messages.CLOSE
                   }),
                   (0, r.jsxs)(r.Fragment, {
                       children: [
                           z
                               ? (0, r.jsx)(I.ZP, {
-                                    type: L.cd.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_EMOJI,
-                                    subscriptionTier: null !== (a = null == W ? void 0 : null === (t = W.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== a ? a : L.Si.TIER_2,
+                                    type: D.cd.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_EMOJI,
+                                    subscriptionTier: null !== (a = null == W ? void 0 : null === (t = W.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== a ? a : D.Si.TIER_2,
                                     onClose: U,
                                     trialOffer: W,
                                     discountOffer: K,
-                                    children: D.Z.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_UPSELL.format({ onClick: Z })
+                                    children: L.Z.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_UPSELL.format({ onClick: Z })
                                 })
                               : (0, r.jsxs)(r.Fragment, {
                                     children: [
@@ -131,17 +131,17 @@ t.Z = (e) => {
                                         }),
                                         (0, r.jsx)('div', {
                                             className: b.premiumPromoTitle,
-                                            children: D.Z.Messages.PREMIUM_PROMO_TITLE_SEARCH_UPSELL
+                                            children: L.Z.Messages.PREMIUM_PROMO_TITLE_SEARCH_UPSELL
                                         }),
                                         (0, r.jsx)('div', {
                                             className: b.premiumPromoDescription,
-                                            children: D.Z.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_UPSELL.format({ onClick: Z })
+                                            children: L.Z.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_UPSELL.format({ onClick: Z })
                                         })
                                     ]
                                 }),
                           !z &&
                               (0, r.jsx)(m.Z, {
-                                  subscriptionTier: L.Si.TIER_2,
+                                  subscriptionTier: D.Si.TIER_2,
                                   submitting: V,
                                   premiumModalAnalyticsLocation: {
                                       section: C.jXE.EMOJI_PICKER_POPOUT,
@@ -155,7 +155,7 @@ t.Z = (e) => {
                                   onSubscribeModalClose: (e) => {
                                       H(!1), e && U();
                                   },
-                                  buttonText: z ? D.Z.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT : D.Z.Messages.PREMIUM_REQUIRED_GET_NITRO
+                                  buttonText: z ? L.Z.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT : L.Z.Messages.PREMIUM_REQUIRED_GET_NITRO
                               })
                       ]
                   })

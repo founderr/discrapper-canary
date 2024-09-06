@@ -219,7 +219,7 @@ function j(e) {
                     children: T(N.Z.theme)
                 }));
     let k = null == f ? void 0 : f(),
-        G =
+        F =
             y && null != k
                 ? (0, i.jsx)('div', {
                       className: M.footer,
@@ -233,12 +233,12 @@ function j(e) {
                       })
                   })
                 : null,
-        F = { maxHeight: D.height - 43 - 25 };
-    b && (F.maxHeight -= 40);
+        G = { maxHeight: D.height - 43 - 25 };
+    b && (G.maxHeight -= 40);
     let w = null != _ && s;
     return (0, i.jsx)('div', {
         className: r()(p, M.messagesPopoutWrap),
-        style: F,
+        style: G,
         onClick: L,
         onDoubleClick: L,
         'aria-label': e['aria-label'],
@@ -266,7 +266,7 @@ function j(e) {
                         B
                     ]
                 }),
-                G
+                F
             ]
         })
     });

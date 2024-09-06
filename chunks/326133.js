@@ -16,13 +16,13 @@ var r = n(735250),
     I = n(430824),
     m = n(436896),
     T = n(590921),
-    g = n(606992),
-    S = n(51062),
+    S = n(606992),
+    g = n(51062),
     A = n(918559),
     N = n(415118);
 t.Z = i.forwardRef(function (e, t) {
     var n, a, O, R, v;
-    let { channel: C, type: y, editorHeight: L, onVisibilityChange: D } = e,
+    let { channel: C, type: y, editorHeight: D, onVisibilityChange: L } = e,
         b = (0, f.Dt)(),
         M = (0, l.e7)(
             [I.Z],
@@ -33,7 +33,7 @@ t.Z = i.forwardRef(function (e, t) {
             [C.guild_id]
         ),
         P = i.useRef(),
-        [U, w, x] = (0, S.Z)(
+        [U, w, x] = (0, g.Z)(
             {
                 ...e,
                 guild: M
@@ -45,8 +45,8 @@ t.Z = i.forwardRef(function (e, t) {
         k = (0, _.DJ)(U.selectedIndex);
     (0, E.KR)(b, U.isVisible, k), m.Z.trackExposure({ location: '6e9811_1' });
     let { usePopoutAutocomplete: B } = m.Z.useExperiment({ location: '6e9811_2' }, { autoTrackExposure: !1 }),
-        F = (0, g.Z)({
-            editorHeight: L,
+        F = (0, S.Z)({
+            editorHeight: D,
             type: y,
             state: U,
             isInPopoutExperiment: B
@@ -63,8 +63,8 @@ t.Z = i.forwardRef(function (e, t) {
         H = i.useMemo(() => (null == F ? '' : String(Date.now())), [null == F ? void 0 : F.top, null == F ? void 0 : F.left, null == F ? void 0 : F.bottom, null == F ? void 0 : F.right]);
     if (
         (i.useEffect(() => {
-            D(U.isVisible);
-        }, [D, U.isVisible]),
+            L(U.isVisible);
+        }, [L, U.isVisible]),
         !U.isVisible || null == U.query || void 0 === F)
     )
         return null;

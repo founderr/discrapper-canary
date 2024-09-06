@@ -10,19 +10,19 @@ var i = n(735250),
     l = n(906732),
     r = n(184301),
     c = n(347475),
-    u = n(592125),
-    d = n(91047);
+    d = n(592125),
+    u = n(91047);
 function h(e) {
     var t, n;
-    let { user: h, channelId: m, guildId: p, messageId: g, stopPropagation: f = !1, ariaLabel: T } = e,
-        { analyticsLocations: _ } = (0, l.ZP)(a.Z.USERNAME);
+    let { user: h, channelId: m, guildId: p, messageId: f, stopPropagation: g = !1, ariaLabel: _ } = e,
+        { analyticsLocations: T } = (0, l.ZP)(a.Z.USERNAME);
     let v =
         ((t = h),
         (n = m),
         s.useCallback(
             (e) => {
-                let i = u.Z.getChannel(n);
-                null != i && null != t && (0, d.Pv)(e, t, i);
+                let i = d.Z.getChannel(n);
+                null != i && null != t && (0, u.Pv)(e, t, i);
             },
             [t, n]
         ));
@@ -36,13 +36,13 @@ function h(e) {
                         name: t,
                         color: null == e ? void 0 : e.colorString,
                         roleName: null == e ? void 0 : e.colorRoleName,
-                        'aria-label': T
+                        'aria-label': _
                     }),
-                u = (e) => (t) => {
-                    f && t.stopPropagation(), e(t);
+                d = (e) => (t) => {
+                    g && t.stopPropagation(), e(t);
                 };
             return (0, i.jsx)(l.Gt, {
-                value: _,
+                value: T,
                 children:
                     null != h
                         ? (0, i.jsx)(
@@ -60,13 +60,13 @@ function h(e) {
                                           userId: h.id,
                                           guildId: p,
                                           channelId: m,
-                                          messageId: g,
+                                          messageId: f,
                                           roleId: null == e ? void 0 : e.colorRoleId
                                       }),
                                   children: (e) => {
                                       let { onClick: t, ...n } = e;
                                       return a({
-                                          onClick: u(t),
+                                          onClick: d(t),
                                           ...n
                                       });
                                   }
@@ -76,6 +76,6 @@ function h(e) {
                         : a(void 0, n)
             });
         },
-        [_, h, m, p, g, v, f, T]
+        [T, h, m, p, f, v, g, _]
     );
 }

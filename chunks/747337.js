@@ -63,16 +63,16 @@ function o(e, t) {
         if ((f !== n && (m -= 7 - n), m < u)) for (var p = 0; p < 7 && ((E.wnomask[m] = 1), (m += 1), E.wdaymask[m] !== t.wkst); p++);
     }
     if (f) {
-        var g = void 0;
-        if ((0, a.q9)(t.byweekno, -1)) g = -1;
+        var S = void 0;
+        if ((0, a.q9)(t.byweekno, -1)) S = -1;
         else {
-            var S = (0, i.FO)((0, i.t2)(e - 1, 1, 1)),
-                A = (0, a.Vy)(7 - S.valueOf() + t.wkst, 7),
+            var g = (0, i.FO)((0, i.t2)(e - 1, 1, 1)),
+                A = (0, a.Vy)(7 - g.valueOf() + t.wkst, 7),
                 N = (0, i.Eg)(e - 1) ? 366 : 365,
                 O = void 0;
-            A >= 4 ? ((A = 0), (O = N + (0, a.Vy)(S - t.wkst, 7))) : (O = u - f), (g = Math.floor(52 + (0, a.Vy)(O, 7) / 4));
+            A >= 4 ? ((A = 0), (O = N + (0, a.Vy)(g - t.wkst, 7))) : (O = u - f), (S = Math.floor(52 + (0, a.Vy)(O, 7) / 4));
         }
-        if ((0, a.q9)(t.byweekno, g)) for (var m = 0; m < f; m++) E.wnomask[m] = 1;
+        if ((0, a.q9)(t.byweekno, S)) for (var m = 0; m < f; m++) E.wnomask[m] = 1;
     }
     return E;
 }

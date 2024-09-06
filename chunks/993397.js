@@ -1,58 +1,58 @@
 n(47120);
 var i = n(735250),
-    a = n(470079),
-    s = n(120356),
-    l = n.n(s),
+    s = n(470079),
+    a = n(120356),
+    l = n.n(a),
     r = n(481060),
     o = n(492593),
     c = n(534469),
     u = n(511010),
     d = n(834129),
     h = n(981631),
-    p = n(689938),
-    m = n(392997),
+    m = n(689938),
+    p = n(392997),
     _ = n(58755);
 function f(e) {
-    let { expanded: t, onClick: n, count: a, compact: s, collapsedReason: l } = e;
+    let { expanded: t, onClick: n, count: s, compact: a, collapsedReason: l } = e;
     return (0, i.jsx)(o.Z, {
-        compact: s,
+        compact: a,
         role: 'group',
         childrenMessageContent: (0, i.jsx)(d.Z, {
-            compact: s,
-            className: m.blockedSystemMessage,
+            compact: a,
+            className: p.blockedSystemMessage,
             iconNode: (0, i.jsx)(r.XSmallIcon, {
                 size: 'md',
                 color: 'currentColor',
-                className: m.blockedIcon
+                className: p.blockedIcon
             }),
             children: (0, i.jsxs)('div', {
-                className: m.blockedMessageText,
+                className: p.blockedMessageText,
                 children: [
-                    l.format({ count: a }),
+                    l.format({ count: s }),
                     ' \u2014',
                     ' ',
                     (0, i.jsx)(r.Clickable, {
                         tag: 'span',
                         onClick: n,
-                        className: m.blockedAction,
-                        children: t ? p.Z.Messages.BLOCKED_MESSAGES_HIDE.format({ count: a }) : p.Z.Messages.BLOCKED_MESSAGES_SHOW.format({ count: a })
+                        className: p.blockedAction,
+                        children: t ? m.Z.Messages.BLOCKED_MESSAGES_HIDE.format({ count: s }) : m.Z.Messages.BLOCKED_MESSAGES_SHOW.format({ count: s })
                     })
                 ]
             })
         })
     });
 }
-t.Z = a.memo(function (e) {
+t.Z = s.memo(function (e) {
     var t;
-    let { messages: n, channel: s, compact: r = !1, unreadId: o, collapsedReason: d } = e,
-        { hasJumpTarget: p = !1 } = n,
-        [E, C] = a.useState(p),
-        g = a.useCallback(() => C((e) => !e), []),
+    let { messages: n, channel: a, compact: r = !1, unreadId: o, collapsedReason: d } = e,
+        { hasJumpTarget: m = !1 } = n,
+        [E, g] = s.useState(m),
+        C = s.useCallback(() => g((e) => !e), []),
         I = n.hasUnread ? n.content.length - 1 : n.content.length;
     return (0, i.jsxs)('div', {
         className: l()({
             [_.groupStart]: !0,
-            [m.expanded]: E
+            [p.expanded]: E
         }),
         children: [
             n.hasUnread && (!E || (null === (t = n.content[0]) || void 0 === t ? void 0 : t.type) === h.ys_.DIVIDER)
@@ -71,7 +71,7 @@ t.Z = a.memo(function (e) {
                     count: I,
                     compact: r,
                     expanded: E,
-                    onClick: g,
+                    onClick: C,
                     collapsedReason: d
                 },
                 'collapsed-message-item'
@@ -79,8 +79,8 @@ t.Z = a.memo(function (e) {
             E
                 ? n.content.map((e, t) => {
                       if (e.type === h.ys_.DIVIDER && t > 0) {
-                          var a, l;
-                          let e = null !== (l = null === (a = n.content[t + 1]) || void 0 === a ? void 0 : a.isGroupStart) && void 0 !== l && l;
+                          var s, l;
+                          let e = null !== (l = null === (s = n.content[t + 1]) || void 0 === s ? void 0 : s.isGroupStart) && void 0 !== l && l;
                           return (0, i.jsx)(
                               u.Z,
                               {
@@ -96,9 +96,9 @@ t.Z = a.memo(function (e) {
                           return (0, i.jsx)(
                               t,
                               {
-                                  className: m.__invalid_blocked,
+                                  className: p.__invalid_blocked,
                                   compact: r,
-                                  channel: s,
+                                  channel: a,
                                   message: e.content,
                                   groupId: e.groupId,
                                   flashKey: e.flashKey,

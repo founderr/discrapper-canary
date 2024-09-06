@@ -3,7 +3,7 @@ n.d(t, {
         return A;
     },
     Xo: function () {
-        return L;
+        return D;
     },
     qE: function () {
         return C;
@@ -28,11 +28,11 @@ var r = n(735250),
     I = n(419061),
     m = n(689938),
     T = n(681539);
-let g = {
+let S = {
     tension: 1200,
     friction: 70
 };
-function S(e) {
+function g(e) {
     let { size: t, isMobile: n, isTyping: i, ...a } = e,
         s = (0, h.UC)(t),
         o = s.status * (n && !i ? h.EW : 1),
@@ -116,13 +116,13 @@ function O(e) {
     };
 }
 function R(e) {
-    let { children: t, size: n, onClick: i, onMouseDown: a, onKeyDown: o, onContextMenu: u, onMouseEnter: c, onMouseLeave: d, className: _, tabIndex: p, ariaLabel: g, ariaHidden: S, status: A, isMobile: N = !1, isTyping: O = !1, avatarDecoration: R, typingOffset: v, specs: C } = e,
+    let { children: t, size: n, onClick: i, onMouseDown: a, onKeyDown: o, onContextMenu: u, onMouseEnter: c, onMouseLeave: d, className: _, tabIndex: p, ariaLabel: S, ariaHidden: g, status: A, isMobile: N = !1, isTyping: O = !1, avatarDecoration: R, typingOffset: v, specs: C } = e,
         y = {
             width: (0, h.px)(n),
             height: (0, h.px)(n)
         },
-        L =
-            null == g || S
+        D =
+            null == S || g
                 ? void 0
                 : (function (e, t) {
                       let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
@@ -132,8 +132,8 @@ function R(e) {
                                 status: (0, f.u5)(t, n)
                             })
                           : e;
-                  })(g, A, N),
-        D = C.size * I.hs,
+                  })(S, A, N),
+        L = C.size * I.hs,
         b = (function (e, t, n, r) {
             if (null == e) return null;
             if (r)
@@ -197,16 +197,16 @@ function R(e) {
         M =
             null != R &&
             (0, r.jsx)('svg', {
-                width: D + v,
-                height: D,
-                viewBox: '0 0 '.concat(D + v, ' ').concat(D),
+                width: L + v,
+                height: L,
+                viewBox: '0 0 '.concat(L + v, ' ').concat(L),
                 className: T.avatarDecoration,
                 'aria-hidden': !0,
                 children: (0, r.jsx)('foreignObject', {
                     x: 0,
                     y: 0,
-                    width: D,
-                    height: D,
+                    width: L,
+                    height: L,
                     mask: null != b ? 'url(#'.concat(b, ')') : void 0,
                     children: (0, r.jsx)('div', {
                         className: T.avatarStack,
@@ -230,8 +230,8 @@ function R(e) {
               onKeyDown: o,
               onMouseEnter: null != c ? c : void 0,
               onMouseLeave: null != d ? d : void 0,
-              'aria-label': L,
-              'aria-hidden': S,
+              'aria-label': D,
+              'aria-hidden': g,
               children: [t, M]
           })
         : (0, r.jsxs)('div', {
@@ -241,8 +241,8 @@ function R(e) {
               onMouseEnter: null != c ? c : void 0,
               onMouseLeave: null != d ? d : void 0,
               role: 'img',
-              'aria-label': L,
-              'aria-hidden': S,
+              'aria-label': D,
+              'aria-hidden': g,
               children: [t, M]
           });
 }
@@ -266,18 +266,18 @@ function v(e) {
     );
 }
 function C(e) {
-    let { src: t, status: n, size: i, statusColor: a, isMobile: o = !1, isTyping: l = !1, typingIndicatorRef: _, isSpeaking: I = !1, statusTooltip: m = !1, statusTooltipDelay: g, statusBackdropColor: S, 'aria-hidden': O = !1, 'aria-label': C, imageClassName: y } = e,
-        L = n !== p.Skl.UNKNOWN ? n : null,
-        D = (0, h.UC)(i),
-        b = null != L ? Math.ceil((D.status * h.D6 - D.status) / 2) : 0,
-        M = D.size + b,
-        P = (0, c.vj)(L, a);
+    let { src: t, status: n, size: i, statusColor: a, isMobile: o = !1, isTyping: l = !1, typingIndicatorRef: _, isSpeaking: I = !1, statusTooltip: m = !1, statusTooltipDelay: S, statusBackdropColor: g, 'aria-hidden': O = !1, 'aria-label': C, imageClassName: y } = e,
+        D = n !== p.Skl.UNKNOWN ? n : null,
+        L = (0, h.UC)(i),
+        b = null != D ? Math.ceil((L.status * h.D6 - L.status) / 2) : 0,
+        M = L.size + b,
+        P = (0, c.vj)(D, a);
     return (0, r.jsx)(R, {
         ...e,
         ariaLabel: C,
         ariaHidden: O,
-        status: L,
-        specs: D,
+        status: D,
+        specs: L,
         typingOffset: b,
         children: (0, r.jsxs)('svg', {
             width: M,
@@ -289,8 +289,8 @@ function C(e) {
                 (0, r.jsx)('foreignObject', {
                     x: 0,
                     y: 0,
-                    width: D.size,
-                    height: D.size,
+                    width: L.size,
+                    height: L.size,
                     mask: 'url(#'.concat(
                         (function (e, t, n, r) {
                             if (null == e) return E.QS.AVATAR_DEFAULT;
@@ -362,7 +362,7 @@ function C(e) {
                                     .concat(e, ', isMobile: ')
                                     .concat(n ? 'true' : 'false')
                             );
-                        })(L, i, o, l),
+                        })(D, i, o, l),
                         ')'
                     ),
                     children: (0, r.jsx)(v, {
@@ -371,30 +371,30 @@ function C(e) {
                         className: y
                     })
                 }),
-                null != L && null != S ? N(S, o, D, L) : null,
-                null != L
+                null != D && null != g ? N(g, o, L, D) : null,
+                null != D
                     ? (0, r.jsx)(d.u, {
-                          text: m ? (0, f.u5)(L) : null,
+                          text: m ? (0, f.u5)(D) : null,
                           'aria-label': !1,
                           position: 'top',
-                          spacing: 5 + 1.5 * D.stroke,
-                          delay: g,
+                          spacing: 5 + 1.5 * L.stroke,
+                          delay: S,
                           children: (e) =>
                               (0, r.jsxs)(r.Fragment, {
                                   children: [
                                       (0, r.jsx)('rect', {
                                           ...e,
-                                          ...A(D, L, o, l),
+                                          ...A(L, D, o, l),
                                           fill: P,
-                                          mask: 'url(#'.concat((0, c.rs)(L, o, l), ')'),
+                                          mask: 'url(#'.concat((0, c.rs)(D, o, l), ')'),
                                           className: T.pointerEvents
                                       }),
                                       l
                                           ? (0, r.jsx)(u.b, {
                                                 ref: _,
-                                                dotRadius: D.status / 4,
-                                                x: D.size - 1.375 * D.status - D.offset,
-                                                y: D.size - D.status / 1.333 - D.offset
+                                                dotRadius: L.status / 4,
+                                                x: L.size - 1.375 * L.status - L.offset,
+                                                y: L.size - L.status / 1.333 - L.offset
                                             })
                                           : null
                                   ]
@@ -406,7 +406,7 @@ function C(e) {
     });
 }
 function y(e) {
-    let { fromIsMobile: t = !0, fromStatus: n, fromColor: a, isMobile: l = !1, isTyping: E = !1, typingIndicatorRef: p, isSpeaking: I = !1, size: m, src: A, status: C, statusColor: y, statusTooltip: L = !1, statusTooltipDelay: D, statusBackdropColor: b, 'aria-hidden': M = !1, 'aria-label': P, imageClassName: U } = e,
+    let { fromIsMobile: t = !0, fromStatus: n, fromColor: a, isMobile: l = !1, isTyping: E = !1, typingIndicatorRef: p, isSpeaking: I = !1, size: m, src: A, status: C, statusColor: y, statusTooltip: D = !1, statusTooltipDelay: L, statusBackdropColor: b, 'aria-hidden': M = !1, 'aria-label': P, imageClassName: U } = e,
         w = (0, c.vj)(C, y),
         x = i.useId(),
         G = i.useId(),
@@ -441,7 +441,7 @@ function y(e) {
             ...W
         } = (0, _.useSpring)(
             {
-                config: g,
+                config: S,
                 from: k,
                 to: B
             },
@@ -505,14 +505,14 @@ function y(e) {
                 }),
                 null != b && N(b, l, z, C),
                 (0, r.jsx)(d.u, {
-                    text: L ? (0, f.u5)(C) : null,
+                    text: D ? (0, f.u5)(C) : null,
                     'aria-label': !1,
                     position: 'top',
                     spacing: (function (e, t, n) {
                         let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
                         return 5 - (n && !r ? 0 : 0.5 * e) + 1.5 * t;
                     })(z.status, z.stroke, l, E),
-                    delay: D,
+                    delay: L,
                     children: (e) =>
                         (0, r.jsxs)(r.Fragment, {
                             children: [
@@ -522,7 +522,7 @@ function y(e) {
                                     width: q,
                                     height: Q,
                                     viewBox: '0 0 '.concat(q, ' ').concat(Q),
-                                    className: L ? T.cursorDefault : void 0,
+                                    className: D ? T.cursorDefault : void 0,
                                     children: [
                                         (0, c.vP)(W, z.status, G),
                                         (0, r.jsx)(o.animated.rect, {
@@ -540,7 +540,7 @@ function y(e) {
                                         })
                                     ]
                                 }),
-                                (0, r.jsx)(S, {
+                                (0, r.jsx)(g, {
                                     size: m,
                                     isMobile: l,
                                     isTyping: E,
@@ -554,7 +554,7 @@ function y(e) {
         })
     });
 }
-let L = i.memo(function (e) {
+let D = i.memo(function (e) {
     var t, n, a, s, o;
     let { statusColor: l, status: u, ...d } = e,
         { isMobile: _ = !1, isTyping: E = !1 } = d,
@@ -563,12 +563,12 @@ let L = i.memo(function (e) {
         I = (0, c.vj)(u, l),
         m = i.useRef(I),
         T = i.useRef(!1);
-    let g = T.current || ((t = E), (n = u), (a = f.current), (s = _), (o = h.current), null != a && null != n && (!!t || n !== a || (n === p.Skl.ONLINE && s !== o) || !1));
+    let S = T.current || ((t = E), (n = u), (a = f.current), (s = _), (o = h.current), null != a && null != n && (!!t || n !== a || (n === p.Skl.ONLINE && s !== o) || !1));
     return (
         i.useLayoutEffect(() => {
-            (T.current = g), (f.current = u), (h.current = _), (m.current = I);
-        }, [u, _, I, g]),
-        null != u && null != f.current && g
+            (T.current = S), (f.current = u), (h.current = _), (m.current = I);
+        }, [u, _, I, S]),
+        null != u && null != f.current && S
             ? (0, r.jsx)(y, {
                   ...d,
                   status: u,

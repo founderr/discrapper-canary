@@ -22,7 +22,7 @@ function T(e, t) {
         size: 40
     });
 }
-let g = {
+let S = {
     sentinel: h.Iv,
     stores: [l.Z],
     matches: (e, t, n, r, i) => n.length > 1,
@@ -201,4 +201,4 @@ let g = {
         return { type: null };
     }
 };
-t.Z = g;
+t.Z = S;

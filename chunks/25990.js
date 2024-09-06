@@ -2,8 +2,8 @@ let r, i, a, s, o, l, u, c, d, _, E, f, h, p;
 var I,
     m,
     T,
-    g,
-    S = n(979554),
+    S,
+    g = n(979554),
     A = n(442837),
     N = n(570140),
     O = n(981631);
@@ -15,10 +15,10 @@ function C() {
 function y() {
     (R = O.QZA.CLOSED), (v = {});
 }
-function L() {
-    D(), b(), (v = {});
-}
 function D() {
+    L(), b(), (v = {});
+}
+function L() {
     (r = void 0), (i = void 0), (a = void 0), (s = void 0);
 }
 function b() {
@@ -27,7 +27,7 @@ function b() {
 function M() {
     (E = void 0), (f = void 0), (h = void 0), (p = void 0), (_ = void 0);
 }
-class P extends (g = A.ZP.Store) {
+class P extends (S = A.ZP.Store) {
     getFormState() {
         return R;
     }
@@ -124,7 +124,7 @@ class P extends (g = A.ZP.Store) {
         },
         USER_SETTINGS_ACCOUNT_CLOSE: y,
         USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM: function () {
-            L(), M(), y();
+            D(), M(), y();
         },
         USER_SETTINGS_ACCOUNT_SUBMIT: function () {
             (R = O.QZA.SUBMITTING), (v = {});
@@ -148,7 +148,7 @@ class P extends (g = A.ZP.Store) {
         },
         USER_SETTINGS_ACCOUNT_SET_SINGLE_TRY_IT_OUT_COLLECTIBLES_ITEM: function (e) {
             let { item: t } = e;
-            (null == t ? void 0 : t.type) === S.Z.PROFILE_EFFECT ? ((f = null), (h = null == t ? void 0 : t.id)) : ((h = null), (f = t));
+            (null == t ? void 0 : t.type) === g.Z.PROFILE_EFFECT ? ((f = null), (h = null == t ? void 0 : t.id)) : ((h = null), (f = t));
         },
         USER_SETTINGS_ACCOUNT_SET_PENDING_PROFILE_EFFECT_ID: function (e) {
             let { profileEffectId: t } = e;
@@ -197,9 +197,9 @@ class P extends (g = A.ZP.Store) {
         USER_SETTINGS_CLEAR_ERRORS: function () {
             v = {};
         },
-        USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES: D,
+        USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES: L,
         USER_SETTINGS_RESET_PENDING_PROFILE_CHANGES: b,
-        USER_SETTINGS_RESET_ALL_PENDING: L,
+        USER_SETTINGS_RESET_ALL_PENDING: D,
         USER_SETTINGS_RESET_ALL_TRY_IT_OUT: M,
         USER_SETTINGS_RESET_PENDING_AVATAR_DECORATION: function () {
             a = void 0;

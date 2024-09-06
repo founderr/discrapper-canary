@@ -3,7 +3,7 @@ n.d(t, {
         return N;
     },
     BH: function () {
-        return S;
+        return g;
     },
     BO: function () {
         return R;
@@ -18,7 +18,7 @@ n.d(t, {
         return v;
     },
     X0: function () {
-        return D;
+        return L;
     },
     XA: function () {
         return b;
@@ -30,13 +30,13 @@ n.d(t, {
         return O;
     },
     nG: function () {
-        return g;
+        return S;
     },
     qJ: function () {
         return P;
     },
     tI: function () {
-        return L;
+        return D;
     },
     vC: function () {
         return M;
@@ -144,7 +144,7 @@ function T(e) {
         handler: a.handler
     };
 }
-function g(e, t) {
+function S(e, t) {
     return l().flatMap(
         e,
         (e) => (
@@ -233,7 +233,7 @@ function g(e, t) {
         )
     );
 }
-function S(e) {
+function g(e) {
     return I.Xyh.test(e.trim());
 }
 function A(e, t, n, r) {
@@ -304,10 +304,10 @@ function y(e) {
             return E.d.SlashCommand;
     }
 }
-function L(e) {
+function D(e) {
     return null == e ? void 0 : e.id === p.bi.BUILT_IN ? f.ub.BUILT_IN : e.id === p.bi.FRECENCY ? f.ub.FRECENCY : f.ub.APP;
 }
-function D(e, t) {
+function L(e, t) {
     var n, r;
     return {
         type: f.Qi.APPLICATION,

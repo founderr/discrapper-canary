@@ -21,14 +21,14 @@ var r = n(735250),
     I = n(186917),
     m = n(360850);
 let T = (e) => {
-        let { bannerAdjustment: t = 0, maxLoops: n, resetOnHover: a = !1, isHovering: o = !1, useOpacityOnHover: l = !0, autoPlay: u = !0, restartMethod: h, urlQueryString: I, profileEffectConfig: T, noBorderRadius: g = !1, introDelay: S = c.lG, debugForTool: A = !1 } = e,
+        let { bannerAdjustment: t = 0, maxLoops: n, resetOnHover: a = !1, isHovering: o = !1, useOpacityOnHover: l = !0, autoPlay: u = !0, restartMethod: h, urlQueryString: I, profileEffectConfig: T, noBorderRadius: S = !1, introDelay: g = c.lG, debugForTool: A = !1 } = e,
             N = i.useRef(null),
             [O, R] = i.useState([]);
         (0, p.Z)(T);
         let [v, C] = i.useState(0),
-            [y, L] = i.useState(0),
-            { accessibilityLabel: D } = T,
-            [b, M] = i.useState(-S),
+            [y, D] = i.useState(0),
+            { accessibilityLabel: L } = T,
+            [b, M] = i.useState(-g),
             {
                 stop: P,
                 reset: U,
@@ -37,7 +37,7 @@ let T = (e) => {
                 M((t) => t + e);
             });
         i.useEffect(() => {
-            M(-S), R((0, E.Hd)(T.effects));
+            M(-g), R((0, E.Hd)(T.effects));
         }, [T]),
             i.useEffect(() => {
                 let e = 0,
@@ -47,8 +47,8 @@ let T = (e) => {
                     r > e && (e = r), n.loop && n.start < t && (t = n.start);
                 }),
                     C(t),
-                    L(e);
-            }, [L, O]);
+                    D(e);
+            }, [D, O]);
         let [x, G] = i.useState(!1);
         return (
             i.useEffect(() => {
@@ -58,7 +58,7 @@ let T = (e) => {
                 ref: N,
                 className: s()(m.profileEffects, { [m.hovered]: o && l }),
                 children: (0, r.jsx)('div', {
-                    className: g ? m.innerNoRadius : m.inner,
+                    className: S ? m.innerNoRadius : m.inner,
                     children: O.map((e, i) => {
                         if (!w.current && T.animationType === d.Q.PERSISTENT && null != T.staticFrameSrc && 0 === i && !0 === u) {
                             var a, s, o, l;
@@ -72,7 +72,7 @@ let T = (e) => {
                                         left: null !== (l = null === (s = e.position) || void 0 === s ? void 0 : s.x) && void 0 !== l ? l : 0
                                     },
                                     src: n,
-                                    alt: D
+                                    alt: L
                                 },
                                 e.src + i
                             );
@@ -84,7 +84,7 @@ let T = (e) => {
                                 animationType: T.animationType,
                                 ticking: w.current,
                                 time: b,
-                                accessibilityLabel: D,
+                                accessibilityLabel: L,
                                 hasPlayedThrough: x,
                                 setHasPlayedThrough: G,
                                 urlQueryString: I,
@@ -100,7 +100,7 @@ let T = (e) => {
             })
         );
     },
-    g = (e) => {
+    S = (e) => {
         let { config: t, useThumbnail: n, bannerAdjustment: i = 0, noBorderRadius: a, isHovering: o = !1, useOpacityOnHover: l = !0 } = e,
             { reducedMotionSrc: u, thumbnailPreviewSrc: c, accessibilityLabel: d } = t;
         return (0, r.jsx)('div', {
@@ -124,7 +124,7 @@ t.Z = (e) => {
         _ = (0, E.Cc)(null == c ? void 0 : c.config);
     return ((0, E.qB)(_), null != c && null != _ && (t || e.shopPreview || c.config.animationType !== d.Q.INTERMITTENT))
         ? (!t && e.shopPreview) || (!t && c.config.animationType === d.Q.PERSISTENT) || n || (!1 === e.autoPlay && !1 === e.isHovering)
-            ? (0, r.jsx)(g, {
+            ? (0, r.jsx)(S, {
                   useThumbnail: e.useThumbnail,
                   config: _,
                   bannerAdjustment: e.bannerAdjustment,

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return L;
+        return D;
     }
 });
 var r = n(735250),
@@ -20,8 +20,8 @@ var r = n(735250),
     I = n(652853),
     m = n(448980),
     T = n(194811),
-    g = n(373826),
-    S = n(315324),
+    S = n(373826),
+    g = n(315324),
     A = n(582123),
     N = n(262210),
     O = n(666984),
@@ -29,8 +29,8 @@ var r = n(735250),
     v = n(318134),
     C = n(228168),
     y = n(139665);
-function L(e) {
-    let { user: t, currentUser: n, activity: a, guild: L, channel: D, className: b, onClose: M } = e,
+function D(e) {
+    let { user: t, currentUser: n, activity: a, guild: D, channel: L, className: b, onClose: M } = e,
         { profileType: P } = (0, I.z)(),
         U = { [y.fullSize]: P === C.y0.FULL_SIZE },
         w = (0, E.Bq)({
@@ -54,11 +54,11 @@ function L(e) {
             return 0 === l.length
                 ? null
                 : null == a.sync_id
-                  ? (0, r.jsx)(g.Z, {
+                  ? (0, r.jsx)(S.Z, {
                         variant: 'text-xs/normal',
                         text: l.join(', ')
                     })
-                  : (0, r.jsx)(g.Z, {
+                  : (0, r.jsx)(S.Z, {
                         variant: 'text-xs/normal',
                         text: l.map((e, n) =>
                             (0, r.jsxs)(
@@ -92,15 +92,15 @@ function L(e) {
                   });
         },
         Z = () =>
-            null == L || null == D
+            null == D || null == L
                 ? null
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)('div', { className: y.voiceChannelDivider }),
-                          (0, r.jsx)(S.Z, {
+                          (0, r.jsx)(g.Z, {
                               user: t,
-                              guild: L,
-                              channel: D,
+                              guild: D,
+                              channel: L,
                               onAction: B,
                               onClose: M
                           })
@@ -158,7 +158,7 @@ function L(e) {
                                             children: [
                                                 (0, r.jsxs)('div', {
                                                     children: [
-                                                        (0, r.jsx)(g.Z, {
+                                                        (0, r.jsx)(S.Z, {
                                                             variant: 'heading-sm/semibold',
                                                             text: a.details,
                                                             onClick: () => {

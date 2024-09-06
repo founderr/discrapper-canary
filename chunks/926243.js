@@ -21,8 +21,8 @@ var r = n(735250),
     I = n(430824),
     m = n(358085),
     T = n(288406),
-    g = n(689938),
-    S = n(269003);
+    S = n(689938),
+    g = n(269003);
 let A = (e, t) => ''.concat(e, ':').concat(t),
     N = i.forwardRef(function (e, t) {
         let n,
@@ -31,12 +31,12 @@ let A = (e, t) => ''.concat(e, ':').concat(t),
         return (0, r.jsx)(l.FocusRing, {
             children: (0, r.jsx)('button', {
                 ...C,
-                className: s()(S.emojiItem, {
-                    [S.emojiItemLarge]: u,
-                    [S.emojiItemMedium]: c,
-                    [S.emojiItemSelected]: d,
+                className: s()(g.emojiItem, {
+                    [g.emojiItemLarge]: u,
+                    [g.emojiItemMedium]: c,
+                    [g.emojiItemSelected]: d,
                     [null != R ? R : '']: d,
-                    [S.showPulse]: h
+                    [g.showPulse]: h
                 }),
                 'data-type': f.S.EMOJI,
                 'data-id': i.id,
@@ -48,12 +48,12 @@ let A = (e, t) => ''.concat(e, ':').concat(t),
                     'aria-label':
                         ((n = i.allNamesString),
                         ((null == y ? void 0 : y.name) != null &&
-                            (n = g.Z.Messages.EMOJI_FROM_GUILD_LABEL.format({
+                            (n = S.Z.Messages.EMOJI_FROM_GUILD_LABEL.format({
                                 names: n,
                                 guildName: y.name
                             })),
                         a)
-                            ? g.Z.Messages.EMOJI_NAMES_WITH_FAVORITED.format({ names: n })
+                            ? S.Z.Messages.EMOJI_NAMES_WITH_FAVORITED.format({ names: n })
                             : n),
                     columnIndex: p,
                     rowIndex: m,
@@ -67,14 +67,14 @@ let A = (e, t) => ''.concat(e, ':').concat(t),
         });
     });
 function O(e) {
-    let { descriptor: t, emojiItemKey: a, isInspected: s, rowIndex: _, channelGuildId: f, onInspect: I, onSelect: T, isScrolling: S, isUsingKeyboardNavigation: O, showEmojiFavoriteTooltip: R, surrogateCodePoint: v, selectedItemClassName: C, getEmojiItemProps: y, isMediumSize: L, isLargeSize: D, pulseItemKey: b, allowAnimatedEmoji: M, setPulseItemKey: P, messageId: U, isBurstReaction: w, rowPosition: x, inNitroLockedSection: G } = e,
+    let { descriptor: t, emojiItemKey: a, isInspected: s, rowIndex: _, channelGuildId: f, onInspect: I, onSelect: T, isScrolling: g, isUsingKeyboardNavigation: O, showEmojiFavoriteTooltip: R, surrogateCodePoint: v, selectedItemClassName: C, getEmojiItemProps: y, isMediumSize: D, isLargeSize: L, pulseItemKey: b, allowAnimatedEmoji: M, setPulseItemKey: P, messageId: U, isBurstReaction: w, rowPosition: x, inNitroLockedSection: G } = e,
         [k, B] = i.useState(''),
         F = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
         V = (0, o.e7)([d.ZP], () => d.ZP.getDisambiguatedEmojiContext(f), [f]),
         H = i.useRef(null),
         { emoji: Z, size: Y, isDisabled: j, columnIndex: W } = t,
         K = (e) => {
-            if ((e.stopPropagation(), S.current || O.current)) return;
+            if ((e.stopPropagation(), g.current || O.current)) return;
             let n = e.altKey;
             n && !d.ZP.getDisambiguatedEmojiContext().isFavoriteEmojiWithoutFetchingLatest(Z) && P(a),
                 (0, h.Kw)(h.v6.FAVORITE_EMOJI_TOOLTIP),
@@ -84,7 +84,7 @@ function O(e) {
                 });
         },
         z = () => {
-            !S.current && !O.current && I(t);
+            !g.current && !O.current && I(t);
         },
         q = (e) => {
             (0, u.jW)(e, async () => {
@@ -108,8 +108,8 @@ function O(e) {
                         ref: o,
                         emoji: Z,
                         isFavorite: V.isFavoriteEmojiWithoutFetchingLatest(Z),
-                        isLargeSize: D,
-                        isMediumSize: L,
+                        isLargeSize: L,
+                        isMediumSize: D,
                         isInspected: s,
                         isDisabled: j,
                         showPulse: b === a,
@@ -141,7 +141,7 @@ function O(e) {
         ? (0, r.jsx)(
               l.Tooltip,
               {
-                  text: g.Z.Messages.EMOJI_FAVORITE_TOOLTIP.format({ key: (0, m.isMac)() ? 'Opt' : 'Alt' }),
+                  text: S.Z.Messages.EMOJI_FAVORITE_TOOLTIP.format({ key: (0, m.isMac)() ? 'Opt' : 'Alt' }),
                   position: 'top',
                   delay: 200,
                   children: (e) => Q(e)

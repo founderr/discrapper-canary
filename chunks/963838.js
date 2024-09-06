@@ -35,8 +35,8 @@ var r = n(392711),
     I = n(90075),
     m = n(862666),
     T = n(252611),
-    g = n(136144),
-    S = n(316137),
+    S = n(136144),
+    g = n(316137),
     A = n(654123),
     N = n(660020),
     O = n(980084),
@@ -44,8 +44,8 @@ var r = n(392711),
     v = n(200997),
     C = n(633302),
     y = n(134432),
-    L = n(594174),
-    D = n(768581),
+    D = n(594174),
+    L = n(768581),
     b = n(176354),
     M = n(353368),
     P = n(689938);
@@ -54,7 +54,7 @@ let U = {
         end: 15
     },
     w = [a],
-    x = [s, o, l, u, c, d, _, E, f, h, p, I, m, T, g, S, A, N, O, R, v],
+    x = [s, o, l, u, c, d, _, E, f, h, p, I, m, T, S, g, A, N, O, R, v],
     G = {
         [M.q.BASIC]: w,
         [M.q.PREMIUM]: x
@@ -88,7 +88,7 @@ function F(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : M.v;
     if (null != e.id) {
         var n;
-        return D.ZP.getEmojiURL({
+        return L.ZP.getEmojiURL({
             id: e.id,
             animated: null !== (n = e.animated) && void 0 !== n && n,
             size: t
@@ -117,19 +117,19 @@ function H(e) {
     if (o.length < 1) return '';
     if (1 === o.length)
         return P.Z.Messages.A11Y_ANNOUNCEMENT_VOICE_CHANNEL_EFFECTS_SINGLE.format({
-            firstUsername: null === (n = L.default.getUser(o[0])) || void 0 === n ? void 0 : n.username,
+            firstUsername: null === (n = D.default.getUser(o[0])) || void 0 === n ? void 0 : n.username,
             emojiNames: u
         });
     if (2 === o.length)
         return P.Z.Messages.A11Y_ANNOUNCEMENT_VOICE_CHANNEL_EFFECTS_DOUBLE.format({
-            firstUsername: null === (r = L.default.getUser(o[0])) || void 0 === r ? void 0 : r.username,
-            secondUsername: null === (i = L.default.getUser(o[1])) || void 0 === i ? void 0 : i.username,
+            firstUsername: null === (r = D.default.getUser(o[0])) || void 0 === r ? void 0 : r.username,
+            secondUsername: null === (i = D.default.getUser(o[1])) || void 0 === i ? void 0 : i.username,
             emojiNames: u
         });
     else
         return P.Z.Messages.A11Y_ANNOUNCEMENT_VOICE_CHANNEL_EFFECTS_MULTIPLE.format({
-            firstUsername: null === (a = L.default.getUser(o[0])) || void 0 === a ? void 0 : a.username,
-            secondUsername: null === (s = L.default.getUser(o[1])) || void 0 === s ? void 0 : s.username,
+            firstUsername: null === (a = D.default.getUser(o[0])) || void 0 === a ? void 0 : a.username,
+            secondUsername: null === (s = D.default.getUser(o[1])) || void 0 === s ? void 0 : s.username,
             count: o.length - 2,
             emojiNames: u
         });

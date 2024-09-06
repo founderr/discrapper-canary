@@ -1,6 +1,6 @@
 n.d(t, {
     A7: function () {
-        return g;
+        return S;
     },
     hQ: function () {
         return O;
@@ -9,7 +9,7 @@ n.d(t, {
         return v;
     },
     yn: function () {
-        return S;
+        return g;
     }
 }),
     n(47120);
@@ -33,7 +33,7 @@ let m = 'data-listbox-item-id',
         STANDARD: I.selected,
         BRAND: I.selectedBrand
     });
-function g(e) {
+function S(e) {
     let [t, n] = i.useState(() => new Set(e));
     return [
         t,
@@ -45,7 +45,7 @@ function g(e) {
         }, [])
     ];
 }
-function S(e) {
+function g(e) {
     let [t, n] = i.useState(() => new Set(null != e ? [e] : void 0));
     return [
         t,
@@ -64,14 +64,14 @@ let N = i.createContext({
     itemToString: A
 });
 function O(e) {
-    let { placeholder: t, children: n, value: a, onChange: u, className: c, listClassName: h, 'aria-label': T, multiSelect: g = !1, autoFocus: S = !1, maxVisibleItems: O = 5, itemToString: R = A, showScrollbar: v = !1 } = e,
+    let { placeholder: t, children: n, value: a, onChange: u, className: c, listClassName: h, 'aria-label': T, multiSelect: S = !1, autoFocus: g = !1, maxVisibleItems: O = 5, itemToString: R = A, showScrollbar: v = !1 } = e,
         [C, y] = i.useState(''),
-        [L] = i.useState(!0),
-        [D, b] = i.useState(null),
+        [D] = i.useState(!0),
+        [L, b] = i.useState(null),
         M = i.useId(),
         P = i.useRef(null);
     i.useLayoutEffect(() => {
-        let e = document.querySelector('['.concat(m, '="').concat(D, '"]')),
+        let e = document.querySelector('['.concat(m, '="').concat(L, '"]')),
             t = P.current;
         null != t &&
             null != e &&
@@ -79,7 +79,7 @@ function O(e) {
                 node: e,
                 padding: 12
             });
-    }, [D]);
+    }, [L]);
     let U = n(C),
         w = 0 === U.length,
         x = i.useId(),
@@ -125,14 +125,14 @@ function O(e) {
                     ref: n,
                     role: 'combobox',
                     'aria-label': T,
-                    'aria-expanded': L,
-                    'aria-controls': L ? M : void 0,
+                    'aria-expanded': D,
+                    'aria-controls': D ? M : void 0,
                     'aria-owns': M,
                     'aria-haspopup': 'listbox',
                     className: s()(I.combobox, c),
                     children: [
                         (0, r.jsx)(E.E, {
-                            autoFocus: S,
+                            autoFocus: g,
                             size: E.E.Sizes.MEDIUM,
                             placeholder: t,
                             query: C,
@@ -143,12 +143,12 @@ function O(e) {
                             className: s()({ [I.searchWithScrollbar]: v }),
                             inputProps: {
                                 'aria-multiline': !1,
-                                'aria-activedescendant': null != D ? D : void 0
+                                'aria-activedescendant': null != L ? L : void 0
                             }
                         }),
                         (0, r.jsx)('div', {
                             children:
-                                L &&
+                                D &&
                                 (w
                                     ? (0, r.jsxs)('div', {
                                           className: I.empty,
@@ -166,7 +166,7 @@ function O(e) {
                                       })
                                     : (0, r.jsx)(N.Provider, {
                                           value: {
-                                              activeDescendant: D,
+                                              activeDescendant: L,
                                               selected: a,
                                               setSelected: u,
                                               itemToString: R
@@ -174,7 +174,7 @@ function O(e) {
                                           children: (0, r.jsx)(V, {
                                               ...o,
                                               style: { maxHeight: 46 * O },
-                                              'aria-multiselectable': g,
+                                              'aria-multiselectable': S,
                                               id: M,
                                               ref: P,
                                               className: s()(I.list, h, { [I.scroller]: v }),
@@ -201,8 +201,8 @@ function v(e) {
     let { value: n, children: a, disabled: o = !1, selectedColor: u = T.STANDARD, ...d } = e,
         { activeDescendant: _, selected: E, setSelected: f, itemToString: h } = i.useContext(N),
         p = h(n),
-        g = _ === p,
-        S = null !== (t = null == d ? void 0 : d.selected) && void 0 !== t ? t : E.has(n),
+        S = _ === p,
+        g = null !== (t = null == d ? void 0 : d.selected) && void 0 !== t ? t : E.has(n),
         A = (0, l.JA)(p);
     return (0, r.jsx)(c.P, {
         tag: 'li',
@@ -210,13 +210,13 @@ function v(e) {
         onClick: () => (o ? null : f(n)),
         [m]: n,
         className: s()(I.item, {
-            [I.focused]: g,
-            [u]: S,
+            [I.focused]: S,
+            [u]: g,
             [I.disabled]: o
         }),
         ...A,
         role: 'option',
-        'aria-selected': S,
+        'aria-selected': g,
         'aria-disabled': o,
         children: (0, r.jsx)(R.Provider, {
             value: n,

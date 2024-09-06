@@ -26,13 +26,13 @@ function p() {
         a = (0, o.e7)([c.Z], () => c.Z.isDeveloper),
         [p, I] = i.useState(!1),
         { name: m, ...T } = null != e ? e : {},
-        g = null != m;
+        S = null != m;
     return a && n
         ? (0, r.jsx)(u.ZP, {
               children: (0, r.jsxs)('div', {
                   className: s()(h.container, {
                       [h.containerMinimized]: p,
-                      [h.notTracked]: !g
+                      [h.notTracked]: !S
                   }),
                   children: [
                       (0, r.jsx)(l.Clickable, {
@@ -46,10 +46,10 @@ function p() {
                           className: s()(h.content, { [h.contentMinimized]: p }),
                           children: [
                               (0, r.jsxs)(l.Text, {
-                                  className: s()(h.label, { [h.notTracked]: !g }),
+                                  className: s()(h.label, { [h.notTracked]: !S }),
                                   variant: 'text-xxs/normal',
                                   children: [
-                                      g
+                                      S
                                           ? (0, r.jsx)(l.CircleCheckIcon, {
                                                 size: 'md',
                                                 color: 'currentColor',
@@ -68,7 +68,7 @@ function p() {
                                   children: JSON.stringify(T, void 0, 2)
                               }),
                               (0, r.jsx)(l.Text, {
-                                  className: s()(h.label, { [h.notTracked]: !g }),
+                                  className: s()(h.label, { [h.notTracked]: !S }),
                                   variant: 'text-xxs/normal',
                                   children: 'impressions stack'
                               }),

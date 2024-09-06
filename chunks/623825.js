@@ -3,12 +3,12 @@ n.d(t, {
         return i;
     },
     N: function () {
-        return a;
+        return s;
     }
 });
 function i(e) {
     return e <= 220;
 }
-function a(e) {
+function s(e) {
     return e <= 124;
 }

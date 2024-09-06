@@ -21,7 +21,7 @@ function c(e, t) {
             ...e,
             value: h
         }),
-        { isInvalid: T, validationErrors: g, validationDetails: S } = m.displayValidation,
+        { isInvalid: T, validationErrors: S, validationDetails: g } = m.displayValidation,
         {
             labelProps: A,
             fieldProps: N,
@@ -30,7 +30,7 @@ function c(e, t) {
         } = (0, s.U)({
             ...e,
             isInvalid: T,
-            errorMessage: e.errorMessage || g
+            errorMessage: e.errorMessage || S
         }),
         v = (0, i.zL)(e, { labelable: !0 }),
         C = {
@@ -86,8 +86,8 @@ function c(e, t) {
             descriptionProps: O,
             errorMessageProps: R,
             isInvalid: T,
-            validationErrors: g,
-            validationDetails: S
+            validationErrors: S,
+            validationDetails: g
         }
     );
 }

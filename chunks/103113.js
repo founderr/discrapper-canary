@@ -21,8 +21,8 @@ var r = n(735250),
     I = n(648052),
     m = n(867176),
     T = n(280885),
-    g = n(502762),
-    S = n(530),
+    S = n(502762),
+    g = n(530),
     A = n(679332),
     N = n(544989),
     O = n(171368),
@@ -30,7 +30,7 @@ var r = n(735250),
     v = n(689938),
     C = n(115879);
 function y(e) {
-    let { user: t, guildId: n, channelId: y, messageId: L, roleId: D, setPopoutRef: b, closePopout: M, disableUserProfileLink: P = __OVERLAY__, newAnalyticsLocations: U = [] } = e,
+    let { user: t, guildId: n, channelId: y, messageId: D, roleId: L, setPopoutRef: b, closePopout: M, disableUserProfileLink: P = __OVERLAY__, newAnalyticsLocations: U = [] } = e,
         w = (0, h.ZP)(t.id, n),
         { analyticsLocations: x } = (0, l.ZP)([...U, o.Z.BITE_SIZE_PROFILE_POPOUT]),
         G = (0, E.ZB)({
@@ -38,8 +38,8 @@ function y(e) {
             userId: t.id,
             guildId: n,
             channelId: y,
-            messageId: L,
-            roleId: D
+            messageId: D,
+            roleId: L
         }),
         k = i.useRef(null),
         B = (0, s.Z)(k);
@@ -62,7 +62,7 @@ function y(e) {
                 ref: k,
                 'aria-label': t.username,
                 children: [
-                    (0, r.jsxs)(g.Z, {
+                    (0, r.jsxs)(S.Z, {
                         user: t,
                         displayProfile: w,
                         profileType: R.y0.BITE_SIZE,
@@ -111,7 +111,7 @@ function y(e) {
                                 fade: !0,
                                 className: C.body,
                                 children: [
-                                    (0, r.jsx)(S.Z, {
+                                    (0, r.jsx)(g.Z, {
                                         user: t,
                                         profileType: R.y0.BITE_SIZE,
                                         nickname: _.ZP.getName(n, y, t),

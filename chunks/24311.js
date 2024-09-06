@@ -18,13 +18,13 @@ var i = n(442837),
     f = n(689938);
 function h(e) {
     let { user: t, context: h, label: p, joinCallVideo: I, id: m, onCall: T } = e,
-        g = (0, o.Aq)(),
-        S = (0, i.e7)([u.default], () => u.default.getId() === t.id),
+        S = (0, o.Aq)(),
+        g = (0, i.e7)([u.default], () => u.default.getId() === t.id),
         A = (0, i.e7)([d.Z], () => d.Z.isBlocked(t.id)),
         N = (0, i.e7)([_.Z, c.Z], () => _.Z.getVoiceChannelId() === c.Z.getDMFromUserId(t.id));
-    if (S || h === E.IlC.POPOUT || N || t.bot) return null;
+    if (g || h === E.IlC.POPOUT || N || t.bot) return null;
     let O = () => {
-            null == T || T(), s.Z.openPrivateChannel(t.id, !0, I), g.dispatch(E.CkL.POPOUT_CLOSE), (0, a.closeAllModals)();
+            null == T || T(), s.Z.openPrivateChannel(t.id, !0, I), S.dispatch(E.CkL.POPOUT_CLOSE), (0, a.closeAllModals)();
         },
         R = !l.ZP.disableCallUserConfirmationPrompt;
     return (0, r.jsx)(a.MenuItem, {

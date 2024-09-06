@@ -219,8 +219,8 @@ function T(e) {
 t.Z = function (e) {
     let t = (0, u.ZP)(),
         [n, a] = i.useState(null),
-        { className: c, guild: d, hideHeading: E, hideTier0: g } = e;
-    function S() {
+        { className: c, guild: d, hideHeading: E, hideTier0: S } = e;
+    function g() {
         a(null);
     }
     return (0, r.jsxs)('div', {
@@ -249,7 +249,7 @@ t.Z = function (e) {
                                             className: h.tableRowHeading,
                                             children: f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_COLUMN_HEADING_PERKS
                                         }),
-                                        !g &&
+                                        !S &&
                                             (0, r.jsx)(I, {
                                                 tier: _.Eu4.NONE,
                                                 children: f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_NONE_NAME
@@ -288,9 +288,9 @@ t.Z = function (e) {
                                                           children: (0, r.jsx)(l.Clickable, {
                                                               className: s()(h.tableRowHeading, h.tableCell, h.tableCellInner),
                                                               onFocus: c,
-                                                              onBlur: S,
+                                                              onBlur: g,
                                                               onMouseEnter: c,
-                                                              onMouseLeave: S,
+                                                              onMouseLeave: g,
                                                               children: (0, r.jsx)(l.Popout, {
                                                                   align: 'center',
                                                                   disablePointerEvents: !0,
@@ -312,7 +312,7 @@ t.Z = function (e) {
                                                               })
                                                           })
                                                       }),
-                                                      !g &&
+                                                      !S &&
                                                           (0, r.jsx)(m, {
                                                               textVariant: 'text-md/normal',
                                                               value: e.getTier0Value()

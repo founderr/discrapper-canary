@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return S;
     }
 }),
     n(47120);
@@ -56,7 +56,7 @@ class T extends (r = a.PureComponent) {
             m(this, 'onZoom', (e, t) => {
                 let { zoomThumbnailPlaceholder: n, trigger: r } = t;
                 e.preventDefault();
-                let { alt: a, src: l, original: u, width: _, height: E, animated: m, children: T, renderLinkComponent: g, renderForwardComponent: S, isWindowFocused: A, shouldHideMediaOptions: N = !1 } = this.props,
+                let { alt: a, src: l, original: u, width: _, height: E, animated: m, children: T, renderLinkComponent: S, renderForwardComponent: g, isWindowFocused: A, shouldHideMediaOptions: N = !1 } = this.props,
                     O = {
                         alt: a,
                         src: l,
@@ -66,8 +66,8 @@ class T extends (r = a.PureComponent) {
                         animated: m,
                         children: T,
                         zoomThumbnailPlaceholder: n,
-                        renderLinkComponent: g,
-                        renderForwardComponent: S,
+                        renderLinkComponent: S,
+                        renderForwardComponent: g,
                         onContextMenu: N
                             ? (e) => {
                                   e.stopPropagation(), e.preventDefault();
@@ -98,7 +98,7 @@ class T extends (r = a.PureComponent) {
             });
     }
 }
-function g(e) {
+function S(e) {
     let t = (0, l.bp)(),
         n = (0, E.n)();
     return (0, i.jsx)(T, {

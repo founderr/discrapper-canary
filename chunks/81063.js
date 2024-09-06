@@ -10,10 +10,10 @@ n.r(t),
             return v;
         },
         getAssetImage: function () {
-            return g;
+            return S;
         },
         getAssets: function () {
-            return S;
+            return g;
         }
     }),
     n(315314),
@@ -78,7 +78,7 @@ function T(e, t) {
     let n = p[e].serialize(t);
     return n ? ''.concat(e, ':').concat(n.toString()) : null;
 }
-function g(e, t, n) {
+function S(e, t, n) {
     if (null != t && t.includes(':')) {
         let [e, r] = t.split(':');
         if (e === c.ABu.TWITCH) {
@@ -101,7 +101,7 @@ function g(e, t, n) {
               .concat(t, '.png')
               .concat(i);
 }
-async function S(e) {
+async function g(e) {
     let t = await (function (e) {
         var t;
         let n = o.Z.getApplicationAssets(e);
@@ -163,7 +163,7 @@ async function R(e, t) {
             }),
             r
         );
-    let a = await S(e);
+    let a = await g(e);
     return (s.Z.dispatch({
         type: 'APPLICATION_ASSETS_UPDATE',
         applicationId: e,

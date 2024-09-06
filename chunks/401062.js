@@ -29,8 +29,8 @@ var r,
     I = n(456631),
     m = n(963838),
     T = n(353368),
-    g = n(981631),
-    S = n(710111);
+    S = n(981631),
+    g = n(710111);
 function A(e) {
     let t = new AbortController(),
         n = (0, a.throttle)((n) => {
@@ -51,12 +51,12 @@ function N(e, t, n) {
         };
     s.tn
         .post({
-            url: g.ANM.CUSTOM_CALL_SOUNDS(e),
+            url: S.ANM.CUSTOM_CALL_SOUNDS(e),
             body: u,
             signal: i.signal,
             onRequestProgress: a
         })
-        .then(g.VqG, () => {
+        .then(S.VqG, () => {
             if (i.signal.aborted) return;
         }),
         (0, _.Z)([l.Z.CHANNEL_CALL], n, t, d.jy.ENTRY);
@@ -70,15 +70,15 @@ function O(e, t, n, r) {
             emoji_id: t.emojiId,
             emoji_name: null !== (a = t.emojiName) && void 0 !== a ? a : null == o ? void 0 : o.name
         };
-    t.guildId !== S.X8 && (E.source_guild_id = t.guildId),
+    t.guildId !== g.X8 && (E.source_guild_id = t.guildId),
         s.tn
             .post({
-                url: g.ANM.SEND_SOUNDBOARD_SOUND(e),
+                url: S.ANM.SEND_SOUNDBOARD_SOUND(e),
                 body: E,
                 signal: l.signal,
                 onRequestProgress: u
             })
-            .then(g.VqG, () => {
+            .then(S.VqG, () => {
                 if (l.signal.aborted) return;
             }),
         (0, _.Z)(null != r ? r : [], n, t, d.jy.DEFAULT);
@@ -104,7 +104,7 @@ let R = async (e) => {
                           animation_id: a
                       };
             await s.tn.post({
-                url: g.ANM.VOICE_CHANNEL_EFFECTS(t.id),
+                url: S.ANM.VOICE_CHANNEL_EFFECTS(t.id),
                 body: e
             }),
                 C(t, n, r, u),
@@ -126,7 +126,7 @@ let R = async (e) => {
     C = (e, t, n, r) => {
         let { unicode: i, custom: a, customExternal: s, managed: o, managedExternal: l, animated: c } = (0, h.sp)([t], e.getGuildId()),
             d = v[r];
-        u.ZP.trackWithMetadata(g.rMx.VOICE_CHANNEL_EFFECT_SENT, {
+        u.ZP.trackWithMetadata(S.rMx.VOICE_CHANNEL_EFFECT_SENT, {
             channel_id: e.id,
             guild_id: e.getGuildId(),
             location: n,

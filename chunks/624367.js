@@ -44,12 +44,12 @@ function b(e) {
         y = D.channel_id,
         B = (0, s.e7)([T.Z], () => T.Z.getChannel(y), [y]),
         k = null == B ? void 0 : B.guild_id,
-        G = null != B && (B.isGuildVoice() || B.isPrivate()),
-        F = (0, s.e7)([p.ZP], () => p.ZP.getSelfEmbeddedActivityForChannel(y)),
-        w = (null == F ? void 0 : F.applicationId) === b,
-        [V] = (0, E.Z)([b, null !== (n = null == F ? void 0 : F.applicationId) && void 0 !== n ? n : '']),
+        F = null != B && (B.isGuildVoice() || B.isPrivate()),
+        G = (0, s.e7)([p.ZP], () => p.ZP.getSelfEmbeddedActivityForChannel(y)),
+        w = (null == G ? void 0 : G.applicationId) === b,
+        [V] = (0, E.Z)([b, null !== (n = null == G ? void 0 : G.applicationId) && void 0 !== n ? n : '']),
         H = (0, A.ZP)(null !== (r = null == V ? void 0 : V.maxParticipants) && void 0 !== r ? r : 0),
-        [Y] = (0, s.Wu)([p.ZP], () => (G ? p.ZP.getEmbeddedActivitiesForChannel(y).filter((e) => e.applicationId === b) : []), [b, y, G]),
+        [Y] = (0, s.Wu)([p.ZP], () => (F ? p.ZP.getEmbeddedActivitiesForChannel(y).filter((e) => e.applicationId === b) : []), [b, y, F]),
         W = Array.from(null !== (C = null == Y ? void 0 : Y.userIds) && void 0 !== C ? C : []),
         K = (0, s.Wu)([h.default], () => W.map((e) => h.default.getUser(e)).filter(f.lm), [W]),
         z = (0, R.Z)({
@@ -60,7 +60,7 @@ function b(e) {
         Q = I.Z.getWindowOpen(v.KJ3.CHANNEL_CALL_POPOUT),
         q = K.length > 0 ? L.Z.Messages.JOIN : L.Z.Messages.START,
         X = async () => {
-            if (G) {
+            if (F) {
                 if (null != Y && K.length > 0)
                     await (0, g.Z)({
                         applicationId: Y.applicationId,

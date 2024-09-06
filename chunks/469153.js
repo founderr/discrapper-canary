@@ -1,32 +1,32 @@
-var a = t(735250);
-t(470079);
-var l = t(180081),
-    i = t(442837),
-    r = t(481060),
-    s = t(607070),
-    o = t(689938),
-    u = t(348910),
-    c = t(810819);
+var l = n(735250);
+n(470079);
+var a = n(180081),
+    i = n(442837),
+    r = n(481060),
+    s = n(607070),
+    o = n(689938),
+    u = n(348910),
+    c = n(810819);
 let d = () =>
-    (0, a.jsxs)('div', {
+    (0, l.jsxs)('div', {
         className: c.toast,
         children: [
-            (0, a.jsx)(r.Spinner, {
+            (0, l.jsx)(r.Spinner, {
                 type: r.SpinnerTypes.SPINNING_CIRCLE_SIMPLE,
                 className: u.loadingSpinner
             }),
-            (0, a.jsx)(r.Text, {
+            (0, l.jsx)(r.Text, {
                 color: 'header-primary',
                 variant: 'text-md/normal',
                 children: o.Z.Messages.CONTENT_INVENTORY_MESSAGE_SENDING
             })
         ]
     });
-n.Z = (e) => {
-    let { shown: n, sent: t, className: u } = e,
+t.Z = (e) => {
+    let { shown: t, sent: n, className: u } = e,
         c = (0, i.e7)([s.Z], () => s.Z.useReducedMotion),
-        _ = (0, r.useTransition)(
-            n,
+        h = (0, r.useTransition)(
+            t,
             {
                 from: {
                     transform: c ? 'translateY(0)' : 'translateY(16px)',
@@ -50,24 +50,24 @@ n.Z = (e) => {
             },
             'animate-always'
         );
-    return (0, a.jsx)(a.Fragment, {
-        children: _(
-            (e, n) =>
-                n &&
-                (0, a.jsx)(l.animated.div, {
+    return (0, l.jsx)(l.Fragment, {
+        children: h(
+            (e, t) =>
+                t &&
+                (0, l.jsx)(a.animated.div, {
                     className: u,
                     style: e,
-                    children: t
-                        ? (0, a.jsx)(r.Toast, {
+                    children: n
+                        ? (0, l.jsx)(r.Toast, {
                               message: o.Z.Messages.CONTENT_INVENTORY_MESSAGE_SENT,
                               type: r.ToastType.SUCCESS,
                               id: 'success_message_toast'
                           })
-                        : (0, a.jsx)(r.Toast, {
+                        : (0, l.jsx)(r.Toast, {
                               message: '',
                               type: r.ToastType.CUSTOM,
                               id: 'custom_loading_message_toast',
-                              options: { component: (0, a.jsx)(d, {}) }
+                              options: { component: (0, l.jsx)(d, {}) }
                           })
                 })
         )

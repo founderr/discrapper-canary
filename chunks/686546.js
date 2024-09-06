@@ -264,7 +264,7 @@ function T(e, t) {
         children: m(n)
     });
 }
-function g(e, t) {
+function S(e, t) {
     let n = (0, u.UC)(t),
         r = I(n),
         i = r.totalSize,
@@ -284,7 +284,7 @@ function g(e, t) {
         ]
     });
 }
-function S(e, t) {
+function g(e, t) {
     let n = (0, u.UC)(t),
         r = I(n),
         i = r.totalSize,
@@ -486,7 +486,7 @@ function y(e, t) {
         ]
     });
 }
-function L(e, t, n, r) {
+function D(e, t, n, r) {
     return (0, a.jsxs)('mask', {
         id: e,
         maskContentUnits: 'objectBoundingBox',
@@ -508,7 +508,7 @@ function L(e, t, n, r) {
         ]
     });
 }
-function D(e) {
+function L(e) {
     let { mask: t, width: n = 24, height: r = 24, rightOverhang: i = 0, bottomOverhang: s = 0, children: o, className: u, style: c, 'aria-label': d, ...E } = e;
     return (0, a.jsx)('svg', {
         width: n + i,
@@ -529,10 +529,10 @@ function D(e) {
         })
     });
 }
-(D.Masks = i), (t.ZP = D);
+(L.Masks = i), (t.ZP = L);
 let b = s.memo(
     function () {
-        var e, t, n, r, i, s, o, l, c, d, _, E, I, m, D, b, M, P, U, w, x;
+        var e, t, n, r, i, s, o, l, c, d, _, E, I, m, L, b, M, P, U, w, x;
         return (0, a.jsxs)('svg', {
             viewBox: '0 0 1 1',
             style: {
@@ -711,32 +711,32 @@ let b = s.memo(
                 R('svg-mask-avatar-status-typing-120', u.EF.SIZE_120),
                 v('svg-mask-avatar-decoration-status-typing-120', u.EF.SIZE_120),
                 T('svg-mask-diagonal-facepile-16', u.EF.SIZE_16),
-                g('svg-mask-diagonal-facepile-status-16', u.EF.SIZE_16),
-                S('svg-mask-diagonal-facepile-typing-16', u.EF.SIZE_16),
+                S('svg-mask-diagonal-facepile-status-16', u.EF.SIZE_16),
+                g('svg-mask-diagonal-facepile-typing-16', u.EF.SIZE_16),
                 T('svg-mask-diagonal-facepile-20', u.EF.SIZE_20),
-                g('svg-mask-diagonal-facepile-status-20', u.EF.SIZE_20),
-                S('svg-mask-diagonal-facepile-typing-20', u.EF.SIZE_20),
+                S('svg-mask-diagonal-facepile-status-20', u.EF.SIZE_20),
+                g('svg-mask-diagonal-facepile-typing-20', u.EF.SIZE_20),
                 T('svg-mask-diagonal-facepile-24', u.EF.SIZE_24),
-                g('svg-mask-diagonal-facepile-status-24', u.EF.SIZE_24),
-                S('svg-mask-diagonal-facepile-typing-24', u.EF.SIZE_24),
+                S('svg-mask-diagonal-facepile-status-24', u.EF.SIZE_24),
+                g('svg-mask-diagonal-facepile-typing-24', u.EF.SIZE_24),
                 T('svg-mask-diagonal-facepile-32', u.EF.SIZE_32),
-                g('svg-mask-diagonal-facepile-status-32', u.EF.SIZE_32),
-                S('svg-mask-diagonal-facepile-typing-32', u.EF.SIZE_32),
+                S('svg-mask-diagonal-facepile-status-32', u.EF.SIZE_32),
+                g('svg-mask-diagonal-facepile-typing-32', u.EF.SIZE_32),
                 T('svg-mask-diagonal-facepile-40', u.EF.SIZE_40),
-                g('svg-mask-diagonal-facepile-status-40', u.EF.SIZE_40),
-                S('svg-mask-diagonal-facepile-typing-40', u.EF.SIZE_40),
+                S('svg-mask-diagonal-facepile-status-40', u.EF.SIZE_40),
+                g('svg-mask-diagonal-facepile-typing-40', u.EF.SIZE_40),
                 T('svg-mask-diagonal-facepile-48', u.EF.SIZE_48),
-                g('svg-mask-diagonal-facepile-status-48', u.EF.SIZE_48),
-                S('svg-mask-diagonal-facepile-typing-48', u.EF.SIZE_48),
+                S('svg-mask-diagonal-facepile-status-48', u.EF.SIZE_48),
+                g('svg-mask-diagonal-facepile-typing-48', u.EF.SIZE_48),
                 T('svg-mask-diagonal-facepile-56', u.EF.SIZE_56),
-                g('svg-mask-diagonal-facepile-status-56', u.EF.SIZE_56),
-                S('svg-mask-diagonal-facepile-typing-56', u.EF.SIZE_56),
+                S('svg-mask-diagonal-facepile-status-56', u.EF.SIZE_56),
+                g('svg-mask-diagonal-facepile-typing-56', u.EF.SIZE_56),
                 T('svg-mask-diagonal-facepile-80', u.EF.SIZE_80),
-                g('svg-mask-diagonal-facepile-status-80', u.EF.SIZE_80),
-                S('svg-mask-diagonal-facepile-typing-80', u.EF.SIZE_80),
+                S('svg-mask-diagonal-facepile-status-80', u.EF.SIZE_80),
+                g('svg-mask-diagonal-facepile-typing-80', u.EF.SIZE_80),
                 T('svg-mask-diagonal-facepile-120', u.EF.SIZE_120),
-                g('svg-mask-diagonal-facepile-status-120', u.EF.SIZE_120),
-                S('svg-mask-diagonal-facepile-typing-120', u.EF.SIZE_120),
+                S('svg-mask-diagonal-facepile-status-120', u.EF.SIZE_120),
+                g('svg-mask-diagonal-facepile-typing-120', u.EF.SIZE_120),
                 (function (e) {
                     let t = 8 * u.EW;
                     return (0, a.jsxs)('mask', {
@@ -954,9 +954,9 @@ let b = s.memo(
                         })
                     ]
                 })),
-                ((D = 'svg-mask-autocomplete-emoji-upsell-emoji'),
+                ((L = 'svg-mask-autocomplete-emoji-upsell-emoji'),
                 (0, a.jsxs)('mask', {
-                    id: D,
+                    id: L,
                     maskContentUnits: 'objectBoundingBox',
                     viewBox: '0 0 1 1',
                     children: [
@@ -1064,8 +1064,8 @@ let b = s.memo(
                         fill: 'white'
                     })
                 })),
-                L('svg-mask-content-image-60', 60, 24, 2),
-                L('svg-mask-content-image-72', 72, 32, 4)
+                D('svg-mask-content-image-60', 60, 24, 2),
+                D('svg-mask-content-image-72', 72, 32, 4)
             ]
         });
     },

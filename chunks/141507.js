@@ -20,8 +20,8 @@ var r = n(735250),
     I = n(430824),
     m = n(451478),
     T = n(768581),
-    g = n(111846),
-    S = n(392552),
+    S = n(111846),
+    g = n(392552),
     A = n(543241),
     N = n(199257),
     O = n(880949),
@@ -29,12 +29,12 @@ var r = n(735250),
     v = n(149203),
     C = n(689938),
     y = n(611540);
-function L(e) {
+function D(e) {
     return 'animated' in e;
 }
-let D = (e) => {
+let L = (e) => {
         let { inspectedEmoji: t, guild: n } = e,
-            r = L(t);
+            r = D(t);
         return null != n && r ? C.Z.Messages.EMOJI_FROM_GUILD.format({ guildName: n.name }) : null;
     },
     b = i.memo(function (e) {
@@ -42,7 +42,7 @@ let D = (e) => {
             b,
             M,
             { className: P, emojiGrid: U, guildId: w, pickerIntention: x, channel: G } = e,
-            { enabled: k } = S.Z.useExperiment({ location: 'EmojiPicker' }, { autoTrackExposure: !1 }),
+            { enabled: k } = g.Z.useExperiment({ location: 'EmojiPicker' }, { autoTrackExposure: !1 }),
             B = E.kJ.useStore((e) => e.inspectedExpressionPosition),
             F = i.useMemo(() => {
                 var e;
@@ -69,11 +69,11 @@ let D = (e) => {
                 };
         }
         let V = (0, a.e7)([I.Z], () => (null !== t && t.type === c.B.GUILD ? I.Z.getGuild(t.guildId) : null), [t]),
-            { useTransparentIcons: H } = g.Z.useExperiment({ location: 'EmojiPicker' }, { autoTrackExposure: !1 }),
+            { useTransparentIcons: H } = S.Z.useExperiment({ location: 'EmojiPicker' }, { autoTrackExposure: !1 }),
             Z = (0, a.e7)([m.Z], () => m.Z.isFocused()),
             Y = (0, a.e7)([l.Z], () => l.Z.useReducedMotion, []),
             j = p.Yk.useSetting(),
-            W = (0, A.C1)(w, L(t) ? t : null),
+            W = (0, A.C1)(w, D(t) ? t : null),
             K = (0, a.e7)([u.ZP], () => u.ZP.expandedSectionsByGuildIds),
             { newlyAddedEmojis: z } = (0, N.Z)(w, x),
             q = t.id,
@@ -83,7 +83,7 @@ let D = (e) => {
                 let e = Date.now();
                 return () => {
                     Date.now() - e >= 250 &&
-                        L(t) &&
+                        D(t) &&
                         Q !== v.t0.NONE &&
                         (Q === v.t0.NEWLY_ADDED_EMOJI && null !== t && t.type === c.B.GUILD && (0, _.Zg)(t.guildId, z[0].id),
                         null != B.source &&
@@ -99,7 +99,7 @@ let D = (e) => {
         )
             return null;
         let X = h.Z.theme;
-        if (L(t)) {
+        if (D(t)) {
             var $;
             let e =
                 null != t.id
@@ -157,7 +157,7 @@ let D = (e) => {
         let ee =
             k && 'CREATE_EMOJI' === t.type
                 ? C.Z.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE
-                : D({
+                : L({
                       inspectedEmoji: t,
                       channel: G,
                       guildId: w,

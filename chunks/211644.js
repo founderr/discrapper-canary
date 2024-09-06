@@ -9,13 +9,13 @@ n.d(t, {
         return A;
     },
     cI: function () {
-        return S;
+        return g;
     },
     f0: function () {
         return T;
     },
     gE: function () {
-        return g;
+        return S;
     },
     mc: function () {
         return R;
@@ -102,7 +102,7 @@ let s = new (n(499303).I)(),
             });
         });
     },
-    g = (e, t) => {
+    S = (e, t) => {
         (0, i.j)(() => {
             l.setState((n) => {
                 let r = u(n);
@@ -110,7 +110,7 @@ let s = new (n(499303).I)(),
             });
         });
     },
-    S = (e) => l.getState().currentlyShown.has(e),
+    g = (e) => l.getState().currentlyShown.has(e),
     A = (e) => l((t) => t.currentlyShown.has(e)),
     N = (e) => l((t) => e.some((e) => t.currentlyShown.has(e))),
     O = () => {

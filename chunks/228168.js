@@ -6,7 +6,7 @@ n.d(t, {
         return h;
     },
     cm: function () {
-        return g;
+        return S;
     },
     jC: function () {
         return C;
@@ -41,8 +41,8 @@ var r,
     I,
     m,
     T,
-    g,
     S,
+    g,
     A,
     N,
     O,
@@ -84,7 +84,7 @@ function C(e) {
     (o.SIMPLIFIED_MODAL_RESTRICTED_BLOCKER_PROFILE = 'SIMPLIFIED_MODAL_RESTRICTED_BLOCKER_PROFILE'),
     ((l = T || (T = {})).USER_SHEET = 'User Sheet'),
     (l.BLOCKED_USER_SHEET = 'Blocked User Sheet'),
-    ((u = g || (g = {}))[(u.NICKNAME = 0)] = 'NICKNAME'),
+    ((u = S || (S = {}))[(u.NICKNAME = 0)] = 'NICKNAME'),
     (u[(u.PRONOUNS = 1)] = 'PRONOUNS'),
     (u[(u.AVATAR = 2)] = 'AVATAR'),
     (u[(u.ANIMATED_AVATAR = 3)] = 'ANIMATED_AVATAR'),
@@ -94,7 +94,7 @@ function C(e) {
     (u[(u.THEME = 7)] = 'THEME'),
     (u[(u.AVATAR_DECORATION = 8)] = 'AVATAR_DECORATION'),
     (u[(u.PROFILE_EFFECT = 9)] = 'PROFILE_EFFECT'),
-    ((c = S || (S = {})).VIEW = 'VIEW'),
+    ((c = g || (g = {})).VIEW = 'VIEW'),
     (c.SEND_MESSAGE = 'SEND_MESSAGE'),
     (c.SEND_DIRECT_MESSAGE = 'SEND_DIRECT_MESSAGE'),
     (c.SEND_FRIEND_REQUEST = 'SEND_FRIEND_REQUEST'),

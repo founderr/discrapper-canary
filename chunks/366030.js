@@ -22,8 +22,8 @@ var r = n(735250),
     I = n(367907),
     m = n(906732),
     T = n(385499),
-    g = n(171368),
-    S = n(598077),
+    S = n(171368),
+    g = n(598077),
     A = n(271383),
     N = n(626135),
     O = n(275759),
@@ -31,8 +31,8 @@ var r = n(735250),
     v = n(977392),
     C = n(134433),
     y = n(753194),
-    L = n(458034),
-    D = n(856651),
+    D = n(458034),
+    L = n(856651),
     b = n(981631),
     M = n(228168),
     P = n(689938),
@@ -42,13 +42,13 @@ function w(e) {
         { connectionType: n, connectionMetadataField: i, operator: a, value: s, description: o } = e;
     if (null != o)
         switch (a) {
-            case D.iO.LESS_THAN:
+            case L.iO.LESS_THAN:
                 t = P.Z.Messages.CONNECTIONS_ROLE_RULE_GENERIC.format({
                     description: o,
                     count: Math.max(0, Number(s) - 1)
                 });
                 break;
-            case D.iO.GREATER_THAN:
+            case L.iO.GREATER_THAN:
                 t = P.Z.Messages.CONNECTIONS_ROLE_RULE_GENERIC.format({
                     description: o,
                     count: Math.max(0, Number(s) + 1)
@@ -96,7 +96,7 @@ function x(e) {
                 E = u.find((e) => null != e.application),
                 h = p.Z.get(e),
                 I = null == E ? void 0 : E.application,
-                m = (null == I ? void 0 : I.bot) != null ? new S.Z(I.bot) : null;
+                m = (null == I ? void 0 : I.bot) != null ? new g.Z(I.bot) : null;
             return (
                 O.SJ.includes(null !== (t = null == I ? void 0 : I.id) && void 0 !== t ? t : '')
                     ? (l = (0, r.jsx)(y.Z, {
@@ -250,10 +250,10 @@ function k(e) {
                           channelId: o.id,
                           guildId: a.id,
                           onGetRolesClicked: () => {
-                              (0, L.Am)(a.id);
+                              (0, D.Am)(a.id);
                           },
                           onOpenProfile: () => {
-                              (0, g.openUserProfileModal)({
+                              (0, S.openUserProfileModal)({
                                   userId: t,
                                   messageId: n,
                                   guildId: a.id,

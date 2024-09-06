@@ -21,7 +21,7 @@
                     if (i === E) throw Error('Generator is already running');
                     if (i === f) {
                         if ('throw' === a) throw s;
-                        return L();
+                        return D();
                     }
                     for (r.method = a, r.arg = s; ; ) {
                         var o = r.delegate;
@@ -91,9 +91,9 @@
     T[s] = function () {
         return this;
     };
-    var g = Object.getPrototypeOf,
-        S = g && g(g(y([])));
-    S && S !== r && i.call(S, s) && (T = S);
+    var S = Object.getPrototypeOf,
+        g = S && S(S(y([])));
+    g && g !== r && i.call(g, s) && (T = g);
     var A = (m.prototype = p.prototype = Object.create(T));
     function N(e) {
         ['next', 'throw', 'return'].forEach(function (t) {
@@ -188,9 +188,9 @@
                 return (a.next = a);
             }
         }
-        return { next: L };
+        return { next: D };
     }
-    function L() {
+    function D() {
         return {
             value: n,
             done: !0

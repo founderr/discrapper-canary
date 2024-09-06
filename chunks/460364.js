@@ -15,7 +15,7 @@ function u(e) {
         h = i.useRef(null),
         p = i.useRef(null),
         I = i.useRef(null),
-        { isUsingKeyboardNavigation: m, focusIndex: T, ...g } = u;
+        { isUsingKeyboardNavigation: m, focusIndex: T, ...S } = u;
     i.useLayoutEffect(() => {
         var e;
         n && ((0, s.F)(f), null === (e = p.current) || void 0 === e || e.focus());
@@ -26,7 +26,7 @@ function u(e) {
                 null === (e = I.current) || void 0 === e || e.scrollRowIntoView(T);
             }
         }, [n, m, T]);
-    let S = i.useCallback((e) => c[e], [c]);
+    let g = i.useCallback((e) => c[e], [c]);
     return (0, r.jsxs)('div', {
         ref: f,
         className: l.__invalid_submenuContainer,
@@ -48,14 +48,14 @@ function u(e) {
                               className: l.submenuPaddingContainer,
                               children: (0, r.jsx)('div', {
                                   className: l.submenu,
-                                  ...g,
+                                  ...S,
                                   ref: p,
                                   children: (0, r.jsx)(o.Z, {
                                       ref: I,
                                       className: E,
                                       listPadding: [6, 0, 6, 8],
                                       onScroll: _,
-                                      renderRow: S,
+                                      renderRow: g,
                                       rowCount: c.length,
                                       rowHeight: d
                                   })

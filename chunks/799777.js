@@ -14,7 +14,7 @@ let f = 'GameLibraryViewStore',
     p = E.iEv.LAST_PLAYED,
     I = !1,
     m = u().debounce(() => {
-        (I = !1), g.emitChange();
+        (I = !1), S.emitChange();
     }, 200);
 class T extends (o = c.ZP.Store) {
     initialize() {
@@ -44,7 +44,7 @@ class T extends (o = c.ZP.Store) {
               writable: !0
           })
         : (i[a] = s);
-let g = new T(_.Z, {
+let S = new T(_.Z, {
     LIBRARY_TABLE_SORT_UPDATE: function (e) {
         let { direction: t, key: n } = e;
         (h = t),
@@ -59,4 +59,4 @@ let g = new T(_.Z, {
         n && ((I = !0), m()), (r = t);
     }
 });
-t.Z = g;
+t.Z = S;

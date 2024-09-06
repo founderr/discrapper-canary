@@ -17,13 +17,13 @@ function s(e, t, n) {
             }
         }),
         { focusableProps: T } = (0, i.kc)(e, n),
-        g = (0, r.dG)(h, T),
-        S = (0, r.zL)(e, { labelable: !0 });
+        S = (0, r.dG)(h, T),
+        g = (0, r.zL)(e, { labelable: !0 });
     return (
         (0, r.y$)(n, t.isSelected, t.setSelected),
         {
             labelProps: (0, r.dG)(I, { onClick: (e) => e.preventDefault() }),
-            inputProps: (0, r.dG)(S, {
+            inputProps: (0, r.dG)(g, {
                 'aria-invalid': f || 'invalid' === E || void 0,
                 'aria-errormessage': e['aria-errormessage'],
                 'aria-controls': e['aria-controls'],
@@ -35,7 +35,7 @@ function s(e, t, n) {
                 ...(null == l ? {} : { value: l }),
                 name: u,
                 type: 'checkbox',
-                ...g
+                ...S
             }),
             isSelected: t.isSelected,
             isPressed: p || m,

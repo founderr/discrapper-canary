@@ -23,14 +23,14 @@ function I(e, t) {
 }
 async function m(e) {
     var t, a, s, m;
-    let { userId: T, section: g, subsection: S, guildId: A = f.ME, channelId: N, friendToken: O, analyticsLocation: R, showGuildProfile: v = !0, ...C } = e,
+    let { userId: T, section: S, subsection: g, guildId: A = f.ME, channelId: N, friendToken: O, analyticsLocation: R, showGuildProfile: v = !0, ...C } = e,
         y = d.default.getUser(T);
     if (null == y) return;
-    let L = E.Z.getUserProfile(T),
-        D = u.Z.getPrimaryActivity(T),
+    let D = E.Z.getUserProfile(T),
+        L = u.Z.getPrimaryActivity(T),
         b = u.Z.getStatus(T),
         M = u.Z.isMobileOnline(T),
-        { party: P, assets: U, application_id: w } = null != D ? D : {},
+        { party: P, assets: U, application_id: w } = null != L ? L : {},
         x = null != w ? l.Z.getApplication(w) : null,
         G = M ? f.j28.ONLINE_MOBILE : f.j28.ONLINE_DESKTOP,
         k = b === f.Skl.ONLINE ? G : b;
@@ -42,8 +42,8 @@ async function m(e) {
                     user: y,
                     guildId: A,
                     friendToken: O,
-                    initialSection: g,
-                    initialSubsection: S,
+                    initialSection: S,
+                    initialSubsection: g,
                     channelId: N,
                     showGuildProfile: v,
                     ...t,
@@ -57,25 +57,25 @@ async function m(e) {
             guild_id: A !== f.ME ? A : null,
             channel_id: N,
             other_user_id: T,
-            application_id: null !== (a = null == D ? void 0 : D.application_id) && void 0 !== a ? a : null,
-            application_name: null == D ? void 0 : D.name,
+            application_id: null !== (a = null == L ? void 0 : L.application_id) && void 0 !== a ? a : null,
+            application_name: null == L ? void 0 : L.name,
             sku_id: null !== (s = null == x ? void 0 : x.primarySkuId) && void 0 !== s ? s : null,
             is_friend: c.Z.isFriend(T),
             has_images: !!(null !== (m = null == U ? void 0 : U.large_image) && void 0 !== m ? m : null == U ? void 0 : U.small_image),
             party_max: null == P ? void 0 : null === (t = P.size) || void 0 === t ? void 0 : t[1],
             party_id: null == P ? void 0 : P.id,
             party_platform: (0, h.Ps)(null == P ? void 0 : P.id) ? f.ABu.SPOTIFY : null,
-            game_platform: (0, o.Z)(D),
+            game_platform: (0, o.Z)(L),
             profile_user_status: k,
-            profile_has_nitro_customization: (null == L ? void 0 : L.banner) != null,
-            profile_has_profile_effect: (null == L ? void 0 : L.profileEffectId) != null,
+            profile_has_nitro_customization: (null == D ? void 0 : D.banner) != null,
+            profile_has_profile_effect: (null == D ? void 0 : D.profileEffectId) != null,
             ...(null == R ? null : (0, _.expandLocation)(R))
         });
 }
 function T() {
     null != p && (0, i.closeModal)(p), (p = null);
 }
-class g extends s.Z {
+class S extends s.Z {
     _initialize() {
         a.Z.subscribe('USER_PROFILE_MODAL_OPEN', m), a.Z.subscribe('USER_PROFILE_MODAL_CLOSE', T);
     }
@@ -83,4 +83,4 @@ class g extends s.Z {
         a.Z.unsubscribe('USER_PROFILE_MODAL_OPEN', m), a.Z.unsubscribe('USER_PROFILE_MODAL_CLOSE', T);
     }
 }
-t.Z = new g();
+t.Z = new S();

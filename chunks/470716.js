@@ -67,10 +67,10 @@ var p = {
         name: ['robots', 'description'],
         property: ['og:type', 'og:title', 'og:url', 'og:image', 'og:image:alt', 'og:description', 'twitter:url', 'twitter:title', 'twitter:description', 'twitter:image', 'twitter:image:alt', 'twitter:card', 'twitter:site']
     },
-    g = Object.keys(p).map(function (e) {
+    S = Object.keys(p).map(function (e) {
         return p[e];
     }),
-    S = {
+    g = {
         accesskey: 'accessKey',
         charset: 'charSet',
         class: 'className',
@@ -80,8 +80,8 @@ var p = {
         itemprop: 'itemProp',
         tabindex: 'tabIndex'
     },
-    A = Object.keys(S).reduce(function (e, t) {
-        return (e[S[t]] = t), e;
+    A = Object.keys(g).reduce(function (e, t) {
+        return (e[g[t]] = t), e;
     }, {}),
     N = function (e, t) {
         for (var n = e.length - 1; n >= 0; n -= 1) {
@@ -156,7 +156,7 @@ var p = {
     y = function (e) {
         return Array.isArray(e) ? e.join('') : e;
     },
-    L = function (e, t) {
+    D = function (e, t) {
         return Array.isArray(e)
             ? e.reduce(
                   function (e, n) {
@@ -177,7 +177,7 @@ var p = {
               )
             : { default: e };
     },
-    D = function (e, t) {
+    L = function (e, t) {
         var n;
         return _({}, e, (((n = {})[t] = void 0), n));
     },
@@ -195,7 +195,7 @@ var p = {
         return (
             void 0 === t && (t = {}),
             Object.keys(e).reduce(function (t, n) {
-                return (t[S[n] || n] = e[n]), t;
+                return (t[g[n] || n] = e[n]), t;
             }, t)
         );
     },
@@ -205,7 +205,7 @@ var p = {
                 a = (((i = { key: n })['data-rh'] = !0), i);
             return (
                 Object.keys(t).forEach(function (e) {
-                    var n = S[e] || e;
+                    var n = g[e] || e;
                     'innerHTML' === n || 'cssText' === n ? (a.dangerouslySetInnerHTML = { __html: t.innerHTML || t.cssText }) : (a[n] = t[e]);
                 }),
                 r.createElement(e, a)
@@ -286,27 +286,27 @@ var p = {
             var E,
                 f,
                 h,
-                g,
                 S,
+                g,
                 A,
                 N,
                 O =
                     ((f = (E = e).linkTags),
                     (h = E.scriptTags),
-                    (g = E.encode),
-                    (S = L(E.metaTags, T)),
-                    (A = L(f, I)),
-                    (N = L(h, m)),
+                    (S = E.encode),
+                    (g = D(E.metaTags, T)),
+                    (A = D(f, I)),
+                    (N = D(h, m)),
                     {
                         priorityMethods: {
                             toComponent: function () {
-                                return [].concat(w(p.META, S.priority), w(p.LINK, A.priority), w(p.SCRIPT, N.priority));
+                                return [].concat(w(p.META, g.priority), w(p.LINK, A.priority), w(p.SCRIPT, N.priority));
                             },
                             toString: function () {
-                                return x(p.META, S.priority, g) + ' ' + x(p.LINK, A.priority, g) + ' ' + x(p.SCRIPT, N.priority, g);
+                                return x(p.META, g.priority, S) + ' ' + x(p.LINK, A.priority, S) + ' ' + x(p.SCRIPT, N.priority, S);
                             }
                         },
-                        metaTags: S.default,
+                        metaTags: g.default,
                         linkTags: A.default,
                         scriptTags: N.default
                     });
@@ -571,7 +571,7 @@ var q = ['children'],
         var n = t.prototype;
         return (
             (n.shouldComponentUpdate = function (e) {
-                return !o()(D(this.props, 'helmetData'), D(e, 'helmetData'));
+                return !o()(L(this.props, 'helmetData'), L(e, 'helmetData'));
             }),
             (n.mapNestedChildrenToProps = function (e, t) {
                 if (!t) return null;
@@ -622,10 +622,10 @@ var q = ['children'],
             (n.warnOnInvalidChildren = function (e, t) {
                 return (
                     u()(
-                        g.some(function (t) {
+                        S.some(function (t) {
                             return e.type === t;
                         }),
-                        'function' == typeof e.type ? 'You may be attempting to nest <Helmet> components within each other, which is not allowed. Refer to our API for more information.' : 'Only elements types ' + g.join(', ') + ' are allowed. Helmet does not support rendering <' + e.type + '> elements. Refer to our API for more information.'
+                        'function' == typeof e.type ? 'You may be attempting to nest <Helmet> components within each other, which is not allowed. Refer to our API for more information.' : 'Only elements types ' + S.join(', ') + ' are allowed. Helmet does not support rendering <' + e.type + '> elements. Refer to our API for more information.'
                     ),
                     u()(
                         !t ||

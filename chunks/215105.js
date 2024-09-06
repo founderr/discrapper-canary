@@ -21,8 +21,8 @@ var r = n(735250),
     I = n(448197),
     m = n(698305),
     T = n(825801),
-    g = n(228168),
-    S = n(689938),
+    S = n(228168),
+    g = n(689938),
     A = n(227795);
 let N = (0, _.kt)({
         id: '1',
@@ -31,14 +31,14 @@ let N = (0, _.kt)({
     O = (e) => {
         let { input: t, username: n, sourceType: r, sourceDetails: i } = e;
         switch (r) {
-            case g.n_.ACTIVITY:
-                let a = S.Z.Messages.USER_PROFILE_REPLIED_TO_ACTIVITY.format({ username: n });
+            case S.n_.ACTIVITY:
+                let a = g.Z.Messages.USER_PROFILE_REPLIED_TO_ACTIVITY.format({ username: n });
                 return '> -# *'.concat(a, '*\n').concat(t);
-            case g.n_.AVATAR:
-                let s = S.Z.Messages.USER_PROFILE_REPLIED_TO_AVATAR.format({ username: n });
+            case S.n_.AVATAR:
+                let s = g.Z.Messages.USER_PROFILE_REPLIED_TO_AVATAR.format({ username: n });
                 return '> -# *'.concat(s, '*\n').concat(t);
-            case g.n_.STATUS:
-                let o = S.Z.Messages.USER_PROFILE_REPLIED_TO_STATUS.format({ username: n });
+            case S.n_.STATUS:
+                let o = g.Z.Messages.USER_PROFILE_REPLIED_TO_STATUS.format({ username: n });
                 return null != i ? '> -# *'.concat(o, '*').concat('\n > '.concat(i), '\n').concat(t) : '> -# *'.concat(o, '*\n').concat(t);
             default:
                 (0, E.vE)(r);
@@ -46,18 +46,18 @@ let N = (0, _.kt)({
     },
     R = (e) => {
         switch (e) {
-            case g.n_.ACTIVITY:
-                return S.Z.Messages.USER_PROFILE_REPLY_TO_ACTIVITY_PLACEHOLDER;
-            case g.n_.AVATAR:
-                return S.Z.Messages.USER_PROFILE_REPLY_TO_AVATAR_PLACEHOLDER;
-            case g.n_.STATUS:
-                return S.Z.Messages.USER_PROFILE_REPLY_TO_STATUS_PLACEHOLDER;
+            case S.n_.ACTIVITY:
+                return g.Z.Messages.USER_PROFILE_REPLY_TO_ACTIVITY_PLACEHOLDER;
+            case S.n_.AVATAR:
+                return g.Z.Messages.USER_PROFILE_REPLY_TO_AVATAR_PLACEHOLDER;
+            case S.n_.STATUS:
+                return g.Z.Messages.USER_PROFILE_REPLY_TO_STATUS_PLACEHOLDER;
             default:
                 (0, E.vE)(e);
         }
     };
 function v(e) {
-    let { user: t, guildId: n, channelId: a, profileType: o, sourceType: _, sourceDetails: E, onInteraction: S, setPopoutRef: v, modalKey: C, setInteractionToastShown: y, setInteractionSent: L, setIsReplyInteraction: D, onClose: b } = e,
+    let { user: t, guildId: n, channelId: a, profileType: o, sourceType: _, sourceDetails: E, onInteraction: g, setPopoutRef: v, modalKey: C, setInteractionToastShown: y, setInteractionSent: D, setIsReplyInteraction: L, onClose: b } = e,
         { trackUserProfileAction: M } = (0, p.KZ)(),
         { sendReply: P } = (0, I.Q)(_),
         [U, w] = i.useState(''),
@@ -76,7 +76,7 @@ function v(e) {
                 sourceType: _,
                 sourceDetails: E
             });
-            D(!0), L(!1), y(!0);
+            L(!0), D(!1), y(!0);
             try {
                 await (0, m.Z)({
                     userId: t.id,
@@ -86,18 +86,18 @@ function v(e) {
                     whenReady: !1
                 });
             } catch (e) {}
-            L(!0),
+            D(!0),
                 setTimeout(() => {
                     y(!1);
                 }, T._);
         },
         V = {
-            [A.biteSize]: o === g.y0.BITE_SIZE,
-            [A.panel]: o === g.y0.PANEL
+            [A.biteSize]: o === S.y0.BITE_SIZE,
+            [A.panel]: o === S.y0.PANEL
         },
         H = {
-            [A.status]: _ === g.n_.STATUS,
-            [A.avatar]: _ === g.n_.AVATAR
+            [A.status]: _ === S.n_.STATUS,
+            [A.avatar]: _ === S.n_.AVATAR
         };
     return (0, r.jsx)(l.V, {
         ref: B,
@@ -128,8 +128,8 @@ function v(e) {
                     }
                     null !== B.current &&
                         ((k.current = !1),
-                        null == S ||
-                            S({
+                        null == g ||
+                            g({
                                 interactionType: null,
                                 interactionSourceType: null
                             }),
@@ -140,8 +140,8 @@ function v(e) {
                     try {
                         return (
                             await F(t.trim()),
-                            null == S ||
-                                S({
+                            null == g ||
+                                g({
                                     interactionType: null,
                                     interactionSourceType: null
                                 }),

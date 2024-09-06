@@ -16,8 +16,8 @@ var r = n(735250),
     I = n(74538),
     m = n(94161),
     T = n(9277),
-    g = n(897291),
-    S = n(764794),
+    S = n(897291),
+    g = n(764794),
     A = n(241553),
     N = n(319417),
     O = n(728386),
@@ -36,19 +36,19 @@ function C(e) {
                   disabled: t,
                   channel: n
               })
-            : (0, r.jsx)(g.Z, {
+            : (0, r.jsx)(S.Z, {
                   disabled: t,
                   channel: n
               })
     );
 }
 t.Z = i.memo(function (e) {
-    var t, n, i, _, g, A, y, L;
-    let { type: D, disabled: b, channel: M, handleSubmit: P, isEmpty: U, showAllButtons: w } = e,
+    var t, n, i, _, S, A, y, D;
+    let { type: L, disabled: b, channel: M, handleSubmit: P, isEmpty: U, showAllButtons: w } = e,
         x = (0, s.e7)([l.Z], () => l.Z.isSubmitButtonEnabled),
-        G = (0, s.e7)([f.Z], () => f.Z.getStickerPreview(M.id, D.drafts.type)),
+        G = (0, s.e7)([f.Z], () => f.Z.getStickerPreview(M.id, L.drafts.type)),
         k = null != G && G.length > 0,
-        B = (0, s.e7)([h.Z], () => h.Z.getUploads(M.id, D.drafts.type)),
+        B = (0, s.e7)([h.Z], () => h.Z.getUploads(M.id, L.drafts.type)),
         { activeCommand: F, activeCommandOption: V } = (0, s.cj)([u.Z], () => ({
             activeCommand: u.Z.getActiveCommand(M.id),
             activeCommandOption: u.Z.getActiveOption(M.id)
@@ -75,13 +75,13 @@ t.Z = i.memo(function (e) {
         });
     return (!a.tq &&
         (M.isDM() &&
-            (null === (g = D.gifts) || void 0 === g ? void 0 : g.button) != null &&
+            (null === (S = L.gifts) || void 0 === S ? void 0 : S.button) != null &&
             null == F &&
             (I.ZP.isPremiumExactly(j, R.p9.TIER_2) && q && E.Z.trackExposure({ location: 'dc120b_5' }),
             z &&
                 Z.push(
                     (0, r.jsx)(
-                        S.Z,
+                        g.Z,
                         {
                             disabled: b,
                             referralsRemaining: W,
@@ -91,7 +91,7 @@ t.Z = i.memo(function (e) {
                         'referral'
                     )
                 )),
-        (null === (A = D.gifts) || void 0 === A ? void 0 : A.button) != null &&
+        (null === (A = L.gifts) || void 0 === A ? void 0 : A.button) != null &&
             null == F &&
             !H &&
             Z.push(
@@ -104,7 +104,7 @@ t.Z = i.memo(function (e) {
                     'gift'
                 )
             ),
-        (null === (y = D.gifs) || void 0 === y ? void 0 : y.button) != null &&
+        (null === (y = L.gifs) || void 0 === y ? void 0 : y.button) != null &&
             null == F &&
             w &&
             Z.push(
@@ -112,12 +112,12 @@ t.Z = i.memo(function (e) {
                     T.Z,
                     {
                         disabled: b,
-                        type: D
+                        type: L
                     },
                     'gif'
                 )
             ),
-        (null === (L = D.stickers) || void 0 === L ? void 0 : L.button) != null &&
+        (null === (D = L.stickers) || void 0 === D ? void 0 : D.button) != null &&
             null == F &&
             w &&
             Z.push(
@@ -125,25 +125,25 @@ t.Z = i.memo(function (e) {
                     O.Z,
                     {
                         disabled: b,
-                        type: D
+                        type: L
                     },
                     'sticker'
                 )
             )),
-    (null === (t = D.emojis) || void 0 === t ? void 0 : t.button) != null &&
+    (null === (t = L.emojis) || void 0 === t ? void 0 : t.button) != null &&
         (null == F || (null != V && V.type !== o.jw.ATTACHMENT)) &&
         Z.push(
             (0, r.jsx)(
                 m.Z,
                 {
                     disabled: b,
-                    type: D
+                    type: L
                 },
                 'emoji'
             )
         ),
-    (null === (n = D.submit) || void 0 === n ? void 0 : n.button) != null &&
-        ((null === (i = D.submit) || void 0 === i ? void 0 : i.ignorePreference) || x) &&
+    (null === (n = L.submit) || void 0 === n ? void 0 : n.button) != null &&
+        ((null === (i = L.submit) || void 0 === i ? void 0 : i.ignorePreference) || x) &&
         Z.push(
             (0, r.jsx)(
                 N.Z,

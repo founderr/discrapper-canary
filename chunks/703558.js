@@ -50,10 +50,10 @@ function T(e) {
             timestamp: Date.now(),
             draft: r
         };
-    } else g(n, i);
+    } else S(n, i);
     return 'DRAFT_SAVE' === t;
 }
-function g(e, t) {
+function S(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : _.default.getId();
     if (null == n) return !1;
     let r = m(n),
@@ -61,7 +61,7 @@ function g(e, t) {
     if (null == i) return !1;
     delete i[t], o().isEmpty(i) && delete r[e];
 }
-function S() {
+function g() {
     let e = _.default.getId();
     if (null == e || f.Z.totalUnavailableGuilds > 0) return;
     let t = m(e);
@@ -83,7 +83,7 @@ class N extends (i = l.ZP.PersistedStore) {
                 for (let [e, t] of d.default.entries(I))
                     for (let [n, r] of d.default.entries(t)) {
                         let t = r[0];
-                        null != t && ('' === t.draft || '' === t.draft.trim()) && g(n, 0, e);
+                        null != t && ('' === t.draft || '' === t.draft.trim()) && S(n, 0, e);
                     }
             })(),
             this.waitFor(_.default, E.Z, f.Z);
@@ -160,7 +160,7 @@ h(N, 'displayName', 'DraftStore'),
     (t.Z = new N(u.Z, {
         CONNECTION_OPEN: function () {
             let e = _.default.getId();
-            return !(e in I) && (I[e] = {}), S(), !1;
+            return !(e in I) && (I[e] = {}), g(), !1;
         },
         LOGOUT: function (e) {
             !e.isSwitchingAccount && (I = {});
@@ -169,7 +169,7 @@ h(N, 'displayName', 'DraftStore'),
             e.userId in I && delete I[e.userId];
         },
         GUILD_DELETE: function () {
-            return S(), !1;
+            return g(), !1;
         },
         CHANNEL_DELETE: A,
         THREAD_DELETE: A,
@@ -195,15 +195,15 @@ h(N, 'displayName', 'DraftStore'),
                             draft: n
                         }
                     }),
-                    g(t.parent_id, 1),
-                    g(t.parent_id, 2);
+                    S(t.parent_id, 1),
+                    S(t.parent_id, 2);
             }
         },
         DRAFT_SAVE: T,
         DRAFT_CHANGE: T,
         DRAFT_CLEAR: function (e) {
             let { channelId: t, draftType: n } = e;
-            return g(t, n);
+            return S(t, n);
         },
         THREAD_SETTINGS_DRAFT_CHANGE: function (e) {
             let { channelId: t, draft: n } = e,

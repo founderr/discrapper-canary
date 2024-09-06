@@ -6,7 +6,7 @@ n.d(t, {
         return A;
     },
     ZJ: function () {
-        return S;
+        return g;
     },
     mF: function () {
         return r;
@@ -30,14 +30,14 @@ var r,
     I = n(981631);
 function m(e, t, n) {
     var r;
-    let { context: i, commandTypes: a, allowNsfw: c, computedPermissions: m, userId: T, roleIds: g, isImpersonating: N, hasBaseAccessPermissions: O } = t,
-        { applicationAllowedForUser: R, applicationAllowedForChannel: v, isGuildInstalled: C, isUserInstalled: y, commandBotId: L } = n;
+    let { context: i, commandTypes: a, allowNsfw: c, computedPermissions: m, userId: T, roleIds: S, isImpersonating: N, hasBaseAccessPermissions: O } = t,
+        { applicationAllowedForUser: R, applicationAllowedForChannel: v, isGuildInstalled: C, isUserInstalled: y, commandBotId: D } = n;
     if (!a.includes(e.type)) return 2;
     if (e.nsfw && !c) return 1;
-    let D = (0, h.Vh)(i, L);
+    let L = (0, h.Vh)(i, D);
     if (null != e.contexts) {
-        if (!e.contexts.includes(D)) return 4;
-    } else if (e.inputType === E.iw.BOT && ((!1 === e.dmPermission && D === u.D.BOT_DM) || D === u.D.PRIVATE_CHANNEL)) return 4;
+        if (!e.contexts.includes(L)) return 4;
+    } else if (e.inputType === E.iw.BOT && ((!1 === e.dmPermission && L === u.D.BOT_DM) || L === u.D.PRIVATE_CHANNEL)) return 4;
     if (null != e.predicate && i instanceof d.Sf) {
         let t = _.Z.getGuild(i.guild_id);
         if (
@@ -54,7 +54,7 @@ function m(e, t, n) {
     if (!O && C && (null == e.integration_types || e.integration_types.includes(o.Y.GUILD_INSTALL))) return 5;
     if (i instanceof d.Sf) {
         s()(void 0 !== v, 'missing applicationAllowedForChannel');
-        let t = S(e.permissions, i, b);
+        let t = g(e.permissions, i, b);
         if (
             (function (e) {
                 return !1 === e;
@@ -68,7 +68,7 @@ function m(e, t, n) {
         )
             return 6;
     }
-    let M = A(e.permissions, b, T, g, N);
+    let M = A(e.permissions, b, T, S, N);
     return (function (e) {
         return !0 === e;
     })(M)
@@ -87,10 +87,10 @@ function m(e, t, n) {
 function T(e) {
     return !0 === e;
 }
-function g(e) {
+function S(e) {
     return !1 === e;
 }
-function S(e, t, n) {
+function g(e, t, n) {
     if (null == e) return null;
     let r = t.id;
     if (t.isThread()) {

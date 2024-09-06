@@ -1,6 +1,6 @@
 var i = n(735250),
-    a = n(470079),
-    s = n(442837),
+    s = n(470079),
+    a = n(442837),
     l = n(481060),
     r = n(287734),
     o = n(358221),
@@ -8,33 +8,33 @@ var i = n(735250),
     u = n(281956),
     d = n(27457),
     h = n(823379),
-    p = n(5192),
-    m = n(501655),
+    m = n(5192),
+    p = n(501655),
     _ = n(689938),
     f = n(226409);
-let E = (e, t) => p.ZP.getName(e.getGuildId(), e.id, t.user);
+let E = (e, t) => m.ZP.getName(e.getGuildId(), e.id, t.user);
 t.Z = function (e) {
     var t, n;
-    let { participants: p, channel: C, hasConnectPermission: g } = e,
-        I = (0, u.J)(C.guild_id),
-        x = a.useCallback(() => {
-            I ? (0, c.hk)(C.guild_id, () => r.default.selectVoiceChannel(C.id)) : r.default.selectVoiceChannel(C.id);
-        }, [C.id, C.guild_id, I]),
-        T = p.filter((e) => e.type === m.Ui.VOICE),
-        N = 4 === T.length ? 2 : 3,
-        S = (0, s.Wu)([o.Z], () => T.map((e) => o.Z.getParticipant(C.id, e.id)).filter(h.lm), [C.id, T]);
+    let { participants: m, channel: g, hasConnectPermission: C } = e,
+        I = (0, u.J)(g.guild_id),
+        x = s.useCallback(() => {
+            I ? (0, c.hk)(g.guild_id, () => r.default.selectVoiceChannel(g.id)) : r.default.selectVoiceChannel(g.id);
+        }, [g.id, g.guild_id, I]),
+        T = m.filter((e) => e.type === p.Ui.VOICE),
+        S = 4 === T.length ? 2 : 3,
+        v = (0, a.Wu)([o.Z], () => T.map((e) => o.Z.getParticipant(g.id, e.id)).filter(h.lm), [g.id, T]);
     return (0, i.jsxs)('div', {
         className: f.container,
         children: [
             (0, i.jsx)('div', {
                 className: f.tiles,
-                style: { maxWidth: 168 * N },
-                children: S.slice(0, 5).map((e) =>
+                style: { maxWidth: 168 * S },
+                children: v.slice(0, 5).map((e) =>
                     (0, i.jsx)(
                         d.ZP,
                         {
                             participant: e,
-                            channel: C,
+                            channel: g,
                             className: f.tile,
                             paused: !0,
                             inCall: !0,
@@ -49,7 +49,7 @@ t.Z = function (e) {
             (0, i.jsx)(l.Heading, {
                 className: f.channelName,
                 variant: 'heading-xxl/semibold',
-                children: C.name
+                children: g.name
             }),
             (0, i.jsx)('div', {
                 className: f.participantsRow,
@@ -57,7 +57,7 @@ t.Z = function (e) {
                     color: 'header-secondary',
                     variant: 'text-sm/normal',
                     children:
-                        ((t = C),
+                        ((t = g),
                         0 === (n = T).length
                             ? _.Z.Messages.CURRENTLY_IN_STAGE_EMPTY
                             : 1 === n.length
@@ -77,12 +77,12 @@ t.Z = function (e) {
                 })
             }),
             (0, i.jsx)(l.Button, {
-                disabled: !g,
+                disabled: !C,
                 className: f.joinButton,
-                color: g ? l.Button.Colors.GREEN : l.Button.Colors.PRIMARY,
+                color: C ? l.Button.Colors.GREEN : l.Button.Colors.PRIMARY,
                 onClick: x,
                 size: l.Button.Sizes.MEDIUM,
-                children: g ? _.Z.Messages.STAGE_CHANNEL_JOIN : _.Z.Messages.CHANNEL_LOCKED_SHORT
+                children: C ? _.Z.Messages.STAGE_CHANNEL_JOIN : _.Z.Messages.CHANNEL_LOCKED_SHORT
             })
         ]
     });

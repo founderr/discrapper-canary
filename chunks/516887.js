@@ -1,14 +1,14 @@
 var i = n(735250),
-    a = n(470079),
-    s = n(120356),
-    l = n.n(s),
+    s = n(470079),
+    a = n(120356),
+    l = n.n(a),
     r = n(481060),
     o = n(826298),
     c = n(437505);
-t.Z = a.memo(function (e) {
+t.Z = s.memo(function (e) {
     var t;
-    let { className: n, channel: a, section: s } = e,
-        u = null != s ? (0, o.ky)(s) : null;
+    let { className: n, channel: s, section: a } = e,
+        u = null != a ? (0, o.ky)(a) : null;
     return (0, i.jsx)('div', {
         className: l()(n, c.wrapper),
         children: (0, i.jsx)('div', {
@@ -16,13 +16,13 @@ t.Z = a.memo(function (e) {
             children:
                 null != u
                     ? (0, i.jsx)(r.Tooltip, {
-                          text: null !== (t = null == s ? void 0 : s.name) && void 0 !== t ? t : '',
+                          text: null !== (t = null == a ? void 0 : a.name) && void 0 !== t ? t : '',
                           position: 'top',
                           children: (e) =>
                               (0, i.jsx)(u, {
                                   ...e,
-                                  channel: a,
-                                  section: s,
+                                  channel: s,
+                                  section: a,
                                   width: 24,
                                   height: 24
                               })

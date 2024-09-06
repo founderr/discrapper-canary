@@ -21,10 +21,10 @@ var r = n(470079),
     I = n(377668),
     m = n(185923);
 function T(e, t, n) {
-    var T, g, S, A, N, O, R;
+    var T, S, g, A, N, O, R;
     let { channel: v, type: C } = e,
-        [y, L] = r.useState(() => (0, f.P)()),
-        D = (0, i.Z)(),
+        [y, D] = r.useState(() => (0, f.P)()),
+        L = (0, i.Z)(),
         b = (0, a.e7)([c.ZP], () => {
             if (null != e.guild) {
                 var t;
@@ -62,7 +62,7 @@ function T(e, t, n) {
             navigator: k,
             activeCommand: x,
             activeCommandOption: G,
-            canMentionUsers: null !== (N = null === (g = C.users) || void 0 === g ? void 0 : g.allowMentioning) && void 0 !== N && N,
+            canMentionUsers: null !== (N = null === (S = C.users) || void 0 === S ? void 0 : S.allowMentioning) && void 0 !== N && N,
             canMentionEveryone: U,
             canMentionClyde: M,
             hidePersonalInformation: w,
@@ -70,7 +70,7 @@ function T(e, t, n) {
             emojiIntention: C === l.I.RULES_INPUT ? m.Hz.COMMUNITY_CONTENT : m.Hz.CHAT,
             currentWord: null !== (O = null == B ? void 0 : B.word) && void 0 !== O ? O : '',
             currentWordIsAtStart: (null == B ? void 0 : B.isAtStart) === !0,
-            optionText: null != G ? (0, s.KF)({ [G.name]: null !== (R = null === (S = e.editorRef.current) || void 0 === S ? void 0 : S.getCurrentCommandOptionValue()) && void 0 !== R ? R : [] }, G.name) : ''
+            optionText: null != G ? (0, s.KF)({ [G.name]: null !== (R = null === (g = e.editorRef.current) || void 0 === g ? void 0 : g.getCurrentCommandOptionValue()) && void 0 !== R ? R : [] }, G.name) : ''
         },
         [V] = r.useState(() => new f.Z(F));
     return (
@@ -79,15 +79,15 @@ function T(e, t, n) {
         }),
         r.useImperativeHandle(t, () => V, [V]),
         r.useEffect(() => {
-            let e = (e) => L(e);
+            let e = (e) => D(e);
             return (
                 V.on('change', e),
-                V.on('update', D),
+                V.on('update', L),
                 () => {
-                    V.off('change', e), V.off('update', D);
+                    V.off('change', e), V.off('update', L);
                 }
             );
-        }, [D, V]),
+        }, [L, V]),
         r.useEffect(() => {
             var e;
             let t = null === (e = y.query) || void 0 === e ? void 0 : e.typeInfo.stores;

@@ -20,8 +20,8 @@ var r = n(735250),
     I = n(594174),
     m = n(626135),
     T = n(74538),
-    g = n(94795),
-    S = n(327943),
+    S = n(94795),
+    g = n(327943),
     A = n(539873),
     N = n(981631),
     O = n(921944),
@@ -46,10 +46,10 @@ let y = () => {
             subscriptionTier: R.Si.TIER_2
         });
     },
-    L = (e) => {
+    D = (e) => {
         let { markAsDismissed: t } = e,
             n = () => {
-                null == t || t(O.L.DISMISS), (0, g.G8)();
+                null == t || t(O.L.DISMISS), (0, S.G8)();
             };
         return (0, r.jsxs)('div', {
             className: C.editorHeader,
@@ -76,9 +76,9 @@ let y = () => {
             ]
         });
     },
-    D = (e) => {
+    L = (e) => {
         let { isCoachmark: t, markAsDismissed: n } = e,
-            i = (0, o.e7)([S.Z], () => S.Z.isUpsellPreview);
+            i = (0, o.e7)([g.Z], () => g.Z.isUpsellPreview);
         return (0, r.jsxs)('div', {
             className: C.editorFooter,
             children: [
@@ -86,7 +86,7 @@ let y = () => {
                 (0, r.jsx)(l.Button, {
                     className: C.footerButton,
                     onClick: () => {
-                        null == n || n(O.L.DISMISS), (0, g.G8)(), !t && u.Z.open();
+                        null == n || n(O.L.DISMISS), (0, S.G8)(), !t && u.Z.open();
                     },
                     color: l.Button.Colors.PRIMARY,
                     size: l.Button.Sizes.MEDIUM,
@@ -103,9 +103,9 @@ function b(e) {
             isUpsellPreview: f,
             isEditorOpen: h,
             shouldEditorAnimate: p
-        } = (0, o.cj)([S.Z, d.Z], () => ({
-            isUpsellPreview: S.Z.isUpsellPreview,
-            isEditorOpen: S.Z.isEditorOpen,
+        } = (0, o.cj)([g.Z, d.Z], () => ({
+            isUpsellPreview: g.Z.isUpsellPreview,
+            isEditorOpen: g.Z.isEditorOpen,
             shouldEditorAnimate: t && !d.Z.useReducedMotion
         }));
     i.useEffect(() => {
@@ -115,9 +115,9 @@ function b(e) {
                 location_stack: a
             });
     }, [f, a]);
-    let T = (0, c.Z)(null, f ? g.O7 : N.dG4);
+    let T = (0, c.Z)(null, f ? S.O7 : N.dG4);
     return (i.useEffect(() => {
-        if (!!f && !h) return g.O7;
+        if (!!f && !h) return S.O7;
     }, [f, h]),
     null == u)
         ? null
@@ -128,7 +128,7 @@ function b(e) {
                   className: s()(C.editor, p ? C.editorAnimate : null),
                   children: (0, r.jsxs)(l.HeadingLevel, {
                       children: [
-                          (0, r.jsx)(L, { markAsDismissed: n }),
+                          (0, r.jsx)(D, { markAsDismissed: n }),
                           (0, r.jsx)(l.Scroller, {
                               className: C.editorBody,
                               children: (0, r.jsx)(A.Z, {
@@ -136,7 +136,7 @@ function b(e) {
                                   isEditor: !0
                               })
                           }),
-                          (0, r.jsx)(D, {
+                          (0, r.jsx)(L, {
                               markAsDismissed: n,
                               isCoachmark: t
                           })

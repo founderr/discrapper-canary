@@ -17,8 +17,8 @@ var r,
 ((a = r || (r = {}))[(a.INVALID = 0)] = 'INVALID'), (a[(a.VALID_USER_ONLY = 1)] = 'VALID_USER_ONLY'), (a[(a.VALID = 2)] = 'VALID');
 let m = new Set(),
     T = new Set(),
-    g = new Set(),
-    S = [],
+    S = new Set(),
+    g = [],
     A = (e) => 'user:'.concat(e),
     N = (e) => 'channel:'.concat(e),
     O = (e) => 'validity:'.concat(e),
@@ -35,7 +35,7 @@ function v(e, t, n) {
         let t = R.get(e);
         return !!(null != t && (0, u.isEqual)(t.source, n)) && (R.delete(e), void 0);
     }
-    !m.has(e) && !T.has(e) && (g.add(e), (S = [...g]));
+    !m.has(e) && !T.has(e) && (S.add(e), (g = [...S]));
     let r = (0, I.tI)(t, e, n);
     R.set(e, r);
 }
@@ -61,7 +61,7 @@ class y extends (i = c.ZP.Store) {
         return R.get(e);
     }
     getUserIdsToValidate() {
-        return S;
+        return g;
     }
 }
 (l = 'BroadcastingStore'),
@@ -105,7 +105,7 @@ class y extends (i = c.ZP.Store) {
         BROADCASTER_BUCKETS_RECEIVED: function (e) {
             let { data: t } = e;
             h.default.keys(t).forEach((e) => {
-                p.g.includes(t[e]) ? m.add(e) : T.add(e), g.clear(), (S = [...g]);
+                p.g.includes(t[e]) ? m.add(e) : T.add(e), S.clear(), (g = [...S]);
                 let n = R.get(e);
                 null != n && (R.delete(e), R.set(e, n));
             });
@@ -152,6 +152,6 @@ class y extends (i = c.ZP.Store) {
             });
         },
         LOGOUT: function () {
-            m.clear(), T.clear(), g.clear(), (S = []), R.clear();
+            m.clear(), T.clear(), S.clear(), (g = []), R.clear();
         }
     }));

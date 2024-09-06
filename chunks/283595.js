@@ -19,8 +19,8 @@ function m() {
     return null !== (e = c.K.get(I)) && void 0 !== e ? e : {};
 }
 let T = !1,
-    g = {},
     S = {},
+    g = {},
     A = new Set(),
     N = {},
     O = {},
@@ -40,24 +40,24 @@ function C() {
 function y(e) {
     for (let t of e) {
         let e = _.Z.createFromServer(t);
-        g[(0, f.Tu)(e.id, e.branchId)] = e;
+        S[(0, f.Tu)(e.id, e.branchId)] = e;
     }
 }
-function L(e) {
+function D(e) {
     let { libraryApplication: t } = e,
         n = _.Z.createFromServer(t),
         r = (0, f.Tu)(n.id, n.branchId);
-    (g[r] = n), A.delete(r);
+    (S[r] = n), A.delete(r);
 }
-function D(e, t) {
+function L(e, t) {
     var n;
     let r = (0, f.Tu)(e, t);
-    return null !== (n = g[r]) && void 0 !== n ? n : S[r];
+    return null !== (n = S[r]) && void 0 !== n ? n : g[r];
 }
 function b() {
     return {
-        ...S,
-        ...g
+        ...g,
+        ...S
     };
 }
 class M extends (r = u.ZP.Store) {
@@ -85,12 +85,12 @@ class M extends (r = u.ZP.Store) {
     }
     hasApplication(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-            r = D(e, t);
+            r = L(e, t);
         return !(null == r || (!n && r.isHidden())) && (0, f.Je)(r);
     }
     getLibraryApplication(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-            r = D(e, t);
+            r = L(e, t);
         return n && null != r ? ((0, f.Je)(r) ? r : null) : r;
     }
     getActiveLibraryApplication(e) {
@@ -99,7 +99,7 @@ class M extends (r = u.ZP.Store) {
         if (null != n) {
             var r;
             let i = (0, f.Tu)(e, n),
-                a = null !== (r = g[i]) && void 0 !== r ? r : S[i];
+                a = null !== (r = S[i]) && void 0 !== r ? r : g[i];
             if (null != a && (0, f.Je)(a) && (t || !a.isHidden())) return a;
         }
         let i = b();
@@ -149,7 +149,7 @@ class M extends (r = u.ZP.Store) {
         },
         LIBRARY_FETCH_SUCCESS: function (e) {
             let { libraryApplications: t } = e;
-            (g = {}), y(t), (T = !0);
+            (S = {}), y(t), (T = !0);
         },
         SKU_PURCHASE_SUCCESS: function (e) {
             let { libraryApplications: t } = e;
@@ -158,11 +158,11 @@ class M extends (r = u.ZP.Store) {
         LIBRARY_APPLICATION_FLAGS_UPDATE_START: function (e) {
             let { applicationId: t, branchId: n, flags: r } = e,
                 i = (0, f.Tu)(t, n),
-                a = D(t, n);
+                a = L(t, n);
             null != a && !a.isHidden() && E.yE(r, p.eHb.HIDDEN) && (R = !0), A.add(i);
         },
-        LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: L,
-        LIBRARY_APPLICATION_UPDATE: L,
+        LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: D,
+        LIBRARY_APPLICATION_UPDATE: D,
         LIBRARY_APPLICATION_ACTIVE_LAUNCH_OPTION_UPDATE: function (e) {
             let { applicationId: t, branchId: n, launchOptionId: r } = e;
             (O[(0, f.Tu)(t, n)] = r), v();
@@ -174,9 +174,9 @@ class M extends (r = u.ZP.Store) {
         },
         LIBRARY_APPLICATIONS_TEST_MODE_ENABLED: function (e) {
             let { libraryApplications: t } = e;
-            for (let e of t) S[(0, f.Tu)(e.id, e.branchId)] = e;
+            for (let e of t) g[(0, f.Tu)(e.id, e.branchId)] = e;
         },
         DEVELOPER_TEST_MODE_RESET: function () {
-            S = {};
+            g = {};
         }
     }));

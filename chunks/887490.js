@@ -21,7 +21,7 @@ n.d(t, {
         return c;
     },
     lP: function () {
-        return S;
+        return g;
     },
     q: function () {
         return _;
@@ -332,7 +332,7 @@ let c = {
             i = c.toDOMRange(e, n).getBoundingClientRect();
         return m(r, i) && m(i, r);
     },
-    g = (e, t, n, r) => {
+    S = (e, t, n, r) => {
         let i = {
                 anchor: t,
                 focus: t
@@ -371,7 +371,7 @@ let c = {
             }
         return n[o];
     },
-    S = {
+    g = {
         getLineStart(e, t, n) {
             let r;
             let i = c.getParentElement(e, t);
@@ -386,11 +386,11 @@ let c = {
                     focus: t
                 },
                 o = Array.from(c.positions(e, { at: s })),
-                l = g(e, t, o, !0);
+                l = S(e, t, o, !0);
             if (n && h.equals(t, l) && !h.isAtEnd(t, i)) {
                 let n = c.after(e, t);
                 if (null == n) return l;
-                l = g(e, n, o, !0);
+                l = S(e, n, o, !0);
             }
             return l;
         },
@@ -408,11 +408,11 @@ let c = {
                     focus: r
                 },
                 o = Array.from(c.positions(e, { at: s })),
-                l = g(e, t, o, !1);
+                l = S(e, t, o, !1);
             if (n && h.equals(t, l) && !h.isAtEnd(t, i)) {
                 let n = c.after(e, t);
                 if (null == n) return l;
-                l = g(e, n, o, !1);
+                l = S(e, n, o, !1);
             }
             return l;
         },
@@ -420,7 +420,7 @@ let c = {
             let n = p.toPoint(e.selection);
             if (null == n) return null;
             if (t) {
-                let t = S.getLineStart(e, n, !1);
+                let t = g.getLineStart(e, n, !1);
                 return null == t
                     ? null
                     : {
@@ -429,7 +429,7 @@ let c = {
                       };
             }
             {
-                let t = S.getLineEnd(e, n, !0);
+                let t = g.getLineEnd(e, n, !0);
                 return null == t
                     ? null
                     : {

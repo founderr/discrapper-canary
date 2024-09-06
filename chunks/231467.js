@@ -24,8 +24,8 @@ var r = n(735250),
     I = n(353093),
     m = n(169559),
     T = n(114487),
-    g = n(214715),
-    S = n(550271),
+    S = n(214715),
+    g = n(550271),
     A = n(686546),
     N = n(246364),
     O = n(937111),
@@ -33,8 +33,8 @@ var r = n(735250),
     v = n(271383),
     C = n(594174),
     y = n(778045),
-    L = n(207796),
-    D = n(355932),
+    D = n(207796),
+    L = n(355932),
     b = n(981631),
     M = n(308083),
     P = n(689938),
@@ -109,7 +109,7 @@ function G(e) {
         o = i.useCallback(
             (e) =>
                 (0, r.jsx)(
-                    g.Z,
+                    S.Z,
                     {
                         className: s()(U.thinTrait, { [U.selectedTrait]: a.has(e) }),
                         text: e,
@@ -119,7 +119,7 @@ function G(e) {
                 ),
             [a]
         );
-    return (0, r.jsx)(D.ZP, {
+    return (0, r.jsx)(L.ZP, {
         className: U.traitsContainer,
         items: t,
         renderItem: o,
@@ -172,7 +172,7 @@ function k(e) {
 }
 function B(e) {
     var t;
-    let { clan: n, bannerComponent: a, expanded: u, isMember: c = !1, traitsToHighlight: d, prioritizedGameIds: h, className: p, position: g, showBrandingFooter: N = !1, showFavoriteButton: O = !1, bannerUrl: R, onlyAnimateIconOnHover: v = !1, hasPendingJoinRequest: C = !1, atMaxMemberCapacity: D = !1 } = e,
+    let { clan: n, bannerComponent: a, expanded: u, isMember: c = !1, traitsToHighlight: d, prioritizedGameIds: h, className: p, position: S, showBrandingFooter: N = !1, showFavoriteButton: O = !1, bannerUrl: R, onlyAnimateIconOnHover: v = !1, hasPendingJoinRequest: C = !1, atMaxMemberCapacity: L = !1 } = e,
         {
             tag: b,
             badge: B,
@@ -185,20 +185,20 @@ function B(e) {
         [W, K] = i.useState(!1),
         z = i.useRef(null),
         [q, Q] = i.useState(!1),
-        X = (0, L.GN)((e) => e.savedGuildIds.includes(n.id), o.Z),
+        X = (0, D.GN)((e) => e.savedGuildIds.includes(n.id), o.Z),
         $ = (0, f.iN)('guild_card'),
         J = i.useCallback(
             (e) => {
                 e.stopPropagation(),
                     e.preventDefault(),
                     (0, E.j$)({
-                        position: g,
+                        position: S,
                         guildId: n.id,
                         isFavorited: !X
                     }),
-                    (0, L.qQ)(n.id, !X);
+                    (0, D.qQ)(n.id, !X);
             },
-            [n.id, X, g]
+            [n.id, X, S]
         ),
         ee = i.useCallback(() => {
             K(!0);
@@ -227,12 +227,12 @@ function B(e) {
     let eo = i.useCallback(
             (e) => () => {
                 (0, E.Gh)({
-                    position: g,
+                    position: S,
                     guildId: n.id,
                     feature: e
                 });
             },
-            [g, n.id]
+            [S, n.id]
         ),
         el = $ && (O || W || X);
     return (0, r.jsxs)('div', {
@@ -247,7 +247,7 @@ function B(e) {
                     ea,
                     (0, r.jsx)(k, {
                         hasPendingJoinRequest: C,
-                        atMaxMemberCapacity: D,
+                        atMaxMemberCapacity: L,
                         isGuildMember: c
                     }),
                     $ &&
@@ -308,7 +308,7 @@ function B(e) {
                                                     ...e,
                                                     className: U.clanTagChiplet,
                                                     children: [
-                                                        (0, r.jsx)(S.A, {
+                                                        (0, r.jsx)(g.A, {
                                                             width: 16,
                                                             height: 16,
                                                             badge: B.badgeKind,
@@ -414,20 +414,20 @@ function B(e) {
 t.ZP = function (e) {
     let { style: t, prioritizedGameIds: a, onVisibilityChange: s = () => {}, ...o } = e,
         { clan: _, affinity: p, index: I, position: m, source: T } = o,
-        g = (0, u.e7)([C.default], () => C.default.getCurrentUser()),
-        S = (0, u.e7)([v.ZP], () => v.ZP.isMember(_.id, null == g ? void 0 : g.id), [_, g]),
+        S = (0, u.e7)([C.default], () => C.default.getCurrentUser()),
+        g = (0, u.e7)([v.ZP], () => v.ZP.isMember(_.id, null == S ? void 0 : S.id), [_, S]),
         A = (0, u.e7)([O.Z], () => {
             var e;
             return (null === (e = O.Z.getRequest(_.id)) || void 0 === e ? void 0 : e.applicationStatus) === N.wB.SUBMITTED;
         }),
         y = (0, f.iN)('ClanGuildProfile'),
-        L = _.memberCount >= M.Du,
-        D = i.useRef(-1),
-        P = i.useCallback((e) => s(e, D), [s]),
+        D = _.memberCount >= M.Du,
+        L = i.useRef(-1),
+        P = i.useCallback((e) => s(e, L), [s]),
         w = (0, d.O)(P, 1);
     i.useEffect(
         () => () => {
-            null == s || s(!1, D);
+            null == s || s(!1, L);
         },
         [s]
     );
@@ -436,13 +436,13 @@ t.ZP = function (e) {
             if (
                 ((0, E.EK)({
                     guildId: _.id,
-                    isMember: S,
+                    isMember: g,
                     hasJoinRequest: e,
                     affinity: p,
                     index: I,
                     position: m
                 }),
-                S)
+                g)
             ) {
                 (0, R.XU)(_.id);
                 return;
@@ -462,7 +462,7 @@ t.ZP = function (e) {
                     a,
                     m
                 );
-        }, [_, S, p, I, m, y, T, a]),
+        }, [_, g, p, I, m, y, T, a]),
         G = i.useCallback(
             (e) => {
                 (0, c.jW)(e, async () => {
@@ -485,11 +485,11 @@ t.ZP = function (e) {
             onContextMenu: G,
             children: (0, r.jsx)(B, {
                 ...o,
-                isMember: S,
+                isMember: g,
                 prioritizedGameIds: a,
                 showBrandingFooter: !0,
                 hasPendingJoinRequest: A,
-                atMaxMemberCapacity: L
+                atMaxMemberCapacity: D
             })
         })
     });

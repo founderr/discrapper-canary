@@ -61,7 +61,7 @@ function T(e, t, n) {
     else if (!n.isRetry) return t(), !1;
     return !0;
 }
-function g(e, t, n, r, i) {
+function S(e, t, n, r, i) {
     var a, s;
     o.Z.dispatch({
         type: e,
@@ -74,7 +74,7 @@ function g(e, t, n, r, i) {
         reactionType: (null == i ? void 0 : i.burst) ? u.O.BURST : u.O.NORMAL
     });
 }
-function S(e) {
+function g(e) {
     let { channelId: t, messageId: n, emoji: r, userId: i, useTypeEndpoint: a = !1, type: s = u.O.NORMAL } = e,
         o = null != r.id ? ''.concat(r.name, ':').concat(r.id) : r.name;
     return null == i ? I.ANM.REACTIONS(t, n, o) : a ? I.ANM.REACTION_WITH_TYPE(t, n, o, i, s) : I.ANM.REACTION(t, n, o, i);
@@ -89,7 +89,7 @@ async function A(e) {
                       let i = null !== (r = n.id) && void 0 !== r ? r : n.name;
                       return I.ANM.POLL_ANSWER_VOTERS(e, t, i);
                   })(t, n, r)
-                : S({
+                : g({
                       channelId: t,
                       messageId: n,
                       emoji: r
@@ -137,14 +137,14 @@ async function N(e, t, n) {
     }
     let E = await y(n, o);
     return (
-        g('MESSAGE_REACTION_ADD', e, t, n, {
+        S('MESSAGE_REACTION_ADD', e, t, n, {
             burst: o,
             colors: E
         }),
         await c.Z.unarchiveThreadIfNecessary(e),
         a.tn
             .put({
-                url: S({
+                url: g({
                     channelId: e,
                     messageId: t,
                     emoji: n,
@@ -178,7 +178,7 @@ async function N(e, t, n) {
                             isRetry: !0
                         }),
                     { isRetry: d }
-                ) && (g('MESSAGE_REACTION_REMOVE', e, t, n, { burst: o }), o ? s.uv.announce(m.Z.Messages.BURST_REACTION_ADD_UNLIMITED_ERROR_A11Y.format({ name: n.name })) : s.uv.announce(m.Z.Messages.REACTION_ADD_ERROR_A11Y.format({ name: n.name })));
+                ) && (S('MESSAGE_REACTION_REMOVE', e, t, n, { burst: o }), o ? s.uv.announce(m.Z.Messages.BURST_REACTION_ADD_UNLIMITED_ERROR_A11Y.format({ name: n.name })) : s.uv.announce(m.Z.Messages.REACTION_ADD_ERROR_A11Y.format({ name: n.name })));
             })
     );
 }
@@ -221,14 +221,14 @@ async function C(e) {
     let { channelId: t, messageId: n, emoji: r, location: i = 'Message', userId: o, options: l } = e,
         d = null != l && !!l.burst,
         _ = null != l && !!l.isRetry;
-    g('MESSAGE_REACTION_REMOVE', t, n, r, {
+    S('MESSAGE_REACTION_REMOVE', t, n, r, {
         userId: o,
         burst: d
     }),
         await c.Z.unarchiveThreadIfNecessary(t),
         a.tn
             .del({
-                url: S({
+                url: g({
                     channelId: t,
                     messageId: n,
                     emoji: r,
@@ -265,7 +265,7 @@ async function C(e) {
                     )
                 ) {
                     let e = await y(r, d);
-                    g('MESSAGE_REACTION_ADD', t, n, r, {
+                    S('MESSAGE_REACTION_ADD', t, n, r, {
                         userId: o,
                         burst: d,
                         colors: e

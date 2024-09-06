@@ -1,12 +1,12 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return C;
     }
 });
 var i = n(735250);
 n(470079);
-var a = n(120356),
-    s = n.n(a),
+var s = n(120356),
+    a = n.n(s),
     l = n(180081),
     r = n(399606),
     o = n(481060),
@@ -14,24 +14,24 @@ var a = n(120356),
     u = n(446183),
     d = n(677281),
     h = n(765104),
-    p = n(477291),
-    m = n(531578),
+    m = n(477291),
+    p = n(531578),
     _ = n(959517),
     f = n(689938),
     E = n(774103);
-function C(e) {
+function g(e) {
     let { summary: t, channel: n } = e,
-        a = (0, r.e7)([h.Z], () => h.Z.summaryFeedback(t)),
-        s = (e, i) => {
+        s = (0, r.e7)([h.Z], () => h.Z.summaryFeedback(t)),
+        a = (e, i) => {
             e.stopPropagation(),
-                (0, p.Z)({
+                (0, m.Z)({
                     summary: t,
                     channel: n,
                     rating: i
                 });
         },
         c = (0, o.useTransition)(
-            null == a,
+            null == s,
             {
                 enter: {
                     from: { opacity: 0 },
@@ -62,7 +62,7 @@ function C(e) {
                                   children: f.Z.Messages.SUMMARY_FEEDBACK
                               }),
                               (0, i.jsx)(o.Clickable, {
-                                  onClick: (e) => s(e, m.aZ.GOOD),
+                                  onClick: (e) => a(e, p.aZ.GOOD),
                                   children: (0, i.jsx)(d.Z, {
                                       className: E.thumbIcon,
                                       width: 12,
@@ -70,7 +70,7 @@ function C(e) {
                                   })
                               }),
                               (0, i.jsx)(o.Clickable, {
-                                  onClick: (e) => s(e, m.aZ.BAD),
+                                  onClick: (e) => a(e, p.aZ.BAD),
                                   children: (0, i.jsx)(u.Z, {
                                       className: E.thumbIcon,
                                       width: 12,
@@ -84,16 +84,16 @@ function C(e) {
         )
     });
 }
-function g(e) {
+function C(e) {
     var t, n;
-    let a,
+    let s,
         { item: l, channel: u, index: d } = e,
-        p = (0, r.e7)([h.Z], () => h.Z.selectedSummary(u.id));
-    if (null == p) return null;
-    let m = null != l.unreadId,
+        m = (0, r.e7)([h.Z], () => h.Z.selectedSummary(u.id));
+    if (null == m) return null;
+    let p = null != l.unreadId,
         f = null != l.content;
     return (
-        (a = f
+        (s = f
             ? (0, i.jsxs)(i.Fragment, {
                   children: [
                       (0, i.jsx)(o.TopicsIcon, {
@@ -106,8 +106,8 @@ function g(e) {
               })
             : (0, i.jsxs)(i.Fragment, {
                   children: [
-                      (0, i.jsx)(C, {
-                          summary: p,
+                      (0, i.jsx)(g, {
+                          summary: m,
                           channel: u
                       }),
                       (0, i.jsx)(o.TopicsIcon, {
@@ -120,11 +120,11 @@ function g(e) {
         (0, i.jsx)(
             c.Z,
             {
-                className: s()(E.summaryDivider, f ? E.summaryDividerStart : E.summaryDividerEnd),
+                className: a()(E.summaryDivider, f ? E.summaryDividerStart : E.summaryDividerEnd),
                 contentClassName: f ? E.summaryStartContent : E.summaryEndContent,
-                isUnread: m,
-                id: m ? _.j1 : void 0,
-                children: a
+                isUnread: p,
+                id: p ? _.j1 : void 0,
+                children: s
             },
             'divider-'.concat(null !== (n = null !== (t = l.contentKey) && void 0 !== t ? t : l.unreadId) && void 0 !== n ? n : d)
         )

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return S;
     }
 }),
     n(47120);
@@ -21,35 +21,35 @@ var r = n(735250),
     I = n(689938),
     m = n(104010),
     T = n(609440);
-function g(e) {
-    let { user: t, guildId: n, setPopoutRef: g, channelId: S, messageId: A, roleId: N, onViewBlockedProfileClick: O, newAnalyticsLocations: R = [] } = e,
+function S(e) {
+    let { user: t, guildId: n, setPopoutRef: S, channelId: g, messageId: A, roleId: N, onViewBlockedProfileClick: O, newAnalyticsLocations: R = [] } = e,
         { analyticsLocations: v } = (0, l.ZP)([...R, o.Z.BLOCKED_PROFILE_POPOUT]),
         C = (0, c.ZB)({
             layout: 'BLOCKED_PROFILE_POPOUT',
             userId: t.id,
             guildId: n,
-            channelId: S,
+            channelId: g,
             messageId: A,
             roleId: N
         }),
         y = i.useRef(null),
-        L = (0, _.ZP)(t.id, n),
-        D = (0, a.e7)([u.ZP], () => (null != n ? u.ZP.getMember(n, t.id) : null));
+        D = (0, _.ZP)(t.id, n),
+        L = (0, a.e7)([u.ZP], () => (null != n ? u.ZP.getMember(n, t.id) : null));
     return (
         i.useEffect(() => {
-            null == g || g(null == y ? void 0 : y.current);
-        }, [y, g]),
+            null == S || S(null == y ? void 0 : y.current);
+        }, [y, S]),
         (0, r.jsx)(l.Gt, {
             value: v,
             children: (0, r.jsx)(c.Mt, {
                 value: C,
-                shouldTrackViewOnMount: null == D || null != D.fullProfileLoadedTimestamp,
+                shouldTrackViewOnMount: null == L || null != L.fullProfileLoadedTimestamp,
                 children: (0, r.jsx)(s.Dialog, {
                     ref: y,
                     'aria-label': t.username,
                     children: (0, r.jsx)(f.Z, {
                         user: t,
-                        displayProfile: L,
+                        displayProfile: D,
                         profileType: p.y0.BITE_SIZE,
                         children: (0, r.jsxs)('div', {
                             className: m.container,

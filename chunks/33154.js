@@ -11,35 +11,35 @@ var i,
     l = n(442837),
     r = n(481060),
     c = n(749210),
-    u = n(313201),
-    d = n(823379),
+    d = n(313201),
+    u = n(823379),
     h = n(41776),
     m = n(981631),
     p = n(689938),
-    g = n(358758);
+    f = n(358758);
 ((s = i || (i = {}))[(s.CHAT = 0)] = 'CHAT'), (s[(s.REACTIONS = 1)] = 'REACTIONS');
 t.Z = (e) => {
-    let { type: t, guild: i, closePopout: s, ctaRef: f } = e,
-        T = (0, u.Dt)(),
-        [_, v] = a.useState(!1),
-        b = (0, l.e7)([h.Z], () => h.Z.isLurking(i.id), [i.id]);
+    let { type: t, guild: i, closePopout: s, ctaRef: g } = e,
+        _ = (0, d.Dt)(),
+        [T, v] = a.useState(!1),
+        E = (0, l.e7)([h.Z], () => h.Z.isLurking(i.id), [i.id]);
     a.useEffect(() => {
-        _ && !b && s();
-    }, [_, b, s]);
-    let E = null,
+        T && !E && s();
+    }, [T, E, s]);
+    let b = null,
         I = p.Z.Messages.LURKER_MODE_POPOUT_UPSELL_BODY;
     switch (t) {
         case 0:
-            E = p.Z.Messages.LURKER_MODE_POPOUT_CHAT_HEADER;
+            b = p.Z.Messages.LURKER_MODE_POPOUT_CHAT_HEADER;
             break;
         case 1:
-            E = p.Z.Messages.LURKER_MODE_POPOUT_REACTIONS_HEADER;
+            b = p.Z.Messages.LURKER_MODE_POPOUT_REACTIONS_HEADER;
             break;
         default:
-            return (0, d.vE)(t);
+            return (0, u.vE)(t);
     }
-    if (null == E) return null;
-    let x = async () => {
+    if (null == b) return null;
+    let C = async () => {
         v(!0);
         try {
             await c.Z.joinGuild(i.id, { source: m.vtS.CHAT_INPUT_BLOCKER }), s();
@@ -48,21 +48,21 @@ t.Z = (e) => {
         }
     };
     return (0, o.jsxs)(r.Dialog, {
-        className: g.container,
-        'aria-labelledby': T,
+        className: f.container,
+        'aria-labelledby': _,
         children: [
             (0, o.jsx)('img', {
                 alt: '',
-                className: g.image,
+                className: f.image,
                 src: n(64395)
             }),
             (0, o.jsxs)('div', {
-                className: g.content,
+                className: f.content,
                 children: [
                     (0, o.jsx)(r.Heading, {
                         variant: 'heading-md/semibold',
-                        id: T,
-                        children: E
+                        id: _,
+                        children: b
                     }),
                     (0, o.jsx)(r.Text, {
                         color: 'header-secondary',
@@ -70,18 +70,18 @@ t.Z = (e) => {
                         children: I
                     }),
                     (0, o.jsxs)('div', {
-                        className: g.buttonContainer,
+                        className: f.buttonContainer,
                         children: [
                             (0, o.jsx)(r.Button, {
-                                buttonRef: f,
-                                onClick: x,
-                                submitting: _,
+                                buttonRef: g,
+                                onClick: C,
+                                submitting: T,
                                 children: p.Z.Messages.LURKER_MODE_POPOUT_JOIN
                             }),
                             (0, o.jsx)(r.Button, {
                                 onClick: s,
                                 look: r.Button.Looks.BLANK,
-                                className: g.cancel,
+                                className: f.cancel,
                                 children: p.Z.Messages.LURKER_MODE_POPOUT_CANCEL
                             })
                         ]

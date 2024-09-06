@@ -50,7 +50,7 @@ function T(e) {
     return I(e) || m(e);
 }
 ((i = r || (r = {})).EMBED = 'embed'), (i.ATTACHMENT = 'attachment');
-function g(e) {
+function S(e) {
     return (function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l.x4.getSetting();
         if (!t) return [];
@@ -88,7 +88,7 @@ function g(e) {
                   .filter(E.lm);
     })(e, l.x4.useSetting());
 }
-function S(e, t) {
+function g(e, t) {
     let n = l.RS.useSetting(),
         r = l.NA.useSetting();
     if (null == e) return [];
@@ -130,18 +130,18 @@ function A(e, t) {
     }, [t, r]);
 }
 function N(e, t) {
-    let n = g(e);
-    return [...n, ...S(e, t)];
+    let n = S(e);
+    return [...n, ...g(e, t)];
 }
 function O(e, t) {
     var n, r;
-    let i = g(e),
-        a = S(e, t);
+    let i = S(e),
+        a = g(e, t);
     return null !== (r = null !== (n = i[0]) && void 0 !== n ? n : a[0]) && void 0 !== r ? r : null;
 }
 function R(e, t) {
-    let n = g(e),
-        r = S(e, t);
+    let n = S(e),
+        r = g(e, t);
     return null == n[0] && null != r[0];
 }
 function v(e, t) {

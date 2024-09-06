@@ -1,157 +1,157 @@
 n.d(t, {
     P: function () {
-        return P;
+        return j;
     }
 });
-var r = n(735250),
-    i = n(470079),
+var i = n(735250),
+    s = n(470079),
     a = n(120356),
-    s = n.n(a),
-    o = n(442837),
-    l = n(481060),
-    u = n(620662),
-    c = n(841784),
+    l = n.n(a),
+    r = n(442837),
+    o = n(481060),
+    c = n(620662),
+    u = n(841784),
     d = n(387903),
-    _ = n(850827),
-    E = n(812206),
-    f = n(202458),
-    h = n(220779),
-    p = n(142550),
-    I = n(954017),
-    m = n(314091),
-    T = n(159244),
-    g = n(574176),
-    S = n(952164),
-    A = n(199902),
-    N = n(592125),
-    O = n(430824),
-    R = n(496675),
-    v = n(979651),
-    C = n(626135),
-    y = n(153066),
-    L = n(981631),
-    D = n(689938),
-    b = n(71851);
-function M(e) {
-    let { type: t, source: n, activity: i, applicationStream: a, user: s, guildId: o, channelId: u, onAction: d, isEmbedded: E = (0, c.Z)(i), actionColor: f } = e;
-    return (0, r.jsx)(_.Z, {
-        className: (0, y.l)(b, 'actions', t),
+    h = n(850827),
+    m = n(812206),
+    p = n(202458),
+    _ = n(220779),
+    f = n(142550),
+    E = n(954017),
+    g = n(314091),
+    C = n(159244),
+    I = n(574176),
+    x = n(952164),
+    T = n(199902),
+    S = n(592125),
+    v = n(430824),
+    N = n(496675),
+    A = n(979651),
+    Z = n(626135),
+    M = n(153066),
+    b = n(981631),
+    R = n(689938),
+    L = n(71851);
+function P(e) {
+    let { type: t, source: n, activity: s, applicationStream: a, user: l, guildId: r, channelId: c, onAction: d, isEmbedded: m = (0, u.Z)(s), actionColor: p } = e;
+    return (0, i.jsx)(h.Z, {
+        className: (0, M.l)(L, 'actions', t),
         type: t,
         source: n,
-        activity: i,
+        activity: s,
         applicationStream: a,
-        user: s,
-        guildId: o,
-        look: l.Button.Looks.FILLED,
-        color: null != f ? f : l.Button.Colors.PRIMARY,
-        channelId: u,
+        user: l,
+        guildId: r,
+        look: o.Button.Looks.FILLED,
+        color: null != p ? p : o.Button.Colors.PRIMARY,
+        channelId: c,
         onAction: d,
-        isEmbedded: E
+        isEmbedded: m
     });
 }
-let P = d.Z.Types;
+let j = d.Z.Types;
 t.Z = function (e) {
-    let { activity: t, user: n, useStoreStream: a = !0, showActions: l = !0, hideHeader: c = !1, showChannelDetails: _ = !1, analyticsParams: y, ...P } = e,
-        U = (0, o.e7)([v.Z, N.Z], () => {
+    let { activity: t, user: n, useStoreStream: a = !0, showActions: o = !0, hideHeader: u = !1, showChannelDetails: h = !1, analyticsParams: M, ...j } = e,
+        O = (0, r.e7)([A.Z, S.Z], () => {
             var e;
-            return N.Z.getChannel(null === (e = v.Z.getVoiceStateForUser(n.id)) || void 0 === e ? void 0 : e.channelId);
+            return S.Z.getChannel(null === (e = A.Z.getVoiceStateForUser(n.id)) || void 0 === e ? void 0 : e.channelId);
         }),
-        { enableHangStatus: w } = g.n.useExperiment(
+        { enableHangStatus: y } = I.n.useExperiment(
             {
-                guildId: null == U ? void 0 : U.guild_id,
+                guildId: null == O ? void 0 : O.guild_id,
                 location: 'UserActivityContainer'
             },
             { autoTrackExposure: !1 }
         ),
-        x = (0, o.e7)([A.Z], () => (a ? A.Z.getAnyStreamForUser(n.id) : null)),
-        G = w && R.Z.can(L.Plq.CONNECT, U),
-        k = (null == t ? void 0 : t.type) === L.IIU.HANG_STATUS && G ? U : null,
-        B = (0, o.e7)([O.Z, v.Z, N.Z], () => {
-            var e, r;
-            return (0, u.Z)(t, L.xjy.EMBEDDED) ? O.Z.getGuild(null === (e = N.Z.getChannel(null === (r = v.Z.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) || void 0 === r ? void 0 : r.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null != k ? O.Z.getGuild(k.getGuildId()) : null;
+        D = (0, r.e7)([T.Z], () => (a ? T.Z.getAnyStreamForUser(n.id) : null)),
+        k = y && N.Z.can(b.Plq.CONNECT, O),
+        U = (null == t ? void 0 : t.type) === b.IIU.HANG_STATUS && k ? O : null,
+        w = (0, r.e7)([v.Z, A.Z, S.Z], () => {
+            var e, i;
+            return (0, c.Z)(t, b.xjy.EMBEDDED) ? v.Z.getGuild(null === (e = S.Z.getChannel(null === (i = A.Z.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) || void 0 === i ? void 0 : i.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null != U ? v.Z.getGuild(U.getGuildId()) : null;
         }),
-        F = (0, o.e7)([O.Z], () => (null != x ? O.Z.getGuild(x.guildId) : null)),
-        V = (0, o.e7)([E.Z], () => {
-            if (null != t) return null != t.application_id ? E.Z.getApplication(t.application_id) : E.Z.getApplicationByName(t.name);
+        B = (0, r.e7)([v.Z], () => (null != D ? v.Z.getGuild(D.guildId) : null)),
+        H = (0, r.e7)([m.Z], () => {
+            if (null != t) return null != t.application_id ? m.Z.getApplication(t.application_id) : m.Z.getApplicationByName(t.name);
             return null;
         }),
-        H = (0, f.Z)(),
-        Z = (0, T.Z)(n),
-        Y = H && null != t && Z;
-    return (i.useEffect(() => {
-        (null == t ? void 0 : t.type) === L.IIU.HANG_STATUS &&
-            G &&
-            C.default.track(L.rMx.VIEW_HANG_STATUS, {
+        G = (0, p.Z)(),
+        V = (0, C.Z)(n),
+        F = G && null != t && V;
+    return (s.useEffect(() => {
+        (null == t ? void 0 : t.type) === b.IIU.HANG_STATUS &&
+            k &&
+            Z.default.track(b.rMx.VIEW_HANG_STATUS, {
                 source: 'UserProfilePopout',
-                guild_id: null == k ? void 0 : k.guild_id,
-                channel_id: null == k ? void 0 : k.id
+                guild_id: null == U ? void 0 : U.guild_id,
+                channel_id: null == U ? void 0 : U.id
             });
-    }, [null == t ? void 0 : t.type, G, k]),
-    (null == t ? void 0 : t.type) !== L.IIU.HANG_STATUS || G)
-        ? (0, r.jsx)(d.Z, {
-              ...P,
+    }, [null == t ? void 0 : t.type, k, U]),
+    (null == t ? void 0 : t.type) !== b.IIU.HANG_STATUS || k)
+        ? (0, i.jsx)(d.Z, {
+              ...j,
               activity: t,
               user: n,
-              application: V,
-              hideHeader: c,
-              activityGuild: null != B ? B : F,
-              showReactions: Y,
-              showChannelDetails: _,
-              channel: _ ? U : void 0,
-              renderActions: l
+              application: H,
+              hideHeader: u,
+              activityGuild: null != w ? w : B,
+              showReactions: F,
+              showChannelDetails: h,
+              channel: h ? O : void 0,
+              renderActions: o
                   ? () =>
-                        (0, r.jsxs)('div', {
-                            className: s()(Y && b.actionsWrapper),
+                        (0, i.jsxs)('div', {
+                            className: l()(F && L.actionsWrapper),
                             children: [
-                                (0, r.jsx)(M, {
-                                    ...P,
-                                    applicationStream: x,
+                                (0, i.jsx)(P, {
+                                    ...j,
+                                    applicationStream: D,
                                     activity: t,
                                     user: n
                                 }),
-                                Y &&
-                                    (0, r.jsx)(h.ZP, {
+                                F &&
+                                    (0, i.jsx)(_.ZP, {
                                         showReact: !0,
                                         showReply: !0,
                                         popoutProps: {
-                                            replyHeaderText: D.Z.Messages.ACTIVITY_REACTION_REPLY_TITLE.format({ activity: t.name }),
-                                            replyPlaceholder: D.Z.Messages.TEXTAREA_PLACEHOLDER.format({ channel: '@'.concat(n.globalName) })
+                                            replyHeaderText: R.Z.Messages.ACTIVITY_REACTION_REPLY_TITLE.format({ activity: t.name }),
+                                            replyPlaceholder: R.Z.Messages.TEXTAREA_PLACEHOLDER.format({ channel: '@'.concat(n.globalName) })
                                         },
                                         onInteraction: (e) => {
-                                            let { interactionType: r, emoji: i, reply: a } = e;
-                                            C.default.track(L.rMx.ACTIVITY_REACTOR_INTERACTED, {
+                                            let { interactionType: i, emoji: s, reply: a } = e;
+                                            Z.default.track(b.rMx.ACTIVITY_REACTOR_INTERACTED, {
                                                 application_id: t.application_id,
-                                                interaction_type: r,
-                                                ...y
+                                                interaction_type: i,
+                                                ...M
                                             }),
-                                                r === p.L.ReactSubmit &&
-                                                    null != i &&
-                                                    (0, I.sendReactionToActivity)({
-                                                        reaction: i,
+                                                i === f.L.ReactSubmit &&
+                                                    null != s &&
+                                                    (0, E.sendReactionToActivity)({
+                                                        reaction: s,
                                                         user: n,
                                                         activity: t,
-                                                        application: V,
-                                                        altText: (0, m.xC)(n, t),
-                                                        stream: x
+                                                        application: H,
+                                                        altText: (0, g.xC)(n, t),
+                                                        stream: D
                                                     }),
-                                                r === p.L.ReplySubmit &&
+                                                i === f.L.ReplySubmit &&
                                                     null != a &&
-                                                    (0, I.sendReplyToActivity)({
+                                                    (0, E.sendReplyToActivity)({
                                                         reply: a,
                                                         user: n,
                                                         activity: t,
-                                                        application: V,
-                                                        altText: (0, m.xC)(n, t),
-                                                        stream: x
+                                                        application: H,
+                                                        altText: (0, g.xC)(n, t),
+                                                        stream: D
                                                     });
                                         }
                                     })
                             ]
                         })
                   : null,
-              onOpenSpotifyTrack: S.aG,
-              onOpenSpotifyArtist: S.d$,
-              onOpenSpotifyAlbum: S.Z5
+              onOpenSpotifyTrack: x.aG,
+              onOpenSpotifyArtist: x.d$,
+              onOpenSpotifyAlbum: x.Z5
           })
         : null;
 };

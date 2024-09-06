@@ -6,10 +6,10 @@ n.d(t, {
         return O;
     },
     G7: function () {
-        return g;
+        return S;
     },
     K5: function () {
-        return S;
+        return g;
     },
     Ue: function () {
         return T;
@@ -48,10 +48,10 @@ n.d(t, {
                     query: t,
                     categoryId: i
                 });
-            let g = Object.assign({}, m, n.filters),
-                S = Object.keys(g).map((e) => ''.concat(e).concat(g[e]));
-            i !== h.Hk && S.push('(primary_category_id='.concat(i, ' OR categories.id=').concat(i, ')'));
-            let A = S.join(' AND ');
+            let S = Object.assign({}, m, n.filters),
+                g = Object.keys(S).map((e) => ''.concat(e).concat(S[e]));
+            i !== h.Hk && g.push('(primary_category_id='.concat(i, ' OR categories.id=').concat(i, ')'));
+            let A = g.join(' AND ');
             try {
                 let s = T.search(t, {
                         filters: A,
@@ -154,7 +154,7 @@ function T() {
         })
     );
 }
-function g(e, t) {
+function S(e, t) {
     let n = c.ZP.getSearchIndex();
     if (null == n) return;
     let r = Object.assign({}, m, t),
@@ -190,7 +190,7 @@ function g(e, t) {
         });
     }
 }
-async function S(e) {
+async function g(e) {
     l.Z.dispatch({
         type: 'GUILD_DISCOVERY_POPULAR_FETCH_START',
         categoryId: e

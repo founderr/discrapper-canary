@@ -421,8 +421,8 @@ class I {
     loadComplete(e) {
         var t, n, r, o, l, c, d, E, p, I, m;
         let T = [...e.newMessages],
-            g = null !== (t = e.isBefore) && void 0 !== t && t,
-            S = null !== (n = e.isAfter) && void 0 !== n && n,
+            S = null !== (t = e.isBefore) && void 0 !== t && t,
+            g = null !== (n = e.isAfter) && void 0 !== n && n,
             A = null !== (r = e.jump) && void 0 !== r ? r : null,
             N = null !== (o = e.hasMoreBefore) && void 0 !== o && o,
             O = null !== (l = e.hasMoreAfter) && void 0 !== l && l,
@@ -432,12 +432,12 @@ class I {
                 .map(a.Z.getCurrentConfig({ location: '2ecb25_2' }, { autoTrackExposure: !1 }).enabled ? (e) => (0, u.e5)(e) : (e) => h(this, e))
                 .value(),
             C = null;
-        if ((g || S) && null == A && this.ready) C = this.merge(v, g, !0);
+        if ((S || g) && null == A && this.ready) C = this.merge(v, S, !0);
         else {
             let e = this._array.filter((e) => e.state === _.yb.SENDING),
                 t = this._array.filter((e) => e.state === _.yb.SEND_FAILED),
                 n = e.length > 0 || t.length > 0;
-            (C = this.reset(v)), !n || g || S || (null == A ? void 0 : A.messageId) != null || (null == A ? void 0 : A.offset) != null ? f.info('loadComplete: resetting state for channelId='.concat(this.channelId, ', sending.length=').concat(e.length)) : (t.length > 0 && (f.info('loadComplete: merging with SEND_FAILED messages for channelId='.concat(this.channelId)), (C = C.merge(t))), e.length > 0 && (f.info('loadComplete: merging with SENDING messages for channelId='.concat(this.channelId)), (C = C.merge(e))));
+            (C = this.reset(v)), !n || S || g || (null == A ? void 0 : A.messageId) != null || (null == A ? void 0 : A.offset) != null ? f.info('loadComplete: resetting state for channelId='.concat(this.channelId, ', sending.length=').concat(e.length)) : (t.length > 0 && (f.info('loadComplete: merging with SEND_FAILED messages for channelId='.concat(this.channelId)), (C = C.merge(t))), e.length > 0 && (f.info('loadComplete: merging with SENDING messages for channelId='.concat(this.channelId)), (C = C.merge(e))));
         }
         return (C = C.mutate({
             ready: !0,
@@ -450,8 +450,8 @@ class I {
             jumpTargetOffset: null != A && null != A.messageId && null != A.offset ? A.offset : 0,
             jumpSequenceId: null != A ? C.jumpSequenceId + 1 : C.jumpSequenceId,
             jumpReturnTargetId: null !== (m = null == A ? void 0 : A.returnMessageId) && void 0 !== m ? m : null,
-            hasMoreBefore: null == A && S ? C.hasMoreBefore : N,
-            hasMoreAfter: null == A && g ? C.hasMoreAfter : O,
+            hasMoreBefore: null == A && g ? C.hasMoreBefore : N,
+            hasMoreAfter: null == A && S ? C.hasMoreAfter : O,
             cached: R,
             hasFetched: e.hasFetched,
             error: !1

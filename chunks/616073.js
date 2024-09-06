@@ -12,13 +12,13 @@ n.d(t, {
         return R;
     },
     aQ: function () {
-        return S;
+        return g;
     },
     bU: function () {
         return I;
     },
     qb: function () {
-        return g;
+        return S;
     }
 });
 var r = n(470079),
@@ -88,12 +88,12 @@ function T(e, t) {
     let r;
     return (t && (0, a.J).getGlobalDictionaryForPackage(t)) || ((n = e), !(r = m.get(n)) && ((r = new a.J(n)), m.set(n, r)), r);
 }
-function g(e, t) {
+function S(e, t) {
     let { locale: n } = I(),
         i = T(e, t);
     return (0, r.useMemo)(() => new a.E(n, i), [n, i]);
 }
-function S(e) {
+function g(e) {
     e = (0, o.vE)(null != e ? e : {}, A);
     let { locale: t } = I();
     return (0, r.useMemo)(() => new s.CN(t, e), [t, e]);

@@ -1,79 +1,79 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
         return m;
     }
 });
-var a = t(735250);
-t(470079);
-var l = t(481060),
-    i = t(239091),
-    r = t(299206),
-    s = t(810568),
-    o = t(168524),
-    u = t(725119),
-    c = t(26033),
-    d = t(689938),
-    _ = t(243113);
+var l = n(735250);
+n(470079);
+var a = n(481060),
+    i = n(239091),
+    r = n(299206),
+    s = n(810568),
+    o = n(168524),
+    u = n(725119),
+    c = n(26033),
+    d = n(689938),
+    h = n(243113);
 function m(e) {
-    var n;
-    let { user: t, guildId: m, channel: E, entry: T, onSelect: h, disableGameProfileLinks: x } = e,
-        I = (0, u.Z)({
-            userId: t.id,
+    var t;
+    let { user: n, guildId: m, channel: x, entry: E, onSelect: _, disableGameProfileLinks: p } = e,
+        v = (0, u.Z)({
+            userId: n.id,
             guildId: m,
-            channelId: null == E ? void 0 : E.id
+            channelId: null == x ? void 0 : x.id
         }),
-        N = (0, r.Z)({
-            id: t.id,
+        T = (0, r.Z)({
+            id: n.id,
             label: d.Z.Messages.COPY_ID_USER
         }),
-        p = (0, c.dX)(T),
-        C = (0, o.Z)({
+        f = (0, c.dX)(E),
+        g = (0, o.Z)({
             location: 'ContentPopoutContextMenu',
-            applicationId: p && !0 !== x ? (null === (n = T.extra) || void 0 === n ? void 0 : n.application_id) : void 0,
+            applicationId: f && !0 !== p ? (null === (t = E.extra) || void 0 === t ? void 0 : t.application_id) : void 0,
             source: s.m1.ActivityCardContextMenu,
             trackEntryPointImpression: !0,
-            sourceUserId: T.author_id
+            sourceUserId: E.author_id
         });
-    return (0, a.jsx)(l.Popout, {
+    return (0, l.jsx)(a.Popout, {
         align: 'top',
         position: 'right',
         disablePointerEvents: !1,
         renderPopout: (e) => {
-            let { closePopout: n } = e;
-            return (0, a.jsx)(l.Menu, {
+            let { closePopout: t } = e;
+            return (0, l.jsx)(a.Menu, {
                 navId: 'content-inventory-context',
                 onClose: () => {
-                    (0, i.Zy)(), n();
+                    (0, i.Zy)(), t();
                 },
                 'aria-label': d.Z.Messages.USER_ACTIONS_MENU_LABEL,
-                onSelect: h,
-                children: (0, a.jsxs)(a.Fragment, {
+                onSelect: _,
+                children: (0, l.jsxs)(l.Fragment, {
                     children: [
-                        (0, a.jsxs)(l.MenuGroup, {
+                        (0, l.jsxs)(a.MenuGroup, {
                             children: [
-                                I,
-                                null != C &&
-                                    (0, a.jsx)(l.MenuItem, {
+                                v,
+                                null != g &&
+                                    (0, l.jsx)(a.MenuItem, {
                                         id: 'game-profile',
                                         label: d.Z.Messages.GAME_PROFILE,
-                                        action: C
+                                        action: g
                                     })
                             ]
                         }),
-                        (0, a.jsx)(l.MenuGroup, { children: N })
+                        (0, l.jsx)(a.MenuGroup, { children: T })
                     ]
                 })
             });
         },
         children: (e) =>
-            (0, a.jsx)(l.Tooltip, {
+            (0, l.jsx)(a.Tooltip, {
                 text: d.Z.Messages.MORE,
-                children: (n) =>
-                    (0, a.jsx)(l.Clickable, {
-                        ...n,
-                        className: _.menuIcon,
+                children: (t) =>
+                    (0, l.jsx)(a.Clickable, {
+                        ...t,
+                        className: h.menuIcon,
                         ...e,
-                        children: (0, a.jsx)(l.MoreHorizontalIcon, {
+                        children: (0, l.jsx)(a.MoreHorizontalIcon, {
                             color: 'currentColor',
                             size: 'custom',
                             width: 16,

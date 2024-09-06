@@ -1,6 +1,6 @@
 n.d(t, {
     i: function () {
-        return g;
+        return S;
     }
 }),
     n(724458),
@@ -85,7 +85,7 @@ function T(e) {
         })(e)
     };
 }
-class g extends (i = o.PureComponent) {
+class S extends (i = o.PureComponent) {
     static getDerivedStateFromProps(e, t) {
         return e.initialValue !== t.initialValueProp
             ? {
@@ -104,7 +104,7 @@ class g extends (i = o.PureComponent) {
     render() {
         var e;
         let { value: t, active: n, focused: r, sortedMarkers: i, markerPositions: a, closestMarkerIndex: o, newClosestIndex: l, min: c, max: d } = this.state,
-            { disabled: _, stickToMarkers: I, className: m, children: T, barStyles: g, fillStyles: S, mini: A, hideBubble: N, defaultValue: O, orientation: R, onValueRender: v, renderMarker: C, getAriaValueText: y, barClassName: L, grabberClassName: D, grabberStyles: b = {}, markerPosition: M = 0, 'aria-hidden': P, 'aria-label': U, 'aria-labelledby': w, 'aria-describedby': x } = this.props,
+            { disabled: _, stickToMarkers: I, className: m, children: T, barStyles: S, fillStyles: g, mini: A, hideBubble: N, defaultValue: O, orientation: R, onValueRender: v, renderMarker: C, getAriaValueText: y, barClassName: D, grabberClassName: L, grabberStyles: b = {}, markerPosition: M = 0, 'aria-hidden': P, 'aria-label': U, 'aria-labelledby': w, 'aria-describedby': x } = this.props,
             G = 0;
         I ? null != a && (null != l ? (G = a[l]) : null != o && (G = a[o])) : (G = this.scaleValue(t));
         let k = ''.concat(G, '%'),
@@ -173,12 +173,12 @@ class g extends (i = o.PureComponent) {
                         children: B
                     }),
                     (0, s.jsx)('div', {
-                        className: u()(p.bar, L),
-                        style: g,
+                        className: u()(p.bar, D),
+                        style: S,
                         children: (0, s.jsx)('div', {
                             className: p.barFill,
                             style: {
-                                ...S,
+                                ...g,
                                 width: k
                             }
                         })
@@ -194,7 +194,7 @@ class g extends (i = o.PureComponent) {
                             children: (e) =>
                                 (0, s.jsx)('div', {
                                     ...e,
-                                    className: u()(p.grabber, D),
+                                    className: u()(p.grabber, L),
                                     style: {
                                         ...b,
                                         left: k
@@ -354,7 +354,7 @@ class g extends (i = o.PureComponent) {
             });
     }
 }
-I(g, 'defaultProps', {
+I(S, 'defaultProps', {
     initialValue: 10,
     minValue: 0,
     maxValue: 100,

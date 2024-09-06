@@ -1,6 +1,6 @@
 n.d(t, {
     An: function () {
-        return g;
+        return S;
     },
     C3: function () {
         return m;
@@ -12,7 +12,7 @@ n.d(t, {
         return T;
     },
     YH: function () {
-        return L;
+        return D;
     },
     iN: function () {
         return _;
@@ -215,7 +215,7 @@ function T(e) {
         includeConverted: r
     });
 }
-function g(e) {
+function S(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
         r = f.useExperiment({ location: t }, { autoTrackExposure: n });
     return p({
@@ -223,7 +223,7 @@ function g(e) {
         genshinConfig: h.useExperiment({ location: t }, { autoTrackExposure: n })
     });
 }
-let S = (0, a.B)({
+let g = (0, a.B)({
         kind: 'user',
         id: '2024-05_clans_valorant_pilot',
         label: 'Clans Valorant Pilot',
@@ -264,7 +264,7 @@ let S = (0, a.B)({
 function N(e) {
     var t, n;
     let r = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        i = S.useExperiment({ location: e }, { autoTrackExposure: r }),
+        i = g.useExperiment({ location: e }, { autoTrackExposure: r }),
         a = A.useExperiment({ location: e }, { autoTrackExposure: r }),
         s = _(e, r);
     return {
@@ -334,6 +334,6 @@ let y = (0, a.B)({
         }
     ]
 });
-function L(e) {
+function D(e) {
     return y.useExperiment({ location: e }).canAdminsBrowse;
 }

@@ -38,16 +38,16 @@ let h = ['http:', 'https:', 'discord:'],
     I = [...p, d.b.EMOJI, d.b.CUSTOM_EMOJI],
     m = [d.b.LIST, d.b.HEADING, d.b.BLOCK_QUOTE, d.b.SUBTEXT],
     T = [d.b.TEXT],
-    g = [d.b.UNDERLINE, d.b.STRONG, d.b.ITALICS, d.b.STRIKETHROUGH, d.b.INLINE_CODE, d.b.SPOILER, d.b.LINE_BREAK, d.b.TIMESTAMP, d.b.EMOJI, d.b.CUSTOM_EMOJI, d.b.LIST, d.b.HEADING, d.b.BLOCK_QUOTE, d.b.SUBTEXT];
-function S(e, t) {
+    S = [d.b.UNDERLINE, d.b.STRONG, d.b.ITALICS, d.b.STRIKETHROUGH, d.b.INLINE_CODE, d.b.SPOILER, d.b.LINE_BREAK, d.b.TIMESTAMP, d.b.EMOJI, d.b.CUSTOM_EMOJI, d.b.LIST, d.b.HEADING, d.b.BLOCK_QUOTE, d.b.SUBTEXT];
+function g(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
     for (let r of (!Array.isArray(e) && (e = [e]), e)) {
         if (void 0 === r || !t.includes(r.type)) return null;
         if (r.type === d.b.INLINE_CODE) {
             let e = [...t, ...n];
-            if (null == S(r.validationChildContent, e)) return null;
+            if (null == g(r.validationChildContent, e)) return null;
         }
-        if (Array.isArray(r.content) && null == S(r.content, t)) return null;
+        if (Array.isArray(r.content) && null == g(r.content, t)) return null;
     }
     return e;
 }
@@ -87,18 +87,18 @@ t.ZP = {
             C = R.trim();
         if (0 === O.trim().length || 0 === C.length) return _();
         let y = A(l().unescapeUrl(s)),
-            L = (0, u.ZP)(a).length > 0 || (0, u.ZP)(o).length > 0;
-        if (null == y || L) return _();
-        let D = {
+            D = (0, u.ZP)(a).length > 0 || (0, u.ZP)(o).length > 0;
+        if (null == y || D) return _();
+        let L = {
                 ...n,
                 allowEscape: !1,
                 parseInlineCodeChildContent: !0
             },
             b = n.allowEmojiLinks ? I : p,
             M = [...b, ...m],
-            P = [...T, ...g],
-            U = S(t(R, D), M, [d.b.EMOJI]),
-            w = S(t(v, D), P);
+            P = [...T, ...S],
+            U = g(t(R, L), M, [d.b.EMOJI]),
+            w = g(t(v, L), P);
         if (
             null == U ||
             null == w ||
@@ -144,7 +144,7 @@ t.ZP = {
         )
             return _();
         let x = i().pick(t.rules, b),
-            G = l().parserFor(x)(h.whitespaceSanitized, D),
+            G = l().parserFor(x)(h.whitespaceSanitized, L),
             k = N.whitespaceSanitized,
             { target: B } = y;
         return {

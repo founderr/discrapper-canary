@@ -71,7 +71,7 @@ var p = /^(matrix|translate|scale|rotate|skew)/,
     T = function (e, t) {
         return c.is.num(e) && 0 !== e ? e + t : e;
     },
-    g = function e(t, n) {
+    S = function e(t, n) {
         return c.is.arr(t)
             ? t.every(function (t) {
                   return e(t, n);
@@ -80,7 +80,7 @@ var p = /^(matrix|translate|scale|rotate|skew)/,
               ? t === n
               : parseFloat(t) === n;
     },
-    S = (function (e) {
+    g = (function (e) {
         function t(t) {
             var n = t.x,
                 r = t.y,
@@ -100,7 +100,7 @@ var p = /^(matrix|translate|scale|rotate|skew)/,
                                     })
                                     .join(',') +
                                 ')',
-                            g(e, 0)
+                            S(e, 0)
                         ];
                     })),
                 c.each(s, function (e, t) {
@@ -120,7 +120,7 @@ var p = /^(matrix|translate|scale|rotate|skew)/,
                                               r = e[1],
                                               i = e[2],
                                               a = e[3];
-                                          return ['rotate3d(' + t + ',' + r + ',' + i + ',' + T(a, n) + ')', g(a, 0)];
+                                          return ['rotate3d(' + t + ',' + r + ',' + i + ',' + T(a, n) + ')', S(a, 0)];
                                       }
                                     : function (e) {
                                           return [
@@ -132,7 +132,7 @@ var p = /^(matrix|translate|scale|rotate|skew)/,
                                                       })
                                                       .join(',') +
                                                   ')',
-                                              g(e, t.startsWith('scale') ? 1 : 0)
+                                              S(e, t.startsWith('scale') ? 1 : 0)
                                           ];
                                       }
                             );
@@ -240,7 +240,7 @@ var N = u.createHost(['a', 'abbr', 'address', 'area', 'article', 'aside', 'audio
         });
     },
     createAnimatedStyle: function (e) {
-        return new S(e);
+        return new g(e);
     },
     getComponentProps: function (e) {
         return e.scrollTop, e.scrollLeft, i(e, ['scrollTop', 'scrollLeft']);

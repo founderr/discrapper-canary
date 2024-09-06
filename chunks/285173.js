@@ -11,15 +11,15 @@ var s = E(735250),
 function A(e) {
     var _;
     let { guildId: E, role: A, className: r, canRemove: a = !1, onRemove: N = t.dG } = e,
-        l = (0, I.useToken)(I.tokens.unsafe_rawColors.PRIMARY_300).hex(),
-        L = null !== (_ = null == A ? void 0 : A.colorString) && void 0 !== _ ? _ : l,
-        S = T.useMemo(() => ({ backgroundColor: ''.concat(L, '27') }), [L]);
+        S = (0, I.useToken)(I.tokens.unsafe_rawColors.PRIMARY_300).hex(),
+        l = null !== (_ = null == A ? void 0 : A.colorString) && void 0 !== _ ? _ : S,
+        D = T.useMemo(() => ({ backgroundColor: ''.concat(l, '27') }), [l]);
     return null == A
         ? null
         : (0, s.jsx)(I.Clickable, {
               children: (0, s.jsx)(n.UB, {
                   className: r,
-                  style: S,
+                  style: D,
                   role: A,
                   guildId: E,
                   canRemove: a,

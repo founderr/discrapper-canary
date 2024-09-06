@@ -21,8 +21,8 @@ var r = n(735250),
     I = n(785717),
     m = n(481046),
     T = n(277085),
-    g = n(228168),
-    S = n(689938),
+    S = n(228168),
+    g = n(689938),
     A = n(576062);
 let N = 'text-sm/medium',
     O = 36,
@@ -31,8 +31,8 @@ function v(e) {
     var t;
     let { statusActivity: a, profileType: h, editEnabled: p, hasEntered: m = !0, animate: v = !0, onClose: C } = e,
         { analyticsLocations: y } = (0, f.ZP)(E.Z.PROFILE_CUSTOM_STATUS),
-        { trackUserProfileAction: L } = (0, I.KZ)(),
-        D = (0, l.e7)([_.Z], () => _.Z.useReducedMotion),
+        { trackUserProfileAction: D } = (0, I.KZ)(),
+        L = (0, l.e7)([_.Z], () => _.Z.useReducedMotion),
         [b] = i.useState(() => new u.V7()),
         [M, P] = i.useState(!0),
         U = i.useRef(null),
@@ -79,10 +79,10 @@ function v(e) {
                     let e = Math.min(null !== (t = w.current) && void 0 !== t ? t : W, W);
                     ei({
                         maxHeight: ''.concat(e, 'px'),
-                        delay: D ? 0 : 300,
+                        delay: L ? 0 : 300,
                         config: {
                             clamp: !0,
-                            duration: D ? 0 : 150
+                            duration: L ? 0 : 150
                         }
                     });
                 } else {
@@ -92,7 +92,7 @@ function v(e) {
                         delay: 0
                     });
                 }
-                if (D) {
+                if (L) {
                     P(!e);
                     return;
                 }
@@ -108,7 +108,7 @@ function v(e) {
                       emoji: k,
                       animate: v,
                       hideTooltip: !1,
-                      tooltipDelay: g.vB
+                      tooltipDelay: S.vB
                   })
                 : null,
         eo = () =>
@@ -130,14 +130,14 @@ function v(e) {
                     (0, r.jsx)(c.Text, {
                         variant: N,
                         className: A.addStatusPrompt,
-                        children: S.Z.Messages.USER_SETTINGS_ADD_STATUS
+                        children: g.Z.Messages.USER_SETTINGS_ADD_STATUS
                     })
                 ]
             }),
         eu = {
-            [A.biteSize]: h === g.y0.BITE_SIZE,
-            [A.fullSize]: h === g.y0.FULL_SIZE,
-            [A.panel]: h === g.y0.PANEL
+            [A.biteSize]: h === S.y0.BITE_SIZE,
+            [A.fullSize]: h === S.y0.FULL_SIZE,
+            [A.panel]: h === S.y0.PANEL
         },
         ec = s()(A.background, { [A.editable]: Q }),
         ed = s()({
@@ -165,13 +165,13 @@ function v(e) {
                                 q && el(),
                                 z &&
                                     (0, r.jsxs)('div', {
-                                        className: s()(A.content, A.clamp, A.placeholderWidth, { [A.panel]: h === g.y0.PANEL }),
+                                        className: s()(A.content, A.clamp, A.placeholderWidth, { [A.panel]: h === S.y0.PANEL }),
                                         ref: x,
                                         children: [es(), eo()]
                                     }),
                                 z &&
                                     (0, r.jsxs)('div', {
-                                        className: s()(A.content, A.unclamp, A.placeholderWidth, A.incorporeal, { [A.panel]: h === g.y0.PANEL }),
+                                        className: s()(A.content, A.unclamp, A.placeholderWidth, A.incorporeal, { [A.panel]: h === S.y0.PANEL }),
                                         ref: U,
                                         children: [es(), eo()]
                                     })
@@ -182,15 +182,15 @@ function v(e) {
                 (0, r.jsxs)(c.ClickableContainer, {
                     className: s()(A.visibleContainer, eu, ec),
                     'aria-label': q
-                        ? S.Z.Messages.CUSTOM_STATUS_ADD_CUSTOM_STATUS_A11Y_LABEL
-                        : S.Z.Messages.CUSTOM_STATUS_CUSTOM_STATUS_A11Y_LABEL.format({
+                        ? g.Z.Messages.CUSTOM_STATUS_ADD_CUSTOM_STATUS_A11Y_LABEL
+                        : g.Z.Messages.CUSTOM_STATUS_CUSTOM_STATUS_A11Y_LABEL.format({
                               emoji: null !== (t = null == k ? void 0 : k.name) && void 0 !== t ? t : '',
                               status: B
                           }),
                     focusProps: { ringClassName: ed },
                     onClick: q
                         ? () => {
-                              L({ action: 'PRESS_ADD_CUSTOM_STATUS' }),
+                              D({ action: 'PRESS_ADD_CUSTOM_STATUS' }),
                                   null == C || C(),
                                   (0, c.openModalLazy)(async () => {
                                       let { default: e } = await n.e('51714').then(n.bind(n, 211065));
@@ -209,7 +209,7 @@ function v(e) {
                         !e.currentTarget.contains(e.relatedTarget) && (en(!1), ea(!1));
                     },
                     onMouseOver: () => {
-                        L({ action: 'HOVER_CUSTOM_STATUS' }), en(!0), ea(!0);
+                        D({ action: 'HOVER_CUSTOM_STATUS' }), en(!0), ea(!0);
                     },
                     onMouseLeave: () => {
                         en(!1), ea(!1);

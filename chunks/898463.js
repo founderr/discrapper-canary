@@ -29,8 +29,8 @@ var r = n(735250),
     I = n(956664),
     m = n(709054),
     T = n(273031),
-    g = n(859235),
-    S = n(689938),
+    S = n(859235),
+    g = n(689938),
     A = n(702284);
 let N = ['image/jpeg', 'image/png', 'image/webp', 'image/gif', 'video/quicktime', 'video/mp4'];
 function O(e) {
@@ -40,7 +40,7 @@ function O(e) {
         value: !n,
         children: (0, r.jsx)(f.Z, {
             containerStyles:
-                s === g.q.CLIP
+                s === S.q.CLIP
                     ? {
                           borderBottomLeftRadius: 0,
                           borderBottomRightRadius: 0,
@@ -61,13 +61,13 @@ function O(e) {
                                 null != t && '' !== t
                                     ? (0, r.jsx)('span', {
                                           className: A.altTag,
-                                          children: S.Z.Messages.IMAGE_ALT
+                                          children: g.Z.Messages.IMAGE_ALT
                                       })
                                     : null,
                                 o && n
                                     ? (0, r.jsx)('span', {
                                           className: A.altTag,
-                                          children: S.Z.Messages.SPOILER
+                                          children: g.Z.Messages.SPOILER
                                       })
                                     : null
                             ]
@@ -78,13 +78,13 @@ function O(e) {
     });
 }
 function R(e) {
-    let { file: t, alt: n, spoiler: a, size: o = g.q.MEDIUM, onMouseEnter: u } = e,
+    let { file: t, alt: n, spoiler: a, size: o = S.q.MEDIUM, onMouseEnter: u } = e,
         [c, d] = i.useState(),
         [_, E] = i.useState({
             width: 0,
             height: 0
         }),
-        f = o === g.q.SMALL;
+        f = o === S.q.SMALL;
     i.useEffect(() => {
         if (null == t || !1 === N.includes(t.type)) return;
         let e = URL.createObjectURL(t);
@@ -134,7 +134,7 @@ function R(e) {
                         className: A.__invalid_modal,
                         ...e,
                         size: l.ModalSize.DYNAMIC,
-                        'aria-label': S.Z.Messages.IMAGE,
+                        'aria-label': g.Z.Messages.IMAGE,
                         children: h(!1, !0)
                     })
                 );
@@ -155,7 +155,7 @@ function R(e) {
     });
 }
 function v(e) {
-    let { file: t, alt: n, spoiler: a, size: o = g.q.MEDIUM, onMouseEnter: l, onVideoLoadError: u } = e,
+    let { file: t, alt: n, spoiler: a, size: o = S.q.MEDIUM, onMouseEnter: l, onVideoLoadError: u } = e,
         [c, d] = i.useState(),
         _ = i.useRef(null);
     return (
@@ -182,7 +182,7 @@ function v(e) {
                         src: c,
                         className: s()(A.media, {
                             [A.spoiler]: e,
-                            [A.sizeClip]: o === g.q.CLIP
+                            [A.sizeClip]: o === S.q.CLIP
                         }),
                         onError: u,
                         preload: 'none',
@@ -194,9 +194,9 @@ function v(e) {
 }
 function C(e) {
     var t;
-    let { upload: n, size: a = g.q.MEDIUM, onMouseEnter: o } = e,
+    let { upload: n, size: a = S.q.MEDIUM, onMouseEnter: o } = e,
         [l, u] = i.useState(!1),
-        c = a === g.q.SMALL;
+        c = a === S.q.SMALL;
     return n.isImage && n.item.platform === d.ow.WEB
         ? (0, r.jsx)(R, {
               file: n.item.file,
@@ -225,21 +225,21 @@ function C(e) {
                     children: n.spoiler
                         ? (0, r.jsx)('span', {
                               className: A.altTag,
-                              children: S.Z.Messages.SPOILER
+                              children: g.Z.Messages.SPOILER
                           })
                         : null
                 })
             });
 }
 function y(e) {
-    let { channelId: t, draftType: n, upload: a, keyboardModeEnabled: d, label: f, size: h = g.q.MEDIUM, canEdit: I = !0, hideFileName: N = !1, clip: O } = e,
+    let { channelId: t, draftType: n, upload: a, keyboardModeEnabled: d, label: f, size: h = S.q.MEDIUM, canEdit: I = !0, hideFileName: N = !1, clip: O } = e,
         R = null != O,
-        v = (h = R ? g.q.CLIP : h) === g.q.SMALL,
+        v = (h = R ? S.q.CLIP : h) === S.q.SMALL,
         y = (0, o.e7)([p.Z], () => {
             var e;
             return null === (e = p.Z.getChannel(t)) || void 0 === e ? void 0 : e.guild_id;
         }),
-        L = (e) => {
+        D = (e) => {
             e.stopPropagation(),
                 (0, l.openModal)((e) =>
                     (0, r.jsx)(c.default, {
@@ -258,13 +258,13 @@ function y(e) {
                     })
                 );
         };
-    return (0, r.jsxs)(g.Z, {
+    return (0, r.jsxs)(S.Z, {
         actions: (0, r.jsxs)(i.Fragment, {
             children: [
                 I
                     ? (0, r.jsx)(T.Z, {
                           className: s()({ [A.action]: v }),
-                          tooltip: R ? S.Z.Messages.CLIPS_ATTACHMENT_UTILITIES_SPOILER : S.Z.Messages.ATTACHMENT_UTILITIES_SPOILER,
+                          tooltip: R ? g.Z.Messages.CLIPS_ATTACHMENT_UTILITIES_SPOILER : g.Z.Messages.ATTACHMENT_UTILITIES_SPOILER,
                           onClick: () => u.Z.update(t, a.id, n, { spoiler: !a.spoiler }),
                           children: a.spoiler
                               ? (0, r.jsx)(l.EyeSlashIcon, {
@@ -282,8 +282,8 @@ function y(e) {
                 I && !R
                     ? (0, r.jsx)(T.Z, {
                           className: s()({ [A.action]: v }),
-                          tooltip: S.Z.Messages.ATTACHMENT_UTILITIES_MODIFY,
-                          onClick: L,
+                          tooltip: g.Z.Messages.ATTACHMENT_UTILITIES_MODIFY,
+                          onClick: D,
                           children: (0, r.jsx)(l.PencilIcon, {
                               size: 'xs',
                               color: 'currentColor',
@@ -293,7 +293,7 @@ function y(e) {
                     : null,
                 (0, r.jsx)(T.Z, {
                     className: s()({ [A.action]: v }),
-                    tooltip: R ? S.Z.Messages.CLIPS_ATTACHMENT_UTILITIES_REMOVE : S.Z.Messages.ATTACHMENT_UTILITIES_REMOVE,
+                    tooltip: R ? g.Z.Messages.CLIPS_ATTACHMENT_UTILITIES_REMOVE : g.Z.Messages.ATTACHMENT_UTILITIES_REMOVE,
                     onClick: () => u.Z.remove(t, a.id, n),
                     dangerous: !0,
                     children: (0, r.jsx)(l.TrashIcon, {
@@ -307,7 +307,7 @@ function y(e) {
         draftType: n,
         id: a.id,
         channelId: t,
-        handleEditModal: L,
+        handleEditModal: D,
         keyboardModeEnabled: d,
         size: h,
         className: s()({ [A.attachmentItemSmall]: v }),
@@ -340,7 +340,7 @@ function y(e) {
                         (0, r.jsx)(l.TextBadge, {
                             color: E.Z.BG_BRAND,
                             className: A.clipsBadge,
-                            text: S.Z.Messages.CLIP_TAG
+                            text: g.Z.Messages.CLIP_TAG
                         })
                     ]
                 })

@@ -10,14 +10,14 @@ var n = t(120356),
     s = t(481060),
     o = t(53281);
 function l(e) {
-    let { children: A, className: t, innerClassName: n, onChange: l, 'aria-label': i, 'aria-describedby': d, filters: c, multiple: u = !1, disabled: C = !1, submitting: g = !1, ...T } = e;
+    let { children: A, className: t, innerClassName: n, onChange: l, 'aria-label': i, 'aria-describedby': d, filters: c, multiple: u = !1, disabled: C = !1, submitting: g = !1, ...h } = e;
     return (0, a.jsx)(s.FocusRing, {
         within: !0,
         children: (0, a.jsxs)('div', {
             className: r()(
                 t,
                 (0, s.getButtonStyle)({
-                    ...T,
+                    ...h,
                     submitting: g,
                     disabled: C
                 })

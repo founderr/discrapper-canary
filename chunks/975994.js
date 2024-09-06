@@ -20,8 +20,8 @@ var r = n(235003),
     I = n(706440),
     m = n(788675),
     T = n(591995),
-    g = n(885723),
-    S = n(580917),
+    S = n(885723),
+    g = n(580917),
     A = n(773959),
     N = n(168147),
     O = n(408291),
@@ -29,8 +29,8 @@ var r = n(235003),
     v = n(701809),
     C = n(340132),
     y = n(355180),
-    L = n(778341),
-    D = n(368480),
+    D = n(778341),
+    L = n(368480),
     b = n(453440),
     M = n(910188),
     P = n(733710),
@@ -73,7 +73,7 @@ function q(e, t) {
             isVirtualized: !0
         }),
         m = (0, F.tv)(),
-        { isInvalid: T, validationErrors: g, validationDetails: S } = t.displayValidation,
+        { isInvalid: T, validationErrors: S, validationDetails: g } = t.displayValidation,
         {
             labelProps: A,
             inputProps: N,
@@ -140,26 +140,26 @@ function q(e, t) {
             'aria-labelledby': e['aria-labelledby'] || A.id
         }),
         y = (0, V.useRef)(0),
-        L = null != t.selectionManager.focusedKey && t.isOpen ? t.collection.getItem(t.selectionManager.focusedKey) : void 0,
-        D = null !== (n = null == L ? void 0 : L.parentKey) && void 0 !== n ? n : null,
+        D = null != t.selectionManager.focusedKey && t.isOpen ? t.collection.getItem(t.selectionManager.focusedKey) : void 0,
+        L = null !== (n = null == D ? void 0 : D.parentKey) && void 0 !== n ? n : null,
         b = null !== (r = t.selectionManager.focusedKey) && void 0 !== r ? r : null,
-        M = (0, V.useRef)(D),
+        M = (0, V.useRef)(L),
         P = (0, V.useRef)(b);
     (0, V.useEffect)(() => {
-        if ((0, F.ad)() && null != L && b !== P.current) {
+        if ((0, F.ad)() && null != D && b !== P.current) {
             let e = t.selectionManager.isSelected(b),
-                n = null != D ? t.collection.getItem(D) : null,
+                n = null != L ? t.collection.getItem(L) : null,
                 r = (null == n ? void 0 : n['aria-label']) || ('string' == typeof (null == n ? void 0 : n.rendered) ? n.rendered : '') || '',
                 i = E.format('focusAnnouncement', {
-                    isGroupChange: n && D !== M.current,
+                    isGroupChange: n && L !== M.current,
                     groupTitle: r,
                     groupCount: n ? [...(0, H._P)(n, t.collection)].length : 0,
-                    optionText: L['aria-label'] || L.textValue || '',
+                    optionText: D['aria-label'] || D.textValue || '',
                     isSelected: e
                 });
             (0, G.xQ)(i);
         }
-        (M.current = D), (P.current = b);
+        (M.current = L), (P.current = b);
     });
     let U = (0, H.is)(t.collection),
         w = (0, V.useRef)(U),
@@ -204,7 +204,7 @@ function q(e, t) {
                 'aria-expanded': f['aria-expanded'],
                 'aria-controls': t.isOpen ? h.id : void 0,
                 'aria-autocomplete': 'list',
-                'aria-activedescendant': L ? (0, B.x3)(t, L.key) : void 0,
+                'aria-activedescendant': D ? (0, B.x3)(t, D.key) : void 0,
                 onTouchEnd: (e) => {
                     if (_ || d) return;
                     if (e.timeStamp - y.current < 500) {
@@ -230,8 +230,8 @@ function q(e, t) {
             descriptionProps: O,
             errorMessageProps: R,
             isInvalid: T,
-            validationErrors: g,
-            validationDetails: S
+            validationErrors: S,
+            validationDetails: g
         }
     );
 }
@@ -253,8 +253,8 @@ z = {
     'it-IT': I.Z,
     'ja-JP': m.Z,
     'ko-KR': T.Z,
-    'lt-LT': g.Z,
-    'lv-LV': S.Z,
+    'lt-LT': S.Z,
+    'lv-LV': g.Z,
     'nb-NO': A.Z,
     'nl-NL': N.Z,
     'pl-PL': O.Z,
@@ -262,8 +262,8 @@ z = {
     'pt-PT': v.Z,
     'ro-RO': C.Z,
     'ru-RU': y.Z,
-    'sk-SK': L.Z,
-    'sl-SI': D.Z,
+    'sk-SK': D.Z,
+    'sl-SI': L.Z,
     'sr-SP': b.Z,
     'sv-SE': M.Z,
     'tr-TR': P.Z,

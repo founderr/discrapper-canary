@@ -2914,7 +2914,7 @@ var E = function (e) {
         for (e = 0; e < this.moov.traks.length; e++) (t = this.moov.traks[e]), this.buildTrakSampleLists(t);
     }),
     (E.prototype.buildTrakSampleLists = function (e) {
-        if (((e.samples = []), (e.samples_duration = 0), (e.samples_size = 0), (n = e.mdia.minf.stbl.stco || e.mdia.minf.stbl.co64), (r = e.mdia.minf.stbl.stsc), (i = e.mdia.minf.stbl.stsz || e.mdia.minf.stbl.stz2), (a = e.mdia.minf.stbl.stts), (s = e.mdia.minf.stbl.ctts), (o = e.mdia.minf.stbl.stss), (l = e.mdia.minf.stbl.stsd), (u = e.mdia.minf.stbl.subs), (_ = e.mdia.minf.stbl.stdp), (c = e.mdia.minf.stbl.sbgps), (d = e.mdia.minf.stbl.sgpds), (T = -1), (g = -1), (S = -1), (A = -1), (N = 0), (O = 0), (R = 0), E.initSampleGroups(e, null, c, d), void 0 !== i)) {
+        if (((e.samples = []), (e.samples_duration = 0), (e.samples_size = 0), (n = e.mdia.minf.stbl.stco || e.mdia.minf.stbl.co64), (r = e.mdia.minf.stbl.stsc), (i = e.mdia.minf.stbl.stsz || e.mdia.minf.stbl.stz2), (a = e.mdia.minf.stbl.stts), (s = e.mdia.minf.stbl.ctts), (o = e.mdia.minf.stbl.stss), (l = e.mdia.minf.stbl.stsd), (u = e.mdia.minf.stbl.subs), (_ = e.mdia.minf.stbl.stdp), (c = e.mdia.minf.stbl.sbgps), (d = e.mdia.minf.stbl.sgpds), (T = -1), (S = -1), (g = -1), (A = -1), (N = 0), (O = 0), (R = 0), E.initSampleGroups(e, null, c, d), void 0 !== i)) {
             for (t = 0; t < i.sample_sizes.length; t++) {
                 var t,
                     n,
@@ -2934,14 +2934,14 @@ var E = function (e) {
                     I,
                     m,
                     T,
-                    g,
                     S,
+                    g,
                     A,
                     N,
                     O,
                     R,
                     v = {};
-                (v.number = t), (v.track_id = e.tkhd.track_id), (v.timescale = e.mdia.mdhd.timescale), (v.alreadyRead = 0), (e.samples[t] = v), (v.size = i.sample_sizes[t]), (e.samples_size += v.size), 0 === t ? ((h = 1), (f = 0), (v.chunk_index = h), (v.chunk_run_index = f), (m = r.samples_per_chunk[f]), (I = 0), (p = f + 1 < r.first_chunk.length ? r.first_chunk[f + 1] - 1 : 1 / 0)) : t < m ? ((v.chunk_index = h), (v.chunk_run_index = f)) : (h++, (v.chunk_index = h), (I = 0), h <= p || (p = ++f + 1 < r.first_chunk.length ? r.first_chunk[f + 1] - 1 : 1 / 0), (v.chunk_run_index = f), (m += r.samples_per_chunk[f])), (v.description_index = r.sample_description_index[v.chunk_run_index] - 1), (v.description = l.entries[v.description_index]), (v.offset = n.chunk_offsets[v.chunk_index - 1] + I), (I += v.size), t > T && (g++, T < 0 && (T = 0), (T += a.sample_counts[g])), t > 0 ? ((e.samples[t - 1].duration = a.sample_deltas[g]), (e.samples_duration += e.samples[t - 1].duration), (v.dts = e.samples[t - 1].dts + e.samples[t - 1].duration)) : (v.dts = 0), s ? (t >= S && (A++, S < 0 && (S = 0), (S += s.sample_counts[A])), (v.cts = e.samples[t].dts + s.sample_offsets[A])) : (v.cts = v.dts), o ? (t == o.sample_numbers[N] - 1 ? ((v.is_sync = !0), N++) : ((v.is_sync = !1), (v.degradation_priority = 0)), u && u.entries[O].sample_delta + R == t + 1 && ((v.subsamples = u.entries[O].subsamples), (R += u.entries[O].sample_delta), O++)) : (v.is_sync = !0), E.process_sdtp(e.mdia.minf.stbl.sdtp, v, v.number), _ ? (v.degradation_priority = _.priority[t]) : (v.degradation_priority = 0), u && u.entries[O].sample_delta + R == t && ((v.subsamples = u.entries[O].subsamples), (R += u.entries[O].sample_delta)), (c.length > 0 || d.length > 0) && E.setSampleGroupProperties(e, v, t, e.sample_groups_info);
+                (v.number = t), (v.track_id = e.tkhd.track_id), (v.timescale = e.mdia.mdhd.timescale), (v.alreadyRead = 0), (e.samples[t] = v), (v.size = i.sample_sizes[t]), (e.samples_size += v.size), 0 === t ? ((h = 1), (f = 0), (v.chunk_index = h), (v.chunk_run_index = f), (m = r.samples_per_chunk[f]), (I = 0), (p = f + 1 < r.first_chunk.length ? r.first_chunk[f + 1] - 1 : 1 / 0)) : t < m ? ((v.chunk_index = h), (v.chunk_run_index = f)) : (h++, (v.chunk_index = h), (I = 0), h <= p || (p = ++f + 1 < r.first_chunk.length ? r.first_chunk[f + 1] - 1 : 1 / 0), (v.chunk_run_index = f), (m += r.samples_per_chunk[f])), (v.description_index = r.sample_description_index[v.chunk_run_index] - 1), (v.description = l.entries[v.description_index]), (v.offset = n.chunk_offsets[v.chunk_index - 1] + I), (I += v.size), t > T && (S++, T < 0 && (T = 0), (T += a.sample_counts[S])), t > 0 ? ((e.samples[t - 1].duration = a.sample_deltas[S]), (e.samples_duration += e.samples[t - 1].duration), (v.dts = e.samples[t - 1].dts + e.samples[t - 1].duration)) : (v.dts = 0), s ? (t >= g && (A++, g < 0 && (g = 0), (g += s.sample_counts[A])), (v.cts = e.samples[t].dts + s.sample_offsets[A])) : (v.cts = v.dts), o ? (t == o.sample_numbers[N] - 1 ? ((v.is_sync = !0), N++) : ((v.is_sync = !1), (v.degradation_priority = 0)), u && u.entries[O].sample_delta + R == t + 1 && ((v.subsamples = u.entries[O].subsamples), (R += u.entries[O].sample_delta), O++)) : (v.is_sync = !0), E.process_sdtp(e.mdia.minf.stbl.sdtp, v, v.number), _ ? (v.degradation_priority = _.priority[t]) : (v.degradation_priority = 0), u && u.entries[O].sample_delta + R == t && ((v.subsamples = u.entries[O].subsamples), (R += u.entries[O].sample_delta)), (c.length > 0 || d.length > 0) && E.setSampleGroupProperties(e, v, t, e.sample_groups_info);
             }
             t > 0 && ((e.samples[t - 1].duration = Math.max(e.mdia.mdhd.duration - e.samples[t - 1].dts, 0)), (e.samples_duration += e.samples[t - 1].duration));
         }
@@ -2972,14 +2972,14 @@ var E = function (e) {
                                 var I = !!(c.tfhd.flags & u.TFHD_FLAG_BASE_DATA_OFFSET),
                                     m = !!(c.tfhd.flags & u.TFHD_FLAG_DEFAULT_BASE_IS_MOOF),
                                     T = !!(p.flags & u.TRUN_FLAGS_DATA_OFFSET),
-                                    g = 0;
-                                (g = I ? c.tfhd.base_data_offset : m ? l.start : 0 === t ? l.start : o), 0 === t && 0 === n ? (T ? (f.offset = g + p.data_offset) : (f.offset = g)) : (f.offset = o), (o = f.offset + f.size), (c.sbgps.length > 0 || c.sgpds.length > 0 || d.mdia.minf.stbl.sbgps.length > 0 || d.mdia.minf.stbl.sgpds.length > 0) && E.setSampleGroupProperties(d, f, f.number_in_traf, c.sample_groups_info);
+                                    S = 0;
+                                (S = I ? c.tfhd.base_data_offset : m ? l.start : 0 === t ? l.start : o), 0 === t && 0 === n ? (T ? (f.offset = S + p.data_offset) : (f.offset = S)) : (f.offset = o), (o = f.offset + f.size), (c.sbgps.length > 0 || c.sgpds.length > 0 || d.mdia.minf.stbl.sbgps.length > 0 || d.mdia.minf.stbl.sgpds.length > 0) && E.setSampleGroupProperties(d, f, f.number_in_traf, c.sample_groups_info);
                             }
                         }
                         if (c.subs) {
                             d.has_fragment_subsamples = !0;
-                            var S = c.first_sample_index;
-                            for (t = 0; t < c.subs.entries.length; t++) (S += c.subs.entries[t].sample_delta), ((f = d.samples[S - 1]).subsamples = c.subs.entries[t].subsamples);
+                            var g = c.first_sample_index;
+                            for (t = 0; t < c.subs.entries.length; t++) (g += c.subs.entries[t].sample_delta), ((f = d.samples[g - 1]).subsamples = c.subs.entries[t].subsamples);
                         }
                     }
         }

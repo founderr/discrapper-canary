@@ -23,8 +23,8 @@ var i,
     I = n(314897),
     m = n(480294),
     T = n(573261),
-    g = n(572691),
-    S = n(981631),
+    S = n(572691),
+    g = n(981631),
     A = n(792101);
 let N = new E.Z('AuthenticationActionCreators'),
     O = null;
@@ -39,14 +39,14 @@ function R(e) {
     });
 }
 function v() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : S.Z5c.DEFAULT_LOGGED_OUT;
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : g.Z5c.DEFAULT_LOGGED_OUT;
     if ((R(), null == e)) return;
     let t = (0, f.PP)();
     if (null == t) {
         (0, h.uL)(e);
         return;
     }
-    g.Z.popAll(),
+    S.Z.popAll(),
         t.reset({
             index: 0,
             routes: [{ name: 'auth' }]
@@ -76,11 +76,11 @@ function v() {
             c.Z.dispatch({
                 type: 'LOGIN',
                 login: n,
-                loginMethod: null != i && '' !== i ? S.nnr.LOGIN_CODE : S.nnr.PASSWORD
+                loginMethod: null != i && '' !== i ? g.nnr.LOGIN_CODE : g.nnr.PASSWORD
             }),
                 this.setLoginCredentials(n, null !== (t = null != r ? r : i) && void 0 !== t ? t : void 0),
                 T.Z.post({
-                    url: S.ANM.LOGIN,
+                    url: g.ANM.LOGIN,
                     body: {
                         login: n,
                         password: r,
@@ -135,7 +135,7 @@ function v() {
                             return;
                         }
                         let s = null === (i = e.body) || void 0 === i ? void 0 : i.code;
-                        s === S.evJ.ACCOUNT_SCHEDULED_FOR_DELETION && null != r && '' !== r
+                        s === g.evJ.ACCOUNT_SCHEDULED_FOR_DELETION && null != r && '' !== r
                             ? c.Z.dispatch({
                                   type: 'LOGIN_ACCOUNT_SCHEDULED_FOR_DELETION',
                                   credentials: {
@@ -143,7 +143,7 @@ function v() {
                                       password: r
                                   }
                               })
-                            : s === S.evJ.ACCOUNT_DISABLED && null != r && '' !== r
+                            : s === g.evJ.ACCOUNT_DISABLED && null != r && '' !== r
                               ? c.Z.dispatch({
                                     type: 'LOGIN_ACCOUNT_DISABLED',
                                     credentials: {
@@ -151,7 +151,7 @@ function v() {
                                         password: r
                                     }
                                 })
-                              : s === S.evJ.PHONE_VERIFICATION_REQUIRED
+                              : s === g.evJ.PHONE_VERIFICATION_REQUIRED
                                 ? c.Z.dispatch({ type: 'LOGIN_PHONE_IP_AUTHORIZATION_REQUIRED' })
                                 : c.Z.dispatch({
                                       type: 'LOGIN_FAILURE',
@@ -163,7 +163,7 @@ function v() {
         loginMFAv2(e) {
             let { code: t, ticket: n, source: r, giftCodeSKUId: i, isMultiAccount: a, mfaType: o } = e;
             return T.Z.post({
-                url: S.ANM.LOGIN_MFA(o),
+                url: g.ANM.LOGIN_MFA(o),
                 body: {
                     code: t,
                     ticket: n,
@@ -191,7 +191,7 @@ function v() {
                         });
                         return;
                     }
-                    if ((null === (t = e.body) || void 0 === t ? void 0 : t.code) === S.evJ.MFA_INVALID_CODE) throw Error(e.body.message);
+                    if ((null === (t = e.body) || void 0 === t ? void 0 : t.code) === g.evJ.MFA_INVALID_CODE) throw Error(e.body.message);
                     throw e;
                 });
         },
@@ -226,7 +226,7 @@ function v() {
         loginWebAuthn(e) {
             let { ticket: t, credential: n, source: r, giftCodeSKUId: i } = e;
             return T.Z.post({
-                url: S.ANM.WEBAUTHN_CONDITIONAL_UI_LOGIN,
+                url: g.ANM.WEBAUTHN_CONDITIONAL_UI_LOGIN,
                 body: {
                     credential: n,
                     ticket: t,
@@ -297,15 +297,15 @@ function v() {
         },
         logout() {
             var e;
-            let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : S.Z5c.DEFAULT_LOGGED_OUT,
+            let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : g.Z5c.DEFAULT_LOGGED_OUT,
                 n = arguments.length > 1 ? arguments[1] : void 0;
             return T.Z.post({
-                url: S.ANM.LOGOUT,
+                url: g.ANM.LOGOUT,
                 body: {
                     provider: (0, A.xJ)(),
-                    token: u.K.get(S.JkL),
+                    token: u.K.get(g.JkL),
                     voip_provider: A.mv,
-                    voip_token: u.K.get(S.scU)
+                    voip_token: u.K.get(g.scU)
                 },
                 oldFormErrors: !0,
                 trackedActionData: { event: s.NetworkActionNames.USER_LOGOUT },
@@ -333,10 +333,10 @@ function v() {
             );
         },
         verifySSOToken() {
-            let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : S.Z5c.DEFAULT_LOGGED_OUT;
+            let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : g.Z5c.DEFAULT_LOGGED_OUT;
             return l.tn
                 .get({
-                    url: S.ANM.ME,
+                    url: g.ANM.ME,
                     oldFormErrors: !0
                 })
                 .catch(() => v(e));
@@ -344,7 +344,7 @@ function v() {
         verify(e) {
             null != e
                 ? T.Z.post({
-                      url: S.ANM.VERIFY,
+                      url: g.ANM.VERIFY,
                       body: { token: e },
                       oldFormErrors: !0,
                       trackedActionData: { event: s.NetworkActionNames.USER_VERIFY }
@@ -373,7 +373,7 @@ function v() {
         async authorizePayment(e) {
             try {
                 await T.Z.post({
-                    url: S.ANM.AUTHORIZE_PAYMENT,
+                    url: g.ANM.AUTHORIZE_PAYMENT,
                     body: { token: e },
                     oldFormErrors: !0,
                     trackedActionData: { event: s.NetworkActionNames.AUTHORIZE_PAYMENT }
@@ -396,7 +396,7 @@ function v() {
             }
             try {
                 await T.Z.post({
-                    url: S.ANM.AUTHORIZE_IP,
+                    url: g.ANM.AUTHORIZE_IP,
                     body: { token: e },
                     oldFormErrors: !0,
                     trackedActionData: { event: s.NetworkActionNames.AUTHORIZE_IP }
@@ -411,7 +411,7 @@ function v() {
         },
         verifyResend: () =>
             T.Z.post({
-                url: S.ANM.VERIFY_RESEND,
+                url: g.ANM.VERIFY_RESEND,
                 oldFormErrors: !0,
                 trackedActionData: { event: s.NetworkActionNames.USER_VERIFY_RESEND }
             }),
@@ -422,16 +422,16 @@ function v() {
                     password: t,
                     source: n
                 },
-                i = u.K.get(S.JkL),
+                i = u.K.get(g.JkL),
                 a = (0, A.xJ)();
             null != a && null != i && ((r.push_provider = a), (r.push_token = i));
-            let o = u.K.get(S.scU);
+            let o = u.K.get(g.scU);
             null != A.mv && null != o && ((r.push_voip_provider = A.mv), (r.push_voip_token = o));
             try {
                 let {
                     body: { mfa: e, sms: t, webauthn: n, ticket: i, token: a, backup: o, totp: l }
                 } = await T.Z.post({
-                    url: S.ANM.RESET_PASSWORD,
+                    url: g.ANM.RESET_PASSWORD,
                     body: r,
                     oldFormErrors: !0,
                     trackedActionData: { event: s.NetworkActionNames.USER_RESET_PASSWORD }
@@ -461,7 +461,7 @@ function v() {
                 c.Z.dispatch({ type: 'LOGIN_MFA' }),
                 (
                     await T.Z.post({
-                        url: S.ANM.RESET_PASSWORD,
+                        url: g.ANM.RESET_PASSWORD,
                         body: {
                             code: n,
                             ticket: r,
@@ -483,7 +483,7 @@ function v() {
             this.setLoginCredentials(e), c.Z.dispatch({ type: 'FORGOT_PASSWORD_REQUEST' });
             try {
                 await T.Z.post({
-                    url: S.ANM.FORGOT_PASSWORD,
+                    url: g.ANM.FORGOT_PASSWORD,
                     body: { login: e },
                     oldFormErrors: !0,
                     trackedActionData: { event: s.NetworkActionNames.FORGOT_PASSWORD }
@@ -492,7 +492,7 @@ function v() {
             } catch (t) {
                 let e = new d.yZ(t);
                 throw (
-                    (e.code === S.evJ.PHONE_VERIFICATION_REQUIRED
+                    (e.code === g.evJ.PHONE_VERIFICATION_REQUIRED
                         ? c.Z.dispatch({ type: 'LOGIN_PASSWORD_RECOVERY_PHONE_VERIFICATION' })
                         : c.Z.dispatch({
                               type: 'LOGIN_FAILURE',
@@ -526,7 +526,7 @@ function v() {
                   }, 5000)),
                   (O = l.tn
                       .get({
-                          url: S.ANM.AUTH_LOCATION_METADATA,
+                          url: g.ANM.AUTH_LOCATION_METADATA,
                           retries: 2,
                           oldFormErrors: !0
                       })

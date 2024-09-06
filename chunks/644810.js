@@ -1,45 +1,45 @@
-t.d(n, {
+n.d(t, {
     B: function () {
         return c;
     }
 }),
-    t(653041);
-var a = t(55000),
-    l = t(693824),
-    i = t(690725),
-    r = t(737583),
-    s = t(169040);
-let o = (e, n, t) => ({
+    n(653041);
+var l = n(55000),
+    a = n(693824),
+    i = n(690725),
+    r = n(737583),
+    s = n(169040);
+let o = (e, t, n) => ({
         AvatarImage: e,
-        ...(null != n && { MediaImage: n }),
-        ...(null != t && { ApplicationImage: t })
+        ...(null != t && { MediaImage: t }),
+        ...(null != n && { ApplicationImage: n })
     }),
-    u = (e, n) => {
-        let t = [
+    u = (e, t) => {
+        let n = [
             {
                 iconPath: s.i6,
                 text: e
             }
         ];
         return (
-            null != n &&
-                t.push({
+            null != t &&
+                n.push({
                     iconPath: s.fj,
-                    text: n
+                    text: t
                 }),
-            t
+            n
         );
     },
     c = async (e) => {
-        let { mediaImageSrc: n, entry: t, avatarSrc: c, description: d, timestamp: _, episodeDescription: m, colors: E, channelId: T } = e,
-            h = t.extra.media_title,
-            x = o(c, n);
+        let { mediaImageSrc: t, entry: n, avatarSrc: c, description: d, timestamp: h, episodeDescription: m, colors: x, channelId: E } = e,
+            _ = n.extra.media_title,
+            p = o(c, t);
         return await (0, i.f)({
-            assetsToLoad: x,
+            assetsToLoad: p,
             drawImage: (e) => {
-                let n = E.map((e, n) => ({
+                let t = x.map((e, t) => ({
                     color: e,
-                    stop: n
+                    stop: t
                 }));
                 e.setSize(
                     {
@@ -49,7 +49,7 @@ let o = (e, n, t) => ({
                     4
                 ),
                     e.drawRoundedGradientRect(
-                        n,
+                        t,
                         {
                             x: 0,
                             y: s.bg
@@ -67,7 +67,7 @@ let o = (e, n, t) => ({
                         8
                     ),
                     e.setColor('white');
-                let t = e.drawRoundedImage(
+                let n = e.drawRoundedImage(
                     'MediaImage',
                     {
                         x: s.sB,
@@ -78,10 +78,10 @@ let o = (e, n, t) => ({
                         h: s.Pu
                     },
                     8,
-                    { fillMode: l.JU.Contain }
+                    { fillMode: a.JU.Contain }
                 );
-                t === l.vP.Failure &&
-                    (t = e.drawRoundedImage(
+                n === a.vP.Failure &&
+                    (n = e.drawRoundedImage(
                         'ApplicationImage',
                         {
                             x: s.sB,
@@ -93,9 +93,9 @@ let o = (e, n, t) => ({
                         },
                         8
                     )),
-                    t === l.vP.Failure &&
+                    n === a.vP.Failure &&
                         e.drawPath(
-                            a.Cv,
+                            l.Cv,
                             {
                                 x: s.sB,
                                 y: s.sB
@@ -119,7 +119,7 @@ let o = (e, n, t) => ({
                         size: 16,
                         family: s.I8,
                         weight: s.Ue,
-                        truncate: l.GX.Wrap
+                        truncate: a.GX.Wrap
                     }),
                     e.drawText(
                         d,
@@ -131,7 +131,7 @@ let o = (e, n, t) => ({
                         },
                         !0
                     );
-                let i = u(_, m);
+                let i = u(h, m);
                 (0, r.J)({
                     canvas: e,
                     badges: i,
@@ -140,11 +140,11 @@ let o = (e, n, t) => ({
                 });
             },
             exportConfigs: {
-                format: l.kH.CloudUpload,
+                format: a.kH.CloudUpload,
                 quality: 1,
-                fileName: 'user-reacting-to-'.concat(h, '.png').toLowerCase(),
+                fileName: 'user-reacting-to-'.concat(_, '.png').toLowerCase(),
                 fileType: 'png',
-                channelId: T
+                channelId: E
             }
         });
     };

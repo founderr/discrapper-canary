@@ -1,31 +1,31 @@
 n.d(t, {
     Z: function () {
-        return u;
+        return c;
     }
 });
-var r = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(557711),
+var s = n(557711),
     a = n(620662),
-    s = n(503438),
-    o = n(981631),
-    l = n(120297);
-function u(e) {
-    let { activity: t, user: n, guildId: u, channelId: c, source: d, look: _, color: E, onAction: f } = e;
-    return null != t && (0, a.Z)(t, o.xjy.SYNC) && (0, s.Z)(t)
-        ? (0, r.jsx)(
-              i.Z,
+    l = n(503438),
+    r = n(981631),
+    o = n(120297);
+function c(e) {
+    let { activity: t, user: n, guildId: c, channelId: u, source: d, look: h, color: m, onAction: p } = e;
+    return null != t && (0, a.Z)(t, r.xjy.SYNC) && (0, l.Z)(t)
+        ? (0, i.jsx)(
+              s.Z,
               {
-                  className: l.button,
-                  size: l.buttonSize,
-                  look: _,
-                  color: E,
+                  className: o.button,
+                  size: o.buttonSize,
+                  look: h,
+                  color: m,
                   user: n,
                   activity: t,
-                  guildId: null != u ? u : void 0,
-                  channelId: c,
+                  guildId: null != c ? c : void 0,
+                  channelId: u,
                   source: d,
-                  onAction: f
+                  onAction: p
               },
               'sync'
           )

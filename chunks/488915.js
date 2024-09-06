@@ -29,11 +29,11 @@ function m(e) {
 function T(e, t, n) {
     return 'entitlement:'.concat(e, ':').concat(n, ':').concat(t);
 }
-function g(e, t) {
+function S(e, t) {
     return 'entitlement:'.concat(t, ':').concat(e);
 }
 ((a = r || (r = {}))[(a.NOT_FETCHED = 0)] = 'NOT_FETCHED'), (a[(a.FETCHING = 1)] = 'FETCHING'), (a[(a.FETCHED = 2)] = 'FETCHED');
-let S = new _.h(
+let g = new _.h(
         (e) => [I(e.application_id), ...e.subscription_listings_ids.map(p)],
         (e) => e.id
     ),
@@ -42,18 +42,18 @@ let S = new _.h(
         (e) => e.id
     ),
     N = new _.h(
-        (e) => [T(e.applicationId, e.isValid(null, h.Z), e.guildId), g(e.isValid(null, h.Z), e.guildId)],
+        (e) => [T(e.applicationId, e.isValid(null, h.Z), e.guildId), S(e.isValid(null, h.Z), e.guildId)],
         (e) => e.id
     ),
     O = {},
     R = {};
 function v(e) {
-    let t = S.values(I(e));
+    let t = g.values(I(e));
     return c()(t.length <= 1, 'Found multiple group listings for application'), t[0];
 }
 function C(e) {
     var t;
-    for (let n of (S.set(e.id, e), null !== (t = e.subscription_listings) && void 0 !== t ? t : []))
+    for (let n of (g.set(e.id, e), null !== (t = e.subscription_listings) && void 0 !== t ? t : []))
         (function (e) {
             A.set(e.id, e);
         })(n);
@@ -64,13 +64,13 @@ class y extends (i = d.yh) {
         return null !== (t = O[e]) && void 0 !== t ? t : 0;
     }
     getSubscriptionGroupListing(e) {
-        return S.get(e);
+        return g.get(e);
     }
     getSubscriptionGroupListingForApplication(e) {
         return v(e);
     }
     getSubscriptionGroupListingForSubscriptionListing(e) {
-        let t = S.values(p(e));
+        let t = g.values(p(e));
         return c()(t.length <= 1, 'Found multiple group listings for listing'), t[0];
     }
     getSubscriptionListing(e) {
@@ -93,7 +93,7 @@ class y extends (i = d.yh) {
     }
     getEntitlementsForGuild(e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-        return N.values(g(t, e));
+        return N.values(S(t, e));
     }
 }
 (l = 'ApplicationSubscriptionStore'),
@@ -107,7 +107,7 @@ class y extends (i = d.yh) {
         : (s[o] = l),
     (t.Z = new y(E.Z, {
         LOGOUT: function () {
-            S.clear(), A.clear(), N.clear(), (O = {}), (R = {});
+            g.clear(), A.clear(), N.clear(), (O = {}), (R = {});
         },
         APPLICATION_SUBSCRIPTIONS_FETCH_LISTINGS: function (e) {
             let { applicationId: t } = e;

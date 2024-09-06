@@ -11,23 +11,23 @@ function s(e) {
         [h, p] = (0, r.zk)(u, isNaN(c) ? NaN : c, d),
         [I, m] = (0, a.useState)(() => (isNaN(h) ? '' : new (0, i.e)(_, l).format(h))),
         T = (0, a.useMemo)(() => new i.d(_, l), [_, l]),
-        g = (0, a.useMemo)(() => T.getNumberingSystem(I), [T, I]),
-        S = (0, a.useMemo)(
+        S = (0, a.useMemo)(() => T.getNumberingSystem(I), [T, I]),
+        g = (0, a.useMemo)(
             () =>
                 new i.e(_, {
                     ...l,
-                    numberingSystem: g
+                    numberingSystem: S
                 }),
-            [_, l, g]
+            [_, l, S]
         ),
-        A = (0, a.useMemo)(() => S.resolvedOptions(), [S]),
-        N = (0, a.useCallback)((e) => (isNaN(e) || null === e ? '' : S.format(e)), [S]),
+        A = (0, a.useMemo)(() => g.resolvedOptions(), [g]),
+        N = (0, a.useCallback)((e) => (isNaN(e) || null === e ? '' : g.format(e)), [g]),
         O = isNaN(s) ? 1 : s;
     'percent' === A.style && isNaN(s) && (O = 0.01);
     let [R, v] = (0, a.useState)(h),
         [C, y] = (0, a.useState)(_),
-        [L, D] = (0, a.useState)(l);
-    (!Object.is(h, R) || _ !== C || l !== L) && (m(N(h)), v(h), y(_), D(l));
+        [D, L] = (0, a.useState)(l);
+    (!Object.is(h, R) || _ !== C || l !== D) && (m(N(h)), v(h), y(_), L(l));
     let b = (0, a.useMemo)(() => T.parse(I), [T, I]),
         M = (e, i) => {
             if (isNaN(b)) {

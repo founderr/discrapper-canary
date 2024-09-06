@@ -109,7 +109,7 @@ function _(e) {
                 h = c(e.kind, e.id, t),
                 p = null == o.trackExposureOptions ? void 0 : (0, i.Z)(null !== (a = o.trackExposureOptions) && void 0 !== a ? a : {}),
                 m = null !== (s = null == h ? void 0 : h.triggerDebuggingEnabled) && void 0 !== s && s,
-                [[T, g, S], A] = (0, r.useState)(() => {
+                [[T, S, g], A] = (0, r.useState)(() => {
                     let t = null == h || l ? u.NZ.NOT_ELIGIBLE : h.bucket;
                     return [d(e, t, _, h), t, null == h ? -1 : h.revision];
                 }),
@@ -117,7 +117,7 @@ function _(e) {
             return (
                 (0, r.useEffect)(() => {
                     if (!l && (!!E || !!m)) f(N, p, !1 === E);
-                }, [l, E, N, p, g, S, m]),
+                }, [l, E, N, p, S, g, m]),
                 (0, r.useEffect)(
                     () =>
                         I(

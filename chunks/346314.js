@@ -45,7 +45,7 @@ function _(e) {
             className: u
         }),
         h = E ? { color: n } : void 0;
-    return (0, r.jsx)(o.e, {
+    return (0, r.jsx)(o.Anchor, {
         ...c,
         children: f,
         style: h

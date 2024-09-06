@@ -21,8 +21,8 @@ var r = n(735250),
     I = n(453070),
     m = n(373228),
     T = n(378233),
-    g = n(689938),
-    S = n(310512);
+    S = n(689938),
+    g = n(310512);
 let A = (e) => e.preventDefault(),
     N = {
         tension: 1100,
@@ -40,13 +40,13 @@ function R(e, t) {
 }
 function v(e) {
     let t = 'description' in e && null != e.description ? ''.concat(e.name, ', ').concat(e.description) : e.name;
-    return g.Z.Messages.STICKER_A11Y_LABEL.format({ stickerName: t });
+    return S.Z.Messages.STICKER_A11Y_LABEL.format({ stickerName: t });
 }
 let C = (e) => {
         let { children: t, hasError: n, isLoading: i, maskAsset: a, size: o, withLoadingIndicator: l = !0 } = e,
             u = o >= 33;
         return (0, r.jsxs)('div', {
-            className: s()(S.assetWrapper, { [S.assetWrapperMasked]: n || a }),
+            className: s()(g.assetWrapper, { [g.assetWrapperMasked]: n || a }),
             style: {
                 height: o,
                 width: o
@@ -54,26 +54,26 @@ let C = (e) => {
             children: [
                 n
                     ? (0, r.jsxs)('div', {
-                          className: S.error,
+                          className: g.error,
                           children: [
                               (0, r.jsx)(_.StickerSadIcon, {
                                   size: 'custom',
                                   width: 20,
                                   height: 20,
                                   color: 'currentColor',
-                                  className: S.errorIcon
+                                  className: g.errorIcon
                               }),
                               u &&
                                   (0, r.jsx)(_.Text, {
-                                      className: S.errorText,
+                                      className: g.errorText,
                                       color: 'header-secondary',
                                       variant: 'text-sm/normal',
-                                      children: g.Z.Messages.STICKER_ASSET_LOAD_ERROR
+                                      children: S.Z.Messages.STICKER_ASSET_LOAD_ERROR
                                   })
                           ]
                       })
                     : t,
-                l && i && (0, r.jsx)('div', { className: S.loadingIndicator })
+                l && i && (0, r.jsx)('div', { className: g.loadingIndicator })
             ]
         });
     },
@@ -83,12 +83,12 @@ let C = (e) => {
             m = i.useRef(null),
             [A, N] = i.useState(!0),
             [O, y] = i.useState(!1),
-            L = i.useRef(!1);
-        L.current = t && c;
-        let D = null == o ? (0, T.Q6)(s) : o;
-        return (l()(null != D, 'Unable to determine sticker asset URL. Sticker ID: '.concat(s.id)),
+            D = i.useRef(!1);
+        D.current = t && c;
+        let L = null == o ? (0, T.Q6)(s) : o;
+        return (l()(null != L, 'Unable to determine sticker asset URL. Sticker ID: '.concat(s.id)),
         i.useEffect(() => {
-            if (null == I.current || null == D) return;
+            if (null == I.current || null == L) return;
             let e = Math.min(2, (0, f.x_)());
             (I.current.width = a * e), (I.current.height = a * e);
             let t = !1;
@@ -99,7 +99,7 @@ let C = (e) => {
                         ((m.current = new e({
                             canvas: I.current,
                             animationId: s.id,
-                            assetUrl: D,
+                            assetUrl: L,
                             assetData: u,
                             onInitialDraw: () => {
                                 !t && N(!1);
@@ -108,25 +108,25 @@ let C = (e) => {
                                 !t && (N(!1), y(!0), null == p || p());
                             }
                         })),
-                        L.current && m.current.setState(!0));
+                        D.current && m.current.setState(!0));
                 })(),
                 () => {
                     var e;
                     null === (e = m.current) || void 0 === e || e.drop(), (m.current = null), (t = !0);
                 }
             );
-        }, [D, a, s.id, u, p]),
+        }, [L, a, s.id, u, p]),
         i.useEffect(() => {
             var e;
             let n;
             !t && (n = 0), null === (e = m.current) || void 0 === e || e.setState(t && c, n);
         }, [s, t, c]),
-        null == D)
+        null == L)
             ? null
             : (0, r.jsx)('div', {
                   role: 'img',
                   className: d,
-                  'aria-label': O ? g.Z.Messages.ERROR_LOADING_STICKER : v(s),
+                  'aria-label': O ? S.Z.Messages.ERROR_LOADING_STICKER : v(s),
                   ref: E,
                   children: (0, r.jsx)(C, {
                       hasError: O,
@@ -136,7 +136,7 @@ let C = (e) => {
                       withLoadingIndicator: h,
                       children: R(
                           (0, r.jsx)('canvas', {
-                              className: S.lottieCanvas,
+                              className: g.lottieCanvas,
                               ref: I
                           }),
                           s.id
@@ -144,11 +144,11 @@ let C = (e) => {
                   })
               });
     },
-    L = (e) => {
+    D = (e) => {
         let { shouldAnimate: t, sticker: n, isFocused: a, size: o, className: l, maskAsset: u, positionRef: c, withLoadingIndicator: _, fileUri: E } = e,
             [f, h] = i.useState(!1),
             [p, I] = i.useState(!0),
-            [m, g] = i.useState(!1),
+            [m, S] = i.useState(!1),
             N = i.useRef(null),
             O = i.useRef(null),
             y =
@@ -158,11 +158,11 @@ let C = (e) => {
                           isPreview: !t || !f || !a,
                           size: o
                       }),
-            L = i.useCallback(() => {
+            D = i.useCallback(() => {
                 I(!1);
             }, []),
-            D = i.useCallback(() => {
-                g(!0);
+            L = i.useCallback(() => {
+                S(!0);
             }, []);
         return (i.useEffect(() => {
             if (null != N.current) {
@@ -181,7 +181,7 @@ let C = (e) => {
                   onChange: h,
                   threshold: 0.7,
                   children: (0, r.jsx)('div', {
-                      className: s()(l, S.__invalid_pngImageWrapper),
+                      className: s()(l, g.__invalid_pngImageWrapper),
                       ref: c,
                       children: (0, r.jsx)(C, {
                           hasError: m,
@@ -191,12 +191,12 @@ let C = (e) => {
                           withLoadingIndicator: _,
                           children: R(
                               (0, r.jsx)('img', {
-                                  className: S.pngImage,
+                                  className: g.pngImage,
                                   alt: v(n),
                                   src: y,
                                   draggable: !1,
-                                  onError: D,
-                                  onLoad: L,
+                                  onError: L,
+                                  onLoad: D,
                                   onContextMenu: A,
                                   ref: O
                               }),
@@ -206,7 +206,7 @@ let C = (e) => {
                   })
               });
     },
-    D = (e) => {
+    L = (e) => {
         let { disableAnimation: t, enlargeScaleFactor: n, enlargeWithName: a, isInteracting: s, positionRef: o, size: l, sticker: d } = e,
             f = (0, c.e7)([E.Z], () => E.Z.useReducedMotion),
             p = i.useRef(null),
@@ -225,7 +225,7 @@ let C = (e) => {
                 config: N
             }),
             T = i.useRef(null),
-            g = (0, _.useSpring)(
+            S = (0, _.useSpring)(
                 {
                     ref: T,
                     transform: s || f ? 'translateY(0)' : 'translateY(-25px)',
@@ -240,20 +240,20 @@ let C = (e) => {
                 (e, i) =>
                     i &&
                     (0, r.jsx)(h.W5, {
-                        className: S.positionedLayer,
+                        className: g.positionedLayer,
                         fixed: !0,
                         align: 'center',
                         position: 'center',
                         targetRef: o,
                         children: () =>
                             (0, r.jsxs)('div', {
-                                className: S.overlayWrapper,
+                                className: g.overlayWrapper,
                                 children: [
                                     (0, r.jsx)(u.animated.div, {
-                                        className: S.overlayStickerWrapper,
+                                        className: g.overlayStickerWrapper,
                                         style: e,
                                         children: (0, r.jsx)(b, {
-                                            className: S.__invalid_overlaySticker,
+                                            className: g.__invalid_overlaySticker,
                                             disableAnimation: t,
                                             enlargeOnInteraction: !1,
                                             isInteracting: s,
@@ -265,11 +265,11 @@ let C = (e) => {
                                     }),
                                     a &&
                                         (0, r.jsx)(u.animated.div, {
-                                            className: S.overlayLabelWrapper,
-                                            style: g,
+                                            className: g.overlayLabelWrapper,
+                                            style: S,
                                             children: (0, r.jsx)(_.Text, {
                                                 variant: 'text-sm/medium',
-                                                className: S.overlayLabel,
+                                                className: g.overlayLabel,
                                                 children: d.name
                                             })
                                         })
@@ -282,34 +282,34 @@ let C = (e) => {
     b = (e) => {
         let { isInteracting: t = !1, disableAnimation: n = !1, enlargeOnInteraction: a = !1, enlargeWithName: s = !0, enlargeScaleFactor: o = 1.55, maskAsset: l = !1, size: u, sticker: c, className: d, withLoadingIndicator: _, assetData: E, fileUri: f, onError: h } = e,
             T = (0, p.n)(),
-            g = (0, I.t$)(t) && !n,
-            S = i.useRef(null);
+            S = (0, I.t$)(t) && !n,
+            g = i.useRef(null);
         if (null == c) return null;
-        let A = c.format_type === m.u3.LOTTIE ? y : L;
+        let A = c.format_type === m.u3.LOTTIE ? y : D;
         return (0, r.jsxs)(
             i.Fragment,
             {
                 children: [
                     (0, r.jsx)(A, {
-                        shouldAnimate: g,
+                        shouldAnimate: S,
                         isFocused: T,
                         size: u,
                         sticker: c,
                         className: d,
                         maskAsset: l,
-                        positionRef: S,
+                        positionRef: g,
                         withLoadingIndicator: _,
                         assetData: E,
                         fileUri: f,
                         onError: h
                     }),
                     a &&
-                        (0, r.jsx)(D, {
+                        (0, r.jsx)(L, {
                             disableAnimation: n,
                             enlargeScaleFactor: o,
                             enlargeWithName: s,
                             isInteracting: t,
-                            positionRef: S,
+                            positionRef: g,
                             size: u,
                             sticker: c
                         })

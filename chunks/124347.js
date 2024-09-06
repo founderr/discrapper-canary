@@ -24,8 +24,8 @@ var r,
     I = n(866960),
     m = n(626135),
     T = n(768581),
-    g = n(956664),
-    S = n(981631),
+    S = n(956664),
+    g = n(981631),
     A = n(217702);
 function N(e, t, n) {
     return (
@@ -54,7 +54,7 @@ class v extends (i = o.Component) {
     }
     componentDidMount() {
         let { readyState: e } = this.state;
-        e === S.zo9.LOADING && this.loadImage(this.getSrc(this.getRatio(), v.isAnimated(this.props)), this.handleImageLoad), v.isAnimated(this.props) && this.observeVisibility();
+        e === g.zo9.LOADING && this.loadImage(this.getSrc(this.getRatio(), v.isAnimated(this.props)), this.handleImageLoad), v.isAnimated(this.props) && this.observeVisibility();
     }
     componentDidUpdate(e) {
         let t = v.isAnimated(this.props);
@@ -93,13 +93,13 @@ class v extends (i = o.Component) {
     getRatio() {
         let { width: e, height: t, maxWidth: n = 400, maxHeight: r = 300, mediaLayoutType: i, useFullWidth: a } = this.props;
         return i === A.hV.MOSAIC && a
-            ? (0, g.rn)({
+            ? (0, S.rn)({
                   width: e,
                   height: t,
                   maxWidth: n,
                   maxHeight: r
               })
-            : (0, g.Dc)({
+            : (0, S.Dc)({
                   width: e,
                   height: t,
                   maxWidth: n,
@@ -119,12 +119,12 @@ class v extends (i = o.Component) {
         null != i && this._cancellers.add(i);
     }
     render() {
-        let { alt: e, zoomThumbnailPlaceholder: t, onZoom: n, shouldLink: r, onContextMenu: i, autoPlay: a, original: o, className: u, imageClassName: c, children: _, animated: E, shouldAnimate: f, width: h, height: p, minWidth: I, minHeight: m, maxWidth: T, maxHeight: g, onClick: A, renderAccessory: N, tabIndex: O, limitResponsiveWidth: R, useFullWidth: C, placeholder: y, placeholderVersion: L, dataSafeSrc: D } = this.props,
+        let { alt: e, zoomThumbnailPlaceholder: t, onZoom: n, shouldLink: r, onContextMenu: i, autoPlay: a, original: o, className: u, imageClassName: c, children: _, animated: E, shouldAnimate: f, width: h, height: p, minWidth: I, minHeight: m, maxWidth: T, maxHeight: S, onClick: A, renderAccessory: N, tabIndex: O, limitResponsiveWidth: R, useFullWidth: C, placeholder: y, placeholderVersion: D, dataSafeSrc: L } = this.props,
             { readyState: b, hasMouseOver: M, hasFocus: P } = this.state,
             U = null != n,
             w = this.getRatio(),
             x = (0, l.clamp)(Math.round(h * w), null != I ? I : 0, null != T ? T : 1 / 0),
-            G = (0, l.clamp)(Math.round(p * w), null != m ? m : 0, null != g ? g : 1 / 0),
+            G = (0, l.clamp)(Math.round(p * w), null != m ? m : 0, null != S ? S : 1 / 0),
             k = {
                 alt: e,
                 readyState: b,
@@ -142,8 +142,8 @@ class v extends (i = o.Component) {
                 height: G,
                 src: '',
                 placeholder: y,
-                placeholderVersion: L,
-                dataSafeSrc: D,
+                placeholderVersion: D,
+                dataSafeSrc: L,
                 children:
                     null != _
                         ? (e) => {
@@ -163,10 +163,10 @@ class v extends (i = o.Component) {
             };
         if (1 === k.width && 1 === k.height) return null;
         switch (((U || null != A) && (k.onClick = this.onClick), r && (k.original = null != o && '' !== o ? o : k.src), b)) {
-            case S.zo9.LOADING:
+            case g.zo9.LOADING:
                 null != t && (k.src = t);
                 break;
-            case S.zo9.READY:
+            case g.zo9.READY:
                 if (v.isAnimated(this.props)) {
                     k.onMouseLeave = this.onMouseLeave;
                     let e = (a || M || P) && (null == f || f) && v.visibilityObserver.isVisible(this);
@@ -194,7 +194,7 @@ class v extends (i = o.Component) {
             s = null != a ? Number(a) : null,
             o = Date.now() - this.startLoadingTime,
             { format: l, quality: c } = this.getFormatQuality();
-        m.default.track(S.rMx.IMAGE_LOADING_COMPLETED, {
+        m.default.track(g.rMx.IMAGE_LOADING_COMPLETED, {
             duration_ms: o,
             requested_height: t.height,
             requested_width: t.width,
@@ -205,7 +205,7 @@ class v extends (i = o.Component) {
             requested_url: t.url,
             format: l,
             quality: c,
-            state: e ? S.zo9.ERROR : this.state.readyState,
+            state: e ? g.zo9.ERROR : this.state.readyState,
             data_saving_mode: p.ZP.dataSavingMode,
             low_quality_image_mode: p.ZP.dataSavingMode,
             trigger: n,
@@ -219,7 +219,7 @@ class v extends (i = o.Component) {
         super(e),
             N(this, 'imageLoadAnalyticsEnabled', !1),
             N(this, 'state', {
-                readyState: S.zo9.LOADING,
+                readyState: g.zo9.LOADING,
                 hasMouseOver: !1,
                 hasFocus: !1
             }),
@@ -232,7 +232,7 @@ class v extends (i = o.Component) {
                 v.visibilityObserver.unobserve(this);
             }),
             N(this, 'handleImageLoad', (e, t) => {
-                this.setState({ readyState: e ? S.zo9.ERROR : S.zo9.READY }, () => {
+                this.setState({ readyState: e ? g.zo9.ERROR : g.zo9.READY }, () => {
                     var n;
                     return this.trackLoadingCompleted(e, t, null !== (n = this.props.trigger) && void 0 !== n ? n : 'LOAD');
                 });
@@ -243,7 +243,7 @@ class v extends (i = o.Component) {
                 (1 !== i || 1 !== a) &&
                     this.loadImage(
                         this.getSrc(
-                            (0, g.Dc)({
+                            (0, S.Dc)({
                                 width: i,
                                 height: a,
                                 maxWidth: n,
@@ -288,7 +288,7 @@ class v extends (i = o.Component) {
                     n = null != this.props.renderAccessory ? this.props.renderAccessory() : null;
                 return this.props.shouldRenderAccessory ? (e || t ? n : (0, s.jsx)(E.Z, {})) : null;
             }),
-            (0, f.Vv)(this.getSrc(this.getRatio(), v.isAnimated(this.props))) && (this.state.readyState = S.zo9.READY),
+            (0, f.Vv)(this.getSrc(this.getRatio(), v.isAnimated(this.props))) && (this.state.readyState = g.zo9.READY),
             (this.imageLoadAnalyticsEnabled = C.getCurrentConfig({ location: 'lazy_image' }).enabled);
     }
 }

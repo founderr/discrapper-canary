@@ -11,19 +11,19 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(120356),
-    s = n.n(a),
+var s = n(120356),
+    a = n.n(s),
     l = n(481060),
     r = n(534091),
     o = n(981631),
     c = n(337928);
 function u(e) {
     let { locked: t = !1, channelType: n } = e,
-        a = (0, l.useRedesignIconContext)().enabled,
+        s = (0, l.useRedesignIconContext)().enabled,
         r = n === o.d4z.GUILD_VOICE || n === o.d4z.GUILD_STAGE_VOICE;
-    if (!a)
+    if (!s)
         return (0, i.jsx)('div', {
-            className: s()(c.emptyChannelIcon, c.emptyChannelIconSvg, {
+            className: a()(c.emptyChannelIcon, c.emptyChannelIconSvg, {
                 [c.locked]: t,
                 [c.voiceChat]: r
             })
@@ -31,7 +31,7 @@ function u(e) {
     {
         let e = r ? l.ChatIcon : t ? l.TextLockIcon : l.TextIcon;
         return (0, i.jsx)('div', {
-            className: s()(c.emptyChannelIcon, c.emptyChannelIconComponent),
+            className: a()(c.emptyChannelIcon, c.emptyChannelIconComponent),
             children: (0, i.jsx)(e, {
                 color: l.tokens.colors.WHITE,
                 size: 'custom',
@@ -45,7 +45,7 @@ function d(e) {
     let { children: t, className: n } = e;
     return (0, i.jsx)(l.Heading, {
         'aria-hidden': 'true',
-        className: s()(n, c.header),
+        className: a()(n, c.header),
         variant: 'heading-xxl/extrabold',
         children: t
     });
@@ -60,11 +60,11 @@ function h(e) {
     });
 }
 t.ZP = function (e) {
-    let { className: t, channelId: n, children: a, ...l } = e;
+    let { className: t, channelId: n, children: s, ...l } = e;
     return (0, i.jsx)('div', {
-        className: s()(t, c.container),
+        className: a()(t, c.container),
         id: (0, r.p)(n, n),
         ...l,
-        children: a
+        children: s
     });
 };

@@ -26,16 +26,16 @@ e.exports = function (e, t, n) {
             r = e - f;
         return void 0 === E || n >= t || n < 0 || (p && r >= c);
     }
-    function g() {
+    function S() {
         var e,
             n,
             r,
             a,
             s = i();
-        if (T(s)) return S(s);
-        _ = setTimeout(g, ((n = (e = s) - E), (r = e - f), (a = t - n), p ? o(a, c - r) : a));
+        if (T(s)) return g(s);
+        _ = setTimeout(S, ((n = (e = s) - E), (r = e - f), (a = t - n), p ? o(a, c - r) : a));
     }
-    function S(e) {
+    function g(e) {
         return ((_ = void 0), I && l) ? m(e) : ((l = u = void 0), d);
     }
     function A() {
@@ -44,18 +44,18 @@ e.exports = function (e, t, n) {
             r = T(n);
         if (((l = arguments), (u = this), (E = n), r)) {
             if (void 0 === _) {
-                return (f = e = E), (_ = setTimeout(g, t)), h ? m(e) : d;
+                return (f = e = E), (_ = setTimeout(S, t)), h ? m(e) : d;
             }
-            if (p) return clearTimeout(_), (_ = setTimeout(g, t)), m(E);
+            if (p) return clearTimeout(_), (_ = setTimeout(S, t)), m(E);
         }
-        return void 0 === _ && (_ = setTimeout(g, t)), d;
+        return void 0 === _ && (_ = setTimeout(S, t)), d;
     }
     return (
         (A.cancel = function () {
             void 0 !== _ && clearTimeout(_), (f = 0), (l = E = u = _ = void 0);
         }),
         (A.flush = function () {
-            return void 0 === _ ? d : S(i());
+            return void 0 === _ ? d : g(i());
         }),
         A
     );

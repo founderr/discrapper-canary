@@ -305,9 +305,9 @@ class T {
         return t;
     }
 }
-let g = new T();
-'u' > typeof window && g.setContainer(document.body);
-let S = o.createContext(g);
+let S = new T();
+'u' > typeof window && S.setContainer(document.body);
+let g = o.createContext(S);
 var A = function (e, t, n, r) {
     var i = n ? n.call(r, e, t) : void 0;
     if (void 0 !== i) return !!i;
@@ -348,10 +348,10 @@ let C = !1,
             (N = !1), null != O && cancelAnimationFrame(O);
         }
     };
-var L = { exports: {} },
-    D = {};
-L.exports = (function () {
-    if (a) return D;
+var D = { exports: {} },
+    L = {};
+D.exports = (function () {
+    if (a) return L;
     a = 1;
     var e = Symbol.for('react.element'),
         t = Symbol.for('react.fragment'),
@@ -379,10 +379,10 @@ L.exports = (function () {
             _owner: r.current
         };
     }
-    return (D.Fragment = t), (D.jsx = s), (D.jsxs = s), D;
+    return (L.Fragment = t), (L.jsx = s), (L.jsxs = s), L;
 })();
-let b = L.exports.jsx,
-    M = L.exports.jsxs;
+let b = D.exports.jsx,
+    M = D.exports.jsxs;
 function P(e) {
     let { containerRef: t, children: n, themeOptions: r } = e,
         i = o.useRef(new T());
@@ -390,14 +390,14 @@ function P(e) {
         o.useEffect(() => {
             i.current.setContainer(t.current), i.current.setThemeOptions(r);
         }, [t.current]),
-        M(S.Provider, {
+        M(g.Provider, {
             value: i.current,
             children: [n, b(U, {})]
         })
     );
 }
 function U() {
-    let e = o.useContext(S),
+    let e = o.useContext(g),
         [, t] = o.useState({});
     return (
         o.useEffect(
@@ -423,9 +423,9 @@ function x(e) {
     null != a && E(null != s, 'FocusRing was given a focusTarget but the required ringTarget was not provided. A ringTarget is required to avoid ambiguity of where the ring will be applied.'), null != r && E(null != s, 'FocusRing was given a controlled focused prop but no ringTarget to apply the ring to. A ringTarget is required since it cannot be inferred through regular focus events.');
     let f = o.useRef(!1),
         [h, p] = o.useState(!1),
-        I = o.useContext(S),
+        I = o.useContext(g),
         m = o.Children.only(d),
-        { onBlur: T, onFocus: g, ...A } = m.props,
+        { onBlur: T, onFocus: S, ...A } = m.props,
         N = o.useMemo(
             () => ({
                 className: l,
@@ -483,9 +483,9 @@ function x(e) {
         R = o.useCallback(
             (e) => {
                 let n = null == s ? void 0 : s.current;
-                e.currentTarget === e.target ? ((f.current = !0), I.showElement(null != n ? n : e.currentTarget, N)) : (p(!0), t && I.showElement(null != n ? n : e.currentTarget, N)), null == g || g(e);
+                e.currentTarget === e.target ? ((f.current = !0), I.showElement(null != n ? n : e.currentTarget, N)) : (p(!0), t && I.showElement(null != n ? n : e.currentTarget, N)), null == S || S(e);
             },
-            [s, t, g, I, N]
+            [s, t, S, I, N]
         );
     return n && null == a && null == r
         ? o.cloneElement(m, {

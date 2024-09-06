@@ -20,17 +20,17 @@ var r = n(735250),
     I = n(526617),
     m = n(474936),
     T = n(689938),
-    g = n(517947);
-let S = [8, 8, 8, 8];
+    S = n(517947);
+let g = [8, 8, 8, 8];
 function A(e) {
     let { icon: t, isSelected: n, onClick: i, listItemProps: a, ...o } = e;
     return (0, r.jsx)(u.Clickable, {
         ...a,
         ...o,
         onClick: i,
-        className: s()(g.categoryIcon, { [g.selected]: n }),
+        className: s()(S.categoryIcon, { [S.selected]: n }),
         children: (0, r.jsx)(t, {
-            className: g.categoryIconIcon,
+            className: S.categoryIconIcon,
             color: 'currentColor'
         })
     });
@@ -116,7 +116,7 @@ function N(e) {
                             {
                                 ...a,
                                 ...i,
-                                className: g.category,
+                                className: S.category,
                                 onClick: t,
                                 children: (0, r.jsx)(c.Z, {
                                     guild: e.categoryInfo.guild,
@@ -145,7 +145,7 @@ function N(e) {
     });
 }
 function O(e) {
-    let { soundboardListRef: t, categories: n, shouldUpsellLockedCategories: a, listPadding: s = S, guildId: o } = e,
+    let { soundboardListRef: t, categories: n, shouldUpsellLockedCategories: a, listPadding: s = g, guildId: o } = e,
         u = i.useRef(null),
         c = (0, l.e7)([f.default], () => f.default.getCurrentUser()),
         E = (0, h.I5)(c, m.p9.TIER_2),
@@ -163,7 +163,7 @@ function O(e) {
             [o, a, E]
         );
     return (0, r.jsx)(_.Z, {
-        className: g.categoryList,
+        className: S.categoryList,
         categoryListRef: u,
         expressionsListRef: t,
         store: d.Wq,

@@ -34,8 +34,8 @@ function I() {
         n = (0, c._O)(),
         I = (0, i.e7)([l.Z], () => l.Z.hasAnyUnexpiredOffer()),
         m = (0, i.e7)([o.ZP], () => o.ZP.inReverseTrial()),
-        [T, g] = r.useState(!1),
-        [S, A] = r.useState([]);
+        [T, S] = r.useState(!1),
+        [g, A] = r.useState([]);
     r.useEffect(() => {
         null != e && a.Z.wait(() => E.ZP.markOutboundPromotionsSeen());
     }, [e]);
@@ -67,15 +67,15 @@ function I() {
             a.Z.wait(() => {
                 (0, _.t8)()
                     .then((e) => {
-                        A(e), g(!0);
+                        A(e), S(!0);
                     })
                     .catch(() => {
-                        A([]), g(!0);
+                        A([]), S(!0);
                     });
             });
         }, []);
     let v = {};
-    for (let { code: e, promotion: t } of S) v[t.id] = e;
+    for (let { code: e, promotion: t } of g) v[t.id] = e;
     let C = p(n, I, m, v),
         y = new Set(
             C.map((e) => {
@@ -83,14 +83,14 @@ function I() {
                 return t;
             })
         ),
-        L = S.filter((e) => {
+        D = g.filter((e) => {
             let { promotion: t } = e;
             return !y.has(t.id);
         });
     return {
         promotionsLoaded: T && (!R || null != e),
         activeOutboundPromotions: C,
-        claimedEndedOutboundPromotions: L.filter((e) => (0, _.ZC)(e.promotion)),
+        claimedEndedOutboundPromotions: D.filter((e) => (0, _.ZC)(e.promotion)),
         claimedOutboundPromotionCodeMap: v,
         addClaimedOutboundPromotionCode: N
     };

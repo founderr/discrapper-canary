@@ -16,8 +16,8 @@ var r,
     I = n(199902),
     m = n(314897),
     T = n(523746),
-    g = n(592125),
-    S = n(944486),
+    S = n(592125),
+    g = n(944486),
     A = n(606304),
     N = n(594174),
     O = n(33039),
@@ -25,8 +25,8 @@ var r,
     v = n(413523),
     C = n(354459),
     y = n(981631);
-let L = new f.Z('ChannelRTCStore'),
-    D = Object.freeze([]),
+let D = new f.Z('ChannelRTCStore'),
+    L = Object.freeze([]),
     b = [],
     M = {},
     P = {},
@@ -56,7 +56,7 @@ function Z(e) {
                   (function (e) {
                       let t = m.default.getId(),
                           n = H(e);
-                      if (0 === n.size() || S.Z.getVoiceChannelId() !== e) {
+                      if (0 === n.size() || g.Z.getVoiceChannelId() !== e) {
                           z(e, null);
                           return;
                       }
@@ -90,7 +90,7 @@ function Y(e) {
 }
 function j(e) {
     var t;
-    let n = g.Z.getChannel(e),
+    let n = S.Z.getChannel(e),
         r = (null == n ? void 0 : n.isDM()) ? C.dF.AUTO : C.dF.NONE;
     return null !== (t = P[e]) && void 0 !== t ? t : [r, C.dF.NONE];
 }
@@ -132,9 +132,9 @@ function X() {
         (e) => e.rebuild(),
         (function () {
             let e = [],
-                t = S.Z.getChannelId();
+                t = g.Z.getChannelId();
             null != t && e.push(t);
-            let n = S.Z.getVoiceChannelId();
+            let n = g.Z.getVoiceChannelId();
             null != n && !e.includes(n) && e.push(n);
             let r = h.Z.getRemoteSessionId(),
                 i = R.Z.getVoiceStateForSession(m.default.getId(), r);
@@ -172,37 +172,37 @@ function er(e) {
 }
 function ei(e) {
     var t;
-    return !!(null === (t = g.Z.getChannel(e)) || void 0 === t ? void 0 : t.isGuildVocal());
+    return !!(null === (t = S.Z.getChannel(e)) || void 0 === t ? void 0 : t.isGuildVocal());
 }
 class ea extends (r = d.ZP.Store) {
     initialize() {
-        this.waitFor(I.Z, m.default, T.Z, g.Z, E.ZP, S.Z, A.Z, N.default, O.Z, R.Z), this.syncWith([E.ZP], $), this.syncWith([h.Z], X);
+        this.waitFor(I.Z, m.default, T.Z, S.Z, E.ZP, g.Z, A.Z, N.default, O.Z, R.Z), this.syncWith([E.ZP], $), this.syncWith([h.Z], X);
     }
     getParticipantsVersion(e) {
         return H(e).version;
     }
     getParticipants(e) {
         var t;
-        return null !== (t = H(e).toArray()) && void 0 !== t ? t : D;
+        return null !== (t = H(e).toArray()) && void 0 !== t ? t : L;
     }
     getSpeakingParticipants(e) {
         var t;
-        return null !== (t = H(e).toArray(v.sI.SPEAKING)) && void 0 !== t ? t : D;
+        return null !== (t = H(e).toArray(v.sI.SPEAKING)) && void 0 !== t ? t : L;
     }
     getFilteredParticipants(e) {
         return k[e] ? H(e).toArray(v.sI.FILTERED) : H(e).toArray();
     }
     getVideoParticipants(e) {
         var t;
-        return null !== (t = H(e).toArray(v.sI.VIDEO)) && void 0 !== t ? t : D;
+        return null !== (t = H(e).toArray(v.sI.VIDEO)) && void 0 !== t ? t : L;
     }
     getStreamParticipants(e) {
         var t;
-        return null !== (t = H(e).toArray(v.sI.STREAM)) && void 0 !== t ? t : D;
+        return null !== (t = H(e).toArray(v.sI.STREAM)) && void 0 !== t ? t : L;
     }
     getActivityParticipants(e) {
         var t;
-        return null !== (t = H(e).toArray(v.sI.ACTIVITY)) && void 0 !== t ? t : D;
+        return null !== (t = H(e).toArray(v.sI.ACTIVITY)) && void 0 !== t ? t : L;
     }
     getParticipant(e, t) {
         return H(e).getParticipant(t);
@@ -245,7 +245,7 @@ class ea extends (r = d.ZP.Store) {
         var t, n;
         let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : y.IlC.APP;
         if (__OVERLAY__) return y.AEg.NORMAL;
-        let i = g.Z.getChannel(e),
+        let i = S.Z.getChannel(e),
             a = ei(e) || (null == i ? void 0 : i.isBroadcastChannel());
         return null !== (n = null === (t = x[e]) || void 0 === t ? void 0 : t[r]) && void 0 !== n ? n : a ? y.AEg.NO_CHAT : y.AEg.NORMAL;
     }
@@ -288,7 +288,7 @@ class ea extends (r = d.ZP.Store) {
         CHANNEL_SELECT: function (e) {
             let { channelId: t, messageId: n } = e,
                 r = X(),
-                i = g.Z.getChannel(t);
+                i = S.Z.getChannel(t);
             return null == t || null == n || ((null == i ? void 0 : i.type) !== y.d4z.GUILD_VOICE && (null == i ? void 0 : i.type) !== y.d4z.GUILD_STAGE_VOICE) || B[t] ? r : ((B[t] = !0), !0);
         },
         CHANNEL_RTC_ACTIVE_CHANNELS: X,
@@ -332,7 +332,7 @@ class ea extends (r = d.ZP.Store) {
                     let { ownerId: e } = (0, p.my)(n);
                     e === m.default.getId() && Y(e, [t]);
                 } catch (e) {
-                    L.warn('INVALID STREAM KEY FORMAT '.concat(n), e);
+                    D.warn('INVALID STREAM KEY FORMAT '.concat(n), e);
                 }
                 !q(r) && (G[t] = !1);
             }
@@ -406,7 +406,7 @@ class ea extends (r = d.ZP.Store) {
                 n = [];
             if (
                 (c().forEach(b, (e) => {
-                    let r = g.Z.getChannel(e);
+                    let r = S.Z.getChannel(e);
                     (null == r || r.getGuildId() === t.id) && n.push(e);
                 }),
                 0 === n.length)

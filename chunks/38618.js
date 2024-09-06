@@ -16,8 +16,8 @@ var r,
     I = n(592125),
     m = n(131951),
     T = n(19780),
-    g = n(936349),
-    S = n(944486),
+    S = n(936349),
+    g = n(944486),
     A = n(885110),
     N = n(959457),
     O = n(358085),
@@ -25,8 +25,8 @@ var r,
     v = n(955132),
     C = n(645436),
     y = n(344651),
-    L = n(981631),
-    D = n(526761);
+    D = n(981631),
+    L = n(526761);
 let b = window.DiscordNative;
 v.Wb.dispatcher.getDispatchHandler = y.Z;
 let M = new _.Z('ConnectionStore'),
@@ -37,7 +37,7 @@ let M = new _.Z('ConnectionStore'),
 async function G(e) {
     (P = Date.now()), (U = e.sessionId), v.RR.handleConnectionOpen();
     let t = {},
-        n = S.Z.getVoiceChannelId();
+        n = g.Z.getVoiceChannelId();
     if (null != n) {
         var r, i, a, s, o, l, u, c;
         if ((null === (o = window) || void 0 === o ? void 0 : null === (s = o.performance) || void 0 === s ? void 0 : null === (a = s.getEntriesByType) || void 0 === a ? void 0 : null === (i = a.call(s, 'navigation')) || void 0 === i ? void 0 : null === (r = i[0]) || void 0 === r ? void 0 : r.type) === 'reload' || (null === (l = await (null == b ? void 0 : null === (c = b.processUtils) || void 0 === c ? void 0 : null === (u = c.getLastCrash) || void 0 === u ? void 0 : u.call(c))) || void 0 === l ? void 0 : l.rendererCrashReason) != null || !w) {
@@ -65,7 +65,7 @@ function V(e) {
 }
 class H extends (r = u.ZP.Store) {
     initialize() {
-        this.waitFor(h.default, S.Z, I.Z, p.Z, f.Z), this.syncWith([m.Z], B), this.syncWith([A.Z], F);
+        this.waitFor(h.default, g.Z, I.Z, p.Z, f.Z), this.syncWith([m.Z], B), this.syncWith([A.Z], F);
     }
     getSocket() {
         return v.Wb;
@@ -112,7 +112,7 @@ class H extends (r = u.ZP.Store) {
             M.verbose('connection closed dispatched'), (P = Date.now());
         },
         RTC_CONNECTION_STATE: function (e) {
-            if (e.state !== L.hes.DISCONNECTED) return !1;
+            if (e.state !== D.hes.DISCONNECTED) return !1;
             e.willReconnect && (null != e.streamKey ? v.Wb.streamPing(e.streamKey) : v.Wb.voiceServerPing());
         },
         VOICE_CHANNEL_SELECT: function (e) {
@@ -121,7 +121,7 @@ class H extends (r = u.ZP.Store) {
                     guildId: e.guildId,
                     channelId: e.channelId
                 }),
-                (0, O.isIOS)() && x === L.$7l.BACKGROUND && (null == e.channelId ? v.Wb.close(!0) : v.Wb.isClosed() && (C.Y(!1), v.Wb.connect())),
+                (0, O.isIOS)() && x === D.$7l.BACKGROUND && (null == e.channelId ? v.Wb.close(!0) : v.Wb.isClosed() && (C.Y(!1), v.Wb.connect())),
                 !1
             );
         },
@@ -168,7 +168,7 @@ class H extends (r = u.ZP.Store) {
                 });
         },
         APP_STATE_UPDATE: function (e) {
-            return (0, O.isIOS)() ? (h.default.isAuthenticated() && (x === L.$7l.INACTIVE && e.state === L.$7l.BACKGROUND && null == v.GC.channelId ? v.Wb.close(!0) : x === L.$7l.BACKGROUND && e.state === L.$7l.ACTIVE && v.Wb.isClosed() && (C.Y(!1), v.Wb.connect())), (x = e.state)) : e.state === L.$7l.ACTIVE && (C.Y(!1), h.default.isAuthenticated() && v.Wb.resetBackoff('App state is active')), !1;
+            return (0, O.isIOS)() ? (h.default.isAuthenticated() && (x === D.$7l.INACTIVE && e.state === D.$7l.BACKGROUND && null == v.GC.channelId ? v.Wb.close(!0) : x === D.$7l.BACKGROUND && e.state === D.$7l.ACTIVE && v.Wb.isClosed() && (C.Y(!1), v.Wb.connect())), (x = e.state)) : e.state === D.$7l.ACTIVE && (C.Y(!1), h.default.isAuthenticated() && v.Wb.resetBackoff('App state is active')), !1;
         },
         GUILD_MEMBERS_REQUEST: function (e) {
             return (
@@ -222,7 +222,7 @@ class H extends (r = u.ZP.Store) {
             if (v.Wb.isSessionEstablished()) {
                 var i, a;
                 let e = null != n ? (null === (i = I.Z.getChannel(r)) || void 0 === i ? void 0 : i.rtcRegion) : null === (a = p.Z.getCall(r)) || void 0 === a ? void 0 : a.region;
-                v.Wb.streamCreate(t, n, r, null != e ? e : g.Z.getPreferredRegion());
+                v.Wb.streamCreate(t, n, r, null != e ? e : S.Z.getPreferredRegion());
             }
             return !1;
         },
@@ -273,6 +273,6 @@ class H extends (r = u.ZP.Store) {
         RUNNING_GAMES_CHANGE: k,
         USER_SETTINGS_PROTO_UPDATE: function (e) {
             var t;
-            e.settings.type === D.yP.PRELOADED_USER_SETTINGS && (null === (t = e.settings.proto.clips) || void 0 === t ? void 0 : t.allowVoiceRecording) != null && k();
+            e.settings.type === L.yP.PRELOADED_USER_SETTINGS && (null === (t = e.settings.proto.clips) || void 0 === t ? void 0 : t.allowVoiceRecording) != null && k();
         }
     }));

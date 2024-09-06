@@ -18,18 +18,18 @@ var r = n(735250),
 t.Z = i.memo(
     i.forwardRef(function (e, t) {
         let { disabled: n, type: a } = e,
-            [T, g] = i.useState(!1),
-            S = (0, l.e7)([_.Z], () => {
+            [T, S] = i.useState(!1),
+            g = (0, l.e7)([_.Z], () => {
                 var e, t;
                 return T && Object.values(null !== (t = null === (e = _.Z.frecencyWithoutFetchingLatest.favoriteGifs) || void 0 === e ? void 0 : e.gifs) && void 0 !== t ? t : {}).length <= 2;
             }),
             [A, N, O] = (0, d.Iu)((e) => [e.activeView, e.activeViewType, e.pickerId], o.Z),
             R = i.useRef(0),
             v = i.useCallback(() => {
-                g(!0),
+                S(!0),
                     clearTimeout(R.current),
                     (R.current = setTimeout(() => {
-                        g(!1), (R.current = 0);
+                        S(!1), (R.current = 0);
                     }, 2000));
             }, []);
         (0, E.yp)({
@@ -39,11 +39,11 @@ t.Z = i.memo(
         let C = i.useCallback(() => {
                 (0, d.RO)(p.X1.GIF, a);
             }, [a]),
-            { Component: y, events: L, play: D } = (0, u.V)();
+            { Component: y, events: D, play: L } = (0, u.V)();
         if (n) return null;
         let b = A === p.X1.GIF && N === a;
         return (0, r.jsx)(c.Tooltip, {
-            text: S ? I.Z.Messages.GIF_TOOLTIP_FAVORITED_PICKER_BUTTON : null,
+            text: g ? I.Z.Messages.GIF_TOOLTIP_FAVORITED_PICKER_BUTTON : null,
             forceOpen: !0,
             children: (e) =>
                 (0, r.jsx)('div', {
@@ -52,10 +52,10 @@ t.Z = i.memo(
                     ...e,
                     children: (0, r.jsx)(f.Z, {
                         innerClassName: m.button,
-                        onMouseEnter: L.onMouseEnter,
-                        onMouseLeave: L.onMouseLeave,
+                        onMouseEnter: D.onMouseEnter,
+                        onMouseLeave: D.onMouseLeave,
                         onClick: () => {
-                            C(), D();
+                            C(), L();
                         },
                         isActive: b,
                         pulse: T,

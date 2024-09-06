@@ -3,7 +3,7 @@ n.d(t, {
         return d;
     },
     Eu: function () {
-        return p;
+        return m;
     },
     bt: function () {
         return h;
@@ -12,15 +12,15 @@ n.d(t, {
     n(47120),
     n(653041);
 var i = n(470079),
-    a = n(392711),
-    s = n(442837),
+    s = n(392711),
+    a = n(442837),
     l = n(413523),
     r = n(314897),
     o = n(878884),
     c = n(19780),
     u = n(979651);
 function d(e, t) {
-    let n = (0, s.e7)([o.Z, c.Z], () => (e === c.Z.getChannelId() ? o.Z.getDesyncedVoiceStates() : null));
+    let n = (0, a.e7)([o.Z, c.Z], () => (e === c.Z.getChannelId() ? o.Z.getDesyncedVoiceStates() : null));
     return i.useMemo(
         () =>
             (function (e, t) {
@@ -31,7 +31,7 @@ function d(e, t) {
                 return (
                     e.forEach((e) => {
                         n.splice(
-                            (0, a.sortedIndexBy)(n, e, (e) => {
+                            (0, s.sortedIndexBy)(n, e, (e) => {
                                 let { comparator: t } = e;
                                 return t;
                             }),
@@ -47,7 +47,7 @@ function d(e, t) {
 }
 function h(e, t) {
     var n;
-    let r = ((n = e), (0, s.e7)([o.Z, c.Z], () => (n === c.Z.getChannelId() ? o.Z.getDesyncedParticipants() : null)));
+    let r = ((n = e), (0, a.e7)([o.Z, c.Z], () => (n === c.Z.getChannelId() ? o.Z.getDesyncedParticipants() : null)));
     return i.useMemo(
         () =>
             (function (e, t) {
@@ -56,7 +56,7 @@ function h(e, t) {
                 return (
                     e.forEach((e) => {
                         n.splice(
-                            (0, a.sortedIndexBy)(n, e, (e) => (0, l.Yr)(e)),
+                            (0, s.sortedIndexBy)(n, e, (e) => (0, l.Yr)(e)),
                             0,
                             e
                         );
@@ -67,21 +67,21 @@ function h(e, t) {
         [r, t]
     );
 }
-function p(e, t) {
-    let n = (0, s.e7)([r.default], () => r.default.getId() === t),
-        a = (0, s.e7)([c.Z], () => c.Z.getChannelId()),
+function m(e, t) {
+    let n = (0, a.e7)([r.default], () => r.default.getId() === t),
+        s = (0, a.e7)([c.Z], () => c.Z.getChannelId()),
         l = i.useRef(null),
         [o, d] = i.useState(!1),
-        [h, p] = i.useState(!1),
-        m = (0, s.e7)([c.Z, u.Z], () => null != t && null != e && c.Z.getChannelId() === e && null != u.Z.isInChannel(e, t) && c.Z.isUserConnected(t)),
-        _ = (0, s.e7)([c.Z, u.Z], () => null != t && null != e && c.Z.getChannelId() === e && null != u.Z.isInChannel(e, t) && !c.Z.isUserConnected(t));
+        [h, m] = i.useState(!1),
+        p = (0, a.e7)([c.Z, u.Z], () => null != t && null != e && c.Z.getChannelId() === e && null != u.Z.isInChannel(e, t) && c.Z.isUserConnected(t)),
+        _ = (0, a.e7)([c.Z, u.Z], () => null != t && null != e && c.Z.getChannelId() === e && null != u.Z.isInChannel(e, t) && !c.Z.isUserConnected(t));
     return (
         i.useEffect(() => {
-            m && p(!0);
-        }, [m]),
+            p && m(!0);
+        }, [p]),
         i.useEffect(() => {
-            a !== e && p(!1);
-        }, [e, a]),
+            s !== e && m(!1);
+        }, [e, s]),
         i.useEffect(
             () => (
                 _ && null == l.current

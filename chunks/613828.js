@@ -97,8 +97,8 @@ m(function (e, t) {
         f = e.className,
         h = e.exact,
         T = e.isActive,
-        g = e.location,
-        S = e.sensitive,
+        S = e.location,
+        g = e.sensitive,
         A = e.strict,
         N = e.style,
         O = e.to,
@@ -106,7 +106,7 @@ m(function (e, t) {
         v = (0, l.Z)(e, ['aria-current', 'activeClassName', 'activeStyle', 'className', 'exact', 'isActive', 'location', 'sensitive', 'strict', 'style', 'to', 'innerRef']);
     return a.createElement(r.s6.Consumer, null, function (e) {
         e || (0, u.Z)(!1);
-        var n = g || e.location,
+        var n = S || e.location,
             s = _(d(O, n), n),
             l = s.pathname,
             C = l && l.replace(/([.+*?=^!:${}()[\]|/\\])/g, '\\$1'),
@@ -114,12 +114,12 @@ m(function (e, t) {
                 ? (0, r.LX)(n.pathname, {
                       path: C,
                       exact: h,
-                      sensitive: S,
+                      sensitive: g,
                       strict: A
                   })
                 : null,
-            L = !!(T ? T(y, n) : y),
-            D = L
+            D = !!(T ? T(y, n) : y),
+            L = D
                 ? (function () {
                       for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
                       return t
@@ -129,11 +129,11 @@ m(function (e, t) {
                           .join(' ');
                   })(f, c)
                 : f,
-            b = L ? (0, o.Z)({}, N, {}, E) : N,
+            b = D ? (0, o.Z)({}, N, {}, E) : N,
             M = (0, o.Z)(
                 {
-                    'aria-current': (L && i) || null,
-                    className: D,
+                    'aria-current': (D && i) || null,
+                    className: L,
                     style: b,
                     to: s
                 },

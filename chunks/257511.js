@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(735250);
 n(470079);
-var a = n(479099),
-    s = n(851237);
+var s = n(479099),
+    a = n(851237);
 function l(e) {
     let { appliedTags: t, setAppliedTags: n } = e,
         l =
@@ -17,14 +17,14 @@ function l(e) {
                   }
                 : void 0;
     return (0, i.jsx)('div', {
-        className: s.tags,
+        className: a.tags,
         children: Array.from(t).map((e) =>
             (0, i.jsx)(
-                a.Z,
+                s.Z,
                 {
                     tag: e,
                     onRemove: l,
-                    size: null == l ? a.Z.Sizes.SMALL : a.Z.Sizes.MEDIUM
+                    size: null == l ? s.Z.Sizes.SMALL : s.Z.Sizes.MEDIUM
                 },
                 e.id
             )

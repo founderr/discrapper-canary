@@ -76,11 +76,11 @@ function s(e, t) {
     }
     if (!s || isNaN(s.getTime())) return new Date(NaN);
     var T = s.getTime(),
-        g = 0;
+        S = 0;
     if (
         I.time &&
         isNaN(
-            (g = (function (e) {
+            (S = (function (e) {
                 var t = e.match(u);
                 if (!t) return NaN;
                 var n = _(t[1]),
@@ -115,11 +115,11 @@ function s(e, t) {
         )
             return new Date(NaN);
     } else {
-        var S = new Date(T + g),
+        var g = new Date(T + S),
             A = new Date(0);
-        return A.setFullYear(S.getUTCFullYear(), S.getUTCMonth(), S.getUTCDate()), A.setHours(S.getUTCHours(), S.getUTCMinutes(), S.getUTCSeconds(), S.getUTCMilliseconds()), A;
+        return A.setFullYear(g.getUTCFullYear(), g.getUTCMonth(), g.getUTCDate()), A.setHours(g.getUTCHours(), g.getUTCMinutes(), g.getUTCSeconds(), g.getUTCMilliseconds()), A;
     }
-    return new Date(T + g + h);
+    return new Date(T + S + h);
 }
 var o = {
         dateTimeDelimiter: /[T ]/,

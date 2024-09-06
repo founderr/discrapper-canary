@@ -82,7 +82,7 @@ class I extends (r = a.PureComponent) {
         null == e || e.blur();
     }
     render() {
-        let { query: e, autoFocus: t, onClear: n, className: r, placeholder: a = _.Z.Messages.SEARCH, iconClassName: s, onKeyDown: l, onKeyUp: c, onKeyPress: d, isLoading: f, size: h, disabled: I, onChange: m, onBlur: T, onFocus: g, autoComplete: S, inputProps: A, hideSearchIcon: N, 'aria-label': O = _.Z.Messages.SEARCH, ...R } = this.props;
+        let { query: e, autoFocus: t, onClear: n, className: r, placeholder: a = _.Z.Messages.SEARCH, iconClassName: s, onKeyDown: l, onKeyUp: c, onKeyPress: d, isLoading: f, size: h, disabled: I, onChange: m, onBlur: T, onFocus: S, autoComplete: g, inputProps: A, hideSearchIcon: N, 'aria-label': O = _.Z.Messages.SEARCH, ...R } = this.props;
         return (0, i.jsx)(u.t, {
             focusTarget: this.inputRef,
             ringTarget: this.containerRef,
@@ -95,7 +95,7 @@ class I extends (r = a.PureComponent) {
                     children: [
                         (0, i.jsx)('input', {
                             ...A,
-                            onFocus: g,
+                            onFocus: S,
                             onBlur: T,
                             className: E.input,
                             value: e,
@@ -106,7 +106,7 @@ class I extends (r = a.PureComponent) {
                             placeholder: a,
                             disabled: I,
                             autoFocus: t,
-                            autoComplete: S,
+                            autoComplete: g,
                             'aria-label': O,
                             ref: this.inputRef
                         }),

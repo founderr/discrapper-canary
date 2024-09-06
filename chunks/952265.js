@@ -1,6 +1,6 @@
 n.d(t, {
     $s: function () {
-        return g;
+        return S;
     },
     DE: function () {
         return O;
@@ -24,7 +24,7 @@ n.d(t, {
         return h;
     },
     f9: function () {
-        return S;
+        return g;
     },
     h7: function () {
         return p;
@@ -187,10 +187,10 @@ function T(e) {
     }
     return !1;
 }
-function g() {
+function S() {
     return T(f.getState());
 }
-function S() {
+function g() {
     return T(f());
 }
 function A(e) {

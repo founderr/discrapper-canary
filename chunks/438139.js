@@ -1,17 +1,17 @@
 n.d(t, {
     Z: function () {
-        return l;
+        return o;
     }
 });
-var r = n(735250),
-    i = n(470079),
+var i = n(735250),
+    s = n(470079),
     a = n(846519),
-    s = n(689938);
-function o(e) {
+    l = n(689938);
+function r(e) {
     return ''.concat(e).length < 13 ? 1000 * e : e;
 }
-function l(e) {
-    return class extends i.PureComponent {
+function o(e) {
+    return class extends s.PureComponent {
         componentDidMount() {
             this._interval.start(1000, () => this.setState(this.getUpdatedTime()));
         }
@@ -25,9 +25,9 @@ function l(e) {
             let { timestamps: e } = this.props,
                 t = Date.now() / 1000;
             return null != e.end
-                ? this.getDiff(t, o(e.end) / 1000)
+                ? this.getDiff(t, r(e.end) / 1000)
                 : null != e.start
-                  ? this.getDiff(o(e.start) / 1000, t)
+                  ? this.getDiff(r(e.start) / 1000, t)
                   : {
                         hours: 0,
                         minutes: 0,
@@ -40,47 +40,47 @@ function l(e) {
         }
         getDiff(e, t) {
             let n = Math.max(t - e, 0),
-                r = Math.floor(n) % 60,
-                i = Math.floor(n / 60) % 60;
+                i = Math.floor(n) % 60,
+                s = Math.floor(n / 60) % 60;
             return {
                 hours: Math.floor(n / 3600) % 24,
-                minutes: i,
-                seconds: r
+                minutes: s,
+                seconds: i
             };
         }
         render() {
             let { timestamps: t, ...n } = this.props,
-                { hours: i, minutes: a, seconds: o } = this.state,
-                l = {
-                    hours: this.renderTime(i, !0),
+                { hours: s, minutes: a, seconds: r } = this.state,
+                o = {
+                    hours: this.renderTime(s, !0),
                     minutes: this.renderTime(a),
-                    seconds: this.renderTime(o)
+                    seconds: this.renderTime(r)
                 };
             return null != t.end
-                ? (0, r.jsx)(e, {
+                ? (0, i.jsx)(e, {
                       ...n,
-                      message: s.Z.Messages.USER_ACTIVITY_TIMESTAMP_END.format(l)
+                      message: l.Z.Messages.USER_ACTIVITY_TIMESTAMP_END.format(o)
                   })
                 : null != t.start
-                  ? (0, r.jsx)(e, {
+                  ? (0, i.jsx)(e, {
                         ...n,
-                        message: s.Z.Messages.USER_ACTIVITY_TIMESTAMP_START.format(l)
+                        message: l.Z.Messages.USER_ACTIVITY_TIMESTAMP_START.format(o)
                     })
                   : null;
         }
         constructor(e) {
-            var t, n, r;
+            var t, n, i;
             super(e),
                 (t = this),
-                (r = void 0),
+                (i = void 0),
                 (n = '_interval') in t
                     ? Object.defineProperty(t, n, {
-                          value: r,
+                          value: i,
                           enumerable: !0,
                           configurable: !0,
                           writable: !0
                       })
-                    : (t[n] = r),
+                    : (t[n] = i),
                 (this._interval = new a.Xp()),
                 (this.state = { ...this.getUpdatedTime() });
         }

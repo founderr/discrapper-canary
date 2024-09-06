@@ -5,8 +5,8 @@ n.d(t, {
 }),
     n(47120);
 var i = n(735250),
-    a = n(470079),
-    s = n(925975),
+    s = n(470079),
+    a = n(925975),
     l = n(957730),
     r = n(981631),
     o = n(689938),
@@ -27,9 +27,9 @@ function u(e, t, n) {
 function d(e) {
     e.stopPropagation();
 }
-class h extends a.PureComponent {
+class h extends s.PureComponent {
     render() {
-        let { className: e, textValue: t, richValue: n, message: a, channel: s, onCancel: l, children: r } = this.props;
+        let { className: e, textValue: t, richValue: n, message: s, channel: a, onCancel: l, children: r } = this.props;
         return (0, i.jsxs)('div', {
             className: e,
             ref: this.node,
@@ -38,8 +38,8 @@ class h extends a.PureComponent {
                 r({
                     textValue: t,
                     richValue: n,
-                    message: a,
-                    channel: s,
+                    message: s,
+                    channel: a,
                     onChange: this.onChange,
                     onSubmit: this.onSubmit,
                     onKeyDown: this.onKeyDown
@@ -47,7 +47,7 @@ class h extends a.PureComponent {
                 (0, i.jsx)('div', {
                     className: c.operations,
                     children: o.Z.Messages.EDIT_TEXTAREA_HELP.format({
-                        onCancel: () => l(s.id),
+                        onCancel: () => l(a.id),
                         onSave: this.onClickSave
                     })
                 })
@@ -56,16 +56,16 @@ class h extends a.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            u(this, 'node', a.createRef()),
+            u(this, 'node', s.createRef()),
             u(this, 'onClickSave', () => {
                 let { textValue: e } = this.props;
                 this.onSubmit(e);
             }),
             u(this, 'onSubmit', (e) => {
-                let { message: t, channel: n, onConfirmDelete: i, onCancel: a, saveMessage: r, validateEdit: o } = this.props;
+                let { message: t, channel: n, onConfirmDelete: i, onCancel: s, saveMessage: r, validateEdit: o } = this.props;
                 return 0 === e.length
                     ? (i(n, t),
-                      a(n.id),
+                      s(n.id),
                       Promise.resolve({
                           shouldClear: !1,
                           shouldRefocus: !1
@@ -80,7 +80,7 @@ class h extends a.PureComponent {
                                   shouldClear: !1,
                                   shouldRefocus: !1
                               });
-                          let o = (0, s.g)(e, {
+                          let o = (0, a.g)(e, {
                               channel: n,
                               isEdit: !0
                           });
@@ -88,7 +88,7 @@ class h extends a.PureComponent {
                           let c = l.ZP.parse(this.props.channel, e);
                           return (
                               c.content !== this.props.message.content && r(this.props.channel.id, this.props.message.id, c),
-                              a(n.id),
+                              s(n.id),
                               Promise.resolve({
                                   shouldClear: !0,
                                   shouldRefocus: !0
@@ -97,8 +97,8 @@ class h extends a.PureComponent {
                       });
             }),
             u(this, 'onChange', (e, t, n) => {
-                let { channel: i, onChange: a } = this.props;
-                a(i.id, t, n);
+                let { channel: i, onChange: s } = this.props;
+                s(i.id, t, n);
             }),
             u(this, 'onKeyDown', (e) => {
                 if (e.keyCode === r.yXg.ESCAPE && !e.shiftKey) {

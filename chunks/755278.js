@@ -35,9 +35,9 @@ class I extends r.Z {
             { enableDecoupledGameClipping: m } = l.Z.getCurrentConfig({ location: 'computeVoiceFlags' }),
             T = f && a.Z.getSettings().decoupledClipsEnabled && (null === (n = o.ZP.getVisibleGame()) || void 0 === n ? void 0 : n.windowHandle) != null && m;
         r = (0, h.mB)(r, p.BVn.CLIPS_ENABLED, I || T);
-        let { enableViewerClipping: g } = u.Z.getCurrentConfig({ location: 'computeVoiceFlags' }, { autoTrackExposure: !1 }),
-            S = g && f && a.Z.getSettings().viewerClipsEnabled;
-        return (r = (0, h.mB)(r, p.BVn.ALLOW_ANY_VIEWER_CLIPS, S));
+        let { enableViewerClipping: S } = u.Z.getCurrentConfig({ location: 'computeVoiceFlags' }, { autoTrackExposure: !1 }),
+            g = S && f && a.Z.getSettings().viewerClipsEnabled;
+        return (r = (0, h.mB)(r, p.BVn.ALLOW_ANY_VIEWER_CLIPS, g));
     }
     getInitialState() {
         return {

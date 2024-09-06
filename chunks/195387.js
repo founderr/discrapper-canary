@@ -21,9 +21,9 @@ function p(e) {
     let { user: t, guildId: n, channelId: p, onClose: I } = e,
         { newestAnalyticsLocation: m } = (0, s.ZP)(),
         T = (0, i.e7)([c.default], () => c.default.getId() === (null == t ? void 0 : t.id)),
-        g = (0, l.ms)(null != n ? n : null, !0),
-        S = (0, i.e7)([d.Z], () => (null != p ? p : d.Z.getChannelId(n, !0)), [p, n]);
-    return null == n || !g || T
+        S = (0, l.ms)(null != n ? n : null, !0),
+        g = (0, i.e7)([d.Z], () => (null != p ? p : d.Z.getChannelId(n, !0)), [p, n]);
+    return null == n || !S || T
         ? null
         : (0, r.jsx)(_.oY, {
               action: 'PRESS_MOD_VIEW',
@@ -31,7 +31,7 @@ function p(e) {
               tooltipText: h.Z.Messages.GUILD_MEMBER_MOD_VIEW_TITLE,
               onClick: () => {
                   u.Z.close(),
-                      (0, o.r)(n, t.id, null != S ? S : E.oC.MEMBER_SAFETY, {
+                      (0, o.r)(n, t.id, null != g ? g : E.oC.MEMBER_SAFETY, {
                           modViewPanel: f.k.INFO,
                           sourceLocation: m
                       }),

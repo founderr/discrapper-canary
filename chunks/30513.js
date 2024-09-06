@@ -12,10 +12,10 @@ n.d(t, {
         return R;
     },
     hC: function () {
-        return D;
+        return L;
     },
     o9: function () {
-        return L;
+        return D;
     },
     zC: function () {
         return C;
@@ -102,12 +102,12 @@ let c = () => ({
         color: r.Z.unsafe_rawColors.PREMIUM_PERK_PINK.css,
         description: u.Z.Messages.PREMIUM_GUILD_USER_FEATURE_BOOST_CRYSTAL
     }),
-    g = () => ({
+    S = () => ({
         icon: i.ShieldUserIcon,
         color: r.Z.unsafe_rawColors.PREMIUM_PERK_YELLOW.css,
         description: u.Z.Messages.PREMIUM_GUILD_USER_FEATURE_SPECIAL_ROLE
     }),
-    S = () => ({
+    g = () => ({
         color: r.Z.unsafe_rawColors.PREMIUM_PERK_BLUE.css,
         icon: i.ReactionIcon,
         description: u.Z.Messages.PREMIUM_GUILD_USER_FEATURE_OTHERS
@@ -145,12 +145,12 @@ function C() {
 function y() {
     return [I(), E(), p(l.Eu4.TIER_3), A()];
 }
-function L() {
+function D() {
     return [c(), h(), d(), A()];
 }
-function D() {
+function L() {
     return [h(), A()];
 }
 function b() {
-    return [T(), g(), m(), S()];
+    return [T(), S(), m(), g()];
 }

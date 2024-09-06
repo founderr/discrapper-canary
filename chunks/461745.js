@@ -143,8 +143,8 @@ class m extends (i = o.Component) {
     }
     render() {
         let { autoFocus: e, query: t, placeholder: n = E.Z.Messages.DM_SEARCH_PLACEHOLDER, themeOverride: r, disabled: i, onClear: a, size: o, maxHeight: l, tags: _, onActivate: h, className: p, inputProps: m, focusAfterReady: T } = this.props,
-            g = null != t && t.length > 0,
-            S = !1,
+            S = null != t && t.length > 0,
+            g = !1,
             A = [];
         return (
             null != _ &&
@@ -172,7 +172,7 @@ class m extends (i = o.Component) {
                               )
                           )
                       )
-                    : ((S = !0),
+                    : ((g = !0),
                       _.forEach((e, t) =>
                           A.push(
                               (0, s.jsxs)(
@@ -232,7 +232,7 @@ class m extends (i = o.Component) {
                                 children: [
                                     A,
                                     (0, s.jsx)('input', {
-                                        className: u()(f.input, { [f.richTagInput]: S }),
+                                        className: u()(f.input, { [f.richTagInput]: g }),
                                         type: 'text',
                                         ref: this.ref,
                                         spellCheck: 'false',
@@ -252,7 +252,7 @@ class m extends (i = o.Component) {
                                         ? (0, s.jsx)(I, {
                                               size: o,
                                               themeOverride: r,
-                                              hasContent: g,
+                                              hasContent: S,
                                               onClear: this.handleClear
                                           })
                                         : null

@@ -21,8 +21,8 @@ var r = n(735250),
     I = n(785717),
     m = n(204197),
     T = n(825801),
-    g = n(215105),
-    S = n(652853),
+    S = n(215105),
+    g = n(652853),
     A = n(429974),
     N = n(228168),
     O = n(981631),
@@ -30,8 +30,8 @@ var r = n(735250),
     v = n(234328);
 let C = p.ZP.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
 function y(e) {
-    let { user: t, displayProfile: n, guildId: a, channelId: p, profileType: y, animateOnHover: L, onOpenProfile: D, isInteractionSource: b, onInteraction: M, showReplyPopout: P = !1, setInteractionToastShown: U, setInteractionSent: w, setIsReplyInteraction: x } = e,
-        { theme: G } = (0, S.z)(),
+    let { user: t, displayProfile: n, guildId: a, channelId: p, profileType: y, animateOnHover: D, onOpenProfile: L, isInteractionSource: b, onInteraction: M, showReplyPopout: P = !1, setInteractionToastShown: U, setInteractionSent: w, setIsReplyInteraction: x } = e,
+        { theme: G } = (0, g.z)(),
         { analyticsLocations: k } = (0, d.ZP)(c.Z.AVATAR),
         { trackUserProfileAction: B } = (0, I.KZ)(),
         F = y === N.y0.FULL_SIZE ? (0, A.z)(t.id, null == n ? void 0 : n.guildId) : void 0,
@@ -70,14 +70,14 @@ function y(e) {
             user: t,
             guildId: null != n ? n.guildId : a,
             size: q,
-            animateOnHover: L
+            animateOnHover: D
         }),
         ee = (0, r.jsx)(C, {
             src: $,
             avatarDecoration: X,
             size: q,
             'aria-label': t.username,
-            imageClassName: null != D ? v.overlay : void 0,
+            imageClassName: null != L ? v.overlay : void 0,
             status: H ? O.Skl.UNKNOWN : K,
             statusBackdropColor: V && !H ? (0, l.getStatusBackdropColor)(G) : void 0,
             isMobile: z,
@@ -85,7 +85,7 @@ function y(e) {
             statusTooltipDelay: N.vB
         }),
         et = () =>
-            null == D
+            null == L
                 ? (0, r.jsx)('div', {
                       ...J,
                       children: ee
@@ -97,7 +97,7 @@ function y(e) {
                               action: 'PRESS_VIEW_PROFILE',
                               analyticsLocations: k
                           }),
-                              null == D || D();
+                              null == L || L();
                       },
                       className: v.clickable,
                       focusProps: { ringClassName: v.focusRing },
@@ -113,7 +113,7 @@ function y(e) {
             (0, r.jsx)(l.Popout, {
                 renderPopout: (e) => {
                     let { setPopoutRef: n } = e;
-                    return (0, r.jsx)(g.Z, {
+                    return (0, r.jsx)(S.Z, {
                         user: t,
                         guildId: a,
                         channelId: p,

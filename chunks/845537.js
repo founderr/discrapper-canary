@@ -9,7 +9,7 @@ n.d(t, {
         return U;
     },
     Ox: function () {
-        return L;
+        return D;
     },
     Vq: function () {
         return b;
@@ -18,7 +18,7 @@ n.d(t, {
         return w;
     },
     cB: function () {
-        return D;
+        return L;
     },
     dy: function () {
         return C;
@@ -48,8 +48,8 @@ var i = n(442837),
     I = n(430824),
     m = n(246946),
     T = n(594174),
-    g = n(934415),
-    S = n(5192),
+    S = n(934415),
+    g = n(5192),
     A = n(51144),
     N = n(377668),
     O = n(689938),
@@ -85,7 +85,7 @@ function y(e) {
             })
     });
 }
-function L(e) {
+function D(e) {
     let { text: t, channelId: n, guildId: i } = e,
         a = I.Z.getGuild(i),
         s = p.Z.getChannel(n),
@@ -95,11 +95,11 @@ function L(e) {
         children: t
     });
 }
-function D(e) {
+function L(e) {
     let { id: t, guildId: n, channelId: s } = e,
         l = (0, i.e7)([T.default], () => T.default.getUser(t)),
         u = (0, i.e7)([m.Z], () => m.Z.hidePersonalInformation),
-        c = S.ZP.useName(n, s, l),
+        c = g.ZP.useName(n, s, l),
         d = (0, r.jsx)(E.Z, { children: null == c ? '<@'.concat(t, '>') : '@'.concat(c) });
     if (null != l) {
         let e = u || l.isPomelo() ? null : '#'.concat(l.discriminator);
@@ -167,7 +167,7 @@ function M(e) {
         o = !0;
     if (null != n) {
         var l;
-        (a = (0, c.YO)(n) ? n.name : O.Z.Messages.NO_ACCESS), (s = (0, c.YO)(n) ? (null !== (l = (0, g.wl)(n)) && void 0 !== l ? l : 'text') : 'locked'), (o = (0, d.B)(n.type));
+        (a = (0, c.YO)(n) ? n.name : O.Z.Messages.NO_ACCESS), (s = (0, c.YO)(n) ? (null !== (l = (0, S.wl)(n)) && void 0 !== l ? l : 'text') : 'locked'), (o = (0, d.B)(n.type));
     }
     return o
         ? (0, r.jsx)(E.Z, {

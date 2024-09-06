@@ -6,7 +6,7 @@ n.d(t, {
         return N;
     },
     Vv: function () {
-        return S;
+        return g;
     },
     _: function () {
         return A;
@@ -15,13 +15,13 @@ n.d(t, {
         return v;
     },
     ef: function () {
-        return g;
+        return S;
     },
     s6: function () {
         return T;
     },
     sh: function () {
-        return L;
+        return D;
     }
 }),
     n(653041),
@@ -69,13 +69,13 @@ async function T() {
         });
     }
 }
-function g(e) {
+function S(e) {
     s.Z.dispatch({
         type: 'REMOTE_SESSION_CONNECT',
         sessionId: e
     });
 }
-function S(e, t) {
+function g(e, t) {
     let { selfMute: n, selfDeaf: r } = t;
     s.Z.dispatch({
         type: 'REMOTE_COMMAND',
@@ -229,7 +229,7 @@ async function y(e, t, n) {
         commandId: n
     });
 }
-async function L(e, t, n) {
+async function D(e, t, n) {
     await E.Z.maybeShowPTTAlert(e), await T();
     let r = await O();
     await C(e, t, n, r), (0, h.Z)(n.id, e);

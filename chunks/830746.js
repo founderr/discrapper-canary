@@ -13,32 +13,32 @@ var a = n(399606),
     T = n(456771),
     I = n(292352),
     R = n(689938),
-    C = n(844760);
+    g = n(844760);
 t.Z = () => {
     let e = (0, c.mq)(I.ne.ACTIVE),
         t = (0, o.c)(),
         n = (0, a.e7)([i.default], () => i.default.getCurrentUser()),
-        g = (0, l.o)(R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_MESSAGES_DESCRIPTION_TEEN, R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_MESSAGES_DESCRIPTION_PARENT),
+        C = (0, l.o)(R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_MESSAGES_DESCRIPTION_TEEN, R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_MESSAGES_DESCRIPTION_PARENT),
         N = (0, l.o)(R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_SHARING_DESCRIPTION_TEEN, R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_SHARING_DESCRIPTION_PARENT),
-        p = (0, l.o)(R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_PAIRING_DESCRIPTION_TEEN, R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_PAIRING_DESCRIPTION_PARENT),
-        m = (0, r.useRedesignIconContext)().enabled;
+        m = (0, l.o)(R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_PAIRING_DESCRIPTION_TEEN, R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_PAIRING_DESCRIPTION_PARENT),
+        p = (0, r.useRedesignIconContext)().enabled;
     return void 0 === n
         ? null
         : (0, s.jsxs)('div', {
-              className: C.container,
+              className: g.container,
               children: [
                   (0, s.jsx)('div', {
-                      className: C.banner,
+                      className: g.banner,
                       children: (0, s.jsx)(d.Z, {})
                   }),
                   (0, s.jsxs)('div', {
-                      className: C.featureCards,
+                      className: g.featureCards,
                       children: [
                           (0, s.jsx)(E.Z, {
-                              iconClassName: C.chatCheckIcon,
+                              iconClassName: g.chatCheckIcon,
                               icon: r.ChatCheckIcon,
                               header: R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_MESSAGES_HEADER,
-                              description: g
+                              description: C
                           }),
                           (0, s.jsx)(E.Z, {
                               icon: r.EyeIcon,
@@ -46,9 +46,9 @@ t.Z = () => {
                               description: N
                           }),
                           (0, s.jsx)(E.Z, {
-                              icon: m ? r.QrCodeIcon : (0, r.makeIconCompat)(T.Z),
+                              icon: p ? r.QrCodeIcon : (0, r.makeIconCompat)(T.Z),
                               header: R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_PAIRING_HEADER,
-                              description: p
+                              description: m
                           })
                       ]
                   }),

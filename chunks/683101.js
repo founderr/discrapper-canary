@@ -5,17 +5,17 @@ n.d(t, {
 }),
     n(47120);
 var i = n(735250),
-    a = n(470079),
-    s = n(392711),
-    l = n.n(s),
+    s = n(470079),
+    a = n(392711),
+    l = n.n(a),
     r = n(374470),
     o = n(481060),
     c = n(239091),
     u = n(294218),
     d = n(592125),
     h = n(689938),
-    p = n(374294);
-function m(e, t, n) {
+    m = n(374294);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,38 +28,38 @@ function m(e, t, n) {
         e
     );
 }
-class _ extends a.PureComponent {
+class _ extends s.PureComponent {
     render() {
-        let { result: e, listItemProps: t, searchOffset: n, index: a, totalResults: s } = this.props,
+        let { result: e, listItemProps: t, searchOffset: n, index: s, totalResults: a } = this.props,
             r = l().find(e, (e) => e.isSearchHit);
         if (null == r) return null;
         let c = d.Z.getChannel(r.channel_id);
         if (null == c) return null;
-        let m = 'search-result-'.concat(r.id);
+        let p = 'search-result-'.concat(r.id);
         return (0, i.jsx)(o.FocusRing, {
             ringTarget: this.hitRef,
-            ringClassName: p.__invalid_searchResultFocusRing,
+            ringClassName: m.__invalid_searchResultFocusRing,
             offset: 4,
             children: (0, i.jsxs)('li', {
-                className: p.container,
+                className: m.container,
                 ...t,
-                'aria-posinset': 1 + n + a,
-                'aria-setsize': s,
-                'aria-labelledby': m,
+                'aria-posinset': 1 + n + s,
+                'aria-setsize': a,
+                'aria-labelledby': p,
                 children: [
                     (0, i.jsx)(o.Clickable, {
                         tabIndex: -1,
                         onClick: this.handleMessageClick,
                         innerRef: this.containerRef,
-                        className: p.searchResult,
+                        className: m.searchResult,
                         focusProps: { enabled: !1 },
                         children: (0, i.jsx)(
                             'div',
                             {
                                 ref: this.hitRef,
-                                className: p.message,
+                                className: m.message,
                                 children: (0, i.jsx)(u.Z, {
-                                    id: m,
+                                    id: p,
                                     message: r,
                                     channel: c,
                                     onContextMenu: (e) => this.handleContextMenu(e, r),
@@ -73,10 +73,10 @@ class _ extends a.PureComponent {
                         )
                     }),
                     (0, i.jsx)('div', {
-                        className: p.buttonsContainer,
+                        className: m.buttonsContainer,
                         'aria-hidden': !0,
                         children: (0, i.jsx)(o.Clickable, {
-                            className: p.button,
+                            className: m.button,
                             onClick: this.jumpTo,
                             children: h.Z.Messages.JUMP
                         })
@@ -87,11 +87,11 @@ class _ extends a.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            m(this, 'containerRef', a.createRef()),
-            m(this, 'hitRef', a.createRef()),
-            m(this, 'handleContextMenu', (e, t) => {
-                let a = d.Z.getChannel(t.channel_id);
-                if (null != a)
+            p(this, 'containerRef', s.createRef()),
+            p(this, 'hitRef', s.createRef()),
+            p(this, 'handleContextMenu', (e, t) => {
+                let s = d.Z.getChannel(t.channel_id);
+                if (null != s)
                     e.stopPropagation(),
                         (0, c.jW)(e, async () => {
                             let { default: e } = await n.e('53809').then(n.bind(n, 858341));
@@ -99,17 +99,17 @@ class _ extends a.PureComponent {
                                 (0, i.jsx)(e, {
                                     ...n,
                                     message: t,
-                                    channel: a
+                                    channel: s
                                 });
                         });
             }),
-            m(this, 'jumpTo', (e) => {
+            p(this, 'jumpTo', (e) => {
                 null != e && (e.preventDefault(), e.stopPropagation());
                 let { onJump: t, result: n } = this.props,
                     i = n.find((e) => e.isSearchHit);
                 null != i && t(i);
             }),
-            m(this, 'handleMessageClick', (e) => {
+            p(this, 'handleMessageClick', (e) => {
                 if (
                     (function (e, t) {
                         var n;

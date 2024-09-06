@@ -21,8 +21,8 @@ var i = n(120356),
     I = n(833858),
     m = n(769654),
     T = n(994746),
-    g = n(502762),
-    S = n(652853),
+    S = n(502762),
+    g = n(652853),
     A = n(979038),
     N = n(448980),
     O = n(194811),
@@ -30,8 +30,8 @@ var i = n(120356),
     v = n(315324),
     C = n(582123),
     y = n(290274),
-    L = n(553375),
-    D = n(318134),
+    D = n(553375),
+    L = n(318134),
     b = n(228168),
     M = n(981631),
     P = n(701488),
@@ -40,7 +40,7 @@ var i = n(120356),
 function x(e) {
     let { user: t, currentUser: n, activity: i, application: x, guild: G, channel: k, className: B, onClose: F } = e,
         { analyticsLocations: V } = (0, d.ZP)(c.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
-        { profileType: H } = (0, S.z)(),
+        { profileType: H } = (0, g.z)(),
         Z = { [w.fullSize]: H === b.y0.FULL_SIZE },
         Y = (0, f.Bq)({
             activity: i,
@@ -50,13 +50,13 @@ function x(e) {
             location: 'UserProfileActivityCard',
             source: h.m1.UserProfile,
             trackEntryPointImpression: !0,
-            ...(0, L.n)({
+            ...(0, D.n)({
                 user: t,
                 activity: i,
                 entry: Y
             })
         }),
-        { onAction: W, trackViewRef: K } = (0, D.Z)({
+        { onAction: W, trackViewRef: K } = (0, L.Z)({
             display: 'live',
             user: t,
             activity: i,
@@ -244,7 +244,7 @@ function x(e) {
             onClose: F,
             children: (e) => {
                 let { onAutoDismiss: n } = e;
-                return (0, r.jsxs)(g.Z.Overlay, {
+                return (0, r.jsxs)(S.Z.Overlay, {
                     className: a()(w.card, B),
                     ref: K,
                     children: [

@@ -95,8 +95,8 @@ var r,
     I = n(553795),
     m = n(70956),
     T = n(63063),
-    g = n(930153),
-    S = n(358085),
+    S = n(930153),
+    g = n(358085),
     A = n(617136),
     N = n(272008),
     O = n(569984),
@@ -104,8 +104,8 @@ var r,
     v = n(918701),
     C = n(796111),
     y = n(977156),
-    L = n(665430),
-    D = n(585500),
+    D = n(665430),
+    L = n(585500),
     b = n(566078),
     M = n(46140),
     P = n(981631),
@@ -469,7 +469,7 @@ function er(e) {
         r = j(e),
         i = null != r ? r.completedRatio : n,
         a = 100 * i,
-        s = null != r ? ''.concat(null == r ? void 0 : r.progress, '/').concat(null == r ? void 0 : r.target) : (0, g.T3)(t, i, { roundingMode: 'floor' });
+        s = null != r ? ''.concat(null == r ? void 0 : r.progress, '/').concat(null == r ? void 0 : r.target) : (0, S.T3)(t, i, { roundingMode: 'floor' });
     return {
         completedRatio: i,
         percentComplete: a,
@@ -480,7 +480,7 @@ function ei(e) {
     var t, n;
     let r = Y(e),
         i = (0, v.b7)(e),
-        a = (0, D.D)({
+        a = (0, L.D)({
             quest: e,
             taskDetails: r,
             location: M.dr.QUEST_HOME_DESKTOP,
@@ -505,7 +505,7 @@ function ea(e, t) {
         s = i.includes(M.cd.CONSOLE),
         o = V(e),
         l = H(e),
-        _ = (0, L.pF)({ location: M.dr.QUESTS_BAR }),
+        _ = (0, D.pF)({ location: M.dr.QUESTS_BAR }),
         E = u.useMemo(
             () =>
                 (0, c.EQ)(t)
@@ -585,8 +585,8 @@ function es(e) {
         u = d.T.DESKTOP.has(i.taskType),
         c = 0 === i.percentComplete,
         _ = o && !l && !s && null == r && (u || (c && a === R.LI.DESKTOP)),
-        E = (0, S.isWeb)() && _,
-        f = (0, S.isMac)() && i.taskType === d.X.STREAM_ON_DESKTOP && _,
+        E = (0, g.isWeb)() && _,
+        f = (0, g.isMac)() && i.taskType === d.X.STREAM_ON_DESKTOP && _,
         h = [];
     return f && h.push(U.Z.Messages.QUESTS_PROGRESS_MAC_STREAMING_TIP), E && h.push(U.Z.Messages.QUESTS_PROGRESS_WEB_TIP), h;
 }

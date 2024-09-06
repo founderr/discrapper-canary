@@ -1,7 +1,7 @@
 let r;
 n.d(t, {
     I: function () {
-        return S;
+        return g;
     }
 }),
     n(47120);
@@ -21,8 +21,8 @@ var i,
     I = n(306680),
     m = n(823379),
     T = n(709054),
-    g = n(569471);
-let S = 25,
+    S = n(569471);
+let g = 25,
     A = !1,
     N = !0,
     O = !1,
@@ -30,9 +30,9 @@ let S = 25,
     v = null,
     C = c.z.LATEST_ACTIVITY,
     y = [],
-    L = 0;
-function D() {
-    (A = !1), (N = !0), (O = !1), (R = !1), (v = null), (C = c.z.LATEST_ACTIVITY), (r = new Set()), (L = 0), (y = []);
+    D = 0;
+function L() {
+    (A = !1), (N = !0), (O = !1), (R = !1), (v = null), (C = c.z.LATEST_ACTIVITY), (r = new Set()), (D = 0), (y = []);
 }
 function b(e, t) {
     return t === c.z.LATEST_ACTIVITY ? I.ZP.lastMessageId(e.id) : e.id;
@@ -65,19 +65,19 @@ function P(e) {
 let U = [];
 class w extends (i = d.ZP.Store) {
     initialize() {
-        this.waitFor(p.Z, g.Z, I.ZP);
+        this.waitFor(p.Z, S.Z, I.ZP);
     }
     get canLoadMore() {
         return O && !A && !R;
     }
     get nextOffset() {
-        return L;
+        return D;
     }
     get isInitialLoad() {
         return N;
     }
     isLoading(e, t, n) {
-        return v === e && C === t && (0, m.OL)(r, n) ? A : (D(), !1);
+        return v === e && C === t && (0, m.OL)(r, n) ? A : (L(), !1);
     }
     getThreads(e, t, n) {
         return v === e && C === t && (0, m.OL)(r, n) ? y : U;
@@ -93,7 +93,7 @@ class w extends (i = d.ZP.Store) {
           })
         : (a[s] = o),
     (t.Z = new w(_.Z, {
-        CONNECTION_OPEN: D,
+        CONNECTION_OPEN: L,
         THREAD_DELETE: function (e) {
             let { channel: t } = e;
             return P(t.id);
@@ -104,10 +104,10 @@ class w extends (i = d.ZP.Store) {
         },
         CHANNEL_DELETE: function (e) {
             if (e.channel.id !== v) return !1;
-            D();
+            L();
         },
         LOAD_ARCHIVED_THREADS: function (e) {
-            (e.channelId !== v || e.sortOrder !== C || !(0, m.OL)(e.tagFilter, r)) && D(), (v = e.channelId), (C = e.sortOrder), (r = e.tagFilter instanceof Set ? e.tagFilter : new Set(e.tagFilter)), (A = !0), (N = !1);
+            (e.channelId !== v || e.sortOrder !== C || !(0, m.OL)(e.tagFilter, r)) && L(), (v = e.channelId), (C = e.sortOrder), (r = e.tagFilter instanceof Set ? e.tagFilter : new Set(e.tagFilter)), (A = !0), (N = !1);
         },
         LOAD_ARCHIVED_THREADS_SUCCESS: function (e) {
             if (e.channelId !== v || e.sortOrder !== C || !(0, m.OL)(e.tagFilter, r)) return !1;
@@ -126,7 +126,7 @@ class w extends (i = d.ZP.Store) {
                 }),
                 M(),
                 (O = e.hasMore),
-                (L = e.offset + S),
+                (D = e.offset + g),
                 (A = !1),
                 (N = !1);
         },

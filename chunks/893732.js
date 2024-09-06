@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(481060),
-    s = n(689938),
+var s = n(481060),
+    a = n(689938),
     l = n(326108);
 function r(e) {
     let { onClose: t, guildName: n } = e;
@@ -15,7 +15,7 @@ function r(e) {
         children: [
             (0, i.jsx)('div', {
                 className: l.iconContainer,
-                children: (0, i.jsx)(a.ClockWarningIcon, {
+                children: (0, i.jsx)(s.ClockWarningIcon, {
                     size: 'custom',
                     color: 'currentColor',
                     className: l.icon,
@@ -26,19 +26,19 @@ function r(e) {
             (0, i.jsxs)('div', {
                 className: l.header,
                 children: [
-                    (0, i.jsx)(a.Heading, {
+                    (0, i.jsx)(s.Heading, {
                         variant: 'heading-md/semibold',
                         className: l.headerText,
-                        children: s.Z.Messages.GUILD_COMMUNICATION_DISABLED_POPOUT_HEADER
+                        children: a.Z.Messages.GUILD_COMMUNICATION_DISABLED_POPOUT_HEADER
                     }),
-                    (0, i.jsx)(a.Text, {
+                    (0, i.jsx)(s.Text, {
                         variant: 'text-sm/normal',
-                        children: s.Z.Messages.GUILD_COMMUNICATION_DISABLED_POPOUT_SUBHEADER.format({ guildName: n })
+                        children: a.Z.Messages.GUILD_COMMUNICATION_DISABLED_POPOUT_SUBHEADER.format({ guildName: n })
                     }),
-                    (0, i.jsx)(a.Button, {
+                    (0, i.jsx)(s.Button, {
                         onClick: t,
                         className: l.button,
-                        children: s.Z.Messages.OKAY
+                        children: a.Z.Messages.OKAY
                     })
                 ]
             })

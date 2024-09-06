@@ -1,7 +1,7 @@
 n(47120);
 var i = n(735250),
-    a = n(470079),
-    s = n(704215),
+    s = n(470079),
+    a = n(704215),
     l = n(974674),
     r = n(481060),
     o = n(243778),
@@ -9,26 +9,26 @@ var i = n(735250),
     u = n(197115),
     d = n(703656),
     h = n(594174),
-    p = n(626135),
-    m = n(74538),
+    m = n(626135),
+    p = n(74538),
     _ = n(204197),
     f = n(502762),
     E = n(981631),
-    C = n(921944),
-    g = n(474936),
+    g = n(921944),
+    C = n(474936),
     I = n(689938),
     x = n(819815);
 function T() {
-    p.default.track(E.rMx.PREMIUM_UPSELL_INTERACTED, {
+    m.default.track(E.rMx.PREMIUM_UPSELL_INTERACTED, {
         cta_type: 'Learn more button',
         target: 'premium marketing page'
     }),
         (0, d.uL)(E.Z5c.APPLICATION_STORE);
 }
-function N(e) {
+function S(e) {
     let { avatarSrc: t, username: n } = e,
-        [a, c] = (0, o.US)([s.z.NITRO_ON_PROFILE_SIDE_PANEL], C.R.SIDEBAR, !0);
-    return a !== s.z.NITRO_ON_PROFILE_SIDE_PANEL
+        [s, c] = (0, o.US)([a.z.NITRO_ON_PROFILE_SIDE_PANEL], g.R.SIDEBAR, !0);
+    return s !== a.z.NITRO_ON_PROFILE_SIDE_PANEL
         ? null
         : (0, i.jsxs)(f.Z.Overlay, {
               className: x.overlay,
@@ -48,7 +48,7 @@ function N(e) {
                               children: I.Z.Messages.AFFINITIES_MARKETING_HEADER_V2_1.format({ username: n })
                           }),
                           (0, i.jsx)(r.Clickable, {
-                              onClick: () => c(C.L.USER_DISMISS),
+                              onClick: () => c(g.L.USER_DISMISS),
                               'aria-label': I.Z.Messages.DISMISS,
                               className: x.closeIconWrapper,
                               children: (0, i.jsx)(r.XSmallIcon, {
@@ -80,10 +80,10 @@ function N(e) {
               ]
           });
 }
-function S(e) {
+function v(e) {
     let { avatarSrc: t, username: n } = e,
-        [a, c] = (0, o.US)([s.z.NITRO_ON_PROFILE_SIDE_PANEL], C.R.SIDEBAR, !0);
-    return a !== s.z.NITRO_ON_PROFILE_SIDE_PANEL
+        [s, c] = (0, o.US)([a.z.NITRO_ON_PROFILE_SIDE_PANEL], g.R.SIDEBAR, !0);
+    return s !== a.z.NITRO_ON_PROFILE_SIDE_PANEL
         ? null
         : (0, i.jsx)(f.Z.Overlay, {
               className: x.overlay2,
@@ -105,7 +105,7 @@ function S(e) {
                           })
                       }),
                       (0, i.jsx)(r.Clickable, {
-                          onClick: () => c(C.L.USER_DISMISS),
+                          onClick: () => c(g.L.USER_DISMISS),
                           'aria-label': I.Z.Messages.DISMISS,
                           className: x.closeIconWrapper,
                           children: (0, i.jsx)(r.XSmallIcon, {
@@ -118,7 +118,7 @@ function S(e) {
               })
           });
 }
-function v(e) {
+function N(e) {
     let { avatarSrc: t, username: n } = e;
     return (0, i.jsx)(f.Z.Overlay, {
         className: x.overlay2,
@@ -143,33 +143,33 @@ function v(e) {
         })
     });
 }
-function Z(e) {
-    let { variant: t, avatarSrc: n, username: a } = e;
+function A(e) {
+    let { variant: t, avatarSrc: n, username: s } = e;
     if (1 === t)
-        return (0, i.jsx)(N, {
-            avatarSrc: n,
-            username: a
-        });
-    if (2 === t)
         return (0, i.jsx)(S, {
             avatarSrc: n,
-            username: a
+            username: s
         });
-    if (3 === t)
+    if (2 === t)
         return (0, i.jsx)(v, {
             avatarSrc: n,
-            username: a
+            username: s
+        });
+    if (3 === t)
+        return (0, i.jsx)(N, {
+            avatarSrc: n,
+            username: s
         });
     return null;
 }
-let A = a.memo(function (e) {
+let Z = s.memo(function (e) {
     let { user: t, displayProfile: n } = e,
-        { avatarSrc: a } = (0, _.Z)({
+        { avatarSrc: s } = (0, _.Z)({
             user: t,
             size: r.AvatarSizes.SIZE_32
         }),
-        s = h.default.getCurrentUser(),
-        l = m.ZP.isPremium(s) || null == n || !m.ZP.isPremiumAtLeast(n.premiumType, g.p9.TIER_2),
+        a = h.default.getCurrentUser(),
+        l = p.ZP.isPremium(a) || null == n || !p.ZP.isPremiumAtLeast(n.premiumType, C.p9.TIER_2),
         { enabled: o, variant: u } = c.f.useExperiment(
             { location: 'UserProfilePanelPremiumUpsell' },
             {
@@ -178,11 +178,11 @@ let A = a.memo(function (e) {
             }
         );
     return o
-        ? (0, i.jsx)(Z, {
+        ? (0, i.jsx)(A, {
               variant: u,
-              avatarSrc: a,
+              avatarSrc: s,
               username: t.username
           })
         : null;
 });
-t.Z = A;
+t.Z = Z;

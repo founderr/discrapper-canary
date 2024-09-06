@@ -22,8 +22,8 @@ var r = n(735250),
     I = n(639119),
     m = n(197115),
     T = n(587446),
-    g = n(594174),
-    S = n(626135),
+    S = n(594174),
+    g = n(626135),
     A = n(74538),
     N = n(238302),
     O = n(514361),
@@ -31,8 +31,8 @@ var r = n(735250),
     v = n(705262),
     C = n(981631),
     y = n(921944),
-    L = n(474936),
-    D = n(689938),
+    D = n(474936),
+    L = n(689938),
     b = n(864879);
 let M = () =>
         (0, r.jsx)('div', {
@@ -44,7 +44,7 @@ let M = () =>
                     (0, r.jsx)(c.Heading, {
                         variant: 'heading-md/bold',
                         color: 'always-white',
-                        children: D.Z.Messages.CLIENT_THEMES_EDITOR_UPSELL_HEADER
+                        children: L.Z.Messages.CLIENT_THEMES_EDITOR_UPSELL_HEADER
                     })
                 ]
             })
@@ -68,7 +68,7 @@ let M = () =>
                 }),
                 (0, r.jsx)(c.Heading, {
                     variant: 'heading-lg/extrabold',
-                    children: D.Z.Messages.CLIENT_THEMES_EDITOR_HEADER
+                    children: L.Z.Messages.CLIENT_THEMES_EDITOR_HEADER
                 })
             ]
         });
@@ -77,7 +77,7 @@ let M = () =>
         var t, n, i;
         let { onSubscribeSuccess: a, markAsDismissed: s } = e,
             { analyticsLocations: o } = (0, p.ZP)(h.Z.CLIENT_THEMES_EDITOR),
-            [_, E] = (0, l.Wu)([g.default, O.Z], () => [O.Z.gradientPreset, A.ZP.isPremium(g.default.getCurrentUser())]),
+            [_, E] = (0, l.Wu)([S.default, O.Z], () => [O.Z.gradientPreset, A.ZP.isPremium(S.default.getCurrentUser())]),
             f = (0, I.N)(),
             T = (0, A.Rt)({
                 intervalType: null == f ? void 0 : null === (t = f.subscription_trial) || void 0 === t ? void 0 : t.interval,
@@ -85,8 +85,8 @@ let M = () =>
             });
         return (0, r.jsx)(m.Z, {
             size: c.Button.Sizes.MEDIUM,
-            buttonText: E ? D.Z.Messages.BILLING_SWITCH_PLAN_UPGRADE : (null == f ? void 0 : null === (i = f.subscription_trial) || void 0 === i ? void 0 : i.sku_id) === L.Si.TIER_2 ? T : D.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL,
-            subscriptionTier: L.Si.TIER_2,
+            buttonText: E ? L.Z.Messages.BILLING_SWITCH_PLAN_UPGRADE : (null == f ? void 0 : null === (i = f.subscription_trial) || void 0 === i ? void 0 : i.sku_id) === D.Si.TIER_2 ? T : L.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL,
+            subscriptionTier: D.Si.TIER_2,
             onSubscribeModalClose: (e) => {
                 if (!e) return;
                 if ((null == a || a(), null != s && s(y.L.PRIMARY), null != _))
@@ -115,9 +115,9 @@ let M = () =>
                 isCoachmark: a,
                 forceShowCloseButton: s
             })
-                .with({ isCoachmark: !0 }, { forceShowCloseButton: !0 }, () => D.Z.Messages.CLOSE)
-                .with({ isPreview: !0 }, () => D.Z.Messages.CLIENT_THEMES_EDITOR_EXIT_PREVIEW)
-                .otherwise(() => D.Z.Messages.CLIENT_THEMES_EDITOR_RETURN_TO_SETTINGS);
+                .with({ isCoachmark: !0 }, { forceShowCloseButton: !0 }, () => L.Z.Messages.CLOSE)
+                .with({ isPreview: !0 }, () => L.Z.Messages.CLIENT_THEMES_EDITOR_EXIT_PREVIEW)
+                .otherwise(() => L.Z.Messages.CLIENT_THEMES_EDITOR_RETURN_TO_SETTINGS);
         return (0, r.jsxs)('div', {
             className: b.editorFooter,
             children: [
@@ -158,8 +158,8 @@ function x(e) {
     i.useEffect(() => _(C.rMx.CLIENT_THEME_PREVIEW_VIEWED), [_]),
         i.useEffect(() => {
             if (!!a)
-                S.default.track(C.rMx.PREMIUM_UPSELL_VIEWED, {
-                    type: L.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
+                g.default.track(C.rMx.PREMIUM_UPSELL_VIEWED, {
+                    type: D.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
                     location_stack: n
                 });
         }, [a, n]);

@@ -29,7 +29,7 @@ function T(e, t, n) {
         e
     );
 }
-class g extends a.Z {
+class S extends a.Z {
     constructor(...e) {
         super(...e),
             T(this, 'onboardingCompleteGuilds', new Set()),
@@ -123,4 +123,4 @@ class g extends a.Z {
             });
     }
 }
-t.Z = new g();
+t.Z = new S();

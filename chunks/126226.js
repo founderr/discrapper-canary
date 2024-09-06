@@ -21,8 +21,8 @@ var i = n(693789),
     I = n(496675),
     m = n(226951),
     T = n(877565),
-    g = n(590921),
-    S = n(665692),
+    S = n(590921),
+    g = n(665692),
     A = n(689079),
     N = n(689938),
     O = n(402345);
@@ -34,12 +34,12 @@ function v() {
     });
 }
 let C = {
-    sentinel: S.GI,
+    sentinel: g.GI,
     stores: [_.Z, u.ZP, I.Z],
-    matches: (e, t, n, r, i) => i.commands !== g.L8.DISABLED && null == _.Z.getActiveCommand(e.id) && (r || i.commands !== g.L8.OLD_BUILT_INS),
+    matches: (e, t, n, r, i) => i.commands !== S.L8.DISABLED && null == _.Z.getActiveCommand(e.id) && (r || i.commands !== S.L8.OLD_BUILT_INS),
     queryResults(e, t, n, r, i) {
-        if (0 === n.length && r.commands !== g.L8.OLD_BUILT_INS) return R;
-        if (r.commands === g.L8.OLD_BUILT_INS) {
+        if (0 === n.length && r.commands !== S.L8.OLD_BUILT_INS) return R;
+        if (r.commands === S.L8.OLD_BUILT_INS) {
             let r = (0, l.Kh)([s.yU.CHAT], !1, !1),
                 i = RegExp('^'.concat(m.Z.escape(n)), 'i'),
                 a = (0, f.Dd)(
@@ -49,7 +49,7 @@ let C = {
                         channel: e,
                         guild: t
                     },
-                    g.AQ
+                    S.AQ
                 ),
                 o = l.Tm[A.bi.BUILT_IN];
             return 0 === a.length
@@ -71,8 +71,8 @@ let C = {
                     text: a.text
                 },
                 {
-                    limit: g.AQ,
-                    placeholderCount: g.YP,
+                    limit: S.AQ,
+                    placeholderCount: S.YP,
                     scoreMethod: d.p.COMMAND_OR_APPLICATION,
                     allowFetch: i
                 }
@@ -88,7 +88,7 @@ let C = {
             ? R
             : {
                   results: {
-                      entries: _.slice(0, g.AQ).map((e) => ({
+                      entries: _.slice(0, S.AQ).map((e) => ({
                           command: e,
                           section: null == u ? void 0 : u.find((t) => t.id === e.applicationId)
                       }))
@@ -106,7 +106,7 @@ let C = {
                 onClick: u
             } = e,
             c = (0, h.hV)(a, s),
-            d = o.commands === g.L8.OLD_BUILT_INS;
+            d = o.commands === S.L8.OLD_BUILT_INS;
         return (0, T.HI)({
             query: c.text,
             selectedIndex: n,
@@ -115,7 +115,7 @@ let C = {
             onClick: u,
             titleWithQuery: N.Z.Messages.COMMANDS_MATCHING,
             titleWithoutQuery: N.Z.Messages.COMMANDS,
-            getQuery: (e) => ''.concat(S.GI).concat(e),
+            getQuery: (e) => ''.concat(g.GI).concat(e),
             Component: d ? p.ZP.Command : p.ZP.NewCommand,
             getProps: (e) => {
                 let { command: t, section: n } = e;
@@ -154,10 +154,10 @@ let C = {
             } = e,
             { command: u, section: c } = t[n];
         if (u.inputType === E.iw.PLACEHOLDER) return null;
-        if (i.commands === g.L8.OLD_BUILT_INS)
+        if (i.commands === S.L8.OLD_BUILT_INS)
             i.insertText(
                 (function (e) {
-                    return ''.concat(S.GI).concat(e.displayName);
+                    return ''.concat(g.GI).concat(e.displayName);
                 })(u)
             );
         else {
@@ -171,7 +171,7 @@ let C = {
                     queryLength: null == r ? void 0 : r.length
                 });
         }
-        return { type: g.z2.COMMAND };
+        return { type: S.z2.COMMAND };
     }
 };
 t.Z = C;

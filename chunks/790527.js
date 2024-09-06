@@ -20,8 +20,8 @@ var r = n(735250),
     I = n(639119),
     m = n(165583),
     T = n(197115),
-    g = n(302945),
-    S = n(631771),
+    S = n(302945),
+    g = n(631771),
     A = n(474936),
     N = n(981631),
     O = n(689938),
@@ -29,8 +29,8 @@ var r = n(735250),
     v = n(769860);
 function C(e) {
     var t, n, a;
-    let { title: C, type: y, guildBoostProps: L, analyticsSource: D, analyticsLocation: b, body: M, context: P, glowUp: U, modalClassName: w, modalContentClassName: x, artContainerClassName: G, headerClassName: k, bodyClassName: B, transitionState: F, onClose: V, onSubscribeClick: H, onSecondaryClick: Z, secondaryCTA: Y, subscribeButtonText: j, showNewBadge: W = !1, enableArtBoxShadow: K = !0, subscriptionTier: z = A.Si.TIER_2, isLoading: q = !1, hideBackButton: Q, backButtonText: X, showEnhancedUpsell: $, useSubscribeButtonGradient: J, subscribeButtonClassname: ee, hidePremiumOfferUpsell: et, children: en, LeadingComponent: er, ...ei } = e,
-        ea = null != L,
+    let { title: C, type: y, guildBoostProps: D, analyticsSource: L, analyticsLocation: b, body: M, context: P, glowUp: U, modalClassName: w, modalContentClassName: x, artContainerClassName: G, headerClassName: k, bodyClassName: B, transitionState: F, onClose: V, onSubscribeClick: H, onSecondaryClick: Z, secondaryCTA: Y, subscribeButtonText: j, showNewBadge: W = !1, enableArtBoxShadow: K = !0, subscriptionTier: z = A.Si.TIER_2, isLoading: q = !1, hideBackButton: Q, backButtonText: X, showEnhancedUpsell: $, useSubscribeButtonGradient: J, subscribeButtonClassname: ee, hidePremiumOfferUpsell: et, children: en, LeadingComponent: er, ...ei } = e,
+        ea = null != D,
         es = (0, I.N)(),
         eo = (0, p.Ng)(),
         el = !et && ((null == es ? void 0 : null === (t = es.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === z || (0, p.Wp)(eo, z)) && !ea,
@@ -39,22 +39,22 @@ function C(e) {
         !q &&
             (ea
                 ? E.default.track(N.rMx.PREMIUM_GUILD_UPSELL_VIEWED, {
-                      type: ''.concat(y, ' - Tier ').concat(L.boostedGuildTier),
-                      guild_id: L.guild.id,
-                      channel_id: L.channelId,
+                      type: ''.concat(y, ' - Tier ').concat(D.boostedGuildTier),
+                      guild_id: D.guild.id,
+                      channel_id: D.channelId,
                       location: b,
                       location_stack: eu
                   })
                 : E.default.track(N.rMx.PREMIUM_UPSELL_VIEWED, {
                       type: y,
-                      source: D,
+                      source: L,
                       location: b,
                       location_stack: eu,
                       sku_id: (0, f.Wz)(z)
                   }));
     }, [ea, z, q]);
     let ec = (0, o.e7)([h.Z], () => h.Z.affinities),
-        ed = ec.length > 1 && (0, S.YN)(y),
+        ed = ec.length > 1 && (0, g.YN)(y),
         e_ = (0, o.e7)([h.Z], () => h.Z.hasFetched);
     i.useEffect(() => {
         !e_ && u.MH();
@@ -120,7 +120,7 @@ function C(e) {
                                                         variant: 'heading-xl/bold',
                                                         children: C
                                                     }),
-                                                    ed ? (0, r.jsx)(g.Z, { affinities: ec }) : void 0,
+                                                    ed ? (0, r.jsx)(S.Z, { affinities: ec }) : void 0,
                                                     en,
                                                     (0, r.jsx)(l.Text, {
                                                         variant: 'text-md/normal',
@@ -153,7 +153,7 @@ function C(e) {
                                     if (ea)
                                         return (0, r.jsx)(_.Z, {
                                             analyticsLocation: b,
-                                            guild: L.guild,
+                                            guild: D.guild,
                                             onClose: V
                                         });
                                     let e = $ ? O.Z.Messages.PREMIUM_UPSELL_GET_NITRO : void 0;

@@ -27,7 +27,7 @@ n.d(t, {
         return v;
     },
     cq: function () {
-        return g;
+        return S;
     },
     j: function () {
         return s;
@@ -36,7 +36,7 @@ n.d(t, {
         return y;
     },
     kb: function () {
-        return L;
+        return D;
     },
     n: function () {
         return p;
@@ -57,7 +57,7 @@ n.d(t, {
         return C;
     },
     vD: function () {
-        return S;
+        return g;
     },
     x3: function () {
         return T;
@@ -80,7 +80,7 @@ let d = 7,
     I = 30,
     m = 200,
     T = 7;
-function g(e) {
+function S(e) {
     var t;
     return {
         channelId: e.channel_id,
@@ -98,7 +98,7 @@ function g(e) {
         icon: null !== (t = e.icon) && void 0 !== t ? t : null
     };
 }
-function S(e) {
+function g(e) {
     var t, n;
     return {
         channelId: e.channel_id,
@@ -122,11 +122,11 @@ function A(e) {
             authorIds: t.author_ids,
             message: t.message
         },
-        s = n.filter((e) => (0, l.lm)(o.Z.getChannel(e.channel_id))).map(g);
+        s = n.filter((e) => (0, l.lm)(o.Z.getChannel(e.channel_id))).map(S);
     return {
         welcomeMessage: a,
         newMemberActions: s,
-        resourceChannels: r.filter((e) => (0, l.lm)(o.Z.getChannel(e.channel_id))).map(S),
+        resourceChannels: r.filter((e) => (0, l.lm)(o.Z.getChannel(e.channel_id))).map(g),
         enabled: i
     };
 }
@@ -198,7 +198,7 @@ function C(e) {
 function y(e) {
     return e.type === c.d4z.GUILD_TEXT && !u.Uu(c.Plq.SEND_MESSAGES, e) && u.Uu(c.Plq.VIEW_CHANNEL, e);
 }
-function L(e) {
+function D(e) {
     switch (e.type) {
         case c.d4z.GUILD_TEXT:
         case c.d4z.GUILD_ANNOUNCEMENT:

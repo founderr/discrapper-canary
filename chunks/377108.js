@@ -9,7 +9,7 @@ n.d(t, {
         return I;
     },
     ND: function () {
-        return S;
+        return g;
     },
     PL: function () {
         return N;
@@ -24,7 +24,7 @@ n.d(t, {
         return C;
     },
     h_: function () {
-        return L;
+        return D;
     },
     ji: function () {
         return d;
@@ -84,7 +84,7 @@ class c extends l.C {
                     i.stickerFrecency = T.internalBinaryRead(e, e.uint32(), n, i.stickerFrecency);
                     break;
                 case 5:
-                    i.favoriteEmojis = S.internalBinaryRead(e, e.uint32(), n, i.favoriteEmojis);
+                    i.favoriteEmojis = g.internalBinaryRead(e, e.uint32(), n, i.favoriteEmojis);
                     break;
                 case 6:
                     i.emojiFrecency = N.internalBinaryRead(e, e.uint32(), n, i.emojiFrecency);
@@ -93,7 +93,7 @@ class c extends l.C {
                     i.applicationCommandFrecency = R.internalBinaryRead(e, e.uint32(), n, i.applicationCommandFrecency);
                     break;
                 case 8:
-                    i.favoriteSoundboardSounds = L.internalBinaryRead(e, e.uint32(), n, i.favoriteSoundboardSounds);
+                    i.favoriteSoundboardSounds = D.internalBinaryRead(e, e.uint32(), n, i.favoriteSoundboardSounds);
                     break;
                 case 9:
                     i.applicationFrecency = w.internalBinaryRead(e, e.uint32(), n, i.applicationFrecency);
@@ -120,7 +120,7 @@ class c extends l.C {
         return i;
     }
     internalBinaryWrite(e, t, n) {
-        e.versions && u.L.internalBinaryWrite(e.versions, t.tag(1, a.TD.LengthDelimited).fork(), n).join(), e.favoriteGifs && E.internalBinaryWrite(e.favoriteGifs, t.tag(2, a.TD.LengthDelimited).fork(), n).join(), e.favoriteStickers && I.internalBinaryWrite(e.favoriteStickers, t.tag(3, a.TD.LengthDelimited).fork(), n).join(), e.stickerFrecency && T.internalBinaryWrite(e.stickerFrecency, t.tag(4, a.TD.LengthDelimited).fork(), n).join(), e.favoriteEmojis && S.internalBinaryWrite(e.favoriteEmojis, t.tag(5, a.TD.LengthDelimited).fork(), n).join(), e.emojiFrecency && N.internalBinaryWrite(e.emojiFrecency, t.tag(6, a.TD.LengthDelimited).fork(), n).join(), e.applicationCommandFrecency && R.internalBinaryWrite(e.applicationCommandFrecency, t.tag(7, a.TD.LengthDelimited).fork(), n).join(), e.favoriteSoundboardSounds && L.internalBinaryWrite(e.favoriteSoundboardSounds, t.tag(8, a.TD.LengthDelimited).fork(), n).join(), e.applicationFrecency && w.internalBinaryWrite(e.applicationFrecency, t.tag(9, a.TD.LengthDelimited).fork(), n).join(), e.heardSoundFrecency && b.internalBinaryWrite(e.heardSoundFrecency, t.tag(10, a.TD.LengthDelimited).fork(), n).join(), e.playedSoundFrecency && P.internalBinaryWrite(e.playedSoundFrecency, t.tag(11, a.TD.LengthDelimited).fork(), n).join(), e.guildAndChannelFrecency && G.internalBinaryWrite(e.guildAndChannelFrecency, t.tag(12, a.TD.LengthDelimited).fork(), n).join(), e.emojiReactionFrecency && N.internalBinaryWrite(e.emojiReactionFrecency, t.tag(13, a.TD.LengthDelimited).fork(), n).join();
+        e.versions && u.L.internalBinaryWrite(e.versions, t.tag(1, a.TD.LengthDelimited).fork(), n).join(), e.favoriteGifs && E.internalBinaryWrite(e.favoriteGifs, t.tag(2, a.TD.LengthDelimited).fork(), n).join(), e.favoriteStickers && I.internalBinaryWrite(e.favoriteStickers, t.tag(3, a.TD.LengthDelimited).fork(), n).join(), e.stickerFrecency && T.internalBinaryWrite(e.stickerFrecency, t.tag(4, a.TD.LengthDelimited).fork(), n).join(), e.favoriteEmojis && g.internalBinaryWrite(e.favoriteEmojis, t.tag(5, a.TD.LengthDelimited).fork(), n).join(), e.emojiFrecency && N.internalBinaryWrite(e.emojiFrecency, t.tag(6, a.TD.LengthDelimited).fork(), n).join(), e.applicationCommandFrecency && R.internalBinaryWrite(e.applicationCommandFrecency, t.tag(7, a.TD.LengthDelimited).fork(), n).join(), e.favoriteSoundboardSounds && D.internalBinaryWrite(e.favoriteSoundboardSounds, t.tag(8, a.TD.LengthDelimited).fork(), n).join(), e.applicationFrecency && w.internalBinaryWrite(e.applicationFrecency, t.tag(9, a.TD.LengthDelimited).fork(), n).join(), e.heardSoundFrecency && b.internalBinaryWrite(e.heardSoundFrecency, t.tag(10, a.TD.LengthDelimited).fork(), n).join(), e.playedSoundFrecency && P.internalBinaryWrite(e.playedSoundFrecency, t.tag(11, a.TD.LengthDelimited).fork(), n).join(), e.guildAndChannelFrecency && G.internalBinaryWrite(e.guildAndChannelFrecency, t.tag(12, a.TD.LengthDelimited).fork(), n).join(), e.emojiReactionFrecency && N.internalBinaryWrite(e.emojiReactionFrecency, t.tag(13, a.TD.LengthDelimited).fork(), n).join();
         let r = n.writeUnknownFields;
         return !1 !== r && (!0 == r ? a.z.onWrite : r)(this.typeName, e, t), t;
     }
@@ -154,7 +154,7 @@ class c extends l.C {
                 no: 5,
                 name: 'favorite_emojis',
                 kind: 'message',
-                T: () => S
+                T: () => g
             },
             {
                 no: 6,
@@ -172,7 +172,7 @@ class c extends l.C {
                 no: 8,
                 name: 'favorite_soundboard_sounds',
                 kind: 'message',
-                T: () => L
+                T: () => D
             },
             {
                 no: 9,
@@ -500,7 +500,7 @@ class m extends l.C {
     }
 }
 let T = new m();
-class g extends l.C {
+class S extends l.C {
     create(e) {
         let t = { emojis: [] };
         return (
@@ -544,7 +544,7 @@ class g extends l.C {
         ]);
     }
 }
-let S = new g();
+let g = new S();
 class A extends l.C {
     create(e) {
         let t = { emojis: {} };
@@ -817,8 +817,8 @@ class y extends l.C {
         ]);
     }
 }
-let L = new y();
-class D extends l.C {
+let D = new y();
+class L extends l.C {
     create(e) {
         let t = { heardSounds: {} };
         return (
@@ -885,7 +885,7 @@ class D extends l.C {
         ]);
     }
 }
-let b = new D();
+let b = new L();
 class M extends l.C {
     create(e) {
         let t = { playedSounds: {} };

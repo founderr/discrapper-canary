@@ -21,8 +21,8 @@ function T() {
         null: []
     };
 }
-let g = T();
-function S(e, t) {
+let S = T();
+function g(e, t) {
     e.index = t;
 }
 function A(e) {
@@ -47,7 +47,7 @@ function A(e) {
         }),
         t[E.sH].forEach(r),
         t[E.Zb].forEach(r),
-        (0, u.Z)(n._categories, n).forEach(S),
+        (0, u.Z)(n._categories, n).forEach(g),
         (I[e] = n),
         n
     );
@@ -80,7 +80,7 @@ function C(e, t) {
 function y() {
     A(h.I_8);
 }
-class L extends (r = o.ZP.Store) {
+class D extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(E.ZP, f.Z, d.default, _.Z, c.Z), this.syncWith([c.Z], y);
     }
@@ -90,11 +90,11 @@ class L extends (r = o.ZP.Store) {
                   let t = I[e];
                   return null != t ? t : A(e);
               })(e)
-            : g;
+            : S;
     }
 }
 (s = 'GuildCategoryStore'),
-    (a = 'displayName') in (i = L)
+    (a = 'displayName') in (i = D)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -102,7 +102,7 @@ class L extends (r = o.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new L(l.Z, {
+    (t.Z = new D(l.Z, {
         CHANNEL_SELECT: function (e) {
             let { guildId: t } = e;
             if (((p = null != t ? t : null), null == t || null != I[t])) return !1;

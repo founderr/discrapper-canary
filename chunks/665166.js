@@ -6,9 +6,9 @@ t.d(s, {
 var n = t(735250);
 t(470079);
 var a = t(481060),
-    i = t(245963),
-    r = t(217591),
-    o = t(836864);
+    i = t(595745),
+    r = t(828683),
+    o = t(388032);
 function l() {
     return (0, n.jsxs)(n.Fragment, {
         children: [
@@ -23,8 +23,8 @@ function l() {
                         label: 'French'
                     }
                 ],
-                isSelected: (e) => e === o.N.currentLocale,
-                select: (e) => o.N.setLocale(e),
+                isSelected: (e) => e === o.NW.currentLocale,
+                select: (e) => o.NW.setLocale(e),
                 serialize: (e) => e
             }),
             (0, n.jsx)(a.Spacer, { size: 32 }),
@@ -34,32 +34,32 @@ function l() {
                     (0, n.jsx)(a.Text, {
                         tag: 'div',
                         variant: 'heading-lg/bold',
-                        children: o.N.format(r.Z.JJ0wpK)
+                        children: o.NW.format(r.Z.JJ0wpK)
                     }),
                     (0, n.jsx)(a.Text, {
                         tag: 'div',
                         variant: 'text-md/normal',
-                        children: o.N.format(i.Z.swfLzc)
+                        children: o.NW.format(i.Z.swfLzc)
                     }),
                     (0, n.jsx)(a.Text, {
                         tag: 'div',
                         variant: 'text-md/normal',
-                        children: o.N.format(r.Z['rmps8/'])
+                        children: o.NW.format(r.Z['rmps8/'], {})
                     }),
                     (0, n.jsx)(a.Text, {
                         tag: 'div',
                         variant: 'text-md/normal',
-                        children: o.N.format(r.Z.uczI4u, { linkTarget: console.log })
+                        children: o.NW.format(r.Z.uczI4u, { linkTarget: console.log })
                     }),
                     (0, n.jsx)(a.Text, {
                         tag: 'div',
                         variant: 'text-md/normal',
-                        children: o.N.format(r.Z.rdfRys)
+                        children: o.NW.format(r.Z.rdfRys, {})
                     }),
                     (0, n.jsx)(a.Text, {
                         tag: 'div',
                         variant: 'text-md/normal',
-                        children: o.N.format(r.Z.XOdbAw, {
+                        children: o.NW.format(r.Z.XOdbAw, {
                             username: 'some user',
                             usernameHook: (e) =>
                                 (0, n.jsx)('span', {

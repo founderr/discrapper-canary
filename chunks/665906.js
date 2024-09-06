@@ -1,6 +1,6 @@
 n.d(t, {
     $R: function () {
-        return D;
+        return L;
     },
     C7: function () {
         return R;
@@ -24,19 +24,19 @@ n.d(t, {
         return U;
     },
     Xu: function () {
-        return g;
+        return S;
     },
     Y: function () {
         return w;
     },
     cD: function () {
-        return S;
+        return g;
     },
     ki: function () {
         return T;
     },
     kn: function () {
-        return L;
+        return D;
     },
     tM: function () {
         return I;
@@ -93,13 +93,13 @@ function T(e, t) {
     let n = e.isForumLikeChannel() ? p.Plq.SEND_MESSAGES : a.$e(p.Plq.CREATE_PUBLIC_THREADS, p.Plq.READ_MESSAGE_HISTORY);
     return A(E.Z.can(n, e), e, t);
 }
-function g(e) {
+function S(e) {
     let t = (0, s.e7)([E.Z], () => E.Z.can(a.$e(p.Plq.CREATE_PRIVATE_THREADS), e), [e]);
     return e.type === p.d4z.GUILD_TEXT && A(t, e);
 }
-function S(e) {
+function g(e) {
     let t = m(e),
-        n = g(e);
+        n = S(e);
     return t || n;
 }
 function A(e, t, n) {
@@ -147,14 +147,14 @@ function y(e) {
         n = U(e);
     return C(e, t, n);
 }
-function L(e) {
+function D(e) {
     let t = v(e, E.Z),
         n = (function (e) {
             return P(e, E.Z);
         })(e);
     return C(e, t, n);
 }
-function D(e) {
+function L(e) {
     var t;
     let n = (0, s.e7)([E.Z], () => null != e && E.Z.can(p.Plq.SEND_MESSAGES_IN_THREADS, e));
     return null != e && (!e.isThread() || e.isActiveThread() || (e.isArchivedThread() && (null === (t = e.threadMetadata) || void 0 === t ? void 0 : t.locked) !== !0 && n));
@@ -176,7 +176,7 @@ function U(e) {
 function w(e) {
     let t = (0, l.Z)(),
         n = (0, s.e7)([E.Z], () => E.Z.can(p.Plq.CONNECT, e)),
-        r = D(e),
+        r = L(e),
         i = I.useExperiment(
             {
                 guildId: e.guild_id,

@@ -65,12 +65,12 @@ function T(e) {
         message: null != e.message ? (0, o.e5)(e.message) : void 0
     };
 }
-function g(e) {
+function S(e) {
     let t = 'NOTIFICATION_CENTER_ITEM_CREATE' === e.type ? T(e.item) : e.item;
     if (!p.initialized || !I(t) || p.notifCenterIds.has(t.id)) return !1;
     p.notifCenterIds.add(t.id), (p.notifCenterItems = [t, ...p.notifCenterItems]), p.notifCenterItems.sort((e, t) => d.default.compare(t.id, e.id));
 }
-function S(e, t) {
+function g(e, t) {
     p.notifCenterItems = p.notifCenterItems
         .map((n) =>
             e.includes(n.id)
@@ -175,23 +175,23 @@ let R = new O(a.Z, {
     LOGOUT: m,
     NOTIFICATION_CENTER_ITEMS_ACK: function (e) {
         let { ids: t } = e;
-        S(t, !0);
+        g(t, !0);
     },
     NOTIFICATION_CENTER_ITEMS_ACK_FAILURE: function (e) {
         let { ids: t } = e;
-        S(t, !1);
+        g(t, !1);
     },
     GUILD_SCHEDULED_EVENT_UPDATE: function (e) {
         let { guildScheduledEvent: t } = e;
         N(t);
     },
-    NOTIFICATION_CENTER_ITEM_CREATE: g,
+    NOTIFICATION_CENTER_ITEM_CREATE: S,
     NOTIFICATION_CENTER_ITEM_DELETE: function (e) {
         let { id: t } = e;
         if (!p.notifCenterIds.has(t)) return !1;
         p.notifCenterIds.delete(t), (p.notifCenterItems = p.notifCenterItems.filter((e) => e.id !== t));
     },
-    NOTIFICATION_CENTER_ITEM_DELETE_FAILURE: g,
+    NOTIFICATION_CENTER_ITEM_DELETE_FAILURE: S,
     LOAD_NOTIFICATION_CENTER_ITEMS: function () {
         p.loading = !0;
     },

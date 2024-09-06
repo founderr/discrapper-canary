@@ -1,9 +1,9 @@
 n.d(t, {
     H: function () {
-        return T;
+        return _;
     },
     v: function () {
-        return _;
+        return T;
     }
 }),
     n(47120);
@@ -14,8 +14,8 @@ var i = n(512722),
     l = n(683860),
     r = n(731965),
     c = n(442837),
-    u = n(592125),
-    d = n(559241);
+    d = n(592125),
+    u = n(559241);
 function h(e, t, n) {
     return (
         t in e
@@ -36,7 +36,7 @@ let m = new Set(),
         tagFilter: m,
         scrollPosition: 0
     };
-class g {
+class f {
     constructor(e, t) {
         h(this, 'set', void 0),
             h(this, 'get', void 0),
@@ -66,7 +66,7 @@ class g {
                 let { channelStates: t } = this.get(),
                     n = t[e];
                 if (null == n) {
-                    let t = u.Z.getChannel(e);
+                    let t = d.Z.getChannel(e);
                     s()(null != t, '[Forum Channel Store] The channel should not be missing.'),
                         (n = {
                             layoutType: t.getDefaultLayout(),
@@ -82,22 +82,22 @@ class g {
                 n.has(t) ? n.delete(t) : n.add(t), this.setTagFilter(e, n);
             }),
             (this.setTagFilter = (e, t) => {
-                this.setChannelState(e, { tagFilter: t }), d.Z.setFilterTagIds(t);
+                this.setChannelState(e, { tagFilter: t }), u.Z.setFilterTagIds(t);
             }),
             (this.setSortOrder = (e, t) => {
-                this.setChannelState(e, { sortOrder: t }), d.Z.setSortOrder(t);
+                this.setChannelState(e, { sortOrder: t }), u.Z.setSortOrder(t);
             }),
             (this.setLayoutType = (e, t) => {
-                this.setChannelState(e, { layoutType: t }), d.Z.setLayout(t);
+                this.setChannelState(e, { layoutType: t }), u.Z.setLayout(t);
             }),
             (this.setScrollPosition = (e, t) => {
                 this.setChannelState(e, { scrollPosition: t });
             });
     }
 }
-let f = (0, o.Z)((e, t) => new g(e, t)),
-    T = (e) => {
-        let t = f();
-        return null == (0, c.e7)([u.Z], () => u.Z.getChannel(e)) ? p : t.getChannelState(e);
+let g = (0, o.Z)((e, t) => new f(e, t)),
+    _ = (e) => {
+        let t = g();
+        return null == (0, c.e7)([d.Z], () => d.Z.getChannel(e)) ? p : t.getChannelState(e);
     },
-    _ = () => f;
+    T = () => g;

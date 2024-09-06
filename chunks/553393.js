@@ -16,8 +16,8 @@ var r = n(735250),
     I = n(210887),
     m = n(592125),
     T = n(430824),
-    g = n(496675),
-    S = n(979651),
+    S = n(496675),
+    g = n(979651),
     A = n(617136),
     N = n(113434),
     O = n(497505),
@@ -25,22 +25,22 @@ var r = n(735250),
     v = n(602667),
     C = n(644646),
     y = n(667105),
-    L = n(341907),
-    D = n(46140),
+    D = n(341907),
+    L = n(46140),
     b = n(981631),
     M = n(231338),
     P = n(689938),
     U = n(637524);
 let w = '11px';
 function x(e, t) {
-    return null != e && null != t && (0, p.p9)(t, S.Z, T.Z, g.Z, h.Z)[0];
+    return null != e && null != t && (0, p.p9)(t, g.Z, T.Z, S.Z, h.Z)[0];
 }
 t.Z = function (e) {
     var t, h, p;
-    let { quest: T, memberListItemRef: g, applicationStream: S, position: G, closePopout: k, updatePosition: B } = e,
+    let { quest: T, memberListItemRef: S, applicationStream: g, position: G, closePopout: k, updatePosition: B } = e,
         F = (0, o.e7)([m.Z], () => {
             var e;
-            return null !== (e = m.Z.getChannel(null == S ? void 0 : S.channelId)) && void 0 !== e ? e : null;
+            return null !== (e = m.Z.getChannel(null == g ? void 0 : g.channelId)) && void 0 !== e ? e : null;
         }),
         V = (0, y.hf)({
             quest: T,
@@ -68,7 +68,7 @@ t.Z = function (e) {
     }, [k, ee]),
         i.useEffect(() => {
             let e = ee.current,
-                t = g.current;
+                t = S.current;
             if (null == e || null == t) return;
             let n = new MutationObserver(() => B());
             return (
@@ -80,7 +80,7 @@ t.Z = function (e) {
                     n.disconnect();
                 }
             );
-        }, [g, ee, B]);
+        }, [S, ee, B]);
     let et = (0, u.useSpring)({
             from: { height: 0 },
             height: null != Q ? Q : 0,
@@ -104,7 +104,7 @@ t.Z = function (e) {
             J.dispatch(b.CkL.POPOUT_CLOSE);
         },
         ei = 'top' === G ? ''.concat('4px', ' ').concat('4px', ' 0 0') : '0 0 '.concat('4px', ' ').concat('4px');
-    if (null == T || H || (Z && !x(S, F))) return null;
+    if (null == T || H || (Z && !x(g, F))) return null;
     let ea = () => {
             (0, A._3)({
                 questId: T.id,
@@ -129,13 +129,13 @@ t.Z = function (e) {
                 questContentCTA: A.jZ.LEARN_MORE,
                 trackGuildAndChannelMetadata: !0
             }),
-                (0, L.navigateToQuestHome)(D.dr.MEMBERS_LIST, O.jn.MEMBERS_LIST, T.id);
+                (0, D.navigateToQuestHome)(L.dr.MEMBERS_LIST, O.jn.MEMBERS_LIST, T.id);
         },
         eo = (e) => {
             e.stopPropagation(), ea();
         },
         el = () => {
-            if (x(S, F) && null != F)
+            if (x(g, F) && null != F)
                 return (
                     (0, A._3)({
                         questId: T.id,
@@ -144,7 +144,7 @@ t.Z = function (e) {
                         trackGuildAndChannelMetadata: !0
                     }),
                     c.default.selectVoiceChannel(F.id),
-                    (0, d.iV)(S)
+                    (0, d.iV)(g)
                 );
             es();
         },
@@ -163,7 +163,7 @@ t.Z = function (e) {
                         handleClickCta: es,
                         tileAssetType: 'reward'
                     }
-                  : x(S, F)
+                  : x(g, F)
                     ? {
                           headerText: P.Z.Messages.QUESTS_MEMBERS_LIST_AVAILBLE,
                           ctaText: P.Z.Messages.QUESTS_JOIN_ME,
@@ -189,7 +189,7 @@ t.Z = function (e) {
                 'aria-expanded': X,
                 className: U.wrapper,
                 style: {
-                    width: null !== (n = null === (t = g.current) || void 0 === t ? void 0 : t.clientWidth) && void 0 !== n ? n : 222,
+                    width: null !== (n = null === (t = S.current) || void 0 === t ? void 0 : t.clientWidth) && void 0 !== n ? n : 222,
                     height: et.height,
                     overflow: X ? 'visible' : 'hidden',
                     borderRadius: ei
@@ -262,7 +262,7 @@ t.Z = function (e) {
                                                     quest: T,
                                                     questContent: O.jn.MEMBERS_LIST,
                                                     learnMoreStyle: 'icon',
-                                                    location: D.dr.MEMBERS_LIST,
+                                                    location: L.dr.MEMBERS_LIST,
                                                     onClick: er
                                                 })
                                         ]

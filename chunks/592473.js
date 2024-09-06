@@ -1,21 +1,21 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return p;
     }
 }),
     n(47120);
 var i = n(735250),
-    a = n(470079),
-    s = n(120356),
-    l = n.n(s),
+    s = n(470079),
+    a = n(120356),
+    l = n.n(a),
     r = n(772848),
     o = n(481060),
     c = n(871499),
     u = n(689938),
     d = n(499442);
 function h(e) {
-    let { width: t = 24, height: n = 24, isBadged: s = !1 } = e,
-        [l] = a.useState(() => (0, r.Z)()),
+    let { width: t = 24, height: n = 24, isBadged: a = !1 } = e,
+        [l] = s.useState(() => (0, r.Z)()),
         c = (0, o.useRedesignIconContext)().enabled;
     return (0, i.jsxs)('svg', {
         width: t,
@@ -31,7 +31,7 @@ function h(e) {
                             width: '100%',
                             height: '100%'
                         }),
-                        s &&
+                        a &&
                             (0, i.jsx)('circle', {
                                 cx: '20',
                                 cy: '19',
@@ -56,14 +56,14 @@ function h(e) {
         ]
     });
 }
-function p(e) {
+function m(e) {
     let { className: t, numRequestToSpeak: n } = e,
-        a = n > 0;
+        s = n > 0;
     return (0, i.jsxs)('div', {
         className: l()(d.raisedHandIcon, t),
         children: [
-            (0, i.jsx)(h, { isBadged: a }),
-            a
+            (0, i.jsx)(h, { isBadged: s }),
+            s
                 ? (0, i.jsx)(o.Text, {
                       className: d.raisedHandCount,
                       variant: 'text-xs/semibold',
@@ -73,19 +73,19 @@ function p(e) {
         ]
     });
 }
-function m(e) {
-    let { toggleRequestToSpeakSidebar: t, showRequestToSpeakSidebar: n, className: s, numRequestToSpeak: l, onClick: r, ...o } = e,
-        d = a.useCallback(() => {
+function p(e) {
+    let { toggleRequestToSpeakSidebar: t, showRequestToSpeakSidebar: n, className: a, numRequestToSpeak: l, onClick: r, ...o } = e,
+        d = s.useCallback(() => {
             null == r || r(), t();
         }, [r, t]);
     return (0, i.jsx)(c.Z, {
         onClick: d,
         label: n ? u.Z.Messages.REQUEST_TO_SPEAK_AREA_CLOSE : u.Z.Messages.REQUEST_TO_SPEAK_AREA_OPEN,
-        className: s,
+        className: a,
         iconComponent: () =>
-            (0, i.jsx)(p, {
+            (0, i.jsx)(m, {
                 numRequestToSpeak: l,
-                className: s
+                className: a
             }),
         ...o
     });

@@ -16,8 +16,8 @@ var r = n(664751),
     I = n(417363),
     m = n(626135),
     T = n(630388),
-    g = n(877481),
-    S = n(358085),
+    S = n(877481),
+    g = n(358085),
     A = n(573261),
     N = n(278323),
     O = n(58642),
@@ -25,9 +25,9 @@ var r = n(664751),
     v = n(981631),
     C = n(701488),
     y = n(689938);
-function L(e) {
+function D(e) {
     let { applicationId: t, secret: n, channelId: r, intent: i = C.Ws.PLAY, embedded: a = !1, source: s, partyId: o, locationObject: u, analyticsLocations: c } = e;
-    D({
+    L({
         applicationId: t,
         channelId: r,
         embedded: a,
@@ -36,8 +36,8 @@ function L(e) {
         locationObject: u,
         analyticsLocations: c
     })
-        .then(() => g.Z.waitConnected(t))
-        .then(() => Promise.race([g.Z.waitSubscribed(t, v.zMe.ACTIVITY_JOIN)]))
+        .then(() => S.Z.waitConnected(t))
+        .then(() => Promise.race([S.Z.waitSubscribed(t, v.zMe.ACTIVITY_JOIN)]))
         .then(() => {
             l.Z.dispatch({
                 type: 'ACTIVITY_JOIN',
@@ -54,7 +54,7 @@ function L(e) {
             })
         );
 }
-async function D(e) {
+async function L(e) {
     let { applicationId: t, branchId: n, channelId: i, embedded: o = !1, source: d, partyId: _, locationObject: h = {}, analyticsLocations: m = [] } = e;
     if (o)
         return null == i
@@ -75,18 +75,18 @@ async function D(e) {
         n = null != e ? e.branchId : t;
     }
     if (I.Z.isLaunchable(t, n)) {
-        var S;
+        var g;
         let e = I.Z.getState(t, n),
             i = p.Z.getActiveLaunchOptionId(t, n);
         if (null == e) throw Error('Missing dispatch game when launching');
         let o = p.Z.getLibraryApplication(t, n);
         if (null == o) throw Error('Missing library application when launching');
-        T = ((S = t),
+        T = ((g = t),
         s.tn
             .post({
                 url: v.ANM.OAUTH2_AUTHORIZE,
                 query: {
-                    client_id: S,
+                    client_id: g,
                     response_type: 'token',
                     scope: [a.x.IDENTIFY].join(' ')
                 },
@@ -109,10 +109,10 @@ async function D(e) {
                     if (404 === e.status) return null;
                     throw e;
                 }
-            )).then((t) => g.Z.launchDispatchApplication(e, t, E.default.locale, o.getBranchName(), i));
+            )).then((t) => S.Z.launchDispatchApplication(e, t, E.default.locale, o.getBranchName(), i));
     } else {
         let e = c.Z.getApplication(t);
-        T = null != e ? g.Z.launch(e) : g.Z.launchGame(t);
+        T = null != e ? S.Z.launch(e) : S.Z.launchGame(t);
     }
     let A = Error('game not found');
     return null != T
@@ -291,7 +291,7 @@ t.Z = {
                     url: v.ANM.UNVERIFIED_APPLICATIONS,
                     body: {
                         name: r,
-                        os: (0, S.getPlatformName)(),
+                        os: (0, g.getPlatformName)(),
                         icon: i,
                         distributor_application:
                             ((t = o),
@@ -339,7 +339,7 @@ t.Z = {
             game: e
         });
     },
-    launch: D,
+    launch: L,
     async join(e) {
         let { userId: t, sessionId: n, applicationId: r, channelId: i, messageId: a, intent: s = C.Ws.PLAY, embedded: o = !1, source: u, partyId: c, locationObject: d, analyticsLocations: _ } = e;
         if (__OVERLAY__)
@@ -361,7 +361,7 @@ t.Z = {
         try {
             let e = await N.Z.getJoinSecret(t, n, r, i, a);
             return (
-                L({
+                D({
                     applicationId: r,
                     secret: e,
                     channelId: i,
@@ -384,5 +384,5 @@ t.Z = {
             );
         }
     },
-    joinWithSecret: L
+    joinWithSecret: D
 };

@@ -1,11 +1,11 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return p;
     }
 });
 var i = n(735250),
-    a = n(470079),
-    s = n(399606),
+    s = n(470079),
+    a = n(399606),
     l = n(481060),
     r = n(346486),
     o = n(69882),
@@ -13,25 +13,25 @@ var i = n(735250),
     u = n(893966),
     d = n(776767),
     h = n(689938),
-    p = n(446926);
-function m(e) {
+    m = n(446926);
+function p(e) {
     let { member: t } = e,
         n = t.userId,
-        m = t.guildId,
-        _ = (0, s.e7)([u.Z], () => u.Z.getEnhancedMember(m, n), [n, m]),
+        p = t.guildId,
+        _ = (0, a.e7)([u.Z], () => u.Z.getEnhancedMember(p, n), [n, p]),
         f = (null != _ ? _ : t).unusualDMActivityUntil,
-        E = a.useCallback((e) => {
+        E = s.useCallback((e) => {
             if (null == e) return null;
             let t = new Date(e).getTime();
             return (0, c.fv)(t, c.jq.JOINED_AT);
         }, []),
-        C = a.useMemo(() => (null == t ? null : E(f)), [t, E, f]),
-        g = a.useMemo(() => (0, o.J)(t.communicationDisabledUntil), [t.communicationDisabledUntil]),
-        I = a.useMemo(() => (null == t.communicationDisabledUntil ? new Date() : new Date(t.communicationDisabledUntil)), [t.communicationDisabledUntil]);
-    return null != f || g
+        g = s.useMemo(() => (null == t ? null : E(f)), [t, E, f]),
+        C = s.useMemo(() => (0, o.J)(t.communicationDisabledUntil), [t.communicationDisabledUntil]),
+        I = s.useMemo(() => (null == t.communicationDisabledUntil ? new Date() : new Date(t.communicationDisabledUntil)), [t.communicationDisabledUntil]);
+    return null != f || C
         ? (0, i.jsx)(l.FormItem, {
               title: h.Z.Messages.MEMBER_SAFETY_TABLE_HEADER_FLAGS,
-              titleClassName: p.infoTitle,
+              titleClassName: m.infoTitle,
               children: (0, i.jsxs)(d.WM, {
                   children: [
                       null != f &&
@@ -50,10 +50,10 @@ function m(e) {
                               description: (0, i.jsx)(l.Text, {
                                   variant: 'text-sm/semibold',
                                   color: 'text-normal',
-                                  children: C
+                                  children: g
                               })
                           }),
-                      g &&
+                      C &&
                           null != I &&
                           (0, i.jsx)(d._2, {
                               icon: (0, i.jsx)(l.ClockWarningIcon, {

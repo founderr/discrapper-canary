@@ -12,7 +12,7 @@ n.d(t, {
         return q;
     },
     Ex: function () {
-        return eL;
+        return eD;
     },
     Fg: function () {
         return H;
@@ -30,7 +30,7 @@ n.d(t, {
         return C;
     },
     L1: function () {
-        return eg;
+        return eS;
     },
     MI: function () {
         return el;
@@ -51,7 +51,7 @@ n.d(t, {
         return M;
     },
     QK: function () {
-        return eS;
+        return eg;
     },
     QZ: function () {
         return m;
@@ -63,7 +63,7 @@ n.d(t, {
         return eE;
     },
     R_: function () {
-        return eD;
+        return eL;
     },
     SE: function () {
         return eR;
@@ -120,10 +120,10 @@ n.d(t, {
         return er;
     },
     d$: function () {
-        return D;
+        return L;
     },
     d4: function () {
-        return S;
+        return g;
     },
     dN: function () {
         return _;
@@ -180,7 +180,7 @@ n.d(t, {
         return ed;
     },
     uL: function () {
-        return L;
+        return D;
     },
     up: function () {
         return f;
@@ -292,23 +292,23 @@ let m = (0, o.Zc)(
         (e) => (null != e ? e : '0'),
         (e) => e
     ),
-    g = [],
-    S = (0, o.Zc)(
+    S = [],
+    g = (0, o.Zc)(
         'textAndImages',
         'emojiPickerCollapsedSections',
-        (e) => (null != e ? e : g),
+        (e) => (null != e ? e : S),
         (e) => e
     ),
     A = (0, o.Zc)(
         'textAndImages',
         'stickerPickerCollapsedSections',
-        (e) => (null != e ? e : g),
+        (e) => (null != e ? e : S),
         (e) => e
     ),
     N = (0, o.Zc)(
         'textAndImages',
         'soundboardPickerCollapsedSections',
-        (e) => (null != e ? e : g),
+        (e) => (null != e ? e : S),
         (e) => e
     ),
     O = (0, o.Zc)(
@@ -350,11 +350,11 @@ let m = (0, o.Zc)(
         (e) => (null == e ? void 0 : e.value),
         (e) => a.D5.create({ value: e })
     ),
-    L = '0',
-    D = (0, o.Zc)(
+    D = '0',
+    L = (0, o.Zc)(
         'notifications',
         'notificationCenterAckedBeforeId',
-        (e) => (null != e ? e : L),
+        (e) => (null != e ? e : D),
         (e) => e
     ),
     b = (0, o.Zc)(
@@ -751,7 +751,7 @@ let eT = (0, o.KM)(
         'appearance',
         'developerMode'
     ),
-    eg = (0, o.Zc)(
+    eS = (0, o.Zc)(
         'appearance',
         'clientThemeSettings',
         (e) => {
@@ -760,7 +760,7 @@ let eT = (0, o.KM)(
         },
         (e) => ({ backgroundGradientPresetId: null != e.backgroundGradientPresetId ? a.yC.create({ value: e.backgroundGradientPresetId }) : void 0 })
     ),
-    eS = (0, o.R2)(
+    eg = (0, o.R2)(
         (0, o.KM)(
             (0, o.Zc)(
                 'textAndImages',
@@ -855,13 +855,13 @@ let eT = (0, o.KM)(
         (e) => e === i.E5.ON_FOR_LARGE_GUILDS,
         (e) => (!0 === e ? i.E5.ON_FOR_LARGE_GUILDS : i.E5.OFF)
     ),
-    eL = (0, o.Zc)(
+    eD = (0, o.Zc)(
         'privacy',
         'familyCenterEnabledV2',
         (e) => (null == e ? void 0 : e.value),
         (e) => a.D5.create({ value: e })
     ),
-    eD = (0, o.Zc)(
+    eL = (0, o.Zc)(
         'privacy',
         'hideLegacyUsername',
         (e) => {

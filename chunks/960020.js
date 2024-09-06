@@ -11,16 +11,16 @@ var i,
     l,
     r,
     c = n(442837),
-    u = n(570140);
+    d = n(570140);
 ((o = i || (i = {})).HOVER = 'HOVER'), (o.EXTERNAL = 'EXTERNAL'), (o.RANDOM = 'RANDOM');
-let d = {},
+let u = {},
     h = {},
     m = {},
     p = (e, t) => {
         let n = null != t.id ? t.id : t.name;
         return ''.concat(e, ':').concat(n);
     },
-    g = (e, t) => {
+    f = (e, t) => {
         var n;
         let i;
         switch (e) {
@@ -48,9 +48,9 @@ let d = {},
         }
         return Object.keys(s).length;
     };
-class f extends (s = c.ZP.Store) {
+class g extends (s = c.ZP.Store) {
     getReactionPickerAnimation(e, t, n) {
-        return d[
+        return u[
             ''
                 .concat(e, ':')
                 .concat(t, ':')
@@ -64,7 +64,7 @@ class f extends (s = c.ZP.Store) {
     }
 }
 (r = 'BurstReactionEffectsStore'),
-    (l = 'displayName') in (a = f)
+    (l = 'displayName') in (a = g)
         ? Object.defineProperty(a, l, {
               value: r,
               enumerable: !0,
@@ -72,7 +72,7 @@ class f extends (s = c.ZP.Store) {
               writable: !0
           })
         : (a[l] = r),
-    (t.Z = new f(u.Z, {
+    (t.Z = new g(d.Z, {
         BURST_REACTION_EFFECT_CLEAR: (e) => {
             var t;
             let { channelId: n, messageId: i, emoji: s } = e,
@@ -83,13 +83,13 @@ class f extends (s = c.ZP.Store) {
             var t, n, i;
             let { channelId: s, messageId: o, emoji: a, key: l } = e,
                 r = p(o, a);
-            if (g(l, s) >= 5) return;
+            if (f(l, s) >= 5) return;
             let c = null !== (t = h[s]) && void 0 !== t ? t : {},
-                u = (null !== (n = m[s]) && void 0 !== n ? n : {})[r],
-                d = c[r];
-            if ('HOVER' !== l || null == d) {
-                'HOVER' === d && 'EXTERNAL' === l && null != u && ('function' == typeof u.destroy && u.destroy(), null === (i = m[s]) || void 0 === i || delete i[r], (d = void 0));
-                null == d && (null != h[s] ? (h[s][r] = l) : (h[s] = { [r]: l }));
+                d = (null !== (n = m[s]) && void 0 !== n ? n : {})[r],
+                u = c[r];
+            if ('HOVER' !== l || null == u) {
+                'HOVER' === u && 'EXTERNAL' === l && null != d && ('function' == typeof d.destroy && d.destroy(), null === (i = m[s]) || void 0 === i || delete i[r], (u = void 0));
+                null == u && (null != h[s] ? (h[s][r] = l) : (h[s] = { [r]: l }));
             }
         },
         BURST_REACTION_ANIMATION_ADD: (e) => {
@@ -99,7 +99,7 @@ class f extends (s = c.ZP.Store) {
         },
         BURST_REACTION_PICKER_ANIMATION_ADD: (e) => {
             let { messageId: t, emojiName: n, emojiId: i, startPosition: s } = e;
-            d[
+            u[
                 ''
                     .concat(t, ':')
                     .concat(n, ':')
@@ -108,7 +108,7 @@ class f extends (s = c.ZP.Store) {
         },
         BURST_REACTION_PICKER_ANIMATION_CLEAR: (e) => {
             let { messageId: t, emojiName: n, emojiId: i } = e;
-            delete d[
+            delete u[
                 ''
                     .concat(t, ':')
                     .concat(n, ':')

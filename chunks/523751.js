@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return D;
+        return L;
     }
 });
 var r = n(735250),
@@ -20,8 +20,8 @@ var r = n(735250),
     I = n(271383),
     m = n(594174),
     T = n(665786),
-    g = n(697725),
-    S = n(267642),
+    S = n(697725),
+    g = n(267642),
     A = n(284363),
     N = n(854218),
     O = n(981631),
@@ -87,7 +87,7 @@ function y(e) {
             (0, r.jsxs)('div', {
                 className: s()(v.tooltipPremiumFooterSegment, v.tooltipPremiumFooterTierSegment),
                 children: [
-                    (0, r.jsx)(g.Z, {
+                    (0, r.jsx)(S.Z, {
                         width: 18,
                         height: 18,
                         className: v.gemIcon
@@ -95,7 +95,7 @@ function y(e) {
                     (0, r.jsx)(c.Text, {
                         variant: 'text-xs/semibold',
                         color: 'always-white',
-                        children: S.nW(t.premiumTier)
+                        children: g.nW(t.premiumTier)
                     })
                 ]
             }),
@@ -110,7 +110,7 @@ function y(e) {
         ]
     });
 }
-function L(e) {
+function D(e) {
     let { badgeType: t, guildTraits: n } = e,
         {
             tooltipTitle: i,
@@ -192,10 +192,10 @@ function L(e) {
         ]
     });
 }
-function D(e) {
+function L(e) {
     let t,
         n,
-        { guild: a, tooltipColor: l = c.Tooltip.Colors.BRAND, tooltipPosition: E, className: T, flowerStarClassName: g, iconClassName: S, badgeStrokeColor: R, badgeColor: y, size: D = 16, disableBoostClick: b, 'aria-label': M = !1 } = e,
+        { guild: a, tooltipColor: l = c.Tooltip.Colors.BRAND, tooltipPosition: E, className: T, flowerStarClassName: S, iconClassName: g, badgeStrokeColor: R, badgeColor: y, size: L = 16, disableBoostClick: b, 'aria-label': M = !1 } = e,
         P = (0, o.e7)([m.default, I.ZP], () => {
             let e = m.default.getCurrentUser();
             return I.ZP.isMember(null == a ? void 0 : a.id, null == e ? void 0 : e.id);
@@ -223,12 +223,12 @@ function D(e) {
     if (x === A.Q.NONE) return null;
     if (x === A.Q.CLAN) {
         var k;
-        let e = (0, d.ky)(a.id, null === (k = a.clan) || void 0 === k ? void 0 : k.badge, D);
+        let e = (0, d.ky)(a.id, null === (k = a.clan) || void 0 === k ? void 0 : k.badge, L);
         return (0, r.jsx)(c.Tooltip, {
             color: l,
             position: E,
             'aria-label': M,
-            text: (0, r.jsx)(L, {
+            text: (0, r.jsx)(D, {
                 badgeType: x,
                 guildTraits: w
             }),
@@ -240,7 +240,7 @@ function D(e) {
                     className: s()(v.clanBadgeContainer, T),
                     children: (0, r.jsx)(_.KQ, {
                         src: e,
-                        size: D
+                        size: L
                     })
                 })
         });
@@ -251,12 +251,12 @@ function D(e) {
     let K = (0, u.wj)(U) ? H : Z,
         z = (0, u.wj)(U) ? F : V;
     (t = null != t ? t : K), (n = null != n ? n : z);
-    let q = Math.floor(0.75 * D) - (null != W ? W : 0);
+    let q = Math.floor(0.75 * L) - (null != W ? W : 0);
     return (0, r.jsx)(c.Tooltip, {
         color: l,
         position: E,
         'aria-label': M,
-        text: (0, r.jsx)(L, {
+        text: (0, r.jsx)(D, {
             badgeType: x,
             guildTraits: w
         }),
@@ -267,16 +267,16 @@ function D(e) {
                 children: (0, r.jsx)(h.Z, {
                     ...e,
                     className: T,
-                    flowerStarClassName: g,
+                    flowerStarClassName: S,
                     allowFullSizedIcon: !0,
                     color: null != n ? n : y,
                     stroke: R,
-                    size: D,
+                    size: L,
                     children: (0, r.jsx)(B, {
                         size: 'custom',
                         width: q,
                         height: q,
-                        className: S,
+                        className: g,
                         color: null != t ? t : 'currentColor'
                     })
                 })

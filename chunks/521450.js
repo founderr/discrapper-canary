@@ -12,8 +12,8 @@ var s = n(735250),
     T = n(695346),
     I = n(981631),
     R = n(930441),
-    C = n(689938),
-    g = n(284725),
+    g = n(689938),
+    C = n(284725),
     N = n(224499);
 t.Z = () => {
     let e = T.Ex.useSetting(),
@@ -23,24 +23,24 @@ t.Z = () => {
             null == n && (0, u.Y7)();
         }, [n]),
         (0, s.jsxs)('div', {
-            className: g.container,
+            className: C.container,
             children: [
                 (0, s.jsx)(d.Text, {
                     variant: 'eyebrow',
                     color: 'text-muted',
-                    children: C.Z.Messages.FAMILY_CENTER_SETTINGS_FORM_TITLE
+                    children: g.Z.Messages.FAMILY_CENTER_SETTINGS_FORM_TITLE
                 }),
                 (0, s.jsx)(d.FormSwitch, {
                     className: i()(N.marginTop8, N.marginBottom20),
                     value: e,
-                    note: C.Z.Messages.FAMILY_CENTER_SETTINGS_ENABLE_SWITCH_NOTE,
+                    note: g.Z.Messages.FAMILY_CENTER_SETTINGS_ENABLE_SWITCH_NOTE,
                     hideBorder: !0,
                     onChange: T.Ex.updateSetting,
-                    children: C.Z.Messages.FAMILY_CENTER_SETTINGS_ENABLE_SWITCH
+                    children: g.Z.Messages.FAMILY_CENTER_SETTINGS_ENABLE_SWITCH
                 }),
                 e
                     ? (0, s.jsx)(d.Card, {
-                          className: g.enableCard,
+                          className: C.enableCard,
                           type: d.Card.Types.CUSTOM,
                           outline: !0,
                           children: (0, s.jsxs)(o.k, {
@@ -50,7 +50,7 @@ t.Z = () => {
                                       children: (0, s.jsx)(d.Text, {
                                           variant: 'text-sm/semibold',
                                           color: 'text-normal',
-                                          children: C.Z.Messages.FAMILY_CENTER_SETTINGS_ENABLE_PROMPT
+                                          children: g.Z.Messages.FAMILY_CENTER_SETTINGS_ENABLE_PROMPT
                                       })
                                   }),
                                   (0, s.jsx)(d.Clickable, {
@@ -60,12 +60,12 @@ t.Z = () => {
                                               pathname: I.Z5c.FAMILY_CENTER,
                                               state: { scrollRestoration: !1 }
                                           },
-                                          children: C.Z.Messages.FAMILY_CENTER_SETTINGS_ENABLE_CTA
+                                          children: g.Z.Messages.FAMILY_CENTER_SETTINGS_ENABLE_CTA
                                       })
                                   }),
                                   (0, s.jsx)(d.IconBadge, {
                                       icon: d.ArrowSmallRightIcon,
-                                      className: g.arrow,
+                                      className: C.arrow,
                                       disableColor: !0
                                   })
                               ]
@@ -75,12 +75,12 @@ t.Z = () => {
                 (0, s.jsx)(d.FormSwitch, {
                     className: i()(N.marginTop20, N.marginBottom20),
                     value: !!t[R.$Z.FAMILY_CENTER_DIGEST],
-                    note: C.Z.Messages.FAMILY_CENTER_SETTINGS_EMAIL_DIGEST_ENABLE_SWITCH_NOTE,
+                    note: g.Z.Messages.FAMILY_CENTER_SETTINGS_EMAIL_DIGEST_ENABLE_SWITCH_NOTE,
                     hideBorder: !0,
                     onChange: function (e) {
                         (0, u.pR)(R.$Z.FAMILY_CENTER_DIGEST, e);
                     },
-                    children: C.Z.Messages.FAMILY_CENTER_SETTINGS_EMAIL_DIGEST_ENABLE_SWITCH
+                    children: g.Z.Messages.FAMILY_CENTER_SETTINGS_EMAIL_DIGEST_ENABLE_SWITCH
                 })
             ]
         })

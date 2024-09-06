@@ -16,8 +16,8 @@ var r = n(735250),
     I = n(981631),
     m = n(149203),
     T = n(689938),
-    g = n(114381);
-function S(e, t, n) {
+    S = n(114381);
+function g(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -48,18 +48,18 @@ class N extends i.PureComponent {
             case I.wI2.FAVORITES:
                 return (0, r.jsx)(l.FormTitle, {
                     tag: 'h5',
-                    className: g.searchHeader,
+                    className: S.searchHeader,
                     children: T.Z.Messages.CATEGORY_FAVORITE
                 });
             case I.wI2.TRENDING_GIFS:
                 return (0, r.jsx)(l.FormTitle, {
                     tag: 'h5',
-                    className: g.searchHeader,
+                    className: S.searchHeader,
                     children: T.Z.Messages.GIF_PICKER_RESULT_TYPE_TRENDING_GIFS
                 });
             default:
                 return (0, r.jsx)(l.SearchBar, {
-                    className: g.searchBar,
+                    className: S.searchBar,
                     size: l.SearchBar.Sizes.MEDIUM,
                     query: e,
                     onChange: this.handleChangeQuery,
@@ -78,7 +78,7 @@ class N extends i.PureComponent {
             null != e &&
                 (t = (0, r.jsx)(l.Clickable, {
                     onClick: this.handleClearQuery,
-                    className: g.backButton,
+                    className: S.backButton,
                     'aria-label': T.Z.Messages.BACK,
                     children: (0, r.jsx)(l.ArrowSmallLeftIcon, {
                         size: 'md',
@@ -120,16 +120,16 @@ class N extends i.PureComponent {
             id: m.vO,
             role: 'tabpanel',
             'aria-labelledby': m._3,
-            className: s()(g.container, e),
+            className: s()(S.container, e),
             onClick: A,
             ref: t,
             children: [
                 (0, r.jsx)('div', {
-                    className: g.header,
+                    className: S.header,
                     children: this.renderHeader()
                 }),
                 (0, r.jsx)('div', {
-                    className: g.content,
+                    className: S.content,
                     children: this.renderContent()
                 })
             ]
@@ -137,27 +137,27 @@ class N extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            S(this, 'state', { resultType: null }),
-            S(this, 'searchBarRef', i.createRef()),
-            S(this, 'backToFrontPage', (e) => {
+            g(this, 'state', { resultType: null }),
+            g(this, 'searchBarRef', i.createRef()),
+            g(this, 'backToFrontPage', (e) => {
                 let { resultType: t } = this.state;
                 e.keyCode === I.yXg.ESCAPE && null != t && (e.stopPropagation(), e.preventDefault(), this.handleClearQuery());
             }),
-            S(this, 'handleChangeQuery', (e) => {
+            g(this, 'handleChangeQuery', (e) => {
                 (0, _.ql)(e), this.search(e, I.wI2.SEARCH);
             }),
-            S(this, 'handleSelectSuggestion', (e) => {
+            g(this, 'handleSelectSuggestion', (e) => {
                 (0, _.ql)(''), c.v2(), this.search(e, I.wI2.SEARCH_SUGGESTION, !0);
             }),
-            S(this, 'handleClearQuery', () => {
+            g(this, 'handleClearQuery', () => {
                 let { current: e } = this.searchBarRef;
                 (0, _.ql)(''), c.v2(), this.setState({ resultType: null }), null != e && e.focus();
             }),
-            S(this, 'handleSelectGIF', (e) => {
+            g(this, 'handleSelectGIF', (e) => {
                 let { onSelectGIF: t } = this.props;
                 null != t && t(e);
             }),
-            S(this, 'handleSelectItem', (e, t) => {
+            g(this, 'handleSelectItem', (e, t) => {
                 let { current: n } = this.searchBarRef;
                 switch (e) {
                     case I.wI2.TRENDING_CATEGORY:

@@ -16,8 +16,8 @@ var r = n(735250),
     I = n(703558),
     m = n(117530),
     T = n(459273),
-    g = n(444282),
-    S = n(898463),
+    S = n(444282),
+    g = n(898463),
     A = n(981631),
     N = n(408860),
     O = n(594402);
@@ -29,8 +29,8 @@ function v(e) {
         C = (0, u.e7)([m.Z], () => m.Z.getUploads(t, n.drafts.type)),
         {
             isApplicationCommand: y,
-            commandOptions: L,
-            commandOptionStates: D
+            commandOptions: D,
+            commandOptionStates: L
         } = (0, u.cj)([h.Z], () => {
             let e = h.Z.getActiveCommand(t);
             if (null == e)
@@ -50,15 +50,15 @@ function v(e) {
             var e;
             return null !==
                 (e =
-                    null == L
+                    null == D
                         ? void 0
-                        : L.filter((e) => {
+                        : D.filter((e) => {
                               var t;
-                              return e.type === _.jw.ATTACHMENT && (null == D ? void 0 : null === (t = D[e.name]) || void 0 === t ? void 0 : t.hasValue);
+                              return e.type === _.jw.ATTACHMENT && (null == L ? void 0 : null === (t = L[e.name]) || void 0 === t ? void 0 : t.hasValue);
                           })) && void 0 !== e
                 ? e
                 : [];
-        }, [L, D]),
+        }, [D, L]),
         [M, P] = i.useState([]);
     i.useEffect(() => {
         let e = () => {
@@ -101,7 +101,7 @@ function v(e) {
                                   children: y
                                       ? b.map((e) =>
                                             (0, r.jsx)(
-                                                g.Z,
+                                                S.Z,
                                                 {
                                                     channelId: t,
                                                     keyboardModeEnabled: a,
@@ -112,7 +112,7 @@ function v(e) {
                                         )
                                       : C.map((e) =>
                                             (0, r.jsx)(
-                                                S.Z,
+                                                g.Z,
                                                 {
                                                     channelId: t,
                                                     draftType: n.drafts.type,

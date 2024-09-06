@@ -1,7 +1,7 @@
 var i = n(735250);
 n(470079);
-var a = n(481060),
-    s = n(689938),
+var s = n(481060),
+    a = n(689938),
     l = n(358758);
 t.Z = (e) => {
     let { guild: t, onClose: r } = e;
@@ -16,20 +16,20 @@ t.Z = (e) => {
             (0, i.jsxs)('div', {
                 className: l.content,
                 children: [
-                    (0, i.jsx)(a.Heading, {
+                    (0, i.jsx)(s.Heading, {
                         variant: 'heading-md/semibold',
-                        children: s.Z.Messages.LURKER_MODE_POPOUT_SUCCESS_HEADER.format({ guild: t.name })
+                        children: a.Z.Messages.LURKER_MODE_POPOUT_SUCCESS_HEADER.format({ guild: t.name })
                     }),
-                    (0, i.jsx)(a.Text, {
+                    (0, i.jsx)(s.Text, {
                         color: 'header-secondary',
                         variant: 'text-sm/normal',
-                        children: s.Z.Messages.LURKER_MODE_POPOUT_SUCCESS_BODY
+                        children: a.Z.Messages.LURKER_MODE_POPOUT_SUCCESS_BODY
                     }),
                     (0, i.jsx)('div', {
                         className: l.buttonContainer,
-                        children: (0, i.jsx)(a.Button, {
+                        children: (0, i.jsx)(s.Button, {
                             onClick: r,
-                            children: s.Z.Messages.LURKER_MODE_POPOUT_SUCCESS_BUTTON
+                            children: a.Z.Messages.LURKER_MODE_POPOUT_SUCCESS_BUTTON
                         })
                     })
                 ]

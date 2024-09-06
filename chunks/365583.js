@@ -36,7 +36,7 @@ function T(e) {
         })
     )
         return null;
-    let g = (function (e) {
+    let S = (function (e) {
         let { activity: t, entry: n, onOpenGameSettings: r } = e;
         return null != n
             ? m({
@@ -57,13 +57,13 @@ function T(e) {
         entry: s,
         onOpenGameSettings: T
     });
-    return null == g
+    return null == S
         ? null
         : (0, r.jsx)(a.MenuItem, {
               id: 'manage-privacy',
               label: p.Z.Messages.USER_ACTIVITY_MANAGE_PRIVACY,
               action: () => {
-                  null == _ || _({ action: 'PRESS_MANAGE_PRIVACY_MENU_ITEM' }), g(), null == h || h();
+                  null == _ || _({ action: 'PRESS_MANAGE_PRIVACY_MENU_ITEM' }), S(), null == h || h();
               }
           });
 }

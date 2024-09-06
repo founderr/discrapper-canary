@@ -22,8 +22,8 @@ var r = n(735250),
     I = n(646476),
     m = n(819640),
     T = n(594174),
-    g = n(965645),
-    S = n(362061),
+    S = n(965645),
+    g = n(362061),
     A = n(70956),
     N = n(709054),
     O = n(51144),
@@ -31,8 +31,8 @@ var r = n(735250),
     v = n(981631),
     C = n(921944),
     y = n(474936),
-    L = n(689938),
-    D = n(881485),
+    D = n(689938),
+    L = n(881485),
     b = n(305489);
 let M = [
         {
@@ -96,8 +96,8 @@ let M = [
     ],
     U = 1 / 300,
     w = A.Z.Millis.DAYS_30,
-    x = (0, a.animated)(g.Z),
-    G = (0, a.animated)(S.Z),
+    x = (0, a.animated)(S.Z),
+    G = (0, a.animated)(g.Z),
     k = (0, a.animated)(u.GiftIcon);
 function B(e) {
     let {
@@ -156,10 +156,10 @@ t.Z = i.memo(function (e) {
     let { disabled: t, channel: n } = e,
         { analyticsLocations: a } = (0, E.ZP)(_.Z.GIFT_BUTTON),
         [l, d] = i.useState(!1),
-        g = (0, s.e7)([m.Z], () => !(null === m.Z || void 0 === m.Z ? void 0 : m.Z.hasLayers())),
-        S = (0, s.e7)([T.default], () => T.default.getCurrentUser()),
-        A = null != S ? N.default.age(S.id) : 0,
-        M = !t && g && A >= w,
+        S = (0, s.e7)([m.Z], () => !(null === m.Z || void 0 === m.Z ? void 0 : m.Z.hasLayers())),
+        g = (0, s.e7)([T.default], () => T.default.getCurrentUser()),
+        A = null != g ? N.default.age(g.id) : 0,
+        M = !t && S && A >= w,
         { enabled: P } = I.RO.useExperiment({ location: 'ChannelPremiumGiftButton' }, { autoTrackExposure: M }),
         U = [];
     P && M && U.push(o.z.SEASONAL_GIFTING_COACHMARK_2023);
@@ -184,7 +184,7 @@ t.Z = i.memo(function (e) {
             });
         },
         Z = (0, r.jsxs)('div', {
-            className: D.container,
+            className: L.container,
             onMouseEnter: () => {
                 !l && d(!0);
             },
@@ -201,13 +201,13 @@ t.Z = i.memo(function (e) {
                     }),
                 (0, r.jsx)(R.Z, {
                     innerClassName: b.button,
-                    'aria-label': L.Z.Messages.PREMIUM_GIFT_BUTTON_LABEL,
+                    'aria-label': D.Z.Messages.PREMIUM_GIFT_BUTTON_LABEL,
                     isActive: !1,
                     onClick: () => {
                         d(!1), (0, f.EW)(o.z.SEASONAL_GIFTING_COACHMARK_2023, { dismissAction: C.L.TAKE_ACTION }), H();
                     },
                     children: (0, r.jsx)('div', {
-                        className: D.noPointerEvents,
+                        className: L.noPointerEvents,
                         children: (0, r.jsx)(B, {
                             hovered: l,
                             isContentDismissed: !k
@@ -219,7 +219,7 @@ t.Z = i.memo(function (e) {
     return k
         ? Z
         : (0, r.jsx)(u.TooltipContainer, {
-              className: D.container,
+              className: L.container,
               text: (0, c.i)(V),
               children: Z
           });

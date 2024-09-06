@@ -1,67 +1,67 @@
-n.d(t, {
+t.d(A, {
     Z: function () {
-        return u;
+        return i;
     }
 }),
-    n(653041);
-var r = n(544891),
-    i = n(881052),
-    a = n(687294),
-    s = n(476326),
-    o = n(861990),
-    l = n(689938);
-class u extends a.Z {
-    async uploadFiles(e, t) {
-        let { addFilesTo: n } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        super.upload({ name: l.Z.Messages.ATTACHMENT_PROCESSING }, t, e);
-        let r = new AbortController();
+    t(653041);
+var a = t(544891),
+    n = t(881052),
+    r = t(687294),
+    s = t(476326),
+    o = t(861990),
+    l = t(689938);
+class i extends r.Z {
+    async uploadFiles(e, A) {
+        let { addFilesTo: t } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        super.upload({ name: l.Z.Messages.ATTACHMENT_PROCESSING }, A, e);
+        let a = new AbortController();
         try {
             if (((this.files = e), this._aborted)) return;
-            if ((this._handleStart(() => r.abort()), !(await this.compressAndCheckFileSize()))) return;
-            this.setUploadingTextForUI(), await (0, a.$)(this.files, !0, this._recomputeProgress.bind(this));
+            if ((this._handleStart(() => a.abort()), !(await this.compressAndCheckFileSize()))) return;
+            this.setUploadingTextForUI(), await (0, r.$)(this.files, !0, this._recomputeProgress.bind(this));
         } catch (e) {
             this._handleException(e);
         }
         try {
-            return await this._createMessage(r.signal, t, n);
+            return await this._createMessage(a.signal, A, t);
         } catch (e) {
             if (this._raiseEndpointErrors) throw e;
             this._handleException(e);
         }
     }
-    async _createMessage(e, t, n) {
-        let a;
+    async _createMessage(e, A, t) {
+        let r;
         let l = [];
-        this.files.forEach((e, t) => {
-            let n = (0, o.B)(e, t);
-            e.item.platform === s.ow.WEB && l.push({ ...n });
+        this.files.forEach((e, A) => {
+            let t = (0, o.B)(e, A);
+            e.item.platform === s.ow.WEB && l.push({ ...t });
         }),
-            (a =
-                null != n && null != t
-                    ? this._addAttachmentsToPayload(t, n, l)
+            (r =
+                null != t && null != A
+                    ? this._addAttachmentsToPayload(A, t, l)
                     : {
-                          ...t,
+                          ...A,
                           attachments: l
                       });
-        let u = {
+        let i = {
                 url: this._url,
-                body: a,
+                body: r,
                 signal: e
             },
-            c = 'POST' === this._method ? r.tn.post : r.tn.patch;
+            d = 'POST' === this._method ? a.tn.post : a.tn.patch;
         try {
-            let e = await c(u);
+            let e = await d(i);
             return this._handleComplete(e.body), e.body;
         } catch (e) {
-            var d;
-            if (this._raiseEndpointErrors) throw new i.Hx(e);
+            var c;
+            if (this._raiseEndpointErrors) throw new n.Hx(e);
             this._handleError({
-                code: null == e ? void 0 : null === (d = e.body) || void 0 === d ? void 0 : d.code,
+                code: null == e ? void 0 : null === (c = e.body) || void 0 === c ? void 0 : c.code,
                 body: null == e ? void 0 : e.body
             });
         }
     }
-    constructor(e, t = 'POST', n) {
-        super(e, t, n);
+    constructor(e, A = 'POST', t) {
+        super(e, A, t);
     }
 }

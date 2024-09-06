@@ -233,8 +233,8 @@ class f {
                             ? void 0
                             : s.value,
                     T = null === (o = c.find((e) => 'group' === e.type)) || void 0 === o ? void 0 : o.value,
-                    g = [...new Set([...c.filter((e) => !h.has(e.type)).map((e) => m(e.value)), ..._.flatMap((e) => e.filter((e) => !h.has(e.type)).map((e) => m(e.value)))])].sort((e, t) => t.length - e.length),
-                    S = 0 === g.length ? RegExp('[\\p{White_Space}]', 'gu') : RegExp(`${g.join('|')}|[\\p{White_Space}]`, 'gu'),
+                    S = [...new Set([...c.filter((e) => !h.has(e.type)).map((e) => m(e.value)), ..._.flatMap((e) => e.filter((e) => !h.has(e.type)).map((e) => m(e.value)))])].sort((e, t) => t.length - e.length),
+                    g = 0 === S.length ? RegExp('[\\p{White_Space}]', 'gu') : RegExp(`${S.join('|')}|[\\p{White_Space}]`, 'gu'),
                     A = [...new Intl.NumberFormat(n.locale, { useGrouping: !1 }).format(9876543210)].reverse(),
                     N = new Map(A.map((e, t) => [e, t])),
                     O = RegExp(`[${A.join('')}]`, 'g');
@@ -243,7 +243,7 @@ class f {
                     plusSign: f,
                     decimal: I,
                     group: T,
-                    literals: S,
+                    literals: g,
                     numeral: O,
                     index: (e) => String(N.get(e))
                 };

@@ -16,8 +16,8 @@ var r = n(392711),
     I = n(271383),
     m = n(430824),
     T = n(496675),
-    g = n(699516),
-    S = n(246946),
+    S = n(699516),
+    g = n(246946),
     A = n(594174),
     N = n(483360),
     O = n(176354),
@@ -25,7 +25,7 @@ var r = n(392711),
     v = n(981631),
     C = n(185923),
     y = n(689938);
-function L(e, t, n) {
+function D(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
     if (t[0] !== e) return null;
     let i = t.substr(e.length);
@@ -48,7 +48,7 @@ function L(e, t, n) {
         })
         .first();
 }
-function D(e) {
+function L(e) {
     return {
         order: e.order,
         match: e.match,
@@ -75,11 +75,11 @@ let M = c.Z.RULES,
     G = /^<a?:(\w+):(\d+)>/,
     k = /(@everyone|@here|@Clyde)\b/,
     B = {
-        link: D(s().defaultRules.link),
-        autolink: D(s().defaultRules.autolink),
-        url: D(s().defaultRules.url),
-        inlineCode: D(M.inlineCode),
-        codeBlock: D(M.codeBlock),
+        link: L(s().defaultRules.link),
+        autolink: L(s().defaultRules.autolink),
+        url: L(s().defaultRules.url),
+        inlineCode: L(M.inlineCode),
+        codeBlock: L(M.codeBlock),
         rawUserMention: b(U),
         rawRoleMention: b(w),
         rawChannelMention: b(x),
@@ -88,10 +88,10 @@ let M = c.Z.RULES,
             match(e, t, n) {
                 let r = n.split(' ').pop() + e;
                 if (/^[^ ]+@[^ ]+\.[^ .]+/.test(r)) return null;
-                let i = L('@', e, t.users, 'mention');
-                if (i || (i = L('@', e, t.mentionableRoles, 'roleMention'))) return i;
+                let i = D('@', e, t.users, 'mention');
+                if (i || (i = D('@', e, t.mentionableRoles, 'roleMention'))) return i;
                 if (
-                    !(i = L(
+                    !(i = D(
                         '@',
                         e,
                         t.users.map((e) => ({
@@ -127,7 +127,7 @@ let M = c.Z.RULES,
                 (function (e, t, n) {
                     let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
                     if (t[0] !== e) return null;
-                    if ('"' !== t[1]) return L(e, t, n, r);
+                    if ('"' !== t[1]) return D(e, t, n, r);
                     let i = 2;
                     for (; i < t.length; i++) {
                         if ('\\' === t[i]) {
@@ -224,15 +224,15 @@ let M = c.Z.RULES,
         }
     },
     F = {
-        inlineCode: D(M.inlineCode),
-        codeBlock: D(M.codeBlock),
+        inlineCode: L(M.inlineCode),
+        codeBlock: L(M.codeBlock),
         mention: {
             match: s().anyScopeRegex(U),
             parse(e, t, n) {
                 let { isNotification: r } = n,
                     i = A.default.getUser(e[1]);
                 if (null == i) return { content: e[0] };
-                let a = R.ZP.getUserTag(i, { identifiable: r && S.Z.enabled ? 'never' : 'always' });
+                let a = R.ZP.getUserTag(i, { identifiable: r && g.Z.enabled ? 'never' : 'always' });
                 if (!r) return { content: '@'.concat(a) };
                 {
                     let e = R.ZP.getGlobalName(i);
@@ -255,7 +255,7 @@ let M = c.Z.RULES,
             match: s().anyScopeRegex(x),
             parse(e) {
                 let t = h.Z.getChannel(e[1]);
-                return { content: null == t ? e[0] : (0, o.F6)(t, A.default, g.Z, !0, !0) };
+                return { content: null == t ? e[0] : (0, o.F6)(t, A.default, S.Z, !0, !0) };
             }
         },
         emoji: {
@@ -406,7 +406,7 @@ function Y(e) {
         _ = l.ZP.getDisambiguatedEmojiContext(n),
         f = _.getEscapedCustomEmoticonNames(),
         h = _.getCustomEmoji(),
-        g = _.getCustomEmoticonRegex();
+        S = _.getCustomEmoticonRegex();
     return {
         inline: !0,
         mentionableRoles: o,
@@ -414,7 +414,7 @@ function Y(e) {
         users: s,
         channels: u.concat(c).concat(d),
         emojiContext: _,
-        customEmoticonsRegex: g,
+        customEmoticonsRegex: S,
         customEmoji: h,
         textExclusions: f,
         disableErrorGuards: !0

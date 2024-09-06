@@ -17,28 +17,28 @@ var r = n(735250),
     m = n(689938),
     T = n(305489);
 t.Z = i.memo(function (e) {
-    let { disabled: t, referralsRemaining: n, channel: g, isResending: S } = e,
+    let { disabled: t, referralsRemaining: n, channel: S, isResending: g } = e,
         { enabled: A } = d.Z.useExperiment({ location: 'ec41f5_1' }, { autoTrackExposure: !0 }),
-        N = A ? m.Z.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP.format() : S ? m.Z.Messages.SHARE_NITRO_RESEND_TOOLTIP : m.Z.Messages.SHARE_NITRO_TOOLTIP,
+        N = A ? m.Z.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP.format() : g ? m.Z.Messages.SHARE_NITRO_RESEND_TOOLTIP : m.Z.Messages.SHARE_NITRO_TOOLTIP,
         O = A ? m.Z.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP_UNFORMATTED : null,
         [R, v] = i.useState(!1),
         [C, y] = i.useState(!1),
-        L = (0, o.Z)(null, () => y(!1)),
-        { analyticsLocations: D } = (0, c.ZP)(u.Z.REFERRAL_TRIALS_COMPOSER_BUTTON),
-        b = g.isDM() && void 0 !== g.recipients ? g.recipients[0] : null,
+        D = (0, o.Z)(null, () => y(!1)),
+        { analyticsLocations: L } = (0, c.ZP)(u.Z.REFERRAL_TRIALS_COMPOSER_BUTTON),
+        b = S.isDM() && void 0 !== S.recipients ? S.recipients[0] : null,
         M = (0, l.ZP)();
     return t
         ? null
         : (0, r.jsxs)('div', {
-              ref: L,
+              ref: D,
               className: T.buttonContainer,
               children: [
                   (0, r.jsx)(_.Z, {
                       shouldShowPopout: C,
                       referralsRemaining: n,
-                      channel: g,
+                      channel: S,
                       onClose: () => y(!1),
-                      isResending: S
+                      isResending: g
                   }),
                   (0, r.jsx)(a.u, {
                       text: N,
@@ -51,7 +51,7 @@ t.Z = i.memo(function (e) {
                                       !R &&
                                       (v(!0),
                                       f.default.track(p.rMx.SHARE_NITRO_FLOW_STEPS, {
-                                          location_stack: D,
+                                          location_stack: L,
                                           step: I.fz.BADGE_TOOLTIP_VIEWED,
                                           other_user_id: Number(b)
                                       }));
@@ -68,7 +68,7 @@ t.Z = i.memo(function (e) {
                                   onClick: () => {
                                       y((e) => !e),
                                           f.default.track(p.rMx.SHARE_NITRO_FLOW_STEPS, {
-                                              location_stack: D,
+                                              location_stack: L,
                                               step: I.fz.BADGE_CLICKED,
                                               other_user_id: Number(b)
                                           });
@@ -76,7 +76,7 @@ t.Z = i.memo(function (e) {
                                   children: (0, r.jsx)(E.Z, {
                                       referralsRemaining: n,
                                       hovered: R,
-                                      isResending: S,
+                                      isResending: g,
                                       shouldShowBirthdayUX: A,
                                       isLightTheme: (0, s.ap)(M)
                                   })

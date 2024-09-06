@@ -534,7 +534,7 @@ e.exports = function (e) {
                 l.FUNCTION_DISPATCH
             ]
         },
-        g = {
+        S = {
             begin: u + ':(:)?' + `(${o.join('|')})`,
             returnBegin: !0,
             contains: [T]
@@ -569,7 +569,7 @@ e.exports = function (e) {
                     contains: p
                 }
             },
-            g,
+            S,
             m,
             T,
             I,

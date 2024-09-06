@@ -1,12 +1,12 @@
 n.d(t, {
     dY: function () {
-        return g;
+        return S;
     },
     kC: function () {
         return m;
     },
     l3: function () {
-        return S;
+        return g;
     },
     o3: function () {
         return T;
@@ -156,11 +156,11 @@ function T(e) {
         n
     );
 }
-function g(e) {
+function S(e) {
     let { image: t, video: n, type: r, author: i, rawTitle: a } = e;
     return (null != t || null != n) && (r === u.hBH.GIFV || (r !== u.hBH.RICH && null == i && null == a));
 }
-function S(e) {
+function g(e) {
     return e.type === u.hBH.ARTICLE && null != e.url && (h.test(e.url) || f.test(e.url));
 }
 function A(e, t, n) {

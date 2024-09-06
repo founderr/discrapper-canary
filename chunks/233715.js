@@ -5,8 +5,8 @@ n.d(t, {
 }),
     n(47120);
 var i = n(735250),
-    a = n(470079),
-    s = n(180081),
+    s = n(470079),
+    a = n(180081),
     l = n(481060);
 function r(e) {
     let { children: t, className: n, flashKey: r } = e,
@@ -14,7 +14,7 @@ function r(e) {
         c = (0, l.useToken)(l.tokens.colors.BACKGROUND_MESSAGE_HIGHLIGHT).spring({ opacity: 0 }),
         [u, d] = (0, l.useSpring)(() => ({ from: { backgroundColor: o } }), 'animate-never');
     return (
-        a.useEffect(() => {
+        s.useEffect(() => {
             d({
                 reset: !0,
                 immediate: !0,
@@ -26,7 +26,7 @@ function r(e) {
                     to: { backgroundColor: c }
                 });
         }, [r, d]),
-        (0, i.jsx)(s.animated.div, {
+        (0, i.jsx)(a.animated.div, {
             style: u,
             className: n,
             children: t

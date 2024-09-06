@@ -20,7 +20,7 @@ var i = n(620662),
     p = n(715547),
     I = n(981631);
 function m(e) {
-    let { user: t, currentUser: n, activity: m, onAction: T, onClose: g } = e;
+    let { user: t, currentUser: n, activity: m, onAction: T, onClose: S } = e;
     return (0, o.Z)(m)
         ? (0, r.jsx)(h.Z, {
               platformType: I.ABu.XBOX,
@@ -44,14 +44,14 @@ function m(e) {
                     currentUser: n,
                     activity: m,
                     onAction: T,
-                    onClose: g
+                    onClose: S
                 })
               : (null == m ? void 0 : m.type) === I.IIU.HANG_STATUS
                 ? (0, r.jsx)(_.Z, {
                       user: t,
                       activity: m,
                       onAction: T,
-                      onClose: g
+                      onClose: S
                   })
                 : (null == m ? void 0 : m.buttons) != null && (null == m ? void 0 : m.buttons.length) >= 1
                   ? (0, r.jsx)(d.Z, {

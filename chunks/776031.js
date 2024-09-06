@@ -20,8 +20,8 @@ var r = n(735250),
     I = n(594174),
     m = n(981631),
     T = n(37113),
-    g = n(65154),
-    S = n(689938);
+    S = n(65154),
+    g = n(689938);
 function A(e, t) {
     let { preset: A, resolution: N, fps: O } = (0, s.cj)([f.Z], () => f.Z.getState()),
         R = (0, s.e7)([p.Z], () => p.Z.getGoLiveSource()),
@@ -31,7 +31,7 @@ function A(e, t) {
             return null === (t = h.Z.getGuild(null == e ? void 0 : e.guildId)) || void 0 === t ? void 0 : t.premiumTier;
         }),
         { location: y } = (0, u.O)(),
-        { available: L, activated: D } = (0, d.k)(a.q.STREAM_HIGH_QUALITY),
+        { available: D, activated: L } = (0, d.k)(a.q.STREAM_HIGH_QUALITY),
         b = i.useCallback(
             (e, i, a, s) => {
                 if (e) {
@@ -42,7 +42,7 @@ function A(e, t) {
                                 resolution: i,
                                 frameRate: a
                             },
-                            context: g.Yn.STREAM
+                            context: S.Yn.STREAM
                         };
                         null != R.desktopSource
                             ? (e.desktopSettings = {
@@ -54,7 +54,7 @@ function A(e, t) {
                                   videoDeviceGuid: R.cameraSource.videoDeviceGuid,
                                   audioDeviceGuid: R.cameraSource.audioDeviceGuid
                               }),
-                            L && (0, E.J1)(!(0, _.mc)(i, a)),
+                            D && (0, E.J1)(!(0, _.mc)(i, a)),
                             l.Z.setGoLiveSource(e);
                     }
                 } else {
@@ -78,7 +78,7 @@ function A(e, t) {
                         );
                 }
             },
-            [t, y, R, L]
+            [t, y, R, D]
         );
     if (null == e) return null;
     let M = A === T.tI.PRESET_DOCUMENTS ? T.ws.FPS_30 : O,
@@ -101,7 +101,7 @@ function A(e, t) {
             let { value: t, label: n } = e,
                 i = (0, c.Z)(T.tI.PRESET_CUSTOM, t, M, v, C);
             return (
-                L && !D && (i = !1),
+                D && !L && (i = !1),
                 (0, r.jsx)(
                     o.MenuRadioItem,
                     {
@@ -118,11 +118,11 @@ function A(e, t) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(o.MenuGroup, {
-                label: S.Z.Messages.SCREENSHARE_FRAME_RATE,
+                label: g.Z.Messages.SCREENSHARE_FRAME_RATE,
                 children: P
             }),
             (0, r.jsx)(o.MenuGroup, {
-                label: S.Z.Messages.STREAM_RESOLUTION,
+                label: g.Z.Messages.STREAM_RESOLUTION,
                 children: U
             })
         ]

@@ -32,7 +32,7 @@ function T(e) {
         }));
     return t ? n.sort((e, t) => d.default.compare(e.sound.soundId, t.sound.soundId)) : n;
 }
-function g(e) {
+function S(e) {
     let { sections: t, guildIds: n, allSounds: r, potentialSoundIdsForSection: i, sectionType: a, sortById: s } = e,
         o = {};
     for (let e of [...n, I.X8]) {
@@ -52,7 +52,7 @@ function g(e) {
             items: c
         });
 }
-function S(e, t) {
+function g(e, t) {
     var n;
     let r = null !== (n = t.get(I.X8)) && void 0 !== n ? n : I.Hy;
     e.push({
@@ -80,7 +80,7 @@ function A(e) {
         }),
         C = c.ZP.canUseSoundboardEverywhere(d),
         y = (0, i.e7)([o.Z], () => o.Z.getGuild(null == e ? void 0 : e.guild_id)),
-        L = (0, i.e7)(
+        D = (0, i.e7)(
             [l.Z],
             () => {
                 let { canCreateExpressions: e } = (0, a.G)(y);
@@ -88,7 +88,7 @@ function A(e) {
             },
             [y]
         ),
-        { canSeeRecentlyHeard: D, canSeeFrequentlyPlayed: b } = (0, _.k)({
+        { canSeeRecentlyHeard: L, canSeeFrequentlyPlayed: b } = (0, _.k)({
             location: 'soundboard-useSoundGrid',
             autoTrackExposure: !0
         }),
@@ -104,12 +104,12 @@ function A(e) {
     return r.useMemo(() => {
         let e = [];
         return n
-            ? (S(e, A),
+            ? (g(e, A),
               {
                   categories: e,
                   isFetching: O
               })
-            : (g({
+            : (S({
                   sections: e,
                   guildIds: R,
                   allSounds: A,
@@ -117,8 +117,8 @@ function A(e) {
                   sectionType: h.bg.FAVORITES,
                   sortById: !0
               }),
-              D &&
-                  g({
+              L &&
+                  S({
                       sections: e,
                       guildIds: R,
                       allSounds: A,
@@ -127,7 +127,7 @@ function A(e) {
                       sortById: !1
                   }),
               b &&
-                  g({
+                  S({
                       sections: e,
                       guildIds: R,
                       allSounds: A,
@@ -158,8 +158,8 @@ function A(e) {
                           key: t.id,
                           items: o
                       });
-              })(e, y, L, A, t),
-              !C && S(e, A),
+              })(e, y, D, A, t),
+              !C && g(e, A),
               !(function (e, t, n, r, i) {
                   for (let s of t) {
                       var a;
@@ -177,12 +177,12 @@ function A(e) {
                           });
                   }
               })(e, v, null == y ? void 0 : y.id, A, I),
-              C && S(e, A),
+              C && g(e, A),
               {
                   categories: e,
                   isFetching: O
               });
-    }, [R, A, N, P, M, b, D, y, L, t, C, v, n, O, I]);
+    }, [R, A, N, P, M, b, L, y, D, t, C, v, n, O, I]);
 }
 function N(e, t, n) {
     return r.useMemo(

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return g;
     }
 });
 var r = n(735250),
@@ -20,7 +20,7 @@ var r = n(735250),
     I = n(981631),
     m = n(689938),
     T = n(325379);
-function g(e) {
+function S(e) {
     let { channel: t, message: n, replyChainLength: a } = e;
     return (
         i.useEffect(() => {
@@ -59,10 +59,10 @@ function g(e) {
         })
     );
 }
-function S(e) {
+function g(e) {
     let { reply: t, chatInputType: n } = e,
         { channel: i, message: a, shouldMention: u, showMentionToggle: f } = t,
-        { nick: S, colorString: A, colorRoleName: N } = (0, c.ZP)(a),
+        { nick: g, colorString: A, colorRoleName: N } = (0, c.ZP)(a),
         O = (function (e, t) {
             let n = e.id,
                 r = t.id;
@@ -113,7 +113,7 @@ function S(e) {
                                             l.NameWithRole,
                                             {
                                                 className: T.name,
-                                                name: S,
+                                                name: g,
                                                 color: A,
                                                 roleName: N
                                             },
@@ -173,7 +173,7 @@ function S(e) {
                     ]
                 }),
                 v &&
-                    (0, r.jsx)(g, {
+                    (0, r.jsx)(S, {
                         channel: i,
                         message: a,
                         replyChainLength: O

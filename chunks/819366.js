@@ -20,8 +20,8 @@ var r = n(735250),
     I = n(347475),
     m = n(592125),
     T = n(271383),
-    g = n(430824),
-    S = n(699516),
+    S = n(430824),
+    g = n(699516),
     A = n(594174),
     N = n(5192),
     O = n(51144),
@@ -53,8 +53,8 @@ function v(e) {
     });
 }
 function C(e) {
-    let { className: t, userId: i, channelId: a, parsedUserId: f, content: C, inlinePreview: y = !1, viewingChannelId: L } = e,
-        { analyticsLocations: D } = (0, _.ZP)(d.Z.USER_MENTION),
+    let { className: t, userId: i, channelId: a, parsedUserId: f, content: C, inlinePreview: y = !1, viewingChannelId: D } = e,
+        { analyticsLocations: L } = (0, _.ZP)(d.Z.USER_MENTION),
         b = (0, l.e7)([A.default], () => A.default.getUser(i)),
         M = (0, l.e7)([m.Z], () => m.Z.getChannel(a)),
         P = null != M ? M.getGuildId() : null,
@@ -68,7 +68,7 @@ function C(e) {
                               return (t) =>
                                   (0, r.jsx)(e, {
                                       ...t,
-                                      viewingChannelId: L,
+                                      viewingChannelId: D,
                                       user: b,
                                       channel: M,
                                       guildId: P
@@ -76,8 +76,8 @@ function C(e) {
                           });
                   },
         w = O.ZP.useName(b),
-        x = (0, l.e7)([m.Z, T.ZP, S.Z], () => N.ZP.getNickname(P, a, b)),
-        G = g.Z.getGuild(P),
+        x = (0, l.e7)([m.Z, T.ZP, g.Z], () => N.ZP.getNickname(P, a, b)),
+        G = S.Z.getGuild(P),
         k = (0, E.Ib)(G, M) && i === R.fL ? R.jM : null;
     if (null == b)
         return (0, r.jsx)(v, {
@@ -95,11 +95,11 @@ function C(e) {
         });
     return y
         ? (0, r.jsx)(_.Gt, {
-              value: D,
+              value: L,
               children: B()
           })
         : (0, r.jsx)(_.Gt, {
-              value: D,
+              value: L,
               children: (0, r.jsx)(u.Popout, {
                   preload:
                       null == b

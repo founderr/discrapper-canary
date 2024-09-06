@@ -1,16 +1,16 @@
 n.d(t, {
     Z: function () {
-        return a;
+        return s;
     }
 });
 var i = n(374470);
-function a(e, t) {
+function s(e, t) {
     let n = e.offsetTop,
-        a = e.offsetParent;
-    for (; null != a; ) {
-        var s;
-        if (a === t || !(0, i.k)(a, HTMLElement)) break;
-        (n += null !== (s = a.offsetTop) && void 0 !== s ? s : 0), (a = a.offsetParent);
+        s = e.offsetParent;
+    for (; null != s; ) {
+        var a;
+        if (s === t || !(0, i.k)(s, HTMLElement)) break;
+        (n += null !== (a = s.offsetTop) && void 0 !== a ? a : 0), (s = s.offsetParent);
     }
     return n;
 }

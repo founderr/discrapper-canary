@@ -5,26 +5,26 @@ n.d(t, {
 }),
     n(47120);
 var i = n(735250),
-    a = n(470079),
-    s = n(120356),
-    l = n.n(s),
+    s = n(470079),
+    a = n(120356),
+    l = n.n(a),
     r = n(392711),
     o = n(772848),
     c = n(442837),
     u = n(570140),
     d = n(596454),
     h = n(607070),
-    p = n(377107);
-let m = [p.emoji1, p.emoji2, p.emoji3, p.emoji4],
-    _ = a.memo(function (e) {
+    m = n(377107);
+let p = [m.emoji1, m.emoji2, m.emoji3, m.emoji4],
+    _ = s.memo(function (e) {
         var t;
-        let { emoji: n, onAnimationEnd: s } = e,
-            o = (0, r.sample)(m),
-            c = a.useCallback(() => {
-                s(n.key);
-            }, [n.key, s]);
+        let { emoji: n, onAnimationEnd: a } = e,
+            o = (0, r.sample)(p),
+            c = s.useCallback(() => {
+                a(n.key);
+            }, [n.key, a]);
         return (0, i.jsx)('div', {
-            className: l()(p.emoji, o),
+            className: l()(m.emoji, o),
             onAnimationEnd: c,
             children: (0, i.jsx)(d.Z, {
                 emojiId: n.id,
@@ -35,12 +35,12 @@ let m = [p.emoji1, p.emoji2, p.emoji3, p.emoji4],
     });
 function f(e) {
     let { channelId: t, callHeight: n } = e,
-        s = (0, c.e7)([h.Z], () => h.Z.useReducedMotion),
-        [l, r] = a.useState([]);
-    a.useEffect(() => {
+        a = (0, c.e7)([h.Z], () => h.Z.useReducedMotion),
+        [l, r] = s.useState([]);
+    s.useEffect(() => {
         function e(e) {
             let { channelId: n, emoji: i } = e;
-            if (n === t && !s && null != i)
+            if (n === t && !a && null != i)
                 r((e) => [
                     ...e,
                     {
@@ -55,14 +55,14 @@ function f(e) {
                 u.Z.unsubscribe('VOICE_CHANNEL_EFFECT_SEND', e);
             }
         );
-    }, [t, s]);
-    let d = a.useCallback((e) => {
+    }, [t, a]);
+    let d = s.useCallback((e) => {
         r((t) => t.filter((t) => t.key !== e));
     }, []);
-    return s
+    return a
         ? null
         : (0, i.jsx)('div', {
-              className: p.container,
+              className: m.container,
               style: { top: n - 16 },
               'aria-hidden': !0,
               children: l.map((e) =>

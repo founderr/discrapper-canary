@@ -16,12 +16,12 @@ var i,
     I = n(981631);
 let m = {},
     T = !1;
-function g(e) {
+function S(e) {
     return (
         null == m[e] &&
             (m[e] = {
                 searchId: e,
-                searchType: S(e),
+                searchType: g(e),
                 isIndexing: !1,
                 isHistoricalIndexing: !1,
                 isSearching: !1,
@@ -41,7 +41,7 @@ function g(e) {
         m[e]
     );
 }
-function S(e) {
+function g(e) {
     return e === I.aib.DMS ? I.aib.DMS : e === I.I_8 ? I.aib.FAVORITES : null != p.Z.getGuild(e) ? I.aib.GUILD : null != h.Z.getChannel(e) ? I.aib.CHANNEL : null;
 }
 function A(e, t) {
@@ -68,11 +68,11 @@ function y(e) {
     if (null == n) return !1;
     null != n.searchFetcher && n.searchFetcher.cancel(), delete m[t];
 }
-function L(e) {
+function D(e) {
     if (e === v) return !1;
-    null != e && null == m[e] && g(e), (v = e);
+    null != e && null == m[e] && S(e), (v = e);
 }
-class D extends (i = c.ZP.Store) {
+class L extends (i = c.ZP.Store) {
     initialize() {
         this.waitFor(p.Z, h.Z);
         let e = d.K.get(N);
@@ -175,7 +175,7 @@ class D extends (i = c.ZP.Store) {
     }
 }
 (o = 'SearchStore'),
-    (s = 'displayName') in (a = D)
+    (s = 'displayName') in (a = L)
         ? Object.defineProperty(a, s, {
               value: o,
               enumerable: !0,
@@ -183,11 +183,11 @@ class D extends (i = c.ZP.Store) {
               writable: !0
           })
         : (a[s] = o),
-    (t.Z = new D(_.Z, {
+    (t.Z = new L(_.Z, {
         SEARCH_START: function (e) {
             var t, n;
             let { queryString: r, searchId: i, query: a } = e,
-                s = g(i);
+                s = S(i);
             null != s.searchFetcher && (s.searchFetcher.cancel(), (s.searchFetcher = null));
             let o = s.searchType,
                 l = new E.ZP(i, o, a);
@@ -246,34 +246,34 @@ class D extends (i = c.ZP.Store) {
         },
         SEARCH_INDEXING: function (e) {
             let { searchId: t } = e,
-                n = g(t);
+                n = S(t);
             (n.isIndexing = !0), (n.isHistoricalIndexing = !0), (n.isSearching = !1);
         },
         SEARCH_FINISH: function (e) {
             let { searchId: t } = e,
-                n = g(t);
+                n = S(t);
             (n.isSearching = !1), (n.isIndexing = !1), (n.isHistoricalIndexing = e.doingHistoricalIndex || !1), (n.searchFetcher = null), (n.totalResults = e.totalResults), (n.hasError = e.hasError), (n.analyticsId = e.analyticsId), (n.documentsIndexed = null != e.documentsIndexed ? e.documentsIndexed : 0), (n.showNoResultsAlt = 0.05 > Math.random()), (n.rawResults = e.messages), null == n.query && (n.hasError = !0);
         },
         SEARCH_EDITOR_STATE_CLEAR: y,
         SEARCH_ENSURE_SEARCH_STATE: function (e) {
             let { searchId: t } = e;
-            null != t && g(t);
+            null != t && S(t);
         },
         SEARCH_EDITOR_STATE_CHANGE: function (e) {
             let { searchId: t, editorState: n } = e;
-            g(t).editorState = n;
+            S(t).editorState = n;
         },
         SEARCH_SET_SHOW_BLOCKED_RESULTS: function (e) {
             let { searchId: t, showBlocked: n } = e;
-            g(t).showBlockedResults = n;
+            S(t).showBlockedResults = n;
         },
         SEARCH_SCREEN_OPEN: function (e) {
             let { searchId: t } = e;
-            L(t);
+            D(t);
         },
         CHANNEL_SELECT: function (e) {
             let { guildId: t, channelId: n } = e;
-            L(null != t ? t : n);
+            D(null != t ? t : n);
         },
         CHANNEL_TOGGLE_MEMBERS_SECTION: function () {
             return null != v && y({ searchId: v });
@@ -292,7 +292,7 @@ class D extends (i = c.ZP.Store) {
         },
         CONNECTION_OPEN: function () {
             Object.keys(m).forEach((e) => {
-                null != m[e] && (m[e].searchType = S(e));
+                null != m[e] && (m[e].searchType = g(e));
             });
         },
         SEARCH_MODAL_OPEN: function (e) {

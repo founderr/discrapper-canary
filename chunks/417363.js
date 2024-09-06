@@ -16,8 +16,8 @@ var r,
     I = n(70956),
     m = n(780570),
     T = n(358085),
-    g = n(804739),
-    S = n(941128),
+    S = n(804739),
+    g = n(941128),
     A = n(391690),
     N = n(981631);
 let O = 1 * I.Z.Millis.MINUTE;
@@ -26,8 +26,8 @@ let R = {},
     v = 'file://',
     C = !1,
     y = 0,
-    L = 0,
     D = 0,
+    L = 0,
     b = [],
     M = [],
     P = [],
@@ -105,7 +105,7 @@ class H extends (i = c.ZP.Store) {
         return null != n && null != n.storage && !!n.storage.sync;
     }
     isLaunchable(e, t) {
-        if (!(0, g.Q)()) return !1;
+        if (!(0, S.Q)()) return !1;
         let n = R[(0, m.Tu)(e, t)];
         return null != n && n.type === N.vxO.UP_TO_DATE && null != n.launchOptions && 0 !== n.launchOptions.length;
     }
@@ -165,7 +165,7 @@ class H extends (i = c.ZP.Store) {
                                 case N.DJE.COMPLETE: {
                                     let e;
                                     let m = {},
-                                        g = null;
+                                        S = null;
                                     if (f) e = N.vxO.REPAIRING;
                                     else if (null == t) e = N.vxO.INSTALL_REQUIRED;
                                     else if (h && (t !== n || (null != r && 0 !== u().difference(r, i).length))) e = N.vxO.UPDATE_REQUIRED;
@@ -188,7 +188,7 @@ class H extends (i = c.ZP.Store) {
                                                             fullExecutablePath: s,
                                                             fullWorkingDir: t
                                                         }),
-                                                        null == g && (g = i);
+                                                        null == S && (S = i);
                                                 }
                                         } else if (null != o) {
                                             t === N.QR$.WIN64 && null == o[t] && (t = N.QR$.WIN32);
@@ -204,7 +204,7 @@ class H extends (i = c.ZP.Store) {
                                                     fullWorkingDir: e,
                                                     platforms: [t]
                                                 }),
-                                                    (g = i);
+                                                    (S = i);
                                             }
                                         }
                                     }
@@ -219,7 +219,7 @@ class H extends (i = c.ZP.Store) {
                                         installPath: d,
                                         installedSize: E,
                                         launchOptions: m,
-                                        defaultLaunchOptionId: g,
+                                        defaultLaunchOptionId: S,
                                         shouldPatch: h,
                                         storage: c
                                     };
@@ -256,9 +256,9 @@ class H extends (i = c.ZP.Store) {
                         let e = V(n, s, w);
                         e > 0 && k((y += e));
                         let r = V(n, s, x);
-                        r > 0 && F((L += r));
+                        r > 0 && F((D += r));
                         let o = V(n, s, G);
-                        if ((o > 0 && B((D += o)), i === t)) {
+                        if ((o > 0 && B((L += o)), i === t)) {
                             let e = n[s];
                             if (!0 !== e.paused && (e.type === N.vxO.UNINSTALLING || e.type === N.vxO.INSTALLING || e.type === N.vxO.UPDATING))
                                 switch (e.stage) {
@@ -282,7 +282,7 @@ class H extends (i = c.ZP.Store) {
                                     installationPath: r
                                 });
                             }),
-                            -1 === S.Z.getQueuePosition(e, t) &&
+                            -1 === g.Z.getQueuePosition(e, t) &&
                                 (n[s].type === N.vxO.INSTALLING || n[s].type === N.vxO.UPDATING) &&
                                 h.Z.hasApplication(e, t) &&
                                 A.Z.shouldBeInstalled(e, t) &&

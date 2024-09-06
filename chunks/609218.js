@@ -23,26 +23,26 @@ var r,
     I = n(197115),
     m = n(302945),
     T = n(474936),
-    g = n(981631),
-    S = n(689938),
+    S = n(981631),
+    g = n(689938),
     A = n(502374);
 function N(e) {
     let { containerContext: t, image: n, title: r, description: i, enableSocialProof: o, analyticsLocationSection: N, upsellViewedTrackingData: O, onClose: R, onDisplay: v, onLearnMore: C } = e,
         y = (0, u.e7)([p.Z], () => p.Z.affinities),
-        L = (0, u.e7)([p.Z], () => p.Z.hasFetched);
+        D = (0, u.e7)([p.Z], () => p.Z.hasFetched);
     s.useEffect(() => {
-        !L && o && d.MH();
-    }, [L, o]),
+        !D && o && d.MH();
+    }, [D, o]),
         s.useEffect(() => {
-            h.default.track(g.rMx.PREMIUM_UPSELL_VIEWED, O), null == v || v();
+            h.default.track(S.rMx.PREMIUM_UPSELL_VIEWED, O), null == v || v();
         }, [v, O]);
-    let D = y.length > 1 && o;
+    let L = y.length > 1 && o;
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)(c.Backdrop, {
                 backdropStyle: c.BackdropStyles.DARK,
                 onClose: R,
-                'aria-label': S.Z.Messages.CLOSE,
+                'aria-label': g.Z.Messages.CLOSE,
                 isVisible: !0
             }),
             (0, a.jsxs)('div', {
@@ -63,11 +63,11 @@ function N(e) {
                                 alt: 'Nitro Perk'
                             }),
                             (0, a.jsx)(c.Heading, {
-                                className: l()(A.title, { [A.titleNoSocialProof]: !D }),
+                                className: l()(A.title, { [A.titleNoSocialProof]: !L }),
                                 variant: 'heading-xl/bold',
                                 children: r
                             }),
-                            D && (0, a.jsx)(m.Z, { affinities: y }),
+                            L && (0, a.jsx)(m.Z, { affinities: y }),
                             (0, a.jsx)(c.Text, {
                                 variant: 'text-sm/medium',
                                 className: A.body,
@@ -84,23 +84,23 @@ function N(e) {
                                 color: c.Button.Colors.CUSTOM,
                                 look: c.Button.Looks.LINK,
                                 onClick: () => {
-                                    h.default.track(g.rMx.PREMIUM_PROMOTION_OPENED, {
+                                    h.default.track(S.rMx.PREMIUM_PROMOTION_OPENED, {
                                         location_section: N,
-                                        location_object: g.qAy.NAVIGATION_LINK
+                                        location_object: S.qAy.NAVIGATION_LINK
                                     }),
                                         null == C || C(),
                                         (0, E.Z)(),
                                         R(),
                                         (0, _.xf)(),
-                                        (0, f.uL)(g.Z5c.APPLICATION_STORE);
+                                        (0, f.uL)(S.Z5c.APPLICATION_STORE);
                                 },
-                                children: S.Z.Messages.STREAM_PREMIUM_UPSELL_SECONDARY_CTA
+                                children: g.Z.Messages.STREAM_PREMIUM_UPSELL_SECONDARY_CTA
                             }),
                             (0, a.jsx)(I.Z, {
                                 showGradient: !0,
                                 premiumModalAnalyticsLocation: {
                                     section: N,
-                                    object: g.qAy.BUTTON_CTA
+                                    object: S.qAy.BUTTON_CTA
                                 },
                                 subscriptionTier: T.Si.TIER_2,
                                 size: c.Button.Sizes.SMALL,
@@ -108,7 +108,7 @@ function N(e) {
                                 onClick: () => {
                                     R();
                                 },
-                                buttonText: S.Z.Messages.PREMIUM_UPSELL_GET_NITRO
+                                buttonText: g.Z.Messages.PREMIUM_UPSELL_GET_NITRO
                             })
                         ]
                     })

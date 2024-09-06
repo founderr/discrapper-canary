@@ -5,21 +5,21 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(120356),
-    s = n.n(a),
+var s = n(120356),
+    a = n.n(s),
     l = n(481060),
     r = n(689938),
     o = n(694333);
 function c(e) {
-    let { className: t, iconContainerClassName: n, icon: a, color: c, title: u, description: d, userCount: h, onClick: p, highlight: m } = e;
+    let { className: t, iconContainerClassName: n, icon: s, color: c, title: u, description: d, userCount: h, onClick: m, highlight: p } = e;
     return (0, i.jsxs)(l.Clickable, {
-        className: s()(o.container, t, null != m && { [o.pulse]: m }),
-        onClick: p,
+        className: a()(o.container, t, null != p && { [o.pulse]: p }),
+        onClick: m,
         children: [
             (0, i.jsx)('div', {
                 style: { backgroundColor: c },
-                className: s()(o.icon, n),
-                children: a
+                className: a()(o.icon, n),
+                children: s
             }),
             (0, i.jsxs)('div', {
                 className: o.textContainer,

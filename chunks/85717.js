@@ -14,8 +14,8 @@ var s = n(493683),
     I = n(885110),
     m = n(67212),
     T = n(770471),
-    g = n(757454),
-    S = n(158631),
+    S = n(757454),
+    g = n(158631),
     A = n(981631);
 let N = [];
 class O extends u.Z {
@@ -26,9 +26,9 @@ class O extends u.Z {
             n = I.Z.getBroadcast(),
             r = (0, m.Ds)(e),
             i = null != h.Z.getGameByName(r),
-            a = (0, S.dD)();
+            a = (0, g.dD)();
         if (!t || null != n || !_.xd.getSetting() || !i || !a || null != N.find((t) => t.pid === e.pid)) return;
-        if (((N = c.ZP.getRunningGames()), !(0, g.Q)())) return;
+        if (((N = c.ZP.getRunningGames()), !(0, S.Q)())) return;
         let s = p.Z.getVoiceChannelId();
         (0, l.tE)({
             pid: e.pid,

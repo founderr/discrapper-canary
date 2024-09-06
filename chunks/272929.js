@@ -5,12 +5,12 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(180081),
-    s = n(481060),
+var s = n(180081),
+    a = n(481060),
     l = n(871499),
     r = n(689938),
     o = n(126888);
-let c = (0, a.animated)((e) => {
+let c = (0, s.animated)((e) => {
     let { percentComplete: t } = e,
         n = 20;
     return (0, i.jsx)('svg', {
@@ -31,34 +31,34 @@ let c = (0, a.animated)((e) => {
     });
 });
 function u(e) {
-    let { totalCooldownSeconds: t, remainingCooldownSeconds: n, onClick: u, onKeyDown: d, onMouseEnter: h, onMouseLeave: p, isActive: m = !1, isCenterButton: _ = !1, ...f } = e,
+    let { totalCooldownSeconds: t, remainingCooldownSeconds: n, onClick: u, onKeyDown: d, onMouseEnter: h, onMouseLeave: m, isActive: p = !1, isCenterButton: _ = !1, ...f } = e,
         E = n > 0,
-        C = (0, s.useSpring)(
+        g = (0, a.useSpring)(
             {
                 percentComplete: 0 !== n ? (t - n) / t : 0,
                 config: {
-                    ...a.config.molasses,
+                    ...s.config.molasses,
                     duration: 1000
                 }
             },
             'animate-always'
         ),
-        g = E ? r.Z.Messages.VOICE_CHANNEL_EFFECTS_COOLDOWN.format({ seconds: n }) : void 0,
+        C = E ? r.Z.Messages.VOICE_CHANNEL_EFFECTS_COOLDOWN.format({ seconds: n }) : void 0,
         I = _ ? l.d : l.Z;
     return (0, i.jsxs)('div', {
         className: o.container,
         children: [
-            E ? (0, i.jsx)(c, { percentComplete: C.percentComplete }) : null,
+            E ? (0, i.jsx)(c, { percentComplete: g.percentComplete }) : null,
             (0, i.jsx)(I, {
                 ...f,
                 disabled: E,
-                label: g,
-                iconComponent: s.ReactionIcon,
+                label: C,
+                iconComponent: a.ReactionIcon,
                 onClick: u,
                 onKeyDown: d,
                 onMouseEnter: h,
-                onMouseLeave: p,
-                isActive: m,
+                onMouseLeave: m,
+                isActive: p,
                 grow: !1
             })
         ]

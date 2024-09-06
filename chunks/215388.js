@@ -16,9 +16,9 @@ var a = t(735250),
     u = t(703558),
     C = t(981631),
     g = t(689938),
-    T = t(703582),
-    p = t(791170);
-let h = (0, o.Z)(),
+    h = t(703582),
+    T = t(791170);
+let p = (0, o.Z)(),
     m = (0, c.kt)({
         id: '1',
         type: C.d4z.DM
@@ -35,20 +35,20 @@ function U(e) {
     var A;
     let { hasError: t, maxLength: n, text: r } = e;
     return (0, a.jsxs)('div', {
-        className: s()(p.maxLength, { [p.errorOverflow]: t }),
+        className: s()(T.maxLength, { [T.errorOverflow]: t }),
         'aria-hidden': 'true',
         children: [null !== (A = null == r ? void 0 : r.length) && void 0 !== A ? A : 0, ' ', null != n && '/ '.concat(n)]
     });
 }
 function f(e) {
     var A;
-    let { 'aria-labelledby': t, className: r, id: o, autoFocus: c, maxLength: C, onChange: p, onSubmit: f, showCharacterCount: v = !1, placeholder: q, required: E, value: N, enableThemedBackground: D = !1, parentModalKey: O } = e,
-        R = (0, l.useFormContext)(),
-        [x, L] = n.useState(() => (0, i.JM)(N)),
-        b = n.useRef(!0 === c),
-        P = null != t ? t : null == R ? void 0 : R.titleId,
-        V = null !== (A = null == R ? void 0 : R.errorId) && void 0 !== A ? A : h,
-        _ = n.useMemo(
+    let { 'aria-labelledby': t, className: r, id: o, autoFocus: c, maxLength: C, onChange: T, onSubmit: f, showCharacterCount: v = !1, placeholder: E, required: q, value: N, enableThemedBackground: D = !1, parentModalKey: O } = e,
+        x = (0, l.useFormContext)(),
+        [R, b] = n.useState(() => (0, i.JM)(N)),
+        L = n.useRef(!0 === c),
+        P = null != t ? t : null == x ? void 0 : x.titleId,
+        _ = null !== (A = null == x ? void 0 : x.errorId) && void 0 !== A ? A : p,
+        V = n.useMemo(
             () => ({
                 analyticsName: 'simple',
                 autocomplete: {
@@ -67,27 +67,27 @@ function f(e) {
             [c]
         );
     return (0, a.jsxs)(d.Z, {
-        'aria-describedby': V,
+        'aria-describedby': _,
         'aria-labelledby': P,
-        innerClassName: s()(r, T.textArea),
+        innerClassName: s()(r, h.textArea),
         id: o,
         maxCharacterCount: C,
         onChange: function (e, A, t) {
-            p(A), L(t);
+            T(A), b(t);
         },
-        placeholder: q,
-        required: E,
+        placeholder: E,
+        required: q,
         channel: m,
         textValue: N,
-        richValue: x,
-        type: _,
+        richValue: R,
+        type: V,
         onBlur: () => {
-            b.current = !1;
+            L.current = !1;
         },
         onFocus: () => {
-            b.current = !0;
+            L.current = !0;
         },
-        focused: b.current,
+        focused: L.current,
         onSubmit: null != f ? f : I,
         disableThemedBackground: !D,
         parentModalKey: O,
@@ -95,13 +95,13 @@ function f(e) {
         children: [
             !0 === v &&
                 (0, a.jsx)(U, {
-                    hasError: null != R.error || (null != C && N.length > C),
+                    hasError: null != x.error || (null != C && N.length > C),
                     text: N,
                     maxLength: C
                 }),
             null != C &&
                 (0, a.jsx)(l.HiddenVisually, {
-                    id: h,
+                    id: p,
                     children: g.Z.Messages.MAXIMUM_LENGTH.format({ maxLength: C })
                 })
         ]

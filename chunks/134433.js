@@ -22,7 +22,7 @@ function _(e) {
         m = (0, s._i)(null != n ? n : I),
         T = (0, s.ho)(m, !1, h ? p : null);
     t = null != _ ? _ : 0.3 > (0, s.Bd)(m) ? l.Z.unsafe_rawColors.PRIMARY_630.css : l.Z.unsafe_rawColors.WHITE_500.css;
-    let g = i / 8;
+    let S = i / 8;
     return (0, r.jsx)('div', {
         style: {
             background: T,
@@ -36,9 +36,9 @@ function _(e) {
             size: 'custom',
             color: t,
             className: a()(d.linkIcon, f),
-            width: i - 2 * g,
-            height: i - 2 * g,
-            style: { margin: g }
+            width: i - 2 * S,
+            height: i - 2 * S,
+            style: { margin: S }
         })
     });
 }

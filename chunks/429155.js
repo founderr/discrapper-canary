@@ -7,20 +7,20 @@ var r = n(735250),
     l = n(98528),
     u = n(653248);
 let c = i.forwardRef(function (e, t) {
-    let { categories: n, store: c, hasSearchResults: d, listPadding: _, renderRow: E, renderSection: f, renderSectionHeader: h, renderSectionFooter: p, renderInspector: I, renderEmptySearchState: m, rowCount: T, rowCountBySection: g, rowHeight: S, sectionHeaderHeight: A, sectionFooterHeight: N, renderUpsell: O, setShowUpsell: R } = e,
+    let { categories: n, store: c, hasSearchResults: d, listPadding: _, renderRow: E, renderSection: f, renderSectionHeader: h, renderSectionFooter: p, renderInspector: I, renderEmptySearchState: m, rowCount: T, rowCountBySection: S, rowHeight: g, sectionHeaderHeight: A, sectionFooterHeight: N, renderUpsell: O, setShowUpsell: R } = e,
         v = i.useRef(!1),
         C = i.useRef(null),
         y = (0, o.Iu)((e) => e.searchQuery),
-        L = c.useStore((e) => e.activeCategoryIndex),
-        D = n.map((e) => ((0, s._O)(e.categoryInfo) ? { isNitroLocked: e.categoryInfo.isNitroLocked } : { isNitroLocked: !1 })),
+        D = c.useStore((e) => e.activeCategoryIndex),
+        L = n.map((e) => ((0, s._O)(e.categoryInfo) ? { isNitroLocked: e.categoryInfo.isNitroLocked } : { isNitroLocked: !1 })),
         b = (0, l.Uf)({
             listRef: C,
             searchQuery: y,
-            nitroLockedSectionStates: D,
+            nitroLockedSectionStates: L,
             setShowUpsell: R
         }),
         M = (0, l.Qs)({
-            activeCategoryIndex: L,
+            activeCategoryIndex: D,
             isScrolling: v,
             listRef: C,
             onActiveCategoryIndexChange: c.setActiveCategoryIndex,
@@ -36,7 +36,7 @@ let c = i.forwardRef(function (e, t) {
     return (
         (0, l.Xs)({
             searchQuery: y,
-            activeCategoryIndex: L,
+            activeCategoryIndex: D,
             listRef: C
         }),
         i.useImperativeHandle(
@@ -96,8 +96,8 @@ let c = i.forwardRef(function (e, t) {
                           renderSectionHeader: h,
                           renderSectionFooter: p,
                           rowCount: T,
-                          rowCountBySection: g,
-                          rowHeight: S,
+                          rowCountBySection: S,
+                          rowHeight: g,
                           sectionHeaderHeight: A,
                           sectionFooterHeight: N,
                           stickyHeaders: !0,

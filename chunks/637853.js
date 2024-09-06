@@ -1,6 +1,6 @@
 n.d(t, {
     Ee: function () {
-        return S;
+        return g;
     },
     L6: function () {
         return b;
@@ -9,7 +9,7 @@ n.d(t, {
         return N;
     },
     VF: function () {
-        return D;
+        return L;
     },
     b$: function () {
         return I;
@@ -80,7 +80,7 @@ function T(e, t) {
     let r = null !== (n = t.flags) && void 0 !== n ? n : 0;
     return c.yE(r, h.q.STARTED_ONBOARDING) && !c.yE(r, h.q.COMPLETED_ONBOARDING);
 }
-function g(e, t, n) {
+function S(e, t, n) {
     let r = new Set();
     e.forEach((e) => {
         e.options.forEach((e) => {
@@ -98,8 +98,8 @@ function g(e, t, n) {
         s = i.filter((e) => r.has(e.id) || (null != e.parent_id && r.has(e.parent_id)));
     return [s, i.filter((e) => !r.has(e.id) && !(null != e.parent_id && r.has(e.parent_id)))];
 }
-function S(e, t, n) {
-    return g(
+function g(e, t, n) {
+    return S(
         t,
         n,
         o.ZP.getChannels(e)[o.sH].map((e) => {
@@ -109,7 +109,7 @@ function S(e, t, n) {
     );
 }
 function A(e, t, n) {
-    return g(
+    return S(
         t,
         n,
         (0, r.e7)([o.ZP], () => o.ZP.getChannels(e))[o.sH].map((e) => {
@@ -184,10 +184,10 @@ function y(e, t) {
         i
     ];
 }
-function L(e, t) {
+function D(e, t) {
     return e[0].length === t[0].length && e[1].length === t[1].length && (0, i.Z)(e[0], t[0]) && (0, i.Z)(e[1], t[1]);
 }
-function D(e, t) {
+function L(e, t) {
     return (0, r.e7)(
         [o.ZP],
         () => {
@@ -199,7 +199,7 @@ function D(e, t) {
             return [i, r];
         },
         [e, t],
-        L
+        D
     );
 }
 function b(e) {

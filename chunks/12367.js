@@ -18,13 +18,13 @@ e.exports = function (e) {
         I,
         m,
         T,
-        g = a(this),
-        S = s(e),
+        S = a(this),
+        g = s(e),
         A = arguments.length,
         N = A > 1 ? arguments[1] : void 0,
         O = void 0 !== N,
-        R = u(S);
-    if (R && !c(R)) for (T = (m = l(S, R)).next, S = []; !(I = i(T, m)).done; ) S.push(I.value);
-    for (O && A > 2 && (N = r(N, arguments[2])), n = o(S), h = d((f = new (_(g))(n))), t = 0; n > t; t++) (p = O ? N(S[t], t) : S[t]), (f[t] = h ? E(p) : +p);
+        R = u(g);
+    if (R && !c(R)) for (T = (m = l(g, R)).next, g = []; !(I = i(T, m)).done; ) g.push(I.value);
+    for (O && A > 2 && (N = r(N, arguments[2])), n = o(g), h = d((f = new (_(S))(n))), t = 0; n > t; t++) (p = O ? N(g[t], t) : g[t]), (f[t] = h ? E(p) : +p);
     return f;
 };

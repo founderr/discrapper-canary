@@ -15,7 +15,7 @@ function u(e, t) {
     return i.forwardRef(function (a, u) {
         let { children: c, className: d, dir: _ = 'ltr', orientation: E = 'vertical', paddingFix: f = !0, fade: h = !1, onScroll: p, style: I, ...m } = a,
             T = i.useRef(null),
-            g = (0, l.tT)({
+            S = (0, l.tT)({
                 paddingFix: f,
                 orientation: E,
                 dir: _,
@@ -36,7 +36,7 @@ function u(e, t) {
             ...m,
             children: (0, r.jsxs)(o.Jc, {
                 containerRef: T,
-                children: [c, g]
+                children: [c, S]
             })
         });
     });

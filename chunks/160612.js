@@ -209,7 +209,7 @@ var r;
                     })
                 );
             },
-            g = function (e, t, n) {
+            S = function (e, t, n) {
                 return I(e)
                     ? Object.keys(e).reduce(function (i, s) {
                           var o = !I(t) || !T(e[s], t[s]);
@@ -217,16 +217,16 @@ var r;
                       }, null)
                     : null;
             },
-            S = 'Invalid prop `stripe` supplied to `Elements`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details.',
+            g = 'Invalid prop `stripe` supplied to `Elements`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details.',
             A = function (e) {
                 var t,
-                    n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S;
+                    n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : g;
                 if (null === e || (I((t = e)) && 'function' == typeof t.elements && 'function' == typeof t.createToken && 'function' == typeof t.createPaymentMethod && 'function' == typeof t.confirmCardPayment)) return e;
                 throw Error(n);
             },
             N = function (e) {
                 var t,
-                    n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S;
+                    n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : g;
                 if (I((t = e)) && 'function' == typeof t.then)
                     return {
                         tag: 'async',
@@ -319,7 +319,7 @@ var r;
                     t.useEffect(
                         function () {
                             if (!!l.elements) {
-                                var e = g(r, d, ['clientSecret', 'fonts']);
+                                var e = S(r, d, ['clientSecret', 'fonts']);
                                 e && l.elements.update(e);
                             }
                         },
@@ -341,11 +341,11 @@ var r;
         var y = function (e) {
                 return v(t.useContext(R), e);
             },
-            L = function (e) {
+            D = function (e) {
                 return (0, e.children)(y('mounts <ElementsConsumer>'));
             };
-        L.propTypes = { children: f.func.isRequired };
-        var D = ['on', 'session'],
+        D.propTypes = { children: f.func.isRequired };
+        var L = ['on', 'session'],
             b = t.createContext(null);
         b.displayName = 'CustomCheckoutSdkContext';
         var M = function (e, t) {
@@ -377,7 +377,7 @@ var r;
                         }
                     }
                     return i;
-                })(e, D);
+                })(e, L);
                 return t ? r(r({}, n), t) : r(r({}, n), e.session());
             },
             w = function (e) {
@@ -470,13 +470,13 @@ var r;
                         },
                         [d.stripe]
                     );
-                var g = t.useMemo(
+                var S = t.useMemo(
                     function () {
                         return U(d.customCheckoutSdk, l);
                     },
                     [d.customCheckoutSdk, l]
                 );
-                return d.customCheckoutSdk ? t.createElement(b.Provider, { value: d }, t.createElement(P.Provider, { value: g }, i)) : null;
+                return d.customCheckoutSdk ? t.createElement(b.Provider, { value: d }, t.createElement(P.Provider, { value: S }, i)) : null;
             };
         w.propTypes = {
             stripe: f.any,
@@ -518,7 +518,7 @@ var r;
                                   I = n.onClick,
                                   m = n.onLoadError,
                                   T = n.onLoaderStart,
-                                  S = n.onNetworksChange,
+                                  g = n.onNetworksChange,
                                   A = n.onConfirm,
                                   N = n.onCancel,
                                   O = n.onShippingAddressChange,
@@ -526,31 +526,31 @@ var r;
                                   v = x('mounts <'.concat(i, '>')),
                                   C = 'elements' in v ? v.elements : null,
                                   y = 'customCheckoutSdk' in v ? v.customCheckoutSdk : null,
-                                  L = s(t.useState(null), 2),
-                                  D = L[0],
-                                  b = L[1],
+                                  D = s(t.useState(null), 2),
+                                  L = D[0],
+                                  b = D[1],
                                   M = t.useRef(null),
                                   P = t.useRef(null);
-                              h(D, 'blur', c),
-                                  h(D, 'focus', d),
-                                  h(D, 'escape', f),
-                                  h(D, 'click', I),
-                                  h(D, 'loaderror', m),
-                                  h(D, 'loaderstart', T),
-                                  h(D, 'networkschange', S),
-                                  h(D, 'confirm', A),
-                                  h(D, 'cancel', N),
-                                  h(D, 'shippingaddresschange', O),
-                                  h(D, 'shippingratechange', R),
-                                  h(D, 'change', E),
+                              h(L, 'blur', c),
+                                  h(L, 'focus', d),
+                                  h(L, 'escape', f),
+                                  h(L, 'click', I),
+                                  h(L, 'loaderror', m),
+                                  h(L, 'loaderstart', T),
+                                  h(L, 'networkschange', g),
+                                  h(L, 'confirm', A),
+                                  h(L, 'cancel', N),
+                                  h(L, 'shippingaddresschange', O),
+                                  h(L, 'shippingratechange', R),
+                                  h(L, 'change', E),
                                   _ &&
                                       (r =
                                           'expressCheckout' === e
                                               ? _
                                               : function () {
-                                                    _(D);
+                                                    _(L);
                                                 }),
-                                  h(D, 'ready', r),
+                                  h(L, 'ready', r),
                                   t.useLayoutEffect(
                                       function () {
                                           if (null === M.current && null !== P.current && (C || y)) {
@@ -565,7 +565,7 @@ var r;
                                   t.useEffect(
                                       function () {
                                           if (!!M.current) {
-                                              var e = g(u, U, ['paymentRequest']);
+                                              var e = S(u, U, ['paymentRequest']);
                                               e && M.current.update(e);
                                           }
                                       },
@@ -687,7 +687,7 @@ var r;
             (e.CardNumberElement = Y),
             (e.CustomCheckoutProvider = w),
             (e.Elements = C),
-            (e.ElementsConsumer = L),
+            (e.ElementsConsumer = D),
             (e.EmbeddedCheckout = V),
             (e.EmbeddedCheckoutProvider = function (e) {
                 var n = e.stripe,

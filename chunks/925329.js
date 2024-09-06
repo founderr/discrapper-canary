@@ -84,9 +84,9 @@ let _ = {
                 className: a()(d.gameIcon, m, p)
             });
         let T = null == i ? void 0 : i.name,
-            g = null != T && '' !== T ? c.Z.Messages.APPLICATION_ICON_A11Y_LABEL.format({ applicationName: T }) : c.Z.Messages.APPLICATION_ICON_NO_NAME_A11Y_LABEL;
+            S = null != T && '' !== T ? c.Z.Messages.APPLICATION_ICON_A11Y_LABEL.format({ applicationName: T }) : c.Z.Messages.APPLICATION_ICON_NO_NAME_A11Y_LABEL;
         return (0, r.jsx)('img', {
-            alt: g,
+            alt: S,
             src: t,
             className: a()(d.gameIcon, m, p)
         });

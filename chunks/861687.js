@@ -24,8 +24,8 @@ var r,
     I = n(668781),
     m = n(846027),
     T = n(304680),
-    g = n(547727),
-    S = n(710845),
+    S = n(547727),
+    g = n(710845),
     A = n(811660),
     N = n(42352),
     O = n(148959),
@@ -33,8 +33,8 @@ var r,
     v = n(926951),
     C = n(868616),
     y = n(848886),
-    L = n(583215),
-    D = n(576574),
+    D = n(583215),
+    L = n(576574),
     b = n(307320),
     M = n(420363);
 n(527702);
@@ -477,10 +477,10 @@ class el extends E.Z {
         }
         let _ = ['unk'];
         if ((G.Z.supports(ei.AN.AMD_EXPERIMENTAL_RATE_CONTROL) && _.push('amdRelaxRc'), this.context === ei.Yn.STREAM)) {
-            let { nvMediumVbvSizeMs: e } = D.Z.getCurrentConfig({ location: 'handleReady' }, { autoTrackExposure: !0 });
+            let { nvMediumVbvSizeMs: e } = L.Z.getCurrentConfig({ location: 'handleReady' }, { autoTrackExposure: !0 });
             if (e > 0) {
                 _.push('nvRelaxRc=' + e);
-                let { nvEnableNewPresets: t } = L.Z.getCurrentConfig({ location: 'handleReady' }, { autoTrackExposure: !0 });
+                let { nvEnableNewPresets: t } = D.Z.getCurrentConfig({ location: 'handleReady' }, { autoTrackExposure: !0 });
                 t && _.push('nvNewPresets');
             }
             if (null != this.guildId) {
@@ -503,7 +503,7 @@ class el extends E.Z {
                 e && this.context === ei.Yn.DEFAULT && m.Z.toggleSelfMute({ playSoundEffect: !1 });
             }),
             d.on(f.Sh.NativeMuteChanged, (e) => {
-                this.context === ei.Yn.DEFAULT && g.Z.nativeMuteChanged(e);
+                this.context === ei.Yn.DEFAULT && S.Z.nativeMuteChanged(e);
             }),
             d.on(f.Sh.Video, (e, t, n, r, i, a) => {
                 this._handleVideoStreamId({
@@ -1166,7 +1166,7 @@ class el extends E.Z {
                 });
             }),
             (this.context = i),
-            (this.logger = new S.Z('RTCConnection('.concat(null !== (l = null != a ? a : n) && void 0 !== l ? l : r, ', ').concat(this.context, ')'))),
+            (this.logger = new g.Z('RTCConnection('.concat(null !== (l = null != a ? a : n) && void 0 !== l ? l : r, ', ').concat(this.context, ')'))),
             (this.userId = e),
             (this.sessionId = t),
             (this.guildId = n),

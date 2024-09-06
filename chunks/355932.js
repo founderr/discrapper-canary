@@ -112,14 +112,14 @@ t.ZP = function (e) {
         {
             lastVisibleIndex: m,
             onItemLayout: T,
-            overflowItemsRef: g
+            overflowItemsRef: S
         } = d({
             items: n,
             itemGapPx: o,
             maxLines: f,
             containerWidth: I
         }),
-        S = i.useCallback(
+        g = i.useCallback(
             (e) =>
                 (0, r.jsx)(_, {
                     items: e,
@@ -153,13 +153,13 @@ t.ZP = function (e) {
                     }),
                     (0, r.jsx)('div', {
                         className: c.overflowMeasurement,
-                        ref: g,
+                        ref: S,
                         children: a(u.Z.Messages.CLAN_DISCOVERY_TRAIT_OVERFLOW.format({ count: Number('1'.concat(n.length)) }))
                     })
                 ]
             }),
             A.map(a),
-            N.length > 0 && (null != h ? h : S)(N)
+            N.length > 0 && (null != h ? h : g)(N)
         ]
     });
 };

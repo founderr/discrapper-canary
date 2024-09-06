@@ -5,24 +5,24 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(120356),
-    s = n.n(a),
+var s = n(120356),
+    a = n.n(s),
     l = n(481060),
     r = n(871118),
     o = n(689938),
     c = n(149050);
 function u(e) {
-    let { stream: t, isSmall: n, selected: a, isSelfStream: u } = e;
+    let { stream: t, isSmall: n, selected: s, isSelfStream: u } = e;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(r.Z, {
-                className: s()(c.absoluteFill, c.streamPreviewOpacity),
+                className: a()(c.absoluteFill, c.streamPreviewOpacity),
                 stream: t,
                 noText: !0
             }),
-            !a &&
+            !s &&
                 (0, i.jsxs)('div', {
-                    className: s()(c.content, c.streamUnavailable, { [c.small]: n }),
+                    className: a()(c.content, c.streamUnavailable, { [c.small]: n }),
                     children: [
                         (0, i.jsx)(l.Text, {
                             className: c.streamUnavailableText,

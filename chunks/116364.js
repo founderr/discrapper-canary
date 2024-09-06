@@ -16,13 +16,13 @@ var i = n(392711),
     I = n(292130),
     m = n(239840);
 let T = { results: { choices: [] } },
-    g = {
+    S = {
         results: {
             choices: [],
             isLoading: !0
         }
     },
-    S = Array.from({ length: 5 }, () => ({
+    g = Array.from({ length: 5 }, () => ({
         name: '',
         displayName: '',
         value: ''
@@ -66,7 +66,7 @@ let T = { results: { choices: [] } },
                 }
                 if (l.Z.getLastErrored(e.id)) return A;
                 let a = l.Z.getAutocompleteChoices(e.id, s.name, n);
-                return null == a ? g : { results: { choices: a } };
+                return null == a ? S : { results: { choices: a } };
             }
             return {
                 results: _.ZP.queryChoiceResults({
@@ -93,7 +93,7 @@ let T = { results: { choices: [] } },
                   ? (0, E.HI)({
                         query: o,
                         selectedIndex: a,
-                        autocompletes: n ? S : t,
+                        autocompletes: n ? g : t,
                         onHover: l,
                         onClick: u,
                         titleWithQuery: p.Z.Messages.OPTIONS_MATCHING,

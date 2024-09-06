@@ -15,8 +15,8 @@ var r,
     I = p,
     m = s(''.charAt),
     T = s(''.indexOf),
-    g = s(''.replace),
-    S = s(''.slice);
+    S = s(''.replace),
+    g = s(''.slice);
 var A = ((i = /b*/g), a(p, (r = /a/), 'a'), a(p, i, 'a'), 0 !== r.lastIndex || 0 !== i.lastIndex),
     N = u.BROKEN_CARET,
     O = void 0 !== /()??/.exec('')[1];
@@ -36,15 +36,15 @@ var A = ((i = /b*/g), a(p, (r = /a/), 'a'), a(p, i, 'a'), 0 !== r.lastIndex || 0
         var v = E.groups,
             C = N && this.sticky,
             y = a(l, this),
-            L = this.source,
-            D = 0,
+            D = this.source,
+            L = 0,
             b = f;
         if (
-            (C && (-1 === T((y = g(y, 'y', '')), 'g') && (y += 'g'), (b = S(f, this.lastIndex)), this.lastIndex > 0 && (!this.multiline || (this.multiline && '\n' !== m(f, this.lastIndex - 1))) && ((L = '(?: ' + L + ')'), (b = ' ' + b), D++), (n = RegExp('^(?:' + L + ')', y))),
-            O && (n = RegExp('^' + L + '$(?!\\s)', y)),
+            (C && (-1 === T((y = S(y, 'y', '')), 'g') && (y += 'g'), (b = g(f, this.lastIndex)), this.lastIndex > 0 && (!this.multiline || (this.multiline && '\n' !== m(f, this.lastIndex - 1))) && ((D = '(?: ' + D + ')'), (b = ' ' + b), L++), (n = RegExp('^(?:' + D + ')', y))),
+            O && (n = RegExp('^' + D + '$(?!\\s)', y)),
             A && (r = this.lastIndex),
             (i = a(p, C ? n : this, b)),
-            C ? (i ? ((i.input = S(i.input, D)), (i[0] = S(i[0], D)), (i.index = this.lastIndex), (this.lastIndex += i[0].length)) : (this.lastIndex = 0)) : A && i && (this.lastIndex = this.global ? i.index + i[0].length : r),
+            C ? (i ? ((i.input = g(i.input, L)), (i[0] = g(i[0], L)), (i.index = this.lastIndex), (this.lastIndex += i[0].length)) : (this.lastIndex = 0)) : A && i && (this.lastIndex = this.global ? i.index + i[0].length : r),
             O &&
                 i &&
                 i.length > 1 &&

@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(592471),
-    s = n(749280),
+var s = n(592471),
+    a = n(749280),
     l = n(424602),
     r = n(871499);
 function o(e) {
@@ -14,12 +14,12 @@ function o(e) {
         n,
         o,
         c,
-        { isActivityActive: u, onMouseEnter: d, onMouseLeave: h, onClick: p, ...m } = e,
+        { isActivityActive: u, onMouseEnter: d, onMouseLeave: h, onClick: m, ...p } = e,
         { enabled: _ } = l.nS.useExperiment({ location: 'ActivityButton' }, { autoTrackExposure: !0 }),
-        { Component: f, events: E, play: C } = (0, a.s)(),
-        { Component: g, events: I, play: x } = (0, s.w)();
+        { Component: f, events: E, play: g } = (0, s.s)(),
+        { Component: C, events: I, play: x } = (0, a.w)();
     return (
-        _ ? ((n = g), (o = I), (c = x)) : ((n = f), (o = E), (c = C)),
+        _ ? ((n = C), (o = I), (c = x)) : ((n = f), (o = E), (c = g)),
         (0, i.jsx)(r.d, {
             isActive: u,
             color: t,
@@ -31,9 +31,9 @@ function o(e) {
                 null == h || h(e), o.onMouseLeave();
             },
             onClick: (e) => {
-                null == p || p(e), c();
+                null == m || m(e), c();
             },
-            ...m
+            ...p
         })
     );
 }

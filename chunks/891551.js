@@ -1,7 +1,7 @@
 var i = n(735250);
 n(470079);
-var a = n(120356),
-    s = n.n(a),
+var s = n(120356),
+    a = n.n(s),
     l = n(442837),
     r = n(846027),
     o = n(793148),
@@ -9,7 +9,7 @@ var a = n(120356),
     u = n(36703),
     d = n(358085),
     h = n(618158),
-    p = n(239527);
+    m = n(239527);
 t.Z = l.ZP.connectStores([c.Z], (e) => {
     let { userId: t, context: n } = e;
     return {
@@ -17,19 +17,19 @@ t.Z = l.ZP.connectStores([c.Z], (e) => {
         muted: c.Z.isLocalMute(t, n)
     };
 })(function (e) {
-    let { className: t, iconClassName: n, sliderClassName: a, userId: l, currentVolume: c, muted: m, context: _, currentWindow: f = window } = e;
+    let { className: t, iconClassName: n, sliderClassName: s, userId: l, currentVolume: c, muted: p, context: _, currentWindow: f = window } = e;
     return (0, i.jsx)(h.Z, {
         children: (0, i.jsx)(o.Z, {
             currentWindow: f,
-            iconClassName: s()(n, p.controlIcon),
-            sliderClassName: a,
+            iconClassName: a()(n, m.controlIcon),
+            sliderClassName: s,
             className: t,
             value: (0, u.P)(c),
-            muted: m,
+            muted: p,
             maxValue: d.isPlatformEmbedded ? 200 : 100,
             onValueChange: (e) => {
-                var t, n, i, a;
-                return (t = e), (n = l), (i = m), (a = _), void (t > 0 && i && r.Z.toggleLocalMute(n, a), r.Z.setLocalVolume(n, (0, u.A)(t), a));
+                var t, n, i, s;
+                return (t = e), (n = l), (i = p), (s = _), void (t > 0 && i && r.Z.toggleLocalMute(n, s), r.Z.setLocalVolume(n, (0, u.A)(t), s));
             },
             onToggleMute: () => {
                 var e, t;

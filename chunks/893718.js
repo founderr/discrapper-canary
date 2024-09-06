@@ -16,8 +16,8 @@ var r = n(735250),
     I = n(607070),
     m = n(100527),
     T = n(906732),
-    g = n(998698),
-    S = n(271668),
+    S = n(998698),
+    g = n(271668),
     A = n(931981),
     N = n(326133),
     O = n(570220),
@@ -25,8 +25,8 @@ var r = n(735250),
     v = n(805680),
     C = n(151574),
     y = n(368844),
-    L = n(41776),
-    D = n(849522),
+    D = n(41776),
+    L = n(849522),
     b = n(780291),
     M = n(913663),
     P = n(268350),
@@ -60,7 +60,7 @@ var r = n(735250),
 t.Z = i.memo(
     i.forwardRef(function (e, t) {
         var a, l, eo, el, eu, ec, ed, e_, eE, ef, eh, ep, eI, em, eT;
-        let { textValue: eg, richValue: eS, className: eA, innerClassName: eN, editorClassName: eO, id: eR, required: ev, disabled: eC, placeholder: ey, accessibilityLabel: eL, channel: eD, type: eb, focused: eM, renderAttachButton: eP, renderApplicationCommandIcon: eU, pendingReply: ew, onChange: ex, onResize: eG, onBlur: ek, onFocus: eB, onKeyDown: eF, onSubmit: eV, promptToUpload: eH, highlighted: eZ, canMentionRoles: eY, canMentionChannels: ej, maxCharacterCount: eW, showRemainingCharsAfterCount: eK, allowNewLines: ez = !0, characterCountClassName: eq, 'aria-describedby': eQ, 'aria-labelledby': eX, setEditorRef: e$, autoCompletePosition: eJ, children: e0, disableThemedBackground: e1 = !1, emojiPickerCloseOnModalOuterClick: e2, parentModalKey: e3, onCommandSentinelTyped: e4 } = e;
+        let { textValue: eS, richValue: eg, className: eA, innerClassName: eN, editorClassName: eO, id: eR, required: ev, disabled: eC, placeholder: ey, accessibilityLabel: eD, channel: eL, type: eb, focused: eM, renderAttachButton: eP, renderApplicationCommandIcon: eU, pendingReply: ew, onChange: ex, onResize: eG, onBlur: ek, onFocus: eB, onKeyDown: eF, onSubmit: eV, promptToUpload: eH, highlighted: eZ, canMentionRoles: eY, canMentionChannels: ej, maxCharacterCount: eW, showRemainingCharsAfterCount: eK, allowNewLines: ez = !0, characterCountClassName: eq, 'aria-describedby': eQ, 'aria-labelledby': eX, setEditorRef: e$, autoCompletePosition: eJ, children: e0, disableThemedBackground: e1 = !1, emojiPickerCloseOnModalOuterClick: e2, parentModalKey: e3, onCommandSentinelTyped: e4 } = e;
         u()(null != eb, 'chat input type must be set');
         let { analyticsLocations: e5 } = (0, T.ZP)(m.Z.CHANNEL_TEXT_AREA),
             e6 = (function (e) {
@@ -78,11 +78,11 @@ t.Z = i.memo(
             let { width: t } = e;
             return tn(null == t || t > 450);
         });
-        let { activeCommand: tr, activeCommandSection: ti } = (0, E.cj)([g.Z], () => {
+        let { activeCommand: tr, activeCommandSection: ti } = (0, E.cj)([S.Z], () => {
                 var e, t;
                 return {
-                    activeCommand: (null === (e = eb.commands) || void 0 === e ? void 0 : e.enabled) ? g.Z.getActiveCommand(eD.id) : null,
-                    activeCommandSection: (null === (t = eb.commands) || void 0 === t ? void 0 : t.enabled) ? g.Z.getActiveCommandSection(eD.id) : null
+                    activeCommand: (null === (e = eb.commands) || void 0 === e ? void 0 : e.enabled) ? S.Z.getActiveCommand(eL.id) : null,
+                    activeCommandSection: (null === (t = eb.commands) || void 0 === t ? void 0 : t.enabled) ? S.Z.getActiveCommandSection(eL.id) : null
                 };
             }),
             {
@@ -94,7 +94,7 @@ t.Z = i.memo(
                 canEveryoneSendMessages: tc
             } = (function (e, t, n, r) {
                 let i = e.getGuildId(),
-                    a = (0, E.e7)([L.Z], () => null != i && L.Z.isLurking(i), [i]),
+                    a = (0, E.e7)([D.Z], () => null != i && D.Z.isLurking(i), [i]),
                     s = (0, E.e7)([G.ZP, H.default], () => {
                         var e, t;
                         let n = H.default.getCurrentUser();
@@ -125,18 +125,18 @@ t.Z = i.memo(
                     isPendingMember: s,
                     ...o
                 };
-            })(eD, eb, tr, eC),
+            })(eL, eb, tr, eC),
             td = eb.toolbarType === K.O.STATIC,
             t_ = !x.dN.useSetting() && !(0, j.isAndroidWeb)() && null != window.ResizeObserver,
-            tE = !t_ || !(null === (a = eb.commands) || void 0 === a ? void 0 : a.enabled) || !eM || eg !== ei.GI,
-            tf = (0, D.Z)(),
+            tE = !t_ || !(null === (a = eb.commands) || void 0 === a ? void 0 : a.enabled) || !eM || eS !== ei.GI,
+            tf = (0, L.Z)(),
             { isSubmitButtonEnabled: th, fontSize: tp } = (0, E.cj)([I.Z], () => ({
                 fontSize: I.Z.fontSize,
                 isSubmitButtonEnabled: I.Z.isSubmitButtonEnabled
             })),
             tI = (0, E.e7)([F.Z], () => F.Z.isEnabled()),
-            tm = i.useRef(eg);
-        tm.current = eg;
+            tm = i.useRef(eS);
+        tm.current = eS;
         let tT = i.useCallback(
             (e, t, n) => {
                 var r;
@@ -169,7 +169,7 @@ t.Z = i.memo(
                     handler: a
                 });
         })(eb, to);
-        let { eventEmitter: tg, handleEditorSelectionChanged: tS } = (function (e, t, n) {
+        let { eventEmitter: tS, handleEditorSelectionChanged: tg } = (function (e, t, n) {
                 let [r] = i.useState(() => new o.EventEmitter());
                 return (
                     i.useEffect(() => {
@@ -182,7 +182,7 @@ t.Z = i.memo(
                         }
                     }
                 );
-            })(e8, eg, eS),
+            })(e8, eS, eg),
             {
                 submitting: tA,
                 submit: tN,
@@ -195,16 +195,16 @@ t.Z = i.memo(
                             if (o) return;
                             l(!0);
                             let T = null !== (I = null === (p = M.Z.getStickerPreview(s, t.drafts.type)) || void 0 === p ? void 0 : p.map((e) => e.id)) && void 0 !== I ? I : [],
-                                g = null !== (m = V.Z.getUploads(s, t.drafts.type)) && void 0 !== m ? m : [];
-                            if (null == c && !_ && !E && (0, y.CB)(g, s)) {
+                                S = null !== (m = V.Z.getUploads(s, t.drafts.type)) && void 0 !== m ? m : [];
+                            if (null == c && !_ && !E && (0, y.CB)(S, s)) {
                                 l(!1),
                                     (0, f.openModalLazy)(async () => {
-                                        let { default: e } = await Promise.all([n.e('23755'), n.e('90508'), n.e('22173'), n.e('53289')]).then(n.bind(n, 273602));
+                                        let { default: e } = await Promise.all([n.e('23755'), n.e('90508'), n.e('18895'), n.e('53289')]).then(n.bind(n, 273602));
                                         return (t) =>
                                             (0, r.jsx)(e, {
                                                 ...t,
                                                 threadId: s,
-                                                attachments: g,
+                                                attachments: S,
                                                 sendMessage: () => u(i, void 0, void 0, void 0, !0)
                                             });
                                     });
@@ -212,7 +212,7 @@ t.Z = i.memo(
                             }
                             e({
                                 value: i,
-                                uploads: g,
+                                uploads: S,
                                 stickers: T,
                                 command: c,
                                 commandOptionValues: d,
@@ -239,7 +239,7 @@ t.Z = i.memo(
                         null == a || null === (t = a.current) || void 0 === t || t.submit(e);
                     }, [])
                 };
-            })(eV, eb, e8, eD.id),
+            })(eV, eb, e8, eL.id),
             {
                 autocompleteRef: tR,
                 handleMaybeShowAutocomplete: tv,
@@ -271,7 +271,7 @@ t.Z = i.memo(
                 },
                 [eI, eh, ep]
             ));
-        let tL =
+        let tD =
                 ((em = e8),
                 i.useCallback(
                     function (e, t) {
@@ -281,7 +281,7 @@ t.Z = i.memo(
                     },
                     [em]
                 )),
-            tD = (function (e) {
+            tL = (function (e) {
                 let { editorRef: t, disabled: n, textValue: r, channelId: a, chatInputType: s, submit: o } = e,
                     { analyticsLocations: l } = (0, T.ZP)();
                 return i.useCallback(
@@ -310,8 +310,8 @@ t.Z = i.memo(
             })({
                 editorRef: e8,
                 disabled: to,
-                textValue: eg,
-                channelId: eD.id,
+                textValue: eS,
+                channelId: eL.id,
                 chatInputType: eb,
                 submit: eV
             });
@@ -395,26 +395,26 @@ t.Z = i.memo(
                     handleAutocompleteVisibilityChange: s,
                     handleOuterClick: o
                 };
-            })(eb, tg, e8);
-        (0, W.S)(tg, eD.guild_id, eD.id);
+            })(eb, tS, e8);
+        (0, W.S)(tS, eL.guild_id, eL.id);
         let tH = null != ew,
             tZ = (to && !((ta || ts) && tc)) || (tA && (null === (eo = eb.submit) || void 0 === eo ? void 0 : eo.useDisabledStylesOnSubmit)),
             tY = null;
         null != tr ? (tY = null == eU ? void 0 : eU(tr, ti, es.attachButton)) : (!to || tu) && (tY = null == eP ? void 0 : eP(tH, es.attachButton));
-        let tj = t_ && null != eS && !to && eb.showCharacterCount && null == tr,
-            tW = t_ && !__OVERLAY__ && null != eS && null == tr && eb.toolbarType !== K.O.NONE,
+        let tj = t_ && null != eg && !to && eb.showCharacterCount && null == tr,
+            tW = t_ && !__OVERLAY__ && null != eg && null == tr && eb.toolbarType !== K.O.NONE,
             tK = (function (e, t, n, r) {
                 var i, a;
                 let s = x.up.useSetting(),
                     o = (0, E.e7)([M.Z], () => M.Z.getStickerPreview(e.id, t.drafts.type)),
                     l = null != o && o.length > 0;
                 return s && (null === (i = t.stickers) || void 0 === i ? void 0 : i.autoSuggest) && !l && (null === (a = r.current) || void 0 === a ? void 0 : a.isVisible()) !== !0 && !__OVERLAY__ && null != n;
-            })(eD, eb, eS, tR),
-            tz = (0, A.e)(eD),
+            })(eL, eb, eg, tR),
+            tz = (0, A.e)(eL),
             tq = null != tr || null != ew || tz,
             tQ = !!(null === (el = eb.emojis) || void 0 === el ? void 0 : el.button) && tP <= 44;
         return (0, r.jsx)(O.f6, {
-            value: tg,
+            value: tS,
             children: (0, r.jsxs)(T.Gt, {
                 value: e5,
                 children: [
@@ -422,7 +422,7 @@ t.Z = i.memo(
                         ? (0, r.jsx)(en.Z, {
                               editorRef: e8,
                               options: eb.markdown,
-                              channel: eD
+                              channel: eL
                           })
                         : tW
                           ? (0, r.jsx)(et.Z, {
@@ -444,7 +444,7 @@ t.Z = i.memo(
                         children: [
                             (0, r.jsx)(X.Z, {
                                 type: eb,
-                                channel: eD,
+                                channel: eL,
                                 activeCommand: tr,
                                 pendingReply: ew
                             }),
@@ -458,13 +458,13 @@ t.Z = i.memo(
                                 }),
                                 children: [
                                     (0, r.jsx)(q.Z, {
-                                        channelId: eD.id,
+                                        channelId: eL.id,
                                         chatInputType: eb
                                     }),
                                     eb.hideAttachmentArea
                                         ? null
                                         : (0, r.jsx)(J.Z, {
-                                              channelId: eD.id,
+                                              channelId: eL.id,
                                               type: eb,
                                               canAttachFiles: tl
                                           }),
@@ -486,14 +486,14 @@ t.Z = i.memo(
                                                     id: eR,
                                                     focused: eM,
                                                     useSlate: t_,
-                                                    textValue: eg,
-                                                    richValue: eS,
+                                                    textValue: eS,
+                                                    richValue: eg,
                                                     disabled: to,
                                                     placeholder: ey,
                                                     required: ev,
-                                                    accessibilityLabel: eL,
+                                                    accessibilityLabel: eD,
                                                     isPreviewing: (ta || ts) && tc,
-                                                    channel: eD,
+                                                    channel: eL,
                                                     type: eb,
                                                     canPasteFiles: tl,
                                                     uploadPromptCharacterCount: er.en1,
@@ -509,7 +509,7 @@ t.Z = i.memo(
                                                     onTab: tw,
                                                     onEnter: tx,
                                                     onMoveSelection: tG,
-                                                    onSelectionChanged: tS,
+                                                    onSelectionChanged: tg,
                                                     onMaybeShowAutocomplete: tv,
                                                     onHideAutocomplete: tC,
                                                     promptToUpload: eH,
@@ -529,9 +529,9 @@ t.Z = i.memo(
                                             (0, r.jsx)($.Z, {
                                                 type: eb,
                                                 disabled: to,
-                                                channel: eD,
+                                                channel: eL,
                                                 handleSubmit: tO,
-                                                isEmpty: 0 === eg.trim().length,
+                                                isEmpty: 0 === eS.trim().length,
                                                 showAllButtons: tt
                                             })
                                         ]
@@ -540,40 +540,40 @@ t.Z = i.memo(
                             }),
                             tE
                                 ? null
-                                : (0, r.jsx)(S.Z, {
+                                : (0, r.jsx)(g.Z, {
                                       ref: e7,
-                                      channel: eD,
+                                      channel: eL,
                                       canOnlyUseTextCommands: tH
                                   }),
                             (0, r.jsx)(N.Z, {
                                 ref: tR,
-                                channel: eD,
+                                channel: eL,
                                 canMentionRoles: eY,
                                 canMentionChannels: ej,
                                 useNewSlashCommands: t_,
                                 canOnlyUseTextCommands: tH,
                                 canSendStickers: null === (eu = eb.stickers) || void 0 === eu ? void 0 : eu.allowSending,
-                                textValue: eg,
+                                textValue: eS,
                                 focused: eM,
                                 expressionPickerView: tk,
                                 type: eb,
                                 targetRef: e6,
                                 editorRef: e8,
                                 onSendMessage: tN,
-                                onSendSticker: tD,
+                                onSendSticker: tL,
                                 onVisibilityChange: tF,
                                 editorHeight: tP,
                                 setValue: (e, t) => (null == tT ? void 0 : tT(null, e, t)),
                                 position: eJ
                             }),
                             (0, r.jsx)(b.Z, {
-                                textValue: eg,
+                                textValue: eS,
                                 editorHeight: tP
                             }),
                             tj
                                 ? (0, r.jsx)(ee.Z, {
                                       type: eb,
-                                      textValue: eg,
+                                      textValue: eS,
                                       className: s()(eq, { [es.indentCharacterCount]: tQ }),
                                       maxCharacterCount: eW,
                                       showRemainingCharsAfterCount: eK
@@ -582,9 +582,9 @@ t.Z = i.memo(
                             tK
                                 ? (0, r.jsx)(C.Z, {
                                       editorRef: e8,
-                                      channel: eD,
+                                      channel: eL,
                                       isEditorFocused: eM,
-                                      onSelectSticker: tD,
+                                      onSelectSticker: tL,
                                       submitButtonVisible: (null === (ec = eb.submit) || void 0 === ec ? void 0 : ec.button) && (null !== (eE = null === (ed = eb.submit) || void 0 === ed ? void 0 : ed.ignorePreference) && void 0 !== eE ? eE : th),
                                       stickerIconVisible: null !== (ef = null === (e_ = eb.stickers) || void 0 === e_ ? void 0 : e_.button) && void 0 !== ef && ef
                                   })
@@ -598,10 +598,10 @@ t.Z = i.memo(
                               positionTargetRef: e6,
                               type: eb,
                               onSelectGIF: ty,
-                              onSelectEmoji: tL,
-                              onSelectSticker: tD,
+                              onSelectEmoji: tD,
+                              onSelectSticker: tL,
                               onSelectSound: tb,
-                              channel: eD,
+                              channel: eL,
                               closeOnModalOuterClick: e2,
                               parentModalKey: e3,
                               position: 'top',

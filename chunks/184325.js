@@ -21,44 +21,44 @@ var r = n(735250),
     I = n(290421),
     m = n(797321),
     T = n(228168),
-    g = n(981631),
-    S = n(474936),
+    S = n(981631),
+    g = n(474936),
     A = n(689938),
     N = n(36548);
 let O = (e) => {
     if (null != e)
         switch (e) {
-            case S.VU.PREMIUM_TENURE_1_MONTH:
+            case g.VU.PREMIUM_TENURE_1_MONTH:
                 return N.tieredTenureBadgeBronzeGlow;
-            case S.VU.PREMIUM_TENURE_3_MONTH:
+            case g.VU.PREMIUM_TENURE_3_MONTH:
                 return N.tieredTenureBadgeSilverGlow;
-            case S.VU.PREMIUM_TENURE_6_MONTH:
+            case g.VU.PREMIUM_TENURE_6_MONTH:
                 return N.tieredTenureBadgeGoldGlow;
-            case S.VU.PREMIUM_TENURE_12_MONTH:
+            case g.VU.PREMIUM_TENURE_12_MONTH:
                 return N.tieredTenureBadgePlatinumGlow;
-            case S.VU.PREMIUM_TENURE_24_MONTH:
+            case g.VU.PREMIUM_TENURE_24_MONTH:
                 return N.tieredTenureBadgeDiamondGlow;
-            case S.VU.PREMIUM_TENURE_36_MONTH:
+            case g.VU.PREMIUM_TENURE_36_MONTH:
                 return N.tieredTenureBadgeEmeraldGlow;
-            case S.VU.PREMIUM_TENURE_60_MONTH:
+            case g.VU.PREMIUM_TENURE_60_MONTH:
                 return N.tieredTenureBadgeRubyGlow;
-            case S.VU.PREMIUM_TENURE_72_MONTH:
+            case g.VU.PREMIUM_TENURE_72_MONTH:
                 return N.tieredTenureBadgeFireGlow;
             default:
                 return;
         }
 };
 function R(e) {
-    let { badges: t, className: n, badgeClassName: a, onClose: S } = e,
+    let { badges: t, className: n, badgeClassName: a, onClose: g } = e,
         { analyticsLocations: R } = (0, c.ZP)(u.Z.BADGE),
         { context: v, trackUserProfileAction: C } = (0, h.KZ)(),
-        [y, L] = i.useState(!1);
+        [y, D] = i.useState(!1);
     return (0, r.jsx)('div', {
         className: s()(N.container, n),
         'aria-label': A.Z.Messages.PROFILE_USER_BADGES,
         role: 'group',
         children: t.map((e) => {
-            let t = (0, f.g)(e.id),
+            let t = (0, f.gn)(e.id),
                 n = O(t),
                 i = null != t && y;
             return (0, r.jsx)(
@@ -67,8 +67,8 @@ function R(e) {
                     text: e.description,
                     delay: T.vB,
                     tooltipClassName: n,
-                    onTooltipShow: () => L(null != t),
-                    onTooltipHide: () => L(!1),
+                    onTooltipShow: () => D(null != t),
+                    onTooltipHide: () => D(!1),
                     children: (0, r.jsxs)(o.Anchor, {
                         onClick: (t) => {
                             C({ action: 'PRESS_BADGE' }),
@@ -78,10 +78,10 @@ function R(e) {
                                     ...v
                                 });
                             let n = null != e.link ? (0, l.default)(e.link, { analyticsLocations: R }) : null;
-                            if (null != n) return null == S || S(), n(t);
+                            if (null != n) return null == g || g(), n(t);
                         },
                         onMouseEnter: () => {
-                            e.id === I.i && E.default.track(g.rMx.QUEST_CONTENT_VIEWED, { ...(0, d.mH)(_.jn.QUEST_BADGE) }),
+                            e.id === I.i && E.default.track(S.rMx.QUEST_CONTENT_VIEWED, { ...(0, d.mH)(_.jn.QUEST_BADGE) }),
                                 C({ action: 'HOVER_BADGE' }),
                                 (0, p.Qf)({
                                     badge: e.id,

@@ -21,20 +21,20 @@ var r = n(735250),
     I = n(261253),
     m = n(7242),
     T = n(934861),
-    g = n(981631),
-    S = n(689938),
+    S = n(981631),
+    g = n(689938),
     A = n(757983);
 let N = (0, _.kt)({
     id: '1',
-    type: g.d4z.DM
+    type: S.d4z.DM
 });
 function O(e) {
     let { user: t, guildId: n, channelId: a, onClose: _ } = e,
-        { newestAnalyticsLocation: g } = (0, l.ZP)(),
+        { newestAnalyticsLocation: S } = (0, l.ZP)(),
         { trackUserProfileAction: O } = (0, f.KZ)(),
         { messageCtaEnabled: R, activeInviteToCallCtaEnabled: v, persistentCallCtaEnabled: C } = (0, h.l)({ location: 'UserProfilePopoutDirectMessageSection' }),
-        [y, L] = i.useState(''),
-        [D, b] = i.useState((0, c.JM)(y)),
+        [y, D] = i.useState(''),
+        [L, b] = i.useState((0, c.JM)(y)),
         M = i.useRef(!1);
     if (R) {
         let e = (0, r.jsx)(m.Z, {
@@ -86,12 +86,12 @@ function O(e) {
         innerClassName: A.inner,
         editorClassName: A.editor,
         type: u.I.USER_PROFILE,
-        placeholder: S.Z.Messages.QUICK_DM_USER.format({ name: E.ZP.getName(n, a, t) }),
+        placeholder: g.Z.Messages.QUICK_DM_USER.format({ name: E.ZP.getName(n, a, t) }),
         channel: N,
         textValue: y,
-        richValue: D,
+        richValue: L,
         onChange: (e, t, n) => {
-            if (t !== y) L(t), b(n);
+            if (t !== y) D(t), b(n);
         },
         focused: M.current,
         onFocus: () => {
@@ -108,7 +108,7 @@ function O(e) {
                     await (0, p.Z)({
                         userId: t.id,
                         content: n.trim(),
-                        location: g
+                        location: S
                     }),
                     null == _ || _(),
                     {

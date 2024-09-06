@@ -71,7 +71,7 @@ let u = (e) => {
 function E(e) {
     let { achievement: t, unlocked: n } = e,
         { name: r, description: E, rarity: T, hideDescriptionUntilUnlock: I, onAction: R } = t,
-        { color: C } = (0, o.F7)(T);
+        { color: g } = (0, o.F7)(T);
     a.useEffect(() => {
         let e = setTimeout(() => {
             c.Z.playAchievementUnlockSound();
@@ -80,12 +80,12 @@ function E(e) {
             clearTimeout(e);
         };
     }, []);
-    let g = null != R && n,
-        N = g ? l.Clickable : 'div';
+    let C = null != R && n,
+        N = C ? l.Clickable : 'div';
     return (0, s.jsxs)(N, {
-        className: i()(_.container, g && _.actionable),
+        className: i()(_.container, C && _.actionable),
         onClick: () => {
-            g && R();
+            C && R();
         },
         children: [
             (0, s.jsx)('div', {
@@ -113,7 +113,7 @@ function E(e) {
             }),
             (0, s.jsx)('div', {
                 className: _.flair,
-                children: (0, s.jsx)(u, { color: C })
+                children: (0, s.jsx)(u, { color: g })
             })
         ]
     });

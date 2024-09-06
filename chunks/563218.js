@@ -4,8 +4,8 @@ n.d(t, {
     }
 });
 var i = n(735250),
-    a = n(470079),
-    s = n(442837),
+    s = n(470079),
+    a = n(442837),
     l = n(570140),
     r = n(519938),
     o = n(928518),
@@ -13,8 +13,8 @@ var i = n(735250),
     u = n(317381),
     d = n(917107),
     h = n(716600),
-    p = n(918559),
-    m = n(981631);
+    m = n(918559),
+    p = n(981631);
 let _ = (e, t) => {
     l.Z.wait(() => {
         (0, r.Cz)(e, t);
@@ -23,16 +23,16 @@ let _ = (e, t) => {
 function f(e) {
     let t,
         { embedId: n, className: l, style: r } = e,
-        f = (0, s.e7)([o.Z], () => o.Z.getWindow(m.KJ3.CHANNEL_CALL_POPOUT)),
+        f = (0, a.e7)([o.Z], () => o.Z.getWindow(p.KJ3.CHANNEL_CALL_POPOUT)),
         E = (0, h.Z)(),
-        C = (0, s.e7)([u.ZP], () => u.ZP.getActivityPanelMode());
-    if (null != E && !(0, d.Z)(E.channelId) && C === p.Ez.PANEL) t = window;
+        g = (0, a.e7)([u.ZP], () => u.ZP.getActivityPanelMode());
+    if (null != E && !(0, d.Z)(E.channelId) && g === m.Ez.PANEL) t = window;
     else {
-        var g;
-        t = null !== (g = null == f ? void 0 : f.window) && void 0 !== g ? g : window;
+        var C;
+        t = null !== (C = null == f ? void 0 : f.window) && void 0 !== C ? C : window;
     }
-    let I = a.useRef(null),
-        x = a.useMemo(() => {
+    let I = s.useRef(null),
+        x = s.useMemo(() => {
             let e = null;
             return () => {
                 null == e &&
@@ -43,17 +43,17 @@ function f(e) {
             };
         }, [n, t]);
     return (
-        a.useEffect(
+        s.useEffect(
             () => (
                 t.addEventListener('resize', x),
-                c.S.subscribe(m.CkL.REMEASURE_TARGET, x),
+                c.S.subscribe(p.CkL.REMEASURE_TARGET, x),
                 () => {
-                    t.removeEventListener('resize', x), c.S.unsubscribe(m.CkL.REMEASURE_TARGET, x);
+                    t.removeEventListener('resize', x), c.S.unsubscribe(p.CkL.REMEASURE_TARGET, x);
                 }
             ),
             [x, t]
         ),
-        a.useLayoutEffect(() => {
+        s.useLayoutEffect(() => {
             let e = I.current;
             if (null == e) return;
             let t = e.ownerDocument.defaultView;

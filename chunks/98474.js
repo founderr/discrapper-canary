@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return T;
     }
 }),
     n(47120);
@@ -11,21 +11,21 @@ var i = n(735250),
     l = n(748780),
     r = n(481060),
     c = n(596454),
-    u = n(745510),
-    d = n(314910),
+    d = n(745510),
+    u = n(314910),
     h = n(912893),
     m = n(768581),
     p = n(176354),
-    g = n(675654),
-    f = n(988573);
-let T = [];
-function _(e) {
-    let { messageId: t, emoji: n, startPosition: _, targetPosition: v } = e,
-        [b, E] = s.useState(0),
-        [I, x] = s.useState(0),
-        [C, S] = s.useState(null),
-        { confettiCanvas: R } = s.useContext(u.h),
-        N = (0, o.uR)(R, C),
+    f = n(675654),
+    g = n(988573);
+let _ = [];
+function T(e) {
+    let { messageId: t, emoji: n, startPosition: T, targetPosition: v } = e,
+        [E, b] = s.useState(0),
+        [I, C] = s.useState(0),
+        [S, R] = s.useState(null),
+        { confettiCanvas: x } = s.useContext(d.h),
+        N = (0, o.uR)(x, S),
         O = s.useMemo(
             () => [
                 {
@@ -43,22 +43,22 @@ function _(e) {
             [n.name, n.id]
         ),
         Z = v.x - (v.width / 2) * 0.5,
-        j = v.y - (v.height / 2) * 0.5,
-        M = (0, r.useSpring)({
-            from: { y: _.y },
-            to: { y: j },
+        A = v.y - (v.height / 2) * 0.5,
+        j = (0, r.useSpring)({
+            from: { y: T.y },
+            to: { y: A },
             config: {
                 duration: 450,
                 easing: l.Z.Easing.in(l.Z.Easing.exp)
             },
             onChange: (e) => {
                 let { y: t } = e;
-                x(t);
+                C(t);
             }
         }),
-        A = (0, r.useSpring)({
+        M = (0, r.useSpring)({
             from: {
-                x: _.x,
+                x: T.x,
                 scale: 1,
                 opacity: 1
             },
@@ -76,44 +76,44 @@ function _(e) {
             },
             onChange: (e) => {
                 let { x: t } = e;
-                E(t);
+                b(t);
             }
         });
     return (
         s.useEffect(() => {
-            b > 0 &&
+            E > 0 &&
                 I > 0 &&
                 N.createConfetti({
-                    ...g.We,
+                    ...f.We,
                     position: {
                         type: 'static',
                         value: {
-                            x: b,
+                            x: E,
                             y: I
                         }
                     }
                 });
-        }, [N, b, I]),
+        }, [N, E, I]),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(o.Ji, {
-                    ref: S,
+                    ref: R,
                     sprites: O,
-                    colors: T,
-                    spriteWidth: g.Ko,
-                    spriteHeight: g.Ko
+                    colors: _,
+                    spriteWidth: f.Ko,
+                    spriteHeight: f.Ko
                 }),
-                (0, i.jsx)(d.ZP, {
+                (0, i.jsx)(u.ZP, {
                     children: (0, i.jsx)(a.animated.div, {
-                        style: { ...M },
-                        className: f.emojiContainer,
+                        style: { ...j },
+                        className: g.emojiContainer,
                         children: (0, i.jsx)(a.animated.div, {
                             style: {
-                                ...A,
-                                opacity: A.opacity
+                                ...M,
+                                opacity: M.opacity
                             },
                             children: (0, i.jsx)(c.Z, {
-                                className: f.emoji,
+                                className: g.emoji,
                                 emojiId: n.id,
                                 emojiName: n.name,
                                 animated: n.animated,

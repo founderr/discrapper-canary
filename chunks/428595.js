@@ -16,8 +16,8 @@ var r = n(392711),
     I = n(723454),
     m = n(772096),
     T = n(800927),
-    g = n(945884),
-    S = n(594199),
+    S = n(945884),
+    g = n(594199),
     A = n(97734),
     N = n(303694),
     O = n(660199),
@@ -25,8 +25,8 @@ var r = n(392711),
     v = n(981631),
     C = n(689079),
     y = n(377668),
-    L = n(689938);
-let D = /^( *>>> +([\s\S]*))|^( *>(?!>>) +[^\n]*(\n *>(?!>>) +[^\n]*)*\n?)/,
+    D = n(689938);
+let L = /^( *>>> +([\s\S]*))|^( *>(?!>>) +[^\n]*(\n *>(?!>>) +[^\n]*)*\n?)/,
     b = /^$|\n *$/,
     M = /^ *>>> ?/,
     P = /^ *> ?/gm;
@@ -68,9 +68,9 @@ let w = (e) => {
             match(e, t) {
                 let { prevCapture: n, inQuote: r, nested: i } = t;
                 if (r || i) return null;
-                if (null == n) return D.exec(e);
+                if (null == n) return L.exec(e);
                 let a = n[0];
-                return b.test(a) ? D.exec(e) : null;
+                return b.test(a) ? L.exec(e) : null;
             },
             parse(e, t, n) {
                 let r = e[0],
@@ -128,7 +128,7 @@ let w = (e) => {
         em: s().defaultRules.em,
         u: s().defaultRules.u,
         br: s().defaultRules.br,
-        text: S.ZP,
+        text: g.ZP,
         inlineCode: {
             ...s().defaultRules.inlineCode,
             parse(e, t, n) {
@@ -142,7 +142,7 @@ let w = (e) => {
             }
         },
         emoticon: {
-            order: S.ZP.order,
+            order: g.ZP.order,
             requiredFirstCharacters: ['\xAF'],
             match: (e) => /^(¯\\_\(ツ\)_\/¯)/.exec(e),
             parse: (e) => ({
@@ -164,7 +164,7 @@ let w = (e) => {
             }
         },
         roleMention: {
-            order: S.ZP.order,
+            order: g.ZP.order,
             requiredFirstCharacters: ['<'],
             match: (e) => /^<@&(\d+)>/.exec(e),
             parse(e, t, n) {
@@ -179,7 +179,7 @@ let w = (e) => {
                 return null == s
                     ? {
                           type: 'text',
-                          content: '@'.concat(L.Z.Messages.UNKNOWN_ROLE_PLACEHOLDER)
+                          content: '@'.concat(D.Z.Messages.UNKNOWN_ROLE_PLACEHOLDER)
                       }
                     : {
                           type: 'mention',
@@ -200,7 +200,7 @@ let w = (e) => {
             }
         },
         mention: {
-            order: S.ZP.order,
+            order: g.ZP.order,
             requiredFirstCharacters: ['<', '@'],
             match(e, t) {
                 let n = /^<@!?(\d+)>|^(@(?:everyone|here|Clyde))/.exec(e);
@@ -227,7 +227,7 @@ let w = (e) => {
                 null == a && '@Clyde' === e[0] && (0, o.gJ)(x(n), s) && (i = y.fL);
                 let u = e[1],
                     d = null != u && v.Xyh.test(u.trim()),
-                    h = d && n.unknownUserMentionPlaceholder ? '@'.concat(L.Z.Messages.UNKNOWN_USER_MENTION_PLACEHOLDER) : e[0];
+                    h = d && n.unknownUserMentionPlaceholder ? '@'.concat(D.Z.Messages.UNKNOWN_USER_MENTION_PLACEHOLDER) : e[0];
                 return {
                     userId: i,
                     channelId: n.channelId,
@@ -275,7 +275,7 @@ let w = (e) => {
             }
         },
         emoji: {
-            order: S.ZP.order,
+            order: g.ZP.order,
             requiredFirstCharacters: [':'],
             match(e) {
                 let t = l.ZP.EMOJI_NAME_RE.exec(e);
@@ -290,7 +290,7 @@ let w = (e) => {
             }
         },
         soundboard: {
-            order: S.ZP.order,
+            order: g.ZP.order,
             requiredFirstCharacters: ['<'],
             match: (e) => /^<sound:(\d+)>/.exec(e),
             parse(e, t, n) {
@@ -308,7 +308,7 @@ let w = (e) => {
             }
         },
         customEmoji: {
-            order: S.ZP.order,
+            order: g.ZP.order,
             requiredFirstCharacters: ['<'],
             match: (e) => /^<a?:(\w+):(\d+)>/.exec(e),
             parse: (e) => ({
@@ -317,7 +317,7 @@ let w = (e) => {
             })
         },
         timestamp: {
-            order: S.ZP.order - 1,
+            order: g.ZP.order - 1,
             requiredFirstCharacters: ['<'],
             match: (e) => O.Ay.exec(e),
             parse(e) {
@@ -338,7 +338,7 @@ let w = (e) => {
             parse: s().defaultRules.u.parse
         },
         spoiler: {
-            order: S.ZP.order,
+            order: g.ZP.order,
             requiredFirstCharacters: ['|'],
             match: (e) => v.$92.exec(e),
             parse: (e, t, n) => ({
@@ -347,7 +347,7 @@ let w = (e) => {
             })
         },
         staticRouteLink: {
-            order: S.ZP.order,
+            order: g.ZP.order,
             requiredFirstCharacters: ['<'],
             match: (e) => v.PEY.exec(e),
             parse(e, t, n) {
@@ -378,7 +378,7 @@ let w = (e) => {
         },
         heading: I.Z,
         list: T.Z,
-        subtext: g.Z
+        subtext: S.Z
     },
     k = (0, R.Z)([G, A.Z]),
     B = i().omit(k, ['inlineCode', 'codeBlock', 'br', 'blockQuote', 'subtext']),

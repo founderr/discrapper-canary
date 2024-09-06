@@ -40,8 +40,8 @@ var i = n(735250),
     y = n(959517),
     B = n(981631),
     k = n(674563),
-    G = n(590433),
-    F = n(689938),
+    F = n(590433),
+    G = n(689938),
     w = n(735612);
 function V(e, t) {
     let { popouts: n, selected: i, setPopout: s } = (0, D.Z)(e.id, y.d$),
@@ -138,17 +138,17 @@ function z(e) {
             try {
                 switch (parseInt(e.actionType)) {
                     case T.d.DELETE_USER_MESSAGE:
-                        return F.Z.Messages.GUILD_AUTOMOD_ALERT_ACTION_ICON_TOOLTIP_DELETE_MESSAGE.format({
+                        return G.Z.Messages.GUILD_AUTOMOD_ALERT_ACTION_ICON_TOOLTIP_DELETE_MESSAGE.format({
                             userName: a,
                             timestamp: s.fromNow()
                         });
                     case T.d.SET_COMPLETED:
-                        return F.Z.Messages.GUILD_AUTOMOD_ALERT_ACTION_ICON_TOOLTIP_SET_COMPLETED.format({
+                        return G.Z.Messages.GUILD_AUTOMOD_ALERT_ACTION_ICON_TOOLTIP_SET_COMPLETED.format({
                             userName: a,
                             timestamp: s.fromNow()
                         });
                     case T.d.SUBMIT_FEEDBACK:
-                        return F.Z.Messages.GUILD_AUTOMOD_ALERT_ACTION_ICON_TOOLTIP_SUBMIT_FEEDBACK.format({
+                        return G.Z.Messages.GUILD_AUTOMOD_ALERT_ACTION_ICON_TOOLTIP_SUBMIT_FEEDBACK.format({
                             userName: a,
                             timestamp: s.fromNow()
                         });
@@ -279,7 +279,7 @@ function X(e) {
         eE = a.useCallback(() => {
             (0, f.Xx)(l.id, o, T.d.DELETE_USER_MESSAGE);
         }, [o, l.id]),
-        eI = (0, G.L9)(Number(en)),
+        eI = (0, F.L9)(Number(en)),
         em = null != ei,
         eT = H && null != et && (null == ea || !ea.actions.hasOwnProperty(T.d.DELETE_USER_MESSAGE)),
         eh = l.embeds.length > 0 ? (null === (t = l.embeds[0].fields.find((e) => 'channel_id' === e.rawName)) || void 0 === t ? void 0 : t.rawValue) : null,
@@ -307,7 +307,7 @@ function X(e) {
                                     color: 'text-brand',
                                     tag: 'span',
                                     className: w.username,
-                                    children: F.Z.Messages.GUILD_AUTOMOD_USERNAME
+                                    children: G.Z.Messages.GUILD_AUTOMOD_USERNAME
                                 }),
                                 (0, i.jsx)(m.Z, {
                                     type: k.Hb.SYSTEM_DM,
@@ -352,7 +352,7 @@ function X(e) {
                                                             variant: 'text-xs/medium',
                                                             color: 'text-muted',
                                                             tag: 'span',
-                                                            children: F.Z.Messages.GUILD_AUTOMOD_POST_TO_CHANNEL_KEYWORD.format({ keyword: $ })
+                                                            children: G.Z.Messages.GUILD_AUTOMOD_POST_TO_CHANNEL_KEYWORD.format({ keyword: $ })
                                                         }),
                                                         (0, i.jsx)('div', { className: r()(w.dot, w.dotMargin) })
                                                     ]
@@ -362,7 +362,7 @@ function X(e) {
                                                     variant: 'text-xs/medium',
                                                     color: 'text-muted',
                                                     tag: 'span',
-                                                    children: F.Z.Messages.GUILD_AUTOMOD_POST_TO_CHANNEL_RULE_NAME.format({ ruleName: K })
+                                                    children: G.Z.Messages.GUILD_AUTOMOD_POST_TO_CHANNEL_RULE_NAME.format({ ruleName: K })
                                                 }),
                                             null != eI &&
                                                 (0, i.jsxs)(i.Fragment, {
@@ -373,7 +373,7 @@ function X(e) {
                                                             color: 'text-muted',
                                                             tag: 'span',
                                                             className: w.__invalid_footerText,
-                                                            children: F.Z.Messages.GUILD_AUTOMOD_POST_TO_CHANNEL_TIMEOUT_DURATION.format({ duration: eI })
+                                                            children: G.Z.Messages.GUILD_AUTOMOD_POST_TO_CHANNEL_TIMEOUT_DURATION.format({ duration: eI })
                                                         })
                                                     ]
                                                 }),
@@ -386,7 +386,7 @@ function X(e) {
                                                             color: 'text-muted',
                                                             tag: 'span',
                                                             className: w.titleCase,
-                                                            children: F.Z.Messages.GUILD_AUTOMOD_POST_TO_CHANNEL_REASON.format({ reason: (0, h.hU)(es) })
+                                                            children: G.Z.Messages.GUILD_AUTOMOD_POST_TO_CHANNEL_REASON.format({ reason: (0, h.hU)(es) })
                                                         })
                                                     ]
                                                 })
@@ -436,7 +436,7 @@ function X(e) {
                                             (0, i.jsx)(_.Text, {
                                                 variant: 'text-xs/normal',
                                                 color: 'text-link',
-                                                children: F.Z.Messages.ACTIONS
+                                                children: G.Z.Messages.ACTIONS
                                             })
                                         ]
                                     })
@@ -456,7 +456,7 @@ function X(e) {
                                                       children: (0, i.jsx)(_.Text, {
                                                           variant: 'text-xs/normal',
                                                           color: 'text-link',
-                                                          children: F.Z.Messages.GUILD_AUTOMOD_JUMP_TO_SURROUNDING
+                                                          children: G.Z.Messages.GUILD_AUTOMOD_JUMP_TO_SURROUNDING
                                                       })
                                                   })
                                               })
@@ -475,7 +475,7 @@ function X(e) {
                                         children: (0, i.jsx)(_.Text, {
                                             variant: 'text-xs/normal',
                                             color: 'text-link',
-                                            children: F.Z.Messages.GUILD_AUTOMOD_REPORT_ISSUES
+                                            children: G.Z.Messages.GUILD_AUTOMOD_REPORT_ISSUES
                                         })
                                     })
                                 }),
@@ -494,7 +494,7 @@ function X(e) {
                                                       children: (0, i.jsx)(_.Text, {
                                                           variant: 'text-xs/normal',
                                                           color: 'text-link',
-                                                          children: F.Z.Messages.GUILD_AUTOMOD_ALERT_DELETE_MEMBERS_MESSAGE
+                                                          children: G.Z.Messages.GUILD_AUTOMOD_ALERT_DELETE_MEMBERS_MESSAGE
                                                       })
                                                   })
                                               })

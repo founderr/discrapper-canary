@@ -23,8 +23,8 @@ var r = n(735250),
     I = n(594174),
     m = n(5192),
     T = n(358085),
-    g = n(521147),
-    S = n(981631),
+    S = n(521147),
+    g = n(981631),
     A = n(65154),
     N = n(689938);
 function O(e, t, n) {
@@ -46,19 +46,19 @@ function O(e, t, n) {
 }
 function R(e) {
     var t, n, c;
-    let { channel: h, currentUser: I, activeStreams: m, hideSelfOptions: R = !1, showReportOption: v = !1, handleGoLive: C, onClose: y, onSelect: L, appContext: D = S.IlC.APP } = e,
+    let { channel: h, currentUser: I, activeStreams: m, hideSelfOptions: R = !1, showReportOption: v = !1, handleGoLive: C, onClose: y, onSelect: D, appContext: L = g.IlC.APP } = e,
         b = (0, a.e7)([p.Z], () => p.Z.getGoLiveSource()),
         M = (0, a.e7)([f.Z], () => f.Z.getState().soundshareEnabled),
         P = p.Z.supports(A.AN.DESKTOP_CAPTURE_APPLICATIONS),
         U = null !== (c = m.find((e) => e.ownerId === (null == I ? void 0 : I.id))) && void 0 !== c ? c : null,
         w = O(h, I, m),
-        x = (0, _.Z)(U, D),
-        G = (0, d.Z)(U, D, S.VqG),
+        x = (0, _.Z)(U, L),
+        G = (0, d.Z)(U, L, g.VqG),
         k = (0, a.e7)([p.Z], () => p.Z.supports(A.AN.SOUNDSHARE)),
         B = (0, a.e7)([p.Z], () => p.Z.supportsScreenSoundshare()),
         F = (null == b ? void 0 : b.desktopSource) != null,
         V = null == b ? void 0 : null === (n = b.desktopSource) || void 0 === n ? void 0 : null === (t = n.id) || void 0 === t ? void 0 : t.startsWith('screen'),
-        H = g.Z.useExperiment(
+        H = S.Z.useExperiment(
             { location: 'ManageStreamsMenu' },
             {
                 disable: !(F && k && (!V || B)),
@@ -141,9 +141,9 @@ function R(e) {
                       ]
                   });
     return (0, r.jsx)(u.Z, {
-        section: S.jXE.CONTEXT_MENU,
+        section: g.jXE.CONTEXT_MENU,
         children: (0, r.jsxs)(s.Menu, {
-            onSelect: L,
+            onSelect: D,
             navId: 'manage-streams',
             onClose: y,
             'aria-label': null != U ? N.Z.Messages.STOP_STREAMING : N.Z.Messages.SHARE_YOUR_SCREEN,

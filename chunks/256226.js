@@ -16,10 +16,10 @@ var r = n(735250),
     m = n(689938),
     T = n(195703);
 t.Z = i.forwardRef(function (e, t) {
-    var a, g, S;
+    var a, S, g;
     let A;
-    let { canRemove: N, className: O, role: R, onRemove: v, guildId: C, disableBorderColor: y, onMouseDown: L } = e,
-        { tabIndex: D, ...b } = (0, o.JA)(R.id),
+    let { canRemove: N, className: O, role: R, onRemove: v, guildId: C, disableBorderColor: y, onMouseDown: D } = e,
+        { tabIndex: L, ...b } = (0, o.JA)(R.id),
         M = (0, I.p9)({
             roleId: R.id,
             size: 16,
@@ -42,8 +42,8 @@ t.Z = i.forwardRef(function (e, t) {
             [R.id]
         ),
         x = (0, d.useToken)(c.Z.unsafe_rawColors.PRIMARY_300).hsl(),
-        G = null !== (g = R.colorString) && void 0 !== g ? g : x,
-        k = null !== (S = (0, l.wK)(G, 0.6)) && void 0 !== S ? S : void 0,
+        G = null !== (S = R.colorString) && void 0 !== S ? S : x,
+        k = null !== (g = (0, l.wK)(G, 0.6)) && void 0 !== g ? g : void 0,
         B = c.Z.unsafe_rawColors.WHITE_500.css,
         F = (0, l._i)(G);
     null != F && 0.3 > (0, l.Bd)(F) && (B = c.Z.unsafe_rawColors.PRIMARY_630.css),
@@ -78,9 +78,9 @@ t.Z = i.forwardRef(function (e, t) {
             className: s()(T.role, O),
             style: V,
             onContextMenu: w,
-            onMouseDown: L,
+            onMouseDown: D,
             'aria-label': R.name,
-            tabIndex: D,
+            tabIndex: L,
             ...b,
             children: [
                 N
@@ -89,7 +89,7 @@ t.Z = i.forwardRef(function (e, t) {
                           children: (0, r.jsxs)(d.Clickable, {
                               className: s()(T.roleRemoveButtonCanRemove, T.roleRemoveButton),
                               onClick: v,
-                              tabIndex: D,
+                              tabIndex: L,
                               focusProps: { focusClassName: T.roleRemoveIconFocused },
                               'aria-hidden': !1,
                               'aria-label': m.Z.Messages.GUILD_SETTINGS_MEMBERS_REMOVE_ROLE.format({ roleName: R.name }),

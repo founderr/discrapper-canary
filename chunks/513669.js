@@ -42,32 +42,32 @@ let c = 'custom-image',
         });
     });
 function C(e) {
-    let { presetImages: A, image: t, imageName: r, savedImageName: C, onChange: g, uploadButtonLabel: T = i.Z.Messages.UPLOAD_IMAGE, radioGroupAriaLabel: p = i.Z.Messages.CUSTOM_IMAGE_SELECTOR_RADIO_GROUP_ARIA_LABEL, disabled: h = !1 } = e,
+    let { presetImages: A, image: t, imageName: r, savedImageName: C, onChange: g, uploadButtonLabel: h = i.Z.Messages.UPLOAD_IMAGE, radioGroupAriaLabel: T = i.Z.Messages.CUSTOM_IMAGE_SELECTOR_RADIO_GROUP_ARIA_LABEL, disabled: p = !1 } = e,
         m = r === c,
         [I, U] = n.useState(m ? t : null),
         [f, v] = n.useState(null),
-        q = n.useRef(null),
-        E = n.useRef(null);
+        E = n.useRef(null),
+        q = n.useRef(null);
     n.useEffect(() => {
         C !== c && (U(null), v(null));
     }, [C]);
     let N = null != f ? i.Z.Messages.CUSTOM_IMAGE_SELECTOR_YOUR_CUSTOM_IMAGE_WITH_FILENAME.format({ filename: f }) : i.Z.Messages.CUSTOM_IMAGE_SELECTOR_YOUR_CUSTOM_IMAGE,
         D = (0, o.useRadioGroup)({
             orientation: 'horizontal',
-            isDisabled: h
+            isDisabled: p
         }),
         O = () => {
             var e;
-            return null === (e = q.current) || void 0 === e ? void 0 : e.activateUploadDialogue();
+            return null === (e = E.current) || void 0 === e ? void 0 : e.activateUploadDialogue();
         },
-        R = () => {
+        x = () => {
             r === c && g(A[0].data, A[0].name), U(null), v(null);
         };
     return (
         n.useEffect(() => {
             if (m && null != f) {
                 var e, A;
-                null === (A = E.current) || void 0 === A || null === (e = A.ref) || void 0 === e || e.focus();
+                null === (A = q.current) || void 0 === A || null === (e = A.ref) || void 0 === e || e.focus();
             }
         }, [m, f]),
         (0, a.jsxs)('div', {
@@ -77,10 +77,10 @@ function C(e) {
                     within: !0,
                     children: (0, a.jsxs)('div', {
                         className: s()(d.uploadButton, {
-                            [d.disabled]: h,
+                            [d.disabled]: p,
                             [d.hidden]: null != I
                         }),
-                        'aria-disabled': h,
+                        'aria-disabled': p,
                         children: [
                             (0, a.jsx)(o.ImagePlusIcon, {
                                 size: 'xs',
@@ -91,15 +91,15 @@ function C(e) {
                                 variant: 'text-xxs/normal',
                                 color: 'text-muted',
                                 'aria-hidden': !0,
-                                children: T
+                                children: h
                             }),
                             (0, a.jsx)(l.ZP, {
-                                ref: q,
+                                ref: E,
                                 tabIndex: 0,
                                 onChange: (e, A) => {
                                     null != A && (v(A.name), U(e), g(e, c));
                                 },
-                                'aria-label': T
+                                'aria-label': h
                             })
                         ]
                     })
@@ -131,7 +131,7 @@ function C(e) {
                                     (0, a.jsx)(o.Clickable, {
                                         ...e,
                                         className: d.customImageAction,
-                                        onClick: R,
+                                        onClick: x,
                                         'aria-label': i.Z.Messages.CUSTOM_IMAGE_SELECTOR_DELETE_CUSTOM_IMAGE_ARIA_LABEL.format({ filename: f }),
                                         children: (0, a.jsx)(o.TrashIcon, {
                                             size: 'md',
@@ -143,16 +143,16 @@ function C(e) {
                         ]
                     }),
                 (0, a.jsxs)('div', {
-                    'aria-label': p,
+                    'aria-label': T,
                     ...D,
                     className: d.radioGroup,
                     children: [
                         null != I &&
                             (0, a.jsx)(u, {
-                                ref: E,
+                                ref: q,
                                 selectedImageName: r,
                                 onChange: g,
-                                disabled: h,
+                                disabled: p,
                                 name: c,
                                 alt: N,
                                 data: I
@@ -163,7 +163,7 @@ function C(e) {
                                 {
                                     selectedImageName: r,
                                     onChange: g,
-                                    disabled: h,
+                                    disabled: p,
                                     ...e
                                 },
                                 e.name

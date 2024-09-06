@@ -24,9 +24,9 @@ function h(e) {
             var e;
             return (null === (e = d.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === n.id;
         }),
-        g = (0, i.e7)([c.Z], () => c.Z.hasConnectedAccount());
+        S = (0, i.e7)([c.Z], () => c.Z.hasConnectedAccount());
     if ('live' === p || !(0, u.AZ)(h)) return null;
-    if (!g)
+    if (!S)
         return (0, r.jsx)(a.MenuItem, {
             id: 'connect-spotify',
             label: f.Z.Messages.USER_ACTIVITY_CONNECT_PLATFORM.format({ platform: E.ai }),
@@ -35,14 +35,14 @@ function h(e) {
             }
         });
     if (T) return null;
-    let S = (0, o.dU)(h) ? (null === (t = h.extra.entries[0]) || void 0 === t ? void 0 : t.media) : h.extra.media;
-    return null == S
+    let g = (0, o.dU)(h) ? (null === (t = h.extra.entries[0]) || void 0 === t ? void 0 : t.media) : h.extra.media;
+    return null == g
         ? null
         : (0, r.jsx)(a.MenuItem, {
               id: 'play-on-spotify',
               label: f.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_ACTION_PLAY_ON_SPOTIFY,
               action: () => {
-                  null == I || I({ action: 'PRESS_PLAY_ON_SPOTIFY_MENU_ITEM' }), (0, l.o)(E.Hw.TRACK, S.external_id);
+                  null == I || I({ action: 'PRESS_PLAY_ON_SPOTIFY_MENU_ITEM' }), (0, l.o)(E.Hw.TRACK, g.external_id);
               }
           });
 }

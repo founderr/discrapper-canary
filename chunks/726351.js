@@ -47,9 +47,9 @@ e.exports = function (e) {
     var m = e.reporter;
     !m && (m = l(!1 === m));
     var T = I(e, 'batchProcessor', c({ reporter: m })),
-        g = {};
-    (g.callOnAdd = !!I(e, 'callOnAdd', !0)), (g.debug = !!I(e, 'debug', !1));
-    var S = a(t),
+        S = {};
+    (S.callOnAdd = !!I(e, 'callOnAdd', !0)), (S.debug = !!I(e, 'debug', !1));
+    var g = a(t),
         A = i({ stateHandler: d }),
         N = I(e, 'strategy', 'object'),
         O = I(e, 'important', !1),
@@ -67,12 +67,12 @@ e.exports = function (e) {
     return {
         listenTo: function (e, i, a) {
             function s(e) {
-                r(S.get(e), function (t) {
+                r(g.get(e), function (t) {
                     t(e);
                 });
             }
             function o(e, t, n) {
-                S.add(t, n), e && n(t);
+                g.add(t, n), e && n(t);
             }
             if ((!a && ((a = i), (i = e), (e = {})), !i)) throw Error('At least one element required.');
             if (!a) throw Error('Listener required.');
@@ -82,9 +82,9 @@ e.exports = function (e) {
                 i = h(i);
             }
             var l = 0,
-                u = I(e, 'callOnAdd', g.callOnAdd),
+                u = I(e, 'callOnAdd', S.callOnAdd),
                 c = I(e, 'onReady', function () {}),
-                _ = I(e, 'debug', g.debug);
+                _ = I(e, 'debug', S.debug);
             r(i, function (e) {
                 !d.getState(e) && (d.initState(e), t.set(e));
                 var E = t.get(e);
@@ -130,8 +130,8 @@ e.exports = function (e) {
             }),
                 l === i.length && c();
         },
-        removeListener: S.removeListener,
-        removeAllListeners: S.removeAllListeners,
+        removeListener: g.removeListener,
+        removeAllListeners: g.removeAllListeners,
         uninstall: function (e) {
             if (!e) return m.error('At least one element is required.');
             if (p(e)) e = [e];
@@ -140,7 +140,7 @@ e.exports = function (e) {
                 e = h(e);
             }
             r(e, function (e) {
-                S.removeAllListeners(e), n.uninstall(e), d.cleanState(e);
+                g.removeAllListeners(e), n.uninstall(e), d.cleanState(e);
             });
         },
         initDocument: function (e) {

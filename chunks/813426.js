@@ -15,8 +15,8 @@ var r = 'function' == typeof Map && Map.prototype,
     I = String.prototype.match,
     m = String.prototype.slice,
     T = String.prototype.replace,
-    g = String.prototype.toUpperCase,
-    S = String.prototype.toLowerCase,
+    S = String.prototype.toUpperCase,
+    g = String.prototype.toLowerCase,
     A = RegExp.prototype.test,
     N = Array.prototype.concat,
     O = Array.prototype.join,
@@ -24,9 +24,9 @@ var r = 'function' == typeof Map && Map.prototype,
     v = Math.floor,
     C = 'function' == typeof BigInt ? BigInt.prototype.valueOf : null,
     y = Object.getOwnPropertySymbols,
-    L = 'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator ? Symbol.prototype.toString : null,
-    D = 'function' == typeof Symbol && 'object' == typeof Symbol.iterator,
-    b = 'function' == typeof Symbol && Symbol.toStringTag && (typeof Symbol.toStringTag === D ? 'object' : 'symbol') ? Symbol.toStringTag : null,
+    D = 'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator ? Symbol.prototype.toString : null,
+    L = 'function' == typeof Symbol && 'object' == typeof Symbol.iterator,
+    b = 'function' == typeof Symbol && Symbol.toStringTag && (typeof Symbol.toStringTag === L ? 'object' : 'symbol') ? Symbol.toStringTag : null,
     M = Object.prototype.propertyIsEnumerable,
     P =
         ('function' == typeof Reflect ? Reflect.getPrototypeOf : Object.getPrototypeOf) ||
@@ -63,7 +63,7 @@ e.exports = function e(t, r, i, o) {
     if ('boolean' != typeof h && 'symbol' !== h) throw TypeError('option "customInspect", if provided, must be `true`, `false`, or `\'symbol\'`');
     if (Z(l, 'indent') && null !== l.indent && '\t' !== l.indent && !(parseInt(l.indent, 10) === l.indent && l.indent > 0)) throw TypeError('option "indent" must be "\\t", an integer > 0, or `null`');
     if (Z(l, 'numericSeparator') && 'boolean' != typeof l.numericSeparator) throw TypeError('option "numericSeparator", if provided, must be `true` or `false`');
-    var g = l.numericSeparator;
+    var S = l.numericSeparator;
     if (void 0 === t) return 'undefined';
     if (null === t) return 'null';
     if ('boolean' == typeof t) return t ? 'true' : 'false';
@@ -78,11 +78,11 @@ e.exports = function e(t, r, i, o) {
     if ('number' == typeof t) {
         if (0 === t) return 1 / 0 / t > 0 ? '0' : '-0';
         var A = String(t);
-        return g ? U(t, A) : A;
+        return S ? U(t, A) : A;
     }
     if ('bigint' == typeof t) {
         var v = String(t) + 'n';
-        return g ? U(t, v) : v;
+        return S ? U(t, v) : v;
     }
     var y = void 0 === l.depth ? 5 : l.depth;
     if ((void 0 === i && (i = 0), i >= y && y > 0 && 'object' == typeof t)) return B(t) ? '[Array]' : '[Object]';
@@ -117,15 +117,15 @@ e.exports = function e(t, r, i, o) {
         return '[Function' + ($ ? ': ' + $ : ' (anonymous)') + ']' + (J.length > 0 ? ' { ' + O.call(J, ', ') + ' }' : '');
     }
     if (V(t)) {
-        var ee = D ? T.call(String(t), /^(Symbol\(.*\))_[^)]*$/, '$1') : L.call(t);
-        return 'object' != typeof t || D ? ee : K(ee);
+        var ee = L ? T.call(String(t), /^(Symbol\(.*\))_[^)]*$/, '$1') : D.call(t);
+        return 'object' != typeof t || L ? ee : K(ee);
     }
     if (
         (function (e) {
             return !!e && 'object' == typeof e && (!!('undefined' != typeof HTMLElement && e instanceof HTMLElement) || ('string' == typeof e.nodeName && 'function' == typeof e.getAttribute));
         })(t)
     ) {
-        for (var et = '<' + S.call(String(t.nodeName)), en = t.attributes || [], er = 0; er < en.length; er++)
+        for (var et = '<' + g.call(String(t.nodeName)), en = t.attributes || [], er = 0; er < en.length; er++)
             et +=
                 ' ' +
                 en[er].name +
@@ -137,7 +137,7 @@ e.exports = function e(t, r, i, o) {
                     'double',
                     l
                 );
-        return (et += '>'), t.childNodes && t.childNodes.length && (et += '...'), (et += '</' + S.call(String(t.nodeName)) + '>');
+        return (et += '>'), t.childNodes && t.childNodes.length && (et += '...'), (et += '</' + g.call(String(t.nodeName)) + '>');
     }
     if (B(t)) {
         if (0 === t.length) return '[]';
@@ -304,11 +304,11 @@ function F(e) {
     return '[object RegExp]' === Y(e) && (!b || !('object' == typeof e && b in e));
 }
 function V(e) {
-    if (D) return e && 'object' == typeof e && e instanceof Symbol;
+    if (L) return e && 'object' == typeof e && e instanceof Symbol;
     if ('symbol' == typeof e) return !0;
-    if (!e || 'object' != typeof e || !L) return !1;
+    if (!e || 'object' != typeof e || !D) return !1;
     try {
-        return L.call(e), !0;
+        return D.call(e), !0;
     } catch (e) {}
     return !1;
 }
@@ -337,7 +337,7 @@ function W(e) {
             12: 'f',
             13: 'r'
         }[t];
-    return n ? '\\' + n : '\\x' + (t < 16 ? '0' : '') + g.call(t.toString(16));
+    return n ? '\\' + n : '\\x' + (t < 16 ? '0' : '') + S.call(t.toString(16));
 }
 function K(e) {
     return 'Object(' + e + ')';
@@ -362,13 +362,13 @@ function X(e, t) {
         for (var a = 0; a < e.length; a++) i[a] = Z(e, a) ? t(e[a], e) : '';
     }
     var s = 'function' == typeof y ? y(e) : [];
-    if (D) {
+    if (L) {
         n = {};
         for (var o = 0; o < s.length; o++) n['$' + s[o]] = s[o];
     }
     for (var l in e) {
         if (!Z(e, l) || (r && String(Number(l)) === l && l < e.length)) continue;
-        if (!(D && n['$' + l] instanceof Symbol)) A.call(/[^\w$]/, l) ? i.push(t(l, e) + ': ' + t(e[l], e)) : i.push(l + ': ' + t(e[l], e));
+        if (!(L && n['$' + l] instanceof Symbol)) A.call(/[^\w$]/, l) ? i.push(t(l, e) + ': ' + t(e[l], e)) : i.push(l + ': ' + t(e[l], e));
     }
     if ('function' == typeof y) for (var u = 0; u < s.length; u++) M.call(e, s[u]) && i.push('[' + t(s[u]) + ']: ' + t(e[s[u]], e));
     return i;

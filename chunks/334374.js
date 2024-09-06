@@ -7,25 +7,25 @@ n.d(t, {
     n(571269),
     n(298267);
 var i = n(735250),
-    a = n(470079),
-    s = n(414910),
+    s = n(470079),
+    a = n(414910),
     l = n(226961),
     r = n(987500);
 function o(e) {
     let { currentUserId: t, participant: n } = e,
-        o = (0, s.Z)(n.type),
-        [c, u] = a.useState(),
-        [d, h] = a.useState(),
-        [p, m] = a.useState(),
+        o = (0, a.Z)(n.type),
+        [c, u] = s.useState(),
+        [d, h] = s.useState(),
+        [m, p] = s.useState(),
         _ = n.id.split(':').at(-1),
         f = t === _,
-        E = a.useCallback((e, t, n) => {
-            var i, a, s;
+        E = s.useCallback((e, t, n) => {
+            var i, s, a;
             let r = n ? l.ZP.getOutboundStats(t) : l.ZP.getInboundStats(e, t);
-            u(null !== (i = null == r ? void 0 : r.codec) && void 0 !== i ? i : 'unknown'), h(void 0 === (a = null == r ? void 0 : r.resolution) || (0 === a.width && 0 === a.height) ? 'unknown' : a.width + ' x ' + a.height), m((null == r ? void 0 : r.bitrateEstimate) !== void 0 ? ((s = r.bitrateEstimate), ''.concat((s / 1000).toFixed(2), ' Kbps')) : 'unknown');
+            u(null !== (i = null == r ? void 0 : r.codec) && void 0 !== i ? i : 'unknown'), h(void 0 === (s = null == r ? void 0 : r.resolution) || (0 === s.width && 0 === s.height) ? 'unknown' : s.width + ' x ' + s.height), p((null == r ? void 0 : r.bitrateEstimate) !== void 0 ? ((a = r.bitrateEstimate), ''.concat((a / 1000).toFixed(2), ' Kbps')) : 'unknown');
         }, []);
     return (
-        a.useEffect(() => {
+        s.useEffect(() => {
             let e = () => E(_, o, f);
             e();
             let t = setInterval(e, 1000);
@@ -47,7 +47,7 @@ function o(e) {
                     f &&
                         (0, i.jsxs)('div', {
                             className: r.infoRow,
-                            children: [(0, i.jsx)('span', { children: 'Bitrate Estimate: ' }), (0, i.jsx)('strong', { children: p })]
+                            children: [(0, i.jsx)('span', { children: 'Bitrate Estimate: ' }), (0, i.jsx)('strong', { children: m })]
                         })
                 ]
             })

@@ -1,6 +1,6 @@
 n.d(t, {
     TE: function () {
-        return g;
+        return C;
     },
     h_: function () {
         return I;
@@ -8,8 +8,8 @@ n.d(t, {
 }),
     n(47120);
 var i = n(470079),
-    a = n(392711),
-    s = n.n(a),
+    s = n(392711),
+    a = n.n(s),
     l = n(442837),
     r = n(159300),
     o = n(901461),
@@ -17,20 +17,20 @@ var i = n(470079),
     u = n(592125),
     d = n(984933),
     h = n(650774),
-    p = n(430824),
-    m = n(819640),
+    m = n(430824),
+    p = n(819640),
     _ = n(375954),
     f = n(496675),
     E = n(709054),
-    C = n(981631);
-function g(e, t) {
+    g = n(981631);
+function C(e, t) {
     return (0, l.cj)(
         [f.Z],
         () => ({
             canInvite: (0, r.b)(f.Z, t, e),
-            canManageGuild: null != t && f.Z.can(C.Plq.MANAGE_GUILD, t),
-            canMessage: null != e && f.Z.can(C.Plq.SEND_MESSAGES, e),
-            canCreateChannel: null != t && f.Z.can(C.Plq.MANAGE_CHANNELS, t)
+            canManageGuild: null != t && f.Z.can(g.Plq.MANAGE_GUILD, t),
+            canMessage: null != e && f.Z.can(g.Plq.SEND_MESSAGES, e),
+            canCreateChannel: null != t && f.Z.can(g.Plq.MANAGE_CHANNELS, t)
         }),
         [t, e]
     );
@@ -46,8 +46,8 @@ function I(e) {
                 () => {
                     var t;
                     let i = null !== (t = h.Z.getMemberCount(null == e ? void 0 : e.id)) && void 0 !== t ? t : 0,
-                        a = n.some((e) => e.type === C.uaV.USER_JOIN);
-                    return i > 1 || a;
+                        s = n.some((e) => e.type === g.uaV.USER_JOIN);
+                    return i > 1 || s;
                 },
                 [e, n]
             );
@@ -57,16 +57,16 @@ function I(e) {
             return (function (e) {
                 let t = (0, l.e7)([c.default], () => c.default.getId());
                 return (0, l.e7)([_.Z], () =>
-                    s().some(e, (e) => {
+                    a().some(e, (e) => {
                         let n = _.Z.getMessages(e.id).toArray();
-                        return s().some(n, (e) => e.author.id === t && !(0, o.Z)(e));
+                        return a().some(n, (e) => e.author.id === t && !(0, o.Z)(e));
                     })
                 );
-            })(i.useMemo(() => (null == t ? [] : s().values(t)), [t]));
+            })(i.useMemo(() => (null == t ? [] : a().values(t)), [t]));
         })(e),
         guildPersonalized: (function (e) {
-            let t = (0, l.e7)([m.Z], () => m.Z.hasLayers()),
-                n = (0, l.e7)([p.Z], () => p.Z.getGuild(null == e ? void 0 : e.id));
+            let t = (0, l.e7)([p.Z], () => p.Z.hasLayers()),
+                n = (0, l.e7)([m.Z], () => m.Z.getGuild(null == e ? void 0 : e.id));
             return (null == n ? void 0 : n.icon) != null && !t;
         })(e),
         guildChannelCreated:

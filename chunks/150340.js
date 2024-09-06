@@ -37,7 +37,7 @@ function m(e, t) {
         m = null != h ? i()().diff(h, 'days') : null,
         T = p.indexOf(t);
     if (-1 === T || !(null == m || m > I[T]) || p.find((e) => !(0, o.un)(e)) !== t) return !1;
-    let { showLifecycleUpsells: g } = _.Z.getCurrentConfig(
+    let { showLifecycleUpsells: S } = _.Z.getCurrentConfig(
         {
             guildId: e,
             location: '7f5b67_1'
@@ -47,7 +47,7 @@ function m(e, t) {
             autoTrackExposure: !0
         }
     );
-    return g;
+    return S;
 }
 function T(e, t) {
     let n = s.E.now();

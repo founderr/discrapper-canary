@@ -18,20 +18,20 @@ function c(e) {
         I = (0, i.e7)([l.Z], () => l.Z.isFocused()) && (f || (!p && !_)),
         { pendingAvatar: m } = (0, u.Z)({}),
         T = void 0 !== E ? E : d ? m : void 0,
-        g = (0, i.e7)([o.ZP], () => (null != n && null != t ? o.ZP.getMember(n, t.id) : null)),
-        S = r.useMemo(
+        S = (0, i.e7)([o.ZP], () => (null != n && null != t ? o.ZP.getMember(n, t.id) : null)),
+        g = r.useMemo(
             () =>
                 null != t
-                    ? (0, s.SG)(T, g, t, {
+                    ? (0, s.SG)(T, S, t, {
                           canAnimate: I,
                           size: c
                       })
                     : void 0,
-            [T, g, t, I, c]
+            [T, S, t, I, c]
         ),
         A = r.useCallback(() => h(!0), []);
     return {
-        avatarSrc: S,
+        avatarSrc: g,
         isAvatarAnimating: I,
         eventHandlers: {
             onMouseEnter: A,

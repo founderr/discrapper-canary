@@ -5,35 +5,35 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(481060),
-    s = n(50493),
+var s = n(481060),
+    a = n(50493),
     l = n(689938),
     r = n(437287),
     o = n(446926);
 function c(e) {
-    let { onNavigate: t, backPanel: n = s.k.INFO } = e;
+    let { onNavigate: t, backPanel: n = a.k.INFO } = e;
     return (0, i.jsxs)('div', {
         className: o.header,
         children: [
             (0, i.jsx)('div', {
                 className: o.headerTitle,
-                children: (0, i.jsxs)(a.Clickable, {
+                children: (0, i.jsxs)(s.Clickable, {
                     className: r.backButton,
                     onClick: () => (null == t ? void 0 : t(n)),
                     children: [
-                        (0, i.jsx)(a.ArrowSmallLeftIcon, {
+                        (0, i.jsx)(s.ArrowSmallLeftIcon, {
                             size: 'custom',
                             width: 20,
                             height: 20
                         }),
-                        (0, i.jsx)(a.Heading, {
+                        (0, i.jsx)(s.Heading, {
                             variant: 'heading-md/semibold',
                             children: l.Z.Messages.BACK
                         })
                     ]
                 })
             }),
-            (0, i.jsx)(a.KeyCombo, {
+            (0, i.jsx)(s.KeyCombo, {
                 shortcut: 'esc',
                 keyClassName: r.keyComboInner,
                 className: r.keyComboContainer

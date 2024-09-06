@@ -35,8 +35,8 @@ let a = (e) => r(/\b/, e, /\w$/.test(e) ? /\b/ : /\B/),
     I = i(/[a-zA-Z_]/, /[\u00A8\u00AA\u00AD\u00AF\u00B2-\u00B5\u00B7-\u00BA]/, /[\u00BC-\u00BE\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u00FF]/, /[\u0100-\u02FF\u0370-\u167F\u1681-\u180D\u180F-\u1DBF]/, /[\u1E00-\u1FFF]/, /[\u200B-\u200D\u202A-\u202E\u203F-\u2040\u2054\u2060-\u206F]/, /[\u2070-\u20CF\u2100-\u218F\u2460-\u24FF\u2776-\u2793]/, /[\u2C00-\u2DFF\u2E80-\u2FFF]/, /[\u3004-\u3007\u3021-\u302F\u3031-\u303F\u3040-\uD7FF]/, /[\uF900-\uFD3D\uFD40-\uFDCF\uFDF0-\uFE1F\uFE30-\uFE44]/, /[\uFE47-\uFEFE\uFF00-\uFFFD]/),
     m = i(I, /\d/, /[\u0300-\u036F\u1DC0-\u1DFF\u20D0-\u20FF\uFE20-\uFE2F]/),
     T = r(I, m, '*'),
-    g = r(/[A-Z]/, m, '*'),
-    S = ['autoclosure', r(/convention\(/, i('swift', 'block', 'c'), /\)/), 'discardableResult', 'dynamicCallable', 'dynamicMemberLookup', 'escaping', 'frozen', 'GKInspectable', 'IBAction', 'IBDesignable', 'IBInspectable', 'IBOutlet', 'IBSegueAction', 'inlinable', 'main', 'nonobjc', 'NSApplicationMain', 'NSCopying', 'NSManaged', r(/objc\(/, T, /\)/), 'objc', 'objcMembers', 'propertyWrapper', 'requires_stored_property_inits', 'resultBuilder', 'testable', 'UIApplicationMain', 'unknown', 'usableFromInline'],
+    S = r(/[A-Z]/, m, '*'),
+    g = ['autoclosure', r(/convention\(/, i('swift', 'block', 'c'), /\)/), 'discardableResult', 'dynamicCallable', 'dynamicMemberLookup', 'escaping', 'frozen', 'GKInspectable', 'IBAction', 'IBDesignable', 'IBInspectable', 'IBOutlet', 'IBSegueAction', 'inlinable', 'main', 'nonobjc', 'NSApplicationMain', 'NSCopying', 'NSManaged', r(/objc\(/, T, /\)/), 'objc', 'objcMembers', 'propertyWrapper', 'requires_stored_property_inits', 'resultBuilder', 'testable', 'UIApplicationMain', 'unknown', 'usableFromInline'],
     A = ['iOS', 'iOSApplicationExtension', 'macOS', 'macOSApplicationExtension', 'macCatalyst', 'macCatalystApplicationExtension', 'watchOS', 'watchOSApplicationExtension', 'tvOS', 'tvOSApplicationExtension', 'swift'];
 e.exports = function (e) {
     let t = {
@@ -74,12 +74,12 @@ e.exports = function (e) {
             literal: c
         },
         y = [N, O, v],
-        L = {
+        D = {
             match: r(/\./, i(...E)),
             relevance: 0
         },
-        D = [
-            L,
+        L = [
+            D,
             {
                 className: 'built_in',
                 match: r(/\b/, i(...E), /(?=\()/)
@@ -160,7 +160,7 @@ e.exports = function (e) {
         },
         j = {
             className: 'keyword',
-            match: r(/@/, i(...S))
+            match: r(/@/, i(...g))
         },
         W = [
             Y,
@@ -180,7 +180,7 @@ e.exports = function (e) {
                 },
                 {
                     className: 'type',
-                    match: g,
+                    match: S,
                     relevance: 0
                 },
                 {
@@ -192,7 +192,7 @@ e.exports = function (e) {
                     relevance: 0
                 },
                 {
-                    match: r(/\s+&\s+/, n(g)),
+                    match: r(/\s+&\s+/, n(S)),
                     relevance: 0
                 }
             ]
@@ -218,7 +218,7 @@ e.exports = function (e) {
                 },
                 ...I,
                 ...y,
-                ...D,
+                ...L,
                 ...M,
                 w,
                 V,
@@ -274,7 +274,7 @@ e.exports = function (e) {
             illegal: [/\[/, /%/]
         },
         J = {
-            begin: [/precedencegroup/, /\s+/, g],
+            begin: [/precedencegroup/, /\s+/, S],
             className: {
                 1: 'keyword',
                 3: 'title'
@@ -286,7 +286,7 @@ e.exports = function (e) {
     for (let e of V.variants) {
         let t = e.contains.find((e) => 'interpol' === e.label);
         t.keywords = C;
-        let n = [...y, ...D, ...M, w, V, ...Z];
+        let n = [...y, ...L, ...M, w, V, ...Z];
         t.contains = [
             ...n,
             {
@@ -336,7 +336,7 @@ e.exports = function (e) {
                 relevance: 0
             },
             ...y,
-            ...D,
+            ...L,
             ...M,
             w,
             V,

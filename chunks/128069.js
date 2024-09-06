@@ -64,9 +64,9 @@ function T(e) {
         }
         (null === (a = e.body) || void 0 === a ? void 0 : a.errors) != null && (e.body = (0, d.J9)(e.body.errors));
     }
-    return new g(e);
+    return new S(e);
 }
-class g extends _.Z {
+class S extends _.Z {
     _isInFieldSet(e) {
         for (let t in this.fields) if (e.has(t)) return !0;
     }
@@ -87,4 +87,4 @@ class g extends _.Z {
         null != e.body && 'string' == typeof e.body.payment_id && (this.paymentId = e.body.payment_id);
     }
 }
-f(g, 'ErrorCodes', r), f(g, 'Fields', i), f(g, 'Sections', s), f(g, 'CARD_ERRORS', I), f(g, 'ADDRESS_ERRORS', m), (t.ZP = g);
+f(S, 'ErrorCodes', r), f(S, 'Fields', i), f(S, 'Sections', s), f(S, 'CARD_ERRORS', I), f(S, 'ADDRESS_ERRORS', m), (t.ZP = S);

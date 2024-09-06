@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return m;
+            return p;
         },
         openEffectsUpsellModal: function () {
             return _;
@@ -9,8 +9,8 @@ n.r(t),
     });
 var i = n(735250);
 n(470079);
-var a = n(481060),
-    s = n(70097),
+var s = n(481060),
+    a = n(70097),
     l = n(174609),
     r = n(98278),
     o = n(790527),
@@ -18,10 +18,10 @@ var a = n(481060),
     u = n(981631),
     d = n(689938),
     h = n(485176),
-    p = n(626065);
-function m(e) {
-    let { onClose: t, analytics: n, ...a } = e,
-        m = d.Z.Messages.VOICE_CHANNEL_EFFECTS_UPSELL_BODY_2.format({
+    m = n(626065);
+function p(e) {
+    let { onClose: t, analytics: n, ...s } = e,
+        p = d.Z.Messages.VOICE_CHANNEL_EFFECTS_UPSELL_BODY_2.format({
             onPressMore: function () {
                 (0, l.Z)(),
                     t(),
@@ -34,8 +34,8 @@ function m(e) {
         });
     return (0, i.jsx)(o.Z, {
         title: d.Z.Messages.VOICE_CHANNEL_EFFECTS_UPSELL_HEADER_2,
-        glowUp: m,
-        body: m,
+        glowUp: p,
+        body: p,
         artContainerClassName: h.artContainer,
         enableArtBoxShadow: !1,
         type: n.type,
@@ -49,18 +49,18 @@ function m(e) {
         },
         onClose: t,
         onSubscribeClick: l.Z,
-        artElement: (0, i.jsx)(s.Z, {
+        artElement: (0, i.jsx)(a.Z, {
             className: h.video,
-            src: p,
+            src: m,
             loop: !0,
             autoPlay: !0
         }),
-        ...a
+        ...s
     });
 }
 function _(e) {
     let { analytics: t } = e;
-    (0, a.openModalLazy)(async () => {
+    (0, s.openModalLazy)(async () => {
         let { default: e } = await Promise.resolve().then(n.bind(n, 310892));
         return (n) =>
             (0, i.jsx)(e, {

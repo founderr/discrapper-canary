@@ -1,6 +1,6 @@
 n.d(t, {
     q: function () {
-        return L;
+        return D;
     },
     r: function () {
         return y;
@@ -23,8 +23,8 @@ var r = n(302454),
     I = n(881706),
     m = n(592125),
     T = n(430824),
-    g = n(20303),
-    S = n(902676),
+    S = n(20303),
+    g = n(902676),
     A = n(375954),
     N = n(699516),
     O = n(944486),
@@ -36,9 +36,9 @@ function y(e, t) {
     let r = m.Z.getChannel(O.Z.getChannelId());
     return !!(null == r || r.type !== v.d4z.DM || N.Z.isFriend(null !== (n = r.getRecipientId()) && void 0 !== n ? n : '')) && e === t;
 }
-function L(e, t) {
+function D(e, t) {
     let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
-        { trusted: N, onClick: O, onConfirm: y, shouldConfirm: L, messageId: D, channelId: b } = e,
+        { trusted: N, onClick: O, onConfirm: y, shouldConfirm: D, messageId: L, channelId: b } = e,
         M = i().sanitizeUrl(e.href);
     if (null == M) {
         null != t && t.preventDefault(),
@@ -51,12 +51,12 @@ function L(e, t) {
     }
     let P = null,
         U = !1,
-        w = D,
+        w = L,
         x = b,
         G = null;
-    if (null != D && null != b) {
+    if (null != L && null != b) {
         var k, B, F;
-        let e = A.Z.getMessage(b, D),
+        let e = A.Z.getMessage(b, L),
             t = m.Z.getBasicChannel(b);
         P = null !== (F = null == t ? void 0 : t.guild_id) && void 0 !== F ? F : null;
         let n = T.Z.getGuild(P),
@@ -73,7 +73,7 @@ function L(e, t) {
             null != t &&
             t.hasFeature(v.oNc.DISCOVERABLE) &&
             R.default.track(v.rMx.URL_CLICKED, {
-                url_domain: (0, S.F)(M),
+                url_domain: (0, g.F)(M),
                 guild_id: t.id,
                 channel_id: e.id
             }),
@@ -123,10 +123,10 @@ function L(e, t) {
         return;
     }
     let H = 'function' == typeof N ? N() : N,
-        Z = (0, S.E)(M),
+        Z = (0, g.E)(M),
         Y = !('http:' === Z || 'https:' === Z);
-    if ((!Y && (H || g.Z.isTrustedDomain(M))) || (Y && g.Z.isTrustedProtocol(M))) {
-        null == t || (null != L && L)
+    if ((!Y && (H || S.Z.isTrustedDomain(M))) || (Y && S.Z.isTrustedProtocol(M))) {
+        null == t || (null != D && D)
             ? V()
             : U &&
               E.Z.trackAnnouncementMessageLinkClicked({

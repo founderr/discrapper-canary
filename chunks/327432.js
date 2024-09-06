@@ -413,8 +413,8 @@ var T = function (e) {
         }
         return o || 1;
     },
-    g = /\s/,
-    S = /[\u0021-\u0023\u0025-\u002A\u002C-\u002F\u003A\u003B\u003F\u0040\u005B-\u005D\u005F\u007B\u007D\u00A1\u00A7\u00AB\u00B6\u00B7\u00BB\u00BF\u037E\u0387\u055A-\u055F\u0589\u058A\u05BE\u05C0\u05C3\u05C6\u05F3\u05F4\u0609\u060A\u060C\u060D\u061B\u061E\u061F\u066A-\u066D\u06D4\u0700-\u070D\u07F7-\u07F9\u0830-\u083E\u085E\u0964\u0965\u0970\u0AF0\u0DF4\u0E4F\u0E5A\u0E5B\u0F04-\u0F12\u0F14\u0F3A-\u0F3D\u0F85\u0FD0-\u0FD4\u0FD9\u0FDA\u104A-\u104F\u10FB\u1360-\u1368\u1400\u166D\u166E\u169B\u169C\u16EB-\u16ED\u1735\u1736\u17D4-\u17D6\u17D8-\u17DA\u1800-\u180A\u1944\u1945\u1A1E\u1A1F\u1AA0-\u1AA6\u1AA8-\u1AAD\u1B5A-\u1B60\u1BFC-\u1BFF\u1C3B-\u1C3F\u1C7E\u1C7F\u1CC0-\u1CC7\u1CD3\u2010-\u2027\u2030-\u2043\u2045-\u2051\u2053-\u205E\u207D\u207E\u208D\u208E\u2329\u232A\u2768-\u2775\u27C5\u27C6\u27E6-\u27EF\u2983-\u2998\u29D8-\u29DB\u29FC\u29FD\u2CF9-\u2CFC\u2CFE\u2CFF\u2D70\u2E00-\u2E2E\u2E30-\u2E3B\u3001-\u3003\u3008-\u3011\u3014-\u301F\u3030\u303D\u30A0\u30FB\uA4FE\uA4FF\uA60D-\uA60F\uA673\uA67E\uA6F2-\uA6F7\uA874-\uA877\uA8CE\uA8CF\uA8F8-\uA8FA\uA92E\uA92F\uA95F\uA9C1-\uA9CD\uA9DE\uA9DF\uAA5C-\uAA5F\uAADE\uAADF\uAAF0\uAAF1\uABEB\uFD3E\uFD3F\uFE10-\uFE19\uFE30-\uFE52\uFE54-\uFE61\uFE63\uFE68\uFE6A\uFE6B\uFF01-\uFF03\uFF05-\uFF0A\uFF0C-\uFF0F\uFF1A\uFF1B\uFF1F\uFF20\uFF3B-\uFF3D\uFF3F\uFF5B\uFF5D\uFF5F-\uFF65]/,
+    S = /\s/,
+    g = /[\u0021-\u0023\u0025-\u002A\u002C-\u002F\u003A\u003B\u003F\u0040\u005B-\u005D\u005F\u007B\u007D\u00A1\u00A7\u00AB\u00B6\u00B7\u00BB\u00BF\u037E\u0387\u055A-\u055F\u0589\u058A\u05BE\u05C0\u05C3\u05C6\u05F3\u05F4\u0609\u060A\u060C\u060D\u061B\u061E\u061F\u066A-\u066D\u06D4\u0700-\u070D\u07F7-\u07F9\u0830-\u083E\u085E\u0964\u0965\u0970\u0AF0\u0DF4\u0E4F\u0E5A\u0E5B\u0F04-\u0F12\u0F14\u0F3A-\u0F3D\u0F85\u0FD0-\u0FD4\u0FD9\u0FDA\u104A-\u104F\u10FB\u1360-\u1368\u1400\u166D\u166E\u169B\u169C\u16EB-\u16ED\u1735\u1736\u17D4-\u17D6\u17D8-\u17DA\u1800-\u180A\u1944\u1945\u1A1E\u1A1F\u1AA0-\u1AA6\u1AA8-\u1AAD\u1B5A-\u1B60\u1BFC-\u1BFF\u1C3B-\u1C3F\u1C7E\u1C7F\u1CC0-\u1CC7\u1CD3\u2010-\u2027\u2030-\u2043\u2045-\u2051\u2053-\u205E\u207D\u207E\u208D\u208E\u2329\u232A\u2768-\u2775\u27C5\u27C6\u27E6-\u27EF\u2983-\u2998\u29D8-\u29DB\u29FC\u29FD\u2CF9-\u2CFC\u2CFE\u2CFF\u2D70\u2E00-\u2E2E\u2E30-\u2E3B\u3001-\u3003\u3008-\u3011\u3014-\u301F\u3030\u303D\u30A0\u30FB\uA4FE\uA4FF\uA60D-\uA60F\uA673\uA67E\uA6F2-\uA6F7\uA874-\uA877\uA8CE\uA8CF\uA8F8-\uA8FA\uA92E\uA92F\uA95F\uA9C1-\uA9CD\uA9DE\uA9DF\uAA5C-\uAA5F\uAADE\uAADF\uAAF0\uAAF1\uABEB\uFD3E\uFD3F\uFE10-\uFE19\uFE30-\uFE52\uFE54-\uFE61\uFE63\uFE68\uFE6A\uFE6B\uFF01-\uFF03\uFF05-\uFF0A\uFF0C-\uFF0F\uFF1A\uFF1B\uFF1F\uFF20\uFF3B-\uFF3D\uFF3F\uFF5B\uFF5D\uFF5F-\uFF65]/,
     A = /['\u2018\u2019]/,
     N = function (e) {
         for (var t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1], n = 0, r = !1; e.length > 0; ) {
@@ -436,13 +436,13 @@ var T = function (e) {
     },
     R = function e(t, n) {
         var r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        if (g.test(t)) return !1;
+        if (S.test(t)) return !1;
         if (A.test(t)) {
             var i = T(n, r),
                 [a, s] = O(n, i, r);
             if (e(a, s, r)) return !0;
         }
-        return !S.test(t) && !0;
+        return !g.test(t) && !0;
     },
     v = function* (e) {
         for (var t = e.length - 1, n = 0; n < e.length; n++) {
@@ -460,8 +460,8 @@ var T = function (e) {
     C = (e) => e >= 55296 && e <= 56319,
     y = (e) => e >= 56320 && e <= 57343;
 ((r = i || (i = {}))[(r.None = 0)] = 'None'), (r[(r.Extend = 1)] = 'Extend'), (r[(r.ZWJ = 2)] = 'ZWJ'), (r[(r.RI = 4)] = 'RI'), (r[(r.Prepend = 8)] = 'Prepend'), (r[(r.SpacingMark = 16)] = 'SpacingMark'), (r[(r.L = 32)] = 'L'), (r[(r.V = 64)] = 'V'), (r[(r.T = 128)] = 'T'), (r[(r.LV = 256)] = 'LV'), (r[(r.LVT = 512)] = 'LVT'), (r[(r.ExtPict = 1024)] = 'ExtPict'), (r[(r.Any = 2048)] = 'Any');
-var L = /^(?:[\u0300-\u036F\u0483-\u0489\u0591-\u05BD\u05BF\u05C1\u05C2\u05C4\u05C5\u05C7\u0610-\u061A\u064B-\u065F\u0670\u06D6-\u06DC\u06DF-\u06E4\u06E7\u06E8\u06EA-\u06ED\u0711\u0730-\u074A\u07A6-\u07B0\u07EB-\u07F3\u07FD\u0816-\u0819\u081B-\u0823\u0825-\u0827\u0829-\u082D\u0859-\u085B\u08D3-\u08E1\u08E3-\u0902\u093A\u093C\u0941-\u0948\u094D\u0951-\u0957\u0962\u0963\u0981\u09BC\u09BE\u09C1-\u09C4\u09CD\u09D7\u09E2\u09E3\u09FE\u0A01\u0A02\u0A3C\u0A41\u0A42\u0A47\u0A48\u0A4B-\u0A4D\u0A51\u0A70\u0A71\u0A75\u0A81\u0A82\u0ABC\u0AC1-\u0AC5\u0AC7\u0AC8\u0ACD\u0AE2\u0AE3\u0AFA-\u0AFF\u0B01\u0B3C\u0B3E\u0B3F\u0B41-\u0B44\u0B4D\u0B55-\u0B57\u0B62\u0B63\u0B82\u0BBE\u0BC0\u0BCD\u0BD7\u0C00\u0C04\u0C3E-\u0C40\u0C46-\u0C48\u0C4A-\u0C4D\u0C55\u0C56\u0C62\u0C63\u0C81\u0CBC\u0CBF\u0CC2\u0CC6\u0CCC\u0CCD\u0CD5\u0CD6\u0CE2\u0CE3\u0D00\u0D01\u0D3B\u0D3C\u0D3E\u0D41-\u0D44\u0D4D\u0D57\u0D62\u0D63\u0D81\u0DCA\u0DCF\u0DD2-\u0DD4\u0DD6\u0DDF\u0E31\u0E34-\u0E3A\u0E47-\u0E4E\u0EB1\u0EB4-\u0EBC\u0EC8-\u0ECD\u0F18\u0F19\u0F35\u0F37\u0F39\u0F71-\u0F7E\u0F80-\u0F84\u0F86\u0F87\u0F8D-\u0F97\u0F99-\u0FBC\u0FC6\u102D-\u1030\u1032-\u1037\u1039\u103A\u103D\u103E\u1058\u1059\u105E-\u1060\u1071-\u1074\u1082\u1085\u1086\u108D\u109D\u135D-\u135F\u1712-\u1714\u1732-\u1734\u1752\u1753\u1772\u1773\u17B4\u17B5\u17B7-\u17BD\u17C6\u17C9-\u17D3\u17DD\u180B-\u180D\u1885\u1886\u18A9\u1920-\u1922\u1927\u1928\u1932\u1939-\u193B\u1A17\u1A18\u1A1B\u1A56\u1A58-\u1A5E\u1A60\u1A62\u1A65-\u1A6C\u1A73-\u1A7C\u1A7F\u1AB0-\u1AC0\u1B00-\u1B03\u1B34-\u1B3A\u1B3C\u1B42\u1B6B-\u1B73\u1B80\u1B81\u1BA2-\u1BA5\u1BA8\u1BA9\u1BAB-\u1BAD\u1BE6\u1BE8\u1BE9\u1BED\u1BEF-\u1BF1\u1C2C-\u1C33\u1C36\u1C37\u1CD0-\u1CD2\u1CD4-\u1CE0\u1CE2-\u1CE8\u1CED\u1CF4\u1CF8\u1CF9\u1DC0-\u1DF9\u1DFB-\u1DFF\u200C\u20D0-\u20F0\u2CEF-\u2CF1\u2D7F\u2DE0-\u2DFF\u302A-\u302F\u3099\u309A\uA66F-\uA672\uA674-\uA67D\uA69E\uA69F\uA6F0\uA6F1\uA802\uA806\uA80B\uA825\uA826\uA82C\uA8C4\uA8C5\uA8E0-\uA8F1\uA8FF\uA926-\uA92D\uA947-\uA951\uA980-\uA982\uA9B3\uA9B6-\uA9B9\uA9BC\uA9BD\uA9E5\uAA29-\uAA2E\uAA31\uAA32\uAA35\uAA36\uAA43\uAA4C\uAA7C\uAAB0\uAAB2-\uAAB4\uAAB7\uAAB8\uAABE\uAABF\uAAC1\uAAEC\uAAED\uAAF6\uABE5\uABE8\uABED\uFB1E\uFE00-\uFE0F\uFE20-\uFE2F\uFF9E\uFF9F]|\uD800[\uDDFD\uDEE0\uDF76-\uDF7A]|\uD802[\uDE01-\uDE03\uDE05\uDE06\uDE0C-\uDE0F\uDE38-\uDE3A\uDE3F\uDEE5\uDEE6]|\uD803[\uDD24-\uDD27\uDEAB\uDEAC\uDF46-\uDF50]|\uD804[\uDC01\uDC38-\uDC46\uDC7F-\uDC81\uDCB3-\uDCB6\uDCB9\uDCBA\uDD00-\uDD02\uDD27-\uDD2B\uDD2D-\uDD34\uDD73\uDD80\uDD81\uDDB6-\uDDBE\uDDC9-\uDDCC\uDDCF\uDE2F-\uDE31\uDE34\uDE36\uDE37\uDE3E\uDEDF\uDEE3-\uDEEA\uDF00\uDF01\uDF3B\uDF3C\uDF3E\uDF40\uDF57\uDF66-\uDF6C\uDF70-\uDF74]|\uD805[\uDC38-\uDC3F\uDC42-\uDC44\uDC46\uDC5E\uDCB0\uDCB3-\uDCB8\uDCBA\uDCBD\uDCBF\uDCC0\uDCC2\uDCC3\uDDAF\uDDB2-\uDDB5\uDDBC\uDDBD\uDDBF\uDDC0\uDDDC\uDDDD\uDE33-\uDE3A\uDE3D\uDE3F\uDE40\uDEAB\uDEAD\uDEB0-\uDEB5\uDEB7\uDF1D-\uDF1F\uDF22-\uDF25\uDF27-\uDF2B]|\uD806[\uDC2F-\uDC37\uDC39\uDC3A\uDD30\uDD3B\uDD3C\uDD3E\uDD43\uDDD4-\uDDD7\uDDDA\uDDDB\uDDE0\uDE01-\uDE0A\uDE33-\uDE38\uDE3B-\uDE3E\uDE47\uDE51-\uDE56\uDE59-\uDE5B\uDE8A-\uDE96\uDE98\uDE99]|\uD807[\uDC30-\uDC36\uDC38-\uDC3D\uDC3F\uDC92-\uDCA7\uDCAA-\uDCB0\uDCB2\uDCB3\uDCB5\uDCB6\uDD31-\uDD36\uDD3A\uDD3C\uDD3D\uDD3F-\uDD45\uDD47\uDD90\uDD91\uDD95\uDD97\uDEF3\uDEF4]|\uD81A[\uDEF0-\uDEF4\uDF30-\uDF36]|\uD81B[\uDF4F\uDF8F-\uDF92\uDFE4]|\uD82F[\uDC9D\uDC9E]|\uD834[\uDD65\uDD67-\uDD69\uDD6E-\uDD72\uDD7B-\uDD82\uDD85-\uDD8B\uDDAA-\uDDAD\uDE42-\uDE44]|\uD836[\uDE00-\uDE36\uDE3B-\uDE6C\uDE75\uDE84\uDE9B-\uDE9F\uDEA1-\uDEAF]|\uD838[\uDC00-\uDC06\uDC08-\uDC18\uDC1B-\uDC21\uDC23\uDC24\uDC26-\uDC2A\uDD30-\uDD36\uDEEC-\uDEEF]|\uD83A[\uDCD0-\uDCD6\uDD44-\uDD4A]|\uD83C[\uDFFB-\uDFFF]|\uDB40[\uDC20-\uDC7F\uDD00-\uDDEF])$/,
-    D = /^(?:[\u0600-\u0605\u06DD\u070F\u0890\u0891\u08E2\u0D4E]|\uD804[\uDCBD\uDCCD\uDDC2\uDDC3]|\uD806[\uDD3F\uDD41\uDE3A\uDE84-\uDE89]|\uD807\uDD46)$/,
+var D = /^(?:[\u0300-\u036F\u0483-\u0489\u0591-\u05BD\u05BF\u05C1\u05C2\u05C4\u05C5\u05C7\u0610-\u061A\u064B-\u065F\u0670\u06D6-\u06DC\u06DF-\u06E4\u06E7\u06E8\u06EA-\u06ED\u0711\u0730-\u074A\u07A6-\u07B0\u07EB-\u07F3\u07FD\u0816-\u0819\u081B-\u0823\u0825-\u0827\u0829-\u082D\u0859-\u085B\u08D3-\u08E1\u08E3-\u0902\u093A\u093C\u0941-\u0948\u094D\u0951-\u0957\u0962\u0963\u0981\u09BC\u09BE\u09C1-\u09C4\u09CD\u09D7\u09E2\u09E3\u09FE\u0A01\u0A02\u0A3C\u0A41\u0A42\u0A47\u0A48\u0A4B-\u0A4D\u0A51\u0A70\u0A71\u0A75\u0A81\u0A82\u0ABC\u0AC1-\u0AC5\u0AC7\u0AC8\u0ACD\u0AE2\u0AE3\u0AFA-\u0AFF\u0B01\u0B3C\u0B3E\u0B3F\u0B41-\u0B44\u0B4D\u0B55-\u0B57\u0B62\u0B63\u0B82\u0BBE\u0BC0\u0BCD\u0BD7\u0C00\u0C04\u0C3E-\u0C40\u0C46-\u0C48\u0C4A-\u0C4D\u0C55\u0C56\u0C62\u0C63\u0C81\u0CBC\u0CBF\u0CC2\u0CC6\u0CCC\u0CCD\u0CD5\u0CD6\u0CE2\u0CE3\u0D00\u0D01\u0D3B\u0D3C\u0D3E\u0D41-\u0D44\u0D4D\u0D57\u0D62\u0D63\u0D81\u0DCA\u0DCF\u0DD2-\u0DD4\u0DD6\u0DDF\u0E31\u0E34-\u0E3A\u0E47-\u0E4E\u0EB1\u0EB4-\u0EBC\u0EC8-\u0ECD\u0F18\u0F19\u0F35\u0F37\u0F39\u0F71-\u0F7E\u0F80-\u0F84\u0F86\u0F87\u0F8D-\u0F97\u0F99-\u0FBC\u0FC6\u102D-\u1030\u1032-\u1037\u1039\u103A\u103D\u103E\u1058\u1059\u105E-\u1060\u1071-\u1074\u1082\u1085\u1086\u108D\u109D\u135D-\u135F\u1712-\u1714\u1732-\u1734\u1752\u1753\u1772\u1773\u17B4\u17B5\u17B7-\u17BD\u17C6\u17C9-\u17D3\u17DD\u180B-\u180D\u1885\u1886\u18A9\u1920-\u1922\u1927\u1928\u1932\u1939-\u193B\u1A17\u1A18\u1A1B\u1A56\u1A58-\u1A5E\u1A60\u1A62\u1A65-\u1A6C\u1A73-\u1A7C\u1A7F\u1AB0-\u1AC0\u1B00-\u1B03\u1B34-\u1B3A\u1B3C\u1B42\u1B6B-\u1B73\u1B80\u1B81\u1BA2-\u1BA5\u1BA8\u1BA9\u1BAB-\u1BAD\u1BE6\u1BE8\u1BE9\u1BED\u1BEF-\u1BF1\u1C2C-\u1C33\u1C36\u1C37\u1CD0-\u1CD2\u1CD4-\u1CE0\u1CE2-\u1CE8\u1CED\u1CF4\u1CF8\u1CF9\u1DC0-\u1DF9\u1DFB-\u1DFF\u200C\u20D0-\u20F0\u2CEF-\u2CF1\u2D7F\u2DE0-\u2DFF\u302A-\u302F\u3099\u309A\uA66F-\uA672\uA674-\uA67D\uA69E\uA69F\uA6F0\uA6F1\uA802\uA806\uA80B\uA825\uA826\uA82C\uA8C4\uA8C5\uA8E0-\uA8F1\uA8FF\uA926-\uA92D\uA947-\uA951\uA980-\uA982\uA9B3\uA9B6-\uA9B9\uA9BC\uA9BD\uA9E5\uAA29-\uAA2E\uAA31\uAA32\uAA35\uAA36\uAA43\uAA4C\uAA7C\uAAB0\uAAB2-\uAAB4\uAAB7\uAAB8\uAABE\uAABF\uAAC1\uAAEC\uAAED\uAAF6\uABE5\uABE8\uABED\uFB1E\uFE00-\uFE0F\uFE20-\uFE2F\uFF9E\uFF9F]|\uD800[\uDDFD\uDEE0\uDF76-\uDF7A]|\uD802[\uDE01-\uDE03\uDE05\uDE06\uDE0C-\uDE0F\uDE38-\uDE3A\uDE3F\uDEE5\uDEE6]|\uD803[\uDD24-\uDD27\uDEAB\uDEAC\uDF46-\uDF50]|\uD804[\uDC01\uDC38-\uDC46\uDC7F-\uDC81\uDCB3-\uDCB6\uDCB9\uDCBA\uDD00-\uDD02\uDD27-\uDD2B\uDD2D-\uDD34\uDD73\uDD80\uDD81\uDDB6-\uDDBE\uDDC9-\uDDCC\uDDCF\uDE2F-\uDE31\uDE34\uDE36\uDE37\uDE3E\uDEDF\uDEE3-\uDEEA\uDF00\uDF01\uDF3B\uDF3C\uDF3E\uDF40\uDF57\uDF66-\uDF6C\uDF70-\uDF74]|\uD805[\uDC38-\uDC3F\uDC42-\uDC44\uDC46\uDC5E\uDCB0\uDCB3-\uDCB8\uDCBA\uDCBD\uDCBF\uDCC0\uDCC2\uDCC3\uDDAF\uDDB2-\uDDB5\uDDBC\uDDBD\uDDBF\uDDC0\uDDDC\uDDDD\uDE33-\uDE3A\uDE3D\uDE3F\uDE40\uDEAB\uDEAD\uDEB0-\uDEB5\uDEB7\uDF1D-\uDF1F\uDF22-\uDF25\uDF27-\uDF2B]|\uD806[\uDC2F-\uDC37\uDC39\uDC3A\uDD30\uDD3B\uDD3C\uDD3E\uDD43\uDDD4-\uDDD7\uDDDA\uDDDB\uDDE0\uDE01-\uDE0A\uDE33-\uDE38\uDE3B-\uDE3E\uDE47\uDE51-\uDE56\uDE59-\uDE5B\uDE8A-\uDE96\uDE98\uDE99]|\uD807[\uDC30-\uDC36\uDC38-\uDC3D\uDC3F\uDC92-\uDCA7\uDCAA-\uDCB0\uDCB2\uDCB3\uDCB5\uDCB6\uDD31-\uDD36\uDD3A\uDD3C\uDD3D\uDD3F-\uDD45\uDD47\uDD90\uDD91\uDD95\uDD97\uDEF3\uDEF4]|\uD81A[\uDEF0-\uDEF4\uDF30-\uDF36]|\uD81B[\uDF4F\uDF8F-\uDF92\uDFE4]|\uD82F[\uDC9D\uDC9E]|\uD834[\uDD65\uDD67-\uDD69\uDD6E-\uDD72\uDD7B-\uDD82\uDD85-\uDD8B\uDDAA-\uDDAD\uDE42-\uDE44]|\uD836[\uDE00-\uDE36\uDE3B-\uDE6C\uDE75\uDE84\uDE9B-\uDE9F\uDEA1-\uDEAF]|\uD838[\uDC00-\uDC06\uDC08-\uDC18\uDC1B-\uDC21\uDC23\uDC24\uDC26-\uDC2A\uDD30-\uDD36\uDEEC-\uDEEF]|\uD83A[\uDCD0-\uDCD6\uDD44-\uDD4A]|\uD83C[\uDFFB-\uDFFF]|\uDB40[\uDC20-\uDC7F\uDD00-\uDDEF])$/,
+    L = /^(?:[\u0600-\u0605\u06DD\u070F\u0890\u0891\u08E2\u0D4E]|\uD804[\uDCBD\uDCCD\uDDC2\uDDC3]|\uD806[\uDD3F\uDD41\uDE3A\uDE84-\uDE89]|\uD807\uDD46)$/,
     b = /^(?:[\u0903\u093B\u093E-\u0940\u0949-\u094C\u094E\u094F\u0982\u0983\u09BF\u09C0\u09C7\u09C8\u09CB\u09CC\u0A03\u0A3E-\u0A40\u0A83\u0ABE-\u0AC0\u0AC9\u0ACB\u0ACC\u0B02\u0B03\u0B40\u0B47\u0B48\u0B4B\u0B4C\u0BBF\u0BC1\u0BC2\u0BC6-\u0BC8\u0BCA-\u0BCC\u0C01-\u0C03\u0C41-\u0C44\u0C82\u0C83\u0CBE\u0CC0\u0CC1\u0CC3\u0CC4\u0CC7\u0CC8\u0CCA\u0CCB\u0D02\u0D03\u0D3F\u0D40\u0D46-\u0D48\u0D4A-\u0D4C\u0D82\u0D83\u0DD0\u0DD1\u0DD8-\u0DDE\u0DF2\u0DF3\u0E33\u0EB3\u0F3E\u0F3F\u0F7F\u1031\u103B\u103C\u1056\u1057\u1084\u1715\u1734\u17B6\u17BE-\u17C5\u17C7\u17C8\u1923-\u1926\u1929-\u192B\u1930\u1931\u1933-\u1938\u1A19\u1A1A\u1A55\u1A57\u1A6D-\u1A72\u1B04\u1B3B\u1B3D-\u1B41\u1B43\u1B44\u1B82\u1BA1\u1BA6\u1BA7\u1BAA\u1BE7\u1BEA-\u1BEC\u1BEE\u1BF2\u1BF3\u1C24-\u1C2B\u1C34\u1C35\u1CE1\u1CF7\uA823\uA824\uA827\uA880\uA881\uA8B4-\uA8C3\uA952\uA953\uA983\uA9B4\uA9B5\uA9BA\uA9BB\uA9BE-\uA9C0\uAA2F\uAA30\uAA33\uAA34\uAA4D\uAAEB\uAAEE\uAAEF\uAAF5\uABE3\uABE4\uABE6\uABE7\uABE9\uABEA\uABEC]|\uD804[\uDC00\uDC02\uDC82\uDCB0-\uDCB2\uDCB7\uDCB8\uDD2C\uDD45\uDD46\uDD82\uDDB3-\uDDB5\uDDBF\uDDC0\uDDCE\uDE2C-\uDE2E\uDE32\uDE33\uDE35\uDEE0-\uDEE2\uDF02\uDF03\uDF3F\uDF41-\uDF44\uDF47\uDF48\uDF4B-\uDF4D\uDF62\uDF63]|\uD805[\uDC35-\uDC37\uDC40\uDC41\uDC45\uDCB1\uDCB2\uDCB9\uDCBB\uDCBC\uDCBE\uDCC1\uDDB0\uDDB1\uDDB8-\uDDBB\uDDBE\uDE30-\uDE32\uDE3B\uDE3C\uDE3E\uDEAC\uDEAE\uDEAF\uDEB6\uDF26]|\uD806[\uDC2C-\uDC2E\uDC38\uDD31-\uDD35\uDD37\uDD38\uDD3D\uDD40\uDD42\uDDD1-\uDDD3\uDDDC-\uDDDF\uDDE4\uDE39\uDE57\uDE58\uDE97]|\uD807[\uDC2F\uDC3E\uDCA9\uDCB1\uDCB4\uDD8A-\uDD8E\uDD93\uDD94\uDD96\uDEF5\uDEF6]|\uD81B[\uDF51-\uDF87\uDFF0\uDFF1]|\uD834[\uDD66\uDD6D])$/,
     M = /^[\u1100-\u115F\uA960-\uA97C]$/,
     P = /^[\u1160-\u11A7\uD7B0-\uD7C6]$/,
@@ -472,7 +472,7 @@ var L = /^(?:[\u0300-\u036F\u0483-\u0489\u0591-\u05BD\u05BF\u05C1\u05C2\u05C4\u0
     G = /^(?:[\xA9\xAE\u203C\u2049\u2122\u2139\u2194-\u2199\u21A9\u21AA\u231A\u231B\u2328\u2388\u23CF\u23E9-\u23F3\u23F8-\u23FA\u24C2\u25AA\u25AB\u25B6\u25C0\u25FB-\u25FE\u2600-\u2605\u2607-\u2612\u2614-\u2685\u2690-\u2705\u2708-\u2712\u2714\u2716\u271D\u2721\u2728\u2733\u2734\u2744\u2747\u274C\u274E\u2753-\u2755\u2757\u2763-\u2767\u2795-\u2797\u27A1\u27B0\u27BF\u2934\u2935\u2B05-\u2B07\u2B1B\u2B1C\u2B50\u2B55\u3030\u303D\u3297\u3299]|\uD83C[\uDC00-\uDCFF\uDD0D-\uDD0F\uDD2F\uDD6C-\uDD71\uDD7E\uDD7F\uDD8E\uDD91-\uDD9A\uDDAD-\uDDE5\uDE01-\uDE0F\uDE1A\uDE2F\uDE32-\uDE3A\uDE3C-\uDE3F\uDE49-\uDFFA]|\uD83D[\uDC00-\uDD3D\uDD46-\uDE4F\uDE80-\uDEFF\uDF74-\uDF7F\uDFD5-\uDFFF]|\uD83E[\uDC0C-\uDC0F\uDC48-\uDC4F\uDC5A-\uDC5F\uDC88-\uDC8F\uDCAE-\uDCFF\uDD0C-\uDD3A\uDD3C-\uDD45\uDD47-\uDEFF]|\uD83F[\uDC00-\uDFFD])$/,
     k = (e, t) => {
         var n = i.Any;
-        return -1 !== e.search(L) && (n |= i.Extend), 8205 === t && (n |= i.ZWJ), t >= 127462 && t <= 127487 && (n |= i.RI), -1 !== e.search(D) && (n |= i.Prepend), -1 !== e.search(b) && (n |= i.SpacingMark), -1 !== e.search(M) && (n |= i.L), -1 !== e.search(P) && (n |= i.V), -1 !== e.search(U) && (n |= i.T), -1 !== e.search(w) && (n |= i.LV), -1 !== e.search(x) && (n |= i.LVT), -1 !== e.search(G) && (n |= i.ExtPict), n;
+        return -1 !== e.search(D) && (n |= i.Extend), 8205 === t && (n |= i.ZWJ), t >= 127462 && t <= 127487 && (n |= i.RI), -1 !== e.search(L) && (n |= i.Prepend), -1 !== e.search(b) && (n |= i.SpacingMark), -1 !== e.search(M) && (n |= i.L), -1 !== e.search(P) && (n |= i.V), -1 !== e.search(U) && (n |= i.T), -1 !== e.search(w) && (n |= i.LV), -1 !== e.search(x) && (n |= i.LVT), -1 !== e.search(G) && (n |= i.ExtPict), n;
     };
 function B(e, t) {
     return (e & t) != 0;
@@ -979,10 +979,10 @@ var X = new WeakMap(),
                         }
                     }
                     if (eO.isText(h)) {
-                        var g = eo.equals(p, u.path);
+                        var S = eo.equals(p, u.path);
                         for (
-                            g ? ((E = i ? u.offset : h.text.length - u.offset), (f = u.offset)) : ((E = h.text.length), (f = i ? E : 0)),
-                                (g || c || 'offset' === r) &&
+                            S ? ((E = i ? u.offset : h.text.length - u.offset), (f = u.offset)) : ((E = h.text.length), (f = i ? E : 0)),
+                                (S || c || 'offset' === r) &&
                                     (yield {
                                         path: p,
                                         offset: f
@@ -1812,8 +1812,8 @@ var eh = {
         for (var o in t) if (void 0 === e[o] && void 0 !== t[o]) return !1;
         return !0;
     },
-    eg = ['text'],
-    eS = ['anchor', 'focus'];
+    eS = ['text'],
+    eg = ['anchor', 'focus'];
 function eA(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -1846,9 +1846,9 @@ var eO = {
         var n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
             { loose: r = !1 } = n;
         function i(e) {
-            return m(e, eg);
+            return m(e, eS);
         }
-        return eT(r ? m(e, eg) : e, r ? m(t, eg) : t);
+        return eT(r ? m(e, eS) : e, r ? m(t, eS) : t);
     },
     isText: (e) => (0, a.P)(e) && 'string' == typeof e.text,
     isTextList: (e) => Array.isArray(e) && e.every((e) => eO.isText(e)),
@@ -1864,7 +1864,7 @@ var eO = {
     decorations(e, t) {
         var n = [eN({}, e)];
         for (var r of t) {
-            var i = m(r, eS),
+            var i = m(r, eg),
                 [a, s] = eh.edges(r),
                 o = [],
                 l = 0,
@@ -1947,24 +1947,24 @@ var eC = (e, t, n) => {
                 var { path: I } = n,
                     m = er.get(e, I),
                     T = eo.previous(I),
-                    g = er.get(e, T),
-                    S = er.parent(e, I),
+                    S = er.get(e, T),
+                    g = er.parent(e, I),
                     A = I[I.length - 1];
-                if (eO.isText(m) && eO.isText(g)) g.text += m.text;
-                else if (eO.isText(m) || eO.isText(g)) throw Error('Cannot apply a "merge_node" operation at path ['.concat(I, '] to nodes of different interfaces: ').concat(em.stringify(m), ' ').concat(em.stringify(g)));
-                else g.children.push(...m.children);
-                if ((S.children.splice(A, 1), t)) for (var [N, O] of eh.points(t)) t[O] = ed.transform(N, n);
+                if (eO.isText(m) && eO.isText(S)) S.text += m.text;
+                else if (eO.isText(m) || eO.isText(S)) throw Error('Cannot apply a "merge_node" operation at path ['.concat(I, '] to nodes of different interfaces: ').concat(em.stringify(m), ' ').concat(em.stringify(S)));
+                else S.children.push(...m.children);
+                if ((g.children.splice(A, 1), t)) for (var [N, O] of eh.points(t)) t[O] = ed.transform(N, n);
                 break;
             case 'move_node':
                 var { path: R, newPath: v } = n;
                 if (eo.isAncestor(R, v)) throw Error('Cannot move a path ['.concat(R, '] to new path [').concat(v, '] because the destination is inside itself.'));
                 var C = er.get(e, R),
                     y = er.parent(e, R),
-                    L = R[R.length - 1];
-                y.children.splice(L, 1);
-                var D = eo.transform(R, n),
-                    b = er.get(e, eo.parent(D)),
-                    M = D[D.length - 1];
+                    D = R[R.length - 1];
+                y.children.splice(D, 1);
+                var L = eo.transform(R, n),
+                    b = er.get(e, eo.parent(L)),
+                    M = L[L.length - 1];
                 if ((b.children.splice(M, 0, C), t)) for (var [P, U] of eh.points(t)) t[U] = ed.transform(P, n);
                 break;
             case 'remove_node':
@@ -2030,23 +2030,23 @@ var eC = (e, t, n) => {
                 if (0 === eE.length) throw Error('Cannot apply a "split_node" operation at path ['.concat(eE, '] because the root node cannot be split.'));
                 var eI = er.get(e, eE),
                     eT = er.parent(e, eE),
-                    eg = eE[eE.length - 1];
+                    eS = eE[eE.length - 1];
                 if (eO.isText(eI)) {
-                    var eS = eI.text.slice(0, ef),
+                    var eg = eI.text.slice(0, ef),
                         eA = eI.text.slice(ef);
-                    (eI.text = eS), (e_ = ev(ev({}, ep), {}, { text: eA }));
+                    (eI.text = eg), (e_ = ev(ev({}, ep), {}, { text: eA }));
                 } else {
                     var eN = eI.children.slice(0, ef),
                         eR = eI.children.slice(ef);
                     (eI.children = eN), (e_ = ev(ev({}, ep), {}, { children: eR }));
                 }
-                if ((eT.children.splice(eg + 1, 0, e_), t)) for (var [eC, ey] of eh.points(t)) t[ey] = ed.transform(eC, n);
+                if ((eT.children.splice(eS + 1, 0, e_), t)) for (var [eC, ey] of eh.points(t)) t[ey] = ed.transform(eC, n);
         }
         return t;
     },
     ey = ['text'],
-    eL = ['children'];
-function eD(e, t) {
+    eD = ['children'];
+function eL(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -2062,12 +2062,12 @@ function eb(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {};
         t % 2
-            ? eD(Object(n), !0).forEach(function (t) {
+            ? eL(Object(n), !0).forEach(function (t) {
                   o(e, t, n[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-              : eD(Object(n)).forEach(function (t) {
+              : eL(Object(n)).forEach(function (t) {
                     Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t));
                 });
     }
@@ -2200,18 +2200,18 @@ var eB = ek(
                             m = s[s.length - 1];
                         if (!(!i && $.void(e, { at: I }))) {
                             for (var T of t) {
-                                var g = I.concat(m);
+                                var S = I.concat(m);
                                 m++,
                                     e.apply({
                                         type: 'insert_node',
-                                        path: g,
+                                        path: S,
                                         node: T
                                     }),
                                     (s = eo.next(s));
                             }
                             if (((s = eo.previous(s)), l)) {
-                                var S = $.end(e, s);
-                                S && eB.select(e, S);
+                                var g = $.end(e, s);
+                                g && eB.select(e, g);
                             }
                         }
                     });
@@ -2318,13 +2318,13 @@ var eB = ek(
                             [p, I] = E;
                         if (0 !== h.length && 0 !== I.length) {
                             var T = eo.next(I),
-                                g = eo.common(h, I),
-                                S = eo.isSibling(h, I),
+                                S = eo.common(h, I),
+                                g = eo.isSibling(h, I),
                                 A = Array.from($.levels(e, { at: h }), (e) => {
                                     var [t] = e;
                                     return t;
                                 })
-                                    .slice(g.length)
+                                    .slice(S.length)
                                     .slice(0, -1),
                                 N = $.above(e, {
                                     at: h,
@@ -2336,10 +2336,10 @@ var eB = ek(
                                 var R = m(f, ey);
                                 (r = p.text.length), (n = R);
                             } else if (W.isElement(f) && W.isElement(p)) {
-                                var R = m(f, eL);
+                                var R = m(f, eD);
                                 (r = p.children.length), (n = R);
                             } else throw Error('Cannot merge the node at path ['.concat(h, '] with the previous sibling because it is not the same kind: ').concat(em.stringify(f), ' ').concat(em.stringify(p)));
-                            !S &&
+                            !g &&
                                 eB.moveNodes(e, {
                                     at: h,
                                     to: T,
@@ -2468,18 +2468,18 @@ var eB = ek(
                                 voids: c
                             }))) {
                                 var T = {},
-                                    g = {};
+                                    S = {};
                                 if (0 !== m.length) {
-                                    var S = !1;
+                                    var g = !1;
                                     for (var A in t) {
-                                        if ('children' !== A && 'text' !== A) a(t[A], I[A]) && ((S = !0), I.hasOwnProperty(A) && (T[A] = I[A]), s ? null != t[A] && (g[A] = s(I[A], t[A])) : null != t[A] && (g[A] = t[A]));
+                                        if ('children' !== A && 'text' !== A) a(t[A], I[A]) && ((g = !0), I.hasOwnProperty(A) && (T[A] = I[A]), s ? null != t[A] && (S[A] = s(I[A], t[A])) : null != t[A] && (S[A] = t[A]));
                                     }
-                                    S &&
+                                    g &&
                                         e.apply({
                                             type: 'set_node',
                                             path: m,
                                             properties: T,
-                                            newProperties: g
+                                            newProperties: S
                                         });
                                 }
                             }
@@ -2534,34 +2534,34 @@ var eB = ek(
                                     (l = o.path.length - I.length + 1), (u = !0);
                                 }
                                 n = $.pointRef(e, o);
-                                var g = o.path.length - l,
-                                    [, S] = f,
-                                    A = o.path.slice(0, g),
-                                    N = 0 === l ? o.offset : o.path[g] + 0;
+                                var S = o.path.length - l,
+                                    [, g] = f,
+                                    A = o.path.slice(0, S),
+                                    N = 0 === l ? o.offset : o.path[S] + 0;
                                 for (var [O, R] of $.levels(e, {
                                     at: A,
                                     reverse: !0,
                                     voids: a
                                 })) {
                                     var v = !1;
-                                    if (R.length < S.length || 0 === R.length || (!a && W.isElement(O) && $.isVoid(e, O))) break;
+                                    if (R.length < g.length || 0 === R.length || (!a && W.isElement(O) && $.isVoid(e, O))) break;
                                     var C = E.current,
                                         y = $.isEnd(e, C, R);
                                     if (u || !E || !$.isEdge(e, C, R)) {
                                         v = !0;
-                                        var L = er.extractProps(O);
+                                        var D = er.extractProps(O);
                                         e.apply({
                                             type: 'split_node',
                                             path: R,
                                             position: N,
-                                            properties: L
+                                            properties: D
                                         });
                                     }
                                     N = R[R.length - 1] + (v || y ? 1 : 0);
                                 }
                                 if (null == t.at) {
-                                    var D = n.current || $.end(e, []);
-                                    eB.select(e, D);
+                                    var L = n.current || $.end(e, []);
+                                    eB.select(e, L);
                                 }
                             } finally {
                                 E.unref(), null === (r = n) || void 0 === r || r.unref();
@@ -2831,8 +2831,8 @@ var eB = ek(
                             at: I,
                             voids: s
                         }),
-                        g = m && T && !eo.equals(m[1], T[1]),
-                        S = eo.equals(p.path, I.path),
+                        S = m && T && !eo.equals(m[1], T[1]),
+                        g = eo.equals(p.path, I.path),
                         A = s
                             ? null
                             : $.void(e, {
@@ -2858,17 +2858,17 @@ var eB = ek(
                         at: o,
                         voids: s
                     })) {
-                        var [y, L] = C;
-                        if (!n || 0 !== eo.compare(L, n)) ((!s && W.isElement(y) && $.isVoid(e, y)) || (!eo.isCommon(L, p.path) && !eo.isCommon(L, I.path))) && (v.push(C), (n = L));
+                        var [y, D] = C;
+                        if (!n || 0 !== eo.compare(D, n)) ((!s && W.isElement(y) && $.isVoid(e, y)) || (!eo.isCommon(D, p.path) && !eo.isCommon(D, I.path))) && (v.push(C), (n = D));
                     }
-                    var D = Array.from(v, (t) => {
+                    var L = Array.from(v, (t) => {
                             var [, n] = t;
                             return $.pathRef(e, n);
                         }),
                         b = $.pointRef(e, p),
                         M = $.pointRef(e, I),
                         P = '';
-                    if (!S && !A) {
+                    if (!g && !A) {
                         var U = b.current,
                             [w] = $.leaf(e, U),
                             { path: x } = U,
@@ -2884,7 +2884,7 @@ var eB = ek(
                             (P = k));
                     }
                     if (
-                        (D.reverse()
+                        (L.reverse()
                             .map((e) => e.unref())
                             .filter((e) => null !== e)
                             .forEach((t) =>
@@ -2898,7 +2898,7 @@ var eB = ek(
                         var B = M.current,
                             [F] = $.leaf(e, B),
                             { path: V } = B,
-                            H = S ? p.offset : 0,
+                            H = g ? p.offset : 0,
                             Z = F.text.slice(H, I.offset);
                         Z.length > 0 &&
                             (e.apply({
@@ -2909,8 +2909,8 @@ var eB = ek(
                             }),
                             (P = Z));
                     }
-                    !S &&
-                        g &&
+                    !g &&
+                        S &&
                         M.current &&
                         b.current &&
                         eB.mergeNodes(e, {
@@ -2967,11 +2967,11 @@ var eB = ek(
                         [, I] = er.first({ children: t }, []),
                         [, m] = er.last({ children: t }, []),
                         T = [],
-                        g = (t) => {
+                        S = (t) => {
                             var [n, r] = t;
                             return 0 !== r.length && (!!f || (!((h && eo.isAncestor(r, I) && W.isElement(n) && !e.isVoid(n) && !e.isInline(n)) || (p && eo.isAncestor(r, m) && W.isElement(n) && !e.isVoid(n) && !e.isInline(n))) && !0));
                         };
-                    for (var S of er.nodes({ children: t }, { pass: g })) g(S) && T.push(S);
+                    for (var g of er.nodes({ children: t }, { pass: S })) S(g) && T.push(g);
                     var A = [],
                         N = [],
                         O = [],
@@ -2984,11 +2984,11 @@ var eB = ek(
                             mode: 'highest',
                             voids: a
                         }),
-                        [, L] = y,
-                        D = $.isStart(e, s, L),
-                        b = $.isEnd(e, s, L),
+                        [, D] = y,
+                        L = $.isStart(e, s, D),
+                        b = $.isEnd(e, s, D),
                         M = $.pathRef(e, E && !O.length ? eo.next(d) : d),
-                        P = $.pathRef(e, b ? eo.next(L) : L);
+                        P = $.pathRef(e, b ? eo.next(D) : D);
                     eB.splitNodes(e, {
                         at: s,
                         match: (t) => (v ? W.isElement(t) && $.isBlock(e, t) : eO.isText(t) || $.isInline(e, t)),
@@ -2996,7 +2996,7 @@ var eB = ek(
                         always: v && (!_ || A.length > 0) && (!E || O.length > 0),
                         voids: a
                     });
-                    var U = $.pathRef(e, !D || (D && b) ? eo.next(L) : L);
+                    var U = $.pathRef(e, !L || (L && b) ? eo.next(D) : D);
                     if (
                         (eB.insertNodes(e, A, {
                             at: U.current,

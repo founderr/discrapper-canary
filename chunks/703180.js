@@ -6,35 +6,35 @@ n.r(t),
     });
 var i = n(735250);
 n(470079);
-var a = n(442837),
-    s = n(481060),
+var s = n(442837),
+    a = n(481060),
     l = n(485267),
     r = n(71585),
     o = n(981631),
     c = n(689938);
 let u = (e) => {
     let { closePopout: t } = e,
-        u = (0, a.e7)([r.Z], () => r.Z.hidden);
-    return (0, i.jsx)(s.Menu, {
+        u = (0, s.e7)([r.Z], () => r.Z.hidden);
+    return (0, i.jsx)(a.Menu, {
         onSelect: () => {},
         navId: 'member-list-settings-menu',
         onClose: null != t ? t : o.dG4,
         'aria-label': c.Z.Messages.CONTENT_INVENTORY_MEMBERLIST_SETTINGS_ALT,
-        children: (0, i.jsxs)(s.MenuGroup, {
+        children: (0, i.jsxs)(a.MenuGroup, {
             children: [
-                (0, i.jsx)(s.MenuItem, {
+                (0, i.jsx)(a.MenuItem, {
                     id: 'about',
                     label: c.Z.Messages.CONTENT_INVENTORY_MEMBERLIST_SETTINGS_ABOUT,
-                    icon: s.CircleInformationIcon,
+                    icon: a.CircleInformationIcon,
                     action: () => {
-                        (0, s.openModalLazy)(async () => {
+                        (0, a.openModalLazy)(async () => {
                             let { default: e } = await n.e('71517').then(n.bind(n, 549505));
                             return (t) => (0, i.jsx)(e, { ...t });
                         }),
                             null == t || t();
                     }
                 }),
-                (0, i.jsx)(s.MenuCheckboxItem, {
+                (0, i.jsx)(a.MenuCheckboxItem, {
                     id: 'hide',
                     label: c.Z.Messages.CONTENT_INVENTORY_MEMBERLIST_SETTINGS_HIDE,
                     checked: u,
@@ -47,8 +47,8 @@ let u = (e) => {
     });
 };
 t.default = () =>
-    (0, i.jsx)(s.Popout, {
-        animation: s.Popout.Animation.NONE,
+    (0, i.jsx)(a.Popout, {
+        animation: a.Popout.Animation.NONE,
         position: 'bottom',
         align: 'right',
         renderPopout: (e) => {
@@ -56,7 +56,7 @@ t.default = () =>
             return (0, i.jsx)(u, { closePopout: t });
         },
         children: (e) =>
-            (0, i.jsx)(s.Clickable, {
+            (0, i.jsx)(a.Clickable, {
                 ...e,
                 onClick: (t) => {
                     t.stopPropagation(), e.onClick(t);
@@ -65,6 +65,6 @@ t.default = () =>
                     width: '12px',
                     height: '12px'
                 },
-                children: (0, i.jsx)(s.SettingsIcon, { size: 'xxs' })
+                children: (0, i.jsx)(a.SettingsIcon, { size: 'xxs' })
             })
     });

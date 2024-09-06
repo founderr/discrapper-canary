@@ -11,8 +11,8 @@ let d = i.forwardRef(function (e, t) {
     let { store: n, hasSendableExpressions: d, onKeyDown: _, gridNavigatorId: E, expressionsListRef: f, defaultSearchPlaceholder: h, emptySearchPlaceholder: p } = e,
         I = i.useRef(null),
         [m, T] = (0, u.Iu)((e) => [e.searchQuery, e.isSearchSuggestion], a.Z),
-        g = n.useStore((e) => e.searchPlaceholder),
-        S = n.useStore((e) => e.inspectedExpressionPosition, a.Z),
+        S = n.useStore((e) => e.searchPlaceholder),
+        g = n.useStore((e) => e.inspectedExpressionPosition, a.Z),
         A = i.useCallback(
             (e) => {
                 var t;
@@ -44,7 +44,7 @@ let d = i.forwardRef(function (e, t) {
                 query: m,
                 ref: I,
                 size: o.ZP.Sizes.MEDIUM,
-                placeholder: null != g ? g : d || null == p ? h : p,
+                placeholder: null != S ? S : d || null == p ? h : p,
                 onClear: N,
                 onKeyDown: _,
                 onQueryChange: A,
@@ -55,7 +55,7 @@ let d = i.forwardRef(function (e, t) {
                     'aria-haspopup': 'grid',
                     'aria-controls': E,
                     'aria-expanded': !0,
-                    'aria-activedescendant': (0, s.NE)(E, S.columnIndex, S.rowIndex)
+                    'aria-activedescendant': (0, s.NE)(E, g.columnIndex, g.rowIndex)
                 }
             })
         })

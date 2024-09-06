@@ -6,7 +6,7 @@ n.d(t, {
         return l;
     }
 });
-let { Layer: i, LayerContainer: a, LayerProvider: s } = (0, n(481060).createLayer)('ChannelCallChat'),
-    l = a,
-    r = s;
+let { Layer: i, LayerContainer: s, LayerProvider: a } = (0, n(481060).createLayer)('ChannelCallChat'),
+    l = s,
+    r = a;
 t.ZP = i;

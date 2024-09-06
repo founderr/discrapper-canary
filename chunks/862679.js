@@ -1,26 +1,26 @@
 var i = n(735250),
-    a = n(470079),
-    s = n(873546),
+    s = n(470079),
+    a = n(873546),
     l = n(442837),
     r = n(481060),
     o = n(346486),
     c = n(433355),
     u = n(841829);
-t.Z = a.memo(function (e) {
-    let { message: t, subtitle: n, countdown: d, buttonText: h, buttonColor: p, buttonSubmitting: m, onButtonClick: _, imageSrc: f, animationSrc: E, secondaryButtonText: C, onSecondaryButtonClick: g, children: I, useReducedMotion: x = !1 } = e,
+t.Z = s.memo(function (e) {
+    let { message: t, subtitle: n, countdown: d, buttonText: h, buttonColor: m, buttonSubmitting: p, onButtonClick: _, imageSrc: f, animationSrc: E, secondaryButtonText: g, onSecondaryButtonClick: C, children: I, useReducedMotion: x = !1 } = e,
         T = (0, l.e7)([c.ZP], () => c.ZP.getState().isMembersOpen);
-    if (s.tq && T) return null;
-    if (null == t) return (0, i.jsx)(i.Fragment, { children: a.Children.only(I) });
-    let N = null;
+    if (a.tq && T) return null;
+    if (null == t) return (0, i.jsx)(i.Fragment, { children: s.Children.only(I) });
+    let S = null;
     return (
         null != f
-            ? (N = (0, i.jsx)('img', {
+            ? (S = (0, i.jsx)('img', {
                   alt: '',
                   src: f,
                   className: u.image
               }))
             : null != E &&
-              (N = (0, i.jsx)(r.LottieAnimation, {
+              (S = (0, i.jsx)(r.LottieAnimation, {
                   importData: E,
                   shouldAnimate: !x,
                   className: u.animation
@@ -31,7 +31,7 @@ t.Z = a.memo(function (e) {
                 (0, i.jsxs)('div', {
                     className: u.content,
                     children: [
-                        N,
+                        S,
                         (0, i.jsxs)('div', {
                             className: u.text,
                             children: [
@@ -53,15 +53,15 @@ t.Z = a.memo(function (e) {
                 (0, i.jsxs)('div', {
                     className: u.buttonContainer,
                     children: [
-                        null != C &&
+                        null != g &&
                             (0, i.jsx)(r.Button, {
                                 className: u.button,
                                 size: r.Button.Sizes.SMALL,
-                                onClick: g,
+                                onClick: C,
                                 look: r.Button.Looks.LINK,
                                 color: r.Button.Colors.PRIMARY,
-                                submitting: m,
-                                children: C
+                                submitting: p,
+                                children: g
                             }),
                         null != h &&
                             (0, i.jsx)(r.Button, {
@@ -69,8 +69,8 @@ t.Z = a.memo(function (e) {
                                 innerClassName: u.innerButton,
                                 size: r.Button.Sizes.SMALL,
                                 onClick: _,
-                                submitting: m,
-                                color: null != p ? p : r.Button.Colors.PRIMARY,
+                                submitting: p,
+                                color: null != m ? m : r.Button.Colors.PRIMARY,
                                 children: h
                             })
                     ]

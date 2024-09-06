@@ -13,9 +13,9 @@ e.exports = function (e, t, n, o) {
             I = null === h,
             m = h == h,
             T = r(h);
-        if (c) var g = o || m;
-        else g = E ? m && (o || p) : d ? m && p && (o || !I) : _ ? m && p && !I && (o || !T) : !I && !T && (o ? h <= t : h < t);
-        g ? (l = f + 1) : (u = f);
+        if (c) var S = o || m;
+        else S = E ? m && (o || p) : d ? m && p && (o || !I) : _ ? m && p && !I && (o || !T) : !I && !T && (o ? h <= t : h < t);
+        S ? (l = f + 1) : (u = f);
     }
     return s(u, i);
 };

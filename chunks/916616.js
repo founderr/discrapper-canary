@@ -21,8 +21,8 @@ var r,
     I = n(689938),
     m = n(235202),
     T = n(167969),
-    g = n(557256);
-function S(e, t, n) {
+    S = n(557256);
+function g(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -38,13 +38,13 @@ function S(e, t, n) {
 class A extends (r = a.PureComponent) {
     render() {
         let e;
-        let { className: t, imageClassName: n, readyState: r, src: a, placeholder: s, placeholderVersion: l, alt: c, width: E, height: T, maxWidth: g = E, maxHeight: S = T, minWidth: A, minHeight: R, mediaLayoutType: v, limitResponsiveWidth: C = !0, accessory: y, zoomable: L, original: D, children: b, renderAccessory: M, onClick: P, tabIndex: U, dataSafeSrc: w, useFullWidth: x = !1, ...G } = this.props;
+        let { className: t, imageClassName: n, readyState: r, src: a, placeholder: s, placeholderVersion: l, alt: c, width: E, height: T, maxWidth: S = E, maxHeight: g = T, minWidth: A, minHeight: R, mediaLayoutType: v, limitResponsiveWidth: C = !0, accessory: y, zoomable: D, original: L, children: b, renderAccessory: M, onClick: P, tabIndex: U, dataSafeSrc: w, useFullWidth: x = !1, ...G } = this.props;
         if (1 === E && 1 === T) return null;
         let k = (0, _.Tj)({
                 width: E,
                 height: T,
-                maxWidth: g,
-                maxHeight: S,
+                maxWidth: S,
+                maxHeight: g,
                 minWidth: A,
                 minHeight: R
             }),
@@ -81,7 +81,7 @@ class A extends (r = a.PureComponent) {
                     className: o()(
                         m.imageWrapper,
                         {
-                            [m.imageZoom]: L,
+                            [m.imageZoom]: D,
                             [m.imageWrapperBackground]: r !== h.zo9.READY,
                             [m.clickable]: null != P
                         },
@@ -106,13 +106,13 @@ class A extends (r = a.PureComponent) {
                     })(k, C, x, v),
                     ...G,
                     children: [
-                        null != D &&
+                        null != L &&
                             (0, i.jsx)('a', {
                                 tabIndex: -1,
                                 onClick: P,
                                 'aria-hidden': !0,
                                 className: m.originalLink,
-                                href: D,
+                                href: L,
                                 ref: this._containerRef,
                                 'data-role': 'img',
                                 'data-safe-src': null != w ? w : a
@@ -141,7 +141,7 @@ class A extends (r = a.PureComponent) {
         );
     }
     constructor(...e) {
-        super(...e), S(this, '_containerRef', a.createRef()), S(this, '_clickableRef', a.createRef());
+        super(...e), g(this, '_containerRef', a.createRef()), g(this, '_clickableRef', a.createRef());
     }
 }
 function N(e) {
@@ -169,13 +169,13 @@ function N(e) {
             }
         })(t, n),
         children: (0, i.jsx)('img', {
-            src: (0, l.ap)(a) ? g : T,
+            src: (0, l.ap)(a) ? S : T,
             className: m.imageError,
             alt: null != r ? r : I.Z.Messages.IMAGE
         })
     });
 }
-S(A, 'defaultProps', {
+g(A, 'defaultProps', {
     readyState: h.zo9.READY,
     zoomable: !0,
     children: (e) => {

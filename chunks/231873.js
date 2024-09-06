@@ -1,13 +1,13 @@
-var i, a, s, l, r, o;
+var i, s, a, l, r, o;
 n.d(t, {
     Ft: function () {
-        return s;
+        return a;
     },
     Rg: function () {
         return i;
     },
     j7: function () {
-        return a;
+        return s;
     }
 }),
     ((l = i || (i = {})).INVITE = 'member_joined'),
@@ -16,7 +16,7 @@ n.d(t, {
     (l.MESSAGE = 'send_message'),
     (l.COMPLETED = 'completed'),
     (l.DISMISSED = 'dismissed'),
-    ((r = a || (a = {})).PERSONALIZE_SERVER = 'Personalize Server'),
+    ((r = s || (s = {})).PERSONALIZE_SERVER = 'Personalize Server'),
     (r.INVITE = 'Invite Friends'),
     (r.CREATE_CHANNEL = 'Create Channel'),
     (r.SEND_MESSAGE = 'Send Message'),
@@ -27,6 +27,6 @@ n.d(t, {
     (r.JOIN_GUILD = 'Join Guild'),
     (r.CONTACT_SYNC = 'Sync Contacts'),
     (r.DISMISS = 'Dismiss'),
-    ((o = s || (s = {})).CHANNEL_WELCOME = 'Channel Welcome CTA'),
+    ((o = a || (a = {})).CHANNEL_WELCOME = 'Channel Welcome CTA'),
     (o.GUILD_PROGRESS = 'Guild Progress'),
     (o.HUB_PROGRESS = 'Hub Progress');

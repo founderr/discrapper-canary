@@ -24,14 +24,14 @@ t.Z = {
                     I = n.boundary,
                     m = n.rootBoundary,
                     T = n.altBoundary,
-                    g = n.flipVariations,
-                    S = void 0 === g || g,
+                    S = n.flipVariations,
+                    g = void 0 === S || S,
                     A = n.allowedAutoPlacements,
                     N = t.options.placement,
                     O = (0, i.Z)(N) === N,
                     R =
                         h ||
-                        (O || !S
+                        (O || !g
                             ? [(0, r.Z)(N)]
                             : (function (e) {
                                   if ((0, i.Z)(e) === l.d7) return [];
@@ -46,7 +46,7 @@ t.Z = {
                                       boundary: I,
                                       rootBoundary: m,
                                       padding: p,
-                                      flipVariations: S,
+                                      flipVariations: g,
                                       allowedAutoPlacements: A
                                   })
                                 : n
@@ -54,8 +54,8 @@ t.Z = {
                     }, []),
                     C = t.rects.reference,
                     y = t.rects.popper,
-                    L = new Map(),
-                    D = !0,
+                    D = new Map(),
+                    L = !0,
                     b = v[0],
                     M = 0;
                 M < v.length;
@@ -84,17 +84,17 @@ t.Z = {
                         return e;
                     }))
                 ) {
-                    (b = P), (D = !1);
+                    (b = P), (L = !1);
                     break;
                 }
-                L.set(P, V);
+                D.set(P, V);
             }
-            if (D) {
+            if (L) {
                 for (
-                    var H = S ? 3 : 1,
+                    var H = g ? 3 : 1,
                         Z = function (e) {
                             var t = v.find(function (t) {
-                                var n = L.get(t);
+                                var n = D.get(t);
                                 if (n)
                                     return n.slice(0, e).every(function (e) {
                                         return e;

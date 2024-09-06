@@ -1,6 +1,6 @@
 n.d(t, {
     J: function () {
-        return g;
+        return S;
     }
 }),
     n(47120),
@@ -25,7 +25,7 @@ var r = n(735250),
     I = n(981631),
     m = n(654892);
 function T(e) {
-    let { url: t, className: n, style: a, onLoad: s, shouldRefocus: m, queryParams: T, allowPopups: g = !1, referrerPolicy: S = 'origin' } = e,
+    let { url: t, className: n, style: a, onLoad: s, shouldRefocus: m, queryParams: T, allowPopups: S = !1, referrerPolicy: g = 'origin' } = e,
         A = (0, u.e7)([c.Z], () => c.Z.getWindow(I.KJ3.CHANNEL_CALL_POPOUT)),
         N = (0, o.useMemoOne)(() => (0, l.Z)(), [t]),
         O = i.useRef(null),
@@ -36,10 +36,10 @@ function T(e) {
             platform: p.S4.DESKTOP
         },
         [C, y] = i.useState(!1),
-        L = _.Z.theme,
-        D = { ...a };
+        D = _.Z.theme,
+        L = { ...a };
     return (
-        L === I.BRd.LIGHT ? (D.colorScheme = 'light') : (D.colorScheme = 'dark'),
+        D === I.BRd.LIGHT ? (L.colorScheme = 'light') : (L.colorScheme = 'dark'),
         i.useEffect(
             () => (
                 E.S.dispatch(I.CkL.IFRAME_MOUNT, { id: N }),
@@ -61,24 +61,24 @@ function T(e) {
                 }
             );
         }, []),
-        C && (D.pointerEvents = 'none'),
+        C && (L.pointerEvents = 'none'),
         null != t
             ? (0, r.jsx)('iframe', {
-                  style: D,
+                  style: L,
                   allow: 'autoplay; encrypted-media',
-                  referrerPolicy: S,
+                  referrerPolicy: g,
                   onLoad: function (e) {
                       var n;
                       null == s || s(e.target), (O.current = e.target), R(!0), null === (n = e.target.contentWindow) || void 0 === n || n.postMessage([d.Z.HELLO, v], null != t ? t : '');
                   },
-                  sandbox: (0, h.Z)({ allowPopups: g }),
+                  sandbox: (0, h.Z)({ allowPopups: S }),
                   className: n,
                   src: ''.concat(t, '?').concat(new URLSearchParams(v))
               })
             : null
     );
 }
-function g(e) {
+function S(e) {
     let { onLoad: t } = e,
         [n, a] = i.useState(!1),
         o = i.useCallback(

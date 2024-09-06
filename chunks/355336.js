@@ -21,8 +21,8 @@ function c(e, t) {
             });
         });
     return i.forwardRef(function (t, c) {
-        let { children: d, className: _, onResize: E, contentClassName: f, onScroll: h, dir: p = 'ltr', fade: I = !1, customTheme: m = !1, style: T, ...g } = t,
-            S = i.useRef(null),
+        let { children: d, className: _, onResize: E, contentClassName: f, onScroll: h, dir: p = 'ltr', fade: I = !1, customTheme: m = !1, style: T, ...S } = t,
+            g = i.useRef(null),
             A = i.useRef(null),
             [N, O] = i.useState(!1),
             { scrollerRef: R, getScrollerState: v } = (0, l.Ke)(),
@@ -31,7 +31,7 @@ function c(e, t) {
             c,
             () => ({
                 getScrollerNode: () => R.current,
-                isScrolling: () => null != S.current,
+                isScrolling: () => null != g.current,
                 getScrollerState: v,
                 ...(0, l.Ue)(R, v, C)
             }),
@@ -39,16 +39,16 @@ function c(e, t) {
         );
         let y = i.useCallback(
             (e) => {
-                null == S.current ? O(!0) : clearTimeout(S.current),
-                    (S.current = setTimeout(() => {
-                        (S.current = null), O(!1);
+                null == g.current ? O(!0) : clearTimeout(g.current),
+                    (g.current = setTimeout(() => {
+                        (g.current = null), O(!1);
                     }, 200)),
                     null != h && h(e);
             },
             [h]
         );
         return (
-            i.useEffect(() => () => clearTimeout(S.current), []),
+            i.useEffect(() => () => clearTimeout(g.current), []),
             (0, l.zn)({
                 ref: R,
                 key: 'container',
@@ -75,7 +75,7 @@ function c(e, t) {
                 style: T,
                 dir: p,
                 onScroll: y,
-                ...g,
+                ...S,
                 children: (0, r.jsx)(o.J, {
                     containerRef: A,
                     children: (0, r.jsxs)('div', {

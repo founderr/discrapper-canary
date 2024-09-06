@@ -5,8 +5,8 @@ n.d(t, {
 }),
     n(47120);
 var i,
-    a,
-    s = n(735250),
+    s,
+    a = n(735250),
     l = n(470079),
     r = n(120356),
     o = n.n(r),
@@ -14,23 +14,23 @@ var i,
     u = n(763520),
     d = n(153066),
     h = n(542590);
-((a = i || (i = {})).CONTAIN = 'contain'), (a.COVER = 'cover');
-let p = l.memo(function (e) {
-    let { streamId: t, onResize: n, wrapperClassName: i, videoComponent: a, className: r, fit: p = 'contain', mirror: m = !1, paused: _ = !1, streamPreviewURL: f, videoSpinnerContext: E, userId: C } = e,
-        [g, I] = l.useState(!0),
+((s = i || (i = {})).CONTAIN = 'contain'), (s.COVER = 'cover');
+let m = l.memo(function (e) {
+    let { streamId: t, onResize: n, wrapperClassName: i, videoComponent: s, className: r, fit: m = 'contain', mirror: p = !1, paused: _ = !1, streamPreviewURL: f, videoSpinnerContext: E, userId: g } = e,
+        [C, I] = l.useState(!0),
         [x] = l.useState(() => new u.o('VideoStream'));
     l.useEffect(() => {
-        !_ && (g ? x.onSpinnerStarted() : null != t && x.trackSpinnerDuration(E, C, t));
-    }, [g, _, t, x, E, C]);
+        !_ && (C ? x.onSpinnerStarted() : null != t && x.trackSpinnerDuration(E, g, t));
+    }, [C, _, t, x, E, g]);
     let T = l.useCallback(() => {
         I(!1);
     }, []);
-    return (0, s.jsxs)('div', {
+    return (0, a.jsxs)('div', {
         className: o()(h.wrapper, i),
         children: [
             null != t &&
-                (0, s.jsx)(a, {
-                    className: o()(h.video, (0, d.l)(h, 'video', p), { [h.mirror]: m }, r),
+                (0, a.jsx)(s, {
+                    className: o()(h.video, (0, d.l)(h, 'video', m), { [h.mirror]: p }, r),
                     streamId: t,
                     onResize: n,
                     onReady: T,
@@ -38,27 +38,27 @@ let p = l.memo(function (e) {
                 }),
             _
                 ? null
-                : (0, s.jsx)('div', {
-                      className: o()(h.previewWrapper, { [h.loading]: g }),
+                : (0, a.jsx)('div', {
+                      className: o()(h.previewWrapper, { [h.loading]: C }),
                       children:
-                          g &&
-                          (0, s.jsxs)(l.Fragment, {
+                          C &&
+                          (0, a.jsxs)(l.Fragment, {
                               children: [
                                   null != f
-                                      ? (0, s.jsx)('img', {
+                                      ? (0, a.jsx)('img', {
                                             src: f,
                                             alt: '',
                                             className: h.previewImage
                                         })
-                                      : (0, s.jsx)('div', {
+                                      : (0, a.jsx)('div', {
                                             className: h.emptyPreviewWrapper,
-                                            children: (0, s.jsx)('div', { className: h.emptyPreview })
+                                            children: (0, a.jsx)('div', { className: h.emptyPreview })
                                         }),
-                                  (0, s.jsx)(c.Spinner, { className: h.spinner })
+                                  (0, a.jsx)(c.Spinner, { className: h.spinner })
                               ]
                           })
                   })
         ]
     });
 });
-t.Z = p;
+t.Z = m;

@@ -1,9 +1,9 @@
 n.d(t, {
     A: function () {
-        return L;
+        return D;
     },
     Z: function () {
-        return D;
+        return L;
     }
 }),
     n(653041);
@@ -24,8 +24,8 @@ var r = n(392711),
     I = n(131951),
     m = n(866960),
     T = n(19780),
-    g = n(936349),
-    S = n(704806),
+    S = n(936349),
+    g = n(704806),
     A = n(626135),
     N = n(756315),
     O = n(569545),
@@ -45,7 +45,7 @@ function y(e, t, n) {
         e
     );
 }
-class L {
+class D {
     setActionContext(e) {
         this.actionContext = e;
     }
@@ -56,7 +56,7 @@ class L {
         y(this, 'streamRegion', void 0), y(this, 'streamApplication', void 0), y(this, 'streamSourceType', void 0), y(this, 'actionContext', void 0), y(this, 'maxViewers', void 0), y(this, 'isBroadcast', void 0), (this.streamRegion = e), (this.streamApplication = t), (this.streamSourceType = n), (this.actionContext = r), (this.maxViewers = i), (this.isBroadcast = a);
     }
 }
-class D extends o.Z {
+class L extends o.Z {
     get isOwner() {
         let { ownerId: e } = this._streamContext;
         return h.default.getId() === e;
@@ -130,12 +130,12 @@ class D extends o.Z {
                     r.on(a.Sh.ScreenshareFinish, (e, t, n, r, i, a, s, o, l, u, c, d, f, h, p, I) => {
                         let m = this.getMediaSessionId(),
                             T = this.getRTCConnectionId(),
-                            g = this.getGoLiveSource();
-                        (0, S.q)().then((S) => {
+                            S = this.getGoLiveSource();
+                        (0, g.q)().then((g) => {
                             var N, O, R;
                             let y = null;
-                            if (null != S) {
-                                let { cpu_brand: e, cpu_vendor: t, cpu_memory: n, gpu_brand: r, gpu_memory: i } = S;
+                            if (null != g) {
+                                let { cpu_brand: e, cpu_vendor: t, cpu_memory: n, gpu_brand: r, gpu_memory: i } = g;
                                 y = {
                                     cpu_brand: e,
                                     cpu_vendor: t,
@@ -144,9 +144,9 @@ class D extends o.Z {
                                     gpu_memory: i
                                 };
                             }
-                            let L = (null != e ? e : 0) + (null != t ? t : 0) + (null != n ? n : 0) + (null != r ? r : 0) + (null != i ? i : 0) + (null != a ? a : 0) + (null != u ? u : 0) + (null != I ? I : 0) + (null != p ? p : 0),
-                                D = (null == g ? void 0 : null === (N = g.desktopSource) || void 0 === N ? void 0 : N.sourcePid) != null ? E.ZP.getGameForPID(g.desktopSource.sourcePid) : null,
-                                { gameName: b, gameId: M, exe: P, distributor: U } = (0, _.G8)(D);
+                            let D = (null != e ? e : 0) + (null != t ? t : 0) + (null != n ? n : 0) + (null != r ? r : 0) + (null != i ? i : 0) + (null != a ? a : 0) + (null != u ? u : 0) + (null != I ? I : 0) + (null != p ? p : 0),
+                                L = (null == S ? void 0 : null === (N = S.desktopSource) || void 0 === N ? void 0 : N.sourcePid) != null ? E.ZP.getGameForPID(S.desktopSource.sourcePid) : null,
+                                { gameName: b, gameId: M, exe: P, distributor: U } = (0, _.G8)(L);
                             A.default.track(v.rMx.SCREENSHARE_FINISHED, {
                                 screenshare_frames: e,
                                 videohook_frames: t,
@@ -160,7 +160,7 @@ class D extends o.Z {
                                 quartz_frames: u,
                                 screencapturekit_frames: I,
                                 go_live_camera_frames: p,
-                                total_frames: L,
+                                total_frames: D,
                                 desktop_capturer_type: c,
                                 media_session_id: m,
                                 rtc_connection_id: T,
@@ -168,7 +168,7 @@ class D extends o.Z {
                                 screens: d,
                                 windows: f,
                                 activity: h,
-                                soundshare_session: null !== (R = null == g ? void 0 : null === (O = g.desktopSource) || void 0 === O ? void 0 : O.soundshareSession) && void 0 !== R ? R : void 0,
+                                soundshare_session: null !== (R = null == S ? void 0 : null === (O = S.desktopSource) || void 0 === O ? void 0 : O.soundshareSession) && void 0 !== R ? R : void 0,
                                 share_game_name: b,
                                 share_game_id: M,
                                 share_game_exe: P,
@@ -213,7 +213,7 @@ class D extends o.Z {
     _getStreamAnalyticsProperties() {
         let { streamRegion: e, streamApplication: t, streamSourceType: n, actionContext: r, isBroadcast: i } = this.analyticsContext,
             { ownerId: a, guildId: s } = this._streamContext,
-            o = g.Z.getRegion(T.Z.getHostname()),
+            o = S.Z.getRegion(T.Z.getHostname()),
             l = f.xd.getSetting(),
             { gameName: u, gameId: c, exe: d, distributor: E } = (0, _.G8)(t);
         return {

@@ -1,6 +1,6 @@
 n.d(t, {
     nC: function () {
-        return d;
+        return u;
     }
 }),
     n(47120),
@@ -19,12 +19,12 @@ function r(e) {
 function c(e) {
     return a.has(e);
 }
-function u(e) {
+function d(e) {
     return 0 === e.length;
 }
-function d(e) {
+function u(e) {
     var t;
-    let n = new Set(((t = e), s()(t.split(/\W+/)).map(l).reject(u).map(r).reject(c).map(o.$).value()));
+    let n = new Set(((t = e), s()(t.split(/\W+/)).map(l).reject(d).map(r).reject(c).map(o.$).value()));
     return (e) =>
         (function e(t, n) {
             if (Array.isArray(t)) t.forEach((t) => e(t, n));
@@ -33,7 +33,7 @@ function d(e) {
                     i = '';
                 t.content.split(/(\W+)/g).forEach((t) => {
                     var s, a;
-                    if (((s = t), (a = n), !u((s = r(l(s)))) && !c(s) && a.has((0, o.$)(s))))
+                    if (((s = t), (a = n), !d((s = r(l(s)))) && !c(s) && a.has((0, o.$)(s))))
                         i.length > 0 &&
                             e.push({
                                 type: 'text',

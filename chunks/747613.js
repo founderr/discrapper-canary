@@ -16,14 +16,14 @@ var r = n(735250),
     I = n(313201),
     m = n(633302),
     T = n(176354),
-    g = n(624138),
-    S = n(981631),
+    S = n(624138),
+    g = n(981631),
     A = n(689938),
     N = n(847838);
 let O = (0, I.hQ)(),
     R = d.Z.convert.fromCodePoint('1f44f'),
-    v = (0, g.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_VERTICAL),
-    C = (0, g.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_DIVERSITY_EMOJI_SIZE),
+    v = (0, S.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_VERTICAL),
+    C = (0, S.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_DIVERSITY_EMOJI_SIZE),
     y = (e) => {
         let { fade: t, surrogate: n, onClick: i, delay: a, index: s } = e,
             o = (0, c.JA)('item-'.concat(s)),
@@ -67,7 +67,7 @@ let O = (0, I.hQ)(),
             })
         });
     },
-    L = (e) => {
+    D = (e) => {
         let { id: t, selectedSurrogate: n, onClick: a, hasTabWrapper: o } = e,
             d = (0, p.Z)('diversity'),
             _ = (0, E.useSpring)({
@@ -142,9 +142,9 @@ t.Z = (e) => {
             l
                 ? (0, r.jsx)('div', {
                       onKeyDown: (e) => {
-                          e.keyCode === S.yXg.ESCAPE && (e.stopPropagation(), u(!1), null != d.current && d.current.focus());
+                          e.keyCode === g.yXg.ESCAPE && (e.stopPropagation(), u(!1), null != d.current && d.current.focus());
                       },
-                      children: (0, r.jsx)(L, {
+                      children: (0, r.jsx)(D, {
                           id: O,
                           hasTabWrapper: s,
                           selectedSurrogate: n,

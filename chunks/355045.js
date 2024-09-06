@@ -15,8 +15,8 @@ var r = n(735250),
     I = n(678558),
     m = n(981631),
     T = n(474936),
-    g = n(689938),
-    S = n(837220);
+    S = n(689938),
+    g = n(837220);
 t.Z = function (e) {
     let { closeLayer: t, guild: n, onCtaVisibilityChange: a } = e,
         A = (0, o.e7)([E.default], () => E.default.getCurrentUser()),
@@ -31,54 +31,54 @@ t.Z = function (e) {
             [N, n.id]
         );
     return (0, r.jsxs)('div', {
-        className: S.guildStatus,
+        className: g.guildStatus,
         children: [
             (0, r.jsx)(d.Z, {
-                className: S.guildIcon,
+                className: g.guildIcon,
                 guild: n,
                 size: d.Z.Sizes.LARGER
             }),
             (0, r.jsx)(u.Heading, {
-                className: S.guildName,
+                className: g.guildName,
                 color: 'always-white',
                 variant: 'text-lg/bold',
                 children: n.name
             }),
             (0, r.jsxs)('div', {
-                className: S.guildBoostCountWrapper,
+                className: g.guildBoostCountWrapper,
                 children: [
                     (0, r.jsxs)('div', {
-                        className: S.guildBoostCount,
+                        className: g.guildBoostCount,
                         children: [
-                            (0, r.jsx)(h.Z, { className: s()(S.guildBoostBadge, { [S.guildBoostBadgeWithBoosts]: n.premiumSubscriberCount > 0 }) }),
+                            (0, r.jsx)(h.Z, { className: s()(g.guildBoostBadge, { [g.guildBoostBadgeWithBoosts]: n.premiumSubscriberCount > 0 }) }),
                             (0, r.jsx)(u.Text, {
-                                className: S.guildStatusCopy,
+                                className: g.guildStatusCopy,
                                 variant: 'text-md/bold',
-                                children: g.Z.Messages.PREMIUM_GUILD_PERKS_MODAL_HEADER_SUBSCRIPTION_COUNT.format({ subscriptions: n.premiumSubscriberCount })
+                                children: S.Z.Messages.PREMIUM_GUILD_PERKS_MODAL_HEADER_SUBSCRIPTION_COUNT.format({ subscriptions: n.premiumSubscriberCount })
                             })
                         ]
                     }),
                     R.length > 0
                         ? (0, r.jsx)(u.Text, {
-                              className: S.guildBoostCountCurrentUser,
+                              className: g.guildBoostCountCurrentUser,
                               variant: 'text-sm/normal',
-                              children: g.Z.Messages.PREMIUM_GUILD_PERKS_MODAL_HEADER_USER_SUBSCRIPTION_COUNT.format({ numSubscriptions: R.length })
+                              children: S.Z.Messages.PREMIUM_GUILD_PERKS_MODAL_HEADER_USER_SUBSCRIPTION_COUNT.format({ numSubscriptions: R.length })
                           })
                         : null
                 ]
             }),
             (0, r.jsxs)('div', {
-                className: S.guildBoostCtas,
+                className: g.guildBoostCtas,
                 children: [
                     (0, r.jsx)(l.$, {
                         onChange: a,
                         threshold: 0.9,
                         children: (0, r.jsx)('div', {
-                            className: s()(S.guildBoostCta, S.guildBoostCtaBoostWrapper),
+                            className: s()(g.guildBoostCta, g.guildBoostCtaBoostWrapper),
                             children: (0, r.jsx)(I.Z, {
-                                className: S.guildBoostCtaBoost,
-                                innerClassName: s()(S.__invalid_guildBoostCtaContent, S.guildBoostCtaBoostContent),
-                                buttonShineClassName: S.guildBoostCtaBoostShine,
+                                className: g.guildBoostCtaBoost,
+                                innerClassName: s()(g.__invalid_guildBoostCtaContent, g.guildBoostCtaBoostContent),
+                                buttonShineClassName: g.guildBoostCtaBoostShine,
                                 guild: n,
                                 analyticsLocation: {
                                     page: m.ZY5.PREMIUM_GUILD_USER_MODAL,
@@ -95,8 +95,8 @@ t.Z = function (e) {
                     }),
                     p.ZP.hasFreeBoosts(A) || p.ZP.isPremium(A, T.p9.TIER_2)
                         ? (0, r.jsxs)(u.Button, {
-                              className: s()(S.guildBoostCta, S.guildBoostCtaSecondary),
-                              innerClassName: s()(S.__invalid_guildBoostCtaContent, S.guildBoostCtaGiftContent),
+                              className: s()(g.guildBoostCta, g.guildBoostCtaSecondary),
+                              innerClassName: s()(g.__invalid_guildBoostCtaContent, g.guildBoostCtaGiftContent),
                               look: u.Button.Looks.OUTLINED,
                               color: u.Button.Colors.WHITE,
                               onClick: function () {
@@ -119,14 +119,14 @@ t.Z = function (e) {
                                   (0, r.jsx)(u.GiftIcon, {
                                       size: 'md',
                                       color: 'currentColor',
-                                      className: S.guildBoostCtaGiftIcon
+                                      className: g.guildBoostCtaGiftIcon
                                   }),
-                                  g.Z.Messages.PREMIUM_GUILD_PERKS_MODAL_GIFT_NITRO
+                                  S.Z.Messages.PREMIUM_GUILD_PERKS_MODAL_GIFT_NITRO
                               ]
                           })
                         : (0, r.jsx)(u.Button, {
-                              className: s()(S.guildBoostCta, S.guildBoostCtaSecondary),
-                              innerClassName: s()(S.__invalid_guildBoostCtaContent, S.__invalid_guildBoostCtaSubscribeContent),
+                              className: s()(g.guildBoostCta, g.guildBoostCtaSecondary),
+                              innerClassName: s()(g.__invalid_guildBoostCtaContent, g.__invalid_guildBoostCtaSubscribeContent),
                               look: u.Button.Looks.OUTLINED,
                               color: u.Button.Colors.WHITE,
                               onClick: function () {
@@ -144,7 +144,7 @@ t.Z = function (e) {
                                   });
                               },
                               size: u.Button.Sizes.LARGE,
-                              children: g.Z.Messages.PREMIUM_GUILD_PERKS_MODAL_SUBSCRIBE_WITH_FREE_BOOSTS
+                              children: S.Z.Messages.PREMIUM_GUILD_PERKS_MODAL_SUBSCRIBE_WITH_FREE_BOOSTS
                           })
                 ]
             })

@@ -28,8 +28,8 @@ let l = (e) => {
             getItemProps: I,
             getRowProps: m,
             gridContainerProps: T,
-            handleGridContainerKeyDown: g,
-            isUsingKeyboardNavigation: S
+            handleGridContainerKeyDown: S,
+            isUsingKeyboardNavigation: g
         } = (0, o.VO)({
             columnCounts: t,
             gridNavigatorId: c,
@@ -60,8 +60,8 @@ let l = (e) => {
             getItemProps: I,
             getRowProps: m,
             gridContainerProps: T,
-            handleGridContainerKeyDown: g,
-            isUsingKeyboardNavigation: S
+            handleGridContainerKeyDown: S,
+            isUsingKeyboardNavigation: g
         }
     );
 };

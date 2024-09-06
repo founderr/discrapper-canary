@@ -1,12 +1,12 @@
 n(47120);
-var r,
-    i = n(735250),
+var i,
+    s = n(735250),
     a = n(470079),
-    s = n(120356),
-    o = n.n(s),
-    l = n(846519),
-    u = n(600164),
-    c = n(657488);
+    l = n(120356),
+    r = n.n(l),
+    o = n(846519),
+    c = n(600164),
+    u = n(657488);
 function d(e, t, n) {
     return (
         t in e
@@ -20,30 +20,30 @@ function d(e, t, n) {
         e
     );
 }
-function _(e) {
+function h(e) {
     let { percentage: t, isSingleLine: n } = e;
-    return (0, i.jsx)('div', {
-        className: o()({
-            [c.bar]: n,
-            [c.barInMultiLine]: !n
+    return (0, s.jsx)('div', {
+        className: r()({
+            [u.bar]: n,
+            [u.barInMultiLine]: !n
         }),
-        children: (0, i.jsx)('div', {
-            className: c.barInner,
+        children: (0, s.jsx)('div', {
+            className: u.barInner,
             style: { width: ''.concat(100 * Math.max(Math.min(t, 1), 0), '%') }
         })
     });
 }
-function E(e) {
+function m(e) {
     return String(e).padStart(2, '0');
 }
-function f(e) {
+function p(e) {
     let { time: t, padLargestUnit: n } = e,
-        r = Math.floor(t) % 60,
-        i = Math.floor(t / 60) % 60,
+        i = Math.floor(t) % 60,
+        s = Math.floor(t / 60) % 60,
         a = Math.floor(t / 3600);
-    return 0 === a ? (n ? ''.concat(E(i), ':').concat(E(r)) : ''.concat(i, ':').concat(E(r))) : n ? ''.concat(E(a), ':').concat(E(i), ':').concat(E(r)) : ''.concat(a, ':').concat(E(i), ':').concat(E(r));
+    return 0 === a ? (n ? ''.concat(m(s), ':').concat(m(i)) : ''.concat(s, ':').concat(m(i))) : n ? ''.concat(m(a), ':').concat(m(s), ':').concat(m(i)) : ''.concat(a, ':').concat(m(s), ':').concat(m(i));
 }
-class h extends (r = a.PureComponent) {
+class _ extends (i = a.PureComponent) {
     componentDidMount() {
         this.timer.start(500, () => {
             this.setState({ now: Date.now() });
@@ -53,59 +53,59 @@ class h extends (r = a.PureComponent) {
         this.timer.stop();
     }
     render() {
-        let { start: e, end: t, className: n, themed: r, singleLine: a = !1 } = this.props,
-            { now: s } = this.state,
-            l = (t - e) / 1000,
-            d = Math.max(Math.min((s - e) / 1000, l), 0);
+        let { start: e, end: t, className: n, themed: i, singleLine: a = !1 } = this.props,
+            { now: l } = this.state,
+            o = (t - e) / 1000,
+            d = Math.max(Math.min((l - e) / 1000, o), 0);
         return a
-            ? (0, i.jsxs)('div', {
-                  className: o()(n, { [c.themed]: r }, c.singleLineContainer),
+            ? (0, s.jsxs)('div', {
+                  className: r()(n, { [u.themed]: i }, u.singleLineContainer),
                   children: [
-                      (0, i.jsx)('div', {
-                          className: c.textLeftInSingleLine,
-                          children: f({
+                      (0, s.jsx)('div', {
+                          className: u.textLeftInSingleLine,
+                          children: p({
                               time: d,
                               padLargestUnit: !0
                           })
                       }),
-                      (0, i.jsx)('div', {
-                          className: c.barInSingleLine,
-                          children: (0, i.jsx)(_, {
-                              percentage: d / l,
+                      (0, s.jsx)('div', {
+                          className: u.barInSingleLine,
+                          children: (0, s.jsx)(h, {
+                              percentage: d / o,
                               isSingleLine: !0
                           })
                       }),
-                      (0, i.jsx)('div', {
-                          className: c.textRight,
-                          children: f({
-                              time: l,
+                      (0, s.jsx)('div', {
+                          className: u.textRight,
+                          children: p({
+                              time: o,
                               padLargestUnit: !0
                           })
                       })
                   ]
               })
-            : (0, i.jsxs)('div', {
-                  className: o()(n, { [c.themed]: r }),
+            : (0, s.jsxs)('div', {
+                  className: r()(n, { [u.themed]: i }),
                   children: [
-                      (0, i.jsx)(_, {
-                          percentage: d / l,
+                      (0, s.jsx)(h, {
+                          percentage: d / o,
                           isSingleLine: !1
                       }),
-                      (0, i.jsxs)(u.Z, {
+                      (0, s.jsxs)(c.Z, {
                           children: [
-                              (0, i.jsx)(u.Z.Child, {
+                              (0, s.jsx)(c.Z.Child, {
                                   grow: 1,
-                                  className: c.textLeft,
-                                  children: f({
+                                  className: u.textLeft,
+                                  children: p({
                                       time: d,
                                       padLargestUnit: !1
                                   })
                               }),
-                              (0, i.jsx)(u.Z.Child, {
+                              (0, s.jsx)(c.Z.Child, {
                                   grow: 0,
-                                  className: c.textRight,
-                                  children: f({
-                                      time: l,
+                                  className: u.textRight,
+                                  children: p({
+                                      time: o,
                                       padLargestUnit: !1
                                   })
                               })
@@ -115,7 +115,7 @@ class h extends (r = a.PureComponent) {
               });
     }
     constructor(...e) {
-        super(...e), d(this, 'timer', new l.Xp()), d(this, 'state', { now: Date.now() });
+        super(...e), d(this, 'timer', new o.Xp()), d(this, 'state', { now: Date.now() });
     }
 }
-d(h, 'defaultProps', { themed: !1 }), (t.Z = h);
+d(_, 'defaultProps', { themed: !1 }), (t.Z = _);

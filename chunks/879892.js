@@ -21,7 +21,7 @@ var i = n(481060),
     f = n(981631);
 let h = 'apply-guild-boost-modal';
 async function p(e) {
-    let { analyticsLocations: t, analyticsLocation: p, analyticsSourceLocation: I, numberOfBoostsToAdd: m, onClose: T, closeLayer: g, onSubscriptionConfirmation: S, guild: A, handleSubscribeModalClose: N, disablePremiumUpsell: O, inPopout: R, applicationId: v } = e,
+    let { analyticsLocations: t, analyticsLocation: p, analyticsSourceLocation: I, numberOfBoostsToAdd: m, onClose: T, closeLayer: S, onSubscriptionConfirmation: g, guild: A, handleSubscribeModalClose: N, disablePremiumUpsell: O, inPopout: R, applicationId: v } = e,
         C = R ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT,
         y = l.default.getCurrentUser();
     if (null == y) return;
@@ -41,16 +41,16 @@ async function p(e) {
         );
         return;
     }
-    let L = [];
-    !c.Z.isLoadedForPremiumSKUs() && L.push((0, o.Y2)()), !u.Z.hasFetched && (L.push(a.jg()), L.push((0, s.X8)())), L.length > 0 && (await Promise.allSettled(L));
-    let D = (0, _.vx)(u.Z.boostSlots),
-        b = D.length,
+    let D = [];
+    !c.Z.isLoadedForPremiumSKUs() && D.push((0, o.Y2)()), !u.Z.hasFetched && (D.push(a.jg()), D.push((0, s.X8)())), D.length > 0 && (await Promise.allSettled(D));
+    let L = (0, _.vx)(u.Z.boostSlots),
+        b = L.length,
         M = (e) => {
             null == T || T(), null == N || N(e);
         };
     if (b > 0 && (null == m || b >= m)) {
         let e;
-        1 === b ? (e = D.slice(0, 1)) : null != m && (e = D.slice(0, m)),
+        1 === b ? (e = L.slice(0, 1)) : null != m && (e = L.slice(0, m)),
             await (0, i.openModalLazy)(
                 async () => {
                     let { default: t } = await Promise.all([n.e('52249'), n.e('29549'), n.e('15685'), n.e('8016'), n.e('22646'), n.e('30419'), n.e('72407')]).then(n.bind(n, 760558));
@@ -83,7 +83,7 @@ async function p(e) {
             guildId: A.id,
             closeLayer: () => {
                 null == T || T(),
-                    null == g || g(),
+                    null == S || S(),
                     d.default.track(f.rMx.MODAL_DISMISSED, {
                         type: f.ZY5.PREMIUM_GUILD_USER_MODAL,
                         location_section: p.section
@@ -92,7 +92,7 @@ async function p(e) {
             totalNumberOfSlotsToAssign: null != m ? m : 1,
             onCloseModal: M,
             disablePremiumUpsell: O,
-            onSubscriptionConfirmation: S,
+            onSubscriptionConfirmation: g,
             inPopout: R,
             applicationId: v
         });

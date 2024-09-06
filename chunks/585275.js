@@ -16,8 +16,8 @@ var i = n(512722),
     I = n(199902),
     m = n(314897),
     T = n(358085),
-    g = n(998502),
-    S = n(569545),
+    S = n(998502),
+    g = n(569545),
     A = n(70722),
     N = n(981631),
     O = n(65154);
@@ -26,14 +26,14 @@ let R = {},
     C = !1,
     y = window.document.createElement('canvas');
 (y.width = 512), (y.height = 288);
-let L = y.getContext('2d');
-function D() {
+let D = y.getContext('2d');
+function L() {
     v.stop(), null != r && (c.Z.removeSink(r, R), (r = null));
 }
 let b = o().debounce((e, t, n, r) => {
     M(
         e,
-        (0, S.V9)({
+        (0, g.V9)({
             streamType: null != t ? A.lo.GUILD : A.lo.CALL,
             guildId: t,
             channelId: n,
@@ -114,7 +114,7 @@ async function M(e, t) {
                 return (
                     null == s || s.putImageData(o, 0, 0),
                     new Promise((t) => {
-                        null == L || L.drawImage(a, 0, 0, e.width, e.height, 0, 0, r, i), t();
+                        null == D || D.drawImage(a, 0, 0, e.width, e.height, 0, 0, r, i), t();
                     })
                 );
             })(n);
@@ -129,7 +129,7 @@ async function M(e, t) {
             ) {
                 let e = m.default.getToken();
                 a()(null != e, 'Auth token was null while sending screenshot.'),
-                    await g.ZP.makeChunkedRequest(
+                    await S.ZP.makeChunkedRequest(
                         N.ANM.STREAM_PREVIEW(t),
                         { thumbnail: i },
                         {
@@ -151,12 +151,12 @@ async function M(e, t) {
 }
 t.Z = {
     init() {
-        E.Z.subscribe('CONNECTION_OPEN', D),
-            E.Z.subscribe('LOGOUT', D),
-            E.Z.subscribe('STREAM_DELETE', D),
+        E.Z.subscribe('CONNECTION_OPEN', L),
+            E.Z.subscribe('LOGOUT', L),
+            E.Z.subscribe('STREAM_DELETE', L),
             E.Z.subscribe('RTC_CONNECTION_VIDEO', (e) => {
                 let { guildId: t, channelId: n, userId: i, streamId: a, context: s } = e;
-                !(null == a || s !== O.Yn.STREAM || i !== m.default.getId() || __OVERLAY__) && (D(), (r = a), b(a, t, n, i));
+                !(null == a || s !== O.Yn.STREAM || i !== m.default.getId() || __OVERLAY__) && (L(), (r = a), b(a, t, n, i));
             }),
             E.Z.subscribe('MEDIA_ENGINE_VIDEO_STATE_CHANGED', (e) => {
                 let { videoState: t } = e;

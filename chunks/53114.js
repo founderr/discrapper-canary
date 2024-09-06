@@ -346,7 +346,7 @@ class p extends s.Z {
                 duration_decoder_unknown: f(e.decoderBuckets[_.gr.UNKNOWN]),
                 ...u
             },
-            { bytes: d, framesDropped: E, framesCodecError: h, framesCodec: p, framesNetwork: I, packets: m, packetsLost: T, nackCount: g, pliCount: S, qpSum: A, pauseCount: N, freezeCount: O, totalPausesDuration: R, totalFreezesDuration: v, totalFramesDuration: C, keyframes: y, passthroughCount: L, cryptorSuccessCount: D, cryptorFailureCount: b, cryptorDuration: M, cryptorAttempts: P, qualityDecodeErrors: U, qualityDecoderReboots: w, qualityScoreErrors: x, qualityFrameDrops: G, qualitySizeMismatches: k } = e.aggregatedProperties;
+            { bytes: d, framesDropped: E, framesCodecError: h, framesCodec: p, framesNetwork: I, packets: m, packetsLost: T, nackCount: S, pliCount: g, qpSum: A, pauseCount: N, freezeCount: O, totalPausesDuration: R, totalFreezesDuration: v, totalFramesDuration: C, keyframes: y, passthroughCount: D, cryptorSuccessCount: L, cryptorFailureCount: b, cryptorDuration: M, cryptorAttempts: P, qualityDecodeErrors: U, qualityDecoderReboots: w, qualityScoreErrors: x, qualityFrameDrops: G, qualitySizeMismatches: k } = e.aggregatedProperties;
         return {
             ...c,
             avg_bitrate: r > 0 ? Math.round(((null != d ? d : 0) * 8) / r) : 0,
@@ -358,8 +358,8 @@ class p extends s.Z {
             num_frames_codec_error: h,
             time_to_first_frame_ms: e.timeToFirstFrame,
             num_frames_dropped: E,
-            num_nacks: g,
-            num_plis: S,
+            num_nacks: S,
+            num_plis: g,
             qp_sum: A,
             receiver_pause_count: N,
             receiver_freeze_count: O,
@@ -367,8 +367,8 @@ class p extends s.Z {
             receiver_total_freezes_duration: v,
             receiver_total_frames_duration: C,
             num_keyframes: y,
-            cryptor_passthrough_count: L,
-            cryptor_success_count: D,
+            cryptor_passthrough_count: D,
+            cryptor_success_count: L,
             cryptor_failure_count: b,
             cryptor_duration: M,
             cryptor_attempts: P,
@@ -393,9 +393,9 @@ class p extends s.Z {
                 .forEach((t) => {
                     if (null != t) {
                         let T = t.ssrc,
-                            g = this.outboundStats[T];
-                        null == g && (console.warn('Unknown outbound video stream with SSRC: '.concat(T)), (g = new _.nt(this.timestampProducer)), (this.outboundStats[T] = g)), null == g.timeToFirstFrame && (t.framesEncoded > 0 || (null !== (r = t.frameRateInput) && void 0 !== r ? r : 0) > 0) && (g.timeToFirstFrame = Math.max(0, e - g.startTime));
-                        let S = n.find((e) => e.ssrc === T);
+                            S = this.outboundStats[T];
+                        null == S && (console.warn('Unknown outbound video stream with SSRC: '.concat(T)), (S = new _.nt(this.timestampProducer)), (this.outboundStats[T] = S)), null == S.timeToFirstFrame && (t.framesEncoded > 0 || (null !== (r = t.frameRateInput) && void 0 !== r ? r : 0) > 0) && (S.timeToFirstFrame = Math.max(0, e - S.startTime));
+                        let g = n.find((e) => e.ssrc === T);
                         var r,
                             i,
                             a,
@@ -408,12 +408,12 @@ class p extends s.Z {
                             I = !0;
                         if (this.connection.context === o.Yn.STREAM) {
                             var m = this.connection.getRemoteVideoSinkWants(T);
-                            null == m && (null == S ? void 0 : S.quality) === h && (m = this.connection.getRemoteVideoSinkWants('any')), (I = (null != m ? m : 0) > 0);
+                            null == m && (null == g ? void 0 : g.quality) === h && (m = this.connection.getRemoteVideoSinkWants('any')), (I = (null != m ? m : 0) > 0);
                         }
                         if (!this.videoStopped.value && I) {
-                            g.appendAndIncrementStats(_.z4.parseOutboundStats(t, e)), g.encoderCodec !== _.u7.UNKNOWN && E.add(g.encoderCodec);
-                            let n = null == S ? void 0 : S.maxBitrate;
-                            g.appendTargetRates(null == S ? void 0 : S.maxFrameRate, null !== (a = t.bitrateTarget) && void 0 !== a ? a : Math.min(null !== (i = c.availableOutgoingBitrate) && void 0 !== i ? i : 0, null != n ? n : 0), n, c.availableOutgoingBitrate), (g.averageEncodeTime = null !== (s = t.averageEncodeTime) && void 0 !== s ? s : 0), (g.framesDroppedRateLimiter = null !== (l = t.framesDroppedRateLimiter) && void 0 !== l ? l : null), (g.framesDroppedEncoderQueue = null !== (u = t.framesDroppedEncoderQueue) && void 0 !== u ? u : null), (g.framesDroppedCongestionWindow = null !== (d = t.framesDroppedCongestionWindow) && void 0 !== d ? d : null), (this.hqSimulcastStreamEncoded.value = null !== (f = t.hqSimulcastStreamEncoded) && void 0 !== f && f), (this.lqSimulcastStreamEncoded.value = null !== (p = t.lqSimulcastStreamEncoded) && void 0 !== p && p), (this.bothSimulcastStreamsEncoded.value = this.hqSimulcastStreamEncoded.value && this.lqSimulcastStreamEncoded.value);
+                            S.appendAndIncrementStats(_.z4.parseOutboundStats(t, e)), S.encoderCodec !== _.u7.UNKNOWN && E.add(S.encoderCodec);
+                            let n = null == g ? void 0 : g.maxBitrate;
+                            S.appendTargetRates(null == g ? void 0 : g.maxFrameRate, null !== (a = t.bitrateTarget) && void 0 !== a ? a : Math.min(null !== (i = c.availableOutgoingBitrate) && void 0 !== i ? i : 0, null != n ? n : 0), n, c.availableOutgoingBitrate), (S.averageEncodeTime = null !== (s = t.averageEncodeTime) && void 0 !== s ? s : 0), (S.framesDroppedRateLimiter = null !== (l = t.framesDroppedRateLimiter) && void 0 !== l ? l : null), (S.framesDroppedEncoderQueue = null !== (u = t.framesDroppedEncoderQueue) && void 0 !== u ? u : null), (S.framesDroppedCongestionWindow = null !== (d = t.framesDroppedCongestionWindow) && void 0 !== d ? d : null), (this.hqSimulcastStreamEncoded.value = null !== (f = t.hqSimulcastStreamEncoded) && void 0 !== f && f), (this.lqSimulcastStreamEncoded.value = null !== (p = t.lqSimulcastStreamEncoded) && void 0 !== p && p), (this.bothSimulcastStreamsEncoded.value = this.hqSimulcastStreamEncoded.value && this.lqSimulcastStreamEncoded.value);
                         }
                     }
                 }),

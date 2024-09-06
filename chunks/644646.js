@@ -15,9 +15,9 @@ var r = n(735250),
     I = n(341907),
     m = n(46140),
     T = n(689938),
-    g = n(984201);
+    S = n(984201);
 t.Z = function (e) {
-    let { className: t, quest: n, autoplay: a = !0, learnMoreStyle: S = null } = e,
+    let { className: t, quest: n, autoplay: a = !0, learnMoreStyle: g = null } = e,
         A = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
         N = (0, E.gO)(n),
         O = i.useMemo(() => (0, E.nP)(N.name), [N.name]),
@@ -48,7 +48,7 @@ t.Z = function (e) {
             a && !y.current ? C.current.play() : !a && y.current && ((C.current.currentTime = 0), C.current.pause()), (y.current = a);
         }
     }, [a, O, A]);
-    let L = O
+    let D = O
         ? (0, r.jsx)(p.Fl, {
               id: 'QuestRewardTile_rewardTileAnimated',
               children: (e) =>
@@ -60,7 +60,7 @@ t.Z = function (e) {
                       loop: !0,
                       muted: !0,
                       playsInline: !0,
-                      className: g.questRewardTileAsset,
+                      className: S.questRewardTileAsset,
                       controls: !1,
                       children: (0, r.jsx)('source', {
                           src: N.url,
@@ -74,43 +74,43 @@ t.Z = function (e) {
                   (0, r.jsx)('img', {
                       ref: e,
                       alt: h.r.build(n.config).defaultReward.messages.name,
-                      className: s()(g.questRewardTileAsset, g.questRewardTileAssetStatic),
+                      className: s()(S.questRewardTileAsset, S.questRewardTileAssetStatic),
                       src: N.url
                   })
           });
-    return null == S
+    return null == g
         ? (0, r.jsx)('div', {
-              className: s()(g.questRewardTile, t),
-              children: L
+              className: s()(S.questRewardTile, t),
+              children: D
           })
         : (0, r.jsxs)(u.Clickable, {
               className: s()(
-                  g.questRewardTileInteractive,
-                  g.questRewardTile,
+                  S.questRewardTileInteractive,
+                  S.questRewardTile,
                   {
-                      [g.rewardHighlight]: v,
-                      [g.borderOverlay]: !v
+                      [S.rewardHighlight]: v,
+                      [S.borderOverlay]: !v
                   },
                   t
               ),
               onClick: R,
               children: [
-                  L,
+                  D,
                   v &&
                       (0, r.jsx)(u.Shine, {
-                          className: g.shine,
+                          className: S.shine,
                           shineSize: u.ShineSizes.SMALL
                       }),
-                  'text' === S &&
+                  'text' === g &&
                       (0, r.jsx)(u.Text, {
                           color: 'always-white',
                           variant: 'text-xs/normal',
-                          className: g.questRewardTileDetailsLearnMore,
+                          className: S.questRewardTileDetailsLearnMore,
                           children: T.Z.Messages.QUESTS_LEARN_MORE_STACKED.format()
                       }),
-                  'icon' === S &&
+                  'icon' === g &&
                       (0, r.jsx)('div', {
-                          className: g.questRewardTileDetailsLearnMore,
+                          className: S.questRewardTileDetailsLearnMore,
                           children: (0, r.jsx)(u.CircleInformationIcon, {
                               size: 'xxs',
                               color: u.tokens.colors.WHITE.css

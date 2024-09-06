@@ -16,8 +16,8 @@ var r = n(147018),
     I = n(740362),
     m = n(566885),
     T = n(974971),
-    g = n(24033),
-    S = n(622281),
+    S = n(24033),
+    g = n(622281),
     A = n(714050),
     N = n(803938),
     O = n(879),
@@ -25,8 +25,8 @@ var r = n(147018),
     v = n(11697),
     C = n(202934),
     y = n(641236),
-    L = n(976418),
-    D = y('iterator'),
+    D = n(976418),
+    L = y('iterator'),
     b = 'URLSearchParams',
     M = b + 'Iterator',
     P = f.set,
@@ -111,7 +111,7 @@ var r = n(147018),
         !0
     ),
     ec = function (e) {
-        (this.entries = []), (this.url = null), void 0 !== e && (S(e) ? this.parseObject(e) : this.parseQuery('string' == typeof e ? ('?' === K(e, 0) ? ee(e, 1) : e) : A(e)));
+        (this.entries = []), (this.url = null), void 0 !== e && (g(e) ? this.parseObject(e) : this.parseQuery('string' == typeof e ? ('?' === K(e, 0) ? ee(e, 1) : e) : A(e)));
     };
 ec.prototype = {
     type: b,
@@ -129,7 +129,7 @@ ec.prototype = {
             u = v(e);
         if (u)
             for (n = (t = R(e, u)).next; !(r = a(n, t)).done; ) {
-                if ((o = a((s = (i = R(g(r.value))).next), i)).done || (l = a(s, i)).done || !a(s, i).done) throw Y('Expected sequence with length 2');
+                if ((o = a((s = (i = R(S(r.value))).next), i)).done || (l = a(s, i)).done || !a(s, i).done) throw Y('Expected sequence with length 2');
                 q(this.entries, {
                     key: A(o.value),
                     value: A(l.value)
@@ -229,7 +229,7 @@ if (
             },
             sort: function () {
                 var e = U(this);
-                L(e.entries, function (e, t) {
+                D(e.entries, function (e, t) {
                     return e.key > t.key ? 1 : -1;
                 }),
                     e.updateURL();
@@ -249,7 +249,7 @@ if (
         },
         { enumerable: !0 }
     ),
-    u(e_, D, e_.entries, { name: 'entries' }),
+    u(e_, L, e_.entries, { name: 'entries' }),
     u(
         e_,
         'toString',
@@ -280,7 +280,7 @@ if (
     var eE = s(H.has),
         ef = s(H.set),
         eh = function (e) {
-            if (S(e)) {
+            if (g(e)) {
                 var t,
                     n = e.body;
                 if (T(n) === b)

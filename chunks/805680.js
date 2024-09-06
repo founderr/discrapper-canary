@@ -16,8 +16,8 @@ var r = n(735250),
     I = n(40851),
     m = n(367907),
     T = n(907040),
-    g = n(455708),
-    S = n(314910),
+    S = n(455708),
+    g = n(314910),
     A = n(315744),
     N = n(603074),
     O = n(453070),
@@ -25,8 +25,8 @@ var r = n(735250),
     v = n(457040),
     C = n(740492),
     y = n(585483),
-    L = n(5967),
-    D = n(28546),
+    D = n(5967),
+    L = n(28546),
     b = n(957825),
     M = n(981631),
     P = n(149203),
@@ -47,7 +47,7 @@ let k = b.Om + P.Su.MEDIUM,
                     tab: i,
                     badged: !1
                 }),
-                    (0, D.hr)(i);
+                    (0, L.hr)(i);
             },
             'aria-current': t ? 'page' : void 0,
             className: s()(n, G.navButton, G.navItem, { [G.navButtonActive]: t }),
@@ -123,7 +123,7 @@ t.Z = i.memo(function (e) {
             drawerRef: ee,
             orientation: 'left' === K ? p.y.HORIZONTAL_RIGHT : p.y.HORIZONTAL_LEFT
         }),
-        er = (0, D.Iu)((e) => e.activeView),
+        er = (0, L.Iu)((e) => e.activeView),
         ei = (0, O.fQ)(Y),
         { renderWindow: ea, windowDispatch: es } = i.useContext(I.ZP),
         eo = (0, d.e7)([R.Z], () => !R.Z.hasLoadedStickerPacks),
@@ -140,18 +140,18 @@ t.Z = i.memo(function (e) {
                     if (n === ee.current || 'true' === n.getAttribute('data-menu-item') || 'true' === n.getAttribute('data-premium-tutorial-expression-picker-tooltip') || 'true' === n.getAttribute('data-premium-tutorial-persistent-coachmark-emoji-step')) return;
                     n = n.parentNode;
                 }
-                (0, D._Q)();
-                let r = null === (t = (0, L.uB)(e)) || void 0 === t ? void 0 : t.activeElement;
+                (0, L._Q)();
+                let r = null === (t = (0, D.uB)(e)) || void 0 === t ? void 0 : t.activeElement;
                 (null == r || 'BODY' === r.tagName) && y.S.dispatchToLastSubscribed(M.CkL.TEXTAREA_FOCUS);
             },
             [q, ec, eu]
         ),
         e_ = i.useCallback(() => {
-            (0, D._Q)();
+            (0, L._Q)();
         }, []);
     i.useLayoutEffect(() => {
         let e = () => {
-            er === b.X1.GIF && (0, D._Q)();
+            er === b.X1.GIF && (0, L._Q)();
         };
         return (
             ea.addEventListener('mousedown', ed),
@@ -165,10 +165,10 @@ t.Z = i.memo(function (e) {
     }, [er, e_, ed, ea, es]),
         (0, E.useFocusLock)(X),
         i.useEffect(() => {
-            (0, D.ql)('');
+            (0, L.ql)('');
         }, []),
         i.useEffect(() => {
-            ((!eu && (0, _.$s)()) || (eu && !ec)) && (0, D._Q)();
+            ((!eu && (0, _.$s)()) || (eu && !ec)) && (0, L._Q)();
         }, [ec, eu]),
         i.useEffect(() => {
             if (null != ee.current && !$.current) {
@@ -192,7 +192,7 @@ t.Z = i.memo(function (e) {
         eI = null != z ? z : 'left' === K ? G.positionLayerDefaultAlignLeft : G.positionLayerDefaultAlignRight;
     return (0, r.jsx)(h.Z, {
         section: M.jXE.EXPRESSION_PICKER,
-        children: (0, r.jsx)(S.W5, {
+        children: (0, r.jsx)(g.W5, {
             className: s()(G.positionLayer, eI),
             targetRef: o,
             position: W,
@@ -290,7 +290,7 @@ t.Z = i.memo(function (e) {
                                                 })
                                               : null,
                                           er === b.X1.GIF && eE
-                                              ? (0, r.jsx)(g.Z, {
+                                              ? (0, r.jsx)(S.Z, {
                                                     onSelectGIF: C,
                                                     hideFavorites: l,
                                                     persistSearch: !0

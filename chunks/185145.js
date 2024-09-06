@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(735250);
 n(470079);
-var a = n(442837),
-    s = n(481060),
+var s = n(442837),
+    a = n(481060),
     l = n(346486),
     r = n(545594),
     o = n(314897),
@@ -15,15 +15,15 @@ var a = n(442837),
     u = n(322937),
     d = n(134049),
     h = n(893732),
-    p = n(590433),
-    m = n(689938),
+    m = n(590433),
+    p = n(689938),
     _ = n(679061);
 function f(e) {
     let { guild: t, disabledUntil: n } = e,
         [f, E] = (0, d.i)(t.id),
-        C = (0, a.e7)([c.ZP, o.default], () => c.ZP.getMember(t.id, o.default.getId()), [t.id]);
+        g = (0, s.e7)([c.ZP, o.default], () => c.ZP.getMember(t.id, o.default.getId()), [t.id]);
     return (
-        (0, u.$)(C),
+        (0, u.$)(g),
         (0, i.jsxs)('div', {
             children: [
                 f
@@ -33,16 +33,16 @@ function f(e) {
                       })
                     : null,
                 (0, i.jsx)(r.i, {
-                    bannerIcon: (0, i.jsx)(s.ClockWarningIcon, {
+                    bannerIcon: (0, i.jsx)(a.ClockWarningIcon, {
                         size: 'md',
                         color: 'currentColor',
                         className: _.bannerIcon
                     }),
-                    bannerHeader: m.Z.Messages.GUILD_COMMUNICATION_DISABLED_NOTICE_HEADER,
-                    bannerSubtext: m.Z.Messages.GUILD_COMMUNICATION_DISABLED_CHAT_NOTICE_DESCRIPTION.format({ link: p.cu }),
+                    bannerHeader: p.Z.Messages.GUILD_COMMUNICATION_DISABLED_NOTICE_HEADER,
+                    bannerSubtext: p.Z.Messages.GUILD_COMMUNICATION_DISABLED_CHAT_NOTICE_DESCRIPTION.format({ link: m.cu }),
                     containerStyles: _.bannerContainer,
                     headerStyles: _.bannerHeader,
-                    children: (0, i.jsx)(s.Text, {
+                    children: (0, i.jsx)(a.Text, {
                         variant: 'text-sm/semibold',
                         children: (0, i.jsx)(l.Z, {
                             deadline: new Date(n),

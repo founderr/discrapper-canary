@@ -15,8 +15,8 @@ var r = n(735250),
     I = n(665692),
     m = n(981631),
     T = n(689938),
-    g = n(847602);
-let S = {
+    S = n(847602);
+let g = {
     results: {
         command: null,
         integrations: [],
@@ -42,12 +42,12 @@ let N = {
     },
     queryResults(e, t, n, r, i) {
         let { command: a, query: o } = A(e, n, r);
-        if (null == a) return S;
+        if (null == a) return g;
         let l = s().findKey(m.nkL, (e) => e.command === a);
         i && null != l && o.length > 0 && u.Z.search(l, o);
         let c = h.Z.getResults(l, o);
         return null == c
-            ? S
+            ? g
             : {
                   results: {
                       command: a,
@@ -70,11 +70,11 @@ let N = {
         if (null == h || 0 === I.length) return null;
         if (n)
             return (0, r.jsx)(o.Spinner, {
-                className: g.spinner,
+                className: S.spinner,
                 type: o.Spinner.Type.SPINNING_CIRCLE
             });
         if (null != t) {
-            var S, N;
+            var g, N;
             let e = !1,
                 n = t.map((t, n) => {
                     if (t.type === m.q9n.GIF) {
@@ -84,7 +84,7 @@ let N = {
                             (0, r.jsx)(
                                 E.ZP.GIFIntegration,
                                 {
-                                    className: g.horizontalAutocomplete,
+                                    className: S.horizontalAutocomplete,
                                     onClick: _,
                                     onHover: c,
                                     selected: a === n,
@@ -99,7 +99,7 @@ let N = {
                         );
                     }
                 }),
-                o = u.commands === p.L8.OLD_BUILT_INS ? h : null !== (N = null === (S = d.Z.getActiveCommand(s.id)) || void 0 === S ? void 0 : S.integrationTitle) && void 0 !== N ? N : h,
+                o = u.commands === p.L8.OLD_BUILT_INS ? h : null !== (N = null === (g = d.Z.getActiveCommand(s.id)) || void 0 === g ? void 0 : g.integrationTitle) && void 0 !== N ? N : h,
                 l =
                     I.length > 0 && null != o
                         ? T.Z.Messages.CONTENT_MATCHING.format({
@@ -116,7 +116,7 @@ let N = {
                         (0, r.jsx)(E.ZP.Title, { title: l }),
                         e
                             ? (0, r.jsx)(f.Z, {
-                                  className: g.horizontalAutocompletes,
+                                  className: S.horizontalAutocompletes,
                                   children: n
                               })
                             : n

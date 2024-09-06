@@ -32,14 +32,14 @@ r.inherits(m, p),
             I = this.h[3],
             m = this.h[4],
             T = this.h[5],
-            g = this.h[6],
-            S = this.h[7];
+            S = this.h[6],
+            g = this.h[7];
         for (s(this.k.length === n.length), r = 0; r < n.length; r++) {
-            var A = u(S, E(m), c(m, T, g), this.k[r], n[r]),
+            var A = u(g, E(m), c(m, T, S), this.k[r], n[r]),
                 N = o(_(i), d(i, a, p));
-            (S = g), (g = T), (T = m), (m = o(I, A)), (I = p), (p = a), (a = i), (i = o(A, N));
+            (g = S), (S = T), (T = m), (m = o(I, A)), (I = p), (p = a), (a = i), (i = o(A, N));
         }
-        (this.h[0] = o(this.h[0], i)), (this.h[1] = o(this.h[1], a)), (this.h[2] = o(this.h[2], p)), (this.h[3] = o(this.h[3], I)), (this.h[4] = o(this.h[4], m)), (this.h[5] = o(this.h[5], T)), (this.h[6] = o(this.h[6], g)), (this.h[7] = o(this.h[7], S));
+        (this.h[0] = o(this.h[0], i)), (this.h[1] = o(this.h[1], a)), (this.h[2] = o(this.h[2], p)), (this.h[3] = o(this.h[3], I)), (this.h[4] = o(this.h[4], m)), (this.h[5] = o(this.h[5], T)), (this.h[6] = o(this.h[6], S)), (this.h[7] = o(this.h[7], g));
     }),
     (m.prototype._digest = function (e) {
         return 'hex' === e ? r.toHex32(this.h, 'big') : r.split32(this.h, 'big');

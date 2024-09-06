@@ -24,9 +24,9 @@ let I = (e) => {
     },
     R = (e, t, n, s) => (t || n ? E.Z.Messages.PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT : e === u.Si.TIER_2 ? E.Z.Messages.PREMIUM_DISCOUNT_CTA.format({ percent: s }) : void 0);
 t.Z = (e) => {
-    let { forceInverted: t, subscriptionTier: n, isEligibleForBogoPromotion: C = !1, isPersistentCTA: g = !1, useShorterCTA: N = !1, ...p } = e,
-        m = (0, i.ZP)(),
-        A = (0, a.wj)(m) || t,
+    let { forceInverted: t, subscriptionTier: n, isEligibleForBogoPromotion: g = !1, isPersistentCTA: C = !1, useShorterCTA: N = !1, ...m } = e,
+        p = (0, i.ZP)(),
+        A = (0, a.wj)(p) || t,
         f = (0, d.N)(),
         S = null == f ? void 0 : f.subscription_trial,
         h = (0, l.a5)({
@@ -37,26 +37,26 @@ t.Z = (e) => {
         x = null != S && n === S.sku_id,
         { enabled: O } = o._.useExperiment({ location: 'SubscribeButton' }, { autoTrackExposure: !1 }),
         b = O && (null == f ? void 0 : f.trial_id) === u.a7,
-        P = C
+        P = g
             ? E.Z.Messages.BOGO_CLAIM_OFFER
             : null != M
-              ? R(n, N, g, M.discount.amount)
+              ? R(n, N, C, M.discount.amount)
               : I({
                     showTrialCTA: x,
                     subscriptionTier: n,
                     shouldShowUpsells: !1,
                     trialDurationCopy: h,
-                    isPersistentCTA: g,
+                    isPersistentCTA: C,
                     shouldShowReferralTrialCopy: b,
                     subscriptionTrial: S
                 });
     return (0, s.jsx)(_.Z, {
         color: A ? r.ButtonColors.BRAND_INVERTED : r.ButtonColors.BRAND,
-        buttonShineClassName: 'buttonShineClassName' in p ? p.buttonShineClassName : A ? T.brandShine : void 0,
+        buttonShineClassName: 'buttonShineClassName' in m ? m.buttonShineClassName : A ? T.brandShine : void 0,
         buttonText: P,
         buttonTextClassName: x ? T.freeTrialText : void 0,
         onlyShineOnHover: !0,
         subscriptionTier: n,
-        ...p
+        ...m
     });
 };

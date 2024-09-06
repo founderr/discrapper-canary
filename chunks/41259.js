@@ -18,11 +18,11 @@ var i = n(974674),
     f = n(658471);
 function h(e) {
     let { id: t, user: n, application: h, bot: p, accountScopes: I, showLogout: m, location: T } = e,
-        g = l.ZP.getApplicationIconURL({
+        S = l.ZP.getApplicationIconURL({
             id: h.id,
             icon: h.icon
         }),
-        S = l.ZP.getUserAvatarURL(n);
+        g = l.ZP.getUserAvatarURL(n);
     return (0, r.jsxs)('header', {
         id: t,
         className: f.header,
@@ -31,7 +31,7 @@ function h(e) {
                 className: f.headerIcons,
                 children: [
                     (0, r.jsx)(i.qE, {
-                        src: g,
+                        src: S,
                         size: _.EF.SIZE_56,
                         'aria-label': h.name
                     }),
@@ -40,7 +40,7 @@ function h(e) {
                         children: [(0, r.jsx)('div', { className: f.ellipse }), (0, r.jsx)('div', { className: f.ellipse }), (0, r.jsx)('div', { className: f.ellipse })]
                     }),
                     (0, r.jsx)(i.qE, {
-                        src: S,
+                        src: g,
                         size: _.EF.SIZE_56,
                         'aria-label': n.username
                     })

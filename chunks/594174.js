@@ -47,7 +47,7 @@ function p(e, t, n) {
 let I = {},
     m = 0,
     T = '47835198259242069';
-function g(e, t, n) {
+function S(e, t, n) {
     let r = I[e];
     if (null == r) return !1;
     let i = r;
@@ -55,7 +55,7 @@ function g(e, t, n) {
     let a = r !== i;
     return a && m++, a;
 }
-function S(e, t) {
+function g(e, t) {
     let n = I[e];
     return !(null == n || (0, f.Dd)(n.clan, t.clan)) && (null == n.clan || null != t.clan) && ((n.clan = (0, f.yi)(t.clan)), (I[n.id] = n), m++, !0);
 }
@@ -165,7 +165,7 @@ function y(e) {
         }),
         r.forEach((e) => {
             e.members.forEach((t) => {
-                g(t.user.id, e.id, t.avatar), S(t.user.id, t.user);
+                S(t.user.id, e.id, t.avatar), g(t.user.id, t.user);
             });
         }),
         null != I[d.default.getId()] &&
@@ -177,11 +177,11 @@ function y(e) {
                 avatar: 'c1f86b313385cb97985f1b118851c28c'
             }));
 }
-function L(e) {
+function D(e) {
     let { guilds: t, lazyPrivateChannels: n } = e;
     t.forEach((e) => {
         e.members.forEach((t) => {
-            g(t.user.id, e.id, t.avatar), S(t.user.id, t.user);
+            S(t.user.id, e.id, t.avatar), g(t.user.id, t.user);
         });
     }),
         null == n ||
@@ -194,13 +194,13 @@ function L(e) {
                     });
             });
 }
-function D(e) {
+function L(e) {
     return !('incomplete' in e);
 }
 function b(e) {
     if (null != e.users)
         for (let t of e.users) {
-            if (!(t.id in I && D(t))) I[t.id] = new l.Z(t);
+            if (!(t.id in I && L(t))) I[t.id] = new l.Z(t);
         }
 }
 function M(e) {
@@ -252,7 +252,7 @@ function V(e) {
         if (null == t) return;
         O(t);
         let i = null == r ? void 0 : r.avatar;
-        null != i && g(t.id, n, i);
+        null != i && S(t.id, n, i);
     });
 }
 function H(e) {
@@ -318,7 +318,7 @@ function $(e) {
 }
 function J(e) {
     let t = O(e.user);
-    return g(e.user.id, e.guildId, e.avatar) || t;
+    return S(e.user.id, e.guildId, e.avatar) || t;
 }
 function ee(e) {
     let { ops: t } = e;
@@ -327,7 +327,7 @@ function ee(e) {
             var n;
             let t = null === (n = e.item.member) || void 0 === n ? void 0 : n.user;
             if (null == t) continue;
-            S(t.id, t);
+            g(t.id, t);
         }
     return !1;
 }
@@ -338,13 +338,13 @@ function et(e) {
         n =
             e.members.reduce((t, n) => {
                 let r = O(n.user);
-                return g(n.user.id, e.guildId, n.avatar) || r || t;
+                return S(n.user.id, e.guildId, n.avatar) || r || t;
             }, !1) || n;
     return n;
 }
 function en(e) {
     let t = !1;
-    for (let n of e.members) O(n.user) && (t = !0), g(n.user.id, e.guildId, n.avatar) && (t = !0);
+    for (let n of e.members) O(n.user) && (t = !0), S(n.user.id, e.guildId, n.avatar) && (t = !0);
     return t;
 }
 function er(e) {
@@ -389,7 +389,7 @@ function es(e) {
                 discriminator: a,
                 bot: s
             }),
-            g(n, t.id, o);
+            S(n, t.id, o);
     });
 }
 function eo(e) {
@@ -450,11 +450,11 @@ function eT(e) {
     let { users: t } = e;
     return t.reduce((e, t) => O(t) || e, !1);
 }
-function eg(e) {
+function eS(e) {
     let { users: t } = e;
     return t.reduce((e, t) => O(t) || e, !1);
 }
-function eS(e) {
+function eg(e) {
     let { familyCenterTeenActivity: t } = e;
     if (void 0 === t) return;
     let { users: n } = t;
@@ -503,7 +503,7 @@ class ev extends _.Z {
         if (null != t) for (let e of t.users) I[e.id] = new l.Z(e);
         if (null != e.users)
             for (let t of e.users) {
-                if (!(t.id in I && D(t))) I[t.id] = new l.Z(t);
+                if (!(t.id in I && L(t))) I[t.id] = new l.Z(t);
             }
         for (let t of [e.privateChannels, e.initialGuildChannels])
             for (let e of t) {
@@ -545,7 +545,7 @@ class ev extends _.Z {
     constructor() {
         super({
             CONNECTION_OPEN: y,
-            CONNECTION_OPEN_SUPPLEMENTAL: L,
+            CONNECTION_OPEN_SUPPLEMENTAL: D,
             UPDATE_CLIENT_PREMIUM_TYPE: U,
             OVERLAY_INITIALIZE: b,
             CACHE_LOADED: (e) => this.handleLoadCache(e),
@@ -600,9 +600,9 @@ class ev extends _.Z {
             PRIVATE_CHANNEL_INTEGRATION_UPDATE: eI,
             FAMILY_CENTER_INITIAL_LOAD: em,
             FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS: eT,
-            FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS: eS,
+            FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS: eg,
             FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS: eA,
-            FAMILY_CENTER_REQUEST_LINK_SUCCESS: eg,
+            FAMILY_CENTER_REQUEST_LINK_SUCCESS: eS,
             MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: eN,
             LOAD_GRAVITY_HYDRATED: eO,
             EMBEDDED_ACTIVITY_UPDATE_V2: eR

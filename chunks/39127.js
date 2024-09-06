@@ -4,8 +4,8 @@ n.d(t, {
     }
 });
 var i = n(735250),
-    a = n(470079),
-    s = n(392711),
+    s = n(470079),
+    a = n(392711),
     l = n(500923),
     r = n.n(l),
     o = n(963838),
@@ -13,16 +13,16 @@ var i = n(735250),
     u = n(949534);
 let d = async (e) => {
     var t;
-    let { animationType: n, animationId: i, url: a, shouldResize: l } = e,
+    let { animationType: n, animationId: i, url: s, shouldResize: l } = e,
         r = null !== (t = o.Jw[n]) && void 0 !== t ? t : o.Jw[c.q.BASIC],
-        u = JSON.parse(JSON.stringify(null != i && i < r.length ? r[i] : (0, s.sample)(r)));
-    return (u.assets[0].p = l ? await (0, o.lv)(a) : a), u;
+        u = JSON.parse(JSON.stringify(null != i && i < r.length ? r[i] : (0, a.sample)(r)));
+    return (u.assets[0].p = l ? await (0, o.lv)(s) : s), u;
 };
 function h(e) {
-    let { containerDimensions: t, effect: n, onComplete: s } = e,
-        l = a.useRef(null);
+    let { containerDimensions: t, effect: n, onComplete: a } = e,
+        l = s.useRef(null);
     return (
-        a.useEffect(() => {
+        s.useEffect(() => {
             let e;
             return (
                 !(async function () {
@@ -37,14 +37,14 @@ function h(e) {
                             rendererSettings: { preserveAspectRatio: 'xMidYMax slice' }
                         })),
                             n.animationType === c.q.PREMIUM && e.setSpeed(0.8),
-                            e.addEventListener('complete', () => (null == s ? void 0 : s(n.id)));
+                            e.addEventListener('complete', () => (null == a ? void 0 : a(n.id)));
                     }
                 })(),
                 () => {
                     null == e || e.destroy();
                 }
             );
-        }, [s, n]),
+        }, [a, n]),
         (0, i.jsx)('div', {
             className: u.effect,
             style: {

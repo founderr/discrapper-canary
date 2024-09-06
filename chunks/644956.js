@@ -21,8 +21,8 @@ var i = n(120356),
     I = n(82295),
     m = n(818083),
     T = n(480608),
-    g = n(124072),
-    S = n(184301),
+    S = n(124072),
+    g = n(184301),
     A = n(347475),
     N = n(592125),
     O = n(271383),
@@ -30,8 +30,8 @@ var i = n(120356),
     v = n(594174),
     C = n(689938),
     y = n(910212),
-    L = n(610684);
-let D = (0, m.B)({
+    D = n(610684);
+let L = (0, m.B)({
     kind: 'user',
     id: '2021-07_role_popout',
     label: 'Role Popout',
@@ -51,7 +51,7 @@ function b(e) {
         x = null != t && 0 !== t && !P,
         G = x && 'dot' === w,
         k = (e) =>
-            (0, r.jsxs)(g.Z, {
+            (0, r.jsxs)(S.Z, {
                 className: a()(y.roleMention),
                 color: 'username' === w && x ? t : null,
                 ...e,
@@ -59,14 +59,14 @@ function b(e) {
                     G &&
                         (0, r.jsx)(c.RoleDot, {
                             color: (0, l.Rf)(t),
-                            className: L.roleDot,
+                            className: D.roleDot,
                             background: !1,
                             tooltip: !1
                         }),
                     M
                 ]
             }),
-        { enabled: B } = D.getCurrentConfig({ location: '2ec235_1' }, { autoTrackExposure: !1 });
+        { enabled: B } = L.getCurrentConfig({ location: '2ec235_1' }, { autoTrackExposure: !1 });
     return !B || P || null == s || null == b || (null == i && '@everyone' !== m)
         ? (0, r.jsx)(h.Gt, {
               value: U,
@@ -96,7 +96,7 @@ function b(e) {
                                       c.Popout,
                                       {
                                           preload: () =>
-                                              (0, S.Z)(i.id, i.getAvatarURL(t.guild_id, 80), {
+                                              (0, g.Z)(i.id, i.getAvatarURL(t.guild_id, 80), {
                                                   guildId: t.guild_id,
                                                   channelId: t.id
                                               }),

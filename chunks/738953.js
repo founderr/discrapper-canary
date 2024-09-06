@@ -21,8 +21,8 @@ var r = n(735250),
     I = n(428785),
     m = n(113557),
     T = n(867176),
-    g = n(169979),
-    S = n(119096),
+    S = n(169979),
+    g = n(119096),
     A = n(502762),
     N = n(544989),
     O = n(481932),
@@ -30,8 +30,8 @@ var r = n(735250),
     v = n(272510),
     C = n(171368),
     y = n(978395),
-    L = n(161572),
-    D = n(228168),
+    D = n(161572),
+    L = n(228168),
     b = n(981631),
     M = n(689938),
     P = n(115879);
@@ -89,11 +89,11 @@ function U(e) {
                     (0, r.jsxs)(A.Z, {
                         user: t,
                         displayProfile: q,
-                        profileType: D.y0.BITE_SIZE,
+                        profileType: L.y0.BITE_SIZE,
                         children: [
                             null != er && (0, r.jsx)('div', { className: P.backdrop }),
                             (0, r.jsxs)(N.Z, {
-                                profileType: D.y0.BITE_SIZE,
+                                profileType: L.y0.BITE_SIZE,
                                 children: [
                                     (0, r.jsx)(R.Z, {
                                         user: t,
@@ -102,7 +102,7 @@ function U(e) {
                                         onClose: k
                                     }),
                                     (0, r.jsx)(O.Z, {
-                                        profileType: D.y0.BITE_SIZE,
+                                        profileType: L.y0.BITE_SIZE,
                                         user: t
                                     }),
                                     t.id !== n.id &&
@@ -133,9 +133,9 @@ function U(e) {
                                         user: t,
                                         displayProfile: q,
                                         guildId: U,
-                                        profileType: D.y0.BITE_SIZE
+                                        profileType: L.y0.BITE_SIZE
                                     }),
-                                    (0, r.jsx)(S.Z, {
+                                    (0, r.jsx)(g.Z, {
                                         isReply: et,
                                         sent: J,
                                         shown: X,
@@ -148,28 +148,28 @@ function U(e) {
                                         displayProfile: q,
                                         guildId: U,
                                         channelId: w,
-                                        profileType: D.y0.BITE_SIZE,
+                                        profileType: L.y0.BITE_SIZE,
                                         onOpenProfile: F ? void 0 : el,
-                                        isInteractionSource: ea === D.n_.AVATAR || ea === D.n_.STATUS,
+                                        isInteractionSource: ea === L.n_.AVATAR || ea === L.n_.STATUS,
                                         onInteraction: eo,
                                         setInteractionToastShown: $,
                                         setInteractionSent: ee,
                                         setIsReplyInteraction: en,
-                                        showReplyPopout: er === D.P.REPLY && ea === D.n_.AVATAR
+                                        showReplyPopout: er === L.P.REPLY && ea === L.n_.AVATAR
                                     }),
-                                    (0, r.jsx)(g.Z, {
+                                    (0, r.jsx)(S.Z, {
                                         location: 'UserProfilePopout',
                                         user: t,
                                         guildId: U,
                                         channelId: w,
-                                        profileType: D.y0.BITE_SIZE,
-                                        isInteractionSource: ea === D.n_.STATUS,
+                                        profileType: L.y0.BITE_SIZE,
+                                        isInteractionSource: ea === L.n_.STATUS,
                                         onInteraction: eo,
                                         onClose: k,
                                         setInteractionToastShown: $,
                                         setInteractionSent: ee,
                                         setIsReplyInteraction: en,
-                                        showReplyPopout: er === D.P.REPLY && ea === D.n_.STATUS
+                                        showReplyPopout: er === L.P.REPLY && ea === L.n_.STATUS
                                     })
                                 ]
                             }),
@@ -183,7 +183,7 @@ function U(e) {
                                 channelId: w,
                                 onClose: k
                             }),
-                            (0, r.jsx)(L.Z, {
+                            (0, r.jsx)(D.Z, {
                                 user: t,
                                 guildId: U,
                                 channelId: w,

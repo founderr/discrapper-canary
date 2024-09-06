@@ -32,7 +32,7 @@ let d = (e) => {
     );
 };
 t.Z = function (e) {
-    let { categoryListRef: t, expressionsListRef: n, categories: a, store: u, children: _, className: E, listPadding: f, rowCount: h, getScrollOffsetForIndex: p, categoryHeight: I, onScroll: m, renderCategoryListItem: T, rowCountBySection: g, renderSection: S } = e,
+    let { categoryListRef: t, expressionsListRef: n, categories: a, store: u, children: _, className: E, listPadding: f, rowCount: h, getScrollOffsetForIndex: p, categoryHeight: I, onScroll: m, renderCategoryListItem: T, rowCountBySection: S, renderSection: g } = e,
         A = u.useStore((e) => e.activeCategoryIndex);
     d({
         activeIndex: A,
@@ -63,8 +63,8 @@ t.Z = function (e) {
                 rowCount: h,
                 rowHeight: R,
                 hideScrollbar: !0,
-                rowCountBySection: g,
-                renderSection: S
+                rowCountBySection: S,
+                renderSection: g
             }),
             null == _ ? void 0 : _(N)
         ]

@@ -18,8 +18,8 @@ e.exports = function (e, t, n) {
         I,
         m,
         T,
-        g,
         S,
+        g,
         A,
         N = n && n.that,
         O = !!(n && n.AS_ENTRIES),
@@ -27,29 +27,29 @@ e.exports = function (e, t, n) {
         v = !!(n && n.IS_ITERATOR),
         C = !!(n && n.INTERRUPTED),
         y = r(t, N),
-        L = function (e) {
+        D = function (e) {
             return p && _(p, 'normal', e), new f(!0, e);
         },
-        D = function (e) {
-            return O ? (a(e), C ? y(e[0], e[1], L) : y(e[0], e[1])) : C ? y(e, L) : y(e);
+        L = function (e) {
+            return O ? (a(e), C ? y(e[0], e[1], D) : y(e[0], e[1])) : C ? y(e, D) : y(e);
         };
     if (R) p = e.iterator;
     else if (v) p = e;
     else {
         if (!(I = d(e))) throw E(s(e) + ' is not iterable');
         if (o(I)) {
-            for (m = 0, T = l(e); T > m; m++) if ((g = D(e[m])) && u(h, g)) return g;
+            for (m = 0, T = l(e); T > m; m++) if ((S = L(e[m])) && u(h, S)) return S;
             return new f(!1);
         }
         p = c(e, I);
     }
-    for (S = R ? e.next : p.next; !(A = i(S, p)).done; ) {
+    for (g = R ? e.next : p.next; !(A = i(g, p)).done; ) {
         try {
-            g = D(A.value);
+            S = L(A.value);
         } catch (e) {
             _(p, 'throw', e);
         }
-        if ('object' == typeof g && g && u(h, g)) return g;
+        if ('object' == typeof S && S && u(h, S)) return S;
     }
     return new f(!1);
 };

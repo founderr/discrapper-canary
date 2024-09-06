@@ -19,7 +19,7 @@ var i = n(97613),
     h = n(981631),
     p = n(474936);
 function I(e) {
-    let { initialPlanId: t, followupSKUInfo: i, onClose: I, onComplete: m, onSubscriptionConfirmation: T, analyticsLocations: g, analyticsObject: S, analyticsLocation: A, analyticsSourceLocation: N, isGift: O = !1, giftMessage: R, giftStyle: v, subscriptionTier: C, trialId: y, postSuccessGuild: L, openInvoiceId: D, applicationId: b, referralTrialOfferId: M, giftRecipient: P, returnRef: U, subscription: w, skipConfirm: x, repeatPurchase: G } = null != e ? e : {},
+    let { initialPlanId: t, followupSKUInfo: i, onClose: I, onComplete: m, onSubscriptionConfirmation: T, analyticsLocations: S, analyticsObject: g, analyticsLocation: A, analyticsSourceLocation: N, isGift: O = !1, giftMessage: R, giftStyle: v, subscriptionTier: C, trialId: y, postSuccessGuild: D, openInvoiceId: L, applicationId: b, referralTrialOfferId: M, giftRecipient: P, returnRef: U, subscription: w, skipConfirm: x, repeatPurchase: G } = null != e ? e : {},
         k = !1,
         B = (0, s.Z)(),
         F = d.default.getCurrentUser(),
@@ -48,14 +48,14 @@ function I(e) {
                         (k = !0), null == m || m(), !O && (0, c.H)(!0);
                     },
                     onSubscriptionConfirmation: T,
-                    analyticsLocations: g,
-                    analyticsObject: S,
+                    analyticsLocations: S,
+                    analyticsObject: g,
                     analyticsLocation: A,
                     analyticsSourceLocation: N,
                     trialId: y,
-                    postSuccessGuild: L,
+                    postSuccessGuild: D,
                     planGroup: p.Y1,
-                    openInvoiceId: D,
+                    openInvoiceId: L,
                     applicationId: b,
                     referralTrialOfferId: M,
                     returnRef: U,
@@ -72,13 +72,13 @@ function I(e) {
                     _.default.track(h.rMx.PAYMENT_FLOW_CANCELED, {
                         load_id: B,
                         payment_type: h.Zuq[h.GZQ.SUBSCRIPTION],
-                        location: null != A ? A : S,
+                        location: null != A ? A : g,
                         source: N,
                         subscription_type: h.NYc.PREMIUM,
                         is_gift: O,
                         eligible_for_trial: null != y,
                         application_id: b,
-                        location_stack: g
+                        location_stack: S
                     }),
                     (0, l.fw)(),
                     (0, u.p)(),

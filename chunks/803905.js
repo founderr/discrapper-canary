@@ -12,7 +12,7 @@ n.d(t, {
         return G;
     },
     Ej: function () {
-        return S;
+        return g;
     },
     ME: function () {
         return f;
@@ -24,10 +24,10 @@ n.d(t, {
         return y;
     },
     Pl: function () {
-        return g;
+        return S;
     },
     Uw: function () {
-        return D;
+        return L;
     },
     ZE: function () {
         return M;
@@ -63,7 +63,7 @@ n.d(t, {
         return E;
     },
     qH: function () {
-        return L;
+        return D;
     },
     tj: function () {
         return p;
@@ -124,8 +124,8 @@ let _ = new d(r.q.ANIMATED_EMOJIS),
     I = new d(r.q.ANIMATED_AVATAR),
     m = new d(r.q.CUSTOM_DISCRIMINATOR),
     T = new d(r.q.PREMIUM_GUILD_MEMBER_PROFILE),
-    g = new d('profileBadges'),
-    S = new d(r.q.PROFILE_PREMIUM_FEATURES, 'custom banner and avatar decoration'),
+    S = new d('profileBadges'),
+    g = new d(r.q.PROFILE_PREMIUM_FEATURES, 'custom banner and avatar decoration'),
     A = new d('collectibles'),
     N = new d('appIcons'),
     O = new d(r.q.CLIENT_THEMES),
@@ -133,8 +133,8 @@ let _ = new d(r.q.ANIMATED_EMOJIS),
     v = new d('freeBoosts'),
     C = new d(r.q.STREAM_MID_QUALITY),
     y = new d(r.q.STREAM_HIGH_QUALITY),
-    L = new d(r.q.CUSTOM_NOTIFICATION_SOUNDS),
-    D = new d('fancyVoiceChannelReactions'),
+    D = new d(r.q.CUSTOM_NOTIFICATION_SOUNDS),
+    L = new d('fancyVoiceChannelReactions'),
     b = new d('installPremiumApplications'),
     M = new d('redeemPremiumPerks'),
     P = new d(r.q.VIDEO_FILTER_ASSETS);
@@ -144,9 +144,9 @@ let U = new d(r.q.INCREASED_GUILD_LIMIT),
     x = new d('increasedVideoUploadQuality'),
     G = new d('uploadLargeFiles'),
     k = Object.freeze({
-        [l.Si.TIER_0]: new o.Z(l.Si.TIER_0, [_, E, f, g, P, x, G, N]),
-        [l.Si.TIER_1]: new o.Z(l.Si.TIER_1, [_, E, I, m, g, R, C, D, x, G, N]),
-        [l.Si.TIER_2]: new o.Z(l.Si.TIER_2, [_, E, f, h, p, I, m, T, g, S, O, R, v, C, y, D, b, M, P, U, w, x, G, N, A, L])
+        [l.Si.TIER_0]: new o.Z(l.Si.TIER_0, [_, E, f, S, P, x, G, N]),
+        [l.Si.TIER_1]: new o.Z(l.Si.TIER_1, [_, E, I, m, S, R, C, L, x, G, N]),
+        [l.Si.TIER_2]: new o.Z(l.Si.TIER_2, [_, E, f, h, p, I, m, T, S, g, O, R, v, C, y, L, b, M, P, U, w, x, G, N, A, D])
     });
 function B(e, t) {
     return e.getFeatureValue(t);

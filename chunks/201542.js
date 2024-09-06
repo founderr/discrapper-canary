@@ -16,8 +16,8 @@ var r = n(735250),
     I = n(981631),
     m = n(689938),
     T = n(718033);
-let g = i.lazy(() => Promise.all([n.e('26460'), n.e('89792')]).then(n.bind(n, 711635)));
-function S(e) {
+let S = i.lazy(() => Promise.all([n.e('26460'), n.e('89792')]).then(n.bind(n, 711635)));
+function g(e) {
     let { played: t, duration: n, currentTime: i } = e,
         a = null == n ? '--:--' : t ? (0, d.yv)(Math.ceil(n - i)) : (0, d.yv)(Math.ceil(n));
     return (0, r.jsx)(l.Text, {
@@ -30,10 +30,10 @@ function S(e) {
 t.Z = i.memo(function (e) {
     var t, n, a, d, A, N;
     let O,
-        { src: R, volume: v = 1, onVolumeChange: C, onMute: y, waveform: L, durationSecs: D, onVolumeShow: b, onVolumeHide: M, onPlay: P, onPause: U, onError: w } = e,
+        { src: R, volume: v = 1, onVolumeChange: C, onMute: y, waveform: D, durationSecs: L, onVolumeShow: b, onVolumeHide: M, onPlay: P, onPause: U, onError: w } = e,
         x = i.useRef(null),
         [G, k] = i.useState(0),
-        [B, F] = i.useState(D),
+        [B, F] = i.useState(L),
         [V, H] = i.useState(!1),
         [Z, Y] = i.useState(!1),
         [j, W] = i.useState(!1),
@@ -144,7 +144,7 @@ t.Z = i.memo(function (e) {
         eE = Z ? m.Z.Messages.PAUSE : m.Z.Messages.PLAY;
     'Safari' === platform.name
         ? (O = (0, r.jsx)(i.Suspense, {
-              children: (0, r.jsx)(g, {
+              children: (0, r.jsx)(S, {
                   ref: x,
                   className: T.audioElement,
                   src: R,
@@ -194,7 +194,7 @@ t.Z = i.memo(function (e) {
             }),
             (0, r.jsx)(p.Z, {
                 className: T.waveform,
-                waveform: L,
+                waveform: D,
                 currentTime: G,
                 duration: null != B ? B : 1,
                 playing: Z,
@@ -203,7 +203,7 @@ t.Z = i.memo(function (e) {
                 onDragStart: el,
                 onDragEnd: eu
             }),
-            (0, r.jsx)(S, {
+            (0, r.jsx)(g, {
                 played: K,
                 currentTime: G,
                 duration: B

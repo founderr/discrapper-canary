@@ -1,6 +1,6 @@
 var i,
-    a = n(442837),
-    s = n(570140);
+    s = n(442837),
+    a = n(570140);
 function l(e, t, n) {
     return (
         t in e
@@ -16,7 +16,7 @@ function l(e, t, n) {
 }
 let r = { toastsEnabledForChannel: {} },
     o = r;
-class c extends (i = a.ZP.PersistedStore) {
+class c extends (i = s.ZP.PersistedStore) {
     initialize(e) {
         o = null != e ? e : r;
     }
@@ -30,7 +30,7 @@ class c extends (i = a.ZP.PersistedStore) {
 }
 l(c, 'displayName', 'CallChatToastsStore'),
     l(c, 'persistKey', 'CallChatToasts'),
-    (t.Z = new c(s.Z, {
+    (t.Z = new c(a.Z, {
         CALL_CHAT_TOASTS_SET_ENABLED: function (e) {
             let { channelId: t, toastsEnabled: n } = e;
             o.toastsEnabledForChannel[t] = n;

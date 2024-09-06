@@ -12,16 +12,16 @@ n.d(t, {
         return y;
     },
     XT: function () {
-        return L;
+        return D;
     },
     al: function () {
         return v;
     },
     cG: function () {
-        return g;
+        return S;
     },
     li: function () {
-        return S;
+        return g;
     },
     ob: function () {
         return m;
@@ -101,7 +101,7 @@ function T(e) {
             location: o
         });
 }
-function g(e, t, n) {
+function S(e, t, n) {
     (0, f.l)(e.id, t).then(() => {
         i.Z.dispatch({
             type: 'DISPATCH_APPLICATION_REPAIR',
@@ -116,7 +116,7 @@ function g(e, t, n) {
             location: n
         });
 }
-function S(e, t, n, r) {
+function g(e, t, n, r) {
     let a = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
     !(function (e, t, n, r) {
         if (s.ZP.getRunningDiscordApplicationIds().includes(e.id)) return;
@@ -188,7 +188,7 @@ function y(e, t) {
     let n = a.Z.getApplication(e);
     null != n && _.Z.createShortcuts(l.Xc.getSetting(), l.Pe.getSetting(), n.name, n.id, t.installPath);
 }
-function L(e, t) {
+function D(e, t) {
     let i = a.Z.getApplication(e);
     r.tn.post({
         url: h.ANM.LIBRARY_APPLICATION_INSTALLED(e, e),

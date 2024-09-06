@@ -42,16 +42,16 @@ let _ = 1500,
     p = [],
     I = () => Promise.resolve({ sessionId: void 0 }),
     m = (e) => {
-        let { dispatcher: t, actionHandler: n, getFingerprint: s, getSessionId: c = I, TRACKING_URL: m, drainTimeoutOverride: T, waitFor: g } = e;
+        let { dispatcher: t, actionHandler: n, getFingerprint: s, getSessionId: c = I, TRACKING_URL: m, drainTimeoutOverride: T, waitFor: S } = e;
         _ = null != T ? T : 1500;
-        function S() {
+        function g() {
             return 0 !== p.length && (null != i ? null != r : null != s());
         }
         function A() {
-            null == a && S() && (a = E(N, { timeout: _ }));
+            null == a && g() && (a = E(N, { timeout: _ }));
         }
         function N() {
-            if (((a = null), !S())) return;
+            if (((a = null), !g())) return;
             let e = p.slice();
             (p = []),
                 O(e).then(
@@ -124,7 +124,7 @@ let _ = 1500,
             });
         class R extends l.yh {
             initialize() {
-                null != g && this.waitFor(...g);
+                null != S && this.waitFor(...S);
             }
             constructor(...e) {
                 super(...e), d(this, 'submitEventsImmediately', O);

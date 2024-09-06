@@ -15,10 +15,10 @@ n.d(t, {
         return U;
     },
     oD: function () {
-        return D;
+        return L;
     },
     vH: function () {
-        return L;
+        return D;
     }
 }),
     n(757143),
@@ -41,8 +41,8 @@ var r,
     I = n(703558),
     m = n(375954),
     T = n(300429),
-    g = n(70956),
-    S = n(630388),
+    S = n(70956),
+    g = n(630388),
     A = n(709054),
     N = n(968437),
     O = n(665906),
@@ -50,11 +50,11 @@ var r,
     v = n(124368),
     C = n(981631),
     y = n(689938);
-function L(e) {
+function D(e) {
     let t = (0, O.NE)(e);
     return (0, O.Xu)(e) ? (t ? 2 : 3) : 1;
 }
-function D(e, t) {
+function L(e, t) {
     var n;
     if (3 === t) return !0;
     return null !== (n = e.isPrivate) && void 0 !== n && n;
@@ -97,11 +97,11 @@ function P(e) {
         async (e, a, h) => {
             var m;
             let T = null == n,
-                g = D(r, i),
-                S = null !== (m = r.name) && void 0 !== m ? m : '';
-            if ('' === S && _) {
+                S = L(r, i),
+                g = null !== (m = r.name) && void 0 !== m ? m : '';
+            if ('' === g && _) {
                 let e = M(t, n);
-                S = '' !== e ? e : y.Z.Messages.THREAD;
+                g = '' !== e ? e : y.Z.Messages.THREAD;
             }
             let O = (0, N.WD)(t),
                 R = p.Z.getChannel(A.default.castMessageIdAsChannelId(n)),
@@ -110,8 +110,8 @@ function P(e) {
                     return s.tn.post({
                         url: e,
                         body: {
-                            name: S,
-                            type: g ? C.d4z.PRIVATE_THREAD : t.type === C.d4z.GUILD_ANNOUNCEMENT ? C.d4z.ANNOUNCEMENT_THREAD : C.d4z.PUBLIC_THREAD,
+                            name: g,
+                            type: S ? C.d4z.PRIVATE_THREAD : t.type === C.d4z.GUILD_ANNOUNCEMENT ? C.d4z.ANNOUNCEMENT_THREAD : C.d4z.PUBLIC_THREAD,
                             auto_archive_duration: O,
                             location: o
                         }
@@ -151,7 +151,7 @@ function w(e) {
         async (e, a, l) => {
             let c = 0,
                 [_, f] = (0, h.Z)(e);
-            _ && ((e = f), (c = (0, S.pj)(c, C.iLy.SUPPRESS_NOTIFICATIONS)));
+            _ && ((e = f), (c = (0, g.pj)(c, C.iLy.SUPPRESS_NOTIFICATIONS)));
             let p = (0, N.WD)(t, null),
                 m = C.ANM.CHANNEL_THREADS(t.id) + '?use_nested_fields=true',
                 T = {
@@ -164,7 +164,7 @@ function w(e) {
                         flags: 0 !== c ? c : void 0
                     }
                 },
-                g = await x(t, () =>
+                S = await x(t, () =>
                     null != l && l.length > 0
                         ? o(m, T, l)
                         : s.tn.post({
@@ -179,10 +179,10 @@ function w(e) {
                 (0, E.Je)({
                     guildId: t.guild_id,
                     channelId: t.id,
-                    postId: g.id
+                    postId: S.id
                 }),
-                null == i || i(g),
-                g
+                null == i || i(S),
+                S
             );
         },
         [t, n, i, r, o]
@@ -227,7 +227,7 @@ async function x(e, t) {
                     type: 'SLOWMODE_SET_COOLDOWN',
                     channelId: e.id,
                     slowmodeType: T.S.CreateThread,
-                    cooldownMs: n * g.Z.Millis.SECOND
+                    cooldownMs: n * S.Z.Millis.SECOND
                 });
         } else if (429 === t.status)
             l.Z.show({

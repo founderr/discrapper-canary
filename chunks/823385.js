@@ -16,8 +16,8 @@ var i,
     I = n(703558),
     m = n(984933),
     T = n(271383),
-    g = n(430824),
-    S = n(496675),
+    S = n(430824),
+    g = n(496675),
     A = n(306680),
     N = n(944486),
     O = n(914010),
@@ -25,8 +25,8 @@ var i,
     v = n(483360),
     C = n(823379),
     y = n(981631),
-    L = n(689938);
-function D(e, t, n) {
+    D = n(689938);
+function L(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -51,7 +51,7 @@ let b = 'seenQSTutorial',
     F = [],
     V = [];
 function H() {
-    (w = g.Z.getGuildCount() >= 3 || s().size(p.Z.getMutablePrivateChannels()) >= 20), (F = []);
+    (w = S.Z.getGuildCount() >= 3 || s().size(p.Z.getMutablePrivateChannels()) >= 20), (F = []);
 }
 function Z(e) {
     let t = (0, d.Z)(e);
@@ -133,9 +133,9 @@ function j(e, t) {
                               a = [];
                           for (let e = 1; e < V.length; e += 1) {
                               let t = Z(V[e]);
-                              if (null != t) ((t.type !== c.h8.TEXT_CHANNEL && t.type !== c.h8.VOICE_CHANNEL) || S.Z.can(y.Plq.VIEW_CHANNEL, t.record)) && a.push(t);
+                              if (null != t) ((t.type !== c.h8.TEXT_CHANNEL && t.type !== c.h8.VOICE_CHANNEL) || g.Z.can(y.Plq.VIEW_CHANNEL, t.record)) && a.push(t);
                           }
-                          a.length > 0 && i.push((0, c.o6)(L.Z.Messages.QUICKSWITCHER_LAST_CHANNEL), ...a);
+                          a.length > 0 && i.push((0, c.o6)(D.Z.Messages.QUICKSWITCHER_LAST_CHANNEL), ...a);
                           let o = (function (e) {
                               let t = [];
                               return (
@@ -148,13 +148,13 @@ function j(e, t) {
                                   t
                               );
                           })((e) => e === r || V.includes(e));
-                          o.length > 0 && i.push((0, c.o6)(L.Z.Messages.QUICKSWITCHER_DRAFTS), ...o);
+                          o.length > 0 && i.push((0, c.o6)(D.Z.Messages.QUICKSWITCHER_DRAFTS), ...o);
                           let l = A.ZP.getMentionChannelIds()
                               .filter((e) => e !== r && !V.includes(e))
                               .map((e) => Z(e))
                               .filter(C.lm)
                               .reverse();
-                          if ((l.length > 0 && (i.push((0, c.o6)(L.Z.Messages.QUICKSWITCHER_MENTIONS)), (i = i.concat(l))), null != n)) {
+                          if ((l.length > 0 && (i.push((0, c.o6)(D.Z.Messages.QUICKSWITCHER_MENTIONS)), (i = i.concat(l))), null != n)) {
                               let e = m.ZP.getSelectableChannelIds(n)
                                   .filter((e) => {
                                       let t = p.Z.getChannel(e);
@@ -168,7 +168,7 @@ function j(e, t) {
                                       null != t && e.push(t);
                                   }
                               }),
-                                  e.length > 0 && (i.push((0, c.o6)(L.Z.Messages.QUICKSWITCHER_UNREAD_CHANNELS)), (i = i.concat(e)));
+                                  e.length > 0 && (i.push((0, c.o6)(D.Z.Messages.QUICKSWITCHER_UNREAD_CHANNELS)), (i = i.concat(e)));
                           }
                           return s()(i)
                               .uniqBy((e) => e.record.id)
@@ -182,21 +182,21 @@ function j(e, t) {
             !(function (e, t) {
                 switch (x) {
                     case c.h8.USER: {
-                        let t = g.Z.getGuild(O.Z.getGuildId());
-                        e.unshift((0, c.o6)(null != t ? L.Z.Messages.QUICKSWITCHER_QUERYMODE_USERS_IN_GUILD.format({ name: t.name }) : L.Z.Messages.QUICKSWITCHER_QUERYMODE_USERS)), (G = e);
+                        let t = S.Z.getGuild(O.Z.getGuildId());
+                        e.unshift((0, c.o6)(null != t ? D.Z.Messages.QUICKSWITCHER_QUERYMODE_USERS_IN_GUILD.format({ name: t.name }) : D.Z.Messages.QUICKSWITCHER_QUERYMODE_USERS)), (G = e);
                         break;
                     }
                     case c.h8.TEXT_CHANNEL:
-                        e.unshift((0, c.o6)(L.Z.Messages.QUICKSWITCHER_QUERYMODE_TEXT_CHANNELS)), (G = e);
+                        e.unshift((0, c.o6)(D.Z.Messages.QUICKSWITCHER_QUERYMODE_TEXT_CHANNELS)), (G = e);
                         break;
                     case c.h8.VOICE_CHANNEL:
-                        e.unshift((0, c.o6)(L.Z.Messages.QUICKSWITCHER_QUERYMODE_VOICE_CHANNELS)), (G = e);
+                        e.unshift((0, c.o6)(D.Z.Messages.QUICKSWITCHER_QUERYMODE_VOICE_CHANNELS)), (G = e);
                         break;
                     case c.h8.GUILD:
-                        e.unshift((0, c.o6)(L.Z.Messages.QUICKSWITCHER_QUERYMODE_GUILDS)), (G = e);
+                        e.unshift((0, c.o6)(D.Z.Messages.QUICKSWITCHER_QUERYMODE_GUILDS)), (G = e);
                         break;
                     case c.h8.APPLICATION:
-                        e.unshift((0, c.o6)(L.Z.Messages.QUICKSWITCHER_QUERYMODE_APPLICATIONS)), (G = e);
+                        e.unshift((0, c.o6)(D.Z.Messages.QUICKSWITCHER_QUERYMODE_APPLICATIONS)), (G = e);
                         break;
                     default:
                         G = e;
@@ -215,7 +215,7 @@ function W() {
 class K extends (i = o.ZP.PersistedStore) {
     initialize(e) {
         var t;
-        this.waitFor(T.ZP, g.Z, p.Z), this.syncWith([f.Z], () => !0), (U = l.K.get(b) || !1), (V = null !== (t = null == e ? void 0 : e.channelHistory) && void 0 !== t ? t : []);
+        this.waitFor(T.ZP, S.Z, p.Z), this.syncWith([f.Z], () => !0), (U = l.K.get(b) || !1), (V = null !== (t = null == e ? void 0 : e.channelHistory) && void 0 !== t ? t : []);
     }
     getState() {
         return { channelHistory: V };
@@ -251,7 +251,7 @@ class K extends (i = o.ZP.PersistedStore) {
         };
     }
 }
-D(K, 'displayName', 'QuickSwitcherStore'), D(K, 'persistKey', 'QuickSwitcherStore');
+L(K, 'displayName', 'QuickSwitcherStore'), L(K, 'persistKey', 'QuickSwitcherStore');
 let z = new K(u.Z, {
     CONNECTION_OPEN: H,
     CONNECTION_OPEN_SUPPLEMENTAL: H,

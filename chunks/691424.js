@@ -21,8 +21,8 @@ var r = n(735250),
     I = n(891984),
     m = n(695503),
     T = n(628692),
-    g = n(590956),
-    S = n(703656),
+    S = n(590956),
+    g = n(703656),
     A = n(271383),
     N = n(430824),
     O = n(572004),
@@ -30,8 +30,8 @@ var r = n(735250),
     v = n(285063),
     C = n(943362),
     y = n(551452),
-    L = n(69626),
-    D = n(142990),
+    D = n(69626),
+    L = n(142990),
     b = n(532901),
     M = n(981631),
     P = n(176505),
@@ -173,7 +173,7 @@ let G = {
                                   let r = N.Z.getGuild(e);
                                   if (null == e || null == r) return;
                                   let i = (t) => {
-                                      r.hasFeature(M.oNc.COMMUNITY) && (0, S.uL)(M.Z5c.CHANNEL(e, t));
+                                      r.hasFeature(M.oNc.COMMUNITY) && (0, g.uL)(M.Z5c.CHANNEL(e, t));
                                   };
                                   switch (t) {
                                       case 'home':
@@ -281,7 +281,7 @@ function k(e) {
     return {
         ...G,
         link: (0, b.Z)(e),
-        devLink: (0, D.Z)(e),
+        devLink: (0, L.Z)(e),
         emoji: (function (e) {
             let { emojiTooltipPosition: t = 'top', enableEmojiClick: n = !0 } = e;
             return {
@@ -289,7 +289,7 @@ function k(e) {
                     let { key: s } = a;
                     return e.src
                         ? (0, r.jsx)(
-                              g.c,
+                              S.c,
                               {
                                   node: e,
                                   tooltipPosition: t,
@@ -315,7 +315,7 @@ function k(e) {
                         };
                     }
                     return (0, r.jsx)(
-                        g.Y,
+                        S.Y,
                         {
                             isInteracting: l,
                             node: e,
@@ -328,7 +328,7 @@ function k(e) {
             };
         })(e),
         channelMention: (0, y.Z)(e),
-        commandMention: (0, L.ZP)(e),
+        commandMention: (0, D.ZP)(e),
         attachmentLink: (0, C.Z)(e)
     };
 }

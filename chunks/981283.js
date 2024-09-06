@@ -16,7 +16,7 @@ var i = n(392711),
     I = n(803647),
     m = n(70722),
     T = n(981631);
-let g = (0, i.debounce)(l.xc, 1000);
+let S = (0, i.debounce)(l.xc, 1000);
 t.Z = {
     init() {
         h.Z.init(),
@@ -62,7 +62,7 @@ t.Z = {
                     { ownerId: r, guildId: i } = (0, p.my)(n);
                 if (null == i || null == r || r !== (null === (t = f.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)) return;
                 let a = _.Z.getMemberCount(i);
-                if (null != a && !(a < 2) && !(a > m.tB)) u.eo.getSetting() && g(n);
+                if (null != a && !(a < 2) && !(a > m.tB)) u.eo.getSetting() && S(n);
             });
     }
 };

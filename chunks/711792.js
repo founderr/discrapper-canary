@@ -34,14 +34,14 @@ function u(e, t, n) {
         I = l(t, s, 'tabpanel'),
         { tabIndex: m } = f,
         T = t.collection.getItem(s),
-        g = (0, r.zL)(null == T ? void 0 : T.props, {
+        S = (0, r.zL)(null == T ? void 0 : T.props, {
             isLink: !!(null == T ? void 0 : null === (a = T.props) || void 0 === a ? void 0 : a.href),
             labelable: !0
         });
     return (
-        delete g.id,
+        delete S.id,
         {
-            tabProps: (0, r.dG)(g, f, {
+            tabProps: (0, r.dG)(S, f, {
                 id: p,
                 'aria-selected': _,
                 'aria-disabled': E || void 0,

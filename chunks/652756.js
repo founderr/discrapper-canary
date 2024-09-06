@@ -43,15 +43,15 @@ function o(e, t, n, s, o) {
             x: n.x - m.x,
             y: n.y - m.y
         },
-        g = e.offsetWidth,
-        S = e.offsetHeight,
+        S = e.offsetWidth,
+        g = e.offsetHeight,
         A = s.anchorX,
         N = s.anchorY;
     var O =
             ((c = I),
             (d = t),
-            (_ = g),
-            (E = S),
+            (_ = S),
+            (E = g),
             (f = c ? d.width : _),
             (h = c ? d.height : E),
             (0, r.G)() && c && ((h /= window.devicePixelRatio), (f /= window.devicePixelRatio)),
@@ -64,7 +64,7 @@ function o(e, t, n, s, o) {
         C = o.offsetX,
         y = o.offsetY;
     return {
-        x: 0 === C || C ? C : new i.I([0, 0.5, 1], [T.x, (T.x / g) * R, T.x + R - g]).interpolate(A),
-        y: 0 === y || y ? y : ((p = new i.I([0, 0.5, 1], [T.y, (T.y / S) * v, T.y + v - S]).interpolate(N)), (0, r.G)() && I && (p += (window.devicePixelRatio - 1) * v), p)
+        x: 0 === C || C ? C : new i.I([0, 0.5, 1], [T.x, (T.x / S) * R, T.x + R - S]).interpolate(A),
+        y: 0 === y || y ? y : ((p = new i.I([0, 0.5, 1], [T.y, (T.y / g) * v, T.y + v - g]).interpolate(N)), (0, r.G)() && I && (p += (window.devicePixelRatio - 1) * v), p)
     };
 }

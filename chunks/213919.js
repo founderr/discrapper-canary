@@ -5,7 +5,7 @@ n.r(t),
             return R;
         },
         getToken: function () {
-            return g;
+            return S;
         },
         hideToken: function () {
             return A;
@@ -17,7 +17,7 @@ n.r(t),
             return O;
         },
         setToken: function () {
-            return S;
+            return g;
         },
         showToken: function () {
             return N;
@@ -88,10 +88,10 @@ function T() {
         )),
         (h = !0);
 }
-function g(e) {
+function S(e) {
     return (T(), null != e) ? _[e] : r;
 }
-function S(e, t) {
+function g(e, t) {
     if (null == e) {
         O(t);
         return;

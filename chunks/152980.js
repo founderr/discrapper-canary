@@ -16,9 +16,9 @@ var a = t(735250),
     u = t(374794),
     C = t(587123),
     g = t(863663),
-    T = t(731994),
-    p = t(629481),
-    h = t(689938),
+    h = t(731994),
+    T = t(629481),
+    p = t(689938),
     m = t(14394);
 let I = (0, c.hQ)();
 function U(e) {
@@ -30,10 +30,10 @@ function U(e) {
         c = r >= 1,
         u = r < 0,
         C = c || u,
-        T = null !== (A = t.filename) && void 0 !== A ? A : t.id,
-        p = (0, g.kg)(r);
+        h = null !== (A = t.filename) && void 0 !== A ? A : t.id,
+        T = (0, g.kg)(r);
     return (0, a.jsx)(o.TooltipContainer, {
-        text: p,
+        text: T,
         children: (0, a.jsxs)('div', {
             className: s()(m.attachedFileCard, {
                 [m.attachedFileCardError]: u,
@@ -50,7 +50,7 @@ function U(e) {
                 }),
                 (0, a.jsx)(o.Text, {
                     variant: 'text-sm/normal',
-                    children: T
+                    children: h
                 }),
                 !C &&
                     (0, a.jsx)(o.Spinner, {
@@ -60,7 +60,7 @@ function U(e) {
                 C &&
                     null != l &&
                     (0, a.jsx)(o.Button, {
-                        'aria-label': h.Z.Messages.GUILD_PRODUCT_DELETE_ATTACHMENT.format({ attachment: T }),
+                        'aria-label': p.Z.Messages.GUILD_PRODUCT_DELETE_ATTACHMENT.format({ attachment: h }),
                         className: m.deleteButton,
                         innerClassName: m.deleteButtonInner,
                         look: o.Button.Looks.BLANK,
@@ -99,9 +99,9 @@ function f(e) {
             children: [
                 (0, a.jsx)(l.Z, {
                     className: m.uploadArea,
-                    title: h.Z.Messages.GUILD_PRODUCT_UPLOAD_AREA_TITLE,
-                    description: h.Z.Messages.GUILD_PRODUCT_UPLOAD_AREA_INSTRUCTIONS,
-                    icons: T.J6,
+                    title: p.Z.Messages.GUILD_PRODUCT_UPLOAD_AREA_TITLE,
+                    description: p.Z.Messages.GUILD_PRODUCT_UPLOAD_AREA_INSTRUCTIONS,
+                    icons: h.J6,
                     onDrop: v
                 }),
                 (0, a.jsxs)(u.Z, {
@@ -109,7 +109,7 @@ function f(e) {
                     innerClassName: m.addFileButton,
                     color: o.Button.Colors.CUSTOM,
                     disabled: !r,
-                    'aria-label': h.Z.Messages.GUILD_PRODUCT_UPLOAD_FILE_BUTTON,
+                    'aria-label': p.Z.Messages.GUILD_PRODUCT_UPLOAD_FILE_BUTTON,
                     'aria-describedby': I,
                     multiple: !0,
                     onChange: function (e) {
@@ -125,7 +125,7 @@ function f(e) {
                         (0, a.jsx)(o.Text, {
                             variant: 'text-sm/medium',
                             color: 'always-white',
-                            children: h.Z.Messages.GUILD_PRODUCT_UPLOAD_FILE_BUTTON
+                            children: p.Z.Messages.GUILD_PRODUCT_UPLOAD_FILE_BUTTON
                         })
                     ]
                 }),
@@ -134,7 +134,7 @@ function f(e) {
                     id: I,
                     color: 'text-muted',
                     variant: 'text-xs/normal',
-                    children: s ? h.Z.Messages.GUILD_PRODUCT_UPLOAD_ATTACHMENT_INSTRUCTIONS_ARCHIVES_ALLOWED.format({ fileUploadLimit: p.TR }) : h.Z.Messages.GUILD_PRODUCT_UPLOAD_ATTACHMENT_INSTRUCTIONS.format({ fileUploadLimit: p.TR })
+                    children: s ? p.Z.Messages.GUILD_PRODUCT_UPLOAD_ATTACHMENT_INSTRUCTIONS_ARCHIVES_ALLOWED.format({ fileUploadLimit: T.TR }) : p.Z.Messages.GUILD_PRODUCT_UPLOAD_ATTACHMENT_INSTRUCTIONS.format({ fileUploadLimit: T.TR })
                 }),
                 t.length > 0 &&
                     (0, a.jsxs)(a.Fragment, {
@@ -142,7 +142,7 @@ function f(e) {
                             (0, a.jsx)('div', { className: m.separator }),
                             (0, a.jsx)('ul', {
                                 className: m.attachedFilesContainer,
-                                'aria-label': h.Z.Messages.GUILD_PRODUCT_ATTACHED_FILES_SECTION_LABEL,
+                                'aria-label': p.Z.Messages.GUILD_PRODUCT_ATTACHED_FILES_SECTION_LABEL,
                                 children: t.map((e) =>
                                     (0, a.jsx)(
                                         'li',

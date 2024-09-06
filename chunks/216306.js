@@ -12,7 +12,7 @@ E.d(_, {
         return H;
     },
     qw: function () {
-        return p;
+        return h;
     },
     tn: function () {
         return P;
@@ -28,18 +28,18 @@ var s = E(470079),
     r = E(704215),
     a = E(45114),
     N = E(740504),
-    l = E(605236),
-    L = E(931261),
-    S = E(540126),
-    D = E(671098),
+    S = E(605236),
+    l = E(931261),
+    D = E(540126),
+    L = E(671098),
     U = E(703656),
-    G = E(592125),
-    O = E(324067),
+    O = E(592125),
+    G = E(324067),
     o = E(306680),
     i = E(709054),
     M = E(981631),
-    u = E(176505),
-    R = E(443063),
+    R = E(176505),
+    u = E(443063),
     c = E(490897),
     C = E(689938);
 function d(e, _) {
@@ -47,8 +47,8 @@ function d(e, _) {
 }
 function g(e, _, E, T) {
     T = T.toLowerCase();
-    let n = (0, L.g)(e),
-        t = s.useCallback((e, _) => !(n && e.channel.hasFlag(u.zZ.IS_GUILD_RESOURCE_CHANNEL)) && e.channel.type !== M.d4z.GUILD_DIRECTORY && (0 === _.length || I()(_, e.channel.name.toLowerCase()) || e.channel.topic.toLowerCase().includes(_)), [n]);
+    let n = (0, l.g)(e),
+        t = s.useCallback((e, _) => !(n && e.channel.hasFlag(R.zZ.IS_GUILD_RESOURCE_CHANNEL)) && e.channel.type !== M.d4z.GUILD_DIRECTORY && (0 === _.length || I()(_, e.channel.name.toLowerCase()) || e.channel.topic.toLowerCase().includes(_)), [n]);
     return s.useMemo(() => {
         let e = {
             null: [],
@@ -67,16 +67,16 @@ function g(e, _, E, T) {
 }
 function f(e) {
     let _ = e.getSections(!1);
-    if (_[S.wZ] > 0)
+    if (_[D.wZ] > 0)
         switch (e.getGuildActionSection().getRow(0)) {
-            case R.z.GUILD_HOME:
-                return u.oC.GUILD_HOME;
-            case R.z.GUILD_ROLE_SUBSCRIPTIONS:
-                return u.oC.ROLE_SUBSCRIPTIONS;
-            case R.z.GUILD_MEMBER_APPLICATIONS:
-                return u.oC.MEMBER_APPLICATIONS;
+            case u.z.GUILD_HOME:
+                return R.oC.GUILD_HOME;
+            case u.z.GUILD_ROLE_SUBSCRIPTIONS:
+                return R.oC.ROLE_SUBSCRIPTIONS;
+            case u.z.GUILD_MEMBER_APPLICATIONS:
+                return R.oC.MEMBER_APPLICATIONS;
         }
-    for (let s = S.wd; s < e.voiceChannelsSectionNumber; s++)
+    for (let s = D.wd; s < e.voiceChannelsSectionNumber; s++)
         if (_[s] > 0) {
             var E;
             let _ = null === (E = e.getChannelFromSectionRow(s, 0)) || void 0 === E ? void 0 : E.channel;
@@ -86,7 +86,7 @@ function f(e) {
 }
 function Z(e, _) {
     let E = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-    (0, D.n)(e, _),
+    (0, L.n)(e, _),
         (0, a.y5)(
             _.map((e) => ({
                 channelId: e,
@@ -97,12 +97,12 @@ function Z(e, _) {
         null != E && (0, U.uL)(M.Z5c.CHANNEL(e, E));
 }
 function P(e, _, E, s) {
-    let T = (0, l.wE)(r.z.CHANNEL_BROWSER_NUX),
+    let T = (0, S.wE)(r.z.CHANNEL_BROWSER_NUX),
         I = (0, A.cj)(
-            [G.Z],
+            [O.Z],
             () => {
                 let _ = {},
-                    E = G.Z.getMutableGuildChannelsForGuild(e);
+                    E = O.Z.getMutableGuildChannelsForGuild(e);
                 for (let e in E) {
                     let { parent_id: T } = E[e];
                     if (null != T) {
@@ -133,14 +133,14 @@ function P(e, _, E, s) {
 }
 function H(e) {
     var _, E;
-    let s = (0, A.e7)([O.Z], () => O.Z.getCategories(e)),
+    let s = (0, A.e7)([G.Z], () => G.Z.getCategories(e)),
         T = s._categories.length,
         I = s._categories[s._categories.length - 1];
     if (null == I) return 0;
     let n = s[null !== (E = null === (_ = I.channel) || void 0 === _ ? void 0 : _.id) && void 0 !== E ? E : 'null'];
     return null == n ? 0 : 0 === n.length ? I.index + 2 - T : n[n.length - 1].index + 2 - T;
 }
-function p(e) {
+function h(e) {
     var _;
     return C.Z.Messages.CHANNEL_BROWSER_ACTIVE_TEXT.format({ timeAgo: t()(i.default.extractTimestamp(null !== (_ = o.ZP.lastMessageId(e)) && void 0 !== _ ? _ : e)).fromNow() });
 }

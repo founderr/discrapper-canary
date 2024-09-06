@@ -1,6 +1,6 @@
 var i = n(735250),
-    a = n(470079),
-    s = n(780384),
+    s = n(470079),
+    a = n(780384),
     l = n(481060),
     r = n(410030),
     o = n(367907),
@@ -8,19 +8,19 @@ var i = n(735250),
     u = n(981631),
     d = n(689938),
     h = n(636827),
-    p = n(66737),
-    m = n(525377);
+    m = n(66737),
+    p = n(525377);
 t.Z = () => {
     let e = (0, r.ZP)();
-    a.useEffect(() => {
+    s.useEffect(() => {
         o.ZP.trackWithMetadata(u.rMx.GUILD_OUTAGE_VIEWED, {});
     }, []);
-    let t = (0, s.wj)(e) ? p : m;
+    let t = (0, a.wj)(e) ? m : p;
     return (0, i.jsxs)('div', {
         className: h.container,
         children: [
             (0, i.jsxs)(c.Z, {
-                toolbar: (0, i.jsx)(a.Fragment, {}),
+                toolbar: (0, i.jsx)(s.Fragment, {}),
                 children: [
                     (0, i.jsx)(c.Z.Icon, {
                         icon: l.TextIcon,

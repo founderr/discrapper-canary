@@ -5,67 +5,67 @@ n.d(t, {
 }),
     n(47120);
 var i = n(735250),
-    a = n(470079),
-    s = n(120356),
-    l = n.n(s),
+    s = n(470079),
+    a = n(120356),
+    l = n.n(a),
     r = n(442837),
     o = n(993365),
     c = n(481060),
     u = n(153867),
     d = n(110924),
     h = n(607070),
-    p = n(900211),
-    m = n(740492),
+    m = n(900211),
+    p = n(740492),
     _ = n(871499),
     f = n(402113),
     E = n(592125),
-    C = n(271383),
-    g = n(944486),
+    g = n(271383),
+    C = n(944486),
     I = n(594174),
     x = n(585483),
     T = n(51144),
-    N = n(566620),
-    S = n(317381),
-    v = n(619915),
-    Z = n(988980),
-    A = n(952561),
+    S = n(566620),
+    v = n(317381),
+    N = n(619915),
+    A = n(988980),
+    Z = n(952561),
     M = n(563218),
     b = n(884338),
     R = n(719296),
     L = n(651612),
-    j = n(918559),
-    O = n(981631),
-    P = n(689938),
+    P = n(918559),
+    j = n(981631),
+    O = n(689938),
     y = n(402137);
 let D = b.u.SIZE_32,
     k = {
-        [j.MI.NO_CHAT]: y.noChat,
-        [j.MI.RESIZABLE]: y.resizable
+        [P.MI.NO_CHAT]: y.noChat,
+        [P.MI.RESIZABLE]: y.resizable
     };
 function U(e) {
     var t, n;
-    let { maxHeight: s, connectedChannelId: U, renderExternalHeader: w } = e,
-        B = (0, A.Z)(),
-        H = (0, r.Wu)([S.ZP], () => (null != U ? S.ZP.getEmbeddedActivitiesForChannel(U) : []), [U]),
+    let { maxHeight: a, connectedChannelId: U, renderExternalHeader: w } = e,
+        B = (0, Z.Z)(),
+        H = (0, r.Wu)([v.ZP], () => (null != U ? v.ZP.getEmbeddedActivitiesForChannel(U) : []), [U]),
         G = (0, r.e7)([E.Z], () => E.Z.getChannel(U)),
-        V = (0, v.gb)(H),
-        F = (0, v.uF)(V),
-        W = a.useCallback(() => {
-            (0, N.tg)(j.Ez.PIP);
+        V = (0, N.gb)(H),
+        F = (0, N.uF)(V),
+        W = s.useCallback(() => {
+            (0, S.tg)(P.Ez.PIP);
         }, []),
-        z = a.useRef(null),
-        Y = (0, r.e7)([S.ZP], () => S.ZP.getFocusedLayout()),
-        K = Y !== j.MI.NO_CHAT,
-        [q, X] = a.useState(null !== (t = m.ZP.activityPanelHeight) && void 0 !== t ? t : s),
-        Q = a.useCallback((e) => {
+        z = s.useRef(null),
+        Y = (0, r.e7)([v.ZP], () => v.ZP.getFocusedLayout()),
+        K = Y !== P.MI.NO_CHAT,
+        [q, X] = s.useState(null !== (t = p.ZP.activityPanelHeight) && void 0 !== t ? t : a),
+        Q = s.useCallback((e) => {
             u.ZP.updatedUnsyncedSettings({ activityPanelHeight: e });
         }, []),
-        J = a.useRef(null),
-        [$, ee] = a.useState({
+        J = s.useRef(null),
+        [$, ee] = s.useState({
             width: 0,
             height: 0
         });
-    a.useLayoutEffect(() => {
+    s.useLayoutEffect(() => {
         if (null == J.current) return;
         let e = new ResizeObserver(() => {
             var e, t, n, i;
@@ -76,26 +76,26 @@ function U(e) {
         });
         return e.observe(J.current), () => e.disconnect();
     }, []);
-    let et = $.width / Math.max($.height, 1) < j.I0,
+    let et = $.width / Math.max($.height, 1) < P.I0,
         en = 0,
         ei = 0,
-        ea = (0, Z.Z)(null == B ? void 0 : B.id);
-    if (!ea) {
+        es = (0, A.Z)(null == B ? void 0 : B.id);
+    if (!es) {
         let e = $.width,
             t = $.height;
-        et ? ((t = $.width / j.I0) > $.height && (e = (t = $.height) * j.I0), (ei = ($.height - t) / 2)) : ((e = Math.min($.height * j.I0)) > $.width && (t = (e = $.width) / j.I0), (en = ($.width - e) / 2));
+        et ? ((t = $.width / P.I0) > $.height && (e = (t = $.height) * P.I0), (ei = ($.height - t) / 2)) : ((e = Math.min($.height * P.I0)) > $.width && (t = (e = $.width) / P.I0), (en = ($.width - e) / 2));
     }
-    let es = F.get(null !== (n = null == B ? void 0 : B.id) && void 0 !== n ? n : ''),
-        el = (0, r.e7)([g.Z], () => g.Z.getChannelId()),
+    let ea = F.get(null !== (n = null == B ? void 0 : B.id) && void 0 !== n ? n : ''),
+        el = (0, r.e7)([C.Z], () => C.Z.getChannelId()),
         er = (0, r.Wu)(
-            [C.ZP],
+            [g.ZP],
             () => {
                 var e;
-                return null == G ? [] : Array.from(null !== (e = null == es ? void 0 : es.embeddedActivity.userIds) && void 0 !== e ? e : []).map((e) => C.ZP.getMember(G.guild_id, e));
+                return null == G ? [] : Array.from(null !== (e = null == ea ? void 0 : ea.embeddedActivity.userIds) && void 0 !== e ? e : []).map((e) => g.ZP.getMember(G.guild_id, e));
             },
-            [es, G]
+            [ea, G]
         ),
-        eo = a.useMemo(() => {
+        eo = s.useMemo(() => {
             let e = new Map();
             return (
                 er.forEach((t) => {
@@ -106,15 +106,15 @@ function U(e) {
         }, [er]),
         ec = (function (e, t, n) {
             let i = (0, d.Z)(e),
-                s = e !== i,
-                [l, r] = a.useState(!1);
-            a.useEffect(() => {
+                a = e !== i,
+                [l, r] = s.useState(!1);
+            s.useEffect(() => {
                 r(!0);
                 let e = setTimeout(() => r(!1), 50);
                 return () => clearTimeout(e);
             }, [e]);
-            let o = !h.Z.useReducedMotion && (s || l);
-            return a.useMemo(() => {
+            let o = !h.Z.useReducedMotion && (a || l);
+            return s.useMemo(() => {
                 let i = o
                     ? {
                           transitionProperty: 'height, max-height',
@@ -131,28 +131,28 @@ function U(e) {
                       }
                     : i;
             }, [o, e, n, t]);
-        })(K, q, s);
+        })(K, q, a);
     if (null == B) return null;
     let eu = [];
-    null != es &&
-        (eu = Array.from(es.embeddedActivity.userIds)
+    null != ea &&
+        (eu = Array.from(ea.embeddedActivity.userIds)
             .map((e) => I.default.getUser(e))
             .filter((e) => null != e && void 0 !== e));
     let ed = (e, t) => {
         var n;
         if (null == e || void 0 === e || void 0 === t) return null;
-        let a = eo.get(e.id),
-            s = null !== (n = null == a ? void 0 : a.nick) && void 0 !== n ? n : T.ZP.getName(e);
+        let s = eo.get(e.id),
+            a = null !== (n = null == s ? void 0 : s.nick) && void 0 !== n ? n : T.ZP.getName(e);
         return (0, i.jsx)(
             c.TooltipContainer,
             {
-                text: s,
+                text: a,
                 position: 'bottom',
                 children: (0, i.jsx)(
                     'img',
                     {
                         src: e.getAvatarURL(t.guild_id, D),
-                        alt: s,
+                        alt: a,
                         className: y.avatar
                     },
                     e.id
@@ -162,7 +162,7 @@ function U(e) {
         );
     };
     return (0, i.jsx)(c.ThemeProvider, {
-        theme: O.BRd.DARK,
+        theme: j.BRd.DARK,
         children: (e) =>
             (0, i.jsxs)('div', {
                 className: l()(y.wrapper, k[Y], e),
@@ -185,7 +185,7 @@ function U(e) {
                                       })
                                   }),
                             (0, i.jsx)('div', {
-                                className: l()(y.activityContainer, { [y.activityContainerNoMargin]: ea }),
+                                className: l()(y.activityContainer, { [y.activityContainerNoMargin]: es }),
                                 style: {
                                     paddingLeft: en,
                                     paddingRight: en,
@@ -228,7 +228,7 @@ function U(e) {
                                                       })
                                                   }),
                                                   (0, i.jsx)(_.d, {
-                                                      label: P.Z.Messages.EMBEDDED_ACTIVITIES_MINIMIZE_A11Y_LABEL,
+                                                      label: O.Z.Messages.EMBEDDED_ACTIVITIES_MINIMIZE_A11Y_LABEL,
                                                       onClick: W,
                                                       iconComponent: c.MinimizeIcon,
                                                       themeable: !0,
@@ -243,15 +243,15 @@ function U(e) {
                         ]
                     }),
                     K
-                        ? (0, i.jsx)(p.Z, {
+                        ? (0, i.jsx)(m.Z, {
                               minHeight: 480,
-                              maxHeight: s,
+                              maxHeight: a,
                               resizableNode: z,
                               onResize: (e) => {
-                                  x.S.dispatch(O.CkL.MANUAL_IFRAME_RESIZING, { resizing: !0 }), X(e);
+                                  x.S.dispatch(j.CkL.MANUAL_IFRAME_RESIZING, { resizing: !0 }), X(e);
                               },
                               onResizeEnd: (e) => {
-                                  x.S.dispatch(O.CkL.MANUAL_IFRAME_RESIZING, { resizing: !1 }), Q(e);
+                                  x.S.dispatch(j.CkL.MANUAL_IFRAME_RESIZING, { resizing: !1 }), Q(e);
                               }
                           })
                         : null

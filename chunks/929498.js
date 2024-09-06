@@ -20,15 +20,15 @@ var r = n(470079),
 let p = [],
     I = [];
 function m(e) {
-    let { pastActivityEnabled: t, selfPastActivityEnabled: n } = (0, E.z)({ location: 'useUserProfileActivity' }),
-        m = (0, a.e7)([d.default], () => d.default.getId() === e),
-        T = t || (n && m),
-        g = (0, a.e7)([_.Z], () => _.Z.getActivities(e)),
-        S = (0, a.e7)([s.Z], () => (T ? s.Z.getUserOutbox(e) : void 0)),
-        A = (0, a.e7)([c.Z], () => c.Z.getAnyStreamForUser(e)),
-        { live: N, recent: O } = (0, r.useMemo)(() => {
+    let { pastActivityEnabled: t } = (0, E.z)({ location: 'useUserProfileActivity' }),
+        n = (0, a.e7)([d.default], () => d.default.getId() === e),
+        m = t || n,
+        T = (0, a.e7)([_.Z], () => _.Z.getActivities(e)),
+        S = (0, a.e7)([s.Z], () => (m ? s.Z.getUserOutbox(e) : void 0)),
+        g = (0, a.e7)([c.Z], () => c.Z.getAnyStreamForUser(e)),
+        { live: A, recent: N } = (0, r.useMemo)(() => {
             let e = (0, i.uniqWith)(
-                    g.filter((e) => {
+                    T.filter((e) => {
                         let { type: t } = e;
                         return t !== h.IIU.CUSTOM_STATUS;
                     }),
@@ -39,11 +39,11 @@ function m(e) {
                 live: 0 === e.length ? p : e,
                 recent: null == t || 0 === t.length ? I : t
             };
-        }, [g, null == S ? void 0 : S.entries]);
+        }, [T, null == S ? void 0 : S.entries]);
     return {
-        live: N,
-        recent: O,
-        stream: A,
+        live: A,
+        recent: N,
+        stream: g,
         outbox: S
     };
 }

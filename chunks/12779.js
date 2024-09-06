@@ -1,16 +1,16 @@
 var i = n(735250),
-    a = n(470079),
-    s = n(120356),
-    l = n.n(s),
+    s = n(470079),
+    a = n(120356),
+    l = n.n(a),
     r = n(481060),
     o = n(194082),
     c = n(14338),
     u = n(327799);
-t.Z = a.memo(function (e) {
-    let { label: t, participantCount: n, onClick: a, className: s, collapsed: d, speakers: h, channel: p, isStreamLive: m } = e;
+t.Z = s.memo(function (e) {
+    let { label: t, participantCount: n, onClick: s, className: a, collapsed: d, speakers: h, channel: m, isStreamLive: p } = e;
     return (0, i.jsxs)(r.Clickable, {
-        onClick: a,
-        className: l()(u.container, s),
+        onClick: s,
+        className: l()(u.container, a),
         children: [
             null == h
                 ? (0, i.jsx)(r.GroupIcon, {
@@ -34,16 +34,16 @@ t.Z = a.memo(function (e) {
                 children: [t, ' \u2014 ', n]
             }),
             d &&
-                null != p &&
+                null != m &&
                 null != h &&
                 h.length > 0 &&
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(c.Z, {
-                            channel: p,
+                            channel: m,
                             speakers: h
                         }),
-                        m && (0, i.jsx)(o.ZP, {})
+                        p && (0, i.jsx)(o.ZP, {})
                     ]
                 }),
             (0, i.jsx)(r.ChevronSmallDownIcon, {

@@ -109,12 +109,12 @@ function c(e, t) {
                     }),
                 m = I.rrulevals,
                 T = I.rdatevals,
-                g = I.exrulevals,
-                S = I.exdatevals,
+                S = I.exrulevals,
+                g = I.exdatevals,
                 A = I.dtstart,
                 N = I.tzid,
                 O = !1 === t.cache;
-            if ((t.compatible && ((t.forceset = !0), (t.unfold = !0)), t.forceset || m.length > 1 || T.length || g.length || S.length)) {
+            if ((t.compatible && ((t.forceset = !0), (t.unfold = !0)), t.forceset || m.length > 1 || T.length || S.length || g.length)) {
                 var R = new a.p(O);
                 return (
                     R.dtstart(A),
@@ -125,10 +125,10 @@ function c(e, t) {
                     T.forEach(function (e) {
                         R.rdate(e);
                     }),
-                    g.forEach(function (e) {
+                    S.forEach(function (e) {
                         R.exrule(new i.Ci(d(e, A, N), O));
                     }),
-                    S.forEach(function (e) {
+                    g.forEach(function (e) {
                         R.exdate(e);
                     }),
                     t.compatible && t.dtstart && R.rdate(A),

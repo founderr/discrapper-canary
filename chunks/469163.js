@@ -20,8 +20,8 @@ var r = n(127118),
     I = n(859974),
     m = n(993770),
     T = n(98426),
-    g = n(842979),
-    S = n(501422),
+    S = n(842979),
+    g = n(501422),
     A = n(852785),
     N = n(286507),
     O = n(995747),
@@ -29,8 +29,8 @@ var r = n(127118),
     v = n(229619),
     C = n(625895),
     y = n(290578),
-    L = n(993518),
-    D = n(440586),
+    D = n(993518),
+    L = n(440586),
     b = n(763677),
     M = n(724777),
     P = n(200045),
@@ -53,18 +53,18 @@ function H(e) {
         T = () => {
             m.current = !0;
         },
-        g = () => {
+        S = () => {
             m.current = !1;
         };
     (i = '' === i ? p.format('Empty') : (i || `${r}`).replace('-', '\u2212')),
         (0, k.useEffect)(() => {
             m.current && ((0, G.gb)('assertive'), (0, G.xQ)(i, 'assertive'));
         }, [i]);
-    let S = (0, B.iW)((e) => {
+    let g = (0, B.iW)((e) => {
             I(),
                 c(),
                 (n.current = window.setTimeout(() => {
-                    (isNaN(s) || isNaN(r) || r < s) && S(60);
+                    (isNaN(s) || isNaN(r) || r < s) && g(60);
                 }, e));
         }),
         A = (0, B.iW)((e) => {
@@ -117,17 +117,17 @@ function H(e) {
                     }
             },
             onFocus: T,
-            onBlur: g
+            onBlur: S
         },
         incrementButtonProps: {
             onPressStart: () => {
-                S(400), O(window, 'contextmenu', N);
+                g(400), O(window, 'contextmenu', N);
             },
             onPressEnd: () => {
                 I(), R();
             },
             onFocus: T,
-            onBlur: g
+            onBlur: S
         },
         decrementButtonProps: {
             onPressStart: () => {
@@ -137,7 +137,7 @@ function H(e) {
                 I(), R();
             },
             onFocus: T,
-            onBlur: g
+            onBlur: S
         }
     };
 }
@@ -159,8 +159,8 @@ V = {
     'it-IT': I.Z,
     'ja-JP': m.Z,
     'ko-KR': T.Z,
-    'lt-LT': g.Z,
-    'lv-LV': S.Z,
+    'lt-LT': S.Z,
+    'lv-LV': g.Z,
     'nb-NO': A.Z,
     'nl-NL': N.Z,
     'pl-PL': O.Z,
@@ -168,8 +168,8 @@ V = {
     'pt-PT': v.Z,
     'ro-RO': C.Z,
     'ru-RU': y.Z,
-    'sk-SK': L.Z,
-    'sl-SI': D.Z,
+    'sk-SK': D.Z,
+    'sl-SI': L.Z,
     'sr-SP': b.Z,
     'sv-SE': M.Z,
     'tr-TR': P.Z,

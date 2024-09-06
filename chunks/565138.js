@@ -36,7 +36,7 @@ let T = {
         LARGER: 'Larger',
         XLARGE: 'XLarge'
     },
-    g = {
+    S = {
         [T.SMOL]: 16,
         [T.MINI]: 20,
         [T.SMALLER]: 24,
@@ -46,7 +46,7 @@ let T = {
         [T.LARGER]: 64,
         [T.XLARGE]: 100
     },
-    S = {
+    g = {
         [T.SMOL]: [10, 10, 8, 6, 6, 4],
         [T.MINI]: [12, 12, 10, 10, 8, 6, 4],
         [T.SMALLER]: [13, 13, 11, 11, 9, 7, 5],
@@ -80,8 +80,8 @@ class A extends a.PureComponent {
     }
     renderIcon() {
         var e, t;
-        let { guild: n, className: r, showBadge: a, active: s, size: l, style: u = {}, textScale: c, showTooltip: _, tooltipPosition: E, onClick: f, to: h, badgeStrokeColor: m, animate: T, tabIndex: g, iconSrc: A, 'aria-hidden': N, ...O } = this.props,
-            R = S[l],
+        let { guild: n, className: r, showBadge: a, active: s, size: l, style: u = {}, textScale: c, showTooltip: _, tooltipPosition: E, onClick: f, to: h, badgeStrokeColor: m, animate: T, tabIndex: S, iconSrc: A, 'aria-hidden': N, ...O } = this.props,
+            R = g[l],
             v = null != f ? d.Clickable : 'div';
         return (0, i.jsxs)(v, {
             className: o()(I.icon, r, (0, p.l)(I, 'iconSize', l), {
@@ -98,7 +98,7 @@ class A extends a.PureComponent {
                       }
                     : u,
             onClick: null != h || null == f ? void 0 : f,
-            tabIndex: g,
+            tabIndex: S,
             ...O,
             children: [this.renderAcronym(), this.renderBadge()]
         });
@@ -135,7 +135,7 @@ let N = u.ZP.connectStores([f.Z], (e) => {
     return {
         style: {
             ...i,
-            backgroundImage: (0, h.rv)(null != r ? r : t.getIconURL(g[a], n && f.Z.isFocused()))
+            backgroundImage: (0, h.rv)(null != r ? r : t.getIconURL(S[a], n && f.Z.isFocused()))
         }
     };
 })((0, _.N)((e) => (0, i.jsx)(A, { ...e })));

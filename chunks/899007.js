@@ -21,29 +21,29 @@ var r = n(735250),
     I = n(204197),
     m = n(929498),
     T = n(652853),
-    g = n(228168),
-    S = n(981631),
+    S = n(228168),
+    g = n(981631),
     A = n(474936),
     N = n(234328);
 let O = h.ZP.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
 function R(e) {
     let { user: t, displayProfile: n, guildId: a, channelId: h, profileType: R, animateOnHover: v, onOpenProfile: C } = e,
         { theme: y } = (0, T.z)(),
-        { analyticsLocations: L } = (0, d.ZP)(c.Z.AVATAR),
-        { trackUserProfileAction: D } = (0, p.KZ)(),
+        { analyticsLocations: D } = (0, d.ZP)(c.Z.AVATAR),
+        { trackUserProfileAction: L } = (0, p.KZ)(),
         b = f.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, A.p9.TIER_2),
         M = i.useMemo(() => t.isNonUserBot() || (0, _.W)(t, h), [t, h]),
         { live: P } = (0, m.Z)(t.id),
         [U] = P,
         { status: w, isMobileOnline: x } = (0, o.cj)([E.Z], () => ({
-            status: (0, u.Z)(U) ? S.Skl.STREAMING : E.Z.getStatus(t.id),
+            status: (0, u.Z)(U) ? g.Skl.STREAMING : E.Z.getStatus(t.id),
             isMobileOnline: E.Z.isMobileOnline(t.id)
         })),
-        G = R === g.y0.FULL_SIZE ? l.AvatarSizes.SIZE_120 : l.AvatarSizes.SIZE_80,
+        G = R === S.y0.FULL_SIZE ? l.AvatarSizes.SIZE_120 : l.AvatarSizes.SIZE_80,
         k = s()(N.avatar, {
-            [N.biteSize]: R === g.y0.BITE_SIZE,
-            [N.fullSize]: R === g.y0.FULL_SIZE,
-            [N.panel]: R === g.y0.PANEL
+            [N.biteSize]: R === S.y0.BITE_SIZE,
+            [N.fullSize]: R === S.y0.FULL_SIZE,
+            [N.panel]: R === S.y0.PANEL
         }),
         {
             avatarDecorationSrc: B,
@@ -61,11 +61,11 @@ function R(e) {
             size: G,
             'aria-label': t.username,
             imageClassName: null != C ? N.overlay : void 0,
-            status: M ? S.Skl.UNKNOWN : w,
+            status: M ? g.Skl.UNKNOWN : w,
             statusBackdropColor: b && !M ? (0, l.getStatusBackdropColor)(y) : void 0,
             isMobile: x,
             statusTooltip: !0,
-            statusTooltipDelay: g.vB
+            statusTooltipDelay: S.vB
         });
     return null == C
         ? (0, r.jsx)('div', {
@@ -78,9 +78,9 @@ function R(e) {
               className: s()(k, N.clickable),
               focusProps: { ringClassName: N.focusRing },
               onClick: () => {
-                  D({
+                  L({
                       action: 'PRESS_VIEW_PROFILE',
-                      analyticsLocations: L
+                      analyticsLocations: D
                   }),
                       null == C || C();
               },

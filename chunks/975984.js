@@ -17,14 +17,14 @@ n.d(t, {
 }),
     n(47120);
 var i = n(512722),
-    a = n.n(i),
-    s = n(392711),
-    l = n.n(s),
+    s = n.n(i),
+    a = n(392711),
+    l = n.n(a),
     r = n(486527);
 function o(e) {
-    var t, n, i, s, l, o, c;
+    var t, n, i, a, l, o, c;
     return (
-        a()(e.type === r.C2.GUILD, 'Directory entries must be connected to a guild!'),
+        s()(e.type === r.C2.GUILD, 'Directory entries must be connected to a guild!'),
         {
             channelId: e.directory_channel_id,
             guildId: e.entity_id,
@@ -36,7 +36,7 @@ function o(e) {
             name: null === (t = e.guild) || void 0 === t ? void 0 : t.name,
             icon: null === (n = e.guild) || void 0 === n ? void 0 : n.icon,
             splash: null === (i = e.guild) || void 0 === i ? void 0 : i.splash,
-            features: new Set(null === (s = e.guild) || void 0 === s ? void 0 : s.features),
+            features: new Set(null === (a = e.guild) || void 0 === a ? void 0 : a.features),
             approximateMemberCount: null === (l = e.guild) || void 0 === l ? void 0 : l.approximate_member_count,
             approximatePresenceCount: null === (o = e.guild) || void 0 === o ? void 0 : o.approximate_presence_count,
             featurableInDirectory: null === (c = e.guild) || void 0 === c ? void 0 : c.featurable_in_directory

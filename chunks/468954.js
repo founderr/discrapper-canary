@@ -11,7 +11,7 @@ var r = n(735250),
     l = n(810462),
     u = n(40261);
 function c(e) {
-    let { categories: t, collapsedCategories: n, containerWidth: c, store: d, onSelectItem: _, onSearchExpressions: E, hasSearchResults: f, defaultSearchPlaceholder: h, emptySearchPlaceholder: p, renderEmptyState: I, renderRow: m, renderSection: T, renderSectionHeader: g, renderSectionFooter: S, renderInspector: A, renderEmptySearchState: N, renderCategoryList: O, renderHeaderAccessories: R, rowHeight: v, sectionHeaderHeight: C, sectionFooterHeight: y, itemNodeWidth: L, listPaddingRight: D, itemNodeMargin: b, listPadding: M, gridNavigatorId: P, gridNotice: U, renderHeader: w, renderUpsell: x, setShowUpsell: G } = e,
+    let { categories: t, collapsedCategories: n, containerWidth: c, store: d, onSelectItem: _, onSearchExpressions: E, hasSearchResults: f, defaultSearchPlaceholder: h, emptySearchPlaceholder: p, renderEmptyState: I, renderRow: m, renderSection: T, renderSectionHeader: S, renderSectionFooter: g, renderInspector: A, renderEmptySearchState: N, renderCategoryList: O, renderHeaderAccessories: R, rowHeight: v, sectionHeaderHeight: C, sectionFooterHeight: y, itemNodeWidth: D, listPaddingRight: L, itemNodeMargin: b, listPadding: M, gridNavigatorId: P, gridNotice: U, renderHeader: w, renderUpsell: x, setShowUpsell: G } = e,
         k = i.useRef(null),
         B = i.useRef(null),
         F = i.useRef(null),
@@ -33,8 +33,8 @@ function c(e) {
             categories: t,
             collapsedCategories: n,
             gridWidth: Y,
-            listPaddingRight: D,
-            itemNodeWidth: L,
+            listPaddingRight: L,
+            itemNodeWidth: D,
             itemNodeMargin: b
         }),
         {
@@ -69,8 +69,8 @@ function c(e) {
             [j, Q, X, q, ee, m, d, W]
         ),
         en = i.useCallback((e) => (null == T ? void 0 : T(t[e])), [t, T]),
-        er = i.useCallback((e) => (null == g ? void 0 : g(t[e], e)), [t, g]),
-        ei = i.useCallback((e) => (null == S ? void 0 : S(t[e], e)), [t, S]),
+        er = i.useCallback((e) => (null == S ? void 0 : S(t[e], e)), [t, S]),
+        ei = i.useCallback((e) => (null == g ? void 0 : g(t[e], e)), [t, g]),
         ea = i.useCallback(() => {
             var e;
             return null == A ? void 0 : A(null == j ? void 0 : null === (e = j[Z.rowIndex]) || void 0 === e ? void 0 : e[Z.columnIndex]);
@@ -135,8 +135,8 @@ function c(e) {
                                             listPadding: M,
                                             renderRow: et,
                                             renderSection: null != T ? en : void 0,
-                                            renderSectionHeader: null != g ? er : void 0,
-                                            renderSectionFooter: null != S ? ei : void 0,
+                                            renderSectionHeader: null != S ? er : void 0,
+                                            renderSectionFooter: null != g ? ei : void 0,
                                             renderInspector: null != A ? ea : void 0,
                                             renderEmptySearchState: N,
                                             rowCount: W,

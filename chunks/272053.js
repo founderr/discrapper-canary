@@ -28,8 +28,8 @@ function p(e, t, n) {
 let I = 1 * _.Z.Millis.MINUTE,
     m = (e) => 'https://youtube.com/watch?v='.concat(e),
     T = 5 * _.Z.Millis.MINUTE,
-    g = /live_user_(.*)-\{width\}/,
-    S = null,
+    S = /live_user_(.*)-\{width\}/,
+    g = null,
     A = 0,
     N = null,
     O = new Set(),
@@ -89,9 +89,9 @@ let y = new (class e {
                 f = { large_image: null != u && null !== (r = (0, d.getAssetFromImageURL)(h.ABu.TWITCH, u)) && void 0 !== r ? r : void 0 },
                 p = await C(_, t),
                 I = c.Z.get(h.ABu.TWITCH);
-            let m = null !== ((a = u), (i = null === (s = g.exec(a)) || void 0 === s ? void 0 : s[1])) && void 0 !== i ? i : e.name,
+            let m = null !== ((a = u), (i = null === (s = S.exec(a)) || void 0 === s ? void 0 : s[1])) && void 0 !== i ? i : e.name,
                 T = null != E && '' !== E ? E.slice(0, 128) : void 0,
-                S = null != p && '' !== p ? p.slice(0, 128) : void 0;
+                g = null != p && '' !== p ? p.slice(0, 128) : void 0;
             return {
                 url:
                     null === (n = I.getPlatformUserUrl) || void 0 === n
@@ -103,7 +103,7 @@ let y = new (class e {
                 name: I.name,
                 assets: f,
                 details: T,
-                state: S
+                state: g
             };
         } catch (n) {
             if (401 === n.status && null == t)
@@ -179,23 +179,23 @@ let y = new (class e {
         p(this, '_nextCheck', void 0), p(this, '_started', void 0), (this._started = !1);
     }
 })();
-function L() {
+function D() {
     f.Z.enabled ? y.start() : y.stop();
 }
-class D extends (r = s.ZP.Store) {
+class L extends (r = s.ZP.Store) {
     initialize() {
-        L(), this.waitFor(E.Z), this.syncWith([f.Z], L);
+        D(), this.waitFor(E.Z), this.syncWith([f.Z], D);
     }
     getStream() {
-        return S;
+        return g;
     }
 }
-p(D, 'displayName', 'ExternalStreamingStore'),
-    (t.Z = new D(l.Z, {
+p(L, 'displayName', 'ExternalStreamingStore'),
+    (t.Z = new L(l.Z, {
         STREAMING_UPDATE: function (e) {
             var t;
-            if (a()(e.stream, S)) return !1;
-            S = null !== (t = e.stream) && void 0 !== t ? t : null;
+            if (a()(e.stream, g)) return !1;
+            g = null !== (t = e.stream) && void 0 !== t ? t : null;
         },
         USER_CONNECTIONS_UPDATE: () => y._check()
     }));

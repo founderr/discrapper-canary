@@ -46,7 +46,7 @@
         function T(e) {
             return String(e).replace(/^ +| +$/g, '');
         }
-        var g = (function e(t) {
+        var S = (function e(t) {
             var n,
                 r,
                 a,
@@ -58,17 +58,17 @@
             var d = l.navigator || {},
                 E = d.userAgent || '';
             t || (t = E);
-            var g = c ? !!d.likeChrome : /\bChrome\b/.test(t) && !/internal|\n/i.test(_.toString()),
-                S = 'Object',
-                A = c ? S : 'ScriptBridgingProxyObject',
-                N = c ? S : 'Environment',
+            var S = c ? !!d.likeChrome : /\bChrome\b/.test(t) && !/internal|\n/i.test(_.toString()),
+                g = 'Object',
+                A = c ? g : 'ScriptBridgingProxyObject',
+                N = c ? g : 'Environment',
                 O = c && l.java ? 'JavaPackage' : p(l.java),
-                R = c ? S : 'RuntimeObject',
+                R = c ? g : 'RuntimeObject',
                 v = /\bJava/.test(O) && l.java,
                 C = v && p(l.environment) == N,
                 y = v ? 'a' : 'α',
-                L = v ? 'b' : 'β',
-                D = l.document || {},
+                D = v ? 'b' : 'β',
+                L = l.document || {},
                 b = l.operamini || l.opera,
                 M = u.test((M = c && b ? b['[[Class]]'] : p(b))) ? M : (b = null),
                 P = t,
@@ -432,7 +432,7 @@
                 });
             }
             if ((k && (k = [k]), /\bAndroid\b/.test(H) && !F && (s = /\bAndroid[^;]*;(.*?)(?:Build|\) AppleWebKit)\b/i.exec(t)) && (F = T(s[1]).replace(/^[a-z]{2}-[a-z]{2};\s*/i, '') || null), V && !F ? (F = Z([V])) : V && F && (F = F.replace(RegExp('^(' + I(V) + ')[-_.\\s]', 'i'), V + ' ').replace(RegExp('^(' + I(V) + ')[-_.]?(\\w)', 'i'), V + ' $2')), (s = /\bGoogle TV\b/.exec(F)) && (F = s[0]), /\bSimulator\b/i.test(t) && (F = (F ? F + ' ' : '') + 'Simulator'), 'Opera Mini' == B && /\bOPiOS\b/.test(t) && U.push('running in Turbo/Uncompressed mode'), 'IE' == B && /\blike iPhone OS\b/.test(t) ? ((V = (s = e(t.replace(/like iPhone OS/, ''))).manufacturer), (F = s.product)) : /^iP/.test(F) ? (B || (B = 'Safari'), (H = 'iOS' + ((s = / OS ([\d_]+)/i.exec(t)) ? ' ' + s[1].replace(/_/g, '.') : ''))) : 'Konqueror' == B && /^Linux\b/i.test(H) ? (H = 'Kubuntu') : (V && 'Google' != V && ((/Chrome/.test(B) && !/\bMobile Safari\b/i.test(t)) || /\bVita\b/.test(F))) || (/\bAndroid\b/.test(H) && /^Chrome/.test(B) && /\bVersion\//i.test(t)) ? ((B = 'Android Browser'), (H = /\bAndroid\b/.test(H) ? H : 'Android')) : 'Silk' == B ? (!/\bMobi/i.test(t) && ((H = 'Android'), U.unshift('desktop mode')), /Accelerated *= *true/i.test(t) && U.unshift('accelerated')) : 'UC Browser' == B && /\bUCWEB\b/.test(t) ? U.push('speed mode') : 'PaleMoon' == B && (s = /\bFirefox\/([\d.]+)\b/.exec(t)) ? U.push('identifying as Firefox ' + s[1]) : 'Firefox' == B && (s = /\b(Mobile|Tablet|TV)\b/i.exec(t)) ? (H || (H = 'Firefox OS'), F || (F = s[1])) : !B || (s = !/\bMinefield\b/i.test(t) && /\b(?:Firefox|Safari)\b/.exec(B)) ? (B && !F && /[\/,]|^[^(]+?\)/.test(t.slice(t.indexOf(s + '/') + 8)) && (B = null), (s = F || V || H) && (F || V || /\b(?:Android|Symbian OS|Tablet OS|webOS)\b/.test(H)) && (B = /[a-z]+(?: Hat)?/i.exec(/\bAndroid\b/.test(H) ? H : s) + ' Browser')) : 'Electron' == B && (s = (/\bChrome\/([\d.]+)\b/.exec(t) || 0)[1]) && U.push('Chromium ' + s), !G && (G = Y(['(?:Cloud9|CriOS|CrMo|Edge|Edg|EdgA|EdgiOS|FxiOS|HeadlessChrome|IEMobile|Iron|Opera ?Mini|OPiOS|OPR|Raven|SamsungBrowser|Silk(?!/[\\d.]+$)|UCBrowser|YaBrowser)', 'Version', I(B), '(?:Firefox|Minefield|NetFront)'])), (s = ('iCab' == k && parseFloat(G) > 3 && 'WebKit') || (/\bOpera\b/.test(B) && (/\bOPR\b/.test(t) ? 'Blink' : 'Presto')) || (/\b(?:Midori|Nook|Safari)\b/i.test(t) && !/^(?:Trident|EdgeHTML)$/.test(k) && 'WebKit') || (!k && /\bMSIE\b/i.test(t) && ('Mac OS' == H ? 'Tasman' : 'Trident')) || ('WebKit' == k && /\bPlayStation\b(?! Vita\b)/i.test(B) && 'NetFront')) && (k = [s]), 'IE' == B && (s = (/; *(?:XBLWP|ZuneWP)(\d+)/i.exec(t) || 0)[1]) ? ((B += ' Mobile'), (H = 'Windows Phone ' + (/\+$/.test(s) ? s : s + '.x')), U.unshift('desktop mode')) : /\bWPDesktop\b/i.test(t) ? ((B = 'IE Mobile'), (H = 'Windows Phone 8.x'), U.unshift('desktop mode'), G || (G = (/\brv:([\d.]+)/.exec(t) || 0)[1])) : 'IE' != B && 'Trident' == k && (s = /\brv:([\d.]+)/.exec(t)) && (B && U.push('identifying as ' + B + (G ? ' ' + G : '')), (B = 'IE'), (G = s[1])), x)) {
-                if (((r = 'global'), (a = null != (n = l) ? typeof n[r] : 'number'), /^(?:boolean|number|string|undefined)$/.test(a) || ('object' == a && !n[r]))) p((s = l.runtime)) == A ? ((B = 'Adobe AIR'), (H = s.flash.system.Capabilities.os)) : p((s = l.phantom)) == R ? ((B = 'PhantomJS'), (G = (s = s.version || null) && s.major + '.' + s.minor + '.' + s.patch)) : 'number' == typeof D.documentMode && (s = /\bTrident\/(\d+)/i.exec(t)) ? ((G = [G, D.documentMode]), (s = +s[1] + 4) != G[1] && (U.push('IE ' + G[1] + ' mode'), k && (k[1] = ''), (G[1] = s)), (G = 'IE' == B ? String(G[1].toFixed(1)) : G[0])) : 'number' == typeof D.documentMode && /^(?:Chrome|Firefox)\b/.test(B) && (U.push('masking as ' + B + ' ' + G), (B = 'IE'), (G = '11.0'), (k = ['Trident']), (H = 'Windows'));
+                if (((r = 'global'), (a = null != (n = l) ? typeof n[r] : 'number'), /^(?:boolean|number|string|undefined)$/.test(a) || ('object' == a && !n[r]))) p((s = l.runtime)) == A ? ((B = 'Adobe AIR'), (H = s.flash.system.Capabilities.os)) : p((s = l.phantom)) == R ? ((B = 'PhantomJS'), (G = (s = s.version || null) && s.major + '.' + s.minor + '.' + s.patch)) : 'number' == typeof L.documentMode && (s = /\bTrident\/(\d+)/i.exec(t)) ? ((G = [G, L.documentMode]), (s = +s[1] + 4) != G[1] && (U.push('IE ' + G[1] + ' mode'), k && (k[1] = ''), (G[1] = s)), (G = 'IE' == B ? String(G[1].toFixed(1)) : G[0])) : 'number' == typeof L.documentMode && /^(?:Chrome|Firefox)\b/.test(B) && (U.push('masking as ' + B + ' ' + G), (B = 'IE'), (G = '11.0'), (k = ['Trident']), (H = 'Windows'));
                 else if ((v && ((P = (s = v.lang.System).getProperty('os.arch')), (H = H || s.getProperty('os.name') + ' ' + s.getProperty('os.version'))), C)) {
                     try {
                         (G = l.require('ringo/engine').version.join('.')), (B = 'RingoJS');
@@ -443,7 +443,7 @@
                 } else 'object' == typeof l.process && !l.process.browser && (s = l.process) && ('object' == typeof s.versions && ('string' == typeof s.versions.electron ? (U.push('Node ' + s.versions.node), (B = 'Electron'), (G = s.versions.electron)) : 'string' == typeof s.versions.nw && (U.push('Chromium ' + G, 'Node ' + s.versions.node), (B = 'NW.js'), (G = s.versions.nw))), !B && ((B = 'Node.js'), (P = s.arch), (H = s.platform), (G = (G = /[\d.]+/.exec(s.version)) ? G[0] : null)));
                 H = H && f(H);
             }
-            if ((G && (s = /(?:[ab]|dp|pre|[ab]\d+pre)(?:\d+\+?)?$/i.exec(G) || /(?:alpha|beta)(?: ?\d)?/i.exec(t + ';' + (x && d.appMinorVersion)) || (/\bMinefield\b/i.test(t) && 'a')) && ((w = /b/i.test(s) ? 'beta' : 'alpha'), (G = G.replace(RegExp(s + '\\+?$'), '') + ('beta' == w ? L : y) + (/\d+\+?/.exec(s) || ''))), 'Fennec' == B || ('Firefox' == B && /\b(?:Android|Firefox OS|KaiOS)\b/.test(H)))) B = 'Firefox Mobile';
+            if ((G && (s = /(?:[ab]|dp|pre|[ab]\d+pre)(?:\d+\+?)?$/i.exec(G) || /(?:alpha|beta)(?: ?\d)?/i.exec(t + ';' + (x && d.appMinorVersion)) || (/\bMinefield\b/i.test(t) && 'a')) && ((w = /b/i.test(s) ? 'beta' : 'alpha'), (G = G.replace(RegExp(s + '\\+?$'), '') + ('beta' == w ? D : y) + (/\d+\+?/.exec(s) || ''))), 'Fennec' == B || ('Firefox' == B && /\b(?:Android|Firefox OS|KaiOS)\b/.test(H)))) B = 'Firefox Mobile';
             else if ('Maxthon' == B && G) G = G.replace(/\.[\d.]+/, '.x');
             else if (/\bXbox\b/i.test(F)) 'Xbox 360' == F && (H = null), 'Xbox 360' == F && /\bIEMobile\b/.test(t) && U.unshift('mobile mode');
             else if ((/^(?:Chrome|IE|Opera)$/.test(B) || (B && !F && !/Browser|Mobi/.test(B))) && ('Windows CE' == H || /Mobi/i.test(t))) B += ' Mobile';
@@ -454,7 +454,7 @@
                     U.unshift('embedded');
                 }
             else (/\bBlackBerry\b/.test(F) || /\bBB10\b/.test(t)) && (s = (RegExp(F.replace(/ +/g, ' *') + '/([.\\d]+)', 'i').exec(t) || 0)[1] || G) ? ((H = ((s = [s, /BB10/.test(t)])[1] ? ((F = null), (V = 'BlackBerry')) : 'Device Software') + ' ' + s[0]), (G = null)) : this != h && 'Wii' != F && ((x && b) || (/Opera/.test(B) && /\b(?:MSIE|Firefox)\b/i.test(t)) || ('Firefox' == B && /\bOS X (?:\d+\.){2,}/.test(H)) || ('IE' == B && ((H && !/^Win/.test(H) && G > 5.5) || (/\bWindows XP\b/.test(H) && G > 8) || (8 == G && !/\bTrident\b/.test(t))))) && !u.test((s = e.call(h, t.replace(u, '') + ';'))) && s.name && ((s = 'ing as ' + s.name + ((s = s.version) ? ' ' + s : '')), u.test(B) ? (/\bIE\b/.test(s) && 'Mac OS' == H && (H = null), (s = 'identify' + s)) : ((s = 'mask' + s), (B = M ? f(M.replace(/([a-z])([A-Z])/g, '$1 $2')) : 'Opera'), /\bIE\b/.test(s) && (H = null), !x && (G = null)), (k = ['Presto']), U.push(s));
-            (s = (/\bAppleWebKit\/([\d.]+\+?)/i.exec(t) || 0)[1]) && ((s = [parseFloat(s.replace(/\.(\d)$/, '.0$1')), s]), 'Safari' == B && '+' == s[1].slice(-1) ? ((B = 'WebKit Nightly'), (w = 'alpha'), (G = s[1].slice(0, -1))) : (G == s[1] || G == (s[2] = (/\bSafari\/([\d.]+\+?)/i.exec(t) || 0)[1])) && (G = null), (s[1] = (/\b(?:Headless)?Chrome\/([\d.]+)/i.exec(t) || 0)[1]), 537.36 == s[0] && 537.36 == s[2] && parseFloat(s[1]) >= 28 && 'WebKit' == k && (k = ['Blink']), x && (g || s[1]) ? (k && (k[1] = 'like Chrome'), (s = s[1] || ((s = s[0]) < 530 ? 1 : s < 532 ? 2 : s < 532.05 ? 3 : s < 533 ? 4 : s < 534.03 ? 5 : s < 534.07 ? 6 : s < 534.1 ? 7 : s < 534.13 ? 8 : s < 534.16 ? 9 : s < 534.24 ? 10 : s < 534.3 ? 11 : s < 535.01 ? 12 : s < 535.02 ? '13+' : s < 535.07 ? 15 : s < 535.11 ? 16 : s < 535.19 ? 17 : s < 536.05 ? 18 : s < 536.1 ? 19 : s < 537.01 ? 20 : s < 537.11 ? '21+' : s < 537.13 ? 23 : s < 537.18 ? 24 : s < 537.24 ? 25 : s < 537.36 ? 26 : 'Blink' != k ? '27' : '28'))) : (k && (k[1] = 'like Safari'), (s = (s = s[0]) < 400 ? 1 : s < 500 ? 2 : s < 526 ? 3 : s < 533 ? 4 : s < 534 ? '4+' : s < 535 ? 5 : s < 537 ? 6 : s < 538 ? 7 : s < 601 ? 8 : s < 602 ? 9 : s < 604 ? 10 : s < 606 ? 11 : s < 608 ? 12 : '12')), k && (k[1] += ' ' + (s += 'number' == typeof s ? '.x' : /[.+]/.test(s) ? '' : '+')), 'Safari' == B && (!G || parseInt(G) > 45) ? (G = s) : 'Chrome' == B && /\bHeadlessChrome/i.test(t) && U.unshift('headless')),
+            (s = (/\bAppleWebKit\/([\d.]+\+?)/i.exec(t) || 0)[1]) && ((s = [parseFloat(s.replace(/\.(\d)$/, '.0$1')), s]), 'Safari' == B && '+' == s[1].slice(-1) ? ((B = 'WebKit Nightly'), (w = 'alpha'), (G = s[1].slice(0, -1))) : (G == s[1] || G == (s[2] = (/\bSafari\/([\d.]+\+?)/i.exec(t) || 0)[1])) && (G = null), (s[1] = (/\b(?:Headless)?Chrome\/([\d.]+)/i.exec(t) || 0)[1]), 537.36 == s[0] && 537.36 == s[2] && parseFloat(s[1]) >= 28 && 'WebKit' == k && (k = ['Blink']), x && (S || s[1]) ? (k && (k[1] = 'like Chrome'), (s = s[1] || ((s = s[0]) < 530 ? 1 : s < 532 ? 2 : s < 532.05 ? 3 : s < 533 ? 4 : s < 534.03 ? 5 : s < 534.07 ? 6 : s < 534.1 ? 7 : s < 534.13 ? 8 : s < 534.16 ? 9 : s < 534.24 ? 10 : s < 534.3 ? 11 : s < 535.01 ? 12 : s < 535.02 ? '13+' : s < 535.07 ? 15 : s < 535.11 ? 16 : s < 535.19 ? 17 : s < 536.05 ? 18 : s < 536.1 ? 19 : s < 537.01 ? 20 : s < 537.11 ? '21+' : s < 537.13 ? 23 : s < 537.18 ? 24 : s < 537.24 ? 25 : s < 537.36 ? 26 : 'Blink' != k ? '27' : '28'))) : (k && (k[1] = 'like Safari'), (s = (s = s[0]) < 400 ? 1 : s < 500 ? 2 : s < 526 ? 3 : s < 533 ? 4 : s < 534 ? '4+' : s < 535 ? 5 : s < 537 ? 6 : s < 538 ? 7 : s < 601 ? 8 : s < 602 ? 9 : s < 604 ? 10 : s < 606 ? 11 : s < 608 ? 12 : '12')), k && (k[1] += ' ' + (s += 'number' == typeof s ? '.x' : /[.+]/.test(s) ? '' : '+')), 'Safari' == B && (!G || parseInt(G) > 45) ? (G = s) : 'Chrome' == B && /\bHeadlessChrome/i.test(t) && U.unshift('headless')),
                 'Opera' == B && (s = /\bzbov|zvav$/.exec(H)) ? ((B += ' '), U.unshift('desktop mode'), 'zvav' == s ? ((B += 'Mini'), (G = null)) : (B += 'Mobile'), (H = H.replace(RegExp(' *' + s + '$'), ''))) : 'Safari' == B && /\bChrome\b/.exec(k && k[1]) ? (U.unshift('desktop mode'), (B = 'Chrome Mobile'), (G = null), /\bOS X\b/.test(H) ? ((V = 'Apple'), (H = 'iOS 4.3+')) : (H = null)) : /\bSRWare Iron\b/.test(B) && !G && (G = Y('Chrome')),
                 G && 0 == G.indexOf((s = /[\d.]+$/.exec(H))) && t.indexOf('/' + s + '-') > -1 && (H = T(H.replace(s, ''))),
                 H && -1 != H.indexOf(B) && !RegExp(B + ' OS').test(H) && (H = H.replace(RegExp(' *' + I(B) + ' *'), '')),
@@ -505,13 +505,13 @@
             );
         })();
         'function' == typeof define && 'object' == typeof define.amd && define.amd
-            ? ((i.platform = g),
+            ? ((i.platform = S),
               define(function () {
-                  return g;
+                  return S;
               }))
             : a && s
-              ? h(g, function (e, t) {
+              ? h(S, function (e, t) {
                     a[t] = e;
                 })
-              : (i.platform = g);
+              : (i.platform = S);
     }.call(this);

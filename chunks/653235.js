@@ -21,8 +21,8 @@ var r = n(735250),
     I = n(985375),
     m = n(132748),
     T = n(353903),
-    g = n(215016),
-    S = n(981631),
+    S = n(215016),
+    g = n(981631),
     A = n(689938),
     N = n(886332);
 function O(e, t, n) {
@@ -50,7 +50,7 @@ class v extends i.PureComponent {
         let { name: t, icon: n, type: a } = e;
         return (0, r.jsxs)(i.Fragment, {
             children: [
-                (0, r.jsx)('div', { className: a === S.wI2.FAVORITES ? N.categoryFadeBlurple : N.categoryFade }),
+                (0, r.jsx)('div', { className: a === g.wI2.FAVORITES ? N.categoryFadeBlurple : N.categoryFade }),
                 (0, r.jsxs)('div', {
                     className: N.categoryText,
                     children: [
@@ -90,7 +90,7 @@ class v extends i.PureComponent {
                     var t;
                     let n = l().sample(l().values(e));
                     return {
-                        type: S.wI2.FAVORITES,
+                        type: g.wI2.FAVORITES,
                         name: A.Z.Messages.CATEGORY_FAVORITE,
                         icon: _.StarIcon,
                         src: null != n ? n.src : 'https://media.giphy.com/media/1TOSaJsWtnhe0/giphy.gif',
@@ -139,7 +139,7 @@ class v extends i.PureComponent {
                 let { onSelectItem: s, imagePool: o, videoPool: l } = this.props,
                     { focusedId: u } = this.state;
                 return (0, r.jsx)(
-                    g.iR,
+                    S.iR,
                     {
                         format: a.format,
                         color: d.Z.unsafe_rawColors.PRIMARY_800.css,
@@ -190,7 +190,7 @@ class v extends i.PureComponent {
 function C(e) {
     let t = (0, u.e7)([h.Z], () => h.Z.getTrendingCategories()),
         n = (0, I.gG)(),
-        i = (0, g.PY)();
+        i = (0, S.PY)();
     return (0, r.jsx)(v, {
         ...e,
         ...i,

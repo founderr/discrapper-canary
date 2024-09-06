@@ -5,15 +5,15 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(399606),
-    s = n(481060),
+var s = n(399606),
+    a = n(481060),
     l = n(351780),
     r = n(170248);
 function o(e) {
     let { isShaking: t, shakeLocation: n, children: o, className: c } = e,
         u = (0, r.Z)(n);
-    return (0, a.e7)([l.Z], () => l.Z.isEnabled({ shakeLocation: n }))
-        ? (0, i.jsx)(s.Shaker, {
+    return (0, s.e7)([l.Z], () => l.Z.isEnabled({ shakeLocation: n }))
+        ? (0, i.jsx)(a.Shaker, {
               isShaking: t,
               intensity: u,
               className: c,

@@ -1,6 +1,6 @@
 t.d(A, {
     Z: function () {
-        return T;
+        return h;
     }
 });
 var a = t(735250);
@@ -75,13 +75,13 @@ function g(e) {
               children: n
           });
 }
-function T(e) {
-    let { imageUrl: A, name: t, description: n, formattedPrice: i, role: T, ctaComponent: p, shouldShowFullDescriptionButton: h = !0, onShowFullDescription: m, productType: I, onTapCard: U, actionMenu: f, showOpaqueBackground: v = !1, hideRoleTag: q = !1, lineClamp: E = 1, cardWidth: N = 332, cardHeight: D, thumbnailHeight: O = 187, descriptionTextVariant: R = 'text-sm/normal', isDraft: x = !1 } = e,
-        L = (0, o.hQ)(),
-        b = (0, a.jsxs)(a.Fragment, {
+function h(e) {
+    let { imageUrl: A, name: t, description: n, formattedPrice: i, role: h, ctaComponent: T, shouldShowFullDescriptionButton: p = !0, onShowFullDescription: m, productType: I, onTapCard: U, actionMenu: f, showOpaqueBackground: v = !1, hideRoleTag: E = !1, lineClamp: q = 1, cardWidth: N = 332, cardHeight: D, thumbnailHeight: O = 187, descriptionTextVariant: x = 'text-sm/normal', isDraft: R = !1 } = e,
+        b = (0, o.hQ)(),
+        L = (0, a.jsxs)(a.Fragment, {
             children: [
                 (0, a.jsx)(C, {
-                    showDraftBadge: x,
+                    showDraftBadge: R,
                     hidePurchaseToUnlockBadge: !0,
                     children: (0, a.jsx)('img', {
                         alt: '',
@@ -100,26 +100,26 @@ function T(e) {
                                     variant: 'text-md/medium',
                                     color: 'header-primary',
                                     className: u.productName,
-                                    id: L,
+                                    id: b,
                                     children: t
                                 }),
                                 (0, a.jsx)(s.FocusBlock, {
                                     children: (0, a.jsx)(l.Z, {
-                                        variant: R,
+                                        variant: x,
                                         color: 'text-muted',
-                                        lineClamp: E,
+                                        lineClamp: q,
                                         text: n
                                     })
                                 }),
-                                h &&
+                                p &&
                                     (0, a.jsx)(g, {
                                         onShowFullDescription: m,
-                                        variant: R
+                                        variant: x
                                     }),
-                                q || null == T || '' === T.name
+                                E || null == h || '' === h.name
                                     ? null
                                     : (0, a.jsxs)(a.Fragment, {
-                                          children: [(0, a.jsx)(s.Spacer, { size: 16 }), (0, a.jsx)(d.Z, { role: T })]
+                                          children: [(0, a.jsx)(s.Spacer, { size: 16 }), (0, a.jsx)(d.Z, { role: h })]
                                       })
                             ]
                         }),
@@ -146,7 +146,7 @@ function T(e) {
                             onClick: (e) => {
                                 e.stopPropagation();
                             },
-                            children: p
+                            children: T
                         })
                     ]
                 })
@@ -155,8 +155,8 @@ function T(e) {
     return null == U
         ? (0, a.jsx)('article', {
               className: r()(u.productCard, v ? u.opaqueBackground : u.solidBackground),
-              'aria-labelledby': L,
-              children: b
+              'aria-labelledby': b,
+              children: L
           })
         : (0, a.jsx)('div', {
               style: {
@@ -168,7 +168,7 @@ function T(e) {
                   'aria-label': c.Z.Messages.GUILD_SHOP_LISTING_CARD_A11Y_LABEL.format({ productName: t }),
                   className: r()(u.productCard, v ? u.opaqueBackground : u.solidBackground, u.cardClickableContainer),
                   onClick: U,
-                  children: b
+                  children: L
               })
           });
 }

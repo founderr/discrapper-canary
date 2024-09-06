@@ -14,7 +14,7 @@ let p = f,
     I = {},
     m = null;
 let T = 0,
-    g = (e) => {
+    S = (e) => {
         p = (0, u.cloneDeep)(e);
         let t = {};
         p.forEach((e) => {
@@ -22,8 +22,8 @@ let T = 0,
         }),
             (I = t);
     },
-    S = () => {
-        (h = !1), g(f), (m = null), (i = void 0);
+    g = () => {
+        (h = !1), S(f), (m = null), (i = void 0);
     };
 class A extends (l = c.ZP.Store) {
     get isFetching() {
@@ -63,17 +63,17 @@ class A extends (l = c.ZP.Store) {
         },
         USER_PROFILE_EFFECTS_FETCH_SUCCESS: (e) => {
             let { profileEffects: t } = e;
-            (h = !1), (r = void 0), (i = Date.now() + 300000), (T = 0), g(0 === t.length ? f : t);
+            (h = !1), (r = void 0), (i = Date.now() + 300000), (T = 0), S(0 === t.length ? f : t);
         },
         USER_PROFILE_EFFECTS_FETCH_FAILURE: (e) => {
             let { error: t } = e;
-            (h = !1), (r = t), (i = Date.now() + Math.min(60000 * 2 ** T, 3600000)), ++T, g(f);
+            (h = !1), (r = t), (i = Date.now() + Math.min(60000 * 2 ** T, 3600000)), ++T, S(f);
         },
         PROFILE_EFFECTS_SET_TRY_IT_OUT: (e) => {
             let { id: t } = e;
             m = t;
         },
         LOGOUT: (e) => {
-            S();
+            g();
         }
     }));

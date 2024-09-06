@@ -35,7 +35,7 @@ let I = new Set([o.s.LISTENED_SESSION]),
 function T(e) {
     return ''.concat(e.author_id, ':').concat(e.id);
 }
-function g(e) {
+function S(e) {
     let t = new Set(),
         n = new Set();
     for (let r of e) {
@@ -52,13 +52,13 @@ function g(e) {
         matchedKeys: n
     };
 }
-function S() {
+function g() {
     let e = !1,
         t = Array.from(m.keys()),
         n = new Set(),
         r = new Set();
     for (let t of d.Z.getFeeds().values()) {
-        let { updatedKeys: i, matchedKeys: a } = g(n.size > 0 ? t.entries.filter((e) => !n.has(T(e.content))) : t.entries);
+        let { updatedKeys: i, matchedKeys: a } = S(n.size > 0 ? t.entries.filter((e) => !n.has(T(e.content))) : t.entries);
         for (let e of i) n.add(e);
         for (let e of a) r.add(e);
         e = e || i.size > 0;
@@ -68,7 +68,7 @@ function S() {
 }
 class A extends (r = l.ZP.Store) {
     initialize() {
-        this.waitFor(d.Z, c.Z), this.syncWith([c.Z], S);
+        this.waitFor(d.Z, c.Z), this.syncWith([c.Z], g);
     }
     getMatchingActivity(e) {
         return (0, f.n2)(e) ? null : m.get(T(e));
@@ -84,7 +84,7 @@ p(A, 'displayName', 'ContentInventoryActivityStore'),
         },
         CONTENT_INVENTORY_SET_FEED: function (e) {
             let { feed: t } = e,
-                { updatedKeys: n } = g(t.entries);
+                { updatedKeys: n } = S(t.entries);
             return n.size > 0;
         }
     }));

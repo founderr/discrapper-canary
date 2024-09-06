@@ -24,8 +24,8 @@ var r = n(595182),
     I = n(829839),
     m = n(916057),
     T = n(992774),
-    g = n(158466),
-    S = n(650886),
+    S = n(158466),
+    g = n(650886),
     A = n(65154),
     N = n(149396);
 function O(e, t, n) {
@@ -195,8 +195,8 @@ class C extends E.Z {
                                             codecs: this.codecs
                                         }),
                                         this.on(p.Sh.Stats, this.handleStats);
-                                    let g = this.getUserOptions();
-                                    for (let e of (g.forEach((e) => {
+                                    let S = this.getUserOptions();
+                                    for (let e of (S.forEach((e) => {
                                         var t, n;
                                         return this.logger.info(
                                             'Creating user: '
@@ -205,8 +205,8 @@ class C extends E.Z {
                                                 .concat(null !== (n = null === (t = e.videoSsrcs) || void 0 === t ? void 0 : t.join(',')) && void 0 !== n ? n : 0)
                                         );
                                     }),
-                                    t.mergeUsers(g),
-                                    this.emit(p.Sh.RemoteStreamsReady, g.length),
+                                    t.mergeUsers(S),
+                                    this.emit(p.Sh.RemoteStreamsReady, S.length),
                                     Object.keys(this.localSpeakingFlags)))
                                         e !== this.userId && this.setSpeakingFlags(e, this.localSpeakingFlags[e]);
                                 });
@@ -245,7 +245,7 @@ class C extends E.Z {
             ? Promise.resolve(null)
             : (0, d.timeout)(
                   new Promise((e) => {
-                      null != this.conn.getFilteredStats ? this.conn.getFilteredStats(A.QP.ALL, (t) => e((0, g.Z)(this.mediaEngineConnectionId, t, this.remoteVideoSinkWants, this.localVideoSinkWants))) : null != this.conn.getStats ? this.conn.getStats((t) => e((0, g.Z)(this.mediaEngineConnectionId, t, this.remoteVideoSinkWants, this.localVideoSinkWants))) : (0, T.zS)().getStats((t) => e((0, g.Z)(this.mediaEngineConnectionId, t, this.remoteVideoSinkWants, this.localVideoSinkWants)));
+                      null != this.conn.getFilteredStats ? this.conn.getFilteredStats(A.QP.ALL, (t) => e((0, S.Z)(this.mediaEngineConnectionId, t, this.remoteVideoSinkWants, this.localVideoSinkWants))) : null != this.conn.getStats ? this.conn.getStats((t) => e((0, S.Z)(this.mediaEngineConnectionId, t, this.remoteVideoSinkWants, this.localVideoSinkWants))) : (0, T.zS)().getStats((t) => e((0, S.Z)(this.mediaEngineConnectionId, t, this.remoteVideoSinkWants, this.localVideoSinkWants)));
                   }),
                   f.T
               ).catch((e) => {
@@ -697,13 +697,13 @@ class C extends E.Z {
                     'level-asymmetry-allowed': '1',
                     'packetization-mode': '1',
                     'profile-level-id': '42e034',
-                    'hardware-h264': this.hardwareH264 && this.useElectronVideo && S.Z.useDirectVideo ? '1' : '0'
+                    'hardware-h264': this.hardwareH264 && this.useElectronVideo && g.Z.useDirectVideo ? '1' : '0'
                 }
               : {
                     'level-asymmetry-allowed': '1',
                     'packetization-mode': '1',
                     'profile-level-id': 'android' === (0, T.zS)().platform ? '42e01f' : '4d0033',
-                    'hardware-h264': this.hardwareH264 && this.useElectronVideo && S.Z.useDirectVideo ? '1' : '0',
+                    'hardware-h264': this.hardwareH264 && this.useElectronVideo && g.Z.useDirectVideo ? '1' : '0',
                     'software-h264': this.softwareH264 ? '1' : '0'
                 };
     }

@@ -23,22 +23,22 @@ r.inherits(c, u),
     (c.hmacStrength = 192),
     (c.padLength = 64),
     (c.prototype._update = function (e, t) {
-        for (var n = this.h[0], r = this.h[1], i = this.h[2], u = this.h[3], c = this.h[4], p = n, I = r, m = i, T = u, g = c, S = 0; S < 80; S++) {
+        for (var n = this.h[0], r = this.h[1], i = this.h[2], u = this.h[3], c = this.h[4], p = n, I = r, m = i, T = u, S = c, g = 0; g < 80; g++) {
             var A = s(
                 a(
                     l(
                         n,
-                        d(S, r, i, u),
-                        e[_[S] + t],
+                        d(g, r, i, u),
+                        e[_[g] + t],
                         (function (e) {
                             if (e <= 15) return 0;
                             if (e <= 31) return 1518500249;
                             if (e <= 47) return 1859775393;
                             else if (e <= 63) return 2400959708;
                             else return 2840853838;
-                        })(S)
+                        })(g)
                     ),
-                    f[S]
+                    f[g]
                 ),
                 c
             );
@@ -51,27 +51,27 @@ r.inherits(c, u),
                     a(
                         l(
                             p,
-                            d(79 - S, I, m, T),
-                            e[E[S] + t],
+                            d(79 - g, I, m, T),
+                            e[E[g] + t],
                             (function (e) {
                                 if (e <= 15) return 1352829926;
                                 if (e <= 31) return 1548603684;
                                 if (e <= 47) return 1836072691;
                                 else if (e <= 63) return 2053994217;
                                 else return 0;
-                            })(S)
+                            })(g)
                         ),
-                        h[S]
+                        h[g]
                     ),
-                    g
+                    S
                 )),
-                (p = g),
-                (g = T),
+                (p = S),
+                (S = T),
                 (T = a(m, 10)),
                 (m = I),
                 (I = A);
         }
-        (A = o(this.h[1], i, T)), (this.h[1] = o(this.h[2], u, g)), (this.h[2] = o(this.h[3], c, p)), (this.h[3] = o(this.h[4], n, I)), (this.h[4] = o(this.h[0], r, m)), (this.h[0] = A);
+        (A = o(this.h[1], i, T)), (this.h[1] = o(this.h[2], u, S)), (this.h[2] = o(this.h[3], c, p)), (this.h[3] = o(this.h[4], n, I)), (this.h[4] = o(this.h[0], r, m)), (this.h[0] = A);
     }),
     (c.prototype._digest = function (e) {
         return 'hex' === e ? r.toHex32(this.h, 'little') : r.split32(this.h, 'little');

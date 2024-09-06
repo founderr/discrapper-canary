@@ -1,35 +1,35 @@
-t.d(n, {
+s.d(n, {
     Z: function () {
-        return p;
+        return m;
     }
 }),
-    t(47120);
-var s,
-    i = t(735250),
-    o = t(470079),
-    l = t(699581),
-    r = t(442837),
-    a = t(481060),
-    c = t(34854),
-    d = t(702557),
-    u = t(246946),
-    I = t(981631),
-    _ = t(689938),
-    E = t(682242);
-function f(e, n, t) {
+    s(47120);
+var t,
+    i = s(735250),
+    o = s(470079),
+    l = s(699581),
+    r = s(442837),
+    a = s(481060),
+    c = s(34854),
+    d = s(702557),
+    u = s(246946),
+    I = s(981631),
+    _ = s(689938),
+    E = s(682242);
+function f(e, n, s) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
-                  value: t,
+                  value: s,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = t),
+            : (e[n] = s),
         e
     );
 }
-class m extends (s = o.PureComponent) {
+class x extends (t = o.PureComponent) {
     componentDidMount() {
         if (this.props.autoFocus && !this.props.hideNote) {
             let e = l.findDOMNode(this.noteRef.current);
@@ -37,8 +37,8 @@ class m extends (s = o.PureComponent) {
         }
     }
     render() {
-        let { className: e, loading: n, note: t, hideNote: s } = this.props;
-        return s
+        let { className: e, loading: n, note: s, hideNote: t } = this.props;
+        return t
             ? null
             : (0, i.jsx)('div', {
                   className: e,
@@ -50,7 +50,7 @@ class m extends (s = o.PureComponent) {
                       'aria-label': _.Z.Messages.NOTE,
                       onBlur: this.handleBlur,
                       onKeyPress: this.handleKeyPress,
-                      defaultValue: null != t ? t : void 0,
+                      defaultValue: null != s ? s : void 0,
                       maxLength: I.vuo
                   })
               });
@@ -60,8 +60,8 @@ class m extends (s = o.PureComponent) {
             f(this, 'noteRef', o.createRef()),
             f(this, 'handleBlur', (e) => {
                 let n = e.currentTarget.value,
-                    { note: t, userId: s, onUpdate: i } = this.props;
-                if ((null != t ? t : '') !== n) null == i || i(), c.Z.updateNote(s, n);
+                    { note: s, userId: t, onUpdate: i } = this.props;
+                if ((null != s ? s : '') !== n) null == i || i(), c.Z.updateNote(t, n);
             }),
             f(this, 'handleKeyPress', (e) => {
                 if (13 === e.which) {
@@ -73,13 +73,13 @@ class m extends (s = o.PureComponent) {
             });
     }
 }
-function p(e) {
+function m(e) {
     let n = (0, r.e7)([u.Z], () => u.Z.hidePersonalInformation),
-        t = (0, d.Z)(e.userId);
-    return (0, i.jsx)(m, {
+        s = (0, d.Z)(e.userId);
+    return (0, i.jsx)(x, {
         ...e,
-        ...t,
+        ...s,
         hideNote: n
     });
 }
-f(m, 'defaultProps', { autoFocus: !1 });
+f(x, 'defaultProps', { autoFocus: !1 });

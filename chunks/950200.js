@@ -160,8 +160,8 @@ var n = (function () {
                     I,
                     m,
                     T,
-                    g,
                     S,
+                    g,
                     A,
                     N,
                     O =
@@ -180,14 +180,14 @@ var n = (function () {
                         (f = O),
                         (m = 1000000),
                         (T = 0),
-                        (g = 1000000),
-                        (S = 0),
+                        (S = 1000000),
+                        (g = 0),
                         (A = 1000000),
                         (N = 0),
                         E.forEach(function (t) {
-                            (h = t[0] >> e), (p = t[1] >> e), (I = t[2] >> e), h < m ? (m = h) : h > T && (T = h), p < g ? (g = p) : p > S && (S = p), I < A ? (A = I) : I > N && (N = I);
+                            (h = t[0] >> e), (p = t[1] >> e), (I = t[2] >> e), h < m ? (m = h) : h > T && (T = h), p < S ? (S = p) : p > g && (g = p), I < A ? (A = I) : I > N && (N = I);
                         }),
-                        new i(m, T, g, S, A, N, f)),
+                        new i(m, T, S, g, A, N, f)),
                     C = new r(function (e, n) {
                         return t.naturalOrder(e.count(), n.count());
                     });
@@ -259,16 +259,16 @@ var n = (function () {
                 }
                 C.push(v), y(C, 0.75 * o);
                 for (
-                    var L = new r(function (e, n) {
+                    var D = new r(function (e, n) {
                         return t.naturalOrder(e.count() * e.volume(), n.count() * n.volume());
                     });
                     C.size();
 
                 )
-                    L.push(C.pop());
-                y(L, o - L.size());
-                for (var D = new a(); L.size(); ) D.push(L.pop());
-                return D;
+                    D.push(C.pop());
+                y(D, o - D.size());
+                for (var L = new a(); D.size(); ) L.push(D.pop());
+                return L;
             }
         }
     );

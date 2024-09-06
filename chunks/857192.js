@@ -65,72 +65,72 @@ let I = (() => {
         appDirectoryIncludesInactiveCollections: !1,
         isStreamInfoOverlayEnabled: !1
     },
-    g = { ...T };
-function S(e) {
-    (g = {
+    S = { ...T };
+function g(e) {
+    (S = {
         ...T,
-        ...g,
+        ...S,
         ...e
     }),
-        I.set(g.sourceMapsEnabled),
-        d.K.set(m, g);
+        I.set(S.sourceMapsEnabled),
+        d.K.set(m, S);
 }
 class A extends (r = u.ZP.Store) {
     initialize() {
         let e = d.K.get(m);
         null != e &&
-            (g = {
+            (S = {
                 ...T,
                 ...e
             });
     }
     get isTracingRequests() {
-        return g.trace;
+        return S.trace;
     }
     get isForcedCanary() {
-        return g.canary;
+        return S.canary;
     }
     get isLoggingGatewayEvents() {
-        return g.logGatewayEvents;
+        return S.logGatewayEvents;
     }
     get isLoggingOverlayEvents() {
-        return g.logOverlayEvents;
+        return S.logOverlayEvents;
     }
     get isLoggingAnalyticsEvents() {
-        return g.logAnalyticsEvents;
+        return S.logAnalyticsEvents;
     }
     get isAxeEnabled() {
-        return g.axeEnabled;
+        return S.axeEnabled;
     }
     get cssDebuggingEnabled() {
-        return g.cssDebuggingEnabled;
+        return S.cssDebuggingEnabled;
     }
     get layoutDebuggingEnabled() {
-        return g.layoutDebuggingEnabled;
+        return S.layoutDebuggingEnabled;
     }
     get sourceMapsEnabled() {
-        return g.sourceMapsEnabled;
+        return S.sourceMapsEnabled;
     }
     get isAnalyticsDebuggerEnabled() {
-        return g.analyticsDebuggerEnabled;
+        return S.analyticsDebuggerEnabled;
     }
     get isBugReporterEnabled() {
-        return g.bugReporterEnabled;
+        return S.bugReporterEnabled;
     }
     get isIdleStatusIndicatorEnabled() {
-        return g.idleStatusIndicatorEnabled;
+        return S.idleStatusIndicatorEnabled;
     }
     get appDirectoryIncludesInactiveCollections() {
-        return g.appDirectoryIncludesInactiveCollections;
+        return S.appDirectoryIncludesInactiveCollections;
     }
     get isStreamInfoOverlayEnabled() {
-        return g.isStreamInfoOverlayEnabled;
+        return S.isStreamInfoOverlayEnabled;
     }
     getDebugOptionsHeaderValue() {
         return (
-            Object.keys(g).map((e) => g[e]),
-            Object.keys(g)
-                .filter((e) => g[e])
+            Object.keys(S).map((e) => S[e]),
+            Object.keys(S)
+                .filter((e) => S[e])
                 .join(',')
         );
     }
@@ -146,16 +146,16 @@ class A extends (r = u.ZP.Store) {
         : (i[a] = s),
     (t.default = new A(_.Z, {
         LOGOUT: function (e) {
-            S(T);
+            g(T);
         },
         CONNECTION_OPEN: function (e) {
             var t;
             let n = ((null !== (t = e.user.flags) && void 0 !== t ? t : 0) & p.xW$.STAFF) === p.xW$.STAFF,
                 r = n || null != e.user.personal_connection_id;
-            n && I.set(g.sourceMapsEnabled), h.Z.setTags({ isStaff: r.toString() });
+            n && I.set(S.sourceMapsEnabled), h.Z.setTags({ isStaff: r.toString() });
         },
         DEVELOPER_OPTIONS_UPDATE_SETTINGS: function (e) {
             let { settings: t } = e;
-            S(t);
+            g(t);
         }
     }));

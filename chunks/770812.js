@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return g;
     }
 });
 var r = n(735250);
@@ -21,19 +21,19 @@ var i = n(990547),
     I = n(176505),
     m = n(689938),
     T = n(473146);
-let g = () => {
+let S = () => {
     let e = (0, l.ZP)();
     return (0, s.ap)(e) ? n(537381) : n(341048);
 };
-function S(e) {
+function g(e) {
     let { onClose: t, guildId: n, emojiId: s } = e,
-        l = g(),
-        { analyticsLocations: S } = (0, c.ZP)(u.Z.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPSELL);
+        l = S(),
+        { analyticsLocations: g } = (0, c.ZP)(u.Z.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPSELL);
     (0, d.Z)({
         type: i.ImpressionTypes.MODAL,
         name: i.ImpressionNames.ROLE_SUBSCRIPTION_EMOJI_UPSELL,
         properties: {
-            location_stack: S,
+            location_stack: g,
             emoji_guild_id: n,
             emoji_id: null != s ? s : null
         }
@@ -83,7 +83,7 @@ function S(e) {
                     (0, r.jsx)(o.Spacer, { size: 24 }),
                     (0, r.jsx)(h.Z, {
                         onClick: () => {
-                            (0, _.uL)(p.Z5c.CHANNEL(n, I.oC.ROLE_SUBSCRIPTIONS), { sourceLocationStack: S });
+                            (0, _.uL)(p.Z5c.CHANNEL(n, I.oC.ROLE_SUBSCRIPTIONS), { sourceLocationStack: g });
                         },
                         children: R
                     })

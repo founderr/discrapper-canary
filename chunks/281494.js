@@ -3,7 +3,7 @@ n.d(t, {
         return m;
     },
     Eo: function () {
-        return S;
+        return g;
     },
     Fe: function () {
         return r;
@@ -24,7 +24,7 @@ n.d(t, {
         return I;
     },
     jy: function () {
-        return g;
+        return S;
     }
 }),
     n(47120),
@@ -172,7 +172,7 @@ let m = () => (
                 }
             )
     );
-async function g(e) {
+async function S(e) {
     let t = [],
         n = new Map();
     for (let i of e)
@@ -195,7 +195,7 @@ async function g(e) {
         n
     );
 }
-async function S(e) {
+async function g(e) {
     try {
         var t;
         let n = await o.tn.post({

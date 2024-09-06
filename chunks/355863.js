@@ -28,7 +28,7 @@ function m(e, t, n) {
 }
 ((o = a || (a = {})).REQUIRED = 'REQUIRED'), (o.OPTIONAL = 'OPTIONAL'), (o.OPTIONAL_DEFAULT = 'OPTIONAL_DEFAULT');
 let T = 'migrated',
-    g = {
+    S = {
         [I.Odu.GUILDS]: {
             minSize: {
                 width: 312,
@@ -122,7 +122,7 @@ let T = 'migrated',
             }
         }
     };
-function S(e, t) {
+function g(e, t) {
     let n = i[e];
     if (null == n) return !1;
     let a = r[n.layoutId];
@@ -130,7 +130,7 @@ function S(e, t) {
 }
 function A(e) {
     var t;
-    return null === (t = g[e]) || void 0 === t ? void 0 : t.defaultSettings;
+    return null === (t = S[e]) || void 0 === t ? void 0 : t.defaultSettings;
 }
 class N extends (s = d.ZP.PersistedStore) {
     initialize(e) {
@@ -156,7 +156,7 @@ class N extends (s = d.ZP.PersistedStore) {
             : ((r = {}), (i = {}));
         let t = !1,
             n = [];
-        u().forEach(g, (e, t) => {
+        u().forEach(S, (e, t) => {
             'REQUIRED' === e.layoutPolicy && n.push(t);
         }),
             u().forEach(r, (e, a) => {
@@ -227,7 +227,7 @@ class N extends (s = d.ZP.PersistedStore) {
               }, []);
     }
     getWidgetConfig(e) {
-        return g[e];
+        return S[e];
     }
     getWidgetDefaultSettings(e) {
         return A(e);
@@ -237,7 +237,7 @@ class N extends (s = d.ZP.PersistedStore) {
         return null != t ? t.type : '';
     }
     getRegisteredWidgets() {
-        return g;
+        return S;
     }
     getDefaultLayout(e) {
         let t = [];
@@ -403,7 +403,7 @@ m(N, 'displayName', 'LayoutStore'),
         },
         LAYOUT_SET_PINNED: function (e) {
             let { widgetId: t } = e;
-            return S(t, (e, t) => {
+            return g(t, (e, t) => {
                 (function (e) {
                     i = {
                         ...i,
@@ -414,7 +414,7 @@ m(N, 'displayName', 'LayoutStore'),
         },
         LAYOUT_UPDATE_WIDGET: function (e) {
             let { widgetId: t, anchor: n, size: r } = e;
-            return S(t, (e, t) =>
+            return g(t, (e, t) =>
                 (function (e, t, n) {
                     i = {
                         ...i,
@@ -428,7 +428,7 @@ m(N, 'displayName', 'LayoutStore'),
         },
         LAYOUT_SET_TOP_WIDGET: function (e) {
             let { widgetId: t } = e;
-            return S(t, (e, t) =>
+            return g(t, (e, t) =>
                 (function (e, t) {
                     let n = (function (e) {
                         let t = [];

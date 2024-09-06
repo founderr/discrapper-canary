@@ -15,7 +15,7 @@ n.d(t, {
         return b;
     },
     g7: function () {
-        return D;
+        return L;
     },
     jZ: function () {
         return v;
@@ -27,7 +27,7 @@ n.d(t, {
         return C;
     },
     rY: function () {
-        return L;
+        return D;
     },
     rt: function () {
         return y;
@@ -59,15 +59,15 @@ var r = n(149765),
     I = n(981631),
     m = n(474936),
     T = n(689938);
-let { GUILD_VOICE: g, GUILD_CATEGORY: S, GUILD_STAGE_VOICE: A } = I.d4z;
+let { GUILD_VOICE: S, GUILD_CATEGORY: g, GUILD_STAGE_VOICE: A } = I.d4z;
 function N(e, t) {
-    return e === t || e === S;
+    return e === t || e === g;
 }
 function O(e, t, n) {
     let i = h.Hn;
     return (
-        ((0, u.r8)(t) || t === S) && (i = r.IH(i, I.Plq.VIEW_CHANNEL)),
-        (N(t, g) || N(t, A)) && ((i = r.IH(i, I.Plq.VIEW_CHANNEL)), (i = r.IH(i, I.Plq.CONNECT))),
+        ((0, u.r8)(t) || t === g) && (i = r.IH(i, I.Plq.VIEW_CHANNEL)),
+        (N(t, S) || N(t, A)) && ((i = r.IH(i, I.Plq.VIEW_CHANNEL)), (i = r.IH(i, I.Plq.CONNECT))),
         {
             id: e,
             type: n,
@@ -87,8 +87,8 @@ function R(e, t, n) {
             (l = t),
             (c = i.BN.ROLE),
             (n = h.Hn),
-            ((0, u.r8)(l) || l === S) && (n = r.IH(n, I.Plq.VIEW_CHANNEL)),
-            N(l, g) && ((n = r.IH(n, I.Plq.VIEW_CHANNEL)), (n = r.IH(n, I.Plq.CONNECT))),
+            ((0, u.r8)(l) || l === g) && (n = r.IH(n, I.Plq.VIEW_CHANNEL)),
+            N(l, S) && ((n = r.IH(n, I.Plq.VIEW_CHANNEL)), (n = r.IH(n, I.Plq.CONNECT))),
             {
                 id: o,
                 type: c,
@@ -120,7 +120,7 @@ function y(e) {
         }
     ];
 }
-function L(e, t, n) {
+function D(e, t, n) {
     var r, i;
     let a = e.getGuildId(),
         o = n.getGuild(a),
@@ -134,7 +134,7 @@ function L(e, t, n) {
     let p = e.userLimit > 0 && c >= e.userLimit;
     return h || (p && !E);
 }
-function D(e, t) {
+function L(e, t) {
     return t.isGuildStageVoice() ? I.epw : null == e ? I.eWB : Math.max(e.hasFeature(I.oNc.VIP_REGIONS) ? m.HO[I.Eu4.TIER_3].limits.bitrate : I.eWB, m.HO[e.premiumTier].limits.bitrate);
 }
 function b(e) {

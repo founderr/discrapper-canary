@@ -3,7 +3,7 @@ n.d(t, {
         return O;
     },
     QP: function () {
-        return g;
+        return S;
     },
     ob: function () {
         return v;
@@ -31,7 +31,7 @@ var r,
     m = n(898770);
 let T = (0, p.Mg)(E.Z.FULL_SCREEN_LAYER_ANIMATION_DURATION);
 ((i = r || (r = {}))[(i.ENTERING = 1)] = 'ENTERING'), (i[(i.ENTERED = 2)] = 'ENTERED'), (i[(i.EXITING = 3)] = 'EXITING'), (i[(i.EXITED = 4)] = 'EXITED');
-let g = (0, d.Z)((e) => ({
+let S = (0, d.Z)((e) => ({
     fullScreenLayers: [],
     addLayer: (t) =>
         (0, _.j)(() => {
@@ -43,7 +43,7 @@ let g = (0, d.Z)((e) => ({
             });
         })
 }));
-function S(e) {
+function g(e) {
     let { item: t } = e,
         n = s.useRef(null);
     return (
@@ -104,7 +104,7 @@ let A = {
 function O() {
     let { reducedMotion: e } = s.useContext(f.AccessibilityPreferencesContext),
         t = e.enabled ? N : A,
-        n = g((e) => e.fullScreenLayers);
+        n = S((e) => e.fullScreenLayers);
     return (0, a.jsx)(u.Z, {
         children: n.map((e) =>
             (0, a.jsx)(
@@ -114,7 +114,7 @@ function O() {
                     timeout: T,
                     onEntered: () => {
                         (0, _.j)(() => {
-                            g.setState({
+                            S.setState({
                                 fullScreenLayers: n.map((t) =>
                                     t.key === e.key
                                         ? {
@@ -127,7 +127,7 @@ function O() {
                         });
                     },
                     unmountOnExit: !0,
-                    children: (0, a.jsx)(S, { item: e })
+                    children: (0, a.jsx)(g, { item: e })
                 },
                 e.key
             )
@@ -140,7 +140,7 @@ function R(e) {
         i = null != n ? n : l()();
     return (
         (0, _.j)(() => {
-            g.setState((t) => ({
+            S.setState((t) => ({
                 fullScreenLayers: [
                     ...t.fullScreenLayers,
                     {
@@ -157,6 +157,6 @@ function R(e) {
 }
 function v(e) {
     (0, _.j)(() => {
-        g.setState((t) => ({ fullScreenLayers: t.fullScreenLayers.filter((t) => t.key !== e) }));
+        S.setState((t) => ({ fullScreenLayers: t.fullScreenLayers.filter((t) => t.key !== e) }));
     });
 }

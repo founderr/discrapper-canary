@@ -21,8 +21,8 @@ var i = n(399606),
     I = n(13140),
     m = n(763296),
     T = n(981631),
-    g = n(689938),
-    S = n(474288);
+    S = n(689938),
+    g = n(474288);
 function A(e) {
     let { soundboardSound: t, closePicker: A } = e,
         N = (0, d.Iu)((e) => e.searchQuery),
@@ -38,12 +38,12 @@ function A(e) {
                     ? (0, r.jsx)(o.Z, {
                           emojiId: t.emojiId,
                           emojiName: t.emojiName,
-                          className: S.emoji
+                          className: g.emoji
                       })
                     : (0, r.jsx)(s.ImageIcon, {
                           size: 'md',
                           color: 'currentColor',
-                          className: S.emoji
+                          className: g.emoji
                       }),
             graphicSecondary:
                 null != R
@@ -56,23 +56,23 @@ function A(e) {
             titleSecondary: null == R ? void 0 : R.name,
             isFavorite: O
         });
-    let L = () => {
+    let D = () => {
             A(),
                 (0, s.openModalLazy)(async () => {
                     let { default: e } = await n.e('58120').then(n.bind(n, 355453));
                     return (t) => (0, r.jsx)(e, { ...t });
                 });
         },
-        D = (0, u.un)(a.z.SOUNDBOARD_KEYBIND_TIP),
+        L = (0, u.un)(a.z.SOUNDBOARD_KEYBIND_TIP),
         b =
-            null != y && (0, p.isWindows)() && !D
-                ? g.Z.Messages.SOUNDBOARD_KEYBIND_HINT_NO_POPOUT_WHEEL_SUPPORT.format({
+            null != y && (0, p.isWindows)() && !L
+                ? S.Z.Messages.SOUNDBOARD_KEYBIND_HINT_NO_POPOUT_WHEEL_SUPPORT.format({
                       keybind: (0, I.BB)(y.shortcut, !0),
                       openSettingsHook: (e, t) =>
                           (0, r.jsx)(
                               s.Anchor,
                               {
-                                  onClick: L,
+                                  onClick: D,
                                   children: e
                               },
                               t
@@ -82,23 +82,23 @@ function A(e) {
     return null == b
         ? null
         : (0, r.jsxs)('div', {
-              className: S.keybindHint,
+              className: g.keybindHint,
               children: [
                   (0, r.jsx)(s.CircleWarningIcon, {
                       size: 'custom',
                       width: 20,
                       height: 20,
                       color: 'currentColor',
-                      className: S.warningIcon
+                      className: g.warningIcon
                   }),
                   (0, r.jsx)(s.Text, {
                       variant: 'text-sm/medium',
                       color: 'text-normal',
-                      className: S.keybindHintText,
+                      className: g.keybindHintText,
                       children: b
                   }),
                   (0, r.jsx)(s.Clickable, {
-                      className: S.closeButton,
+                      className: g.closeButton,
                       onClick: () => (0, u.EW)(a.z.SOUNDBOARD_KEYBIND_TIP),
                       children: (0, r.jsx)(s.XSmallIcon, {
                           size: 'xs',

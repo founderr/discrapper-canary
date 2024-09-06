@@ -41,7 +41,7 @@ function i(e, A, i) {
             null != i ? ((C = l.Z.Messages.CREATOR_MONETIZATION_PAYMENT_ACCOUNT_VERIFICATION_REQUIRED_BODY_WITH_LINK), (g = { url: o.EYA.DEVELOPER_PORTAL_PAYOUT_SETTINGS(i) })) : (C = l.Z.Messages.CREATOR_MONETIZATION_PAYMENT_ACCOUNT_VERIFICATION_REQUIRED_BODY), (0, s.B)(l.Z.Messages.CREATOR_MONETIZATION_PAYMENT_ACCOUNT_VERIFICATION_REQUIRED_TITLE, C, r.IconVariant.WARNING, g);
             break;
         default:
-            let T = null !== (u = e.getFirstFieldErrorMessage(['published'])) && void 0 !== u ? u : (null === (c = e.hasFieldErrors) || void 0 === c ? void 0 : c.call(e)) ? void 0 : e.message;
-            if (null != T) (0, s.B)(l.Z.Messages.GUILD_PRODUCT_GENERIC_ERROR_TITLE, T, r.IconVariant.WARNING);
+            let h = null !== (u = e.getFirstFieldErrorMessage(['published'])) && void 0 !== u ? u : (null === (c = e.hasFieldErrors) || void 0 === c ? void 0 : c.call(e)) ? void 0 : e.message;
+            if (null != h) (0, s.B)(l.Z.Messages.GUILD_PRODUCT_GENERIC_ERROR_TITLE, h, r.IconVariant.WARNING);
     }
 }

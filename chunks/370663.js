@@ -4,26 +4,26 @@ n.d(t, {
     }
 });
 var i = n(470079),
-    a = n(772848),
-    s = n(125268);
+    s = n(772848),
+    a = n(125268);
 let l = () => {};
 function r(e, t, n) {
-    let r = i.useRef((0, a.Z)()),
+    let r = i.useRef((0, s.Z)()),
         o = i.useRef(Date.now()),
         c = i.useCallback(
-            (i, a) => {
+            (i, s) => {
                 let l = {
                     x: i,
-                    y: a,
+                    y: s,
                     deltaTime: Date.now() - o.current
                 };
-                (0, s.oW)(t, r.current, e, n, l), (0, s.cV)(r.current, e, n, [l]);
+                (0, a.oW)(t, r.current, e, n, l), (0, a.cV)(r.current, e, n, [l]);
             },
             [t, n, e]
         ),
         u = i.useCallback(
             (e, t, n) => {
-                (r.current = (0, a.Z)()), (o.current = Date.now()), c(t, n);
+                (r.current = (0, s.Z)()), (o.current = Date.now()), c(t, n);
             },
             [c]
         ),

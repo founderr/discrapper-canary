@@ -181,8 +181,8 @@ class m extends (a = u.PureComponent) {
                 let { clientX: t, clientY: n } = e,
                     { current: r } = this.draggableRef,
                     { maxX: i, maxY: a, flipVertical: s, flipHorizontal: o, onDragStart: l, onDrag: u, onFlip: c, snapOrientation: d } = this.props,
-                    { dragging: I, dragging: m, verticalOrientation: T, horizontalOrientation: g } = this.state,
-                    S = !1;
+                    { dragging: I, dragging: m, verticalOrientation: T, horizontalOrientation: S } = this.state,
+                    g = !1;
                 if (
                     null == r ||
                     (!I &&
@@ -210,22 +210,22 @@ class m extends (a = u.PureComponent) {
                     );
                 if (d) {
                     let e = f((R = h(R)));
-                    (T = e[0]), (g = e[1]);
+                    (T = e[0]), (S = e[1]);
                 } else
                     R = {
                         top: R.top,
                         left: R.left
                     };
-                2 === o && g !== this.state.horizontalOrientation && ((this._offsetX = A - this._offsetX), (S = !0)),
-                    2 === s && T !== this.state.verticalOrientation && ((this._offsetY = N - this._offsetY), (S = !0)),
+                2 === o && S !== this.state.horizontalOrientation && ((this._offsetX = A - this._offsetX), (g = !0)),
+                    2 === s && T !== this.state.verticalOrientation && ((this._offsetY = N - this._offsetY), (g = !0)),
                     this.setDOMPositions(R),
                     !m && (null == l || l(R, r)),
                     null == u || u(R, r),
-                    S && (null == c || c([T, g])),
+                    g && (null == c || c([T, S])),
                     this.setState({
                         dragging: I,
                         verticalOrientation: T,
-                        horizontalOrientation: g,
+                        horizontalOrientation: S,
                         atTopEdge: 0 === R.top
                     });
             }),

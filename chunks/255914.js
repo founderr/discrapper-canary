@@ -9,7 +9,7 @@ n.d(t, {
         return a;
     },
     lG: function () {
-        return S;
+        return g;
     },
     m7: function () {
         return O;
@@ -65,14 +65,14 @@ let T = Object.freeze({
         OpenH264: 'openh264',
         libvpx: 'vp8_libvpx'
     }),
-    g = Object.freeze({
+    S = Object.freeze({
         VideoToolbox: 'videotoolbox',
         libvpx: 'vp8_libvpx',
         electron: 'electron',
         ffmpeg: 'ffmpeg',
         dav1d: 'dav1d'
     });
-function S(e) {
+function g(e) {
     if (null == e) return 'unknown';
     for (let t of Object.keys(T)) if (e.includes(t)) return T[t];
     return 'uncategorized';
@@ -108,7 +108,7 @@ class N {
               (u.pliCount = e.pliCount),
               (u.decoder = (function (e) {
                   if (null == e) return 'unknown';
-                  for (let t of Object.keys(g)) if (e.includes(t)) return g[t];
+                  for (let t of Object.keys(S)) if (e.includes(t)) return S[t];
                   return 'uncategorized';
               })(e.decoderImplementationName)),
               (u.codecType = A(e.codec.name)),
@@ -127,7 +127,7 @@ class N {
               u);
     }
     static parseOutboundStats(e, t) {
-        var n, r, i, a, s, o, l, u, c, d, _, E, f, h, p, I, m, T, g, O;
+        var n, r, i, a, s, o, l, u, c, d, _, E, f, h, p, I, m, T, S, O;
         let R = new N();
         return null == e
             ? R
@@ -143,7 +143,7 @@ class N {
                   minorResolution: null != e.resolution ? Math.min(e.resolution.height, e.resolution.width) : 0,
                   majorResolution: null != e.resolution ? Math.max(e.resolution.height, e.resolution.width) : 0,
                   timestamp: t,
-                  encoder: S(e.encoderImplementationName),
+                  encoder: g(e.encoderImplementationName),
                   decoder: null,
                   codecType: A(e.codec.name),
                   nackCount: e.nackCount,
@@ -170,7 +170,7 @@ class N {
                   cryptorSuccessCount: null !== (I = e.encryptSuccessCount) && void 0 !== I ? I : 0,
                   cryptorFailureCount: null !== (m = e.encryptFailureCount) && void 0 !== m ? m : 0,
                   cryptorDuration: null !== (T = e.encryptDuration) && void 0 !== T ? T : 0,
-                  cryptorAttempts: null !== (g = e.encryptAttempts) && void 0 !== g ? g : 0,
+                  cryptorAttempts: null !== (S = e.encryptAttempts) && void 0 !== S ? S : 0,
                   cryptorMaxAttempts: null !== (O = e.encryptMaxAttempts) && void 0 !== O ? O : 0
               };
     }
@@ -216,17 +216,17 @@ class O {
         I.forEach((e) => {
             s <= e && (this.resolutionBuckets[e] += E);
         });
-        let g = (a - T) / 1000,
-            S = ((r - f) * 8) / g,
-            A = (i - m) / g;
+        let S = (a - T) / 1000,
+            g = ((r - f) * 8) / S,
+            A = (i - m) / S;
         h.forEach((e) => {
-            S <= e && (this.bitrateBuckets[e] += E);
+            g <= e && (this.bitrateBuckets[e] += E);
         }),
             p.forEach((e) => {
                 A <= e && (this.fpsBuckets[e] += E);
             }),
             this.resolutionHistogram.addSample(s),
-            this.bitrateHistogram.addSample(S),
+            this.bitrateHistogram.addSample(g),
             this.fpsHistogram.addSample(A),
             this.statsWindow.shift();
     }

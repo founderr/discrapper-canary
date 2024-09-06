@@ -25,8 +25,8 @@ var r,
     I = n(539873),
     m = n(207164),
     T = n(238302),
-    g = n(514361),
-    S = n(572397),
+    S = n(514361),
+    g = n(572397),
     A = n(705262),
     N = n(436774),
     O = n(768762),
@@ -34,11 +34,11 @@ var r,
     v = n(727939),
     C = n(981631),
     y = n(921944),
-    L = n(474936),
-    D = n(689938),
+    D = n(474936),
+    L = n(689938),
     b = n(50103);
 function M() {
-    let e = (0, S.q)();
+    let e = (0, g.q)();
     return (
         s.useEffect(() => ((0, T.Kq)(), e(C.rMx.CLIENT_THEME_PREVIEW_VIEWED), () => e(C.rMx.CLIENT_THEME_PREVIEW_CLOSED)), [e]),
         (0, a.jsx)(A.ZP, {
@@ -65,9 +65,9 @@ function U(e) {
             isPreview: r,
             isCoachmark: i
         })
-            .with({ isCoachmark: !0 }, () => D.Z.Messages.CLOSE)
-            .with({ isPreview: !0 }, () => D.Z.Messages.CLIENT_THEMES_EDITOR_EXIT_PREVIEW)
-            .otherwise(() => D.Z.Messages.CLIENT_THEMES_EDITOR_RETURN_TO_SETTINGS),
+            .with({ isCoachmark: !0 }, () => L.Z.Messages.CLOSE)
+            .with({ isPreview: !0 }, () => L.Z.Messages.CLIENT_THEMES_EDITOR_EXIT_PREVIEW)
+            .otherwise(() => L.Z.Messages.CLIENT_THEMES_EDITOR_RETURN_TO_SETTINGS),
         h = s.useCallback(() => {
             if (1 === t) {
                 (0, d.openModalLazy)(async () => {
@@ -109,7 +109,7 @@ function U(e) {
                         (0, a.jsx)(d.Text, {
                             className: b.footerText,
                             variant: 'text-sm/medium',
-                            children: D.Z.Messages.PREMIUM_UPSELL_MAKE_DISCORD_YOURS.format({ onClick: h })
+                            children: L.Z.Messages.PREMIUM_UPSELL_MAKE_DISCORD_YOURS.format({ onClick: h })
                         })
                     ]
                 }),
@@ -129,10 +129,10 @@ function U(e) {
                     r &&
                         (0, a.jsx)(R.Z, {
                             className: b.footerButton,
-                            subscriptionTier: L.Si.TIER_2,
+                            subscriptionTier: D.Si.TIER_2,
                             showGradient: !0,
                             fullWidth: !0,
-                            buttonText: D.Z.Messages.PREMIUM_UPSELL_GET_NITRO
+                            buttonText: L.Z.Messages.PREMIUM_UPSELL_GET_NITRO
                         })
                 ]
             })
@@ -145,20 +145,20 @@ function w(e) {
         o = s.useMemo(
             () => [
                 {
-                    name: D.Z.Messages.THEME,
+                    name: L.Z.Messages.THEME,
                     value: 0
                 },
                 {
-                    name: D.Z.Messages.USER_SETTINGS_APPEARANCE_IN_APP_ICON_TITLE,
+                    name: L.Z.Messages.USER_SETTINGS_APPEARANCE_IN_APP_ICON_TITLE,
                     value: 1
                 }
             ],
             []
         ),
-        l = (0, c.e7)([g.Z], () => g.Z.isPreview),
+        l = (0, c.e7)([S.Z], () => S.Z.isPreview),
         u = (0, c.e7)([p.Z], () => p.Z.isUpsellPreview),
         _ = l || u,
-        f = (0, S.J)(),
+        f = (0, g.J)(),
         I = s.useCallback(() => {
             l && f(), u && (0, h.O7)();
         }, [l, u, f]),
@@ -180,7 +180,7 @@ function w(e) {
                             children: [
                                 (0, a.jsx)(d.Heading, {
                                     variant: 'heading-lg/extrabold',
-                                    children: D.Z.Messages.PREMIUM_UPSELL_FEATURE_CLIENT_THEMES_APP_ICONS_PREVIEW_TITLE
+                                    children: L.Z.Messages.PREMIUM_UPSELL_FEATURE_CLIENT_THEMES_APP_ICONS_PREVIEW_TITLE
                                 }),
                                 (0, a.jsx)(d.ModalCloseButton, {
                                     className: b.closeContainer,

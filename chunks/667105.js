@@ -33,8 +33,8 @@ var r = n(735250),
     I = n(669041),
     m = n(341907),
     T = n(46140),
-    g = n(981631),
-    S = n(689938);
+    S = n(981631),
+    g = n(689938);
 function A(e) {
     let { quest: t, location: n, questContentPosition: r, questContentRowIndex: a } = e,
         o = (0, s.e7)([c.default], () => {
@@ -134,8 +134,8 @@ function v(e) {
         switch (n) {
             case E.OH.UNACCEPTED:
                 return {
-                    text: S.Z.Messages.QUESTS_ACCEPT,
-                    tooltipText: S.Z.Messages.QUESTS_ACCEPT_TOOLTIP,
+                    text: g.Z.Messages.QUESTS_ACCEPT,
+                    tooltipText: g.Z.Messages.QUESTS_ACCEPT_TOOLTIP,
                     onClick: () =>
                         (0, _.AH)(t.id, {
                             questContent: a,
@@ -148,7 +148,7 @@ function v(e) {
             case E.OH.IN_PROGRESS:
                 if (I && c)
                     return {
-                        text: S.Z.Messages.QUESTS_CONNECT_CONSOLE,
+                        text: g.Z.Messages.QUESTS_CONNECT_CONSOLE,
                         tooltipText: null,
                         onClick: () =>
                             (0, f.gI)(
@@ -165,14 +165,14 @@ function v(e) {
                             )
                     };
                 return {
-                    text: S.Z.Messages.QUESTS_CLAIM_REWARD,
-                    tooltipText: S.Z.Messages.QUESTS_IN_PROGRESS_TOOLTIP,
+                    text: g.Z.Messages.QUESTS_CLAIM_REWARD,
+                    tooltipText: g.Z.Messages.QUESTS_IN_PROGRESS_TOOLTIP,
                     onClick: null
                 };
             case E.OH.COMPLETED:
                 return {
-                    text: S.Z.Messages.QUESTS_CLAIM_REWARD,
-                    tooltipText: u ? S.Z.Messages.QUESTS_IN_HOUSE_REWARD_TOOLTIP : null,
+                    text: g.Z.Messages.QUESTS_CLAIM_REWARD,
+                    tooltipText: u ? g.Z.Messages.QUESTS_IN_HOUSE_REWARD_TOOLTIP : null,
                     onClick: p
                 };
             case E.OH.CLAIMED:
@@ -182,30 +182,30 @@ function v(e) {
                 };
                 if ((0, f.zK)(t, T.S7.FRACTIONS_QUEST))
                     return {
-                        text: S.Z.Messages.QUESTS_LEARN_MORE_V2,
-                        tooltipText: S.Z.Messages.QUESTS_LEARN_MORE_V2,
+                        text: g.Z.Messages.QUESTS_LEARN_MORE_V2,
+                        tooltipText: g.Z.Messages.QUESTS_LEARN_MORE_V2,
                         onClick: () => {
-                            l.Z.open(g.oAB.PREMIUM, null, {});
+                            l.Z.open(S.oAB.PREMIUM, null, {});
                         }
                     };
                 if (u)
                     return {
                         ...e,
-                        text: S.Z.Messages.QUESTS_MOBILE_HOME_VIEW_REWARD
+                        text: g.Z.Messages.QUESTS_MOBILE_HOME_VIEW_REWARD
                     };
                 if (r)
                     return {
                         ...e,
-                        text: S.Z.Messages.COLLECTIBLES_USE_NOW
+                        text: g.Z.Messages.COLLECTIBLES_USE_NOW
                     };
                 else if ((0, f.vQ)(t.config))
                     return {
                         ...e,
-                        text: S.Z.Messages.QUESTS_MOBILE_HOME_VIEW_REWARD
+                        text: g.Z.Messages.QUESTS_MOBILE_HOME_VIEW_REWARD
                     };
                 return {
                     ...e,
-                    text: S.Z.Messages.QUESTS_SEE_CODE
+                    text: g.Z.Messages.QUESTS_SEE_CODE
                 };
         }
     }, [t, r, u, a, p, n, s, o, I, c]);

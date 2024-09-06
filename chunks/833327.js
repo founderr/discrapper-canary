@@ -30,8 +30,8 @@ var o = { deprecate: n(220342) },
     I = E.ERR_STREAM_CANNOT_PIPE,
     m = E.ERR_STREAM_DESTROYED,
     T = E.ERR_STREAM_NULL_VALUES,
-    g = E.ERR_STREAM_WRITE_AFTER_END,
-    S = E.ERR_UNKNOWN_ENCODING,
+    S = E.ERR_STREAM_WRITE_AFTER_END,
+    g = E.ERR_UNKNOWN_ENCODING,
     A = d.errorOrDestroy;
 function N() {}
 function O(e, t, i) {
@@ -59,7 +59,7 @@ function O(e, t, i) {
                 if ((((n = u).writing = !1), (n.writecb = null), (n.length -= n.writelen), (n.writelen = 0), t)) {
                     (r = e), (i = u), (s = c), (o = t), (l = d), --i.pendingcb, s ? (a.nextTick(l, o), a.nextTick(b, r, i), (r._writableState.errorEmitted = !0), A(r, o)) : (l(o), (r._writableState.errorEmitted = !0), A(r, o), b(r, i));
                 } else {
-                    var _ = L(u) || e.destroyed;
+                    var _ = D(u) || e.destroyed;
                     !_ && !u.corked && !u.bufferProcessing && u.bufferedRequest && y(e, u), c ? a.nextTick(C, e, u, _, d) : C(e, u, _, d);
                 }
             })(t, e);
@@ -125,14 +125,14 @@ n(689118)(R, l),
         p,
         I = this._writableState,
         m = !1;
-    var S = !I.objectMode && ((r = e), u.isBuffer(r) || r instanceof c);
-    if (S && !u.isBuffer(e)) {
+    var g = !I.objectMode && ((r = e), u.isBuffer(r) || r instanceof c);
+    if (g && !u.isBuffer(e)) {
         (i = e), (e = u.from(i));
     }
-    if (('function' == typeof t && ((n = t), (t = null)), S ? (t = 'buffer') : !t && (t = I.defaultEncoding), 'function' != typeof n && (n = N), I.ending)) {
-        (s = this), (o = n), A(s, (l = new g())), a.nextTick(o, l);
+    if (('function' == typeof t && ((n = t), (t = null)), g ? (t = 'buffer') : !t && (t = I.defaultEncoding), 'function' != typeof n && (n = N), I.ending)) {
+        (s = this), (o = n), A(s, (l = new S())), a.nextTick(o, l);
     } else {
-        if (S || ((d = this), (_ = I), (E = e), (h = n), null === E ? (p = new T()) : 'string' != typeof E && !_.objectMode && (p = new f('chunk', ['string', 'Buffer'], E)), !p || (A(d, p), a.nextTick(h, p), 0)))
+        if (g || ((d = this), (_ = I), (E = e), (h = n), null === E ? (p = new T()) : 'string' != typeof E && !_.objectMode && (p = new f('chunk', ['string', 'Buffer'], E)), !p || (A(d, p), a.nextTick(h, p), 0)))
             I.pendingcb++,
                 (m = (function (e, t, n, r, i, a) {
                     if (!n) {
@@ -158,7 +158,7 @@ n(689118)(R, l),
                             (t.bufferedRequestCount += 1);
                     } else v(e, t, !1, d, r, i, a);
                     return _;
-                })(this, I, S, e, t, n));
+                })(this, I, g, e, t, n));
     }
     return m;
 }),
@@ -170,7 +170,7 @@ n(689118)(R, l),
         e.corked && (e.corked--, !e.writing && !e.corked && !e.bufferProcessing && e.bufferedRequest && y(this, e));
     }),
     (R.prototype.setDefaultEncoding = function (e) {
-        if (('string' == typeof e && (e = e.toLowerCase()), !(['hex', 'utf8', 'utf-8', 'ascii', 'binary', 'base64', 'ucs2', 'ucs-2', 'utf16le', 'utf-16le', 'raw'].indexOf((e + '').toLowerCase()) > -1))) throw new S(e);
+        if (('string' == typeof e && (e = e.toLowerCase()), !(['hex', 'utf8', 'utf-8', 'ascii', 'binary', 'base64', 'ucs2', 'ucs-2', 'utf16le', 'utf-16le', 'raw'].indexOf((e + '').toLowerCase()) > -1))) throw new g(e);
         return (this._writableState.defaultEncoding = e), this;
     }),
     Object.defineProperty(R.prototype, 'writableBuffer', {
@@ -218,10 +218,10 @@ function y(e, t) {
     }
     (t.bufferedRequest = n), (t.bufferProcessing = !1);
 }
-function L(e) {
+function D(e) {
     return e.ending && 0 === e.length && null === e.bufferedRequest && !e.finished && !e.writing;
 }
-function D(e, t) {
+function L(e, t) {
     e._final(function (n) {
         t.pendingcb--, n && A(e, n), (t.prefinished = !0), e.emit('prefinish'), b(e, t);
     });
@@ -252,9 +252,9 @@ function D(e, t) {
 function b(e, t) {
     var n,
         r,
-        i = L(t);
+        i = D(t);
     if (i) {
-        if (((n = e), (r = t).prefinished || r.finalCalled || ('function' != typeof n._final || r.destroyed ? ((r.prefinished = !0), n.emit('prefinish')) : (r.pendingcb++, (r.finalCalled = !0), a.nextTick(D, n, r))), 0 === t.pendingcb && ((t.finished = !0), e.emit('finish'), t.autoDestroy))) {
+        if (((n = e), (r = t).prefinished || r.finalCalled || ('function' != typeof n._final || r.destroyed ? ((r.prefinished = !0), n.emit('prefinish')) : (r.pendingcb++, (r.finalCalled = !0), a.nextTick(L, n, r))), 0 === t.pendingcb && ((t.finished = !0), e.emit('finish'), t.autoDestroy))) {
             var s = e._readableState;
             (!s || (s.autoDestroy && s.endEmitted)) && e.destroy();
         }

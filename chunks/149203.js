@@ -7,7 +7,7 @@ n.d(t, {
         return p;
     },
     N6: function () {
-        return g;
+        return S;
     },
     Su: function () {
         return s;
@@ -66,4 +66,4 @@ let E = 'emoji-picker-tab-panel',
         default: 44,
         jumbo: 96
     },
-    g = 9;
+    S = 9;

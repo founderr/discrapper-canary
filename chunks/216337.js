@@ -1,6 +1,6 @@
 var i = n(735250),
-    a = n(470079),
-    s = n(442837),
+    s = n(470079),
+    a = n(442837),
     l = n(481060),
     r = n(607070),
     o = n(665906),
@@ -8,8 +8,8 @@ var i = n(735250),
     u = n(496675),
     d = n(981631),
     h = n(689938),
-    p = n(322699);
-let m = () =>
+    m = n(322699);
+let p = () =>
     n
         .e('26176')
         .then(n.t.bind(n, 737848, 19))
@@ -17,24 +17,24 @@ let m = () =>
             let { default: t } = e;
             return t;
         });
-t.Z = a.memo(function (e) {
+t.Z = s.memo(function (e) {
     let { channel: t, isLastItem: n } = e,
-        a = (0, s.e7)([r.Z], () => r.Z.useReducedMotion),
-        _ = (0, s.e7)([u.Z], () => u.Z.can(d.Plq.SEND_MESSAGES_IN_THREADS, t)),
+        s = (0, a.e7)([r.Z], () => r.Z.useReducedMotion),
+        _ = (0, a.e7)([u.Z], () => u.Z.can(d.Plq.SEND_MESSAGES_IN_THREADS, t)),
         f = (0, o.Gu)(t),
-        E = (0, s.e7)([c.default], () => c.default.getId());
+        E = (0, a.e7)([c.default], () => c.default.getId());
     return n
         ? _ && !f && t.ownerId !== E
             ? (0, i.jsxs)('div', {
-                  className: p.box,
+                  className: m.box,
                   children: [
                       (0, i.jsx)(l.LottieAnimation, {
-                          importData: m,
-                          shouldAnimate: !a,
-                          className: p.animation
+                          importData: p,
+                          shouldAnimate: !s,
+                          className: m.animation
                       }),
                       (0, i.jsxs)('div', {
-                          className: p.textContainer,
+                          className: m.textContainer,
                           children: [
                               (0, i.jsx)(l.Heading, {
                                   variant: 'heading-md/semibold',
@@ -50,5 +50,5 @@ t.Z = a.memo(function (e) {
                   ]
               })
             : null
-        : (0, i.jsx)('div', { className: p.divider });
+        : (0, i.jsx)('div', { className: m.divider });
 });

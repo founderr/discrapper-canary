@@ -135,12 +135,12 @@ function I(e) {
 }
 let m = 'undefined' != typeof document && window.visualViewport;
 function T() {
-    let [e, t] = (0, r.useState)(() => g());
+    let [e, t] = (0, r.useState)(() => S());
     return (
         (0, r.useEffect)(() => {
             let e = () => {
                 t((e) => {
-                    let t = g();
+                    let t = S();
                     return t.width === e.width && t.height === e.height ? e : t;
                 });
             };
@@ -154,13 +154,13 @@ function T() {
         e
     );
 }
-function g() {
+function S() {
     return {
         width: (null == m ? void 0 : m.width) || window.innerWidth,
         height: (null == m ? void 0 : m.height) || window.innerHeight
     };
 }
-function S(e) {
+function g(e) {
     var t;
     return 'undefined' != typeof window && null != window.navigator && ((null === (t = window.navigator.userAgentData) || void 0 === t ? void 0 : t.brands.some((t) => e.test(t.brand))) || e.test(window.navigator.userAgent));
 }
@@ -173,9 +173,9 @@ function N() {
 }
 function O() {
     return (
-        S(/AppleWebKit/i) &&
+        g(/AppleWebKit/i) &&
         !(function () {
-            return S(/Chrome/i);
+            return g(/Chrome/i);
         })()
     );
 }

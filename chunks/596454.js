@@ -36,7 +36,7 @@ function T(e, t, n) {
         e
     );
 }
-class g extends (r = a.PureComponent) {
+class S extends (r = a.PureComponent) {
     componentWillUnmount() {
         var e;
         null === (e = this.cancelLoadImage) || void 0 === e || e.call(this);
@@ -108,8 +108,8 @@ class g extends (r = a.PureComponent) {
             });
     }
 }
-T(g, 'defaultProps', { isInteracting: !1 });
-let S = (function (e) {
+T(S, 'defaultProps', { isInteracting: !1 });
+let g = (function (e) {
     if (null == window.IntersectionObserver)
         return function (t) {
             return (0, i.jsx)(e, {
@@ -182,7 +182,7 @@ let S = (function (e) {
             });
         }
     };
-})(g);
+})(S);
 function A(e) {
     let t = E.Yk.useSetting(),
         n = {
@@ -190,7 +190,7 @@ function A(e) {
             allowAnimatedEmoji: t
         },
         r = __OVERLAY__ ? (0, c.e7)([f.Z], () => f.Z.isInstanceFocused()) : (0, I.n)();
-    return (0, i.jsx)(S, {
+    return (0, i.jsx)(g, {
         ...e,
         ...n,
         isFocused: r

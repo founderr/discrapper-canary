@@ -1,6 +1,6 @@
 n.d(t, {
     B0: function () {
-        return L;
+        return D;
     },
     Hc: function () {
         return P;
@@ -18,7 +18,7 @@ n.d(t, {
         return M;
     },
     X_: function () {
-        return D;
+        return L;
     },
     Zt: function () {
         return N;
@@ -59,9 +59,9 @@ var r = n(606301),
     E = n(981631);
 let { API_ENDPOINT: f, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: p, ASSET_ENDPOINT: I, CDN_HOST: m } = window.GLOBAL_ENV,
     T = Object.values(d.og),
-    g = decodeURIComponent(E.ANM.STICKER_ASSET('[\\d]+', '('.concat(T.join('|'), ')'))),
-    S = RegExp('('.concat(location.protocol).concat(I, '|').concat(location.protocol).concat(h, ')(').concat(g, ')'), 'ig'),
-    A = RegExp(''.concat(location.protocol).concat(f, '(').concat(g, ')'), 'ig'),
+    S = decodeURIComponent(E.ANM.STICKER_ASSET('[\\d]+', '('.concat(T.join('|'), ')'))),
+    g = RegExp('('.concat(location.protocol).concat(I, '|').concat(location.protocol).concat(h, ')(').concat(S, ')'), 'ig'),
+    A = RegExp(''.concat(location.protocol).concat(f, '(').concat(S, ')'), 'ig'),
     N = (e) => {
         if (null != e.cover_sticker_id) {
             let t = e.stickers.find((t) => t.id === e.cover_sticker_id);
@@ -138,8 +138,8 @@ let { API_ENDPOINT: f, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: p, ASSET_ENDPOINT: 
             n
         );
     },
-    L = (e) => e.match('development' !== p ? S : A),
-    D = (e) =>
+    D = (e) => e.match('development' !== p ? g : A),
+    L = (e) =>
         e.stickers.some((e) => {
             let { format_type: t } = e;
             return t === d.u3.APNG || t === d.u3.LOTTIE || t === d.u3.GIF;

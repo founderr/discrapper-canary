@@ -21,8 +21,8 @@ var r = n(735250),
     I = n(932724),
     m = n(672339),
     T = n(898531),
-    g = n(923973),
-    S = n(189771),
+    S = n(923973),
+    g = n(189771),
     A = n(560688),
     N = n(871499),
     O = n(136995),
@@ -30,8 +30,8 @@ var r = n(735250),
     v = n(131951),
     C = n(594174),
     y = n(451478),
-    L = n(358221),
-    D = n(584511),
+    D = n(358221),
+    L = n(584511),
     b = n(793865),
     M = n(981631),
     P = n(65154),
@@ -84,8 +84,8 @@ function V(e) {
 }
 function H(e) {
     let { canVideo: t, channel: n, numVideoDevices: i } = e,
-        { cameraUnavailable: a, enabled: o } = (0, g.Z)(),
-        l = (0, S.Z)(n);
+        { cameraUnavailable: a, enabled: o } = (0, S.Z)(),
+        l = (0, g.Z)(n);
     return (0, r.jsxs)('div', {
         className: w.actions,
         children: [
@@ -140,9 +140,9 @@ function Z(e) {
         [p, I] = i.useState(!1),
         m = (0, f.x)(_),
         T = (0, h.ZP)(_),
-        [g, S] = (0, l.Wu)([v.Z], () => [v.Z.supports(P.AN.VIDEO), Object.keys(v.Z.getVideoDevices()).length]),
+        [S, g] = (0, l.Wu)([v.Z], () => [v.Z.supports(P.AN.VIDEO), Object.keys(v.Z.getVideoDevices()).length]),
         A = (0, l.e7)([y.Z], () => y.Z.isFocused()),
-        N = (0, l.e7)([L.Z], () => L.Z.getMode(_.id)),
+        N = (0, l.e7)([D.Z], () => D.Z.getMode(_.id)),
         O = i.useCallback((e) => {
             null != e.top && null != e.left && d.Z.move(e.left, e.top);
         }, []),
@@ -162,14 +162,14 @@ function Z(e) {
         };
         return window.addEventListener('keydown', e), () => window.removeEventListener('keydown', e);
     }, [_]);
-    let C = N === M.WtW.VIDEO && g && S > 0,
+    let C = N === M.WtW.VIDEO && S && g > 0,
         b = (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(D.Z, {
+                (0, r.jsx)(L.Z, {
                     className: w.icon,
                     ringing: A,
                     src: null != m ? m : '',
-                    ringingType: D.Z.RingingType.INCOMING,
+                    ringingType: L.Z.RingingType.INCOMING,
                     size: p ? u.AvatarSizes.SIZE_40 : u.AvatarSizes.SIZE_80
                 }),
                 (0, r.jsxs)('div', {
@@ -225,7 +225,7 @@ function Z(e) {
                         (0, r.jsx)(H, {
                             canVideo: C,
                             channel: _,
-                            numVideoDevices: S
+                            numVideoDevices: g
                         }),
                         C && !p
                             ? (0, r.jsx)(u.Button, {

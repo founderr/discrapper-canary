@@ -3,7 +3,7 @@ n.d(t, {
         return y;
     },
     Bn: function () {
-        return D;
+        return L;
     },
     C9: function () {
         return M;
@@ -30,7 +30,7 @@ n.d(t, {
         return O;
     },
     nm: function () {
-        return L;
+        return D;
     },
     sr: function () {
         return P;
@@ -80,8 +80,8 @@ function T(e, t, n) {
         e
     );
 }
-let g = 'UserSettingsProtoLastWriteTimes',
-    S = Date.now();
+let S = 'UserSettingsProtoLastWriteTimes',
+    g = Date.now();
 function A() {}
 d.Z.subscribe('CONNECTION_OPEN', () => {
     Date.now();
@@ -160,8 +160,8 @@ class N {
     }
     saveLastSendTime() {
         var e;
-        let t = null !== (e = c.K.get(g)) && void 0 !== e ? e : {};
-        (t[this.type] = Date.now()), c.K.set(g, t);
+        let t = null !== (e = c.K.get(S)) && void 0 !== e ? e : {};
+        (t[this.type] = Date.now()), c.K.set(S, t);
     }
     async loadIfNecessary(e) {
         if (__OVERLAY__) {
@@ -318,7 +318,7 @@ function C(e, t, n) {
 function y(e, t, n, r) {
     return C(e, (e) => (0, p.uL)(e, t, n), r);
 }
-function L(e) {
+function D(e) {
     return O.updateAsync(
         'userContent',
         (t) => {
@@ -328,7 +328,7 @@ function L(e) {
         I.fy.INFREQUENT_USER_ACTION
     );
 }
-function D(e, t) {
+function L(e, t) {
     return O.updateAsync(
         'userContent',
         (n) => {

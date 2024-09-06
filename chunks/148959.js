@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return S;
     },
     y: function () {
         return r;
@@ -39,7 +39,7 @@ function T(e, t) {
     !e && f.Z.captureMessage('Assert failed: ' + t);
 }
 ((s = r || (r = {})).RequestedSSRCsUpdate = 'requested-ssrcs-update'), (s.RequestedStreamsUpdate = 'requested-streams-update'), ((o = i || (i = {}))[(o.Ready = 0)] = 'Ready'), (o[(o.Pending = 1)] = 'Pending'), (o[(o.PendingSeamless = 2)] = 'PendingSeamless'), (o[(o.Finalizing = 3)] = 'Finalizing'), ((l = a || (a = {}))[(l.None = 0)] = 'None'), (l[(l.Low = 60)] = 'Low'), (l[(l.High = 100)] = 'High');
-class g extends d.Z {
+class S extends d.Z {
     setUserID(e) {
         this.userId = e;
     }

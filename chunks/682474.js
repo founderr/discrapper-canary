@@ -42,7 +42,7 @@ function T(e) {
                 p(e.channel_id, e);
             });
 }
-class g extends (s = o.ZP.Store) {
+class S extends (s = o.ZP.Store) {
     initialize() {
         this.waitFor(c.Z, d.default);
     }
@@ -58,7 +58,7 @@ class g extends (s = o.ZP.Store) {
     }
 }
 (a = 'ForumPostRecentMessageStore'),
-    (i = 'displayName') in (r = g)
+    (i = 'displayName') in (r = S)
         ? Object.defineProperty(r, i, {
               value: a,
               enumerable: !0,
@@ -66,7 +66,7 @@ class g extends (s = o.ZP.Store) {
               writable: !0
           })
         : (r[i] = a),
-    new g(l.Z, {
+    new S(l.Z, {
         CONNECTION_OPEN: function () {
             f = {};
         },

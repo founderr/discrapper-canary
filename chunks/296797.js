@@ -4,8 +4,8 @@ n.d(t, {
     }
 });
 var i = n(470079),
-    a = n(592125),
-    s = n(944486),
+    s = n(592125),
+    a = n(944486),
     l = n(585483),
     r = n(917107),
     o = n(89425),
@@ -17,8 +17,8 @@ function d(e) {
         async function e(e) {
             let { channelId: n } = e;
             if (!(0, r.Z)(n)) return;
-            s.Z.getVoiceChannelId() !== n && (await (0, o.Z)({ channelId: n }));
-            let i = a.Z.getChannel(n),
+            a.Z.getVoiceChannelId() !== n && (await (0, o.Z)({ channelId: n }));
+            let i = s.Z.getChannel(n),
                 l = null == i ? void 0 : i.guild_id;
             setTimeout(() => {
                 (0, c.Z)(l, n), null == t || t();

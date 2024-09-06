@@ -1,7 +1,7 @@
 n(47120);
 var i,
-    a = n(442837),
-    s = n(570140);
+    s = n(442837),
+    a = n(570140);
 function l(e, t, n) {
     return (
         t in e
@@ -16,7 +16,7 @@ function l(e, t, n) {
     );
 }
 let r = new Set();
-class o extends (i = a.ZP.PersistedStore) {
+class o extends (i = s.ZP.PersistedStore) {
     initialize(e) {
         null != e && (r = new Set(e));
     }
@@ -29,7 +29,7 @@ class o extends (i = a.ZP.PersistedStore) {
 }
 l(o, 'displayName', 'ForumChannelAdminOnboardingGuideStore'),
     l(o, 'persistKey', 'ForumChannelAdminOnboardingGuideStore'),
-    (t.Z = new o(s.Z, {
+    (t.Z = new o(a.Z, {
         ADMIN_ONBOARDING_GUIDE_HIDE: function (e) {
             let { channelId: t, hide: n } = e;
             n ? r.add(t) : r.delete(t);

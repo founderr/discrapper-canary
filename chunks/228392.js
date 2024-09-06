@@ -33,19 +33,19 @@ n.d(t, {
         return P;
     },
     Oq: function () {
-        return S;
+        return g;
     },
     P_: function () {
         return m;
     },
     Vn: function () {
-        return g;
+        return S;
     },
     ab: function () {
         return N;
     },
     e5: function () {
-        return L;
+        return D;
     },
     e7: function () {
         return I;
@@ -66,7 +66,7 @@ n.d(t, {
         return G;
     },
     ws: function () {
-        return D;
+        return L;
     },
     xI: function () {
         return b;
@@ -144,7 +144,7 @@ function T(e) {
         channel_id: n
     });
 }
-function g(e) {
+function S(e) {
     var t, n, i, a;
     let { guildId: l, channelId: u } = e,
         c = s.Z.getChannel(u);
@@ -164,7 +164,7 @@ function g(e) {
             num_attachments: (0, _.RR)(u)
         });
 }
-function S(e) {
+function g(e) {
     let { guildId: t, channelId: n } = e;
     r.ZP.trackWithMetadata(E.rMx.FORUM_CHANNEL_NEW_POST_DRAFT_CLEARED, {
         ...(0, _.xl)({ channelId: n }),
@@ -243,11 +243,11 @@ function y(e) {
         location: n
     });
 }
-function L(e) {
+function D(e) {
     let { onboardingCTA: t } = e;
     r.ZP.trackWithMetadata(E.rMx.FORUM_CHANNEL_ONBOARDING_CLICKED, { onboarding_cta_type: t });
 }
-function D(e) {
+function L(e) {
     let { forumDemoId: t } = e;
     r.ZP.trackWithMetadata(E.rMx.FORUM_UPSELL_MODAL_CLICKED, { forum_demo_id: t });
 }

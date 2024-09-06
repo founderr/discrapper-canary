@@ -74,8 +74,8 @@ function d(e, t, n) {
         I = l.get(t),
         m = null !== (c = e.isDisabled) && void 0 !== c ? c : t.disabledKeys.has(p),
         T = null !== (d = e.isSelected) && void 0 !== d ? d : t.selectionManager.isSelected(p),
-        g = null !== (_ = e.shouldSelectOnPressUp) && void 0 !== _ ? _ : null == I ? void 0 : I.shouldSelectOnPressUp,
-        S = null !== (E = e.shouldFocusOnHover) && void 0 !== E ? E : null == I ? void 0 : I.shouldFocusOnHover,
+        S = null !== (_ = e.shouldSelectOnPressUp) && void 0 !== _ ? _ : null == I ? void 0 : I.shouldSelectOnPressUp,
+        g = null !== (E = e.shouldFocusOnHover) && void 0 !== E ? E : null == I ? void 0 : I.shouldFocusOnHover,
         A = null !== (f = e.shouldUseVirtualFocus) && void 0 !== f ? f : null == I ? void 0 : I.shouldUseVirtualFocus,
         N = null !== (h = e.isVirtualized) && void 0 !== h ? h : null == I ? void 0 : I.isVirtualized,
         O = (0, r.mp)(),
@@ -93,16 +93,16 @@ function d(e, t, n) {
     }
     let {
             itemProps: y,
-            isPressed: L,
-            isFocused: D,
+            isPressed: D,
+            isFocused: L,
             hasAction: b,
             allowsSelection: M
         } = (0, s.Cs)({
             selectionManager: t.selectionManager,
             key: p,
             ref: n,
-            shouldSelectOnPressUp: g,
-            allowsDifferentPressOrigin: g && S,
+            shouldSelectOnPressUp: S,
+            allowsDifferentPressOrigin: S && g,
             isVirtualized: N,
             shouldUseVirtualFocus: A,
             isDisabled: m,
@@ -115,7 +115,7 @@ function d(e, t, n) {
             linkBehavior: null == I ? void 0 : I.linkBehavior
         }),
         { hoverProps: P } = (0, i.XI)({
-            isDisabled: m || !S,
+            isDisabled: m || !g,
             onHoverStart() {
                 !(0, i.E)() && (t.selectionManager.setFocused(!0), t.selectionManager.setFocusedKey(p));
             }
@@ -131,11 +131,11 @@ function d(e, t, n) {
             },
             labelProps: { id: O },
             descriptionProps: { id: R },
-            isFocused: D,
-            isFocusVisible: D && (0, i.E)(),
+            isFocused: L,
+            isFocusVisible: L && (0, i.E)(),
             isSelected: T,
             isDisabled: m,
-            isPressed: L,
+            isPressed: D,
             allowsSelection: M,
             hasAction: b
         }

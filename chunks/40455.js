@@ -29,7 +29,7 @@ let h = null,
     m = !1;
 class T extends s.Z {
     initialize() {
-        this.waitFor(r.Z), this.waitFor(a.Z), this.waitFor(i.Z), this.syncWith([o.Z], () => !0), this.syncWith([a.Z], g);
+        this.waitFor(r.Z), this.waitFor(a.Z), this.waitFor(i.Z), this.syncWith([o.Z], () => !0), this.syncWith([a.Z], S);
     }
     loadCache() {
         let e = this.readSnapshot(T.LATEST_SNAPSHOT_VERSION);
@@ -97,11 +97,11 @@ class T extends s.Z {
     }
     constructor() {
         super({
-            CACHE_LOADED_LAZY_NO_CACHE: L,
+            CACHE_LOADED_LAZY_NO_CACHE: D,
             CACHE_LOADED_LAZY: () => this.loadCache(),
             CHANNEL_DELETE: O,
             CHANNEL_UPDATES: N,
-            CONNECTION_OPEN_SUPPLEMENTAL: S,
+            CONNECTION_OPEN_SUPPLEMENTAL: g,
             GUILD_DELETE: C,
             LOGIN_SUCCESS: y,
             THREAD_DELETE: v,
@@ -109,11 +109,11 @@ class T extends s.Z {
         });
     }
 }
-function g() {
+function S() {
     let e = a.Z.getChannelId();
     null != e && T.recordChannel(e);
 }
-function S() {
+function g() {
     T.dropUnreachableChannels(), T.replaceLru((0, E.J)(p, 1250));
 }
 function A(e) {
@@ -140,7 +140,7 @@ function C(e) {
 function y(e) {
     p.clear(), I.clear(), (m = !1);
 }
-function L(e) {
+function D(e) {
     m = !0;
 }
 f(T, 'displayName', 'SaveableChannelsStore'), f(T, 'LATEST_SNAPSHOT_VERSION', 1), (t.ZP = new T());

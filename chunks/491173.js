@@ -15,7 +15,7 @@ var r = n(735250),
     I = n(471902);
 let m = (0, d.Mg)(a.Z.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_PRIMARY_DIMENSIONS),
     T = (0, d.Mg)(a.Z.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_SECONDARY_DIMENSIONS),
-    g = (e) => {
+    S = (e) => {
         let t = null,
             n = null;
         if ((!(0, f.jl)(e) && !(0, f.J8)(e)) || (0, f.J8)(e)) {
@@ -36,7 +36,7 @@ let m = (0, d.Mg)(a.Z.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BA
             graphic: n
         };
     },
-    S = i.memo(function (e) {
+    g = i.memo(function (e) {
         let { stickersGrid: t } = e,
             n = l.ZN.useStore((e) => e.inspectedExpressionPosition),
             a = i.useMemo(() => {
@@ -53,7 +53,7 @@ let m = (0, d.Mg)(a.Z.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BA
                       : a.sticker;
             }, [t, n]);
         if (null == a) return null;
-        let { graphic: o, title: c } = g(a),
+        let { graphic: o, title: c } = S(a),
             d =
                 (0, f.jl)(a) || (0, f.J8)(a)
                     ? (0, r.jsx)(h.ZP, {
@@ -77,4 +77,4 @@ let m = (0, d.Mg)(a.Z.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BA
             titleSecondary: (0, f.jl)(a) || (0, f.J8)(a) ? c : null
         });
     });
-t.Z = S;
+t.Z = g;

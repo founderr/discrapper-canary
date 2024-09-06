@@ -5,15 +5,15 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(120356),
-    s = n.n(a),
+var s = n(120356),
+    a = n.n(s),
     l = n(481060),
     r = n(618158),
     o = n(837832);
 function c(e) {
     let { errorMessage: t, className: n } = e;
     return (0, i.jsx)(l.TooltipContainer, {
-        className: s()(n, o.root),
+        className: a()(n, o.root),
         text: t,
         position: 'bottom',
         color: l.TooltipColors.GREY,

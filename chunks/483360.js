@@ -24,8 +24,8 @@ var i = n(658722),
     I = n(285651),
     m = n(822179),
     T = n(926491),
-    g = n(373228),
-    S = n(601070),
+    S = n(373228),
+    g = n(601070),
     A = n(675478),
     N = n(131704),
     O = n(598077),
@@ -33,8 +33,8 @@ var i = n(658722),
     v = n(984933),
     C = n(271383),
     y = n(430824),
-    L = n(375954),
-    D = n(496675),
+    D = n(375954),
+    L = n(496675),
     b = n(158776),
     M = n(699516),
     P = n(944486),
@@ -101,7 +101,7 @@ function ea(e) {
         h = 0,
         p = 0;
     for (; h < f; ) {
-        var I, m, T, g, S, A, N, R, v;
+        var I, m, T, S, g, A, N, R, v;
         let e, r;
         let u = n[h];
         u instanceof O.Z ? ((r = u), (e = null === (m = C.ZP.getNick(l, r.id)) || void 0 === m ? void 0 : m.toLocaleLowerCase())) : ((e = null === (T = u.nick) || void 0 === T ? void 0 : T.toLocaleLowerCase()), (r = o[u.userId]));
@@ -119,8 +119,8 @@ function ea(e) {
                       type: j.h8.USER,
                       record: r,
                       score: 10,
-                      comparator: null !== (g = null != f ? f : e) && void 0 !== g ? g : n,
-                      sortable: null !== (S = null != h ? h : l) && void 0 !== S ? S : i
+                      comparator: null !== (S = null != f ? f : e) && void 0 !== S ? S : n,
+                      sortable: null !== (g = null != h ? h : l) && void 0 !== g ? g : i
                   })
                 : o.substring(0, d.length) === d || (null == u ? void 0 : u.substring(0, d.length)) === d || (null == I ? void 0 : I.substring(0, d.length)) === d
                   ? _.push({
@@ -158,7 +158,7 @@ function eo(e, t) {
     let n = R.Z.getChannel(e);
     return null == e || null == n
         ? []
-        : o()(L.Z.getMessages(e).toArray())
+        : o()(D.Z.getMessages(e).toArray())
               .reverse()
               .uniqBy((e) => e.author.id)
               .map((e) => w.default.getUser(e.author.id))
@@ -312,14 +312,14 @@ t.ZP = {
             null != r
                 ? o()(v.ZP.getChannels(r)[l])
                       .map((e) => e.channel)
-                      .concat(S.Z.computeAllActiveJoinedThreads(r))
+                      .concat(g.Z.computeAllActiveJoinedThreads(r))
                       .value()
-                : o()(R.Z.loadAllGuildAndPrivateChannelsFromDisk()).values().concat(S.Z.computeAllActiveJoinedThreads()).value();
+                : o()(R.Z.loadAllGuildAndPrivateChannelsFromDisk()).values().concat(g.Z.computeAllActiveJoinedThreads()).value();
         let p = {},
             I = [];
         for (let e of t) {
-            var m, T, g, A, O;
-            if (((m = l), (T = e.type), (g = null != r), !(m === T || ((g || (0, N.Km)(T)) && (m === v.sH ? (0, N.r8)(T) || (0, N.bw)(T) : m === v.Zb && (0, N.bw)(T)))) || ((0, N.Km)(e.type) && !D.Z.can(_ ? e.accessPermissions : Y.Plq.VIEW_CHANNEL, e)) || !s(e))) continue;
+            var m, T, S, A, O;
+            if (((m = l), (T = e.type), (S = null != r), !(m === T || ((S || (0, N.Km)(T)) && (m === v.sH ? (0, N.r8)(T) || (0, N.bw)(T) : m === v.Zb && (0, N.bw)(T)))) || ((0, N.Km)(e.type) && !L.Z.can(_ ? e.accessPermissions : Y.Plq.VIEW_CHANNEL, e)) || !s(e))) continue;
             let t = [...h],
                 i = e.name.toLocaleLowerCase(),
                 o = f && n === e.id,
@@ -752,21 +752,21 @@ t.ZP = {
                     let { type: r, value: i } = n,
                         a = (function (e) {
                             switch (e) {
-                                case g.MO.STICKER_NAME:
+                                case S.MO.STICKER_NAME:
                                     return 11;
-                                case g.MO.CORRELATED_EMOJI:
+                                case S.MO.CORRELATED_EMOJI:
                                     return 6;
-                                case g.MO.TAG:
+                                case S.MO.TAG:
                                     return 1;
-                                case g.MO.GUILD_NAME:
-                                case g.MO.PACK_NAME:
+                                case S.MO.GUILD_NAME:
+                                case S.MO.PACK_NAME:
                                     return 8;
                                 default:
                                     return 1;
                             }
                         })(r),
                         s = 0;
-                    t ? (i === e ? (s = 10 * a) : c.test(i) ? (s = 7 * a) : (r === g.MO.GUILD_NAME || r === g.MO.PACK_NAME || r === g.MO.STICKER_NAME) && d.test(i) && (s = 5 * a)) : i === e && ((s = 10 * a), (_ = i)), s > u && ((u = s), (_ = i));
+                    t ? (i === e ? (s = 10 * a) : c.test(i) ? (s = 7 * a) : (r === S.MO.GUILD_NAME || r === S.MO.PACK_NAME || r === S.MO.STICKER_NAME) && d.test(i) && (s = 5 * a)) : i === e && ((s = 10 * a), (_ = i)), s > u && ((u = s), (_ = i));
                 }
                 let f = m.Z.stickerFrecencyWithoutFetchingLatest.getScore(o);
                 null != f && (u *= f / 100),

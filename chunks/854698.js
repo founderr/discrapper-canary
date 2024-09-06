@@ -76,8 +76,8 @@ let E = 365,
     I = [s.Ci.SU.weekday, s.Ci.MO.weekday, s.Ci.TU.weekday, s.Ci.WE.weekday, s.Ci.TH.weekday],
     m = [s.Ci.TU.weekday, s.Ci.WE.weekday, s.Ci.TH.weekday, s.Ci.FR.weekday, s.Ci.SA.weekday],
     T = [s.Ci.SA.weekday, s.Ci.SU.weekday],
-    g = [s.Ci.FR.weekday, s.Ci.SA.weekday],
-    S = [s.Ci.SU.weekday, s.Ci.MO.weekday],
+    S = [s.Ci.FR.weekday, s.Ci.SA.weekday],
+    g = [s.Ci.SU.weekday, s.Ci.MO.weekday],
     A = [s.Ci.SU.weekday, s.Ci.MO.weekday, s.Ci.TU.weekday, s.Ci.WE.weekday, s.Ci.TH.weekday, s.Ci.FR.weekday, s.Ci.SA.weekday],
     N = new Set([0, 6]);
 function O(e) {
@@ -150,10 +150,10 @@ function y(e, t, n) {
         diffMinutes: r.diff(n, 'minutes')
     };
 }
-function L(e) {
+function D(e) {
     return new s.OG(A[e]);
 }
-function D(e, t) {
+function L(e, t) {
     let n;
     return (
         null != e &&
@@ -167,7 +167,7 @@ function D(e, t) {
 }
 function b(e, t) {
     let n = (function (e) {
-            return D(e.scheduled_start_time, e.scheduled_end_time);
+            return L(e.scheduled_start_time, e.scheduled_end_time);
         })(t),
         r = a()(u.default.extractTimestamp(e)),
         i = (null == n ? void 0 : n.endDate) != null ? r.clone().add(n.endDate.diff(n.startDate)) : void 0;
@@ -186,7 +186,7 @@ function M(e, t) {
     };
 }
 function P(e) {
-    return D(e.scheduledStartTime, e.scheduledEndTime);
+    return L(e.scheduledStartTime, e.scheduledEndTime);
 }
 function U(e, t) {
     return null == e || null == t ? null == e && null == t : e.isSame(t);
@@ -249,20 +249,20 @@ function B(e, t) {
     }
 }
 function F(e) {
-    let t = L(e.toDate().getDay()),
-        n = L(e.toDate().getUTCDay());
+    let t = D(e.toDate().getDay()),
+        n = D(e.toDate().getUTCDay());
     return n.weekday - t.weekday > 0 ? m : n.weekday - t.weekday < 0 ? I : p;
 }
 function V(e) {
-    let t = L(e.toDate().getDay()),
-        n = L(e.toDate().getUTCDay());
-    return n.weekday - t.weekday > 0 ? S : n.weekday - t.weekday < 0 ? g : T;
+    let t = D(e.toDate().getDay()),
+        n = D(e.toDate().getUTCDay());
+    return n.weekday - t.weekday > 0 ? g : n.weekday - t.weekday < 0 ? S : T;
 }
 function H(e, t) {
     let n = (function (e, t) {
         let n = F(t),
             r = V(t),
-            i = L(t.toDate().getUTCDay()),
+            i = D(t.toDate().getUTCDay()),
             a = Math.ceil(t.toDate().getUTCDate() / 7),
             o = t.toDate();
         switch ((o.setMilliseconds(0), e)) {

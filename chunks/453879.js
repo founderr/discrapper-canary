@@ -6,10 +6,10 @@ n.d(t, {
     n(47120),
     n(653041);
 var i = n(975984),
-    a = n(486527),
-    s = n(689938);
+    s = n(486527),
+    a = n(689938);
 function l(e, t) {
-    if (t !== a.AR.ALL)
+    if (t !== s.AR.ALL)
         return [
             {
                 entries: (0, i.TR)(e),
@@ -21,7 +21,7 @@ function l(e, t) {
         r = new Set(l.map((e) => e.guildId));
     l.length > 0 &&
         n.push({
-            header: s.Z.Messages.SEARCH_NEWEST,
+            header: a.Z.Messages.SEARCH_NEWEST,
             entries: l,
             appendEndCard: !1
         });
@@ -29,7 +29,7 @@ function l(e, t) {
     return (
         (o = (0, i.Th)(o)).length > 0 &&
             n.push({
-                header: s.Z.Messages.ALL_SERVERS,
+                header: a.Z.Messages.ALL_SERVERS,
                 entries: o,
                 appendEndCard: !0
             }),

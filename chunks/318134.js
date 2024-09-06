@@ -17,7 +17,7 @@ function c(e) {
         { analyticsLocations: p } = (0, s.ZP)(),
         I = null != E ? E : p,
         [m, T] = (0, i.Wu)([o.Z], () => [o.Z.getUserOutbox(t.id), o.Z.isFetchingUserOutbox(t.id)]),
-        g = (0, r.useCallback)(
+        S = (0, r.useCallback)(
             (e) => {
                 let { action: t } = e;
                 h({
@@ -37,15 +37,15 @@ function c(e) {
             },
             [h, f, n, c, _, d, m, I]
         ),
-        [S, A] = (0, r.useState)(!1),
+        [g, A] = (0, r.useState)(!1),
         N = (0, r.useCallback)(
             (e) => {
-                e && (g({ action: 'VIEW' }), A(!0));
+                e && (S({ action: 'VIEW' }), A(!0));
             },
-            [g]
+            [S]
         );
     return {
-        onAction: g,
-        trackViewRef: (0, a.O)(N, void 0, !T && !S)
+        onAction: S,
+        trackViewRef: (0, a.O)(N, void 0, !T && !g)
     };
 }

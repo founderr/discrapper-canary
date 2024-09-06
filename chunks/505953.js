@@ -21,15 +21,15 @@ var r = n(735250),
     I = n(477291),
     m = n(478758),
     T = n(789707),
-    g = n(981631),
-    S = n(531578),
+    S = n(981631),
+    g = n(531578),
     A = n(375459);
 function N(e) {
     let { summary: t, channel: _, members: T, guildId: N, unread: O, onClick: R } = e,
         [v, C] = i.useState(!1),
         y = (0, c.Ye)(h.default.extractTimestamp(t.startId)),
-        L = (0, a.e7)([p.Z], () => p.Z.summaryFeedback(t)),
-        D = (e, n) => {
+        D = (0, a.e7)([p.Z], () => p.Z.summaryFeedback(t)),
+        L = (e, n) => {
             e.stopPropagation(),
                 (0, I.Z)({
                     summary: t,
@@ -37,7 +37,7 @@ function N(e) {
                     rating: n
                 });
         },
-        b = d.Z.can(g.Plq.MANAGE_MESSAGES, _);
+        b = d.Z.can(S.Plq.MANAGE_MESSAGES, _);
     return (0, r.jsxs)(s.Clickable, {
         className: A.container,
         onClick: R,
@@ -112,12 +112,12 @@ function N(e) {
                 })
             }),
             v &&
-                !L &&
+                !D &&
                 (0, r.jsxs)('div', {
                     className: A.feedbackContainer,
                     children: [
                         (0, r.jsx)(s.Clickable, {
-                            onClick: (e) => D(e, S.aZ.GOOD),
+                            onClick: (e) => L(e, g.aZ.GOOD),
                             children: (0, r.jsx)(f.Z, {
                                 className: A.thumbIcon,
                                 width: 12,
@@ -125,7 +125,7 @@ function N(e) {
                             })
                         }),
                         (0, r.jsx)(s.Clickable, {
-                            onClick: (e) => D(e, S.aZ.BAD),
+                            onClick: (e) => L(e, g.aZ.BAD),
                             children: (0, r.jsx)(E.Z, {
                                 className: A.thumbIcon,
                                 width: 12,

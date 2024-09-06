@@ -16,24 +16,24 @@ t.Z = i.memo(function (e) {
     let { user: t, onClose: n, bio: a, hidePersonalInformation: p } = e,
         { context: I } = (0, u.KZ)(),
         { analyticsLocations: m } = (0, l.ZP)(),
-        [T, g] = i.useState(!1),
-        [S, A] = i.useState(!1);
+        [T, S] = i.useState(!1),
+        [g, A] = i.useState(!1);
     return p || null == a || '' === a
         ? null
         : (0, r.jsxs)('div', {
               children: [
                   (0, r.jsx)('div', {
                       ref: (e) => {
-                          null != e && (g(!S && e.scrollHeight - e.clientHeight > 1), e.getBoundingClientRect().height > h && A(!0));
+                          null != e && (S(!g && e.scrollHeight - e.clientHeight > 1), e.getBoundingClientRect().height > h && A(!0));
                       },
-                      className: s()(f.descriptionClamp, S && f.maxBioHeight),
+                      className: s()(f.descriptionClamp, g && f.maxBioHeight),
                       children: (0, r.jsx)(c.Z, {
                           userBio: a,
                           setLineClamp: !1,
                           textColor: 'header-primary'
                       })
                   }),
-                  (T || S) &&
+                  (T || g) &&
                       (0, r.jsx)(o.Button, {
                           look: o.Button.Looks.BLANK,
                           size: o.Button.Sizes.NONE,

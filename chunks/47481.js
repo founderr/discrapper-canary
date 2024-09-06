@@ -6,8 +6,8 @@ n.d(t, {
     n(653041),
     n(47120);
 var i = n(275726),
-    a = n(135938),
-    s = n(55935),
+    s = n(135938),
+    a = n(55935),
     l = n(709054),
     r = n(554838),
     o = n(493892),
@@ -16,17 +16,17 @@ function u(e) {
     let t,
         n,
         u,
-        { channel: d, messages: h, oldestUnreadMessageId: p, treatSpam: m, summaries: _, selectedSummary: f } = e,
+        { channel: d, messages: h, oldestUnreadMessageId: m, treatSpam: p, summaries: _, selectedSummary: f } = e,
         E = [],
-        C = !1,
-        g = null != p ? l.default.extractTimestamp(p) : null,
+        g = !1,
+        C = null != m ? l.default.extractTimestamp(m) : null,
         I = null;
     return (
         h.forEach((e) => {
-            var a, x, T, N, S, v, Z, A;
+            var s, x, T, S, v, N, A, Z;
             if (null != _ && _.length > 0) {
                 let t = l.default.extractTimestamp(e.id);
-                for (let e = 0; (a = e < (null == _ ? void 0 : _.length)), a; e++) {
+                for (let e = 0; (s = e < (null == _ ? void 0 : _.length)), s; e++) {
                     if (null == _[e]) continue;
                     let n = l.default.extractTimestamp(_[e].startId),
                         i = l.default.extractTimestamp(_[e].endId);
@@ -42,7 +42,7 @@ function u(e) {
                     }
                 }
             }
-            let M = (0, s.vc)(e.timestamp, 'LL');
+            let M = (0, a.vc)(e.timestamp, 'LL');
             M !== t &&
                 null == I &&
                 (E.push({
@@ -54,69 +54,69 @@ function u(e) {
             let b = E[E.length - 1],
                 R = null,
                 L = (0, o.DQ)(e);
-            C = C || L;
-            let j = (function (e, t, n) {
+            g = g || L;
+            let P = (function (e, t, n) {
                 if (i.V.NON_COLLAPSIBLE.has(t.type));
                 else if (t.blocked) return c.ys_.MESSAGE_GROUP_BLOCKED;
                 else if ((0, o.P1)(e) && n) return c.ys_.MESSAGE_GROUP_SPAMMER;
                 return null;
-            })(d, e, L && m);
-            if (null !== j) {
+            })(d, e, L && p);
+            if (null !== P) {
                 let t, n;
                 [R, b] =
                     ((x = E),
                     (T = e),
-                    (N = j),
-                    (n = S = b),
-                    null == S || S.type !== N
+                    (S = P),
+                    (n = v = b),
+                    null == v || v.type !== S
                         ? ((t = {
-                              type: N,
+                              type: S,
                               content: [],
                               key: T.id
                           }),
                           x.push(t))
-                        : (n = (t = S).content[t.content.length - 1]),
+                        : (n = (t = v).content[t.content.length - 1]),
                     [t, n]);
             }
-            if (p === e.id && null != g) {
-                if (null != b && b.type === c.ys_.DIVIDER) (b.unreadId = e.id), (g = null);
+            if (m === e.id && null != C) {
+                if (null != b && b.type === c.ys_.DIVIDER) (b.unreadId = e.id), (C = null);
                 else if (null !== R) {
-                    (v = R),
-                        (Z = d),
-                        (A = e).isFirstMessageInForumPost(Z) ||
-                            v.content.push({
+                    (N = R),
+                        (A = d),
+                        (Z = e).isFirstMessageInForumPost(A) ||
+                            N.content.push({
                                 type: c.ys_.DIVIDER,
-                                unreadId: A.id
+                                unreadId: Z.id
                             }),
-                        (v.hasUnread = !0),
-                        (g = null);
+                        (N.hasUnread = !0),
+                        (C = null);
                 } else
                     !e.isFirstMessageInForumPost(d) &&
                         E.push({
                             type: c.ys_.DIVIDER,
                             unreadId: e.id
                         }),
-                        (g = null);
+                        (C = null);
             } else
-                null != g &&
-                    l.default.extractTimestamp(e.id) > g &&
+                null != C &&
+                    l.default.extractTimestamp(e.id) > C &&
                     (!e.isFirstMessageInForumPost(d) &&
                         E.push({
                             type: c.ys_.DIVIDER,
                             unreadId: e.id
                         }),
-                    (g = null));
-            let O = (null == b ? void 0 : b.type) === c.ys_.MESSAGE ? u : b;
-            (0, r.J)(d, O, e) && (n = e.id);
-            let P = {
+                    (C = null));
+            let j = (null == b ? void 0 : b.type) === c.ys_.MESSAGE ? u : b;
+            (0, r.J)(d, j, e) && (n = e.id);
+            let O = {
                 type: e.type === c.uaV.THREAD_STARTER_MESSAGE ? c.ys_.THREAD_STARTER_MESSAGE : c.ys_.MESSAGE,
                 content: e,
                 groupId: n
             };
-            n === e.id && (u = P);
+            n === e.id && (u = O);
             let { jumpSequenceId: y, jumpFlash: D, jumpTargetId: k } = h;
-            D && e.id === k && null != y && (P.flashKey = y),
-                h.jumpTargetId === e.id && (P.jumpTarget = !0),
+            D && e.id === k && null != y && (O.flashKey = y),
+                h.jumpTargetId === e.id && (O.jumpTarget = !0),
                 null != f &&
                     e.id === f.startId &&
                     f.count > 1 &&
@@ -126,7 +126,7 @@ function u(e) {
                         contentKey: f.startId,
                         isSummaryDivider: !0
                     }),
-                null !== R ? (R.content.push(P), P.jumpTarget && (R.hasJumpTarget = !0)) : E.push(P),
+                null !== R ? (R.content.push(O), O.jumpTarget && (R.hasJumpTarget = !0)) : E.push(O),
                 e.isFirstMessageInForumPost(d) && E.push({ type: c.ys_.FORUM_POST_ACTION_BAR }),
                 null != f &&
                     e.id === f.endId &&
@@ -137,7 +137,7 @@ function u(e) {
                         isSummaryDivider: !0
                     });
         }),
-        C && (0, o.P1)(d) && a.Z.trackExposure({ location: '416cc9_1' }),
+        g && (0, o.P1)(d) && s.Z.trackExposure({ location: '416cc9_1' }),
         E
     );
 }

@@ -6,7 +6,7 @@ n.d(t, {
         return p;
     },
     F$: function () {
-        return g;
+        return S;
     },
     K$: function () {
         return R;
@@ -30,7 +30,7 @@ n.d(t, {
         return T;
     },
     qg: function () {
-        return S;
+        return g;
     }
 });
 var r = n(561842),
@@ -66,7 +66,7 @@ let h = (e) => {
     },
     m = (e, t) => !!e == !!t,
     T = (e, t) => m(null == e ? void 0 : e.noCache, null == t ? void 0 : t.noCache) && m(null == e ? void 0 : e.includeUnpublished, null == t ? void 0 : t.includeUnpublished) && m(null == e ? void 0 : e.includeBundles, null == t ? void 0 : t.includeBundles) && (null == e ? void 0 : e.countryCode) === (null == t ? void 0 : t.countryCode) && (null == e ? void 0 : e.paymentGateway) === (null == t ? void 0 : t.paymentGateway),
-    g = async (e) => {
+    S = async (e) => {
         s.Z.dispatch({
             type: 'COLLECTIBLES_CATEGORIES_FETCH',
             options: null != e ? e : {}
@@ -92,7 +92,7 @@ let h = (e) => {
             );
         }
     },
-    S = async () => {
+    g = async () => {
         s.Z.dispatch({ type: 'COLLECTIBLES_PURCHASES_FETCH' });
         try {
             let e = await a.tn.get(f.ANM.COLLECTIBLES_PURCHASES);

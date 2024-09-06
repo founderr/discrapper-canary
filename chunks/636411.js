@@ -24,9 +24,9 @@ function m(e) {
     let { onDismiss: i } = e,
         m = (0, s.e7)([l.Z], () => l.Z.useReducedMotion),
         T = p.Z.Messages.SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2,
-        g = (0, d.N)(),
-        S = (0, c.Ng)(),
-        A = (null == g ? void 0 : g.subscription_trial) != null || null != S,
+        S = (0, d.N)(),
+        g = (0, c.Ng)(),
+        A = (null == S ? void 0 : S.subscription_trial) != null || null != g,
         N = {
             object: f.qAy.BUTTON_CTA,
             section: f.jXE.SUPER_REACTION_PICKER
@@ -60,11 +60,11 @@ function m(e) {
                     A
                         ? (0, r.jsx)(_.ZP, {
                               type: h.cd.BURST_REACTION_QUICK_ACTION_UPSELL,
-                              subscriptionTier: null !== (n = null == g ? void 0 : null === (t = g.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== n ? n : h.Si.TIER_2,
+                              subscriptionTier: null !== (n = null == S ? void 0 : null === (t = S.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== n ? n : h.Si.TIER_2,
                               headingText: p.Z.Messages.SUPER_REACTIONS_UPSELL_TITLE_MOBILE,
                               analyticsLocationObject: N,
-                              discountOffer: S,
-                              trialOffer: g,
+                              discountOffer: g,
+                              trialOffer: S,
                               children: T
                           })
                         : (0, r.jsxs)(r.Fragment, {

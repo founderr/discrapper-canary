@@ -15,8 +15,8 @@ var r = n(302454),
     I = n(699450),
     m = n(594199),
     T = n(981631),
-    g = n(689938);
-let S = (e) => {
+    S = n(689938);
+let g = (e) => {
     let t = u.Z.getChannel(e);
     return null == t ? void 0 : t.getGuildId();
 };
@@ -127,7 +127,7 @@ function y(e, t, n, r, i) {
         content: [
             N(
                 {
-                    name: g.Z.Messages.UNKNOWN_CHANNEL.toLowerCase(),
+                    name: S.Z.Messages.UNKNOWN_CHANNEL.toLowerCase(),
                     type: T.d4z.UNKNOWN,
                     iconType: 'text'
                 },
@@ -136,12 +136,12 @@ function y(e, t, n, r, i) {
         ]
     };
 }
-function L(e, t, n, r) {
+function D(e, t, n, r) {
     if (!e.canViewChannel)
         return (function (e, t) {
             let n = {
                 type: 'channel',
-                content: [C(e.roleSubscriptionGated ? e.name : g.Z.Messages.NO_ACCESS)],
+                content: [C(e.roleSubscriptionGated ? e.name : S.Z.Messages.NO_ACCESS)],
                 channelType: e.roleSubscriptionGated ? e.type : T.d4z.UNKNOWN,
                 iconType: 'locked'
             };
@@ -172,7 +172,7 @@ function L(e, t, n, r) {
                 inContent: [N(e)],
                 content: [O(!1)]
             };
-        return null != (s = r) ? v(s) : C('#'.concat(g.Z.Messages.UNKNOWN_CHANNEL_PLACEHOLDER));
+        return null != (s = r) ? v(s) : C('#'.concat(S.Z.Messages.UNKNOWN_CHANNEL_PLACEHOLDER));
     }
     let o = e.guildId === n;
     return {
@@ -221,7 +221,7 @@ function L(e, t, n, r) {
         })(a, e, o, null != t)
     };
 }
-let D = {
+let L = {
         order: m.ZP.order,
         requiredFirstCharacters: ['<'],
         match: (e) => /^<#(\d+)>/.exec(e),
@@ -233,7 +233,7 @@ let D = {
                     id: r
                 };
             let i = R(r, n.mentionChannels);
-            return null == i ? y(null, r, null, S(n.channelId)) : L(i, null, S(n.channelId));
+            return null == i ? y(null, r, null, g(n.channelId)) : D(i, null, g(n.channelId));
         }
     },
     b = {
@@ -250,7 +250,7 @@ let D = {
                 s = e[3];
             if (null == a) return v(r);
             let o = R(a, null);
-            return null == o ? y(i, a, s, S(n.channelId), r) : L(o, s, S(n.channelId), r);
+            return null == o ? y(i, a, s, g(n.channelId), r) : D(o, s, g(n.channelId), r);
         }
     },
     M = {
@@ -265,13 +265,13 @@ let D = {
                 o = e[4];
             if (null == a || null == s) return v(r);
             let l = R(s, null);
-            if (null != l) return L(l, o, S(n.channelId), r);
+            if (null != l) return D(l, o, g(n.channelId), r);
             let u = R(a, null);
-            return null != u ? L(u, o, S(n.channelId), r) : y(i, a, o, S(n.channelId), r);
+            return null != u ? D(u, o, g(n.channelId), r) : y(i, a, o, g(n.channelId), r);
         }
     };
 t.Z = {
-    channelMention: D,
+    channelMention: L,
     channelOrMessageUrl: b,
     mediaPostLink: M
 };

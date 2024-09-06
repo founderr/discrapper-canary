@@ -9,7 +9,7 @@ n.d(t, {
         return T;
     },
     P6: function () {
-        return L;
+        return D;
     },
     S2: function () {
         return m;
@@ -18,7 +18,7 @@ n.d(t, {
         return N;
     },
     V3: function () {
-        return S;
+        return g;
     },
     W3: function () {
         return y;
@@ -33,7 +33,7 @@ n.d(t, {
         return O;
     },
     ol: function () {
-        return g;
+        return S;
     },
     si: function () {
         return C;
@@ -164,13 +164,13 @@ function T(e) {
         )
     );
 }
-function g() {
+function S() {
     return r.tn.get({
         url: _.ANM.USER_HARVEST,
         oldFormErrors: !0
     });
 }
-function S(e) {
+function g(e) {
     return r.tn.post({
         url: _.ANM.USER_HARVEST,
         body: { backends: e },
@@ -211,6 +211,6 @@ function C() {
 function y() {
     s.Z.dispatch({ type: 'USER_SETTINGS_RESET_ALL_PENDING' });
 }
-function L() {
+function D() {
     s.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM' });
 }

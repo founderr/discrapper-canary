@@ -24,7 +24,7 @@ n.d(t, {
         return W;
     },
     LK: function () {
-        return L;
+        return D;
     },
     N: function () {
         return a;
@@ -63,7 +63,7 @@ n.d(t, {
         return m;
     },
     cm: function () {
-        return S;
+        return g;
     },
     dt: function () {
         return K;
@@ -87,7 +87,7 @@ n.d(t, {
         return x;
     },
     mv: function () {
-        return D;
+        return L;
     },
     nJ: function () {
         return M;
@@ -96,7 +96,7 @@ n.d(t, {
         return C;
     },
     q2: function () {
-        return g;
+        return S;
     },
     qC: function () {
         return i;
@@ -135,8 +135,8 @@ var r,
 let I = 200,
     m = 4,
     T = 'ClanSetupModal',
-    g = 'ClanSettingsModal',
-    S = 20,
+    S = 'ClanSettingsModal',
+    g = 20,
     A = 30,
     N = 24,
     O = 12,
@@ -145,8 +145,8 @@ let I = 200,
     C = 5;
 f()('2024-01-01T00:00:00');
 let y = '',
-    L = ['cozy', 'crunchy', 'chaos'];
-function D(e) {
+    D = ['cozy', 'crunchy', 'chaos'];
+function L(e) {
     switch (e) {
         case h.z.SOCIAL:
             return p.Z.Messages.CLAN_SETUP_PLAYSTYLE_SOCIAL_TITLE;

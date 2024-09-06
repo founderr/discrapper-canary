@@ -38,7 +38,7 @@ function h(e) {
     var t, n;
     let { image: r, smallImage: i, aspectRatio: s, onClick: h, size: p } = e,
         { imageSize: I, smallImageSize: m, mask: T } = f[p],
-        g = (0, a.jsx)(c.f, {
+        S = (0, a.jsx)(c.f, {
             src: null == r ? void 0 : r.src,
             alt: null !== (n = null !== (t = null == r ? void 0 : r.alt) && void 0 !== t ? t : null == r ? void 0 : r.text) && void 0 !== n ? n : d.Z.Messages.APPLICATION_ICON_NO_NAME_A11Y_LABEL,
             size: I,
@@ -46,7 +46,7 @@ function h(e) {
             constrain: 'width'
         });
     return null == r
-        ? g
+        ? S
         : (0, a.jsxs)('div', {
               className: o()(_.imagePosition, E[null != s ? s : 'default']),
               children: [
@@ -64,12 +64,12 @@ function h(e) {
                                             mask: T,
                                             width: I,
                                             height: I,
-                                            children: g
+                                            children: S
                                         })
                                       : (0, a.jsx)('div', {
                                             ...e,
                                             className: _.imageContainer,
-                                            children: g
+                                            children: S
                                         })
                           })
                   }),

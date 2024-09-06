@@ -15,10 +15,10 @@ var a = t(735250),
 function c(e) {
     let { disabled: A = !1, disabledTooltip: t, published: r, submitting: c = !1, onClick: u } = e,
         C = (0, l.Dt)(),
-        [g, T] = n.useState(r);
+        [g, h] = n.useState(r);
     return (
         n.useEffect(() => {
-            T((e) => e || r);
+            h((e) => e || r);
         }, [r]),
         (0, a.jsxs)('div', {
             className: s()(

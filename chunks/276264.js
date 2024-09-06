@@ -21,8 +21,8 @@ var r = n(735250),
     I = n(736144),
     m = n(113434),
     T = n(918701),
-    g = n(553393),
-    S = n(204197),
+    S = n(553393),
+    g = n(204197),
     A = n(699516),
     N = n(594174),
     O = n(709586),
@@ -30,8 +30,8 @@ var r = n(735250),
     v = n(51144),
     C = n(788307),
     y = n(981631),
-    L = n(674563),
-    D = n(524484),
+    D = n(674563),
+    L = n(524484),
     b = n(689938),
     M = n(410740);
 let P = (0, R.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING);
@@ -48,7 +48,7 @@ t.Z = function (e) {
             avatarDecorationSrc: eh,
             avatarSrc: ep,
             eventHandlers: eI
-        } = (0, S.Z)({
+        } = (0, g.Z)({
             user: G,
             size: u.AvatarSizes.SIZE_32,
             animateOnHover: !(n || ed),
@@ -62,13 +62,13 @@ t.Z = function (e) {
             [eo]
         ),
         eT = (0, o.e7)([A.Z], () => A.Z.isBlocked(eo)),
-        eg = (0, E.aK)('member_list_item'),
-        [eS, eA] = i.useState(!1);
+        eS = (0, E.aK)('member_list_item'),
+        [eg, eA] = i.useState(!1);
     i.useEffect(() => {
         n && eA(!1);
     }, [n]);
     let eN = (0, m.Fr)(B),
-        eO = null != eN && !eu && n && !eS && (0, T.dl)(eN),
+        eO = null != eN && !eu && n && !eg && (0, T.dl)(eN),
         eR = () => {
             e_(!0);
         },
@@ -79,7 +79,7 @@ t.Z = function (e) {
             ef(e);
         },
         ey = () => {
-            if (eT && eg) return null;
+            if (eT && eS) return null;
             let e = null != B ? B.find((e) => e.type === y.IIU.CUSTOM_STATUS) : null,
                 t = null != e && null != G && (0, p.Z)(e, G, j);
             return (0, r.jsx)(C.Z, {
@@ -95,7 +95,7 @@ t.Z = function (e) {
                 hasQuest: null != eN && (0, T.dl)(eN)
             });
         },
-        eL = () =>
+        eD = () =>
             null != R && R && null == U
                 ? (0, r.jsx)(u.Tooltip, {
                       text: null != P ? P : b.Z.Messages.GUILD_OWNER,
@@ -108,7 +108,7 @@ t.Z = function (e) {
                           })
                   })
                 : null,
-        eD = () =>
+        eL = () =>
             null == Y
                 ? null
                 : (0, r.jsx)(u.Tooltip, {
@@ -124,7 +124,7 @@ t.Z = function (e) {
                           })
                   }),
         eb = () => {
-            let e = (null == G ? void 0 : G.isClyde()) ? L.Hb.AI : L.Hb.BOT;
+            let e = (null == G ? void 0 : G.isClyde()) ? D.Hb.AI : D.Hb.BOT;
             return null != G && G.bot
                 ? (0, r.jsx)(d.Z, {
                       className: M.botTag,
@@ -135,7 +135,7 @@ t.Z = function (e) {
         },
         eM = () =>
             (0, r.jsxs)(r.Fragment, {
-                children: [eb(), eL(), eD()]
+                children: [eb(), eD(), eL()]
             }),
         eP = (e, t) => {
             let n = H ? u.AnimatedAvatar : u.Avatar,
@@ -159,7 +159,7 @@ t.Z = function (e) {
                         (0, r.jsx)(I.Z, {
                             confettiSpawnRef: eE,
                             shouldFire: w && null != k && e.id !== k.id,
-                            confettiLocation: D.Hn.MEMBER_USER
+                            confettiLocation: L.Hn.MEMBER_USER
                         })
                     ]
                 })
@@ -192,7 +192,7 @@ t.Z = function (e) {
           })
         : (0, r.jsx)(u.Popout, {
               renderPopout: (e) =>
-                  (0, r.jsx)(g.Z, {
+                  (0, r.jsx)(S.Z, {
                       quest: eN,
                       memberListItemRef: ec,
                       applicationStream: F,

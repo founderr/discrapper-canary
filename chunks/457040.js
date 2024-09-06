@@ -16,8 +16,8 @@ var r = n(735250),
     I = n(98278),
     m = n(639119),
     T = n(695346),
-    g = n(594174),
-    S = n(626135),
+    S = n(594174),
+    g = n(626135),
     A = n(624138),
     N = n(191177),
     O = n(285651),
@@ -25,8 +25,8 @@ var r = n(735250),
     v = n(453070),
     C = n(926491),
     y = n(373228),
-    L = n(462109),
-    D = n(422195),
+    D = n(462109),
+    L = n(422195),
     b = n(657795),
     M = n(489762),
     P = n(31543),
@@ -71,7 +71,7 @@ let B = (0, A.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             }),
             el = T._O.useSetting(),
             eu = i.useMemo(() => new Set(el), [el]),
-            ec = (0, l.e7)([g.default], () => g.default.getCurrentUser()),
+            ec = (0, l.e7)([S.default], () => S.default.getCurrentUser()),
             ed = i.useMemo(() => (0, w.S)(en, ec, u), [en, ec, u]),
             e_ = (0, v.RJ)(),
             eE = (0, v.LZ)(),
@@ -86,8 +86,8 @@ let B = (0, A.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             ),
             eT = null != eo && eo > B,
             {
-                rowCount: eg,
-                rowCountBySection: eS,
+                rowCount: eS,
+                rowCountBySection: eg,
                 stickersGrid: eA,
                 gutterWidth: eN,
                 columnCounts: eO
@@ -105,7 +105,7 @@ let B = (0, A.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                     let { location: i } = t;
                     switch (e.type) {
                         case y.al.CREATE_STICKER:
-                            S.default.track(G.rMx.OPEN_MODAL, {
+                            g.default.track(G.rMx.OPEN_MODAL, {
                                 type: G.jXE.CREATE_STICKER_MODAL,
                                 location: j
                             }),
@@ -128,9 +128,9 @@ let B = (0, A.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 getItemProps: ev,
                 getRowProps: eC,
                 gridContainerProps: ey,
-                handleGridContainerKeyDown: eL,
-                isUsingKeyboardNavigation: eD
-            } = (0, L.t)({
+                handleGridContainerKeyDown: eD,
+                isUsingKeyboardNavigation: eL
+            } = (0, D.t)({
                 columnCounts: eO,
                 stickersListRef: J,
                 stickersGrid: eA,
@@ -171,7 +171,7 @@ let B = (0, A.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 null === (e = ee.current) || void 0 === e || e.focus();
             }, []);
         let eM = i.useCallback(() => {
-            Y(), S.default.track(G.rMx.PREMIUM_PROMOTION_OPENED, { location_section: G.jXE.STICKER_PICKER_UPSELL }), (0, I.z)();
+            Y(), g.default.track(G.rMx.PREMIUM_PROMOTION_OPENED, { location_section: G.jXE.STICKER_PICKER_UPSELL }), (0, I.z)();
         }, [Y]);
         return (0, r.jsxs)(E.Gt, {
             value: W,
@@ -181,7 +181,7 @@ let B = (0, A.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                         className: k.header,
                         children: (0, r.jsx)(P.Z, {
                             ref: ee,
-                            onKeyDown: eL,
+                            onKeyDown: eD,
                             stickersListRef: J,
                             channel: u
                         })
@@ -208,17 +208,17 @@ let B = (0, A.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                                 getStickerRowProps: eC,
                                                 gridWidth: eo,
                                                 gutterWidth: eN,
-                                                isUsingKeyboardNavigation: eD,
+                                                isUsingKeyboardNavigation: eL,
                                                 onSelectSticker: em,
-                                                rowCount: eg,
-                                                rowCountBySection: eS,
+                                                rowCount: eS,
+                                                rowCountBySection: eg,
                                                 stickersCategories: ea,
                                                 stickersGrid: eA,
                                                 channel: u
                                             })
                                           : null
                               }),
-                              (0, r.jsx)(D.Z, {
+                              (0, r.jsx)(L.Z, {
                                   stickersListRef: J,
                                   channel: u
                               })

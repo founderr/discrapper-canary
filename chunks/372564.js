@@ -1,21 +1,21 @@
 n(47120);
 var i = n(735250),
-    a = n(470079),
-    s = n(120356),
-    l = n.n(s),
+    s = n(470079),
+    a = n(120356),
+    l = n.n(a),
     r = n(374470),
     o = n(481060),
     c = n(239091),
     u = n(822951),
     d = n(835473),
     h = n(933557),
-    p = n(454585),
-    m = n(63063),
+    m = n(454585),
+    p = n(63063),
     _ = n(984370),
     f = n(981631),
     E = n(689938),
-    C = n(119338);
-function g(e, t, n) {
+    g = n(119338);
+function C(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -30,16 +30,16 @@ function g(e, t, n) {
 }
 function I(e) {
     var t;
-    let { channel: n, onClose: a, transitionState: s } = e,
+    let { channel: n, onClose: s, transitionState: a } = e,
         l = (0, h.ZP)(n, !0),
         r = (0, d.q)(null === (t = n.linkedLobby) || void 0 === t ? void 0 : t.application_id);
     return (0, i.jsx)(o.ModalRoot, {
-        transitionState: s,
+        transitionState: a,
         'aria-label': E.Z.Messages.FORM_LABEL_CHANNEL_TOPIC,
         children: (0, i.jsx)(o.ModalContent, {
             children: (0, i.jsxs)(u.Z, {
                 selectable: !0,
-                onClose: a,
+                onClose: s,
                 renderHeader: () =>
                     (0, i.jsx)(o.Heading, {
                         variant: 'heading-lg/semibold',
@@ -49,25 +49,25 @@ function I(e) {
                     (0, i.jsx)(o.Text, {
                         selectable: !0,
                         variant: 'text-md/normal',
-                        className: C.content,
-                        children: p.Z.parseTopic(n.topic, !0, { channelId: n.id })
+                        className: g.content,
+                        children: m.Z.parseTopic(n.topic, !0, { channelId: n.id })
                     }),
                     null != r
                         ? (0, i.jsxs)('div', {
-                              className: C.linkedLobbyNotice,
+                              className: g.linkedLobbyNotice,
                               children: [
-                                  (0, i.jsx)(o.RefreshIcon, { className: C.linkedLobbyApplicationIcon }),
+                                  (0, i.jsx)(o.RefreshIcon, { className: g.linkedLobbyApplicationIcon }),
                                   (0, i.jsx)(o.Text, {
                                       variant: 'text-sm/normal',
                                       color: 'header-secondary',
                                       children: E.Z.Messages.CHANNEL_LINKED_LOBBY_CHANNEL_TOPIC_NOTICE.format({
                                           applicationName: r.name,
-                                          helpdeskArticle: m.Z.getArticleURL(f.BhN.CHANNEL_LINKED_LOBBIES),
+                                          helpdeskArticle: p.Z.getArticleURL(f.BhN.CHANNEL_LINKED_LOBBIES),
                                           separatorHook: (e, t) =>
                                               (0, i.jsx)(
                                                   'span',
                                                   {
-                                                      className: C.linkedLobbyNoticeSeparator,
+                                                      className: g.linkedLobbyNoticeSeparator,
                                                       children: e
                                                   },
                                                   t
@@ -85,16 +85,16 @@ function I(e) {
 function x(e) {
     return e.matches('a') || 'highlight' === e.className || e.className.includes('mention');
 }
-class T extends a.Component {
+class T extends s.Component {
     render() {
         let { channel: e } = this.props;
         return e.isMultiUserDM() || null == e.topic || 0 === e.topic.length
             ? null
-            : (0, i.jsxs)(a.Fragment, {
+            : (0, i.jsxs)(s.Fragment, {
                   children: [
                       (0, i.jsx)(_.Z.Divider, {}),
                       (0, i.jsxs)('div', {
-                          className: l()(C.topic, C.expandable),
+                          className: l()(g.topic, g.expandable),
                           onMouseDown: this.onMouseDown,
                           onMouseMove: this.onMouseMove,
                           onMouseUp: this.onMouseUp,
@@ -104,9 +104,9 @@ class T extends a.Component {
                               (0, i.jsx)(o.Clickable, {
                                   onClick: this.handleClick,
                                   'aria-label': E.Z.Messages.OPEN_CHANNEL_TOPIC,
-                                  className: C.topicClickTarget
+                                  className: g.topicClickTarget
                               }),
-                              p.Z.parseTopic(e.topic, !0, {
+                              m.Z.parseTopic(e.topic, !0, {
                                   channelId: e.id,
                                   allowLinks: !0
                               })
@@ -117,9 +117,9 @@ class T extends a.Component {
     }
     constructor(...e) {
         super(...e),
-            g(this, '_mouseDown', !1),
-            g(this, '_mouseUp', !1),
-            g(this, 'handleOpenTopic', (e) => {
+            C(this, '_mouseDown', !1),
+            C(this, '_mouseUp', !1),
+            C(this, 'handleOpenTopic', (e) => {
                 let t = e.target;
                 if ((0, r.k)(t)) {
                     if (x(t)) return;
@@ -133,29 +133,29 @@ class T extends a.Component {
                     })
                 );
             }),
-            g(this, 'onMouseDown', () => {
+            C(this, 'onMouseDown', () => {
                 this._mouseDown = !0;
             }),
-            g(this, 'onMouseMove', () => {
+            C(this, 'onMouseMove', () => {
                 this._mouseDown && (this._mouseDown = !1);
             }),
-            g(this, 'onMouseUp', (e) => {
+            C(this, 'onMouseUp', (e) => {
                 this._mouseDown && e.button !== f.AeJ.SECONDARY && this.handleOpenTopic(e), (this._mouseUp = !0), (this._mouseDown = !1);
             }),
-            g(this, 'handleContextMenu', (e) => {
-                let { channel: t, guild: a } = this.props;
+            C(this, 'handleContextMenu', (e) => {
+                let { channel: t, guild: s } = this.props;
                 (0, c.jW)(e, async () => {
                     let { default: e } = await n.e('24783').then(n.bind(n, 439635));
                     return (n) =>
                         (0, i.jsx)(e, {
                             ...n,
                             channel: t,
-                            guild: a,
+                            guild: s,
                             includeTopic: !0
                         });
                 });
             }),
-            g(this, 'handleClick', (e) => {
+            C(this, 'handleClick', (e) => {
                 if (this._mouseUp) {
                     this._mouseUp = !1;
                     return;

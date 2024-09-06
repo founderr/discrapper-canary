@@ -15,8 +15,8 @@ var r,
     I = n(531460),
     m = n(391673),
     T = o.setImmediate,
-    g = o.clearImmediate,
-    S = o.process,
+    S = o.clearImmediate,
+    g = o.process,
     A = o.Dispatch,
     N = o.Function,
     O = o.MessageChannel,
@@ -27,24 +27,24 @@ var r,
 _(function () {
     r = o.location;
 });
-var L = function (e) {
+var D = function (e) {
         if (d(C, e)) {
             var t = C[e];
             delete C[e], t();
         }
     },
-    D = function (e) {
+    L = function (e) {
         return function () {
-            L(e);
+            D(e);
         };
     },
     b = function (e) {
-        L(e.data);
+        D(e.data);
     },
     M = function (e) {
         o.postMessage(R(e), r.protocol + '//' + r.host);
     };
-(!T || !g) &&
+(!T || !S) &&
     ((T = function (e) {
         p(arguments.length, 1);
         var t = c(e) ? e : N(e),
@@ -57,16 +57,16 @@ var L = function (e) {
             v
         );
     }),
-    (g = function (e) {
+    (S = function (e) {
         delete C[e];
     }),
     m
         ? (i = function (e) {
-              S.nextTick(D(e));
+              g.nextTick(L(e));
           })
         : A && A.now
           ? (i = function (e) {
-                A.now(D(e));
+                A.now(L(e));
             })
           : O && !I
             ? ((s = (a = new O()).port2), (a.port1.onmessage = b), (i = u(s.postMessage, s)))
@@ -76,13 +76,13 @@ var L = function (e) {
                     y in h('script')
                         ? function (e) {
                               E.appendChild(h('script'))[y] = function () {
-                                  E.removeChild(this), L(e);
+                                  E.removeChild(this), D(e);
                               };
                           }
                         : function (e) {
-                              setTimeout(D(e), 0);
+                              setTimeout(L(e), 0);
                           })),
     (e.exports = {
         set: T,
-        clear: g
+        clear: S
     });

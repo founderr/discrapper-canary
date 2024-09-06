@@ -22,8 +22,8 @@ var i = n(120356),
     I = n(543882),
     m = n(592125),
     T = n(430824),
-    g = n(496675),
-    S = n(938475),
+    S = n(496675),
+    g = n(938475),
     A = n(502762),
     N = n(652853),
     O = n(194811),
@@ -31,8 +31,8 @@ var i = n(120356),
     v = n(315324),
     C = n(582123),
     y = n(648926),
-    L = n(290274),
-    D = n(318134),
+    D = n(290274),
+    L = n(318134),
     b = n(228168),
     M = n(981631),
     P = n(689938),
@@ -48,7 +48,7 @@ function k(e) {
             [U.fullSize]: F === b.y0.FULL_SIZE
         },
         { analyticsLocations: Z } = (0, _.ZP)(d.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
-        { onAction: Y, trackViewRef: j } = (0, D.Z)({
+        { onAction: Y, trackViewRef: j } = (0, L.Z)({
             display: 'live',
             user: t,
             stream: i,
@@ -56,9 +56,9 @@ function k(e) {
         }),
         W = (0, s.e7)([T.Z], () => T.Z.getGuild(null == i ? void 0 : i.guildId)),
         K = (0, s.e7)([m.Z], () => m.Z.getChannel(null == i ? void 0 : i.channelId)),
-        z = (0, s.Wu)([S.ZP], () =>
+        z = (0, s.Wu)([g.ZP], () =>
             null != K
-                ? S.ZP.getVoiceStatesForChannel(K).map((e) => {
+                ? g.ZP.getVoiceStatesForChannel(K).map((e) => {
                       let { user: t } = e;
                       return t;
                   })
@@ -69,8 +69,8 @@ function k(e) {
             url: X,
             isLoading: $,
             canSeePreview: J
-        } = (0, s.cj)([g.Z, I.Z], () => {
-            let e = null != K && g.Z.canBasicChannel(M.S7T.CONNECT, K);
+        } = (0, s.cj)([S.Z, I.Z], () => {
+            let e = null != K && S.Z.canBasicChannel(M.S7T.CONNECT, K);
             return e
                 ? {
                       url: I.Z.getPreviewURL(i.guildId, i.channelId, i.ownerId),
@@ -222,7 +222,7 @@ function k(e) {
                             tags: (0, r.jsxs)(r.Fragment, {
                                 children: [
                                     (0, r.jsx)(E.ZP, { size: E.OH.SMALL }),
-                                    (0, r.jsx)(L.Z, {
+                                    (0, r.jsx)(D.Z, {
                                         display: 'live',
                                         user: t,
                                         onClose: B,

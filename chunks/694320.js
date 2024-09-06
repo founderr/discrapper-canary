@@ -20,8 +20,8 @@ var r = n(735250),
     I = n(626135),
     m = n(981631),
     T = n(474936),
-    g = n(689938),
-    S = n(540451);
+    S = n(689938),
+    g = n(540451);
 function A() {
     (0, l.openModalLazy)(async () => {
         let { default: e } = await n.e('3289').then(n.bind(n, 682609));
@@ -43,7 +43,7 @@ function N(e) {
         v = (0, _.Ng)(),
         C = (0, E.N)(),
         y = (0, _.Wp)(v, T.Si.TIER_2),
-        L = (null == C ? void 0 : null === (t = C.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === T.Si.TIER_2;
+        D = (null == C ? void 0 : null === (t = C.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === T.Si.TIER_2;
     return (i.useEffect(() => {
         I.default.track(m.rMx.PREMIUM_UPSELL_VIEWED, {
             type: 'longer messages inline',
@@ -54,43 +54,43 @@ function N(e) {
             location_stack: R
         });
     }, [O, R]),
-    (L || y) && N < 0)
+    (D || y) && N < 0)
         ? (0, r.jsx)(f.ZP, {
               type: T.cd.MESSAGE_LENGTH_IN_EDITOR_UPSELL,
               subscriptionTier: T.Si.TIER_2,
               context: N,
               discountOffer: v,
               trialOffer: C,
-              children: g.Z.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP.format({ onLearnMore: A })
+              children: S.Z.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP.format({ onLearnMore: A })
           })
         : a
           ? (0, r.jsx)(l.Clickable, {
-                className: S.iconOnly,
+                className: g.iconOnly,
                 onClick: () => A(),
                 children: (0, r.jsx)(l.Tooltip, {
-                    text: g.Z.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP_WITHOUT_LINK,
+                    text: S.Z.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP_WITHOUT_LINK,
                     position: 'top',
                     children: (e) =>
                         (0, r.jsx)(l.NitroWheelIcon, {
                             size: 'md',
                             color: 'currentColor',
-                            className: S.premium,
+                            className: g.premium,
                             ...e
                         })
                 })
             })
           : (0, r.jsxs)('div', {
-                className: s()(S.root, n),
+                className: s()(g.root, n),
                 children: [
                     (0, r.jsx)(l.NitroWheelIcon, {
                         size: 'md',
-                        className: S.premium,
+                        className: g.premium,
                         color: d.JX.PREMIUM_TIER_2
                     }),
                     (0, r.jsx)(l.Text, {
-                        className: S.text,
+                        className: g.text,
                         variant: 'text-sm/normal',
-                        children: g.Z.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP.format({ onLearnMore: A })
+                        children: S.Z.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP.format({ onLearnMore: A })
                     })
                 ]
             });

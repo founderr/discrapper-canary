@@ -15,8 +15,8 @@ let { Themes: f } = n(15202).V,
     { Shadows: I } = _.V,
     { Spacing: m } = E.V,
     { Modules: T } = c.V,
-    g = l()(p, (e) => i()(e)),
-    S = {
+    S = l()(p, (e) => i()(e)),
+    g = {
         themes: f,
         modules: T,
         colors: l()(h, (e, t) => ({
@@ -25,15 +25,15 @@ let { Themes: f } = n(15202).V,
                 let n = e[t.theme],
                     r = n.raw,
                     i = n.opacity;
-                if (1 === i) return S.unsafe_rawColors[r].resolve(t);
+                if (1 === i) return g.unsafe_rawColors[r].resolve(t);
                 {
-                    let e = g[r];
+                    let e = S[r];
                     return 0 !== e.alpha() && 1 !== i && (e = e.alpha(i)), A(e, t.saturation);
                 }
             }
         })),
         unsafe_rawColors: l()(p, (e, t) => {
-            let n = g[t];
+            let n = S[t];
             return {
                 css: R(t),
                 resolve: (e) => A(n, e.saturation)
@@ -86,4 +86,4 @@ function R(e, t) {
         r = O(e);
     return 'var(--'.concat([n, r].filter(Boolean).join('-'), ')');
 }
-t.Z = S;
+t.Z = g;

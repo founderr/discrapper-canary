@@ -1,6 +1,6 @@
 n.d(t, {
     T: function () {
-        return g;
+        return S;
     }
 });
 var r = n(313694);
@@ -57,7 +57,7 @@ var u = new WeakMap(),
     I = new WeakMap(),
     m = new WeakMap(),
     T = new WeakMap();
-class g {
+class S {
     constructor(e, t, n) {
         if (
             (i(this, u, {
@@ -102,12 +102,12 @@ class g {
             }),
             a(this, 'setup', () => {
                 if ('undefined' != typeof window) {
-                    if (g.isSetUp) throw Error('Cannot have two MultiBackends at the same time.');
-                    (g.isSetUp = !0), s(this, h).call(this, window), s(this, d)[s(this, u)].instance.setup();
+                    if (S.isSetUp) throw Error('Cannot have two MultiBackends at the same time.');
+                    (S.isSetUp = !0), s(this, h).call(this, window), s(this, d)[s(this, u)].instance.setup();
                 }
             }),
             a(this, 'teardown', () => {
-                if ('undefined' != typeof window) (g.isSetUp = !1), s(this, p).call(this, window), s(this, d)[s(this, u)].instance.teardown();
+                if ('undefined' != typeof window) (S.isSetUp = !1), s(this, p).call(this, window), s(this, d)[s(this, u)].instance.teardown();
             }),
             a(this, 'connectDragSource', (e, t, n) => s(this, T).call(this, 'connectDragSource', e, t, n)),
             a(this, 'connectDragPreview', (e, t, n) => s(this, T).call(this, 'connectDragPreview', e, t, n)),
@@ -186,4 +186,4 @@ class g {
             o(this, E, {});
     }
 }
-a(g, 'isSetUp', !1);
+a(S, 'isSetUp', !1);

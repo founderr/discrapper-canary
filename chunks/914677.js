@@ -37,17 +37,17 @@ let c = 'url(#gradient)',
     };
 t.Z = (e) => {
     let { percentage: t = 0, children: n, animationClassName: c, initialPercentage: E = 0, progressCircleStrokeSize: T = 2, progressCircleVariation: I, progressCircleStroke: R } = e,
-        C = 43 + T / 2,
-        g = 2 * Math.PI * C,
-        [N, p] = a.useState(E);
+        g = 43 + T / 2,
+        C = 2 * Math.PI * g,
+        [N, m] = a.useState(E);
     a.useEffect(() => {
         let e = setTimeout(() => {
-            p(t);
+            m(t);
         }, 200);
         return () => clearTimeout(e);
     }, [t]);
-    let m = (0, i.ZP)(),
-        A = (0, r.ap)(m),
+    let p = (0, i.ZP)(),
+        A = (0, r.ap)(p),
         f = _(I),
         S = d(I, A),
         h = null != R ? R : u(A, I);
@@ -62,7 +62,7 @@ t.Z = (e) => {
                         className: I === l.Q.NITRO_GEM ? o.baseProgressCircle : void 0,
                         fill: 'transparent',
                         strokeWidth: T,
-                        r: ''.concat(C),
+                        r: ''.concat(g),
                         cx: '50%',
                         cy: '50%',
                         stroke: f,
@@ -72,10 +72,10 @@ t.Z = (e) => {
                         stroke: h,
                         strokeWidth: T,
                         strokeLinecap: 'round',
-                        strokeDasharray: ''.concat(g, ' ').concat(g),
+                        strokeDasharray: ''.concat(C, ' ').concat(C),
                         className: c,
-                        style: { strokeDashoffset: (1 - N / 100) * g },
-                        r: ''.concat(C),
+                        style: { strokeDashoffset: (1 - N / 100) * C },
+                        r: ''.concat(g),
                         cx: '50%',
                         cy: '50%'
                     })

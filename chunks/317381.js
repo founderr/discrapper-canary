@@ -23,7 +23,7 @@ var i,
     I = n(917107),
     m = n(918559),
     T = n(981631);
-function g(e, t, n) {
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -36,7 +36,7 @@ function g(e, t, n) {
         e
     );
 }
-let S = {
+let g = {
         everLaunchedActivities: new Set(),
         seenNewActivities: {},
         seenUpdatedActivities: {},
@@ -49,8 +49,8 @@ let S = {
     v = new Map(),
     C = new Map(),
     y = new Map(),
-    L = new Map(),
     D = new Map(),
+    L = new Map(),
     b = new Map(),
     M = new Map(),
     P = new Map(),
@@ -62,12 +62,12 @@ function G(e) {
 }
 function k(e) {
     var t, n, i, a;
-    let { guildId: s, channelId: o, location: E, applicationId: p, launchId: g, compositeInstanceId: S, participants: N } = e,
+    let { guildId: s, channelId: o, location: E, applicationId: p, launchId: S, compositeInstanceId: g, participants: N } = e,
         C = (0, f.Z)(p);
     if (null == C) return;
     let y = null !== (n = v.get(o)) && void 0 !== n ? n : A,
-        L = 0 === y.length,
-        D = y.find((e) => e.applicationId === p),
+        D = 0 === y.length,
+        L = y.find((e) => e.applicationId === p),
         b = N.map((e) => e.userId),
         M = l.default.getId(),
         P = b.some((e) => e === M),
@@ -79,8 +79,8 @@ function k(e) {
             channelId: o,
             guildId: s,
             location: E,
-            launchId: g,
-            compositeInstanceId: S,
+            launchId: S,
+            compositeInstanceId: g,
             url: C,
             userIds: new Set(b),
             participants: N
@@ -98,10 +98,10 @@ function k(e) {
           x === l.default.getSessionId() &&
           (function (e) {
               var t, n;
-              let { channelId: i, applicationId: a, launchId: s, compositeInstanceId: o, location: E, participants: h, isFirstActivityInChannel: p, isStart: g } = e,
-                  S = (0, f.Z)(a),
+              let { channelId: i, applicationId: a, launchId: s, compositeInstanceId: o, location: E, participants: h, isFirstActivityInChannel: p, isStart: S } = e,
+                  g = (0, f.Z)(a),
                   A = l.default.getSessionId();
-              if (null == S || null == A || (null === (t = O.get(a)) || void 0 === t ? void 0 : t.channelId) === i) return !1;
+              if (null == g || null == A || (null === (t = O.get(a)) || void 0 === t ? void 0 : t.channelId) === i) return !1;
               let N = u.Z.getChannel(i),
                   R = null == N ? void 0 : N.getGuildId(),
                   v = d.default.getCurrentUser();
@@ -111,7 +111,7 @@ function k(e) {
                   guildId: R,
                   channelId: i,
                   applicationId: a,
-                  url: S,
+                  url: g,
                   userIds: new Set(h.map((e) => e.userId)),
                   participants: h,
                   connectedSince: Date.now(),
@@ -124,7 +124,7 @@ function k(e) {
                       channelId: i,
                       applicationId: a,
                       isFirstActivityInChannel: p,
-                      isStart: g,
+                      isStart: S,
                       participants: h,
                       embeddedActivity: C
                   }),
@@ -133,12 +133,12 @@ function k(e) {
           })({
               channelId: o,
               applicationId: p,
-              launchId: g,
-              compositeInstanceId: S,
+              launchId: S,
+              compositeInstanceId: g,
               location: E,
               participants: N,
-              isFirstActivityInChannel: L,
-              isStart: null == D
+              isFirstActivityInChannel: D,
+              isStart: null == L
           });
     let V = (null !== (i = v.get(o)) && void 0 !== i ? i : []).filter((e) => e.applicationId !== p),
         Z = G(s),
@@ -179,13 +179,13 @@ class Z extends (i = a.ZP.PersistedStore) {
         var t;
         let n = new Set(null !== (t = null == e ? void 0 : e.everLaunchedActivities) && void 0 !== t ? t : []);
         null != e &&
-            (S = {
+            (g = {
                 ...e,
                 everLaunchedActivities: n
             });
     }
     getState() {
-        return S;
+        return g;
     }
     getSelfEmbeddedActivityForChannel(e) {
         var t;
@@ -225,18 +225,18 @@ class Z extends (i = a.ZP.PersistedStore) {
     }
     getShelfFetchStatus(e) {
         let t = G(e);
-        return L.get(t);
+        return D.get(t);
     }
     shouldFetchShelf(e) {
         var t, n;
         let r = G(e),
-            i = null !== (t = L.get(r)) && void 0 !== t ? t : { isFetching: !1 },
+            i = null !== (t = D.get(r)) && void 0 !== t ? t : { isFetching: !1 },
             a = Date.now() - (null !== (n = null == i ? void 0 : i.lastFetchTimestampMs) && void 0 !== n ? n : 0) > 21600000;
         return !(null == i ? void 0 : i.isFetching) && a;
     }
     getOrientationLockStateForApp(e) {
         var t;
-        return null !== (t = D.get(e)) && void 0 !== t ? t : null;
+        return null !== (t = L.get(e)) && void 0 !== t ? t : null;
     }
     getPipOrientationLockStateForApp(e) {
         var t;
@@ -276,7 +276,7 @@ class Z extends (i = a.ZP.PersistedStore) {
         }
     }
     hasActivityEverBeenLaunched(e) {
-        return S.everLaunchedActivities.has(e);
+        return g.everLaunchedActivities.has(e);
     }
     getLaunchState(e, t) {
         if (null != e && null != t) return C.get(F(t, e));
@@ -285,9 +285,9 @@ class Z extends (i = a.ZP.PersistedStore) {
         return C;
     }
 }
-g(Z, 'displayName', 'EmbeddedActivitiesStore'),
-    g(Z, 'persistKey', 'EmbeddedActivities'),
-    g(Z, 'migrations', [
+S(Z, 'displayName', 'EmbeddedActivitiesStore'),
+    S(Z, 'persistKey', 'EmbeddedActivities'),
+    S(Z, 'migrations', [
         (e) => ({
             ...e,
             seenFeaturedActivities: [],
@@ -344,7 +344,7 @@ let Y = new Z(s.Z, {
     },
     EMBEDDED_ACTIVITY_LAUNCH_SUCCESS: function (e) {
         let { applicationId: t, channelId: n } = e;
-        S.everLaunchedActivities.add(t),
+        g.everLaunchedActivities.add(t),
             V({
                 applicationId: t,
                 channelId: n
@@ -398,8 +398,8 @@ let Y = new Z(s.Z, {
     EMBEDDED_ACTIVITY_FETCH_SHELF: function (e) {
         let { guildId: t } = e,
             n = G(t),
-            r = L.get(n);
-        L.set(n, {
+            r = D.get(n);
+        D.set(n, {
             isFetching: !0,
             lastFetchTimestampMs: null == r ? void 0 : r.lastFetchTimestampMs
         });
@@ -417,20 +417,20 @@ let Y = new Z(s.Z, {
                 if (null == r.label_until) return;
                 let i = new Date(r.label_until).getTime();
                 if (i < n) return;
-                let a = S.seenNewActivities[t],
-                    s = Object.hasOwn(S.seenNewActivities, t),
+                let a = g.seenNewActivities[t],
+                    s = Object.hasOwn(g.seenNewActivities, t),
                     l = new Date(a).getTime() < i;
-                r.label_type === o.ww.NEW && (!s || l) && ((S.shouldShowNewActivityIndicator = !0), (S.seenNewActivities[t] = r.label_until));
-                let u = S.seenUpdatedActivities[t],
-                    c = Object.hasOwn(S.seenUpdatedActivities, t),
+                r.label_type === o.ww.NEW && (!s || l) && ((g.shouldShowNewActivityIndicator = !0), (g.seenNewActivities[t] = r.label_until));
+                let u = g.seenUpdatedActivities[t],
+                    c = Object.hasOwn(g.seenUpdatedActivities, t),
                     d = new Date(u).getTime() < i;
-                r.label_type === o.ww.UPDATED && (!c || d) && ((S.shouldShowNewActivityIndicator = !0), (S.seenUpdatedActivities[t] = r.label_until));
+                r.label_type === o.ww.UPDATED && (!c || d) && ((g.shouldShowNewActivityIndicator = !0), (g.seenUpdatedActivities[t] = r.label_until));
             });
         })({
             activities: n,
             now: i
         }),
-            L.set(r, {
+            D.set(r, {
                 isFetching: !1,
                 lastFetchTimestampMs: i
             });
@@ -438,18 +438,18 @@ let Y = new Z(s.Z, {
     EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL: function (e) {
         let { guildId: t } = e,
             n = G(t),
-            r = L.get(n);
-        L.set(n, {
+            r = D.get(n);
+        D.set(n, {
             isFetching: !1,
             lastFetchTimestampMs: null == r ? void 0 : r.lastFetchTimestampMs
         });
     },
     EMBEDDED_ACTIVITY_DISMISS_NEW_INDICATOR: () => {
-        S.shouldShowNewActivityIndicator = !1;
+        g.shouldShowNewActivityIndicator = !1;
     },
     EMBEDDED_ACTIVITY_SET_ORIENTATION_LOCK_STATE: function (e) {
         let { applicationId: t, lockState: n, pictureInPictureLockState: r, gridLockState: i } = e;
-        null == n ? D.delete(t) : D.set(t, n), null === r ? b.delete(t) : void 0 !== r && b.set(t, r), null === i ? M.delete(t) : void 0 !== i && M.set(t, i);
+        null == n ? L.delete(t) : L.set(t, n), null === r ? b.delete(t) : void 0 !== r && b.set(t, r), null === i ? M.delete(t) : void 0 !== i && M.set(t, i);
     },
     EMBEDDED_ACTIVITY_SET_PANEL_MODE: function (e) {
         let { activityPanelMode: t } = e;

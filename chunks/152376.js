@@ -18,7 +18,7 @@ n.d(t, {
         return R;
     },
     k$: function () {
-        return g;
+        return S;
     }
 }),
     n(47120);
@@ -64,7 +64,7 @@ function T(e, t, n, r) {
             location: r
         });
 }
-function g(e, t, n, r) {
+function S(e, t, n, r) {
     if (null == e) return;
     if (u.Z.isFullServerPreview(e)) {
         (0, l.zS)(e, n ? [t] : [], n ? [] : [t]), (0, l.aq)(e, { optInEnabled: !0 });
@@ -98,7 +98,7 @@ function g(e, t, n, r) {
             location: r
         });
 }
-async function S(e, t) {
+async function g(e, t) {
     if (!(null == e || u.Z.isFullServerPreview(e)))
         await c.Z.saveUserGuildSettingsBulk({ [e]: { channel_overrides: t } }),
             a.Z.dispatch({
@@ -107,7 +107,7 @@ async function S(e, t) {
                 updates: t
             });
 }
-let A = (0, r.debounce)((e, t) => S(e, t), 1000);
+let A = (0, r.debounce)((e, t) => g(e, t), 1000);
 function N(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = arguments.length > 3 ? arguments[3] : void 0;

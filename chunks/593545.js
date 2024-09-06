@@ -98,7 +98,7 @@ function T(e) {
         ]
     });
 }
-function g(e) {
+function S(e) {
     let { language: t, setLanguage: n } = e;
     return (0, r.jsx)(l.Popout, {
         position: 'left',
@@ -145,7 +145,7 @@ function g(e) {
             })
     });
 }
-function S(e) {
+function g(e) {
     return (0, r.jsx)(l.Tooltip, {
         text: f.Z.Messages.PREVIEW_WHOLE_FILE,
         children: (t) =>
@@ -176,8 +176,8 @@ function A(e) {
         C = 0 === A,
         y = '';
     C && u && R > v ? (y = '\n...') : !C && (y = '...'), '' !== y && (C ? (y += ' ' + f.Z.Messages.PREVIEW_LINES_LEFT.format({ lines: R - v })) : (y += ' ' + f.Z.Messages.PREVIEW_BYTES_LEFT.format({ formattedBytes: (0, E.IC)(A) })));
-    let L = (null == O ? void 0 : O.slice(0, v).join('\n')) + y,
-        D = (0, c.yx)(L),
+    let D = (null == O ? void 0 : O.slice(0, v).join('\n')) + y,
+        L = (0, c.yx)(D),
         b = u || v < R;
     return (0, r.jsxs)('div', {
         className: s()(N, h.container),
@@ -188,7 +188,7 @@ function A(e) {
                     null == o
                         ? (0, r.jsx)(l.Spinner, { className: h.spinner })
                         : (0, r.jsx)(I, {
-                              text: D,
+                              text: L,
                               language: _
                           })
             }),
@@ -206,7 +206,7 @@ function A(e) {
                                       isWholeFile: C,
                                       numLines: R
                                   }),
-                                  (0, r.jsx)(S, {
+                                  (0, r.jsx)(g, {
                                       url: n,
                                       fileName: i,
                                       fileSize: a,
@@ -223,7 +223,7 @@ function A(e) {
                         fileName: i,
                         fileSize: a
                     }),
-                    (0, r.jsx)(g, {
+                    (0, r.jsx)(S, {
                         language: _,
                         setLanguage: p
                     })
@@ -267,7 +267,7 @@ function N(e) {
                                 fileName: n,
                                 fileSize: a
                             }),
-                            (0, r.jsx)(g, {
+                            (0, r.jsx)(S, {
                                 language: d,
                                 setLanguage: _
                             })

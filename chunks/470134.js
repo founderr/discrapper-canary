@@ -5,9 +5,9 @@ n.d(t, {
 }),
     n(47120);
 var i = n(735250),
-    a = n(470079),
-    s = n(120356),
-    l = n.n(s),
+    s = n(470079),
+    a = n(120356),
+    l = n.n(a),
     r = n(481060),
     o = n(923726),
     c = n(689938),
@@ -31,17 +31,17 @@ function d(e) {
     });
 }
 function h(e) {
-    let [t, n] = a.useState(),
-        [s, l] = a.useState(),
-        [r, u] = a.useState(!1),
-        [h, p] = a.useState(!1),
-        { enabled: m } = (0, o.s1)(e);
+    let [t, n] = s.useState(),
+        [a, l] = s.useState(),
+        [r, u] = s.useState(!1),
+        [h, m] = s.useState(!1),
+        { enabled: p } = (0, o.s1)(e);
     return (
-        a.useEffect(() => {
-            m && null != t && null != s ? u(t < s) : u(!1);
-        }, [m, t, s]),
+        s.useEffect(() => {
+            p && null != t && null != a ? u(t < a) : u(!1);
+        }, [p, t, a]),
         {
-            horizontalScrollNotice: a.useMemo(
+            horizontalScrollNotice: s.useMemo(
                 () =>
                     r
                         ? (0, i.jsx)(d, {
@@ -51,7 +51,7 @@ function h(e) {
                         : null,
                 [r, h]
             ),
-            handleScroll: () => p(!0),
+            handleScroll: () => m(!0),
             handleSetScrollerRef: (e) => {
                 var t;
                 return l(null == e ? void 0 : null === (t = e.getScrollerState()) || void 0 === t ? void 0 : t.scrollWidth);

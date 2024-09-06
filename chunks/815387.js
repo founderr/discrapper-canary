@@ -36,8 +36,8 @@ var i = n(735250),
     y = n(158776),
     B = n(944486),
     k = n(594174),
-    G = n(979651),
-    F = n(585483),
+    F = n(979651),
+    G = n(585483),
     w = n(5192),
     V = n(960048),
     H = n(709054),
@@ -206,7 +206,7 @@ let eO = Object.freeze({
             u = P.default.getId(),
             d = t.getChannelId(),
             _ = (0, s.e7)([b.Z], () => b.Z.isCallActive(d, l), [d, l]),
-            E = (0, s.e7)([G.Z], () => G.Z.getVoiceState(eC.ME, u)),
+            E = (0, s.e7)([F.Z], () => F.Z.getVoiceState(eC.ME, u)),
             I = !_ && null != t.call && !t.call.participants.includes(u),
             m = _ && (null == E || E.channelId !== d),
             T = a.useCallback(() => c.default.selectVoiceChannel(d), [d]),
@@ -267,7 +267,7 @@ let eO = Object.freeze({
                     let e = D.Z.getChannel(l);
                     null != e && (0, R.XU)(e.guild_id, e.id);
                 }
-                setTimeout(() => F.S.dispatch(eC.CkL.TOGGLE_CHANNEL_PINS), 0);
+                setTimeout(() => G.S.dispatch(eC.CkL.TOGGLE_CHANNEL_PINS), 0);
             }, [l]),
             c = (0, z.l)({
                 user: r,

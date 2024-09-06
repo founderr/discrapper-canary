@@ -34,8 +34,8 @@ var i,
     I = n(439849),
     m = n(710845),
     T = n(630699),
-    g = n(855403),
-    S = n(454991),
+    S = n(855403),
+    g = n(454991),
     A = n(77498),
     N = n(283595),
     O = n(417363),
@@ -43,8 +43,8 @@ var i,
     v = n(70956),
     C = n(877481),
     y = n(823379),
-    L = n(358085),
-    D = n(998502),
+    D = n(358085),
+    L = n(998502),
     b = n(145597),
     M = n(370862),
     P = n(981631),
@@ -235,7 +235,7 @@ function ec(e) {
                 overlayMethod: U.gl.Disabled
             };
     }
-    let n = T.H() && (0, b.VS)() && !S.v.legacyEnabled,
+    let n = T.H() && (0, b.VS)() && !g.v.legacyEnabled,
         r = n ? U.gl.OutOfProcess : U.gl.Hook,
         i = z.enableOverlay[eu(e)];
     if (null != i)
@@ -312,9 +312,9 @@ function eh() {
     );
 }
 function ep() {
-    if (!__OVERLAY__ && L.isPlatformEmbedded) {
+    if (!__OVERLAY__ && D.isPlatformEmbedded) {
         let e = [...V, ...u().values(z.gameOverrides)];
-        D.ZP.setGameCandidateOverrides(e);
+        L.ZP.setGameCandidateOverrides(e);
     }
 }
 function eI(e) {
@@ -356,7 +356,7 @@ function em() {
     return z.gamesSeen.filter((e) => void 0 === z.gameOverrides[eu(e)]).concat(e);
 }
 !__OVERLAY__ &&
-    (0, L.isDesktop)() &&
+    (0, D.isDesktop)() &&
     (q = function () {
         let e = [],
             t = new Set();
@@ -380,7 +380,7 @@ function em() {
                             ? void 0
                             : r.filter((e) => {
                                   let { os: t } = e;
-                                  return t === (0, L.getPlatformName)();
+                                  return t === (0, D.getPlatformName)();
                               })
                         : [],
                 a = {};
@@ -398,7 +398,7 @@ function em() {
                 );
         }),
             (e = e.filter((e) => null != e.executables && e.executables.length > 0)),
-            D.ZP.setObservedGamesCallback(e, (e) => {
+            L.ZP.setObservedGamesCallback(e, (e) => {
                 let n = [],
                     i = {};
                 e = e.filter(
@@ -413,7 +413,7 @@ function em() {
                         e.isLauncher && null != e.id && (i[e.id] = e),
                         (e.windowHandle = (function (e, t) {
                             if (void 0 === t) {
-                                let t = D.ZP.getDiscordUtils();
+                                let t = L.ZP.getDiscordUtils();
                                 if (null != t && null != t.getWindowHandleFromPid) {
                                     let n = t.getWindowHandleFromPid(e);
                                     return null != n && '0' !== n ? n : null;
@@ -547,7 +547,7 @@ class eT extends (i = _.ZP.Store) {
     }
     getObservedAppNameForWindow(e) {
         var t, n;
-        return null !== (n = null === (t = j.find((t) => (0, g.Z)(e, t.windowHandle))) || void 0 === t ? void 0 : t.name) && void 0 !== n ? n : null;
+        return null !== (n = null === (t = j.find((t) => (0, S.Z)(e, t.windowHandle))) || void 0 === t ? void 0 : t.name) && void 0 !== n ? n : null;
     }
     get canShowAdminWarning() {
         return B;
@@ -674,8 +674,8 @@ class eT extends (i = _.ZP.Store) {
         GAMES_DATABASE_UPDATE: q,
         GAME_LAUNCH_SUCCESS: function (e) {
             var t;
-            if (__OVERLAY__ || !L.isPlatformEmbedded) return;
-            let n = D.ZP.getDiscordUtils().notifyGameLaunched;
+            if (__OVERLAY__ || !D.isPlatformEmbedded) return;
+            let n = L.ZP.getDiscordUtils().notifyGameLaunched;
             if (null == n) return;
             let r = A.Z.getDetectableGame(e.applicationId);
             if (null != r) n(r.id, r.name, null !== (t = e.pids) && void 0 !== t ? t : []);

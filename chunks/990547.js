@@ -44,7 +44,7 @@ n.r(t),
             return C;
         },
         getDevice: function () {
-            return L;
+            return D;
         },
         getOS: function () {
             return y;
@@ -80,8 +80,8 @@ n(804098);
 var I = n(699407),
     m = n(20281),
     T = n(525769);
-let g = 'deviceProperties',
-    S = 'referralProperties',
+let S = 'deviceProperties',
+    g = 'referralProperties',
     A = {},
     N = {},
     O = window.DiscordNative;
@@ -152,7 +152,7 @@ function y() {
     else if (/Linux/i.test(e)) return 'Linux';
     else return '';
 }
-function L() {
+function D() {
     let { userAgent: e } = window.navigator;
     if (/(BlackBerry|PlayBook|BB10)/i.test(e)) return 'BlackBerry';
     if (/Windows Phone/i.test(e)) return 'Windows Phone';
@@ -161,7 +161,7 @@ function L() {
     else if (/iPad/.test(e)) return 'iPad';
     else return '';
 }
-function D() {
+function L() {
     let e = {};
     return (
         (e.referrer = document.referrer),
@@ -199,7 +199,7 @@ function b(e) {
 if (null == r)
     try {
         let e, t, n;
-        (e = E.K.get(g)),
+        (e = E.K.get(S)),
             null == e &&
                 ((e = (function () {
                     let e = {},
@@ -223,21 +223,21 @@ if (null == r)
                             else if (/Gecko/.test(e)) return 'Mozilla';
                             else return '';
                         })()),
-                        (e.device = L()),
+                        (e.device = D()),
                         (e.system_locale = (0, _.qf)()),
                         e
                     );
                 })()),
-                E.K.set(g, e)),
-            (t = E.K.get(S)),
-            null == t && ((t = D()), E.K.set(S, t)),
-            (n = f.x.get(S)),
+                E.K.set(S, e)),
+            (t = E.K.get(g)),
+            null == t && ((t = L()), E.K.set(g, t)),
+            (n = f.x.get(g)),
             null == n &&
                 ((n = (function (e, t) {
                     let n = {};
                     return Object.keys(e).map((r) => (n[''.concat(r).concat(t)] = e[r])), n;
-                })(D(), '_current')),
-                f.x.set(S, n)),
+                })(L(), '_current')),
+                f.x.set(g, n)),
             (r = {
                 ...e,
                 ...(function () {
@@ -270,7 +270,7 @@ M(
         let r = {},
             i = window.GLOBAL_ENV.RELEASE_CHANNEL;
         i && (r.release_channel = i.split('-')[0]);
-        let a = parseInt(((n = '325006'), '325006'), 10);
+        let a = parseInt(((n = '325113'), '325113'), 10);
         !isNaN(a) && (r.client_build_number = a);
         let s = null == O ? void 0 : null === (e = (t = O.remoteApp).getBuildNumber) || void 0 === e ? void 0 : e.call(t);
         return (

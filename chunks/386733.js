@@ -12,11 +12,11 @@ var s = n(735250),
     T = n(594174),
     I = n(626135),
     R = n(63063),
-    C = n(281494),
-    g = n(276444),
+    g = n(281494),
+    C = n(276444),
     N = n(520540),
-    p = n(197115),
-    m = n(119269),
+    m = n(197115),
+    p = n(119269),
     A = n(938736),
     f = n(981631),
     S = n(689938),
@@ -50,9 +50,9 @@ let x = (e) => {
             children: (e) =>
                 (0, s.jsx)('div', {
                     className: i()({
-                        [h.redeemedCircle]: c && (a === C.Fe.REDEEMED || a === C.Fe.CONVERTED),
-                        [h.convertedCircleGlow]: c && a === C.Fe.CONVERTED,
-                        [h.standardCircle]: c && (a === C.Fe.PENDING || null == a)
+                        [h.redeemedCircle]: c && (a === g.Fe.REDEEMED || a === g.Fe.CONVERTED),
+                        [h.convertedCircleGlow]: c && a === g.Fe.CONVERTED,
+                        [h.standardCircle]: c && (a === g.Fe.PENDING || null == a)
                     }),
                     children: (0, s.jsx)('div', {
                         className: c ? h.content : void 0,
@@ -119,16 +119,16 @@ t.Z = (e) => {
     let t,
         r,
         { isInSettings: u = !1 } = e,
-        x = (0, l.Wu)([g.Z], () => g.Z.getSentUserIds()),
-        O = (0, l.e7)([g.Z], () => g.Z.getRecipientStatus()),
+        x = (0, l.Wu)([C.Z], () => C.Z.getSentUserIds()),
+        O = (0, l.e7)([C.Z], () => C.Z.getRecipientStatus()),
         P = (0, A.uv)('ReferralProgramProgressBar'),
         v = (0, A.TW)('ReferralProgramProgressBar'),
         L = (0, l.Wu)([T.default], () => x.map((e) => T.default.getUser(e)).filter((e) => null != e)),
         Z = a.useMemo(() => L.map((e) => new E.Z(e)), [L]),
-        D = (0, l.e7)([g.Z], () => g.Z.getRefreshAt()),
-        { subscriberHomeVariant: B } = N.g.useExperiment({ location: 'ReferralProgramProgressBar' }, { autoTrackExposure: !1 }),
-        j = P === f.g2L.UNAPPLIED || P === f.g2L.QUALIFIED,
-        U = B === N.p.VARIANT_2;
+        D = (0, l.e7)([C.Z], () => C.Z.getRefreshAt()),
+        { subscriberHomeVariant: U } = N.g.useExperiment({ location: 'ReferralProgramProgressBar' }, { autoTrackExposure: !1 }),
+        B = P === f.g2L.UNAPPLIED || P === f.g2L.QUALIFIED,
+        j = U === N.p.VARIANT_2;
     a.useEffect(() => {
         x.forEach((e) => {
             (0, c.PR)(e);
@@ -140,12 +140,12 @@ t.Z = (e) => {
         sent: O.size
     };
     O.forEach((e) => {
-        e === C.Fe.REDEEMED && G.redeemed++, e === C.Fe.CONVERTED && (G.redeemed++, G.converted++);
+        e === g.Fe.REDEEMED && G.redeemed++, e === g.Fe.CONVERTED && (G.redeemed++, G.converted++);
     });
     let y = G.sent === A.Q_,
-        k = R.Z.getArticleURL(f.BhN.REFERRAL_PROGRAM),
-        { analyticsLocations: w } = (0, _.ZP)(d.Z.PREMIUM_MARKETING_REFERALL_PROGRAM_PROGRESS_BAR),
-        H = a.useRef(null),
+        w = R.Z.getArticleURL(f.BhN.REFERRAL_PROGRAM),
+        { analyticsLocations: H } = (0, _.ZP)(d.Z.PREMIUM_MARKETING_REFERALL_PROGRAM_PROGRESS_BAR),
+        k = a.useRef(null),
         F = (G.sent / A.Q_) * 100,
         V = !1;
     v && null != D && ((V = 0 < (t = Math.ceil((new Date(D).getTime() - new Date().getTime()) / 86400000)) && t < A.AV), (r = (100 * (A.AV - t)) / A.AV));
@@ -153,9 +153,9 @@ t.Z = (e) => {
         K = (0, s.jsxs)('div', {
             className: h.referralInfoContent,
             children: [
-                (0, s.jsx)(m.Z, {
+                (0, s.jsx)(p.Z, {
                     percentage: W ? 0 : F,
-                    progressCircleVariation: m.Q.NITRO_LOGO,
+                    progressCircleVariation: p.Q.NITRO_LOGO,
                     iconClassName: i()({
                         [h.referralProgressBarIcon]: !u,
                         [h.referralProgressBarIconSettings]: u
@@ -197,7 +197,7 @@ t.Z = (e) => {
                         (0, s.jsx)(o.Text, {
                             variant: u ? 'text-sm/normal' : 'text-lg/medium',
                             children: (0, A.Hg)({
-                                helpdeskArticle: k,
+                                helpdeskArticle: w,
                                 referralIncentiveLifecycleState: P,
                                 referralsStatuses: G,
                                 isWithinCountdownRange: V
@@ -207,8 +207,8 @@ t.Z = (e) => {
                             className: i()(h.expandedProgressBarButtonContainer, { [h.expandedProgressBarButtonContainerLayout]: !u }),
                             children: [
                                 !u &&
-                                    !U &&
-                                    (0, s.jsx)(p.Z, {
+                                    !j &&
+                                    (0, s.jsx)(m.Z, {
                                         color: o.ButtonColors.CUSTOM,
                                         buttonText: S.Z.Messages.GIFT_NITRO,
                                         className: i()(h.expandedProgressBarGiftingCTA, { [h.expandedProgressBarGiftingCTALayout]: !u }),
@@ -220,13 +220,13 @@ t.Z = (e) => {
                                         className: h.expandedProgressBarSelectFriendsCTA,
                                         color: o.ButtonColors.CUSTOM,
                                         onClick: () => {
-                                            I.default.track(f.rMx.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, { location_stack: w }),
+                                            I.default.track(f.rMx.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, { location_stack: H }),
                                                 (0, o.openModalLazy)(async () => {
                                                     let { default: e } = await n.e('47435').then(n.bind(n, 204387));
                                                     return (t) =>
                                                         (0, s.jsx)(e, {
                                                             ...t,
-                                                            sourceAnalyticsLocations: w
+                                                            sourceAnalyticsLocations: H
                                                         });
                                                 });
                                         },
@@ -252,28 +252,28 @@ t.Z = (e) => {
         Y = x.length === A.Q_,
         z = G.redeemed === A.Q_;
     return (0, s.jsx)(_.Gt, {
-        value: w,
+        value: H,
         children: (0, s.jsx)('div', {
             className: i()({
-                [h.containerWithGlowWithoutBanner]: !W && z && !j,
-                [h.containerWithGlowWithBanner]: !W && z && j,
+                [h.containerWithGlowWithoutBanner]: !W && z && !B,
+                [h.containerWithGlowWithBanner]: !W && z && B,
                 [h.containerWithoutGlow]: W || !z,
                 [h.containerWithMargins]: !u,
-                [h.marginWithBanner]: j,
+                [h.marginWithBanner]: B,
                 [h.containerWithGlowOnSettingsPage]: !W && z && u
             }),
             children: (0, s.jsxs)('div', {
-                ref: H,
+                ref: k,
                 className: i()({
                     [h.expandedProgressBarContainer]: !u,
                     [h.expandedProgressBarContainerSettingsPage]: u,
-                    [h.expandedProgressBarContainerVariant1]: !U && !u,
-                    [h.expandedProgressBarContainerVariant2]: U && !u,
+                    [h.expandedProgressBarContainerVariant1]: !j && !u,
+                    [h.expandedProgressBarContainerVariant2]: j && !u,
                     [h.allReferralsSentBorder]: !W && z,
-                    [h.containerWithBanner]: !W && j
+                    [h.containerWithBanner]: !W && B
                 }),
                 children: [
-                    j &&
+                    B &&
                         !W &&
                         (0, s.jsx)('div', {
                             className: i()(h.banner, {

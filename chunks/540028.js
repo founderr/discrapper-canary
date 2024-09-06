@@ -20,8 +20,8 @@ function T(e) {
     let { closePopout: t, idle: n, pipWindows: a, voiceChannelId: f, onSelect: m } = e;
     n && t();
     let T = (0, i.e7)([u.ZP], () => u.ZP.getSelfEmbeddedActivityForChannel(f)),
-        g = (0, i.e7)([E.Z], () => E.Z.pipWindow),
-        S = (0, i.e7)([d.Z], () => d.Z.getSelectedParticipant(f)),
+        S = (0, i.e7)([E.Z], () => E.Z.pipWindow),
+        g = (0, i.e7)([d.Z], () => d.Z.getSelectedParticipant(f)),
         A = (0, i.e7)([d.Z], () => d.Z.getStreamParticipants(f));
     return (0, r.jsx)(s.Menu, {
         navId: 'pip-menu',
@@ -33,11 +33,11 @@ function T(e) {
                 t = a.find((e) => e.component === h.NYg.VIDEO),
                 n = [];
             return (
-                null != e && (null == g ? void 0 : g.id) !== e.id && n.push({ pipWindow: e }),
+                null != e && (null == S ? void 0 : S.id) !== e.id && n.push({ pipWindow: e }),
                 null != t &&
                     A.forEach((e) => {
                         let r = _.Z.getActiveStreamForApplicationStream(e.stream),
-                            i = e.id === (null == S ? void 0 : S.id) && (null == g ? void 0 : g.id) === t.id;
+                            i = e.id === (null == g ? void 0 : g.id) && (null == S ? void 0 : S.id) === t.id;
                         null != r &&
                             !i &&
                             n.push({
@@ -68,7 +68,7 @@ function T(e) {
                     label: a,
                     action: () =>
                         (function (e) {
-                            (null == g ? void 0 : g.id) !== e.pipWindow.id && (0, l.k3)(e.pipWindow.id);
+                            (null == S ? void 0 : S.id) !== e.pipWindow.id && (0, l.k3)(e.pipWindow.id);
                             let t = e.participant;
                             null != t && t.type !== p.fO.ACTIVITY && o.Z.selectParticipant(f, t.id);
                         })(e)

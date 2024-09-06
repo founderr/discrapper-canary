@@ -114,11 +114,11 @@ function E(e) {
         I = _[Math.max(0, p)],
         m = a.length > 4,
         T = a.length - 3,
-        g = T >= 10 ? 1 : 2,
-        S = I.map((e, t) => {
+        S = T >= 10 ? 1 : 2,
+        g = I.map((e, t) => {
             let i = a[t];
             if (null == i) return null;
-            let o = m && t === g;
+            let o = m && t === S;
             return (0, r.jsx)(
                 'div',
                 {
@@ -141,7 +141,7 @@ function E(e) {
         className: o === c.BRd.DARK ? d.gradientContainerDark : d.gradientContainer,
         children: (0, r.jsx)('div', {
             className: d.groupContainer,
-            children: S
+            children: g
         })
     });
 }

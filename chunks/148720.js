@@ -18,7 +18,7 @@ var r = n(668781),
     h = n(527805),
     p = n(689938);
 async function I(e) {
-    let { channelId: t, applicationId: n, launchId: I, inputApplication: m, analyticsLocations: T, launchingComponentId: g, commandOrigin: S, sectionName: A } = e,
+    let { channelId: t, applicationId: n, launchId: I, inputApplication: m, analyticsLocations: T, launchingComponentId: S, commandOrigin: g, sectionName: A } = e,
         N = _.ZP.getEmbeddedActivitiesForChannel(t).find((e) => e.applicationId === n && (null == I || e.launchId === I)),
         O = m;
     if (null == O) {
@@ -35,8 +35,8 @@ async function I(e) {
                 activityChannelId: t,
                 locationObject: {},
                 analyticsLocations: T,
-                componentId: g,
-                commandOrigin: S,
+                componentId: S,
+                commandOrigin: g,
                 sectionName: A
             });
     }

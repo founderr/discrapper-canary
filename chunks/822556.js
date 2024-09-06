@@ -5,15 +5,15 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(481060),
-    s = n(230711),
+var s = n(481060),
+    a = n(230711),
     l = n(981631),
     r = n(689938);
 function o() {
-    return (0, i.jsx)(a.MenuItem, {
+    return (0, i.jsx)(s.MenuItem, {
         id: 'voice-settings',
         label: r.Z.Messages.VOICE_SETTINGS,
-        action: () => s.Z.open(l.oAB.VOICE),
-        icon: a.SettingsIcon
+        action: () => a.Z.open(l.oAB.VOICE),
+        icon: s.SettingsIcon
     });
 }

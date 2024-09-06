@@ -16,13 +16,13 @@ let p = new Map(),
     I = null,
     m = null,
     T = null;
-function g(e, t) {
+function S(e, t) {
     let n = p.get(e);
     if (null == n) return !1;
     let r = n.delete(t);
     return 0 === n.size && p.delete(e), r;
 }
-function S(e, t, n) {
+function g(e, t, n) {
     var r, i, a;
     return ((null !== (a = null === (i = p.get(e)) || void 0 === i ? void 0 : null === (r = i.get(t)) || void 0 === r ? void 0 : r.flags) && void 0 !== a ? a : h.Dg.NONE) & n) === n;
 }
@@ -54,19 +54,19 @@ class O extends (r = o.ZP.Store) {
     getSpeakers() {
         var e, t;
         let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : h.Yn.DEFAULT;
-        return Array.from(null !== (t = null === (e = p.get(n)) || void 0 === e ? void 0 : e.keys()) && void 0 !== t ? t : []).filter((e) => S(n, e, h.Dg.VOICE));
+        return Array.from(null !== (t = null === (e = p.get(n)) || void 0 === e ? void 0 : e.keys()) && void 0 !== t ? t : []).filter((e) => g(n, e, h.Dg.VOICE));
     }
     isSpeaking(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : h.Yn.DEFAULT;
-        return S(t, e, h.Dg.VOICE);
+        return g(t, e, h.Dg.VOICE);
     }
     isPrioritySpeaker(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : h.Yn.DEFAULT;
-        return S(t, e, h.Dg.PRIORITY);
+        return g(t, e, h.Dg.PRIORITY);
     }
     isSoundSharing(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : h.Yn.DEFAULT;
-        return S(t, e, h.Dg.SOUNDSHARE);
+        return g(t, e, h.Dg.SOUNDSHARE);
     }
     isAnyoneElseSpeaking() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : h.Yn.DEFAULT;
@@ -140,7 +140,7 @@ class O extends (r = o.ZP.Store) {
                 let { userId: n, channelId: r, sessionId: i } = t,
                     a = !1,
                     s = T;
-                return n === I && i === m && (T = null != r ? r : null), s !== T && (a = p.delete(h.Yn.DEFAULT) || a), null == r ? (a = n === I && i === m ? p.delete(h.Yn.DEFAULT) || a : g(h.Yn.DEFAULT, n) || a) : n === I && i !== m ? (a = p.delete(h.Yn.DEFAULT) || a) : n !== I && r !== _.Z.getChannelId() && (a = g(h.Yn.DEFAULT, n) || a), a || e;
+                return n === I && i === m && (T = null != r ? r : null), s !== T && (a = p.delete(h.Yn.DEFAULT) || a), null == r ? (a = n === I && i === m ? p.delete(h.Yn.DEFAULT) || a : S(h.Yn.DEFAULT, n) || a) : n === I && i !== m ? (a = p.delete(h.Yn.DEFAULT) || a) : n !== I && r !== _.Z.getChannelId() && (a = S(h.Yn.DEFAULT, n) || a), a || e;
             }, !1);
         }
     }));

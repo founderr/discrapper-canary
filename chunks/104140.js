@@ -37,11 +37,11 @@ let T = {
         tension: 240,
         duration: 150
     },
-    g = {
+    S = {
         duration: 150,
         friction: 3
     },
-    S = {
+    g = {
         friction: 30,
         tension: 900,
         mass: 1
@@ -153,7 +153,7 @@ class v extends (i = s.Component) {
                       .update({
                           spring: 0,
                           immediate: !1,
-                          config: g
+                          config: S
                       })
                       .start()),
             null != n && null == e.lowerBadge
@@ -162,7 +162,7 @@ class v extends (i = s.Component) {
                       .update({
                           spring: 1,
                           immediate: !document.hasFocus(),
-                          config: S
+                          config: g
                       })
                       .start()
                 : null == n &&
@@ -181,7 +181,7 @@ class v extends (i = s.Component) {
                       .update({
                           spring: 1,
                           immediate: !document.hasFocus(),
-                          config: S
+                          config: g
                       })
                       .start()
                 : null == r &&
@@ -230,8 +230,8 @@ class v extends (i = s.Component) {
     }
     render() {
         let { children: e, className: t, innerClassName: n, lowerBadge: r, lowerBadgeSize: i, style: o, upperBadge: u, highlight: c } = this.props,
-            { maskId: d, lowerBadgeMask: E, upperBadgeMask: h, focused: m, hasRenderedBadge: T, renderComplex: g } = this.state;
-        if (!g)
+            { maskId: d, lowerBadgeMask: E, upperBadgeMask: h, focused: m, hasRenderedBadge: T, renderComplex: S } = this.state;
+        if (!S)
             return (0, a.jsx)(
                 'div',
                 {
@@ -268,7 +268,7 @@ class v extends (i = s.Component) {
                 },
                 'wrapper'
             );
-        let S = ''.concat(d, '-upper_badge_masks'),
+        let g = ''.concat(d, '-upper_badge_masks'),
             A = ''.concat(d, '-lower_badge_masks'),
             N = ''.concat(d, '-blob_mask'),
             R = ''.concat(d, '-stroke_mask'),
@@ -305,7 +305,7 @@ class v extends (i = s.Component) {
                                         }),
                                         T
                                             ? (0, a.jsx)(_.animated.rect, {
-                                                  id: S,
+                                                  id: g,
                                                   x: 28,
                                                   y: -4,
                                                   width: 24,
@@ -351,7 +351,7 @@ class v extends (i = s.Component) {
                                             ? (0, a.jsxs)(a.Fragment, {
                                                   children: [
                                                       (0, a.jsx)('use', {
-                                                          href: '#'.concat(S),
+                                                          href: '#'.concat(g),
                                                           fill: 'black'
                                                       }),
                                                       (0, a.jsx)('use', {
@@ -375,7 +375,7 @@ class v extends (i = s.Component) {
                                                   fill: 'white'
                                               }),
                                               (0, a.jsx)('use', {
-                                                  href: '#'.concat(S),
+                                                  href: '#'.concat(g),
                                                   fill: 'black'
                                               }),
                                               (0, a.jsx)('use', {
@@ -395,7 +395,7 @@ class v extends (i = s.Component) {
                                               }),
                                               (0, a.jsxs)('g', {
                                                   className: I.focusFill,
-                                                  children: [null != u ? (0, a.jsx)('use', { href: '#'.concat(S) }) : null, null != r ? (0, a.jsx)('use', { href: '#'.concat(A) }) : null]
+                                                  children: [null != u ? (0, a.jsx)('use', { href: '#'.concat(g) }) : null, null != r ? (0, a.jsx)('use', { href: '#'.concat(A) }) : null]
                                               })
                                           ]
                                       })

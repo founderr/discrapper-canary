@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(120356),
-    s = n.n(a),
+var s = n(120356),
+    a = n.n(s),
     l = n(442837),
     r = n(481060),
     o = n(607070),
@@ -15,7 +15,7 @@ var a = n(120356),
     d = n(547438);
 function h(e) {
     let { height: t } = e,
-        a = (0, l.e7)([o.Z], () => o.Z.useReducedMotion);
+        s = (0, l.e7)([o.Z], () => o.Z.useReducedMotion);
     return (0, i.jsxs)('div', {
         className: d.root,
         children: [
@@ -28,8 +28,8 @@ function h(e) {
                             let { default: t } = e;
                             return t;
                         }),
-                shouldAnimate: !a,
-                className: s()(d.art, { [d.hidden]: t <= 280 })
+                shouldAnimate: !s,
+                className: a()(d.art, { [d.hidden]: t <= 280 })
             }),
             (0, i.jsx)(r.Heading, {
                 className: d.header,

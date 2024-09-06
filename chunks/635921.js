@@ -13,11 +13,11 @@ var a = n(120356),
     T = n(650032),
     I = n(105759),
     R = n(248042),
-    C = n(422034),
-    g = n(206127),
+    g = n(422034),
+    C = n(206127),
     N = n(710220),
-    p = n(318747),
-    m = n(409100),
+    m = n(318747),
+    p = n(409100),
     A = n(474936),
     f = n(689938),
     S = n(738527);
@@ -28,12 +28,12 @@ let h = (e) => {
             (l = (0, s.jsxs)('div', {
                 className: S.buttonContainer,
                 children: [
-                    (0, s.jsx)(m.Z, {
+                    (0, s.jsx)(p.Z, {
                         forceInverted: !0,
                         className: r()(S.button, i),
                         subscriptionTier: a
                     }),
-                    (0, s.jsx)(p.Z, {
+                    (0, s.jsx)(m.Z, {
                         className: r()(S.button, i),
                         forceWhite: !0
                     })
@@ -44,7 +44,7 @@ let h = (e) => {
             n &&
                 (o = (0, s.jsx)('div', {
                     className: S.buttonContainer,
-                    children: (0, s.jsx)(p.Z, {
+                    children: (0, s.jsx)(m.Z, {
                         className: r()(S.button, i),
                         forceWhite: !0
                     })
@@ -62,7 +62,7 @@ let h = (e) => {
     };
 function x(e) {
     let { variant: t = 'text-lg/normal', withBottomMargin: n = !0 } = e,
-        a = (0, g.$)();
+        a = (0, C.$)();
     return (0, s.jsx)(l.Text, {
         variant: t,
         color: 'always-white',
@@ -71,22 +71,22 @@ function x(e) {
     });
 }
 t.Z = (e) => {
-    let { isFullscreen: t, className: n, buttonClassName: a, subscriptionTier: d, hideSparkles: g, hideSubscribeAndGiftButton: m, entrypoint: O } = e,
+    let { isFullscreen: t, className: n, buttonClassName: a, subscriptionTier: d, hideSparkles: C, hideSubscribeAndGiftButton: p, entrypoint: O } = e,
         { analyticsLocations: b } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_HERO_CTA),
         P = (0, E._O)(),
         v = (0, u.Nx)(),
         L = (0, R.Vi)(),
         Z = (0, i.e7)([_.Z], () => _.Z.affinities),
         D = (0, I.Z)(),
-        { enabled: B } = T._.useExperiment({ location: 'HeroHeading' }, { autoTrackExposure: !1 }),
-        j = O === A.EZ.ApplicationStoreHome && null != D && B,
-        U = Z.length > 0;
+        { enabled: U } = T._.useExperiment({ location: 'HeroHeading' }, { autoTrackExposure: !1 }),
+        B = O === A.EZ.ApplicationStoreHome && null != D && U,
+        j = Z.length > 0;
     return (0, s.jsx)(c.Gt, {
         value: b,
         children: (0, s.jsxs)('div', {
             className: r()(S.container, n, {
                 [S.settingsContainer]: !t,
-                [S.affinityHeight]: !t && U
+                [S.affinityHeight]: !t && j
             }),
             'data-testid': 'v2-marketing-page-hero-header',
             children: [
@@ -98,12 +98,12 @@ t.Z = (e) => {
                             color: 'always-white',
                             children: f.Z.Messages.PREMIUM_MARKETING_HERO_HEADER_TITLE_V3
                         }),
-                        j
+                        B
                             ? (0, s.jsx)(N.Z, { referrer: D })
-                            : U
+                            : j
                               ? (0, s.jsx)('div', {
                                     className: r()(S.affinityDescription),
-                                    children: (0, s.jsx)(C.Z, {
+                                    children: (0, s.jsx)(g.Z, {
                                         textColor: 'always-white',
                                         smallerText: !t
                                     })
@@ -112,12 +112,12 @@ t.Z = (e) => {
                         L
                             ? (0, s.jsx)('div', {
                                   className: S.buttonContainer,
-                                  children: (0, s.jsx)(p.Z, {
+                                  children: (0, s.jsx)(m.Z, {
                                       className: r()(S.button, a),
                                       forceWhite: !0
                                   })
                               })
-                            : m
+                            : p
                               ? null
                               : (0, s.jsx)(h, {
                                     subscriptionTier: d,
@@ -125,15 +125,15 @@ t.Z = (e) => {
                                     inTrial: P,
                                     buttonClassName: a
                                 }),
-                        U &&
-                            !j &&
+                        j &&
+                            !B &&
                             (0, s.jsx)(x, {
                                 variant: 'text-md/normal',
                                 withBottomMargin: !1
                             })
                     ]
                 }),
-                !(v || g) && (0, s.jsx)(M, { isFullscreen: t })
+                !(v || C) && (0, s.jsx)(M, { isFullscreen: t })
             ]
         })
     });

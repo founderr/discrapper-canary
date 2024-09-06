@@ -41,8 +41,8 @@ var r = n(392711),
     I = n(158776),
     m = n(19780),
     T = n(306680),
-    g = n(944486),
-    S = n(914010),
+    S = n(944486),
+    g = n(914010),
     A = n(9156),
     N = n(979651),
     O = n(626135),
@@ -50,8 +50,8 @@ var r = n(392711),
     v = n(700785),
     C = n(546416),
     y = n(981631),
-    L = n(176505);
-function D(e) {
+    D = n(176505);
+function L(e) {
     let t = 0;
     for (let n in e) t += 1;
     return t;
@@ -74,12 +74,12 @@ function b(e) {
         guild_num_channels: o + l,
         guild_num_text_channels: o,
         guild_num_voice_channels: l,
-        guild_num_roles: D(r),
+        guild_num_roles: L(r),
         guild_member_num_roles: null != a ? a.roles.length : 0,
         guild_member_perms: String(null !== (t = p.Z.getGuildPermissions(n)) && void 0 !== t ? t : v.Hn),
         guild_is_vip: n.hasFeature(y.oNc.VIP_REGIONS),
         is_member: null != a,
-        num_voice_channels_active: D(c)
+        num_voice_channels_active: L(c)
     };
 }
 function M(e) {
@@ -129,14 +129,14 @@ function w(e) {
         o = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     if (O.default.isThrottled(e)) return;
     let l = !('location' in s) || s.location !== y.Sbl.GUILD_CREATE_INVITE_SUGGESTION,
-        u = 'guild_id' in s ? s.guild_id : l ? S.Z.getGuildId() : null,
-        d = 'channel_id' in s ? s.channel_id : l ? g.Z.getChannelId(u) : null,
+        u = 'guild_id' in s ? s.guild_id : l ? g.Z.getGuildId() : null,
+        d = 'channel_id' in s ? s.channel_id : l ? S.Z.getChannelId(u) : null,
         _ = c.Z.getChannel(d);
     let E = ((t = _), (n = u), null == t ? (null != n ? n : null) : t.isPrivate() ? null : null !== (i = null !== (r = t.getGuildId()) && void 0 !== r ? r : n) && void 0 !== i ? i : null);
     let f = {
         ...s,
         ...b(E),
-        ...(null != u && null != d && (0, L.AB)(d)
+        ...(null != u && null != d && (0, D.AB)(d)
             ? ((a = 0),
               {
                   channel_static_route: d,

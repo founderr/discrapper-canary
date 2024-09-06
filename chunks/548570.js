@@ -28,8 +28,8 @@ var r = n(512722),
     I = n(797614),
     m = n(218543),
     T = n(857192),
-    g = n(626135),
-    S = n(12647),
+    S = n(626135),
+    g = n(12647),
     A = n(70956),
     N = n(358085),
     O = n(960048),
@@ -37,8 +37,8 @@ var r = n(512722),
     v = n(14639),
     C = n(639655),
     y = n(610308),
-    L = n(91247),
-    D = n(508569),
+    D = n(91247),
+    L = n(508569),
     b = n(183139),
     M = n(645436),
     P = n(833508),
@@ -215,7 +215,7 @@ class Y extends b.Z {
                     this._sendHeartbeatIfDue();
                 }),
                 onError: () => {
-                    this.setResumeUrl(null), S.Z.flushDNSCache(), this._handleClose(!1, 0, 'An error with the websocket occurred');
+                    this.setResumeUrl(null), g.Z.flushDNSCache(), this._handleClose(!1, 0, 'An error with the websocket occurred');
                 },
                 onClose: (e) => {
                     let { wasClean: t, code: n, reason: r } = e;
@@ -226,7 +226,7 @@ class Y extends b.Z {
     _handleHello(e) {
         let t = (this.heartbeatInterval = e.heartbeat_interval),
             n = Date.now() - this.connectionStartTime;
-        x.verbose('[HELLO] via '.concat((0, L.TO)(e), ', ') + 'heartbeat interval: '.concat(t, ', ') + 'took '.concat(n, ' ms')), this._startHeartbeater();
+        x.verbose('[HELLO] via '.concat((0, D.TO)(e), ', ') + 'heartbeat interval: '.concat(t, ', ') + 'took '.concat(n, ' ms')), this._startHeartbeater();
     }
     _handleReconnect() {
         x.verbose('[RECONNECT] gateway requested I reconnect.'), this._cleanup((e) => e.close(4000)), (this.connectionState = R.Z.WILL_RECONNECT), this._connect();
@@ -239,9 +239,9 @@ class Y extends b.Z {
         if ('READY' === t) {
             let t = e.session_id;
             this.sessionId = t;
-            let n = (0, L.TO)(e);
+            let n = (0, D.TO)(e);
             o.Z.setServerTrace(n), x.info('[READY] took '.concat(r, 'ms, as ').concat(t)), x.verbose(''.concat(n)), (this.connectionState = R.Z.SESSION_ESTABLISHED), this.gatewayBackoff.succeed(), (this.iosGoingAwayEventCount = 0), this.setResumeUrl(e.resume_gateway_url);
-        } else 'READY_SUPPLEMENTAL' === t ? (x.info('[READY_SUPPLEMENTAL] took '.concat(r, 'ms')), (this.connectionState = R.Z.SESSION_ESTABLISHED), this.gatewayBackoff.succeed(), (this.iosGoingAwayEventCount = 0)) : 'RESUMED' === t && (x.verbose((0, L.TO)(e)), (this.connectionState = R.Z.SESSION_ESTABLISHED), this.gatewayBackoff.succeed(), (this.iosGoingAwayEventCount = 0));
+        } else 'READY_SUPPLEMENTAL' === t ? (x.info('[READY_SUPPLEMENTAL] took '.concat(r, 'ms')), (this.connectionState = R.Z.SESSION_ESTABLISHED), this.gatewayBackoff.succeed(), (this.iosGoingAwayEventCount = 0)) : 'RESUMED' === t && (x.verbose((0, D.TO)(e)), (this.connectionState = R.Z.SESSION_ESTABLISHED), this.gatewayBackoff.succeed(), (this.iosGoingAwayEventCount = 0));
         this.dispatcher.receiveDispatch(e, t, n);
     }
     handleResumeDispatched() {
@@ -304,11 +304,11 @@ class Y extends b.Z {
                     .then(
                         (e) => {
                             let { status: t } = e;
-                            g.default.track(U.rMx.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, { api_status_code: t });
+                            S.default.track(U.rMx.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, { api_status_code: t });
                         },
                         (e) => {
                             let { status: t } = e;
-                            401 === t && ((this.connectionState = R.Z.CLOSED), x.warn('[WS CLOSED] because of manual authentication failure, marking as closed.'), this._reset(n, 4004, 'invalid token manually detected')), g.default.track(U.rMx.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, { api_status_code: t });
+                            401 === t && ((this.connectionState = R.Z.CLOSED), x.warn('[WS CLOSED] because of manual authentication failure, marking as closed.'), this._reset(n, 4004, 'invalid token manually detected')), S.default.track(U.rMx.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, { api_status_code: t });
                         }
                     ));
     }
@@ -356,7 +356,7 @@ class Y extends b.Z {
     _doResume() {
         var e;
         (this.connectionState = R.Z.RESUMING),
-            (this.dispatcher.resumeAnalytics = (0, L.zH)(Date.now() - this.connectionStartTime)),
+            (this.dispatcher.resumeAnalytics = (0, D.zH)(Date.now() - this.connectionStartTime)),
             x.info('[RESUME] resuming session '.concat(null !== (e = this.sessionId) && void 0 !== e ? e : '', ', seq: ').concat(this.seq)),
             this.send(
                 b.j.RESUME,
@@ -457,7 +457,7 @@ class Y extends b.Z {
                 !0
             ),
             !1 !== e.sentry && O.Z.captureException(n, { tags: { socketCrashedAction: t } }),
-            g.default.track(U.rMx.GATEWAY_SOCKET_RESET, {
+            S.default.track(U.rMx.GATEWAY_SOCKET_RESET, {
                 error_message: n.message,
                 error_stack: n.stack,
                 action: t
@@ -573,7 +573,7 @@ class Y extends b.Z {
                     } catch (e) {}
                 else x.warn('Attempted to send while not being in a connected state opcode: '.concat(e));
             }),
-            (this.dispatcher = new D.Z(this)),
+            (this.dispatcher = new L.Z(this)),
             (this.gatewayBackoff = new s.Z(1000, 60000)),
             (this.connectionState_ = R.Z.CLOSED),
             (this.webSocket = null),

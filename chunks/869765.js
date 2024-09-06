@@ -105,7 +105,7 @@ let T = new (class e {
         h(this, '_channelCaches', new Map());
     }
 })();
-function g(e) {
+function S(e) {
     let t = !1;
     if ((T.updateExistingMessageIfCached(e) && (t = !0), f.OBS.has(e.type))) {
         let n = e.message_reference;
@@ -119,7 +119,7 @@ function g(e) {
                       state: 0,
                       message: (0, d.e5)(t)
                   }),
-                  e.type === f.uaV.THREAD_STARTER_MESSAGE && g(t))
+                  e.type === f.uaV.THREAD_STARTER_MESSAGE && S(t))
                 : T.set(e.channel_id, r, { state: 2 });
         } else {
             let e = E.Z.getMessage(n.channel_id, r);
@@ -134,18 +134,18 @@ function g(e) {
     }
     return t;
 }
-function S(e, t) {
+function g(e, t) {
     let n = !1;
     for (let r of e) n = !1 !== t(r) || n;
     return n;
 }
 function A(e) {
     let { messages: t } = e;
-    return S(t, (e) => g(e));
+    return g(t, (e) => S(e));
 }
 function N(e) {
     let { messages: t } = e;
-    return S(t, (e) => S(e, (e) => g(e)));
+    return g(t, (e) => g(e, (e) => S(e)));
 }
 function O(e) {
     return T.deleteChannelCache(e.channel.id);
@@ -159,7 +159,7 @@ function v() {
 }
 function C(e) {
     let { firstMessages: t } = e;
-    return null != t && S(t, (e) => g(e));
+    return null != t && g(t, (e) => S(e));
 }
 class y extends (i = l.ZP.Store) {
     initialize() {
@@ -182,7 +182,7 @@ h(y, 'displayName', 'ReferencedMessageStore'),
     (t.Z = new y(u.Z, {
         CACHE_LOADED: function (e) {
             let { messages: t } = e;
-            return S(Object.values(t), (e) => S(Object.values(e), (e) => g(e)));
+            return g(Object.values(t), (e) => g(Object.values(e), (e) => S(e)));
         },
         LOCAL_MESSAGES_LOADED: A,
         LOAD_MESSAGES_SUCCESS: A,
@@ -203,14 +203,14 @@ h(y, 'displayName', 'ReferencedMessageStore'),
         },
         LOAD_FORUM_POSTS: function (e) {
             let { threads: t } = e;
-            return S(Object.values(t), (e) => {
+            return g(Object.values(t), (e) => {
                 let { first_message: t } = e;
-                return null != t && g(t);
+                return null != t && S(t);
             });
         },
         MESSAGE_CREATE: function (e) {
             let { message: t } = e;
-            return !!E.Z.getMessages(t.channel_id).ready && g(t);
+            return !!E.Z.getMessages(t.channel_id).ready && S(t);
         },
         MESSAGE_UPDATE: function (e) {
             let { message: t } = e,
@@ -230,7 +230,7 @@ h(y, 'displayName', 'ReferencedMessageStore'),
         },
         MESSAGE_DELETE_BULK: function (e) {
             let { ids: t, channelId: n } = e;
-            return S(t, (e) => R(n, e));
+            return g(t, (e) => R(n, e));
         },
         CREATE_PENDING_REPLY: function (e) {
             let { message: t } = e;

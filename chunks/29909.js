@@ -14,8 +14,8 @@ t.Z = i.memo(function (e) {
     let { width: t, height: n, src: a, url: f, format: h, className: p } = e,
         [I, m] = i.useState(!1),
         T = (0, u.hb)((0, l.iy)(f)),
-        g = T ? _.Z.Messages.GIF_TOOLTIP_REMOVE_FROM_FAVORITES : _.Z.Messages.GIF_TOOLTIP_ADD_TO_FAVORITES,
-        S = T ? o.StarIcon : o.StarOutlineIcon;
+        S = T ? _.Z.Messages.GIF_TOOLTIP_REMOVE_FROM_FAVORITES : _.Z.Messages.GIF_TOOLTIP_ADD_TO_FAVORITES,
+        g = T ? o.StarIcon : o.StarOutlineIcon;
     i.useEffect(() => {
         if (!I) return;
         let e = setTimeout(() => {
@@ -39,7 +39,7 @@ t.Z = i.memo(function (e) {
                   c.S.dispatch(d.CkL.FAVORITE_GIF));
     };
     return (0, r.jsx)(o.Tooltip, {
-        text: g,
+        text: S,
         children: (e) =>
             (0, r.jsx)(o.Clickable, {
                 ...e,
@@ -50,7 +50,7 @@ t.Z = i.memo(function (e) {
                 onMouseDown: (e) => e.preventDefault(),
                 onClick: A,
                 onDoubleClick: (e) => e.preventDefault(),
-                children: (0, r.jsx)(S, {
+                children: (0, r.jsx)(g, {
                     color: 'currentColor',
                     className: E.icon
                 })

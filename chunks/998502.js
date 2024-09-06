@@ -26,8 +26,8 @@ var r,
     I = n(189451),
     m = n(358085),
     T = n(591759),
-    g = n(981631),
-    S = n(413135).Buffer;
+    S = n(981631),
+    g = n(413135).Buffer;
 let A = window.DiscordNative,
     N = ['jpg', 'jpeg', 'png'],
     O = null,
@@ -42,8 +42,8 @@ null != A &&
     (v = null === (r = (i = A.remoteApp).getModuleVersions) || void 0 === r ? void 0 : r.call(i)),
     (R = null === (a = (s = A.remoteApp).getBuildNumber) || void 0 === a ? void 0 : a.call(s)));
 let y = new Set(['discord_erlpack', 'discord_game_utils', 'discord_rpc', 'discord_spellcheck', 'discord_utils', 'discord_voice']),
-    L = !1;
-async function D(e) {
+    D = !1;
+async function L(e) {
     let t = await fetch(
         new Request(e, {
             method: 'GET',
@@ -55,7 +55,7 @@ async function D(e) {
     return _()(null != n, 'Data is null'), n;
 }
 function b(e) {
-    return D(e);
+    return L(e);
 }
 function M(e) {
     var t, n, r, i, a, s, o, l;
@@ -102,7 +102,7 @@ function M(e) {
             try {
                 n = this.requireModule('discord_overlay2');
             } catch (e) {}
-            n && n.reset && n.reset(), n && n.disconnectAllProcesses && n.destroyHostProcess && (n.disconnectAllProcesses(), n.destroyHostProcess()), A.remotePowerMonitor.removeAllListeners(), window.location.origin === window.GLOBAL_ENV.MIGRATION_SOURCE_ORIGIN && !0 !== h.K.get(E.SV) && this.supportsFeature(g.eRX.USER_DATA_CACHE) && A.userDataCache.cacheUserData(h.K.stringify()), null == A || null === (t = A.window) || void 0 === t || t.close(null == A ? void 0 : null === (e = A.globalOverlay) || void 0 === e ? void 0 : e.WINDOW_KEY);
+            n && n.reset && n.reset(), n && n.disconnectAllProcesses && n.destroyHostProcess && (n.disconnectAllProcesses(), n.destroyHostProcess()), A.remotePowerMonitor.removeAllListeners(), window.location.origin === window.GLOBAL_ENV.MIGRATION_SOURCE_ORIGIN && !0 !== h.K.get(E.SV) && this.supportsFeature(S.eRX.USER_DATA_CACHE) && A.userDataCache.cacheUserData(h.K.stringify()), null == A || null === (t = A.window) || void 0 === t || t.close(null == A ? void 0 : null === (e = A.globalOverlay) || void 0 === e ? void 0 : e.WINDOW_KEY);
         },
         inputEventRegister(e, t, n, r) {
             !Array.isArray(t) && (t = t.toJS()),
@@ -171,10 +171,10 @@ function M(e) {
         },
         getVoiceEngine() {
             if (__OVERLAY__) throw Error('cannot require discord_voice in overlay');
-            return (L = !0), this.requireModule('discord_voice');
+            return (D = !0), this.requireModule('discord_voice');
         },
         getDiscordUtils() {
-            if (!L)
+            if (!D)
                 try {
                     this.getVoiceEngine();
                 } catch (e) {}
@@ -244,8 +244,8 @@ function M(e) {
         },
         async copyImage(e) {
             _()(m.isPlatformEmbedded, 'Copy image method called outside native app'), _()('function' == typeof A.clipboard.copyImage, 'Copy image not supported');
-            let t = await D(e);
-            A.clipboard.copyImage(S.from(t), e);
+            let t = await L(e);
+            A.clipboard.copyImage(g.from(t), e);
         },
         async saveImage(e) {
             var t;
@@ -253,8 +253,8 @@ function M(e) {
             let n = T.Z.toURLSafe(e);
             if (null == n) return;
             let r = null !== (t = n.pathname.split('/').pop()) && void 0 !== t ? t : 'unknown',
-                i = await D(e),
-                a = S.from(i);
+                i = await L(e),
+                a = g.from(i);
             A.fileManager.saveWithDialog(a, r);
         },
         async saveFile(e, t) {
@@ -263,8 +263,8 @@ function M(e) {
             let r = T.Z.toURLSafe(e);
             if (null == r) return;
             let i = null !== (n = null != t ? t : r.pathname.split('/').pop()) && void 0 !== n ? n : 'unknown',
-                a = await D(e),
-                s = S.from(a);
+                a = await L(e),
+                s = g.from(a);
             A.fileManager.saveWithDialog(s, i);
         },
         canCopyImage() {

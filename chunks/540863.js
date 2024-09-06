@@ -12,8 +12,8 @@ let o = i.forwardRef(function (e, t) {
     let { children: l, disabled: u = !1, className: c, titleClassName: d, tag: _ = 'h5', required: E = !1, style: f, title: h, error: p, ...I } = e,
         m = i.useId(),
         T = i.useId(),
-        g = null !== (n = I.titleId) && void 0 !== n ? n : m,
-        S = null != p ? (null !== (o = I.errorId) && void 0 !== o ? o : T) : void 0;
+        S = null !== (n = I.titleId) && void 0 !== n ? n : m,
+        g = null != p ? (null !== (o = I.errorId) && void 0 !== o ? o : T) : void 0;
     return (0, r.jsxs)('div', {
         ref: t,
         className: null != c ? c : void 0,
@@ -26,15 +26,15 @@ let o = i.forwardRef(function (e, t) {
                       required: E,
                       error: p,
                       className: d,
-                      id: g,
-                      errorId: S,
+                      id: S,
+                      errorId: g,
                       ...I,
                       children: h
                   })
                 : null,
             (0, r.jsx)(a.ol, {
-                titleId: g,
-                errorId: S,
+                titleId: S,
+                errorId: g,
                 error: null != p ? p : void 0,
                 children: l
             })

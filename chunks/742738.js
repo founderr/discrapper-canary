@@ -15,8 +15,8 @@ var r,
     I = n(501655),
     m = n(750154),
     T = n(427679),
-    g = n(71275),
-    S = n(157925),
+    S = n(71275),
+    g = n(157925),
     A = n(981631);
 let N = null;
 function O() {
@@ -36,11 +36,11 @@ function O() {
             v = R.filter((e) => e.type === I.Ui.STREAM).length,
             C = R.length - v,
             y = p.Z.getParticipantCount(o) - v,
-            L = (null == O ? void 0 : null === (t = O.party) || void 0 === t ? void 0 : t.size) != null ? O.party.size[1] : 0;
+            D = (null == O ? void 0 : null === (t = O.party) || void 0 === t ? void 0 : t.size) != null ? O.party.size[1] : 0;
         return {
-            application_id: S.gD,
+            application_id: g.gD,
             name: null !== (i = null !== (r = l.topic) && void 0 !== r ? r : u.topic) && void 0 !== i ? i : u.name,
-            type: (0, g.xJ)(u.id) ? A.IIU.WATCHING : A.IIU.LISTENING,
+            type: (0, S.xJ)(u.id) ? A.IIU.WATCHING : A.IIU.LISTENING,
             timestamps: { start: null !== (a = null == O ? void 0 : null === (n = O.timestamps) || void 0 === n ? void 0 : n.start) && void 0 !== a ? a : new Date().getTime() },
             assets: {
                 small_image: null !== (s = c.icon) && void 0 !== s ? s : void 0,
@@ -48,7 +48,7 @@ function O() {
             },
             party: {
                 id: E,
-                size: [C, Math.max(y, L)]
+                size: [C, Math.max(y, D)]
             }
         };
     })();

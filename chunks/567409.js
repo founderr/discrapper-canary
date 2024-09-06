@@ -1,35 +1,35 @@
-n.d(a, {
+t.d(n, {
     Z: function () {
         return I;
     }
 }),
-    n(47120);
-var t = n(470079),
-    r = n(392711),
-    s = n.n(r),
-    o = n(876215),
-    i = n(442837),
-    l = n(146282),
-    c = n(897674),
-    u = n(709054),
-    d = n(206583);
+    t(47120);
+var a = t(470079),
+    r = t(392711),
+    s = t.n(r),
+    o = t(876215),
+    i = t(442837),
+    l = t(146282),
+    c = t(897674),
+    d = t(709054),
+    u = t(206583);
 let _ = new Set([o.s.PLAYED_GAME]),
     E = (e) => _.has(e.content_type);
 function I() {
-    let e = (0, c.Z)(d.YN.GAME_PROFILE_FEED),
-        a = (0, c.Z)(d.YN.GLOBAL_FEED),
-        n = t.useMemo(
+    let e = (0, c.Z)(u.YN.GAME_PROFILE_FEED),
+        n = (0, c.Z)(u.YN.GLOBAL_FEED),
+        t = a.useMemo(
             () =>
-                s()(a)
+                s()(n)
                     .unionBy(e, (e) => e.id)
                     .filter(E)
-                    .orderBy((e) => u.default.extractTimestamp(e.id), 'desc')
-                    .uniqWith((e, a) => e.author_id === a.author_id && e.extra.application_id === a.extra.application_id)
+                    .orderBy((e) => d.default.extractTimestamp(e.id), 'desc')
+                    .uniqWith((e, n) => e.author_id === n.author_id && e.extra.application_id === n.extra.application_id)
                     .value(),
-            [e, a]
+            [e, n]
         );
     return {
-        requestId: (0, i.e7)([l.Z], () => l.Z.getFeedRequestId(d.YN.GAME_PROFILE_FEED)),
-        entries: n
+        requestId: (0, i.e7)([l.Z], () => l.Z.getFeedRequestId(u.YN.GAME_PROFILE_FEED)),
+        entries: t
     };
 }

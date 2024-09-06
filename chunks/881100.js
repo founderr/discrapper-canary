@@ -1,6 +1,6 @@
 n.d(t, {
     N: function () {
-        return k;
+        return w;
     }
 });
 var s = n(399606),
@@ -17,11 +17,11 @@ var s = n(399606),
     T = n(323780),
     I = n(101732),
     R = n(450598),
-    C = n(633030),
-    g = n(97942),
+    g = n(633030),
+    C = n(97942),
     N = n(269987),
-    p = n(548629),
-    m = n(507084),
+    m = n(548629),
+    p = n(507084),
     A = n(680313),
     f = n(926433),
     S = n(302036),
@@ -35,19 +35,19 @@ var s = n(399606),
     L = n(334347),
     Z = n(943734),
     D = n(603076),
-    B = n(472656),
-    j = n(912429),
-    U = n(772969),
+    U = n(472656),
+    B = n(912429),
+    j = n(772969),
     G = n(926262);
 let y = (e, t, n) => ((0, a.wj)(e) ? t : n),
-    k = (e) => {
+    w = (e) => {
         let { styles: t } = e,
             n = (0, i.ZP)(),
             a = (0, s.e7)([l.default], () => {
                 let e = l.default.getCurrentUser();
                 return c.ZP.canUsePremiumProfileCustomization(e);
             }),
-            k = (0, o.BU)(d.Uq / 1024, { useKibibytes: !0 });
+            w = (0, o.BU)(d.Uq / 1024, { useKibibytes: !0 });
         return {
             badge: {
                 title: E.Z.Messages.PREMIUM_MARKETING_BADGE_PERK_TITLE,
@@ -91,7 +91,7 @@ let y = (e, t, n) => ((0, a.wj)(e) ? t : n),
                     };
                     return a ? E.Z.Messages.PREMIUM_MARKETING_PER_GUILD_PROFILE_THEMES_PERK_DESCRIPTION_CHECK_IT_OUT.format({ onCheckItOutClick: t }) : E.Z.Messages.PREMIUM_MARKETING_PER_GUILD_PROFILE_THEMES_PERK_DESCRIPTION_TRY_IT_OUT.format({ onTryItOutClick: t });
                 },
-                imageSource: g,
+                imageSource: C,
                 imageClassName: t.perGuildProfilesImage
             },
             longerMessages: {
@@ -103,19 +103,19 @@ let y = (e, t, n) => ((0, a.wj)(e) ? t : n),
             moreGuilds: {
                 title: E.Z.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_TITLE,
                 description: E.Z.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_DESCRIPTION,
-                imageSource: y(n, C, B),
+                imageSource: y(n, g, U),
                 imageClassName: t.moreGuildsImage
             },
             moreGuildsAlt: {
                 title: E.Z.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_TITLE,
                 description: E.Z.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_DESCRIPTION,
-                imageSource: y(n, m, A),
+                imageSource: y(n, p, A),
                 imageClassName: t.moreGuildsAltImage
             },
             remix: {
                 title: E.Z.Messages.REMIXING_PERKS_CARD_TITLE,
                 description: E.Z.Messages.REMIXING_PERKS_CARD_DESCRIPTION,
-                imageSource: y(n, N, p),
+                imageSource: y(n, N, m),
                 imageClassName: t.remixingImage,
                 isEarlyAccess: !0
             },
@@ -128,25 +128,25 @@ let y = (e, t, n) => ((0, a.wj)(e) ? t : n),
             stickers: {
                 title: E.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE_OLD,
                 description: E.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_DESCRIPTION,
-                imageSource: y(n, h, j),
+                imageSource: y(n, h, B),
                 imageClassName: t.stickersImage
             },
             stickersBurst: {
                 title: E.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE,
                 description: E.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_DESCRIPTION,
-                imageSource: y(n, h, j),
+                imageSource: y(n, h, B),
                 imageClassName: t.stickersImage
             },
             stickersPerkDiscoverability: {
                 title: E.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE,
                 description: E.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_LONG_DESCRIPTION,
-                imageSource: y(n, h, j),
+                imageSource: y(n, h, B),
                 imageClassName: t.stickersImage
             },
             streaming: {
                 title: E.Z.Messages.PREMIUM_MARKETING_FEATURE_PREMIUM_GO_LIVE_TITLE,
                 description: E.Z.Messages.PREMIUM_MARKETING_STREAMING_SMALL_PERK_DESCRIPTION,
-                imageSource: U,
+                imageSource: j,
                 imageClassName: t.streamingImage
             },
             superReactions: {
@@ -156,8 +156,8 @@ let y = (e, t, n) => ((0, a.wj)(e) ? t : n),
                 imageClassName: t.superReactionsImage
             },
             upload: {
-                title: E.Z.Messages.PREMIUM_MARKETING_UPLOADS_SMALL_PERK_TITLE.format({ premiumMaxSize: k }),
-                description: E.Z.Messages.PREMIUM_MARKETING_UPLOADS_SMALL_PERK_DESCRIPTION.format({ premiumMaxSize: k }),
+                title: E.Z.Messages.PREMIUM_MARKETING_UPLOADS_SMALL_PERK_TITLE.format({ premiumMaxSize: w }),
+                description: E.Z.Messages.PREMIUM_MARKETING_UPLOADS_SMALL_PERK_DESCRIPTION.format({ premiumMaxSize: w }),
                 imageSource: G,
                 imageClassName: t.uploadImage
             },

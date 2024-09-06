@@ -13,17 +13,17 @@ var s = n(735250),
     T = n(477734),
     I = n(626135),
     R = n(881100),
-    C = n(981631),
-    g = n(689938),
+    g = n(981631),
+    C = n(689938),
     N = n(757355);
-let p = (e) => (e ? g.Z.Messages.PREMIUM_MARKETING_PERKS_TITLE_NITRO_HOME : g.Z.Messages.PREMIUM_MARKETING_PERKS_TITLE),
-    m = (e) => {
+let m = (e) => (e ? C.Z.Messages.PREMIUM_MARKETING_PERKS_TITLE_NITRO_HOME : C.Z.Messages.PREMIUM_MARKETING_PERKS_TITLE),
+    p = (e) => {
         let { isShowingAll: t, onClick: n } = e;
         return (0, s.jsxs)(o.Clickable, {
             onClick: n,
             className: N.customButton,
             children: [
-                t ? g.Z.Messages.PREMIUM_MARKETING_PERKS_SEE_LESS : g.Z.Messages.PREMIUM_MARKETING_PERKS_SEE_ALL,
+                t ? C.Z.Messages.PREMIUM_MARKETING_PERKS_SEE_LESS : C.Z.Messages.PREMIUM_MARKETING_PERKS_SEE_ALL,
                 t
                     ? (0, s.jsx)(o.ChevronSmallUpIcon, {
                           size: 'md',
@@ -82,7 +82,7 @@ t.Z = (e) => {
         [r, d] = a.useState(!1),
         u = (0, R.N)({ styles: N }),
         E = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
-        { analyticsLocations: g } = (0, _.ZP)(),
+        { analyticsLocations: C } = (0, _.ZP)(),
         f = (0, T._f)(),
         S = [u.emoji, u.streaming, u.upload, u.customAppIcons, u.soundboard, f ? u.remix : u.videoBackground, u.superReactions, u.stickersPerkDiscoverability, u.badgeAlt];
     return (0, s.jsxs)('div', {
@@ -95,7 +95,7 @@ t.Z = (e) => {
             (0, s.jsx)(o.Heading, {
                 variant: 'heading-xxl/extrabold',
                 className: i()(N.perksTitle),
-                children: p(n)
+                children: m(n)
             }),
             (0, s.jsx)('div', {
                 className: i()(N.perkCardContainer, { [N.perkCardContainerExpanded]: r }),
@@ -109,10 +109,10 @@ t.Z = (e) => {
                                 [N.sizeGizmo]: !r,
                                 [N.sizeGizmoExpanded]: r
                             }),
-                            children: (0, s.jsx)(m, {
+                            children: (0, s.jsx)(p, {
                                 onClick: () => {
-                                    I.default.track(C.rMx.PREMIUM_MARKETING_PERKS_SEE_ALL_CLICKED, {
-                                        location_stack: g,
+                                    I.default.track(g.rMx.PREMIUM_MARKETING_PERKS_SEE_ALL_CLICKED, {
+                                        location_stack: C,
                                         was_expanded: r
                                     }),
                                         d(!r);

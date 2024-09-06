@@ -22,18 +22,18 @@ function p(e) {
         n = (0, s.e7)([l.Z], () => l.Z.useReducedMotion),
         [p, I] = i.useState(!1),
         [m, T] = i.useState(0),
-        g = i.useRef(null),
-        S = Math.min(_.Eu4.TIER_3, t.premiumTier + 1),
+        S = i.useRef(null),
+        g = Math.min(_.Eu4.TIER_3, t.premiumTier + 1),
         A = _.oCV[t.premiumTier],
-        N = _.oCV[S],
+        N = _.oCV[g],
         O = (t.premiumSubscriberCount - A) / (N - A),
         R = d.P[t.premiumTier],
-        v = d.P[S],
+        v = d.P[g],
         C = t.premiumTier === _.Eu4.TIER_3,
         {
             progressBarFillWidthFactor: y,
-            isProgressBarAnimationComplete: L,
-            setShouldFireConfetti: D,
+            isProgressBarAnimationComplete: D,
+            setShouldFireConfetti: L,
             shouldFireConfetti: b,
             tierMarkerAnimationPosition: M
         } = (function (e) {
@@ -134,11 +134,11 @@ function p(e) {
                     (0, r.jsx)(
                         d.Z,
                         {
-                            confettiTriggerRef: g,
+                            confettiTriggerRef: S,
                             guild: t,
-                            isProgressBarAnimationComplete: L,
+                            isProgressBarAnimationComplete: D,
                             setConfettiCount: T,
-                            setShouldFireConfetti: D,
+                            setShouldFireConfetti: L,
                             tier: e,
                             tierMarkerAnimationPosition: M,
                             children: (0, u.nW)(e)
@@ -148,7 +148,7 @@ function p(e) {
                 ),
                 (0, r.jsx)(c.Z, {
                     confettiCount: m,
-                    confettiTriggerRef: g,
+                    confettiTriggerRef: S,
                     isFiring: b
                 })
             ]

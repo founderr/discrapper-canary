@@ -293,14 +293,14 @@ var t, n;
                         throw {
                             name: 'RetryError',
                             message: 'Unreachable hosts - your application id may be incorrect. If the error persists, contact support@algolia.com.',
-                            transporterStackTrace: S(_)
+                            transporterStackTrace: g(_)
                         };
                     var o = {
                             data: E,
                             headers: p,
                             method: I,
                             url: (function (e, t, n) {
-                                var r = g(n),
+                                var r = S(n),
                                     i = ''
                                         .concat(e.protocol, '://')
                                         .concat(e.url, '/')
@@ -362,7 +362,7 @@ var t, n;
                                             status: r,
                                             transporterStackTrace: t
                                         };
-                                    })(e, S(_)))
+                                    })(e, g(_)))
                                 );
                             }
                         };
@@ -487,7 +487,7 @@ var t, n;
                 };
             return d;
         }
-        function g(e) {
+        function S(e) {
             return Object.keys(e)
                 .map(function (t) {
                     var n;
@@ -495,7 +495,7 @@ var t, n;
                 })
                 .join('&');
         }
-        function S(e) {
+        function g(e) {
             return e.map(function (e) {
                 return A(e);
             });
@@ -571,7 +571,7 @@ var t, n;
                     );
                 };
             },
-            L = function (e) {
+            D = function (e) {
                 return function (t, n) {
                     return e.transporter.write(
                         {
@@ -583,7 +583,7 @@ var t, n;
                     );
                 };
             };
-        function D(e) {
+        function L(e) {
             return (function t(n) {
                 return e.request(n).then(function (r) {
                     if ((void 0 !== e.batch && e.batch(r.hits), !e.shouldStop(r))) return r.cursor ? t({ cursor: r.cursor }) : t({ page: (n.page || 0) + 1 });
@@ -954,7 +954,7 @@ var t, n;
             er = function (e) {
                 return function (n, r) {
                     var i = n.map(function (e) {
-                        return t(t({}, e), {}, { params: g(e.params || {}) });
+                        return t(t({}, e), {}, { params: S(e.params || {}) });
                     });
                     return e.transporter.read(
                         {
@@ -1183,7 +1183,7 @@ var t, n;
             },
             eh = function (e) {
                 return function (n) {
-                    return D(
+                    return L(
                         t(
                             t(
                                 {
@@ -1213,7 +1213,7 @@ var t, n;
             ep = function (e) {
                 return function (n) {
                     var r = t({ hitsPerPage: 1000 }, n);
-                    return D(
+                    return L(
                         t(
                             t(
                                 {
@@ -1246,7 +1246,7 @@ var t, n;
             eI = function (e) {
                 return function (n) {
                     var r = t({ hitsPerPage: 1000 }, n);
-                    return D(
+                    return L(
                         t(
                             t(
                                 {
@@ -1331,7 +1331,7 @@ var t, n;
                     );
                 };
             },
-            eg = function (e) {
+            eS = function (e) {
                 return function (t) {
                     var r = t || {},
                         i = r.forwardToReplicas,
@@ -1353,7 +1353,7 @@ var t, n;
                     );
                 };
             },
-            eS = function (e) {
+            eg = function (e) {
                 return function (t) {
                     var r = t || {},
                         i = r.forwardToReplicas,
@@ -1484,7 +1484,7 @@ var t, n;
                         });
                 };
             },
-            eL = function (e) {
+            eD = function (e) {
                 return function (t, n, r) {
                     return e.transporter.read(
                         {
@@ -1500,7 +1500,7 @@ var t, n;
                     );
                 };
             },
-            eD = function (e) {
+            eL = function (e) {
                 return function (i, a) {
                     var s = a || {},
                         o = s.query,
@@ -1666,7 +1666,7 @@ var t, n;
                             indexName: p
                         }),
                         T = [],
-                        g = f(
+                        S = f(
                             e.indexName,
                             p,
                             'copy',
@@ -1679,9 +1679,9 @@ var t, n;
                             )
                         );
                     return (
-                        T.push(g),
+                        T.push(S),
                         l(
-                            (u ? g.wait(E) : g)
+                            (u ? S.wait(E) : S)
                                 .then(function () {
                                     var e = m(
                                         a,
@@ -2077,10 +2077,10 @@ var t, n;
                 p,
                 I,
                 m,
-                g,
                 S,
+                g,
                 A,
-                D,
+                L,
                 em = {
                     appId: e,
                     apiKey: n,
@@ -2318,7 +2318,7 @@ var t, n;
                                     {
                                         methods: {
                                             getPersonalizationStrategy: y,
-                                            setPersonalizationStrategy: L
+                                            setPersonalizationStrategy: D
                                         }
                                     }
                                 )).region || 'us'),
@@ -2344,7 +2344,7 @@ var t, n;
                     };
                 };
             return (
-                (S = (g = t(
+                (g = (S = t(
                     t({}, e0),
                     {},
                     {
@@ -2393,7 +2393,7 @@ var t, n;
                                         methods: {
                                             batch: ef,
                                             delete: eN,
-                                            findAnswers: eL,
+                                            findAnswers: eD,
                                             getObject: eb,
                                             getObjects: eP,
                                             saveObject: eH,
@@ -2411,7 +2411,7 @@ var t, n;
                                             clearObjects: eT,
                                             browseObjects: eh,
                                             getObjectPosition: eM,
-                                            findObject: eD,
+                                            findObject: eL,
                                             exists: ey,
                                             saveSynonym: eW,
                                             saveSynonyms: eK,
@@ -2419,7 +2419,7 @@ var t, n;
                                             searchSynonyms: eX,
                                             browseSynonyms: eI,
                                             deleteSynonym: eC,
-                                            clearSynonyms: eS,
+                                            clearSynonyms: eg,
                                             replaceAllObjects: eB,
                                             replaceAllSynonyms: eV,
                                             searchRules: eQ,
@@ -2429,7 +2429,7 @@ var t, n;
                                             saveRules: ej,
                                             replaceAllRules: eF,
                                             browseRules: ep,
-                                            clearRules: eg
+                                            clearRules: eS
                                         }
                                     });
                                 };
@@ -2489,20 +2489,20 @@ var t, n;
                         }
                     }
                 )).appId),
-                (A = s(void 0 !== g.authMode ? g.authMode : d.WithinHeaders, S, g.apiKey)),
+                (A = s(void 0 !== S.authMode ? S.authMode : d.WithinHeaders, g, S.apiKey)),
                 u(
                     {
-                        transporter: (D = T(
+                        transporter: (L = T(
                             t(
                                 t(
                                     {
                                         hosts: [
                                             {
-                                                url: ''.concat(S, '-dsn.algolia.net'),
+                                                url: ''.concat(g, '-dsn.algolia.net'),
                                                 accept: E.Read
                                             },
                                             {
-                                                url: ''.concat(S, '.algolia.net'),
+                                                url: ''.concat(g, '.algolia.net'),
                                                 accept: E.Write
                                             }
                                         ].concat(
@@ -2513,30 +2513,30 @@ var t, n;
                                                     (e[t] = e[n]), (e[n] = r);
                                                 }
                                                 return e;
-                                            })([{ url: ''.concat(S, '-1.algolianet.com') }, { url: ''.concat(S, '-2.algolianet.com') }, { url: ''.concat(S, '-3.algolianet.com') }])
+                                            })([{ url: ''.concat(g, '-1.algolianet.com') }, { url: ''.concat(g, '-2.algolianet.com') }, { url: ''.concat(g, '-3.algolianet.com') }])
                                         )
                                     },
-                                    g
+                                    S
                                 ),
                                 {},
                                 {
-                                    headers: t(t(t({}, A.headers()), { 'content-type': 'application/x-www-form-urlencoded' }), g.headers),
-                                    queryParameters: t(t({}, A.queryParameters()), g.queryParameters)
+                                    headers: t(t(t({}, A.headers()), { 'content-type': 'application/x-www-form-urlencoded' }), S.headers),
+                                    queryParameters: t(t({}, A.queryParameters()), S.queryParameters)
                                 }
                             )
                         )),
-                        appId: S,
+                        appId: g,
                         addAlgoliaAgent: function (e, t) {
-                            D.userAgent.add({
+                            L.userAgent.add({
                                 segment: e,
                                 version: t
                             });
                         },
                         clearCache: function () {
-                            return Promise.all([D.requestsCache.clear(), D.responsesCache.clear()]).then(function () {});
+                            return Promise.all([L.requestsCache.clear(), L.responsesCache.clear()]).then(function () {});
                         }
                     },
-                    g.methods
+                    S.methods
                 )
             );
         }

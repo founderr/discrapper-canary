@@ -1,103 +1,103 @@
 n.d(t, {
     Z: function () {
-        return O;
+        return j;
     }
 }),
     n(47120);
 var i = n(735250),
-    a = n(470079),
-    s = n(120356),
-    l = n.n(s),
+    s = n(470079),
+    a = n(120356),
+    l = n.n(a),
     r = n(392711),
     o = n.n(r),
     c = n(149765),
     u = n(866442),
     d = n(442837),
     h = n(481060),
-    p = n(787014),
-    m = n(911969),
+    m = n(787014),
+    p = n(911969),
     _ = n(933557),
     f = n(605436),
     E = n(185413),
-    C = n(42311),
-    g = n(626786),
+    g = n(42311),
+    C = n(626786),
     I = n(434404),
     x = n(454585),
     T = n(430824),
-    N = n(496675),
-    S = n(594174),
-    v = n(700785),
-    Z = n(51144),
-    A = n(396769),
+    S = n(496675),
+    v = n(594174),
+    N = n(700785),
+    A = n(51144),
+    Z = n(396769),
     M = n(967128),
     b = n(318374),
     R = n(981631),
     L = n(689938),
-    j = n(123197);
-function O(e) {
+    P = n(123197);
+function j(e) {
     let { channel: t } = e,
-        [n, s] = a.useState(!1),
+        [n, a] = s.useState(!1),
         r = (0, _.ZP)(t, !0),
-        O = t.guild_id,
-        P = (0, d.e7)([T.Z], () => (null != O ? T.Z.getRoles(O) : void 0)),
-        y = (0, d.e7)([S.default, T.Z], () => {
+        j = t.guild_id,
+        O = (0, d.e7)([T.Z], () => (null != j ? T.Z.getRoles(j) : void 0)),
+        y = (0, d.e7)([v.default, T.Z], () => {
             var e;
-            return S.default.getUser(null === (e = T.Z.getGuild(O)) || void 0 === e ? void 0 : e.ownerId);
+            return v.default.getUser(null === (e = T.Z.getGuild(j)) || void 0 === e ? void 0 : e.ownerId);
         }),
-        D = a.useMemo(
+        D = s.useMemo(
             () =>
-                null != O
-                    ? o()(P)
+                null != j
+                    ? o()(O)
                           .sortBy((e) => -e.position)
-                          .filter((e) => !(0, f.pM)(O, e.id))
+                          .filter((e) => !(0, f.pM)(j, e.id))
                           .value()
                     : [],
-            [O, P]
+            [j, O]
         ),
-        k = a.useMemo(
+        k = s.useMemo(
             () =>
                 o()(D)
                     .filter((e) => {
-                        if (null == O) return !1;
-                        let n = v.I0({
+                        if (null == j) return !1;
+                        let n = N.I0({
                             forceRoles: { [e.id]: e },
                             context: t
                         });
                         return c.e$(n, R.Plq.ADMINISTRATOR) || c.e$(n, R.Plq.VIEW_CHANNEL);
                     })
                     .value(),
-            [t, O, D]
+            [t, j, D]
         ),
         U = (0, d.Wu)(
-            [S.default],
+            [v.default],
             () => {
                 let e = {};
                 for (let n of (null != y && (e[y.id] = y), Object.values(t.permissionOverwrites))) {
-                    if (n.type !== m.BN.MEMBER || null != e[n.id]) continue;
-                    let t = S.default.getUser(n.id);
+                    if (n.type !== p.BN.MEMBER || null != e[n.id]) continue;
+                    let t = v.default.getUser(n.id);
                     null != t && (e[t.id] = t);
                 }
                 return o()(e)
                     .filter((e) => {
                         var n;
-                        let i = v.BT({
+                        let i = N.BT({
                                 permission: R.Plq.ADMINISTRATOR,
                                 user: e,
                                 context: t
                             }),
-                            a = null !== (n = t.permissionOverwrites[e.id]) && void 0 !== n ? n : v.Hn,
-                            s = c.e$(a.allow, R.Plq.VIEW_CHANNEL);
-                        return i || s;
+                            s = null !== (n = t.permissionOverwrites[e.id]) && void 0 !== n ? n : N.Hn,
+                            a = c.e$(s.allow, R.Plq.VIEW_CHANNEL);
+                        return i || a;
                     })
                     .value();
             },
             [t, y]
         ),
-        w = N.Z.can(R.Plq.MANAGE_CHANNELS, t) || N.Z.can(R.Plq.MANAGE_ROLES, t);
+        w = S.Z.can(R.Plq.MANAGE_CHANNELS, t) || S.Z.can(R.Plq.MANAGE_ROLES, t);
     function B() {
-        p.ZP.open(t.id);
+        m.ZP.open(t.id);
     }
-    let H = a.useCallback(() => s(!1), []);
+    let H = s.useCallback(() => a(!1), []);
     return (0, i.jsxs)(M.ZP, {
         channelId: t.id,
         children: [
@@ -114,17 +114,17 @@ function O(e) {
             }),
             w
                 ? (0, i.jsxs)('div', {
-                      className: j.channelSettingButtons,
+                      className: P.channelSettingButtons,
                       children: [
-                          (0, i.jsx)(A.Z, {
+                          (0, i.jsx)(Z.Z, {
                               label: L.Z.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TITLE,
-                              onClick: () => s(!0),
+                              onClick: () => a(!0),
                               icon: (0, i.jsx)(h.GroupIcon, {
                                   size: 'xs',
                                   color: 'currentColor'
                               })
                           }),
-                          (0, i.jsx)(A.Z, {
+                          (0, i.jsx)(Z.Z, {
                               label: L.Z.Messages.EDIT_CHANNEL,
                               onClick: B,
                               icon: (0, i.jsx)(h.PencilIcon, {
@@ -136,20 +136,20 @@ function O(e) {
                   })
                 : null,
             (0, i.jsxs)('div', {
-                className: j.members,
+                className: P.members,
                 children: [
                     (function () {
                         if (1 !== U.length || k.length > 0)
                             return (0, i.jsx)(b.Z, {
                                 guildId: t.guild_id,
-                                className: j.avatars,
+                                className: P.avatars,
                                 maxUsers: 5,
                                 users: U
                             });
                         let e = U[0],
-                            n = Z.ZP.getName(e);
+                            n = A.ZP.getName(e);
                         return (0, i.jsxs)('div', {
-                            className: j.avatars,
+                            className: P.avatars,
                             children: [
                                 (0, i.jsx)(h.Avatar, {
                                     src: e.getAvatarURL(t.guild_id, 24),
@@ -158,7 +158,7 @@ function O(e) {
                                 }),
                                 (0, i.jsx)(h.Text, {
                                     tag: 'span',
-                                    className: j.singleUserName,
+                                    className: P.singleUserName,
                                     variant: 'text-md/normal',
                                     children: n
                                 }),
@@ -173,14 +173,14 @@ function O(e) {
                         });
                     })(),
                     k.map((e, n) => {
-                        var a, s;
-                        let r = null !== (s = e.colorString) && void 0 !== s ? s : (0, u.Rf)(R.p6O),
-                            o = (null === (a = e.tags) || void 0 === a ? void 0 : a.guild_connections) !== void 0;
+                        var s, a;
+                        let r = null !== (a = e.colorString) && void 0 !== a ? a : (0, u.Rf)(R.p6O),
+                            o = (null === (s = e.tags) || void 0 === s ? void 0 : s.guild_connections) !== void 0;
                         return w
                             ? (0, i.jsx)(
-                                  C.Z,
+                                  g.Z,
                                   {
-                                      className: l()(j.role, { [j.last]: n === k.length - 1 }),
+                                      className: l()(P.role, { [P.last]: n === k.length - 1 }),
                                       roleName: e.name,
                                       roleColor: r,
                                       disabled: !w,
@@ -192,9 +192,9 @@ function O(e) {
                                   e.id
                               )
                             : (0, i.jsx)(
-                                  g.Z,
+                                  C.Z,
                                   {
-                                      className: l()(j.role, { [j.last]: n === k.length - 1 }),
+                                      className: l()(P.role, { [P.last]: n === k.length - 1 }),
                                       roleName: e.name,
                                       roleColor: r,
                                       verified: o
@@ -212,7 +212,7 @@ function O(e) {
                               onClose: () => (H(), e.onClose()),
                               channelId: t.id
                           }),
-                      onCloseRequest: () => s(!1)
+                      onCloseRequest: () => a(!1)
                   })
                 : null
         ]

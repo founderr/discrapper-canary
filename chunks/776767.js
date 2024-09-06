@@ -11,21 +11,21 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(120356),
-    s = n.n(a),
+var s = n(120356),
+    a = n.n(s),
     l = n(481060),
     r = n(395193);
 let o = 16;
 function c(e) {
-    let { description: t, name: n, icon: a, onNavigate: c, className: u, missingNavIcon: d } = e;
+    let { description: t, name: n, icon: s, onNavigate: c, className: u, missingNavIcon: d } = e;
     return (0, i.jsxs)(l.Clickable, {
         onClick: c,
-        className: s()(r.modInfoItem, null != c && r.modInfoAction, u),
+        className: a()(r.modInfoItem, null != c && r.modInfoAction, u),
         children: [
-            null != a &&
+            null != s &&
                 (0, i.jsx)('div', {
                     className: r.modInfoItemIcon,
-                    children: a
+                    children: s
                 }),
             null != n &&
                 (0, i.jsx)('div', {

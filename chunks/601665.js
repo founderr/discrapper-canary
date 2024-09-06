@@ -21,23 +21,23 @@ var r = n(735250),
     I = n(438163),
     m = n(502762),
     T = n(952124),
-    g = n(544989),
-    S = n(171368),
+    S = n(544989),
+    g = n(171368),
     A = n(895697),
     N = n(161572),
     O = n(228168),
     R = n(689938),
     v = n(115879);
 function C(e) {
-    let { user: t, currentUser: n, guildId: C, channelId: y, messageId: L, roleId: D, closePopout: b, setPopoutRef: M, disableUserProfileLink: P = __OVERLAY__, newAnalyticsLocations: U = [] } = e,
+    let { user: t, currentUser: n, guildId: C, channelId: y, messageId: D, roleId: L, closePopout: b, setPopoutRef: M, disableUserProfileLink: P = __OVERLAY__, newAnalyticsLocations: U = [] } = e,
         { analyticsLocations: w } = (0, u.ZP)([...U, l.Z.BITE_SIZE_PROFILE_POPOUT]),
         x = (0, _.ZB)({
             layout: 'BITE_SIZE_POPOUT',
             userId: t.id,
             guildId: C,
             channelId: y,
-            messageId: L,
-            roleId: D
+            messageId: D,
+            roleId: L
         }),
         G = (0, f.ZP)(t.id, C),
         k = (0, a.e7)([d.Z], () => (null != C ? d.Z.getGuild(C) : null)),
@@ -49,7 +49,7 @@ function C(e) {
     }, [F, M]);
     let H = (e) => {
         null == b || b(),
-            (0, S.openUserProfileModal)({
+            (0, g.openUserProfileModal)({
                 sourceAnalyticsLocations: w,
                 ...x,
                 ...e
@@ -68,7 +68,7 @@ function C(e) {
                     displayProfile: G,
                     profileType: O.y0.BITE_SIZE,
                     children: [
-                        (0, r.jsx)(g.Z, {
+                        (0, r.jsx)(S.Z, {
                             profileType: O.y0.BITE_SIZE,
                             children: (0, r.jsx)(T.Z, {
                                 user: t,

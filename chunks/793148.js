@@ -35,10 +35,10 @@ class E extends (r = a.PureComponent) {
     }
     render() {
         let { iconClassName: e, iconColor: t, className: n, sliderWrapperClassName: r, sliderClassName: a, currentWindow: s, muted: _, minValue: E, maxValue: f, value: h, onVolumeShow: p, onVolumeHide: I } = this.props,
-            { hovered: m, focused: T, dragging: g } = this.state,
-            S = l.VoiceNormalIcon;
+            { hovered: m, focused: T, dragging: S } = this.state,
+            g = l.VoiceNormalIcon;
         return (
-            _ || h === E ? (S = l.VoiceXIcon) : h < f / 2 && (S = l.VoiceLowIcon),
+            _ || h === E ? (g = l.VoiceXIcon) : h < f / 2 && (g = l.VoiceLowIcon),
             (0, i.jsxs)('div', {
                 className: o()(n, d.container),
                 onMouseEnter: () => {
@@ -55,7 +55,7 @@ class E extends (r = a.PureComponent) {
                 onKeyDown: this.handleKeyDown,
                 children: [
                     (0, i.jsx)('div', {
-                        className: o()(d.volumeButtonSlider, r, { [d.sliderVisible]: m || T || g }),
+                        className: o()(d.volumeButtonSlider, r, { [d.sliderVisible]: m || T || S }),
                         onMouseEnter: () => {
                             clearTimeout(this._hoverTimeout), this.setState({ hovered: !0 });
                         },
@@ -79,7 +79,7 @@ class E extends (r = a.PureComponent) {
                         size: l.Button.Sizes.NONE,
                         look: l.Button.Looks.BLANK,
                         onClick: this.handleToggleMute,
-                        children: (0, i.jsx)(S, {
+                        children: (0, i.jsx)(g, {
                             color: t,
                             className: e
                         })

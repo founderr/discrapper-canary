@@ -15,7 +15,7 @@ t.default = (e) => {
     let t,
         n,
         i,
-        { body: f, cancelText: h, className: p, confirmColor: I, confirmText: m = _.Z.Messages.OKAY, secondaryConfirmText: T, onCancel: g, onClose: S, onConfirm: A, onConfirmSecondary: N, title: O, transitionState: R, titleClassName: v } = e;
+        { body: f, cancelText: h, className: p, confirmColor: I, confirmText: m = _.Z.Messages.OKAY, secondaryConfirmText: T, onCancel: S, onClose: g, onConfirm: A, onConfirmSecondary: N, title: O, transitionState: R, titleClassName: v } = e;
     return (
         null != h &&
             '' !== h &&
@@ -24,7 +24,7 @@ t.default = (e) => {
                 size: s.zx.Sizes.LARGE,
                 color: s.zx.Colors.PRIMARY,
                 onClick: () => {
-                    null == S || S(), null == g || g();
+                    null == g || g(), null == S || S();
                 },
                 className: E.secondaryButton,
                 children: h
@@ -43,7 +43,7 @@ t.default = (e) => {
             '' !== T &&
             (i = (0, r.jsx)(o.P, {
                 onClick: () => {
-                    null == S || S(), null == N || N();
+                    null == g || g(), null == N || N();
                 },
                 className: E.minorContainer,
                 children: (0, r.jsx)(c.x, {
@@ -58,7 +58,7 @@ t.default = (e) => {
             'aria-label': O,
             children: (0, r.jsxs)('form', {
                 onSubmit: (e) => {
-                    null != e && e.preventDefault(), null == S || S(), null == A || A();
+                    null != e && e.preventDefault(), null == g || g(), null == A || A();
                 },
                 className: E.form,
                 children: [

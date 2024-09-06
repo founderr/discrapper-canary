@@ -1,6 +1,6 @@
 n.d(t, {
     H: function () {
-        return S;
+        return g;
     }
 }),
     n(47120),
@@ -34,8 +34,8 @@ function T(e, t, n) {
         e
     );
 }
-let g = new Set(['Spacebar', ' ', 'Enter']);
-class S extends (r = a.Component) {
+let S = new Set(['Spacebar', ' ', 'Enter']);
+class g extends (r = a.Component) {
     shouldShowPopout(e, t) {
         return null != e.shouldShow ? e.shouldShow : t.shouldShowPopout;
     }
@@ -208,7 +208,7 @@ class S extends (r = a.Component) {
                 }
             }),
             T(this, 'handleKeyboardPreload', (e) => {
-                g.has(e.key) && this.handlePreload();
+                S.has(e.key) && this.handlePreload();
             }),
             T(this, 'handleDocumentMouseDown', (e) => {
                 let { ignoreModalClicks: t } = this.props,
@@ -227,10 +227,10 @@ class S extends (r = a.Component) {
             });
     }
 }
-T(S, 'defaultProps', {
+T(g, 'defaultProps', {
     autoInvert: !1,
     nudgeAlignIntoViewport: !1,
     spacing: 0,
     loadingComponent: (0, i.jsx)(I.x, {})
 }),
-    T(S, 'contextType', h.ZP);
+    T(g, 'contextType', h.ZP);

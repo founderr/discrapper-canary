@@ -1,6 +1,6 @@
 var i,
-    a = n(442837),
-    s = n(570140),
+    s = n(442837),
+    a = n(570140),
     l = n(592125),
     r = n(176505);
 function o(e, t, n) {
@@ -18,7 +18,7 @@ function o(e, t, n) {
 }
 let c = {},
     u = {};
-class d extends (i = a.ZP.PersistedStore) {
+class d extends (i = s.ZP.PersistedStore) {
     initialize(e) {
         var t;
         c = null !== (t = null == e ? void 0 : e.selectedResourceChannelIdByGuildId) && void 0 !== t ? t : {};
@@ -36,14 +36,14 @@ class d extends (i = a.ZP.PersistedStore) {
 }
 o(d, 'displayName', 'GuildOnboardingHomeNavigationStore'),
     o(d, 'persistKey', 'GuildOnboardingHomeNavigationStore'),
-    (t.Z = new d(s.Z, {
+    (t.Z = new d(a.Z, {
         CHANNEL_SELECT: function (e) {
             let { channelId: t, guildId: n } = e;
             if (null == n || t === r.oC.GUILD_HOME) return;
             let i = l.Z.getChannel(t),
-                a = c[n],
-                s = u[n];
-            if (!((null == i ? void 0 : i.isThread()) && (null == i ? void 0 : i.parent_id) != null && [s, a].includes(null == i ? void 0 : i.parent_id))) t !== a && delete c[n], t !== s && delete u[n];
+                s = c[n],
+                a = u[n];
+            if (!((null == i ? void 0 : i.isThread()) && (null == i ? void 0 : i.parent_id) != null && [a, s].includes(null == i ? void 0 : i.parent_id))) t !== s && delete c[n], t !== a && delete u[n];
         },
         SELECT_HOME_RESOURCE_CHANNEL: function (e) {
             let { channelId: t, guildId: n } = e;

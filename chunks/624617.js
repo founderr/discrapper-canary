@@ -1,7 +1,7 @@
 n(733860);
 var i,
-    a = n(31775),
-    s = n.n(a),
+    s = n(31775),
+    a = n.n(s),
     l = n(442837),
     r = n(570140);
 function o(e, t, n) {
@@ -18,7 +18,7 @@ function o(e, t, n) {
     );
 }
 let c = {
-    channelVisits: new (s())({ max: 1000 }),
+    channelVisits: new (a())({ max: 1000 }),
     bannerRenders: []
 };
 function u(e, t) {
@@ -56,8 +56,8 @@ o(d, 'displayName', 'UnreadSettingNoticeStore'),
         UNREAD_SETTING_NOTICE_CHANNEL_VISIT: function (e) {
             var t;
             let { guildId: n, channelId: i } = e,
-                a = n + i,
-                s = null !== (t = c.channelVisits.get(a)) && void 0 !== t ? t : [];
-            s.length > 100 && s.pop(), s.unshift(Date.now()), c.channelVisits.set(a, s);
+                s = n + i,
+                a = null !== (t = c.channelVisits.get(s)) && void 0 !== t ? t : [];
+            a.length > 100 && a.pop(), a.unshift(Date.now()), c.channelVisits.set(s, a);
         }
     }));

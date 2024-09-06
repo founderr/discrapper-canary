@@ -3,13 +3,13 @@ n.d(t, {
         return E;
     },
     Z: function () {
-        return C;
+        return g;
     }
 });
 var i = n(735250);
 n(470079);
-var a = n(442837),
-    s = n(481060),
+var s = n(442837),
+    a = n(481060),
     l = n(239091),
     r = n(129861),
     o = n(906732),
@@ -17,14 +17,14 @@ var a = n(442837),
     u = n(785717),
     d = n(726059),
     h = n(171368),
-    p = n(981631),
-    m = n(689938),
+    m = n(981631),
+    p = n(689938),
     _ = n(542926);
-let f = (0, s.getAvatarSize)(s.AvatarSizes.SIZE_40);
+let f = (0, a.getAvatarSize)(a.AvatarSizes.SIZE_40);
 function E(e) {
     let { user: t, status: o, onSelect: u } = e,
-        d = (0, a.e7)([c.Z], () => c.Z.isMobileOnline(t.id));
-    return (0, i.jsxs)(s.Clickable, {
+        d = (0, s.e7)([c.Z], () => c.Z.isMobileOnline(t.id));
+    return (0, i.jsxs)(a.Clickable, {
         focusProps: { offset: { right: 8 } },
         className: _.listRow,
         onClick: u,
@@ -39,10 +39,10 @@ function E(e) {
             });
         },
         children: [
-            (0, i.jsx)(s.Avatar, {
+            (0, i.jsx)(a.Avatar, {
                 src: t.getAvatarURL(void 0, f),
                 'aria-label': t.username,
-                size: s.AvatarSizes.SIZE_40,
+                size: a.AvatarSizes.SIZE_40,
                 status: o,
                 isMobile: d,
                 className: _.listAvatar
@@ -55,9 +55,9 @@ function E(e) {
         ]
     });
 }
-function C(e) {
+function g(e) {
     let { user: t, onClose: n } = e,
-        { mutualFriends: a } = (0, d.Z)(t.id),
+        { mutualFriends: s } = (0, d.Z)(t.id),
         { analyticsLocations: l } = (0, o.ZP)(),
         { context: r } = (0, u.KZ)(),
         c = (e) => {
@@ -66,36 +66,36 @@ function C(e) {
                     ...r,
                     userId: e,
                     sourceAnalyticsLocations: l,
-                    analyticsLocation: { section: p.jXE.USER_PROFILE_MUTUAL_FRIENDS }
+                    analyticsLocation: { section: m.jXE.USER_PROFILE_MUTUAL_FRIENDS }
                 });
         };
-    return (0, i.jsx)(s.ScrollerThin, {
+    return (0, i.jsx)(a.ScrollerThin, {
         className: _.listScroller,
         fade: !0,
         children:
-            null == a
+            null == s
                 ? (0, i.jsx)('div', {
                       className: _.empty,
-                      children: (0, i.jsx)(s.Spinner, {})
+                      children: (0, i.jsx)(a.Spinner, {})
                   })
-                : 0 === a.length
+                : 0 === s.length
                   ? (0, i.jsxs)('div', {
                         className: _.empty,
                         children: [
                             (0, i.jsx)('div', { className: _.emptyIconFriends }),
                             (0, i.jsx)('div', {
                                 className: _.emptyText,
-                                children: m.Z.Messages.NO_MUTUAL_FRIENDS
+                                children: p.Z.Messages.NO_MUTUAL_FRIENDS
                             })
                         ]
                     })
-                  : a.map((e) => {
-                        let { key: t, user: n, status: a } = e;
+                  : s.map((e) => {
+                        let { key: t, user: n, status: s } = e;
                         return (0, i.jsx)(
                             E,
                             {
                                 user: n,
-                                status: a,
+                                status: s,
                                 onSelect: () => c(n.id)
                             },
                             t

@@ -48,7 +48,7 @@ function B(e, t, n) {
     );
 }
 let k = { spotify: 'Spotify' };
-class G extends (i = s.PureComponent) {
+class F extends (i = s.PureComponent) {
     getCoverImage() {
         let { activity: e, connectedApplication: t, application: n, isPreview: i, message: a } = this.props;
         if (null != n && (i || (null != a && (0, E.Z)(e, a, n.id)))) {
@@ -209,7 +209,7 @@ class G extends (i = s.PureComponent) {
             });
     }
 }
-B(G, 'defaultProps', { isPreview: !1 }),
+B(F, 'defaultProps', { isPreview: !1 }),
     (t.Z = r.ZP.connectStores([f.Z, R.Z, M.Z, x.Z, h.Z, Z.Z, A.Z, L.Z, v.default, O.ZP], (e) => {
         let { activity: t, analyticsLocations: n, application: i, partyId: a, userId: s, guildId: r } = e,
             { id: l } = null != i ? i : {},
@@ -251,4 +251,4 @@ B(G, 'defaultProps', { isPreview: !1 }),
                     applicationId: l
                 })
         };
-    })(G));
+    })(F));

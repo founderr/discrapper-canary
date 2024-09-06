@@ -1,6 +1,6 @@
 n.d(t, {
     B_: function () {
-        return g;
+        return S;
     },
     MO: function () {
         return _;
@@ -62,7 +62,7 @@ async function T(e) {
     });
     return t.ok ? t.body.refreshed_urls[0].refreshed : void 0;
 }
-async function g(e) {
+async function S(e) {
     if (!o.l.getCurrentConfig({ location: 'link_clicked' }).enabled) return e;
     let t = s.Z.toURLSafe(e);
     if (null == t || !f(t)) return e;

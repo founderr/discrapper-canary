@@ -1,67 +1,67 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
-        return h;
+        return _;
     }
 });
-var a = t(735250),
-    l = t(470079),
-    i = t(120356),
-    r = t.n(i),
-    s = t(442837),
-    o = t(481060),
-    u = t(543882),
-    c = t(592125),
-    d = t(496675),
-    _ = t(981631),
-    m = t(689938),
-    E = t(375387);
-function T(e) {
-    let { isLoading: n, noText: t, previewText: l, className: i } = e;
-    return (0, a.jsx)('div', {
-        className: r()(E.emptyPreviewContainer, i),
-        children: n
-            ? (0, a.jsx)(o.Spinner, {})
-            : (0, a.jsxs)(a.Fragment, {
+var l = n(735250),
+    a = n(470079),
+    i = n(120356),
+    r = n.n(i),
+    s = n(442837),
+    o = n(481060),
+    u = n(543882),
+    c = n(592125),
+    d = n(496675),
+    h = n(981631),
+    m = n(689938),
+    x = n(375387);
+function E(e) {
+    let { isLoading: t, noText: n, previewText: a, className: i } = e;
+    return (0, l.jsx)('div', {
+        className: r()(x.emptyPreviewContainer, i),
+        children: t
+            ? (0, l.jsx)(o.Spinner, {})
+            : (0, l.jsxs)(l.Fragment, {
                   children: [
-                      (0, a.jsx)('div', { className: E.emptyPreviewImage }),
-                      t
+                      (0, l.jsx)('div', { className: x.emptyPreviewImage }),
+                      n
                           ? null
-                          : (0, a.jsx)(o.Text, {
+                          : (0, l.jsx)(o.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'none',
-                                className: E.emptyPreviewText,
-                                children: null != l ? l : m.Z.Messages.STREAM_NO_PREVIEW
+                                className: x.emptyPreviewText,
+                                children: null != a ? a : m.Z.Messages.STREAM_NO_PREVIEW
                             })
                   ]
               })
     });
 }
-function h(e) {
-    let { stream: n, className: t, noText: i = !1 } = e,
-        o = (0, s.e7)([c.Z], () => c.Z.getBasicChannel(n.channelId)),
-        h = (0, s.e7)([d.Z], () => null != o && d.Z.canBasicChannel(_.S7T.CONNECT, o)),
-        { url: x, isLoading: I } = (0, s.cj)([u.Z], () => ({
-            url: h ? u.Z.getPreviewURL(n.guildId, n.channelId, n.ownerId) : null,
-            isLoading: h && u.Z.getIsPreviewLoading(n.guildId, n.channelId, n.ownerId)
+function _(e) {
+    let { stream: t, className: n, noText: i = !1 } = e,
+        o = (0, s.e7)([c.Z], () => c.Z.getBasicChannel(t.channelId)),
+        _ = (0, s.e7)([d.Z], () => null != o && d.Z.canBasicChannel(h.S7T.CONNECT, o)),
+        { url: p, isLoading: v } = (0, s.cj)([u.Z], () => ({
+            url: _ ? u.Z.getPreviewURL(t.guildId, t.channelId, t.ownerId) : null,
+            isLoading: _ && u.Z.getIsPreviewLoading(t.guildId, t.channelId, t.ownerId)
         })),
-        N = l.useRef(I ? null : x);
-    l.useEffect(() => {
-        !I && (N.current = x);
-    }, [x, I]);
-    let p = null == x || I ? N.current : x;
-    return null == p
-        ? (0, a.jsx)(T, {
-              className: t,
-              isLoading: I,
+        T = a.useRef(v ? null : p);
+    a.useEffect(() => {
+        !v && (T.current = p);
+    }, [p, v]);
+    let f = null == p || v ? T.current : p;
+    return null == f
+        ? (0, l.jsx)(E, {
+              className: n,
+              isLoading: v,
               noText: i,
-              previewText: h ? void 0 : m.Z.Messages.STREAM_NO_PERMISSION_CTA
+              previewText: _ ? void 0 : m.Z.Messages.STREAM_NO_PERMISSION_CTA
           })
-        : (0, a.jsx)('div', {
-              className: r()(t, E.root),
-              children: (0, a.jsx)('img', {
-                  src: p,
+        : (0, l.jsx)('div', {
+              className: r()(n, x.root),
+              children: (0, l.jsx)('img', {
+                  src: f,
                   alt: '',
-                  className: E.image
+                  className: x.image
               })
           });
 }

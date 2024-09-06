@@ -230,10 +230,10 @@ function m(e, t, n) {
 function T(e, t, n) {
     return 0 === p(e, t, n);
 }
-function g(e, t, n) {
+function S(e, t, n) {
     return 0 !== p(e, t, n);
 }
-function S(e, t, n) {
+function g(e, t, n) {
     return p(e, t, n) >= 0;
 }
 function A(e, t, n) {
@@ -250,11 +250,11 @@ function N(e, t, n, r) {
         case '==':
             return T(e, n, r);
         case '!=':
-            return g(e, n, r);
+            return S(e, n, r);
         case '>':
             return I(e, n, r);
         case '>=':
-            return S(e, n, r);
+            return g(e, n, r);
         case '<':
             return m(e, n, r);
         case '<=':
@@ -278,7 +278,7 @@ function O(e, t) {
     if (!(this instanceof O)) return new O(e, t);
     r('comparator', e, t), (this.options = t), (this.loose = !!t.loose), this.parse(e), this.semver === R ? (this.value = '') : (this.value = this.operator + this.semver.version), r('comp', this);
 }
-(t.gt = I), (t.lt = m), (t.eq = T), (t.neq = g), (t.gte = S), (t.lte = A), (t.cmp = N), (t.Comparator = O);
+(t.gt = I), (t.lt = m), (t.eq = T), (t.neq = S), (t.gte = g), (t.lte = A), (t.cmp = N), (t.Comparator = O);
 var R = {};
 function v(e, t) {
     if (
@@ -347,8 +347,8 @@ function C(e, t) {
                 }),
             '' === this.operator)
         )
-            return '' === this.value || ((n = new v(e.value, t)), D(this.value, n, t));
-        if ('' === e.operator) return '' === e.value || ((n = new v(this.value, t)), D(e.semver, n, t));
+            return '' === this.value || ((n = new v(e.value, t)), L(this.value, n, t));
+        if ('' === e.operator) return '' === e.value || ((n = new v(this.value, t)), L(e.semver, n, t));
         var n,
             r = ('>=' === this.operator || '>' === this.operator) && ('>=' === e.operator || '>' === e.operator),
             i = ('<=' === this.operator || '<' === this.operator) && ('<=' === e.operator || '<' === e.operator),
@@ -377,7 +377,7 @@ function C(e, t) {
         var t = this.options.loose;
         e = e.trim();
         var n = t ? s[l.HYPHENRANGELOOSE] : s[l.HYPHENRANGE];
-        (e = e.replace(n, L)), r('hyphen replace', e), (e = e.replace(s[l.COMPARATORTRIM], '$1$2$3')), r('comparator trim', e, s[l.COMPARATORTRIM]), (e = (e = (e = e.replace(s[l.TILDETRIM], '$1~')).replace(s[l.CARETTRIM], '$1^')).split(/\s+/).join(' '));
+        (e = e.replace(n, D)), r('hyphen replace', e), (e = e.replace(s[l.COMPARATORTRIM], '$1$2$3')), r('comparator trim', e, s[l.COMPARATORTRIM]), (e = (e = (e = e.replace(s[l.TILDETRIM], '$1~')).replace(s[l.CARETTRIM], '$1^')).split(/\s+/).join(' '));
         var i = t ? s[l.COMPARATORLOOSE] : s[l.COMPARATOR],
             a = e
                 .split(' ')
@@ -492,7 +492,7 @@ function C(e, t) {
 function y(e) {
     return !e || 'x' === e.toLowerCase() || '*' === e;
 }
-function L(e, t, n, r, i, a, s, o, l, u, c, d, _) {
+function D(e, t, n, r, i, a, s, o, l, u, c, d, _) {
     return (t = y(n) ? '' : y(r) ? '>=' + n + '.0.0' : y(i) ? '>=' + n + '.' + r + '.0' : '>=' + t), (t + ' ' + (o = y(l) ? '' : y(u) ? '<' + (+l + 1) + '.0.0' : y(c) ? '<' + l + '.' + (+u + 1) + '.0' : d ? '<=' + l + '.' + u + '.' + c + '-' + d : '<=' + o)).trim();
 }
 v.prototype.test = function (e) {
@@ -524,7 +524,7 @@ v.prototype.test = function (e) {
             return !0;
     return !1;
 };
-function D(e, t, n) {
+function L(e, t, n) {
     try {
         t = new v(t, n);
     } catch (e) {
@@ -532,7 +532,7 @@ function D(e, t, n) {
     }
     return t.test(e);
 }
-(t.satisfies = D),
+(t.satisfies = L),
     (t.maxSatisfying = function (e, t, n) {
         var r = null,
             i = null;
@@ -607,12 +607,12 @@ function b(e, t, n, r) {
             (i = I), (a = A), (s = m), (o = '>'), (l = '>=');
             break;
         case '<':
-            (i = m), (a = S), (s = I), (o = '<'), (l = '<=');
+            (i = m), (a = g), (s = I), (o = '<'), (l = '<=');
             break;
         default:
             throw TypeError('Must provide a hilo val of "<" or ">"');
     }
-    if (D(e, t, r)) return !1;
+    if (L(e, t, r)) return !1;
     for (var i, a, s, o, l, u = 0; u < t.set.length; ++u) {
         var c = t.set[u],
             d = null,

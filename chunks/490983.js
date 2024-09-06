@@ -16,8 +16,8 @@ var r,
     I = n(592745),
     m = n(706454),
     T = n(757266),
-    g = n(77498),
-    S = n(283595),
+    S = n(77498),
+    g = n(283595),
     A = n(246946),
     N = n(230307),
     O = n(799777),
@@ -25,8 +25,8 @@ var r,
     v = n(941128),
     C = n(70956),
     y = n(251625),
-    L = n(823379),
-    D = n(780570),
+    D = n(823379),
+    L = n(780570),
     b = n(358085),
     M = n(998502),
     P = n(804739),
@@ -70,10 +70,10 @@ function z() {
         t = {},
         n = new Set(),
         r = p.ZP.getGamesSeen(!1, !1).map((e) => {
-            let n = g.Z.getGameByGameData(e);
+            let n = S.Z.getGameByGameData(e);
             return null != n ? ((t[n.id] = e.lastFocused * C.Z.Millis.SECOND), n.id) : null;
         }),
-        i = Object.values(S.Z.getAllLibraryApplications())
+        i = Object.values(g.Z.getAllLibraryApplications())
             .map((r) =>
                 (function (e, t, n, r, i) {
                     var a, s;
@@ -81,7 +81,7 @@ function z() {
                     let o = h.Z.getApplication(e.id);
                     if (null == o) return null;
                     let l = K(o, n);
-                    if ((t.add(e.id), !(0, D.Je)(e) && !R.Z.isInstalled(e.id, e.branchId))) return null;
+                    if ((t.add(e.id), !(0, L.Je)(e) && !R.Z.isInstalled(e.id, e.branchId))) return null;
                     return {
                         key: ''.concat(e.id, '-').concat(e.branchId),
                         application: o,
@@ -92,20 +92,20 @@ function z() {
                         isLaunching: I.Z.launchingGames.has(e.id),
                         isRunning: r.has(e.id),
                         isLaunchable: (0, P.t)({
-                            LibraryApplicationStore: S.Z,
+                            LibraryApplicationStore: g.Z,
                             LaunchableGameStore: I.Z,
                             DispatchApplicationStore: R.Z,
                             ConnectedAppsStore: T.Z,
                             applicationId: e.id,
                             branchId: e.branchId
                         }),
-                        isUpdatingFlags: S.Z.isUpdatingFlags(e.id, e.branchId),
-                        shouldShowInLibrary: (0, D.d0)(o, e, A.Z),
+                        isUpdatingFlags: g.Z.isUpdatingFlags(e.id, e.branchId),
+                        shouldShowInLibrary: (0, L.d0)(o, e, A.Z),
                         defaultAction: (0, U.i)(e, R.Z, v.Z)
                     };
                 })(r, n, t, e, !0)
             )
-            .filter(L.lm),
+            .filter(D.lm),
         a = [
             ...r
                 .map((r) =>
@@ -124,7 +124,7 @@ function z() {
                                 isLaunching: I.Z.launchingGames.has(e),
                                 isRunning: r.has(e),
                                 isLaunchable: (0, P.t)({
-                                    LibraryApplicationStore: S.Z,
+                                    LibraryApplicationStore: g.Z,
                                     LaunchableGameStore: I.Z,
                                     DispatchApplicationStore: R.Z,
                                     ConnectedAppsStore: T.Z,
@@ -139,11 +139,11 @@ function z() {
                         );
                     })(r, n, t, e)
                 )
-                .filter(L.lm),
+                .filter(D.lm),
             ...i
         ].sort((e, t) => (e.lastPlayed === t.lastPlayed ? 0 : e.lastPlayed > t.lastPlayed ? -1 : 1));
     return (
-        (B = null != g.Z.lastFetched && S.Z.fetched),
+        (B = null != S.Z.lastFetched && g.Z.fetched),
         !c().isEqual(a, G) &&
             ((G = a),
             b.isPlatformEmbedded &&
@@ -157,7 +157,7 @@ function z() {
 }
 class q extends (r = E.ZP.Store) {
     initialize() {
-        this.syncWith([h.Z, g.Z, I.Z, p.ZP, R.Z, v.Z, S.Z, N.Z, A.Z, T.Z], z, 200), this.syncWith([O.Z, m.default], () => !0);
+        this.syncWith([h.Z, S.Z, I.Z, p.ZP, R.Z, v.Z, g.Z, N.Z, A.Z, T.Z], z, 200), this.syncWith([O.Z, m.default], () => !0);
     }
     get applicationFilterQuery() {
         return k;

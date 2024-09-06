@@ -7,7 +7,7 @@ n.r(t),
             return I;
         },
         trackToggleSelfMute: function () {
-            return g;
+            return S;
         }
     });
 var r = n(735250);
@@ -94,7 +94,7 @@ function T() {
               )
               .then(() => !0));
 }
-function g(e) {
+function S(e) {
     let { usedKeybind: t = !1 } = e,
         n = l.Z.getKeybindForAction(_.kg4.TOGGLE_MUTE, !1, !0);
     c.default.track(_.rMx.INPUT_MUTE_TOGGLED, {

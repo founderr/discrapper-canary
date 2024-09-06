@@ -15,7 +15,7 @@ function u(e, t) {
     return Array.from((null !== (n = t.current) && void 0 !== n ? n : document).querySelectorAll('['.concat(l.ie, '^="').concat(e, '"]')));
 }
 function c(e) {
-    let { id: t, defaultFocused: n, isEnabled: c, scrollToStart: d, scrollToEnd: _, onNavigatePreviousAtStart: E, onNavigateNextAtEnd: f, setFocus: h, setFocusOnList: p, preserveFocusPosition: I = !0, useVirtualFocus: m = !1, wrap: T = !1, orientation: g = o.hy.VERTICAL, disableClickOnSpace: S = !1 } = e,
+    let { id: t, defaultFocused: n, isEnabled: c, scrollToStart: d, scrollToEnd: _, onNavigatePreviousAtStart: E, onNavigateNextAtEnd: f, setFocus: h, setFocusOnList: p, preserveFocusPosition: I = !0, useVirtualFocus: m = !1, wrap: T = !1, orientation: S = o.hy.VERTICAL, disableClickOnSpace: g = !1 } = e,
         A = r.useRef(n ? (0, l.jb)(t, n) : null),
         N = r.useRef(!1),
         O = r.useRef(null),
@@ -37,13 +37,13 @@ function c(e) {
             },
             [h]
         ),
-        L = r.useCallback(
+        D = r.useCallback(
             (e) => {
                 R.current && (null != p ? p : C)(e);
             },
             [p]
         ),
-        D = r.useCallback(
+        L = r.useCallback(
             (e) => {
                 A.current = e;
                 let n = (0, l.P1)(e),
@@ -92,7 +92,7 @@ function c(e) {
                     P(!1),
                         requestAnimationFrame(() => {
                             let e = A.current;
-                            null !== e && null == v((0, l.P1)(e)) && L((0, l.P1)(t, l.kn));
+                            null !== e && null == v((0, l.P1)(e)) && D((0, l.P1)(t, l.kn));
                         });
             }
             async function i() {
@@ -108,12 +108,12 @@ function c(e) {
                     }
                 }
                 let r = await (0, s.KG)(e, u(t, O));
-                null !== r && D(r);
+                null !== r && L(r);
             }
             function a() {
                 N.current = !0;
             }
-        }, [c, t, I, y, p, L, D]);
+        }, [c, t, I, y, p, D, L]);
     let w = r.useMemo(
             () => ({
                 wrap: T,
@@ -132,18 +132,18 @@ function c(e) {
         x = r.useCallback(async () => {
             let e = await b.getNextFocusableElement(w),
                 t = null == e ? void 0 : e.getAttribute(l.ie);
-            null != t ? D(t) : null == e && null != f && f();
-        }, [b, w, f, D]),
+            null != t ? L(t) : null == e && null != f && f();
+        }, [b, w, f, L]),
         G = r.useCallback(async () => {
             let e = await b.getPreviousFocusableElement(w),
                 t = null == e ? void 0 : e.getAttribute(l.ie);
-            null != t ? D(t) : null == e && null != E && E();
-        }, [b, w, E, D]),
+            null != t ? L(t) : null == e && null != E && E();
+        }, [b, w, E, L]),
         k = r.useCallback(
             (e) => {
                 if (!R.current || (!m && !U.current)) return;
-                let n = g === o.hy.HORIZONTAL ? o.R8.RIGHT : o.R8.DOWN,
-                    r = g === o.hy.HORIZONTAL ? o.R8.LEFT : o.R8.UP;
+                let n = S === o.hy.HORIZONTAL ? o.R8.RIGHT : o.R8.DOWN,
+                    r = S === o.hy.HORIZONTAL ? o.R8.LEFT : o.R8.UP;
                 switch (e.key) {
                     case n:
                         e.stopPropagation(), e.preventDefault(), x();
@@ -157,7 +157,7 @@ function c(e) {
                             d().then(() => {
                                 var e;
                                 let n = null === (e = u(t, O)[0]) || void 0 === e ? void 0 : e.getAttribute(l.ie);
-                                null != n && D(n);
+                                null != n && L(n);
                             });
                         return;
                     case o.R8.END:
@@ -167,12 +167,12 @@ function c(e) {
                                 var e;
                                 let n = u(t, O),
                                     r = null === (e = n[n.length - 1]) || void 0 === e ? void 0 : e.getAttribute(l.ie);
-                                null != r && D(r);
+                                null != r && L(r);
                             });
                         return;
                     case o.R8.SPACE:
                     case o.R8.ENTER: {
-                        if ((e.key === o.R8.SPACE && S) || e.repeat) return;
+                        if ((e.key === o.R8.SPACE && g) || e.repeat) return;
                         let t = A.current;
                         if (null != t) {
                             var i;
@@ -184,7 +184,7 @@ function c(e) {
                     }
                 }
             },
-            [x, G, t, g, _, d, D, m]
+            [x, G, t, S, _, d, L, m]
         ),
         B = r.useCallback(
             (e) => {
@@ -201,17 +201,17 @@ function c(e) {
                 ref: O,
                 tabIndex: M && I ? -1 : 0
             },
-            orientation: g,
+            orientation: S,
             setFocus: B,
             async focusLastVisibleItem() {
                 var e;
                 let n = await (0, s.jo)(null !== (e = O.current) && void 0 !== e ? e : document.body, u(t, O));
-                null !== n && D(n);
+                null !== n && L(n);
             },
             async focusFirstVisibleItem() {
                 var e;
                 let n = await (0, s.KG)(null !== (e = O.current) && void 0 !== e ? e : document.body, u(t, O));
-                null !== n && D(n);
+                null !== n && L(n);
             },
             focusPreviousItem: G,
             focusNextItem: x,
@@ -220,6 +220,6 @@ function c(e) {
                 return e ? (0, l.x3)(e) : null;
             }
         }),
-        [t, k, g, M, I, B, G, x, D]
+        [t, k, S, M, I, B, G, x, L]
     );
 }

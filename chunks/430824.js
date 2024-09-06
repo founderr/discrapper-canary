@@ -16,8 +16,8 @@ var i,
     I = n(647086);
 let m = {},
     T = {},
-    g = !1,
-    S = [];
+    S = !1,
+    g = [];
 function A(e) {
     for (let t of ((T = {}), (m = {}), (r = 0), e)) r++, (T[t.id] = _.cL(t)), (m[t.id] = t.roles);
 }
@@ -49,10 +49,10 @@ class R extends (i = l.ZP.Store) {
         return r;
     }
     isLoaded() {
-        return g;
+        return S;
     }
     getGeoRestrictedGuilds() {
-        return S;
+        return g;
     }
     getAllGuildsRoles() {
         return m;
@@ -86,7 +86,7 @@ class R extends (i = l.ZP.Store) {
             r = Object.keys(T).length;
         },
         CONNECTION_OPEN: function (e) {
-            g = !0;
+            S = !0;
             let t = T;
             (T = {}),
                 (m = {}),
@@ -95,14 +95,14 @@ class R extends (i = l.ZP.Store) {
                     r++, (T[e.id] = _.wD(e, t[e.id])), (m[e.id] = e.roles instanceof Array ? E.C5(e.id, e.roles) : e.roles);
                 });
             let n = !1;
-            if (S.length !== e.geoRestrictedGuilds.length) n = !0;
+            if (g.length !== e.geoRestrictedGuilds.length) n = !0;
             else
                 for (let t = 0; t < e.geoRestrictedGuilds.length; t++)
-                    if (!(0, u.Z)(S[t], e.geoRestrictedGuilds[t])) {
+                    if (!(0, u.Z)(g[t], e.geoRestrictedGuilds[t])) {
                         n = !0;
                         break;
                     }
-            n && (S = e.geoRestrictedGuilds);
+            n && (g = e.geoRestrictedGuilds);
         },
         OVERLAY_INITIALIZE: function (e) {
             var t;
@@ -143,9 +143,9 @@ class R extends (i = l.ZP.Store) {
         },
         GUILD_DELETE: function (e) {
             let { guild: t } = e,
-                n = S.findIndex((e) => e.id === t.id);
+                n = g.findIndex((e) => e.id === t.id);
             if (-1 !== n) {
-                S.splice(n, 1), (S = [...S]);
+                g.splice(n, 1), (g = [...g]);
                 return;
             }
             if (null == T[t.id] || t.unavailable) return !1;
@@ -175,8 +175,8 @@ class R extends (i = l.ZP.Store) {
             return !0;
         },
         GUILD_GEO_RESTRICTED: function (e) {
-            S = [
-                ...S,
+            g = [
+                ...g,
                 {
                     id: e.guildId,
                     name: e.name,

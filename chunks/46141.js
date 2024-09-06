@@ -21,7 +21,7 @@ n.d(t, {
         return f;
     },
     Xc: function () {
-        return S;
+        return g;
     },
     ZP: function () {
         return u;
@@ -51,7 +51,7 @@ n.d(t, {
         return R;
     },
     z: function () {
-        return g;
+        return S;
     }
 }),
     n(789020),
@@ -111,7 +111,7 @@ class u extends r.Z {
                     email: e.email
                 });
             case o.HeQ.VENMO:
-                return new S({
+                return new g({
                     ...r,
                     username: e.username
                 });
@@ -141,7 +141,7 @@ class u extends r.Z {
             case o.HeQ.GRABPAY_MY:
                 return new T({ ...r });
             case o.HeQ.MOMO_WALLET:
-                return new g({ ...r });
+                return new S({ ...r });
             case o.HeQ.KAKAOPAY:
                 return new A({ ...r });
             case o.HeQ.GOPAY_WALLET:
@@ -183,9 +183,9 @@ class u extends r.Z {
             case o.HeQ.GRABPAY_MY:
                 return new T(e);
             case o.HeQ.MOMO_WALLET:
-                return new g(e);
-            case o.HeQ.VENMO:
                 return new S(e);
+            case o.HeQ.VENMO:
+                return new g(e);
             case o.HeQ.KAKAOPAY:
                 return new A(e);
             case o.HeQ.GOPAY_WALLET:
@@ -275,12 +275,12 @@ class T extends u {
         if ((super(e), e.type !== o.HeQ.GRABPAY_MY)) throw Error('Cannot instantiate GrabPayMySourceRecord with type: '.concat(e.type, ', must be ').concat(o.HeQ.GRABPAY_MY));
     }
 }
-class g extends u {
+class S extends u {
     constructor(e) {
         if ((super(e), e.type !== o.HeQ.MOMO_WALLET)) throw Error('Cannot instantiate MomoWalletSourceRecord with type: '.concat(e.type, ', must be ').concat(o.HeQ.MOMO_WALLET));
     }
 }
-class S extends u {
+class g extends u {
     constructor(e) {
         if ((super(e), l(this, 'username', void 0), e.type !== o.HeQ.VENMO)) throw Error('Cannot instantiate VenmoSourceRecord with type: '.concat(e.type, ', must be ').concat(o.HeQ.VENMO));
         this.username = e.username || '';

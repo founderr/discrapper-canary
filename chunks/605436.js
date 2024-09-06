@@ -15,13 +15,13 @@ n.d(t, {
         return H;
     },
     RZ: function () {
-        return L;
+        return D;
     },
     Tj: function () {
         return j;
     },
     W: function () {
-        return g;
+        return S;
     },
     Wx: function () {
         return C;
@@ -39,7 +39,7 @@ n.d(t, {
         return k;
     },
     aq: function () {
-        return S;
+        return g;
     },
     cR: function () {
         return w;
@@ -99,12 +99,12 @@ function T(e) {
         tags: e.tags
     };
 }
-function g(e, t) {
+function S(e, t) {
     let n = m(e) ? 0 : 1,
         r = m(t) ? 0 : 1;
     return n !== r ? n - r : t.position - e.position;
 }
-function S() {
+function g() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : I.Z.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_NO_ROLES;
     return [
         {
@@ -136,22 +136,22 @@ function v(e, t, n, r) {
     let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => !0;
     return Object.values(t)
         .filter((t) => !m(t) && A(n, t.id, r) && R(e, t) && i(t.name))
-        .sort(g)
+        .sort(S)
         .map((e) => T(e));
 }
 function C(e, t, n, i) {
     let a = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => !0;
     return Object.values(t)
         .filter((t) => !m(t) && A(n, t.id, i) && R(e, t) && a(t.name))
-        .sort(g)
+        .sort(S)
         .map((e) => T(e, r.e$(e.permissions, i)));
 }
 function y(e, t, n, r, i) {
     var a, s, o, l, u;
     let c = [];
-    return 0 === (c = ((a = e), (s = t), (o = n), (l = r), (u = i), Object.values(s).filter((e) => m(e) || (!A(o, e.id, l, u) && R(a, e)))).sort(g).map((e) => T(e))).length ? S(I.Z.Messages.CHANNEL_PERMISSIONS_NO_ROLES) : c;
+    return 0 === (c = ((a = e), (s = t), (o = n), (l = r), (u = i), Object.values(s).filter((e) => m(e) || (!A(o, e.id, l, u) && R(a, e)))).sort(S).map((e) => T(e))).length ? g(I.Z.Messages.CHANNEL_PERMISSIONS_NO_ROLES) : c;
 }
-function L(e, t, n, i, a) {
+function D(e, t, n, i, a) {
     var s, o, l, u, c;
     let d = [];
     return 0 ===
@@ -164,12 +164,12 @@ function L(e, t, n, i, a) {
             var t;
             return m(e) || (!A(l, e.id, u, c) && R(s, e)) || r.e$(r.$e(e.permissions, null === (t = l.permissionOverwrites[e.id]) || void 0 === t ? void 0 : t.allow), u);
         }))
-            .sort(g)
+            .sort(S)
             .map((e) => T(e, r.e$(e.permissions, i)))).length
-        ? S(I.Z.Messages.CHANNEL_PERMISSIONS_NO_ROLES)
+        ? g(I.Z.Messages.CHANNEL_PERMISSIONS_NO_ROLES)
         : d;
 }
-function D(e, t) {
+function L(e, t) {
     var n;
     return null !== (n = l.ZP.getNick(t.id, e.id)) && void 0 !== n ? n : f.ZP.getName(e);
 }
@@ -181,7 +181,7 @@ function M(e, t) {
     let a = ((r = e), t.isOwner(r) ? h.aC.OWNER : h.aC.MEMBER);
     return {
         rowType: a,
-        name: D(e, t),
+        name: L(e, t),
         nickname: null !== (n = l.ZP.getNick(t.id, e.id)) && void 0 !== n ? n : null,
         username: f.ZP.getName(e),
         id: e.id,
@@ -200,7 +200,7 @@ function U(e, t, n, r) {
     return e
         .map(u.default.getUser)
         .filter(d.lm)
-        .filter((e) => !n.isOwner(e) && A(t, e.id, r) && (i(D(e, n)) || i(e.username) || i(e.discriminator)))
+        .filter((e) => !n.isOwner(e) && A(t, e.id, r) && (i(L(e, n)) || i(e.username) || i(e.discriminator)))
         .map((e) => M(e, n))
         .sort(P);
 }

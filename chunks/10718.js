@@ -3,7 +3,7 @@ n.d(t, {
         return m;
     },
     JT: function () {
-        return g;
+        return S;
     },
     Nk: function () {
         return p;
@@ -18,7 +18,7 @@ n.d(t, {
         return f;
     },
     YZ: function () {
-        return S;
+        return g;
     },
     wi: function () {
         return T;
@@ -186,7 +186,7 @@ function T(e, t, n) {
         return e;
     }, [c, u, h, d, f, m]);
 }
-function g(e, t, n) {
+function S(e, t, n) {
     var r;
     let { descriptors: i, commands: a, loading: s } = l.ZP.query(e, t, n),
         u = O(s && null !== (r = n.placeholderCount) && void 0 !== r ? r : 0, t.commandTypes[0]);
@@ -195,7 +195,7 @@ function g(e, t, n) {
         sections: s && 0 === i.length ? [o.Tm[_.bi.BUILT_IN]] : i
     };
 }
-function S(e, t) {
+function g(e, t) {
     let n = (0, l.PL)(!0, !0),
         i = (0, l.em)(e, !0, !0);
     return r.useMemo(() => {

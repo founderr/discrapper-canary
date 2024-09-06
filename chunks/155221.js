@@ -21,8 +21,8 @@ var r = n(735250),
     I = n(554608),
     m = n(83949),
     T = n(137412),
-    g = n(314897),
-    S = n(626135),
+    S = n(314897),
+    g = n(626135),
     A = n(361207),
     N = n(690032),
     O = n(358085),
@@ -31,12 +31,12 @@ var r = n(735250),
     C = n(188785),
     y = n(436620);
 n(928518), n(972830), n(704806);
-let L = (0, h.Un)({
+let D = (0, h.Un)({
         createPromise: () => n.e('91134').then(n.bind(n, 576184)),
         webpackId: 576184,
         name: 'UnsupportedBrowser'
     }),
-    D = (0, h.Un)({
+    L = (0, h.Un)({
         createPromise: () => n.e('72872').then(n.bind(n, 431583)),
         webpackId: 431583,
         name: 'DownloadApps'
@@ -77,7 +77,7 @@ let L = (0, h.Un)({
         name: 'ActivateDevice'
     }),
     k = (0, h.Un)({
-        createPromise: () => Promise.all([n.e('77298'), n.e('23357'), n.e('50506'), n.e('23755'), n.e('89350'), n.e('11751'), n.e('50990'), n.e('35535'), n.e('63958'), n.e('29549'), n.e('6380'), n.e('18543'), n.e('31605'), n.e('72181'), n.e('30671'), n.e('65840'), n.e('79107'), n.e('81272'), n.e('95393'), n.e('53115'), n.e('18101'), n.e('29637'), n.e('86975'), n.e('90508'), n.e('46097'), n.e('8739'), n.e('58059'), n.e('22173'), n.e('18146'), n.e('30243'), n.e('37229'), n.e('7590'), n.e('59743'), n.e('39285'), n.e('68241'), n.e('26138'), n.e('46617'), n.e('19446'), n.e('54535'), n.e('1187'), n.e('40702'), n.e('22036'), n.e('92557'), n.e('29975'), n.e('64679'), n.e('67588'), n.e('93826'), n.e('48800'), n.e('90628'), n.e('23693'), n.e('87713'), n.e('21351'), n.e('20011'), n.e('28128'), n.e('90029'), n.e('37220'), n.e('80026'), n.e('82158'), n.e('91315'), n.e('48458'), n.e('4775'), n.e('84921'), n.e('95468'), n.e('11256'), n.e('6991')]).then(n.bind(n, 457094)),
+        createPromise: () => Promise.all([n.e('77298'), n.e('23357'), n.e('50506'), n.e('23755'), n.e('89350'), n.e('11751'), n.e('50990'), n.e('35535'), n.e('63958'), n.e('29549'), n.e('6380'), n.e('18543'), n.e('31605'), n.e('72181'), n.e('30671'), n.e('65840'), n.e('79107'), n.e('81272'), n.e('95393'), n.e('53115'), n.e('18101'), n.e('29637'), n.e('86975'), n.e('90508'), n.e('46097'), n.e('8739'), n.e('58059'), n.e('18895'), n.e('18146'), n.e('30243'), n.e('37229'), n.e('7590'), n.e('59743'), n.e('39285'), n.e('68241'), n.e('26138'), n.e('46617'), n.e('19446'), n.e('54535'), n.e('1187'), n.e('40702'), n.e('22036'), n.e('92557'), n.e('29975'), n.e('64679'), n.e('67588'), n.e('93826'), n.e('48800'), n.e('90628'), n.e('23693'), n.e('87713'), n.e('21351'), n.e('28128'), n.e('20011'), n.e('90029'), n.e('37220'), n.e('80026'), n.e('82158'), n.e('91315'), n.e('39121'), n.e('4775'), n.e('84921'), n.e('95468'), n.e('11256'), n.e('6991')]).then(n.bind(n, 457094)),
         webpackId: 457094,
         name: 'ViewsWithMainInterface',
         memo: !0,
@@ -104,7 +104,7 @@ let L = (0, h.Un)({
         name: 'MobileWebHandoffFallback'
     }),
     Z = (0, h.Un)({
-        createPromise: () => Promise.all([n.e('77298'), n.e('23357'), n.e('50506'), n.e('23755'), n.e('89350'), n.e('11751'), n.e('50990'), n.e('35535'), n.e('29549'), n.e('6380'), n.e('18543'), n.e('31605'), n.e('72181'), n.e('30671'), n.e('65840'), n.e('79107'), n.e('81272'), n.e('95393'), n.e('53115'), n.e('18101'), n.e('29637'), n.e('86975'), n.e('90508'), n.e('46097'), n.e('8739'), n.e('58059'), n.e('22173'), n.e('30243'), n.e('7590'), n.e('59743'), n.e('39285'), n.e('68241'), n.e('26138'), n.e('46617'), n.e('19446'), n.e('1187'), n.e('22036'), n.e('92557'), n.e('29975'), n.e('64679'), n.e('67588'), n.e('93826'), n.e('48800'), n.e('90628'), n.e('87713'), n.e('21351'), n.e('28128'), n.e('90029'), n.e('37220'), n.e('82158'), n.e('91315'), n.e('48458'), n.e('84921'), n.e('41916')]).then(n.bind(n, 290161)),
+        createPromise: () => Promise.all([n.e('77298'), n.e('23357'), n.e('50506'), n.e('23755'), n.e('89350'), n.e('11751'), n.e('50990'), n.e('35535'), n.e('29549'), n.e('6380'), n.e('18543'), n.e('31605'), n.e('72181'), n.e('30671'), n.e('65840'), n.e('79107'), n.e('81272'), n.e('95393'), n.e('53115'), n.e('18101'), n.e('29637'), n.e('86975'), n.e('90508'), n.e('46097'), n.e('8739'), n.e('58059'), n.e('18895'), n.e('30243'), n.e('7590'), n.e('59743'), n.e('39285'), n.e('68241'), n.e('26138'), n.e('46617'), n.e('19446'), n.e('1187'), n.e('22036'), n.e('92557'), n.e('29975'), n.e('64679'), n.e('67588'), n.e('93826'), n.e('48800'), n.e('90628'), n.e('87713'), n.e('21351'), n.e('28128'), n.e('90029'), n.e('37220'), n.e('82158'), n.e('91315'), n.e('39121'), n.e('84921'), n.e('41916')]).then(n.bind(n, 290161)),
         webpackId: 290161,
         name: 'Overlay'
     }),
@@ -159,7 +159,7 @@ class X extends i.Component {
                                     (0, r.jsx)(f.Z, {
                                         exact: !0,
                                         path: v.Z5c.APPS,
-                                        component: D
+                                        component: L
                                     }),
                                     (0, r.jsx)(s.AW, {
                                         path: Q([v.Z5c.LOGIN, v.Z5c.REGISTER, v.Z5c.INVITE(':inviteCode'), v.Z5c.INVITE_LOGIN(':inviteCode'), v.Z5c.GIFT_CODE(':giftCode'), v.Z5c.GIFT_CODE_LOGIN(':giftCode'), v.Z5c.RESET], C.a),
@@ -264,12 +264,12 @@ class X extends i.Component {
                                         path: v.Z5c.DOWNLOAD_QR_CODE_REDIRECT,
                                         render: () => {
                                             var e, t, n;
-                                            let r = null === (e = S.default.getSuperProperties()) || void 0 === e ? void 0 : e.os,
+                                            let r = null === (e = g.default.getSuperProperties()) || void 0 === e ? void 0 : e.os,
                                                 i = (0, a.parse)((null !== (n = window.location.search) && void 0 !== n ? n : '').substr(1)),
                                                 s = null === (t = i.referring_location) || void 0 === t ? void 0 : t.toString();
                                             return (
                                                 ('iOS' === r || 'Android' === r) &&
-                                                    S.default.track(v.rMx.DOWNLOAD_APP, {
+                                                    g.default.track(v.rMx.DOWNLOAD_APP, {
                                                         platform: r,
                                                         ptb: !1,
                                                         released: !0,
@@ -286,14 +286,14 @@ class X extends i.Component {
                                         path: v.Z5c.OPEN_APP_FROM_EMAIL,
                                         render: () => {
                                             var e, t;
-                                            let n = null === (e = S.default.getSuperProperties()) || void 0 === e ? void 0 : e.os,
+                                            let n = null === (e = g.default.getSuperProperties()) || void 0 === e ? void 0 : e.os,
                                                 i = (0, N.o)(null !== (t = window.location.search) && void 0 !== t ? t : '');
                                             if ('iOS' !== n && 'Android' !== n) return (0, r.jsx)(s.l_, { to: null != i.desktop ? ''.concat(i.desktop.pathname).concat(i.desktop.search) : v.Z5c.APP });
                                             {
                                                 let e = (0, A.Gn)('app_open_from_email', n, i.mobile),
                                                     t = (0, u.zS)(e);
                                                 null != t &&
-                                                    S.default.track(v.rMx.DEEP_LINK_CLICKED, {
+                                                    g.default.track(v.rMx.DEEP_LINK_CLICKED, {
                                                         fingerprint: (0, c.K)(t.fingerprint),
                                                         attempt_id: t.attemptId,
                                                         source: t.utmSource,
@@ -329,7 +329,7 @@ class X extends i.Component {
                                     (0, r.jsx)(s.AW, { render: z })
                                 ]
                             })
-                      : (0, r.jsx)(s.rs, { children: (0, r.jsx)(f.Z, { component: L }) })),
+                      : (0, r.jsx)(s.rs, { children: (0, r.jsx)(f.Z, { component: D }) })),
             (0, r.jsxs)(p.Z, {
                 skipsSettingDefaultPageTitle: i,
                 children: [e, O.isPlatformEmbedded && (n === I.P.NOT_STARTED || n === I.P.IN_PROGRESS) && !0 !== _.K.get(l.SV) ? (0, r.jsx)(m.Z, {}) : null]
@@ -338,9 +338,9 @@ class X extends i.Component {
     }
 }
 t.Z = d.ZP.connectStores(
-    [g.default, I.Z],
+    [S.default, I.Z],
     () => ({
-        isAuthenticated: g.default.isAuthenticated(),
+        isAuthenticated: S.default.isAuthenticated(),
         migrationStatus: I.Z.getMigrationStatus()
     }),
     { forwardRef: !0 }

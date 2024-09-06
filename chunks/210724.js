@@ -18,11 +18,11 @@ var s = n(735250),
     T = n(113434),
     I = n(569984),
     R = n(497505),
-    C = n(918701),
-    g = n(302245),
+    g = n(918701),
+    C = n(302245),
     N = n(977156),
-    p = n(5881),
-    m = n(602667),
+    m = n(5881),
+    p = n(602667),
     A = n(78826),
     f = n(693900),
     S = n(617889),
@@ -32,7 +32,7 @@ var s = n(735250),
 function O(e) {
     var t, n, r;
     let { quest: I } = e,
-        O = (0, p.T)({
+        O = (0, m.T)({
             quest: I,
             location: h.dr.QUESTS_BAR
         }),
@@ -42,15 +42,15 @@ function O(e) {
         L = (null === (t = I.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
         Z = (0, d.Z)(L),
         D = (null === (n = I.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
-        B = (0, d.Z)(D),
-        j = (null === (r = I.userStatus) || void 0 === r ? void 0 : r.claimedAt) != null,
-        U = null != I.userStatus && (0, C.zE)(I.userStatus, R.jn.QUEST_BAR),
+        U = (0, d.Z)(D),
+        B = (null === (r = I.userStatus) || void 0 === r ? void 0 : r.claimedAt) != null,
+        j = null != I.userStatus && (0, g.zE)(I.userStatus, R.jn.QUEST_BAR),
         G = (0, T.tP)(I),
-        { hasError: y, isLoading: k } = (0, A.d7)(),
-        w = b && !U && !j && !G && !k,
-        H = a.useRef(w),
-        F = (0, S.B)(I, w && !y),
-        V = (0, g.vI)(I, h.dr.QUESTS_BAR) ? g.WV : F.collapsedHeight,
+        { hasError: y, isLoading: w } = (0, A.d7)(),
+        H = b && !j && !B && !G && !w,
+        k = a.useRef(H),
+        F = (0, S.B)(I, H && !y),
+        V = (0, C.vI)(I, h.dr.QUESTS_BAR) ? C.WV : F.collapsedHeight,
         W = a.useRef(-1),
         K = a.useRef(!1),
         [Y, z] = a.useState(!1),
@@ -115,10 +115,10 @@ function O(e) {
             !D && L && !Z && !K.current && ea(!1);
         }, [L, D, Z, ea]),
         a.useLayoutEffect(() => {
-            w !== H.current && ee(!1), (H.current = w);
-        }, [w]);
+            H !== k.current && ee(!1), (k.current = H);
+        }, [H]);
     let eI = L ? h.XZ : h.R4,
-        [{ expansionSpring: eR }, eC] = (0, c.useSpring)(() => ({
+        [{ expansionSpring: eR }, eg] = (0, c.useSpring)(() => ({
             from: { expansionSpring: 0 },
             config: eI,
             onRest: () => {
@@ -129,14 +129,14 @@ function O(e) {
             }
         }));
     a.useEffect(() => {
-        eC({
+        eg({
             expansionSpring: Q ? 1 : 0,
             immediate: P
         });
-    }, [Q, eC, P]);
-    let { visibilitySpring: eg } = (0, c.useSpring)({
+    }, [Q, eg, P]);
+    let { visibilitySpring: eC } = (0, c.useSpring)({
         from: { visibilitySpring: 0 },
-        to: { visibilitySpring: w ? 1 : 0 },
+        to: { visibilitySpring: H ? 1 : 0 },
         config: {
             tension: 250,
             friction: 10,
@@ -150,8 +150,8 @@ function O(e) {
         }
     });
     return (a.useLayoutEffect(() => {
-        D && !B && F.canCollapseOnBlur && er();
-    }, [D, ei, F.canCollapseOnBlur, er, B]),
+        D && !U && F.canCollapseOnBlur && er();
+    }, [D, ei, F.canCollapseOnBlur, er, U]),
     a.useEffect(() => {
         y &&
             (0, E.dA)({
@@ -172,28 +172,28 @@ function O(e) {
                     }
                 });
     }, [y, b, I.id]),
-    b && (w || !$ || k) && !y)
-        ? (0, s.jsx)(m.A, {
+    b && (H || !$ || w) && !y)
+        ? (0, s.jsx)(p.A, {
               questOrQuests: I,
               questContent: F.trackingCtx.content,
-              overrideVisibility: !v && w,
+              overrideVisibility: !v && H,
               children: () => {
                   let e = F.component;
                   return (0, s.jsx)('div', {
                       className: x.mask,
                       children: (0, s.jsx)(l.animated.div, {
-                          'aria-hidden': !w,
+                          'aria-hidden': !H,
                           onMouseLeave: eT,
                           onMouseEnter: eE,
                           onFocus: e_,
                           onBlur: eu,
                           className: i()(x.wrapper, {
-                              [x.wrapperInvisible]: !w,
-                              [x.wrapperVisible]: w && $
+                              [x.wrapperInvisible]: !H,
+                              [x.wrapperVisible]: H && $
                           }),
                           style: {
                               color: I.config.colors.secondary,
-                              height: eg.to({
+                              height: eC.to({
                                   range: [0, 1],
                                   output: [0, !F.canCollapseOnBlur && Q ? et : V]
                               })
@@ -236,7 +236,7 @@ t.Z =
               let { overrideQuest: t } = e,
                   n = (0, o.e7)([I.Z], () => {
                       var e;
-                      return null !== (e = null != t ? t : I.Z.questDeliveryOverride) && void 0 !== e ? e : (0, C._)(I.Z.quests, R.jn.QUEST_BAR);
+                      return null !== (e = null != t ? t : I.Z.questDeliveryOverride) && void 0 !== e ? e : (0, g._)(I.Z.quests, R.jn.QUEST_BAR);
                   });
               return null == n
                   ? null

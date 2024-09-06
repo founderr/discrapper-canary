@@ -6,7 +6,7 @@ n.d(t, {
         return p;
     },
     Tu: function () {
-        return g;
+        return S;
     },
     am: function () {
         return function e(t, n, r) {
@@ -177,7 +177,7 @@ function T() {
                 });
             });
 }
-function g(e, t) {
+function S(e, t) {
     a.Z.dispatch({
         type: 'SPOTIFY_SET_ACTIVE_DEVICE',
         accountId: e,

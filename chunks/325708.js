@@ -8,8 +8,8 @@ n.d(t, {
 }),
     n(47120);
 var i,
-    a,
-    s = n(735250),
+    s,
+    a = n(735250),
     l = n(470079),
     r = n(120356),
     o = n.n(r),
@@ -17,27 +17,27 @@ var i,
     u = n(692547),
     d = n(153867),
     h = n(347469),
-    p = n(740492),
-    m = n(36645),
+    m = n(740492),
+    p = n(36645),
     _ = n(589958);
-((a = i || (i = {}))[(a.PostSidebar = 0)] = 'PostSidebar'), (a[(a.ThreadSidebar = 1)] = 'ThreadSidebar'), (a[(a.CallChatSidebar = 2)] = 'CallChatSidebar'), (a[(a.MessageRequestSidebar = 3)] = 'MessageRequestSidebar'), (a[(a.HomeSidebar = 4)] = 'HomeSidebar');
+((s = i || (i = {}))[(s.PostSidebar = 0)] = 'PostSidebar'), (s[(s.ThreadSidebar = 1)] = 'ThreadSidebar'), (s[(s.CallChatSidebar = 2)] = 'CallChatSidebar'), (s[(s.MessageRequestSidebar = 3)] = 'MessageRequestSidebar'), (s[(s.HomeSidebar = 4)] = 'HomeSidebar');
 function f(e) {
-    let { resizableNode: t, onResize: n, onResizeEnd: i, maxWidth: a } = e,
+    let { resizableNode: t, onResize: n, onResizeEnd: i, maxWidth: s } = e,
         l = (0, h.Z)({
-            minDimension: m.C,
-            maxDimension: a,
+            minDimension: p.C,
+            maxDimension: s,
             resizableDomNodeRef: t,
             onElementResize: n,
             onElementResizeEnd: i,
             orientation: h.y.HORIZONTAL_LEFT
         });
-    return (0, s.jsx)('div', {
+    return (0, a.jsx)('div', {
         onMouseDown: l,
         className: _.resizeHandle
     });
 }
 function E(e) {
-    let { sidebarType: t, maxWidth: n, onWidthChange: i, children: a, floatingLayer: r } = e,
+    let { sidebarType: t, maxWidth: n, onWidthChange: i, children: s, floatingLayer: r } = e,
         h = l.useRef(null),
         E = (function (e) {
             switch (e) {
@@ -53,46 +53,46 @@ function E(e) {
                     return 'homeSidebarWidth';
             }
         })(t),
-        [C, g] = l.useState(p.ZP[E]),
+        [g, C] = l.useState(m.ZP[E]),
         I = l.useCallback(
             (e) => {
                 d.ZP.updatedUnsyncedSettings({ [E]: e });
             },
             [E]
         ),
-        x = (0, m.W)({ maxWidth: n }),
-        T = (0, c.clamp)(C, m.C, n),
-        N = x ? T : T + u.Z.modules.chat.RESIZE_HANDLE_WIDTH;
+        x = (0, p.W)({ maxWidth: n }),
+        T = (0, c.clamp)(g, p.C, n),
+        S = x ? T : T + u.Z.modules.chat.RESIZE_HANDLE_WIDTH;
     l.useEffect(() => {
         null == i || i(T, x);
     }, [T, i, x]);
-    let S = null != r ? r : l.Fragment;
-    return (0, s.jsxs)(s.Fragment, {
+    let v = null != r ? r : l.Fragment;
+    return (0, a.jsxs)(a.Fragment, {
         children: [
-            !x && (0, s.jsx)('div', { style: { minWidth: N } }),
-            (0, s.jsx)(S, {
-                children: (0, s.jsxs)('div', {
+            !x && (0, a.jsx)('div', { style: { minWidth: S } }),
+            (0, a.jsx)(v, {
+                children: (0, a.jsxs)('div', {
                     className: _.chatLayerWrapper,
                     children: [
-                        (0, s.jsx)('div', {
+                        (0, a.jsx)('div', {
                             className: o()(_.chatTarget, {
                                 [_.floating]: x,
                                 [_.notFloating]: !x
                             }),
-                            style: { width: N }
+                            style: { width: S }
                         }),
                         !x &&
-                            (0, s.jsx)(f, {
+                            (0, a.jsx)(f, {
                                 maxWidth: n,
                                 resizableNode: h,
-                                onResize: g,
+                                onResize: C,
                                 onResizeEnd: I
                             }),
-                        (0, s.jsx)('div', {
+                        (0, a.jsx)('div', {
                             ref: h,
                             className: o()(_.container, { [_.floating]: x }),
                             style: { width: T },
-                            children: a
+                            children: s
                         })
                     ]
                 })

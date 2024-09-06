@@ -21,8 +21,8 @@ var r = n(735250),
     I = n(275920),
     m = n(906732),
     T = n(895924),
-    g = n(835473),
-    S = n(592745),
+    S = n(835473),
+    g = n(592745),
     A = n(592125),
     N = n(757266),
     O = n(650774),
@@ -30,8 +30,8 @@ var r = n(735250),
     v = n(283595),
     C = n(496675),
     y = n(699516),
-    L = n(944486),
-    D = n(979651),
+    D = n(944486),
+    L = n(979651),
     b = n(181106),
     M = n(417363),
     P = n(358085),
@@ -43,7 +43,7 @@ var r = n(735250),
 function B(e) {
     let { user: t, currentUser: n, activity: B, onAction: F, onClose: V } = e,
         { analyticsLocations: H, newestAnalyticsLocation: Z } = (0, m.ZP)(),
-        [Y] = (0, g.Z)([null == B ? void 0 : B.application_id]),
+        [Y] = (0, S.Z)([null == B ? void 0 : B.application_id]),
         j = (0, p.Z)(B),
         W = null == B ? void 0 : B.application_id,
         K = null == B ? void 0 : B.session_id,
@@ -54,13 +54,13 @@ function B(e) {
         }),
         q =
             (0, a.e7)(
-                [v.Z, S.Z, M.Z, N.Z],
+                [v.Z, g.Z, M.Z, N.Z],
                 () =>
                     null != W &&
                     (0, U.t)({
                         applicationId: W,
                         LibraryApplicationStore: v.Z,
-                        LaunchableGameStore: S.Z,
+                        LaunchableGameStore: g.Z,
                         DispatchApplicationStore: M.Z,
                         ConnectedAppsStore: N.Z
                     })
@@ -72,7 +72,7 @@ function B(e) {
             })
         ),
         X = (0, a.e7)([b.Z], () => null != W && b.Z.getState(W, x.mFx.JOIN) === x.OcF.LOADING),
-        $ = (0, a.e7)([A.Z, R.Z, O.Z, y.Z, L.Z, D.Z, C.Z], () =>
+        $ = (0, a.e7)([A.Z, R.Z, O.Z, y.Z, D.Z, L.Z, C.Z], () =>
             (0, E.Z)({
                 user: t,
                 activity: B,
@@ -84,8 +84,8 @@ function B(e) {
                 GuildStore: R.Z,
                 GuildMemberCountStore: O.Z,
                 RelationshipStore: y.Z,
-                SelectedChannelStore: L.Z,
-                VoiceStateStore: D.Z,
+                SelectedChannelStore: D.Z,
+                VoiceStateStore: L.Z,
                 PermissionStore: C.Z
             })
         ),
@@ -115,7 +115,7 @@ function B(e) {
                     userId: t.id,
                     sessionId: K,
                     applicationId: W,
-                    channelId: L.Z.getVoiceChannelId(),
+                    channelId: D.Z.getVoiceChannelId(),
                     messageId: null,
                     intent: G.Ws.PLAY,
                     embedded: j,

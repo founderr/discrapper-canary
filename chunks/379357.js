@@ -31,8 +31,8 @@ function I(e) {
         { activity: s, activityApplication: o, fallbackApplication: l } = (0, E.qy)(r),
         { largeImage: f, smallImage: p } = T(s, o),
         { largeImage: I } = m(s, null != l ? l : o),
-        { coverImageUrl: g } = (0, u.$)(null === (t = null != l ? l : o) || void 0 === t ? void 0 : t.id);
-    let S =
+        { coverImageUrl: S } = (0, u.$)(null === (t = null != l ? l : o) || void 0 === t ? void 0 : t.id);
+    let g =
         ((n = r),
         (0, _.dU)(n)
             ? { src: n.extra.entries[0].media.image_url }
@@ -49,14 +49,14 @@ function I(e) {
               largeImage: f,
               smallImage: p
           }
-        : null != S
+        : null != g
           ? {
-                largeImage: S,
+                largeImage: g,
                 smallImage: void 0
             }
-          : null != g && i
+          : null != S && i
             ? {
-                  largeImage: { src: g },
+                  largeImage: { src: S },
                   smallImage: void 0
               }
             : {
@@ -108,8 +108,8 @@ function T(e, t) {
         I = E ? void 0 : null == e ? void 0 : null === (r = e.assets) || void 0 === r ? void 0 : r.small_image,
         m = null == e ? void 0 : null === (s = e.assets) || void 0 === s ? void 0 : s.large_text,
         T = null == e ? void 0 : null === (o = e.assets) || void 0 === o ? void 0 : o.small_text,
-        [g] = (0, l.Z)([null == e ? void 0 : e.application_id]),
-        S = null === (u = null != t ? t : g) || void 0 === u ? void 0 : u.getIconURL(h.Si.LARGE);
+        [S] = (0, l.Z)([null == e ? void 0 : e.application_id]),
+        g = null === (u = null != t ? t : S) || void 0 === u ? void 0 : u.getIconURL(h.Si.LARGE);
     return null == e
         ? {
               largeImage: void 0,
@@ -118,8 +118,8 @@ function T(e, t) {
         : (0, a.Z)(e) && null != t
           ? {
                 largeImage: {
-                    src: S,
-                    alt: p.Z.Messages.APPLICATION_ICON_A11Y_LABEL.format({ applicationName: null === (d = null != t ? t : g) || void 0 === d ? void 0 : d.name })
+                    src: g,
+                    alt: p.Z.Messages.APPLICATION_ICON_A11Y_LABEL.format({ applicationName: null === (d = null != t ? t : S) || void 0 === d ? void 0 : d.name })
                 },
                 smallImage: void 0
             }
@@ -142,11 +142,11 @@ function T(e, t) {
                     },
                     smallImage: void 0
                 }
-              : null == f && null != I && null != S
+              : null == f && null != I && null != g
                 ? {
                       largeImage: {
-                          src: S,
-                          alt: p.Z.Messages.APPLICATION_ICON_A11Y_LABEL.format({ applicationName: null === (_ = null != t ? t : g) || void 0 === _ ? void 0 : _.name })
+                          src: g,
+                          alt: p.Z.Messages.APPLICATION_ICON_A11Y_LABEL.format({ applicationName: null === (_ = null != t ? t : S) || void 0 === _ ? void 0 : _.name })
                       },
                       smallImage: {
                           src: (0, c.getAssetImage)(e.application_id, I, h.Si.LARGE),

@@ -1,6 +1,6 @@
 n.d(t, {
     DR: function () {
-        return g;
+        return S;
     },
     bD: function () {
         return T;
@@ -92,28 +92,28 @@ function T(e) {
             .with({ theme: f.BRd.DARKER }, () => p.darkerIcon)
             .with({ theme: f.BRd.MIDNIGHT }, () => p.midnightIcon)
             .otherwise(() => p.darkIcon),
-        g = (0, s.EQ)(t)
+        S = (0, s.EQ)(t)
             .with(f.BRd.LIGHT, () => h.Z.Messages.THEME_LIGHT)
             .with(f.BRd.DARK, () => h.Z.Messages.THEME_DARK)
             .with(f.BRd.DARKER, () => 'Darker')
             .with(f.BRd.MIDNIGHT, () => h.Z.Messages.THEME_MIDNIGHT)
             .with('system', () => h.Z.Messages.THEME_SYSTEM)
             .exhaustive(),
-        S = (0, c.useRedesignIconContext)().enabled;
+        g = (0, c.useRedesignIconContext)().enabled;
     return (0, r.jsx)(m, {
         onSelect: i,
         isSelected: n,
-        name: g,
+        name: S,
         className: a()(p.defaultThemeSelection, T),
         children:
             'system' === t &&
             (0, r.jsx)('div', {
                 className: p.iconWrapper,
-                children: S ? (0, r.jsx)(c.RefreshIcon, { color: I(_) }) : (0, r.jsx)(E.Z, { fill: I(_) })
+                children: g ? (0, r.jsx)(c.RefreshIcon, { color: I(_) }) : (0, r.jsx)(E.Z, { fill: I(_) })
             })
     });
 }
-function g(e) {
+function S(e) {
     let { preset: t, isSelected: n, disabled: i, tabIndex: s, onSelect: o, showBadge: l, showLockedBadge: c } = e,
         { colors: d, angle: E, theme: f } = t,
         h = (0, _.VK)({

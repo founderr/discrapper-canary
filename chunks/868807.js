@@ -1,12 +1,12 @@
 n.d(t, {
     a: function () {
-        return m;
+        return p;
     }
 }),
     n(47120);
 var i = n(392711),
-    a = n.n(i),
-    s = n(442837),
+    s = n.n(i),
+    a = n(442837),
     l = n(544891),
     r = n(570140),
     o = n(375954),
@@ -14,14 +14,14 @@ var i = n(392711),
     u = n(748902),
     d = n(981631);
 let h = new Set(),
-    p = null;
-function m(e) {
+    m = null;
+function p(e) {
     let { id: t } = e,
         {
             loaded: n,
             message: i,
-            error: a
-        } = (0, s.cj)(
+            error: s
+        } = (0, a.cj)(
             [u.Z, o.Z, c.ZP],
             () => {
                 let e = c.ZP.lastMessageId(t),
@@ -39,26 +39,26 @@ function m(e) {
             },
             [t]
         ),
-        l = (0, s.e7)([u.Z], () => u.Z.shouldLoadMessageRequestPreview(t), [t]);
+        l = (0, a.e7)([u.Z], () => u.Z.shouldLoadMessageRequestPreview(t), [t]);
     return (
         !n &&
             null == i &&
             l &&
             (function (e) {
-                h.add(e), null == p && (p = setTimeout(_, 0));
+                h.add(e), null == m && (m = setTimeout(_, 0));
             })(t),
         {
             loaded: n,
-            error: a,
+            error: s,
             message: i
         }
     );
 }
 async function _() {
     try {
-        for (; !a().isEmpty(h); ) await f();
+        for (; !s().isEmpty(h); ) await f();
     } finally {
-        p = null;
+        m = null;
     }
 }
 async function f() {

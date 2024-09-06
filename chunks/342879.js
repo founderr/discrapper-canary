@@ -16,8 +16,8 @@ var r = n(392711),
 let I = h.YN.GLOBAL_FEED,
     m = new Map(),
     T = new Set(),
-    g = new Map(),
-    S = null,
+    S = new Map(),
+    g = null,
     A = (0, r.debounce)(_.yK, 3000, { trailing: !0 });
 function N(e, t) {
     i.Z.dispatch({
@@ -46,9 +46,9 @@ function v(e) {
 function C() {
     if ((v(I), !R(I))) return;
     let e = f.Z.getFeed(I);
-    if ((null == e ? void 0 : e.refresh_stale_inbox_after_ms) != null && null == S) return;
+    if ((null == e ? void 0 : e.refresh_stale_inbox_after_ms) != null && null == g) return;
     let t = (null == e ? void 0 : e.expired_at) == null ? 0 : new Date(e.expired_at).getTime() - Date.now(),
-        n = Math.max(0, null == S ? 0 : new Date(S).getTime() - Date.now(), t);
+        n = Math.max(0, null == g ? 0 : new Date(g).getTime() - Date.now(), t);
     N(I, {
         loading: !1,
         nextFetchDate: new Date(Date.now() + n)
@@ -73,20 +73,20 @@ async function y(e) {
                 feedId: e,
                 feed: n
             }),
-                g.set(e, 0),
+                S.set(e, 0),
                 T.delete(e),
                 N(e, { loading: !1 }),
-                e === I && ((S = null), C());
+                e === I && ((g = null), C());
         } catch (a) {
             var n;
-            let r = null !== (n = g.get(e)) && void 0 !== n ? n : 0;
+            let r = null !== (n = S.get(e)) && void 0 !== n ? n : 0;
             if (r < 3) {
                 let n = 1000 * Math.pow(5, r);
                 m.set(
                     e,
                     setTimeout(() => y(e, { force: t }), n)
                 ),
-                    g.set(e, r + 1);
+                    S.set(e, r + 1);
             } else
                 i.Z.dispatch({
                     type: 'CONTENT_INVENTORY_CLEAR_FEED',
@@ -95,17 +95,17 @@ async function y(e) {
             T.delete(e);
         }
 }
-function L() {
+function D() {
     C();
 }
-function D(e) {
+function L(e) {
     let { feedId: t } = e;
     v(t), y(t, { force: !0 });
 }
 function b(e) {
     let { refreshAfterMs: t } = e,
         n = f.Z.getFeed(I);
-    if ((null == n ? void 0 : n.refresh_stale_inbox_after_ms) != null) (S = new Date(Date.now() + (null != t ? t : n.refresh_stale_inbox_after_ms)).toUTCString()), C();
+    if ((null == n ? void 0 : n.refresh_stale_inbox_after_ms) != null) (g = new Date(Date.now() + (null != t ? t : n.refresh_stale_inbox_after_ms)).toUTCString()), C();
 }
 function M(e) {
     var t;
@@ -122,12 +122,12 @@ class U extends a.Z {
             (t = this),
             (n = 'actions'),
             (r = {
-                POST_CONNECTION_OPEN: L,
+                POST_CONNECTION_OPEN: D,
                 CONNECTION_CLOSED: O,
-                WINDOW_FOCUS: L,
-                IDLE: L,
-                CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN: L,
-                CONTENT_INVENTORY_MANUAL_REFRESH: D,
+                WINDOW_FOCUS: D,
+                IDLE: D,
+                CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN: D,
+                CONTENT_INVENTORY_MANUAL_REFRESH: L,
                 CONTENT_INVENTORY_INBOX_STALE: b,
                 SPOTIFY_NEW_TRACK: M,
                 GAME_PROFILE_OPEN: P

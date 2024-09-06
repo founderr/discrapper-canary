@@ -21,22 +21,22 @@ var r = n(735250),
     I = n(706667),
     m = n(409673),
     T = n(981631),
-    g = n(474936),
-    S = n(689938),
+    S = n(474936),
+    g = n(689938),
     A = n(493277),
     N = n(900566);
 function O(e) {
     var t;
     let { onClose: a, closePopout: O, sound: R, channel: v } = e,
         C = (0, c.ZP)(),
-        [y, L] = i.useState(!1),
-        { location: D } = (0, u.O)(),
+        [y, D] = i.useState(!1),
+        { location: L } = (0, u.O)(),
         b = i.useMemo(
             () => ({
-                ...D,
+                ...L,
                 section: T.jXE.SOUNDBOARD_SOUND_PICKER
             }),
-            [D]
+            [L]
         ),
         { analyticsLocations: M } = (0, _.ZP)(d.Z.PREMIUM_UPSELL),
         { previewSound: P } = (0, I.Z)(R, null !== (t = null == v ? void 0 : v.id) && void 0 !== t ? t : null),
@@ -48,14 +48,14 @@ function O(e) {
         w = (0, o.ap)(C) ? n(537381) : n(341048);
     i.useEffect(() => {
         h.default.track(T.rMx.PREMIUM_UPSELL_VIEWED, {
-            type: g.cd.SOUND_PICKER_SOUND_CLICKED,
+            type: S.cd.SOUND_PICKER_SOUND_CLICKED,
             is_external: !0,
             location: {
                 ...b,
                 object: T.qAy.SOUNDBOARD_SOUND
             },
             location_stack: M,
-            sku_id: p.ZP.getSkuIdForPremiumType(g.p9.TIER_2)
+            sku_id: p.ZP.getSkuIdForPremiumType(S.p9.TIER_2)
         });
     }, [M, b]);
     let x = i.useCallback(() => {
@@ -67,7 +67,7 @@ function O(e) {
             (0, r.jsx)(l.Clickable, {
                 className: N.premiumPromoClose,
                 onClick: a,
-                children: S.Z.Messages.CLOSE
+                children: g.Z.Messages.CLOSE
             }),
             (0, r.jsx)('img', {
                 'aria-hidden': !0,
@@ -79,13 +79,13 @@ function O(e) {
                 variant: 'heading-lg/normal',
                 color: 'header-primary',
                 className: N.premiumPromoTitle,
-                children: S.Z.Messages.SOUNDBOARD_NITRO_UPSELL_TITLE
+                children: g.Z.Messages.SOUNDBOARD_NITRO_UPSELL_TITLE
             }),
             (0, r.jsx)(l.Text, {
                 variant: 'text-md/normal',
                 color: 'header-secondary',
                 className: N.premiumPromoDescription,
-                children: S.Z.Messages.SOUNDBOARD_NITRO_UPSELL_BODY.format({ onClick: x })
+                children: g.Z.Messages.SOUNDBOARD_NITRO_UPSELL_BODY.format({ onClick: x })
             }),
             (0, r.jsxs)('div', {
                 className: A.buttonContainer,
@@ -95,7 +95,7 @@ function O(e) {
                         children: U
                     }),
                     (0, r.jsx)(f.Z, {
-                        subscriptionTier: g.Si.TIER_2,
+                        subscriptionTier: S.Si.TIER_2,
                         submitting: y,
                         premiumModalAnalyticsLocation: {
                             section: T.jXE.SOUNDBOARD_SOUND_PICKER,
@@ -104,10 +104,10 @@ function O(e) {
                         size: l.Button.Sizes.SMALL,
                         color: l.Button.Colors.GREEN,
                         onClick: () => {
-                            L(!0);
+                            D(!0);
                         },
                         onSubscribeModalClose: (e) => {
-                            L(!1), e && a();
+                            D(!1), e && a();
                         }
                     })
                 ]

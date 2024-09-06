@@ -5,12 +5,12 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(800004),
-    s = n(192029),
+var s = n(800004),
+    a = n(192029),
     l = n(527119);
 function r() {
     return (0, i.jsx)('div', {
-        className: a.container,
+        className: s.container,
         children: (0, i.jsxs)('svg', {
             width: '224',
             height: '148',
@@ -80,7 +80,7 @@ function r() {
                                 y: '0',
                                 height: '32',
                                 width: '32',
-                                href: s
+                                href: a
                             })
                         }),
                         (0, i.jsx)('pattern', {

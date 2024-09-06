@@ -18,7 +18,7 @@ var r,
 function T(e) {
     (0, p.Zy)(), h.Z.show(e);
 }
-function g(e, t, n) {
+function S(e, t, n) {
     let { status: r, body: i } = e,
         a = i && i.code;
     switch (r) {
@@ -57,7 +57,7 @@ function g(e, t, n) {
     throw e;
 }
 ((i = r || (r = {}))[(i.SHOW_ALWAYS = 0)] = 'SHOW_ALWAYS'), (i[(i.SHOW_ONLY_IF_ACTION_NEEDED = 1)] = 'SHOW_ONLY_IF_ACTION_NEEDED');
-let S = {
+let g = {
     sendRequest(e) {
         let { discordTag: t, context: n, captchaPayload: r, errorUxConfig: i = 0 } = e,
             [s, o] = t.split('#');
@@ -73,7 +73,7 @@ let S = {
                 oldFormErrors: !0
             })
             .catch((e) => {
-                g(e, i, t);
+                S(e, i, t);
             });
     },
     addRelationship(e, t) {
@@ -96,24 +96,24 @@ let S = {
                 null == t || t();
             })
             .catch((e) => {
-                g(e, u, f.ZP.getUserTag(c));
+                S(e, u, f.ZP.getUserTag(c));
             });
     },
     acceptFriendRequest: (e) =>
-        S.addRelationship(e, function () {
+        g.addRelationship(e, function () {
             s.uv.announce(m.Z.Messages.A11Y_ANNOUNCEMENT_FRIEND_ACCEPT_REQUEST);
         }),
     cancelFriendRequest: (e, t) =>
-        S.removeRelationship(e, t, function () {
+        g.removeRelationship(e, t, function () {
             s.uv.announce(m.Z.Messages.A11Y_ANNOUNCEMENT_FRIEND_CANCEL_REQUEST);
         }),
     removeFriend(e, t) {
-        S.removeRelationship(e, t, function () {
+        g.removeRelationship(e, t, function () {
             s.uv.announce(m.Z.Messages.A11Y_ANNOUNCEMENT_FRIEND_REMOVED);
         });
     },
     unblockUser(e, t) {
-        S.removeRelationship(e, t, function () {
+        g.removeRelationship(e, t, function () {
             s.uv.announce(m.Z.Messages.A11Y_ANNOUNCEMENT_USER_UNBLOCKED);
         });
     },
@@ -181,4 +181,4 @@ let S = {
                 s.uv.announce(m.Z.Messages.A11Y_ANNOUNCEMENT_GENERIC_FAIL);
             })
 };
-t.Z = S;
+t.Z = g;

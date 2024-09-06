@@ -6,7 +6,7 @@ n.d(t, {
         return T;
     },
     bG: function () {
-        return S;
+        return g;
     },
     g5: function () {
         return A;
@@ -18,7 +18,7 @@ n.d(t, {
         return I;
     },
     yC: function () {
-        return g;
+        return S;
     }
 }),
     n(47120);
@@ -168,12 +168,12 @@ async function T(e) {
         }
     }
 }
-async function g(e) {
+async function S(e) {
     var t;
     let { query: n, guildId: r, options: l, onSuccessCallback: u } = e,
         { page: c, categoryId: _, integrationType: E, minUserInstallCommandCount: h, excludeAppsWithCustomInstallUrl: p, excludeNonEmbeddedApps: I, excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: m, source: T = i.F.APP_DIRECTORY } = null != l ? l : {},
-        g = Date.now(),
-        S = d.Z.getFetchState({
+        S = Date.now(),
+        g = d.Z.getFetchState({
             query: n,
             guildId: r,
             page: c,
@@ -191,7 +191,7 @@ async function g(e) {
                 })) && void 0 !== t
                 ? t
                 : {};
-    if (S !== d.M.FETCHING && (null == A || !(A + 600000 > g))) {
+    if (g !== d.M.FETCHING && (null == A || !(A + 600000 > S))) {
         s.Z.dispatch({
             type: 'APPLICATION_DIRECTORY_FETCH_SEARCH',
             query: n,
@@ -261,7 +261,7 @@ async function g(e) {
         }
     }
 }
-async function S() {
+async function g() {
     let { includesInactive: e = !1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         t = Date.now(),
         n = c.Z.getFetchState({ includesInactive: e }),

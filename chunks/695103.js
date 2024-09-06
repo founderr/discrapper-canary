@@ -33,7 +33,7 @@ function m() {
 function T() {
     (r = null), (i = null), (p = new Set()), (h.applicationId = null), (h.originURL = null), m();
 }
-class g extends (s = o.ZP.PersistedStore) {
+class S extends (s = o.ZP.PersistedStore) {
     initialize(e) {
         (r = (h = { ...(null != e ? e : f) }).applicationId),
             (i = h.originURL),
@@ -79,9 +79,9 @@ class g extends (s = o.ZP.PersistedStore) {
         });
     }
 }
-E(g, 'displayName', 'TestModeStore'),
-    E(g, 'persistKey', 'TestModeStore'),
-    (t.Z = new g(l.Z, {
+E(S, 'displayName', 'TestModeStore'),
+    E(S, 'persistKey', 'TestModeStore'),
+    (t.Z = new S(l.Z, {
         DEVELOPER_TEST_MODE_AUTHORIZATION_START: function (e) {
             let { applicationId: t } = e;
             p.add(t), (a = null);

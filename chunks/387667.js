@@ -3,7 +3,7 @@ E.d(_, {
         return N;
     },
     ms: function () {
-        return l;
+        return S;
     },
     p5: function () {
         return a;
@@ -142,15 +142,15 @@ function N(e) {
     }
     return A.vB8.ALL;
 }
-class l {
+class S {
     constructor(e, _, E) {
         r(this, 'key', void 0), r(this, 'oldValue', void 0), r(this, 'newValue', void 0), r(this, 'subtarget', void 0), (this.key = e), (this.oldValue = _), (this.newValue = E);
     }
 }
-class L extends I.Z {
+class l extends I.Z {
     constructor(e) {
         var _, E, s, I, n, A;
         super(), r(this, 'id', void 0), r(this, 'actionType', void 0), r(this, 'action', void 0), r(this, 'targetType', void 0), r(this, 'targetId', void 0), r(this, 'target', void 0), r(this, 'userId', void 0), r(this, 'changes', void 0), r(this, 'timestampStart', void 0), r(this, 'timestampEnd', void 0), r(this, 'user', void 0), r(this, 'options', void 0), (this.id = e.id), (this.action = e.action), (this.actionType = N(this.action)), (this.targetId = e.targetId), (this.timestampStart = null !== (_ = e.timestampStart) && void 0 !== _ ? _ : T()(t.default.extractTimestamp(this.id))), (this.timestampEnd = null !== (E = e.timestampEnd) && void 0 !== E ? E : this.timestampStart), (this.userId = e.userId), (this.changes = null !== (s = e.changes) && void 0 !== s ? s : []), (this.targetType = a(this.action)), (this.options = null !== (I = e.options) && void 0 !== I ? I : {}), (this.target = null !== (n = e.target) && void 0 !== n ? n : e.id), (this.user = null !== (A = e.user) && void 0 !== A ? A : null);
     }
 }
-_.ZP = L;
+_.ZP = l;

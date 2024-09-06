@@ -15,7 +15,7 @@ n.d(t, {
         return j;
     },
     zs: function () {
-        return G;
+        return F;
     }
 }),
     n(627341);
@@ -305,7 +305,7 @@ function k(e) {
               className: i
           });
 }
-function G(e) {
+function F(e) {
     let { isSelected: t, size: n, className: i } = e,
         a = 0.85 * n;
     return (0, s.jsx)('div', {

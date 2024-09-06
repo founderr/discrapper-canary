@@ -1,14 +1,14 @@
 var i = n(735250),
-    a = n(470079),
-    s = n(390322),
+    s = n(470079),
+    a = n(390322),
     l = n(381871);
 t.Z = (e) => {
     let { isHovered: t, closePopout: n, onMouseEnter: r, onMouseLeave: o, onFocus: c, channel: u } = e;
     return (
-        a.useEffect(() => {
+        s.useEffect(() => {
             !t && n();
         }, [n, t]),
-        (0, i.jsx)(s.Z, {
+        (0, i.jsx)(a.Z, {
             children: (0, i.jsx)('div', {
                 onMouseEnter: r,
                 onMouseLeave: o,

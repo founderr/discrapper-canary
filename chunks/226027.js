@@ -1,9 +1,9 @@
-var i, a;
+var i, s;
 n.d(t, {
     E: function () {
         return i;
     }
 }),
-    ((a = i || (i = {})).NEW_MESSAGES = 'new_messages'),
-    (a.OPT_IN_CHANNEL = 'opt_in_channel'),
-    (a.SUMMARIES = 'summaries');
+    ((s = i || (i = {})).NEW_MESSAGES = 'new_messages'),
+    (s.OPT_IN_CHANNEL = 'opt_in_channel'),
+    (s.SUMMARIES = 'summaries');

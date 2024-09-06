@@ -79,18 +79,18 @@ function T(e) {
     return 'undefined' != typeof Set && (m.working ? m(e) : e instanceof Set);
 }),
     (T.working = 'undefined' != typeof WeakMap && T(new WeakMap()));
-function g(e) {
+function S(e) {
     return '[object WeakSet]' === c(e);
 }
 (t.isWeakMap = function (e) {
     return 'undefined' != typeof WeakMap && (T.working ? T(e) : e instanceof WeakMap);
 }),
-    (g.working = 'undefined' != typeof WeakSet && g(new WeakSet()));
-function S(e) {
+    (S.working = 'undefined' != typeof WeakSet && S(new WeakSet()));
+function g(e) {
     return '[object ArrayBuffer]' === c(e);
 }
 function A(e) {
-    return 'undefined' != typeof ArrayBuffer && (S.working ? S(e) : e instanceof ArrayBuffer);
+    return 'undefined' != typeof ArrayBuffer && (g.working ? g(e) : e instanceof ArrayBuffer);
 }
 function N(e) {
     return '[object DataView]' === c(e);
@@ -99,9 +99,9 @@ function O(e) {
     return 'undefined' != typeof DataView && (N.working ? N(e) : e instanceof DataView);
 }
 (t.isWeakSet = function (e) {
-    return g(e);
+    return S(e);
 }),
-    (S.working = 'undefined' != typeof ArrayBuffer && S(new ArrayBuffer())),
+    (g.working = 'undefined' != typeof ArrayBuffer && g(new ArrayBuffer())),
     (t.isArrayBuffer = A),
     (N.working = 'undefined' != typeof ArrayBuffer && 'undefined' != typeof DataView && N(new DataView(new ArrayBuffer(1), 0, 1))),
     (t.isDataView = O);
@@ -128,10 +128,10 @@ t.isGeneratorObject = function (e) {
 function y(e) {
     return p(e, d);
 }
-function L(e) {
+function D(e) {
     return p(e, _);
 }
-function D(e) {
+function L(e) {
     return p(e, E);
 }
 function b(e) {
@@ -144,12 +144,12 @@ function M(e) {
     return '[object WebAssembly.Module]' === c(e);
 }),
     (t.isNumberObject = y),
-    (t.isStringObject = L),
-    (t.isBooleanObject = D),
+    (t.isStringObject = D),
+    (t.isBooleanObject = L),
     (t.isBigIntObject = b),
     (t.isSymbolObject = M);
 t.isBoxedPrimitive = function (e) {
-    return y(e) || L(e) || D(e) || b(e) || M(e);
+    return y(e) || D(e) || L(e) || b(e) || M(e);
 };
 (t.isAnyArrayBuffer = function (e) {
     return 'undefined' != typeof Uint8Array && (A(e) || C(e));

@@ -5,9 +5,9 @@ n.d(t, {
 }),
     n(47120);
 var i = n(735250),
-    a = n(470079),
-    s = n(120356),
-    l = n.n(s),
+    s = n(470079),
+    a = n(120356),
+    l = n.n(a),
     r = n(981631),
     o = n(909314);
 function c(e, t, n) {
@@ -23,7 +23,7 @@ function c(e, t, n) {
         e
     );
 }
-class u extends a.Component {
+class u extends s.Component {
     componentDidUpdate(e, t) {
         if (t.focused !== this.state.focused && this.state.focused) {
             var n;
@@ -33,7 +33,7 @@ class u extends a.Component {
     }
     render() {
         let e;
-        let { className: t, name: n, autoComplete: a, maxLen: s } = this.props,
+        let { className: t, name: n, autoComplete: s, maxLen: a } = this.props,
             r = {
                 position: 'absolute',
                 left: 0,
@@ -59,8 +59,8 @@ class u extends a.Component {
                             style: r,
                             value: this.state.value,
                             name: n,
-                            maxLength: s,
-                            autoComplete: a,
+                            maxLength: a,
+                            autoComplete: s,
                             onKeyPress: this.handleKeyPress,
                             onChange: this.handleChange,
                             onFocus: this.handleFocus,
@@ -78,7 +78,7 @@ class u extends a.Component {
     }
     constructor(...e) {
         super(...e),
-            c(this, 'inputRef', a.createRef()),
+            c(this, 'inputRef', s.createRef()),
             c(this, 'state', {
                 focused: !1,
                 lastGoodValue: this.props.value,

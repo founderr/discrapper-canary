@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return S;
     }
 }),
     n(47120),
@@ -37,7 +37,7 @@ let f = new s.Z('GatewaySocket'),
     m = new Set(['READY', 'INITIAL_GUILD', 'READY_SUPPLEMENTAL', 'RESUMED', 'VOICE_SERVER_UPDATE', 'RTC_CONNECTION_STATE']);
 ((i = r || (r = {}))[(i.NotStarted = 0)] = 'NotStarted'), (i[(i.Loading = 1)] = 'Loading'), (i[(i.Loaded = 2)] = 'Loaded');
 let T = {};
-class g {
+class S {
     hasStuffToDispatchNow() {
         return this.queue.length > 0 && 2 === this.queue[0].status;
     }

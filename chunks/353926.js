@@ -36,8 +36,8 @@ function I(e, t, n) {
 }
 let m = 'scientist:triggered',
     T = 'exerimentOverrides',
-    g = 'userExperimentOverrides',
-    S = 'guildExperimentOverrides',
+    S = 'userExperimentOverrides',
+    g = 'guildExperimentOverrides',
     A = new c.Z('ExperimentStore'),
     N = !1,
     O = {},
@@ -45,8 +45,8 @@ let m = 'scientist:triggered',
     v = [],
     C = [],
     y = {},
-    L = {},
     D = {},
+    L = {},
     b = {},
     M = {},
     P = 'staging' === window.GLOBAL_ENV.RELEASE_CHANNEL,
@@ -159,7 +159,7 @@ function j(e) {
     };
 }
 function W(e) {
-    !P && 'CONNECTION_OPEN' === e.type && k(e.user) && (P = !0), (y = {}), (L = {}), (D = {});
+    !P && 'CONNECTION_OPEN' === e.type && k(e.user) && (P = !0), (y = {}), (D = {}), (L = {});
     let t = 'CONNECTION_OPEN' === e.type || null == e.fingerprint || e.fingerprint === d.default.getFingerprint(),
         { experiments: r, guildExperiments: i } = e;
     t && K(r, i), n(598984).Vx.trackExposure(), (N = !0);
@@ -183,7 +183,7 @@ function K(e, t) {
         null != t &&
             t.forEach((e) => {
                 let [t, n, r, i, a, s, o, l, u, c] = e;
-                L[t] = {
+                D[t] = {
                     hashKey: n,
                     revision: r,
                     populations: i.map(j),
@@ -237,21 +237,21 @@ function q(e) {
 }
 function Q(e) {
     let { serializedExperimentStore: t, user: n } = e;
-    !P && k(n) && (P = !0), (N = t.hasLoadedExperiments), (O = t.trackedExposureExperiments), (y = t.loadedUserExperiments), (b = t.userExperimentOverrides), (M = t.guildExperimentOverrides), (L = q(t.loadedGuildExperiments)), (D = {});
+    !P && k(n) && (P = !0), (N = t.hasLoadedExperiments), (O = t.trackedExposureExperiments), (y = t.loadedUserExperiments), (b = t.userExperimentOverrides), (M = t.guildExperimentOverrides), (D = q(t.loadedGuildExperiments)), (L = {});
 }
 function X() {
     N = !0;
 }
 function $(e) {
     let { isSwitchingAccount: t } = e;
-    o.K.remove(m), !t && (o.K.remove(T), o.K.remove(g), o.K.remove(S), (b = {}), (M = {})), (y = {}), (v = []), (O = {}), (N = !1);
+    o.K.remove(m), !t && (o.K.remove(T), o.K.remove(S), o.K.remove(g), (b = {}), (M = {})), (y = {}), (v = []), (O = {}), (N = !1);
 }
 function J() {
     (N = !1), (O = {}), o.K.remove(m);
 }
 function ee() {
     try {
-        o.K.set(g, b);
+        o.K.set(S, b);
     } catch (e) {
         A.error('Error saving user experiment overrides, unsaved data will be lost', e),
             E.default.track(p.rMx.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
@@ -260,7 +260,7 @@ function ee() {
             });
     }
     try {
-        o.K.set(S, M);
+        o.K.set(g, M);
     } catch (e) {
         A.error('Error saving guild experiment overrides, unsaved data will be lost', e),
             E.default.track(p.rMx.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
@@ -328,9 +328,9 @@ function er(e) {
 }
 function ei(e) {
     let { guild: t } = e;
-    for (let e in D) {
+    for (let e in L) {
         let [n] = e.split(':');
-        t.id === n && delete D[e];
+        t.id === n && delete L[e];
     }
 }
 class ea extends _.Z {
@@ -346,7 +346,7 @@ class ea extends _.Z {
         })()),
             !(function () {
                 var e, t, n;
-                let r = [null !== (e = o.K.get(T)) && void 0 !== e ? e : {}, null !== (t = o.K.get(g)) && void 0 !== t ? t : {}, null !== (n = o.K.get(S)) && void 0 !== n ? n : {}];
+                let r = [null !== (e = o.K.get(T)) && void 0 !== e ? e : {}, null !== (t = o.K.get(S)) && void 0 !== t ? t : {}, null !== (n = o.K.get(g)) && void 0 !== n ? n : {}];
                 (b = {}), (M = {});
                 let a = !i().isEmpty(r[0]);
                 for (let e of r)
@@ -379,7 +379,7 @@ class ea extends _.Z {
     }
     loadCache() {
         let e = this.readSnapshot(ea.LATEST_SNAPSHOT_VERSION);
-        null != e && ('loadedUserExperiments' in e ? ((y = e.loadedUserExperiments), (L = q(e.loadedGuildExperiments))) : K(e.rawUserExperiments, e.rawGuildExperiments));
+        null != e && ('loadedUserExperiments' in e ? ((y = e.loadedUserExperiments), (D = q(e.loadedGuildExperiments))) : K(e.rawUserExperiments, e.rawGuildExperiments));
     }
     takeSnapshot() {
         return {
@@ -409,11 +409,11 @@ class ea extends _.Z {
             r = M[e];
         if (P && null != r) return r;
         let i = ''.concat(n, ':').concat(e);
-        if (i in D) return D[i];
+        if (i in L) return L[i];
         let a = (function e(t, n) {
             var r, i;
             let a = w(n),
-                s = L[''.concat(a)];
+                s = D[''.concat(a)];
             if (null == s) return null;
             let { revision: o, aaMode: l } = s,
                 u = s.overrides[t],
@@ -467,7 +467,7 @@ class ea extends _.Z {
                 triggerDebuggingEnabled: c
             };
         })(n, e);
-        return (D[i] = a), a;
+        return (L[i] = a), a;
     }
     getUserExperimentBucket(e) {
         let t = this.getUserExperimentDescriptor(e);
@@ -481,13 +481,13 @@ class ea extends _.Z {
         return y;
     }
     getGuildExperiments() {
-        return L;
+        return D;
     }
     getLoadedUserExperiment(e) {
         return y[w(e)];
     }
     getLoadedGuildExperiment(e) {
-        return L[w(e)];
+        return D[w(e)];
     }
     getRecentExposures(e, t) {
         let n = ''.concat(e, '|').concat(t, '|');
@@ -526,15 +526,15 @@ class ea extends _.Z {
             let r = t[n];
             null != r && (e[r] = y[n].bucket);
         }
-        for (let t in D) {
-            let n = D[t];
+        for (let t in L) {
+            let n = L[t];
             null != n && (e[t] = n.bucket);
         }
         return e;
     }
     getSerializedState() {
         let e = {};
-        for (let t in L) for (let n of ((e[t] = JSON.parse(JSON.stringify(L[t]))), e[t].populations)) n.filters = [];
+        for (let t in D) for (let n of ((e[t] = JSON.parse(JSON.stringify(D[t]))), e[t].populations)) n.filters = [];
         return {
             hasLoadedExperiments: N,
             trackedExposureExperiments: O,

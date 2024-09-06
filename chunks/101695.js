@@ -5,14 +5,14 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(481060),
-    s = n(395255);
+var s = n(481060),
+    a = n(395255);
 function l(e) {
     let { changePage: t, offset: n, totalResults: l, pageLength: r } = e,
         o = Math.floor(n / r) + 1;
     return (0, i.jsx)('div', {
-        className: s.container,
-        children: (0, i.jsx)(a.Paginator, {
+        className: a.container,
+        children: (0, i.jsx)(s.Paginator, {
             currentPage: o,
             totalCount: l,
             pageSize: r,

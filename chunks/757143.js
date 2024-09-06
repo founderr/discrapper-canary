@@ -15,8 +15,8 @@ var r = n(197187),
     I = n(115726),
     m = n(651673),
     T = n(641236)('replace'),
-    g = Math.max,
-    S = Math.min,
+    S = Math.max,
+    g = Math.min,
     A = a([].concat),
     N = a([].push),
     O = a(''.indexOf),
@@ -43,14 +43,14 @@ s(
                 var f = u(i);
                 !f && (i = E(i));
                 var p = s.global;
-                p && ((D = s.unicode), (s.lastIndex = 0));
+                p && ((L = s.unicode), (s.lastIndex = 0));
                 for (var T = []; null !== (b = m(s, o)); ) {
                     if ((N(T, b), !p)) break;
-                    '' === E(b[0]) && (s.lastIndex = h(o, _(s.lastIndex), D));
+                    '' === E(b[0]) && (s.lastIndex = h(o, _(s.lastIndex), L));
                 }
                 for (var v = '', C = 0, y = 0; y < T.length; y++) {
-                    for (var L, D, b, M, P = E((b = T[y])[0]), U = g(S(d(b.index), o.length), 0), w = [], x = 1; x < b.length; x++) {
-                        N(w, void 0 === (L = b[x]) ? L : String(L));
+                    for (var D, L, b, M, P = E((b = T[y])[0]), U = S(g(d(b.index), o.length), 0), w = [], x = 1; x < b.length; x++) {
+                        N(w, void 0 === (D = b[x]) ? D : String(D));
                     }
                     var G = b.groups;
                     if (f) {

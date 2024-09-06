@@ -1,69 +1,69 @@
-t.d(n, {
+s.d(n, {
     Z: function () {
-        return x;
+        return Z;
     }
 });
-var s = t(735250),
-    i = t(470079),
-    o = t(704215),
-    l = t(481060),
-    r = t(605236),
-    a = t(63063),
-    c = t(929498),
-    d = t(678738),
-    u = t(151545),
-    I = t(527790),
-    _ = t(304042),
-    E = t(981631),
-    f = t(921944),
-    m = t(689938),
-    p = t(949968);
-function x(e) {
-    let { user: n, currentUser: t, onClose: x } = e,
-        { live: Z, recent: h, stream: v } = (0, c.Z)(n.id),
-        S = n.id === t.id,
+var t = s(735250),
+    i = s(470079),
+    o = s(704215),
+    l = s(481060),
+    r = s(605236),
+    a = s(63063),
+    c = s(929498),
+    d = s(678738),
+    u = s(151545),
+    I = s(527790),
+    _ = s(304042),
+    E = s(981631),
+    f = s(921944),
+    x = s(689938),
+    m = s(949968);
+function Z(e) {
+    let { user: n, currentUser: s, onClose: Z } = e,
+        { live: p, recent: h, stream: S } = (0, c.Z)(n.id),
+        v = n.id === s.id,
         T = (0, r.wE)(o.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP);
     return (
         i.useEffect(() => {
-            if (!!S && !T)
+            if (!!v && !T)
                 (0, r.EW)(o.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP, {
                     dismissAction: f.L.AUTO_DISMISS,
                     forceTrack: !0
                 });
-        }, [S, T]),
-        (0, s.jsxs)(l.ScrollerThin, {
-            className: p.scroller,
+        }, [v, T]),
+        (0, t.jsxs)(l.ScrollerThin, {
+            className: m.scroller,
             fade: !0,
             children: [
-                (0, s.jsxs)(d.Z, {
+                (0, t.jsxs)(d.Z, {
                     children: [
-                        null != v &&
-                            (0, s.jsx)(_.Z, {
+                        null != S &&
+                            (0, t.jsx)(_.Z, {
                                 user: n,
-                                currentUser: t,
-                                stream: v,
-                                onClose: x
+                                currentUser: s,
+                                stream: S,
+                                onClose: Z
                             }),
-                        Z.map((e, i) =>
-                            (0, s.jsx)(
+                        p.map((e, i) =>
+                            (0, t.jsx)(
                                 u.Z,
                                 {
                                     user: n,
-                                    currentUser: t,
+                                    currentUser: s,
                                     activity: e,
-                                    onClose: x
+                                    onClose: Z
                                 },
                                 'live-'.concat(i)
                             )
                         )
                     ]
                 }),
-                (0, s.jsx)(d.Z, {
-                    heading: m.Z.Messages.USER_PROFILE_ACTIVITY_RECENT_ACTIVITY,
-                    subheading: S
-                        ? m.Z.Messages.USER_RECENT_ACTIVITY_LEARN_MORE.format({
+                (0, t.jsx)(d.Z, {
+                    heading: x.Z.Messages.USER_PROFILE_ACTIVITY_RECENT_ACTIVITY,
+                    subheading: v
+                        ? x.Z.Messages.USER_RECENT_ACTIVITY_LEARN_MORE.format({
                               learnMoreHook: (e, n) =>
-                                  (0, s.jsx)(
+                                  (0, t.jsx)(
                                       l.Anchor,
                                       {
                                           href: a.Z.getArticleURL(E.BhN.ACTIVITY_STATUS_SETTINGS),
@@ -74,12 +74,12 @@ function x(e) {
                           })
                         : null,
                     children: h.map((e) =>
-                        (0, s.jsx)(
+                        (0, t.jsx)(
                             I.Z,
                             {
                                 user: n,
                                 entry: e,
-                                onClose: x
+                                onClose: Z
                             },
                             e.id
                         )

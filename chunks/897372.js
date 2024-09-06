@@ -16,8 +16,8 @@ var r,
     I = n(700312).codeAt,
     m = n(233591),
     T = n(714050),
-    g = n(865312),
-    S = n(202934),
+    S = n(865312),
+    g = n(202934),
     A = n(320273),
     N = n(644659),
     O = N.set,
@@ -25,8 +25,8 @@ var r,
     v = A.URLSearchParams,
     C = A.getState,
     y = o.URL,
-    L = o.TypeError,
-    D = o.parseInt,
+    D = o.TypeError,
+    L = o.parseInt,
     b = Math.floor,
     M = Math.pow,
     P = u(''.charAt),
@@ -71,7 +71,7 @@ var r,
             if (((a = 10), i.length > 1 && '0' === P(i, 0) && ((a = U(X, i) ? 16 : 8), (i = H(i, 8 === a ? 1 : 2))), '' === i)) s = 0;
             else {
                 if (!U(10 === a ? J : 8 === a ? $ : ee, i)) return e;
-                s = D(i, a);
+                s = L(i, a);
             }
             k(n, s);
         }
@@ -108,7 +108,7 @@ var r,
                 d++, (c = ++u);
                 continue;
             }
-            for (t = n = 0; n < 4 && U(ee, _()); ) (t = 16 * t + D(_(), 16)), d++, n++;
+            for (t = n = 0; n < 4 && U(ee, _()); ) (t = 16 * t + L(_(), 16)), d++, n++;
             if ('.' === _()) {
                 if (0 === n) return;
                 if (((d -= n), u > 6)) return;
@@ -119,7 +119,7 @@ var r,
                     }
                     if (!U(Q, _())) return;
                     for (; U(Q, _()); ) {
-                        if (((a = D(_(), 10)), null === i)) i = a;
+                        if (((a = L(_(), 10)), null === i)) i = a;
                         else {
                             if (0 === i) return;
                             i = 10 * i + a;
@@ -205,8 +205,8 @@ var r,
     },
     em = {},
     eT = {},
-    eg = {},
     eS = {},
+    eg = {},
     eA = {},
     eN = {},
     eO = {},
@@ -214,8 +214,8 @@ var r,
     ev = {},
     eC = {},
     ey = {},
-    eL = {},
     eD = {},
+    eL = {},
     eb = {},
     eM = {},
     eP = {},
@@ -230,10 +230,10 @@ var r,
             a,
             s = T(e);
         if (t) {
-            if ((i = this.parse(s))) throw L(i);
+            if ((i = this.parse(s))) throw D(i);
             this.searchParams = null;
         } else {
-            if ((void 0 !== n && (r = new eB(n, !0)), (i = this.parse(s, null, r)))) throw L(i);
+            if ((void 0 !== n && (r = new eB(n, !0)), (i = this.parse(s, null, r)))) throw D(i);
             (a = C(new v())).bindURL(this), (this.searchParams = a);
         }
     };
@@ -252,7 +252,7 @@ eB.prototype = {
                     if (d && U(z, d)) (s += Z(d)), (i = eT);
                     else {
                         if (t) return j;
-                        i = eg;
+                        i = eS;
                         continue;
                     }
                     break;
@@ -264,14 +264,14 @@ eB.prototype = {
                             this.isSpecial() && eh[this.scheme] === this.port && (this.port = null);
                             return;
                         }
-                        (s = ''), 'file' === this.scheme ? (i = eb) : this.isSpecial() && n && n.scheme === this.scheme ? (i = eS) : this.isSpecial() ? (i = eR) : '/' === c[a + 1] ? ((i = eA), a++) : ((this.cannotBeABaseURL = !0), k(this.path, ''), (i = ex));
+                        (s = ''), 'file' === this.scheme ? (i = eb) : this.isSpecial() && n && n.scheme === this.scheme ? (i = eg) : this.isSpecial() ? (i = eR) : '/' === c[a + 1] ? ((i = eA), a++) : ((this.cannotBeABaseURL = !0), k(this.path, ''), (i = ex));
                     } else {
                         if (t) return j;
-                        (s = ''), (i = eg), (a = 0);
+                        (s = ''), (i = eS), (a = 0);
                         continue;
                     }
                     break;
-                case eg:
+                case eS:
                     if (!n || (n.cannotBeABaseURL && '#' !== d)) return j;
                     if (n.cannotBeABaseURL && '#' === d) {
                         (this.scheme = n.scheme), (this.path = p(n.path)), (this.query = n.query), (this.fragment = ''), (this.cannotBeABaseURL = !0), (i = ek);
@@ -279,7 +279,7 @@ eB.prototype = {
                     }
                     i = 'file' === n.scheme ? eb : eN;
                     continue;
-                case eS:
+                case eg:
                     if ('/' === d && '/' === c[a + 1]) (i = ev), a++;
                     else {
                         i = eN;
@@ -324,13 +324,13 @@ eB.prototype = {
                 case eC:
                     if ('@' === d) {
                         o && (s = '%40' + s), (o = !0), (_ = h(s));
-                        for (var c, d, _, f, I, m, g = 0; g < _.length; g++) {
-                            var S = _[g];
-                            if (':' === S && !u) {
+                        for (var c, d, _, f, I, m, S = 0; S < _.length; S++) {
+                            var g = _[S];
+                            if (':' === g && !u) {
                                 u = !0;
                                 continue;
                             }
-                            var A = ef(S, eE);
+                            var A = ef(g, eE);
                             u ? (this.password += A) : (this.username += A);
                         }
                         s = '';
@@ -340,7 +340,7 @@ eB.prototype = {
                     } else s += d;
                     break;
                 case ey:
-                case eL:
+                case eD:
                     if (t && 'file' === this.scheme) {
                         i = eP;
                         continue;
@@ -356,15 +356,15 @@ eB.prototype = {
                     } else {
                         if ('' === s) return W;
                         if ((f = this.parseHost(s))) return f;
-                        if (((s = ''), (i = eD), t === eL)) return;
+                        if (((s = ''), (i = eL), t === eD)) return;
                     }
                     break;
-                case eD:
+                case eL:
                     if (U(Q, d)) s += d;
                     else {
                         if (!(d === r || '/' === d || '?' === d || '#' === d || ('\\' === d && this.isSpecial())) && !t) return K;
                         if ('' !== s) {
-                            var N = D(s, 10);
+                            var N = L(s, 10);
                             if (N > 65535) return K;
                             (this.port = this.isSpecial() && N === eh[this.scheme] ? null : N), (s = '');
                         }
@@ -491,7 +491,7 @@ eB.prototype = {
     },
     setHref: function (e) {
         var t = this.parse(e);
-        if (t) throw L(t);
+        if (t) throw D(t);
         this.searchParams.update();
     },
     getOrigin: function () {
@@ -544,14 +544,14 @@ eB.prototype = {
         return null === e ? '' : eu(e);
     },
     setHostname: function (e) {
-        !this.cannotBeABaseURL && this.parse(e, eL);
+        !this.cannotBeABaseURL && this.parse(e, eD);
     },
     getPort: function () {
         var e = this.port;
         return null === e ? '' : T(e);
     },
     setPort: function (e) {
-        !this.cannotHaveUsernamePasswordPort() && ('' === (e = T(e)) ? (this.port = null) : this.parse(e, eD));
+        !this.cannotHaveUsernamePasswordPort() && ('' === (e = T(e)) ? (this.port = null) : this.parse(e, eL));
     },
     getPathname: function () {
         var e = this.path;
@@ -587,7 +587,7 @@ eB.prototype = {
 };
 var eF = function (e) {
         var t = _(this, eV),
-            n = S(arguments.length, 1) > 1 ? arguments[1] : void 0,
+            n = g(arguments.length, 1) > 1 ? arguments[1] : void 0,
             r = O(t, new eB(e, !1, n));
         !a && ((t.href = r.serialize()), (t.origin = r.getOrigin()), (t.protocol = r.getProtocol()), (t.username = r.getUsername()), (t.password = r.getPassword()), (t.host = r.getHost()), (t.hostname = r.getHostname()), (t.port = r.getPort()), (t.pathname = r.getPathname()), (t.search = r.getSearch()), (t.searchParams = r.getSearchParams()), (t.hash = r.getHash()));
     },
@@ -630,7 +630,7 @@ if (
         eY = y.revokeObjectURL;
     eZ && c(eF, 'createObjectURL', l(eZ, y)), eY && c(eF, 'revokeObjectURL', l(eY, y));
 }
-g(eF, 'URL'),
+S(eF, 'URL'),
     i(
         {
             global: !0,

@@ -3,7 +3,7 @@ n.d(t, {
         return s;
     },
     Z: function () {
-        return _;
+        return T;
     }
 });
 var i,
@@ -13,22 +13,22 @@ var i,
     l = n(120356),
     r = n.n(l),
     c = n(500923),
-    u = n.n(c),
-    d = n(570140),
+    d = n.n(c),
+    u = n(570140),
     h = n(960020),
     m = n(831244),
     p = n(815605),
-    g = n(981631),
-    f = n(159188);
+    f = n(981631),
+    g = n(159188);
 ((i = s || (s = {}))[(i.NORMAL = 16)] = 'NORMAL'), (i[(i.LARGE = 32)] = 'LARGE');
-let T = async (e) => {
+let _ = async (e) => {
     var t;
     let { effect: n } = e,
-        i = await (0, m.T)(n.channelId, null !== (t = n.messageId) && void 0 !== t ? t : g.lds, n.emoji.name),
+        i = await (0, m.T)(n.channelId, null !== (t = n.messageId) && void 0 !== t ? t : f.lds, n.emoji.name),
         s = await (0, p.aB)(''.concat(n.channelId, ':').concat(n.messageId, ':').concat(n.emoji.name), n.url, i, n.color);
     return (s.assets[0].p = n.url), s;
 };
-function _(e) {
+function T(e) {
     let { className: t, effect: n, onComplete: i, emojiSize: s = 16 } = e,
         l = a.useRef(null),
         c = s * p.Vz,
@@ -40,8 +40,8 @@ function _(e) {
                 return (
                     !(async function () {
                         if (null != l.current) {
-                            let t = await T({ effect: n });
-                            (e = u().loadAnimation({
+                            let t = await _({ effect: n });
+                            (e = d().loadAnimation({
                                 container: l.current,
                                 renderer: 'svg',
                                 loop: !1,
@@ -54,7 +54,7 @@ function _(e) {
                                     null != n.messageId &&
                                     null != n.emoji &&
                                     n.key === h.I.HOVER &&
-                                    d.Z.dispatch({
+                                    u.Z.dispatch({
                                         type: 'BURST_REACTION_ANIMATION_ADD',
                                         channelId: n.channelId,
                                         messageId: n.messageId,
@@ -69,9 +69,9 @@ function _(e) {
                 );
         }, [i, n, s]),
         (0, o.jsx)('div', {
-            className: f.effectsWrapper,
+            className: g.effectsWrapper,
             children: (0, o.jsx)('div', {
-                className: r()(f.effect, t),
+                className: r()(g.effect, t),
                 style: {
                     transform: 'translateY('.concat(m, 'px)'),
                     height: c,

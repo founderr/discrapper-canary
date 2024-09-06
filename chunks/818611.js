@@ -16,8 +16,8 @@ var r = n(735250),
     I = n(125988),
     m = n(689938),
     T = n(357038);
-let g = () => 80,
-    S = (e) => {
+let S = () => 80,
+    g = (e) => {
         let { children: t, className: n, onSelect: i, isSelected: a = !1, ...o } = e;
         return (0, r.jsx)(c.Clickable, {
             className: s()(T.decorationGridItem, a ? T.selected : void 0, n),
@@ -28,7 +28,7 @@ let g = () => 80,
     },
     A = (e) => {
         let { user: t, avatarDecoration: n, innerRef: a, section: s, isSelected: o = !1, ...h } = e,
-            g = (0, u.e7)([_.Z], () => {
+            S = (0, u.e7)([_.Z], () => {
                 let e = _.Z.getProduct(n.skuId);
                 return (0, E.G1)(e);
             }),
@@ -43,7 +43,7 @@ let g = () => 80,
                 size: 80,
                 onlyAnimateOnHover: !v
             });
-        return (0, r.jsxs)(S, {
+        return (0, r.jsxs)(g, {
             className: O ? T.decorationGridItemChurned : void 0,
             innerRef: null != a ? a : R,
             isSelected: o,
@@ -71,7 +71,7 @@ let g = () => 80,
                             })
                         })
                       : (0, r.jsx)(c.IconBadge, {
-                            icon: g
+                            icon: S
                                 ? () =>
                                       (0, r.jsx)(c.NitroWheelIcon, {
                                           size: 'custom',
@@ -114,7 +114,7 @@ t.Z = (e) => {
             return (0, o.EQ)(I[i])
                 .with(p.Tm, () =>
                     (0, r.jsxs)(
-                        S,
+                        g,
                         {
                             style: { ...u },
                             isSelected: null === a,
@@ -137,7 +137,7 @@ t.Z = (e) => {
                 )
                 .with(p.oT, () =>
                     (0, r.jsxs)(
-                        S,
+                        g,
                         {
                             style: u,
                             onSelect: _,
@@ -196,6 +196,6 @@ t.Z = (e) => {
         },
         getSectionHeight: (e) => d[e].height,
         getItemKey: (e, t) => d[e].items[t].id,
-        getItemHeight: g
+        getItemHeight: S
     });
 };

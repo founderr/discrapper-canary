@@ -21,8 +21,8 @@ let p = function (e, t) {
         I = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         m = c.Z.getChannel(e),
         T = f.Z.getCurrentClientVoiceChannelId(null != t ? t : null) === e,
-        g = null != m ? _.Z.getCheck(m.guild_id) : null;
-    if (!(null != t && (0, a.n)(t)) && (null == g || !!g.canChat || !!(0, s.jU)(m))) {
+        S = null != m ? _.Z.getCheck(m.guild_id) : null;
+    if (!(null != t && (0, a.n)(t)) && (null == S || !!S.canChat || !!(0, s.jU)(m))) {
         if (null != m && !T) {
             let e = (0, h.rY)(m, f.Z, d.Z);
             if (e && m.isGuildStageVoice() && (0, o.xJ)(m.id)) {

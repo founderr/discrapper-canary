@@ -13,8 +13,8 @@ var o,
     I = n(902840),
     m = n(212819),
     T = n(353926),
-    g = n(823385),
-    S = n(592125),
+    S = n(823385),
+    g = n(592125),
     A = n(430824),
     N = n(306680),
     O = n(944486),
@@ -22,8 +22,8 @@ var o,
     v = n(594174),
     C = n(70956),
     y = n(709054),
-    L = n(418088),
-    D = n(814249);
+    D = n(418088),
+    L = n(814249);
 ((u = o || (o = {})).FETCHING = 'fetching'), (u.OK = 'ok'), (u.ERROR = 'error');
 let b = {},
     M = {},
@@ -38,7 +38,7 @@ let b = {},
     G = [],
     k = [];
 function B() {
-    G = g.Z.getProps()
+    G = S.Z.getProps()
         .results.filter((e) => e.type === m.h8.TEXT_CHANNEL && 0 === e.record.type)
         .map((e) => e.record.id);
 }
@@ -48,7 +48,7 @@ class F extends (l = h.ZP.PersistedStore) {
     }
     initialize(e) {
         var t;
-        (r = null === (t = null == e ? void 0 : e.shouldShowTopicsBar) || void 0 === t || t), this.waitFor(S.Z, v.default, O.Z, A.Z, T.Z), this.syncWith([g.Z], B);
+        (r = null === (t = null == e ? void 0 : e.shouldShowTopicsBar) || void 0 === t || t), this.waitFor(g.Z, v.default, O.Z, A.Z, T.Z), this.syncWith([S.Z], B);
     }
     allSummaries() {
         return b;
@@ -86,12 +86,12 @@ class F extends (l = h.ZP.PersistedStore) {
     shouldFetch(e, t) {
         var n, r;
         let i = M[e],
-            a = S.Z.getChannel(e);
+            a = g.Z.getChannel(e);
         if (!(0, I.Lp)(a)) return !1;
         if (null != t) {
             let e = null !== (n = null == i ? void 0 : i.summaryIdLastRequestedAt) && void 0 !== n ? n : 0,
                 r = Date.now() - e;
-            return t !== (null == i ? void 0 : i.summaryId) || r > D.cS;
+            return t !== (null == i ? void 0 : i.summaryId) || r > L.cS;
         }
         let s = null !== (r = null == i ? void 0 : i.lastReceivedAt) && void 0 !== r ? r : 0;
         return !(null == i ? void 0 : i.fetching) && 0 === s;
@@ -116,11 +116,11 @@ class F extends (l = h.ZP.PersistedStore) {
             n && (a = a.concat(U.map((e) => e.channel_id))),
             r &&
                 (a = a.filter((e) => {
-                    let t = S.Z.getChannel(e);
+                    let t = g.Z.getChannel(e);
                     return null != t && !R.ZP.isChannelMuted(t.guild_id, e) && N.ZP.hasUnread(e);
                 })),
             (a = a.filter((e) => {
-                let t = S.Z.getChannel(e);
+                let t = g.Z.getChannel(e);
                 return (0, I.Lp)(t, !1, !1);
             })).slice(0, i)
         );
@@ -151,7 +151,7 @@ let V = new F(p.Z, {
         var t, n;
         let { summary: r, channelId: i, error: a, receivedAt: s } = e;
         if (null != r && Object.keys(r).length > 0) {
-            let e = (0, L.b)(r, i),
+            let e = (0, D.b)(r, i),
                 n = [...(null !== (t = b[i]) && void 0 !== t ? t : [])],
                 a = n.findIndex((t) => t.id === (null == e ? void 0 : e.id));
             a > -1 ? (n[a] = e) : n.push(e), (b[i] = n);
@@ -175,7 +175,7 @@ let V = new F(p.Z, {
     },
     RECEIVE_CHANNEL_SUMMARIES(e) {
         let { summaries: t, channelId: n, error: r, receivedAt: i } = e,
-            a = t.filter((e) => Object.keys(e).length > 0).map((e) => (0, L.b)(e, n));
+            a = t.filter((e) => Object.keys(e).length > 0).map((e) => (0, D.b)(e, n));
         if (null != s && s.channelId === n && !a.some((e) => e.id === (null == s ? void 0 : s.summaryId))) {
             var o;
             let e = (null !== (o = b[n]) && void 0 !== o ? o : []).find((e) => e.id === (null == s ? void 0 : s.summaryId));
@@ -310,7 +310,7 @@ let V = new F(p.Z, {
                 .reduce((e, t) => {
                     let [n, r] = t,
                         i = f()
-                            .chain(r.map((e) => (0, L.b)(e, n)))
+                            .chain(r.map((e) => (0, D.b)(e, n)))
                             .sortBy((e) => y.default.extractTimestamp(e.startId))
                             .takeRight(75)
                             .reverse()
@@ -356,7 +356,7 @@ let V = new F(p.Z, {
                 .chain(a)
                 .sortBy((e) => y.default.extractTimestamp(e.start_id))
                 .filter((e) => Object.keys(e).length > 0)
-                .map((e) => (0, L.b)(e, i))
+                .map((e) => (0, D.b)(e, i))
                 .reverse()
                 .value(),
             u = null !== (n = b[i]) && void 0 !== n ? n : [],

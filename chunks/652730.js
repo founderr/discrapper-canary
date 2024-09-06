@@ -1,6 +1,6 @@
 var i,
-    a,
     s,
+    a,
     l,
     r = n(442837),
     o = n(570140),
@@ -11,7 +11,7 @@ function h() {
     let e = c.Z.mostRecentLurkedGuildId();
     null != e ? ((u = e), (d = null)) : (null != u ? (d = u) : (d = null), (u = null));
 }
-class p extends (l = r.ZP.Store) {
+class m extends (l = r.ZP.Store) {
     initialize() {
         this.syncWith([c.Z], h);
     }
@@ -19,13 +19,13 @@ class p extends (l = r.ZP.Store) {
         return d === e;
     }
 }
-(s = 'LurkerModePopoutStore'),
-    (a = 'displayName') in (i = p)
-        ? Object.defineProperty(i, a, {
-              value: s,
+(a = 'LurkerModePopoutStore'),
+    (s = 'displayName') in (i = m)
+        ? Object.defineProperty(i, s, {
+              value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (i[a] = s),
-    (t.Z = new p(o.Z));
+        : (i[s] = a),
+    (t.Z = new m(o.Z));

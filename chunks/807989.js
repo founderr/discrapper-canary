@@ -36,11 +36,11 @@ let h = (e) => {
 function p(e) {
     var t;
     let n,
-        { application: a, scopes: p, redirectUri: m, approximateGuildCount: T, isEmbeddedFlow: g, disclosures: S } = e,
+        { application: a, scopes: p, redirectUri: m, approximateGuildCount: T, isEmbeddedFlow: S, disclosures: g } = e,
         A = new Date(u.default.extractTimestamp(a.id)),
         N = (0, d.W3)(p),
         O = (0, l.yE)(null !== (t = a.flags) && void 0 !== t ? t : 0, _.udG.EMBEDDED);
-    if (null != m && !O && !g)
+    if (null != m && !O && !S)
         try {
             let e = new URL(m);
             n = null != e.host && e.host.length > 0 ? e.origin : e.href;
@@ -74,8 +74,8 @@ function p(e) {
                 icon: s.ShieldIcon,
                 text: N
             }),
-            null != S
-                ? S.map((e) => {
+            null != g
+                ? g.map((e) => {
                       let t = (0, o.PM)(e),
                           n = h(e);
                       return null != n && null != t

@@ -1,12 +1,12 @@
 n.d(t, {
     Az: function () {
-        return g;
+        return S;
     },
     Eg: function () {
         return y;
     },
     IZ: function () {
-        return S;
+        return g;
     },
     Lq: function () {
         return I;
@@ -155,7 +155,7 @@ function T(e) {
         recommendations_source: a
     });
 }
-function g(e, t) {
+function S(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
     E.default.track(f.rMx.GUILD_DISCOVERY_EXITED, {
         load_id: e,
@@ -163,7 +163,7 @@ function g(e, t) {
         recommendations_source: n
     });
 }
-function S(e) {
+function g(e) {
     E.default.track(f.rMx.SEARCH_CLOSED, { load_id: e });
 }
 function A(e, t) {

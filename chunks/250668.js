@@ -15,8 +15,8 @@ var r = n(147018),
     I = n(712560),
     m = n(966606),
     T = n(740362),
-    g = n(974971),
-    S = n(622281),
+    S = n(974971),
+    g = n(622281),
     A = n(323979),
     N = n(803938),
     O = n(838957),
@@ -24,8 +24,8 @@ var r = n(147018),
     v = n(537443).f,
     C = n(12367),
     y = n(335225).forEach,
-    L = n(930990),
-    D = n(4340),
+    D = n(930990),
+    L = n(4340),
     b = n(97131),
     M = n(347722),
     P = n(644659),
@@ -53,7 +53,7 @@ var r = n(147018),
         return i;
     },
     J = function (e, t) {
-        D(e, t, {
+        L(e, t, {
             configurable: !0,
             get: function () {
                 return w(this)[t];
@@ -62,7 +62,7 @@ var r = n(147018),
     },
     ee = function (e) {
         var t;
-        return O(H, e) || 'ArrayBuffer' === (t = g(e)) || 'SharedArrayBuffer' === t;
+        return O(H, e) || 'ArrayBuffer' === (t = S(e)) || 'SharedArrayBuffer' === t;
     },
     et = function (e, t) {
         return q(e) && !A(t) && t in e && E(+t) && t >= 0;
@@ -71,7 +71,7 @@ var r = n(147018),
         return et(e, (t = m(t))) ? d(2, e[t]) : B(e, t);
     },
     er = function (e, t, n) {
-        return et(e, (t = m(t))) && S(n) && T(n, 'value') && !T(n, 'get') && !T(n, 'set') && !n.configurable && (!T(n, 'writable') || n.writable) && (!T(n, 'enumerable') || n.enumerable) ? ((e[t] = n.value), e) : k(e, t, n);
+        return et(e, (t = m(t))) && g(n) && T(n, 'value') && !T(n, 'get') && !T(n, 'set') && !n.configurable && (!T(n, 'writable') || n.writable) && (!T(n, 'enumerable') || n.enumerable) ? ((e[t] = n.value), e) : k(e, t, n);
     };
 s
     ? (!Y && ((M.f = en), (b.f = er), J(K, 'buffer'), J(K, 'byteOffset'), J(K, 'byteLength'), J(K, 'length')),
@@ -94,7 +94,7 @@ s
               E = i[l],
               m = E,
               T = m && m.prototype,
-              g = {},
+              S = {},
               A = function (e, t) {
                   var n = w(e);
                   return n.view[u](t * s + n.byteOffset, !0);
@@ -103,7 +103,7 @@ s
                   var i = w(e);
                   i.view[d](t * s + i.byteOffset, n ? I(r) : r, !0);
               },
-              D = function (e, t) {
+              L = function (e, t) {
                   k(e, t, {
                       get: function () {
                           return A(this, t);
@@ -117,7 +117,7 @@ s
           Y
               ? o &&
                 ((m = t(function (e, t, n, r) {
-                    return c(e, T), U(S(t) ? (ee(t) ? (void 0 !== r ? new E(t, p(n, s), r) : void 0 !== n ? new E(t, p(n, s)) : new E(t)) : q(t) ? $(m, t) : a(C, m, t)) : new E(h(t)), e, m);
+                    return c(e, T), U(g(t) ? (ee(t) ? (void 0 !== r ? new E(t, p(n, s), r) : void 0 !== n ? new E(t, p(n, s)) : new E(t)) : q(t) ? $(m, t) : a(C, m, t)) : new E(h(t)), e, m);
                 })),
                 R && R(m, W),
                 y(v(E), function (e) {
@@ -131,7 +131,7 @@ s
                         l,
                         u = 0,
                         d = 0;
-                    if (S(t)) {
+                    if (g(t)) {
                         if (ee(t)) {
                             (i = t), (d = p(n, s));
                             var _ = t.byteLength;
@@ -153,7 +153,7 @@ s
                         u < l;
 
                     )
-                        D(e, u++);
+                        L(e, u++);
                 })),
                 R && R(m, W),
                 (T = m.prototype = N(K))),
@@ -161,7 +161,7 @@ s
               (G(T).TypedArrayConstructor = m),
               j && _(T, j, l);
           var b = m !== E;
-          (g[l] = m),
+          (S[l] = m),
               r(
                   {
                       global: !0,
@@ -169,10 +169,10 @@ s
                       forced: b,
                       sham: !Y
                   },
-                  g
+                  S
               ),
               !(Q in m) && _(m, Q, s),
               !(Q in T) && _(T, Q, s),
-              L(l);
+              D(l);
       }))
     : (e.exports = function () {});

@@ -17,8 +17,8 @@ var d = n(202226),
     I = n(485359),
     m = n(395727),
     T = n(471638),
-    g = n(585275),
-    S = n(960048),
+    S = n(585275),
+    g = n(960048),
     A = n(63063),
     N = n(240849),
     O = n(998502),
@@ -26,8 +26,8 @@ var d = n(202226),
     v = n(534713),
     C = n(358085),
     y = n(703656),
-    L = n(284737),
-    D = n(473159),
+    D = n(284737),
+    L = n(473159),
     b = n(846519),
     M = n(579806),
     P = n(896361),
@@ -50,18 +50,18 @@ if (null != M.Z) {
         void 0 === r ||
         r.call(M.Z, (e, t) => {
             setImmediate(() => {
-                throw (S.Z.captureCrash(e), e);
+                throw (g.Z.captureCrash(e), e);
             });
         });
     let e = null === (i = (a = M.Z.remoteApp).getVersion) || void 0 === i ? void 0 : i.call(a),
         t = null === (s = (o = M.Z.remoteApp).getBuildNumber) || void 0 === s ? void 0 : s.call(o),
         n = {};
     null != M.Z.remoteApp.getModuleVersions && (n = M.Z.remoteApp.getModuleVersions()),
-        S.Z.setExtra({
+        g.Z.setExtra({
             hostVersion: e,
             moduleVersions: n
         }),
-        S.Z.setTags({ nativeBuildNumber: null == t ? void 0 : t.toString() });
+        g.Z.setTags({ nativeBuildNumber: null == t ? void 0 : t.toString() });
     let c = Object.keys(n)
         .filter((e) => null != n[e])
         .map((e) => ''.concat(e, ': ').concat(n[e]))
@@ -70,17 +70,17 @@ if (null != M.Z) {
     let d = null === (l = (u = M.Z.remoteApp).getReleaseChannel) || void 0 === l ? void 0 : l.call(u);
     ('canary' === d || 'development' === d) && O.ZP.pauseFrameEvictor(), O.ZP.initializeExitHook();
 }
-if (((0, D.O)(window), __OVERLAY__)) Y(f.Z.Overlay);
+if (((0, L.O)(window), __OVERLAY__)) Y(f.Z.Overlay);
 else if (null != window.require && null == window.DiscordNative) Y(f.Z.OutdatedClient);
 else {
     if ((document.addEventListener('scroll', (e) => e.preventDefault()), C.isPlatformEmbedded)) {
         (window.onbeforeunload = () => O.ZP.beforeUnload()), O.ZP.on('HELP_OPEN', () => window.open(A.Z.getCommunityURL()));
         let e = new b.sW(F, () => O.ZP.purgeMemory());
         O.ZP.on('MAIN_WINDOW_BLUR', () => {
-            e.delay(), O.ZP.setFocused(!1), (0, L.T_)(window, !1);
+            e.delay(), O.ZP.setFocused(!1), (0, D.T_)(window, !1);
         }),
             O.ZP.on('MAIN_WINDOW_FOCUS', () => {
-                e.cancel(), O.ZP.setFocused(!0), (0, L.T_)(window, !0);
+                e.cancel(), O.ZP.setFocused(!0), (0, D.T_)(window, !0);
             }),
             O.ZP.on('MAIN_WINDOW_PATH', function (e, t, n) {
                 var r;
@@ -88,8 +88,8 @@ else {
                 if (null === (r = Z[t]) || void 0 === r ? !void 0 : !r.call(Z, i)) (0, y.uL)(t);
             }),
             O.ZP.on('MAIN_WINDOW_HIDDEN', () => {
-                (0, L.al)(window);
+                (0, D.al)(window);
             });
     }
-    m.Z.initialize(), h.Z.initialize(), p.Z.init(), g.Z.init(), G.Z.init(), I.Z.initialize(), N.Z.initialize(), R.Z.initialize(), T.j(), Y(f.Z.App);
+    m.Z.initialize(), h.Z.initialize(), p.Z.init(), S.Z.init(), G.Z.init(), I.Z.initialize(), N.Z.initialize(), R.Z.initialize(), T.j(), Y(f.Z.App);
 }

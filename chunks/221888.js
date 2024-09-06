@@ -22,15 +22,15 @@ var r = n(735250),
     I = n(823379),
     m = n(5192),
     T = n(354459),
-    g = n(981631),
-    S = n(689938),
+    S = n(981631),
+    g = n(689938),
     A = n(526111);
 function N(e, t) {
     switch (e) {
         case T.fO.ACTIVITY:
-            return S.Z.Messages.EMBEDDED_ACTIVITIES_NUM_PARTICIPANTS.format({ numUsers: t });
+            return g.Z.Messages.EMBEDDED_ACTIVITIES_NUM_PARTICIPANTS.format({ numUsers: t });
         case T.fO.STREAM:
-            return S.Z.Messages.SPECTATORS.format({ numViewers: t });
+            return g.Z.Messages.SPECTATORS.format({ numViewers: t });
         default:
             throw Error('Unknown participant type.');
     }
@@ -107,10 +107,10 @@ function R(e) {
 }
 let v = [];
 function C(e) {
-    let { channelId: t, guildId: a, participant: o, className: f, compact: m = !1, disableInteraction: S = !1, maxVisibleUsers: N = 3 } = e,
+    let { channelId: t, guildId: a, participant: o, className: f, compact: m = !1, disableInteraction: g = !1, maxVisibleUsers: N = 3 } = e,
         [C, y] = i.useState(!1),
-        L = i.useRef(new c.sW(150, () => y(!1))),
-        D = (0, u.Wu)(
+        D = i.useRef(new c.sW(150, () => y(!1))),
+        L = (0, u.Wu)(
             [h.Z, p.default],
             () => {
                 if (o.type === T.fO.STREAM) {
@@ -128,10 +128,10 @@ function C(e) {
             [o]
         ),
         b = i.useCallback(() => {
-            L.current.cancel(), y(!0);
+            D.current.cancel(), y(!0);
         }, []),
         M = i.useCallback(() => {
-            L.current.delay();
+            D.current.delay();
         }, []),
         P = i.useCallback(
             (e, t) => {
@@ -151,17 +151,17 @@ function C(e) {
             },
             [M, b]
         );
-    if (0 === D.length) return null;
+    if (0 === L.length) return null;
     if (m)
         return (0, r.jsx)(R, {
             maxVisibleUsers: N,
-            users: D,
+            users: L,
             guildId: a,
             channelId: t,
             className: f,
             participantType: o.type
         });
-    let U = l()(D)
+    let U = l()(L)
         .take(N)
         .map((e) =>
             (0, r.jsx)(
@@ -177,17 +177,17 @@ function C(e) {
         )
         .value();
     return (
-        D.length > N &&
+        L.length > N &&
             (U[U.length - 1] = (0, r.jsxs)(
                 'div',
                 {
                     className: A.overflow,
-                    children: ['+', D.length - N + 1]
+                    children: ['+', L.length - N + 1]
                 },
                 'overflow'
             )),
         (0, r.jsx)(E.Z, {
-            section: g.jXE.STREAM_VIEWER_POPOUT,
+            section: S.jXE.STREAM_VIEWER_POPOUT,
             children: (0, r.jsx)('div', {
                 onMouseEnter: b,
                 onMouseLeave: M,
@@ -198,8 +198,8 @@ function C(e) {
                             handleUserContextMenu: P,
                             guildId: a,
                             channelId: t,
-                            users: D,
-                            disableInteraction: S
+                            users: L,
+                            disableInteraction: g
                         }),
                     shouldShow: C,
                     position: 'top',

@@ -25,16 +25,16 @@ function c(e) {
         I = e.children,
         m = r.useContext(i.C8),
         T = r.useState(null),
-        g = T[0],
-        S = T[1],
+        S = T[0],
+        g = T[1],
         A = r.useState(null),
         N = A[0],
         O = A[1];
     r.useEffect(
         function () {
-            (0, a.k$)(p, g);
+            (0, a.k$)(p, S);
         },
-        [p, g]
+        [p, S]
     );
     var R = r.useMemo(
             function () {
@@ -53,15 +53,15 @@ function c(e) {
             },
             [n, d, h, E, N]
         ),
-        v = (0, s.D)(f || m, g, R),
+        v = (0, s.D)(f || m, S, R),
         C = v.state,
         y = v.styles,
-        L = v.forceUpdate,
-        D = v.update,
+        D = v.forceUpdate,
+        L = v.update,
         b = r.useMemo(
             function () {
                 return {
-                    ref: S,
+                    ref: g,
                     style: y.popper,
                     placement: C ? C.placement : n,
                     hasPopperEscaped: C && C.modifiersData.hide ? C.modifiersData.hide.hasPopperEscaped : null,
@@ -70,11 +70,11 @@ function c(e) {
                         style: y.arrow,
                         ref: O
                     },
-                    forceUpdate: L || o,
-                    update: D || l
+                    forceUpdate: D || o,
+                    update: L || l
                 };
             },
-            [S, O, n, C, y, D, L]
+            [g, O, n, C, y, L, D]
         );
     return (0, a.$p)(I)(b);
 }

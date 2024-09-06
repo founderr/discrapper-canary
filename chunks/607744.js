@@ -24,7 +24,7 @@ let p = {
     m = {};
 function T(e) {
     let t;
-    g(e), I.add(e);
+    S(e), I.add(e);
     let n = _.Z.getGuild(e),
         r = E.default.getCurrentUser();
     if (null == n || n.verificationLevel === f.sFg.NONE || null == r || n.isOwner(r) || r.isPhoneVerified()) return;
@@ -46,12 +46,12 @@ function T(e) {
         c = n.verificationLevel >= f.sFg.LOW && !r.isClaimed(),
         p = !1,
         T = !1,
-        S = !1,
+        g = !1,
         A = !1;
-    !r.isPhoneVerified() && !r.isStaff() && ((p = n.verificationLevel >= f.sFg.LOW && !r.verified), (T = n.verificationLevel >= f.sFg.VERY_HIGH), (S = n.verificationLevel >= f.sFg.MEDIUM && s > 0), (A = n.verificationLevel >= f.sFg.HIGH && o > 0));
+    !r.isPhoneVerified() && !r.isStaff() && ((p = n.verificationLevel >= f.sFg.LOW && !r.verified), (T = n.verificationLevel >= f.sFg.VERY_HIGH), (g = n.verificationLevel >= f.sFg.MEDIUM && s > 0), (A = n.verificationLevel >= f.sFg.HIGH && o > 0));
     let N = [];
     A && N.push(o),
-        S && N.push(s),
+        g && N.push(s),
         N.length > 0 &&
             (t = setTimeout(
                 () =>
@@ -65,19 +65,19 @@ function T(e) {
             notClaimed: c,
             notEmailVerified: p,
             notPhoneVerified: T,
-            newAccount: S,
+            newAccount: g,
             newMember: A,
-            canChat: !(c || p || T || S || A),
+            canChat: !(c || p || T || g || A),
             accountDeadline: new Date(Date.now() + s),
             memberDeadline: new Date(Date.now() + o),
             timeoutRef: t
         });
 }
-function g(e) {
+function S(e) {
     let t = m[e];
     null != t && clearTimeout(t.timeoutRef), delete m[e];
 }
-function S(e) {
+function g(e) {
     I.delete(e.guild.id), T(e.guild.id);
 }
 class A extends (r = o.ZP.Store) {
@@ -103,19 +103,19 @@ class A extends (r = o.ZP.Store) {
         : (i[a] = s),
     (t.Z = new A(l.Z, {
         CONNECTION_OPEN: function () {
-            for (let e in (I.clear(), m)) g(e);
+            for (let e in (I.clear(), m)) S(e);
         },
         CONNECTION_CLOSED: function () {
-            c.default.keys(m).forEach(g);
+            c.default.keys(m).forEach(S);
         },
         CURRENT_USER_UPDATE: function () {
             I.clear();
         },
-        GUILD_CREATE: S,
-        GUILD_UPDATE: S,
+        GUILD_CREATE: g,
+        GUILD_UPDATE: g,
         GUILD_DELETE: function (e) {
             let { guild: t } = e;
-            g(t.id);
+            S(t.id);
         },
         GUILD_MEMBER_UPDATE: function (e) {
             var t;

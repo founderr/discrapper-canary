@@ -7,7 +7,7 @@ n.d(t, {
         return N;
     },
     Vf: function () {
-        return S;
+        return g;
     },
     YR: function () {
         return ex;
@@ -185,7 +185,7 @@ function f(e, t) {
     return (t = b(t, e.calendar)), e.era === t.era && e.year === t.year && e.month === t.month && e.day === t.day;
 }
 function h(e, t) {
-    return (t = b(t, e.calendar)), (e = g(e)), (t = g(t)), e.era === t.era && e.year === t.year && e.month === t.month;
+    return (t = b(t, e.calendar)), (e = S(e)), (t = S(t)), e.era === t.era && e.year === t.year && e.month === t.month;
 }
 function p(e, t) {
     return e.calendar.toJulianDay(e) - t.calendar.toJulianDay(t);
@@ -197,10 +197,10 @@ let m = null;
 function T() {
     return null == m && (m = new Intl.DateTimeFormat().resolvedOptions().timeZone), m;
 }
-function g(e) {
+function S(e) {
     return e.subtract({ days: e.day - 1 });
 }
-function S(e) {
+function g(e) {
     return e.add({ days: e.calendar.getDaysInMonth(e) - e.day });
 }
 let A = new Map();
@@ -209,7 +209,7 @@ function N(e, t) {
     let i,
         a = e.calendar.getDaysInMonth(e);
     return Math.ceil(
-        ((n = g(e)),
+        ((n = S(e)),
         (r = t),
         (i =
             Math.ceil(
@@ -274,11 +274,11 @@ function y(e, t) {
         second: +i.second
     };
 }
-function L(e, t, n = 'compatible') {
+function D(e, t, n = 'compatible') {
     return new Date(
         (function (e, t, n = 'compatible') {
             var r, i, a, s;
-            let o = D(e);
+            let o = L(e);
             if ('UTC' === t) return O(o);
             if (t === T() && 'compatible' === n) {
                 o = b(o, new _());
@@ -321,7 +321,7 @@ function L(e, t, n = 'compatible') {
         })(e, t, n)
     );
 }
-function D(e, t) {
+function L(e, t) {
     let n = 0,
         r = 0,
         i = 0,
@@ -469,7 +469,7 @@ class j {
         return F(this, e, t, n);
     }
     toDate(e) {
-        return L(this, e);
+        return D(this, e);
     }
     toString() {
         return H(this);
@@ -554,7 +554,7 @@ class K {
         }
     }
     toDate(e, t) {
-        return L(this, e, t);
+        return D(this, e, t);
     }
     toString() {
         var e, t;
@@ -564,7 +564,7 @@ class K {
         let t = p(this, e);
         if (0 === t) {
             var n, r;
-            return (n = this), (r = D(e)), I(n) - I(r);
+            return (n = this), (r = L(e)), I(n) - I(r);
         }
         return t;
     }
@@ -858,7 +858,7 @@ function em(e, t) {
 function eT(e) {
     return i[e + 1 - 1300] - i[e - 1300];
 }
-class eg extends ef {
+class eS extends ef {
     fromJulianDay(e) {
         let t = e - 1948440,
             n = ep(1300),
@@ -904,8 +904,8 @@ class eg extends ef {
         }
     }
 }
-let eS = 25920,
-    eA = 29 * eS + 13753;
+let eg = 25920,
+    eA = 29 * eg + 13753;
 function eN(e) {
     return 7 > s(7 * e + 1, 19);
 }
@@ -940,7 +940,7 @@ function eC(e, t) {
 class ey {
     fromJulianDay(e) {
         let t = e - 347997,
-            n = Math.floor((((t * eS) / eA) * 19 + 234) / 235) + 1,
+            n = Math.floor((((t * eg) / eA) * 19 + 234) / 235) + 1,
             r = eR(n),
             i = Math.floor(t - r);
         for (; i < 1; ) i = Math.floor(t - (r = eR(--n)));
@@ -977,13 +977,13 @@ class ey {
         this.identifier = 'hebrew';
     }
 }
-function eL(e, t, n, r) {
+function eD(e, t, n, r) {
     return e + 365 * t + Math.floor(t / 4) + 30 * (n - 1) + r - 1;
 }
-function eD(e, t) {
+function eL(e, t) {
     let n = Math.floor((4 * (t - e)) / 1461),
-        r = 1 + Math.floor((t - eL(e, n, 1, 1)) / 30),
-        i = t + 1 - eL(e, n, r, 1);
+        r = 1 + Math.floor((t - eD(e, n, 1, 1)) / 30),
+        i = t + 1 - eD(e, n, r, 1);
     return [n, r, i];
 }
 function eb(e) {
@@ -994,13 +994,13 @@ function eM(e, t) {
 }
 class eP {
     fromJulianDay(e) {
-        let [t, n, r] = eD(1723856, e),
+        let [t, n, r] = eL(1723856, e),
             i = 'AM';
         return t <= 0 && ((i = 'AA'), (t += 5500)), new j(this, i, t, n, r);
     }
     toJulianDay(e) {
         let t = e.year;
-        return 'AA' === e.era && (t -= 5500), eL(1723856, t, e.month, e.day);
+        return 'AA' === e.era && (t -= 5500), eD(1723856, t, e.month, e.day);
     }
     getDaysInMonth(e) {
         return eM(e.year, e.month);
@@ -1023,7 +1023,7 @@ class eP {
 }
 class eU extends eP {
     fromJulianDay(e) {
-        let [t, n, r] = eD(1723856, e);
+        let [t, n, r] = eL(1723856, e);
         return new j(this, 'AA', (t += 5500), n, r);
     }
     getEras() {
@@ -1038,13 +1038,13 @@ class eU extends eP {
 }
 class ew extends eP {
     fromJulianDay(e) {
-        let [t, n, r] = eD(1824665, e),
+        let [t, n, r] = eL(1824665, e),
             i = 'CE';
         return t <= 0 && ((i = 'BCE'), (t = 1 - t)), new j(this, i, t, n, r);
     }
     toJulianDay(e) {
         let t = e.year;
-        return 'BCE' === e.era && (t = 1 - t), eL(1824665, t, e.month, e.day);
+        return 'BCE' === e.era && (t = 1 - t), eD(1824665, t, e.month, e.day);
     }
     getDaysInMonth(e) {
         let t = e.year;
@@ -1085,7 +1085,7 @@ function ex(e) {
         case 'islamic-tbla':
             return new eh();
         case 'islamic-umalqura':
-            return new eg();
+            return new eS();
         case 'japanese':
             return new ee();
         case 'persian':

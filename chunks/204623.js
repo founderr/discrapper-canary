@@ -21,8 +21,8 @@ var r = n(735250),
     I = n(998502),
     m = n(151851),
     T = n(981631),
-    g = n(689938);
-let S = l.ZP.connectStores([E.Z], () => ({ focused: E.Z.isFocused() }))(m.Z);
+    S = n(689938);
+let g = l.ZP.connectStores([E.Z], () => ({ focused: E.Z.isFocused() }))(m.Z);
 class A extends i.PureComponent {
     getPlatform() {
         var e;
@@ -43,7 +43,7 @@ class A extends i.PureComponent {
         let e = (0, r.jsx)('div', {
                 children: (0, r.jsxs)('p', {
                     children: [
-                        g.Z.Messages.VERY_OUT_OF_DATE_DESCRIPTION,
+                        S.Z.Messages.VERY_OUT_OF_DATE_DESCRIPTION,
                         ' ',
                         (0, r.jsx)(d.Z, {
                             src: f.ZP.getURL(u.Z.convert.fromCodePoint('1f44c')),
@@ -56,14 +56,14 @@ class A extends i.PureComponent {
             t = (0, r.jsx)(c.Button, {
                 size: c.ButtonSizes.LARGE,
                 onClick: this.handleDownload,
-                children: g.Z.Messages.DOWNLOAD
+                children: S.Z.Messages.DOWNLOAD
             });
         return (0, r.jsxs)(i.Fragment, {
             children: [
                 (0, r.jsx)(o.ql, { children: (0, r.jsx)('html', { className: (0, c.getThemeClass)(T.BRd.DARK) }) }),
-                (0, r.jsx)(S, { type: this.getPlatform() }),
+                (0, r.jsx)(g, { type: this.getPlatform() }),
                 (0, r.jsx)(_.Z, {
-                    title: g.Z.Messages.UNSUPPORTED_BROWSER_TITLE,
+                    title: S.Z.Messages.UNSUPPORTED_BROWSER_TITLE,
                     note: e,
                     action: t
                 })

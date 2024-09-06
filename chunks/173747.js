@@ -16,8 +16,8 @@ var r,
     I = n(417363),
     m = n(391690),
     T = n(70956),
-    g = n(780570),
-    S = n(804739);
+    S = n(780570),
+    g = n(804739);
 let A = new Set(),
     N = {},
     O = new Set(),
@@ -25,14 +25,14 @@ let A = new Set(),
     v = new Set(),
     C = {},
     y = 10 * T.Z.Millis.MINUTE,
-    L = 6 * T.Z.Millis.HOUR,
-    D = 10 * T.Z.Millis.MINUTE,
+    D = 6 * T.Z.Millis.HOUR,
+    L = 10 * T.Z.Millis.MINUTE,
     b = new c.V7();
 function M(e) {
     b.start(e + Math.random() * y, _.o);
 }
 function P() {
-    if (!(0, S.Q)()) return !1;
+    if (!(0, g.Q)()) return !1;
     let e = p.Z.entitledBranchIds,
         t = [];
     for (let n of e) !C.hasOwnProperty(n) && ((C[n] = null), t.push(n));
@@ -49,7 +49,7 @@ function U(e, t) {
             (i.buildId !== n.id || !l().isEqual(i.manifestIds, r)) &&
             d.Z.wait(() => {
                 let i = h.Z.getApplication(e);
-                null != i ? (v.delete((0, g.Tu)(e, t)), (0, f.li)(i, t, n.id, r, !0)) : v.add((0, g.Tu)(e, t));
+                null != i ? (v.delete((0, S.Tu)(e, t)), (0, f.li)(i, t, n.id, r, !0)) : v.add((0, S.Tu)(e, t));
             });
     }
 }
@@ -90,12 +90,12 @@ class x extends (r = u.ZP.Store) {
         : (i[a] = s),
     (t.Z = new x(d.Z, {
         CONNECTION_OPEN: function () {
-            return M(L), P();
+            return M(D), P();
         },
         GAMES_DATABASE_UPDATE: function () {
-            if (!(0, S.Q)()) return !1;
+            if (!(0, g.Q)()) return !1;
             for (let e of v) {
-                let { applicationId: t, branchId: n } = (0, g.CP)(e);
+                let { applicationId: t, branchId: n } = (0, S.CP)(e);
                 null != h.Z.getApplication(t) && (v.delete(e), U(t, n));
             }
         },
@@ -152,21 +152,21 @@ class x extends (r = u.ZP.Store) {
                 }
                 C[t] = r;
             }
-            M(L);
+            M(D);
         },
         APPLICATION_BRANCHES_FETCH_FAIL: function () {
-            M(D);
+            M(L);
         },
         CONNECTION_CLOSED: w,
         LOGOUT: w,
         SKU_PURCHASE_SUCCESS: function (e) {
             let { entitlements: t } = e;
-            if (!(0, S.Q)()) return !1;
+            if (!(0, g.Q)()) return !1;
             let n = new Set();
             for (let e of t) n.add(e.application_id);
             for (let e in p.Z.libraryApplications) {
                 let t = p.Z.libraryApplications[e];
-                n.has(t.id) && (0, g.Je)(t) && d.Z.wait(() => E.l(t.id, t.branchId));
+                n.has(t.id) && (0, S.Je)(t) && d.Z.wait(() => E.l(t.id, t.branchId));
             }
         }
     }));

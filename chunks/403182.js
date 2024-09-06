@@ -1,12 +1,12 @@
 n.d(t, {
     Ng: function () {
-        return g;
+        return S;
     },
     OC: function () {
         return O;
     },
     dg: function () {
-        return S;
+        return g;
     },
     dp: function () {
         return p;
@@ -118,10 +118,10 @@ function T(e, t) {
     let r = s().find(I, (n) => (null != n.reType && null != t ? n.reType.test(t) : null != n.reName && '' !== e && n.reName.test(e)));
     return null != r ? r.klass : 'unknown';
 }
-function g(e) {
+function S(e) {
     return i().filesize(e);
 }
-function S(e) {
+function g(e) {
     let t = c.default.getCurrentUser();
     o.Z.trackExposure({ location: 'de18ec_1' }), l.Z.trackExposure({ location: 'de18ec_2' });
     let n = _.ZP.getUserMaxFileSize(t);
@@ -131,7 +131,7 @@ function S(e) {
     return (0, d.XS)() && null != r && r.premiumTier < 2 && n < i ? n : Math.max(i, n);
 }
 function A(e, t) {
-    let n = S(t);
+    let n = g(t);
     return Array.from(e).some((e) => e.size > n);
 }
 function N(e) {

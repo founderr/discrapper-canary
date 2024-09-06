@@ -22,8 +22,8 @@ var i = n(120356),
     I = n(335326),
     m = n(297781),
     T = n(797342),
-    g = n(810568),
-    S = n(168524),
+    S = n(810568),
+    g = n(168524),
     A = n(502762),
     N = n(652853),
     O = n(194811),
@@ -31,28 +31,28 @@ var i = n(120356),
     v = n(582123),
     C = n(622058),
     y = n(290274),
-    L = n(318134),
-    D = n(228168),
+    D = n(318134),
+    L = n(228168),
     b = n(689938),
     M = n(139665);
 function P(e) {
     let { user: t, entry: n, header: i, className: l, onClose: d } = e,
         { profileType: f } = (0, N.z)(),
-        h = { [M.fullSize]: f === D.y0.FULL_SIZE },
+        h = { [M.fullSize]: f === L.y0.FULL_SIZE },
         { largeImage: I } = (0, c.rv)({
             entry: n,
             showCoverImage: !1
         }),
         { appName: O } = (0, T.n)(n),
-        v = (0, S.Z)({
+        v = (0, g.Z)({
             location: 'UserProfileRecentActivityCard',
             applicationId: n.extra.application_id,
-            source: g.m1.UserProfile,
+            source: S.m1.UserProfile,
             sourceUserId: t.id,
             trackEntryPointImpression: !0
         }),
         { analyticsLocations: C } = (0, u.ZP)(),
-        { onAction: y, trackViewRef: b } = (0, L.Z)({
+        { onAction: y, trackViewRef: b } = (0, D.Z)({
             display: 'recent',
             user: t,
             entry: n,
@@ -141,10 +141,10 @@ function P(e) {
 function U(e) {
     let { user: t, entry: n, header: i, className: s } = e,
         { profileType: o } = (0, N.z)(),
-        l = { [M.fullSize]: o === D.y0.FULL_SIZE },
+        l = { [M.fullSize]: o === L.y0.FULL_SIZE },
         { largeImage: d } = (0, c.rv)({ entry: n }),
         { analyticsLocations: E } = (0, u.ZP)(),
-        { trackViewRef: f } = (0, L.Z)({
+        { trackViewRef: f } = (0, D.Z)({
             display: 'recent',
             user: t,
             entry: n,
@@ -197,18 +197,18 @@ function w(e) {
     var t, n, i;
     let { user: s, entry: o, header: l, className: d } = e,
         { profileType: E } = (0, N.z)(),
-        h = { [M.fullSize]: E === D.y0.FULL_SIZE },
+        h = { [M.fullSize]: E === L.y0.FULL_SIZE },
         { largeImage: p } = (0, c.rv)({ entry: o }),
         { analyticsLocations: I } = (0, u.ZP)(),
-        { trackViewRef: T } = (0, L.Z)({
+        { trackViewRef: T } = (0, D.Z)({
             display: 'recent',
             user: s,
             entry: o,
             analyticsLocations: I
         }),
-        g = null === (t = o.extra.entries[0]) || void 0 === t ? void 0 : t.media;
-    if (null == g) return null;
-    let S = null !== (i = null === (n = g.artists[0]) || void 0 === n ? void 0 : n.name) && void 0 !== i ? i : g.title;
+        S = null === (t = o.extra.entries[0]) || void 0 === t ? void 0 : t.media;
+    if (null == S) return null;
+    let g = null !== (i = null === (n = S.artists[0]) || void 0 === n ? void 0 : n.name) && void 0 !== i ? i : S.title;
     return (0, r.jsxs)(A.Z.Overlay, {
         className: a()(M.card, d),
         ref: T,
@@ -229,7 +229,7 @@ function w(e) {
                                 (0, r.jsx)('div', {
                                     children: (0, r.jsx)(R.Z, {
                                         variant: 'heading-sm/semibold',
-                                        text: S
+                                        text: g
                                     })
                                 }),
                                 (0, r.jsx)(m.Gk, {
@@ -248,10 +248,10 @@ function w(e) {
 function x(e) {
     let { user: t, entry: n, header: i, className: s } = e,
         { profileType: o } = (0, N.z)(),
-        l = { [M.fullSize]: o === D.y0.FULL_SIZE },
+        l = { [M.fullSize]: o === L.y0.FULL_SIZE },
         { largeImage: d } = (0, c.rv)({ entry: n }),
         { analyticsLocations: E } = (0, u.ZP)(),
-        { trackViewRef: f } = (0, L.Z)({
+        { trackViewRef: f } = (0, D.Z)({
             display: 'recent',
             user: t,
             entry: n,
@@ -313,7 +313,7 @@ function G(e) {
                       let { onAutoDismiss: o } = e,
                           l = (e) =>
                               (0, r.jsx)(O.Z, {
-                                  text: c === D.y0.FULL_SIZE ? null : e,
+                                  text: c === L.y0.FULL_SIZE ? null : e,
                                   tags: s
                                       ? null
                                       : (0, r.jsx)(y.Z, {

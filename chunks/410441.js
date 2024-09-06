@@ -1,35 +1,35 @@
-l.d(n, {
+t.d(n, {
     Z: function () {
-        return a;
+        return o;
     }
 });
-var t = l(735250);
-l(470079);
-var r = l(481060),
-    i = l(76927);
-function a(e) {
-    let { onClick: n, Icon: l, 'aria-label': a } = e,
-        s = (0, r.useToken)(r.tokens.colors.CONTENT_INVENTORY_OVERLAY_TEXT_PRIMARY),
-        u = (0, t.jsx)(l, {
-            color: s.hex(),
+var a = t(735250);
+t(470079);
+var r = t(481060),
+    s = t(76927);
+function o(e) {
+    let { onClick: n, Icon: t, 'aria-label': o } = e,
+        i = (0, r.useToken)(r.tokens.colors.CONTENT_INVENTORY_OVERLAY_TEXT_PRIMARY),
+        l = (0, a.jsx)(t, {
+            color: i.hex(),
             size: 'custom',
             width: 16,
             height: 16
         });
     return null == n
-        ? (0, t.jsx)('div', {
-              className: i.container,
-              'aria-label': a,
-              children: u
+        ? (0, a.jsx)('div', {
+              className: s.container,
+              'aria-label': o,
+              children: l
           })
-        : (0, t.jsx)(r.Tooltip, {
-              text: a,
+        : (0, a.jsx)(r.Tooltip, {
+              text: o,
               children: (e) =>
-                  (0, t.jsx)(r.Clickable, {
-                      className: i.container,
+                  (0, a.jsx)(r.Clickable, {
+                      className: s.container,
                       ...e,
                       onClick: n,
-                      children: u
+                      children: l
                   })
           });
 }

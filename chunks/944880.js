@@ -18,7 +18,7 @@ let I = null,
 function T(e) {
     let t = o.Z.createFromServer(e.entitlement);
     (0, f._k)(t)
-        ? g({ forceRefresh: !0 })
+        ? S({ forceRefresh: !0 })
         : (0, f.YE)(t) &&
           null != E.Z.getTenureRewardStatusForRewardId(t.skuId) &&
           a.Z.dispatch({
@@ -26,7 +26,7 @@ function T(e) {
               tenureRewardIds: [t.skuId]
           });
 }
-function g() {
+function S() {
     let { forceRefresh: e = !1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     A();
     let t = u.Z.getForApplication(h.RQ),
@@ -58,7 +58,7 @@ function g() {
                 })(s)) &&
             null == r
         )
-            S();
+            g();
         else {
             let e = u.Z.getForApplication(h.RQ);
             if (null == e) return;
@@ -72,7 +72,7 @@ function g() {
                 });
         }
 }
-async function S() {
+async function g() {
     if (!m)
         (m = !0),
             await d.V(),
@@ -84,7 +84,7 @@ async function S() {
                     let t = null !== (e = E.Z.getTenureRewardStatusForRewardId(p.Ft.FREE_GUILD_BOOST_1_MONTH)) && void 0 !== e ? e : E.Z.getTenureRewardStatusForRewardId(p.Ft.FREE_GUILD_BOOST_3_MONTHS);
                     if ((null == t ? void 0 : t.redeemable_at) == null) return;
                     let n = (null == t ? void 0 : t.redeemable_at) != null ? new Date(t.redeemable_at).getTime() - Date.now() : null;
-                    null != n && n > 0 && (I = setTimeout(g, n));
+                    null != n && n > 0 && (I = setTimeout(S, n));
                 })()
             );
 }
@@ -95,12 +95,12 @@ function N() {
     A();
 }
 function O() {
-    g();
+    S();
 }
 class R extends s.Z {
     forceRefreshIfOutdated() {
         let e = E.Z.getState();
-        null != e.lastFetchTimeMs && Date.now() - e.lastFetchTimeMs > 86400000 && g({ forceRefresh: !0 });
+        null != e.lastFetchTimeMs && Date.now() - e.lastFetchTimeMs > 86400000 && S({ forceRefresh: !0 });
     }
     constructor(...e) {
         var t, n, r;
@@ -110,10 +110,10 @@ class R extends s.Z {
             (r = {
                 POST_CONNECTION_OPEN: O,
                 CONNECTION_CLOSED: N,
-                ENTITLEMENT_FETCH_APPLICATION_SUCCESS: () => g(),
+                ENTITLEMENT_FETCH_APPLICATION_SUCCESS: () => S(),
                 ENTITLEMENT_CREATE: T,
-                ENTITLEMENT_UPDATE: () => g(),
-                ENTITLEMENT_DELETE: () => g(),
+                ENTITLEMENT_UPDATE: () => S(),
+                ENTITLEMENT_DELETE: () => S(),
                 LOGOUT: A
             }),
             n in t

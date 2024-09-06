@@ -6,7 +6,7 @@ t.d(A, {
         return m;
     },
     aN: function () {
-        return p;
+        return T;
     }
 });
 var a = t(735250);
@@ -27,7 +27,7 @@ function g() {
         color: c.p6O
     };
 }
-function T(e) {
+function h(e) {
     let A,
         { onRemove: t, role: n } = e;
     return (
@@ -77,14 +77,14 @@ function T(e) {
         })
     );
 }
-function p() {
+function T() {
     return (0, a.jsx)(l.CircleWarningIcon, {
         size: 'xs',
         color: 'currentColor',
         className: C.warningIcon
     });
 }
-function h(e) {
+function p(e) {
     let { roleName: A } = e;
     return (0, a.jsxs)(a.Fragment, {
         children: [
@@ -155,7 +155,7 @@ function m(e) {
               title: (0, a.jsxs)('div', {
                   className: C.warningTitle,
                   children: [
-                      (0, a.jsx)(p, {}),
+                      (0, a.jsx)(T, {}),
                       (0, a.jsx)(l.Spacer, {
                           horizontal: !0,
                           size: 4
@@ -176,7 +176,7 @@ function m(e) {
                   (0, a.jsxs)('div', {
                       className: C.reattachRoleRow,
                       children: [
-                          (0, a.jsx)(T, {
+                          (0, a.jsx)(h, {
                               role: I,
                               onRemove: void 0
                           }),
@@ -223,7 +223,7 @@ function m(e) {
                         children: u.Z.Messages.GUILD_PRODUCT_SETTINGS_ATTACHED_ROLE_DESCRIPTION
                     }),
                     (0, a.jsx)(l.Spacer, { size: 8 }),
-                    (0, a.jsx)(T, {
+                    (0, a.jsx)(h, {
                         role: I,
                         onRemove: () => {
                             r()(null != c, 'productId cannot be null'),
@@ -235,7 +235,7 @@ function m(e) {
                                         return (t) =>
                                             (0, a.jsx)(e, {
                                                 title: u.Z.Messages.GUILD_PRODUCT_SETTINGS_REMOVE_ROLE_MODAL_TITLE,
-                                                body: (0, a.jsx)(h, { roleName: n }),
+                                                body: (0, a.jsx)(p, { roleName: n }),
                                                 cta: u.Z.Messages.GUILD_PRODUCT_SETTINGS_REMOVE_ROLE_MODAL_REMOVE_CTA,
                                                 closeLabel: u.Z.Messages.GUILD_PRODUCT_SETTINGS_REMOVE_ROLE_MODAL_REMOVE_CLOSE_LABEL,
                                                 onConfirm: A,

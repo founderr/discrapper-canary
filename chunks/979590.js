@@ -30,7 +30,7 @@
                         e = e.replace(a, '').replace(s, '').toLowerCase();
                         var t,
                             n = !1;
-                        if (D[e]) (e = D[e]), (n = !0);
+                        if (L[e]) (e = L[e]), (n = !0);
                         else if ('transparent' == e)
                             return {
                                 r: 0,
@@ -312,10 +312,10 @@
             return (this._r = n._r), (this._g = n._g), (this._b = n._b), this.setAlpha(n._a), this;
         },
         lighten: function () {
-            return this._applyModification(g, arguments);
+            return this._applyModification(S, arguments);
         },
         brighten: function () {
-            return this._applyModification(S, arguments);
+            return this._applyModification(g, arguments);
         },
         darken: function () {
             return this._applyModification(A, arguments);
@@ -342,7 +342,7 @@
             return this._applyCombination(O, arguments);
         },
         monochromatic: function () {
-            return this._applyCombination(L, arguments);
+            return this._applyCombination(D, arguments);
         },
         splitcomplement: function () {
             return this._applyCombination(C, arguments);
@@ -437,12 +437,12 @@
     function T(e) {
         return _(e).desaturate(100);
     }
-    function g(e, t) {
+    function S(e, t) {
         t = 0 === t ? 0 : t || 10;
         var n = _(e).toHsl();
         return (n.l += t / 100), (n.l = U(n.l)), _(n);
     }
-    function S(e, t) {
+    function g(e, t) {
         t = 0 === t ? 0 : t || 10;
         var n = _(e).toRgb();
         return (n.r = c(0, u(255, n.r - l(-((t / 100) * 255))))), (n.g = c(0, u(255, n.g - l(-((t / 100) * 255))))), (n.b = c(0, u(255, n.b - l(-((t / 100) * 255))))), _(n);
@@ -525,7 +525,7 @@
         for (r.h = (r.h - ((i * t) >> 1) + 720) % 360; --t; ) (r.h = (r.h + i) % 360), a.push(_(r));
         return a;
     }
-    function L(e, t) {
+    function D(e, t) {
         t = t || 6;
         for (var n = _(e).toHsv(), r = n.h, i = n.s, a = n.v, s = [], o = 1 / t; t--; )
             s.push(
@@ -618,7 +618,7 @@
                 ? o
                 : ((n.includeFallbackColors = !1), _.mostReadable(e, ['#fff', '#000'], n));
         });
-    var D = (_.names = {
+    var L = (_.names = {
             aliceblue: 'f0f8ff',
             antiquewhite: 'faebd7',
             aqua: '0ff',
@@ -773,7 +773,7 @@
             var t = {};
             for (var n in e) e.hasOwnProperty(n) && (t[e[n]] = n);
             return t;
-        })(D));
+        })(L));
     function M(e) {
         return (isNaN((e = parseFloat(e))) || e < 0 || e > 1) && (e = 1), e;
     }

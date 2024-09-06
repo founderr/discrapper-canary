@@ -28,8 +28,8 @@ let p = 'default',
     I = [],
     m = [],
     T = [],
-    g = 0,
-    S = null,
+    S = 0,
+    g = null,
     A = null,
     N = {},
     O = null,
@@ -62,14 +62,14 @@ let p = 'default',
             numberOfTimesDismissed: 0
         }
     };
-async function L() {
+async function D() {
     if (y.clipsSettings.storageLocation !== p || null == s.Z || null == s.Z.remoteApp) return;
     let e = await s.Z.remoteApp.getPath('documents');
     (y.clipsSettings.storageLocation = e), b.emitChange();
 }
-class D extends (r = i.ZP.DeviceSettingsStore) {
+class L extends (r = i.ZP.DeviceSettingsStore) {
     initialize(e) {
-        null != e && (y = e), L(), this.waitFor(o.ZP);
+        null != e && (y = e), D(), this.waitFor(o.ZP);
     }
     getClips() {
         return m;
@@ -87,7 +87,7 @@ class D extends (r = i.ZP.DeviceSettingsStore) {
         return A;
     }
     getClipsWarningShown(e) {
-        return S === e;
+        return g === e;
     }
     getActiveAnimation() {
         return R;
@@ -109,7 +109,7 @@ class D extends (r = i.ZP.DeviceSettingsStore) {
         return y.hardwareClassificationVersion;
     }
     getIsAtMaxSaveClipOperations() {
-        return g >= _.Kw;
+        return S >= _.Kw;
     }
     getLastClipsError() {
         return O;
@@ -136,9 +136,9 @@ class D extends (r = i.ZP.DeviceSettingsStore) {
         return y.newClipIds;
     }
 }
-h(D, 'displayName', 'ClipsStore'),
-    h(D, 'persistKey', 'ClipsStore'),
-    h(D, 'migrations', [
+h(L, 'displayName', 'ClipsStore'),
+    h(L, 'persistKey', 'ClipsStore'),
+    h(L, 'migrations', [
         (e) => ({
             clipsSettings: null != e ? e : C,
             newClipsCount: 0
@@ -236,7 +236,7 @@ h(D, 'displayName', 'ClipsStore'),
             }
         })
     ]);
-let b = new D(a.Z, {
+let b = new L(a.Z, {
     CLIPS_SETTINGS_UPDATE: function (e) {
         let { settings: t } = e;
         y = {
@@ -250,7 +250,7 @@ let b = new D(a.Z, {
     CLIPS_SAVE_CLIP: function (e) {
         var t, n;
         let { clip: r } = e;
-        (g = Math.max(g - 1, 0)),
+        (S = Math.max(S - 1, 0)),
             (A = {
                 applicationName: r.applicationName,
                 ended: !1,
@@ -281,7 +281,7 @@ let b = new D(a.Z, {
     },
     CLIPS_SAVE_CLIP_START: function (e) {
         let { clipType: t, streamKey: n, thumbnail: r } = e;
-        if (((g += 1), (y.hasTakenDecoupledClip = y.hasTakenDecoupledClip || t === _.X9.DECOUPLED), null != n && null != r)) {
+        if (((S += 1), (y.hasTakenDecoupledClip = y.hasTakenDecoupledClip || t === _.X9.DECOUPLED), null != n && null != r)) {
             var i;
             let e = Date.now();
             (R = null != R ? R : e),
@@ -295,7 +295,7 @@ let b = new D(a.Z, {
         }
     },
     CLIPS_SAVE_CLIP_ERROR: function () {
-        g = Math.max(g - 1, 0);
+        S = Math.max(S - 1, 0);
     },
     CLIPS_SAVE_ANIMATION_END: function (e) {
         let { streamKey: t, timestamp: n } = e;
@@ -362,11 +362,11 @@ let b = new D(a.Z, {
     },
     CLIPS_SHOW_CALL_WARNING: function (e) {
         let { channelId: t } = e;
-        S = t;
+        g = t;
     },
     VOICE_CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
-        t !== S && (S = null);
+        t !== g && (g = null);
     },
     CLIPS_CLASSIFY_HARDWARE: function (e) {
         let { classification: t } = e,

@@ -1,7 +1,7 @@
 n(47120);
 var i,
-    a = n(442837),
-    s = n(570140);
+    s = n(442837),
+    a = n(570140);
 function l(e, t, n) {
     return (
         t in e
@@ -16,7 +16,7 @@ function l(e, t, n) {
     );
 }
 let r = {};
-class o extends (i = a.ZP.PersistedStore) {
+class o extends (i = s.ZP.PersistedStore) {
     initialize(e) {
         for (let t in e) {
             let n = e[t];
@@ -33,7 +33,7 @@ class o extends (i = a.ZP.PersistedStore) {
 }
 l(o, 'displayName', 'GuildPromptsStore'),
     l(o, 'persistKey', 'GuildPromptsStore'),
-    (t.Z = new o(s.Z, {
+    (t.Z = new o(a.Z, {
         GUILD_PROMPT_VIEWED: function (e) {
             let { prompt: t, guildId: n } = e,
                 i = r[n];

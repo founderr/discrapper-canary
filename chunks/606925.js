@@ -1,29 +1,29 @@
 n.d(t, {
     Z: function () {
-        return c;
+        return u;
     }
 });
-var r = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(442837),
+var s = n(442837),
     a = n(231757),
-    s = n(553795),
-    o = n(915863),
-    l = n(689938),
-    u = n(581845);
-function c(e) {
-    let { platform: t, color: n, look: c, onAction: d, Icon: _ } = e;
-    if ((0, i.e7)([s.Z], () => s.Z.getAccounts().some((e) => e.type === t.type))) return null;
-    let E =
-        null != _
-            ? (0, r.jsx)(_, { className: u.platformIcon })
-            : (0, r.jsx)('img', {
+    l = n(553795),
+    r = n(915863),
+    o = n(689938),
+    c = n(581845);
+function u(e) {
+    let { platform: t, color: n, look: u, onAction: d, Icon: h } = e;
+    if ((0, s.e7)([l.Z], () => l.Z.getAccounts().some((e) => e.type === t.type))) return null;
+    let m =
+        null != h
+            ? (0, i.jsx)(h, { className: c.platformIcon })
+            : (0, i.jsx)('img', {
                   alt: '',
-                  className: u.platformIcon,
+                  className: c.platformIcon,
                   src: t.icon.whiteSVG
               });
-    return (0, r.jsx)(
-        o.Z,
+    return (0, i.jsx)(
+        r.Z,
         {
             onClick: () => {
                 null == d || d(),
@@ -33,11 +33,11 @@ function c(e) {
                     });
             },
             color: n,
-            look: c,
+            look: u,
             fullWidth: !0,
-            children: (0, r.jsxs)('div', {
-                className: u.flex,
-                children: [E, l.Z.Messages.USER_ACTIVITY_CONNECT_PLATFORM.format({ platform: t.name })]
+            children: (0, i.jsxs)('div', {
+                className: c.flex,
+                children: [m, o.Z.Messages.USER_ACTIVITY_CONNECT_PLATFORM.format({ platform: t.name })]
             })
         },
         'connect-platform-activity'

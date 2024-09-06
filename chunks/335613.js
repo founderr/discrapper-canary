@@ -77,8 +77,8 @@ i(E, a),
                 (I = f(p, 10)),
                 (p = h),
                 (h = t);
-        var g = (this._b + a + I) | 0;
-        (this._b = (this._c + d + m) | 0), (this._c = (this._d + _ + E) | 0), (this._d = (this._e + r + h) | 0), (this._e = (this._a + i + p) | 0), (this._a = g);
+        var S = (this._b + a + I) | 0;
+        (this._b = (this._c + d + m) | 0), (this._c = (this._d + _ + E) | 0), (this._d = (this._e + r + h) | 0), (this._e = (this._a + i + p) | 0), (this._a = S);
     }),
     (E.prototype._digest = function () {
         (this._block[this._blockOffset++] = 128), this._blockOffset > 56 && (this._block.fill(0, this._blockOffset, 64), this._update(), (this._blockOffset = 0)), this._block.fill(0, this._blockOffset, 56), this._block.writeUInt32LE(this._length[0], 56), this._block.writeUInt32LE(this._length[1], 60), this._update();

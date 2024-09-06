@@ -17,9 +17,9 @@ var a = t(470079),
     u = t(710845),
     C = t(430824),
     g = t(277985),
-    T = t(240864),
-    p = t(863663),
-    h = t(981631),
+    h = t(240864),
+    T = t(863663),
+    p = t(981631),
     m = t(689938);
 function I(e, A, t) {
     return (
@@ -44,9 +44,9 @@ class f {
         a.upload(),
             a.on('error', (t) => {
                 var n;
-                t === h.evJ.ENTITY_TOO_LARGE && this.onFileSizeError();
+                t === p.evJ.ENTITY_TOO_LARGE && this.onFileSizeError();
                 let s = 'number' == typeof t && t > 0 ? -t : -1,
-                    o = (0, p.kg)(s),
+                    o = (0, T.kg)(s),
                     l = null === (n = e.file) || void 0 === n ? void 0 : n.name;
                 null != l
                     ? r.uv.announce(
@@ -134,10 +134,10 @@ class f {
                 return e;
             }),
             (this.isEdit = null != A);
-        let n = null == A ? h.ANM.GUILD_PRODUCTS(e) : h.ANM.GUILD_PRODUCT_LISTINGS(e, A),
+        let n = null == A ? p.ANM.GUILD_PRODUCTS(e) : p.ANM.GUILD_PRODUCT_LISTINGS(e, A),
             r = null == A ? 'POST' : 'PATCH';
         (this.createCloudUploader = () => (0, c.F)(n, r)), (this.guildId = e), (this.onFileSizeError = t);
-        let s = null === (a = T.Z.getGuildProduct(null != A ? A : '')) || void 0 === a ? void 0 : a.attachments;
+        let s = null === (a = h.Z.getGuildProduct(null != A ? A : '')) || void 0 === a ? void 0 : a.attachments;
         null != s &&
             (this.uploads = s.map((A) => {
                 var t;
@@ -175,25 +175,25 @@ function v(e, A) {
             [e, i]
         ),
         [u, g] = a.useState(c.generateInitialProgresses),
-        [, T] = a.useState(null);
+        [, h] = a.useState(null);
     a.useLayoutEffect(() => {
         g(c.generateInitialProgresses());
     }, [c]);
-    let [p, m] = a.useState(),
+    let [T, m] = a.useState(),
         [I, U] = a.useState(),
         v = a.useCallback(
             (e) => {
-                c.deleteAttachment(e) && T({});
-            },
-            [c]
-        ),
-        q = a.useCallback(
-            (e) => {
-                c.addAttachment(e, g), T({});
+                c.deleteAttachment(e) && h({});
             },
             [c]
         ),
         E = a.useCallback(
+            (e) => {
+                c.addAttachment(e, g), h({});
+            },
+            [c]
+        ),
+        q = a.useCallback(
             async (e) => {
                 try {
                     m(e), U(void 0);
@@ -204,7 +204,7 @@ function v(e, A) {
                                 editSkuId: A.id,
                                 onFileSizeError: s
                             }),
-                        T({}),
+                        h({}),
                         A
                     );
                 } catch (e) {
@@ -223,7 +223,7 @@ function v(e, A) {
             [c, s]
         ),
         N = a.useCallback(() => {
-            c.cancelUnusedUploads(), T({});
+            c.cancelUnusedUploads(), h({});
         }, [c]);
     a.useEffect(
         () => () => {
@@ -234,17 +234,17 @@ function v(e, A) {
     let { uploads: D } = c,
         O = !D.every((e) => c.existingAttachmentIds.has(e.id)) || D.length !== c.existingAttachmentIds.size;
     return {
-        addAttachment: q,
+        addAttachment: E,
         cancelUnusedUploads: N,
         deleteAttachment: v,
         fileUploadProgresses: u,
         uploads: D,
-        saveProductWithAttachments: E,
-        isSaving: null != p,
-        changesSaving: p,
+        saveProductWithAttachments: q,
+        isSaving: null != T,
+        changesSaving: T,
         saveError: I,
         hasUnsavedAttachmentChanges: O,
         canAttachFiles: D.length < c.target.getMaxAttachmentsCount(),
-        canAttachArchives: null !== (t = null == l ? void 0 : l.hasFeature(h.oNc.GUILD_PRODUCTS_ALLOW_ARCHIVED_FILE)) && void 0 !== t && t
+        canAttachArchives: null !== (t = null == l ? void 0 : l.hasFeature(p.oNc.GUILD_PRODUCTS_ALLOW_ARCHIVED_FILE)) && void 0 !== t && t
     };
 }

@@ -13,11 +13,11 @@ var s = n(735250),
     T = n(314684),
     I = n(794484),
     R = n(536844),
-    C = n(342414),
-    g = n(938736),
+    g = n(342414),
+    C = n(938736),
     N = n(391110),
-    p = n(71363),
-    m = n(781800),
+    m = n(71363),
+    p = n(781800),
     A = n(981631),
     f = n(689938),
     S = n(396001),
@@ -30,8 +30,8 @@ t.Z = () => {
         { analyticsLocations: r } = (0, d.ZP)(c.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
         [x, O] = a.useState(!1);
     (0, T.FM)();
-    let b = (0, g.bD)(M),
-        P = (0, g.TW)(M);
+    let b = (0, C.bD)(M),
+        P = (0, C.TW)(M);
     return (0, s.jsxs)(s.Fragment, {
         children: [
             (0, s.jsx)(o.AdvancedScrollerAuto, {
@@ -42,7 +42,7 @@ t.Z = () => {
                     children: (0, s.jsxs)(d.Gt, {
                         value: r,
                         children: [
-                            (0, s.jsx)(C.Z, {
+                            (0, s.jsx)(g.Z, {
                                 className: S.heroHeading,
                                 location: N.MQ.HOME
                             }),
@@ -56,7 +56,7 @@ t.Z = () => {
                                 className: S.perksDiscoverability,
                                 noBackground: !0,
                                 leftAlignHeaders: !0,
-                                showAllPerksButton: (0, s.jsx)(m.Z, {
+                                showAllPerksButton: (0, s.jsx)(p.Z, {
                                     setIsAllPerksVisible: n,
                                     previousComponent: N.MQ.HOME
                                 })
@@ -87,7 +87,7 @@ t.Z = () => {
                     })
                 })
             }),
-            (0, s.jsx)(p.Z, {
+            (0, s.jsx)(m.Z, {
                 isAllPerksVisible: t,
                 setIsAllPerksVisible: n,
                 previousComponent: N.MQ.HOME

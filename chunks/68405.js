@@ -3,7 +3,7 @@ n.d(t, {
         return w;
     },
     R7: function () {
-        return L;
+        return D;
     },
     Tg: function () {
         return b;
@@ -12,7 +12,7 @@ n.d(t, {
         return M;
     },
     gK: function () {
-        return D;
+        return L;
     },
     hM: function () {
         return N;
@@ -54,8 +54,8 @@ var r = n(392711),
     I = n(668781),
     m = n(981631),
     T = n(526761),
-    g = n(689938);
-let S = /-/g;
+    S = n(689938);
+let g = /-/g;
 function A(e) {
     let t = null != e ? { [e]: 1 } : {};
     u.ZP.trackWithMetadata(m.rMx.SEARCH_STARTED, {
@@ -158,7 +158,7 @@ function y() {
         query: ''
     });
 }
-function L(e) {
+function D(e) {
     let { type: t, index: n, offset: r, limit: i, results: a, totalResults: o, query: l, gifId: c } = e,
         d = (0, h._)(E.Z.getAnalyticsID(), t, {
             offset: r,
@@ -182,8 +182,8 @@ function L(e) {
                 oldFormErrors: !0
             });
 }
-function D() {
-    let e = (0, a.Z)().replace(S, '');
+function L() {
+    let e = (0, a.Z)().replace(g, '');
     u.ZP.trackWithMetadata(m.rMx.SEARCH_OPENED, {
         search_type: m.aib.GIF,
         load_id: e
@@ -266,8 +266,8 @@ function U(e) {
             )
                 return (
                     I.Z.show({
-                        title: g.Z.Messages.FAVORITES_LIMIT_REACHED_TITLE,
-                        body: g.Z.Messages.FAVORITE_GIFS_LIMIT_REACHED_BODY
+                        title: S.Z.Messages.FAVORITES_LIMIT_REACHED_TITLE,
+                        body: S.Z.Messages.FAVORITE_GIFS_LIMIT_REACHED_BODY
                     }),
                     !1
                 );

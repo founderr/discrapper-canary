@@ -16,8 +16,8 @@ var r = n(735250),
     I = n(519938),
     m = n(367907),
     T = n(158631),
-    g = n(552740),
-    S = n(358221),
+    S = n(552740),
+    g = n(358221),
     A = n(414910),
     N = n(221888),
     O = n(933557),
@@ -25,8 +25,8 @@ var r = n(735250),
     v = n(74299),
     C = n(863908),
     y = n(803647),
-    L = n(266910),
-    D = n(788983),
+    D = n(266910),
+    L = n(788983),
     b = n(703656),
     M = n(937995),
     P = n(618158),
@@ -115,7 +115,7 @@ class eu extends i.PureComponent {
     componentWillUnmount() {
         let { channel: e } = this.props;
         K.default.track(ei.rMx.VIDEO_LAYOUT_TOGGLED, {
-            video_layout: S.Z.getLayout(e.id),
+            video_layout: g.Z.getLayout(e.id),
             ...(0, m.AB)(e.id)
         });
     }
@@ -172,7 +172,7 @@ class eu extends i.PureComponent {
                           streamId: t,
                           component: V.Z.getVideoComponent(),
                           mirror: u,
-                          children: (0, r.jsx)(L.Z, {
+                          children: (0, r.jsx)(D.Z, {
                               size: _.AvatarSizes.SIZE_80,
                               src: null == n ? void 0 : n.user.getAvatarURL(e.guild_id, 80),
                               'aria-label': null == n ? void 0 : n.user.username
@@ -230,7 +230,7 @@ class eu extends i.PureComponent {
             }),
             el(this, 'handleStopStream', () => {
                 let { participantOnScreen: e, isSelfBroadcasting: t } = this.props;
-                l()((0, ea._5)(e), 'cannot stop stream for non streamer'), t ? (0, g.Z)(() => (0, y.Z)(e.stream)) : (0, y.Z)(e.stream);
+                l()((0, ea._5)(e), 'cannot stop stream for non streamer'), t ? (0, S.Z)(() => (0, y.Z)(e.stream)) : (0, y.Z)(e.stream);
             }),
             el(this, 'handleHidePIP', () => {
                 let { channel: e } = this.props;
@@ -238,7 +238,7 @@ class eu extends i.PureComponent {
             }),
             el(this, 'handleOpenPopout', () => {
                 let { channel: e } = this.props;
-                D.hP(e);
+                L.hP(e);
             }),
             el(this, 'renderBottomLeftControls', () => {
                 let { canSeeParticipantName: e } = this.viewProperties;
@@ -302,10 +302,10 @@ class eu extends i.PureComponent {
             });
     }
 }
-t.Z = d.ZP.connectStores([V.Z, S.Z, F.default, Y.Z, j.Z, B.Z, W.Z], (e) => {
+t.Z = d.ZP.connectStores([V.Z, g.Z, F.default, Y.Z, j.Z, B.Z, W.Z], (e) => {
     let { channel: t } = e,
         n = Y.Z.getSpeaker(t.id),
-        r = S.Z.getParticipant(t.id, n),
+        r = g.Z.getParticipant(t.id, n),
         i = c()(V.Z.getVideoDevices()).values().first(),
         a = null == i || i.disabled,
         s = null != r && r.type !== ea.fO.ACTIVITY && r.type !== ea.fO.HIDDEN_STREAM ? j.Z.getStreamId(r.user.id, t.getGuildId(), (0, A.Z)(r.type)) : null,

@@ -1,97 +1,97 @@
 n.d(t, {
     w: function () {
-        return O;
+        return f;
     }
 });
 var i = n(735250),
     a = n(470079),
-    s = n(120356),
-    r = n.n(s),
-    l = n(657707),
-    o = n(793030),
-    c = n(442837),
-    u = n(481060),
-    d = n(100527),
-    _ = n(436774),
-    E = n(294218),
-    I = n(197115),
-    m = n(695346),
-    T = n(594174),
-    h = n(111361),
-    N = n(74538),
-    f = n(997486),
-    C = n(981631),
-    p = n(474936),
-    g = n(689938),
-    S = n(591047),
-    A = n(80706);
-let R = {
-    offset: {
-        left: 4,
-        right: -12
-    }
-};
-function O() {
-    let e = (0, c.e7)([T.default], () => T.default.getCurrentUser()),
-        t = (0, h.I5)(e, p.p9.TIER_2),
-        { fakeMessage: n, fakeChannel: s } = a.useMemo(() => (0, f.Z)({ showAttachment: !1 }), []);
-    return (0, i.jsxs)('div', {
-        className: A.messagesScroller,
-        children: [
-            (0, i.jsx)('div', {
-                className: A.messageContainer,
-                children: (0, i.jsx)(E.Z, {
-                    message: n,
-                    channel: s,
-                    className: r()(A.message, S.tutorialMessage),
-                    compact: m.jU.getSetting(),
-                    animateAvatar: !1,
-                    focusProps: R,
-                    trackAnnouncementViews: !0
-                })
-            }),
-            t ? null : (0, i.jsx)(x, {})
-        ]
-    });
+    s = n(657707),
+    r = n(793030),
+    l = n(524437),
+    o = n(481060),
+    c = n(100527),
+    u = n(436774),
+    d = n(197115),
+    _ = n(74538),
+    E = n(175006),
+    I = n(981631),
+    m = n(474936),
+    T = n(689938),
+    h = n(591047),
+    N = n(492764);
+function f(e) {
+    let { tab: t } = e,
+        n = '',
+        a = '';
+    return (
+        t === l.Pr.ALL ? ((n = T.Z.Messages.FOR_LATER_EMPTY_ALL_TITLE), (a = T.Z.Messages.FOR_LATER_EMPTY_ALL_BODY)) : t === l.Pr.BOOKMARKS ? ((n = T.Z.Messages.FOR_LATER_EMPTY_BOOKMARKS_TITLE), (a = T.Z.Messages.FOR_LATER_EMPTY_BOOKMARKS_BODY)) : t === l.Pr.REMINDERS && ((n = T.Z.Messages.FOR_LATER_EMPTY_REMINDERS_TITLE), (a = T.Z.Messages.FOR_LATER_EMPTY_REMINDERS_BODY)),
+        (0, i.jsxs)('div', {
+            className: h.emptyContainer,
+            children: [
+                (0, i.jsxs)('div', {
+                    className: h.emptyInner,
+                    children: [
+                        (0, i.jsx)('img', {
+                            src: N,
+                            className: h.image,
+                            alt: ''
+                        }),
+                        (0, i.jsx)(o.Heading, {
+                            className: h.header,
+                            variant: 'heading-xl/semibold',
+                            color: 'text-muted',
+                            children: n
+                        }),
+                        (0, i.jsx)(r.x, {
+                            variant: 'text-md/medium',
+                            color: 'text-muted',
+                            children: a
+                        })
+                    ]
+                }),
+                (0, E.Z)() ? null : (0, i.jsx)(C, {})
+            ]
+        })
+    );
 }
-function x() {
-    let e = (0, N.Px)(p.p9.TIER_2),
+function C() {
+    let e = (0, _.Px)(m.p9.TIER_2),
         t = a.useCallback(
             () =>
-                (0, u.openModalLazy)(async () => {
+                (0, o.openModalLazy)(async () => {
                     let { default: e } = await n.e('34906').then(n.bind(n, 639565));
                     return (t) =>
                         (0, i.jsx)(e, {
-                            source: d.Z.FOR_LATER_POPOUT,
+                            source: c.Z.FOR_LATER_POPOUT,
                             ...t
                         });
                 }),
             []
         ),
-        s = g.Z.Messages.FOR_LATER_PREMIUM_UPSELL.format({
+        l = T.Z.Messages.FOR_LATER_PREMIUM_UPSELL.format({
             nitroTierName: e,
             onClick: t
         });
     return (0, i.jsxs)('div', {
-        className: S.upsellContainer,
+        className: h.upsellContainer,
         children: [
-            (0, i.jsx)(l.SrA, {
+            (0, i.jsx)(s.SrA, {
                 size: 'md',
-                color: _.JX.PREMIUM_TIER_2
+                color: u.JX.PREMIUM_TIER_2
             }),
-            (0, i.jsx)(o.x, {
+            (0, i.jsx)(r.x, {
                 variant: 'text-xs/medium',
                 color: 'header-primary',
-                className: S.upsellText,
-                children: s
+                className: h.upsellText,
+                children: l
             }),
-            (0, i.jsx)(I.Z, {
-                className: S.upsellButton,
-                size: u.ButtonSizes.TINY,
-                shinyButtonClassName: S.upsellButton,
-                subscriptionTier: p.Si.TIER_2,
-                buttonText: g.Z.Messages.FOR_LATER_PREMIUM_UPSELL_CTA,
-                premiumModalAnalyticsLocation: { section: C.jXE.FOR_LATER_POPOUT_UPSELL }
+            (0, i.jsx)(d.Z, {
+                className: h.upsellButton,
+                size: o.ButtonSizes.TINY,
+                shinyButtonClassName: h.upsellButton,
+                subscriptionTier: m.Si.TIER_2,
+                buttonText: T.Z.Messages.FOR_LATER_PREMIUM_UPSELL_CTA,
+                premiumModalAnalyticsLocation: { section: I.jXE.FOR_LATER_POPOUT_UPSELL }
             })
         ]
     });

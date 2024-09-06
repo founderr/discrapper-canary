@@ -55,8 +55,8 @@ var c = [],
     I = !1,
     m = 'function' == typeof setTimeout ? setTimeout : null,
     T = 'function' == typeof clearTimeout ? clearTimeout : null,
-    g = 'undefined' != typeof setImmediate ? setImmediate : null;
-function S(e) {
+    S = 'undefined' != typeof setImmediate ? setImmediate : null;
+function g(e) {
     for (var t = r(d); null !== t; ) {
         if (null === t.callback) i(d);
         else if (t.startTime <= e) i(d), (t.sortIndex = t.expirationTime), n(c, t);
@@ -65,7 +65,7 @@ function S(e) {
     }
 }
 function A(e) {
-    if (((I = !1), S(e), !p)) {
+    if (((I = !1), g(e), !p)) {
         if (null !== r(c)) (p = !0), P(N);
         else {
             var t = r(d);
@@ -77,12 +77,12 @@ function N(e, n) {
     (p = !1), I && ((I = !1), T(v), (v = -1)), (h = !0);
     var a = f;
     try {
-        for (S(n), E = r(c); null !== E && (!(E.expirationTime > n) || (e && !L())); ) {
+        for (g(n), E = r(c); null !== E && (!(E.expirationTime > n) || (e && !D())); ) {
             var s = E.callback;
             if ('function' == typeof s) {
                 (E.callback = null), (f = E.priorityLevel);
                 var o = s(E.expirationTime <= n);
-                (n = t.unstable_now()), 'function' == typeof o ? (E.callback = o) : E === r(c) && i(c), S(n);
+                (n = t.unstable_now()), 'function' == typeof o ? (E.callback = o) : E === r(c) && i(c), g(n);
             } else i(c);
             E = r(c);
         }
@@ -102,10 +102,10 @@ var O = !1,
     v = -1,
     C = 5,
     y = -1;
-function L() {
+function D() {
     return !(t.unstable_now() - y < C);
 }
-function D() {
+function L() {
     if (null !== R) {
         var e = t.unstable_now();
         y = e;
@@ -117,20 +117,20 @@ function D() {
         }
     } else O = !1;
 }
-if ('function' == typeof g)
+if ('function' == typeof S)
     s = function () {
-        g(D);
+        S(L);
     };
 else if ('undefined' != typeof MessageChannel) {
     var b = new MessageChannel(),
         M = b.port2;
-    (b.port1.onmessage = D),
+    (b.port1.onmessage = L),
         (s = function () {
             M.postMessage(null);
         });
 } else
     s = function () {
-        m(D, 0);
+        m(L, 0);
     };
 function P(e) {
     (R = e), O || ((O = !0), s());
@@ -232,7 +232,7 @@ function U(e, n) {
             e
         );
     }),
-    (t.unstable_shouldYield = L),
+    (t.unstable_shouldYield = D),
     (t.unstable_wrapCallback = function (e) {
         var t = f;
         return function () {

@@ -21,10 +21,10 @@ n.d(t, {
         return A;
     },
     Hp: function () {
-        return S;
+        return g;
     },
     JO: function () {
-        return L;
+        return D;
     },
     Kw: function () {
         return b;
@@ -72,7 +72,7 @@ n.d(t, {
         return M;
     },
     mg: function () {
-        return g;
+        return S;
     },
     nU: function () {
         return T;
@@ -87,7 +87,7 @@ n.d(t, {
         return w;
     },
     yl: function () {
-        return D;
+        return L;
     }
 });
 var r,
@@ -108,8 +108,8 @@ let E = 'alt+c',
     I = 3,
     m = 1,
     T = /(NVIDIA GeForce GTX (98|10|16).*|Radeon RX 5(500|600|).*|Radeon RX5.*)/,
-    g = /(NVIDIA GeForce (RTX (20|30|40).*))|(.*Radeon RX (57|58|59|6|7).*)/,
-    S = 0.1,
+    S = /(NVIDIA GeForce (RTX (20|30|40).*))|(.*Radeon RX (57|58|59|6|7).*)/,
+    g = 0.1,
     A = 25,
     N = 0,
     O = 200,
@@ -117,8 +117,8 @@ let E = 'alt+c',
     v = 'clips-gallery',
     C = 640,
     y = 360,
-    L = 100,
-    D = (e) => 'Clip - '.concat(new Date(e).toLocaleString()),
+    D = 100,
+    L = (e) => 'Clip - '.concat(new Date(e).toLocaleString()),
     b = 15,
     M = 30000,
     P = 30,

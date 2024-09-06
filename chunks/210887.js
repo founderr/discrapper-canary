@@ -17,8 +17,8 @@ var h = n(12647),
     I = n(238514),
     m = n(740492),
     T = n(581883),
-    g = n(874893),
-    S = n(981631),
+    S = n(874893),
+    g = n(981631),
     A = n(469115);
 function N(e, t, n) {
     return (
@@ -33,43 +33,43 @@ function N(e, t, n) {
         e
     );
 }
-let O = null !== (i = (0, f.Z)()) && void 0 !== i ? i : S.BRd.DARK,
+let O = null !== (i = (0, f.Z)()) && void 0 !== i ? i : g.BRd.DARK,
     R = null,
     v = !1;
 function C() {
     let e = (function () {
         var e, t;
-        if (__OVERLAY__) return S.BRd.DARK;
+        if (__OVERLAY__) return g.BRd.DARK;
         if (d.Z.syncForcedColors && 'active' === d.Z.systemForcedColors && null != r) return r;
         let n = m.ZP.useSystemTheme;
-        if (n === g.K.ON && null != r) return r;
+        if (n === S.K.ON && null != r) return r;
         let i = null === (e = I.Z.getAppearanceSettings()) || void 0 === e ? void 0 : e.theme;
         if (null != i) return i;
         let a = null === (t = T.Z.settings.appearance) || void 0 === t ? void 0 : t.theme;
         if (null == a) return O;
-        if (!E.i.getCurrentConfig({ location: 'ThemeStore' }).enabled) return a === o.Q2.LIGHT ? S.BRd.LIGHT : S.BRd.DARK;
+        if (!E.i.getCurrentConfig({ location: 'ThemeStore' }).enabled) return a === o.Q2.LIGHT ? g.BRd.LIGHT : g.BRd.DARK;
         switch (a) {
             case o.Q2.LIGHT:
-                return S.BRd.LIGHT;
+                return g.BRd.LIGHT;
             case o.Q2.DARK:
-                return S.BRd.DARK;
+                return g.BRd.DARK;
             case o.Q2.DARKER:
-                return S.BRd.DARKER;
+                return g.BRd.DARKER;
             case o.Q2.MIDNIGHT:
-                return S.BRd.MIDNIGHT;
+                return g.BRd.MIDNIGHT;
             default:
-                return S.BRd.DARK;
+                return g.BRd.DARK;
         }
     })();
     return e;
 }
 function y() {
-    return D();
-}
-function L() {
-    return D();
+    return L();
 }
 function D() {
+    return L();
+}
+function L() {
     let e = C();
     return e !== O && ((O = e), !0);
 }
@@ -116,17 +116,17 @@ N(b, 'displayName', 'ThemeStore'),
         LOGOUT: function (e) {
             return (
                 !e.isSwitchingAccount &&
-                O !== S.BRd.DARK &&
-                ((O = S.BRd.DARK),
+                O !== g.BRd.DARK &&
+                ((O = g.BRd.DARK),
                 (function () {
                     !__OVERLAY__ && p.isPlatformEmbedded && h.Z.setApplicationBackgroundColor((0, u.wj)(C()) ? l.Z.unsafe_rawColors.PRIMARY_700.resolve({ saturation: d.Z.saturation }).hsl() : l.Z.unsafe_rawColors.WHITE_500.resolve({ saturation: d.Z.saturation }).hsl());
                 })(),
-                D())
+                L())
             );
         },
         OVERLAY_INITIALIZE: y,
-        SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: L,
-        UNSYNCED_USER_SETTINGS_UPDATE: L,
+        SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: D,
+        UNSYNCED_USER_SETTINGS_UPDATE: D,
         USER_SETTINGS_PROTO_UPDATE: y,
         UPDATE_BACKGROUND_GRADIENT_PRESET: function (e) {
             var t, n;
@@ -143,10 +143,10 @@ N(b, 'displayName', 'ThemeStore'),
         RESET_PREVIEW_CLIENT_THEME: y,
         SYSTEM_THEME_CHANGE: function (e) {
             let { systemTheme: t } = e;
-            return (R = t), D();
+            return (R = t), L();
         },
         ACCESSIBILITY_SYSTEM_COLOR_PREFERENCES_CHANGED: function (e) {
-            return (r = e.systemPrefersColorScheme), D();
+            return (r = e.systemPrefersColorScheme), L();
         },
         ACCESSIBILITY_DARK_SIDEBAR_TOGGLE: function () {
             return (0, u.ap)(C());

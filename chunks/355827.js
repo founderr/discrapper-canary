@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(442837),
-    s = n(481060),
+var s = n(442837),
+    a = n(481060),
     l = n(207055),
     r = n(938475),
     o = n(981631),
@@ -14,16 +14,16 @@ var a = n(442837),
     u = n(428947);
 function d(e) {
     let { channel: t } = e,
-        n = (0, a.e7)([r.ZP], () => r.ZP.getVoiceStatesForChannel(t));
+        n = (0, s.e7)([r.ZP], () => r.ZP.getVoiceStatesForChannel(t));
     return (0, i.jsxs)('div', {
         className: u.root,
         children: [
-            (0, i.jsx)(s.Text, {
+            (0, i.jsx)(a.Text, {
                 variant: 'text-xs/bold',
                 className: u.header,
                 children: c.Z.Messages.CHANNEL_CALL_MEMBERS_POPOUT_HEADER.format({ count: n.length })
             }),
-            (0, i.jsx)(s.Scroller, {
+            (0, i.jsx)(a.Scroller, {
                 className: u.scroller,
                 children: (0, i.jsx)(l.Z, {
                     allowDragging: !1,

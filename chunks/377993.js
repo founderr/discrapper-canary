@@ -6,8 +6,8 @@ n.d(t, {
     n(47120),
     n(653041);
 var i = n(735250),
-    a = n(470079),
-    s = n(873546),
+    s = n(470079),
+    a = n(873546),
     l = n(442837),
     r = n(481060),
     o = n(239091),
@@ -15,34 +15,34 @@ var i = n(735250),
     u = n(100527),
     d = n(906732),
     h = n(385499),
-    p = n(82295),
-    m = n(554300),
+    m = n(82295),
+    p = n(554300),
     _ = n(556084),
     f = n(184301),
     E = n(347475),
-    C = n(158776),
-    g = n(699516),
+    g = n(158776),
+    C = n(699516),
     I = n(111583),
     x = n(594174),
     T = n(626135),
-    N = n(768581),
-    S = n(585483),
-    v = n(233870),
-    Z = n(51144),
-    A = n(998502),
+    S = n(768581),
+    v = n(585483),
+    N = n(233870),
+    A = n(51144),
+    Z = n(998502),
     M = n(276264),
     b = n(981631),
     R = n(689938),
     L = n(410740),
-    j = n(460356);
-let O = [],
-    P = A.ZP.getEnableHardwareAcceleration();
+    P = n(460356);
+let j = [],
+    O = Z.ZP.getEnableHardwareAcceleration();
 function y(e) {
-    let { user: t, channel: a, status: u, activities: d } = e,
-        h = (0, l.e7)([I.Z], () => null != I.Z.getTypingUsers(a.id)[t.id]),
-        p = (0, l.e7)([x.default], () => x.default.getCurrentUser()),
-        m = (0, l.e7)([C.Z], () => C.Z.isMobileOnline(t.id)),
-        _ = (0, l.e7)([g.Z], () => g.Z.getNickname(t.id)),
+    let { user: t, channel: s, status: u, activities: d } = e,
+        h = (0, l.e7)([I.Z], () => null != I.Z.getTypingUsers(s.id)[t.id]),
+        m = (0, l.e7)([x.default], () => x.default.getCurrentUser()),
+        p = (0, l.e7)([g.Z], () => g.Z.isMobileOnline(t.id)),
+        _ = (0, l.e7)([C.Z], () => C.Z.getNickname(t.id)),
         T = (e) => {
             (0, o.jW)(e, async () => {
                 let { default: e } = await Promise.all([n.e('79695'), n.e('90286'), n.e('17354')]).then(n.bind(n, 354589));
@@ -50,44 +50,44 @@ function y(e) {
                     (0, i.jsx)(e, {
                         ...n,
                         user: t,
-                        channel: a
+                        channel: s
                     });
             });
         };
     return (0, i.jsx)(r.Popout, {
-        preload: () => (0, f.Z)(t, { channelId: a.id }),
+        preload: () => (0, f.Z)(t, { channelId: s.id }),
         renderPopout: (e) =>
             (0, i.jsx)(E.Z, {
                 ...e,
                 userId: t.id,
-                channelId: a.id
+                channelId: s.id
             }),
-        position: s.tq ? 'window_center' : 'left',
+        position: a.tq ? 'window_center' : 'left',
         spacing: 16,
         onShiftClick: () => {
-            let e = '@'.concat(Z.ZP.getUserTag(t, { decoration: 'never' })),
+            let e = '@'.concat(A.ZP.getUserTag(t, { decoration: 'never' })),
                 n = '<@'.concat(t.id, '>');
-            S.S.dispatchToLastSubscribed(b.CkL.INSERT_TEXT, {
+            v.S.dispatchToLastSubscribed(b.CkL.INSERT_TEXT, {
                 plainText: e,
                 rawText: n
             }),
-                c.Z.startTyping(a.id);
+                c.Z.startTyping(s.id);
         },
         children: (e) =>
             (0, i.jsx)(
                 M.Z,
                 {
                     user: t,
-                    currentUser: p,
-                    isOwner: t.id === a.ownerId,
+                    currentUser: m,
+                    isOwner: t.id === s.ownerId,
                     ownerTooltipText: R.Z.Messages.GROUP_OWNER,
-                    shouldAnimateStatus: P,
+                    shouldAnimateStatus: O,
                     isTyping: h,
                     status: u,
                     activities: d,
-                    channel: a,
+                    channel: s,
                     onContextMenu: T,
-                    isMobile: m,
+                    isMobile: p,
                     nick: _,
                     ...e
                 },
@@ -98,7 +98,7 @@ function y(e) {
 function D(e) {
     var t;
     let { integration: l, channel: c } = e,
-        u = a.useCallback(
+        u = s.useCallback(
             (e) => {
                 (0, o.jW)(e, async () => {
                     let { default: e } = await n.e('37969').then(n.bind(n, 496281));
@@ -113,7 +113,7 @@ function D(e) {
             [l, c]
         ),
         d = l.application.bot,
-        p = N.ZP.getApplicationIconURL({
+        m = S.ZP.getApplicationIconURL({
             id: l.application.id,
             icon: l.application.icon,
             bot: null === (t = l.application) || void 0 === t ? void 0 : t.bot,
@@ -121,17 +121,17 @@ function D(e) {
         });
     return null != d
         ? (0, i.jsx)(r.Popout, {
-              preload: () => (0, f.Z)(d.id, p, { channelId: c.id }),
+              preload: () => (0, f.Z)(d.id, m, { channelId: c.id }),
               renderPopout: (e) =>
                   (0, i.jsx)(E.Z, {
                       ...e,
                       userId: d.id,
                       channelId: c.id
                   }),
-              position: s.tq ? 'window_center' : 'left',
+              position: a.tq ? 'window_center' : 'left',
               spacing: 16,
               children: (e) =>
-                  (0, i.jsx)(m.Z, {
+                  (0, i.jsx)(p.Z, {
                       onContextMenu: u,
                       className: L.member,
                       name: (0, i.jsx)('span', {
@@ -140,7 +140,7 @@ function D(e) {
                       }),
                       avatar: (0, i.jsx)(r.Avatar, {
                           size: r.AvatarSizes.SIZE_32,
-                          src: p,
+                          src: m,
                           'aria-label': l.application.name,
                           statusTooltip: !0
                       }),
@@ -166,34 +166,34 @@ function k(e, t) {
     if (e.listItems.length !== t.listItems.length) return !1;
     for (let n = 0; n < e.listItems.length; n++) {
         let i = e.listItems[n],
-            a = t.listItems[n];
-        if (i.user !== a.user || i.status !== a.status || i.activities !== a.activities) return !1;
+            s = t.listItems[n];
+        if (i.user !== s.user || i.status !== s.status || i.activities !== s.activities) return !1;
     }
     return !0;
 }
 function U(e) {
     var t;
-    let { channel: s } = e,
+    let { channel: a } = e,
         o = x.default.getCurrentUser(),
         c = null == o ? void 0 : o.isStaff(),
         { analyticsLocations: f } = (0, d.ZP)(u.Z.MEMBER_LIST);
     let { listItems: E } =
-            ((t = s),
+            ((t = a),
             (0, l.e7)(
-                [g.Z, x.default, C.Z],
+                [C.Z, x.default, g.Z],
                 () => {
-                    let e = (0, v.T)(t.recipients, x.default),
+                    let e = (0, N.T)(t.recipients, x.default),
                         n = {};
                     for (let t of e) {
-                        var i, a, s;
-                        g.Z.isFriend(t.id) || t.id === (null === (i = x.default.getCurrentUser()) || void 0 === i ? void 0 : i.id)
+                        var i, s, a;
+                        C.Z.isFriend(t.id) || t.id === (null === (i = x.default.getCurrentUser()) || void 0 === i ? void 0 : i.id)
                             ? (n[t.id] = {
-                                  status: null !== (a = C.Z.getStatus(t.id)) && void 0 !== a ? a : b.Skl.OFFLINE,
-                                  activities: null !== (s = C.Z.getActivities(t.id)) && void 0 !== s ? s : O
+                                  status: null !== (s = g.Z.getStatus(t.id)) && void 0 !== s ? s : b.Skl.OFFLINE,
+                                  activities: null !== (a = g.Z.getActivities(t.id)) && void 0 !== a ? a : j
                               })
                             : (n[t.id] = {
                                   status: b.Skl.OFFLINE,
-                                  activities: O
+                                  activities: j
                               });
                     }
                     let l = [];
@@ -210,25 +210,25 @@ function U(e) {
                 [t],
                 k
             )),
-        { installedIntegrations: I, applicationsShelf: N, fetched: S, appsInGDMEnabled: Z, availableApplications: A } = (0, _.j)({ channelId: s.id });
-    a.useEffect(() => {
+        { installedIntegrations: I, applicationsShelf: S, fetched: v, appsInGDMEnabled: A, availableApplications: Z } = (0, _.j)({ channelId: a.id });
+    s.useEffect(() => {
         T.default.track(b.rMx.MEMBER_LIST_VIEWED, {
-            channel_id: s.id,
-            channel_type: s.type,
-            guild_id: s.guild_id
+            channel_id: a.id,
+            channel_type: a.type,
+            guild_id: a.guild_id
         });
-    }, [s.guild_id, s.id, s.type]);
+    }, [a.guild_id, a.id, a.type]);
     let M = c && E.every((e) => e.user.isStaff());
     return (0, i.jsx)(d.Gt, {
         value: f,
         children: (0, i.jsx)('div', {
-            className: j.membersWrap,
+            className: P.membersWrap,
             children: (0, i.jsxs)(r.Scroller, {
-                className: j.members,
+                className: P.members,
                 fade: !0,
                 children: [
-                    (0, i.jsxs)(p.Z, {
-                        className: j.membersGroup,
+                    (0, i.jsxs)(m.Z, {
+                        className: P.membersGroup,
                         children: [''.concat(R.Z.Messages.MEMBERS, '\u2014').concat(E.length, ' '), M && (0, i.jsx)(h.Z, { type: h.Z.Types.STAFF_ONLY_DM })]
                     }),
                     E.map((e) =>
@@ -238,17 +238,17 @@ function U(e) {
                                 user: e.user,
                                 status: e.status,
                                 activities: e.activities,
-                                channel: s
+                                channel: a
                             },
                             e.user.id
                         )
                     ),
-                    Z &&
-                        (I.length > 0 || (S && N.length > 0)) &&
+                    A &&
+                        (I.length > 0 || (v && S.length > 0)) &&
                         (0, i.jsxs)(i.Fragment, {
                             children: [
-                                (0, i.jsx)(p.Z, {
-                                    className: j.membersGroup,
+                                (0, i.jsx)(m.Z, {
+                                    className: P.membersGroup,
                                     children: ''.concat(R.Z.Messages.APPS, '\u2014').concat(I.length)
                                 }),
                                 I.map((e) =>
@@ -256,13 +256,13 @@ function U(e) {
                                         D,
                                         {
                                             integration: e,
-                                            channel: s
+                                            channel: a
                                         },
                                         e.application.id
                                     )
                                 ),
-                                A.length > 0 &&
-                                    (0, i.jsx)(m.Z, {
+                                Z.length > 0 &&
+                                    (0, i.jsx)(p.Z, {
                                         className: L.member,
                                         onClick: () => {
                                             (0, r.openModalLazy)(async () => {
@@ -270,12 +270,12 @@ function U(e) {
                                                 return (t) =>
                                                     (0, i.jsx)(e, {
                                                         ...t,
-                                                        channelId: s.id
+                                                        channelId: a.id
                                                     });
                                             });
                                         },
                                         avatar: (0, i.jsx)('div', {
-                                            className: j.appIconWrapper,
+                                            className: P.appIconWrapper,
                                             children: (0, i.jsx)(r.PlusSmallIcon, {
                                                 size: 'sm',
                                                 color: 'currentColor'

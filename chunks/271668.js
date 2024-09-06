@@ -16,8 +16,8 @@ var r = n(735250),
     I = n(98528),
     m = n(551058),
     T = n(555573),
-    g = n(10718),
-    S = n(367790),
+    S = n(10718),
+    g = n(367790),
     A = n(895924),
     N = n(581364),
     O = n(56801),
@@ -25,8 +25,8 @@ var r = n(735250),
     v = n(826298),
     C = n(689079),
     y = n(981631),
-    L = n(689938),
-    D = n(11872),
+    D = n(689938),
+    L = n(11872),
     b = n(239840);
 let M = [8, 8, 0, 8],
     P = l().debounce(() => {
@@ -55,11 +55,11 @@ t.Z = i.forwardRef(function (e, t) {
             filteredSectionId: W,
             scrollDown: K,
             filterSection: z
-        } = g.wi(
+        } = S.wi(
             n,
             {
                 commandTypes: [c.yU.CHAT],
-                builtIns: a ? S.D.ONLY_TEXT : S.D.ALLOW,
+                builtIns: a ? g.D.ONLY_TEXT : g.D.ALLOW,
                 applicationCommands: !a
             },
             {
@@ -164,7 +164,7 @@ t.Z = i.forwardRef(function (e, t) {
                 return (0, r.jsx)(
                     m.Z,
                     {
-                        className: D.categoryHeader,
+                        className: L.categoryHeader,
                         icon: a,
                         children: t.name
                     },
@@ -183,14 +183,14 @@ t.Z = i.forwardRef(function (e, t) {
                     {
                         role: 'group',
                         'aria-label': i.name,
-                        className: s()(D.categorySection, { [D.categorySectionLast]: n }),
+                        className: s()(L.categorySection, { [L.categorySectionLast]: n }),
                         children: [
                             t,
                             0 === a.length &&
                                 (0, r.jsx)(u.Z, {
-                                    message: L.Z.Messages.APPLICATION_COMMAND_NO_PERMISSIONS.format({ applicationName: i.name }),
+                                    message: D.Z.Messages.APPLICATION_COMMAND_NO_PERMISSIONS.format({ applicationName: i.name }),
                                     noResultsImageURL: b,
-                                    className: D.noSearchResults
+                                    className: L.noSearchResults
                                 })
                         ]
                     },
@@ -213,7 +213,7 @@ t.Z = i.forwardRef(function (e, t) {
                         index: e,
                         command: s,
                         channel: n,
-                        className: D.itemWrapper,
+                        className: L.itemWrapper,
                         selected: w === e,
                         showImage: a.section.id !== s.applicationId,
                         section: l,
@@ -238,12 +238,12 @@ t.Z = i.forwardRef(function (e, t) {
         ),
         (0, r.jsxs)(_.ZP, {
             id: ei,
-            className: D.outerWrapper,
-            innerClassName: D.wrapper,
+            className: L.outerWrapper,
+            innerClassName: L.wrapper,
             onMouseDown: U,
             children: [
                 (0, r.jsx)(O.Z, {
-                    className: D.rail,
+                    className: L.rail,
                     channel: n,
                     sections: V,
                     filteredSectionId: W,
@@ -253,7 +253,7 @@ t.Z = i.forwardRef(function (e, t) {
                 }),
                 (0, r.jsx)(f.Z, {
                     role: 'listbox',
-                    className: D.list,
+                    className: L.list,
                     listPadding: M,
                     onScroll: Q,
                     renderRow: er,

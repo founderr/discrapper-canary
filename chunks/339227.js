@@ -126,13 +126,13 @@ let I = {
     },
     m = new Set(['*', '_', '\\']),
     T = {},
-    g = {};
+    S = {};
 for (let e in d.Z.RULES) {
     if (!(e in I)) throw Error('Slate: Unknown markdown rule: '.concat(e, '.  If you have just added a new markdown rule ') + 'then you probably need to add it to this file so that the rich chat box understands it.');
     let t = I[e];
-    'skip' !== t.type && (T[e] = S(d.Z.RULES[e])), 'skip' !== t.type && 'inlineObject' !== t.type && (g[e] = S('text' === e ? _.ZP : d.Z.RULES[e]));
+    'skip' !== t.type && (T[e] = g(d.Z.RULES[e])), 'skip' !== t.type && 'inlineObject' !== t.type && (S[e] = g('text' === e ? _.ZP : d.Z.RULES[e]));
 }
-function S(e) {
+function g(e) {
     i()(null != e.parse, 'Slate: rule must have a parse function');
     let t = e.parse;
     return {
@@ -198,7 +198,7 @@ let A = {
     },
     N = /(-# +)/,
     O = (0, E.Z)([T, A]),
-    R = (0, E.Z)([g, A]),
+    R = (0, E.Z)([S, A]),
     v = l._p(O),
     C = l._p(R),
     y = {
@@ -206,8 +206,8 @@ let A = {
         maxAge: 1 * f.Z.Millis.MINUTE,
         updateAgeOnGet: !0
     },
-    L = new (s())(y),
-    D = new (s())(y);
+    D = new (s())(y),
+    L = new (s())(y);
 function b(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
@@ -231,7 +231,7 @@ function b(e, t) {
             '' !== l &&
                 (function (e, t, n) {
                     let r = [],
-                        i = n ? D : L,
+                        i = n ? L : D,
                         a = i.get(e);
                     if (null != a) return a;
                     let s =

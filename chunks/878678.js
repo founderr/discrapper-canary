@@ -18,7 +18,7 @@ var r = n(735250),
 function d(e) {
     let t,
         n,
-        { header: a, children: d, confirmText: _, cancelText: E, className: f, onConfirm: h, onCancel: p, onClose: I, onCloseCallback: m, bodyClassName: T, transitionState: g, loading: S = !1, confirmButtonColor: A = o.zx.Colors.RED, focusCancel: N = !1 } = e,
+        { header: a, children: d, confirmText: _, cancelText: E, className: f, onConfirm: h, onCancel: p, onClose: I, onCloseCallback: m, bodyClassName: T, transitionState: S, loading: g = !1, confirmButtonColor: A = o.zx.Colors.RED, focusCancel: N = !1 } = e,
         O = i.useRef(null);
     return (
         i.useEffect(() => {
@@ -34,7 +34,7 @@ function d(e) {
                 type: 'button',
                 look: o.zx.Looks.LINK,
                 color: o.zx.Colors.PRIMARY,
-                disabled: S,
+                disabled: g,
                 onClick: () => {
                     null == p || p(), I();
                 },
@@ -46,7 +46,7 @@ function d(e) {
                 buttonRef: O,
                 type: 'submit',
                 color: A,
-                submitting: S,
+                submitting: g,
                 onClick: async () => {
                     try {
                         await (null == h ? void 0 : h()), I();
@@ -59,7 +59,7 @@ function d(e) {
             })),
         (0, r.jsxs)(u.Y0, {
             className: f,
-            transitionState: g,
+            transitionState: S,
             children: [
                 null != a
                     ? (0, r.jsx)(u.xB, {

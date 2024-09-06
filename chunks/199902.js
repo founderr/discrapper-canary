@@ -13,8 +13,8 @@ var o,
     I = n(139656),
     m = n(855403),
     T = n(314897),
-    g = n(592125),
-    S = n(430824),
+    S = n(592125),
+    g = n(430824),
     A = n(131951),
     N = n(496675),
     O = n(19780),
@@ -22,11 +22,11 @@ var o,
     v = n(979651),
     C = n(981631),
     y = n(70722);
-let L = null,
-    D = {},
+let D = null,
+    L = {},
     b = null;
 function M() {
-    (r = new Map()), (i = {}), (a = {}), (s = {}), (D = {});
+    (r = new Map()), (i = {}), (a = {}), (s = {}), (L = {});
 }
 M();
 function P(e) {
@@ -53,13 +53,13 @@ function w(e) {
         });
 }
 function x(e, t) {
-    let n = g.Z.getBasicChannel(t);
+    let n = S.Z.getBasicChannel(t);
     return e === y.lo.CALL || (null != n && N.Z.canBasicChannel(C.S7T.VIEW_CHANNEL, n));
 }
 function G(e) {
     if (x(e.streamType, e.channelId)) return !0;
-    let t = g.Z.getBasicChannel(e.channelId);
-    return null != t && (0, p.p9)(t, v.Z, S.Z, N.Z, E.Z)[0];
+    let t = S.Z.getBasicChannel(e.channelId);
+    return null != t && (0, p.p9)(t, v.Z, g.Z, N.Z, E.Z)[0];
 }
 class k extends (o = d.ZP.Store) {
     initialize() {
@@ -67,7 +67,7 @@ class k extends (o = d.ZP.Store) {
     }
     isSelfStreamHidden(e) {
         var t;
-        return null !== (t = D[e]) && void 0 !== t && t;
+        return null !== (t = L[e]) && void 0 !== t && t;
     }
     getLastActiveStream() {
         var e;
@@ -91,7 +91,7 @@ class k extends (o = d.ZP.Store) {
     }
     getCurrentUserActiveStream() {
         let e = R.Z.getVoiceChannelId(),
-            t = g.Z.getChannel(e);
+            t = S.Z.getChannel(e);
         return null == t ? null : this.getActiveStreamForUser(T.default.getId(), t.getGuildId());
     }
     getActiveStreamForUser(e, t) {
@@ -102,7 +102,7 @@ class k extends (o = d.ZP.Store) {
     getStreamerActiveStreamMetadata() {
         var e;
         let t = R.Z.getVoiceChannelId(),
-            n = g.Z.getChannel(t);
+            n = S.Z.getChannel(t);
         if (null == n) return null;
         let r = this.getActiveStreamForUser(T.default.getId(), n.getGuildId());
         return null == r ? null : null !== (e = s[(0, h.V9)(r)]) && void 0 !== e ? e : null;
@@ -217,7 +217,7 @@ class k extends (o = d.ZP.Store) {
                     ...n,
                     state: C.jm8.CONNECTING
                 }),
-                n.ownerId === T.default.getId() && (D[n.channelId] = !1);
+                n.ownerId === T.default.getId() && (L[n.channelId] = !1);
         },
         STREAM_START: function (e) {
             var t;
@@ -282,7 +282,7 @@ class k extends (o = d.ZP.Store) {
                 ...o,
                 state: l
             }),
-                l === C.jm8.ENDED && L !== t && P(t);
+                l === C.jm8.ENDED && D !== t && P(t);
         },
         STREAM_CLOSE: function (e) {
             let { streamKey: t } = e;
@@ -290,7 +290,7 @@ class k extends (o = d.ZP.Store) {
         },
         STREAM_UPDATE_SELF_HIDDEN: function (e) {
             let { channelId: t, selfStreamHidden: n } = e;
-            (0, h.DB)(L) && (null == L ? void 0 : L.includes(T.default.getId())) && !1 === D[t] && !0 === n && (L = null), (D[t] = n);
+            (0, h.DB)(D) && (null == D ? void 0 : D.includes(T.default.getId())) && !1 === L[t] && !0 === n && (D = null), (L[t] = n);
         },
         SET_STREAM_APP_INTENT: function (e) {
             let { intent: t } = e;
@@ -318,13 +318,13 @@ class k extends (o = d.ZP.Store) {
         CHANNEL_RTC_SELECT_PARTICIPANT: function (e) {
             let { id: t, channelId: n } = e;
             if (
-                ((L = t),
+                ((D = t),
                 Array.from(r.values()).forEach((e) => {
-                    (0, h.V9)(e) !== L && e.state === C.jm8.ENDED && P((0, h.V9)(e));
+                    (0, h.V9)(e) !== D && e.state === C.jm8.ENDED && P((0, h.V9)(e));
                 }),
                 null != t)
             )
-                (0, h.DB)(t) && t.includes(T.default.getId()) && (D[n] = !1);
+                (0, h.DB)(t) && t.includes(T.default.getId()) && (L[n] = !1);
         },
         CONNECTION_OPEN: M,
         CONNECTION_CLOSED: M,

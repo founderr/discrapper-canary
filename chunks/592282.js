@@ -15,18 +15,18 @@ var r = n(735250),
     _ = n(939350),
     E = n(837244);
 function f(e) {
-    let { color: t = 'default', label: n, checked: a, subtext: f, disabled: h, isFocused: p, menuItemProps: I, action: m, className: T, focusedClassName: g } = e,
-        S = i.useRef(null);
+    let { color: t = 'default', label: n, checked: a, subtext: f, disabled: h, isFocused: p, menuItemProps: I, action: m, className: T, focusedClassName: S } = e,
+        g = i.useRef(null);
     return (
         i.useEffect(() => {
-            p && (0, u.F)(S);
+            p && (0, u.F)(g);
         }, [p]),
         (0, r.jsxs)(o.P, {
-            innerRef: S,
+            innerRef: g,
             className: s()(E.item, E.labelContainer, _._[t], T, {
                 [E.disabled]: h,
                 [E.focused]: p,
-                [null != g ? g : '']: p
+                [null != S ? S : '']: p
             }),
             onClick: h ? void 0 : m,
             ...I,

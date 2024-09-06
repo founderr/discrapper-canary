@@ -16,8 +16,8 @@ var r = n(392711),
     I = n(675478),
     m = n(65154);
 let T = (e) => 'AudioContextSettingsMigrated:'.concat(e),
-    g = (e) => (e === m.Yn.STREAM ? a.h.STREAM : a.h.USER);
-function S() {
+    S = (e) => (e === m.Yn.STREAM ? a.h.STREAM : a.h.USER);
+function g() {
     o.K.get(T(_.default.getId())) ||
         I.hW.updateAsync(
             'audioContextSettings',
@@ -32,7 +32,7 @@ function S() {
                     for (let [e, t] of Object.entries(r.localMutes))
                         o[e] = {
                             muted: t,
-                            volume: g(n),
+                            volume: S(n),
                             modifiedAt: s,
                             soundboardMuted: !1
                         };
@@ -78,13 +78,13 @@ function O() {
                                     : ((a = n),
                                       s.JY.create({
                                           muted: !1,
-                                          volume: g(a)
+                                          volume: S(a)
                                       }))),
                             r(_[t]),
                             (_[t].modifiedAt = String(Date.now())),
                             c)
                         ) {
-                            (o = _), (l = t), (u = n), o[l].volume !== g(u) || o[l].muted || o[l].soundboardMuted || delete o[l];
+                            (o = _), (l = t), (u = n), o[l].volume !== S(u) || o[l].muted || o[l].soundboardMuted || delete o[l];
                         }
                         return (
                             !(function (e) {
@@ -152,7 +152,7 @@ class y extends l.Z {
             (t = this),
             (n = 'actions'),
             (r = {
-                POST_CONNECTION_OPEN: S,
+                POST_CONNECTION_OPEN: g,
                 AUDIO_SET_LOCAL_VOLUME: R,
                 AUDIO_TOGGLE_LOCAL_MUTE: v,
                 AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE: C

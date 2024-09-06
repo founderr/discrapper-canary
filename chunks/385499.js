@@ -38,9 +38,9 @@ let d = (e) => {
     }
     let m = i === l.Hb.ORIGINAL_POSTER,
         T = i === l.Hb.REMIX,
-        g = null;
+        S = null;
     _ &&
-        (g = (0, r.jsx)(s.u, {
+        (S = (0, r.jsx)(s.u, {
             text: I,
             align: 'center',
             position: 'top',
@@ -52,7 +52,7 @@ let d = (e) => {
                 })
         })),
         (t = i === l.Hb.AI ? c.botTagAI : n ? c.botTagInvert : c.botTagRegular);
-    let S = (e) =>
+    let g = (e) =>
         (0, r.jsxs)('span', {
             ...e,
             className: a()(d, t, f ? c.rem : c.px, {
@@ -60,7 +60,7 @@ let d = (e) => {
                 [c.botTagRemix]: T
             }),
             children: [
-                E ? null : g,
+                E ? null : S,
                 h,
                 (0, r.jsx)('span', {
                     className: c.botText,
@@ -73,16 +73,16 @@ let d = (e) => {
             return (0, r.jsx)(s.u, {
                 text: u.Z.Messages.REMIXING_DOWNLOAD_APP,
                 position: 'top',
-                children: (e) => S(e)
+                children: (e) => g(e)
             });
         case l.Hb.ORIGINAL_POSTER:
             return (0, r.jsx)(s.u, {
                 text: u.Z.Messages.BOT_TAG_FORUM_ORIGINAL_POSTER_TOOLTIP,
                 position: 'top',
-                children: (e) => S(e)
+                children: (e) => g(e)
             });
         default:
-            return S();
+            return g();
     }
 };
 (d.Types = l.Hb), (t.Z = d);

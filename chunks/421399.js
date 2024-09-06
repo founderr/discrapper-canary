@@ -23,8 +23,8 @@ var r,
     I = n(372900),
     m = n(477734),
     T = n(184301),
-    g = n(768581),
-    S = n(463396),
+    S = n(768581),
+    g = n(463396),
     A = n(944192),
     N = n(981631),
     O = n(438379);
@@ -39,7 +39,7 @@ function R(e) {
 function v(e) {
     var t;
     let n,
-        { author: r, message: i, channel: o, userOverride: h, compact: v = !1, withMentionPrefix: C = !1, showPopout: y = !1, className: L, onClick: D, onContextMenu: b, onPopoutRequestClose: M, renderPopout: P, renderRemixTag: U = !1, decorations: w } = e,
+        { author: r, message: i, channel: o, userOverride: h, compact: v = !1, withMentionPrefix: C = !1, showPopout: y = !1, className: D, onClick: L, onContextMenu: b, onPopoutRequestClose: M, renderPopout: P, renderRemixTag: U = !1, decorations: w } = e,
         x = s.useContext(I.Z),
         G = null !== (t = null == o ? void 0 : o.guild_id) && void 0 !== t ? t : x,
         { analyticsLocations: k } = (0, f.ZP)(E.Z.USERNAME),
@@ -58,7 +58,7 @@ function v(e) {
         W = {
             className: O.username,
             style: 'username' === Z && null != F ? { color: F } : void 0,
-            onClick: D,
+            onClick: L,
             onContextMenu: b,
             children: (0, a.jsx)(a.Fragment, { children: (C ? '@' : '') + B })
         },
@@ -85,7 +85,7 @@ function v(e) {
                             return (0, T.Z)(
                                 e.id,
                                 null != r.guildMemberAvatar && null != G
-                                    ? (0, g.JM)({
+                                    ? (0, S.JM)({
                                           guildId: G,
                                           userId: e.id,
                                           avatar: r.guildMemberAvatar,
@@ -110,7 +110,7 @@ function v(e) {
                                   tag: 'span',
                                   ...n,
                                   ...W,
-                                  className: l()(W.className, O.clickable, L)
+                                  className: l()(W.className, O.clickable, D)
                               }),
                               K
                           ]
@@ -121,7 +121,7 @@ function v(e) {
                   children: [
                       (0, a.jsx)(d.Clickable, {
                           ...W,
-                          className: l()(W.className, L)
+                          className: l()(W.className, D)
                       }),
                       K
                   ]
@@ -159,7 +159,7 @@ function v(e) {
                 }),
             null != q ? (0, a.jsx)(a.Fragment, { children: q }) : null,
             null == z || v ? null : z,
-            null != i && (0, S.f)(i) && Y && U ? (0, a.jsx)(R, {}) : null
+            null != i && (0, g.f)(i) && Y && U ? (0, a.jsx)(R, {}) : null
         ]
     });
 }

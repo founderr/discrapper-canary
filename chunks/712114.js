@@ -1,11 +1,11 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return m;
     }
 });
 var i = n(735250),
-    a = n(470079),
-    s = n(990547),
+    s = n(470079),
+    a = n(990547),
     l = n(481060),
     r = n(213609),
     o = n(536442),
@@ -13,17 +13,17 @@ var i = n(735250),
     u = n(176127),
     d = n(689938),
     h = n(823472);
-function p(e) {
-    let { onOpenClips: t, lastClipsSession: n, closePopout: p } = e;
-    return (a.useEffect(
+function m(e) {
+    let { onOpenClips: t, lastClipsSession: n, closePopout: m } = e;
+    return (s.useEffect(
         () => () => {
             (0, c.eL)();
         },
         []
     ),
     (0, r.Z)({
-        type: s.ImpressionTypes.VIEW,
-        name: s.ImpressionNames.HOTSPOT,
+        type: a.ImpressionTypes.VIEW,
+        name: a.ImpressionNames.HOTSPOT,
         properties: { hotspot_location: o.v6.CLIPS_CHANNEL_ATTACH_REMINDER }
     }),
     null == n)
@@ -54,7 +54,7 @@ function p(e) {
                               color: l.Button.Colors.PRIMARY,
                               look: l.Button.Looks.LINK,
                               onClick: function () {
-                                  (0, o.Kw)(o.v6.CLIPS_CHANNEL_ATTACH_REMINDER), p();
+                                  (0, o.Kw)(o.v6.CLIPS_CHANNEL_ATTACH_REMINDER), m();
                               },
                               children: d.Z.Messages.CLIPS_SESSION_ENDED_TOOLTIP_SECONDARY_CTA
                           }),

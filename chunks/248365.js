@@ -120,7 +120,7 @@ class T extends (i = r.ZP.Store) {
     }
 }
 c(T, 'displayName', 'GlobalDiscoveryServersSearchStore'),
-    new T(l.Z, {
+    (t.Z = new T(l.Z, {
         CONNECTION_OPEN: function () {
             d.clear(), u.clear(), (_ = null);
         },
@@ -163,4 +163,4 @@ c(T, 'displayName', 'GlobalDiscoveryServersSearchStore'),
             let { id: t } = e;
             return u.delete(t);
         }
-    });
+    }));

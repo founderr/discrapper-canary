@@ -16,18 +16,18 @@ var r = n(735250),
 let E = i.forwardRef(function (e, t) {
     var n, a, E;
     let { query: f, onChange: h, loading: p = !1, disabled: I = !1, placeholder: m = d.Z.Messages.SEARCH, 'aria-label': T } = e,
-        g = i.useRef(null),
-        S = i.useRef(null);
+        S = i.useRef(null),
+        g = i.useRef(null);
     i.useImperativeHandle(
         t,
         () => ({
             focus: () => {
                 var e;
-                return null === (e = S.current) || void 0 === e ? void 0 : e.focus();
+                return null === (e = g.current) || void 0 === e ? void 0 : e.focus();
             },
             blur: () => {
                 var e;
-                return null === (e = S.current) || void 0 === e ? void 0 : e.blur();
+                return null === (e = g.current) || void 0 === e ? void 0 : e.blur();
             },
             activate: () => !1
         }),
@@ -84,8 +84,8 @@ let E = i.forwardRef(function (e, t) {
                     })
                 }));
     return (0, r.jsx)(l.t, {
-        focusTarget: S,
-        ringTarget: g,
+        focusTarget: g,
+        ringTarget: S,
         offset: {
             top: 2,
             bottom: 2,
@@ -94,12 +94,12 @@ let E = i.forwardRef(function (e, t) {
         },
         children: (0, r.jsxs)('div', {
             className: _.container,
-            ref: g,
+            ref: S,
             children: [
                 (0, r.jsx)('input', {
                     role: 'searchbox',
                     'aria-busy': p,
-                    ref: S,
+                    ref: g,
                     className: _.input,
                     value: f,
                     onChange: (e) => h(e.currentTarget.value),

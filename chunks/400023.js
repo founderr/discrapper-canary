@@ -1,52 +1,52 @@
 n(47120);
 var i = n(735250),
-    a = n(470079),
-    s = n(120356),
-    l = n.n(s),
+    s = n(470079),
+    a = n(120356),
+    l = n.n(a),
     r = n(91192),
     o = n(442837),
     c = n(481060),
     u = n(904245),
     d = n(902840),
     h = n(607070),
-    p = n(95398),
-    m = n(580747),
+    m = n(95398),
+    p = n(580747),
     _ = n(135938),
     f = n(160404),
     E = n(765104),
-    C = n(695346),
-    g = n(314897),
+    g = n(695346),
+    C = n(314897),
     I = n(323873),
     x = n(607744),
     T = n(375954),
-    N = n(496675),
-    S = n(306680),
-    v = n(62817),
-    Z = n(594174),
-    A = n(459273),
+    S = n(496675),
+    v = n(306680),
+    N = n(62817),
+    A = n(594174),
+    Z = n(459273),
     M = n(255269),
     b = n(47481),
     R = n(977391),
     L = n(73274),
-    j = n(419388),
-    O = n(406534),
-    P = n(981631),
+    P = n(419388),
+    j = n(406534),
+    O = n(981631),
     y = n(689938),
     D = n(793818);
-let k = a.memo(
+let k = s.memo(
     function (e) {
         var t, n;
-        let { className: s, messageGroupSpacing: d, scrollerClassName: p, channel: m, messages: _, unreadCount: E, showNewMessagesBar: C, messageDisplayCompact: g, channelStream: I, uploads: x, hasUnreads: T, editingMessageId: S, fontSize: v, keyboardModeEnabled: Z, filterAfterTimestamp: M, showingQuarantineBanner: b, hideSummaries: k = !1 } = e,
-            [U, w] = a.useState(!1),
-            B = a.useMemo(
+        let { className: a, messageGroupSpacing: d, scrollerClassName: m, channel: p, messages: _, unreadCount: E, showNewMessagesBar: g, messageDisplayCompact: C, channelStream: I, uploads: x, hasUnreads: T, editingMessageId: v, fontSize: N, keyboardModeEnabled: A, filterAfterTimestamp: M, showingQuarantineBanner: b, hideSummaries: k = !1 } = e,
+            [U, w] = s.useState(!1),
+            B = s.useMemo(
                 () =>
-                    g
+                    C
                         ? (0, R.aJ)({
                               compact: !0,
                               messageGroups: 30,
                               groupRange: 4,
                               attachments: 8,
-                              fontSize: v,
+                              fontSize: N,
                               groupSpacing: d
                           })
                         : (0, R.aJ)({
@@ -54,41 +54,41 @@ let k = a.memo(
                               messageGroups: 26,
                               groupRange: 4,
                               attachments: 8,
-                              fontSize: v,
+                              fontSize: N,
                               groupSpacing: d
                           }),
-                [g, v, d]
+                [C, N, d]
             ),
-            H = (0, j.ZP)({
+            H = (0, P.ZP)({
                 messages: _,
-                channel: m,
-                compact: g,
+                channel: p,
+                compact: C,
                 hasUnreads: T,
-                focusId: S,
+                focusId: v,
                 placeholderHeight: B.totalHeight,
                 canLoadMore: null == M,
-                handleScrollToBottom: a.useCallback(() => w(!0), [w]),
-                handleScrollFromBottom: a.useCallback(() => w(!1), [w])
+                handleScrollToBottom: s.useCallback(() => w(!0), [w]),
+                handleScrollFromBottom: s.useCallback(() => w(!1), [w])
             }),
             G = (0, L.Z)({
                 scrollerRef: H.ref,
-                isEditing: null != S,
-                keyboardModeEnabled: Z,
+                isEditing: null != v,
+                keyboardModeEnabled: A,
                 hasMoreAfter: _.hasMoreAfter
             });
-        let V = ((n = m), (0, o.e7)([f.Z], () => (N.Z.can(P.Plq.READ_MESSAGE_HISTORY, n) ? null : f.Z.getViewingRolesTimestamp(n.getGuildId())))),
+        let V = ((n = p), (0, o.e7)([f.Z], () => (S.Z.can(O.Plq.READ_MESSAGE_HISTORY, n) ? null : f.Z.getViewingRolesTimestamp(n.getGuildId())))),
             {
                 channelStreamMarkup: F,
                 newMessagesBar: W,
                 jumpToPresentBar: z,
                 forumPostActionBar: Y,
                 safetyWarningBanner: K
-            } = (0, O.Z)({
-                channel: m,
+            } = (0, j.Z)({
+                channel: p,
                 messages: _,
                 unreadCount: E,
-                showNewMessagesBar: C,
-                messageDisplayCompact: g,
+                showNewMessagesBar: g,
+                messageDisplayCompact: C,
                 channelStream: I,
                 uploads: x,
                 loadMore: H.loadMore,
@@ -102,38 +102,38 @@ let k = a.memo(
                     if (_.hasPresent()) {
                         var e;
                         null === (e = H.ref.current) || void 0 === e || e.scrollToBottom({ animate: !h.Z.useReducedMotion });
-                    } else u.Z.jumpToPresent(m.id, P.AQB);
+                    } else u.Z.jumpToPresent(p.id, O.AQB);
                 }
             });
         !(function (e) {
-            let t = a.useCallback(() => {
+            let t = s.useCallback(() => {
                     var t;
                     return null === (t = e.current) || void 0 === t ? void 0 : t.scrollToBottom();
                 }, [e]),
-                n = a.useCallback(() => {
+                n = s.useCallback(() => {
                     var t;
                     return null === (t = e.current) || void 0 === t ? void 0 : t.scrollPageUp({ animate: !h.Z.useReducedMotion });
                 }, [e]),
-                i = a.useCallback(() => {
+                i = s.useCallback(() => {
                     var t;
                     return null === (t = e.current) || void 0 === t ? void 0 : t.scrollPageDown({ animate: !h.Z.useReducedMotion });
                 }, [e]);
-            (0, A.yp)({
-                event: P.CkL.SCROLLTO_PRESENT,
+            (0, Z.yp)({
+                event: O.CkL.SCROLLTO_PRESENT,
                 handler: t
             }),
-                (0, A.yp)({
-                    event: P.CkL.SCROLL_PAGE_UP,
+                (0, Z.yp)({
+                    event: O.CkL.SCROLL_PAGE_UP,
                     handler: n
                 }),
-                (0, A.yp)({
-                    event: P.CkL.SCROLL_PAGE_DOWN,
+                (0, Z.yp)({
+                    event: O.CkL.SCROLL_PAGE_DOWN,
                     handler: i
                 });
         })(H.ref);
         let q = (0, c.useFocusJumpSection)(),
             { ref: X, ...Q } = (0, r.l2)(G),
-            J = a.useCallback((e) => {
+            J = s.useCallback((e) => {
                 var t;
                 (H.ref.current = e), (X.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null);
             }, []);
@@ -142,13 +142,13 @@ let k = a.memo(
             children: [
                 null != K && K,
                 (0, i.jsxs)('div', {
-                    className: l()(D.messagesWrapper, s, 'group-spacing-'.concat(d)),
+                    className: l()(D.messagesWrapper, a, 'group-spacing-'.concat(d)),
                     children: [
                         null == K && W,
                         (0, i.jsxs)(c.PinToBottomScrollerAuto, {
                             ref: J,
                             customTheme: !0,
-                            className: l()(p, D.scroller),
+                            className: l()(m, D.scroller),
                             contentClassName: D.scrollerContent,
                             onResize: H.handleResize,
                             onScroll: H.handleScroll,
@@ -161,7 +161,7 @@ let k = a.memo(
                                 Y,
                                 (0, i.jsxs)('ol', {
                                     className: D.scrollerInner,
-                                    'aria-label': y.Z.Messages.CHANNEL_MESSAGES_A11Y_LABEL.format({ channelName: m.name }),
+                                    'aria-label': y.Z.Messages.CHANNEL_MESSAGES_A11Y_LABEL.format({ channelName: p.name }),
                                     ...Q,
                                     children: [
                                         (0, i.jsx)('span', {
@@ -175,7 +175,7 @@ let k = a.memo(
                                             className: l()({
                                                 [D.scrollerSpacer]: !b,
                                                 [D.empty]: 0 === _.length && !_.loadingMore,
-                                                [D.emptyForum]: 1 === _.length && !_.loadingMore && m.isForumPost() && (null === (t = _.first()) || void 0 === t ? void 0 : t.isFirstMessageInForumPost(m))
+                                                [D.emptyForum]: 1 === _.length && !_.loadingMore && p.isForumPost() && (null === (t = _.first()) || void 0 === t ? void 0 : t.isFirstMessageInForumPost(p))
                                             })
                                         })
                                     ]
@@ -190,42 +190,42 @@ let k = a.memo(
     },
     (e, t) => null != e.isHidden && null != t.isHidden && e.isHidden && t.isHidden
 );
-t.Z = a.memo(function (e) {
-    let { channel: t, showingQuarantineBanner: n, hideSummaries: s = !1, forceCompact: l = !1, forceCozy: r = !1, ...c } = e,
+t.Z = s.memo(function (e) {
+    let { channel: t, showingQuarantineBanner: n, hideSummaries: a = !1, forceCompact: l = !1, forceCozy: r = !1, ...c } = e,
         {
             canManageMessages: u,
             permissionVersion: f,
-            canChat: A
+            canChat: Z
         } = (function (e) {
             let t = e.getGuildId(),
                 n = (0, o.e7)([x.Z], () => null == t || x.Z.canChatInGuild(t), [t]),
-                { canManageMessages: i, permissionVersion: a } = (0, o.cj)(
-                    [N.Z],
+                { canManageMessages: i, permissionVersion: s } = (0, o.cj)(
+                    [S.Z],
                     () => ({
-                        canManageMessages: N.Z.can(P.Plq.MANAGE_MESSAGES, e),
-                        permissionVersion: null != t ? N.Z.getGuildVersion(t) : null
+                        canManageMessages: S.Z.can(O.Plq.MANAGE_MESSAGES, e),
+                        permissionVersion: null != t ? S.Z.getGuildVersion(t) : null
                     }),
                     [e, t]
                 );
             return {
                 canChat: n,
-                permissionVersion: a,
+                permissionVersion: s,
                 canManageMessages: i
             };
         })(t),
         {
             messageGroupSpacing: R,
             fontSize: L,
-            messageDisplayCompact: j,
-            renderSpoilers: O,
+            messageDisplayCompact: P,
+            renderSpoilers: j,
             keyboardModeEnabled: y
         } = (function () {
-            let e = C.jU.useSetting(),
-                t = C.cC.useSetting(),
+            let e = g.jU.useSetting(),
+                t = g.cC.useSetting(),
                 {
                     messageGroupSpacing: n,
                     fontSize: i,
-                    keyboardModeEnabled: a
+                    keyboardModeEnabled: s
                 } = (0, o.cj)([h.Z], () => {
                     let { messageGroupSpacing: e, fontSize: t, keyboardModeEnabled: n } = h.Z;
                     return {
@@ -239,7 +239,7 @@ t.Z = a.memo(function (e) {
                 messageDisplayCompact: e,
                 renderSpoilers: t,
                 fontSize: i,
-                keyboardModeEnabled: a
+                keyboardModeEnabled: s
             };
         })(),
         {
@@ -250,18 +250,18 @@ t.Z = a.memo(function (e) {
         } = (function (e) {
             var t, n;
             let i = (0, o.e7)([T.Z], () => T.Z.getMessages(e.id), [e.id]),
-                s = (0, o.e7)(
-                    [S.ZP],
+                a = (0, o.e7)(
+                    [v.ZP],
                     () => {
                         var t;
-                        return null !== (t = S.ZP.getOldestUnreadMessageId(e.id)) && void 0 !== t ? t : null;
+                        return null !== (t = v.ZP.getOldestUnreadMessageId(e.id)) && void 0 !== t ? t : null;
                     },
                     [e.id]
                 ),
                 { enabled: l } = _.Z.useExperiment({ location: '41de6d_1' }, { autoTrackExposure: !1 }),
-                r = null !== (n = null === (t = Z.default.getUser(g.default.getId())) || void 0 === t ? void 0 : t.hasFlag(P.xW$.SPAMMER)) && void 0 !== n && n,
+                r = null !== (n = null === (t = A.default.getUser(C.default.getId())) || void 0 === t ? void 0 : t.hasFlag(O.xW$.SPAMMER)) && void 0 !== n && n,
                 c = (0, d.ts)(e),
-                u = (0, m.Z)('use_topic_dividers_in_chat'),
+                u = (0, p.Z)('use_topic_dividers_in_chat'),
                 h = (0, o.Wu)(
                     [E.Z],
                     () => {
@@ -270,49 +270,49 @@ t.Z = a.memo(function (e) {
                     },
                     [c, e.id, u]
                 ),
-                p = (0, o.e7)([E.Z], () => (c ? E.Z.selectedSummary(e.id) : null), [c, e.id]),
-                f = a.useMemo(
+                m = (0, o.e7)([E.Z], () => (c ? E.Z.selectedSummary(e.id) : null), [c, e.id]),
+                f = s.useMemo(
                     () =>
                         (0, b.Z)({
                             channel: e,
                             messages: i,
-                            oldestUnreadMessageId: s,
+                            oldestUnreadMessageId: a,
                             treatSpam: l && !r,
                             summaries: h,
-                            selectedSummary: p
+                            selectedSummary: m
                         }),
-                    [i, e, s, l, h, p]
+                    [i, e, a, l, h, m]
                 );
             return {
                 messages: i,
                 channelStream: f,
-                oldestUnreadMessageId: s,
+                oldestUnreadMessageId: a,
                 editingMessageId: (0, o.e7)([I.Z], () => {
                     var t;
                     return null === (t = I.Z.getEditingMessage(e.id)) || void 0 === t ? void 0 : t.id;
                 })
             };
         })(t);
-    return (0, i.jsx)(p.a.Provider, {
-        value: (0, M.Z)(O, u),
+    return (0, i.jsx)(m.a.Provider, {
+        value: (0, M.Z)(j, u),
         children: (0, i.jsx)(k, {
             ...c,
             messageGroupSpacing: R,
             showNewMessagesBar: !0,
             channel: t,
-            messageDisplayCompact: !r && (l || j),
+            messageDisplayCompact: !r && (l || P),
             messages: D,
             channelStream: U,
             permissionVersion: f,
-            uploads: (0, o.e7)([v.Z], () => v.Z.getFiles(t.id), [t]),
-            unreadCount: (0, o.e7)([S.ZP], () => S.ZP.getUnreadCount(t.id), [t]),
+            uploads: (0, o.e7)([N.Z], () => N.Z.getFiles(t.id), [t]),
+            unreadCount: (0, o.e7)([v.ZP], () => v.ZP.getUnreadCount(t.id), [t]),
             hasUnreads: null != w,
-            canChat: A,
+            canChat: Z,
             editingMessageId: B,
             fontSize: L,
             keyboardModeEnabled: y,
             showingQuarantineBanner: n,
-            hideSummaries: s
+            hideSummaries: a
         })
     });
 });

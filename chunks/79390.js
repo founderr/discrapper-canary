@@ -3,13 +3,13 @@ n.d(t, {
         return v;
     },
     N4: function () {
-        return D;
+        return L;
     },
     UI: function () {
         return O;
     },
     Uu: function () {
-        return S;
+        return g;
     },
     _N: function () {
         return R;
@@ -33,7 +33,7 @@ n.d(t, {
         return y;
     },
     x9: function () {
-        return L;
+        return D;
     }
 }),
     n(757143),
@@ -56,8 +56,8 @@ var r = n(392711),
     I = n(5192),
     m = n(489887),
     T = n(981631),
-    g = n(689938);
-function S() {
+    S = n(689938);
+function g() {
     return {
         text: void 0,
         image: void 0,
@@ -95,7 +95,7 @@ function y(e, t) {
     let r = null === (n = e.text) || void 0 === n ? void 0 : n.trim();
     return t === s.C.DEFAULT && null != e.image && (null == r || 0 === r.length);
 }
-function L(e) {
+function D(e) {
     var t, n;
     if (null == e) return;
     let r =
@@ -129,14 +129,14 @@ function L(e) {
         answers: r
     };
 }
-function D(e) {
+function L(e) {
     let t = (0, c.ZH)(e),
         n = (function (e, t) {
             var n, r, i, a;
             let s = null !== (a = null === (i = e.embeds[0]) || void 0 === i ? void 0 : null === (r = i.fields) || void 0 === r ? void 0 : null === (n = r.find((e) => 'poll_question_text' === e.rawName)) || void 0 === n ? void 0 : n.rawValue) && void 0 !== a ? a : '';
             return null != t ? (0, o.aF)(s, t) : s;
         })(e, m.Dv);
-    return g.Z.Messages.POLL_RESULT_REPLY_TEXT.format({
+    return S.Z.Messages.POLL_RESULT_REPLY_TEXT.format({
         username: t.nick,
         title: n
     });
@@ -184,32 +184,32 @@ function M(e, t, n) {
               let n = Math.max(0, t - e.length);
               if (1 === e.length)
                   return n > 0
-                      ? g.Z.Messages.POLL_VOTES_TOOLTIP_1_N.format({
+                      ? S.Z.Messages.POLL_VOTES_TOOLTIP_1_N.format({
                             a: e[0],
                             n: n.toLocaleString()
                         })
                       : e[0];
               if (2 === e.length)
                   return n > 0
-                      ? g.Z.Messages.POLL_VOTES_TOOLTIP_2_N.format({
+                      ? S.Z.Messages.POLL_VOTES_TOOLTIP_2_N.format({
                             a: e[0],
                             b: e[1],
                             n: n.toLocaleString()
                         })
-                      : g.Z.Messages.POLL_VOTES_TOOLTIP_2.format({
+                      : S.Z.Messages.POLL_VOTES_TOOLTIP_2.format({
                             a: e[0],
                             b: e[1]
                         });
-              if (3 !== e.length) return g.Z.Messages.POLL_VOTES_TOOLTIP_N.format({ n: n.toLocaleString() });
+              if (3 !== e.length) return S.Z.Messages.POLL_VOTES_TOOLTIP_N.format({ n: n.toLocaleString() });
               else
                   return n > 0
-                      ? g.Z.Messages.POLL_VOTES_TOOLTIP_3_N.format({
+                      ? S.Z.Messages.POLL_VOTES_TOOLTIP_3_N.format({
                             a: e[0],
                             b: e[1],
                             c: e[2],
                             n: n.toLocaleString()
                         })
-                      : g.Z.Messages.POLL_VOTES_TOOLTIP_3.format({
+                      : S.Z.Messages.POLL_VOTES_TOOLTIP_3.format({
                             a: e[0],
                             b: e[1],
                             c: e[2]

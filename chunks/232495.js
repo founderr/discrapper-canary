@@ -6,8 +6,8 @@ n.d(t, {
     n(757143);
 var i = n(735250);
 n(470079);
-var a = n(442837),
-    s = n(481060),
+var s = n(442837),
+    a = n(481060),
     l = n(430824),
     r = n(914010),
     o = n(689938),
@@ -16,17 +16,17 @@ let u = () =>
         (0, i.jsx)(i.Fragment, {
             children: o.Z.Messages.TIP_INSTANT_INVITE_BODY3.format({
                 shareIcon: o.Z.Messages.INSTANT_INVITE,
-                shareIconHook: () => (0, i.jsx)(s.GroupPlusIcon, { className: c.icon }, 'icon')
+                shareIconHook: () => (0, i.jsx)(a.GroupPlusIcon, { className: c.icon }, 'icon')
             })
         }),
     d = () => {
-        let e = (0, a.e7)([l.Z, r.Z], () => l.Z.getGuild(r.Z.getGuildId()), []),
+        let e = (0, s.e7)([l.Z, r.Z], () => l.Z.getGuild(r.Z.getGuildId()), []),
             t = null == e ? void 0 : e.name;
         return (0, i.jsx)(i.Fragment, { children: o.Z.Messages.TIP_WRITING_MESSAGES_BODY3.format({ serverName: t }) });
     },
     h = (e) => {
         var t, n;
-        let a = {
+        let s = {
                 VOICE_CONVERSATIONS: {
                     title: (0, i.jsx)('div', {
                         className: c.voiceChannelsTitle,
@@ -77,10 +77,10 @@ let u = () =>
                     body: o.Z.Messages.TIP_FRIENDS_LIST_BODY3.format()
                 }
             },
-            s = null !== (t = a[e.replace(/-/g, '_').toUpperCase()]) && void 0 !== t ? t : {};
+            a = null !== (t = s[e.replace(/-/g, '_').toUpperCase()]) && void 0 !== t ? t : {};
         return {
-            title: s.title,
-            body: s.body,
-            isLongText: null !== (n = s.isLongText) && void 0 !== n && n
+            title: a.title,
+            body: a.body,
+            isLongText: null !== (n = a.isLongText) && void 0 !== n && n
         };
     };

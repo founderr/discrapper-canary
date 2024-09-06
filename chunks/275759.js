@@ -1,6 +1,6 @@
 n.d(t, {
     FI: function () {
-        return S;
+        return g;
     },
     O1: function () {
         return i;
@@ -9,7 +9,7 @@ n.d(t, {
         return p;
     },
     Ur: function () {
-        return g;
+        return S;
     },
     kQ: function () {
         return T;
@@ -194,7 +194,7 @@ function T(e, t) {
         return (null === (t = e.tags) || void 0 === t ? void 0 : t.guild_connections) === null;
     });
 }
-function g(e) {
+function S(e) {
     var t, n;
     let { guildMember: r, guild: i, guildRoles: a, channel: o, onlyChannelConnectionRoles: u = !1 } = e;
     if (null == r) return null;
@@ -211,7 +211,7 @@ function g(e) {
         f = l().intersection(E, (0, d.Z)(o));
     return f.length > 0 ? (null !== (t = f[0]) && void 0 !== t ? t : null) : u ? null : null !== (n = E[0]) && void 0 !== n ? n : null;
 }
-function S(e, t) {
+function g(e, t) {
     if (null == e || '' === e) return null;
     let n = new Date(e);
     return !(n instanceof Date) || isNaN(n.getTime())

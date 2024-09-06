@@ -35,9 +35,9 @@ let f = (e, t) => {
         return s()(r, i);
     },
     p = i.forwardRef(function (e, t) {
-        let { user: n, displayProfile: i, profileType: a, className: o, pendingThemeColors: _, pendingProfileEffectId: p, themeOverride: I, children: m, forceShowPremium: T = !1, showOutOfBoundaryComponents: g = !1 } = e,
+        let { user: n, displayProfile: i, profileType: a, className: o, pendingThemeColors: _, pendingProfileEffectId: p, themeOverride: I, children: m, forceShowPremium: T = !1, showOutOfBoundaryComponents: S = !1 } = e,
             {
-                theme: S,
+                theme: g,
                 primaryColor: A,
                 secondaryColor: N
             } = (0, u.Z)({
@@ -47,23 +47,23 @@ let f = (e, t) => {
                 isPreview: T
             }),
             { profileThemeStyle: O, profileThemeClassName: R } = (0, c.Z)({
-                theme: null != I ? I : S,
+                theme: null != I ? I : g,
                 primaryColor: A,
                 secondaryColor: N
             }),
             v = (null == i ? void 0 : i.canEditThemes) || T,
             C = null !== p && ((null == i ? void 0 : i.banner) != null || void 0 !== p);
         return (0, r.jsx)('div', {
-            className: s()(f(a, v), g ? E.showOutOfBoundaryComponents : void 0, R, o),
+            className: s()(f(a, v), S ? E.showOutOfBoundaryComponents : void 0, R, o),
             style: O,
             ref: t,
             children: (0, r.jsx)('div', {
                 className: h(a, v, C),
                 children: (0, r.jsx)(l.ThemeContextProvider, {
-                    theme: null != I ? I : S,
+                    theme: null != I ? I : g,
                     children: (0, r.jsx)(d.X, {
                         profileType: a,
-                        theme: null != I ? I : S,
+                        theme: null != I ? I : g,
                         primaryColor: A,
                         secondaryColor: N,
                         children: m

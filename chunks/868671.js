@@ -9,8 +9,8 @@ n.d(t, {
     n(47120),
     n(724458);
 var i = n(470079),
-    a = n(442837),
-    s = n(570140),
+    s = n(442837),
+    a = n(570140),
     l = n(439170),
     r = n(592125),
     o = n(430824),
@@ -18,69 +18,69 @@ var i = n(470079),
     u = n(626135),
     d = n(162461),
     h = n(71585),
-    p = n(34586),
-    m = n(69259),
+    m = n(34586),
+    p = n(69259),
     _ = n(590026),
     f = n(178762),
     E = n(206583),
-    C = n(809017),
-    g = n(981631),
+    g = n(809017),
+    C = n(981631),
     I = n(689938);
 let x = 0;
 function T(e) {
     let {
             memberStoreProps: { groups: t, rows: n, version: x },
             channelId: T,
-            guildId: N
+            guildId: S
         } = e,
-        [S, v] = i.useState(!1),
-        { requestId: Z, entries: A, impressionCappedEntryIds: M } = (0, _.Z)(T),
-        b = (0, a.e7)([h.Z], () => h.Z.hidden),
-        R = (0, a.e7)([c.Z], () => c.Z.isFocused()),
-        L = (0, a.e7)([r.Z], () => r.Z.getChannel(T)),
-        j = (0, a.e7)([o.Z], () => o.Z.getGuild(N), [N]),
-        O = (0, p.E)(j),
-        P = null != O && O && (null == L ? void 0 : L.isForumChannel()) === !1,
+        [v, N] = i.useState(!1),
+        { requestId: A, entries: Z, impressionCappedEntryIds: M } = (0, _.Z)(T),
+        b = (0, s.e7)([h.Z], () => h.Z.hidden),
+        R = (0, s.e7)([c.Z], () => c.Z.isFocused()),
+        L = (0, s.e7)([r.Z], () => r.Z.getChannel(T)),
+        P = (0, s.e7)([o.Z], () => o.Z.getGuild(S), [S]),
+        j = (0, m.E)(P),
+        O = null != j && j && (null == L ? void 0 : L.isForumChannel()) === !1,
         [y, D, k, U] = i.useMemo(() => {
             let e;
-            if (null == A || 0 === A.length || null == Z || !P) return [t, n, x];
-            let i = S ? A.length : 3,
-                a = A.slice(0, i);
+            if (null == Z || 0 === Z.length || null == A || !O) return [t, n, x];
+            let i = v ? Z.length : 3,
+                s = Z.slice(0, i);
             e = b
                 ? [{ type: l.so.HIDDEN_CONTENT_INVENTORY }]
-                : a.map((e) => ({
+                : s.map((e) => ({
                       type: l.so.CONTENT_INVENTORY,
                       entry: e,
-                      requestId: Z
+                      requestId: A
                   }));
-            let s = {
-                id: C.G,
+            let a = {
+                id: g.G,
                 type: l.so.CONTENT_INVENTORY_GROUP,
-                key: C.G,
+                key: g.G,
                 count: e.length,
                 index: n.length,
                 title: I.Z.Messages.CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE,
                 onToggleExpand: () => {
-                    v((e) => {
+                    N((e) => {
                         let t = !e;
                         return (
-                            u.default.track(g.rMx.MEMBERLIST_CONTENT_FEED_TOGGLED, {
+                            u.default.track(C.rMx.MEMBERLIST_CONTENT_FEED_TOGGLED, {
                                 channel_id: T,
-                                guild_id: N,
+                                guild_id: S,
                                 expanded: t
                             }),
                             t
                         );
                     });
                 },
-                expanded: S,
-                expandedCount: A.length,
+                expanded: v,
+                expandedCount: Z.length,
                 feedHeight: e.map(f.iZ).reduce((e, t) => e + t, 0)
             };
-            return [[s, ...t], [...n, s, ...e], Math.random(), e];
-        }, [T, A, S, t, N, Z, n, x, b, P]),
+            return [[a, ...t], [...n, a, ...e], Math.random(), e];
+        }, [T, Z, v, t, S, A, n, x, b, O]),
         w = i.useRef(0),
-        B = i.useRef(A),
+        B = i.useRef(Z),
         H = i.useRef(),
         G = i.useRef({ impressionCappedEntryIds: M }),
         V = i.useCallback(
@@ -94,8 +94,8 @@ function T(e) {
         );
     return (
         i.useEffect(() => {
-            B.current = A;
-        }, [A]),
+            B.current = Z;
+        }, [Z]),
         i.useEffect(() => {
             G.current = { impressionCappedEntryIds: M };
         }, [M]),
@@ -105,28 +105,28 @@ function T(e) {
                 (H.current = Date.now()),
                 () => {
                     var e, t;
-                    if (null == Z || null == H.current || Date.now() - H.current < 3000) return;
+                    if (null == A || null == H.current || Date.now() - H.current < 3000) return;
                     let n = null !== (t = null === (e = B.current) || void 0 === e ? void 0 : e.map((e) => e.id)) && void 0 !== t ? t : [],
                         i = n.slice(0, w.current);
-                    if (!b && !!R && !!P)
-                        (0, m.e)(g.rMx.RANKING_ITEMS_SEEN_MUST_BE_SAMPLED, {
-                            request_id: Z,
+                    if (!b && !!R && !!O)
+                        (0, p.e)(C.rMx.RANKING_ITEMS_SEEN_MUST_BE_SAMPLED, {
+                            request_id: A,
                             first_shown_at: H.current,
                             item_ids: i,
                             surface_type: E.Kd.GUILD_MEMBER_LIST,
                             channel_id: T,
-                            guild_id: N,
+                            guild_id: S,
                             all_item_ids: n,
                             impression_capped_item_ids: [...G.current.impressionCappedEntryIds]
                         }),
                             (0, d.wm)('useInjectContentInventoryFeed') &&
-                                s.Z.dispatch({
+                                a.Z.dispatch({
                                     type: 'CONTENT_INVENTORY_TRACK_ITEM_IMPRESSIONS',
                                     itemIds: i
                                 });
                 }
             ),
-            [Z, T, N, b, R, P]
+            [A, T, S, b, R, O]
         ),
         {
             groups: y,

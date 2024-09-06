@@ -3,10 +3,10 @@ n.d(t, {
         return c;
     },
     Zn: function () {
-        return d;
+        return u;
     },
     aB: function () {
-        return u;
+        return d;
     }
 }),
     n(757143);
@@ -17,7 +17,7 @@ var i = n(392711),
     l = n(302221),
     r = n(347904);
 let c = 7.5,
-    u = (0, i.memoize)(
+    d = (0, i.memoize)(
         (e, t, n, i) =>
             new Promise((e) => {
                 let s = new Image();
@@ -34,7 +34,7 @@ let c = 7.5,
                     });
             })
     );
-function d(e, t, n, i) {
+function u(e, t, n, i) {
     let { emojiSize: o, key: l, messageId: r } = null != i ? i : {},
         c = (0, a._r)(e, null != o ? 2 * o : void 0);
     return {

@@ -21,7 +21,7 @@ var r,
     I = n(481060),
     m = n(981631),
     T = n(693297);
-function g(e, t, n) {
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -35,7 +35,7 @@ function g(e, t, n) {
     );
 }
 ((s = r || (r = {})).DEFAULT = 'default'), (s.INVERTED = 'inverted'), (s.GHOST = 'ghost'), (s.ROW = 'row'), ((o = i || (i = {})).TOP = 'top'), (o.CENTER = 'center');
-let S = {
+let g = {
         BOX: T.box,
         ROUND: T.round,
         SMALL_BOX: T.smallBox
@@ -88,7 +88,7 @@ class N extends (a = u.PureComponent) {
     }
     render() {
         let { disabled: e, readOnly: t, value: n, shape: r, align: i = 'center', className: a, innerClassName: s, children: o, size: u, reverse: c, checkboxColor: _, displayOnly: E, type: f, onClick: h } = this.props,
-            g =
+            S =
                 null != o
                     ? (0, l.jsx)('div', {
                           className: d()(T.label, e ? T.labelDisabled : T.labelClickable, c ? T.labelReversed : T.labelForward),
@@ -96,18 +96,18 @@ class N extends (a = u.PureComponent) {
                           children: o
                       })
                     : null,
-            S = this.props.disabled ? T.inputDisabled : this.props.readOnly ? T.inputReadonly : T.inputDefault;
+            g = this.props.disabled ? T.inputDisabled : this.props.readOnly ? T.inputReadonly : T.inputDefault;
         return (0, l.jsxs)(E ? 'span' : 'label', {
             className: d()(e ? T.checkboxWrapperDisabled : T.checkboxWrapper, A[i], a, {
                 [T.row]: 'row' === f,
                 [T.checked]: n
             }),
             children: [
-                c ? g : null,
+                c ? S : null,
                 !E &&
                     (0, l.jsx)(p.t, {
                         children: (0, l.jsx)('input', {
-                            className: d()(s, S),
+                            className: d()(s, g),
                             type: 'checkbox',
                             onClick: h,
                             onChange: e || t ? m.dG4 : this.handleChange,
@@ -132,22 +132,22 @@ class N extends (a = u.PureComponent) {
                         'aria-hidden': !0
                     })
                 }),
-                c ? null : g
+                c ? null : S
             ]
         });
     }
     constructor(...e) {
         super(...e),
-            g(this, 'handleChange', (e) => {
+            S(this, 'handleChange', (e) => {
                 let { onChange: t } = this.props;
                 null == t || t(e, e.currentTarget.checked);
             });
     }
 }
-g(N, 'Types', r),
-    g(N, 'Shapes', S),
-    g(N, 'Aligns', i),
-    g(N, 'defaultProps', {
+S(N, 'Types', r),
+    S(N, 'Shapes', g),
+    S(N, 'Aligns', i),
+    S(N, 'defaultProps', {
         size: 24,
         disabled: !1,
         readOnly: !1,
@@ -155,7 +155,7 @@ g(N, 'Types', r),
         value: !1,
         type: 'default',
         color: h.Z.unsafe_rawColors.BRAND_500.css,
-        shape: S.BOX,
+        shape: g.BOX,
         align: 'center',
         onChange: m.dG4,
         reverse: !1

@@ -9,7 +9,7 @@ n.d(t, {
         return y;
     },
     lX: function () {
-        return g;
+        return S;
     },
     ob: function () {
         return _;
@@ -120,7 +120,7 @@ function T() {
         return {};
     }
 }
-function g(e) {
+function S(e) {
     void 0 === e && (e = {}), h || (0, s.Z)(!1);
     var t,
         n = window.history;
@@ -128,9 +128,9 @@ function g(e) {
         a = -1 !== window.navigator.userAgent.indexOf('Trident'),
         l = e,
         E = l.forceRefresh,
-        g = void 0 !== E && E,
-        S = l.getUserConfirmation,
-        A = void 0 === S ? p : S,
+        S = void 0 !== E && E,
+        g = l.getUserConfirmation,
+        A = void 0 === g ? p : g,
         N = l.keyLength,
         O = void 0 === N ? 6 : N,
         R = e.basename ? c(o(e.basename)) : '';
@@ -146,10 +146,10 @@ function g(e) {
         return Math.random().toString(36).substr(2, O);
     }
     var y = f();
-    function L(e) {
+    function D(e) {
         (0, r.Z)(V, e), (V.length = n.length), y.notifyListeners(V.location, V.action);
     }
-    function D(e) {
+    function L(e) {
         if (!(void 0 === e.state && -1 === navigator.userAgent.indexOf('CriOS'))) P(v(e.state));
     }
     function b() {
@@ -158,10 +158,10 @@ function g(e) {
     var M = !1;
     function P(e) {
         M
-            ? ((M = !1), L())
+            ? ((M = !1), D())
             : y.confirmTransitionTo(e, 'POP', A, function (t) {
                   t
-                      ? L({
+                      ? D({
                             action: 'POP',
                             location: e
                         })
@@ -186,7 +186,7 @@ function g(e) {
     }
     var k = 0;
     function B(e) {
-        1 === (k += e) && 1 === e ? (window.addEventListener(I, D), a && window.addEventListener(m, b)) : 0 === k && (window.removeEventListener(I, D), a && window.removeEventListener(m, b));
+        1 === (k += e) && 1 === e ? (window.addEventListener(I, L), a && window.addEventListener(m, b)) : 0 === k && (window.removeEventListener(I, L), a && window.removeEventListener(m, b));
     }
     var F = !1,
         V = {
@@ -212,7 +212,7 @@ function g(e) {
                                     null,
                                     t
                                 ),
-                                g)
+                                S)
                             )
                                 window.location.href = t;
                             else {
@@ -220,7 +220,7 @@ function g(e) {
                                     u = w.slice(0, l + 1);
                                 u.push(a.key),
                                     (w = u),
-                                    L({
+                                    D({
                                         action: r,
                                         location: a
                                     });
@@ -247,13 +247,13 @@ function g(e) {
                                     null,
                                     t
                                 ),
-                                g)
+                                S)
                             )
                                 window.location.replace(t);
                             else {
                                 var l = w.indexOf(V.location.key);
                                 -1 !== l && (w[l] = a.key),
-                                    L({
+                                    D({
                                         action: r,
                                         location: a
                                     });
@@ -291,7 +291,7 @@ function g(e) {
         };
     return V;
 }
-var S = 'hashchange',
+var g = 'hashchange',
     A = {
         hashbang: {
             encodePath: function (e) {
@@ -334,7 +334,7 @@ function v(e) {
         I = A[void 0 === l ? 'slash' : l],
         m = I.encodePath,
         T = I.decodePath;
-    function g() {
+    function S() {
         var e = T(O());
         return E && (e = u(e, E)), _(e);
     }
@@ -343,18 +343,18 @@ function v(e) {
         (0, r.Z)(B, e), (B.length = t.length), v.notifyListeners(B.location, B.action);
     }
     var y = !1,
-        L = null;
-    function D() {
+        D = null;
+    function L() {
         var e = O(),
             t = m(e);
         if (e !== t) R(t);
         else {
             var n,
                 r,
-                i = g(),
+                i = S(),
                 s = B.location;
-            if ((!y && ((n = s), (r = i), n.pathname === r.pathname && n.search === r.search && n.hash === r.hash)) || L === d(i)) return;
-            (L = null),
+            if ((!y && ((n = s), (r = i), n.pathname === r.pathname && n.search === r.search && n.hash === r.hash)) || D === d(i)) return;
+            (D = null),
                 (function (e) {
                     y
                         ? ((y = !1), C())
@@ -380,14 +380,14 @@ function v(e) {
     var b = O(),
         M = m(b);
     b !== M && R(M);
-    var P = g(),
+    var P = S(),
         U = [d(P)];
     function w(e) {
         t.go(e);
     }
     var x = 0;
     function G(e) {
-        1 === (x += e) && 1 === e ? window.addEventListener(S, D) : 0 === x && window.removeEventListener(S, D);
+        1 === (x += e) && 1 === e ? window.addEventListener(g, L) : 0 === x && window.removeEventListener(g, L);
     }
     var k = !1,
         B = {
@@ -407,7 +407,7 @@ function v(e) {
                         var t = d(r),
                             i = m(E + t);
                         if (O() !== i) {
-                            (L = t), (a = i), (window.location.hash = a);
+                            (D = t), (a = i), (window.location.hash = a);
                             var a,
                                 s = U.lastIndexOf(d(B.location)),
                                 o = U.slice(0, s + 1);
@@ -428,7 +428,7 @@ function v(e) {
                     if (e) {
                         var t = d(r),
                             i = m(E + t);
-                        O() !== i && ((L = t), R(i));
+                        O() !== i && ((D = t), R(i));
                         var a = U.indexOf(d(B.location));
                         -1 !== a && (U[a] = t),
                             C({

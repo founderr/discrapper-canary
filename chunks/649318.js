@@ -1,12 +1,12 @@
 n.d(t, {
     $6: function () {
-        return D;
+        return L;
     },
     MP: function () {
         return R;
     },
     Mg: function () {
-        return S;
+        return g;
     },
     Nl: function () {
         return y;
@@ -21,7 +21,7 @@ n.d(t, {
         return b;
     },
     sc: function () {
-        return L;
+        return D;
     }
 }),
     n(47120),
@@ -48,8 +48,8 @@ var r,
     m = n(436620);
 let T = new p.Y('SDP');
 ((a = r || (r = {})).AUDIO = 'a'), (a.VIDEO = 'v'), ((s = i || (i = {})).SENDRECV = 'sendrecv'), (s.SENDONLY = 'sendonly'), (s.RECVONLY = 'recvonly'), (s.INACTIVE = 'inactive');
-let g = 'UDP/TLS/RTP/SAVPF';
-function S(e) {
+let S = 'UDP/TLS/RTP/SAVPF';
+function g(e) {
     switch (e) {
         case 'recvonly':
             return 'sendonly';
@@ -131,7 +131,7 @@ function O(e) {
             fmtp: [],
             payloads: o,
             port: 0,
-            protocol: g,
+            protocol: S,
             rtp: [
                 {
                     codec: 'NULL',
@@ -147,7 +147,7 @@ function O(e) {
     } = h.parse(a);
     if (
         ((p.type = n),
-        (p.protocol = g),
+        (p.protocol = S),
         (p.payloads = o),
         (p.setup = r),
         (p.mid = t),
@@ -420,7 +420,7 @@ function y(e) {
     );
     return (t.codecs = _()(t.codecs, c())), t;
 }
-function L(e) {
+function D(e) {
     var t;
     let { codecs: n } = y(e),
         r = n.find((e) => e.name === I.ad.VP8),
@@ -430,7 +430,7 @@ function L(e) {
         codecs: n
     };
 }
-function D(e) {
+function L(e) {
     if (!e.includes('a=fingerprint')) return T.error('Remote SDP does not include fingerprint!'), !1;
     if (!e.includes('a=ice-ufrag')) return T.error('Remote SDP does not include ICE user name!'), !1;
     if (!e.includes('a=ice-pwd')) return T.error('Remote SDP does not include ICE password!'), !1;

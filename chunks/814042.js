@@ -20,8 +20,8 @@ var r = n(735250),
     I = n(981631),
     m = n(474936),
     T = n(689938),
-    g = n(244719),
-    S = n(867250);
+    S = n(244719),
+    g = n(867250);
 let A = () => (0, h.f)(!1),
     N = (e) => {
         var t, n, a;
@@ -39,7 +39,7 @@ let A = () => (0, h.f)(!1),
             v = (null == O ? void 0 : null === (t = O.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === m.Si.TIER_0,
             C = null != O || null != R;
         return (0, r.jsxs)('div', {
-            className: s()(g.upsellWrapper, { [g.unifyTrialUpsell]: C }),
+            className: s()(S.upsellWrapper, { [S.unifyTrialUpsell]: C }),
             children: [
                 C
                     ? (0, r.jsx)(_.ZP, {
@@ -58,18 +58,18 @@ let A = () => (0, h.f)(!1),
                     : (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)('img', {
-                                  className: g.upsellImage,
-                                  src: S,
+                                  className: S.upsellImage,
+                                  src: g,
                                   alt: T.Z.Messages.STICKER_PICKER_PREMIUM_UPSELL_ALT
                               }),
                               (0, r.jsx)(o.Text, {
-                                  className: g.upsellTitle,
+                                  className: S.upsellTitle,
                                   color: 'header-primary',
                                   variant: 'text-lg/semibold',
                                   children: T.Z.Messages.STICKER_PICKER_PREMIUM_UPSELL_TITLE
                               }),
                               (0, r.jsx)(o.Text, {
-                                  className: g.upsellDescription,
+                                  className: S.upsellDescription,
                                   variant: 'text-md/normal',
                                   children: T.Z.Messages.STICKER_PICKER_PREMIUM_UPSELL_DESCRIPTION.format({ onClick: h })
                               })
@@ -81,7 +81,7 @@ let A = () => (0, h.f)(!1),
                         buttonText: C ? (v ? T.Z.Messages.PREMIUM_TRIAL_TIER_0_CTA_BUTTON_VARIANT : T.Z.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT) : void 0
                     }),
                 (0, r.jsx)(o.Clickable, {
-                    className: g.upsellClose,
+                    className: S.upsellClose,
                     onClick: A,
                     children: (0, r.jsx)(o.XSmallIcon, {
                         size: 'md',

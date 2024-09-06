@@ -22,16 +22,16 @@ function p(e) {
         { newestAnalyticsLocation: I } = (0, o.ZP)(),
         { trackUserProfileAction: m } = (0, d.KZ)(),
         T = (0, i.e7)([u.default], () => u.default.getId() === (null == t ? void 0 : t.id)),
-        g = (0, i.e7)([c.Z], () => (null != t ? c.Z.getRelationshipType(t.id) : f.OGo.NONE)),
-        S = (0, l.Z)({
+        S = (0, i.e7)([c.Z], () => (null != t ? c.Z.getRelationshipType(t.id) : f.OGo.NONE)),
+        g = (0, l.Z)({
             user: t,
             color: 'danger',
             location: I,
             onAction: () => m({ action: 'REMOVE_FRIEND' })
         });
-    return null == t || t.bot || T || g === f.OGo.BLOCKED
+    return null == t || t.bot || T || S === f.OGo.BLOCKED
         ? null
-        : g === f.OGo.FRIEND
+        : S === f.OGo.FRIEND
           ? (0, r.jsx)(a.Popout, {
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
@@ -40,7 +40,7 @@ function p(e) {
                         onSelect: void 0,
                         onClose: t,
                         'aria-label': h.Z.Messages.FRIEND_ACTIONS_MENU_LABEL,
-                        children: S
+                        children: g
                     });
                 },
                 children: (e) =>
@@ -50,7 +50,7 @@ function p(e) {
                         ...e
                     })
             })
-          : g === f.OGo.PENDING_INCOMING || g === f.OGo.PENDING_OUTGOING
+          : S === f.OGo.PENDING_INCOMING || S === f.OGo.PENDING_OUTGOING
             ? p === E.y0.FULL_SIZE
                 ? null
                 : (0, r.jsx)(_.oY, {

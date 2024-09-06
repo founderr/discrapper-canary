@@ -1,12 +1,12 @@
 n.d(t, {
     $: function () {
-        return p;
+        return m;
     }
 });
 var i = n(735250);
 n(470079);
-var a = n(120356),
-    s = n.n(a),
+var s = n(120356),
+    a = n.n(s),
     l = n(481060),
     r = n(170671),
     o = n(738672),
@@ -16,7 +16,7 @@ var a = n(120356),
 function h(e) {
     let { hidden: t, onDismiss: n } = e;
     return (0, i.jsxs)('div', {
-        className: s()(u.demoCta, { [u.hidden]: t }),
+        className: a()(u.demoCta, { [u.hidden]: t }),
         children: [
             (0, i.jsxs)('div', {
                 children: [
@@ -65,7 +65,7 @@ function h(e) {
         ]
     });
 }
-function p(e) {
+function m(e) {
     return (0, i.jsx)(o.h, {
         ...e,
         renderComponent: (e) => (0, i.jsx)(h, { ...e })

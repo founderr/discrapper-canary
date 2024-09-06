@@ -6,7 +6,7 @@ n.d(t, {
         return O;
     },
     Ww: function () {
-        return L;
+        return D;
     },
     ZI: function () {
         return A;
@@ -41,13 +41,13 @@ var r = n(392711),
     m = n(823379);
 n(358085);
 var T = n(709054),
-    g = n(981631);
+    S = n(981631);
 n(689938), l().shim();
-let S = !u.tq && !u.Em && -1 !== (0, p.vu)();
+let g = !u.tq && !u.Em && -1 !== (0, p.vu)();
 function A(e, t) {
     let { analyticsSource: n, analyticsProperties: r, storeListingId: i, slug: a, channelId: s, guildId: o } = t;
     return {
-        pathname: null != s && null != o ? g.Z5c.CHANNEL(o, s, e) : g.Z5c.APPLICATION_STORE_LISTING_SKU(e, a),
+        pathname: null != s && null != o ? S.Z5c.CHANNEL(o, s, e) : S.Z5c.APPLICATION_STORE_LISTING_SKU(e, a),
         state: {
             analyticsSource: n,
             analyticsProperties: r
@@ -71,7 +71,7 @@ function N(e, t, n, r) {
             default:
                 r = 'webp';
         }
-    'webp' === r && !S && (r = 'png');
+    'webp' === r && !g && (r = 'png');
     let o = 'string' == typeof t ? t : t.id,
         l = ((i = 'https:'), 'https:');
     return (
@@ -81,7 +81,7 @@ function N(e, t, n, r) {
                 : ''
                       .concat(l)
                       .concat(window.GLOBAL_ENV.API_ENDPOINT)
-                      .concat(g.ANM.STORE_ASSET(e, o, r))),
+                      .concat(S.ANM.STORE_ASSET(e, o, r))),
         null != n && (a += '?size='.concat((0, _.oO)(n * (0, _.x_)()))),
         a
     );
@@ -158,7 +158,7 @@ function C(e, t, n, r, a) {
             return 0 === a.length
                 ? null
                 : {
-                      type: g.AzA.NOW_PLAYING,
+                      type: S.AzA.NOW_PLAYING,
                       userInfo: a
                   };
         })(o, n, r);
@@ -190,7 +190,7 @@ function C(e, t, n, r, a) {
                 return 0 === i.length
                     ? null
                     : {
-                          type: g.AzA.EVER_PLAYED,
+                          type: S.AzA.EVER_PLAYED,
                           userInfo: i
                       };
             })(o, n, a);
@@ -200,28 +200,28 @@ function C(e, t, n, r, a) {
     return l;
 }
 let y = [];
-function L(e, t, n) {
+function D(e, t, n) {
     let r = t.get(e),
         i = n.getForSKU(e);
     if (null == r || null == i) return y;
     let a = [];
-    (0, I.yE)(r.flags, g.l4R.HAS_FREE_PREMIUM_CONTENT) && a.push({ type: g.AzA.HAS_FREE_PREMIUM_CONTENT });
+    (0, I.yE)(r.flags, S.l4R.HAS_FREE_PREMIUM_CONTENT) && a.push({ type: S.AzA.HAS_FREE_PREMIUM_CONTENT });
     let o = r.releaseDate;
     return (
         null != o &&
             3 > s()().diff(o, 'months') &&
-            (r.accessType === g.kGb.EARLY_ACCESS
+            (r.accessType === S.kGb.EARLY_ACCESS
                 ? a.push({
-                      type: g.AzA.EARLY_ACCESS,
+                      type: S.AzA.EARLY_ACCESS,
                       releaseDate: o
                   })
                 : a.push({
-                      type: g.AzA.RECENT_RELEASE_DATE,
+                      type: S.AzA.RECENT_RELEASE_DATE,
                       releaseDate: o
                   })),
         null != i.flavorText &&
             a.push({
-                type: g.AzA.FLAVOR_TEXT,
+                type: S.AzA.FLAVOR_TEXT,
                 flavorText: i.flavorText
             }),
         a

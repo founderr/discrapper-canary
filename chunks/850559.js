@@ -11,8 +11,8 @@ var r = n(275857),
 function l(e) {
     var t, n, l, u, c, d, _, E;
     let { defaultFilter: f, menuTrigger: h = 'input', allowsEmptyCollection: p = !1, allowsCustomValue: I, shouldCloseOnBlur: m = !0 } = e,
-        [T, g] = (0, a.useState)(!1),
-        [S, A] = (0, a.useState)(!1),
+        [T, S] = (0, a.useState)(!1),
+        [g, A] = (0, a.useState)(!1),
         {
             collection: N,
             selectionManager: O,
@@ -27,7 +27,7 @@ function l(e) {
             },
             items: null !== (l = e.items) && void 0 !== l ? l : e.defaultItems
         }),
-        [L, D] = (0, s.zk)(e.inputValue, null !== (c = null !== (u = e.defaultInputValue) && void 0 !== u ? u : null === (t = N.getItem(R)) || void 0 === t ? void 0 : t.textValue) && void 0 !== c ? c : '', e.onInputChange),
+        [D, L] = (0, s.zk)(e.inputValue, null !== (c = null !== (u = e.defaultInputValue) && void 0 !== u ? u : null === (t = N.getItem(R)) || void 0 === t ? void 0 : t.textValue) && void 0 !== c ? c : '', e.onInputChange),
         b = (0, a.useMemo)(
             () =>
                 null == e.items && f
@@ -47,9 +47,9 @@ function l(e) {
                                   return s;
                               })(e, e, t, n)
                           );
-                      })(N, L, f)
+                      })(N, D, f)
                     : N,
-            [N, L, f, e.items]
+            [N, D, f, e.items]
         ),
         [M, P] = (0, a.useState)(b),
         U = (0, a.useRef)('focus'),
@@ -63,7 +63,7 @@ function l(e) {
         }),
         x = (t, n) => {
             let r = 'manual' === n || ('focus' === n && 'focus' === h);
-            (p || b.size > 0 || (r && N.size > 0) || e.items) && (r && !w.isOpen && void 0 === e.items && g(!0), (U.current = n), w.open(t));
+            (p || b.size > 0 || (r && N.size > 0) || e.items) && (r && !w.isOpen && void 0 === e.items && S(!0), (U.current = n), w.open(t));
         },
         G = (0, a.useCallback)(
             (e) => {
@@ -74,19 +74,19 @@ function l(e) {
         k = (0, a.useCallback)(() => {
             w.isOpen && (P(b), w.close());
         }, [w, b]),
-        B = (0, a.useRef)(L),
+        B = (0, a.useRef)(D),
         F = () => {
             var e, t;
             let n = null !== (t = null === (e = N.getItem(R)) || void 0 === e ? void 0 : e.textValue) && void 0 !== t ? t : '';
-            (B.current = n), D(n);
+            (B.current = n), L(n);
         },
         V = (0, a.useRef)(null !== (_ = null !== (d = e.selectedKey) && void 0 !== d ? d : e.defaultSelectedKey) && void 0 !== _ ? _ : null),
         H = (0, a.useRef)(null !== (E = null === (n = N.getItem(R)) || void 0 === n ? void 0 : n.textValue) && void 0 !== E ? E : '');
     (0, a.useEffect)(() => {
         var t, n;
-        S && (b.size > 0 || p) && !w.isOpen && L !== B.current && 'manual' !== h && x(null, 'input'), !T && !p && w.isOpen && 0 === b.size && k(), null != R && R !== V.current && k(), L !== B.current && (O.setFocusedKey(null), g(!1), '' === L && (void 0 === e.inputValue || void 0 === e.selectedKey) && v(null)), R !== V.current && (void 0 === e.inputValue || void 0 === e.selectedKey) ? F() : (B.current = L);
+        g && (b.size > 0 || p) && !w.isOpen && D !== B.current && 'manual' !== h && x(null, 'input'), !T && !p && w.isOpen && 0 === b.size && k(), null != R && R !== V.current && k(), D !== B.current && (O.setFocusedKey(null), S(!1), '' === D && (void 0 === e.inputValue || void 0 === e.selectedKey) && v(null)), R !== V.current && (void 0 === e.inputValue || void 0 === e.selectedKey) ? F() : (B.current = D);
         let r = null !== (n = null === (t = N.getItem(R)) || void 0 === t ? void 0 : t.textValue) && void 0 !== n ? n : '';
-        !S && null != R && void 0 === e.inputValue && R === V.current && H.current !== r && ((B.current = r), D(r)), (V.current = R), (H.current = r);
+        !g && null != R && void 0 === e.inputValue && R === V.current && H.current !== r && ((B.current = r), L(r)), (V.current = R), (H.current = r);
     });
     let Z = () => {
             (V.current = null), v(null), k();
@@ -102,7 +102,7 @@ function l(e) {
         j = () => {
             if (I) {
                 var e, t;
-                L === (null !== (t = null === (e = N.getItem(R)) || void 0 === e ? void 0 : e.textValue) && void 0 !== t ? t : '') ? Y() : Z();
+                D === (null !== (t = null === (e = N.getItem(R)) || void 0 === e ? void 0 : e.textValue) && void 0 !== t ? t : '') ? Y() : Z();
             } else Y();
         },
         W = (0, a.useMemo)(() => (w.isOpen ? (T ? N : b) : M), [w.isOpen, N, b, T, M]);
@@ -110,7 +110,7 @@ function l(e) {
         ...w,
         toggle: (t, n) => {
             let r = 'manual' === n || ('focus' === n && 'focus' === h);
-            (p || b.size > 0 || (r && N.size > 0) || e.items || w.isOpen) && (r && !w.isOpen && void 0 === e.items && g(!0), !w.isOpen && (U.current = n), G(t));
+            (p || b.size > 0 || (r && N.size > 0) || e.items || w.isOpen) && (r && !w.isOpen && void 0 === e.items && S(!0), !w.isOpen && (U.current = n), G(t));
         },
         open: x,
         close: j,
@@ -118,14 +118,14 @@ function l(e) {
         selectedKey: R,
         setSelectedKey: v,
         disabledKeys: y,
-        isFocused: S,
+        isFocused: g,
         setFocused: (e) => {
             e ? 'focus' === h && x(null, 'focus') : m && j(), A(e);
         },
         selectedItem: C,
         collection: W,
-        inputValue: L,
-        setInputValue: D,
+        inputValue: D,
+        setInputValue: L,
         commit: () => {
             w.isOpen && null != O.focusedKey ? (R === O.focusedKey ? Y() : v(O.focusedKey)) : j();
         },

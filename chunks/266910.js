@@ -12,8 +12,8 @@ var r = n(735250),
     f = n(826881);
 t.Z = function (e) {
     let { style: t, src: n, backgroundSrc: h, userId: p, pulseSpeakingIndicator: I = !1, speaking: m = !1, ...T } = e,
-        g = null != h ? h : n,
-        S = (0, o.ZP)(g, a.Z.unsafe_rawColors.PRIMARY_800.css),
+        S = null != h ? h : n,
+        g = (0, o.ZP)(S, a.Z.unsafe_rawColors.PRIMARY_800.css),
         A = (0, l.c)(!0, 'VideoBackground-web').enabled,
         N = (0, d.ZP)(null != p ? p : E.lds),
         O =
@@ -37,7 +37,7 @@ t.Z = function (e) {
         }),
         v = {
             ...t,
-            backgroundColor: S
+            backgroundColor: g
         };
     return (
         null != O && m && A && ((v.backgroundImage = 'url('.concat(O, ')')), (v.backgroundSize = 'cover')),

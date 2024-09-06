@@ -30,7 +30,7 @@ n.d(t, {
         return c;
     },
     jb: function () {
-        return S;
+        return g;
     },
     lA: function () {
         return I;
@@ -81,8 +81,8 @@ let T = {
         43: [() => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_EMOJI, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_EMOTES, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_NITRO, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ANIME, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_CUTE, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_GIVEAWAYS, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_AESTHETIC, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ART, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_MEMES],
         49: [() => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_APPS, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_BOTS, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_DISCORD_BOT, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_GIVEAWAYS, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_SUPPORT, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_FUN, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_MEMES]
     },
-    g = ['en-GB'];
-function S() {
+    S = ['en-GB'];
+function g() {
     return d.Z.getAvailableLocales()
         .map((e) => {
             let t;
@@ -104,11 +104,11 @@ function S() {
                       image: t
                   };
         })
-        .filter((e) => !g.includes(e.value));
+        .filter((e) => !S.includes(e.value));
 }
-S();
+g();
 let A = d.Z.getLanguages()
-        .filter((e) => !g.includes(e.code))
+        .filter((e) => !S.includes(e.code))
         .map((e) =>
             'en-US' === e.code
                 ? {

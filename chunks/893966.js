@@ -16,10 +16,10 @@ var r,
     I = n(44715),
     m = n(327999),
     T = n(981631);
-let g = !1,
-    S = {};
+let S = !1,
+    g = {};
 function A(e) {
-    return null == S[e] && (S[e] = new h.P(e)), S[e];
+    return null == g[e] && (g[e] = new h.P(e)), g[e];
 }
 function N(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
@@ -105,11 +105,11 @@ class C extends (r = o.ZP.Store) {
 let y = new C(l.Z, {
     CONNECTION_OPEN: function (e) {
         let t;
-        g
-            ? (g = !1)
+        S
+            ? (S = !1)
             : !(function () {
                   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                  for (let t in S) N(t, e);
+                  for (let t in g) N(t, e);
               })(!0);
         return (
             (t = !1),
@@ -145,7 +145,7 @@ let y = new C(l.Z, {
     LOCAL_MESSAGES_LOADED: function (e) {
         let { guildId: t, members: n } = e;
         if (null == t || null == d.Z.getGuild(t)) return !1;
-        g = !0;
+        S = !0;
         let r = A(t),
             i = [];
         for (let e of n) null == r.getMember(e.userId) && i.push(e);
@@ -155,7 +155,7 @@ let y = new C(l.Z, {
         let { guildMembers: t } = e,
             n = !1;
         return (
-            (g = !0),
+            (S = !0),
             f.default.entries(t).forEach((e) => {
                 let [t, r] = e;
                 n = A(t).updateClientMembers(Object.values(r)) || n;
@@ -303,9 +303,9 @@ let y = new C(l.Z, {
             ),
             h = (0, I.Qu)(u, f);
         (0, m.nf)(u, E);
-        let g = _.updateSearchedMembersByMemberIds(E);
+        let S = _.updateSearchedMembersByMemberIds(E);
         c.length > 0 && ((o = c[0]), (l = c[c.length - 1]));
-        let [S] = _.updatePaginationState(
+        let [g] = _.updatePaginationState(
             {
                 totalResultsCount: d,
                 elasticSearchCursor: {
@@ -321,7 +321,7 @@ let y = new C(l.Z, {
             },
             !1
         );
-        return h || g || S;
+        return h || S || g;
     },
     MEMBER_SAFETY_GUILD_MEMBER_UPDATE_BATCH: function (e) {
         let { guildId: t, userIds: n } = e;

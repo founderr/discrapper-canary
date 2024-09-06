@@ -95,8 +95,8 @@ var c = (function (e) {
                         var m = !1;
                         this._overshootClamping && 0 !== this._tension && (m = this._startPosition < this._toValue ? e > this._toValue : e < this._toValue);
                         var T = Math.abs(t) <= this._restSpeedThreshold,
-                            g = !0;
-                        if ((0 !== this._tension && (g = Math.abs(this._toValue - e) <= this._restDisplacementThreshold), m || (T && g))) {
+                            S = !0;
+                        if ((0 !== this._tension && (S = Math.abs(this._toValue - e) <= this._restDisplacementThreshold), m || (T && S))) {
                             0 !== this._tension && this._onUpdate(this._toValue), this.__debouncedOnEnd({ finished: !0 });
                             return;
                         }

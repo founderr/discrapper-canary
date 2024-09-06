@@ -17,31 +17,31 @@ var i = n(120356),
     E = n(836846);
 ((s = a || (a = {}))[(s.NITRO_GEM = 0)] = 'NITRO_GEM'), (s[(s.NITRO_LOGO = 1)] = 'NITRO_LOGO');
 t.Z = (e) => {
-    let { showAnimations: t = !0, iconClassName: n, staticPercentage: s, innerCircleClassName: a, progressCircleStrokeSize: i, backgroundCircleSize: T, percentage: I, initialPercentage: R, progressCircleVariation: C = 0, ellipseOpacity: g, customAnimationClassName: N, circleColor: p, circleStroke: m } = e,
+    let { showAnimations: t = !0, iconClassName: n, staticPercentage: s, innerCircleClassName: a, progressCircleStrokeSize: i, backgroundCircleSize: T, percentage: I, initialPercentage: R, progressCircleVariation: g = 0, ellipseOpacity: C, customAnimationClassName: N, circleColor: m, circleStroke: p } = e,
         A = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
         f = t && !A;
     return (0, r.jsx)('div', {
-        className: l()(E.progressCircle, n, { [E.progressCricleBottomMargin]: 0 === C }),
+        className: l()(E.progressCircle, n, { [E.progressCricleBottomMargin]: 0 === g }),
         children: (0, r.jsx)(u.Z, {
             animationClassName: l()(E.activeProgressCircle, {
                 [E.activeProgressCircleAnimation]: f,
                 [null != N ? N : '']: f
             }),
-            progressCircleStroke: m,
+            progressCircleStroke: p,
             progressCircleStrokeSize: i,
             percentage: null != s ? s : I,
             initialPercentage: null != s ? s : R,
-            progressCircleVariation: C,
+            progressCircleVariation: g,
             children:
-                0 === C
+                0 === g
                     ? (0, r.jsx)(d.Z, {
                           className: f ? E.nitroGemAnimation : void 0,
                           backgroundColor: l()(E.gemBackgroundFill, a),
                           backgroundCircleSize: T
                       })
                     : (0, r.jsx)(_.Z, {
-                          circleColor: p,
-                          ellipseOpacity: g
+                          circleColor: m,
+                          ellipseOpacity: C
                       })
         })
     });

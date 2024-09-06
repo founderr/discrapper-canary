@@ -15,7 +15,7 @@ n.d(t, {
         return E;
     },
     lM: function () {
-        return g;
+        return S;
     },
     wu: function () {
         return I;
@@ -117,7 +117,7 @@ function T(e, t) {
     let n = E(e);
     return null != n && null != t ? p(t, null == n ? void 0 : n.messageInputBorder) : null;
 }
-function g(e, t) {
+function S(e, t) {
     let n = (0, c.Sl)(_.Ilk.WHITE_500).hex;
     return (0, l.wj)(e) ? (0, a._i)(n) : null != t ? m(t) : null;
 }

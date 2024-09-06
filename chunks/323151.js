@@ -13,17 +13,17 @@ var r = n(687249),
 e.exports = function (e, t, n, h, p, I) {
     var m = l(e),
         T = l(t),
-        g = m ? _ : o(e),
-        S = T ? _ : o(t);
-    (g = g == d ? E : g), (S = S == d ? E : S);
-    var A = g == E,
-        N = S == E,
-        O = g == S;
+        S = m ? _ : o(e),
+        g = T ? _ : o(t);
+    (S = S == d ? E : S), (g = g == d ? E : g);
+    var A = S == E,
+        N = g == E,
+        O = S == g;
     if (O && u(e)) {
         if (!u(t)) return !1;
         (m = !0), (A = !1);
     }
-    if (O && !A) return I || (I = new r()), m || c(e) ? i(e, t, n, h, p, I) : a(e, t, g, n, h, p, I);
+    if (O && !A) return I || (I = new r()), m || c(e) ? i(e, t, n, h, p, I) : a(e, t, S, n, h, p, I);
     if (!(1 & n)) {
         var R = A && f.call(e, '__wrapped__'),
             v = N && f.call(t, '__wrapped__');

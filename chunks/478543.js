@@ -71,7 +71,7 @@ function T(e) {
 }
 t.Z = (e) => {
     var t, n, a;
-    let { loading: o = !1, currentOverrides: d, linkMeta: g, url: S, applyBuildOverride: A, clearBuildOverride: N } = e,
+    let { loading: o = !1, currentOverrides: d, linkMeta: S, url: g, applyBuildOverride: A, clearBuildOverride: N } = e,
         [O, R] = i.useState(!1),
         v = i.useCallback(() => {
             if (!O) R(!0), A().catch(() => R(!1));
@@ -82,8 +82,8 @@ t.Z = (e) => {
     return (0, r.jsxs)('div', {
         className: I.wrapper,
         children: [
-            ((t = g),
-            (n = S),
+            ((t = S),
+            (n = g),
             (a = o),
             (0, r.jsxs)(u.Text, {
                 variant: 'text-xs/normal',
@@ -140,13 +140,13 @@ t.Z = (e) => {
                                       });
                                   })(I.reason);
                               l()(null != o, 'BuildOverrideEmbed.renderResolved: linkMeta should never be null if resolved');
-                              let { discord_web: m, discord_developers: g } = o.targetBuildOverride,
-                                  S = null != m ? m : g;
-                              if ((l()(null != S, 'BuildOverrideEmbed.renderResolved: linkMeta.targetBuildOverride.discord_web or linkMeta.targetBuildOverride.discord_developers should never be null if resolved'), (t = S), null == (n = s) || null == n.discord_web ? 1 : t.id !== n.discord_web.id || t.type !== n.discord_web.type)) (i = p.Z.Messages.BUILD_OVERRIDE_APPLY), (r = c), (a = u.Button.Colors.GREEN);
+                              let { discord_web: m, discord_developers: S } = o.targetBuildOverride,
+                                  g = null != m ? m : S;
+                              if ((l()(null != g, 'BuildOverrideEmbed.renderResolved: linkMeta.targetBuildOverride.discord_web or linkMeta.targetBuildOverride.discord_developers should never be null if resolved'), (t = g), null == (n = s) || null == n.discord_web ? 1 : t.id !== n.discord_web.id || t.type !== n.discord_web.type)) (i = p.Z.Messages.BUILD_OVERRIDE_APPLY), (r = c), (a = u.Button.Colors.GREEN);
                               else (i = p.Z.Messages.BUILD_OVERRIDE_CLEAR), (r = d), (a = u.Button.Colors.RED);
                               return T({
                                   subHead: p.Z.Messages.BUILD_OVERRIDE_ID,
-                                  buildDetails: S.id,
+                                  buildDetails: g.id,
                                   buttonClick: r,
                                   buttonText: i,
                                   buttonColor: a,
@@ -154,7 +154,7 @@ t.Z = (e) => {
                               });
                           })({
                               currentOverrides: d,
-                              linkMeta: g,
+                              linkMeta: S,
                               applyBuildOverride: v,
                               clearBuildOverride: C,
                               submitting: O

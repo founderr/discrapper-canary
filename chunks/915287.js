@@ -25,7 +25,7 @@ function _(e, t, n, a) {
             });
         });
     return i.forwardRef(function (a, f) {
-        let { className: h, onScroll: p, onResize: I = null, onContentResize: m = null, dir: T = 'ltr', sections: g, sectionHeight: S, rowHeight: A, footerHeight: N = 0, sidebarHeight: O, listHeaderHeight: R = 0, renderSection: v, renderRow: C, renderFooter: y, renderSidebar: L, renderListHeader: D, stickyListHeader: b, wrapSection: M, getAnchorId: P, paddingTop: U, paddingBottom: w, fade: x = !1, customTheme: G = !1, chunkSize: k, style: B, innerId: F, innerRole: V, innerAriaLabel: H, innerAriaMultiselectable: Z, innerAriaOrientation: Y, innerClassName: j, innerTag: W = 'div', ...K } = a,
+        let { className: h, onScroll: p, onResize: I = null, onContentResize: m = null, dir: T = 'ltr', sections: S, sectionHeight: g, rowHeight: A, footerHeight: N = 0, sidebarHeight: O, listHeaderHeight: R = 0, renderSection: v, renderRow: C, renderFooter: y, renderSidebar: D, renderListHeader: L, stickyListHeader: b, wrapSection: M, getAnchorId: P, paddingTop: U, paddingBottom: w, fade: x = !1, customTheme: G = !1, chunkSize: k, style: B, innerId: F, innerRole: V, innerAriaLabel: H, innerAriaMultiselectable: Z, innerAriaOrientation: Y, innerClassName: j, innerTag: W = 'div', ...K } = a,
             z = i.useRef(null),
             q = i.useRef(null),
             [Q, X] = i.useState(!1),
@@ -46,8 +46,8 @@ function _(e, t, n, a) {
                 forceUpdateOnChunkChange: es,
                 anchor: eo
             } = (0, c.aU)({
-                sections: g,
-                sectionHeight: S,
+                sections: S,
+                sectionHeight: g,
                 rowHeight: A,
                 footerHeight: N,
                 sidebarHeight: O,
@@ -112,7 +112,7 @@ function _(e, t, n, a) {
                         return [0, 0];
                     }, [])
                 );
-            })(g);
+            })(S);
         i.useImperativeHandle(
             f,
             () => ({
@@ -212,7 +212,7 @@ function _(e, t, n, a) {
                                         return l()(_);
                                     })({
                                         items: er,
-                                        renderListHeader: D,
+                                        renderListHeader: L,
                                         stickyListHeader: b,
                                         renderSection: v,
                                         renderRow: C,
@@ -222,7 +222,7 @@ function _(e, t, n, a) {
                                     })
                                 })
                             }),
-                        [W, F, V, H, Z, Y, en, j, er, D, b, v, C, y, M, et]
+                        [W, F, V, H, Z, Y, en, j, er, L, b, v, C, y, M, et]
                     ),
                     i.useMemo(
                         () =>
@@ -231,11 +231,11 @@ function _(e, t, n, a) {
                                 return null == n || null == t ? null : t(i, r);
                             })({
                                 isSidebarVisible: ei,
-                                renderSidebar: L,
+                                renderSidebar: D,
                                 sidebarHeight: O,
                                 isListVisible: 0 !== er.length
                             }),
-                        [ei, L, O, er.length]
+                        [ei, D, O, er.length]
                     )
                 ]
             })

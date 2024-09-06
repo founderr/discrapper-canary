@@ -26,7 +26,7 @@ class I extends o.Z {
             (t = this),
             (n = 'actions'),
             (r = {
-                GUILD_CREATE: g,
+                GUILD_CREATE: S,
                 DELETED_ENTITY_IDS: m
             }),
             n in t
@@ -101,14 +101,14 @@ function m(e) {
 }
 function T() {
     l.Z.getAll().then((e) => {
-        e.forEach((e) => S(e));
+        e.forEach((e) => g(e));
     });
 }
-function g(e) {
-    let { guild: t } = e;
-    t.unableToSyncDeletes && S(t.id);
-}
 function S(e) {
+    let { guild: t } = e;
+    t.unableToSyncDeletes && g(t.id);
+}
+function g(e) {
     setTimeout(
         () =>
             (function (e) {

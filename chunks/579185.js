@@ -1,15 +1,15 @@
 n.d(t, {
     Z: function () {
-        return s;
+        return a;
     }
 }),
     n(47120);
 var i = n(470079),
-    a = n(846519);
-function s(e, t) {
-    let [n, s] = i.useState(!1),
-        l = i.useRef(new a.sW(t, () => s(!1))),
-        r = i.useRef(new a.sW(e, () => s(!0))),
+    s = n(846519);
+function a(e, t) {
+    let [n, a] = i.useState(!1),
+        l = i.useRef(new s.sW(t, () => a(!1))),
+        r = i.useRef(new s.sW(e, () => a(!0))),
         o = i.useCallback(() => {
             l.current.cancel(), r.current.cancel();
         }, []);
@@ -19,7 +19,7 @@ function s(e, t) {
     }, [o]);
     return {
         isHovered: n,
-        setIsHovered: s,
+        setIsHovered: a,
         onMouseEnter: i.useCallback(() => {
             o(), r.current.delay();
         }, [o]),

@@ -16,8 +16,8 @@ var r = n(697988),
     I = n(91159),
     m = n(952537),
     T = n(981631),
-    g = n(176505),
-    S = n(689938);
+    S = n(176505),
+    g = n(689938);
 function A(e, t) {
     return i.tn
         .patch({
@@ -85,22 +85,22 @@ t.Z = {
             throw (
                 ((null === (i = e.body) || void 0 === i ? void 0 : i.code) === T.evJ.TOO_MANY_THREADS
                     ? s.Z.show({
-                          title: r ? S.Z.Messages.CANNOT_UNARCHIVE_FORUM_POST : S.Z.Messages.CANNOT_UNARCHIVE_THREAD,
-                          body: r ? S.Z.Messages.TOO_MANY_FORUM_POSTS_MESSAGE : S.Z.Messages.TOO_MANY_THREADS_MESSAGE
+                          title: r ? g.Z.Messages.CANNOT_UNARCHIVE_FORUM_POST : g.Z.Messages.CANNOT_UNARCHIVE_THREAD,
+                          body: r ? g.Z.Messages.TOO_MANY_FORUM_POSTS_MESSAGE : g.Z.Messages.TOO_MANY_THREADS_MESSAGE
                       })
                     : (null === (a = e.body) || void 0 === a ? void 0 : a.code) === T.evJ.TOO_MANY_ANNOUNCEMENT_THREADS
                       ? s.Z.show({
-                            title: S.Z.Messages.CANNOT_UNARCHIVE_THREAD,
-                            body: S.Z.Messages.TOO_MANY_ANNOUNCEMENT_THREADS_MESSAGE
+                            title: g.Z.Messages.CANNOT_UNARCHIVE_THREAD,
+                            body: g.Z.Messages.TOO_MANY_ANNOUNCEMENT_THREADS_MESSAGE
                         })
                       : 429 === e.status
                         ? s.Z.show({
-                              title: r ? S.Z.Messages.CANNOT_UNARCHIVE_FORUM_POST : S.Z.Messages.CANNOT_UNARCHIVE_THREAD,
-                              body: S.Z.Messages.RATE_LIMITED
+                              title: r ? g.Z.Messages.CANNOT_UNARCHIVE_FORUM_POST : g.Z.Messages.CANNOT_UNARCHIVE_THREAD,
+                              body: g.Z.Messages.RATE_LIMITED
                           })
                         : s.Z.show({
-                              title: S.Z.Messages.ERROR,
-                              body: S.Z.Messages.ERROR_OCCURRED_TRY_AGAIN
+                              title: g.Z.Messages.ERROR,
+                              body: g.Z.Messages.ERROR_OCCURRED_TRY_AGAIN
                           }),
                 e)
             );
@@ -125,13 +125,13 @@ t.Z = {
             if ((null === (n = t.body) || void 0 === n ? void 0 : n.code) === T.evJ.TOO_MANY_THREAD_MEMBERS) {
                 let t = e.isForumPost();
                 s.Z.show({
-                    title: t ? S.Z.Messages.CANNOT_JOIN_FORUM_POST : S.Z.Messages.CANNOT_JOIN_THREAD,
-                    body: t ? S.Z.Messages.TOO_MANY_MEMBERS_MESSAGE_FORUM_POST : S.Z.Messages.TOO_MANY_MEMBERS_MESSAGE
+                    title: t ? g.Z.Messages.CANNOT_JOIN_FORUM_POST : g.Z.Messages.CANNOT_JOIN_THREAD,
+                    body: t ? g.Z.Messages.TOO_MANY_MEMBERS_MESSAGE_FORUM_POST : g.Z.Messages.TOO_MANY_MEMBERS_MESSAGE
                 });
             } else
                 s.Z.show({
-                    title: S.Z.Messages.ERROR,
-                    body: S.Z.Messages.ERROR_OCCURRED_TRY_AGAIN
+                    title: g.Z.Messages.ERROR,
+                    body: g.Z.Messages.ERROR_OCCURRED_TRY_AGAIN
                 });
             e.isForumPost() && N(e, !1);
         }
@@ -147,13 +147,13 @@ t.Z = {
             if ((null === (r = t.body) || void 0 === r ? void 0 : r.code) === T.evJ.TOO_MANY_THREAD_MEMBERS) {
                 let t = e.isForumPost();
                 s.Z.show({
-                    title: t ? S.Z.Messages.CANNOT_ADD_USER_TO_FORUM_POST : S.Z.Messages.CANNOT_ADD_USER_TO_THREAD,
-                    body: t ? S.Z.Messages.TOO_MANY_MEMBERS_MESSAGE_FORUM_POST : S.Z.Messages.TOO_MANY_MEMBERS_MESSAGE
+                    title: t ? g.Z.Messages.CANNOT_ADD_USER_TO_FORUM_POST : g.Z.Messages.CANNOT_ADD_USER_TO_THREAD,
+                    body: t ? g.Z.Messages.TOO_MANY_MEMBERS_MESSAGE_FORUM_POST : g.Z.Messages.TOO_MANY_MEMBERS_MESSAGE
                 });
             } else
                 s.Z.show({
-                    title: S.Z.Messages.ERROR,
-                    body: S.Z.Messages.ERROR_OCCURRED_TRY_AGAIN
+                    title: g.Z.Messages.ERROR,
+                    body: g.Z.Messages.ERROR_OCCURRED_TRY_AGAIN
                 });
         }
     },
@@ -175,11 +175,11 @@ t.Z = {
             body: { auto_archive_duration: t }
         }),
     pin(e) {
-        let t = e.flags | g.zZ.PINNED;
+        let t = e.flags | S.zZ.PINNED;
         this.updateFlags(e, t, e.isArchivedThread());
     },
     unpin(e) {
-        let t = e.flags & ~g.zZ.PINNED;
+        let t = e.flags & ~S.zZ.PINNED;
         this.updateFlags(e, t);
     },
     async updateFlags(e, t) {
@@ -203,8 +203,8 @@ t.Z = {
         }
     },
     async replacePin(e, t) {
-        let n = e.merge({ flags: e.flags & ~g.zZ.PINNED }),
-            r = t.merge({ flags: t.flags | g.zZ.PINNED });
+        let n = e.merge({ flags: e.flags & ~S.zZ.PINNED }),
+            r = t.merge({ flags: t.flags | S.zZ.PINNED });
         a.Z.dispatch({
             type: 'THREAD_UPDATE',
             channel: n
@@ -218,7 +218,7 @@ t.Z = {
         try {
             await i.tn.patch({
                 url: T.ANM.CHANNEL(e.id),
-                body: { flags: e.flags & ~g.zZ.PINNED }
+                body: { flags: e.flags & ~S.zZ.PINNED }
             });
         } catch {
             a.Z.dispatch({
@@ -234,7 +234,7 @@ t.Z = {
         try {
             await i.tn.patch({
                 url: T.ANM.CHANNEL(t.id),
-                body: { flags: t.flags | g.zZ.PINNED }
+                body: { flags: t.flags | S.zZ.PINNED }
             });
         } catch {
             a.Z.dispatch({

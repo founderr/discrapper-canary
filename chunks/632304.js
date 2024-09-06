@@ -5,20 +5,20 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(442837),
-    s = n(481060),
+var s = n(442837),
+    a = n(481060),
     l = n(846027),
     r = n(131951),
     o = n(36703),
     c = n(358085),
     u = n(689938);
 function d() {
-    let e = (0, a.e7)([r.Z], () => (0, o.P)(r.Z.getOutputVolume()));
-    return (0, i.jsx)(s.MenuControlItem, {
+    let e = (0, s.e7)([r.Z], () => (0, o.P)(r.Z.getOutputVolume()));
+    return (0, i.jsx)(a.MenuControlItem, {
         id: 'output',
         label: u.Z.Messages.FORM_LABEL_OUTPUT_VOLUME,
         control: (t, n) =>
-            (0, i.jsx)(s.MenuSliderControl, {
+            (0, i.jsx)(a.MenuSliderControl, {
                 ...t,
                 ref: n,
                 value: e,

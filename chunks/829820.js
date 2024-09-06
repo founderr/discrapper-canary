@@ -1,9 +1,9 @@
 n.d(t, {
     Fe: function () {
-        return S;
+        return g;
     },
     Ih: function () {
-        return g;
+        return S;
     },
     Lz: function () {
         return A;
@@ -51,7 +51,7 @@ function m(e) {
 function T(e, t) {
     return (0, i.cj)([c.Z, o.default], () => (0, E.Z)(c.Z, o.default, t, e), [e, t]);
 }
-function g(e, t, n) {
+function S(e, t, n) {
     let i = T(e, t),
         { notPlayable: a, isCurrentUser: s, playingSameTrack: o } = i,
         { loading: l, startLoading: u, clearLoading: c } = m(i),
@@ -67,12 +67,12 @@ function g(e, t, n) {
         spotifyData: i
     };
 }
-function S(e, t, n, i) {
+function g(e, t, n, i) {
     let a = null != i ? i : u.ZP.getName(t),
         s = T(e, t),
         { syncingWithUser: o, syncingWithParty: l, isCurrentUser: c } = s,
         { loading: E, startLoading: h, clearLoading: I } = m(s),
-        g = r.useCallback(() => {
+        S = r.useCallback(() => {
             h(), (0, f.Z)(s, p.kG.USER_ACTIVITY_SYNC, n).catch(I);
         }, [s, n, h, I]);
     return {
@@ -80,7 +80,7 @@ function S(e, t, n, i) {
         tooltip: (0, _.Z)(s, p.kG.USER_ACTIVITY_SYNC, a),
         disabled: !E && (c || o || l),
         loading: E,
-        onClick: g,
+        onClick: S,
         spotifyData: s
     };
 }

@@ -1,7 +1,7 @@
 n(653041), n(47120);
 var i,
-    a,
     s,
+    a,
     l,
     r = n(442837),
     o = n(570140),
@@ -9,25 +9,25 @@ var i,
     u = n(594174),
     d = n(176354),
     h = n(292793),
-    p = n(88315),
-    m = n(813900);
+    m = n(88315),
+    p = n(813900);
 let _ = {},
     f = {},
     E = {},
-    C = !0,
-    g = null;
+    g = !0,
+    C = null;
 function I(e) {
     if (null == f[e]) {
         let t = u.default.getUser(e);
         if (null == t) return;
-        let n = t.getAvatarURL(null, m.Ks),
+        let n = t.getAvatarURL(null, p.Ks),
             i = new Image();
         (i.src = n), (f[e] = i);
     }
 }
 class x extends (i = r.ZP.Store) {
     get visibleOverlayCanvas() {
-        return C;
+        return g;
     }
     getDrawables(e) {
         return null != _[e] ? _[e] : [];
@@ -39,24 +39,24 @@ class x extends (i = r.ZP.Store) {
         return E[e];
     }
     getDrawMode() {
-        return g;
+        return C;
     }
 }
 (l = 'SharedCanvasStore'),
-    (s = 'displayName') in (a = x)
-        ? Object.defineProperty(a, s, {
+    (a = 'displayName') in (s = x)
+        ? Object.defineProperty(s, a, {
               value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (a[s] = l);
+        : (s[a] = l);
 let T = new x(o.Z, {
     SHARED_CANVAS_UPDATE_LINE_POINTS: function (e) {
-        let { lineId: t, newPoints: n, userId: i, streamerId: a } = e,
-            s = _[a];
-        if (null == s)
-            _[a] = [
+        let { lineId: t, newPoints: n, userId: i, streamerId: s } = e,
+            a = _[s];
+        if (null == a)
+            _[s] = [
                 {
                     type: h.W.LINE,
                     id: t,
@@ -65,46 +65,46 @@ let T = new x(o.Z, {
                 }
             ];
         else {
-            let e = s.find((e) => e.id === t);
+            let e = a.find((e) => e.id === t);
             null == e
-                ? s.push({
+                ? a.push({
                       type: h.W.LINE,
                       id: t,
                       userId: i,
                       points: n
                   })
-                : (0, p.P7)(e) && e.points.push(...n);
+                : (0, m.P7)(e) && e.points.push(...n);
         }
         I(i);
     },
     SHARED_CANVAS_UPDATE_EMOJI_HOSE: function (e) {
         var t, n, i;
-        let { emojiHose: a, streamerId: s, userId: l } = e,
+        let { emojiHose: s, streamerId: a, userId: l } = e,
             r = {
-                ...a,
+                ...s,
                 type: h.W.EMOJI_HOSE
             };
-        if (null == _[s]) _[s] = [r];
+        if (null == _[a]) _[a] = [r];
         else {
-            let e = _[s].findIndex((e) => e.id === a.id);
+            let e = _[a].findIndex((e) => e.id === s.id);
             e >= 0
-                ? (_[s][e] = {
-                      ..._[s][e],
+                ? (_[a][e] = {
+                      ..._[a][e],
                       ...r
                   })
-                : _[s].push(r);
+                : _[a].push(r);
         }
-        let o = null !== (n = null !== (t = a.emojiId) && void 0 !== t ? t : a.emojiName) && void 0 !== n ? n : '';
+        let o = null !== (n = null !== (t = s.emojiId) && void 0 !== t ? t : s.emojiName) && void 0 !== n ? n : '';
         if (null == E[o]) {
-            let e = null != a.emojiName ? c.ZP.convertNameToSurrogate(a.emojiName) : null;
+            let e = null != s.emojiName ? c.ZP.convertNameToSurrogate(s.emojiName) : null;
             (E[o] = new Image()),
                 (E[o].src = (0, d.qc)(
                     {
-                        id: a.emojiId,
-                        name: null !== (i = null != e ? e : a.emojiName) && void 0 !== i ? i : '',
+                        id: s.emojiId,
+                        name: null !== (i = null != e ? e : s.emojiName) && void 0 !== i ? i : '',
                         animated: !1
                     },
-                    m.qh
+                    p.qh
                 ));
         }
         I(l);
@@ -118,11 +118,11 @@ let T = new x(o.Z, {
     },
     SHARED_CANVAS_SET_DRAW_MODE: function (e) {
         let { drawMode: t } = e;
-        g = t;
+        C = t;
     },
     TOGGLE_OVERLAY_CANVAS: function (e) {
         let {} = e;
-        C = !C;
+        g = !g;
     }
 });
 t.Z = T;

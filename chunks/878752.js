@@ -1,12 +1,12 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return S;
     }
 });
 var i = n(735250);
 n(470079);
-var a = n(512722),
-    s = n.n(a),
+var s = n(512722),
+    a = n.n(s),
     l = n(442837),
     r = n(779618),
     o = n(446226),
@@ -14,49 +14,49 @@ var a = n(512722),
     u = n(822183),
     d = n(641015),
     h = n(131951),
-    p = n(594174),
-    m = n(700785),
+    m = n(594174),
+    p = n(700785),
     _ = n(213652),
     f = n(320427),
     E = n(145010),
-    C = n(933686),
-    g = n(997614),
+    g = n(933686),
+    C = n(997614),
     I = n(159909),
     x = n(981631),
     T = n(468289);
-function N(e) {
-    let { channel: t, hasActiveStream: n, themeable: a = !1 } = e,
-        N = (0, l.e7)([p.default], () => {
-            let e = p.default.getCurrentUser();
-            return s()(null != e, 'CenterControlTray: currentUser cannot be undefined'), e;
+function S(e) {
+    let { channel: t, hasActiveStream: n, themeable: s = !1 } = e,
+        S = (0, l.e7)([m.default], () => {
+            let e = m.default.getCurrentUser();
+            return a()(null != e, 'CenterControlTray: currentUser cannot be undefined'), e;
         }),
-        S = (0, o.Z)(),
-        { isSharedCanvasEnabled: v } = u.Z.useExperiment({
+        v = (0, o.Z)(),
+        { isSharedCanvasEnabled: N } = u.Z.useExperiment({
             guildId: null == t ? void 0 : t.guild_id,
             location: 'b7309a_1'
         }),
-        { enableViewerClipping: Z } = c.Z.useExperiment({ location: 'VoiceEffectsActionBar' }, { autoTrackExposure: !1 }),
-        A = (0, r.Z)(h.Z);
-    if (null == t || null != S) return null;
+        { enableViewerClipping: A } = c.Z.useExperiment({ location: 'VoiceEffectsActionBar' }, { autoTrackExposure: !1 }),
+        Z = (0, r.Z)(h.Z);
+    if (null == t || null != v) return null;
     let M = (0, d.Z)(t),
-        b = m.BT({
+        b = p.BT({
             permission: x.Plq.ADD_REACTIONS,
-            user: N,
+            user: S,
             context: t
         });
     return (0, i.jsxs)('div', {
         className: T.voiceEffectsActionBar,
         children: [
             M &&
-                (0, i.jsx)(g.Z, {
+                (0, i.jsx)(C.Z, {
                     channel: t,
-                    themeable: a
+                    themeable: s
                 }),
-            b && (0, i.jsx)(C.Z, { channel: t }),
-            Z && A && (0, i.jsx)(_.Z, { channel: t }),
-            v && n && (0, i.jsx)(f.Z, {}),
-            v && n && (0, i.jsx)(E.Z, { channel: t }),
-            v && n && (0, i.jsx)(I.Z, {})
+            b && (0, i.jsx)(g.Z, { channel: t }),
+            A && Z && (0, i.jsx)(_.Z, { channel: t }),
+            N && n && (0, i.jsx)(f.Z, {}),
+            N && n && (0, i.jsx)(E.Z, { channel: t }),
+            N && n && (0, i.jsx)(I.Z, {})
         ]
     });
 }

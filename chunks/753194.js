@@ -19,7 +19,7 @@ function d(e) {
         [p, I] = (0, a.Wu)([l.Z], () => [l.Z.desaturateUserColors, l.Z.saturation]),
         m = (0, o.useToken)(s.Z.unsafe_rawColors.PRIMARY_300).hex(),
         T = (0, i._i)(null != n ? n : m),
-        g = (0, i.ho)(T, !1, p ? I : null);
+        S = (0, i.ho)(T, !1, p ? I : null);
     return (
         (t = null != _ ? _ : 0.3 > (0, i.Bd)(T) ? s.Z.unsafe_rawColors.PRIMARY_630.css : s.Z.unsafe_rawColors.WHITE_500.css),
         (0, r.jsx)(o.Tooltip, {
@@ -28,7 +28,7 @@ function d(e) {
                 (0, r.jsx)(u.Z, {
                     ...e,
                     className: E,
-                    color: g,
+                    color: S,
                     size: d,
                     children: (0, r.jsx)(o.CheckmarkSmallIcon, {
                         size: 'custom',

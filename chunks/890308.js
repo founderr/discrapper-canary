@@ -33,13 +33,13 @@
             for (var t, n, r = [], i = 0, a = e.length; i < a; ) (t = e.charCodeAt(i++)) >= 55296 && t <= 56319 && i < a ? ((64512 & (n = e.charCodeAt(i++))) == 56320 ? r.push(((1023 & t) << 10) + (1023 & n) + 65536) : (r.push(t), i--)) : r.push(t);
             return r;
         }
-        function g(e) {
+        function S(e) {
             return I(e, function (e) {
                 var t = '';
                 return e > 65535 && ((e -= 65536), (t += h(((e >>> 10) & 1023) | 55296)), (e = 56320 | (1023 & e))), (t += h(e));
             }).join('');
         }
-        function S(e, t) {
+        function g(e, t) {
             return e + 22 + 75 * (e < 26) - ((0 != t) << 5);
         }
         function A(e, t, n) {
@@ -72,7 +72,7 @@
                 }
                 (m = A(h - s, (n = _.length + 1), 0 == s)), f(h / n) > 2147483647 - I && p('overflow'), (I += f(h / n)), (h %= n), _.splice(h++, 0, I);
             }
-            return g(_);
+            return S(_);
         }
         function O(e) {
             var t,
@@ -90,27 +90,27 @@
                 E,
                 I,
                 m,
-                g = [];
-            for (s = 0, _ = (e = T(e)).length, t = 128, n = 0, a = 72; s < _; ++s) (d = e[s]) < 128 && g.push(h(d));
-            for (r = i = g.length, i && g.push('-'); r < _; ) {
+                S = [];
+            for (s = 0, _ = (e = T(e)).length, t = 128, n = 0, a = 72; s < _; ++s) (d = e[s]) < 128 && S.push(h(d));
+            for (r = i = S.length, i && S.push('-'); r < _; ) {
                 for (o = 2147483647, s = 0; s < _; ++s) (d = e[s]) >= t && d < o && (o = d);
                 for (o - t > f((2147483647 - n) / (E = r + 1)) && p('overflow'), n += (o - t) * E, t = o, s = 0; s < _; ++s)
                     if (((d = e[s]) < t && ++n > 2147483647 && p('overflow'), d == t)) {
                         for (l = n, u = 36; !(l < (c = u <= a ? 1 : u >= a + 26 ? 26 : u - a)); u += 36) {
-                            (m = l - c), (I = 36 - c), g.push(h(S(c + (m % I), 0))), (l = f(m / I));
+                            (m = l - c), (I = 36 - c), S.push(h(g(c + (m % I), 0))), (l = f(m / I));
                         }
-                        g.push(h(S(l, 0))), (a = A(n, E, r == i)), (n = 0), ++r;
+                        S.push(h(g(l, 0))), (a = A(n, E, r == i)), (n = 0), ++r;
                     }
                 ++n, ++t;
             }
-            return g.join('');
+            return S.join('');
         }
         if (
             ((o = {
                 version: '1.4.1',
                 ucs2: {
                     decode: T,
-                    encode: g
+                    encode: S
                 },
                 decode: N,
                 encode: O,

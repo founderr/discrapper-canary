@@ -33,11 +33,11 @@ let T = new _.h(
         (e) => [h(e.guild_id), ...e.subscription_listings_ids.map(p)],
         (e) => e.id
     ),
-    g = new _.h(
+    S = new _.h(
         (e) => [I(e.application_id), m(e.subscription_plans[0].id)],
         (e) => e.id
     ),
-    S = {},
+    g = {},
     A = new Set(),
     N = {},
     O = {},
@@ -47,18 +47,18 @@ let T = new _.h(
 function y(e) {
     return T.values(h(e));
 }
-function L(e) {
-    var t;
-    for (let n of (T.set(e.id, e), C.set(e.guild_id, e.application_id), null !== (t = e.subscription_listings) && void 0 !== t ? t : [])) D(n);
-}
 function D(e) {
-    g.set(e.id, e);
+    var t;
+    for (let n of (T.set(e.id, e), C.set(e.guild_id, e.application_id), null !== (t = e.subscription_listings) && void 0 !== t ? t : [])) L(n);
+}
+function L(e) {
+    S.set(e.id, e);
 }
 let b = [];
 class M extends (i = d.ZP.Store) {
     getSubscriptionGroupListingsForGuildFetchState(e) {
         var t;
-        return null !== (t = S[e]) && void 0 !== t ? t : 0;
+        return null !== (t = g[e]) && void 0 !== t ? t : 0;
     }
     getDidFetchListingForSubscriptionPlanId(e) {
         return A.has(e);
@@ -74,15 +74,15 @@ class M extends (i = d.ZP.Store) {
         return c()(t.length <= 1, 'Found multiple group listings for listing'), t[0];
     }
     getSubscriptionListing(e) {
-        return g.get(e);
+        return S.get(e);
     }
     getSubscriptionListingsForGuild(e) {
         var t;
         let n = null === (t = this.getSubscriptionGroupListingsForGuild(e)[0]) || void 0 === t ? void 0 : t.application_id;
-        return null != n ? g.values(I(n)) : b;
+        return null != n ? S.values(I(n)) : b;
     }
     getSubscriptionListingForPlan(e) {
-        let t = g.values(m(e));
+        let t = S.values(m(e));
         return c()(t.length <= 1, 'Found multiple listings for plan'), t[0];
     }
     getSubscriptionSettings(e) {
@@ -113,7 +113,7 @@ class M extends (i = d.ZP.Store) {
         : (s[o] = l),
     (t.Z = new M(E.Z, {
         CONNECTION_OPEN: function () {
-            T.clear(), g.clear(), (S = {}), A.clear(), (N = {}), (O = {}), (R = {}), (v = {}), C.clear();
+            T.clear(), S.clear(), (g = {}), A.clear(), (N = {}), (O = {}), (R = {}), (v = {}), C.clear();
         },
         GUILD_ROLE_SUBSCRIPTIONS_UPDATE_SUBSCRIPTIONS_SETTINGS: function (e) {
             let { settings: t } = e;
@@ -121,20 +121,20 @@ class M extends (i = d.ZP.Store) {
         },
         GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTINGS: function (e) {
             let { guildId: t } = e;
-            for (let e of ((S[t] = 1), y(t))) for (let t of (T.delete(e.id), e.subscription_listings_ids)) g.delete(t);
+            for (let e of ((g[t] = 1), y(t))) for (let t of (T.delete(e.id), e.subscription_listings_ids)) S.delete(t);
         },
         GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTINGS_SUCCESS: function (e) {
             let { guildId: t, groupListings: n, settings: r, subscriptionTrials: i } = e;
-            for (let e of ((S[t] = 2), n)) L(e);
+            for (let e of ((g[t] = 2), n)) D(e);
             for (let e of ((N[t] = r), i)) O[e.id] = e;
         },
         GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTINGS_FAILURE: function (e) {
             let { guildId: t } = e;
-            S[t] = 2;
+            g[t] = 2;
         },
         GUILD_ROLE_SUBSCRIPTIONS_UPDATE_GROUP_LISTING: function (e) {
             let { listing: t } = e;
-            L(t);
+            D(t);
         },
         GUILD_ROLE_SUBSCRIPTIONS_DELETE_GROUP_LISTING: function (e) {
             let { groupListingId: t } = e;
@@ -146,19 +146,19 @@ class M extends (i = d.ZP.Store) {
         },
         GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTING_FOR_PLAN_SUCCESS: function (e) {
             let { groupListing: t } = e;
-            L(t);
+            D(t);
         },
         GUILD_ROLE_SUBSCRIPTIONS_CREATE_LISTING: function (e) {
             let { listing: t, groupListing: n } = e;
-            D(t), L(n);
+            L(t), D(n);
         },
         GUILD_ROLE_SUBSCRIPTIONS_UPDATE_LISTING: function (e) {
             let { listing: t } = e;
-            D(t);
+            L(t);
         },
         GUILD_ROLE_SUBSCRIPTIONS_DELETE_LISTING: function (e) {
             let { listingId: t } = e;
-            return g.delete(t);
+            return S.delete(t);
         },
         GUILD_ROLE_SUBSCRIPTIONS_UPDATE_SUBSCRIPTION_TRIAL: function (e) {
             let { subscriptionTrial: t } = e;

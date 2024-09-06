@@ -9,14 +9,14 @@ n.d(t, {
         return i;
     },
     q2: function () {
-        return s;
+        return a;
     },
     qh: function () {
-        return a;
+        return s;
     }
 });
 let i = 80,
-    a = 48,
-    s = 3,
+    s = 48,
+    a = 3,
     l = 500,
     r = 5000;

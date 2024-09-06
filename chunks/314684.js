@@ -3,7 +3,7 @@ n.d(t, {
         return v;
     },
     FM: function () {
-        return B;
+        return U;
     },
     IB: function () {
         return L;
@@ -42,11 +42,11 @@ var s = n(470079),
     T = n(314884),
     I = n(580130),
     R = n(626135),
-    C = n(823379),
-    g = n(111361),
+    g = n(823379),
+    C = n(111361),
     N = n(595878),
-    p = n(944880),
-    m = n(513785),
+    m = n(944880),
+    p = n(513785),
     A = n(106255),
     f = n(474936),
     S = n(735825),
@@ -54,7 +54,7 @@ var s = n(470079),
 function M() {
     let e = (function () {
             var e;
-            let t = (0, i.cj)([m.Z], () => m.Z.getState());
+            let t = (0, i.cj)([p.Z], () => p.Z.getState());
             if (null != t) return null !== (e = t.userTenureRewardStatusByRewardId[S.Ft.FREE_GUILD_BOOST_1_MONTH]) && void 0 !== e ? e : t.userTenureRewardStatusByRewardId[S.Ft.FREE_GUILD_BOOST_3_MONTHS];
         })(),
         t = b(),
@@ -128,11 +128,11 @@ function b() {
                 return null !== (e = I.Z.getForApplication(f.RQ)) && void 0 !== e ? e : O;
             },
             [],
-            C.OL
+            g.OL
         ),
         t = (0, i.e7)([E.default], () => {
             let e = E.default.getCurrentUser();
-            return null != e && (0, g.M5)(e, f.p9.TIER_2);
+            return null != e && (0, C.M5)(e, f.p9.TIER_2);
         });
     if (null != (0, A.kG)(e) || !!t) return (0, A.MR)([S.Ft.FREE_GUILD_BOOST_1_MONTH, S.Ft.FREE_GUILD_BOOST_3_MONTHS], e);
 }
@@ -192,19 +192,19 @@ function D() {
         })),
         n = (0, i.e7)([E.default], () => {
             let e = E.default.getCurrentUser();
-            return null != e && (0, g.M5)(e, f.p9.TIER_2);
+            return null != e && (0, C.M5)(e, f.p9.TIER_2);
         }),
         a = s.useRef(!1);
     s.useEffect(() => {
         !1 === e && !1 === t && !0 === n && !1 === a.current && (o.yD(f.RQ), (a.current = !0));
     }, [e, t, n]);
 }
-function B() {
+function U() {
     var e;
     D();
     let t = M(),
         n = null !== (e = null == t ? void 0 : t.showCard) && void 0 !== e && e;
     s.useEffect(() => {
-        n && p.Z.forceRefreshIfOutdated();
+        n && m.Z.forceRefreshIfOutdated();
     }, [n]);
 }

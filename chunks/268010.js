@@ -1,101 +1,101 @@
-t(627494), t(757143);
-var a = t(735250),
-    l = t(470079),
-    i = t(442837),
-    r = t(481060),
-    s = t(706454),
-    o = t(594174),
-    u = t(49012),
-    c = t(5192),
-    d = t(591759),
-    _ = t(379357),
-    m = t(561308),
-    E = t(644810),
-    T = t(206295),
-    h = t(335326),
-    x = t(297781),
-    I = t(591853),
-    N = t(410441),
-    p = t(689938);
-let C = (e, n, t) => {
-        let a = p.Z.Messages.MEMBER_LIST_CONTENT_FEED_USER_WATCHED_MEDIA,
-            l = c.ZP.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, t),
+n(627494), n(757143);
+var l = n(735250),
+    a = n(470079),
+    i = n(442837),
+    r = n(481060),
+    s = n(706454),
+    o = n(594174),
+    u = n(49012),
+    c = n(5192),
+    d = n(591759),
+    h = n(379357),
+    m = n(561308),
+    x = n(644810),
+    E = n(206295),
+    _ = n(335326),
+    p = n(297781),
+    v = n(591853),
+    T = n(410441),
+    f = n(689938);
+let g = (e, t, n) => {
+        let l = f.Z.Messages.MEMBER_LIST_CONTENT_FEED_USER_WATCHED_MEDIA,
+            a = c.ZP.getName(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, n),
             i = e.extra.media_title;
-        return a
+        return l
             .plainFormat({
                 mediaTitle: i,
-                userName: l,
+                userName: a,
                 episodeDescription: e.extra.media_subtitle
             })
             .replaceAll('*', '');
     },
-    g = (e, n) =>
-        p.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_WATCHING.format({
-            username: n.username,
+    I = (e, t) =>
+        f.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_WATCHING.format({
+            username: t.username,
             activity: e.extra.media_title
         });
-n.Z = (e) => {
-    let { channel: n, entry: t, onReaction: c, onVoiceChannelPreview: v } = e,
-        f = (0, i.e7)([o.default], () => o.default.getUser(t.author_id)),
-        { largeImage: P } = (0, _.rv)({ entry: t }),
-        { primaryColor: M, secondaryColor: Z } = (0, T.Z)(null == P ? void 0 : P.src),
-        A = (0, i.e7)([s.default], () => s.default.locale),
-        S = (0, m.ap)(t.extra.media_assets_large_text),
-        O = l.useCallback(
+t.Z = (e) => {
+    let { channel: t, entry: n, onReaction: c, onVoiceChannelPreview: C } = e,
+        N = (0, i.e7)([o.default], () => o.default.getUser(n.author_id)),
+        { largeImage: P } = (0, h.rv)({ entry: n }),
+        { primaryColor: Z, secondaryColor: S } = (0, E.Z)(null == P ? void 0 : P.src),
+        M = (0, i.e7)([s.default], () => s.default.locale),
+        y = (0, m.ap)(n.extra.media_assets_large_text),
+        A = a.useCallback(
             (e) => {
-                if (null != f && (null == P ? void 0 : P.src) != null)
-                    return (0, E.B)({
-                        entry: t,
+                if (null != N && (null == P ? void 0 : P.src) != null)
+                    return (0, x.B)({
+                        entry: n,
                         mediaImageSrc: null == P ? void 0 : P.src,
-                        avatarSrc: f.getAvatarURL(null == n ? void 0 : n.guild_id, 128),
-                        description: C(t, n, f),
-                        timestamp: (0, m.yh)(t, A),
-                        episodeDescription: S,
-                        colors: [M, Z],
+                        avatarSrc: N.getAvatarURL(null == t ? void 0 : t.guild_id, 128),
+                        description: g(n, t, N),
+                        timestamp: (0, m.yh)(n, M),
+                        episodeDescription: y,
+                        colors: [Z, S],
                         channelId: e
                     });
             },
-            [n, t, S, A, null == P ? void 0 : P.src, M, Z, f]
+            [t, n, y, M, null == P ? void 0 : P.src, Z, S, N]
         ),
-        j = () => {
-            if (null == t.extra.url) return;
-            let e = d.Z.safeParseWithQuery(t.extra.url);
+        O = () => {
+            if (null == n.extra.url) return;
+            let e = d.Z.safeParseWithQuery(n.extra.url);
             if (null != e && null != e.protocol && null != e.hostname)
                 (0, u.q)({
                     href: d.Z.format(e),
                     trusted: !1
                 });
         };
-    return null == f
+    return null == N
         ? null
-        : (0, a.jsxs)(I.yR, {
+        : (0, l.jsxs)(v.yR, {
               children: [
-                  (0, a.jsx)(I.wG, {
-                      channel: n,
-                      entry: t,
-                      userDescription: (0, m.kr)(t) ? p.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHING_V2 : p.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHED_V2,
-                      title: t.extra.media_title,
-                      subtitle: t.extra.media_subtitle,
-                      headerIcons: (0, a.jsx)(N.Z, {
+                  (0, l.jsx)(v.wG, {
+                      channel: t,
+                      entry: n,
+                      userDescription: (0, m.kr)(n) ? f.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHING_V2 : f.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHED_V2,
+                      title: n.extra.media_title,
+                      subtitle: n.extra.media_subtitle,
+                      headerIcons: (0, l.jsx)(T.Z, {
                           Icon: r.CrunchyrollNeutralIcon,
-                          'aria-label': p.Z.Messages.CRUNCHYROLL
+                          'aria-label': f.Z.Messages.CRUNCHYROLL
                       }),
-                      badges: (0, a.jsx)(x.Gk, {
-                          location: x.Gt.POPOUT,
-                          children: h.t.map((e, n) => (0, a.jsx)(e, { entry: t }, n))
+                      badges: (0, l.jsx)(p.Gk, {
+                          location: p.Gt.POPOUT,
+                          children: _.t.map((e, t) => (0, l.jsx)(e, { entry: n }, t))
                       }),
-                      onClickTitle: j,
-                      onClickThumbnail: j
+                      onClickTitle: O,
+                      onClickThumbnail: O
                   }),
-                  (0, a.jsx)(I.St, {
-                      children: (0, a.jsx)(I.WT, {
+                  (0, l.jsx)(v.St, {
+                      children: (0, l.jsx)(v.WT, {
                           onReaction: c,
-                          onVoiceChannelPreview: v,
-                          user: f,
-                          channel: n,
-                          generateReactionImage: O,
-                          reactionImageAltText: g(t, f),
-                          entry: t
+                          onVoiceChannelPreview: C,
+                          user: N,
+                          channel: t,
+                          generateReactionImage: A,
+                          reactionImageAltText: I(n, N),
+                          entry: n
                       })
                   })
               ]

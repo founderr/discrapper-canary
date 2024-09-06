@@ -75,18 +75,18 @@ function u(e) {
         (null == u ? void 0 : u.validationDetails.valid) && (u = null);
         let I = (0, r.useContext)(o),
             m = (0, r.useMemo)(() => (i ? (Array.isArray(i) ? i.flatMap((e) => c(I[e])) : c(I[i])) : []), [I, i]),
-            [T, g] = (0, r.useState)(I),
-            [S, A] = (0, r.useState)(!1);
-        I !== T && (g(I), A(!1));
-        let N = (0, r.useMemo)(() => d(S ? [] : m), [S, m]),
+            [T, S] = (0, r.useState)(I),
+            [g, A] = (0, r.useState)(!1);
+        I !== T && (S(I), A(!1));
+        let N = (0, r.useMemo)(() => d(g ? [] : m), [g, m]),
             O = (0, r.useRef)(s),
             [R, v] = (0, r.useState)(s),
             C = (0, r.useRef)(s),
-            [y, L] = (0, r.useState)(!1);
+            [y, D] = (0, r.useState)(!1);
         return (
             (0, r.useEffect)(() => {
                 if (!y) return;
-                L(!1);
+                D(!1);
                 let e = p || u || O.current;
                 !_(e, C.current) && ((C.current = e), v(e));
             }),
@@ -97,10 +97,10 @@ function u(e) {
                     'aria' !== f || _(R, e) ? (O.current = e) : v(e);
                 },
                 resetValidation() {
-                    !_(s, C.current) && ((C.current = s), v(s)), 'native' === f && L(!1), A(!0);
+                    !_(s, C.current) && ((C.current = s), v(s)), 'native' === f && D(!1), A(!0);
                 },
                 commitValidation() {
-                    'native' === f && L(!0), A(!0);
+                    'native' === f && D(!0), A(!0);
                 }
             }
         );

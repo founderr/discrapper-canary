@@ -33,8 +33,8 @@ function m(e, t, m) {
         }),
             (0, c.F4)() && ((0, u.z)(), (0, d.O)());
     else {
-        var g;
-        let n = (0, s.Z)(I.tI.PRESET_CUSTOM, I.LY.RESOLUTION_1080, I.ws.FPS_30, f.default.getCurrentUser(), null === (g = _.Z.getGuild(e)) || void 0 === g ? void 0 : g.premiumTier)
+        var S;
+        let n = (0, s.Z)(I.tI.PRESET_CUSTOM, I.LY.RESOLUTION_1080, I.ws.FPS_30, f.default.getCurrentUser(), null === (S = _.Z.getGuild(e)) || void 0 === S ? void 0 : S.premiumTier)
             ? {
                   width: 1920,
                   height: 1080

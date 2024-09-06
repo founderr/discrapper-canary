@@ -1,14 +1,14 @@
 var i = n(735250),
-    a = n(470079),
-    s = n(481060),
+    s = n(470079),
+    a = n(481060),
     l = n(128557),
     r = n(981631),
     o = n(689938),
     c = n(916469);
 t.Z = (e) => {
     let { guild: t, onAddGuild: u } = e,
-        d = a.useCallback(() => {
-            (0, s.openModalLazy)(async () => {
+        d = s.useCallback(() => {
+            (0, a.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([n.e('7654'), n.e('66633')]).then(n.bind(n, 560114));
                 return (n) =>
                     (0, i.jsx)(e, {
@@ -27,12 +27,12 @@ t.Z = (e) => {
                 alt: '',
                 src: n(705845)
             }),
-            (0, i.jsx)(s.Heading, {
+            (0, i.jsx)(a.Heading, {
                 className: c.emptyTitle,
                 variant: 'heading-xl/semibold',
                 children: o.Z.Messages.HUB_DIRECTORY_CHANNEL_EMPTY_TITLE.format({ guildName: t.name })
             }),
-            (0, i.jsx)(s.Text, {
+            (0, i.jsx)(a.Text, {
                 variant: 'text-md/normal',
                 className: c.emptySubtitle,
                 children: o.Z.Messages.HUB_DIRECTORY_CHANNEL_EMPTY_SUBTITLE

@@ -50,8 +50,8 @@ var i,
     y = n(71619),
     B = n(637618),
     k = n(225890),
-    G = n(364097),
-    F = n(495129),
+    F = n(364097),
+    G = n(495129),
     w = n(939170),
     V = n(505104),
     H = n(954654),
@@ -104,8 +104,8 @@ var i,
     ey = n(101578),
     eB = n(524444),
     ek = n(319323),
-    eG = n(884182),
-    eF = n(546432),
+    eF = n(884182),
+    eG = n(546432),
     ew = n(920888),
     eV = n(817384),
     eH = n(981631),
@@ -236,7 +236,7 @@ class e7 extends (i = s.Component) {
                                 i
                             )
                           : null;
-                  if (n === S.g.TEMPLATE) return (0, a.jsx)(G.Z, { code: i }, i);
+                  if (n === S.g.TEMPLATE) return (0, a.jsx)(F.Z, { code: i }, i);
                   if (n === S.g.EVENT) return (0, a.jsx)(k.Z, { code: i }, i);
                   else if (n === S.g.CHANNEL_LINK)
                       return (0, a.jsx)(
@@ -384,7 +384,7 @@ class e7 extends (i = s.Component) {
                 let n = (0, z.VY)(t),
                     a = {
                         message: e,
-                        item: (0, eF.OB)(t, u),
+                        item: (0, eG.OB)(t, u),
                         autoPlayGif: o,
                         canRemoveItem: c && (l.length > 1 || '' !== e.content),
                         onRemoveItem: this.handleRemoveAttachment,
@@ -430,7 +430,7 @@ class e7 extends (i = s.Component) {
                       targetKind: 'media'
                   })
                 : void 0;
-        return (0, a.jsx)(eG.Z, {
+        return (0, a.jsx)(eF.Z, {
             items: N,
             inlineForwardButton: f
         });
@@ -646,7 +646,7 @@ class e7 extends (i = s.Component) {
     }
     renderVoiceChannelInvite(e, t) {
         if (1 === e.embeds.length && e.embeds[0].type === eH.hBH.VOICE_CHANNEL)
-            return (0, a.jsx)(F.H, {
+            return (0, a.jsx)(G.H, {
                 message: e,
                 channel: t
             });
@@ -837,7 +837,7 @@ function e3(e) {
         j = (0, O.V)(n.id, i.author.id),
         B = (0, x.r)(i.id),
         { hasInlineForwardButton: k } = (0, L.yk)({ location: 'MessageAccessories' }),
-        G = (0, Z.a)(i) && k;
+        F = (0, Z.a)(i) && k;
     return (0, a.jsx)(e7, {
         canSuppressEmbeds: S,
         canDeleteAttachments: A,
@@ -859,7 +859,7 @@ function e3(e) {
         shouldHideMediaOptions: b,
         shouldRedactExplicitContent: j,
         shouldRenderCtaButton: B,
-        hasInlineForwardButton: G
+        hasInlineForwardButton: F
     });
 }
 eq(e7, 'defaultProps', {

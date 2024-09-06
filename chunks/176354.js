@@ -6,7 +6,7 @@ n.d(t, {
         return N;
     },
     sp: function () {
-        return S;
+        return g;
     }
 }),
     n(47120),
@@ -34,7 +34,7 @@ function m(e) {
 function T(e, t) {
     return null != e && null != t && (!m(e) || t === e.guildId);
 }
-function g(e) {
+function S(e) {
     let { emoji: t, channel: n, guildId: i = null == n ? void 0 : n.getGuildId(), intention: u, forceIncludeExternalGuilds: c } = e;
     if (!m(t)) return null;
     let d = null != n && (0, s.zi)(n.type),
@@ -44,15 +44,15 @@ function g(e) {
     if (u === f.Hz.COMMUNITY_CONTENT) return p && null != t.guildId && t.available ? null : f.Z5.DISALLOW_EXTERNAL;
     if ((!(0, f.Gt)(u) && !T(t, i) && !c) || ((d || h) && !p && !I)) return f.Z5.DISALLOW_EXTERNAL;
     if (null != t.id && !t.available) return f.Z5.GUILD_SUBSCRIPTION_UNAVAILABLE;
-    let g = l.default.getCurrentUser();
-    if (!_.ZP.canUseEmojisEverywhere(g) && !p) {
+    let S = l.default.getCurrentUser();
+    if (!_.ZP.canUseEmojisEverywhere(S) && !p) {
         if (u === f.Hz.STATUS) return f.Z5.PREMIUM_LOCKED;
         if (!t.managed) return f.Z5.PREMIUM_LOCKED;
     }
     if ((0, a.Fv)(t, null != i ? i : void 0)) return (0, r.Ol)(t.guildId) ? f.Z5.ROLE_SUBSCRIPTION_UNAVAILABLE : f.Z5.ROLE_SUBSCRIPTION_LOCKED;
-    return !t.animated || _.ZP.canUseAnimatedEmojis(g) || (0, a.yH)(t) ? null : f.Z5.PREMIUM_LOCKED;
+    return !t.animated || _.ZP.canUseAnimatedEmojis(S) || (0, a.yH)(t) ? null : f.Z5.PREMIUM_LOCKED;
 }
-function S(e, t) {
+function g(e, t) {
     let n = 0,
         r = 0,
         a = 0,
@@ -95,7 +95,7 @@ t.ZP = {
     filterUnsupportedEmojis: c.Z.filterUnsupportedEmojis,
     getURL: c.Z.getURL,
     isInternalEmojiForGuildId: T,
-    getEmojiUnavailableReason: g,
+    getEmojiUnavailableReason: S,
     isCustomEmoji: m,
     getEmojiUnavailableReasons(e) {
         let { categoryEmojis: t, channel: n, guildId: r, intention: i, computeUnfiltered: a = !1 } = e,
@@ -105,7 +105,7 @@ t.ZP = {
             u = 0,
             c = !1;
         for (let e of t) {
-            let t = g({
+            let t = S({
                 emoji: e,
                 channel: n,
                 guildId: r,
@@ -122,11 +122,11 @@ t.ZP = {
         };
     },
     isEmojiFiltered(e) {
-        let t = g(e);
+        let t = S(e);
         return I.has(t);
     },
     isEmojiPremiumLocked(e) {
-        let t = g(e);
+        let t = S(e);
         return h.has(t);
     },
     isEmojiCategoryNitroLocked(e) {
@@ -134,7 +134,7 @@ t.ZP = {
             a = !1,
             s = 0;
         for (let e of t) {
-            let t = g({
+            let t = S({
                 emoji: e,
                 channel: n,
                 intention: i,
@@ -148,7 +148,7 @@ t.ZP = {
         return this.isEmojiFiltered(e) || this.isEmojiPremiumLocked(e);
     },
     isEmojiDisabled(e) {
-        let t = g(e);
+        let t = S(e);
         return p.has(t);
     },
     isFileTooBig: (e) => e.size > 2097152,

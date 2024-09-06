@@ -28,8 +28,8 @@ var r,
     I = n(70956),
     m = n(403182),
     T = n(651655),
-    g = n(861990),
-    S = n(141795),
+    S = n(861990),
+    g = n(141795),
     A = n(981631),
     N = n(959517);
 function O(e, t, n) {
@@ -50,8 +50,8 @@ __OVERLAY__ && (R = n(237997).Z), ((a = r || (r = {})).OVERLAY_UNLOCKED = 'overl
 let v = (e) => 0 === e.type,
     C = (e) => 1 === e.type,
     y = (e) => (v(e) ? e.message.nonce : C(e) ? e.message.messageId : e.message.data.id),
-    L = [1 * I.Z.Millis.MINUTE, 5 * I.Z.Millis.MINUTE];
-class D extends T.Z {
+    D = [1 * I.Z.Millis.MINUTE, 5 * I.Z.Millis.MINUTE];
+class L extends T.Z {
     isFull() {
         return this.queue.length >= this.maxSize;
     }
@@ -82,7 +82,7 @@ class D extends T.Z {
         return this.queue.push(...n), this.logger.log('Cancel pending send requests', t.length), t;
     }
     startQueueMetricTimers(e) {
-        let t = L.map((e) =>
+        let t = D.map((e) =>
             setTimeout(() => {
                 (0, d.yw)(A.rMx.SEND_MESSAGE_QUEUED, { queued_duration_ms: e });
             }, e)
@@ -177,7 +177,7 @@ class D extends T.Z {
             };
         if (null != d) {
             (I.data.attachments = []), (n = []);
-            I.data.attachments = d.map((e, t) => (l()(e.status === S.m.COMPLETED, 'Uploads must be staged before trying to send a message'), (0, g.B)(e, t)));
+            I.data.attachments = d.map((e, t) => (l()(e.status === g.m.COMPLETED, 'Uploads must be staged before trying to send a message'), (0, S.B)(e, t)));
         }
         let T = new AbortController();
         u.tn.post(
@@ -207,4 +207,4 @@ class D extends T.Z {
         super(new _.Z('MessageQueue')), O(this, 'maxSize', void 0), O(this, 'requests', void 0), O(this, 'analyticsTimeouts', void 0), (this.maxSize = e), (this.requests = new Map()), (this.analyticsTimeouts = new Map());
     }
 }
-t.ZP = new D();
+t.ZP = new L();

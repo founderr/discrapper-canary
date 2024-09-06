@@ -1,17 +1,17 @@
 n.d(t, {
     V: function () {
-        return s;
+        return a;
     }
 }),
     n(47120);
 var i = n(442837),
-    a = n(375954);
-function s(e, t) {
+    s = n(375954);
+function a(e, t) {
     return (0, i.e7)(
-        [a.Z],
+        [s.Z],
         () => {
             if (null == t) return;
-            let n = a.Z.getMessages(e),
+            let n = s.Z.getMessages(e),
                 i = n.findOldest((e) => e.author.id === t);
             if (null != i) {
                 for (let e of n.toArray()) {

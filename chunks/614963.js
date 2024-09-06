@@ -1,11 +1,11 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return m;
     }
 });
 var i,
-    a,
-    s = n(251625),
+    s,
+    a = n(251625),
     l = n(823379),
     r = n(981631),
     o = n(689938);
@@ -31,20 +31,20 @@ function u(e, t) {
     i.forEach((e, t, i) => {
         (n.packetsSentOrReceived += t > 0 ? i[t].packetsSentOrReceived - i[t - 1].packetsSentOrReceived : 0), (n.packetsLost += t > 0 ? i[t].packetsLost - i[t - 1].packetsLost : 0), (n.frameRate += e.frameRate), (n.resolution += e.resolution);
     });
-    let a = i[0].type,
-        s = i.length;
+    let s = i[0].type,
+        a = i.length;
     return {
-        type: a,
+        type: s,
         packetsSentOrReceived: n.packetsSentOrReceived,
         packetsLost: n.packetsLost,
         packetLossRate: n.packetsLost / (n.packetsLost + n.packetsSentOrReceived),
-        frameRate: n.frameRate / s,
-        resolution: n.resolution / s,
-        numDatapoints: s
+        frameRate: n.frameRate / a,
+        resolution: n.resolution / a,
+        numDatapoints: a
     };
 }
-((i = a || (a = {})).PACKET_LOSS = 'Packet Loss'), (i.FRAME_RATE_INPUT = 'Frame Rate Encode'), (i.FRAME_RATE_NETWORK = 'Frame Rate Decode'), (i.SOUNDSHARE_FAILED = 'Soundshare Failed'), (i.BAD_CONNECTION = 'Bad Connection');
-let d = (0, s.oH)((e, t) => ({
+((i = s || (s = {})).PACKET_LOSS = 'Packet Loss'), (i.FRAME_RATE_INPUT = 'Frame Rate Encode'), (i.FRAME_RATE_NETWORK = 'Frame Rate Decode'), (i.SOUNDSHARE_FAILED = 'Soundshare Failed'), (i.BAD_CONNECTION = 'Bad Connection');
+let d = (0, a.oH)((e, t) => ({
     message: e,
     errorType: t
 }));
@@ -58,14 +58,14 @@ function h(e, t) {
     }
     return null;
 }
-function p(e, t, n, i) {
+function m(e, t, n, i) {
     if (n) return d(o.Z.Messages.STREAM_SOUNDSHARE_FAILED, 'Soundshare Failed');
     if (null != t) {
         let e = u(t, 5),
             n = u(t, 30);
         if (n.numDatapoints >= 5) {
-            var a;
-            return null !== (a = h(e, null == i ? void 0 : i.maxFrameRate)) && void 0 !== a ? a : h(n, null == i ? void 0 : i.maxFrameRate);
+            var s;
+            return null !== (s = h(e, null == i ? void 0 : i.maxFrameRate)) && void 0 !== s ? s : h(n, null == i ? void 0 : i.maxFrameRate);
         }
     }
     return e === r.IE4.BAD ? d(o.Z.Messages.STREAM_NETWORK_QUALITY_ERROR, 'Bad Connection') : null;

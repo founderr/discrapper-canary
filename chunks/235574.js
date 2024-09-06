@@ -17,19 +17,19 @@ function s(e) {
         p = (0, a.useMemo)(() => (null !== (t = l(e.defaultValue)) && void 0 !== t ? t : [s]), [e.defaultValue, s]),
         I = u(e.value, e.defaultValue, e.onChange),
         m = u(e.value, e.defaultValue, e.onChangeEnd),
-        [T, g] = (0, i.zk)(h, p, I),
-        [S, A] = (0, a.useState)(Array(T.length).fill(!1)),
+        [T, S] = (0, i.zk)(h, p, I),
+        [g, A] = (0, a.useState)(Array(T.length).fill(!1)),
         N = (0, a.useRef)(Array(T.length).fill(!0)),
         [O, R] = (0, a.useState)(void 0),
         v = (0, a.useRef)(T),
-        C = (0, a.useRef)(S),
+        C = (0, a.useRef)(g),
         y = (e) => {
-            (v.current = e), g(e);
+            (v.current = e), S(e);
         },
-        L = (e) => {
+        D = (e) => {
             (C.current = e), A(e);
         };
-    function D(e) {
+    function L(e) {
         return (e - s) / (c - s);
     }
     function b(e) {
@@ -61,16 +61,16 @@ function s(e) {
         setThumbPercent: function (e, t) {
             U(e, x(t));
         },
-        isThumbDragging: (e) => S[e],
+        isThumbDragging: (e) => g[e],
         setThumbDragging: function (e, t) {
             if (n || !P(e)) return;
             let r = C.current[e];
-            (C.current = o(C.current, e, t)), L(C.current), m && r && !C.current.some(Boolean) && m(v.current);
+            (C.current = o(C.current, e, t)), D(C.current), m && r && !C.current.some(Boolean) && m(v.current);
         },
         focusedThumb: O,
         setFocusedThumb: R,
-        getThumbPercent: (e) => D(T[e]),
-        getValuePercent: D,
+        getThumbPercent: (e) => L(T[e]),
+        getValuePercent: L,
         getThumbValueLabel: (e) => w(T[e]),
         getFormattedValue: w,
         getThumbMinValue: b,

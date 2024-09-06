@@ -1,20 +1,20 @@
 n.d(t, {
     a: function () {
-        return a;
+        return s;
     },
     g: function () {
-        return s;
+        return a;
     }
 });
 var i = n(570140);
-function a(e, t) {
+function s(e, t) {
     i.Z.dispatch({
         guildId: e,
         channelId: t,
         type: 'UNREAD_SETTING_NOTICE_CHANNEL_VISIT'
     });
 }
-function s(e, t) {
+function a(e, t) {
     i.Z.dispatch({
         guildId: e,
         channelId: t,

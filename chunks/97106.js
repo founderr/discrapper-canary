@@ -25,9 +25,9 @@ t.Z = function (e, t, n, a, s, o) {
         p || (p = 'constructor' == _);
     }
     if (h && !p) {
-        var g = e.constructor,
-            S = t.constructor;
-        g != S && 'constructor' in e && 'constructor' in t && !('function' == typeof g && g instanceof g && 'function' == typeof S && S instanceof S) && (h = !1);
+        var S = e.constructor,
+            g = t.constructor;
+        S != g && 'constructor' in e && 'constructor' in t && !('function' == typeof S && S instanceof S && 'function' == typeof g && g instanceof g) && (h = !1);
     }
     return o.delete(e), o.delete(t), h;
 };

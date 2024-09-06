@@ -1,12 +1,12 @@
 n.d(t, {
     Z: function () {
-        return C;
+        return g;
     }
 });
 var i = n(735250);
 n(470079);
-var a = n(442837),
-    s = n(481060),
+var s = n(442837),
+    a = n(481060),
     l = n(665149),
     r = n(171368),
     o = n(650774),
@@ -14,21 +14,21 @@ var a = n(442837),
     u = n(496675),
     d = n(709054),
     h = n(826581),
-    p = n(246364),
-    m = n(360328),
+    m = n(246364),
+    p = n(360328),
     _ = n(981631),
     f = n(689938),
     E = n(617803);
-function C(e) {
-    let { channelId: t, showProfile: n = !1, showTrailingDivider: C = !1 } = e,
-        g = d.default.cast(t),
+function g(e) {
+    let { channelId: t, showProfile: n = !1, showTrailingDivider: g = !1 } = e,
+        C = d.default.cast(t),
         {
             joinRequest: I,
             isModmin: x,
             guildId: T,
-            maxMembers: N
-        } = (0, a.cj)([h.Z, c.Z, u.Z], () => {
-            let e = h.Z.getRequest(g),
+            maxMembers: S
+        } = (0, s.cj)([h.Z, c.Z, u.Z], () => {
+            let e = h.Z.getRequest(C),
                 t = c.Z.getGuild(null == e ? void 0 : e.guildId);
             return {
                 joinRequest: e,
@@ -37,37 +37,37 @@ function C(e) {
                 maxMembers: null == t ? void 0 : t.maxMembers
             };
         }),
-        S = (0, a.e7)([o.Z], () => (null != T ? o.Z.getMemberCount(T) : 0)),
-        v = null != N && (null != S ? S : 0) >= N,
-        { approveRequest: Z, rejectRequest: A, submitting: M } = (0, m.s)(null == I ? void 0 : I.guildId, null == I ? void 0 : I.userId, null == I ? void 0 : I.joinRequestId);
-    return null != I && I.applicationStatus === p.wB.SUBMITTED && x
+        v = (0, s.e7)([o.Z], () => (null != T ? o.Z.getMemberCount(T) : 0)),
+        N = null != S && (null != v ? v : 0) >= S,
+        { approveRequest: A, rejectRequest: Z, submitting: M } = (0, p.s)(null == I ? void 0 : I.guildId, null == I ? void 0 : I.userId, null == I ? void 0 : I.joinRequestId);
+    return null != I && I.applicationStatus === m.wB.SUBMITTED && x
         ? (0, i.jsxs)('div', {
               className: E.buttons,
               children: [
-                  (0, i.jsx)(s.Tooltip, {
+                  (0, i.jsx)(a.Tooltip, {
                       text: f.Z.Messages.CLAN_APPLICATION_MAX_MEMBER_LIMIT_TOOLTIP,
-                      shouldShow: v,
+                      shouldShow: N,
                       children: (e) =>
-                          (0, i.jsx)(s.Button, {
+                          (0, i.jsx)(a.Button, {
                               ...e,
-                              color: s.Button.Colors.GREEN,
+                              color: a.Button.Colors.GREEN,
                               submitting: M,
-                              onClick: Z,
-                              size: s.ButtonSizes.SMALL,
-                              disabled: v,
+                              onClick: A,
+                              size: a.ButtonSizes.SMALL,
+                              disabled: N,
                               children: f.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_APPROVE_APPLICATION
                           })
                   }),
-                  (0, i.jsx)(s.Button, {
-                      color: s.Button.Colors.RED,
-                      onClick: A,
-                      size: s.ButtonSizes.SMALL,
-                      disabled: M || I.applicationStatus !== p.wB.SUBMITTED,
+                  (0, i.jsx)(a.Button, {
+                      color: a.Button.Colors.RED,
+                      onClick: Z,
+                      size: a.ButtonSizes.SMALL,
+                      disabled: M || I.applicationStatus !== m.wB.SUBMITTED,
                       children: f.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DENY_APPLICATION
                   }),
                   n &&
-                      (0, i.jsx)(s.Button, {
-                          color: s.Button.Colors.TRANSPARENT,
+                      (0, i.jsx)(a.Button, {
+                          color: a.Button.Colors.TRANSPARENT,
                           onClick: () => {
                               (0, r.openUserProfileModal)({
                                   userId: I.userId,
@@ -78,10 +78,10 @@ function C(e) {
                                   }
                               });
                           },
-                          size: s.ButtonSizes.SMALL,
+                          size: a.ButtonSizes.SMALL,
                           children: f.Z.Messages.VIEW_PROFILE
                       }),
-                  C && (0, i.jsx)(l.ZP.Divider, {})
+                  g && (0, i.jsx)(l.ZP.Divider, {})
               ]
           })
         : null;

@@ -5,61 +5,61 @@ n.d(t, {
 }),
     n(47120);
 var i = n(735250),
-    a = n(470079),
-    s = n(512722),
-    l = n.n(s),
+    s = n(470079),
+    a = n(512722),
+    l = n.n(a),
     r = n(442837),
     o = n(911367),
     c = n(699516),
     u = n(594174),
     d = n(971393),
     h = n(184301),
-    p = n(249882),
-    m = n(432958),
+    m = n(249882),
+    p = n(432958),
     _ = n(792379),
     f = n(177222);
 function E(e) {
     let { channel: t, ...n } = e,
-        s = (0, p.Z)();
+        a = (0, m.Z)();
     (0, o.t)();
     let [E] = t.recipients,
-        C = (0, r.e7)([u.default], () => u.default.getUser(E));
-    l()(null != C, 'UserProfilePanelWrapper: user cannot be undefined');
-    let g = (0, r.e7)([u.default], () => u.default.getCurrentUser());
-    l()(null != g, 'UserProfilePanelWrapper: currentUser cannot be undefined'),
-        a.useEffect(() => {
-            (0, h.Z)(C, {
-                withMutualFriends: !C.bot,
+        g = (0, r.e7)([u.default], () => u.default.getUser(E));
+    l()(null != g, 'UserProfilePanelWrapper: user cannot be undefined');
+    let C = (0, r.e7)([u.default], () => u.default.getCurrentUser());
+    l()(null != C, 'UserProfilePanelWrapper: currentUser cannot be undefined'),
+        s.useEffect(() => {
+            (0, h.Z)(g, {
+                withMutualFriends: !g.bot,
                 withMutualGuilds: !0,
                 channelId: t.id
             });
-        }, [C, t.id]);
-    let I = (0, r.e7)([c.Z], () => c.Z.isBlocked(C.id)),
-        [x, T] = a.useState(I),
-        N = (0, d.sS)({ location: 'UserProfilePanelWrapper' });
-    return (a.useEffect(() => {
+        }, [g, t.id]);
+    let I = (0, r.e7)([c.Z], () => c.Z.isBlocked(g.id)),
+        [x, T] = s.useState(I),
+        S = (0, d.sS)({ location: 'UserProfilePanelWrapper' });
+    return (s.useEffect(() => {
         T(I);
     }, [I]),
-    s)
+    a)
         ? null
-        : x && N
-          ? (0, i.jsx)(m.Z, {
-                user: C,
-                currentUser: g,
+        : x && S
+          ? (0, i.jsx)(p.Z, {
+                user: g,
+                currentUser: C,
                 channel: t,
                 onViewBlockedProfileClick: () => T(!1),
                 ...n
             })
-          : C.isNonUserBot()
+          : g.isNonUserBot()
             ? (0, i.jsx)(_.Z, {
-                  user: C,
-                  currentUser: g,
+                  user: g,
+                  currentUser: C,
                   channel: t,
                   ...n
               })
             : (0, i.jsx)(f.Z, {
-                  user: C,
-                  currentUser: g,
+                  user: g,
+                  currentUser: C,
                   channel: t,
                   ...n
               });

@@ -1,15 +1,15 @@
 n.d(t, {
     AF: function () {
-        return f;
+        return g;
     },
     NU: function () {
-        return T;
+        return _;
     },
     oL: function () {
         return p;
     },
     xH: function () {
-        return g;
+        return f;
     }
 }),
     n(47120);
@@ -20,8 +20,8 @@ var i = n(652874),
     l = n(752305),
     r = n(592125),
     c = n(703558),
-    u = n(883429),
-    d = n(228392);
+    d = n(883429),
+    u = n(228392);
 function h(e, t, n) {
     return (
         t in e
@@ -136,7 +136,7 @@ class m {
                 this.set({ submitting: e });
             }),
             (this.setFormOpen = (e) => {
-                this.set({ formOpen: e }), u.Z.clearForumSearch(this.channelId);
+                this.set({ formOpen: e }), d.Z.clearForumSearch(this.channelId);
             }),
             (this.setOnboardingExpanded = (e) => {
                 this.set({ onboardingExpanded: e });
@@ -165,13 +165,13 @@ class m {
                     appliedTags: new Set(),
                     hasClickedForm: !1
                 }),
-                    u.Z.clearForumSearch(this.channelId);
+                    d.Z.clearForumSearch(this.channelId);
             }),
             (this.setFormOpenFromUserAction = () => {
                 if (this.hasClickedForm) return;
                 let e = r.Z.getChannel(this.channelId);
                 null != e &&
-                    (0, d.HR)({
+                    (0, u.HR)({
                         guildId: e.guild_id,
                         channelId: this.channelId
                     }),
@@ -179,18 +179,18 @@ class m {
                         hasClickedForm: !0,
                         formOpen: !0
                     }),
-                    u.Z.clearForumSearch(this.channelId);
+                    d.Z.clearForumSearch(this.channelId);
             });
         let p = r.Z.getChannel(e);
         if (null == p) return;
-        let g = null !== (i = c.Z.getThreadSettings(p.id)) && void 0 !== i ? i : {},
-            f = null == p.template ? '' : p.template.trim(),
-            T = c.Z.getDraft(p.id, c.d.FirstThreadMessage),
-            _ = (0, l.eK)(null != T && '' !== T.trim() ? T : f);
-        (this.name = null !== (s = g.name) && void 0 !== s ? s : ''), (m = new Set(g.appliedTags)), (this.appliedTags = void 0 !== m ? m : new Set()), (this.formOpen = this.name.length > 0), (this.textAreaState = _);
+        let f = null !== (i = c.Z.getThreadSettings(p.id)) && void 0 !== i ? i : {},
+            g = null == p.template ? '' : p.template.trim(),
+            _ = c.Z.getDraft(p.id, c.d.FirstThreadMessage),
+            T = (0, l.eK)(null != _ && '' !== _.trim() ? _ : g);
+        (this.name = null !== (s = f.name) && void 0 !== s ? s : ''), (m = new Set(f.appliedTags)), (this.appliedTags = void 0 !== m ? m : new Set()), (this.formOpen = this.name.length > 0), (this.textAreaState = T);
     }
 }
-let { Provider: p, useStore: g, useStoreApi: f } = (0, s.Z)();
-function T(e) {
+let { Provider: p, useStore: f, useStoreApi: g } = (0, s.Z)();
+function _(e) {
     return (0, i.Z)((t, n) => new m(e.id, t, n));
 }

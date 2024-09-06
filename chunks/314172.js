@@ -19,9 +19,9 @@ var i = n(442837),
     h = n(113166);
 function p(e) {
     let { guild: t, guildMember: n, numRoles: p, highestRole: I, onAddRole: m, buttonRef: T } = e,
-        g = (0, i.e7)([u.Z], () => u.Z.roleStyle);
+        S = (0, i.e7)([u.Z], () => u.Z.roleStyle);
     if (!(0, i.e7)([d.Z], () => d.Z.can(E.Plq.MANAGE_ROLES, t))) return null;
-    let S = (e) => (0, c.Gy)(t.id, e.id) && !e.managed && d.Z.isRoleHigher(t, I, e) && -1 === n.roles.indexOf(e.id);
+    let g = (e) => (0, c.Gy)(t.id, e.id) && !e.managed && d.Z.isRoleHigher(t, I, e) && -1 === n.roles.indexOf(e.id);
     return (0, r.jsx)(s.y, {
         position: 'bottom',
         align: 'center',
@@ -29,8 +29,8 @@ function p(e) {
             let { closePopout: n } = e;
             return (0, r.jsx)(l.Z, {
                 guild: t,
-                roleStyle: g,
-                roleFilter: S,
+                roleStyle: S,
+                roleFilter: g,
                 onSelect: m,
                 onClose: n
             });

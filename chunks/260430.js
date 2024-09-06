@@ -60,7 +60,7 @@ function p(e) {
     if (0 === i.length) return null;
     let m = I(),
         T = p ? E.Z.Messages.OAUTH2_SCOPES_LABEL_TRUSTED_NAME : E.Z.Messages.OAUTH2_SCOPES_LABEL,
-        g = c === o.Y.USER_INSTALL && a.includes(l.x.APPLICATIONS_COMMANDS);
+        S = c === o.Y.USER_INSTALL && a.includes(l.x.APPLICATIONS_COMMANDS);
     return (0, r.jsxs)('div', {
         className: f.scopes,
         children: [
@@ -84,7 +84,7 @@ function p(e) {
                     })
                 )
                 .flat(),
-            g && (0, r.jsx)(h, { text: E.Z.Messages.SCOPE_DM_YOU }),
+            S && (0, r.jsx)(h, { text: E.Z.Messages.SCOPE_DM_YOU }),
             (0, r.jsx)(h, {
                 text: m,
                 isFake: !0

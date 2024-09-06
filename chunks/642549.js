@@ -15,7 +15,7 @@ var r = n(147018),
     I = a('Error'),
     m = a(p),
     T = function () {
-        u(this, g);
+        u(this, S);
         var e = arguments.length,
             t = d(e < 1 ? void 0 : arguments[0]),
             n = d(e < 2 ? void 0 : arguments[1], 'Error'),
@@ -23,12 +23,12 @@ var r = n(147018),
             i = I(t);
         return (i.name = p), o(r, 'stack', s(1, E(i.stack, 1))), c(r, this, T), r;
     },
-    g = (T.prototype = m.prototype),
-    S = 'stack' in I(p),
+    S = (T.prototype = m.prototype),
+    g = 'stack' in I(p),
     A = 'stack' in new m(1, 2),
     N = m && f && Object.getOwnPropertyDescriptor(i, p),
     O = !!N && !(N.writable && N.configurable),
-    R = S && !O && !A;
+    R = g && !O && !A;
 r(
     {
         global: !0,
@@ -42,8 +42,8 @@ var v = a(p),
 if (C.constructor !== v) {
     for (var y in (!h && o(C, 'constructor', s(1, v)), _))
         if (l(_, y)) {
-            var L = _[y],
-                D = L.s;
-            !l(v, D) && o(v, D, s(6, L.c));
+            var D = _[y],
+                L = D.s;
+            !l(v, L) && o(v, L, s(6, D.c));
         }
 }

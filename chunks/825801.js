@@ -3,7 +3,7 @@ n.d(t, {
         return N;
     },
     _: function () {
-        return S;
+        return g;
     }
 });
 var r = n(735250);
@@ -24,8 +24,8 @@ var i = n(120356),
     I = n(228168),
     m = n(185923),
     T = n(689938),
-    g = n(951768);
-let S = 1800,
+    S = n(951768);
+let g = 1800,
     A = (e) => {
         let { emoji: t, username: n, sourceType: r, sourceDetails: i } = e,
             a = ':'.concat(t.name, ':');
@@ -44,15 +44,15 @@ let S = 1800,
         }
     };
 function N(e) {
-    let { user: t, channel: n, sourceType: i, sourceDetails: d, isVisible: N, isExpandable: O, onInteraction: R, setInteractionToastShown: v, setInteractionSent: C, setIsReplyInteraction: y, onClose: L } = e,
-        { trackUserProfileAction: D } = (0, E.KZ)(),
+    let { user: t, channel: n, sourceType: i, sourceDetails: d, isVisible: N, isExpandable: O, onInteraction: R, setInteractionToastShown: v, setInteractionSent: C, setIsReplyInteraction: y, onClose: D } = e,
+        { trackUserProfileAction: L } = (0, E.KZ)(),
         { sendReact: b, pressReact: M, pressReply: P } = (0, h.Q)(i),
         U = (0, s.e7)([c.default], () => c.default.getId() === t.id),
         w = (0, f.Z)(t.id);
     if (t.bot || U || !w) return null;
     let x = async (e) => {
         if (null == e) return;
-        D({ action: b });
+        L({ action: b });
         let n = A({
             emoji: e,
             username: _.ZP.getName(t),
@@ -72,14 +72,14 @@ function N(e) {
         C(!0),
             setTimeout(() => {
                 v(!1);
-            }, S);
+            }, g);
     };
     return (0, r.jsxs)(l.ZP, {
-        className: a()(g.popover, {
-            [g.visible]: N,
-            [g.expandable]: O,
-            [g.statusPopover]: i === I.n_.STATUS,
-            [g.avatarPopover]: i === I.n_.AVATAR
+        className: a()(S.popover, {
+            [S.visible]: N,
+            [S.expandable]: O,
+            [S.statusPopover]: i === I.n_.STATUS,
+            [S.avatarPopover]: i === I.n_.AVATAR
         }),
         children: [
             (0, r.jsx)(o.TooltipContainer, {
@@ -108,7 +108,7 @@ function N(e) {
                             guildId: null == n ? void 0 : n.guild_id,
                             closePopout: t,
                             onSelectEmoji: async (e, n) => {
-                                await x(e), n && (t(), null == L || L());
+                                await x(e), n && (t(), null == D || D());
                             },
                             pickerIntention: m.Hz.PROFILE,
                             channel: n
@@ -121,13 +121,13 @@ function N(e) {
                         (0, r.jsx)(l.zx, {
                             ...e,
                             onClick: (t) => {
-                                D({ action: M }), e.onClick(t);
+                                L({ action: M }), e.onClick(t);
                             },
-                            className: a()(g.button, g.left),
+                            className: a()(S.button, S.left),
                             'aria-label': T.Z.Messages.USER_PROFILE_SEND_REACTION,
                             children: (0, r.jsx)(o.ReactionIcon, {
                                 size: 'xs',
-                                className: g.icon
+                                className: S.icon
                             })
                         })
                 })
@@ -139,18 +139,18 @@ function N(e) {
                 'aria-label': !1,
                 children: (0, r.jsx)(l.zx, {
                     onClick: () => {
-                        D({ action: P }),
+                        L({ action: P }),
                             null == R ||
                                 R({
                                     interactionType: I.P.REPLY,
                                     interactionSourceType: i
                                 });
                     },
-                    className: a()(g.button, g.right),
+                    className: a()(S.button, S.right),
                     'aria-label': T.Z.Messages.USER_PROFILE_REPLY,
                     children: (0, r.jsx)(o.ArrowAngleLeftUpIcon, {
                         size: 'xs',
-                        className: g.icon
+                        className: S.icon
                     })
                 })
             })

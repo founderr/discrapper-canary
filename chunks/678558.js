@@ -13,12 +13,12 @@ var r = n(735250),
     f = n(689938),
     h = n(330708);
 t.Z = (e) => {
-    let { analyticsLocation: t, analyticsSourceLocation: n, guild: a, buttonText: p, targetBoostedGuildTier: I, onClose: m = () => {}, closeLayer: T = () => {}, pauseAnimation: g = !1, applicationId: S, handleSubscribeModalClose: A, withHighlight: N = !1, ...O } = e,
+    let { analyticsLocation: t, analyticsSourceLocation: n, guild: a, buttonText: p, targetBoostedGuildTier: I, onClose: m = () => {}, closeLayer: T = () => {}, pauseAnimation: S = !1, applicationId: g, handleSubscribeModalClose: A, withHighlight: N = !1, ...O } = e,
         { analyticsLocations: R } = (0, u.ZP)(),
         v = (0, l.bp)() === E.IlC.POPOUT,
         [C, y] = i.useState(!1),
-        L = null != I ? Math.max((0, d.KK)(a, I), 1) : 1,
-        D = (0, d.aq)(),
+        D = null != I ? Math.max((0, d.KK)(a, I), 1) : 1,
+        L = (0, d.aq)(),
         b = async () => {
             y(!0),
                 await (0, _.u)({
@@ -26,11 +26,11 @@ t.Z = (e) => {
                     analyticsLocation: t,
                     analyticsSourceLocation: n,
                     guild: a,
-                    numberOfBoostsToAdd: L,
+                    numberOfBoostsToAdd: D,
                     onClose: m,
                     closeLayer: T,
                     inPopout: v,
-                    applicationId: S,
+                    applicationId: g,
                     handleSubscribeModalClose: A
                 }),
                 y(!1);
@@ -50,16 +50,16 @@ t.Z = (e) => {
             ]
         })),
         (O.disabled = !0)),
-    null != D)
+    null != L)
         ? (0, r.jsx)(o.Tooltip, {
-              text: D,
+              text: L,
               'aria-label': !1,
               children: (e) =>
                   (0, r.jsx)(o.ShinyButton, {
                       ...e,
                       disabled: !0,
                       size: o.Button.Sizes.SMALL,
-                      pauseAnimation: g,
+                      pauseAnimation: S,
                       ...O,
                       children: P
                   })
@@ -70,7 +70,7 @@ t.Z = (e) => {
               className: s()(O.className, { [h.buttonHighlighted]: N }),
               submitting: C,
               onClick: b,
-              pauseAnimation: g,
+              pauseAnimation: S,
               children: P
           });
 };

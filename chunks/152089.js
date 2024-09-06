@@ -20,7 +20,7 @@ var r = n(911969),
     u = n(185923);
 function c(e) {
     var t;
-    let { activeCommandOption: n, canMentionUsers: s = !0, canMentionRoles: o = !0, canMentionChannels: u = !0, canMentionEveryone: c, canMentionClyde: d = !1, useNewSlashCommands: _, canOnlyUseTextCommands: E, canSendStickers: f, hideMentionDescription: h, hidePersonalInformation: p, type: I, emojiIntention: m, editorRef: T, onSendMessage: g, onSendSticker: S, setValue: A } = e,
+    let { activeCommandOption: n, canMentionUsers: s = !0, canMentionRoles: o = !0, canMentionChannels: u = !0, canMentionEveryone: c, canMentionClyde: d = !1, useNewSlashCommands: _, canOnlyUseTextCommands: E, canSendStickers: f, hideMentionDescription: h, hidePersonalInformation: p, type: I, emojiIntention: m, editorRef: T, onSendMessage: S, onSendSticker: g, setValue: A } = e,
         N = {
             mentions: {
                 channel: l.nS.DENY,
@@ -36,8 +36,8 @@ function c(e) {
             hidePersonalInformation: !0 === p,
             chatInputType: I,
             emojiIntention: m,
-            sendMessage: g,
-            sendSticker: S,
+            sendMessage: S,
+            sendSticker: g,
             insertText: (e, t) => {
                 var n;
                 null === (n = T.current) || void 0 === n || n.insertAutocomplete(e, null != t ? t : e);
@@ -70,7 +70,7 @@ function _(e) {
         E = null;
     for (let e of o.R) {
         var f, h, p, I, m, T;
-        let g = o.W[e];
+        let S = o.W[e];
         if (e === l.eq.GIFS || e === l.eq.CHOICES) {
             if (r.commands === l.L8.OLD_BUILT_INS) {
                 if (
@@ -85,7 +85,7 @@ function _(e) {
                 ) {
                     E = {
                         type: e,
-                        typeInfo: g,
+                        typeInfo: S,
                         query: c
                     };
                     break;
@@ -102,7 +102,7 @@ function _(e) {
             )
                 return {
                     type: e,
-                    typeInfo: g,
+                    typeInfo: S,
                     query: _
                 };
         } else if (e === l.eq.STICKERS) {
@@ -118,7 +118,7 @@ function _(e) {
             )
                 return {
                     type: e,
-                    typeInfo: g,
+                    typeInfo: S,
                     query: _
                 };
         } else if (e === l.eq.COMMANDS && r.commands !== l.L8.OLD_BUILT_INS) {
@@ -134,8 +134,8 @@ function _(e) {
             ) {
                 E = {
                     type: e,
-                    typeInfo: g,
-                    query: c.substring(null !== (h = null === (f = g.sentinel) || void 0 === f ? void 0 : f.length) && void 0 !== h ? h : 0)
+                    typeInfo: S,
+                    query: c.substring(null !== (h = null === (f = S.sentinel) || void 0 === f ? void 0 : f.length) && void 0 !== h ? h : 0)
                 };
                 break;
             }
@@ -152,7 +152,7 @@ function _(e) {
             ) {
                 E = {
                     type: e,
-                    typeInfo: g,
+                    typeInfo: S,
                     query: c
                 };
                 break;
@@ -172,8 +172,8 @@ function _(e) {
             ) {
                 E = {
                     type: e,
-                    typeInfo: g,
-                    query: i.substring(null !== (I = null === (p = g.sentinel) || void 0 === p ? void 0 : p.length) && void 0 !== I ? I : 0)
+                    typeInfo: S,
+                    query: i.substring(null !== (I = null === (p = S.sentinel) || void 0 === p ? void 0 : p.length) && void 0 !== I ? I : 0)
                 };
                 break;
             }
@@ -190,8 +190,8 @@ function _(e) {
         ) {
             E = {
                 type: e,
-                typeInfo: g,
-                query: i.substring(null !== (T = null === (m = g.sentinel) || void 0 === m ? void 0 : m.length) && void 0 !== T ? T : 0)
+                typeInfo: S,
+                query: i.substring(null !== (T = null === (m = S.sentinel) || void 0 === m ? void 0 : m.length) && void 0 !== T ? T : 0)
             };
             break;
         }

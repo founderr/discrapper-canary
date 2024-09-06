@@ -29,12 +29,12 @@ function T(e) {
         I = (0, i.ZP)(),
         R = (0, c.oX)(n);
     if (null == R) return null;
-    let C = (0, r.getAvatarSpecs)(T),
-        { name: g, rarity: N } = R,
-        { color: p } = (0, c.F7)(N),
-        m = (0, a.wj)(I) ? u : E,
-        A = (C.size - C.offset - 2 * C.stroke) * 0.8,
-        f = C.size - C.stroke,
+    let g = (0, r.getAvatarSpecs)(T),
+        { name: C, rarity: N } = R,
+        { color: m } = (0, c.F7)(N),
+        p = (0, a.wj)(I) ? u : E,
+        A = (g.size - g.offset - 2 * g.stroke) * 0.8,
+        f = g.size - g.stroke,
         S = {
             width: 0.4 * A,
             height: 0.4 * A
@@ -42,8 +42,8 @@ function T(e) {
         h = {
             width: S.width + 1,
             height: S.height + 1,
-            right: C.stroke + 1,
-            bottom: C.stroke + 1,
+            right: g.stroke + 1,
+            bottom: g.stroke + 1,
             padding: 0
         };
     return (0, s.jsxs)('div', {
@@ -51,15 +51,15 @@ function T(e) {
         style: {
             width: f,
             height: f,
-            padding: C.stroke
+            padding: g.stroke
         },
-        'aria-label': ''.concat(null !== (t = g()) && void 0 !== t ? t : ''),
+        'aria-label': ''.concat(null !== (t = C()) && void 0 !== t ? t : ''),
         children: [
             (0, s.jsx)('div', {
                 className: _.trophyIconContainer,
                 children: (0, s.jsx)(r.TrophyIcon, {
                     size: 'custom',
-                    color: d ? p : (0, l.Lq)(m.trophy),
+                    color: d ? m : (0, l.Lq)(p.trophy),
                     width: A,
                     height: A
                 })
@@ -70,7 +70,7 @@ function T(e) {
                     style: h,
                     children: (0, s.jsx)(r.LockIcon, {
                         size: 'custom',
-                        color: (0, l.Lq)(m.locked),
+                        color: (0, l.Lq)(p.locked),
                         ...S
                     })
                 }),

@@ -4,8 +4,8 @@ n.d(t, {
     }
 });
 var i = n(442837),
-    a = n(355298),
-    s = n(88101),
+    s = n(355298),
+    a = n(88101),
     l = n(375954),
     r = n(699516),
     o = n(594174),
@@ -13,11 +13,11 @@ var i = n(442837),
 function u(e) {
     let t = e.isDM() && !e.isSystemDM() && !e.rawRecipients.some((e) => e.bot),
         n = t ? e.getRecipientId() : null,
-        u = (0, s.P)(e.id, 'dm_convo_starter');
+        u = (0, a.P)(e.id, 'dm_convo_starter');
     return (0, i.e7)(
-        [l.Z, a.Z, r.Z, o.default],
+        [l.Z, s.Z, r.Z, o.default],
         () => {
-            if (null != u || !t || a.Z.isMessageRequest(e.id) || (null != n && r.Z.getRelationshipType(n) === c.OGo.BLOCKED)) return !1;
+            if (null != u || !t || s.Z.isMessageRequest(e.id) || (null != n && r.Z.getRelationshipType(n) === c.OGo.BLOCKED)) return !1;
             if (null != n) {
                 let e = o.default.getUser(n);
                 if (null != e && e.hasFlag(c.xW$.PROVISIONAL_ACCOUNT)) return !1;

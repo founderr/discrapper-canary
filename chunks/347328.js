@@ -22,9 +22,9 @@ function h(e) {
             var e;
             return (null === (e = d.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === t.id;
         }),
-        g = (0, i.e7)([c.Z], () => null != c.Z.getAccount(null, E.ABu.CRUNCHYROLL));
+        S = (0, i.e7)([c.Z], () => null != c.Z.getAccount(null, E.ABu.CRUNCHYROLL));
     if (!(0, l.Z)(n) && !(0, u.gr)(h)) return null;
-    if (!g)
+    if (!S)
         return (0, r.jsx)(a.MenuItem, {
             id: 'connect-crunchyroll',
             label: f.Z.Messages.USER_ACTIVITY_CONNECT_PLATFORM.format({ platform: o.Z.get(E.ABu.CRUNCHYROLL).name }),
@@ -33,8 +33,8 @@ function h(e) {
             }
         });
     if (T || 'live' === p || !(0, u.gr)(h)) return null;
-    let S = h.extra.url;
-    return null == S || '' === S
+    let g = h.extra.url;
+    return null == g || '' === g
         ? null
         : (0, r.jsx)(a.MenuItem, {
               id: 'watch-on-crunchyroll',
@@ -42,7 +42,7 @@ function h(e) {
               action: () => {
                   null == I || I({ action: 'PRESS_WATCH_ON_CRUNCHYROLL_MENU_ITEM' });
                   let e = null;
-                  !(0, _.isDesktop)() && (e = window.open('', '_blank')), null != e ? (e.location.href = S) : window.open(S);
+                  !(0, _.isDesktop)() && (e = window.open('', '_blank')), null != e ? (e.location.href = g) : window.open(g);
               }
           });
 }

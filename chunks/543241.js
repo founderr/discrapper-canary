@@ -1,6 +1,6 @@
 n.d(t, {
     A3: function () {
-        return L;
+        return D;
     },
     C1: function () {
         return Z;
@@ -27,7 +27,7 @@ n.d(t, {
         return G;
     },
     PC: function () {
-        return D;
+        return L;
     },
     Y1: function () {
         return k;
@@ -82,8 +82,8 @@ var d = n(558217),
     m = n(176354),
     T = n(111361);
 n(709054);
-var g = n(304852),
-    S = n(199257),
+var S = n(304852),
+    g = n(199257),
     A = n(149203),
     N = n(981631),
     O = n(185923),
@@ -105,18 +105,18 @@ let y = function (e, t) {
                 autoTrackExposure: !0
             }),
             I = H(n),
-            { topEmojis: N, newlyAddedEmojis: R } = (0, S.Z)(n, e),
-            { allEmojis: v } = (0, g.Z)({
+            { topEmojis: N, newlyAddedEmojis: R } = (0, g.Z)(n, e),
+            { allEmojis: v } = (0, S.Z)({
                 topEmojis: N,
                 newlyAddedEmojis: R
             }),
             y = (0, s.e7)([l.ZP], () => l.ZP.getDisambiguatedEmojiContext(n), [n]),
-            L = (0, s.e7)([E.Z], () => {
+            D = (0, s.e7)([E.Z], () => {
                 var e;
                 return null === (e = E.Z.getGuild(n)) || void 0 === e ? void 0 : e.name;
             }),
-            D = (0, s.e7)([h.default], () => h.default.getCurrentUser()),
-            b = (0, T.I5)(D);
+            L = (0, s.e7)([h.default], () => h.default.getCurrentUser()),
+            b = (0, T.I5)(L);
         return r.useMemo(() => {
             let r = y.getGroupedCustomEmoji(),
                 s = f.ZP.getFlattenedGuildIds(),
@@ -157,7 +157,7 @@ let y = function (e, t) {
                         t.push({
                             type: A.En.TOP_GUILD_EMOJI,
                             id: r,
-                            name: C.Z.Messages.EMOJI_CATEGORY_TOP_GUILD_EMOJI.format({ guildName: L }),
+                            name: C.Z.Messages.EMOJI_CATEGORY_TOP_GUILD_EMOJI.format({ guildName: D }),
                             isNitroLocked: !1,
                             emojis: n,
                             emojisDisabled: e
@@ -197,16 +197,16 @@ let y = function (e, t) {
                     return t;
                 }, [])
             );
-        }, [y, t, n, e, b, v, L, _, p, o, a, I, i]);
+        }, [y, t, n, e, b, v, D, _, p, o, a, I, i]);
     },
-    L = (e) => {
+    D = (e) => {
         let t = (null == e ? void 0 : e.getGuildId()) != null;
         p.default.track(N.rMx.PREMIUM_PROMOTION_OPENED, {
             location_page: t ? N.ZY5.GUILD_CHANNEL : N.ZY5.DM_CHANNEL,
             location_section: null != e ? N.jXE.EMOJI_PICKER_POPOUT : N.jXE.CUSTOM_STATUS_MODAL
         });
     },
-    D = (e, t) => {
+    L = (e, t) => {
         o.ZP.trackWithMetadata(N.rMx.SEARCH_STARTED, {
             search_type: null != t && t === O.Hz.REACTION ? N.aib.EMOJI_REACTION : N.aib.EMOJI,
             location: e

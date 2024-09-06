@@ -56,8 +56,8 @@ var r = n(990547),
     I = n(812206),
     m = n(358221),
     T = n(233764),
-    g = n(375824),
-    S = n(835873),
+    S = n(375824),
+    g = n(835873),
     A = n(973616),
     N = n(314897),
     O = n(592125),
@@ -65,8 +65,8 @@ var r = n(990547),
     v = n(496675),
     C = n(594174),
     y = n(979651),
-    L = n(585483),
-    D = n(630388),
+    D = n(585483),
+    L = n(630388),
     b = n(823379),
     M = n(573261),
     P = n(595519),
@@ -96,7 +96,7 @@ function z(e, t) {
 }
 async function q(e) {
     var t, n;
-    let { channelId: r, applicationId: i, isStart: s, analyticsLocations: o, locationObject: l, embeddedActivitiesManager: u, componentId: c, commandOrigin: m, sectionName: S, source: A, partyId: N } = e,
+    let { channelId: r, applicationId: i, isStart: s, analyticsLocations: o, locationObject: l, embeddedActivitiesManager: u, componentId: c, commandOrigin: m, sectionName: g, source: A, partyId: N } = e,
         v = O.Z.getChannel(r),
         y = null !== (t = null == v ? void 0 : v.getGuildId()) && void 0 !== t ? t : void 0;
     if (null == y && !(null !== (n = null == v ? void 0 : v.isPrivate()) && void 0 !== n && n)) return !1;
@@ -155,7 +155,7 @@ async function q(e) {
                                     guild: n
                                 },
                                 commandOrigin: m,
-                                sectionName: S,
+                                sectionName: g,
                                 source: A,
                                 interactionLifecycleOptionsFactory: () => ({
                                     onSuccess: () => r(),
@@ -170,9 +170,9 @@ async function q(e) {
                                                       }
                                                   })
                                               )
-                                            : null != r && r in g.Z.ReasonCodes
-                                              ? i(new g.Z(r))
-                                              : i(new g.Z(g.Z.ReasonCodes.UNKNOWN));
+                                            : null != r && r in S.Z.ReasonCodes
+                                              ? i(new S.Z(r))
+                                              : i(new S.Z(S.Z.ReasonCodes.UNKNOWN));
                                     }
                                 })
                             });
@@ -183,7 +183,7 @@ async function q(e) {
                 n = j.Yq.includes(i),
                 a = (null == v ? void 0 : v.type) === Y.d4z.GUILD_VOICE,
                 s = I.Z.getApplication(i),
-                o = null != s && (0, D.yE)(s.flags, Y.udG.EMBEDDED),
+                o = null != s && (0, L.yE)(s.flags, Y.udG.EMBEDDED),
                 l = (0, P.l5)(v);
             if (n) {
                 if (((t = !1), !(await e()))) throw Error();
@@ -218,7 +218,7 @@ async function q(e) {
                 guildId: y,
                 applicationId: i,
                 channelId: r,
-                error: e instanceof T.Z || e instanceof d.Z || e instanceof g.Z ? e : new d.Z(e)
+                error: e instanceof T.Z || e instanceof d.Z || e instanceof S.Z ? e : new d.Z(e)
             }),
             !1
         );
@@ -232,7 +232,7 @@ async function Q(e) {
         c = C.default.getCurrentUser();
     if (null == n) return !1;
     let d = await (0, k.Z)(n, i);
-    if (null == i) return L.S.dispatch(Y.CkL.SHOW_ACTIVITIES_CHANNEL_SELECTOR, { applicationId: n }), !1;
+    if (null == i) return D.S.dispatch(Y.CkL.SHOW_ACTIVITIES_CHANNEL_SELECTOR, { applicationId: n }), !1;
     let _ = O.Z.getChannel(i);
     if (null == _ || null == c || null == d) return !1;
     let E =
@@ -248,7 +248,7 @@ async function Q(e) {
     if (E !== B.jy.CAN_LAUNCH)
         return (
             E === B.jy.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION
-                ? (0, S.w)()
+                ? (0, g.w)()
                 : E === B.jy.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS &&
                   s.Z.show({
                       title: K.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GENERIC,

@@ -1,9 +1,9 @@
 n.d(t, {
     GN: function () {
-        return S;
+        return g;
     },
     be: function () {
-        return g;
+        return S;
     },
     g4: function () {
         return m;
@@ -88,7 +88,7 @@ function T(e) {
     }
     return i;
 }
-function g(e) {
+function S(e) {
     let t = T(e);
     (p[e] = t),
         t.forEach((e) => {
@@ -99,7 +99,7 @@ function g(e) {
             });
         });
 }
-function S(e) {
+function g(e) {
     var t;
     (null !== (t = p[e]) && void 0 !== t ? t : T(e)).forEach((e) => {
         s.Z.dispatch({

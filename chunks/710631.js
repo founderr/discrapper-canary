@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return g;
     }
 }),
     n(653041),
@@ -22,12 +22,12 @@ var r = n(735250),
     I = n(594174),
     m = n(981631),
     T = n(689938);
-function g(e, t) {
+function S(e, t) {
     o.Z.ensurePrivateChannel(e).then((e) => {
         null != d.Z.getChannel(e) && u.Z.sendInvite(e, t, 'context_menu', null);
     });
 }
-function S(e) {
+function g(e) {
     let { user: t, guildId: n, onAction: o } = e,
         u = (0, a.e7)([I.default], () => I.default.getCurrentUser(), []),
         d = (0, a.Wu)(
@@ -45,14 +45,14 @@ function S(e) {
             },
             [n]
         ),
-        [S, A] = i.useState({});
+        [g, A] = i.useState({});
     return (null == u ? void 0 : u.id) === t.id || t.bot || 0 === d.length || h.Z.isBlocked(t.id)
         ? null
         : (0, r.jsx)(s.MenuItem, {
               id: 'invite-to-server',
               label: T.Z.Messages.INVITE_TO_SERVER,
               children: d.map((e) =>
-                  S[e.id]
+                  g[e.id]
                       ? (0, r.jsx)(
                             s.MenuItem,
                             {
@@ -74,12 +74,12 @@ function S(e) {
                                             if (null != n) {
                                                 if (
                                                     (A({
-                                                        ...S,
+                                                        ...g,
                                                         [e.id]: !0
                                                     }),
                                                     !f.Z.can(m.Plq.CREATE_INSTANT_INVITE, e) && null != e.vanityURLCode)
                                                 ) {
-                                                    g(t, e.vanityURLCode);
+                                                    S(t, e.vanityURLCode);
                                                     return;
                                                 }
                                                 l.Z.createInvite(
@@ -89,7 +89,7 @@ function S(e) {
                                                         unique: !0
                                                     },
                                                     'User Invite Context Menu'
-                                                ).then((e) => g(t, e.code));
+                                                ).then((e) => S(t, e.code));
                                             }
                                         })(e, t.id);
                                 }

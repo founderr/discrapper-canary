@@ -24,14 +24,14 @@ var r = n(735250),
     I = n(768581),
     m = n(888778),
     T = n(462997),
-    g = n(679168);
-let S = (e) => {
+    S = n(679168);
+let g = (e) => {
     let { size: t, stroke: n } = (0, c.getAvatarSpecs)(e);
     return t / 2 + n;
 };
 function A(e) {
     var t;
-    let { user: n, displayProfile: a, guildId: T, pendingBanner: A, children: N, className: O, avatarSize: R, avatarOffsetX: v, avatarOffsetY: C, bannerWidth: y, bannerHeight: L, themePadding: D, animateOnHover: b = !1 } = e,
+    let { user: n, displayProfile: a, guildId: T, pendingBanner: A, children: N, className: O, avatarSize: R, avatarOffsetX: v, avatarOffsetY: C, bannerWidth: y, bannerHeight: D, themePadding: L, animateOnHover: b = !1 } = e,
         M = (0, E.Dt)(),
         [P, U] = i.useState(!1),
         w = (0, l.e7)([p.Z], () => p.Z.isFocused()),
@@ -46,14 +46,14 @@ function A(e) {
         F = n.getAvatarURL(T, (0, c.getAvatarSize)(R)),
         V = (0, o._i)((0, d.ZP)(F, B, !1)),
         H = (0, _.Z)(null !== (t = null == a ? void 0 : a.primaryColor) && void 0 !== t ? t : V).hsl,
-        Z = S(R),
-        Y = L - C - D;
+        Z = g(R),
+        Y = D - C - L;
     return (0, r.jsxs)('svg', {
-        className: g.mask,
-        viewBox: '0 0 '.concat(y, ' ').concat(L),
+        className: S.mask,
+        viewBox: '0 0 '.concat(y, ' ').concat(D),
         style: {
             minWidth: y,
-            minHeight: L
+            minHeight: D
         },
         children: [
             (0, r.jsxs)('mask', {
@@ -68,7 +68,7 @@ function A(e) {
                     }),
                     (0, r.jsx)('circle', {
                         fill: 'black',
-                        cx: Z + v - D,
+                        cx: Z + v - L,
                         cy: Y,
                         r: Z
                     })
@@ -84,16 +84,16 @@ function A(e) {
                 children: [
                     N,
                     (0, r.jsxs)('div', {
-                        className: s()(g.banner, O),
+                        className: s()(S.banner, O),
                         onMouseMove: () => U(!0),
                         onMouseLeave: () => U(!1),
                         style: {
-                            height: L,
-                            minHeight: L,
+                            height: D,
+                            minHeight: D,
                             backgroundImage: null != G ? 'url('.concat(G, ')') : void 0,
                             backgroundColor: 'COMPLETE' !== k ? u.Z.unsafe_rawColors.PRIMARY_800.css : H
                         },
-                        children: [!x && (0, I.F8)(G) && (0, r.jsx)(f.Z, { className: g.gifTag }), N]
+                        children: [!x && (0, I.F8)(G) && (0, r.jsx)(f.Z, { className: S.gifTag }), N]
                     })
                 ]
             })

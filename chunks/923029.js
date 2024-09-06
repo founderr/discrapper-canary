@@ -4,8 +4,8 @@ n.d(t, {
     }
 });
 var i = n(735250),
-    a = n(470079),
-    s = n(873546),
+    s = n(470079),
+    a = n(873546),
     l = n(442837),
     r = n(481060),
     o = n(665149),
@@ -13,12 +13,12 @@ var i = n(735250),
     u = n(210887),
     d = n(914010),
     h = n(981631),
-    p = n(689938),
-    m = n(42894);
+    m = n(689938),
+    p = n(42894);
 function _(e) {
     let t,
         { channelId: _ } = e;
-    a.useEffect(() => {
+    s.useEffect(() => {
         c.Z.loadThread(_);
     });
     let f = (0, l.e7)([d.Z], () => d.Z.getGuildId()) === h.I_8,
@@ -26,19 +26,19 @@ function _(e) {
     return (
         (t = f
             ? (0, i.jsx)(r.EmptyStateText, {
-                  note: p.Z.Messages.FAVORITES_EMPTY_BODY,
-                  children: p.Z.Messages.FAVORITES_EMPTY_TITLE
+                  note: m.Z.Messages.FAVORITES_EMPTY_BODY,
+                  children: m.Z.Messages.FAVORITES_EMPTY_TITLE
               })
             : null != _
               ? (0, i.jsx)(r.Spinner, { type: r.Spinner.Type.SPINNING_CIRCLE })
               : (0, i.jsx)(r.EmptyStateText, {
-                    note: p.Z.Messages.CHANNELS_UNAVAILABLE_BODY,
-                    children: p.Z.Messages.CHANNELS_UNAVAILABLE_TITLE
+                    note: m.Z.Messages.CHANNELS_UNAVAILABLE_BODY,
+                    children: m.Z.Messages.CHANNELS_UNAVAILABLE_TITLE
                 })),
         (0, i.jsxs)('div', {
-            className: m.noChannel,
+            className: p.noChannel,
             children: [
-                s.tq && (0, i.jsx)(o.ZP, { children: (0, i.jsx)(a.Fragment, {}) }),
+                a.tq && (0, i.jsx)(o.ZP, { children: (0, i.jsx)(s.Fragment, {}) }),
                 (0, i.jsxs)(r.EmptyState, {
                     theme: E,
                     children: [

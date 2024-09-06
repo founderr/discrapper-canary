@@ -16,7 +16,7 @@ let p = new i.Z('Games'),
     I = {},
     m = 0,
     T = null;
-function g() {
+function S() {
     return null != T
         ? Promise.resolve(T)
         : (0, _.isDesktop)()
@@ -26,7 +26,7 @@ function g() {
             })
           : Promise.reject(Error('not desktop client'));
 }
-function S(e) {
+function g(e) {
     let t = {
             id: e.id,
             name: e.name,
@@ -60,7 +60,7 @@ async function N(e) {
         throw Error('No remaining launchable queries');
     let t = Date.now();
     t > m && ((m = t + 3600000), (I = {}));
-    let n = await g();
+    let n = await S();
     for (let t of e) {
         let e = I[t.id];
         if (null != e) return e;
@@ -93,10 +93,10 @@ t.Z = {
         return new Promise(O.bind(this, () => l.Z.isConnected(e)));
     },
     isLaunchable: (e) =>
-        N(S(e))
+        N(g(e))
             .then((e) => null != e)
             .catch(() => !1),
-    launch: (e) => N(S(e)).then(R),
+    launch: (e) => N(g(e)).then(R),
     launchDispatchApplication(e, t, n, i, s) {
         let { launchOptions: l, defaultLaunchOptionId: u, installPath: _, applicationId: E, branchId: f, buildId: p, shouldPatch: I } = e;
         if (null == l || null == u || null == _) throw Error("Couldn't construct launchable for ".concat(e.applicationId));
@@ -125,7 +125,7 @@ t.Z = {
     },
     removeShortcuts: (e) =>
         (0, _.isWindows)()
-            ? g().then((t) => {
+            ? S().then((t) => {
                   var n, r;
                   return null !== (r = null === (n = t.removeShortcuts) || void 0 === n ? void 0 : n.call(t, e)) && void 0 !== r && r;
               })
@@ -134,7 +134,7 @@ t.Z = {
         if (null == i || !(0, _.isWindows)()) return Promise.resolve(!1);
         let a = 'discord:///library/'.concat(r, '/launch'),
             s = ''.concat(i, '\\icon.ico');
-        return g().then((r) => {
+        return S().then((r) => {
             var i, o;
             return null !== (o = null === (i = r.createShortcuts) || void 0 === i ? void 0 : i.call(r, e, t, n, a, s)) && void 0 !== o && o;
         });
@@ -148,12 +148,12 @@ t.Z = {
         return N({ id: e }).then(R);
     },
     isProtocolRegistered: (e) =>
-        g().then((t) => {
+        S().then((t) => {
             var n, r;
             return null !== (r = null === (n = t.isProtocolSchemeRegistered) || void 0 === n ? void 0 : n.call(t, e)) && void 0 !== r && r;
         }),
     setRecentGames(e) {
-        g()
+        S()
             .then((t) => {
                 var n;
                 return null === (n = t.setRecentGames) || void 0 === n ? void 0 : n.call(t, e);

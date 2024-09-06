@@ -21,7 +21,7 @@ n.d(t, {
         return l;
     },
     X: function () {
-        return g;
+        return S;
     },
     YW: function () {
         return h;
@@ -39,7 +39,7 @@ n.d(t, {
         return R;
     },
     fY: function () {
-        return S;
+        return g;
     },
     iU: function () {
         return _;
@@ -74,8 +74,8 @@ let _ = 100,
     I = 50,
     m = 4,
     T = 7,
-    g = 5,
-    S = 13;
+    S = 5,
+    g = 13;
 function A(e) {
     if (e.options.length > 0) return !1;
     let { id: t, ...n } = N(),

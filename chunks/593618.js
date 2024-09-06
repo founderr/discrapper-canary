@@ -25,8 +25,8 @@ var r = n(735250),
     I = n(523751),
     m = n(246364),
     T = n(746916),
-    g = n(965638),
-    S = n(160404),
+    S = n(965638),
+    g = n(160404),
     A = n(41776),
     N = n(777861),
     O = n(565799),
@@ -34,8 +34,8 @@ var r = n(735250),
     v = n(517334),
     C = n(344185),
     y = n(199902),
-    L = n(77498),
-    D = n(984933),
+    D = n(77498),
+    L = n(984933),
     b = n(607744),
     M = n(158776),
     P = n(699516),
@@ -91,16 +91,16 @@ function K(e) {
             stageSpeakers: I,
             numStageListeners: m,
             streamUsersToShow: T,
-            embeddedActivitiesUsers: g,
-            gameUsers: S,
+            embeddedActivitiesUsers: S,
+            gameUsers: g,
             shouldShowGameBadge: A
         } = (function (e) {
             let t = e.id,
                 n = (0, u.Wu)(
-                    [D.ZP, C.Z],
+                    [L.ZP, C.Z],
                     () => {
-                        let e = D.ZP.getChannels(t)
-                            [D.Zb].filter((e) => {
+                        let e = L.ZP.getChannels(t)
+                            [L.Zb].filter((e) => {
                                 let { channel: t } = e;
                                 return t.type === V.d4z.GUILD_VOICE;
                             })
@@ -153,13 +153,13 @@ function K(e) {
                     },
                     [c, o, t]
                 ),
-                m = (0, u.Wu)([M.Z, L.Z], () => {
-                    let e = _.filter((e) => M.Z.getActivities(e.id, t).some((e) => (null == e ? void 0 : e.application_id) != null && null != L.Z.getDetectableGame(null == e ? void 0 : e.application_id)));
+                m = (0, u.Wu)([M.Z, D.Z], () => {
+                    let e = _.filter((e) => M.Z.getActivities(e.id, t).some((e) => (null == e ? void 0 : e.application_id) != null && null != D.Z.getDetectableGame(null == e ? void 0 : e.application_id)));
                     return c ? (0, E.Qj)(e, o) : e;
                 }),
                 T = (0, G.kM)('Guild Tooltip', !1),
-                g = T ? m.map((e) => e.id) : [],
-                S = (0, u.Wu)(
+                S = T ? m.map((e) => e.id) : [],
+                g = (0, u.Wu)(
                     [d.ZP],
                     () => {
                         let e = d.ZP.getEmbeddedActivitiesForGuild(t).flatMap((e) => Array.from(e.userIds));
@@ -170,15 +170,15 @@ function K(e) {
                 A = (0, u.Wu)(
                     [w.default],
                     () => {
-                        let e = S.map((e) => w.default.getUser(e));
+                        let e = g.map((e) => w.default.getUser(e));
                         return c ? (0, E.Qj)(e) : e;
                     },
-                    [c, S]
+                    [c, g]
                 ),
                 N = (0, u.Wu)([w.default], () => I.map((e) => w.default.getUser(e)), [I]),
-                b = _.filter((e) => !I.includes(e.id) && !S.includes(e.id) && !g.includes(e.id)),
+                b = _.filter((e) => !I.includes(e.id) && !g.includes(e.id) && !S.includes(e.id)),
                 U = c ? (0, E.Qj)(b) : b,
-                k = N.filter((e) => null != e && !S.includes(e.id)),
+                k = N.filter((e) => null != e && !g.includes(e.id)),
                 B = h.length > 0 || b.length > 0 || k.length > 0 || A.length > 0;
             return {
                 voiceUsersToShow: U,
@@ -191,7 +191,7 @@ function K(e) {
                 hasActivity: B
             };
         })(o),
-        N = j(c.GameControllerIcon, S, h),
+        N = j(c.GameControllerIcon, g, h),
         b = j(c.VoiceNormalIcon, p, h);
     let k =
             ((t = h),
@@ -230,7 +230,7 @@ function K(e) {
                       ]
                   })),
         B = j(c.ScreenArrowIcon, T, h),
-        F = j(c.ActivitiesIcon, g, h),
+        F = j(c.ActivitiesIcon, S, h),
         { isMuted: H, muteConfig: Y } = (0, u.cj)(
             [U.ZP],
             () => ({
@@ -284,8 +284,8 @@ function q(e) {
         a = (0, T.E)(t),
         o = null != a ? (0, r.jsx)(z, { guildJoinRequestStatus: a }) : null,
         l = n ? (0, r.jsx)(K, { guild: t }) : null,
-        d = (0, u.e7)([S.Z], () => S.Z.isViewingRoles(t.id)),
-        _ = (0, g.I)(t);
+        d = (0, u.e7)([g.Z], () => g.Z.isViewingRoles(t.id)),
+        _ = (0, S.I)(t);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)('div', {

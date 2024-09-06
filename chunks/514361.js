@@ -15,8 +15,8 @@ var a,
     I = n(592125),
     m = n(594174),
     T = n(74538),
-    g = n(51144),
-    S = n(47760),
+    S = n(51144),
+    g = n(47760),
     A = n(469115),
     N = n(874893);
 function O(e, t, n) {
@@ -38,10 +38,10 @@ let R = !1,
 function y() {
     R = !0;
 }
-function L() {
+function D() {
     v && (r = void 0), (C = !1), (R = !1);
 }
-let D = () => {
+let L = () => {
         v = !T.ZP.canUseClientThemes(m.default.getCurrentUser());
     },
     b = () => {
@@ -67,7 +67,7 @@ let D = () => {
     };
 class P extends (a = s.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (r = (null == e ? void 0 : e.gradientPresetId) != null ? A.qt[e.gradientPresetId] : void 0), this.waitFor(m.default, _.Z, I.Z, c.Z, h.Z), this.syncWith([m.default], D), this.syncWith([c.Z], b), this.syncWith([h.Z], M);
+        null != e && (r = (null == e ? void 0 : e.gradientPresetId) != null ? A.qt[e.gradientPresetId] : void 0), this.waitFor(m.default, _.Z, I.Z, c.Z, h.Z), this.syncWith([m.default], L), this.syncWith([c.Z], b), this.syncWith([h.Z], M);
     }
     getState() {
         return v ? {} : { gradientPresetId: null == r ? void 0 : r.id };
@@ -76,7 +76,7 @@ class P extends (a = s.ZP.PersistedStore) {
         return r;
     }
     getLinearGradient() {
-        return null == this.gradientPreset ? null : (0, S.VK)(this.gradientPreset);
+        return null == this.gradientPreset ? null : (0, g.VK)(this.gradientPreset);
     }
     get isEditorOpen() {
         return R;
@@ -125,7 +125,7 @@ O(P, 'displayName', 'ClientThemesBackgroundStore'),
             })();
         },
         CLIENT_THEMES_EDITOR_CLOSE: (e) => {
-            L();
+            D();
         },
         RESET_PREVIEW_CLIENT_THEME: (e) => {
             r = void 0;
@@ -133,7 +133,7 @@ O(P, 'displayName', 'ClientThemesBackgroundStore'),
         CHANNEL_SELECT: (e) => {
             let { channelId: t, guildId: n } = e,
                 r = m.default.getCurrentUser();
-            if (null == t || null == n || (0, u.un)(o.z.CLIENT_THEMES_COACHMARK) || !(0, g.Fc)(r)) return;
+            if (null == t || null == n || (0, u.un)(o.z.CLIENT_THEMES_COACHMARK) || !(0, S.Fc)(r)) return;
             let i = I.Z.getChannel(t);
             null != i &&
                 (0, p.zi)(i.type) &&
@@ -143,6 +143,6 @@ O(P, 'displayName', 'ClientThemesBackgroundStore'),
                 })());
         },
         LOGOUT: function () {
-            L();
+            D();
         }
     }));

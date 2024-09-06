@@ -4,25 +4,25 @@ n.d(t, {
     }
 });
 var i = n(442837),
-    a = n(872810),
-    s = n(199902),
+    s = n(872810),
+    a = n(199902),
     l = n(314897);
 function r(e, t) {
     let n = (0, i.e7)([l.default], () => l.default.getId()),
         r = (0, i.e7)(
-            [s.Z],
+            [a.Z],
             () => {
-                let t = s.Z.getCurrentUserActiveStream();
+                let t = a.Z.getCurrentUserActiveStream();
                 return null != t && t.channelId === e;
             },
             [e]
         ),
-        o = (0, i.e7)([s.Z], () => s.Z.isSelfStreamHidden(e), [e]);
+        o = (0, i.e7)([a.Z], () => a.Z.isSelfStreamHidden(e), [e]);
     return [
         (null == t || t === n) && r,
         o,
         (t) => {
-            (0, a.pR)(e, t);
+            (0, s.pR)(e, t);
         }
     ];
 }

@@ -1,12 +1,12 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return p;
     }
 }),
     n(47120);
 var i = n(735250),
-    a = n(470079),
-    s = n(481060),
+    s = n(470079),
+    a = n(481060),
     l = n(665149),
     r = n(585483),
     o = n(723170),
@@ -14,13 +14,13 @@ var i = n(735250),
     u = n(124368),
     d = n(981631),
     h = n(689938),
-    p = n(423262);
-function m(e) {
+    m = n(423262);
+function p(e) {
     let { channel: t } = e,
         n = (0, o.B)(t),
-        [m, _] = a.useState(!1),
-        f = (0, s.useRedesignIconContext)().enabled;
-    a.useEffect(() => {
+        [p, _] = s.useState(!1),
+        f = (0, a.useRedesignIconContext)().enabled;
+    s.useEffect(() => {
         let e = () => _(!0);
         return (
             r.S.subscribe(d.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e),
@@ -30,9 +30,9 @@ function m(e) {
         );
     }, []);
     let E = h.Z.Messages.NOTIFICATION_SETTINGS;
-    return (0, i.jsx)(s.Popout, {
-        shouldShow: m,
-        animation: s.Popout.Animation.NONE,
+    return (0, i.jsx)(a.Popout, {
+        shouldShow: p,
+        animation: a.Popout.Animation.NONE,
         position: 'bottom',
         align: 'right',
         autoInvert: !1,
@@ -45,15 +45,15 @@ function m(e) {
                 label: h.Z.Messages.THREAD_ACTIONS_MENU_LABEL
             }),
         children: (e, t) => {
-            let { isShown: a } = t;
+            let { isShown: s } = t;
             return (0, i.jsx)(l.ZP.Icon, {
                 ...e,
                 onClick: () => _((e) => !e),
-                tooltip: a ? null : E,
-                icon: n === u.iN.NO_MESSAGES ? s.BellSlashIcon : s.BellIcon,
-                foreground: n !== u.iN.NO_MESSAGES || f ? null : p.strikethrough,
+                tooltip: s ? null : E,
+                icon: n === u.iN.NO_MESSAGES ? a.BellSlashIcon : a.BellIcon,
+                foreground: n !== u.iN.NO_MESSAGES || f ? null : m.strikethrough,
                 'aria-label': E,
-                selected: a
+                selected: s
             });
         }
     });

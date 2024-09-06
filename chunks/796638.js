@@ -3,17 +3,17 @@ n.d(t, {
         return E;
     },
     ZP: function () {
-        return C;
+        return g;
     },
     cF: function () {
-        return p;
+        return m;
     }
 }),
     n(47120),
     n(653041);
 var i = n(735250),
-    a = n(470079),
-    s = n(392711),
+    s = n(470079),
+    a = n(392711),
     l = n(933546),
     r = n(314897),
     o = n(70956),
@@ -21,8 +21,8 @@ var i = n(735250),
     u = n(27457),
     d = n(354459),
     h = n(835894);
-let p = 112,
-    m = (16 / 9) * p + 8,
+let m = 112,
+    p = (16 / 9) * m + 8,
     _ = 10 * o.Z.Millis.SECOND;
 function f(e) {
     var t;
@@ -30,8 +30,8 @@ function f(e) {
     return e.type === d.fO.USER && e.user.id === n && (null === (t = e.voiceState) || void 0 === t ? void 0 : t.selfVideo);
 }
 function E(e, t) {
-    let [n, i] = a.useState(Date.now());
-    a.useEffect(() => {
+    let [n, i] = s.useState(Date.now());
+    s.useEffect(() => {
         let e = setTimeout(() => {
             i(Date.now());
         }, _);
@@ -39,10 +39,10 @@ function E(e, t) {
             clearTimeout(e);
         };
     }, [t]);
-    let r = a.useRef({}),
-        { visibleParticipants: o, participantTileWidth: u } = a.useMemo(() => {
+    let r = s.useRef({}),
+        { visibleParticipants: o, participantTileWidth: u } = s.useMemo(() => {
             let n = Date.now(),
-                i = (0, s.sortBy)(t, (e) =>
+                i = (0, a.sortBy)(t, (e) =>
                     (function (e) {
                         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
                         switch (e.type) {
@@ -69,22 +69,22 @@ function E(e, t) {
                         }
                     })(e, n)
                 ),
-                [a, o] = (0, s.partition)(i, d.Io),
-                u = a.findIndex(f),
+                [s, o] = (0, a.partition)(i, d.Io),
+                u = s.findIndex(f),
                 h = null;
-            -1 !== u && ((h = a[u]), a.splice(u, 1));
-            let p = null != h ? e - m - 8 : e,
-                E = Math.max(0, Math.min(Math.floor((p - 8) / 132), 12, t.length)),
-                C = Math.min((p - 8) / E - 8, m),
-                g = Math.max(0, E - o.length),
+            -1 !== u && ((h = s[u]), s.splice(u, 1));
+            let m = null != h ? e - p - 8 : e,
+                E = Math.max(0, Math.min(Math.floor((m - 8) / 132), 12, t.length)),
+                g = Math.min((m - 8) / E - 8, p),
+                C = Math.max(0, E - o.length),
                 I = o.slice(0, E),
-                x = a.slice(0, g),
-                T = Array(g);
-            if (g > 0) {
+                x = s.slice(0, C),
+                T = Array(C);
+            if (C > 0) {
                 let e = [];
                 for (let t of x) {
                     let n = r.current[t.id];
-                    null != n && n < g ? (T[n] = t) : e.push(t);
+                    null != n && n < C ? (T[n] = t) : e.push(t);
                 }
                 for (let t = 0; t < T.length; t++) {
                     if (null != T[t]) continue;
@@ -93,15 +93,15 @@ function E(e, t) {
                     T[t] = n;
                 }
             }
-            let N = T.filter(c.lm),
-                S = (0, s.keyBy)((0, s.range)(N.length), (e) => N[e].id);
-            r.current = S;
-            let v = [...I, ...N];
+            let S = T.filter(c.lm),
+                v = (0, a.keyBy)((0, a.range)(S.length), (e) => S[e].id);
+            r.current = v;
+            let N = [...I, ...S];
             return (
-                null != h && v.push(h),
+                null != h && N.push(h),
                 {
-                    visibleParticipants: v,
-                    participantTileWidth: C
+                    visibleParticipants: N,
+                    participantTileWidth: g
                 }
             );
         }, [e, t, n]);
@@ -110,8 +110,8 @@ function E(e, t) {
         participantTileWidth: u
     };
 }
-function C(e) {
-    let { participants: t, participantTileWidth: n, selectedParticipantId: a, onDoubleClick: s, onContextMenu: l, onClick: r, channel: o, inCall: c, popoutWindow: d, paused: p = !1 } = e,
+function g(e) {
+    let { participants: t, participantTileWidth: n, selectedParticipantId: s, onDoubleClick: a, onContextMenu: l, onClick: r, channel: o, inCall: c, popoutWindow: d, paused: m = !1 } = e,
         _ = null != d;
     return (0, i.jsx)('div', {
         className: h.root,
@@ -125,16 +125,16 @@ function C(e) {
                     style: t ? { flexShrink: 0 } : void 0,
                     children: (0, i.jsx)(u.ZP, {
                         participant: e,
-                        selected: a === e.id,
+                        selected: s === e.id,
                         channel: o,
                         className: h.tile,
                         fit: u.BP.COVER,
                         onClick: r,
-                        onDoubleClick: s,
+                        onDoubleClick: a,
                         onContextMenu: l,
-                        width: t ? m : n,
+                        width: t ? p : n,
                         inCall: c,
-                        paused: p,
+                        paused: m,
                         inPopout: _
                     })
                 },

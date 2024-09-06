@@ -7,13 +7,13 @@ n.d(t, {
     }
 });
 var i = n(442837),
-    a = n(592125),
-    s = n(430824),
+    s = n(592125),
+    a = n(430824),
     l = n(496675),
     r = n(981631);
 function o(e) {
-    let t = (0, i.e7)([s.Z], () => s.Z.getGuild(e.guildId)),
-        n = (0, i.e7)([a.Z], () => a.Z.getChannel(e.channelId)),
+    let t = (0, i.e7)([a.Z], () => a.Z.getGuild(e.guildId)),
+        n = (0, i.e7)([s.Z], () => s.Z.getChannel(e.channelId)),
         o = (0, i.e7)([l.Z], () => l.Z.can(r.Plq.ADMINISTRATOR, t)),
         c = (0, i.e7)([l.Z], () => l.Z.can(r.Plq.MANAGE_MESSAGES, n));
     return {

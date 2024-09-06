@@ -18,8 +18,8 @@ let o = Object.freeze({
     }
 });
 function l(e) {
-    let { sections: t, columns: n, getItemKey: l, getItemHeight: u, getSectionHeight: c, chunkSize: d = 250, getScrollerState: _, maxBufferWidth: E, itemGutter: f, removeEdgeItemGutters: h, sectionGutter: p, padding: I, paddingVertical: m, paddingHorizontal: T, dir: g } = e,
-        S = (0, a.Z)(),
+    let { sections: t, columns: n, getItemKey: l, getItemHeight: u, getSectionHeight: c, chunkSize: d = 250, getScrollerState: _, maxBufferWidth: E, itemGutter: f, removeEdgeItemGutters: h, sectionGutter: p, padding: I, paddingVertical: m, paddingHorizontal: T, dir: S } = e,
+        g = (0, a.Z)(),
         A = (0, r.useRef)(o),
         [N] = (0, r.useState)(() => new i.ZP()),
         O = _(),
@@ -28,12 +28,12 @@ function l(e) {
         {
             dirty: C,
             chunkStart: y,
-            chunkEnd: L,
-            forceUpdateOnChunkChange: D
+            chunkEnd: D,
+            forceUpdateOnChunkChange: L
         } = (0, s.Z)({
             chunkSize: d,
             getScrollerState: _,
-            forceUpdate: S
+            forceUpdate: g
         });
     return (
         (A.current = (0, r.useMemo)(
@@ -54,17 +54,17 @@ function l(e) {
                           paddingVertical: m,
                           paddingHorizontal: T,
                           marginLeft: v / 2,
-                          dir: g
+                          dir: S
                       }),
-                      N.computeVisibleSections(Math.max(0, y * d), L * d),
+                      N.computeVisibleSections(Math.max(0, y * d), D * d),
                       N.getState()),
-            [C, N, t, n, l, u, c, y, L, d, f, h, p, I, m, T, R, g]
+            [C, N, t, n, l, u, c, y, D, d, f, h, p, I, m, T, R, S]
         )),
         {
             ...A.current,
             masonryComputer: N,
-            forceUpdateOnChunkChange: D,
-            forceUpdate: S
+            forceUpdateOnChunkChange: L,
+            forceUpdate: g
         }
     );
 }

@@ -21,8 +21,8 @@ function h(e) {
         { trackUserProfileAction: p } = (0, d.KZ)(),
         { analyticsLocations: I, newestAnalyticsLocation: m } = (0, o.ZP)(s.Z.USER_PROFILE_OVERFLOW_MENU),
         T = (0, i.e7)([_.Z], () => _.Z.getUserProfile(t.id)),
-        g = null == T ? void 0 : T.application,
-        S = (0, u.Z)({
+        S = null == T ? void 0 : T.application,
+        g = (0, u.Z)({
             user: t,
             location: m,
             color: 'danger',
@@ -50,10 +50,10 @@ function h(e) {
         }),
         N = [
             [h],
-            [S, A],
+            [g, A],
             [
                 (0, l.Z)({
-                    id: null == g ? void 0 : g.id,
+                    id: null == S ? void 0 : S.id,
                     label: f.Z.Messages.COPY_ID_APP,
                     onSuccess: () =>
                         p({

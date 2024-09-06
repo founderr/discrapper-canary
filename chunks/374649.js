@@ -1,9 +1,9 @@
 n.d(t, {
     ED: function () {
-        return g;
+        return S;
     },
     Ox: function () {
-        return S;
+        return g;
     },
     hz: function () {
         return h;
@@ -151,7 +151,7 @@ function T(e) {
     let t = (0, r.useCallback)(() => p(e), [JSON.stringify(e)]);
     return m(e, t);
 }
-function g(e) {
+function S(e) {
     if ('subscriptionId' in e && null == e.subscriptionId) {
         let { subscriptionId: t, ...n } = e;
         e = n;
@@ -159,7 +159,7 @@ function g(e) {
     let t = (0, r.useCallback)(() => ('subscriptionId' in e ? h(e) : 'items' in e ? f(e) : null), [JSON.stringify(e)]);
     return m(e, t);
 }
-function S(e) {
+function g(e) {
     let t = (0, r.useCallback)(() => I(e), [JSON.stringify(e)]);
     return m(e, t);
 }

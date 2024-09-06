@@ -21,8 +21,8 @@ var r = n(735250),
     I = n(314897),
     m = n(785717),
     T = n(481046),
-    g = n(277085),
-    S = n(825801),
+    S = n(277085),
+    g = n(825801),
     A = n(215105),
     N = n(429974),
     O = n(228168),
@@ -30,9 +30,9 @@ var r = n(735250),
     v = n(209071);
 let C = 'text-sm/medium',
     y = 36,
-    L = 144;
-function D(e) {
-    let { statusActivity: t, user: a, displayProfile: h, guildId: I, channelId: T, profileType: D, hasEntered: b = !0, animate: M = !0, editEnabled: P, onInteraction: U, isInteractionSource: w, showReplyPopout: x = !1, onClose: G, setInteractionToastShown: k, setInteractionSent: B, setIsReplyInteraction: F } = e,
+    D = 144;
+function L(e) {
+    let { statusActivity: t, user: a, displayProfile: h, guildId: I, channelId: T, profileType: L, hasEntered: b = !0, animate: M = !0, editEnabled: P, onInteraction: U, isInteractionSource: w, showReplyPopout: x = !1, onClose: G, setInteractionToastShown: k, setInteractionSent: B, setIsReplyInteraction: F } = e,
         { analyticsLocations: V } = (0, f.ZP)(E.Z.PROFILE_CUSTOM_STATUS),
         { trackUserProfileAction: H } = (0, m.KZ)(),
         Z = (0, l.e7)([_.Z], () => _.Z.useReducedMotion),
@@ -49,7 +49,7 @@ function D(e) {
         en = et && !ee,
         er = et ? 1.25 : 0,
         ei = 18 + er,
-        ea = L + er,
+        ea = D + er,
         es = y + er,
         eo = et || ee,
         el = P && !eo,
@@ -57,7 +57,7 @@ function D(e) {
         [ec, ed] = i.useState(en),
         [e_, eE] = i.useState(!en),
         [ef, eh] = i.useState(!1),
-        ep = D === O.y0.FULL_SIZE ? (0, N.z)(a.id, null == h ? void 0 : h.guildId) : void 0;
+        ep = L === O.y0.FULL_SIZE ? (0, N.z)(a.id, null == h ? void 0 : h.guildId) : void 0;
     i.useLayoutEffect(() => {
         if (null == K.current || en) return;
         let e = K.current.getBoundingClientRect().height;
@@ -105,7 +105,7 @@ function D(e) {
                 });
             }
         },
-        eg = () =>
+        eS = () =>
             et
                 ? (0, r.jsx)(d.I, {
                       className: ee ? v.statusEmojiInline : v.statusEmojiOnly,
@@ -115,7 +115,7 @@ function D(e) {
                       tooltipDelay: O.vB
                   })
                 : null,
-        eS = () =>
+        eg = () =>
             ee
                 ? (0, r.jsx)(c.Text, {
                       variant: C,
@@ -132,20 +132,20 @@ function D(e) {
             return (0, r.jsxs)(o.animated.div, {
                 style: eI,
                 className: e,
-                children: [eg(), eS()]
+                children: [eS(), eg()]
             });
         },
         eN = () =>
             (0, r.jsxs)('div', {
-                className: s()(v.content, v.clamp, v.placeholderWidth, { [v.panel]: D === O.y0.PANEL }),
+                className: s()(v.content, v.clamp, v.placeholderWidth, { [v.panel]: L === O.y0.PANEL }),
                 ref: q,
-                children: [eg(), eS()]
+                children: [eS(), eg()]
             }),
         eO = () =>
             (0, r.jsxs)('div', {
-                className: s()(v.content, v.unclamp, v.placeholderWidth, v.incorporeal, { [v.panel]: D === O.y0.PANEL }),
+                className: s()(v.content, v.unclamp, v.placeholderWidth, v.incorporeal, { [v.panel]: L === O.y0.PANEL }),
                 ref: K,
-                children: [eg(), eS()]
+                children: [eS(), eg()]
             }),
         eR = () =>
             (0, r.jsxs)('div', {
@@ -184,12 +184,12 @@ function D(e) {
                 });
         },
         ey = {
-            [v.biteSize]: D === O.y0.BITE_SIZE,
-            [v.fullSize]: D === O.y0.FULL_SIZE,
-            [v.panel]: D === O.y0.PANEL
+            [v.biteSize]: L === O.y0.BITE_SIZE,
+            [v.fullSize]: L === O.y0.FULL_SIZE,
+            [v.panel]: L === O.y0.PANEL
         },
-        eL = s()(v.background, { [v.editable]: eu }),
-        eD = { [v.hoisted]: w },
+        eD = s()(v.background, { [v.editable]: eu }),
+        eL = { [v.hoisted]: w },
         eb = s()({
             [v.statusBubbleShape]: (!ee && et) || !ec,
             [v.statusBubbleSingleLineWithTextShape]: (ec && ee) || el
@@ -210,7 +210,7 @@ function D(e) {
         },
         ew = () =>
             (0, r.jsxs)(c.ClickableContainer, {
-                className: s()(v.visibleContainer, ey, eL, eD),
+                className: s()(v.visibleContainer, ey, eD, eL),
                 'aria-label': ev(),
                 focusProps: { ringClassName: eb },
                 onClick: el ? eC : void 0,
@@ -236,7 +236,7 @@ function D(e) {
                     }),
                     eo &&
                         !x &&
-                        (0, r.jsx)(S.Z, {
+                        (0, r.jsx)(g.Z, {
                             user: a,
                             sourceDetails: eU(),
                             sourceType: O.n_.STATUS,
@@ -251,7 +251,7 @@ function D(e) {
                             }
                         }),
                     eu &&
-                        (0, r.jsx)(g.Z, {
+                        (0, r.jsx)(S.Z, {
                             isVisible: ef,
                             isExpandable: e_,
                             onClose: G
@@ -277,7 +277,7 @@ function D(e) {
                         user: a,
                         guildId: I,
                         channelId: T,
-                        profileType: D,
+                        profileType: L,
                         sourceDetails: eU(),
                         sourceType: O.n_.STATUS,
                         setPopoutRef: t,
@@ -293,7 +293,7 @@ function D(e) {
                 },
                 animationPosition: 'top',
                 position: 'bottom',
-                align: D === O.y0.FULL_SIZE ? 'center' : 'left',
+                align: L === O.y0.FULL_SIZE ? 'center' : 'left',
                 spacing: 6,
                 shouldShow: x,
                 children: () => ew()
@@ -309,7 +309,7 @@ function b(e) {
         { customStatusBubbleEditEnabled: o } = (0, T.K)({ location: 'UserProfileCustomStatusBubbleWithReactReplyBar' });
     return (0, r.jsx)(f.Gt, {
         value: s,
-        children: (0, r.jsx)(D, {
+        children: (0, r.jsx)(L, {
             user: t,
             editEnabled: o && i,
             statusActivity: a,

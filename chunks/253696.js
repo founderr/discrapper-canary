@@ -30,25 +30,25 @@ function I(e) {
     var t;
     let { intention: n, containerWidth: r, rowSize: p, isBurstReaction: I, analyticsObject: m } = e,
         T = l.Z.getChannel(u.Z.getChannelId()),
-        g = null == T ? void 0 : T.getGuildId(),
-        { canSplitFrecencyList: S } = s.Z.getCurrentConfig({ location: 'trackOnEmojiPickerOpened' }, { autoTrackExposure: !0 }),
+        S = null == T ? void 0 : T.getGuildId(),
+        { canSplitFrecencyList: g } = s.Z.getCurrentConfig({ location: 'trackOnEmojiPickerOpened' }, { autoTrackExposure: !0 }),
         A = (0, o.E2)({
             location: 'trackOnEmojiPickerOpened',
             autoTrackExposure: !0
         }),
-        N = (S || A) && n === f.Hz.REACTION ? a.ZP.emojiReactionFrecencyWithoutFetchingLatest.frequently.slice() : a.ZP.emojiFrecencyWithoutFetchingLatest.frequently.slice(),
+        N = (g || A) && n === f.Hz.REACTION ? a.ZP.emojiReactionFrecencyWithoutFetchingLatest.frequently.slice() : a.ZP.emojiFrecencyWithoutFetchingLatest.frequently.slice(),
         O = null != T ? a.ZP.getDisambiguatedEmojiContext(T.getGuildId()).favoriteEmojisWithoutFetchingLatest : [],
-        R = (S || A) && n === f.Hz.REACTION ? a.ZP.emojiReactionFrecencyWithoutFetchingLatest.numFrequentlyItems : a.ZP.emojiFrecencyWithoutFetchingLatest.numFrequentlyItems,
+        R = (g || A) && n === f.Hz.REACTION ? a.ZP.emojiReactionFrecencyWithoutFetchingLatest.numFrequentlyItems : a.ZP.emojiFrecencyWithoutFetchingLatest.numFrequentlyItems,
         v = N.slice(0, R),
-        C = null != g ? a.ZP.getGuildEmoji(g) : [],
+        C = null != S ? a.ZP.getGuildEmoji(S) : [],
         y = Object.values(null !== (t = a.ZP.getDisambiguatedEmojiContext(null == T ? void 0 : T.getGuildId()).groupedCustomEmojis) && void 0 !== t ? t : {}).reduce((e, t) => (e += t.length), 0),
-        { topEmojis: L, newlyAddedEmojis: D } = (0, _._)({
+        { topEmojis: D, newlyAddedEmojis: L } = (0, _._)({
             guildId: null == T ? void 0 : T.getGuildId(),
             pickerIntention: n
         }),
         { visibleTopEmojis: b, visibleNewlyAddedEmojis: M } = (0, d.J)({
-            topEmojis: L,
-            newlyAddedEmojis: D,
+            topEmojis: D,
+            newlyAddedEmojis: L,
             rowSize: p
         });
     i.ZP.trackWithMetadata(n === f.Hz.REACTION ? E.rMx.REACTION_PICKER_OPENED : E.rMx.EXPRESSION_PICKER_OPENED, {

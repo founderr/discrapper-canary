@@ -25,8 +25,8 @@ var r,
     I = n(471445),
     m = n(511618),
     T = n(926491),
-    g = n(378233),
-    S = n(695346),
+    S = n(378233),
+    g = n(695346),
     A = n(430824),
     N = n(699516),
     O = n(594174),
@@ -34,8 +34,8 @@ var r,
     v = n(51144),
     C = n(965386),
     y = n(981631),
-    L = n(185923),
-    D = n(689938),
+    D = n(185923),
+    L = n(689938),
     b = n(664323);
 function M(e, t, n) {
     return (
@@ -253,7 +253,7 @@ M(
                                 ]
                             })
                         }),
-                        t ? null : (0, i.jsx)(C.dY, { children: D.Z.Messages.MENTION_USERS_WITH_ROLE })
+                        t ? null : (0, i.jsx)(C.dY, { children: L.Z.Messages.MENTION_USERS_WITH_ROLE })
                     ]
                 });
             }
@@ -325,7 +325,7 @@ M(
         class e extends x {
             renderContent() {
                 let { emoji: e, sentinel: t, guild: n } = this.props,
-                    r = S.Yk.getSetting(),
+                    r = g.Yk.getSetting(),
                     a =
                         null != e.id || '' !== e.url
                             ? (0, i.jsx)('img', {
@@ -336,7 +336,7 @@ M(
                                           ? R.ZP.getEmojiURL({
                                                 id: e.id,
                                                 animated: e.animated && r,
-                                                size: L.$U
+                                                size: D.$U
                                             })
                                           : e.url
                               })
@@ -390,12 +390,12 @@ M(
                 let { queryMatch: r, renderSticker: a, selected: s, sticker: o } = this.props,
                     { hovered: l } = this.state;
                 return (
-                    (0, g.jl)(o) ? (n = null === (e = T.Z.getStickerPack(o.pack_id)) || void 0 === e ? void 0 : e.name) : (0, g.J8)(o) && (n = null === (t = A.Z.getGuild(o.guild_id)) || void 0 === t ? void 0 : t.name),
+                    (0, S.jl)(o) ? (n = null === (e = T.Z.getStickerPack(o.pack_id)) || void 0 === e ? void 0 : e.name) : (0, S.J8)(o) && (n = null === (t = A.Z.getGuild(o.guild_id)) || void 0 === t ? void 0 : t.name),
                     (0, i.jsxs)(C.RX, {
                         children: [
                             (0, i.jsx)(C.Tw, { children: a(o, l || !0 === s) }),
                             (0, i.jsxs)(C.z5, {
-                                children: [(0, i.jsx)(C.BR, { children: o.name }), null != r && (0, i.jsx)(C.wL, { children: D.Z.Messages.AUTOCOMPLETE_STICKERS_QUERY_MATCH.format({ queryMatch: r }) })]
+                                children: [(0, i.jsx)(C.BR, { children: o.name }), null != r && (0, i.jsx)(C.wL, { children: L.Z.Messages.AUTOCOMPLETE_STICKERS_QUERY_MATCH.format({ queryMatch: r }) })]
                             }),
                             null != n && (0, i.jsx)(C.dY, { children: n })
                         ]

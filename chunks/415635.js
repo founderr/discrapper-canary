@@ -5,8 +5,8 @@ n.d(t, {
 }),
     n(47120);
 var i = n(735250),
-    a = n(470079),
-    s = n(772848),
+    s = n(470079),
+    a = n(772848),
     l = n(442837),
     r = n(570140),
     o = n(607070),
@@ -14,33 +14,33 @@ var i = n(735250),
     u = n(37091),
     d = n(721264),
     h = n(963838),
-    p = n(39127),
-    m = n(981631),
+    m = n(39127),
+    p = n(981631),
     _ = n(396793);
 function f(e) {
     let { channelId: t, guildId: n, userId: f, containerDimensions: E } = e,
-        C = (0, l.e7)([o.Z], () => o.Z.useReducedMotion),
-        [g, I] = a.useState([]),
-        x = g.length < 50;
-    a.useEffect(() => {
+        g = (0, l.e7)([o.Z], () => o.Z.useReducedMotion),
+        [C, I] = s.useState([]),
+        x = C.length < 50;
+    s.useEffect(() => {
         function e(e) {
             var i;
-            let { channelId: a, userId: l, emoji: r, animationType: o, animationId: p } = e;
+            let { channelId: s, userId: l, emoji: r, animationType: o, animationId: m } = e;
             if ((null != f && f !== l) || (u.Z.getEnabled() && (0, d.Z)(null !== (i = null == r ? void 0 : r.name) && void 0 !== i ? i : ''))) return;
-            let _ = null != r && null != o && null != p;
-            if (a === t && !C && x && _) {
+            let _ = null != r && null != o && null != m;
+            if (s === t && !g && x && _) {
                 let e = (0, h._r)(r),
                     i = null != r.id && !r.animated,
-                    a = {
-                        id: (0, s.Z)(),
+                    s = {
+                        id: (0, a.Z)(),
                         animationType: o,
-                        animationId: p,
+                        animationId: m,
                         shouldResize: i,
                         url: e,
                         userId: l
                     };
-                I((e) => [...e, a]),
-                    c.ZP.trackWithMetadata(m.rMx.VOICE_CHANNEL_EFFECT_VIEWED, {
+                I((e) => [...e, s]),
+                    c.ZP.trackWithMetadata(p.rMx.VOICE_CHANNEL_EFFECT_VIEWED, {
                         channel_id: t,
                         guild_id: n
                     });
@@ -52,24 +52,24 @@ function f(e) {
                 r.Z.unsubscribe('VOICE_CHANNEL_EFFECT_SEND', e);
             }
         );
-    }, [t, n, f, C, x]);
-    let T = a.useCallback((e) => {
+    }, [t, n, f, g, x]);
+    let T = s.useCallback((e) => {
         I((t) => {
             let n = [...t],
                 i = n.findIndex((t) => t.id === e);
             return n.splice(i, 1), n;
         });
     }, []);
-    return C
+    return g
         ? null
         : (0, i.jsx)('div', {
               className: _.effectsWrapper,
               style: { width: E.width },
               children: (0, i.jsx)('div', {
                   className: _.effects,
-                  children: g.map((e) =>
+                  children: C.map((e) =>
                       (0, i.jsx)(
-                          p.Z,
+                          m.Z,
                           {
                               containerDimensions: E,
                               effect: e,

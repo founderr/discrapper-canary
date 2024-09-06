@@ -13,17 +13,17 @@ var r = n(421896),
 t.Z = function (e, t, n, h, p, I) {
     var m = (0, l.Z)(e),
         T = (0, l.Z)(t),
-        g = m ? _ : (0, o.Z)(e),
-        S = T ? _ : (0, o.Z)(t);
-    (g = g == d ? E : g), (S = S == d ? E : S);
-    var A = g == E,
-        N = S == E,
-        O = g == S;
+        S = m ? _ : (0, o.Z)(e),
+        g = T ? _ : (0, o.Z)(t);
+    (S = S == d ? E : S), (g = g == d ? E : g);
+    var A = S == E,
+        N = g == E,
+        O = S == g;
     if (O && (0, u.Z)(e)) {
         if (!(0, u.Z)(t)) return !1;
         (m = !0), (A = !1);
     }
-    if (O && !A) return I || (I = new r.Z()), m || (0, c.Z)(e) ? (0, i.Z)(e, t, n, h, p, I) : (0, a.Z)(e, t, g, n, h, p, I);
+    if (O && !A) return I || (I = new r.Z()), m || (0, c.Z)(e) ? (0, i.Z)(e, t, n, h, p, I) : (0, a.Z)(e, t, S, n, h, p, I);
     if (!(1 & n)) {
         var R = A && f.call(e, '__wrapped__'),
             v = N && f.call(t, '__wrapped__');

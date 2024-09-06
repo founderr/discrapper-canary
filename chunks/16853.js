@@ -1,21 +1,21 @@
 var i = n(735250);
 n(470079);
-var a = n(481060),
-    s = n(643560);
+var s = n(481060),
+    a = n(643560);
 t.Z = (e) => {
     let { entry: t, hideEditButton: n, children: l, onRequestOpen: r, onRequestClose: o } = e;
-    return (0, i.jsx)(a.Popout, {
+    return (0, i.jsx)(s.Popout, {
         onRequestOpen: r,
         onRequestClose: o,
-        animation: a.Popout.Animation.NONE,
+        animation: s.Popout.Animation.NONE,
         position: 'bottom',
         spacing: 4,
         align: 'right',
         renderPopout: (e) => {
-            let { closePopout: a } = e;
-            return (0, i.jsx)(s.default, {
+            let { closePopout: s } = e;
+            return (0, i.jsx)(a.default, {
                 entry: t,
-                closePopout: a,
+                closePopout: s,
                 hideEditButton: n
             });
         },

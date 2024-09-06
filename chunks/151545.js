@@ -20,7 +20,7 @@ var r = n(735250),
     I = n(128277),
     m = n(981631);
 function T(e) {
-    let { user: t, currentUser: n, activity: T, className: g, onClose: S } = e,
+    let { user: t, currentUser: n, activity: T, className: S, onClose: g } = e,
         A = (0, a.e7)([f.Z, d.Z], () => {
             var e;
             return d.Z.getChannel(null === (e = f.Z.getVoiceStateForUser(t.id)) || void 0 === e ? void 0 : e.channelId);
@@ -61,8 +61,8 @@ function T(e) {
                   activity: T,
                   guild: v,
                   channel: A,
-                  className: g,
-                  onClose: S
+                  className: S,
+                  onClose: g
               })
             : (0, r.jsx)(p.Z, {
                   user: t,
@@ -71,8 +71,8 @@ function T(e) {
                   application: C,
                   guild: v,
                   channel: A,
-                  className: g,
-                  onClose: S
+                  className: S,
+                  onClose: g
               })
         : null;
 }

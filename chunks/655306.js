@@ -3,7 +3,7 @@ n.d(t, {
         return I;
     },
     ZP: function () {
-        return S;
+        return g;
     },
     ai: function () {
         return r;
@@ -40,9 +40,9 @@ function p(e, t, n) {
 let I = { any: 100 },
     m = 30 * d.Z.Millis.SECOND,
     T = 120 * d.Z.Millis.SECOND,
-    g = -1 !== (0, c.hY)();
+    S = -1 !== (0, c.hY)();
 ((i = r || (r = {})).UserSSRCUpdate = 'user-ssrc-update'), (i.Update = 'update');
-class S extends a.Z {
+class g extends a.Z {
     getWantsLevel() {
         let e = this.getVideoParticipantCount();
         return this.ladder.getMaxSinkValue(e);
@@ -254,7 +254,7 @@ class S extends a.Z {
                     var r;
                     (null === (r = i.connection) || void 0 === r ? void 0 : r.getLocalMute(e)) && (n[t] = 0);
                 }
-                return g ? i.latestWants : (null != i.connection && !(0, l.Z)(i.latestWants, n) && ((i.latestWants = n), i.emit('update', n)), n);
+                return S ? i.latestWants : (null != i.connection && !(0, l.Z)(i.latestWants, n) && ((i.latestWants = n), i.emit('update', n)), n);
             }),
             (this.incomingVideoEnabledChanged = () => {
                 this.update();

@@ -90,7 +90,7 @@ e.exports = function (e) {
                     t = {};
                 return (t.position = e.position), (t.width = l.offsetWidth), (t.height = l.offsetHeight), (t.top = e.top), (t.right = e.right), (t.bottom = e.bottom), (t.left = e.left), (t.widthCSS = e.width), (t.heightCSS = e.height), t;
             }
-            function g() {
+            function S() {
                 if ((I('storeStyle invoked.'), !i(l))) {
                     I('Aborting because element has been uninstalled');
                     return;
@@ -98,7 +98,7 @@ e.exports = function (e) {
                 var e = T();
                 i(l).style = e;
             }
-            function S(e, t, n) {
+            function g(e, t, n) {
                 (i(e).lastWidth = t), (i(e).lastHeight = n);
             }
             function A() {
@@ -162,25 +162,25 @@ e.exports = function (e) {
                 var p = u(['position: absolute', 'flex: none', 'overflow: hidden', 'z-index: -1', 'visibility: hidden'].concat(((n = -(1 + E)), (r = -(1 + f)), (a = -f), ['left: ' + (n = n ? n + 'px' : '0'), 'top: ' + (r = r ? r + 'px' : '0'), 'right: ' + (d = (d = -E) ? d + 'px' : '0'), 'bottom: ' + (a = a ? a + 'px' : '0')]))),
                     m = u(['position: absolute', 'flex: none', 'overflow: scroll', 'z-index: -1', 'visibility: hidden', 'width: 100%', 'height: 100%']),
                     T = u(['position: absolute', 'flex: none', 'overflow: scroll', 'z-index: -1', 'visibility: hidden', 'width: 100%', 'height: 100%']),
-                    g = u(['position: absolute', 'left: 0', 'top: 0']),
-                    S = u(['position: absolute', 'width: 200%', 'height: 200%']),
+                    S = u(['position: absolute', 'left: 0', 'top: 0']),
+                    g = u(['position: absolute', 'width: 200%', 'height: 200%']),
                     A = document.createElement('div'),
                     N = document.createElement('div'),
                     O = document.createElement('div'),
                     R = document.createElement('div'),
                     v = document.createElement('div'),
                     y = document.createElement('div');
-                function L() {
+                function D() {
                     var e = i(l);
                     e && e.onExpand ? e.onExpand() : I('Aborting expand scroll handler: element has been uninstalled');
                 }
-                function D() {
+                function L() {
                     var e = i(l);
                     e && e.onShrink ? e.onShrink() : I('Aborting shrink scroll handler: element has been uninstalled');
                 }
-                (A.dir = 'ltr'), (A.style.cssText = h), (A.className = o), (N.className = o), (N.style.cssText = p), (O.style.cssText = m), (R.style.cssText = g), (v.style.cssText = T), (y.style.cssText = S), O.appendChild(R), v.appendChild(y), N.appendChild(O), N.appendChild(v), A.appendChild(N), _.appendChild(A), c(O, 'scroll', L), c(v, 'scroll', D), (i(l).onExpandScroll = L), (i(l).onShrinkScroll = D);
+                (A.dir = 'ltr'), (A.style.cssText = h), (A.className = o), (N.className = o), (N.style.cssText = p), (O.style.cssText = m), (R.style.cssText = S), (v.style.cssText = T), (y.style.cssText = g), O.appendChild(R), v.appendChild(y), N.appendChild(O), N.appendChild(v), A.appendChild(N), _.appendChild(A), c(O, 'scroll', D), c(v, 'scroll', L), (i(l).onExpandScroll = D), (i(l).onShrinkScroll = L);
             }
-            function L() {
+            function D() {
                 function s(t, n, r) {
                     var i = _(t).childNodes[0],
                         a = n + 10 + A(),
@@ -192,7 +192,7 @@ e.exports = function (e) {
                         c = l.offsetHeight,
                         d = o !== i(l).lastWidth || c !== i(l).lastHeight;
                     I('Storing current size', o, c),
-                        S(l, o, c),
+                        g(l, o, c),
                         n.add(0, function () {
                             if (!!d) {
                                 if (!i(l)) {
@@ -279,13 +279,13 @@ e.exports = function (e) {
                 var f = i(l).style;
                 s(l, f.width, f.height);
             }
-            function D() {
+            function L() {
                 if ((I('finalizeDomMutation invoked.'), !i(l))) {
                     I('Aborting because element has been uninstalled');
                     return;
                 }
                 var e = i(l).style;
-                S(l, e.width, e.height), v(l, e.width, e.height);
+                g(l, e.width, e.height), v(l, e.width, e.height);
             }
             function b() {
                 d(l);
@@ -300,10 +300,10 @@ e.exports = function (e) {
                         height: e.height
                     }),
                     I('Element start size', i(l).startSize),
-                    n.add(0, g),
+                    n.add(0, S),
                     n.add(1, y),
-                    n.add(2, L),
-                    n.add(3, D),
+                    n.add(2, D),
+                    n.add(3, L),
                     n.add(4, b);
             }
             if ((I('Making detectable...'), ((p = (h = f = l).getRootNode && h.getRootNode().contains(h)), (h === h.ownerDocument.body || h.ownerDocument.body.contains(h) || p) && null !== window.getComputedStyle(f)) ? 1 : 0)) M();

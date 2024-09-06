@@ -21,8 +21,8 @@ var r = n(735250),
     I = n(501655),
     m = n(427679),
     T = n(543882),
-    g = n(592125),
-    S = n(496675),
+    S = n(592125),
+    g = n(496675),
     A = n(594174),
     N = n(979651),
     O = n(912787),
@@ -30,8 +30,8 @@ var r = n(735250),
     v = n(718582),
     C = n(177963),
     y = n(835248),
-    L = n(437431),
-    D = n(874070),
+    D = n(437431),
+    L = n(874070),
     b = n(185885),
     M = n(126134),
     P = n(981631),
@@ -90,14 +90,14 @@ function B(e) {
     var t, n;
     let { cardData: a, guildId: c, cardIndex: _ } = e,
         { category: y } = a,
-        [D, b] = i.useState(!1),
+        [L, b] = i.useState(!1),
         B = y === M.L.HANGOUT && a.streamUserIds.length > 0,
         F = (0, l.e7)([T.Z], () => (B ? T.Z.getPreviewURL(c, a.channelId, a.streamUserIds[0]) : null)),
         V = (0, l.e7)([T.Z], () => (y === M.L.HANGOUT ? T.Z.getIsPreviewLoading(c, a.channelId, a.streamUserIds[0]) : null)),
         H = y === M.L.HANGOUT && a.streamUserIds.length > 0 && null == F && !V,
-        Z = (0, l.e7)([g.Z], () => {
+        Z = (0, l.e7)([S.Z], () => {
             let e = y === M.L.HANGOUT || y === M.L.GAMING ? a.channelId : y === M.L.EVENT ? a.event.channel_id : y === M.L.EMBEDDED_ACTIVITY ? a.embeddedActivities[0].channelId : null;
-            return g.Z.getChannel(e);
+            return S.Z.getChannel(e);
         }),
         Y = (0, l.e7)([f.ZP], () => f.ZP.getActiveEventByChannel(null == Z ? void 0 : Z.id)),
         { usersToShow: j, othersCount: W } = (0, v.QO)(null !== (n = null == Z ? void 0 : Z.id) && void 0 !== n ? n : '', c),
@@ -127,7 +127,7 @@ function B(e) {
                             guildId: t,
                             users: c
                         });
-                    return e.isStage ? (0, r.jsx)(L.Z, { className: x.imageIcon }) : (0, r.jsx)(C.Z, { className: x.imageIcon });
+                    return e.isStage ? (0, r.jsx)(D.Z, { className: x.imageIcon }) : (0, r.jsx)(C.Z, { className: x.imageIcon });
                 case M.L.EMBEDDED_ACTIVITY:
                     let { embeddedActivities: h } = e;
                     if (null == h[0].applicationId)
@@ -144,7 +144,7 @@ function B(e) {
                     let { streamUserIds: i, userIds: a, channelHasVideo: s, isStage: l } = e,
                         d = l ? c : [];
                     if (l) {
-                        if (0 === d.length) return (0, r.jsx)(L.Z, { className: x.imageIcon });
+                        if (0 === d.length) return (0, r.jsx)(D.Z, { className: x.imageIcon });
                         return (0, r.jsx)(R.Z, {
                             guildId: t,
                             users: d
@@ -271,7 +271,7 @@ function B(e) {
                                 variant: 'text-xs/medium',
                                 color: 'text-secondary',
                                 className: x.ellipsis,
-                                children: null === (i = g.Z.getChannel(p)) || void 0 === i ? void 0 : i.name
+                                children: null === (i = S.Z.getChannel(p)) || void 0 === i ? void 0 : i.name
                             })
                         ]
                     });
@@ -279,8 +279,8 @@ function B(e) {
                     let { event: I } = e,
                         m = (0, v.NZ)(I),
                         T = null == m ? void 0 : m.IconComponent,
-                        S = null == m ? void 0 : m.locationName;
-                    if (null != T && null != S)
+                        g = null == m ? void 0 : m.locationName;
+                    if (null != T && null != g)
                         return (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsx)(T, { className: x.categoryIcon }),
@@ -288,7 +288,7 @@ function B(e) {
                                     variant: 'text-xs/medium',
                                     color: 'text-secondary',
                                     className: x.ellipsis,
-                                    children: S
+                                    children: g
                                 }),
                                 null != d &&
                                     d > 0 &&
@@ -331,7 +331,7 @@ function B(e) {
                                 variant: 'text-xs/medium',
                                 color: 'text-secondary',
                                 className: x.ellipsis,
-                                children: null === (a = g.Z.getChannel(A[0].channelId)) || void 0 === a ? void 0 : a.name
+                                children: null === (a = S.Z.getChannel(A[0].channelId)) || void 0 === a ? void 0 : a.name
                             })
                         ]
                     });
@@ -353,7 +353,7 @@ function B(e) {
                                           variant: 'text-xs/medium',
                                           color: 'text-secondary',
                                           className: x.ellipsis,
-                                          children: null === (s = g.Z.getChannel(t)) || void 0 === s ? void 0 : s.name
+                                          children: null === (s = S.Z.getChannel(t)) || void 0 === s ? void 0 : s.name
                                       }),
                                       E &&
                                           null != n &&
@@ -461,7 +461,7 @@ function B(e) {
             if (null == (s = o ? e.event.channel_id : a === M.L.EMBEDDED_ACTIVITY ? e.embeddedActivities[0].channelId : e.channelId) && !o) return;
             let l = null != s && N.Z.isInChannel(s),
                 c = o && (e.event.entity_type === U.WX.EXTERNAL || e.event.entity_type === U.WX.NONE) ? w.Z.Messages.VIEW : l ? w.Z.Messages.GUILD_POPOUT_JOINED : w.Z.Messages.JOIN,
-                d = (null === (i = g.Z.getChannel(s)) || void 0 === i ? void 0 : i.isGuildVocal()) && !S.Z.can(P.Plq.CONNECT, g.Z.getChannel(s)),
+                d = (null === (i = S.Z.getChannel(s)) || void 0 === i ? void 0 : i.isGuildVocal()) && !g.Z.can(P.Plq.CONNECT, S.Z.getChannel(s)),
                 _ = (0, v.DE)(e, t),
                 E = (0, r.jsxs)(u.Button, {
                     size: u.Button.Sizes.MIN,
@@ -558,13 +558,13 @@ function B(e) {
                                     variant: 'text-xs/medium',
                                     color: 'text-secondary',
                                     className: x.ellipsis,
-                                    children: null === (t = g.Z.getChannel(a.channelId)) || void 0 === t ? void 0 : t.name
+                                    children: null === (t = S.Z.getChannel(a.channelId)) || void 0 === t ? void 0 : t.name
                                 })
                             ]
                         })
                 ]
             }),
-            D && ee
+            L && ee
         ]
     });
 }

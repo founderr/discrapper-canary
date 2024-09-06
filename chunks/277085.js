@@ -31,7 +31,7 @@ function p(e) {
         { analyticsLocations: p } = (0, u.ZP)(),
         { trackUserProfileAction: I } = (0, _.KZ)(),
         [m, T] = (0, s.Wu)([l.Z], () => [l.Z.useReducedMotion, l.Z.keyboardModeEnabled]),
-        g = !n || m || T ? 0 : 300;
+        S = !n || m || T ? 0 : 300;
     return (0, r.jsxs)(c.ZP, {
         className: a()(f.popover, {
             [f.visible]: t,
@@ -41,7 +41,7 @@ function p(e) {
             (0, r.jsx)(o.TooltipContainer, {
                 text: E.Z.Messages.EDIT,
                 shouldShow: t,
-                delay: g,
+                delay: S,
                 'aria-label': !1,
                 children: (0, r.jsx)(c.zx, {
                     className: a()(f.button, f.left),
@@ -58,7 +58,7 @@ function p(e) {
             (0, r.jsx)(o.TooltipContainer, {
                 text: E.Z.Messages.CLEAR,
                 shouldShow: t,
-                delay: g,
+                delay: S,
                 'aria-label': !1,
                 children: (0, r.jsx)(c.zx, {
                     className: a()(f.button, f.right),

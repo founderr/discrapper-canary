@@ -16,22 +16,22 @@ var a = n(120356),
 t.Z = function (e) {
     let { localizedPricingPromo: t, smallGap: n } = e,
         a = t.countryCode,
-        C = (0, i.e7)([o.default], () => o.default.locale);
+        g = (0, i.e7)([o.default], () => o.default.locale);
     (0, _.U)(I.jXE.SETTINGS_PREMIUM_BANNER, a);
-    let g = (0, i.e7)([c.ZP], () => c.ZP.getPremiumTypeSubscription()),
-        { localizedPricingBannerHeader: N, localizedPricingBannerBody: p } = (0, d.vB)({
+    let C = (0, i.e7)([c.ZP], () => c.ZP.getPremiumTypeSubscription()),
+        { localizedPricingBannerHeader: N, localizedPricingBannerBody: m } = (0, d.vB)({
             localizedPricingPromo: t,
-            subscription: g,
-            userLocale: C
+            subscription: C,
+            userLocale: g
         }),
-        m = a.toLowerCase() + 'Banner';
+        p = a.toLowerCase() + 'Banner';
     return (0, s.jsxs)('div', {
         className: r()(R.bannerContainer, {
             [R.smallGap]: n,
             [R.bigGap]: !n
         }),
         children: [
-            (0, s.jsx)('div', { className: r()(R[m], R.bannerImageContainer) }),
+            (0, s.jsx)('div', { className: r()(R[p], R.bannerImageContainer) }),
             (0, s.jsx)(l.Heading, {
                 className: R.bannerHeading,
                 variant: 'heading-xl/semibold',
@@ -43,7 +43,7 @@ t.Z = function (e) {
                     color: 'none',
                     variant: 'text-md/normal',
                     className: R.bannerBody,
-                    children: p
+                    children: m
                 })
             }),
             (0, s.jsxs)('div', {

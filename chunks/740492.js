@@ -29,7 +29,7 @@ function p(e, t, n) {
 let I = (window.innerWidth - f.PrS) / 2,
     m = null,
     T = {};
-class g extends (o = c.ZP.DeviceSettingsStore) {
+class S extends (o = c.ZP.DeviceSettingsStore) {
     initialize(e) {
         var t;
         T = null != e ? e : {};
@@ -152,15 +152,15 @@ class g extends (o = c.ZP.DeviceSettingsStore) {
         return null !== (e = T.swipeToReply) && void 0 !== e && e;
     }
 }
-p(g, 'displayName', 'UnsyncedUserSettingsStore'),
-    p(g, 'persistKey', 'UnsyncedUserSettingsStore'),
-    p(g, 'migrations', [
+p(S, 'displayName', 'UnsyncedUserSettingsStore'),
+    p(S, 'persistKey', 'UnsyncedUserSettingsStore'),
+    p(S, 'migrations', [
         () => {
             let e = d.K.get('UserSettingsStore');
             return d.K.remove('UserSettingsStore'), u().pick(e, 'dataSavingMode', 'videoUploadQuality', 'lowQualityImageMode', 'useSystemTheme', 'expressionPickerWidth', 'disableVoiceChannelChangeAlert', 'disableHideSelfStreamAndVideoConfirmationAlert', 'pushUpsellDismissed', 'disableEmbeddedActivityPopOutAlert', 'disableActivityHardwareAccelerationPrompt', 'disableInviteWithTextChannelActivityLaunch', 'disableActivityHostLeftNitroUpsell', 'disableCallUserConfirmationPrompt', 'disableApplicationSubscriptionCancellationSurvey', 'enableAndroidChatListAnimations');
         }
     ]),
-    (t.ZP = new g(_.Z, {
+    (t.ZP = new S(_.Z, {
         UNSYNCED_USER_SETTINGS_UPDATE: function (e) {
             T = {
                 ...T,

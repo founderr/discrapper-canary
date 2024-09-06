@@ -1,6 +1,6 @@
 n.d(t, {
     T: function () {
-        return g;
+        return S;
     },
     v: function () {
         return T;
@@ -29,7 +29,7 @@ var r = n(735250),
     m = n(837244);
 function T(e) {
     var t;
-    let { navId: n, variant: a = 'flexible', hideScroller: o = !1, className: _, children: T, onClose: g, onSelect: A } = e,
+    let { navId: n, variant: a = 'flexible', hideScroller: o = !1, className: _, children: T, onClose: S, onSelect: A } = e,
         N = (function e(t) {
             return (function e(t) {
                 return null == t
@@ -157,14 +157,14 @@ function T(e) {
             navId: n,
             items: R.current,
             initialFocusPath: f.Z.keyboardModeEnabled && null != v ? [v] : [],
-            closeMenu: g
+            closeMenu: S
         });
     i.useEffect(() => {
         C.isUsingKeyboardNavigation ? !f.Z.keyboardModeEnabled && (0, E.Qj)() : f.Z.keyboardModeEnabled && (0, E.rf)();
     }, [C.isUsingKeyboardNavigation]);
     let y = i.useRef(null);
     (0, c.T)(y);
-    let L = o ? d.u2 : d.zJ;
+    let D = o ? d.u2 : d.zJ;
     return (0, r.jsx)(p.r.Provider, {
         value: A,
         children: (0, r.jsx)('div', {
@@ -172,17 +172,17 @@ function T(e) {
             ...C.getContainerProps(),
             ref: y,
             'aria-label': e['aria-label'],
-            children: (0, r.jsxs)(L, {
+            children: (0, r.jsxs)(D, {
                 className: m.scroller,
                 children: [
                     0 === N.length &&
                         (0, r.jsx)(I.ck, {
                             disabled: !0,
-                            label: () => (0, r.jsx)(S, {}),
+                            label: () => (0, r.jsx)(g, {}),
                             menuItemProps: C.getItemProps({ path: ['empty'] }),
                             isFocused: !1,
                             onFocus: () => {},
-                            onClose: g
+                            onClose: S
                         }),
                     N.length > 0 &&
                         (function e(t, n, i, a) {
@@ -365,19 +365,19 @@ function T(e) {
                                 }
                                 return t;
                             }, []);
-                        })(N, C, [], g)
+                        })(N, C, [], S)
                 ]
             })
         })
     });
 }
-function g() {
+function S() {
     return (0, r.jsx)('div', {
         className: s()(m.menu, m.loader, m.flexible),
         children: (0, r.jsx)(_.$, {})
     });
 }
-function S() {
+function g() {
     let e = '\u266B (つ\uFF61\u25D5‿‿\u25D5\uFF61)つ \u266A',
         [t, n] = i.useState(e);
     return (

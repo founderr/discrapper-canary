@@ -38,8 +38,8 @@ function f(e) {
         secondaryButtonProps: I = { color: d.Button.Colors.BRAND_INVERTED },
         onComponentMount: m,
         asset: T,
-        markAsDismissed: g,
-        caretPosition: S = 'caretTopCenter',
+        markAsDismissed: S,
+        caretPosition: g = 'caretTopCenter',
         buttonLayout: A = 0
     } = e;
     l.useEffect(() => {
@@ -47,7 +47,7 @@ function f(e) {
     }, []);
     let N = null != u;
     return (0, o.jsxs)('div', {
-        className: c()(t, E.upsellTooltipWrapper, E[S]),
+        className: c()(t, E.upsellTooltipWrapper, E[g]),
         children: [
             T,
             null == n
@@ -75,7 +75,7 @@ function f(e) {
                                     ...I,
                                     fullWidth: 1 === A,
                                     onClick: () => {
-                                        null == h || h(), null == g || g(_.L.SECONDARY);
+                                        null == h || h(), null == S || S(_.L.SECONDARY);
                                     },
                                     children: u
                                 })
@@ -86,7 +86,7 @@ function f(e) {
                                     ...p,
                                     fullWidth: !N || 1 === A,
                                     onClick: (e) => {
-                                        f(e), null == g || g(_.L.PRIMARY);
+                                        f(e), null == S || S(_.L.PRIMARY);
                                     },
                                     children: s
                                 })

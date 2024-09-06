@@ -15,13 +15,13 @@ let f = new Map(),
     I = h,
     m = !1,
     T = new Set();
-let g = {},
-    S = () => {
-        (p = f), (I = h), (i = void 0), (m = !1), (T = new Set()), (r = void 0), (g = {});
+let S = {},
+    g = () => {
+        (p = f), (I = h), (i = void 0), (m = !1), (T = new Set()), (r = void 0), (S = {});
     };
 class A extends (a = c.ZP.Store) {
     initialize() {
-        this.syncWith([_.default], S);
+        this.syncWith([_.default], g);
     }
     get isFetchingCategories() {
         return m;
@@ -36,7 +36,7 @@ class A extends (a = c.ZP.Store) {
         return i;
     }
     get lastFetchOptions() {
-        return g;
+        return S;
     }
     get categories() {
         return p;
@@ -66,7 +66,7 @@ class A extends (a = c.ZP.Store) {
         : (s[o] = l),
     (t.Z = new A(d.Z, {
         COLLECTIBLES_CATEGORIES_FETCH: (e) => {
-            (m = !0), (r = void 0), (g = e.options);
+            (m = !0), (r = void 0), (S = e.options);
         },
         COLLECTIBLES_CATEGORIES_FETCH_SUCCESS: (e) => {
             0 === e.categories.length ? ((p = f), (I = h)) : !(0, u.isEqual)([...p.values()], e.categories) && ((p = new Map(e.categories.map((e) => [e.skuId, e]))), (I = new Map((0, E.Cs)(p).map((e) => [e.skuId, e])))), (i = Date.now()), (m = !1), (r = void 0);
@@ -87,5 +87,5 @@ class A extends (a = c.ZP.Store) {
             let { skuId: t, error: n } = e;
             (T = new Set(T)).delete(t), (r = n);
         },
-        LOGOUT: S
+        LOGOUT: g
     }));

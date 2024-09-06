@@ -15,7 +15,7 @@ n.d(t, {
         return c;
     },
     L1: function () {
-        return S;
+        return g;
     },
     Od: function () {
         return N;
@@ -27,7 +27,7 @@ n.d(t, {
         return v;
     },
     d9: function () {
-        return g;
+        return S;
     },
     fv: function () {
         return f;
@@ -93,11 +93,11 @@ var r = n(686942),
     T = function (e, t) {
         return (t = t || e), new Date(Date.UTC(e.getUTCFullYear(), e.getUTCMonth(), e.getUTCDate(), t.getHours(), t.getMinutes(), t.getSeconds(), t.getMilliseconds()));
     },
-    g = function (e) {
+    S = function (e) {
         return new Date(e.getTime());
     },
-    S = function (e) {
-        for (var t = [], n = 0; n < e.length; n++) t.push(g(e[n]));
+    g = function (e) {
+        for (var t = [], n = 0; n < e.length; n++) t.push(S(e[n]));
         return t;
     },
     A = function (e) {

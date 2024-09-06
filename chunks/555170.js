@@ -19,8 +19,8 @@ var f = n(443551),
     I = n(531478).codes,
     m = I.ERR_INVALID_ARG_TYPE,
     T = I.ERR_STREAM_PUSH_AFTER_EOF,
-    g = I.ERR_METHOD_NOT_IMPLEMENTED,
-    S = I.ERR_STREAM_UNSHIFT_AFTER_END_EVENT;
+    S = I.ERR_METHOD_NOT_IMPLEMENTED,
+    g = I.ERR_STREAM_UNSHIFT_AFTER_END_EVENT;
 n(689118)(R, c);
 var A = h.errorOrDestroy,
     N = ['error', 'close', 'destroy', 'pause', 'resume'];
@@ -45,7 +45,7 @@ function v(e, t, n, r, a) {
                         var n = t.decoder.end();
                         n && n.length && (t.buffer.push(n), (t.length += t.objectMode ? 1 : n.length));
                     }
-                    (t.ended = !0), t.sync ? L(e) : ((t.needReadable = !1), !t.emittedReadable && ((t.emittedReadable = !0), D(e)));
+                    (t.ended = !0), t.sync ? D(e) : ((t.needReadable = !1), !t.emittedReadable && ((t.emittedReadable = !0), L(e)));
                 }
             })(e, l);
     else if (
@@ -62,7 +62,7 @@ function v(e, t, n, r, a) {
         if ('string' != typeof t && !l.objectMode && Object.getPrototypeOf(t) !== d.prototype) {
             (s = t), (t = d.from(s));
         }
-        if (r) l.endEmitted ? A(e, new S()) : C(e, l, t, !0);
+        if (r) l.endEmitted ? A(e, new g()) : C(e, l, t, !0);
         else if (l.ended) A(e, new T());
         else {
             if (l.destroyed) return !1;
@@ -72,7 +72,7 @@ function v(e, t, n, r, a) {
     return !l.ended && (l.length < l.highWaterMark || 0 === l.length);
 }
 function C(e, t, n, r) {
-    t.flowing && 0 === t.length && !t.sync ? ((t.awaitDrain = 0), e.emit('data', n)) : ((t.length += t.objectMode ? 1 : n.length), r ? t.buffer.unshift(n) : t.buffer.push(n), t.needReadable && L(e)), b(e, t);
+    t.flowing && 0 === t.length && !t.sync ? ((t.awaitDrain = 0), e.emit('data', n)) : ((t.length += t.objectMode ? 1 : n.length), r ? t.buffer.unshift(n) : t.buffer.push(n), t.needReadable && D(e)), b(e, t);
 }
 Object.defineProperty(R.prototype, 'destroyed', {
     enumerable: !1,
@@ -121,16 +121,16 @@ R.prototype.read = function (e) {
     var t,
         n = this._readableState,
         r = e;
-    if ((0 !== e && (n.emittedReadable = !1), 0 === e && n.needReadable && ((0 !== n.highWaterMark ? n.length >= n.highWaterMark : n.length > 0) || n.ended))) return i('read: emitReadable', n.length, n.ended), 0 === n.length && n.ended ? k(this) : L(this), null;
+    if ((0 !== e && (n.emittedReadable = !1), 0 === e && n.needReadable && ((0 !== n.highWaterMark ? n.length >= n.highWaterMark : n.length > 0) || n.ended))) return i('read: emitReadable', n.length, n.ended), 0 === n.length && n.ended ? k(this) : D(this), null;
     if (0 === (e = y(e, n)) && n.ended) return 0 === n.length && k(this), null;
     var a = n.needReadable;
     return i('need readable', a), (0 === n.length || n.length - e < n.highWaterMark) && i('length less than watermark', (a = !0)), n.ended || n.reading ? i('reading or ended', (a = !1)) : a && (i('do read'), (n.reading = !0), (n.sync = !0), 0 === n.length && (n.needReadable = !0), this._read(n.highWaterMark), (n.sync = !1), !n.reading && (e = y(r, n))), null === (t = e > 0 ? G(e, n) : null) ? ((n.needReadable = n.length <= n.highWaterMark), (e = 0)) : ((n.length -= e), (n.awaitDrain = 0)), 0 === n.length && (!n.ended && (n.needReadable = !0), r !== e && n.ended && k(this)), null !== t && this.emit('data', t), t;
 };
-function L(e) {
-    var t = e._readableState;
-    i('emitReadable', t.needReadable, t.emittedReadable), (t.needReadable = !1), !t.emittedReadable && (i('emitReadable', t.flowing), (t.emittedReadable = !0), l.nextTick(D, e));
-}
 function D(e) {
+    var t = e._readableState;
+    i('emitReadable', t.needReadable, t.emittedReadable), (t.needReadable = !1), !t.emittedReadable && (i('emitReadable', t.flowing), (t.emittedReadable = !0), l.nextTick(L, e));
+}
+function L(e) {
     var t = e._readableState;
     i('emitReadable_', t.destroyed, t.length, t.ended), !t.destroyed && (t.length || t.ended) && (e.emit('readable'), (t.emittedReadable = !1)), (t.needReadable = !t.flowing && !t.ended && t.length <= t.highWaterMark), x(e);
 }
@@ -145,7 +145,7 @@ function M(e, t) {
     t.readingMore = !1;
 }
 (R.prototype._read = function (e) {
-    A(this, new g('_read()'));
+    A(this, new S('_read()'));
 }),
     (R.prototype.pipe = function (e, t) {
         var n = this,
@@ -239,7 +239,7 @@ function U(e) {
     (R.prototype.on = function (e, t) {
         var n = c.prototype.on.call(this, e, t),
             r = this._readableState;
-        return 'data' === e ? ((r.readableListening = this.listenerCount('readable') > 0), !1 !== r.flowing && this.resume()) : 'readable' === e && !r.endEmitted && !r.readableListening && ((r.readableListening = r.needReadable = !0), (r.flowing = !1), (r.emittedReadable = !1), i('on readable', r.length, r.reading), r.length ? L(this) : !r.reading && l.nextTick(U, this)), n;
+        return 'data' === e ? ((r.readableListening = this.listenerCount('readable') > 0), !1 !== r.flowing && this.resume()) : 'readable' === e && !r.endEmitted && !r.readableListening && ((r.readableListening = r.needReadable = !0), (r.flowing = !1), (r.emittedReadable = !1), i('on readable', r.length, r.reading), r.length ? D(this) : !r.reading && l.nextTick(U, this)), n;
     }),
     (R.prototype.addListener = R.prototype.on),
     (R.prototype.removeListener = function (e, t) {

@@ -3,7 +3,7 @@ n.d(t, {
         return l.J;
     },
     Jt: function () {
-        return L;
+        return D;
     },
     K0: function () {
         return R;
@@ -211,14 +211,14 @@ function m(e, t, n) {
     });
 }
 let T = m.bind(null, 'get'),
-    g = m.bind(null, 'post'),
-    S = m.bind(null, 'put'),
+    S = m.bind(null, 'post'),
+    g = m.bind(null, 'put'),
     A = m.bind(null, 'patch'),
     N = m.bind(null, 'del'),
     O = {
         get: T,
-        post: g,
-        put: S,
+        post: S,
+        put: g,
         patch: A,
         del: N
     };
@@ -231,7 +231,7 @@ if (n.g.isServerRendering) {
             body: null,
             text: ''
         });
-    (T = e), (g = e), (S = e), (A = e), (N = e);
+    (T = e), (S = e), (g = e), (A = e), (N = e);
 }
 function R() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
@@ -242,6 +242,6 @@ function C(e) {
     v = e;
 }
 let y = () => Promise.resolve();
-function L(e) {
+function D(e) {
     y = e;
 }

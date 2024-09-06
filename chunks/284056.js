@@ -18,8 +18,8 @@ var s = n(735250),
     T = n(19780),
     I = n(626135),
     R = n(981631),
-    C = n(689938),
-    g = n(610781);
+    g = n(689938),
+    C = n(610781);
 function N(e, t, n) {
     return (
         t in e
@@ -33,7 +33,7 @@ function N(e, t, n) {
         e
     );
 }
-class p extends a.PureComponent {
+class m extends a.PureComponent {
     componentDidMount() {
         this._initTimeout.start(1000, this.setupVoiceActivity);
     }
@@ -81,7 +81,7 @@ class p extends a.PureComponent {
         let { captionVoice: e, captionNoVoice: t } = this.props,
             { isMicTesting: n, isDetectingInput: a } = this.state;
         return (0, s.jsx)(d.FormText, {
-            className: g.micTestCaption,
+            className: C.micTestCaption,
             type: d.FormText.Types.DESCRIPTION,
             children: n ? (a ? e : t) : null
         });
@@ -89,25 +89,25 @@ class p extends a.PureComponent {
     render() {
         let { isVoiceConnected: e, title: t, description: n, notchBackground: a, buttonTest: r, buttonStop: i, buttonClassName: l, buttonColor: o, isDeafened: c } = this.props,
             { isMicTesting: _, volume: E } = this.state,
-            T = e && !_ ? C.Z.Messages.MIC_TEST_VOICE_CHANNEL_WARNING : null;
+            T = e && !_ ? g.Z.Messages.MIC_TEST_VOICE_CHANNEL_WARNING : null;
         return (
             _ && e && !c && this._micTestStop(),
             (0, s.jsxs)('div', {
-                className: g.container,
+                className: C.container,
                 children: [
                     (0, s.jsx)(d.FormTitle, {
                         tag: d.FormTitleTags.H5,
-                        className: g.title,
+                        className: C.title,
                         children: t
                     }),
                     null != n &&
                         (0, s.jsx)(d.FormText, {
                             type: d.FormText.Types.DESCRIPTION,
-                            className: g.description,
+                            className: C.description,
                             children: n
                         }),
                     (0, s.jsxs)('div', {
-                        className: g.micTest,
+                        className: C.micTest,
                         children: [
                             (0, s.jsx)(d.Tooltip, {
                                 text: T,
@@ -197,4 +197,4 @@ t.Z = l.ZP.connectStores([T.Z, E.Z], () => {
         inputDeviceName: null != n ? n.name : '',
         outputDeviceName: null != r ? r.name : ''
     };
-})(p);
+})(m);

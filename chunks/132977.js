@@ -1,9 +1,9 @@
 n.d(t, {
     ZX: function () {
-        return g;
+        return S;
     },
     gt: function () {
-        return S;
+        return g;
     },
     rH: function () {
         return o;
@@ -33,7 +33,7 @@ let m = {
         default: I.shineInnerDefault,
         small: I.shineInnerSmall
     };
-class g extends (l = c.PureComponent) {
+class S extends (l = c.PureComponent) {
     render() {
         let { className: e, shineSize: t, shinePaused: n, ...r } = this.props;
         return (0, u.jsx)(E.Z.div, {
@@ -49,7 +49,7 @@ class g extends (l = c.PureComponent) {
     }
 }
 (s = { shineSize: 'default' }),
-    (a = 'defaultProps') in (i = g)
+    (a = 'defaultProps') in (i = S)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -57,7 +57,7 @@ class g extends (l = c.PureComponent) {
               writable: !0
           })
         : (i[a] = s);
-let S = (e) => {
+let g = (e) => {
     let { children: t, className: n, disabled: r, submitting: i, pauseAnimation: a, shineSize: s = 'default', shinePaused: o, buttonShineClassName: l, onlyShineOnHover: d, ...E } = e,
         p = c.createRef(),
         m = (0, h.Z)(p),
@@ -71,7 +71,7 @@ let S = (e) => {
         children: [
             t,
             T
-                ? (0, u.jsx)(g, {
+                ? (0, u.jsx)(S, {
                       shinePaused: o,
                       className: _()(I.buttonShine, d ? I.onlyShineOnHover : void 0, l),
                       shineSize: s
@@ -80,4 +80,4 @@ let S = (e) => {
         ]
     });
 };
-S.ShineSizes = o;
+g.ShineSizes = o;

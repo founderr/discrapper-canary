@@ -1,100 +1,100 @@
-t.d(n, {
+n.d(t, {
     SO: function () {
-        return I;
+        return v;
     }
 }),
-    t(653041),
-    t(512722);
-var a = t(913527),
-    l = t.n(a),
-    i = t(705512);
-t(812206);
-var r = t(55000);
-t(220082);
-var s = t(693824),
-    o = t(690725);
-t(706454), t(594174);
-var u = t(70956),
-    c = t(709054),
-    d = t(561308);
-t(206295);
-var _ = t(737583);
-t(438226);
-var m = t(169040),
-    E = t(689938);
-let T = (e, n) => ({
+    n(653041),
+    n(512722);
+var l = n(913527),
+    a = n.n(l),
+    i = n(705512);
+n(812206);
+var r = n(55000);
+n(220082);
+var s = n(693824),
+    o = n(690725);
+n(706454), n(594174);
+var u = n(70956),
+    c = n(709054),
+    d = n(561308);
+n(206295);
+var h = n(737583);
+n(438226);
+var m = n(169040),
+    x = n(689938);
+let E = (e, t) => ({
         AvatarImage1: e[0],
         ...(null != e[1] && { AvatarImage2: e[1] }),
         ...(null != e[2] && { AvatarImage3: e[2] }),
-        ...(null != n && { ApplicationImage: n })
+        ...(null != t && { ApplicationImage: t })
     }),
-    h = (e, n) => {
-        let t = [
+    _ = (e, t) => {
+        let n = [
                 {
                     iconPath: m.NM,
-                    text: n
+                    text: t
                 }
             ],
-            a = c.default.extractTimestamp(e.extra.application_id);
+            l = c.default.extractTimestamp(e.extra.application_id);
         if (
-            (7 >= l()().diff(l()(a), 'days') &&
-                t.push({
+            (7 >= a()().diff(a()(l), 'days') &&
+                n.push({
                     iconPath: m.As,
-                    text: E.Z.Messages.MEMBER_LIST_CONTENT_FEED_NEW_RELEASE
+                    text: x.Z.Messages.MEMBER_LIST_CONTENT_FEED_NEW_RELEASE
                 }),
             (0, d.Ol)(e) &&
-                t.push({
+                n.push({
                     iconPath: m.fO,
-                    text: E.Z.Messages.MEMBER_LIST_CONTENT_FEED_NEW_PLAYER
+                    text: x.Z.Messages.MEMBER_LIST_CONTENT_FEED_NEW_PLAYER
                 }),
             (0, d.q_)(e))
         ) {
-            let n = (0, d.vU)(e);
-            t.push({
+            let t = (0, d.vU)(e);
+            n.push({
                 iconPath: m.t1,
-                text: E.Z.Messages.MEMBER_LIST_CONTENT_FEED_STREAK_DAYS.format({ days: n })
+                text: x.Z.Messages.MEMBER_LIST_CONTENT_FEED_STREAK_DAYS.format({ days: t })
             });
         }
         (0, d.ig)(e) === i.o.GLOBAL &&
-            t.push({
+            n.push({
                 iconPath: m.Op,
-                text: E.Z.Messages.MEMBER_LIST_CONTENT_FEED_TRENDING
+                text: x.Z.Messages.MEMBER_LIST_CONTENT_FEED_TRENDING
             });
         let r = (0, d.dw)(e);
         if (
             (null != r &&
-                t.push({
+                n.push({
                     iconPath: m.Z,
                     text: (0, d.GE)(r)
                 }),
             (0, d.V5)(e))
         ) {
-            let { text: n } = (0, d.zo)(e);
-            null != n &&
-                t.push({
+            let { text: t } = (0, d.zo)(e);
+            null != t &&
+                n.push({
                     iconPath: m.Md,
-                    text: n
+                    text: t
                 });
         }
         if ((0, d.Jd)(e)) {
-            let n = (0, d.yA)(e);
-            if (null != n) {
-                let e = E.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_THIS_WEEK.format({ hours: Math.round(n / u.Z.Seconds.HOUR) });
+            let t = (0, d.yA)(e);
+            if (null != t) {
+                let e = x.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_THIS_WEEK.format({ hours: Math.round(t / u.Z.Seconds.HOUR) });
                 return [
                     {
                         iconPath: m.eF,
-                        text: ''.concat(E.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_GAME, ' \u2014 ').concat(e)
+                        text: ''.concat(x.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_GAME, ' \u2014 ').concat(e)
                     }
                 ];
             }
         }
-        return t;
+        return n;
     },
-    x = (e, n) => {
-        let { timestamp: t, colors: a, description: l, entry: i, numAvatars: o } = n,
-            u = a.map((e, n) => ({
+    p = (e, t) => {
+        let { timestamp: n, colors: l, description: a, entry: i, numAvatars: o } = t,
+            u = l.map((e, t) => ({
                 color: e,
-                stop: n
+                stop: t
             }));
         e.setSize(
             {
@@ -143,7 +143,7 @@ let T = (e, n) => ({
                     !0,
                     2 + 2 / 3
                 );
-        (0, _.l)({
+        (0, h.l)({
             canvas: e,
             avatarSrcs: ['AvatarImage1', 'AvatarImage2', 'AvatarImage3'].slice(0, o),
             position: {
@@ -160,7 +160,7 @@ let T = (e, n) => ({
                 truncate: s.GX.Wrap
             }),
             e.drawText(
-                l,
+                a,
                 {
                     x: m.Iq,
                     y: 64,
@@ -169,27 +169,27 @@ let T = (e, n) => ({
                 },
                 !0
             );
-        let c = h(i, t);
-        (0, _.J)({
+        let c = _(i, n);
+        (0, h.J)({
             canvas: e,
             badges: c,
             startPosition: m.Iq,
             maxWidth: m.kC
         });
     },
-    I = async (e) => {
-        let { applicationImageSrc: n, entry: t, avatarSrcs: a, description: l, timestamp: i, colors: r, channelId: u } = e,
-            c = t.extra.game_name,
-            d = T(a, n);
+    v = async (e) => {
+        let { applicationImageSrc: t, entry: n, avatarSrcs: l, description: a, timestamp: i, colors: r, channelId: u } = e,
+            c = n.extra.game_name,
+            d = E(l, t);
         return await (0, o.f)({
             assetsToLoad: d,
             drawImage: (e) =>
-                x(e, {
+                p(e, {
                     timestamp: i,
                     colors: r,
-                    description: l,
-                    entry: t,
-                    numAvatars: a.length
+                    description: a,
+                    entry: n,
+                    numAvatars: l.length
                 }),
             exportConfigs: {
                 format: s.kH.CloudUpload,

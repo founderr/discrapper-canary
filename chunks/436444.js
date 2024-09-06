@@ -25,35 +25,35 @@ let p = {
     [E.Eu4.TIER_3]: 1
 };
 t.Z = function (e) {
-    let { children: t, confettiTriggerRef: n, guild: i, isProgressBarAnimationComplete: I, setConfettiCount: m, setShouldFireConfetti: T, tier: g, tierMarkerAnimationPosition: S } = e,
+    let { children: t, confettiTriggerRef: n, guild: i, isProgressBarAnimationComplete: I, setConfettiCount: m, setShouldFireConfetti: T, tier: S, tierMarkerAnimationPosition: g } = e,
         { analyticsLocations: A } = (0, l.ZP)(),
-        N = E.oCV[g] - i.premiumSubscriberCount,
-        O = g <= S || I,
-        R = O && g <= i.premiumTier,
-        v = O && g < i.premiumTier,
-        C = O && g === i.premiumTier,
+        N = E.oCV[S] - i.premiumSubscriberCount,
+        O = S <= g || I,
+        R = O && S <= i.premiumTier,
+        v = O && S < i.premiumTier,
+        C = O && S === i.premiumTier,
         { scaleFactor: y } = (0, o.useSpring)({
             from: { scaleFactor: 0 },
-            to: { scaleFactor: S >= g || (I && S + 1 === g) || (I && -1 === S && g === E.Eu4.NONE) ? 1 : 0 },
+            to: { scaleFactor: g >= S || (I && g + 1 === S) || (I && -1 === g && S === E.Eu4.NONE) ? 1 : 0 },
             config: {
                 tension: 360,
                 friction: 12
             }
         }),
-        L = (0, r.jsxs)(r.Fragment, {
+        D = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(s.animated.div, {
                     className: h.progressBarMarkerIndicator,
                     style: { transform: y.to((e) => 'translate(-50%, -50%) scale('.concat(e, ')')) }
                 }),
-                g !== E.Eu4.NONE &&
+                S !== E.Eu4.NONE &&
                     (0, r.jsx)(u.Z, {
-                        tier: g,
+                        tier: S,
                         className: h.boostedTierIcon
                     })
             ]
         }),
-        D = R ? 'div' : o.Clickable,
+        L = R ? 'div' : o.Clickable,
         b = R
             ? {}
             : {
@@ -76,7 +76,7 @@ t.Z = function (e) {
                                           default:
                                               throw Error('Unsupported Boosting tier: '.concat(e));
                                       }
-                                  })(g)
+                                  })(S)
                               },
                               numberOfBoostsToAdd: N,
                               guild: i
@@ -85,39 +85,39 @@ t.Z = function (e) {
               };
     return (0, r.jsx)(o.Tooltip, {
         text: R
-            ? f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PROGRESS_BAR_TOOLTIP_TIER_UNLOCKED.format({ tierName: (0, c.nW)(g, { useLevels: !1 }) })
+            ? f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PROGRESS_BAR_TOOLTIP_TIER_UNLOCKED.format({ tierName: (0, c.nW)(S, { useLevels: !1 }) })
             : f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PROGRESS_BAR_TOOLTIP_REMAINING_FOR_TIER.format({
                   numBoostsRequired: N,
-                  tierName: (0, c.nW)(g, { useLevels: !1 })
+                  tierName: (0, c.nW)(S, { useLevels: !1 })
               }),
-        shouldShow: g !== E.Eu4.NONE,
+        shouldShow: S !== E.Eu4.NONE,
         children: (e) =>
-            (0, r.jsxs)(D, {
+            (0, r.jsxs)(L, {
                 className: a()(h.progressBarMarker, {
                     [h.progressBarMarkerUnlocked]: R,
                     [h.progressBarMarkerLocked]: !R,
                     [h.progressBarMarkerLower]: v,
                     [h.progressBarMarkerCurrent]: C
                 }),
-                style: { left: ''.concat(100 * p[g], '%') },
+                style: { left: ''.concat(100 * p[S], '%') },
                 ...e,
                 ...b,
                 children: [
                     !R && (0, r.jsx)('div', { className: h.boostedTierIconBackground }),
-                    R && g === E.Eu4.TIER_3
+                    R && S === E.Eu4.TIER_3
                         ? (0, r.jsx)(_.m, {
                               confettiTriggerRef: n,
                               setConfettiCount: m,
                               setShouldFireConfetti: T,
-                              children: L
+                              children: D
                           })
-                        : L,
+                        : D,
                     (0, r.jsxs)(o.Text, {
                         className: h.progressBarMarkerLabel,
                         variant: 'text-md/normal',
                         children: [
                             R &&
-                                g !== E.Eu4.NONE &&
+                                S !== E.Eu4.NONE &&
                                 (0, r.jsx)(o.CheckmarkLargeIcon, {
                                     size: 'md',
                                     color: 'currentColor',

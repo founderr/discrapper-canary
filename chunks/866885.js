@@ -16,8 +16,8 @@ var r = n(735250),
     I = n(607187),
     m = n(937995),
     T = n(366050),
-    g = n(944486),
-    S = n(594174),
+    S = n(944486),
+    g = n(594174),
     A = n(566620),
     N = n(317381),
     O = n(175894),
@@ -25,8 +25,8 @@ var r = n(735250),
     v = n(963614),
     C = n(917107),
     y = n(208156),
-    L = n(748492),
-    D = n(701488),
+    D = n(748492),
+    L = n(701488),
     b = n(918559),
     M = n(981631),
     P = n(354459),
@@ -41,7 +41,7 @@ function G(e) {
         F = (0, o.e7)([N.ZP], () => N.ZP.getActivityPanelMode()),
         V = (0, E.q)(null == B ? void 0 : B.applicationId),
         H = null == B ? void 0 : B.launchId,
-        Z = (0, o.e7)([g.Z], () => g.Z.getChannelId() === O.id),
+        Z = (0, o.e7)([S.Z], () => S.Z.getChannelId() === O.id),
         { dockedRect: Y, isHidden: j } = (0, o.cj)([T.Z], () => {
             let e = T.Z.pipWindow;
             return {
@@ -76,7 +76,7 @@ function G(e) {
     }
     i.useEffect(() => {
         if ((null == B ? void 0 : B.applicationId) != null) {
-            let e = ee ? D.cE.PIP : D.cE.FOCUSED;
+            let e = ee ? L.cE.PIP : L.cE.FOCUSED;
             u.Z.dispatch({
                 type: 'ACTIVITY_LAYOUT_MODE_UPDATE',
                 layoutMode: e,
@@ -86,7 +86,7 @@ function G(e) {
     }, [null == B ? void 0 : B.applicationId, ee]);
     if (null == B || null == H || (null == K && (0, C.Z)(O.id)) || null == V) return null;
     let ei = Array.from(B.userIds)
-            .map((e) => S.default.getUser(e))
+            .map((e) => g.default.getUser(e))
             .filter((e) => null != e),
         ea = {
             instance_id: null !== (a = null !== (n = B.compositeInstanceId) && void 0 !== n ? n : B.launchId) && void 0 !== a ? a : '',
@@ -123,7 +123,7 @@ function G(e) {
                                 (c = ei),
                                 ee && null != B && ((null == K ? void 0 : K.type) === P.fO.ACTIVITY || u)
                                     ? (null === (d = B.config) || void 0 === d ? void 0 : d.useInteractivePIP)
-                                        ? (0, r.jsx)(L.of, {
+                                        ? (0, r.jsx)(D.of, {
                                               onJumpToChannel: en,
                                               applicationId: B.applicationId,
                                               channel: O,
@@ -137,7 +137,7 @@ function G(e) {
                                           })
                                         : u
                                           ? (0, r.jsx)(r.Fragment, {
-                                                children: (0, r.jsx)(L.q5, {
+                                                children: (0, r.jsx)(D.q5, {
                                                     idle: o,
                                                     onMouseMove: i,
                                                     onMouseDown: i,
@@ -161,7 +161,7 @@ function G(e) {
                                                           className: U.clickShield,
                                                           onDoubleClick: en
                                                       }),
-                                                      (0, r.jsx)(L.YB, {
+                                                      (0, r.jsx)(D.YB, {
                                                           idle: o,
                                                           onMouseMove: i,
                                                           onMouseDown: i,
@@ -184,7 +184,7 @@ function G(e) {
                               })
                             : (0, r.jsx)(y.J, {
                                   allowPopups: (0, v.h)(V),
-                                  referrerPolicy: D.um.has(B.applicationId) ? 'no-referrer' : 'origin',
+                                  referrerPolicy: L.um.has(B.applicationId) ? 'no-referrer' : 'origin',
                                   url: B.url,
                                   queryParams: ea,
                                   className: s()(U.iframe, {
@@ -195,7 +195,7 @@ function G(e) {
                                   shouldRefocus: !ee && Z
                               }),
                         !ee &&
-                            (0, r.jsx)(L.Ds, {
+                            (0, r.jsx)(D.Ds, {
                                 participantsOpen: q,
                                 showToggleParticipants: !1,
                                 channelId: O.id

@@ -16,8 +16,8 @@ var r = n(348327),
     I = n(944486),
     m = n(358085),
     T = n(998502),
-    g = n(981631),
-    S = n(689938);
+    S = n(981631),
+    g = n(689938);
 function A(e, t, n) {
     return (
         t in e
@@ -45,7 +45,7 @@ class N extends c.Z {
         super(...e),
             A(this, 'callbackActions', {
                 [T.tS.VIDEO]: () => {
-                    p.Z.isVideoEnabled() ? l.Z.setVideoEnabled(!1) : (0, f.Z)(() => l.Z.setVideoEnabled(!0), g.IlC.APP);
+                    p.Z.isVideoEnabled() ? l.Z.setVideoEnabled(!1) : (0, f.Z)(() => l.Z.setVideoEnabled(!0), S.IlC.APP);
                 },
                 [T.tS.MUTE]: () => l.Z.toggleSelfMute(),
                 [T.tS.DEAFEN]: () => l.Z.toggleSelfDeaf(),
@@ -101,17 +101,17 @@ class N extends c.Z {
                         {
                             name: T.tS.MUTE,
                             active: t,
-                            tooltip: t ? S.Z.Messages.UNMUTE : S.Z.Messages.MUTE
+                            tooltip: t ? g.Z.Messages.UNMUTE : g.Z.Messages.MUTE
                         },
                         {
                             name: T.tS.DEAFEN,
                             active: n,
-                            tooltip: n ? S.Z.Messages.UNDEAFEN : S.Z.Messages.DEAFEN
+                            tooltip: n ? g.Z.Messages.UNDEAFEN : g.Z.Messages.DEAFEN
                         },
                         {
                             name: T.tS.DISCONNECT,
                             active: !0,
-                            tooltip: S.Z.Messages.DISCONNECT_SELF
+                            tooltip: g.Z.Messages.DISCONNECT_SELF
                         }
                     ]);
                 }, 100)

@@ -15,8 +15,8 @@ var r,
     I = n(838957),
     m = n(144748),
     T = n(276321),
-    g = n(641236),
-    S = n(457507),
+    S = n(641236),
+    g = n(457507),
     A = n(644659),
     N = A.enforce,
     O = A.get,
@@ -24,12 +24,12 @@ var r,
     v = R && R.prototype,
     C = l.Uint8ClampedArray,
     y = C && C.prototype,
-    L = R && m(R),
-    D = v && m(v),
+    D = R && m(R),
+    L = v && m(v),
     b = Object.prototype,
     M = l.TypeError,
-    P = g('toStringTag'),
-    U = S('TYPED_ARRAY_TAG'),
+    P = S('toStringTag'),
+    U = g('TYPED_ARRAY_TAG'),
     w = 'TypedArrayConstructor',
     x = s && !!T && 'Opera' !== _(l.opera),
     G = !1,
@@ -63,17 +63,17 @@ var r,
 for (r in k) (a = (i = l[r]) && i.prototype) ? (N(a)[w] = i) : (x = !1);
 for (r in B) (a = (i = l[r]) && i.prototype) && (N(a)[w] = i);
 if (
-    (!x || !u(L) || L === Function.prototype) &&
-    ((L = function () {
+    (!x || !u(D) || D === Function.prototype) &&
+    ((D = function () {
         throw M('Incorrect invocation');
     }),
     x)
 )
-    for (r in k) l[r] && T(l[r], L);
-if ((!x || !D || D === b) && ((D = L.prototype), x)) for (r in k) l[r] && T(l[r].prototype, D);
-if ((x && m(y) !== D && T(y, D), o && !d(D, P)))
+    for (r in k) l[r] && T(l[r], D);
+if ((!x || !L || L === b) && ((L = D.prototype), x)) for (r in k) l[r] && T(l[r].prototype, L);
+if ((x && m(y) !== L && T(y, L), o && !d(L, P)))
     for (r in ((G = !0),
-    p(D, P, {
+    p(L, P, {
         configurable: !0,
         get: function () {
             return c(this) ? this[U] : void 0;
@@ -89,7 +89,7 @@ e.exports = {
         throw M('Target is not a typed array');
     },
     aTypedArrayConstructor: function (e) {
-        if (u(e) && (!T || I(L, e))) return e;
+        if (u(e) && (!T || I(D, e))) return e;
         throw M(E(e) + ' is not a typed array constructor');
     },
     exportTypedArrayMethod: function (e, t, n, r) {
@@ -106,7 +106,7 @@ e.exports = {
                             } catch (e) {}
                         }
                 }
-            (!D[e] || n) && h(D, e, n ? t : (x && v[e]) || t, r);
+            (!L[e] || n) && h(L, e, n ? t : (x && v[e]) || t, r);
         }
     },
     exportTypedArrayStaticMethod: function (e, t, n) {
@@ -120,9 +120,9 @@ e.exports = {
                                 delete i[e];
                             } catch (e) {}
                 }
-                if (L[e] && !n) return;
+                if (D[e] && !n) return;
                 try {
-                    return h(L, e, n ? t : (x && L[e]) || t);
+                    return h(D, e, n ? t : (x && D[e]) || t);
                 } catch (e) {}
             }
             for (r in k) (i = l[r]) && (!i[e] || n) && h(i, e, t);
@@ -135,6 +135,6 @@ e.exports = {
         return 'DataView' === t || d(k, t) || d(B, t);
     },
     isTypedArray: V,
-    TypedArray: L,
-    TypedArrayPrototype: D
+    TypedArray: D,
+    TypedArrayPrototype: L
 };

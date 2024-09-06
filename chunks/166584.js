@@ -22,8 +22,8 @@ var r = n(735250),
     I = n(785717),
     m = n(256226),
     T = n(314172),
-    g = n(981631),
-    S = n(689938),
+    S = n(981631),
+    g = n(689938),
     A = n(317384);
 let N = (e) => {
     if (null == e) return 0;
@@ -37,7 +37,7 @@ function O(e) {
             null != t ? (R.current[e] = t) : delete R.current[e];
         },
         [C, y] = i.useState(d),
-        [L, D] = i.useState(268),
+        [D, L] = i.useState(268),
         [b, M] = i.useState(!1),
         P = i.useRef(null),
         U = i.useRef(null);
@@ -58,18 +58,18 @@ function O(e) {
                 (e += s + 4), n.push(i);
             }
         }
-        y(n.length === C.length ? C : n), D(r);
+        y(n.length === C.length ? C : n), L(r);
     }, [d, C, b]);
     let w = i.useMemo(() => 'roles-'.concat((0, a.Z)()), []),
         x = (0, s.ZP)({
             id: w,
             isEnabled: !0,
-            scrollToStart: g.Cyb,
-            scrollToEnd: g.Cyb,
+            scrollToStart: S.Cyb,
+            scrollToEnd: S.Cyb,
             wrap: !0
         }),
         G = d.length,
-        k = 0 === G ? S.Z.Messages.ROLE_LIST_EMPTY : S.Z.Messages.ROLES_LIST.format({ numRoles: G }),
+        k = 0 === G ? g.Z.Messages.ROLE_LIST_EMPTY : g.Z.Messages.ROLES_LIST.format({ numRoles: G }),
         B = (b ? d : C).map((e, i) => {
             var a;
             return (0, r.jsx)(
@@ -77,7 +77,7 @@ function O(e) {
                 {
                     role: e,
                     guildId: l.id,
-                    style: { maxWidth: b || i !== C.length - 1 ? 268 : L },
+                    style: { maxWidth: b || i !== C.length - 1 ? 268 : D },
                     disableBorderColor: !0,
                     ref: (t) => v(e.id, t),
                     onRemove: () => O(e),
@@ -108,7 +108,7 @@ function O(e) {
                         !b &&
                             C.length < d.length &&
                             (0, r.jsx)(u.TooltipContainer, {
-                                text: S.Z.Messages.VIEW_ALL_ROLES,
+                                text: g.Z.Messages.VIEW_ALL_ROLES,
                                 children: (0, r.jsx)(u.Clickable, {
                                     innerRef: P,
                                     onClick: V,
@@ -121,7 +121,7 @@ function O(e) {
                             }),
                         b &&
                             (0, r.jsx)(u.TooltipContainer, {
-                                text: S.Z.Messages.COLLAPSE_ROLES,
+                                text: g.Z.Messages.COLLAPSE_ROLES,
                                 children: (0, r.jsx)(u.Clickable, {
                                     onClick: H,
                                     className: A.collapseButton,
@@ -169,7 +169,7 @@ function R(e) {
             [u, h]
         ),
         T = p.e9(a, n.id),
-        [S] = (0, l.Wu)([f.Z], () => [f.Z.can(g.Plq.MANAGE_ROLES, a), null != a ? f.Z.getGuildVersion(a.id) : null]),
+        [g] = (0, l.Wu)([f.Z], () => [f.Z.can(S.Plq.MANAGE_ROLES, a), null != a ? f.Z.getGuildVersion(a.id) : null]),
         A = i.useCallback(
             (e) => {
                 var n, r;
@@ -187,7 +187,7 @@ function R(e) {
             },
             [h, a.id, t.id, s]
         ),
-        R = S && null != o;
+        R = g && null != o;
     return 0 !== m.length || R
         ? (0, r.jsx)('div', {
               children: (0, r.jsx)(O, {
@@ -197,7 +197,7 @@ function R(e) {
                   guildMember: o,
                   roles: m,
                   highestRole: T,
-                  canManageRoles: S,
+                  canManageRoles: g,
                   onAddRole: N,
                   onRemoveRole: A
               })

@@ -15,8 +15,8 @@ var r = n(735250),
     I = n(594174),
     m = n(63063),
     T = n(970606),
-    g = n(963202),
-    S = n(645896),
+    S = n(963202),
+    g = n(645896),
     A = n(905362),
     N = n(353093),
     O = n(954138),
@@ -24,8 +24,8 @@ var r = n(735250),
     v = n(284019),
     C = n(308083),
     y = n(981631),
-    L = n(689938),
-    D = n(931797);
+    D = n(689938),
+    L = n(931797);
 function b(e) {
     e.stopPropagation();
 }
@@ -33,7 +33,7 @@ t.Z = i.memo(function (e) {
     var t;
     let { clan: n, isLoading: M, onClose: P, profileViewedAnalytics: U } = e,
         w = null == n ? void 0 : n.identityGuildId,
-        x = (0, S.Cc)(null != w ? w : null),
+        x = (0, g.Cc)(null != w ? w : null),
         G = null == n ? void 0 : n.tag,
         k = (0, R.Z)('clan_guild_profile'),
         B = (0, O.Z)('base_clan_tag_chiplet'),
@@ -49,7 +49,7 @@ t.Z = i.memo(function (e) {
         W = (null == V ? void 0 : V.joinedAt) != null,
         K = (0, N.Z4)(w, null == j ? void 0 : j.clan),
         z = null != (0, E.Z)(w),
-        q = (0, g.iN)('ClanGuildProfile');
+        q = (0, S.iN)('ClanGuildProfile');
     i.useEffect(() => {
         null != w &&
             (0, T.u0)({
@@ -68,7 +68,7 @@ t.Z = i.memo(function (e) {
                     tagUserId: null == U ? void 0 : U.tagUserId,
                     location: l.Z.CLAN_GUILD_PROFILE
                 }),
-                    (0, s.showToast)((0, s.createToast)(L.Z.Messages.CLAN_USER_WAITLIST_TOAST_SUCCESS, s.ToastType.SUCCESS));
+                    (0, s.showToast)((0, s.createToast)(D.Z.Messages.CLAN_USER_WAITLIST_TOAST_SUCCESS, s.ToastType.SUCCESS));
         }, [w, Y, U]),
         X = i.useCallback(
             (e) => {
@@ -104,7 +104,7 @@ t.Z = i.memo(function (e) {
                 color: s.Button.Colors.BRAND,
                 size: s.Button.Sizes.SMALL,
                 fullWidth: !0,
-                className: D.button,
+                className: L.button,
                 themeColor: null !== (t = null == x ? void 0 : null === (e = x.branding) || void 0 === e ? void 0 : e.primaryColor) && void 0 !== t ? t : null
             };
         }, [null == x ? void 0 : null === (t = x.branding) || void 0 === t ? void 0 : t.primaryColor]),
@@ -118,17 +118,17 @@ t.Z = i.memo(function (e) {
                         color: s.Button.Colors.PRIMARY,
                         size: s.Button.Sizes.SMALL,
                         fullWidth: !0,
-                        children: L.Z.Messages.CLAN_USER_WAITLIST_CTA
+                        children: D.Z.Messages.CLAN_USER_WAITLIST_CTA
                     });
                 case !W && !k && Y:
                     return (0, r.jsxs)(s.Button, {
-                        innerClassName: D.waitlistedButton,
+                        innerClassName: L.waitlistedButton,
                         onClick: J,
                         color: s.Button.Colors.PRIMARY,
                         size: s.Button.Sizes.SMALL,
                         fullWidth: !0,
                         children: [
-                            L.Z.Messages.CLAN_USER_WAITLISTED,
+                            D.Z.Messages.CLAN_USER_WAITLISTED,
                             (0, r.jsx)(s.CircleInformationIcon, {
                                 size: 'xs',
                                 color: 'currentColor'
@@ -139,25 +139,25 @@ t.Z = i.memo(function (e) {
                     return (0, r.jsx)(v.Z, {
                         onClick: ee,
                         ...en,
-                        children: L.Z.Messages.CLAN_USER_APPLICATION_EXISTS_TAG_GUILD_PROFILE_CTA
+                        children: D.Z.Messages.CLAN_USER_APPLICATION_EXISTS_TAG_GUILD_PROFILE_CTA
                     });
                 case !W && q:
                     return (0, r.jsx)(v.Z, {
                         onClick: $,
                         ...en,
-                        children: L.Z.Messages.CLAN_USER_APPLY_TAG_GUILD_PROFILE_CTA
+                        children: D.Z.Messages.CLAN_USER_APPLY_TAG_GUILD_PROFILE_CTA
                     });
                 case W && !K:
                     return (0, r.jsx)(v.Z, {
                         onClick: X,
                         ...en,
-                        children: L.Z.Messages.CLAN_USER_ADOPT_TAG_GUILD_PROFILE_CTA
+                        children: D.Z.Messages.CLAN_USER_ADOPT_TAG_GUILD_PROFILE_CTA
                     });
                 case W && K:
                     return (0, r.jsx)(v.Z, {
                         onClick: et,
                         ...en,
-                        children: L.Z.Messages.CLAN_USER_GO_TO_CLAN_CTA
+                        children: D.Z.Messages.CLAN_USER_GO_TO_CLAN_CTA
                     });
                 default:
                     return null;
@@ -165,7 +165,7 @@ t.Z = i.memo(function (e) {
         }, [B, W, k, Y, z, q, K, Q, J, ee, en, $, X, et]),
         ei = i.useMemo(
             () => ({
-                className: D.container,
+                className: L.container,
                 onClick: b
             }),
             []
@@ -180,14 +180,14 @@ t.Z = i.memo(function (e) {
               children: [
                   (0, r.jsx)(u.xV, {
                       clan: x,
-                      className: D.cardContainer,
+                      className: L.cardContainer,
                       isMember: W,
                       hasPendingJoinRequest: H,
                       atMaxMemberCapacity: Z
                   }),
                   null != er &&
                       (0, r.jsx)('div', {
-                          className: D.buttonContainer,
+                          className: L.buttonContainer,
                           children: er
                       })
               ]

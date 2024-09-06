@@ -1,6 +1,6 @@
 n.d(t, {
     ZP: function () {
-        return G;
+        return F;
     }
 }),
     n(47120);
@@ -299,7 +299,7 @@ function k(e) {
         })
     );
 }
-function G(e) {
+function F(e) {
     let t,
         { message: n, compact: i, guild: a, usernameHook: s, onClickMessage: r } = e,
         c = (function (e) {

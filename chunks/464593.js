@@ -41,8 +41,8 @@ var r = n(963663),
     I = n(320564),
     m = n(25163),
     T = n(869940),
-    g = n(904838),
-    S = n(740519),
+    S = n(904838),
+    g = n(740519),
     A = n(526622),
     N = n(826737),
     O = n(65275),
@@ -50,8 +50,8 @@ var r = n(963663),
     v = n(417443),
     C = n(42287),
     y = n(240362),
-    L = n(836168),
-    D = n(109465),
+    D = n(836168),
+    L = n(109465),
     b = n(348949),
     M = n(936443),
     P = n(542063),
@@ -342,14 +342,14 @@ function J(e, t, n) {
             },
             [c]
         ),
-        g = (0, F.useMemo)(
+        S = (0, F.useMemo)(
             () => ({
                 onBlur: h.onBlur,
                 onFocus: T
             }),
             [T, h.onBlur]
         ),
-        S = (0, H.pu)(n, { isDisabled: 0 !== t.collection.size }),
+        g = (0, H.pu)(n, { isDisabled: 0 !== t.collection.size }),
         A = (0, B.dG)(
             m,
             {
@@ -357,8 +357,8 @@ function J(e, t, n) {
                 id: p,
                 'aria-multiselectable': 'multiple' === c.selectionMode ? 'true' : void 0
             },
-            t.isKeyboardNavigationDisabled ? g : h,
-            0 === t.collection.size && { tabIndex: S ? -1 : 0 },
+            t.isKeyboardNavigationDisabled ? S : h,
+            0 === t.collection.size && { tabIndex: g ? -1 : 0 },
             I
         );
     return r && ((A['aria-rowcount'] = t.collection.size), (A['aria-colcount'] = t.collection.columnCount)), Q({ getRowText: o }, t), { gridProps: A };
@@ -524,8 +524,8 @@ q = {
     'it-IT': I.Z,
     'ja-JP': m.Z,
     'ko-KR': T.Z,
-    'lt-LT': g.Z,
-    'lv-LV': S.Z,
+    'lt-LT': S.Z,
+    'lv-LV': g.Z,
     'nb-NO': A.Z,
     'nl-NL': N.Z,
     'pl-PL': O.Z,
@@ -533,8 +533,8 @@ q = {
     'pt-PT': v.Z,
     'ro-RO': C.Z,
     'ru-RU': y.Z,
-    'sk-SK': L.Z,
-    'sl-SI': D.Z,
+    'sk-SK': D.Z,
+    'sl-SI': L.Z,
     'sr-SP': b.Z,
     'sv-SE': M.Z,
     'tr-TR': P.Z,

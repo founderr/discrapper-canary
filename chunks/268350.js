@@ -1,18 +1,18 @@
 n.d(t, {
     $p: function () {
-        return g;
+        return S;
     },
     FQ: function () {
         return T;
     },
     Il: function () {
-        return S;
+        return g;
     },
     Jf: function () {
         return R;
     },
     SA: function () {
-        return L;
+        return D;
     },
     Um: function () {
         return N;
@@ -21,7 +21,7 @@ n.d(t, {
         return v;
     },
     hW: function () {
-        return D;
+        return L;
     },
     lY: function () {
         return O;
@@ -62,7 +62,7 @@ let T = async (e, t) => {
             n
         );
     },
-    g = async function () {
+    S = async function () {
         let { locale: e = u.default.locale } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
         if (h.Z.isFetchingStickerPacks || h.Z.hasLoadedStickerPacks) return;
         s.Z.wait(() => {
@@ -79,7 +79,7 @@ let T = async (e, t) => {
             packs: t
         });
     },
-    S = async (e) => {
+    g = async (e) => {
         let { body: t } = await a.tn.get({ url: p.ANM.STICKER(e) });
         s.Z.dispatch({
             type: 'STICKER_FETCH_SUCCESS',
@@ -146,7 +146,7 @@ function C(e, t) {
 function y(e) {
     return _.Z.totalUnavailableGuilds > 0 || !l.Z.isConnected() ? e : e.filter((e) => null != h.Z.getStickerById(e));
 }
-function L(e) {
+function D(e) {
     c.DZ.updateAsync(
         'favoriteStickers',
         (t) =>
@@ -160,7 +160,7 @@ function L(e) {
         I.fy.INFREQUENT_USER_ACTION
     );
 }
-function D(e) {
+function L(e) {
     c.DZ.updateAsync(
         'favoriteStickers',
         (t) => {

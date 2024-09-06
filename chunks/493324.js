@@ -1,6 +1,6 @@
 n.d(t, {
     $: function () {
-        return a;
+        return s;
     }
 });
 let i = (0, n(818083).B)({
@@ -16,6 +16,6 @@ let i = (0, n(818083).B)({
         }
     ]
 });
-function a(e) {
+function s(e) {
     return i.getCurrentConfig({ location: e }, { autoTrackExposure: !0 }).hideActivities;
 }

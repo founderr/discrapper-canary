@@ -38,8 +38,8 @@ function T(e, t, n) {
         e
     );
 }
-let g = [_.ZP, E.ZP];
-class S extends i.PureComponent {
+let S = [_.ZP, E.ZP];
+class g extends i.PureComponent {
     render() {
         let { render: e, LayerComponent: t, isTopModal: n, instant: i } = this.props,
             { transitionState: a } = this.state;
@@ -128,11 +128,11 @@ function O() {
             },
             [e]
         ),
-        d = g.map((e) => t.some((t) => t.Layer === e || (null == t.Layer && e === _.ZP)));
+        d = S.map((e) => t.some((t) => t.Layer === e || (null == t.Layer && e === _.ZP)));
     return (0, r.jsxs)(u.W, {
         component: i.Fragment,
         children: [
-            g.map((e, n) => {
+            S.map((e, n) => {
                 var i;
                 let a = l().findLast(t, (t) => t.Layer === e || (null == t.Layer && e === _.ZP));
                 return (0, r.jsx)(
@@ -150,7 +150,7 @@ function O() {
             t.map((e, n) => {
                 let { key: i, Layer: a, render: s, instant: l } = e;
                 return (0, r.jsx)(
-                    S,
+                    g,
                     {
                         modalKey: i,
                         LayerComponent: null != a ? a : _.ZP,

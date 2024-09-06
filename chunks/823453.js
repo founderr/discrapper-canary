@@ -16,8 +16,8 @@ var r = n(735250),
     I = n(210887),
     m = n(451478),
     T = n(597952),
-    g = n(252618),
-    S = n(80006),
+    S = n(252618),
+    g = n(80006),
     A = n(587061),
     N = n(392358),
     O = n(981631);
@@ -25,7 +25,7 @@ n(243997);
 let R = new Set([O.Z5c.LOGIN, O.Z5c.REGISTER]);
 t.Z = i.memo(function (e) {
     let { children: t, skipsSettingDefaultPageTitle: a } = e;
-    (0, g.ZD)({ skipsSettingDefaultPageTitle: a });
+    (0, S.ZD)({ skipsSettingDefaultPageTitle: a });
     let { clientThemesClassName: O, clientThemesCSS: v } = (0, E.ZP)(),
         C = i.createElement('style', { [E.PQ]: !0 }, v);
     return (0, r.jsxs)(o.ql, {
@@ -37,10 +37,10 @@ t.Z = i.memo(function (e) {
                     })),
                     a = (0, c.e7)([m.Z], () => m.Z.isFocused(), []),
                     { reducedMotion: o } = i.useContext(_.AccessibilityPreferencesContext),
-                    { accessibilitySettings: d, appWrapperClassName: E } = (0, S.I)(),
-                    { fontScale: g, fontScaleClass: O, saturation: v, desaturateUserColors: C, useForcedColors: y, systemForcedColors: L } = d,
-                    D = (0, l.TH)(),
-                    b = i.useMemo(() => R.has(D.pathname), [D.pathname]);
+                    { accessibilitySettings: d, appWrapperClassName: E } = (0, g.I)(),
+                    { fontScale: S, fontScaleClass: O, saturation: v, desaturateUserColors: C, useForcedColors: y, systemForcedColors: D } = d,
+                    L = (0, l.TH)(),
+                    b = i.useMemo(() => R.has(L.pathname), [L.pathname]);
                 (0, A.Z)(window, b);
                 let M = (0, N.Z)(window, __OVERLAY__ || a),
                     P = (0, c.e7)([h.Z], () => h.Z.sidebarWidth),
@@ -48,7 +48,7 @@ t.Z = i.memo(function (e) {
                     w = (0, f.Q)('AppHelmet');
                 return (0, r.jsx)('html', {
                     lang: t,
-                    style: 'font-size: '.concat(g, '%; --saturation-factor: ').concat(v, '; --devtools-sidebar-width: ').concat(P, 'px;'),
+                    style: 'font-size: '.concat(S, '%; --saturation-factor: ').concat(v, '; --devtools-sidebar-width: ').concat(P, 'px;'),
                     className: s()(
                         e,
                         E,
@@ -60,7 +60,7 @@ t.Z = i.memo(function (e) {
                             'is-mobile': u.tq,
                             'app-focused': a,
                             'desaturate-user-colors': C,
-                            'disable-forced-colors': !y && 'active' === L,
+                            'disable-forced-colors': !y && 'active' === D,
                             'enable-forced-colors': y,
                             'show-redesigned-icons': U,
                             'visual-refresh': w

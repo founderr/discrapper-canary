@@ -35,17 +35,17 @@ function T(e) {
     };
     return null != I.ZP.getGlobalName(e) && (t.globalName = e.globalName), e.bot && (t.isBot = !0), _.Z.isFriend(e.id) && ((t.isFriend = !0), (t.friendNickname = _.Z.getNickname(e.id))), t;
 }
-function g(e, t, n) {
+function S(e, t, n) {
     null != e && (e[t] = null != n && '' !== n ? n : null);
 }
-function S(e) {
+function g(e) {
     let t = [];
     if (null == e || !(0, u.hv)(e.type)) return t;
     let { recipients: n = [] } = e;
     return (
         n.forEach((n) => {
             let r = T(E.default.getUser(n));
-            null != e && g(r, e.id), t.push(r);
+            null != e && S(r, e.id), t.push(r);
         }),
         t
     );
@@ -55,7 +55,7 @@ function A(e, t) {
     return (
         e.forEach((e) => {
             let r = T(e.user);
-            null != r && (g(r, t, e.nick), n.push(r));
+            null != r && (S(r, t, e.nick), n.push(r));
         }),
         n
     );
@@ -233,7 +233,7 @@ class O extends l.Z {
                                             let r = t.member;
                                             if (null != r) {
                                                 let t = T(r.user);
-                                                null != t && (g(t, e.id, r.nick), n.push(t));
+                                                null != t && (S(t, e.id, r.nick), n.push(t));
                                             }
                                         });
                                     }),
@@ -253,7 +253,7 @@ class O extends l.Z {
                         for (let n of p.default.keys(t)) {
                             let i = r.get(n),
                                 a = t[n];
-                            if (null != i && null != a && null != a.nick) g(i, e, a.nick), r.set(n, i);
+                            if (null != i && null != a && null != a.nick) S(i, e, a.nick), r.set(n, i);
                         }
                 }
                 this.updateUsers(Array.from(r.values()), 'overlay_initialize'), r.clear();
@@ -277,7 +277,7 @@ class O extends l.Z {
             m(this, '_handleGuildMemberUpdate', (e) => {
                 let { guildId: t, user: n, nick: r } = e,
                     i = T(n);
-                null != i && (g(i, t, r), this.updateUsers([i], 'guild_member_update'));
+                null != i && (S(i, t, r), this.updateUsers([i], 'guild_member_update'));
             }),
             m(this, '_handlePassiveUpdateV2', (e) => {
                 this.updateUsers(A(e.members, e.guildId), 'passive_update_v2');
@@ -298,25 +298,25 @@ class O extends l.Z {
                 let {
                         channel: { id: t }
                     } = e,
-                    n = S(c.Z.getChannel(t));
+                    n = g(c.Z.getChannel(t));
                 if (0 === n.length) return;
                 let r = T(E.default.getCurrentUser());
-                g(r, t), n.push(r), this.updateUsers(n, 'dm_create');
+                S(r, t), n.push(r), this.updateUsers(n, 'dm_create');
             }),
             m(this, '_handleDMUpdates', (e) => {
                 let { channels: t } = e;
                 for (let e of t) {
-                    let t = S(c.Z.getChannel(e.id));
+                    let t = g(c.Z.getChannel(e.id));
                     if (0 === t.length) continue;
                     let n = T(E.default.getCurrentUser());
-                    g(n, e.id), t.push(n), this.updateUsers(t, 'dm_updates');
+                    S(n, e.id), t.push(n), this.updateUsers(t, 'dm_updates');
                 }
             }),
             m(this, '_handleRecipientChanges', (e) => {
                 let { channelId: t, user: n, isMember: r } = e;
                 if (!r) return;
                 let i = T(n);
-                g(i, t), this.updateUsers([i], 'recipient_changes');
+                S(i, t), this.updateUsers([i], 'recipient_changes');
             });
     }
 }

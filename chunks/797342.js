@@ -30,14 +30,14 @@ function l(e) {
         I = null !== (c = _.name) && void 0 !== c ? c : 'game_name' in e.extra ? e.extra.game_name : void 0,
         m = _.details,
         T = _.state,
-        g = _.party;
+        S = _.party;
     return {
-        isRich: h || p || null != m || null != T || null != g,
+        isRich: h || p || null != m || null != T || null != S,
         user: d,
         activity: _,
         state: T,
         details: m,
-        party: g,
+        party: S,
         appName: I,
         inExperiment: f,
         embeddedActivity: E

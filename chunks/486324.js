@@ -45,10 +45,10 @@ n.d(t, {
         return a;
     },
     qj: function () {
-        return S;
+        return g;
     },
     sX: function () {
-        return g;
+        return S;
     },
     u: function () {
         return s;
@@ -81,8 +81,8 @@ let l = 568,
     I = 17 / 6,
     m = 16 / 9,
     T = 2.5,
-    g = 4,
-    S = 568 / (17 / 6),
+    S = 4,
+    g = 568 / (17 / 6),
     A = 568 / (16 / 9),
     N = 227.2,
     O = 142,

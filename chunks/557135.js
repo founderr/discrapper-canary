@@ -14,10 +14,10 @@ var i = n(481060),
     f = n(981631);
 t.Z = {
     async handleVoiceConnect(e) {
-        let { channel: t, connected: h, needSubscriptionToAccess: p, locked: I = !1, routeDirectlyToChannel: m = !1, bypassChangeModal: T, bypassGuildIdCheck: g = !1 } = e;
+        let { channel: t, connected: h, needSubscriptionToAccess: p, locked: I = !1, routeDirectlyToChannel: m = !1, bypassChangeModal: T, bypassGuildIdCheck: S = !1 } = e;
         t.isThread() && (await u.Z.unarchiveThreadIfNecessary(t.id), !l.Z.hasJoined(t.id) && (await u.Z.joinThread(t, 'Join Voice')));
-        let S = s.Z.getRemoteSessionId(),
-            A = _.Z.getVoiceStateForSession(c.default.getId(), S),
+        let g = s.Z.getRemoteSessionId(),
+            A = _.Z.getVoiceStateForSession(c.default.getId(), g),
             N = (null == A ? void 0 : A.channelId) === t.id || d.Z.getChannelId() === _.Z.getCurrentClientVoiceChannelId(t.guild_id);
         return !T && !I && (0, E._)(t)
             ? new Promise((e) => {
@@ -49,7 +49,7 @@ t.Z = {
                           n = e.getGuildId();
                       if (null == n && !t) throw Error('VoiceChannel, transitionTo: Channel does not have a guildId');
                       (0, o.uL)(f.Z5c.CHANNEL(n, e.id));
-                  })(t, g),
+                  })(t, S),
               !0);
     }
 };

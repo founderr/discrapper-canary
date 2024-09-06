@@ -18,23 +18,23 @@ t.Z = (e) => {
     let a = n.hasFeature(_.oNc.VERIFIED) || n.hasFeature(_.oNc.PARTNERED),
         I = n.toString(),
         R = n.getIconURL(40, !0),
-        C = null,
-        g = T[T.length - 1];
+        g = null,
+        C = T[T.length - 1];
     if (null == n.icon && null != I) {
         var N;
-        g = null !== (N = T[(C = (0, i.Zg)(I)).length - 1]) && void 0 !== N ? N : T[T.length - 1];
+        C = null !== (N = T[(g = (0, i.Zg)(I)).length - 1]) && void 0 !== N ? N : T[T.length - 1];
     }
     return (0, s.jsxs)('div', {
         className: E.container,
         children: [
             (0, s.jsxs)('div', {
-                style: { fontSize: g },
+                style: { fontSize: C },
                 children: [
-                    null != C
+                    null != g
                         ? (0, s.jsx)('div', {
                               className: r()(E.childWrapper, E.acronym),
                               'aria-hidden': !0,
-                              children: C
+                              children: g
                           })
                         : null,
                     null != R

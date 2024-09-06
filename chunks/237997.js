@@ -16,8 +16,8 @@ var r,
     I = n(998502),
     m = n(145597),
     T = n(451478),
-    g = n(981631),
-    S = n(987650);
+    S = n(981631),
+    g = n(987650);
 function A(e, t, n) {
     return (
         t in e
@@ -34,23 +34,23 @@ function A(e, t, n) {
 let N = Object.freeze({
         selectedGuildId: null,
         selectedChannelId: null,
-        displayUserMode: g.OYC.ALWAYS,
-        displayNameMode: g.wC$.ALWAYS,
-        avatarSizeMode: g.ipw.LARGE,
-        notificationPositionMode: g._vf.TOP_LEFT,
-        textChatNotifications: g.Ypu.ENABLED,
+        displayUserMode: S.OYC.ALWAYS,
+        displayNameMode: S.wC$.ALWAYS,
+        avatarSizeMode: S.ipw.LARGE,
+        notificationPositionMode: S._vf.TOP_LEFT,
+        textChatNotifications: S.Ypu.ENABLED,
         disableExternalLinkAlert: !1,
         disablePinTutorial: !1,
         showKeybindIndicators: !0,
-        textWidgetOpacity: S.wF.LOWER
+        textWidgetOpacity: g.wF.LOWER
     }),
     O = null,
     R = {},
     v = null,
     C = new Set(),
     y = !1,
-    L = null,
-    D = !1,
+    D = null,
+    L = !1,
     b = !1,
     M = new Set(),
     P = !1;
@@ -75,12 +75,12 @@ function F(e) {
     let t = (0, m.QF)();
     if (null == e.pid || e.pid === t)
         switch (e.type) {
-            case g.BmY.STORAGE_SYNC:
+            case S.BmY.STORAGE_SYNC:
                 i.ZP.PersistedStore.initializeAll(e.states);
                 break;
-            case g.BmY.DISPATCH:
+            case S.BmY.DISPATCH:
                 null != e.payloads &&
-                    ((D = !0),
+                    ((L = !0),
                     e.payloads.forEach((e) =>
                         (function (e) {
                             var t, n, r, i, a, o;
@@ -140,7 +140,7 @@ function F(e) {
                             }
                         })(e)
                     ),
-                    (D = !1));
+                    (L = !1));
         }
 }
 class V extends (r = i.ZP.PersistedStore) {
@@ -209,7 +209,7 @@ class V extends (r = i.ZP.PersistedStore) {
         return w.notificationPositionMode;
     }
     getTextChatNotificationMode() {
-        return w.notificationPositionMode === g._vf.DISABLED ? g.Ypu.DISABLED : w.textChatNotifications;
+        return w.notificationPositionMode === S._vf.DISABLED ? S.Ypu.DISABLED : w.textChatNotifications;
     }
     get showKeybindIndicators() {
         return null == w.showKeybindIndicators || w.showKeybindIndicators;
@@ -263,21 +263,21 @@ A(V, 'displayName', 'OverlayStore'),
         },
         OVERLAY_START_SESSION: function () {
             s.Z.addInterceptor((e) => {
-                if (D || !G.has(e.type)) return !1;
+                if (L || !G.has(e.type)) return !1;
                 if ('CHANNEL_SELECT' === e.type) {
                     let { guildId: t, channelId: n } = e;
                     return (
                         null != n &&
                         ((0, l.lW)({
-                            type: g.BmY.DISPATCH,
+                            type: S.BmY.DISPATCH,
                             pid: (0, m.QF)(),
                             token: (0, m.Ht)(),
                             payloads: [
                                 {
                                     type: 'CHANNEL_PRELOAD',
-                                    guildId: t === g.ME ? null : t,
+                                    guildId: t === S.ME ? null : t,
                                     channelId: n,
-                                    context: g.e3s
+                                    context: S.e3s
                                 },
                                 {
                                     type: 'OVERLAY_SELECT_CHANNEL',
@@ -291,7 +291,7 @@ A(V, 'displayName', 'OverlayStore'),
                 }
                 return (
                     (0, l.lW)({
-                        type: g.BmY.DISPATCH,
+                        type: S.BmY.DISPATCH,
                         pid: (0, m.QF)(),
                         token: (0, m.Ht)(),
                         payloads: [e]
@@ -302,7 +302,7 @@ A(V, 'displayName', 'OverlayStore'),
                 (0, l.Ty)(F, (0, m.Ht)()),
                 (0, l.$j)(),
                 (0, l.lW)({
-                    type: g.BmY.CONNECT,
+                    type: S.BmY.CONNECT,
                     pid: (0, m.QF)(),
                     token: (0, m.Ht)()
                 });
