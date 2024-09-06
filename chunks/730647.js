@@ -12,10 +12,10 @@ var r = t(735250),
     o = t(399606),
     l = t(38618),
     u = t(423117),
-    a = t(289393);
-let s = i.createContext(void 0);
+    s = t(289393);
+let a = i.createContext(void 0);
 function c(e) {
-    let n = i.useContext(s);
+    let n = i.useContext(a);
     if (null == n) throw Error(''.concat(null != e ? e : 'useGroupListingsFetchContext', ' must be used within a GroupListingsFetchContextProvider'));
     let { listingsLoaded: t, fetchGroupListingsForGuild: r } = n;
     return r(), t;
@@ -23,23 +23,23 @@ function c(e) {
 function d(e) {
     let { guildId: n, children: t, refetchOnMount: c, includeSoftDeleted: d, countryCode: _, dontFetchWhileTrue: f } = e,
         E = (0, o.e7)([l.Z], () => l.Z.isConnected()),
-        I = (0, o.e7)([a.Z], () => (null != n ? a.Z.getSubscriptionGroupListingsForGuildFetchState(n) : a.M.FETCHED)),
-        g = i.useRef(c),
-        p = i.useCallback(() => {
+        I = (0, o.e7)([s.Z], () => (null != n ? s.Z.getSubscriptionGroupListingsForGuildFetchState(n) : s.M.FETCHED)),
+        S = i.useRef(c),
+        g = i.useCallback(() => {
             if (null == n || !E || !0 === f) return;
-            let e = a.Z.getSubscriptionGroupListingsForGuildFetchState(n);
-            (g.current || e === a.M.NOT_FETCHED) &&
-                ((g.current = !1),
+            let e = s.Z.getSubscriptionGroupListingsForGuildFetchState(n);
+            (S.current || e === s.M.NOT_FETCHED) &&
+                ((S.current = !1),
                 u.FP(n, {
                     includeSoftDeleted: d,
                     countryCode: _
                 }));
         }, [E, n, d, _, f]),
-        S = i.useMemo(() => I === a.M.FETCHED && !0 !== g.current, [I, g]);
-    return (0, r.jsx)(s.Provider, {
+        T = i.useMemo(() => I === s.M.FETCHED && !0 !== S.current, [I, S]);
+    return (0, r.jsx)(a.Provider, {
         value: {
-            listingsLoaded: S,
-            fetchGroupListingsForGuild: p
+            listingsLoaded: T,
+            fetchGroupListingsForGuild: g
         },
         children: t
     });

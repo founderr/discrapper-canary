@@ -9,8 +9,8 @@ var i = t(735250),
     a = t(470079),
     s = t(120356),
     l = t.n(s),
-    r = t(658722),
-    o = t.n(r),
+    o = t(658722),
+    r = t.n(o),
     d = t(442837),
     c = t(780384),
     u = t(481060),
@@ -24,9 +24,9 @@ var i = t(735250),
     g = t(553795),
     p = t(496675),
     f = t(626135),
-    C = t(768581),
-    O = t(63063),
-    x = t(709054),
+    O = t(768581),
+    x = t(63063),
+    C = t(709054),
     S = t(51144),
     A = t(585835),
     R = t(997787),
@@ -60,7 +60,7 @@ function P(e) {
     });
 }
 function B(e) {
-    let { guild: n, channel: t, applicationIntegrations: s, builtInIntegrations: r, customWebhooks: B, followedChannelWebhooks: y, isLoading: G, canCreateWebhook: k, onManageBuiltIn: U, onManageCustomWebhooks: H, onManageFollowedChannels: w, onManageApplication: W } = e,
+    let { guild: n, channel: t, applicationIntegrations: s, builtInIntegrations: o, customWebhooks: B, followedChannelWebhooks: y, isLoading: G, canCreateWebhook: k, onManageBuiltIn: U, onManageCustomWebhooks: w, onManageFollowedChannels: H, onManageApplication: W } = e,
         F = (0, m.ZP)(),
         [V, K] = a.useState(''),
         { isFetchingConnections: Y, accounts: z } = (0, d.cj)(
@@ -85,14 +85,14 @@ function B(e) {
             guildTwitchIntegrations: $,
             guildYoutubeIntegrations: ee
         } = a.useMemo(() => {
-            var e, n, t, i, a, s, l, o;
+            var e, n, t, i, a, s, l, r;
             return {
-                availableTwitchIntegrations: null !== (a = null === (e = r.twitch) || void 0 === e ? void 0 : e.length) && void 0 !== a ? a : 0,
-                availableYoutubeIntegrations: null !== (s = null === (n = r.youtube) || void 0 === n ? void 0 : n.length) && void 0 !== s ? s : 0,
-                guildTwitchIntegrations: null !== (l = null === (t = r.twitch) || void 0 === t ? void 0 : t.filter((e) => e.enabled).length) && void 0 !== l ? l : 0,
-                guildYoutubeIntegrations: null !== (o = null === (i = r.youtube) || void 0 === i ? void 0 : i.filter((e) => e.enabled).length) && void 0 !== o ? o : 0
+                availableTwitchIntegrations: null !== (a = null === (e = o.twitch) || void 0 === e ? void 0 : e.length) && void 0 !== a ? a : 0,
+                availableYoutubeIntegrations: null !== (s = null === (n = o.youtube) || void 0 === n ? void 0 : n.length) && void 0 !== s ? s : 0,
+                guildTwitchIntegrations: null !== (l = null === (t = o.twitch) || void 0 === t ? void 0 : t.filter((e) => e.enabled).length) && void 0 !== l ? l : 0,
+                guildYoutubeIntegrations: null !== (r = null === (i = o.youtube) || void 0 === i ? void 0 : i.filter((e) => e.enabled).length) && void 0 !== r ? r : 0
             };
-        }, [r.twitch, r.youtube]),
+        }, [o.twitch, o.youtube]),
         { showTwitchCard: en, showYoutubeCard: et } = a.useMemo(() => {
             if (Y || !X)
                 return {
@@ -109,7 +109,7 @@ function B(e) {
         }, [Y, X, n, z, J, Q]),
         ei = Object.values(s).length,
         ea = a.useMemo(() => {
-            let e = ei > 100 ? D : o();
+            let e = ei > 100 ? D : r();
             return Object.values(s).filter((n) => {
                 var t, i, a;
                 let { application: s } = n;
@@ -124,8 +124,8 @@ function B(e) {
             [ea, n]
         ),
         el = a.useMemo(() => (void 0 !== es ? [es, ...ea.filter((e) => e.integration.id !== es.integration.id)] : ea), [ea, es]),
-        er = (0, u.useModalsStore)(u.hasAnyModalOpenSelector),
-        [eo, ed] = a.useState(!1),
+        eo = (0, u.useModalsStore)(u.hasAnyModalOpenSelector),
+        [er, ed] = a.useState(!1),
         ec = a.useRef(0),
         eu = () => {
             ed(!0),
@@ -136,36 +136,36 @@ function B(e) {
         };
     a.useEffect(() => (window.addEventListener('scroll', eu, !0), () => window.removeEventListener('scroll', eu)));
     let eI = el.map((e) => {
-            let t = !er && e.integration.id === (null == es ? void 0 : es.integration.id);
+            let t = !eo && e.integration.id === (null == es ? void 0 : es.integration.id);
             return (function (e, n, t, a, s) {
                 var l;
-                let { application: r, integration: o } = n,
+                let { application: o, integration: r } = n,
                     d = [];
                 return (
-                    null != o.user
+                    null != r.user
                         ? d.push({
                               icon: u.ClockIcon,
                               text: Z.Z.Messages.INTEGRATION_ADDED_USER_DATE.format({
-                                  timestamp: x.default.extractTimestamp(o.id),
-                                  user: S.ZP.getUserTag(o.user)
+                                  timestamp: C.default.extractTimestamp(r.id),
+                                  user: S.ZP.getUserTag(r.user)
                               })
                           })
                         : d.push({
                               icon: u.ClockIcon,
-                              text: Z.Z.Messages.INTEGRATION_ADDED_DATE.format({ timestamp: x.default.extractTimestamp(o.id) })
+                              text: Z.Z.Messages.INTEGRATION_ADDED_DATE.format({ timestamp: C.default.extractTimestamp(r.id) })
                           }),
                     (0, i.jsx)(
                         A.Z,
                         {
-                            name: r.name,
-                            imageSrc: null !== (l = r.getIconURL(48)) && void 0 !== l ? l : C.pK['0'],
+                            name: o.name,
+                            imageSrc: null !== (l = o.getIconURL(48)) && void 0 !== l ? l : O.pK['0'],
                             integration: n,
                             buttonText: Z.Z.Messages.INTEGRATIONS_APPLICATION_BUTTON,
                             hasNextSection: !0,
                             onButtonClick: () => {
-                                t(r.id),
+                                t(o.id),
                                     f.default.track(b.rMx.APP_MANAGE_CTA_CLICKED, {
-                                        application_id: r.id,
+                                        application_id: o.id,
                                         guild_id: null == e ? void 0 : e.id,
                                         is_admin: null != e ? p.Z.can(b.Plq.ADMINISTRATOR, e) : void 0
                                     });
@@ -175,10 +175,10 @@ function B(e) {
                             isScrolling: a,
                             canShowMigrationTooltip: s
                         },
-                        'integration-'.concat(o.id)
+                        'integration-'.concat(r.id)
                     )
                 );
-            })(n, e, W, eo, t);
+            })(n, e, W, er, t);
         }),
         em = (0, i.jsx)('div', { className: v.footerImage });
     0 === eI.length &&
@@ -241,7 +241,7 @@ function B(e) {
             return n > 0 ? s : l;
         })(F, ei, null == n ? void 0 : n.id)),
         (em = null));
-    let e_ = O.Z.getArticleURL(b.BhN.INTEGRATIONS),
+    let e_ = x.Z.getArticleURL(b.BhN.INTEGRATIONS),
         eN = null != t ? Z.Z.Messages.INTEGRATIONS_OVERVIEW_DESCRIPTION_CHANNEL : Z.Z.Messages.INTEGRATIONS_OVERVIEW_DESCRIPTION_GUILD,
         eE = [];
     if (q) {
@@ -251,7 +251,7 @@ function B(e) {
             (eE.push(
                 ((eT = B.length),
                 (eh = k),
-                (eg = H),
+                (eg = w),
                 (e = eT > 0 ? Z.Z.Messages.INTEGRATIONS_WEBHOOKS_BUTTON : Z.Z.Messages.INTEGRATIONS_WEBHOOKS_EMPTY_BUTTON),
                 (0, i.jsx)(
                     A.Z,
@@ -272,8 +272,8 @@ function B(e) {
             let e, n;
             eE.push(
                 ((ep = y.length),
-                (ef = w),
-                ep > 0 ? ((e = Z.Z.Messages.INTEGRATIONS_CHANNEL_FOLLOWING_BUTTON), (n = ef)) : ((e = Z.Z.Messages.INTEGRATIONS_CHANNEL_FOLLOWING_EMPTY_BUTTON), (n = () => open(O.Z.getArticleURL(b.BhN.CHANNEL_FOLLOWING)))),
+                (ef = H),
+                ep > 0 ? ((e = Z.Z.Messages.INTEGRATIONS_CHANNEL_FOLLOWING_BUTTON), (n = ef)) : ((e = Z.Z.Messages.INTEGRATIONS_CHANNEL_FOLLOWING_EMPTY_BUTTON), (n = () => open(x.Z.getArticleURL(b.BhN.CHANNEL_FOLLOWING)))),
                 (0, i.jsx)(
                     A.Z,
                     {
@@ -294,7 +294,7 @@ function B(e) {
             eE.push(
                 (function (e, n, t) {
                     let a, s, l;
-                    let r = _.Z.get(b.ABu.TWITCH);
+                    let o = _.Z.get(b.ABu.TWITCH);
                     return (
                         e > 0
                             ? ((a = Z.Z.Messages.INTEGRATIONS_TWITCH_BUTTON), (s = Z.Z.Messages.INTEGRATIONS_TWITCH_SUMMARY.format({ count: n })), (l = () => t(b.ABu.TWITCH)))
@@ -309,8 +309,8 @@ function B(e) {
                             A.Z,
                             {
                                 name: Z.Z.Messages.INTEGRATIONS_TWITCH,
-                                icon: r.icon.whiteSVG,
-                                iconBackgroundColor: r.color,
+                                icon: o.icon.whiteSVG,
+                                iconBackgroundColor: o.color,
                                 iconClassName: v.platformIcon,
                                 buttonText: a,
                                 onButtonClick: l,
@@ -326,7 +326,7 @@ function B(e) {
             eE.push(
                 (function (e, n, t) {
                     let a, s, l;
-                    let r = _.Z.get(b.ABu.YOUTUBE);
+                    let o = _.Z.get(b.ABu.YOUTUBE);
                     return (
                         e > 0
                             ? ((a = Z.Z.Messages.INTEGRATIONS_YOUTUBE_BUTTON), (s = Z.Z.Messages.INTEGRATIONS_YOUTUBE_SUMMARY.format({ count: n })), (l = () => t(b.ABu.YOUTUBE)))
@@ -341,8 +341,8 @@ function B(e) {
                             A.Z,
                             {
                                 name: Z.Z.Messages.INTEGRATIONS_YOUTUBE,
-                                icon: r.icon.whiteSVG,
-                                iconBackgroundColor: r.color,
+                                icon: o.icon.whiteSVG,
+                                iconBackgroundColor: o.color,
                                 iconClassName: v.platformIcon,
                                 buttonText: a,
                                 onButtonClick: l,

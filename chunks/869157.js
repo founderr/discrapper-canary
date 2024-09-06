@@ -9,8 +9,8 @@ var i = t(735250),
     a = t(470079),
     s = t(512722),
     l = t.n(s),
-    r = t(392711),
-    o = t.n(r),
+    o = t(392711),
+    r = t.n(o),
     d = t(442837),
     c = t(481060),
     u = t(749210),
@@ -24,9 +24,9 @@ var i = t(735250),
     g = t(430824),
     p = t(594174),
     f = t(626135),
-    C = t(5192),
-    O = t(709054),
-    x = t(360606),
+    O = t(5192),
+    x = t(709054),
+    C = t(360606),
     S = t(905753),
     A = t(399860),
     R = t(335049),
@@ -35,7 +35,7 @@ var i = t(735250),
     v = t(689938),
     M = t(570767);
 function L(e) {
-    let { commandId: n, editPermissions: t, guildId: s, noneSelectedText: r, overwrites: I, hasAccessToMutatePermissions: N } = e,
+    let { commandId: n, editPermissions: t, guildId: s, noneSelectedText: o, overwrites: I, hasAccessToMutatePermissions: N } = e,
         T = (0, d.e7)([g.Z], () => g.Z.getGuild(s));
     l()(null != T, '');
     let h = (0, d.e7)([g.Z], () => g.Z.getRoles(s)),
@@ -45,7 +45,7 @@ function L(e) {
             let n = (0, _.bD)(s);
             let t =
                 ((e = h),
-                o()(e)
+                r()(e)
                     .sortBy((e) => e.position)
                     .reduce((e, n, t) => ((e[n.id] = t), e), {}));
             return Object.values(I)
@@ -61,11 +61,11 @@ function L(e) {
                                 let a = p.default.getUser(e.id),
                                     s = p.default.getUser(n.id);
                                 if (null != a && null != s) {
-                                    let e = C.ZP.getName(t, void 0, a),
-                                        n = C.ZP.getName(t, void 0, s);
+                                    let e = O.ZP.getName(t, void 0, a),
+                                        n = O.ZP.getName(t, void 0, s);
                                     return null == e ? void 0 : e.localeCompare(n);
                                 }
-                                return O.default.compare(e.id, n.id);
+                                return x.default.compare(e.id, n.id);
                             })(e, i, s);
                         case m.Kw.ROLE:
                             return (function (e, n, t, i) {
@@ -79,7 +79,7 @@ function L(e) {
                                 if (e.id === t) return -1;
                                 if (n.id === t) return 1;
                                 let i = Number(e.canWrite) - Number(n.canWrite);
-                                return 0 !== i ? i : O.default.compare(e.id, n.id);
+                                return 0 !== i ? i : x.default.compare(e.id, n.id);
                             })(e, i, n);
                     }
                 });
@@ -114,10 +114,10 @@ function L(e) {
         if (0 !== e.length) u.Z.requestMembersById(s, e, !1), R((n) => new Set([...n, ...e]));
     }, [s, I, f, R]);
     let L = (0, d.e7)([S.Z], () => S.Z.getApplicationId()),
-        D = (0, d.e7)([x.Z], () =>
+        D = (0, d.e7)([C.Z], () =>
             null == L
                 ? void 0
-                : x.Z.integrations.find((e) => {
+                : C.Z.integrations.find((e) => {
                       var n;
                       return (null === (n = e.application) || void 0 === n ? void 0 : n.id) === L;
                   })
@@ -147,7 +147,7 @@ function L(e) {
                       children: (0, i.jsx)(c.Text, {
                           color: 'text-muted',
                           variant: 'text-sm/normal',
-                          children: r
+                          children: o
                       })
                   })
     });
@@ -155,23 +155,23 @@ function L(e) {
 function j(e) {
     var n, t, s;
     let l,
-        { guild: r, commandId: o, onChange: d, onRemove: u, overwrite: E, integration: g, canShowMigrationTooltip: p, hasAccessToMutatePermissions: C } = e,
-        O = E.id === r.id || E.id === (0, _.bD)(r.id),
-        x = null == g ? void 0 : null === (t = g.application) || void 0 === t ? void 0 : null === (n = t.bot) || void 0 === n ? void 0 : n.username,
-        S = !E.canWrite || !C,
+        { guild: o, commandId: r, onChange: d, onRemove: u, overwrite: E, integration: g, canShowMigrationTooltip: p, hasAccessToMutatePermissions: O } = e,
+        x = E.id === o.id || E.id === (0, _.bD)(o.id),
+        C = null == g ? void 0 : null === (t = g.application) || void 0 === t ? void 0 : null === (n = t.bot) || void 0 === n ? void 0 : n.username,
+        S = !E.canWrite || !O,
         A = h.default.getId();
-    C ? !E.canWrite && (E.type === m.Kw.USER ? (l = E.id === A ? v.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_USER_SELF : v.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_USER_OTHER) : E.type === m.Kw.ROLE && (l = v.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_ROLE)) : (l = null != o ? v.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_COMMAND : v.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_APPLICATION);
-    let L = p && null != g && E.id === r.id && void 0 !== x && !E.permission;
+    O ? !E.canWrite && (E.type === m.Kw.USER ? (l = E.id === A ? v.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_USER_SELF : v.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_USER_OTHER) : E.type === m.Kw.ROLE && (l = v.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_ROLE)) : (l = null != r ? v.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_COMMAND : v.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_APPLICATION);
+    let L = p && null != g && E.id === o.id && void 0 !== C && !E.permission;
     a.useEffect(() => {
         if (L) {
             var e;
             f.default.track(Z.rMx.COMMANDS_MIGRATION_TOOLTIP_VIEWED, {
-                ...(0, I.hH)(r.id),
+                ...(0, I.hH)(o.id),
                 application_id: null == g ? void 0 : null === (e = g.application) || void 0 === e ? void 0 : e.id,
                 location: 'toggle'
             });
         }
-    }, [r.id, null == g ? void 0 : null === (s = g.application) || void 0 === s ? void 0 : s.id, L]);
+    }, [o.id, null == g ? void 0 : null === (s = g.application) || void 0 === s ? void 0 : s.id, L]);
     let j = (0, i.jsx)(c.Tooltip, {
             tooltipClassName: M.tooltip,
             text: l,
@@ -186,7 +186,7 @@ function j(e) {
                         currentValue: E.permission,
                         onChange: L
                             ? (e) => {
-                                  N.Z.dismissToggleTooltip(r.id, g), d(e);
+                                  N.Z.dismissToggleTooltip(o.id, g), d(e);
                               }
                             : d
                     })
@@ -196,12 +196,12 @@ function j(e) {
             renderPopout: () =>
                 (0, i.jsx)(c.Clickable, {
                     onClick: (e) => {
-                        e.stopPropagation(), N.Z.dismissToggleTooltip(r.id, g);
+                        e.stopPropagation(), N.Z.dismissToggleTooltip(o.id, g);
                     },
                     children: (0, i.jsx)(T.ZP, {
                         className: M.tooltip,
                         content: v.Z.Messages.COMMANDS_SCOPE_MIGRATION_TOGGLE_TOOLTIP.format({
-                            botName: x,
+                            botName: C,
                             link: 'https://discord.com/blog/welcome-to-the-new-era-of-discord-apps/'
                         }),
                         onClick: () => {}
@@ -210,7 +210,7 @@ function j(e) {
             position: 'bottom',
             align: 'center',
             animation: c.Popout.Animation.TRANSLATE,
-            onRequestClose: () => N.Z.dismissToggleTooltip(r.id, g),
+            onRequestClose: () => N.Z.dismissToggleTooltip(o.id, g),
             shouldShow: L,
             closeOnScroll: !0,
             children: () => j
@@ -223,7 +223,7 @@ function j(e) {
                 (0, i.jsx)('div', {
                     className: M.entryName,
                     children: (0, i.jsx)(R.Z, {
-                        guild: r,
+                        guild: o,
                         id: E.id,
                         type: E.type,
                         isLocked: S,
@@ -234,9 +234,9 @@ function j(e) {
                     className: M.entryActions,
                     children: [
                         (0, i.jsx)(D, {
-                            commandId: o,
-                            isSentinel: O,
-                            isDisabled: !C,
+                            commandId: r,
+                            isSentinel: x,
+                            isDisabled: !O,
                             onRemove: u
                         }),
                         P

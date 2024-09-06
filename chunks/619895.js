@@ -1,6 +1,6 @@
 n.d(t, {
     Id: function () {
-        return u;
+        return m;
     },
     Qm: function () {
         return p;
@@ -9,15 +9,15 @@ n.d(t, {
         return _;
     }
 });
-var i = n(470079),
-    o = n(892814),
+var o = n(470079),
+    i = n(892814),
     a = n(442837),
     l = n(895924),
     r = n(581364),
-    d = n(823379),
-    c = n(399654),
-    m = n(844439);
-let u = {
+    c = n(823379),
+    d = n(399654),
+    u = n(844439);
+let m = {
         '1181475143340539995': {
             imageOption: 'image',
             additionalOptions: [
@@ -255,7 +255,7 @@ let u = {
         '1029794689932611625': { imageOption: 'image' },
         '1238332854602043454': { imageOption: 'image' }
     },
-    s = Object.keys(u);
+    s = Object.keys(m);
 function p(e) {
     let { contentType: t } = e;
     switch (t) {
@@ -273,10 +273,10 @@ function p(e) {
 }
 function _(e) {
     let { channelId: t } = e,
-        { fetchState: n, recommendationsSections: u } = (function (e) {
+        { fetchState: n, recommendationsSections: m } = (function (e) {
             let { channelId: t } = e,
-                n = o.I.CONTEXTUAL_IMAGE,
-                l = i.useMemo(
+                n = i.I.CONTEXTUAL_IMAGE,
+                l = o.useMemo(
                     () => ({
                         channelId: t,
                         location: n,
@@ -284,58 +284,58 @@ function _(e) {
                     }),
                     [t, n]
                 );
-            i.useEffect(() => {
-                (0, c.a)(l);
+            o.useEffect(() => {
+                (0, d.a)(l);
             }, [l]);
-            let { fetchState: r, recommendationsSections: d } = (0, a.cj)([m.ZP], () => ({
-                fetchState: m.ZP.getFetchState(l),
-                recommendationsSections: m.ZP.getRecommendations(l)
+            let { fetchState: r, recommendationsSections: c } = (0, a.cj)([u.ZP], () => ({
+                fetchState: u.ZP.getFetchState(l),
+                recommendationsSections: u.ZP.getRecommendations(l)
             }));
             return {
                 fetchState: r,
-                recommendationsSections: d
+                recommendationsSections: c
             };
         })({ channelId: t });
     return {
         fetchState: n,
-        imageRecCommandContexts: i.useMemo(() => {
-            let e = u.length > 0 ? u[0].items : void 0;
+        imageRecCommandContexts: o.useMemo(() => {
+            let e = m.length > 0 ? m[0].items : void 0;
             return void 0 === e
                 ? []
                 : s
                       .map((t) => {
-                          var n, i;
-                          let o;
+                          var n, o;
+                          let i;
                           let a = e.find((e) => {
                               var n;
-                              return null != (o = null === (n = e.commands) || void 0 === n ? void 0 : n.find((e) => e.id === t));
+                              return null != (i = null === (n = e.commands) || void 0 === n ? void 0 : n.find((e) => e.id === t));
                           });
                           if (null == a) return null;
-                          let { application: d } = a;
-                          if (null == o) return null;
-                          let c = (0, r.Z8)({
-                              rootCommand: o,
-                              command: o,
-                              applicationId: d.id
+                          let { application: c } = a;
+                          if (null == i) return null;
+                          let d = (0, r.Z8)({
+                              rootCommand: i,
+                              command: i,
+                              applicationId: c.id
                           });
                           return {
                               command: {
-                                  ...c,
-                                  displayName: c.displayName
+                                  ...d,
+                                  displayName: d.displayName
                                       .split(/[_ ]/)
                                       .map((e) => e.charAt(0).toUpperCase() + e.slice(1))
                                       .join(' ')
                               },
                               section: {
                                   type: l.Qi.APPLICATION,
-                                  id: d.id,
-                                  icon: d.icon,
-                                  name: null !== (i = null == d ? void 0 : null === (n = d.bot) || void 0 === n ? void 0 : n.username) && void 0 !== i ? i : d.name,
-                                  application: d
+                                  id: c.id,
+                                  icon: c.icon,
+                                  name: null !== (o = null == c ? void 0 : null === (n = c.bot) || void 0 === n ? void 0 : n.username) && void 0 !== o ? o : c.name,
+                                  application: c
                               }
                           };
                       })
-                      .filter(d.lm);
-        }, [u])
+                      .filter(c.lm);
+        }, [m])
     };
 }

@@ -1,8 +1,8 @@
 let i, a, s;
 t(47120);
 var l,
-    r,
     o,
+    r,
     d,
     c = t(442837),
     u = t(570140),
@@ -38,14 +38,14 @@ class h extends (l = c.ZP.Store) {
     }
 }
 (d = 'IntegrationPermissionStore'),
-    (o = 'displayName') in (r = h)
-        ? Object.defineProperty(r, o, {
+    (r = 'displayName') in (o = h)
+        ? Object.defineProperty(o, r, {
               value: d,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (r[o] = d),
+        : (o[r] = d),
     (n.Z = new h(u.Z, {
         LOGOUT: T,
         INTEGRATION_PERMISSION_SETTINGS_APPLICATION_PERMISSIONS_FETCH_FAILURE: function (e) {

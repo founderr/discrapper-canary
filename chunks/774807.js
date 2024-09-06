@@ -1,7 +1,7 @@
 n(47120);
 var i,
-    a = n(442837),
-    s = n(570140);
+    s = n(442837),
+    a = n(570140);
 n(57132);
 var r = n(455199),
     l = n(70956),
@@ -28,7 +28,7 @@ let d = 90 * l.Z.Millis.DAY,
         isDataStale: !1,
         isRefreshing: !1
     };
-class E extends (i = a.ZP.PersistedStore) {
+class E extends (i = s.ZP.PersistedStore) {
     initialize(e) {
         if ((this.waitFor(r.Z), null != e)) {
             var t;
@@ -67,7 +67,7 @@ u(E, 'displayName', 'NotificationCenterStore'), u(E, 'persistKey', 'Notification
 function I() {
     (_.hasNewMentions = !1), (_.isDataStale = !1), (_.isRefreshing = !1);
 }
-t.Z = new E(s.Z, {
+t.Z = new E(a.Z, {
     MESSAGE_CREATE: function (e) {
         let { message: t } = e;
     },

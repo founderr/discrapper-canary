@@ -8,8 +8,8 @@ var i = t(735250),
     a = t(470079),
     s = t(481060),
     l = t(668781),
-    r = t(139387),
-    o = t(308063),
+    o = t(139387),
+    r = t(308063),
     d = t(600164),
     c = t(259580),
     u = t(768581),
@@ -40,7 +40,7 @@ function E(e) {
                     confirmText: _.Z.Messages.INTEGRATIONS_FOLLOWED_CHANNEL_DELETE,
                     cancelText: _.Z.Messages.CANCEL,
                     onConfirm: () => {
-                        o.Z.delete(n.guild_id, n.id).catch(() => {
+                        r.Z.delete(n.guild_id, n.id).catch(() => {
                             l.Z.show({
                                 title: _.Z.Messages.INTEGRATIONS_FOLLOWED_CHANNEL_ERROR_DELETING,
                                 body: _.Z.Messages.WEBHOOK_ERROR_INTERNAL_SERVER_ERROR
@@ -54,14 +54,14 @@ function E(e) {
                 })
             );
         }, [n.guild_id, n.id, n.name]),
-        C = [];
+        O = [];
     null != n.source_channel &&
         null != n.source_guild &&
-        (C.push({
+        (O.push({
             icon: s.AnnouncementsIcon,
             text: n.source_channel.name
         }),
-        C.push({
+        O.push({
             text: (0, i.jsx)(
                 'span',
                 {
@@ -81,11 +81,11 @@ function E(e) {
                 'guild-source'
             )
         }));
-    let O = null;
+    let x = null;
     return (
         T &&
             null != t &&
-            (O = (0, i.jsxs)('div', {
+            (x = (0, i.jsxs)('div', {
                 className: N.body,
                 children: [
                     (0, i.jsx)(s.FormDivider, { className: N.topDivider }),
@@ -102,7 +102,7 @@ function E(e) {
                                                 children: (0, i.jsx)(s.TextInput, {
                                                     value: t.name,
                                                     onChange: (e) => {
-                                                        r.Z.updateWebhook({ name: e });
+                                                        o.Z.updateWebhook({ name: e });
                                                     },
                                                     maxLength: 80,
                                                     error: h.name
@@ -117,7 +117,7 @@ function E(e) {
                                                     value: t.channel_id,
                                                     options: E,
                                                     onChange: (e) => {
-                                                        r.Z.updateWebhook({ channelId: e });
+                                                        o.Z.updateWebhook({ channelId: e });
                                                     }
                                                 })
                                             })
@@ -157,7 +157,7 @@ function E(e) {
                                     name: n.name,
                                     imageSrc: p,
                                     detailsClassName: N.__invalid_description,
-                                    details: C
+                                    details: O
                                 }),
                                 (0, i.jsx)(c.Z, {
                                     className: N.expandIcon,
@@ -167,7 +167,7 @@ function E(e) {
                             ]
                         })
                     }),
-                    O
+                    x
                 ]
             })
         })

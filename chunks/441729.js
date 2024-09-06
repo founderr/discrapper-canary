@@ -1,6 +1,6 @@
 var i,
-    a = n(442837),
-    s = n(570140);
+    s = n(442837),
+    a = n(570140);
 function r(e, t, n) {
     return (
         t in e
@@ -19,7 +19,7 @@ let l = {
         currentMessage: null
     },
     o = l;
-class c extends (i = a.ZP.DeviceSettingsStore) {
+class c extends (i = s.ZP.DeviceSettingsStore) {
     initialize(e) {
         o = {
             ...l,
@@ -44,7 +44,7 @@ r(c, 'displayName', 'TTSStore'),
     r(c, 'persistKey', 'TTSStore'),
     r(c, 'migrations', []),
     (t.Z = new c(
-        s.Z,
+        a.Z,
         __OVERLAY__
             ? {}
             : {

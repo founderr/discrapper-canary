@@ -9,8 +9,8 @@ t(470079);
 var a = t(442837),
     s = t(481060),
     l = t(749210),
-    r = t(240872),
-    o = t(605436),
+    o = t(240872),
+    r = t(605436),
     d = t(228643),
     c = t(299206),
     u = t(496675),
@@ -32,7 +32,7 @@ function _(e, n) {
     null != T && N.push(T);
     let h = (null === (t = n.tags) || void 0 === t ? void 0 : t.guild_connections) === null,
         g = n.managed && !h,
-        p = null != n && (0, o.pM)(e.id, n.id);
+        p = null != n && (0, r.pM)(e.id, n.id);
     return (
         !_ &&
             !g &&
@@ -47,7 +47,7 @@ function _(e, n) {
                             color: 'danger',
                             icon: s.TrashIcon,
                             action: () => {
-                                r.Z.show({
+                                o.Z.show({
                                     title: m.Z.Messages.SETTINGS_ROLES_DELETE_TITLE,
                                     body: m.Z.Messages.SETTINGS_ROLES_DELETE_BODY.format({ name: n.name }),
                                     cancelText: m.Z.Messages.CANCEL,

@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return a;
+        return s;
     }
 });
 var r = t(470079),
@@ -8,7 +8,7 @@ var r = t(470079),
     o = t(293810),
     l = t(474936),
     u = t(689938);
-function a(e) {
+function s(e) {
     return r.useMemo(() => {
         var n;
         let t = o.DN.map((e) => ({

@@ -6,15 +6,15 @@ t.d(n, {
 var i = t(470079),
     l = t(442837),
     r = t(821849),
-    o = t(509545);
-let s = (0, l.Kb)(o.Z, {
-    get: (e) => (null != e ? o.Z.getForSKU(e) : []),
+    s = t(509545);
+let o = (0, l.Kb)(s.Z, {
+    get: (e) => (null != e ? s.Z.getForSKU(e) : []),
     load: (e, n) => (null != n ? (0, r.GZ)(n) : Promise.resolve()),
-    getIsLoading: (e) => null != e && o.Z.isFetchingForSKU(e),
+    getIsLoading: (e) => null != e && s.Z.isFetchingForSKU(e),
     useStateHook: l.Wu
 });
 function a(e) {
-    let n = s(e);
+    let n = o(e);
     return (
         i.useEffect(() => {
             if (null != e) (0, r.GZ)(e);

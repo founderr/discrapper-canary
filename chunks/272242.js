@@ -7,6 +7,6 @@ r.r(t),
     }),
     ((a = n || (n = {})).GENERAL = 'general'),
     (a.IMAGES = 'images'),
-    (a.PREMIUM = 'premium'),
+    (a.PREMIUM_DEPRECATED = 'premium'),
     (a.STORE = 'store'),
     (a.PRIVACY = 'privacy');

@@ -8,8 +8,8 @@ var i = t(735250),
     a = t(470079),
     s = t(392711),
     l = t.n(s),
-    r = t(149765),
-    o = t(442837),
+    o = t(149765),
+    r = t(442837),
     d = t(481060),
     c = t(895924),
     u = t(581364),
@@ -23,16 +23,16 @@ var i = t(735250),
     g = t(643886),
     p = t(869157),
     f = t(454092),
-    C = t(289465),
-    O = t(981631),
-    x = t(689079),
+    O = t(289465),
+    x = t(981631),
+    C = t(689079),
     S = t(689938),
     A = t(869880);
 function R(e) {
     let { applicationId: n, commandId: s, guildId: h, inModal: g, editedTargetPermissions: R, originalApplicationPermissions: v, originalCommandPermissions: M, selectedPermissionCount: L } = e,
-        j = (0, o.e7)([T.Z], () => (null == s ? null : T.Z.getCommand(s)), [s]),
+        j = (0, r.e7)([T.Z], () => (null == s ? null : T.Z.getCommand(s)), [s]),
         D = (null == j ? void 0 : j.defaultMemberPermissions) != null,
-        P = (0, o.e7)(
+        P = (0, r.e7)(
             [_.Z, m.ZP, N.Z],
             () => {
                 let e = _.Z.getGuild(h),
@@ -112,7 +112,7 @@ function R(e) {
             },
             [h, R]
         ),
-        H = a.useCallback(
+        w = a.useCallback(
             (e, t) => {
                 let i = {};
                 for (let [e, n] of Object.entries(R))
@@ -129,13 +129,13 @@ function R(e) {
             },
             [n, R, B, k, U]
         ),
-        w = a.useCallback(() => {
+        H = a.useCallback(() => {
             let e = Object.keys(y);
             return (0, d.openModalLazy)(async () => {
                 let { default: n } = await t.e('64908').then(t.bind(t, 557944));
                 return (t) =>
                     (0, i.jsx)(n, {
-                        editPermissions: H,
+                        editPermissions: w,
                         guildId: h,
                         headerText: S.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_CHANNEL_ADD_BUTTON,
                         hasMemberSearch: !1,
@@ -146,14 +146,14 @@ function R(e) {
                         ...t
                     });
             });
-        }, [H, y, h, L]),
+        }, [w, y, h, L]),
         W = a.useCallback(() => {
             let e = Object.keys(G);
             return (0, d.openModalLazy)(async () => {
                 let { default: n } = await t.e('64908').then(t.bind(t, 557944));
                 return (t) =>
                     (0, i.jsx)(n, {
-                        editPermissions: H,
+                        editPermissions: w,
                         guildId: h,
                         hasMemberSearch: !0,
                         headerText: S.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_ROLE_MEMBER_ADD_BUTTON,
@@ -164,14 +164,14 @@ function R(e) {
                         ...t
                     });
             });
-        }, [H, h, G, L]),
+        }, [w, h, G, L]),
         F = a.useCallback(
             () =>
                 (0, d.openModalLazy)(async () => {
                     let { default: e } = await t.e('21897').then(t.bind(t, 303313)),
                         n = j.defaultMemberPermissions;
                     return (
-                        r.fS(n, u.BO) && (n = O.Plq.ADMINISTRATOR),
+                        o.fS(n, u.BO) && (n = x.Plq.ADMINISTRATOR),
                         (t) =>
                             (0, i.jsx)(e, {
                                 ...t,
@@ -181,7 +181,7 @@ function R(e) {
                 }),
             [j]
         ),
-        V = L - x._n,
+        V = L - C._n,
         K = V >= 0,
         Y = [
             {
@@ -192,7 +192,7 @@ function R(e) {
                 title: null == s ? S.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_ROLE_MEMBER_ADD : S.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_OVERRIDE_SECTION_ROLE_MEMBER_HEADER
             },
             {
-                buttonClick: w,
+                buttonClick: H,
                 buttonText: S.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_CHANNEL_ADD_BUTTON,
                 noneSelectedText: S.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_OVERRIDE_SECTION_CHANNEL_NO_ENTRIES,
                 overwrites: y,
@@ -245,7 +245,7 @@ function R(e) {
                 return (
                     P ? K && (a = S.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_MAX) : (a = null != s ? S.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_COMMAND : S.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_APPLICATION),
                     (0, i.jsx)(
-                        C.Z,
+                        O.Z,
                         {
                             bar: (0, i.jsx)(d.Tooltip, {
                                 tooltipClassName: A.tooltip,
@@ -262,7 +262,7 @@ function R(e) {
                                     commandId: s,
                                     noneSelectedText: e.noneSelectedText,
                                     overwrites: e.overwrites,
-                                    editPermissions: H,
+                                    editPermissions: w,
                                     hasAccessToMutatePermissions: P
                                 })
                             })

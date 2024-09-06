@@ -5,8 +5,8 @@ n.d(t, {
 }),
     n(47120);
 var i = n(735250),
-    a = n(470079),
-    s = n(442837),
+    s = n(470079),
+    a = n(442837),
     r = n(481060),
     l = n(2052),
     o = n(317381),
@@ -20,8 +20,8 @@ var i = n(735250),
     T = n(973616),
     h = n(314897),
     N = n(592125),
-    f = n(158776),
-    C = n(594174),
+    C = n(158776),
+    f = n(594174),
     p = n(823379),
     g = n(226378),
     S = n(701488),
@@ -32,30 +32,30 @@ function O(e) {
     let { application: n, channelId: O, guildId: x } = e,
         { analyticsLocations: M } = (0, I.ZP)(E.Z.ACTIVITY_INSTANCE_EMBED),
         v = (0, l.O)(),
-        L = (0, s.e7)([N.Z], () => N.Z.getChannel(O)),
+        L = (0, a.e7)([N.Z], () => N.Z.getChannel(O)),
         Z = (null == L ? void 0 : null === (t = L.isThread) || void 0 === t ? void 0 : t.call(L)) ? (null == L ? void 0 : L.parent_id) : O,
-        P = (0, s.e7)([h.default], () => h.default.getId()),
+        P = (0, a.e7)([h.default], () => h.default.getId()),
         {
-            embeddedActivity: b,
-            currentEmbeddedActivity: D,
+            embeddedActivity: D,
+            currentEmbeddedActivity: b,
             activityLaunchState: j
-        } = (0, s.cj)([o.ZP], () => ({
+        } = (0, a.cj)([o.ZP], () => ({
             embeddedActivity: o.ZP.getEmbeddedActivitiesForChannel(null != Z ? Z : '').find((e) => e.applicationId === n.id),
             currentEmbeddedActivity: o.ZP.getCurrentEmbeddedActivity(),
             activityLaunchState: o.ZP.getLaunchState(n.id, null != Z ? Z : void 0)
         })),
-        U = (0, s.Wu)([C.default], () => {
+        U = (0, a.Wu)([f.default], () => {
             var e;
-            return Array.from(null !== (e = null == b ? void 0 : b.userIds) && void 0 !== e ? e : [])
-                .map((e) => C.default.getUser(e))
+            return Array.from(null !== (e = null == D ? void 0 : D.userIds) && void 0 !== e ? e : [])
+                .map((e) => f.default.getUser(e))
                 .filter(p.lm);
         }),
-        y = (0, s.e7)([f.Z], () => {
+        y = (0, a.e7)([C.Z], () => {
             var e;
-            let t = null == b ? void 0 : b.userIds.values().next().value;
-            return null == t ? null : null === (e = f.Z.findActivity(t, (e) => e.application_id === n.id)) || void 0 === e ? void 0 : e.details;
+            let t = null == D ? void 0 : D.userIds.values().next().value;
+            return null == t ? null : null === (e = C.Z.findActivity(t, (e) => e.application_id === n.id)) || void 0 === e ? void 0 : e.details;
         }),
-        B = a.useMemo(() => {
+        B = s.useMemo(() => {
             let e = new T.Z(n);
             return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = S.wT), e;
         }, [n]),
@@ -64,14 +64,14 @@ function O(e) {
             channelId: O,
             application: B
         }),
-        F = null == b,
+        F = null == D,
         G = (0, g.NL)({
-            embeddedActivity: b,
+            embeddedActivity: D,
             joinability: k,
-            currentEmbeddedActivity: D,
+            currentEmbeddedActivity: b,
             channel: L
         }),
-        w = a.useId(),
+        w = s.useId(),
         V = null != j && j.isLaunching && j.componentId === w,
         H = async () => {
             F
@@ -84,7 +84,7 @@ function O(e) {
                       commandOrigin: m.bB.ACTIVITY_INSTANCE_EMBED
                   })
                 : await (0, c.Z)({
-                      applicationId: b.applicationId,
+                      applicationId: D.applicationId,
                       activityChannelId: O,
                       locationObject: v.location,
                       analyticsLocations: M,
@@ -123,7 +123,7 @@ function O(e) {
                             tooltipContentClassName: R.tooltipContent,
                             children: (e) => {
                                 let { onClick: t, ...n } = e;
-                                return (0, a.createElement)(
+                                return (0, s.createElement)(
                                     r.Button,
                                     {
                                         ...n,

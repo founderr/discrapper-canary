@@ -12,7 +12,7 @@ t.d(n, {
         return f;
     },
     nb: function () {
-        return g;
+        return S;
     },
     zO: function () {
         return d;
@@ -23,8 +23,8 @@ var r = t(570140),
     o = t(703656),
     l = t(430824),
     u = t(241559),
-    a = t(327999),
-    s = t(981631),
+    s = t(327999),
+    a = t(981631),
     c = t(176505);
 async function d(e) {
     await r.Z.dispatch({
@@ -56,10 +56,10 @@ async function E(e, n) {
 function I(e) {
     let n = (0, u.lv)(e),
         t = l.Z.getGuild(e);
-    return !!n && null != t && (t.hasFeature(s.oNc.COMMUNITY) || t.hasFeature(s.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY) ? ((0, o.uL)(s.Z5c.CHANNEL(e, c.oC.MEMBER_SAFETY)), !0) : (i.Z.open(t.id, s.pNK.MEMBERS), !0));
+    return !!n && null != t && (t.hasFeature(a.oNc.COMMUNITY) || t.hasFeature(a.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY) ? ((0, o.uL)(a.Z5c.CHANNEL(e, c.oC.MEMBER_SAFETY)), !0) : (i.Z.open(t.id, a.pNK.MEMBERS), !0));
 }
-async function g(e, n) {
-    let t = await (0, a._2)(e, n);
+async function S(e, n) {
+    let t = await (0, s._2)(e, n);
     return 0 === t.length
         ? []
         : (await r.Z.dispatch({

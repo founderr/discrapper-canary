@@ -3,16 +3,16 @@ t.d(n, {
         return c;
     },
     Ic: function () {
-        return C;
+        return p;
     },
     Lg: function () {
-        return S;
+        return T;
     },
     OU: function () {
-        return g;
+        return S;
     },
     RH: function () {
-        return a;
+        return s;
     },
     Ux: function () {
         return i;
@@ -21,19 +21,19 @@ t.d(n, {
         return d;
     },
     Vg: function () {
-        return p;
+        return g;
     },
     Vk: function () {
         return f;
     },
     _6: function () {
-        return m;
+        return C;
     },
     aj: function () {
         return I;
     },
     dc: function () {
-        return T;
+        return m;
     },
     fX: function () {
         return u.f;
@@ -45,7 +45,7 @@ t.d(n, {
         return o.j;
     },
     n4: function () {
-        return s;
+        return a;
     },
     q4: function () {
         return l.q;
@@ -60,17 +60,17 @@ var r,
     l = t(95930),
     u = t(41381);
 ((r = i || (i = {}))[(r.PROFANITY = 1)] = 'PROFANITY'), (r[(r.SEXUAL_CONTENT = 2)] = 'SEXUAL_CONTENT'), (r[(r.SLURS = 3)] = 'SLURS'), u.f.USER_PROFILE, u.f.SERVER_POLICY, u.f.MENTION_SPAM, u.f.ML_SPAM, u.f.DEFAULT_KEYWORD_LIST, u.f.KEYWORD;
-let a = 1000,
-    s = 100,
+let s = 1000,
+    a = 100,
     c = 1000,
     d = 10,
     _ = 60,
     f = 1,
     E = 1,
     I = 260,
-    g = 100,
-    p = 1,
-    S = 50,
-    C = 20,
-    m = 150,
-    T = 'automod-profile-quarantine-alert';
+    S = 100,
+    g = 1,
+    T = 50,
+    p = 20,
+    C = 150,
+    m = 'automod-profile-quarantine-alert';

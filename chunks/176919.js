@@ -1,37 +1,37 @@
 n.d(t, {
     D6: function () {
-        return c;
+        return I;
     },
     bp: function () {
-        return A;
+        return T;
     },
     wr: function () {
         return r;
     }
 });
-var i,
+var E,
     r,
-    u = n(470079),
-    l = n(442837),
-    o = n(846519),
-    E = n(355467),
-    a = n(38618),
-    _ = n(409813),
-    S = n(45572),
-    s = n(505649);
-function A(e, t, n, i) {
+    i = n(470079),
+    u = n(442837),
+    S = n(846519),
+    _ = n(355467),
+    o = n(38618),
+    A = n(409813),
+    l = n(45572),
+    a = n(505649);
+function T(e, t, n, E) {
     let r = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
-        l = arguments.length > 5 ? arguments[5] : void 0;
-    u.useEffect(() => {
-        if (null != e) 1 === t && e !== _.h8.AWAITING_AUTHENTICATION ? n(_.h8.AWAITING_AUTHENTICATION) : e === _.h8.AWAITING_AUTHENTICATION && (2 === t ? n(_.h8.REVIEW) : 3 === t && (r ? (null != l ? l() : n(_.h8.REVIEW)) : (i(S.A.COMPLETED), n(_.h8.CONFIRM))));
-    }, [e, t, n, i, r, l]);
+        u = arguments.length > 5 ? arguments[5] : void 0;
+    i.useEffect(() => {
+        if (null != e) 1 === t && e !== A.h8.AWAITING_AUTHENTICATION ? n(A.h8.AWAITING_AUTHENTICATION) : e === A.h8.AWAITING_AUTHENTICATION && (2 === t ? n(A.h8.REVIEW) : 3 === t && (r ? (null != u ? u() : n(A.h8.REVIEW)) : (E(l.A.COMPLETED), n(A.h8.CONFIRM))));
+    }, [e, t, n, E, r, u]);
 }
-((i = r || (r = {}))[(i.PENDING = 1)] = 'PENDING'), (i[(i.ERROR = 2)] = 'ERROR'), (i[(i.NONE = 3)] = 'NONE');
-function c(e) {
-    let t = (0, l.e7)([s.Z], () => s.Z.awaitingPaymentId),
-        n = (0, l.e7)([a.Z], () => a.Z.isConnected()),
-        i = u.useRef(new o.Xp());
-    u.useEffect(() => {
-        n || null == t || 1 !== e ? i.current.stop() : i.current.start(5000, () => (0, E.O1)(t));
+((E = r || (r = {}))[(E.PENDING = 1)] = 'PENDING'), (E[(E.ERROR = 2)] = 'ERROR'), (E[(E.NONE = 3)] = 'NONE');
+function I(e) {
+    let t = (0, u.e7)([a.Z], () => a.Z.awaitingPaymentId),
+        n = (0, u.e7)([o.Z], () => o.Z.isConnected()),
+        E = i.useRef(new S.Xp());
+    i.useEffect(() => {
+        n || null == t || 1 !== e ? E.current.stop() : E.current.start(5000, () => (0, _.O1)(t));
     }, [t, e, n]);
 }

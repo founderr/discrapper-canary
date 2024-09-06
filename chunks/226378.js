@@ -4,25 +4,25 @@ n.d(t, {
     }
 });
 var i,
-    a,
-    s = n(470079),
+    s,
+    a = n(470079),
     r = n(595519),
     l = n(527805),
     o = n(689938);
 function c(e) {
-    let { embeddedActivity: t, joinability: n, currentEmbeddedActivity: i, channel: a } = e;
-    return s.useMemo(
+    let { embeddedActivity: t, joinability: n, currentEmbeddedActivity: i, channel: s } = e;
+    return a.useMemo(
         () =>
             (function (e) {
-                let { embeddedActivity: t, joinability: n, currentEmbeddedActivity: i, channel: a } = e,
-                    s = null == t,
+                let { embeddedActivity: t, joinability: n, currentEmbeddedActivity: i, channel: s } = e,
+                    a = null == t,
                     c = {
                         disabled: !1,
-                        isJoinAction: !s,
-                        text: s ? o.Z.Messages.START : o.Z.Messages.EMBEDDED_ACTIVITIES_JOIN,
+                        isJoinAction: !a,
+                        text: a ? o.Z.Messages.START : o.Z.Messages.EMBEDDED_ACTIVITIES_JOIN,
                         tooltip: void 0
                     },
-                    u = (0, r.WS)(a);
+                    u = (0, r.WS)(s);
                 if (null != t && null != i && t.launchId === i.launchId)
                     return {
                         ...c,
@@ -30,7 +30,7 @@ function c(e) {
                         text: o.Z.Messages.EMBEDDED_ACTIVITIES_JOINED,
                         tooltip: o.Z.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY
                     };
-                if (s)
+                if (a)
                     return {
                         ...c,
                         disabled: !u,
@@ -74,9 +74,9 @@ function c(e) {
                 embeddedActivity: t,
                 joinability: n,
                 currentEmbeddedActivity: i,
-                channel: a
+                channel: s
             }),
-        [t, n, i, a]
+        [t, n, i, s]
     );
 }
-((i = a || (a = {}))[(i.ACTIVE = 0)] = 'ACTIVE'), (i[(i.ENDED = 1)] = 'ENDED');
+((i = s || (s = {}))[(i.ACTIVE = 0)] = 'ACTIVE'), (i[(i.ENDED = 1)] = 'ENDED');

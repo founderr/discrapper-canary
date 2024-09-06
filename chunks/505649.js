@@ -1,88 +1,88 @@
 n(411104);
-var i,
+var E,
     r,
+    i,
     u,
-    l,
-    o = n(442837),
-    E = n(570140),
-    a = n(366939),
-    _ = n(16084),
-    S = n(128069),
-    s = n(122289),
-    A = n(622999),
-    c = n(981631),
-    I = n(689938);
-let T = !1,
-    d = null,
-    R = null;
-function C() {
-    (T = !1), (R = null);
+    S = n(442837),
+    _ = n(570140),
+    o = n(366939),
+    A = n(16084),
+    l = n(128069),
+    a = n(122289),
+    T = n(622999),
+    I = n(981631),
+    c = n(689938);
+let R = !1,
+    C = null,
+    N = null;
+function s() {
+    (R = !1), (N = null);
 }
-function N(e) {
+function M(e) {
     let { error: t } = e,
-        { code: n, paymentId: i } = t;
-    if (n !== S.ZP.ErrorCodes.AUTHENTICATION_REQUIRED) return (T = !1), !1;
-    !T && ((T = !0), (d = i), M(i));
+        { code: n, paymentId: E } = t;
+    if (n !== l.ZP.ErrorCodes.AUTHENTICATION_REQUIRED) return (R = !1), !1;
+    !R && ((R = !0), (C = E), P(E));
 }
-async function M(e) {
+async function P(e) {
     if (null == e) return;
-    let { error: t } = await (0, A.oe)(e);
+    let { error: t } = await (0, T.oe)(e);
     if (null != t) {
-        E.Z.dispatch({
+        _.Z.dispatch({
             type: 'PAYMENT_AUTHENTICATION_ERROR',
-            error: new S.ZP(I.Z.Messages.PAYMENT_METHOD_CONFIRMATION_ERROR)
+            error: new l.ZP(c.Z.Messages.PAYMENT_METHOD_CONFIRMATION_ERROR)
         });
         let e = Error(t);
-        (0, s.q2)(e, { extra: { authenticationError: t } });
+        (0, a.q2)(e, { extra: { authenticationError: t } });
     }
 }
-function P(e) {
+function U(e) {
     let { payment: t } = e;
-    if (!T || t.id !== d || ![c.PyE.COMPLETED, c.PyE.CANCELED].includes(t.status)) return !1;
-    (T = !1), (R = null), (d = null), E.Z.wait(a.fw), E.Z.wait(_.pB);
+    if (!R || t.id !== C || ![I.PyE.COMPLETED, I.PyE.CANCELED].includes(t.status)) return !1;
+    (R = !1), (N = null), (C = null), _.Z.wait(o.fw), _.Z.wait(A.pB);
 }
-class f extends (i = o.ZP.Store) {
+class d extends (E = S.ZP.Store) {
     get isAwaitingAuthentication() {
-        return T;
-    }
-    get error() {
         return R;
     }
+    get error() {
+        return N;
+    }
     get awaitingPaymentId() {
-        return d;
+        return C;
     }
 }
-(l = 'PaymentAuthenticationStore'),
-    (u = 'displayName') in (r = f)
-        ? Object.defineProperty(r, u, {
-              value: l,
+(u = 'PaymentAuthenticationStore'),
+    (i = 'displayName') in (r = d)
+        ? Object.defineProperty(r, i, {
+              value: u,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (r[u] = l),
-    (t.Z = new f(E.Z, {
-        BILLING_SUBSCRIPTION_UPDATE_START: C,
-        PAYMENT_AUTHENTICATION_CLEAR_ERROR: C,
-        PREMIUM_PAYMENT_ERROR_CLEAR: C,
-        PREMIUM_PAYMENT_MODAL_CLOSE: C,
-        PREMIUM_PAYMENT_MODAL_OPEN: C,
-        PREMIUM_PAYMENT_SUBSCRIBE_START: C,
-        PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS: C,
-        PREMIUM_PAYMENT_UPDATE_SUCCESS: C,
-        SKU_PURCHASE_MODAL_CLOSE: C,
-        SKU_PURCHASE_MODAL_OPEN: C,
-        SKU_PURCHASE_START: C,
-        SKU_PURCHASE_SUCCESS: C,
-        BILLING_SUBSCRIPTION_UPDATE_FAIL: N,
-        PREMIUM_PAYMENT_SUBSCRIBE_FAIL: N,
-        PREMIUM_PAYMENT_UPDATE_FAIL: N,
-        SKU_PURCHASE_FAIL: N,
-        GIFT_CODE_REDEEM_FAILURE: N,
+        : (r[i] = u),
+    (t.Z = new d(_.Z, {
+        BILLING_SUBSCRIPTION_UPDATE_START: s,
+        PAYMENT_AUTHENTICATION_CLEAR_ERROR: s,
+        PREMIUM_PAYMENT_ERROR_CLEAR: s,
+        PREMIUM_PAYMENT_MODAL_CLOSE: s,
+        PREMIUM_PAYMENT_MODAL_OPEN: s,
+        PREMIUM_PAYMENT_SUBSCRIBE_START: s,
+        PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS: s,
+        PREMIUM_PAYMENT_UPDATE_SUCCESS: s,
+        SKU_PURCHASE_MODAL_CLOSE: s,
+        SKU_PURCHASE_MODAL_OPEN: s,
+        SKU_PURCHASE_START: s,
+        SKU_PURCHASE_SUCCESS: s,
+        BILLING_SUBSCRIPTION_UPDATE_FAIL: M,
+        PREMIUM_PAYMENT_SUBSCRIBE_FAIL: M,
+        PREMIUM_PAYMENT_UPDATE_FAIL: M,
+        SKU_PURCHASE_FAIL: M,
+        GIFT_CODE_REDEEM_FAILURE: M,
         PAYMENT_AUTHENTICATION_ERROR: function (e) {
             let { error: t } = e;
-            (R = t), (T = !1);
+            (N = t), (R = !1);
         },
-        PAYMENT_UPDATE: P,
-        BILLING_PAYMENT_FETCH_SUCCESS: P
+        PAYMENT_UPDATE: U,
+        BILLING_PAYMENT_FETCH_SUCCESS: U
     }));

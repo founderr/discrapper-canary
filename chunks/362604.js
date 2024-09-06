@@ -1,14 +1,14 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return C;
     }
 }),
     n(47120),
     n(536091);
 var i = n(735250),
-    a = n(470079),
-    s = n(120356),
-    r = n.n(s),
+    s = n(470079),
+    a = n(120356),
+    r = n.n(a),
     l = n(442837),
     o = n(481060),
     c = n(834129),
@@ -21,28 +21,28 @@ var i = n(735250),
     T = n(981631),
     h = n(689938),
     N = n(360869);
-function f(e) {
-    let { message: t, channel: s, compact: f } = e,
-        C = (0, l.Wu)([d.Z], () => Array.from(d.Z.getAllGuildStickers().values()).flat()).slice(0, 20),
-        [p, g] = a.useState(null);
-    return (a.useEffect(() => {
+function C(e) {
+    let { message: t, channel: a, compact: C } = e,
+        f = (0, l.Wu)([d.Z], () => Array.from(d.Z.getAllGuildStickers().values()).flat()).slice(0, 20),
+        [p, g] = s.useState(null);
+    return (s.useEffect(() => {
         let e = setInterval(() => {
-            C.length > 0 && g(C[Math.floor(Math.random() * C.length)]);
+            f.length > 0 && g(f[Math.floor(Math.random() * f.length)]);
         }, 500);
         return () => clearInterval(e);
-    }, [C]),
-    null == s.guild_id)
+    }, [f]),
+    null == a.guild_id)
         ? null
         : (0, i.jsxs)('div', {
               children: [
                   (0, i.jsx)(c.Z, {
-                      className: r()(N.mainContainer, { [N.compact]: f }),
+                      className: r()(N.mainContainer, { [N.compact]: C }),
                       icon: n(570111),
-                      compact: f,
+                      compact: C,
                       children: (0, i.jsx)('div', {
-                          className: r()(N.__invalid_content, { [N.compact]: f }),
+                          className: r()(N.__invalid_content, { [N.compact]: C }),
                           children: (0, i.jsx)('div', {
-                              className: r()(N.__invalid_messageContent, { [N.compact]: f }),
+                              className: r()(N.__invalid_messageContent, { [N.compact]: C }),
                               children: '' !== t.content ? t.content : h.Z.Messages.DEADCHAT_PROMPT_1
                           })
                       })
@@ -57,14 +57,14 @@ function f(e) {
                                   onClick: () => {
                                       E.default.track(T.rMx.CHANNEL_PROMPT_ACTION_CLICKED, {
                                           message_id: t.id,
-                                          channel_id: s.id,
-                                          guild_id: s.guild_id,
+                                          channel_id: a.id,
+                                          guild_id: a.guild_id,
                                           action_type: 'upload_file'
                                       }),
                                           I.S.dispatch(T.CkL.UPLOAD_FILE),
                                           (0, u.fE)({
                                               message: t,
-                                              channel: s,
+                                              channel: a,
                                               shouldMention: !0
                                           });
                                   },
@@ -81,11 +81,11 @@ function f(e) {
                                   onClick: () => {
                                       E.default.track(T.rMx.CHANNEL_PROMPT_ACTION_CLICKED, {
                                           message_id: t.id,
-                                          channel_id: s.id,
-                                          guild_id: s.guild_id,
+                                          channel_id: a.id,
+                                          guild_id: a.guild_id,
                                           action_type: 'sticker'
                                       }),
-                                          (0, m.O)(t.id, s);
+                                          (0, m.O)(t.id, a);
                                   },
                                   children:
                                       null != p

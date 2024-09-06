@@ -7,24 +7,24 @@ var i = t(735250),
     a = t(470079),
     s = t(120356),
     l = t.n(s),
-    r = t(481060),
-    o = t(169991);
+    o = t(481060),
+    r = t(169991);
 function d(e) {
     let { children: n, icon: t, title: s } = e;
     return (0, i.jsxs)('header', {
-        className: o.header,
+        className: r.header,
         children: [
             (0, i.jsxs)('div', {
-                className: o.name,
+                className: r.name,
                 children: [
                     a.cloneElement(t, {
-                        className: l()(t.props.className, o.icon),
+                        className: l()(t.props.className, r.icon),
                         height: 24,
                         width: 24
                     }),
-                    (0, i.jsx)(r.Heading, {
+                    (0, i.jsx)(o.Heading, {
                         variant: 'heading-md/semibold',
-                        className: o.title,
+                        className: r.title,
                         children: s
                     })
                 ]

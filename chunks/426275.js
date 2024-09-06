@@ -4,8 +4,8 @@ n.d(t, {
     }
 });
 var i = n(735250),
-    a = n(470079),
-    s = n(692547),
+    s = n(470079),
+    a = n(692547),
     r = n(481060),
     l = n(375954),
     o = n(876338),
@@ -14,7 +14,7 @@ var i = n(735250),
     d = n(689938);
 function _(e) {
     let { className: t, channelId: n, messageId: _, targetKind: E, embedIndex: I } = e,
-        m = a.useCallback(() => {
+        m = s.useCallback(() => {
             let e = l.Z.getMessage(n, _);
             if (null == e) return;
             let t = (0, o.j)(e, {
@@ -34,7 +34,7 @@ function _(e) {
         color: r.CircleIconButtonColors.SECONDARY,
         icon: (0, i.jsx)(u.Z, {
             size: 'xs',
-            color: s.Z.colors.INTERACTIVE_NORMAL
+            color: a.Z.colors.INTERACTIVE_NORMAL
         }),
         onClick: m
     });

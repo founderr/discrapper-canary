@@ -3,10 +3,10 @@ t.d(n, {
         return c;
     },
     _s: function () {
-        return a;
+        return s;
     },
     kW: function () {
-        return s;
+        return a;
     },
     km: function () {
         return u;
@@ -40,11 +40,11 @@ function u(e) {
             new Promise((u) => {
                 (0, i.openModalLazy)(async () => {
                     let { default: i } = await t.e('74543').then(t.bind(t, 643611)),
-                        a = n.actions.find((e) => e.type === o.jj.FLAG_TO_CHANNEL);
+                        s = n.actions.find((e) => e.type === o.jj.FLAG_TO_CHANNEL);
                     return (t) =>
                         (0, r.jsx)(i, {
                             action: l,
-                            isEdit: null != a,
+                            isEdit: null != s,
                             triggerType: n.triggerType,
                             guildId: e,
                             onEditChannel: (e) => {
@@ -75,7 +75,7 @@ function u(e) {
             })
     };
 }
-function a(e, n, o, l) {
+function s(e, n, o, l) {
     (0, i.openModalLazy)(async () => {
         let { default: i } = await t.e('37483').then(t.bind(t, 241046));
         return (t) =>
@@ -90,7 +90,7 @@ function a(e, n, o, l) {
             });
     });
 }
-function s(e, n) {
+function a(e, n) {
     (0, i.openModalLazy)(async () => {
         let { default: i } = await t.e('28382').then(t.bind(t, 537623));
         return (t) =>

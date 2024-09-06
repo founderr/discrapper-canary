@@ -8,12 +8,12 @@ var i = t(470079),
     a = t(225857),
     s = t(290843);
 function l(e) {
-    let { type: n, index: t, optionId: l, onDragStart: r, onDragComplete: o, onDragReset: d } = e,
+    let { type: n, index: t, optionId: l, onDragStart: o, onDragComplete: r, onDragReset: d } = e,
         [c, u] = i.useState(!1),
         [, I] = (0, a.c)({
             type: n,
             item: () => (
-                r(l),
+                o(l),
                 {
                     id: l,
                     position: t
@@ -27,7 +27,7 @@ function l(e) {
                     d();
                     return;
                 }
-                o(t.optionId);
+                r(t.optionId);
             }
         }),
         [{ dragSourcePosition: m }, _] = (0, s.L)({

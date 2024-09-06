@@ -1,6 +1,6 @@
 i.d(t, {
     Z: function () {
-        return f;
+        return g;
     }
 }),
     i(47120),
@@ -19,11 +19,11 @@ var n = i(735250),
     _ = i(216547),
     p = i(57716),
     m = i(981631),
-    g = i(486073);
-function f(e) {
+    f = i(486073);
+function g(e) {
     let {
             collection: t,
-            collection: { id: i, title: f, application_directory_collection_items: C }
+            collection: { id: i, title: g, application_directory_collection_items: C }
         } = e,
         [x, I] = a.useState(300),
         [b, N] = a.useState(4),
@@ -54,7 +54,7 @@ function f(e) {
     return (0, n.jsx)('div', {
         ref: E,
         children: (0, n.jsx)(_.Z, {
-            header: f,
+            header: g,
             headerId: T,
             tileWidth: x,
             tileMargin: v,
@@ -73,7 +73,7 @@ function f(e) {
             },
             children: (0, n.jsx)('ul', {
                 'aria-labelledby': T,
-                className: g.itemsContainer,
+                className: f.itemsContainer,
                 children: C.map((e) => {
                     let { id: t, type: a, application: o } = e;
                     if (a === r.C.APPLICATION && null != o)
@@ -81,9 +81,9 @@ function f(e) {
                             'li',
                             {
                                 style: { width: x },
-                                className: g.itemContainer,
+                                className: f.itemContainer,
                                 children: (0, n.jsx)(c.Z, {
-                                    className: g.seoAnchor,
+                                    className: f.seoAnchor,
                                     href: m.Z5c.APPLICATION_DIRECTORY_PROFILE(o.id),
                                     children: (0, n.jsx)(d.Z, {
                                         application: o,

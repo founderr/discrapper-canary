@@ -12,8 +12,8 @@ var n,
     _ = i(846519),
     p = i(481060),
     m = i(570140),
-    g = i(578361),
-    f = i(768762),
+    f = i(578361),
+    g = i(768762),
     C = i(259580),
     x = i(585483),
     I = i(981631),
@@ -62,9 +62,9 @@ class E extends (a = l.PureComponent) {
                                   className: N.arrow,
                                   direction: C.Z.Directions.LEFT
                               })
-                            : (0, s.jsx)(f.Z, {
+                            : (0, s.jsx)(g.Z, {
                                   className: N.arrow,
-                                  direction: f.Z.Directions.LEFT
+                                  direction: g.Z.Directions.LEFT
                               })
                 }),
                 (0, s.jsx)('div', {
@@ -94,9 +94,9 @@ class E extends (a = l.PureComponent) {
                                   className: N.arrow,
                                   direction: C.Z.Directions.RIGHT
                               })
-                            : (0, s.jsx)(f.Z, {
+                            : (0, s.jsx)(g.Z, {
                                   className: N.arrow,
-                                  direction: f.Z.Directions.RIGHT
+                                  direction: g.Z.Directions.RIGHT
                               })
                 })
             ]
@@ -148,7 +148,7 @@ class T extends (r = l.PureComponent) {
         i < 0 ? (i = e.length - 1) : i > e.length - 1 && (i = 0);
         let { onChangeItem: n } = this.props;
         null == n || n(e[i], this.state.visibleIndex, i);
-        let a = t > 0 ? g.n.LEFT : g.n.RIGHT;
+        let a = t > 0 ? f.n.LEFT : f.n.RIGHT;
         return (
             this.setState({
                 visibleIndex: i,
@@ -158,7 +158,7 @@ class T extends (r = l.PureComponent) {
         );
     }
     render() {
-        let { items: e, renderItem: t, className: i, slideAnimatorClassName: n, slideAnimatorSpringSettings: a, slideAnimatorFadeInOut: r, paginationClassName: o, paginationArrowClassName: l, paginationArrowIconType: c, paginationDotClassName: u, paginationDotSelectedClassName: h, themedPagination: _, includeHitboxPadding: p, style: m, aspectRatio: f, children: C } = this.props,
+        let { items: e, renderItem: t, className: i, slideAnimatorClassName: n, slideAnimatorSpringSettings: a, slideAnimatorFadeInOut: r, paginationClassName: o, paginationArrowClassName: l, paginationArrowIconType: c, paginationDotClassName: u, paginationDotSelectedClassName: h, themedPagination: _, includeHitboxPadding: p, style: m, aspectRatio: g, children: C } = this.props,
             { visibleIndex: x } = this.state;
         return (0, s.jsxs)('div', {
             className: N.root,
@@ -170,8 +170,8 @@ class T extends (r = l.PureComponent) {
                     onMouseLeave: this.handleMouseLeave,
                     children: [
                         (0, s.jsx)('div', {
-                            style: { aspectRatio: f },
-                            children: (0, s.jsx)(g.Z, {
+                            style: { aspectRatio: g },
+                            children: (0, s.jsx)(f.Z, {
                                 className: d()(N.carousel, n),
                                 step: x,
                                 direction: this.getCurrentDirection(),
@@ -237,7 +237,7 @@ class T extends (r = l.PureComponent) {
             }),
             (this.state = {
                 visibleIndex: !0 === e.randomize ? h().random(0, e.items.length - 1) : 0,
-                direction: g.n.LEFT,
+                direction: f.n.LEFT,
                 paused: !1
             });
     }

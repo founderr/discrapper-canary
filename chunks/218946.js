@@ -1,9 +1,4 @@
-n.d(t, {
-    m: function () {
-        return i;
-    }
-});
-function i(e) {
+function r(e) {
     return {
         id: e.id,
         filename: e.filename,
@@ -13,3 +8,8 @@ function i(e) {
         mimeType: e.mime_type
     };
 }
+n.d(t, {
+    m: function () {
+        return r;
+    }
+});

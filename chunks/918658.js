@@ -3,7 +3,7 @@ t.d(n, {
         return D;
     },
     d: function () {
-        return Z;
+        return U;
     }
 });
 var r = t(735250);
@@ -12,59 +12,59 @@ var i = t(120356),
     o = t.n(i),
     l = t(442837),
     u = t(692547),
-    a = t(481060),
-    s = t(549817),
+    s = t(481060),
+    a = t(549817),
     c = t(819553),
     d = t(17181),
     _ = t(303737),
     f = t(434404),
     E = t(703656),
     I = t(944486),
-    g = t(914010),
-    p = t(671533),
-    S = t(259580),
-    C = t(358085),
-    m = t(962086),
-    T = t(160404),
+    S = t(914010),
+    g = t(671533),
+    T = t(259580),
+    p = t(358085),
+    C = t(962086),
+    m = t(160404),
     A = t(889695),
     N = t(981631),
     h = t(176505),
-    v = t(302463),
-    L = t(293810),
+    L = t(302463),
+    O = t(293810),
     R = t(689938),
-    M = t(370040);
-function O(e) {
+    v = t(370040);
+function M(e) {
     let { className: n, onClick: t, children: i } = e;
-    return (0, r.jsx)(a.Button, {
-        className: o()(M.button, n),
-        innerClassName: M.buttonInner,
-        look: a.Button.Looks.OUTLINED,
-        color: a.Button.Colors.WHITE,
-        size: a.Button.Sizes.NONE,
+    return (0, r.jsx)(s.Button, {
+        className: o()(v.button, n),
+        innerClassName: v.buttonInner,
+        look: s.Button.Looks.OUTLINED,
+        color: s.Button.Colors.WHITE,
+        size: s.Button.Sizes.NONE,
         onClick: t,
         children: i
     });
 }
 function b(e) {
     let { onClick: n } = e;
-    return (0, r.jsx)(O, {
+    return (0, r.jsx)(M, {
         onClick: n,
         children: R.Z.Messages.DISABLE
     });
 }
 function D() {
-    let e = (0, l.e7)([g.Z], () => g.Z.getGuildId()),
+    let e = (0, l.e7)([S.Z], () => S.Z.getGuildId()),
         n = (0, l.e7)([I.Z], () => I.Z.getChannelId(e)),
         {
             viewingRoles: t,
             backNavigationSection: i,
             isFullServerPreview: o,
-            isServerShopPreview: C
-        } = (0, l.cj)([T.Z], () => ({
-            viewingRoles: null != e ? T.Z.getViewingRoles(e) : null,
-            backNavigationSection: T.Z.getBackNavigationSection(e),
-            isFullServerPreview: null != e && T.Z.isFullServerPreview(e),
-            isServerShopPreview: null != e && T.Z.isViewingServerShop(e)
+            isServerShopPreview: p
+        } = (0, l.cj)([m.Z], () => ({
+            viewingRoles: null != e ? m.Z.getViewingRoles(e) : null,
+            backNavigationSection: m.Z.getBackNavigationSection(e),
+            isFullServerPreview: null != e && m.Z.isFullServerPreview(e),
+            isServerShopPreview: null != e && m.Z.isViewingServerShop(e)
         }));
     if (null == t || null == e) return null;
     let D = (function (e) {
@@ -79,80 +79,80 @@ function D() {
                     return R.Z.Messages.VIEWING_AS_ROLES_BACK;
             }
         })(i),
-        Z = i === N.pNK.ROLE_SUBSCRIPTIONS ? R.Z.Messages.VIEWING_AS_SUBSCRIPTION_ROLES_SELECT : R.Z.Messages.VIEWING_AS_ROLES_SELECT,
-        U = n === h.oC.GUILD_ONBOARDING,
+        U = i === N.pNK.ROLE_SUBSCRIPTIONS ? R.Z.Messages.VIEWING_AS_SUBSCRIPTION_ROLES_SELECT : R.Z.Messages.VIEWING_AS_ROLES_SELECT,
+        Z = n === h.oC.GUILD_ONBOARDING,
         P = (n) => {
             let { backToSettings: t } = n;
-            null != e && (T.Z.isFullServerPreview(e) && (0, E.uL)(N.Z5c.CHANNEL(e)), c.ZP.shouldShowOnboarding(e) && (s.Z.finishOnboarding(e), (0, d.discardOnboardingPromise)(e)), (0, m.mL)(e), t && f.Z.open(e, i), i === N.pNK.ROLE_SUBSCRIPTIONS && (0, _.GN)(e));
+            null != e && (m.Z.isFullServerPreview(e) && (0, E.uL)(N.Z5c.CHANNEL(e)), c.ZP.shouldShowOnboarding(e) && (a.Z.finishOnboarding(e), (0, d.discardOnboardingPromise)(e)), (0, C.mL)(e), t && f.Z.open(e, i), i === N.pNK.ROLE_SUBSCRIPTIONS && (0, _.GN)(e));
         };
-    return (0, r.jsxs)(a.Notice, {
-        color: a.NoticeColors.BRAND,
-        className: M.notice,
+    return (0, r.jsxs)(s.Notice, {
+        color: s.NoticeColors.BRAND,
+        className: v.notice,
         children: [
-            (0, r.jsxs)(O, {
+            (0, r.jsxs)(M, {
                 onClick: () => P({ backToSettings: !0 }),
-                className: M.backButton,
+                className: v.backButton,
                 children: [
-                    (0, r.jsx)(p.Z, {
+                    (0, r.jsx)(g.Z, {
                         width: 16,
                         height: 16,
-                        direction: p.Z.Directions.LEFT,
-                        className: M.backArrow
+                        direction: g.Z.Directions.LEFT,
+                        className: v.backArrow
                     }),
                     D
                 ]
             }),
-            U && o
+            Z && o
                 ? (0, r.jsx)('div', {
-                      className: M.noticeContents,
+                      className: v.noticeContents,
                       children: (0, r.jsx)('div', {
-                          className: M.noticeText,
+                          className: v.noticeText,
                           children: R.Z.Messages.VIEW_AS_MEMBER_DESCRIPTION
                       })
                   })
                 : (0, r.jsxs)('div', {
-                      className: M.noticeContents,
+                      className: v.noticeContents,
                       children: [
                           (0, r.jsx)('div', {
-                              className: M.noticeText,
+                              className: v.noticeText,
                               children: o ? R.Z.Messages.VIEW_AS_MEMBER_DESCRIPTION_WITH_ROLES.format({ numRoles: Object.keys(t).length }) : R.Z.Messages.VIEWING_AS_ROLES.format({ numRoles: Object.keys(t).length })
                           }),
-                          (0, r.jsx)(a.Popout, {
+                          (0, r.jsx)(s.Popout, {
                               position: 'bottom',
                               renderPopout: () => (0, r.jsx)(A.Z, { guildId: e }),
                               children: (e) => {
                                   let { onClick: n } = e;
-                                  return (0, r.jsxs)(O, {
+                                  return (0, r.jsxs)(M, {
                                       onClick: n,
                                       children: [
-                                          Z,
-                                          (0, r.jsx)(S.Z, {
+                                          U,
+                                          (0, r.jsx)(T.Z, {
                                               width: 16,
                                               height: 16,
-                                              direction: S.Z.Directions.DOWN,
-                                              className: M.selectCaret
+                                              direction: T.Z.Directions.DOWN,
+                                              className: v.selectCaret
                                           })
                                       ]
                                   });
                               }
                           }),
                           o &&
-                              (0, r.jsx)(a.TooltipContainer, {
-                                  className: M.previewWarning,
+                              (0, r.jsx)(s.TooltipContainer, {
+                                  className: v.previewWarning,
                                   text: R.Z.Messages.VIEW_AS_MEMBER_ROLES_WARNING,
-                                  children: (0, r.jsx)(a.CircleWarningIcon, {
+                                  children: (0, r.jsx)(s.CircleWarningIcon, {
                                       size: 'xs',
                                       color: u.Z.unsafe_rawColors.YELLOW_300.css
                                   })
                               }),
-                          C &&
-                              (0, r.jsx)(a.TooltipContainer, {
-                                  className: M.previewWarning,
+                          p &&
+                              (0, r.jsx)(s.TooltipContainer, {
+                                  className: v.previewWarning,
                                   text: R.Z.Messages.SERVER_SHOP_PREVIEW_DISCLAIMER.format({
-                                      maxTiers: L.fF,
-                                      maxProducts: v.dD
+                                      maxTiers: O.fF,
+                                      maxProducts: L.dD
                                   }),
-                                  children: (0, r.jsx)(a.CircleWarningIcon, {
+                                  children: (0, r.jsx)(s.CircleWarningIcon, {
                                       size: 'xs',
                                       color: u.Z.unsafe_rawColors.YELLOW_300.css
                                   })
@@ -163,13 +163,13 @@ function D() {
         ]
     });
 }
-function Z(e) {
+function U(e) {
     let { guildId: n } = e;
-    return (0, l.e7)([T.Z], () => T.Z.isViewingRoles(n))
+    return (0, l.e7)([m.Z], () => m.Z.isViewingRoles(n))
         ? (0, r.jsx)('div', {
-              className: o()(M.settingsWrapper, {
-                  [M.windows]: (0, C.isWindows)(),
-                  [M.osx]: (0, C.isMac)()
+              className: o()(v.settingsWrapper, {
+                  [v.windows]: (0, p.isWindows)(),
+                  [v.osx]: (0, p.isMac)()
               }),
               children: (0, r.jsx)(D, {})
           })

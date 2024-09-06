@@ -3,8 +3,8 @@ var i = t(735250),
     a = t(470079),
     s = t(120356),
     l = t.n(s),
-    r = t(149765),
-    o = t(481060),
+    o = t(149765),
+    r = t(481060),
     d = t(208884),
     c = t(453628),
     u = t(996987),
@@ -14,24 +14,24 @@ class _ extends a.PureComponent {
     getOverwriteValue(e) {
         let { allow: n, deny: t } = this.props;
         if (null == n || null == t) throw Error('PermissionsForm.getOverwriteValue: Invalid allow or deny props');
-        return r.e$(n, e) ? c.y.ALLOW : r.e$(t, e) ? c.y.DENY : c.y.PASSTHROUGH;
+        return o.e$(n, e) ? c.y.ALLOW : o.e$(t, e) ? c.y.DENY : c.y.PASSTHROUGH;
     }
     getPermissionValue(e, n) {
-        return r.e$(n, e);
+        return o.e$(n, e);
     }
     handleChange(e, n) {
         let { onChange: t } = this.props;
         t(e, n);
     }
     renderDisabledIndicator(e) {
-        return (0, i.jsx)(o.Tooltip, {
+        return (0, i.jsx)(r.Tooltip, {
             text: e,
             position: 'top',
-            color: o.Tooltip.Colors.RED,
+            color: r.Tooltip.Colors.RED,
             children: (e) =>
                 (0, i.jsx)('span', {
                     ...e,
-                    children: (0, i.jsx)(o.DenyIcon, {
+                    children: (0, i.jsx)(r.DenyIcon, {
                         size: 'sm',
                         color: 'currentColor',
                         className: I.icon
@@ -41,12 +41,12 @@ class _ extends a.PureComponent {
     }
     renderComponent(e) {
         let { title: n, description: t, helpdeskArticleId: a, flag: s } = e,
-            { permissions: r, locked: c, permissionRender: m } = this.props,
+            { permissions: o, locked: c, permissionRender: m } = this.props,
             _ = null == m ? void 0 : m(s),
             N = !!(c || _),
             E = 'string' == typeof _ ? this.renderDisabledIndicator(_) : null,
             T = l()({ [I.title]: null != E });
-        return null == r
+        return null == o
             ? (0, i.jsxs)(
                   u.Z,
                   {
@@ -66,10 +66,10 @@ class _ extends a.PureComponent {
                   String(s)
               )
             : (0, i.jsxs)(
-                  o.FormSwitch,
+                  r.FormSwitch,
                   {
                       disabled: N,
-                      value: this.getPermissionValue(s, r),
+                      value: this.getPermissionValue(s, o),
                       onChange: (e) => this.handleChange(s, e),
                       note: (0, d._u)(t),
                       children: [
@@ -85,17 +85,17 @@ class _ extends a.PureComponent {
     }
     render() {
         let { spec: e, className: n } = this.props;
-        return (0, i.jsx)(o.FormSection, {
+        return (0, i.jsx)(r.FormSection, {
             className: n,
-            children: (0, i.jsxs)(o.HeadingLevel, {
-                component: (0, i.jsx)(o.FormTitle, {
-                    tag: o.FormTitleTags.H5,
+            children: (0, i.jsxs)(r.HeadingLevel, {
+                component: (0, i.jsx)(r.FormTitle, {
+                    tag: r.FormTitleTags.H5,
                     className: null != e.description ? m.marginBottom8 : m.marginBottom20,
                     children: e.title
                 }),
                 children: [
                     null != e.description &&
-                        (0, i.jsx)(o.Text, {
+                        (0, i.jsx)(r.Text, {
                             variant: 'text-sm/normal',
                             color: 'header-secondary',
                             className: m.marginBottom20,

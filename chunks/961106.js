@@ -21,8 +21,8 @@ var n = i(735250),
     _ = i(132871),
     p = i(147890),
     m = i(981631),
-    g = i(689938),
-    f = i(496783);
+    f = i(689938),
+    g = i(496783);
 function C(e) {
     let { className: t } = e,
         i = (0, _.useApplicationDirectoryHistory)((e) => e.guildId),
@@ -40,7 +40,7 @@ function C(e) {
                 (0, p.goToCategory)({ categoryId: t.id });
         };
     return (0, n.jsx)('nav', {
-        className: o()(f.container, t),
+        className: o()(g.container, t),
         children: C.map((e) => {
             let t = e.id,
                 i = e.name,
@@ -53,12 +53,12 @@ function C(e) {
                     {
                         href: ''.concat(m.Z5c.APPLICATION_DIRECTORY_SEARCH, '?').concat(r),
                         children: (0, n.jsxs)(l.Clickable, {
-                            className: f.category,
-                            'aria-label': g.Z.Messages.APP_DIRECTORY_CATEGORY_BUTTON_A11Y_LABEL.format({ categoryName: i }),
+                            className: g.category,
+                            'aria-label': f.Z.Messages.APP_DIRECTORY_CATEGORY_BUTTON_A11Y_LABEL.format({ categoryName: i }),
                             onClick: () => I(t),
                             children: [
                                 (0, n.jsx)(a, {
-                                    className: f.icon,
+                                    className: g.icon,
                                     size: 'md',
                                     color: 'currentColor'
                                 }),

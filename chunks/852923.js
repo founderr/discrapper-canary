@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(120356),
-    s = n.n(a),
+var s = n(120356),
+    a = n.n(s),
     r = n(481060),
     l = n(592125),
     o = n(944486),
@@ -49,7 +49,7 @@ function m() {
                         })
                       : null,
                   (0, i.jsx)(r.Button, {
-                      className: s()(E.__invalid_button, E.acceptButton),
+                      className: a()(E.__invalid_button, E.acceptButton),
                       size: r.Button.Sizes.MIN,
                       color: r.Button.Colors.WHITE,
                       onClick: () => I(!1),
@@ -61,7 +61,7 @@ function m() {
                       })
                   }),
                   (0, i.jsx)(r.Button, {
-                      className: s()(E.__invalid_button, E.declineButton),
+                      className: a()(E.__invalid_button, E.declineButton),
                       look: r.Button.Looks.OUTLINED,
                       size: r.Button.Sizes.MIN,
                       color: r.Button.Colors.WHITE,

@@ -9,8 +9,8 @@ var i = t(735250),
     a = t(470079),
     s = t(149765),
     l = t(442837),
-    r = t(481060),
-    o = t(749210),
+    o = t(481060),
+    r = t(749210),
     d = t(412899),
     c = t(995648),
     u = t(385499),
@@ -26,25 +26,25 @@ var i = t(735250),
 function f(e) {
     var n;
     let { guild: t, applicationIntegration: f } = e,
-        C = (0, l.e7)([E.Z], () => E.Z.getRoles(t.id)),
-        { application: O } = f,
-        x = null != O.bot ? new _.Z(O.bot) : null,
-        S = (0, l.e7)([N.ZP], () => (null != x ? N.ZP.getMember(t.id, x.id) : null), [x, t]),
-        A = null == x ? void 0 : x.id;
+        O = (0, l.e7)([E.Z], () => E.Z.getRoles(t.id)),
+        { application: x } = f,
+        C = null != x.bot ? new _.Z(x.bot) : null,
+        S = (0, l.e7)([N.ZP], () => (null != C ? N.ZP.getMember(t.id, C.id) : null), [C, t]),
+        A = null == C ? void 0 : C.id;
     a.useEffect(() => {
-        if (null != A) o.Z.requestMembersById(t.id, A);
+        if (null != A) r.Z.requestMembersById(t.id, A);
     }, [t.id, A]);
     let R = a.useMemo(() => {
         var e, n, i;
-        let a = C[t.getEveryoneRoleId()],
-            l = null !== (n = null == S ? void 0 : null === (e = S.roles) || void 0 === e ? void 0 : e.map((e) => C[e]).filter(T.lm)) && void 0 !== n ? n : [],
-            r = null !== (i = null == a ? void 0 : a.permissions) && void 0 !== i ? i : h.Hn;
-        for (let e of l) r = s.IH(r, e.permissions);
-        return r;
-    }, [t, C, S]);
-    return null == x
+        let a = O[t.getEveryoneRoleId()],
+            l = null !== (n = null == S ? void 0 : null === (e = S.roles) || void 0 === e ? void 0 : e.map((e) => O[e]).filter(T.lm)) && void 0 !== n ? n : [],
+            o = null !== (i = null == a ? void 0 : a.permissions) && void 0 !== i ? i : h.Hn;
+        for (let e of l) o = s.IH(o, e.permissions);
+        return o;
+    }, [t, O, S]);
+    return null == C
         ? null
-        : (0, i.jsx)(r.Card, {
+        : (0, i.jsx)(o.Card, {
               editable: !0,
               className: p.card,
               children: (0, i.jsxs)(I.Z, {
@@ -55,31 +55,31 @@ function f(e) {
                           children: [
                               (0, i.jsx)('img', {
                                   alt: '',
-                                  src: x.getAvatarURL(t.id, 32),
+                                  src: C.getAvatarURL(t.id, 32),
                                   className: p.iconWrapper
                               }),
-                              (0, i.jsx)(r.Text, {
+                              (0, i.jsx)(o.Text, {
                                   color: 'header-primary',
                                   variant: 'text-sm/normal',
-                                  children: g.Z.Messages.INTEGRATIONS_APPLICATION_BOT_NAME.format({ user: x })
+                                  children: g.Z.Messages.INTEGRATIONS_APPLICATION_BOT_NAME.format({ user: C })
                               }),
                               (0, i.jsx)(u.Z, {
                                   className: p.tag,
-                                  verified: x.isVerifiedBot()
+                                  verified: C.isVerifiedBot()
                               })
                           ]
                       }),
                       (function (e, n, t, a) {
                           let l = [],
-                              o = [];
-                          for (let e of m.VY) s.e$(a, e) ? l.push(e) : o.push(e);
+                              r = [];
+                          for (let e of m.VY) s.e$(a, e) ? l.push(e) : r.push(e);
                           return (0, i.jsxs)(i.Fragment, {
                               children: [
-                                  (0, i.jsx)(r.FormDivider, { className: p.divider }),
+                                  (0, i.jsx)(o.FormDivider, { className: p.divider }),
                                   t.length > 0
                                       ? (0, i.jsxs)(i.Fragment, {
                                             children: [
-                                                (0, i.jsx)(r.FormTitle, {
+                                                (0, i.jsx)(o.FormTitle, {
                                                     className: p.permissionHeader,
                                                     children: g.Z.Messages.ROLES_LIST.format({ numRoles: t.length })
                                                 }),
@@ -94,18 +94,18 @@ function f(e) {
                                             ]
                                         })
                                       : null,
-                                  l.length > 0 || o.length > 0
+                                  l.length > 0 || r.length > 0
                                       ? (0, i.jsx)(c.Z, {
                                             className: p.permissionList,
                                             grantedPermissions: l,
                                             grantedPermissionsHeader: g.Z.Messages.INTEGRATIONS_APPLICATION_GRANTED_PERMISSIONS,
-                                            disabledPermissions: o,
+                                            disabledPermissions: r,
                                             disabledPermissionsHeader: g.Z.Messages.INTEGRATIONS_APPLICATION_DENIED_PERMISSIONS
                                         })
                                       : null
                               ]
                           });
-                      })(x, t, null !== (n = null == S ? void 0 : S.roles) && void 0 !== n ? n : [], R)
+                      })(C, t, null !== (n = null == S ? void 0 : S.roles) && void 0 !== n ? n : [], R)
                   ]
               })
           });

@@ -7,8 +7,8 @@ var i = t(735250),
     a = t(470079),
     s = t(481060),
     l = t(932776),
-    r = t(680298),
-    o = t(289465),
+    o = t(680298),
+    r = t(289465),
     d = t(689938),
     c = t(400587);
 function u(e) {
@@ -17,7 +17,7 @@ function u(e) {
         T = null != m && E > 0;
     return (0, i.jsx)(a.Fragment, {
         children: T
-            ? (0, i.jsx)(o.Z, {
+            ? (0, i.jsx)(r.Z, {
                   bar: (0, i.jsx)(s.SearchBar, {
                       query: _,
                       onChange: N,
@@ -30,7 +30,7 @@ function u(e) {
                           a.Fragment,
                           {
                               children: [
-                                  (0, i.jsx)(r.Z, {
+                                  (0, i.jsx)(o.Z, {
                                       applicationIcon: n,
                                       applicationName: t,
                                       canNavigate: u,

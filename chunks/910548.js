@@ -5,8 +5,8 @@ n.d(t, {
 }),
     n(47120);
 var i,
-    a,
     s,
+    a,
     r,
     l = n(735250),
     o = n(470079),
@@ -20,8 +20,8 @@ var i,
     T = n(230711),
     h = n(745510),
     N = n(549006),
-    f = n(64078),
-    C = n(29270),
+    C = n(64078),
+    f = n(29270),
     p = n(709586),
     g = n(267642),
     S = n(739566),
@@ -29,7 +29,7 @@ var i,
     R = n(981631),
     O = n(689938),
     x = n(407339);
-((s = i || (i = {})).ENTER = 'enter'), (s.CONFETTI = 'confetti'), (s.LEAF_PEEL = 'leaf_peel'), (s.LEAF_FALL = 'leaf_fall'), (s.EXIT = 'exit');
+((a = i || (i = {})).ENTER = 'enter'), (a.CONFETTI = 'confetti'), (a.LEAF_PEEL = 'leaf_peel'), (a.LEAF_FALL = 'leaf_fall'), (a.EXIT = 'exit');
 let M = {
     enter: {
         BEG: 0,
@@ -52,7 +52,7 @@ let M = {
         END: 200
     }
 };
-((r = a || (a = {})).TOP_LEFT = 'TOP_LEFT'), (r.TOP_RIGHT = 'TOP_RIGHT'), (r.BOTTOM_LEFT = 'BOTTOM_LEFT'), (r.BOTTOM_RIGHT = 'BOTTOM_RIGHT');
+((r = s || (s = {})).TOP_LEFT = 'TOP_LEFT'), (r.TOP_RIGHT = 'TOP_RIGHT'), (r.BOTTOM_LEFT = 'BOTTOM_LEFT'), (r.BOTTOM_RIGHT = 'BOTTOM_RIGHT');
 let v = ['TOP_LEFT', 'TOP_RIGHT'],
     L = (0, E.Mg)(I.Z.USER_PREMIUM_GUILD_SUBSCRIPTION_EASTER_EGG_SIZE),
     Z = {
@@ -116,8 +116,8 @@ let v = ['TOP_LEFT', 'TOP_RIGHT'],
             }
         }
     }),
-    b = 'falling-leaf',
-    D = ['#61D5B2'],
+    D = 'falling-leaf',
+    b = ['#61D5B2'],
     j = n(303893),
     U = n(313226),
     y = [j, U];
@@ -131,14 +131,14 @@ function B() {
         });
 }
 function k(e) {
-    let { onAnimationComplete: t, onClick: n, position: i, size: s } = e,
+    let { onAnimationComplete: t, onClick: n, position: i, size: a } = e,
         r = o.useRef(null),
         [c, E] = o.useState(null),
         [I] = o.useState(
             null != i
                 ? i
                 : (function () {
-                      switch (Math.floor(Math.random() * Object.keys(a).length)) {
+                      switch (Math.floor(Math.random() * Object.keys(s).length)) {
                           case 0:
                               return 'TOP_LEFT';
                           case 2:
@@ -151,8 +151,8 @@ function k(e) {
                   })()
         ),
         { createMultipleConfettiAt: T, confettiCanvas: N } = o.useContext(h.h),
-        [f, C] = o.useState(null),
-        p = (0, d.uR)(N, f),
+        [C, f] = o.useState(null),
+        p = (0, d.uR)(N, C),
         g = (function (e, t) {
             if (null == e) return 'enter';
             switch (e) {
@@ -192,12 +192,12 @@ function k(e) {
                                 x: 0,
                                 y: 0
                             };
-                        let a = P[t].getConfettiPosition(n);
+                        let s = P[t].getConfettiPosition(n);
                         return {
-                            x: i.left + a.x,
-                            y: i.top + a.y
+                            x: i.left + s.x,
+                            y: i.top + s.y
                         };
-                    })(r.current, I, s);
+                    })(r.current, I, a);
                 T(t.x, t.y, {
                     velocity: {
                         type: 'static-random',
@@ -212,13 +212,13 @@ function k(e) {
                     }
                 });
             }
-        }, [T, I, c, s]),
+        }, [T, I, c, a]),
         o.useEffect(() => {
             if (S && 'leaf_fall' === c) {
                 let e = P[I].leafRotationDirection;
                 p.createConfetti(
                     {
-                        id: ''.concat(b, '-').concat((0, _.Z)()),
+                        id: ''.concat(D, '-').concat((0, _.Z)()),
                         position: {
                             type: 'static',
                             value: (function (e, t) {
@@ -270,9 +270,9 @@ function k(e) {
         (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsx)(d.Ji, {
-                    ref: C,
+                    ref: f,
                     sprites: y,
-                    colors: D,
+                    colors: b,
                     spriteWidth: 45,
                     spriteHeight: 45
                 }),
@@ -301,7 +301,7 @@ function k(e) {
 }
 function F(e) {
     let t,
-        { message: n, compact: i, guild: a, usernameHook: s, onClickMessage: r } = e,
+        { message: n, compact: i, guild: s, usernameHook: a, onClickMessage: r } = e,
         c = (function (e) {
             switch (e.type) {
                 case R.uaV.GUILD_BOOST_TIER_1:
@@ -313,16 +313,16 @@ function F(e) {
             }
             return null;
         })(n),
-        u = (0, C.Z)(n),
+        u = (0, f.Z)(n),
         { createMultipleConfettiAt: d, addClickListener: _ } = o.useContext(h.h),
         [E, I] = o.useState(!1),
         M = o.useRef(null),
         { reducedMotion: v } = o.useContext(m.AccessibilityPreferencesContext),
         L = (0, S.ZH)(n),
         Z = L.nick,
-        P = s(L);
+        P = a(L);
     t =
-        null == c || null == a
+        null == c || null == s
             ? u > 1
                 ? O.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED_MANY_HOOK.format({
                       username: Z,
@@ -338,16 +338,16 @@ function F(e) {
                     username: Z,
                     usernameHook: P,
                     numSubscriptions: u,
-                    guildName: a.name,
+                    guildName: s.name,
                     newTierName: (0, g.nW)(c)
                 })
               : O.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED_ACHIEVED_TIER_HOOK.format({
                     username: Z,
                     usernameHook: P,
-                    guildName: a.name,
+                    guildName: s.name,
                     newTierName: (0, g.nW)(c)
                 });
-    let D = o.useCallback(() => {
+    let b = o.useCallback(() => {
             if (!v.enabled)
                 if (E || 0 !== Math.floor(50 * Math.random())) {
                     var e;
@@ -360,11 +360,11 @@ function F(e) {
             I(!1);
         }, []),
         U = o.useCallback(() => {
-            (0, f.AI)({ settingsVisible: !0 }), T.Z.open(R.oAB.POGGERMODE), I(!1);
+            (0, C.AI)({ settingsVisible: !0 }), T.Z.open(R.oAB.POGGERMODE), I(!1);
         }, []),
         y = o.useCallback(
             (e, t) => {
-                (null == t ? void 0 : t.id.startsWith(b)) && U();
+                (null == t ? void 0 : t.id.startsWith(D)) && U();
             },
             [U]
         );
@@ -375,7 +375,7 @@ function F(e) {
         onClick: r,
         children: (0, l.jsx)(p.Z, {
             className: x.icon,
-            onMouseEnter: D
+            onMouseEnter: b
         })
     });
     return (0, l.jsxs)(A.Z, {

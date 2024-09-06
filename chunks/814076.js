@@ -1,22 +1,22 @@
 n.d(t, {
     Z: function () {
-        return o;
+        return S;
     }
 }),
     n(47120);
-var i = n(470079),
+var E = n(470079),
     r = n(742280),
-    u = n(442837),
-    l = n(351402);
-function o() {
-    let [e, t] = i.useState(!1),
-        [n, o] = i.useState(!1),
-        E = (0, u.e7)([l.Z], () => r.M.EEA_COUNTRIES.has(l.Z.ipCountryCodeWithFallback));
+    i = n(442837),
+    u = n(351402);
+function S() {
+    let [e, t] = E.useState(!1),
+        [n, S] = E.useState(!1),
+        _ = (0, i.e7)([u.Z], () => r.M.EEA_COUNTRIES.has(u.Z.ipCountryCodeWithFallback));
     return {
         hasViewedPurchaseTerms: e,
         setHasViewedPurchaseTerms: t,
-        showWithdrawalWaiver: E,
-        hasAcceptedWithdrawalWaiver: !E || n,
-        setHasAcceptedWithdrawalWaiver: o
+        showWithdrawalWaiver: _,
+        hasAcceptedWithdrawalWaiver: !_ || n,
+        setHasAcceptedWithdrawalWaiver: S
     };
 }

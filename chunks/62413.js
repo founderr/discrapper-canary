@@ -17,8 +17,8 @@ var n = i(735250),
     _ = i(125909),
     p = i(185156),
     m = i(87528),
-    g = i(57348),
-    f = i(886053);
+    f = i(57348),
+    g = i(886053);
 function C() {
     let e = (0, l.e7)([c.default], () => c.default.appDirectoryIncludesInactiveCollections),
         t = (0, l.e7)([u.Z], () => u.Z.getFetchState({ includesInactive: e })),
@@ -41,7 +41,7 @@ function C() {
                                     a = (0, n.jsx)(m.Z, { collection: e });
                                     break;
                                 case s.o.LIST_WITH_IMAGE:
-                                    a = (0, n.jsx)(g.Z, { collection: e });
+                                    a = (0, n.jsx)(f.Z, { collection: e });
                                     break;
                                 case s.o.GALLERY:
                                     a = (0, n.jsx)(p.Z, { collection: e });
@@ -52,7 +52,7 @@ function C() {
                             return (0, n.jsx)(
                                 'div',
                                 {
-                                    className: o()({ [f.topMargin]: r }),
+                                    className: o()({ [g.topMargin]: r }),
                                     children: a
                                 },
                                 e.id

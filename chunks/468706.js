@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(481060),
-    s = n(240872),
+var s = n(481060),
+    a = n(240872),
     r = n(923500),
     l = n(163268),
     o = n(774863),
@@ -20,7 +20,7 @@ function u(e, t) {
         }),
         !o.Z.canSubmitFpReport(t))
     ) {
-        s.Z.show({
+        a.Z.show({
             title: c.Z.Messages.SENDER_BLOCKED_MEDIA_EXPIRED_ERROR_HEADER,
             body: c.Z.Messages.SENDER_BLOCKED_MEDIA_EXPIRED_ERROR_BODY,
             confirmText: c.Z.Messages.OKAY
@@ -28,10 +28,10 @@ function u(e, t) {
             r.Z.disableFalsePositiveButton(e, t);
         return;
     }
-    (0, a.openModalLazy)(async () => {
-        let { default: a } = await n(773276);
+    (0, s.openModalLazy)(async () => {
+        let { default: s } = await n(773276);
         return (n) =>
-            (0, i.jsx)(a, {
+            (0, i.jsx)(s, {
                 channelId: e,
                 messageId: t,
                 ...n

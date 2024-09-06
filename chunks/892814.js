@@ -1,9 +1,9 @@
-var i, o;
+var o, i;
 n.d(t, {
     I: function () {
-        return i;
+        return o;
     }
 }),
-    ((o = i || (i = {})).APP_LAUNCHER_TEXT = 'app_launcher_text'),
-    (o.APP_LAUNCHER_VOICE = 'app_launcher_voice'),
-    (o.CONTEXTUAL_IMAGE = 'contextual_image');
+    ((i = o || (o = {})).APP_LAUNCHER_TEXT = 'app_launcher_text'),
+    (i.APP_LAUNCHER_VOICE = 'app_launcher_voice'),
+    (i.CONTEXTUAL_IMAGE = 'contextual_image');

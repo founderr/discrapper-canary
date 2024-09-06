@@ -1,24 +1,24 @@
-l.d(n, {
+t.d(n, {
     F: function () {
-        return s;
+        return o;
     },
     c: function () {
-        return a;
+        return r;
     }
 }),
-    l(411104);
-var t = l(735250),
-    r = l(470079);
-let i = r.createContext(null);
-function a() {
-    let e = r.useContext(i);
+    t(411104);
+var l = t(735250),
+    i = t(470079);
+let a = i.createContext(null);
+function r() {
+    let e = i.useContext(a);
     if (null == e) throw Error('Could not find context for useMessageAccessoriesComponentContext.');
     return e;
 }
-function s(e) {
-    let { children: n, ...l } = e;
-    return (0, t.jsx)(i.Provider, {
-        value: l,
+function o(e) {
+    let { children: n, ...t } = e;
+    return (0, l.jsx)(a.Provider, {
+        value: t,
         children: n
     });
 }

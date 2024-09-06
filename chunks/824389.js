@@ -6,13 +6,13 @@ t.d(n, {
         return d;
     },
     mh: function () {
-        return a;
+        return s;
     },
     p9: function () {
         return c;
     },
     uV: function () {
-        return s;
+        return a;
     }
 });
 var r = t(544891),
@@ -20,7 +20,7 @@ var r = t(544891),
     o = t(73346),
     l = t(981631);
 let u = async (e, n, t) => {
-        let { priceTier: o, imageName: u, createNewRole: a, unlinkRole: s, ...c } = t;
+        let { priceTier: o, imageName: u, createNewRole: s, unlinkRole: a, ...c } = t;
         try {
             return (
                 await r.tn.patch({
@@ -29,8 +29,8 @@ let u = async (e, n, t) => {
                         ...c,
                         image_name: u,
                         price_tier: o,
-                        create_new_role: a,
-                        unlink_role: s
+                        create_new_role: s,
+                        unlink_role: a
                     }
                 })
             ).body;
@@ -38,14 +38,14 @@ let u = async (e, n, t) => {
             throw new i.Hx(e);
         }
     },
-    a = async (e, n) => {
+    s = async (e, n) => {
         try {
             await r.tn.del({ url: l.ANM.GUILD_PRODUCT_LISTINGS(e, n) });
         } catch (e) {
             throw new i.Hx(e);
         }
     },
-    s = async (e) => {
+    a = async (e) => {
         try {
             return (await (0, o.Kb)({ url: l.ANM.GUILD_PRODUCT_LISTINGS(e) })).body.listings;
         } catch (e) {

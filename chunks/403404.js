@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(481060),
-    s = n(424602),
+var s = n(481060),
+    a = n(424602),
     r = n(397698),
     l = n(776862),
     o = n(701488),
@@ -14,8 +14,8 @@ var a = n(481060),
 function u(e) {
     let { channel: t, guildId: u, locationObject: d, openInPopout: _, initialSelectedApplicationId: E, initialSlide: I = o.ag.DIRECTORY, enableSelectedTextChannelInvite: m = !1, analyticsLocations: T, opensAppLauncherModal: h = !1 } = e,
         N = T.length > 0 ? T[T.length - 1] : 'open-activity-shelf',
-        { enabled: f } = s.m1.getCurrentConfig({ location: N }, { autoTrackExposure: !1 });
-    if (h && f) {
+        { enabled: C } = a.m1.getCurrentConfig({ location: N }, { autoTrackExposure: !1 });
+    if (h && C) {
         null != t &&
             (0, r.Z)({
                 openInPopout: _,
@@ -25,8 +25,8 @@ function u(e) {
         return;
     }
     _ && (0, l.Z)(c.KJ3.CHANNEL_CALL_POPOUT);
-    let C = _ ? a.POPOUT_MODAL_CONTEXT : a.DEFAULT_MODAL_CONTEXT;
-    return (0, a.openModalLazy)(
+    let f = _ ? s.POPOUT_MODAL_CONTEXT : s.DEFAULT_MODAL_CONTEXT;
+    return (0, s.openModalLazy)(
         async () => {
             let { default: e } = await Promise.all([n.e('67588'), n.e('64430')]).then(n.bind(n, 471840));
             return (n) =>
@@ -43,7 +43,7 @@ function u(e) {
         },
         {
             modalKey: o.AC,
-            contextKey: C
+            contextKey: f
         }
     );
 }

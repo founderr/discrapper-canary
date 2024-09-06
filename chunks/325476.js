@@ -2,8 +2,8 @@ var i,
     a,
     s = t(735250),
     l = t(470079),
-    r = t(120356),
-    o = t.n(r),
+    o = t(120356),
+    r = t.n(o),
     d = t(481060),
     c = t(600164),
     u = t(811692);
@@ -51,7 +51,7 @@ class _ extends l.PureComponent {
     render() {
         let { className: e, ...n } = this.props;
         return (0, s.jsx)(c.Z.Child, {
-            className: o()(u.content, e),
+            className: r()(u.content, e),
             wrap: !0,
             ...n
         });

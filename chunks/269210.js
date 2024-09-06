@@ -1,43 +1,43 @@
 t.d(n, {
     G: function () {
-        return f;
+        return m;
     },
     U: function () {
-        return m;
+        return p;
     }
 });
 var i = t(735250);
 t(470079);
 var l = t(557533),
     r = t.n(l),
-    o = t(789978),
-    s = t(368072),
+    s = t(789978),
+    o = t(368072),
     a = t(777207),
-    c = t(752843),
-    u = t(330711),
+    u = t(752843),
+    c = t(330711),
     d = t(772421),
-    S = t(778342);
-function m(e) {
-    let { description: n, imgSrc: t, renderPurchaseButton: l, onPurchase: m, subscriptionType: f, title: I, onDetails: x, benefitItems: _, benefitsSummary: p } = e;
-    return (0, i.jsx)(o.tE, {
+    f = t(778342);
+function p(e) {
+    let { description: n, imgSrc: t, renderPurchaseButton: l, onPurchase: p, subscriptionType: m, title: v, onDetails: I, benefitItems: S, benefitsSummary: g } = e;
+    return (0, i.jsx)(s.tE, {
         children: (0, i.jsxs)('div', {
-            className: r()(d.container, S.hoverCard),
+            className: r()(d.container, f.hoverCard),
             tabIndex: 0,
             onClick: () => {
-                null != x ? x() : null != m && m();
+                null != I ? I() : null != p && p();
             },
             children: [
                 (0, i.jsxs)('div', {
                     className: d.card,
                     children: [
-                        null != f && (0, i.jsx)(c.Z, { type: f }),
+                        null != m && (0, i.jsx)(u.Z, { type: m }),
                         (0, i.jsxs)('div', {
                             className: d.body,
                             children: [
                                 (0, i.jsx)(a.x, {
                                     tag: 'div',
                                     variant: 'heading-lg/semibold',
-                                    children: I
+                                    children: v
                                 }),
                                 (0, i.jsx)('div', {
                                     className: d.image,
@@ -47,7 +47,7 @@ function m(e) {
                                                   src: t.toString(),
                                                   alt: ''
                                               })
-                                            : (0, i.jsx)(s.V, {
+                                            : (0, i.jsx)(o.V, {
                                                   color: 'white',
                                                   size: 'custom',
                                                   height: 48,
@@ -58,7 +58,7 @@ function m(e) {
                                     ? l({
                                           className: d.purchaseBtn,
                                           onClick: (e) => {
-                                              e.stopPropagation(), null == m || m();
+                                              e.stopPropagation(), null == p || p();
                                           }
                                       })
                                     : null,
@@ -74,16 +74,16 @@ function m(e) {
                         })
                     ]
                 }),
-                null != p &&
+                null != g &&
                     (0, i.jsx)('div', {
                         className: d.benefitsSummary,
                         children: (0, i.jsx)(a.x, {
                             color: 'interactive-normal',
                             variant: 'text-sm/medium',
-                            children: u.Z.Messages.Storefront.BENEFITS_SUMMARY.format({ count: p })
+                            children: c.Z.Messages.Storefront.BENEFITS_SUMMARY.format({ count: g })
                         })
                     }),
-                null != _ &&
+                null != S &&
                     (0, i.jsx)('div', {
                         className: d.benefits,
                         children: (0, i.jsx)('div', {
@@ -94,20 +94,20 @@ function m(e) {
                                     (0, i.jsx)(a.x, {
                                         color: 'header-secondary',
                                         variant: 'eyebrow',
-                                        children: u.Z.Messages.Storefront.BENEFITS_TITLE
+                                        children: c.Z.Messages.Storefront.BENEFITS_TITLE
                                     }),
-                                    _.length > 3
+                                    S.length > 3
                                         ? (0, i.jsxs)(i.Fragment, {
                                               children: [
-                                                  _.slice(0, 3),
+                                                  S.slice(0, 3),
                                                   (0, i.jsx)(a.x, {
                                                       variant: 'text-md/semibold',
                                                       color: 'text-secondary',
-                                                      children: u.Z.Messages.Storefront.MORE_BENEFITS.format({ count: _.length - 3 })
+                                                      children: c.Z.Messages.Storefront.MORE_BENEFITS.format({ count: S.length - 3 })
                                                   })
                                               ]
                                           })
-                                        : _
+                                        : S
                                 ]
                             })
                         })
@@ -116,7 +116,7 @@ function m(e) {
         })
     });
 }
-function f(e) {
+function m(e) {
     let { icon: n, name: t, description: l } = e;
     return (0, i.jsxs)('div', {
         className: d.cardBenefit,

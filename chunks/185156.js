@@ -17,8 +17,8 @@ var n = i(735250),
     _ = i(34674),
     p = i(132871),
     m = i(147890),
-    g = i(409425),
-    f = i(57716),
+    f = i(409425),
+    g = i(57716),
     C = i(981631),
     x = i(689938),
     I = i(377351);
@@ -58,7 +58,7 @@ function b(e) {
                         (0, n.jsxs)(c.Heading, {
                             className: I.applicationName,
                             variant: 'heading-xxl/medium',
-                            children: [i, ' ', _ && (0, n.jsx)(g.Z, {})]
+                            children: [i, ' ', _ && (0, n.jsx)(f.Z, {})]
                         }),
                         (0, n.jsx)(c.Text, {
                             className: I.applicationDescription,
@@ -93,8 +93,8 @@ function N(e) {
             collection: t,
             collection: { id: i, title: r, application_directory_collection_items: c }
         } = e,
-        h = (0, f.Z)({ collection: t }),
-        [g, N] = a.useState(),
+        h = (0, g.Z)({ collection: t }),
+        [f, N] = a.useState(),
         v = (0, p.useApplicationDirectoryHistory)((e) => e.guildId);
     return (
         a.useEffect(() => {
@@ -115,7 +115,7 @@ function N(e) {
             ref: h,
             className: o()({ [I.collectionBottomMargin]: c.length <= 1 }),
             children: (0, n.jsx)(d.Z, {
-                aspectRatio: g,
+                aspectRatio: f,
                 themedPagination: !0,
                 paginationClassName: I.paginationControls,
                 paginationArrowClassName: I.paginationArrow,
@@ -133,16 +133,16 @@ function N(e) {
                 renderItem: (e) => {
                     let { id: t, image_hash: a, application: o, type: l, description: c, title: d, call_to_action_label: h, call_to_action_url: p } = e;
                     if (null == a) return;
-                    let g = (0, _.$_)({
+                    let f = (0, _.$_)({
                         itemId: t,
                         hash: a
                     });
                     if (l === s.C.APPLICATION && null != o) {
-                        var f, I;
+                        var g, I;
                         return (0, n.jsx)(b, {
                             collectionTitle: r,
                             title: o.name,
-                            description: null !== (I = null === (f = o.directory_entry) || void 0 === f ? void 0 : f.short_description) && void 0 !== I ? I : o.description,
+                            description: null !== (I = null === (g = o.directory_entry) || void 0 === g ? void 0 : g.short_description) && void 0 !== I ? I : o.description,
                             handleClick: () => {
                                 u.default.track(C.rMx.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
                                     collection_id: i,
@@ -152,7 +152,7 @@ function N(e) {
                                 }),
                                     (0, m.goToApplication)({ applicationId: o.id });
                             },
-                            imageSrc: g,
+                            imageSrc: f,
                             ctaLabel: x.Z.Messages.APP_DIRECTORY_GALLERY_COLLECTION_VIEW_APP_CTA,
                             applicationId: o.id
                         });
@@ -170,7 +170,7 @@ function N(e) {
                                     shown_mutual_guilds_count: void 0
                                 });
                             },
-                            imageSrc: g,
+                            imageSrc: f,
                             ctaLabel: h,
                             ctaLink: p
                         });

@@ -4,8 +4,8 @@ n.d(t, {
     }
 });
 var i = n(735250),
-    a = n(470079),
-    s = n(442837),
+    s = n(470079),
+    a = n(442837),
     r = n(481060),
     l = n(665149),
     o = n(618158),
@@ -20,15 +20,15 @@ var i = n(735250),
     h = n(689938);
 function N(e) {
     let { canShowReminder: t = !1, className: N } = e,
-        f = (0, E.Z)(u.Z),
-        { showClipsHeaderEntrypoint: C } = d.NV.useExperiment({ location: 'ClipsButton' }, { autoTrackExposure: !1 }),
+        C = (0, E.Z)(u.Z),
+        { showClipsHeaderEntrypoint: f } = d.NV.useExperiment({ location: 'ClipsButton' }, { autoTrackExposure: !1 }),
         {
             hasClips: p,
             hasNewClips: g,
             lastClipsSession: S,
             remindersEnabled: A,
             hasAnyClipAnimations: R
-        } = (0, s.cj)([_.Z], () => ({
+        } = (0, a.cj)([_.Z], () => ({
             hasClips: _.Z.hasClips(),
             hasNewClips: _.Z.getNewClipIds().length > 0,
             lastClipsSession: _.Z.getLastClipsSession(),
@@ -38,7 +38,7 @@ function N(e) {
         O = null != S && S.newClipIds.length > 0,
         x = (0, I.n)((e) => e.clipsButtonRef),
         M = (0, I.n)((e) => e.setClipsButtonRef),
-        v = (0, s.e7)([c.Z], () => c.Z.hasLayers()),
+        v = (0, a.e7)([c.Z], () => c.Z.hasLayers()),
         { preventIdle: L, allowIdle: Z } = (0, o.Y)('animation');
     function P() {
         (0, r.openModalLazy)(
@@ -49,7 +49,7 @@ function N(e) {
             { modalKey: T.Qr }
         );
     }
-    return (a.useEffect(() => (R ? L() : Z(), () => Z()), [R, L, Z]), C && f && p)
+    return (s.useEffect(() => (R ? L() : Z(), () => Z()), [R, L, Z]), f && C && p)
         ? (0, i.jsxs)(i.Fragment, {
               children: [
                   null != x &&

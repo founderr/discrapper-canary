@@ -5,15 +5,15 @@ n.d(t, {
 }),
     n(47120);
 var i = n(735250),
-    a = n(470079),
-    s = n(481060),
+    s = n(470079),
+    a = n(481060),
     r = n(626135),
     l = n(288552),
     o = n(981631),
     c = n(689938);
 function u(e) {
     let { type: t, onClick: n } = e,
-        [u, _] = a.useState(!1),
+        [u, _] = s.useState(!1),
         E = () => {
             n(),
                 r.default.track(o.rMx.INBOX_CHANNEL_ACKED, {
@@ -35,13 +35,13 @@ function u(e) {
             'bottom-floating' === t
                 ? (0, i.jsx)(l.a, {
                       text: c.Z.Messages.MARK_ALL_AS_READ,
-                      icon: s.DoubleCheckmarkIcon,
+                      icon: a.DoubleCheckmarkIcon,
                       onClick: I
                   })
-                : (0, i.jsx)(s.CircleIconButton, {
+                : (0, i.jsx)(a.CircleIconButton, {
                       tooltip: c.Z.Messages.MARK_ALL_AS_READ,
-                      color: s.CircleIconButtonColors.SECONDARY,
-                      icon: (0, i.jsx)(s.DoubleCheckmarkIcon, {
+                      color: a.CircleIconButtonColors.SECONDARY,
+                      icon: (0, i.jsx)(a.DoubleCheckmarkIcon, {
                           size: 'xs',
                           color: 'currentColor'
                       }),
@@ -52,15 +52,15 @@ function u(e) {
 }
 function d(e) {
     let { cancel: t, confirm: n } = e;
-    return (0, i.jsx)(s.DeclarativeConfirmModal, {
+    return (0, i.jsx)(a.DeclarativeConfirmModal, {
         dismissable: !0,
         header: c.Z.Messages.UNREADS_CONFIRM_MARK_ALL_READ_HEADER,
         confirmText: c.Z.Messages.MARK_AS_READ,
         cancelText: c.Z.Messages.CANCEL,
-        confirmButtonColor: s.Button.Colors.BRAND,
+        confirmButtonColor: a.Button.Colors.BRAND,
         onCancel: t,
         onConfirm: n,
-        children: (0, i.jsx)(s.Text, {
+        children: (0, i.jsx)(a.Text, {
             color: 'text-normal',
             variant: 'text-sm/normal',
             children: c.Z.Messages.UNREADS_CONFIRM_MARK_ALL_READ_DESCRIPTION

@@ -12,7 +12,7 @@ var n = i(735250),
     c = i(649921);
 function d(e) {
     var t, i, d, u, h;
-    let { application: _, onClick: p, imageSrc: m, className: g, animatesOnHover: f } = e,
+    let { application: _, onClick: p, imageSrc: m, className: f, animatesOnHover: g } = e,
         C = (0, l.Z)({ application: _ }),
         x = null === (t = _.categories) || void 0 === t ? void 0 : t[0],
         I = (null !== (u = null === (i = _.directory_entry) || void 0 === i ? void 0 : i.guild_count) && void 0 !== u ? u : 0) > 0 || C.length > 0,
@@ -28,7 +28,7 @@ function d(e) {
             compact: !0
         });
     return (0, n.jsx)(s.Z, {
-        className: g,
+        className: f,
         imageSrc: m,
         onClick: b,
         header: _.name,
@@ -55,7 +55,7 @@ function d(e) {
                     })
             ]
         }),
-        animatesOnHover: f,
+        animatesOnHover: g,
         children:
             null != _.description &&
             (0, n.jsx)('div', {

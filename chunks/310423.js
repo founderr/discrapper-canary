@@ -1,8 +1,8 @@
 n(47120);
 var i = n(735250),
-    a = n(470079),
-    s = n(120356),
-    r = n.n(s),
+    s = n(470079),
+    a = n(120356),
+    r = n.n(a),
     l = n(442837),
     o = n(481060),
     c = n(911969),
@@ -15,8 +15,8 @@ var i = n(735250),
     T = n(430824),
     h = n(594174),
     N = n(739566),
-    f = n(981631),
-    C = n(665692),
+    C = n(981631),
+    f = n(665692),
     p = n(689938),
     g = n(894684);
 let S = {
@@ -34,15 +34,15 @@ function R(e) {
         })
     });
 }
-t.Z = a.memo(function (e) {
-    var t, n, s, r, O, x;
+t.Z = s.memo(function (e) {
+    var t, n, a, r, O, x;
     let M,
         { channel: v, messageId: L, interactionData: Z } = e,
         { analyticsLocations: P } = (0, u.ZP)(),
-        { onCopy: b, copyRef: D } = (0, d.Z)(v, null == Z ? void 0 : null === (t = Z.application_command) || void 0 === t ? void 0 : t.id),
+        { onCopy: D, copyRef: b } = (0, d.Z)(v, null == Z ? void 0 : null === (t = Z.application_command) || void 0 === t ? void 0 : t.id),
         j = (0, l.e7)([T.Z], () => T.Z.getGuild(v.guild_id), [v.guild_id]);
     if (
-        (a.useEffect(() => {
+        (s.useEffect(() => {
             (null == Z || (Z.type === c.yU.CHAT && void 0 === Z.application_command)) && _.OG(v.id, L);
         }, [v.id, L, Z]),
         null == Z)
@@ -57,24 +57,24 @@ t.Z = a.memo(function (e) {
         for (let n of null !== (O = Z.options) && void 0 !== O ? O : [])
             e = e.concat(
                 (function e(t) {
-                    var n, s, r, l, u, d, _;
+                    var n, a, r, l, u, d, _;
                     let g,
                         { option: O, channel: x, guild: M, messageId: v, parentOptionKey: L, commandOptionSpec: Z, sourceAnalyticsLocations: P } = t,
-                        b = null != L ? L + ' ' + O.name : O.name;
+                        D = null != L ? L + ' ' + O.name : O.name;
                     if (O.type === c.jw.SUB_COMMAND || O.type === c.jw.SUB_COMMAND_GROUP) {
                         let t = [
                                 (0, i.jsxs)(
-                                    a.Fragment,
+                                    s.Fragment,
                                     {
                                         children: [
                                             ' ',
                                             (0, i.jsx)(o.Text, {
                                                 ...S,
-                                                children: null !== (s = null == Z ? void 0 : Z.name_localized) && void 0 !== s ? s : O.name
+                                                children: null !== (a = null == Z ? void 0 : Z.name_localized) && void 0 !== a ? a : O.name
                                             })
                                         ]
                                     },
-                                    b
+                                    D
                                 )
                             ],
                             c = Object.fromEntries(null === (n = null !== (r = null == Z ? void 0 : Z.options) && void 0 !== r ? r : []) || void 0 === n ? void 0 : n.map((e) => [e.name, e]));
@@ -85,14 +85,14 @@ t.Z = a.memo(function (e) {
                                     channel: x,
                                     guild: M,
                                     messageId: v,
-                                    parentOptionKey: b,
+                                    parentOptionKey: D,
                                     commandOptionSpec: c[n.name],
                                     sourceAnalyticsLocations: P
                                 })
                             );
                         return t;
                     }
-                    let D = O.value;
+                    let b = O.value;
                     if (null != O.value)
                         switch (O.type) {
                             case c.jw.USER: {
@@ -109,9 +109,9 @@ t.Z = a.memo(function (e) {
                                                 channelId: x.id,
                                                 messageId: v,
                                                 sourceAnalyticsLocations: P,
-                                                analyticsLocation: { section: f.jXE.CHANNEL_TEXT_AREA_AUTOCOMPLETE }
+                                                analyticsLocation: { section: C.jXE.CHANNEL_TEXT_AREA_AUTOCOMPLETE }
                                             }),
-                                        children: [C.ME, e.nick]
+                                        children: [f.ME, e.nick]
                                     });
                                 }
                                 break;
@@ -122,7 +122,7 @@ t.Z = a.memo(function (e) {
                                 null != t &&
                                     (g = (0, i.jsxs)(E.Z, {
                                         ...A,
-                                        children: [C.zy, t.name]
+                                        children: [f.zy, t.name]
                                     }));
                                 break;
                             }
@@ -132,7 +132,7 @@ t.Z = a.memo(function (e) {
                                 null != t &&
                                     (g = (0, i.jsxs)(E.Z, {
                                         ...A,
-                                        children: [C.ME, t.name]
+                                        children: [f.ME, t.name]
                                     }));
                                 break;
                             }
@@ -141,7 +141,7 @@ t.Z = a.memo(function (e) {
                                     t = null != M ? T.Z.getRole(M.id, e) : void 0;
                                 if (null != t)
                                     g = (0, i.jsxs)(E.Z, {
-                                        children: [C.ME, t.name]
+                                        children: [f.ME, t.name]
                                     });
                                 else {
                                     let t = h.default.getUser(e);
@@ -153,9 +153,9 @@ t.Z = a.memo(function (e) {
                                                 (0, I.openUserProfileModal)({
                                                     userId: t.id,
                                                     guildId: x.guild_id,
-                                                    analyticsLocation: { section: f.jXE.CHANNEL_TEXT_AREA_AUTOCOMPLETE }
+                                                    analyticsLocation: { section: C.jXE.CHANNEL_TEXT_AREA_AUTOCOMPLETE }
                                                 }),
-                                            children: [C.ME, e.nick]
+                                            children: [f.ME, e.nick]
                                         });
                                     }
                                 }
@@ -166,14 +166,14 @@ t.Z = a.memo(function (e) {
                                 break;
                             default: {
                                 let e = null == Z ? void 0 : null === (u = Z.choices) || void 0 === u ? void 0 : u.find((e) => e.value === O.value);
-                                null != e && (D = null !== (d = e.name_localized) && void 0 !== d ? d : e.name);
+                                null != e && (b = null !== (d = e.name_localized) && void 0 !== d ? d : e.name);
                             }
                         }
                     return (
-                        null == g && (g = R(null == D ? void 0 : D.toString())),
+                        null == g && (g = R(null == b ? void 0 : b.toString())),
                         [
                             (0, i.jsxs)(
-                                a.Fragment,
+                                s.Fragment,
                                 {
                                     children: [
                                         (0, i.jsxs)(o.Text, {
@@ -183,7 +183,7 @@ t.Z = a.memo(function (e) {
                                         g
                                     ]
                                 },
-                                b
+                                D
                             )
                         ]
                     );
@@ -201,7 +201,7 @@ t.Z = a.memo(function (e) {
             children: [
                 (0, i.jsxs)(o.Text, {
                     ...S,
-                    children: ['/', null !== (x = null === (s = Z.application_command) || void 0 === s ? void 0 : s.name_localized) && void 0 !== x ? x : Z.name]
+                    children: ['/', null !== (x = null === (a = Z.application_command) || void 0 === a ? void 0 : a.name_localized) && void 0 !== x ? x : Z.name]
                 }),
                 e
             ]
@@ -211,13 +211,13 @@ t.Z = a.memo(function (e) {
         className: g.container,
         onCopy: (e) => {
             var t, n, i;
-            let a = null !== (i = null === (n = window) || void 0 === n ? void 0 : null === (t = n.getSelection()) || void 0 === t ? void 0 : t.toString()) && void 0 !== i ? i : '';
-            a.startsWith('/') && a.endsWith('\n') && b(e, Z);
+            let s = null !== (i = null === (n = window) || void 0 === n ? void 0 : null === (t = n.getSelection()) || void 0 === t ? void 0 : t.toString()) && void 0 !== i ? i : '';
+            s.startsWith('/') && s.endsWith('\n') && D(e, Z);
         },
         children: [
             (0, i.jsx)('div', {
                 className: g.tooltip,
-                ref: D,
+                ref: b,
                 children: M
             }),
             (0, i.jsx)('div', { className: g.tooltipPointer })

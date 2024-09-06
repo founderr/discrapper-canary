@@ -4,20 +4,20 @@ n.d(t, {
     }
 }),
     n(47120);
-var i = n(470079);
+var E = n(470079);
 function r(e) {
     var t;
     let { stepConfigs: n, breadcrumbs: r } = e,
-        [u, l] = i.useState(null === (t = n[0]) || void 0 === t ? void 0 : t.key),
-        o = i.useRef(null);
-    i.useEffect(() => {
-        o.current = u;
-    }, [o, u]);
-    let E = n.map((e) => e.key).filter((e) => null != e);
+        [i, u] = E.useState(null === (t = n[0]) || void 0 === t ? void 0 : t.key),
+        S = E.useRef(null);
+    E.useEffect(() => {
+        S.current = i;
+    }, [S, i]);
+    let _ = n.map((e) => e.key).filter((e) => null != e);
     return {
-        steps: E,
-        step: u,
-        setStep: l,
+        steps: _,
+        step: i,
+        setStep: u,
         breadcrumbsData: n
             .filter((e) => {
                 var t;
@@ -28,6 +28,6 @@ function r(e) {
                 useBreadcrumbLabel: e.options.useBreadcrumbLabel
             }))
             .sort((e, t) => (null != r ? r.indexOf(e.id) - r.indexOf(t.id) : 0)),
-        previousStepRef: o
+        previousStepRef: S
     };
 }

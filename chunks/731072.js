@@ -7,23 +7,23 @@ var i = t(735250),
     a = t(470079),
     s = t(481060),
     l = t(139387),
-    r = t(726542),
-    o = t(434404),
+    o = t(726542),
+    r = t(434404),
     d = t(486199),
     c = t(13051),
     u = t(288179);
 function I(e) {
     let { integrations: n, editedIntegration: t, guild: I, platformType: m, labelText: _, descriptionText: N, helpText: E, canNavigate: T } = e,
-        h = r.Z.get(m),
+        h = o.Z.get(m),
         g = a.useCallback(
             async (e) => {
-                T() && (await o.Z.enableIntegration(I.id, e.type, e.id), l.Z.startEditingIntegration(e.id));
+                T() && (await r.Z.enableIntegration(I.id, e.type, e.id), l.Z.startEditingIntegration(e.id));
             },
             [T, I.id]
         ),
         p = a.useCallback(
             (e) => {
-                T() && (e.id === (null == t ? void 0 : t.id) && l.Z.stopEditingIntegration(), o.Z.disableIntegration(I.id, e.id));
+                T() && (e.id === (null == t ? void 0 : t.id) && l.Z.stopEditingIntegration(), r.Z.disableIntegration(I.id, e.id));
             },
             [T, t, I.id]
         ),

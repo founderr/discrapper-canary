@@ -66,8 +66,8 @@ t.Z = (e) => {
             j('open'), O('open'), (0, u.emitCaptchaDistributionMetric)(w, x), null == E || E();
         }, [O, w, E, j, x]),
         D = a.useCallback(() => {
-            j('close'), null == b || b();
-        }, [b, j]),
+            j('close'), null == b || b(), T();
+        }, [b, j, T]),
         M = a.useCallback(() => {
             j('chal-expire'), null == _ || _();
         }, [_, j]);

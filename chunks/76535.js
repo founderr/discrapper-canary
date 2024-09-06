@@ -1,9 +1,9 @@
 t.d(n, {
     H: function () {
-        return s;
+        return a;
     },
     R: function () {
-        return a;
+        return s;
     }
 });
 var r = t(470079),
@@ -11,7 +11,7 @@ var r = t(470079),
     o = t(584825),
     l = t(17079),
     u = t(281320);
-function a(e, n) {
+function s(e, n) {
     let t = (0, i.e7)([u.Z], () => u.Z.getPriceTiersForGuildAndType(e, n)),
         o = (0, i.e7)([u.Z], () => u.Z.getPriceTiersFetchStateForGuildAndType(e, n));
     return (
@@ -24,7 +24,7 @@ function a(e, n) {
         }
     );
 }
-function s(e) {
+function a(e) {
     let { fetchSubscriptionsSettings: n, loading: t, error: i } = (0, o.JH)();
     r.useEffect(() => {
         n(e);

@@ -4,9 +4,9 @@ n.d(t, {
     }
 });
 var i = n(594174),
-    a = n(111361),
-    s = n(474936);
+    s = n(111361),
+    a = n(474936);
 function r() {
     let e = i.default.getCurrentUser();
-    return (0, a.I5)(e, s.p9.TIER_2);
+    return (0, s.I5)(e, a.p9.TIER_2);
 }

@@ -1,67 +1,67 @@
 n.d(t, {
     I: function () {
-        return o;
+        return S;
     }
 });
-var i,
+var E,
     r,
+    i,
     u,
-    l,
-    o,
-    E,
-    a = n(442837),
-    _ = n(570140),
-    S = n(128069),
-    s = n(38618);
-((i = o || (o = {}))[(i.UNKNOWN = 0)] = 'UNKNOWN'), (i[(i.PENDING = 1)] = 'PENDING'), (i[(i.SUCCESS = 2)] = 'SUCCESS'), (i[(i.ERROR = 3)] = 'ERROR');
-let A = 0,
-    c = null,
-    I = null;
-function T(e) {
+    S,
+    _,
+    o = n(442837),
+    A = n(570140),
+    l = n(128069),
+    a = n(38618);
+((E = S || (S = {}))[(E.UNKNOWN = 0)] = 'UNKNOWN'), (E[(E.PENDING = 1)] = 'PENDING'), (E[(E.SUCCESS = 2)] = 'SUCCESS'), (E[(E.ERROR = 3)] = 'ERROR');
+let T = 0,
+    I = null,
+    c = null;
+function R(e) {
     let { error: t } = e,
-        n = t instanceof S.ZP ? t : new S.ZP(t);
-    s.Z.isConnected() && n.code === S.ZP.ErrorCodes.PURCHASE_TOKEN_AUTHORIZATION_REQUIRED && (A = 1);
+        n = t instanceof l.ZP ? t : new l.ZP(t);
+    a.Z.isConnected() && n.code === l.ZP.ErrorCodes.PURCHASE_TOKEN_AUTHORIZATION_REQUIRED && (T = 1);
 }
-function d() {
-    (A = 0), (c = null), (I = null);
+function C() {
+    (T = 0), (I = null), (c = null);
 }
-class R extends (E = a.ZP.Store) {
+class N extends (_ = o.ZP.Store) {
     get purchaseTokenAuthState() {
-        return A;
+        return T;
     }
     get purchaseTokenHash() {
-        return c;
-    }
-    get expiresAt() {
         return I;
     }
+    get expiresAt() {
+        return c;
+    }
 }
-(l = 'PurchaseTokenAuthStore'),
-    (u = 'displayName') in (r = R)
-        ? Object.defineProperty(r, u, {
-              value: l,
+(u = 'PurchaseTokenAuthStore'),
+    (i = 'displayName') in (r = N)
+        ? Object.defineProperty(r, i, {
+              value: u,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (r[u] = l),
-    (t.Z = new R(_.Z, {
-        SKU_PURCHASE_FAIL: T,
-        PREMIUM_PAYMENT_SUBSCRIBE_FAIL: T,
+        : (r[i] = u),
+    (t.Z = new N(A.Z, {
+        SKU_PURCHASE_FAIL: R,
+        PREMIUM_PAYMENT_SUBSCRIBE_FAIL: R,
         USER_PAYMENT_CLIENT_ADD: function (e) {
-            (A = 2), (c = e.purchaseTokenHash), (I = e.expiresAt);
+            (T = 2), (I = e.purchaseTokenHash), (c = e.expiresAt);
         },
-        BILLING_PURCHASE_TOKEN_AUTH_CLEAR_STATE: d,
-        BILLING_SUBSCRIPTION_UPDATE_START: d,
-        PAYMENT_AUTHENTICATION_CLEAR_ERROR: d,
-        PREMIUM_PAYMENT_ERROR_CLEAR: d,
-        PREMIUM_PAYMENT_MODAL_CLOSE: d,
-        PREMIUM_PAYMENT_MODAL_OPEN: d,
-        PREMIUM_PAYMENT_SUBSCRIBE_START: d,
-        PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS: d,
-        PREMIUM_PAYMENT_UPDATE_SUCCESS: d,
-        SKU_PURCHASE_MODAL_CLOSE: d,
-        SKU_PURCHASE_MODAL_OPEN: d,
-        SKU_PURCHASE_START: d,
-        SKU_PURCHASE_SUCCESS: d
+        BILLING_PURCHASE_TOKEN_AUTH_CLEAR_STATE: C,
+        BILLING_SUBSCRIPTION_UPDATE_START: C,
+        PAYMENT_AUTHENTICATION_CLEAR_ERROR: C,
+        PREMIUM_PAYMENT_ERROR_CLEAR: C,
+        PREMIUM_PAYMENT_MODAL_CLOSE: C,
+        PREMIUM_PAYMENT_MODAL_OPEN: C,
+        PREMIUM_PAYMENT_SUBSCRIBE_START: C,
+        PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS: C,
+        PREMIUM_PAYMENT_UPDATE_SUCCESS: C,
+        SKU_PURCHASE_MODAL_CLOSE: C,
+        SKU_PURCHASE_MODAL_OPEN: C,
+        SKU_PURCHASE_START: C,
+        SKU_PURCHASE_SUCCESS: C
     }));

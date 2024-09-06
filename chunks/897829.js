@@ -1,17 +1,17 @@
 n.d(t, {
     Z: function () {
-        return o;
+        return S;
     }
 });
-var i = n(470079),
+var E = n(470079),
     r = n(442837),
-    u = n(355467),
-    l = n(78839);
-function o() {
-    let e = (0, r.e7)([l.ZP], () => l.ZP.hasFetchedSubscriptions());
+    i = n(355467),
+    u = n(78839);
+function S() {
+    let e = (0, r.e7)([u.ZP], () => u.ZP.hasFetchedSubscriptions());
     return (
-        i.useEffect(() => {
-            !e && (0, u.jg)();
+        E.useEffect(() => {
+            !e && (0, i.jg)();
         }, [e]),
         e
     );

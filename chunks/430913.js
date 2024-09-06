@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return x;
+        return E;
     }
 }),
     t(47120),
@@ -13,8 +13,8 @@ var i = t(735250),
     a = t(470079),
     r = t(120356),
     o = t.n(r),
-    s = t(780384),
-    l = t(481060),
+    l = t(780384),
+    s = t(481060),
     c = t(794295),
     d = t(410030),
     u = t(726542),
@@ -25,16 +25,16 @@ var i = t(735250),
     f = t(290247),
     g = t(981631),
     h = t(689938),
-    C = t(200682);
-let v = h.Z.getAvailableLocales();
-function E(e) {
+    v = t(200682);
+let C = h.Z.getAvailableLocales();
+function x(e) {
     var n, t, a;
     let { onClick: r, url: o, children: c } = e,
         _ = (0, d.ZP)(),
         p = u.Z.getByUrl(o),
-        m = (0, s.wj)(_) ? (null == p ? void 0 : null === (n = p.icon) || void 0 === n ? void 0 : n.darkSVG) : null == p ? void 0 : null === (t = p.icon) || void 0 === t ? void 0 : t.lightSVG;
+        m = (0, l.wj)(_) ? (null == p ? void 0 : null === (n = p.icon) || void 0 === n ? void 0 : n.darkSVG) : null == p ? void 0 : null === (t = p.icon) || void 0 === t ? void 0 : t.lightSVG;
     return (0, i.jsx)(b, {
-        icon: void 0 === m ? l.LinkIcon : void 0,
+        icon: void 0 === m ? s.LinkIcon : void 0,
         imageSrc: m,
         onClick: r,
         url: o,
@@ -43,12 +43,12 @@ function E(e) {
     });
 }
 function b(e) {
-    let { icon: n, imageSrc: t, iconColor: a, url: r, type: s, children: d, onClick: u } = e,
+    let { icon: n, imageSrc: t, iconColor: a, url: r, type: l, children: d, onClick: u } = e,
         _ = (0, m.Z)(),
         p = null;
     null != n
         ? (p = (0, i.jsx)(n, {
-              className: C.listIcon,
+              className: v.listIcon,
               color: null != a ? a : 'currentColor',
               width: 20,
               height: 20,
@@ -56,15 +56,15 @@ function b(e) {
           }))
         : null != t &&
           (p = (0, i.jsx)('img', {
-              className: C.listImage,
+              className: v.listImage,
               src: t,
               alt: ''
           }));
     let I = (0, i.jsxs)(i.Fragment, {
         children: [
             p,
-            (0, i.jsx)(l.Text, {
-                className: C.listText,
+            (0, i.jsx)(s.Text, {
+                className: v.listText,
                 variant: 'text-md/normal',
                 selectable: !0,
                 children: d
@@ -73,48 +73,48 @@ function b(e) {
     });
     return (0, i.jsx)(c.Z, {
         href: r,
-        className: o()(C.listItem, C.linkItem),
-        onClick: () => (u(r, s), !1),
+        className: o()(v.listItem, v.linkItem),
+        onClick: () => (u(r, l), !1),
         trusted: !_,
         useDefaultUnderlineStyles: !1,
         children: I
     });
 }
-function x(e) {
+function E(e) {
     var n, t, r;
-    let { application: s, guildId: c, className: d, onViewCategory: u, onClickGuildWidget: m } = e,
-        [x, A] = a.useState(null),
-        P = [],
-        T = null !== (t = null == s ? void 0 : null === (n = s.directory_entry) || void 0 === n ? void 0 : n.external_urls) && void 0 !== t ? t : [];
+    let { application: l, guildId: c, className: d, onViewCategory: u, onClickGuildWidget: m } = e,
+        [E, S] = a.useState(null),
+        T = [],
+        P = null !== (t = null == l ? void 0 : null === (n = l.directory_entry) || void 0 === n ? void 0 : n.external_urls) && void 0 !== t ? t : [];
     a.useEffect(() => {
         var e;
-        if ((null === (e = s.directory_entry) || void 0 === e ? void 0 : e.supported_locales) !== void 0) {
-            let e = new Set(s.directory_entry.supported_locales);
-            A(v.filter((n) => e.has(n.value)).map((e) => e.localizedName));
+        if ((null === (e = l.directory_entry) || void 0 === e ? void 0 : e.supported_locales) !== void 0) {
+            let e = new Set(l.directory_entry.supported_locales);
+            S(C.filter((n) => e.has(n.value)).map((e) => e.localizedName));
         }
-    }, [s.directory_entry]);
-    let R = (e, n) => {
+    }, [l.directory_entry]);
+    let N = (e, n) => {
         _.default.track(g.rMx.APP_DIRECTORY_APPLICATION_EXTERNAL_LINK_CLICKED, {
-            application_id: s.id,
+            application_id: l.id,
             guild_id: c,
             type: n,
             url: e
         });
     };
     return (
-        null != s.categories &&
-            s.categories.length > 0 &&
-            P.push(
+        null != l.categories &&
+            l.categories.length > 0 &&
+            T.push(
                 (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (0, i.jsx)(l.Heading, {
-                            className: C.sectionHeader,
+                        (0, i.jsx)(s.Heading, {
+                            className: v.sectionHeader,
                             variant: 'eyebrow',
                             children: h.Z.Messages.APP_DIRECTORY_PROFILE_CATEGORIES_HEADING
                         }),
                         (0, i.jsx)('div', {
-                            className: C.categories,
-                            children: (null !== (r = s.categories) && void 0 !== r ? r : []).map((e) => {
+                            className: v.categories,
+                            children: (null !== (r = l.categories) && void 0 !== r ? r : []).map((e) => {
                                 let n = new URLSearchParams();
                                 return (
                                     n.set('category_id', e.id.toString()),
@@ -122,10 +122,10 @@ function x(e) {
                                         p.Z,
                                         {
                                             href: ''.concat(g.Z5c.APPLICATION_DIRECTORY_SEARCH, '?').concat(n),
-                                            children: (0, i.jsx)(l.Clickable, {
-                                                className: C.category,
+                                            children: (0, i.jsx)(s.Clickable, {
+                                                className: v.category,
                                                 onClick: () => u(e),
-                                                children: (0, i.jsx)(l.Text, {
+                                                children: (0, i.jsx)(s.Text, {
                                                     variant: 'text-sm/normal',
                                                     color: 'header-primary',
                                                     children: e.name
@@ -140,54 +140,54 @@ function x(e) {
                     ]
                 })
             ),
-        null != x &&
-            x.length > 0 &&
-            P.push(
+        null != E &&
+            E.length > 0 &&
+            T.push(
                 (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (0, i.jsx)(l.Heading, {
-                            className: C.sectionHeader,
+                        (0, i.jsx)(s.Heading, {
+                            className: v.sectionHeader,
                             variant: 'eyebrow',
                             children: h.Z.Messages.APP_DIRECTORY_PROFILE_LANGUAGES_HEADING
                         }),
-                        (0, i.jsx)(f.Z, { supportedLanguages: x })
+                        (0, i.jsx)(f.Z, { supportedLanguages: E })
                     ]
                 })
             ),
-        (null != s.terms_of_service_url || null != s.privacy_policy_url || T.length > 0) &&
-            P.push(
+        (null != l.terms_of_service_url || null != l.privacy_policy_url || P.length > 0) &&
+            T.push(
                 (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (0, i.jsx)(l.Heading, {
-                            className: C.sectionHeader,
+                        (0, i.jsx)(s.Heading, {
+                            className: v.sectionHeader,
                             variant: 'eyebrow',
                             children: h.Z.Messages.APP_DIRECTORY_PROFILE_LINKS_HEADING
                         }),
-                        T.map((e, n) =>
+                        P.map((e, n) =>
                             (0, i.jsx)(
-                                E,
+                                x,
                                 {
                                     url: e.url,
-                                    onClick: R,
+                                    onClick: N,
                                     children: e.name
                                 },
                                 n
                             )
                         ),
-                        null != s.terms_of_service_url
+                        null != l.terms_of_service_url
                             ? (0, i.jsx)(b, {
-                                  icon: l.LinkIcon,
-                                  onClick: R,
-                                  url: s.terms_of_service_url,
+                                  icon: s.LinkIcon,
+                                  onClick: N,
+                                  url: l.terms_of_service_url,
                                   type: 'tos',
                                   children: h.Z.Messages.APP_DIRECTORY_PROFILE_TERMS_LINK
                               })
                             : null,
-                        null != s.privacy_policy_url
+                        null != l.privacy_policy_url
                             ? (0, i.jsx)(b, {
-                                  icon: l.LockIcon,
-                                  onClick: R,
-                                  url: s.privacy_policy_url,
+                                  icon: s.LockIcon,
+                                  onClick: N,
+                                  url: l.privacy_policy_url,
                                   type: 'policy',
                                   children: h.Z.Messages.APP_DIRECTORY_PROFILE_PRIVACY_LINK
                               })
@@ -195,33 +195,33 @@ function x(e) {
                     ]
                 })
             ),
-        null != s.guild &&
-            s.guild.features.includes(g.oNc.DISCOVERABLE) &&
-            P.push(
+        null != l.guild &&
+            l.guild.features.includes(g.oNc.DISCOVERABLE) &&
+            T.push(
                 (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (0, i.jsx)(l.Heading, {
-                            className: C.sectionHeader,
+                        (0, i.jsx)(s.Heading, {
+                            className: v.sectionHeader,
                             variant: 'eyebrow',
                             children: h.Z.Messages.APP_DIRECTORY_PROFILE_SERVER_HEADING
                         }),
                         (0, i.jsx)(I.Z, {
-                            guild: s.guild,
+                            guild: l.guild,
                             onClick: m
                         })
                     ]
                 })
             ),
         (0, i.jsx)('div', {
-            className: o()(C.sidebar, d),
+            className: o()(v.sidebar, d),
             children:
-                P.length > 0
+                T.length > 0
                     ? (0, i.jsx)(i.Fragment, {
-                          children: P.map((e, n) =>
+                          children: T.map((e, n) =>
                               (0, i.jsx)(
                                   'div',
                                   {
-                                      className: C.section,
+                                      className: v.section,
                                       children: e
                                   },
                                   n

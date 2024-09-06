@@ -9,7 +9,7 @@ var r = t(470079),
     l = t(607070);
 function u(e, n, t) {
     let u = (0, o.e7)([l.Z], () => l.Z.keyboardModeEnabled),
-        a = r.useCallback(
+        s = r.useCallback(
             (e) => {
                 let t = document.querySelector(e),
                     r = n.current;
@@ -23,7 +23,7 @@ function u(e, n, t) {
             },
             [n]
         ),
-        s = r.useCallback(
+        a = r.useCallback(
             () =>
                 new Promise((e) => {
                     let t = n.current;
@@ -50,8 +50,8 @@ function u(e, n, t) {
     return (0, i.ZP)({
         id: e,
         isEnabled: u,
-        setFocus: a,
-        scrollToStart: s,
+        setFocus: s,
+        scrollToStart: a,
         scrollToEnd: c,
         orientation: null == t ? void 0 : t.orientation
     });

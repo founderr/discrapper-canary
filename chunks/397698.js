@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(481060),
-    s = n(776862),
+var s = n(481060),
+    a = n(776862),
     r = n(306680),
     l = n(626135),
     o = n(499254),
@@ -15,8 +15,8 @@ var a = n(481060),
     d = n(981631);
 function _(e) {
     let { channel: t, openInPopout: _, analyticsLocation: E } = e;
-    _ && (0, s.Z)(d.KJ3.CHANNEL_CALL_POPOUT);
-    let I = _ ? a.POPOUT_MODAL_CONTEXT : a.DEFAULT_MODAL_CONTEXT;
+    _ && (0, a.Z)(d.KJ3.CHANNEL_CALL_POPOUT);
+    let I = _ ? s.POPOUT_MODAL_CONTEXT : s.DEFAULT_MODAL_CONTEXT;
     (0, o.y)(c.ti.DISMISSED), (0, o._)(c._b.VOICE);
     let m = t.id,
         T = r.ZP.hasUnread(m) || r.ZP.getMentionCount(m) > 0;
@@ -27,7 +27,7 @@ function _(e) {
             source: c._b.VOICE,
             is_chat_badged: T
         }),
-        (0, a.openModalLazy)(
+        (0, s.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([n.e('67588'), n.e('21351'), n.e('81056')]).then(n.bind(n, 743161));
                 return (n) =>

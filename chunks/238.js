@@ -1,63 +1,63 @@
-t.d(n, {
+n.d(t, {
     N: function () {
-        return i;
+        return r;
     }
 }),
-    t(47120);
-var i,
+    n(47120);
+var r,
+    i,
     a,
-    r,
-    o,
     s,
+    o,
     l,
-    c = t(442837),
-    d = t(570140),
-    u = t(331065),
-    _ = t(55563),
-    p = t(551428);
-let m = new Map(),
-    I = new Map();
-((r = i || (i = {}))[(r.NONE = 0)] = 'NONE'), (r[(r.FETCHING = 1)] = 'FETCHING'), (r[(r.FETCHED = 2)] = 'FETCHED'), (r[(r.FAILED = 3)] = 'FAILED');
-let f = new u.Z({
+    u = n(442837),
+    c = n(570140),
+    d = n(331065),
+    _ = n(55563),
+    E = n(551428);
+let f = new Map(),
+    h = new Map();
+((a = r || (r = {}))[(a.NONE = 0)] = 'NONE'), (a[(a.FETCHING = 1)] = 'FETCHING'), (a[(a.FETCHED = 2)] = 'FETCHED'), (a[(a.FAILED = 3)] = 'FAILED');
+let p = new d.Z({
     subscriptions: [],
     otps: []
 });
-class g extends (a = c.ZP.Store) {
+class I extends (i = u.ZP.Store) {
     initialize() {
-        this.waitFor(_.Z, p.Z);
+        this.waitFor(_.Z, E.Z);
     }
     hasStorefront(e) {
-        return m.has(e);
+        return f.has(e);
     }
     getStoreLayout(e) {
-        var n;
-        return null !== (n = m.get(e)) && void 0 !== n ? n : f;
+        var t;
+        return null !== (t = f.get(e)) && void 0 !== t ? t : p;
     }
     getFetchStatus(e) {
-        var n;
-        return m.has(e) ? 2 : null !== (n = I.get(e)) && void 0 !== n ? n : 0;
+        var t;
+        return f.has(e) ? 2 : null !== (t = h.get(e)) && void 0 !== t ? t : 0;
     }
 }
 (l = 'ApplicationStoreDirectoryStore'),
-    (s = 'displayName') in (o = g)
-        ? Object.defineProperty(o, s, {
+    (o = 'displayName') in (s = I)
+        ? Object.defineProperty(s, o, {
               value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (o[s] = l),
-    (n.Z = new g(d.Z, {
+        : (s[o] = l),
+    (t.Z = new I(c.Z, {
         APPLICATION_STORE_DIRECTORY_LAYOUT_FETCH_SUCCESS: function (e) {
-            let { applicationId: n, layout: t } = e;
-            m.set(n, u.Z.createFromServer(t)), I.delete(n);
+            let { applicationId: t, layout: n } = e;
+            f.set(t, d.Z.createFromServer(n)), h.delete(t);
         },
         APPLICATION_STORE_DIRECTORY_LAYOUT_FETCH_FAILED: function (e) {
-            let { applicationId: n } = e;
-            I.set(n, 3);
+            let { applicationId: t } = e;
+            h.set(t, 3);
         },
         APPLICATION_STORE_DIRECTORY_LAYOUT_FETCHING: function (e) {
-            let { applicationId: n } = e;
-            I.set(n, 1);
+            let { applicationId: t } = e;
+            h.set(t, 1);
         }
     }));

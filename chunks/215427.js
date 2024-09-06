@@ -1,6 +1,6 @@
 var i,
-    a,
     s,
+    a,
     r,
     l = n(442837),
     o = n(433517),
@@ -21,15 +21,15 @@ class m extends (r = l.ZP.Store) {
         return null != E && E.id !== I ? E : null;
     }
 }
-(s = 'MaintenanceStore'),
-    (a = 'displayName') in (i = m)
-        ? Object.defineProperty(i, a, {
-              value: s,
+(a = 'MaintenanceStore'),
+    (s = 'displayName') in (i = m)
+        ? Object.defineProperty(i, s, {
+              value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (i[a] = s),
+        : (i[s] = a),
     (t.Z = new m(c.Z, {
         CONNECTION_OPEN: function () {
             _ = null;

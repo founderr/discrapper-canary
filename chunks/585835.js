@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return C;
+        return O;
     }
 }),
     t(653041),
@@ -9,8 +9,8 @@ var i = t(735250),
     a = t(470079),
     s = t(120356),
     l = t.n(s),
-    r = t(243814),
-    o = t(442837),
+    o = t(243814),
+    r = t(442837),
     d = t(481060),
     c = t(367907),
     u = t(213459),
@@ -24,27 +24,27 @@ var i = t(735250),
     g = t(981631),
     p = t(689938),
     f = t(503899);
-function C(e) {
-    var n, t, s, C, O, x, S;
+function O(e) {
+    var n, t, s, O, x, C, S;
     let { name: A, icon: R, imageSrc: b, iconBackgroundColor: Z, iconClassName: v, details: M, integration: L, buttonText: j, buttonDisabled: D, hasNextSection: P, onButtonClick: B, guildId: y, isScrolling: G, canShowMigrationTooltip: k } = e,
-        [U, H] = a.useState(!1),
-        [w, W] = a.useState(!1);
+        [U, w] = a.useState(!1),
+        [H, W] = a.useState(!1);
     let F =
-            ((C = j),
-            (O = D),
-            (x = P),
+            ((O = j),
+            (x = D),
+            (C = P),
             (S = B),
-            null == C || null == S
+            null == O || null == S
                 ? null
-                : x
+                : C
                   ? (0, i.jsxs)(I.Z, {
                         align: I.Z.Align.CENTER,
                         children: [
                             (0, i.jsx)(d.Text, {
                                 variant: 'text-sm/normal',
-                                children: C
+                                children: O
                             }),
-                            x
+                            C
                                 ? (0, i.jsx)(d.ChevronSmallRightIcon, {
                                       size: 'custom',
                                       color: 'currentColor',
@@ -57,13 +57,13 @@ function C(e) {
                     })
                   : (0, i.jsx)(d.Button, {
                         size: d.Button.Sizes.SMALL,
-                        look: x ? d.Button.Looks.LINK : d.Button.Looks.FILLED,
-                        color: x ? d.Button.Colors.PRIMARY : d.Button.Colors.BRAND,
-                        disabled: O,
+                        look: C ? d.Button.Looks.LINK : d.Button.Looks.FILLED,
+                        color: C ? d.Button.Colors.PRIMARY : d.Button.Colors.BRAND,
+                        disabled: x,
                         onClick: S,
-                        children: C
+                        children: O
                     })),
-        V = k && !G && !w && void 0 !== y && null != L;
+        V = k && !G && !H && void 0 !== y && null != L;
     a.useEffect(() => {
         V &&
             E.default.track(g.rMx.COMMANDS_MIGRATION_TOOLTIP_VIEWED, {
@@ -91,7 +91,7 @@ function C(e) {
                   children: () => F
               })
             : F,
-        Y = (0, o.Wu)([m.Z], () => {
+        Y = (0, r.Wu)([m.Z], () => {
             var e;
             return null != L && null != y && null !== (e = m.Z.getApplicationEntitlementsForGuild(L.application.id, y)) && void 0 !== e ? e : [];
         }),
@@ -119,7 +119,7 @@ function C(e) {
                                 var a;
                                 if (null == e) return null;
                                 let s = [],
-                                    { application: l, integration: o, webhooks: c } = e;
+                                    { application: l, integration: r, webhooks: c } = e;
                                 return (
                                     null != l.bot &&
                                         s.push(
@@ -155,7 +155,7 @@ function C(e) {
                                                 'webhooks'
                                             )
                                         ),
-                                    (null == o ? void 0 : null === (a = o.scopes) || void 0 === a ? void 0 : a.includes(r.x.APPLICATIONS_COMMANDS)) === !0 &&
+                                    (null == r ? void 0 : null === (a = r.scopes) || void 0 === a ? void 0 : a.includes(o.x.APPLICATIONS_COMMANDS)) === !0 &&
                                         t &&
                                         s.push(
                                             (0, i.jsx)(
@@ -185,8 +185,8 @@ function C(e) {
               onClick: () => {
                   k && null != y && null != L && h.Z.dismissOverviewTooltip(y, L.integration), null == B || B();
               },
-              onFocus: () => H(!0),
-              onBlur: () => H(!1),
+              onFocus: () => w(!0),
+              onBlur: () => w(!1),
               children: (0, i.jsx)(d.Card, {
                   editable: !0,
                   className: l()(f.card, f.clickable),

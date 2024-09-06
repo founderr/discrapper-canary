@@ -4,8 +4,8 @@ n.d(t, {
     }
 });
 var i = n(735250),
-    a = n(470079),
-    s = n(442837),
+    s = n(470079),
+    a = n(442837),
     r = n(447543),
     l = n(410575),
     o = n(906732),
@@ -19,8 +19,8 @@ var i = n(735250),
     T = n(701190),
     h = n(610699),
     N = n(313876),
-    f = n(778333),
-    C = n(949981),
+    C = n(778333),
+    f = n(949981),
     p = n(680668),
     g = n(143708),
     S = n(358595),
@@ -29,7 +29,7 @@ var i = n(735250),
     O = n(981631);
 function x(e) {
     let { code: t, author: n, getAcceptInviteContext: x } = e,
-        { invite: M, inviteError: v } = (0, s.cj)(
+        { invite: M, inviteError: v } = (0, a.cj)(
             [T.Z],
             () => ({
                 invite: T.Z.getInvite(t),
@@ -37,7 +37,7 @@ function x(e) {
             }),
             [t]
         );
-    a.useEffect(() => {
+    s.useEffect(() => {
         null == M && r.Z.resolveInvite(t);
     }, [t]);
     let L =
@@ -48,9 +48,9 @@ function x(e) {
                       code: ''
                   },
         { analyticsLocations: Z } = (0, o.ZP)(),
-        P = (0, s.e7)([m.Z], () => ((null == M ? void 0 : M.guild) != null ? m.Z.getGuild(M.guild.id) : null), [M]),
-        b = (0, s.e7)([I.default], () => I.default.getId()),
-        D = (0, s.e7)(
+        P = (0, a.e7)([m.Z], () => ((null == M ? void 0 : M.guild) != null ? m.Z.getGuild(M.guild.id) : null), [M]),
+        D = (0, a.e7)([I.default], () => I.default.getId()),
+        b = (0, a.e7)(
             [c.ZP],
             () => {
                 var e;
@@ -79,7 +79,7 @@ function x(e) {
         y = (0, i.jsx)(p.Z, {
             onTransitionToInviteChannel: j,
             onAcceptInstantInvite: U,
-            currentUserId: b,
+            currentUserId: D,
             guild: P,
             invite: L,
             author: n
@@ -104,16 +104,16 @@ function x(e) {
         default:
             switch ((0, d.VR)(L)) {
                 case d.wx.GROUP_DM:
-                    y = (0, i.jsx)(C.Z, {
+                    y = (0, i.jsx)(f.Z, {
                         onTransitionToInviteChannel: j,
                         onAcceptInstantInvite: U,
-                        currentUserId: b,
+                        currentUserId: D,
                         invite: L,
                         author: n
                     });
                     break;
                 case d.wx.FRIEND:
-                    y = (0, i.jsx)(f.Z, {
+                    y = (0, i.jsx)(C.Z, {
                         invite: L,
                         author: n,
                         getAcceptInviteContext: x
@@ -124,7 +124,7 @@ function x(e) {
                         y = (0, i.jsx)(R.Z, {
                             onTransitionToInviteChannel: j,
                             onAcceptInstantInvite: U,
-                            currentUserId: b,
+                            currentUserId: D,
                             guild: P,
                             invite: L
                         });
@@ -132,7 +132,7 @@ function x(e) {
                     }
                     if ((0, d.Tx)(L)) {
                         y = (0, i.jsx)(u.ZP, {
-                            guildScheduledEvent: D,
+                            guildScheduledEvent: b,
                             guild: L.guild,
                             channel: L.channel,
                             isMember: null != P,

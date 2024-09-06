@@ -1,12 +1,12 @@
 n.d(t, {
     Z: function () {
-        return u;
+        return i;
     }
 }),
     n(411104);
-var i = n(735250),
+var E = n(735250),
     r = n(470079);
-function u() {
+function i() {
     let e = r.createContext(void 0);
     function t() {
         let t = r.useContext(e);
@@ -20,7 +20,7 @@ function u() {
             let n = t();
             return function (t) {
                 let { children: r } = t;
-                return (0, i.jsx)(e.Provider, {
+                return (0, E.jsx)(e.Provider, {
                     value: n,
                     children: r
                 });

@@ -1,53 +1,53 @@
-l.d(n, {
+t.d(n, {
     Z: function () {
-        return E;
+        return p;
     }
 });
-var t = l(876215),
-    r = l(758713),
-    i = l(835473),
-    a = l(810568),
-    s = l(168524),
-    u = l(561308),
-    o = l(206583),
-    c = l(96513),
-    d = l(701488),
-    m = l(689938);
-let p = {
-        [r.z.XBOX]: o.kG.XBOX,
-        [r.z.PLAYSTATION]: o.kG.PLAYSTATION
+var l = t(876215),
+    i = t(758713),
+    a = t(835473),
+    r = t(810568),
+    o = t(168524),
+    s = t(561308),
+    c = t(206583),
+    u = t(96513),
+    d = t(701488),
+    m = t(689938);
+let f = {
+        [i.z.XBOX]: c.kG.XBOX,
+        [i.z.PLAYSTATION]: c.kG.PLAYSTATION
     },
-    f = { [c._.EMBED]: a.m1.Embed };
-function E(e) {
+    _ = { [u._.EMBED]: r.m1.Embed };
+function p(e) {
     let n,
-        l,
-        { entry: r, location: a, baseEntryData: o } = e,
-        c = (0, i.q)(r.extra.application_id),
-        E = null == c ? void 0 : c.getIconURL(d.Si.LARGE),
-        N = r.extra.game_name;
-    if (null != r.extra.platform) {
-        let e = p[r.extra.platform];
+        t,
+        { entry: i, location: r, baseEntryData: c } = e,
+        u = (0, a.q)(i.extra.application_id),
+        p = null == u ? void 0 : u.getIconURL(d.Si.LARGE),
+        C = i.extra.game_name;
+    if (null != i.extra.platform) {
+        let e = f[i.extra.platform];
         null != e && (n = { type: e });
     }
-    l = r.content_type === t.s.PLAYED_GAME ? ((0, u.kr)(r) && !(0, u.n2)(r) ? m.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING_V2 : m.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED_V2) : m.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED_V2;
-    let C = f[a],
-        v = {
-            onClick: (0, s.Z)({
-                location: C,
-                applicationId: r.extra.application_id,
-                source: C,
+    t = i.content_type === l.s.PLAYED_GAME ? ((0, s.kr)(i) && !(0, s.n2)(i) ? m.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING_V2 : m.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED_V2) : m.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED_V2;
+    let h = _[r],
+        I = {
+            onClick: (0, o.Z)({
+                location: h,
+                applicationId: i.extra.application_id,
+                source: h,
                 trackEntryPointImpression: !0,
-                sourceUserId: r.author_id
+                sourceUserId: i.author_id
             }),
-            ariaDescription: m.Z.Messages.CONTENT_INVENTORY_OPEN_GAME_PROFILE_A11Y_DESCRIPTION.format({ gameName: N })
+            ariaDescription: m.Z.Messages.CONTENT_INVENTORY_OPEN_GAME_PROFILE_A11Y_DESCRIPTION.format({ gameName: C })
         };
     return {
-        ...o,
-        thumbnailUrl: E,
-        title: N,
-        titleClickable: v,
-        thumbnailClickable: v,
-        userDescription: l,
+        ...c,
+        thumbnailUrl: p,
+        title: C,
+        titleClickable: I,
+        thumbnailClickable: I,
+        userDescription: t,
         providerIconProps: n
     };
 }

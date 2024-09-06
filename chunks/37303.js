@@ -5,8 +5,8 @@ n.d(t, {
 }),
     n(47120);
 var i = n(735250),
-    a = n(470079),
-    s = n(180081);
+    s = n(470079),
+    a = n(180081);
 n(442837);
 var r = n(686777),
     l = n(113434);
@@ -21,9 +21,9 @@ var o = n(497505),
     m = n(861495);
 function T(e) {
     let { quest: t, location: n, initiallyExpanded: T, contentPosition: h } = e,
-        [N, f] = a.useState(!1),
-        C = a.useCallback(() => f(!0), []),
-        p = a.useCallback(() => f(!1), []),
+        [N, C] = s.useState(!1),
+        f = s.useCallback(() => C(!0), []),
+        p = s.useCallback(() => C(!1), []),
         g = (0, l.tP)(t),
         { containerRef: S, size: A, height: R } = (0, E.h)(),
         O = (0, r.q)({ location: I.dr.QUESTS_CARD }),
@@ -49,7 +49,7 @@ function T(e) {
         trackGuildAndChannelMetadata: n === o.jn.QUESTS_EMBED,
         children: (e) =>
             (0, i.jsx)(i.Fragment, {
-                children: (0, i.jsx)(s.animated.div, {
+                children: (0, i.jsx)(a.animated.div, {
                     style: {
                         maxHeight:
                             n === o.jn.QUESTS_EMBED
@@ -60,8 +60,8 @@ function T(e) {
                                   })
                     },
                     className: m.questsCard,
-                    onFocus: C,
-                    onMouseEnter: C,
+                    onFocus: f,
+                    onMouseEnter: f,
                     onBlur: p,
                     onMouseLeave: p,
                     children: (0, i.jsxs)('div', {

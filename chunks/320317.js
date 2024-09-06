@@ -4,12 +4,12 @@ n.d(t, {
     }
 }),
     n(47120);
-var i = n(470079);
+var E = n(470079);
 function r() {
-    let [e, t] = i.useState(null),
-        n = i.useRef(null);
+    let [e, t] = E.useState(null),
+        n = E.useRef(null);
     return (
-        i.useEffect(() => {
+        E.useEffect(() => {
             null != e && null != n.current && n.current.scrollIntoView({ behavior: 'smooth' });
         }, [e]),
         {

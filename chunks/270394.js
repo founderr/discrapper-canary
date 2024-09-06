@@ -7,8 +7,8 @@ var i = t(735250),
     a = t(470079),
     s = t(120356),
     l = t.n(s),
-    r = t(512722),
-    o = t.n(r),
+    o = t(512722),
+    r = t.n(o),
     d = t(392711),
     c = t.n(d),
     u = t(399606),
@@ -22,9 +22,9 @@ var i = t(735250),
     g = t(410030),
     p = t(933557),
     f = t(346486),
-    C = t(600164),
-    O = t(666657),
-    x = t(487419),
+    O = t(600164),
+    x = t(666657),
+    C = t(487419),
     S = t(664452),
     A = t(560114),
     R = t(699516),
@@ -43,19 +43,19 @@ let P = {
 };
 function B(e) {
     var n, t;
-    let { invite: a, showChannel: s = !1, inviteDisabled: r = !1, hide: o = !1 } = e,
+    let { invite: a, showChannel: s = !1, inviteDisabled: o = !1, hide: r = !1 } = e,
         d = a.uses;
     return (
         a.maxUses > 0 && (d = ''.concat(a.uses, '/').concat(a.maxUses)),
-        (0, i.jsxs)(C.Z, {
-            className: l()(L.inviteSettingsInviteRow, j.card, { [L.inviteDisabledRow]: r }),
+        (0, i.jsxs)(O.Z, {
+            className: l()(L.inviteSettingsInviteRow, j.card, { [L.inviteDisabledRow]: o }),
             children: [
-                (0, i.jsx)(C.Z, {
+                (0, i.jsx)(O.Z, {
                     grow: P.INVITER,
                     basis: 0,
-                    align: C.Z.Align.CENTER,
+                    align: O.Z.Align.CENTER,
                     className: l()(L.text),
-                    children: (0, i.jsxs)(C.Z.Child, {
+                    children: (0, i.jsxs)(O.Z.Child, {
                         children: [
                             null == (n = a.inviter)
                                 ? null
@@ -85,23 +85,23 @@ function B(e) {
                         ]
                     })
                 }),
-                (0, i.jsx)(C.Z, {
+                (0, i.jsx)(O.Z, {
                     grow: P.INVITE_CODE,
                     shrink: 1,
                     basis: 0,
-                    align: C.Z.Align.CENTER,
+                    align: O.Z.Align.CENTER,
                     className: L.text,
                     children: (0, i.jsx)(m.Text, {
                         className: L.inviteCode,
                         variant: 'text-sm/normal',
-                        children: o ? '...' : a.code
+                        children: r ? '...' : a.code
                     })
                 }),
-                (0, i.jsx)(C.Z, {
+                (0, i.jsx)(O.Z, {
                     grow: P.USES,
                     basis: 0,
-                    justify: C.Z.Justify.END,
-                    align: C.Z.Align.CENTER,
+                    justify: O.Z.Justify.END,
+                    align: O.Z.Align.CENTER,
                     className: l()(L.text),
                     children: (0, i.jsx)(m.Text, {
                         className: L.uses,
@@ -109,11 +109,11 @@ function B(e) {
                         children: d
                     })
                 }),
-                (0, i.jsx)(C.Z, {
+                (0, i.jsx)(O.Z, {
                     grow: P.EXPIRES,
                     basis: 0,
-                    align: C.Z.Align.CENTER,
-                    justify: C.Z.Justify.END,
+                    align: O.Z.Align.CENTER,
+                    justify: O.Z.Justify.END,
                     className: l()(L.text, L.countdownColumn),
                     children: (0, i.jsx)(m.Text, {
                         className: L.countdown,
@@ -132,10 +132,10 @@ function B(e) {
     );
 }
 function y(e) {
-    let { invites: n, guild: s, hide: l, channel: r = null, showChannel: d = !1, loading: _ = !1, canCreateInvites: N = !1 } = e;
-    o()(null != s, 'guild is required');
+    let { invites: n, guild: s, hide: l, channel: o = null, showChannel: d = !1, loading: _ = !1, canCreateInvites: N = !1 } = e;
+    r()(null != s, 'guild is required');
     let E = (0, Z.M)(s),
-        h = (0, u.e7)([x.Z], () => x.Z.getGuildIncident(s.id)),
+        h = (0, u.e7)([C.Z], () => C.Z.getGuildIncident(s.id)),
         p = s.hasFeature(v.oNc.INVITES_DISABLED) || ((null == h ? void 0 : h.invitesDisabledUntil) != null && new Date(h.invitesDisabledUntil) > new Date()),
         f = (0, g.ZP)(),
         R = a.useMemo(
@@ -155,14 +155,14 @@ function y(e) {
                 async () => (e) =>
                     (0, i.jsx)(A.default, {
                         ...e,
-                        channel: r,
+                        channel: o,
                         guild: s,
                         source: v.t4x.SETTINGS_INVITE
                     })
             );
         },
         j = () => {
-            let e = { source: O.Zu.GUILD_SETTINGS };
+            let e = { source: x.Zu.GUILD_SETTINGS };
             (0, m.openModalLazy)(
                 async () => (n) =>
                     (0, i.jsx)(S.default, {
@@ -179,27 +179,27 @@ function y(e) {
             return (
                 (e =
                     0 !== R.length || _
-                        ? (0, i.jsxs)(C.Z, {
+                        ? (0, i.jsxs)(O.Z, {
                               children: [
-                                  (0, i.jsx)(C.Z.Child, {
+                                  (0, i.jsx)(O.Z.Child, {
                                       grow: P.INVITER,
                                       basis: 0,
                                       className: D.marginReset,
                                       children: (0, i.jsx)(m.FormTitle, { children: M.Z.Messages.INSTANT_INVITE_INVITER })
                                   }),
-                                  (0, i.jsx)(C.Z.Child, {
+                                  (0, i.jsx)(O.Z.Child, {
                                       basis: 0,
                                       grow: P.INVITE_CODE,
                                       className: D.marginReset,
                                       children: (0, i.jsx)(m.FormTitle, { children: M.Z.Messages.INSTANT_INVITE_INVITE_CODE })
                                   }),
-                                  (0, i.jsx)(C.Z.Child, {
+                                  (0, i.jsx)(O.Z.Child, {
                                       grow: P.USES,
                                       basis: 0,
                                       className: L.textAlignRight,
                                       children: (0, i.jsx)(m.FormTitle, { children: M.Z.Messages.INSTANT_INVITE_USES })
                                   }),
-                                  (0, i.jsx)(C.Z.Child, {
+                                  (0, i.jsx)(O.Z.Child, {
                                       grow: P.EXPIRES,
                                       basis: 0,
                                       className: L.textAlignRight,

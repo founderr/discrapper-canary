@@ -1,89 +1,89 @@
-o.r(n),
-    o.d(n, {
+n.r(e),
+    n.d(e, {
         default: function () {
-            return f;
+            return p;
         },
         openInteractionModal: function () {
-            return _;
+            return S;
         }
     });
-var t = o(735250);
-o(470079);
-var i = o(481060),
-    a = o(112831),
-    r = o(970184),
-    l = o(471073),
-    c = o(293979),
-    d = o(954654),
-    s = o(689938),
-    u = o(167990);
-function f(e) {
-    let { title: n, onClose: o, transitionState: f } = e,
-        { components: _, applicationIconURL: p, applicationName: m, submissionState: I, error: h, validators: b, onSubmit: C } = (0, c.X9)(e, o);
-    return (0, t.jsx)('form', {
-        onSubmit: (e) => {
-            e.preventDefault(), C();
+var i = n(735250);
+n(470079);
+var o = n(481060),
+    r = n(112831),
+    l = n(970184),
+    s = n(471073),
+    a = n(293979),
+    u = n(954654),
+    c = n(689938),
+    d = n(167990);
+function p(t) {
+    let { title: e, onClose: n, transitionState: p } = t,
+        { components: S, applicationIconURL: I, applicationName: _, submissionState: C, error: f, validators: T, onSubmit: h } = (0, a.X9)(t, n);
+    return (0, i.jsx)('form', {
+        onSubmit: (t) => {
+            t.preventDefault(), h();
         },
-        children: (0, t.jsxs)(i.ModalRoot, {
-            transitionState: f,
+        children: (0, i.jsxs)(o.ModalRoot, {
+            transitionState: p,
             children: [
-                (0, t.jsxs)(i.ModalHeader, {
+                (0, i.jsxs)(o.ModalHeader, {
                     separator: !1,
                     children: [
-                        (0, t.jsx)(i.Avatar, {
-                            src: p,
-                            size: i.AvatarSizes.SIZE_24,
-                            'aria-label': m,
-                            className: u.applicationIcon
+                        (0, i.jsx)(o.Avatar, {
+                            src: I,
+                            size: o.AvatarSizes.SIZE_24,
+                            'aria-label': _,
+                            className: d.applicationIcon
                         }),
-                        (0, t.jsx)(a.Z, {
-                            color: a.Z.Colors.HEADER_PRIMARY,
-                            size: a.Z.Sizes.SIZE_24,
-                            children: n
+                        (0, i.jsx)(r.Z, {
+                            color: r.Z.Colors.HEADER_PRIMARY,
+                            size: r.Z.Sizes.SIZE_24,
+                            children: e
                         }),
-                        (0, t.jsx)(i.ModalCloseButton, {
-                            onClick: o,
-                            className: u.closeButton
+                        (0, i.jsx)(o.ModalCloseButton, {
+                            onClick: n,
+                            className: d.closeButton
                         })
                     ]
                 }),
-                (0, t.jsxs)(i.ModalContent, {
+                (0, i.jsxs)(o.ModalContent, {
                     children: [
-                        null != h && '' !== h
-                            ? (0, t.jsx)(i.HelpMessage, {
-                                  messageType: i.HelpMessageTypes.ERROR,
-                                  className: u.submissionWarning,
-                                  children: h
+                        null != f && '' !== f
+                            ? (0, i.jsx)(o.HelpMessage, {
+                                  messageType: o.HelpMessageTypes.ERROR,
+                                  className: d.submissionWarning,
+                                  children: f
                               })
                             : null,
-                        (0, t.jsx)(i.HelpMessage, {
-                            messageType: i.HelpMessageTypes.WARNING,
-                            className: u.submissionWarning,
-                            children: s.Z.Messages.INTERACTION_FORM_SUBMISSION_APPLICATION.format({ applicationName: m })
+                        (0, i.jsx)(o.HelpMessage, {
+                            messageType: o.HelpMessageTypes.WARNING,
+                            className: d.submissionWarning,
+                            children: c.Z.Messages.INTERACTION_FORM_SUBMISSION_APPLICATION.format({ applicationName: _ })
                         }),
-                        (0, t.jsx)(i.FormSection, {
-                            children: (0, t.jsx)(r.Il, {
-                                modal: e,
-                                validators: b,
-                                children: (0, d.xX)(_)
+                        (0, i.jsx)(o.FormSection, {
+                            children: (0, i.jsx)(l.Il, {
+                                modal: t,
+                                validators: T,
+                                children: (0, u.xX)(S)
                             })
                         })
                     ]
                 }),
-                (0, t.jsxs)(i.ModalFooter, {
+                (0, i.jsxs)(o.ModalFooter, {
                     children: [
-                        (0, t.jsx)(i.Button, {
+                        (0, i.jsx)(o.Button, {
                             type: 'submit',
-                            color: i.Button.Colors.BRAND,
-                            size: i.Button.Sizes.MEDIUM,
-                            submitting: I === l.i.IN_FLIGHT,
-                            children: s.Z.Messages.SUBMIT
+                            color: o.Button.Colors.BRAND,
+                            size: o.Button.Sizes.MEDIUM,
+                            submitting: C === s.i.IN_FLIGHT,
+                            children: c.Z.Messages.SUBMIT
                         }),
-                        (0, t.jsx)(i.Button, {
-                            look: i.Button.Looks.LINK,
-                            color: i.Button.Colors.PRIMARY,
-                            onClick: o,
-                            children: s.Z.Messages.CANCEL
+                        (0, i.jsx)(o.Button, {
+                            look: o.Button.Looks.LINK,
+                            color: o.Button.Colors.PRIMARY,
+                            onClick: n,
+                            children: c.Z.Messages.CANCEL
                         })
                     ]
                 })
@@ -91,11 +91,11 @@ function f(e) {
         })
     });
 }
-function _(e) {
-    (0, i.openModal)((n) =>
-        (0, t.jsx)(f, {
-            ...n,
-            ...e
+function S(t) {
+    (0, o.openModal)((e) =>
+        (0, i.jsx)(p, {
+            ...e,
+            ...t
         })
     );
 }

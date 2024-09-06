@@ -1,11 +1,11 @@
 n.d(t, {
     w: function () {
-        return f;
+        return C;
     }
 });
 var i = n(735250),
-    a = n(470079),
-    s = n(657707),
+    s = n(470079),
+    a = n(657707),
     r = n(793030),
     l = n(524437),
     o = n(481060),
@@ -19,12 +19,12 @@ var i = n(735250),
     T = n(689938),
     h = n(591047),
     N = n(492764);
-function f(e) {
+function C(e) {
     let { tab: t } = e,
         n = '',
-        a = '';
+        s = '';
     return (
-        t === l.Pr.ALL ? ((n = T.Z.Messages.FOR_LATER_EMPTY_ALL_TITLE), (a = T.Z.Messages.FOR_LATER_EMPTY_ALL_BODY)) : t === l.Pr.BOOKMARKS ? ((n = T.Z.Messages.FOR_LATER_EMPTY_BOOKMARKS_TITLE), (a = T.Z.Messages.FOR_LATER_EMPTY_BOOKMARKS_BODY)) : t === l.Pr.REMINDERS && ((n = T.Z.Messages.FOR_LATER_EMPTY_REMINDERS_TITLE), (a = T.Z.Messages.FOR_LATER_EMPTY_REMINDERS_BODY)),
+        t === l.Pr.ALL ? ((n = T.Z.Messages.FOR_LATER_EMPTY_ALL_TITLE), (s = T.Z.Messages.FOR_LATER_EMPTY_ALL_BODY)) : t === l.Pr.BOOKMARKS ? ((n = T.Z.Messages.FOR_LATER_EMPTY_BOOKMARKS_TITLE), (s = T.Z.Messages.FOR_LATER_EMPTY_BOOKMARKS_BODY)) : t === l.Pr.REMINDERS && ((n = T.Z.Messages.FOR_LATER_EMPTY_REMINDERS_TITLE), (s = T.Z.Messages.FOR_LATER_EMPTY_REMINDERS_BODY)),
         (0, i.jsxs)('div', {
             className: h.emptyContainer,
             children: [
@@ -45,18 +45,18 @@ function f(e) {
                         (0, i.jsx)(r.x, {
                             variant: 'text-md/medium',
                             color: 'text-muted',
-                            children: a
+                            children: s
                         })
                     ]
                 }),
-                (0, E.Z)() ? null : (0, i.jsx)(C, {})
+                (0, E.Z)() ? null : (0, i.jsx)(f, {})
             ]
         })
     );
 }
-function C() {
+function f() {
     let e = (0, _.Px)(m.p9.TIER_2),
-        t = a.useCallback(
+        t = s.useCallback(
             () =>
                 (0, o.openModalLazy)(async () => {
                     let { default: e } = await n.e('34906').then(n.bind(n, 639565));
@@ -75,7 +75,7 @@ function C() {
     return (0, i.jsxs)('div', {
         className: h.upsellContainer,
         children: [
-            (0, i.jsx)(s.SrA, {
+            (0, i.jsx)(a.SrA, {
                 size: 'md',
                 color: u.JX.PREMIUM_TIER_2
             }),

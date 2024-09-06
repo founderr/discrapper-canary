@@ -1,6 +1,6 @@
 n.d(t, {
     $d: function () {
-        return f;
+        return C;
     },
     BQ: function () {
         return N;
@@ -24,7 +24,7 @@ n.d(t, {
         return v;
     },
     jD: function () {
-        return C;
+        return f;
     },
     lf: function () {
         return S;
@@ -54,8 +54,8 @@ n.d(t, {
     n(653041),
     n(47120);
 var i = n(668781),
-    a = n(904245),
-    s = n(911969),
+    s = n(904245),
+    a = n(911969),
     r = n(895924),
     l = n(667204),
     o = n(957730),
@@ -71,10 +71,10 @@ let h = { id: m.bi.BUILT_IN };
 function N(e) {
     return e.id !== m.bi.BUILT_IN;
 }
-function f(e) {
+function C(e) {
     return N(e) ? e.name : T.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_NAME;
 }
-function C(e) {
+function f(e) {
     return N(e) ? e.description : T.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_DESCRIPTION;
 }
 function p(e) {
@@ -93,14 +93,14 @@ function A(e) {
     return N(e) && p(e) ? (e instanceof c.Z ? e.embeddedActivityConfig : e.embedded_activity_config) : null;
 }
 function R(e) {
-    let { command: t, optionValues: n, context: s, commandTargetId: c, maxSizeCallback: u, sectionName: d } = e,
-        { channel: E } = s,
+    let { command: t, optionValues: n, context: a, commandTargetId: c, maxSizeCallback: u, sectionName: d } = e,
+        { channel: E } = a,
         I = async () => {
             try {
                 let i = await (0, l.Z)({
                     command: t,
                     optionValues: n,
-                    context: s,
+                    context: a,
                     commandTargetId: c,
                     maxSizeCallback: u,
                     commandOrigin: r.bB.APPLICATION_LAUNCHER,
@@ -110,7 +110,7 @@ function R(e) {
                 if (t.inputType === r.iw.BUILT_IN_TEXT && null != i) {
                     var e;
                     let t = o.ZP.parse(E, i.content);
-                    (t.tts = null !== (e = i.tts) && void 0 !== e && e), a.Z.sendMessage(s.channel.id, t);
+                    (t.tts = null !== (e = i.tts) && void 0 !== e && e), s.Z.sendMessage(a.channel.id, t);
                 }
             } catch (e) {
                 throw (
@@ -165,7 +165,7 @@ function Z(e) {
             var t;
             let n = e.application,
                 i = null !== (t = e.commands) && void 0 !== t ? t : [];
-            return p(n) && i.some((e) => e.type === s.yU.PRIMARY_ENTRY_POINT);
+            return p(n) && i.some((e) => e.type === a.yU.PRIMARY_ENTRY_POINT);
         });
         if (0 !== e.length)
             t.push({

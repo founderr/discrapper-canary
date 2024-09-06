@@ -1,94 +1,94 @@
-l.d(n, {
+t.d(n, {
     Z: function () {
-        return E;
+        return p;
     }
 });
-var t = l(735250),
-    r = l(120356),
-    i = l.n(r),
-    a = l(481060),
-    s = l(318374),
-    u = l(5192),
-    o = l(192918),
-    c = l(256139),
-    d = l(91907),
-    m = l(866040),
-    p = l(689938),
-    f = l(182408);
-function E(e) {
-    let { entry: n, channel: l, className: r } = e,
-        { displayParticipants: E, participant1: N, participant2: C, numOtherParticipants: v, orderedParticipants: h } = (0, o.Z)(n),
-        _ = [N, C];
-    return (0, t.jsxs)('div', {
-        className: i()(f.container, r),
+var l = t(735250),
+    i = t(120356),
+    a = t.n(i),
+    r = t(481060),
+    o = t(318374),
+    s = t(5192),
+    c = t(192918),
+    u = t(256139),
+    d = t(91907),
+    m = t(866040),
+    f = t(689938),
+    _ = t(182408);
+function p(e) {
+    let { entry: n, channel: t, className: i } = e,
+        { displayParticipants: p, participant1: C, participant2: h, numOtherParticipants: I, orderedParticipants: x } = (0, c.Z)(n),
+        E = [C, h];
+    return (0, l.jsxs)('div', {
+        className: a()(_.container, i),
         children: [
-            E.length > 0
-                ? (0, t.jsxs)(t.Fragment, {
+            p.length > 0
+                ? (0, l.jsxs)(l.Fragment, {
                       children: [
-                          (0, t.jsx)(m.Z, {
-                              participants: h,
-                              channel: l,
+                          (0, l.jsx)(m.Z, {
+                              participants: x,
+                              channel: t,
                               children: (e) =>
-                                  (0, t.jsx)(a.Clickable, {
-                                      className: f.clickable,
+                                  (0, l.jsx)(r.Clickable, {
+                                      className: _.clickable,
                                       ...e,
-                                      children: (0, t.jsx)(s.Z, {
+                                      children: (0, l.jsx)(o.Z, {
                                           maxUsers: 3,
-                                          users: E,
-                                          size: a.AvatarSizes.SIZE_20,
-                                          avatarClassName: f.stackedAvatar,
+                                          users: p,
+                                          size: r.AvatarSizes.SIZE_20,
+                                          avatarClassName: _.stackedAvatar,
                                           hideOverflowCount: !0,
                                           disableUsernameTooltip: !0
                                       })
                                   })
                           }),
-                          (0, t.jsx)(a.Spacer, {
+                          (0, l.jsx)(r.Spacer, {
                               size: 6,
                               horizontal: !0
                           })
                       ]
                   })
                 : null,
-            (0, t.jsx)(a.Heading, {
+            (0, l.jsx)(r.Heading, {
                 variant: 'text-sm/semibold',
                 color: 'text-secondary',
-                className: i()(f.truncatedText, f.usersHeader),
+                className: a()(_.truncatedText, _.usersHeader),
                 scaleFontToUserSetting: !0,
-                children: p.Z.Messages.CONTENT_INVENTORY_ENTRY_USERS_V2.format({
-                    user0: u.ZP.getName(l.guild_id, l.id, _[0]),
-                    user1: u.ZP.getName(l.guild_id, l.id, _[1]),
-                    countOthers: v,
+                children: f.Z.Messages.CONTENT_INVENTORY_ENTRY_USERS_V2.format({
+                    user0: s.ZP.getName(t.guild_id, t.id, E[0]),
+                    user1: s.ZP.getName(t.guild_id, t.id, E[1]),
+                    countOthers: I,
                     name0Hook: (e, n) =>
-                        (0, t.jsx)(
+                        (0, l.jsx)(
                             d.Z,
                             {
                                 text: e,
-                                user: _[0],
-                                channel: l
+                                user: E[0],
+                                channel: t
                             },
                             n
                         ),
                     name1Hook: (e, n) =>
-                        (0, t.jsx)(
+                        (0, l.jsx)(
                             d.Z,
                             {
                                 text: e,
-                                user: _[1],
-                                channel: l
+                                user: E[1],
+                                channel: t
                             },
                             n
                         ),
                     countOthersHook: (e, n) =>
-                        (0, t.jsx)(
+                        (0, l.jsx)(
                             m.Z,
                             {
-                                participants: h,
-                                channel: l,
+                                participants: x,
+                                channel: t,
                                 children: (n) =>
-                                    (0, t.jsx)(c.Z, {
+                                    (0, l.jsx)(u.Z, {
                                         ...n,
                                         tag: 'span',
-                                        children: (0, t.jsx)(a.Text, {
+                                        children: (0, l.jsx)(r.Text, {
                                             variant: 'text-sm/semibold',
                                             color: 'text-primary',
                                             lineClamp: 1,

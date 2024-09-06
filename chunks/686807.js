@@ -9,13 +9,13 @@ var i = t(481060),
     o = t(201895),
     l = t(471445),
     u = t(823379),
-    a = t(303737),
-    s = t(293810),
+    s = t(303737),
+    a = t(293810),
     c = t(689938),
     d = t(70197);
 function _(e) {
     let { channelId: n } = e,
-        t = (0, a.m7)(n);
+        t = (0, s.m7)(n);
     if (null == t) return (0, r.jsx)(r.Fragment, { children: '['.concat(c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DELETED_CHANNEL_LABEL, ']') });
     let u = t.isMediaChannel() ? i.ImageIcon : (0, l.Th)(t.type);
     return (0, r.jsxs)(r.Fragment, {
@@ -37,9 +37,9 @@ function _(e) {
 }
 function f(e) {
     switch (e.ref_type) {
-        case s.Qs.CHANNEL:
+        case a.Qs.CHANNEL:
             return (0, r.jsx)(_, { channelId: e.ref_id });
-        case s.Qs.INTANGIBLE:
+        case a.Qs.INTANGIBLE:
             return e.name;
         default:
             (0, u.vE)(e);

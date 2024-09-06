@@ -10,8 +10,8 @@ var i = t(470079),
     a = t(581364),
     s = t(984933),
     l = t(496675),
-    r = t(282923),
-    o = t(981631),
+    o = t(282923),
+    r = t(981631),
     d = t(689938);
 function c(e) {
     let n = i.useMemo(() => {
@@ -21,7 +21,7 @@ function c(e) {
             let i = t.map((e) => ({
                 id: e.channel.id,
                 name: e.channel.name,
-                canManage: l.Z.can(o.Plq.MANAGE_ROLES, e.channel)
+                canManage: l.Z.can(r.Plq.MANAGE_ROLES, e.channel)
             }));
             return (
                 i.unshift({
@@ -37,7 +37,7 @@ function c(e) {
             let e = (function (e) {
                 return e.startsWith('#') ? e.substr(1) : e;
             })(t);
-            return (0, r.B)(n, u, e);
+            return (0, o.B)(n, u, e);
         }, [n, t]);
     return {
         query: t,

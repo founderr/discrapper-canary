@@ -1,7 +1,7 @@
 n(47120);
 var i,
-    a,
     s,
+    a,
     r,
     l = n(442837),
     o = n(570140),
@@ -56,14 +56,14 @@ class T extends (i = l.ZP.Store) {
     }
 }
 (r = 'GameInviteStore'),
-    (s = 'displayName') in (a = T)
-        ? Object.defineProperty(a, s, {
+    (a = 'displayName') in (s = T)
+        ? Object.defineProperty(s, a, {
               value: r,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (a[s] = r),
+        : (s[a] = r),
     (t.Z = new T(o.Z, {
         CONNECTION_OPEN_SUPPLEMENTAL: function (e) {
             let { gameInvites: t } = e;

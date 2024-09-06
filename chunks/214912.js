@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return C;
+        return v;
     }
 });
 var i = t(735250);
@@ -8,8 +8,8 @@ t(470079);
 var a = t(120356),
     r = t.n(a),
     o = t(481060),
-    s = t(410030),
-    l = t(686546),
+    l = t(410030),
+    s = t(686546),
     c = t(565138),
     d = t(372769),
     u = t(134432),
@@ -20,21 +20,21 @@ var a = t(120356),
     f = t(936404),
     g = t(129512),
     h = t(330065);
-function C(e) {
+function v(e) {
     let { guild: n, className: t, onClick: a } = e,
-        C = (0, s.ZP)(),
-        v = new _.ZP({
+        v = (0, l.ZP)(),
+        C = new _.ZP({
             name: n.name,
             icon: n.icon
         }),
-        E = p.ZP.getGuildDiscoverySplashURL({
+        x = p.ZP.getGuildDiscoverySplashURL({
             id: n.id,
             splash: n.discovery_splash,
             size: 192 * (0, u.x_)()
         }),
         b =
-            null != E
-                ? E
+            null != x
+                ? x
                 : (function (e) {
                       switch (e) {
                           case m.BRd.DARK:
@@ -42,8 +42,8 @@ function C(e) {
                           case m.BRd.LIGHT:
                               return h;
                       }
-                  })(C),
-        x = p.ZP.getGuildIconURL({
+                  })(v),
+        E = p.ZP.getGuildIconURL({
             id: n.id,
             icon: n.icon,
             size: 50
@@ -63,16 +63,16 @@ function C(e) {
                     }),
                     (0, i.jsx)('div', {
                         className: f.guildIcon,
-                        children: (0, i.jsx)(l.ZP, {
-                            mask: l.ZP.Masks.AVATAR_DEFAULT,
+                        children: (0, i.jsx)(s.ZP, {
+                            mask: s.ZP.Masks.AVATAR_DEFAULT,
                             width: 58,
                             height: 58,
                             children: (0, i.jsx)('div', {
                                 className: f.iconMask,
                                 children: (0, i.jsx)(c.Z, {
                                     className: f.__invalid_icon,
-                                    iconSrc: x,
-                                    guild: v,
+                                    iconSrc: E,
+                                    guild: C,
                                     size: c.Z.Sizes.LARGE
                                 })
                             })

@@ -1,6 +1,6 @@
 t.d(n, {
     g: function () {
-        return g;
+        return S;
     },
     mI: function () {
         return I;
@@ -12,8 +12,8 @@ var r = t(149765),
     o = t(581883),
     l = t(430824),
     u = t(496675),
-    a = t(914010),
-    s = t(594174),
+    s = t(914010),
+    a = t(594174),
     c = t(700785),
     d = t(709054),
     _ = t(533244),
@@ -35,10 +35,10 @@ function I(e) {
         isUnderLockdown: o
     };
 }
-function g() {
+function S() {
     var e;
     let n = (function (e) {
-            let n = s.default.getCurrentUser(),
+            let n = a.default.getCurrentUser(),
                 t = f.Z.getIncidentsByGuild();
             for (let i of d.default.keys(t).map((e) => l.Z.getGuild(e))) {
                 if (null == i) continue;
@@ -58,7 +58,7 @@ function g() {
                 }
             }
             return null;
-        })(a.Z.getGuildId()),
+        })(s.Z.getGuildId()),
         t = null !== (e = o.Z.getGuildsProto()) && void 0 !== e ? e : {},
         i = null != n ? t[n] : null,
         u = null != i && i.disableRaidAlertNag;

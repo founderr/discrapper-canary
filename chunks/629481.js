@@ -4,7 +4,7 @@ t.d(n, {
         return u;
     },
     P4: function () {
-        return s;
+        return a;
     },
     TR: function () {
         return c;
@@ -13,7 +13,7 @@ t.d(n, {
         return r;
     },
     tM: function () {
-        return a;
+        return s;
     },
     xv: function () {
         return i;
@@ -26,6 +26,6 @@ t.d(n, {
     ((l = i || (i = {})).CHANNEL_ROW_CONTEXT_MENU = 'channel_row_context_menu'),
     (l.SHOP_HEADER_BUTTON = 'shop_header_button');
 let u = 'hasClickedGuildShopProductPreviewTab',
-    a = 'hasClickedGuildShopChannelRow',
-    s = 'https://discord.com/servershop',
+    s = 'hasClickedGuildShopChannelRow',
+    a = 'https://discord.com/servershop',
     c = '1 GB';

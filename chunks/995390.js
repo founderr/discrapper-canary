@@ -9,8 +9,8 @@ var i = t(470079),
     a = t(512722),
     s = t.n(a),
     l = t(392711),
-    r = t.n(l),
-    o = t(442837),
+    o = t.n(l),
+    r = t(442837),
     d = t(139387),
     c = t(895924),
     u = t(581364),
@@ -23,7 +23,7 @@ var i = t(470079),
     h = t(399860),
     g = t(981631);
 function p(e, n, t) {
-    let a = (0, o.e7)([T.Z], () => T.Z.getApplicationPermissions()),
+    let a = (0, r.e7)([T.Z], () => T.Z.getApplicationPermissions()),
         l = i.useMemo(
             () =>
                 (function (e, n) {
@@ -49,7 +49,7 @@ function p(e, n, t) {
                 })(e, null != a ? a : {}),
             [a, e]
         ),
-        p = (0, o.e7)(
+        p = (0, r.e7)(
             [T.Z],
             () => {
                 var e;
@@ -59,7 +59,7 @@ function p(e, n, t) {
             },
             [t]
         ),
-        f = (0, o.e7)(
+        f = (0, r.e7)(
             [T.Z],
             () => {
                 var e;
@@ -67,28 +67,28 @@ function p(e, n, t) {
             },
             [t]
         ),
-        C = null != t ? t : n,
-        O = null != t ? p : l,
-        x = i.useMemo(() => (null != f ? f : { ...(null != O ? O : {}) }), [f, O]),
-        S = i.useMemo(() => Object.keys(x).length, [x]),
-        A = i.useMemo(() => (null == O || null == x ? null : !r().isEqual(O, x)), [O, x]);
+        O = null != t ? t : n,
+        x = null != t ? p : l,
+        C = i.useMemo(() => (null != f ? f : { ...(null != x ? x : {}) }), [f, x]),
+        S = i.useMemo(() => Object.keys(C).length, [C]),
+        A = i.useMemo(() => (null == x || null == C ? null : !o().isEqual(x, C)), [x, C]);
     return (
         i.useEffect(() => {
-            if (C === n) A ? d.Z.startEditingCommandPermissions(C) : d.Z.stopEditingCommandPermissions(C);
-        }, [n, A, C]),
+            if (O === n) A ? d.Z.startEditingCommandPermissions(O) : d.Z.stopEditingCommandPermissions(O);
+        }, [n, A, O]),
         {
             originalApplicationPermissions: l,
             originalCommandPermissions: p,
             editedTargetPermissions: (function (e, n) {
-                let t = (0, o.e7)([m.Z], () => m.Z.getGuild(e), [e]);
+                let t = (0, r.e7)([m.Z], () => m.Z.getGuild(e), [e]);
                 s()(null != t, 'guild must be present to be editing its integration settings');
-                let a = (0, o.e7)([_.Z], () => _.Z.getHighestRole(t), [t]),
-                    l = (0, o.e7)([N.default], () => {
+                let a = (0, r.e7)([_.Z], () => _.Z.getHighestRole(t), [t]),
+                    l = (0, r.e7)([N.default], () => {
                         var e;
                         return null === (e = N.default.getCurrentUser()) || void 0 === e ? void 0 : e.id;
                     });
                 s()(null != l, 'useComputePermissions: currentUserId must not be null');
-                let r = l === t.ownerId,
+                let o = l === t.ownerId,
                     {
                         channelIds: d,
                         roleIds: T,
@@ -104,7 +104,7 @@ function p(e, n, t) {
                             userIds: i
                         };
                     }, [n]),
-                    p = (0, o.cj)(
+                    p = (0, r.cj)(
                         [I.Z],
                         () =>
                             Object.fromEntries(
@@ -115,7 +115,7 @@ function p(e, n, t) {
                             ),
                         [d]
                     ),
-                    f = (0, o.cj)(
+                    f = (0, r.cj)(
                         [m.Z],
                         () =>
                             Object.fromEntries(
@@ -125,7 +125,7 @@ function p(e, n, t) {
                             ),
                         [T, e]
                     ),
-                    C = (0, o.cj)(
+                    O = (0, r.cj)(
                         [N.default],
                         () =>
                             Object.fromEntries(
@@ -140,30 +140,30 @@ function p(e, n, t) {
                     let e = t.id,
                         i = (0, u.bD)(t.id),
                         s = {};
-                    for (let [l, o] of Object.entries(n)) {
+                    for (let [l, r] of Object.entries(n)) {
                         let n = !1,
                             d = !1;
-                        if (o.type === c.Kw.CHANNEL) {
-                            let e = o.id === i,
-                                t = p[o.id];
+                        if (r.type === c.Kw.CHANNEL) {
+                            let e = r.id === i,
+                                t = p[r.id];
                             (n = e || _.Z.can(g.Plq.VIEW_CHANNEL, t)), (d = !0);
-                        } else if (o.type === c.Kw.ROLE) {
-                            let i = o.id === e,
-                                s = f[o.id];
-                            (n = i || null != s), (d = r || i || _.Z.isRoleHigher(t, a, s));
-                        } else if (o.type === c.Kw.USER) {
-                            let e = C[o.id];
-                            (n = null != e), (d = null != e && (r || _.Z.canManageUser(g.Plq.USE_APPLICATION_COMMANDS, e, t)));
+                        } else if (r.type === c.Kw.ROLE) {
+                            let i = r.id === e,
+                                s = f[r.id];
+                            (n = i || null != s), (d = o || i || _.Z.isRoleHigher(t, a, s));
+                        } else if (r.type === c.Kw.USER) {
+                            let e = O[r.id];
+                            (n = null != e), (d = null != e && (o || _.Z.canManageUser(g.Plq.USE_APPLICATION_COMMANDS, e, t)));
                         }
                         s[l] = {
-                            ...o,
+                            ...r,
                             canRead: n,
                             canWrite: d
                         };
                     }
                     return s;
-                }, [p, t, a, r, n, f, C]);
-            })(e, x),
+                }, [p, t, a, o, n, f, O]);
+            })(e, C),
             hasChanges: A,
             selectedPermissionCount: S
         }

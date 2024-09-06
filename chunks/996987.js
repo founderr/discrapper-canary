@@ -8,8 +8,8 @@ t(470079);
 var a = t(481060),
     s = t(600164),
     l = t(313201),
-    r = t(63063),
-    o = t(453628),
+    o = t(63063),
+    r = t(453628),
     d = t(689938),
     c = t(224499);
 function u(e) {
@@ -34,7 +34,7 @@ function u(e) {
                     (0, i.jsx)(s.Z.Child, {
                         grow: 0,
                         shrink: 0,
-                        children: (0, i.jsx)(o.Z, {
+                        children: (0, i.jsx)(r.Z, {
                             value: n,
                             onChange: t,
                             disabled: N,
@@ -58,7 +58,7 @@ function u(e) {
                         disabled: N,
                         type: a.FormTextTypes.DESCRIPTION,
                         children: (0, i.jsx)(a.Anchor, {
-                            href: r.Z.getArticleURL(m),
+                            href: o.Z.getArticleURL(m),
                             children: d.Z.Messages.LEARN_MORE
                         })
                     })
@@ -71,4 +71,4 @@ function u(e) {
         ]
     });
 }
-o.Z.Types, (u.Types = o.Z.Types);
+r.Z.Types, (u.Types = r.Z.Types);

@@ -1,7 +1,7 @@
 n(518263), n(970173), n(520712), n(268111), n(941497), n(32026), n(480839), n(744285), n(492257), n(873817), n(47120);
 var i,
-    a = n(442837),
-    s = n(253135),
+    s = n(442837),
+    a = n(253135),
     r = n(570140),
     l = n(709054);
 function o(e, t, n) {
@@ -18,7 +18,7 @@ function o(e, t, n) {
     );
 }
 let c = {};
-class u extends (i = a.ZP.PersistedStore) {
+class u extends (i = s.ZP.PersistedStore) {
     initialize(e) {
         var t;
         c = null !== (t = null == e ? void 0 : e.users) && void 0 !== t ? t : {};
@@ -28,7 +28,7 @@ class u extends (i = a.ZP.PersistedStore) {
     }
     getKeyTrustedAt(e, t) {
         var n;
-        let i = (0, s.MK)(t);
+        let i = (0, a.MK)(t);
         return null === (n = c[e]) || void 0 === n ? void 0 : n[i];
     }
     isKeyVerified(e, t) {
@@ -51,16 +51,16 @@ o(u, 'displayName', 'VerifiedKeyStore'),
                     let n = null !== (t = c[e]) && void 0 !== t ? t : {};
                     return (c[e] = n), n;
                 })(t),
-                a = new Uint8Array(n);
-            i[(0, s.MK)(a)] = Date.now();
+                s = new Uint8Array(n);
+            i[(0, a.MK)(s)] = Date.now();
         },
         SECURE_FRAMES_VERIFIED_KEY_DELETE: function (e) {
             let { userId: t, serializedKey: n } = e,
                 i = c[t];
             if (null == i) return !1;
-            let a = delete i[n],
-                s = !1;
-            return 0 === Object.keys(i).length && (delete c[t], (s = !0)), a || s;
+            let s = delete i[n],
+                a = !1;
+            return 0 === Object.keys(i).length && (delete c[t], (a = !0)), s || a;
         },
         SECURE_FRAMES_USER_VERIFIED_KEYS_DELETE: function (e) {
             let { userId: t } = e;

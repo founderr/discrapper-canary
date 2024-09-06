@@ -17,8 +17,8 @@ var a = i(120356),
     _ = i(132871),
     p = i(147890),
     m = i(57716),
-    g = i(981631),
-    f = i(255569);
+    f = i(981631),
+    g = i(255569);
 function C(e) {
     let {
             collection: t,
@@ -31,11 +31,11 @@ function C(e) {
         children: [
             (0, n.jsx)(s.Heading, {
                 variant: 'heading-lg/semibold',
-                className: f.header,
+                className: g.header,
                 children: a
             }),
             (0, n.jsx)('div', {
-                className: f.list,
+                className: g.list,
                 children: C.map((e) => {
                     let { id: t, type: a, application: _, image_hash: m, title: C, description: x, call_to_action_label: b, call_to_action_url: N } = e;
                     if (null == m) return;
@@ -47,14 +47,14 @@ function C(e) {
                         ? (0, n.jsx)(
                               c.Z,
                               {
-                                  href: g.Z5c.APPLICATION_DIRECTORY_PROFILE(_.id),
-                                  className: f.item,
+                                  href: f.Z5c.APPLICATION_DIRECTORY_PROFILE(_.id),
+                                  className: g.item,
                                   children: (0, n.jsx)(u.Z, {
                                       imageSrc: v,
                                       application: _,
                                       onClick: (e) => {
                                           let { mutualGuilds: t } = e;
-                                          l.default.track(g.rMx.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
+                                          l.default.track(f.rMx.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
                                               collection_id: i,
                                               application_id: _.id,
                                               guild_id: I,
@@ -71,19 +71,19 @@ function C(e) {
                           ? (0, n.jsxs)(
                                 h.Z,
                                 {
-                                    className: r()(f.item, f.linkCard),
+                                    className: r()(g.item, g.linkCard),
                                     imageSrc: v,
                                     header: C,
-                                    headerClassName: f.cardHeader,
+                                    headerClassName: g.cardHeader,
                                     children: [
                                         (0, n.jsx)(s.Text, {
                                             variant: 'text-sm/normal',
-                                            className: f.linkDescription,
+                                            className: g.linkDescription,
                                             children: x
                                         }),
                                         (0, n.jsx)(s.Anchor, {
                                             onClick: () => {
-                                                l.default.track(g.rMx.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
+                                                l.default.track(f.rMx.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
                                                     collection_id: i,
                                                     link: N,
                                                     guild_id: I,
@@ -91,7 +91,7 @@ function C(e) {
                                                 });
                                             },
                                             href: N,
-                                            className: r()((0, s.getButtonStyle)(), f.linkCta),
+                                            className: r()((0, s.getButtonStyle)(), g.linkCta),
                                             children: b
                                         })
                                     ]

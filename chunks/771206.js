@@ -1,17 +1,17 @@
 n.d(t, {
     Z: function () {
-        return l;
+        return u;
     }
 }),
     n(47120);
-var i = n(470079),
+var E = n(470079),
     r = n(122289),
-    u = n(622999);
-function l() {
-    let [e, t] = i.useState(null);
+    i = n(622999);
+function u() {
+    let [e, t] = E.useState(null);
     return (
-        i.useEffect(() => {
-            (0, u.d2)()
+        E.useEffect(() => {
+            (0, i.d2)()
                 .then((e) => t(e))
                 .catch((e) => {
                     (0, r.q2)(e);

@@ -3,8 +3,8 @@ t(470079);
 var a = t(302454),
     r = t.n(a),
     o = t(481060),
-    s = t(447543),
-    l = t(15470),
+    l = t(447543),
+    s = t(15470),
     c = t(960904),
     d = t(830121),
     u = t(746878),
@@ -12,7 +12,7 @@ var a = t(302454),
 let p = /^discord.gg\/[a-zA-Z0-9-]+/,
     m = {
         ..._.Z.rules,
-        heading: { ...l.i.heading },
+        heading: { ...s.i.heading },
         image: { ...r().defaultRules.image },
         inviteLink: {
             order: _.Z.rules.link.order + 1,
@@ -34,7 +34,7 @@ let p = /^discord.gg\/[a-zA-Z0-9-]+/,
                           ],
                           onClick: () => {
                               var e;
-                              s.Z.acceptInviteAndTransitionToInviteChannel({
+                              l.Z.acceptInviteAndTransitionToInviteChannel({
                                   inviteKey: i.code,
                                   context: { location: 'Application Directory' }
                               }),

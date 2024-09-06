@@ -1,7 +1,7 @@
 var i = n(735250);
 n(470079);
-var a = n(442837),
-    s = n(481060),
+var s = n(442837),
+    a = n(481060),
     r = n(204418),
     l = n(594174),
     o = n(113434),
@@ -11,12 +11,12 @@ var a = n(442837),
 let _ = () => (0, i.jsx)('div', { className: d.questsCollectibleReward }),
     E = (e) => {
         let { questConfig: t, fallback: n, isFocused: c } = e,
-            _ = (0, a.e7)([l.default], () => l.default.getCurrentUser()),
+            _ = (0, s.e7)([l.default], () => l.default.getCurrentUser()),
             { avatarDecoration: E, isFetching: I } = (0, o.DU)(t);
         return I
             ? (0, i.jsx)('div', {
                   className: d.questsCollectibleReward,
-                  children: (0, i.jsx)(s.Spinner, {})
+                  children: (0, i.jsx)(a.Spinner, {})
               })
             : null == _ || null == E
               ? n

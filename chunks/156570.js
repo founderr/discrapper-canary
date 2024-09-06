@@ -4,10 +4,10 @@ n.d(t, {
     }
 }),
     n(789020);
-var i = n(81825),
-    r = n(218946),
-    u = n(598077);
-function l(e, t, n) {
+var r = n(81825),
+    i = n(218946),
+    a = n(598077);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,7 +20,7 @@ function l(e, t, n) {
         e
     );
 }
-class o extends i.Z {
+class o extends r.Z {
     static createFromServer(e) {
         let t = e.staff_notes;
         return new o({
@@ -41,12 +41,12 @@ class o extends i.Z {
                           youtubeVideoId: e.youtube_video_id
                       }))
                     : null,
-            assets: null != e.assets ? e.assets.map(r.m) : null,
+            assets: null != e.assets ? e.assets.map(i.m) : null,
             staffNotes:
                 null != t
                     ? {
                           content: t.content,
-                          user: null != t.user ? new u.Z(t.user) : null
+                          user: null != t.user ? new a.Z(t.user) : null
                       }
                     : null,
             guild:
@@ -59,14 +59,14 @@ class o extends i.Z {
                           approximatePresenceCount: e.guild.approximate_presence_count
                       }
                     : null,
-            thumbnail: null != e.thumbnail ? (0, r.m)(e.thumbnail) : null,
-            previewVideo: null != e.preview_video ? (0, r.m)(e.preview_video) : null,
-            headerBackground: null != e.header_background ? (0, r.m)(e.header_background) : null,
-            headerLogoDarkTheme: null != e.header_logo_dark_theme ? (0, r.m)(e.header_logo_dark_theme) : null,
-            headerLogoLightTheme: null != e.header_logo_light_theme ? (0, r.m)(e.header_logo_light_theme) : null,
-            boxArt: null != e.box_art ? (0, r.m)(e.box_art) : null,
-            heroBackground: null != e.hero_background ? (0, r.m)(e.hero_background) : null,
-            heroVideo: null != e.hero_video ? (0, r.m)(e.hero_video) : null,
+            thumbnail: null != e.thumbnail ? (0, i.m)(e.thumbnail) : null,
+            previewVideo: null != e.preview_video ? (0, i.m)(e.preview_video) : null,
+            headerBackground: null != e.header_background ? (0, i.m)(e.header_background) : null,
+            headerLogoDarkTheme: null != e.header_logo_dark_theme ? (0, i.m)(e.header_logo_dark_theme) : null,
+            headerLogoLightTheme: null != e.header_logo_light_theme ? (0, i.m)(e.header_logo_light_theme) : null,
+            boxArt: null != e.box_art ? (0, i.m)(e.box_art) : null,
+            heroBackground: null != e.hero_background ? (0, i.m)(e.hero_background) : null,
+            heroVideo: null != e.hero_video ? (0, i.m)(e.hero_video) : null,
             entitlementBranchId: e.entitlement_branch_id,
             benefits: e.benefits,
             published: e.published
@@ -76,7 +76,7 @@ class o extends i.Z {
         return null == this.description;
     }
     constructor(e) {
-        var t, n, i, r, u, o, E, a, _, S, s, A, c;
-        super(), l(this, 'id', void 0), l(this, 'applicationId', void 0), l(this, 'skuId', void 0), l(this, 'skuFlags', void 0), l(this, 'summary', void 0), l(this, 'tagline', void 0), l(this, 'flavorText', void 0), l(this, 'description', void 0), l(this, 'carouselItems', void 0), l(this, 'childSkuIds', void 0), l(this, 'alternativeSkuIds', void 0), l(this, 'assets', void 0), l(this, 'staffNotes', void 0), l(this, 'guild', void 0), l(this, 'thumbnail', void 0), l(this, 'boxArt', void 0), l(this, 'previewVideo', void 0), l(this, 'headerBackground', void 0), l(this, 'headerLogoDarkTheme', void 0), l(this, 'headerLogoLightTheme', void 0), l(this, 'heroBackground', void 0), l(this, 'heroVideo', void 0), l(this, 'entitlementBranchId', void 0), l(this, 'benefits', void 0), l(this, 'published', void 0), (this.id = e.id), (this.applicationId = e.applicationId), (this.skuId = e.skuId), (this.skuFlags = e.skuFlags), (this.summary = e.summary), (this.tagline = e.tagline), (this.flavorText = e.flavorText), (this.description = e.description), (this.carouselItems = null !== (t = e.carouselItems) && void 0 !== t ? t : []), (this.childSkuIds = null !== (n = e.childSkuIds) && void 0 !== n ? n : []), (this.alternativeSkuIds = null !== (i = e.alternativeSkuIds) && void 0 !== i ? i : []), (this.assets = null !== (r = e.assets) && void 0 !== r ? r : []), (this.staffNotes = e.staffNotes), (this.guild = e.guild), (this.thumbnail = null !== (u = e.thumbnail) && void 0 !== u ? u : null), (this.boxArt = null !== (o = e.boxArt) && void 0 !== o ? o : null), (this.previewVideo = null !== (E = e.previewVideo) && void 0 !== E ? E : null), (this.headerBackground = null !== (a = e.headerBackground) && void 0 !== a ? a : null), (this.headerLogoDarkTheme = null !== (_ = e.headerLogoDarkTheme) && void 0 !== _ ? _ : null), (this.headerLogoLightTheme = null !== (S = e.headerLogoLightTheme) && void 0 !== S ? S : null), (this.heroBackground = null !== (s = e.heroBackground) && void 0 !== s ? s : null), (this.heroVideo = null !== (A = e.heroVideo) && void 0 !== A ? A : null), (this.entitlementBranchId = null !== (c = e.entitlementBranchId) && void 0 !== c ? c : null), (this.benefits = e.benefits), (this.published = !!e.published);
+        var t, n, r, i, a, o, l, u, c, d, _, E, f;
+        super(), s(this, 'id', void 0), s(this, 'applicationId', void 0), s(this, 'skuId', void 0), s(this, 'skuFlags', void 0), s(this, 'summary', void 0), s(this, 'tagline', void 0), s(this, 'flavorText', void 0), s(this, 'description', void 0), s(this, 'carouselItems', void 0), s(this, 'childSkuIds', void 0), s(this, 'alternativeSkuIds', void 0), s(this, 'assets', void 0), s(this, 'staffNotes', void 0), s(this, 'guild', void 0), s(this, 'thumbnail', void 0), s(this, 'boxArt', void 0), s(this, 'previewVideo', void 0), s(this, 'headerBackground', void 0), s(this, 'headerLogoDarkTheme', void 0), s(this, 'headerLogoLightTheme', void 0), s(this, 'heroBackground', void 0), s(this, 'heroVideo', void 0), s(this, 'entitlementBranchId', void 0), s(this, 'benefits', void 0), s(this, 'published', void 0), (this.id = e.id), (this.applicationId = e.applicationId), (this.skuId = e.skuId), (this.skuFlags = e.skuFlags), (this.summary = e.summary), (this.tagline = e.tagline), (this.flavorText = e.flavorText), (this.description = e.description), (this.carouselItems = null !== (t = e.carouselItems) && void 0 !== t ? t : []), (this.childSkuIds = null !== (n = e.childSkuIds) && void 0 !== n ? n : []), (this.alternativeSkuIds = null !== (r = e.alternativeSkuIds) && void 0 !== r ? r : []), (this.assets = null !== (i = e.assets) && void 0 !== i ? i : []), (this.staffNotes = e.staffNotes), (this.guild = e.guild), (this.thumbnail = null !== (a = e.thumbnail) && void 0 !== a ? a : null), (this.boxArt = null !== (o = e.boxArt) && void 0 !== o ? o : null), (this.previewVideo = null !== (l = e.previewVideo) && void 0 !== l ? l : null), (this.headerBackground = null !== (u = e.headerBackground) && void 0 !== u ? u : null), (this.headerLogoDarkTheme = null !== (c = e.headerLogoDarkTheme) && void 0 !== c ? c : null), (this.headerLogoLightTheme = null !== (d = e.headerLogoLightTheme) && void 0 !== d ? d : null), (this.heroBackground = null !== (_ = e.heroBackground) && void 0 !== _ ? _ : null), (this.heroVideo = null !== (E = e.heroVideo) && void 0 !== E ? E : null), (this.entitlementBranchId = null !== (f = e.entitlementBranchId) && void 0 !== f ? f : null), (this.benefits = e.benefits), (this.published = !!e.published);
     }
 }

@@ -7,29 +7,29 @@ var i = t(735250);
 t(470079);
 var l = t(777207),
     r = t(541822),
-    o = t(330711),
-    s = t(689498);
+    s = t(330711),
+    o = t(689498);
 function a(e) {
-    let { benefits: n, description: t, imgSrc: a, title: c, tag: u, FallbackIcon: d } = e,
-        S = null != a ? { '--custom-background-url': 'url('.concat(a.toString(), ')') } : void 0,
-        m = null != t && '' !== t,
-        f = m || null != n;
+    let { benefits: n, description: t, imgSrc: a, title: u, tag: c, FallbackIcon: d } = e,
+        f = null != a ? { '--custom-background-url': 'url('.concat(a.toString(), ')') } : void 0,
+        p = null != t && '' !== t,
+        m = p || null != n;
     return (0, i.jsxs)('div', {
-        className: s.container,
+        className: o.container,
         children: [
             (0, i.jsxs)('div', {
-                className: s.header,
+                className: o.header,
                 children: [
                     (0, i.jsx)('div', {
-                        className: s.headerBackground,
-                        style: S
+                        className: o.headerBackground,
+                        style: f
                     }),
                     (0, i.jsx)('div', {
-                        className: s.headerTop,
-                        children: (0, i.jsx)('div', { children: u })
+                        className: o.headerTop,
+                        children: (0, i.jsx)('div', { children: c })
                     }),
                     (0, i.jsx)('div', {
-                        className: s.headerImage,
+                        className: o.headerImage,
                         children:
                             null != a
                                 ? (0, i.jsx)('img', {
@@ -46,43 +46,43 @@ function a(e) {
                 ]
             }),
             (0, i.jsxs)(r.Z, {
-                className: s.scroll,
+                className: o.scroll,
                 children: [
                     (0, i.jsx)('br', {}),
                     (0, i.jsxs)('div', {
-                        className: s.scrollContent,
+                        className: o.scrollContent,
                         children: [
                             (0, i.jsx)(l.x, {
                                 color: 'header-primary',
                                 tag: 'div',
                                 variant: 'heading-xl/semibold',
-                                children: c
+                                children: u
                             }),
-                            f &&
+                            m &&
                                 (0, i.jsxs)('div', {
-                                    className: s.details,
+                                    className: o.details,
                                     children: [
                                         (0, i.jsx)(l.x, {
                                             color: 'header-primary',
                                             tag: 'div',
                                             variant: 'heading-lg/semibold',
-                                            children: o.Z.Messages.Storefront.PRODUCT_DETAILS
+                                            children: s.Z.Messages.Storefront.PRODUCT_DETAILS
                                         }),
-                                        m &&
+                                        p &&
                                             (0, i.jsx)(l.x, {
                                                 color: 'text-muted',
                                                 variant: 'text-md/normal',
-                                                className: s.description,
+                                                className: o.description,
                                                 children: t
                                             }),
                                         null != n &&
                                             (0, i.jsxs)('div', {
-                                                className: s.benefits,
+                                                className: o.benefits,
                                                 children: [
                                                     (0, i.jsx)(l.x, {
                                                         color: 'header-secondary',
                                                         variant: 'eyebrow',
-                                                        children: o.Z.Messages.Storefront.BENEFITS_TITLE
+                                                        children: s.Z.Messages.Storefront.BENEFITS_TITLE
                                                     }),
                                                     n
                                                 ]

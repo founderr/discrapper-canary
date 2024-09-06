@@ -32,7 +32,7 @@ var s = n(735250),
     k = n(919812);
 let U = o.forwardRef(function (e, t) {
     var n, r;
-    let { children: S, className: U, collapsedHeight: q, expansionSpring: Z, isExpanded: w, isExpansionAnimationComplete: P, onCtxMenuOpen: Q, onCtxMenuClose: W, onCtxMenuSelect: D, quest: H, useReducedMotion: V } = e,
+    let { children: S, className: U, collapsedHeight: q, expansionSpring: Z, isExpanded: P, isExpansionAnimationComplete: w, onCtxMenuOpen: Q, onCtxMenuClose: W, onCtxMenuSelect: D, quest: H, useReducedMotion: V } = e,
         z = (0, i.e7)([f.Z], () => f.Z.isEnrolling(H.id), [H]),
         G = (0, C.B6)(H.config.expiresAt),
         F = A.r.build(H.config),
@@ -65,7 +65,7 @@ let U = o.forwardRef(function (e, t) {
         el = (null === (n = H.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null,
         ei = (null === (r = H.userStatus) || void 0 === r ? void 0 : r.completedAt) != null,
         ec = o.useMemo(() => (0, E.Xv)(H.config), [H.config]),
-        ed = w && P,
+        ed = P && w,
         eu = (0, E.ph)(H),
         ep = (0, T.D)({
             quest: H,
