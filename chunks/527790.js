@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return G;
+        return k;
     }
 }),
     n(47120);
@@ -24,69 +24,74 @@ var i = n(120356),
     T = n(797342),
     S = n(810568),
     g = n(168524),
-    A = n(502762),
-    N = n(652853),
-    O = n(194811),
-    R = n(373826),
-    v = n(582123),
-    C = n(622058),
-    y = n(290274),
-    D = n(318134),
-    L = n(228168),
-    b = n(689938),
-    M = n(139665);
-function P(e) {
+    A = n(960870),
+    N = n(139793),
+    O = n(579264),
+    R = n(502762),
+    v = n(652853),
+    C = n(194811),
+    y = n(373826),
+    D = n(582123),
+    L = n(290274),
+    b = n(228168),
+    M = n(689938),
+    P = n(139665);
+function U(e) {
     let { user: t, entry: n, header: i, className: l, onClose: d } = e,
-        { profileType: f } = (0, N.z)(),
-        h = { [M.fullSize]: f === L.y0.FULL_SIZE },
+        { profileType: f } = (0, v.z)(),
+        h = { [P.fullSize]: f === b.y0.FULL_SIZE },
         { largeImage: I } = (0, c.rv)({
             entry: n,
             showCoverImage: !1
         }),
         { appName: O } = (0, T.n)(n),
-        v = (0, g.Z)({
+        C = (0, g.Z)({
             location: 'UserProfileRecentActivityCard',
             applicationId: n.extra.application_id,
             source: S.m1.UserProfile,
             sourceUserId: t.id,
             trackEntryPointImpression: !0
         }),
-        { analyticsLocations: C } = (0, u.ZP)(),
-        { onAction: y, trackViewRef: b } = (0, D.Z)({
+        { analyticsLocations: D } = (0, u.ZP)(),
+        L = (0, A.Z)({
             display: 'recent',
             user: t,
             entry: n,
-            analyticsLocations: C
+            analyticsLocations: D
         }),
-        P = () => (n.content_type === s.s.TOP_GAME ? p.Hs.map((e, t) => (0, r.jsx)(e, { entry: n }, 'entry-'.concat(t))) : E.W.map((e, t) => (0, r.jsx)(e, { entry: n }, 'entry-'.concat(t))));
-    return null == v
-        ? (0, r.jsxs)(A.Z.Overlay, {
-              className: a()(M.card, l),
-              ref: b,
+        M = (0, N.Z)({
+            userId: t.id,
+            onAction: L
+        }),
+        U = () => (n.content_type === s.s.TOP_GAME ? p.Hs.map((e, t) => (0, r.jsx)(e, { entry: n }, 'entry-'.concat(t))) : E.W.map((e, t) => (0, r.jsx)(e, { entry: n }, 'entry-'.concat(t))));
+    return null == C
+        ? (0, r.jsxs)(R.Z.Overlay, {
+              className: a()(P.card, l),
+              ref: M,
               children: [
                   i,
                   (0, r.jsx)('div', {
-                      className: M.body,
+                      className: P.body,
                       children: (0, r.jsxs)('div', {
-                          className: a()(M.content, h),
+                          className: a()(P.content, h),
                           children: [
                               (0, r.jsx)(_.E, {
                                   image: I,
                                   size: _.J.SIZE_60
                               }),
                               (0, r.jsxs)('div', {
-                                  className: M.details,
+                                  className: P.details,
                                   children: [
                                       (0, r.jsx)('div', {
-                                          children: (0, r.jsx)(R.Z, {
+                                          children: (0, r.jsx)(y.Z, {
                                               variant: 'heading-sm/semibold',
                                               text: O
                                           })
                                       }),
                                       (0, r.jsx)(m.Gk, {
                                           location: m.Gt.USER_PROFILE,
-                                          className: M.badges,
-                                          children: P()
+                                          className: P.badges,
+                                          children: U()
                                       })
                                   ]
                               })
@@ -95,40 +100,40 @@ function P(e) {
                   })
               ]
           })
-        : (0, r.jsxs)(A.Z.Overlay, {
-              className: a()(M.card, l),
-              ref: b,
+        : (0, r.jsxs)(R.Z.Overlay, {
+              className: a()(P.card, l),
+              ref: M,
               children: [
                   i,
                   (0, r.jsx)('div', {
-                      className: M.body,
+                      className: P.body,
                       children: (0, r.jsxs)('div', {
-                          className: a()(M.content, h),
+                          className: a()(P.content, h),
                           children: [
                               (0, r.jsx)(_.E, {
                                   image: I,
                                   onClick: () => {
-                                      y({ action: 'PRESS_GAME_IMAGE' }), v();
+                                      L({ action: 'PRESS_GAME_IMAGE' }), C();
                                   },
                                   size: _.J.SIZE_60
                               }),
                               (0, r.jsxs)('div', {
-                                  className: M.details,
+                                  className: P.details,
                                   children: [
                                       (0, r.jsx)(o.Clickable, {
-                                          className: M.clickable,
+                                          className: P.clickable,
                                           onClick: () => {
-                                              y({ action: 'OPEN_GAME_PROFILE' }), v(), null == d || d();
+                                              L({ action: 'OPEN_GAME_PROFILE' }), C(), null == d || d();
                                           },
-                                          children: (0, r.jsx)(R.Z, {
+                                          children: (0, r.jsx)(y.Z, {
                                               variant: 'heading-sm/semibold',
                                               text: O
                                           })
                                       }),
                                       (0, r.jsx)(m.Gk, {
                                           location: m.Gt.USER_PROFILE,
-                                          className: M.badges,
-                                          children: P()
+                                          className: P.badges,
+                                          children: U()
                                       })
                                   ]
                               })
@@ -138,27 +143,31 @@ function P(e) {
               ]
           });
 }
-function U(e) {
+function w(e) {
     let { user: t, entry: n, header: i, className: s } = e,
-        { profileType: o } = (0, N.z)(),
-        l = { [M.fullSize]: o === L.y0.FULL_SIZE },
+        { profileType: o } = (0, v.z)(),
+        l = { [P.fullSize]: o === b.y0.FULL_SIZE },
         { largeImage: d } = (0, c.rv)({ entry: n }),
         { analyticsLocations: E } = (0, u.ZP)(),
-        { trackViewRef: f } = (0, D.Z)({
+        f = (0, A.Z)({
             display: 'recent',
             user: t,
             entry: n,
             analyticsLocations: E
+        }),
+        h = (0, N.Z)({
+            userId: t.id,
+            onAction: f
         });
-    return (0, r.jsxs)(A.Z.Overlay, {
-        className: a()(M.card, s),
-        ref: f,
+    return (0, r.jsxs)(R.Z.Overlay, {
+        className: a()(P.card, s),
+        ref: h,
         children: [
             i,
             (0, r.jsx)('div', {
-                className: M.body,
+                className: P.body,
                 children: (0, r.jsxs)('div', {
-                    className: a()(M.content, l),
+                    className: a()(P.content, l),
                     children: [
                         (0, r.jsx)(_.E, {
                             aspectRatio: 'crunchyroll',
@@ -166,15 +175,15 @@ function U(e) {
                             size: _.J.SIZE_60
                         }),
                         (0, r.jsxs)('div', {
-                            className: M.details,
+                            className: P.details,
                             children: [
                                 (0, r.jsxs)('div', {
                                     children: [
-                                        (0, r.jsx)(R.Z, {
+                                        (0, r.jsx)(y.Z, {
                                             variant: 'heading-sm/semibold',
                                             text: n.extra.media_title
                                         }),
-                                        (0, r.jsx)(R.Z, {
+                                        (0, r.jsx)(y.Z, {
                                             variant: 'text-xs/normal',
                                             text: n.extra.media_subtitle
                                         })
@@ -182,7 +191,7 @@ function U(e) {
                                 }),
                                 (0, r.jsx)(m.Gk, {
                                     location: m.Gt.USER_PROFILE,
-                                    className: M.badges,
+                                    className: P.badges,
                                     children: I.t.map((e, t) => (0, r.jsx)(e, { entry: n }, 'entry-'.concat(t)))
                                 })
                             ]
@@ -193,48 +202,52 @@ function U(e) {
         ]
     });
 }
-function w(e) {
+function x(e) {
     var t, n, i;
     let { user: s, entry: o, header: l, className: d } = e,
-        { profileType: E } = (0, N.z)(),
-        h = { [M.fullSize]: E === L.y0.FULL_SIZE },
+        { profileType: E } = (0, v.z)(),
+        h = { [P.fullSize]: E === b.y0.FULL_SIZE },
         { largeImage: p } = (0, c.rv)({ entry: o }),
         { analyticsLocations: I } = (0, u.ZP)(),
-        { trackViewRef: T } = (0, D.Z)({
+        T = (0, A.Z)({
             display: 'recent',
             user: s,
             entry: o,
             analyticsLocations: I
         }),
-        S = null === (t = o.extra.entries[0]) || void 0 === t ? void 0 : t.media;
-    if (null == S) return null;
-    let g = null !== (i = null === (n = S.artists[0]) || void 0 === n ? void 0 : n.name) && void 0 !== i ? i : S.title;
-    return (0, r.jsxs)(A.Z.Overlay, {
-        className: a()(M.card, d),
-        ref: T,
+        S = (0, N.Z)({
+            userId: s.id,
+            onAction: T
+        }),
+        g = null === (t = o.extra.entries[0]) || void 0 === t ? void 0 : t.media;
+    if (null == g) return null;
+    let O = null !== (i = null === (n = g.artists[0]) || void 0 === n ? void 0 : n.name) && void 0 !== i ? i : g.title;
+    return (0, r.jsxs)(R.Z.Overlay, {
+        className: a()(P.card, d),
+        ref: S,
         children: [
             l,
             (0, r.jsx)('div', {
-                className: M.body,
+                className: P.body,
                 children: (0, r.jsxs)('div', {
-                    className: a()(M.content, h),
+                    className: a()(P.content, h),
                     children: [
                         (0, r.jsx)(_.E, {
                             image: p,
                             size: _.J.SIZE_60
                         }),
                         (0, r.jsxs)('div', {
-                            className: M.details,
+                            className: P.details,
                             children: [
                                 (0, r.jsx)('div', {
-                                    children: (0, r.jsx)(R.Z, {
+                                    children: (0, r.jsx)(y.Z, {
                                         variant: 'heading-sm/semibold',
-                                        text: g
+                                        text: O
                                     })
                                 }),
                                 (0, r.jsx)(m.Gk, {
                                     location: m.Gt.USER_PROFILE,
-                                    className: M.badges,
+                                    className: P.badges,
                                     children: f.te.map((e, t) => (0, r.jsx)(e, { entry: o }, 'entry-'.concat(t)))
                                 })
                             ]
@@ -245,42 +258,46 @@ function w(e) {
         ]
     });
 }
-function x(e) {
+function G(e) {
     let { user: t, entry: n, header: i, className: s } = e,
-        { profileType: o } = (0, N.z)(),
-        l = { [M.fullSize]: o === L.y0.FULL_SIZE },
+        { profileType: o } = (0, v.z)(),
+        l = { [P.fullSize]: o === b.y0.FULL_SIZE },
         { largeImage: d } = (0, c.rv)({ entry: n }),
         { analyticsLocations: E } = (0, u.ZP)(),
-        { trackViewRef: f } = (0, D.Z)({
+        f = (0, A.Z)({
             display: 'recent',
             user: t,
             entry: n,
             analyticsLocations: E
+        }),
+        p = (0, N.Z)({
+            userId: t.id,
+            onAction: f
         });
-    return (0, r.jsxs)(A.Z.Overlay, {
-        className: a()(M.card, s),
-        ref: f,
+    return (0, r.jsxs)(R.Z.Overlay, {
+        className: a()(P.card, s),
+        ref: p,
         children: [
             i,
             (0, r.jsx)('div', {
-                className: M.body,
+                className: P.body,
                 children: (0, r.jsxs)('div', {
-                    className: a()(M.content, l),
+                    className: a()(P.content, l),
                     children: [
                         (0, r.jsx)(_.E, {
                             image: d,
                             size: _.J.SIZE_60
                         }),
                         (0, r.jsxs)('div', {
-                            className: M.details,
+                            className: P.details,
                             children: [
                                 (0, r.jsxs)('div', {
                                     children: [
-                                        (0, r.jsx)(R.Z, {
+                                        (0, r.jsx)(y.Z, {
                                             variant: 'heading-sm/semibold',
                                             text: n.extra.media.title
                                         }),
-                                        (0, r.jsx)(R.Z, {
+                                        (0, r.jsx)(y.Z, {
                                             variant: 'text-xs/normal',
                                             text: n.extra.artist.name
                                         })
@@ -288,7 +305,7 @@ function x(e) {
                                 }),
                                 (0, r.jsx)(m.Gk, {
                                     location: m.Gt.USER_PROFILE,
-                                    className: M.badges,
+                                    className: P.badges,
                                     children: h.Ho.map((e, t) => (0, r.jsx)(e, { entry: n }, 'entry-'.concat(t)))
                                 })
                             ]
@@ -299,24 +316,24 @@ function x(e) {
         ]
     });
 }
-function G(e) {
+function k(e) {
     let { user: t, entry: n, className: i, onClose: a, hideContextMenu: s = !1 } = e,
         { analyticsLocations: o } = (0, u.ZP)(l.Z.USER_PROFILE_RECENT_ACTIVITY_CARD),
-        { profileType: c } = (0, N.z)();
-    return (0, C.R)(n)
+        { profileType: c } = (0, v.z)();
+    return (0, O.Z)(n)
         ? (0, r.jsx)(u.Gt, {
               value: o,
-              children: (0, r.jsx)(v.Z, {
+              children: (0, r.jsx)(D.Z, {
                   user: t,
                   onClose: a,
                   children: (e) => {
                       let { onAutoDismiss: o } = e,
                           l = (e) =>
-                              (0, r.jsx)(O.Z, {
-                                  text: c === L.y0.FULL_SIZE ? null : e,
+                              (0, r.jsx)(C.Z, {
+                                  text: c === b.y0.FULL_SIZE ? null : e,
                                   tags: s
                                       ? null
-                                      : (0, r.jsx)(y.Z, {
+                                      : (0, r.jsx)(L.Z, {
                                             display: 'recent',
                                             entry: n,
                                             user: t,
@@ -325,29 +342,29 @@ function G(e) {
                                         })
                               });
                       return (0, d.dX)(n)
-                          ? (0, r.jsx)(P, {
-                                header: l(b.Z.Messages.USER_ACTIVITY_RECENTLY_PLAYED),
+                          ? (0, r.jsx)(U, {
+                                header: l(M.Z.Messages.USER_ACTIVITY_RECENTLY_PLAYED),
                                 user: t,
                                 entry: n,
                                 className: i
                             })
                           : (0, d.y0)(n)
-                            ? (0, r.jsx)(U, {
-                                  header: l(b.Z.Messages.USER_ACTIVITY_RECENTLY_WATCHED),
+                            ? (0, r.jsx)(w, {
+                                  header: l(M.Z.Messages.USER_ACTIVITY_RECENTLY_WATCHED),
                                   user: t,
                                   entry: n,
                                   className: i
                               })
                             : (0, d.dU)(n)
-                              ? (0, r.jsx)(w, {
-                                    header: l(b.Z.Messages.USER_ACTIVITY_RECENTLY_LISTENED_TO),
+                              ? (0, r.jsx)(x, {
+                                    header: l(M.Z.Messages.USER_ACTIVITY_RECENTLY_LISTENED_TO),
                                     user: t,
                                     entry: n,
                                     className: i
                                 })
                               : (0, d.KF)(n)
-                                ? (0, r.jsx)(x, {
-                                      header: l(b.Z.Messages.USER_ACTIVITY_RECENTLY_LISTENED_TO),
+                                ? (0, r.jsx)(G, {
+                                      header: l(M.Z.Messages.USER_ACTIVITY_RECENTLY_LISTENED_TO),
                                       user: t,
                                       entry: n,
                                       className: i

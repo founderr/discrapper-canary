@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return D;
+        return L;
     }
 });
 var r = n(735250),
@@ -15,50 +15,55 @@ var r = n(735250),
     _ = n(358696),
     E = n(180335),
     f = n(952164),
-    h = n(994746),
-    p = n(502762),
-    I = n(652853),
-    m = n(448980),
-    T = n(194811),
-    S = n(373826),
-    g = n(315324),
-    A = n(582123),
-    N = n(262210),
-    O = n(666984),
-    R = n(290274),
-    v = n(318134),
-    C = n(228168),
-    y = n(139665);
-function D(e) {
-    let { user: t, currentUser: n, activity: a, guild: D, channel: L, className: b, onClose: M } = e,
-        { profileType: P } = (0, I.z)(),
-        U = { [y.fullSize]: P === C.y0.FULL_SIZE },
-        w = (0, E.Bq)({
+    h = n(960870),
+    p = n(139793),
+    I = n(994746),
+    m = n(502762),
+    T = n(652853),
+    S = n(448980),
+    g = n(194811),
+    A = n(373826),
+    N = n(315324),
+    O = n(582123),
+    R = n(262210),
+    v = n(666984),
+    C = n(290274),
+    y = n(228168),
+    D = n(139665);
+function L(e) {
+    let { user: t, currentUser: n, activity: a, guild: L, channel: b, className: M, onClose: P } = e,
+        { profileType: U } = (0, T.z)(),
+        w = { [D.fullSize]: U === y.y0.FULL_SIZE },
+        x = (0, E.Bq)({
             activity: a,
             user: t
         }),
-        x = (0, h.Z)(a),
-        { largeImage: G } = (0, d.FO)(a),
-        { analyticsLocations: k } = (0, c.ZP)(u.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
-        { onAction: B, trackViewRef: F } = (0, v.Z)({
+        G = (0, I.Z)(a),
+        { largeImage: k } = (0, d.FO)(a),
+        { analyticsLocations: B } = (0, c.ZP)(u.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
+        F = (0, h.Z)({
             display: 'live',
             user: t,
             activity: a,
-            entry: w,
-            analyticsLocations: k
+            entry: x,
+            analyticsLocations: B
+        }),
+        V = (0, p.Z)({
+            userId: t.id,
+            onAction: F
         });
     if (!(0, l.Z)(a)) return null;
-    let V = () => {
+    let H = () => {
             var e, n;
             let l = null !== (n = null === (e = a.state) || void 0 === e ? void 0 : e.split(';')) && void 0 !== n ? n : [];
             return 0 === l.length
                 ? null
                 : null == a.sync_id
-                  ? (0, r.jsx)(S.Z, {
+                  ? (0, r.jsx)(A.Z, {
                         variant: 'text-xs/normal',
                         text: l.join(', ')
                     })
-                  : (0, r.jsx)(S.Z, {
+                  : (0, r.jsx)(A.Z, {
                         variant: 'text-xs/normal',
                         text: l.map((e, n) =>
                             (0, r.jsxs)(
@@ -66,9 +71,9 @@ function D(e) {
                                 {
                                     children: [
                                         (0, r.jsx)(o.Clickable, {
-                                            className: s()(y.clickable, y.inline),
+                                            className: s()(D.clickable, D.inline),
                                             onClick: () => {
-                                                B({ action: 'OPEN_SPOTIFY_ARTIST' }), (0, f.d$)(a, t.id, n);
+                                                F({ action: 'OPEN_SPOTIFY_ARTIST' }), (0, f.d$)(a, t.id, n);
                                             },
                                             children: e
                                         }),
@@ -80,109 +85,109 @@ function D(e) {
                         )
                     });
         },
-        H = () => {
+        Z = () => {
             let { timestamps: e } = a;
             if (null == e) return null;
             let { start: t, end: n } = e;
             return null == t || null == n
                 ? null
-                : (0, r.jsx)(N.Z, {
+                : (0, r.jsx)(R.Z, {
                       start: t,
                       end: n
                   });
         },
-        Z = () =>
-            null == D || null == L
+        Y = () =>
+            null == L || null == b
                 ? null
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
-                          (0, r.jsx)('div', { className: y.voiceChannelDivider }),
-                          (0, r.jsx)(g.Z, {
+                          (0, r.jsx)('div', { className: D.voiceChannelDivider }),
+                          (0, r.jsx)(N.Z, {
                               user: t,
-                              guild: D,
-                              channel: L,
-                              onAction: B,
-                              onClose: M
+                              guild: L,
+                              channel: b,
+                              onAction: F,
+                              onClose: P
                           })
                       ]
                   }),
-        Y = () =>
+        j = () =>
             t.id === n.id
                 ? null
                 : (0, r.jsx)('div', {
-                      className: s()(y.actions, U),
-                      children: (0, r.jsx)(O.Z, {
+                      className: s()(D.actions, w),
+                      children: (0, r.jsx)(v.Z, {
                           user: t,
                           activity: a,
-                          onAction: B
+                          onAction: F
                       })
                   });
     return (0, r.jsx)(c.Gt, {
-        value: k,
-        children: (0, r.jsx)(A.Z, {
+        value: B,
+        children: (0, r.jsx)(O.Z, {
             user: t,
-            onClose: M,
+            onClose: P,
             children: (e) => {
                 let { onAutoDismiss: n } = e;
-                return (0, r.jsxs)(p.Z.Overlay, {
-                    className: s()(y.card, b),
-                    ref: F,
+                return (0, r.jsxs)(m.Z.Overlay, {
+                    className: s()(D.card, M),
+                    ref: V,
                     children: [
-                        (0, r.jsx)(T.Z, {
-                            text: x.text,
-                            icon: x.icon,
-                            tags: (0, r.jsx)(R.Z, {
+                        (0, r.jsx)(g.Z, {
+                            text: G.text,
+                            icon: G.icon,
+                            tags: (0, r.jsx)(C.Z, {
                                 display: 'live',
                                 user: t,
                                 activity: a,
-                                entry: w,
-                                onClose: M,
+                                entry: x,
+                                onClose: P,
                                 onRequestOpen: n
                             })
                         }),
                         (0, r.jsxs)('div', {
-                            className: y.body,
+                            className: D.body,
                             children: [
                                 (0, r.jsxs)('div', {
-                                    className: s()(y.content, U),
+                                    className: s()(D.content, w),
                                     children: [
                                         (0, r.jsx)(_.E, {
-                                            image: G,
+                                            image: k,
                                             onClick: () => {
-                                                B({ action: 'OPEN_SPOTIFY_ALBUM' }), (0, f.Z5)(a, t.id);
+                                                F({ action: 'OPEN_SPOTIFY_ALBUM' }), (0, f.Z5)(a, t.id);
                                             },
                                             size: _.J.SIZE_60
                                         }),
                                         (0, r.jsxs)('div', {
-                                            className: y.details,
+                                            className: D.details,
                                             children: [
                                                 (0, r.jsxs)('div', {
                                                     children: [
-                                                        (0, r.jsx)(S.Z, {
+                                                        (0, r.jsx)(A.Z, {
                                                             variant: 'heading-sm/semibold',
                                                             text: a.details,
                                                             onClick: () => {
-                                                                B({ action: 'OPEN_SPOTIFY_TRACK' }), (0, f.aG)(a);
+                                                                F({ action: 'OPEN_SPOTIFY_TRACK' }), (0, f.aG)(a);
                                                             }
                                                         }),
-                                                        V()
+                                                        H()
                                                     ]
                                                 }),
-                                                (0, r.jsx)(m.Z, {
+                                                (0, r.jsx)(S.Z, {
                                                     user: t,
                                                     activity: a,
-                                                    className: y.badges
+                                                    className: D.badges
                                                 }),
-                                                H()
+                                                Z()
                                             ]
                                         }),
-                                        P === C.y0.FULL_SIZE && Y()
+                                        U === y.y0.FULL_SIZE && j()
                                     ]
                                 }),
-                                Z()
+                                Y()
                             ]
                         }),
-                        P !== C.y0.FULL_SIZE && Y()
+                        U !== y.y0.FULL_SIZE && j()
                     ]
                 });
             }
