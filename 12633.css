@@ -19641,7 +19641,8 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .tooltipGameImage_fda254 {
     width: 16px;
-    height: 16px
+    height: 16px;
+    border-radius: 4px
 }
 
 .tooltipGameName_fda254 {
