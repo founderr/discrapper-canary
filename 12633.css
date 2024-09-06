@@ -19697,19 +19697,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
     gap: 4px
 }
 
-.clickableCard_e0fe28 {
-    border-radius: 8px;
-    cursor: pointer;
-    box-shadow: var(--shadow-low);
-    min-width: 240px;
-    max-width: 360px;
-    height: 400px
-}
-
-.full-motion .clickableCard_e0fe28 {
-    transition: transform.2s, box-shadow.1s
-}
-
+.clickableCard_e0fe28,
 .nonClickableCard_e0fe28 {
     border-radius: 8px;
     cursor: pointer;
@@ -19719,12 +19707,12 @@ html.decorate-links .lowSaturationUnderline_c7819f {
     height: 400px
 }
 
-.clickableCard_e0fe28:hover {
+.clickableCard_e0fe28:hover .card_e0fe28 {
     box-shadow: var(--shadow-high);
     transform: translatey(-2px)
 }
 
-.clickableCard_e0fe28:active {
+.clickableCard_e0fe28:active .card_e0fe28 {
     box-shadow: var(--shadow-low);
     transform: translatey(-2px)scale(.99)
 }
@@ -19737,7 +19725,12 @@ html.decorate-links .lowSaturationUnderline_c7819f {
     overflow: hidden;
     background-color: var(--bg-base-tertiary);
     display: flex;
-    flex-direction: column
+    flex-direction: column;
+    box-sizing: border-box
+}
+
+.full-motion .card_e0fe28 {
+    transition: transform.2s, box-shadow.1s
 }
 
 .skeletonCard_e0fe28 {
