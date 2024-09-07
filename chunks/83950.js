@@ -11,8 +11,8 @@ var s = e(735250),
     c = e(37234),
     i = e(809206),
     d = e(100527),
-    l = e(906732),
-    _ = e(213609),
+    _ = e(906732),
+    l = e(213609),
     E = e(1585),
     L = e(313201),
     u = e(300284),
@@ -67,35 +67,41 @@ function I() {
     });
 }
 function h(a) {
-    let { transitionState: t, onClose: e } = a,
-        v = (0, L.Dt)(),
-        { analyticsLocations: D } = (0, l.ZP)(d.Z.COLLECTIBLES_EXPIRY_MODAL),
-        h = (0, u.Z)({ analyticsLocations: D }),
-        m = r.useRef(null);
+    let { transitionState: t, onClose: e, skuId: v } = a,
+        D = (0, L.Dt)(),
+        { analyticsLocations: h } = (0, _.ZP)(d.Z.COLLECTIBLES_EXPIRY_MODAL),
+        m = (0, u.Z)({ analyticsLocations: h }),
+        p = r.useRef(null);
     return (
         r.useEffect(
             () => (
                 (0, i.Mn)({ avatarDecoration: null }),
                 () => {
-                    A.default.track(f.rMx.COLLECTIBLES_EXPIRY_MODAL_CLOSED, { reason: m.current });
+                    A.default.track(f.rMx.COLLECTIBLES_EXPIRY_MODAL_CLOSED, {
+                        reason: p.current,
+                        sku_id: v
+                    });
                 }
             ),
-            []
+            [v]
         ),
-        (0, _.Z)({
+        (0, l.Z)({
             type: o.ImpressionTypes.MODAL,
             name: o.ImpressionNames.COLLECTIBLES_EXPIRY_MODAL,
-            properties: { location_stack: D }
+            properties: {
+                location_stack: h,
+                sku_id: v
+            }
         }),
         (0, s.jsxs)(n.ModalRoot, {
             transitionState: t,
-            'aria-labelledby': v,
+            'aria-labelledby': D,
             className: B.container,
             children: [
                 (0, s.jsx)(I, {}),
                 (0, s.jsx)(n.ModalCloseButton, {
                     onClick: () => {
-                        (m.current = 'tap_close_button'), e();
+                        (p.current = 'tap_close_button'), e();
                     },
                     className: B.closeButton
                 }),
@@ -121,7 +127,7 @@ function h(a) {
                             look: n.Button.Looks.LINK,
                             color: n.Button.Colors.BRAND,
                             onClick: () => {
-                                (m.current = 'change_avatar_decoration'), e(), (0, c.xf)(), h(), (0, E.ps)({ analyticsLocations: D });
+                                (p.current = 'change_avatar_decoration'), e(), (0, c.xf)(), m(), (0, E.ps)({ analyticsLocations: h });
                             },
                             children: S.Z.Messages.COLLECTIBLES_EPHEMERAL_DECO_UPSELL_CTA_2
                         }),
@@ -129,10 +135,10 @@ function h(a) {
                             look: n.Button.Looks.FILLED,
                             color: n.Button.Colors.BRAND,
                             onClick: () => {
-                                (m.current = 'go_to_shop'),
+                                (p.current = 'go_to_shop'),
                                     e(),
                                     (0, C.mK)({
-                                        analyticsLocations: D,
+                                        analyticsLocations: h,
                                         analyticsSource: d.Z.COLLECTIBLES_EXPIRY_MODAL,
                                         openInLayer: !1
                                     });
