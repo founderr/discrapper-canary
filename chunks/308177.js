@@ -19,9 +19,9 @@ var i,
     I = n(442545);
 let x = 424,
     T = 624,
-    S = 824;
+    v = 824;
 ((s = i || (i = {}))[(s.SELECTED = 0)] = 'SELECTED'), (s[(s.SPEAKER = 1)] = 'SPEAKER'), (s[(s.AUDIENCE = 2)] = 'AUDIENCE');
-let v = (e, t) => {
+let S = (e, t) => {
         let n = Math.floor(e / t - 8),
             i = Math.floor(n / g.Q);
         return {
@@ -29,7 +29,7 @@ let v = (e, t) => {
             speakerTileHeight: i
         };
     },
-    N = (e, t) => (e < x ? 1 : e < T ? 2 : e < S ? 3 : t ? 3 : 4),
+    N = (e, t) => (e < x ? 1 : e < T ? 2 : e < v ? 3 : t ? 3 : 4),
     A = (e) => Math.floor((e - 32) / 102);
 function Z(e) {
     return e.type === h.Ui.VOICE;
@@ -40,7 +40,7 @@ t.Z = (0, o.Z)((e) => {
         {
             selectedParticipantId: x,
             largeStream: T,
-            chatOpen: S
+            chatOpen: v
         } = (0, r.cj)(
             [c.Z],
             () => ({
@@ -54,10 +54,10 @@ t.Z = (0, o.Z)((e) => {
         b = (0, d.Rk)(i.id, h.pV.AUDIENCE),
         R = (0, r.e7)([u.Z], () => (null != x ? u.Z.getParticipant(i.id, x) : null)),
         L = (0, d.w8)(i.id, h.pV.SPEAKER),
-        P = L.filter(Z),
-        j = null != L.find((e) => e.type === h.Ui.STREAM),
+        j = L.filter(Z),
+        P = null != L.find((e) => e.type === h.Ui.STREAM),
         O = A(s),
-        y = N(s, S),
+        y = N(s, v),
         D = {
             [h.pV.SPEAKER]: y,
             [h.pV.AUDIENCE]: O,
@@ -66,7 +66,7 @@ t.Z = (0, o.Z)((e) => {
         k = (0, m.Dx)(i.id),
         [U, w] = (0, m.aP)(i.id, D, k),
         B = [Math.max(null !== (t = U[0]) && void 0 !== t ? t : 1, 1), Math.max(null !== (n = U[1]) && void 0 !== n ? n : 1, 1), U[2]],
-        { speakerTileWidth: H, speakerTileHeight: G } = v(s, y),
+        { speakerTileWidth: H, speakerTileHeight: G } = S(s, y),
         V = T ? s - 32 : Math.min(s - 64, 3 * H + 8),
         F = (e) => e === U.length - 1 || (0 === b && 1 === e),
         [W, z] = l.useState(!1),
@@ -86,9 +86,9 @@ t.Z = (0, o.Z)((e) => {
                               className: I.header,
                               onClick: () => z(!W),
                               collapsed: W,
-                              speakers: P,
+                              speakers: j,
                               channel: i,
-                              isStreamLive: j
+                              isStreamLive: P
                           },
                           'speaker-header-'.concat(t)
                       );

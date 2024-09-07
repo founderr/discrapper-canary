@@ -43,8 +43,8 @@ var i = n(735250),
     y = n(305325),
     B = n(281956),
     k = n(574650),
-    F = n(665302),
-    G = n(434404),
+    G = n(665302),
+    F = n(434404),
     w = n(918658),
     V = n(859428),
     H = n(963249),
@@ -597,7 +597,7 @@ let ef =
                       });
                   case ed.kVF.DISPATCH_INSTALL_SCRIPT_PROGRESS:
                       if (null == eu.metadata) return null;
-                      let { progress: ek, total: eF, name: eG } = eu.metadata;
+                      let { progress: ek, total: eG, name: eF } = eu.metadata;
                       return (0, i.jsxs)(c.Notice, {
                           color: c.NoticeColors.DEFAULT,
                           children: [
@@ -608,15 +608,15 @@ let ef =
                               (0, i.jsxs)(v.Z, {
                                   justify: v.Z.Justify.CENTER,
                                   children: [
-                                      null != eG
+                                      null != eF
                                           ? em.Z.Messages.NOTICE_DISPATCH_INSTALL_SCRIPT_PROGRESS_WITH_NAME.format({
-                                                name: ''.concat(eG),
+                                                name: ''.concat(eF),
                                                 progress: ''.concat(ek),
-                                                total: ''.concat(eF)
+                                                total: ''.concat(eG)
                                             })
                                           : em.Z.Messages.NOTICE_DISPATCH_INSTALL_SCRIPT_PROGRESS.format({
                                                 progress: ''.concat(ek),
-                                                total: ''.concat(eF)
+                                                total: ''.concat(eG)
                                             }),
                                       (0, i.jsx)(c.Spinner, {
                                           type: c.Spinner.Type.PULSING_ELLIPSIS,
@@ -804,7 +804,7 @@ let ef =
                           ]
                       });
                   case ed.kVF.BACK_TO_PREVIOUS_SCREEN:
-                      return (0, i.jsx)(F.h, {
+                      return (0, i.jsx)(G.h, {
                           buttonText: null !== (a = eu.buttonText) && void 0 !== a ? a : em.Z.Messages.GO_BACK,
                           onGoBack: eu.callback,
                           onDismiss: () => eC(),
@@ -886,7 +886,7 @@ let ef =
                               }),
                               null != R
                                   ? (0, i.jsx)(c.NoticeButton, {
-                                        onClick: () => G.Z.open(R, ed.pNK.GUILD_AUTOMOD, void 0, ed.KsC.AUTOMOD_MENTION_SPAM),
+                                        onClick: () => F.Z.open(R, ed.pNK.GUILD_AUTOMOD, void 0, ed.KsC.AUTOMOD_MENTION_SPAM),
                                         children: em.Z.Messages.GUILD_AUTOMOD_MENTION_SPAM_NOTICE_CONFIGURE_SETTINGS
                                     })
                                   : null

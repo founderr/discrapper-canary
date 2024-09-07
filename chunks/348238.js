@@ -27,7 +27,7 @@ n.d(t, {
         return V;
     },
     bb: function () {
-        return G;
+        return F;
     },
     qo: function () {
         return j;
@@ -39,7 +39,7 @@ n.d(t, {
         return B;
     },
     tn: function () {
-        return F;
+        return G;
     },
     wq: function () {
         return U;
@@ -225,7 +225,7 @@ function k(e, t) {
         [i, n]
     );
 }
-function F(e, t, n) {
+function G(e, t, n) {
     let { canShowReactionsOnMessageHover: i } = u.ZP.useExperiment({ location: 'useHoveredMessage' }, { autoTrackExposure: !1 }),
         a = ''.concat(e, ':').concat(t),
         r = s.useRef(n),
@@ -244,7 +244,7 @@ function F(e, t, n) {
         handleMouseLeave: _
     };
 }
-function G(e, t) {
+function F(e, t) {
     let [n, i] = s.useState(!1),
         [a, r] = s.useState(!1),
         l = s.useCallback(

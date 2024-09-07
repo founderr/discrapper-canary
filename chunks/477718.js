@@ -23,8 +23,8 @@ var i = n(735250),
     I = n(274730),
     x = n(5192),
     T = n(776767),
-    S = n(689938),
-    v = n(577904),
+    v = n(689938),
+    S = n(577904),
     N = n(395193),
     A = n(446926);
 function Z(e) {
@@ -47,13 +47,13 @@ function Z(e) {
                 null == t.user
                     ? null
                     : (0, i.jsx)(u.Tooltip, {
-                          text: S.Z.Messages.GUILD_MEMBER_MOD_VIEW_AUDIT_LOG_SOURCE_USER,
+                          text: v.Z.Messages.GUILD_MEMBER_MOD_VIEW_AUDIT_LOG_SOURCE_USER,
                           children: (e) => {
                               var s;
                               let { onMouseEnter: a, onMouseLeave: l } = e;
                               return (0, i.jsx)(u.Clickable, {
                                   tag: 'span',
-                                  className: v.username,
+                                  className: S.username,
                                   onClick: Z(A),
                                   onMouseEnter: a,
                                   onMouseLeave: l,
@@ -74,13 +74,13 @@ function Z(e) {
             [Z, t.user, n.guildId, A]
         )();
     return (0, i.jsxs)('div', {
-        className: l()(N.modInfoItem, v.auditLogItem),
+        className: l()(N.modInfoItem, S.auditLogItem),
         children: [
             (0, i.jsxs)('div', {
-                className: v.auditLogItemTitleContainer,
+                className: S.auditLogItemTitleContainer,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: v.auditLogItemTitle,
+                        className: S.auditLogItemTitle,
                         children: [
                             null != d &&
                                 (0, i.jsx)(u.Text, {
@@ -97,7 +97,7 @@ function Z(e) {
                         ]
                     }),
                     (0, i.jsx)('div', {
-                        className: v.auditLogItemDate,
+                        className: S.auditLogItemDate,
                         children: (0, i.jsx)(u.Text, {
                             variant: 'text-sm/medium',
                             color: 'header-primary',
@@ -108,9 +108,9 @@ function Z(e) {
             }),
             null != C &&
                 (0, i.jsx)('div', {
-                    className: v.auditLogSecondaryContainer,
+                    className: S.auditLogSecondaryContainer,
                     children: (0, i.jsxs)('div', {
-                        className: v.auditLogReason,
+                        className: S.auditLogReason,
                         children: [
                             M,
                             (0, i.jsx)(u.Text, {
@@ -125,9 +125,9 @@ function Z(e) {
             null == C &&
                 null != I &&
                 (0, i.jsx)('div', {
-                    className: v.auditLogSecondaryContainer,
+                    className: S.auditLogSecondaryContainer,
                     children: (0, i.jsxs)('div', {
-                        className: v.auditLogSecondary,
+                        className: S.auditLogSecondary,
                         children: [
                             M,
                             (0, i.jsx)(u.Text, {
@@ -142,9 +142,9 @@ function Z(e) {
             null == C &&
                 null == I &&
                 (0, i.jsx)('div', {
-                    className: v.auditLogSecondaryContainer,
+                    className: S.auditLogSecondaryContainer,
                     children: (0, i.jsx)('div', {
-                        className: v.auditLogSecondary,
+                        className: S.auditLogSecondary,
                         children: (0, i.jsx)(u.Text, {
                             variant: 'text-sm/normal',
                             color: 'text-muted',
@@ -153,7 +153,7 @@ function Z(e) {
                                 log: t,
                                 guild: a,
                                 onContentClick: () => {},
-                                className: v.auditLogExpandedChangeDetails
+                                className: S.auditLogExpandedChangeDetails
                             })
                         })
                     })
@@ -180,7 +180,7 @@ function M(e) {
     null == n || 0 === a.length)
         ? null
         : (0, i.jsx)(u.FormItem, {
-              title: S.Z.Messages.GUILD_MEMBER_MOD_VIEW_RECENT_AUDIT_LOG,
+              title: v.Z.Messages.GUILD_MEMBER_MOD_VIEW_RECENT_AUDIT_LOG,
               titleClassName: A.infoTitle,
               children:
                   a.length > 0

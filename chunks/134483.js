@@ -36,8 +36,8 @@ var i = n(735250),
     y = n(212522);
 t.Z = function (e) {
     var t, n, a;
-    let { channelId: B, previewQuest: k, isParticipatingOverride: F } = e,
-        [G, w] = s.useState(!1),
+    let { channelId: B, previewQuest: k, isParticipatingOverride: G } = e,
+        [F, w] = s.useState(!1),
         V = s.useCallback(() => w(!0), []),
         H = s.useCallback(() => w(!1), []),
         Y = s.useContext(I.h9),
@@ -101,7 +101,7 @@ t.Z = function (e) {
             },
             [q, J, W]
         ),
-        ee = !0 === F || Q || $,
+        ee = !0 === G || Q || $,
         et = (0, l.e7)([f.Z], () => null != q && f.Z.isEnrolling(q.id), [q]),
         en = (0, l.e7)([u.Z], () => ((null == W ? void 0 : W.id) == null ? null : u.Z.getParticipant(B, W.id)) != null, [B, W]),
         ei = (0, C.B6)(null == q ? void 0 : q.config.expiresAt),
@@ -161,7 +161,7 @@ t.Z = function (e) {
     let eh = (0, g.il)(q),
         eN = (0, i.jsx)(M.Z, {
             className: y.rewardTile,
-            autoplay: G,
+            autoplay: F,
             quest: q,
             questContent: p.jn.QUEST_LIVE_STREAM,
             location: D.dr.QUEST_CHANNEL_CALL_HEADER
@@ -251,7 +251,7 @@ t.Z = function (e) {
                                 !e_ &&
                                 !ee &&
                                 (0, i.jsx)(Z.Z, {
-                                    autoplay: G,
+                                    autoplay: F,
                                     quest: q,
                                     questContent: p.jn.QUEST_LIVE_STREAM,
                                     taskDetails: eh,

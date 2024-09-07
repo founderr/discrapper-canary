@@ -18,8 +18,8 @@ var i = n(735250),
     I = n(689938),
     x = n(307529),
     T = n(438379),
-    S = n(910212);
-let v = s.memo(function (e) {
+    v = n(910212);
+let S = s.memo(function (e) {
     let { message: t, notice: n, compact: s = !1, onDismiss: a } = e;
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -76,7 +76,7 @@ t.Z = s.memo(function (e) {
         }, [C, u.content, _, N, p]),
         (0, i.jsxs)('div', {
             id: (0, f.ut)(u),
-            className: l()(a, S.markup, {
+            className: l()(a, v.markup, {
                 [T.messageContent]: !0,
                 [T.markupRtl]: 'rtl' === o()(u.content),
                 [x.blockedEdit]: null == Z ? void 0 : Z.isBlockedEdit,
@@ -100,7 +100,7 @@ t.Z = s.memo(function (e) {
                             })
                         ]
                     }),
-                (0, i.jsx)(v, {
+                (0, i.jsx)(S, {
                     notice: null !== (n = null == Z ? void 0 : Z.errorMessage) && void 0 !== n ? n : I.Z.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_SEND_NOTICE,
                     message: u,
                     compact: r,

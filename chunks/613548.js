@@ -24,8 +24,8 @@ var i = n(735250),
     I = n(933843),
     x = n(141321),
     T = n(121254),
-    S = n(954551),
-    v = n(44136),
+    v = n(954551),
+    S = n(44136),
     N = n(651183),
     A = n(618158),
     Z = n(390322),
@@ -33,8 +33,8 @@ var i = n(735250),
     b = n(961048),
     R = n(179424),
     L = n(786915),
-    P = n(975146),
-    j = n(991617),
+    j = n(975146),
+    P = n(991617),
     O = n(597998),
     y = n(606304),
     D = n(594174),
@@ -52,7 +52,7 @@ function W(e) {
         a = (0, u.e7)([y.Z, k.Z], () =>
             o()(y.Z.getSpeakers())
                 .map((e) => k.Z.getParticipant(t, e))
-                .filter((e) => null != e && e.type === H.fO.USER && e.speaking && !(0, v.ZP)(e))
+                .filter((e) => null != e && e.type === H.fO.USER && e.speaking && !(0, S.ZP)(e))
                 .sortBy((e) => -y.Z.getSpeakingDuration(e.user.id, s))
                 .slice(0, 3)
                 .value()
@@ -84,7 +84,7 @@ function W(e) {
 }
 function z(e) {
     let { inPopout: t, channel: n, appContext: a, inCall: l, isChatOpen: r, exitFullScreen: o } = e,
-        v = n.id,
+        S = n.id,
         {
             voiceParticipantsHidden: O,
             selectedParticipant: y,
@@ -92,11 +92,11 @@ function z(e) {
         } = (0, u.cj)(
             [k.Z],
             () => ({
-                selectedParticipant: k.Z.getSelectedParticipant(v),
-                voiceParticipantsHidden: k.Z.getVoiceParticipantsHidden(v),
-                userParticipantCount: k.Z.getUserParticipantCount(v)
+                selectedParticipant: k.Z.getSelectedParticipant(S),
+                voiceParticipantsHidden: k.Z.getVoiceParticipantsHidden(S),
+                userParticipantCount: k.Z.getUserParticipantCount(S)
             }),
-            [v]
+            [S]
         ),
         z = (0, u.e7)([D.default], () => D.default.getCurrentUser()),
         Y = (0, U.Z)(n),
@@ -130,7 +130,7 @@ function z(e) {
                 (0, i.jsx)(
                     W,
                     {
-                        channelId: v,
+                        channelId: S,
                         guildId: n.guild_id
                     },
                     'current-speaker'
@@ -141,7 +141,7 @@ function z(e) {
                 p.Z,
                 {
                     className: F.button,
-                    channelId: v
+                    channelId: S
                 },
                 'clips-enabled-indicator'
             )
@@ -179,7 +179,7 @@ function z(e) {
                         renderPopout: () => (0, i.jsx)(Z.Z, { children: (0, i.jsx)(B.Z, { channel: n }) }),
                         children: (e, t) => {
                             let { isShown: n } = t;
-                            return (0, s.createElement)(P.Z, {
+                            return (0, s.createElement)(j.Z, {
                                 ...e,
                                 isActive: n,
                                 count: V,
@@ -198,15 +198,15 @@ function z(e) {
                           R.Z,
                           {
                               className: F.button,
-                              channelId: v
+                              channelId: S
                           },
                           'deselect-participant'
                       )
                     : (0, i.jsx)(
-                          j.Z,
+                          P.Z,
                           {
                               className: F.button,
-                              channelId: v,
+                              channelId: S,
                               isHorizontal: !0
                           },
                           'select-participant'
@@ -224,7 +224,7 @@ function z(e) {
                 'recents'
             )
         ),
-        Q && ee.push((0, i.jsx)(S.Z, { className: F.button }, 'for-later')),
+        Q && ee.push((0, i.jsx)(v.Z, { className: F.button }, 'for-later')),
         ee.push(
             (0, i.jsx)(
                 d.Popout,
@@ -234,7 +234,7 @@ function z(e) {
                         let { closePopout: t } = e;
                         return (0, i.jsx)(Z.Z, {
                             children: (0, i.jsx)(w.Z, {
-                                channelId: v,
+                                channelId: S,
                                 onClose: t,
                                 appContext: a,
                                 exitFullScreen: o

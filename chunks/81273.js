@@ -37,18 +37,18 @@ t.Z = (e, t, n, a) => {
         y = null == U ? void 0 : U.id,
         B = (null == e ? void 0 : e.published) === !0,
         k = null == U ? void 0 : U.sku_id,
-        F = (0, c.e7)([f.Z], () => (null != y ? f.Z.get(y) : null)),
-        { activeSubscription: G, activeSubscriptionPlanFromStore: w } = (0, R.Z)(n),
-        V = null == G || null != w,
+        G = (0, c.e7)([f.Z], () => (null != y ? f.Z.get(y) : null)),
+        { activeSubscription: F, activeSubscriptionPlanFromStore: w } = (0, R.Z)(n),
+        V = null == F || null != w,
         H = (0, S._k)(n, { includeSoftDeleted: !0 }).map((e) => e.subscription_plans[0].id),
-        Y = (0, A.V)(G),
+        Y = (0, A.V)(F),
         W = null != Y,
-        K = (null == G ? void 0 : G.trialId) != null,
+        K = (null == F ? void 0 : F.trialId) != null,
         { loading: z, getTrialPurchaseEligibility: Q } = (0, O.F)(),
         q = (0, S.oC)(null == e ? void 0 : e.id),
         { analyticsLocations: X } = (0, E.ZP)(),
-        J = (null == G ? void 0 : G.paymentGateway) === L.gg$.APPLE_PARTNER;
-    j ? (l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_REQUIRE_APPROVED_MEMBER) : P && !D ? (l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_REQUIRE_APPROVED_MEMBER) : Y === y ? (l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_HAS_PENDING_MUTATION_TO_CURRENT_LISTING.format({ changeDate: null != G ? o()(G.currentPeriodEnd).format('MMM DD, YYYY') : '' })) : W ? (l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_HAS_PENDING_MUTATION) : K ? (l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHANGE_TIER_DISABLED_IN_TRIAL) : J && (l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHANGE_TIER_DISABLED_IF_IAP);
+        J = (null == F ? void 0 : F.paymentGateway) === L.gg$.APPLE_PARTNER;
+    j ? (l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_REQUIRE_APPROVED_MEMBER) : P && !D ? (l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_REQUIRE_APPROVED_MEMBER) : Y === y ? (l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_HAS_PENDING_MUTATION_TO_CURRENT_LISTING.format({ changeDate: null != F ? o()(F.currentPeriodEnd).format('MMM DD, YYYY') : '' })) : W ? (l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_HAS_PENDING_MUTATION) : K ? (l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHANGE_TIER_DISABLED_IN_TRIAL) : J && (l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHANGE_TIER_DISABLED_IF_IAP);
     let $ = (0, _.Z)(v.iP);
     s.useEffect(() => {
         B &&
@@ -67,7 +67,7 @@ t.Z = (e, t, n, a) => {
                 } else s = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_INELIGIBLE_TRIAL_DISCLAIMER;
             }
             (0, C.Z)({
-                activeSubscription: G,
+                activeSubscription: F,
                 analyticsSubscriptionType: L.NYc.GUILD,
                 trialId: n,
                 trialFooterMessageOverride:
@@ -109,13 +109,13 @@ t.Z = (e, t, n, a) => {
                           }),
                 reviewWarningMessage: s
             });
-        }, [B, e, U, G, H, t, X, a, Q, q, $]),
+        }, [B, e, U, F, H, t, X, a, Q, q, $]),
         et = s.useCallback(() => {
             (0, I.hk)(t);
         }, [t]);
     return {
         openModal: D ? et : ee,
-        canOpenModal: !P && null != F && V && !j && !W && !K && !J,
+        canOpenModal: !P && null != G && V && !j && !W && !K && !J,
         cannotOpenReason: l,
         isCheckingTrialEligibility: z
     };

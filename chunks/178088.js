@@ -79,10 +79,10 @@ function R(e) {
         }, [D, y]);
     s.useEffect(() => (T.S.subscribe(S.CkL.TOGGLE_INBOX_UNREADS_TAB, B), () => void T.S.unsubscribe(S.CkL.TOGGLE_INBOX_UNREADS_TAB, B)), [B]);
     let { showReminders: k } = E.Z.useExperiment({ location: 'RecentsPopout' }, { autoTrackExposure: !1 }),
-        { enabled: F } = _.Z.useExperiment({ location: 'RecentsPopout' }, { autoTrackExposure: !1 }),
-        { enabled: G } = d.Z.useExperiment({ location: 'RecentsPopout' });
+        { enabled: G } = _.Z.useExperiment({ location: 'RecentsPopout' }, { autoTrackExposure: !1 }),
+        { enabled: F } = d.Z.useExperiment({ location: 'RecentsPopout' });
     s.useEffect(() => {
-        ((!k && P === l.X.TODOS) || (!F && P === l.X.BOOKMARKS)) && D(l.X.MENTIONS);
+        ((!k && P === l.X.TODOS) || (!G && P === l.X.BOOKMARKS)) && D(l.X.MENTIONS);
     });
     let w = s.useCallback(
         (e) => {
@@ -116,13 +116,13 @@ function R(e) {
                                     badgeState: O,
                                     closePopout: U
                                 })
-                              : G && P === l.X.GAME_INVITES
+                              : F && P === l.X.GAME_INVITES
                                 ? (0, i.jsx)(g.Z, {
                                       setTab: D,
                                       badgeState: O,
                                       closePopout: U
                                   })
-                                : F && P === l.X.BOOKMARKS
+                                : G && P === l.X.BOOKMARKS
                                   ? (0, i.jsx)(N.Z, {
                                         setTab: D,
                                         onJump: w,

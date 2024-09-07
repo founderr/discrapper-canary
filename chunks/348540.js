@@ -24,15 +24,15 @@ var s = n(442837),
     I = n(7242),
     x = n(827313),
     T = n(228168),
-    S = n(981631),
-    v = n(689938),
+    v = n(981631),
+    S = n(689938),
     N = n(836272);
 function A(e) {
     let { user: t, currentUser: n, displayProfile: A, channel: Z, isHovering: M, onOpenProfile: b } = e,
         { activeInviteToCallCtaEnabled: R } = (0, c.l)({ location: 'UserProfilePanelBody' }),
         L = (0, s.e7)([a.Z], () => a.Z.getRelationshipType(t.id)),
-        P = (0, s.e7)([l.Z], () => l.Z.hidePersonalInformation),
-        j = (0, s.e7)([o.Z], () => {
+        j = (0, s.e7)([l.Z], () => l.Z.hidePersonalInformation),
+        P = (0, s.e7)([o.Z], () => {
             var e;
             return null === (e = o.Z.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application;
         });
@@ -52,7 +52,7 @@ function A(e) {
                 nicknameIcons: (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(p.Z, { userId: t.id }),
-                        !P &&
+                        !j &&
                             (0, i.jsx)(x.Z, {
                                 userId: t.id,
                                 isHovering: M,
@@ -61,7 +61,7 @@ function A(e) {
                     ]
                 })
             }),
-            L === S.OGo.PENDING_INCOMING &&
+            L === v.OGo.PENDING_INCOMING &&
                 (0, i.jsx)(g.Z.Overlay, {
                     children: (0, i.jsx)(_.Z, {
                         user: t,
@@ -77,11 +77,11 @@ function A(e) {
             (0, i.jsxs)(g.Z.Overlay, {
                 className: N.overlay,
                 children: [
-                    !P &&
+                    !j &&
                         (null == A ? void 0 : A.bio) != null &&
                         (null == A ? void 0 : A.bio) !== '' &&
                         (0, i.jsx)(E.Z, {
-                            heading: v.Z.Messages.USER_POPOUT_ABOUT_ME,
+                            heading: S.Z.Messages.USER_POPOUT_ABOUT_ME,
                             headingColor: 'header-primary',
                             children: (0, i.jsx)(h.Z, {
                                 userBio: A.bio,
@@ -90,14 +90,14 @@ function A(e) {
                                 userId: t.id
                             })
                         }),
-                    (null == j ? void 0 : j.popularApplicationCommandIds) != null &&
+                    (null == P ? void 0 : P.popularApplicationCommandIds) != null &&
                         (0, i.jsx)(u.Z, {
-                            applicationId: j.id,
-                            commandIds: j.popularApplicationCommandIds,
+                            applicationId: P.id,
+                            commandIds: P.popularApplicationCommandIds,
                             channel: Z
                         }),
                     (0, i.jsx)(E.Z, {
-                        heading: t.bot ? v.Z.Messages.BOT_PROFILE_CREATED_ON : v.Z.Messages.USER_PROFILE_MEMBER_SINCE,
+                        heading: t.bot ? S.Z.Messages.BOT_PROFILE_CREATED_ON : S.Z.Messages.USER_PROFILE_MEMBER_SINCE,
                         headingColor: 'header-primary',
                         children: (0, i.jsx)(f.Z, { userId: t.id })
                     })

@@ -25,8 +25,8 @@ var i = n(735250),
     I = n(173507),
     x = n(523746),
     T = n(819640),
-    S = n(131951),
-    v = n(699516),
+    v = n(131951),
+    S = n(699516),
     N = n(594174),
     A = n(979651),
     Z = n(585483),
@@ -34,8 +34,8 @@ var i = n(735250),
     b = n(665149),
     R = n(981631),
     L = n(921944),
-    P = n(65154),
-    j = n(689938),
+    j = n(65154),
+    P = n(689938),
     O = n(517759);
 function y(e, t, n) {
     return (
@@ -65,7 +65,7 @@ class D extends s.PureComponent {
             d = null,
             h = !1;
         return (
-            S.Z.supports(P.AN.VIDEO) ? (l ? ((d = j.Z.Messages.CALL_UNAVAILABLE_BLOCKED_USERS), (e = r.Tooltip.Colors.RED), (h = !0)) : s && c === R.WtW.VIDEO ? ((t = this.handleJoinVideoCall), (d = u ? j.Z.Messages.CONNECT : j.Z.Messages.JOIN_VIDEO_CALL)) : ((t = this.handleStartVideoCall), (d = u ? j.Z.Messages.CONNECT : j.Z.Messages.START_VIDEO_CALL))) : ((h = !0), (t = this.handleBrowserNotSupported), (d = j.Z.Messages.BROWSER_NOT_SUPPORTED)),
+            v.Z.supports(j.AN.VIDEO) ? (l ? ((d = P.Z.Messages.CALL_UNAVAILABLE_BLOCKED_USERS), (e = r.Tooltip.Colors.RED), (h = !0)) : s && c === R.WtW.VIDEO ? ((t = this.handleJoinVideoCall), (d = u ? P.Z.Messages.CONNECT : P.Z.Messages.JOIN_VIDEO_CALL)) : ((t = this.handleStartVideoCall), (d = u ? P.Z.Messages.CONNECT : P.Z.Messages.START_VIDEO_CALL))) : ((h = !0), (t = this.handleBrowserNotSupported), (d = P.Z.Messages.BROWSER_NOT_SUPPORTED)),
             (0, i.jsx)(b.ZP.Icon, {
                 icon: r.VideoIcon,
                 onClick: t,
@@ -82,7 +82,7 @@ class D extends s.PureComponent {
         let m = c.isManaged(),
             _ = '',
             E = !1;
-        a ? ((_ = m ? j.Z.Messages.VOICE_UNAVAILABLE : j.Z.Messages.CALL_UNAVAILABLE), (e = r.Tooltip.Colors.RED), (E = !0)) : o ? ((_ = j.Z.Messages.CALL_UNAVAILABLE_BLOCKED_USERS), (e = r.Tooltip.Colors.RED), (E = !0)) : (_ = s ? (m ? j.Z.Messages.CONNECT : j.Z.Messages.JOIN_VOICE_CALL) : m ? j.Z.Messages.CONNECT : j.Z.Messages.START_VOICE_CALL);
+        a ? ((_ = m ? P.Z.Messages.VOICE_UNAVAILABLE : P.Z.Messages.CALL_UNAVAILABLE), (e = r.Tooltip.Colors.RED), (E = !0)) : o ? ((_ = P.Z.Messages.CALL_UNAVAILABLE_BLOCKED_USERS), (e = r.Tooltip.Colors.RED), (E = !0)) : (_ = s ? (m ? P.Z.Messages.CONNECT : P.Z.Messages.JOIN_VOICE_CALL) : m ? P.Z.Messages.CONNECT : P.Z.Messages.START_VOICE_CALL);
         let C = (0, i.jsx)(b.ZP.Icon, {
             icon: r.PhoneCallIcon,
             onClick: this.handleVoiceClick,
@@ -117,7 +117,7 @@ class D extends s.PureComponent {
                                         (0, i.jsx)(r.Heading, {
                                             variant: 'heading-md/bold',
                                             color: 'always-white',
-                                            children: j.Z.Messages.EMBEDDED_ACTIVITIES_DM_TOOLTIP_HEADER
+                                            children: P.Z.Messages.EMBEDDED_ACTIVITIES_DM_TOOLTIP_HEADER
                                         })
                                     ]
                                 }),
@@ -126,15 +126,15 @@ class D extends s.PureComponent {
                                         (0, i.jsx)(r.Text, {
                                             variant: 'text-sm/normal',
                                             color: 'always-white',
-                                            children: j.Z.Messages.EMBEDDED_ACTIVITIES_DM_TOOLTIP_BODY
+                                            children: P.Z.Messages.EMBEDDED_ACTIVITIES_DM_TOOLTIP_BODY
                                         }),
                                         (0, i.jsx)(r.Anchor, {
                                             href: M.Z.getArticleURL(R.BhN.ACTIVITIES),
-                                            children: j.Z.Messages.LEARN_MORE
+                                            children: P.Z.Messages.LEARN_MORE
                                         })
                                     ]
                                 }),
-                                buttonCTA: j.Z.Messages.GOT_IT,
+                                buttonCTA: P.Z.Messages.GOT_IT,
                                 onClick: () => {
                                     t(), a(L.L.UNKNOWN);
                                 },
@@ -192,20 +192,20 @@ function k(e) {
             callUnavailable: x.Z.isCallUnavailable(t.id)
         })),
         f = t.getRecipientId(),
-        { notFriend: g, isBlocked: C } = (0, a.cj)([v.Z], () => ({
-            notFriend: t.type === R.d4z.DM && null != f && !v.Z.isFriend(f),
-            isBlocked: t.type === R.d4z.DM && null != f && v.Z.isBlocked(f)
+        { notFriend: g, isBlocked: C } = (0, a.cj)([S.Z], () => ({
+            notFriend: t.type === R.d4z.DM && null != f && !S.Z.isFriend(f),
+            isBlocked: t.type === R.d4z.DM && null != f && S.Z.isBlocked(f)
         })),
         I = (0, a.e7)([N.default], () => N.default.getUser(f)),
-        S = (0, u.bp)(),
+        v = (0, u.bp)(),
         Z = [],
         M = (0, h.Z)(t.id),
         b = (0, a.e7)([T.Z], () => T.Z.hasLayers());
     M && !b && Z.push(l.z.ACTIVITY_GDM_CALL_TOOLTIP);
-    let [L, P] = s.useState(!1);
+    let [L, j] = s.useState(!1);
     return (s.useEffect(() => {
         let e = setTimeout(() => {
-            P(!0);
+            j(!0);
         }, 250);
         return () => clearTimeout(e);
     }, []),
@@ -219,7 +219,7 @@ function k(e) {
               callUnavailable: _,
               notFriend: g,
               isBlocked: C,
-              appContext: S,
+              appContext: v,
               canShowTooltip: L,
               canShowActivityGdmTooltip: M,
               dismissibleContentTypes: Z,

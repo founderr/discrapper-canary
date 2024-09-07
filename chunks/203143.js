@@ -240,7 +240,7 @@ async function k(e) {
         );
     }
 }
-async function F(e) {
+async function G(e) {
     let { channelId: t, messageId: n, type: i } = e;
     switch (i) {
         case 'submit':
@@ -307,7 +307,7 @@ async function F(e) {
             s()(!1, 'Unknown poll action type: '.concat(i));
     }
 }
-async function G(e) {
+async function F(e) {
     let { channel: t, question: n, answers: i, allowMultiSelect: s, duration: a, layout: r, onClose: o } = e,
         c = A.Z.getUploads(t.id, p.d.Poll),
         u = i.map((e) => {
@@ -448,7 +448,7 @@ t.Z = {
     },
     handlePollSubmitVote: B,
     handleUpdateVoteEditingState: j,
-    handlePollActionTapped: F,
-    createPoll: G,
+    handlePollActionTapped: G,
+    createPoll: F,
     endPollEarly: w
 };

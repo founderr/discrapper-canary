@@ -27,19 +27,19 @@ function S(e, n) {
         { isLoading: S, saveRule: T, errorMessage: v } = (0, c.w)(),
         { createNewEditingRule: A } = (0, c.V)(),
         [R, h] = i.useState(!1),
-        [N, O] = (0, o.I2)(n),
+        [O, N] = (0, o.I2)(n),
         { rulesByTriggerType: p, updateRule: x } = (0, o.pH)(n),
         j = i.useMemo(() => {
             var e;
             return null !== (e = p[Z]) && void 0 !== e ? e : [];
         }, [p]),
-        D = 0 === j.length,
-        b = t > j.length && !D;
+        b = 0 === j.length,
+        C = t > j.length && !b;
     if (!i.useMemo(() => (0, d.ze)(n), [n]) || null == e || 0 === e.length || null == n) return null;
-    let C = e.split(' '),
-        L = C.length;
+    let D = e.split(' '),
+        L = D.length;
     try {
-        (0, s.km)(C, g.RH);
+        (0, s.km)(D, g.RH);
     } catch (e) {
         return null;
     }
@@ -76,10 +76,10 @@ function S(e, n) {
             })
         });
     return (
-        !N &&
+        !O &&
             (y = (0, a.jsxs)(a.Fragment, {
                 children: [
-                    D &&
+                    b &&
                         (0, a.jsx)(l.MenuItem, {
                             id: 'add-first-rule',
                             label: _.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_AUTOMOD_RULE_CREATE,
@@ -115,7 +115,7 @@ function S(e, n) {
                             e.id
                         );
                     }),
-                    b &&
+                    C &&
                         (0, a.jsxs)(a.Fragment, {
                             children: [
                                 (0, a.jsx)(l.MenuSeparator, {}),
@@ -133,7 +133,7 @@ function S(e, n) {
             id: 'guild-automod-add-selection',
             label: _.Z.Messages.GUILD_AUTOMOD_ADD_SELECTION.format({ keywordCount: L }),
             onFocus: () => {
-                if (!R) h(!0), O();
+                if (!R) h(!0), N();
             },
             children: y
         })

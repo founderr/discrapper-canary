@@ -24,8 +24,8 @@ var i = n(735250),
     I = n(119096),
     x = n(502762),
     T = n(952124),
-    S = n(544989),
-    v = n(481932),
+    v = n(544989),
+    S = n(481932),
     N = n(272510),
     A = n(171368),
     Z = n(348540),
@@ -33,8 +33,8 @@ var i = n(735250),
     b = n(572791),
     R = n(228168),
     L = n(981631),
-    P = n(689938),
-    j = n(61291);
+    j = n(689938),
+    P = n(61291);
 function O(e) {
     let { user: t, currentUser: n, channel: O } = e,
         y = __OVERLAY__,
@@ -78,15 +78,15 @@ function O(e) {
                 displayProfile: D,
                 profileType: R.y0.PANEL,
                 themeOverride: k,
-                className: j.container,
+                className: P.container,
                 children: [
-                    null != q && (0, i.jsx)('div', { className: j.backdrop }),
+                    null != q && (0, i.jsx)('div', { className: P.backdrop }),
                     (0, i.jsxs)(a.u2, {
                         children: [
-                            (0, i.jsxs)(S.Z, {
+                            (0, i.jsxs)(v.Z, {
                                 profileType: R.y0.PANEL,
                                 children: [
-                                    (0, i.jsx)(v.Z, {
+                                    (0, i.jsx)(S.Z, {
                                         user: t,
                                         profileType: R.y0.PANEL
                                     }),
@@ -94,21 +94,21 @@ function O(e) {
                                 ]
                             }),
                             (0, i.jsxs)('header', {
-                                className: j.header,
+                                className: P.header,
                                 children: [
                                     (0, i.jsx)(g.Z, {
                                         user: t,
                                         displayProfile: D,
                                         profileType: R.y0.PANEL,
                                         animateOnHover: !G,
-                                        className: j.banner
+                                        className: P.banner
                                     }),
                                     (0, i.jsx)(I.Z, {
                                         isReply: Y,
                                         sent: W,
                                         shown: V,
                                         userId: t.id,
-                                        className: j.toast
+                                        className: P.toast
                                     }),
                                     (0, i.jsx)(E.Z, {
                                         location: 'UserProfilePanel',
@@ -136,7 +136,7 @@ function O(e) {
                                         setIsReplyInteraction: K,
                                         showReplyPopout: q === R.P.REPLY && Q === R.n_.STATUS
                                     }),
-                                    t.isClyde() && (0, i.jsx)(d.Z, { className: j.headerTag })
+                                    t.isClyde() && (0, i.jsx)(d.Z, { className: P.headerTag })
                                 ]
                             }),
                             (0, i.jsx)(Z.Z, {
@@ -156,12 +156,12 @@ function O(e) {
                     }),
                     !y &&
                         (0, i.jsx)('footer', {
-                            className: j.footer,
+                            className: P.footer,
                             children: (0, i.jsx)(l.Button, {
                                 fullWidth: !0,
                                 size: l.Button.Sizes.LARGE,
                                 look: l.Button.Looks.BLANK,
-                                color: j.footerButtonColor,
+                                color: P.footerButtonColor,
                                 onClick: () => {
                                     ee(),
                                         (0, p.pQ)({
@@ -170,7 +170,7 @@ function O(e) {
                                             ...w
                                         });
                                 },
-                                children: P.Z.Messages.VIEW_FULL_PROFILE
+                                children: j.Z.Messages.VIEW_FULL_PROFILE
                             })
                         }),
                     (null == D ? void 0 : D.profileEffectId) != null &&

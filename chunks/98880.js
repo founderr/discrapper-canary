@@ -27,8 +27,8 @@ var i,
     p = t(607070),
     _ = t(115130),
     C = t(317381),
-    h = t(361213),
-    f = t(542094),
+    f = t(361213),
+    h = t(542094),
     A = t(778569),
     E = t(182906),
     N = t(823531),
@@ -38,8 +38,8 @@ var i,
     g = t(695346),
     P = t(973616),
     S = t(695103),
-    b = t(880448),
-    L = t(768581),
+    L = t(880448),
+    b = t(768581),
     R = t(541099),
     T = t(783097),
     M = t(695676),
@@ -84,7 +84,7 @@ function w(e) {
 function V(e) {
     let { application: n, onClick: t, children: i, sectionName: a, resultsPosition: r, tracksImpression: c, disabled: m, containerStyle: p, look: _ } = e,
         C = g.Sb.useSetting(),
-        h = o.useCallback(
+        f = o.useCallback(
             (e) => {
                 if ((0, T.BQ)(n) && C) {
                     let t = n instanceof P.Z ? n : P.Z.createFromServer(n);
@@ -98,7 +98,7 @@ function V(e) {
             },
             [n, C]
         ),
-        { name: f, description: A } = o.useMemo(() => (0, T.sl)(n, { fakeAppIconURL: k }), [n]),
+        { name: h, description: A } = o.useMemo(() => (0, T.sl)(n, { fakeAppIconURL: k }), [n]),
         { trackItemImpressionRef: E } = (0, j.Z)({
             applicationId: n.id,
             sectionName: a,
@@ -126,9 +126,9 @@ function V(e) {
               innerRef: c ? E : void 0,
               className: x,
               onClick: t,
-              onContextMenu: h,
+              onContextMenu: f,
               'aria-label': U.Z.Messages.APP_LAUNCHER_APP_CARD_ARIA_LABEL.format({
-                  applicationName: f,
+                  applicationName: h,
                   applicationDescription: A
               }),
               children: (0, l.jsx)(d.FocusBlock, { children: i })
@@ -161,8 +161,8 @@ function W(e) {
 function F(e) {
     let { application: n, look: t, imageStyle: i, enableVideoBanner: a, disableBannerFadeIn: r, children: u } = e,
         { iconURL: m, name: p, description: C } = o.useMemo(() => (0, T.sl)(n, { fakeAppIconURL: k }), [n]),
-        h = o.useMemo(() => (null == C ? null : (0, y.ae)(C)), [C]),
-        f = (0, v.ZP)(m, ''),
+        f = o.useMemo(() => (null == C ? null : (0, y.ae)(C)), [C]),
+        h = (0, v.ZP)(m, ''),
         [A, E] = o.useState(!1),
         N = o.useCallback(() => {
             !0 === a && E(!0);
@@ -187,7 +187,7 @@ function F(e) {
                         className: i,
                         children: (0, l.jsx)(z, {
                             application: n,
-                            fallbackColor: f,
+                            fallbackColor: h,
                             showVideo: A,
                             disableFadeIn: r
                         })
@@ -259,7 +259,7 @@ function F(e) {
                                 variant: 'text-sm/normal',
                                 color: 'text-secondary',
                                 lineClamp: 1,
-                                children: h
+                                children: f
                             })
                         ]
                     }),
@@ -276,7 +276,7 @@ function Y() {
             (0, l.jsx)('div', {
                 className: B.devShelfBadge,
                 ...e,
-                children: (0, l.jsx)(b.Z, { className: B.devShelfIcon })
+                children: (0, l.jsx)(L.Z, { className: B.devShelfIcon })
             })
     });
 }
@@ -284,7 +284,7 @@ function G(e) {
     let { application: n } = e,
         t = (0, T.yJ)(n);
     if (null == t) return null;
-    let i = (0, f.fD)(t);
+    let i = (0, h.fD)(t);
     return null == i
         ? null
         : (0, l.jsx)(d.Tooltip, {
@@ -328,7 +328,7 @@ function X(e) {
         }),
         r = o.useMemo(() => {
             let e = (0, T.yJ)(n);
-            return null != e && null != e.activity_preview_video_asset_id ? (0, h.Z)(n.id, e.activity_preview_video_asset_id) : null;
+            return null != e && null != e.activity_preview_video_asset_id ? (0, f.Z)(n.id, e.activity_preview_video_asset_id) : null;
         }, [n]),
         [c, d] = o.useState(t);
     o.useEffect(() => {
@@ -365,7 +365,7 @@ function X(e) {
 function q(e) {
     let { bot: n, fallbackColor: t, disableFadeIn: i } = e,
         a = (0, c.e7)([p.Z], () => p.Z.useReducedMotion),
-        o = (0, L.aN)({
+        o = (0, b.aN)({
             id: n.id,
             banner: n.banner,
             canAnimate: !a,
@@ -427,7 +427,7 @@ function $(e) {
         [m, p] = (0, c.Wu)([C.ZP], () => [C.ZP.isLaunchingActivity(), C.ZP.getLaunchState(t.id, n.id)]),
         _ = null != p && p.isLaunching && p.componentId === u,
         {
-            onActivityItemSelected: h,
+            onActivityItemSelected: f,
             activityAction: A,
             buttonColor: E,
             buttonText: N
@@ -438,13 +438,13 @@ function $(e) {
             sectionName: a,
             launchingComponentId: u
         });
-    if (A === f.JS.START || A === f.JS.JOIN)
+    if (A === h.JS.START || A === h.JS.JOIN)
         return r
             ? (0, l.jsx)(w, {
                   ...s,
                   sectionName: a,
                   application: t,
-                  onClick: h,
+                  onClick: f,
                   disabled: m,
                   enableVideoBanner: !_,
                   children: _
@@ -478,7 +478,7 @@ function $(e) {
                 size: d.Button.Sizes.LARGE,
                 color: E,
                 disabled: m,
-                onClick: h,
+                onClick: f,
                 'aria-label': U.Z.Messages.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED_BUTTON_ARIA_LABEL.format({
                     buttonText: N,
                     applicationName: t.name

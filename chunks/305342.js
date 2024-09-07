@@ -225,8 +225,8 @@ t.Z = (e) => {
         { activeSubscription: D, activeSubscriptionListing: U } = (0, h.Z)(u),
         y = (null == U ? void 0 : U.id) === n,
         B = (null == D ? void 0 : D.status) === v.O0b.CANCELED,
-        [k, F] = s.useState(!1),
-        [G, w] = s.useState(!1),
+        [k, G] = s.useState(!1),
+        [F, w] = s.useState(!1),
         V = s.useCallback((e) => {
             let t = !1;
             null != e && (t = e.scrollHeight - e.clientHeight > 1), w(t);
@@ -319,16 +319,16 @@ t.Z = (e) => {
                                               (0, i.jsx)(o.Text, {
                                                   variant: 'text-sm/normal',
                                                   color: 'text-normal',
-                                                  className: r()((!G || !k) && Z.tierDescriptionTruncate),
+                                                  className: r()((!F || !k) && Z.tierDescriptionTruncate),
                                                   children: (0, i.jsx)('div', {
                                                       ref: V,
                                                       children: Y
                                                   })
                                               }),
-                                              G &&
+                                              F &&
                                                   (0, i.jsx)(j, {
                                                       isViewAll: k,
-                                                      onToggle: () => F((e) => !e),
+                                                      onToggle: () => G((e) => !e),
                                                       showMoreText: ei
                                                   })
                                           ]

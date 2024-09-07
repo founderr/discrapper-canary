@@ -31,20 +31,20 @@ function T(e) {
     let {
             memberStoreProps: { groups: t, rows: n, version: x },
             channelId: T,
-            guildId: S
+            guildId: v
         } = e,
-        [v, N] = i.useState(!1),
+        [S, N] = i.useState(!1),
         { requestId: A, entries: Z, impressionCappedEntryIds: M } = (0, _.Z)(T),
         b = (0, s.e7)([h.Z], () => h.Z.hidden),
         R = (0, s.e7)([c.Z], () => c.Z.isFocused()),
         L = (0, s.e7)([r.Z], () => r.Z.getChannel(T)),
-        P = (0, s.e7)([o.Z], () => o.Z.getGuild(S), [S]),
-        j = (0, m.E)(P),
-        O = null != j && j && (null == L ? void 0 : L.isForumChannel()) === !1,
+        j = (0, s.e7)([o.Z], () => o.Z.getGuild(v), [v]),
+        P = (0, m.E)(j),
+        O = null != P && P && (null == L ? void 0 : L.isForumChannel()) === !1,
         [y, D, k, U] = i.useMemo(() => {
             let e;
             if (null == Z || 0 === Z.length || null == A || !O) return [t, n, x];
-            let i = v ? Z.length : 3,
+            let i = S ? Z.length : 3,
                 s = Z.slice(0, i);
             e = b
                 ? [{ type: l.so.HIDDEN_CONTENT_INVENTORY }]
@@ -66,19 +66,19 @@ function T(e) {
                         return (
                             u.default.track(C.rMx.MEMBERLIST_CONTENT_FEED_TOGGLED, {
                                 channel_id: T,
-                                guild_id: S,
+                                guild_id: v,
                                 expanded: t
                             }),
                             t
                         );
                     });
                 },
-                expanded: v,
+                expanded: S,
                 expandedCount: Z.length,
                 feedHeight: e.map(f.iZ).reduce((e, t) => e + t, 0)
             };
             return [[a, ...t], [...n, a, ...e], Math.random(), e];
-        }, [T, Z, v, t, S, A, n, x, b, O]),
+        }, [T, Z, S, t, v, A, n, x, b, O]),
         w = i.useRef(0),
         B = i.useRef(Z),
         H = i.useRef(),
@@ -115,7 +115,7 @@ function T(e) {
                             item_ids: i,
                             surface_type: E.Kd.GUILD_MEMBER_LIST,
                             channel_id: T,
-                            guild_id: S,
+                            guild_id: v,
                             all_item_ids: n,
                             impression_capped_item_ids: [...G.current.impressionCappedEntryIds]
                         }),
@@ -126,7 +126,7 @@ function T(e) {
                                 });
                 }
             ),
-            [A, T, S, b, R, O]
+            [A, T, v, b, R, O]
         ),
         {
             groups: y,

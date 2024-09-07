@@ -150,8 +150,8 @@ let y = (e) => {
             b = g.ZP.canUseCustomStickersEverywhere(D),
             y = (0, l.e7)([C.Z], () => C.Z.getGuild(n.guild_id)),
             B = null != y,
-            [k, F] = s.useState(!1),
-            [G, w] = s.useState(null),
+            [k, G] = s.useState(!1),
+            [F, w] = s.useState(null),
             V = s.useMemo(
                 () => ({
                     page: null != a.guild_id ? M.ZY5.GUILD_CHANNEL : M.ZY5.DM_CHANNEL,
@@ -262,7 +262,7 @@ let y = (e) => {
                                               children: [
                                                   (0, i.jsx)(o.Clickable, {
                                                       onClick: () => {
-                                                          h(), F(!k);
+                                                          h(), G(!k);
                                                       },
                                                       className: P.showMoreEmojis,
                                                       children: (0, i.jsxs)(d.Z, {
@@ -298,7 +298,7 @@ let y = (e) => {
                                                                           return (0, i.jsx)(
                                                                               'div',
                                                                               {
-                                                                                  className: r()(P.otherEmoji, { [Z.nonInteractingSticker]: null != G && G !== e.id }),
+                                                                                  className: r()(P.otherEmoji, { [Z.nonInteractingSticker]: null != F && F !== e.id }),
                                                                                   onMouseEnter: () => {
                                                                                       null == n || n(), w(e.id);
                                                                                   },
@@ -311,7 +311,7 @@ let y = (e) => {
                                                                                       enlargeOnInteraction: !0,
                                                                                       enlargeWithName: !1,
                                                                                       enlargeScaleFactor: 2,
-                                                                                      isInteracting: G === e.id,
+                                                                                      isInteracting: F === e.id,
                                                                                       sticker: e
                                                                                   })
                                                                               },

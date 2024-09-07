@@ -24,8 +24,8 @@ var i = n(735250),
     I = n(348600),
     x = n(566620),
     T = n(520599),
-    S = n(127255),
-    v = n(5200),
+    v = n(127255),
+    S = n(5200),
     N = n(558317),
     A = n(403404),
     Z = n(701488),
@@ -33,8 +33,8 @@ var i = n(735250),
     b = n(689938),
     R = n(57241),
     L = n(587952),
-    P = n(736733),
-    j = n(932463);
+    j = n(736733),
+    P = n(932463);
 let O = 'vc-activities-'.concat((0, o.Z)()),
     y = s.forwardRef(function (e, t) {
         let { channel: n, isHovered: a, closePopout: o, onMouseEnter: y, onMouseLeave: D, onClick: k, className: U } = e,
@@ -58,7 +58,7 @@ let O = 'vc-activities-'.concat((0, o.Z)()),
             K = W === M.IlC.POPOUT,
             q = (0, d.O)(),
             X = (function (e) {
-                return (0, S.Z)({ guildId: e }).slice(0, 5);
+                return (0, v.Z)({ guildId: e }).slice(0, 5);
             })(n.getGuildId());
         s.useEffect(() => {
             let e = setTimeout(() => x.ux(), 1000);
@@ -93,7 +93,7 @@ let O = 'vc-activities-'.concat((0, o.Z)()),
                       children: [
                           (0, i.jsx)('img', {
                               alt: b.Z.Messages.EMBEDDED_ACTIVITIES_BIRTHDAY_ACTIVITIES_HERO_ALT,
-                              src: 'light' === H ? L : P,
+                              src: 'light' === H ? L : j,
                               className: R.poster
                           }),
                           (0, i.jsx)('div', { className: R.posterDivider })
@@ -108,7 +108,7 @@ let O = 'vc-activities-'.concat((0, o.Z)()),
                         children: [
                             (0, i.jsx)('img', {
                                 alt: b.Z.Messages.EMBEDDED_ACTIVITIES_AMAZON_MUSIC_PROMO_BANNER_ALT,
-                                src: j,
+                                src: P,
                                 className: R.poster
                             }),
                             (0, i.jsx)('div', { className: R.posterDivider })
@@ -182,14 +182,14 @@ let O = 'vc-activities-'.concat((0, o.Z)()),
                                     children: [
                                         X.map((e) =>
                                             (0, i.jsx)(
-                                                v.Y,
+                                                S.Y,
                                                 {
                                                     channel: n,
                                                     activityItem: e,
                                                     onClick: () => {
                                                         o(), k();
                                                     },
-                                                    aspectRatio: v.Y.AspectRatio.THIRTEEN_BY_ELEVEN,
+                                                    aspectRatio: S.Y.AspectRatio.THIRTEEN_BY_ELEVEN,
                                                     animatedDivClass: R.activitySuggestion
                                                 },
                                                 e.application.id

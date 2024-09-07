@@ -17,8 +17,8 @@ var i = t(735250),
     p = t(496675),
     _ = t(358085),
     C = t(499254),
-    h = t(827498),
-    f = t(783097),
+    f = t(827498),
+    h = t(783097),
     A = t(890280),
     E = t(176412),
     N = t(231338),
@@ -27,21 +27,21 @@ var i = t(735250),
 function I(e) {
     let { channel: n, application: t, sectionName: I, primaryEntryPointCommand: g, buttonSize: P = o.ButtonSizes.MEDIUM } = e,
         S = a.useId(),
-        b = a.useCallback(() => {
-            C.y(h.ti.ACTIVITY);
+        L = a.useCallback(() => {
+            C.y(f.ti.ACTIVITY);
         }, []),
-        { submitting: L, wasSubmitting: R } = (0, A.Z)({
+        { submitting: b, wasSubmitting: R } = (0, A.Z)({
             applicationId: t.id,
             channelId: n.id,
             launchingComponentId: S,
-            onSubmissionComplete: b
+            onSubmissionComplete: L
         }),
         [T, M] = a.useState(!1),
         y = (0, d.Qv)({
             applicationId: t.id,
             channelId: n.id
         }),
-        j = a.useMemo(() => (0, f.XZ)(g.displayName), [g.displayName]),
+        j = a.useMemo(() => (0, h.XZ)(g.displayName), [g.displayName]),
         {
             onActivityItemSelected: Z,
             buttonColor: O,
@@ -54,7 +54,7 @@ function I(e) {
             commandName: j,
             autoDismissOnClick: y === d.JS.LEAVE,
             launchingComponentId: S,
-            submitting: null != R ? R : L
+            submitting: null != R ? R : b
         }),
         { disabled: U, reason: B } = (function (e) {
             let { channel: n, application: t, activityAction: i } = e,

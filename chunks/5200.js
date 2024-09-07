@@ -30,8 +30,8 @@ function x(e) {
     let { channel: n, activityItem: i, onClick: s, aspectRatio: r = 0, animatedDivClass: x } = e,
         {
             onActivityItemSelected: T,
-            imageBackground: S,
-            activityAction: v,
+            imageBackground: v,
+            activityAction: S,
             labelType: N
         } = (0, h.ZP)({
             channel: n,
@@ -65,7 +65,7 @@ function x(e) {
             [i.application.name, N]
         ),
         L = l.useMemo(() => {
-            switch (v) {
+            switch (S) {
                 case h.JS.JOIN:
                     return (0, a.jsx)('div', {
                         className: g.activityAction,
@@ -94,7 +94,7 @@ function x(e) {
                 default:
                     return (0, a.jsx)(a.Fragment, {});
             }
-        }, [v]);
+        }, [S]);
     return (0, a.jsx)(u.Button, {
         onClick: T,
         color: 'transparent',
@@ -125,7 +125,7 @@ function x(e) {
                             children: (0, a.jsxs)(a.Fragment, {
                                 children: [
                                     (0, a.jsx)(m.Z, {
-                                        imageBackground: S,
+                                        imageBackground: v,
                                         applicationName: i.application.name,
                                         imageClassName: g.activitySuggestionImage,
                                         imageNotFoundClassName: g.brokenImageIconWrapper

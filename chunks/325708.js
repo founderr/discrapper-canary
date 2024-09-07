@@ -62,15 +62,15 @@ function E(e) {
         ),
         x = (0, p.W)({ maxWidth: n }),
         T = (0, c.clamp)(g, p.C, n),
-        S = x ? T : T + u.Z.modules.chat.RESIZE_HANDLE_WIDTH;
+        v = x ? T : T + u.Z.modules.chat.RESIZE_HANDLE_WIDTH;
     l.useEffect(() => {
         null == i || i(T, x);
     }, [T, i, x]);
-    let v = null != r ? r : l.Fragment;
+    let S = null != r ? r : l.Fragment;
     return (0, a.jsxs)(a.Fragment, {
         children: [
-            !x && (0, a.jsx)('div', { style: { minWidth: S } }),
-            (0, a.jsx)(v, {
+            !x && (0, a.jsx)('div', { style: { minWidth: v } }),
+            (0, a.jsx)(S, {
                 children: (0, a.jsxs)('div', {
                     className: _.chatLayerWrapper,
                     children: [
@@ -79,7 +79,7 @@ function E(e) {
                                 [_.floating]: x,
                                 [_.notFloating]: !x
                             }),
-                            style: { width: S }
+                            style: { width: v }
                         }),
                         !x &&
                             (0, a.jsx)(f, {

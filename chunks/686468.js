@@ -78,7 +78,7 @@ function T(e) {
         r = t.guild_id,
         { canCreateGuildEvent: o } = (0, h.X)(t),
         T = (0, f.Z)(t.id),
-        { usersInSummary: S } = (0, _.Z)(t.id);
+        { usersInSummary: v } = (0, _.Z)(t.id);
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsx)(E.Z, {
@@ -121,7 +121,7 @@ function T(e) {
                       guildId: r
                   })
                 : null,
-            (a || S.length > 0) && (0, i.jsx)('hr', { className: C.separator }),
+            (a || v.length > 0) && (0, i.jsx)('hr', { className: C.separator }),
             a ? (0, i.jsx)(I, { onClick: n }) : null,
             (0, i.jsx)(x, { channel: t })
         ]

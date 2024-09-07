@@ -157,7 +157,7 @@ function L(e, t) {
         Z = h.layout_type,
         P = v(e, t, { formattedExpirationLabel: _ });
     if (null == P) return;
-    let { canTapAnswers: D, canRemoveVote: b, canShowVoteCounts: j, canSubmitVote: U, expirationLabel: y = A.Z.Messages.POLL_EXPIRED, hasSelectedAnswer: B, hasVoted: k, isEditingVote: F, isExpired: G, isInteractive: w, reactions: V, selectedAnswerIds: H, submitting: Y, tapShouldOpenVotersModal: W, showResults: K } = P,
+    let { canTapAnswers: D, canRemoveVote: b, canShowVoteCounts: j, canSubmitVote: U, expirationLabel: y = A.Z.Messages.POLL_EXPIRED, hasSelectedAnswer: B, hasVoted: k, isEditingVote: G, isExpired: F, isInteractive: w, reactions: V, selectedAnswerIds: H, submitting: Y, tapShouldOpenVotersModal: W, showResults: K } = P,
         z = (0, N.cZ)(V),
         Q = A.Z.Messages.POLL_VOTES_COUNT.format({ count: z.toLocaleString() }),
         q = Math.max(
@@ -179,7 +179,7 @@ function L(e, t) {
                 N = x({
                     didSelfVote: h,
                     hasVoted: k,
-                    isExpired: G,
+                    isExpired: F,
                     isSelected: E,
                     isLeader: T,
                     showResults: K
@@ -216,7 +216,7 @@ function L(e, t) {
                     attachmentIds: e.poll_media.attachment_ids
                 },
                 isSelected: E,
-                isVictor: G && T,
+                isVictor: F && T,
                 didSelfVote: h,
                 style: N,
                 shouldAnimateTransition: Y && !S,
@@ -227,10 +227,10 @@ function L(e, t) {
             };
         }),
         J = (0, i.EQ)({
-            isExpired: G,
+            isExpired: F,
             canSubmitVote: U,
             hasVoted: k,
-            isEditingVote: F,
+            isEditingVote: G,
             canRemoveVote: b,
             isInteractive: w,
             showResults: K
@@ -269,9 +269,9 @@ function L(e, t) {
             })),
         $ = (0, T.isIOS)() ? A.Z.Messages.POLL_TAP_FOR_VOTERS_A11Y_IOS : A.Z.Messages.POLL_TAP_FOR_VOTERS_A11Y_ANDROID,
         ee = (0, i.EQ)({
-            isExpired: G,
+            isExpired: F,
             isInteractive: w,
-            isEditingVote: F
+            isEditingVote: G
         })
             .with(
                 {
@@ -299,7 +299,7 @@ function L(e, t) {
                 type: 'showVoterDetails'
             })),
         et =
-            !w || G || k || K
+            !w || F || k || K
                 ? void 0
                 : {
                       label: A.Z.Messages.POLL_SHOW_VOTES,
@@ -310,7 +310,7 @@ function L(e, t) {
         en = h.allow_multiselect,
         ei = (0, i.EQ)({
             isInteractive: w,
-            isExpired: G,
+            isExpired: F,
             canSelectMultipleAnswers: en
         })
             .with({ isInteractive: !1 }, () => void 0)
@@ -345,7 +345,7 @@ function L(e, t) {
         hasSelectedAnswer: B,
         canShowVoteCounts: j,
         hasVoted: k,
-        isExpired: G,
+        isExpired: F,
         myAvatarUrl: M,
         secondaryAction: ee,
         tertiaryAction: et

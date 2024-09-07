@@ -26,8 +26,8 @@ var i,
     I = n(708690),
     x = n(194359),
     T = n(425493),
-    S = n(461745),
-    v = n(40851),
+    v = n(461745),
+    S = n(40851),
     N = n(367907),
     A = n(762914),
     Z = n(43267),
@@ -35,8 +35,8 @@ var i,
     b = n(600164),
     R = n(313201),
     L = n(366980),
-    P = n(703656),
-    j = n(93127),
+    j = n(703656),
+    P = n(93127),
     O = n(60349),
     y = n(428598),
     D = n(131704),
@@ -97,7 +97,7 @@ let ec = (e) => {
             });
         return (0, s.jsx)(p.Clickable, {
             onClick: () => {
-                (0, P.XU)(ee.ME, n.id), i();
+                (0, j.XU)(ee.ME, n.id), i();
             },
             children: (0, s.jsxs)('div', {
                 className: en.confirmChannelItemContainer,
@@ -268,13 +268,13 @@ class ed extends (i = a.PureComponent) {
             (0, s.jsxs)(b.Z, {
                 className: r()(en.searchBar, es.marginTop20),
                 children: [
-                    (0, s.jsx)(S.ZP, {
+                    (0, s.jsx)(v.ZP, {
                         ref: this.searchBarRef,
                         className: en.searchBarComponent,
                         autoFocus: !0,
                         placeholder: 0 === l.size ? et.Z.Messages.GROUP_DM_SEARCH_PLACEHOLDER : void 0,
                         disabled: this.isPartyFull(),
-                        size: S.ZP.Sizes.MEDIUM,
+                        size: v.ZP.Sizes.MEDIUM,
                         query: t,
                         selectedRow: a,
                         sections: [null !== (e = null == i ? void 0 : i.length) && void 0 !== e ? e : 0],
@@ -603,7 +603,7 @@ class ed extends (i = a.PureComponent) {
                 t.has(e) ? I.Z.removeUser(e) : (I.Z.addUser(e), n.length > 0 && I.Z.clear(null == i ? void 0 : i.id)), this.forceFocus();
             }),
             ea(this, 'handleAddFriendNavigation', () => {
-                (0, P.uL)(ee.Z5c.FRIENDS), g.Z.setSection(ee.pJs.ADD_FRIEND), this.props.onClose();
+                (0, j.uL)(ee.Z5c.FRIENDS), g.Z.setSection(ee.pJs.ADD_FRIEND), this.props.onClose();
             }),
             ea(this, 'handleScroll', () => {
                 let e = this.scrollerRef.current;
@@ -737,7 +737,7 @@ function em(e) {
         [u, _]
     ),
     a.useEffect(() => {
-        (0, j._)();
+        (0, P._)();
     }, []),
     m)
         ? null
@@ -779,4 +779,4 @@ function ep(e) {
 function e_(e) {
     return JSON.stringify(e.sort());
 }
-ea(ed, 'contextType', v.ZP);
+ea(ed, 'contextType', S.ZP);

@@ -22,8 +22,8 @@ var i = t(470079),
     p = t(895924),
     _ = t(691424),
     C = t(428595),
-    h = t(364458),
-    f = t(499254),
+    f = t(364458),
+    h = t(499254),
     A = t(541099),
     E = t(827498),
     N = t(981631),
@@ -33,7 +33,7 @@ let v = {
         parse: (e, n, t) => ({ content: C.Z.RULES.commandMention.parse(e, n, t).content })
     },
     I = l().pick(
-        (0, h.Z)([
+        (0, f.Z)([
             C.Z.RULES,
             { commandMention: v },
             (0, _.Z)({
@@ -46,7 +46,7 @@ let v = {
     g = r.w4(I);
 function P(e) {
     let { channel: n, application: t, location: i, sectionName: a, commandName: l, autoDismissOnClick: r = !0, launchingComponentId: _, submitting: C = !1 } = e,
-        h = (0, c.O)(),
+        f = (0, c.O)(),
         v = (0, d.Qv)({
             channelId: n.id,
             applicationId: t.id
@@ -56,10 +56,10 @@ function P(e) {
             applicationId: t.id,
             embeddedActivitiesManager: u.Z,
             channelId: n.id,
-            locationObject: h.location,
+            locationObject: f.location,
             onActivityItemSelectedProp: (e) => {
                 let { applicationId: n } = e;
-                r && f.y(E.ti.ACTIVITY),
+                r && h.y(E.ti.ACTIVITY),
                     (0, m.yw)(N.rMx.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
                         location: i,
                         application_id: n,

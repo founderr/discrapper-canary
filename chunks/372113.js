@@ -107,8 +107,8 @@ t.Z = (e) => {
         y = b >= E.OH.CLAIMED,
         B = (0, T.Xv)(t.config),
         k = (0, S.uq)(n),
-        F = n === m.jn.QUESTS_EMBED,
-        G = f || v,
+        G = n === m.jn.QUESTS_EMBED,
+        F = f || v,
         w = j && !y && k,
         V = (0, E.t5)(t, R.dr.QUESTS_CARD, n),
         { xboxAndPlaystationAccounts: H } = (0, E.z6)(),
@@ -121,7 +121,7 @@ t.Z = (e) => {
             autoplay: o,
             className: a()(M.gridImg, {
                 [M.questRewardGiftInventory]: k && 'lg' === s,
-                [M.questRewardEmbed]: F && 'lg' === s,
+                [M.questRewardEmbed]: G && 'lg' === s,
                 [M.questRewardEmbedSm]: 'sm' === s,
                 [M.questRewardEmbedXs]: 'xs' === s
             }),
@@ -140,8 +140,8 @@ t.Z = (e) => {
                     [M.outerContainerXs]: 'xs' === s,
                     [M.outerContainerNoProgress]: !w
                 }),
-                style: { visibility: G ? 'inherit' : 'hidden' },
-                'aria-hidden': !G,
+                style: { visibility: F ? 'inherit' : 'hidden' },
+                'aria-hidden': !F,
                 children: [
                     (0, i.jsx)(l.Tooltip, {
                         text: z ? x.Z.Messages.QUESTS_REWARD_TILE_EXPIRED_QUEST : null,

@@ -25,7 +25,7 @@ function T() {
     }),
         (0, d.uL)(E.Z5c.APPLICATION_STORE);
 }
-function S(e) {
+function v(e) {
     let { avatarSrc: t, username: n } = e,
         [s, c] = (0, o.US)([a.z.NITRO_ON_PROFILE_SIDE_PANEL], g.R.SIDEBAR, !0);
     return s !== a.z.NITRO_ON_PROFILE_SIDE_PANEL
@@ -80,7 +80,7 @@ function S(e) {
               ]
           });
 }
-function v(e) {
+function S(e) {
     let { avatarSrc: t, username: n } = e,
         [s, c] = (0, o.US)([a.z.NITRO_ON_PROFILE_SIDE_PANEL], g.R.SIDEBAR, !0);
     return s !== a.z.NITRO_ON_PROFILE_SIDE_PANEL
@@ -146,12 +146,12 @@ function N(e) {
 function A(e) {
     let { variant: t, avatarSrc: n, username: s } = e;
     if (1 === t)
-        return (0, i.jsx)(S, {
+        return (0, i.jsx)(v, {
             avatarSrc: n,
             username: s
         });
     if (2 === t)
-        return (0, i.jsx)(v, {
+        return (0, i.jsx)(S, {
             avatarSrc: n,
             username: s
         });

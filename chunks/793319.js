@@ -27,8 +27,8 @@ var i,
     I = n(40851),
     x = n(317381),
     T = n(596040),
-    S = n(100527),
-    v = n(906732),
+    v = n(100527),
+    S = n(906732),
     N = n(67212),
     A = n(757454),
     Z = n(158631),
@@ -36,8 +36,8 @@ var i,
     b = n(552740),
     R = n(358221),
     L = n(887012),
-    P = n(659580),
-    j = n(793865),
+    j = n(659580),
+    P = n(793865),
     O = n(575175),
     y = n(243778),
     D = n(258609),
@@ -81,8 +81,8 @@ var i,
     eI = n(985370),
     ex = n(544384),
     eT = n(560688),
-    eS = n(127608),
-    ev = n(76021),
+    ev = n(127608),
+    eS = n(76021),
     eN = n(173507),
     eA = n(981631),
     eZ = n(354459),
@@ -102,33 +102,33 @@ function eL(e) {
         C = null != d && f,
         x = l.useRef(null),
         T = t.getGuildId(),
-        S = l.useCallback(() => {
-            if ((null == i || i(), !s)) return (0, eS.Z)();
-            (0, ev.Z)(T, t.id, eA.ZY5.GUILD_CHANNEL);
+        v = l.useCallback(() => {
+            if ((null == i || i(), !s)) return (0, ev.Z)();
+            (0, eS.Z)(T, t.id, eA.ZY5.GUILD_CHANNEL);
         }, [T, t.id, s, i]),
-        v = (0, m.e7)([U.ZP, eh.Z], () => (0, H.Z)(U.ZP, eh.Z)),
+        S = (0, m.e7)([U.ZP, eh.Z], () => (0, H.Z)(U.ZP, eh.Z)),
         M = (0, Z.ZP)(),
-        R = (0, A.Z)() && null != v,
+        R = (0, A.Z)() && null != S,
         L = (0, m.e7)([ed.ZP], () => ed.ZP.inReverseTrial()),
-        P = () => {
+        j = () => {
             R &&
                 (null == d
                     ? (0, g.tE)({
                           channelId: t.id,
-                          pid: null == v ? void 0 : v.pid
+                          pid: null == S ? void 0 : S.pid
                       })
-                    : (0, N.v$)((0, w.V9)(d), null == v ? void 0 : v.pid));
+                    : (0, N.v$)((0, w.V9)(d), null == S ? void 0 : S.pid));
         },
-        j = () => {
+        P = () => {
             if (R) {
-                (0, b.D)(P);
+                (0, b.D)(j);
                 return;
             }
             if (s) {
-                S();
+                v();
                 return;
             }
-            (0, eS.Z)();
+            (0, ev.Z)();
         },
         O = () => {
             if (M) {
@@ -166,7 +166,7 @@ function eL(e) {
                 shouldShowTooltip: !t,
                 premiumGlow: C && E.hqStreamingIsEnabled,
                 buttonRef: x,
-                onClick: null != d ? O : j
+                onClick: null != d ? O : P
             });
         };
     return M
@@ -208,7 +208,7 @@ function eL(e) {
                                       channel: t,
                                       currentUser: n,
                                       activeStreams: null != d ? [d] : [],
-                                      handleGoLive: S,
+                                      handleGoLive: v,
                                       onClose: i,
                                       appContext: c
                                   })
@@ -227,7 +227,7 @@ function eL(e) {
               ]
           });
 }
-function eP(e) {
+function ej(e) {
     let { channel: t, idle: n } = e,
         i = t.getGuildId();
     return (0, T.Z)(i, t.id)
@@ -241,7 +241,7 @@ function eP(e) {
         : null;
 }
 ((s = i || (i = {})).ACTIVITY = 'ACTIVITY'), (s.STREAM = 'STREAM'), (s.CALL = 'CALL'), (s.EVENT = 'EVENT'), (s.BROADCAST = 'BROADCAST');
-let ej = l.memo(function (e) {
+let eP = l.memo(function (e) {
     let { connectedActivityApplicationId: t, currentUser: n, onDisconnectCall: i, channel: s } = e,
         r = (0, m.e7)([R.Z], () => R.Z.getSelectedParticipant(s.id)),
         { reducedMotion: o } = l.useContext(_.AccessibilityPreferencesContext),
@@ -263,7 +263,7 @@ let ej = l.memo(function (e) {
             if (null != I) return 'EVENT';
             return 'CALL';
         }, [r, t, f, I]),
-        [S, v] = l.useState(T()),
+        [v, S] = l.useState(T()),
         N = (0, _.useSpring)(
             {
                 opacity: c ? 0.2 : 1,
@@ -276,14 +276,14 @@ let ej = l.memo(function (e) {
                     clamp: c
                 },
                 onRest: () => {
-                    v(T()), u(!1);
+                    S(T()), u(!1);
                 }
             },
             'animate-always'
         );
     l.useEffect(() => {
-        T() !== S && u(!0);
-    }, [S, T]);
+        T() !== v && u(!0);
+    }, [v, T]);
     let A = l.useCallback(() => {
             if (null != p) (0, g.g)((0, w.V9)(p));
             else for (let e of C) (0, g.g)((0, w.V9)(e));
@@ -294,7 +294,7 @@ let ej = l.memo(function (e) {
                 className: eb.controlButton,
                 popoutOpen: e
             };
-            switch (S) {
+            switch (v) {
                 case 'ACTIVITY':
                     if (null == r || null == n) return;
                     return (0, a.jsx)(et.Z, {
@@ -429,9 +429,9 @@ t.ZP = function (e) {
             return null != e ? e.applicationId : null;
         }),
         { reachedLimit: R, limit: y } = (0, ef.Z)(n),
-        { analyticsLocations: U } = (0, v.ZP)(S.Z.VOICE_CONTROL_TRAY);
+        { analyticsLocations: U } = (0, S.ZP)(v.Z.VOICE_CONTROL_TRAY);
     if (!Z)
-        return (0, a.jsx)(v.Gt, {
+        return (0, a.jsx)(S.Gt, {
             value: U,
             children: (0, a.jsx)(eO, {
                 channel: n,
@@ -448,7 +448,7 @@ t.ZP = function (e) {
         }) &&
         !n.isPrivate() &&
         !M;
-    return (0, a.jsx)(v.Gt, {
+    return (0, a.jsx)(S.Gt, {
         value: U,
         children: (0, a.jsxs)(C.Z, {
             section: eA.jXE.VOICE_CONTROL_TRAY,
@@ -464,7 +464,7 @@ t.ZP = function (e) {
                             (0, a.jsx)(_.Popout, {
                                 renderPopout: (e) => {
                                     let { closePopout: t } = e;
-                                    return (0, a.jsx)(J.Z, { children: (0, a.jsx)(j.Z, { onClose: t }) });
+                                    return (0, a.jsx)(J.Z, { children: (0, a.jsx)(P.Z, { onClose: t }) });
                                 },
                                 position: 'top',
                                 align: 'center',
@@ -488,7 +488,7 @@ t.ZP = function (e) {
                                 }
                             }),
                         !A &&
-                            (0, a.jsx)(eP, {
+                            (0, a.jsx)(ej, {
                                 channel: n,
                                 idle: null === (t = null == r ? void 0 : r.idle) || void 0 === t || t
                             }),
@@ -504,7 +504,7 @@ t.ZP = function (e) {
                             renderPopout: (e) => {
                                 let { closePopout: t } = e;
                                 return (0, a.jsx)(J.Z, {
-                                    children: (0, a.jsx)(P.default, {
+                                    children: (0, a.jsx)(j.default, {
                                         onClose: t,
                                         renderInputDevices: !0,
                                         renderOutputDevices: !0,
@@ -537,7 +537,7 @@ t.ZP = function (e) {
                                   children: (0, a.jsx)(eI.Z, { channel: n })
                               })
                             : null,
-                        (0, a.jsx)(ej, {
+                        (0, a.jsx)(eP, {
                             connectedActivityApplicationId: b,
                             currentUser: c,
                             channel: n,

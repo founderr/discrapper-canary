@@ -48,11 +48,11 @@ function B(e, t, n) {
     );
 }
 let k = _()('2015-05-15').local(),
-    F = (0, E.Un)({
+    G = (0, E.Un)({
         createPromise: () => Promise.resolve().then(n.bind(n, 547800)),
         webpackId: 547800
     }),
-    G = (e, t, n) => {
+    F = (e, t, n) => {
         var s, a, r;
         let { user: l, text: o } = n;
         if (null == l) return (0, i.jsx)('strong', { children: o });
@@ -146,7 +146,7 @@ let k = _()('2015-05-15').local(),
         (0, i.jsx)(V, {
             ...e,
             className: y.user,
-            renderResult: G
+            renderResult: F
         }),
     Y = {
         [j.dCx.FILTER_FROM]: {
@@ -396,7 +396,7 @@ class W extends s.PureComponent {
                 (0, i.jsxs)('div', {
                     className: y.datePicker,
                     children: [
-                        (0, i.jsx)(F, {
+                        (0, i.jsx)(G, {
                             onSelect: this.handleDateChange,
                             maxDate: _()().local(),
                             minDate: k

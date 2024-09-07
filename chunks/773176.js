@@ -19,8 +19,8 @@ var i = n(735250),
     I = n(346610),
     x = n(868643),
     T = n(245216),
-    S = n(223606),
-    v = n(188597),
+    v = n(223606),
+    S = n(188597),
     N = n(41776),
     A = n(222677),
     Z = n(995774),
@@ -28,8 +28,8 @@ var i = n(735250),
     b = n(280845),
     R = n(768943),
     L = n(121254),
-    P = n(665906),
-    j = n(695346),
+    j = n(665906),
+    P = n(695346),
     O = n(314897),
     y = n(323873),
     D = n(271383),
@@ -154,8 +154,8 @@ function ec(e) {
             canPublish: f,
             canReact: g,
             canConfigureJoin: C,
-            canReply: S,
-            canStartThread: v,
+            canReply: v,
+            canStartThread: S,
             canViewThread: A,
             canForward: Z,
             isExpanded: M,
@@ -172,10 +172,10 @@ function ec(e) {
                 { author: o } = n,
                 u = (0, c.e7)([k.Z], () => k.Z.getGuild(t.guild_id), [t.guild_id]),
                 d = (0, c.e7)([O.default], () => O.default.getId()),
-                h = (0, P.$R)(t),
-                _ = (0, P.Gu)(t),
-                f = j.nc.useSetting(),
-                E = j.Sb.useSetting(),
+                h = (0, j.$R)(t),
+                _ = (0, j.Gu)(t),
+                f = P.nc.useSetting(),
+                E = P.Sb.useSetting(),
                 g = (0, c.e7)([U.Z], () => null == t.guild_id || U.Z.canChatInGuild(t.guild_id), [t]),
                 { canManageMessages: C, canAddNewReactions: T } = (0, c.cj)(
                     [w.Z],
@@ -185,9 +185,9 @@ function ec(e) {
                     }),
                     [t, g]
                 ),
-                S = (0, b.U)(t, n),
-                v = (0, P.NE)(t, n),
-                A = (0, P.Ek)(n),
+                v = (0, b.U)(t, n),
+                S = (0, j.NE)(t, n),
+                A = (0, j.Ek)(n),
                 Z = (0, c.e7)([N.Z], () => null != t.guild_id && N.Z.isLurking(t.guild_id), [t]),
                 M = (0, c.e7)([D.ZP], () => null != t.guild_id && D.ZP.isCurrentUserGuest(t.guild_id), [t]),
                 y = o.id === d,
@@ -221,8 +221,8 @@ function ec(e) {
                 canEdit: K,
                 canDelete: B,
                 canReport: G,
-                canReply: S,
-                canStartThread: v,
+                canReply: v,
+                canStartThread: S,
                 canViewThread: A,
                 canForward: et && en,
                 canCopy: H.wS,
@@ -252,7 +252,7 @@ function ec(e) {
         eu = s.useCallback(() => {
             et({ emojiPicker: !G });
         }, [G, et]),
-        ed = (0, P.$R)(t),
+        ed = (0, j.$R)(t),
         em = n.hasFlag($.iLy.CROSSPOSTED),
         [ep, e_] = (0, _.cv)(Z ? [u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE] : []),
         ef = ep === u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE,
@@ -341,7 +341,7 @@ function ec(e) {
                                     'pin'
                                 )
                               : null,
-                          v && Z
+                          S && Z
                               ? (0, i.jsx)(
                                     K.sF,
                                     {
@@ -352,7 +352,7 @@ function ec(e) {
                                     'thread'
                                 )
                               : null,
-                          S && h
+                          v && h
                               ? (0, i.jsx)(
                                     K.sF,
                                     {
@@ -391,7 +391,7 @@ function ec(e) {
                       ]
                   })
                 : null,
-            S && !h
+            v && !h
                 ? (0, i.jsx)(
                       K.sF,
                       {
@@ -427,7 +427,7 @@ function ec(e) {
                       'forward'
                   )
                 : null,
-            v && !Z
+            S && !Z
                 ? (0, i.jsx)(
                       K.sF,
                       {
@@ -438,7 +438,7 @@ function ec(e) {
                       'thread'
                   )
                 : null,
-            !v && A
+            !S && A
                 ? (0, i.jsx)(
                       K.sF,
                       {
@@ -513,8 +513,8 @@ function ec(e) {
 }
 function eu(e) {
     let { channel: t, message: n } = e,
-        s = (0, c.e7)([S.Z], () => null != S.Z.getMessage(n.id), [n.id]),
-        a = null == n.interaction || (null != n.interactionData && (0, v.$s)(n.interactionData));
+        s = (0, c.e7)([v.Z], () => null != v.Z.getMessage(n.id), [n.id]),
+        a = null == n.interaction || (null != n.interactionData && (0, S.$s)(n.interactionData));
     return (0, i.jsxs)(i.Fragment, {
         children: [
             !s &&

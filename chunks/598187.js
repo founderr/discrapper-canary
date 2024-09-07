@@ -45,7 +45,7 @@ function y(e) {
     switch (s) {
         case C.nj:
         case u.p.RAID:
-            return (0, i.jsx)(G, {
+            return (0, i.jsx)(F, {
                 message: t,
                 compact: n
             });
@@ -55,7 +55,7 @@ function y(e) {
                 compact: n
             });
         case u.p.ACTIVITY_ALERTS_ENABLED:
-            return (0, i.jsx)(F, {
+            return (0, i.jsx)(G, {
                 message: t,
                 compact: n
             });
@@ -113,7 +113,7 @@ function k(e) {
         })
     });
 }
-function F(e) {
+function G(e) {
     var t;
     let { message: n, compact: a } = e,
         r = x.default.getUser((0, C.Sw)(n)),
@@ -211,7 +211,7 @@ function F(e) {
         })
     });
 }
-function G(e) {
+function F(e) {
     var t;
     let { message: n, compact: a } = e,
         { joinAttempts: r, raidDatetime: l, dmsSent: u, raidType: m, resolvedReason: T } = (0, C.FL)(n),

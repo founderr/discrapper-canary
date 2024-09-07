@@ -24,7 +24,7 @@ function C(e) {
         n = '',
         s = '';
     return (
-        t === l.Pr.ALL ? ((n = T.Z.Messages.FOR_LATER_EMPTY_ALL_TITLE), (s = T.Z.Messages.FOR_LATER_EMPTY_ALL_BODY)) : t === l.Pr.BOOKMARKS ? ((n = T.Z.Messages.FOR_LATER_EMPTY_BOOKMARKS_TITLE), (s = T.Z.Messages.FOR_LATER_EMPTY_BOOKMARKS_BODY)) : t === l.Pr.REMINDERS && ((n = T.Z.Messages.FOR_LATER_EMPTY_REMINDERS_TITLE), (s = T.Z.Messages.FOR_LATER_EMPTY_REMINDERS_BODY)),
+        t === l.Pr.ALL ? ((n = T.Z.Messages.FOR_LATER_EMPTY_ALL_TITLE), (s = T.Z.Messages.FOR_LATER_EMPTY_ALL_BODY_WEB)) : t === l.Pr.BOOKMARKS ? ((n = T.Z.Messages.FOR_LATER_EMPTY_BOOKMARKS_TITLE), (s = T.Z.Messages.FOR_LATER_EMPTY_BOOKMARKS_BODY_WEB)) : t === l.Pr.REMINDERS && ((n = T.Z.Messages.FOR_LATER_EMPTY_REMINDERS_TITLE), (s = T.Z.Messages.FOR_LATER_EMPTY_REMINDERS_BODY_WEB)),
         (0, i.jsxs)('div', {
             className: h.emptyContainer,
             children: [

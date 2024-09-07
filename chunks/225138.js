@@ -31,14 +31,14 @@ var i = t(374470),
     A = t(519110),
     R = t(759875),
     h = t(168405),
-    N = t(536639),
-    O = t(720904),
+    O = t(536639),
+    N = t(720904),
     p = t(88791),
     x = t(385302),
     j = t(873699),
-    D = t(134323),
-    b = t(429260),
-    C = t(1626),
+    b = t(134323),
+    C = t(429260),
+    D = t(1626),
     L = t(279329),
     G = t(627938),
     P = t(512303),
@@ -82,16 +82,16 @@ function k(e) {
     let { message: n, channel: t, mediaItem: i, textSelection: r, favoriteableType: w, favoriteableId: k, favoriteableName: F, itemHref: V, itemSrc: z, itemSafeSrc: K, itemTextContent: X, canReport: H, onHeightUpdate: Y, onSelect: B, onClose: W, navId: q, ariaLabel: J, shouldHideMediaOptions: $ = !1 } = e,
         Q = (0, u.Z)(r),
         ee = (0, E.Z)(r),
-        en = (0, O.Z)(n, t),
+        en = (0, N.Z)(n, t),
         et = (0, _.Z)(n, t),
         ea = (0, v.Z)(n, t),
-        ei = (0, N.Z)(n, t),
+        ei = (0, O.Z)(n, t),
         el = (0, A.Z)({
             type: w,
             id: k,
             name: F
         }),
-        er = (0, C.Z)(n, t),
+        er = (0, D.Z)(n, t),
         es = (0, h.Z)(n, t),
         eo = (0, p.Z)(n),
         eu = (0, f.Z)(n, t),
@@ -99,7 +99,7 @@ function k(e) {
         ec = (0, x.Z)(n, t),
         eE = (0, j.Z)(n, t),
         eM = (0, T.Z)(n, t),
-        eI = (0, b.Z)(n),
+        eI = (0, C.Z)(n),
         em = (0, L.Z)(n, t),
         eg = (0, c.Z)(null != V ? V : z, X, n, { shouldHideMediaOptions: $ }),
         e_ = (0, d.Z)(K, n, { shouldHideMediaOptions: $ }),
@@ -109,20 +109,20 @@ function k(e) {
             label: U.Z.Messages.COPY_ID_MESSAGE,
             shiftId: ''.concat(n.channel_id, '-').concat(n.id)
         }),
-        eS = (0, D.Z)(n, t),
+        eS = (0, b.Z)(n, t),
         eT = (0, R.Z)(n, t),
         ev = (0, G.Z)(n, t),
         eA = (0, m.Z)(r, t.getGuildId()),
         eR = (0, g.Z)(n),
         eh = (0, S.Z)(n),
-        eN = (0, I.Z)({
+        eO = (0, I.Z)({
             commandType: s.yU.MESSAGE,
             commandTargetId: n.id,
             channel: t,
             guildId: void 0,
             onHeightUpdate: Y
         }),
-        eO = (0, P.Z)(n),
+        eN = (0, P.Z)(n),
         ep = (0, M.Z)(n);
     return (0, a.jsxs)(l.Menu, {
         navId: q,
@@ -133,7 +133,7 @@ function k(e) {
             (0, a.jsx)(l.MenuGroup, { children: Q }),
             (0, a.jsx)(l.MenuGroup, { children: ee }),
             (0, a.jsxs)(l.MenuGroup, {
-                children: ['' === r ? en : null, et, eo, ea, ei, eR, el, eS, eT, ev, eh, eN, er, es, eu, ed, em, ep, eE, ec, eO, eM, H && eI]
+                children: ['' === r ? en : null, et, eo, ea, ei, eR, el, eS, eT, ev, eh, eO, er, es, eu, ed, em, ep, eE, ec, eN, eM, H && eI]
             }),
             null != eA && (0, a.jsx)(l.MenuGroup, { children: eA }),
             (0, a.jsxs)(l.MenuGroup, {

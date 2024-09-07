@@ -64,8 +64,8 @@ function O(e) {
             channelId: O,
             application: B
         }),
-        F = null == D,
-        G = (0, g.NL)({
+        G = null == D,
+        F = (0, g.NL)({
             embeddedActivity: D,
             joinability: k,
             currentEmbeddedActivity: b,
@@ -74,7 +74,7 @@ function O(e) {
         w = s.useId(),
         V = null != j && j.isLaunching && j.componentId === w,
         H = async () => {
-            F
+            G
                 ? await (0, u.Z)({
                       targetApplicationId: n.id,
                       channelId: O,
@@ -92,7 +92,7 @@ function O(e) {
                       commandOrigin: m.bB.ACTIVITY_INSTANCE_EMBED
                   });
         },
-        Y = G.disabled ? A.Z.Messages.EMBEDDED_ACTIVITIES_EMBED_ENDED : A.Z.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_ENDED;
+        Y = F.disabled ? A.Z.Messages.EMBEDDED_ACTIVITIES_EMBED_ENDED : A.Z.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_ENDED;
     return (0, i.jsx)('div', {
         className: R.container,
         children: (0, i.jsxs)('div', {
@@ -100,7 +100,7 @@ function O(e) {
             children: [
                 (0, i.jsx)('div', {
                     className: R.headerContainer,
-                    children: F
+                    children: G
                         ? (0, i.jsx)('div', {
                               className: R.__invalid_endedNote,
                               children: (0, i.jsx)(r.Text, {
@@ -119,7 +119,7 @@ function O(e) {
                     className: R.footerContainer,
                     children: [
                         (0, i.jsx)(r.Tooltip, {
-                            text: G.tooltip,
+                            text: F.tooltip,
                             tooltipContentClassName: R.tooltipContent,
                             children: (e) => {
                                 let { onClick: t, ...n } = e;
@@ -127,19 +127,19 @@ function O(e) {
                                     r.Button,
                                     {
                                         ...n,
-                                        key: ''.concat(G.isJoinAction),
+                                        key: ''.concat(F.isJoinAction),
                                         onClick: () => {
                                             H(), null == t || t();
                                         },
-                                        color: G.isJoinAction ? r.ButtonColors.GREEN : r.ButtonColors.PRIMARY,
+                                        color: F.isJoinAction ? r.ButtonColors.GREEN : r.ButtonColors.PRIMARY,
                                         submitting: V,
-                                        disabled: G.disabled
+                                        disabled: F.disabled
                                     },
-                                    G.text
+                                    F.text
                                 );
                             }
                         }),
-                        !F &&
+                        !G &&
                             (0, i.jsx)(_.Z, {
                                 guildId: x,
                                 users: U,

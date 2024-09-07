@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return h;
+        return f;
     }
 });
 var i = t(735250),
@@ -16,14 +16,14 @@ var i = t(735250),
     p = t(532309),
     _ = t(728021),
     C = t(413097);
-function h(e) {
+function f(e) {
     var n;
-    let { command: t, application: h, onClick: f, query: A, searchResultsPosition: E } = e,
+    let { command: t, application: f, onClick: h, query: A, searchResultsPosition: E } = e,
         N = s.Sb.useSetting(),
         x = a.useCallback(
             (e) => {
-                if ((0, d.BQ)(h) && N) {
-                    let n = h instanceof c.Z ? h : c.Z.createFromServer(h);
+                if ((0, d.BQ)(f) && N) {
+                    let n = f instanceof c.Z ? f : c.Z.createFromServer(f);
                     (0, o.vq)(e, (e) =>
                         (0, i.jsx)(r.Z, {
                             application: n,
@@ -32,16 +32,16 @@ function h(e) {
                     );
                 }
             },
-            [h, N]
+            [f, N]
         ),
-        { iconURL: v, name: I, description: g } = a.useMemo(() => (0, d.sl)(h, { fakeAppIconURL: C }), [h]),
+        { iconURL: v, name: I, description: g } = a.useMemo(() => (0, d.sl)(f, { fakeAppIconURL: C }), [f]),
         P = a.useMemo(() => {
             var e;
             let n = null !== (e = null == t ? void 0 : t.displayDescription) && void 0 !== e ? e : g;
             return null == n ? null : (0, u.ae)(n, void 0);
         }, [g, null == t ? void 0 : t.displayDescription]),
         { trackSearchResultsItemImpressionRef: S } = (0, p.Z)({
-            applicationId: h.id,
+            applicationId: f.id,
             commandId: null == t ? void 0 : t.id,
             query: A,
             searchResultsPosition: E
@@ -49,7 +49,7 @@ function h(e) {
     return (0, i.jsx)(l.Clickable, {
         className: _.clickable,
         innerRef: (e) => (S.current = e),
-        onClick: f,
+        onClick: h,
         onContextMenu: x,
         children: (0, i.jsxs)(l.FocusBlock, {
             className: _.focusBlock,

@@ -19,7 +19,7 @@ var i,
 let I = new u.Z(),
     x = new u.Z(),
     T = new Set();
-function S(e, t, n) {
+function v(e, t, n) {
     let i = new d.Z({
             userId: e.id,
             channelId: n
@@ -42,7 +42,7 @@ function S(e, t, n) {
     };
     x.set(e.id, a);
 }
-function v(e) {
+function S(e) {
     let t = I.delete(e),
         n = x.delete(e),
         i = T.delete(e);
@@ -61,7 +61,7 @@ function N() {
                 return;
             }
             let s = _.default.getUser(e);
-            null != s && ((i = !0), T.delete(e), S(s, n, t));
+            null != s && ((i = !0), T.delete(e), v(s, n, t));
         }),
         i
     );
@@ -112,7 +112,7 @@ class Z extends (i = r.ZP.Store) {
                 null != n &&
                 t.reduce((e, t) => {
                     let { userId: i, channelId: s } = t;
-                    return (s === n && !!v(i)) || e;
+                    return (s === n && !!S(i)) || e;
                 }, !1)
             );
         },
@@ -123,12 +123,12 @@ class Z extends (i = r.ZP.Store) {
                 t.reduce((e, t) => {
                     if (null != f.Z.getVoiceStateForChannel(i, t)) return e;
                     let s = _.default.getUser(t);
-                    return null == s ? (T.add(t), e) : (S(s, n, i), !0);
+                    return null == s ? (T.add(t), e) : (v(s, n, i), !0);
                 }, !1)
             );
         },
         RTC_CONNECTION_CLIENT_DISCONNECT: function (e) {
             let { userId: t, context: n } = e;
-            return n === o.Yn.DEFAULT && v(t);
+            return n === o.Yn.DEFAULT && S(t);
         }
     }));

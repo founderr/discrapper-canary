@@ -609,8 +609,8 @@ class T extends s.Z {
             p(this, 'handleNativeScreenSharePickerError', (e) => {
                 this.emit(o.aB.NativeScreenSharePickerError, e);
             }),
-            p(this, 'handleAudioDeviceModuleErrorCallback', (e) => {
-                -100 !== e && this.emit(o.aB.AudioDeviceModuleError, 'RustAudioDeviceModule', e);
+            p(this, 'handleAudioDeviceModuleErrorCallback', (e, t) => {
+                -100 !== e && this.emit(o.aB.AudioDeviceModuleError, 'RustAudioDeviceModule', e, t);
             });
         let i = (0, d.zS)();
         if (

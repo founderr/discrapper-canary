@@ -23,7 +23,7 @@ function u(e) {
         I = null;
     return (
         h.forEach((e) => {
-            var s, x, T, S, v, N, A, Z;
+            var s, x, T, v, S, N, A, Z;
             if (null != _ && _.length > 0) {
                 let t = l.default.extractTimestamp(e.id);
                 for (let e = 0; (s = e < (null == _ ? void 0 : _.length)), s; e++) {
@@ -55,27 +55,27 @@ function u(e) {
                 R = null,
                 L = (0, o.DQ)(e);
             g = g || L;
-            let P = (function (e, t, n) {
+            let j = (function (e, t, n) {
                 if (i.V.NON_COLLAPSIBLE.has(t.type));
                 else if (t.blocked) return c.ys_.MESSAGE_GROUP_BLOCKED;
                 else if ((0, o.P1)(e) && n) return c.ys_.MESSAGE_GROUP_SPAMMER;
                 return null;
             })(d, e, L && p);
-            if (null !== P) {
+            if (null !== j) {
                 let t, n;
                 [R, b] =
                     ((x = E),
                     (T = e),
-                    (S = P),
-                    (n = v = b),
-                    null == v || v.type !== S
+                    (v = j),
+                    (n = S = b),
+                    null == S || S.type !== v
                         ? ((t = {
-                              type: S,
+                              type: v,
                               content: [],
                               key: T.id
                           }),
                           x.push(t))
-                        : (n = (t = v).content[t.content.length - 1]),
+                        : (n = (t = S).content[t.content.length - 1]),
                     [t, n]);
             }
             if (m === e.id && null != C) {
@@ -106,8 +106,8 @@ function u(e) {
                             unreadId: e.id
                         }),
                     (C = null));
-            let j = (null == b ? void 0 : b.type) === c.ys_.MESSAGE ? u : b;
-            (0, r.J)(d, j, e) && (n = e.id);
+            let P = (null == b ? void 0 : b.type) === c.ys_.MESSAGE ? u : b;
+            (0, r.J)(d, P, e) && (n = e.id);
             let O = {
                 type: e.type === c.uaV.THREAD_STARTER_MESSAGE ? c.ys_.THREAD_STARTER_MESSAGE : c.ys_.MESSAGE,
                 content: e,

@@ -24,8 +24,8 @@ var i = n(735250),
     I = n(313201),
     x = n(967128),
     T = n(665149),
-    S = n(294218),
-    v = n(913663),
+    v = n(294218),
+    S = n(913663),
     N = n(268350),
     A = n(695346),
     Z = n(592125),
@@ -33,8 +33,8 @@ var i = n(735250),
     b = n(375954),
     R = n(496675),
     L = n(117530),
-    P = n(459273),
-    j = n(838440),
+    j = n(459273),
+    P = n(838440),
     O = n(127654),
     y = n(241309),
     D = n(928477),
@@ -54,7 +54,7 @@ function W(e) {
         ? null
         : (0, i.jsx)(_.Gt, {
               value: l,
-              children: (0, i.jsx)(P.I3, {
+              children: (0, i.jsx)(j.I3, {
                   children: (0, i.jsxs)('section', {
                       'aria-label': H.Z.Messages.CREATE_THREAD,
                       className: G.container,
@@ -92,7 +92,7 @@ function z(e) {
     let { parentChannel: t, parentMessageId: n, location: a } = e,
         u = (0, r.e7)([m.Z], () => m.Z.messageGroupSpacing),
         h = (function () {
-            let e = s.useContext(P.oo);
+            let e = s.useContext(j.oo);
             return s.useCallback(() => {
                 e.bumpDispatchPriority();
             }, [e]);
@@ -148,7 +148,7 @@ function z(e) {
         I = (0, D.vH)(t),
         {
             nameError: T,
-            messageError: S,
+            messageError: v,
             submit: A
         } = (function (e) {
             let { parentChannel: t, parentMessageId: n, threadSettings: i, privateThreadMode: a, textAreaState: l, location: r } = e,
@@ -169,7 +169,7 @@ function z(e) {
                 submit: s.useCallback(
                     async (e, s, a) => {
                         var r, o, u;
-                        null == e && (e = l.textValue), (e = e.trim()), (null == s || 0 === s.length) && (s = null === (r = v.Z.getStickerPreview(t.id, F.drafts.type)) || void 0 === r ? void 0 : r.map((e) => e.id)), (null == a || 0 === a.length) && (a = L.Z.getUploads(t.id, M.d.FirstThreadMessage));
+                        null == e && (e = l.textValue), (e = e.trim()), (null == s || 0 === s.length) && (s = null === (r = S.Z.getStickerPreview(t.id, F.drafts.type)) || void 0 === r ? void 0 : r.map((e) => e.id)), (null == a || 0 === a.length) && (a = L.Z.getUploads(t.id, M.d.FirstThreadMessage));
                         let m = null !== (o = i.name) && void 0 !== o ? o : '',
                             p = null == n && 0 === m.length,
                             _ = '' === e && (null == s || 0 === s.length) && 0 === a.length;
@@ -179,7 +179,7 @@ function z(e) {
                                 shouldRefocus: !0
                             };
                         if (null == n) {
-                            let { valid: n } = await (0, j.v)({
+                            let { valid: n } = await (0, P.v)({
                                 content: e,
                                 stickers: s,
                                 uploads: a,
@@ -280,7 +280,7 @@ function z(e) {
                                 textAreaState: g,
                                 setTextAreaState: C,
                                 submit: A,
-                                error: S
+                                error: v
                             }),
                             (0, i.jsx)(d.Z, {
                                 channel: t,
@@ -389,11 +389,11 @@ function q(e) {
             },
             [d]
         );
-    (0, P.yp)({
+    (0, j.yp)({
         event: B.CkL.TEXTAREA_FOCUS,
         handler: _
     }),
-        (0, P.yp)({
+        (0, j.yp)({
             event: B.CkL.TEXTAREA_BLUR,
             handler: f
         });
@@ -433,7 +433,7 @@ function X(e) {
         s = (0, r.e7)([b.Z], () => (null == n ? null : b.Z.getMessage(t.id, n))),
         a = A.jU.useSetting();
     return null != s
-        ? (0, i.jsx)(S.Z, {
+        ? (0, i.jsx)(v.Z, {
               className: G.messagePreview,
               message: s,
               channel: t,

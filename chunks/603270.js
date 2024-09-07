@@ -148,7 +148,7 @@ let M = Z(function (e) {
                         });
                 });
             },
-            F = () => {
+            G = () => {
                 (0, r.openModalLazy)(async () => {
                     let e = y ? (await Promise.resolve().then(n.bind(n, 519896))).SubscriptionDetailsModal : null,
                         t = y ? null : (await Promise.resolve().then(n.bind(n, 147496))).ItemDetailsModal;
@@ -178,7 +178,7 @@ let M = Z(function (e) {
                     };
                 });
             },
-            G = y
+            F = y
                 ? B
                     ? (0, i.jsxs)(i.Fragment, {
                           children: [
@@ -207,7 +207,7 @@ let M = Z(function (e) {
                   : null === (t = M.description) || void 0 === t
                     ? void 0
                     : t.trim();
-        '' === G && (G = void 0);
+        '' === F && (F = void 0);
         let w = () => {
             h.default.track(A.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
                 application_id: p.id,
@@ -218,7 +218,7 @@ let M = Z(function (e) {
         return (0, i.jsx)(L, {
             appName: p.name,
             title: N.name,
-            description: G,
+            description: F,
             link: ''.concat(location.protocol, '//').concat(location.host).concat(A.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(p.id, R.ApplicationDirectoryProfileSections.STORE)),
             onLinkCopy: () => {
                 (0, f.X)(p.id, f.B.SKU_EMBED, u);
@@ -238,7 +238,7 @@ let M = Z(function (e) {
                     (0, i.jsx)(r.Button, {
                         color: r.ButtonColors.CUSTOM,
                         onClick: () => {
-                            F(),
+                            G(),
                                 h.default.track(A.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
                                     application_id: p.id,
                                     sku_id: N.id,
@@ -263,7 +263,7 @@ let M = Z(function (e) {
                                   subscriptionPlan: P
                               })
                             : (0, i.jsx)(r.Button, {
-                                  onClick: F,
+                                  onClick: G,
                                   children: O.Z.Messages.STOREFRONT_SUBSCRIBE
                               })
                         : (0, i.jsx)(S.Y, {

@@ -11,7 +11,7 @@ var a = o(120356),
     i = o(259580),
     r = o(373521);
 function u(e) {
-    let { options: t, onClick: o, className: a, optionClassName: u, hideCaret: c } = e;
+    let { options: t, onClick: o, className: a, optionClassName: u, hideCaret: d } = e;
     return (0, n.jsx)('div', {
         className: s()(r.root, a),
         children: t.map((e, t) =>
@@ -27,7 +27,7 @@ function u(e) {
                             variant: 'text-md/normal',
                             children: e.label
                         }),
-                        !(null == c ? void 0 : c(e)) &&
+                        !(null == d ? void 0 : d(e)) &&
                             (0, n.jsx)(i.Z, {
                                 className: r.caret,
                                 direction: i.Z.Directions.RIGHT

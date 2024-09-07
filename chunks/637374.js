@@ -36,7 +36,7 @@ var i = n(735250),
     y = n(474936),
     B = n(689938),
     k = n(145312);
-function F(e, t, n) {
+function G(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -49,7 +49,7 @@ function F(e, t, n) {
         e
     );
 }
-function G(e) {
+function F(e) {
     let { onClick: t, libraryApplication: n } = e;
     return (0, i.jsxs)(u.Clickable, {
         className: k.libraryLink,
@@ -83,9 +83,9 @@ class w extends s.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            F(this, 'renderMedia', () => (0, i.jsx)('div', { className: r()(k.invalidPoop, { [k.invalidPoopHorizontal]: this.isHorizontal }) })),
-            F(this, 'renderTitle', () => (this.props.isSelfGift ? B.Z.Messages.GIFT_EMBED_INVALID_TITLE_SELF : B.Z.Messages.GIFT_EMBED_INVALID_TITLE_OTHER)),
-            F(this, 'renderActions', () =>
+            G(this, 'renderMedia', () => (0, i.jsx)('div', { className: r()(k.invalidPoop, { [k.invalidPoopHorizontal]: this.isHorizontal }) })),
+            G(this, 'renderTitle', () => (this.props.isSelfGift ? B.Z.Messages.GIFT_EMBED_INVALID_TITLE_SELF : B.Z.Messages.GIFT_EMBED_INVALID_TITLE_OTHER)),
+            G(this, 'renderActions', () =>
                 this.props.isSelfGift
                     ? (0, i.jsx)(u.Button, {
                           size: u.Button.Sizes.SMALL,
@@ -98,7 +98,7 @@ class w extends s.PureComponent {
                           children: B.Z.Messages.GIFT_EMBED_BUTTON_ACCEPT
                       })
             ),
-            F(this, 'renderTagline', () => (this.props.isSelfGift ? B.Z.Messages.GIFT_EMBED_INVALID_TAGLINE_SELF : B.Z.Messages.GIFT_EMBED_INVALID_TAGLINE_OTHER));
+            G(this, 'renderTagline', () => (this.props.isSelfGift ? B.Z.Messages.GIFT_EMBED_INVALID_TAGLINE_SELF : B.Z.Messages.GIFT_EMBED_INVALID_TAGLINE_OTHER));
     }
 }
 class V extends s.Component {
@@ -121,7 +121,7 @@ class V extends s.Component {
                         this.renderButton(e),
                         null == t || e.isSubscription
                             ? null
-                            : (0, i.jsx)(G, {
+                            : (0, i.jsx)(F, {
                                   onClick: this.handleViewLibrary,
                                   libraryApplication: t
                               })
@@ -276,14 +276,14 @@ class V extends s.Component {
     }
     constructor(...e) {
         super(...e),
-            F(this, 'handleViewLibrary', (e) => {
+            G(this, 'handleViewLibrary', (e) => {
                 let { libraryApplication: t } = this.props;
                 e.preventDefault(), null != t && t.isHidden() ? (0, g.uL)(U.Z5c.APPLICATION_LIBRARY_SETTINGS) : (0, g.uL)(U.Z5c.APPLICATION_LIBRARY, { state: { applicationId: null != t ? t.id : void 0 } });
             }),
-            F(this, 'handleVerificationClick', (e) => {
+            G(this, 'handleVerificationClick', (e) => {
                 e.stopPropagation(), e.preventDefault(), d.Z.open(U.oAB.ACCOUNT);
             }),
-            F(this, 'handleAccept', (e) => {
+            G(this, 'handleAccept', (e) => {
                 let { channelId: t, code: n, content: i, type: s, giftInfo: a } = this.props;
                 e.preventDefault(),
                     e.stopPropagation(),
@@ -302,17 +302,17 @@ class V extends s.Component {
                     giftInfo: a
                 });
             }),
-            F(this, 'handleEmbedClick', (e) => {
+            G(this, 'handleEmbedClick', (e) => {
                 let { giftCode: t } = this.props;
                 null != t && t.isSubscription && (e.preventDefault(), d.Z.open(U.oAB.PREMIUM));
             }),
-            F(this, 'handleClaimPromotion', (e) => {
+            G(this, 'handleClaimPromotion', (e) => {
                 var t;
                 e.stopPropagation(), e.preventDefault();
                 let n = null === (t = this.props.giftCode) || void 0 === t ? void 0 : t.code;
                 if (null != n) window.open(U.Z5c.BILLING_PROMOTION_REDEMPTION(n));
             }),
-            F(this, 'renderCustomGiftBox', (e) => {
+            G(this, 'renderCustomGiftBox', (e) => {
                 let { useReducedMotion: t, width: n } = this.props;
                 if (null == e || null == e.giftStyle) return null;
                 let s = y.jy.includes(e.giftStyle),

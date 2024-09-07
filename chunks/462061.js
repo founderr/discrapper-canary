@@ -26,8 +26,8 @@ var i = n(735250),
     I = n(131951),
     x = n(451478),
     T = n(5192),
-    S = n(44136),
-    v = n(981631),
+    v = n(44136),
+    S = n(981631),
     N = n(65154),
     A = n(689938),
     Z = n(149050);
@@ -50,14 +50,14 @@ function R(e) {
         : null;
 }
 function L(e) {
-    let { participant: t, channel: n, inCall: a, width: o, paused: E, selected: R, fit: L, onVideoResize: P, blocked: j, noVideoRender: O = !1, pulseSpeakingIndicator: y = !1 } = e,
+    let { participant: t, channel: n, inCall: a, width: o, paused: E, selected: R, fit: L, onVideoResize: j, blocked: P, noVideoRender: O = !1, pulseSpeakingIndicator: y = !1 } = e,
         D = I.Z.getVideoComponent(),
         k = (0, r.e7)([g.default], () => g.default.getId()),
         { user: U, streamId: w, speaking: B } = t,
         H = U.id === k,
-        G = (0, S.ZP)(t),
+        G = (0, v.ZP)(t),
         V = (0, r.e7)([x.Z], () => x.Z.isFocused()),
-        F = (0, r.e7)([_.Z], () => _.Z.getWindowFocused(v.KJ3.CHANNEL_CALL_POPOUT)),
+        F = (0, r.e7)([_.Z], () => _.Z.getWindowFocused(S.KJ3.CHANNEL_CALL_POPOUT)),
         W = (0, r.e7)([I.Z], () => null != U.id && I.Z.isLocalVideoDisabled(U.id, (0, h.Z)(t.type)), [U.id, t.type]),
         z = (0, r.e7)([C.ZP], () => C.ZP.isGuestOrLurker(n.guild_id, U.id)),
         Y = T.ZP.getName(n.getGuildId(), n.id, U) + (z ? ' '.concat(A.Z.Messages.GUEST_NAME_SUFFIX) : ''),
@@ -77,7 +77,7 @@ function L(e) {
         ? (0, i.jsx)(
               p.Z,
               {
-                  onResize: P,
+                  onResize: j,
                   wrapperClassName: Z.videoWrapper,
                   className: Z.content,
                   mirror: H,
@@ -91,7 +91,7 @@ function L(e) {
               w
           )
         : (0, i.jsx)('div', {
-              className: l()(Z.content, { [Z.blockedAvatar]: j }),
+              className: l()(Z.content, { [Z.blockedAvatar]: P }),
               children: (0, i.jsx)(m.Z, {
                   'aria-label': Y,
                   src: X,

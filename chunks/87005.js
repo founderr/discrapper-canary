@@ -1,6 +1,6 @@
 t.d(n, {
     f: function () {
-        return h;
+        return f;
     }
 }),
     t(47120);
@@ -24,7 +24,7 @@ let _ = {
         limit: p.tn,
         includeFrecency: !0
     };
-function h(e, n) {
+function f(e, n) {
     let { sectionDescriptors: t, loading: r } = s.wi(e, _, C);
     return {
         loading: r,

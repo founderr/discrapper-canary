@@ -27,8 +27,8 @@ var i,
     I = n(884338),
     x = n(719296),
     T = n(958185),
-    S = n(100527),
-    v = n(906732),
+    v = n(100527),
+    S = n(906732),
     N = n(890280),
     A = n(895924),
     Z = n(835473),
@@ -36,8 +36,8 @@ var i,
     b = n(314897),
     R = n(819640),
     L = n(594174),
-    P = n(823379),
-    j = n(5192),
+    j = n(823379),
+    P = n(5192),
     O = n(689938),
     y = n(305268);
 ((s = i || (i = {}))[(s.SMALL = 0)] = 'SMALL'), (s[(s.MEDIUM = 1)] = 'MEDIUM'), (s[(s.LARGE = 2)] = 'LARGE');
@@ -53,7 +53,7 @@ function k(e) {
         max: 4,
         renderUser: (e) => {
             if (null == e) return null;
-            let t = j.ZP.getName(n, i, e);
+            let t = P.ZP.getName(n, i, e);
             return (0, a.jsx)(
                 u.TooltipContainer,
                 {
@@ -82,12 +82,12 @@ function U(e) {
         x = (0, c.Wu)([L.default, b.default], () =>
             Array.from(r)
                 .map((e) => ((0, p.J)(e, b.default) ? null : L.default.getUser(e.userId)))
-                .filter(P.lm)
+                .filter(j.lm)
         ),
         T = (0, c.e7)([h.ZP], () => h.ZP.getEmbeddedActivitiesForChannel(E.id).find((e) => e.applicationId === f.id)),
-        { analyticsLocations: S } = (0, v.ZP)(),
+        { analyticsLocations: v } = (0, S.ZP)(),
         Z = (0, d.O)(),
-        M = j.ZP.getName(E.getGuildId(), E.id, null == x ? void 0 : x[0]),
+        M = P.ZP.getName(E.getGuildId(), E.id, null == x ? void 0 : x[0]),
         R =
             (0, _.s5)({
                 userId: null === (t = L.default.getCurrentUser()) || void 0 === t ? void 0 : t.id,
@@ -144,7 +144,7 @@ function U(e) {
                                       applicationId: T.applicationId,
                                       activityChannelId: E.id,
                                       locationObject: Z.location,
-                                      analyticsLocations: S,
+                                      analyticsLocations: v,
                                       componentId: U,
                                       commandOrigin: A.bB.VOICE_UI
                                   });
@@ -171,7 +171,7 @@ function U(e) {
 }
 function w(e) {
     let { participant: t, width: n, selected: i, interactible: s, channel: r } = e,
-        { analyticsLocations: o } = (0, v.ZP)(S.Z.ACTIVITY_TILE),
+        { analyticsLocations: o } = (0, S.ZP)(v.Z.ACTIVITY_TILE),
         { id: u } = t,
         d = (0, f.Z)(),
         h = (null == d ? void 0 : d.channelId) === r.id && d.applicationId === u,
@@ -197,7 +197,7 @@ function w(e) {
                 (0, C.jy)(e);
             }
         }, [_, d, A]),
-        (0, a.jsx)(v.Gt, {
+        (0, a.jsx)(S.Gt, {
             value: o,
             children: (0, a.jsx)('div', {
                 className: y.container,

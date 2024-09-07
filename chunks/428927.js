@@ -3,7 +3,7 @@ n.d(t, {
         return T;
     },
     Z: function () {
-        return S;
+        return v;
     }
 });
 var i = n(735250);
@@ -82,7 +82,7 @@ function T(e) {
         ]
     });
 }
-function S(e) {
+function v(e) {
     let { user: t, onClose: n } = e,
         { mutualGuilds: s } = (0, _.Z)(t.id),
         a = (0, u.ZP)(),

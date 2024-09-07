@@ -24,8 +24,8 @@ var i = n(735250),
     I = n(603368),
     x = n(353093),
     T = n(940725),
-    S = n(114487),
-    v = n(979264),
+    v = n(114487),
+    S = n(979264),
     N = n(981631),
     A = n(921944),
     Z = n(689938),
@@ -63,13 +63,13 @@ function b(e) {
             }
         );
     }, []);
-    let P = s.useCallback(
+    let j = s.useCallback(
             (e) => {
                 e.stopPropagation(), e.preventDefault(), m();
             },
             [m]
         ),
-        j = s.useCallback(
+        P = s.useCallback(
             (e) => {
                 e.stopPropagation(), e.preventDefault(), o();
             },
@@ -122,20 +122,20 @@ function b(e) {
                 ref: E,
                 children: (0, i.jsx)(c.ClickableContainer, {
                     'aria-label': U,
-                    onClick: j,
+                    onClick: P,
                     children: (0, i.jsxs)('div', {
                         className: l()(M.toastContainerInner, p ? M.hovered : null),
                         children: [
                             (0, i.jsxs)('div', {
                                 className: M.guildIconContainer,
                                 children: [
-                                    (0, i.jsx)(S.Z, {
+                                    (0, i.jsx)(v.Z, {
                                         guild: n,
                                         iconSize: 64
                                     }),
                                     (0, i.jsx)('div', {
                                         className: M.guildTagContainer,
-                                        children: (0, i.jsx)(v.aG, {
+                                        children: (0, i.jsx)(S.aG, {
                                             guildId: n.id,
                                             clanTag: null === (s = n.clan) || void 0 === s ? void 0 : s.tag,
                                             clanBadge: null === (a = n.clan) || void 0 === a ? void 0 : a.badge,
@@ -165,7 +165,7 @@ function b(e) {
                             (0, i.jsx)('div', {
                                 children: (0, i.jsx)(c.Clickable, {
                                     className: M.toastButton,
-                                    onClick: P,
+                                    onClick: j,
                                     children: (0, i.jsx)(c.XSmallBoldIcon, {
                                         size: 'custom',
                                         width: 20,
