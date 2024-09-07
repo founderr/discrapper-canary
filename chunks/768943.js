@@ -60,6 +60,9 @@ class p extends (r = o.ZP.Store) {
             return null == t.dueAt || new Date() > t.dueAt;
         }).length;
     }
+    getSavedMessageCount() {
+        return _.size();
+    }
     getLastFetched() {
         return E;
     }

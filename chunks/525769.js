@@ -47,6 +47,7 @@ n.d(t, {
     (a.ENABLE_CREATOR_MONETIZATION_CREATE_REQUEST_LANDING = 'impression_enable_creator_monetization_create_request_landing'),
     (a.ENABLE_CREATOR_MONETIZATION_GUILD_HEADER_UPSELL = 'impression_enable_creator_monetization_guild_header_upsell'),
     (a.ENABLE_CREATOR_MONETIZATION_WAITLIST_LANDING = 'impression_enable_creator_monetization_waitlist_landing'),
+    (a.FOR_LATER_LIST_VIEWED = 'impression_for_later_list_viewed'),
     (a.FRIEND_REQUESTS_SPAM_INBOX = 'impression_friend_requests_spam_inbox'),
     (a.FRIENDS = 'impression_friends'),
     (a.GAME_CONSOLE_DEVICE_LIST = 'impression_game_console_device_list'),
