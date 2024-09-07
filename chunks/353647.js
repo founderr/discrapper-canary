@@ -9,11 +9,12 @@ var r,
 let c = new Map(),
     d = new Set(),
     _ = null,
-    E = !1;
-function f() {
+    E = !1,
+    f = !1;
+function h() {
     (c = new Map()), (d = new Set()), (_ = null), (E = !1);
 }
-class h extends (r = o.ZP.Store) {
+class p extends (r = o.ZP.Store) {
     getMatchingOutboxEntry(e) {
         let { activity: t, userId: n } = e,
             r = c.get(n);
@@ -31,9 +32,12 @@ class h extends (r = o.ZP.Store) {
     get isDeletingEntryHistory() {
         return E;
     }
+    get hasInitialized() {
+        return f;
+    }
 }
 (s = 'ContentInventoryOutboxStore'),
-    (a = 'displayName') in (i = h)
+    (a = 'displayName') in (i = p)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -41,12 +45,12 @@ class h extends (r = o.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new h(l.Z, {
+    (t.Z = new p(l.Z, {
         CONNECTION_OPEN: function () {
-            f();
+            h(), (f = !0);
         },
         LOGOUT: function () {
-            f();
+            h();
         },
         CONTENT_INVENTORY_FETCH_OUTBOX_START: function (e) {
             let { userId: t } = e;
