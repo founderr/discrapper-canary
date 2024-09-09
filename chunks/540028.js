@@ -29,24 +29,22 @@ function T(e) {
         onClose: t,
         onSelect: m,
         children: (function () {
-            let e = a.find((e) => e.component === h.NYg.EMBED_IFRAME),
-                t = a.find((e) => e.component === h.NYg.VIDEO),
-                n = [];
+            let e = [],
+                t = a.find((e) => e.component === h.NYg.VIDEO);
             return (
-                null != e && (null == S ? void 0 : S.id) !== e.id && n.push({ pipWindow: e }),
                 null != t &&
-                    A.forEach((e) => {
-                        let r = _.Z.getActiveStreamForApplicationStream(e.stream),
-                            i = e.id === (null == g ? void 0 : g.id) && (null == S ? void 0 : S.id) === t.id;
+                    A.forEach((n) => {
+                        let r = _.Z.getActiveStreamForApplicationStream(n.stream),
+                            i = n.id === (null == g ? void 0 : g.id) && (null == S ? void 0 : S.id) === t.id;
                         null != r &&
                             !i &&
-                            n.push({
+                            e.push({
                                 pipWindow: t,
-                                participant: e,
+                                participant: n,
                                 stream: r
                             });
                     }),
-                n
+                e
             );
         })().map(function (e) {
             var t;
@@ -80,7 +78,7 @@ function T(e) {
 }
 t.Z = function (e) {
     let { voiceChannelId: t, idle: n } = e,
-        o = Array.from((0, i.e7)([E.Z], () => E.Z.pipWindows).values()),
+        o = Array.from((0, i.e7)([E.Z], () => E.Z.pipWindows).values()).filter((e) => e.component !== h.NYg.EMBED_IFRAME),
         l = (0, i.Wu)([_.Z], () => _.Z.getAllActiveStreamsForChannel(t)).filter((e) => {
             var n;
             return e.ownerId !== (null === (n = f.default.getCurrentUser()) || void 0 === n ? void 0 : n.id) && e.channelId === t;
