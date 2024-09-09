@@ -1,4 +1,4 @@
-n.d(t, {
+a.d(t, {
     U: function () {
         return o;
     },
@@ -6,39 +6,39 @@ n.d(t, {
         return r;
     }
 });
-var s,
+var n,
     o,
-    a = n(689938);
+    s = a(689938);
 function r() {
     return [
         {
             value: 'Too hard',
-            label: a.Z.Messages.GUILD_DELETE_FEEDBACK_TOO_HARD
+            label: s.Z.Messages.GUILD_DELETE_FEEDBACK_TOO_HARD
         },
         {
             value: 'Testing purposes',
-            label: a.Z.Messages.GUILD_DELETE_FEEDBACK_TEST
+            label: s.Z.Messages.GUILD_DELETE_FEEDBACK_TEST
         },
         {
             value: 'Created on accident',
-            label: a.Z.Messages.GUILD_DELETE_FEEDBACK_ACCIDENT
+            label: s.Z.Messages.GUILD_DELETE_FEEDBACK_ACCIDENT
         },
         {
             value: 'Curious about server/template',
-            label: a.Z.Messages.GUILD_DELETE_FEEDBACK_TEMPLATE
+            label: s.Z.Messages.GUILD_DELETE_FEEDBACK_TEMPLATE
         },
         {
             value: 'Empty server',
-            label: a.Z.Messages.GUILD_DELETE_FEEDBACK_LONELY
+            label: s.Z.Messages.GUILD_DELETE_FEEDBACK_LONELY
         },
         {
             value: 'Inactive server',
-            label: a.Z.Messages.GUILD_DELETE_FEEDBACK_INACTIVE
+            label: s.Z.Messages.GUILD_DELETE_FEEDBACK_INACTIVE
         },
         {
             value: 'Other',
-            label: a.Z.Messages.GUILD_DELETE_FEEDBACK_OTHER
+            label: s.Z.Messages.GUILD_DELETE_FEEDBACK_OTHER
         }
     ];
 }
-((s = o || (o = {})).TOO_HARD = 'Too hard'), (s.TEST = 'Testing purposes'), (s.ACCIDENT = 'Created on accident'), (s.TEMPLATE = 'Curious about server/template'), (s.LONELY = 'Empty server'), (s.INACTIVE = 'Inactive server'), (s.OTHER = 'Other');
+((n = o || (o = {})).TOO_HARD = 'Too hard'), (n.TEST = 'Testing purposes'), (n.ACCIDENT = 'Created on accident'), (n.TEMPLATE = 'Curious about server/template'), (n.LONELY = 'Empty server'), (n.INACTIVE = 'Inactive server'), (n.OTHER = 'Other');

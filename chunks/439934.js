@@ -27,8 +27,8 @@ var a = n(735250),
     E = n(542094),
     S = n(665811),
     N = n(182906),
-    b = n(556505),
-    j = n(513202),
+    j = n(556505),
+    b = n(513202),
     A = n(884338),
     M = n(823531),
     y = n(689938),
@@ -98,8 +98,8 @@ function B(e) {
             imageBackground: B,
             videoUrl: R,
             activityAction: V,
-            joinableEmbeddedApp: k,
-            onActivityItemSelected: P,
+            joinableEmbeddedApp: P,
+            onActivityItemSelected: k,
             labelType: H,
             staffReleasePhase: F
         } = (0, E.ZP)({
@@ -109,7 +109,7 @@ function B(e) {
             locationObject: f,
             onActivityItemVisible: _,
             onActivityItemSelected: T,
-            embeddedActivitiesManager: j.Z,
+            embeddedActivitiesManager: b.Z,
             commandOrigin: g.bB.APPLICATION_LAUNCHER
         }),
         U = (0, o.e7)([h.Z, I.Z], () => h.Z.inDevModeForApplication(n.application.id) || I.Z.inTestModeForApplication(n.application.id), [n.application.id]),
@@ -125,8 +125,8 @@ function B(e) {
         X = () => z(!1),
         $ = v.Sb.useSetting(),
         Q = i.useCallback(() => {
-            null == P || P(), u.ZP.maybeQueryForInstallLessApps(Y.id, null == l ? void 0 : l.id);
-        }, [Y.id, null == l ? void 0 : l.id, P]);
+            null == k || k(), u.ZP.maybeQueryForInstallLessApps(Y.id, null == l ? void 0 : l.id);
+        }, [Y.id, null == l ? void 0 : l.id, k]);
     return (0, a.jsxs)(r.Clickable, {
         onClick: V === E.JS.START ? Q : void 0,
         onContextMenu: $
@@ -181,7 +181,7 @@ function B(e) {
                         className: Z.overlayBadge,
                         children: (0, a.jsx)('div', {
                             className: Z.badgeContainer,
-                            children: (0, a.jsx)(b.Z, {
+                            children: (0, a.jsx)(j.Z, {
                                 name: Y.name,
                                 labelType: H
                             })
@@ -235,7 +235,7 @@ function B(e) {
                         ]
                     }),
                     (0, a.jsx)(O, {
-                        activity: null == k ? void 0 : k.embeddedActivity,
+                        activity: null == P ? void 0 : P.embeddedActivity,
                         application: Y,
                         channel: l,
                         guildId: p,

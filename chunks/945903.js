@@ -1,52 +1,52 @@
-n.r(t),
-    n.d(t, {
+a.r(t),
+    a.d(t, {
         default: function () {
-            return f;
+            return h;
         }
     });
-var s = n(735250),
-    o = n(470079),
-    a = n(77866),
-    r = n(704215),
-    l = n(481060),
-    i = n(605236),
-    c = n(624659),
-    u = n(626135),
-    E = n(652463),
-    d = n(709243),
-    _ = n(981631),
-    b = n(689938);
-let m = [d.U.OTHER];
-function f(e) {
-    let { transitionState: t, onClose: f, guildId: D } = e,
-        x = (0, a.Z)(d.e);
+var n = a(735250),
+    o = a(470079),
+    s = a(77866),
+    r = a(704215),
+    l = a(481060),
+    i = a(605236),
+    c = a(624659),
+    u = a(626135),
+    d = a(652463),
+    E = a(709243),
+    b = a(981631),
+    _ = a(689938);
+let m = { [E.U.OTHER]: {} };
+function h(e) {
+    let { transitionState: t, onClose: h, guildId: f } = e,
+        x = (0, s.Z)(E.e);
     return (
         o.useEffect(() => {
-            u.default.track(_.rMx.OPEN_MODAL, { type: 'Guild Delete Report' });
+            u.default.track(b.rMx.OPEN_MODAL, { type: 'Guild Delete Report' });
         }, []),
-        (0, s.jsx)(c.Z, {
-            header: b.Z.Messages.GUILD_DELETE_FEEDBACK_HEADER,
-            body: b.Z.Messages.GUILD_DELETE_FEEDBACK_BODY,
+        (0, n.jsx)(c.Z, {
+            header: _.Z.Messages.GUILD_DELETE_FEEDBACK_HEADER,
+            body: _.Z.Messages.GUILD_DELETE_FEEDBACK_BODY,
             problems: x,
             feedbackProblems: m,
             onSubmit: function (e) {
-                let { problem: t, dontShowAgain: o, feedback: a } = e;
+                let { problem: t, dontShowAgain: o, feedback: s } = e;
                 o && (0, i.EW)(r.z.GUILD_DELETE_FEEDBACK);
                 let c = null == t;
-                (0, E.Z)(D, t, a, c),
+                (0, d.Z)(f, t, s, c),
                     !c &&
                         (0, l.openModalLazy)(async () => {
-                            let { default: e } = await n.e('14466').then(n.bind(n, 729328));
+                            let { default: e } = await a.e('14466').then(a.bind(a, 729328));
                             return (t) =>
-                                (0, s.jsx)(e, {
-                                    body: b.Z.Messages.GUILD_DELETE_FEEDBACK_REPORT,
+                                (0, n.jsx)(e, {
+                                    body: _.Z.Messages.GUILD_DELETE_FEEDBACK_REPORT,
                                     ...t
                                 });
                         });
             },
-            onClose: f,
+            onClose: h,
             transitionState: t,
-            otherKey: d.U.OTHER
+            otherKey: E.U.OTHER
         })
     );
 }

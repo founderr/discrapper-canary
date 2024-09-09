@@ -60,12 +60,12 @@ function j(e) {
                               className: L.linkedLobbyEducationTooltip,
                               children: [
                                   (0, i.jsx)(c.Text, {
-                                      variant: 'text-md/bold',
+                                      variant: 'text-md/semibold',
                                       color: 'header-primary',
                                       children: R.Z.Messages.CHANNEL_LINKED_LOBBY_CHANNEL_HEADER_COACHMARK_TITLE
                                   }),
                                   (0, i.jsx)(c.Text, {
-                                      variant: 'text-sm/normal',
+                                      variant: 'text-sm/medium',
                                       color: 'header-secondary',
                                       children: R.Z.Messages.CHANNEL_LINKED_LOBBY_CHANNEL_HEADER_COACHMARK_DESCRIPTION.format({ helpdeskArticle: T.Z.getArticleURL(M.BhN.CHANNEL_LINKED_LOBBIES) })
                                   }),
@@ -94,7 +94,7 @@ function j(e) {
                 (0, i.jsxs)(c.Text, {
                     ...e,
                     className: L.linkedLobby,
-                    variant: 'text-sm/normal',
+                    variant: 'text-sm/medium',
                     color: 'header-primary',
                     children: [
                         '\u2022',

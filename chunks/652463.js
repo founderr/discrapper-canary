@@ -1,16 +1,16 @@
-n.d(t, {
+a.d(t, {
     Z: function () {
-        return a;
+        return s;
     }
 });
-var s = n(626135),
-    o = n(981631);
-function a(e, t, n, a) {
-    s.default.track(o.rMx.USER_REPORT_SUBMITTED, {
+var n = a(626135),
+    o = a(981631);
+function s(e, t, a, s) {
+    n.default.track(o.rMx.USER_REPORT_SUBMITTED, {
         report_name: 'Guild Deletion',
         guild_id: e,
         reason: t,
-        feedback: n,
-        skipped: a
+        feedback: a,
+        skipped: s
     });
 }

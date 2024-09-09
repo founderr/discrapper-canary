@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return k;
+            return P;
         }
     }),
     n(47120),
@@ -29,8 +29,8 @@ var a = n(735250),
     E = n(115130),
     S = n(566620),
     N = n(421),
-    b = n(895395),
-    j = n(49978),
+    j = n(895395),
+    b = n(49978),
     A = n(427996),
     M = n(701488),
     y = n(981631),
@@ -41,9 +41,9 @@ var a = n(735250),
 let B = (0, C.Mg)(c.Z.ACTIVITY_SHELF_MODAL_MODAL_PADDING),
     R = (0, C.Mg)(c.Z.ACTIVITY_SHELF_MODAL_MODAL_WIDTH),
     V = (0, C.Mg)(c.Z.ACTIVITY_SHELF_MODAL_MODAL_MAX_HEIGHT) + B + (0, C.Mg)(c.Z.ACTIVITY_SHELF_MODAL_MODAL_ART_HEIGHT);
-function k(e) {
+function P(e) {
     let { channel: t, guildId: n, locationObject: l, onClose: c, initialSelectedApplicationId: g, initialSlide: _ = M.ag.DIRECTORY, enableSelectedTextChannelInvite: C, analyticsLocations: B, ...V } = e,
-        k = (0, r.e7)([E.Z], () => E.Z.getIsEnabled(), []),
+        P = (0, r.e7)([E.Z], () => E.Z.getIsEnabled(), []),
         { analyticsLocations: H } = (0, p.ZP)(B),
         [F, U] = i.useState(_),
         Y = (0, u.Z)(F),
@@ -210,7 +210,7 @@ function k(e) {
                                         if (F === M.ag.DIRECTORY)
                                             return (0, a.jsx)(d.Text, {
                                                 variant: 'text-sm/normal',
-                                                children: k ? Z.Z.Messages.EMBEDDED_ACTIVITIES_DEVELOPER_SHELF_SUBTITLE : Z.Z.Messages.EMBEDDED_ACTIVITIES_SHELF_SUBTITLE
+                                                children: P ? Z.Z.Messages.EMBEDDED_ACTIVITIES_DEVELOPER_SHELF_SUBTITLE : Z.Z.Messages.EMBEDDED_ACTIVITIES_SHELF_SUBTITLE
                                             });
                                         return null;
                                     })()
@@ -222,7 +222,7 @@ function k(e) {
                             })
                         ]
                     }),
-                    F === M.ag.DIRECTORY && k ? (0, a.jsx)(A.W, {}) : null,
+                    F === M.ag.DIRECTORY && P ? (0, a.jsx)(A.W, {}) : null,
                     (0, a.jsx)('div', { className: D.modalDivider }),
                     (0, a.jsxs)(d.Slides, {
                         activeSlide: F,
@@ -236,9 +236,9 @@ function k(e) {
                                     source_section: l.section,
                                     impression_group: o.ImpressionGroups.ACTIVITY_SHELF_FLOW
                                 },
-                                children: (0, a.jsx)(P, {
+                                children: (0, a.jsx)(k, {
                                     slide: F,
-                                    children: (0, a.jsx)(b.Z, {
+                                    children: (0, a.jsx)(j.Z, {
                                         scrollerRef: X,
                                         channel: t,
                                         guildId: n,
@@ -256,9 +256,9 @@ function k(e) {
                                     impression_group: o.ImpressionGroups.ACTIVITY_SHELF_FLOW,
                                     application_id: W
                                 },
-                                children: (0, a.jsx)(P, {
+                                children: (0, a.jsx)(k, {
                                     slide: F,
-                                    children: (0, a.jsx)(j.Z, {
+                                    children: (0, a.jsx)(b.Z, {
                                         applicationId: W,
                                         selectedChannelId: q,
                                         setSelectedChannelId: J,
@@ -271,7 +271,7 @@ function k(e) {
                                 id: M.ag.DETAIL_PAGE,
                                 impressionName: o.ImpressionNames.ACTIVITY_DETAILS,
                                 impressionProperties: $,
-                                children: (0, a.jsx)(P, {
+                                children: (0, a.jsx)(k, {
                                     slide: F,
                                     children:
                                         null == W
@@ -293,9 +293,9 @@ function k(e) {
                         children: (() => {
                             switch (F) {
                                 case M.ag.DIRECTORY:
-                                    return (0, a.jsx)(b.d, {});
+                                    return (0, a.jsx)(j.d, {});
                                 case M.ag.SELECT_CHANNEL:
-                                    return (0, a.jsx)(j.q, {
+                                    return (0, a.jsx)(b.q, {
                                         onBack: et,
                                         onClose: c,
                                         guildId: n,
@@ -316,7 +316,7 @@ function k(e) {
         })
     );
 }
-let P = (e) => {
+let k = (e) => {
     let { children: t, slide: n } = e,
         l = (0, r.e7)([E.Z], () => E.Z.getIsEnabled(), []),
         o = i.useContext(g.ZP),

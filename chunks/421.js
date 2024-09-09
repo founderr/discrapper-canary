@@ -51,7 +51,7 @@ function N(e) {
                 children: [
                     (0, a.jsx)('div', {
                         className: S.launcherOuterContainer,
-                        children: (0, a.jsx)(b, {
+                        children: (0, a.jsx)(j, {
                             activityItem: I,
                             onLaunch: u,
                             channelId: c
@@ -162,7 +162,7 @@ function N(e) {
         })
     });
 }
-function b(e) {
+function j(e) {
     var t, o;
     let { activityItem: d, onLaunch: g, channelId: v } = e,
         x = (0, f.Z)({
@@ -170,8 +170,8 @@ function b(e) {
             size: 2048
         }),
         { analyticsLocations: C } = (0, r.ZP)(),
-        [N, b] = i.useState(null !== (t = (0, p.$)({ allowGdmActivityChannelSuggestion: !0 })) && void 0 !== t ? t : void 0),
-        [j, A] = i.useState(
+        [N, j] = i.useState(null !== (t = (0, p.$)({ allowGdmActivityChannelSuggestion: !0 })) && void 0 !== t ? t : void 0),
+        [b, A] = i.useState(
             null !==
                 (o = (0, I.d)({
                     guildId: N,
@@ -180,19 +180,19 @@ function b(e) {
                 ? o
                 : void 0
         ),
-        M = (0, l.e7)([u.Z], () => u.Z.getChannel(j), [j]),
+        M = (0, l.e7)([u.Z], () => u.Z.getChannel(b), [b]),
         y = (0, p.W)(),
         Z = (0, I.F)(N),
         D = i.useCallback(async () => {
             var e;
-            if (null != j)
+            if (null != b)
                 await (0, m.Z)({
                     targetApplicationId: null == d ? void 0 : null === (e = d.application) || void 0 === e ? void 0 : e.id,
-                    channelId: j,
+                    channelId: b,
                     analyticsLocations: C,
                     commandOrigin: c.bB.APPLICATION_LAUNCHER
                 }).then(g);
-        }, [d, C, g, j]),
+        }, [d, C, g, b]),
         L = i.useCallback(() => {
             (0, s.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([n.e('60133'), n.e('79329')]).then(n.bind(n, 827940));
@@ -204,7 +204,7 @@ function b(e) {
                     });
             });
         }, [d, C]),
-        O = null == M || (null != M.guild_id && !(null != N && null != j && y.some((e) => e.value === N) && Z.some((e) => e.value.channel.id === j)) && !0);
+        O = null == M || (null != M.guild_id && !(null != N && null != b && y.some((e) => e.value === N) && Z.some((e) => e.value.channel.id === b)) && !0);
     return (0, a.jsxs)('div', {
         className: S.launcherInnerContainer,
         children: [
@@ -236,7 +236,7 @@ function b(e) {
                               isSelected: (e) => e === N,
                               select: (e) => {
                                   var t;
-                                  b(e), A(null !== (t = (0, I.d)({ guildId: e })) && void 0 !== t ? t : void 0);
+                                  j(e), A(null !== (t = (0, I.d)({ guildId: e })) && void 0 !== t ? t : void 0);
                               },
                               serialize: (e) => e
                           }),
@@ -246,7 +246,7 @@ function b(e) {
                               options: Z,
                               isSelected: (e) => {
                                   let { channel: t } = e;
-                                  return t.id === j;
+                                  return t.id === b;
                               },
                               select: (e) => {
                                   let { channel: t } = e;
@@ -257,7 +257,7 @@ function b(e) {
                                   return t.id;
                               },
                               renderOptionValue: () => {
-                                  let e = Z.find((e) => e.value.channel.id === j);
+                                  let e = Z.find((e) => e.value.channel.id === b);
                                   return null == e
                                       ? null
                                       : (0, a.jsx)(T.O, {

@@ -1,48 +1,48 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return I;
+            return C;
         }
     });
-var s = n(735250),
-    a = n(470079),
-    o = n(77866),
+var a = n(735250),
+    o = n(470079),
+    s = n(77866),
     l = n(704215),
     r = n(481060),
     i = n(605236),
-    E = n(624659),
+    c = n(624659),
     u = n(626135),
-    c = n(263226),
+    E = n(263226),
     d = n(225634),
     _ = n(981631),
     b = n(689938);
-function I(e) {
-    let { transitionState: t, onClose: I, guildId: C, guildName: f } = e,
-        m = (0, o.Z)(d.S);
+function C(e) {
+    let { transitionState: t, onClose: C, guildId: m, guildName: I } = e,
+        f = (0, s.Z)(d.S);
     return (
-        a.useEffect(() => {
+        o.useEffect(() => {
             u.default.track(_.rMx.OPEN_MODAL, { type: 'Guild Leave Report' });
         }, []),
-        (0, s.jsx)(E.Z, {
+        (0, a.jsx)(c.Z, {
             header: b.Z.Messages.GUILD_LEAVE_FEEDBACK_HEADER,
-            body: b.Z.Messages.GUILD_LEAVE_FEEDBACK_BODY.format({ server: f }),
-            problems: m,
+            body: b.Z.Messages.GUILD_LEAVE_FEEDBACK_BODY.format({ server: I }),
+            problems: f,
             onSubmit: function (e) {
-                let { problem: t, dontShowAgain: a, feedback: o } = e;
-                a && (0, i.EW)(l.z.GUILD_LEAVE_FEEDBACK);
-                let E = null == t;
-                (0, c.Z)(C, t, o, E),
-                    !E &&
+                let { problem: t, dontShowAgain: o, feedback: s } = e;
+                o && (0, i.EW)(l.z.GUILD_LEAVE_FEEDBACK);
+                let c = null == t;
+                (0, E.Z)(m, t, s, c),
+                    !c &&
                         (0, r.openModalLazy)(async () => {
                             let { default: e } = await n.e('14466').then(n.bind(n, 729328));
                             return (t) =>
-                                (0, s.jsx)(e, {
+                                (0, a.jsx)(e, {
                                     body: b.Z.Messages.GUILD_LEAVE_FEEDBACK_REPORT,
                                     ...t
                                 });
                         });
             },
-            onClose: I,
+            onClose: C,
             transitionState: t,
             otherKey: d.G.OTHER,
             hasCloseButton: !0
