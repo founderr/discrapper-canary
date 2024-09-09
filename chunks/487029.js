@@ -91,7 +91,7 @@ function x(e) {
             },
             [D, A]
         ),
-        G = l.useCallback(
+        U = l.useCallback(
             (e) => {
                 if (null == e) return;
                 let t = A[e];
@@ -99,7 +99,7 @@ function x(e) {
             },
             [A, j]
         ),
-        U = l.useMemo(
+        G = l.useMemo(
             () =>
                 A.map((e) =>
                     (0, i.jsx)(
@@ -128,9 +128,9 @@ function x(e) {
                   showDeadZoneIndicator: !v,
                   activeItem: R,
                   onItemSelect: w,
-                  onItemAction: G,
+                  onItemAction: U,
                   interactive: Z,
-                  children: U
+                  children: G
               })
           });
 }

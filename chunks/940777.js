@@ -51,8 +51,8 @@ function P() {
         })),
         D = (0, o.e7)([E.Z], () => E.Z.getChannelId(A.I_8)),
         w = (0, o.e7)([I.Z], () => I.Z.getChannel(D)),
-        G = (0, m.Z)((e) => e.guildId) === A.I_8,
-        { badge: U, unread: k } = (0, Z.Z)(j),
+        U = (0, m.Z)((e) => e.guildId) === A.I_8,
+        { badge: G, unread: k } = (0, Z.Z)(j),
         B = (function (e) {
             let t = (0, o.e7)([E.Z], () => E.Z.getVoiceChannelId()),
                 n = null != t && null != e[t],
@@ -87,14 +87,14 @@ function P() {
                 })
             );
         })(j),
-        V = U > 0 ? (0, g.N)(U) : null,
+        V = G > 0 ? (0, g.N)(G) : null,
         H = l.useCallback(() => {
             r();
         }, [r]);
     return (0, i.jsxs)(_.H, {
         children: [
             (0, i.jsx)(p.Z, {
-                selected: G,
+                selected: U,
                 hovered: P,
                 unread: k && !y,
                 className: M.pill
@@ -103,20 +103,20 @@ function P() {
                 onShow: H,
                 children: (0, i.jsx)(T.S, {
                     children: (0, i.jsx)(c.BlobMask, {
-                        selected: G || P,
+                        selected: U || P,
                         upperBadge: B,
                         lowerBadge: V,
                         children: (0, i.jsx)(c.NavItem, {
                             ...e,
                             ariaLabel: b.Z.Messages.GUILD_TOOLTIP_A11Y_LABEL.format({
                                 guildName: b.Z.Messages.FAVORITES_GUILD_NAME,
-                                mentions: U
+                                mentions: G
                             }),
                             to: {
                                 pathname: A.Z5c.CHANNEL(A.I_8, D),
                                 state: R
                             },
-                            selected: G || P,
+                            selected: U || P,
                             onMouseEnter: () => O(!0),
                             onMouseLeave: () => O(!1),
                             onMouseDown: function () {

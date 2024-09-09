@@ -80,21 +80,21 @@ let Z = l.memo(function (e) {
                 });
         }, [r]),
         { role: j, tabIndex: D, ...w } = (0, s.JA)(r.id),
-        G = l.useRef(null),
         U = l.useRef(null),
+        G = l.useRef(null),
         k = (0, i.jsxs)('li', {
             className: t,
             'data-dnd-name': r.name,
             children: [
                 (0, i.jsx)(c.FocusRing, {
-                    focusTarget: G,
-                    ringTarget: U,
+                    focusTarget: U,
+                    ringTarget: G,
                     offset: {
                         left: 4,
                         right: 4
                     },
                     children: (0, i.jsxs)('div', {
-                        ref: U,
+                        ref: G,
                         className: a()(S.iconVisibility, S.wrapper, {
                             [S.collapsed]: M,
                             [S.muted]: b,
@@ -103,7 +103,7 @@ let Z = l.memo(function (e) {
                         onContextMenu: O,
                         children: [
                             (0, i.jsxs)(c.Clickable, {
-                                innerRef: G,
+                                innerRef: U,
                                 className: S.mainContent,
                                 tabIndex: D,
                                 ...w,

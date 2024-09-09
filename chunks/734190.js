@@ -55,10 +55,10 @@ t.Z = l.memo(function (e) {
             },
             [t]
         ),
-        G = l.useCallback(() => {
+        U = l.useCallback(() => {
             u.Z.preload(t.guild_id, t.id);
         }, [t.guild_id, t.id]),
-        U = l.useCallback(
+        G = l.useCallback(
             (e) => {
                 let l = f.Z.getChannel(t.id);
                 null != l &&
@@ -111,8 +111,8 @@ t.Z = l.memo(function (e) {
                         [L.modeUnreadImportant]: !D && !r && y,
                         [L.withGuildIcon]: R
                     }),
-                    onMouseDown: G,
-                    onContextMenu: U,
+                    onMouseDown: U,
+                    onContextMenu: G,
                     children: [
                         !y || D || r ? null : (0, i.jsx)('div', { className: a()(L.unread, L.unreadImportant) }),
                         (0, i.jsx)(c.Clickable, {

@@ -89,7 +89,7 @@ function y(e) {
         {
             guildHasVoice: D,
             guildHasVideo: w,
-            selectedVoiceChannelHasVideo: G
+            selectedVoiceChannelHasVideo: U
         } = (0, s.cj)(
             [Z.Z, L.Z, x.Z, S.Z, E.Z],
             () => {
@@ -115,7 +115,7 @@ function y(e) {
             },
             [R, e, n]
         ),
-        U = I.default.getId();
+        G = I.default.getId();
     return (0, s.cj)(
         [Z.Z, E.Z, d.ZP, g.Z, C.Z, S.Z],
         () => {
@@ -144,9 +144,9 @@ function y(e) {
                     return null != t && S.Z.can(f.gl, t);
                 }),
                 v = o && null !== (r = null === (i = E.Z.getChannel(s)) || void 0 === i ? void 0 : i.isGuildStageVoice()) && void 0 !== r && r,
-                T = !!o && null != C.Z.getActiveStreamForUser(U, e),
+                T = !!o && null != C.Z.getActiveStreamForUser(G, e),
                 L = (R ? (0, h.aK)(C.Z.getAllApplicationStreams()) : C.Z.getAllApplicationStreams()).some((t) => t.guildId === e),
-                b = o && G,
+                b = o && U,
                 M = (() => {
                     if (j) return y.length > 0;
                     for (let e of y) {
@@ -170,6 +170,6 @@ function y(e) {
                 }
             );
         },
-        [e, n, R, G, a, U, j, y, l, D, w]
+        [e, n, R, U, a, G, j, y, l, D, w]
     );
 }
