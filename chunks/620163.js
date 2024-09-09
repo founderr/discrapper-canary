@@ -418,10 +418,20 @@ let ej = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eZ.Z.Messages.PRIVACY_SETTINGS_ACTIVITY_STATUS],
                 parent: eD.s6.PRIVACY_SERVER_SPECIFIC_SETTINGS
             },
+            [eD.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_ACTIVITY_STATUS_V2]: {
+                section: eP.oAB.PRIVACY_AND_SAFETY_V2,
+                searchableTitles: [eZ.Z.Messages.PRIVACY_SETTINGS_ACTIVITY_STATUS],
+                parent: eD.s6.PRIVACY_AND_SAFETY_SERVER_SELECTOR
+            },
             [eD.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_ACTIVITY_JOINING]: {
                 section: eP.oAB.PRIVACY_AND_SAFETY,
                 searchableTitles: [eZ.Z.Messages.PRIVACY_SETTINGS_ACTIVITY_JOINING],
                 parent: eD.s6.PRIVACY_SERVER_SPECIFIC_SETTINGS
+            },
+            [eD.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_ACTIVITY_JOINING_V2]: {
+                section: eP.oAB.PRIVACY_AND_SAFETY_V2,
+                searchableTitles: [eZ.Z.Messages.PRIVACY_SETTINGS_ACTIVITY_JOINING],
+                parent: eD.s6.PRIVACY_AND_SAFETY_SERVER_SELECTOR
             },
             [eD.s6.PRIVACY_DATA_PRIVACY]: {
                 section: eP.oAB.PRIVACY_AND_SAFETY,
