@@ -12,6 +12,5 @@ e.exports = {
     wumpusRocketInnerContainer: 'wumpusRocketInnerContainer_b572de',
     wumpusRocket: 'wumpusRocket_b572de',
     poster: 'poster_b572de',
-    posterDivider: 'posterDivider_b572de',
-    clickableBanner: 'clickableBanner_b572de'
+    posterDivider: 'posterDivider_b572de'
 };

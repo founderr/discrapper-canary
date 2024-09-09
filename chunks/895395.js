@@ -1,9 +1,9 @@
 n.d(t, {
     Z: function () {
-        return Z;
+        return b;
     },
     d: function () {
-        return D;
+        return A;
     }
 }),
     n(47120);
@@ -17,43 +17,38 @@ var a = n(735250),
     d = n(481060),
     u = n(100527),
     g = n(906732),
-    m = n(703656),
-    v = n(430824),
-    p = n(594174),
-    I = n(115130),
-    x = n(566620),
-    f = n(520599),
-    _ = n(127255),
-    T = n(880308),
-    h = n(451576),
-    C = n(439934),
-    E = n(701488),
-    S = n(981631),
-    N = n(689938),
-    b = n(876792),
-    j = n(932463);
-let A = (0, o.Mg)(c.Z.ACTIVITY_SHELF_SLIDE_ACTIVITY_DIRECTORY_SHELF_GRID_GAP),
-    M = (0, o.Mg)(c.Z.ACTIVITY_SHELF_ITEM_ACTIVITY_ITEM_HEIGHT),
-    y = (0, o.Mg)(c.Z.ACTIVITY_SHELF_ITEM_LARGE_ACTIVITY_ITEM_HEIGHT);
-function Z(e) {
-    let { channel: t, guildId: n, locationObject: l, onClose: o, onActivityItemVisible: c, scrollerRef: Z } = e,
-        [D, L] = i.useState(0),
-        O = (0, _.Z)({
+    m = n(430824),
+    v = n(594174),
+    p = n(115130),
+    I = n(566620),
+    x = n(127255),
+    f = n(880308),
+    _ = n(451576),
+    T = n(439934),
+    h = n(701488),
+    C = n(689938),
+    E = n(876792);
+let S = (0, o.Mg)(c.Z.ACTIVITY_SHELF_SLIDE_ACTIVITY_DIRECTORY_SHELF_GRID_GAP),
+    N = (0, o.Mg)(c.Z.ACTIVITY_SHELF_ITEM_ACTIVITY_ITEM_HEIGHT),
+    j = (0, o.Mg)(c.Z.ACTIVITY_SHELF_ITEM_LARGE_ACTIVITY_ITEM_HEIGHT);
+function b(e) {
+    let { channel: t, guildId: n, locationObject: l, onClose: o, onActivityItemVisible: c, scrollerRef: h } = e,
+        [b, A] = i.useState(0),
+        M = (0, x.Z)({
             guildId: n,
             enableFilter: !0
         }),
-        B = (0, r.e7)([p.default], () => p.default.getCurrentUser()),
-        R = (0, r.e7)([v.Z], () => v.Z.getGuild(n), [n]),
-        { analyticsLocations: V } = (0, g.ZP)(u.Z.ACTIVITY_DIRECTORY),
-        k = (0, h.Z)(null == t ? void 0 : t.id),
-        { enableAmazonMusicShelfPoster: P } = f.p.useExperiment({ location: 'ActivitiesShelf' }, { autoTrackExposure: !0 }),
-        { isDeveloperActivityShelfEnabled: H, filter: F } = (0, r.cj)([I.Z], () => ({
-            filter: I.Z.getFilter(),
-            isDeveloperActivityShelfEnabled: I.Z.getIsEnabled()
+        y = (0, r.e7)([v.default], () => v.default.getCurrentUser()),
+        Z = (0, r.e7)([m.Z], () => m.Z.getGuild(n), [n]),
+        { analyticsLocations: D } = (0, g.ZP)(u.Z.ACTIVITY_DIRECTORY),
+        L = (0, _.Z)(null == t ? void 0 : t.id),
+        { isDeveloperActivityShelfEnabled: O, filter: B } = (0, r.cj)([p.Z], () => ({
+            filter: p.Z.getFilter(),
+            isDeveloperActivityShelfEnabled: p.Z.getIsEnabled()
         }));
     if (
         (i.useEffect(() => {
-            let e = Z.current;
+            let e = h.current;
             if (null != e)
                 return (
                     e.addEventListener('scroll', t, !1),
@@ -63,83 +58,56 @@ function Z(e) {
                 );
             function t() {
                 var e, t;
-                L(null !== (t = null === (e = Z.current) || void 0 === e ? void 0 : e.scrollTop) && void 0 !== t ? t : 0);
+                A(null !== (t = null === (e = h.current) || void 0 === e ? void 0 : e.scrollTop) && void 0 !== t ? t : 0);
             }
-        }, [Z]),
+        }, [h]),
         i.useEffect(() => {
-            (k || null != n) &&
-                (0, x.w1)({
+            (L || null != n) &&
+                (0, I.w1)({
                     guildId: n,
                     force: !0
                 });
-        }, [n, k]),
-        (0, T.g)(),
-        (null == R && !k) || null == B)
+        }, [n, L]),
+        (0, f.g)(),
+        (null == Z && !L) || null == y)
     )
         return null;
-    let U = O.length > 0;
-    function Y(e) {
-        o();
-    }
+    let R = M.length > 0;
     return (0, a.jsx)(g.Gt, {
-        value: V,
+        value: D,
         children: (0, a.jsxs)('div', {
-            className: b.scrollContainer,
+            className: E.scrollContainer,
             children: [
-                U
+                R
                     ? (0, a.jsx)('div', {
-                          className: b.scrollBackgroundContainer,
-                          style: { top: -D },
+                          className: E.scrollBackgroundContainer,
+                          style: { top: -b },
                           children: (0, a.jsx)('div', {
-                              className: s()(b.scrollTierBackground),
+                              className: s()(E.scrollTierBackground),
                               style: {
                                   height: ((e) => {
                                       let t = 1 === e.length;
-                                      return A + Math.ceil(e.length / 2) * (t ? y : M);
-                                  })(O)
+                                      return S + Math.ceil(e.length / 2) * (t ? j : N);
+                                  })(M)
                               }
                           })
                       })
                     : null,
                 (0, a.jsxs)(d.Scroller, {
-                    ref: Z,
-                    className: b.scroller,
+                    ref: h,
+                    className: E.scroller,
                     children: [
-                        (function () {
-                            if (P) {
-                                let e = N.Z.Messages.EMBEDDED_ACTIVITIES_AMAZON_MUSIC_PROMO_BANNER_ALT;
-                                return (0, a.jsxs)(d.Clickable, {
-                                    className: b.posterClickable,
-                                    'aria-label': e,
-                                    onClick: () => {
-                                        var e;
-                                        (e = E.Fu), o(), (0, m.uL)(S.Z5c.ACTIVITY_DETAILS(E.Fu), { sourceLocationStack: V });
-                                    },
-                                    children: [
-                                        (0, a.jsx)('div', {
-                                            className: b.poster,
-                                            children: (0, a.jsx)('img', {
-                                                className: b.posterBackground,
-                                                src: j,
-                                                alt: e
-                                            })
-                                        }),
-                                        (0, a.jsx)('div', { className: b.posterDivider })
-                                    ]
-                                });
-                            }
-                            return null;
-                        })(),
-                        U
+                        null,
+                        R
                             ? (0, a.jsx)('div', {
-                                  className: b.scrollSection,
+                                  className: E.scrollSection,
                                   children: (0, a.jsx)('div', {
-                                      className: s()(b.shelf),
-                                      children: O.map((e) =>
+                                      className: s()(E.shelf),
+                                      children: M.map((e) =>
                                           (0, a.jsx)(
-                                              C.Z,
+                                              T.Z,
                                               {
-                                                  large: 1 === O.length,
+                                                  large: 1 === M.length,
                                                   activityItem: e,
                                                   channel: t,
                                                   guildId: n,
@@ -155,14 +123,14 @@ function Z(e) {
                                       )
                                   })
                               })
-                            : H && F.length > 0
+                            : O && B.length > 0
                               ? (0, a.jsx)(d.Text, {
                                     variant: 'text-md/normal',
-                                    className: b.filterError,
-                                    children: N.Z.Messages.EMBEDDED_ACTIVITIES_DEVELOPER_ACTIVITY_SHELF_FILTER_ERROR.format({ filter: F })
+                                    className: E.filterError,
+                                    children: C.Z.Messages.EMBEDDED_ACTIVITIES_DEVELOPER_ACTIVITY_SHELF_FILTER_ERROR.format({ filter: B })
                                 })
                               : (0, a.jsx)('div', {
-                                    className: b.spinnerContainer,
+                                    className: E.spinnerContainer,
                                     children: (0, a.jsx)(d.Spinner, {})
                                 })
                     ]
@@ -171,9 +139,9 @@ function Z(e) {
         })
     });
 }
-function D() {
+function A() {
     return (0, a.jsx)(d.Text, {
         variant: 'text-sm/normal',
-        children: N.Z.Messages.EMBEDDED_ACTIVITIES_FEEDBACK_SURVEY.format({ surveyURL: E.Es })
+        children: C.Z.Messages.EMBEDDED_ACTIVITIES_FEEDBACK_SURVEY.format({ surveyURL: h.Es })
     });
 }
