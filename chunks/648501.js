@@ -30,7 +30,7 @@ var l = n(442837),
     T = n(704842);
 function L(e) {
     var t;
-    let { channel: n, isChannelSelected: L, isChannelCollapsed: A, voiceStates: b, enableConnectedUserLimit: M, enableActivities: R, isSubscriptionGated: P, needSubscriptionToAccess: O, isNewChannel: y, muted: j, resolvedUnreadSetting: D } = e,
+    let { channel: n, isChannelSelected: L, isChannelCollapsed: A, voiceStates: b, enableConnectedUserLimit: M, enableActivities: R, isSubscriptionGated: O, needSubscriptionToAccess: P, isNewChannel: y, muted: j, resolvedUnreadSetting: D } = e,
         w = (0, l.e7)([_.ZP], () => _.ZP.getMentionCount(n.id)),
         U = (0, s.ZP)(n),
         G = (0, l.e7)([p.Z], () => !p.Z.can(S.Plq.CONNECT, n)),
@@ -49,7 +49,7 @@ function L(e) {
             return null !== (t = null === (e = h.Z.getGuild(n.guild_id)) || void 0 === e ? void 0 : e.hasFeature(S.oNc.COMMUNITY)) && void 0 !== t && t;
         });
     if ((0, C.Z)(w)) return (0, i.jsx)(x.Z, { mentionsCount: w });
-    if ((0, c.O)(P)) return (0, i.jsx)(c.Z, { locked: O });
+    if ((0, c.O)(O)) return (0, i.jsx)(c.Z, { locked: P });
     if (y)
         return (0, i.jsx)(a.TextBadge, {
             text: Z.Z.Messages.NEW,

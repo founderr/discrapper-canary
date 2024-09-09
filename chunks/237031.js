@@ -1,26 +1,26 @@
-n.d(t, {
+r.d(t, {
     T: function () {
-        return o;
+        return i;
     },
     v: function () {
-        return i;
+        return o;
     }
 });
-var a = n(735250);
-n(470079);
-var r = n(481060);
+var a = r(735250);
+r(470079);
+var n = r(481060);
 let s = 'collectibles shop product details modal',
-    o = (e) => {
-        let { product: t, category: o, analyticsSource: i, analyticsLocations: l, returnRef: c } = e;
-        (0, r.openModalLazy)(
+    i = (e) => {
+        let { product: t, category: i, analyticsSource: o, analyticsLocations: l, returnRef: c } = e;
+        (0, n.openModalLazy)(
             async () => {
-                let { default: e } = await n.e('2026').then(n.bind(n, 702370));
-                return (n) =>
+                let { default: e } = await r.e('2026').then(r.bind(r, 702370));
+                return (r) =>
                     (0, a.jsx)(e, {
-                        ...n,
+                        ...r,
                         product: t,
-                        category: o,
-                        analyticsSource: i,
+                        category: i,
+                        analyticsSource: o,
                         analyticsLocations: l,
                         returnRef: c
                     });
@@ -28,6 +28,6 @@ let s = 'collectibles shop product details modal',
             { modalKey: s }
         );
     },
-    i = () => {
-        (0, r.closeModal)(s);
+    o = () => {
+        (0, n.closeModal)(s);
     };

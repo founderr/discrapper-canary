@@ -1,15 +1,15 @@
-var a = n(735250),
-    r = n(470079),
-    s = n(481060),
-    o = n(727637),
-    i = n(906732),
-    l = n(241553),
-    c = n(333867),
-    d = n(884697),
-    u = n(231338),
-    f = n(689938),
-    p = n(703909);
-let g = {
+var a = r(735250),
+    n = r(470079),
+    s = r(481060),
+    i = r(727637),
+    o = r(906732),
+    l = r(241553),
+    c = r(333867),
+    d = r(884697),
+    u = r(231338),
+    f = r(689938),
+    p = r(703909);
+let C = {
     dark: [
         {
             box: '#FFF19E',
@@ -72,11 +72,11 @@ let g = {
     ]
 };
 t.Z = (e) => {
-    let { product: t, returnRef: n, onSuccess: C, tooltipDelay: m, isGiftEasterEggEnabled: _, disableCustomColor: h = !1 } = e,
-        { analyticsLocations: b } = (0, i.ZP)(),
-        x = r.useRef(null),
-        I = (0, o.Z)(x),
-        E = h ? u.BR.DARK : u.BR.LIGHT;
+    let { product: t, returnRef: r, onSuccess: _, tooltipDelay: m, isGiftEasterEggEnabled: g, disableCustomColor: h = !1 } = e,
+        { analyticsLocations: b } = (0, o.ZP)(),
+        E = n.useRef(null),
+        I = (0, i.Z)(E),
+        x = h ? u.BR.DARK : u.BR.LIGHT;
     return (0, d.x6)(t)
         ? null
         : (0, a.jsx)(s.Tooltip, {
@@ -85,7 +85,7 @@ t.Z = (e) => {
               children: (e) =>
                   (0, a.jsx)(s.Button, {
                       ...e,
-                      buttonRef: x,
+                      buttonRef: E,
                       className: p.giftButton,
                       color: h ? s.ButtonColors.BRAND : s.ButtonColors.CUSTOM,
                       look: s.Button.Looks.FILLED,
@@ -98,21 +98,21 @@ t.Z = (e) => {
                                   skuId: t.skuId,
                                   isGift: !0,
                                   analyticsLocations: b,
-                                  returnRef: n,
+                                  returnRef: r,
                                   onClose:
-                                      null != C
+                                      null != _
                                           ? (e) => {
-                                                e && C();
+                                                e && _();
                                             }
                                           : void 0
                               });
                       },
-                      children: _
+                      children: g
                           ? (0, a.jsx)(l.e, {
                                 hovered: I,
                                 isContentDismissed: !0,
-                                themeOverride: E,
-                                boxColors: g
+                                themeOverride: x,
+                                boxColors: C
                             })
                           : (0, a.jsx)(s.GiftIcon, {
                                 size: 'md',

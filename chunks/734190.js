@@ -42,8 +42,8 @@ function b(e) {
 }
 t.Z = l.memo(function (e) {
     let { thread: t, isSelectedChannel: r, isSelectedVoice: A, isLast: M, withGuildIcon: R } = e,
-        P = (0, o.e7)([C.ZP], () => C.ZP.getVoiceStatesForChannel(t), [t]),
-        O = (0, o.e7)([m.Z], () => m.Z.hasVideo(t.id)),
+        O = (0, o.e7)([C.ZP], () => C.ZP.getVoiceStatesForChannel(t), [t]),
+        P = (0, o.e7)([m.Z], () => m.Z.hasVideo(t.id)),
         { unread: y, mentionCount: j } = (0, o.cj)([g.ZP], () => ({
             unread: g.ZP.hasUnread(t.id),
             mentionCount: g.ZP.getMentionCount(t.id)
@@ -73,7 +73,7 @@ t.Z = l.memo(function (e) {
             },
             [t.id]
         ),
-        k = null == P ? 0 : P.length,
+        k = null == O ? 0 : O.length,
         { role: B, ...V } = (0, s.JA)(t.id),
         H = l.useRef(null),
         F =
@@ -136,7 +136,7 @@ t.Z = l.memo(function (e) {
                                             k > 0 && t.userLimit > 0
                                                 ? (0, i.jsx)(E.Z, {
                                                       userCount: k,
-                                                      video: O,
+                                                      video: P,
                                                       channel: t
                                                   })
                                                 : null,
@@ -153,7 +153,7 @@ t.Z = l.memo(function (e) {
                 channel: t,
                 collapsed: !A,
                 collapsedMax: 6,
-                voiceStates: P,
+                voiceStates: O,
                 location: S.Sbl.GUILD_CHANNEL_LIST
             })
         ]

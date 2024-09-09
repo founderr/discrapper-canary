@@ -34,8 +34,8 @@ var i,
     b = n(670512),
     M = n(981631),
     R = n(689938),
-    P = n(614899);
-function O(e, t, n) {
+    O = n(614899);
+function P(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -51,14 +51,14 @@ function O(e, t, n) {
 let y = 10,
     j = () =>
         (0, l.jsxs)('div', {
-            className: P.emptyState,
+            className: O.emptyState,
             children: [
                 (0, l.jsx)('div', {
-                    className: P.emptyStateNote,
+                    className: O.emptyStateNote,
                     children: R.Z.Messages.QUICKSWITCHER_EMPTY_TEXT
                 }),
                 (0, l.jsx)('div', {
-                    className: P.emptyStateCTA,
+                    className: O.emptyStateCTA,
                     children: (0, l.jsx)(u.Anchor, {
                         href: Z.Z.getArticleURL(M.BhN.QUICK_SWITCHER_TUTORIAL),
                         children: R.Z.Messages.QUICKSWITCHER_EMPTY_CTA
@@ -72,13 +72,13 @@ class D extends (i = r.Component) {
         return (0, l.jsx)(A.$W, {
             ...this.props,
             children: (0, l.jsx)('div', {
-                className: P.miscContainer,
+                className: O.miscContainer,
                 children: null != e ? e.name : null
             })
         });
     }
 }
-O(D, 'defaultProps', { unread: !1 });
+P(D, 'defaultProps', { unread: !1 });
 let w = c.ZP.connectStores([N.ZP, C.Z], (e) => {
         let { channel: t } = e;
         return {
@@ -113,7 +113,7 @@ function V(e, t, n) {
             children: (e) =>
                 (0, l.jsx)('span', {
                     ...e,
-                    className: P.autocompleteQuerySymbol,
+                    className: O.autocompleteQuerySymbol,
                     children: t
                 })
         },
@@ -154,7 +154,7 @@ class H extends r.PureComponent {
             i = t.length > 0 && '' !== n;
         return (0, l.jsx)(u.FocusRing, {
             children: (0, l.jsx)('input', {
-                className: P.input,
+                className: O.input,
                 'aria-label': R.Z.Messages.QUICK_SWITCHER,
                 ref: this.inputRef,
                 type: 'text',
@@ -191,7 +191,7 @@ class H extends r.PureComponent {
                     rowHeight: 34,
                     paddingBottom: y,
                     sections: [t.length],
-                    className: P.scroller,
+                    className: O.scroller,
                     renderRow: this.renderRow,
                     renderSection: this.renderSection
                 });
@@ -204,7 +204,7 @@ class H extends r.PureComponent {
     }
     renderProtip() {
         return (0, l.jsx)(g.Z, {
-            className: s()(P.protip, { [P.hasContent]: this.state.query.length > 0 }),
+            className: s()(O.protip, { [O.hasContent]: this.state.query.length > 0 }),
             type: g.Z.Types.INLINE,
             children: R.Z.Messages.QUICKSWITCHER_PROTIP.format({
                 userSymbolHook: (e, t) => V(t, _.xQ.USER, R.Z.Messages.QUICKSWITCHER_PROTIP_USERNAMES),
@@ -225,10 +225,10 @@ class H extends r.PureComponent {
             'aria-label': R.Z.Messages.QUICK_SWITCHER,
             size: u.ModalSize.DYNAMIC,
             transitionState: this.props.transitionState,
-            className: s()(P.container, o.tq && P.mobileContainer),
+            className: s()(O.container, o.tq && O.mobileContainer),
             fullscreenOnMobile: !1,
             children: (0, l.jsxs)('div', {
-                className: s()(P.quickswitcher, o.tq && P.mobileQuickswitcher),
+                className: s()(O.quickswitcher, o.tq && O.mobileQuickswitcher),
                 onMouseMove: this.handleMouseMove,
                 children: [this.renderInput(), this.renderResults(), this.renderProtip(), this.renderTutorial()]
             })
@@ -236,28 +236,28 @@ class H extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            O(this, 'scrollerRef', r.createRef()),
-            O(this, 'inputRef', r.createRef()),
-            O(this, '_listId', (0, m.hQ)()),
-            O(this, 'state', {
+            P(this, 'scrollerRef', r.createRef()),
+            P(this, 'inputRef', r.createRef()),
+            P(this, '_listId', (0, m.hQ)()),
+            P(this, 'state', {
                 query: this.props.query,
                 mouseFocusDisabled: !0
             }),
-            O(this, 'handleInputChange', () => {
+            P(this, 'handleInputChange', () => {
                 let { current: e } = this.inputRef;
                 null != e && this.search(e.value);
             }),
-            O(this, 'handleMouseMove', () => {
+            P(this, 'handleMouseMove', () => {
                 let { mouseFocusDisabled: e } = this.state;
                 if (!1 !== e) this.setState({ mouseFocusDisabled: !1 });
             }),
-            O(this, 'focusResult', (e) => {
+            P(this, 'focusResult', (e) => {
                 if (!this.state.mouseFocusDisabled) (0, T.tF)(this.props.results.indexOf(e));
             }),
-            O(this, 'selectResult', (e) => {
+            P(this, 'selectResult', (e) => {
                 (0, T.Se)(e, this.props.queryMode === _.h8.TEXT_CHANNEL);
             }),
-            O(this, 'handleContextMenu', (e) => {
+            P(this, 'handleContextMenu', (e) => {
                 let t = this.props.results[this.props.selectedIndex];
                 switch (t.type) {
                     case _.h8.GUILD:
@@ -360,7 +360,7 @@ class H extends r.PureComponent {
                         });
                 }
             }),
-            O(this, 'handleKeyDown', (e) => {
+            P(this, 'handleKeyDown', (e) => {
                 let { mouseFocusDisabled: t, query: n } = this.state,
                     { results: i } = this.props;
                 !1 === t && this.setState({ mouseFocusDisabled: !0 });
@@ -399,7 +399,7 @@ class H extends r.PureComponent {
                 }
                 e.preventDefault(), (0, T.tF)(r);
             }),
-            O(this, 'renderRow', (e) => {
+            P(this, 'renderRow', (e) => {
                 let { row: t } = e,
                     n = this.props.results[t],
                     { selectedIndex: i } = this.props,

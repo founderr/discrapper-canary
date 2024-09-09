@@ -101,11 +101,11 @@ function N() {
     });
 }
 t.ZP = l.memo(function (e) {
-    let { bannerVisible: t, controller: n, className: r, onClick: s, onContextMenu: x, onMouseDown: S, disableBannerAnimation: v, 'aria-expanded': Z, 'aria-controls': T, guild: L, guildBanner: A, animationOverlayHeight: b, children: M, headerClassName: R, communityInfoVisible: P, hasSubheader: O } = e,
+    let { bannerVisible: t, controller: n, className: r, onClick: s, onContextMenu: x, onMouseDown: S, disableBannerAnimation: v, 'aria-expanded': Z, 'aria-controls': T, guild: L, guildBanner: A, animationOverlayHeight: b, children: M, headerClassName: R, communityInfoVisible: O, hasSubheader: P } = e,
         y = L.hasFeature(f.oNc.ANIMATED_BANNER),
         j = (0, d.Z)(L),
         D = !j && L.hasCommunityInfoSubheader(),
-        w = !j && P,
+        w = !j && O,
         U = (0, p.xR)(A) && y && !v,
         [G, k] = l.useState(!1),
         B = l.useRef(),
@@ -147,7 +147,7 @@ t.ZP = l.memo(function (e) {
                             [C.hasBanner]: W(),
                             [C.bannerVisible]: t,
                             [e]: t,
-                            [C.communityInfoVisible]: w || (O && D)
+                            [C.communityInfoVisible]: w || (P && D)
                         }),
                         onMouseDown: S,
                         onContextMenu: x,
@@ -196,7 +196,7 @@ t.ZP = l.memo(function (e) {
                                                   guild: L,
                                                   controller: n,
                                                   hasBanner: null != A,
-                                                  hasSubheader: null != O && O
+                                                  hasSubheader: null != P && P
                                               })
                                       ]
                                   }),

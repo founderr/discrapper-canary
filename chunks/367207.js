@@ -29,8 +29,8 @@ var l = n(392711),
     b = n(757692),
     M = n(114064),
     R = n(933843),
-    P = n(281494),
-    O = n(276444),
+    O = n(281494),
+    P = n(276444),
     y = n(684259),
     j = n(937579),
     D = n(1163),
@@ -79,10 +79,10 @@ class q extends c.Z {
     }
     _getReferralIncentiveEligibility() {
         let e = m.default.getCurrentUser();
-        if (O.Z.getIsFetchingReferralIncentiveEligibility() || !(0, E.I5)(e)) return;
+        if (P.Z.getIsFetchingReferralIncentiveEligibility() || !(0, E.I5)(e)) return;
         let t = { location: 'PremiumManager' },
             n = { autoTrackExposure: !1 };
-        if (!!B.g.getCurrentConfig(t, n).enabled && !G.eP.getCurrentConfig(t, n).enabled) k.$.getCurrentConfig(t, n).enabled && (0, P.bq)();
+        if (!!B.g.getCurrentConfig(t, n).enabled && !G.eP.getCurrentConfig(t, n).enabled) k.$.getCurrentConfig(t, n).enabled && (0, O.bq)();
     }
     openPremiumPaymentModalInApp(e) {
         if (__OVERLAY__) throw Error('Should not use this function from the overlay, use ModalAPI.openModal instead');

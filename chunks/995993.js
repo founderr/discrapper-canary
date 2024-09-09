@@ -41,7 +41,7 @@ function v(e) {
         R = l.useCallback(() => {
             (0, _.uL)(I.Z5c.CHANNEL(t.id, Z ? E.oC.CUSTOMIZE_COMMUNITY : E.oC.CHANNEL_BROWSER));
         }, [t.id, Z]),
-        P = l.useCallback(
+        O = l.useCallback(
             (e) => {
                 (0, c.jW)(e, async () => {
                     let { default: e } = await n.e('8926').then(n.bind(n, 156673));
@@ -54,12 +54,12 @@ function v(e) {
             },
             [t]
         ),
-        O = null;
+        P = null;
     return (
         (!T || A || b) &&
             !v &&
             !M &&
-            (O = (0, i.jsx)(o.TextBadge, {
+            (P = (0, i.jsx)(o.TextBadge, {
                 color: s.Z.colors.BADGE_BRAND_BG.css,
                 text: x.Z.Messages.NEW,
                 className: S.newChannel
@@ -75,8 +75,8 @@ function v(e) {
             text: Z ? x.Z.Messages.CHANNELS_AND_ROLES : x.Z.Messages.CHANNEL_BROWSER_TITLE,
             selected: v,
             onClick: R,
-            onContextMenu: P,
-            trailing: O
+            onContextMenu: O,
+            trailing: P
         })
     );
 }

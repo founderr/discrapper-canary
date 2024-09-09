@@ -37,8 +37,8 @@ var i,
     b = n(131704),
     M = n(592125),
     R = n(796974),
-    P = n(984933),
-    O = n(914010),
+    O = n(984933),
+    P = n(914010),
     y = n(540126),
     j = n(734307),
     D = n(854444),
@@ -480,7 +480,7 @@ class eu extends (i = r.PureComponent) {
                                 S.Z,
                                 {
                                     guild: i,
-                                    channel: P.ZP.getDefaultChannel(i.id)
+                                    channel: O.ZP.getDefaultChannel(i.id)
                                 },
                                 ei.z.GUILD_HUB_HEADER_OPTIONS
                             );
@@ -738,7 +738,7 @@ let ed = (e) => {
         { analyticsLocations: s } = (0, m.ZP)(g.Z.GUILD_CHANNEL_LIST),
         d = (0, u.e7)([M.Z], () => M.Z.getChannel(n)),
         h = (0, u.e7)([M.Z], () => M.Z.getChannel(i)),
-        p = (0, u.e7)([O.Z], () => O.Z.getGuildId()),
+        p = (0, u.e7)([P.Z], () => P.Z.getGuildId()),
         C = (0, Z.DM)(t),
         I = r.useRef(null),
         E = r.useCallback((e, t) => {

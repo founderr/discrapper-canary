@@ -28,8 +28,8 @@ var i,
     b = n(210887),
     M = n(592125),
     R = n(158776),
-    P = n(55589),
-    O = n(515753),
+    O = n(55589),
+    P = n(515753),
     y = n(981631),
     j = n(689938),
     D = n(680136);
@@ -327,7 +327,7 @@ class G extends (l = s.Component) {
                 return null == o
                     ? null
                     : (0, a.jsx)(
-                          O.ZP,
+                          P.ZP,
                           {
                               channel: o,
                               selected: o.id === l,
@@ -392,9 +392,9 @@ t.Z = (e) => {
         o = M.Z.getMutablePrivateChannels(),
         c = (0, L.k1)(o),
         p = (0, h.Wu)(
-            [P.Z, T.Z, A.Z],
+            [O.Z, T.Z, A.Z],
             () => {
-                let e = P.Z.getPrivateChannelIds(),
+                let e = O.Z.getPrivateChannelIds(),
                     t = (0, L.tU)(e, [T.Z, A.Z]);
                 return (0, I.Ce)(t);
             },

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return P;
+        return O;
     }
 }),
     n(47120),
@@ -41,10 +41,10 @@ let R = {
         object: A.qAy.CHANNEL
     }
 };
-function P() {
+function O() {
     let e = (0, s.Ie)('favorites'),
         { favoriteAdded: t, clearFavoriteAdded: r } = (0, v.up)(),
-        [P, O] = l.useState(!1),
+        [O, P] = l.useState(!1),
         { favoriteServerMuted: y, favoriteChannels: j } = (0, o.cj)([S.Z], () => ({
             favoriteChannels: S.Z.getFavoriteChannels(),
             favoriteServerMuted: S.Z.favoriteServerMuted
@@ -95,7 +95,7 @@ function P() {
         children: [
             (0, i.jsx)(p.Z, {
                 selected: U,
-                hovered: P,
+                hovered: O,
                 unread: k && !y,
                 className: M.pill
             }),
@@ -103,7 +103,7 @@ function P() {
                 onShow: H,
                 children: (0, i.jsx)(T.S, {
                     children: (0, i.jsx)(c.BlobMask, {
-                        selected: U || P,
+                        selected: U || O,
                         upperBadge: B,
                         lowerBadge: V,
                         children: (0, i.jsx)(c.NavItem, {
@@ -116,9 +116,9 @@ function P() {
                                 pathname: A.Z5c.CHANNEL(A.I_8, D),
                                 state: R
                             },
-                            selected: U || P,
-                            onMouseEnter: () => O(!0),
-                            onMouseLeave: () => O(!1),
+                            selected: U || O,
+                            onMouseEnter: () => P(!0),
+                            onMouseLeave: () => P(!1),
                             onMouseDown: function () {
                                 if (null != w) u.Z.preload(w.guild_id, w.id);
                             },

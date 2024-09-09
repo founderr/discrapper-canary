@@ -43,8 +43,8 @@ function x(e) {
         })((0, m.h)(n, !0)),
         b = (0, g.j)(),
         M = l.useRef(null),
-        [R, P] = l.useState(void 0),
-        O = (0, a.e7)([d.Z], () => d.Z.getMediaSessionId()),
+        [R, O] = l.useState(void 0),
+        P = (0, a.e7)([d.Z], () => d.Z.getMediaSessionId()),
         { analyticsLocations: y } = (0, o.ZP)(s.Z.SOUNDBOARD_WHEEL),
         j = l.useCallback(
             (e) => {
@@ -72,13 +72,13 @@ function x(e) {
                 properties: {
                     source: T,
                     guild_id: t,
-                    media_session_id: O
+                    media_session_id: P
                 }
             },
             { disableTrack: !Z }
         );
     let D = l.useCallback((e) => {
-            (M.current = e), P(null == e ? void 0 : e.soundId);
+            (M.current = e), O(null == e ? void 0 : e.soundId);
         }, []),
         w = l.useCallback(
             (e) => {

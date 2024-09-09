@@ -28,8 +28,8 @@ var i = n(735250),
     b = n(802718),
     M = n(796974),
     R = n(271383),
-    P = n(430824),
-    O = n(771845),
+    O = n(430824),
+    P = n(771845),
     y = n(358085),
     j = n(709054),
     D = n(727258),
@@ -188,16 +188,16 @@ class eo {
 }
 function ec(e) {
     let { disableAppDownload: t = y.isPlatformEmbedded, isOverlay: n = !1, className: r, themeOverride: s } = e,
-        [o] = (0, p.Wu)([O.ZP], () => {
-            let e = O.ZP.getGuildsTree();
+        [o] = (0, p.Wu)([P.ZP], () => {
+            let e = P.ZP.getGuildsTree();
             return [e, e.version];
         }),
         c = (0, p.e7)([L.Z], () => L.Z.lurkingGuildIds()),
         h = l.useMemo(() => (n ? [] : c), [c, n]),
-        _ = (0, p.Wu)([P.Z, R.ZP], () => j.default.keys(P.Z.getGuilds()).filter((e) => R.ZP.isCurrentUserGuest(e))),
+        _ = (0, p.Wu)([O.Z, R.ZP], () => j.default.keys(O.Z.getGuilds()).filter((e) => R.ZP.isCurrentUserGuest(e))),
         m = h.concat(_),
         C = (0, p.e7)([N.Z], () => N.Z.isFullscreenInContext()),
-        ei = (0, p.e7)([P.Z], () => P.Z.getGeoRestrictedGuilds()),
+        ei = (0, p.e7)([O.Z], () => O.Z.getGeoRestrictedGuilds()),
         [el, er] = l.useState(!1),
         ea = l.useCallback(() => er(!0), []),
         es = l.useCallback(() => er(!1), []),
@@ -265,13 +265,13 @@ function ec(e) {
                 n !== t && ((t = n), eL.scrollToGuild(t, !1));
             });
         }, [o, eL]);
-    let eP = l.useCallback(() => {
+    let eO = l.useCallback(() => {
         eL.scrollTo({
             to: 0,
             animate: !1
         });
     }, [eL]);
-    function eO(e) {
+    function eP(e) {
         switch (e.type) {
             case D.eD.FOLDER:
                 return (0, i.jsx)(
@@ -283,7 +283,7 @@ function ec(e) {
                         sorting: el,
                         onDragStart: ea,
                         onDragEnd: es,
-                        renderChildNode: eO
+                        renderChildNode: eP
                     },
                     e.id
                 );
@@ -356,11 +356,11 @@ function ec(e) {
                                     (0, i.jsx)(G.Z, {}),
                                     eD,
                                     m.map((e) => (0, i.jsx)($.Z, { guildId: e }, e)),
-                                    (0, i.jsx)(J.Z, { onActivate: eP }),
+                                    (0, i.jsx)(J.Z, { onActivate: eO }),
                                     (0, i.jsx)(K.Z, {}),
                                     (0, i.jsx)('div', {
                                         'aria-label': et.Z.Messages.SERVERS,
-                                        children: ey.map(eO)
+                                        children: ey.map(eP)
                                     }),
                                     ew,
                                     n

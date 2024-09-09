@@ -34,7 +34,7 @@ let R = {
         object: A.qAy.CHANNEL
     }
 };
-function P(e, t) {
+function O(e, t) {
     (0, p.jW)(e, async () => {
         let { default: e } = await Promise.all([n.e('96427'), n.e('33053'), n.e('37581'), n.e('7654'), n.e('18146'), n.e('44156'), n.e('14203'), n.e('85552'), n.e('58227'), n.e('75531'), n.e('23693'), n.e('33213'), n.e('3116')]).then(n.bind(n, 545135));
         return (n) =>
@@ -45,13 +45,13 @@ function P(e, t) {
     });
 }
 t.Z = l.memo(function (e) {
-    var t, n, r, p, O;
-    let { guildNode: y, setRef: j, onDragStart: D, onDragEnd: w, route: U, guild: G, animatable: k, selected: B = !1, unread: V = !1, mediaState: H, unavailable: F = !1, badge: W = 0, contextMenu: z = P, draggable: Y = !1, sorting: K = !1, preloadOnClick: q = !0, guildJoinRequestStatus: Q } = e,
+    var t, n, r, p, P;
+    let { guildNode: y, setRef: j, onDragStart: D, onDragEnd: w, route: U, guild: G, animatable: k, selected: B = !1, unread: V = !1, mediaState: H, unavailable: F = !1, badge: W = 0, contextMenu: z = O, draggable: Y = !1, sorting: K = !1, preloadOnClick: q = !0, guildJoinRequestStatus: Q } = e,
         { id: X, parentId: J } = y,
         $ = null !== (t = e.upperBadge) && void 0 !== t ? t : F ? (0, L.Ny)() : null != H ? (0, L.Or)(H) : void 0,
         ee = null !== (n = e.lowerBadge) && void 0 !== n ? n : void 0;
     null == ee && W > 0 ? (ee = null !== (r = (0, L.Ne)(W)) && void 0 !== r ? r : void 0) : null == ee && null != Q && (ee = null !== (p = (0, L.jt)({ guildJoinRequestStatus: Q })) && void 0 !== p ? p : void 0);
-    let et = null !== (O = e.lowerBadgeSize) && void 0 !== O ? O : { width: (0, d.getBadgeWidthForValue)(W) },
+    let et = null !== (P = e.lowerBadgeSize) && void 0 !== P ? P : { width: (0, d.getBadgeWidthForValue)(W) },
         [{ dragging: en }, ei] = (0, s.c)({
             type: E.eD.GUILD,
             item: () => (

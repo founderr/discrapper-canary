@@ -11,7 +11,7 @@ var i = n(735250),
     h = n(689938),
     p = n(121865);
 t.Z = l.forwardRef(function (e, t) {
-    let { body: n, header: r, artClassName: _, headerClassName: f, contentClassName: g, tryItText: m, dismissText: C, onTryFeature: I, onClose: E, className: N, inlineArt: x = !1, isPremiumFeature: S = !1, shouldUseHorizontalButtons: v = !1, showGIFTag: Z = !1, dismissibleContent: T, position: L = 'top', align: A = 'center', art: b, isPremiumEarlyAccess: M = !1, maxWidth: R = 280, hideDismissButton: P = !1, pointerClassName: O, dismissIconClassName: y, dismissIcon: j, onDismissIconClick: D } = e,
+    let { body: n, header: r, artClassName: _, headerClassName: f, contentClassName: g, tryItText: m, dismissText: C, onTryFeature: I, onClose: E, className: N, inlineArt: x = !1, isPremiumFeature: S = !1, shouldUseHorizontalButtons: v = !1, showGIFTag: Z = !1, dismissibleContent: T, position: L = 'top', align: A = 'center', art: b, isPremiumEarlyAccess: M = !1, maxWidth: R = 280, hideDismissButton: O = !1, pointerClassName: P, dismissIconClassName: y, dismissIcon: j, onDismissIconClick: D } = e,
         w = v ? s.Button.Sizes.LARGE : s.Button.Sizes.MAX,
         [U, G] = l.useState(!1),
         { ref: k, width: B } = (0, o.Z)();
@@ -109,7 +109,7 @@ t.Z = l.forwardRef(function (e, t) {
                                               color: S || M ? s.Button.Colors.BRAND_INVERTED : s.Button.Colors.WHITE,
                                               children: null != m ? m : h.Z.Messages.EDUCATION_NEW_FEATURE_TRY_IT
                                           }),
-                                          !P &&
+                                          !O &&
                                               (0, i.jsx)(s.Button, {
                                                   className: p.button,
                                                   size: w,
@@ -133,7 +133,7 @@ t.Z = l.forwardRef(function (e, t) {
                                   })
                     }),
                     (0, i.jsx)('div', {
-                        className: a()(p.pointer, O, {
+                        className: a()(p.pointer, P, {
                             [p.bottomPointer]: 'top' === L,
                             [p.centerLeftPointer]: 'right' === L && 'center' === A,
                             [p.topLeftPointer]: 'right' === L && 'top' === A

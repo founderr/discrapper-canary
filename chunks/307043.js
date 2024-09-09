@@ -1,10 +1,10 @@
-n.d(t, {
+r.d(t, {
     u: function () {
-        return o;
+        return i;
     }
 });
-var a = n(818083),
-    r = n(987338);
+var a = r(818083),
+    n = r(987338);
 let s = (0, a.B)({
         kind: 'user',
         id: '2024-08_shop_browse',
@@ -17,6 +17,6 @@ let s = (0, a.B)({
                 config: { enabled: !0 }
             }
         ],
-        commonTriggerPoint: r.$P.COLLECTIBLES_SHOP_OPEN
+        commonTriggerPoint: n.$P.COLLECTIBLES_SHOP_OPEN
     }),
-    o = (e) => s.useExperiment({ location: e }).enabled;
+    i = (e) => s.useExperiment({ location: e }).enabled;

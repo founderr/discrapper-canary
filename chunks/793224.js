@@ -38,17 +38,17 @@ function b() {
         { canBroadcast: b } = u.Z.useExperiment({ location: 'broadcast_button_rtc_panel_no_track' }, { autoTrackExposure: !1 }),
         M = (0, d.Z)() && null != n,
         R = (0, l.e7)([x.Z], () => null != x.Z.getBroadcast()),
-        P = (0, l.Wu)([I.Z], () => I.Z.getAllActiveStreams());
+        O = (0, l.Wu)([I.Z], () => I.Z.getAllActiveStreams());
     if (!M && !R) return null;
     if ((u.Z.trackExposure({ location: 'broadcast_button_rtc_panel' }), !b)) return null;
-    let O = [];
-    M && O.push(r.z.BROADCASTING_BROADCASTER_TOOLTIP);
+    let P = [];
+    M && P.push(r.z.BROADCASTING_BROADCASTER_TOOLTIP);
     let y = () => {
             o.ZP.trackWithMetadata(T.rMx.BROADCAST_START_BUTTON_HOVERED, { game_id: null == n ? void 0 : n.id });
         },
         j = () => {
             if (M) {
-                let i = P.find((e) => e.ownerId === t);
+                let i = O.find((e) => e.ownerId === t);
                 null == i
                     ? (0, _.X)(A.Z.Messages.START_BROADCASTING, A.Z.Messages.START_BROADCASTING_CTA, () => {
                           (0, s.tE)({
@@ -76,7 +76,7 @@ function b() {
             }),
         w = (e) => (0, i.jsx)(h.Z, { markAsDismissed: e });
     return (0, i.jsx)(f.ZP, {
-        contentTypes: O,
+        contentTypes: P,
         bypassAutoDismiss: !0,
         children: (e) => {
             let { visibleContent: t, markAsDismissed: n } = e;
