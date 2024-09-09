@@ -30,8 +30,8 @@ let A = [],
     v = c.z.LATEST_ACTIVITY,
     C = 0,
     y = [],
-    D = !1,
-    L = [],
+    L = !1,
+    D = [],
     b = u().chain(A),
     M = u().chain(A),
     P = new Set(),
@@ -49,7 +49,7 @@ function x(e) {
     };
 }
 function G() {
-    (y = []), (r = null), (O = null), (R = new Set()), (v = c.z.LATEST_ACTIVITY), (C = 0), (L = []), (b = u().chain(A)), (M = u().chain(A)), U.clear(), P.clear();
+    (y = []), (r = null), (O = null), (R = new Set()), (v = c.z.LATEST_ACTIVITY), (C = 0), (D = []), (b = u().chain(A)), (M = u().chain(A)), U.clear(), P.clear();
 }
 function k() {
     var e;
@@ -73,15 +73,15 @@ function F(e) {
     let n = p.Z.getChannel(O);
     if (null == n) return;
     (null == e ? void 0 : e.refreshThreadIds) &&
-        ((L = Object.values(E.Z.getThreadsForParent(n.guild_id, n.id)).map((e) => {
+        ((D = Object.values(E.Z.getThreadsForParent(n.guild_id, n.id)).map((e) => {
             let { id: t } = e;
             return t;
         })),
         (C = 0),
-        (D = !0)),
-        0 !== P.size && ((L = L.filter((e) => !P.has(e))), P.clear()),
-        0 !== U.size && ((L = Array.from(new Set([...L, ...U]))), U.clear()),
-        ((null == e ? void 0 : e.refreshThreadIds) || (null == e ? void 0 : e.sortThreadIds)) && ((M = u().chain(L).sort(x(c.z.LATEST_ACTIVITY))), (b = u().chain(L).sort(x(c.z.CREATION_DATE))));
+        (L = !0)),
+        0 !== P.size && ((D = D.filter((e) => !P.has(e))), P.clear()),
+        0 !== U.size && ((D = Array.from(new Set([...D, ...U]))), U.clear()),
+        ((null == e ? void 0 : e.refreshThreadIds) || (null == e ? void 0 : e.sortThreadIds)) && ((M = u().chain(D).sort(x(c.z.LATEST_ACTIVITY))), (b = u().chain(D).sort(x(c.z.CREATION_DATE))));
     let i = (v === c.z.LATEST_ACTIVITY ? M : b).value();
     let a = (y =
         0 === R.size
@@ -109,7 +109,7 @@ class V extends (i = d.ZP.Store) {
         return C;
     }
     getCanAckThreads() {
-        return D;
+        return L;
     }
     getThreadIds(e, t, n) {
         let r = e !== O,
@@ -182,6 +182,6 @@ class V extends (i = d.ZP.Store) {
         CHANNEL_ACK: function (e) {
             let { channelId: t } = e;
             if (null == t || t !== O) return !1;
-            D = !1;
+            L = !1;
         }
     }));

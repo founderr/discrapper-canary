@@ -9,7 +9,7 @@ n.d(t, {
         return y;
     },
     OR: function () {
-        return D;
+        return L;
     },
     QB: function () {
         return g;
@@ -357,7 +357,7 @@ function y(e) {
         questId: e
     });
 }
-function D(e, t) {
+function L(e, t) {
     a.Z.dispatch({
         type: 'QUESTS_SELECT_TASK_PLATFORM',
         questId: e,

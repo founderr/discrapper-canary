@@ -116,19 +116,19 @@ t.Z = {
             [u, _] = (0, A.Ee)(e, t, s),
             T = [...a, ...s],
             y = T.map((e) => E.Z.getChannel(e)).filter(m.lm),
-            D = (0, N.v)(e, new Set(T), y, !0).length,
-            L = null == n ? [] : n.options.map((e) => e.id);
+            L = (0, N.v)(e, new Set(T), y, !0).length,
+            D = null == n ? [] : n.options.map((e) => e.id);
         if (
             (p.default.track(O.rMx.GUILD_ONBOARDING_STEP_COMPLETED, {
                 ...(0, l.hH)(e),
                 step: t.length - 1,
-                options_selected: null == n ? 0 : r.filter((e) => L.includes(e.id)).length,
-                skipped: L.length > 0,
+                options_selected: null == n ? 0 : r.filter((e) => D.includes(e.id)).length,
+                skipped: D.length > 0,
                 back: !1,
                 in_onboarding: !0,
                 is_final_step: !0,
                 roles_granted: i.size,
-                channels_granted: D,
+                channels_granted: L,
                 guild_onboarding_covered_channel_ids: u.map((e) => e.id),
                 guild_onboarding_uncovered_channel_ids: _.map((e) => e.id)
             }),

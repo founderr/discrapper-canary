@@ -29,8 +29,8 @@ function v(e) {
         C = (0, u.e7)([m.Z], () => m.Z.getUploads(t, n.drafts.type)),
         {
             isApplicationCommand: y,
-            commandOptions: D,
-            commandOptionStates: L
+            commandOptions: L,
+            commandOptionStates: D
         } = (0, u.cj)([h.Z], () => {
             let e = h.Z.getActiveCommand(t);
             if (null == e)
@@ -50,15 +50,15 @@ function v(e) {
             var e;
             return null !==
                 (e =
-                    null == D
+                    null == L
                         ? void 0
-                        : D.filter((e) => {
+                        : L.filter((e) => {
                               var t;
-                              return e.type === _.jw.ATTACHMENT && (null == L ? void 0 : null === (t = L[e.name]) || void 0 === t ? void 0 : t.hasValue);
+                              return e.type === _.jw.ATTACHMENT && (null == D ? void 0 : null === (t = D[e.name]) || void 0 === t ? void 0 : t.hasValue);
                           })) && void 0 !== e
                 ? e
                 : [];
-        }, [D, L]),
+        }, [L, D]),
         [M, P] = i.useState([]);
     i.useEffect(() => {
         let e = () => {

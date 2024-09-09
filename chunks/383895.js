@@ -11,21 +11,21 @@ var a = t(735250),
     E = t(944486),
     I = t(594174),
     A = t(5192),
-    p = t(810568),
-    m = t(689938),
+    m = t(810568),
+    p = t(689938),
     T = t(255341),
     O = t(707443);
 n.Z = (e) => {
     let { entry: n, viewId: t, onClose: s } = e,
-        N = (0, i.e7)([E.Z, _.Z], () => _.Z.getChannel(E.Z.getChannelId())),
+        g = (0, i.e7)([E.Z, _.Z], () => _.Z.getChannel(E.Z.getChannelId())),
         R = (0, i.e7)([I.default], () => I.default.getUser(n.author_id)),
-        { nick: g, avatar: P } = r.useMemo(() => {
-            let e = null == R ? void 0 : R.getAvatarURL(null == N ? void 0 : N.guild_id, 48, !1);
+        { nick: N, avatar: P } = r.useMemo(() => {
+            let e = null == R ? void 0 : R.getAvatarURL(null == g ? void 0 : g.guild_id, 48, !1);
             return {
-                nick: A.ZP.getName(null == N ? void 0 : N.guild_id, null == N ? void 0 : N.id, R),
+                nick: A.ZP.getName(null == g ? void 0 : g.guild_id, null == g ? void 0 : g.id, R),
                 avatar: e
             };
-        }, [R, N]);
+        }, [R, g]);
     return null == R
         ? null
         : (0, a.jsx)(l.Popout, {
@@ -37,8 +37,8 @@ n.Z = (e) => {
                       closePopout: r,
                       updatePopoutPosition: o,
                       onReaction: () => {
-                          (0, p.UE)({
-                              action: p.as.SendMessageUser,
+                          (0, m.UE)({
+                              action: m.as.SendMessageUser,
                               applicationId: n.extra.application_id,
                               gameName: n.extra.game_name,
                               recipientUserId: n.author_id,
@@ -53,8 +53,8 @@ n.Z = (e) => {
               },
               positionKey: 'game-profile-entry-'.concat(n.id),
               onRequestOpen: () => {
-                  (0, p.UE)({
-                      action: p.as.ClickMessageUser,
+                  (0, m.UE)({
+                      action: m.as.ClickMessageUser,
                       applicationId: n.extra.application_id,
                       gameName: n.extra.game_name,
                       recipientUserId: n.author_id,
@@ -77,7 +77,7 @@ n.Z = (e) => {
                                   (0, a.jsx)('img', {
                                       className: T.avatar,
                                       src: P,
-                                      alt: m.Z.Messages.GAME_PROFILE_USER_AVATAR_ALT.format({ userName: g })
+                                      alt: p.Z.Messages.GAME_PROFILE_USER_AVATAR_ALT.format({ userName: N })
                                   }),
                                   (0, a.jsx)('div', {
                                       className: o()(T.playerInfo),
@@ -88,7 +88,7 @@ n.Z = (e) => {
                                                   variant: 'text-md/medium',
                                                   color: 'text-primary',
                                                   lineClamp: 1,
-                                                  children: g
+                                                  children: N
                                               }),
                                               (0, a.jsx)(u.Gk, {
                                                   location: u.Gt.GAME_PROFILE,

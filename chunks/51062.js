@@ -23,8 +23,8 @@ var r = n(470079),
 function T(e, t, n) {
     var T, S, g, A, N, O, R;
     let { channel: v, type: C } = e,
-        [y, D] = r.useState(() => (0, f.P)()),
-        L = (0, i.Z)(),
+        [y, L] = r.useState(() => (0, f.P)()),
+        D = (0, i.Z)(),
         b = (0, a.e7)([c.ZP], () => {
             if (null != e.guild) {
                 var t;
@@ -79,15 +79,15 @@ function T(e, t, n) {
         }),
         r.useImperativeHandle(t, () => V, [V]),
         r.useEffect(() => {
-            let e = (e) => D(e);
+            let e = (e) => L(e);
             return (
                 V.on('change', e),
-                V.on('update', L),
+                V.on('update', D),
                 () => {
-                    V.off('change', e), V.off('update', L);
+                    V.off('change', e), V.off('update', D);
                 }
             );
-        }, [L, V]),
+        }, [D, V]),
         r.useEffect(() => {
             var e;
             let t = null === (e = y.query) || void 0 === e ? void 0 : e.typeInfo.stores;

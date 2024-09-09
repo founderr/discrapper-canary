@@ -88,11 +88,11 @@ t.Z = a.ZP.connectStores([E.Z, o.ZP, S.Z, f.Z, I.Z, T.Z, m.Z, d.Z, h.ZP], (e) =>
                       height: e.innerHeight
                   };
     }
-    let D = s ? A.IlC.POPOUT : A.IlC.APP;
+    let L = s ? A.IlC.POPOUT : A.IlC.APP;
     a = s && p ? null : s || !c || p ? (null != _ && v ? (null !== (n = m.Z.pipActivityWindow) && void 0 !== n ? n : m.Z.pipVideoWindow) : null !== (r = m.Z.pipVideoWindow) && void 0 !== r ? r : m.Z.pipActivityWindow) : null;
-    let L = O.cL.VIDEO,
+    let D = O.cL.VIDEO,
         b = Array.from(m.Z.pipWindows.values()),
-        M = m.Z.pipWidth(L),
+        M = m.Z.pipWidth(D),
         P = b.find((e) => e.component === A.NYg.VIDEO),
         U = [P, b.find((e) => e.component === A.NYg.EMBED_IFRAME)].filter(g.lm),
         w = h.ZP.callChatSidebarWidth,
@@ -104,12 +104,12 @@ t.Z = a.ZP.connectStores([E.Z, o.ZP, S.Z, f.Z, I.Z, T.Z, m.Z, d.Z, h.ZP], (e) =>
         selectedPIPWindow: a,
         pipWindows: U,
         pipWidth: M,
-        pipType: L,
+        pipType: D,
         maxX: y.width - (G && k ? w : 0),
         maxY: y.height,
         theme: f.Z.theme,
         dockedRect: m.Z.getDockedRect(null !== (i = null == a ? void 0 : a.id) && void 0 !== i ? i : ''),
-        appContext: D,
+        appContext: L,
         roundCorners: !B
     };
 })(C);

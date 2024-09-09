@@ -160,8 +160,8 @@ let e4 = l.ZP.connectStores([V.Z, eU.Z, eD.default], () => ({
         }
     ),
     e7 = (0, v.e)(Z.Z, null, { passProps: !1 }),
-    e2 = (0, v.e)(A.default, null, { passProps: !1 }),
-    e5 = [eX.Z5c.GUILD_BOOSTING_MARKETING(':guildId'), ...Array.from(eJ.Vg).map((e) => eX.Z5c.CHANNEL(':guildId', e))];
+    e5 = (0, v.e)(A.default, null, { passProps: !1 }),
+    e2 = [eX.Z5c.GUILD_BOOSTING_MARKETING(':guildId'), ...Array.from(eJ.Vg).map((e) => eX.Z5c.CHANNEL(':guildId', e))];
 function e3(e) {
     let { guildId: t, channelId: n = null, messageId: i = null, threadId: a = null } = e.params;
     return {
@@ -361,7 +361,7 @@ let e9 = [
     },
     {
         path: [eX.Z5c.APPLICATION_DIRECTORY],
-        render: e2,
+        render: e5,
         isSessionRequired: !0
     }
 ];
@@ -509,7 +509,7 @@ class te extends a.PureComponent {
                     var I;
                     if (
                         ((I = e),
-                        !e5.some((e) => {
+                        !e2.some((e) => {
                             var t;
                             return (null === (t = (0, r.LX)(I, e)) || void 0 === t ? void 0 : t.isExact) === !0;
                         }))

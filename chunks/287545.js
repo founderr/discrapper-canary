@@ -33,8 +33,8 @@ var i = n(772848),
     v = n(115130),
     C = n(566620),
     y = n(317381),
-    D = n(969345),
-    L = n(148720),
+    L = n(969345),
+    D = n(148720),
     b = n(122613),
     M = n(782769),
     P = n(761122),
@@ -88,7 +88,7 @@ async function Z(e) {
     if (null == c || null == _ || null == E) return;
     let f = _.getGuildId(),
         h = y.ZP.getShelfActivities(f),
-        p = (0, D.Z)({
+        p = (0, L.Z)({
             applicationId: i,
             activityConfigs: h
         }),
@@ -134,13 +134,13 @@ async function Y(e) {
         v = null == N && (null == S ? void 0 : S.isVocal()) === !0 && (null == S ? void 0 : S.isPrivate()) === !1;
     if (null == O || v) return;
     let C = (0, i.Z)(),
-        L = 'location' in f ? 2 : 1,
+        D = 'location' in f ? 2 : 1,
         b = null == S ? void 0 : S.getGuildId(),
         M = g.default.getCurrentUser();
     if (null == S || null == M) return;
     let P = y.ZP.getShelfActivities(b),
         U = R.Z.getState().shelfOrder,
-        w = (0, D.Z)({
+        w = (0, L.Z)({
             applicationId: l,
             activityConfigs: P
         }),
@@ -153,7 +153,7 @@ async function Y(e) {
             activityUserSessionId: C,
             launchId: f.launchId,
             mediaSessionIds: Z,
-            activitiesInfraVersion: L
+            activitiesInfraVersion: D
         };
     B[l] = Y;
     let j = F[l];
@@ -190,7 +190,7 @@ async function Y(e) {
             is_activity_start: _,
             shelf_rank: null == w ? void 0 : null === (r = w.activity) || void 0 === r ? void 0 : r.shelf_rank,
             shelf_sorted_rank: G > 0 ? G : null,
-            activities_infra_version: L
+            activities_infra_version: D
         });
 }
 function j(e) {
@@ -324,7 +324,7 @@ class W extends l.Z {
                 }
                 let _ = null !== (n = null == l ? void 0 : l.getGuildId()) && void 0 !== n ? n : void 0,
                     { activityConfigs: E, applications: f } = await (0, C.w1)({ guildId: _ }),
-                    h = (0, D.Z)({
+                    h = (0, L.Z)({
                         applicationId: a,
                         activityConfigs: E,
                         applications: f
@@ -334,7 +334,7 @@ class W extends l.Z {
                         guildId: _,
                         force: !0
                     });
-                    h = (0, D.Z)({
+                    h = (0, L.Z)({
                         applicationId: a,
                         activityConfigs: e.activityConfigs,
                         applications: e.applications
@@ -343,7 +343,7 @@ class W extends l.Z {
                 let I = y.ZP.getEmbeddedActivitiesForChannel(i).find((e) => e.applicationId === a),
                     T = null !== (r = null == I ? void 0 : I.userIds.size) && void 0 !== r ? r : 0;
                 T > 0
-                    ? await (0, L.k)({
+                    ? await (0, D.k)({
                           channelId: i,
                           applicationId: a,
                           launchId: null == I ? void 0 : I.launchId,

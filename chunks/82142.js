@@ -21,7 +21,7 @@ let f = {},
     C = {},
     O = {},
     A = new Set();
-function v(e) {
+function R(e) {
     let t = E.Z.createFromServer(e),
         n = t.code;
     if (S.has(n)) S.set(n, S.get(n).merge(t));
@@ -41,7 +41,7 @@ function v(e) {
             })(n);
     }
 }
-function R(e) {
+function v(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     if (t && !A.has(e.channel_id)) return !1;
     let n = (0, h.Fp)(e) ? (0, h.Q_)((null == e ? void 0 : e.embeds) != null ? (null == e ? void 0 : e.embeds[0].url) : void 0) : (0, h.Q_)(e.content);
@@ -59,16 +59,16 @@ function N(e) {
 }
 function T(e) {
     let { message: t } = e;
-    return R(t, !0);
+    return v(t, !0);
 }
 function y(e) {
     let { channelId: t, messages: n } = e;
-    A.add(t), n.forEach((e) => R(e, !0));
+    A.add(t), n.forEach((e) => v(e, !0));
 }
 function L(e) {
     let { firstMessages: t } = e;
     if (null == t) return !1;
-    null == t || t.forEach((e) => R(e));
+    null == t || t.forEach((e) => v(e));
 }
 class D extends (i = u.ZP.Store) {
     get(e) {
@@ -126,7 +126,7 @@ let F = new D(c.Z, {
     GIFT_CODE_RESOLVE: N,
     GIFT_CODE_RESOLVE_SUCCESS: function (e) {
         let { giftCode: t } = e;
-        return (m = m.filter((e) => e !== t.code)), !b.includes(t.code) && (b = [...b, t.code]), v(t);
+        return (m = m.filter((e) => e !== t.code)), !b.includes(t.code) && (b = [...b, t.code]), R(t);
     },
     GIFT_CODE_RESOLVE_FAILURE: function (e) {
         let { code: t } = e;
@@ -170,7 +170,7 @@ let F = new D(c.Z, {
     },
     GIFT_CODE_CREATE_SUCCESS: function (e) {
         let { giftCode: t } = e;
-        v(t);
+        R(t);
     },
     GIFT_CODES_FETCH: function (e) {
         let { skuId: t, subscriptionPlanId: n } = e;
@@ -178,7 +178,7 @@ let F = new D(c.Z, {
     },
     GIFT_CODES_FETCH_SUCCESS: function (e) {
         let { giftCodes: t, skuId: n, subscriptionPlanId: i } = e;
-        t.forEach(v);
+        t.forEach(R);
         let r = (0, h.Bg)(n, i);
         (C[r] = Date.now()), g.delete(r);
     },
@@ -193,15 +193,15 @@ let F = new D(c.Z, {
     LOAD_MESSAGES_AROUND_SUCCESS: y,
     LOAD_RECENT_MENTIONS_SUCCESS: function (e) {
         let { messages: t } = e;
-        t.forEach((e) => R(e));
+        t.forEach((e) => v(e));
     },
     LOAD_PINNED_MESSAGES_SUCCESS: function (e) {
         let { messages: t } = e;
-        t.forEach((e) => R(e));
+        t.forEach((e) => v(e));
     },
     SEARCH_FINISH: function (e) {
         e.messages.forEach((e) => {
-            e.forEach((e) => R(e));
+            e.forEach((e) => v(e));
         });
     },
     GIFT_CODE_UPDATE: function (e) {
@@ -215,7 +215,7 @@ let F = new D(c.Z, {
         let { threads: t } = e;
         Object.values(t).map((e) => {
             let { first_message: t } = e;
-            return null != t && R(t);
+            return null != t && v(t);
         });
     }
 });

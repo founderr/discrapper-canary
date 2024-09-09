@@ -128,10 +128,10 @@ t.isGeneratorObject = function (e) {
 function y(e) {
     return p(e, d);
 }
-function D(e) {
+function L(e) {
     return p(e, _);
 }
-function L(e) {
+function D(e) {
     return p(e, E);
 }
 function b(e) {
@@ -144,12 +144,12 @@ function M(e) {
     return '[object WebAssembly.Module]' === c(e);
 }),
     (t.isNumberObject = y),
-    (t.isStringObject = D),
-    (t.isBooleanObject = L),
+    (t.isStringObject = L),
+    (t.isBooleanObject = D),
     (t.isBigIntObject = b),
     (t.isSymbolObject = M);
 t.isBoxedPrimitive = function (e) {
-    return y(e) || D(e) || L(e) || b(e) || M(e);
+    return y(e) || L(e) || D(e) || b(e) || M(e);
 };
 (t.isAnyArrayBuffer = function (e) {
     return 'undefined' != typeof Uint8Array && (A(e) || C(e));

@@ -24,10 +24,10 @@ async function I(e) {
         v = i.Z.getChannel(I),
         C = null == v ? void 0 : v.getGuildId(),
         y = null == C || '' === C,
-        D = s.default.getCurrentUser();
-    if (null == v || (y && !v.isPrivate()) || null == I || null == D) return Promise.resolve(!1);
-    let L = u.ZP.getCurrentEmbeddedActivity();
-    if (((null == L ? void 0 : L.applicationId) != null && (t = r.Z.getApplication(null == L ? void 0 : L.applicationId)), a.Z.getVoiceChannelId() === I && (null == L ? void 0 : L.applicationId) === n && (null == L ? void 0 : L.channelId) === a.Z.getVoiceChannelId())) return (0, h.Z)(C, I), Promise.resolve(!0);
+        L = s.default.getCurrentUser();
+    if (null == v || (y && !v.isPrivate()) || null == I || null == L) return Promise.resolve(!1);
+    let D = u.ZP.getCurrentEmbeddedActivity();
+    if (((null == D ? void 0 : D.applicationId) != null && (t = r.Z.getApplication(null == D ? void 0 : D.applicationId)), a.Z.getVoiceChannelId() === I && (null == D ? void 0 : D.applicationId) === n && (null == D ? void 0 : D.channelId) === a.Z.getVoiceChannelId())) return (0, h.Z)(C, I), Promise.resolve(!0);
     if (
         !(await (0, c.p)({
             applicationId: n,
@@ -35,7 +35,7 @@ async function I(e) {
             channel: v,
             currentEmbeddedApplication: t,
             embeddedActivitiesManager: R,
-            user: D
+            user: L
         }))
     )
         return !1;

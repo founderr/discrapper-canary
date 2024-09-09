@@ -25,12 +25,12 @@ var r = n(620014),
     C = '[object Object]',
     y = {};
 (y[R] = y['[object Array]'] = y['[object ArrayBuffer]'] = y['[object DataView]'] = y['[object Boolean]'] = y['[object Date]'] = y['[object Float32Array]'] = y['[object Float64Array]'] = y['[object Int8Array]'] = y['[object Int16Array]'] = y['[object Int32Array]'] = y['[object Map]'] = y['[object Number]'] = y[C] = y['[object RegExp]'] = y['[object Set]'] = y['[object String]'] = y['[object Symbol]'] = y['[object Uint8Array]'] = y['[object Uint8ClampedArray]'] = y['[object Uint16Array]'] = y['[object Uint32Array]'] = !0), (y['[object Error]'] = y[v] = y['[object WeakMap]'] = !1);
-e.exports = function e(t, n, D, L, b, M) {
+e.exports = function e(t, n, L, D, b, M) {
     var P,
         U = 1 & n,
         w = 2 & n,
         x = 4 & n;
-    if ((D && (P = b ? D(t, L, b, M) : D(t)), void 0 !== P)) return P;
+    if ((L && (P = b ? L(t, D, b, M) : L(t)), void 0 !== P)) return P;
     if (!g(t)) return t;
     var G = m(t);
     if (G) {
@@ -52,17 +52,17 @@ e.exports = function e(t, n, D, L, b, M) {
     M.set(t, P),
         A(t)
             ? t.forEach(function (r) {
-                  P.add(e(r, n, D, r, t, M));
+                  P.add(e(r, n, L, r, t, M));
               })
             : S(t) &&
               t.forEach(function (r, i) {
-                  P.set(i, e(r, n, D, i, t, M));
+                  P.set(i, e(r, n, L, i, t, M));
               });
     var V = x ? (w ? E : _) : w ? O : N,
         H = G ? void 0 : V(t);
     return (
         i(H || t, function (r, i) {
-            H && (r = t[(i = r)]), a(P, i, e(r, n, D, i, t, M));
+            H && (r = t[(i = r)]), a(P, i, e(r, n, L, i, t, M));
         }),
         P
     );

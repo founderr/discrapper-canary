@@ -104,8 +104,8 @@ var r,
     v = n(918701),
     C = n(977156),
     y = n(665430),
-    D = n(585500),
-    L = n(566078),
+    L = n(585500),
+    D = n(566078),
     b = n(46140),
     M = n(981631),
     P = n(689938);
@@ -177,8 +177,8 @@ function x(e) {
                         var n, r;
                         let i = (null === (n = e.userStatus) || void 0 === n ? void 0 : n.claimedAt) == null;
                         if (i !== ((null === (r = t.userStatus) || void 0 === r ? void 0 : r.claimedAt) == null)) return i ? -1 : 1;
-                        let a = L.r.build(e.config).rewardsExpireAt;
-                        return w(a, L.r.build(t.config).rewardsExpireAt, 0);
+                        let a = D.r.build(e.config).rewardsExpireAt;
+                        return w(a, D.r.build(t.config).rewardsExpireAt, 0);
                     })
                     .map((e) => e.id);
                 return (n.current = e), e;
@@ -308,7 +308,7 @@ function W(e, t, n) {
         return P.Z.Messages.QUESTS_CONSOLE_QUEST_TASK_WITH_LINK.format({
             minutes: r,
             onClick: a,
-            gameTitle: L.r.build(e.config).application.name
+            gameTitle: D.r.build(e.config).application.name
         });
     if (null != i) return i.title;
     let s = P.Z.Messages.QUESTS_STREAM_TASK;
@@ -351,7 +351,7 @@ function z(e) {
 function q(e) {
     var t;
     let n = (0, v.Xv)(e),
-        { product: r, isFetching: i } = (0, h.T)(L.r.build(e).defaultReward.skuId);
+        { product: r, isFetching: i } = (0, h.T)(D.r.build(e).defaultReward.skuId);
     return {
         hasQuestCollectibles: n,
         avatarDecoration: null == r ? void 0 : null === (t = r.items) || void 0 === t ? void 0 : t[0],
@@ -473,7 +473,7 @@ function er(e) {
     var t, n;
     let r = Z(e),
         i = (0, v.b7)(e),
-        a = (0, D.D)({
+        a = (0, L.D)({
             quest: e,
             taskDetails: r,
             location: b.dr.QUEST_HOME_DESKTOP,

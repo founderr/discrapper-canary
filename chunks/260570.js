@@ -30,9 +30,9 @@ var r = n(735250),
     v = n(209071);
 let C = 'text-sm/medium',
     y = 36,
-    D = 144;
-function L(e) {
-    let { statusActivity: t, user: a, displayProfile: h, guildId: I, channelId: T, profileType: L, hasEntered: b = !0, animate: M = !0, editEnabled: P, onInteraction: U, isInteractionSource: w, showReplyPopout: x = !1, onClose: G, setInteractionToastShown: k, setInteractionSent: B, setIsReplyInteraction: F } = e,
+    L = 144;
+function D(e) {
+    let { statusActivity: t, user: a, displayProfile: h, guildId: I, channelId: T, profileType: D, hasEntered: b = !0, animate: M = !0, editEnabled: P, onInteraction: U, isInteractionSource: w, showReplyPopout: x = !1, onClose: G, setInteractionToastShown: k, setInteractionSent: B, setIsReplyInteraction: F } = e,
         { analyticsLocations: V } = (0, f.ZP)(E.Z.PROFILE_CUSTOM_STATUS),
         { trackUserProfileAction: H } = (0, m.KZ)(),
         Z = (0, l.e7)([_.Z], () => _.Z.useReducedMotion),
@@ -49,7 +49,7 @@ function L(e) {
         en = et && !ee,
         er = et ? 1.25 : 0,
         ei = 18 + er,
-        ea = D + er,
+        ea = L + er,
         es = y + er,
         eo = et || ee,
         el = P && !eo,
@@ -57,7 +57,7 @@ function L(e) {
         [ec, ed] = i.useState(en),
         [e_, eE] = i.useState(!en),
         [ef, eh] = i.useState(!1),
-        ep = L === O.y0.FULL_SIZE ? (0, N.z)(a.id, null == h ? void 0 : h.guildId) : void 0;
+        ep = D === O.y0.FULL_SIZE ? (0, N.z)(a.id, null == h ? void 0 : h.guildId) : void 0;
     i.useLayoutEffect(() => {
         if (null == K.current || en) return;
         let e = K.current.getBoundingClientRect().height;
@@ -152,13 +152,13 @@ function L(e) {
         },
         eO = () =>
             (0, r.jsxs)('div', {
-                className: s()(v.content, v.clamp, v.placeholderWidth, { [v.panel]: L === O.y0.PANEL }),
+                className: s()(v.content, v.clamp, v.placeholderWidth, { [v.panel]: D === O.y0.PANEL }),
                 ref: q,
                 children: [eg(), eA()]
             }),
         eR = () =>
             (0, r.jsxs)('div', {
-                className: s()(v.content, v.unclamp, v.placeholderWidth, v.incorporeal, { [v.panel]: L === O.y0.PANEL }),
+                className: s()(v.content, v.unclamp, v.placeholderWidth, v.incorporeal, { [v.panel]: D === O.y0.PANEL }),
                 ref: K,
                 children: [eg(), eA()]
             }),
@@ -198,18 +198,18 @@ function L(e) {
                         });
                 });
         },
-        eD = {
-            [v.biteSize]: L === O.y0.BITE_SIZE,
-            [v.fullSize]: L === O.y0.FULL_SIZE,
-            [v.panel]: L === O.y0.PANEL
+        eL = {
+            [v.biteSize]: D === O.y0.BITE_SIZE,
+            [v.fullSize]: D === O.y0.FULL_SIZE,
+            [v.panel]: D === O.y0.PANEL
         },
-        eL = s()(v.background, { [v.editable]: eu }),
+        eD = s()(v.background, { [v.editable]: eu }),
         eb = { [v.hoisted]: w },
         eM = s()({
             [v.statusBubbleShape]: (!ee && et) || !ec,
             [v.statusBubbleSingleLineWithTextShape]: (ec && ee) || el
         }),
-        eP = s()(v.statusBubbleOuter, eD, eM, { [v.statusBubbleOuterAddStatusCursor]: el }),
+        eP = s()(v.statusBubbleOuter, eL, eM, { [v.statusBubbleOuterAddStatusCursor]: el }),
         eU = s()(v.statusBubble, eM, {
             [v.statusBubbleEmojiOnlyPadding]: en,
             [v.statusBubbleWithTextPadding]: ee || el,
@@ -225,7 +225,7 @@ function L(e) {
         },
         ex = () =>
             (0, r.jsxs)(c.ClickableContainer, {
-                className: s()(v.visibleContainer, eD, eL, eb),
+                className: s()(v.visibleContainer, eL, eD, eb),
                 'aria-label': eC(),
                 focusProps: { ringClassName: eM },
                 onClick: el ? ey : void 0,
@@ -276,7 +276,7 @@ function L(e) {
     return (0, r.jsxs)('div', {
         children: [
             (0, r.jsx)('div', {
-                className: s()(v.invisibleContainer, eD),
+                className: s()(v.invisibleContainer, eL),
                 children: (0, r.jsx)('div', {
                     className: eP,
                     children: (0, r.jsxs)('span', {
@@ -292,7 +292,7 @@ function L(e) {
                         user: a,
                         guildId: I,
                         channelId: T,
-                        profileType: L,
+                        profileType: D,
                         sourceDetails: ew(),
                         sourceType: O.n_.STATUS,
                         setPopoutRef: t,
@@ -308,7 +308,7 @@ function L(e) {
                 },
                 animationPosition: 'top',
                 position: 'bottom',
-                align: L === O.y0.FULL_SIZE ? 'center' : 'left',
+                align: D === O.y0.FULL_SIZE ? 'center' : 'left',
                 spacing: 6,
                 shouldShow: x,
                 children: () => ex()
@@ -324,7 +324,7 @@ function b(e) {
         { customStatusBubbleEditEnabled: o } = (0, T.K)({ location: 'UserProfileCustomStatusBubbleWithReactReplyBar' });
     return (0, r.jsx)(f.Gt, {
         value: s,
-        children: (0, r.jsx)(L, {
+        children: (0, r.jsx)(D, {
             user: t,
             editEnabled: o && i,
             statusActivity: a,

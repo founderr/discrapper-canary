@@ -40,7 +40,7 @@ function y(e) {
     var t;
     return null !== (t = S.get(e)) && void 0 !== t ? t : new Set();
 }
-function D(e, t, n) {
+function L(e, t, n) {
     let r = v(m, null != e ? e : f.ME),
         i = r[t],
         a = n(i);
@@ -67,8 +67,8 @@ function D(e, t, n) {
               null != a.sessionId && (v(N, t)[a.sessionId] = a)),
           [!0, a, i]);
 }
-function L(e, t) {
-    return D(e, t.userId, (e) => {
+function D(e, t) {
+    return L(e, t.userId, (e) => {
         if (null == t.channelId) return null;
         {
             let n = {
@@ -92,7 +92,7 @@ function L(e, t) {
 function b(e) {
     let { guild: t } = e;
     c().forEach(m[t.id], (e) => {
-        D(t.id, e.userId, () => null);
+        L(t.id, e.userId, () => null);
     }),
         delete m[t.id];
 }
@@ -181,18 +181,18 @@ class M extends (a = d.ZP.Store) {
         },
         OVERLAY_INITIALIZE: function (e) {
             let { voiceStates: t, user: n, sessionId: a } = e;
-            for (let [e, n] of ((m = {}), (g = {}), (N = {}), (A = {}), Object.entries(t))) for (let [t, r] of Object.entries(n)) D(e, t, () => new E.Z(r));
+            for (let [e, n] of ((m = {}), (g = {}), (N = {}), (A = {}), Object.entries(t))) for (let [t, r] of Object.entries(n)) L(e, t, () => new E.Z(r));
             (r = n.id), (i = a);
         },
         VOICE_CHANNEL_SELECT: function (e) {
             let { guildId: t, channelId: n } = e,
-                [i] = D(t, r, (e) => (null == e ? void 0 : e.set('channelId', n)));
+                [i] = L(t, r, (e) => (null == e ? void 0 : e.set('channelId', n)));
             return i;
         },
         VOICE_STATE_UPDATES: function (e) {
             let { voiceStates: t } = e;
             return t.reduce((e, t) => {
-                let [n, r, a] = L(t.guildId, t);
+                let [n, r, a] = D(t.guildId, t);
                 return n ? (t.sessionId === i && null != r && null != a && a.channelId !== r.channelId && (p += 1), I++, !0) : e;
             }, !1);
         },
@@ -209,10 +209,10 @@ class M extends (a = d.ZP.Store) {
         PASSIVE_UPDATE_V2: function (e) {
             let t = !1;
             for (let n of e.voiceStates) {
-                let [r] = L(e.guildId, n);
+                let [r] = D(e.guildId, n);
                 t = t || r;
             }
-            for (let n of e.removedVoiceStateUsers) D(e.guildId, n, () => null), (t = !0);
+            for (let n of e.removedVoiceStateUsers) L(e.guildId, n, () => null), (t = !0);
             return t && I++, t;
         },
         RTC_CONNECTION_PLATFORM: function (e) {

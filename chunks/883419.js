@@ -26,7 +26,7 @@ var r = n(735250),
     C = n(600962);
 function N(e) {
     var t;
-    let { backButtonEligible: n, prevStep: i, showGuildPicker: N, handleStepChange: A, trialFooterMessageOverride: O, reviewWarningMessage: P, planGroup: b, openInvoiceId: g, analyticsData: v, analyticsLocation: L, eligibleApplicationSubscriptionGuilds: x, handleClose: R } = e,
+    let { backButtonEligible: n, prevStep: i, showGuildPicker: N, handleStepChange: A, trialFooterMessageOverride: O, reviewWarningMessage: P, planGroup: b, openInvoiceId: g, analyticsData: R, analyticsLocation: v, eligibleApplicationSubscriptionGuilds: L, handleClose: x } = e,
         { activeSubscription: M, application: k, setUpdatedSubscription: B, contextMetadata: j, currencies: U, paymentSources: Z, priceOptions: y, purchaseError: D, purchaseTokenAuthState: w, selectedPlan: F, selectedSku: H, setCurrency: V, setPaymentSourceId: G, setPurchaseState: W, setPurchaseError: K, purchaseState: Y, subscriptionMetadataRequest: X, setSubscriptionMetadataRequest: z, setHasAcceptedTerms: J } = (0, d.usePaymentContext)();
     l()(null != F, 'Expected plan to be selected'), l()(null != k, 'Expected application');
     let q = a.useRef(null),
@@ -94,7 +94,7 @@ function N(e) {
                                       (0, r.jsx)(p.y, {
                                           selectedGuildId: ee,
                                           onGuildChange: ea,
-                                          eligibleApplicationSubscriptionGuilds: x
+                                          eligibleApplicationSubscriptionGuilds: L
                                       })
                                   ]
                               }),
@@ -114,7 +114,7 @@ function N(e) {
                               metadata: N || en ? void 0 : X,
                               purchaseState: Y,
                               hideSubscriptionDetails: !0,
-                              handleClose: R
+                              handleClose: x
                           })
                       ]
                   }),
@@ -127,8 +127,8 @@ function N(e) {
                           onPurchaseError: (e) => K(e),
                           legalTermsNodeRef: ei,
                           flashLegalTerms: () => $(!0),
-                          analyticsLocation: L,
-                          baseAnalyticsData: v,
+                          analyticsLocation: v,
+                          baseAnalyticsData: R,
                           flowStartTime: j.startTime,
                           planGroup: b,
                           purchaseTokenAuthState: w,

@@ -48,7 +48,7 @@ t.Z = function (e) {
             a && !y.current ? C.current.play() : !a && y.current && ((C.current.currentTime = 0), C.current.pause()), (y.current = a);
         }
     }, [a, O, A]);
-    let D = O
+    let L = O
         ? (0, r.jsx)(p.Fl, {
               id: 'QuestRewardTile_rewardTileAnimated',
               children: (e) =>
@@ -81,7 +81,7 @@ t.Z = function (e) {
     return null == g
         ? (0, r.jsx)('div', {
               className: s()(S.questRewardTile, t),
-              children: D
+              children: L
           })
         : (0, r.jsxs)(u.Clickable, {
               className: s()(
@@ -95,7 +95,7 @@ t.Z = function (e) {
               ),
               onClick: R,
               children: [
-                  D,
+                  L,
                   v &&
                       (0, r.jsx)(u.Shine, {
                           className: S.shine,

@@ -29,7 +29,7 @@ var i = n(442837),
     R = n(84040),
     v = n(115879);
 function C(e) {
-    let { user: t, currentUser: n, displayProfile: C, guild: y, isHovering: D, onOpenProfile: L, channelId: b, onClose: M } = e,
+    let { user: t, currentUser: n, displayProfile: C, guild: y, isHovering: L, onOpenProfile: D, channelId: b, onClose: M } = e,
         P = u.ZP.getName(null == y ? void 0 : y.id, b, t),
         U = (0, i.e7)([c.Z], () => {
             var e;
@@ -44,7 +44,7 @@ function C(e) {
             (0, r.jsx)(p.Z, {
                 user: t,
                 profileType: N.y0.BITE_SIZE,
-                onOpenProfile: L,
+                onOpenProfile: D,
                 nickname: P,
                 pronouns: null == C ? void 0 : C.pronouns,
                 tags: (0, r.jsx)(_.Z, {
@@ -58,15 +58,15 @@ function C(e) {
                         !x &&
                             (0, r.jsx)(T.Z, {
                                 userId: t.id,
-                                isHovering: D,
-                                onOpenProfile: L
+                                isHovering: L,
+                                onOpenProfile: D
                             })
                     ]
                 })
             }),
             (0, r.jsx)(A.Z, {
                 user: t,
-                onOpenProfile: (e) => (null == L ? void 0 : L({ section: e }))
+                onOpenProfile: (e) => (null == D ? void 0 : D({ section: e }))
             }),
             (0, r.jsxs)('div', {
                 className: R.buttons,

@@ -3,7 +3,7 @@ n.d(t, {
         return y;
     },
     Bn: function () {
-        return L;
+        return D;
     },
     C9: function () {
         return M;
@@ -30,7 +30,7 @@ n.d(t, {
         return O;
     },
     nm: function () {
-        return D;
+        return L;
     },
     sr: function () {
         return P;
@@ -318,7 +318,7 @@ function C(e, t, n) {
 function y(e, t, n, r) {
     return C(e, (e) => (0, p.uL)(e, t, n), r);
 }
-function D(e) {
+function L(e) {
     return O.updateAsync(
         'userContent',
         (t) => {
@@ -328,7 +328,7 @@ function D(e) {
         I.fy.INFREQUENT_USER_ACTION
     );
 }
-function L(e, t) {
+function D(e, t) {
     return O.updateAsync(
         'userContent',
         (n) => {

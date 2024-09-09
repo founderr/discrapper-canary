@@ -68,11 +68,11 @@ function y(e) {
     if (null == n) return !1;
     null != n.searchFetcher && n.searchFetcher.cancel(), delete m[t];
 }
-function D(e) {
+function L(e) {
     if (e === v) return !1;
     null != e && null == m[e] && S(e), (v = e);
 }
-class L extends (i = c.ZP.Store) {
+class D extends (i = c.ZP.Store) {
     initialize() {
         this.waitFor(p.Z, h.Z);
         let e = d.K.get(N);
@@ -175,7 +175,7 @@ class L extends (i = c.ZP.Store) {
     }
 }
 (o = 'SearchStore'),
-    (s = 'displayName') in (a = L)
+    (s = 'displayName') in (a = D)
         ? Object.defineProperty(a, s, {
               value: o,
               enumerable: !0,
@@ -183,7 +183,7 @@ class L extends (i = c.ZP.Store) {
               writable: !0
           })
         : (a[s] = o),
-    (t.Z = new L(_.Z, {
+    (t.Z = new D(_.Z, {
         SEARCH_START: function (e) {
             var t, n;
             let { queryString: r, searchId: i, query: a } = e,
@@ -269,11 +269,11 @@ class L extends (i = c.ZP.Store) {
         },
         SEARCH_SCREEN_OPEN: function (e) {
             let { searchId: t } = e;
-            D(t);
+            L(t);
         },
         CHANNEL_SELECT: function (e) {
             let { guildId: t, channelId: n } = e;
-            D(null != t ? t : n);
+            L(null != t ? t : n);
         },
         CHANNEL_TOGGLE_MEMBERS_SECTION: function () {
             return null != v && y({ searchId: v });

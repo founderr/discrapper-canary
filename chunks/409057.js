@@ -30,8 +30,8 @@ var i = n(120356),
     v = n(194811),
     C = n(373826),
     y = n(315324),
-    D = n(582123),
-    L = n(290274),
+    L = n(582123),
+    D = n(290274),
     b = n(553375),
     M = n(228168),
     P = n(981631),
@@ -244,7 +244,7 @@ function G(e) {
                   });
     return (0, r.jsx)(d.Gt, {
         value: H,
-        children: (0, r.jsx)(D.Z, {
+        children: (0, r.jsx)(L.Z, {
             user: t,
             onClose: V,
             children: (e) => {
@@ -256,7 +256,7 @@ function G(e) {
                         (0, r.jsx)(v.Z, {
                             text: q.text,
                             icon: q.icon,
-                            tags: (0, r.jsx)(L.Z, {
+                            tags: (0, r.jsx)(D.Z, {
                                 display: 'live',
                                 user: t,
                                 activity: i,

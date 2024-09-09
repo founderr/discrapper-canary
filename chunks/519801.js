@@ -25,10 +25,10 @@ function p(e) {
     let p,
         T,
         { showBenefits: C, handleClose: N, onSubscriptionConfirmation: A } = e,
-        { updatedSubscription: O, readySlideId: P, selectedSku: b, selectedStoreListing: g, application: v } = (0, d.usePaymentContext)(),
-        L = (0, i.Z)(S.i),
-        { createMultipleConfettiAt: x } = a.useContext(s.h),
-        R = null !== (t = null == b ? void 0 : b.name) && void 0 !== t ? t : '',
+        { updatedSubscription: O, readySlideId: P, selectedSku: b, selectedStoreListing: g, application: R } = (0, d.usePaymentContext)(),
+        v = (0, i.Z)(S.i),
+        { createMultipleConfettiAt: L } = a.useContext(s.h),
+        x = null !== (t = null == b ? void 0 : b.name) && void 0 !== t ? t : '',
         M = () => {
             N(), null == A || A();
         },
@@ -37,22 +37,22 @@ function p(e) {
         j = null != g && g.benefits.length > 0 ? m.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_BENEFITS_SUBTITLE.format({ benefitCount: g.benefits.length }) : null;
     return (
         C
-            ? L
+            ? v
                 ? (p = (0, r.jsx)(c.h, {
-                      title: m.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_TITLE_V2.format({ tierName: R }),
+                      title: m.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_TITLE_V2.format({ tierName: x }),
                       subtitle: null != g && g.benefits.length > 0 ? m.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_SUBTITLE.format({ benefits: j }) : null,
                       onConfirm: M,
                       confirmCta: m.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_DONE_BUTTON
                   }))
                 : ((p =
-                      null != g && null != v
+                      null != g && null != R
                           ? (0, r.jsx)(u.Oc, {
                                 icon: g.thumbnail,
                                 storeListingBenefits: g.benefits,
-                                application: v,
-                                title: m.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_TITLE_V2.format({ tier: R }),
+                                application: R,
+                                title: m.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_TITLE_V2.format({ tier: x }),
                                 subtitle: m.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_BENEFITS_PREVIEW,
-                                description: B ? m.Z.Messages.APPLICATION_USER_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_SUBTITLE.format({ applicationName: null == v ? void 0 : v.name }) : m.Z.Messages.APPLICATION_GUILD_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_SUBTITLE.format({ tier: R })
+                                description: B ? m.Z.Messages.APPLICATION_USER_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_SUBTITLE.format({ applicationName: null == R ? void 0 : R.name }) : m.Z.Messages.APPLICATION_GUILD_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_SUBTITLE.format({ tier: x })
                             })
                           : (0, r.jsx)(f.Z, {})),
                   (T = (0, r.jsx)(_.Z, {
@@ -60,20 +60,20 @@ function p(e) {
                       primaryCTA: _.g.CONTINUE,
                       primaryText: m.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_DONE_BUTTON
                   })))
-            : (p = L
+            : (p = v
                   ? (0, r.jsx)(c.m, {
-                        tierName: R,
+                        tierName: x,
                         onConfirm: M,
                         subscription: O
                     })
                   : (0, r.jsx)(u.xe, {
-                        tierName: R,
+                        tierName: x,
                         onConfirm: M,
                         subscription: O
                     })),
         a.useEffect(() => {
-            l.Z.useReducedMotion && k && x(window.innerWidth / 2, window.innerHeight / 2);
-        }, [x, k]),
+            l.Z.useReducedMotion && k && L(window.innerWidth / 2, window.innerHeight / 2);
+        }, [L, k]),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)(h.C3, {

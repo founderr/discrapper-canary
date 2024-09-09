@@ -42,8 +42,8 @@ var v = a(p),
 if (C.constructor !== v) {
     for (var y in (!h && o(C, 'constructor', s(1, v)), _))
         if (l(_, y)) {
-            var D = _[y],
-                L = D.s;
-            !l(v, L) && o(v, L, s(6, D.c));
+            var L = _[y],
+                D = L.s;
+            !l(v, D) && o(v, D, s(6, L.c));
         }
 }

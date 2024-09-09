@@ -9,7 +9,7 @@ n.d(t, {
         return d;
     },
     uR: function () {
-        return D;
+        return L;
     }
 });
 var r = n(470079),
@@ -350,8 +350,8 @@ var C = r.forwardRef(function (e, t) {
         })(e, ['className', 'environment', 'onClick', 'onMouseDown', 'onMouseMove', 'onMouseUp', 'onBeforeRender', 'onAfterRender']),
         C = r.useRef(null),
         y = r.useRef(new Map()),
-        D = r.useRef(null),
-        L = r.useRef(0),
+        L = r.useRef(null),
+        D = r.useRef(0),
         b = r.useRef(0),
         M = r.useCallback(
             function () {
@@ -367,9 +367,9 @@ var C = r.forwardRef(function (e, t) {
                                 i.update(s), i.draw(a, t), i.shouldDestroy(e, s) && y.current.delete(r);
                             }),
                             null == p || p(t),
-                            y.current.size > 0 ? (D.current = window.requestAnimationFrame(M)) : (t.clearRect(0, 0, e.width, e.height), (D.current = null));
+                            y.current.size > 0 ? (L.current = window.requestAnimationFrame(M)) : (t.clearRect(0, 0, e.width, e.height), (L.current = null));
                         var n = Date.now();
-                        0 !== L.current && (b.current = 1000 / (n - L.current)), (L.current = n);
+                        0 !== D.current && (b.current = 1000 / (n - D.current)), (D.current = n);
                     }
                 }
             },
@@ -377,7 +377,7 @@ var C = r.forwardRef(function (e, t) {
         );
     r.useEffect(
         function () {
-            null != D.current && (window.cancelAnimationFrame(D.current), (D.current = window.requestAnimationFrame(M)));
+            null != L.current && (window.cancelAnimationFrame(L.current), (L.current = window.requestAnimationFrame(M)));
         },
         [M]
     );
@@ -387,7 +387,7 @@ var C = r.forwardRef(function (e, t) {
                     confetti: e,
                     spriteCanvas: t
                 }),
-                    null == D.current && M();
+                    null == L.current && M();
             },
             [M]
         ),
@@ -404,8 +404,8 @@ var C = r.forwardRef(function (e, t) {
                     O,
                     C,
                     y,
-                    D,
                     L,
+                    D,
                     b,
                     M,
                     U =
@@ -425,7 +425,7 @@ var C = r.forwardRef(function (e, t) {
                             return A(t.sprites);
                         })(d, l))[0]),
                         (y = O[1]),
-                        (D = (function (e, t, n) {
+                        (L = (function (e, t, n) {
                             if (!('string' == typeof (r = e) || r.colorize)) return 0;
                             var r,
                                 i =
@@ -441,7 +441,7 @@ var C = r.forwardRef(function (e, t) {
                             position: v(h.position),
                             velocity: v(h.velocity),
                             rotation:
-                                ((L = h.rotation),
+                                ((D = h.rotation),
                                 (function (e) {
                                     switch (e.type) {
                                         case 'static':
@@ -479,7 +479,7 @@ var C = r.forwardRef(function (e, t) {
                                                 v = R(e.maxDirection);
                                             return new I(new S(g(n.x, r.x), g(d.x, _.x), g(E.x, f.x), g(h.x, p.x), N(O.x, v.x), A(e.easingFunctions)[0]), new S(g(n.y, r.y), g(d.y, _.y), g(E.y, f.y), g(h.y, p.y), N(O.y, v.y), A(e.easingFunctions)[0]), new S(g(n.z, r.z), g(d.z, _.z), g(E.z, f.z), g(h.z, p.z), N(O.z, v.z), A(e.easingFunctions)[0]));
                                     }
-                                })(f(f({}, L), { valueType: 'Vector3' }))),
+                                })(f(f({}, D), { valueType: 'Vector3' }))),
                             dragCoefficient: v(h.dragCoefficient),
                             size: p,
                             opacity:
@@ -500,7 +500,7 @@ var C = r.forwardRef(function (e, t) {
                                             return new S(g(e.minValue, e.maxValue), g(e.minStart, e.maxStart), g(e.minFinal, e.maxFinal), g(e.minDuration, e.maxDuration), N(e.minDirection, e.maxDirection), A(e.easingFunctions)[0]);
                                     }
                                 })(f(f({}, b), { valueType: 'number' }))),
-                            spriteX: D * l.spriteWidth + 2 * D,
+                            spriteX: L * l.spriteWidth + 2 * L,
                             spriteY: y * l.spriteHeight + 2 * y,
                             spriteWidth: l.spriteWidth,
                             spriteHeight: l.spriteHeight
@@ -939,7 +939,7 @@ var y = r.forwardRef(function (e, t) {
         })
     );
 });
-function D(e, t) {
+function L(e, t) {
     var n,
         i = r.useState(null !== (n = null == t ? void 0 : t.isReady) && void 0 !== n && n),
         a = i[0],

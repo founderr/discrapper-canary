@@ -53,8 +53,8 @@ var i = n(53786),
     v = n(510022),
     C = n(423793),
     y = n(517156),
-    D = n(587818),
-    L = n(864407),
+    L = n(587818),
+    D = n(864407),
     b = n(637290),
     M = n(854451),
     P = n(275051),
@@ -247,17 +247,17 @@ function ec(e) {
                         let A = en(e),
                             { size: N, crossAxis: O, crossSize: R, placement: v, crossPlacement: C } = A,
                             y = er(t, o, n, A, c, d, u, _, f, h),
-                            D = c,
-                            L = ei(o, u, t, i, a + c, A);
-                        if (s && r[N] > L) {
+                            L = c,
+                            D = ei(o, u, t, i, a + c, A);
+                        if (s && r[N] > D) {
                             let e = en(`${z[v]} ${C}`),
                                 r = er(t, o, n, e, c, d, u, _, f, h);
-                            ei(o, u, t, i, a + c, e) > L && ((A = e), (y = r), (D = c));
+                            ei(o, u, t, i, a + c, e) > D && ((A = e), (y = r), (L = c));
                         }
                         let b = et(O, y[O], n[R], o, l, a);
                         y[O] += b;
                         let M = ((p = y), (I = o), (m = u), (T = t), (S = i), (g = a), null != p.top ? Math.max(0, I.height + I.top + I.scroll.top - (m.top + p.top) - (S.top + S.bottom + g)) : Math.max(0, T.top + m.top - (I.top + I.scroll.top) - (S.top + S.bottom + g)));
-                        E && E < M && (M = E), (n.height = Math.min(n.height, M)), (b = et(O, (y = er(t, o, n, A, D, d, u, _, f, h))[O], n[R], o, l, a)), (y[O] += b);
+                        E && E < M && (M = E), (n.height = Math.min(n.height, M)), (b = et(O, (y = er(t, o, n, A, L, d, u, _, f, h))[O], n[R], o, l, a)), (y[O] += b);
                         let P = {},
                             U = t[O] + 0.5 * t[R] - n[O],
                             w = f / 2 + h,
@@ -704,8 +704,8 @@ eC = {
     'pt-BR': v.Z,
     'pt-PT': C.Z,
     'ro-RO': y.Z,
-    'ru-RU': D.Z,
-    'sk-SK': L.Z,
+    'ru-RU': L.Z,
+    'sk-SK': D.Z,
     'sl-SI': b.Z,
     'sr-SP': M.Z,
     'sv-SE': P.Z,
@@ -714,8 +714,8 @@ eC = {
     'zh-CN': x.Z,
     'zh-TW': G.Z
 };
-let eD = new WeakMap(),
-    eL = [];
+let eL = new WeakMap(),
+    eD = [];
 function eb(e, t = document.body) {
     let n = new Set(e),
         r = new Set(),
@@ -735,10 +735,10 @@ function eb(e, t = document.body) {
         },
         a = (e) => {
             var t;
-            let n = null !== (t = eD.get(e)) && void 0 !== t ? t : 0;
-            ('true' !== e.getAttribute('aria-hidden') || 0 !== n) && (0 === n && e.setAttribute('aria-hidden', 'true'), r.add(e), eD.set(e, n + 1));
+            let n = null !== (t = eL.get(e)) && void 0 !== t ? t : 0;
+            ('true' !== e.getAttribute('aria-hidden') || 0 !== n) && (0 === n && e.setAttribute('aria-hidden', 'true'), r.add(e), eL.set(e, n + 1));
         };
-    eL.length && eL[eL.length - 1].disconnect(), i(t);
+    eD.length && eD[eD.length - 1].disconnect(), i(t);
     let s = new MutationObserver((e) => {
         for (let t of e)
             if ('childList' === t.type && 0 !== t.addedNodes.length && ![...n, ...r].some((e) => e.contains(t.target))) {
@@ -762,13 +762,13 @@ function eb(e, t = document.body) {
         }
     };
     return (
-        eL.push(o),
+        eD.push(o),
         () => {
             for (let e of (s.disconnect(), r)) {
-                let t = eD.get(e);
-                1 === t ? (e.removeAttribute('aria-hidden'), eD.delete(e)) : eD.set(e, t - 1);
+                let t = eL.get(e);
+                1 === t ? (e.removeAttribute('aria-hidden'), eL.delete(e)) : eL.set(e, t - 1);
             }
-            o === eL[eL.length - 1] ? (eL.pop(), eL.length && eL[eL.length - 1].observe()) : eL.splice(eL.indexOf(o), 1);
+            o === eD[eD.length - 1] ? (eD.pop(), eD.length && eD[eD.length - 1].observe()) : eD.splice(eD.indexOf(o), 1);
         }
     );
 }

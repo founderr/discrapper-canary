@@ -84,7 +84,7 @@ n.d(t, {
         return eo;
     },
     Rt: function () {
-        return eD;
+        return eL;
     },
     Si: function () {
         return i;
@@ -192,7 +192,7 @@ n.d(t, {
         return d;
     },
     h8: function () {
-        return eL;
+        return eD;
     },
     hs: function () {
         return eb;
@@ -294,8 +294,8 @@ var r,
     v,
     C,
     y,
-    D,
     L,
+    D,
     b,
     M,
     P,
@@ -530,8 +530,8 @@ let ea = Object.freeze({
     ev = '1073698058383917056',
     eC = '1070132870233980928',
     ey = '1267968635301789696',
-    eD = '1268347360493174784',
-    eL = [ey, '1267969164312576000'],
+    eL = '1268347360493174784',
+    eD = [ey, '1267969164312576000'],
     eb = '1150904354090532864',
     eM = '1199128659810582528',
     eP = '1204865493622587392',
@@ -579,8 +579,8 @@ let ea = Object.freeze({
             id: eO,
             skus: ['521847234246082599']
         },
-        [eD]: {
-            id: eD,
+        [eL]: {
+            id: eL,
             skus: ['521847234246082599']
         }
     });
@@ -673,10 +673,10 @@ let ea = Object.freeze({
     (y.CLIENT_THEMES_UPSELL = 'client_themes_upsell'),
     (y.APP_ICONS_INLINE_UPSELL = 'app_icons_inline_upsell'),
     (y.APP_ICONS_UPSELL = 'app_icons_upsell'),
-    ((D = u || (u = {}))[(D.PREMIUM_TIER_1 = 1)] = 'PREMIUM_TIER_1'),
-    (D[(D.PREMIUM_TIER_2 = 2)] = 'PREMIUM_TIER_2'),
-    (D[(D.GUILD_BOOST = 4)] = 'GUILD_BOOST'),
-    (D[(D.PREMIUM_TIER_0 = 8)] = 'PREMIUM_TIER_0');
+    ((L = u || (u = {}))[(L.PREMIUM_TIER_1 = 1)] = 'PREMIUM_TIER_1'),
+    (L[(L.PREMIUM_TIER_2 = 2)] = 'PREMIUM_TIER_2'),
+    (L[(L.GUILD_BOOST = 4)] = 'GUILD_BOOST'),
+    (L[(L.PREMIUM_TIER_0 = 8)] = 'PREMIUM_TIER_0');
 let eH = Object.freeze({
         '978380684370378762': 8,
         '521846918637420545': 1,
@@ -762,7 +762,7 @@ let eH = Object.freeze({
         }
     }),
     eq = ['978380692553465866', '1024422698568122368', '511651871736201216', '511651876987469824', '511651880837840896', '642251038925127690', '944037208325619722', '511651885459963904'];
-((L = c || (c = {})).SOUNDBOARD_PLAY = 'soundboard play'), (L.PROFILE_THEME_COLOR = 'profile_theme_color'), (L.PROFILE_BANNER = 'profile_banner'), (L.ANIMATED_AVATAR = 'animated_avatar'), (L.AVATAR_DECORATION = 'avatar_decoration'), (L.CLIENT_THEME = 'client_theme'), (L.SHARED_CANVAS = 'shared_canvas'), (L.PROFILE_EFFECT = 'profile_effect'), ((b = d || (d = {})).FREE = 'free'), (b.PREMIUM_STANDARD = 'premium-standard');
+((D = c || (c = {})).SOUNDBOARD_PLAY = 'soundboard play'), (D.PROFILE_THEME_COLOR = 'profile_theme_color'), (D.PROFILE_BANNER = 'profile_banner'), (D.ANIMATED_AVATAR = 'animated_avatar'), (D.AVATAR_DECORATION = 'avatar_decoration'), (D.CLIENT_THEME = 'client_theme'), (D.SHARED_CANVAS = 'shared_canvas'), (D.PROFILE_EFFECT = 'profile_effect'), ((b = d || (d = {})).FREE = 'free'), (b.PREMIUM_STANDARD = 'premium-standard');
 let eQ = {
     '1024422698568122368': 16,
     '511651876987469824': 16,

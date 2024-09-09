@@ -244,7 +244,7 @@ let Z = (e) => {
                         className: B.sendToRecipientButton,
                         onClick: () => {
                             b(!0),
-                                (0, C.Y)(s, t)
+                                (0, C.YD)(s, t)
                                     .then(() => {
                                         n(), (0, u.Ou)();
                                     })

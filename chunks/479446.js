@@ -1,8 +1,8 @@
 n.d(t, {
-    S: function () {
+    SR: function () {
         return s;
     },
-    Y: function () {
+    YD: function () {
         return _;
     }
 }),

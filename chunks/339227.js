@@ -206,8 +206,8 @@ let A = {
         maxAge: 1 * f.Z.Millis.MINUTE,
         updateAgeOnGet: !0
     },
-    D = new (s())(y),
-    L = new (s())(y);
+    L = new (s())(y),
+    D = new (s())(y);
 function b(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
@@ -231,7 +231,7 @@ function b(e, t) {
             '' !== l &&
                 (function (e, t, n) {
                     let r = [],
-                        i = n ? L : D,
+                        i = n ? D : L,
                         a = i.get(e);
                     if (null != a) return a;
                     let s =

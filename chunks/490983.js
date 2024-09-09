@@ -25,8 +25,8 @@ var r,
     v = n(941128),
     C = n(70956),
     y = n(251625),
-    D = n(823379),
-    L = n(780570),
+    L = n(823379),
+    D = n(780570),
     b = n(358085),
     M = n(998502),
     P = n(804739),
@@ -81,7 +81,7 @@ function z() {
                     let o = h.Z.getApplication(e.id);
                     if (null == o) return null;
                     let l = K(o, n);
-                    if ((t.add(e.id), !(0, L.Je)(e) && !R.Z.isInstalled(e.id, e.branchId))) return null;
+                    if ((t.add(e.id), !(0, D.Je)(e) && !R.Z.isInstalled(e.id, e.branchId))) return null;
                     return {
                         key: ''.concat(e.id, '-').concat(e.branchId),
                         application: o,
@@ -100,12 +100,12 @@ function z() {
                             branchId: e.branchId
                         }),
                         isUpdatingFlags: g.Z.isUpdatingFlags(e.id, e.branchId),
-                        shouldShowInLibrary: (0, L.d0)(o, e, A.Z),
+                        shouldShowInLibrary: (0, D.d0)(o, e, A.Z),
                         defaultAction: (0, U.i)(e, R.Z, v.Z)
                     };
                 })(r, n, t, e, !0)
             )
-            .filter(D.lm),
+            .filter(L.lm),
         a = [
             ...r
                 .map((r) =>
@@ -139,7 +139,7 @@ function z() {
                         );
                     })(r, n, t, e)
                 )
-                .filter(D.lm),
+                .filter(L.lm),
             ...i
         ].sort((e, t) => (e.lastPlayed === t.lastPlayed ? 0 : e.lastPlayed > t.lastPlayed ? -1 : 1));
     return (

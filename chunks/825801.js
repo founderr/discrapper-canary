@@ -45,7 +45,7 @@ let A = 1800,
         }
     };
 function O(e) {
-    let { user: t, channel: n, sourceType: i, sourceDetails: _, isVisible: O, isExpandable: R, onInteraction: v, setInteractionToastShown: C, setInteractionSent: y, setIsReplyInteraction: D, onClose: L } = e,
+    let { user: t, channel: n, sourceType: i, sourceDetails: _, isVisible: O, isExpandable: R, onInteraction: v, setInteractionToastShown: C, setInteractionSent: y, setIsReplyInteraction: L, onClose: D } = e,
         { trackUserProfileAction: b } = (0, f.KZ)(),
         M = (0, s.e7)([c.Z], () => c.Z.theme),
         { sendReact: P, pressReact: U, pressReply: w } = (0, p.Q)(i),
@@ -61,7 +61,7 @@ function O(e) {
             sourceType: i,
             sourceDetails: _
         });
-        D(!1), y(!1), C(!0);
+        L(!1), y(!1), C(!0);
         try {
             await (0, I.Z)({
                 userId: t.id,
@@ -113,7 +113,7 @@ function O(e) {
                                     guildId: null == n ? void 0 : n.guild_id,
                                     closePopout: t,
                                     onSelectEmoji: async (e, n) => {
-                                        await k(e), n && (t(), null == L || L());
+                                        await k(e), n && (t(), null == D || D());
                                     },
                                     pickerIntention: T.Hz.PROFILE,
                                     channel: n,

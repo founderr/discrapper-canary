@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return D;
+        return L;
     }
 }),
     n(47120);
@@ -30,12 +30,12 @@ var r = n(735250),
     v = n(689938),
     C = n(234328);
 let y = p.ZP.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
-function D(e) {
-    let { user: t, displayProfile: n, guildId: a, channelId: p, profileType: D, animateOnHover: L, onOpenProfile: b, isInteractionSource: M, onInteraction: P, showReplyPopout: U = !1, setInteractionToastShown: w, setInteractionSent: x, setIsReplyInteraction: G } = e,
+function L(e) {
+    let { user: t, displayProfile: n, guildId: a, channelId: p, profileType: L, animateOnHover: D, onOpenProfile: b, isInteractionSource: M, onInteraction: P, showReplyPopout: U = !1, setInteractionToastShown: w, setInteractionSent: x, setIsReplyInteraction: G } = e,
         { theme: k } = (0, g.z)(),
         { analyticsLocations: B } = (0, d.ZP)(c.Z.AVATAR),
         { trackUserProfileAction: F } = (0, I.KZ)(),
-        V = D === N.y0.FULL_SIZE ? (0, A.z)(t.id, null == n ? void 0 : n.guildId) : void 0,
+        V = L === N.y0.FULL_SIZE ? (0, A.z)(t.id, null == n ? void 0 : n.guildId) : void 0,
         H = h.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, R.p9.TIER_2),
         Z = i.useMemo(() => t.isNonUserBot() || (0, _.W)(t, p), [t, p]),
         [Y, j] = i.useState(!1),
@@ -56,12 +56,12 @@ function D(e) {
                 isMobileOnline: f.Z.isMobileOnline(t.id)
             };
         }),
-        Q = D === N.y0.FULL_SIZE ? l.AvatarSizes.SIZE_120 : l.AvatarSizes.SIZE_80,
+        Q = L === N.y0.FULL_SIZE ? l.AvatarSizes.SIZE_120 : l.AvatarSizes.SIZE_80,
         X = s()(C.avatar, {
             [C.hoisted]: M,
-            [C.biteSize]: D === N.y0.BITE_SIZE,
-            [C.fullSize]: D === N.y0.FULL_SIZE,
-            [C.panel]: D === N.y0.PANEL
+            [C.biteSize]: L === N.y0.BITE_SIZE,
+            [C.fullSize]: L === N.y0.FULL_SIZE,
+            [C.panel]: L === N.y0.PANEL
         }),
         {
             avatarDecorationSrc: $,
@@ -71,7 +71,7 @@ function D(e) {
             user: t,
             guildId: null != n ? n.guildId : a,
             size: Q,
-            animateOnHover: L
+            animateOnHover: D
         }),
         et = (0, r.jsx)(y, {
             src: J,
@@ -120,7 +120,7 @@ function D(e) {
                         user: t,
                         guildId: a,
                         channelId: p,
-                        profileType: D,
+                        profileType: L,
                         sourceType: N.n_.AVATAR,
                         modalKey: V,
                         setPopoutRef: n,
@@ -135,7 +135,7 @@ function D(e) {
                 },
                 animationPosition: 'top',
                 position: 'bottom',
-                align: D === N.y0.FULL_SIZE ? 'center' : 'left',
+                align: L === N.y0.FULL_SIZE ? 'center' : 'left',
                 shouldShow: U,
                 children: () => en()
             }),

@@ -31,8 +31,8 @@ var i = n(120356),
     v = n(194811),
     C = n(373826),
     y = n(315324),
-    D = n(582123),
-    L = n(648926),
+    L = n(582123),
+    D = n(648926),
     b = n(290274),
     M = n(228168),
     P = n(981631),
@@ -203,7 +203,7 @@ function B(e) {
                 ? null
                 : (0, r.jsx)('div', {
                       className: a()(w.actions, Z),
-                      children: (0, r.jsx)(L.Z, {
+                      children: (0, r.jsx)(D.Z, {
                           stream: i,
                           canWatch: Q,
                           unavailableReason: X,
@@ -213,7 +213,7 @@ function B(e) {
                   });
     return (0, r.jsx)(_.Gt, {
         value: Y,
-        children: (0, r.jsx)(D.Z, {
+        children: (0, r.jsx)(L.Z, {
             user: t,
             onClose: F,
             children: (e) => {

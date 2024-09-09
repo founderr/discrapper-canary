@@ -12,7 +12,7 @@ n.d(t, {
         return S;
     },
     Sw: function () {
-        return D;
+        return L;
     },
     ZP: function () {
         return v;
@@ -27,7 +27,7 @@ n.d(t, {
         return T;
     },
     nj: function () {
-        return L;
+        return D;
     }
 }),
     n(47120);
@@ -291,7 +291,7 @@ function y(e) {
             return m.Z.Messages.GUILD_ANTIRAID_EMBED_RESOLVE_REASON_OTHER;
     }
 }
-function D(e) {
+function L(e) {
     return g(e, l.D.ACTION_BY_USER_ID);
 }
-let L = void 0;
+let D = void 0;

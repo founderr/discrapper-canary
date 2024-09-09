@@ -12,7 +12,7 @@ n.d(t, {
         return T;
     },
     YH: function () {
-        return D;
+        return L;
     },
     iN: function () {
         return _;
@@ -334,6 +334,6 @@ let y = (0, a.B)({
         }
     ]
 });
-function D(e) {
+function L(e) {
     return y.useExperiment({ location: e }).canAdminsBrowse;
 }

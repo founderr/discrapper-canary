@@ -93,8 +93,8 @@ function d(e, t, n) {
     }
     let {
             itemProps: y,
-            isPressed: D,
-            isFocused: L,
+            isPressed: L,
+            isFocused: D,
             hasAction: b,
             allowsSelection: M
         } = (0, s.Cs)({
@@ -131,11 +131,11 @@ function d(e, t, n) {
             },
             labelProps: { id: O },
             descriptionProps: { id: R },
-            isFocused: L,
-            isFocusVisible: L && (0, i.E)(),
+            isFocused: D,
+            isFocusVisible: D && (0, i.E)(),
             isSelected: T,
             isDisabled: m,
-            isPressed: D,
+            isPressed: L,
             allowsSelection: M,
             hasAction: b
         }

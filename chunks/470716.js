@@ -156,7 +156,7 @@ var p = {
     y = function (e) {
         return Array.isArray(e) ? e.join('') : e;
     },
-    D = function (e, t) {
+    L = function (e, t) {
         return Array.isArray(e)
             ? e.reduce(
                   function (e, n) {
@@ -177,7 +177,7 @@ var p = {
               )
             : { default: e };
     },
-    L = function (e, t) {
+    D = function (e, t) {
         var n;
         return _({}, e, (((n = {})[t] = void 0), n));
     },
@@ -294,9 +294,9 @@ var p = {
                     ((f = (E = e).linkTags),
                     (h = E.scriptTags),
                     (S = E.encode),
-                    (g = D(E.metaTags, T)),
-                    (A = D(f, I)),
-                    (N = D(h, m)),
+                    (g = L(E.metaTags, T)),
+                    (A = L(f, I)),
+                    (N = L(h, m)),
                     {
                         priorityMethods: {
                             toComponent: function () {
@@ -571,7 +571,7 @@ var q = ['children'],
         var n = t.prototype;
         return (
             (n.shouldComponentUpdate = function (e) {
-                return !o()(L(this.props, 'helmetData'), L(e, 'helmetData'));
+                return !o()(D(this.props, 'helmetData'), D(e, 'helmetData'));
             }),
             (n.mapNestedChildrenToProps = function (e, t) {
                 if (!t) return null;

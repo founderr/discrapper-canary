@@ -1,7 +1,7 @@
 let n, a, o, i, _, E;
 r.d(t, {
     G: function () {
-        return rV;
+        return rk;
     },
     T: function () {
         return rW;
@@ -39,8 +39,8 @@ var s,
     H = r(26506),
     Y = r(650093),
     K = r(501684),
-    k = r(157079),
-    V = r(469359),
+    V = r(157079),
+    k = r(469359),
     x = r(393523);
 let F = g.n,
     W = 'sentryReplaySession',
@@ -899,12 +899,12 @@ function eY() {
 function eK() {
     return window.innerWidth || (document.documentElement && document.documentElement.clientWidth) || (document.body && document.body.clientWidth);
 }
-function ek(e) {
+function eV(e) {
     return e ? (e.nodeType === e.ELEMENT_NODE ? e : e.parentElement) : null;
 }
-function eV(e, t, r, n, a) {
+function ek(e, t, r, n, a) {
     if (!e) return !1;
-    let o = ek(e);
+    let o = eV(e);
     if (!o) return !1;
     let i = eg(t, r);
     if (!a) {
@@ -1193,10 +1193,10 @@ class e8 {
                     switch (e.type) {
                         case 'characterData': {
                             let t = e.target.textContent;
-                            !eV(e.target, this.blockClass, this.blockSelector, this.unblockSelector, !1) &&
+                            !ek(e.target, this.blockClass, this.blockSelector, this.unblockSelector, !1) &&
                                 t !== e.oldValue &&
                                 this.texts.push({
-                                    value: eM(e.target, this.maskTextClass, this.maskTextSelector, this.unmaskTextClass, this.unmaskTextSelector, this.maskAllText) && t ? (this.maskTextFn ? this.maskTextFn(t, ek(e.target)) : t.replace(/[\S]/g, '*')) : t,
+                                    value: eM(e.target, this.maskTextClass, this.maskTextSelector, this.unmaskTextClass, this.unmaskTextSelector, this.maskAllText) && t ? (this.maskTextFn ? this.maskTextFn(t, eV(e.target)) : t.replace(/[\S]/g, '*')) : t,
                                     node: e.target
                                 });
                             break;
@@ -1221,7 +1221,7 @@ class e8 {
                                     maskInputFn: this.maskInputFn
                                 });
                             }
-                            if (eV(e.target, this.blockClass, this.blockSelector, this.unblockSelector, !1) || n === e.oldValue) return;
+                            if (ek(e.target, this.blockClass, this.blockSelector, this.unblockSelector, !1) || n === e.oldValue) return;
                             let a = this.attributeMap.get(e.target);
                             if ('IFRAME' === t.tagName && 'src' === r && !this.keepIframeSrcFn(n)) {
                                 if (t.contentDocument) return;
@@ -1257,13 +1257,13 @@ class e8 {
                             break;
                         }
                         case 'childList':
-                            if (eV(e.target, this.blockClass, this.blockSelector, this.unblockSelector, !0)) return;
+                            if (ek(e.target, this.blockClass, this.blockSelector, this.unblockSelector, !0)) return;
                             e.addedNodes.forEach((t) => this.genAdds(t, e.target)),
                                 e.removedNodes.forEach((t) => {
                                     var r;
                                     let n = this.mirror.getId(t),
                                         a = q(e.target) ? this.mirror.getId(e.target.host) : this.mirror.getId(e.target);
-                                    if (!(eV(e.target, this.blockClass, this.blockSelector, this.unblockSelector, !1) || ex(t, this.mirror)) && ((r = t), -1 !== this.mirror.getId(r)))
+                                    if (!(ek(e.target, this.blockClass, this.blockSelector, this.unblockSelector, !1) || ex(t, this.mirror)) && ((r = t), -1 !== this.mirror.getId(r)))
                                         this.addedSet.has(t)
                                             ? (e7(this.addedSet, t), this.droppedSet.add(t))
                                             : (this.addedSet.has(e.target) && -1 === n) ||
@@ -1292,7 +1292,7 @@ class e8 {
                             let r = null;
                             t && this.mirror.hasNode(t) && (r = this.mirror.getId(t)), r && -1 !== r && (this.movedMap[e4(this.mirror.getId(e), r)] = !0);
                         } else this.addedSet.add(e), this.droppedSet.delete(e);
-                        !eV(e, this.blockClass, this.blockSelector, this.unblockSelector, !1) &&
+                        !ek(e, this.blockClass, this.blockSelector, this.unblockSelector, !1) &&
                             (e.childNodes.forEach((e) => this.genAdds(e)),
                             ej(e) &&
                                 e.shadowRoot.childNodes.forEach((t) => {
@@ -1412,7 +1412,7 @@ function ti({ scrollCb: e, doc: t, mirror: r, blockClass: n, blockSelector: a, u
             eb(
                 tt((i) => {
                     let _ = ta(i);
-                    if (!_ || eV(_, n, a, o, !0)) return;
+                    if (!_ || ek(_, n, a, o, !0)) return;
                     let E = r.getId(_);
                     if (_ === t && t.defaultView) {
                         let r = eH(t.defaultView);
@@ -1542,7 +1542,7 @@ function tu(e, t = {}) {
                 s = null,
                 c = (t) => (i) => {
                     let _ = ta(i);
-                    if (eV(_, n, a, o, !0)) return;
+                    if (ek(_, n, a, o, !0)) return;
                     let E = null,
                         c = t;
                     if ('pointerType' in i) {
@@ -1624,7 +1624,7 @@ function tu(e, t = {}) {
                 let r = ta(e),
                     c = e.isTrusted,
                     T = r && en(r.tagName);
-                if (('OPTION' === T && (r = r.parentElement), !r || !T || 0 > t_.indexOf(T) || eV(r, n, a, o, !0))) return;
+                if (('OPTION' === T && (r = r.parentElement), !r || !T || 0 > t_.indexOf(T) || ek(r, n, a, o, !0))) return;
                 let N = r;
                 if (N.classList.contains(i) || (_ && N.matches(_))) return;
                 let p = eo(r),
@@ -1760,7 +1760,7 @@ function tu(e, t = {}) {
                     eb(
                         tt((o) => {
                             let _ = ta(o);
-                            if (!_ || eV(_, t, r, n, !0)) return;
+                            if (!_ || ek(_, t, r, n, !0)) return;
                             let { currentTime: E, volume: s, muted: c, playbackRate: I } = _;
                             e({
                                 type: i,
@@ -2020,7 +2020,7 @@ function tu(e, t = {}) {
                         s = e.rangeCount || 0;
                     for (let t = 0; t < s; t++) {
                         let { startContainer: i, startOffset: _, endContainer: s, endOffset: c } = e.getRangeAt(t);
-                        !(eV(i, n, a, o, !0) || eV(s, n, a, o, !0)) &&
+                        !(ek(i, n, a, o, !0) || ek(s, n, a, o, !0)) &&
                             E.push({
                                 start: r.getId(i),
                                 startOffset: _,
@@ -2456,8 +2456,8 @@ try {
 let tD = new Z();
 function th(e = {}) {
     let t;
-    let { emit: r, checkoutEveryNms: n, checkoutEveryNth: a, blockClass: E = 'rr-block', blockSelector: s = null, unblockSelector: c = null, ignoreClass: I = 'rr-ignore', ignoreSelector: u = null, maskAllText: l = !1, maskTextClass: R = 'rr-mask', unmaskTextClass: A = null, maskTextSelector: T = null, unmaskTextSelector: d = null, inlineStylesheet: p = !0, maskAllInputs: O, maskInputOptions: f, slimDOMOptions: S, maskAttributeFn: L, maskInputFn: D, maskTextFn: h, maxCanvasSize: C = null, packFn: g, sampling: M = {}, dataURLOptions: P = {}, mousemoveWait: m, recordDOM: U = !0, recordCanvas: G = !1, recordCrossOriginIframes: y = !1, recordAfter: v = 'DOMContentLoaded' === e.recordAfter ? e.recordAfter : 'load', userTriggeredOnInput: b = !1, collectFonts: B = !1, inlineImages: w = !1, plugins: H, keepIframeSrcFn: Y = () => !1, ignoreCSSAttributes: K = new Set([]), errorHandler: k, onMutation: V, getCanvasManager: x } = e;
-    o = k;
+    let { emit: r, checkoutEveryNms: n, checkoutEveryNth: a, blockClass: E = 'rr-block', blockSelector: s = null, unblockSelector: c = null, ignoreClass: I = 'rr-ignore', ignoreSelector: u = null, maskAllText: l = !1, maskTextClass: R = 'rr-mask', unmaskTextClass: A = null, maskTextSelector: T = null, unmaskTextSelector: d = null, inlineStylesheet: p = !0, maskAllInputs: O, maskInputOptions: f, slimDOMOptions: S, maskAttributeFn: L, maskInputFn: D, maskTextFn: h, maxCanvasSize: C = null, packFn: g, sampling: M = {}, dataURLOptions: P = {}, mousemoveWait: m, recordDOM: U = !0, recordCanvas: G = !1, recordCrossOriginIframes: y = !1, recordAfter: v = 'DOMContentLoaded' === e.recordAfter ? e.recordAfter : 'load', userTriggeredOnInput: b = !1, collectFonts: B = !1, inlineImages: w = !1, plugins: H, keepIframeSrcFn: Y = () => !1, ignoreCSSAttributes: K = new Set([]), errorHandler: V, onMutation: k, getCanvasManager: x } = e;
+    o = V;
     let F = !y || window.parent === window,
         W = !1;
     if (!F)
@@ -2622,7 +2622,7 @@ function th(e = {}) {
             maxCanvasSize: C,
             sampling: M.canvas,
             dataURLOptions: P,
-            errorHandler: k
+            errorHandler: V
         }),
         ea =
             'boolean' == typeof __RRWEB_EXCLUDE_SHADOW_DOM__ && __RRWEB_EXCLUDE_SHADOW_DOM__
@@ -2631,7 +2631,7 @@ function th(e = {}) {
                       mutationCb: z,
                       scrollCb: J,
                       bypassOptions: {
-                          onMutation: V,
+                          onMutation: k,
                           blockClass: E,
                           blockSelector: s,
                           unblockSelector: c,
@@ -2790,7 +2790,7 @@ function th(e = {}) {
             t = (e) =>
                 tt(tu)(
                     {
-                        onMutation: V,
+                        onMutation: k,
                         mutationCb: z,
                         mousemoveCb: (e, t) =>
                             i({
@@ -3245,8 +3245,8 @@ let tY = {
             ? null
             : {
                   type: `${t}.${r}`,
-                  start: tV(o),
-                  end: tV(a),
+                  start: tk(o),
+                  end: tk(a),
                   name: n,
                   data: {
                       size: s,
@@ -3258,7 +3258,7 @@ let tY = {
     },
     paint: function (e) {
         let { duration: t, entryType: r, name: n, startTime: a } = e,
-            o = tV(a);
+            o = tk(a);
         return {
             type: r,
             name: n,
@@ -3273,8 +3273,8 @@ let tY = {
             ? null
             : {
                   type: `${t}.${A}`,
-                  start: tV(l),
-                  end: tV(o),
+                  start: tk(l),
+                  end: tk(o),
                   name: r,
                   data: {
                       size: R,
@@ -3295,11 +3295,11 @@ let tY = {
 function tK(e, t) {
     return ({ metric: r }) => void t.replayPerformanceEntries.push(e(r));
 }
-function tk(e) {
+function tV(e) {
     let t = tY[e.entryType];
     return t ? t(e) : null;
 }
-function tV(e) {
+function tk(e) {
     return ((U.Z1 || F.performance.timeOrigin) + e) / 1000;
 }
 function tx(e) {
@@ -3323,7 +3323,7 @@ function tX(e) {
 function tj(e, t, r) {
     let n = e.value,
         a = e.rating,
-        o = tV(n);
+        o = tk(n);
     return {
         type: 'web-vital',
         name: t,
@@ -3941,7 +3941,7 @@ async function rP(e, t, r) {
                         response: rT(u)
                     };
                 }
-                let l = _[k.xU],
+                let l = _[V.xU],
                     R = l ? rN(l.request_headers, r.networkRequestHeaders) : {},
                     A = rN(
                         (function (e) {
@@ -4617,7 +4617,7 @@ class rw {
                     (!(function (e) {
                         var t, r, n, a;
                         let o = (0, O.s3)();
-                        (0, V.O)(tw(e)),
+                        (0, k.O)(tw(e)),
                             (0, x.a)(
                                 ((t = e),
                                 (e) => {
@@ -4972,7 +4972,7 @@ class rw {
         });
     }
     _addPerformanceEntries() {
-        let e = this.performanceEntries.map(tk).filter(Boolean).concat(this.replayPerformanceEntries);
+        let e = this.performanceEntries.map(tV).filter(Boolean).concat(this.replayPerformanceEntries);
         return (this.performanceEntries = []), (this.replayPerformanceEntries = []), Promise.all(rs(this, e));
     }
     _clearContext() {
@@ -5091,8 +5091,8 @@ function rH(e, t) {
 }
 let rY = 'img,image,svg,video,object,picture,embed,map,audio,link[rel="icon"],link[rel="apple-touch-icon"]',
     rK = ['content-length', 'content-type', 'accept'],
-    rk = !1,
-    rV = (e) => new rx(e);
+    rV = !1,
+    rk = (e) => new rx(e);
 class rx {
     static __initStatic() {
         this.id = 'Replay';
@@ -5175,10 +5175,10 @@ class rx {
         this._isInitialized = !0;
     }
     get _isInitialized() {
-        return rk;
+        return rV;
     }
     set _isInitialized(e) {
-        rk = e;
+        rV = e;
     }
     afterAllSetup(e) {
         if (!!(0, H.j)() && !this._replay) this._setup(e), this._initialize(e);

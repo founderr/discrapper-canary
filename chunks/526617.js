@@ -33,8 +33,8 @@ var r = n(735250),
     v = n(259580),
     C = n(626135),
     y = n(74538),
-    D = n(135869),
-    L = n(763296),
+    L = n(135869),
+    D = n(763296),
     b = n(697426),
     M = n(242291),
     P = n(22382),
@@ -193,7 +193,7 @@ function $(e) {
 }
 function J(e) {
     let { guildId: t, channel: a, containerWidth: s, onClose: c, onSelect: h, suppressPlaySound: S = !1, shouldShowUpsell: v = !0, gridNotice: G, soundButtonOverlay: k, listPadding: J, renderHeader: ee, defaultSoundsOnly: et = !1, refreshEnabled: en } = e,
-        { currentPreviewRef: er } = i.useContext(D.Z),
+        { currentPreviewRef: er } = i.useContext(L.Z),
         { analyticsLocations: ei } = (0, E.ZP)(),
         { analyticsLocations: ea } = (0, E.ZP)(_.Z.PREMIUM_UPSELL),
         { location: es } = (0, d.O)(),
@@ -223,15 +223,15 @@ function J(e) {
         eO = !ed && v && eN,
         { enableInlineUpsell: eR, enableRoadblock: ev, enableRoadblockWithSocialProof: eC } = g.Qs.useExperiment({ location: 'Soundboard Picker' }, { autoTrackExposure: eO }),
         ey = eO && eR,
-        eD = N.T4.useSetting(),
-        eL = i.useMemo(() => new Set(eD), [eD]),
+        eL = N.T4.useSetting(),
+        eD = i.useMemo(() => new Set(eL), [eL]),
         eb = null == a,
         eM = y.ZP.canUseCustomCallSounds(ec),
         eP = i.useCallback(
             (e) => {
-                eL.has(e) ? eL.delete(e) : eL.add(e), N.T4.updateSetting(Array.from(eL));
+                eD.has(e) ? eD.delete(e) : eD.add(e), N.T4.updateSetting(Array.from(eD));
             },
-            [eL]
+            [eD]
         ),
         eU = i.useCallback(
             (e, t) => {
@@ -325,7 +325,7 @@ function J(e) {
                     {
                         categoryInfo: e.categoryInfo,
                         toggleCollapsed: () => eP(i),
-                        collapsed: eL.has(i),
+                        collapsed: eD.has(i),
                         index: n,
                         isSectionNitroLocked: a && ey,
                         showNitroDivider: s && ey
@@ -333,7 +333,7 @@ function J(e) {
                     'header-'.concat(i)
                 );
             },
-            [eL, eP, t, eG, v, ed, ey]
+            [eD, eP, t, eG, v, ed, ey]
         ),
         eV = i.useCallback(
             (e, t) => {
@@ -376,7 +376,7 @@ function J(e) {
             [eI, J, t, ey]
         ),
         eW = () => {
-            let e = L.Z.getSoundById('3');
+            let e = D.Z.getSoundById('3');
             null != e && eu(e);
         },
         eK = i.useCallback(() => {
@@ -413,7 +413,7 @@ function J(e) {
         ),
         eQ = i.useCallback(() => {
             var e;
-            let t = L.Z.getSoundById('3'),
+            let t = D.Z.getSoundById('3'),
                 n = new Audio((0, P.Z)('3'));
             null != er.current && er.current.pause(), (er.current = n), (n.currentTime = 0), (n.volume = (0, U.Z)(null !== (e = null == t ? void 0 : t.volume) && void 0 !== e ? e : 1)), n.play();
         }, [er]);
@@ -454,7 +454,7 @@ function J(e) {
                 : void 0,
             (0, r.jsx)(m.Z, {
                 categories: eA,
-                collapsedCategories: eL,
+                collapsedCategories: eD,
                 containerWidth: s,
                 store: p.Wq,
                 onSelectItem: ew,

@@ -31,12 +31,12 @@ var r = n(735250),
     C = n(188785),
     y = n(436620);
 n(928518), n(972830), n(704806);
-let D = (0, h.Un)({
+let L = (0, h.Un)({
         createPromise: () => n.e('91134').then(n.bind(n, 576184)),
         webpackId: 576184,
         name: 'UnsupportedBrowser'
     }),
-    L = (0, h.Un)({
+    D = (0, h.Un)({
         createPromise: () => n.e('72872').then(n.bind(n, 431583)),
         webpackId: 431583,
         name: 'DownloadApps'
@@ -159,7 +159,7 @@ class X extends i.Component {
                                     (0, r.jsx)(f.Z, {
                                         exact: !0,
                                         path: v.Z5c.APPS,
-                                        component: L
+                                        component: D
                                     }),
                                     (0, r.jsx)(s.AW, {
                                         path: Q([v.Z5c.LOGIN, v.Z5c.REGISTER, v.Z5c.INVITE(':inviteCode'), v.Z5c.INVITE_LOGIN(':inviteCode'), v.Z5c.GIFT_CODE(':giftCode'), v.Z5c.GIFT_CODE_LOGIN(':giftCode'), v.Z5c.RESET], C.a),
@@ -329,7 +329,7 @@ class X extends i.Component {
                                     (0, r.jsx)(s.AW, { render: z })
                                 ]
                             })
-                      : (0, r.jsx)(s.rs, { children: (0, r.jsx)(f.Z, { component: D }) })),
+                      : (0, r.jsx)(s.rs, { children: (0, r.jsx)(f.Z, { component: L }) })),
             (0, r.jsxs)(p.Z, {
                 skipsSettingDefaultPageTitle: i,
                 children: [e, O.isPlatformEmbedded && (n === I.P.NOT_STARTED || n === I.P.IN_PROGRESS) && !0 !== _.K.get(l.SV) ? (0, r.jsx)(m.Z, {}) : null]

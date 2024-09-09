@@ -12,8 +12,8 @@ var a = t(735250),
     E = t(810568),
     I = t(981631),
     A = t(689938),
-    p = t(707443);
-let m = [i.p.OFFICIAL, i.p.TWITTER, i.p.YOUTUBE],
+    m = t(707443);
+let p = [i.p.OFFICIAL, i.p.TWITTER, i.p.YOUTUBE],
     T = (e) => {
         let { invite: n, trackClick: t } = e,
             { approximate_member_count: r, guild: s } = n;
@@ -26,7 +26,7 @@ let m = [i.p.OFFICIAL, i.p.TWITTER, i.p.YOUTUBE],
             size: 32
         });
         return (0, a.jsxs)('div', {
-            className: o()(p.column),
+            className: o()(m.column),
             children: [
                 (0, a.jsx)(l.Heading, {
                     variant: 'text-xs/semibold',
@@ -34,15 +34,15 @@ let m = [i.p.OFFICIAL, i.p.TWITTER, i.p.YOUTUBE],
                     children: A.Z.Messages.GAME_PROFILE_OFFICIAL_GUILD
                 }),
                 (0, a.jsxs)('div', {
-                    className: o()(p.row, p.gapMd),
+                    className: o()(m.row, m.gapMd),
                     children: [
                         (0, a.jsx)('img', {
-                            className: p.icon,
+                            className: m.icon,
                             src: d,
                             alt: A.Z.Messages.GAME_PROFILE_GUILD_ICON_ALT.format({ guildName: s.name })
                         }),
                         (0, a.jsxs)('div', {
-                            className: o()(p.gapNone),
+                            className: o()(m.gapNone),
                             children: [
                                 (0, a.jsx)(l.Text, {
                                     variant: 'text-sm/normal',
@@ -100,11 +100,11 @@ n.Z = (e) => {
     let _ = n
         .filter((e) => {
             let { category: n } = e;
-            return m.includes(n);
+            return p.includes(n);
         })
         .sort((e, n) => e.category - n.category);
     return (0, a.jsxs)('div', {
-        className: o()(p.column),
+        className: o()(m.column),
         children: [
             null != c &&
                 (0, a.jsx)(T, {
@@ -112,7 +112,7 @@ n.Z = (e) => {
                     trackClick: t
                 }),
             (0, a.jsxs)('div', {
-                className: o()(p.column, p.gapSm),
+                className: o()(m.column, m.gapSm),
                 children: [
                     (0, a.jsx)(l.Heading, {
                         variant: 'text-xs/semibold',
@@ -120,7 +120,7 @@ n.Z = (e) => {
                         children: A.Z.Messages.GAME_PROFILE_LINKS
                     }),
                     (0, a.jsx)('div', {
-                        className: p.row,
+                        className: m.row,
                         children: _.map((e) => {
                             let n,
                                 r,
@@ -128,19 +128,19 @@ n.Z = (e) => {
                                 c = null;
                             switch (s) {
                                 case i.p.OFFICIAL:
-                                    (c = (0, a.jsx)(l.GlobeEarthIcon, { colorClass: p.linkIcon })), (r = E.as.WebsiteLink), (n = A.Z.Messages.GAME_PROFILE_LINK_OFFICIAL);
+                                    (c = (0, a.jsx)(l.GlobeEarthIcon, { colorClass: m.linkIcon })), (r = E.as.WebsiteLink), (n = A.Z.Messages.GAME_PROFILE_LINK_OFFICIAL);
                                     break;
                                 case i.p.TWITTER:
-                                    (c = (0, a.jsx)(l.XNeutralIcon, { colorClass: p.linkIcon })), (r = E.as.XLink), (n = A.Z.Messages.GAME_PROFILE_LINK_TWITTER);
+                                    (c = (0, a.jsx)(l.XNeutralIcon, { colorClass: m.linkIcon })), (r = E.as.XLink), (n = A.Z.Messages.GAME_PROFILE_LINK_TWITTER);
                                     break;
                                 case i.p.YOUTUBE:
-                                    (r = E.as.YouTubeLink), (c = (0, a.jsx)(l.YoutubeNeutralIcon, { colorClass: p.linkIcon })), (n = A.Z.Messages.GAME_PROFILE_LINK_YOUTUBE);
+                                    (r = E.as.YouTubeLink), (c = (0, a.jsx)(l.YoutubeNeutralIcon, { colorClass: m.linkIcon })), (n = A.Z.Messages.GAME_PROFILE_LINK_YOUTUBE);
                             }
                             return null != c
                                 ? (0, a.jsx)(
                                       l.Anchor,
                                       {
-                                          className: p.linkAnchor,
+                                          className: m.linkAnchor,
                                           title: n,
                                           href: o,
                                           onClick: () => {

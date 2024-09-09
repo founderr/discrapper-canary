@@ -24,8 +24,8 @@ var r,
     v = R && R.prototype,
     C = l.Uint8ClampedArray,
     y = C && C.prototype,
-    D = R && m(R),
-    L = v && m(v),
+    L = R && m(R),
+    D = v && m(v),
     b = Object.prototype,
     M = l.TypeError,
     P = S('toStringTag'),
@@ -63,17 +63,17 @@ var r,
 for (r in k) (a = (i = l[r]) && i.prototype) ? (N(a)[w] = i) : (x = !1);
 for (r in B) (a = (i = l[r]) && i.prototype) && (N(a)[w] = i);
 if (
-    (!x || !u(D) || D === Function.prototype) &&
-    ((D = function () {
+    (!x || !u(L) || L === Function.prototype) &&
+    ((L = function () {
         throw M('Incorrect invocation');
     }),
     x)
 )
-    for (r in k) l[r] && T(l[r], D);
-if ((!x || !L || L === b) && ((L = D.prototype), x)) for (r in k) l[r] && T(l[r].prototype, L);
-if ((x && m(y) !== L && T(y, L), o && !d(L, P)))
+    for (r in k) l[r] && T(l[r], L);
+if ((!x || !D || D === b) && ((D = L.prototype), x)) for (r in k) l[r] && T(l[r].prototype, D);
+if ((x && m(y) !== D && T(y, D), o && !d(D, P)))
     for (r in ((G = !0),
-    p(L, P, {
+    p(D, P, {
         configurable: !0,
         get: function () {
             return c(this) ? this[U] : void 0;
@@ -89,7 +89,7 @@ e.exports = {
         throw M('Target is not a typed array');
     },
     aTypedArrayConstructor: function (e) {
-        if (u(e) && (!T || I(D, e))) return e;
+        if (u(e) && (!T || I(L, e))) return e;
         throw M(E(e) + ' is not a typed array constructor');
     },
     exportTypedArrayMethod: function (e, t, n, r) {
@@ -106,7 +106,7 @@ e.exports = {
                             } catch (e) {}
                         }
                 }
-            (!L[e] || n) && h(L, e, n ? t : (x && v[e]) || t, r);
+            (!D[e] || n) && h(D, e, n ? t : (x && v[e]) || t, r);
         }
     },
     exportTypedArrayStaticMethod: function (e, t, n) {
@@ -120,9 +120,9 @@ e.exports = {
                                 delete i[e];
                             } catch (e) {}
                 }
-                if (D[e] && !n) return;
+                if (L[e] && !n) return;
                 try {
-                    return h(D, e, n ? t : (x && D[e]) || t);
+                    return h(L, e, n ? t : (x && L[e]) || t);
                 } catch (e) {}
             }
             for (r in k) (i = l[r]) && (!i[e] || n) && h(i, e, t);
@@ -135,6 +135,6 @@ e.exports = {
         return 'DataView' === t || d(k, t) || d(B, t);
     },
     isTypedArray: V,
-    TypedArray: D,
-    TypedArrayPrototype: L
+    TypedArray: L,
+    TypedArrayPrototype: D
 };

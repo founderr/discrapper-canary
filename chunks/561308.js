@@ -1,6 +1,6 @@
 n.d(t, {
     GE: function () {
-        return D;
+        return L;
     },
     GL: function () {
         return T;
@@ -24,7 +24,7 @@ n.d(t, {
         return C;
     },
     ap: function () {
-        return L;
+        return D;
     },
     bT: function () {
         return b;
@@ -170,7 +170,7 @@ function y(e) {
     let t = g(e, s.N.RESURRECTED);
     return (null == t ? void 0 : t.resurrected_last_played) != null ? new Date(t.resurrected_last_played) : void 0;
 }
-function D(e) {
+function L(e) {
     let {
         months: t = 0,
         weeks: n = 0,
@@ -185,7 +185,7 @@ function D(e) {
         days: t > 0 || n > 0 ? 0 : i
     });
 }
-function L(e) {
+function D(e) {
     if (null == e || '' === e) return null;
     let t = /\w+ (\d+), \w+ (\d+)/.exec(e);
     return null == t

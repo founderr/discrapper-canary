@@ -47,7 +47,7 @@ function h(e) {
                 className: M.container,
                 children: [
                     (0, l.jsx)(_.Z, {
-                        defaultAnimationState: a.S.LOOP,
+                        defaultAnimationState: a.SR.LOOP,
                         giftStyle: L,
                         className: M.seasonalGiftBoxHeaderIcon
                     }),

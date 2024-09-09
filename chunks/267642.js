@@ -39,7 +39,7 @@ n.d(t, {
         return R;
     },
     f2: function () {
-        return L;
+        return D;
     },
     gZ: function () {
         return G;
@@ -57,7 +57,7 @@ n.d(t, {
         return y;
     },
     tb: function () {
-        return D;
+        return L;
     },
     tl: function () {
         return V;
@@ -328,11 +328,11 @@ function y(e, t) {
     for (let n of x(t)) if (e >= n.amount) return n.tier;
     return f.Eu4.NONE;
 }
-function D(e, t) {
+function L(e, t) {
     return null == t || (null != e && e >= t);
 }
-function L(e, t) {
-    return D(e.premiumTier, t);
+function D(e, t) {
+    return L(e.premiumTier, t);
 }
 function b(e) {
     return s()

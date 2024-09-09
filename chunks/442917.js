@@ -25,8 +25,8 @@ var r = n(735250),
     v = n(74299),
     C = n(863908),
     y = n(803647),
-    D = n(266910),
-    L = n(788983),
+    L = n(266910),
+    D = n(788983),
     b = n(703656),
     M = n(937995),
     P = n(618158),
@@ -172,7 +172,7 @@ class eu extends i.PureComponent {
                           streamId: t,
                           component: V.Z.getVideoComponent(),
                           mirror: u,
-                          children: (0, r.jsx)(D.Z, {
+                          children: (0, r.jsx)(L.Z, {
                               size: _.AvatarSizes.SIZE_80,
                               src: null == n ? void 0 : n.user.getAvatarURL(e.guild_id, 80),
                               'aria-label': null == n ? void 0 : n.user.username
@@ -238,7 +238,7 @@ class eu extends i.PureComponent {
             }),
             el(this, 'handleOpenPopout', () => {
                 let { channel: e } = this.props;
-                L.hP(e);
+                D.hP(e);
             }),
             el(this, 'renderBottomLeftControls', () => {
                 let { canSeeParticipantName: e } = this.viewProperties;

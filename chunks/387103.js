@@ -15,7 +15,7 @@ n.d(t, {
         return p;
     },
     Mb: function () {
-        return L;
+        return D;
     },
     Mw: function () {
         return Z;
@@ -255,8 +255,8 @@ function f(e, t) {
                 (function (e) {
                     let t = (function (e) {
                         if (Intl.Locale) {
-                            let t = D.get(e);
-                            return !t && (t = new Intl.Locale(e).maximize().region) && D.set(e, t), t;
+                            let t = L.get(e);
+                            return !t && (t = new Intl.Locale(e).maximize().region) && L.set(e, t), t;
                         }
                         let t = e.split('-')[1];
                         return 'u' === t ? void 0 : t;
@@ -307,8 +307,8 @@ function C(e, t) {
 function y(e, t) {
     return C(e, t).add({ days: 6 });
 }
-let D = new Map();
-function L(e, t) {
+let L = new Map();
+function D(e, t) {
     return e && t ? (0 >= e.compare(t) ? e : t) : e || t;
 }
 function b(e, t) {

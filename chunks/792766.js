@@ -106,9 +106,9 @@ t.Z = (e) => {
     let { topic: b, speaker_count: g, participant_count: C } = n,
         O = null !== (t = n.members) && void 0 !== t ? t : [],
         A = S ? O.slice(0, 3) : O,
-        v = g - A.length;
+        R = g - A.length;
     return (
-        S && (v += O.length - A.length),
+        S && (R += O.length - A.length),
         (0, i.jsxs)('div', {
             children: [
                 (0, i.jsxs)('div', {
@@ -195,7 +195,7 @@ t.Z = (e) => {
                                             e.user.id
                                         )
                                     ),
-                                    v > 0
+                                    R > 0
                                         ? (0, i.jsxs)('div', {
                                               className: p.speaker,
                                               children: [
@@ -211,7 +211,7 @@ t.Z = (e) => {
                                                   (0, i.jsxs)(u.Z, {
                                                       size: S ? u.Z.Sizes.SIZE_12 : u.Z.Sizes.SIZE_14,
                                                       color: u.Z.Colors.HEADER_SECONDARY,
-                                                      children: ['+', h.Z.Messages.STAGE_INVITE_SPEAKER_COUNT.format({ count: v })]
+                                                      children: ['+', h.Z.Messages.STAGE_INVITE_SPEAKER_COUNT.format({ count: R })]
                                                   })
                                               ]
                                           })

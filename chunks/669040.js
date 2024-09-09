@@ -25,8 +25,8 @@ var r = n(735250),
     v = n(75145),
     C = n(631771),
     y = n(695346),
-    D = n(594174),
-    L = n(78839),
+    L = n(594174),
+    D = n(78839),
     b = n(626135),
     M = n(111361),
     P = n(74538),
@@ -51,7 +51,7 @@ let W = (0, U.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
     $ = (0, U.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_VERTICAL),
     J = (e) => e + 2 * $,
     ee = (e) => {
-        let { collapsedSections: t, diversitySurrogate: n, emojiGrid: a, emojiSize: o, onEmojiSelect: u, searchQuery: _, sectionDescriptors: E, setCollapsedSections: h, getEmojiItemProps: p, getEmojiRowProps: m, isScrolling: S, isUsingKeyboardNavigation: N, allowAnimatedEmoji: O, channelGuildId: R, messageId: C, isBurstReaction: y, listHeaderClassName: D, activeSectionIndex: M, upsellGlowOpacity: P, emojiListRef: U } = e,
+        let { collapsedSections: t, diversitySurrogate: n, emojiGrid: a, emojiSize: o, onEmojiSelect: u, searchQuery: _, sectionDescriptors: E, setCollapsedSections: h, getEmojiItemProps: p, getEmojiRowProps: m, isScrolling: S, isUsingKeyboardNavigation: N, allowAnimatedEmoji: O, channelGuildId: R, messageId: C, isBurstReaction: y, listHeaderClassName: L, activeSectionIndex: M, upsellGlowOpacity: P, emojiListRef: U } = e,
             Z = (0, f.O)(),
             Y = i.useRef(V.xAR),
             $ = i.useMemo(() => ('' !== n ? d.Z.convert.toCodePoint(n) : ''), [n]),
@@ -174,7 +174,7 @@ let W = (0, U.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
                         return (0, r.jsx)(
                             g.Z,
                             {
-                                className: s()(j.header, D, {
+                                className: s()(j.header, L, {
                                     [j.inactiveNitroHeader]: f,
                                     [j.activeNitroHeader]: h
                                 }),
@@ -186,9 +186,9 @@ let W = (0, U.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
                             l
                         );
                     }),
-                [E, t, et, D, M]
+                [E, t, et, L, M]
             ),
-            es = (0, c.e7)([L.ZP], () => L.ZP.inReverseTrial()),
+            es = (0, c.e7)([D.ZP], () => D.ZP.inReverseTrial()),
             eo = i.useCallback(
                 (e, n) => {
                     let i = E[e],
@@ -238,12 +238,12 @@ let W = (0, U.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
         };
     },
     et = i.memo(function (e) {
-        let { diversitySurrogate: t, emojiGrid: n, emojiListRef: a, emojiSize: s, onEmojiSelect: o, setUpsellConfigs: l, sectionDescriptors: d, rowCountBySection: _, collapsedSections: T, setCollapsedSections: g, getEmojiItemProps: A, getEmojiRowProps: v, rowCount: L, isUsingKeyboardNavigation: U, channelGuildId: w, messageId: x, isBurstReaction: G, listHeaderClassName: B } = e,
+        let { diversitySurrogate: t, emojiGrid: n, emojiListRef: a, emojiSize: s, onEmojiSelect: o, setUpsellConfigs: l, sectionDescriptors: d, rowCountBySection: _, collapsedSections: T, setCollapsedSections: g, getEmojiItemProps: A, getEmojiRowProps: v, rowCount: D, isUsingKeyboardNavigation: U, channelGuildId: w, messageId: x, isBurstReaction: G, listHeaderClassName: B } = e,
             F = i.useRef(!1),
             H = I.kJ.useStore((e) => e.activeCategoryIndex),
             W = (0, m.Iu)((e) => e.searchQuery),
             K = y.Yk.useSetting(),
-            z = (0, c.e7)([D.default], () => D.default.getCurrentUser()),
+            z = (0, c.e7)([L.default], () => L.default.getCurrentUser()),
             q = (0, M.I5)(z),
             { location: Q } = (0, f.O)(),
             { analyticsLocations: X } = (0, h.ZP)(),
@@ -346,7 +346,7 @@ let W = (0, U.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
                               renderSection: e_,
                               renderSectionHeader: eE,
                               renderSectionFooter: ef,
-                              rowCount: L,
+                              rowCount: D,
                               rowCountBySection: _,
                               rowHeight: J(s),
                               sectionHeaderHeight: ep,

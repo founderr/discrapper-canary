@@ -12,7 +12,7 @@ var r = n(735250),
     u = n(689938);
 class c extends i.Component {
     render() {
-        let { src: e, fileSize: t, className: n, mediaPlayerClassName: i, poster: c, fileName: d, naturalWidth: _, naturalHeight: E, playable: f, downloadable: h = !0, volume: p, autoPlay: I, autoMute: m, responsive: T, mediaLayoutType: S, mimeType: g, renderOverlayContent: A, renderLinkComponent: N, onClick: O, onPlay: R, onPause: v, onEnded: C, onControlsShow: y, onControlsHide: D, onVolumeChange: L, onMute: b, alt: M = u.Z.Messages.VIDEO, ...P } = this.props;
+        let { src: e, fileSize: t, className: n, mediaPlayerClassName: i, poster: c, fileName: d, naturalWidth: _, naturalHeight: E, playable: f, downloadable: h = !0, volume: p, autoPlay: I, autoMute: m, responsive: T, mediaLayoutType: S, mimeType: g, renderOverlayContent: A, renderLinkComponent: N, onClick: O, onPlay: R, onPause: v, onEnded: C, onControlsShow: y, onControlsHide: L, onVolumeChange: D, onMute: b, alt: M = u.Z.Messages.VIDEO, ...P } = this.props;
         return (0, r.jsx)(s.Z, {
             alt: M,
             className: n,
@@ -53,10 +53,10 @@ class c extends i.Component {
                     onPlay: R,
                     onPause: v,
                     onEnded: C,
-                    onVolumeChange: L,
+                    onVolumeChange: D,
                     onMute: b,
                     onControlsShow: y,
-                    onControlsHide: D,
+                    onControlsHide: L,
                     mimeType: g,
                     downloadable: h
                 });

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return D;
+        return L;
     }
 }),
     n(47120);
@@ -59,8 +59,8 @@ let v = (0, h.kt)({
                 (0, p.vE)(e);
         }
     };
-function D(e) {
-    let { user: t, guildId: n, channelId: a, profileType: o, sourceType: h, sourceDetails: p, onInteraction: O, setPopoutRef: D, modalKey: L, setInteractionToastShown: b, setInteractionSent: M, setIsReplyInteraction: P, onClose: U } = e,
+function L(e) {
+    let { user: t, guildId: n, channelId: a, profileType: o, sourceType: h, sourceDetails: p, onInteraction: O, setPopoutRef: L, modalKey: D, setInteractionToastShown: b, setInteractionSent: M, setIsReplyInteraction: P, onClose: U } = e,
         { trackUserProfileAction: w } = (0, T.KZ)(),
         x = (0, l.e7)([f.Z], () => f.Z.theme),
         { sendReply: G } = (0, S.Q)(h),
@@ -69,8 +69,8 @@ function D(e) {
         H = i.useRef(!1),
         Z = i.useRef(null);
     i.useEffect(() => {
-        null == D || D(null == Z ? void 0 : Z.current);
-    }, [Z, D]);
+        null == L || L(null == Z ? void 0 : Z.current);
+    }, [Z, L]);
     let Y = async (e) => {
             if (null == e) return;
             w({ action: G });
@@ -111,7 +111,7 @@ function D(e) {
                 (0, r.jsx)('div', {
                     className: s()(R.container, j, W, e),
                     children: (0, r.jsx)(E.Z, {
-                        parentModalKey: L,
+                        parentModalKey: D,
                         emojiPickerCloseOnModalOuterClick: !0,
                         innerClassName: R.inner,
                         editorClassName: R.editor,

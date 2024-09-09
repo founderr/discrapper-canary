@@ -73,7 +73,7 @@ function h(e) {
         ? (0, i.jsx)('div', {
               className: E.giftMainAnimationWrapper,
               children: (0, i.jsx)(d.Z, {
-                  defaultAnimationState: u.S.LOOP,
+                  defaultAnimationState: u.SR.LOOP,
                   giftStyle: t,
                   shouldAnimate: !0,
                   className: E.__invalid_giftMainAnimation

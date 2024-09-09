@@ -31,8 +31,8 @@ var i = n(120356),
     v = n(652853),
     C = n(194811),
     y = n(373826),
-    D = n(582123),
-    L = n(290274),
+    L = n(582123),
+    D = n(290274),
     b = n(228168),
     M = n(689938),
     P = n(139665);
@@ -52,16 +52,16 @@ function U(e) {
             sourceUserId: t.id,
             trackEntryPointImpression: !0
         }),
-        { analyticsLocations: D } = (0, u.ZP)(),
-        L = (0, A.Z)({
+        { analyticsLocations: L } = (0, u.ZP)(),
+        D = (0, A.Z)({
             display: 'recent',
             user: t,
             entry: n,
-            analyticsLocations: D
+            analyticsLocations: L
         }),
         M = (0, N.Z)({
             userId: t.id,
-            onAction: L
+            onAction: D
         }),
         U = () => (n.content_type === s.s.TOP_GAME ? p.Hs.map((e, t) => (0, r.jsx)(e, { entry: n }, 'entry-'.concat(t))) : E.W.map((e, t) => (0, r.jsx)(e, { entry: n }, 'entry-'.concat(t))));
     return null == C
@@ -113,7 +113,7 @@ function U(e) {
                               (0, r.jsx)(_.E, {
                                   image: I,
                                   onClick: () => {
-                                      L({ action: 'PRESS_GAME_IMAGE' }), C();
+                                      D({ action: 'PRESS_GAME_IMAGE' }), C();
                                   },
                                   size: _.J.SIZE_60
                               }),
@@ -123,7 +123,7 @@ function U(e) {
                                       (0, r.jsx)(o.Clickable, {
                                           className: P.clickable,
                                           onClick: () => {
-                                              L({ action: 'OPEN_GAME_PROFILE' }), C(), null == d || d();
+                                              D({ action: 'OPEN_GAME_PROFILE' }), C(), null == d || d();
                                           },
                                           children: (0, r.jsx)(y.Z, {
                                               variant: 'heading-sm/semibold',
@@ -323,7 +323,7 @@ function k(e) {
     return (0, O.Z)(n)
         ? (0, r.jsx)(u.Gt, {
               value: o,
-              children: (0, r.jsx)(D.Z, {
+              children: (0, r.jsx)(L.Z, {
                   user: t,
                   onClose: a,
                   children: (e) => {
@@ -333,7 +333,7 @@ function k(e) {
                                   text: c === b.y0.FULL_SIZE ? null : e,
                                   tags: s
                                       ? null
-                                      : (0, r.jsx)(L.Z, {
+                                      : (0, r.jsx)(D.Z, {
                                             display: 'recent',
                                             entry: n,
                                             user: t,

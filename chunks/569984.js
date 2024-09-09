@@ -11,8 +11,8 @@ var m,
     v = n(481060),
     C = n(570140),
     y = n(497505),
-    D = n(918701),
-    L = n(5881),
+    L = n(918701),
+    D = n(5881),
     b = n(46140),
     M = n(689938);
 function P() {
@@ -120,7 +120,7 @@ class B extends (m = R.ZP.Store) {
         },
         QUESTS_FETCH_CURRENT_QUESTS_SUCCESS: function (e) {
             let { quests: t } = e;
-            for (let e of ((r = !1), (a = new Map()), t)) a.set(e.id, e), e.targetedContent.includes(y.jn.QUEST_BAR) && (0, L.T)({ location: b.dr.QUESTS_STORE }).log('Delivered '.concat(e.config.messages.questName, ' (').concat(e.id, ')'));
+            for (let e of ((r = !1), (a = new Map()), t)) a.set(e.id, e), e.targetedContent.includes(y.jn.QUEST_BAR) && (0, D.T)({ location: b.dr.QUESTS_STORE }).log('Delivered '.concat(e.config.messages.questName, ' (').concat(e.id, ')'));
         },
         QUESTS_FETCH_CURRENT_QUESTS_FAILURE: function () {
             (o = 0), (r = !1);
@@ -161,7 +161,7 @@ class B extends (m = R.ZP.Store) {
             let { questId: t } = e;
             G(t);
             let n = a.get(t);
-            null != n && (0, D.zK)(n, b.S7.FRACTIONS_QUEST) && (0, v.showToast)((0, v.createToast)(M.Z.Messages.QUESTS_NITRO_ENROLL_FAILURE_TOAST, v.ToastType.FAILURE));
+            null != n && (0, L.zK)(n, b.S7.FRACTIONS_QUEST) && (0, v.showToast)((0, v.createToast)(M.Z.Messages.QUESTS_NITRO_ENROLL_FAILURE_TOAST, v.ToastType.FAILURE));
         },
         QUESTS_FETCH_REWARD_CODE_BEGIN: function (e) {
             let { questId: t } = e,
@@ -246,7 +246,7 @@ class B extends (m = R.ZP.Store) {
         },
         QUESTS_USER_STATUS_UPDATE: function (e) {
             let { user_status: t } = e;
-            (0, L.T)({ location: b.dr.QUESTS_STORE }).log('Received user status update for '.concat(t.quest_id), t), U(t.quest_id, { userStatus: (0, D.U3)(t) });
+            (0, D.T)({ location: b.dr.QUESTS_STORE }).log('Received user status update for '.concat(t.quest_id), t), U(t.quest_id, { userStatus: (0, L.U3)(t) });
         },
         STREAM_CLOSE: function (e) {
             let { streamKey: t } = e;

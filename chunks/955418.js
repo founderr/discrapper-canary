@@ -33,8 +33,8 @@ function O(e) {
         { newestAnalyticsLocation: S } = (0, l.ZP)(),
         { trackUserProfileAction: O } = (0, f.KZ)(),
         { messageCtaEnabled: R, activeInviteToCallCtaEnabled: v, persistentCallCtaEnabled: C } = (0, h.l)({ location: 'UserProfilePopoutDirectMessageSection' }),
-        [y, D] = i.useState(''),
-        [L, b] = i.useState((0, c.JM)(y)),
+        [y, L] = i.useState(''),
+        [D, b] = i.useState((0, c.JM)(y)),
         M = i.useRef(!1);
     if (R) {
         let e = (0, r.jsx)(m.Z, {
@@ -89,9 +89,9 @@ function O(e) {
         placeholder: g.Z.Messages.QUICK_DM_USER.format({ name: E.ZP.getName(n, a, t) }),
         channel: N,
         textValue: y,
-        richValue: L,
+        richValue: D,
         onChange: (e, t, n) => {
-            if (t !== y) D(t), b(n);
+            if (t !== y) L(t), b(n);
         },
         focused: M.current,
         onFocus: () => {

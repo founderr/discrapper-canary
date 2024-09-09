@@ -54,7 +54,7 @@ function y(e) {
         t.start(Math.min(2147483647, n), () => y(e));
     }
 }
-function D(e, t) {
+function L(e, t) {
     let n = g[e];
     if (null == n) return;
     let r = n[t];
@@ -73,10 +73,10 @@ function D(e, t) {
         if (null == n) return;
         let r = n[t];
         if (null == r) return;
-        r.start(Math.min(2147483647, i), () => D(e, t));
+        r.start(Math.min(2147483647, i), () => L(e, t));
     }
 }
-function L() {
+function D() {
     (m = {}), T.clear(), (S = {}), (g = {}), (O = {}), (R = {}), (v = {}), (C = !1);
 }
 function b(e) {
@@ -104,7 +104,7 @@ function U(e) {
     T.delete(e.userId), (O[e.userId] = P(e.mutualFriends)), (R[e.userId] = e.mutualFriends.length);
 }
 function w(e) {
-    var t, n, r, i, o, l, u, d, _, h, I, T, C, L, b, M, U, w, x, G, k, B, F, V, H, Z;
+    var t, n, r, i, o, l, u, d, _, h, I, T, C, D, b, M, U, w, x, G, k, B, F, V, H, Z;
     if ((null === (n = m[e.user.id]) || void 0 === n || n.delete(null === (t = e.guild_member_profile) || void 0 === t ? void 0 : t.guild_id), null != e.mutual_guilds)) {
         let t = {};
         e.mutual_guilds.forEach((e) => {
@@ -185,7 +185,7 @@ function w(e) {
                       })
                     : e.badges
         }),
-        (null === (L = e.user_profile) || void 0 === L ? void 0 : null === (C = L.profile_effect) || void 0 === C ? void 0 : C.expires_at) != null)
+        (null === (D = e.user_profile) || void 0 === D ? void 0 : null === (C = D.profile_effect) || void 0 === C ? void 0 : C.expires_at) != null)
     ) {
         let t = new a.V7();
         (A[e.user.id] = t), y(e.user.id);
@@ -206,7 +206,7 @@ function w(e) {
         };
         if ((null != g[e.user.id] ? (g[e.user.id][e.guild_member_profile.guild_id] = t) : (g[e.user.id] = { [e.guild_member_profile.guild_id]: t }), (null === (Z = e.guild_member_profile) || void 0 === Z ? void 0 : null === (H = Z.profile_effect) || void 0 === H ? void 0 : H.expires_at) != null)) {
             let t = new a.V7();
-            (N[e.user.id][e.guild_member_profile.guild_id] = t), D(e.user.id, e.guild_member_profile.guild_id);
+            (N[e.user.id][e.guild_member_profile.guild_id] = t), L(e.user.id, e.guild_member_profile.guild_id);
         }
     }
 }
@@ -267,7 +267,7 @@ function B(e) {
                       null != d)
                   ) {
                       let e = new a.V7();
-                      null != N[t] ? (N[t][n] = e) : (N[t] = { [n]: e }), D(t, n);
+                      null != N[t] ? (N[t][n] = e) : (N[t] = { [n]: e }), L(t, n);
                   }
               })(e)
             : !(function (e) {
@@ -383,7 +383,7 @@ class W extends _.Z {
             RELATIONSHIP_ADD: Y,
             RELATIONSHIP_REMOVE: Y,
             RELATIONSHIP_UPDATE: Y,
-            LOGOUT: L
+            LOGOUT: D
         }),
             I(this, 'loadCache', () => {
                 let e = this.readSnapshot(W.LATEST_SNAPSHOT_VERSION);

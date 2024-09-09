@@ -536,9 +536,9 @@ function g(e) {
     let R = (0, s.useMemo)(() => new r.CN(i), [i]),
         v = (0, s.useMemo)(() => o(R.resolvedOptions().calendar), [o, R]),
         [C, y] = (0, a.zk)(e.value, e.defaultValue, e.onChange),
-        D = (0, s.useMemo)(() => E(C, v), [C, v]),
-        [L, b] = (0, s.useState)(() => f(e.placeholderValue, A, v, N)),
-        M = D || L,
+        L = (0, s.useMemo)(() => E(C, v), [C, v]),
+        [D, b] = (0, s.useState)(() => f(e.placeholderValue, A, v, N)),
+        M = L || D,
         P = 'gregory' === v.identifier && 'BC' === M.era,
         U = (0, s.useMemo)(
             () => ({
@@ -571,7 +571,7 @@ function g(e) {
     }, [v, A, B, N, e.placeholderValue]),
         C && Object.keys(B).length < Object.keys(k).length && F((B = { ...k })),
         null == C && Object.keys(B).length === Object.keys(k).length && (F((B = {})), b(f(e.placeholderValue, A, v, N)));
-    let Z = D && Object.keys(B).length >= Object.keys(k).length ? D : L,
+    let Z = L && Object.keys(B).length >= Object.keys(k).length ? L : D,
         Y = (t) => {
             if (e.isDisabled || e.isReadOnly) return;
             let n = Object.keys(B),
@@ -701,9 +701,9 @@ function g(e) {
                 (t.length >= n.length || (t.length === n.length - 1 && k.dayPeriod && !B.dayPeriod)) && Y(Z);
             }
         },
-        q = e.isInvalid || 'invalid' === e.validationState || l(D, e.minValue, e.maxValue);
+        q = e.isInvalid || 'invalid' === e.validationState || l(L, e.minValue, e.maxValue);
     return {
-        value: D,
+        value: L,
         dateValue: j,
         calendar: v,
         setValue: Y,
@@ -777,7 +777,7 @@ function g(e) {
             y(null), Y(r);
         },
         formatValue(e) {
-            if (!D) return '';
+            if (!L) return '';
             let t = d(e, U);
             return new r.CN(i, t).format(j);
         }
@@ -838,8 +838,8 @@ function A(e) {
         y = (e) => {
             (null == A ? void 0 : A.start) && (null == A ? void 0 : A.end) && e.start && e.end ? v(A, e) : R(e);
         },
-        D = e.isInvalid || 'invalid' === e.validationState || (null != I && (l(I.start, e.minValue, e.maxValue) || l(I.end, e.minValue, e.maxValue) || (null != I.end && null != I.start && 0 > I.end.compare(I.start)) || ((null == I ? void 0 : I.start) && (null === (t = e.isDateUnavailable) || void 0 === t ? void 0 : t.call(e, I.start))) || ((null == I ? void 0 : I.end) && (null === (n = e.isDateUnavailable) || void 0 === n ? void 0 : n.call(e, I.end))))),
-        L = e.validationState || (D ? 'invalid' : null);
+        L = e.isInvalid || 'invalid' === e.validationState || (null != I && (l(I.start, e.minValue, e.maxValue) || l(I.end, e.minValue, e.maxValue) || (null != I.end && null != I.start && 0 > I.end.compare(I.start)) || ((null == I ? void 0 : I.start) && (null === (t = e.isDateUnavailable) || void 0 === t ? void 0 : t.call(e, I.start))) || ((null == I ? void 0 : I.end) && (null === (n = e.isDateUnavailable) || void 0 === n ? void 0 : n.call(e, I.end))))),
+        D = e.validationState || (L ? 'invalid' : null);
     return {
         value: I,
         setValue: m,
@@ -880,8 +880,8 @@ function A(e) {
                 }),
                 u.setOpen(t);
         },
-        validationState: L,
-        isInvalid: D,
+        validationState: D,
+        isInvalid: L,
         formatValue(t, n) {
             let i;
             if (!I || !I.start || !I.end) return null;

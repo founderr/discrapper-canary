@@ -143,7 +143,7 @@ function eg(e) {
                     onClick: () => l(!0),
                     style: { left: ''.concat(f.current, '%') },
                     children: (0, a.jsx)(L.Z, {
-                        idleAnimationState: v.S.IDLE,
+                        idleAnimationState: v.SR.IDLE,
                         giftStyle: ec.Cj.BOX
                     })
                 }),

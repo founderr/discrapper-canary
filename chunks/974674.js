@@ -3,7 +3,7 @@ n.d(t, {
         return A;
     },
     Xo: function () {
-        return D;
+        return L;
     },
     qE: function () {
         return C;
@@ -121,7 +121,7 @@ function R(e) {
             width: (0, h.px)(n),
             height: (0, h.px)(n)
         },
-        D =
+        L =
             null == S || g
                 ? void 0
                 : (function (e, t) {
@@ -133,7 +133,7 @@ function R(e) {
                             })
                           : e;
                   })(S, A, N),
-        L = C.size * I.hs,
+        D = C.size * I.hs,
         b = (function (e, t, n, r) {
             if (null == e) return null;
             if (r)
@@ -197,16 +197,16 @@ function R(e) {
         M =
             null != R &&
             (0, r.jsx)('svg', {
-                width: L + v,
-                height: L,
-                viewBox: '0 0 '.concat(L + v, ' ').concat(L),
+                width: D + v,
+                height: D,
+                viewBox: '0 0 '.concat(D + v, ' ').concat(D),
                 className: T.avatarDecoration,
                 'aria-hidden': !0,
                 children: (0, r.jsx)('foreignObject', {
                     x: 0,
                     y: 0,
-                    width: L,
-                    height: L,
+                    width: D,
+                    height: D,
                     mask: null != b ? 'url(#'.concat(b, ')') : void 0,
                     children: (0, r.jsx)('div', {
                         className: T.avatarStack,
@@ -230,7 +230,7 @@ function R(e) {
               onKeyDown: o,
               onMouseEnter: null != c ? c : void 0,
               onMouseLeave: null != d ? d : void 0,
-              'aria-label': D,
+              'aria-label': L,
               'aria-hidden': g,
               children: [t, M]
           })
@@ -241,7 +241,7 @@ function R(e) {
               onMouseEnter: null != c ? c : void 0,
               onMouseLeave: null != d ? d : void 0,
               role: 'img',
-              'aria-label': D,
+              'aria-label': L,
               'aria-hidden': g,
               children: [t, M]
           });
@@ -267,17 +267,17 @@ function v(e) {
 }
 function C(e) {
     let { src: t, status: n, size: i, statusColor: a, isMobile: o = !1, isTyping: l = !1, typingIndicatorRef: _, isSpeaking: I = !1, statusTooltip: m = !1, statusTooltipDelay: S, statusBackdropColor: g, 'aria-hidden': O = !1, 'aria-label': C, imageClassName: y } = e,
-        D = n !== p.Skl.UNKNOWN ? n : null,
-        L = (0, h.UC)(i),
-        b = null != D ? Math.ceil((L.status * h.D6 - L.status) / 2) : 0,
-        M = L.size + b,
-        P = (0, c.vj)(D, a);
+        L = n !== p.Skl.UNKNOWN ? n : null,
+        D = (0, h.UC)(i),
+        b = null != L ? Math.ceil((D.status * h.D6 - D.status) / 2) : 0,
+        M = D.size + b,
+        P = (0, c.vj)(L, a);
     return (0, r.jsx)(R, {
         ...e,
         ariaLabel: C,
         ariaHidden: O,
-        status: D,
-        specs: L,
+        status: L,
+        specs: D,
         typingOffset: b,
         children: (0, r.jsxs)('svg', {
             width: M,
@@ -289,8 +289,8 @@ function C(e) {
                 (0, r.jsx)('foreignObject', {
                     x: 0,
                     y: 0,
-                    width: L.size,
-                    height: L.size,
+                    width: D.size,
+                    height: D.size,
                     mask: 'url(#'.concat(
                         (function (e, t, n, r) {
                             if (null == e) return E.QS.AVATAR_DEFAULT;
@@ -362,7 +362,7 @@ function C(e) {
                                     .concat(e, ', isMobile: ')
                                     .concat(n ? 'true' : 'false')
                             );
-                        })(D, i, o, l),
+                        })(L, i, o, l),
                         ')'
                     ),
                     children: (0, r.jsx)(v, {
@@ -371,30 +371,30 @@ function C(e) {
                         className: y
                     })
                 }),
-                null != D && null != g ? N(g, o, L, D) : null,
-                null != D
+                null != L && null != g ? N(g, o, D, L) : null,
+                null != L
                     ? (0, r.jsx)(d.u, {
-                          text: m ? (0, f.u5)(D) : null,
+                          text: m ? (0, f.u5)(L) : null,
                           'aria-label': !1,
                           position: 'top',
-                          spacing: 5 + 1.5 * L.stroke,
+                          spacing: 5 + 1.5 * D.stroke,
                           delay: S,
                           children: (e) =>
                               (0, r.jsxs)(r.Fragment, {
                                   children: [
                                       (0, r.jsx)('rect', {
                                           ...e,
-                                          ...A(L, D, o, l),
+                                          ...A(D, L, o, l),
                                           fill: P,
-                                          mask: 'url(#'.concat((0, c.rs)(D, o, l), ')'),
+                                          mask: 'url(#'.concat((0, c.rs)(L, o, l), ')'),
                                           className: T.pointerEvents
                                       }),
                                       l
                                           ? (0, r.jsx)(u.b, {
                                                 ref: _,
-                                                dotRadius: L.status / 4,
-                                                x: L.size - 1.375 * L.status - L.offset,
-                                                y: L.size - L.status / 1.333 - L.offset
+                                                dotRadius: D.status / 4,
+                                                x: D.size - 1.375 * D.status - D.offset,
+                                                y: D.size - D.status / 1.333 - D.offset
                                             })
                                           : null
                                   ]
@@ -406,7 +406,7 @@ function C(e) {
     });
 }
 function y(e) {
-    let { fromIsMobile: t = !0, fromStatus: n, fromColor: a, isMobile: l = !1, isTyping: E = !1, typingIndicatorRef: p, isSpeaking: I = !1, size: m, src: A, status: C, statusColor: y, statusTooltip: D = !1, statusTooltipDelay: L, statusBackdropColor: b, 'aria-hidden': M = !1, 'aria-label': P, imageClassName: U } = e,
+    let { fromIsMobile: t = !0, fromStatus: n, fromColor: a, isMobile: l = !1, isTyping: E = !1, typingIndicatorRef: p, isSpeaking: I = !1, size: m, src: A, status: C, statusColor: y, statusTooltip: L = !1, statusTooltipDelay: D, statusBackdropColor: b, 'aria-hidden': M = !1, 'aria-label': P, imageClassName: U } = e,
         w = (0, c.vj)(C, y),
         x = i.useId(),
         G = i.useId(),
@@ -505,14 +505,14 @@ function y(e) {
                 }),
                 null != b && N(b, l, z, C),
                 (0, r.jsx)(d.u, {
-                    text: D ? (0, f.u5)(C) : null,
+                    text: L ? (0, f.u5)(C) : null,
                     'aria-label': !1,
                     position: 'top',
                     spacing: (function (e, t, n) {
                         let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
                         return 5 - (n && !r ? 0 : 0.5 * e) + 1.5 * t;
                     })(z.status, z.stroke, l, E),
-                    delay: L,
+                    delay: D,
                     children: (e) =>
                         (0, r.jsxs)(r.Fragment, {
                             children: [
@@ -522,7 +522,7 @@ function y(e) {
                                     width: q,
                                     height: Q,
                                     viewBox: '0 0 '.concat(q, ' ').concat(Q),
-                                    className: D ? T.cursorDefault : void 0,
+                                    className: L ? T.cursorDefault : void 0,
                                     children: [
                                         (0, c.vP)(W, z.status, G),
                                         (0, r.jsx)(o.animated.rect, {
@@ -554,7 +554,7 @@ function y(e) {
         })
     });
 }
-let D = i.memo(function (e) {
+let L = i.memo(function (e) {
     var t, n, a, s, o;
     let { statusColor: l, status: u, ...d } = e,
         { isMobile: _ = !1, isTyping: E = !1 } = d,

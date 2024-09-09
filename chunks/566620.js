@@ -65,8 +65,8 @@ var r = n(990547),
     v = n(496675),
     C = n(594174),
     y = n(979651),
-    D = n(585483),
-    L = n(630388),
+    L = n(585483),
+    D = n(630388),
     b = n(823379),
     M = n(573261),
     P = n(595519),
@@ -189,7 +189,7 @@ async function q(e) {
                 n = j.Yq.includes(i),
                 a = (null == v ? void 0 : v.type) === Y.d4z.GUILD_VOICE,
                 s = I.Z.getApplication(i),
-                o = null != s && (0, L.yE)(s.flags, Y.udG.EMBEDDED),
+                o = null != s && (0, D.yE)(s.flags, Y.udG.EMBEDDED),
                 l = (0, P.l5)(v);
             if (n) {
                 if (((t = !1), !(await e()))) throw Error();
@@ -238,7 +238,7 @@ async function Q(e) {
         c = C.default.getCurrentUser();
     if (null == n) return !1;
     let d = await (0, k.Z)(n, i);
-    if (null == i) return D.S.dispatch(Y.CkL.SHOW_ACTIVITIES_CHANNEL_SELECTOR, { applicationId: n }), !1;
+    if (null == i) return L.S.dispatch(Y.CkL.SHOW_ACTIVITIES_CHANNEL_SELECTOR, { applicationId: n }), !1;
     let _ = O.Z.getChannel(i);
     if (null == _ || null == c || null == d) return !1;
     let E =

@@ -43,13 +43,13 @@ function C(e) {
     return t.push(R(e.joinRequestId)), t.push(v(e.guildId, e.applicationStatus)), t;
 }
 let y = new c.h(C, (e) => ''.concat(e.joinRequestId)),
-    D = new c.h(C, (e) => ''.concat(e.joinRequestId)),
-    L = new c.h(C, (e) => ''.concat(e.actionedAt));
+    L = new c.h(C, (e) => ''.concat(e.joinRequestId)),
+    D = new c.h(C, (e) => ''.concat(e.actionedAt));
 function b(e) {
     return y.get(e);
 }
 function M(e) {
-    (G[e.joinRequestId] = e), y.set(e.joinRequestId, e), (0, h.Nd)(e.applicationStatus) && (L.delete(e.joinRequestId), D.set(e.joinRequestId, e)), (0, h.bk)(e.applicationStatus) && (D.delete(e.joinRequestId), L.set(e.joinRequestId, e));
+    (G[e.joinRequestId] = e), y.set(e.joinRequestId, e), (0, h.Nd)(e.applicationStatus) && (D.delete(e.joinRequestId), L.set(e.joinRequestId, e)), (0, h.bk)(e.applicationStatus) && (L.delete(e.joinRequestId), D.set(e.joinRequestId, e));
 }
 function P(e) {
     var t, n;
@@ -71,7 +71,7 @@ class B extends (r = u.ZP.Store) {
     }
     getRequests(e, t) {
         let n = v(e, t);
-        return (0, h.bk)(t) ? L.values(n) : (0, h.Nd)(t) ? D.values(n) : y.values(n);
+        return (0, h.bk)(t) ? D.values(n) : (0, h.Nd)(t) ? L.values(n) : y.values(n);
     }
     getSubmittedGuildJoinRequestTotal(e) {
         return S[e];
@@ -145,7 +145,7 @@ class B extends (r = u.ZP.Store) {
             let { id: r, guildId: i } = e;
             let a = ((t = r), y.get(t));
             if (null != a) {
-                N(i, null, a.applicationStatus), (n = r), delete G[n], y.delete(n), D.delete(n), L.delete(n);
+                N(i, null, a.applicationStatus), (n = r), delete G[n], y.delete(n), L.delete(n), D.delete(n);
             }
         },
         GUILD_JOIN_REQUESTS_SET_APPLICATION_TAB: function (e) {
@@ -158,7 +158,7 @@ class B extends (r = u.ZP.Store) {
             if (r === w[n]) return;
             w[n] = r;
             let i = null !== (t = U[n]) && void 0 !== t ? t : p.wB.SUBMITTED;
-            'REVIEW_APPLICATION' !== i && ((0, h.bk)(i) && L.clear(), (0, h.Nd)(i) && D.clear());
+            'REVIEW_APPLICATION' !== i && ((0, h.bk)(i) && D.clear(), (0, h.Nd)(i) && L.clear());
         },
         GUILD_JOIN_REQUESTS_SET_SELECTED: function (e) {
             let { guildId: t, request: n } = e;

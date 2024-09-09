@@ -25,8 +25,8 @@ var r = n(278074),
     v = n(366980),
     C = n(779832),
     y = n(786761),
-    D = n(459618),
-    L = n(541288),
+    L = n(459618),
+    D = n(541288),
     b = n(3148),
     M = n(48854),
     P = n(785359),
@@ -584,7 +584,7 @@ let eI = {
                 ...i,
                 nonce: o
             }),
-            D.Z.recordMessageSendAttempt(e, o),
+            L.Z.recordMessageSendAttempt(e, o),
             q.Z.isReady(e))
                 ? s()
                 : r && e !== eu.V
@@ -675,7 +675,7 @@ let eI = {
                 })
                 .then(
                     (n) => (
-                        L.Z.donateSentMessage(n.body.content, e),
+                        D.Z.donateSentMessage(n.body.content, e),
                         em.receiveMessage(e, n.body),
                         s.Z.dispatch({
                             type: 'STICKER_TRACK_USAGE',
@@ -792,7 +792,7 @@ let eI = {
                             (o) => {
                                 let d = Date.now() - i;
                                 if (o.ok) {
-                                    L.Z.donateSentMessage(c, e),
+                                    D.Z.donateSentMessage(c, e),
                                         em.receiveMessage(e, o.body, !0, {
                                             sendAnalytics: {
                                                 duration: d,
@@ -812,7 +812,7 @@ let eI = {
                                             joinRequestUserId: n
                                         });
                                     }
-                                    D.Z.recordMessageSendApiResponse(q);
+                                    L.Z.recordMessageSendApiResponse(q);
                                     s.Z.dispatch({
                                         type: 'SLOWMODE_RESET_COOLDOWN',
                                         slowmodeType: J.S.SendMessage,

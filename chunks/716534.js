@@ -317,7 +317,7 @@ function H(e) {
                           (0, i.jsxs)(i.Fragment, {
                               children: [
                                   (0, i.jsx)(j.Z, {
-                                      defaultAnimationState: M.S.LOOP,
+                                      defaultAnimationState: M.SR.LOOP,
                                       giftStyle: ev,
                                       shouldAnimate: !0,
                                       className: W.__invalid_giftMainAnimation

@@ -25,8 +25,8 @@ var r = n(735250),
     v = n(457040),
     C = n(740492),
     y = n(585483),
-    D = n(5967),
-    L = n(28546),
+    L = n(5967),
+    D = n(28546),
     b = n(957825),
     M = n(981631),
     P = n(149203),
@@ -47,7 +47,7 @@ let k = b.Om + P.Su.MEDIUM,
                     tab: i,
                     badged: !1
                 }),
-                    (0, L.hr)(i);
+                    (0, D.hr)(i);
             },
             'aria-current': t ? 'page' : void 0,
             className: s()(n, G.navButton, G.navItem, { [G.navButtonActive]: t }),
@@ -123,7 +123,7 @@ t.Z = i.memo(function (e) {
             drawerRef: ee,
             orientation: 'left' === K ? p.y.HORIZONTAL_RIGHT : p.y.HORIZONTAL_LEFT
         }),
-        er = (0, L.Iu)((e) => e.activeView),
+        er = (0, D.Iu)((e) => e.activeView),
         ei = (0, O.fQ)(Y),
         { renderWindow: ea, windowDispatch: es } = i.useContext(I.ZP),
         eo = (0, d.e7)([R.Z], () => !R.Z.hasLoadedStickerPacks),
@@ -140,18 +140,18 @@ t.Z = i.memo(function (e) {
                     if (n === ee.current || 'true' === n.getAttribute('data-menu-item') || 'true' === n.getAttribute('data-premium-tutorial-expression-picker-tooltip') || 'true' === n.getAttribute('data-premium-tutorial-persistent-coachmark-emoji-step')) return;
                     n = n.parentNode;
                 }
-                (0, L._Q)();
-                let r = null === (t = (0, D.uB)(e)) || void 0 === t ? void 0 : t.activeElement;
+                (0, D._Q)();
+                let r = null === (t = (0, L.uB)(e)) || void 0 === t ? void 0 : t.activeElement;
                 (null == r || 'BODY' === r.tagName) && y.S.dispatchToLastSubscribed(M.CkL.TEXTAREA_FOCUS);
             },
             [q, ec, eu]
         ),
         e_ = i.useCallback(() => {
-            (0, L._Q)();
+            (0, D._Q)();
         }, []);
     i.useLayoutEffect(() => {
         let e = () => {
-            er === b.X1.GIF && (0, L._Q)();
+            er === b.X1.GIF && (0, D._Q)();
         };
         return (
             ea.addEventListener('mousedown', ed),
@@ -165,10 +165,10 @@ t.Z = i.memo(function (e) {
     }, [er, e_, ed, ea, es]),
         (0, E.useFocusLock)(X),
         i.useEffect(() => {
-            (0, L.ql)('');
+            (0, D.ql)('');
         }, []),
         i.useEffect(() => {
-            ((!eu && (0, _.$s)()) || (eu && !ec)) && (0, L._Q)();
+            ((!eu && (0, _.$s)()) || (eu && !ec)) && (0, D._Q)();
         }, [ec, eu]),
         i.useEffect(() => {
             if (null != ee.current && !$.current) {

@@ -95,7 +95,7 @@ function A(e) {
 }
 function N(e) {
     let { src: t, original: n, placeholder: a, width: s, height: l, animated: u, children: c, responsive: d, renderLinkComponent: f, renderForwardComponent: p, maxWidth: m, maxHeight: N, shouldAnimate: O, onClose: R, shouldHideMediaOptions: v = !1, obscure: C = !1, ...y } = e,
-        { width: D, height: L } = (0, E.zp)(s, l),
+        { width: L, height: D } = (0, E.zp)(s, l),
         b = o.tq && null != R;
     i.useEffect(() => {
         if (null != R)
@@ -127,8 +127,8 @@ function N(e) {
                             shouldLink: !1,
                             width: s,
                             height: l,
-                            maxWidth: D,
-                            maxHeight: L,
+                            maxWidth: L,
+                            maxHeight: D,
                             children: c,
                             animated: !e && u,
                             autoPlay: !e,

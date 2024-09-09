@@ -12,8 +12,8 @@ n.Z = (e) => {
     var n, r, u, _, E, I;
     let A;
     A = t(481060).tokens;
-    let p = (0, o.e7)([l.Z], () => l.Z.saturation),
-        [m, T] = (0, c.Cf)(
+    let m = (0, o.e7)([l.Z], () => l.Z.saturation),
+        [p, T] = (0, c.Cf)(
             e,
             null !==
                 (I =
@@ -28,7 +28,7 @@ n.Z = (e) => {
                               : null ===
                                       (r = u.call(_, {
                                           theme: d.BRd.DARK,
-                                          saturation: p
+                                          saturation: m
                                       })) || void 0 === r
                                 ? void 0
                                 : null === (n = r.hex) || void 0 === n
@@ -38,7 +38,7 @@ n.Z = (e) => {
                 : '#000'
         );
     return a.useMemo(() => {
-        let e = (0, i._i)(m),
+        let e = (0, i._i)(p),
             n = (0, i._i)(T);
         for (let n = 1; n < 8 && !((0, i.Bd)(e) >= 0.725); n++) {
             e = s()(e).darken(0.5).num();
@@ -51,5 +51,5 @@ n.Z = (e) => {
             primaryColor: t,
             secondaryColor: (0, i.Rf)(n)
         };
-    }, [m, T]);
+    }, [p, T]);
 };

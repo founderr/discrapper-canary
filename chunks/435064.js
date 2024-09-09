@@ -62,14 +62,14 @@ let p = 'default',
             numberOfTimesDismissed: 0
         }
     };
-async function D() {
+async function L() {
     if (y.clipsSettings.storageLocation !== p || null == s.Z || null == s.Z.remoteApp) return;
     let e = await s.Z.remoteApp.getPath('documents');
     (y.clipsSettings.storageLocation = e), b.emitChange();
 }
-class L extends (r = i.ZP.DeviceSettingsStore) {
+class D extends (r = i.ZP.DeviceSettingsStore) {
     initialize(e) {
-        null != e && (y = e), D(), this.waitFor(o.ZP);
+        null != e && (y = e), L(), this.waitFor(o.ZP);
     }
     getClips() {
         return m;
@@ -136,9 +136,9 @@ class L extends (r = i.ZP.DeviceSettingsStore) {
         return y.newClipIds;
     }
 }
-h(L, 'displayName', 'ClipsStore'),
-    h(L, 'persistKey', 'ClipsStore'),
-    h(L, 'migrations', [
+h(D, 'displayName', 'ClipsStore'),
+    h(D, 'persistKey', 'ClipsStore'),
+    h(D, 'migrations', [
         (e) => ({
             clipsSettings: null != e ? e : C,
             newClipsCount: 0
@@ -236,7 +236,7 @@ h(L, 'displayName', 'ClipsStore'),
             }
         })
     ]);
-let b = new L(a.Z, {
+let b = new D(a.Z, {
     CLIPS_SETTINGS_UPDATE: function (e) {
         let { settings: t } = e;
         y = {

@@ -83,8 +83,8 @@ var T = new WeakMap(),
     v = new WeakMap(),
     C = new WeakMap(),
     y = new WeakMap(),
-    D = new WeakMap(),
     L = new WeakMap(),
+    D = new WeakMap(),
     b = new WeakMap(),
     M = new WeakMap(),
     P = new WeakMap(),
@@ -191,7 +191,7 @@ var T = new WeakMap(),
     eI = !!('undefined' != typeof window && void 0 !== window.document && void 0 !== window.document.createElement),
     em = (!e_ || !eE) && !ec && 'undefined' != typeof globalThis && globalThis.InputEvent && 'function' == typeof globalThis.InputEvent.prototype.getTargetRanges,
     eT = {
-        isComposing: (e) => !!L.get(e),
+        isComposing: (e) => !!D.get(e),
         getWindow(e) {
             var t = g.get(e);
             if (!t) throw Error('Unable to find a host window element for this editor');
@@ -219,17 +219,17 @@ var T = new WeakMap(),
                 n = t.getRootNode();
             return (n instanceof Document || n instanceof ShadowRoot) && null != n.getSelection ? n : t.ownerDocument;
         },
-        isFocused: (e) => !!D.get(e),
+        isFocused: (e) => !!L.get(e),
         isReadOnly: (e) => !!y.get(e),
         blur(e) {
             var t = eT.toDOMNode(e, e),
                 n = eT.findDocumentOrShadowRoot(e);
-            D.set(e, !1), n.activeElement === t && t.blur();
+            L.set(e, !1), n.activeElement === t && t.blur();
         },
         focus(e) {
             var t = eT.toDOMNode(e, e),
                 n = eT.findDocumentOrShadowRoot(e);
-            D.set(e, !0), n.activeElement !== t && t.focus({ preventScroll: !0 });
+            L.set(e, !0), n.activeElement !== t && t.focus({ preventScroll: !0 });
         },
         deselect(e) {
             var { selection: t } = e,
@@ -506,17 +506,17 @@ var T = new WeakMap(),
             o = d.y$.parent(s),
             l = !0 === n[V];
         return a.isVoid(r)
-            ? u.createElement(eL, { length: d.NB.string(r).length })
+            ? u.createElement(eD, { length: d.NB.string(r).length })
             : '' !== n.text || r.children[r.children.length - 1] !== i || a.isInline(r) || '' !== d.ML.string(a, o)
               ? '' === n.text
-                  ? u.createElement(eL, { isMarkPlaceholder: l })
+                  ? u.createElement(eD, { isMarkPlaceholder: l })
                   : t && '\n' === n.text.slice(-1)
                     ? u.createElement(ey, {
                           isTrailing: !0,
                           text: n.text
                       })
                     : u.createElement(ey, { text: n.text })
-              : u.createElement(eL, {
+              : u.createElement(eD, {
                     isLineBreak: !0,
                     isMarkPlaceholder: l
                 });
@@ -531,10 +531,10 @@ var T = new WeakMap(),
                 var e = i();
                 r.current && r.current.textContent !== e && (r.current.textContent = e);
             }),
-            u.createElement(eD, { ref: r }, a)
+            u.createElement(eL, { ref: r }, a)
         );
     },
-    eD = (0, u.memo)(
+    eL = (0, u.memo)(
         (0, u.forwardRef)((e, t) =>
             u.createElement(
                 'span',
@@ -546,7 +546,7 @@ var T = new WeakMap(),
             )
         )
     ),
-    eL = (e) => {
+    eD = (e) => {
         var { length: t = 0, isLineBreak: n = !1, isMarkPlaceholder: r = !1 } = e,
             i = {
                 'data-slate-zero-width': n ? 'n' : 'z',
@@ -1200,7 +1200,7 @@ var tu = (e) => u.createElement(u.Fragment, null, eH(e)),
                             { activeElement: t } = e,
                             n = eT.toDOMNode(X, X),
                             r = e.getSelection();
-                        if ((t === n ? ((ec.latestElement = t), D.set(X, !0)) : D.delete(X), !r)) return d.YR.deselect(X);
+                        if ((t === n ? ((ec.latestElement = t), L.set(X, !0)) : L.delete(X), !r)) return d.YR.deselect(X);
                         var { anchorNode: i, focusNode: a } = r,
                             s = eT.hasEditableTarget(X, i) || eT.isTargetInsideNonReadonlyVoid(X, i),
                             o = eT.hasEditableTarget(X, a) || eT.isTargetInsideNonReadonlyVoid(X, a);
@@ -1419,11 +1419,11 @@ var tu = (e) => u.createElement(u.Fragment, null, eH(e)),
                                 handleCompositionEnd: (e) => {
                                     a && clearTimeout(a),
                                         (a = setTimeout(() => {
-                                            L.set(t, !1), E();
+                                            D.set(t, !1), E();
                                         }, 25));
                                 },
                                 handleCompositionStart: (e) => {
-                                    L.set(t, !0), a && (clearTimeout(a), (a = null));
+                                    D.set(t, !0), a && (clearTimeout(a), (a = null));
                                 },
                                 handleDOMBeforeInput: (e) => {
                                     s && (clearTimeout(s), (s = null));
@@ -1446,7 +1446,7 @@ var tu = (e) => u.createElement(u.Fragment, null, eH(e)),
                                                 exactMatch: !1,
                                                 suppressThrow: !0
                                             }))),
-                                        !!(r = null !== (L = r) && void 0 !== L ? L : t.selection))
+                                        !!(r = null !== (D = r) && void 0 !== D ? D : t.selection))
                                     ) {
                                         var l = !0;
                                         if (n.startsWith('delete')) {
@@ -1503,8 +1503,8 @@ var tu = (e) => u.createElement(u.Fragment, null, eH(e)),
                                             case 'deleteContentForward':
                                                 var { anchor: y } = r;
                                                 if (l && d.e6.isCollapsed(r)) {
-                                                    var D = d.NB.leaf(t, y.path);
-                                                    if (y.offset < D.text.length)
+                                                    var L = d.NB.leaf(t, y.path);
+                                                    if (y.offset < L.text.length)
                                                         return h(y.path, {
                                                             text: '',
                                                             start: y.offset,
@@ -1513,7 +1513,7 @@ var tu = (e) => u.createElement(u.Fragment, null, eH(e)),
                                                 }
                                                 return p(() => d.ML.deleteForward(t), { at: r });
                                             case 'deleteContentBackward':
-                                                var L,
+                                                var D,
                                                     b,
                                                     { anchor: M } = r,
                                                     P = K(a) ? a.isCollapsed : !!(null !== (b = a) && void 0 !== b && b.collapsed);
@@ -1801,7 +1801,7 @@ var tu = (e) => u.createElement(u.Fragment, null, eH(e)),
                                 case 'insertFromYank':
                                 case 'insertReplacementText':
                                 case 'insertText':
-                                    'insertFromComposition' === n && eT.isComposing(X) && (J(!1), L.set(X, !1)), (null == r ? void 0 : r.constructor.name) === 'DataTransfer' ? eT.insertData(X, r) : 'string' == typeof r && (a ? et.current.push(() => d.ML.insertText(X, r)) : d.ML.insertText(X, r));
+                                    'insertFromComposition' === n && eT.isComposing(X) && (J(!1), D.set(X, !1)), (null == r ? void 0 : r.constructor.name) === 'DataTransfer' ? eT.insertData(X, r) : 'string' == typeof r && (a ? et.current.push(() => d.ML.insertText(X, r)) : d.ML.insertText(X, r));
                             }
                             var O = null === (_ = b.get(X)) || void 0 === _ ? void 0 : _.unref();
                             b.delete(X), O && (!X.selection || !d.e6.equals(X.selection, O)) && d.YR.select(X, O);
@@ -1839,13 +1839,13 @@ var tu = (e) => u.createElement(u.Fragment, null, eH(e)),
         if (((ec.hasMarkPlaceholder = !1), X.selection && d.e6.isCollapsed(X.selection) && eR)) {
             var { anchor: eC } = X.selection,
                 ey = d.NB.leaf(X, eC.path),
-                eD = p(ey, ts);
+                eL = p(ey, ts);
             if (!d.xv.equals(ey, eR, { loose: !0 })) {
                 ec.hasMarkPlaceholder = !0;
-                var eL = Object.fromEntries(Object.keys(eD).map((e) => [e, null]));
+                var eD = Object.fromEntries(Object.keys(eL).map((e) => [e, null]));
                 eN.push(
                     tl(
-                        tl(tl({ [V]: !0 }, eL), eR),
+                        tl(tl({ [V]: !0 }, eD), eR),
                         {},
                         {
                             anchor: eC,
@@ -1951,7 +1951,7 @@ var tu = (e) => u.createElement(u.Fragment, null, eH(e)),
                                                 var i = t.getSelection();
                                                 null == i || i.removeAllRanges();
                                             }
-                                            D.delete(X);
+                                            L.delete(X);
                                         }
                                     },
                                     [T, Q.onBlur]
@@ -1993,7 +1993,7 @@ var tu = (e) => u.createElement(u.Fragment, null, eH(e)),
                                 onCompositionEnd: (0, u.useCallback)(
                                     (e) => {
                                         if (eT.hasSelectableTarget(X, e.target)) {
-                                            if ((eT.isComposing(X) && (J(!1), L.set(X, !1)), null == eS || eS.handleCompositionEnd(e), !tf(e, Q.onCompositionEnd) && !eo)) {
+                                            if ((eT.isComposing(X) && (J(!1), D.set(X, !1)), null == eS || eS.handleCompositionEnd(e), !tf(e, Q.onCompositionEnd) && !eo)) {
                                                 if (!eu && !ef && !ea && !ep && !eh && e.data) {
                                                     var t = U.get(X);
                                                     U.delete(X), void 0 !== t && (w.set(X, X.marks), (X.marks = t)), d.ML.insertText(X, e.data);
@@ -2007,7 +2007,7 @@ var tu = (e) => u.createElement(u.Fragment, null, eH(e)),
                                 ),
                                 onCompositionUpdate: (0, u.useCallback)(
                                     (e) => {
-                                        eT.hasSelectableTarget(X, e.target) && !tf(e, Q.onCompositionUpdate) && !eT.isComposing(X) && (J(!0), L.set(X, !0));
+                                        eT.hasSelectableTarget(X, e.target) && !tf(e, Q.onCompositionUpdate) && !eT.isComposing(X) && (J(!0), D.set(X, !0));
                                     },
                                     [Q.onCompositionUpdate]
                                 ),
@@ -2131,7 +2131,7 @@ var tu = (e) => u.createElement(u.Fragment, null, eH(e)),
                                                 t.focus();
                                                 return;
                                             }
-                                            D.set(X, !0);
+                                            L.set(X, !0);
                                         }
                                     },
                                     [T, Q.onFocus]
@@ -2141,7 +2141,7 @@ var tu = (e) => u.createElement(u.Fragment, null, eH(e)),
                                         if (!T && eT.hasEditableTarget(X, e.target)) {
                                             null == eS || eS.handleKeyDown(e);
                                             var { nativeEvent: t } = e;
-                                            if ((eT.isComposing(X) && !1 === t.isComposing && (L.set(X, !1), J(!1)), !(tf(e, Q.onKeyDown) || eT.isComposing(X)))) {
+                                            if ((eT.isComposing(X) && !1 === t.isComposing && (D.set(X, !1), J(!1)), !(tf(e, Q.onKeyDown) || eT.isComposing(X)))) {
                                                 var { selection: n } = X,
                                                     r = X.children[null !== n ? n.focus.path[0] : 0],
                                                     a = 'rtl' === i()(d.NB.string(r));

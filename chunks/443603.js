@@ -41,7 +41,7 @@ let p = {
     }
 };
 t.Z = s.memo(function (e) {
-    let { className: t, disabled: n = !1, innerClassName: r, childClassName: i, iconClassName: s, icon: o, children: I, onClick: m, isActive: T, onMouseEnter: S, onMouseLeave: g, onFocus: A, onBlur: N, pulse: O, sparkle: R, notification: v, 'aria-label': C, 'aria-expanded': y, 'aria-haspopup': D, 'aria-controls': L } = e,
+    let { className: t, disabled: n = !1, innerClassName: r, childClassName: i, iconClassName: s, icon: o, children: I, onClick: m, isActive: T, onMouseEnter: S, onMouseLeave: g, onFocus: A, onBlur: N, pulse: O, sparkle: R, notification: v, 'aria-label': C, 'aria-expanded': y, 'aria-haspopup': L, 'aria-controls': D } = e,
         b = (0, _.Q)('ChannelTextAreaButton'),
         M = (0, c.useTransition)(null != I, {
             ...p,
@@ -70,8 +70,8 @@ t.Z = s.memo(function (e) {
         size: c.Button.Sizes.NONE,
         'aria-label': C,
         'aria-expanded': y,
-        'aria-haspopup': D,
-        'aria-controls': L,
+        'aria-haspopup': L,
+        'aria-controls': D,
         disabled: n,
         className: l()(t, { [h.active]: T }),
         innerClassName: l()(h.button, r, { [h.pulseButton]: O }),

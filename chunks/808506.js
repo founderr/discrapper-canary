@@ -46,8 +46,8 @@ var a,
     v = n(48481),
     C = n(314897),
     y = n(77498),
-    D = n(355863),
-    L = n(449224),
+    L = n(355863),
+    D = n(449224),
     b = n(626135),
     M = n(866119),
     P = n(671999),
@@ -268,7 +268,7 @@ function ed() {
     null === T.Z || void 0 === T.Z || null === (t = T.Z.window) || void 0 === t || t.close(null === T.Z || void 0 === T.Z ? void 0 : null === (e = T.Z.globalOverlay) || void 0 === e ? void 0 : e.WINDOW_KEY), (W = null);
 }
 function e_(e) {
-    let t = L.Z.getGameForPID(e);
+    let t = D.Z.getGameForPID(e);
     I.Z.setAssociatedGame(null != W ? W : -1, e, t);
 }
 let eE = (() => {
@@ -327,7 +327,7 @@ function eT(e, t, n) {
             success: t,
             ...n
         };
-    (0, p.te)(w.qU, D.Z.getDefaultLayout(w.qU), {
+    (0, p.te)(w.qU, L.Z.getDefaultLayout(w.qU), {
         width: n.graphics_width,
         height: n.graphics_height
     }),
@@ -418,12 +418,12 @@ function eC() {
 function ey(e) {
     return null != e && (0, M.y)(e, K);
 }
-function eD(e) {
+function eL(e) {
     switch ((0, e.type)) {
         case x.BmY.CONNECT:
             let t = C.default.getToken();
             if (null == t) break;
-            (0, p.te)(w.qU, D.Z.getDefaultLayout(w.qU)),
+            (0, p.te)(w.qU, L.Z.getDefaultLayout(w.qU)),
                 Promise.all([(0, R.Z)(t, e.pid), _.ZP.PersistedStore.getAllStates()]).then((t) => {
                     let [n, r] = t,
                         { pid: i, token: a } = e;
@@ -453,9 +453,9 @@ function eD(e) {
             $.info('[overlay data received]', e.payload);
     }
 }
-class eL extends (s = _.ZP.Store) {
+class eD extends (s = _.ZP.Store) {
     initialize() {
-        if (!(!G.iP || __OVERLAY__)) this.waitFor(N.ZP, C.default), g.sr(eD, ey), C.default.addChangeListener(eS), eh(O.v.enabled, O.v.legacyEnabled), E.Z.addInterceptor(ev);
+        if (!(!G.iP || __OVERLAY__)) this.waitFor(N.ZP, C.default), g.sr(eL, ey), C.default.addChangeListener(eS), eh(O.v.enabled, O.v.legacyEnabled), E.Z.addInterceptor(ev);
     }
     isInputLocked(e) {
         return !z.has(e);
@@ -480,7 +480,7 @@ class eL extends (s = _.ZP.Store) {
     }
 }
 (c = 'OverlayBridgeStore'),
-    (u = 'displayName') in (l = eL)
+    (u = 'displayName') in (l = eD)
         ? Object.defineProperty(l, u, {
               value: c,
               enumerable: !0,
@@ -488,7 +488,7 @@ class eL extends (s = _.ZP.Store) {
               writable: !0
           })
         : (l[u] = c);
-let eb = new eL(
+let eb = new eD(
     E.Z,
     __OVERLAY__
         ? {
@@ -561,7 +561,7 @@ let eb = new eL(
                   let { port: t } = e;
                   K = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
                   let n = new URLSearchParams();
-                  n.append('build_id', '01fa36337daecc23c5205ebfa9ee095642b1306b'), n.append('rpc', String(t)), n.append('rpc_auth_token', K), (r = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(n.toString()));
+                  n.append('build_id', '8aff15d26735b536771d071e9665497f48b4172c'), n.append('rpc', String(t)), n.append('rpc_auth_token', K), (r = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(n.toString()));
               },
               OVERLAY_CALL_PRIVATE_CHANNEL: function (e) {
                   let { channelId: t, ring: n } = e;

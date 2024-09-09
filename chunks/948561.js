@@ -31,26 +31,26 @@ var r = n(952639),
     v = n(981631),
     C = n(526761);
 let y = 3000,
-    D = {};
-function L(e) {
+    L = {};
+function D(e) {
     return ''.concat(e.channel_id, ':').concat(e.id);
 }
 function b() {
-    Object.values(D).forEach((e) => {
+    Object.values(L).forEach((e) => {
         let { timeout: t } = e;
         clearTimeout(t);
     }),
-        (D = {});
+        (L = {});
 }
 function M(e, t) {
     if (null == e.id || null == e.channel_id) return !1;
-    let n = L(e);
-    if (null != D[n]) {
-        let { timeout: r } = D[n];
+    let n = D(e);
+    if (null != L[n]) {
+        let { timeout: r } = L[n];
         return (
             clearTimeout(r),
             (function (e, t) {
-                let { setAt: n } = D[L(e)];
+                let { setAt: n } = L[D(e)];
                 if (t === N.Pq.UPDATE) {
                     var r, i;
                     let t = null !== (r = e.attachments) && void 0 !== r ? r : [],
@@ -84,7 +84,7 @@ function M(e, t) {
                 }
                 (0, N.OP)(n, t);
             })(e, t),
-            delete D[n],
+            delete L[n],
             !0
         );
     }
@@ -106,10 +106,10 @@ function U(e, t) {
     let { forceBatchScan: n = !1, jitter: r = !1 } = null != t ? t : {},
         i = (null == t ? void 0 : t.isMessageUpdate) ? e.filter(S.N7) : e;
     i.forEach((e) => {
-        let t = L(e);
-        null == D[t] &&
+        let t = D(e);
+        null == L[t] &&
             (d.Z.increment({ name: o.V.EXPLICIT_MEDIA_SCAN_CLIENT_TIMEOUT_CREATE }),
-            (D[t] = {
+            (L[t] = {
                 setAt: Date.now(),
                 timeout: setTimeout(() => {
                     !(function (e) {
@@ -136,7 +136,7 @@ function U(e, t) {
     r
         ? setTimeout(() => {
               P(
-                  i.filter((e) => null != D[L(e)]),
+                  i.filter((e) => null != L[D(e)]),
                   a
               );
           }, 800 * Math.random())

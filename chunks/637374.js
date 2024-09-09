@@ -338,7 +338,7 @@ class V extends s.Component {
                         s && (0, i.jsx)(v.Z, { className: k.headerIcon }),
                         null != e.giftStyle &&
                             (0, i.jsx)(f.Z, {
-                                defaultAnimationState: e.redeemed ? N.S.LOOP : N.S.IDLE,
+                                defaultAnimationState: e.redeemed ? N.SR.LOOP : N.SR.IDLE,
                                 giftStyle: e.giftStyle,
                                 className: l
                             })

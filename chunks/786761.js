@@ -6,7 +6,7 @@ n.d(t, {
         return N;
     },
     lp: function () {
-        return L;
+        return D;
     },
     wi: function () {
         return O;
@@ -56,7 +56,7 @@ function A(e) {
     let { reactions: N, interactionData: O } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         R = g(e),
         C = null !== (i = null === (t = e.mentions) || void 0 === t ? void 0 : t.map((e) => e.id)) && void 0 !== i ? i : [],
-        L = null !== (a = e.mention_roles) && void 0 !== a ? a : [],
+        D = null !== (a = e.mention_roles) && void 0 !== a ? a : [],
         b = null !== (s = e.mention_channels) && void 0 !== s ? s : [],
         M = e.message_reference;
     let P = null == (h = e).author ? S : null != h.webhook_id ? new d.Z(h.author) : null !== (m = f.default.getUser(h.author.id)) && void 0 !== m ? m : new d.Z(h.author),
@@ -76,7 +76,7 @@ function A(e) {
             blocked: E.Z.isBlockedForMessage(e) || (null != x && E.Z.isBlocked(x)),
             mentionEveryone: e.mention_everyone,
             mentions: C,
-            mentionRoles: L,
+            mentionRoles: D,
             mentionChannels: b,
             messageReference: M,
             mentioned: (0, I.Sz)({
@@ -84,13 +84,13 @@ function A(e) {
                 channelId: e.channel_id,
                 mentionEveryone: null !== (l = e.mention_everyone) && void 0 !== l && l,
                 mentionUsers: C,
-                mentionRoles: L
+                mentionRoles: D
             }),
             giftCodes: (0, p.Fp)(e) ? (0, p.Q_)(null == e ? void 0 : e.embeds[0].url) : (0, p.Q_)(e.content),
             content: k,
             referralTrialOfferId: G,
             call: v(e.call, R.timestamp),
-            messageSnapshots: D(e),
+            messageSnapshots: L(e),
             reactions: y(null != N ? N : e.reactions, e.poll),
             interaction: w,
             interactionData: null != O ? O : e.interaction_data,
@@ -122,7 +122,7 @@ function O(e, t) {
         });
     let n = e,
         r = !1;
-    if ((null != t.call && (n = n.set('call', v(t.call, e.timestamp))), null != t.attachments && (n = n.set('attachments', R(t))), null != t.content && '' !== t.content && (n = n.set('content', t.content)), null != t.embeds && (n = n.set('embeds', C(t))), null != t.message_snapshots && (n = n.set('messageSnapshots', D(t))), t.pinned !== n.pinned && (n = n.set('pinned', t.pinned)), null != n.webhookId && null != t.author && (n = n.set('author', new d.Z(t.author))), null != t.flags && t.flags !== n.flags && (n = n.set('flags', t.flags)), null != t.components && (n = n.set('components', (0, s.uZ)(t.components, { includeEmojiSrc: !1 }))), null != t.role_subscription_data && (n = n.set('roleSubscriptionData', t.role_subscription_data)), null != t.reactions)) {
+    if ((null != t.call && (n = n.set('call', v(t.call, e.timestamp))), null != t.attachments && (n = n.set('attachments', R(t))), null != t.content && '' !== t.content && (n = n.set('content', t.content)), null != t.embeds && (n = n.set('embeds', C(t))), null != t.message_snapshots && (n = n.set('messageSnapshots', L(t))), t.pinned !== n.pinned && (n = n.set('pinned', t.pinned)), null != n.webhookId && null != t.author && (n = n.set('author', new d.Z(t.author))), null != t.flags && t.flags !== n.flags && (n = n.set('flags', t.flags)), null != t.components && (n = n.set('components', (0, s.uZ)(t.components, { includeEmojiSrc: !1 }))), null != t.role_subscription_data && (n = n.set('roleSubscriptionData', t.role_subscription_data)), null != t.reactions)) {
         var i;
         n = n.set('reactions', y(null !== (i = e.reactions) && void 0 !== i ? i : t.reactions));
     }
@@ -202,7 +202,7 @@ function y(e, t) {
         return t.count < 0 && (t.count = 0), t.burst_count < 0 && (t.burst_count = 0), t;
     });
 }
-function D(e) {
+function L(e) {
     return null == e.message_snapshots
         ? []
         : e.message_snapshots.map((e) => {
@@ -210,4 +210,4 @@ function D(e) {
               return new c.Hx({ message: g(t) });
           });
 }
-let L = (e) => 0 === (0, l.cv)(e).length || '' !== e.content;
+let D = (e) => 0 === (0, l.cv)(e).length || '' !== e.content;

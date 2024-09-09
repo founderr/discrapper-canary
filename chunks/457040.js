@@ -25,8 +25,8 @@ var r = n(735250),
     v = n(453070),
     C = n(926491),
     y = n(373228),
-    D = n(462109),
-    L = n(422195),
+    L = n(462109),
+    D = n(422195),
     b = n(657795),
     M = n(489762),
     P = n(31543),
@@ -128,9 +128,9 @@ let B = (0, A.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 getItemProps: ev,
                 getRowProps: eC,
                 gridContainerProps: ey,
-                handleGridContainerKeyDown: eD,
-                isUsingKeyboardNavigation: eL
-            } = (0, D.t)({
+                handleGridContainerKeyDown: eL,
+                isUsingKeyboardNavigation: eD
+            } = (0, L.t)({
                 columnCounts: eO,
                 stickersListRef: J,
                 stickersGrid: eA,
@@ -181,7 +181,7 @@ let B = (0, A.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                         className: k.header,
                         children: (0, r.jsx)(P.Z, {
                             ref: ee,
-                            onKeyDown: eD,
+                            onKeyDown: eL,
                             stickersListRef: J,
                             channel: u
                         })
@@ -208,7 +208,7 @@ let B = (0, A.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                                 getStickerRowProps: eC,
                                                 gridWidth: eo,
                                                 gutterWidth: eN,
-                                                isUsingKeyboardNavigation: eL,
+                                                isUsingKeyboardNavigation: eD,
                                                 onSelectSticker: em,
                                                 rowCount: eS,
                                                 rowCountBySection: eg,
@@ -218,7 +218,7 @@ let B = (0, A.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                             })
                                           : null
                               }),
-                              (0, r.jsx)(L.Z, {
+                              (0, r.jsx)(D.Z, {
                                   stickersListRef: J,
                                   channel: u
                               })

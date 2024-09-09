@@ -40,7 +40,7 @@ let s = (e, t) => {
             break;
         case r.Cj.STANDARD_BOX:
             switch (t) {
-                case i.S.IDLE:
+                case i.SR.IDLE:
                     s = () =>
                         n
                             .e('60592')
@@ -50,7 +50,7 @@ let s = (e, t) => {
                                 return t;
                             });
                     break;
-                case i.S.LOOP:
+                case i.SR.LOOP:
                     s = () =>
                         n
                             .e('81358')
@@ -73,7 +73,7 @@ let s = (e, t) => {
             break;
         case r.Cj.CAKE:
             switch (t) {
-                case i.S.IDLE:
+                case i.SR.IDLE:
                     s = () =>
                         n
                             .e('5996')
@@ -83,7 +83,7 @@ let s = (e, t) => {
                                 return t;
                             });
                     break;
-                case i.S.LOOP:
+                case i.SR.LOOP:
                     s = () =>
                         n
                             .e('71378')
@@ -106,7 +106,7 @@ let s = (e, t) => {
             break;
         case r.Cj.CHEST:
             switch (t) {
-                case i.S.IDLE:
+                case i.SR.IDLE:
                     s = () =>
                         n
                             .e('38506')
@@ -116,7 +116,7 @@ let s = (e, t) => {
                                 return t;
                             });
                     break;
-                case i.S.LOOP:
+                case i.SR.LOOP:
                     s = () =>
                         n
                             .e('31085')
@@ -139,7 +139,7 @@ let s = (e, t) => {
             break;
         case r.Cj.COFFEE:
             switch (t) {
-                case i.S.IDLE:
+                case i.SR.IDLE:
                     s = () =>
                         n
                             .e('23847')
@@ -149,7 +149,7 @@ let s = (e, t) => {
                                 return t;
                             });
                     break;
-                case i.S.LOOP:
+                case i.SR.LOOP:
                     s = () =>
                         n
                             .e('93554')
@@ -172,7 +172,7 @@ let s = (e, t) => {
             break;
         case r.Cj.SEASONAL_STANDARD_BOX:
             switch (t) {
-                case i.S.IDLE:
+                case i.SR.IDLE:
                     s = () =>
                         n
                             .e('20196')
@@ -182,7 +182,7 @@ let s = (e, t) => {
                                 return t;
                             });
                     break;
-                case i.S.LOOP:
+                case i.SR.LOOP:
                     s = () =>
                         n
                             .e('58903')
@@ -205,7 +205,7 @@ let s = (e, t) => {
             break;
         case r.Cj.SEASONAL_CAKE:
             switch (t) {
-                case i.S.IDLE:
+                case i.SR.IDLE:
                     s = () =>
                         n
                             .e('22101')
@@ -215,7 +215,7 @@ let s = (e, t) => {
                                 return t;
                             });
                     break;
-                case i.S.LOOP:
+                case i.SR.LOOP:
                     s = () =>
                         n
                             .e('63007')
@@ -238,7 +238,7 @@ let s = (e, t) => {
             break;
         case r.Cj.SEASONAL_CHEST:
             switch (t) {
-                case i.S.IDLE:
+                case i.SR.IDLE:
                     s = () =>
                         n
                             .e('97674')
@@ -248,7 +248,7 @@ let s = (e, t) => {
                                 return t;
                             });
                     break;
-                case i.S.LOOP:
+                case i.SR.LOOP:
                     s = () =>
                         n
                             .e('37357')
@@ -271,7 +271,7 @@ let s = (e, t) => {
             break;
         case r.Cj.SEASONAL_COFFEE:
             switch (t) {
-                case i.S.IDLE:
+                case i.SR.IDLE:
                     s = () =>
                         n
                             .e('83646')
@@ -281,7 +281,7 @@ let s = (e, t) => {
                                 return t;
                             });
                     break;
-                case i.S.LOOP:
+                case i.SR.LOOP:
                     s = () =>
                         n
                             .e('92695')

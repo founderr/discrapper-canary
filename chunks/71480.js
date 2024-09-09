@@ -27,25 +27,25 @@ e.exports = function (e, t, n) {
         v = !!(n && n.IS_ITERATOR),
         C = !!(n && n.INTERRUPTED),
         y = r(t, N),
-        D = function (e) {
+        L = function (e) {
             return p && _(p, 'normal', e), new f(!0, e);
         },
-        L = function (e) {
-            return O ? (a(e), C ? y(e[0], e[1], D) : y(e[0], e[1])) : C ? y(e, D) : y(e);
+        D = function (e) {
+            return O ? (a(e), C ? y(e[0], e[1], L) : y(e[0], e[1])) : C ? y(e, L) : y(e);
         };
     if (R) p = e.iterator;
     else if (v) p = e;
     else {
         if (!(I = d(e))) throw E(s(e) + ' is not iterable');
         if (o(I)) {
-            for (m = 0, T = l(e); T > m; m++) if ((S = L(e[m])) && u(h, S)) return S;
+            for (m = 0, T = l(e); T > m; m++) if ((S = D(e[m])) && u(h, S)) return S;
             return new f(!1);
         }
         p = c(e, I);
     }
     for (g = R ? e.next : p.next; !(A = i(g, p)).done; ) {
         try {
-            S = L(A.value);
+            S = D(A.value);
         } catch (e) {
             _(p, 'throw', e);
         }

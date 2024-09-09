@@ -15,7 +15,7 @@ n.d(t, {
         return R;
     },
     j3: function () {
-        return D;
+        return L;
     }
 });
 var r = n(735250),
@@ -184,7 +184,7 @@ function y() {
         })
     });
 }
-function D(e) {
+function L(e) {
     var t, n;
     let { location: a } = e;
     i.useEffect(() => {

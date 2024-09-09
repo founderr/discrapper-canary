@@ -41,8 +41,8 @@ let E = (e) => {
                             null != E
                                 ? (0, i.jsx)(d.Z, {
                                       giftStyle: E,
-                                      defaultAnimationState: c.S.ACTION,
-                                      idleAnimationState: c.S.LOOP,
+                                      defaultAnimationState: c.SR.ACTION,
+                                      idleAnimationState: c.SR.LOOP,
                                       shouldAnimate: !0,
                                       className: f.animation
                                   })

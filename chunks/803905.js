@@ -27,7 +27,7 @@ n.d(t, {
         return S;
     },
     Uw: function () {
-        return L;
+        return D;
     },
     ZE: function () {
         return M;
@@ -63,7 +63,7 @@ n.d(t, {
         return E;
     },
     qH: function () {
-        return D;
+        return L;
     },
     tj: function () {
         return p;
@@ -133,8 +133,8 @@ let _ = new d(r.q.ANIMATED_EMOJIS),
     v = new d('freeBoosts'),
     C = new d(r.q.STREAM_MID_QUALITY),
     y = new d(r.q.STREAM_HIGH_QUALITY),
-    D = new d(r.q.CUSTOM_NOTIFICATION_SOUNDS),
-    L = new d('fancyVoiceChannelReactions'),
+    L = new d(r.q.CUSTOM_NOTIFICATION_SOUNDS),
+    D = new d('fancyVoiceChannelReactions'),
     b = new d('installPremiumApplications'),
     M = new d('redeemPremiumPerks'),
     P = new d(r.q.VIDEO_FILTER_ASSETS);
@@ -145,8 +145,8 @@ let U = new d(r.q.INCREASED_GUILD_LIMIT),
     G = new d('uploadLargeFiles'),
     k = Object.freeze({
         [l.Si.TIER_0]: new o.Z(l.Si.TIER_0, [_, E, f, S, P, x, G, N]),
-        [l.Si.TIER_1]: new o.Z(l.Si.TIER_1, [_, E, I, m, S, R, C, L, x, G, N]),
-        [l.Si.TIER_2]: new o.Z(l.Si.TIER_2, [_, E, f, h, p, I, m, T, S, g, O, R, v, C, y, L, b, M, P, U, w, x, G, N, A, D])
+        [l.Si.TIER_1]: new o.Z(l.Si.TIER_1, [_, E, I, m, S, R, C, D, x, G, N]),
+        [l.Si.TIER_2]: new o.Z(l.Si.TIER_2, [_, E, f, h, p, I, m, T, S, g, O, R, v, C, y, D, b, M, P, U, w, x, G, N, A, L])
     });
 function B(e, t) {
     return e.getFeatureValue(t);

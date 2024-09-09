@@ -216,14 +216,14 @@ var t, r;
             return G.test(e) || y.test(e) || v.test(e) || b.test(e) || B.test(e) || w.test(e);
         };
         var K = _.type,
-            k = function () {
+            V = function () {
                 for (var e = [], t = arguments.length; t--; ) e[t] = arguments[t];
                 var r = h(e, 'rgba'),
                     n = C(e) || 'rgb';
                 return 'hsl' == n.substr(0, 3) ? g(D(r), n) : ((r[0] = M(r[0])), (r[1] = M(r[1])), (r[2] = M(r[2])), ('rgba' === n || (r.length > 3 && r[3] < 1)) && ((r[3] = r.length > 3 ? r[3] : 1), (n = 'rgba')), n + '(' + r.slice(0, 'rgb' === n ? 3 : 4).join(',') + ')');
             };
         (u.prototype.css = function (e) {
-            return k(this._rgb, e);
+            return V(this._rgb, e);
         }),
             (l.css = function () {
                 for (var e = [], t = arguments.length; t--; ) e[t] = arguments[t];
@@ -237,10 +237,10 @@ var t, r;
                     if (!t.length && 'string' === K(e) && Y.test(e)) return 'css';
                 }
             });
-        var V = _.unpack;
+        var k = _.unpack;
         (E.format.gl = function () {
             for (var e = [], t = arguments.length; t--; ) e[t] = arguments[t];
-            var r = V(e, 'rgba');
+            var r = k(e, 'rgba');
             return (r[0] *= 255), (r[1] *= 255), (r[2] *= 255), r;
         }),
             (l.gl = function () {
@@ -566,8 +566,8 @@ var t, r;
                 }
             });
         var eK = _.unpack,
-            ek = _.RAD2DEG,
-            eV = Math.sqrt,
+            eV = _.RAD2DEG,
+            ek = Math.sqrt,
             ex = Math.atan2,
             eF = Math.round,
             eW = function () {
@@ -576,8 +576,8 @@ var t, r;
                     n = r[0],
                     a = r[1],
                     o = r[2],
-                    i = eV(a * a + o * o),
-                    _ = (ex(o, a) * ek + 360) % 360;
+                    i = ek(a * a + o * o),
+                    _ = (ex(o, a) * eV + 360) % 360;
                 return 0 === eF(10000 * i) && (_ = Number.NaN), [n, i, _];
             },
             eX = _.unpack,
@@ -1158,8 +1158,8 @@ var t, r;
         };
         var tY = _.clip_rgb,
             tK = Math.pow,
-            tk = Math.sqrt,
-            tV = Math.PI,
+            tV = Math.sqrt,
+            tk = Math.PI,
             tx = Math.cos,
             tF = Math.sin,
             tW = Math.atan2,
@@ -1170,7 +1170,7 @@ var t, r;
                         _ = o._rgb;
                     (n[0] += tK(_[0], 2) * i), (n[1] += tK(_[1], 2) * i), (n[2] += tK(_[2], 2) * i), (n[3] += _[3] * i);
                 }
-                return (n[0] = tk(n[0])), (n[1] = tk(n[1])), (n[2] = tk(n[2])), n[3] > 0.9999999 && (n[3] = 1), new u(tY(n));
+                return (n[0] = tV(n[0])), (n[1] = tV(n[1])), (n[2] = tV(n[2])), n[3] > 0.9999999 && (n[3] = 1), new u(tY(n));
             },
             tj = _.type,
             t$ = Math.pow,
@@ -1599,9 +1599,9 @@ var t, r;
                             return e - t;
                         })),
                             _.push(Y[0]);
-                        for (var k = 1; k < Y.length; k += 2) {
-                            var V = Y[k];
-                            !isNaN(V) && -1 === _.indexOf(V) && _.push(V);
+                        for (var V = 1; V < Y.length; V += 2) {
+                            var k = Y[V];
+                            !isNaN(k) && -1 === _.indexOf(k) && _.push(k);
                         }
                     }
                     return _;
@@ -1689,7 +1689,7 @@ var t, r;
                     return tX(e, r);
                 for (var o = e.shift(), i = o.get(t), _ = [], E = 0, s = 0, c = 0; c < i.length; c++)
                     if (((i[c] = (i[c] || 0) * r[0]), _.push(isNaN(i[c]) ? 0 : r[0]), 'h' === t.charAt(c) && !isNaN(i[c]))) {
-                        var I = (i[c] / 180) * tV;
+                        var I = (i[c] / 180) * tk;
                         (E += tx(I) * r[0]), (s += tF(I) * r[0]);
                     }
                 var l = o.alpha() * r[0];
@@ -1699,14 +1699,14 @@ var t, r;
                     for (var o = 0; o < i.length; o++)
                         if (!isNaN(a[o])) {
                             if (((_[o] += r[n + 1]), 'h' === t.charAt(o))) {
-                                var c = (a[o] / 180) * tV;
+                                var c = (a[o] / 180) * tk;
                                 (E += tx(c) * r[n + 1]), (s += tF(c) * r[n + 1]);
                             } else i[o] += a[o] * r[n + 1];
                         }
                 });
                 for (var R = 0; R < i.length; R++)
                     if ('h' === t.charAt(R)) {
-                        for (var A = (tW(s / _[R], E / _[R]) / tV) * 180; A < 0; ) A += 360;
+                        for (var A = (tW(s / _[R], E / _[R]) / tk) * 180; A < 0; ) A += 360;
                         for (; A >= 360; ) A -= 360;
                         i[R] = A;
                     } else i[R] = i[R] / _[R];

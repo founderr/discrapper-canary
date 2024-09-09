@@ -97,7 +97,7 @@ class T extends s.Z {
     }
     constructor() {
         super({
-            CACHE_LOADED_LAZY_NO_CACHE: D,
+            CACHE_LOADED_LAZY_NO_CACHE: L,
             CACHE_LOADED_LAZY: () => this.loadCache(),
             CHANNEL_DELETE: O,
             CHANNEL_UPDATES: N,
@@ -140,7 +140,7 @@ function C(e) {
 function y(e) {
     p.clear(), I.clear(), (m = !1);
 }
-function D(e) {
+function L(e) {
     m = !0;
 }
 f(T, 'displayName', 'SaveableChannelsStore'), f(T, 'LATEST_SNAPSHOT_VERSION', 1), (t.ZP = new T());

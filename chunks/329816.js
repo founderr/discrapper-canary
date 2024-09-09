@@ -25,8 +25,8 @@ var r = n(735250),
     v = n(327943),
     C = n(907459),
     y = n(559407),
-    D = n(556766),
-    L = n(514361),
+    L = n(556766),
+    D = n(514361),
     b = n(724145),
     M = n(260035),
     P = n(482215),
@@ -88,7 +88,7 @@ t.Z = function (e) {
         m = u.tq || u.Em,
         W = (0, c.e7)([H.Z], () => (H.Z.darkSidebar ? en.BRd.DARK : void 0)),
         q = (0, c.e7)([S.Z], () => (S.Z.useForcedColors ? 'yes' : 'no')),
-        [et, eo, el] = (0, c.Wu)([L.Z], () => [L.Z.isEditorOpen, L.Z.isCoachmark, L.Z.isPreview]),
+        [et, eo, el] = (0, c.Wu)([D.Z], () => [D.Z.isEditorOpen, D.Z.isCoachmark, D.Z.isPreview]),
         [eu, ec] = (0, c.Wu)([v.Z], () => [v.Z.isEditorOpen, v.Z.isUpsellPreview]),
         ed = (0, c.e7)([Y.Z], () => Y.Z.getLayers().includes(en.S9g.USER_SETTINGS)),
         e_ = (0, c.e7)([j.default], () => z.ZP.canUseClientThemes(j.default.getCurrentUser())),
@@ -192,7 +192,7 @@ t.Z = function (e) {
                                                                     })
                                                                 })
                                                             }),
-                                                            (0, r.jsx)(D.Z, {}),
+                                                            (0, r.jsx)(L.Z, {}),
                                                             (0, r.jsx)(h.Z, {}),
                                                             eS && !eN && (0, r.jsx)(b.Z, { markAsDismissed: ep }),
                                                             eg &&

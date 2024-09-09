@@ -21,8 +21,8 @@ var i = s(735250),
     T = s(745510),
     C = s(313201),
     x = s(925329),
-    _ = s(703656),
-    R = s(763296),
+    R = s(703656),
+    _ = s(763296),
     A = s(82142),
     N = s(283595),
     O = s(594174),
@@ -72,7 +72,7 @@ let W = (e) => {
             n.useEffect(() => {
                 var e;
                 if (t !== H.wZ8.CONFIRM) return;
-                let i = R.Z.getSoundById(s);
+                let i = _.Z.getSoundById(s);
                 (0, F.playGiftSound)(s, null !== (e = null == i ? void 0 : i.volume) && void 0 !== e ? e : 1);
             }, [t, s]),
             null
@@ -183,7 +183,7 @@ class q extends n.Component {
             { isCustomGift: g, isCollectiblesGift: I, accepted: Z, opened: S, emojiURL: E } = this.state,
             T = O.default.getCurrentUser(),
             C = this.step === H.wZ8.ERROR,
-            _ = (null == n ? void 0 : n.userId) != null && null != T && (null == T ? void 0 : T.id) != null && n.userId === T.id;
+            R = (null == n ? void 0 : n.userId) != null && null != T && (null == T ? void 0 : T.id) != null && n.userId === T.id;
         switch (this.step) {
             case H.wZ8.ERROR:
                 null == d || d(n, !1);
@@ -277,7 +277,7 @@ class q extends n.Component {
                                     !C &&
                                     null != c &&
                                     '' !== c &&
-                                    !_ &&
+                                    !R &&
                                     (0, i.jsxs)(i.Fragment, {
                                         children: [
                                             (0, i.jsx)(u.FormTitle, { children: B.Z.Messages.GIFT_SENDER_INFO.format({ sender: w.ZP.getName(m) }) }),
@@ -357,14 +357,14 @@ class q extends n.Component {
             }),
             Q(this, 'handleGoToLibrary', () => {
                 let { onClose: e, libraryApplication: t } = this.props;
-                (0, _.uL)(H.Z5c.APPLICATION_LIBRARY, { state: { applicationId: null != t ? t.id : void 0 } }), e();
+                (0, R.uL)(H.Z5c.APPLICATION_LIBRARY, { state: { applicationId: null != t ? t.id : void 0 } }), e();
             }),
             Q(this, 'getDefaultAnimationStatus', () => {
-                if (this.step === H.wZ8.OPEN) return G.S.IDLE;
-                return G.S.ACTION;
+                if (this.step === H.wZ8.OPEN) return G.SR.IDLE;
+                return G.SR.ACTION;
             }),
             Q(this, 'getIdleAnimationStatus', () => {
-                if (this.step !== H.wZ8.OPEN) return G.S.LOOP;
+                if (this.step !== H.wZ8.OPEN) return G.SR.LOOP;
             });
     }
 }

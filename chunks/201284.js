@@ -82,11 +82,11 @@ function u(e) {
             O = (0, r.useRef)(s),
             [R, v] = (0, r.useState)(s),
             C = (0, r.useRef)(s),
-            [y, D] = (0, r.useState)(!1);
+            [y, L] = (0, r.useState)(!1);
         return (
             (0, r.useEffect)(() => {
                 if (!y) return;
-                D(!1);
+                L(!1);
                 let e = p || u || O.current;
                 !_(e, C.current) && ((C.current = e), v(e));
             }),
@@ -97,10 +97,10 @@ function u(e) {
                     'aria' !== f || _(R, e) ? (O.current = e) : v(e);
                 },
                 resetValidation() {
-                    !_(s, C.current) && ((C.current = s), v(s)), 'native' === f && D(!1), A(!0);
+                    !_(s, C.current) && ((C.current = s), v(s)), 'native' === f && L(!1), A(!0);
                 },
                 commitValidation() {
-                    'native' === f && D(!0), A(!0);
+                    'native' === f && L(!0), A(!0);
                 }
             }
         );

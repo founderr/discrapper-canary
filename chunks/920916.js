@@ -35,8 +35,8 @@ var r = n(735250),
     v = n(566078),
     C = n(114732),
     y = n(46140),
-    D = n(675654),
-    L = n(689938),
+    L = n(675654),
+    D = n(689938),
     b = n(443100);
 function M() {
     let e = g.Z.getAllPending(),
@@ -52,14 +52,14 @@ function P(e) {
         g = (0, u.e7)([_.Z], () => _.Z.useReducedMotion),
         v = (0, u.e7)([A.default], () => A.default.getCurrentUser()),
         y = (0, R.j8)(l),
-        L = (null === (t = l.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null,
-        [M, P] = i.useState(L ? 'claimed' : 'loading');
+        D = (null === (t = l.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null,
+        [M, P] = i.useState(D ? 'claimed' : 'loading');
     i.useEffect(() => {
-        !L &&
+        !D &&
             (0, N.QB)(l.id, O.y$.CROSS_PLATFORM, d)
                 .then(() => P('claimed'))
                 .catch(() => P('error'));
-    }, [l, d, L]);
+    }, [l, d, D]);
     let U = null == v || null == f || 'loading' === M;
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -96,13 +96,13 @@ function P(e) {
                 })
             }),
             !g &&
-                !L &&
+                !D &&
                 'claimed' === M &&
                 (0, r.jsx)(p.Z, {
                     confettiTarget: I.current,
                     confettiCanvas: m,
-                    sprites: D.CA,
-                    colors: D.Br
+                    sprites: L.CA,
+                    colors: L.Br
                 })
         ]
     });
@@ -131,8 +131,8 @@ function w(e) {
         E = (0, R.Kr)(t.config),
         h =
             null == E
-                ? L.Z.Messages.QUESTS_REWARD_AVATAR_DECORATION_BODY.format({ decorationName: a })
-                : L.Z.Messages.QUESTS_REWARD_AVATAR_DECORATION_BODY_WITH_EXPIRATION.format({
+                ? D.Z.Messages.QUESTS_REWARD_AVATAR_DECORATION_BODY.format({ decorationName: a })
+                : D.Z.Messages.QUESTS_REWARD_AVATAR_DECORATION_BODY_WITH_EXPIRATION.format({
                       decorationName: a,
                       duration: E
                   });
@@ -182,7 +182,7 @@ function w(e) {
                             variant: 'heading-lg/bold',
                             color: 'always-white',
                             className: b.heading,
-                            children: L.Z.Messages.QUESTS_REWARD_AVATAR_DECORATION_HEADER
+                            children: D.Z.Messages.QUESTS_REWARD_AVATAR_DECORATION_HEADER
                         }),
                         (0, r.jsx)(c.Text, {
                             variant: 'text-sm/normal',
@@ -193,7 +193,7 @@ function w(e) {
                         (0, r.jsx)(c.Button, {
                             submitting: u,
                             onClick: _,
-                            children: L.Z.Messages.COLLECTIBLES_USE_NOW
+                            children: D.Z.Messages.COLLECTIBLES_USE_NOW
                         }),
                         (0, R.zK)(t, y.S7.ADDITIONAL_REDEMPTION_INSTRUCTIONS) && (0, r.jsx)(U, { quest: t })
                     ]

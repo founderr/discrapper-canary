@@ -43,7 +43,7 @@ t.Z = l.ZP.connectStores([p.Z, c.Z, g.Z, E.default], (e) => {
             children: [
                 null != n.giftStyle
                     ? (0, s.jsx)(h.Z, {
-                          defaultAnimationState: _.S.LOOP,
+                          defaultAnimationState: _.SR.LOOP,
                           giftStyle: n.giftStyle,
                           className: T.seasonalIcon
                       })
