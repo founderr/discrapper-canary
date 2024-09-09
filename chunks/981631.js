@@ -4919,6 +4919,7 @@ let it = Object.freeze({
     (nf.POST_ACTION_UPSELL_DISMISSED = 'post_action_upsell_dismissed'),
     (nf.POST_ACTION_UPSELL_PRIMARY_ACTION_CLICKED = 'post_action_upsell_primary_action_clicked'),
     (nf.POST_ACTION_UPSELL_SECONDARY_ACTION_CLICKED = 'post_action_upsell_secondary_action_clicked'),
+    (nf.FRIEND_ANNIVERSARIES_CHANNEL_VIEWED = 'friend_anniversaries_channel_viewed'),
     ((nS = eW || (eW = {})).CANARY = 'canary'),
     (nS.PTB = 'ptb'),
     (nS.STABLE = 'stable'),
