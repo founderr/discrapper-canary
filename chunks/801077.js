@@ -265,12 +265,15 @@ let er = o().throttle(() => {
                     }))
                 )
             ).filter((e) => {
-                let t = ((0, I.NH)('now-playing-view-store'), e.partiedMembers.some((e) => D.Z.isBlocked(e.id))),
-                    n = e.voiceChannels.every((e) => {
-                        let { voiceStates: t } = e;
-                        return Object.values(t).every((e) => !1 === e.discoverable);
-                    });
-                return (e.voiceChannels.length >= 1 || e.currentActivities.length > 0 || e.applicationStreams.length > 0) && !t && !n;
+                let t = (0, I.NH)('now-playing-view-store') || !0,
+                    n = t && e.partiedMembers.some((e) => D.Z.isBlocked(e.id)),
+                    i =
+                        t &&
+                        e.voiceChannels.every((e) => {
+                            let { voiceStates: t } = e;
+                            return Object.values(t).every((e) => !1 === e.discoverable);
+                        });
+                return (e.voiceChannels.length >= 1 || e.currentActivities.length > 0 || e.applicationStreams.length > 0) && !n && !i;
             })).map((e) => ({
                 type: k.GOo.USER,
                 party: e

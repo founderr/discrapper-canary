@@ -413,6 +413,12 @@ let ej = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 parent: eD.s6.PRIVACY_SERVER_SPECIFIC_SETTINGS,
                 predicate: () => !eX
             },
+            [eD.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_MESSAGE_REQUESTS_V2]: {
+                section: eP.oAB.PRIVACY_AND_SAFETY_V2,
+                searchableTitles: [eZ.Z.Messages.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_MESSAGE_REQUESTS_SETTING_TITLE],
+                parent: eD.s6.PRIVACY_AND_SAFETY_SERVER_SELECTOR,
+                predicate: () => !eX
+            },
             [eD.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_ACTIVITY_STATUS]: {
                 section: eP.oAB.PRIVACY_AND_SAFETY,
                 searchableTitles: [eZ.Z.Messages.PRIVACY_SETTINGS_ACTIVITY_STATUS],
