@@ -53,7 +53,10 @@ function u(e) {
             n = (0, l.jsx)(a.TextInput, { ...T });
             break;
         case r.FO.PARAGRAPH:
-            n = (0, l.jsx)(a.TextArea, { ...T });
+            n = (0, l.jsx)(a.TextArea, {
+                autosize: !0,
+                ...T
+            });
     }
     return (0, l.jsx)(a.FormItem, {
         title: d,
