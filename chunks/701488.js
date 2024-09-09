@@ -1,123 +1,120 @@
 n.d(t, {
     AC: function () {
-        return $;
+        return Q;
     },
     Cb: function () {
-        return H;
-    },
-    ES: function () {
-        return u;
+        return F;
     },
     Ec: function () {
-        return x;
+        return U;
     },
     Es: function () {
-        return z;
+        return W;
     },
     Ev: function () {
-        return R;
+        return N;
     },
     Fr: function () {
-        return O;
+        return A;
     },
     Fu: function () {
-        return K;
-    },
-    GR: function () {
-        return M;
-    },
-    Gv: function () {
-        return V;
-    },
-    IF: function () {
-        return B;
-    },
-    In: function () {
         return j;
     },
+    GR: function () {
+        return D;
+    },
+    Gv: function () {
+        return B;
+    },
+    IF: function () {
+        return G;
+    },
+    In: function () {
+        return Z;
+    },
     JT: function () {
-        return W;
+        return Y;
     },
     K8: function () {
         return r;
     },
     MO: function () {
-        return D;
+        return C;
     },
     OF: function () {
-        return ei;
+        return en;
     },
     P9: function () {
-        return X;
+        return q;
     },
     PD: function () {
-        return P;
+        return b;
     },
     Pc: function () {
-        return J;
+        return X;
     },
     S4: function () {
         return a;
     },
     Si: function () {
-        return q;
+        return K;
     },
     W0: function () {
-        return c;
+        return u;
     },
     Ws: function () {
         return i;
     },
     Zc: function () {
-        return F;
+        return k;
     },
     ag: function () {
         return l;
     },
     am: function () {
-        return w;
+        return P;
     },
     cE: function () {
-        return d;
+        return c;
     },
     cc: function () {
-        return N;
+        return g;
     },
     eB: function () {
-        return Q;
+        return z;
     },
     f9: function () {
-        return Y;
+        return H;
     },
     fE: function () {
-        return k;
+        return x;
     },
     jT: function () {
-        return U;
+        return M;
     },
     js: function () {
-        return L;
+        return y;
     },
     l4: function () {
-        return G;
+        return w;
     },
     mI: function () {
-        return b;
+        return L;
     },
     qG: function () {
-        return Z;
+        return V;
     },
     qm: function () {
-        return v;
+        return O;
     },
     um: function () {
-        return ee;
+        return $;
     },
     wP: function () {
-        return er;
+        return et;
     },
     wT: function () {
-        return en;
+        return ee;
     },
     xK: function () {
         return o;
@@ -140,66 +137,64 @@ var r,
     p,
     I,
     m,
-    T,
-    S,
-    g = n(911969),
-    A = n(981631);
-let N = 160,
-    O = /^https?:\/\/(?:www\.)?(twitch\.tv\/(.+)|youtube.com\/watch\?v=)/,
-    R = '438122941302046720',
-    v = '773336526917861400',
-    C = '880218832743055411',
-    y = '1050941315912835122',
-    D = '1070087967294631976',
-    L = '1007373802981822582',
-    b = '1039835161136746497',
-    M = '852509694341283871',
-    P = '903769130790969345',
-    U = '880218394199220334',
-    w = '1078728822972764312',
-    x = '947957217959759964',
-    G = '832013003968348200',
-    k = '832012774040141894',
-    B = '832025144389533716',
-    F = '755827207812677713',
-    V = '879863686565621790',
-    H = '902271654783242291',
-    Z = '1037680572660727838',
-    Y = '945737671223947305',
-    j = '1011683823555199066',
-    W = '1234546995360694434',
-    K = '1214629548377768066',
-    z = 'https://discord.sjc1.qualtrics.com/jfe/form/SV_6SvWAOxlcSRWiEu',
-    q = {
+    T = n(911969),
+    S = n(981631);
+let g = 160,
+    A = /^https?:\/\/(?:www\.)?(twitch\.tv\/(.+)|youtube.com\/watch\?v=)/,
+    N = '438122941302046720',
+    O = '773336526917861400',
+    R = '880218832743055411',
+    v = '1050941315912835122',
+    C = '1070087967294631976',
+    y = '1007373802981822582',
+    L = '1039835161136746497',
+    D = '852509694341283871',
+    b = '903769130790969345',
+    M = '880218394199220334',
+    P = '1078728822972764312',
+    U = '947957217959759964',
+    w = '832013003968348200',
+    x = '832012774040141894',
+    G = '832025144389533716',
+    k = '755827207812677713',
+    B = '879863686565621790',
+    F = '902271654783242291',
+    V = '1037680572660727838',
+    H = '945737671223947305',
+    Z = '1011683823555199066',
+    Y = '1234546995360694434',
+    j = '1214629548377768066',
+    W = 'https://discord.sjc1.qualtrics.com/jfe/form/SV_6SvWAOxlcSRWiEu',
+    K = {
         SMALL: 64,
         LARGE: 160
     },
-    Q = ['in_development', 'activities_team', 'employee_release'],
-    X = [Z, '235088799074484224', L, '1067803140071620628', '1194351737264406548', '1245041113882955918', '1245040907732910201', '1245040436427489471', '1208090049871351890', '1235205910863806484', '1220052815590723654', '1222080278672179220', '1227719606223765687'];
-((_ = r || (r = {})).ADS = 'ADS'), (_.FAILED_LOAD = 'FAILED_LOAD'), (_.LAGGING = 'LAGGING'), (_.CONFUSING = 'CONFUSING'), (_.NOT_FUN = 'NOT_FUN'), (_.OTHER = 'OTHER'), ((E = i || (i = {}))[(E.PLAY = 0)] = 'PLAY'), (E[(E.SPECTATE = 1)] = 'SPECTATE'), ((f = a || (a = {})).DESKTOP = 'desktop'), (f.MOBILE = 'mobile'), ((h = s || (s = {})).BETRAYAL_MARKETING_TOOLTIP = 'BETRAYAL_MARKETING_TOOLTIP'), (h.FISHINGTON_MARKETING_TOOLTIP = 'FISHINGTON_MARKETING_TOOLTIP'), (h.POKER_MARKETING_TOOLTIP = 'POKER_MARKETING_TOOLTIP'), (h.YOUTUBE_MARKETING_TOOLTIP = 'YOUTUBE_MARKETING_TOOLTIP'), ((p = o || (o = {}))[(p.UNLOCKED = 1)] = 'UNLOCKED'), (p[(p.PORTRAIT = 2)] = 'PORTRAIT'), (p[(p.LANDSCAPE = 3)] = 'LANDSCAPE'), ((I = l || (l = {}))[(I.DIRECTORY = 0)] = 'DIRECTORY'), (I[(I.SELECT_CHANNEL = 1)] = 'SELECT_CHANNEL'), (I[(I.DETAIL_PAGE = 2)] = 'DETAIL_PAGE');
-let $ = 'activity-shelf',
-    J = new Set(['755600276941176913', C, y, U]),
-    ee = new Set([C, y, U]);
-((m = u || (u = {})).DISCORD_TURNS_8 = 'DISCORD_TURNS_8'), (m.GDM_ACTIVITIES = 'GDM_ACTIVITIES'), (m.PUTT_PARTY = 'PUTT_PARTY'), (m.JAMSPACE_OLD = 'JAMSPACE'), (m.JAMSPACE = 'JAMSPACE2'), (m.POKER = 'POKER'), (m.FREE = 'FREE'), ((T = c || (c = {}))[(T.PORTRAIT = 0)] = 'PORTRAIT'), (T[(T.LANDSCAPE = 1)] = 'LANDSCAPE'), ((S = d || (d = {}))[(S.FOCUSED = 0)] = 'FOCUSED'), (S[(S.PIP = 1)] = 'PIP'), (S[(S.GRID = 2)] = 'GRID');
-let et = {
-        label_type: g.ww.NONE,
+    z = ['in_development', 'activities_team', 'employee_release'],
+    q = [V, '235088799074484224', y, '1067803140071620628', '1194351737264406548', '1245041113882955918', '1245040907732910201', '1245040436427489471', '1208090049871351890', '1235205910863806484', '1220052815590723654', '1222080278672179220', '1227719606223765687'];
+((d = r || (r = {})).ADS = 'ADS'), (d.FAILED_LOAD = 'FAILED_LOAD'), (d.LAGGING = 'LAGGING'), (d.CONFUSING = 'CONFUSING'), (d.NOT_FUN = 'NOT_FUN'), (d.OTHER = 'OTHER'), ((_ = i || (i = {}))[(_.PLAY = 0)] = 'PLAY'), (_[(_.SPECTATE = 1)] = 'SPECTATE'), ((E = a || (a = {})).DESKTOP = 'desktop'), (E.MOBILE = 'mobile'), ((f = s || (s = {})).BETRAYAL_MARKETING_TOOLTIP = 'BETRAYAL_MARKETING_TOOLTIP'), (f.FISHINGTON_MARKETING_TOOLTIP = 'FISHINGTON_MARKETING_TOOLTIP'), (f.POKER_MARKETING_TOOLTIP = 'POKER_MARKETING_TOOLTIP'), (f.YOUTUBE_MARKETING_TOOLTIP = 'YOUTUBE_MARKETING_TOOLTIP'), ((h = o || (o = {}))[(h.UNLOCKED = 1)] = 'UNLOCKED'), (h[(h.PORTRAIT = 2)] = 'PORTRAIT'), (h[(h.LANDSCAPE = 3)] = 'LANDSCAPE'), ((p = l || (l = {}))[(p.DIRECTORY = 0)] = 'DIRECTORY'), (p[(p.SELECT_CHANNEL = 1)] = 'SELECT_CHANNEL'), (p[(p.DETAIL_PAGE = 2)] = 'DETAIL_PAGE');
+let Q = 'activity-shelf',
+    X = new Set(['755600276941176913', R, v, M]),
+    $ = new Set([R, v, M]);
+((I = u || (u = {}))[(I.PORTRAIT = 0)] = 'PORTRAIT'), (I[(I.LANDSCAPE = 1)] = 'LANDSCAPE'), ((m = c || (c = {}))[(m.FOCUSED = 0)] = 'FOCUSED'), (m[(m.PIP = 1)] = 'PIP'), (m[(m.GRID = 2)] = 'GRID');
+let J = {
+        label_type: T.ww.NONE,
         release_phase: '',
         label_until: null
     },
-    en = {
+    ee = {
         application_id: '',
         requires_age_gate: !1,
         legacy_responsive_aspect_ratio: !1,
         default_orientation_lock_state: 1,
         tablet_default_orientation_lock_state: 1,
-        supported_platforms: [g.C3.WEB],
+        supported_platforms: [T.C3.WEB],
         client_platform_config: {
-            [g.C3.WEB]: et,
-            [g.C3.IOS]: et,
-            [g.C3.ANDROID]: et
+            [T.C3.WEB]: J,
+            [T.C3.IOS]: J,
+            [T.C3.ANDROID]: J
         },
         has_csp_exception: !1,
         displays_advertisements: !1
     },
-    er = [A.d4z.GUILD_TEXT, A.d4z.DM, A.d4z.GROUP_DM],
-    ei = 'https://support-dev.discord.com/hc/en-us/articles/21692628851351-Private-Activity-Safety';
+    et = [S.d4z.GUILD_TEXT, S.d4z.DM, S.d4z.GROUP_DM],
+    en = 'https://support-dev.discord.com/hc/en-us/articles/21692628851351-Private-Activity-Safety';

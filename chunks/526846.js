@@ -1,6 +1,6 @@
 n.d(t, {
     m: function () {
-        return L;
+        return A;
     }
 }),
     n(47120);
@@ -8,178 +8,158 @@ var i = n(735250),
     s = n(470079),
     a = n(120356),
     l = n.n(a),
-    r = n(613828),
-    o = n(772848),
-    c = n(442837),
-    u = n(481060),
-    d = n(2052),
-    h = n(40851),
-    m = n(607070),
-    p = n(100527),
-    _ = n(906732),
-    f = n(210887),
-    E = n(390322),
-    g = n(626135),
-    C = n(348600),
-    I = n(566620),
-    x = n(127255),
-    T = n(5200),
-    v = n(558317),
-    S = n(403404),
-    N = n(981631),
-    A = n(689938),
-    Z = n(57241),
-    M = n(587952),
-    b = n(736733);
-let R = 'vc-activities-'.concat((0, o.Z)()),
-    L = s.forwardRef(function (e, t) {
-        let { channel: n, isHovered: a, closePopout: o, onMouseEnter: L, onMouseLeave: j, onClick: P, className: O } = e,
-            { enabled: y } = C.Z.useExperiment({ location: '8009ca_3' }),
-            D = (0, c.e7)([f.Z], () => f.Z.getState().theme),
-            k = (0, c.e7)([m.Z], () => m.Z.useReducedMotion),
-            { id: U, guild_id: w } = n;
+    r = n(772848),
+    o = n(442837),
+    c = n(481060),
+    u = n(2052),
+    d = n(40851),
+    h = n(607070),
+    m = n(100527),
+    p = n(906732),
+    _ = n(390322),
+    f = n(626135),
+    E = n(566620),
+    g = n(127255),
+    C = n(5200),
+    I = n(558317),
+    x = n(403404),
+    T = n(981631),
+    v = n(689938),
+    S = n(57241);
+let N = 'vc-activities-'.concat((0, r.Z)()),
+    A = s.forwardRef(function (e, t) {
+        let { channel: n, isHovered: a, closePopout: r, onMouseEnter: A, onMouseLeave: Z, onClick: M, className: b } = e,
+            R = (0, o.e7)([h.Z], () => h.Z.useReducedMotion),
+            { id: L, guild_id: j } = n;
         s.useEffect(() => {
-            g.default.track(N.rMx.ACTIVITIES_CENTER_CONTROL_TRAY_BUTTON_HOVERED, {
-                channel_id: U,
-                guild_id: w
+            f.default.track(T.rMx.ACTIVITIES_CENTER_CONTROL_TRAY_BUTTON_HOVERED, {
+                channel_id: L,
+                guild_id: j
             });
-        }, [U, w]),
+        }, [L, j]),
             s.useEffect(() => {
-                !a && o();
-            }, [o, a]);
-        let B = (0, h.bp)(),
-            { analyticsLocations: H } = (0, _.ZP)(p.Z.ACTIVITIES_MINI_SHELF),
-            { analyticsLocations: G } = (0, _.ZP)([...H, p.Z.ACTIVITIES_MINI_SHELF_BANNER]),
-            V = B === N.IlC.POPOUT,
-            F = (0, d.O)(),
-            W = (function (e) {
-                return (0, x.Z)({ guildId: e }).slice(0, 5);
+                !a && r();
+            }, [r, a]);
+        let P = (0, d.bp)(),
+            { analyticsLocations: O } = (0, p.ZP)(m.Z.ACTIVITIES_MINI_SHELF),
+            { analyticsLocations: y } = (0, p.ZP)([...O, m.Z.ACTIVITIES_MINI_SHELF_BANNER]),
+            D = P === T.IlC.POPOUT,
+            k = (0, u.O)(),
+            U = (function (e) {
+                return (0, g.Z)({ guildId: e }).slice(0, 5);
             })(n.getGuildId());
         s.useEffect(() => {
-            let e = setTimeout(() => I.ux(), 1000);
+            let e = setTimeout(() => E.ux(), 1000);
             return () => clearTimeout(e);
         }, []);
-        let z = s.useCallback(() => {
+        let w = s.useCallback(() => {
                 var e;
-                (0, S.Z)({
+                (0, x.Z)({
                     channel: n,
                     guildId: null !== (e = n.getGuildId()) && void 0 !== e ? e : void 0,
-                    locationObject: F.location,
-                    openInPopout: V,
-                    analyticsLocations: H,
+                    locationObject: k.location,
+                    openInPopout: D,
+                    analyticsLocations: O,
                     opensAppLauncherModal: !0
                 }),
-                    j(),
-                    P();
-            }, [F, H, n, P, j, V]),
-            Y = s.useCallback(
+                    Z(),
+                    M();
+            }, [k, O, n, M, Z, D]),
+            B = s.useCallback(
                 (e) => {
-                    L(),
-                        g.default.track(N.rMx.ACTIVITIES_MINI_SHELF_HOVERED, {
+                    A(),
+                        f.default.track(T.rMx.ACTIVITIES_MINI_SHELF_HOVERED, {
                             channel_id: n.id,
                             guild_id: n.getGuildId()
                         });
                 },
-                [L, n]
-            ),
-            K = y
-                ? (0, i.jsxs)(r.rU, {
-                      to: N.Z5c.ACTIVITIES,
-                      children: [
-                          (0, i.jsx)('img', {
-                              alt: A.Z.Messages.EMBEDDED_ACTIVITIES_BIRTHDAY_ACTIVITIES_HERO_ALT,
-                              src: 'light' === D ? M : b,
-                              className: Z.poster
-                          }),
-                          (0, i.jsx)('div', { className: Z.posterDivider })
-                      ]
-                  })
-                : null;
-        return (0, i.jsx)(_.Gt, {
-            value: H,
-            children: (0, i.jsx)(E.Z, {
-                children: (0, i.jsxs)(u.Dialog, {
+                [A, n]
+            );
+        return (0, i.jsx)(p.Gt, {
+            value: O,
+            children: (0, i.jsx)(_.Z, {
+                children: (0, i.jsxs)(c.Dialog, {
                     ref: t,
-                    'aria-labelledby': R,
-                    className: O,
+                    'aria-labelledby': N,
+                    className: b,
                     children: [
-                        (0, i.jsx)(u.HeadingLevel, {
+                        (0, i.jsx)(c.HeadingLevel, {
                             forceLevel: 2,
-                            children: (0, i.jsx)(u.HiddenVisually, {
-                                children: (0, i.jsx)(u.H, {
-                                    id: R,
-                                    children: A.Z.Messages.EMBEDDED_ACTIVITIES_MINI_SHELF_TITLE
+                            children: (0, i.jsx)(c.HiddenVisually, {
+                                children: (0, i.jsx)(c.H, {
+                                    id: N,
+                                    children: v.Z.Messages.EMBEDDED_ACTIVITIES_MINI_SHELF_TITLE
                                 })
                             })
                         }),
                         (0, i.jsxs)('div', {
-                            className: Z.container,
-                            onMouseEnter: Y,
-                            onMouseLeave: j,
+                            className: S.container,
+                            onMouseEnter: B,
+                            onMouseLeave: Z,
                             children: [
                                 (0, i.jsxs)('div', {
-                                    className: Z.titleContainer,
+                                    className: S.titleContainer,
                                     children: [
                                         (0, i.jsxs)('div', {
-                                            className: Z.titleLeft,
+                                            className: S.titleLeft,
                                             children: [
-                                                (0, i.jsx)(u.ActivitiesIcon, {
+                                                (0, i.jsx)(c.ActivitiesIcon, {
                                                     size: 'md',
-                                                    className: Z.titleLeftIcon,
+                                                    className: S.titleLeftIcon,
                                                     color: 'var(--interactive-active)'
                                                 }),
-                                                (0, i.jsx)(u.Text, {
+                                                (0, i.jsx)(c.Text, {
                                                     variant: 'eyebrow',
-                                                    children: A.Z.Messages.EMBEDDED_ACTIVITIES_AUTO_SUGGEST_ACTIVITIES_TITLE
+                                                    children: v.Z.Messages.EMBEDDED_ACTIVITIES_AUTO_SUGGEST_ACTIVITIES_TITLE
                                                 })
                                             ]
                                         }),
-                                        (0, i.jsxs)(u.Clickable, {
-                                            className: Z.titleRight,
-                                            onClick: z,
+                                        (0, i.jsxs)(c.Clickable, {
+                                            className: S.titleRight,
+                                            onClick: w,
                                             children: [
-                                                (0, i.jsx)(u.Text, {
+                                                (0, i.jsx)(c.Text, {
                                                     variant: 'eyebrow',
-                                                    children: A.Z.Messages.EMBEDDED_ACTIVITIES_AUTO_SUGGEST_SEE_ALL
+                                                    children: v.Z.Messages.EMBEDDED_ACTIVITIES_AUTO_SUGGEST_SEE_ALL
                                                 }),
-                                                (0, i.jsx)(u.ChevronSmallRightIcon, {
+                                                (0, i.jsx)(c.ChevronSmallRightIcon, {
                                                     size: 'custom',
                                                     width: 12,
                                                     height: 12,
                                                     color: 'var(--interactive-active)',
-                                                    className: Z.titleRightIcon
+                                                    className: S.titleRightIcon
                                                 })
                                             ]
                                         })
                                     ]
                                 }),
-                                (0, i.jsx)(_.Gt, {
-                                    value: G,
-                                    children: K
+                                (0, i.jsx)(p.Gt, {
+                                    value: y,
+                                    children: null
                                 }),
                                 (0, i.jsxs)('div', {
-                                    className: Z.activityContainer,
+                                    className: S.activityContainer,
                                     children: [
-                                        W.map((e) =>
+                                        U.map((e) =>
                                             (0, i.jsx)(
-                                                T.Y,
+                                                C.Y,
                                                 {
                                                     channel: n,
                                                     activityItem: e,
                                                     onClick: () => {
-                                                        o(), P();
+                                                        r(), M();
                                                     },
-                                                    aspectRatio: T.Y.AspectRatio.THIRTEEN_BY_ELEVEN,
-                                                    animatedDivClass: Z.activitySuggestion
+                                                    aspectRatio: C.Y.AspectRatio.THIRTEEN_BY_ELEVEN,
+                                                    animatedDivClass: S.activitySuggestion
                                                 },
                                                 e.application.id
                                             )
                                         ),
                                         (0, i.jsx)('div', {
-                                            className: l()(Z.wumpusRocketOuterContainer, { [Z.wumpusReducedMotion]: k }),
+                                            className: l()(S.wumpusRocketOuterContainer, { [S.wumpusReducedMotion]: R }),
                                             children: (0, i.jsx)('div', {
-                                                className: Z.wumpusRocketInnerContainer,
-                                                children: (0, i.jsx)(v.Z, { className: Z.wumpusRocket })
+                                                className: S.wumpusRocketInnerContainer,
+                                                children: (0, i.jsx)(I.Z, { className: S.wumpusRocket })
                                             })
                                         })
                                     ]

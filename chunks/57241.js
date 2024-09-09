@@ -10,7 +10,5 @@ e.exports = {
     wumpusRocketOuterContainer: 'wumpusRocketOuterContainer_b572de',
     wumpusReducedMotion: 'wumpusReducedMotion_b572de',
     wumpusRocketInnerContainer: 'wumpusRocketInnerContainer_b572de',
-    wumpusRocket: 'wumpusRocket_b572de',
-    poster: 'poster_b572de',
-    posterDivider: 'posterDivider_b572de'
+    wumpusRocket: 'wumpusRocket_b572de'
 };

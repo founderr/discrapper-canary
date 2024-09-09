@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return es;
+        return et;
     }
 }),
     n(47120);
@@ -16,54 +16,51 @@ var i = n(735250),
     _ = n(952265),
     E = n(481060),
     h = n(493683),
-    m = n(348600),
-    I = n(257968),
-    g = n(367907),
-    p = n(770471),
-    T = n(158631),
-    S = n(143614),
-    C = n(463119),
-    f = n(377171),
-    N = n(243778),
-    A = n(922409),
-    v = n(899740),
-    L = n(28476),
-    Z = n(880257),
-    R = n(631885),
-    O = n(457396),
-    x = n(51596),
-    b = n(905423),
-    P = n(155409),
-    M = n(210887),
-    D = n(695346),
-    y = n(283595),
-    j = n(699516),
-    U = n(923834),
-    G = n(55563),
-    w = n(774343),
-    k = n(517802),
-    B = n(436088),
-    H = n(814225),
-    V = n(515753),
-    F = n(831218),
-    Y = n(339149),
-    W = n(981631),
-    z = n(689938),
-    K = n(308809);
-let q = (e) => {
+    m = n(367907),
+    I = n(770471),
+    g = n(158631),
+    p = n(143614),
+    T = n(463119),
+    S = n(377171),
+    C = n(243778),
+    f = n(922409),
+    N = n(899740),
+    A = n(28476),
+    v = n(880257),
+    L = n(631885),
+    Z = n(457396),
+    R = n(51596),
+    O = n(905423),
+    x = n(155409),
+    b = n(210887),
+    P = n(695346),
+    M = n(283595),
+    D = n(699516),
+    y = n(923834),
+    j = n(55563),
+    U = n(774343),
+    G = n(436088),
+    w = n(814225),
+    k = n(515753),
+    B = n(831218),
+    H = n(339149),
+    V = n(981631),
+    F = n(689938),
+    Y = n(308809);
+let W = (e) => {
         let { selected: t, ...n } = e,
             a = (0, o.JA)('friends'),
-            s = (0, d.e7)([j.Z], () => j.Z.getPendingCount()),
-            r = (0, S.Z)(),
-            { canViewBroadcasts: l } = p.Z.useExperiment({ location: 'friends_tab_no_track' }),
-            c = (0, T.ZP)();
-        return (0, i.jsxs)(V.Qj, {
+            s = (0, d.e7)([D.Z], () => D.Z.getPendingCount()),
+            r = (0, p.Z)(),
+            { canViewBroadcasts: l } = I.Z.useExperiment({ location: 'friends_tab_no_track' }),
+            c = (0, g.ZP)();
+        return (0, i.jsxs)(k.Qj, {
             selected: t,
-            route: W.Z5c.FRIENDS,
+            route: V.Z5c.FRIENDS,
             icon: E.FriendsIcon,
-            text: z.Z.Messages.FRIENDS,
+            text: F.Z.Messages.FRIENDS,
             onClick: () => {
-                g.ZP.trackWithMetadata(W.rMx.BROADCAST_LIST_VISITED, {
+                m.ZP.trackWithMetadata(V.rMx.BROADCAST_LIST_VISITED, {
                     num_active_broadcasts: r.length,
                     friends_tab_clicked: !0,
                     is_broadcasting: c
@@ -75,11 +72,11 @@ let q = (e) => {
                 r.length > 0 &&
                     l &&
                     (0, i.jsx)(E.TextBadge, {
-                        color: f.Z.BG_BRAND,
+                        color: S.Z.BG_BRAND,
                         text: (0, i.jsxs)('div', {
-                            className: K.broadcastingBadge,
+                            className: Y.broadcastingBadge,
                             children: [
-                                (0, i.jsx)(B.Z, { className: K.broadcastingIcon }),
+                                (0, i.jsx)(G.Z, { className: Y.broadcastingIcon }),
                                 (0, i.jsx)(E.Text, {
                                     variant: 'text-xs/semibold',
                                     color: 'always-white',
@@ -92,73 +89,56 @@ let q = (e) => {
             ]
         });
     },
-    Q = (e) => {
+    z = (e) => {
         let { selected: t, hideGameUpdateProgressIndicator: n, ...a } = e,
             s = (0, o.JA)('library');
-        return (0, i.jsx)(V.Qj, {
+        return (0, i.jsx)(k.Qj, {
             selected: t,
-            route: W.Z5c.APPLICATION_LIBRARY,
+            route: V.Z5c.APPLICATION_LIBRARY,
             icon: E.InventoryIcon,
-            text: z.Z.Messages.LIBRARY,
+            text: F.Z.Messages.LIBRARY,
             ...a,
             ...s,
-            children: (0, i.jsx)(Y.Z, { className: r()(K.downloadProgressCircle, { [K.hideGameUpdateProgressIndicator]: n }) })
+            children: (0, i.jsx)(H.Z, { className: r()(Y.downloadProgressCircle, { [Y.hideGameUpdateProgressIndicator]: n }) })
         });
     },
-    X = (e) => {
-        let { selected: t, route: n, locationState: a, ...s } = e,
-            l = (0, o.JA)('activities'),
-            c = (0, d.e7)([M.Z], () => M.Z.getState().theme),
-            u = (0, I.p)();
-        return (0, i.jsx)(V.Qj, {
-            selected: t,
-            route: n,
-            icon: (0, E.makeIconCompat)(k.Z),
-            iconClassName: r()(K.activitiesBirthdayIcon, { [K.activitiesBirthdayIconLight]: 'light' === c }),
-            text: z.Z.Messages.EMBEDDED_ACTIVITIES_ACTIVITY_TAB_TITLE,
-            locationState: a,
-            ...s,
-            ...l,
-            children: u > 0 ? (0, i.jsx)(E.NumberBadge, { count: u }) : null
-        });
-    },
-    J = () => {
-        let e = (0, v.q)(),
-            t = (0, v.T)();
+    K = () => {
+        let e = (0, N.q)(),
+            t = (0, N.T)();
         return e > 0
             ? (0, i.jsx)(E.NumberBadge, {
                   count: e,
-                  color: 0 === t ? f.Z.ICON_MUTED : void 0
+                  color: 0 === t ? S.Z.ICON_MUTED : void 0
               })
             : null;
     },
-    $ = (e) => {
+    q = (e) => {
         let { selected: t } = e,
             n = (0, o.JA)('messageRequests'),
-            { channelId: a } = (0, A._)();
-        if (!(0, L.a)()) return null;
-        let s = null == a ? void 0 : () => h.Z.preload(W.ME, a);
-        return (0, i.jsx)(V.Qj, {
+            { channelId: a } = (0, f._)();
+        if (!(0, A.a)()) return null;
+        let s = null == a ? void 0 : () => h.Z.preload(V.ME, a);
+        return (0, i.jsx)(k.Qj, {
             selected: t,
-            route: W.Z5c.MESSAGE_REQUESTS,
+            route: V.Z5c.MESSAGE_REQUESTS,
             icon: E.EnvelopeIcon,
-            text: z.Z.Messages.MESSAGE_REQUESTS,
+            text: F.Z.Messages.MESSAGE_REQUESTS,
             onClick: s,
             ...n,
-            children: (0, i.jsx)(J, {})
+            children: (0, i.jsx)(K, {})
         });
     },
-    ee = (e) => {
+    Q = (e) => {
         let { selected: t } = e,
-            n = z.Z.Messages.FAMILY_CENTER_SIDEBAR_TITLE,
+            n = F.Z.Messages.FAMILY_CENTER_SIDEBAR_TITLE,
             s = (0, o.JA)('family-center'),
-            r = D.Ex.useSetting(),
-            l = (0, Z.Z)(),
+            r = P.Ex.useSetting(),
+            l = (0, v.Z)(),
             [c, d] = a.useState(!0);
         return r && l
-            ? (0, i.jsx)(V.Qj, {
+            ? (0, i.jsx)(k.Qj, {
                   selected: t,
-                  route: W.Z5c.FAMILY_CENTER,
+                  route: V.Z5c.FAMILY_CENTER,
                   icon: E.GroupIcon,
                   text: n,
                   onMouseEnter: () => {
@@ -167,171 +147,153 @@ let q = (e) => {
                   onMouseLeave: () => {
                       d(!1);
                   },
-                  interactiveClassName: K.familyCenterLinkButton,
+                  interactiveClassName: Y.familyCenterLinkButton,
                   ...s,
-                  children: (0, i.jsx)(et, { isParentHovered: c })
+                  children: (0, i.jsx)(X, { isParentHovered: c })
               })
             : null;
     },
-    et = (e) => {
+    X = (e) => {
         let { isParentHovered: t } = e,
-            a = (0, R.gU)();
+            a = (0, L.gU)();
         return t
-            ? (0, i.jsx)(V.PZ, {
+            ? (0, i.jsx)(k.PZ, {
                   onClick: () => {
                       (0, _.ZD)(async () => {
                           let { default: e } = await n.e('44153').then(n.bind(n, 760949));
                           return (t) => (0, i.jsx)(e, { ...t });
                       });
                   },
-                  'aria-label': z.Z.Messages.CLOSE
+                  'aria-label': F.Z.Messages.CLOSE
               })
             : a > 0
               ? (0, i.jsx)('div', {
-                    className: K.familyCenterPendingBadge,
+                    className: Y.familyCenterPendingBadge,
                     children: (0, i.jsx)(E.NumberBadge, { count: a })
                 })
-              : (0, i.jsx)(N.ZP, {
+              : (0, i.jsx)(C.ZP, {
                     contentTypes: [u.z.FAMILY_CENTER_NEW_BADGE],
                     children: (e) => {
                         let { visibleContent: t } = e;
                         return t === u.z.FAMILY_CENTER_NEW_BADGE
                             ? (0, i.jsx)(E.TextBadge, {
-                                  text: z.Z.Messages.NEW,
-                                  color: f.Z.BG_BRAND
+                                  text: F.Z.Messages.NEW,
+                                  color: S.Z.BG_BRAND
                               })
                             : null;
                     }
                 });
     },
-    en = () => (0, x.$Z)('DM_SEARCH');
-function ei(e) {
+    J = () => (0, R.$Z)('DM_SEARCH');
+function $(e) {
     switch (e) {
-        case W.Z5c.APPLICATION_LIBRARY:
-            return W.ZY5.LIBRARY;
-        case W.Z5c.FRIENDS:
-            return W.ZY5.FRIENDS_LIST;
-        case W.Z5c.COLLECTIBLES_SHOP:
-            return W.ZY5.COLLECTIBLES_SHOP;
+        case V.Z5c.APPLICATION_LIBRARY:
+            return V.ZY5.LIBRARY;
+        case V.Z5c.FRIENDS:
+            return V.ZY5.FRIENDS_LIST;
+        case V.Z5c.COLLECTIBLES_SHOP:
+            return V.ZY5.COLLECTIBLES_SHOP;
     }
-    if (e.startsWith(W.Z5c.APPLICATION_STORE)) return e === W.Z5c.APPLICATION_STORE ? W.ZY5.STORE_DIRECTORY_HOME : e.startsWith(W.Z5c.APPLICATION_STORE) ? W.ZY5.STORE_DIRECTORY_BROWSE : W.ZY5.STORE_LISTING;
-    return W.ZY5.DM_CHANNEL;
+    if (e.startsWith(V.Z5c.APPLICATION_STORE)) return e === V.Z5c.APPLICATION_STORE ? V.ZY5.STORE_DIRECTORY_HOME : e.startsWith(V.Z5c.APPLICATION_STORE) ? V.ZY5.STORE_DIRECTORY_BROWSE : V.ZY5.STORE_LISTING;
+    return V.ZY5.DM_CHANNEL;
 }
-let ea = (e) => {
+let ee = (e) => {
     let { showLibrary: t, hasLibraryApplication: n, homeLink: a, storeLink: s, premiumTabSelected: o } = e,
-        [d, u] = (0, b.Z)((e) => {
+        [d, u] = (0, O.Z)((e) => {
             let { channelId: t, path: n } = e;
             return [t, n];
-        }, l.Z),
-        { enabled: _ } = m.Z.useExperiment({ location: 'a718d6_2' }, { autoTrackExposure: !0 });
+        }, l.Z);
     return (0, i.jsxs)('nav', {
-        className: K.privateChannels,
-        'aria-label': z.Z.Messages.PRIVATE_CHANNELS_A11Y_LABEL,
+        className: Y.privateChannels,
+        'aria-label': F.Z.Messages.PRIVATE_CHANNELS_A11Y_LABEL,
         children: [
-            (0, i.jsx)(P.Z, {
+            (0, i.jsx)(x.Z, {
                 tutorialId: 'direct-messages',
                 position: 'right',
                 offsetX: -52,
                 children: (0, i.jsx)('div', {
-                    className: r()(K.searchBar, { [K.themedHeaderMobile]: c.tq }),
+                    className: r()(Y.searchBar, { [Y.themedHeaderMobile]: c.tq }),
                     children: (0, i.jsx)('button', {
                         type: 'button',
-                        className: r()(K.searchBarComponent, { [K.themedSearchBarMobile]: c.tq }),
-                        onClick: en,
-                        children: z.Z.Messages.DM_SEARCH_PLACEHOLDER
+                        className: r()(Y.searchBarComponent, { [Y.themedSearchBarMobile]: c.tq }),
+                        onClick: J,
+                        children: F.Z.Messages.DM_SEARCH_PLACEHOLDER
                     })
                 })
             }),
-            (0, i.jsxs)(F.Z, {
+            (0, i.jsxs)(B.Z, {
                 ...e,
                 version: u,
                 selectedChannelId: d,
                 showDMHeader: !0,
                 children: [
-                    (0, i.jsx)(q, { selected: null != u ? u === W.Z5c.FRIENDS : a === W.Z5c.FRIENDS }, 'friends'),
+                    (0, i.jsx)(W, { selected: null != u ? u === V.Z5c.FRIENDS : a === V.Z5c.FRIENDS }, 'friends'),
                     n && t
                         ? (0, i.jsx)(
-                              Q,
+                              z,
                               {
-                                  selected: null == u ? null != a && a.startsWith(W.Z5c.APPLICATION_LIBRARY) : u.startsWith(W.Z5c.APPLICATION_LIBRARY),
-                                  hideGameUpdateProgressIndicator: a === W.Z5c.APPLICATION_LIBRARY
+                                  selected: null == u ? null != a && a.startsWith(V.Z5c.APPLICATION_LIBRARY) : u.startsWith(V.Z5c.APPLICATION_LIBRARY),
+                                  hideGameUpdateProgressIndicator: a === V.Z5c.APPLICATION_LIBRARY
                               },
                               'library'
                           )
                         : null,
                     (0, i.jsx)(
-                        O.g,
+                        Z.g,
                         {
-                            selected: null == u ? o : u.startsWith(W.Z5c.APPLICATION_STORE),
-                            route: null == s || location.pathname.startsWith(W.Z5c.ACTIVITIES) || location.pathname.startsWith(W.Z5c.APPLICATION_STORE) ? W.Z5c.APPLICATION_STORE : s,
+                            selected: null == u ? o : u.startsWith(V.Z5c.APPLICATION_STORE),
+                            route: null == s || location.pathname.startsWith(V.Z5c.ACTIVITIES) || location.pathname.startsWith(V.Z5c.APPLICATION_STORE) ? V.Z5c.APPLICATION_STORE : s,
                             locationState: {
                                 analyticsSource: {
-                                    page: ei(a),
-                                    section: W.jXE.NAVIGATION,
-                                    object: W.qAy.NAVIGATION_LINK
+                                    page: $(a),
+                                    section: V.jXE.NAVIGATION,
+                                    object: V.qAy.NAVIGATION_LINK
                                 }
                             }
                         },
                         'premium'
                     ),
-                    _
-                        ? (0, i.jsx)(
-                              X,
-                              {
-                                  selected: (null != u && u.startsWith(W.Z5c.ACTIVITIES)) || (null != a && a.startsWith(W.Z5c.ACTIVITIES)),
-                                  route: W.Z5c.ACTIVITIES,
-                                  locationState: {
-                                      analyticsSource: {
-                                          page: ei(a),
-                                          section: W.jXE.NAVIGATION,
-                                          object: W.qAy.NAVIGATION_LINK
-                                      }
-                                  }
-                              },
-                              'activities'
-                          )
-                        : null,
-                    (0, i.jsx)($, { selected: null == u ? null != a && a.startsWith(W.Z5c.MESSAGE_REQUESTS) : u === W.Z5c.MESSAGE_REQUESTS }, 'message-requests'),
+                    (0, i.jsx)(q, { selected: null == u ? null != a && a.startsWith(V.Z5c.MESSAGE_REQUESTS) : u === V.Z5c.MESSAGE_REQUESTS }, 'message-requests'),
                     (0, i.jsx)(
-                        C.i,
+                        T.i,
                         {
-                            selected: u === W.Z5c.COLLECTIBLES_SHOP || (null == a ? void 0 : a.startsWith(W.Z5c.COLLECTIBLES_SHOP)),
+                            selected: u === V.Z5c.COLLECTIBLES_SHOP || (null == a ? void 0 : a.startsWith(V.Z5c.COLLECTIBLES_SHOP)),
                             locationState: {
                                 analyticsSource: {
-                                    page: ei(a),
-                                    section: W.jXE.NAVIGATION,
-                                    object: W.qAy.NAVIGATION_LINK
+                                    page: $(a),
+                                    section: V.jXE.NAVIGATION,
+                                    object: V.qAy.NAVIGATION_LINK
                                 }
                             }
                         },
                         'discord-shop'
                     ),
-                    (0, i.jsx)(ee, { selected: (null != a && a.startsWith(W.Z5c.FAMILY_CENTER)) || (null != u && u.startsWith(W.Z5c.FAMILY_CENTER)) }, 'family-center')
+                    (0, i.jsx)(Q, { selected: (null != a && a.startsWith(V.Z5c.FAMILY_CENTER)) || (null != u && u.startsWith(V.Z5c.FAMILY_CENTER)) }, 'family-center')
                 ]
             })
         ]
     });
 };
-function es() {
-    let e = (0, d.e7)([w.Z], () => w.Z.getHomeLink()),
+function et() {
+    let e = (0, d.e7)([U.Z], () => U.Z.getHomeLink()),
         t = (0, d.e7)(
-            [G.Z],
+            [j.Z],
             () => {
-                if (e === W.Z5c.APPLICATION_STORE) return !0;
-                let t = (0, H.ZK)(e);
+                if (e === V.Z5c.APPLICATION_STORE) return !0;
+                let t = (0, w.ZK)(e);
                 if (null != t) {
                     var n, i;
-                    return null !== (i = null === (n = G.Z.get(t)) || void 0 === n ? void 0 : n.premium) && void 0 !== i && i;
+                    return null !== (i = null === (n = j.Z.get(t)) || void 0 === n ? void 0 : n.premium) && void 0 !== i && i;
                 }
                 return !1;
             },
             [e]
         ),
-        n = !D.bm.useSetting(),
-        { theme: a } = (0, d.cj)([M.Z], () => ({ theme: M.Z.theme })),
-        s = (0, d.e7)([y.Z], () => y.Z.hasLibraryApplication()),
-        r = (0, d.e7)([U.Z], () => U.Z.getCurrentPath());
-    return (0, i.jsx)(ea, {
+        n = !P.bm.useSetting(),
+        { theme: a } = (0, d.cj)([b.Z], () => ({ theme: b.Z.theme })),
+        s = (0, d.e7)([M.Z], () => M.Z.hasLibraryApplication()),
+        r = (0, d.e7)([y.Z], () => y.Z.getCurrentPath());
+    return (0, i.jsx)(ee, {
         theme: a,
         showLibrary: n,
         hasLibraryApplication: s,

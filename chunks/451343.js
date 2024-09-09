@@ -1,5 +1,4 @@
 var r = {
-    './activities-rocket-time.mp3': '689096',
     './activity_end.mp3': '90152',
     './activity_launch.mp3': '12790',
     './activity_user_join.mp3': '9907',

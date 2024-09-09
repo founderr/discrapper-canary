@@ -4,8 +4,6 @@ e.exports = {
     privateChannels: 'privateChannels_f0963d',
     searchBar: 'searchBar_f0963d',
     searchBarComponent: 'searchBarComponent_f0963d',
-    activitiesBirthdayIcon: 'activitiesBirthdayIcon_f0963d',
-    activitiesBirthdayIconLight: 'activitiesBirthdayIconLight_f0963d',
     familyCenterLinkButton: 'familyCenterLinkButton_f0963d',
     familyCenterPendingBadge: 'familyCenterPendingBadge_f0963d',
     broadcastingBadge: 'broadcastingBadge_f0963d',
