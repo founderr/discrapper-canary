@@ -201,12 +201,20 @@ function O(e) {
     }
 }
 function R(e) {
-    let { location: t } = e;
-    u.default.track(d.rMx.CLAN_USER_INVITE_VIEWED, { location: t });
+    let { location: t, treatment: n, gameApplicationId: r } = e;
+    u.default.track(d.rMx.CLAN_USER_INVITE_VIEWED, {
+        location: t,
+        treatment: n,
+        game_application_id: r
+    });
 }
 function v(e) {
-    let { location: t } = e;
-    u.default.track(d.rMx.CLAN_USER_INVITE_CLICKED, { location: t });
+    let { location: t, treatment: n, gameApplicationId: r } = e;
+    u.default.track(d.rMx.CLAN_USER_INVITE_CLICKED, {
+        location: t,
+        treatment: n,
+        game_application_id: r
+    });
 }
 function C(e) {
     let { guildId: t, location: n } = e;
