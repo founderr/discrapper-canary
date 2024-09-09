@@ -9,13 +9,14 @@ var i = n(735250),
     u = n(822951),
     d = n(835473),
     h = n(933557),
-    m = n(454585),
-    p = n(63063),
-    _ = n(984370),
-    f = n(981631),
-    E = n(689938),
-    g = n(119338);
-function C(e, t, n) {
+    m = n(471445),
+    p = n(454585),
+    _ = n(63063),
+    f = n(984370),
+    E = n(981631),
+    g = n(689938),
+    C = n(119338);
+function I(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,46 +29,59 @@ function C(e, t, n) {
         e
     );
 }
-function I(e) {
+function x(e) {
     var t;
-    let { channel: n, onClose: s, transitionState: a } = e,
-        l = (0, h.ZP)(n, !0),
-        r = (0, d.q)(null === (t = n.linkedLobby) || void 0 === t ? void 0 : t.application_id);
+    let { channel: n, onClose: s, guild: a, transitionState: l } = e,
+        r = (0, m.KS)(n, a),
+        c = (0, h.ZP)(n, !1),
+        f = (0, d.q)(null === (t = n.linkedLobby) || void 0 === t ? void 0 : t.application_id);
     return (0, i.jsx)(o.ModalRoot, {
-        transitionState: a,
-        'aria-label': E.Z.Messages.FORM_LABEL_CHANNEL_TOPIC,
+        transitionState: l,
+        'aria-label': g.Z.Messages.FORM_LABEL_CHANNEL_TOPIC,
         children: (0, i.jsx)(o.ModalContent, {
             children: (0, i.jsxs)(u.Z, {
                 selectable: !0,
                 onClose: s,
                 renderHeader: () =>
-                    (0, i.jsx)(o.Heading, {
-                        variant: 'heading-lg/semibold',
-                        children: l
+                    (0, i.jsxs)('div', {
+                        className: C.header,
+                        children: [
+                            null != r &&
+                                (0, i.jsx)(r, {
+                                    size: 'md',
+                                    color: 'currentColor',
+                                    className: C.channelIcon
+                                }),
+                            (0, i.jsx)(o.Text, {
+                                variant: 'text-md/semibold',
+                                color: 'header-primary',
+                                children: c
+                            })
+                        ]
                     }),
                 children: [
                     (0, i.jsx)(o.Text, {
                         selectable: !0,
                         variant: 'text-md/normal',
-                        className: g.content,
-                        children: m.Z.parseTopic(n.topic, !0, { channelId: n.id })
+                        className: C.content,
+                        children: p.Z.parseTopic(n.topic, !0, { channelId: n.id })
                     }),
-                    null != r
+                    null != f
                         ? (0, i.jsxs)('div', {
-                              className: g.linkedLobbyNotice,
+                              className: C.linkedLobbyNotice,
                               children: [
-                                  (0, i.jsx)(o.RefreshIcon, { className: g.linkedLobbyApplicationIcon }),
+                                  (0, i.jsx)(o.RefreshIcon, { className: C.linkedLobbyApplicationIcon }),
                                   (0, i.jsx)(o.Text, {
                                       variant: 'text-sm/normal',
                                       color: 'header-secondary',
-                                      children: E.Z.Messages.CHANNEL_LINKED_LOBBY_CHANNEL_TOPIC_NOTICE.format({
-                                          applicationName: r.name,
-                                          helpdeskArticle: p.Z.getArticleURL(f.BhN.CHANNEL_LINKED_LOBBIES),
+                                      children: g.Z.Messages.CHANNEL_LINKED_LOBBY_CHANNEL_TOPIC_NOTICE.format({
+                                          applicationName: f.name,
+                                          helpdeskArticle: _.Z.getArticleURL(E.BhN.CHANNEL_LINKED_LOBBIES),
                                           separatorHook: (e, t) =>
                                               (0, i.jsx)(
                                                   'span',
                                                   {
-                                                      className: g.linkedLobbyNoticeSeparator,
+                                                      className: C.linkedLobbyNoticeSeparator,
                                                       children: e
                                                   },
                                                   t
@@ -82,19 +96,19 @@ function I(e) {
         })
     });
 }
-function x(e) {
+function T(e) {
     return e.matches('a') || 'highlight' === e.className || e.className.includes('mention');
 }
-class T extends s.Component {
+class v extends s.Component {
     render() {
         let { channel: e } = this.props;
         return e.isMultiUserDM() || null == e.topic || 0 === e.topic.length
             ? null
             : (0, i.jsxs)(s.Fragment, {
                   children: [
-                      (0, i.jsx)(_.Z.Divider, {}),
+                      (0, i.jsx)(f.Z.Divider, {}),
                       (0, i.jsxs)('div', {
-                          className: l()(g.topic, g.expandable),
+                          className: l()(C.topic, C.expandable),
                           onMouseDown: this.onMouseDown,
                           onMouseMove: this.onMouseMove,
                           onMouseUp: this.onMouseUp,
@@ -103,10 +117,10 @@ class T extends s.Component {
                           children: [
                               (0, i.jsx)(o.Clickable, {
                                   onClick: this.handleClick,
-                                  'aria-label': E.Z.Messages.OPEN_CHANNEL_TOPIC,
-                                  className: g.topicClickTarget
+                                  'aria-label': g.Z.Messages.OPEN_CHANNEL_TOPIC,
+                                  className: C.topicClickTarget
                               }),
-                              m.Z.parseTopic(e.topic, !0, {
+                              p.Z.parseTopic(e.topic, !0, {
                                   channelId: e.id,
                                   allowLinks: !0
                               })
@@ -117,32 +131,32 @@ class T extends s.Component {
     }
     constructor(...e) {
         super(...e),
-            C(this, '_mouseDown', !1),
-            C(this, '_mouseUp', !1),
-            C(this, 'handleOpenTopic', (e) => {
+            I(this, '_mouseDown', !1),
+            I(this, '_mouseUp', !1),
+            I(this, 'handleOpenTopic', (e) => {
                 let t = e.target;
                 if ((0, r.k)(t)) {
-                    if (x(t)) return;
+                    if (T(t)) return;
                     let e = t.parentNode;
-                    if ((0, r.k)(e) && x(e)) return;
+                    if ((0, r.k)(e) && T(e)) return;
                 }
                 (0, o.openModal)((e) =>
-                    (0, i.jsx)(I, {
+                    (0, i.jsx)(x, {
                         ...e,
                         ...this.props
                     })
                 );
             }),
-            C(this, 'onMouseDown', () => {
+            I(this, 'onMouseDown', () => {
                 this._mouseDown = !0;
             }),
-            C(this, 'onMouseMove', () => {
+            I(this, 'onMouseMove', () => {
                 this._mouseDown && (this._mouseDown = !1);
             }),
-            C(this, 'onMouseUp', (e) => {
-                this._mouseDown && e.button !== f.AeJ.SECONDARY && this.handleOpenTopic(e), (this._mouseUp = !0), (this._mouseDown = !1);
+            I(this, 'onMouseUp', (e) => {
+                this._mouseDown && e.button !== E.AeJ.SECONDARY && this.handleOpenTopic(e), (this._mouseUp = !0), (this._mouseDown = !1);
             }),
-            C(this, 'handleContextMenu', (e) => {
+            I(this, 'handleContextMenu', (e) => {
                 let { channel: t, guild: s } = this.props;
                 (0, c.jW)(e, async () => {
                     let { default: e } = await n.e('24783').then(n.bind(n, 439635));
@@ -155,7 +169,7 @@ class T extends s.Component {
                         });
                 });
             }),
-            C(this, 'handleClick', (e) => {
+            I(this, 'handleClick', (e) => {
                 if (this._mouseUp) {
                     this._mouseUp = !1;
                     return;
@@ -164,4 +178,4 @@ class T extends s.Component {
             });
     }
 }
-t.Z = T;
+t.Z = v;
