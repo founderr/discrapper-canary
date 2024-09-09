@@ -4025,7 +4025,6 @@ let it = Object.freeze({
     (nf.ACTIVITY_SHELF_CLOSE = 'activity_shelf_close'),
     (nf.ACTIVITY_IFRAME_MOUNT = 'activity_iframe_mount'),
     (nf.ACTIVITY_IFRAME_UNMOUNT = 'activity_iframe_unmount'),
-    (nf.ACTIVITIES_RESTRICTRED_CSP_VIOLATION = 'activities_restricted_csp_violation'),
     (nf.NITRO_TAB_VISITED = 'nitro_tab_visited'),
     (nf.BROWSER_HANDOFF_SUCCEEDED = 'browser_handoff_succeeded'),
     (nf.SHOW_TUTORIAL = 'show_tutorial'),

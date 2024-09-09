@@ -67,11 +67,6 @@ let A = {
         throttlePeriod: 900000,
         throttleKeys: (e) => [e.guild_id, e.channel_id, e.location_section]
     },
-    [f.rMx.ACTIVITIES_RESTRICTRED_CSP_VIOLATION]: {
-        throttlePeriod: 86400000,
-        throttleKeys: (e) => [e.application_id],
-        throttlePercent: 0.001
-    },
     [f.rMx.GUILD_VIEWED]: {
         throttlePeriod: 900000,
         throttleKeys: (e) => [e.guild_id, e.is_pending]

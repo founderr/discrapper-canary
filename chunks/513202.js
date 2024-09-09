@@ -4,31 +4,18 @@ n(470079);
 var i = n(481060),
     a = n(570140),
     s = n(468026),
-    o = n(626135),
-    l = n(358085),
-    u = n(998502),
-    c = n(566620),
-    d = n(287545),
-    _ = n(318891),
-    E = n(719296),
-    f = n(981631),
-    h = n(689938);
-class p extends d.Z {
-    _initialize() {
-        super._initialize(),
-            l.isPlatformEmbedded &&
-                u.ZP.on('APP_PUSH_ANALYTICS', (e, t) => {
-                    t.forEach((e) => {
-                        'activities' === e.type && e.name === f.rMx.ACTIVITIES_RESTRICTRED_CSP_VIOLATION && o.default.track(e.name, e.data);
-                    });
-                });
-    }
+    o = n(566620),
+    l = n(287545),
+    u = n(318891),
+    c = n(719296),
+    d = n(689938);
+class _ extends l.Z {
     showErrorModal(e) {
         let { code: t, message: n } = e;
         (0, i.openModalLazy)(
             async () => (e) =>
                 (0, r.jsx)(s.default, {
-                    title: h.Z.Messages.EMBEDDED_ACTIVITIES_ERROR_TITLE.format({ code: t }),
+                    title: d.Z.Messages.EMBEDDED_ACTIVITIES_ERROR_TITLE.format({ code: t }),
                     body: n,
                     ...e
                 })
@@ -38,7 +25,7 @@ class p extends d.Z {
         (0, i.openModalLazy)(
             async () => (t) =>
                 (0, r.jsx)(s.default, {
-                    title: h.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAILURE,
+                    title: d.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAILURE,
                     body: e,
                     ...t
                 })
@@ -47,7 +34,7 @@ class p extends d.Z {
     leaveActivity(e) {
         let { channelId: t, applicationId: n, showFeedback: r } = e;
         a.Z.wait(() => {
-            (0, c.mW)({
+            (0, o.mW)({
                 channelId: t,
                 applicationId: n,
                 showFeedback: r
@@ -56,8 +43,8 @@ class p extends d.Z {
     }
     hidePIPEmbed(e) {
         let { channelId: t, applicationId: n } = e,
-            r = (0, E.Z)(t, n);
-        (0, _.RI)(r);
+            r = (0, c.Z)(t, n);
+        (0, u.RI)(r);
     }
     releaseWebView() {}
     constructor(...e) {
@@ -82,4 +69,4 @@ class p extends d.Z {
                 : (t[n] = r);
     }
 }
-t.Z = new p();
+t.Z = new _();
