@@ -8,6 +8,5 @@ e.exports = {
     animatedLayer: 'animatedLayer_d396b3',
     attributionLogos: 'attributionLogos_d396b3',
     categoryLogo: 'categoryLogo_d396b3',
-    summary: 'summary_d396b3',
-    noTopMargin: 'noTopMargin_d396b3'
+    summary: 'summary_d396b3'
 };
