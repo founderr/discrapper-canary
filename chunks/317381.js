@@ -159,7 +159,8 @@ function B(e) {
                 compositeInstanceId: a,
                 participants: s.map((e) => ({
                     userId: e.user_id,
-                    sessionId: e.session_id
+                    sessionId: e.session_id,
+                    nonce: e.nonce
                 }))
             });
         });
@@ -374,7 +375,8 @@ let Y = new Z(s.Z, {
                 compositeInstanceId: r,
                 participants: a.map((e) => ({
                     userId: e.user_id,
-                    sessionId: e.session_id
+                    sessionId: e.session_id,
+                    nonce: e.nonce
                 }))
             });
     },

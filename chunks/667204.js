@@ -291,7 +291,7 @@ let Y = (e) => {
                 channelId: h,
                 guildId: p,
                 data: r,
-                nonce: null !== (t = _.messageId) && void 0 !== t ? t : (0, S.r)(),
+                nonce: null !== (t = _.nonce) && void 0 !== t ? t : (0, S.r)(),
                 attachments: a,
                 maxSizeCallback: s,
                 analytics_location: l,
@@ -368,6 +368,9 @@ async function z(e, t, n) {
         }),
         {
             get messageId() {
+                return c.id;
+            },
+            get nonce() {
                 return c.id;
             },
             onCreate: (e) => {

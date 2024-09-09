@@ -19,6 +19,7 @@ async function _(e, t, n) {
     } catch (a) {
         r.Z.dispatch({
             type: 'EMBEDDED_ACTIVITY_LAUNCH_FAIL',
+            nonce: '',
             applicationId: e,
             channelId: t,
             guildId: n,
