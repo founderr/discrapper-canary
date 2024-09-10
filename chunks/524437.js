@@ -17,9 +17,6 @@ n.d(t, {
     Me: function () {
         return eu;
     },
-    Pr: function () {
-        return f;
-    },
     Q2: function () {
         return c;
     },
