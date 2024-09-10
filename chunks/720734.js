@@ -557,8 +557,7 @@ function eG() {
         (0, S.j)({
             location: ea + ' auto off',
             autoTrackExposure: !1
-        }),
-        (0, Q.o)();
+        });
     let es = (0, l.e7)([et.Z], () => et.Z.hasHadOtherUserPlaySoundInSession()),
         eg = (function () {
             let e = (0, j.wE)(o.z.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2),
