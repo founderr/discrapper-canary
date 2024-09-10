@@ -13,5 +13,6 @@ e.exports = {
     navButtonActive: 'navButtonActive_af5dbb',
     resizeHandle: 'resizeHandle_af5dbb',
     stickersNavItem: 'stickersNavItem_af5dbb',
-    soundboardContainer: 'soundboardContainer_af5dbb'
+    soundboardContainer: 'soundboardContainer_af5dbb',
+    soundboardHeader: 'soundboardHeader_af5dbb'
 };

@@ -323,7 +323,12 @@ t.Z = i.memo(function (e) {
                                                         onClose: e_,
                                                         onSelect: Z,
                                                         analyticsSource: 'expression-picker',
-                                                        autoWidth: !0
+                                                        renderHeader: (e) =>
+                                                            (0, r.jsx)('div', {
+                                                                className: G.soundboardHeader,
+                                                                children: e
+                                                            }),
+                                                        inExpressionPicker: !0
                                                     })
                                                 })
                                               : null
