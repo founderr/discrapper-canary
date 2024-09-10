@@ -10,9 +10,9 @@ var a = r(735250),
     u = r(597688),
     f = r(1870),
     p = r(884697),
-    C = r(223143),
-    _ = r(823941),
-    m = r(38900),
+    m = r(223143),
+    C = r(823941),
+    _ = r(38900),
     g = r(709999),
     h = r(215023),
     b = r(689938),
@@ -21,13 +21,13 @@ var a = r(735250),
     x = r(933285),
     v = r(83498);
 t.Z = (e) => {
-    var t, r, s, T, L, S;
+    var t, r, s, T, S, L;
     let { handleTransition: N, numVisibleItems: O } = e,
-        { isFetching: k } = (0, C.Z)(),
-        B = (0, l.e7)([d.default], () => d.default.getCurrentUser()),
+        { isFetching: B } = (0, m.Z)(),
+        k = (0, l.e7)([d.default], () => d.default.getCurrentUser()),
         j = n.createRef(),
-        P = (0, l.cj)([u.Z], () => ({ feature: u.Z.getCategory(o.T.THE_VAULT) })),
-        R = n.useMemo(
+        R = (0, l.cj)([u.Z], () => ({ feature: u.Z.getCategory(o.T.THE_VAULT) })),
+        P = n.useMemo(
             () =>
                 h.$O
                     .map((e) => u.Z.getProduct(e))
@@ -43,7 +43,7 @@ t.Z = (e) => {
                         return Number(r) - Number(a);
                     })
                     .slice(0, 4),
-            [k]
+            [B]
         ),
         Z = n.useMemo(
             () =>
@@ -60,9 +60,9 @@ t.Z = (e) => {
                             a = !!f.Z.getPurchase(t.skuId);
                         return Number(r) - Number(a);
                     }),
-            [k]
+            [B]
         );
-    if (null == B) return null;
+    if (null == k) return null;
     return (0, a.jsx)(a.Fragment, {
         children: (0, a.jsxs)('div', {
             className: E.shop,
@@ -80,12 +80,12 @@ t.Z = (e) => {
                         (0, a.jsxs)('div', {
                             className: i()(E.heroHeaderContainer),
                             children: [
-                                k
+                                B
                                     ? (0, a.jsx)('div', { className: i()(E.heroHeaderBadgeLogoSummaryContainer) })
                                     : (0, a.jsxs)('div', {
                                           className: i()(E.heroHeaderBadgeLogoSummaryContainer),
                                           children: [
-                                              (null === (r = P.feature) || void 0 === r ? void 0 : r.unpublishedAt) != null &&
+                                              (null === (r = R.feature) || void 0 === r ? void 0 : r.unpublishedAt) != null &&
                                                   (0, a.jsx)(c.TextBadge, {
                                                       disableColor: !0,
                                                       text: b.Z.Messages.LIMITED_TIME,
@@ -93,13 +93,13 @@ t.Z = (e) => {
                                                   }),
                                               (0, a.jsx)('img', {
                                                   className: E.heroHeaderLogo,
-                                                  src: (0, p.uV)(null !== (S = null === (s = P.feature) || void 0 === s ? void 0 : s.logo) && void 0 !== S ? S : '', { size: _.n }),
-                                                  alt: null === (T = P.feature) || void 0 === T ? void 0 : T.name
+                                                  src: (0, p.uV)(null !== (L = null === (s = R.feature) || void 0 === s ? void 0 : s.logo) && void 0 !== L ? L : '', { size: C.n }),
+                                                  alt: null === (T = R.feature) || void 0 === T ? void 0 : T.name
                                               }),
                                               (0, a.jsx)(c.Text, {
                                                   color: 'always-white',
                                                   variant: 'text-md/normal',
-                                                  children: null === (L = P.feature) || void 0 === L ? void 0 : L.summary
+                                                  children: null === (S = R.feature) || void 0 === S ? void 0 : S.summary
                                               })
                                           ]
                                       }),
@@ -116,12 +116,12 @@ t.Z = (e) => {
                         }),
                         (0, a.jsx)('div', {
                             className: i()(E.row, E.feed, E.feedSingleRow),
-                            children: k
+                            children: B
                                 ? (0, a.jsx)(a.Fragment, {
-                                      children: [void 0, void 0, void 0, void 0].map((e, t) => (0, a.jsx)(m.K, {}, t))
+                                      children: [void 0, void 0, void 0, void 0].map((e, t) => (0, a.jsx)(_.K, {}, t))
                                   })
                                 : (0, a.jsx)(a.Fragment, {
-                                      children: R.map((e) => {
+                                      children: P.map((e) => {
                                           if (null == e || null == e.category) return null;
                                           let { category: t, ...r } = e;
                                           return (0, a.jsx)(
@@ -129,7 +129,7 @@ t.Z = (e) => {
                                               {
                                                   product: r,
                                                   category: t,
-                                                  user: B,
+                                                  user: k,
                                                   isInFeedView: !0
                                               },
                                               null == e ? void 0 : e.skuId
@@ -202,8 +202,8 @@ t.Z = (e) => {
                         (0, a.jsx)('div', {
                             className: E.feed,
                             ref: j,
-                            children: k
-                                ? (0, a.jsx)(a.Fragment, { children: [...Array(12)].map((e, t) => (0, a.jsx)(m.K, {}, t + 1)) })
+                            children: B
+                                ? (0, a.jsx)(a.Fragment, { children: [...Array(12)].map((e, t) => (0, a.jsx)(_.K, {}, t + 1)) })
                                 : (0, a.jsx)(a.Fragment, {
                                       children: Z.slice(0, O).map((e) => {
                                           if (null == e || null == e.category) return null;
@@ -213,7 +213,7 @@ t.Z = (e) => {
                                               {
                                                   product: r,
                                                   category: t,
-                                                  user: B,
+                                                  user: k,
                                                   isInFeedView: !0
                                               },
                                               null == e ? void 0 : e.skuId

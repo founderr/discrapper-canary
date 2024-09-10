@@ -14,9 +14,9 @@ var a = r(735250),
     u = r(410030),
     f = r(984370),
     p = r(594174),
-    C = r(471731),
-    _ = r(335131),
-    m = r(689938),
+    m = r(471731),
+    C = r(335131),
+    _ = r(689938),
     g = r(99065);
 function h(e) {
     let { isFullScreen: t, isLayer: r, onClose: s, isCatalogView: h, handleTransition: b, transparent: E } = e,
@@ -43,25 +43,25 @@ function h(e) {
                                 (0, a.jsx)(c.Clickable, {
                                     onClick: b,
                                     className: g.back,
-                                    'aria-label': m.Z.Messages.BACK,
+                                    'aria-label': _.Z.Messages.BACK,
                                     children: (0, a.jsx)(c.ArrowLargeLeftIcon, {})
                                 }),
-                            (0, a.jsx)(C.Z, {
+                            (0, a.jsx)(m.Z, {
                                 color: E ? ((0, l.wj)(I) ? 'white' : 'black') : void 0,
                                 className: g.discordLogo
                             })
                         ]
                     }),
-                    (0, a.jsx)(f.Z.Title, { children: m.Z.Messages.COLLECTIBLES_SHOP }),
+                    (0, a.jsx)(f.Z.Title, { children: _.Z.Messages.COLLECTIBLES_SHOP }),
                     h &&
                         (0, a.jsx)(f.Z.Title, {
                             className: g.shopAllHeader,
-                            children: m.Z.Messages.COLLECTIBLES_SHOP_ALL
+                            children: _.Z.Messages.COLLECTIBLES_SHOP_ALL
                         }),
                     t &&
                         (0, a.jsx)(d.Z, {
                             className: g.closeIcon,
-                            closeAction: r ? _.DR : s,
+                            closeAction: r ? C.DR : s,
                             keybind: 'ESC'
                         })
                 ]

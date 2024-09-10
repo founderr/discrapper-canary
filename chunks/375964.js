@@ -15600,7 +15600,7 @@ e.exports = Object.freeze({
     AVATAR_PROFILE_BANNER_MARKETING: 'Animated avatar, profile banner, and custom tag',
     SOUNDBOARD_MARKETING_REACT_WITH_SOUNDBOARD: 'Use custom sounds and personalized entrance sounds across voice channels.',
     SOUNDBOARD_MARKETING_TRY_ON_MOBILE: 'Try Soundboard on mobile!',
-    SOUNDBOARD_SEARCH_PLACEHOLDER: 'Search for sound',
+    SOUNDBOARD_SEARCH_PLACEHOLDER: 'Find the perfect sound',
     SOUNDBOARD_SEARCH_EMPTY_STATE_BODY: 'No sounds match your search',
     SOUNDBOARD_SOUND_DISABLED_PREMIUM_TIER_LOST: 'Requires higher Server Boost Level',
     SOUNDBOARD_NITRO_UPSELL_TITLE: "You can't use this sound right now",

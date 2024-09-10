@@ -1,6 +1,6 @@
 r.d(t, {
     $: function () {
-        return m;
+        return _;
     }
 }),
     r(653041);
@@ -15,8 +15,8 @@ var a = r(735250),
     u = r(689938),
     f = r(409912),
     p = r(493978),
-    C = r(932135);
-function _(e) {
+    m = r(932135);
+function C(e) {
     let { endDate: t } = e,
         { days: r, hours: n, minutes: s, seconds: i } = (0, d.Z)(t),
         o = (function (e, t, r, a) {
@@ -35,7 +35,7 @@ function _(e) {
         })
     });
 }
-let m = n.memo(function (e) {
+let _ = n.memo(function (e) {
     let { unpublishedAt: t, isVisible: r, displayOptions: n, isFullScreen: s } = e,
         d = (0, c.useSpring)({
             transform: 'translateX(-50%) '.concat(r ? 'translateY(-75%)' : 'translateY(0%)'),
@@ -65,7 +65,7 @@ let m = n.memo(function (e) {
                     alt: '',
                     'aria-hidden': !0
                 }),
-            (0, a.jsx)(_, { endDate: t }),
+            (0, a.jsx)(C, { endDate: t }),
             (0, a.jsx)('img', {
                 src: p,
                 className: i()(f.sparkles, f.left),
@@ -73,7 +73,7 @@ let m = n.memo(function (e) {
                 'aria-hidden': !0
             }),
             (0, a.jsx)('img', {
-                src: C,
+                src: m,
                 className: i()(f.sparkles, f.right),
                 alt: '',
                 'aria-hidden': !0

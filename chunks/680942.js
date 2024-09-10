@@ -9,7 +9,7 @@ var a = r(735250),
     u = r(231338),
     f = r(689938),
     p = r(703909);
-let C = {
+let m = {
     dark: [
         {
             box: '#FFF19E',
@@ -72,7 +72,7 @@ let C = {
     ]
 };
 t.Z = (e) => {
-    let { product: t, returnRef: r, onSuccess: _, tooltipDelay: m, isGiftEasterEggEnabled: g, disableCustomColor: h = !1 } = e,
+    let { product: t, returnRef: r, onSuccess: C, tooltipDelay: _, isGiftEasterEggEnabled: g, disableCustomColor: h = !1 } = e,
         { analyticsLocations: b } = (0, o.ZP)(),
         E = n.useRef(null),
         I = (0, i.Z)(E),
@@ -81,7 +81,7 @@ t.Z = (e) => {
         ? null
         : (0, a.jsx)(s.Tooltip, {
               text: f.Z.Messages.COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER,
-              delay: m,
+              delay: _,
               children: (e) =>
                   (0, a.jsx)(s.Button, {
                       ...e,
@@ -100,9 +100,9 @@ t.Z = (e) => {
                                   analyticsLocations: b,
                                   returnRef: r,
                                   onClose:
-                                      null != _
+                                      null != C
                                           ? (e) => {
-                                                e && _();
+                                                e && C();
                                             }
                                           : void 0
                               });
@@ -112,7 +112,7 @@ t.Z = (e) => {
                                 hovered: I,
                                 isContentDismissed: !0,
                                 themeOverride: x,
-                                boxColors: C
+                                boxColors: m
                             })
                           : (0, a.jsx)(s.GiftIcon, {
                                 size: 'md',

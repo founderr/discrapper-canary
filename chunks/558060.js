@@ -15,23 +15,23 @@ var n = r(120356),
     u = r(689938),
     f = r(889540);
 function p(e) {
-    let { product: t, isPremiumUser: r, discount: n, className: p, nitroUpsell: C = !1 } = e,
-        _ = (0, o.ql)(t, d.tuJ.DEFAULT);
-    if (null == _) return null;
-    if (_.amount <= 0)
+    let { product: t, isPremiumUser: r, discount: n, className: p, nitroUpsell: m = !1 } = e,
+        C = (0, o.ql)(t, d.tuJ.DEFAULT);
+    if (null == C) return null;
+    if (C.amount <= 0)
         return (0, a.jsx)('div', {
             className: s()(f.priceTagsContainer, p),
-            children: (0, a.jsx)(l.F, { price: _ })
+            children: (0, a.jsx)(l.F, { price: C })
         });
-    let m = (0, o.ql)(t, d.tuJ.PREMIUM_TIER_2),
+    let _ = (0, o.ql)(t, d.tuJ.PREMIUM_TIER_2),
         g = !r && !(0, o.x6)(t),
         h =
             (0, o.x6)(t) && r
                 ? {
-                      ..._,
+                      ...C,
                       amount: n.original
                   }
-                : _;
+                : C;
     return (0, a.jsxs)('div', {
         className: s()(f.priceTagsContainer, p),
         children: [
@@ -44,11 +44,11 @@ function p(e) {
                     [f.fullPrice]: g
                 })
             }),
-            null != m &&
+            null != _ &&
                 (0, a.jsx)(l.F, {
-                    price: m,
+                    price: _,
                     discount: r ? n : o.f_,
-                    renderPrice: C
+                    renderPrice: m
                         ? (e) =>
                               (0, a.jsx)(i.Text, {
                                   variant: 'text-xs/medium',

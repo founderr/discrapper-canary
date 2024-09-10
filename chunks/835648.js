@@ -145,13 +145,13 @@ function N(e) {
     });
 }
 function O(e) {
-    let { soundboardListRef: t, categories: n, shouldUpsellLockedCategories: a, listPadding: s = g, guildId: o } = e,
-        u = i.useRef(null),
-        c = (0, l.e7)([f.default], () => f.default.getCurrentUser()),
-        E = (0, h.I5)(c, m.p9.TIER_2),
-        p = i.useCallback(
+    let { soundboardListRef: t, categories: n, shouldUpsellLockedCategories: a, listPadding: s = g, guildId: o, inExpressionPicker: u } = e,
+        c = i.useRef(null),
+        E = (0, l.e7)([f.default], () => f.default.getCurrentUser()),
+        p = (0, h.I5)(E, m.p9.TIER_2),
+        T = i.useCallback(
             (e, t, n, i) => {
-                let s = a && (0, I.O)(e.categoryInfo, E, o);
+                let s = a && (0, I.O)(e.categoryInfo, p, o);
                 return (0, r.jsx)(N, {
                     category: e,
                     categoryIndex: t,
@@ -160,16 +160,16 @@ function O(e) {
                     isNitroLocked: s
                 });
             },
-            [o, a, E]
+            [o, a, p]
         );
     return (0, r.jsx)(_.Z, {
-        className: S.categoryList,
-        categoryListRef: u,
+        className: u ? S.expressionPickerCategoryList : S.categoryList,
+        categoryListRef: c,
         expressionsListRef: t,
         store: d.Wq,
         categories: n,
         listPadding: s,
-        renderCategoryListItem: p,
+        renderCategoryListItem: T,
         rowCount: n.length,
         categoryHeight: 40
     });

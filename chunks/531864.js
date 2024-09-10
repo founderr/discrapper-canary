@@ -13,7 +13,7 @@ let p = {
         x: 160,
         y: 160
     },
-    C = [
+    m = [
         {
             left: 0,
             top: 20,
@@ -102,8 +102,8 @@ let p = {
 t.Z = (e) => {
     let { peaking: t, transitioning: r, style: s } = e,
         p = window.innerHeight,
-        [_, m] = n.useState(!1),
-        g = C.map((e) => {
+        [C, _] = n.useState(!1),
+        g = m.map((e) => {
             let { skuId: t } = e;
             return c.Z.getProduct(t);
         });
@@ -111,18 +111,18 @@ t.Z = (e) => {
         n.useEffect(() => {
             r &&
                 setTimeout(() => {
-                    m(!0);
+                    _(!0);
                 }, u.lb);
         }, [r]),
         (0, a.jsx)('div', {
             style: s,
             className: i()(f.jumbleWrapper, {
                 [f.peaking]: t,
-                [f.transitioned]: _
+                [f.transitioned]: C
             }),
-            children: C.map((e, t) => {
+            children: m.map((e, t) => {
                 var n, s;
-                let { top: i, left: c, rotation: C, size: _, skuId: m } = e,
+                let { top: i, left: c, rotation: m, size: C, skuId: _ } = e,
                     h = null === (n = g[t]) || void 0 === n ? void 0 : n.items[0],
                     b = null === (s = g[t]) || void 0 === s ? void 0 : s.type,
                     E = b === o.Z.AVATAR_DECORATION ? 384 : 512;
@@ -133,9 +133,9 @@ t.Z = (e) => {
                         style: {
                             top: r ? -p - E : i,
                             left: r ? ''.concat(c - 75 - 350 * Math.random()) : c,
-                            transform: 'rotate('.concat(C, 'deg)'),
-                            height: _.y,
-                            width: _.x,
+                            transform: 'rotate('.concat(m, 'deg)'),
+                            height: C.y,
+                            width: C.x,
                             transitionDelay: ''.concat(Math.random() / 3, 's'),
                             transitionDuration: ''.concat(u.lb - 200 * Math.random(), 'ms')
                         },
@@ -150,7 +150,7 @@ t.Z = (e) => {
                                 })
                         ]
                     },
-                    m + t
+                    _ + t
                 );
             })
         })
