@@ -23,13 +23,13 @@ function c(e) {
                 })),
             [t]
         ),
-        f = [n.length];
+        x = [n.length];
     return (0, r.jsx)('div', {
         className: s.tableContainer,
         children: (0, r.jsx)(o.ListThin, {
             className: i()(l),
             innerClassName: s.table,
-            sections: f,
+            sections: x,
             sectionHeight: 40,
             renderSection: (e) => {
                 let { section: t } = e,
@@ -61,14 +61,14 @@ function c(e) {
                 let { rowIndex: t } = e,
                     a = n[t],
                     l = a.key,
-                    f = i()(s.tableRow, {
+                    x = i()(s.tableRow, {
                         [s.selectedTableRow]: l === d,
                         rowClassName: c
                     });
                 return (0, r.jsx)(
                     o.Clickable,
                     {
-                        className: f,
+                        className: x,
                         onClick: () => (null == u ? void 0 : u(a)),
                         children: m.map((e) => {
                             var n, l;

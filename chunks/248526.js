@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return p;
     }
 }),
     n(47120);
@@ -24,7 +24,7 @@ let m = [
             value: !0
         }
     ],
-    f = [
+    x = [
         {
             label: 'No Override',
             value: !1
@@ -34,7 +34,7 @@ let m = [
             value: !0
         }
     ],
-    x = [
+    f = [
         {
             label: '1 day',
             value: 1
@@ -44,10 +44,10 @@ let m = [
             value: 7
         }
     ];
-function g() {
+function p() {
     let e = (0, i.e7)([u.default], () => u.default.getCurrentUser()),
         [t, n] = a.useState(!1),
-        [g, p] = a.useState(!1),
+        [p, g] = a.useState(!1),
         [b, v] = a.useState(1);
     return (0, r.jsxs)('div', {
         className: h.container,
@@ -70,10 +70,10 @@ function g() {
                 className: h.formElement,
                 tag: o.FormTitleTags.H3,
                 children: (0, r.jsx)(o.SingleSelect, {
-                    options: f,
-                    value: g,
+                    options: x,
+                    value: p,
                     onChange: (e) => {
-                        p(e);
+                        g(e);
                     },
                     popoutLayerContext: d.O$
                 })
@@ -83,7 +83,7 @@ function g() {
                 className: h.formElement,
                 tag: o.FormTitleTags.H3,
                 children: (0, r.jsx)(o.SingleSelect, {
-                    options: x,
+                    options: f,
                     value: b,
                     onChange: (e) => {
                         v(e);
@@ -98,7 +98,7 @@ function g() {
                         perkType: l.q.STREAM_HIGH_QUALITY,
                         user: e,
                         available: t,
-                        activateSuccess: g,
+                        activateSuccess: p,
                         demoDuration: b
                     }),
                     (0, c.Vk)()),

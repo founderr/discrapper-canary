@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return x;
     }
 });
 var r = n(735250),
@@ -14,7 +14,7 @@ var r = n(735250),
     d = n(859921),
     h = n(785287),
     m = n(219299);
-function f() {
+function x() {
     let e = a.useRef(null);
     return (0, r.jsxs)('div', {
         ref: e,

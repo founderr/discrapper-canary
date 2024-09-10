@@ -9,10 +9,10 @@ var r,
     d = n(663993),
     h = n(770146),
     m = n(772096),
-    f = n(428595),
-    x = n(532901),
-    g = n(207533),
-    p = n(112864);
+    x = n(428595),
+    f = n(532901),
+    p = n(207533),
+    g = n(112864);
 function b(e, t, n) {
     return (
         t in e
@@ -27,10 +27,10 @@ function b(e, t, n) {
     );
 }
 let v = new RegExp('https?://'.concat(null !== (r = window.GLOBAL_ENV.CDN_HOST) && void 0 !== r ? r : ''));
-function _(e) {
+function j(e) {
     return 'string' == typeof e.content ? e.content : T(e.content);
 }
-let C = {
+let _ = {
         ...u().defaultRules,
         heading: {
             ...u().defaultRules.heading,
@@ -52,7 +52,7 @@ let C = {
                 (0, l.jsx)(
                     'div',
                     {
-                        className: g.paragraph,
+                        className: p.paragraph,
                         children: t(e.content, n)
                     },
                     n.key
@@ -76,7 +76,7 @@ let C = {
         },
         link: {
             ...m.ZP,
-            ...(0, x.Z)({ enableBuildOverrides: !1 }),
+            ...(0, f.Z)({ enableBuildOverrides: !1 }),
             order: 6
         },
         blockQuote: {
@@ -85,8 +85,8 @@ let C = {
                 (0, l.jsx)(
                     'blockquote',
                     {
-                        className: g.blockquote,
-                        children: _(e)
+                        className: p.blockquote,
+                        children: j(e)
                     },
                     n.key
                 )
@@ -106,14 +106,14 @@ let C = {
             }
         },
         inlineCode: {
-            ...f.Z.RULES.inlineCode,
+            ...x.Z.RULES.inlineCode,
             order: 6,
             react: (e, t, n) =>
                 (0, l.jsx)(
                     'code',
                     {
-                        className: g.codeInline,
-                        children: _(e)
+                        className: p.codeInline,
+                        children: j(e)
                     },
                     n.key
                 )
@@ -126,8 +126,8 @@ let C = {
                         'pre',
                         {
                             children: (0, l.jsx)('code', {
-                                className: s()(p.scrollbarGhostHairline, 'hljs'),
-                                children: _(e)
+                                className: s()(g.scrollbarGhostHairline, 'hljs'),
+                                children: j(e)
                             })
                         },
                         r.key
@@ -148,7 +148,7 @@ let C = {
                                           'pre',
                                           {
                                               children: (0, l.jsx)('code', {
-                                                  className: s()(p.scrollbarGhostHairline, 'hljs', n.language),
+                                                  className: s()(g.scrollbarGhostHairline, 'hljs', n.language),
                                                   dangerouslySetInnerHTML: { __html: n.value }
                                               })
                                           },
@@ -162,9 +162,9 @@ let C = {
             }
         }
     },
-    j = u().parserFor(C),
-    T = u().reactFor(u().ruleOutput(C, 'react'));
-class N extends (a = i.PureComponent) {
+    C = u().parserFor(_),
+    T = u().reactFor(u().ruleOutput(_, 'react'));
+class S extends (a = i.PureComponent) {
     render() {
         let { className: e, children: t, state: n, parser: r, output: a } = this.props,
             i = a(
@@ -174,14 +174,14 @@ class N extends (a = i.PureComponent) {
                 })
             );
         return (0, l.jsx)('div', {
-            className: s()(g.markdown, e),
+            className: s()(p.markdown, e),
             children: i
         });
     }
 }
-b(N, 'rules', C),
-    b(N, 'defaultProps', {
-        parser: j,
+b(S, 'rules', _),
+    b(S, 'defaultProps', {
+        parser: C,
         output: T
     }),
-    (t.Z = N);
+    (t.Z = S);

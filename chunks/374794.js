@@ -10,15 +10,15 @@ var a = n(120356),
     i = n(481060),
     o = n(53281);
 function s(e) {
-    let { children: t, className: n, innerClassName: a, onChange: s, 'aria-label': c, 'aria-describedby': u, filters: d, multiple: h = !1, disabled: m = !1, submitting: f = !1, ...x } = e;
+    let { children: t, className: n, innerClassName: a, onChange: s, 'aria-label': c, 'aria-describedby': u, filters: d, multiple: h = !1, disabled: m = !1, submitting: x = !1, ...f } = e;
     return (0, r.jsx)(i.FocusRing, {
         within: !0,
         children: (0, r.jsxs)('div', {
             className: l()(
                 n,
                 (0, i.getButtonStyle)({
-                    ...x,
-                    submitting: f,
+                    ...f,
+                    submitting: x,
                     disabled: m
                 })
             ),

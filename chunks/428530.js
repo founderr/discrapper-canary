@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return x;
+        return f;
     }
 }),
     n(47120);
@@ -28,7 +28,7 @@ function d(e) {
 }
 let h = d(u),
     m = d(u);
-function f(e) {
+function x(e) {
     return s.Jn9.test(e)
         ? (0, r.jsx)(o.Z, {
               type: o.Z.Types.TEXT,
@@ -36,7 +36,7 @@ function f(e) {
           })
         : e;
 }
-function x(e) {
+function f(e) {
     let { data: t } = e,
         n = (0, i.ZP)();
     return (0, r.jsx)('div', {
@@ -45,7 +45,7 @@ function x(e) {
             data: t,
             theme: 'light' === n ? m : h,
             invertTheme: !1,
-            valueRenderer: f
+            valueRenderer: x
         })
     });
 }

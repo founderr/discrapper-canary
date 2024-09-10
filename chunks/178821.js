@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return j;
     }
 }),
     n(47120);
@@ -15,9 +15,9 @@ var r = n(735250),
     d = n(219299);
 let h = 1000 / 60,
     m = 1000 / 45,
-    f = 3 * h,
-    x = Math.ceil(3000 / h);
-function g(e) {
+    x = 3 * h,
+    f = Math.ceil(3000 / h);
+function p(e) {
     let { socket: t, isAverageFrameTime: n } = e,
         [l, i] = (function (e) {
             let t = e.dispatcher.getIsSchedulerBackgrounded(),
@@ -36,12 +36,12 @@ function g(e) {
             averageFrameTime: c,
             timeSinceLastDrop: d,
             onResetFrameData: m,
-            droppedFramesRef: g,
-            renderedFrameCount: p,
+            droppedFramesRef: p,
+            renderedFrameCount: g,
             bufferFramecountRef: b,
             frameCheckerEffect: v
         } = (function (e, t) {
-            let n = a.useRef(Array(x).fill(0)),
+            let n = a.useRef(Array(f).fill(0)),
                 r = a.useRef(performance.now()),
                 l = a.useRef(0),
                 i = a.useRef(0),
@@ -57,7 +57,7 @@ function g(e) {
                         let a = performance.now(),
                             d = a - r.current;
                         if (((r.current = a), t.current)) return;
-                        if (((i.current -= n.current[c.current]), (n.current[c.current] = d), (i.current += d), s.current < x && (s.current += 1), (c.current = (c.current + 1) % x), d > f)) {
+                        if (((i.current -= n.current[c.current]), (n.current[c.current] = d), (i.current += d), s.current < f && (s.current += 1), (c.current = (c.current + 1) % f), d > x)) {
                             let t = 0 === s.current ? h : i.current / s.current,
                                 n = Math.min(2 * h, t),
                                 r = Math.floor(d / (e ? n : h));
@@ -68,10 +68,10 @@ function g(e) {
                     },
                     [e, t]
                 ),
-                g = 0 === s.current ? 0 : i.current / s.current;
+                p = 0 === s.current ? 0 : i.current / s.current;
             return {
-                currentFPS: 0 === g ? 0 : (h / g) * 60,
-                averageFrameTime: g,
+                currentFPS: 0 === p ? 0 : (h / p) * 60,
+                averageFrameTime: p,
                 timeSinceLastDrop: (performance.now() - u.current) / 1000,
                 droppedFramesRef: l,
                 bufferFramecountRef: s,
@@ -80,8 +80,8 @@ function g(e) {
                 onResetFrameData: d
             };
         })(n, l),
-        [_, C, j] = (function (e) {
-            let t = a.useRef(Array(x).fill(0)),
+        [j, _, C] = (function (e) {
+            let t = a.useRef(Array(f).fill(0)),
                 n = a.useRef(performance.now()),
                 r = a.useRef(0),
                 l = a.useRef(0),
@@ -96,7 +96,7 @@ function g(e) {
             let u = a.useCallback(function () {
                 let e = performance.now(),
                     a = e - n.current;
-                if (((n.current = e), !s.current)) (r.current -= t.current[i.current]), (t.current[i.current] = a), (r.current += a), l.current < x && (l.current += 1), (i.current = (i.current + 1) % x);
+                if (((n.current = e), !s.current)) (r.current -= t.current[i.current]), (t.current[i.current] = a), (r.current += a), l.current < f && (l.current += 1), (i.current = (i.current + 1) % f);
             }, []);
             return [
                 u,
@@ -111,7 +111,7 @@ function g(e) {
                 }
             ];
         })(t),
-        [T, N] = (function (e, t) {
+        [T, S] = (function (e, t) {
             let n = a.useRef(null),
                 r = a.useRef(null),
                 l = a.useRef(null),
@@ -132,21 +132,21 @@ function g(e) {
                 }, [i, o]),
                 i
             ];
-        })(_, v),
-        S = performance.now() - i.current < 5000,
-        y = C(c, b.current);
+        })(j, v),
+        N = performance.now() - i.current < 5000,
+        y = _(c, b.current);
     a.useEffect(
         () => (
             T(),
             () => {
-                N();
+                S();
             }
         ),
         []
     );
     let I = a.useCallback(() => {
-        m(), j(), T();
-    }, [m, j, T]);
+        m(), C(), T();
+    }, [m, C, T]);
     return (0, r.jsxs)('div', {
         className: u.panelGroup,
         children: [
@@ -174,16 +174,16 @@ function g(e) {
                         tag: 'span',
                         variant: 'text-md/bold',
                         color: d < 2 ? 'text-danger' : d < 5 ? 'text-warning' : 'text-primary',
-                        children: g.current
+                        children: p.current
                     }),
                     (0, r.jsxs)(s.Text, {
                         tag: 'span',
                         variant: 'text-sm/normal',
                         color: 'text-muted',
                         className: u.secondaryInfoText,
-                        children: ['(Dropped: ', ((g.current / p.current) * 100).toFixed(4), '%)']
+                        children: ['(Dropped: ', ((p.current / g.current) * 100).toFixed(4), '%)']
                     }),
-                    S &&
+                    N &&
                         (0, r.jsx)(s.Tooltip, {
                             position: 'left',
                             text: "We don't track frames while the app is in the background, because requestAnimationFrame doesn't fire in the background",
@@ -211,7 +211,7 @@ function g(e) {
                         tag: 'span',
                         variant: 'text-md/semibold',
                         color: 'text-secondary',
-                        children: p.current.toFixed(0)
+                        children: g.current.toFixed(0)
                     })
                 ]
             }),
@@ -247,7 +247,7 @@ function g(e) {
                                     color: y > 1 ? 'text-danger' : 'text-secondary',
                                     children: [y.toFixed(2), 'ms']
                                 }),
-                                S &&
+                                N &&
                                     (0, r.jsx)(s.Tooltip, {
                                         position: 'left',
                                         text: "We don't track frames while the app is in the background, because requestAnimationFrame doesn't fire in the background",
@@ -278,7 +278,7 @@ function g(e) {
         ]
     });
 }
-function p(e) {
+function g(e) {
     let { socket: t, isAverageFrameTime: n, onToggleAverageFrameTime: l } = e,
         [i, o] = a.useState(t.dispatcher.getIsRequestIdleCallbackEnabled()),
         c = a.useRef(null);
@@ -508,7 +508,7 @@ function v(e) {
         ]
     });
 }
-function _() {
+function j() {
     let e = (0, o.e7)([c.Z], () => c.Z.getSocket()),
         [t, n] = a.useState(!1);
     return (
@@ -528,11 +528,11 @@ function _() {
             children: (0, r.jsxs)(s.ScrollerThin, {
                 className: u.panel,
                 children: [
-                    (0, r.jsx)(g, {
+                    (0, r.jsx)(p, {
                         socket: e,
                         isAverageFrameTime: t
                     }),
-                    (0, r.jsx)(p, {
+                    (0, r.jsx)(g, {
                         socket: e,
                         isAverageFrameTime: t,
                         onToggleAverageFrameTime: n

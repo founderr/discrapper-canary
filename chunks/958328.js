@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return j;
     }
 });
 var r = n(735250);
@@ -15,24 +15,24 @@ var a = n(120356),
     d = n(430824),
     h = n(496675),
     m = n(944486),
-    f = n(914010),
-    x = n(233608),
-    g = n(71080),
-    p = n(644715),
+    x = n(914010),
+    f = n(233608),
+    p = n(71080),
+    g = n(644715),
     b = n(219299);
 function v(e) {
     let { title: t, can: n } = e,
         a = n ? s.CheckmarkLargeIcon : s.XSmallIcon,
         i = (0, r.jsx)('div', {
-            className: l()(p.iconOuter, n ? p.iconCheck : p.iconCross),
-            children: (0, r.jsx)(a, { className: p.icon })
+            className: l()(g.iconOuter, n ? g.iconCheck : g.iconCross),
+            children: (0, r.jsx)(a, { className: g.icon })
         });
     return (0, r.jsxs)('div', {
-        className: p.scope,
+        className: g.scope,
         children: [
             i,
             (0, r.jsx)('div', {
-                className: p.scopeInner,
+                className: g.scopeInner,
                 children: (0, r.jsx)(s.Text, {
                     variant: 'text-md/normal',
                     children: t
@@ -41,17 +41,29 @@ function v(e) {
         ]
     });
 }
-function _() {
+function j() {
     let e = (0, o.e7)([m.Z], () => m.Z.getChannelId()),
-        t = (0, o.e7)([f.Z], () => f.Z.getGuildId()),
+        t = (0, o.e7)([x.Z], () => x.Z.getGuildId()),
         n = (0, o.e7)([u.Z], () => u.Z.getChannel(e)),
         a = (0, o.e7)([d.Z], () => d.Z.getGuild(t)),
-        _ = (0, o.e7)([h.Z], () => h.Z.computePermissions(n)),
-        C = (0, o.e7)([h.Z], () => h.Z.computePermissions(a)),
-        j = (0, c.ZP)(n, !0),
-        T = null != n ? (0, g.IG)(n, !1, !0) : null,
-        N = null != a ? x.Z.getGuildPermissionSpecMap(a) : null,
-        S = Object.values(null != T ? T : {}).map((e) => {
+        j = (0, o.e7)([h.Z], () => h.Z.computePermissions(n)),
+        _ = (0, o.e7)([h.Z], () => h.Z.computePermissions(a)),
+        C = (0, c.ZP)(n, !0),
+        T = null != n ? (0, p.IG)(n, !1, !0) : null,
+        S = null != a ? f.Z.getGuildPermissionSpecMap(a) : null,
+        N = Object.values(null != T ? T : {}).map((e) => {
+            let { title: t, flag: n } = e,
+                a = i.e$(j, n);
+            return (0, r.jsx)(
+                v,
+                {
+                    title: t,
+                    can: a
+                },
+                t
+            );
+        }),
+        y = Object.values(null != S ? S : {}).map((e) => {
             let { title: t, flag: n } = e,
                 a = i.e$(_, n);
             return (0, r.jsx)(
@@ -62,36 +74,24 @@ function _() {
                 },
                 t
             );
-        }),
-        y = Object.values(null != N ? N : {}).map((e) => {
-            let { title: t, flag: n } = e,
-                a = i.e$(C, n);
-            return (0, r.jsx)(
-                v,
-                {
-                    title: t,
-                    can: a
-                },
-                t
-            );
         });
     return (0, r.jsx)('div', {
-        className: l()(b.panel, p.panel),
+        className: l()(b.panel, g.panel),
         children: (0, r.jsxs)('div', {
-            className: p.panelInner,
+            className: g.panelInner,
             children: [
                 (0, r.jsxs)('section', {
-                    className: p.section,
+                    className: g.section,
                     children: [
                         (0, r.jsx)(s.Heading, {
                             variant: 'heading-md/semibold',
-                            children: null != j ? 'Permissions in '.concat(j) : 'No channel selected'
+                            children: null != C ? 'Permissions in '.concat(C) : 'No channel selected'
                         }),
-                        S
+                        N
                     ]
                 }),
                 (0, r.jsxs)('section', {
-                    className: p.section,
+                    className: g.section,
                     children: [
                         (0, r.jsx)(s.Heading, {
                             variant: 'heading-md/semibold',
