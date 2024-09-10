@@ -103,14 +103,8 @@ let W = (e) => {
         });
     },
     K = () => {
-        let e = (0, N.q)(),
-            t = (0, N.T)();
-        return e > 0
-            ? (0, i.jsx)(E.NumberBadge, {
-                  count: e,
-                  color: 0 === t ? S.Z.ICON_MUTED : void 0
-              })
-            : null;
+        let e = (0, N.q)();
+        return e > 0 ? (0, i.jsx)(E.NumberBadge, { count: e }) : null;
     },
     q = (e) => {
         let { selected: t } = e,

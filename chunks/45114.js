@@ -2,9 +2,6 @@ n.d(t, {
     CZ: function () {
         return h;
     },
-    ES: function () {
-        return T;
-    },
     FT: function () {
         return m;
     },
@@ -16,9 +13,6 @@ n.d(t, {
     },
     U6: function () {
         return _;
-    },
-    YJ: function () {
-        return S;
     },
     iV: function () {
         return f;
@@ -131,13 +125,4 @@ function m(e, t) {
             ackedId: t,
             local: !1
         });
-}
-function T(e) {
-    r.Z.dispatch({
-        type: 'MESSAGE_REQUEST_ACK',
-        ackedId: e
-    });
-}
-function S() {
-    r.Z.dispatch({ type: 'MESSAGE_REQUEST_CLEAR_ACK' });
 }
