@@ -26,56 +26,60 @@ var i = t(735250),
     v = t(413097);
 function I(e) {
     var n;
-    let { channel: t, application: s, sectionName: c, installOnDemand: I } = e,
-        P = (0, l.e7)([m.Z], () => m.Z.entrypoint()),
-        S = null !== (n = (0, u.q)(s.id === E.bi.BUILT_IN ? null : s.id)) && void 0 !== n ? n : s,
-        L = (0, _.ye)(S) ? g : A.Z,
-        b = a.useRef(null),
-        [R, T] = a.useState(!1),
-        { iconURL: M, name: y } = a.useMemo(
+    let { channel: t, application: s, sectionName: c } = e,
+        I = (0, l.e7)([m.Z], () => m.Z.entrypoint()),
+        P = null !== (n = (0, u.q)(s.id === E.bi.BUILT_IN ? null : s.id)) && void 0 !== n ? n : s,
+        S = (0, _.ye)(P) ? g : A.Z,
+        L = a.useRef(null),
+        [b, R] = a.useState(!1),
+        { iconURL: T, name: M } = a.useMemo(
             () =>
-                (0, _.sl)(S, {
+                (0, _.sl)(P, {
                     fakeAppIconURL: v,
                     size: 84
                 }),
-            [S]
-        );
+            [P]
+        ),
+        j = (0, d.PL)(!0, !0),
+        y = (0, d.LD)(t.guild_id, !0),
+        Z = a.useMemo(() => (0, d.If)(t, P.id), [j, y, t, P.id]),
+        O = !Z.isGuildInstalled && !Z.isUserInstalled;
     return (
         a.useEffect(() => {
-            I ? d.ZP.queryInstallOnDemandApp(S.id, t.id) : d.ZP.maybeQueryForInstallLessApps(S.id, t.id);
-        }, [S.id, t.id, I]),
+            O ? d.ZP.queryInstallOnDemandApp(P.id, t.id) : d.ZP.maybeQueryForInstallLessApps(P.id, t.id);
+        }, [P.id, t.id, O]),
         (0, i.jsxs)(r.ScrollerNone, {
             className: x.container,
             fade: !0,
-            ref: b,
+            ref: L,
             role: 'region',
-            'aria-label': N.Z.Messages.APP_LAUNCHER_SECTION_APPLICATION_DETAILS_ARIA_LABEL.format({ applicationName: y }),
+            'aria-label': N.Z.Messages.APP_LAUNCHER_SECTION_APPLICATION_DETAILS_ARIA_LABEL.format({ applicationName: M }),
             children: [
                 (0, i.jsx)(h.Z, {
-                    application: S,
-                    name: y,
-                    iconURL: M,
-                    scrollerRef: b
+                    application: P,
+                    name: M,
+                    iconURL: T,
+                    scrollerRef: L
                 }),
-                null != M &&
+                null != T &&
                     (0, i.jsx)(C.Z, {
-                        src: M,
+                        src: T,
                         className: x.appIcon
                     }),
                 (0, i.jsx)(o.Z, { size: 54 }),
-                (0, i.jsx)(L, {
+                (0, i.jsx)(S, {
                     channel: t,
-                    application: S,
+                    application: P,
                     sectionName: c,
-                    hasCommands: R
+                    hasCommands: b
                 }),
-                P === p._b.TEXT
+                I === p._b.TEXT
                     ? (0, i.jsx)(f.Z, {
                           channel: t,
-                          application: S,
+                          application: P,
                           sectionName: c,
-                          installOnDemand: I,
-                          setHasCommands: T
+                          installOnDemand: O,
+                          setHasCommands: R
                       })
                     : null
             ]

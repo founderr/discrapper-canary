@@ -147,8 +147,7 @@ function N(e) {
                         (0, i.jsx)(u.Z, {
                             channel: n,
                             application: v.application,
-                            sectionName: v.sectionName,
-                            installOnDemand: v.installOnDemand
+                            sectionName: v.sectionName
                         })
                 })
             })

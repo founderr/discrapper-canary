@@ -6,7 +6,7 @@ var i = n(735250),
     r = n(952265),
     o = n(481060),
     c = n(40851),
-    u = n(213459),
+    u = n(835473),
     d = n(314910),
     h = n(585483),
     m = n(5967),
@@ -66,26 +66,25 @@ function N(e) {
             ((!v && (0, r.$s)()) || (v && !N)) && S();
         }, [N, v]);
     let Z = (0, l.e7)([_.Z], () => _.Z.initialState(), []),
-        M = s.useMemo(() => {
+        M = (0, u.q)(null == Z ? void 0 : Z.applicationId),
+        b = s.useMemo(() => {
             if (null == Z) return;
             let e = [{ type: E.gc.HOME }];
-            if (null != Z.applicationId) {
-                var n;
-                let i = (0, u.If)(t, Z.applicationId);
-                (null == i ? void 0 : null === (n = i.descriptor) || void 0 === n ? void 0 : n.application) != null &&
+            return (
+                null != Z.applicationId &&
+                    null != M &&
                     e.push({
                         type: E.gc.APPLICATION,
-                        application: i.descriptor.application,
-                        installOnDemand: !i.isGuildInstalled && !i.isUserInstalled
-                    });
-            }
-            return e;
-        }, [t, Z]);
+                        application: M
+                    }),
+                e
+            );
+        }, [Z, M]);
     return (0, i.jsx)(g.Z, {
         ref: p,
         channel: t,
         entrypoint: f._b.TEXT,
-        initHistory: M
+        initHistory: b
     });
 }
 t.Z = s.memo(function (e) {

@@ -2,9 +2,6 @@ n.d(t, {
     Fs: function () {
         return _;
     },
-    SY: function () {
-        return E;
-    },
     Xu: function () {
         return d;
     },
@@ -53,31 +50,30 @@ function d(e, t) {
     ).commands[0];
 }
 function _(e, t) {
-    let { commands: n, loading: i } = E(e, t),
-        a = n[0],
-        o = null != a;
+    let { commands: n, loading: a } = (function (e, t) {
+            return (0, o.v1)(
+                e,
+                { commandTypes: [i.yU.PRIMARY_ENTRY_POINT] },
+                {
+                    placeholderCount: 1,
+                    scoreMethod: l.p.COMMAND_ONLY,
+                    applicationId: t,
+                    allowFetch: !1,
+                    allowApplicationState: !0
+                }
+            );
+        })(e, t),
+        u = n[0],
+        c = null != u;
     return (
         r.useEffect(() => {
-            !o &&
-                !i &&
+            !c &&
+                !a &&
                 (0, s.j)({
                     type: 'application',
                     applicationId: t
                 });
-        }, [t, o, i]),
-        a
-    );
-}
-function E(e, t) {
-    return (0, o.v1)(
-        e,
-        { commandTypes: [i.yU.PRIMARY_ENTRY_POINT] },
-        {
-            placeholderCount: 1,
-            scoreMethod: l.p.COMMAND_ONLY,
-            applicationId: t,
-            allowFetch: !1,
-            allowApplicationState: !0
-        }
+        }, [t, c, a]),
+        u
     );
 }
