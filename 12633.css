@@ -30312,6 +30312,10 @@ input[type=checkbox]:focus-visible+.label_d1ac9b {
     top: 58px
 }
 
+.expressionPickerCategoryList_ceda83 {
+    top: 50px
+}
+
 .category_ceda83 {
     cursor: pointer;
     margin-bottom: 8px;
@@ -30492,8 +30496,9 @@ input[type=checkbox]:focus-visible+.label_d1ac9b {
     width: 500px
 }
 
-.picker_cd703d.autoWidth_cd703d {
-    width: auto
+.picker_cd703d.inExpressionPicker_cd703d {
+    width: auto;
+    box-shadow: none
 }
 
 .fetching_cd703d {
@@ -31233,6 +31238,13 @@ input[type=checkbox]:focus-visible+.label_d1ac9b {
 
 .soundboardContainer_af5dbb {
     position: relative
+}
+
+.soundboardHeader_af5dbb {
+    display: flex;
+    align-items: center;
+    box-shadow: var(--shadow-low);
+    padding: 0 16px 16px
 }
 
 .enable-forced-colors .resizeHandle_af5dbb {
