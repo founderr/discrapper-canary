@@ -291,16 +291,11 @@ let ej = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eZ.Z.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_STANDING],
                 parent: eD.s6.PRIVACY_AND_SAFETY_V2
             },
-            [eD.s6.PRIVACY_AND_SAFETY_ENCRYPTION]: {
-                section: eP.oAB.PRIVACY_AND_SAFETY_V2,
-                searchableTitles: [eZ.Z.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_ENCRYPTION],
-                parent: eD.s6.PRIVACY_AND_SAFETY_V2,
-                predicate: () => (0, F.isDesktop)()
-            },
             [eD.s6.PRIVACY_AND_SAFETY_VOICE_SECURITY]: {
                 section: eP.oAB.PRIVACY_AND_SAFETY_V2,
                 searchableTitles: [eZ.Z.Messages.PRIVACY_AND_SAFETY_CATEGORY_TITLE_VOICE_SECURITY],
-                parent: eD.s6.PRIVACY_AND_SAFETY_ENCRYPTION
+                parent: eD.s6.PRIVACY_AND_SAFETY_DATA_PRIVACY,
+                predicate: () => (0, F.isDesktop)()
             },
             [eD.s6.PRIVACY_AND_SAFETY_PERSISTENT_VERIFICATION_CODES]: {
                 section: eP.oAB.PRIVACY_AND_SAFETY_V2,
