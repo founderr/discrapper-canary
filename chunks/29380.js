@@ -37,11 +37,11 @@ function I(e) {
             onSubmissionComplete: L
         }),
         [T, M] = a.useState(!1),
-        y = (0, d.Qv)({
+        j = (0, d.Qv)({
             applicationId: t.id,
             channelId: n.id
         }),
-        j = a.useMemo(() => (0, h.XZ)(g.displayName), [g.displayName]),
+        y = a.useMemo(() => (0, h.XZ)(g.displayName), [g.displayName]),
         {
             onActivityItemSelected: Z,
             buttonColor: O,
@@ -51,8 +51,8 @@ function I(e) {
             application: t,
             location: u.Vh.APP_LAUNCHER_APPLICATION_VIEW,
             sectionName: I,
-            commandName: j,
-            autoDismissOnClick: y === d.JS.LEAVE,
+            commandName: y,
+            autoDismissOnClick: j === d.JS.LEAVE,
             launchingComponentId: S,
             submitting: null != R ? R : b
         }),
@@ -84,7 +84,7 @@ function I(e) {
         })({
             channel: n,
             application: t,
-            activityAction: y
+            activityAction: j
         });
     return (0, i.jsx)(o.Tooltip, {
         shouldShow: U,

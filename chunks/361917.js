@@ -35,8 +35,8 @@ var i = t(735250),
     R = t(783097),
     T = t(695676),
     M = t(98880),
-    y = t(804307),
-    j = t(888617),
+    j = t(804307),
+    y = t(888617),
     Z = t(561160),
     O = t(41558),
     H = t(105862),
@@ -303,7 +303,7 @@ function q(e) {
     (0, C.g)();
     let l = (0, _.Z)({ guildId: n.getGuildId() }),
         o = M.U4.LARGE_BANNER,
-        { trackSectionImpressionRef: r } = (0, j.Z)({
+        { trackSectionImpressionRef: r } = (0, y.Z)({
             sectionName: L.L3.ACTIVITIES,
             numItems: l.length,
             numVisibleItems: l.length
@@ -388,7 +388,7 @@ function J(e) {
             [p]
         ),
         { items: f, handleViewMore: h } = ee(D.Z.Messages.APP_LAUNCHER_HOME_APPS_IN_SERVER_HEADER, M.U4.ROW, C, 4, _),
-        { trackSectionImpressionRef: A } = (0, j.Z)({
+        { trackSectionImpressionRef: A } = (0, y.Z)({
             sectionName: _,
             numItems: C.length,
             numVisibleItems: f.length
@@ -413,7 +413,7 @@ function J(e) {
                   (0, i.jsx)('div', {
                       className: w.sectionRowsContentContainer,
                       children: E
-                          ? W.map((e) => (0, i.jsx)(y.Z, { look: M.U4.ROW }, e))
+                          ? W.map((e) => (0, i.jsx)(j.Z, { look: M.U4.ROW }, e))
                           : f.map((e, n) => {
                                 let { application: t } = e;
                                 return null != t
@@ -520,7 +520,7 @@ function Q(e) {
                                     (0, i.jsx)(O.Z.Loading, {}),
                                     (0, i.jsx)('div', {
                                         className: a === M.U4.ROW ? w.sectionRowsContentContainer : w.sectionTwoColumnContentContainer,
-                                        children: t.map((e) => (0, i.jsx)(y.Z, { look: a }, e))
+                                        children: t.map((e) => (0, i.jsx)(j.Z, { look: a }, e))
                                     })
                                 ]
                             },
@@ -588,7 +588,7 @@ function K(e) {
             t = 4;
     }
     let { items: m, handleViewMore: p } = ee(c, n, d, t, u),
-        { trackSectionImpressionRef: _ } = (0, j.Z)({
+        { trackSectionImpressionRef: _ } = (0, y.Z)({
             sectionName: u,
             numItems: d.length,
             numVisibleItems: m.length

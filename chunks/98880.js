@@ -43,8 +43,8 @@ var i,
     R = t(541099),
     T = t(783097),
     M = t(695676),
-    y = t(176412),
-    j = t(226026),
+    j = t(176412),
+    y = t(226026),
     Z = t(753972),
     O = t(981631),
     H = t(217702),
@@ -99,7 +99,7 @@ function V(e) {
             [n, C]
         ),
         { name: h, description: A } = o.useMemo(() => (0, T.sl)(n, { fakeAppIconURL: k }), [n]),
-        { trackItemImpressionRef: E } = (0, j.Z)({
+        { trackItemImpressionRef: E } = (0, y.Z)({
             applicationId: n.id,
             sectionName: a,
             sectionPosition: r
@@ -161,7 +161,7 @@ function W(e) {
 function F(e) {
     let { application: n, look: t, imageStyle: i, enableVideoBanner: a, disableBannerFadeIn: r, children: u } = e,
         { iconURL: m, name: p, description: C } = o.useMemo(() => (0, T.sl)(n, { fakeAppIconURL: k }), [n]),
-        f = o.useMemo(() => (null == C ? null : (0, y.ae)(C)), [C]),
+        f = o.useMemo(() => (null == C ? null : (0, j.ae)(C)), [C]),
         h = (0, v.ZP)(m, ''),
         [A, E] = o.useState(!1),
         N = o.useCallback(() => {
@@ -431,7 +431,7 @@ function $(e) {
             activityAction: A,
             buttonColor: E,
             buttonText: N
-        } = (0, y.P7)({
+        } = (0, j.P7)({
             channel: n,
             application: t,
             location: i,
