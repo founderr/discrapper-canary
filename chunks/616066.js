@@ -1,6 +1,6 @@
 n.d(t, {
     R: function () {
-        return C;
+        return p;
     }
 });
 var a = n(735250);
@@ -12,31 +12,29 @@ var r = n(120356),
     i = n(1585),
     c = n(125988),
     d = n(998502),
-    u = n(266386),
-    f = n(689938),
-    g = n(777381);
-let p = d.ZP.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar,
-    C = (e) => {
-        let { item: t, user: n, isHighlighted: r = !1, isPurchased: d = !1, avatarSize: C = l.AvatarSizes.SIZE_152, avatarPlaceholderSrc: v } = e,
-            m = (0, i.y9)(C),
-            E = (0, u.c)('AvatarDecorationPreview'),
+    u = n(689938),
+    f = n(777381);
+let g = d.ZP.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar,
+    p = (e) => {
+        let { item: t, user: n, isHighlighted: r = !1, isPurchased: d = !1, avatarSize: p = l.AvatarSizes.SIZE_152, avatarPlaceholderSrc: C } = e,
+            m = (0, i.y9)(p),
             {
-                avatarDecorationSrc: h,
-                eventHandlers: b,
-                avatarPlaceholderSrc: y
+                avatarDecorationSrc: E,
+                eventHandlers: v,
+                avatarPlaceholderSrc: h
             } = (0, c.Z)({
                 user: n,
                 avatarDecorationOverride: (null == t ? void 0 : t.type) === o.Z.AVATAR_DECORATION ? t : void 0,
                 size: m,
                 onlyAnimateOnHover: !r
             });
-        return (0, a.jsx)(p, {
-            ...b,
-            avatarDecoration: h,
-            src: E && r ? (null == n ? void 0 : n.getAvatarURL(void 0, 152, !0)) : null != v ? v : y,
-            imageClassName: E && r ? g.fadeInAvatarImg : void 0,
-            className: s()(g.avatar, { [g.avatarPurchased]: d }),
-            size: C,
-            'aria-label': f.Z.Messages.USER_SETTINGS_AVATAR
+        return (0, a.jsx)(g, {
+            ...v,
+            avatarDecoration: E,
+            src: r ? (null == n ? void 0 : n.getAvatarURL(void 0, 152, !0)) : null != C ? C : h,
+            imageClassName: r ? f.fadeInAvatarImg : void 0,
+            className: s()(f.avatar, { [f.avatarPurchased]: d }),
+            size: p,
+            'aria-label': u.Z.Messages.USER_SETTINGS_AVATAR
         });
     };
