@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return m;
     }
 }),
     n(653041);
@@ -14,21 +14,24 @@ var i = n(399606),
     u = n(460347),
     d = n(994592),
     h = n(265418),
-    p = n(443063),
-    _ = n(981631);
-function f(e) {
+    p = n(398758),
+    _ = n(330791),
+    f = n(443063),
+    g = n(981631);
+function m(e) {
     let t = (0, h.Z)(e.id),
         n = (0, r.W)(e.id),
-        f = (0, d.j0)(e.id),
-        g = (0, l.u)(e),
-        m = (0, c.g)(e.id),
-        C = (0, i.e7)([s.Z], () => s.Z.getNewMemberActions(e.id), [e.id]),
-        I = (0, u.Z)(e.id),
-        E = (0, o.PE)(e.id),
-        N = (0, a.n2)(e.id),
-        x = [],
-        S = e.hasFeature(_.oNc.HUB),
-        v = e.hasFeature(_.oNc.COMMUNITY),
-        Z = e.hasFeature(_.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY);
-    return S && x.push(p.z.GUILD_HUB_HEADER_OPTIONS), !E && m && I && null != C && C.length > 0 ? x.push(p.z.GUILD_NEW_MEMBER_ACTIONS_PROGRESS_BAR) : e.premiumProgressBarEnabled && x.push(p.z.GUILD_PREMIUM_PROGRESS_BAR), !S && m && x.push(p.z.GUILD_HOME), t && x.push(p.z.GUILD_SCHEDULED_EVENTS), !S && v && x.push(p.z.CHANNELS_AND_ROLES), f && x.push(p.z.GUILD_ROLE_SUBSCRIPTIONS), g && x.push(p.z.GUILD_SHOP), n && x.push(p.z.GUILD_MEMBER_APPLICATIONS), N && (v || Z) && x.push(p.z.GUILD_MOD_DASH_MEMBER_SAFETY), x;
+        m = (0, d.j0)(e.id),
+        C = (0, l.u)(e),
+        I = (0, c.g)(e.id),
+        E = (0, i.e7)([s.Z], () => s.Z.getNewMemberActions(e.id), [e.id]),
+        N = (0, u.Z)(e.id),
+        x = (0, o.PE)(e.id),
+        S = (0, a.n2)(e.id),
+        v = [],
+        Z = e.hasFeature(g.oNc.HUB),
+        T = e.hasFeature(g.oNc.COMMUNITY),
+        L = (0, _.lN)(!(0, p.r1)(e.id)),
+        A = e.hasFeature(g.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY);
+    return Z && v.push(f.z.GUILD_HUB_HEADER_OPTIONS), !x && I && N && null != E && E.length > 0 ? v.push(f.z.GUILD_NEW_MEMBER_ACTIONS_PROGRESS_BAR) : e.premiumProgressBarEnabled && v.push(f.z.GUILD_PREMIUM_PROGRESS_BAR), !Z && I && v.push(f.z.GUILD_HOME), t && v.push(f.z.GUILD_SCHEDULED_EVENTS), !Z && T && L && v.push(f.z.CHANNELS_AND_ROLES), m && v.push(f.z.GUILD_ROLE_SUBSCRIPTIONS), C && v.push(f.z.GUILD_SHOP), n && v.push(f.z.GUILD_MEMBER_APPLICATIONS), S && (T || A) && v.push(f.z.GUILD_MOD_DASH_MEMBER_SAFETY), v;
 }
