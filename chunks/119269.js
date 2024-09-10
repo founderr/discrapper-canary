@@ -14,7 +14,7 @@ var i = n(120356),
     d = n(967538),
     _ = n(885302),
     u = n(914677),
-    E = n(836846);
+    E = n(226705);
 ((s = a || (a = {}))[(s.NITRO_GEM = 0)] = 'NITRO_GEM'), (s[(s.NITRO_LOGO = 1)] = 'NITRO_LOGO');
 t.Z = (e) => {
     let { showAnimations: t = !0, iconClassName: n, staticPercentage: s, innerCircleClassName: a, progressCircleStrokeSize: i, backgroundCircleSize: T, percentage: I, initialPercentage: R, progressCircleVariation: g = 0, ellipseOpacity: C, customAnimationClassName: N, circleColor: m, circleStroke: p } = e,

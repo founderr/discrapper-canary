@@ -16,7 +16,7 @@ var r = a(442837),
     A = a(246946),
     E = a(654904),
     _ = a(228168),
-    I = a(115879);
+    I = a(451563);
 function P(e) {
     var n;
     let { user: a, displayProfile: P, guild: p, pendingAvatar: v, pendingNickname: N, pendingGlobalName: m, pendingBio: C, pendingPronouns: L, isTryItOutFlow: T, hideBioSection: R } = e,

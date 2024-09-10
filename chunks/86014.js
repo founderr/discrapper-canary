@@ -15,7 +15,7 @@ var i = n(735250),
     I = n(895068),
     g = n(308083),
     p = n(689938),
-    T = n(266489);
+    T = n(641388);
 function S(e) {
     let { showPickGameButton: t, showAdminGuildPicker: n, inGlobalDiscovery: s } = e,
         { guilds: _ } = (0, c.C3)({

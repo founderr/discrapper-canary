@@ -18,7 +18,7 @@ var s = n(533800),
     E = n(358595),
     I = n(981631),
     m = n(689938),
-    T = n(29062);
+    T = n(691784);
 function h(e) {
     var t, h;
     let N,
@@ -138,7 +138,7 @@ function h(e) {
                                 children: m.Z.Messages.HUB_INVITE_ANOTHER_SCHOOL_LINK.format({
                                     onClick: () =>
                                         (0, a.openModalLazy)(async () => {
-                                            let { default: e } = await Promise.all([n.e('95468'), n.e('46030')]).then(n.bind(n, 650233));
+                                            let { default: e } = await Promise.all([n.e('95468'), n.e('16325')]).then(n.bind(n, 650233));
                                             return (t) => (0, i.jsx)(e, { ...t });
                                         })
                                 })

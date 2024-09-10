@@ -9,14 +9,14 @@ var s = n(735250),
     d = n(268350),
     u = n(419922),
     _ = n(689938),
-    I = n(405385);
+    I = n(102017);
 t.Z = (e) => {
     let { className: t, isDisabled: i, sticker: E, canManageSticker: T } = e,
         [m, N] = a.useState(!1),
         [S, h] = (0, c.Z)(null, 4000),
         g = () => {
             (0, l.openModalLazy)(async () => {
-                let { default: e } = await Promise.all([n.e('93626'), n.e('33625')]).then(n.bind(n, 136735));
+                let { default: e } = await Promise.all([n.e('93626'), n.e('2901')]).then(n.bind(n, 136735));
                 return (t) =>
                     (0, s.jsx)(e, {
                         sticker: E,

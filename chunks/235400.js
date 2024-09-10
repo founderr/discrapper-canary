@@ -30,7 +30,7 @@ var r = n(735250),
     R = n(981631),
     v = n(474936),
     C = n(689938),
-    y = n(801802);
+    y = n(398787);
 function L(e) {
     let { user: t, categories: n, purchases: a, analyticsLocations: s, onClose: u, initialSelectedDecoration: E, initialSelectedDecorationId: T, isTryItOutFlow: S, guild: R } = e,
         {

@@ -9,7 +9,7 @@ var i = n(120356),
     c = n(246946),
     d = n(51144),
     _ = n(689938),
-    E = n(442129);
+    E = n(845286);
 let f = (e) => {
     let { primary: t, secondary: n, botType: i, botVerified: s, discriminatorClass: u, className: c, usernameClass: d, color: f, botClass: h, showStreamerModeTooltip: p } = e;
     return (0, r.jsxs)('div', {

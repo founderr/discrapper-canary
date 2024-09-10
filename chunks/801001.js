@@ -24,7 +24,7 @@ var s = t(735250),
     E = t(460117),
     x = t(290511),
     j = t(689938),
-    R = t(995581);
+    R = t(996747);
 function M(e) {
     let { transitionState: n, onClose: t, onSave: i, onDelete: _, option: O, guild: h, prompt: M, index: g } = e,
         P = (0, c.Dt)(),

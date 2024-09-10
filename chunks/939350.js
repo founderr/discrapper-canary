@@ -3,7 +3,7 @@ n.d(t, {
         return i;
     }
 });
-var r = n(837244);
+var r = n(667947);
 let i = {
     default: r.colorDefault,
     brand: r.colorBrand,

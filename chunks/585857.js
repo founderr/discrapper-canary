@@ -18,7 +18,7 @@ var o = n(120356),
     m = n(46140),
     g = n(981631),
     _ = n(689938),
-    C = n(59596);
+    C = n(181284);
 function f(e) {
     let { quest: t, isConnected: n, consoleType: o } = e;
     return (0, s.jsx)(i.Clickable, {

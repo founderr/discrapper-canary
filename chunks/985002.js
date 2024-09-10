@@ -19,10 +19,10 @@ function o(e) {
         [C, N] = s.useState(!1),
         [m, p] = s.useState(!1),
         [A, f] = s.useState(!1),
-        h = o || d || u || T || C || A,
-        S = s.useCallback(
+        M = o || d || u || T || C || A,
+        h = s.useCallback(
             async (e) => {
-                if (!h) {
+                if (!M) {
                     c(!0);
                     try {
                         await (0, r.Yw)(e.id, l.ne.ACTIVE), null == n || n();
@@ -34,11 +34,11 @@ function o(e) {
                     }
                 }
             },
-            [h, t, n]
+            [M, t, n]
         ),
-        M = s.useCallback(
+        S = s.useCallback(
             async (e) => {
-                if (!h) {
+                if (!M) {
                     _(!0);
                     try {
                         await (0, r.Yw)(e.id, l.ne.DECLINED), null == n || n();
@@ -50,11 +50,11 @@ function o(e) {
                     }
                 }
             },
-            [h, t, n]
+            [M, t, n]
         ),
         x = s.useCallback(
             async (e) => {
-                if (!h) {
+                if (!M) {
                     E(!0);
                     try {
                         await (0, r.Yw)(e.id, l.ne.INACTIVE), null == n || n();
@@ -66,11 +66,11 @@ function o(e) {
                     }
                 }
             },
-            [h, t, n]
+            [M, t, n]
         ),
         O = s.useCallback(
             async (e) => {
-                if (!h) {
+                if (!M) {
                     I(!0);
                     try {
                         await (0, r.fc)(e.id), null == n || n();
@@ -82,7 +82,7 @@ function o(e) {
                     }
                 }
             },
-            [h, t, n]
+            [M, t, n]
         ),
         b = s.useCallback(async () => {
             if (!R) {
@@ -130,8 +130,8 @@ function o(e) {
             [C, t, n]
         );
     return {
-        acceptLinkRequest: S,
-        declineLinkRequest: M,
+        acceptLinkRequest: h,
+        declineLinkRequest: S,
         disconnectLinkRequest: x,
         cancelLinkRequest: O,
         selectTeenUser: P,

@@ -28,7 +28,7 @@ var n,
     T = t(703115),
     S = t(726985),
     I = t(689938),
-    N = t(205548);
+    N = t(566701);
 function m(e) {
     let { isGuildRestricted: s, handleRestrictedGuildChange: t, isGuildActivityRestricted: n, handleActivityRestrictedGuildChange: a, isGuildActivityJoiningRestricted: r, handleActivityJoiningRestrictedGuildChange: c, isGuildMessageRequestRestricted: d, handleMessageRequestRestrictedGuildChange: u, guild: T } = e,
         m = T.hasFeature(E.oNc.HUB);

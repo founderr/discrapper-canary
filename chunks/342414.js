@@ -15,7 +15,7 @@ var a = n(120356),
     R = n(938736),
     g = n(386733),
     C = n(689938),
-    N = n(636013),
+    N = n(993270),
     m = n(872905),
     p = n(578478);
 let A = (e) => {
@@ -102,7 +102,7 @@ let A = (e) => {
             ]
         });
     },
-    h = () =>
+    M = () =>
         (0, s.jsxs)(s.Fragment, {
             children: [
                 (0, s.jsx)('img', {
@@ -142,7 +142,7 @@ t.Z = (e) => {
             inTrial: l
         });
     return (
-        r && (T = (0, s.jsx)(h, {})),
+        r && (T = (0, s.jsx)(M, {})),
         (u || E) &&
             (T = (0, s.jsx)(f, {
                 inTrial: l,

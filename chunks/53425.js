@@ -8,7 +8,7 @@ var i = n(735250),
     u = n(823379),
     d = n(734190),
     h = n(689938),
-    p = n(645829);
+    p = n(82915);
 t.Z = l.memo(function (e) {
     let { channel: t, selectedChannel: n, selectedVoiceChannelId: l, sortedThreadIds: r, withGuildIcon: _ } = e,
         f = (0, s.Wu)([o.Z], () => r.map((e) => o.Z.getChannel(e)).filter(u.lm), [r]),

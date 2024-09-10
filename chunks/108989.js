@@ -1,16 +1,16 @@
 n.d(t, {
     Z: function () {
-        return d;
+        return c;
     }
 }),
     n(47120);
 var r = n(735250),
-    a = n(470079),
-    i = n(887024);
+    i = n(470079),
+    a = n(887024);
 let o = [n(123353)],
     s = ['#FFFFFF'],
-    l = 1000 / 60,
-    c = {
+    d = 1000 / 60,
+    u = {
         velocity: {
             type: 'static-random',
             minValue: {
@@ -62,18 +62,18 @@ let o = [n(123353)],
             value: 0.3
         }
     };
-function d(e) {
-    let { className: t, firing: n = !0, wind: d = 2 } = e,
-        [u, f] = a.useState(null),
-        [h, p] = a.useState(null),
-        b = (0, i.uR)(h, u),
-        m = a.useMemo(() => new i.qA({ wind: d }), [d]),
-        g = a.useCallback(() => {
-            let e = null == h ? void 0 : h.getCanvas();
+function c(e) {
+    let { className: t, firing: n = !0, wind: c = 2 } = e,
+        [l, f] = i.useState(null),
+        [_, b] = i.useState(null),
+        p = (0, a.uR)(_, l),
+        h = i.useMemo(() => new a.qA({ wind: c }), [c]),
+        m = i.useCallback(() => {
+            let e = null == _ ? void 0 : _.getCanvas();
             if (null == e) return;
             let t = e.getBoundingClientRect();
-            b.createConfetti({
-                ...c,
+            p.createConfetti({
+                ...u,
                 position: {
                     type: 'static-random',
                     minValue: {
@@ -86,20 +86,20 @@ function d(e) {
                     }
                 }
             });
-        }, [b, h]);
+        }, [p, _]);
     return (
-        a.useEffect(() => {
-            let e = n ? setInterval(g, l) : null;
+        i.useEffect(() => {
+            let e = n ? setInterval(m, d) : null;
             return () => clearInterval(e);
-        }, [n, g]),
+        }, [n, m]),
         (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(i.O_, {
-                    ref: p,
+                (0, r.jsx)(a.O_, {
+                    ref: b,
                     className: t,
-                    environment: m
+                    environment: h
                 }),
-                (0, r.jsx)(i.Ji, {
+                (0, r.jsx)(a.Ji, {
                     ref: f,
                     colors: s,
                     sprites: o,

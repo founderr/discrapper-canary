@@ -16,7 +16,7 @@ var s = t(735250),
     O = t(134612),
     _ = t(981631),
     u = t(689938),
-    R = t(288877);
+    R = t(872612);
 function N(e) {
     let { userId: o, channelId: t, transitionState: N, onBlock: T, onBlockAndReport: I, onClose: A, onCancel: B } = e,
         M = (0, C.q)(t),

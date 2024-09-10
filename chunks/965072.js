@@ -12,7 +12,7 @@ var a = s(735250),
     r = s(479531),
     i = s(213609),
     d = s(689938),
-    u = s(78247),
+    u = s(884527),
     c = s(800010);
 function C(e) {
     let { transitionState: t, onFormSubmit: s, onResend: C, onSuccess: _, onClose: h, headerText: T, confirmButtonText: m, confirmButtonColor: E, impressionName: N } = e,

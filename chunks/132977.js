@@ -23,7 +23,7 @@ var r,
     f = n(481060),
     h = n(727637),
     p = n(600164),
-    I = n(745820);
+    I = n(604547);
 ((r = o || (o = {})).DEFAULT = 'default'), (r.SMALL = 'small');
 let m = {
         default: I.shineDefault,

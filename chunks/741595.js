@@ -9,7 +9,7 @@ var a = t(735250),
     s = t.n(i),
     o = t(481060),
     l = t(308083),
-    c = t(318577);
+    c = t(602075);
 function d(e) {
     let { playstyle: n, onUpdatePlaystyle: t } = e,
         i = (0, o.useToken)(o.tokens.colors.WHITE),

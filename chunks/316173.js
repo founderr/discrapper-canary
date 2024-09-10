@@ -10,7 +10,7 @@ var i = n(735250),
     u = n(865427),
     _ = n(820254),
     E = n(689938),
-    h = n(514990);
+    h = n(231483);
 let m = 'isHideDevBanner';
 t.Z = () => {
     var e;
@@ -42,7 +42,7 @@ t.Z = () => {
         : 'staging' === window.GLOBAL_ENV.RELEASE_CHANNEL
           ? (0, i.jsxs)('div', {
                 className: r()(h.devBanner, h.staging),
-                children: [(0, i.jsx)(_.Z, { className: h.icon }), E.Z.Messages.DEV_NOTICE_STAGING.format({ buildNumber: '325896' }), (0, i.jsx)(g, {})]
+                children: [(0, i.jsx)(_.Z, { className: h.icon }), E.Z.Messages.DEV_NOTICE_STAGING.format({ buildNumber: '325969' }), (0, i.jsx)(g, {})]
             })
           : null;
 };

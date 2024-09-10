@@ -8,7 +8,7 @@ t(470079);
 var r = t(481060),
     s = t(600164),
     o = t(689938),
-    l = t(564510);
+    l = t(879137);
 function c(e) {
     let { onClose: a, img: t, title: c, body: i, content: d } = e;
     return (0, n.jsxs)(n.Fragment, {

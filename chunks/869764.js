@@ -32,7 +32,7 @@ var a = l(735250),
     b = l(308083),
     E = l(372897),
     M = l(689938),
-    A = l(591294);
+    A = l(571413);
 function S(e) {
     let { title: n, emojiId: l, emojiName: i, icon: r, completed: s, Icon: d, ...o } = e,
         c = 'channel' === o.variant ? o.channelId : null,

@@ -23,7 +23,7 @@ var l = t(735250),
     v = t(710111),
     D = t(981631),
     O = t(689938),
-    S = t(162896);
+    S = t(999507);
 function x(e) {
     let { availableSlots: n, className: t } = e;
     return (0, l.jsxs)(u.Text, {

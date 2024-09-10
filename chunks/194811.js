@@ -10,7 +10,7 @@ var i = n(120356),
     s = n(481060),
     o = n(652853),
     l = n(228168),
-    u = n(139665);
+    u = n(676411);
 function c(e) {
     let { text: t, tags: n, icon: i } = e,
         { profileType: c } = (0, o.z)();

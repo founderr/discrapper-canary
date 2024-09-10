@@ -26,7 +26,7 @@ var l = a(735250),
     E = a(410426),
     N = a(207346),
     S = a(356659),
-    I = a(63676);
+    I = a(21554);
 function Z(e) {
     let { channelId: t, onClose: s, transitionState: o } = e,
         [Z, _] = n.useState(''),

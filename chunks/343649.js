@@ -56,7 +56,7 @@ var o,
     z = t(474936),
     X = t(231338),
     q = t(689938),
-    $ = t(55417);
+    $ = t(312094);
 (o || (o = {})).PREMIUM = 'discord://app/settings/nitro';
 let J = z.Xh.NONE_MONTH,
     Q = [y.h8.PLAN_SELECT, y.h8.REVIEW, y.h8.CONFIRM],
@@ -198,11 +198,11 @@ function et(e) {
     let e1 = a.useRef(null),
         [e7, e2] = (0, g.Z)(!1, 500),
         [e8, e4] = a.useState(null),
-        [e6, e5] = a.useState([]),
-        [e3, e9] = a.useState(!1);
+        [e6, e9] = a.useState([]),
+        [e5, e3] = a.useState(!1);
     a.useEffect(() => {
         let e;
-        if (!!ew) null != w.Z.get(z.Xh.PREMIUM_MONTH_GUILD) && e5((e = (0, W.DE)(z.Xh.PREMIUM_MONTH_GUILD, eT, !1))), null == eT && null != eu && null != eu.paymentSourceId ? e4(eu.currency) : null != e && e4(e[0]);
+        if (!!ew) null != w.Z.get(z.Xh.PREMIUM_MONTH_GUILD) && e9((e = (0, W.DE)(z.Xh.PREMIUM_MONTH_GUILD, eT, !1))), null == eT && null != eu && null != eu.paymentSourceId ? e4(eu.currency) : null != e && e4(e[0]);
     }, [eT, eu, ew, JSON.stringify(e6)]);
     let ne = (0, A.vP)({
         paymentModalArgs: eE,
@@ -370,7 +370,7 @@ function et(e) {
                                                   guild_id: er,
                                                   application_id: es
                                               }),
-                                              e3)
+                                              e5)
                                           )
                                               return;
                                           if (null == eu || null == ef) {
@@ -381,7 +381,7 @@ function et(e) {
                                                   currency: l.currency
                                               });
                                               if (n.redirectConfirmation) {
-                                                  e9(null != n.redirectURL);
+                                                  e3(null != n.redirectURL);
                                                   return;
                                               }
                                           } else {
@@ -389,7 +389,7 @@ function et(e) {
                                               (n.currency = eu.currency), null == n.currency && (n.currency = l.currency), (n.paymentSource = null != e_ ? eI[e_] : void 0), null == n.paymentSource && (c()(null != e, 'Missing paymentSource'), (n.paymentSource = e), (n.currency = l.currency));
                                               let t = await (0, f.Mg)(eu, n, eF);
                                               if (t.redirectConfirmation) {
-                                                  e9(null != t.redirectURL);
+                                                  e3(null != t.redirectURL);
                                                   return;
                                               }
                                           }
@@ -405,7 +405,7 @@ function et(e) {
                                                   duration_ms: Date.now() - eZ
                                               });
                                       } finally {
-                                          !e3 && ex(!1);
+                                          !e5 && ex(!1);
                                       }
                                   },
                                   children: q.Z.Messages.GUILD_SUBSCRIPTION_PURCHASE_MODAL_SUBMIT

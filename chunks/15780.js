@@ -13,7 +13,7 @@ var n = t(735250),
     d = t(695346),
     _ = t(981631),
     u = t(689938),
-    E = t(224499);
+    E = t(113207);
 function T() {
     let e = d.xq.useSetting(),
         s = a.useMemo(() => (0, c.bL)(e), [e]);

@@ -9,7 +9,7 @@ var a = o(120356),
     s = o.n(a),
     l = o(481060),
     i = o(259580),
-    r = o(373521);
+    r = o(20535);
 function u(e) {
     let { options: t, onClick: o, className: a, optionClassName: u, hideCaret: d } = e;
     return (0, n.jsx)('div', {

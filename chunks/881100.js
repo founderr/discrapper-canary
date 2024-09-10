@@ -24,9 +24,9 @@ var s = n(399606),
     p = n(507084),
     A = n(680313),
     f = n(926433),
-    h = n(302036),
-    S = n(994554),
-    M = n(1549),
+    M = n(302036),
+    h = n(994554),
+    S = n(1549),
     x = n(13327),
     O = n(59137),
     b = n(405991),
@@ -122,25 +122,25 @@ let y = (e, t, n) => ((0, a.wj)(e) ? t : n),
             soundboard: {
                 title: E.Z.Messages.SOUND_BOARD_MARKETING_USE_CUSTOM_SOUNDS,
                 description: E.Z.Messages.SOUNDBOARD_MARKETING_REACT_WITH_SOUNDBOARD,
-                imageSource: y(n, f, h),
+                imageSource: y(n, f, M),
                 imageClassName: t.soundboardImage
             },
             stickers: {
                 title: E.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE_OLD,
                 description: E.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_DESCRIPTION,
-                imageSource: y(n, S, B),
+                imageSource: y(n, h, B),
                 imageClassName: t.stickersImage
             },
             stickersBurst: {
                 title: E.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE,
                 description: E.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_DESCRIPTION,
-                imageSource: y(n, S, B),
+                imageSource: y(n, h, B),
                 imageClassName: t.stickersImage
             },
             stickersPerkDiscoverability: {
                 title: E.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE,
                 description: E.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_LONG_DESCRIPTION,
-                imageSource: y(n, S, B),
+                imageSource: y(n, h, B),
                 imageClassName: t.stickersImage
             },
             streaming: {
@@ -152,7 +152,7 @@ let y = (e, t, n) => ((0, a.wj)(e) ? t : n),
             superReactions: {
                 title: E.Z.Messages.PREMIUM_MARKETING_SUPER_REACTIONS_PERK_TITLE_V2,
                 description: E.Z.Messages.PREMIUM_MARKETING_SUPER_REACTIONS_PERK_DESCRIPTION_V2,
-                imageSource: y(n, M, x),
+                imageSource: y(n, S, x),
                 imageClassName: t.superReactionsImage
             },
             upload: {

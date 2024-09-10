@@ -21,7 +21,7 @@ var r = a(512722),
     f = a(409110),
     j = a(226060),
     p = a(689938),
-    g = a(575928);
+    g = a(122296);
 function N(e) {
     var t, a;
     let { transitionState: r, guildProductListingId: N, analyticsLocation: v, guildId: I, onClose: D } = e,

@@ -23,7 +23,7 @@ var r,
     S = t(695346),
     g = t(572004),
     T = t(689938),
-    p = t(109756);
+    p = t(813778);
 function C(e) {
     let { tag: n, size: r = 1, disabled: i, className: u, onClick: C, onRemove: m, selected: A, ariaLabel: N } = e,
         { name: h, emojiId: L, emojiName: O } = n,

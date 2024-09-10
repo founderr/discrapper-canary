@@ -10,7 +10,7 @@ var r = n(735250),
     o = n(1561),
     l = n(743236),
     u = n(939350),
-    c = n(837244);
+    c = n(667947);
 function d(e) {
     let { children: t, color: n = 'default', isFocused: a = !1, disabled: d = !1, keepItemStyles: _ = !1, menuItemProps: E, action: f, dontCloseOnActionIfHoldingShiftKey: h, dontCloseOnAction: p, onClose: I } = e,
         m = i.useRef(null);

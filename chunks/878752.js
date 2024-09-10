@@ -23,7 +23,7 @@ var s = n(512722),
     C = n(997614),
     I = n(159909),
     x = n(981631),
-    T = n(468289);
+    T = n(307410);
 function v(e) {
     let { channel: t, hasActiveStream: n, themeable: s = !1 } = e,
         v = (0, l.e7)([m.default], () => {

@@ -16,7 +16,7 @@ var s = n(120356),
     l = n(481060),
     r = n(534091),
     o = n(981631),
-    c = n(337928);
+    c = n(83700);
 function u(e) {
     let { locked: t = !1, channelType: n } = e,
         s = (0, l.useRedesignIconContext)().enabled,

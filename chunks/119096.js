@@ -9,8 +9,8 @@ var i = n(120356),
     c = n(607070),
     d = n(785717),
     _ = n(689938),
-    E = n(720867),
-    f = n(810819);
+    E = n(920163),
+    f = n(482617);
 let h = (e) => {
         let { message: t, userId: n, onClose: i } = e,
             { trackUserProfileAction: s } = (0, d.KZ)();

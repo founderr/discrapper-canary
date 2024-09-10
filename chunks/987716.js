@@ -17,7 +17,7 @@ var i = t(735250),
     p = t(703926),
     m = t(474936),
     I = t(689938),
-    f = t(62612);
+    f = t(522888);
 let E = (e) => {
     let { isShopGift: n } = e,
         { giftRecipient: t, selectedGiftStyle: E, setSelectedGiftStyle: x, emojiConfetti: N, soundEffect: S, setEmojiConfetti: T, setSoundEffect: h } = (0, s.wD)(),

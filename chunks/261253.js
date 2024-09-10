@@ -10,7 +10,7 @@ var i = n(481060),
     s = n(785717),
     o = n(475413),
     l = n(689938),
-    u = n(624871);
+    u = n(332623);
 function c(e) {
     let { user: t, onClose: n, className: c } = e,
         { trackUserProfileAction: d } = (0, s.KZ)(),

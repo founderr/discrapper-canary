@@ -9,7 +9,7 @@ a(470079);
 var s = a(481060),
     o = a(313201),
     l = a(689938),
-    i = a(556244),
+    i = a(848401),
     d = a(298860);
 let r = (e) => {
     let { text: t, icon: a, foreground: o } = e;

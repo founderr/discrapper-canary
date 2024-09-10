@@ -10,7 +10,7 @@ var s = n(481060),
     l = n(112560),
     r = n(981631),
     o = n(689938),
-    c = n(140160),
+    c = n(795447),
     u = n(800350);
 function d(e) {
     let { channel: t, guild: d, width: h, inPopout: m } = e;
@@ -23,7 +23,7 @@ function d(e) {
             onCTAClick: () =>
                 (0, s.openModalLazy)(
                     async () => {
-                        let { default: e } = await Promise.all([n.e('7654'), n.e('66633')]).then(n.bind(n, 560114));
+                        let { default: e } = await Promise.all([n.e('7654'), n.e('85683')]).then(n.bind(n, 560114));
                         return (n) =>
                             (0, i.jsx)(e, {
                                 ...n,

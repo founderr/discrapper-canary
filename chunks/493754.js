@@ -17,7 +17,7 @@ var s = n(120356),
     m = n(496675),
     p = n(981631),
     _ = n(689938),
-    f = n(271590);
+    f = n(632189);
 function E(e) {
     var t, s;
     let { stream: l, applicationId: E, channel: g, exitFullScreen: C, appContext: I, analyticsLocation: x, className: T, ...v } = e,
@@ -42,7 +42,7 @@ function E(e) {
                                 null == o || o(),
                                     (0, c.openModalLazy)(
                                         async () => {
-                                            let { default: e } = await Promise.all([n.e('7654'), n.e('66633')]).then(n.bind(n, 560114));
+                                            let { default: e } = await Promise.all([n.e('7654'), n.e('85683')]).then(n.bind(n, 560114));
                                             return (n) =>
                                                 (0, i.jsx)(e, {
                                                     ...n,

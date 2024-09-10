@@ -21,7 +21,7 @@ var t = n(735250),
     h = n(146463),
     A = n(981631),
     b = n(689938),
-    S = n(412449);
+    S = n(958681);
 function j(e) {
     let { guild: s } = e;
     return (0, t.jsxs)('div', {

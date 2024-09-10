@@ -5,7 +5,7 @@ var a = t(120356),
     r = t(481060),
     o = t(230711),
     l = t(528084),
-    c = t(313482);
+    c = t(746943);
 s.Z = (e) => {
     let { tabs: s, settingsSection: t, parentSetting: a, panelClassName: d } = e,
         { viewableTabs: _, selectedTab: u } = (0, l.a)(s, a);

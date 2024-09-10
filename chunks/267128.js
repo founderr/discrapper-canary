@@ -32,7 +32,7 @@ var r = n(735250),
     v = n(217702),
     C = n(981631),
     y = n(689938),
-    L = n(438379);
+    L = n(825193);
 function D(e) {
     let { width: t = 12, height: n = 8, color: i = 'currentColor', className: a, foreground: s } = e;
     return (0, r.jsx)('svg', {

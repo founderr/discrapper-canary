@@ -27,8 +27,8 @@ var i = n(735250),
     M = n(981631),
     v = n(474936),
     L = n(689938),
-    Z = n(450304),
-    P = n(78731);
+    Z = n(174461),
+    P = n(507444);
 let D = (e, t) => (t ? L.Z.Messages.STICKER_POPOUT_PACK_INFO_PREMIUM.format({ stickerPackName: e.name }) : L.Z.Messages.STICKER_POPOUT_PACK_INFO_UNAVAILABLE.format({ stickerPackName: e.name })),
     b = (e) => {
         let { sticker: t, stickerPack: n } = e;

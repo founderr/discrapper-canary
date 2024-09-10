@@ -10,8 +10,8 @@ var t = l(557533),
     a = l(789978),
     r = l(790472),
     o = l(777207),
-    d = l(25378),
-    u = l(778342);
+    d = l(147333),
+    u = l(103077);
 function c(e) {
     let { title: n, description: l, headerImage: t, onDetails: c, onPurchase: m, PurchaseButton: p, availabilityLabel: v } = e;
     return (0, i.jsx)(a.tE, {

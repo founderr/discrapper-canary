@@ -17,7 +17,7 @@ var t = s(735250),
     I = s(981631),
     x = s(921944),
     u = s(689938),
-    P = s(272091);
+    P = s(716012);
 function A(e) {
     let { guildId: o, transitionState: A, onClose: C, analyticsType: N = a.z.APP_DIRECTORY_UPSELL_MODAL } = e;
     return (

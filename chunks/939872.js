@@ -11,7 +11,7 @@ var s = n(442837),
     l = n(430824),
     o = n(313550),
     c = n(689938),
-    u = n(947461);
+    u = n(673823);
 let d = (e) => {
     let { onClose: t, listing: n, guildId: d } = e,
         _ = (0, s.e7)([l.Z], () => l.Z.getGuild(d), [d]),

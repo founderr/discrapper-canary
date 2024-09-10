@@ -18,7 +18,7 @@ var a = n(442837),
     h = n(791359),
     m = n(981631),
     I = n(689938),
-    g = n(205692);
+    g = n(831162);
 function p() {
     let { analyticsLocations: e } = (0, c.ZP)(o.Z.ACTIVE_NOW_COLUMN),
         t = (0, a.e7)([E.Z], () => E.Z.hasConsented(m.pjP.PERSONALIZATION)) ? [] : [s.z.NOW_PLAYING_CONSENT_CARD],

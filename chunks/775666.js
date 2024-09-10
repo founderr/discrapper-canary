@@ -1,74 +1,74 @@
 t.d(n, {
     EQ: function () {
-        return b;
+        return M;
     },
     T5: function () {
-        return L;
+        return O;
     },
     ZP: function () {
-        return E;
+        return c;
     }
 }),
     t(47120),
     t(789020);
 var i = t(735250),
-    a = t(470079),
-    c = t(442837),
-    o = t(481060),
-    s = t(92114),
+    s = t(470079),
+    a = t(442837),
+    _ = t(481060),
+    d = t(92114),
     r = t(221259),
-    d = t(113449),
-    _ = t(686660),
-    l = t(9156),
-    u = t(621600),
-    g = t(981631),
-    S = t(490897),
-    h = t(526761),
+    l = t(113449),
+    L = t(686660),
+    S = t(9156),
+    E = t(621600),
+    o = t(981631),
+    u = t(490897),
+    g = t(526761),
     N = t(689938);
-function E(e) {
-    let n = b(e);
-    return e.type === g.d4z.GUILD_VOICE
+function c(e) {
+    let n = M(e);
+    return e.type === o.d4z.GUILD_VOICE
         ? null
-        : (0, i.jsx)(o.MenuItem, {
+        : (0, i.jsx)(_.MenuItem, {
               id: 'channel_notification_settings',
               label: N.Z.Messages.NOTIFICATIONS,
               children: n
           });
 }
-function b(e) {
+function M(e) {
     let n = (0, r.ZA)(e),
         t = (0, r.yN)(e),
-        d = n.preset === _.s8.CUSTOM && !t.inherited,
-        [u, S] = a.useState(d),
-        [h, E] = a.useState(!1),
-        b = h ? _.s8.CUSTOM : n.preset,
-        M = L(e, () => E(!1)),
-        f = (0, c.e7)([l.ZP], () => l.ZP.getNewForumThreadsCreated(e)),
-        I = 'parent' === t.inheritedFrom ? N.Z.Messages.FORM_LABEL_DEFAULT_CATEGORY : N.Z.Messages.FORM_LABEL_DEFAULT;
-    return e.type === g.d4z.GUILD_STAGE_VOICE
-        ? (0, i.jsxs)(o.MenuGroup, {
+        l = n.preset === L.s8.CUSTOM && !t.inherited,
+        [E, u] = s.useState(l),
+        [g, c] = s.useState(!1),
+        M = g ? L.s8.CUSTOM : n.preset,
+        A = O(e, () => c(!1)),
+        I = (0, a.e7)([S.ZP], () => S.ZP.getNewForumThreadsCreated(e)),
+        T = 'parent' === t.inheritedFrom ? N.Z.Messages.FORM_LABEL_DEFAULT_CATEGORY : N.Z.Messages.FORM_LABEL_DEFAULT;
+    return e.type === o.d4z.GUILD_STAGE_VOICE
+        ? (0, i.jsxs)(_.MenuGroup, {
               children: [
-                  (0, i.jsx)(o.MenuRadioItem, {
+                  (0, i.jsx)(_.MenuRadioItem, {
                       id: 'cns_default',
-                      label: I,
+                      label: T,
                       checked: t.inherited,
                       group: 'channel_notification_settings',
-                      subtext: n.notification === g.bL.NO_MESSAGES ? N.Z.Messages.FORM_LABEL_NOTHING : N.Z.Messages.FORM_LABEL_LIVE_STAGES_ONLY,
+                      subtext: n.notification === o.bL.NO_MESSAGES ? N.Z.Messages.FORM_LABEL_NOTHING : N.Z.Messages.FORM_LABEL_LIVE_STAGES_ONLY,
                       action: () => (0, r.JK)(e.guild_id, e.id)
                   }),
-                  (0, i.jsx)(o.MenuRadioItem, {
+                  (0, i.jsx)(_.MenuRadioItem, {
                       id: 'cns_only_mention',
                       group: 'channel_notification_settings',
-                      checked: !t.inherited && n.notification !== g.bL.NO_MESSAGES,
+                      checked: !t.inherited && n.notification !== o.bL.NO_MESSAGES,
                       label: N.Z.Messages.FORM_LABEL_LIVE_STAGES_ONLY,
-                      action: () => (0, r.ft)(e.guild_id, e.id, g.bL.ONLY_MENTIONS)
+                      action: () => (0, r.ft)(e.guild_id, e.id, o.bL.ONLY_MENTIONS)
                   }),
-                  (0, i.jsx)(o.MenuRadioItem, {
+                  (0, i.jsx)(_.MenuRadioItem, {
                       id: 'cns_no_message',
                       group: 'channel_notification_settings',
                       label: N.Z.Messages.FORM_LABEL_NOTHING,
-                      checked: !t.inherited && n.notification === g.bL.NO_MESSAGES,
-                      action: () => (0, r.ft)(e.guild_id, e.id, g.bL.NO_MESSAGES)
+                      checked: !t.inherited && n.notification === o.bL.NO_MESSAGES,
+                      action: () => (0, r.ft)(e.guild_id, e.id, o.bL.NO_MESSAGES)
                   })
               ]
           })
@@ -77,124 +77,124 @@ function b(e) {
                   e.isForumLikeChannel()
                       ? (0, i.jsxs)(i.Fragment, {
                             children: [
-                                (0, i.jsx)(o.MenuCheckboxItem, {
+                                (0, i.jsx)(_.MenuCheckboxItem, {
                                     id: 'new-forum-threads-created',
                                     label: N.Z.Messages.FORUM_NEW_POSTS_CREATED,
-                                    checked: f,
-                                    action: () => s.Z.setForumThreadsCreated(e, !f)
+                                    checked: I,
+                                    action: () => d.Z.setForumThreadsCreated(e, !I)
                                 }),
-                                (0, i.jsx)(o.MenuSeparator, {})
+                                (0, i.jsx)(_.MenuSeparator, {})
                             ]
                         })
                       : null,
-                  (0, i.jsxs)(o.MenuGroup, {
+                  (0, i.jsxs)(_.MenuGroup, {
                       children: [
-                          (0, i.jsx)(o.MenuRadioItem, {
+                          (0, i.jsx)(_.MenuRadioItem, {
                               id: 'cns_default',
-                              label: I,
+                              label: T,
                               group: 'channel_notification_settings',
-                              checked: t.inherited && !h,
+                              checked: t.inherited && !g,
                               subtext: t.inheritedPreset,
-                              action: () => ((0, r.JK)(e.guild_id, e.id), E(!1))
+                              action: () => ((0, r.JK)(e.guild_id, e.id), c(!1))
                           }),
-                          (0, i.jsx)(o.MenuRadioItem, {
+                          (0, i.jsx)(_.MenuRadioItem, {
                               id: 'cns_everything',
                               group: 'channel_notification_settings',
                               label: N.Z.Messages.NOTIFICATION_PRESET_1,
-                              checked: !t.inherited && b === _.s8.ALL_MESSAGES,
-                              action: () => ((0, r._m)(e.guild_id, e.id, _.s8.ALL_MESSAGES), E(!1))
+                              checked: !t.inherited && M === L.s8.ALL_MESSAGES,
+                              action: () => ((0, r._m)(e.guild_id, e.id, L.s8.ALL_MESSAGES), c(!1))
                           }),
-                          (0, i.jsx)(o.MenuRadioItem, {
+                          (0, i.jsx)(_.MenuRadioItem, {
                               id: 'cns_essentials',
                               group: 'channel_notification_settings',
                               label: N.Z.Messages.NOTIFICATION_PRESET_2,
-                              checked: !t.inherited && b === _.s8.MENTIONS,
-                              action: () => ((0, r._m)(e.guild_id, e.id, _.s8.MENTIONS), E(!1))
+                              checked: !t.inherited && M === L.s8.MENTIONS,
+                              action: () => ((0, r._m)(e.guild_id, e.id, L.s8.MENTIONS), c(!1))
                           }),
-                          (0, i.jsx)(o.MenuRadioItem, {
+                          (0, i.jsx)(_.MenuRadioItem, {
                               id: 'cns_nothing',
                               group: 'channel_notification_settings',
                               label: N.Z.Messages.NOTIFICATION_PRESET_3,
-                              checked: !t.inherited && b === _.s8.NOTHING,
-                              action: () => ((0, r._m)(e.guild_id, e.id, _.s8.NOTHING), E(!1))
+                              checked: !t.inherited && M === L.s8.NOTHING,
+                              action: () => ((0, r._m)(e.guild_id, e.id, L.s8.NOTHING), c(!1))
                           }),
-                          (0, i.jsx)(o.MenuRadioItem, {
+                          (0, i.jsx)(_.MenuRadioItem, {
                               id: 'cns_custom',
                               group: 'channel_notification_settings',
                               label: N.Z.Messages.NOTIFICATION_PRESET_CUSTOM,
-                              checked: h || (!t.inherited && b === _.s8.CUSTOM),
-                              action: () => (S(!0), E(!0))
+                              checked: g || (!t.inherited && M === L.s8.CUSTOM),
+                              action: () => (u(!0), c(!0))
                           })
                       ]
                   }),
-                  (u || d) && M
+                  (E || l) && A
               ]
           });
 }
-function L(e, n) {
-    let { notification: t, unread: a } = (0, r.ZA)(e),
-        c = (e) => {
+function O(e, n) {
+    let { notification: t, unread: s } = (0, r.ZA)(e),
+        a = (e) => {
             e(), n();
         },
-        _ = (n) => {
+        L = (n) => {
             let t = { message_notifications: n };
-            n === g.bL.ALL_MESSAGES && a !== S.i.ALL_MESSAGES && (t.flags = (0, d.pq)(l.ZP.getChannelIdFlags(e.guild_id, e.id), h.ic.UNREADS_ALL_MESSAGES)), s.Z.updateChannelOverrideSettings(e.guild_id, e.id, t, u.UE.notifications(n));
+            n === o.bL.ALL_MESSAGES && s !== u.i.ALL_MESSAGES && (t.flags = (0, l.pq)(S.ZP.getChannelIdFlags(e.guild_id, e.id), g.ic.UNREADS_ALL_MESSAGES)), d.Z.updateChannelOverrideSettings(e.guild_id, e.id, t, E.UE.notifications(n));
         };
-    return (0, i.jsxs)(o.MenuGroup, {
+    return (0, i.jsxs)(_.MenuGroup, {
         children: [
             (0, i.jsxs)(
-                o.MenuItem,
+                _.MenuItem,
                 {
                     id: 'unread_setting',
                     label: 'Unread Badges',
                     children: [
-                        (0, i.jsx)(o.MenuRadioItem, {
+                        (0, i.jsx)(_.MenuRadioItem, {
                             id: 'unread_setting_all_messages',
                             group: 'unread_setting',
-                            checked: a === S.i.ALL_MESSAGES,
+                            checked: s === u.i.ALL_MESSAGES,
                             label: N.Z.Messages.NOTIFICATION_SETTINGS_PRESETS_ALL_MESSAGES,
-                            action: () => c(() => (0, r.IG)(e.guild_id, e.id, S.i.ALL_MESSAGES))
+                            action: () => a(() => (0, r.IG)(e.guild_id, e.id, u.i.ALL_MESSAGES))
                         }),
-                        (0, i.jsx)(o.MenuRadioItem, {
+                        (0, i.jsx)(_.MenuRadioItem, {
                             id: 'unread_setting_mention_only',
                             group: 'unread_setting',
-                            checked: a === S.i.ONLY_MENTIONS,
+                            checked: s === u.i.ONLY_MENTIONS,
                             label: N.Z.Messages.NOTIFICATION_SETTINGS_PRESETS_MENTION_ONLY,
-                            disabled: a !== S.i.ONLY_MENTIONS && t === g.bL.ALL_MESSAGES,
-                            subtext: a !== S.i.ONLY_MENTIONS && t === g.bL.ALL_MESSAGES ? N.Z.Messages.NOTIFICATION_SETTINGS_UNREAD_MENTION_ONLY_DISABLED : void 0,
-                            action: () => c(() => (0, r.IG)(e.guild_id, e.id, S.i.ONLY_MENTIONS))
+                            disabled: s !== u.i.ONLY_MENTIONS && t === o.bL.ALL_MESSAGES,
+                            subtext: s !== u.i.ONLY_MENTIONS && t === o.bL.ALL_MESSAGES ? N.Z.Messages.NOTIFICATION_SETTINGS_UNREAD_MENTION_ONLY_DISABLED : void 0,
+                            action: () => a(() => (0, r.IG)(e.guild_id, e.id, u.i.ONLY_MENTIONS))
                         })
                     ]
                 },
                 'unread_setting'
             ),
             (0, i.jsxs)(
-                o.MenuItem,
+                _.MenuItem,
                 {
                     id: 'push_settings',
                     label: N.Z.Messages.NOTIFICATIONS,
                     children: [
-                        (0, i.jsx)(o.MenuRadioItem, {
+                        (0, i.jsx)(_.MenuRadioItem, {
                             group: 'notification-preset',
                             id: 'push_settings_everything',
                             label: N.Z.Messages.NOTIFICATION_SETTINGS_PRESETS_ALL_MESSAGES,
-                            checked: t === g.bL.ALL_MESSAGES,
-                            subtext: a !== S.i.ALL_MESSAGES && t !== g.bL.ALL_MESSAGES ? N.Z.Messages.NOTIFICATION_SETTINGS_UNREAD_UPDATE_WARNING : void 0,
-                            action: () => c(() => _(g.bL.ALL_MESSAGES))
+                            checked: t === o.bL.ALL_MESSAGES,
+                            subtext: s !== u.i.ALL_MESSAGES && t !== o.bL.ALL_MESSAGES ? N.Z.Messages.NOTIFICATION_SETTINGS_UNREAD_UPDATE_WARNING : void 0,
+                            action: () => a(() => L(o.bL.ALL_MESSAGES))
                         }),
-                        (0, i.jsx)(o.MenuRadioItem, {
+                        (0, i.jsx)(_.MenuRadioItem, {
                             group: 'notification-preset',
                             id: 'push_settings_everything_mention',
-                            checked: t === g.bL.ONLY_MENTIONS,
+                            checked: t === o.bL.ONLY_MENTIONS,
                             label: N.Z.Messages.NOTIFICATION_SETTINGS_PRESETS_MENTION_ONLY,
-                            action: () => c(() => _(g.bL.ONLY_MENTIONS))
+                            action: () => a(() => L(o.bL.ONLY_MENTIONS))
                         }),
-                        (0, i.jsx)(o.MenuRadioItem, {
+                        (0, i.jsx)(_.MenuRadioItem, {
                             group: 'notification-preset',
                             id: 'push_settings_everything_nothing',
                             label: N.Z.Messages.NOTIFICATION_SETTINGS_PRESETS_NONE,
-                            checked: t === g.bL.NO_MESSAGES,
-                            action: () => c(() => _(g.bL.NO_MESSAGES))
+                            checked: t === o.bL.NO_MESSAGES,
+                            action: () => a(() => L(o.bL.NO_MESSAGES))
                         })
                     ]
                 },

@@ -11,7 +11,7 @@ var o = n(735250),
     a = n(481060),
     c = n(818634),
     i = n(689938),
-    u = n(600038);
+    u = n(525815);
 function d(e) {
     let [t, n] = r.useState(!1);
     return (0, o.jsxs)(a.ConfirmModal, {

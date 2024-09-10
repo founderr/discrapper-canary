@@ -9,7 +9,7 @@ var a = n(481060),
     i = n(449226),
     r = n(231338),
     l = n(689938),
-    o = n(70529);
+    o = n(176981);
 function c(e) {
     let { title: t, details: n } = e;
     return (0, s.jsxs)('div', {

@@ -10,7 +10,7 @@ var s = n(481060),
     r = n(497505),
     l = n(37303),
     o = n(683650),
-    c = n(513766);
+    c = n(170658);
 function u(e) {
     let { questId: t } = e,
         { quests: n, isFetchingCurrentQuests: u } = (0, a.J2)({ fetchPolicy: 'cache-or-network' }),

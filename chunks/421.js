@@ -25,7 +25,7 @@ var a = n(735250),
     h = n(431136),
     C = n(226799),
     E = n(689938),
-    S = n(806384);
+    S = n(706451);
 function N(e) {
     var t;
     let { applicationId: n, guildId: l, channelId: c, onActivityLaunch: u } = e,
@@ -195,7 +195,7 @@ function j(e) {
         }, [d, C, g, b]),
         L = i.useCallback(() => {
             (0, s.openModalLazy)(async () => {
-                let { default: e } = await Promise.all([n.e('60133'), n.e('79329')]).then(n.bind(n, 827940));
+                let { default: e } = await Promise.all([n.e('60133'), n.e('37493')]).then(n.bind(n, 827940));
                 return (t) =>
                     (0, a.jsx)(e, {
                         activityItem: d,

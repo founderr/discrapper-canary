@@ -9,7 +9,7 @@ var i = n(735250),
     r = n(745752),
     l = n(17181),
     o = n(689938),
-    c = n(870396);
+    c = n(894710);
 function d(e) {
     let { guildId: t, channelId: n } = e,
         d = a.useCallback(() => {

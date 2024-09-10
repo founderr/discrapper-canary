@@ -10,7 +10,7 @@ var s = n(692547),
     r = n(739566),
     l = n(834129),
     o = n(689938),
-    c = n(820843);
+    c = n(437814);
 function u(e) {
     let { message: t, compact: n, usernameHook: u } = e,
         d = (0, r.ZP)(t),

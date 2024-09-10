@@ -32,7 +32,7 @@ var n = t(735250),
     j = t(569658),
     Z = t(981631),
     A = t(689938),
-    R = t(651172);
+    R = t(805747);
 function f(e) {
     let { guildId: s, requestScrollToBottom: t } = e,
         i = (0, r.Wu)([g.Z, T.ZP], () =>

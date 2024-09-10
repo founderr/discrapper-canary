@@ -25,7 +25,7 @@ var i = n(735250),
     O = n(145807),
     x = n(56744),
     M = n(981631),
-    v = n(58755);
+    v = n(916315);
 t.Z = s.memo(function (e) {
     var t, n;
     let { message: s, compact: a = !1, className: L, onContextMenu: Z, onClick: P, hideSimpleEmbedContent: D = !0, channel: b, isGroupStart: j, animateAvatar: U, subscribeToComponentDispatch: y, renderThreadAccessory: B, trackAnnouncementViews: k = !1, ...G } = e,

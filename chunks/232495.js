@@ -11,7 +11,7 @@ var s = n(442837),
     l = n(430824),
     r = n(914010),
     o = n(689938),
-    c = n(569234);
+    c = n(60719);
 let u = () =>
         (0, i.jsx)(i.Fragment, {
             children: o.Z.Messages.TIP_INSTANT_INVITE_BODY3.format({

@@ -33,7 +33,7 @@ var a = n(735250),
     P = n(710352),
     w = n(981631),
     y = n(689938),
-    D = n(286124);
+    D = n(127403);
 function F(e) {
     let { id: t, channel: n, goToThread: r, overrideMedia: u, className: m, coords: h, gridCoords: _, gridSectionBoundaries: g, observePostVisibilityAnalytics: f } = e,
         C = (0, o.e7)([I.Z], () => I.Z.getChannel(n.parent_id)),

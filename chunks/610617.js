@@ -28,7 +28,7 @@ var n = t(735250),
     M = t(921944),
     p = t(871465),
     v = t(689938),
-    L = t(238620);
+    L = t(364966);
 function j(e) {
     let { guildId: s, onClose: t, isRedesign: l = !1 } = e,
         r = (0, c.e7)([E.Z], () => E.Z.getGuild(s)),

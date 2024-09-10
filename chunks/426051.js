@@ -16,7 +16,7 @@ var i = n(735250),
     E = n(376191),
     h = n(86203),
     m = n(689938),
-    I = n(747689);
+    I = n(894639);
 function g(e) {
     let { active: t, user: n, channel: g } = e,
         p = (0, u.V)(),

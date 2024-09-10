@@ -1,207 +1,207 @@
-i.r(l),
-    i.d(l, {
+n.r(t),
+    n.d(t, {
         openGuildRoleConnectionsConnectAccountModal: function () {
-            return A;
+            return O;
         }
     }),
-    i(47120),
-    i(536091);
-var a = i(735250),
-    o = i(470079),
-    n = i(120356),
-    r = i.n(n),
-    t = i(442837),
-    s = i(780384),
-    d = i(481060),
-    c = i(239091),
-    u = i(749210),
-    f = i(410030),
-    m = i(726542),
-    v = i(884338),
-    p = i(367907),
-    h = i(313201),
-    N = i(598077),
-    R = i(314897),
-    _ = i(271383),
-    x = i(430824),
-    C = i(626135),
-    b = i(63063),
-    j = i(134433),
-    g = i(225104),
-    k = i(981631),
-    Z = i(689938),
-    E = i(516920),
-    I = i(39368);
-function A(e, l) {
-    (0, d.openModalLazy)(async () => {
-        let { default: o } = await Promise.all([i.e('82412'), i.e('59715')]).then(i.bind(i, 107807));
-        return (i) =>
-            (0, a.jsx)(o, {
+    n(47120),
+    n(536091);
+var i = n(735250),
+    a = n(470079),
+    s = n(120356),
+    r = n.n(s),
+    l = n(442837),
+    o = n(780384),
+    c = n(481060),
+    d = n(239091),
+    u = n(749210),
+    _ = n(410030),
+    E = n(726542),
+    h = n(884338),
+    m = n(367907),
+    I = n(313201),
+    g = n(598077),
+    p = n(314897),
+    T = n(271383),
+    S = n(430824),
+    C = n(626135),
+    f = n(63063),
+    N = n(134433),
+    A = n(225104),
+    v = n(981631),
+    L = n(689938),
+    Z = n(140167),
+    R = n(621925);
+function O(e, t) {
+    (0, c.openModalLazy)(async () => {
+        let { default: a } = await Promise.all([n.e('82412'), n.e('18993')]).then(n.bind(n, 107807));
+        return (n) =>
+            (0, i.jsx)(a, {
                 role: e,
-                guildId: l,
-                ...i
+                guildId: t,
+                ...n
             });
     });
 }
-l.default = function (e) {
-    let { guildId: l, transitionState: n, onClose: O } = e,
-        M = (0, t.e7)([x.Z], () => x.Z.getRoles(l)),
-        S = (0, t.e7)([R.default], () => R.default.getId()),
-        L = (0, t.e7)([_.ZP], () => _.ZP.getMember(l, S)),
-        [y, T] = o.useState([]),
-        D = (0, f.ZP)(),
-        H = (0, h.Dt)();
+t.default = function (e) {
+    let { guildId: t, transitionState: s, onClose: x } = e,
+        b = (0, l.e7)([S.Z], () => S.Z.getRoles(t)),
+        P = (0, l.e7)([p.default], () => p.default.getId()),
+        M = (0, l.e7)([T.ZP], () => T.ZP.getMember(t, P)),
+        [D, y] = a.useState([]),
+        j = (0, _.ZP)(),
+        U = (0, I.Dt)();
     if (
-        (o.useEffect(() => {
-            if (0 !== y.length)
-                C.default.track(k.rMx.PASSPORT_ENTRY_VIEWED, {
-                    role_ids: y.map((e) => {
-                        let { role_id: l } = e;
-                        return l;
+        (a.useEffect(() => {
+            if (0 !== D.length)
+                C.default.track(v.rMx.PASSPORT_ENTRY_VIEWED, {
+                    role_ids: D.map((e) => {
+                        let { role_id: t } = e;
+                        return t;
                     }),
-                    ...(0, p.hH)(l)
+                    ...(0, m.hH)(t)
                 });
-        }, [l, y]),
-        o.useEffect(() => {
-            u.Z.getGuildRoleConnectionsConfigurations(l).then((e) => T(e));
-        }, [l]),
-        null == L)
+        }, [t, D]),
+        a.useEffect(() => {
+            u.Z.getGuildRoleConnectionsConfigurations(t).then((e) => y(e));
+        }, [t]),
+        null == M)
     )
         return null;
-    let P = Object.values(M).filter((e) => {
-        var l;
-        return (null === (l = e.tags) || void 0 === l ? void 0 : l.guild_connections) === null;
+    let G = Object.values(b).filter((e) => {
+        var t;
+        return (null === (t = e.tags) || void 0 === t ? void 0 : t.guild_connections) === null;
     });
-    return (0, a.jsxs)(d.ModalRoot, {
-        transitionState: n,
-        'aria-labelledby': H,
-        className: E.modal,
+    return (0, i.jsxs)(c.ModalRoot, {
+        transitionState: s,
+        'aria-labelledby': U,
+        className: Z.modal,
         children: [
-            (0, a.jsxs)(d.ModalHeader, {
+            (0, i.jsxs)(c.ModalHeader, {
                 separator: !1,
                 children: [
-                    (0, a.jsx)(j.Z, {
-                        className: E.headerIcon,
+                    (0, i.jsx)(N.Z, {
+                        className: Z.headerIcon,
                         size: 24
                     }),
-                    (0, a.jsx)(d.Heading, {
+                    (0, i.jsx)(c.Heading, {
                         variant: 'text-md/medium',
                         color: 'header-primary',
-                        children: Z.Z.Messages.CONNECTIONS_ROLES_CHANNEL_NAME
+                        children: L.Z.Messages.CONNECTIONS_ROLES_CHANNEL_NAME
                     }),
-                    (0, a.jsx)(d.ModalCloseButton, {
-                        className: E.modalCloseButton,
-                        onClick: O
+                    (0, i.jsx)(c.ModalCloseButton, {
+                        className: Z.modalCloseButton,
+                        onClick: x
                     })
                 ]
             }),
-            (0, a.jsxs)(d.ModalContent, {
-                className: E.container,
+            (0, i.jsxs)(c.ModalContent, {
+                className: Z.container,
                 children: [
-                    (0, a.jsx)(d.Heading, {
+                    (0, i.jsx)(c.Heading, {
                         variant: 'heading-md/semibold',
                         color: 'header-primary',
-                        children: Z.Z.Messages.CONNECTIONS_ROLES_CHANNEL_CALL_TO_ACTION_LEARN_MORE.format({ helpdeskArticleUrl: b.Z.getArticleURL(k.BhN.CONNECTION_DETAILS) })
+                        children: L.Z.Messages.CONNECTIONS_ROLES_CHANNEL_CALL_TO_ACTION_LEARN_MORE.format({ helpdeskArticleUrl: f.Z.getArticleURL(v.BhN.CONNECTION_DETAILS) })
                     }),
-                    (0, a.jsx)('div', {
-                        className: E.verifiedRoles,
-                        children: P.map((e) => {
-                            let n = L.roles.includes(e.id),
-                                t = (function (e) {
-                                    let i = y.find((l) => {
-                                        let { role_id: i } = l;
-                                        return i === e;
+                    (0, i.jsx)('div', {
+                        className: Z.verifiedRoles,
+                        children: G.map((e) => {
+                            let s = M.roles.includes(e.id),
+                                l = (function (e) {
+                                    let n = D.find((t) => {
+                                        let { role_id: n } = t;
+                                        return n === e;
                                     });
-                                    if (null == i) return [];
-                                    let o = {};
-                                    for (let e of i.rules.flat()) {
-                                        let t;
+                                    if (null == n) return [];
+                                    let a = {};
+                                    for (let e of n.rules.flat()) {
+                                        let l;
                                         if (null != e.application_id) {
-                                            var n;
-                                            let o = null === (n = i.applications) || void 0 === n ? void 0 : n[e.application_id];
-                                            t =
-                                                (null == o ? void 0 : o.bot) != null
-                                                    ? (0, a.jsx)('img', {
-                                                          src: new N.Z(o.bot).getAvatarURL(l, 24),
+                                            var s;
+                                            let a = null === (s = n.applications) || void 0 === s ? void 0 : s[e.application_id];
+                                            l =
+                                                (null == a ? void 0 : a.bot) != null
+                                                    ? (0, i.jsx)('img', {
+                                                          src: new g.Z(a.bot).getAvatarURL(t, 24),
                                                           alt: '',
-                                                          className: r()(E.botAvatar, I.avatar)
+                                                          className: r()(Z.botAvatar, R.avatar)
                                                       })
                                                     : null;
                                         } else {
-                                            let l = m.Z.get(e.connection_type);
-                                            t = (0, a.jsx)('img', {
-                                                src: (0, s.ap)(D) ? l.icon.lightSVG : l.icon.darkSVG,
+                                            let t = E.Z.get(e.connection_type);
+                                            l = (0, i.jsx)('img', {
+                                                src: (0, o.ap)(j) ? t.icon.lightSVG : t.icon.darkSVG,
                                                 alt: '',
-                                                className: I.avatar
+                                                className: R.avatar
                                             });
                                         }
-                                        if (null != t) o[''.concat(e.connection_type, ':').concat(e.application_id)] = t;
+                                        if (null != l) a[''.concat(e.connection_type, ':').concat(e.application_id)] = l;
                                     }
-                                    return Object.values(o);
+                                    return Object.values(a);
                                 })(e.id);
-                            return (0, a.jsxs)(
-                                d.Clickable,
+                            return (0, i.jsxs)(
+                                c.Clickable,
                                 {
-                                    className: r()(E.verifiedRole, n ? E.verifiedRoleHasRole : null),
-                                    onClick: n ? void 0 : () => A(e, l),
-                                    onContextMenu: n
-                                        ? (o) => {
-                                              var n, r, t;
+                                    className: r()(Z.verifiedRole, s ? Z.verifiedRoleHasRole : null),
+                                    onClick: s ? void 0 : () => O(e, t),
+                                    onContextMenu: s
+                                        ? (a) => {
+                                              var s, r, l;
                                               return (
-                                                  (n = l),
+                                                  (s = t),
                                                   (r = e.id),
-                                                  (t = o),
-                                                  void (0, c.jW)(t, async () => {
-                                                      let { default: e } = await i.e('60079').then(i.bind(i, 850902));
-                                                      return (l) =>
-                                                          (0, a.jsx)(e, {
-                                                              ...l,
+                                                  (l = a),
+                                                  void (0, d.jW)(l, async () => {
+                                                      let { default: e } = await n.e('60079').then(n.bind(n, 850902));
+                                                      return (t) =>
+                                                          (0, i.jsx)(e, {
+                                                              ...t,
                                                               roleId: r,
-                                                              onLeaveRole: () => u.Z.unassignGuildRoleConnection(n, r)
+                                                              onLeaveRole: () => u.Z.unassignGuildRoleConnection(s, r)
                                                           });
                                                   })
                                               );
                                           }
                                         : void 0,
                                     children: [
-                                        n
-                                            ? (0, a.jsx)('div', {
-                                                  className: E.roleCheckmark,
-                                                  children: (0, a.jsx)(d.CheckmarkSmallIcon, {
+                                        s
+                                            ? (0, i.jsx)('div', {
+                                                  className: Z.roleCheckmark,
+                                                  children: (0, i.jsx)(c.CheckmarkSmallIcon, {
                                                       size: 'xs',
                                                       color: 'currentColor'
                                                   })
                                               })
                                             : null,
-                                        (0, a.jsx)(g.Z, {
-                                            guildId: l,
+                                        (0, i.jsx)(A.Z, {
+                                            guildId: t,
                                             role: e,
                                             size: 24
                                         }),
-                                        (0, a.jsxs)('div', {
-                                            className: E.verifiedRoleNameDescriptionContainer,
+                                        (0, i.jsxs)('div', {
+                                            className: Z.verifiedRoleNameDescriptionContainer,
                                             children: [
-                                                (0, a.jsx)(d.Text, {
+                                                (0, i.jsx)(c.Text, {
                                                     variant: 'text-md/medium',
                                                     color: 'header-primary',
-                                                    className: E.verifiedRoleName,
+                                                    className: Z.verifiedRoleName,
                                                     children: e.name
                                                 }),
                                                 void 0 !== e.description
-                                                    ? (0, a.jsx)(d.Text, {
+                                                    ? (0, i.jsx)(c.Text, {
                                                           variant: 'text-xs/normal',
                                                           color: 'header-secondary',
-                                                          className: E.verifiedRoleDescription,
+                                                          className: Z.verifiedRoleDescription,
                                                           children: e.description
                                                       })
                                                     : null
                                             ]
                                         }),
-                                        (0, a.jsx)(v.Z, {
+                                        (0, i.jsx)(h.Z, {
                                             showUserPopout: !1,
-                                            guildId: l,
-                                            users: t.map(() => null),
-                                            renderUser: (e, l, i) => (0, a.jsx)(o.Fragment, { children: t[i] }, i),
+                                            guildId: t,
+                                            users: l.map(() => null),
+                                            renderUser: (e, t, n) => (0, i.jsx)(a.Fragment, { children: l[n] }, n),
                                             max: 3
                                         })
                                     ]

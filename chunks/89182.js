@@ -7,7 +7,7 @@ var i = n(735250),
     a = n(120356),
     s = n.n(a),
     r = n(481060),
-    l = n(986932);
+    l = n(392512);
 function o(e) {
     let { items: t, onClose: n, onSelect: a, selected: s, ...o } = e;
     return (0, i.jsx)(r.Menu, {

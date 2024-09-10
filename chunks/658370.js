@@ -12,17 +12,17 @@ var a = n(120356),
     E = n(409100),
     T = n(474936),
     I = n(689938),
-    R = n(817199);
+    R = n(977341);
 t.Z = (e) => {
     var t;
     let n;
-    let { title: a, titleClassName: g = '', buttonClassName: C = '', subtitle: N = '', description: m = '', descriptionCta: p = '', isPremiumGetCta: A, onCtaClick: f, cardVariant: h } = e,
-        S = (0, d.N)(),
-        M = null == S ? void 0 : S.subscription_trial,
+    let { title: a, titleClassName: g = '', buttonClassName: C = '', subtitle: N = '', description: m = '', descriptionCta: p = '', isPremiumGetCta: A, onCtaClick: f, cardVariant: M } = e,
+        h = (0, d.N)(),
+        S = null == h ? void 0 : h.subscription_trial,
         x = (0, c.Ng)(),
         O = (0, l.Rt)({
-            intervalType: null == M ? void 0 : M.interval,
-            intervalCount: null == M ? void 0 : M.interval_count
+            intervalType: null == S ? void 0 : S.interval,
+            intervalCount: null == S ? void 0 : S.interval_count
         }),
         b = (0, o._)({
             defaultResponse: I.Z.Messages.PREMIUM_SETTINGS_GET,
@@ -31,7 +31,7 @@ t.Z = (e) => {
             onTier0TrialOffer: O,
             onDiscountOffer: I.Z.Messages.PREMIUM_DISCOUNT_CTA.format({ percent: null == x ? void 0 : x.discount.amount })
         }),
-        P = (0, _._)(h);
+        P = (0, _._)(M);
     return (0, s.jsxs)('div', {
         className: r()(R.cardDescription, null == P ? void 0 : null === (t = P.description) || void 0 === t ? void 0 : t.className),
         children: [

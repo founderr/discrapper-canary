@@ -18,7 +18,7 @@ var i = s(442837),
     E = s(643518),
     f = s(228168),
     x = s(981631),
-    m = s(419758);
+    m = s(272216);
 function Z(e) {
     var n;
     let { user: s, currentUser: Z, channelId: p, displayProfile: h, initialSection: S, initialSubsection: v, friendToken: T, onClose: g } = e,

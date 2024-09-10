@@ -20,7 +20,7 @@ var a = n(481060),
     m = n(215124),
     N = n(981631),
     S = n(689938),
-    h = n(700017);
+    h = n(772236);
 function g(e) {
     let { payoutsByPeriod: t, team: n } = e,
         i = (0, c.mY)() ? null : S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_EDIT_PAYMENT_METHOD_LINK.format({ url: null != n ? N.EYA.DEVELOPER_PORTAL_PAYOUT_SETTINGS(n.id) : null });

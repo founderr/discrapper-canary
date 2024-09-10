@@ -8,7 +8,7 @@ var n = s(735250),
     r = s(470079),
     o = s(748780),
     i = s(481060),
-    a = s(38928);
+    a = s(532864);
 class u extends r.Component {
     componentWillEnter(e) {
         let { offset: t } = this.state;

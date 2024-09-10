@@ -15,7 +15,7 @@ var i = o(481060),
     C = o(573703),
     u = o(798930),
     d = o(981631),
-    _ = o(564510);
+    _ = o(879137);
 function N(e) {
     let { transitionState: n, onClose: o, analyticsLocation: N } = e,
         { slide: L, gotoNext: R, gotoError: h, handleWaitingForConnection: O, handleAuthToken: x, expectedCallbackState: p, callbackData: T } = (0, r.k)(N, d.ABu.CRUNCHYROLL);

@@ -6,7 +6,7 @@ n.d(t, {
     n(47120);
 var i = n(470079),
     a = n(49898),
-    s = n(9886);
+    s = n(25912);
 function r(e) {
     let { isSearchBarVisible: t } = e,
         [n, r] = i.useState(a.WB.DEFAULT),

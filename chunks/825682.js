@@ -2,7 +2,7 @@ var i = n(735250);
 n(470079);
 var a = n(788307),
     s = n(51144),
-    r = n(17337);
+    r = n(126875);
 t.Z = function (e) {
     let { hovered: t, activities: n, applicationStream: l, status: o, user: c } = e;
     return n.length > 0

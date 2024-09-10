@@ -10,7 +10,7 @@ var a = n(481060),
     r = n(554300),
     l = n(981631),
     o = n(689938),
-    c = n(612260);
+    c = n(582036);
 function d(e) {
     let { isSelected: t, onClick: n } = e,
         d = (0, s.Sl)(l.Ilk.WHITE);

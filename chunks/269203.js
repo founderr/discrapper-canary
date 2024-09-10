@@ -14,7 +14,7 @@ var s = n(442837),
     u = n(594174),
     d = n(967128),
     h = n(689938),
-    m = n(422226);
+    m = n(527094);
 function p(e) {
     var t;
     let { joinRequest: n, guild: l } = e,

@@ -14,7 +14,7 @@ var s = n(735250),
     u = n(208567),
     _ = n(624138),
     I = n(689938),
-    E = n(455658);
+    E = n(819793);
 let T = (0, _.Mg)(l.Z.ROLE_ICON_UPLOADER_ICON_SIZE);
 function m(e) {
     let { role: t, 'aria-label': n = I.Z.Messages.UPLOAD_IMAGE, className: i, onClick: l, disabled: _ = !1 } = e,

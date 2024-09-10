@@ -10,8 +10,8 @@ var i = n(735250),
     u = n(347904),
     h = n(620652),
     m = n(815605),
-    p = n(610176),
-    f = n(968651);
+    p = n(37741),
+    f = n(403969);
 t.Z = s.memo(function (e) {
     let { channelId: t, messageId: n, emoji: g, useChatFontScaling: _, color: T, count: v } = e,
         E = (0, o.e7)([d.Z], () => d.Z.getEffectForEmojiId(t, n, g)),

@@ -35,7 +35,7 @@ var a = n(442837),
     v = n(176505),
     j = n(829857),
     Z = n(689938),
-    b = n(911688);
+    b = n(811843);
 function U(e) {
     let { application: t, guild: n } = e,
         i = (0, S.YB)(n.id),

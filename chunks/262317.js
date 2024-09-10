@@ -39,7 +39,7 @@ var i,
     j = n(927923),
     P = n(70722),
     O = n(689938),
-    y = n(884535);
+    y = n(697529);
 function D(e, t, n) {
     return (
         t in e
@@ -167,7 +167,7 @@ class w extends (i = a.PureComponent) {
             D(this, 'handleUserContextMenu', (e) => {
                 let { channel: t, user: i } = this.props;
                 (0, h.jW)(e, async () => {
-                    let { default: e } = await Promise.all([n.e('79695'), n.e('90286'), n.e('12435'), n.e('46563')]).then(n.bind(n, 757387));
+                    let { default: e } = await Promise.all([n.e('79695'), n.e('90286'), n.e('12435'), n.e('53092')]).then(n.bind(n, 757387));
                     return (n) =>
                         (0, s.jsx)(e, {
                             ...n,

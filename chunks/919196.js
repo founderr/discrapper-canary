@@ -24,7 +24,7 @@ var i = t(735250),
     g = t(725875),
     p = t(981631),
     f = t(689938),
-    O = t(819949);
+    O = t(695768);
 function x(e) {
     let { application: n, guild: t, integration: a, ...s } = e;
     return (0, i.jsx)(l.ConfirmModal, {

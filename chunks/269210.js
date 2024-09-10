@@ -15,8 +15,8 @@ var l = t(557533),
     a = t(777207),
     u = t(752843),
     c = t(330711),
-    d = t(772421),
-    f = t(778342);
+    d = t(56273),
+    f = t(103077);
 function p(e) {
     let { description: n, imgSrc: t, renderPurchaseButton: l, onPurchase: p, subscriptionType: m, title: v, onDetails: I, benefitItems: S, benefitsSummary: g } = e;
     return (0, i.jsx)(s.tE, {

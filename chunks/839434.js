@@ -56,7 +56,7 @@ var i,
     q = n(981631),
     $ = n(65154),
     ee = n(689938),
-    et = n(37223);
+    et = n(5239);
 function en(e, t, n) {
     return (
         t in e
@@ -344,7 +344,7 @@ class es extends (i = a.PureComponent) {
             en(this, 'handleUserContextMenu', (e, t) => {
                 let { context: i } = this.props;
                 (0, h.jW)(e, async () => {
-                    let { default: e } = await Promise.all([n.e('79695'), n.e('69220'), n.e('740')]).then(n.bind(n, 881351));
+                    let { default: e } = await Promise.all([n.e('79695'), n.e('69220'), n.e('5901')]).then(n.bind(n, 881351));
                     return (n) =>
                         (0, s.jsx)(e, {
                             ...n,

@@ -19,7 +19,7 @@ var n = a(735250),
     L = a(984933),
     r = a(430824),
     o = a(689938),
-    C = a(772509);
+    C = a(85750);
 function A(e) {
     let { createdGuildId: s, hasFooter: a = !0, onClose: A, onChannelPromptCompleted: I, isSlideReady: c } = e,
         [N, G] = E.useState(''),

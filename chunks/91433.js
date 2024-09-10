@@ -13,7 +13,7 @@ var i = n(120356),
     u = n(5192),
     c = n(785717),
     d = n(689938),
-    _ = n(179672);
+    _ = n(235677);
 function E(e) {
     let { user: t, guildId: n, channelId: i, friendToken: E, className: f } = e,
         h = u.ZP.getName(n, i, t),

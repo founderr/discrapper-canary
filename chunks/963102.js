@@ -17,7 +17,7 @@ var a = r(735250),
     m = r(471731),
     C = r(335131),
     _ = r(689938),
-    g = r(99065);
+    g = r(454801);
 function h(e) {
     let { isFullScreen: t, isLayer: r, onClose: s, isCatalogView: h, handleTransition: b, transparent: E } = e,
         I = (0, u.ZP)(),

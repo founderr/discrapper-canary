@@ -20,7 +20,7 @@ var s = n(442837),
     f = n(643632),
     E = n(939863),
     g = n(689938),
-    C = n(625229);
+    C = n(187169);
 function I(e) {
     let { onClick: t } = e;
     return (0, i.jsx)(o.Z, {

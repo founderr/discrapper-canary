@@ -1,13 +1,13 @@
-var r, i;
-t.d(n, {
+var r, u;
+t.d(e, {
     f: function () {
         return r;
     }
 }),
-    ((i = r || (r = {}))[(i.KEYWORD = 1)] = 'KEYWORD'),
-    (i[(i.SPAM_LINK = 2)] = 'SPAM_LINK'),
-    (i[(i.ML_SPAM = 3)] = 'ML_SPAM'),
-    (i[(i.DEFAULT_KEYWORD_LIST = 4)] = 'DEFAULT_KEYWORD_LIST'),
-    (i[(i.MENTION_SPAM = 5)] = 'MENTION_SPAM'),
-    (i[(i.USER_PROFILE = 6)] = 'USER_PROFILE'),
-    (i[(i.SERVER_POLICY = 7)] = 'SERVER_POLICY');
+    ((u = r || (r = {}))[(u.KEYWORD = 1)] = 'KEYWORD'),
+    (u[(u.SPAM_LINK = 2)] = 'SPAM_LINK'),
+    (u[(u.ML_SPAM = 3)] = 'ML_SPAM'),
+    (u[(u.DEFAULT_KEYWORD_LIST = 4)] = 'DEFAULT_KEYWORD_LIST'),
+    (u[(u.MENTION_SPAM = 5)] = 'MENTION_SPAM'),
+    (u[(u.USER_PROFILE = 6)] = 'USER_PROFILE'),
+    (u[(u.SERVER_POLICY = 7)] = 'SERVER_POLICY');

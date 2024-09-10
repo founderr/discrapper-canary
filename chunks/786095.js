@@ -20,7 +20,7 @@ var a = t(735250),
     m = t(981631),
     g = t(273504),
     _ = t(689938),
-    f = t(858733);
+    f = t(561240);
 let Z = g.fX.KEYWORD;
 function S(e, n) {
     let { perGuildMaxCount: t } = u.I6[Z],

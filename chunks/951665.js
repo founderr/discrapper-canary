@@ -10,7 +10,7 @@ var s = n(735250),
     r = n(457414),
     l = n(311173),
     o = n(689938),
-    c = n(883333);
+    c = n(343189);
 function d(e) {
     var t;
     let { rule: n, onChangeRule: d, collapsed: u = !1 } = e,

@@ -26,7 +26,7 @@ var n = o(735250),
     A = o(531578),
     p = o(981631),
     g = o(689938),
-    f = o(940256);
+    f = o(214859);
 let L = [
     {
         className: f.emojiSad,

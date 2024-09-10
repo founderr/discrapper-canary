@@ -10,7 +10,7 @@ var n = t(735250),
     u = t(594174),
     E = t(418632),
     T = t(689938),
-    S = t(116536);
+    S = t(838344);
 class I extends a.Component {
     renderNotice() {
         let { isClaimed: e, unclaimedNotice: s, unverifiedNotice: t } = this.props;
@@ -57,13 +57,13 @@ class I extends a.Component {
     }
     openClaimAccountModal() {
         (0, d.openModalLazy)(async () => {
-            let { default: e } = await t.e('1677').then(t.bind(t, 324239));
+            let { default: e } = await t.e('60827').then(t.bind(t, 324239));
             return (s) => (0, n.jsx)(e, { ...s });
         });
     }
     openChangeEmailModal() {
         (0, d.openModalLazy)(async () => {
-            let { default: e } = await Promise.all([t.e('9343'), t.e('12409')]).then(t.bind(t, 642298));
+            let { default: e } = await Promise.all([t.e('9343'), t.e('30566')]).then(t.bind(t, 642298));
             return (s) => (0, n.jsx)(e, { ...s });
         });
     }

@@ -27,7 +27,7 @@ var i = n(735250),
     N = n(302800),
     A = n(981631),
     v = n(689938),
-    L = n(236786);
+    L = n(283522);
 let Z = (e) => {
         let { color: t } = e;
         return (0, i.jsx)(d.TextBadge, {

@@ -31,7 +31,7 @@ var t = a(735250),
     C = a(226799),
     M = a(981631),
     N = a(689938),
-    Z = a(776097);
+    Z = a(710137);
 function E(e) {
     var n, a;
     let { match: u } = e,
@@ -250,7 +250,7 @@ function T(e) {
         }, [l, o, m, d]),
         j = s.useCallback(() => {
             (0, r.openModalLazy)(async () => {
-                let { default: e } = await Promise.all([a.e('60133'), a.e('45374')]).then(a.bind(a, 827940));
+                let { default: e } = await Promise.all([a.e('60133'), a.e('87546')]).then(a.bind(a, 827940));
                 return (n) =>
                     (0, t.jsx)(e, {
                         activityItem: l,

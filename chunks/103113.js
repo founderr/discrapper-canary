@@ -28,7 +28,7 @@ var r = n(735250),
     O = n(171368),
     R = n(228168),
     v = n(689938),
-    C = n(115879);
+    C = n(451563);
 function y(e) {
     let { user: t, guildId: n, channelId: y, messageId: L, roleId: D, setPopoutRef: b, closePopout: M, disableUserProfileLink: P = __OVERLAY__, newAnalyticsLocations: U = [] } = e,
         w = (0, h.ZP)(t.id, n),

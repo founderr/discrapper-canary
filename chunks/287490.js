@@ -17,7 +17,7 @@ var n = t(735250),
     u = t(499533),
     E = t(878209),
     T = t(987338),
-    S = t(922269);
+    S = t(891742);
 function I(e, s) {
     return e.map((e, t) => ({
         label: 'object' == typeof s ? s[t] : u.Z.getExperimentBucketName(e),

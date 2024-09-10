@@ -9,7 +9,7 @@ var i = n(120356),
     a = n.n(i),
     s = n(481060),
     o = n(689938),
-    l = n(78852);
+    l = n(94220);
 function u(e) {
     let { text: t = o.Z.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP, className: n } = e;
     return (0, r.jsx)(s.Tooltip, {

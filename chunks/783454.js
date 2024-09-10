@@ -13,7 +13,7 @@ var s = n(735250),
     c = n(259580),
     d = n(404203),
     u = n(689938),
-    _ = n(873712);
+    _ = n(777926);
 function I(e) {
     let { intiallyExpanded: t = !1, title: n, description: i, children: I } = e,
         [E, T] = a.useState(t),

@@ -8,14 +8,14 @@ var i = n(735250),
     d = n(678513),
     u = n(981631),
     _ = n(689938),
-    E = n(299353);
+    E = n(224719);
 t.Z = function (e) {
     let { guild: t } = e,
         s = (0, o.e7)([d.Z], () => d.Z.getActiveGuildSignUp(t.id)),
         h = a.useCallback(() => {
             null != s &&
                 (0, l.openModalLazy)(async () => {
-                    let { default: e } = await Promise.all([n.e('22862'), n.e('78938')]).then(n.bind(n, 646202));
+                    let { default: e } = await Promise.all([n.e('22862'), n.e('53596')]).then(n.bind(n, 646202));
                     return (n) =>
                         (0, i.jsx)(e, {
                             ...n,

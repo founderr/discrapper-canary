@@ -4,7 +4,7 @@ var o = n(120356),
     a = n.n(o),
     i = n(481060),
     r = n(689938),
-    l = n(608561);
+    l = n(967979);
 t.Z = function (e) {
     let { className: t, color: n = 'header-primary', textOpacity: o = 0.9, bgOpacity: u = 0.4 } = e;
     return (0, s.jsxs)(i.Text, {

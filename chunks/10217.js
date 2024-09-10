@@ -26,8 +26,8 @@ var l,
     j = a(572720),
     M = a(981631),
     T = a(689938),
-    b = a(496947),
-    k = a(906998);
+    b = a(66120),
+    k = a(654165);
 ((n = l || (l = {})).DELETE = 'delete'), (n.EDIT = 'edit'), (n.SHARE = 'share');
 function P(e) {
     let { clip: t, isNew: a, videoRef: l } = e,

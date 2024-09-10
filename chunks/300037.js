@@ -12,7 +12,7 @@ var a = t(120356),
     E = t(267642),
     T = t(981631),
     S = t(689938),
-    I = t(660847);
+    I = t(74175);
 s.Z = function (e) {
     let { className: s, guildId: t, boostingVariant: a } = e,
         N = (0, r.e7)([_.Z], () => _.Z.getGuild(t), [t]);

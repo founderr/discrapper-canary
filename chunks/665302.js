@@ -8,7 +8,7 @@ n(470079);
 var s = n(481060),
     a = n(671533),
     r = n(981631),
-    l = n(451179);
+    l = n(279096);
 function o(e) {
     let { buttonText: t, onGoBack: n, onDismiss: o, showCloseButton: c } = e;
     return (0, i.jsxs)(s.Notice, {

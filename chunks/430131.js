@@ -12,7 +12,7 @@ var a = t(442837),
     l = t(52597),
     c = t(981631),
     d = t(689938),
-    _ = t(290605);
+    _ = t(983078);
 function u(e) {
     let { errors: s, pendingNick: t, currentNick: u, username: E, guild: T } = e,
         S = null != t ? t : u,

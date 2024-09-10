@@ -27,7 +27,7 @@ var r = n(735250),
     N = n(161572),
     O = n(228168),
     R = n(689938),
-    v = n(115879);
+    v = n(451563);
 function C(e) {
     let { user: t, currentUser: n, guildId: C, channelId: y, messageId: L, roleId: D, closePopout: b, setPopoutRef: M, disableUserProfileLink: P = __OVERLAY__, newAnalyticsLocations: U = [] } = e,
         { analyticsLocations: w } = (0, u.ZP)([...U, l.Z.BITE_SIZE_PROFILE_POPOUT]),

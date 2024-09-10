@@ -9,7 +9,7 @@ var r = n(735250),
     d = n(484459),
     _ = n(695346),
     E = n(981631),
-    f = n(826881);
+    f = n(67996);
 t.Z = function (e) {
     let { style: t, src: n, backgroundSrc: h, userId: p, pulseSpeakingIndicator: I = !1, speaking: m = !1, ...T } = e,
         S = null != h ? h : n,

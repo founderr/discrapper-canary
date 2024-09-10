@@ -19,7 +19,7 @@ var a = s(735250),
     _ = s(892322),
     x = s(15608),
     E = s(486527),
-    I = s(625263);
+    I = s(507064);
 function L(e) {
     let { directoryChannelId: t, transitionState: s, initialSlide: L = E.VX.CHOOSE_GUILD, onClose: f, directoryGuildName: T, directoryGuildId: h, currentCategoryId: g } = e,
         [N, B] = n.useState(L),

@@ -17,7 +17,7 @@ var s = n(120356),
     E = n(834129),
     I = n(674563),
     m = n(689938),
-    T = n(549766);
+    T = n(38814);
 function h(e) {
     var t;
     let { message: n, compact: s, usernameHook: h, channel: N } = e,

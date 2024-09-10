@@ -1,55 +1,55 @@
-n.d(t, {
+t.d(n, {
     Np: function () {
-        return c;
+        return s;
     },
     l8: function () {
-        return l;
+        return r;
     },
     mc: function () {
-        return o;
+        return l;
     },
     so: function () {
-        return r;
+        return c;
     }
 });
-var i = n(735250);
-n(470079);
-var s = n(481060),
-    a = n(822869);
-let r = 'forward-modal';
-function l(e) {
-    let { messageId: t, channelId: l, source: o, initialSelectedDestinations: c = [], forwardOptions: u, onRequestSent: d } = e;
-    (0, a.Lb)(l, t, o),
-        (0, s.openModalLazy)(
+var i = t(735250);
+t(470079);
+var o = t(481060),
+    a = t(822869);
+let c = 'forward-modal';
+function r(e) {
+    let { messageId: n, channelId: r, source: l, initialSelectedDestinations: s = [], forwardOptions: d, onRequestSent: u } = e;
+    (0, a.Lb)(r, n, l),
+        (0, o.openModalLazy)(
             async () => {
-                let { ForwardModal: e } = await Promise.all([n.e('6380'), n.e('18499')]).then(n.bind(n, 930864));
-                return (n) =>
+                let { ForwardModal: e } = await Promise.all([t.e('6380'), t.e('99452')]).then(t.bind(t, 930864));
+                return (t) =>
                     (0, i.jsx)(e, {
-                        ...n,
-                        channelId: l,
-                        messageId: t,
-                        initialSelectedDestinations: c,
-                        forwardOptions: u,
-                        onRequestSent: d
+                        ...t,
+                        channelId: r,
+                        messageId: n,
+                        initialSelectedDestinations: s,
+                        forwardOptions: d,
+                        onRequestSent: u
                     });
             },
-            { modalKey: r }
+            { modalKey: c }
         );
 }
-function o() {
-    (0, s.closeModal)(r);
+function l() {
+    (0, o.closeModal)(c);
 }
-function c(e) {
-    let { messageId: t, channelId: a, failedDestinations: r, forwardOptions: l } = e;
-    (0, s.openModalLazy)(async () => {
-        let { ForwardFailedAlertModal: e } = await n.e('86590').then(n.bind(n, 384331));
-        return (n) =>
+function s(e) {
+    let { messageId: n, channelId: a, failedDestinations: c, forwardOptions: r } = e;
+    (0, o.openModalLazy)(async () => {
+        let { ForwardFailedAlertModal: e } = await t.e('86590').then(t.bind(t, 384331));
+        return (t) =>
             (0, i.jsx)(e, {
-                ...n,
-                messageId: t,
+                ...t,
+                messageId: n,
                 channelId: a,
-                failedDestinations: r,
-                forwardOptions: l
+                failedDestinations: c,
+                forwardOptions: r
             });
     });
 }

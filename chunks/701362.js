@@ -28,7 +28,7 @@ var i = n(735250),
     S = n(871118),
     N = n(981631),
     A = n(689938),
-    Z = n(403144);
+    Z = n(278552);
 class M extends s.PureComponent {
     componentDidMount() {
         let { user: e, streamApplication: t } = this.props;

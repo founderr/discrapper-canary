@@ -15,7 +15,7 @@ var a = n(120356),
     s = n.n(a),
     r = n(180081),
     l = n(481060),
-    o = n(9886);
+    o = n(25912);
 function c(e) {
     let { scrollPosition: t } = e;
     return (0, i.jsx)(r.animated.div, {

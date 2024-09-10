@@ -19,7 +19,7 @@ var r = n(735250),
     p = n(962293),
     I = n(981631),
     m = n(689938),
-    T = n(325379);
+    T = n(486522);
 function S(e) {
     let { channel: t, message: n, replyChainLength: a } = e;
     return (

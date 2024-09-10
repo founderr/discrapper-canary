@@ -4,12 +4,12 @@ var i = n(735250),
     l = n(128557),
     r = n(981631),
     o = n(689938),
-    c = n(916469);
+    c = n(339828);
 t.Z = (e) => {
     let { guild: t, onAddGuild: u } = e,
         d = s.useCallback(() => {
             (0, a.openModalLazy)(async () => {
-                let { default: e } = await Promise.all([n.e('7654'), n.e('66633')]).then(n.bind(n, 560114));
+                let { default: e } = await Promise.all([n.e('7654'), n.e('85683')]).then(n.bind(n, 560114));
                 return (n) =>
                     (0, i.jsx)(e, {
                         ...n,

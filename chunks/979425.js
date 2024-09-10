@@ -10,7 +10,7 @@ var s = n(120356),
     l = n(481060),
     r = n(871118),
     o = n(689938),
-    c = n(149050);
+    c = n(810190);
 function u(e) {
     let { stream: t, isSmall: n, selected: s, isSelfStream: u } = e;
     return (0, i.jsxs)(i.Fragment, {

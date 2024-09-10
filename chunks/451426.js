@@ -16,8 +16,8 @@ var a = s(735250),
     E = s(613734),
     N = s(981631),
     u = s(689938),
-    x = s(260768),
-    A = s(220613);
+    x = s(6063),
+    A = s(487043);
 function I(e) {
     let { className: n, onClose: s, onNext: I, onBack: C } = e,
         S = (0, l.e7)([d.Z], () => d.Z.getAppealClassificationId()),

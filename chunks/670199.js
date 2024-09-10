@@ -16,7 +16,7 @@ var t = s(120356),
     E = s(97568),
     N = s(800530),
     u = s(689938),
-    x = s(220613);
+    x = s(487043);
 function A(e) {
     var n, s;
     let { classification: t, isSpam: A = !1, isCoppa: I = !1, className: C, onClose: S, onNext: T } = e,

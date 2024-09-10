@@ -35,8 +35,8 @@ var l = t(735250),
     v = t(176505),
     p = t(50493),
     O = t(689938),
-    B = t(212911),
-    k = t(625032);
+    B = t(842100),
+    k = t(784237);
 function G(e) {
     let { guild: n, previousChannel: t } = e,
         o = O.Z.Messages.MEMBER_SAFETY_CHANNEL_TITLE,

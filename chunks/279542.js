@@ -32,7 +32,7 @@ var s = n(735250),
     x = n(193544),
     p = n(981631),
     R = n(689938),
-    f = n(14020);
+    f = n(10105);
 function L(e) {
     let { guild: t } = e,
         n = (0, o.e7)([E.Z], () => null != t && E.Z.can(p.Plq.MANAGE_GUILD, t), [t]),

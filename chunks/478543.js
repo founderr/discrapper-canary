@@ -13,7 +13,7 @@ var r = n(735250),
     f = n(145022),
     h = n(981631),
     p = n(689938),
-    I = n(962740);
+    I = n(528370);
 function m(e) {
     let { url: t } = e,
         [n, a] = i.useState(!1),

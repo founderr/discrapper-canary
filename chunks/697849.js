@@ -29,7 +29,7 @@ var i = t(735250),
     k = t(462179),
     D = t(765305),
     R = t(981631),
-    y = t(946508);
+    y = t(828819);
 function M(e) {
     let { guildEvent: n, guild: t, channel: a, onActionTaken: r, isHub: o, isMember: c, recurrenceId: s } = e,
         d = (0, f.xt)(n),

@@ -10,7 +10,7 @@ var a = n(481060),
     r = n(113434),
     l = n(710914),
     o = n(689938),
-    c = n(466836);
+    c = n(769771);
 function d(e) {
     let { onSelectTab: t } = e,
         { quests: d, isFetchingCurrentQuests: u } = (0, r.bA)(r.e5.CLAIMED),

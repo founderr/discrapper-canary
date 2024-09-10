@@ -15,7 +15,7 @@ var s = o(481060),
     d = o(319392),
     u = o(798930),
     _ = o(981631),
-    C = o(564510);
+    C = o(879137);
 function x(e) {
     let { transitionState: n, onClose: o, analyticsLocation: x } = e,
         { slide: p, gotoNext: O, gotoError: f, handleWaitingForConnection: g, handleAuthToken: N, expectedCallbackState: h, callbackData: b } = (0, r.k)(x, _.ABu.XBOX);

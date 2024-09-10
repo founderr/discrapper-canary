@@ -65,9 +65,9 @@ var n,
     ei = t(981631),
     er = t(800530),
     eo = t(689938),
-    el = t(81138),
-    ec = t(630785),
-    ed = t(224499);
+    el = t(36968),
+    ec = t(933919),
+    ed = t(113207);
 function e_(e, s, t) {
     return (
         s in e
@@ -166,7 +166,7 @@ function eT(e, s) {
 function eS() {
     let e = Q.iG.useSetting(),
         s = Q.mX.useSetting(),
-        t = (0, X.a)(en.to.DM_SAFETY_ALERTS);
+        t = (0, X.a)(en.to.MESSAGE_REQUESTS);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)('div', {
@@ -215,7 +215,7 @@ function eI() {
     var e;
     let s = null === (e = (0, P.Z)()) || void 0 === e || e,
         { explicitContentGuilds: t, explicitContentFriendDm: n, explicitContentNonFriendDm: a } = (0, R.B)(),
-        r = (0, X.a)(en.to.DM_SAFETY_ALERTS),
+        r = (0, X.a)(en.to.EXPLICIT_MEDIA_REDACTION),
         o = [
             {
                 value: T.Q4.BLUR,

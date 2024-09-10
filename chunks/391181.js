@@ -18,7 +18,7 @@ var i = t(120356),
     d = t(48691),
     _ = t(231338),
     f = t(689938),
-    E = t(954888);
+    E = t(772103);
 function I(e) {
     let { showEditProduct: n, showUnpublishProduct: t, showCopyLink: i, showTestDownload: o, showDeleteProduct: u, showReportProduct: s, onEditProduct: a, onUnpublishProduct: c, onDeleteProduct: d, onCopyLink: _, onTestDownload: I, onReportProduct: S, closePopout: g, onSelect: T } = e;
     return (0, r.jsx)('div', {

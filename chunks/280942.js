@@ -10,7 +10,7 @@ var a = t(481060),
     r = t(267642),
     o = t(981631),
     l = t(689938),
-    c = t(641280);
+    c = t(55733);
 function d(e) {
     let { guildBoostSlot: s, onClose: d, hasCancelableGuildBoostSlot: _, premiumSubscription: u, onSelect: E } = e,
         T = {

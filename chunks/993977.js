@@ -19,7 +19,7 @@ var i = n(735250),
     m = n(34305),
     I = n(981631),
     g = n(689938),
-    p = n(400174);
+    p = n(8347);
 function T(e) {
     let { applicationViewItems: t, restoreApplication: n } = e;
     if (0 === t.length) return null;

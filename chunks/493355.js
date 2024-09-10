@@ -10,7 +10,7 @@ var i = n(120356),
     s = n(481060),
     o = n(686546),
     l = n(436088),
-    u = n(979348);
+    u = n(904122);
 function c(e) {
     let { width: t = 20, height: n = 20, className: i } = e;
     return (0, r.jsxs)('div', {

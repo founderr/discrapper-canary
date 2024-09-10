@@ -26,7 +26,7 @@ var n = t(735250),
     N = t(400916),
     I = t(916001),
     T = t(689938),
-    v = t(2372);
+    v = t(926492);
 function D(e) {
     let { guildProductListing: a, guildId: t, skuPricePreview: r } = e,
         s = (0, O.C)(a),

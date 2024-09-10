@@ -39,7 +39,7 @@ var i = l(735250),
     P = l(519896),
     M = l(981631),
     _ = l(689938),
-    Z = l(637714);
+    Z = l(335567);
 function A(e) {
     let { app: n, onlySubscribeServerSubForGuildId: l, subscriptions: a, otps: r } = e,
         p = t.useMemo(() => (0, b.y)(n, 100), [n]),

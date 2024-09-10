@@ -37,7 +37,7 @@ var a = t(735250),
     U = t(715318),
     w = t(206583),
     F = t(689938),
-    k = t(707443);
+    k = t(51527);
 let K = 'GameProfileModal',
     B = (e) => {
         let { game: n, onClose: t, trackClick: r } = e,

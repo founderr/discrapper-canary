@@ -5,7 +5,7 @@ var i = n(735250),
     r = n(481060),
     o = n(194082),
     c = n(14338),
-    u = n(327799);
+    u = n(7459);
 t.Z = s.memo(function (e) {
     let { label: t, participantCount: n, onClick: s, className: a, collapsed: d, speakers: h, channel: m, isStreamLive: p } = e;
     return (0, i.jsxs)(r.Clickable, {

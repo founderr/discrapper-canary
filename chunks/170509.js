@@ -9,7 +9,7 @@ n(470079);
 var l = n(481060),
     r = n(933557),
     a = n(689938),
-    s = n(377367);
+    s = n(884921);
 function o(e) {
     let { channel: t, category: n, ...o } = e,
         c = (0, r.ZP)(t, !0),

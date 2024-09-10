@@ -5,7 +5,7 @@ var r = n(735250),
     s = n.n(a),
     o = n(481060),
     l = n(686546),
-    u = n(296564);
+    u = n(90837);
 t.Z = (e) => {
     let { className: t, guild: n, isSelected: a = !0, width: c = 32, height: d = 32, shouldAnimate: _ = !0, isLocked: E = !1 } = e,
         [f, h] = i.useState(!1),

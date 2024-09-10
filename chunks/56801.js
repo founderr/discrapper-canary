@@ -12,7 +12,7 @@ var r = n(735250),
     u = n(254494),
     c = n(895924),
     d = n(826298),
-    _ = n(395812);
+    _ = n(360557);
 let E = [16, 12, 8, 12];
 function f(e) {
     let { className: t, channel: n, sections: a, activeCategoryIndex: f, filteredSectionId: h, onSectionClick: p, applicationCommandListRef: I } = e,

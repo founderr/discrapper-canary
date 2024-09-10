@@ -17,7 +17,7 @@ var i = n(735250),
     m = n(768581),
     p = n(176354),
     f = n(675654),
-    g = n(988573);
+    g = n(867494);
 let _ = [];
 function T(e) {
     let { messageId: t, emoji: n, startPosition: T, targetPosition: v } = e,

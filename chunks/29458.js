@@ -6,7 +6,7 @@ var s = n(442837),
     l = n(853197),
     o = n(921944),
     c = n(689938),
-    u = n(587545);
+    u = n(827932);
 t.Z = (e) => {
     var t;
     let { noticeType: n, markAsDismissed: d, partnerGame: _ } = e,

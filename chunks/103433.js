@@ -4,7 +4,7 @@ var a = n(120356),
     r = n.n(a),
     i = n(481060),
     l = n(689938),
-    o = n(953012),
+    o = n(686549),
     c = n(505944);
 t.Z = (e) => {
     let { className: t, onBackClick: n } = e;

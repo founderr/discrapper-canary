@@ -35,7 +35,7 @@ var i = n(735250),
     P = n(981631),
     D = n(674563),
     b = n(689938),
-    j = n(549766);
+    j = n(38814);
 function U() {
     return (0, i.jsx)('div', { className: j.dot });
 }

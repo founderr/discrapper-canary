@@ -9,7 +9,7 @@ var a = t(120356),
     r = t.n(a),
     o = t(481060),
     i = t(679768),
-    c = t(447421);
+    c = t(704448);
 function l(e) {
     let { copy: s, showStars: t = !0, className: a } = e;
     return (0, n.jsxs)('div', {

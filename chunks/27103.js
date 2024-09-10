@@ -15,7 +15,7 @@ var s = n(120356),
     d = n(834129),
     _ = n(674563),
     E = n(689938),
-    I = n(549766);
+    I = n(38814);
 function m(e) {
     let { message: t, compact: n, usernameHook: s } = e,
         m = (0, o.ZP)(t),

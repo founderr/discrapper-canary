@@ -6,7 +6,7 @@ n.d(t, {
 var i = n(735250);
 n(470079);
 var a = n(82295),
-    s = n(2237);
+    s = n(749176);
 function r(e) {
     let { title: t, id: n } = e;
     return (0, i.jsx)(a.Z, {

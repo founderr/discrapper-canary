@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(554231);
+var a = n(148956);
 function s() {
     return (0, i.jsx)('div', { className: a.divider });
 }

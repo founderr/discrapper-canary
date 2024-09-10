@@ -44,7 +44,7 @@ var i = t(735250),
     U = t(981631),
     k = t(231338),
     F = t(689938),
-    H = t(56035);
+    H = t(309951);
 function W(e) {
     var n, t, r, W, Y;
     let V,
@@ -227,8 +227,8 @@ function W(e) {
     }
     let e1 = l.M.EEA_COUNTRIES.has(h.Z.ipCountryCodeWithFallback),
         {
-            checkboxLabel: e7,
-            checkboxClassname: e4,
+            checkboxLabel: e4,
+            checkboxClassname: e7,
             checkboxLabelClassname: e2
         } = (function (e, n, t) {
             let i = null,
@@ -385,8 +385,8 @@ function W(e) {
                           children: (0, i.jsx)(m.Z, {
                               onChange: et,
                               forceShow: !0,
-                              checkboxLabel: e7,
-                              checkboxClassname: e4,
+                              checkboxLabel: e4,
+                              checkboxClassname: e7,
                               checkboxLabelClassname: e2,
                               finePrint:
                                   null !== (Y = !eb && es) && void 0 !== Y

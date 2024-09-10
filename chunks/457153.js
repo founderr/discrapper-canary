@@ -4,7 +4,7 @@ var s = n(735250),
     a = n.n(r),
     l = n(180081),
     i = n(95985),
-    c = n(596282);
+    c = n(183004);
 let d = o.forwardRef(function (e, t) {
     var n;
     let { className: r, expansionSpring: d, isExpanded: u, isExpansionAnimationComplete: p, quest: x, taskDetails: m } = e,

@@ -5,7 +5,7 @@ var s = n(442837),
     l = n(979651),
     r = n(915863),
     o = n(689938),
-    c = n(275778);
+    c = n(91772);
 t.Z = (e) => {
     let { guildId: t, channelId: n, color: u, look: d, onAction: h } = e,
         m = (0, s.e7)([l.Z], () => l.Z.isInChannel(n), [n]);

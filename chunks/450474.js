@@ -5,7 +5,7 @@ var a = n(481060),
     r = n(150192),
     l = n(285888),
     o = n(203377),
-    c = n(592602);
+    c = n(930871);
 t.Z = (e) => {
     let { guild: t, guildMetadata: n, menuPlacement: d, disabled: u } = e,
         _ = (e) => {

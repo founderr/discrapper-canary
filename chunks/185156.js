@@ -21,7 +21,7 @@ var n = i(735250),
     g = i(57716),
     C = i(981631),
     x = i(689938),
-    I = i(377351);
+    I = i(674777);
 function b(e) {
     let { collectionTitle: t, title: i, description: a, handleClick: r, imageSrc: s, ctaLabel: l, ctaLink: d, applicationId: u } = e,
         _ = '936929561302675456' === u,

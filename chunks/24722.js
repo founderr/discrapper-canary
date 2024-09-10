@@ -27,7 +27,7 @@ var a = o(735250),
     C = o(71080),
     f = o(377668),
     L = o(689938),
-    B = o(346611);
+    B = o(391882);
 function S(e) {
     var t;
     let { onClose: o, roleId: S, guildId: g, onBack: E, isCreateRoleFlow: k, focusSearchAfterReady: p, isReady: v } = e,

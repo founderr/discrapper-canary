@@ -1,22 +1,22 @@
 t.d(n, {
     _: function () {
-        return r;
+        return i;
     },
     y: function () {
-        return s;
+        return a;
     }
 });
-var a = t(570140);
-function r(e, n, t) {
-    a.Z.dispatch({
+var l = t(570140);
+function i(e, n, t) {
+    l.Z.dispatch({
         type: 'APP_LAUNCHER_SHOW',
         entrypoint: e,
         activeViewType: n,
         initialState: t
     });
 }
-function s(e) {
-    a.Z.dispatch({
+function a(e) {
+    l.Z.dispatch({
         type: 'APP_LAUNCHER_DISMISS',
         closeReason: e
     });

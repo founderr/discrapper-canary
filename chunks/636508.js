@@ -1,28 +1,28 @@
-a.d(n, {
+n.d(t, {
     $: function () {
         return c;
     },
     W: function () {
-        return u;
+        return d;
     }
 });
-var t = a(470079),
-    s = a(442837),
-    i = a(592125),
-    l = a(944486),
-    r = a(914010),
-    o = a(771845);
+var a = n(470079),
+    i = n(442837),
+    l = n(592125),
+    s = n(944486),
+    o = n(914010),
+    r = n(771845);
 function c() {
     var e;
-    let { allowGdmActivityChannelSuggestion: n } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : { allowGdmActivityChannelSuggestion: !1 },
-        a = l.Z.getVoiceChannelId(),
-        t = i.Z.getChannel(a);
-    if (null != t && null != t.guild_id) return t.guild_id;
-    if (null == t || !n) return null !== (e = r.Z.getLastSelectedGuildId()) && void 0 !== e ? e : o.ZP.getFlattenedGuildIds()[0];
+    let { allowGdmActivityChannelSuggestion: t } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : { allowGdmActivityChannelSuggestion: !1 },
+        n = s.Z.getVoiceChannelId(),
+        a = l.Z.getChannel(n);
+    if (null != a && null != a.guild_id) return a.guild_id;
+    if (null == a || !t) return null !== (e = o.Z.getLastSelectedGuildId()) && void 0 !== e ? e : r.ZP.getFlattenedGuildIds()[0];
 }
-function u() {
-    let e = (0, s.e7)([o.ZP], () => o.ZP.getFlattenedGuildIds());
-    return t.useMemo(
+function d() {
+    let e = (0, i.e7)([r.ZP], () => r.ZP.getFlattenedGuildIds());
+    return a.useMemo(
         () =>
             e.map((e) => ({
                 label: e,

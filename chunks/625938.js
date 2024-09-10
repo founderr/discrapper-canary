@@ -25,7 +25,7 @@ var i = n(735250),
     x = n(981631),
     T = n(231338),
     v = n(689938),
-    S = n(651359);
+    S = n(29150);
 let N = (e) => {
         let { style: t, className: n, name: s, icon: a } = e;
         return (0, i.jsx)(d.Tooltip, {

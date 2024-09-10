@@ -1,33 +1,33 @@
-E(47120);
-var s = E(735250),
-    T = E(470079),
-    I = E(120356),
-    n = E.n(I),
-    t = E(481060),
-    A = E(310752),
-    r = E(531643),
-    a = E(689938),
-    N = E(981429),
-    S = E(658371);
-function l(e, _, E) {
+t(47120);
+var a = t(735250),
+    n = t(470079),
+    r = t(120356),
+    s = t.n(r),
+    o = t(481060),
+    l = t(310752),
+    i = t(531643),
+    d = t(689938),
+    c = t(570486),
+    u = t(351915);
+function C(e, A, t) {
     return (
-        _ in e
-            ? Object.defineProperty(e, _, {
-                  value: E,
+        A in e
+            ? Object.defineProperty(e, A, {
+                  value: t,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[_] = E),
+            : (e[A] = t),
         e
     );
 }
-function D() {
-    return (0, s.jsxs)('div', {
-        children: [(0, s.jsx)('div', { className: n()(S.sparkleWhite, N.sparkleOne) }), (0, s.jsx)('div', { className: n()(S.sparkleWhite, N.sparkleTwo) }), (0, s.jsx)('div', { className: n()(S.lightWhite, N.lightOne) }), (0, s.jsx)('div', { className: n()(S.lightWhite, N.lightTwo) }), (0, s.jsx)('div', { className: n()(S.crossWhite, N.crossOne) }), (0, s.jsx)('div', { className: n()(S.crossWhite, N.crossTwo) }), (0, s.jsx)('div', { className: n()(S.popWhite, N.popOne) })]
+function g() {
+    return (0, a.jsxs)('div', {
+        children: [(0, a.jsx)('div', { className: s()(u.sparkleWhite, c.sparkleOne) }), (0, a.jsx)('div', { className: s()(u.sparkleWhite, c.sparkleTwo) }), (0, a.jsx)('div', { className: s()(u.lightWhite, c.lightOne) }), (0, a.jsx)('div', { className: s()(u.lightWhite, c.lightTwo) }), (0, a.jsx)('div', { className: s()(u.crossWhite, c.crossOne) }), (0, a.jsx)('div', { className: s()(u.crossWhite, c.crossTwo) }), (0, a.jsx)('div', { className: s()(u.popWhite, c.popOne) })]
     });
 }
-class L extends T.Component {
+class h extends n.Component {
     componentDidMount() {
         let e = this.elementDOMRef.current;
         null != e && (e.ownerDocument.body.addEventListener('dragover', this.handleDragOver, !1), e.ownerDocument.body.addEventListener('drop', this.handleDragLeave, !1), e.addEventListener('dragover', this.handleDragOverZone, !1), e.addEventListener('dragleave', this.handleDragLeaveZone, !1), e.addEventListener('drop', this.handleDrop, !1));
@@ -37,30 +37,30 @@ class L extends T.Component {
         null != e && (e.ownerDocument.body.removeEventListener('dragover', this.handleDragOver, !1), e.ownerDocument.body.removeEventListener('drop', this.handleDragLeave, !1), e.removeEventListener('dragover', this.handleDragOverZone, !1), e.removeEventListener('dragleave', this.handleDragLeaveZone, !1), e.removeEventListener('drop', this.handleDrop, !1)), clearTimeout(this.dragOverTimeout);
     }
     render() {
-        let { title: e, description: _, icons: E, style: T, className: I } = this.props;
-        return (0, s.jsx)('div', {
+        let { title: e, description: A, icons: t, style: n, className: r } = this.props;
+        return (0, a.jsx)('div', {
             ref: this.elementDOMRef,
-            className: n()(I, N.uploadArea, {
-                [N.droppable]: this.state.isDragging,
-                [N.uploadModalIn]: this.state.isOverZone
+            className: s()(r, c.uploadArea, {
+                [c.droppable]: this.state.isDragging,
+                [c.uploadModalIn]: this.state.isOverZone
             }),
-            style: T,
-            children: (0, s.jsxs)('div', {
-                className: N.uploadDropModal,
+            style: n,
+            children: (0, a.jsxs)('div', {
+                className: c.uploadDropModal,
                 children: [
-                    this.state.isDragging && (0, s.jsx)(D, {}),
-                    (0, s.jsx)('div', { className: N.bgScale }),
-                    (0, s.jsxs)('div', {
-                        className: N.inner,
+                    this.state.isDragging && (0, a.jsx)(g, {}),
+                    (0, a.jsx)('div', { className: c.bgScale }),
+                    (0, a.jsxs)('div', {
+                        className: c.inner,
                         children: [
-                            (0, s.jsx)(A.Z, { icons: E }),
-                            (0, s.jsx)('div', {
-                                className: N.title,
+                            (0, a.jsx)(l.Z, { icons: t }),
+                            (0, a.jsx)('div', {
+                                className: c.title,
                                 children: e
                             }),
-                            (0, s.jsx)('div', {
-                                className: N.instructions,
-                                children: (0, s.jsx)('pre', { children: _ })
+                            (0, a.jsx)('div', {
+                                className: c.instructions,
+                                children: (0, a.jsx)('pre', { children: A })
                             })
                         ]
                     })
@@ -69,87 +69,87 @@ class L extends T.Component {
         });
     }
     constructor(...e) {
-        var _;
+        var A;
         super(...e),
-            (_ = this),
-            l(this, 'state', {
+            (A = this),
+            C(this, 'state', {
                 isDragging: !1,
                 isOverZone: !1
             }),
-            l(this, 'dragOverTimeout', null),
-            l(this, 'elementDOMRef', T.createRef()),
-            l(this, 'isAllDropFiles', (e) => {
-                for (let E = 0; E < e.length; E++)
+            C(this, 'dragOverTimeout', null),
+            C(this, 'elementDOMRef', n.createRef()),
+            C(this, 'isAllDropFiles', (e) => {
+                for (let t = 0; t < e.length; t++)
                     try {
-                        var _;
-                        let s = null !== (_ = e[E].webkitGetAsEntry()) && void 0 !== _ ? _ : e[E].getAsEntry();
-                        if (s && !s.isFile) return !1;
+                        var A;
+                        let a = null !== (A = e[t].webkitGetAsEntry()) && void 0 !== A ? A : e[t].getAsEntry();
+                        if (a && !a.isFile) return !1;
                     } catch (e) {
                         continue;
                     }
                 return !0;
             }),
-            l(this, 'preventUnwantedDrop', function (e) {
-                let E = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-                    s = e.dataTransfer;
-                if (null == s) return !0;
-                let T = Array.isArray(s.types) && -1 !== s.types.indexOf('text/uri-list') && -1 === s.types.indexOf('application/json'),
-                    I = null != s.items && !_.isAllDropFiles(s.items);
+            C(this, 'preventUnwantedDrop', function (e) {
+                let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+                    a = e.dataTransfer;
+                if (null == a) return !0;
+                let n = Array.isArray(a.types) && -1 !== a.types.indexOf('text/uri-list') && -1 === a.types.indexOf('application/json'),
+                    r = null != a.items && !A.isAllDropFiles(a.items);
                 return (
-                    (!T && !I) ||
+                    (!n && !r) ||
                     (e.stopPropagation(),
                     e.preventDefault(),
-                    (s.effectAllowed = 'none'),
-                    (s.dropEffect = 'none'),
-                    E &&
-                        (_.setState({ isDragging: !1 }),
-                        (0, r.openUploadError)({
-                            title: a.Z.Messages.UPLOAD_AREA_INVALID_FILE_TYPE_TITLE,
-                            help: a.Z.Messages.UPLOAD_AREA_INVALID_FILE_TYPE_HELP,
-                            icons: _.props.icons
+                    (a.effectAllowed = 'none'),
+                    (a.dropEffect = 'none'),
+                    t &&
+                        (A.setState({ isDragging: !1 }),
+                        (0, i.openUploadError)({
+                            title: d.Z.Messages.UPLOAD_AREA_INVALID_FILE_TYPE_TITLE,
+                            help: d.Z.Messages.UPLOAD_AREA_INVALID_FILE_TYPE_HELP,
+                            icons: A.props.icons
                         })),
                     !1)
                 );
             }),
-            l(this, 'handleDragOver', (e) => {
-                var _, E, s;
+            C(this, 'handleDragOver', (e) => {
+                var A, t, a;
                 if (!this.preventUnwantedDrop(e)) return !1;
-                let T = e.dataTransfer;
-                if (null != T) {
-                    if (((T.dropEffect = 'copy'), (0, t.hasModalOpen)(r.UPLOAD_ERROR_MODAL_KEY) && (0, t.closeModal)(r.UPLOAD_ERROR_MODAL_KEY), e.stopPropagation(), e.preventDefault(), null === (_ = (E = this.props).onDragOver) || void 0 === _ || _.call(E, e), !this.state.isDragging)) {
-                        let e = null === (s = this.elementDOMRef.current) || void 0 === s ? void 0 : s.ownerDocument.defaultView;
-                        ((null != e && T.types instanceof e.DOMStringList && T.types.contains('application/x-moz-file')) || -1 !== T.types.indexOf('Files')) && this.setState((e) => (e.isDragging ? {} : { isDragging: !0 }));
+                let n = e.dataTransfer;
+                if (null != n) {
+                    if (((n.dropEffect = 'copy'), (0, o.hasModalOpen)(i.UPLOAD_ERROR_MODAL_KEY) && (0, o.closeModal)(i.UPLOAD_ERROR_MODAL_KEY), e.stopPropagation(), e.preventDefault(), null === (A = (t = this.props).onDragOver) || void 0 === A || A.call(t, e), !this.state.isDragging)) {
+                        let e = null === (a = this.elementDOMRef.current) || void 0 === a ? void 0 : a.ownerDocument.defaultView;
+                        ((null != e && n.types instanceof e.DOMStringList && n.types.contains('application/x-moz-file')) || -1 !== n.types.indexOf('Files')) && this.setState((e) => (e.isDragging ? {} : { isDragging: !0 }));
                     }
                     clearTimeout(this.dragOverTimeout),
                         (this.dragOverTimeout = setTimeout(() => {
-                            var e, _;
-                            this.setState({ isDragging: !1 }), null === (e = (_ = this.props).onDragClear) || void 0 === e || e.call(_);
+                            var e, A;
+                            this.setState({ isDragging: !1 }), null === (e = (A = this.props).onDragClear) || void 0 === e || e.call(A);
                         }, 1000));
                 }
             }),
-            l(this, 'handleDragOverZone', () => {
+            C(this, 'handleDragOverZone', () => {
                 this.setState({ isOverZone: !0 });
             }),
-            l(this, 'handleDragLeaveZone', () => {
+            C(this, 'handleDragLeaveZone', () => {
                 this.setState({ isOverZone: !1 });
             }),
-            l(this, 'handleDragLeave', (e) => {
+            C(this, 'handleDragLeave', (e) => {
                 this.state.isDragging && (e.stopPropagation(), e.preventDefault(), this.clearDragging());
             }),
-            l(this, 'clearDragging', () => {
-                var e, _;
+            C(this, 'clearDragging', () => {
+                var e, A;
                 this.setState({
                     isDragging: !1,
                     isOverZone: !1
                 }),
-                    null === (e = (_ = this.props).onDragClear) || void 0 === e || e.call(_);
+                    null === (e = (A = this.props).onDragClear) || void 0 === e || e.call(A);
             }),
-            l(this, 'handleDrop', (e) => {
+            C(this, 'handleDrop', (e) => {
                 if (!this.preventUnwantedDrop(e, !0)) return !1;
-                let _ = e.dataTransfer;
-                if (null == _) return !0;
-                this.state.isDragging && (e.preventDefault(), e.stopPropagation(), this.props.onDrop(_.files), this.clearDragging());
+                let A = e.dataTransfer;
+                if (null == A) return !0;
+                this.state.isDragging && (e.preventDefault(), e.stopPropagation(), this.props.onDrop(A.files), this.clearDragging());
             });
     }
 }
-_.Z = L;
+A.Z = h;

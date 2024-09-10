@@ -24,7 +24,7 @@ var a = n(442837),
     g = n(677892),
     C = n(981631),
     x = n(689938),
-    p = n(717305);
+    p = n(14360);
 function R(e) {
     let { guildId: t, completed: n } = e,
         { homeSettingsEnabled: i } = (0, d.kZ)(t),

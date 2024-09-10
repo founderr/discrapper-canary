@@ -20,7 +20,7 @@ var a = t(735250),
     T = t(134612),
     A = t(981631),
     m = t(689938),
-    x = t(250833);
+    x = t(899014);
 function M(e) {
     let { transitionState: s, onClose: t, handleBlock: M, channelId: S, warningId: h, senderId: g } = e,
         b = () => {

@@ -77,7 +77,7 @@ var i = t(735250),
     eu = t(981631),
     e_ = t(558921),
     ep = t(689938),
-    em = t(364658),
+    em = t(613250),
     eI = t(902294);
 let ef = d().parserFor(el.Z),
     eg = d().reactFor(d().ruleOutput(el.Z, 'react')),
@@ -376,9 +376,9 @@ function eE(e) {
                       }),
                       (0, q.rf)({ [eC]: 'true' })));
         }, [eM, x, eU, p, f]),
-        e2 = (null == eM ? void 0 : eM.id) === e_.g,
+        e5 = (null == eM ? void 0 : eM.id) === e_.g,
         [e8, e3] = a.useState(!1),
-        [e5, e9] = a.useState(!1),
+        [e2, e9] = a.useState(!1),
         [e4, e7] = a.useState(!0),
         ne = (e) => {
             null != e && e3(e.scrollHeight > e.clientHeight);
@@ -408,8 +408,8 @@ function eE(e) {
                                       (0, i.jsx)('div', {
                                           ref: ne,
                                           className: o()({
-                                              [em.descriptionClamp]: !e5,
-                                              [em.descriptionClampSafari]: !e5 && 'Safari' === s().name
+                                              [em.descriptionClamp]: !e2,
+                                              [em.descriptionClampSafari]: !e2 && 'Safari' === s().name
                                           }),
                                           children: (0, i.jsx)(O.Z, {
                                               className: em.detailedDescription,
@@ -419,9 +419,9 @@ function eE(e) {
                                               children: r
                                           })
                                       }),
-                                      (e8 || e5) &&
+                                      (e8 || e2) &&
                                           (0, i.jsx)(eT, {
-                                              isViewAll: e5,
+                                              isViewAll: e2,
                                               onToggle: () => {
                                                   e9((e) => !e);
                                               }
@@ -568,7 +568,7 @@ function eE(e) {
                     )
                 )
             );
-        }, [I, eF, eM, eA, e5, e8, ez, eO, eK, ni, p, nn, nt, eW]),
+        }, [I, eF, eM, eA, e2, e8, ez, eO, eK, ni, p, nn, nt, eW]),
         nr = a.useMemo(() => {
             let e = [
                 {
@@ -679,7 +679,7 @@ function eE(e) {
                                                                                   src: t(744050)
                                                                               })
                                                                       }),
-                                                                  e2 && (0, i.jsx)($.Z, { className: em.partnerBadge })
+                                                                  e5 && (0, i.jsx)($.Z, { className: em.partnerBadge })
                                                               ]
                                                           }),
                                                           (0, i.jsxs)('div', {

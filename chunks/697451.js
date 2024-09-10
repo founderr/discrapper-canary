@@ -29,7 +29,7 @@ var i = n(735250),
     O = n(223021),
     x = n(981631),
     M = n(689938),
-    v = n(438379);
+    v = n(825193);
 function L(e) {
     let { width: t = 6, height: n = 10, color: s = 'currentColor', className: a, foreground: r } = e;
     return (0, i.jsx)('svg', {

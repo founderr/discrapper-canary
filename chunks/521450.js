@@ -13,8 +13,8 @@ var s = n(735250),
     I = n(981631),
     R = n(930441),
     g = n(689938),
-    C = n(284725),
-    N = n(224499);
+    C = n(35411),
+    N = n(113207);
 t.Z = () => {
     let e = T.Ex.useSetting(),
         { categories: t, initialized: n } = (0, c.cj)([E.Z], () => E.Z.getEmailSettings());

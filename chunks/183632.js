@@ -12,8 +12,8 @@ var a = t(442837),
     l = t(39604),
     c = t(442334),
     d = t(689938),
-    _ = t(992133),
-    u = t(677787);
+    _ = t(595362),
+    u = t(193788);
 function E() {
     let e = (0, a.e7)([o.Z], () => o.Z.getSettings().storageLocation),
         s = async () => {

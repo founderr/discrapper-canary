@@ -11,7 +11,7 @@ var n = t(735250),
     r = t(481060),
     o = t(259580),
     l = t(394644),
-    c = t(245795);
+    c = t(516915);
 function d(e) {
     let { setting: s, hasChildren: t } = e;
     return (0, n.jsx)(r.Text, {

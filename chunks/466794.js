@@ -6,7 +6,7 @@ n.d(t, {
 var i = n(735250);
 n(470079);
 var s = n(481060),
-    a = n(277366);
+    a = n(988064);
 function r(e) {
     let { tooltipText: t, textColor: n } = e;
     return (0, i.jsxs)('span', {

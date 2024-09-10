@@ -38,7 +38,7 @@ var i = n(735250),
     y = n(981631),
     D = n(474936),
     k = n(689938),
-    U = n(985902);
+    U = n(219912);
 function w(e) {
     let { inPopout: t, channel: n, toggleRequestToSpeakSidebar: a, showRequestToSpeakSidebar: o } = e,
         m = (0, d.bp)(),

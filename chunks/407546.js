@@ -11,7 +11,7 @@ var i = n(149765),
     o = n(481060),
     l = n(981631),
     u = n(689938),
-    c = n(185158);
+    c = n(507119);
 function d(e) {
     let { error: t, selectedGuildId: n, onGuildChange: d, guilds: _, disabled: E = !1 } = e,
         f = _.filter((e) => i.e$(e.permissions, l.Plq.MANAGE_GUILD)).map((e) => ({

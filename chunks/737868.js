@@ -25,7 +25,7 @@ var o = l(735250),
     f = l(981631),
     g = l(185923),
     M = l(689938),
-    Z = l(923070);
+    Z = l(169876);
 n.default = (e) => {
     var n, l;
     let { guildId: B, welcomeChannel: P, transitionState: O, onSave: k, onClose: D } = e,

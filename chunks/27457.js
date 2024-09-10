@@ -62,7 +62,7 @@ var i = n(735250),
     es = n(524484),
     ea = n(65154),
     el = n(689938),
-    er = n(149050);
+    er = n(810190);
 let eo = s.memo((e) => {
     var t, n, a, c, E;
     let { participant: I, onDoubleClick: x, onContextMenu: z, onClick: Y, onMouseDown: ee, onKeyDown: eo, className: ec, style: ed, channel: eh, width: em, inPopout: ep, onVideoResize: e_, inCall: ef = !1, selected: eE = !1, noBorder: eg = !1, noVideoRender: eC = !1, focused: eI = !1, blocked: ex = !1, fit: eT = S.L.CONTAIN, paused: ev = !1, pulseSpeakingIndicator: eS = !1 } = e,

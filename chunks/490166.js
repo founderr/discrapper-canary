@@ -11,7 +11,7 @@ var o = t(481060),
     i = t(13140),
     d = t(487029),
     c = t(689938),
-    l = t(816376);
+    l = t(243984);
 function r(e) {
     let { guildId: n, channel: r, keybind: _, transitionState: u, onClose: h } = e;
     function D() {

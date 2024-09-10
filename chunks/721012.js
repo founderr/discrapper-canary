@@ -15,7 +15,7 @@ var i = n(735250),
     l = n(481060),
     c = n(671533),
     d = n(689938),
-    m = n(444086);
+    m = n(689937);
 function u(e) {
     let { message: t, adminTitle: n, profilePic: s, emphasisColor: a = 'interactive-normal', arrowPosition: r, className: c } = e;
     return (0, i.jsxs)('div', {

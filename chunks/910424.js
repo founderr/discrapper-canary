@@ -19,7 +19,7 @@ var s = n(442837),
     p = n(915863),
     _ = n(981631),
     f = n(689938),
-    E = n(589850);
+    E = n(511292);
 function g(e) {
     let { isCurrentUser: t, color: n, look: g, applicationStream: C, onAction: I } = e,
         { activeStream: x, watchingOtherStream: T } = (0, s.cj)([d.Z], () => ({

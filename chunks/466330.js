@@ -28,7 +28,7 @@ let d = (n, e, l) =>
             icon: n === i.t4x.GUILD_HEADER ? u.GroupPlusIcon : void 0,
             action: () =>
                 (0, u.openModalLazy)(async () => {
-                    let { default: u } = await Promise.all([a.e('7654'), a.e('66633')]).then(a.bind(a, 560114));
+                    let { default: u } = await Promise.all([a.e('7654'), a.e('85683')]).then(a.bind(a, 560114));
                     return (a) =>
                         (0, t.jsx)(u, {
                             ...a,

@@ -35,7 +35,7 @@ var s = n(735250),
     v = n(966301),
     j = n(981631),
     Z = n(689938),
-    b = n(867754);
+    b = n(693310);
 function U() {
     let e = (0, o.e7)([S.Z], () => S.Z.getGuild());
     return null == e ? null : (0, s.jsx)(G, { guild: e });

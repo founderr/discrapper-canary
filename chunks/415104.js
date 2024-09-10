@@ -15,7 +15,7 @@ var i = n(735250),
     u = n(439826),
     _ = n(43779),
     E = n(981631),
-    h = n(882442);
+    h = n(968470);
 function m(e) {
     let { quest: t, className: n, questContent: s, contentPosition: m, rowIndex: I } = e,
         [g, p] = a.useState(!1),

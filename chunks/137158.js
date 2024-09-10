@@ -14,7 +14,7 @@ var a = t(735250),
     d = t(692547),
     u = t(481060),
     m = t(689938),
-    _ = t(944309);
+    _ = t(631403);
 function f(e) {
     let { title: n, children: t, onEdit: r, onRemove: i, canRemove: o, actionsLocation: l } = e;
     return (0, a.jsxs)('div', {

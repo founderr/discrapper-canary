@@ -8,7 +8,7 @@ a(470079);
 var r = a(475413),
     s = a(955418),
     o = a(689938),
-    l = a(115879);
+    l = a(451563);
 function t(e) {
     let { user: n, hideMessageInput: a, hideExampleButton: t } = e;
     return a

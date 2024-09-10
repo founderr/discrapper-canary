@@ -25,7 +25,7 @@ var s = n(735250),
     g = n(273504),
     C = n(981631),
     x = n(689938),
-    p = n(830760);
+    p = n(603211);
 function R(e) {
     var t, n;
     let { guildId: R, setPreventNavigation: f = () => {} } = e,

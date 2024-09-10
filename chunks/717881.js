@@ -31,7 +31,7 @@ var i = n(735250),
     M = n(153066),
     b = n(981631),
     R = n(689938),
-    L = n(71851);
+    L = n(247111);
 function j(e) {
     let { type: t, source: n, activity: s, applicationStream: a, user: l, guildId: r, channelId: c, onAction: d, isEmbedded: m = (0, u.Z)(s), actionColor: p } = e;
     return (0, i.jsx)(h.Z, {

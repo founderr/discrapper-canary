@@ -8,7 +8,7 @@ var o = t(735250),
     c = t(120356),
     r = t.n(c),
     i = t(481060),
-    l = t(481022);
+    l = t(956731);
 function a(e) {
     let { chunks: n, columns: t, className: c } = e,
         a = s.useMemo(() => ({ '--secure-frames-columns': t }), [t]);

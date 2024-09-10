@@ -7,7 +7,7 @@ var a = t(735250),
     c = t(210753),
     d = t(77498),
     u = t(689938),
-    m = t(840078);
+    m = t(123060);
 n.Z = function (e) {
     let { applicationId: n, imageContainerClassName: t, onClick: i, selected: _, locked: f = !1, otherGamesCount: C = 0 } = e,
         h = (0, o.useToken)(o.tokens.colors.WHITE),

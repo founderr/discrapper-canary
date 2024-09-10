@@ -18,9 +18,9 @@ var l = n(735250),
     h = n(537135),
     m = n(176940),
     x = n(689938),
-    _ = n(51449),
-    g = n(458623),
-    p = n(224499);
+    _ = n(836471),
+    g = n(410894),
+    p = n(113207);
 function C(e) {
     let { selectedSource: t, onChangeVideoDeviceSource: n, onChangeAudioDevice: i } = e;
     r()(null != t, 'Camera capture device cannot be null');

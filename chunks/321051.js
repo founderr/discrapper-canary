@@ -11,7 +11,7 @@ var i = t(735250),
     l = t(697426),
     o = t(603074),
     c = t(689938),
-    u = t(84340);
+    u = t(599215);
 let d = [54, 8, 8, 8];
 function _(e) {
     let { onSelect: n, sound: t } = e,

@@ -7,7 +7,7 @@ var i = n(735250),
     c = n(528144),
     u = n(212342),
     d = n(689938),
-    _ = n(493249);
+    _ = n(196273);
 t.Z = (e) => {
     let { channelId: t, messageId: n } = e,
         E = (0, a.e7)([u.Z], () => u.Z.shouldShowBump(n), [n]),

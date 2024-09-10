@@ -7,7 +7,7 @@ var n = t(735250);
 t(470079);
 var a = t(481060),
     i = t(921801),
-    r = t(56309);
+    r = t(607922);
 function o(e) {
     let { children: s, title: t, webSetting: o } = e;
     return (0, n.jsx)(i.F, {

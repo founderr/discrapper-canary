@@ -8,7 +8,7 @@ s(470079);
 var n = s(481060),
     l = s(813197),
     o = s(689938),
-    i = s(302541);
+    i = s(510186);
 function r(e) {
     let { icon: t, onChange: s } = e;
     return (0, a.jsx)(n.FocusRing, {

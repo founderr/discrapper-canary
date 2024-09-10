@@ -10,7 +10,7 @@ var s = n(120356),
     l = n(873546),
     r = n(481060),
     o = n(470134),
-    c = n(722980);
+    c = n(678064);
 function u(e) {
     let { guildId: t, children: n, className: s } = e,
         { horizontalScrollNotice: u, handleScroll: d, handleSetScrollerRef: h, handleSetContainerRef: m } = (0, o.Z)(t),

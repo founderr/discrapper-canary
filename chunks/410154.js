@@ -1,13 +1,13 @@
-n.d(t, {
+a.d(t, {
     C5: function () {
-        return a;
+        return o;
     }
 });
-var s,
-    a,
-    r = n(818083);
-((s = a || (a = {}))[(s.DEFAULT = 0)] = 'DEFAULT'), (s[(s.WINTER_2023_DROP = 1)] = 'WINTER_2023_DROP'), (s[(s.MONSTER_DROP = 2)] = 'MONSTER_DROP'), (s[(s.SPRINGTOONS = 4)] = 'SPRINGTOONS'), (s[(s.SHY = 5)] = 'SHY'), (s[(s.GALAXY = 6)] = 'GALAXY'), (s[(s.TIDE = 7)] = 'TIDE'), (s[(s.ROBERT = 8)] = 'ROBERT'), (s[(s.STORM = 9)] = 'STORM');
-let i = (0, r.B)({
+var n,
+    o,
+    i = a(818083);
+((n = o || (o = {}))[(n.DEFAULT = 0)] = 'DEFAULT'), (n[(n.WINTER_2023_DROP = 1)] = 'WINTER_2023_DROP'), (n[(n.MONSTER_DROP = 2)] = 'MONSTER_DROP'), (n[(n.SPRINGTOONS = 4)] = 'SPRINGTOONS'), (n[(n.SHY = 5)] = 'SHY'), (n[(n.GALAXY = 6)] = 'GALAXY'), (n[(n.TIDE = 7)] = 'TIDE'), (n[(n.ROBERT = 8)] = 'ROBERT'), (n[(n.STORM = 9)] = 'STORM');
+let r = (0, i.B)({
     kind: 'user',
     id: '2023-12_collectibles_shop_marketing',
     label: 'Collectibles Shop Marketing Variations',
@@ -30,4 +30,4 @@ let i = (0, r.B)({
         }
     ]
 });
-t.ZP = (e) => i.useExperiment({ location: e }).variant;
+t.ZP = (e) => r.useExperiment({ location: e }).variant;

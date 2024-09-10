@@ -31,8 +31,8 @@ var s = n(735250),
     O = n(203377),
     A = n(981631),
     M = n(689938),
-    D = n(780626),
-    v = n(214099);
+    D = n(956385),
+    v = n(928014);
 let j = 'DRAGGABLE_ROLE';
 function Z(e) {
     let { setEditRoleId: t, guild: n, everyoneRole: i, otherRoles: r, setSelectedSection: l, renderHeader: o, headerHeight: c, query: u } = e,

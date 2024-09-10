@@ -3,30 +3,30 @@ n.d(t, {
         return r;
     }
 });
-var o,
+var i,
     r,
     s = n(990547),
-    a = n(544891),
-    i = n(570140),
-    l = n(314897),
-    d = n(573261),
-    c = n(815660),
-    E = n(981631);
-((o = r || (r = {})).USER_ACTION_REQUIRED = 'user_action_required'),
-    (o.USER_SETTINGS_UPDATE = 'user_settings_update'),
-    (o.GUILD_PHONE_REQUIRED = 'guild_phone_required'),
-    (o.MFA_PHONE_UPDATE = 'mfa_phone_update'),
-    (o.CONTACT_SYNC = 'contact_sync'),
+    l = n(544891),
+    a = n(570140),
+    o = n(314897),
+    u = n(573261),
+    d = n(815660),
+    c = n(981631);
+((i = r || (r = {})).USER_ACTION_REQUIRED = 'user_action_required'),
+    (i.USER_SETTINGS_UPDATE = 'user_settings_update'),
+    (i.GUILD_PHONE_REQUIRED = 'guild_phone_required'),
+    (i.MFA_PHONE_UPDATE = 'mfa_phone_update'),
+    (i.CONTACT_SYNC = 'contact_sync'),
     (t.Z = {
         setCountryCode(e) {
-            i.Z.dispatch({
+            a.Z.dispatch({
                 type: 'PHONE_SET_COUNTRY_CODE',
                 countryCode: e
             });
         },
         removePhone: (e, t) =>
-            a.tn.del({
-                url: E.ANM.PHONE,
+            l.tn.del({
+                url: c.ANM.PHONE,
                 body: {
                     password: e,
                     change_phone_reason: t
@@ -35,27 +35,27 @@ var o,
             }),
         resendCode(e) {
             let t = {},
-                n = l.default.getFingerprint();
+                n = o.default.getFingerprint();
             return (
                 null != n && '' !== n && (t['X-Fingerprint'] = n),
-                a.tn.post({
-                    url: E.ANM.RESEND_PHONE,
+                l.tn.post({
+                    url: c.ANM.RESEND_PHONE,
                     headers: t,
                     body: { phone: e }
                 })
             );
         },
         beginAddPhone: (e, t) =>
-            a.tn.post({
-                url: E.ANM.PHONE,
+            l.tn.post({
+                url: c.ANM.PHONE,
                 body: {
                     phone: e,
                     change_phone_reason: t
                 }
             }),
         addPhone: (e, t, n) =>
-            a.tn.post({
-                url: E.ANM.PHONE,
+            l.tn.post({
+                url: c.ANM.PHONE,
                 body: {
                     phone_token: e,
                     password: t,
@@ -64,21 +64,21 @@ var o,
                 oldFormErrors: !0
             }),
         addPhoneWithoutPassword: (e) =>
-            a.tn.post({
-                url: E.ANM.PHONE_VERIFY_NO_PASSWORD,
+            l.tn.post({
+                url: c.ANM.PHONE_VERIFY_NO_PASSWORD,
                 body: { code: e }
             }),
         beginReverifyPhone: (e, t) =>
-            a.tn.post({
-                url: E.ANM.PHONE_REVERIFY,
+            l.tn.post({
+                url: c.ANM.PHONE_REVERIFY,
                 body: {
                     phone: e,
                     change_phone_reason: t
                 }
             }),
         reverifyPhone: (e, t, n) =>
-            a.tn.post({
-                url: E.ANM.PHONE_REVERIFY,
+            l.tn.post({
+                url: c.ANM.PHONE_REVERIFY,
                 body: {
                     phone_token: e,
                     password: t,
@@ -87,19 +87,19 @@ var o,
                 oldFormErrors: !0
             }),
         validatePhoneForSupport: (e) =>
-            a.tn.post({
-                url: E.ANM.VERIFY_PHONE_FOR_TICKET,
+            l.tn.post({
+                url: c.ANM.VERIFY_PHONE_FOR_TICKET,
                 body: { token: e },
                 oldFormErrors: !0
             }),
         async verifyPhone(e, t) {
             let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-                o = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+                i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
                 r = {},
-                a = l.default.getFingerprint();
-            null != a && '' !== a && (r['X-Fingerprint'] = a), o && (r.authorization = '');
-            let u = await d.Z.post({
-                url: E.ANM.VERIFY_PHONE,
+                l = o.default.getFingerprint();
+            null != l && '' !== l && (r['X-Fingerprint'] = l), i && (r.authorization = '');
+            let _ = await u.Z.post({
+                url: c.ANM.VERIFY_PHONE,
                 headers: r,
                 body: {
                     phone: e,
@@ -110,11 +110,11 @@ var o,
             });
             return (
                 n &&
-                    i.Z.dispatch({
+                    a.Z.dispatch({
                         type: 'MODAL_POP',
-                        key: c.M
+                        key: d.M
                     }),
-                u.body
+                _.body
             );
         }
     });

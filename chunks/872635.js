@@ -18,7 +18,7 @@ var r = n(735250),
     f = n(436660),
     h = n(887490),
     p = n(447525),
-    I = n(30005);
+    I = n(3066);
 function m(e) {
     var t;
     let { editorRef: n, options: i, iconClassName: a, dividerClassName: o } = e,

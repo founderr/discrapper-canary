@@ -8,7 +8,7 @@ var r = n(735250),
     a = n(337033),
     s = n(15127),
     o = n(512983),
-    l = n(70638);
+    l = n(276580);
 let u = i.forwardRef(function (e, t) {
     var n;
     let { children: u, className: c, titleClassName: d, title: _, icon: E, disabled: f, htmlFor: h, tag: p = 'h5', ...I } = e,

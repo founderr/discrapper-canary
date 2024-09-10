@@ -15,7 +15,7 @@ var o = t(120356),
     i = t(410030),
     c = t(696936),
     u = t(903773),
-    d = t(72105);
+    d = t(861277);
 let E = {
     RIGHT: d.horizontalStatusWarningBlock,
     BOTTOM: d.verticalStatusWarningBlock

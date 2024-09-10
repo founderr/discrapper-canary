@@ -8,7 +8,7 @@ n(470079);
 var s = n(481060),
     a = n(834129),
     r = n(689938),
-    l = n(397381);
+    l = n(861111);
 function o(e) {
     let { message: t, compact: n } = e;
     return (0, i.jsx)(a.Z, {

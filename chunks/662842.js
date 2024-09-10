@@ -39,7 +39,7 @@ var i,
     y = n(981631),
     j = n(765305),
     U = n(689938),
-    G = n(167555);
+    G = n(599293);
 ((a = i || (i = {}))[(a.STAGE = 0)] = 'STAGE'), (a[(a.EVENT_EXTERNAL = 1)] = 'EVENT_EXTERNAL'), (a[(a.EVENT_VOICE = 2)] = 'EVENT_VOICE'), (a[(a.STUDY_ROOM = 3)] = 'STUDY_ROOM');
 function w(e) {
     let { guild: t, isStudyRoomNotice: n = !1 } = e,

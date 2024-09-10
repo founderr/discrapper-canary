@@ -1,13 +1,13 @@
-var o, s, l, r, a, i, c, u, d, m;
+var s, o, l, r, a, c, i, u, d, m;
 n.d(t, {
     EW: function () {
         return a;
     },
     FF: function () {
-        return s;
+        return o;
     },
     MK: function () {
-        return o;
+        return s;
     },
     X2: function () {
         return r;
@@ -16,15 +16,15 @@ n.d(t, {
         return l;
     }
 }),
-    ((i = o || (o = {})).UNKNOWN = 'unknown'),
-    (i.ANY = 'any'),
-    (i.INVITE = 'invite'),
-    (i.ORGANIC = 'organic_registration'),
-    (i.ORGANIC_MARKETING = 'organic_marketing'),
-    (i.ORGANIC_GUILD_TEMPLATES = 'organic_guild_template'),
-    (i.CREATE_GUILD = 'create_guild'),
-    ((c = s || (s = {})).AGE_GATE = 'age_gate'),
-    (c.AGE_GATE_UNDERAGE = 'age_gate_underage'),
+    ((c = s || (s = {})).UNKNOWN = 'unknown'),
+    (c.ANY = 'any'),
+    (c.INVITE = 'invite'),
+    (c.ORGANIC = 'organic_registration'),
+    (c.ORGANIC_MARKETING = 'organic_marketing'),
+    (c.ORGANIC_GUILD_TEMPLATES = 'organic_guild_template'),
+    (c.CREATE_GUILD = 'create_guild'),
+    ((i = o || (o = {})).AGE_GATE = 'age_gate'),
+    (i.AGE_GATE_UNDERAGE = 'age_gate_underage'),
     ((u = l || (l = {})).CLAIM_ACCOUNT = 'claim_account'),
     (u.CLAIM_ACCOUNT_SUCCESS = 'claim_account_success'),
     ((d = r || (r = {})).GUILD_TEMPLATES = 'guild_templates'),

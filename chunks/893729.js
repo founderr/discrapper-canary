@@ -17,7 +17,7 @@ var r = t(735250),
     E = t(5192),
     I = t(981631),
     S = t(689938),
-    g = t(471292);
+    g = t(391317);
 function T(e) {
     var n;
     let { guildId: t, role: o, theme: T, content: p = S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FLAIR_PREVIEW_MESSAGE_TEXT, className: C } = e,

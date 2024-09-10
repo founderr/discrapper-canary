@@ -12,7 +12,7 @@ var r = n(735250),
     s = n.n(a),
     o = n(1561),
     l = n(481060),
-    u = n(381404);
+    u = n(265157);
 let c = {
         RED: u.backgroundRed,
         BACKGROUND_TERTIARY: u.backgroundTertiary,

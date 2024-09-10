@@ -10,7 +10,7 @@ var a = n(780384),
     _ = n(197115),
     u = n(474936),
     E = n(689938),
-    T = n(380876);
+    T = n(629381);
 let I = (e) => {
         let { showTrialCTA: t, subscriptionTier: n, shouldShowUpsells: s, trialDurationCopy: a, isPersistentCTA: r, shouldShowReferralTrialCopy: i, subscriptionTrial: o } = e;
         if (t && i) return E.Z.Messages.REFERRAL_PROGRAM_START_TRIAL;
@@ -28,27 +28,27 @@ t.Z = (e) => {
         p = (0, i.ZP)(),
         A = (0, a.wj)(p) || t,
         f = (0, d.N)(),
-        h = null == f ? void 0 : f.subscription_trial,
-        S = (0, l.a5)({
-            intervalType: null == h ? void 0 : h.interval,
-            intervalCount: null == h ? void 0 : h.interval_count
+        M = null == f ? void 0 : f.subscription_trial,
+        h = (0, l.a5)({
+            intervalType: null == M ? void 0 : M.interval,
+            intervalCount: null == M ? void 0 : M.interval_count
         }),
-        M = (0, c.Ng)(),
-        x = null != h && n === h.sku_id,
+        S = (0, c.Ng)(),
+        x = null != M && n === M.sku_id,
         { enabled: O } = o._.useExperiment({ location: 'SubscribeButton' }, { autoTrackExposure: !1 }),
         b = O && (null == f ? void 0 : f.trial_id) === u.a7,
         P = g
             ? E.Z.Messages.BOGO_CLAIM_OFFER
-            : null != M
-              ? R(n, N, C, M.discount.amount)
+            : null != S
+              ? R(n, N, C, S.discount.amount)
               : I({
                     showTrialCTA: x,
                     subscriptionTier: n,
                     shouldShowUpsells: !1,
-                    trialDurationCopy: S,
+                    trialDurationCopy: h,
                     isPersistentCTA: C,
                     shouldShowReferralTrialCopy: b,
-                    subscriptionTrial: h
+                    subscriptionTrial: M
                 });
     return (0, s.jsx)(_.Z, {
         color: A ? r.ButtonColors.BRAND_INVERTED : r.ButtonColors.BRAND,

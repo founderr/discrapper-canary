@@ -19,7 +19,7 @@ var a = t(278074),
     m = t(998502),
     I = t(987209),
     f = t(689938),
-    E = t(326397),
+    E = t(15841),
     x = t(241822);
 let N = m.ZP.getEnableHardwareAcceleration() ? s.AnimatedAvatar : s.Avatar;
 function S(e) {

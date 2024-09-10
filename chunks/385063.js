@@ -8,7 +8,7 @@ n(470079);
 var s = n(739566),
     a = n(834129),
     r = n(689938),
-    l = n(324865);
+    l = n(922133);
 function o(e) {
     let { message: t, usernameHook: o, compact: c, isForumPost: u } = e,
         d = (0, s.ZP)(t),

@@ -8,7 +8,7 @@ n(470079);
 var l = n(120356),
     o = n.n(l),
     s = n(481060),
-    u = n(100535);
+    u = n(507815);
 function a(e) {
     let { className: t, color: n, ...l } = e;
     return (0, i.jsx)(s.Text, {

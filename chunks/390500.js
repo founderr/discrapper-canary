@@ -4,7 +4,7 @@ var i = n(735250),
     r = n(970606),
     l = n(565138),
     o = n(689938),
-    c = n(807907),
+    c = n(27471),
     d = n(586522);
 t.Z = function (e) {
     let { onWithdrawApplication: t, guild: n = null } = e,

@@ -17,7 +17,7 @@ var n = t(735250),
     E = t(654904),
     T = t(981631),
     S = t(689938),
-    I = t(562476);
+    I = t(109469);
 function N(e) {
     let { onChange: s, onClose: t, color: i, suggestedColors: N, disabled: m, label: C, colorPickerMiddle: A, colorPickerFooter: g, showEyeDropper: h } = e,
         O = a.useRef(null),

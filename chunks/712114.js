@@ -12,7 +12,7 @@ var i = n(735250),
     c = n(39604),
     u = n(176127),
     d = n(689938),
-    h = n(823472);
+    h = n(894438);
 function m(e) {
     let { onOpenClips: t, lastClipsSession: n, closePopout: m } = e;
     return (s.useEffect(

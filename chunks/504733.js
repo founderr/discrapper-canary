@@ -10,7 +10,7 @@ var s = n(481060),
     r = n(942951),
     l = n(834129),
     o = n(981791),
-    c = n(523536);
+    c = n(56689);
 function u(e) {
     let { message: t, channel: n, compact: u } = e,
         d = (0, a.ZP)(t),

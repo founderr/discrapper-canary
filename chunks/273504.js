@@ -1,76 +1,76 @@
-t.d(n, {
+t.d(e, {
     I3: function () {
-        return c;
-    },
-    Ic: function () {
-        return p;
-    },
-    Lg: function () {
-        return T;
-    },
-    OU: function () {
-        return S;
-    },
-    RH: function () {
-        return s;
-    },
-    Ux: function () {
-        return i;
-    },
-    VW: function () {
         return d;
     },
-    Vg: function () {
-        return g;
+    Ic: function () {
+        return T;
     },
-    Vk: function () {
-        return f;
-    },
-    _6: function () {
-        return C;
-    },
-    aj: function () {
+    Lg: function () {
         return I;
     },
-    dc: function () {
-        return m;
+    OU: function () {
+        return A;
     },
-    fX: function () {
-        return u.f;
+    RH: function () {
+        return l;
     },
-    hu: function () {
+    Ux: function () {
+        return u;
+    },
+    VW: function () {
         return _;
     },
+    Vg: function () {
+        return O;
+    },
+    Vk: function () {
+        return E;
+    },
+    _6: function () {
+        return L;
+    },
+    aj: function () {
+        return f;
+    },
+    dc: function () {
+        return N;
+    },
+    fX: function () {
+        return o.f;
+    },
+    hu: function () {
+        return s;
+    },
     jj: function () {
-        return o.j;
+        return i.j;
     },
     n4: function () {
-        return a;
+        return c;
     },
     q4: function () {
-        return l.q;
+        return a.q;
     },
     uE: function () {
-        return E;
+        return M;
     }
 });
 var r,
-    i,
-    o = t(401653),
-    l = t(95930),
-    u = t(41381);
-((r = i || (i = {}))[(r.PROFANITY = 1)] = 'PROFANITY'), (r[(r.SEXUAL_CONTENT = 2)] = 'SEXUAL_CONTENT'), (r[(r.SLURS = 3)] = 'SLURS'), u.f.USER_PROFILE, u.f.SERVER_POLICY, u.f.MENTION_SPAM, u.f.ML_SPAM, u.f.DEFAULT_KEYWORD_LIST, u.f.KEYWORD;
-let s = 1000,
-    a = 100,
-    c = 1000,
-    d = 10,
-    _ = 60,
-    f = 1,
+    u,
+    i = t(401653),
+    a = t(95930),
+    o = t(41381);
+((r = u || (u = {}))[(r.PROFANITY = 1)] = 'PROFANITY'), (r[(r.SEXUAL_CONTENT = 2)] = 'SEXUAL_CONTENT'), (r[(r.SLURS = 3)] = 'SLURS'), o.f.USER_PROFILE, o.f.SERVER_POLICY, o.f.MENTION_SPAM, o.f.ML_SPAM, o.f.DEFAULT_KEYWORD_LIST, o.f.KEYWORD;
+let l = 1000,
+    c = 100,
+    d = 1000,
+    _ = 10,
+    s = 60,
     E = 1,
-    I = 260,
-    S = 100,
-    g = 1,
-    T = 50,
-    p = 20,
-    C = 150,
-    m = 'automod-profile-quarantine-alert';
+    M = 1,
+    f = 260,
+    A = 100,
+    O = 1,
+    I = 50,
+    T = 20,
+    L = 150,
+    N = 'automod-profile-quarantine-alert';

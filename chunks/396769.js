@@ -7,7 +7,7 @@ var i = n(735250);
 n(470079);
 var s = n(481060),
     a = n(600164),
-    l = n(991797);
+    l = n(761673);
 function r(e) {
     let { icon: t, onClick: n, label: r } = e;
     return (0, i.jsx)(s.Button, {

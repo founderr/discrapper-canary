@@ -6,7 +6,7 @@ var r,
     o = n(470079),
     c = n(120356),
     d = n.n(c),
-    u = n(122967);
+    u = n(207341);
 class h extends (l = o.PureComponent) {
     render() {
         let { tag: e, children: s, hoverText: n, className: r, forceHover: t, ...i } = this.props;

@@ -26,7 +26,7 @@ function c(e) {
         S = (e) => {
             (null == T || e) && !N
                 ? (0, u.openModalLazy)(async () => {
-                      let { default: e } = await Promise.all([t.e('58023'), t.e('19068')]).then(t.bind(t, 779250));
+                      let { default: e } = await Promise.all([t.e('58023'), t.e('81350')]).then(t.bind(t, 779250));
                       return (t) =>
                           (0, l.jsx)(e, {
                               ...t,

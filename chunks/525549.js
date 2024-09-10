@@ -8,7 +8,7 @@ var a = t(735250);
 t(470079);
 var n = t(481060),
     o = t(689938),
-    i = t(552401),
+    i = t(814255),
     d = t(607273);
 function r(e) {
     let { applicationName: s, onConfirm: t, onClose: r, onCancel: c, ...l } = e;

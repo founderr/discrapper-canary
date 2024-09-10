@@ -11,7 +11,7 @@ var r = n(735250),
     o = n(180081),
     l = n(481060),
     u = n(393238),
-    c = n(23505);
+    c = n(761115);
 function d(e) {
     let { children: t, className: n, collapsibleContent: a, isExpanded: d } = e,
         [_, E] = i.useState(!1),

@@ -20,12 +20,12 @@ var s = n(735250),
     p = n(792258),
     A = n(657825),
     f = n(198952),
-    h = n(329242),
-    S = n(895328),
-    M = n(292352),
+    M = n(329242),
+    h = n(895328),
+    S = n(292352),
     x = n(981631),
     O = n(689938),
-    b = n(89979);
+    b = n(555825);
 function P() {
     let e = a.useCallback(() => {
         (0, o.openModalLazy)(async () => {
@@ -54,14 +54,14 @@ function v(e) {
         l = (0, R.ws)(t),
         c = (0, R.C7)(t),
         { loadMore: _, isMoreLoading: T } = (0, I.G)({ onError: n }),
-        g = M.tx.get(t),
-        [N, m] = a.useState(M.iB),
+        g = S.tx.get(t),
+        [N, m] = a.useState(S.iB),
         f = (0, E.Xi)({ location: 'family_center_activity_section_web' }),
-        h = a.useCallback(() => {
-            m((e) => e + M.iB), _(t);
+        M = a.useCallback(() => {
+            m((e) => e + S.iB), _(t);
         }, [t, _]);
     i()(g, 'No text for action type');
-    let S = g.sectionHeader(c),
+    let h = g.sectionHeader(c),
         x = a.useCallback(
             (e) => {
                 let { row: t } = e,
@@ -90,7 +90,7 @@ function v(e) {
                             className: b.sectionHeader,
                             variant: 'eyebrow',
                             color: 'header-secondary',
-                            children: S
+                            children: h
                         }),
                         void 0 !== g.sectionDescription
                             ? (0, s.jsx)(o.Text, {
@@ -102,7 +102,7 @@ function v(e) {
                             : null
                     ]
                 }),
-            [S, g, r, f]
+            [h, g, r, f]
         );
     if (0 === l.length) return null;
     let v = l.slice(0, N);
@@ -118,7 +118,7 @@ function v(e) {
             v.length !== c
                 ? (0, s.jsx)(o.Clickable, {
                       className: b.loadMoreBar,
-                      onClick: h,
+                      onClick: M,
                       role: 'button',
                       children: T
                           ? (0, s.jsx)(o.Spinner, {
@@ -128,7 +128,7 @@ function v(e) {
                           : (0, s.jsx)(o.Text, {
                                 className: b.loadMore,
                                 variant: 'text-sm/bold',
-                                children: O.Z.Messages.FAMILY_CENTER_ACTIVITY_MORE.format({ pageSize: Math.min(c - v.length, M.iB) })
+                                children: O.Z.Messages.FAMILY_CENTER_ACTIVITY_MORE.format({ pageSize: Math.min(c - v.length, S.iB) })
                             })
                   })
                 : null
@@ -137,7 +137,7 @@ function v(e) {
 }
 let L = () => {
         let e = (0, C.Z)(),
-            t = (0, N.mq)(M.ne.ACTIVE),
+            t = (0, N.mq)(S.ne.ACTIVE),
             n = (0, T.o)(O.Z.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_PREFACE_TEEN.format({ activeLinks: t.length }), O.Z.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_PREFACE_PARENT),
             a = (0, u.Qr)(!!e),
             r = (0, N.Rd)(a);
@@ -177,7 +177,7 @@ let L = () => {
                       (0, s.jsxs)('div', {
                           className: b.headerText,
                           children: [
-                              (0, s.jsx)(h.Z, { user: r }),
+                              (0, s.jsx)(M.Z, { user: r }),
                               void 0 !== n
                                   ? (0, s.jsx)(o.Text, {
                                         variant: 'text-sm/medium',
@@ -191,7 +191,7 @@ let L = () => {
               });
     },
     D = () => {
-        let e = (0, N.mq)(M.ne.ACTIVE),
+        let e = (0, N.mq)(S.ne.ACTIVE),
             t = (0, l.e7)([_.Z], () => _.Z.getSelectedTeenId()),
             { selectTeenUser: n } = (0, I.G)({}),
             r = e.map((e) => ({
@@ -215,7 +215,7 @@ let L = () => {
             },
             serialize: (e) => e,
             select: (e) => {
-                n(e), c.default.track(x.rMx.FAMILY_CENTER_ACTION, { action: M.YC.SelectTeen });
+                n(e), c.default.track(x.rMx.FAMILY_CENTER_ACTION, { action: S.YC.SelectTeen });
             },
             isSelected: (e) => e === t,
             options: r
@@ -224,7 +224,7 @@ let L = () => {
     U = (e) => {
         let { userId: t } = e,
             n = (0, C.Z)(),
-            a = (0, N.mq)(M.ne.ACTIVE),
+            a = (0, N.mq)(S.ne.ACTIVE),
             r = (0, u.Qr)(!!n),
             i = (0, N.Rd)(r);
         return n && 1 !== a.length
@@ -236,7 +236,7 @@ let L = () => {
     };
 t.Z = (e) => {
     let { user: t } = e,
-        n = Array.from(M.tx.entries()),
+        n = Array.from(S.tx.entries()),
         a = (0, R.kE)(),
         r = (0, u.t3)(),
         i = (0, N.Rd)(r);
@@ -278,7 +278,7 @@ t.Z = (e) => {
                                           let [t] = e;
                                           return (0, s.jsx)(v, { displayType: t }, ''.concat(t, '-list'));
                                       })
-                                    : (0, s.jsx)(S.Z, {
+                                    : (0, s.jsx)(h.Z, {
                                           className: b.emptyActivity,
                                           text: null != i ? i : ''
                                       })

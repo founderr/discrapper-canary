@@ -2,7 +2,7 @@ var s = n(735250),
     o = n(470079),
     a = n(481060),
     i = n(377171),
-    r = n(656588);
+    r = n(1494);
 t.Z = o.forwardRef(function (e, t) {
     let { isInventory: n, style: o, children: l } = e;
     return (0, s.jsxs)('div', {

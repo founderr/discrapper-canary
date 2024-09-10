@@ -7,7 +7,7 @@ var a = n(735250);
 n(470079);
 var i = n(481060),
     l = n(689938),
-    r = n(813801);
+    r = n(57778);
 function s(e) {
     let { imageSrc: t, header: n, description: s, secondaryInfo: c, mutualGuildCount: o, ctaLabel: d, onCtaClick: u, children: _ } = e,
         g = (0, a.jsx)(a.Fragment, {

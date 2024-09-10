@@ -11,7 +11,7 @@ var s = n(481060),
     l = n(981631),
     o = n(474936),
     c = n(689938),
-    u = n(364497);
+    u = n(315642);
 function d(e) {
     let { message: t, channel: n } = e,
         d = null != n.guild_id ? l.jXE.TEXT_IN_VOICE : l.jXE.CHANNEL_TEXT_AREA;

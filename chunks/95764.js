@@ -17,7 +17,7 @@ var s = n(442837),
     m = n(389303),
     p = n(554747),
     _ = n(689938),
-    f = n(513128);
+    f = n(249786);
 function E(e) {
     let { channelId: t, onClick: n } = e,
         E = (0, l.bp)(),

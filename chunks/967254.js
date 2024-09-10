@@ -24,7 +24,7 @@ var i = n(735250),
     f = n(800530),
     C = n(981631),
     U = n(689938),
-    m = n(827530);
+    m = n(388690);
 let h = (e) => {
         let { status: t, onClick: n, opened: a, count: s } = e;
         return (0, i.jsxs)(o.Clickable, {
@@ -151,7 +151,7 @@ let h = (e) => {
             {
                 onClick: () => {
                     (0, o.openModalLazy)(async () => {
-                        let { default: e } = await Promise.all([n.e('72181'), n.e('46097'), n.e('25183'), n.e('18831'), n.e('10621')]).then(n.bind(n, 41164));
+                        let { default: e } = await Promise.all([n.e('72181'), n.e('46097'), n.e('25183'), n.e('18831'), n.e('92999')]).then(n.bind(n, 41164));
                         return (t) =>
                             (0, i.jsx)(e, {
                                 classificationId: s,

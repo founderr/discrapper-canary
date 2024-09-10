@@ -12,7 +12,7 @@ var r = n(735250),
     u = n(768581),
     c = n(182294),
     d = n(689938),
-    _ = n(875304);
+    _ = n(517066);
 function E(e) {
     let { application: t, onSelect: n } = e,
         E = i.useMemo(

@@ -1,15 +1,15 @@
 n.d(t, {
     $s: function () {
-        return S;
+        return h;
     },
     AV: function () {
         return T;
     },
     Hg: function () {
-        return M;
+        return S;
     },
     Kn: function () {
-        return h;
+        return M;
     },
     Nq: function () {
         return u;
@@ -107,13 +107,13 @@ let u = '40%',
             n = (0, r.wE)(a.z.REFERRAL_INCENTIVE_AWARDED_INFO);
         return t && !n;
     },
-    h = (e) => {
+    M = (e) => {
         let t = g(e),
             n = R(e),
             s = (0, r.wE)(a.z.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE);
         return !t && n && !s;
     },
-    S = (e) => {
+    h = (e) => {
         let { referralIncentiveLifecycleState: t, hasSentAll: n, referralsStatuses: s } = e;
         switch (t) {
             case d.g2L.NOT_ELIGIBLE:
@@ -128,7 +128,7 @@ let u = '40%',
                 return s.redeemed === E ? _.Z.Messages.REFERRAL_INCENTIVE_NITRO_FRIEND_PASSES_INCOMING : _.Z.Messages.REFERRAL_INCENTIVE_DISCOUNT_UNLOCKED;
         }
     },
-    M = (e) => {
+    S = (e) => {
         let { helpdeskArticle: t, referralIncentiveLifecycleState: n, referralsStatuses: s, isWithinCountdownRange: a } = e;
         switch (n) {
             case d.g2L.NOT_ELIGIBLE:

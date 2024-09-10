@@ -18,7 +18,7 @@ var r = n(735250),
     S = n(981631),
     g = n(176505),
     A = n(689938),
-    N = n(157732);
+    N = n(118151);
 t.Z = (e) => {
     let { roleIcon: t, guild: n } = e,
         { name: O } = t;

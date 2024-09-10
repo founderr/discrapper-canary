@@ -10,7 +10,7 @@ var t = n(735250),
     I = n(673885),
     E = n(981631),
     _ = n(689938),
-    T = n(189522);
+    T = n(794284);
 s.Z = function (e) {
     let { guild: s, guildJoinRequest: m, guildJoinRequestUser: R, onClose: M } = e,
         N = a.useMemo(() => {

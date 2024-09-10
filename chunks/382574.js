@@ -3,7 +3,7 @@ t(470079);
 var r = t(73880),
     i = t(137158),
     s = t(689938),
-    o = t(944309);
+    o = t(631403);
 n.Z = function (e) {
     let { formField: n, index: t, isDragEnabled: l, isDropHovered: c, onDrop: d, onEdit: u, onRemove: m, canRemove: _, actionsLocation: f } = e,
         { label: C, placeholder: h } = n;

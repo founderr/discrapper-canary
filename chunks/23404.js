@@ -24,7 +24,7 @@ var i = n(735250),
     v = n(46140),
     L = n(981631),
     Z = n(689938),
-    R = n(775513);
+    R = n(233342);
 function O(e) {
     var t;
     let { quest: n } = e,

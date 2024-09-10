@@ -10,7 +10,7 @@ var i = t(120356),
     a = t(481060),
     s = t(596454),
     o = t(889989),
-    c = t(164892);
+    c = t(600699);
 function u(e) {
     let n,
         { applicationId: t, storeListingBenefits: i, skuBenefits: a, className: s } = e;

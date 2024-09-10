@@ -9,7 +9,7 @@ var i = t(120356),
     o = t.n(i),
     l = t(481060),
     c = t(471731),
-    s = t(600636);
+    s = t(985312);
 function a(e) {
     let { title: n, className: t, ref: i } = e;
     return (0, r.jsxs)('div', {

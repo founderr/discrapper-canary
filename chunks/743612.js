@@ -3,7 +3,7 @@ n(470079);
 var a = n(120356),
     r = n.n(a),
     i = n(481060),
-    l = n(817199);
+    l = n(977341);
 t.Z = (e) => {
     var t, n, a, o;
     let { title: c, shouldShowElement: d, cardVariantStyleInfo: _, description: u, titleClassName: E = '', subtitle: T = '', subtitleClassName: I } = e;

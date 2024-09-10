@@ -6,7 +6,7 @@ n.d(t, {
 var i = n(735250);
 n(470079);
 var s = n(481060),
-    a = n(887981);
+    a = n(152718);
 let r = (e) => {
     let { text: t, icon: n, onClick: r } = e;
     return (0, i.jsxs)(s.Button, {

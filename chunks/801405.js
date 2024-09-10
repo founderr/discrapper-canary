@@ -18,7 +18,7 @@ var i = n(735250),
     _ = n(358085),
     f = n(228488),
     E = n(981631),
-    g = n(394738);
+    g = n(336496);
 let C = () => {
     l.Z.wait(() => u.xv(E.KJ3.CHANNEL_CALL_POPOUT));
 };

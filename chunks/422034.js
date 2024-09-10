@@ -16,7 +16,7 @@ var r = n(735250),
     c = n(357355),
     d = n(182294),
     _ = n(689938),
-    E = n(32724);
+    E = n(314188);
 function f(e) {
     let { smallerText: t, className: n, textColor: a } = e,
         u = (0, o.e7)([c.Z], () => c.Z.affinities.slice(0, 3).reverse()),

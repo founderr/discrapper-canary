@@ -8,7 +8,7 @@ var i = t(735250),
     s = t(120356),
     l = t.n(s),
     o = t(481060),
-    r = t(169991);
+    r = t(926152);
 function d(e) {
     let { children: n, icon: t, title: s } = e;
     return (0, i.jsxs)('header', {

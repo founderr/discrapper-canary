@@ -32,7 +32,7 @@ var i = n(735250),
     E = n(438144),
     N = n(981631),
     x = n(689938),
-    S = n(405695);
+    S = n(134743);
 function v(e) {
     e.stopPropagation();
 }
@@ -69,7 +69,7 @@ let Z = l.memo(function (e) {
                 t = r.getGuildId();
             null != t &&
                 (0, c.openModalLazy)(async () => {
-                    let { default: l } = await Promise.all([n.e('45094'), n.e('58983')]).then(n.bind(n, 218613));
+                    let { default: l } = await Promise.all([n.e('45094'), n.e('5324')]).then(n.bind(n, 218613));
                     return (n) =>
                         (0, i.jsx)(l, {
                             ...n,

@@ -6,7 +6,7 @@ var i = n(120356),
     o = n(249458),
     l = n(138599),
     u = n(689938),
-    c = n(652051);
+    c = n(351025);
 t.Z = (e) => {
     let { onPlay: t, externalURL: n, className: i, renderLinkComponent: d, inactive: _, messageId: E, channelId: f } = e;
     return (0, r.jsx)(o.G.Consumer, {

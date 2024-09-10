@@ -17,7 +17,7 @@ function E() {
     let e = (0, a.c)();
     return (0, n.jsx)(o.U, {
         setting: d.s6.PRIVACY_SAFETY_ALERTS_V2,
-        scrollPosition: c.to.DM_SAFETY_ALERTS,
+        scrollPosition: c.to.DM_SAFETY_ALERTS_V2,
         children: (0, n.jsx)(l.Z, {
             value: e,
             onChange: i.Q,

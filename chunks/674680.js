@@ -12,7 +12,7 @@ var a = n(780384),
     o = n(889901),
     c = n(955204),
     d = n(231338),
-    _ = n(499872);
+    _ = n(694954);
 let u = {
         trophy: d.Il.PRIMARY_400,
         locked: d.Il.PRIMARY_400,
@@ -35,13 +35,13 @@ function T(e) {
         p = (0, a.wj)(I) ? u : E,
         A = (g.size - g.offset - 2 * g.stroke) * 0.8,
         f = g.size - g.stroke,
-        h = {
+        M = {
             width: 0.4 * A,
             height: 0.4 * A
         },
-        S = {
-            width: h.width + 1,
-            height: h.height + 1,
+        h = {
+            width: M.width + 1,
+            height: M.height + 1,
             right: g.stroke + 1,
             bottom: g.stroke + 1,
             padding: 0
@@ -67,21 +67,21 @@ function T(e) {
             !d &&
                 (0, s.jsx)('div', {
                     className: _.lockContainer,
-                    style: S,
+                    style: h,
                     children: (0, s.jsx)(r.LockIcon, {
                         size: 'custom',
                         color: (0, l.Lq)(p.locked),
-                        ...h
+                        ...M
                     })
                 }),
             d &&
                 N === c.EP.LEGENDARY &&
                 (0, s.jsx)('div', {
                     className: _.lockContainer,
-                    style: S,
+                    style: h,
                     children: (0, s.jsx)(o.Z, {
                         className: _.confettiIcon,
-                        ...h
+                        ...M
                     })
                 })
         ]

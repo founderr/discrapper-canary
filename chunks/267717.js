@@ -17,7 +17,7 @@ var a = t(481060),
     c = t(474936),
     d = t(981631),
     _ = t(689938),
-    u = t(960232);
+    u = t(821774);
 function E() {
     let e = r.default.getCurrentUser();
     if (null != e)

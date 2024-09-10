@@ -18,7 +18,7 @@ var s = n(735250),
     h = n(626135),
     g = n(981631),
     x = n(689938),
-    f = n(379946);
+    f = n(275211);
 function _(e) {
     var t;
     let { guild: n, prompts: _, completeOnboarding: N, setCurrentStep: I, disableTracking: b, previousPromptIndex: C } = e,

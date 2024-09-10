@@ -2,7 +2,7 @@ var r = n(735250);
 n(470079);
 var i = n(120356),
     a = n.n(i),
-    s = n(854610);
+    s = n(648820);
 t.Z = (e) => {
     let { message: t, className: n, noResultsImageURL: i, forceLightTheme: o, suggestions: l } = e;
     return (0, r.jsx)('div', {

@@ -6,7 +6,7 @@ n.d(t, {
 var i = n(735250);
 n(470079);
 var s = n(481060),
-    a = n(395255);
+    a = n(378664);
 function l(e) {
     let { changePage: t, offset: n, totalResults: l, pageLength: r } = e,
         o = Math.floor(n / r) + 1;

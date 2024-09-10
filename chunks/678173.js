@@ -1,14 +1,14 @@
-a.d(n, {
+n.d(t, {
     T: function () {
-        return i;
+        return l;
     }
 });
-var t = a(470079),
-    s = a(127255);
-function i(e, n) {
-    let a = (0, s.Z)({ guildId: e });
-    return t.useMemo(() => {
+var a = n(470079),
+    i = n(127255);
+function l(e, t) {
+    let n = (0, i.Z)({ guildId: e });
+    return a.useMemo(() => {
         var e;
-        return null !== (e = a.find((e) => e.application.id === n)) && void 0 !== e ? e : null;
-    }, [a, n]);
+        return null !== (e = n.find((e) => e.application.id === t)) && void 0 !== e ? e : null;
+    }, [n, t]);
 }

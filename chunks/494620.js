@@ -1,43 +1,43 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return u;
+        return f;
     },
     z: function () {
-        return a;
+        return s;
     }
 });
-var n,
-    a,
-    i = t(735250);
-t(470079);
-var r = t(120356),
-    o = t.n(r),
-    l = t(481060),
-    c = t(151876);
-((n = a || (a = {})).INFO = 'info'), (n.WARNING = 'warning');
+var l,
+    s,
+    i = n(735250);
+n(470079);
+var r = n(120356),
+    a = n.n(r),
+    o = n(481060),
+    c = n(179840);
+((l = s || (s = {})).INFO = 'info'), (l.WARNING = 'warning');
 let d = {
         info: c.info,
         warning: c.warning
     },
-    _ = {
-        info: l.CircleInformationIcon,
-        warning: l.CircleWarningIcon
+    u = {
+        info: o.CircleInformationIcon,
+        warning: o.CircleWarningIcon
     };
-function u(e) {
-    let { children: s, className: t, look: n = 'info' } = e,
-        a = _[n];
+function f(e) {
+    let { children: t, className: n, look: l = 'info' } = e,
+        s = u[l];
     return (0, i.jsxs)('div', {
-        className: o()(c.root, t, d[n]),
+        className: a()(c.root, n, d[l]),
         children: [
-            (0, i.jsx)(a, {
+            (0, i.jsx)(s, {
                 className: c.icon,
                 color: 'currentColor'
             }),
-            (0, i.jsx)(l.Text, {
+            (0, i.jsx)(o.Text, {
                 className: c.text,
                 variant: 'text-sm/medium',
                 color: 'text-normal',
-                children: s
+                children: t
             })
         ]
     });

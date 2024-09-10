@@ -1,42 +1,42 @@
-let r;
-n(653041);
-var a,
-    i = n(442837),
-    l = n(570140);
-function s(e, t, n) {
+let o;
+t(653041);
+var r,
+    a = t(442837),
+    i = t(570140);
+function c(e, n, t) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: t,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = t),
         e
     );
 }
-let o = {
+let l = {
     hasAcceptedStoreTerms: !1,
     hasAcceptedEulaIds: []
 };
-class u extends (a = i.ZP.PersistedStore) {
+class s extends (r = a.ZP.PersistedStore) {
     initialize(e) {
-        r = null != e ? e : o;
+        o = null != e ? e : l;
     }
     getState() {
-        return r;
+        return o;
     }
     get hasAcceptedStoreTerms() {
-        return r.hasAcceptedStoreTerms;
+        return o.hasAcceptedStoreTerms;
     }
     hasAcceptedEULA(e) {
-        return r.hasAcceptedEulaIds.includes(e);
+        return o.hasAcceptedEulaIds.includes(e);
     }
 }
-s(u, 'displayName', 'ApplicationStoreUserSettingsStore'),
-    s(u, 'persistKey', 'ApplicationStoreUserSettingsStore'),
-    s(u, 'migrations', [
+c(s, 'displayName', 'ApplicationStoreUserSettingsStore'),
+    c(s, 'persistKey', 'ApplicationStoreUserSettingsStore'),
+    c(s, 'migrations', [
         (e) =>
             null == e.hasAcceptedEulaIds
                 ? {
@@ -45,13 +45,13 @@ s(u, 'displayName', 'ApplicationStoreUserSettingsStore'),
                   }
                 : e
     ]),
-    (t.Z = new u(l.Z, {
+    (n.Z = new s(i.Z, {
         APPLICATION_STORE_ACCEPT_STORE_TERMS: function () {
-            r.hasAcceptedStoreTerms = !0;
+            o.hasAcceptedStoreTerms = !0;
         },
         APPLICATION_STORE_ACCEPT_EULA: function (e) {
-            let { eulaId: t } = e;
-            if (r.hasAcceptedEulaIds.includes(t)) return !1;
-            r.hasAcceptedEulaIds.push(t);
+            let { eulaId: n } = e;
+            if (o.hasAcceptedEulaIds.includes(n)) return !1;
+            o.hasAcceptedEulaIds.push(n);
         }
     }));

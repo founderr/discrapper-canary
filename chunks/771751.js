@@ -19,8 +19,8 @@ var r = n(735250),
     x = n(246992),
     g = n(981631),
     p = n(474936),
-    b = n(535271),
-    v = n(384712);
+    b = n(219299),
+    v = n(423705);
 let _ = async () => {
         try {
             let { body: e } = await o.tn.get({ url: g.ANM.USER_OFFER_IDS });

@@ -14,7 +14,7 @@ var s = n(120356),
     u = n(623633),
     d = n(930180),
     _ = n(689938),
-    E = n(736842);
+    E = n(979661);
 function I(e) {
     let t = o.Z.getVoiceChannelId();
     if (null == t) return;

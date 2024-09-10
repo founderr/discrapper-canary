@@ -23,7 +23,7 @@ var r = n(735250),
     T = n(789707),
     S = n(981631),
     g = n(531578),
-    A = n(375459);
+    A = n(857911);
 function N(e) {
     let { summary: t, channel: _, members: T, guildId: N, unread: O, onClick: R } = e,
         [v, C] = i.useState(!1),

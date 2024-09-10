@@ -8,7 +8,7 @@ var n = s(180081),
     c = s(313201),
     o = s(731455),
     d = s(689938),
-    _ = s(459720);
+    _ = s(267021);
 let I = (e) => {
     let { currentNumber: a, thresholdNumber: s, currentLabel: c, isPercent: o = !1 } = e,
         I = null != s ? Math.floor((a / s) * 100) : 0,

@@ -28,7 +28,7 @@ var i = n(735250),
     N = n(124368),
     A = n(981631),
     Z = n(689938),
-    M = n(437996);
+    M = n(972270);
 function b(e) {
     let { channelId: t, baseChannelId: a, channelViewSource: b = 'Split View' } = e,
         R = (0, r.e7)([I.Z], () => I.Z.getChannel(t)),

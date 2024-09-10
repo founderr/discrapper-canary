@@ -3,7 +3,7 @@ n(470079);
 var s = n(120356),
     a = n.n(s),
     r = n(481060),
-    l = n(717809);
+    l = n(300995);
 t.Z = (e) => {
     let { renderTitle: t, renderTagline: n, renderActions: s, renderMedia: o, className: c, isHorizontal: u = !1 } = e;
     return (0, i.jsxs)('div', {

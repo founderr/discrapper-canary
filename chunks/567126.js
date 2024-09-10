@@ -60,7 +60,7 @@ var l = n(735250),
     P = n(46140),
     y = n(65154),
     G = n(689938),
-    B = n(624743);
+    B = n(24548);
 async function k() {
     let e = I.Z.getVideoDevices(),
         t = (0, f.Z)(I.Z.getMediaEngine(), [d.vA.WINDOW, d.vA.SCREEN], {

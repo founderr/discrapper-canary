@@ -1,39 +1,39 @@
-n.d(t, {
+t.d(n, {
     EW: function () {
-        return o;
+        return l;
     },
     Np: function () {
-        return c;
+        return s;
     },
     tb: function () {
-        return l;
+        return r;
     }
 });
 var i,
-    s,
-    a = n(626135),
-    r = n(981631);
-function l(e, t, n, i) {
-    a.default.track(r.rMx.VOICE_MESSAGE_PLAYBACK_STARTED, {
+    o,
+    a = t(626135),
+    c = t(981631);
+function r(e, n, t, i) {
+    a.default.track(c.rMx.VOICE_MESSAGE_PLAYBACK_STARTED, {
         message_id: e,
-        total_duration_secs: t,
-        start_duration_secs: Math.min(null != t ? t : n, n),
+        total_duration_secs: n,
+        start_duration_secs: Math.min(null != n ? n : t, t),
         sender_user_id: i
     });
 }
-function o(e, t, n, i, s) {
-    a.default.track(r.rMx.VOICE_MESSAGE_PLAYBACK_ENDED, {
+function l(e, n, t, i, o) {
+    a.default.track(c.rMx.VOICE_MESSAGE_PLAYBACK_ENDED, {
         message_id: e,
-        total_duration_secs: t,
-        end_duration_secs: Math.min(null != t ? t : n, n),
+        total_duration_secs: n,
+        end_duration_secs: Math.min(null != n ? n : t, t),
         sender_user_id: i,
-        duration_listening_secs: s
+        duration_listening_secs: o
     });
 }
-function c(e, t) {
-    a.default.track(r.rMx.VOICE_MESSAGE_PLAYBACK_FAILED, {
+function s(e, n) {
+    a.default.track(c.rMx.VOICE_MESSAGE_PLAYBACK_FAILED, {
         message_id: e,
-        error_message: t
+        error_message: n
     });
 }
-((i = s || (s = {})).SENT = 'sent'), (i.CANCELLED_DURATION = 'cancelled_duration'), (i.CANCELLED_USER_REQUESTED = 'cancelled_user_requested'), (i.CANCELLED_GESTURE_CONFLICT = 'cancelled_gesture_conflict'), (i.CANCELLED_ON_BACKGROUND = 'cancelled_on_background');
+((i = o || (o = {})).SENT = 'sent'), (i.CANCELLED_DURATION = 'cancelled_duration'), (i.CANCELLED_USER_REQUESTED = 'cancelled_user_requested'), (i.CANCELLED_GESTURE_CONFLICT = 'cancelled_gesture_conflict'), (i.CANCELLED_ON_BACKGROUND = 'cancelled_on_background');

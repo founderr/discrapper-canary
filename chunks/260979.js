@@ -2,7 +2,7 @@ n(653041);
 var i = n(735250),
     s = n(470079),
     a = n(965288),
-    l = n(934492);
+    l = n(793954);
 t.Z = s.memo(function (e) {
     let { channel: t, participants: n, maxTiles: s } = e;
     if (0 === n.length) return null;

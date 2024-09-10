@@ -45,7 +45,7 @@ var i = t(735250),
     B = t(981631),
     L = t(245335),
     G = t(689938),
-    F = t(700290);
+    F = t(826373);
 async function H(e) {
     return e.type === D.bm.DM || e.type === D.bm.FRIEND ? await m.Z.ensurePrivateChannel(e.item.id) : e.item.id;
 }

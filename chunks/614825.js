@@ -28,7 +28,7 @@ var i = n(735250),
     A = n(474936),
     R = n(981631),
     O = n(689938),
-    x = n(474013);
+    x = n(526387);
 class M extends s.Component {
     renderTitle(e, t, n) {
         let { trialOffer: i } = this.props,

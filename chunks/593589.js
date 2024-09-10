@@ -12,7 +12,7 @@ var o = t(735250),
     s = t(207035),
     c = t(823748),
     d = t(981631),
-    p = t(616792);
+    p = t(405601);
 function Z(n) {
     let { windowKey: e, channel: t } = n;
     return (0, o.jsx)(r.Z, {

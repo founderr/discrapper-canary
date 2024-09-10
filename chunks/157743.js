@@ -11,7 +11,7 @@ var c = s(481060),
     r = s(488131),
     i = s(124368),
     t = s(689938),
-    l = s(343586);
+    l = s(453100);
 function d(e) {
     let { guildId: a, onClose: s, transitionState: d } = e;
     return (0, n.jsx)(c.ModalRoot, {

@@ -12,7 +12,7 @@ var a = n(481060),
     o = n(685389),
     c = n(981631),
     d = n(689938),
-    u = n(481904);
+    u = n(967790);
 function _(e) {
     let { children: t, revenue: n, revenueTrend: _, summaryMetricLabel: I, summaryMetricValue: E, summaryMetricTrend: T, summaryMetricTrendIsPercent: m } = e;
     return (0, s.jsx)(a.FormSection, {

@@ -11,7 +11,7 @@ var s = n(442837),
     l = n(739566),
     o = n(834129),
     c = n(689938),
-    u = n(238874);
+    u = n(563480);
 function d(e) {
     var t;
     let { message: n, compact: d, usernameHook: _, onClickThread: E, onClickViewThreads: I, onContextMenuThread: m } = e,

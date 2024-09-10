@@ -1,63 +1,63 @@
-var a = i(735250);
-i(470079);
-var o = i(120356),
-    t = i.n(o),
-    l = i(481060),
-    s = i(709586),
-    c = i(267642),
-    r = i(689938),
-    d = i(547780);
-n.Z = (e) => {
-    let n,
-        i,
-        o,
-        { guildFeature: f, guild: u, className: p, hideTooltip: x = !1, tooltipPosition: _ = 'left', onClick: m } = e,
-        g = u.hasFeature(f),
-        C = (0, c._p)(f);
-    return (g
-        ? (null != C && (o = r.Z.Messages.PREMIUM_GUILD_INCLUDED),
-          (n = (0, a.jsxs)(a.Fragment, {
+var s = n(735250);
+n(470079);
+var a = n(120356),
+    i = n.n(a),
+    r = n(481060),
+    l = n(709586),
+    o = n(267642),
+    c = n(689938),
+    d = n(844396);
+t.Z = (e) => {
+    let t,
+        n,
+        a,
+        { guildFeature: u, guild: _, className: I, hideTooltip: E = !1, tooltipPosition: T = 'left', onClick: m } = e,
+        N = _.hasFeature(u),
+        S = (0, o._p)(u);
+    return (N
+        ? (null != S && (a = c.Z.Messages.PREMIUM_GUILD_INCLUDED),
+          (t = (0, s.jsxs)(s.Fragment, {
               children: [
-                  (0, a.jsx)(s.Z, { className: d.unlockedIcon }),
-                  (0, a.jsx)(l.Heading, {
+                  (0, s.jsx)(l.Z, { className: d.unlockedIcon }),
+                  (0, s.jsx)(r.Heading, {
                       variant: 'eyebrow',
                       className: d.description,
-                      children: r.Z.Messages.PREMIUM_GUILD_TIER_UNLOCKED
+                      children: c.Z.Messages.PREMIUM_GUILD_TIER_UNLOCKED
                   })
               ]
           })))
-        : (null != C && (o = r.Z.Messages.CLICK_TO_LEARN_MORE),
-          (n = (0, a.jsxs)(a.Fragment, {
+        : (null != S && (a = c.Z.Messages.CLICK_TO_LEARN_MORE),
+          (t = (0, s.jsxs)(s.Fragment, {
               children: [
-                  (0, a.jsx)(s.Z, { className: d.icon }),
-                  (0, a.jsx)(l.Heading, {
+                  (0, s.jsx)(l.Z, { className: d.icon }),
+                  (0, s.jsx)(r.Heading, {
                       variant: 'eyebrow',
                       className: d.description,
-                      children: null != C && (0, c.e9)(C)
+                      children: null != S && (0, o.e9)(S)
                   })
               ]
           }))),
-    (i =
-        x || null == o
-            ? (0, a.jsx)('div', {
-                  className: t()(d.availabilityIndicator, p),
-                  children: n
+    (n =
+        E || null == a
+            ? (0, s.jsx)('div', {
+                  className: i()(d.availabilityIndicator, I),
+                  children: t
               })
-            : (0, a.jsx)(l.Tooltip, {
-                  position: _,
-                  text: o,
+            : (0, s.jsx)(r.Tooltip, {
+                  position: T,
+                  text: a,
                   children: (e) =>
-                      (0, a.jsx)('div', {
+                      (0, s.jsx)('div', {
                           ...e,
-                          className: t()(d.availabilityIndicator, p),
-                          children: n
+                          className: i()(d.availabilityIndicator, I),
+                          children: t
                       })
               })),
-    null == m || g)
-        ? i
-        : (0, a.jsx)(l.Clickable, {
+    null == m || N)
+        ? n
+        : (0, s.jsx)(r.Clickable, {
               onClick: m,
               className: d.clickable,
-              children: i
+              children: n
           });
 };

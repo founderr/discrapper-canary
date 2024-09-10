@@ -30,7 +30,7 @@ var a = t(735250),
     S = t(308083),
     Z = t(981631),
     L = t(689938),
-    M = t(319410);
+    M = t(429982);
 function A(e) {
     var l;
     let { guildId: t, clanInfo: s, signed: r, onSignCharter: c } = e,

@@ -13,7 +13,7 @@ var s = n(735250),
     T = n(391110),
     I = n(75077),
     R = n(320319),
-    g = n(126274);
+    g = n(821912);
 let C = (e) => {
     let { showAllPerksButton: t, leftAlignHeaders: n, title: a, headerClassname: r } = e,
         i = (0, s.jsx)(o.Heading, {
@@ -47,27 +47,27 @@ let C = (e) => {
 t.Z = (e) => {
     var t;
     let { className: n, variant: r = T.R0.PERKS_DISCOVERABILITY, noBackground: N = !1, leftAlignHeaders: m = !1, showAllPerksButton: p, headerClassname: A, isFullScreen: f = !0 } = e,
-        h = a.useRef(null),
-        S = (0, _.yQ)(),
-        M = (0, u.Ag)(S),
+        M = a.useRef(null),
+        h = (0, _.yQ)(),
+        S = (0, u.Ag)(h),
         x = (0, c.ZP)('perks-discoverability');
     (0, u.I2)();
     let O = (0, d.HI)({ location: T.R0.PERKS_DISCOVERABILITY }),
         b = r === T.R0.WHATS_NEW,
         P = (0, _.IY)();
     a.useEffect(() => {
-        b && !M && P();
-    }, [P, b, M]),
+        b && !S && P();
+    }, [P, b, S]),
         a.useEffect(() => {
-            let e = h.current;
-            if (null == e || !M || !b) return;
+            let e = M.current;
+            if (null == e || !S || !b) return;
             let t = requestAnimationFrame(() => {
                 e.scrollIntoView({ behavior: 'smooth' }), b && P();
             });
             return () => {
                 cancelAnimationFrame(t), b && P();
             };
-        }, [h, M, b, P]);
+        }, [M, S, b, P]);
     let v = (0, I.Op)(b),
         L = (0, E.Z)(),
         Z = (0, I.mN)(),
@@ -76,7 +76,7 @@ t.Z = (e) => {
             variant: r,
             shopMarketingVariation: x,
             isFullScreen: f,
-            showTenureCard: null == S ? void 0 : S.showCard,
+            showTenureCard: null == h ? void 0 : h.showCard,
             tileOrderVariant: O,
             isPremiumSubscriber: Z
         }),
@@ -92,7 +92,7 @@ t.Z = (e) => {
                     environment: G.current
                 }),
             (0, s.jsxs)('div', {
-                ref: h,
+                ref: M,
                 className: i()(
                     g.section,
                     {

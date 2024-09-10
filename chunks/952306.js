@@ -7,7 +7,7 @@ s.Z = {
     openNewUserAgeGateModal: (e) => {
         (0, a.openModalLazy)(
             async () => {
-                let { default: e } = await Promise.all([t.e('20727'), t.e('69790')]).then(t.bind(t, 298237));
+                let { default: e } = await Promise.all([t.e('20727'), t.e('60249')]).then(t.bind(t, 298237));
                 return (s) => (0, n.jsx)(e, { ...s });
             },
             {
@@ -22,7 +22,7 @@ s.Z = {
             s = arguments.length > 1 ? arguments[1] : void 0;
         (0, a.openModalLazy)(
             async () => {
-                let { default: s } = await t.e('1677').then(t.bind(t, 324239));
+                let { default: s } = await t.e('60827').then(t.bind(t, 324239));
                 return (t) =>
                     (0, n.jsx)(s, {
                         claimRequired: e,

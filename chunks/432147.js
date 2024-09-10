@@ -20,7 +20,7 @@ var s = n(120356),
     T = n(488131),
     h = n(981631),
     N = n(689938),
-    C = n(384880);
+    C = n(119487);
 function f(e) {
     let { message: t, compact: n } = e,
         s = (0, r.e7)([u.Z], () => u.Z.getChannel(d.default.castMessageIdAsChannelId(t.id)));
@@ -88,7 +88,7 @@ function p(e) {
                 },
                 onContextMenu: function (e) {
                     (0, o.jW)(e, async () => {
-                        let { default: e } = await Promise.all([n.e('39285'), n.e('48800'), n.e('4985')]).then(n.bind(n, 422200));
+                        let { default: e } = await Promise.all([n.e('39285'), n.e('48800'), n.e('13154')]).then(n.bind(n, 422200));
                         return (n) =>
                             (0, i.jsx)(e, {
                                 channel: t,

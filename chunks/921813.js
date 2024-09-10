@@ -21,7 +21,7 @@ var r = a(120356),
     p = a(165747),
     v = a(981631),
     N = a(228168),
-    m = a(60638);
+    m = a(706995);
 function C(e) {
     let { user: n, guild: a, canUsePremiumCustomization: r, onUpsellClick: C, pendingBanner: L, pendingBio: T, pendingPronouns: R, pendingAvatar: f, pendingAvatarDecoration: M, pendingNickname: S, pendingGlobalName: Z, pendingThemeColors: g, pendingProfileEffectId: h, avatarClassName: U, containerClassName: x, isTryItOutFlow: y = !1, disabledInputs: j = !1, hideCustomStatus: O = !1, hideBioSection: B = !1, hideMessageInput: b = !0, hideExampleButton: w = !1 } = e,
         D = (0, t.ZP)(n.id, null == a ? void 0 : a.id),

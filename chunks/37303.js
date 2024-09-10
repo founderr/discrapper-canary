@@ -18,7 +18,7 @@ var o = n(497505),
     _ = n(206044),
     E = n(266843),
     I = n(46140),
-    m = n(861495);
+    m = n(271074);
 function T(e) {
     let { quest: t, location: n, initiallyExpanded: T, contentPosition: h } = e,
         [N, C] = s.useState(!1),

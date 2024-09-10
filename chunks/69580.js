@@ -71,7 +71,7 @@ var r,
     Q = n(574384),
     X = n(981631),
     $ = n(689938),
-    J = n(828947);
+    J = n(195943);
 let ee = 'oauth2-authorize-header-id';
 function et() {
     let e = (0, u.TH)(),

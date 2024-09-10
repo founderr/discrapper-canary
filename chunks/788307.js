@@ -26,7 +26,7 @@ var r = n(735250),
     A = n(979651),
     N = n(6074),
     O = n(981631),
-    R = n(955859);
+    R = n(23952);
 let v = '14px';
 function C(e) {
     let { emoji: t, className: n, animate: i = !0, hideTooltip: a, tooltipDelay: o } = e,

@@ -26,7 +26,7 @@ var s = n(735250),
     I = n(974513),
     E = n(290511),
     T = n(689938),
-    m = n(167356);
+    m = n(839754);
 function N(e) {
     let t,
         { title: n, description: a, icon: i, hasStarted: l, status: o, onEdit: c, extra: d } = e;

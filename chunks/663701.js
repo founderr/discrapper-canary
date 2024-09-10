@@ -46,7 +46,7 @@ var i = n(735250),
     H = n(339149),
     V = n(981631),
     F = n(689938),
-    Y = n(308809);
+    Y = n(465200);
 let W = (e) => {
         let { selected: t, ...n } = e,
             a = (0, o.JA)('friends'),

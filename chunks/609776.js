@@ -28,7 +28,7 @@ var a = t(735250),
     v = t(765305),
     A = t(190378),
     p = t(689938),
-    j = t(151581);
+    j = t(479562);
 function R(e) {
     let { stageChannelsInGuild: n, channel: t, onSelectChannel: l } = e;
     return null == l

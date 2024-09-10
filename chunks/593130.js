@@ -20,7 +20,7 @@ var a = t(735250),
     f = t(124368),
     Z = t(981631),
     x = t(689938),
-    T = t(14564);
+    T = t(70737);
 function v(e) {
     let { channel: n, className: t, onClose: l } = e,
         v = (0, i.e7)([c.Z], () => c.Z.can(Z.Plq.READ_MESSAGE_HISTORY, n)),

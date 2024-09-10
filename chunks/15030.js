@@ -18,7 +18,7 @@ var s = n(735250),
     T = n(975464),
     m = n(981631),
     N = n(674563),
-    S = n(974420);
+    S = n(15594);
 function h() {
     let e;
     let t = (0, i.e7)([d.Z], () => d.Z.getGuild()),

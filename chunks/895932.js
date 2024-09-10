@@ -11,7 +11,7 @@ var s = n(313361),
     i = n(109434),
     o = n(228392),
     c = n(689938),
-    d = n(479856);
+    d = n(704649);
 function u(e) {
     let { channel: t, closePopout: n } = e,
         { sortOrder: u, layoutType: m } = (0, i.H)(t.id),

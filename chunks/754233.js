@@ -6,7 +6,7 @@ var n = a(481060),
     l = a(430824),
     d = a(614812),
     c = a(689938),
-    r = a(143950);
+    r = a(640733);
 t.default = (e) => {
     let { onClose: t, guildId: a } = e,
         i = (0, o.Dt)(),

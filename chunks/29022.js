@@ -27,7 +27,7 @@ var a,
     A = t(921944),
     L = t(135899),
     M = t(689938),
-    C = t(951410);
+    C = t(67706);
 function h(e) {
     let { guild: n, headerText: a, headerSubtext: s, step: i } = e,
         l = T.ZP.getGuildIconURL({

@@ -7,7 +7,7 @@ var s = n(442837),
     o = n(113434),
     c = n(46140),
     u = n(182294),
-    d = n(679001);
+    d = n(52539);
 let _ = () => (0, i.jsx)('div', { className: d.questsCollectibleReward }),
     E = (e) => {
         let { questConfig: t, fallback: n, isFocused: c } = e,

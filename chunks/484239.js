@@ -7,7 +7,7 @@ var a = n(120356),
     o = n(176782),
     c = n(743612),
     d = n(735825),
-    _ = n(817199),
+    _ = n(977341),
     u = n(721239),
     E = n(557634),
     T = n(992429);
@@ -15,8 +15,8 @@ t.Z = (e) => {
     var t;
     let n,
         a,
-        { title: I, titleClassName: R, buttonClassName: g, perkImage: C, isCarousel: N, onCtaClick: m, perkComponent: p, subtitle: A = '', descriptionCta: f = '', cardVariant: h, subtitleClassName: S } = e,
-        M = (0, o._)(h),
+        { title: I, titleClassName: R, buttonClassName: g, perkImage: C, isCarousel: N, onCtaClick: m, perkComponent: p, subtitle: A = '', descriptionCta: f = '', cardVariant: M, subtitleClassName: h } = e,
+        S = (0, o._)(M),
         x = (0, l.yQ)(),
         O = (null == x ? void 0 : x.nitroTenureStatus) === d.EB.REDEEMABLE;
     switch (null == x ? void 0 : x.nitroTenureStatus) {
@@ -38,10 +38,10 @@ t.Z = (e) => {
             (0, s.jsx)(c.Z, {
                 title: I,
                 shouldShowElement: (e) => (null == e ? void 0 : e.onlyShowOnHover) !== !0,
-                cardVariantStyleInfo: M,
+                cardVariantStyleInfo: S,
                 titleClassName: R,
                 subtitle: A,
-                subtitleClassName: S
+                subtitleClassName: h
             }),
             null != C &&
                 (0, s.jsx)('img', {
@@ -66,7 +66,7 @@ t.Z = (e) => {
                                     fullWidth: !0,
                                     onClick: m,
                                     children: (0, s.jsxs)('div', {
-                                        className: null == M ? void 0 : null === (t = M.descriptionCta) || void 0 === t ? void 0 : t.className,
+                                        className: null == S ? void 0 : null === (t = S.descriptionCta) || void 0 === t ? void 0 : t.className,
                                         children: [
                                             (0, s.jsx)('img', {
                                                 alt: a,

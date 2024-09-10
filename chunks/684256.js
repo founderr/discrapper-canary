@@ -14,7 +14,7 @@ var i = t(735250),
     u = t(98880),
     m = t(772606),
     p = t(689938),
-    _ = t(622443);
+    _ = t(400963);
 function C(e) {
     let { channel: n, entrypoint: t, title: l, look: C, items: f, sectionName: h } = e,
         { clickOnHomeActivityOpensAppDetail: A } = c.m1.getCurrentConfig({ location: 'AppLauncherApplicationListViewScreen' }, { autoTrackExposure: !1 }),

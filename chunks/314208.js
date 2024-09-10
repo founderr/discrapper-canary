@@ -24,7 +24,7 @@ var a = t(735250),
     _ = t(91159),
     R = t(217702),
     j = t(689938),
-    N = t(280301);
+    N = t(31812);
 function S(e) {
     return e.isActiveThread() ? (0, a.jsx)(A, { channel: e }) : (0, a.jsx)(M, { channel: e });
 }

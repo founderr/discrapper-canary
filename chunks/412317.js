@@ -14,7 +14,7 @@ var i = s(481060),
     d = s(934861),
     u = s(981631),
     I = s(689938),
-    _ = s(9654);
+    _ = s(266580);
 function E(e) {
     let { isCurrentUser: n, user: s, relationshipType: E, friendToken: f, persistentCallCtaEnabled: x = !1, activeInviteToCallCtaEnabled: m = !1, onClose: Z } = e,
         { newestAnalyticsLocation: p } = (0, l.ZP)();

@@ -14,8 +14,8 @@ var i = n(735250),
     u = n(626135),
     d = n(981631),
     h = n(689938),
-    m = n(282794),
-    p = n(910212);
+    m = n(240375),
+    p = n(554034);
 function _(e) {
     let { onClose: t, onConfirm: _, onCancel: f, channel: E, analyticsType: g, popoutText: C, animation: I } = e;
     s.useEffect(() => {

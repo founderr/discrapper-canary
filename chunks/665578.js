@@ -27,7 +27,7 @@ var i = t(735250),
     x = t(981631),
     C = t(689079),
     S = t(689938),
-    A = t(869880);
+    A = t(457237);
 function R(e) {
     let { applicationId: n, commandId: s, guildId: h, inModal: g, editedTargetPermissions: R, originalApplicationPermissions: v, originalCommandPermissions: M, selectedPermissionCount: L } = e,
         j = (0, r.e7)([T.Z], () => (null == s ? null : T.Z.getCommand(s)), [s]),
@@ -132,7 +132,7 @@ function R(e) {
         H = a.useCallback(() => {
             let e = Object.keys(y);
             return (0, d.openModalLazy)(async () => {
-                let { default: n } = await t.e('64908').then(t.bind(t, 557944));
+                let { default: n } = await t.e('64908').then(t.bind(t, 46851));
                 return (t) =>
                     (0, i.jsx)(n, {
                         editPermissions: w,
@@ -150,7 +150,7 @@ function R(e) {
         W = a.useCallback(() => {
             let e = Object.keys(G);
             return (0, d.openModalLazy)(async () => {
-                let { default: n } = await t.e('64908').then(t.bind(t, 557944));
+                let { default: n } = await t.e('64908').then(t.bind(t, 46851));
                 return (t) =>
                     (0, i.jsx)(n, {
                         editPermissions: w,

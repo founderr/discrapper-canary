@@ -4,7 +4,7 @@ var s = n(692547),
     a = n(481060),
     l = n(311888),
     r = n(689938),
-    o = n(570151);
+    o = n(80130);
 t.Z = () =>
     (0, i.jsx)(a.Tooltip, {
         text: r.Z.Messages.STAGE_MODERATOR_TOOLTIP,

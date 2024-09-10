@@ -6,7 +6,7 @@ n.d(t, {
 var r = n(735250);
 n(470079);
 var i = n(481060),
-    a = n(567025);
+    a = n(652484);
 function s(e) {
     let { onClick: t } = e;
     return (0, r.jsx)(i.Clickable, {

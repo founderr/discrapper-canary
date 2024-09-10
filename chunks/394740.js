@@ -23,8 +23,8 @@ var r = n(735250),
     T = n(981631),
     S = n(474936),
     g = n(689938),
-    A = n(493277),
-    N = n(900566);
+    A = n(383052),
+    N = n(145834);
 function O(e) {
     var t;
     let { onClose: a, closePopout: O, sound: R, channel: v } = e,

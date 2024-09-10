@@ -36,7 +36,7 @@ var t = s(735250),
     O = s(228168),
     C = s(981631),
     P = s(689938),
-    y = s(419758);
+    y = s(272216);
 function U(e) {
     let { user: n, currentUser: s, guildId: U, channelId: D, messageId: F, roleId: B, sessionId: w, friendToken: G, initialSection: V, initialSubsection: k, transitionState: W, onClose: Y, showGuildProfile: K = !0, sourceAnalyticsLocations: H = [] } = e,
         z = U === C.ME ? void 0 : U,

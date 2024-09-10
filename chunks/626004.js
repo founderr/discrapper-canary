@@ -14,7 +14,7 @@ var i = t(735250),
     d = t(49012),
     u = t(981631),
     _ = t(689938),
-    p = t(121281);
+    p = t(568161);
 let m = c.Z.getArticleURL(u.BhN.BOT_DATA_ACCESS);
 function I(e) {
     let { icon: n, heading: t, body: a } = e;

@@ -13,7 +13,7 @@ var t = a(735250),
     I = a(915509),
     C = a(592286),
     p = a(689938),
-    _ = a(330771);
+    _ = a(352784);
 let E = 'MULTIPLE_CHOICE',
     x = (e) => {
         let { choice: n, index: a, onChange: r, onClear: c, onReorder: u, isDropHovered: m } = e,

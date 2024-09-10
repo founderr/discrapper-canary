@@ -8,7 +8,7 @@ t(470079);
 var l = t(777207),
     r = t(541822),
     s = t(330711),
-    o = t(689498);
+    o = t(770561);
 function a(e) {
     let { benefits: n, description: t, imgSrc: a, title: u, tag: c, FallbackIcon: d } = e,
         f = null != a ? { '--custom-background-url': 'url('.concat(a.toString(), ')') } : void 0,

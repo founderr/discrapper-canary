@@ -27,9 +27,9 @@ var s = n(735250),
     p = n(108427),
     A = n(210887),
     f = n(695346),
-    h = n(594174),
-    S = n(626135),
-    M = n(280570),
+    M = n(594174),
+    h = n(626135),
+    S = n(280570),
     x = n(914788),
     O = n(841409),
     b = n(652262),
@@ -43,7 +43,7 @@ var s = n(735250),
     j = n(723359),
     G = n(921944),
     y = n(689938),
-    w = n(199071);
+    w = n(379493);
 let H = {
         [U.dG.REQUESTS]: () => (0, s.jsx)(Z.Z, {}),
         [U.dG.ACTIVITY]: () => (0, s.jsx)(L.Z, {}),
@@ -157,12 +157,12 @@ function W() {
         l = (0, b.M)(),
         { selectedTab: u, handleTabChange: T } = (0, O.Z)(),
         I = (0, g.Dt)(),
-        N = h.default.getCurrentUser(),
+        N = M.default.getCurrentUser(),
         A = null != e,
         f = r && null != N && !A;
     return (a.useEffect(() => {
         (0, p.e)('family-center'),
-            M.ZP.initialPageLoad(),
+            S.ZP.initialPageLoad(),
             !n &&
                 (0, C.EW)(d.z.FAMILY_CENTER_NEW_BADGE, {
                     dismissAction: G.L.AUTO,
@@ -172,7 +172,7 @@ function W() {
     a.useEffect(() => {
         r &&
             A &&
-            (S.default.track(B.rMx.FAMILY_CENTER_VIEWED, {
+            (h.default.track(B.rMx.FAMILY_CENTER_VIEWED, {
                 is_considered_adult: e,
                 num_of_accepted_links: t,
                 selected_teen_id: l,
@@ -213,14 +213,14 @@ function K() {
         L = (0, c.e7)([A.Z], () => A.Z.theme),
         { selectedTab: Z, handleTabChange: D } = (0, O.Z)(),
         H = (0, g.Dt)(),
-        F = h.default.getCurrentUser(),
+        F = M.default.getCurrentUser(),
         W = null != t,
         K = l && null != F && !W;
     if (
         (a.useEffect(() => {
             u.Y(B.Z5c.FAMILY_CENTER),
                 (0, p.e)('family-center'),
-                !x.Z.isLoading() && x.Z.canRefetch() && M.ZP.initialPageLoad(),
+                !x.Z.isLoading() && x.Z.canRefetch() && S.ZP.initialPageLoad(),
                 !r &&
                     (0, C.EW)(d.z.FAMILY_CENTER_NEW_BADGE, {
                         dismissAction: G.L.AUTO,
@@ -230,7 +230,7 @@ function K() {
         a.useEffect(() => {
             l &&
                 W &&
-                (S.default.track(B.rMx.FAMILY_CENTER_VIEWED, {
+                (h.default.track(B.rMx.FAMILY_CENTER_VIEWED, {
                     is_considered_adult: t,
                     num_of_accepted_links: n,
                     selected_teen_id: N,

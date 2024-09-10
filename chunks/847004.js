@@ -13,7 +13,7 @@ var n = a(735250),
     o = a(937615),
     d = a(981631),
     _ = a(689938),
-    m = a(567905);
+    m = a(970810);
 function T(e) {
     let { price: t, selected: a, onClick: s } = e;
     return (0, n.jsxs)(r.Clickable, {

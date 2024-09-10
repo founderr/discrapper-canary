@@ -18,7 +18,7 @@ var n = t(735250),
     _ = t(524347),
     u = t(853197),
     E = t(689938),
-    T = t(144048);
+    T = t(347301);
 function S(e) {
     let { onClose: s, code: t, copyInputTitle: a, bodyText: i } = e;
     return (0, n.jsxs)(n.Fragment, {

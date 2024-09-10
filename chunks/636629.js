@@ -6,7 +6,7 @@ var s = n(913527),
     l = n(730417),
     o = n(921944),
     c = n(689938),
-    u = n(959823);
+    u = n(274739);
 let d = (e, t) => ({
     bodyText: c.Z.Messages.DROPS_BANNER_NOTICE.format({
         gameName: e.title,

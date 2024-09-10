@@ -18,7 +18,7 @@ var a = t(120356),
     T = t(193528),
     S = t(993413),
     I = t(689938),
-    N = t(798721);
+    N = t(96923);
 function m(e) {
     let { user: s, pendingAvatar: t, pendingColors: a, onThemeColorsChange: r, preventDisabled: m, guildId: C, className: A, showPremiumIcon: g = !0, showResetThemeButton: h = !1, forcedDivider: O } = e,
         p = (0, _.ZP)(s.id, C),

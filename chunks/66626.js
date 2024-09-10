@@ -11,7 +11,7 @@ var a = s(735250),
     i = s(600164),
     r = s(486527),
     c = s(689938),
-    d = s(816497);
+    d = s(294550);
 function u(e) {
     let { directoryChannelId: t, description: s, onDescriptionChange: u, categoryId: m, onCategoryIdChange: C, onSubmit: _, onClose: x, onBack: E } = e,
         [I, L] = n.useState(!1),

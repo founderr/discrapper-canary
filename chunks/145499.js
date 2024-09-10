@@ -20,7 +20,7 @@ var s = n(735250),
     C = n(863562),
     x = n(981631),
     p = n(689938),
-    R = n(88473);
+    R = n(444466);
 let f = (e, t) => (e < (0, m.A3)(x.Eu4.NONE) ? x.Eu4.NONE : e < (0, m.A3)(x.Eu4.TIER_1) ? x.Eu4.TIER_1 : e < (0, m.A3)(x.Eu4.TIER_2) ? x.Eu4.TIER_2 : e < (0, m.A3)(x.Eu4.TIER_3) || (null != t && t.hasFeature(x.oNc.MORE_STICKERS) && e < c.D.MAX_STICKER_SLOTS) ? x.Eu4.TIER_3 : x.Eu4.NONE),
     L = (e) => {
         let { children: t, currentGuildTier: n, guildStickers: a, tier: i } = e,
@@ -47,7 +47,7 @@ let f = (e, t) => (e < (0, m.A3)(x.Eu4.NONE) ? x.Eu4.NONE : e < (0, m.A3)(x.Eu4.
     O = (e) => {
         let { guildId: t } = e;
         (0, o.openModalLazy)(async () => {
-            let { default: e } = await Promise.all([n.e('93626'), n.e('33625')]).then(n.bind(n, 136735));
+            let { default: e } = await Promise.all([n.e('93626'), n.e('2901')]).then(n.bind(n, 136735));
             return (n) =>
                 (0, s.jsx)(e, {
                     guildId: t,

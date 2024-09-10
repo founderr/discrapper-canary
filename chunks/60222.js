@@ -1,20 +1,20 @@
-o.d(t, {
+_.d(S, {
     A: function () {
-        return a;
+        return N;
     },
     m: function () {
-        return d;
+        return R;
     }
 }),
-    o(47120);
-var n = o(442837),
-    r = o(430824),
-    i = o(981631);
-function a(e) {
-    var t;
-    let [o] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [r.Z];
-    return !!(null === (t = o.getGuild(e)) || void 0 === t ? void 0 : t.hasFeature(i.oNc.COMMUNITY));
+    _(47120);
+var s = _(442837),
+    I = _(430824),
+    e = _(981631);
+function N(E) {
+    var S;
+    let [_] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [I.Z];
+    return !!(null === (S = _.getGuild(E)) || void 0 === S ? void 0 : S.hasFeature(e.oNc.COMMUNITY));
 }
-function d(e) {
-    return (0, n.e7)([r.Z], () => a(e, [r.Z]), [e]);
+function R(E) {
+    return (0, s.e7)([I.Z], () => N(E, [I.Z]), [E]);
 }

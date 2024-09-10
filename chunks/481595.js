@@ -34,7 +34,7 @@ var i = t(735250),
     O = t(119226),
     R = t(981631),
     L = t(689938),
-    j = t(488579);
+    j = t(679640);
 function Z(e) {
     let { sku: n, skuPricePreview: t } = e;
     s()(null != t.amount, 'SKU must have a price set.');

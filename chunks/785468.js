@@ -26,7 +26,7 @@ var s = l(735250),
     S = l(765305),
     C = l(981631),
     L = l(689938),
-    A = l(969032);
+    A = l(356731);
 let Z = (e) => e === S.WX.EXTERNAL,
     f = (e, n) => {
         let l = c.Z.getChannel(e);
@@ -249,7 +249,7 @@ function O(e) {
                               name: L.Z.Messages.STAGE_CHANNEL
                           }),
                               (0, o.openModalLazy)(async () => {
-                                  let { default: e } = await Promise.all([l.e('90508'), l.e('7590'), l.e('45094'), l.e('96990')]).then(l.bind(l, 218613));
+                                  let { default: e } = await Promise.all([l.e('90508'), l.e('7590'), l.e('45094'), l.e('54548')]).then(l.bind(l, 218613));
                                   return (l) =>
                                       (0, s.jsx)(e, {
                                           ...l,

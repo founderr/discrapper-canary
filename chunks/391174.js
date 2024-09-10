@@ -8,8 +8,8 @@ var s = n(735250),
     l = n(120356),
     r = n.n(l),
     i = n(725436),
-    u = n(958948),
-    c = n(910212);
+    u = n(737602),
+    c = n(554034);
 function o(e) {
     let { description: t, className: n, guildId: l, truncate: o = !0 } = e,
         E = a.useMemo(

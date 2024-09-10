@@ -48,7 +48,7 @@ var i,
     G = n(765305),
     w = n(981631),
     k = n(689938),
-    B = n(697879);
+    B = n(257956);
 let H = r.memo(function (e) {
     let { heading: t, location: n, locationIcon: i, details: a, detailsIcon: r, topic: l, onClickCloseIcon: c, onClickTopicText: u, children: _ } = e,
         E = (0, s.jsx)(d.Text, {

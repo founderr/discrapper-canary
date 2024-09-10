@@ -7,7 +7,7 @@ var i = n(735250);
 n(470079);
 var a = n(113434),
     s = n(710914),
-    r = n(466836);
+    r = n(769771);
 function l(e) {
     let {} = e,
         { quests: t, isFetchingCurrentQuests: n } = (0, a.bA)(a.e5.ALL);

@@ -33,8 +33,8 @@ var i = n(735250),
     b = n(228392),
     R = n(981631),
     L = n(689938),
-    j = n(704119),
-    P = n(952527);
+    j = n(314251),
+    P = n(96042);
 function O(e) {
     let { postId: t, isFirstMessage: n, isLastItem: a = !1, parentChannelId: O } = e,
         { ref: y, width: D } = (0, m.Z)(),

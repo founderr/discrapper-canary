@@ -18,7 +18,7 @@ var s = n(120356),
     p = n(351402),
     b = n(170671),
     f = n(474936),
-    S = n(840309);
+    S = n(655580);
 function v(e) {
     let t,
         { decoration: n, label: s, isSelected: v } = e,

@@ -9,7 +9,7 @@ var a = t(481060),
     i = t(921801),
     r = t(726985),
     o = t(689938),
-    l = t(105756);
+    l = t(857367);
 function c(e) {
     let { className: s, currentUser: t, handleDisableAccount: c, handleDeleteAccount: d } = e,
         _ = t.isClaimed();

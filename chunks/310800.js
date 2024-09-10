@@ -16,7 +16,7 @@ var a = n(852229),
     _ = n(613810),
     I = n(391181),
     E = n(689938),
-    T = n(852202);
+    T = n(463446);
 let m = 'guild-product-listings-header';
 function N(e) {
     let { guildId: t, handleCreateOrEditProduct: u } = e,

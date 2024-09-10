@@ -14,7 +14,7 @@ var n = t(735250),
     c = t(53281),
     d = t(451593),
     _ = t(694539),
-    u = t(792461);
+    u = t(661065);
 let E = (e) => {
         var s, t, a;
         let { effect: i, onClick: o } = e,

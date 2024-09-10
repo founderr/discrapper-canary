@@ -53,7 +53,7 @@ var i = n(735250),
     q = n(981631),
     X = n(354459),
     Q = n(689938),
-    J = n(394738);
+    J = n(336496);
 let $ = 'HasBeenInStageChannel',
     ee = (e, t) => () => {
         let n = e.getGuildId();

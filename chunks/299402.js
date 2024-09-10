@@ -19,7 +19,7 @@ var o = n(735250),
     N = n(867581),
     m = n(675999),
     T = n(981631),
-    p = n(771553);
+    p = n(870863);
 function f(e) {
     let { transitionState: t, initialSlide: n = m._m.GUILD_TEMPLATES, onSuccess: a, onClose: f, onSlideChange: S, hasJoinButton: C } = e,
         [L, A] = l.useState(n),

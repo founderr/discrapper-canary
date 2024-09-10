@@ -16,7 +16,7 @@ var r = n(735250),
     C = n(981631),
     m = n(678916),
     w = n(689938),
-    R = n(323125);
+    R = n(57739);
 t.default = (e) => {
     let { file: t, imgURI: n, transitionState: f, allowSkip: M = !1, onCrop: _, onClose: N, uploadType: L = g.pC.AVATAR, showUpsellHeader: v = !1, analyticsPage: I } = e,
         [x, D] = i.useState({

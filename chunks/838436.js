@@ -14,8 +14,8 @@ var a = t(120356),
     o = t(921801),
     l = t(3957),
     c = t(279743),
-    d = t(81138),
-    _ = t(5718);
+    d = t(36968),
+    _ = t(597941);
 function u(e) {
     let { header: s, description: t, relatedId: a, disabled: o } = e;
     return (0, n.jsxs)('div', {

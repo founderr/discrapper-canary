@@ -13,7 +13,7 @@ var i = n(735250),
     u = n(152376),
     d = n(981631),
     h = n(689938),
-    m = n(499256);
+    m = n(237530);
 function p(e) {
     let { channel: t, narrow: n } = e;
     return (

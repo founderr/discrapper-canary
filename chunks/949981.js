@@ -18,7 +18,7 @@ var s = n(512722),
     _ = n(358595),
     E = n(981631),
     I = n(689938),
-    m = n(29062);
+    m = n(691784);
 function T(e) {
     let t,
         { invite: n, author: s, currentUserId: T, onTransitionToInviteChannel: h, onAcceptInstantInvite: N } = e,

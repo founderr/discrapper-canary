@@ -17,7 +17,7 @@ var t = s(735250),
     E = s(981631),
     f = s(921944),
     x = s(689938),
-    m = s(949968);
+    m = s(505865);
 function Z(e) {
     let { user: n, currentUser: s, onClose: Z } = e,
         { live: p, recent: h, stream: S } = (0, c.Z)(n.id),

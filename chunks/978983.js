@@ -1,11 +1,11 @@
-var o = n(735250);
-n(470079);
-var i = n(481060),
-    a = n(882441);
-t.Z = () =>
-    (0, o.jsx)('div', {
-        className: a.loadingWrapper,
-        children: (0, o.jsx)(i.Dots, {
+var i = t(735250);
+t(470079);
+var r = t(481060),
+    o = t(53304);
+n.Z = () =>
+    (0, i.jsx)('div', {
+        className: o.loadingWrapper,
+        children: (0, i.jsx)(r.Dots, {
             dotRadius: 4,
             themed: !0
         })

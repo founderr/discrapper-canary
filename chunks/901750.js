@@ -2,7 +2,7 @@ var n = t(735250);
 t(470079);
 var a = t(481060),
     i = t(689938),
-    r = t(817258);
+    r = t(251529);
 s.Z = function (e) {
     let { hasGuildBoostSlots: s, hasAppliedGuildBoosts: o, isUserPremiumTier2: l, subscriptionIsPausedOrPausePending: c } = e;
     return (0, n.jsxs)('div', {

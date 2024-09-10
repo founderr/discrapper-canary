@@ -23,7 +23,7 @@ var a = l(735250),
     _ = l(5192),
     Z = l(51144),
     N = l(228168),
-    j = l(65679);
+    j = l(36766);
 function p(e) {
     let { guildId: n, welcomeMessage: l, className: r } = e,
         p = (0, d.e7)([I.Z], () => I.Z.getGuild(n)),

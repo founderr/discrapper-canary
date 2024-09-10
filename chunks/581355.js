@@ -18,7 +18,7 @@ var a = t(735250),
     h = t(180899),
     T = t(157925),
     m = t(689938),
-    I = t(469433);
+    I = t(639879);
 function N(e) {
     let { guild: n, channel: t, stageInstance: l, headerId: s, onClose: r, loading: o, error: c, onSave: u, defaultOptions: E, isSlideReady: h } = e;
     return (0, a.jsxs)(a.Fragment, {

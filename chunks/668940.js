@@ -20,7 +20,7 @@ var a = n(636977),
     C = n(981631),
     f = n(46140),
     N = n(689938),
-    A = n(745322);
+    A = n(289505);
 let v = (e) => {
         switch (e) {
             case S.Gj.Activity:

@@ -14,7 +14,7 @@ var i = t(481060),
     a = t(555638),
     C = t(42011),
     d = t(798930),
-    u = t(564510);
+    u = t(879137);
 function _(e) {
     let { transitionState: n, onClose: t, analyticsLocation: _, platformType: T } = e,
         { slide: N, gotoNext: P, gotoError: A, handleWaitingForConnection: I, handleAuthToken: f, expectedCallbackState: S, callbackData: h, errorCode: O } = (0, s.k)(_, T);

@@ -14,7 +14,7 @@ var n = t(735250),
     _ = t(955204),
     u = t(248998),
     E = t(689938),
-    T = t(914480);
+    T = t(790980);
 function S(e) {
     let { onBackClick: s } = e,
         t = (0, i.e7)([d.Z], () => d.Z.getAllUnlockedAchievements()),

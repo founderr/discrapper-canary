@@ -18,7 +18,7 @@ var i = n(735250),
     m = n(981631),
     T = n(176505),
     h = n(689938),
-    N = n(824480);
+    N = n(341738);
 function C(e) {
     let { username: t } = e;
     return (0, i.jsx)('div', {

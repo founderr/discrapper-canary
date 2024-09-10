@@ -20,9 +20,9 @@ var s = n(735250),
     p = n(104494),
     A = n(639119),
     f = n(8647),
-    h = n(568126),
-    S = n(605289),
-    M = n(248042),
+    M = n(568126),
+    h = n(605289),
+    S = n(248042),
     x = n(823188),
     O = n(135785),
     b = n(498765),
@@ -38,7 +38,7 @@ var s = n(735250),
     y = n(781800),
     w = n(474936),
     H = n(981631),
-    k = n(556613),
+    k = n(445615),
     F = n(865215),
     V = n(735035),
     W = n(786362);
@@ -105,7 +105,7 @@ t.Z = (e) => {
         eo = (0, A.N)(),
         ec = null == eo ? void 0 : null === (t = eo.subscription_trial) || void 0 === t ? void 0 : t.sku_id,
         ed = (0, N.Nx)(),
-        e_ = (0, M.Vi)(),
+        e_ = (0, S.Vi)(),
         { analyticsLocations: eu } = (0, E.ZP)(u.Z.PREMIUM_MARKETING),
         eE = 'PremiumMarketingHome';
     (0, _.j)({
@@ -184,7 +184,7 @@ t.Z = (e) => {
                     inOfferExperience: ed
                 }),
                 !n && ea
-                    ? (0, s.jsx)(S.Z, {
+                    ? (0, s.jsx)(h.Z, {
                           localizedPricingPromo: es,
                           smallGap: !0
                       })
@@ -208,7 +208,7 @@ t.Z = (e) => {
                       }),
                 (0, s.jsxs)('div', {
                     className: k.promoBannerContainer,
-                    children: [(0, s.jsx)(f.Z, { isFullScreen: n }), n && ea && (0, s.jsx)(h.Z, { localizedPricingPromo: es })]
+                    children: [(0, s.jsx)(f.Z, { isFullScreen: n }), n && ea && (0, s.jsx)(M.Z, { localizedPricingPromo: es })]
                 }),
                 eT,
                 (0, s.jsx)(z, {

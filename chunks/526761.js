@@ -60,7 +60,7 @@ let O = 250,
     S = 'ROLE_SUBSCRIPTIONS',
     L = 'APPLICATION_SUBSCRIPTION_SUBSECTION',
     D = 'SOUNDBOARD_SUBSECTION';
-((l = n || (n = {})).USER_PROFILE = 'user_profile'), (l.GUILD = 'guild'), (l.TRY_IT_OUT = 'try_it_out'), ((a || (a = {})).CUSTOM_APP_ICONS = 'custom_app_icon'), ((o || (o = {})).TRY_IT_OUT = 'try_it_out'), ((R = i || (i = {})).REDUCED_MOTION = 'reduced_motion'), (R.SYNC_PROFILE_THEME_WITH_USER_THEME = 'sync_profile_theme_with_user_theme'), (R.LEGACY_CHAT_INPUT = 'legacy_chat_input'), ((_ || (_ = {})).HARDWARE_ACCELERATION = 'hardware_acceleration'), ((A = E || (E = {})).DM_SAFETY_ALERTS = 'dm_safety_alerts'), (A.MESSAGE_REQUESTS = 'message_requests'), (A.EXPLICIT_MEDIA_REDACTION = 'explicit_media_redaction');
+((l = n || (n = {})).USER_PROFILE = 'user_profile'), (l.GUILD = 'guild'), (l.TRY_IT_OUT = 'try_it_out'), ((a || (a = {})).CUSTOM_APP_ICONS = 'custom_app_icon'), ((o || (o = {})).TRY_IT_OUT = 'try_it_out'), ((R = i || (i = {})).REDUCED_MOTION = 'reduced_motion'), (R.SYNC_PROFILE_THEME_WITH_USER_THEME = 'sync_profile_theme_with_user_theme'), (R.LEGACY_CHAT_INPUT = 'legacy_chat_input'), ((_ || (_ = {})).HARDWARE_ACCELERATION = 'hardware_acceleration'), ((A = E || (E = {})).DM_SAFETY_ALERTS = 'dm_safety_alerts'), (A.DM_SAFETY_ALERTS_V2 = 'dm_safety_alerts_v2'), (A.MESSAGE_REQUESTS = 'message_requests'), (A.MESSAGE_REQUESTS_V2 = 'message_requests_v2'), (A.EXPLICIT_MEDIA_REDACTION = 'explicit_media_redaction'), (A.EXPLICIT_MEDIA_REDACTION_V2 = 'explicit_media_redaction_v2');
 let h = {
     ProfileCustomizationScrollPositions: o,
     AccessibilityScrollPositions: i,

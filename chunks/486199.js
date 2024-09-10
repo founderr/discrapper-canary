@@ -11,7 +11,7 @@ var a = t(120356),
     o = t(600164),
     r = t(528144),
     d = t(689938),
-    c = t(479422);
+    c = t(365515);
 function u(e) {
     let { name: n, description: t, icon: a, imageSrc: u, iconBackgroundColor: I, iconClassName: m, details: _, detailsClassName: N, isHeader: E, isPremium: T } = e;
     return (0, i.jsxs)(o.Z, {

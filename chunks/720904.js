@@ -20,7 +20,7 @@ var i = t(120356),
     g = t(981631),
     _ = t(185923),
     f = t(689938),
-    Z = t(994209);
+    Z = t(50455);
 let S = ['slight_smile', 'frowning', 'smile', 'stuck_out_tongue', 'wink'];
 function T(e) {
     var n;

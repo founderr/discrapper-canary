@@ -7,7 +7,7 @@ var s = t(735250),
     c = t(618541),
     u = t(975060),
     d = t(689938),
-    E = t(223811);
+    E = t(245715);
 class A extends n.PureComponent {
     componentDidMount() {
         null != this.props.paypalClient && o.f6();

@@ -12,7 +12,7 @@ var r = n(735250),
     l = n(481060),
     u = n(410030),
     c = n(689938),
-    d = n(668850);
+    d = n(449761);
 function _(e) {
     let { src: t, size: n, constrain: a = 'height', className: _, alt: E, fallbackSrc: f, 'aria-hidden': h, showTooltip: p = !1 } = e,
         I = (0, u.ZP)(),

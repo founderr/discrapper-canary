@@ -24,7 +24,7 @@ var n = a(735250),
     L = a(592286),
     v = a(981631),
     B = a(689938),
-    j = a(330771);
+    j = a(352784);
 let T = 'RULE';
 function A(e) {
     let { rule: l, rulesChannel: a, index: s, onChange: o, onKeyDown: i, onClear: c, onRuleReorder: E, isDropHovered: _, focused: m, onFocus: R, previewEnabled: h } = e,

@@ -18,7 +18,7 @@ var i = n(735250),
     C = n(981631),
     f = n(665692),
     p = n(689938),
-    g = n(894684);
+    g = n(120584);
 let S = {
         tag: 'span',
         variant: 'text-md/normal',

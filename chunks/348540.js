@@ -26,7 +26,7 @@ var s = n(442837),
     T = n(228168),
     v = n(981631),
     S = n(689938),
-    N = n(836272);
+    N = n(299336);
 function A(e) {
     let { user: t, currentUser: n, displayProfile: A, channel: Z, isHovering: M, onOpenProfile: b } = e,
         { activeInviteToCallCtaEnabled: R } = (0, c.l)({ location: 'UserProfilePanelBody' }),

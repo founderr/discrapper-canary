@@ -13,7 +13,7 @@ var o = i(481060),
     c = i(30513),
     d = i(981631),
     u = i(689938),
-    _ = i(651610);
+    _ = i(472997);
 function g(e) {
     let { guild: n, banner: i } = e;
     return (0, t.jsx)('div', {

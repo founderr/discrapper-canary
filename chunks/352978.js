@@ -13,7 +13,7 @@ var i,
     c = n(481060),
     u = n(763520),
     d = n(153066),
-    h = n(542590);
+    h = n(500829);
 ((s = i || (i = {})).CONTAIN = 'contain'), (s.COVER = 'cover');
 let m = l.memo(function (e) {
     let { streamId: t, onResize: n, wrapperClassName: i, videoComponent: s, className: r, fit: m = 'contain', mirror: p = !1, paused: _ = !1, streamPreviewURL: f, videoSpinnerContext: E, userId: g } = e,

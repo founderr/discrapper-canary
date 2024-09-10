@@ -31,7 +31,7 @@ var s = n(735250),
     O = n(293810),
     A = n(333866),
     M = n(689938),
-    D = n(720579);
+    D = n(155161);
 let v = (0, C.Mg)(I.Z.GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_OVERVIEW_SETTINGS_MAX_WIDTH);
 function j() {
     return [

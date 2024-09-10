@@ -15,7 +15,7 @@ var a = l(735250),
     f = l(825334),
     I = l(981631),
     v = l(689938),
-    _ = l(523460);
+    _ = l(469085);
 let Z = i.memo(function (e) {
         let { guild: n } = e,
             l = (0, r.e7)([c.Z], () => c.Z.getGuild(n.id), [n]);

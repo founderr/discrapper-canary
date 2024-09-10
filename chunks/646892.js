@@ -11,7 +11,7 @@ var a = n(120356),
     l = n(481060),
     o = n(607070),
     c = n(307537),
-    d = n(132973);
+    d = n(776362);
 function u(e) {
     let { className: t, shouldShine: n = !0, size: a = 14 } = e,
         u = (0, r.e7)([o.Z], () => o.Z.useReducedMotion);

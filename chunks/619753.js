@@ -38,7 +38,7 @@ var i = n(735250),
     j = n(683101),
     P = n(981631),
     O = n(689938),
-    y = n(647146);
+    y = n(652553);
 function D(e) {
     var t;
     let { search: n, searchId: a, renderEmbeds: l, scrollTo: p, searchResults: _, blockCount: f, onChangePage: E } = e,

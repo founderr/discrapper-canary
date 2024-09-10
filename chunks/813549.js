@@ -9,7 +9,7 @@ var i = n(120356),
     a = n.n(i),
     s = n(385499),
     o = n(674563),
-    l = n(769029);
+    l = n(590398);
 t.Z = (e) => {
     let { name: t, discriminator: n, invertBotTagColor: i, nameColor: o, className: u, botType: c, usernameClass: d, discriminatorClass: _, botClass: E, botVerified: f = !1, style: h, useRemSizes: p = !1, usernameIcon: I } = e;
     return (0, r.jsxs)('div', {

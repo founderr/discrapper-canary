@@ -22,7 +22,7 @@ var r = n(735250),
     m = n(373228),
     T = n(378233),
     S = n(689938),
-    g = n(310512);
+    g = n(131345);
 let A = (e) => e.preventDefault(),
     N = {
         tension: 1100,

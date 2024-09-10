@@ -6,7 +6,7 @@ var s = n(735250),
     i = n(481060),
     c = n(569379),
     d = n(642145),
-    u = n(416744);
+    u = n(808326);
 t.Z = o.forwardRef((e, t) => {
     let { quest: n, percentComplete: o, size: r = 42, strokeWidth: p = 3, glowBlur: x = 0.4, percentCompleteText: m, children: g } = e,
         _ = (0, c.EK)(n, o > 0),

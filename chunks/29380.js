@@ -23,7 +23,7 @@ var i = t(735250),
     E = t(176412),
     N = t(231338),
     x = t(689938),
-    v = t(872674);
+    v = t(94958);
 function I(e) {
     let { channel: n, application: t, sectionName: I, primaryEntryPointCommand: g, buttonSize: P = o.ButtonSizes.MEDIUM } = e,
         S = a.useId(),

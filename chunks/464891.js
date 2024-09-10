@@ -48,7 +48,7 @@ var r = n(735250),
     x = n(47930),
     G = n(981631),
     k = n(689938),
-    B = n(438379),
+    B = n(825193),
     F = n(255963);
 function V(e) {
     let { avatarSrc: t, avatarDecorationSrc: n, compact: i, onClick: a, onContextMenu: o, onMouseDown: l, onMouseEnter: u, onMouseLeave: c, onKeyDown: d, showCommunicationDisabledStyles: _ = !1, className: E } = e;

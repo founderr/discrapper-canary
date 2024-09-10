@@ -9,7 +9,7 @@ var a = n(120356),
     i = n.n(a),
     r = n(481060),
     l = n(2150),
-    o = n(270068);
+    o = n(96956);
 function c(e) {
     let { title: t, description: n, action: a, highlightColor: c = l.q.NONE, selected: d = !1, subsection: u = null, onClick: _, className: I, disabled: E } = e;
     return (0, s.jsxs)('div', {

@@ -17,7 +17,7 @@ var i = n(735250),
     E = n(791914),
     I = n(326838),
     m = n(689938),
-    T = n(401098);
+    T = n(706897);
 function h(e) {
     let { setTab: t, badgeState: a, closePopout: h } = e,
         C = (0, l.Wu)([u.Z], () => u.Z.getInvites()),

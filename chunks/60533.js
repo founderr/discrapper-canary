@@ -9,7 +9,7 @@ var a = n(442837),
     i = n(481060),
     r = n(90815),
     l = n(594174),
-    o = n(562606);
+    o = n(430994);
 function c(e) {
     let { guild: t } = e,
         n = (0, a.e7)([l.default], () => {

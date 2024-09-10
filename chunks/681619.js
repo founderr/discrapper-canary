@@ -8,7 +8,7 @@ var r = n(735250),
     l = n(120356),
     i = n.n(l),
     o = n(481060),
-    s = n(535271);
+    s = n(219299);
 function c(e) {
     let { columns: t, data: n, className: l, rowClassName: c, onClickRow: u, selectedRowKey: d, rowHeight: h = 40 } = e,
         m = a.useMemo(

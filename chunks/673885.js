@@ -14,7 +14,7 @@ var a = n(120356),
     d = n(51144),
     u = n(981631),
     I = n(689938),
-    E = n(691700);
+    E = n(634200);
 function _(e) {
     let { user: s, joinRequestId: n, className: a } = e,
         { username: _ } = s,

@@ -35,7 +35,7 @@ var i = n(735250),
     Z = n(981631),
     M = n(231873),
     b = n(689938),
-    R = n(616616);
+    R = n(776187);
 function L(e) {
     let { className: t, iconUrl: n, icon: a, header: r, completed: o, onClick: c } = e,
         [u, m] = s.useState(!1),
@@ -99,7 +99,7 @@ function j(e) {
                     }),
                         null != e &&
                             (0, d.openModalLazy)(async () => {
-                                let { default: t } = await Promise.all([n.e('7654'), n.e('66633')]).then(n.bind(n, 560114));
+                                let { default: t } = await Promise.all([n.e('7654'), n.e('85683')]).then(n.bind(n, 560114));
                                 return (n) =>
                                     (0, i.jsx)(t, {
                                         ...n,

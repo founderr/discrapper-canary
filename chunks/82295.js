@@ -3,7 +3,7 @@ n(470079);
 var i = n(120356),
     a = n.n(i),
     s = n(481060),
-    o = n(905374);
+    o = n(996479);
 t.Z = (e) => {
     let { className: t, children: n, 'aria-label': i, id: l } = e;
     return (0, r.jsx)(s.H, {

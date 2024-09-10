@@ -10,7 +10,7 @@ var n = a(735250),
     o = a(826078),
     s = a(917042),
     u = a(20437),
-    d = a(726085);
+    d = a(948061);
 function c(e) {
     let { isLoading: t, onDoneLoading: a, videoURL: c, audioURL: m, transitionState: p } = e,
         { videoPlayerRef: v, cropData: f, applicationAudioEnabled: b, voiceAudioEnabled: h } = (0, u.S)(),

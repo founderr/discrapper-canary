@@ -7,7 +7,7 @@ var o = n(120356),
     r = n(481060),
     l = n(113434),
     u = n(26650),
-    c = n(601084);
+    c = n(597799);
 t.Z = function (e) {
     let { className: t, color: n = i.Z.colors.WHITE, quest: o, isInventory: d } = e,
         C = (0, l.qb)(e.quest),

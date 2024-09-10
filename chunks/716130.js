@@ -11,7 +11,7 @@ var s = n(735250),
     l = n(399606),
     o = n(481060),
     c = n(668781),
-    d = n(603211),
+    d = n(659388),
     u = n(710344),
     _ = n(430824),
     I = n(570961),
@@ -19,7 +19,7 @@ var s = n(735250),
     T = n(959508),
     m = n(290511),
     N = n(689938),
-    S = n(264506);
+    S = n(84877);
 function h(e) {
     let { guild: t, prejoinOnly: n, postjoinOnly: i } = e,
         c = (0, l.e7)([E.Z], () => E.Z.editedOnboardingPrompts),

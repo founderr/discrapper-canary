@@ -18,7 +18,7 @@ var i = n(735250),
     h = n(207796),
     m = n(308083),
     I = n(689938),
-    g = n(630244);
+    g = n(899115);
 function p(e) {
     let { icon: t, text: n, ariaLabel: s, tooltip: l, onClick: c, isActive: d, autoWidth: u = !1 } = e,
         [_, E] = a.useState(!1),

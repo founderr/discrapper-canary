@@ -9,7 +9,7 @@ var a = n(120356),
     r = n.n(a),
     i = n(481060),
     l = n(689938),
-    o = n(18702);
+    o = n(887965);
 function c(e) {
     let { className: t } = e;
     return (0, s.jsx)(i.TextBadge, {

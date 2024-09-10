@@ -32,7 +32,7 @@ var o = n(735250),
     P = n(844439),
     S = n(981631),
     T = n(689938),
-    O = n(834033);
+    O = n(973335);
 function R(e) {
     let { toggleShowMenu: t, showMenu: n, className: c, channelId: d, imageUrl: u, mimeType: m } = e,
         s = (0, a.e7)([h.Z], () => h.Z.getChannel(d)),

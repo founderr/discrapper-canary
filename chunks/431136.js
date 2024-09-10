@@ -1,49 +1,49 @@
-a.d(n, {
+n.d(t, {
     m: function () {
-        return u;
+        return d;
     }
 });
-var t = a(735250);
-a(470079);
-var s = a(468194),
-    i = a(399606),
-    l = a(481060),
-    r = a(430824),
-    o = a(768581),
-    c = a(107455);
-function u(e) {
-    let { guildId: n } = e,
-        a = (0, i.e7)([r.Z], () => r.Z.getGuild(n));
-    if (null == a) return null;
-    let u = null;
-    if (null != a.icon) {
-        let e = o.ZP.getGuildIconURL({
-            id: a.id,
-            icon: a.icon,
+var a = n(735250);
+n(470079);
+var i = n(468194),
+    l = n(399606),
+    s = n(481060),
+    o = n(430824),
+    r = n(768581),
+    c = n(419091);
+function d(e) {
+    let { guildId: t } = e,
+        n = (0, l.e7)([o.Z], () => o.Z.getGuild(t));
+    if (null == n) return null;
+    let d = null;
+    if (null != n.icon) {
+        let e = r.ZP.getGuildIconURL({
+            id: n.id,
+            icon: n.icon,
             size: 40
         });
-        u = (0, t.jsx)(l.Avatar, {
+        d = (0, a.jsx)(s.Avatar, {
             src: e,
-            'aria-label': a.name,
-            size: l.AvatarSizes.SIZE_24
+            'aria-label': n.name,
+            size: s.AvatarSizes.SIZE_24
         });
     } else {
-        let e = (0, s.Zg)(a.name).slice(0, 2);
-        u = (0, t.jsx)(l.Text, {
+        let e = (0, i.Zg)(n.name).slice(0, 2);
+        d = (0, a.jsx)(s.Text, {
             variant: 'text-xs/semibold',
             className: c.acronym,
             'aria-hidden': !0,
             children: e
         });
     }
-    return (0, t.jsxs)('div', {
+    return (0, a.jsxs)('div', {
         className: c.container,
         children: [
-            u,
-            (0, t.jsx)(l.Text, {
+            d,
+            (0, a.jsx)(s.Text, {
                 variant: 'text-md/semibold',
                 className: c.text,
-                children: a.name
+                children: n.name
             })
         ]
     });

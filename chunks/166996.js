@@ -20,7 +20,7 @@ var a = n(735250),
     _ = n(34674),
     g = n(132871),
     m = n(981631),
-    f = n(310602);
+    f = n(37381);
 function C(e) {
     let { currentCategoryId: t, className: n, countsByCategory: l, onView: C } = e,
         p = (0, g.useApplicationDirectoryHistory)((e) => e.guildId),

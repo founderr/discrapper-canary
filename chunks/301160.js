@@ -12,7 +12,7 @@ var t = a(735250),
     l = a(768581),
     r = a(570533),
     d = a(689938),
-    m = a(666246);
+    m = a(276612);
 function c(e) {
     let { emoji: o, onChange: a, value: s } = e,
         n = l.ZP.getEmojiURL({

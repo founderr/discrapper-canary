@@ -16,7 +16,7 @@ var s = n(735250),
     _ = n(714939),
     I = n(981631),
     E = n(689938),
-    T = n(329349);
+    T = n(912111);
 function m(e) {
     let { color: t, children: n } = e;
     return (0, s.jsxs)('div', {

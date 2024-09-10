@@ -13,7 +13,7 @@ var i = n(735250),
     d = n(486622),
     u = n(376191),
     _ = n(689938),
-    E = n(846482);
+    E = n(970941);
 function h(e) {
     let { active: t, user: n, channel: h } = e,
         m = (0, c.K)(),

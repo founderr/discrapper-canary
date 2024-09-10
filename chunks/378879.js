@@ -20,7 +20,7 @@ var r = a(481060),
     A = a(981631),
     E = a(486324),
     _ = a(689938),
-    I = a(960232);
+    I = a(821774);
 function P(e, n, s) {
     let o = t.default.getCurrentUser();
     return (

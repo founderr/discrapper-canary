@@ -44,7 +44,7 @@ var i = n(735250),
     M = n(921944),
     R = n(49898),
     O = n(689938),
-    P = n(174507);
+    P = n(877861);
 function y(e) {
     let { title: t, message: n, dismissibleContent: r, gameId: a, onPopoutVisible: c, onClick: h, children: p, isEligibleForUpsell: _ = !0, withInviteIcon: f = !0, backgroundImageUrl: m } = e,
         C = (0, s.TH)(),

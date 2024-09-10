@@ -3,26 +3,26 @@ t.d(n, {
         return u;
     }
 });
-var r = t(735250);
+var o = t(735250);
 t(470079);
-var i = t(120356),
-    l = t.n(i),
-    a = t(481060),
-    s = t(689938),
-    o = t(853265),
-    c = t(257995);
+var r = t(120356),
+    a = t.n(r),
+    i = t(481060),
+    c = t(689938),
+    l = t(638635),
+    s = t(739017);
 function u() {
-    return (0, r.jsxs)('div', {
-        className: l()(o.paymentModalLockIcon, c.flex, c.alignCenter),
+    return (0, o.jsxs)('div', {
+        className: a()(l.paymentModalLockIcon, s.flex, s.alignCenter),
         children: [
-            (0, r.jsx)(a.LockIcon, {
+            (0, o.jsx)(i.LockIcon, {
                 size: 'sm',
                 color: 'currentColor',
-                className: o.lockIcon
+                className: l.lockIcon
             }),
-            (0, r.jsx)(a.Text, {
+            (0, o.jsx)(i.Text, {
                 variant: 'text-sm/medium',
-                children: s.Z.Messages.BILLING_SECURE
+                children: c.Z.Messages.BILLING_SECURE
             })
         ]
     });

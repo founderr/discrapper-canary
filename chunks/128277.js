@@ -29,7 +29,7 @@ var r = n(735250),
     v = n(666984),
     C = n(290274),
     y = n(228168),
-    L = n(139665);
+    L = n(676411);
 function D(e) {
     let { user: t, currentUser: n, activity: a, guild: D, channel: b, className: M, onClose: P } = e,
         { profileType: U } = (0, T.z)(),

@@ -25,7 +25,7 @@ var i = n(120356),
     m = n(228168),
     T = n(185923),
     S = n(689938),
-    g = n(951768);
+    g = n(374729);
 let A = 1800,
     N = (e) => {
         let { emoji: t, username: n, sourceType: r, sourceDetails: i } = e,

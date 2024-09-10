@@ -28,7 +28,7 @@ var t = s(735250),
     R = s(486324),
     k = s(474936),
     D = s(689938),
-    j = s(143968);
+    j = s(793532);
 function T(e) {
     let { icon: n, onClick: s, text: a, children: o, className: i, selected: r = !1, disabled: d = !1, onMouseLeave: u, onBlur: _ } = e;
     return (0, t.jsxs)(c.Clickable, {
@@ -254,7 +254,7 @@ function P(e) {
         onClick: function () {
             (0, c.openModalLazy)(
                 async () => {
-                    let { default: e } = await Promise.all([s.e('70687'), s.e('98041')]).then(s.bind(s, 28130));
+                    let { default: e } = await Promise.all([s.e('70687'), s.e('32880')]).then(s.bind(s, 28130));
                     return (s) =>
                         (0, t.jsx)(e, {
                             maxFileSizeBytes: C.SJ,

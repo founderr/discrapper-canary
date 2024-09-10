@@ -19,7 +19,7 @@ var i = n(735250),
     f = n(586646),
     g = n(760373),
     m = n(689938),
-    C = n(711124);
+    C = n(739949);
 function I(e) {
     let { lobbyId: t, connectionTypeText: n, closePopout: l } = e,
         a = (0, r.cj)([u.Z], () => ({

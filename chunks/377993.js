@@ -33,8 +33,8 @@ var i = n(735250),
     M = n(276264),
     b = n(981631),
     R = n(689938),
-    L = n(410740),
-    j = n(460356);
+    L = n(226686),
+    j = n(204394);
 let P = [],
     O = Z.ZP.getEnableHardwareAcceleration();
 function y(e) {
@@ -45,7 +45,7 @@ function y(e) {
         _ = (0, l.e7)([C.Z], () => C.Z.getNickname(t.id)),
         T = (e) => {
             (0, o.jW)(e, async () => {
-                let { default: e } = await Promise.all([n.e('79695'), n.e('90286'), n.e('17354')]).then(n.bind(n, 354589));
+                let { default: e } = await Promise.all([n.e('79695'), n.e('90286'), n.e('18283')]).then(n.bind(n, 354589));
                 return (n) =>
                     (0, i.jsx)(e, {
                         ...n,

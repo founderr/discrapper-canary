@@ -11,7 +11,7 @@ n(470079);
 var a = n(481060),
     i = n(17894),
     l = n(689938),
-    s = n(410113);
+    s = n(632354);
 let o = (e) => {
     let { onConfirm: t, onCancel: n, title: o, subtitle: u, confirmCta: c, showOpenDiscord: d = !0 } = e;
     return (0, r.jsxs)('div', {

@@ -12,7 +12,7 @@ var r = n(735250),
     u = n(580552),
     c = n(249458),
     d = n(240991),
-    _ = n(910212);
+    _ = n(554034);
 function E(e) {
     let { userBio: t, className: n, animateOnHover: a = !1, isHovering: E = !1, lineClamp: f = 6, setLineClamp: h = !0, textColor: p, userId: I } = e,
         m = i.useMemo(() => ((0, u.Z)(I) ? (0, r.jsx)(l.Z, {}) : null == t || '' === t ? null : (0, d.YP)(t)), [I, t]);

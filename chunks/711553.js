@@ -6,7 +6,7 @@ var s = n(120356),
     r = n(518084),
     l = n(981631),
     c = n(689938),
-    d = n(702729);
+    d = n(230519);
 t.Z = function (e) {
     let t;
     let { title: n, header: s, children: u, renderSettings: h, onDragStart: p } = e;

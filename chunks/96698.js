@@ -9,7 +9,7 @@ var a = l(120356),
     t = l.n(a),
     i = l(481060),
     r = l(112831),
-    o = l(633818);
+    o = l(985992);
 function d(e) {
     let { steps: n, stepIndex: l, onClick: a } = e;
     return (0, s.jsx)('div', {

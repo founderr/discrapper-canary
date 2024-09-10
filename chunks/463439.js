@@ -22,7 +22,7 @@ var s,
     R = n(134612),
     O = n(981631),
     C = n(689938),
-    S = n(917475),
+    S = n(248296),
     P = n(149355);
 function h(e) {
     let { senderId: t, channelId: n, hasReported: s, onReport: o, trackAnalyticsEvent: h } = e,

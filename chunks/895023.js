@@ -10,7 +10,7 @@ var i = n(120356),
     o = n.n(i),
     r = n(481060),
     s = n(761705),
-    l = n(278054);
+    l = n(896645);
 function c(t) {
     let { className: e, transitionState: n, items: i, startingIndex: c, onClose: u, onIndexChange: d, modalCarouselClassName: h, modalCarouselItemClassName: p } = t;
     return (0, a.jsx)(r.ModalRoot, {

@@ -27,7 +27,7 @@ var n = l(735250),
     S = l(267642),
     I = l(981631),
     M = l(689938),
-    _ = l(294503);
+    _ = l(251897);
 function x(e) {
     let { isTransfer: s = !1, setQuery: l, query: t } = e;
     return (0, n.jsxs)(o.ModalHeader, {

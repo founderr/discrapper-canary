@@ -42,7 +42,7 @@ class h extends a.PureComponent {
             E(this, 'handleInvite', () => {
                 let { guild: e } = this.props;
                 (0, s.openModalLazy)(async () => {
-                    let { default: t } = await Promise.all([n.e('7654'), n.e('66633')]).then(n.bind(n, 560114));
+                    let { default: t } = await Promise.all([n.e('7654'), n.e('85683')]).then(n.bind(n, 560114));
                     return (n) =>
                         (0, i.jsx)(t, {
                             ...n,

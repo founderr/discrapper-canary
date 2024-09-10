@@ -1,15 +1,15 @@
-t.d(n, {
+n.d(t, {
     $: function () {
         return l;
     },
     C: function () {
-        return o;
+        return i;
     }
 });
-var i = t(570140);
+var c = n(570140);
 function l() {
-    i.Z.dispatch({ type: 'SHOW_KEYBOARD_SHORTCUTS' });
+    c.Z.dispatch({ type: 'SHOW_KEYBOARD_SHORTCUTS' });
 }
-function o() {
-    i.Z.dispatch({ type: 'HIDE_KEYBOARD_SHORTCUTS' });
+function i() {
+    c.Z.dispatch({ type: 'HIDE_KEYBOARD_SHORTCUTS' });
 }

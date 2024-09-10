@@ -8,7 +8,7 @@ var i = n(120356),
     u = n(533432),
     c = n(149203),
     d = n(185923),
-    _ = n(23022);
+    _ = n(74353);
 t.Z = (e) => {
     let { accessory: t, pickerIntention: n, headerClassName: i, emojiListRef: E, onKeyDown: f, onFocus: h, autoFocus: p, searchBarRef: I, hasTabWrapper: m, diversitySurrogate: T, isBurstReaction: S, onBurstReactionToggle: g, renderHeader: A } = e,
         N = (0, r.jsxs)(r.Fragment, {

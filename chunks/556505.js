@@ -9,7 +9,7 @@ var a = n(735250),
     l = n(481060),
     s = n(911969),
     o = n(689938),
-    r = n(661337);
+    r = n(899207);
 function c(e) {
     let { name: t, labelType: n, collapsed: c = !1, showTooltip: d = !1 } = e,
         u = n === s.ww.NEW ? o.Z.Messages.NEW : o.Z.Messages.UPDATED,

@@ -16,7 +16,7 @@ var a = n(442837),
     N = n(981631),
     S = n(611480),
     h = n(689938),
-    g = n(815750);
+    g = n(580765);
 let C = {
         page: N.ZY5.GUILD_SETTINGS,
         section: N.jXE.GUILD_SETTINGS_STICKERS,

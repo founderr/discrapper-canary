@@ -54,8 +54,8 @@ var s = t(735250),
     w = t(850228),
     G = t(231338),
     W = t(689938),
-    V = t(260173),
-    Q = t(83644);
+    V = t(100401),
+    Q = t(896769);
 let K = new P.Z('AddPaymentStep.tsx'),
     z = [f.h8.PAYMENT_TYPE],
     X = [f.h8.PAYMENT_TYPE, f.h8.CREDIT_CARD_INFORMATION, f.h8.ADDRESS],
@@ -415,15 +415,15 @@ function eh(e) {
                 }));
             break;
         case f.h8.SOFORT_INFORMATION:
-            let e7 = eB.info;
+            let e5 = eB.info;
             (a = (0, s.jsx)('div', {
                 className: V.body,
                 children: (0, s.jsx)(_.Z, {
-                    billingAddressInfo: e7,
+                    billingAddressInfo: e5,
                     onChange: (e) => {
                         eF({
                             info: {
-                                ...e7,
+                                ...e5,
                                 ...e
                             },
                             isValid: !1
@@ -436,7 +436,7 @@ function eh(e) {
                     onBack: () => eD(f.h8.PAYMENT_TYPE),
                     primaryCTA: b.Z.CTAType.CONTINUE,
                     primaryText: W.Z.Messages.NEXT,
-                    primaryDisabled: '' === e7.name || '' === e7.email || void 0 === e7.email,
+                    primaryDisabled: '' === e5.name || '' === e5.email || void 0 === e5.email,
                     onPrimary: () => eD(f.h8.ADDRESS)
                 }));
             break;
@@ -520,13 +520,13 @@ function eh(e) {
                 }));
             break;
         case f.h8.PAYPAL_INFORMATION:
-            let e5 = 0 !== eW.length && null != eV;
+            let e7 = 0 !== eW.length && null != eV;
             (a = (0, s.jsx)(ec, {})),
                 (t = (0, s.jsx)(e_, {
                     onBack: () => eD(f.h8.PAYMENT_TYPE),
                     primaryCTA: b.Z.CTAType.CONTINUE,
-                    primaryText: e5 ? W.Z.Messages.NEXT : W.Z.Messages.PAYMENT_SOURCE_CONNECT_TO_PAYPAL,
-                    onPrimary: () => (e5 ? eD(f.h8.ADDRESS) : (0, E.i0)())
+                    primaryText: e7 ? W.Z.Messages.NEXT : W.Z.Messages.PAYMENT_SOURCE_CONNECT_TO_PAYPAL,
+                    onPrimary: () => (e7 ? eD(f.h8.ADDRESS) : (0, E.i0)())
                 }));
             break;
         case f.h8.VENMO_INFORMATION:

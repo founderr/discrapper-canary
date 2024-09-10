@@ -9,7 +9,7 @@ var s = n(120356),
     a = n.n(s),
     l = n(481060),
     r = n(626786),
-    o = n(55043);
+    o = n(127340);
 function c(e) {
     let { className: t, roleColor: n, roleName: s, hasRemoveIcon: c = !1, onClick: u, disabled: d = !1, verified: h = !1 } = e;
     return (0, i.jsx)(l.Button, {

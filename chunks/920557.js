@@ -22,7 +22,7 @@ var i = n(735250),
     h = n(139256),
     N = n(294608),
     C = n(689938),
-    f = n(703308);
+    f = n(490351);
 function p(e) {
     let { percentage: t, label: n, canShowVoterDetails: a, answerId: r } = e,
         o = (0, _.Dt)(),

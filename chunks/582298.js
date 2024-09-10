@@ -11,7 +11,7 @@ var s = n(481060),
     l = n(834129),
     o = n(981631),
     c = n(689938),
-    u = n(400362);
+    u = n(657480);
 function d(e) {
     let t,
         { compact: d, isOwner: _, channel: E } = e,
@@ -19,7 +19,7 @@ function d(e) {
             let e = a.Z.getGuild(E.getGuildId());
             null != e &&
                 ((0, s.openModalLazy)(async () => {
-                    let { default: t } = await Promise.all([n.e('7654'), n.e('1187'), n.e('84003')]).then(n.bind(n, 560114));
+                    let { default: t } = await Promise.all([n.e('7654'), n.e('1187'), n.e('28299')]).then(n.bind(n, 560114));
                     return (n) =>
                         (0, i.jsx)(t, {
                             ...n,

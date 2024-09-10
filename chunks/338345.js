@@ -17,8 +17,8 @@ var a = t(120356),
     E = t(726985),
     T = t(981631),
     S = t(689938),
-    I = t(302823),
-    N = t(224499);
+    I = t(414068),
+    N = t(113207);
 function m() {
     let { enabled: e, autoToggle: s, hideInstantInvites: a, hidePersonalInformation: m, disableSounds: C, disableNotifications: A, enableContentProtection: g } = (0, r.cj)([_.Z], () => ({ ..._.Z.getSettings() })),
         h = (e, s) => {

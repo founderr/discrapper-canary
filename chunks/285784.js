@@ -19,7 +19,7 @@ var l = t(735250),
     i = t(481060),
     r = t(765305),
     u = t(689938),
-    a = t(573863);
+    a = t(269907);
 function c(e) {
     let { text: n, disabled: t, onJoinClick: s } = e;
     return (0, l.jsx)(i.Button, {

@@ -33,7 +33,7 @@ var l = n(735250),
     x = n(646746),
     Z = n(819727),
     y = n(689938),
-    M = n(619499),
+    M = n(463061),
     P = n(621054);
 function R(e) {
     let { message: t, forwardOptions: n, sendLabel: s, canSend: _, selectedDestinations: E, isSending: S, onSend: A, showPreview: I } = e,

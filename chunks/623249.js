@@ -25,7 +25,7 @@ var i = n(735250),
     g = n(667105),
     p = n(981631),
     T = n(689938),
-    S = n(913895),
+    S = n(24444),
     C = n(708901);
 function f(e) {
     let { questId: t, errorHints: n, transitionState: s, onClose: f } = e,

@@ -11,7 +11,7 @@ var r = n(735250),
     l = n(28546),
     u = n(872635),
     c = n(185923),
-    d = n(30005);
+    d = n(3066);
 function _(e) {
     var t;
     let { editorRef: n, options: _, channel: E } = e,

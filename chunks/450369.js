@@ -29,7 +29,7 @@ var i = n(735250),
     A = n(248400),
     Z = n(981631),
     M = n(354459),
-    b = n(711612);
+    b = n(527938);
 let R = 16 / 9,
     L = (e) => {
         let { stageParticipant: t, rtcParticipant: n, channel: a, guildId: l, user: r, width: c, isModerator: u, onContextMenu: d, inPopout: h } = e,
@@ -151,7 +151,7 @@ t.Z = s.memo(function (e) {
                     (0, u.jW)(
                         t,
                         async () => {
-                            let { default: e } = await Promise.all([n.e('79695'), n.e('90286'), n.e('12435'), n.e('46563')]).then(n.bind(n, 757387));
+                            let { default: e } = await Promise.all([n.e('79695'), n.e('90286'), n.e('12435'), n.e('53092')]).then(n.bind(n, 757387));
                             return (t) =>
                                 (0, i.jsx)(e, {
                                     ...t,

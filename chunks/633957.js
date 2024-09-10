@@ -26,7 +26,7 @@ var i = n(735250),
     g = n(226378),
     S = n(701488),
     A = n(689938),
-    R = n(810250);
+    R = n(211655);
 function O(e) {
     var t;
     let { application: n, channelId: O, guildId: x } = e,

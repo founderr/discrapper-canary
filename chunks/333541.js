@@ -22,7 +22,7 @@ var o = n(735250),
     T = n(505905),
     p = n(185923),
     v = n(689938),
-    I = n(763940);
+    I = n(472088);
 function h(e) {
     let { customStatusEmoji: t, setCustomStatusEmoji: n, onClose: l } = e,
         r = (0, s.e7)([c.Z, m.Z], () => m.Z.getChannel(c.Z.getVoiceChannelId())),

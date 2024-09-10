@@ -18,7 +18,7 @@ var a = n(392711),
     u = n(999382),
     _ = n(981631),
     I = n(689938),
-    E = n(232802);
+    E = n(535633);
 function T() {
     var e;
     let t = (0, i.e7)([u.Z], () => u.Z.getProps().guild, []),

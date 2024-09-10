@@ -1,15 +1,15 @@
 a.d(n, {
     Ul: function () {
-        return l;
+        return _;
     },
     YE: function () {
-        return c;
+        return l;
     }
 }),
     a(47120);
 var t = a(818083),
-    o = a(981631),
-    r = a(689938);
+    r = a(981631),
+    o = a(689938);
 n.ZP = (0, t.B)({
     kind: 'user',
     id: '2021-08_regional_payment_methods',
@@ -24,7 +24,7 @@ n.ZP = (0, t.B)({
             id: 1,
             label: 'Regional Payment Method for Germany',
             config: {
-                enabledPaymentTypes: [o.HeQ.SOFORT],
+                enabledPaymentTypes: [r.HeQ.SOFORT],
                 forceCountryCode: 'DE',
                 validCountryCodes: ['DE']
             }
@@ -33,7 +33,7 @@ n.ZP = (0, t.B)({
             id: 2,
             label: 'Regional Payment Method for US',
             config: {
-                enabledPaymentTypes: [o.HeQ.VENMO, o.HeQ.CASH_APP],
+                enabledPaymentTypes: [r.HeQ.VENMO, r.HeQ.CASH_APP],
                 forceCountryCode: 'US',
                 validCountryCodes: ['US']
             }
@@ -60,7 +60,7 @@ n.ZP = (0, t.B)({
             id: 5,
             label: 'Regional Payment Method for Poland',
             config: {
-                enabledPaymentTypes: [o.HeQ.PRZELEWY24],
+                enabledPaymentTypes: [r.HeQ.PRZELEWY24],
                 forceCountryCode: 'PL',
                 validCountryCodes: ['PL']
             }
@@ -69,7 +69,7 @@ n.ZP = (0, t.B)({
             id: 6,
             label: 'Enable paysafecard',
             config: {
-                enabledPaymentTypes: [o.HeQ.PAYSAFE_CARD],
+                enabledPaymentTypes: [r.HeQ.PAYSAFE_CARD],
                 forceCountryCode: 'DE',
                 validCountryCodes: ['BG', 'CZ', 'DK', 'HU', 'RO', 'SE', 'DE']
             }
@@ -78,7 +78,7 @@ n.ZP = (0, t.B)({
             id: 7,
             label: 'Regional Payment Method for Philippines',
             config: {
-                enabledPaymentTypes: [o.HeQ.GCASH],
+                enabledPaymentTypes: [r.HeQ.GCASH],
                 forceCountryCode: 'PH',
                 validCountryCodes: ['PH']
             }
@@ -87,7 +87,7 @@ n.ZP = (0, t.B)({
             id: 8,
             label: 'Regional Payment Method for Malaysia',
             config: {
-                enabledPaymentTypes: [o.HeQ.GRABPAY_MY],
+                enabledPaymentTypes: [r.HeQ.GRABPAY_MY],
                 forceCountryCode: 'MY',
                 validCountryCodes: ['MY']
             }
@@ -96,7 +96,7 @@ n.ZP = (0, t.B)({
             id: 9,
             label: 'Regional Payment Method for Vietnam',
             config: {
-                enabledPaymentTypes: [o.HeQ.MOMO_WALLET],
+                enabledPaymentTypes: [r.HeQ.MOMO_WALLET],
                 forceCountryCode: 'VN',
                 validCountryCodes: ['VN']
             }
@@ -105,7 +105,7 @@ n.ZP = (0, t.B)({
             id: 10,
             label: 'Regional Payment Method for Indonesia',
             config: {
-                enabledPaymentTypes: [o.HeQ.GOPAY_WALLET],
+                enabledPaymentTypes: [r.HeQ.GOPAY_WALLET],
                 forceCountryCode: 'ID',
                 validCountryCodes: ['ID']
             }
@@ -114,7 +114,7 @@ n.ZP = (0, t.B)({
             id: 11,
             label: 'Regional Payment Method for South Korea',
             config: {
-                enabledPaymentTypes: [o.HeQ.KAKAOPAY],
+                enabledPaymentTypes: [r.HeQ.KAKAOPAY],
                 forceCountryCode: 'KR',
                 validCountryCodes: ['KR']
             }
@@ -123,7 +123,7 @@ n.ZP = (0, t.B)({
             id: 12,
             label: 'Regional Payment Method for Belgium',
             config: {
-                enabledPaymentTypes: [o.HeQ.PAYSAFE_CARD, o.HeQ.SOFORT, o.HeQ.BANCONTACT],
+                enabledPaymentTypes: [r.HeQ.PAYSAFE_CARD, r.HeQ.SOFORT, r.HeQ.BANCONTACT],
                 forceCountryCode: 'BE',
                 validCountryCodes: ['BE']
             }
@@ -132,7 +132,7 @@ n.ZP = (0, t.B)({
             id: 13,
             label: 'Regional Payment Method for Austria',
             config: {
-                enabledPaymentTypes: [o.HeQ.PAYSAFE_CARD, o.HeQ.EPS, o.HeQ.SOFORT],
+                enabledPaymentTypes: [r.HeQ.PAYSAFE_CARD, r.HeQ.EPS, r.HeQ.SOFORT],
                 forceCountryCode: 'AT',
                 validCountryCodes: ['AT']
             }
@@ -141,7 +141,7 @@ n.ZP = (0, t.B)({
             id: 14,
             label: 'Regional Payment Method for Netherlands',
             config: {
-                enabledPaymentTypes: [o.HeQ.PAYSAFE_CARD, o.HeQ.IDEAL, o.HeQ.SOFORT],
+                enabledPaymentTypes: [r.HeQ.PAYSAFE_CARD, r.HeQ.IDEAL, r.HeQ.SOFORT],
                 forceCountryCode: 'NL',
                 validCountryCodes: ['NL']
             }
@@ -150,7 +150,7 @@ n.ZP = (0, t.B)({
             id: 15,
             label: 'Launch Paysafecard and Sofort',
             config: {
-                enabledPaymentTypes: [o.HeQ.PAYSAFE_CARD, o.HeQ.SOFORT],
+                enabledPaymentTypes: [r.HeQ.PAYSAFE_CARD, r.HeQ.SOFORT],
                 forceCountryCode: 'ES',
                 validCountryCodes: ['ES', 'IT']
             }
@@ -159,14 +159,14 @@ n.ZP = (0, t.B)({
             id: 16,
             label: 'Launch Cash App',
             config: {
-                enabledPaymentTypes: [o.HeQ.CASH_APP],
+                enabledPaymentTypes: [r.HeQ.CASH_APP],
                 forceCountryCode: 'US',
                 validCountryCodes: ['US']
             }
         }
     ]
 });
-let i = new Map([
+let s = new Map([
     ['abn_amro', 'ABN AMRO'],
     ['asn_bank', 'ASN Bank'],
     ['bunq', 'Bunq'],
@@ -180,10 +180,10 @@ let i = new Map([
     ['triodos_bank', 'Triodos Bank'],
     ['van_lanschot', 'Van Lanschot']
 ]);
-function c(e) {
-    return void 0 !== e && i.has(e) ? i.get(e) : r.Z.Messages.PAYMENT_SOURCE_UNKNOWN;
+function l(e) {
+    return void 0 !== e && s.has(e) ? s.get(e) : o.Z.Messages.PAYMENT_SOURCE_UNKNOWN;
 }
-let s = new Map([
+let i = new Map([
     ['arzte_und_apotheker_bank', 'Ärzte- und Apothekerbank'],
     ['austrian_anadi_bank_ag', 'Austrian Anadi Bank AG'],
     ['bank_austria', 'Bank Austria'],
@@ -212,6 +212,6 @@ let s = new Map([
     ['volkskreditbank_ag', 'Volkskreditbank AG'],
     ['vr_bank_braunau', 'VR-Bank Braunau']
 ]);
-function l(e) {
-    return void 0 !== e && s.has(e) ? s.get(e) : r.Z.Messages.PAYMENT_SOURCE_UNKNOWN;
+function _(e) {
+    return void 0 !== e && i.has(e) ? i.get(e) : o.Z.Messages.PAYMENT_SOURCE_UNKNOWN;
 }

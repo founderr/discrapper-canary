@@ -22,7 +22,7 @@ var t = s(735250),
     Z = s(314172),
     p = s(981631),
     h = s(689938),
-    S = s(646474);
+    S = s(726769);
 function v(e) {
     let { user: n, currentUser: s, guild: a, guildMember: c, roles: d, highestRole: u, canManageRoles: I, onAddRole: _, onRemoveRole: f } = e,
         m = I && null != c,

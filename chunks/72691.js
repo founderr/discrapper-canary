@@ -30,7 +30,7 @@ var o = n(735250),
     M = n(981631),
     b = n(474936),
     g = n(689938),
-    j = n(947558);
+    j = n(840812);
 let L = (e) => {
         let { locale: r } = e;
         return (0, o.jsxs)(o.Fragment, {

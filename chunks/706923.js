@@ -15,7 +15,7 @@ var t = n(399606),
     c = n(812545),
     u = n(981631),
     d = n(689938),
-    g = n(608362);
+    g = n(262704);
 function _(e) {
     let { channelId: s, messageId: n, transitionState: _, onClose: S } = e,
         E = (0, t.e7)([r.Z], () => r.Z.getChannel(s)),

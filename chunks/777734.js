@@ -1,7 +1,7 @@
 var i = n(735250),
     a = n(470079),
     s = n(481060),
-    r = n(266489);
+    r = n(641388);
 let l = a.forwardRef(function (e, t) {
     let { title: n, subtitle: a, icon: l, style: o } = e;
     return (0, i.jsxs)(i.Fragment, {

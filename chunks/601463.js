@@ -10,7 +10,7 @@ var i = n(735250),
     l = n(532490),
     o = n(620929),
     c = n(689938),
-    d = n(629209);
+    d = n(837275);
 function u(e) {
     let { guildId: t, signed: n, setSigned: u, sidebarWidth: _, windowWidth: E, transition: h, brandPrimaryColor: m } = e,
         I = a.useMemo(() => (E - _) / 2, [_, E]);

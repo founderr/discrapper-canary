@@ -42,7 +42,7 @@ var i,
     S = n(65145),
     A = n(981631),
     R = n(689938),
-    O = n(2482);
+    O = n(142822);
 function x(e) {
     let { className: t, children: n } = e;
     return (0, a.jsx)('ul', {

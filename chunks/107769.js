@@ -11,7 +11,7 @@ var i = n(735250),
     o = n(55935),
     c = n(981631),
     d = n(689938),
-    u = n(252961);
+    u = n(908529);
 let _ = (e) => {
         let { IconComponent: t, className: n } = e;
         return (0, i.jsx)('div', {

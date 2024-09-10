@@ -38,7 +38,7 @@ var i = n(735250),
     w = n(356659),
     B = n(921944),
     H = n(689938),
-    G = n(135449);
+    G = n(687689);
 t.Z = s.memo(function (e) {
     var t, a;
     let V,
@@ -77,7 +77,7 @@ t.Z = s.memo(function (e) {
     function eC() {
         (0, c.openModalLazy)(
             async () => {
-                let { default: e } = await Promise.all([n.e('2668'), n.e('18963')]).then(n.bind(n, 542055));
+                let { default: e } = await Promise.all([n.e('2668'), n.e('98530')]).then(n.bind(n, 542055));
                 return (t) =>
                     (0, i.jsx)(e, {
                         ...t,

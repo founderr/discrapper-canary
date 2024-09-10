@@ -20,9 +20,9 @@ var s = n(735250),
     p = n(214852),
     A = n(621853),
     f = n(246946),
-    h = n(594174),
-    S = n(78839),
-    M = n(626135),
+    M = n(594174),
+    h = n(78839),
+    S = n(626135),
     x = n(111361),
     O = n(357355),
     b = n(937579),
@@ -35,14 +35,14 @@ var s = n(735250),
     B = n(132547),
     j = n(474936),
     G = n(981631),
-    y = n(874296);
+    y = n(700199);
 t.Z = function (e) {
     let { entrypoint: t = j.EZ.UserSettings } = e;
     (0, p.z)(m.X);
     let n = (0, g.Q)(),
         { sourceAnalyticsLocations: r, analyticsLocations: w } = (0, R.ZP)(I.Z.PREMIUM_MARKETING),
-        H = (0, l.e7)([S.ZP], () => S.ZP.hasFetchedSubscriptions()),
-        k = (0, l.e7)([h.default], () => h.default.getCurrentUser()),
+        H = (0, l.e7)([h.ZP], () => h.ZP.hasFetchedSubscriptions()),
+        k = (0, l.e7)([M.default], () => M.default.getCurrentUser()),
         F = (0, D.N)(),
         V = (0, Z.Ng)(),
         W = (0, C.V)(),
@@ -71,7 +71,7 @@ t.Z = function (e) {
         }, [n, F, V]),
         a.useEffect(() => {
             !K &&
-                M.default.track(G.rMx.PREMIUM_MARKETING_PAGE_VIEWED, {
+                S.default.track(G.rMx.PREMIUM_MARKETING_PAGE_VIEWED, {
                     location_stack: r,
                     load_duration_ms: z.current
                 });

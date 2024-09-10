@@ -11,7 +11,7 @@ var a = n(481060),
     r = n(695346),
     l = n(506071),
     o = n(353254),
-    c = n(834704);
+    c = n(911965);
 function d(e) {
     let { coverImageAsset: t, title: n, guild: d, description: u, children: _ } = e,
         E = r.QK.useSetting(),

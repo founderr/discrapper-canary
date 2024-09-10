@@ -29,7 +29,7 @@ var i = n(735250),
     g = n(809780),
     S = n(981631),
     A = n(689938),
-    R = n(758046);
+    R = n(129640);
 function O(e) {
     let { setTab: t, onJump: n, showTutorial: a, setSeenTutorial: l, closePopout: O, badgeState: M } = e,
         v = s.useRef(null),

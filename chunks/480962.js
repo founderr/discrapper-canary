@@ -10,7 +10,7 @@ var r = n(735250),
     o = n(539907),
     l = n(743236),
     u = n(21340),
-    c = n(837244);
+    c = n(667947);
 function d(e) {
     let { subMenuClassName: t, parentItem: n, isFocused: a, menuSubmenuProps: d, renderSubmenu: _ } = e,
         { focusIndex: E, isUsingKeyboardNavigation: f, ...h } = d,

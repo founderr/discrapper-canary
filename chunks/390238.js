@@ -24,7 +24,7 @@ var r = n(735250),
     p = n(46140),
     j = n(675654),
     N = n(689938),
-    b = n(228279);
+    b = n(685753);
 function v(e) {
     var a;
     let { transitionState: n, onClose: t, quest: C, location: f, reward: p } = e,

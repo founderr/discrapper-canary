@@ -12,7 +12,7 @@ var t = n(735250),
     E = n(889711),
     _ = n(246364),
     T = n(689938),
-    m = n(859955);
+    m = n(576779);
 let R = (e) => {
         let { tabs: s, selectedTab: n, onTabSelect: a, onClose: l } = e;
         return (0, t.jsx)(o.Menu, {

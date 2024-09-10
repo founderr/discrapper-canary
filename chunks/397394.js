@@ -38,7 +38,7 @@ var r = n(735250),
     S = n(787025),
     g = n(981631),
     A = n(689938),
-    N = n(19807);
+    N = n(193310);
 function O(e) {
     let { message: t, footer: n, headerClassName: i, showsCloseWindowText: a, spinner: o, onClose: l } = e;
     return (

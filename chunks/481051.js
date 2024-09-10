@@ -8,7 +8,7 @@ n(470079);
 var s = n(120356),
     a = n.n(s),
     l = n(481060),
-    r = n(442947);
+    r = n(537583);
 function o(e) {
     let { hasMentions: t, truncatedCount: n, className: s } = e;
     return (0, i.jsx)(l.Text, {

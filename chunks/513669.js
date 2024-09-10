@@ -11,7 +11,7 @@ var a = t(735250),
     o = t(481060),
     l = t(813197),
     i = t(689938),
-    d = t(709908);
+    d = t(605586);
 let c = 'custom-image',
     u = n.forwardRef(function (e, A) {
         let { selectedImageName: t, onChange: n, disabled: r = !1, name: l, alt: i, data: c } = e,

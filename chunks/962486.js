@@ -12,7 +12,7 @@ var a = n(481060),
     o = n(374939),
     c = n(726115),
     d = n(481685),
-    u = n(252065);
+    u = n(417712);
 function _(e) {
     let { tab: t, guilds: n, onScroll: _, onGuildCardClick: E, onGuildCardSeen: h } = e,
         m = (0, s.ZP)(),

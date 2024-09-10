@@ -17,8 +17,8 @@ var n = t(735250),
     E = t(930441),
     T = t(726985),
     S = t(689938),
-    I = t(780346),
-    N = t(224499);
+    I = t(325582),
+    N = t(113207);
 function m(e) {
     let { label: s, onChange: t, enabled: a, subLabel: i } = e;
     return (0, n.jsx)(l.FormSwitch, {

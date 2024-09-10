@@ -13,7 +13,7 @@ var i = n(120356),
     l = n(692547),
     u = n(481060),
     c = n(607070),
-    d = n(454867);
+    d = n(427788);
 function _(e) {
     let t,
         { color: n, size: i, forcedIconColor: _, className: E, iconClassName: f } = e,

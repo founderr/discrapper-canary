@@ -3,7 +3,7 @@ n(470079);
 var r = n(481060),
     i = n(823188),
     l = n(474936),
-    a = n(964917);
+    a = n(377628);
 function o(e) {
     let { onClick: s, isGift: n, priceOptions: l } = e;
     return (0, t.jsx)(r.Clickable, {

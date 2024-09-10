@@ -28,7 +28,7 @@ var r = n(735250),
     R = n(784222),
     v = n(149203),
     C = n(689938),
-    y = n(611540);
+    y = n(5772);
 function L(e) {
     return 'animated' in e;
 }

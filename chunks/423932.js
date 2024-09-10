@@ -1,12 +1,12 @@
 s.d(t, {
     Z: function () {
-        return n;
+        return a;
     }
 });
 var T = s(735250);
 s(470079);
 var o = s(481060);
-function n(e) {
+function a(e) {
     (0, o.openModalLazy)(
         async () => {
             let { default: e } = await s.e('76815').then(s.bind(s, 336977));

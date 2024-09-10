@@ -6,7 +6,7 @@ var a = n(120356),
     l = n(129861),
     o = n(700582),
     c = n(699516),
-    d = n(54216);
+    d = n(263443);
 t.Z = function (e) {
     let { user: t, hovered: n, subText: a, showAccountIdentifier: u, status: _, isMobile: E, className: h } = e,
         m = (0, r.e7)([c.Z], () => c.Z.getNickname(t.id));

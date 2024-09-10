@@ -21,7 +21,7 @@ var a = s(735250),
     _ = s(458879),
     x = s(981631),
     E = s(689938),
-    I = s(816497);
+    I = s(294550);
 function L(e) {
     var t;
     let { guildTemplate: s, onClose: l, onBack: L, onHubGuildInfoSet: f, onGuildCreated: T, isSlideReady: h, hasFooter: g = !0, isCommunity: N = !1 } = e,

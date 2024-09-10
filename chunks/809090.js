@@ -11,7 +11,7 @@ var r = n(735250),
     o = n(686546),
     l = n(768581),
     u = n(895924),
-    c = n(545659),
+    c = n(696967),
     d = n(970952);
 function _(e) {
     let { section: t, isSelected: n, width: a, height: _, className: E, selectable: f = !1, isSquircle: h, onFocus: p, onBlur: I, onMouseOver: m, onMouseLeave: T, ...S } = e,

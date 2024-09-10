@@ -10,7 +10,7 @@ var r = t(442837),
     o = t(600164),
     l = t(553795),
     c = t(689938),
-    i = t(564510);
+    i = t(879137);
 function d(e) {
     let { platformType: a, onContinue: t, onClose: d, img: u, headerConnect: x, headerReconnect: N, body: h, learnMoreLink: m, valueProps: C } = e,
         j = (0, r.e7)([l.Z], () => {

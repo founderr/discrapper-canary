@@ -11,7 +11,7 @@ t(470079);
 var a = t(481060),
     r = t(600164),
     s = t(689938),
-    l = t(192055);
+    l = t(830151);
 let o = (e) => {
         let { className: n, isEmailResent: t, resendEmail: r } = e;
         return (0, i.jsx)('div', {

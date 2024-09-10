@@ -6,17 +6,17 @@ s.d(t, {
 var T = s(735250);
 s(470079);
 var o = s(120356),
-    n = s.n(o),
-    a = s(481060),
-    l = s(296664);
+    a = s.n(o),
+    n = s(481060),
+    l = s(32501);
 function _(e) {
     let { tips: t, className: s, headerText: o } = e;
     return (0, T.jsxs)('div', {
-        className: n()(l.tipsSection, s),
+        className: a()(l.tipsSection, s),
         children: [
             (0, T.jsx)('div', {
                 className: l.tipsHeader,
-                children: (0, T.jsx)(a.Heading, {
+                children: (0, T.jsx)(n.Heading, {
                     variant: 'heading-lg/bold',
                     className: l.headerText,
                     children: o
@@ -30,13 +30,13 @@ function _(e) {
                         {
                             className: l.tipRow,
                             children: [
-                                (0, T.jsx)(a.Heading, {
+                                (0, T.jsx)(n.Heading, {
                                     variant: 'heading-md/semibold',
                                     color: 'text-brand',
                                     className: l.tipNumber,
                                     children: t + 1
                                 }),
-                                (0, T.jsx)(a.Text, {
+                                (0, T.jsx)(n.Text, {
                                     variant: 'text-sm/medium',
                                     children: e
                                 })

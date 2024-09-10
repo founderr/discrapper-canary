@@ -8,7 +8,7 @@ var s = n(481060),
     c = n(981631),
     u = n(921944),
     d = n(689938),
-    _ = n(66740);
+    _ = n(569252);
 t.Z = (e) => {
     let { notice: t, noticeType: n, dismissCurrentNotice: E } = e,
         I = (null == t ? void 0 : t.metadata.premiumSubscription) != null,

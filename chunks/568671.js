@@ -7,11 +7,11 @@ var s = n(735250);
 n(470079);
 var a = n(481060),
     r = n(626135),
-    i = n(413875),
+    i = n(503899),
     l = n(292352),
     o = n(981631),
     c = n(689938),
-    d = n(774167);
+    d = n(386676);
 function _() {
     return (0, s.jsxs)(a.Button, {
         innerClassName: d.qrCodeButtonContent,

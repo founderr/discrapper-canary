@@ -9,7 +9,7 @@ var a = t(481060),
     i = t(357841),
     r = t(231338),
     o = t(689938),
-    l = t(495018);
+    l = t(925477);
 function c(e) {
     let { payment: s } = e,
         t = null != s.paymentSource && s.status === r.Py.COMPLETED;

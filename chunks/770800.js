@@ -19,8 +19,8 @@ var r = n(735250),
     R = n(513547),
     D = n(65154),
     v = n(689938),
-    b = n(876975),
-    E = n(224499);
+    b = n(701491),
+    E = n(113207);
 class Z extends a.PureComponent {
     render() {
         let { transport: e, mediaSessionId: t, hidePersonalInformation: n, hostname: a } = this.props;

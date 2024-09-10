@@ -6,7 +6,7 @@ var i = n(735250),
     o = n(481060),
     c = n(514361),
     d = n(17845),
-    u = n(89866);
+    u = n(647616);
 t.Z = a.forwardRef(function (e, t) {
     let { title: n, description: a, onScroll: s, button: _, bannerClassName: E, bannerBackground: h, children: m } = e,
         I = (0, l.e7)([c.Z], () => null != c.Z.gradientPreset);

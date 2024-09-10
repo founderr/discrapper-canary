@@ -9,7 +9,7 @@ var a = t(120356),
     o = t.n(a),
     i = t(481060),
     s = t(809086),
-    l = t(132496);
+    l = t(16990);
 function c(e) {
     let { className: n, onClose: t } = e;
     return (0, r.jsx)(i.Clickable, {

@@ -6,7 +6,7 @@ var i = n(120356),
     o = n(55935),
     l = n(223021),
     u = n(689938),
-    c = n(438379);
+    c = n(825193);
 t.Z = function (e) {
     let { children: t, className: n, compact: i = !1, timestamp: d, isVisibleOnlyOnHover: _ = !1, cozyAlt: E = !1, isInline: f = !0, id: h, isEdited: p = !1 } = e,
         I = (0, o.Hg)(d),

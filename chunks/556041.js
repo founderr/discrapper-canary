@@ -4,7 +4,7 @@ var s = n(481060),
     a = n(600164),
     r = n(245315),
     l = n(689938),
-    o = n(770330);
+    o = n(905702);
 t.Z = () =>
     (0, i.jsxs)(a.Z, {
         align: a.Z.Align.CENTER,

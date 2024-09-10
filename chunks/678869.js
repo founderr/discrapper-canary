@@ -31,8 +31,8 @@ var l = n(735250),
     P = n(981631),
     Z = n(616922),
     S = n(689938),
-    M = n(346292),
-    y = n(164384);
+    M = n(290500),
+    y = n(738127);
 let A = (e, t, n) => {
     let { artist: l, media: a } = e,
         i = S.Z.Messages.MEMBER_LIST_CONTENT_FEED_USER_LISTENING_TO_MEDIA_ARTIST,

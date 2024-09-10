@@ -8,7 +8,7 @@ n(470079);
 var r = n(481060),
     i = n(471445),
     a = n(742593),
-    l = n(639843);
+    l = n(577491);
 function o(e) {
     let { channel: t } = e,
         n = (0, i.Th)(t.type);

@@ -15,7 +15,7 @@ var i = n(120356),
     d = n(78826),
     C = n(46140),
     m = n(981631),
-    p = n(272326);
+    p = n(789935);
 ((s = o || (o = {}))[(s.SMALL = 24)] = 'SMALL'), (s[(s.MEDIUM = 32)] = 'MEDIUM');
 t.Z = function (e) {
     let { className: t, gameTileSize: n = 24, quest: s, theme: o = m.BRd.DARK, withGameTile: i = !0 } = e,

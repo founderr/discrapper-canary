@@ -11,7 +11,7 @@ t(470079);
 var o = t(120356),
     r = t.n(o),
     a = t(481060),
-    l = t(74633);
+    l = t(915938);
 let i = {
     RED: l.redMessageBlock,
     YELLOW: l.yellowMessageBlock,

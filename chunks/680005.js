@@ -22,7 +22,7 @@ var l = t(860911),
     v = t(981631),
     I = t(474936),
     S = t(689938),
-    g = t(986357);
+    g = t(962083);
 function h(e) {
     let { appId: n, className: t, groupListingId: l, subscriptionType: r, guildId: s, onClick: o, onHasClicked: a, skuId: u, subscriptionPlan: d, icon: f } = e,
         { openModal: h } = (0, c.Z)({

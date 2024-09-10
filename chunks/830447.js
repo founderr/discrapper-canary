@@ -26,7 +26,7 @@ var r = n(735250),
     h = n(828214),
     p = n(898560),
     I = n(788314),
-    m = n(837244);
+    m = n(667947);
 function T(e) {
     var t;
     let { navId: n, variant: a = 'flexible', hideScroller: o = !1, className: _, children: T, onClose: S, onSelect: A } = e,

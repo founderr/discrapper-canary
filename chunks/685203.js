@@ -8,7 +8,7 @@ n(470079);
 var i = n(120356),
     a = n.n(i),
     s = n(481060),
-    o = n(896330);
+    o = n(467783);
 function l(e) {
     let { children: t, onClick: n, className: i, tooltip: l } = e;
     return (0, r.jsx)(s.Tooltip, {
