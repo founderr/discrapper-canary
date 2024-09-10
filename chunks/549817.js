@@ -1,4 +1,4 @@
-n(536091), n(47120), n(789020);
+n(536091), n(411104), n(47120), n(789020);
 var r = n(392711),
     i = n.n(r),
     a = n(544891),
@@ -74,7 +74,9 @@ function C(e) {
                           options_seen: t.body.onboarding_responses_seen
                       });
               })
-              .catch((e) => T.Z.captureException(e));
+              .catch((t) => {
+                  T.Z.captureException(Error('Failed to update onboarding responses for guild '.concat(e, ': ').concat(t.statusCode), { cause: t }));
+              });
 }
 t.Z = {
     selectOption(e, t, n, r) {
