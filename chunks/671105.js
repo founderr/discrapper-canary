@@ -1,21 +1,21 @@
 n.d(t, {
     OR: function () {
-        return s;
+        return o;
     },
     _c: function () {
-        return a;
+        return u;
     },
     bb: function () {
         return r;
     },
     iD: function () {
-        return u;
+        return a;
     }
 });
 var i = n(442837),
     l = n(581883),
-    o = n(871465);
-function s(e) {
+    s = n(871465);
+function o(e) {
     return d(
         e,
         void 0,
@@ -25,11 +25,11 @@ function s(e) {
         })
     );
 }
-function u(e) {
+function a(e) {
     var t, n;
     return d(e, void 0, null !== (n = null === (t = l.Z.settings.guilds) || void 0 === t ? void 0 : t.guilds) && void 0 !== n ? n : {});
 }
-function a(e, t) {
+function u(e, t) {
     let n = (0, i.e7)([l.Z], () => {
         var e;
         return null === (e = l.Z.settings.guilds) || void 0 === e ? void 0 : e.guilds;
@@ -38,17 +38,17 @@ function a(e, t) {
 }
 function r(e, t) {
     var n, i;
-    let o = null !== (i = null === (n = l.Z.settings.guilds) || void 0 === n ? void 0 : n.guilds) && void 0 !== i ? i : {};
-    return null != t ? d(e, t, o) : void 0;
+    let s = null !== (i = null === (n = l.Z.settings.guilds) || void 0 === n ? void 0 : n.guilds) && void 0 !== i ? i : {};
+    return null != t ? d(e, t, s) : void 0;
 }
 function d(e, t, n) {
     var i, l;
     if (null == n) return;
-    let s = null != t ? (null === (i = n[e]) || void 0 === i ? void 0 : i.channels[t]) : n[e],
-        u = null == s ? void 0 : s.customNotificationSoundConfig;
-    return null != u
+    let o = null != t ? (null === (i = n[e]) || void 0 === i ? void 0 : i.channels[t]) : n[e],
+        a = null == o ? void 0 : o.customNotificationSoundConfig;
+    return null != a
         ? (function (e) {
-              return null != e ? Object.values(o.YC).find((t) => t === e) : void 0;
-          })(null == u ? void 0 : null === (l = u.notificationSoundPackId) || void 0 === l ? void 0 : l.value)
+              return null != e ? Object.values(s.YC).find((t) => t === e) : void 0;
+          })(null == a ? void 0 : null === (l = a.notificationSoundPackId) || void 0 === l ? void 0 : l.value)
         : void 0;
 }

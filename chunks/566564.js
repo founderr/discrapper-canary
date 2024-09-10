@@ -23,7 +23,7 @@ var a = r(735250),
 t.Z = (e) => {
     var t, r, s, T, S, L;
     let { handleTransition: N, numVisibleItems: O } = e,
-        { isFetching: B } = (0, m.Z)(),
+        { isFetchingCategories: B } = (0, m.Z)(),
         k = (0, l.e7)([d.default], () => d.default.getCurrentUser()),
         j = n.createRef(),
         R = (0, l.cj)([u.Z], () => ({ feature: u.Z.getCategory(o.T.THE_VAULT) })),

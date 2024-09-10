@@ -40,9 +40,9 @@ function I(e) {
                 }),
             [P]
         ),
-        j = (0, d.PL)(!0, !0),
-        y = (0, d.LD)(t.guild_id, !0),
-        Z = a.useMemo(() => (0, d.If)(t, P.id), [j, y, t, P.id]),
+        y = (0, d.PL)(!0, !0),
+        j = (0, d.LD)(t.guild_id, !0),
+        Z = a.useMemo(() => (0, d.If)(t, P.id), [y, j, t, P.id]),
         O = !Z.isGuildInstalled && !Z.isUserInstalled;
     return (
         a.useEffect(() => {

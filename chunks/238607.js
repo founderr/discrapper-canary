@@ -90,8 +90,8 @@ function B(e) {
             })
         ),
         [J, ee] = i.useState(!1),
-        et = !$ || J || Q || (P.isPlatformEmbedded && !q);
-    if (null == W || (!(0, h.Z)(B, x.xjy.JOIN) && !j)) return null;
+        et = J || Q || (P.isPlatformEmbedded && !q);
+    if (null == W || !$ || (!(0, h.Z)(B, x.xjy.JOIN) && !j)) return null;
     let en = async () => {
             if (
                 j &&

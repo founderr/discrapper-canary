@@ -9,8 +9,8 @@ s(470079);
 var n = s(703656),
     _ = s(626135),
     c = s(790527),
-    o = s(474936),
-    L = s(981631),
+    L = s(474936),
+    o = s(981631),
     r = s(689938),
     i = s(588058),
     A = s(235810);
@@ -28,24 +28,24 @@ function O(t) {
     let { onClose: e, source: s, ...i } = t;
     return (0, a.jsx)(c.Z, {
         artElement: (0, a.jsx)(E, {}),
-        type: o.cd.FOR_LATER_MODAL_UPSELL,
+        type: L.cd.FOR_LATER_MODAL_UPSELL,
         title: r.Z.Messages.FOR_LATER_UPSELL_MODAL_TITLE,
         body: r.Z.Messages.FOR_LATER_UPSELL_MODAL_BODY,
         glowUp: r.Z.Messages.FOR_LATER_UPSELL_MODAL_BODY,
         secondaryCTA: r.Z.Messages.PREMIUM_ROADBLOCK_UPSELL_SECONDARY_CTA,
         onSecondaryClick: function () {
-            _.default.track(L.rMx.PREMIUM_PROMOTION_OPENED, {
-                location_section: L.jXE.PREMIUM_FOR_LATER_UPSELL_MODAL,
-                location_object: L.qAy.NAVIGATION_LINK
+            _.default.track(o.rMx.PREMIUM_PROMOTION_OPENED, {
+                location_section: o.jXE.PREMIUM_FOR_LATER_UPSELL_MODAL,
+                location_object: o.qAy.NAVIGATION_LINK
             }),
                 e(),
-                (0, n.uL)(L.Z5c.APPLICATION_STORE);
+                (0, n.uL)(o.Z5c.APPLICATION_STORE);
         },
         showEnhancedUpsell: !0,
         analyticsSource: s,
         analyticsLocation: {
-            section: L.jXE.PREMIUM_FOR_LATER_UPSELL_MODAL,
-            object: L.qAy.BUTTON_CTA
+            section: o.jXE.PREMIUM_FOR_LATER_UPSELL_MODAL,
+            object: o.qAy.BUTTON_CTA
         },
         onClose: e,
         ...i

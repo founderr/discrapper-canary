@@ -35,8 +35,8 @@ var i = t(735250),
 let M = Array(6)
         .fill(0)
         .map((e, n) => n),
-    j = [, , ,].fill(0).map((e, n) => n),
-    y = [, , , ,].fill(0).map((e, n) => n);
+    y = [, , ,].fill(0).map((e, n) => n),
+    j = [, , , ,].fill(0).map((e, n) => n);
 function Z(e) {
     return (0, i.jsx)(O, { ...e });
 }
@@ -137,8 +137,8 @@ function H(e) {
         M = E && !S;
     a.useLayoutEffect(() => N(!1), [S]);
     let {
-        ref: j,
-        isTransitioning: y,
+        ref: y,
+        isTransitioning: j,
         onTransitionEnd: Z
     } = (0, x.Z)({
         key: r,
@@ -155,7 +155,7 @@ function H(e) {
                 num: o.length
             });
     }, [o.length, v, E]);
-    let O = M || y,
+    let O = M || j,
         H = M ? g.Z.buttonTypes.VIEW_LESS : g.Z.buttonTypes.VIEW_MORE,
         U = O ? o : A;
     return (0, i.jsxs)('div', {
@@ -167,7 +167,7 @@ function H(e) {
             }),
             (0, i.jsx)('div', {
                 className: T.sectionContentContainer,
-                ref: j,
+                ref: y,
                 onTransitionEnd: Z,
                 children: U.map((e, n) => {
                     let { command: t, application: a, section: o } = e;
@@ -248,7 +248,7 @@ function B(e) {
                                   t.id
                               );
                           }),
-                          t && j.map((e) => (0, i.jsx)(S.Z, {}, e))
+                          t && y.map((e) => (0, i.jsx)(S.Z, {}, e))
                       ]
                   })
               ]
@@ -275,7 +275,7 @@ function B(e) {
                                   t.id
                               );
                           }),
-                          t && y.map((e) => (0, i.jsx)(N.Z, { look: E.U4.LARGE_BANNER }, e))
+                          t && j.map((e) => (0, i.jsx)(N.Z, { look: E.U4.LARGE_BANNER }, e))
                       ]
                   })
               ]
@@ -301,7 +301,7 @@ function D() {
             (0, i.jsx)(g.Z, { title: R.Z.Messages.APPS }),
             (0, i.jsx)('div', {
                 className: T.sectionContentContainer,
-                children: j.map((e) => (0, i.jsx)(S.Z, {}, e))
+                children: y.map((e) => (0, i.jsx)(S.Z, {}, e))
             })
         ]
     });
