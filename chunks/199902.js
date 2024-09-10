@@ -180,20 +180,21 @@ class k extends (o = d.ZP.Store) {
         VOICE_STATE_UPDATES: function (e) {
             let { voiceStates: t } = e;
             return t.reduce((e, t) => {
-                let { userId: n, guildId: r, channelId: a, sessionId: s, selfStream: o } = t;
+                let { userId: n, guildId: r, channelId: a, sessionId: s, selfStream: o, discoverable: l } = t;
                 if (o && null != a) {
-                    var l, u;
+                    var u, c;
                     return (
                         null ==
                             i[
-                                (l = {
+                                (u = {
                                     streamType: null != r ? y.lo.GUILD : y.lo.CALL,
                                     ownerId: n,
                                     guildId: r,
-                                    channelId: a
+                                    channelId: a,
+                                    discoverable: l
                                 }).ownerId
-                            ] && (i[l.ownerId] = {}),
-                        (i[l.ownerId][null !== (u = l.guildId) && void 0 !== u ? u : C.kod] = l),
+                            ] && (i[u.ownerId] = {}),
+                        (i[u.ownerId][null !== (c = u.guildId) && void 0 !== c ? c : C.kod] = u),
                         !0
                     );
                 }
