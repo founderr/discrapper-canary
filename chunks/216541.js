@@ -17,21 +17,21 @@ var r = n(120356),
     g = n(63243),
     p = n(244488);
 let C = (e) => {
-    let { product: t, isPurchased: n, isHighlighted: r, user: C, forCollectedModal: v, profileEffectClassName: m } = e,
-        { firstProfileEffect: E, firstAvatarDecoration: h } = (0, d.R)(t),
+    let { product: t, isPurchased: n, isHighlighted: r, user: C, forCollectedModal: m, profileEffectClassName: E } = e,
+        { firstProfileEffect: v, firstAvatarDecoration: h } = (0, d.R)(t),
         b = (0, i.ZP)(),
         y = (0, o.ap)(b);
     return (0, a.jsxs)('div', {
         className: f.container,
         children: [
-            null != E
+            null != v
                 ? (0, a.jsx)('div', {
-                      className: s()(f.profileEffectShopPreview, m),
+                      className: s()(f.profileEffectShopPreview, E),
                       children: (0, a.jsx)(c.Z, {
                           isHovering: r,
-                          profileEffectId: E.id,
+                          profileEffectId: v.id,
                           isPurchased: n,
-                          forCollectedModal: v,
+                          forCollectedModal: m,
                           removeSetHeight: !0
                       })
                   })

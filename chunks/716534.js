@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return H;
+        return W;
     }
 }),
     t(47120);
@@ -44,9 +44,9 @@ var i = t(735250),
     U = t(981631),
     k = t(231338),
     F = t(689938),
-    W = t(56035);
-function H(e) {
-    var n, t, r, H, Y;
+    H = t(56035);
+function W(e) {
+    var n, t, r, W, Y;
     let V,
         K,
         z,
@@ -111,12 +111,12 @@ function H(e) {
         eT(eB);
     }, [eT, eB]);
     let ek = eg && (0, g.pO)(eP),
-        eF = null !== (H = null !== (r = null != ej ? ej : eD) && void 0 !== r ? r : eG) && void 0 !== H ? H : eU,
-        eW = (0, o.e7)([T.Z], () => T.Z.enabled),
-        eH = J.paymentSourceId,
+        eF = null !== (W = null !== (r = null != ej ? ej : eD) && void 0 !== r ? r : eG) && void 0 !== W ? W : eU,
+        eH = (0, o.e7)([T.Z], () => T.Z.enabled),
+        eW = J.paymentSourceId,
         { hasEntitlements: eY, entitlements: eV } = (0, w.H)(eC.id, eg),
         eK = (0, v.Ap)(J.paymentSourceId),
-        ez = (0, N.sE)(er, eH, X),
+        ez = (0, N.sE)(er, eW, X),
         eX = (0, S.Kp)({
             isTrial: e_,
             isGift: eg,
@@ -159,7 +159,7 @@ function H(e) {
     } else if (eg && null != eB)
         z = (0, i.jsx)(D.e9, {
             plan: eC,
-            className: W.invoice,
+            className: H.invoice,
             isPrepaidPaymentSource: eK,
             isCustomGift: ek,
             invoicePreview: eB
@@ -169,10 +169,10 @@ function H(e) {
             children: [
                 (0, i.jsx)(R.KU, { negativeMarginTop: !eb }),
                 (0, i.jsxs)(R.PO, {
-                    className: W.invoice,
+                    className: H.invoice,
                     children: [
                         (0, i.jsxs)('div', {
-                            className: W.trialPriceLine,
+                            className: H.trialPriceLine,
                             children: [
                                 (0, i.jsx)(u.Text, {
                                     variant: 'text-md/bold',
@@ -185,7 +185,7 @@ function H(e) {
                             ]
                         }),
                         (0, i.jsx)('div', {
-                            className: W.afterTrialPriceLine,
+                            className: H.afterTrialPriceLine,
                             children: (0, i.jsx)(D.yT, {
                                 invoice: e0,
                                 plan: eC
@@ -198,12 +198,12 @@ function H(e) {
     else {
         if (null == eL || null == eZ || e$)
             return (0, i.jsx)('div', {
-                className: W.spinnerWrapper,
+                className: H.spinnerWrapper,
                 children: (0, i.jsx)(u.Spinner, {})
             });
         e_ && eL.subscriptionPeriodEnd !== eZ.subscriptionPeriodEnd && (V = eL.subscriptionPeriodEnd),
             (z = (0, i.jsxs)(R.PO, {
-                className: W.invoice,
+                className: H.invoice,
                 children: [
                     (0, i.jsx)(R.q9, { children: F.Z.Messages.BILLING_SWITCH_PLAN_PURCHASE_DETAILS }),
                     (0, i.jsx)(D.Lu, {
@@ -244,8 +244,8 @@ function H(e) {
                     rate: l,
                     renewalDate: o
                 })),
-                    (a = W.trialCheckbox),
-                    (r = W.trialCheckboxLabel);
+                    (a = H.trialCheckbox),
+                    (r = H.trialCheckboxLabel);
             }
             return {
                 checkboxLabel: i,
@@ -259,11 +259,11 @@ function H(e) {
         ez
             ? null
             : (0, i.jsxs)('div', {
-                  className: W.stepBody,
+                  className: H.stepBody,
                   children: [
                       null != el &&
                           (0, i.jsxs)('div', {
-                              className: W.reviewWarningMessageContainer,
+                              className: H.reviewWarningMessageContainer,
                               children: [
                                   (0, i.jsx)(u.CircleInformationIcon, {
                                       size: 'custom',
@@ -272,7 +272,7 @@ function H(e) {
                                       height: 20
                                   }),
                                   (0, i.jsx)(u.Text, {
-                                      className: W.reviewWarningMessage,
+                                      className: H.reviewWarningMessage,
                                       variant: 'text-sm/normal',
                                       children: el
                                   })
@@ -304,7 +304,7 @@ function H(e) {
                           (0, i.jsx)(u.Heading, {
                               variant: 'heading-md/normal',
                               color: 'always-white',
-                              className: W.trialHeader,
+                              className: H.trialHeader,
                               children: F.Z.Messages.REVERSE_TRIAL_PAYMENT_MODAL_INFO.format({ trialEnd: null == ef ? void 0 : ef.currentPeriodEnd })
                           }),
                       !e_ &&
@@ -320,19 +320,19 @@ function H(e) {
                                       defaultAnimationState: M.SR.LOOP,
                                       giftStyle: ev,
                                       shouldAnimate: !0,
-                                      className: W.__invalid_giftMainAnimation
+                                      className: H.__invalid_giftMainAnimation
                                   }),
                                   (0, i.jsx)(G.s, { giftRecipient: eP })
                               ]
                           }),
                       z,
                       (0, i.jsxs)('div', {
-                          className: W.paymentSourceWrapper,
+                          className: H.paymentSourceWrapper,
                           children: [
                               e_
                                   ? (0, i.jsx)(u.FormTitle, {
                                         tag: u.FormTitleTags.H5,
-                                        className: W.formTitle,
+                                        className: H.formTitle,
                                         children: F.Z.Messages.BILLING_STEP_PAYMENT_METHOD
                                     })
                                   : (0, i.jsx)(u.FormTitle, {
@@ -341,7 +341,7 @@ function H(e) {
                                     }),
                               (0, i.jsx)(p.Z, {
                                   paymentSources: Object.values(q),
-                                  selectedPaymentSourceId: eH,
+                                  selectedPaymentSourceId: eW,
                                   prependOption:
                                       eY && !e_
                                           ? {
@@ -351,12 +351,12 @@ function H(e) {
                                           : null,
                                   onChange: ee,
                                   onPaymentSourceAdd: en,
-                                  hidePersonalInformation: eW,
+                                  hidePersonalInformation: eH,
                                   isTrial: e_
                               }),
-                              eY && null == eH
+                              eY && null == eW
                                   ? (0, i.jsx)('div', {
-                                        className: W.paymentSourceOptionalWarning,
+                                        className: H.paymentSourceOptionalWarning,
                                         children: F.Z.Messages.ATTACH_PAYMENT_SOURCE_OPTIONAL_WITH_ENTITLEMENTS_WARNING.format({ months: eV.length })
                                     })
                                   : null,
@@ -364,7 +364,7 @@ function H(e) {
                                   ? null
                                   : (0, i.jsxs)(d.b, {
                                         currencies: Q,
-                                        className: W.currencyWrapper,
+                                        className: H.currencyWrapper,
                                         children: [
                                             (0, i.jsx)(u.FormTitle, {
                                                 tag: u.FormTitleTags.H5,
@@ -396,7 +396,7 @@ function H(e) {
                                             subscriptionPlan: eC,
                                             renewalInvoice: eZ,
                                             isGift: eg,
-                                            paymentSourceType: null === (t = q[null != eH ? eH : '']) || void 0 === t ? void 0 : t.type,
+                                            paymentSourceType: null === (t = q[null != eW ? eW : '']) || void 0 === t ? void 0 : t.type,
                                             isEmbeddedIAP: eI,
                                             basePrice: (0, v.aS)(eC.id, !1, eg, J)
                                         }),

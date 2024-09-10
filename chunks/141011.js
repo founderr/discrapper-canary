@@ -10,30 +10,30 @@ var a = n(735250),
     f = n(372654),
     g = n(924579);
 t.Z = (e) => {
-    let { asset: t, size: n = f.yV, className: s, style: p, children: C, categoryBannerOverride: v } = e,
-        m = (0, l.e7)([c.Z], () => c.Z.saturation),
-        E = r.useMemo(() => {
+    let { asset: t, size: n = f.yV, className: s, style: p, children: C, categoryBannerOverride: m } = e,
+        E = (0, l.e7)([c.Z], () => c.Z.saturation),
+        v = r.useMemo(() => {
             if (null == t) return p;
             let e = (0, u.uV)(t, {
                     size: n,
                     format: 'jpg'
                 }),
-                a = (null == v ? void 0 : v.blur)
+                a = (null == m ? void 0 : m.blur)
                     ? {
                           filter: 'blur(2px)',
                           transform: 'scale(1.02)'
                       }
                     : {};
-            if (1 === m)
+            if (1 === E)
                 return {
                     ...p,
-                    backgroundImage: (null == v ? void 0 : v.addGradient) ? 'url('.concat(e, '), linear-gradient(180deg, rgba(0, 71, 94, 0.6) 5%, rgba(9, 33, 65, 0.6) 95%)') : 'url('.concat(e, ')'),
+                    backgroundImage: (null == m ? void 0 : m.addGradient) ? 'url('.concat(e, '), linear-gradient(180deg, rgba(0, 71, 94, 0.6) 5%, rgba(9, 33, 65, 0.6) 95%)') : 'url('.concat(e, ')'),
                     backgroundBlendMode: 'multiply',
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     ...a
                 };
-            let r = (0, d.aD)(i.ZP.unsafe_rawColors.BLACK_500, 1 - m);
+            let r = (0, d.aD)(i.ZP.unsafe_rawColors.BLACK_500, 1 - E);
             return {
                 ...p,
                 backgroundImage: 'linear-gradient('.concat(r, ', ').concat(r, '), url(').concat(e, ')'),
@@ -42,10 +42,10 @@ t.Z = (e) => {
                 backgroundPosition: 'center',
                 ...a
             };
-        }, [t, n, m, p, null == v ? void 0 : v.blur, null == v ? void 0 : v.addGradient]);
+        }, [t, n, E, p, null == m ? void 0 : m.blur, null == m ? void 0 : m.addGradient]);
     return (0, a.jsx)('div', {
         className: o()(g.banner, s),
-        style: E,
+        style: v,
         children: C
     });
 };

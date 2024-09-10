@@ -214,7 +214,7 @@ class C extends E.Z {
                 })).setSecureFramesStateUpdateCallback) ||
             void 0 === i ||
             i.call(t, (e) => {
-                this.logger.info('Secure frames state update: '.concat(JSON.stringify(e))), this.emit(p.Sh.SecureFramesUpdate, e);
+                this.logger.info('DAVE protocol state update: '.concat(JSON.stringify(e))), this.emit(p.Sh.SecureFramesUpdate, e);
             }),
             null === (a = t.setDesktopSourceStatusCallback) ||
                 void 0 === a ||
