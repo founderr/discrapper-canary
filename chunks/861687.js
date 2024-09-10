@@ -873,8 +873,15 @@ class ea extends E.Z {
         });
     }
     _handleSecureFramesInit(e) {
-        var t;
-        e > 0 && this.logger.info('DAVE protocol init with protocol version: '.concat(e)), null === (t = this._connection) || void 0 === t || t.prepareSecureFramesEpoch('1', e, this.trueChannelId), this._sendMLSKeyPackage();
+        var t, n;
+        e > 0
+            ? (this.logger.info('DAVE protocol init with protocol version: '.concat(e)), null === (t = this._connection) || void 0 === t || t.prepareSecureFramesEpoch('1', e, this.trueChannelId), this._sendMLSKeyPackage())
+            : null === (n = this._connection) ||
+              void 0 === n ||
+              n.prepareSecureFramesTransition(0, e, () => {
+                  var t;
+                  e > 0 && this._trackSecureFrameTransition(0, e), null === (t = this._connection) || void 0 === t || t.executeSecureFramesTransition(0);
+              });
     }
     _handleSecureFramesRosterChange(e) {
         let t = [];
