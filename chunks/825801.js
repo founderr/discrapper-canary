@@ -136,7 +136,6 @@ function v(e) {
         children: [
             (0, r.jsx)(l.TooltipContainer, {
                 text: g.Z.Messages.USER_PROFILE_SEND_REACTION,
-                shouldShow: E,
                 delay: 0,
                 'aria-label': !1,
                 children: (0, r.jsx)(l.Popout, {
@@ -194,7 +193,6 @@ function v(e) {
             }),
             (0, r.jsx)(l.TooltipContainer, {
                 text: g.Z.Messages.USER_PROFILE_REPLY,
-                shouldShow: E,
                 delay: 0,
                 'aria-label': !1,
                 children: (0, r.jsx)(u.zx, {

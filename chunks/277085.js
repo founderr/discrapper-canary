@@ -40,7 +40,6 @@ function p(e) {
         children: [
             (0, r.jsx)(o.TooltipContainer, {
                 text: E.Z.Messages.EDIT,
-                shouldShow: t,
                 delay: S,
                 'aria-label': !1,
                 children: (0, r.jsx)(c.zx, {
@@ -57,7 +56,6 @@ function p(e) {
             }),
             (0, r.jsx)(o.TooltipContainer, {
                 text: E.Z.Messages.CLEAR,
-                shouldShow: t,
                 delay: S,
                 'aria-label': !1,
                 children: (0, r.jsx)(c.zx, {
