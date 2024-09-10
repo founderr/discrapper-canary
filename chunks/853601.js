@@ -7,6 +7,5 @@ e.exports = {
     art: 'art_da1432',
     defaultArt: 'defaultArt_da1432',
     tideArt: 'tideArt_da1432',
-    robertContainer: 'robertContainer_da1432',
-    stormContainer: 'stormContainer_da1432'
+    robertContainer: 'robertContainer_da1432'
 };

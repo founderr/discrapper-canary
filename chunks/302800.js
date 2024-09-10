@@ -110,11 +110,5 @@ let R = (e) =>
             backgroundSrc: n(619359),
             title: () => d.Z.Messages.COLLECTIBLES_ROBERT_SETTINGS_BANNER_TITLE,
             description: () => d.Z.Messages.COLLECTIBLES_ROBERT_SETTINGS_BANNER_DESCRIPTION
-        },
-        [c.C5.STORM]: {
-            artSrc: n(152777),
-            backgroundSrc: n(962560),
-            title: () => d.Z.Messages.COLLECTIBLES_STORM_SETTINGS_BANNER_TITLE,
-            description: () => d.Z.Messages.COLLECTIBLES_STORM_SETTINGS_BANNER_DESCRIPTION
         }
     };
