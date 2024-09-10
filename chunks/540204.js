@@ -12,27 +12,29 @@ var n = t(735250),
     l = t(430824),
     c = t(771845),
     d = t(823379),
-    _ = t(736530),
+    _ = t(997950),
     u = t(689938),
     E = t(729520);
 let T = {
     label: () => u.Z.Messages.PRIVACY_AND_SAFETY_ALL_SERVERS_OPTION_TITLE,
     value: _.T
 };
-function S(e) {
-    let { guildId: s, onChange: t } = e,
-        _ = (0, i.e7)([c.ZP], () => c.ZP.getFlattenedGuildIds()),
+function S() {
+    let { selectedGuildId: e, setSelectedGuildId: s } = (0, _.x)(),
+        t = (0, i.e7)([c.ZP], () => c.ZP.getFlattenedGuildIds()),
         u = (0, i.e7)([l.Z], () => l.Z.getGuilds()),
         S = a.useMemo(() => {
-            let e = _.map((e) => {
-                let s = u[e];
-                return null == s
-                    ? null
-                    : {
-                          label: s.name,
-                          value: s.id
-                      };
-            }).filter(d.lm);
+            let e = t
+                .map((e) => {
+                    let s = u[e];
+                    return null == s
+                        ? null
+                        : {
+                              label: s.name,
+                              value: s.id
+                          };
+                })
+                .filter(d.lm);
             return (
                 e.unshift({
                     ...T,
@@ -40,7 +42,7 @@ function S(e) {
                 }),
                 e
             );
-        }, [_, u]),
+        }, [t, u]),
         I = a.useCallback(
             (e) => {
                 let s = (null == e ? void 0 : e.label) === T.label() && (null == e ? void 0 : e.value) === T.value;
@@ -65,8 +67,10 @@ function S(e) {
         );
     return (0, n.jsx)(r.SearchableSelect, {
         wrapperClassName: E.searchableSelect,
-        onChange: t,
-        value: s,
+        onChange: (e) => {
+            s(e);
+        },
+        value: e,
         options: S,
         renderOptionPrefix: I
     });

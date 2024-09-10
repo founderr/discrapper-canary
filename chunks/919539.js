@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return C;
+        return A;
     }
 }),
     t(47120);
@@ -13,48 +13,50 @@ var n = t(735250),
     c = t(709054),
     d = t(88658),
     _ = t(695346),
-    u = t(838436),
-    E = t(51331),
-    T = t(922628),
-    S = t(726985),
-    I = t(736530),
-    N = t(981631),
-    m = t(689938);
-function C(e) {
-    let { guildId: s, isHubGuild: t } = e,
-        C = _.iG.useSetting(),
-        A = _.h2.useSetting().includes(s),
+    u = t(639814),
+    E = t(838436),
+    T = t(51331),
+    S = t(922628),
+    I = t(726985),
+    N = t(736530),
+    m = t(981631),
+    C = t(689938);
+function A() {
+    let e = (0, u.i)(),
+        s = (0, u.c)(),
+        t = _.iG.useSetting(),
+        A = _.h2.useSetting().includes(e),
         g = _.mX.useSetting(),
-        h = _.zA.useSetting().includes(s),
+        h = _.zA.useSetting().includes(e),
         O = a.useCallback(
-            (e) => {
+            (s) => {
                 let t = new Set((0, d.gl)());
-                e ? t.delete(s) : t.add(s), _.zA.updateSetting(Array.from(t));
+                s ? t.delete(e) : t.add(e), _.zA.updateSetting(Array.from(t));
             },
-            [s]
+            [e]
         );
     function p(e, s) {
-        o.default.track(N.rMx.GUILD_DEFAULT_MESSAGE_REQUEST_UPDATED, {
+        o.default.track(m.rMx.GUILD_DEFAULT_MESSAGE_REQUEST_UPDATED, {
             default_guilds_restricted: e,
             applied_to_existing_guilds: s
         });
     }
-    return (0, n.jsx)(u.U, {
-        setting: S.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_MESSAGE_REQUESTS_V2,
+    return (0, n.jsx)(E.U, {
+        setting: I.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_MESSAGE_REQUESTS_V2,
         children:
-            s === I.T
-                ? (0, n.jsx)(E.Z, {
-                      title: m.Z.Messages.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_MESSAGE_REQUESTS_SETTING_TITLE,
-                      value: !C && !g,
+            e === N.T
+                ? (0, n.jsx)(T.Z, {
+                      title: C.Z.Messages.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_MESSAGE_REQUESTS_SETTING_TITLE,
+                      value: !t && !g,
                       onChange: () => {
                           var e;
                           return (
                               (e = !g),
-                              void (0, T.V)({
-                                  header: m.Z.Messages.MESSAGE_REQUESTS_SETTING_GENERAL_MODAL_HEADER,
-                                  body: m.Z.Messages.MESSAGE_REQUESTS_SETTING_GENERAL_MODAL_DESCRIPTION,
-                                  confirmText: m.Z.Messages.NO_TEXT,
-                                  cancelText: m.Z.Messages.YES_TEXT,
+                              void (0, S.V)({
+                                  header: C.Z.Messages.MESSAGE_REQUESTS_SETTING_GENERAL_MODAL_HEADER,
+                                  body: C.Z.Messages.MESSAGE_REQUESTS_SETTING_GENERAL_MODAL_DESCRIPTION,
+                                  confirmText: C.Z.Messages.NO_TEXT,
+                                  cancelText: C.Z.Messages.YES_TEXT,
                                   confirmButtonColor: i.Button.Colors.BRAND,
                                   onConfirm: () => {
                                       _.mX.updateSetting(e), p(e, !1);
@@ -65,15 +67,15 @@ function C(e) {
                               })
                           );
                       },
-                      disabled: C,
-                      note: m.Z.Messages.PRIVACY_SETTINGS_MESSAGE_REQUESTS_DESC.format({ helpdeskArticle: l.Z.getArticleURL(N.BhN.MESSAGE_REQUESTS) })
+                      disabled: t,
+                      note: C.Z.Messages.PRIVACY_SETTINGS_MESSAGE_REQUESTS_DESC.format({ helpdeskArticle: l.Z.getArticleURL(m.BhN.MESSAGE_REQUESTS) })
                   })
-                : (0, n.jsx)(E.Z, {
-                      title: m.Z.Messages.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_MESSAGE_REQUESTS_SETTING_TITLE,
+                : (0, n.jsx)(T.Z, {
+                      title: C.Z.Messages.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_MESSAGE_REQUESTS_SETTING_TITLE,
                       value: !h,
                       onChange: O,
                       disabled: A,
-                      note: t ? m.Z.Messages.PRIVACY_SETTINGS_MESSAGE_REQUESTS_DESC_HUB.format({ helpdeskArticle: l.Z.getArticleURL(N.BhN.MESSAGE_REQUESTS) }) : m.Z.Messages.PRIVACY_SETTINGS_MESSAGE_REQUESTS_DESC.format({ helpdeskArticle: l.Z.getArticleURL(N.BhN.MESSAGE_REQUESTS) })
+                      note: s ? C.Z.Messages.PRIVACY_SETTINGS_MESSAGE_REQUESTS_DESC_HUB.format({ helpdeskArticle: l.Z.getArticleURL(m.BhN.MESSAGE_REQUESTS) }) : C.Z.Messages.PRIVACY_SETTINGS_MESSAGE_REQUESTS_DESC.format({ helpdeskArticle: l.Z.getArticleURL(m.BhN.MESSAGE_REQUESTS) })
                   })
     });
 }
