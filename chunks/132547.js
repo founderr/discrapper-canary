@@ -20,8 +20,8 @@ var s = n(735250),
     p = n(781800),
     A = n(981631),
     f = n(689938),
-    S = n(396001),
-    h = n(865215);
+    h = n(396001),
+    S = n(865215);
 let M = 'SubscriberNitroHome';
 t.Z = () => {
     (0, u.z)(_.X);
@@ -35,25 +35,25 @@ t.Z = () => {
     return (0, s.jsxs)(s.Fragment, {
         children: [
             (0, s.jsx)(o.AdvancedScrollerAuto, {
-                className: S.mainPageScroller,
+                className: h.mainPageScroller,
                 ref: e,
                 children: (0, s.jsx)('div', {
-                    className: S.container,
+                    className: h.container,
                     children: (0, s.jsxs)(d.Gt, {
                         value: r,
                         children: [
                             (0, s.jsx)(g.Z, {
-                                className: S.heroHeading,
+                                className: h.heroHeading,
                                 location: N.MQ.HOME
                             }),
                             (0, s.jsx)(I.Z, {
                                 variant: N.R0.WHATS_NEW,
-                                className: i()(S.whatsNew, { [S.whatsNewWithOriginalHeroHeading]: !(b || P) }),
+                                className: i()(h.whatsNew, { [h.whatsNewWithOriginalHeroHeading]: !(b || P) }),
                                 noBackground: !0,
                                 leftAlignHeaders: !0
                             }),
                             (0, s.jsx)(I.Z, {
-                                className: S.perksDiscoverability,
+                                className: h.perksDiscoverability,
                                 noBackground: !0,
                                 leftAlignHeaders: !0,
                                 showAllPerksButton: (0, s.jsx)(p.Z, {
@@ -62,23 +62,23 @@ t.Z = () => {
                                 })
                             }),
                             (0, s.jsx)(R.Z, {
-                                className: S.giftNitro,
+                                className: h.giftNitro,
                                 location: c.Z.PREMIUM_MARKETING_GIFT_SECTION,
                                 analyticsLocation: {
                                     page: A.ZY5.NITRO_HOME,
                                     section: A.jXE.GIFT_BANNER
                                 }
                             }),
-                            (0, s.jsx)('div', { className: S.footerSpacing }),
+                            (0, s.jsx)('div', { className: h.footerSpacing }),
                             (0, s.jsx)(l.$, {
                                 onChange: (e) => {
                                     e && !x && (E.default.track(A.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: r }), O(!0));
                                 },
-                                children: (0, s.jsx)('div', { className: S.bottomOfPageVisibilitySensor })
+                                children: (0, s.jsx)('div', { className: h.bottomOfPageVisibilitySensor })
                             }),
                             (0, s.jsx)('img', {
-                                src: h,
-                                className: S.bottomIllustration,
+                                src: S,
+                                className: h.bottomIllustration,
                                 width: 112,
                                 height: 85,
                                 alt: f.Z.Messages.IMAGE

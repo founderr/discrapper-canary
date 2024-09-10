@@ -102,7 +102,7 @@ let A = (e) => {
             ]
         });
     },
-    S = () =>
+    h = () =>
         (0, s.jsxs)(s.Fragment, {
             children: [
                 (0, s.jsx)('img', {
@@ -142,7 +142,7 @@ t.Z = (e) => {
             inTrial: l
         });
     return (
-        r && (T = (0, s.jsx)(S, {})),
+        r && (T = (0, s.jsx)(h, {})),
         (u || E) &&
             (T = (0, s.jsx)(f, {
                 inTrial: l,

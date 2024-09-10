@@ -25,8 +25,8 @@ var r = n(735250),
     d = n(190558),
     h = n(203165),
     m = n(481060),
-    x = n(410030),
-    f = n(705262),
+    f = n(410030),
+    x = n(705262),
     g = n(374794),
     p = n(246992),
     b = n(231338),
@@ -80,7 +80,7 @@ function S(e, t, n, r, a) {
     };
 }
 function y() {
-    let e = (0, x.Fg)(),
+    let e = (0, f.Fg)(),
         [{ semanticColorOverrides: t, rawColorOverrides: n }, l, o, u, d, b] = (function (e, t) {
             let [n, r] = T(''.concat(e, '-states'), [t]),
                 [l, i] = T(''.concat(e, '-index'), 0),
@@ -244,9 +244,9 @@ function y() {
                     '--custom-theme-selection-group-column-gap': 'var(--spacing-8)'
                 },
                 children: [
-                    (0, r.jsx)(f.ZP, {
-                        type: f.yH.SETTINGS,
-                        children: (0, r.jsx)(f.ZP.Basic, {
+                    (0, r.jsx)(x.ZP, {
+                        type: x.yH.SETTINGS,
+                        children: (0, r.jsx)(x.ZP.Basic, {
                             className: v.toolbarThemeSelector,
                             hideSystemSelector: !0
                         })

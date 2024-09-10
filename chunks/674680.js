@@ -35,13 +35,13 @@ function T(e) {
         p = (0, a.wj)(I) ? u : E,
         A = (g.size - g.offset - 2 * g.stroke) * 0.8,
         f = g.size - g.stroke,
-        S = {
+        h = {
             width: 0.4 * A,
             height: 0.4 * A
         },
-        h = {
-            width: S.width + 1,
-            height: S.height + 1,
+        S = {
+            width: h.width + 1,
+            height: h.height + 1,
             right: g.stroke + 1,
             bottom: g.stroke + 1,
             padding: 0
@@ -67,21 +67,21 @@ function T(e) {
             !d &&
                 (0, s.jsx)('div', {
                     className: _.lockContainer,
-                    style: h,
+                    style: S,
                     children: (0, s.jsx)(r.LockIcon, {
                         size: 'custom',
                         color: (0, l.Lq)(p.locked),
-                        ...S
+                        ...h
                     })
                 }),
             d &&
                 N === c.EP.LEGENDARY &&
                 (0, s.jsx)('div', {
                     className: _.lockContainer,
-                    style: h,
+                    style: S,
                     children: (0, s.jsx)(o.Z, {
                         className: _.confettiIcon,
-                        ...S
+                        ...h
                     })
                 })
         ]

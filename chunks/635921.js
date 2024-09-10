@@ -20,21 +20,21 @@ var a = n(120356),
     p = n(409100),
     A = n(474936),
     f = n(689938),
-    S = n(738527);
-let h = (e) => {
+    h = n(738527);
+let S = (e) => {
         let { inOfferExperience: t, inTrial: n, subscriptionTier: a, buttonClassName: i } = e,
             l = null;
         !t &&
             (l = (0, s.jsxs)('div', {
-                className: S.buttonContainer,
+                className: h.buttonContainer,
                 children: [
                     (0, s.jsx)(p.Z, {
                         forceInverted: !0,
-                        className: r()(S.button, i),
+                        className: r()(h.button, i),
                         subscriptionTier: a
                     }),
                     (0, s.jsx)(m.Z, {
-                        className: r()(S.button, i),
+                        className: r()(h.button, i),
                         forceWhite: !0
                     })
                 ]
@@ -43,9 +43,9 @@ let h = (e) => {
         return (
             n &&
                 (o = (0, s.jsx)('div', {
-                    className: S.buttonContainer,
+                    className: h.buttonContainer,
                     children: (0, s.jsx)(m.Z, {
-                        className: r()(S.button, i),
+                        className: r()(h.button, i),
                         forceWhite: !0
                     })
                 })),
@@ -57,7 +57,7 @@ let h = (e) => {
     M = (e) => {
         let { isFullscreen: t } = e;
         return (0, s.jsxs)(s.Fragment, {
-            children: [(0, s.jsx)(d.A, { className: t ? S.fullscreenSparkleStar1 : S.settingsSparkleStar1 }), (0, s.jsx)(d.A, { className: t ? S.fullscreenSparkleStar2 : S.settingsSparkleStar2 }), (0, s.jsx)(d.A, { className: t ? S.fullscreenSparkleStar3 : S.settingsSparkleStar3 }), (0, s.jsx)(d.A, { className: t ? S.fullscreenSparkleStar4 : S.settingsSparkleStar4 })]
+            children: [(0, s.jsx)(d.A, { className: t ? h.fullscreenSparkleStar1 : h.settingsSparkleStar1 }), (0, s.jsx)(d.A, { className: t ? h.fullscreenSparkleStar2 : h.settingsSparkleStar2 }), (0, s.jsx)(d.A, { className: t ? h.fullscreenSparkleStar3 : h.settingsSparkleStar3 }), (0, s.jsx)(d.A, { className: t ? h.fullscreenSparkleStar4 : h.settingsSparkleStar4 })]
         });
     };
 function x(e) {
@@ -66,7 +66,7 @@ function x(e) {
     return (0, s.jsx)(l.Text, {
         variant: t,
         color: 'always-white',
-        className: r()(S.description, { [S.descriptionBottomMargin]: n }),
+        className: r()(h.description, { [h.descriptionBottomMargin]: n }),
         children: f.Z.Messages.PREMIUM_MARKETING_HERO_HEADER_DESCRIPTION.format({ cheapestMonthlyPrice: a })
     });
 }
@@ -84,14 +84,14 @@ t.Z = (e) => {
     return (0, s.jsx)(c.Gt, {
         value: b,
         children: (0, s.jsxs)('div', {
-            className: r()(S.container, n, {
-                [S.settingsContainer]: !t,
-                [S.affinityHeight]: !t && j
+            className: r()(h.container, n, {
+                [h.settingsContainer]: !t,
+                [h.affinityHeight]: !t && j
             }),
             'data-testid': 'v2-marketing-page-hero-header',
             children: [
                 (0, s.jsxs)('div', {
-                    className: t ? S.fullscreenTextContainer : S.settingsTextContainer,
+                    className: t ? h.fullscreenTextContainer : h.settingsTextContainer,
                     children: [
                         (0, s.jsx)(l.Heading, {
                             variant: t ? 'display-lg' : 'display-md',
@@ -102,7 +102,7 @@ t.Z = (e) => {
                             ? (0, s.jsx)(N.Z, { referrer: D })
                             : j
                               ? (0, s.jsx)('div', {
-                                    className: r()(S.affinityDescription),
+                                    className: r()(h.affinityDescription),
                                     children: (0, s.jsx)(g.Z, {
                                         textColor: 'always-white',
                                         smallerText: !t
@@ -111,15 +111,15 @@ t.Z = (e) => {
                               : (0, s.jsx)(x, {}),
                         L
                             ? (0, s.jsx)('div', {
-                                  className: S.buttonContainer,
+                                  className: h.buttonContainer,
                                   children: (0, s.jsx)(m.Z, {
-                                      className: r()(S.button, a),
+                                      className: r()(h.button, a),
                                       forceWhite: !0
                                   })
                               })
                             : p
                               ? null
-                              : (0, s.jsx)(h, {
+                              : (0, s.jsx)(S, {
                                     subscriptionTier: d,
                                     inOfferExperience: v,
                                     inTrial: P,

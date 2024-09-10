@@ -15,7 +15,7 @@ n.d(t, {
         return x;
     },
     sP: function () {
-        return h;
+        return S;
     },
     t2: function () {
         return p;
@@ -92,7 +92,7 @@ function p(e, t) {
 }
 let A = (e, t, n) => ((0, r.wj)(e) ? t : n),
     f = 'getWhatsNewRow',
-    S = (e) => {
+    h = (e) => {
         let { cards: t, perksCards: n, isFullScreen: s, showTenureCard: a, shopMarketingVariation: r } = e,
             l = s ? 3 : 2,
             o = (e) => {
@@ -109,7 +109,7 @@ let A = (e, t, n) => ((0, r.wj)(e) ? t : n),
             g = O();
         return null != n.tenureBadge && o({ card: n.tenureBadge }), null != n.freeBoost && !0 === a && o({ card: n.freeBoost }), null != n.shyProject && o({ card: n.shyProject }), s && g ? (0 === t.length && c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })) : s && !g && (R || null != n.shyProject ? R && o({ card: n.referralProgram }) : c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })), o({ card: n.earlyAccess }), c(), o({ card: n.unlimitedSuperReactions }), t;
     },
-    h = (e) => {
+    S = (e) => {
         let { perksCards: t, variant: n, shopMarketingVariation: a, isFullScreen: r, showTenureCard: i, tileOrderVariant: l, isPremiumSubscriber: o } = e,
             c = [];
         switch (n) {
@@ -135,7 +135,7 @@ let A = (e, t, n) => ((0, r.wj)(e) ? t : n),
                     .otherwise(() => [t.profiles, t.clientThemes, t.serverBoosts]);
                 break;
             case T.R0.WHATS_NEW:
-                c = S({
+                c = h({
                     cards: c,
                     perksCards: t,
                     isFullScreen: r,

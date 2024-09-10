@@ -9,8 +9,8 @@ var r,
     d = n(663993),
     h = n(770146),
     m = n(772096),
-    x = n(428595),
-    f = n(532901),
+    f = n(428595),
+    x = n(532901),
     g = n(3732),
     p = n(594402);
 function b(e, t, n) {
@@ -76,7 +76,7 @@ let C = {
         },
         link: {
             ...m.ZP,
-            ...(0, f.Z)({ enableBuildOverrides: !1 }),
+            ...(0, x.Z)({ enableBuildOverrides: !1 }),
             order: 6
         },
         blockQuote: {
@@ -106,7 +106,7 @@ let C = {
             }
         },
         inlineCode: {
-            ...x.Z.RULES.inlineCode,
+            ...f.Z.RULES.inlineCode,
             order: 6,
             react: (e, t, n) =>
                 (0, l.jsx)(

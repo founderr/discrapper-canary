@@ -15,8 +15,8 @@ var r = n(735250),
     d = n(433517),
     h = n(481060),
     m = n(570140),
-    x = n(812206),
-    f = n(835473),
+    f = n(812206),
+    x = n(835473),
     g = n(681619),
     p = n(810568),
     b = n(168524),
@@ -105,10 +105,10 @@ function E() {
         }),
         [E, Z] = a.useState(''),
         O = (0, u.e7)(
-            [v.Z, x.Z],
+            [v.Z, f.Z],
             () => {
                 var e, t, n;
-                return parseInt(E) > 0 ? E : null !== (n = null === (e = v.Z.getGameByName(E)) || void 0 === e ? void 0 : e.id) && void 0 !== n ? n : null === (t = x.Z.getApplicationByName(E)) || void 0 === t ? void 0 : t.id;
+                return parseInt(E) > 0 ? E : null !== (n = null === (e = v.Z.getGameByName(E)) || void 0 === e ? void 0 : e.id) && void 0 !== n ? n : null === (t = f.Z.getApplicationByName(E)) || void 0 === t ? void 0 : t.id;
             },
             [E]
         ),
@@ -126,7 +126,7 @@ function E() {
                 let [t] = e;
                 return t;
             }),
-        P = (0, f.Z)(L).filter(_.lm);
+        P = (0, x.Z)(L).filter(_.lm);
     return (0, r.jsx)('div', {
         className: i()(I.panel),
         children: (0, r.jsxs)(h.ScrollerThin, {

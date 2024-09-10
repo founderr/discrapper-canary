@@ -34,8 +34,8 @@ var i = n(735250),
     j = n(709054),
     D = n(727258),
     w = n(605951),
-    U = n(474109),
-    G = n(741616),
+    G = n(474109),
+    U = n(741616),
     k = n(187835),
     B = n(162050),
     V = n(118122),
@@ -334,7 +334,7 @@ function ec(e) {
                         role: 'tree',
                         className: en.tree,
                         children: [
-                            (0, i.jsx)(U.Z, {
+                            (0, i.jsx)(G.Z, {
                                 ref: ed,
                                 isVisible: eL.isItemVisible,
                                 onJumpTo: eL.handleJumpToGuild,
@@ -353,7 +353,7 @@ function ec(e) {
                                     ej ? (0, i.jsx)(Z.Z, {}) : null,
                                     (0, i.jsx)(B.Z, {}),
                                     (0, i.jsx)(Y.Z, { isOnHubVerificationRoute: eR }),
-                                    (0, i.jsx)(G.Z, {}),
+                                    (0, i.jsx)(U.Z, {}),
                                     eD,
                                     m.map((e) => (0, i.jsx)($.Z, { guildId: e }, e)),
                                     (0, i.jsx)(J.Z, { onActivate: eO }),
@@ -408,7 +408,7 @@ function ec(e) {
                                         })
                                     })
                                   : null,
-                            (0, i.jsx)(U.Z, {
+                            (0, i.jsx)(G.Z, {
                                 reverse: !0,
                                 ref: eh,
                                 isVisible: eL.isItemVisible,

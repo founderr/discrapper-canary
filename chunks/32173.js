@@ -25,8 +25,8 @@ var i = n(399606),
     p = n(860489),
     A = n(471309),
     f = n(827686),
-    S = n(494127),
-    h = n(314684),
+    h = n(494127),
+    S = n(314684),
     M = n(687362),
     x = n(119269),
     O = n(467685),
@@ -78,9 +78,9 @@ t.Z = () => {
         eE = null != a ? m.ZP.getSkuIdForPlan(a.planId) : null,
         eT = eE === L.Si.TIER_2,
         eI = eE === L.Si.TIER_0,
-        { flipped: eR } = (0, S.JP)(),
-        { flipped: eg } = (0, S.as)(),
-        eC = (0, h.nY)({ showAnimations: !0 }),
+        { flipped: eR } = (0, h.JP)(),
+        { flipped: eg } = (0, h.as)(),
+        eC = (0, S.nY)({ showAnimations: !0 }),
         eN = null != eC ? eC.initialPercentage : void 0,
         em = null != eC ? eC.percentage : void 0,
         ep = (0, u.Z)(R.Z),
@@ -89,13 +89,13 @@ t.Z = () => {
             scrollPosition: D.Y_.TRY_IT_OUT,
             analyticsLocations: e
         }),
-        eS = () => {
+        eh = () => {
             o.Z.open(Z.oAB.VOICE, D.GA, {
                 openWithoutBackstack: !0,
                 analyticsLocations: e
             });
         },
-        eh = () => {
+        eS = () => {
             (0, T.uL)(Z.Z5c.COLLECTIBLES_SHOP);
         },
         eM = () => {
@@ -109,7 +109,7 @@ t.Z = () => {
                       subtitle: B.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_SUBTITLE_SUB,
                       description: B.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_DESCRIPTION_SUB,
                       descriptionCta: B.Z.Messages.VISIT_THE_SHOP_CTA,
-                      onCtaClick: eh,
+                      onCtaClick: eS,
                       pillText: B.Z.Messages.EARLY_ACCESS,
                       perkImage: K,
                       canReveal: eR,
@@ -206,7 +206,7 @@ t.Z = () => {
                       subtitle: B.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_SUBTITLE,
                       description: B.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_DESCRIPTION_SUB,
                       descriptionCta: B.Z.Messages.TAKE_ME_THERE,
-                      onCtaClick: eS,
+                      onCtaClick: eh,
                       perkImage: X
                   }
                 : {
@@ -223,7 +223,7 @@ t.Z = () => {
                       subtitle: B.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_SUBTITLE,
                       description: B.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_DESCRIPTION_SUB,
                       descriptionCta: B.Z.Messages.TAKE_ME_THERE,
-                      onCtaClick: eS,
+                      onCtaClick: eh,
                       perkImage: $
                   }
                 : {
@@ -240,7 +240,7 @@ t.Z = () => {
                       subtitle: B.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_SUBTITLE,
                       description: B.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_DESCRIPTION_SUB,
                       descriptionCta: B.Z.Messages.VISIT_THE_SHOP_CTA,
-                      onCtaClick: eh,
+                      onCtaClick: eS,
                       pillText: B.Z.Messages.EARLY_ACCESS,
                       perkImage: en,
                       canReveal: eg,
@@ -304,7 +304,7 @@ t.Z = () => {
                       subtitle: B.Z.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_SUBTITLE_V2,
                       description: B.Z.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_SUB,
                       descriptionCta: B.Z.Messages.VISIT_THE_SHOP_CTA,
-                      onCtaClick: eh,
+                      onCtaClick: eS,
                       perkImage: ei
                   }
                 : {
@@ -322,7 +322,7 @@ t.Z = () => {
                       subtitle: B.Z.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_SUBTITLE_V2,
                       description: B.Z.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_SUB,
                       descriptionCta: B.Z.Messages.VISIT_THE_SHOP_CTA,
-                      onCtaClick: eh,
+                      onCtaClick: eS,
                       perkImage: el
                   }
                 : {
@@ -340,7 +340,7 @@ t.Z = () => {
                       subtitle: B.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_SPECIAL_SHOP_PERKS_SUBTITLE,
                       description: B.Z.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_SUB,
                       descriptionCta: B.Z.Messages.VISIT_THE_SHOP_CTA,
-                      onCtaClick: eh,
+                      onCtaClick: eS,
                       perkImage: ei
                   }
                 : {
@@ -349,7 +349,7 @@ t.Z = () => {
                       subtitle: B.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_SPECIAL_SHOP_PERKS_SUBTITLE,
                       description: B.Z.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_NON_SUB,
                       descriptionCta: B.Z.Messages.VISIT_THE_SHOP_CTA,
-                      onCtaClick: eh,
+                      onCtaClick: eS,
                       perkImage: ei
                   },
             unlimitedSuperReactions: eT
@@ -510,7 +510,7 @@ t.Z = () => {
                 description: eT ? B.Z.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_SUB : B.Z.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_NON_SUB,
                 descriptionCta: B.Z.Messages.VISIT_THE_SHOP_CTA,
                 pillText: B.Z.Messages.NITRO_HOME_TAB_NEW.toLocaleUpperCase(),
-                onCtaClick: eT ? eh : void 0,
+                onCtaClick: eT ? eS : void 0,
                 perkImage: W,
                 isPremiumGetCta: !eT
             }),

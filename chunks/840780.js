@@ -34,8 +34,8 @@ var i = n(735250),
     j = n(616360),
     D = n(858064),
     w = n(594190),
-    U = n(925329),
-    G = n(810568),
+    G = n(925329),
+    U = n(810568),
     k = n(168524),
     B = n(569545),
     V = n(382182),
@@ -217,7 +217,7 @@ class eZ extends l.PureComponent {
                 (0, i.jsxs)('div', {
                     className: ex.gameIconWrapper,
                     children: [
-                        (0, i.jsx)(U.Z, {
+                        (0, i.jsx)(G.Z, {
                             className: ex.gameIcon,
                             game: n,
                             pid: null == l ? void 0 : l.pid
@@ -321,10 +321,10 @@ class eZ extends l.PureComponent {
         return (0, i.jsxs)('div', {
             className: ex.gameWrapper,
             children: [
-                (0, i.jsx)(U.Z, {
+                (0, i.jsx)(G.Z, {
                     className: ex.gameIcon,
                     game: t,
-                    size: U.Z.Sizes.SMALL
+                    size: G.Z.Sizes.SMALL
                 }),
                 (0, i.jsxs)('div', {
                     className: ex.info,
@@ -455,7 +455,7 @@ function eT(e) {
         l = (0, k.Z)({
             location: 'ActivityPanelGameCard',
             applicationId: n,
-            source: G.m1.RtcPanel,
+            source: U.m1.RtcPanel,
             trackEntryPointImpression: !0
         });
     return (0, i.jsx)(h.Clickable, {

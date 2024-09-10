@@ -22,15 +22,15 @@ function g(e) {
     let { text: t, copyValue: n, children: d, onCopy: u, 'aria-label': g, delay: C = I } = e,
         [N, m] = a.useState(0),
         [p, A] = a.useState(!1),
-        [f, S] = a.useState(!1),
-        [h] = a.useState(() => new i.V7()),
+        [f, h] = a.useState(!1),
+        [S] = a.useState(() => new i.V7()),
         [M] = a.useState(() => new i.V7());
     if (
         (a.useEffect(
             () => () => {
-                h.stop(), M.stop();
+                S.stop(), M.stop();
             },
-            [h, M]
+            [S, M]
         ),
         !c.wS)
     )
@@ -39,7 +39,7 @@ function g(e) {
         O = x ? l.TooltipColors.RED : l.TooltipColors.GREEN,
         b = p ? O : l.TooltipColors.PRIMARY,
         P = () => {
-            null == u || u(), (0, c.JG)(n), o.default.track(_.rMx.TEXT_COPIED), !f && m(N + 1), S(!0), A(!0), h.start(E, () => S(!1)), M.start(T, () => m(0));
+            null == u || u(), (0, c.JG)(n), o.default.track(_.rMx.TEXT_COPIED), !f && m(N + 1), h(!0), A(!0), S.start(E, () => h(!1)), M.start(T, () => m(0));
         };
     return (0, s.jsx)(l.Tooltip, {
         text: (() => {
@@ -71,7 +71,7 @@ function g(e) {
                         null == n || n();
                         return;
                     }
-                    h.stop(), S(!1);
+                    S.stop(), h(!1);
                 }
             });
         }

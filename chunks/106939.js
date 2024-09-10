@@ -27,8 +27,8 @@ var s = n(735250),
     p = n(108427),
     A = n(210887),
     f = n(695346),
-    S = n(594174),
-    h = n(626135),
+    h = n(594174),
+    S = n(626135),
     M = n(280570),
     x = n(914788),
     O = n(841409),
@@ -157,7 +157,7 @@ function W() {
         l = (0, b.M)(),
         { selectedTab: u, handleTabChange: T } = (0, O.Z)(),
         I = (0, g.Dt)(),
-        N = S.default.getCurrentUser(),
+        N = h.default.getCurrentUser(),
         A = null != e,
         f = r && null != N && !A;
     return (a.useEffect(() => {
@@ -172,7 +172,7 @@ function W() {
     a.useEffect(() => {
         r &&
             A &&
-            (h.default.track(B.rMx.FAMILY_CENTER_VIEWED, {
+            (S.default.track(B.rMx.FAMILY_CENTER_VIEWED, {
                 is_considered_adult: e,
                 num_of_accepted_links: t,
                 selected_teen_id: l,
@@ -213,7 +213,7 @@ function K() {
         L = (0, c.e7)([A.Z], () => A.Z.theme),
         { selectedTab: Z, handleTabChange: D } = (0, O.Z)(),
         H = (0, g.Dt)(),
-        F = S.default.getCurrentUser(),
+        F = h.default.getCurrentUser(),
         W = null != t,
         K = l && null != F && !W;
     if (
@@ -230,7 +230,7 @@ function K() {
         a.useEffect(() => {
             l &&
                 W &&
-                (h.default.track(B.rMx.FAMILY_CENTER_VIEWED, {
+                (S.default.track(B.rMx.FAMILY_CENTER_VIEWED, {
                     is_considered_adult: t,
                     num_of_accepted_links: n,
                     selected_teen_id: N,

@@ -3,7 +3,7 @@ n.d(t, {
         return j;
     },
     LW: function () {
-        return U;
+        return G;
     },
     OO: function () {
         return D;
@@ -276,7 +276,7 @@ function w(e) {
         })
     );
 }
-function U(e) {
+function G(e) {
     let { hideGradient: t, children: n } = e;
     return (0, i.jsxs)('div', {
         className: P.footer,

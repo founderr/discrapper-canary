@@ -47,9 +47,9 @@ let C = (e) => {
 t.Z = (e) => {
     var t;
     let { className: n, variant: r = T.R0.PERKS_DISCOVERABILITY, noBackground: N = !1, leftAlignHeaders: m = !1, showAllPerksButton: p, headerClassname: A, isFullScreen: f = !0 } = e,
-        S = a.useRef(null),
-        h = (0, _.yQ)(),
-        M = (0, u.Ag)(h),
+        h = a.useRef(null),
+        S = (0, _.yQ)(),
+        M = (0, u.Ag)(S),
         x = (0, c.ZP)('perks-discoverability');
     (0, u.I2)();
     let O = (0, d.HI)({ location: T.R0.PERKS_DISCOVERABILITY }),
@@ -59,7 +59,7 @@ t.Z = (e) => {
         b && !M && P();
     }, [P, b, M]),
         a.useEffect(() => {
-            let e = S.current;
+            let e = h.current;
             if (null == e || !M || !b) return;
             let t = requestAnimationFrame(() => {
                 e.scrollIntoView({ behavior: 'smooth' }), b && P();
@@ -67,7 +67,7 @@ t.Z = (e) => {
             return () => {
                 cancelAnimationFrame(t), b && P();
             };
-        }, [S, M, b, P]);
+        }, [h, M, b, P]);
     let v = (0, I.Op)(b),
         L = (0, E.Z)(),
         Z = (0, I.mN)(),
@@ -76,7 +76,7 @@ t.Z = (e) => {
             variant: r,
             shopMarketingVariation: x,
             isFullScreen: f,
-            showTenureCard: null == h ? void 0 : h.showCard,
+            showTenureCard: null == S ? void 0 : S.showCard,
             tileOrderVariant: O,
             isPremiumSubscriber: Z
         }),
@@ -92,7 +92,7 @@ t.Z = (e) => {
                     environment: G.current
                 }),
             (0, s.jsxs)('div', {
-                ref: S,
+                ref: h,
                 className: i()(
                     g.section,
                     {

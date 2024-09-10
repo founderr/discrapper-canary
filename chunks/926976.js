@@ -15,8 +15,8 @@ var r = n(735250),
     d = n(129861),
     h = n(665149),
     m = n(594174),
-    x = n(55935),
-    f = n(120816),
+    f = n(55935),
+    x = n(120816),
     g = n(31336),
     p = n(257785),
     b = n(484036),
@@ -75,7 +75,7 @@ let I = [
                         onClose: o
                     } = e,
                     c = m.default.getUser(l),
-                    f = s()(a);
+                    x = s()(a);
                 return (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsxs)(h.ZP, {
@@ -103,8 +103,8 @@ let I = [
                                     name: 'Timestamp (local)',
                                     children: (0, r.jsx)('time', {
                                         dateTime: a.toISOString(),
-                                        title: (0, x.vc)(f, 'LLLL'),
-                                        children: (0, x.Y4)(f)
+                                        title: (0, f.vc)(x, 'LLLL'),
+                                        children: (0, f.Y4)(x)
                                     })
                                 }),
                                 null != c &&
@@ -172,7 +172,7 @@ let I = [
     };
 function k() {
     let e = a.useRef(null),
-        t = (0, c.e7)([f.Z], () => f.Z.loggedEvents),
+        t = (0, c.e7)([x.Z], () => x.Z.loggedEvents),
         [n, l] = a.useState(Object.keys(w)),
         o = t.filter((e) => {
             for (let t of n) if (w[t].filter(e)) return !0;
@@ -180,7 +180,7 @@ function k() {
         }),
         [s, d] = a.useState(void 0),
         h = o.find((e) => e.key === s),
-        { TabBar: m, renderSelectedTab: x } = (0, _.Z)({ tabs: I }, []);
+        { TabBar: m, renderSelectedTab: f } = (0, _.Z)({ tabs: I }, []);
     return (0, r.jsxs)('div', {
         ref: e,
         className: i()(T.panel, j.panel),
@@ -236,7 +236,7 @@ function k() {
                     initialHeight: null != e.current ? e.current.clientHeight / 2 : 300,
                     children: [
                         (0, r.jsx)(m, {}),
-                        x({
+                        f({
                             loggedEvent: h,
                             onClose: () => d(void 0)
                         })

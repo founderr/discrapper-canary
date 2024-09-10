@@ -20,8 +20,8 @@ var s = n(735250),
     p = n(104494),
     A = n(639119),
     f = n(8647),
-    S = n(568126),
-    h = n(605289),
+    h = n(568126),
+    S = n(605289),
     M = n(248042),
     x = n(823188),
     O = n(135785),
@@ -184,7 +184,7 @@ t.Z = (e) => {
                     inOfferExperience: ed
                 }),
                 !n && ea
-                    ? (0, s.jsx)(h.Z, {
+                    ? (0, s.jsx)(S.Z, {
                           localizedPricingPromo: es,
                           smallGap: !0
                       })
@@ -208,7 +208,7 @@ t.Z = (e) => {
                       }),
                 (0, s.jsxs)('div', {
                     className: k.promoBannerContainer,
-                    children: [(0, s.jsx)(f.Z, { isFullScreen: n }), n && ea && (0, s.jsx)(S.Z, { localizedPricingPromo: es })]
+                    children: [(0, s.jsx)(f.Z, { isFullScreen: n }), n && ea && (0, s.jsx)(h.Z, { localizedPricingPromo: es })]
                 }),
                 eT,
                 (0, s.jsx)(z, {

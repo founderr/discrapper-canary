@@ -19,10 +19,10 @@ function o(e) {
         [C, N] = s.useState(!1),
         [m, p] = s.useState(!1),
         [A, f] = s.useState(!1),
-        S = o || d || u || T || C || A,
-        h = s.useCallback(
+        h = o || d || u || T || C || A,
+        S = s.useCallback(
             async (e) => {
-                if (!S) {
+                if (!h) {
                     c(!0);
                     try {
                         await (0, r.Yw)(e.id, l.ne.ACTIVE), null == n || n();
@@ -34,11 +34,11 @@ function o(e) {
                     }
                 }
             },
-            [S, t, n]
+            [h, t, n]
         ),
         M = s.useCallback(
             async (e) => {
-                if (!S) {
+                if (!h) {
                     _(!0);
                     try {
                         await (0, r.Yw)(e.id, l.ne.DECLINED), null == n || n();
@@ -50,11 +50,11 @@ function o(e) {
                     }
                 }
             },
-            [S, t, n]
+            [h, t, n]
         ),
         x = s.useCallback(
             async (e) => {
-                if (!S) {
+                if (!h) {
                     E(!0);
                     try {
                         await (0, r.Yw)(e.id, l.ne.INACTIVE), null == n || n();
@@ -66,11 +66,11 @@ function o(e) {
                     }
                 }
             },
-            [S, t, n]
+            [h, t, n]
         ),
         O = s.useCallback(
             async (e) => {
-                if (!S) {
+                if (!h) {
                     I(!0);
                     try {
                         await (0, r.fc)(e.id), null == n || n();
@@ -82,7 +82,7 @@ function o(e) {
                     }
                 }
             },
-            [S, t, n]
+            [h, t, n]
         ),
         b = s.useCallback(async () => {
             if (!R) {
@@ -130,7 +130,7 @@ function o(e) {
             [C, t, n]
         );
     return {
-        acceptLinkRequest: h,
+        acceptLinkRequest: S,
         declineLinkRequest: M,
         disconnectLinkRequest: x,
         cancelLinkRequest: O,
