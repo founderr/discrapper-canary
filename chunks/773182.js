@@ -120,8 +120,7 @@ function j(e) {
         } = (function () {
             var e;
             let t = (0, o.e7)([Z.default], () => Z.default.getId()),
-                { recent: n } = (0, v._)(t, !0),
-                i = (0, o.e7)([C.Z], () => C.Z.getUserOutbox(t), [t]),
+                { recent: n, outbox: i } = (0, v.Z)(t),
                 r = (0, o.e7)([C.Z], () => C.Z.hasInitialized),
                 a = (0, o.e7)([T.Z], () => T.Z.hasConsented(A.pjP.PERSONALIZATION)),
                 s = null == i && r,
