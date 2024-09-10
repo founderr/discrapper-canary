@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return Y;
+        return V;
     }
 });
 var n = t(735250),
@@ -35,7 +35,7 @@ var n = t(735250),
     b = t(726985),
     Z = t(981631),
     v = t(689938),
-    j = t(202490);
+    j = t(129503);
 let B = () =>
         (0, n.jsxs)(x.Z, {
             title: v.Z.Messages.PRIVACY_AND_SAFETY_CATEGORY_TITLE_SOCIAL_PERMISSIONS,
@@ -81,32 +81,21 @@ let B = () =>
                 })
             ]
         }),
-    F = () =>
-        (0, n.jsx)(x.Z, {
-            title: v.Z.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_SUPPORT_V2,
-            webSetting: b.s6.PRIVACY_AND_SAFETY_STANDING_CATEGORY,
-            children: (0, n.jsx)(l.Z, {})
-        }),
+    F = () => (0, n.jsx)(l.Z, {}),
     y = () =>
         (0, n.jsxs)(x.Z, {
             title: v.Z.Messages.PRIVACY_AND_SAFETY_CATEGORY_TITLE_VOICE_SECURITY,
             webSetting: b.s6.PRIVACY_AND_SAFETY_VOICE_SECURITY,
             children: [(0, n.jsx)(O.Z, {}), (0, n.jsx)(L.Z, {})]
-        }),
-    V = (e) => {
-        let { children: s } = e;
-        return (0, n.jsx)('div', {
-            className: j.settingsSection,
-            children: s
         });
-    };
-function Y(e) {
+function V(e) {
     let { enabled: s } = (0, o.S)({ location: 'PrivacySafetySettingsV2' });
     return (
         a.useEffect(() => {
             (0, r.I)();
         }, []),
-        (0, n.jsxs)(V, {
+        (0, n.jsxs)('div', {
+            className: j.settingsPage,
             children: [
                 (0, n.jsx)(i.HeadingLevel, {
                     children: (0, n.jsx)(i.Heading, {

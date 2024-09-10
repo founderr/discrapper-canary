@@ -89,11 +89,11 @@ var a = t(990547),
     eL = t(46140),
     eb = t(65154),
     eZ = t(689938),
-    ev = t(54048);
+    ev = t(208637);
 let ej = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BADGE],
     eB = eO.Z,
     eU = (e) => {
-        let { unseenGiftCount: s, showPrepaidPaymentPastDueWarning: eU, impressionSource: eG, numOfPendingFamilyRequests: eF, isOverlaySupported: ey, isClipsBetaTagShowing: eV = !1, shouldMergeGameSettings: eY, isUserSettingsSearchEnabled: ew, isKeywordFilteringEnabled: ek, isStaff: eH, isInappropriateConversationWarningEnabled: eW, paymentsBlocked: eK, isEligibleForQuests: ez, showGiftNitro: eQ, isStricterMessageRequestsEnabled: eX, hasLibraryApplication: eq, hasTOTPEnabled: eJ, canBroadcastActivity: e$, developerMode: e0, isSafetySettingsV2Enabled: e1, isAdultUser: e2, hasSecureFramesVerifiedUserIds: e6 } = e;
+        let { unseenGiftCount: s, showPrepaidPaymentPastDueWarning: eU, impressionSource: eG, numOfPendingFamilyRequests: eF, isOverlaySupported: ey, isClipsBetaTagShowing: eV = !1, shouldMergeGameSettings: eY, isUserSettingsSearchEnabled: ew, isKeywordFilteringEnabled: ek, isStaff: eH, isInappropriateConversationWarningEnabled: eW, paymentsBlocked: eK, isEligibleForQuests: ez, showGiftNitro: eQ, isStricterMessageRequestsEnabled: eX, hasLibraryApplication: eq, hasTOTPEnabled: eJ, canBroadcastActivity: e$, developerMode: e0, isSafetySettingsV2Enabled: e1, isAdultUser: e6, hasSecureFramesVerifiedUserIds: e2 } = e;
         return Object.freeze({
             [eD.s6.SEARCH_NO_RESULTS]: {
                 section: u.ID.CUSTOM,
@@ -290,11 +290,6 @@ let ej = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eP.oAB.PRIVACY_AND_SAFETY_V2,
                 searchableTitles: [eZ.Z.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_STANDING],
                 parent: eD.s6.PRIVACY_AND_SAFETY_V2
-            },
-            [eD.s6.PRIVACY_AND_SAFETY_STANDING_CATEGORY]: {
-                section: eP.oAB.PRIVACY_AND_SAFETY_V2,
-                searchableTitles: [eZ.Z.Messages.SAFETY_HUB_PAGE_TITLE],
-                parent: eD.s6.PRIVACY_AND_SAFETY_STANDING
             },
             [eD.s6.PRIVACY_AND_SAFETY_ENCRYPTION]: {
                 section: eP.oAB.PRIVACY_AND_SAFETY_V2,
@@ -527,7 +522,7 @@ let ej = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eP.oAB.PRIVACY_AND_SAFETY_V2,
                 searchableTitles: [eZ.Z.Messages.SAFETY_ALERTS_SETTING_TITLE],
                 parent: eD.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
-                predicate: () => eW && !e2
+                predicate: () => eW && !e6
             },
             [eD.s6.PRIVACY_ACCOUNT_STANDING]: {
                 section: eP.oAB.PRIVACY_AND_SAFETY,
@@ -553,7 +548,7 @@ let ej = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eP.oAB.PRIVACY_AND_SAFETY_V2,
                 searchableTitles: [eZ.Z.Messages.E2EE_VERIFIED_DEVICES],
                 parent: eD.s6.PRIVACY_AND_SAFETY_VOICE_SECURITY,
-                predicate: () => e6
+                predicate: () => e2
             },
             [eD.s6.PRIVACY_FAMILY_CENTER]: {
                 section: eP.oAB.FAMILY_CENTER,
