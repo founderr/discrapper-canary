@@ -109,6 +109,7 @@ t.Z = i.memo(function (e) {
             };
         }, [null == x ? void 0 : null === (t = x.branding) || void 0 === t ? void 0 : t.primaryColor]),
         er = i.useMemo(() => {
+            var e;
             switch (!0) {
                 case !B:
                     return null;
@@ -141,6 +142,8 @@ t.Z = i.memo(function (e) {
                         ...en,
                         children: L.Z.Messages.CLAN_USER_APPLICATION_EXISTS_TAG_GUILD_PROFILE_CTA
                     });
+                case !W && (null == x ? void 0 : null === (e = x.discoveryProfileFeatures) || void 0 === e ? void 0 : e.has(y.oNc.CLAN_DISCOVERY_DISABLED)):
+                    return null;
                 case !W && q:
                     return (0, r.jsx)(v.Z, {
                         onClick: $,
@@ -162,7 +165,7 @@ t.Z = i.memo(function (e) {
                 default:
                     return null;
             }
-        }, [B, W, k, Y, z, q, K, Q, J, ee, en, $, X, et]),
+        }, [B, W, k, Y, z, null == x ? void 0 : x.discoveryProfileFeatures, q, K, Q, J, ee, en, $, X, et]),
         ei = i.useMemo(
             () => ({
                 className: D.container,

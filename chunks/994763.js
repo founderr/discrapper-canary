@@ -122,15 +122,15 @@ function ez(e, t) {
 }
 function eK(e) {
     var t;
-    let { guild: a, canManageGuild: r, canViewAuditLog: d, canViewAuditLogV2: _, canManageRoles: I, canManageGuildExpressions: E, canManageWebhooks: x, canManageBans: f, canAccessMembersPage: M, canViewGuildAnalytics: D, isOwner: j, isOwnerWithRequiredMfaLevel: Z, showDirtyGuildTemplateIndicator: k, memberCount: w, isGuildAuditLogV2Enabled: V, showAccessRate: W, onboardingStep: z, onboardingEnabled: q, welcomeScreenEmpty: Q, guildMetadata: J, section: $, canAccessClanSettings: en } = e,
-        ei = el.$.getCurrentConfig({
+    let { guild: a, isGuildAdmin: r, canManageGuild: d, canViewAuditLog: _, canViewAuditLogV2: I, canManageRoles: E, canManageGuildExpressions: x, canManageWebhooks: f, canManageBans: M, canAccessMembersPage: D, canViewGuildAnalytics: j, isOwner: Z, isOwnerWithRequiredMfaLevel: k, showDirtyGuildTemplateIndicator: w, memberCount: V, isGuildAuditLogV2Enabled: W, showAccessRate: z, onboardingStep: q, onboardingEnabled: Q, welcomeScreenEmpty: J, guildMetadata: $, section: en, canAccessClanSettings: ei } = e,
+        er = el.$.getCurrentConfig({
             guildId: a.id,
             location: 'generateSections'
         }).enabled,
-        er = () =>
+        eE = () =>
             (0, P.X$)({
                 guild: a,
-                isOwner: j,
+                isOwner: Z,
                 canManageGuildRoleSubscriptions: (0, P.H2)(a),
                 isMonetizationWaitlistEnabledForGuild: (0, g.mG)(a.id),
                 isGuildEligibleForRoleSubscriptions: (0, G.kT)(a.id),
@@ -138,10 +138,10 @@ function eK(e) {
                 isUserInCreatorMonetizationEligibleCountry: (0, g.DB)(),
                 shouldRestrictUpdatingRoleSubscriptionSettings: (0, C.cu)(a.id)
             }),
-        eE = (0, b.p)(a.id, 'guild_settings'),
-        eT = !1 === a.hasFeature(eF.oNc.CREATOR_MONETIZABLE) && !1 === a.hasFeature(eF.oNc.CREATOR_MONETIZABLE_PROVISIONAL),
-        eK =
-            eE && eT
+        eT = (0, b.p)(a.id, 'guild_settings'),
+        eK = !1 === a.hasFeature(eF.oNc.CREATOR_MONETIZABLE) && !1 === a.hasFeature(eF.oNc.CREATOR_MONETIZABLE_PROVISIONAL),
+        eq =
+            eT && eK
                 ? {
                       label: (0, s.jsx)('div', {
                           className: eY.roleSubLabel,
@@ -156,8 +156,8 @@ function eK(e) {
                       }),
                       ariaLabel: eV.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE
                   },
-        eq = (null === (t = a.clan) || void 0 === t ? void 0 : t.badge) != null ? (0, N.ky)(a.id, a.clan.badge, ek.NC.SIZE_16) : null,
-        eX = {
+        eX = (null === (t = a.clan) || void 0 === t ? void 0 : t.badge) != null ? (0, N.ky)(a.id, a.clan.badge, ek.NC.SIZE_16) : null,
+        eQ = {
             section: eF.pNK.DELETE,
             onClick() {
                 let e = ee.default.getCurrentUser();
@@ -217,9 +217,9 @@ function eK(e) {
                 size: 'xs',
                 color: 'currentColor'
             }),
-            predicate: () => Z
+            predicate: () => k
         };
-    if (ei) {
+    if (er) {
         let e = [
                 { section: u.ID.DIVIDER },
                 {
@@ -231,7 +231,7 @@ function eK(e) {
                     impressionName: i.ImpressionNames.GUILD_SETTINGS_EMOJI,
                     label: eV.Z.Messages.EMOJI,
                     element: ef.ZP,
-                    predicate: () => E
+                    predicate: () => x
                 },
                 {
                     section: eF.pNK.STICKERS,
@@ -239,7 +239,7 @@ function eK(e) {
                     label: eV.Z.Messages.GUILD_SETTINGS_STICKERS,
                     ariaLabel: eV.Z.Messages.GUILD_SETTINGS_STICKERS,
                     element: eU.Z,
-                    predicate: () => E
+                    predicate: () => x
                 },
                 {
                     section: eF.pNK.SOUNDBOARD,
@@ -247,7 +247,7 @@ function eK(e) {
                     label: eV.Z.Messages.GUILD_SETTINGS_SOUNDBOARD,
                     ariaLabel: eV.Z.Messages.GUILD_SETTINGS_SOUNDBOARD,
                     element: eb.Z,
-                    predicate: () => E
+                    predicate: () => x
                 },
                 {
                     section: eF.pNK.APP_DIRECTORY,
@@ -258,7 +258,7 @@ function eK(e) {
                             guildId: a.id,
                             entrypoint: {
                                 name: T.ApplicationDirectoryEntrypointNames.GUILD_SETTINGS,
-                                guildSettingsSection: $
+                                guildSettingsSection: en
                             }
                         }),
                             (0, c.xf)();
@@ -274,11 +274,11 @@ function eK(e) {
                         stores: [eo.Z, ed.Z],
                         element: eL.j
                     },
-                    predicate: () => r || x
+                    predicate: () => d || f
                 }
             ],
             t =
-                I || M || r
+                E || D || d
                     ? [
                           { section: u.ID.DIVIDER },
                           {
@@ -296,7 +296,7 @@ function eK(e) {
                                   stores: [ec.Z],
                                   element: eN._
                               },
-                              predicate: () => I
+                              predicate: () => E
                           },
                           {
                               section: eF.pNK.MEMBERS,
@@ -305,7 +305,7 @@ function eK(e) {
                               ariaLabel: eV.Z.Messages.MEMBERS,
                               element: eA.Z,
                               type: u.bT.CUSTOM,
-                              predicate: () => M
+                              predicate: () => D
                           },
                           {
                               section: eF.pNK.INSTANT_INVITES,
@@ -313,17 +313,17 @@ function eK(e) {
                               label: eV.Z.Messages.INVITES,
                               element: eO.Z,
                               type: u.bT.CUSTOM,
-                              predicate: () => r
+                              predicate: () => d
                           }
                       ]
                     : [],
             n = a.hasFeature(eF.oNc.COMMUNITY),
-            o = r && n,
-            N = r && !n,
-            g = !n && ((0, O.Nb)(a.id) || (0, O.ze)(a.id)),
-            C = _ && V,
-            p =
-                o || N || g || d || C || f
+            r = d && n,
+            o = d && !n,
+            N = !n && ((0, O.Nb)(a.id) || (0, O.ze)(a.id)),
+            g = I && W,
+            C =
+                r || o || N || _ || g || M
                     ? [
                           { section: u.ID.DIVIDER },
                           {
@@ -337,14 +337,14 @@ function eK(e) {
                               ariaLabel: eV.Z.Messages.SAFETY_SETUP,
                               element: eS.Z,
                               newIndicatorDismissibleContentTypes: [l.z.COMMUNITY_GUILD_SETTINGS_SAFETY],
-                              predicate: () => o
+                              predicate: () => r
                           },
                           {
                               section: eF.pNK.MODERATION,
                               impressionName: i.ImpressionNames.GUILD_SETTINGS_MODERATION,
                               label: eV.Z.Messages.SAFETY_SETUP,
                               element: ej.ZP,
-                              predicate: () => N
+                              predicate: () => o
                           },
                           {
                               section: eF.pNK.GUILD_AUTOMOD,
@@ -355,7 +355,7 @@ function eK(e) {
                               ariaLabel: eV.Z.Messages.GUILD_SETTINGS_AUTOMOD_TITLE,
                               element: A.Z,
                               newIndicatorDismissibleContentTypes: null,
-                              predicate: () => g
+                              predicate: () => N
                           },
                           {
                               section: eF.pNK.AUDIT_LOG,
@@ -363,7 +363,7 @@ function eK(e) {
                               label: eV.Z.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG,
                               element: e_.Z,
                               type: u.bT.CUSTOM,
-                              predicate: () => d
+                              predicate: () => _
                           },
                           {
                               section: eF.pNK.AUDIT_LOG_V2,
@@ -371,23 +371,23 @@ function eK(e) {
                               label: eV.Z.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG,
                               element: L.Z,
                               type: u.bT.CUSTOM,
-                              predicate: () => C
+                              predicate: () => g
                           },
                           {
                               section: eF.pNK.BANS,
                               impressionName: i.ImpressionNames.GUILD_SETTINGS_BANS,
                               label: eV.Z.Messages.BANS,
                               element: eg.Z,
-                              predicate: () => f
+                              predicate: () => M
                           }
                       ]
                     : [],
-            j = (0, v.wC)(a.id),
-            P = n && D,
-            ee = r && (a.hasFeature(eF.oNc.DISCOVERABLE) || !!(null == J ? void 0 : J.isPublished)),
-            et = r && !Q && !a.hasFeature(eF.oNc.GUILD_SERVER_GUIDE),
-            es =
-                n && (r || j || P || ee || et)
+            p = (0, v.wC)(a.id),
+            Z = n && j,
+            P = d && (a.hasFeature(eF.oNc.DISCOVERABLE) || !!(null == $ ? void 0 : $.isPublished)),
+            ee = d && !J && !a.hasFeature(eF.oNc.GUILD_SERVER_GUIDE),
+            et =
+                n && (d || p || Z || P || ee)
                     ? [
                           { section: u.ID.DIVIDER },
                           {
@@ -404,20 +404,20 @@ function eK(e) {
                                   stores: [ed.Z],
                                   element: eC.X
                               },
-                              predicate: () => r
+                              predicate: () => d
                           },
                           {
                               section: eF.pNK.ONBOARDING,
                               label: eV.Z.Messages.ONBOARDING,
                               element: eM.Z,
                               ariaLabel: eV.Z.Messages.ONBOARDING,
-                              newIndicatorDismissibleContentTypes: q ? null : [l.z.COMMUNITY_ONBOARDING_NEW_BADGE],
+                              newIndicatorDismissibleContentTypes: Q ? null : [l.z.COMMUNITY_ONBOARDING_NEW_BADGE],
                               notice: {
                                   stores: [eI.Z],
                                   element: em.Z
                               },
-                              predicate: () => j,
-                              decoration: ez(a.id, z)
+                              predicate: () => p,
+                              decoration: ez(a.id, q)
                           },
                           {
                               section: eF.pNK.ANALYTICS,
@@ -426,8 +426,8 @@ function eK(e) {
                               ariaLabel: eV.Z.Messages.SERVER_INSIGHTS,
                               element: eh.Z,
                               newIndicator: H.Z.hasHotspot(ew.v.GUILD_ANALYTICS_GUILD_SETTINGS_MENU),
-                              newIndicatorDismissibleContentTypes: W ? [l.z.GUILD_INSIGHTS_ACCESS_RATE_NEW] : null,
-                              predicate: () => P
+                              newIndicatorDismissibleContentTypes: z ? [l.z.GUILD_INSIGHTS_ACCESS_RATE_NEW] : null,
+                              predicate: () => Z
                           },
                           {
                               section: eF.pNK.DISCOVERY,
@@ -438,7 +438,7 @@ function eK(e) {
                                   stores: [ed.Z],
                                   element: ep.s
                               },
-                              predicate: () => r,
+                              predicate: () => d,
                               ariaLabel: a.hasFeature(eF.oNc.DISCOVERABLE) ? eV.Z.Messages.DISCOVERY : eV.Z.Messages.GUILD_SETTINGS_ENABLE_DISCOVERABLE
                           },
                           {
@@ -455,7 +455,7 @@ function eK(e) {
                                   element: eR.J
                               },
                               type: u.bT.CUSTOM,
-                              predicate: () => ee
+                              predicate: () => P
                           },
                           {
                               section: eF.pNK.COMMUNITY_WELCOME,
@@ -467,11 +467,11 @@ function eK(e) {
                                   stores: [K.Z],
                                   element: X.Z
                               },
-                              predicate: () => et
+                              predicate: () => ee
                           }
                       ]
                     : [],
-            ea = er()
+            es = eE()
                 ? [
                       { section: u.ID.DIVIDER },
                       {
@@ -479,7 +479,7 @@ function eK(e) {
                           label: eV.Z.Messages.MONETIZATION
                       },
                       {
-                          ...eK,
+                          ...eq,
                           section: eF.pNK.ROLE_SUBSCRIPTIONS,
                           element: y.Z,
                           type: u.bT.CUSTOM,
@@ -503,10 +503,10 @@ function eK(e) {
                       }
                   ]
                 : [],
-            ei = null != en && en,
-            el = r && !a.hasFeature(eF.oNc.COMMUNITY),
-            eE =
-                ei || el || r
+            ea = null != ei && ei,
+            er = d && !a.hasFeature(eF.oNc.COMMUNITY),
+            el =
+                ea || er || d
                     ? [
                           { section: u.ID.DIVIDER },
                           {
@@ -526,8 +526,8 @@ function eK(e) {
                                   ),
                                       (0, c.xf)();
                               },
-                              predicate: () => ei,
-                              icon: null != eq ? (0, s.jsx)(h.KQ, { src: eq }) : null
+                              predicate: () => ea,
+                              icon: null != eX ? (0, s.jsx)(h.KQ, { src: eX }) : null
                           },
                           {
                               section: eF.pNK.COMMUNITY,
@@ -535,19 +535,19 @@ function eK(e) {
                               label: eV.Z.Messages.GUILD_SETTINGS_COMMUNITY_ENABLE_COMMUNITY,
                               element: eC.Z,
                               ariaLabel: eV.Z.Messages.GUILD_SETTINGS_COMMUNITY_ENABLE_COMMUNITY,
-                              newIndicator: null != w && w >= eH.U3 && H.Z.hasHotspot(ew.v.GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL),
+                              newIndicator: null != V && V >= eH.U3 && H.Z.hasHotspot(ew.v.GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL),
                               notice: {
                                   stores: [ed.Z],
                                   element: eC.X
                               },
-                              predicate: () => el
+                              predicate: () => er
                           },
                           {
                               section: eF.pNK.WIDGET,
                               impressionName: i.ImpressionNames.GUILD_SETTINGS_WIDGET,
                               label: eV.Z.Messages.WIDGET,
                               element: ey.Z,
-                              predicate: () => r
+                              predicate: () => d
                           },
                           {
                               section: eF.pNK.VANITY_URL,
@@ -558,19 +558,19 @@ function eK(e) {
                                   stores: [eu.Z],
                                   element: eB.T
                               },
-                              predicate: () => r
+                              predicate: () => d
                           },
                           {
                               section: eF.pNK.GUILD_TEMPLATES,
                               impressionName: i.ImpressionNames.GUILD_SETTINGS_TEMPLATE,
-                              label: (0, s.jsx)(eP.Z, { showDirtyIndicator: k }),
+                              label: (0, s.jsx)(eP.Z, { showDirtyIndicator: w }),
                               ariaLabel: eV.Z.Messages.GUILD_TEMPLATES,
                               element: eG.ZP,
                               notice: {
                                   stores: [eG.Sf],
                                   element: eG.Q5
                               },
-                              predicate: () => r
+                              predicate: () => d
                           }
                       ]
                     : [];
@@ -592,9 +592,9 @@ function eK(e) {
             },
             ...e,
             ...t,
-            ...p,
+            ...C,
+            ...et,
             ...es,
-            ...ea,
             { section: u.ID.DIVIDER },
             {
                 section: eF.pNK.GUILD_PREMIUM,
@@ -605,12 +605,12 @@ function eK(e) {
                 className: eY.serverBoostTabItem,
                 icon: (0, s.jsx)(eZ.Z, { className: eY.icon })
             },
-            ...eE,
+            ...el,
             {
                 section: u.ID.DIVIDER,
-                predicate: () => Z
+                predicate: () => k
             },
-            eX
+            eQ
         ];
     }
     return [
@@ -640,14 +640,14 @@ function eK(e) {
                 stores: [ec.Z],
                 element: eN._
             },
-            predicate: () => I
+            predicate: () => E
         },
         {
             section: eF.pNK.EMOJI,
             impressionName: i.ImpressionNames.GUILD_SETTINGS_EMOJI,
             label: eV.Z.Messages.EMOJI,
             element: ef.ZP,
-            predicate: () => E
+            predicate: () => x
         },
         {
             section: eF.pNK.STICKERS,
@@ -655,7 +655,7 @@ function eK(e) {
             label: eV.Z.Messages.GUILD_SETTINGS_STICKERS,
             ariaLabel: eV.Z.Messages.GUILD_SETTINGS_STICKERS,
             element: eU.Z,
-            predicate: () => E
+            predicate: () => x
         },
         {
             section: eF.pNK.SOUNDBOARD,
@@ -663,26 +663,26 @@ function eK(e) {
             label: eV.Z.Messages.GUILD_SETTINGS_SOUNDBOARD,
             ariaLabel: eV.Z.Messages.GUILD_SETTINGS_SOUNDBOARD,
             element: eb.Z,
-            predicate: () => E
+            predicate: () => x
         },
         {
             section: eF.pNK.WIDGET,
             impressionName: i.ImpressionNames.GUILD_SETTINGS_WIDGET,
             label: eV.Z.Messages.WIDGET,
             element: ey.Z,
-            predicate: () => r
+            predicate: () => d
         },
         {
             section: eF.pNK.GUILD_TEMPLATES,
             impressionName: i.ImpressionNames.GUILD_SETTINGS_TEMPLATE,
-            label: (0, s.jsx)(eP.Z, { showDirtyIndicator: k }),
+            label: (0, s.jsx)(eP.Z, { showDirtyIndicator: w }),
             ariaLabel: eV.Z.Messages.GUILD_TEMPLATES,
             element: eG.ZP,
             notice: {
                 stores: [eG.Sf],
                 element: eG.Q5
             },
-            predicate: () => r
+            predicate: () => d
         },
         {
             section: eF.pNK.VANITY_URL,
@@ -697,12 +697,12 @@ function eK(e) {
         },
         {
             section: u.ID.DIVIDER,
-            predicate: () => r || x
+            predicate: () => d || f
         },
         {
             section: u.ID.HEADER,
             label: eV.Z.Messages.APPS,
-            predicate: () => r || x
+            predicate: () => d || f
         },
         {
             section: eF.pNK.INTEGRATIONS,
@@ -714,7 +714,7 @@ function eK(e) {
                 stores: [eo.Z, ed.Z],
                 element: eL.j
             },
-            predicate: () => r || x
+            predicate: () => d || f
         },
         {
             section: eF.pNK.APP_DIRECTORY,
@@ -725,7 +725,7 @@ function eK(e) {
                     guildId: a.id,
                     entrypoint: {
                         name: T.ApplicationDirectoryEntrypointNames.GUILD_SETTINGS,
-                        guildSettingsSection: $
+                        guildSettingsSection: en
                     }
                 }),
                     (0, c.xf)();
@@ -733,12 +733,12 @@ function eK(e) {
         },
         {
             section: u.ID.DIVIDER,
-            predicate: () => r
+            predicate: () => d
         },
         {
             section: u.ID.HEADER,
             label: eV.Z.Messages.MODERATION,
-            predicate: () => r
+            predicate: () => d
         },
         {
             section: eF.pNK.SAFETY,
@@ -747,14 +747,14 @@ function eK(e) {
             ariaLabel: eV.Z.Messages.SAFETY_SETUP,
             element: eS.Z,
             newIndicatorDismissibleContentTypes: [l.z.COMMUNITY_GUILD_SETTINGS_SAFETY],
-            predicate: () => r && a.hasFeature(eF.oNc.COMMUNITY)
+            predicate: () => d && a.hasFeature(eF.oNc.COMMUNITY)
         },
         {
             section: eF.pNK.MODERATION,
             impressionName: i.ImpressionNames.GUILD_SETTINGS_MODERATION,
             label: eV.Z.Messages.SAFETY_SETUP,
             element: ej.ZP,
-            predicate: () => r && !a.hasFeature(eF.oNc.COMMUNITY)
+            predicate: () => d && !a.hasFeature(eF.oNc.COMMUNITY)
         },
         {
             section: eF.pNK.GUILD_AUTOMOD,
@@ -773,7 +773,7 @@ function eK(e) {
             label: eV.Z.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG,
             element: e_.Z,
             type: u.bT.CUSTOM,
-            predicate: () => d
+            predicate: () => _
         },
         {
             section: eF.pNK.AUDIT_LOG_V2,
@@ -781,23 +781,23 @@ function eK(e) {
             label: eV.Z.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG,
             element: L.Z,
             type: u.bT.CUSTOM,
-            predicate: () => _ && V
+            predicate: () => I && W
         },
         {
             section: eF.pNK.BANS,
             impressionName: i.ImpressionNames.GUILD_SETTINGS_BANS,
             label: eV.Z.Messages.BANS,
             element: eg.Z,
-            predicate: () => f
+            predicate: () => M
         },
         {
             section: u.ID.DIVIDER,
-            predicate: () => r || D
+            predicate: () => d || j
         },
         {
             section: u.ID.HEADER,
             label: eV.Z.Messages.COMMUNITY,
-            predicate: () => !en && (r || D)
+            predicate: () => !ei && (d || j)
         },
         {
             section: eF.pNK.CLAN,
@@ -816,8 +816,8 @@ function eK(e) {
                 ),
                     (0, c.xf)();
             },
-            predicate: () => null != en && en,
-            icon: null != eq ? (0, s.jsx)(h.KQ, { src: eq }) : null
+            predicate: () => null != ei && ei,
+            icon: null != eX ? (0, s.jsx)(h.KQ, { src: eX }) : null
         },
         {
             section: eF.pNK.COMMUNITY,
@@ -825,25 +825,25 @@ function eK(e) {
             label: a.hasFeature(eF.oNc.COMMUNITY) ? eV.Z.Messages.OVERVIEW : eV.Z.Messages.GUILD_SETTINGS_COMMUNITY_ENABLE_COMMUNITY,
             element: eC.Z,
             ariaLabel: a.hasFeature(eF.oNc.COMMUNITY) ? eV.Z.Messages.OVERVIEW : eV.Z.Messages.GUILD_SETTINGS_COMMUNITY_ENABLE_COMMUNITY,
-            newIndicator: !a.hasFeature(eF.oNc.COMMUNITY) && null != w && w >= eH.U3 && H.Z.hasHotspot(ew.v.GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL),
+            newIndicator: !a.hasFeature(eF.oNc.COMMUNITY) && null != V && V >= eH.U3 && H.Z.hasHotspot(ew.v.GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL),
             notice: {
                 stores: [ed.Z],
                 element: eC.X
             },
-            predicate: () => r
+            predicate: () => d
         },
         {
             section: eF.pNK.ONBOARDING,
             label: eV.Z.Messages.ONBOARDING,
             element: eM.Z,
             ariaLabel: eV.Z.Messages.ONBOARDING,
-            newIndicatorDismissibleContentTypes: q ? null : [l.z.COMMUNITY_ONBOARDING_NEW_BADGE],
+            newIndicatorDismissibleContentTypes: Q ? null : [l.z.COMMUNITY_ONBOARDING_NEW_BADGE],
             notice: {
                 stores: [eI.Z],
                 element: em.Z
             },
             predicate: () => (0, v.wC)(a.id),
-            decoration: ez(a.id, z)
+            decoration: ez(a.id, q)
         },
         {
             section: eF.pNK.ANALYTICS,
@@ -852,8 +852,8 @@ function eK(e) {
             ariaLabel: eV.Z.Messages.SERVER_INSIGHTS,
             element: eh.Z,
             newIndicator: H.Z.hasHotspot(ew.v.GUILD_ANALYTICS_GUILD_SETTINGS_MENU),
-            newIndicatorDismissibleContentTypes: W ? [l.z.GUILD_INSIGHTS_ACCESS_RATE_NEW] : null,
-            predicate: () => D && a.hasFeature(eF.oNc.COMMUNITY)
+            newIndicatorDismissibleContentTypes: z ? [l.z.GUILD_INSIGHTS_ACCESS_RATE_NEW] : null,
+            predicate: () => j && a.hasFeature(eF.oNc.COMMUNITY)
         },
         {
             section: eF.pNK.DISCOVERY,
@@ -864,7 +864,7 @@ function eK(e) {
                 stores: [ed.Z],
                 element: ep.s
             },
-            predicate: () => r && a.hasFeature(eF.oNc.COMMUNITY),
+            predicate: () => d && a.hasFeature(eF.oNc.COMMUNITY),
             ariaLabel: a.hasFeature(eF.oNc.DISCOVERABLE) ? eV.Z.Messages.DISCOVERY : eV.Z.Messages.GUILD_SETTINGS_ENABLE_DISCOVERABLE
         },
         {
@@ -881,7 +881,7 @@ function eK(e) {
                 element: eR.J
             },
             type: u.bT.CUSTOM,
-            predicate: () => r && (a.hasFeature(eF.oNc.DISCOVERABLE) || !!(null == J ? void 0 : J.isPublished))
+            predicate: () => d && (a.hasFeature(eF.oNc.DISCOVERABLE) || !!(null == $ ? void 0 : $.isPublished))
         },
         {
             section: eF.pNK.COMMUNITY_WELCOME,
@@ -893,23 +893,23 @@ function eK(e) {
                 stores: [K.Z],
                 element: X.Z
             },
-            predicate: () => r && a.hasFeature(eF.oNc.COMMUNITY) && !Q && !a.hasFeature(eF.oNc.GUILD_SERVER_GUIDE)
+            predicate: () => d && a.hasFeature(eF.oNc.COMMUNITY) && !J && !a.hasFeature(eF.oNc.GUILD_SERVER_GUIDE)
         },
         {
             section: u.ID.DIVIDER,
-            predicate: er
+            predicate: eE
         },
         {
             section: u.ID.HEADER,
             label: eV.Z.Messages.MONETIZATION,
-            predicate: er
+            predicate: eE
         },
         {
-            ...eK,
+            ...eq,
             section: eF.pNK.ROLE_SUBSCRIPTIONS,
             element: y.Z,
             type: u.bT.CUSTOM,
-            predicate: er,
+            predicate: eE,
             newIndicatorDismissibleContentTypes: (0, B.sO)(a) ? [l.z.SERVER_SUBSCRIPTION_SETTINGS_NEW_BADGE_TIER_TEMPLATE] : null
         },
         {
@@ -917,7 +917,7 @@ function eK(e) {
             label: eV.Z.Messages.GUILD_PRODUCTS_TITLE,
             ariaLabel: eV.Z.Messages.GUILD_PRODUCTS_TITLE,
             element: U.Z,
-            predicate: () => er() && (0, b.p)(a.id, 'guild_product_settings_predicate') && (0, G.sy)(a)
+            predicate: () => eE() && (0, b.p)(a.id, 'guild_product_settings_predicate') && (0, G.sy)(a)
         },
         {
             section: eF.pNK.ROLE_SUBSCRIPTIONS_STORE_PAGE,
@@ -926,7 +926,7 @@ function eK(e) {
             label: eV.Z.Messages.GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_STORE_PAGE,
             ariaLabel: eV.Z.Messages.GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_STORE_PAGE,
             element: F.Z,
-            predicate: () => er() && (0, G.sy)(a)
+            predicate: () => eE() && (0, G.sy)(a)
         },
         { section: u.ID.DIVIDER },
         {
@@ -950,7 +950,7 @@ function eK(e) {
             ariaLabel: eV.Z.Messages.MEMBERS,
             element: eA.Z,
             type: u.bT.CUSTOM,
-            predicate: () => M
+            predicate: () => D
         },
         {
             section: eF.pNK.INSTANT_INVITES,
@@ -958,13 +958,13 @@ function eK(e) {
             label: eV.Z.Messages.INVITES,
             element: eO.Z,
             type: u.bT.CUSTOM,
-            predicate: () => r
+            predicate: () => d
         },
         {
             section: u.ID.DIVIDER,
-            predicate: () => Z
+            predicate: () => k
         },
-        eX
+        eQ
     ];
 }
 function eq(e, t) {
@@ -1019,49 +1019,50 @@ class eJ extends a.PureComponent {
     }
     componentDidUpdate(e) {
         let { section: t } = e,
-            { section: n, canManageGuild: s, canManageRoles: a, canManageBans: i, canManageNicknames: r, canManageGuildExpressions: l, canViewAuditLog: o, canViewAuditLogV2: d, canManageWebhooks: u, canAccessMembersPage: _, canViewGuildAnalytics: I } = this.props;
-        n !== t && eX(n, t), ((!s && !a && !i && !r && !l && !o && !d && !_ && !u) || (!o && n === eF.pNK.AUDIT_LOG) || (!d && n === eF.pNK.AUDIT_LOG_V2) || (!a && n === eF.pNK.ROLES) || (!l && n === eF.pNK.EMOJI) || (!l && n === eF.pNK.STICKERS) || (!l && n === eF.pNK.SOUNDBOARD) || (!i && n === eF.pNK.BANS) || (!I && n === eF.pNK.ANALYTICS) || (!_ && n === eF.pNK.MEMBERS)) && (0, c.xf)();
+            { section: n, isGuildAdmin: s, canManageGuild: a, canManageRoles: i, canManageBans: r, canManageNicknames: l, canManageGuildExpressions: o, canViewAuditLog: d, canViewAuditLogV2: u, canManageWebhooks: _, canAccessMembersPage: I, canViewGuildAnalytics: E } = this.props;
+        n !== t && eX(n, t), ((!s && !a && !i && !r && !l && !o && !d && !u && !I && !_) || (!d && n === eF.pNK.AUDIT_LOG) || (!u && n === eF.pNK.AUDIT_LOG_V2) || (!i && n === eF.pNK.ROLES) || (!o && n === eF.pNK.EMOJI) || (!o && n === eF.pNK.STICKERS) || (!o && n === eF.pNK.SOUNDBOARD) || (!r && n === eF.pNK.BANS) || (!E && n === eF.pNK.ANALYTICS) || (!I && n === eF.pNK.MEMBERS)) && (0, c.xf)();
     }
     render() {
         var e, t;
-        let { theme: n, sidebarTheme: a, section: i, guild: r, channels: l, canManageGuild: o, canViewAuditLog: u, canViewAuditLogV2: _, canManageRoles: I, canManageGuildExpressions: E, canManageWebhooks: T, canManageBans: m, canAccessMembersPage: N, canViewGuildAnalytics: S, isOwner: h, isOwnerWithRequiredMfaLevel: g, showDirtyGuildTemplateIndicator: C, memberCount: x, isGuildAuditLogV2Enabled: p, showAccessRate: R, onboardingStep: f, onboardingEnabled: L, welcomeScreenEmpty: O, guildMetadata: A, canAccessClanSettings: M } = this.props;
+        let { theme: n, sidebarTheme: a, section: i, guild: r, channels: l, isGuildAdmin: o, canManageGuild: u, canViewAuditLog: _, canViewAuditLogV2: I, canManageRoles: E, canManageGuildExpressions: T, canManageWebhooks: m, canManageBans: N, canAccessMembersPage: S, canViewGuildAnalytics: h, isOwner: g, isOwnerWithRequiredMfaLevel: C, showDirtyGuildTemplateIndicator: x, memberCount: p, isGuildAuditLogV2Enabled: R, showAccessRate: f, onboardingStep: L, onboardingEnabled: O, welcomeScreenEmpty: A, guildMetadata: M, canAccessClanSettings: D } = this.props;
         if (null == r) return null;
-        let D = eK({
+        let v = eK({
                 guild: r,
                 channels: l,
-                canManageGuild: o,
-                canViewAuditLog: u,
-                canViewAuditLogV2: _,
-                canManageRoles: I,
-                canManageGuildExpressions: E,
-                canManageWebhooks: T,
-                canManageBans: m,
-                canAccessMembersPage: N,
-                canViewGuildAnalytics: S,
-                isOwner: h,
-                isOwnerWithRequiredMfaLevel: g,
-                showDirtyGuildTemplateIndicator: C,
-                memberCount: x,
-                isGuildAuditLogV2Enabled: p,
-                showAccessRate: R,
-                onboardingStep: f,
-                onboardingEnabled: L,
-                welcomeScreenEmpty: O,
-                guildMetadata: A,
+                isGuildAdmin: o,
+                canManageGuild: u,
+                canViewAuditLog: _,
+                canViewAuditLogV2: I,
+                canManageRoles: E,
+                canManageGuildExpressions: T,
+                canManageWebhooks: m,
+                canManageBans: N,
+                canAccessMembersPage: S,
+                canViewGuildAnalytics: h,
+                isOwner: g,
+                isOwnerWithRequiredMfaLevel: C,
+                showDirtyGuildTemplateIndicator: x,
+                memberCount: p,
+                isGuildAuditLogV2Enabled: R,
+                showAccessRate: f,
+                onboardingStep: L,
+                onboardingEnabled: O,
+                welcomeScreenEmpty: A,
+                guildMetadata: M,
                 section: i,
-                canAccessClanSettings: M
+                canAccessClanSettings: D
             }),
-            v = (null === (t = D.find((e) => e.section === i)) || void 0 === t ? void 0 : null === (e = t.predicate) || void 0 === e ? void 0 : e.call(t)) !== !1;
+            j = (null === (t = v.find((e) => e.section === i)) || void 0 === t ? void 0 : null === (e = t.predicate) || void 0 === e ? void 0 : e.call(t)) !== !1;
         return (0, s.jsxs)('div', {
             children: [
                 (0, s.jsx)(d.ZP, {
                     theme: n,
                     sidebarTheme: a,
-                    section: v && null != i ? i : eF.pNK.OVERVIEW,
+                    section: j && null != i ? i : eF.pNK.OVERVIEW,
                     onSetSection: ea.Z.setSection,
                     onClose: c.xf,
                     title: eW(r),
-                    sections: D
+                    sections: v
                 }),
                 (0, s.jsx)(V.d, { guildId: r.id })
             ]
