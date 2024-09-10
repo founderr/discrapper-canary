@@ -1,5 +1,7 @@
 e.exports = {
     panel: 'panel_bcec8d',
+    tabBar: 'tabBar_bcec8d',
+    tab: 'tab_bcec8d',
     toolbar: 'toolbar_bcec8d',
     toolbarThemeSelector: 'toolbarThemeSelector_bcec8d',
     toolbarButtons: 'toolbarButtons_bcec8d',
@@ -13,8 +15,14 @@ e.exports = {
     semanticOverride: 'semanticOverride_bcec8d',
     overrideHeader: 'overrideHeader_bcec8d',
     title: 'title_bcec8d',
+    titleWithIcon: 'titleWithIcon_bcec8d',
     overrideHeading: 'overrideHeading_bcec8d',
     clickabeIcon: 'clickabeIcon_bcec8d',
     removeOverride: 'removeOverride_bcec8d',
-    divider: 'divider_bcec8d'
+    divider: 'divider_bcec8d',
+    formItem: 'formItem_bcec8d',
+    paletteSettings: 'paletteSettings_bcec8d',
+    section: 'section_bcec8d',
+    paletteOverrides: 'paletteOverrides_bcec8d',
+    palettePreview: 'palettePreview_bcec8d'
 };
