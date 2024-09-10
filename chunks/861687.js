@@ -295,7 +295,7 @@ class ea extends E.Z {
                 userId: this.userId,
                 sessionId: this.sessionId,
                 token: r,
-                maxSecureFramesVersion: U.Z.getSupportedSecureFramesProtocolVersion(this.guildId),
+                maxDaveProtocolVersion: U.Z.getSupportedSecureFramesProtocolVersion(this.guildId),
                 video: U.Z.supports(et.AN.VIDEO),
                 streamParameters: U.Z.getVideoStreamParameters(this.context)
             }),
@@ -873,16 +873,8 @@ class ea extends E.Z {
         });
     }
     _handleSecureFramesInit(e) {
-        var t, n;
-        e > 0 && this.logger.info('Secure frames init with protocol version: '.concat(e)),
-            e >= 100
-                ? (null === (t = this._connection) || void 0 === t || t.prepareSecureFramesEpoch('1', e, this.trueChannelId), this._sendMLSKeyPackage())
-                : null === (n = this._connection) ||
-                  void 0 === n ||
-                  n.prepareSecureFramesTransition(0, e, () => {
-                      var t;
-                      e > 0 && this._trackSecureFrameTransition(0, e), null === (t = this._connection) || void 0 === t || t.executeSecureFramesTransition(0);
-                  });
+        var t;
+        e > 0 && this.logger.info('DAVE protocol init with protocol version: '.concat(e)), null === (t = this._connection) || void 0 === t || t.prepareSecureFramesEpoch('1', e, this.trueChannelId), this._sendMLSKeyPackage();
     }
     _handleSecureFramesRosterChange(e) {
         let t = [];
@@ -895,7 +887,7 @@ class ea extends E.Z {
     }
     _handleSecureFramesPrepareTransition(e, t) {
         var n;
-        this.logger.info('Preparing secure frames transition: '.concat(e, ', protocol version: ').concat(t)),
+        this.logger.info('Preparing DAVE protocol transition: '.concat(e, ', protocol version: ').concat(t)),
             null === (n = this._connection) ||
                 void 0 === n ||
                 n.prepareSecureFramesTransition(e, t, () => {
@@ -904,7 +896,7 @@ class ea extends E.Z {
     }
     _handleSecureFramesPrepareEpoch(e, t) {
         var n;
-        this.logger.info('Preparing secure frames epoch: '.concat(e, ', protocol version: ').concat(t));
+        this.logger.info('Preparing DAVE protocol epoch: '.concat(e, ', protocol version: ').concat(t));
         let r = e.toString();
         null === (n = this._connection) || void 0 === n || n.prepareSecureFramesEpoch(r, t, this.trueChannelId), '1' === r && this._sendMLSKeyPackage();
     }
@@ -920,12 +912,12 @@ class ea extends E.Z {
     _maybeSendSecureFramesTransitionReady(e) {
         if (0 !== e) {
             var t;
-            this.logger.info('Sending secure frames ready for transition ID '.concat(e)), null === (t = this._socket) || void 0 === t || t.secureFramesReadyForTransition(e);
+            this.logger.info('Sending DAVE protocol ready for transition ID '.concat(e)), null === (t = this._socket) || void 0 === t || t.secureFramesReadyForTransition(e);
         }
     }
     _handleSecureFramesExecuteTransition(e) {
         var t;
-        this.logger.info('Executing secure frames transition: '.concat(e)), null === (t = this._connection) || void 0 === t || t.executeSecureFramesTransition(e);
+        this.logger.info('Executing DAVE protocol transition: '.concat(e)), null === (t = this._connection) || void 0 === t || t.executeSecureFramesTransition(e);
     }
     _handleMLSExternalSenderPackage(e) {
         var t;

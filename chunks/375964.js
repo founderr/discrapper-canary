@@ -2473,6 +2473,7 @@ e.exports = Object.freeze({
     CONNECTED_ACCOUNT_VERIFY_FAILURE: 'Failed to connect your **!!{name}!!** account to **Discord**',
     CONNECTED_ACCOUNT_VERIFY_FAILURE_DETAILS: "We're sorry, there was a problem connecting. You can close this window and try again.",
     CONNECTED_ACCOUNT_VERIFY_FAILURE_PSN_CHILD_ACCOUNT_DETAILS: 'This PlayStation Network account requires communication features to be enabled by a parent account.',
+    CONNECTED_ACCOUNT_VERIFY_FAILURE_YOUTUBE_PROFILE: 'You need a YouTube channel to connect your account. Create one by following the steps [here]({link})',
     CONNECTED_ACCOUNT_HELP_CENTER_ARTICLE: 'If problem continues see $[link](link) for help.',
     CONNECTED_ACCOUNT_HELP_CENTER_ARTICLE_MOBILE: 'If problem continues try connecting on desktop or see $[link](link) for help.',
     DISCONNECT_ACCOUNT: 'Disconnect',

@@ -1,43 +1,39 @@
 t.r(n),
     t.d(n, {
         VerifyAccountLoading: function () {
-            return m;
+            return v;
         },
         default: function () {
             return N;
         }
     }),
-    t(610138),
-    t(216116),
-    t(78328),
-    t(815648),
     t(47120),
     t(757143);
 var o = t(735250),
-    c = t(470079),
-    r = t(266067),
+    r = t(470079),
+    c = t(266067),
     l = t(481060),
     i = t(457330),
-    a = t(726542),
-    s = t(536285),
-    u = t(656649),
-    d = t(981631),
-    f = t(689938),
-    p = t(934484);
-let C = null != window.opener,
-    g = (e) => new URLSearchParams(e.search);
+    a = t(169382),
+    s = t(726542),
+    u = t(536285),
+    d = t(656649),
+    f = t(981631),
+    p = t(689938),
+    C = t(934484);
+let g = null != window.opener;
 function N() {
     var e;
-    let n = (0, r.k6)(),
-        t = g((0, r.TH)()),
+    let n = (0, c.k6)(),
+        t = (0, a.l)(),
         l = t.get('code'),
-        f = t.get('oauth_verifier'),
-        p = null !== (e = t.get('state')) && void 0 !== e ? e : '',
+        p = t.get('oauth_verifier'),
+        C = null !== (e = t.get('state')) && void 0 !== e ? e : '',
         N = t.get('loading'),
-        { type: v } = (0, r.UO)(),
-        _ = (0, u.vJ)(v),
-        E = null == f ? (null != l ? l : '') : f;
-    return (c.useEffect(() => {
+        { type: m } = (0, c.UO)(),
+        _ = (0, d.vJ)(m),
+        E = null == p ? (null != l ? l : '') : p;
+    return (r.useEffect(() => {
         (async function e() {
             let e;
             if (null != N) return;
@@ -45,67 +41,67 @@ function N() {
                 if (!!n.startsWith('openid.')) null == e && (e = {}), (e[n] = t.get(n));
             }
             let o = (e) => {
-                    let { status: o, body: c } = e;
+                    let { status: o, body: r } = e;
                     if (null != l) {
-                        if (null == c ? void 0 : c.redirect) {
-                            n.replace(d.Z5c.CONNECTIONS_SUCCESS(l)), (window.location = c.redirect);
+                        if (null == r ? void 0 : r.redirect) {
+                            n.replace(f.Z5c.CONNECTIONS_SUCCESS(l)), (window.location = r.redirect);
                             return;
                         }
                         if ([200, 204].includes(o)) {
-                            n.replace(d.Z5c.CONNECTIONS_SUCCESS(l)), C && window.close();
+                            n.replace(f.Z5c.CONNECTIONS_SUCCESS(l)), g && window.close();
                             return;
                         }
-                        n.replace(''.concat(d.Z5c.CONNECTIONS_ERROR(l), '?').concat(t.toString()));
+                        null != r.code && t.append('error-code', r.code), n.replace(''.concat(f.Z5c.CONNECTIONS_ERROR(l), '?').concat(t.toString()));
                     }
                 },
-                c = {
+                r = {
                     code: E,
                     openid_params: e,
-                    state: p
+                    state: C
                 };
-            async function r(e) {
-                if (null != l && a.Z.isSupported(l))
+            async function c(e) {
+                if (null != l && s.Z.isSupported(l))
                     try {
-                        let n = await i.Z.callback(l, c, e);
+                        let n = await i.Z.callback(l, r, e);
                         o(n);
                     } catch (e) {
                         o(e);
                     }
             }
-            if (C) {
-                await r(!1);
+            if (g) {
+                await c(!1);
                 return;
             }
-            let l = (0, u.vJ)(v);
+            let l = (0, d.vJ)(m);
             try {
-                let e = await s.default.request(d.Etm.CONNECTIONS_CALLBACK, {
-                    ...c,
+                let e = await u.default.request(f.Etm.CONNECTIONS_CALLBACK, {
+                    ...r,
                     providerType: l
                 });
                 o(e);
             } catch (e) {
-                (null == e ? void 0 : e.code) !== d.lTL.BAD_REQUEST_FOR_PROVIDER && (await r('RPCError' !== e.name));
+                (null == e ? void 0 : e.code) !== f.lTL.BAD_REQUEST_FOR_PROVIDER && (await c('RPCError' !== e.name));
             }
-            s.default.disconnect();
+            u.default.disconnect();
         })();
-    }, [E, n, N, v, t, p]),
-    null != _ && a.Z.isSupported(_))
-        ? (0, o.jsx)(m, { platformType: _ })
+    }, [E, n, N, m, t, C]),
+    null != _ && s.Z.isSupported(_))
+        ? (0, o.jsx)(v, { platformType: _ })
         : null;
 }
-function m(e) {
+function v(e) {
     let { platformType: n } = e;
-    return (0, o.jsxs)(u.UV, {
+    return (0, o.jsxs)(d.UV, {
         platformType: n,
         children: [
             (0, o.jsx)('div', {
-                className: p.message,
-                children: f.Z.Messages.CONNECTED_ACCOUNT_VERIFYING.format({ name: platform.name })
+                className: C.message,
+                children: p.Z.Messages.CONNECTED_ACCOUNT_VERIFYING.format({ name: platform.name })
             }),
             (0, o.jsx)(l.Button, {
-                className: p.btn,
+                className: C.btn,
                 disabled: !0,
-                children: (0, o.jsx)(l.Spinner, { itemClassName: p.spinnerItem })
+                children: (0, o.jsx)(l.Spinner, { itemClassName: C.spinnerItem })
             })
         ]
     });
