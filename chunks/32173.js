@@ -19,18 +19,18 @@ var i = n(399606),
     I = n(703656),
     R = n(547972),
     g = n(131951),
-    C = n(78839),
-    N = n(424218),
+    N = n(78839),
+    C = n(424218),
     m = n(63063),
     p = n(74538),
     A = n(860489),
     f = n(471309),
-    M = n(827686),
-    h = n(494127),
+    h = n(827686),
+    M = n(494127),
     S = n(314684),
     x = n(687362),
-    O = n(119269),
-    b = n(467685),
+    b = n(119269),
+    O = n(467685),
     P = n(391110),
     v = n(75077),
     L = n(976465),
@@ -40,8 +40,8 @@ var i = n(399606),
     B = n(332325),
     j = n(689938),
     G = n(977341),
-    y = n(660372),
-    w = n(926433),
+    w = n(660372),
+    y = n(926433),
     H = n(302036),
     k = n(994554),
     F = n(704565),
@@ -52,8 +52,8 @@ var i = n(399606),
     z = n(766491),
     Q = n(193943),
     q = n(707046),
-    J = n(488459),
-    X = n(334347),
+    X = n(488459),
+    J = n(334347),
     $ = n(132015),
     ee = n(142416),
     et = n(607762),
@@ -73,20 +73,20 @@ var i = n(399606),
 t.Z = () => {
     let { analyticsLocations: e } = (0, u.ZP)(_.Z.PREMIUM_MARKETING_PERK_CARD),
         t = (0, d.ZP)(),
-        s = (0, N.BU)(Z.Uq / 1024, { useKibibytes: !0 }),
-        a = (0, i.e7)([C.ZP], () => C.ZP.getPremiumTypeSubscription()),
+        s = (0, C.BU)(Z.Uq / 1024, { useKibibytes: !0 }),
+        a = (0, i.e7)([N.ZP], () => N.ZP.getPremiumTypeSubscription()),
         eT = null != a ? p.ZP.getPremiumPlanItem(a) : null,
         eI = null != eT ? p.ZP.getSkuIdForPlan(eT.planId) : null,
         eR = eI === Z.Si.TIER_2,
         eg = eI === Z.Si.TIER_0,
-        { flipped: eC } = (0, h.JP)(),
-        { flipped: eN } = (0, h.as)(),
+        { flipped: eN } = (0, M.JP)(),
+        { flipped: eC } = (0, M.as)(),
         em = (0, S.nY)({ showAnimations: !0 }),
         ep = null != em ? em.initialPercentage : void 0,
         eA = null != em ? em.percentage : void 0,
         ef = (0, E.Z)(g.Z),
-        eM = (0, x.Z)(),
-        eh = (0, T.Z)({
+        eh = (0, x.Z)(),
+        eM = (0, T.Z)({
             scrollPosition: U.Y_.TRY_IT_OUT,
             analyticsLocations: e
         }),
@@ -99,10 +99,10 @@ t.Z = () => {
         ex = () => {
             (0, I.uL)(D.Z5c.COLLECTIBLES_SHOP);
         },
-        eO = () => {
+        eb = () => {
             c.Z.open(D.oAB.APPEARANCE, null, { scrollPosition: U.h1.CUSTOM_APP_ICONS });
         },
-        eb = {
+        eO = {
             avatarDecorations: eR
                 ? {
                       name: 'avatarDecorations',
@@ -113,7 +113,7 @@ t.Z = () => {
                       onCtaClick: ex,
                       pillText: j.Z.Messages.EARLY_ACCESS,
                       perkImage: Y,
-                      canReveal: eC,
+                      canReveal: eN,
                       dismissibleContentType: l.z.WHATS_NEW_AVATAR_DECOS_FLIP
                   }
                 : {
@@ -123,7 +123,7 @@ t.Z = () => {
                       description: j.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_DESCRIPTION_NON_SUB,
                       pillText: j.Z.Messages.EARLY_ACCESS,
                       perkImage: Y,
-                      canReveal: eC,
+                      canReveal: eN,
                       dismissibleContentType: l.z.WHATS_NEW_AVATAR_DECOS_FLIP
                   },
             clientThemes: {
@@ -190,7 +190,7 @@ t.Z = () => {
                       title: j.Z.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_TITLE,
                       subtitle: j.Z.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_SUBTITLE_V2,
                       description: j.Z.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_DESCRIPTION_SUB,
-                      perkImage: J
+                      perkImage: X
                   }
                 : {
                       name: 'earlyAccess',
@@ -198,7 +198,7 @@ t.Z = () => {
                       subtitle: j.Z.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_SUBTITLE_V2,
                       description: j.Z.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_DESCRIPTION_NON_SUB,
                       isPremiumGetCta: !0,
-                      perkImage: J
+                      perkImage: X
                   },
             entranceSounds: eR
                 ? {
@@ -244,7 +244,7 @@ t.Z = () => {
                       onCtaClick: ex,
                       pillText: j.Z.Messages.EARLY_ACCESS,
                       perkImage: es,
-                      canReveal: eN,
+                      canReveal: eC,
                       dismissibleContentType: l.z.WHATS_NEW_PROFILE_EFFECTS_FLIP
                   }
                 : {
@@ -254,7 +254,7 @@ t.Z = () => {
                       description: j.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_DESCRIPTION_NON_SUB,
                       pillText: j.Z.Messages.EARLY_ACCESS,
                       perkImage: es,
-                      canReveal: eN,
+                      canReveal: eC,
                       dismissibleContentType: l.z.WHATS_NEW_PROFILE_EFFECTS_FLIP
                   },
             profiles: {
@@ -263,7 +263,7 @@ t.Z = () => {
                 subtitle: j.Z.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_PROFILES_SUBTITLE,
                 description: j.Z.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_PROFILES_DESCRIPTION,
                 descriptionCta: j.Z.Messages.TAKE_ME_THERE,
-                onCtaClick: eh,
+                onCtaClick: eM,
                 perkImage: V
             },
             remixing: eR
@@ -388,7 +388,7 @@ t.Z = () => {
                 name: 'badge',
                 title: j.Z.Messages.NITRO_HOME_SUBSCRIBER_BADGE,
                 subtitle: j.Z.Messages.NITRO_HOME_GET_THIS_SUBSCRIBER_BADGE,
-                perkImage: y,
+                perkImage: w,
                 description: j.Z.Messages.NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS
             },
             customAppIcons: {
@@ -398,20 +398,20 @@ t.Z = () => {
                 perkImage: Q,
                 description: j.Z.Messages.NITRO_HOME_CARD_INCLUDED_WITH_BASIC_AND_NITRO,
                 descriptionCta: j.Z.Messages.TAKE_ME_THERE,
-                onCtaClick: eO
+                onCtaClick: eb
             },
             moreEmojiPower: {
                 name: 'moreEmojiPower',
                 title: j.Z.Messages.PREMIUM_MARKETING_FEATURE_EMOJI_TITLE,
                 subtitle: j.Z.Messages.PREMIUM_MARKETING_EMOJI_PERK_TITLE,
-                perkImage: X,
+                perkImage: J,
                 description: j.Z.Messages.NITRO_HOME_CARD_CHOOSE_CUSTOM_EMOJI
             },
             customSoundsEverywhere: {
                 name: 'customSoundsEverywhere',
                 title: j.Z.Messages.NITRO_HOME_CARD_CUSTOM_SOUNDS_EVERYWHERE,
                 subtitle: j.Z.Messages.NITRO_HOME_CARD_USE_CUSTOM_SOUNDS,
-                perkImage: (0, v.gx)(t, w, H),
+                perkImage: (0, v.gx)(t, y, H),
                 description: j.Z.Messages.NITRO_HOME_CARD_INCLUDED_WITH_ONLY_NITRO
             },
             specialStickerAccess: {
@@ -442,7 +442,7 @@ t.Z = () => {
                 description: j.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_NEW_APP_STYLES_DESCRIPTION,
                 descriptionCta: eR || eg ? j.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_NITRO_NEW_APP_STYLES : j.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_NON_NITRO_NEW_APP_STYLES,
                 isPremiumGetCta: !(eR || eg),
-                onCtaClick: eR || eg ? eO : void 0,
+                onCtaClick: eR || eg ? eb : void 0,
                 perkImage: et
             },
             referralProgram: {
@@ -460,21 +460,21 @@ t.Z = () => {
                 subtitle: j.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_SERVER_PRORFILES_SUBTITLE,
                 descriptionCta: eR ? j.Z.Messages.TAKE_ME_THERE : j.Z.Messages.MARKETING_PAGE_CTA_GET_NITRO,
                 isPremiumGetCta: !eR,
-                onCtaClick: eR ? eh : void 0,
+                onCtaClick: eR ? eM : void 0,
                 perkImage: ei
             }
         };
-    if (null != eM) {
-        let { title: t, subtitle: n, description: s, pillText: a, ctaDescription: i, dismissibleContentType: l } = eM,
+    if (null != eh) {
+        let { title: t, subtitle: n, description: s, pillText: a, ctaDescription: i, dismissibleContentType: l } = eh,
             o = (0, r.jsx)('div', {
                 className: G.cardComponent,
-                children: (0, r.jsx)(O.Z, {
+                children: (0, r.jsx)(b.Z, {
                     showAnimations: !0,
                     percentage: eA,
                     initialPercentage: ep
                 })
             });
-        eb.freeBoost = {
+        eO.freeBoost = {
             name: 'freeBoost',
             title: t,
             subtitle: n,
@@ -491,7 +491,7 @@ t.Z = () => {
     }
     let eP = (0, L.kG)(),
         { enabled: ev } = (0, f.Z)(),
-        { enabled: eL } = (0, M.Z)(),
+        { enabled: eL } = (0, h.Z)(),
         eZ = () => {
             (0, o.openModalLazy)(async () => {
                 let { default: e } = await n.e('16133').then(n.bind(n, 743648));
@@ -502,16 +502,16 @@ t.Z = () => {
         null != eP &&
             ev &&
             eL &&
-            (eb.tenureBadge = {
+            (eO.tenureBadge = {
                 name: 'tenureBadge',
                 title: j.Z.Messages.NITRO_HOME_TIERED_TENURE_BADGES_WHATS_NEW_CARD_HEADER,
                 pillText: j.Z.Messages.REWARD.toLocaleUpperCase(),
-                perkComponent: (0, r.jsx)(b.Z, {}),
+                perkComponent: (0, r.jsx)(O.Z, {}),
                 cardVariant: P.zW.NITRO_GRADIENT_HOVER_BORDER,
                 onClick: () => eZ()
             }),
         (0, A.ZP)('usePerksDiscoverabilityCard') === A.P0.SUMMER_2024 &&
-            (eb.shyProject = {
+            (eO.shyProject = {
                 name: 'shyProject',
                 title: j.Z.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_TITLE,
                 subtitle: j.Z.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_SUBTITLE_V2,
@@ -522,6 +522,6 @@ t.Z = () => {
                 perkImage: K,
                 isPremiumGetCta: !eR
             }),
-        eb
+        eO
     );
 };

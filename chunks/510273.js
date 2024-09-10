@@ -80,12 +80,12 @@ function E(e) {
             clearTimeout(e);
         };
     }, []);
-    let C = null != R && n,
-        N = C ? l.Clickable : 'div';
-    return (0, s.jsxs)(N, {
-        className: i()(_.container, C && _.actionable),
+    let N = null != R && n,
+        C = N ? l.Clickable : 'div';
+    return (0, s.jsxs)(C, {
+        className: i()(_.container, N && _.actionable),
         onClick: () => {
-            C && R();
+            N && R();
         },
         children: [
             (0, s.jsx)('div', {

@@ -14,8 +14,8 @@ t.Z = (e) => {
     let { className: t, imageClassName: n, textContainerOverrideStyles: a, location: T, analyticsLocation: I } = e,
         { analyticsLocations: R } = (0, l.ZP)(T),
         g = (0, o.rK)(),
-        { enabled: C } = o.RO.useExperiment({ location: 'GiftNitro' }, { autoTrackExposure: g }),
-        N = C && g;
+        { enabled: N } = o.RO.useExperiment({ location: 'GiftNitro' }, { autoTrackExposure: g }),
+        C = N && g;
     return (0, s.jsx)(l.Gt, {
         value: R,
         children: (0, s.jsxs)('div', {
@@ -28,11 +28,11 @@ t.Z = (e) => {
                         (0, s.jsx)(i.Heading, {
                             variant: 'heading-lg/extrabold',
                             className: _.heading,
-                            children: N ? d.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_HEADING : d.Z.Messages.GIFT_NITRO
+                            children: C ? d.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_HEADING : d.Z.Messages.GIFT_NITRO
                         }),
                         (0, s.jsx)(i.Text, {
                             variant: 'text-sm/medium',
-                            children: N ? d.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_BODY : d.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_BODY
+                            children: C ? d.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_BODY : d.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_BODY
                         }),
                         (0, s.jsx)(c.Z, {
                             isGift: !0,
@@ -46,7 +46,7 @@ t.Z = (e) => {
                     ]
                 }),
                 (0, s.jsx)('img', {
-                    src: N ? E : u,
+                    src: C ? E : u,
                     className: r()(_.bannerImage, n),
                     alt: 'gift nitro banner'
                 })

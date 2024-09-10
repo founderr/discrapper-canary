@@ -1,6 +1,6 @@
 n.d(t, {
     $s: function () {
-        return h;
+        return M;
     },
     AV: function () {
         return T;
@@ -9,7 +9,7 @@ n.d(t, {
         return S;
     },
     Kn: function () {
-        return M;
+        return h;
     },
     Nq: function () {
         return u;
@@ -24,13 +24,13 @@ n.d(t, {
         return R;
     },
     pn: function () {
-        return C;
+        return N;
     },
     uv: function () {
         return p;
     },
     vx: function () {
-        return N;
+        return C;
     },
     wG: function () {
         return f;
@@ -72,7 +72,7 @@ let u = '40%',
         let t = p(e);
         return null != t && t !== d.g2L.NOT_ELIGIBLE;
     },
-    C = (e) => {
+    N = (e) => {
         let t = g(e),
             n = R('PremiumManagementSettings'),
             a = (0, s.e7)([i.Z], () => i.Z.getRecipientStatus());
@@ -80,7 +80,7 @@ let u = '40%',
         if (!n) return !!(a.size > 0) || !1;
         return !0;
     },
-    N = (e) => {
+    C = (e) => {
         let t = m(e),
             n = (0, r.wE)(a.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR);
         return t && !n;
@@ -107,13 +107,13 @@ let u = '40%',
             n = (0, r.wE)(a.z.REFERRAL_INCENTIVE_AWARDED_INFO);
         return t && !n;
     },
-    M = (e) => {
+    h = (e) => {
         let t = g(e),
             n = R(e),
             s = (0, r.wE)(a.z.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE);
         return !t && n && !s;
     },
-    h = (e) => {
+    M = (e) => {
         let { referralIncentiveLifecycleState: t, hasSentAll: n, referralsStatuses: s } = e;
         switch (t) {
             case d.g2L.NOT_ELIGIBLE:

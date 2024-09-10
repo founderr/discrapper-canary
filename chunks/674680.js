@@ -30,18 +30,18 @@ function T(e) {
         R = (0, c.oX)(n);
     if (null == R) return null;
     let g = (0, r.getAvatarSpecs)(T),
-        { name: C, rarity: N } = R,
-        { color: m } = (0, c.F7)(N),
+        { name: N, rarity: C } = R,
+        { color: m } = (0, c.F7)(C),
         p = (0, a.wj)(I) ? u : E,
         A = (g.size - g.offset - 2 * g.stroke) * 0.8,
         f = g.size - g.stroke,
-        M = {
+        h = {
             width: 0.4 * A,
             height: 0.4 * A
         },
-        h = {
-            width: M.width + 1,
-            height: M.height + 1,
+        M = {
+            width: h.width + 1,
+            height: h.height + 1,
             right: g.stroke + 1,
             bottom: g.stroke + 1,
             padding: 0
@@ -53,7 +53,7 @@ function T(e) {
             height: f,
             padding: g.stroke
         },
-        'aria-label': ''.concat(null !== (t = C()) && void 0 !== t ? t : ''),
+        'aria-label': ''.concat(null !== (t = N()) && void 0 !== t ? t : ''),
         children: [
             (0, s.jsx)('div', {
                 className: _.trophyIconContainer,
@@ -67,21 +67,21 @@ function T(e) {
             !d &&
                 (0, s.jsx)('div', {
                     className: _.lockContainer,
-                    style: h,
+                    style: M,
                     children: (0, s.jsx)(r.LockIcon, {
                         size: 'custom',
                         color: (0, l.Lq)(p.locked),
-                        ...M
+                        ...h
                     })
                 }),
             d &&
-                N === c.EP.LEGENDARY &&
+                C === c.EP.LEGENDARY &&
                 (0, s.jsx)('div', {
                     className: _.lockContainer,
-                    style: h,
+                    style: M,
                     children: (0, s.jsx)(o.Z, {
                         className: _.confettiIcon,
-                        ...M
+                        ...h
                     })
                 })
         ]

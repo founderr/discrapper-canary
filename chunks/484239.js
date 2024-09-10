@@ -15,10 +15,10 @@ t.Z = (e) => {
     var t;
     let n,
         a,
-        { title: I, titleClassName: R, buttonClassName: g, perkImage: C, isCarousel: N, onCtaClick: m, perkComponent: p, subtitle: A = '', descriptionCta: f = '', cardVariant: M, subtitleClassName: h } = e,
-        S = (0, o._)(M),
+        { title: I, titleClassName: R, buttonClassName: g, perkImage: N, isCarousel: C, onCtaClick: m, perkComponent: p, subtitle: A = '', descriptionCta: f = '', cardVariant: h, subtitleClassName: M } = e,
+        S = (0, o._)(h),
         x = (0, l.yQ)(),
-        O = (null == x ? void 0 : x.nitroTenureStatus) === d.EB.REDEEMABLE;
+        b = (null == x ? void 0 : x.nitroTenureStatus) === d.EB.REDEEMABLE;
     switch (null == x ? void 0 : x.nitroTenureStatus) {
         case d.EB.REDEEMABLE:
             (n = T), (a = 'unlocked icon');
@@ -41,15 +41,15 @@ t.Z = (e) => {
                 cardVariantStyleInfo: S,
                 titleClassName: R,
                 subtitle: A,
-                subtitleClassName: h
+                subtitleClassName: M
             }),
-            null != C &&
+            null != N &&
                 (0, s.jsx)('img', {
-                    src: C,
+                    src: N,
                     alt: '',
                     className: r()({
-                        [_.cardImage]: !N,
-                        [_.carouselCardImage]: N
+                        [_.cardImage]: !C,
+                        [_.carouselCardImage]: C
                     })
                 }),
             null != p &&
@@ -62,7 +62,7 @@ t.Z = (e) => {
                                 null != m &&
                                 (0, s.jsx)(i.Button, {
                                     className: g,
-                                    disabled: !O,
+                                    disabled: !b,
                                     fullWidth: !0,
                                     onClick: m,
                                     children: (0, s.jsxs)('div', {

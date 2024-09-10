@@ -14,23 +14,23 @@ var s = n(735250),
     I = n(915296),
     R = n(103433),
     g = n(166021),
-    C = n(32173),
-    N = n(391110),
+    N = n(32173),
+    C = n(391110),
     m = n(75077),
     p = n(981631),
     A = n(689938),
     f = n(170367),
-    M = n(865215);
+    h = n(865215);
 t.Z = (e) => {
     let t,
         n,
-        { isAllPerksVisible: r, setIsAllPerksVisible: h, previousComponent: S, isFullScreen: x } = e,
-        O = a.useRef(null),
-        b = Object.entries((0, C.Z)()).reduce((e, t) => {
+        { isAllPerksVisible: r, setIsAllPerksVisible: M, previousComponent: S, isFullScreen: x } = e,
+        b = a.useRef(null),
+        O = Object.entries((0, N.Z)()).reduce((e, t) => {
             let [n, s] = t;
             return !1 !== s.canReveal && 'upcomingDropUntimed' !== s.name && (e[n] = s), e;
         }, {}),
-        P = (0, I.HI)({ location: N.MQ.SEE_ALL }),
+        P = (0, I.HI)({ location: C.MQ.SEE_ALL }),
         { analyticsLocations: v } = (0, u.ZP)(_.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
         [L, Z] = a.useState(!1),
         D = (0, E.ZP)('perks-discoverability'),
@@ -43,7 +43,7 @@ t.Z = (e) => {
                 [f.open]: r,
                 [f.openCloseReduceMotion]: U
             }),
-            ref: O,
+            ref: b,
             children: (0, s.jsx)('div', {
                 className: f.container,
                 children: (0, s.jsxs)(u.Gt, {
@@ -52,9 +52,9 @@ t.Z = (e) => {
                         (0, s.jsx)(R.Z, {
                             className: f.heroHeading,
                             onBackClick: () => {
-                                h(!1),
+                                M(!1),
                                     T.default.track(p.rMx.NITRO_HOME_NAVIGATION, {
-                                        current_component: N.MQ.SEE_ALL,
+                                        current_component: C.MQ.SEE_ALL,
                                         next_component: S,
                                         interaction_component: 'Back Button'
                                     });
@@ -72,14 +72,14 @@ t.Z = (e) => {
                                 (0, s.jsx)(g.Z, {
                                     className: f.cardCarousel,
                                     cards: (0, m.sP)({
-                                        perksCards: b,
-                                        variant: N.R0.CARD_CAROUSEL_FIRST_ROW,
+                                        perksCards: O,
+                                        variant: C.R0.CARD_CAROUSEL_FIRST_ROW,
                                         shopMarketingVariation: D,
                                         tileOrderVariant: P,
                                         isPremiumSubscriber: B,
                                         isFullScreen: x
                                     }),
-                                    cardType: N.R0.CARD_CAROUSEL_FIRST_ROW
+                                    cardType: C.R0.CARD_CAROUSEL_FIRST_ROW
                                 }),
                                 (0, s.jsx)(c.Heading, {
                                     variant: 'heading-xxl/extrabold',
@@ -90,14 +90,14 @@ t.Z = (e) => {
                                 (0, s.jsx)(g.Z, {
                                     className: f.cardCarousel,
                                     cards: (0, m.sP)({
-                                        perksCards: b,
-                                        variant: N.R0.CARD_CAROUSEL_SECOND_ROW,
+                                        perksCards: O,
+                                        variant: C.R0.CARD_CAROUSEL_SECOND_ROW,
                                         shopMarketingVariation: D,
                                         tileOrderVariant: P,
                                         isPremiumSubscriber: B,
                                         isFullScreen: x
                                     }),
-                                    cardType: N.R0.CARD_CAROUSEL_SECOND_ROW
+                                    cardType: C.R0.CARD_CAROUSEL_SECOND_ROW
                                 }),
                                 (0, s.jsx)(c.Heading, {
                                     variant: 'heading-xxl/extrabold',
@@ -108,14 +108,14 @@ t.Z = (e) => {
                                 (0, s.jsx)(g.Z, {
                                     className: f.cardCarousel,
                                     cards: (0, m.sP)({
-                                        perksCards: b,
-                                        variant: N.R0.CARD_CAROUSEL_THIRD_ROW,
+                                        perksCards: O,
+                                        variant: C.R0.CARD_CAROUSEL_THIRD_ROW,
                                         shopMarketingVariation: D,
                                         tileOrderVariant: P,
                                         isPremiumSubscriber: B,
                                         isFullScreen: x
                                     }),
-                                    cardType: N.R0.CARD_CAROUSEL_THIRD_ROW
+                                    cardType: C.R0.CARD_CAROUSEL_THIRD_ROW
                                 })
                             ]
                         }),
@@ -127,7 +127,7 @@ t.Z = (e) => {
                             children: (0, s.jsx)('div', { className: f.bottomOfPageVisibilitySensor })
                         }),
                         (0, s.jsx)('img', {
-                            src: M,
+                            src: h,
                             className: f.bottomIllustration,
                             width: 112,
                             height: 85,

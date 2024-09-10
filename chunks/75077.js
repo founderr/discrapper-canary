@@ -9,19 +9,19 @@ n.d(t, {
         return A;
     },
     k3: function () {
-        return C;
+        return N;
     },
     mN: function () {
         return x;
     },
     sP: function () {
-        return h;
+        return M;
     },
     t2: function () {
         return p;
     },
     vZ: function () {
-        return N;
+        return C;
     }
 }),
     n(653041),
@@ -41,7 +41,7 @@ var s = n(278074),
     I = n(474936),
     R = n(735825),
     g = n(689938);
-let C = (e) => {
+let N = (e) => {
         switch (e) {
             case R.EB.PENDING:
                 return g.Z.Messages.NITRO_HOME_REWARDING_LOCKED_STATE_TITLE;
@@ -53,7 +53,7 @@ let C = (e) => {
                 return '';
         }
     },
-    N = (e, t, n) => {
+    C = (e, t, n) => {
         switch (e) {
             case R.EB.PENDING:
                 return t === R.Ft.FREE_GUILD_BOOST_1_MONTH ? g.Z.Messages.NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_1_MONTH_VARIANT : g.Z.Messages.NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_3_MONTHS_VARIANT;
@@ -92,7 +92,7 @@ function p(e, t) {
 }
 let A = (e, t, n) => ((0, r.wj)(e) ? t : n),
     f = 'getWhatsNewRow',
-    M = (e) => {
+    h = (e) => {
         let { cards: t, perksCards: n, isFullScreen: s, showTenureCard: a, shopMarketingVariation: r } = e,
             l = s ? 3 : 2,
             o = (e) => {
@@ -106,10 +106,10 @@ let A = (e, t, n) => ((0, r.wj)(e) ? t : n),
             { enabled: T } = _.r.getCurrentConfig({ location: f }, { autoTrackExposure: !1 }),
             { enabled: I } = d.C.getCurrentConfig({ location: f }, { autoTrackExposure: !1 }),
             R = u && !T && !I,
-            g = O();
+            g = b();
         return null != n.tenureBadge && o({ card: n.tenureBadge }), null != n.freeBoost && !0 === a && o({ card: n.freeBoost }), null != n.shyProject && o({ card: n.shyProject }), s && g ? (0 === t.length && c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })) : s && !g && (R || null != n.shyProject ? R && o({ card: n.referralProgram }) : c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })), o({ card: n.earlyAccess }), c(), o({ card: n.unlimitedSuperReactions }), t;
     },
-    h = (e) => {
+    M = (e) => {
         let { perksCards: t, variant: n, shopMarketingVariation: a, isFullScreen: r, showTenureCard: i, tileOrderVariant: l, isPremiumSubscriber: o } = e,
             c = [];
         switch (n) {
@@ -135,7 +135,7 @@ let A = (e, t, n) => ((0, r.wj)(e) ? t : n),
                     .otherwise(() => [t.profiles, t.clientThemes, t.serverBoosts]);
                 break;
             case T.R0.WHATS_NEW:
-                c = M({
+                c = h({
                     cards: c,
                     perksCards: t,
                     isFullScreen: r,
@@ -213,7 +213,7 @@ let A = (e, t, n) => ((0, r.wj)(e) ? t : n),
         let e = (0, a.e7)([l.default], () => l.default.getCurrentUser());
         return (0, c.I5)(e);
     },
-    O = () => {
+    b = () => {
         let e = l.default.getCurrentUser();
         return (0, c.M5)(e, I.p9.TIER_2);
     };

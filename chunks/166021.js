@@ -13,7 +13,7 @@ t.Z = (e) => {
         [u, E] = a.useState(0),
         [T, I] = a.useState(_()),
         [R, g] = a.useState(!1),
-        C = t.length;
+        N = t.length;
     a.useEffect(() => {
         let e = () => {
             I(_());
@@ -26,24 +26,24 @@ t.Z = (e) => {
         );
     }, []),
         a.useEffect(() => {
-            C > T && u > C - T ? E(C - T) : C <= T && E(0);
-        }, [C, T]);
-    let N = a.useCallback((e) => ({ x: (e - u) * 100 }), [u]),
-        [m, p] = (0, o.useSprings)(t.length, N);
+            N > T && u > N - T ? E(N - T) : N <= T && E(0);
+        }, [N, T]);
+    let C = a.useCallback((e) => ({ x: (e - u) * 100 }), [u]),
+        [m, p] = (0, o.useSprings)(t.length, C);
     return (
         a.useEffect(() => {
-            p(N);
-        }, [p, N]),
+            p(C);
+        }, [p, C]),
         (0, s.jsx)('div', {
             className: n,
             children: (0, s.jsxs)('div', {
                 className: d.cardContainer,
                 children: [
-                    C > T &&
+                    N > T &&
                         (0, s.jsx)(o.Clickable, {
                             onClick: R
                                 ? () => {
-                                      E((e) => (0 === e ? C - T : e - 1));
+                                      E((e) => (0 === e ? N - T : e - 1));
                                   }
                                 : void 0,
                             className: i()({
@@ -77,10 +77,10 @@ t.Z = (e) => {
                             );
                         })
                     }),
-                    C > T &&
+                    N > T &&
                         (0, s.jsx)(o.Clickable, {
                             onClick: () => {
-                                E((e) => (e >= C - T ? (g(!0), 0) : e + 1));
+                                E((e) => (e >= N - T ? (g(!0), 0) : e + 1));
                             },
                             className: d.rightArrow,
                             children: (0, s.jsx)(o.ArrowSmallRightIcon, {
@@ -88,11 +88,11 @@ t.Z = (e) => {
                                 colorClass: d.arrowIcon
                             })
                         }),
-                    C > T &&
+                    N > T &&
                         (0, s.jsx)('div', {
                             className: d.cardProgressBar,
                             children: t.map((e, t) => {
-                                if (!(t > C - T)) return (0, s.jsx)('div', { className: t === u ? d.selectedDot : d.dot }, 'progress_bar_dot_'.concat(t));
+                                if (!(t > N - T)) return (0, s.jsx)('div', { className: t === u ? d.selectedDot : d.dot }, 'progress_bar_dot_'.concat(t));
                             })
                         })
                 ]

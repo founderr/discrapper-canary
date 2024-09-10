@@ -24,31 +24,31 @@ let I = (e) => {
     },
     R = (e, t, n, s) => (t || n ? E.Z.Messages.PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT : e === u.Si.TIER_2 ? E.Z.Messages.PREMIUM_DISCOUNT_CTA.format({ percent: s }) : void 0);
 t.Z = (e) => {
-    let { forceInverted: t, subscriptionTier: n, isEligibleForBogoPromotion: g = !1, isPersistentCTA: C = !1, useShorterCTA: N = !1, ...m } = e,
+    let { forceInverted: t, subscriptionTier: n, isEligibleForBogoPromotion: g = !1, isPersistentCTA: N = !1, useShorterCTA: C = !1, ...m } = e,
         p = (0, i.ZP)(),
         A = (0, a.wj)(p) || t,
         f = (0, d.N)(),
-        M = null == f ? void 0 : f.subscription_trial,
-        h = (0, l.a5)({
-            intervalType: null == M ? void 0 : M.interval,
-            intervalCount: null == M ? void 0 : M.interval_count
+        h = null == f ? void 0 : f.subscription_trial,
+        M = (0, l.a5)({
+            intervalType: null == h ? void 0 : h.interval,
+            intervalCount: null == h ? void 0 : h.interval_count
         }),
         S = (0, c.Ng)(),
-        x = null != M && n === M.sku_id,
-        { enabled: O } = o._.useExperiment({ location: 'SubscribeButton' }, { autoTrackExposure: !1 }),
-        b = O && (null == f ? void 0 : f.trial_id) === u.a7,
+        x = null != h && n === h.sku_id,
+        { enabled: b } = o._.useExperiment({ location: 'SubscribeButton' }, { autoTrackExposure: !1 }),
+        O = b && (null == f ? void 0 : f.trial_id) === u.a7,
         P = g
             ? E.Z.Messages.BOGO_CLAIM_OFFER
             : null != S
-              ? R(n, N, C, S.discount.amount)
+              ? R(n, C, N, S.discount.amount)
               : I({
                     showTrialCTA: x,
                     subscriptionTier: n,
                     shouldShowUpsells: !1,
-                    trialDurationCopy: h,
-                    isPersistentCTA: C,
-                    shouldShowReferralTrialCopy: b,
-                    subscriptionTrial: M
+                    trialDurationCopy: M,
+                    isPersistentCTA: N,
+                    shouldShowReferralTrialCopy: O,
+                    subscriptionTrial: h
                 });
     return (0, s.jsx)(_.Z, {
         color: A ? r.ButtonColors.BRAND_INVERTED : r.ButtonColors.BRAND,

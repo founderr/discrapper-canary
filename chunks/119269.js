@@ -17,7 +17,7 @@ var i = n(120356),
     E = n(226705);
 ((s = a || (a = {}))[(s.NITRO_GEM = 0)] = 'NITRO_GEM'), (s[(s.NITRO_LOGO = 1)] = 'NITRO_LOGO');
 t.Z = (e) => {
-    let { showAnimations: t = !0, iconClassName: n, staticPercentage: s, innerCircleClassName: a, progressCircleStrokeSize: i, backgroundCircleSize: T, percentage: I, initialPercentage: R, progressCircleVariation: g = 0, ellipseOpacity: C, customAnimationClassName: N, circleColor: m, circleStroke: p } = e,
+    let { showAnimations: t = !0, iconClassName: n, staticPercentage: s, innerCircleClassName: a, progressCircleStrokeSize: i, backgroundCircleSize: T, percentage: I, initialPercentage: R, progressCircleVariation: g = 0, ellipseOpacity: N, customAnimationClassName: C, circleColor: m, circleStroke: p } = e,
         A = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
         f = t && !A;
     return (0, r.jsx)('div', {
@@ -25,7 +25,7 @@ t.Z = (e) => {
         children: (0, r.jsx)(u.Z, {
             animationClassName: l()(E.activeProgressCircle, {
                 [E.activeProgressCircleAnimation]: f,
-                [null != N ? N : '']: f
+                [null != C ? C : '']: f
             }),
             progressCircleStroke: p,
             progressCircleStrokeSize: i,
@@ -41,7 +41,7 @@ t.Z = (e) => {
                       })
                     : (0, r.jsx)(_.Z, {
                           circleColor: m,
-                          ellipseOpacity: C
+                          ellipseOpacity: N
                       })
         })
     });

@@ -12,13 +12,13 @@ let o = {
     },
     c = (e, t, n) => (null == n ? t : (e * n) / 100),
     d = a.memo(function (e) {
-        let { confettiTarget: t, colors: n, emojiURL: d, numBursts: _, particlesPerBurst: u, offsetXPercentageMax: E, offsetXPercentageMin: T, offsetYPercentageMax: I, offsetYPercentageMin: R, customConfettiCanvas: g, speedValues: C = o, dragCoefficientValue: N = 0.001, onAnimationEnd: m } = e,
+        let { confettiTarget: t, colors: n, emojiURL: d, numBursts: _, particlesPerBurst: u, offsetXPercentageMax: E, offsetXPercentageMin: T, offsetYPercentageMax: I, offsetYPercentageMin: R, customConfettiCanvas: g, speedValues: N = o, dragCoefficientValue: C = 0.001, onAnimationEnd: m } = e,
             [p, A] = a.useState(null),
             { confettiCanvas: f } = a.useContext(i.h),
-            M = (0, r.uR)(null != g ? g : f, p),
-            [h, S] = a.useState(!1);
+            h = (0, r.uR)(null != g ? g : f, p),
+            [M, S] = a.useState(!1);
         a.useEffect(() => {
-            h && (null == m || m());
+            M && (null == m || m());
         });
         let x = a.useMemo(() => {
             if (null != d)
@@ -36,7 +36,7 @@ let o = {
                 return (
                     (e = e.map((n, s) =>
                         setTimeout(() => {
-                            M.createMultipleConfetti(
+                            h.createMultipleConfetti(
                                 (function (e, t, n, s, a) {
                                     let r = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : o,
                                         i = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 0.001,
@@ -79,7 +79,7 @@ let o = {
                                             value: i
                                         }
                                     };
-                                })(t.getBoundingClientRect(), E, T, I, R, C, N),
+                                })(t.getBoundingClientRect(), E, T, I, R, N, C),
                                 null != u ? u : 50
                             ),
                                 s === e.length - 1 && null != m && S(!0);
@@ -89,7 +89,7 @@ let o = {
                         for (let t of e) clearTimeout(t);
                     }
                 );
-            }, [M, t, _, u, E, T, I, R, C, N, m]),
+            }, [h, t, _, u, E, T, I, R, N, C, m]),
             (0, s.jsx)(r.Ji, {
                 ref: A,
                 sprites: null != x ? x : l.CA,

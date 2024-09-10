@@ -16,13 +16,13 @@ function o(e) {
         [u, E] = s.useState(!1),
         [T, I] = s.useState(!1),
         [R, g] = s.useState(!1),
-        [C, N] = s.useState(!1),
+        [N, C] = s.useState(!1),
         [m, p] = s.useState(!1),
         [A, f] = s.useState(!1),
-        M = o || d || u || T || C || A,
-        h = s.useCallback(
+        h = o || d || u || T || N || A,
+        M = s.useCallback(
             async (e) => {
-                if (!M) {
+                if (!h) {
                     c(!0);
                     try {
                         await (0, r.Yw)(e.id, l.ne.ACTIVE), null == n || n();
@@ -34,11 +34,11 @@ function o(e) {
                     }
                 }
             },
-            [M, t, n]
+            [h, t, n]
         ),
         S = s.useCallback(
             async (e) => {
-                if (!M) {
+                if (!h) {
                     _(!0);
                     try {
                         await (0, r.Yw)(e.id, l.ne.DECLINED), null == n || n();
@@ -50,11 +50,11 @@ function o(e) {
                     }
                 }
             },
-            [M, t, n]
+            [h, t, n]
         ),
         x = s.useCallback(
             async (e) => {
-                if (!M) {
+                if (!h) {
                     E(!0);
                     try {
                         await (0, r.Yw)(e.id, l.ne.INACTIVE), null == n || n();
@@ -66,11 +66,11 @@ function o(e) {
                     }
                 }
             },
-            [M, t, n]
+            [h, t, n]
         ),
-        O = s.useCallback(
+        b = s.useCallback(
             async (e) => {
-                if (!M) {
+                if (!h) {
                     I(!0);
                     try {
                         await (0, r.fc)(e.id), null == n || n();
@@ -82,9 +82,9 @@ function o(e) {
                     }
                 }
             },
-            [M, t, n]
+            [h, t, n]
         ),
-        b = s.useCallback(async () => {
+        O = s.useCallback(async () => {
             if (!R) {
                 g(!0);
                 try {
@@ -115,27 +115,27 @@ function o(e) {
         ),
         v = s.useCallback(
             async (e, s) => {
-                if (!C) {
-                    N(!0);
+                if (!N) {
+                    C(!0);
                     try {
                         await r.ZP.requestLink(e, s), null == n || n();
                     } catch (n) {
                         let e = new a.Hx(n);
                         null == t || t(e);
                     } finally {
-                        N(!1);
+                        C(!1);
                     }
                 }
             },
-            [C, t, n]
+            [N, t, n]
         );
     return {
-        acceptLinkRequest: h,
+        acceptLinkRequest: M,
         declineLinkRequest: S,
         disconnectLinkRequest: x,
-        cancelLinkRequest: O,
+        cancelLinkRequest: b,
         selectTeenUser: P,
-        getLinkCode: b,
+        getLinkCode: O,
         requestLink: v,
         loadMore: s.useCallback(
             async (e) => {
@@ -163,7 +163,7 @@ function o(e) {
         isCancelLoading: T,
         isGetLinkCodeLoading: R,
         isSelectTeenUserLoading: m,
-        isRequestingLink: C,
+        isRequestingLink: N,
         isMoreLoading: A
     };
 }
