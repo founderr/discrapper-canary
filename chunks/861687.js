@@ -957,6 +957,10 @@ class ea extends E.Z {
                     t ? (this._handleSecureFramesRosterChange(r), this._maybeSendSecureFramesTransitionReady(e), this._trackSecureFrameTransition(e, n), this._recoverMLSFailures()) : (this._flagMLSInvalidCommitWelcome(e), this._sendMLSKeyPackage());
                 });
     }
+    getMLSPairwiseFingerprint(e, t, n) {
+        var r;
+        null === (r = this._connection) || void 0 === r || r.getMLSPairwiseFingerprint(e, t, n);
+    }
     _flagMLSInvalidCommitWelcome(e) {
         var t;
         this.logger.info('Flagging invalid MLS commit/welcome for transition ID '.concat(e)), null === (t = this._socket) || void 0 === t || t.flagMLSInvalidCommitWelcome(e);

@@ -825,6 +825,10 @@ class C extends E.Z {
         var r, i;
         null === (r = (i = this.conn).processMLSWelcome) || void 0 === r || r.call(i, e, t, n);
     }
+    getMLSPairwiseFingerprint(e, t, n) {
+        var r, i;
+        null === (r = (i = this.conn).getMLSPairwiseFingerprint) || void 0 === r || r.call(i, e, t, n);
+    }
     presentDesktopSourcePicker(e) {
         var t, n;
         null === (t = (n = this.conn).presentDesktopSourcePicker) || void 0 === t || t.call(n, e);

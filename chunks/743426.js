@@ -118,6 +118,8 @@ class T extends s.Z {
                 return (0, d.eJ)(h.eR.CAPTURE_TIMEOUT_EXPERIMENTS);
             case h.AN.NATIVE_SCREENSHARE_PICKER:
                 return (0, d.eJ)(h.eR.NATIVE_SCREENSHARE_PICKER);
+            case h.AN.MLS_PAIRWISE_FINGERPRINTS:
+                return (0, d.eJ)(h.eR.MLS_PAIRWISE_FINGERPRINTS);
             case h.AN.DIAGNOSTICS:
             case h.AN.NATIVE_PING:
             case h.AN.AUTOMATIC_VAD:
