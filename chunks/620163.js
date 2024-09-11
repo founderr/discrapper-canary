@@ -362,6 +362,11 @@ let ej = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eZ.Z.Messages.NSFW_GUILDS_TOGGLE_HEADER],
                 parent: eD.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS
             },
+            [eD.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS_AGE_RESTRICTED_IOS_V2]: {
+                section: eP.oAB.PRIVACY_AND_SAFETY_V2,
+                searchableTitles: [eZ.Z.Messages.NSFW_GUILDS_TOGGLE_HEADER],
+                parent: eD.s6.PRIVACY_AND_SAFETY_SERVER_SELECTOR
+            },
             [eD.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS_MESSAGE_REQUESTS]: {
                 section: eP.oAB.PRIVACY_AND_SAFETY,
                 searchableTitles: [eZ.Z.Messages.MESSAGE_REQUESTS_SETTING_GENERAL_HEADER],
