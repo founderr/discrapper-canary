@@ -28,8 +28,8 @@ var i = n(278074),
     I = n(768581),
     m = n(176354),
     T = n(358085),
-    h = n(798628),
-    N = n(79390),
+    N = n(798628),
+    h = n(79390),
     C = n(839963),
     f = n(897325),
     p = n(57101),
@@ -106,7 +106,7 @@ function v(e, t) {
     let E = e.state === S.yb.SENT,
         I = E ? (null != r ? r : (0, g.H)(l.expiry)) : '',
         m = null == I && E,
-        { selectedAnswerIds: T, submitting: N, editing: C, showResults: f } = null !== (s = null != t ? t : (0, h.fU)(e.getChannelId(), e.id)) && void 0 !== s ? s : R,
+        { selectedAnswerIds: T, submitting: h, editing: C, showResults: f } = null !== (s = null != t ? t : (0, N.fU)(e.getChannelId(), e.id)) && void 0 !== s ? s : R,
         p = e.reactions,
         A = !0;
     if (!M(e)) {
@@ -127,7 +127,7 @@ function v(e, t) {
         canTapAnswers: Z,
         canRemoveVote: v && E && !m,
         canShowVoteCounts: L,
-        canSubmitVote: !N && O && !v && E && !b && !j,
+        canSubmitVote: !h && O && !v && E && !b && !j,
         expirationLabel: I,
         hasSelectedAnswer: O,
         hasVoted: v,
@@ -138,7 +138,7 @@ function v(e, t) {
         isSent: E,
         reactions: p,
         selectedAnswerIds: T,
-        submitting: N,
+        submitting: h,
         tapShouldOpenVotersModal: L,
         showResults: f
     };
@@ -146,19 +146,19 @@ function v(e, t) {
 function L(e, t) {
     var n, o;
     let { animateEmoji: c = !1, theme: d = 'dark', formattedExpirationLabel: _ } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        { poll: h } = e;
-    if (null == h) return;
+        { poll: N } = e;
+    if (null == N) return;
     let g = E.default.getCurrentUser();
     if (null == g) return;
     let S = a.Z.useReducedMotion,
         R = null === (o = u.Z.getChannel(e.getChannelId())) || void 0 === o ? void 0 : null === (n = o.getGuildId) || void 0 === n ? void 0 : n.call(o),
         M = (0, f.E)(g, R),
-        L = h.answers,
-        Z = h.layout_type,
+        L = N.answers,
+        Z = N.layout_type,
         P = v(e, t, { formattedExpirationLabel: _ });
     if (null == P) return;
-    let { canTapAnswers: D, canRemoveVote: b, canShowVoteCounts: j, canSubmitVote: U, expirationLabel: y = A.Z.Messages.POLL_EXPIRED, hasSelectedAnswer: B, hasVoted: k, isEditingVote: G, isExpired: F, isInteractive: w, reactions: V, selectedAnswerIds: H, submitting: Y, tapShouldOpenVotersModal: W, showResults: K } = P,
-        z = (0, N.cZ)(V),
+    let { canTapAnswers: D, canRemoveVote: b, canShowVoteCounts: j, canSubmitVote: U, expirationLabel: y = A.Z.Messages.POLL_EXPIRED, hasSelectedAnswer: B, hasVoted: k, isEditingVote: F, isExpired: G, isInteractive: w, reactions: V, selectedAnswerIds: H, submitting: Y, tapShouldOpenVotersModal: W, showResults: K } = P,
+        z = (0, h.cZ)(V),
         Q = A.Z.Messages.POLL_VOTES_COUNT.format({ count: z.toLocaleString() }),
         q = Math.max(
             ...L.map((e) => {
@@ -175,11 +175,11 @@ function L(e, t) {
                 _ = 0 === z ? 0 : d / z,
                 E = H.has(o),
                 T = d >= q && 0 !== d,
-                h = k && null !== (a = null == u ? void 0 : u.me_vote) && void 0 !== a && a,
-                N = x({
-                    didSelfVote: h,
+                N = k && null !== (a = null == u ? void 0 : u.me_vote) && void 0 !== a && a,
+                h = x({
+                    didSelfVote: N,
                     hasVoted: k,
-                    isExpired: F,
+                    isExpired: G,
                     isSelected: E,
                     isLeader: T,
                     showResults: K
@@ -216,9 +216,9 @@ function L(e, t) {
                     attachmentIds: e.poll_media.attachment_ids
                 },
                 isSelected: E,
-                isVictor: F && T,
-                didSelfVote: h,
-                style: N,
+                isVictor: G && T,
+                didSelfVote: N,
+                style: h,
                 shouldAnimateTransition: Y && !S,
                 votesPercentage: Math.round(100 * _),
                 votes: (0, i.EQ)(Z)
@@ -227,10 +227,10 @@ function L(e, t) {
             };
         }),
         J = (0, i.EQ)({
-            isExpired: F,
+            isExpired: G,
             canSubmitVote: U,
             hasVoted: k,
-            isEditingVote: G,
+            isEditingVote: F,
             canRemoveVote: b,
             isInteractive: w,
             showResults: K
@@ -269,9 +269,9 @@ function L(e, t) {
             })),
         $ = (0, T.isIOS)() ? A.Z.Messages.POLL_TAP_FOR_VOTERS_A11Y_IOS : A.Z.Messages.POLL_TAP_FOR_VOTERS_A11Y_ANDROID,
         ee = (0, i.EQ)({
-            isExpired: F,
+            isExpired: G,
             isInteractive: w,
-            isEditingVote: G
+            isEditingVote: F
         })
             .with(
                 {
@@ -299,7 +299,7 @@ function L(e, t) {
                 type: 'showVoterDetails'
             })),
         et =
-            !w || F || k || K
+            !w || G || k || K
                 ? void 0
                 : {
                       label: A.Z.Messages.POLL_SHOW_VOTES,
@@ -307,10 +307,10 @@ function L(e, t) {
                       enabled: !0,
                       type: 'showVotes'
                   },
-        en = h.allow_multiselect,
+        en = N.allow_multiselect,
         ei = (0, i.EQ)({
             isInteractive: w,
-            isExpired: F,
+            isExpired: G,
             canSelectMultipleAnswers: en
         })
             .with({ isInteractive: !1 }, () => void 0)
@@ -318,7 +318,7 @@ function L(e, t) {
             .with({ canSelectMultipleAnswers: !0 }, () => A.Z.Messages.POLL_SELECT_MULTIPLE_ANSWERS)
             .otherwise(() => A.Z.Messages.POLL_SELECT_ONE_ANSWER);
     return {
-        question: h.question,
+        question: N.question,
         promptLabel: ei,
         answers: X,
         answersInteraction: (0, i.EQ)({
@@ -345,7 +345,7 @@ function L(e, t) {
         hasSelectedAnswer: B,
         canShowVoteCounts: j,
         hasVoted: k,
-        isExpired: F,
+        isExpired: G,
         myAvatarUrl: M,
         secondaryAction: ee,
         tertiaryAction: et

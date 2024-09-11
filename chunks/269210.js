@@ -6,10 +6,10 @@ t.d(n, {
         return p;
     }
 });
-var i = t(735250);
+var l = t(735250);
 t(470079);
-var l = t(557533),
-    r = t.n(l),
+var i = t(557533),
+    r = t.n(i),
     s = t(789978),
     o = t(368072),
     a = t(777207),
@@ -18,44 +18,44 @@ var l = t(557533),
     d = t(56273),
     f = t(103077);
 function p(e) {
-    let { description: n, imgSrc: t, renderPurchaseButton: l, onPurchase: p, subscriptionType: m, title: v, onDetails: I, benefitItems: S, benefitsSummary: g } = e;
-    return (0, i.jsx)(s.tE, {
-        children: (0, i.jsxs)('div', {
+    let { description: n, imgSrc: t, renderPurchaseButton: i, onPurchase: p, subscriptionType: m, title: v, onDetails: I, benefitItems: S, benefitsSummary: h } = e;
+    return (0, l.jsx)(s.tE, {
+        children: (0, l.jsxs)('div', {
             className: r()(d.container, f.hoverCard),
             tabIndex: 0,
             onClick: () => {
                 null != I ? I() : null != p && p();
             },
             children: [
-                (0, i.jsxs)('div', {
+                (0, l.jsxs)('div', {
                     className: d.card,
                     children: [
-                        null != m && (0, i.jsx)(u.Z, { type: m }),
-                        (0, i.jsxs)('div', {
+                        null != m && (0, l.jsx)(u.Z, { type: m }),
+                        (0, l.jsxs)('div', {
                             className: d.body,
                             children: [
-                                (0, i.jsx)(a.x, {
+                                (0, l.jsx)(a.x, {
                                     tag: 'div',
                                     variant: 'heading-lg/semibold',
                                     children: v
                                 }),
-                                (0, i.jsx)('div', {
+                                (0, l.jsx)('div', {
                                     className: d.image,
                                     children:
                                         null != t
-                                            ? (0, i.jsx)('img', {
+                                            ? (0, l.jsx)('img', {
                                                   src: t.toString(),
                                                   alt: ''
                                               })
-                                            : (0, i.jsx)(o.V, {
+                                            : (0, l.jsx)(o.V, {
                                                   color: 'white',
                                                   size: 'custom',
                                                   height: 48,
                                                   width: 48
                                               })
                                 }),
-                                null != l
-                                    ? l({
+                                null != i
+                                    ? i({
                                           className: d.purchaseBtn,
                                           onClick: (e) => {
                                               e.stopPropagation(), null == p || p();
@@ -64,7 +64,7 @@ function p(e) {
                                     : null,
                                 null != n &&
                                     '' !== n &&
-                                    (0, i.jsx)(a.x, {
+                                    (0, l.jsx)(a.x, {
                                         className: d.description,
                                         color: 'text-normal',
                                         variant: 'text-sm/medium',
@@ -74,33 +74,33 @@ function p(e) {
                         })
                     ]
                 }),
-                null != g &&
-                    (0, i.jsx)('div', {
+                null != h &&
+                    (0, l.jsx)('div', {
                         className: d.benefitsSummary,
-                        children: (0, i.jsx)(a.x, {
+                        children: (0, l.jsx)(a.x, {
                             color: 'interactive-normal',
                             variant: 'text-sm/medium',
-                            children: c.Z.Messages.Storefront.BENEFITS_SUMMARY.format({ count: g })
+                            children: c.Z.Messages.Storefront.BENEFITS_SUMMARY.format({ count: h })
                         })
                     }),
                 null != S &&
-                    (0, i.jsx)('div', {
+                    (0, l.jsx)('div', {
                         className: d.benefits,
-                        children: (0, i.jsx)('div', {
+                        children: (0, l.jsx)('div', {
                             className: d.benefitsContainer,
-                            children: (0, i.jsxs)('div', {
+                            children: (0, l.jsxs)('div', {
                                 className: d.benefitsList,
                                 children: [
-                                    (0, i.jsx)(a.x, {
+                                    (0, l.jsx)(a.x, {
                                         color: 'header-secondary',
                                         variant: 'eyebrow',
                                         children: c.Z.Messages.Storefront.BENEFITS_TITLE
                                     }),
                                     S.length > 3
-                                        ? (0, i.jsxs)(i.Fragment, {
+                                        ? (0, l.jsxs)(l.Fragment, {
                                               children: [
                                                   S.slice(0, 3),
-                                                  (0, i.jsx)(a.x, {
+                                                  (0, l.jsx)(a.x, {
                                                       variant: 'text-md/semibold',
                                                       color: 'text-secondary',
                                                       children: c.Z.Messages.Storefront.MORE_BENEFITS.format({ count: S.length - 3 })
@@ -117,25 +117,25 @@ function p(e) {
     });
 }
 function m(e) {
-    let { icon: n, name: t, description: l } = e;
-    return (0, i.jsxs)('div', {
+    let { icon: n, name: t, description: i } = e;
+    return (0, l.jsxs)('div', {
         className: d.cardBenefit,
         children: [
-            (0, i.jsx)('div', {
+            (0, l.jsx)('div', {
                 className: d.cardBenefitIcon,
                 children: n
             }),
-            (0, i.jsxs)('div', {
+            (0, l.jsxs)('div', {
                 children: [
-                    (0, i.jsx)(a.x, {
+                    (0, l.jsx)(a.x, {
                         variant: 'text-md/semibold',
                         children: t
                     }),
-                    null != l &&
-                        (0, i.jsx)(a.x, {
+                    null != i &&
+                        (0, l.jsx)(a.x, {
                             variant: 'text-sm/medium',
                             color: 'text-muted',
-                            children: l
+                            children: i
                         })
                 ]
             })

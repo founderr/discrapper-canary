@@ -13,8 +13,8 @@ var i,
     I = n(572804),
     m = n(901461),
     T = n(814082),
-    h = n(23750),
-    N = n(314897),
+    N = n(23750),
+    h = n(314897),
     C = n(592125),
     f = n(375954),
     p = n(306680),
@@ -38,7 +38,7 @@ let x = 'recentMentionFilterSettings',
     j = !1,
     U = !1;
 function y(e) {
-    if (e instanceof h.ZP) return e;
+    if (e instanceof N.ZP) return e;
     let t = f.Z.getMessage(e.channel_id, e.id);
     return null != t ? t : (0, E.e5)(e);
 }
@@ -48,7 +48,7 @@ function B(e) {
     null == t && (t = e.channel_id);
     let n = C.Z.getChannel(t);
     if (null == n || n.type === O.d4z.DM || (P.guildFilter === O.NgX.THIS_SERVER && n.getGuildId() !== S.Z.getGuildId())) return null;
-    let i = N.default.getId();
+    let i = h.default.getId();
     if (g.Z.isBlockedForMessage(e) || (0, T.Z)(e, i)) return null;
     e = y(e);
     let s = !P.everyoneFilter,
@@ -79,11 +79,11 @@ function k(e) {
             return n !== e;
         }));
 }
-function G(e) {
+function F(e) {
     let { id: t } = e;
     return k(t);
 }
-function F(e) {
+function G(e) {
     let t = { ...P };
     (P = o().defaults(o().pick(e, ['guildFilter', 'roleFilter', 'everyoneFilter']), P)), u.K.set(x, P);
     let n = (e, n) => t[e] !== P[e] && P[e] === n,
@@ -157,7 +157,7 @@ class Y extends (i = c.ZP.Store) {
     (t.Z = new Y(_.Z, {
         LOAD_RECENT_MENTIONS: function (e) {
             let { guildId: t } = e;
-            (L = !0), null == t && P.guildFilter === O.NgX.THIS_SERVER && F({ guildFilter: O.NgX.ALL_SERVERS });
+            (L = !0), null == t && P.guildFilter === O.NgX.THIS_SERVER && G({ guildFilter: O.NgX.ALL_SERVERS });
         },
         LOAD_RECENT_MENTIONS_SUCCESS: function (e) {
             let { hasMoreAfter: t, messages: n, isAfter: i } = e,
@@ -174,7 +174,7 @@ class Y extends (i = c.ZP.Store) {
         LOAD_RECENT_MENTIONS_FAILURE: function () {
             L = !1;
         },
-        SET_RECENT_MENTIONS_FILTER: F,
+        SET_RECENT_MENTIONS_FILTER: G,
         CLEAR_MENTIONS: function (e) {
             w();
         },
@@ -223,8 +223,8 @@ class Y extends (i = c.ZP.Store) {
                 i = (M = M.slice())[n];
             null != i && (M[n] = (0, E.wi)(i, e.message));
         },
-        MESSAGE_DELETE: G,
-        RECENT_MENTION_DELETE: G,
+        MESSAGE_DELETE: F,
+        RECENT_MENTION_DELETE: F,
         MESSAGE_DELETE_BULK: function (e) {
             let { ids: t } = e;
             o().forEach(t, k);

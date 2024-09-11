@@ -17,8 +17,8 @@ var i = n(735250),
     I = n(626135),
     m = n(709054),
     T = n(591759),
-    h = n(833592),
-    N = n(497089),
+    N = n(833592),
+    h = n(497089),
     C = n(178480),
     f = n(418316),
     p = n(526146),
@@ -98,7 +98,7 @@ let D = s.memo(function (e) {
             { analyticsLocations: _ } = (0, l.ZP)(),
             E = (0, p.I)(r, d),
             O = s.useCallback(async () => {
-                if ((!E && (0, h.wt)(r), null != r.item_enum && r.item_enum === N.AM.FIND_FRIENDS)) {
+                if ((!E && (0, N.wt)(r), null != r.item_enum && r.item_enum === h.AM.FIND_FRIENDS)) {
                     (0, a.openModalLazy)(async () => {
                         let { default: e } = await n.e('6074').then(n.bind(n, 443189));
                         return (t) =>
@@ -128,7 +128,7 @@ let D = s.memo(function (e) {
                         } else await (0, o.Z)(i);
                     }
                     I.default.track(R.rMx.NOTIFICATION_CENTER_ACTION, {
-                        action_type: N.ud.CLICKED,
+                        action_type: h.ud.CLICKED,
                         notification_center_id: r.id,
                         item_type: r.type,
                         acked: E
@@ -136,7 +136,7 @@ let D = s.memo(function (e) {
                 }
             }, [r, E, _]),
             M = null;
-        r.type === N.O7.INCOMING_FRIEND_REQUESTS && null != r.other_user && (M = (0, i.jsx)(S.Z, { userId: r.other_user.id }));
+        r.type === h.O7.INCOMING_FRIEND_REQUESTS && null != r.other_user && (M = (0, i.jsx)(S.Z, { userId: r.other_user.id }));
         let v = null != r.local_id,
             D = (0, f.Z)(r);
         return (0, i.jsxs)('div', {

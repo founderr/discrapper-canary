@@ -13,8 +13,8 @@ var i = n(735250),
     I = n(937995),
     m = n(158776),
     T = n(594174),
-    h = n(617136),
-    N = n(272008),
+    N = n(617136),
+    h = n(272008),
     C = n(113434),
     f = n(569984),
     p = n(497505),
@@ -36,8 +36,8 @@ var i = n(735250),
     y = n(869630);
 t.Z = function (e) {
     var t, n, a;
-    let { channelId: B, previewQuest: k, isParticipatingOverride: G } = e,
-        [F, w] = s.useState(!1),
+    let { channelId: B, previewQuest: k, isParticipatingOverride: F } = e,
+        [G, w] = s.useState(!1),
         V = s.useCallback(() => w(!0), []),
         H = s.useCallback(() => w(!1), []),
         Y = s.useContext(I.h9),
@@ -101,33 +101,33 @@ t.Z = function (e) {
             },
             [q, J, W]
         ),
-        ee = !0 === G || Q || $,
+        ee = !0 === F || Q || $,
         et = (0, l.e7)([f.Z], () => null != q && f.Z.isEnrolling(q.id), [q]),
         en = (0, l.e7)([u.Z], () => ((null == W ? void 0 : W.id) == null ? null : u.Z.getParticipant(B, W.id)) != null, [B, W]),
         ei = (0, C.B6)(null == q ? void 0 : q.config.expiresAt),
         es = (0, C.B6)(null == X ? void 0 : X.rewardsExpireAt),
         ea = s.useCallback(() => {
             null != q &&
-                (0, N.AH)(q.id, {
+                (0, h.AH)(q.id, {
                     questContent: p.jn.QUEST_LIVE_STREAM,
-                    questContentCTA: h.jZ.ACCEPT_QUEST
+                    questContentCTA: N.jZ.ACCEPT_QUEST
                 });
         }, [q]),
         er = s.useCallback(() => {
             null != q &&
-                ((0, h._3)({
+                ((0, N._3)({
                     questId: q.id,
                     questContent: p.jn.QUEST_LIVE_STREAM,
-                    questContentCTA: h.jZ.TRACK_PROGRESS
+                    questContentCTA: N.jZ.TRACK_PROGRESS
                 }),
                 (0, P.navigateToQuestHome)(D.dr.QUEST_CHANNEL_CALL_HEADER, p.jn.QUEST_LIVE_STREAM, q.id));
         }, [q]),
         el = s.useCallback(() => {
             null != q &&
-                ((0, h._3)({
+                ((0, N._3)({
                     questId: q.id,
                     questContent: p.jn.QUEST_LIVE_STREAM,
-                    questContentCTA: h.jZ.LEARN_MORE
+                    questContentCTA: N.jZ.LEARN_MORE
                 }),
                 (0, P.navigateToQuestHome)(D.dr.QUEST_CHANNEL_CALL_HEADER, p.jn.QUEST_LIVE_STREAM, q.id));
         }, [q]),
@@ -158,10 +158,10 @@ t.Z = function (e) {
     });
     let eT = null != k && (null === (a = q.userStatus) || void 0 === a ? void 0 : a.claimedAt) == null;
     if ((!eT && (eE || eu || em)) || (!eT && !en)) return null;
-    let eh = (0, g.il)(q),
-        eN = (0, i.jsx)(M.Z, {
+    let eN = (0, g.il)(q),
+        eh = (0, i.jsx)(M.Z, {
             className: y.rewardTile,
-            autoplay: F,
+            autoplay: G,
             quest: q,
             questContent: p.jn.QUEST_LIVE_STREAM,
             location: D.dr.QUEST_CHANNEL_CALL_HEADER
@@ -183,7 +183,7 @@ t.Z = function (e) {
                         (0, i.jsxs)('div', {
                             className: y.rewardTileWrapper,
                             children: [
-                                eN,
+                                eh,
                                 (0, i.jsx)(x.Z, {
                                     bgOpacity: 0.32,
                                     className: y.promotedTag
@@ -197,7 +197,7 @@ t.Z = function (e) {
                                 className: y.heading,
                                 children: [
                                     ed && ee
-                                        ? eN
+                                        ? eh
                                         : (0, i.jsx)('img', {
                                               className: y.gameTile,
                                               alt: q.config.messages.gameTitle,
@@ -215,7 +215,7 @@ t.Z = function (e) {
                                                         children: ee
                                                             ? (0, g.AV)({
                                                                   quest: q,
-                                                                  taskDetails: eh
+                                                                  taskDetails: eN
                                                               })
                                                             : U.Z.Messages.QUESTS_TITLE.format({ questName: q.config.messages.questName })
                                                     }),
@@ -251,10 +251,10 @@ t.Z = function (e) {
                                 !e_ &&
                                 !ee &&
                                 (0, i.jsx)(Z.Z, {
-                                    autoplay: F,
+                                    autoplay: G,
                                     quest: q,
                                     questContent: p.jn.QUEST_LIVE_STREAM,
-                                    taskDetails: eh,
+                                    taskDetails: eN,
                                     location: D.dr.QUEST_CHANNEL_CALL_HEADER
                                 }),
                             (0, i.jsxs)('div', {

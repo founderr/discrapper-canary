@@ -18,8 +18,8 @@ var i = n(735250),
     I = n(817460),
     m = n(584825),
     T = n(290348),
-    h = n(934826),
-    N = n(768318),
+    N = n(934826),
+    h = n(768318),
     C = n(570533),
     f = n(971792),
     p = n(629262),
@@ -222,11 +222,11 @@ t.Z = (e) => {
         C = (0, m.jO)(n),
         { openModal: f, canOpenModal: p, cannotOpenReason: S, isCheckingTrialEligibility: A } = (0, x.Z)(C, a, u, E),
         P = (0, l.e7)([_.Z], () => _.Z.isSyncing),
-        { activeSubscription: D, activeSubscriptionListing: U } = (0, h.Z)(u),
+        { activeSubscription: D, activeSubscriptionListing: U } = (0, N.Z)(u),
         y = (null == U ? void 0 : U.id) === n,
         B = (null == D ? void 0 : D.status) === v.O0b.CANCELED,
-        [k, G] = s.useState(!1),
-        [F, w] = s.useState(!1),
+        [k, F] = s.useState(!1),
+        [G, w] = s.useState(!1),
         V = s.useCallback((e) => {
             let t = !1;
             null != e && (t = e.scrollHeight - e.clientHeight > 1), w(t);
@@ -235,7 +235,7 @@ t.Z = (e) => {
         [Y] = T.PK(n),
         [W] = T.TT(n),
         [K] = T.F2(n),
-        z = (0, N.Z)(a, n),
+        z = (0, h.Z)(a, n),
         Q = null != W && null == D && z,
         q = (0, c.Z)(M.iP),
         [X, J] = s.useState(!1),
@@ -319,16 +319,16 @@ t.Z = (e) => {
                                               (0, i.jsx)(o.Text, {
                                                   variant: 'text-sm/normal',
                                                   color: 'text-normal',
-                                                  className: r()((!F || !k) && Z.tierDescriptionTruncate),
+                                                  className: r()((!G || !k) && Z.tierDescriptionTruncate),
                                                   children: (0, i.jsx)('div', {
                                                       ref: V,
                                                       children: Y
                                                   })
                                               }),
-                                              F &&
+                                              G &&
                                                   (0, i.jsx)(j, {
                                                       isViewAll: k,
-                                                      onToggle: () => G((e) => !e),
+                                                      onToggle: () => F((e) => !e),
                                                       showMoreText: ei
                                                   })
                                           ]

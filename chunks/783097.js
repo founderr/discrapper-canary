@@ -3,7 +3,7 @@ n.d(t, {
         return C;
     },
     BQ: function () {
-        return N;
+        return h;
     },
     Cb: function () {
         return x;
@@ -12,7 +12,7 @@ n.d(t, {
         return M;
     },
     Wx: function () {
-        return h;
+        return N;
     },
     XZ: function () {
         return L;
@@ -67,30 +67,30 @@ var i = n(668781),
     I = n(981631),
     m = n(689079),
     T = n(689938);
-let h = { id: m.bi.BUILT_IN };
-function N(e) {
+let N = { id: m.bi.BUILT_IN };
+function h(e) {
     return e.id !== m.bi.BUILT_IN;
 }
 function C(e) {
-    return N(e) ? e.name : T.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_NAME;
+    return h(e) ? e.name : T.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_NAME;
 }
 function f(e) {
-    return N(e) ? e.description : T.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_DESCRIPTION;
+    return h(e) ? e.description : T.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_DESCRIPTION;
 }
 function p(e) {
     var t;
-    return N(e) && (0, d.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, I.udG.EMBEDDED);
+    return h(e) && (0, d.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, I.udG.EMBEDDED);
 }
 function g(e) {
     var t;
-    return N(e) && (0, d.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, I.udG.PARTNER);
+    return h(e) && (0, d.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, I.udG.PARTNER);
 }
 function S(e) {
     var t;
-    return N(e) && (0, d.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, I.udG.PROMOTED);
+    return h(e) && (0, d.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, I.udG.PROMOTED);
 }
 function A(e) {
-    return N(e) && p(e) ? (e instanceof c.Z ? e.embeddedActivityConfig : e.embedded_activity_config) : null;
+    return h(e) && p(e) ? (e instanceof c.Z ? e.embeddedActivityConfig : e.embedded_activity_config) : null;
 }
 function R(e) {
     let { command: t, optionValues: n, context: a, commandTargetId: c, maxSizeCallback: u, sectionName: d } = e,
@@ -129,7 +129,7 @@ function R(e) {
 function O(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { fakeAppIconURL: n, ...i } = t;
-    return N(e)
+    return h(e)
         ? {
               iconURL: u.ZP.getApplicationIconURL({
                   ...i,
@@ -146,7 +146,7 @@ function O(e) {
           };
 }
 function x(e) {
-    return !!N(e) && (e instanceof c.Z ? e.isMonetized : e.is_monetized);
+    return !!h(e) && (e instanceof c.Z ? e.isMonetized : e.is_monetized);
 }
 function M(e) {
     let t = A(e);

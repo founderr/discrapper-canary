@@ -13,8 +13,8 @@ var i = n(735250),
     I = n(349033),
     m = n(999650),
     T = n(857595),
-    h = n(607070),
-    N = n(367907),
+    N = n(607070),
+    h = n(367907),
     C = n(313201),
     f = n(592125),
     p = n(984933),
@@ -239,7 +239,7 @@ class U extends s.PureComponent {
             }),
             D(this, 'onFocus', () => {
                 let { searchType: e } = this.props;
-                N.ZP.trackWithMetadata(L.rMx.SEARCH_OPENED, { search_type: e }), this.setState({ focused: !0 });
+                h.ZP.trackWithMetadata(L.rMx.SEARCH_OPENED, { search_type: e }), this.setState({ focused: !0 });
             }),
             D(this, 'onBlur', () => {
                 this.setState({ focused: !1 }, () => {
@@ -323,13 +323,13 @@ class U extends s.PureComponent {
             O.WU();
     }
 }
-t.Z = u.ZP.connectStores([h.Z, g.Z], () => {
+t.Z = u.ZP.connectStores([N.Z, g.Z], () => {
     var e;
     let t = g.Z.getCurrentSearchId(),
         n = g.Z.getSearchType(),
         i = null != t && g.Z.isSearching(t),
         s = null != t && null !== (e = g.Z.getEditorState(t)) && void 0 !== e ? e : R.nR(x.Jl(m.ZP)),
-        a = h.Z.keyboardModeEnabled;
+        a = N.Z.keyboardModeEnabled;
     return {
         searchId: t,
         searchType: n,

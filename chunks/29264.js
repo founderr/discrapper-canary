@@ -23,12 +23,12 @@ let g = 'https://media.discordapp.net',
     f = 'cdn.discordapp.com',
     Z = ''.concat(g, '/stickers'),
     S = new Set(['jpg', 'jpeg', 'png', 'webp', 'gif', 'tiff', 'bmp']),
-    T = new Set(['jpg', 'jpeg', 'png']),
-    v = (e) => {
+    A = new Set(['jpg', 'jpeg', 'png']),
+    T = (e) => {
         var n, t, a, i;
         return null === (i = c.Z.toURLSafe(e)) || void 0 === i ? void 0 : null === (a = i.pathname) || void 0 === a ? void 0 : null === (t = a.split('.')) || void 0 === t ? void 0 : null === (n = t.pop()) || void 0 === n ? void 0 : n.toLowerCase();
     };
-function A(e, n) {
+function v(e, n) {
     l.Z.show({
         title: m.Z.Messages.ERROR,
         body: e
@@ -44,7 +44,7 @@ function R(e, n, t) {
         !(function (e) {
             let n = c.Z.toURLSafe(e);
             if (null == n) return !1;
-            let t = v(e);
+            let t = T(e);
             return (_.test(n.hostname) || n.host === f) && !e.startsWith(Z) && !(0, r.zt)(e) && null != t && S.has(t);
         })(e)
     )
@@ -57,21 +57,21 @@ function R(e, n, t) {
             try {
                 await E.ZP.saveImage(l), o.default.track(I.rMx.CONTEXT_MENU_IMAGE_SAVED, { ...(0, M.v)() });
             } catch (e) {
-                o.default.track(I.rMx.CONTEXT_MENU_IMAGE_SAVE_FAILED, { ...(0, M.v)() }), A(m.Z.Messages.ERROR_SAVING_IMAGE, e);
+                o.default.track(I.rMx.CONTEXT_MENU_IMAGE_SAVE_FAILED, { ...(0, M.v)() }), v(m.Z.Messages.ERROR_SAVING_IMAGE, e);
             }
         },
         R = async () => {
             try {
                 await E.ZP.copyImage(l), o.default.track(I.rMx.CONTEXT_MENU_IMAGE_COPIED, { ...(0, M.v)() });
             } catch (e) {
-                A(m.Z.Messages.ERROR_COPYING_IMAGE, e), o.default.track(I.rMx.CONTEXT_MENU_IMAGE_COPY_FAILED, { ...(0, M.v)() });
+                v(m.Z.Messages.ERROR_COPYING_IMAGE, e), o.default.track(I.rMx.CONTEXT_MENU_IMAGE_COPY_FAILED, { ...(0, M.v)() });
             }
         };
     return [
         E.ZP.canCopyImage() &&
         (function (e) {
-            let n = v(e);
-            return null != n && T.has(n);
+            let n = T(e);
+            return null != n && A.has(n);
         })(e)
             ? (0, a.jsx)(
                   i.MenuItem,

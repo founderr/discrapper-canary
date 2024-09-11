@@ -13,8 +13,8 @@ var i = n(735250),
     I = n(112724),
     m = n(607070),
     T = n(884697),
-    h = n(600164),
-    N = n(479446),
+    N = n(600164),
+    h = n(479446),
     C = n(930114),
     f = n(981632),
     p = n(108989),
@@ -36,7 +36,7 @@ var i = n(735250),
     y = n(474936),
     B = n(689938),
     k = n(216981);
-function G(e, t, n) {
+function F(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -49,7 +49,7 @@ function G(e, t, n) {
         e
     );
 }
-function F(e) {
+function G(e) {
     let { onClick: t, libraryApplication: n } = e;
     return (0, i.jsxs)(u.Clickable, {
         className: k.libraryLink,
@@ -83,9 +83,9 @@ class w extends s.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            G(this, 'renderMedia', () => (0, i.jsx)('div', { className: r()(k.invalidPoop, { [k.invalidPoopHorizontal]: this.isHorizontal }) })),
-            G(this, 'renderTitle', () => (this.props.isSelfGift ? B.Z.Messages.GIFT_EMBED_INVALID_TITLE_SELF : B.Z.Messages.GIFT_EMBED_INVALID_TITLE_OTHER)),
-            G(this, 'renderActions', () =>
+            F(this, 'renderMedia', () => (0, i.jsx)('div', { className: r()(k.invalidPoop, { [k.invalidPoopHorizontal]: this.isHorizontal }) })),
+            F(this, 'renderTitle', () => (this.props.isSelfGift ? B.Z.Messages.GIFT_EMBED_INVALID_TITLE_SELF : B.Z.Messages.GIFT_EMBED_INVALID_TITLE_OTHER)),
+            F(this, 'renderActions', () =>
                 this.props.isSelfGift
                     ? (0, i.jsx)(u.Button, {
                           size: u.Button.Sizes.SMALL,
@@ -98,7 +98,7 @@ class w extends s.PureComponent {
                           children: B.Z.Messages.GIFT_EMBED_BUTTON_ACCEPT
                       })
             ),
-            G(this, 'renderTagline', () => (this.props.isSelfGift ? B.Z.Messages.GIFT_EMBED_INVALID_TAGLINE_SELF : B.Z.Messages.GIFT_EMBED_INVALID_TAGLINE_OTHER));
+            F(this, 'renderTagline', () => (this.props.isSelfGift ? B.Z.Messages.GIFT_EMBED_INVALID_TAGLINE_SELF : B.Z.Messages.GIFT_EMBED_INVALID_TAGLINE_OTHER));
     }
 }
 class V extends s.Component {
@@ -113,25 +113,25 @@ class V extends s.Component {
     }
     renderActions(e) {
         let { libraryApplication: t } = this.props;
-        return (0, i.jsxs)(h.Z, {
-            justify: h.Z.Justify.BETWEEN,
+        return (0, i.jsxs)(N.Z, {
+            justify: N.Z.Justify.BETWEEN,
             children: [
-                (0, i.jsxs)(h.Z, {
+                (0, i.jsxs)(N.Z, {
                     children: [
                         this.renderButton(e),
                         null == t || e.isSubscription
                             ? null
-                            : (0, i.jsx)(F, {
+                            : (0, i.jsx)(G, {
                                   onClick: this.handleViewLibrary,
                                   libraryApplication: t
                               })
                     ]
                 }),
-                (0, i.jsxs)(h.Z, {
-                    align: h.Z.Align.END,
-                    justify: h.Z.Justify.END,
+                (0, i.jsxs)(N.Z, {
+                    align: N.Z.Align.END,
+                    justify: N.Z.Justify.END,
                     className: k.metadata,
-                    direction: h.Z.Direction.VERTICAL,
+                    direction: N.Z.Direction.VERTICAL,
                     children: [e.hasMultipleCopies ? (0, i.jsx)('div', { children: this.renderGiftCodeCopiesLeft(e) }) : null, e.redeemed || e.isClaimed || null != t || null == e.expiresAt ? null : (0, i.jsx)('div', { children: B.Z.Messages.GIFT_EMBED_EXPIRATION.format({ hours: e.expiresAt.diff(o()(), 'h') }) })]
                 })
             ]
@@ -276,14 +276,14 @@ class V extends s.Component {
     }
     constructor(...e) {
         super(...e),
-            G(this, 'handleViewLibrary', (e) => {
+            F(this, 'handleViewLibrary', (e) => {
                 let { libraryApplication: t } = this.props;
                 e.preventDefault(), null != t && t.isHidden() ? (0, g.uL)(U.Z5c.APPLICATION_LIBRARY_SETTINGS) : (0, g.uL)(U.Z5c.APPLICATION_LIBRARY, { state: { applicationId: null != t ? t.id : void 0 } });
             }),
-            G(this, 'handleVerificationClick', (e) => {
+            F(this, 'handleVerificationClick', (e) => {
                 e.stopPropagation(), e.preventDefault(), d.Z.open(U.oAB.ACCOUNT);
             }),
-            G(this, 'handleAccept', (e) => {
+            F(this, 'handleAccept', (e) => {
                 let { channelId: t, code: n, content: i, type: s, giftInfo: a } = this.props;
                 e.preventDefault(),
                     e.stopPropagation(),
@@ -302,17 +302,17 @@ class V extends s.Component {
                     giftInfo: a
                 });
             }),
-            G(this, 'handleEmbedClick', (e) => {
+            F(this, 'handleEmbedClick', (e) => {
                 let { giftCode: t } = this.props;
                 null != t && t.isSubscription && (e.preventDefault(), d.Z.open(U.oAB.PREMIUM));
             }),
-            G(this, 'handleClaimPromotion', (e) => {
+            F(this, 'handleClaimPromotion', (e) => {
                 var t;
                 e.stopPropagation(), e.preventDefault();
                 let n = null === (t = this.props.giftCode) || void 0 === t ? void 0 : t.code;
                 if (null != n) window.open(U.Z5c.BILLING_PROMOTION_REDEMPTION(n));
             }),
-            G(this, 'renderCustomGiftBox', (e) => {
+            F(this, 'renderCustomGiftBox', (e) => {
                 let { useReducedMotion: t, width: n } = this.props;
                 if (null == e || null == e.giftStyle) return null;
                 let s = y.jy.includes(e.giftStyle),
@@ -338,7 +338,7 @@ class V extends s.Component {
                         s && (0, i.jsx)(v.Z, { className: k.headerIcon }),
                         null != e.giftStyle &&
                             (0, i.jsx)(f.Z, {
-                                defaultAnimationState: e.redeemed ? N.SR.LOOP : N.SR.IDLE,
+                                defaultAnimationState: e.redeemed ? h.SR.LOOP : h.SR.IDLE,
                                 giftStyle: e.giftStyle,
                                 className: l
                             })

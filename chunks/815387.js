@@ -13,8 +13,8 @@ var i = n(735250),
     I = n(710845),
     m = n(825829),
     T = n(623624),
-    h = n(533694),
-    N = n(182180),
+    N = n(533694),
+    h = n(182180),
     C = n(924301),
     f = n(225890),
     p = n(434404),
@@ -36,8 +36,8 @@ var i = n(735250),
     y = n(158776),
     B = n(944486),
     k = n(594174),
-    G = n(979651),
-    F = n(585483),
+    F = n(979651),
+    G = n(585483),
     w = n(5192),
     V = n(960048),
     H = n(709054),
@@ -67,8 +67,8 @@ var i = n(735250),
     eI = n(461135),
     em = n(296571),
     eT = n(587737),
-    eh = n(482239),
-    eN = n(328749),
+    eN = n(482239),
+    eh = n(328749),
     eC = n(4305),
     ef = n(910548),
     ep = n(981631),
@@ -178,7 +178,7 @@ let ex = Object.freeze({
                 messageId: t.id
             });
         return n.isThread()
-            ? (0, i.jsx)(eh.Z, {
+            ? (0, i.jsx)(eN.Z, {
                   message: t,
                   channel: n,
                   compact: s,
@@ -207,11 +207,11 @@ let ex = Object.freeze({
             u = P.default.getId(),
             d = t.getChannelId(),
             _ = (0, a.e7)([D.Z], () => D.Z.isCallActive(d, l), [d, l]),
-            E = (0, a.e7)([G.Z], () => G.Z.getVoiceState(ep.ME, u)),
+            E = (0, a.e7)([F.Z], () => F.Z.getVoiceState(ep.ME, u)),
             I = !_ && null != t.call && !t.call.participants.includes(u),
             m = _ && (null == E || E.channelId !== d),
             T = s.useCallback(() => c.default.selectVoiceChannel(d), [d]),
-            h = (0, z.l)({
+            N = (0, z.l)({
                 user: o,
                 channelId: d,
                 guildId: r.guild_id,
@@ -222,7 +222,7 @@ let ex = Object.freeze({
             message: t,
             missed: I,
             joinable: m,
-            usernameHook: h,
+            usernameHook: N,
             onClickJoinCall: T
         });
     },
@@ -268,7 +268,7 @@ let ex = Object.freeze({
                     let e = b.Z.getChannel(l);
                     null != e && (0, R.XU)(e.guild_id, e.id);
                 }
-                setTimeout(() => F.S.dispatch(ep.CkL.TOGGLE_CHANNEL_PINS), 0);
+                setTimeout(() => G.S.dispatch(ep.CkL.TOGGLE_CHANNEL_PINS), 0);
             }, [l]),
             c = (0, z.l)({
                 user: r,
@@ -436,7 +436,7 @@ let ex = Object.freeze({
             onContextMenuThread: _
         });
     },
-    [ep.uaV.THREAD_STARTER_MESSAGE]: eN.Z,
+    [ep.uaV.THREAD_STARTER_MESSAGE]: eh.Z,
     [ep.uaV.GUILD_INVITE_REMINDER]: function (e) {
         let { message: t, channel: n, compact: s } = e,
             r = (0, a.e7)([k.default], () => k.default.getCurrentUser()),
@@ -493,12 +493,12 @@ let ex = Object.freeze({
             usernameHook: a
         });
     },
-    [ep.uaV.ROLE_SUBSCRIPTION_PURCHASE]: N.Z,
+    [ep.uaV.ROLE_SUBSCRIPTION_PURCHASE]: h.Z,
     [ep.uaV.PURCHASE_NOTIFICATION]: function (e) {
         var t;
         let { message: n, channel: s, compact: a } = e;
         return (null === (t = n.purchaseNotification) || void 0 === t ? void 0 : t.type) === d.Eh.GUILD_PRODUCT
-            ? (0, i.jsx)(h.Z, {
+            ? (0, i.jsx)(N.Z, {
                   message: n,
                   channel: s,
                   compact: a

@@ -19,14 +19,14 @@ var i = n(735250),
     u = n(689938),
     d = n(189265);
 function _(e) {
-    let { label: t, ariaLabel: n, tooltipText: s, tooltipColor: _, icon: E, iconProps: I, onClick: m, onTooltipShow: T, onTooltipHide: h, disabled: N, dangerous: C, separator: f, sparkle: p, showNewBadge: g, buttonClassName: S, children: A, ...R } = e,
+    let { label: t, ariaLabel: n, tooltipText: s, tooltipColor: _, icon: E, iconProps: I, onClick: m, onTooltipShow: T, onTooltipHide: N, disabled: h, dangerous: C, separator: f, sparkle: p, showNewBadge: g, buttonClassName: S, children: A, ...R } = e,
         { canShowReactionsOnMessageHover: O } = c.ZP.useExperiment({ location: 'HoverBarButton' }, { autoTrackExposure: !0 });
     return (0, i.jsx)(r.Tooltip, {
         text: null != s ? s : t,
         color: null != _ ? _ : r.TooltipColors.PRIMARY,
         'aria-label': t,
         onTooltipShow: T,
-        onTooltipHide: h,
+        onTooltipHide: N,
         hideOnClick: !0,
         tooltipClassName: d.tooltip,
         children: (e) => {
@@ -41,7 +41,7 @@ function _(e) {
                             null == _ || _(), m(e);
                         },
                         'aria-label': null != n ? n : t,
-                        disabled: N,
+                        disabled: h,
                         dangerous: C,
                         ...R,
                         children: [

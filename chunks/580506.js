@@ -1,7 +1,7 @@
 n(47120);
 var r = n(147913),
-    i = n(192720),
-    a = n(121254),
+    i = n(2818),
+    a = n(192720),
     s = n(742989);
 function o(e, t, n) {
     return (
@@ -22,7 +22,7 @@ class l extends r.Z {
             o(this, 'actions', { POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen() }),
             o(this, 'handlePostConnectionOpen', () => {
                 !(function () {
-                    if (!!(a.Z.getCurrentConfig({ location: 'saved_messages_manager' }, { autoTrackExposure: !1 }).enabled || s.Z.getCurrentConfig({ location: 'saved_messages_manager' }, { autoTrackExposure: !1 }).showReminders)) (0, i.sE)();
+                    if (!!(i.Z.getCurrentConfig({ location: 'saved_messages_manager' }, { autoTrackExposure: !1 }).enabled || s.Z.getCurrentConfig({ location: 'saved_messages_manager' }, { autoTrackExposure: !1 }).showReminders)) (0, a.sE)();
                 })();
             });
     }

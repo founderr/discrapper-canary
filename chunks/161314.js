@@ -18,8 +18,8 @@ var i = n(735250),
     I = n(267101),
     m = n(336197),
     T = n(661824),
-    h = n(430824),
-    N = n(626135),
+    N = n(430824),
+    h = n(626135),
     C = n(76535),
     f = n(866104),
     p = n(886176),
@@ -29,12 +29,12 @@ var i = n(735250),
 function R(e) {
     var t;
     let { guildId: n } = e,
-        a = (0, c.e7)([h.Z], () => h.Z.getGuild(n)),
+        a = (0, c.e7)([N.Z], () => N.Z.getGuild(n)),
         { loading: R, subscriptionsSettings: O } = (0, C.H)(n),
         { listingsLoaded: x } = (0, I.eD)(n),
         M = (0, I.ue)(n, { publishedOnly: !0 }),
         v = s.useCallback(async () => {
-            N.default.track(g.rMx.GUILD_SHOP_EMBED_CLICKED, { ...(0, d.hH)(n) }), await (0, m.Z)(g.Z5c.SERVER_SHOP(n));
+            h.default.track(g.rMx.GUILD_SHOP_EMBED_CLICKED, { ...(0, d.hH)(n) }), await (0, m.Z)(g.Z5c.SERVER_SHOP(n));
         }, [n]);
     (0, _.Z)(
         {

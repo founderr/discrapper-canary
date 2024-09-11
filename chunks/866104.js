@@ -21,8 +21,8 @@ var i = n(735250),
     I = n(695346),
     m = n(271383),
     T = n(594174),
-    h = n(671533),
-    N = n(51144),
+    N = n(671533),
+    h = n(51144),
     C = n(506071),
     f = n(696014),
     p = n(847033),
@@ -45,8 +45,8 @@ function O(e) {
                 size: 4,
                 horizontal: !0
             }),
-            (0, i.jsx)(h.Z, {
-                direction: h.Z.Directions.RIGHT,
+            (0, i.jsx)(N.Z, {
+                direction: N.Z.Directions.RIGHT,
                 className: R.showMoreArrow
             })
         ]
@@ -88,7 +88,7 @@ function M(e) {
     var t, n, a;
     let { guild: d, subscriptionsSettings: E } = e,
         I = d.id;
-    let { nickname: h, nickcolor: C } =
+    let { nickname: N, nickcolor: C } =
             ((a = I),
             (0, l.cj)(
                 [m.ZP, T.default],
@@ -98,7 +98,7 @@ function M(e) {
                     r()(null != n, 'user cannot be null');
                     let i = m.ZP.getMember(a, n.id);
                     return {
-                        nickname: null !== (e = null == i ? void 0 : i.nick) && void 0 !== e ? e : N.ZP.getName(n),
+                        nickname: null !== (e = null == i ? void 0 : i.nick) && void 0 !== e ? e : h.ZP.getName(n),
                         nickcolor: null !== (t = null == i ? void 0 : i.colorString) && void 0 !== t ? t : void 0
                     };
                 },
@@ -169,7 +169,7 @@ function M(e) {
                                         variant: 'text-md/normal',
                                         color: 'text-normal',
                                         children: A.Z.Messages.GUILD_STORE_HERO_DESCRIPTION_GREETING.format({
-                                            username: h,
+                                            username: N,
                                             usernameHook: function (e, t) {
                                                 return (0, i.jsx)(
                                                     'span',

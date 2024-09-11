@@ -23,7 +23,7 @@ var i = n(735250),
     C = n(757692),
     I = n(933843),
     x = n(141321),
-    T = n(121254),
+    T = n(2818),
     v = n(954551),
     S = n(44136),
     N = n(651183),
@@ -103,13 +103,13 @@ function z(e) {
         K = (0, I.So)(c.q.STREAM_HIGH_QUALITY),
         q = (0, C.o)(y, z),
         X = (0, g.lL)('CallHeader', !0, z, q),
-        { enabled: Q } = T.Z.useExperiment({ location: 'ChannelCallHeaderToolbar' }, { autoTrackExposure: !1 }),
-        { preventIdle: J, allowIdle: $ } = (0, A.Y)('popup'),
-        ee = [];
+        { enabled: Q, inInbox: J } = T.Z.useExperiment({ location: 'ChannelCallHeaderToolbar' }),
+        { preventIdle: $, allowIdle: ee } = (0, A.Y)('popup'),
+        et = [];
     if (Y) {
         let e = (null == y ? void 0 : y.type) === H.fO.STREAM ? (0, _.my)(y.id) : void 0,
             t = (null == y ? void 0 : y.type) === H.fO.ACTIVITY ? y.id : void 0;
-        ee.push(
+        et.push(
             (0, i.jsx)(
                 L.Z,
                 {
@@ -126,7 +126,7 @@ function z(e) {
     }
     return (
         O &&
-            ee.push(
+            et.push(
                 (0, i.jsx)(
                     W,
                     {
@@ -136,7 +136,7 @@ function z(e) {
                     'current-speaker'
                 )
             ),
-        ee.push(
+        et.push(
             (0, i.jsx)(
                 p.Z,
                 {
@@ -147,7 +147,7 @@ function z(e) {
             )
         ),
         (null == y ? void 0 : y.type) === H.fO.STREAM &&
-            (ee.push(
+            (et.push(
                 (0, i.jsx)(
                     N.Z,
                     {
@@ -157,7 +157,7 @@ function z(e) {
                     'warning'
                 )
             ),
-            ee.push(
+            et.push(
                 (0, i.jsx)(
                     f.Z,
                     {
@@ -171,7 +171,7 @@ function z(e) {
                 )
             )),
         O &&
-            ee.push(
+            et.push(
                 (0, i.jsx)(
                     d.Popout,
                     {
@@ -192,7 +192,7 @@ function z(e) {
                 )
             ),
         l &&
-            ee.push(
+            et.push(
                 null != y
                     ? (0, i.jsx)(
                           R.Z,
@@ -212,20 +212,20 @@ function z(e) {
                           'select-participant'
                       )
             ),
-        !t && ee.push((0, i.jsx)(m.Z, { className: F.button }, 'clips')),
-        ee.push(
+        !t && et.push((0, i.jsx)(m.Z, { className: F.button }, 'clips')),
+        et.push(
             (0, i.jsx)(
                 x.Z,
                 {
-                    onOpen: J,
-                    onClose: $,
+                    onOpen: $,
+                    onClose: ee,
                     className: F.button
                 },
                 'recents'
             )
         ),
-        Q && ee.push((0, i.jsx)(v.Z, { className: F.button }, 'for-later')),
-        ee.push(
+        Q && !J && et.push((0, i.jsx)(v.Z, { className: F.button }, 'for-later')),
+        et.push(
             (0, i.jsx)(
                 d.Popout,
                 {
@@ -255,8 +255,8 @@ function z(e) {
             )
         ),
         !r &&
-            (ee.push((0, i.jsx)(E.ZP.Divider, { className: F.divider }, 'divider')),
-            ee.push(
+            (et.push((0, i.jsx)(E.ZP.Divider, { className: F.divider }, 'divider')),
+            et.push(
                 (0, i.jsx)(
                     M.T,
                     {
@@ -267,6 +267,6 @@ function z(e) {
                     'chat-spacer'
                 )
             )),
-        (0, i.jsx)(i.Fragment, { children: ee })
+        (0, i.jsx)(i.Fragment, { children: et })
     );
 }

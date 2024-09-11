@@ -18,8 +18,8 @@ var i = n(735250),
     I = n(703656),
     m = n(324701),
     T = n(768943),
-    h = n(695346),
-    N = n(592125),
+    N = n(695346),
+    h = n(592125),
     C = n(655354),
     f = n(324081),
     p = n(240126),
@@ -74,7 +74,7 @@ function v(e) {
         { messageReminder: s } = e,
         a = s.saveData,
         l = s.message,
-        u = (0, c.e7)([N.Z], () => N.Z.getChannel(a.channelId)),
+        u = (0, c.e7)([h.Z], () => h.Z.getChannel(a.channelId)),
         T = () => {
             (0, I.uL)(S.Z5c.CHANNEL(null == u ? void 0 : u.getGuildId(), a.channelId, a.messageId));
         },
@@ -176,7 +176,7 @@ function v(e) {
                                   message: l,
                                   channel: u,
                                   className: O.message,
-                                  compact: h.jU.getSetting(),
+                                  compact: N.jU.getSetting(),
                                   animateAvatar: !1,
                                   focusProps: x,
                                   trackAnnouncementViews: !0

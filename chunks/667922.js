@@ -23,9 +23,9 @@ function Z(e, n) {
     let { reducedMotion: t } = i.useContext(r.AccessibilityPreferencesContext),
         M = (0, d.$R)(n),
         Z = (0, l.e7)([E.Z], () => (n.isPrivate() || E.Z.can(g.Plq.ADD_REACTIONS, n)) && M, [n, M]),
-        T = (0, s.MZ)(n.getGuildId());
+        A = (0, s.MZ)(n.getGuildId());
     if (!c.nc.getSetting() || !Z || e.type === g.uaV.GUILD_INVITE_REMINDER) return null;
-    let v = T.filter(
+    let T = A.filter(
         (e) =>
             !m.ZP.isEmojiFilteredOrLocked({
                 emoji: e,
@@ -65,7 +65,7 @@ function Z(e, n) {
         color: 'default',
         children: (0, a.jsxs)(a.Fragment, {
             children: [
-                v,
+                T,
                 (0, a.jsx)(r.MenuSeparator, {}),
                 (0, a.jsx)(r.MenuItem, {
                     color: 'default',

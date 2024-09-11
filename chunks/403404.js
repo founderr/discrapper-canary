@@ -12,15 +12,15 @@ var s = n(481060),
     o = n(701488),
     c = n(981631);
 function u(e) {
-    let { channel: t, guildId: u, locationObject: d, openInPopout: _, initialSelectedApplicationId: E, initialSlide: I = o.ag.DIRECTORY, enableSelectedTextChannelInvite: m = !1, analyticsLocations: T, opensAppLauncherModal: h = !1 } = e,
-        N = T.length > 0 ? T[T.length - 1] : 'open-activity-shelf',
-        { enabled: C } = a.m1.getCurrentConfig({ location: N }, { autoTrackExposure: !1 });
-    if (h && C) {
+    let { channel: t, guildId: u, locationObject: d, openInPopout: _, initialSelectedApplicationId: E, initialSlide: I = o.ag.DIRECTORY, enableSelectedTextChannelInvite: m = !1, analyticsLocations: T, opensAppLauncherModal: N = !1 } = e,
+        h = T.length > 0 ? T[T.length - 1] : 'open-activity-shelf',
+        { enabled: C } = a.m1.getCurrentConfig({ location: h }, { autoTrackExposure: !1 });
+    if (N && C) {
         null != t &&
             (0, r.Z)({
                 openInPopout: _,
                 channel: t,
-                analyticsLocation: N
+                analyticsLocation: h
             });
         return;
     }

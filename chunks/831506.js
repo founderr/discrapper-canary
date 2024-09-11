@@ -13,12 +13,12 @@ var i,
     I = n(981631);
 let m = {},
     T = {};
-function h(e, t) {
+function N(e, t) {
     var n;
     return (null !== (n = m[e]) && void 0 !== n ? n : {})[t];
 }
-function N(e, t) {
-    let n = h(e, t);
+function h(e, t) {
+    let n = N(e, t);
     if (null == n) return;
     let i = m[e];
     delete i[t], o().isEmpty(i) && delete m[e];
@@ -28,11 +28,11 @@ function N(e, t) {
 function C(e, t, n, i) {
     let s = n.find((e) => null != e.party && e.party.id),
         a = null != s && null != s.party ? s.party.id : null,
-        r = h(t, e);
-    if (null == a || i === I.Skl.OFFLINE) return null != r && (N(t, e), void 0);
+        r = N(t, e);
+    if (null == a || i === I.Skl.OFFLINE) return null != r && (h(t, e), void 0);
     if (null != r) {
         if (r === a) return !1;
-        N(t, e);
+        h(t, e);
     }
     !(function (e, t, n) {
         var i;

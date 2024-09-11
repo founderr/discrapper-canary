@@ -35,24 +35,24 @@ function c(e) {
             n = d > 0 ? s.Z.Messages.GUILD_SIDEBAR_ANNOUNCEMENT_CHANNEL_A11Y_LABEL_WITH_MENTIONS : c ? s.Z.Messages.GUILD_SIDEBAR_ANNOUNCEMENT_CHANNEL_A11Y_LABEL_WITH_UNREADS : s.Z.Messages.GUILD_SIDEBAR_ANNOUNCEMENT_CHANNEL_A11Y_LABEL;
             break;
         case u.d4z.GUILD_VOICE:
-            let g = [s.Z.Messages.GUILD_SIDEBAR_VOICE_CHANNEL_A11Y_LABEL.format({ channelName: t.name })];
-            if ((d > 0 && g.push(s.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({ mentionCount: d })), c && g.push(s.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD), null != _)) {
+            let T = [s.Z.Messages.GUILD_SIDEBAR_VOICE_CHANNEL_A11Y_LABEL.format({ channelName: t.name })];
+            if ((d > 0 && T.push(s.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({ mentionCount: d })), c && T.push(s.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD), null != _)) {
                 let e = t.userLimit;
                 null != e && e > 0
-                    ? g.push(
+                    ? T.push(
                           s.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_LIMIT.format({
                               userCount: _,
                               limit: e
                           })
                       )
-                    : g.push(s.Z.Messages.GUILD_SIDEBAR_VOICE_CHANNEL_A11Y_LABEL_USERS.format({ userCount: _ }));
+                    : T.push(s.Z.Messages.GUILD_SIDEBAR_VOICE_CHANNEL_A11Y_LABEL_USERS.format({ userCount: _ }));
             }
-            null != f && f > 0 && g.push(s.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_ACTIVITIES.format({ activitiesCount: f }));
-            let T = a({
+            null != f && f > 0 && T.push(s.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_ACTIVITIES.format({ activitiesCount: f }));
+            let g = a({
                 isSubscriptionGated: E,
                 needSubscriptionToAccess: I
             });
-            return null != T && g.push(T), g.join(', ');
+            return null != g && T.push(g), T.join(', ');
         case u.d4z.GUILD_STAGE_VOICE:
             n = s.Z.Messages.GUILD_SIDEBAR_STAGE_CHANNEL_A11Y_LABEL;
             break;

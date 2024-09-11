@@ -4,7 +4,7 @@ n.r(e),
             return p;
         },
         openInteractionModal: function () {
-            return S;
+            return I;
         }
     });
 var i = n(735250);
@@ -19,7 +19,7 @@ var o = n(481060),
     d = n(251686);
 function p(t) {
     let { title: e, onClose: n, transitionState: p } = t,
-        { components: S, applicationIconURL: I, applicationName: _, submissionState: C, error: f, validators: T, onSubmit: h } = (0, a.X9)(t, n);
+        { components: I, applicationIconURL: S, applicationName: _, submissionState: C, error: f, validators: T, onSubmit: h } = (0, a.X9)(t, n);
     return (0, i.jsx)('form', {
         onSubmit: (t) => {
             t.preventDefault(), h();
@@ -31,7 +31,7 @@ function p(t) {
                     separator: !1,
                     children: [
                         (0, i.jsx)(o.Avatar, {
-                            src: I,
+                            src: S,
                             size: o.AvatarSizes.SIZE_24,
                             'aria-label': _,
                             className: d.applicationIcon
@@ -65,7 +65,7 @@ function p(t) {
                             children: (0, i.jsx)(l.Il, {
                                 modal: t,
                                 validators: T,
-                                children: (0, u.xX)(S)
+                                children: (0, u.xX)(I)
                             })
                         })
                     ]
@@ -91,7 +91,7 @@ function p(t) {
         })
     });
 }
-function S(t) {
+function I(t) {
     (0, o.openModal)((e) =>
         (0, i.jsx)(p, {
             ...e,

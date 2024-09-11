@@ -20,10 +20,10 @@ function I(e) {
         n,
         I,
         { author: m, banned: T } = e,
-        h = (0, s.e7)([l.default], () => l.default.getId()),
-        N = (0, s.e7)([o.Z], () => o.Z.getChannelId()),
+        N = (0, s.e7)([l.default], () => l.default.getId()),
+        h = (0, s.e7)([o.Z], () => o.Z.getChannelId()),
         C = u.ZP.useName(m),
-        f = h === m.id;
+        f = N === m.id;
     return (
         f
             ? ((t = _.Z.Messages.INVITE_BUTTON_INVALID_OWNER), (I = _.Z.Messages.INVITE_BUTTON_TITLE_INVITER_INVALID))
@@ -40,7 +40,7 @@ function I(e) {
                                   plainText: t,
                                   rawText: '<@'.concat(e, '>')
                               }),
-                                  null != N && a.Z.startTyping(N);
+                                  null != h && a.Z.startTyping(h);
                           },
                           children: _.Z.Messages.MENTION
                       })))

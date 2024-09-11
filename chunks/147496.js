@@ -4,9 +4,9 @@ t.r(n),
             return S;
         }
     });
-var i = t(735250);
+var l = t(735250);
 t(470079);
-var l = t(752843),
+var i = t(752843),
     r = t(442837),
     s = t(481060),
     o = t(55563),
@@ -20,37 +20,37 @@ var l = t(752843),
     v = t(981631),
     I = t(689938);
 function S(e) {
-    var n, t, S, g;
-    let { onClose: h, transitionState: x, skuId: E, appId: _, onHeaderTitleClick: N } = e,
-        T = (0, r.e7)([a.Z], () => a.Z.getForSKU(E), [E]),
-        Z = (0, r.e7)([o.Z], () => o.Z.get(E), [E]),
-        C = (0, d.M)(E);
+    var n, t, S, h;
+    let { onClose: g, transitionState: x, skuId: _, appId: N, onHeaderTitleClick: E } = e,
+        T = (0, r.e7)([a.Z], () => a.Z.getForSKU(_), [_]),
+        Z = (0, r.e7)([o.Z], () => o.Z.get(_), [_]),
+        C = (0, d.M)(_);
     if (null == Z) return null;
     let A = null !== (t = Z.name) && void 0 !== t ? t : '',
         L = null !== (S = null == T ? void 0 : null === (n = T.description) || void 0 === n ? void 0 : n.trim()) && void 0 !== S ? S : void 0,
-        b = (null == T ? void 0 : T.headerBackground) != null && null !== (g = c.Z.toURLSafe((0, u._W)(_, T.headerBackground, 256))) && void 0 !== g ? g : void 0,
-        O = Z.type === v.epS.DURABLE && C,
-        R = Z.type === v.epS.DURABLE ? (O ? I.Z.Messages.STOREFRONT_DURABLE_AVAILABILITY_NONE : I.Z.Messages.STOREFRONT_DURABLE_AVAILABILITY) : void 0,
+        O = (null == T ? void 0 : T.headerBackground) != null && null !== (h = c.Z.toURLSafe((0, u._W)(N, T.headerBackground, 256))) && void 0 !== h ? h : void 0,
+        R = Z.type === v.epS.DURABLE && C,
+        b = Z.type === v.epS.DURABLE ? (R ? I.Z.Messages.STOREFRONT_DURABLE_AVAILABILITY_NONE : I.Z.Messages.STOREFRONT_DURABLE_AVAILABILITY) : void 0,
         { price: j } = Z;
     return null == j
         ? null
-        : (0, i.jsx)(f.A, {
-              appId: _,
+        : (0, l.jsx)(f.A, {
+              appId: N,
               skuId: Z.id,
               transitionState: x,
-              onHeaderTitleClick: null != N ? N : h,
-              onClose: h,
-              footer: (0, i.jsx)(p.Y, {
-                  appId: _,
+              onHeaderTitleClick: null != E ? E : g,
+              onClose: g,
+              footer: (0, l.jsx)(p.Y, {
+                  appId: N,
                   sku: Z
               }),
-              children: (0, i.jsx)(m.i, {
-                  appId: _,
+              children: (0, l.jsx)(m.i, {
+                  appId: N,
                   skuId: Z.id,
                   title: A,
                   description: L,
-                  imgSrc: b,
-                  tag: null != R ? (0, i.jsx)(l.V, { text: R }) : void 0,
+                  imgSrc: O,
+                  tag: null != b ? (0, l.jsx)(i.V, { text: b }) : void 0,
                   FallbackIcon: s.TicketIcon
               })
           });

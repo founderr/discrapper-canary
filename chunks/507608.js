@@ -23,8 +23,8 @@ var i = l(735250),
     p = l(87484),
     v = l(171246),
     h = l(930155),
-    S = l(889989),
-    x = l(696906),
+    x = l(889989),
+    S = l(696906),
     g = l(55563),
     I = l(551428),
     N = l(626135),
@@ -44,7 +44,7 @@ function A(e) {
     let { app: n, onlySubscribeServerSubForGuildId: l, subscriptions: a, otps: r } = e,
         p = t.useMemo(() => (0, b.y)(n, 100), [n]),
         { bot: h } = n,
-        S = t.useMemo(() => {
+        x = t.useMemo(() => {
             var e;
             if ((null == h ? void 0 : h.banner) == null) return;
             let n = (0, T.aN)({
@@ -55,7 +55,7 @@ function A(e) {
             });
             return null != n && null !== (e = f.Z.toURLSafe(n)) && void 0 !== e ? e : void 0;
         }, [h]),
-        x = t.useMemo(() => {
+        S = t.useMemo(() => {
             var e;
             if ((null == h ? void 0 : h.banner) == null) return;
             let n = (0, T.aN)({
@@ -84,8 +84,8 @@ function A(e) {
                 (0, i.jsx)(s.j, {
                     title: n.name,
                     iconSrc: p,
-                    backgroundSrc: S,
-                    animatedBackgroundSrc: x,
+                    backgroundSrc: x,
+                    animatedBackgroundSrc: S,
                     prefersReducedMotion: g
                 }),
                 a.length > 0 &&
@@ -158,7 +158,7 @@ function C(e) {
     let { appId: l, onlySubscribeServerSubForGuildId: s, listing: a, subscriptionType: u, onDetails: c } = e,
         { data: m } = (0, h.H)(a.skuId),
         p = (0, o.e7)([g.Z], () => g.Z.getParentSKU(a.skuId), [a.skuId]),
-        { openModal: v } = (0, x.Z)({
+        { openModal: v } = (0, S.Z)({
             guildId: s,
             groupListingId: null == p ? void 0 : p.id,
             showBenefitsFirst: !1,
@@ -173,7 +173,7 @@ function C(e) {
                       id: e.id,
                       title: e.name,
                       description: e.description,
-                      icon: (0, S.n)(l, e.icon)
+                      icon: (0, x.n)(l, e.icon)
                   }));
         }, [l, a.benefits]),
         N = t.useMemo(() => {
@@ -241,16 +241,16 @@ function L(e) {
     var n, l, t, s;
     let { skuId: r, appId: u, onDetails: v } = e,
         { analyticsLocations: h } = (0, m.ZP)(c.Z.APP_STOREFRONT),
-        S = (0, o.e7)([I.Z], () => I.Z.getForSKU(r), [r]),
-        x = (0, o.e7)([g.Z], () => g.Z.get(r), [r]),
+        x = (0, o.e7)([I.Z], () => I.Z.getForSKU(r), [r]),
+        S = (0, o.e7)([g.Z], () => g.Z.get(r), [r]),
         N = (0, O.M)(r);
-    if (null == x) return null;
-    let T = null !== (l = x.name) && void 0 !== l ? l : '',
-        b = null !== (t = null == S ? void 0 : null === (n = S.description) || void 0 === n ? void 0 : n.trim()) && void 0 !== t ? t : void 0,
-        P = (null == S ? void 0 : S.headerBackground) != null && null !== (s = f.Z.toURLSafe((0, j._W)(u, S.headerBackground, 256))) && void 0 !== s ? s : void 0,
-        Z = x.type === M.epS.DURABLE && N,
-        A = x.type === M.epS.DURABLE ? (Z ? _.Z.Messages.STOREFRONT_DURABLE_AVAILABILITY_NONE : _.Z.Messages.STOREFRONT_DURABLE_AVAILABILITY) : void 0,
-        { price: C } = x;
+    if (null == S) return null;
+    let T = null !== (l = S.name) && void 0 !== l ? l : '',
+        b = null !== (t = null == x ? void 0 : null === (n = x.description) || void 0 === n ? void 0 : n.trim()) && void 0 !== t ? t : void 0,
+        P = (null == x ? void 0 : x.headerBackground) != null && null !== (s = f.Z.toURLSafe((0, j._W)(u, x.headerBackground, 256))) && void 0 !== s ? s : void 0,
+        Z = S.type === M.epS.DURABLE && N,
+        A = S.type === M.epS.DURABLE ? (Z ? _.Z.Messages.STOREFRONT_DURABLE_AVAILABILITY_NONE : _.Z.Messages.STOREFRONT_DURABLE_AVAILABILITY) : void 0,
+        { price: C } = S;
     return null == C
         ? null
         : (0, i.jsx)(a.I, {
@@ -278,12 +278,12 @@ function L(e) {
                   (0, i.jsx)(E.Y, {
                       ...e,
                       appId: u,
-                      sku: x
+                      sku: S
                   }),
               onPurchase: () => {
                   (0, p.Z)({
                       applicationId: u,
-                      skuId: x.id,
+                      skuId: S.id,
                       analyticsLocations: h
                   });
               }

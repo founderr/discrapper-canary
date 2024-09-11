@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return N;
     }
 }),
     n(789020);
@@ -19,9 +19,9 @@ var s = n(533800),
     I = n(981631),
     m = n(689938),
     T = n(691784);
-function h(e) {
-    var t, h;
-    let N,
+function N(e) {
+    var t, N;
+    let h,
         C,
         f,
         { onTransitionToInviteChannel: p, onAcceptInstantInvite: g, guild: S, invite: A, author: R, currentUserId: O } = e,
@@ -34,7 +34,7 @@ function h(e) {
         j = null != P && P.isGuildVocal(),
         U = null != P && P.isGuildStageVoice(),
         y = (0, c.yE)(null !== (t = A.flags) && void 0 !== t ? t : 0, s.$.IS_GUEST_INVITE),
-        B = null !== (h = null == S ? void 0 : S.hasFeature(I.oNc.HUB)) && void 0 !== h && h;
+        B = null !== (N = null == S ? void 0 : S.hasFeature(I.oNc.HUB)) && void 0 !== N && N;
     if (null == S) {
         if (null == A.guild) return (0, i.jsx)(E.Z, {});
         S = d.Qs(A.guild);
@@ -42,7 +42,7 @@ function h(e) {
         S.premiumTier = e;
     }
     let k = D ? p : g,
-        G = (0, _.e)({
+        F = (0, _.e)({
             isVoiceChannel: j,
             isOwnInvite: x,
             isGuest: y,
@@ -77,7 +77,7 @@ function h(e) {
             })),
         j
             ? ((C = (0, i.jsx)(l.Z.Channel, { channel: P })),
-              (N = (0, i.jsxs)('span', {
+              (h = (0, i.jsxs)('span', {
                   className: T.infoTitle,
                   children: [
                       m.Z.Messages.INVITE_BUTTON_BODY_IN_GUILD.format({ guildName: S.name }),
@@ -91,12 +91,12 @@ function h(e) {
                   ]
               })))
             : (null != v && v >= 5) || (null != L && L > 0)
-              ? (N = (0, i.jsx)(l.Z.Data, {
+              ? (h = (0, i.jsx)(l.Z.Data, {
                     members: v,
                     membersOnline: L
                 }))
               : b &&
-                (N = (0, i.jsx)(l.Z.Channel, {
+                (h = (0, i.jsx)(l.Z.Channel, {
                     channel: P,
                     guild: S
                 })),
@@ -104,7 +104,7 @@ function h(e) {
             children: [
                 (0, i.jsx)(l.Z.GuildSplash, { guild: S }),
                 (0, i.jsx)(l.Z.Header, {
-                    text: G,
+                    text: F,
                     extra: f
                 }),
                 (0, i.jsxs)(l.Z.Body, {
@@ -116,7 +116,7 @@ function h(e) {
                                 (0, i.jsx)(l.Z.Info, {
                                     title: C,
                                     onClick: D ? k : null,
-                                    children: N
+                                    children: h
                                 })
                             ]
                         }),

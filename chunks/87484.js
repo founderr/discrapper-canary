@@ -3,9 +3,9 @@ t.d(n, {
         return c;
     }
 });
-var i = t(735250);
+var l = t(735250);
 t(470079);
-var l = t(772848),
+var i = t(772848),
     r = t(481060),
     s = t(976255),
     o = t(667),
@@ -14,13 +14,13 @@ var l = t(772848),
 function c(e) {
     let { applicationId: n, skuId: c, onClose: d, onComplete: f, analyticsLocations: p, analyticsLocationObject: m, contextKey: v } = e,
         I = !1,
-        S = (0, l.Z)();
+        S = (0, i.Z)();
     (0, r.openModalLazy)(
         async () => {
             let { default: e } = await Promise.all([t.e('96427'), t.e('77298'), t.e('23357'), t.e('52249'), t.e('54803'), t.e('15685'), t.e('47006'), t.e('32776'), t.e('79915'), t.e('30671'), t.e('49288')]).then(t.bind(t, 409600));
             return (t) => {
-                let { onClose: l, ...r } = t;
-                return (0, i.jsx)(e, {
+                let { onClose: i, ...r } = t;
+                return (0, l.jsx)(e, {
                     ...r,
                     loadId: S,
                     applicationId: n,
@@ -28,7 +28,7 @@ function c(e) {
                     analyticsLocations: p,
                     analyticsLocationObject: m,
                     onClose: (e) => {
-                        l(), null == d || d(e);
+                        i(), null == d || d(e);
                     },
                     onComplete: (e) => {
                         (I = !0), null == f || f(e);

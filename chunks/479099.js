@@ -21,11 +21,11 @@ var r,
     E = t(607070),
     I = t(339085),
     S = t(695346),
-    g = t(572004),
-    T = t(689938),
+    T = t(572004),
+    g = t(689938),
     p = t(813778);
 function C(e) {
-    let { tag: n, size: r = 1, disabled: i, className: u, onClick: C, onRemove: m, selected: A, ariaLabel: N } = e,
+    let { tag: n, size: r = 1, disabled: i, className: u, onClick: C, onRemove: m, selected: N, ariaLabel: A } = e,
         { name: h, emojiId: L, emojiName: O } = n,
         R = null != m,
         [v, M] = l.useState(!1),
@@ -37,7 +37,7 @@ function C(e) {
         y = (0, c.e7)([E.Z], () => E.Z.keyboardModeEnabled),
         G = (e) => {
             let r = S.Sb.getSetting();
-            g.wS &&
+            T.wS &&
                 r &&
                 (0, _.jW)(e, async () => {
                     let { default: e } = await t.e('29646').then(t.bind(t, 955116));
@@ -84,7 +84,7 @@ function C(e) {
                     [p.disabled]: i,
                     [p.clickable]: D,
                     [p.small]: Z,
-                    [p.selected]: A
+                    [p.selected]: N
                 },
                 u
             ),
@@ -101,9 +101,9 @@ function C(e) {
               ...w,
               innerRef: P,
               focusProps: { ringTarget: P },
-              'aria-label': null != N ? N : T.Z.Messages.FORUM_TAG_A11Y_FILTER_BY_TAG.format({ tagName: h }),
+              'aria-label': null != A ? A : g.Z.Messages.FORUM_TAG_A11Y_FILTER_BY_TAG.format({ tagName: h }),
               role: 'button',
-              'aria-pressed': A,
+              'aria-pressed': N,
               ...F,
               children: x
           })
@@ -116,7 +116,7 @@ function m(e) {
     let { tags: n, count: t, size: r = 1 } = e,
         i = 0 === r;
     return (0, o.jsx)(d.Tooltip, {
-        'aria-label': T.Z.Messages.FORUM_TAGS,
+        'aria-label': g.Z.Messages.FORUM_TAGS,
         text: (0, o.jsx)(o.Fragment, {
             children: n.map((e) =>
                 (0, o.jsx)(

@@ -67,8 +67,8 @@ let E = {
             storageKey: 'inAppReportsFeedback'
         },
         [d.nw.USER_DM_MUTE]: {
-            cooldown: 0,
-            chance: 0.5,
+            cooldown: 604800000,
+            chance: 1,
             hotspot: o.v6.USER_DM_MUTE_FEEDBACK,
             storageKey: 'userDmMute'
         }

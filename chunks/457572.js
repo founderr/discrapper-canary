@@ -2,8 +2,8 @@ n(47120);
 var r = n(570140),
     i = n(147913),
     a = n(70956),
-    s = n(768943),
-    o = n(121254);
+    s = n(2818),
+    o = n(768943);
 function l(e, t, n) {
     return (
         t in e
@@ -20,10 +20,10 @@ function l(e, t, n) {
 let u = null;
 function c() {
     var e;
-    let { enabled: t } = o.Z.getCurrentConfig({ location: 'MessageRemindersNotificationManager' }, { autoTrackExposure: !1 });
+    let { enabled: t } = s.Z.getCurrentConfig({ location: 'MessageRemindersNotificationManager' }, { autoTrackExposure: !1 });
     if (!t) return;
     null != u && clearTimeout(u);
-    let n = s.Z.getMessageReminders().find((e) => null != e.saveData.dueAt && e.saveData.dueAt > new Date());
+    let n = o.Z.getMessageReminders().find((e) => null != e.saveData.dueAt && e.saveData.dueAt > new Date());
     if ((null == n ? void 0 : null === (e = n.saveData) || void 0 === e ? void 0 : e.dueAt) == null) {
         u = null;
         return;
@@ -33,7 +33,7 @@ function c() {
         u = setTimeout(
             () =>
                 (function (e) {
-                    let { enabled: t } = o.Z.getCurrentConfig({ location: 'MessageRemindersNotificationManager' }, { autoTrackExposure: !1 });
+                    let { enabled: t } = s.Z.getCurrentConfig({ location: 'MessageRemindersNotificationManager' }, { autoTrackExposure: !1 });
                     if (!!t)
                         r.Z.dispatch({
                             type: 'MESSAGE_REMINDER_DUE',

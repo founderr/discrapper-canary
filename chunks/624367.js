@@ -20,8 +20,8 @@ var s = n(613828),
     I = n(522474),
     m = n(523746),
     T = n(592125),
-    h = n(594174),
-    N = n(630388),
+    N = n(594174),
+    h = n(630388),
     C = n(823379),
     f = n(624138),
     p = n(317381),
@@ -44,14 +44,14 @@ function D(e) {
         y = b.channel_id,
         B = (0, a.e7)([T.Z], () => T.Z.getChannel(y), [y]),
         k = null == B ? void 0 : B.guild_id,
-        G = null != B && (B.isGuildVoice() || B.isPrivate()),
-        F = (0, a.e7)([p.ZP], () => p.ZP.getSelfEmbeddedActivityForChannel(y)),
-        w = (null == F ? void 0 : F.applicationId) === D,
-        [V] = (0, E.Z)([D, null !== (n = null == F ? void 0 : F.applicationId) && void 0 !== n ? n : '']),
+        F = null != B && (B.isGuildVoice() || B.isPrivate()),
+        G = (0, a.e7)([p.ZP], () => p.ZP.getSelfEmbeddedActivityForChannel(y)),
+        w = (null == G ? void 0 : G.applicationId) === D,
+        [V] = (0, E.Z)([D, null !== (n = null == G ? void 0 : G.applicationId) && void 0 !== n ? n : '']),
         H = (0, A.ZP)(null !== (r = null == V ? void 0 : V.maxParticipants) && void 0 !== r ? r : 0),
-        [Y] = (0, a.Wu)([p.ZP], () => (G ? p.ZP.getEmbeddedActivitiesForChannel(y).filter((e) => e.applicationId === D) : []), [D, y, G]),
+        [Y] = (0, a.Wu)([p.ZP], () => (F ? p.ZP.getEmbeddedActivitiesForChannel(y).filter((e) => e.applicationId === D) : []), [D, y, F]),
         W = Array.from(null !== (f = null == Y ? void 0 : Y.userIds) && void 0 !== f ? f : []),
-        K = (0, a.Wu)([h.default], () => W.map((e) => h.default.getUser(e)).filter(C.lm), [W]),
+        K = (0, a.Wu)([N.default], () => W.map((e) => N.default.getUser(e)).filter(C.lm), [W]),
         z = (0, R.Z)({
             applicationId: D,
             size: P,
@@ -60,7 +60,7 @@ function D(e) {
         Q = I.Z.getWindowOpen(v.KJ3.CHANNEL_CALL_POPOUT),
         q = K.length > 0 ? L.Z.Messages.JOIN : L.Z.Messages.START,
         X = async () => {
-            if (G) {
+            if (F) {
                 if (null != Y && K.length > 0)
                     await (0, g.Z)({
                         applicationId: Y.applicationId,
@@ -98,7 +98,7 @@ function D(e) {
                     analyticsLocations: j
                 });
         };
-    return null != V && (0, N.yE)(V.flags, v.udG.EMBEDDED)
+    return null != V && (0, h.yE)(V.flags, v.udG.EMBEDDED)
         ? (0, i.jsx)(d.Gt, {
               value: j,
               children: (0, i.jsxs)('div', {

@@ -1,6 +1,6 @@
 n.d(t, {
     FB: function () {
-        return h;
+        return N;
     },
     Pu: function () {
         return C;
@@ -12,7 +12,7 @@ n.d(t, {
         return d;
     },
     Zs: function () {
-        return N;
+        return h;
     },
     c7: function () {
         return T;
@@ -70,10 +70,10 @@ let m = (e) =>
             [l.bK.SOMETHING_ELSE]: u.Z.Messages.APPEAL_INGESTION_MODAL_COLLECT_SIGNAL_SOMETHING_ELSE
         })[e],
     T = (e) => (null == e || 0 === e.length ? '' : 1 === e.length ? e.toUpperCase() : ''.concat(e.charAt(0).toUpperCase()).concat(e.slice(1)));
-function h(e) {
+function N(e) {
     return null != e && null != e.guild_metadata;
 }
-let N = (e) => {
+let h = (e) => {
     if (e === o.evJ.DSA_APPEAL_REQUEST_DEFLECTION) return u.Z.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_DEFLECTION_ERROR;
     return u.Z.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_ERROR;
 };

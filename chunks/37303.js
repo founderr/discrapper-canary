@@ -20,8 +20,8 @@ var o = n(497505),
     I = n(46140),
     m = n(271074);
 function T(e) {
-    let { quest: t, location: n, initiallyExpanded: T, contentPosition: h } = e,
-        [N, C] = s.useState(!1),
+    let { quest: t, location: n, initiallyExpanded: T, contentPosition: N } = e,
+        [h, C] = s.useState(!1),
         f = s.useCallback(() => C(!0), []),
         p = s.useCallback(() => C(!1), []),
         g = (0, l.tP)(t),
@@ -45,7 +45,7 @@ function T(e) {
     return (0, i.jsx)(c.A, {
         questOrQuests: t,
         questContent: n,
-        questContentPosition: h,
+        questContentPosition: N,
         trackGuildAndChannelMetadata: n === o.jn.QUESTS_EMBED,
         children: (e) =>
             (0, i.jsx)(i.Fragment, {
@@ -70,7 +70,7 @@ function T(e) {
                         },
                         children: [
                             (0, i.jsx)(_.Z, {
-                                isFocused: N,
+                                isFocused: h,
                                 isQuestExpired: g,
                                 location: n,
                                 quest: t,
@@ -79,7 +79,7 @@ function T(e) {
                                 isAnimating: M,
                                 isExpanded: v,
                                 isInConcurrentQuestExperiment: O,
-                                contentPosition: h,
+                                contentPosition: N,
                                 toggleExpanded: L
                             }),
                             (0, i.jsx)(d.Z, {
@@ -87,10 +87,10 @@ function T(e) {
                                 isQuestExpired: g,
                                 location: n,
                                 size: A,
-                                isFocused: N,
+                                isFocused: h,
                                 isExpanded: v,
                                 isAnimating: M,
-                                contentPosition: h
+                                contentPosition: N
                             })
                         ]
                     })

@@ -20,8 +20,8 @@ var i = n(735250),
     I = n(37234),
     m = n(254854),
     T = n(195500),
-    h = n(287734),
-    N = n(205355),
+    N = n(287734),
+    h = n(205355),
     C = n(558381),
     f = n(223245),
     p = n(491428),
@@ -43,8 +43,8 @@ var i = n(735250),
     y = n(305325),
     B = n(281956),
     k = n(574650),
-    G = n(665302),
-    F = n(434404),
+    F = n(665302),
+    G = n(434404),
     w = n(918658),
     V = n(859428),
     H = n(963249),
@@ -74,7 +74,7 @@ var i = n(735250),
     eI = n(65154),
     em = n(689938),
     eT = n(569252);
-let eh = () =>
+let eN = () =>
         (0, i.jsxs)(c.Notice, {
             color: c.NoticeColors.DANGER,
             children: [
@@ -90,7 +90,7 @@ let eh = () =>
                 })
             ]
         }),
-    eN = () =>
+    eh = () =>
         (0, i.jsxs)(c.Notice, {
             color: c.NoticeColors.DANGER,
             children: [
@@ -247,7 +247,7 @@ let ef =
                               (0, i.jsx)(c.PrimaryCTANoticeButton, {
                                   onClick: () => {
                                       let e = ee.Z.getRemoteDisconnectVoiceChannelId();
-                                      null != e && null != X.Z.getChannel(e) && h.default.selectVoiceChannel(e);
+                                      null != e && null != X.Z.getChannel(e) && N.default.selectVoiceChannel(e);
                                   },
                                   noticeType: ed.kVF.VOICE_DISABLED,
                                   children: em.Z.Messages.RECONNECT
@@ -268,7 +268,7 @@ let ef =
                               (0, i.jsx)(c.PrimaryCTANoticeButton, {
                                   onClick: () => {
                                       let e = ee.Z.getLastSessionVoiceChannelId();
-                                      null != e && null != X.Z.getChannel(e) && h.default.selectVoiceChannel(e);
+                                      null != e && null != X.Z.getChannel(e) && N.default.selectVoiceChannel(e);
                                   },
                                   noticeType: ed.kVF.VOICE_CONNECTED_LAST_SESSION,
                                   children: em.Z.Messages.RECONNECT
@@ -341,7 +341,7 @@ let ef =
                           color: c.NoticeColors.DEFAULT,
                           children: [
                               (0, i.jsx)(c.NoticeCloseButton, {
-                                  onClick: () => N.Z.ackScheduledMaintenance(),
+                                  onClick: () => h.Z.ackScheduledMaintenance(),
                                   noticeType: ed.kVF.SCHEDULED_MAINTENANCE
                               }),
                               em.Z.Messages.NOTICE_SCHEDULED_MAINTENANCE.format(eu.metadata),
@@ -352,8 +352,8 @@ let ef =
                           ]
                       });
                   case ed.kVF.NO_INPUT_DETECTED:
-                      if (!$.Z.supports(eI.AN.LOOPBACK)) return (0, i.jsx)(eh, {});
-                      return (0, i.jsx)(eN, {});
+                      if (!$.Z.supports(eI.AN.LOOPBACK)) return (0, i.jsx)(eN, {});
+                      return (0, i.jsx)(eh, {});
                   case ed.kVF.HARDWARE_MUTE:
                       if (null == eu.metadata) return null;
                       let { vendor: eZ, model: eP } = eu.metadata;
@@ -597,7 +597,7 @@ let ef =
                       });
                   case ed.kVF.DISPATCH_INSTALL_SCRIPT_PROGRESS:
                       if (null == eu.metadata) return null;
-                      let { progress: ek, total: eG, name: eF } = eu.metadata;
+                      let { progress: ek, total: eF, name: eG } = eu.metadata;
                       return (0, i.jsxs)(c.Notice, {
                           color: c.NoticeColors.DEFAULT,
                           children: [
@@ -608,15 +608,15 @@ let ef =
                               (0, i.jsxs)(v.Z, {
                                   justify: v.Z.Justify.CENTER,
                                   children: [
-                                      null != eF
+                                      null != eG
                                           ? em.Z.Messages.NOTICE_DISPATCH_INSTALL_SCRIPT_PROGRESS_WITH_NAME.format({
-                                                name: ''.concat(eF),
+                                                name: ''.concat(eG),
                                                 progress: ''.concat(ek),
-                                                total: ''.concat(eG)
+                                                total: ''.concat(eF)
                                             })
                                           : em.Z.Messages.NOTICE_DISPATCH_INSTALL_SCRIPT_PROGRESS.format({
                                                 progress: ''.concat(ek),
-                                                total: ''.concat(eG)
+                                                total: ''.concat(eF)
                                             }),
                                       (0, i.jsx)(c.Spinner, {
                                           type: c.Spinner.Type.PULSING_ELLIPSIS,
@@ -804,7 +804,7 @@ let ef =
                           ]
                       });
                   case ed.kVF.BACK_TO_PREVIOUS_SCREEN:
-                      return (0, i.jsx)(G.h, {
+                      return (0, i.jsx)(F.h, {
                           buttonText: null !== (a = eu.buttonText) && void 0 !== a ? a : em.Z.Messages.GO_BACK,
                           onGoBack: eu.callback,
                           onDismiss: () => eC(),
@@ -886,7 +886,7 @@ let ef =
                               }),
                               null != R
                                   ? (0, i.jsx)(c.NoticeButton, {
-                                        onClick: () => F.Z.open(R, ed.pNK.GUILD_AUTOMOD, void 0, ed.KsC.AUTOMOD_MENTION_SPAM),
+                                        onClick: () => G.Z.open(R, ed.pNK.GUILD_AUTOMOD, void 0, ed.KsC.AUTOMOD_MENTION_SPAM),
                                         children: em.Z.Messages.GUILD_AUTOMOD_MENTION_SPAM_NOTICE_CONFIGURE_SETTINGS
                                     })
                                   : null

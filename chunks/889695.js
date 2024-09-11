@@ -20,13 +20,13 @@ var r = t(735250),
     E = t(594174),
     I = t(700785),
     S = t(709054),
-    g = t(962086),
-    T = t(160404),
+    T = t(962086),
+    g = t(160404),
     p = t(225675),
     C = t(981631),
     m = t(689938),
-    A = t(679537);
-function N(e) {
+    N = t(679537);
+function A(e) {
     var n;
     return (0, r.jsx)('span', {
         style: { color: null !== (n = e.colorString) && void 0 !== n ? n : 'currentColor' },
@@ -38,9 +38,9 @@ function h(e) {
         t = (0, c.e7)([E.default], () => E.default.getCurrentUser()),
         o = (0, c.e7)([f.Z], () => f.Z.getGuild(n)),
         u = (0, c.e7)([f.Z], () => f.Z.getRoles(n)),
-        { impersonateType: h, viewingRoles: L } = (0, c.cj)([T.Z], () => ({
-            impersonateType: T.Z.getImpersonateType(n),
-            viewingRoles: T.Z.getViewingRoles(n)
+        { impersonateType: h, viewingRoles: L } = (0, c.cj)([g.Z], () => ({
+            impersonateType: g.Z.getImpersonateType(n),
+            viewingRoles: g.Z.getViewingRoles(n)
         })),
         O = h === p.z.SERVER_SHOP,
         R = (0, c.e7)([_.ZP], () => (null != t ? _.ZP.getTrueMember(n, t.id) : null)),
@@ -54,7 +54,7 @@ function h(e) {
                 let t = u[n];
                 null != t && (e[n] = t);
             }
-            (0, g.Zm)(n.id, {
+            (0, T.Zm)(n.id, {
                 type: h,
                 roles: e
             });
@@ -94,7 +94,7 @@ function h(e) {
         a.$e(C.Plq.MANAGE_GUILD, C.Plq.MANAGE_ROLES)
     ) || o.isOwner(t.id))
         ? (0, r.jsx)('div', {
-              className: A.container,
+              className: N.container,
               children: (0, r.jsx)(d.Combobox, {
                   placeholder: m.Z.Messages.SEARCH_ROLES,
                   value: v,
@@ -109,7 +109,7 @@ function h(e) {
                                               d.ComboboxItem,
                                               {
                                                   value: t.id,
-                                                  children: [(0, r.jsx)(d.ComboboxItem.Label, { children: N(t) }), (0, r.jsx)(d.ComboboxItem.Checkbox, {})]
+                                                  children: [(0, r.jsx)(d.ComboboxItem.Label, { children: A(t) }), (0, r.jsx)(d.ComboboxItem.Checkbox, {})]
                                               },
                                               t.id
                                           )
@@ -127,7 +127,7 @@ function h(e) {
                                       {
                                           value: t.id,
                                           disabled: !0,
-                                          children: [(0, r.jsx)(d.ComboboxItem.Label, { children: N(t) }), (0, r.jsx)(d.ComboboxItem.Checkbox, { checked: !0 })]
+                                          children: [(0, r.jsx)(d.ComboboxItem.Label, { children: A(t) }), (0, r.jsx)(d.ComboboxItem.Checkbox, { checked: !0 })]
                                       },
                                       t.id
                                   )

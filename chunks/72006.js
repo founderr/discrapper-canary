@@ -67,13 +67,13 @@ var r = t(371917),
     E = t(71716),
     I = t.n(E),
     S = t(869045),
-    g = t.n(S),
-    T = t(110599),
-    p = t.n(T),
+    T = t.n(S),
+    g = t(110599),
+    p = t.n(g),
     C = t(801539),
     m = t.n(C),
-    A = t(887868),
-    N = t.n(A);
+    N = t(887868),
+    A = t.n(N);
 function h(e, n, t, i) {
     let o = i.getCurrentContent(),
         l = null;
@@ -125,9 +125,9 @@ function O(e, n) {
 function R(e, n) {
     switch (e) {
         case 'transpose-characters':
-            return N()(n);
+            return A()(n);
         case 'move-selection-to-start-of-block':
-            return g()(n);
+            return T()(n);
         case 'move-selection-to-end-of-block':
             return I()(n);
         default:

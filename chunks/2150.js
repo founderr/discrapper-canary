@@ -1,12 +1,12 @@
-var n, t;
+var t, n;
 s.d(a, {
     q: function () {
-        return n;
+        return t;
     }
 }),
-    ((t = n || (n = {})).ACCENT = 'accent'),
-    (t.GREEN = 'statusGreen'),
-    (t.YELLOW = 'statusYellow'),
-    (t.ORANGE = 'statusOrange'),
-    (t.RED = 'statusRed'),
-    (t.NONE = 'transparent');
+    ((n = t || (t = {})).ACCENT = 'accent'),
+    (n.GREEN = 'statusGreen'),
+    (n.YELLOW = 'statusYellow'),
+    (n.ORANGE = 'statusOrange'),
+    (n.RED = 'statusRed'),
+    (n.NONE = 'transparent');

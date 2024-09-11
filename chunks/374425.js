@@ -13,13 +13,13 @@ var i = n(735250),
     I = n(419922),
     m = n(217588),
     T = n(981631),
-    h = n(474936),
-    N = n(231206);
+    N = n(474936),
+    h = n(231206);
 let C = (0, d.Mg)(a.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
     f = (e) => {
         if (null != e)
             o.ZP.trackWithMetadata(T.rMx.EXPRESSION_TOOLTIP_VIEWED, {
-                type: h.cd.STICKER_IN_MESSAGE_HOVER,
+                type: N.cd.STICKER_IN_MESSAGE_HOVER,
                 expression_id: e.id,
                 expression_name: e.name,
                 is_animated: (0, E.aQ)(e.format_type),
@@ -30,17 +30,17 @@ t.Z = (e) => {
     let { renderableSticker: t, channel: n, isInteracting: a } = e,
         [o, d] = s.useState(!0),
         [E, T] = s.useState(String(Date.now())),
-        [h] = (0, _.XW)(t, a),
+        [N] = (0, _.XW)(t, a),
         { analyticsLocations: p } = (0, c.ZP)(l.Z.STICKER_MESSAGE),
         g = (0, i.jsxs)('span', {
-            className: N.stickerName,
+            className: h.stickerName,
             children: [
                 (0, i.jsx)(r.StickerSmallIcon, {
                     size: 'xs',
                     color: 'currentColor',
-                    className: N.stickerIcon
+                    className: h.stickerIcon
                 }),
-                (null != h ? h : t).name
+                (null != N ? N : t).name
             ]
         });
     return (0, i.jsx)(c.Gt, {
@@ -67,12 +67,12 @@ t.Z = (e) => {
                     text: (0, u.Y)(g),
                     'aria-label': !1,
                     onTooltipShow: () => {
-                        f(h);
+                        f(N);
                     },
                     children: (e) =>
                         (0, i.jsx)(r.Clickable, {
                             ...e,
-                            className: N.clickableSticker,
+                            className: h.clickableSticker,
                             onClick: (e) => {
                                 d(!o), n(e);
                             },
@@ -80,7 +80,7 @@ t.Z = (e) => {
                             children: (0, i.jsx)(I.ZP, {
                                 isInteracting: a,
                                 size: C,
-                                sticker: null != h ? h : t
+                                sticker: null != N ? N : t
                             })
                         })
                 });

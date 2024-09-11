@@ -21,7 +21,7 @@ n.d(t, {
         return R;
     },
     Xt: function () {
-        return h;
+        return N;
     },
     YK: function () {
         return T;
@@ -82,10 +82,10 @@ function T(e, t, n) {
     }
     return !1;
 }
-function h(e) {
+function N(e) {
     return T(e, a.ZP.getGamesSeen(!1), m());
 }
-function N(e, t) {
+function h(e, t) {
     let { endDate: n } = e,
         i = s()(),
         a = s()(n, u.fS),
@@ -99,7 +99,7 @@ function C(e) {
     let n = g(e);
     if (null == n || !(null === (t = _(e)) || void 0 === t ? void 0 : t.getCurrentConfig({ location: '1' }, { autoTrackExposure: !1 }).dropsEnabled)) return !1;
     let i = r.bh.getSetting(),
-        s = N(n, !0);
+        s = h(n, !0);
     return !i && s;
 }
 function f(e) {
@@ -107,7 +107,7 @@ function f(e) {
     let i = g(e);
     if (null == i || !(null === (n = _(e)) || void 0 === n ? void 0 : null === (t = n.getCurrentConfig({ location: '2' }, { autoTrackExposure: !1 })) || void 0 === t ? void 0 : t.dropsEnabled)) return !1;
     let s = r.bh.getSetting(),
-        a = N(i, !1);
+        a = h(i, !1);
     return p(i) && !s && a;
 }
 function p(e) {

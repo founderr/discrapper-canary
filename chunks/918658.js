@@ -21,13 +21,13 @@ var i = t(120356),
     E = t(703656),
     I = t(944486),
     S = t(914010),
-    g = t(671533),
-    T = t(259580),
+    T = t(671533),
+    g = t(259580),
     p = t(358085),
     C = t(962086),
     m = t(160404),
-    A = t(889695),
-    N = t(981631),
+    N = t(889695),
+    A = t(981631),
     h = t(176505),
     L = t(302463),
     O = t(293810),
@@ -69,21 +69,21 @@ function D() {
     if (null == t || null == e) return null;
     let D = (function (e) {
             switch (e) {
-                case N.pNK.INTEGRATIONS:
+                case A.pNK.INTEGRATIONS:
                     return R.Z.Messages.VIEWING_AS_ROLES_BACK_INTEGRATIONS;
-                case N.pNK.ROLE_SUBSCRIPTIONS:
+                case A.pNK.ROLE_SUBSCRIPTIONS:
                     return R.Z.Messages.VIEWING_AS_SUBSCRIPTION_ROLES_BACK;
-                case N.pNK.ONBOARDING:
+                case A.pNK.ONBOARDING:
                     return R.Z.Messages.VIEWING_AS_ONBOARDING_MEMBER_BACK;
                 default:
                     return R.Z.Messages.VIEWING_AS_ROLES_BACK;
             }
         })(i),
-        U = i === N.pNK.ROLE_SUBSCRIPTIONS ? R.Z.Messages.VIEWING_AS_SUBSCRIPTION_ROLES_SELECT : R.Z.Messages.VIEWING_AS_ROLES_SELECT,
+        U = i === A.pNK.ROLE_SUBSCRIPTIONS ? R.Z.Messages.VIEWING_AS_SUBSCRIPTION_ROLES_SELECT : R.Z.Messages.VIEWING_AS_ROLES_SELECT,
         Z = n === h.oC.GUILD_ONBOARDING,
         P = (n) => {
             let { backToSettings: t } = n;
-            null != e && (m.Z.isFullServerPreview(e) && (0, E.uL)(N.Z5c.CHANNEL(e)), c.ZP.shouldShowOnboarding(e) && (a.Z.finishOnboarding(e), (0, d.discardOnboardingPromise)(e)), (0, C.mL)(e), t && f.Z.open(e, i), i === N.pNK.ROLE_SUBSCRIPTIONS && (0, _.GN)(e));
+            null != e && (m.Z.isFullServerPreview(e) && (0, E.uL)(A.Z5c.CHANNEL(e)), c.ZP.shouldShowOnboarding(e) && (a.Z.finishOnboarding(e), (0, d.discardOnboardingPromise)(e)), (0, C.mL)(e), t && f.Z.open(e, i), i === A.pNK.ROLE_SUBSCRIPTIONS && (0, _.GN)(e));
         };
     return (0, r.jsxs)(s.Notice, {
         color: s.NoticeColors.BRAND,
@@ -93,10 +93,10 @@ function D() {
                 onClick: () => P({ backToSettings: !0 }),
                 className: v.backButton,
                 children: [
-                    (0, r.jsx)(g.Z, {
+                    (0, r.jsx)(T.Z, {
                         width: 16,
                         height: 16,
-                        direction: g.Z.Directions.LEFT,
+                        direction: T.Z.Directions.LEFT,
                         className: v.backArrow
                     }),
                     D
@@ -119,17 +119,17 @@ function D() {
                           }),
                           (0, r.jsx)(s.Popout, {
                               position: 'bottom',
-                              renderPopout: () => (0, r.jsx)(A.Z, { guildId: e }),
+                              renderPopout: () => (0, r.jsx)(N.Z, { guildId: e }),
                               children: (e) => {
                                   let { onClick: n } = e;
                                   return (0, r.jsxs)(M, {
                                       onClick: n,
                                       children: [
                                           U,
-                                          (0, r.jsx)(T.Z, {
+                                          (0, r.jsx)(g.Z, {
                                               width: 16,
                                               height: 16,
-                                              direction: T.Z.Directions.DOWN,
+                                              direction: g.Z.Directions.DOWN,
                                               className: v.selectCaret
                                           })
                                       ]
@@ -159,7 +159,7 @@ function D() {
                               })
                       ]
                   }),
-            o || i === N.pNK.ROLE_SUBSCRIPTIONS ? null : (0, r.jsx)(b, { onClick: () => P({ backToSettings: !1 }) })
+            o || i === A.pNK.ROLE_SUBSCRIPTIONS ? null : (0, r.jsx)(b, { onClick: () => P({ backToSettings: !1 }) })
         ]
     });
 }

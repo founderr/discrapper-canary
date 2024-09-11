@@ -28,8 +28,8 @@ var i,
     I = n(904245),
     m = n(45114),
     T = n(607070),
-    h = n(853856),
-    N = n(181945),
+    N = n(853856),
+    h = n(181945),
     C = n(220444),
     f = n(601070),
     p = n(344185),
@@ -51,8 +51,8 @@ var i,
     y = n(823379),
     B = n(709054),
     k = n(981631),
-    G = n(124368);
-function F(e, t, n) {
+    F = n(124368);
+function G(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -181,19 +181,19 @@ class V extends o.EventEmitter {
     }
     constructor(e, t) {
         super(),
-            F(this, 'state', void 0),
-            F(this, 'scrollerRef', void 0),
-            F(this, 'maybeLoadMore', void 0),
-            F(this, 'reloadMessages', void 0),
-            F(this, 'getNumUnreadChannels', void 0),
-            F(this, 'markChannelRead', void 0),
-            F(this, 'markGuildRead', void 0),
-            F(this, 'deleteChannel', void 0),
-            F(this, 'markAllRead', void 0),
-            F(this, 'toggle', void 0),
-            F(this, 'handleUserGuildSettingsStoreChange', void 0),
-            F(this, 'handleJoinedThreadsStoreChange', void 0),
-            F(this, 'handleActiveThreadsStoreChange', void 0),
+            G(this, 'state', void 0),
+            G(this, 'scrollerRef', void 0),
+            G(this, 'maybeLoadMore', void 0),
+            G(this, 'reloadMessages', void 0),
+            G(this, 'getNumUnreadChannels', void 0),
+            G(this, 'markChannelRead', void 0),
+            G(this, 'markGuildRead', void 0),
+            G(this, 'deleteChannel', void 0),
+            G(this, 'markAllRead', void 0),
+            G(this, 'toggle', void 0),
+            G(this, 'handleUserGuildSettingsStoreChange', void 0),
+            G(this, 'handleJoinedThreadsStoreChange', void 0),
+            G(this, 'handleActiveThreadsStoreChange', void 0),
             (this.state = e),
             (this.scrollerRef = t),
             (this.maybeLoadMore = () => {
@@ -221,7 +221,7 @@ class V extends o.EventEmitter {
                     this.maybeLoadMore();
             }),
             (this.markGuildRead = (e) => {
-                E.Z.wait(() => (0, N.Z)([e], k.jXE.INBOX)), this.setState({ channels: this.state.channels.filter((t) => t.guildId !== e) }), this.maybeLoadMore();
+                E.Z.wait(() => (0, h.Z)([e], k.jXE.INBOX)), this.setState({ channels: this.state.channels.filter((t) => t.guildId !== e) }), this.maybeLoadMore();
             }),
             (this.deleteChannel = (e) => {
                 this.setState({
@@ -386,7 +386,7 @@ function W(e, t, n, i) {
         mentionCount: o,
         sortOrder: (function (e, t, n) {
             let i = x.Z.getChannel(t);
-            if (h.Z.isFavorite(t)) return 0;
+            if (N.Z.isFavorite(t)) return 0;
             if (i.isPrivate()) return 1;
             if (D.ZP.getMentionCount(t) > 0) return 2;
             if (null != n) {
@@ -396,7 +396,7 @@ function W(e, t, n, i) {
             }
             if (i.isThread()) {
                 let e = (0, S.J)(i);
-                return e === G.iN.ALL_MESSAGES ? 3 : e === G.iN.NO_MESSAGES ? 6 : 4;
+                return e === F.iN.ALL_MESSAGES ? 3 : e === F.iN.NO_MESSAGES ? 6 : 4;
             }
             {
                 let n = j.ZP.getChannelMessageNotifications(e, t),

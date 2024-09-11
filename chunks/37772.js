@@ -13,8 +13,8 @@ var i = n(735250),
     I = n(869765),
     m = n(695346),
     T = n(592125),
-    h = n(699516),
-    N = n(630388),
+    N = n(699516),
+    h = n(630388),
     C = n(709054),
     f = n(493892),
     p = n(901461),
@@ -58,7 +58,7 @@ function B(e) {
 t.Z = s.memo(function e(t) {
     var n;
     let s;
-    let { channel: a, message: o, compact: D = !1, className: U, onContextMenu: k, onClick: G, disableInteraction: F = !1, hasThread: w, treatSpam: V } = t,
+    let { channel: a, message: o, compact: D = !1, className: U, onContextMenu: k, onClick: F, disableInteraction: G = !1, hasThread: w, treatSpam: V } = t,
         H = b.OBS.has(o.type) ? o.messageReference : void 0,
         Y = (0, l.e7)([I.Z], () => I.Z.getMessageByReference(H)),
         W = (0, l.e7)([T.Z], () => (o.type === b.uaV.THREAD_STARTER_MESSAGE && Y.state === I.Y.LOADED ? T.Z.getChannel(Y.message.channel_id) : null)),
@@ -95,7 +95,7 @@ t.Z = s.memo(function e(t) {
               channel: W,
               hasThread: !1
           })
-        : (h.Z.isBlockedForMessage(o) ? (s = j.Z.Messages.BLOCKED_MESSAGE_COUNT) : (0, f.DQ)(o) && V && (s = j.Z.Messages.HIDDEN_SPAM_MESSAGE_COUNT), void 0 !== s)
+        : (N.Z.isBlockedForMessage(o) ? (s = j.Z.Messages.BLOCKED_MESSAGE_COUNT) : (0, f.DQ)(o) && V && (s = j.Z.Messages.HIDDEN_SPAM_MESSAGE_COUNT), void 0 !== s)
           ? (0, i.jsx)(B, {
                 className: U,
                 compact: D,
@@ -105,8 +105,8 @@ t.Z = s.memo(function e(t) {
           : (0, i.jsx)(A.Z, {
                 compact: D,
                 className: r()(U, {
-                    [y.ephemeral]: (0, N.yE)(o.flags, b.iLy.EPHEMERAL),
-                    [y.disableInteraction]: F,
+                    [y.ephemeral]: (0, h.yE)(o.flags, b.iLy.EPHEMERAL),
+                    [y.disableInteraction]: G,
                     [y.groupStart]: t.isGroupStart
                 }),
                 childrenRepliedMessage: (0, P.Z)(o, a, H, Y, D),
@@ -143,7 +143,7 @@ t.Z = s.memo(function e(t) {
                 childrenMessageContent: (0, M.Z)(t, ee),
                 childrenSystemMessage: (0, L.Z)(t),
                 onContextMenu: k,
-                onClick: G,
+                onClick: F,
                 hasThread: !1 !== w && null != ei && o.hasFlag(b.iLy.HAS_THREAD),
                 hasReply: o.type === b.uaV.REPLY,
                 isSystemMessage: (0, p.Z)(o),

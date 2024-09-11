@@ -21,8 +21,8 @@ var i = n(735250),
     I = n(607070),
     m = n(724757),
     T = n(626135),
-    h = n(585483),
-    N = n(143316),
+    N = n(585483),
+    h = n(143316),
     C = n(240126),
     f = n(791914),
     p = n(147522),
@@ -58,9 +58,9 @@ function O(e) {
                     null != n && t.markChannelRead(n);
                 };
                 return (
-                    h.S.subscribe(S.CkL.MARK_TOP_INBOX_CHANNEL_READ, n),
+                    N.S.subscribe(S.CkL.MARK_TOP_INBOX_CHANNEL_READ, n),
                     () => {
-                        h.S.unsubscribe(S.CkL.MARK_TOP_INBOX_CHANNEL_READ, n);
+                        N.S.unsubscribe(S.CkL.MARK_TOP_INBOX_CHANNEL_READ, n);
                     }
                 );
             }, [t, e.channels]);
@@ -107,7 +107,7 @@ function O(e) {
                 setTab: t,
                 badgeState: M,
                 closePopout: O,
-                children: (0, i.jsx)(N.Z, {
+                children: (0, i.jsx)(h.Z, {
                     type: 'top-header',
                     onClick: j
                 })

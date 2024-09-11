@@ -27,7 +27,7 @@ n.d(t, {
         return V;
     },
     bb: function () {
-        return F;
+        return G;
     },
     qo: function () {
         return j;
@@ -39,7 +39,7 @@ n.d(t, {
         return B;
     },
     tn: function () {
-        return G;
+        return F;
     },
     wq: function () {
         return U;
@@ -61,8 +61,8 @@ var i = n(735250),
     I = n(375954),
     m = n(594174),
     T = n(585483),
-    h = n(5967),
-    N = n(630388),
+    N = n(5967),
+    h = n(630388),
     C = n(358085),
     f = n(51144),
     p = n(91047),
@@ -127,9 +127,9 @@ function b(e, t) {
 function j(e, t, a, l) {
     let { id: o } = t,
         { id: u, flags: d } = e,
-        m = (0, N.yE)(d, A.iLy.EPHEMERAL),
+        m = (0, h.yE)(d, A.iLy.EPHEMERAL),
         T = (0, g.Z)(e),
-        h = (0, c.bp)();
+        N = (0, c.bp)();
     return s.useCallback(
         (e, t) => {
             if (m) return;
@@ -171,11 +171,11 @@ function j(e, t, a, l) {
                         },
                         {
                             onClose: () => a({ contextMenu: !1 }),
-                            context: h
+                            context: N
                         }
                     );
         },
-        [m, o, u, a, h, T, l]
+        [m, o, u, a, N, T, l]
     );
 }
 function U(e, t) {
@@ -225,7 +225,7 @@ function k(e, t) {
         [i, n]
     );
 }
-function G(e, t, n) {
+function F(e, t, n) {
     let { canShowReactionsOnMessageHover: i } = u.ZP.useExperiment({ location: 'useHoveredMessage' }, { autoTrackExposure: !1 }),
         a = ''.concat(e, ':').concat(t),
         r = s.useRef(n),
@@ -244,13 +244,13 @@ function G(e, t, n) {
         handleMouseLeave: _
     };
 }
-function F(e, t) {
+function G(e, t) {
     let [n, i] = s.useState(!1),
         [a, r] = s.useState(!1),
         l = s.useCallback(
             (t) => {
                 var n, s;
-                let a = null !== (s = null === (n = (0, h.uB)(t)) || void 0 === n ? void 0 : n.activeElement) && void 0 !== s ? s : null;
+                let a = null !== (s = null === (n = (0, N.uB)(t)) || void 0 === n ? void 0 : n.activeElement) && void 0 !== s ? s : null;
                 (t.target === t.currentTarget || t.currentTarget.contains(a)) && (r(!0), i(!0)), null != e && e(t);
             },
             [e]
@@ -260,7 +260,7 @@ function F(e, t) {
         handleBlur: s.useCallback(
             (e) => {
                 var n, s;
-                let a = null !== (s = null === (n = (0, h.uB)(e)) || void 0 === n ? void 0 : n.activeElement) && void 0 !== s ? s : null;
+                let a = null !== (s = null === (n = (0, N.uB)(e)) || void 0 === n ? void 0 : n.activeElement) && void 0 !== s ? s : null;
                 (e.target === e.currentTarget || !e.currentTarget.contains(a)) && i(!1), null != t && t(e);
             },
             [t]

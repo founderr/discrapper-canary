@@ -17,8 +17,8 @@ var i = n(735250),
     I = n(430824),
     m = n(594174),
     T = n(689938),
-    h = n(239048);
-let N = {
+    N = n(239048);
+let h = {
     top: 8,
     bottom: 8,
     left: -4,
@@ -27,9 +27,9 @@ let N = {
 function C(e) {
     let { channel: t, children: n } = e;
     return (0, i.jsx)(r.tE, {
-        offset: N,
+        offset: h,
         children: (0, i.jsxs)('div', {
-            className: h.channelHeader,
+            className: N.channelHeader,
             'data-recents-channel': t.id,
             children: [(0, i.jsx)(f, { channel: t }), t.isPrivate() ? null : (0, i.jsx)(l.Fbu, { size: 'xxs' }), (0, i.jsx)(p, { channel: t }), n]
         })
@@ -41,19 +41,19 @@ function f(e) {
         s = (0, o.e7)([I.Z], () => I.Z.getGuild(t.guild_id));
     if (null != s)
         return (0, i.jsx)(E.Z, {
-            className: h.icon,
+            className: N.icon,
             guild: s,
             size: E.Z.Sizes.SMALLER,
             'aria-hidden': !0
         });
     if (null != n)
         return (0, i.jsx)('div', {
-            className: a()(h.icon, h.dmIcon),
+            className: a()(N.icon, N.dmIcon),
             children: (0, i.jsx)(l.kBi, { size: 'xxs' })
         });
     let r = (0, u.x)(t);
     return (0, i.jsx)('img', {
-        className: h.icon,
+        className: N.icon,
         src: r,
         alt: '',
         'aria-hidden': !0
@@ -67,12 +67,12 @@ function p(e) {
         r = t.isPrivate() || null == a,
         l = t.isDM() ? T.Z.Messages.FOR_LATER_DIRECT_MESSAGE_WITH.format({ username: s }) : s;
     return (0, i.jsxs)('div', {
-        className: h.channelNameSection,
+        className: N.channelNameSection,
         children: [
             r
                 ? null
                 : (0, i.jsx)(a, {
-                      className: h.channelTypeIcon,
+                      className: N.channelTypeIcon,
                       size: 'xxs'
                   }),
             (0, i.jsx)(c.Heading, {

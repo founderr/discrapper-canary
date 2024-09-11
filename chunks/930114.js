@@ -17,8 +17,8 @@ function _(e) {
     let { processedCode: t, channelContext: _, customGiftMessage: E, giftInfo: I } = e,
         m = !1,
         T = null,
-        h = a.default.getCurrentUser(),
-        N = (0, o.yd)(null == h ? void 0 : h.premiumType, u.p9.TIER_0);
+        N = a.default.getCurrentUser(),
+        h = (0, o.yd)(null == N ? void 0 : N.premiumType, u.p9.TIER_0);
     (0, s.openModalLazy)(
         async () => {
             let { default: e } = await Promise.all([n.e('92446'), n.e('7312')]).then(n.bind(n, 409858));
@@ -40,7 +40,7 @@ function _(e) {
         {
             onCloseCallback: () => {
                 var e;
-                m && null != T && !N && T.isSubscription && (null == T ? void 0 : null === (e = T.subscriptionPlan) || void 0 === e ? void 0 : e.premiumSubscriptionType) === u.p9.TIER_2 && l.S.dispatch(d.CkL.PREMIUM_SUBSCRIPTION_CREATED);
+                m && null != T && !h && T.isSubscription && (null == T ? void 0 : null === (e = T.subscriptionPlan) || void 0 === e ? void 0 : e.premiumSubscriptionType) === u.p9.TIER_2 && l.S.dispatch(d.CkL.PREMIUM_SUBSCRIPTION_CREATED);
             }
         }
     );

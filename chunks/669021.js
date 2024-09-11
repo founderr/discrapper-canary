@@ -94,7 +94,7 @@ class T extends s.Component {
             });
     }
 }
-class h extends s.Component {
+class N extends s.Component {
     componentWillUnmount() {
         this.videoTimeout.stop();
     }
@@ -170,8 +170,8 @@ class h extends s.Component {
             }),
             m(this, 'renderTypeVideo', () => {
                 let { videoLoaded: e } = this.state,
-                    { video: t, image: n, title: a, playing: l, muted: c, splashClassName: _, splashPlaceholderClassName: m, renderMediaOverlay: h } = this.props,
-                    N = c ? d.VoiceXIcon : d.VoiceNormalIcon;
+                    { video: t, image: n, title: a, playing: l, muted: c, splashClassName: _, splashPlaceholderClassName: m, renderMediaOverlay: N } = this.props,
+                    h = c ? d.VoiceXIcon : d.VoiceNormalIcon;
                 return (0, i.jsxs)(s.Fragment, {
                     children: [
                         o.tq
@@ -206,10 +206,10 @@ class h extends s.Component {
                         (0, i.jsx)(d.Clickable, {
                             className: r()(I.muteContainer, {
                                 [I.muteContainerPlaying]: l && e,
-                                [I.muteContainerMediaOverlay]: null != h
+                                [I.muteContainerMediaOverlay]: null != N
                             }),
                             onClick: this.handleToggleMute,
-                            children: l && e ? (0, i.jsx)(N, { className: I.mute }) : null
+                            children: l && e ? (0, i.jsx)(h, { className: I.mute }) : null
                         })
                     ]
                 });
@@ -243,4 +243,4 @@ class h extends s.Component {
             });
     }
 }
-t.Z = h;
+t.Z = N;

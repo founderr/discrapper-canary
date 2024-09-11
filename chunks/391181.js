@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return g;
+        return T;
     },
     m: function () {
         return S;
@@ -20,14 +20,14 @@ var i = t(120356),
     f = t(689938),
     E = t(772103);
 function I(e) {
-    let { showEditProduct: n, showUnpublishProduct: t, showCopyLink: i, showTestDownload: o, showDeleteProduct: u, showReportProduct: s, onEditProduct: a, onUnpublishProduct: c, onDeleteProduct: d, onCopyLink: _, onTestDownload: I, onReportProduct: S, closePopout: g, onSelect: T } = e;
+    let { showEditProduct: n, showUnpublishProduct: t, showCopyLink: i, showTestDownload: o, showDeleteProduct: u, showReportProduct: s, onEditProduct: a, onUnpublishProduct: c, onDeleteProduct: d, onCopyLink: _, onTestDownload: I, onReportProduct: S, closePopout: T, onSelect: g } = e;
     return (0, r.jsx)('div', {
         className: E.menuContainer,
         children: (0, r.jsxs)(l.Menu, {
             navId: 'guild-product-context',
-            onClose: g,
+            onClose: T,
             'aria-label': f.Z.Messages.GUILD_PRODUCTS_ACTION_MENU_LABEL,
-            onSelect: T,
+            onSelect: g,
             children: [
                 (0, r.jsxs)(l.MenuGroup, {
                     children: [
@@ -85,7 +85,7 @@ function I(e) {
     });
 }
 function S(e) {
-    let { product: n, guildId: t, showEditProduct: i, showUnpublishProduct: o, showTestDownload: u, showCopyLink: s, showDeleteProduct: a, showReportProduct: c, onEditProduct: d, onUnpublishProduct: _, onDeleteProduct: S, onCopyProductLink: g, onTestDownload: T, onReportProduct: p } = e;
+    let { product: n, guildId: t, showEditProduct: i, showUnpublishProduct: o, showTestDownload: u, showCopyLink: s, showDeleteProduct: a, showReportProduct: c, onEditProduct: d, onUnpublishProduct: _, onDeleteProduct: S, onCopyProductLink: T, onTestDownload: g, onReportProduct: p } = e;
     return (0, r.jsx)('div', {
         onClick: (e) => {
             e.stopPropagation();
@@ -109,8 +109,8 @@ function S(e) {
                     onEditProduct: d,
                     onUnpublishProduct: _,
                     onDeleteProduct: S,
-                    onCopyLink: g,
-                    onTestDownload: T,
+                    onCopyLink: T,
+                    onTestDownload: g,
                     onReportProduct: p
                 }),
             children: (e, t) => {
@@ -132,10 +132,10 @@ function S(e) {
         })
     });
 }
-function g(e) {
-    let { product: n, guildId: t, onEditProduct: i, onUnpublishProduct: g, onDeleteProduct: T, onCopyProductLink: p, onTestDownload: C, disabled: m = !1 } = e,
-        A = (0, s.U)(n, 600),
-        N = null !== n.price_tier ? (0, a.T4)(n.price_tier, _.pK.USD) : void 0,
+function T(e) {
+    let { product: n, guildId: t, onEditProduct: i, onUnpublishProduct: T, onDeleteProduct: g, onCopyProductLink: p, onTestDownload: C, disabled: m = !1 } = e,
+        N = (0, s.U)(n, 600),
+        A = null !== n.price_tier ? (0, a.T4)(n.price_tier, _.pK.USD) : void 0,
         h = (0, c.C)(n);
     return (0, r.jsxs)(l.ClickableContainer, {
         tag: 'article',
@@ -156,8 +156,8 @@ function g(e) {
                         showDeleteProduct: !0,
                         showReportProduct: !1,
                         onEditProduct: i,
-                        onUnpublishProduct: g,
-                        onDeleteProduct: T,
+                        onUnpublishProduct: T,
+                        onDeleteProduct: g,
                         onCopyLink: p,
                         onTestDownload: C,
                         onReportProduct: () => {}
@@ -169,7 +169,7 @@ function g(e) {
         children: [
             (0, r.jsx)('img', {
                 alt: '',
-                src: A,
+                src: N,
                 className: E.productThumbnail
             }),
             (0, r.jsxs)('div', {
@@ -191,7 +191,7 @@ function g(e) {
                                     (0, r.jsx)(l.Text, {
                                         variant: 'text-md/normal',
                                         color: 'header-secondary',
-                                        children: N
+                                        children: A
                                     }),
                                     null != h
                                         ? (0, r.jsxs)(r.Fragment, {
@@ -222,8 +222,8 @@ function g(e) {
                             showDeleteProduct: !0,
                             showReportProduct: !1,
                             onEditProduct: i,
-                            onUnpublishProduct: g,
-                            onDeleteProduct: T,
+                            onUnpublishProduct: T,
+                            onDeleteProduct: g,
                             onCopyProductLink: p,
                             onTestDownload: C,
                             onReportProduct: () => {}

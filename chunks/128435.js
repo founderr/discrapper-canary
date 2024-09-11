@@ -26,7 +26,7 @@ function T(e) {
         children: t.text
     });
 }
-function h(e) {
+function N(e) {
     let { children: t, onClick: n, variant: s = 'text-sm/medium', color: a = 'interactive-active', className: l, buttonRef: o } = e;
     return (0, i.jsx)(c.Button, {
         onClick: n,
@@ -42,13 +42,13 @@ function h(e) {
         })
     });
 }
-function N(e) {
+function h(e) {
     let { buttonLabel: t, secondaryLabel: n, handleClick: s, isInteractive: a, className: l } = e;
     return (0, i.jsxs)('div', {
         className: r()(m.detailsText, l),
         children: [
             a
-                ? (0, i.jsx)(h, {
+                ? (0, i.jsx)(N, {
                       onClick: s,
                       variant: 'text-sm/normal',
                       color: 'none',
@@ -105,13 +105,13 @@ function C(e) {
                 t.presentation
             )
           : 'textButton' === t.presentation
-            ? (0, i.jsx)(h, {
+            ? (0, i.jsx)(N, {
                   buttonRef: d,
                   onClick: I,
                   className: o,
                   children: t.label
               })
-            : (0, i.jsx)(N, {
+            : (0, i.jsx)(h, {
                   buttonLabel: t.label,
                   secondaryLabel: t.secondaryLabel,
                   handleClick: I,

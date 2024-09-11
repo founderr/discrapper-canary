@@ -21,8 +21,8 @@ var n = t(735250),
     I = t(818083),
     N = t(688465),
     m = t(487419),
-    A = t(378364),
-    C = t(197344),
+    C = t(378364),
+    A = t(197344),
     g = t(734934),
     h = t(223683),
     O = t(312400),
@@ -95,7 +95,7 @@ function z(e) {
 function Q(e) {
     let { disabledSounds: s, disableAllSounds: t, notifyMessagesInSelectedChannel: i } = e,
         { allowAprilFoolsSoundpack: o } = D.Z.useExperiment({ location: '791c79_1' }, { autoTrackExposure: !1 }),
-        l = C.Z.useIsRingtoneEligible();
+        l = A.Z.useIsRingtoneEligible();
     a.useEffect(() => {
         D.Z.trackExposure({ location: '791c79_3' });
     }, []);
@@ -108,7 +108,7 @@ function Q(e) {
             (e, t) => {
                 let n = s.filter((s) => s !== e);
                 !t && n.push(e),
-                    e === A.Z.ringtone &&
+                    e === C.Z.ringtone &&
                         Z.default.track(Y.rMx.EVENT_RINGTONE_TOGGLED, {
                             toggled_on: t,
                             sound_name: e
@@ -178,8 +178,8 @@ function Q(e) {
         ...(l
             ? [
                   {
-                      label: A.Z.getRingtoneSettingsLabel(),
-                      sound: A.Z.ringtone,
+                      label: C.Z.getRingtoneSettingsLabel(),
+                      sound: C.Z.ringtone,
                       disabled: s.includes('call_ringing')
                   }
               ]

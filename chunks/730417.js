@@ -9,13 +9,13 @@ n.d(t, {
         return C;
     },
     dy: function () {
-        return h;
+        return N;
     },
     hs: function () {
         return f;
     },
     op: function () {
-        return N;
+        return h;
     }
 });
 var i = n(470079),
@@ -73,11 +73,11 @@ function T(e) {
         null != I && !!d && !T && o && l
     );
 }
-function h() {
+function N() {
     let e = m(I.X2.FORTNITE);
     return null == e ? void 0 : e.config.dropsEnabled;
 }
-function N(e) {
+function h(e) {
     let t = m(e),
         n = null == t ? void 0 : t.drop,
         a = (0, s.e7)([_.Z], () => null != n && _.Z.serverEligibleByQuestIds[n.dropsQuestId]),
@@ -94,13 +94,13 @@ function C(e, t, n, i) {
         d = (0, s.e7)([_.Z], () => _.Z.getIsPartnerGameQuestComplete(e)),
         I = (0, E.wj)(null == t ? void 0 : t.name, null !== (a = null == c ? void 0 : c.gameSearchTerm) && void 0 !== a ? a : []),
         T = (0, l.ot)([n, i]),
-        h = (0, o.wE)(i),
-        N = null == c || (0, E.hM)(c),
-        C = !!(null != c && !N && I && (null == r ? void 0 : r.config.dropsEnabled) && u);
+        N = (0, o.wE)(i),
+        h = null == c || (0, E.hM)(c),
+        C = !!(null != c && !h && I && (null == r ? void 0 : r.config.dropsEnabled) && u);
     return {
         partnerGame: C ? e : null,
         dropsActivityPanelExperienceBlocked: T,
-        showDropsSparkles: !d && !h
+        showDropsSparkles: !d && !N
     };
 }
 function f(e, t, n) {

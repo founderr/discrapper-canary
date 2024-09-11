@@ -1,6 +1,6 @@
 n.d(t, {
     ZP: function () {
-        return G;
+        return F;
     }
 }),
     n(47120);
@@ -18,8 +18,8 @@ var i,
     I = n(477690),
     m = n(481060),
     T = n(230711),
-    h = n(745510),
-    N = n(549006),
+    N = n(745510),
+    h = n(549006),
     C = n(64078),
     f = n(29270),
     p = n(709586),
@@ -150,9 +150,9 @@ function k(e) {
                       }
                   })()
         ),
-        { createMultipleConfettiAt: T, confettiCanvas: N } = o.useContext(h.h),
+        { createMultipleConfettiAt: T, confettiCanvas: h } = o.useContext(N.h),
         [C, f] = o.useState(null),
-        p = (0, d.uR)(N, C),
+        p = (0, d.uR)(h, C),
         g = (function (e, t) {
             if (null == e) return 'enter';
             switch (e) {
@@ -299,7 +299,7 @@ function k(e) {
         })
     );
 }
-function G(e) {
+function F(e) {
     let t,
         { message: n, compact: i, guild: s, usernameHook: a, onClickMessage: r } = e,
         c = (function (e) {
@@ -314,7 +314,7 @@ function G(e) {
             return null;
         })(n),
         u = (0, f.Z)(n),
-        { createMultipleConfettiAt: d, addClickListener: _ } = o.useContext(h.h),
+        { createMultipleConfettiAt: d, addClickListener: _ } = o.useContext(N.h),
         [E, I] = o.useState(!1),
         M = o.useRef(null),
         { reducedMotion: v } = o.useContext(m.AccessibilityPreferencesContext),
@@ -389,7 +389,7 @@ function G(e) {
                 children: t
             }),
             E
-                ? (0, l.jsx)(N.ZP, {
+                ? (0, l.jsx)(h.ZP, {
                       children: (0, l.jsx)('div', {
                           className: x.cannonWrapper,
                           children: (0, l.jsx)(k, {

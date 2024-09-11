@@ -25,8 +25,8 @@ var i = n(735250),
     I = n(724757),
     m = n(951844),
     T = n(294218),
-    h = n(703656),
-    N = n(210887),
+    N = n(703656),
+    h = n(210887),
     C = n(592125),
     f = n(375954),
     p = n(496675),
@@ -147,7 +147,7 @@ let b = u.ZP.connectStores([p.Z], (e) => {
     return { canManageMessages: null != t && p.Z.can(O.Plq.MANAGE_MESSAGES, t) };
 })(D);
 function j(e) {
-    let { analyticsName: t, items: n, hasMore: a, loading: l, loadMore: _, renderHeader: E, renderEmptyState: T, renderItem: h, getProTip: C, scrollerClassName: f, className: p, listName: v } = e,
+    let { analyticsName: t, items: n, hasMore: a, loading: l, loadMore: _, renderHeader: E, renderEmptyState: T, renderItem: N, getProTip: C, scrollerClassName: f, className: p, listName: v } = e,
         Z = s.useRef(null),
         P = (0, I.Z)(v, Z),
         D = (0, u.e7)([g.Z], () => g.Z.hasNotice()),
@@ -191,11 +191,11 @@ function j(e) {
               )
           ])
         : 0 === n.length
-          ? U.push((0, i.jsx)(s.Fragment, { children: T(N.Z.theme) }, 'empty-state'))
+          ? U.push((0, i.jsx)(s.Fragment, { children: T(h.Z.theme) }, 'empty-state'))
           : ((y = !1),
             (U = []),
             o().each(n, (e) => {
-                U.push(...h(e));
+                U.push(...N(e));
             }));
     let B = null;
     null != n &&
@@ -223,10 +223,10 @@ function j(e) {
                 })
               : (0, i.jsx)('div', {
                     className: M.scrollingFooterWrap,
-                    children: T(N.Z.theme)
+                    children: T(h.Z.theme)
                 }));
     let k = null == C ? void 0 : C(),
-        G =
+        F =
             y && null != k
                 ? (0, i.jsx)('div', {
                       className: M.footer,
@@ -240,12 +240,12 @@ function j(e) {
                       })
                   })
                 : null,
-        F = { maxHeight: b.height - 43 - 25 };
-    D && (F.maxHeight -= 40);
+        G = { maxHeight: b.height - 43 - 25 };
+    D && (G.maxHeight -= 40);
     let w = null != _ && a;
     return (0, i.jsx)('div', {
         className: r()(p, M.messagesPopoutWrap),
-        style: F,
+        style: G,
         onClick: L,
         onDoubleClick: L,
         'aria-label': e['aria-label'],
@@ -273,13 +273,13 @@ function j(e) {
                         B
                     ]
                 }),
-                G
+                F
             ]
         })
     });
 }
 function U(e) {
-    let { analyticsName: t, onFetch: n, channel: a, messages: r, hasMore: l, loading: o, loadMore: c, onJump: d, canCloseAllMessages: I = !1, renderHeader: m, renderEmptyState: N, renderMessage: p, getProTip: g, scrollerClassName: S, className: A, onCloseMessage: R, listName: v } = e,
+    let { analyticsName: t, onFetch: n, channel: a, messages: r, hasMore: l, loading: o, loadMore: c, onJump: d, canCloseAllMessages: I = !1, renderHeader: m, renderEmptyState: h, renderMessage: p, getProTip: g, scrollerClassName: S, className: A, onCloseMessage: R, listName: v } = e,
         L = (0, u.e7)([f.Z], () => {
             let e = null != a ? f.Z.getMessages(a.id) : null;
             return null != e && null != e.jumpTargetId && e.loadingMore && null == e.get(e.jumpTargetId);
@@ -294,7 +294,7 @@ function U(e) {
             });
         else if (!L) {
             let e = C.Z.getChannel(r);
-            null != e && (E.Z.trackJump(r, i, t), (0, h.uL)(O.Z5c.CHANNEL(e.getGuildId(), r, i))), null == d || d(n);
+            null != e && (E.Z.trackJump(r, i, t), (0, N.uL)(O.Z5c.CHANNEL(e.getGuildId(), r, i))), null == d || d(n);
         }
     }
     s.useEffect(() => {
@@ -316,7 +316,7 @@ function U(e) {
         items: P,
         loading: o,
         analyticsName: t,
-        renderEmptyState: N,
+        renderEmptyState: h,
         renderHeader: m,
         hasMore: l,
         loadMore: c,

@@ -13,8 +13,8 @@ var i = n(735250),
     I = n(70097),
     m = n(210887),
     T = n(572004),
-    h = n(617136),
-    N = n(113434),
+    N = n(617136),
+    h = n(113434),
     C = n(497505),
     f = n(918701),
     p = n(566078),
@@ -43,10 +43,10 @@ let L = (0, l.animated)(d.ChevronSmallDownIcon),
         )
             return null;
         let _ = () => {
-            (0, h._3)({
+            (0, N._3)({
                 questId: t.id,
                 questContent: n,
-                questContentCTA: h.jZ.COPY_QUEST_URL,
+                questContentCTA: N.jZ.COPY_QUEST_URL,
                 questContentPosition: a
             }),
                 (0, T.JG)((0, f.Rs)(t.id)),
@@ -72,22 +72,22 @@ let L = (0, l.animated)(d.ChevronSmallDownIcon),
 t.Z = (e) => {
     var t;
     let { isFocused: n, isQuestExpired: a, quest: u, location: I, size: T, expansionSpring: D, isAnimating: b, isExpanded: j, isInConcurrentQuestExperiment: U, contentPosition: y, toggleExpanded: B } = e,
-        { ref: k, height: G } = (0, _.Z)(),
-        { ref: F, width: w, scrollWidth: V } = (0, _.Z)(),
+        { ref: k, height: F } = (0, _.Z)(),
+        { ref: G, width: w, scrollWidth: V } = (0, _.Z)(),
         H = (0, c.e7)([m.Z], () => m.Z.getState().theme),
         Y = (0, c.e7)([E.Z], () => E.Z.useReducedMotion),
         W = s.useMemo(() => (0, f.nP)(u.config.assets.hero), [u]),
         K = s.useRef(null),
         z = (0, O.uq)(I),
         Q = I === C.jn.QUESTS_EMBED,
-        q = (0, N.t5)(u, x.dr.QUESTS_CARD, I),
+        q = (0, h.t5)(u, x.dr.QUESTS_CARD, I),
         X = (null === (t = u.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
-        J = (0, N.B6)(u.config.expiresAt, {
+        J = (0, h.B6)(u.config.expiresAt, {
             year: 'numeric',
             month: 'long',
             day: 'numeric'
         }),
-        $ = (0, N.B6)(p.r.build(u.config).rewardsExpireAt, {
+        $ = (0, h.B6)(p.r.build(u.config).rewardsExpireAt, {
             year: 'numeric',
             month: 'long',
             day: 'numeric'
@@ -96,10 +96,10 @@ t.Z = (e) => {
             e.stopPropagation(),
                 e.currentTarget.blur(),
                 B(),
-                (0, h._3)({
+                (0, N._3)({
                     questId: u.id,
                     questContent: I,
-                    questContentCTA: j ? h.jZ.COLLAPSE : h.jZ.EXPAND,
+                    questContentCTA: j ? N.jZ.COLLAPSE : N.jZ.EXPAND,
                     questContentPosition: y
                 });
         };
@@ -114,7 +114,7 @@ t.Z = (e) => {
             [v.outerContainerXs]: 'xs' === T
         }),
         'aria-label': M.Z.Messages.EXPAND,
-        style: { height: z ? G : void 0 },
+        style: { height: z ? F : void 0 },
         children: [
             (0, i.jsx)(Z, {
                 style: {
@@ -243,7 +243,7 @@ t.Z = (e) => {
                                                         shouldShow: null != w && null != V && w < V,
                                                         children: (e) =>
                                                             (0, i.jsx)(d.Heading, {
-                                                                ref: F,
+                                                                ref: G,
                                                                 variant: 'lg' === T ? 'heading-xxl/bold' : 'sm' === T ? 'heading-xl/bold' : 'heading-lg/bold',
                                                                 className: v.heading,
                                                                 ...e,

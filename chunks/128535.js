@@ -14,21 +14,21 @@ var s = n(120356),
     I = n(113434),
     m = n(918701),
     T = n(566078),
-    h = n(667105),
-    N = n(689938),
+    N = n(667105),
+    h = n(689938),
     C = n(727526);
 let f = (e) => (0 === e.length ? C.warning : C.danger),
-    p = (e, t) => (0 === e.length ? N.Z.Messages.QUESTS_LAUNCHED_GAME.format({ gameTitle: t }) : N.Z.Messages.QUESTS_GAME_NOT_DETECTED.format({ gameTitle: t })),
+    p = (e, t) => (0 === e.length ? h.Z.Messages.QUESTS_LAUNCHED_GAME.format({ gameTitle: t }) : h.Z.Messages.QUESTS_GAME_NOT_DETECTED.format({ gameTitle: t })),
     g = (e) => {
         let { quest: t, location: n, errors: s, gameTitle: a, consoleHelpArticle: l, expiredCredentialsInteractable: c } = e;
         if (0 === s.length)
             return (0, i.jsx)(o.Text, {
                 variant: 'text-sm/medium',
                 color: 'text-muted',
-                children: N.Z.Messages.QUESTS_MICROPHONE_UNIT_BODY.format({ gameTitle: a })
+                children: h.Z.Messages.QUESTS_MICROPHONE_UNIT_BODY.format({ gameTitle: a })
             });
         let E = [];
-        (0, m.Nj)({ quest: t }) && E.push((0, d.isWeb)() ? N.Z.Messages.QUEST_PROGRESS_NO_GAME_WEB : N.Z.Messages.QUEST_PROGRESS_NO_GAME);
+        (0, m.Nj)({ quest: t }) && E.push((0, d.isWeb)() ? h.Z.Messages.QUEST_PROGRESS_NO_GAME_WEB : h.Z.Messages.QUEST_PROGRESS_NO_GAME);
         let I = [
             ...E,
             ...s.map((e) => {
@@ -63,9 +63,9 @@ let f = (e) => (0 === e.length ? C.warning : C.danger),
 t.Z = function (e) {
     let t = T.r.build(e.quest.config).application.name,
         n = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
-        s = (0, h.k3)(e.quest.id, e.location),
+        s = (0, N.k3)(e.quest.id, e.location),
         r = (0, E.n)(),
-        u = (0, h.g2)({
+        u = (0, N.g2)({
             useReducedMotion: n,
             className: C.refreshIcon
         }),
@@ -125,7 +125,7 @@ t.Z = function (e) {
                     disabled: m,
                     children: (0, i.jsxs)('div', {
                         className: C.ctaInner,
-                        children: [u.render(), N.Z.Messages.QUESTS_MICROHPONE_UNIT_BUTTON_CTA]
+                        children: [u.render(), h.Z.Messages.QUESTS_MICROHPONE_UNIT_BUTTON_CTA]
                     })
                 })
             })

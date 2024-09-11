@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return T;
+        return g;
     }
 });
 var r = t(735250),
@@ -17,13 +17,13 @@ var r = t(735250),
     E = t(5192),
     I = t(981631),
     S = t(689938),
-    g = t(391317);
-function T(e) {
+    T = t(391317);
+function g(e) {
     var n;
-    let { guildId: t, role: o, theme: T, content: p = S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FLAIR_PREVIEW_MESSAGE_TEXT, className: C } = e,
+    let { guildId: t, role: o, theme: g, content: p = S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FLAIR_PREVIEW_MESSAGE_TEXT, className: C } = e,
         m = (0, u.e7)([f.default], () => f.default.getCurrentUser()),
-        A = E.ZP.useName(t, null, m),
-        N = (0, a.Kz)(o),
+        N = E.ZP.useName(t, null, m),
+        A = (0, a.Kz)(o),
         h = i.useMemo(
             () =>
                 (0, c.e5)({
@@ -42,18 +42,18 @@ function T(e) {
             [m, p]
         ),
         L = {
-            nick: A,
+            nick: N,
             colorString: null !== (n = o.colorString) && void 0 !== n ? n : void 0
         };
     return (0, r.jsx)(s.ThemeProvider, {
-        theme: T,
+        theme: g,
         children: (e) =>
             (0, r.jsx)('div', {
-                className: l()(e, g.container, C),
+                className: l()(e, T.container, C),
                 children: (0, r.jsx)(_.Z, {
                     hideTimestamp: !0,
                     author: L,
-                    roleIcon: N,
+                    roleIcon: A,
                     message: h,
                     isGroupStart: !0,
                     disableInteraction: !0

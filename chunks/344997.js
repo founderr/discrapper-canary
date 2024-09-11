@@ -1,6 +1,6 @@
 n.d(t, {
     g: function () {
-        return N;
+        return h;
     }
 });
 var i = n(735250);
@@ -70,7 +70,7 @@ function T(e) {
           })
         : null;
 }
-function h(e) {
+function N(e) {
     let { children: t, theme: n } = e,
         s = {
             default: d.defaultFooterContainer,
@@ -81,7 +81,7 @@ function h(e) {
         children: t
     });
 }
-function N(e) {
+function h(e) {
     var t, n;
     if (null == e.embed || null == e.embed.fields) return null;
     let s = (0, o.fr)(e.embed);
@@ -120,7 +120,7 @@ function N(e) {
                           })
                       ]
                   }),
-                  (0, i.jsx)(h, {
+                  (0, i.jsx)(N, {
                       theme: s.theme,
                       children:
                           null === (t = s.ctas) || void 0 === t

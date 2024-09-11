@@ -19,19 +19,19 @@ var i = n(735250),
     I = n(203143),
     m = n(79390),
     T = n(839963),
-    h = n(139256),
-    N = n(294608),
+    N = n(139256),
+    h = n(294608),
     C = n(689938),
     f = n(490351);
 function p(e) {
     let { percentage: t, label: n, canShowVoterDetails: a, answerId: r } = e,
         o = (0, _.Dt)(),
-        { channelId: c, messageId: u } = (0, N.pE)(),
-        [T, h] = s.useState(''),
+        { channelId: c, messageId: u } = (0, h.pE)(),
+        [T, N] = s.useState(''),
         [C, p] = s.useState(!1),
         g = '' !== T && C,
         S = s.useCallback(() => {
-            h((0, m.e1)(u, c, r));
+            N((0, m.e1)(u, c, r));
         }, [u, c, r]),
         A = s.useCallback(() => {
             S(), p(!0);
@@ -135,14 +135,14 @@ function S(e) {
         didSelfVote: s
     })
         .with({ answersInteraction: T.Y7.RADIO_BUTTONS }, () =>
-            (0, i.jsx)(h.Og, {
+            (0, i.jsx)(N.Og, {
                 isSelected: n,
                 size: 24,
                 className: l
             })
         )
         .with({ answersInteraction: T.Y7.CHECKBOXES }, () =>
-            (0, i.jsx)(h.zs, {
+            (0, i.jsx)(N.zs, {
                 isSelected: n,
                 size: 20,
                 className: l
@@ -154,7 +154,7 @@ function S(e) {
                 didSelfVote: !0
             },
             () =>
-                (0, i.jsx)(h.ZY, {
+                (0, i.jsx)(N.ZY, {
                     isVictor: a,
                     isExpired: r,
                     size: 24,
@@ -183,7 +183,7 @@ function A(e) {
                       })
                     : null,
                 null != t.pollMedia.emoji &&
-                    (0, i.jsx)(h.sc, {
+                    (0, i.jsx)(N.sc, {
                         className: f.emoji,
                         emoji: t.pollMedia.emoji
                     }),
@@ -216,7 +216,7 @@ function A(e) {
 }
 function R(e) {
     let { isExpired: t, answersInteraction: n, canShowVoteCounts: s, canTapAnswers: a, ...r } = e;
-    return (0, i.jsx)(h.$e, {
+    return (0, i.jsx)(N.$e, {
         className: f.answersContainer,
         answerClassName: f.answer,
         answersInteraction: n,

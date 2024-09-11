@@ -20,8 +20,8 @@ var a = t(990547),
     I = t(163379),
     N = t(703288),
     m = t(574755),
-    A = t(377171),
-    C = t(621628),
+    C = t(377171),
+    A = t(621628),
     g = t(18438),
     h = t(778825),
     O = t(665166),
@@ -74,8 +74,8 @@ var a = t(990547),
     eI = t(301121),
     eN = t(757151),
     em = t(463153),
-    eA = t(36192),
-    eC = t(338345),
+    eC = t(36192),
+    eA = t(338345),
     eg = t(400287),
     eh = t(554042),
     eO = t(200645),
@@ -559,7 +559,7 @@ let ej = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 badgeCount: eF,
                 newIndicator: (0, n.jsx)(o.TextBadge, {
                     text: eZ.Z.Messages.NEW,
-                    color: A.Z.BG_BRAND
+                    color: C.Z.BG_BRAND
                 }),
                 newIndicatorDismissibleContentTypes: [i.z.FAMILY_CENTER_NEW_BADGE]
             },
@@ -579,7 +579,7 @@ let ej = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eZ.Z.Messages.AUTH_SESSIONS],
                 label: eZ.Z.Messages.AUTH_SESSIONS,
                 ariaLabel: eZ.Z.Messages.AUTH_SESSIONS,
-                element: eA.Z,
+                element: eC.Z,
                 newIndicatorDismissibleContentTypes: [i.z.AUTH_SESSIONS_NEW],
                 predicate: () => V.Z.getCurrentConfig({ location: '9f7d84_1' }, { autoTrackExposure: !1 }).showSettings
             },
@@ -1243,7 +1243,7 @@ let ej = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eZ.Z.Messages.STREAMER_MODE],
                 label: eZ.Z.Messages.STREAMER_MODE,
                 ariaLabel: eZ.Z.Messages.STREAMER_MODE,
-                element: eC.Z
+                element: eA.Z
             },
             [eD.s6.STREAMER_MODE_INTEGRATIONS]: {
                 section: eP.oAB.STREAMER_MODE,
@@ -1557,7 +1557,7 @@ let ej = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eP.oAB.DISMISSIBLE_CONTENT_OPTIONS,
                 searchableTitles: ['Dismissible Contents'],
                 label: 'Dismissible Contents',
-                element: C.Z,
+                element: A.Z,
                 predicate: () => b.Z.isDeveloper
             },
             [eD.s6.PAYMENT_FLOW_MODALS]: {

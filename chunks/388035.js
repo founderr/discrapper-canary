@@ -9,7 +9,7 @@ var i = n(735250),
     a = n(481060),
     r = n(243778),
     l = n(970731),
-    o = n(121254),
+    o = n(2818),
     c = n(921944),
     u = n(689938),
     d = n(413859),
@@ -41,12 +41,12 @@ let E = s.z.FOR_LATER_POPOUT_COACHMARK,
         });
 function T(e) {
     let { children: t } = e,
-        { enabled: n } = o.Z.useExperiment({ location: 'ForLaterCoachmarkWeb' }, { autoTrackExposure: !1 }),
-        [s, l] = (0, r.US)(n ? [E] : [], void 0);
-    return s !== E
+        { enabled: n, inInbox: s } = o.Z.useExperiment({ location: 'ForLaterCoachmarkWeb' }, { autoTrackExposure: !1 }),
+        [l, c] = (0, r.US)(n && !s ? [E] : [], void 0);
+    return l !== E
         ? (0, i.jsx)(i.Fragment, { children: t })
         : (0, i.jsx)(a.Popout, {
-              renderPopout: () => m(l),
+              renderPopout: () => m(c),
               position: 'bottom',
               align: 'right',
               animation: a.Popout.Animation.TRANSLATE,

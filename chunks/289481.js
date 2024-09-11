@@ -13,8 +13,8 @@ var i = n(735250),
     I = n(703656),
     m = n(592125),
     T = n(259580),
-    h = n(617379),
-    N = n(324081),
+    N = n(617379),
+    h = n(324081),
     C = n(305248),
     f = n(520116),
     p = n(981631),
@@ -93,13 +93,13 @@ let R = s.memo(function (e) {
     return (0, i.jsx)('div', {
         className: S.channel,
         children: (0, i.jsx)(c.HeadingLevel, {
-            component: (0, i.jsxs)(N.Z, {
+            component: (0, i.jsxs)(h.Z, {
                 channel: l,
                 gotoChannel: E,
                 mentionCount: t.mentionCount,
                 toggleCollapsed: r,
                 channelState: t,
-                children: [(0, i.jsx)(h.Z, { channel: l }), (0, i.jsx)(O, { ...e }), 'nsfw' === t.type ? null : (0, i.jsx)(x, { ...e })]
+                children: [(0, i.jsx)(N.Z, { channel: l }), (0, i.jsx)(O, { ...e }), 'nsfw' === t.type ? null : (0, i.jsx)(x, { ...e })]
             }),
             children: t.collapsed
                 ? null

@@ -6,23 +6,23 @@ t.d(n, {
         return u;
     }
 });
-var i = t(735250);
+var l = t(735250);
 t(470079);
-var l = t(628028),
+var i = t(628028),
     r = t(220427),
     s = t(777207),
     o = t(330711),
     a = t(350727);
 function u(e) {
     let { type: n } = e;
-    return (0, i.jsx)(c, {
+    return (0, l.jsx)(c, {
         icon:
             'user' === n
-                ? (0, i.jsx)(r.t, {
+                ? (0, l.jsx)(r.t, {
                       size: 'xxs',
                       color: 'var(--text-positive)'
                   })
-                : (0, i.jsx)(l.Q, {
+                : (0, l.jsx)(i.Q, {
                       size: 'xxs',
                       color: 'var(--text-brand)'
                   }),
@@ -31,11 +31,11 @@ function u(e) {
 }
 function c(e) {
     let { icon: n, text: t } = e;
-    return (0, i.jsxs)('div', {
+    return (0, l.jsxs)('div', {
         className: a.container,
         children: [
             n,
-            (0, i.jsx)(s.x, {
+            (0, l.jsx)(s.x, {
                 color: 'header-secondary',
                 variant: 'text-sm/medium',
                 children: t

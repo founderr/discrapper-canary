@@ -13,7 +13,7 @@ var r = n(381499),
     o = n(675478),
     l = n(885110),
     u = n(626135),
-    c = n(621600),
+    c = n(468788),
     d = n(981631),
     _ = n(689938);
 function E() {
@@ -31,7 +31,7 @@ function f(e, t) {
         o.fy.INFREQUENT_USER_ACTION
     ),
         u.default.track(d.rMx.NOTIFICATION_SETTINGS_UPDATED, {
-            update_type: c.Ib.ACCOUNT,
+            update_type: c.I.ACCOUNT,
             quiet_mode_enabled: e,
             quiet_mode_enabled_old: n
         }),

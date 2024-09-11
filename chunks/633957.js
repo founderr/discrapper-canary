@@ -18,8 +18,8 @@ var i = n(735250),
     I = n(906732),
     m = n(895924),
     T = n(973616),
-    h = n(314897),
-    N = n(592125),
+    N = n(314897),
+    h = n(592125),
     C = n(158776),
     f = n(594174),
     p = n(823379),
@@ -32,9 +32,9 @@ function O(e) {
     let { application: n, channelId: O, guildId: x } = e,
         { analyticsLocations: M } = (0, I.ZP)(E.Z.ACTIVITY_INSTANCE_EMBED),
         v = (0, l.O)(),
-        L = (0, a.e7)([N.Z], () => N.Z.getChannel(O)),
+        L = (0, a.e7)([h.Z], () => h.Z.getChannel(O)),
         Z = (null == L ? void 0 : null === (t = L.isThread) || void 0 === t ? void 0 : t.call(L)) ? (null == L ? void 0 : L.parent_id) : O,
-        P = (0, a.e7)([h.default], () => h.default.getId()),
+        P = (0, a.e7)([N.default], () => N.default.getId()),
         {
             embeddedActivity: D,
             currentEmbeddedActivity: b,
@@ -64,8 +64,8 @@ function O(e) {
             channelId: O,
             application: B
         }),
-        G = null == D,
-        F = (0, g.NL)({
+        F = null == D,
+        G = (0, g.NL)({
             embeddedActivity: D,
             joinability: k,
             currentEmbeddedActivity: b,
@@ -74,7 +74,7 @@ function O(e) {
         w = s.useId(),
         V = null != j && j.isLaunching && j.componentId === w,
         H = async () => {
-            G
+            F
                 ? await (0, u.Z)({
                       targetApplicationId: n.id,
                       channelId: O,
@@ -92,7 +92,7 @@ function O(e) {
                       commandOrigin: m.bB.ACTIVITY_INSTANCE_EMBED
                   });
         },
-        Y = F.disabled ? A.Z.Messages.EMBEDDED_ACTIVITIES_EMBED_ENDED : A.Z.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_ENDED;
+        Y = G.disabled ? A.Z.Messages.EMBEDDED_ACTIVITIES_EMBED_ENDED : A.Z.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_ENDED;
     return (0, i.jsx)('div', {
         className: R.container,
         children: (0, i.jsxs)('div', {
@@ -100,7 +100,7 @@ function O(e) {
             children: [
                 (0, i.jsx)('div', {
                     className: R.headerContainer,
-                    children: G
+                    children: F
                         ? (0, i.jsx)('div', {
                               className: R.__invalid_endedNote,
                               children: (0, i.jsx)(r.Text, {
@@ -119,7 +119,7 @@ function O(e) {
                     className: R.footerContainer,
                     children: [
                         (0, i.jsx)(r.Tooltip, {
-                            text: F.tooltip,
+                            text: G.tooltip,
                             tooltipContentClassName: R.tooltipContent,
                             children: (e) => {
                                 let { onClick: t, ...n } = e;
@@ -127,19 +127,19 @@ function O(e) {
                                     r.Button,
                                     {
                                         ...n,
-                                        key: ''.concat(F.isJoinAction),
+                                        key: ''.concat(G.isJoinAction),
                                         onClick: () => {
                                             H(), null == t || t();
                                         },
-                                        color: F.isJoinAction ? r.ButtonColors.GREEN : r.ButtonColors.PRIMARY,
+                                        color: G.isJoinAction ? r.ButtonColors.GREEN : r.ButtonColors.PRIMARY,
                                         submitting: V,
-                                        disabled: F.disabled
+                                        disabled: G.disabled
                                     },
-                                    F.text
+                                    G.text
                                 );
                             }
                         }),
-                        !G &&
+                        !F &&
                             (0, i.jsx)(_.Z, {
                                 guildId: x,
                                 users: U,

@@ -17,8 +17,8 @@ var i,
     I = n(739566),
     m = n(942951),
     T = n(834129),
-    h = n(809026),
-    N = n(139256),
+    N = n(809026),
+    h = n(139256),
     C = n(489887),
     f = n(689938),
     p = n(167919);
@@ -83,7 +83,7 @@ function A(e) {
                                 scaleFontToUserSetting: !0,
                                 children: s
                             }),
-                            (0, a.jsx)(N.ZY, {
+                            (0, a.jsx)(h.ZY, {
                                 size: 16,
                                 className: p.victorIcon,
                                 isVictor: !0,
@@ -174,9 +174,9 @@ function O(e) {
     var t;
     let { message: n, channel: i, compact: s, disableInteraction: l = !1 } = e,
         o = n.embeds[0],
-        _ = r.useMemo(() => (0, h.Z)(o), [o]),
+        _ = r.useMemo(() => (0, N.Z)(o), [o]),
         E = (0, c.aF)(null !== (t = null == _ ? void 0 : _.questionText) && void 0 !== t ? t : '', C.Dv),
-        N = (0, I.ZP)(n),
+        h = (0, I.ZP)(n),
         g = (0, m.l)({
             user: n.author,
             channelId: i.id,
@@ -202,8 +202,8 @@ function O(e) {
                       timestamp: n.timestamp,
                       compact: s,
                       children: f.Z.Messages.POLL_RESULT_MESSAGE_HEADER.format({
-                          username: N.nick,
-                          usernameHook: g(N),
+                          username: h.nick,
+                          usernameHook: g(h),
                           title: E,
                           titleOnClick: A
                       })

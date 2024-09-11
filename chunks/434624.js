@@ -1,6 +1,6 @@
 n.d(t, {
     l: function () {
-        return h;
+        return N;
     }
 }),
     n(47120);
@@ -20,12 +20,12 @@ var i = n(735250),
 let T = s.memo(function (e) {
         let t,
             n,
-            { useChatFontScaling: s, hideEmoji: a, emoji: c, className: T, count: h, me: N, me_burst: C, burst_count: f, burst_colors: p, readOnly: g, isLurking: S, isGuest: A, isPendingMember: R, type: O } = e,
+            { useChatFontScaling: s, hideEmoji: a, emoji: c, className: T, count: N, me: h, me_burst: C, burst_count: f, burst_colors: p, readOnly: g, isLurking: S, isGuest: A, isPendingMember: R, type: O } = e,
             x = O === _.O.BURST,
-            M = (0, E.y4)(N, C, O),
+            M = (0, E.y4)(h, C, O),
             v = (0, d.v)(x && null != p ? p : []),
             L = s ? m : I,
-            Z = x ? f : h,
+            Z = x ? f : N,
             P = (0, u.y)(Z, E.aO),
             D = {};
         if (x && null != v) {
@@ -61,7 +61,7 @@ let T = s.memo(function (e) {
             ]
         });
     }),
-    h = s.memo(function (e) {
+    N = s.memo(function (e) {
         let { showImmediate: t, reactions: n, ...a } = e,
             [r, l] = s.useState(!1),
             [o, u] = s.useTransition(),

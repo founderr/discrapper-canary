@@ -1,6 +1,6 @@
 n.d(t, {
     w: function () {
-        return N;
+        return h;
     }
 });
 var i = n(735250),
@@ -17,8 +17,8 @@ var i = n(735250),
     I = n(474936),
     m = n(689938),
     T = n(169458),
-    h = n(492764);
-function N() {
+    N = n(492764);
+function h() {
     return (0, i.jsxs)('div', {
         className: T.emptyContainer,
         children: [
@@ -26,7 +26,7 @@ function N() {
                 className: T.emptyInner,
                 children: [
                     (0, i.jsx)('img', {
-                        src: h,
+                        src: N,
                         className: T.image,
                         alt: ''
                     }),

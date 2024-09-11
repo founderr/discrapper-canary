@@ -3,20 +3,20 @@ t.d(n, {
         return a;
     }
 });
-var i = t(470079),
-    l = t(442837),
+var l = t(470079),
+    i = t(442837),
     r = t(821849),
     s = t(509545);
-let o = (0, l.Kb)(s.Z, {
+let o = (0, i.Kb)(s.Z, {
     get: (e) => (null != e ? s.Z.getForSKU(e) : []),
     load: (e, n) => (null != n ? (0, r.GZ)(n) : Promise.resolve()),
     getIsLoading: (e) => null != e && s.Z.isFetchingForSKU(e),
-    useStateHook: l.Wu
+    useStateHook: i.Wu
 });
 function a(e) {
     let n = o(e);
     return (
-        i.useEffect(() => {
+        l.useEffect(() => {
             if (null != e) (0, r.GZ)(e);
         }, [e]),
         n

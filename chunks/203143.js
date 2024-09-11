@@ -21,8 +21,8 @@ var i = n(512722),
     I = n(367907),
     m = n(41776),
     T = n(566006),
-    h = n(48854),
-    N = n(869765),
+    N = n(48854),
+    h = n(869765),
     C = n(314897),
     f = n(592125),
     p = n(703558),
@@ -240,7 +240,7 @@ async function k(e) {
         );
     }
 }
-async function G(e) {
+async function F(e) {
     let { channelId: t, messageId: n, type: i } = e;
     switch (i) {
         case 'submit':
@@ -307,7 +307,7 @@ async function G(e) {
             s()(!1, 'Unknown poll action type: '.concat(i));
     }
 }
-async function F(e) {
+async function G(e) {
     let { channel: t, question: n, answers: i, allowMultiSelect: s, duration: a, layout: r, onClose: o } = e,
         c = A.Z.getUploads(t.id, p.d.Poll),
         u = i.map((e) => {
@@ -343,7 +343,7 @@ async function F(e) {
                 items: c,
                 token: e,
                 poll: d,
-                nonce: (0, h.r)(),
+                nonce: (0, N.r)(),
                 maxSizeCallback: () => {}
             });
         } else await _.Z.sendPollMessage(t.id, d);
@@ -385,7 +385,7 @@ t.Z = {
                         channelId: t,
                         messageId: n
                     };
-                let a = N.Z.getMessage(t, n);
+                let a = h.Z.getMessage(t, n);
                 if (null != a.message)
                     return {
                         channelId: t,
@@ -448,7 +448,7 @@ t.Z = {
     },
     handlePollSubmitVote: B,
     handleUpdateVoteEditingState: j,
-    handlePollActionTapped: G,
-    createPoll: F,
+    handlePollActionTapped: F,
+    createPoll: G,
     endPollEarly: w
 };
