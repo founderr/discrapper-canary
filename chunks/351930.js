@@ -1,10 +1,9 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return C;
     }
 }),
-    n(47120),
-    n(411104);
+    n(47120);
 var r = n(735250),
     a = n(470079),
     l = n(120356),
@@ -110,7 +109,7 @@ let g = [
         '978380692553465866': 'Basic Monthly',
         '1024422698568122368': 'Basic Yearly'
     };
-function _() {
+function C() {
     let [e, t] = a.useState('511651880837840896'),
         n = (0, o.e7)([d.ZP], () => d.ZP.getPremiumSubscription()),
         l = async () => {
@@ -164,18 +163,15 @@ function _() {
                         })
                     ]
                 }),
-                null != n && (0, r.jsx)(C, { subscription: n })
+                null != n && (0, r.jsx)(_, { subscription: n })
             ]
         })
     });
 }
-function C(e) {
+function _(e) {
     var t;
     let { subscription: n } = e,
-        a = (e) => {
-            if ((null == e && (e = n.status), e in b)) return b[e];
-            throw Error('Unknown status');
-        },
+        a = (e) => ((null == e && (e = n.status), e in b) ? b[e] : 'Unknown status '.concat(e)),
         l = async (e) => {
             await s.tn.patch({
                 url: '/debug/subscription',
@@ -217,9 +213,7 @@ function C(e) {
                             ' Subscription Type: ',
                             (() => {
                                 let e = n.planIdFromItems;
-                                if (null == e) throw Error('No plan id');
-                                if (e in j) return j[e];
-                                throw Error('Unknown plan id');
+                                return null == e ? 'No plan id' : e in j ? j[e] : 'Unknown plan id '.concat(e);
                             })(),
                             ' '
                         ]
