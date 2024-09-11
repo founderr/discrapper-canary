@@ -83,6 +83,12 @@ function R(e) {
                                             channelId: L,
                                             profileType: g.y0.FULL_SIZE
                                         }),
+                                        (0, t.jsx)(_.Z, {
+                                            user: n,
+                                            profileType: g.y0.FULL_SIZE,
+                                            hasEntered: y === i.ModalTransitionState.ENTERED,
+                                            onClose: U
+                                        }),
                                         (0, t.jsxs)('div', {
                                             className: j.headerButtons,
                                             children: [
@@ -102,12 +108,6 @@ function R(e) {
                                                 }),
                                                 (0, t.jsx)(m.Z, { user: n })
                                             ]
-                                        }),
-                                        (0, t.jsx)(_.Z, {
-                                            user: n,
-                                            profileType: g.y0.FULL_SIZE,
-                                            hasEntered: y === i.ModalTransitionState.ENTERED,
-                                            onClose: U
                                         })
                                     ]
                                 })

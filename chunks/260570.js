@@ -251,7 +251,7 @@ function D(e) {
                     }),
                     eo &&
                         !x &&
-                        (0, r.jsx)(g.Z, {
+                        (0, r.jsx)(g.ZP, {
                             user: a,
                             sourceDetails: ew(),
                             sourceType: O.n_.STATUS,

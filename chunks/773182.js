@@ -178,7 +178,7 @@ function j(e) {
               withInviteIcon: !1,
               children: t
           })
-        : null;
+        : (0, i.jsx)(i.Fragment, { children: t({ onClick: d }) });
 }
 function D(e) {
     let { children: t } = e,

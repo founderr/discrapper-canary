@@ -16,7 +16,7 @@ var i = n(735250),
     m = n(649561),
     E = n(631553),
     Z = n(981631);
-n(635324), n(167666), n(308765), a.ZP.initialize();
+n(635324), n(167666), n(308765), n(913487), a.ZP.initialize();
 t.default = function () {
     return (
         s.useEffect(

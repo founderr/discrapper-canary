@@ -36,13 +36,13 @@ let v = (0, h.kt)({
         switch (r) {
             case N.n_.ACTIVITY:
                 let a = O.Z.Messages.USER_PROFILE_REPLIED_TO_ACTIVITY.format({ username: n });
-                return '> -# *'.concat(a, '*\n').concat(t);
+                return ''.concat(A.jd).concat(a, '*\n').concat(t);
             case N.n_.AVATAR:
                 let s = O.Z.Messages.USER_PROFILE_REPLIED_TO_AVATAR.format({ username: n });
-                return '> -# *'.concat(s, '*\n').concat(t);
+                return ''.concat(A.jd).concat(s, '*\n').concat(t);
             case N.n_.STATUS:
                 let o = O.Z.Messages.USER_PROFILE_REPLIED_TO_STATUS.format({ username: n });
-                return null != i ? '> -# *'.concat(o, '*').concat('\n > '.concat(i), '\n').concat(t) : '> -# *'.concat(o, '*\n').concat(t);
+                return null != i ? ''.concat(A.jd).concat(o, '*').concat('\n > '.concat(i), '\n').concat(t) : ''.concat(A.jd).concat(o, '*\n').concat(t);
             default:
                 (0, p.vE)(r);
         }
@@ -93,7 +93,7 @@ function L(e) {
             M(!0),
                 setTimeout(() => {
                     b(!1);
-                }, A._);
+                }, A._1);
         },
         j = {
             [R.biteSize]: o === N.y0.BITE_SIZE,

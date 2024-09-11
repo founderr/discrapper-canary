@@ -184,6 +184,22 @@ function U(e) {
                                                 setInteractionSent: eE,
                                                 setIsReplyInteraction: ex
                                             }),
+                                            (0, t.jsx)(S.Z, {
+                                                location: 'SimplifiedUserProfileModal',
+                                                user: n,
+                                                displayProfile: eo,
+                                                guildId: z,
+                                                channelId: D,
+                                                profileType: O.y0.FULL_SIZE,
+                                                hasEntered: W === l.ModalTransitionState.ENTERED,
+                                                isInteractionSource: es === O.n_.STATUS,
+                                                onInteraction: ei,
+                                                showReplyPopout: ee === O.P.REPLY && es === O.n_.STATUS,
+                                                onClose: Y,
+                                                setInteractionToastShown: eI,
+                                                setInteractionSent: eE,
+                                                setIsReplyInteraction: ex
+                                            }),
                                             (0, t.jsxs)('div', {
                                                 className: y.headerButtons,
                                                 children: [
@@ -202,22 +218,6 @@ function U(e) {
                                                         onClose: Y
                                                     })
                                                 ]
-                                            }),
-                                            (0, t.jsx)(S.Z, {
-                                                location: 'SimplifiedUserProfileModal',
-                                                user: n,
-                                                displayProfile: eo,
-                                                guildId: z,
-                                                channelId: D,
-                                                profileType: O.y0.FULL_SIZE,
-                                                hasEntered: W === l.ModalTransitionState.ENTERED,
-                                                isInteractionSource: es === O.n_.STATUS,
-                                                onInteraction: ei,
-                                                showReplyPopout: ee === O.P.REPLY && es === O.n_.STATUS,
-                                                onClose: Y,
-                                                setInteractionToastShown: eI,
-                                                setInteractionSent: eE,
-                                                setIsReplyInteraction: ex
                                             })
                                         ]
                                     })

@@ -140,7 +140,7 @@ function L(e) {
                 children: () => en()
             }),
             !U &&
-                (0, r.jsx)(T.Z, {
+                (0, r.jsx)(T.ZP, {
                     user: t,
                     sourceType: N.n_.AVATAR,
                     isVisible: Y,
