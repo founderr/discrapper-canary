@@ -190,11 +190,12 @@ function G(e) {
                           (0, r.jsxs)('div', {
                               children: [J(), ee(), et()]
                           }),
-                          (0, r.jsx)(R.Z, {
-                              user: t,
-                              activity: i,
-                              className: x.badges
-                          })
+                          !t.bot &&
+                              (0, r.jsx)(R.Z, {
+                                  user: t,
+                                  activity: i,
+                                  className: x.badges
+                              })
                       ]
                   })
                 : (0, r.jsxs)('div', {
@@ -271,12 +272,13 @@ function G(e) {
                                 (0, r.jsxs)('div', {
                                     className: a()(x.content, Y),
                                     children: [
-                                        (0, r.jsx)(E.E, {
-                                            image: Q,
-                                            smallImage: X,
-                                            onClick: $,
-                                            size: E.J.SIZE_60
-                                        }),
+                                        !t.bot &&
+                                            (0, r.jsx)(E.E, {
+                                                image: Q,
+                                                smallImage: X,
+                                                onClick: $,
+                                                size: E.J.SIZE_60
+                                            }),
                                         er(),
                                         Z === M.y0.FULL_SIZE && ea()
                                     ]
