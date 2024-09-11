@@ -71,11 +71,12 @@ function y(e) {
                             children: [
                                 (0, i.jsx)(I.BookmarkIcon, {
                                     size: 'md',
-                                    color: 'currentColor',
+                                    color: I.tokens.colors.INTERACTIVE_ACTIVE,
                                     className: j.headerTitleIcon
                                 }),
                                 (0, i.jsx)(I.Heading, {
                                     variant: 'heading-lg/semibold',
+                                    color: 'interactive-active',
                                     children: b.Z.Messages.FOR_LATER
                                 })
                             ]

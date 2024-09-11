@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return g;
     }
 }),
     n(47120);
@@ -20,25 +20,27 @@ var i = n(735250),
     T = n(791914),
     h = n(981631),
     N = n(689938),
-    C = n(802840);
-function f(e) {
+    C = n(802840),
+    f = n(811304);
+function p(e) {
     let { onClick: t } = e;
     return (0, i.jsx)(l.CircleIconButton, {
         tooltip: N.Z.Messages.MARK_ALL_AS_READ,
-        color: l.CircleIconButtonColors.SECONDARY,
+        color: l.CircleIconButtonColors.TERTIARY,
         icon: (0, i.jsx)(l.DoubleCheckmarkIcon, {
             size: 'xs',
             color: 'currentColor'
         }),
+        className: f.controlButton,
         onClick: t
     });
 }
-function p(e) {
+function g(e) {
     let { setTab: t, badgeState: n, closePopout: l } = e,
-        { initialized: N, items: p, loading: g, loadMore: S } = (0, d.y6)(),
+        { initialized: N, items: f, loading: g, loadMore: S } = (0, d.y6)(),
         A = (0, a.e7)([o.Z], () => o.Z.localItems),
-        R = s.useMemo(() => [...[...p, ...A].sort((e, t) => -1 * m.default.compare(e.id, t.id))], [p, A]),
-        O = p.length > 0 ? p[0] : null,
+        R = s.useMemo(() => [...[...f, ...A].sort((e, t) => -1 * m.default.compare(e.id, t.id))], [f, A]),
+        O = f.length > 0 ? f[0] : null,
         x = E.d$.useSetting(),
         M = s.useMemo(() => {
             if (null != O && 0 >= m.default.compare(O.id, x)) return !1;
@@ -57,7 +59,7 @@ function p(e) {
                 badgeState: n,
                 closePopout: l,
                 children: M
-                    ? (0, i.jsx)(f, {
+                    ? (0, i.jsx)(p, {
                           onClick: () => {
                               null != O && (E.d$.updateSetting(O.id), I.default.track(h.rMx.NOTIFICATION_CENTER_ACTION, { action_type: c.ud.MARK_ALL_READ }));
                           }

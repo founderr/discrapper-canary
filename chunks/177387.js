@@ -1,6 +1,7 @@
 e.exports = {
     messagesPopoutWrap: 'messagesPopoutWrap_ac90a2',
     header: 'header_ac90a2',
+    titleContainer: 'titleContainer_ac90a2',
     footer: 'footer_ac90a2',
     loadingMore: 'loadingMore_ac90a2',
     hasMore: 'hasMore_ac90a2',

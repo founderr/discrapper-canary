@@ -1,131 +1,119 @@
 n.d(t, {
     Z: function () {
-        return C;
+        return T;
     }
 });
 var i = n(735250);
 n(470079);
-var s = n(120356),
-    a = n.n(s),
-    r = n(399606),
-    l = n(524437),
-    o = n(481060),
-    c = n(494404),
-    u = n(377171),
-    d = n(317632),
-    _ = n(602478),
-    E = n(768943),
-    I = n(121254),
-    m = n(742989),
-    T = n(818186),
-    h = n(689938),
-    N = n(811304);
-function C(e) {
-    let { tab: t, setTab: n, children: s, badgeState: C, closePopout: f } = e,
-        { showReminders: p } = m.Z.useExperiment({ location: 'RecentsHeader' }, { autoTrackExposure: !1 }),
-        { enabled: g } = I.Z.useExperiment({ location: 'RecentsPopout' }, { autoTrackExposure: !1 }),
-        { enabled: S } = _.Z.useExperiment({ location: 'RecentsHeader' }),
-        A = (0, r.e7)([d.Z], () => d.Z.getUnseenInviteCount()),
-        R = (0, r.e7)([E.Z], () => E.Z.getMessageReminders()).length;
-    return (0, i.jsxs)(c.h4, {
-        className: a()(N.header, N.expanded),
+var s = n(399606),
+    a = n(524437),
+    r = n(481060),
+    l = n(494404),
+    o = n(377171),
+    c = n(317632),
+    u = n(602478),
+    d = n(768943),
+    _ = n(742989),
+    E = n(818186),
+    I = n(689938),
+    m = n(811304);
+function T(e) {
+    let { tab: t, setTab: n, children: T, badgeState: h, closePopout: N } = e,
+        { showReminders: C } = _.Z.useExperiment({ location: 'RecentsHeader' }, { autoTrackExposure: !1 }),
+        { enabled: f } = u.Z.useExperiment({ location: 'RecentsHeader' }),
+        p = (0, s.e7)([c.Z], () => c.Z.getUnseenInviteCount()),
+        g = (0, s.e7)([d.Z], () => d.Z.getMessageReminders()).length;
+    return (0, i.jsxs)(l.h4, {
+        className: m.header,
         children: [
             (0, i.jsxs)('div', {
-                className: a()(N.expandedInboxHeader),
+                className: m.headerTitle,
                 children: [
-                    (0, i.jsx)(o.InboxIcon, {
+                    (0, i.jsx)(r.InboxIcon, {
                         size: 'md',
                         color: 'currentColor',
-                        className: N.inboxIcon
+                        className: m.inboxIcon
                     }),
-                    (0, i.jsx)(o.Text, {
-                        className: N.inboxTitle,
+                    (0, i.jsx)(r.Text, {
+                        className: m.inboxTitle,
                         variant: 'text-lg/semibold',
-                        children: h.Z.Messages.INBOX
+                        color: 'interactive-active',
+                        children: I.Z.Messages.INBOX
                     }),
-                    (0, i.jsx)(T.Z, { closePopout: f })
-                ]
-            }),
-            (0, i.jsxs)('div', {
-                className: a()(N.expandedTabSection),
-                children: [
-                    (0, i.jsxs)(o.TabBar, {
-                        selectedItem: t,
-                        type: 'top-pill',
-                        onItemSelect: n,
-                        children: [
-                            (0, i.jsxs)(o.TabBar.Item, {
-                                id: l.X.FOR_YOU,
-                                'aria-label': h.Z.Messages.FOR_YOU,
-                                className: a()(N.tab, N.expanded, { [N.active]: t === l.X.FOR_YOU }),
-                                children: [
-                                    h.Z.Messages.FOR_YOU,
-                                    (null == C ? void 0 : C.badgeForYou)
-                                        ? (0, i.jsx)(o.CircleBadge, {
-                                              color: u.Z.STATUS_DANGER,
-                                              className: a()(N.iconBadge)
-                                          })
-                                        : null
-                                ]
-                            }),
-                            (0, i.jsx)(o.TabBar.Item, {
-                                id: l.X.UNREADS,
-                                className: a()(N.tab, N.expanded, { [N.active]: t === l.X.UNREADS }),
-                                children: h.Z.Messages.UNREADS_TAB_LABEL
-                            }),
-                            (0, i.jsx)(o.TabBar.Item, {
-                                'aria-label': h.Z.Messages.MENTIONS,
-                                id: l.X.MENTIONS,
-                                className: a()(N.tab, N.expanded, { [N.active]: t === l.X.MENTIONS }),
-                                children: h.Z.Messages.MENTIONS
-                            }),
-                            S
-                                ? (0, i.jsxs)(o.TabBar.Item, {
-                                      'aria-label': 'game_invites',
-                                      id: l.X.GAME_INVITES,
-                                      className: a()(N.tab, N.expanded, { [N.active]: t === l.X.GAME_INVITES }),
-                                      children: [
-                                          h.Z.Messages.GAME_INVITES,
-                                          A > 0
-                                              ? (0, i.jsx)(o.CircleBadge, {
-                                                    color: u.Z.STATUS_DANGER,
-                                                    className: a()(N.iconBadge)
-                                                })
-                                              : null
-                                      ]
-                                  })
-                                : null,
-                            g
-                                ? (0, i.jsx)(o.TabBar.Item, {
-                                      'aria-label': 'bookmarks',
-                                      id: l.X.BOOKMARKS,
-                                      className: a()(N.tab, N.expanded, { [N.active]: t === l.X.BOOKMARKS }),
-                                      children: h.Z.Messages.MESSAGE_BOOKMARKS_HEADER
-                                  })
-                                : null,
-                            p
-                                ? (0, i.jsxs)(o.TabBar.Item, {
-                                      'aria-label': 'todos',
-                                      id: l.X.TODOS,
-                                      className: a()(N.tab, N.expanded, { [N.active]: t === l.X.TODOS }),
-                                      children: [
-                                          h.Z.Messages.MESSAGE_REMINDERS_HEADER,
-                                          R > 0
-                                              ? (0, i.jsx)(o.CircleBadge, {
-                                                    color: u.Z.STATUS_DANGER,
-                                                    className: a()(N.iconBadge)
-                                                })
-                                              : null
-                                      ]
-                                  })
-                                : null
-                        ]
-                    }),
-                    (0, i.jsx)('div', {
-                        className: N.controls,
-                        children: s
+                    (0, i.jsxs)('div', {
+                        className: m.controls,
+                        children: [T, (0, i.jsx)(E.Z, { closePopout: N })]
                     })
                 ]
+            }),
+            (0, i.jsx)('div', {
+                className: m.headerTabs,
+                children: (0, i.jsxs)(r.TabBar, {
+                    selectedItem: t,
+                    type: 'top',
+                    look: 'brand',
+                    onItemSelect: n,
+                    className: m.tabBar,
+                    children: [
+                        (0, i.jsxs)(r.TabBar.Item, {
+                            id: a.X.FOR_YOU,
+                            'aria-label': I.Z.Messages.FOR_YOU,
+                            className: m.tab,
+                            children: [
+                                I.Z.Messages.FOR_YOU,
+                                (null == h ? void 0 : h.badgeForYou)
+                                    ? (0, i.jsx)(r.CircleBadge, {
+                                          color: o.Z.STATUS_DANGER,
+                                          className: m.iconBadge
+                                      })
+                                    : null
+                            ]
+                        }),
+                        (0, i.jsx)(r.TabBar.Item, {
+                            id: a.X.UNREADS,
+                            className: m.tab,
+                            children: I.Z.Messages.UNREADS_TAB_LABEL
+                        }),
+                        (0, i.jsx)(r.TabBar.Item, {
+                            'aria-label': I.Z.Messages.MENTIONS,
+                            id: a.X.MENTIONS,
+                            className: m.tab,
+                            children: I.Z.Messages.MENTIONS
+                        }),
+                        f
+                            ? (0, i.jsxs)(r.TabBar.Item, {
+                                  'aria-label': 'game_invites',
+                                  id: a.X.GAME_INVITES,
+                                  className: m.tab,
+                                  children: [
+                                      I.Z.Messages.GAME_INVITES,
+                                      p > 0
+                                          ? (0, i.jsx)(r.CircleBadge, {
+                                                color: o.Z.STATUS_DANGER,
+                                                className: m.iconBadge
+                                            })
+                                          : null
+                                  ]
+                              })
+                            : null,
+                        C
+                            ? (0, i.jsxs)(r.TabBar.Item, {
+                                  'aria-label': 'todos',
+                                  id: a.X.TODOS,
+                                  className: m.tab,
+                                  children: [
+                                      I.Z.Messages.MESSAGE_REMINDERS_HEADER,
+                                      g > 0
+                                          ? (0, i.jsx)(r.CircleBadge, {
+                                                color: o.Z.STATUS_DANGER,
+                                                className: m.iconBadge
+                                            })
+                                          : null
+                                  ]
+                              })
+                            : null
+                    ]
+                })
             })
         ]
     });

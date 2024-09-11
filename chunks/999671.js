@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return I;
     }
 });
 var i = n(735250);
@@ -13,8 +13,9 @@ var s = n(442837),
     c = n(455199);
 n(288552);
 var u = n(981631),
-    d = n(689938);
-function _(e) {
+    d = n(689938),
+    _ = n(811304);
+function E(e) {
     let { closePopout: t, onSelect: n } = e,
         _ = (0, s.e7)([l.Z, o.Z], () => l.Z.getChannel(o.Z.getChannelId())),
         {
@@ -64,24 +65,25 @@ function _(e) {
         ]
     });
 }
-function E() {
+function I() {
     return (0, i.jsx)(a.Popout, {
         align: 'right',
         animation: a.Popout.Animation.NONE,
         position: 'bottom',
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, i.jsx)(_, { closePopout: t });
+            return (0, i.jsx)(E, { closePopout: t });
         },
         children: (e) => {
             let { onClick: t } = e;
             return (0, i.jsx)(a.CircleIconButton, {
                 tooltip: d.Z.Messages.FILTER,
-                color: a.CircleIconButtonColors.SECONDARY,
+                color: a.CircleIconButtonColors.TERTIARY,
                 icon: (0, i.jsx)(a.FiltersHorizontalIcon, {
                     size: 'xs',
                     color: 'currentColor'
                 }),
+                className: _.controlButton,
                 onClick: t
             });
         }

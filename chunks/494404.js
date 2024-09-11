@@ -54,17 +54,24 @@ function L(e) {
     e.stopPropagation();
 }
 let Z = (e) => {
-        let { title: t, children: n, className: s } = e;
+        let { title: t, icon: n, children: s, className: a } = e;
         return (0, i.jsxs)('div', {
-            className: r()(s, M.header),
+            className: r()(a, M.header),
             children: [
-                null == t
-                    ? null
-                    : (0, i.jsx)(d.Heading, {
-                          variant: 'heading-md/medium',
-                          children: t
-                      }),
-                n
+                (0, i.jsxs)('div', {
+                    className: M.titleContainer,
+                    children: [
+                        null != n ? (0, i.jsx)(n, { color: d.tokens.colors.INTERACTIVE_ACTIVE }) : null,
+                        null == t
+                            ? null
+                            : (0, i.jsx)(d.Text, {
+                                  variant: 'text-lg/semibold',
+                                  color: 'interactive-active',
+                                  children: t
+                              })
+                    ]
+                }),
+                s
             ]
         });
     },

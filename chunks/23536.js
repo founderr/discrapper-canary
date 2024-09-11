@@ -52,7 +52,11 @@ function E(e) {
                 getProTip: function () {
                     return t.isPrivate() ? _.Z.Messages.PINNED_MESSAGES_PRO_TIP_BODY_DMS : _.Z.Messages.PINNED_MESSAGES_PRO_TIP_BODY_CHANNEL;
                 },
-                renderHeader: () => (0, i.jsx)(m.h4, { title: _.Z.Messages.PINNED_MESSAGES }),
+                renderHeader: () =>
+                    (0, i.jsx)(m.h4, {
+                        icon: r.PinIcon,
+                        title: _.Z.Messages.PINNED_MESSAGES
+                    }),
                 renderEmptyState: function (e) {
                     let s = _.Z.Messages.NO_PINS_IN_CHANNEL;
                     t.isPrivate() && (s = _.Z.Messages.NO_PINS_IN_DM);
