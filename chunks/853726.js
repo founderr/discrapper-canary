@@ -5,8 +5,8 @@ a.d(n, {
 });
 var i = a(735250);
 a(470079);
-var r = a(442837),
-    s = a(954138),
+var s = a(442837),
+    r = a(954138),
     o = a(979264),
     l = a(648052),
     t = a(530),
@@ -20,9 +20,9 @@ var r = a(442837),
 function P(e) {
     var n;
     let { user: a, displayProfile: P, guild: p, pendingAvatar: v, pendingNickname: N, pendingGlobalName: m, pendingBio: C, pendingPronouns: L, isTryItOutFlow: T, hideBioSection: R } = e,
-        f = (0, r.e7)([d.ZP], () => (null == p ? null : d.ZP.getMember(p.id, a.id))),
-        M = (0, r.e7)([A.Z], () => A.Z.hidePersonalInformation),
-        S = (0, s.Z)('ProfileCustomizationPreviewBody'),
+        f = (0, s.e7)([d.ZP], () => (null == p ? null : d.ZP.getMember(p.id, a.id))),
+        M = (0, s.e7)([A.Z], () => A.Z.hidePersonalInformation),
+        S = (0, r.Z)('ProfileCustomizationPreviewBody'),
         Z = null == P ? void 0 : null === (n = P.getPreviewBio(C)) || void 0 === n ? void 0 : n.value,
         g = null != L ? L : null == P ? void 0 : P.pronouns,
         h = (0, E.Ly)({
@@ -65,7 +65,8 @@ function P(e) {
                 (0, i.jsx)(u.Z, {
                     user: a,
                     bio: Z,
-                    hidePersonalInformation: M
+                    hidePersonalInformation: M,
+                    viewFullBioDisabled: !0
                 })
         ]
     });
