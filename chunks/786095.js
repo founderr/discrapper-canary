@@ -43,7 +43,7 @@ function S(e, n) {
     } catch (e) {
         return null;
     }
-    let G = () => {
+    let P = () => {
             if (null != n)
                 (0, r.Zy)(),
                     I.Z.open(n, m.pNK.GUILD_AUTOMOD),
@@ -57,7 +57,7 @@ function S(e, n) {
                         });
                     }, 400);
         },
-        P = async (n) => {
+        G = async (n) => {
             var t, a;
             if (((0, r.Zy)(), !(await (0, M.XN)(n.name, e)))) return;
             let i = {
@@ -83,7 +83,7 @@ function S(e, n) {
                         (0, a.jsx)(l.MenuItem, {
                             id: 'add-first-rule',
                             label: _.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_AUTOMOD_RULE_CREATE,
-                            action: G,
+                            action: P,
                             disabled: S
                         }),
                     j.map((e) => {
@@ -110,7 +110,7 @@ function S(e, n) {
                                 group: 'automod-rule-selection',
                                 checked: !1,
                                 disabled: S,
-                                action: () => P(e)
+                                action: () => G(e)
                             },
                             e.id
                         );
@@ -122,7 +122,7 @@ function S(e, n) {
                                 (0, a.jsx)(l.MenuItem, {
                                     id: 'add-another-rule',
                                     label: _.Z.Messages.GUILD_AUTOMOD_ADD_NEW_RULE,
-                                    action: G,
+                                    action: P,
                                     disabled: S
                                 })
                             ]

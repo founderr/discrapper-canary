@@ -61,7 +61,7 @@ let Z = (e) => {
                 (0, i.jsxs)('div', {
                     className: M.titleContainer,
                     children: [
-                        null != n ? (0, i.jsx)(n, { color: d.tokens.colors.INTERACTIVE_ACTIVE }) : null,
+                        null != n ? (0, i.jsx)(n, { color: d.tokens.colors.INTERACTIVE_NORMAL }) : null,
                         null == t
                             ? null
                             : (0, i.jsx)(d.Text, {

@@ -40,8 +40,8 @@ var i = t(374470),
     C = t(429260),
     D = t(1626),
     L = t(279329),
-    G = t(627938),
-    P = t(512303),
+    P = t(627938),
+    G = t(512303),
     y = t(481300),
     U = t(689938);
 function w(e) {
@@ -111,7 +111,7 @@ function k(e) {
         }),
         eS = (0, b.Z)(n, t),
         eT = (0, R.Z)(n, t),
-        ev = (0, G.Z)(n, t),
+        ev = (0, P.Z)(n, t),
         eA = (0, m.Z)(r, t.getGuildId()),
         eR = (0, g.Z)(n),
         eh = (0, S.Z)(n),
@@ -122,7 +122,7 @@ function k(e) {
             guildId: void 0,
             onHeightUpdate: Y
         }),
-        eN = (0, P.Z)(n),
+        eN = (0, G.Z)(n),
         ep = (0, M.Z)(n);
     return (0, a.jsxs)(l.Menu, {
         navId: q,
