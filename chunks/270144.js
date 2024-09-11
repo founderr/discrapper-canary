@@ -3,31 +3,28 @@ t.d(n, {
         return O;
     },
     F5: function () {
-        return C;
-    },
-    FE: function () {
-        return E;
+        return Z;
     },
     _k: function () {
         return N;
     },
     h6: function () {
-        return A;
+        return C;
     },
     jd: function () {
-        return i;
+        return l;
     },
     qz: function () {
-        return b;
+        return L;
     },
     sp: function () {
-        return L;
+        return A;
     }
 }),
     t(653041),
     t(47120);
-var i,
-    l,
+var l,
+    i,
     r = t(470079),
     s = t(442837),
     o = t(496929),
@@ -41,32 +38,20 @@ var i,
     v = t(106976),
     I = t(307643),
     S = t(488915),
-    g = t(171246),
-    h = t(981631);
+    h = t(171246),
+    g = t(981631);
 let x = 12633 == t.j ? 2592000000 : null;
-((l = i || (i = {}))[(l.NOT_LOADED = 0)] = 'NOT_LOADED'), (l[(l.LOADING = 1)] = 'LOADING'), (l[(l.LOADED = 2)] = 'LOADED'), (l[(l.ERROR = 3)] = 'ERROR');
-let E = function (e, n) {
-        let { refetchOnMount: t = !1 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-            i = (0, s.e7)([S.Z], () => (null != e ? S.Z.getSubscriptionGroupListingsForApplicationFetchState(e) : S.M.FETCHED), [e]);
+((i = l || (l = {}))[(i.NOT_LOADED = 0)] = 'NOT_LOADED'), (i[(i.LOADING = 1)] = 'LOADING'), (i[(i.LOADED = 2)] = 'LOADED'), (i[(i.ERROR = 3)] = 'ERROR');
+let _ = (e) => {
+        let { guildId: n, canFetch: t = !0, forceRefetch: l = !1 } = e,
+            i = (0, s.e7)([S.Z], () => (null != n ? S.Z.getEntitlementsForGuildFetchState(n) : null), [n]);
         return (
             r.useEffect(() => {
-                if (null == e || null == n) return;
-                let i = S.Z.getSubscriptionGroupListingsForApplicationFetchState(e);
-                (t || i === S.M.NOT_FETCHED) && (0, v.rx)(e, n);
-            }, [e, n, t]),
-            { listingsLoaded: i === S.M.FETCHED }
-        );
-    },
-    _ = (e) => {
-        let { guildId: n, canFetch: t = !0, forceRefetch: i = !1 } = e,
-            l = (0, s.e7)([S.Z], () => (null != n ? S.Z.getEntitlementsForGuildFetchState(n) : null), [n]);
-        return (
-            r.useEffect(() => {
-                if (null == n || n === h.ME) return;
+                if (null == n || n === g.ME) return;
                 let e = S.Z.getEntitlementsForGuildFetchState(n);
-                t && (e === S.M.NOT_FETCHED || i) && (0, v.i1)(n);
-            }, [n, t, i]),
-            { entitlementsLoaded: l === S.M.FETCHED }
+                t && (e === S.M.NOT_FETCHED || l) && (0, v.i1)(n);
+            }, [n, t, l]),
+            { entitlementsLoaded: i === S.M.FETCHED }
         );
     },
     N = function (e) {
@@ -77,43 +62,43 @@ let E = function (e, n) {
                 if (null == e) return [];
                 let t = S.Z.getSubscriptionGroupListing(e);
                 if (null == t) return [];
-                let i = [];
+                let l = [];
                 for (let e of t.subscription_listings_ids) {
                     let t = S.Z.getSubscriptionListing(e);
-                    if (null != t) (!t.soft_deleted || n.includeSoftDeleted) && i.push(t);
+                    if (null != t) (!t.soft_deleted || n.includeSoftDeleted) && l.push(t);
                 }
-                return i;
+                return l;
             },
             [e, n.includeSoftDeleted]
         );
     },
-    T = [],
-    Z = [];
-function C(e, n) {
-    let t = (0, s.e7)([d.ZP], () => d.ZP.getSubscriptions()),
+    E = [],
+    T = [];
+function Z(e, n, t) {
+    let l = (0, s.e7)([d.ZP], () => d.ZP.getSubscriptions()),
         {
             subscriptionGroupListing: i,
-            guildEntitlements: l,
-            userEntitlements: o
+            guildEntitlements: o,
+            userEntitlements: a
         } = (0, s.cj)(
             [S.Z, f.Z],
             () => {
-                var t, i;
+                var l, i;
                 return {
-                    subscriptionGroupListing: null != e ? S.Z.getSubscriptionGroupListingForApplication(e) : null,
-                    guildEntitlements: null != e && null != n ? S.Z.getApplicationEntitlementsForGuild(e, n) : T,
-                    userEntitlements: null != e && null !== (i = null === (t = f.Z.getForApplication(e)) || void 0 === t ? void 0 : t.values()) && void 0 !== i ? i : Z
+                    subscriptionGroupListing: null != t ? S.Z.getSubscriptionGroupListing(t) : null,
+                    guildEntitlements: null != e && null != n ? S.Z.getApplicationEntitlementsForGuild(e, n) : E,
+                    userEntitlements: null != e && null !== (i = null === (l = f.Z.getForApplication(e)) || void 0 === l ? void 0 : l.values()) && void 0 !== i ? i : T
                 };
             },
-            [e, n]
+            [e, n, t]
         ),
-        a = r.useMemo(() => [...l, ...o], [l, o]),
-        u = null == i ? void 0 : i.subscription_listings,
-        { activeSubscriptionListing: c, activeEntitlement: p } = r.useMemo(() => {
-            if (null != u) {
-                for (let e of a)
-                    for (let t of u)
-                        if ((0, g.AQ)(t, e, n))
+        u = r.useMemo(() => [...o, ...a], [o, a]),
+        c = null == i ? void 0 : i.subscription_listings,
+        { activeSubscriptionListing: p, activeEntitlement: m } = r.useMemo(() => {
+            if (null != c) {
+                for (let e of u)
+                    for (let t of c)
+                        if ((0, h.AQ)(t, e, n))
                             return {
                                 activeSubscriptionListing: t,
                                 activeEntitlement: e
@@ -123,32 +108,32 @@ function C(e, n) {
                 activeSubscriptionListing: null,
                 activeEntitlement: null
             };
-        }, [a, u, n]);
+        }, [u, c, n]);
     return {
         activeSubscription: r.useMemo(() => {
-            if (null == t) return null;
-            let e = null == c ? void 0 : c.subscription_plans[0].id;
-            for (let n of Object.values(t)) if (n.type === h.NYc.APPLICATION && n.items[0].planId === e) return n;
+            if (null == l) return null;
+            let e = null == p ? void 0 : p.subscription_plans[0].id;
+            for (let n of Object.values(l)) if (n.type === g.NYc.APPLICATION && n.items[0].planId === e) return n;
             return null;
-        }, [c, t]),
-        activeSubscriptionListing: c,
-        activeEntitlement: p,
+        }, [p, l]),
+        activeSubscriptionListing: p,
+        activeEntitlement: m,
         subscriptionGroupListing: i
     };
 }
-function A(e) {
+function C(e) {
     var n;
-    let t = null !== (n = null == e ? void 0 : e.id) && void 0 !== n ? n : h.lds,
-        { entitlementsLoaded: i } = _({
+    let t = null !== (n = null == e ? void 0 : e.id) && void 0 !== n ? n : g.lds,
+        { entitlementsLoaded: l } = _({
             guildId: t,
-            canFetch: (0, s.e7)([u.Z], () => u.Z.can(h.Plq.ADMINISTRATOR, e))
+            canFetch: (0, s.e7)([u.Z], () => u.Z.can(g.Plq.ADMINISTRATOR, e))
         }),
-        l = (0, s.e7)([m.Z], () => m.Z.getLastGuildDismissedTime(t)),
+        i = (0, s.e7)([m.Z], () => m.Z.getLastGuildDismissedTime(t)),
         o = (0, s.Wu)([S.Z], () => {
             let e = S.Z.getEntitlementsForGuild(t),
                 n = S.Z.getEntitlementsForGuild(t, !1),
-                i = e.map((e) => e.applicationId);
-            return n.filter((e) => !i.includes(e.applicationId));
+                l = e.map((e) => e.applicationId);
+            return n.filter((e) => !l.includes(e.applicationId));
         }),
         a = (0, s.cj)([p.Z], () => p.Z.getSKUs()),
         c = r.useMemo(
@@ -159,26 +144,26 @@ function A(e) {
                 }),
             [o, a]
         );
-    return i ? c.filter((e) => null != e.endsAt && e.endsAt.getTime() > Math.max(null != l ? l : 0, Date.now() - x)) : [];
+    return l ? c.filter((e) => null != e.endsAt && e.endsAt.getTime() > Math.max(null != i ? i : 0, Date.now() - x)) : [];
 }
-let L = (e) => {
+let A = (e) => {
         let [n, t] = r.useState(!1),
-            i = r.useMemo(() => e.map(g.bZ), [e]),
-            l = (0, s.Wu)([c.Z], () => i.filter((e) => null == c.Z.get(e)), [i]);
+            l = r.useMemo(() => e.map(h.bZ), [e]),
+            i = (0, s.Wu)([c.Z], () => l.filter((e) => null == c.Z.get(e)), [l]);
         return (
             r.useEffect(() => {
-                l.length > 0 &&
+                i.length > 0 &&
                     (t(!0),
-                    Promise.all(l.map((e) => (0, v.vY)(e)))
+                    Promise.all(i.map((e) => (0, v.vY)(e)))
                         .catch(() => {})
                         .then(() => {
                             t(!1);
                         }));
-            }, [l]),
+            }, [i]),
             { loading: n }
         );
     },
-    b = () => {
+    L = () => {
         let [e, n] = r.useState(0);
         return (
             r.useEffect(() => {
@@ -186,7 +171,7 @@ let L = (e) => {
                     (0, o.p0)({
                         withSku: !0,
                         withApplication: !0,
-                        entitlementType: h.qc2.APPLICATION_SUBSCRIPTION
+                        entitlementType: g.qc2.APPLICATION_SUBSCRIPTION
                     })
                         .catch(() => {
                             n(3);
@@ -200,16 +185,16 @@ let L = (e) => {
     };
 function O(e, n) {
     let t = (0, s.e7)([a.Z], () => a.Z.isLoaded()),
-        [i, l] = r.useState([]);
+        [l, i] = r.useState([]);
     return (
         r.useEffect(() => {
             null == n &&
                 null != e &&
                 t &&
                 (0, I.tn)(e).then((e) => {
-                    l(e.map((e) => a.Z.getGuild(e)).filter((e) => null != e));
+                    i(e.map((e) => a.Z.getGuild(e)).filter((e) => null != e));
                 });
         }, [e, n, t]),
-        i
+        l
     );
 }

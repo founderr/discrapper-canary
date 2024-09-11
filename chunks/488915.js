@@ -48,26 +48,19 @@ let x = new _.h(
     S = {},
     T = {};
 function P(e) {
-    let n = x.values(g(e));
-    return d()(n.length <= 1, 'Found multiple group listings for application'), n[0];
-}
-function N(e) {
     var n;
     for (let t of (x.set(e.id, e), null !== (n = e.subscription_listings) && void 0 !== n ? n : []))
         (function (e) {
             b.set(e.id, e);
         })(t);
 }
-class A extends (a = u.yh) {
+class N extends (a = u.yh) {
     getSubscriptionGroupListingsForApplicationFetchState(e) {
         var n;
         return null !== (n = S[e]) && void 0 !== n ? n : 0;
     }
     getSubscriptionGroupListing(e) {
         return x.get(e);
-    }
-    getSubscriptionGroupListingForApplication(e) {
-        return P(e);
     }
     getSubscriptionGroupListingForSubscriptionListing(e) {
         let n = x.values(f(e));
@@ -97,7 +90,7 @@ class A extends (a = u.yh) {
     }
 }
 (s = 'ApplicationSubscriptionStore'),
-    (l = 'displayName') in (o = A)
+    (l = 'displayName') in (o = N)
         ? Object.defineProperty(o, l, {
               value: s,
               enumerable: !0,
@@ -105,19 +98,19 @@ class A extends (a = u.yh) {
               writable: !0
           })
         : (o[l] = s),
-    (n.Z = new A(p.Z, {
+    (n.Z = new N(p.Z, {
         LOGOUT: function () {
             x.clear(), b.clear(), E.clear(), (S = {}), (T = {});
         },
         APPLICATION_SUBSCRIPTIONS_FETCH_LISTINGS: function (e) {
-            let { applicationId: n } = e;
+            let { applicationId: n, groupListingId: t } = e;
             S[n] = 1;
-            let t = P(n);
-            if (null != t) for (let e of t.subscription_listings_ids) b.delete(e);
+            let i = x.get(t);
+            if (null != i) for (let e of i.subscription_listings_ids) b.delete(e);
         },
         APPLICATION_SUBSCRIPTIONS_FETCH_LISTINGS_SUCCESS: function (e) {
             let { applicationId: n, groupListing: t } = e;
-            (S[n] = 2), N(t);
+            (S[n] = 2), P(t);
         },
         APPLICATION_SUBSCRIPTIONS_FETCH_LISTINGS_FAILURE: function (e) {
             let { applicationId: n } = e;
@@ -141,6 +134,6 @@ class A extends (a = u.yh) {
         },
         APPLICATION_SUBSCRIPTIONS_FETCH_LISTING_FOR_PLAN_SUCCESS: function (e) {
             let { groupListing: n } = e;
-            N(n);
+            P(n);
         }
     }));
