@@ -133,6 +133,13 @@ function L(e) {
                         }
                     });
                 },
+                onRequestClose: () =>
+                    null == P
+                        ? void 0
+                        : P({
+                              interactionType: null,
+                              interactionSourceType: null
+                          }),
                 animationPosition: 'top',
                 position: 'bottom',
                 align: L === N.y0.FULL_SIZE ? 'center' : 'left',

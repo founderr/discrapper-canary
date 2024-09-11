@@ -306,6 +306,13 @@ function D(e) {
                         }
                     });
                 },
+                onRequestClose: () =>
+                    null == U
+                        ? void 0
+                        : U({
+                              interactionType: null,
+                              interactionSourceType: null
+                          }),
                 animationPosition: 'top',
                 position: 'bottom',
                 align: D === O.y0.FULL_SIZE ? 'center' : 'left',
