@@ -1,24 +1,24 @@
-n.d(t, {
+t.d(n, {
     n: function () {
         return a;
     }
 });
-var s,
+var i,
     a,
-    r = n(735250),
-    i = n(470079),
-    l = n(120356),
-    o = n.n(l),
-    c = n(748780),
-    d = n(215569),
-    _ = n(189682);
-((s = a || (a = {}))[(s.RIGHT = -1)] = 'RIGHT'), (s[(s.LEFT = 1)] = 'LEFT');
-let u = {
+    r = t(735250),
+    o = t(470079),
+    l = t(120356),
+    s = t.n(l),
+    c = t(748780),
+    d = t(215569),
+    u = t(189682);
+((i = a || (a = {}))[(i.RIGHT = -1)] = 'RIGHT'), (i[(i.LEFT = 1)] = 'LEFT');
+let _ = {
     friction: 7,
     tension: 40,
     clamp: !0
 };
-class E extends i.PureComponent {
+class p extends o.PureComponent {
     componentWillEnter(e) {
         this._animated.setValue(-this.props.direction),
             c.Z.spring(this._animated, {
@@ -58,40 +58,40 @@ class E extends i.PureComponent {
     render() {
         return (0, r.jsx)(c.Z.div, {
             style: this.getStyle(),
-            className: _.item,
+            className: u.item,
             children: this.props.children
         });
     }
     constructor(e) {
-        var t, n, s;
+        var n, t, i;
         super(e),
-            (t = this),
-            (s = void 0),
-            (n = '_animated') in t
-                ? Object.defineProperty(t, n, {
-                      value: s,
+            (n = this),
+            (i = void 0),
+            (t = '_animated') in n
+                ? Object.defineProperty(n, t, {
+                      value: i,
                       enumerable: !0,
                       configurable: !0,
                       writable: !0
                   })
-                : (t[n] = s),
+                : (n[t] = i),
             (this._animated = new c.Z.Value(-1 * e.direction));
     }
 }
-t.Z = (e) => {
-    let { children: t, step: n, direction: s, className: a, springSettings: i = u, fadeInOut: l = !1 } = e;
+n.Z = (e) => {
+    let { children: n, step: t, direction: i, className: a, springSettings: o = _, fadeInOut: l = !1 } = e;
     return (0, r.jsx)(d.W, {
         component: 'div',
-        className: o()(_.animator, a),
+        className: s()(u.animator, a),
         children: (0, r.jsx)(
-            E,
+            p,
             {
-                direction: s,
-                springSettings: i,
+                direction: i,
+                springSettings: o,
                 fadeInOut: l,
-                children: t
+                children: n
             },
-            n
+            t
         )
     });
 };

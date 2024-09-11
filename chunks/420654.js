@@ -13,38 +13,38 @@ var r = n(735250),
     f = n(362187);
 let h = 57.75;
 t.Z = i.memo(function (e) {
-    let { user: t, onClose: n, bio: a, hidePersonalInformation: p } = e,
-        { context: I } = (0, u.KZ)(),
-        { analyticsLocations: m } = (0, l.ZP)(),
-        [T, S] = i.useState(!1),
-        [g, A] = i.useState(!1);
+    let { user: t, onClose: n, bio: a, hidePersonalInformation: p, viewFullBioDisabled: I = !1 } = e,
+        { context: m } = (0, u.KZ)(),
+        { analyticsLocations: T } = (0, l.ZP)(),
+        [S, g] = i.useState(!1),
+        [A, N] = i.useState(!1);
     return p || null == a || '' === a
         ? null
         : (0, r.jsxs)('div', {
               children: [
                   (0, r.jsx)('div', {
                       ref: (e) => {
-                          null != e && (S(!g && e.scrollHeight - e.clientHeight > 1), e.getBoundingClientRect().height > h && A(!0));
+                          null != e && (g(!A && e.scrollHeight - e.clientHeight > 1), e.getBoundingClientRect().height > h && N(!0));
                       },
-                      className: s()(f.descriptionClamp, g && f.maxBioHeight),
+                      className: s()(f.descriptionClamp, A && f.maxBioHeight),
                       children: (0, r.jsx)(c.Z, {
                           userBio: a,
                           setLineClamp: !1,
                           textColor: 'header-primary'
                       })
                   }),
-                  (T || g) &&
+                  (S || A) &&
                       (0, r.jsx)(o.Button, {
                           look: o.Button.Looks.BLANK,
                           size: o.Button.Sizes.NONE,
                           className: f.viewFullBio,
-                          color: f.viewFullBioColor,
+                          color: s()(f.viewFullBioColor, I && f.viewFullBioDisabled),
                           onClick: () => {
                               null == n || n(),
                                   (0, d.openUserProfileModal)({
-                                      ...I,
+                                      ...m,
                                       userId: t.id,
-                                      sourceAnalyticsLocations: m,
+                                      sourceAnalyticsLocations: T,
                                       analyticsLocation: { section: _.jXE.BITE_SIZE_PROFILE_POPOUT }
                                   });
                           },

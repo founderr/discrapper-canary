@@ -29,7 +29,7 @@ let j = async () => {
             return [];
         }
     },
-    _ = async (e, t) => {
+    C = async (e, t) => {
         try {
             await o.tn.post({ url: p.ANM.CREATE_USER_OFFER(e, t) });
         } catch {
@@ -37,7 +37,7 @@ let j = async () => {
             await (0, u.T)();
         }
     },
-    C = async (e, t) => {
+    _ = async (e, t) => {
         try {
             await o.tn.del({ url: p.ANM.DELETE_USER_OFFER(e, t) });
         } catch {
@@ -77,17 +77,17 @@ function y(e) {
     let { offer: s, offerOptions: d, forceRefetch: h } = e,
         [f, p] = a.useState(!1),
         [b, j] = a.useState(!1),
-        [_, S] = a.useState(!1),
+        [C, S] = a.useState(!1),
         [N, y] = a.useState(!1);
     a.useEffect(() => {
-        _ && y(!0);
+        C && y(!0);
         let e = setTimeout(() => {
             y(!1);
         }, 500);
         return () => {
             clearTimeout(e);
         };
-    }, [_]);
+    }, [C]);
     let { id: I, expires_at: w, redeemed_at: E, trial_id: k, subscription_trial: R } = s,
         O =
             null !==
@@ -142,7 +142,7 @@ function y(e) {
                         }),
                         (0, r.jsx)(c.Clickable, {
                             onClick: async () => {
-                                S(!0), await C(I, 'trial'), h(), S(!1);
+                                S(!0), await _(I, 'trial'), h(), S(!1);
                             },
                             children: (0, r.jsx)(c.TrashIcon, {
                                 size: 'md',
@@ -242,7 +242,7 @@ function y(e) {
                     ]
                 }),
                 (0, r.jsx)('div', {
-                    className: i()(v.loadingContainer, { [v.isLoading]: _ || N }),
+                    className: i()(v.loadingContainer, { [v.isLoading]: C || N }),
                     children: (0, r.jsx)(c.Spinner, {})
                 })
             ]
@@ -265,7 +265,7 @@ function I(e) {
             clearTimeout(e);
         };
     }, [p]);
-    let { id: _, expires_at: S, applied_at: N, discount_id: y, discount: I } = l,
+    let { id: C, expires_at: S, applied_at: N, discount_id: y, discount: I } = l,
         w =
             null !==
                 (n =
@@ -281,7 +281,7 @@ function I(e) {
         E = null != S,
         k = null != S && new Date(S).getTime() < Date.now(),
         R = async () => {
-            g(!0), E ? await T(_, 'discount') : await (0, u.a)(void 0, l), s(), g(!1);
+            g(!0), E ? await T(C, 'discount') : await (0, u.a)(void 0, l), s(), g(!1);
         };
     a.useEffect(() => {
         if (d) {
@@ -318,7 +318,7 @@ function I(e) {
                         }),
                         (0, r.jsx)(c.Clickable, {
                             onClick: async () => {
-                                g(!0), await C(_, 'discount'), s(), g(!1);
+                                g(!0), await _(C, 'discount'), s(), g(!1);
                             },
                             children: (0, r.jsx)(c.TrashIcon, {
                                 size: 'md',
@@ -331,13 +331,13 @@ function I(e) {
                 (0, r.jsxs)(c.Clickable, {
                     className: i()(v.row, v.idRow),
                     onClick: () => {
-                        (0, m.JG)(_), h(!0);
+                        (0, m.JG)(C), h(!0);
                     },
                     children: [
                         (0, r.jsxs)(c.Text, {
                             variant: 'eyebrow',
                             color: 'text-normal',
-                            children: ['Offer: ', _]
+                            children: ['Offer: ', C]
                         }),
                         d
                             ? (0, r.jsx)(c.CheckmarkLargeIcon, {
@@ -422,7 +422,7 @@ function w() {
         [n, l] = a.useState([]),
         [o, m] = a.useState(),
         [x, p] = a.useState(),
-        [g, C] = a.useState([]),
+        [g, _] = a.useState([]),
         [T, w] = a.useState([]),
         [E, k] = a.useState(!0);
     a.useEffect(() => {
@@ -445,14 +445,14 @@ function w() {
                 h.Z.forceReset(),
                 (0, u.T)(),
                 S().then((e) => {
-                    C(e.trial.sort((e, t) => e.id.localeCompare(t.id))), w(e.discount.sort((e, t) => e.id.localeCompare(t.id)));
+                    _(e.trial.sort((e, t) => e.id.localeCompare(t.id))), w(e.discount.sort((e, t) => e.id.localeCompare(t.id)));
                 }));
         }, [E]);
     let R = async () => {
-            null != o && (await _(o, 'trial'), k(!0));
+            null != o && (await C(o, 'trial'), k(!0));
         },
         O = async () => {
-            null != x && (await _(x, 'discount'), k(!0));
+            null != x && (await C(x, 'discount'), k(!0));
         },
         Z = async () => {
             await N(), k(!0);

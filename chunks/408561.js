@@ -38,11 +38,11 @@ function h(e) {
                 }
             },
             onSubmit: function (e) {
-                let { problem: t, dontShowAgain: o, feedback: s } = e;
+                let { problem: t, dontShowAgain: o, feedback: s, closeClicked: r } = e;
                 o && (0, c.EW)(l.z.USER_DM_MUTE_FEEDBACK);
-                let r = null == t;
-                (0, E.Z)(t, s, r, o),
-                    !r &&
+                let u = null == t || r;
+                (0, E.Z)(t, s, u, o),
+                    !u &&
                         (0, i.openModalLazy)(async () => {
                             let { default: e } = await n.e('14466').then(n.bind(n, 729328));
                             return (t) =>

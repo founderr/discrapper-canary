@@ -5,8 +5,8 @@ a.d(n, {
 });
 var i = a(735250);
 a(470079);
-var r = a(475413),
-    s = a(955418),
+var s = a(475413),
+    r = a(955418),
     o = a(689938),
     l = a(451563);
 function t(e) {
@@ -16,7 +16,7 @@ function t(e) {
               className: l.footer,
               children:
                   !t &&
-                  (0, i.jsx)(r.tG, {
+                  (0, i.jsx)(s.tG, {
                       text: o.Z.Messages.USER_SETTINGS_CUSTOMIZE_PROFILE_EXAMPLE_BUTTON,
                       fullWidth: !0
                   })
@@ -24,6 +24,6 @@ function t(e) {
         : (0, i.jsx)('footer', {
               inert: '',
               className: l.footer,
-              children: (0, i.jsx)(s.Z, { user: n })
+              children: (0, i.jsx)(r.Z, { user: n })
           });
 }

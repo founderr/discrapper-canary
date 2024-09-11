@@ -38,7 +38,7 @@ function E(e) {
 function h(e) {
     let { className: t, style: n } = e;
     return (0, i.jsx)('div', {
-        className: r()(_.nonClickableCard, t),
+        className: r()(_.clickableCard, t),
         style: n,
         children: (0, i.jsxs)('div', {
             className: r()(_.card, _.skeletonCard),

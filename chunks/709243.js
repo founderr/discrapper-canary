@@ -1,4 +1,4 @@
-a.d(t, {
+n.d(t, {
     U: function () {
         return o;
     },
@@ -6,9 +6,9 @@ a.d(t, {
         return r;
     }
 });
-var n,
+var a,
     o,
-    s = a(689938);
+    s = n(689938);
 function r() {
     return [
         {
@@ -41,4 +41,4 @@ function r() {
         }
     ];
 }
-((n = o || (o = {})).TOO_HARD = 'Too hard'), (n.TEST = 'Testing purposes'), (n.ACCIDENT = 'Created on accident'), (n.TEMPLATE = 'Curious about server/template'), (n.LONELY = 'Empty server'), (n.INACTIVE = 'Inactive server'), (n.OTHER = 'Other');
+((a = o || (o = {})).TOO_HARD = 'Too hard'), (a.TEST = 'Testing purposes'), (a.ACCIDENT = 'Created on accident'), (a.TEMPLATE = 'Curious about server/template'), (a.LONELY = 'Empty server'), (a.INACTIVE = 'Inactive server'), (a.OTHER = 'Other');

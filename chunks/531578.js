@@ -18,8 +18,8 @@ n.d(t, {
     (a.NEUTRAL = 'neutral'),
     (a.GOOD = 'good');
 let o = 1024;
-((s = i || (i = {}))[(s.VOICE = 0)] = 'VOICE'), (s[(s.STREAM = 1)] = 'STREAM'), (s[(s.VIDEO_BACKGROUND = 2)] = 'VIDEO_BACKGROUND'), (s[(s.ACTIVITY = 3)] = 'ACTIVITY'), (s[(s.IN_APP_REPORTS = 4)] = 'IN_APP_REPORTS'), (s[(s.USER_DM_MUTE = 5)] = 'USER_DM_MUTE');
-let l = [2, 1, 3, 0, 4, 5].reduce(
+((s = i || (i = {})).VOICE = 'VOICE'), (s.STREAM = 'STREAM'), (s.VIDEO_BACKGROUND = 'VOICE_BACKGROUND'), (s.ACTIVITY = 'ACTIVITY'), (s.IN_APP_REPORTS = 'IN_APP_REPORTS'), (s.USER_DM_MUTE = 'USER_DM_MUTE');
+let l = ['VOICE_BACKGROUND', 'STREAM', 'ACTIVITY', 'VOICE', 'IN_APP_REPORTS', 'USER_DM_MUTE'].reduce(
     (e, t, n) => ({
         ...e,
         [t]: n

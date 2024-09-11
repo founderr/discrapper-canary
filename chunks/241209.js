@@ -30,7 +30,7 @@ let v = new RegExp('https?://'.concat(null !== (r = window.GLOBAL_ENV.CDN_HOST) 
 function j(e) {
     return 'string' == typeof e.content ? e.content : T(e.content);
 }
-let _ = {
+let C = {
         ...u().defaultRules,
         heading: {
             ...u().defaultRules.heading,
@@ -162,8 +162,8 @@ let _ = {
             }
         }
     },
-    C = u().parserFor(_),
-    T = u().reactFor(u().ruleOutput(_, 'react'));
+    _ = u().parserFor(C),
+    T = u().reactFor(u().ruleOutput(C, 'react'));
 class S extends (a = i.PureComponent) {
     render() {
         let { className: e, children: t, state: n, parser: r, output: a } = this.props,
@@ -179,9 +179,9 @@ class S extends (a = i.PureComponent) {
         });
     }
 }
-b(S, 'rules', _),
+b(S, 'rules', C),
     b(S, 'defaultProps', {
-        parser: C,
+        parser: _,
         output: T
     }),
     (t.Z = S);

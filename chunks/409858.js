@@ -26,8 +26,8 @@ var i = s(735250),
     A = s(82142),
     N = s(283595),
     O = s(594174),
-    j = s(509545),
-    y = s(55563),
+    y = s(509545),
+    j = s(55563),
     b = s(626135),
     M = s(176354),
     P = s(669079),
@@ -73,7 +73,7 @@ let W = (e) => {
                 var e;
                 if (t !== H.wZ8.CONFIRM) return;
                 let i = _.Z.getSoundById(s);
-                (0, F.I)(s, null !== (e = null == i ? void 0 : i.volume) && void 0 !== e ? e : 1);
+                (0, F.playGiftSound)(s, null !== (e = null == i ? void 0 : i.volume) && void 0 !== e ? e : 1);
             }, [t, s]),
             null
         );
@@ -368,9 +368,9 @@ class q extends n.Component {
             });
     }
 }
-let J = o.ZP.connectStores([N.Z, y.Z, I.Z, A.Z, j.Z, p.Z], (e) => {
+let J = o.ZP.connectStores([N.Z, j.Z, I.Z, A.Z, y.Z, p.Z], (e) => {
     let { giftCode: t } = e,
-        s = y.Z.get(t.skuId),
+        s = j.Z.get(t.skuId),
         i = null != s ? I.Z.getApplication(s.applicationId) : null,
         n = p.Z.useReducedMotion;
     return {

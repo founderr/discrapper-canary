@@ -112,7 +112,7 @@ let o = (0, r.B)({
 function c(e) {
     switch (e) {
         case s.cd.UPLOAD_ERROR_UPSELL:
-            return l.getCurrentConfig({ location: 'File Upload Roadblock' }, { autoTrackExposure: !1 }).addSocialProof || (0, i.XS)();
+            return l.getCurrentConfig({ location: 'File Upload Roadblock' }, { autoTrackExposure: !1 }).addSocialProof && !(0, i.XS)();
         case s.cd.CLIENT_THEMES_UPSELL:
         case s.cd.APP_ICONS_UPSELL:
             return a.Z.getCurrentConfig({ location: 'shouldShowSocialProof' }, { autoTrackExposure: !1 }).addSocialProof;

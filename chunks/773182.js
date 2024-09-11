@@ -166,7 +166,7 @@ function j(e) {
             }),
                 (0, L.o)(R.F$.SERVERS);
         }, [a, n]);
-    return s
+    return a !== b.O7.GAME_SPECIFIC || s
         ? (0, i.jsx)(y, {
               title: O.Z.Messages.RAPIDASH_GUILD_LIST_USER_UPSELL_TITLE,
               message: O.Z.Messages.RAPIDASH_GUILD_LIST_USER_UPSELL_MESSAGE,

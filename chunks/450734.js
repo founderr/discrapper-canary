@@ -5,8 +5,8 @@ a.d(n, {
 });
 var i = a(735250);
 a(470079);
-var r = a(120356),
-    s = a.n(r),
+var s = a(120356),
+    r = a.n(s),
     o = a(442837),
     l = a(481060),
     t = a(906732),
@@ -19,14 +19,14 @@ var r = a(120356),
     I = a(529934);
 let P = d.ZP.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
 function p(e) {
-    let { user: n, guild: a, displayProfile: r, canUsePremiumCustomization: d, previewAvatar: p, previewAvatarDecoration: v, previewTheme: N, previewPrimaryColor: m, className: C, disabledInputs: L, isTryItOutFlow: T, onUpsellClick: R } = e,
+    let { user: n, guild: a, displayProfile: s, canUsePremiumCustomization: d, previewAvatar: p, previewAvatarDecoration: v, previewTheme: N, previewPrimaryColor: m, className: C, disabledInputs: L, isTryItOutFlow: T, onUpsellClick: R } = e,
         { analyticsLocations: f } = (0, t.ZP)(),
         M = (0, o.e7)([c.Z], () => c.Z.getStatus(n.id)),
-        S = null == a || (null == r ? void 0 : r.canUsePremiumProfileCustomization) || d,
+        S = null == a || (null == s ? void 0 : s.canUsePremiumProfileCustomization) || d,
         Z = (0, i.jsx)(P, {
             src: p,
             avatarDecoration: v,
-            imageClassName: s()(C, { [I.overlay]: !L }),
+            imageClassName: r()(C, { [I.overlay]: !L }),
             size: l.AvatarSizes.SIZE_80,
             'aria-label': n.username,
             status: M,
@@ -58,7 +58,7 @@ function p(e) {
                 children: (e) =>
                     (0, i.jsxs)(l.Clickable, {
                         ...e,
-                        className: s()(I.avatar, I.clickable),
+                        className: r()(I.avatar, I.clickable),
                         children: [
                             Z,
                             (0, i.jsx)(l.PencilIcon, {
@@ -73,7 +73,7 @@ function p(e) {
             })
           : (0, i.jsxs)(l.Clickable, {
                 onClick: R,
-                className: s()(I.avatar, I.clickable),
+                className: r()(I.avatar, I.clickable),
                 children: [
                     Z,
                     (0, i.jsx)(l.NitroWheelIcon, {

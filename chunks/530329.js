@@ -4,18 +4,18 @@ a.d(n, {
     }
 });
 var i = a(735250),
-    r = a(470079),
-    s = a(53691),
+    s = a(470079),
+    r = a(53691),
     o = a(378879),
     l = a(981631),
     t = a(486324),
     u = a(689938);
 function c(e) {
     let { uploadType: n, onSecondaryClick: a, ...c } = e,
-        d = r.useCallback(() => {
+        d = s.useCallback(() => {
             (0, o.openProfileUpsellModal)(n, void 0, a);
         }, [n, a]),
-        A = r.useMemo(() => {
+        A = s.useMemo(() => {
             switch (n) {
                 case t.pC.AVATAR:
                     return u.Z.Messages.PREMIUM_UPSELL_PROFILE_ANIMATED_AVATAR_INLINE_UPSELL.format({ onClick: d });
@@ -26,7 +26,7 @@ function c(e) {
             }
         }, [n, d]);
     return n === t.pC.AVATAR || n === t.pC.BANNER
-        ? (0, i.jsx)(s.p, {
+        ? (0, i.jsx)(r.p, {
               text: A,
               button: u.Z.Messages.EMOJI_PICKER_PREMIUM_UPSELL_CTA,
               buttonAnalyticsObject: { section: l.jXE.USER_PROFILE },

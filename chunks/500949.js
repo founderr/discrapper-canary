@@ -51,7 +51,7 @@ n.d(t, {
         return r;
     },
     zn: function () {
-        return _;
+        return C;
     }
 }),
     n(47120);
@@ -116,7 +116,7 @@ function j(e) {
         highlight: !e.highlight
     };
 }
-function _() {
+function C() {
     return (function (e, t) {
         let [n, r] = g(''.concat(e, '-states'), [t]),
             [a, l] = g(''.concat(e, '-index'), 0),
@@ -143,10 +143,10 @@ function _() {
     });
 }
 ((i = r || (r = {})).JzAzBz = 'jzazbz'), (i.ICtCp = 'ictcp'), (i.OKLch = 'oklch'), (i.HSLuv = 'hsluv'), ((o = a || (a = {})).TOKENS = 'Tokens'), (o.PALETTES = 'Palettes');
-let C = [100, 130, 160, 200, 230, 260, 300, 330, 345, 360, 400, 430, 460, 500, 530, 560, 600, 630, 660, 700, 730, 760, 800, 830, 860, 900],
+let _ = [100, 130, 160, 200, 230, 260, 300, 330, 345, 360, 400, 430, 460, 500, 530, 560, 600, 630, 660, 700, 730, 760, 800, 830, 860, 900],
     T = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26];
 function S(e) {
-    return 'plum' === e ? T : C;
+    return 'plum' === e ? T : _;
 }
 let N = [
     {

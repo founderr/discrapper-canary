@@ -9,10 +9,10 @@ var s,
     T = n(913527),
     S = n.n(T),
     C = n(442837),
-    h = n(544891),
-    f = n(570140),
-    I = n(131704),
-    A = n(601964),
+    f = n(544891),
+    h = n(570140),
+    A = n(131704),
+    I = n(601964),
     m = n(758449),
     p = n(598077),
     L = n(592125),
@@ -26,7 +26,7 @@ let Z = v.QZA.CLOSED,
     H = ['name', 'type', 'topic_', 'bitrate_', 'userLimit_', 'nsfw_', 'flags_', 'rateLimitPerUser_', 'defaultThreadRateLimitPerUser', 'defaultAutoArchiveDuration', 'template', 'defaultReactionEmoji', 'rtcRegion', 'videoQualityMode', 'threadMetadata', 'banner', 'availableTags', 'defaultSortOrder', 'defaultForumLayout', 'iconEmoji', 'themeColor'];
 function U(e) {
     let t = L.Z.getChannel(e.channelId);
-    if (null == t) return b();
+    if (null == t) return j();
     (Z = v.QZA.OPEN),
         (a = r = t),
         (G = 'location' in e && null != e.location ? e.location : null),
@@ -35,19 +35,19 @@ function U(e) {
         (u = L.Z.getChannel(a.parent_id)),
         (o = a.getGuildId()),
         (g = {}),
-        j({
+        b({
             type: 'CHANNEL_SETTINGS_SET_SECTION',
             section: null != l ? l : v.CoT.OVERVIEW,
             subsection: i
         });
 }
-function j(e) {
+function b(e) {
     (l = e.section),
         (i = e.subsection),
         null != a &&
             l === v.CoT.INSTANT_INVITES &&
             ((y = !0),
-            h.tn
+            f.tn
                 .get({
                     url: v.ANM.INSTANT_INVITES(a.id),
                     oldFormErrors: !0
@@ -55,7 +55,7 @@ function j(e) {
                 .then(
                     (e) => {
                         (y = !1),
-                            f.Z.dispatch({
+                            h.Z.dispatch({
                                 type: 'CHANNEL_SETTINGS_LOADED_INVITES',
                                 invites: e.body
                             });
@@ -63,7 +63,7 @@ function j(e) {
                     () => (y = !1)
                 ));
 }
-function b() {
+function j() {
     (O = !1), (Z = v.QZA.CLOSED), (l = null), (a = r = null), (u = null), (M = {});
 }
 let P = E().debounce(() => {
@@ -78,8 +78,8 @@ function D(e) {
         temporary: e.temporary,
         revoked: e.revoked,
         inviter: null != e.inviter ? new p.Z(e.inviter) : null,
-        channel: (0, I.jD)(e.channel),
-        guild: null != e.guild ? new A.ZP(e.guild) : null,
+        channel: (0, A.jD)(e.channel),
+        guild: null != e.guild ? new I.ZP(e.guild) : null,
         uses: e.uses,
         maxUses: e.max_uses,
         maxAge: e.max_age,
@@ -141,7 +141,7 @@ class w extends (s = C.ZP.Store) {
               writable: !0
           })
         : (d[c] = _);
-let R = new w(f.Z, {
+let R = new w(h.Z, {
     CHANNEL_SETTINGS_INIT: U,
     CHANNEL_SETTINGS_OPEN: function (e) {
         (O = !0), U(e);
@@ -160,13 +160,13 @@ let R = new w(f.Z, {
                 return (0, N.isArray)(l) ? (t[n] = l.join('\n')) : (t[n] = l), t;
             }, {}));
     },
-    CHANNEL_SETTINGS_CLOSE: b,
+    CHANNEL_SETTINGS_CLOSE: j,
     CHANNEL_SETTINGS_OVERWRITE_SELECT: function (e) {
         let { overwriteId: t } = e;
         o = t;
     },
     CHANNEL_SETTINGS_UPDATE: function (e) {
-        let { name: t, channelType: n, topic: l, bitrate: i, userLimit: r, nsfw: u, flags: o, rateLimitPerUser: s, defaultThreadRateLimitPerUser: d, autoArchiveDuration: c, locked: _, invitable: N, defaultAutoArchiveDuration: E, template: T, defaultReactionEmoji: S, rtcRegion: C, videoQualityMode: h, availableTags: f, defaultSortOrder: I, defaultForumLayout: A, iconEmoji: m, themeColor: p } = e;
+        let { name: t, channelType: n, topic: l, bitrate: i, userLimit: r, nsfw: u, flags: o, rateLimitPerUser: s, defaultThreadRateLimitPerUser: d, autoArchiveDuration: c, locked: _, invitable: N, defaultAutoArchiveDuration: E, template: T, defaultReactionEmoji: S, rtcRegion: C, videoQualityMode: f, availableTags: h, defaultSortOrder: A, defaultForumLayout: I, iconEmoji: m, themeColor: p } = e;
         if (null == a) return !1;
         null != t && (a = a.set('name', t)),
             null != l && (a = a.set('topic', l)),
@@ -195,16 +195,16 @@ let R = new w(f.Z, {
             null != T && (a = a.set('template', T)),
             null != n && (a = a.set('type', n)),
             void 0 !== C && (a = a.set('rtcRegion', C)),
-            null != h && (a = a.set('videoQualityMode', h)),
+            null != f && (a = a.set('videoQualityMode', f)),
             void 0 !== S && (a = a.set('defaultReactionEmoji', S)),
-            null != f && (a = a.set('availableTags', f)),
-            null != I && (a = a.set('defaultSortOrder', I)),
-            null != A && (a = a.set('defaultForumLayout', A)),
+            null != h && (a = a.set('availableTags', h)),
+            null != A && (a = a.set('defaultSortOrder', A)),
+            null != I && (a = a.set('defaultForumLayout', I)),
             void 0 !== m && (a = a.set('iconEmoji', m)),
             null != p && (a = a.set('themeColor', p)),
             P();
     },
-    CHANNEL_SETTINGS_SET_SECTION: j,
+    CHANNEL_SETTINGS_SET_SECTION: b,
     CHANNEL_SETTINGS_LOADED_INVITES: function (e) {
         (M = {}),
             e.invites.forEach((e) => {

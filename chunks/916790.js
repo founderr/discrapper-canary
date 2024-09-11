@@ -22,15 +22,15 @@ var r = n(735250),
     b = n(484036),
     v = n(681619),
     j = n(621060),
-    _ = n(246195),
-    C = n(219299);
+    C = n(246195),
+    _ = n(219299);
 function T(e) {
     return parseFloat(e.toFixed(3));
 }
 let S = [
     {
         key: 'store',
-        cellClassName: _.actionColumn,
+        cellClassName: C.actionColumn,
         render(e) {
             let { trace: t } = e;
             return t.name;
@@ -38,7 +38,7 @@ let S = [
     },
     {
         key: 'time',
-        cellClassName: _.totalTimeColumn,
+        cellClassName: C.totalTimeColumn,
         render(e) {
             let { trace: t } = e;
             return ''.concat(T(t.time), ' ms');
@@ -73,7 +73,7 @@ let y = [
             return (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsxs)(g.E, {
-                        className: _.actionProperties,
+                        className: C.actionProperties,
                         children: [
                             (0, r.jsx)(g.Z9, {
                                 name: 'Created at',
@@ -90,7 +90,7 @@ let y = [
                         ]
                     }),
                     (0, r.jsx)(u.ScrollerThin, {
-                        className: _.inspectorContainer,
+                        className: C.inspectorContainer,
                         children: (0, r.jsx)(p.Z, { data: n.action })
                     })
                 ]
@@ -116,18 +116,18 @@ function I(e) {
                           {
                               id: 'error',
                               name: (0, r.jsxs)(r.Fragment, {
-                                  children: [(0, r.jsx)(x.Z, { className: _.errorIcon }), 'Error']
+                                  children: [(0, r.jsx)(x.Z, { className: C.errorIcon }), 'Error']
                               }),
                               render(e) {
                                   let { actionLog: t } = e;
                                   return (0, r.jsxs)(r.Fragment, {
                                       children: [
                                           (0, r.jsx)('div', {
-                                              className: i()(_.errorToolbar, C.toolbar),
+                                              className: i()(C.errorToolbar, _.toolbar),
                                               children: (0, r.jsx)('div', {
-                                                  className: C.toolbarGroup,
+                                                  className: _.toolbarGroup,
                                                   children: (0, r.jsx)(u.Button, {
-                                                      className: C.toolbarButton,
+                                                      className: _.toolbarButton,
                                                       size: u.Button.Sizes.MIN,
                                                       onClick: () => console.error(t.error),
                                                       children: 'Log to Console'
@@ -135,7 +135,7 @@ function I(e) {
                                               })
                                           }),
                                           (0, r.jsx)(u.ScrollerThin, {
-                                              className: _.inspectorContainer,
+                                              className: C.inspectorContainer,
                                               children: (0, r.jsx)(p.Z, { data: t.error })
                                           })
                                       ]
@@ -148,13 +148,13 @@ function I(e) {
         ),
         { TabBar: o, renderSelectedTab: s } = (0, j.Z)({ tabs: l }, [l]);
     return (0, r.jsxs)(b.Z, {
-        className: _.subPanel,
+        className: C.subPanel,
         minHeight: 100,
         initialHeight: n,
         children: [
             (0, r.jsx)(o, {}),
             (0, r.jsxs)(h.ZP, {
-                className: i()(C.headerBar, _.subPanelHeaderBar),
+                className: i()(_.headerBar, C.subPanelHeaderBar),
                 children: [
                     (0, r.jsx)(h.ZP.Icon, {
                         icon: u.ReceiptIcon,
@@ -170,17 +170,17 @@ function I(e) {
 let w = [
     {
         key: 'action',
-        cellClassName: _.actionColumn,
+        cellClassName: C.actionColumn,
         render(e) {
             let { actionLog: t } = e;
             return (0, r.jsxs)(r.Fragment, {
-                children: [t.error && (0, r.jsx)(x.Z, { className: _.errorIcon }), t.name]
+                children: [t.error && (0, r.jsx)(x.Z, { className: C.errorIcon }), t.name]
             });
         }
     },
     {
         key: 'total time',
-        cellClassName: _.totalTimeColumn,
+        cellClassName: C.totalTimeColumn,
         render(e) {
             let { actionLog: t } = e;
             return ''.concat(T(t.totalTime), ' ms');
@@ -250,12 +250,12 @@ function E() {
         }, []),
         (0, r.jsxs)('div', {
             ref: e,
-            className: i()(C.panel, _.panel),
+            className: i()(_.panel, C.panel),
             children: [
                 (0, r.jsx)('div', {
-                    className: _.toolbar,
+                    className: C.toolbar,
                     children: (0, r.jsx)(u.SearchBar, {
-                        className: _.searchBar,
+                        className: C.searchBar,
                         query: t,
                         onChange: n,
                         onClear: () => n(''),

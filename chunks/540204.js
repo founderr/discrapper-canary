@@ -59,7 +59,7 @@ function I() {
                           className: T.clydeIconContainer,
                           children: (0, n.jsx)(r.ClydeIcon, {
                               size: 'sm',
-                              color: 'currentColor',
+                              color: 'white',
                               'aria-hidden': !0,
                               className: T.guildSelectOptionIcon
                           })

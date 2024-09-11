@@ -5,8 +5,8 @@ a.d(n, {
 });
 var i = a(735250);
 a(470079);
-var r = a(120356),
-    s = a.n(r),
+var s = a(120356),
+    r = a.n(s),
     o = a(481060),
     l = a(680295),
     t = a(687158),
@@ -23,7 +23,7 @@ var r = a(120356),
     N = a(228168),
     m = a(706995);
 function C(e) {
-    let { user: n, guild: a, canUsePremiumCustomization: r, onUpsellClick: C, pendingBanner: L, pendingBio: T, pendingPronouns: R, pendingAvatar: f, pendingAvatarDecoration: M, pendingNickname: S, pendingGlobalName: Z, pendingThemeColors: g, pendingProfileEffectId: h, avatarClassName: U, containerClassName: x, isTryItOutFlow: y = !1, disabledInputs: j = !1, hideCustomStatus: O = !1, hideBioSection: B = !1, hideMessageInput: b = !0, hideExampleButton: w = !1 } = e,
+    let { user: n, guild: a, canUsePremiumCustomization: s, onUpsellClick: C, pendingBanner: L, pendingBio: T, pendingPronouns: R, pendingAvatar: f, pendingAvatarDecoration: M, pendingNickname: S, pendingGlobalName: Z, pendingThemeColors: g, pendingProfileEffectId: h, avatarClassName: U, containerClassName: x, isTryItOutFlow: y = !1, disabledInputs: j = !1, hideCustomStatus: O = !1, hideBioSection: B = !1, hideMessageInput: b = !0, hideExampleButton: w = !1 } = e,
         D = (0, t.ZP)(n.id, null == a ? void 0 : a.id),
         { avatarSrc: k, avatarDecorationSrc: F } = (0, c.Z)({
             user: n,
@@ -41,7 +41,7 @@ function C(e) {
             user: n,
             displayProfile: D,
             pendingThemeColors: g,
-            isPreview: r
+            isPreview: s
         });
     return (0, i.jsxs)(A.Z, {
         user: n,
@@ -49,8 +49,8 @@ function C(e) {
         profileType: N.y0.BITE_SIZE,
         pendingThemeColors: g,
         pendingProfileEffectId: V,
-        className: s()(m.container, x),
-        forceShowPremium: r,
+        className: r()(m.container, x),
+        forceShowPremium: s,
         children: [
             (0, i.jsxs)('header', {
                 className: m.header,
@@ -59,7 +59,7 @@ function C(e) {
                         user: n,
                         displayProfile: D,
                         guildId: null == a ? void 0 : a.id,
-                        canUsePremiumCustomization: r,
+                        canUsePremiumCustomization: s,
                         pendingBanner: L,
                         isTryItOutFlow: y,
                         disabledInputs: j,
@@ -69,7 +69,7 @@ function C(e) {
                         user: n,
                         guild: a,
                         displayProfile: D,
-                        canUsePremiumCustomization: r,
+                        canUsePremiumCustomization: s,
                         previewAvatar: k,
                         previewAvatarDecoration: F,
                         previewTheme: z,
