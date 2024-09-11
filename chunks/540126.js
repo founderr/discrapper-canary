@@ -894,36 +894,48 @@ class ev extends eC {
     }
 }
 function eI(e, t, n) {
-    if (e.type === z.d4z.GUILD_VOICE) {
-        let i = f.ZP.getActiveEventByChannel(e.id);
-        if (null != i)
-            return {
-                type: 'event',
-                name: i.name
-            };
-        let s = U.ZP.getVoiceStatesForChannel(e);
-        if (n && t && (0, F.a)(s)) return { type: 'go-live' };
-        let l = C.Z.getChannelStatus(e);
-        if (null != l && l.length > 0)
-            return {
-                type: 'voice',
-                text: l
-            };
-        let r = u.ZP.getEmbeddedActivitiesForChannel(e.id),
-            a = (null != r ? r : [])
-                .map((e) => {
-                    var t;
-                    return null === (t = c.Z.getApplication(e.applicationId)) || void 0 === t ? void 0 : t.name;
-                })
-                .filter(V.lm);
-        return a.length > 0
-            ? {
-                  type: 'embedded-activities',
-                  name: a.join(', ')
-              }
-            : null;
+    switch (e.type) {
+        case z.d4z.GUILD_VOICE: {
+            let i = f.ZP.getActiveEventByChannel(e.id);
+            if (null != i)
+                return {
+                    type: 'event',
+                    name: i.name
+                };
+            let s = U.ZP.getVoiceStatesForChannel(e);
+            if (n && t && (0, F.a)(s)) return { type: 'go-live' };
+            let l = C.Z.getChannelStatus(e);
+            if (null != l && l.length > 0)
+                return {
+                    type: 'voice',
+                    text: l
+                };
+            let r = u.ZP.getEmbeddedActivitiesForChannel(e.id),
+                a = (null != r ? r : [])
+                    .map((e) => {
+                        var t;
+                        return null === (t = c.Z.getApplication(e.applicationId)) || void 0 === t ? void 0 : t.name;
+                    })
+                    .filter(V.lm);
+            if (a.length > 0)
+                return {
+                    type: 'embedded-activities',
+                    name: a.join(', ')
+                };
+            return null;
+        }
+        case z.d4z.GUILD_STAGE_VOICE: {
+            let t = f.ZP.getActiveEventByChannel(e.id);
+            if (null != t)
+                return {
+                    type: 'event',
+                    name: t.name
+                };
+            return null;
+        }
+        default:
+            return null;
     }
-    return null;
 }
 function eE(e, t, n, i, s) {
     let l = null != n && (n.id === e.id || i === e.id),
