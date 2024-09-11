@@ -2,6 +2,9 @@ n.d(t, {
     AH: function () {
         return S;
     },
+    Ag: function () {
+        return D;
+    },
     CS: function () {
         return p;
     },
@@ -363,4 +366,21 @@ function L(e, t) {
         questId: e,
         platform: t
     });
+}
+async function D() {
+    if (!c.Z.isFetchingClaimedQuests) {
+        a.Z.dispatch({ type: 'QUESTS_FETCH_CLAIMED_QUESTS_BEGIN' });
+        try {
+            let e = (await i.tn.get({ url: f.ANM.QUESTS_CLAIMED_QUESTS })).body.quests.map((e) => (0, _.hQ)(e));
+            a.Z.dispatch({
+                type: 'QUESTS_FETCH_CLAIMED_QUESTS_SUCCESS',
+                quests: e
+            });
+        } catch (e) {
+            a.Z.dispatch({
+                type: 'QUESTS_FETCH_CLAIMED_QUESTS_FAILURE',
+                error: new s.Z(e)
+            });
+        }
+    }
 }
