@@ -20,7 +20,7 @@ t.d(n, {
 var i,
     l,
     o = t(346610),
-    r = t(121254),
+    r = t(2818),
     E = t(186070),
     a = t(185514),
     u = t(395878),
@@ -376,14 +376,16 @@ function X() {
             group: 'MISCELLANEOUS'
         }
     ];
+    (0, o.WT)({ location: 'keybinds' }, { autoTrackExposure: !1 }).canForwardMessages &&
+        e.push({
+            description: F.Z.Messages.KEYBIND_DESCRIPTION_MODAL_FORWARD_MESSAGE,
+            binds: ['f'],
+            group: 'MESSAGE'
+        });
+    let { enabled: n, inInbox: t } = r.Z.getCurrentConfig({ location: 'keybinds' }, { autoTrackExposure: !1 });
     return (
-        (0, o.WT)({ location: 'keybinds' }, { autoTrackExposure: !1 }).canForwardMessages &&
-            e.push({
-                description: F.Z.Messages.KEYBIND_DESCRIPTION_MODAL_FORWARD_MESSAGE,
-                binds: ['f'],
-                group: 'MESSAGE'
-            }),
-        r.Z.getCurrentConfig({ location: 'keybinds' }, { autoTrackExposure: !1 }).enabled &&
+        n &&
+            !t &&
             e.push({
                 description: F.Z.Messages.KEYBIND_DESCRIPTION_MODAL_TOGGLE_FOR_LATER,
                 binds: W(V.EkH.TOGGLE_FOR_LATER),

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return T;
+        return N;
     }
 });
 var i = n(735250);
@@ -12,104 +12,106 @@ var s = n(399606),
     o = n(377171),
     c = n(317632),
     u = n(602478),
-    d = n(768943),
-    _ = n(742989),
-    E = n(818186),
-    I = n(689938),
-    m = n(811304);
-function T(e) {
-    let { tab: t, setTab: n, children: T, badgeState: h, closePopout: N } = e,
-        { showReminders: C } = _.Z.useExperiment({ location: 'RecentsHeader' }, { autoTrackExposure: !1 }),
-        { enabled: f } = u.Z.useExperiment({ location: 'RecentsHeader' }),
-        p = (0, s.e7)([c.Z], () => c.Z.getUnseenInviteCount()),
-        g = (0, s.e7)([d.Z], () => d.Z.getMessageReminders()).length;
+    d = n(2818),
+    _ = n(768943),
+    E = n(742989),
+    I = n(818186),
+    m = n(689938),
+    T = n(811304);
+function N(e) {
+    let { tab: t, setTab: n, children: N, badgeState: h, closePopout: C } = e,
+        { showReminders: f } = E.Z.useExperiment({ location: 'RecentsHeader' }, { autoTrackExposure: !1 }),
+        { enabled: p, inInbox: g } = d.Z.useExperiment({ location: 'RecentsPopout' }),
+        { enabled: S } = u.Z.useExperiment({ location: 'RecentsHeader' }),
+        A = (0, s.e7)([c.Z], () => c.Z.getUnseenInviteCount()),
+        R = (0, s.e7)([_.Z], () => _.Z.getOverdueMessageReminderCount());
     return (0, i.jsxs)(l.h4, {
-        className: m.header,
+        className: T.header,
         children: [
             (0, i.jsxs)('div', {
-                className: m.headerTitle,
+                className: T.headerTitle,
                 children: [
                     (0, i.jsx)(r.InboxIcon, {
                         size: 'md',
                         color: 'currentColor',
-                        className: m.inboxIcon
+                        className: T.inboxIcon
                     }),
                     (0, i.jsx)(r.Text, {
-                        className: m.inboxTitle,
+                        className: T.inboxTitle,
                         variant: 'text-lg/semibold',
                         color: 'interactive-active',
-                        children: I.Z.Messages.INBOX
+                        children: m.Z.Messages.INBOX
                     }),
                     (0, i.jsxs)('div', {
-                        className: m.controls,
-                        children: [T, (0, i.jsx)(E.Z, { closePopout: N })]
+                        className: T.controls,
+                        children: [N, (0, i.jsx)(I.Z, { closePopout: C })]
                     })
                 ]
             }),
             (0, i.jsx)('div', {
-                className: m.headerTabs,
+                className: T.headerTabs,
                 children: (0, i.jsxs)(r.TabBar, {
                     selectedItem: t,
                     type: 'top',
                     look: 'brand',
                     onItemSelect: n,
-                    className: m.tabBar,
+                    className: T.tabBar,
                     children: [
                         (0, i.jsxs)(r.TabBar.Item, {
                             id: a.X.FOR_YOU,
-                            'aria-label': I.Z.Messages.FOR_YOU,
-                            className: m.tab,
+                            'aria-label': m.Z.Messages.FOR_YOU,
+                            className: T.tab,
                             children: [
-                                I.Z.Messages.FOR_YOU,
+                                m.Z.Messages.FOR_YOU,
                                 (null == h ? void 0 : h.badgeForYou)
                                     ? (0, i.jsx)(r.CircleBadge, {
                                           color: o.Z.STATUS_DANGER,
-                                          className: m.iconBadge
+                                          className: T.iconBadge
                                       })
                                     : null
                             ]
                         }),
                         (0, i.jsx)(r.TabBar.Item, {
                             id: a.X.UNREADS,
-                            className: m.tab,
-                            children: I.Z.Messages.UNREADS_TAB_LABEL
+                            className: T.tab,
+                            children: m.Z.Messages.UNREADS_TAB_LABEL
                         }),
                         (0, i.jsx)(r.TabBar.Item, {
-                            'aria-label': I.Z.Messages.MENTIONS,
+                            'aria-label': m.Z.Messages.MENTIONS,
                             id: a.X.MENTIONS,
-                            className: m.tab,
-                            children: I.Z.Messages.MENTIONS
+                            className: T.tab,
+                            children: m.Z.Messages.MENTIONS
                         }),
-                        f
+                        S
                             ? (0, i.jsxs)(r.TabBar.Item, {
                                   'aria-label': 'game_invites',
                                   id: a.X.GAME_INVITES,
-                                  className: m.tab,
+                                  className: T.tab,
                                   children: [
-                                      I.Z.Messages.GAME_INVITES,
-                                      p > 0
+                                      m.Z.Messages.GAME_INVITES,
+                                      A > 0
                                           ? (0, i.jsx)(r.CircleBadge, {
                                                 color: o.Z.STATUS_DANGER,
-                                                className: m.iconBadge
+                                                className: T.iconBadge
                                             })
                                           : null
                                   ]
                               })
                             : null,
-                        C
-                            ? (0, i.jsxs)(r.TabBar.Item, {
+                        p && g
+                            ? (0, i.jsx)(r.TabBar.Item, {
+                                  'aria-label': 'for_later',
+                                  id: a.X.BOOKMARKS,
+                                  className: T.tab,
+                                  children: 0 === R ? m.Z.Messages.FOR_LATER : m.Z.Messages.FOR_LATER_COUNT.format({ count: R })
+                              })
+                            : null,
+                        f && !p
+                            ? (0, i.jsx)(r.TabBar.Item, {
                                   'aria-label': 'todos',
                                   id: a.X.TODOS,
-                                  className: m.tab,
-                                  children: [
-                                      I.Z.Messages.MESSAGE_REMINDERS_HEADER,
-                                      g > 0
-                                          ? (0, i.jsx)(r.CircleBadge, {
-                                                color: o.Z.STATUS_DANGER,
-                                                className: m.iconBadge
-                                            })
-                                          : null
-                                  ]
+                                  className: T.tab,
+                                  children: 0 === R ? m.Z.Messages.FOR_LATER_TAB_REMINDERS : m.Z.Messages.FOR_LATER_TAB_REMINDERS_COUNT.format({ count: R })
                               })
                             : null
                     ]

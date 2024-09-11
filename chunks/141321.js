@@ -12,33 +12,32 @@ var i = n(735250),
     c = n(665149),
     u = n(306680),
     d = n(594174),
-    _ = n(280763),
-    E = n(178088),
-    I = n(222940),
-    m = n(490897),
-    T = n(689938),
-    h = n(233194);
+    _ = n(178088),
+    E = n(222940),
+    I = n(490897),
+    m = n(689938),
+    T = n(233194);
 function N(e) {
     let { onOpen: t, onClose: n, className: N } = e,
-        C = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
-        f = s.useRef(null),
-        p = (0, a.e7)([u.ZP], () => (null == C ? void 0 : C.id) != null && u.ZP.getMentionCount(C.id, m.W.NOTIFICATION_CENTER) > 0),
-        { enabled: g } = o.Z.useExperiment({ location: 'RecentsButton' }, { autoTrackExposure: !1 }),
-        S = (0, a.e7)([l.Z], () => g && l.Z.getUnseenInviteCount() > 0);
-    return (0, i.jsx)(E.k, {
+        h = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
+        C = s.useRef(null),
+        f = (0, a.e7)([u.ZP], () => (null == h ? void 0 : h.id) != null && u.ZP.getMentionCount(h.id, I.W.NOTIFICATION_CENTER) > 0),
+        { enabled: p } = o.Z.useExperiment({ location: 'RecentsButton' }, { autoTrackExposure: !1 }),
+        g = (0, a.e7)([l.Z], () => p && l.Z.getUnseenInviteCount() > 0);
+    return (0, i.jsx)(_.k, {
         onOpen: t,
         onClose: n,
-        badgeState: { badgeForYou: p },
+        badgeState: { badgeForYou: f },
         popoutPosition: 'bottom',
         popoutAlign: 'right',
-        children: (e, t, n) =>
+        children: (e, t, n, s) =>
             (0, i.jsxs)('div', {
-                ref: f,
-                className: h.recentsIcon,
+                ref: C,
+                className: T.recentsIcon,
                 children: [
-                    g &&
-                        (0, i.jsx)(I.Z, {
-                            inboxIconRef: f,
+                    p &&
+                        (0, i.jsx)(E.Z, {
+                            inboxIconRef: C,
                             recentsPopoutShown: t
                         }),
                     (0, i.jsx)(c.JO, {
@@ -46,11 +45,10 @@ function N(e) {
                         className: N,
                         onClick: e,
                         icon: r.InboxIcon,
-                        'aria-label': T.Z.Messages.INBOX,
-                        tooltip: t ? null : T.Z.Messages.INBOX,
+                        'aria-label': m.Z.Messages.INBOX,
+                        tooltip: t ? null : m.Z.Messages.INBOX,
                         selected: t,
-                        showBadge: p || S,
-                        children: (0, i.jsx)(_.Z, { className: h.todoBadge })
+                        showBadge: f || g || s
                     })
                 ]
             })

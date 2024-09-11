@@ -17078,6 +17078,7 @@ e.exports = Object.freeze({
     CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS: 'Manage Clips Settings',
     CLIPS_USER_EDUCATION_LEARN_MORE: 'Learn More',
     FOR_LATER: 'For Later',
+    FOR_LATER_COUNT: 'For Later ({count, number})',
     FOR_LATER_SAVE: 'Save for Later',
     FOR_LATER_TAB_ALL: 'All',
     FOR_LATER_TAB_SAVED: 'Saved',
