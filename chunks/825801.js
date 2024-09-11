@@ -1,9 +1,12 @@
 n.d(t, {
-    Z: function () {
-        return v;
+    ZP: function () {
+        return C;
     },
-    _: function () {
+    _1: function () {
         return N;
+    },
+    jd: function () {
+        return O;
     }
 }),
     n(627341);
@@ -29,24 +32,25 @@ var i = n(120356),
     g = n(689938),
     A = n(374729);
 let N = 1800,
-    O = (e) => {
+    O = '> -# *',
+    R = (e) => {
         let { emoji: t, username: n, sourceType: r, sourceDetails: i } = e,
             a = ':'.concat(t.name, ':');
         switch (r) {
             case T.n_.ACTIVITY:
                 let s = g.Z.Messages.USER_PROFILE_REACTED_TO_ACTIVITY.format({ username: n });
-                return '> -# *'.concat(s, '*\n').concat(a);
+                return ''.concat(O).concat(s, '*\n').concat(a);
             case T.n_.AVATAR:
                 let o = g.Z.Messages.USER_PROFILE_REACTED_TO_AVATAR.format({ username: n });
-                return '> -# *'.concat(o, '*\n').concat(a);
+                return ''.concat(O).concat(o, '*\n').concat(a);
             case T.n_.STATUS:
                 let l = g.Z.Messages.USER_PROFILE_REACTED_TO_STATUS.format({ username: n });
-                return null != i ? '> -# *'.concat(l, '*').concat('\n > '.concat(i), '\n').concat(a) : '> -# *'.concat(l, '*\n').concat(a);
+                return null != i ? ''.concat(O).concat(l, '*').concat('\n > '.concat(i), '\n').concat(a) : ''.concat(O).concat(l, '*\n').concat(a);
             default:
                 (0, E.vE)(r);
         }
     },
-    R = (e, t) =>
+    v = (e, t) =>
         (0, s.EQ)({
             interactionType: e,
             sourceType: t
@@ -94,8 +98,8 @@ let N = 1800,
                 () => g.Z.Messages.USER_PROFILE_REACT_TO_ACTIVITY_A11Y_LABEL
             )
             .exhaustive();
-function v(e) {
-    let { user: t, channel: n, sourceType: i, sourceDetails: s, isVisible: E, isExpandable: v, onInteraction: C, setInteractionToastShown: y, setInteractionSent: L, setIsReplyInteraction: D, onClose: b } = e,
+function C(e) {
+    let { user: t, channel: n, sourceType: i, sourceDetails: s, isVisible: E, isExpandable: O, onInteraction: C, setInteractionToastShown: y, setInteractionSent: L, setIsReplyInteraction: D, onClose: b } = e,
         { trackUserProfileAction: M } = (0, h.KZ)(),
         P = (0, o.e7)([d.Z], () => d.Z.theme),
         { sendReact: U, pressReact: w, pressReply: x } = (0, I.Q)(i),
@@ -105,7 +109,7 @@ function v(e) {
     let B = async (e) => {
         if (null == e) return;
         M({ action: U });
-        let n = O({
+        let n = R({
             emoji: e,
             username: f.ZP.getName(t),
             sourceType: i,
@@ -129,7 +133,7 @@ function v(e) {
     return (0, r.jsxs)(u.ZP, {
         className: a()(A.popover, {
             [A.visible]: E,
-            [A.expandable]: v,
+            [A.expandable]: O,
             [A.statusPopover]: i === T.n_.STATUS,
             [A.avatarPopover]: i === T.n_.AVATAR
         }),
@@ -183,7 +187,7 @@ function v(e) {
                                 M({ action: w }), e.onClick(t);
                             },
                             className: a()(A.button, A.left),
-                            'aria-label': R(T.P.REACT, i),
+                            'aria-label': v(T.P.REACT, i),
                             children: (0, r.jsx)(l.ReactionIcon, {
                                 size: 'xs',
                                 className: A.icon
@@ -205,7 +209,7 @@ function v(e) {
                                 });
                     },
                     className: a()(A.button, A.right),
-                    'aria-label': R(T.P.REPLY, i),
+                    'aria-label': v(T.P.REPLY, i),
                     children: (0, r.jsx)(l.ArrowAngleLeftUpIcon, {
                         size: 'xs',
                         className: A.icon
