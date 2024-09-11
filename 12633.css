@@ -25526,6 +25526,10 @@ img.thumbnail_c64476 {
     text-decoration: underline
 }
 
+.viewFullBioDisabled_abaf7d {
+    opacity: .5
+}
+
 .descriptionClamp_abaf7d {
     display: -webkit-box;
     -webkit-box-orient: vertical;
