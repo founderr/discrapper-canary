@@ -1,11 +1,15 @@
-n.d(t, {
-    I: function () {
-        return m;
-    },
-    b: function () {
-        return S;
-    }
-}),
+n.r(t),
+    n.d(t, {
+        WebAudioAPISound: function () {
+            return g;
+        },
+        WebAudioSound: function () {
+            return S;
+        },
+        playGiftSound: function () {
+            return m;
+        }
+    }),
     n(47120),
     n(411104);
 var r,
@@ -66,6 +70,70 @@ function T() {
 }
 d.isPlatformEmbedded && (c.Z.addChangeListener(T), T());
 class S {
+    get volume() {
+        return this._volume;
+    }
+    set volume(e) {
+        (this._volume = e), this._ensureAudio().then((t) => (t.volume = e));
+    }
+    loop() {
+        this._ensureAudio().then((e) => {
+            (e.loop = !0), e.play();
+        });
+    }
+    play() {
+        this._ensureAudio().then((e) => {
+            (e.loop = !1), e.play();
+        });
+    }
+    pause() {
+        null != this._audio && this._audio.then((e) => e.pause());
+    }
+    stop() {
+        this._destroyAudio();
+    }
+    playWithListener() {
+        return new Promise((e, t) => {
+            this._ensureAudio().then((n) => {
+                (null == n.duration || 0 === n.duration) && t('sound has no duration'),
+                    n.play(),
+                    setTimeout(() => {
+                        e(!0);
+                    }, n.duration);
+            });
+        });
+    }
+    _destroyAudio() {
+        null != this._audio &&
+            (this._audio.then((e) => {
+                e.pause(), (e.src = '');
+            }),
+            (this._audio = null));
+    }
+    _ensureAudio() {
+        var e;
+        return (
+            (this._audio =
+                null !== (e = this._audio) && void 0 !== e
+                    ? e
+                    : new Promise((e, t) => {
+                          let r = new Audio();
+                          (r.src = n(451343)('./'.concat(this.name, '.mp3'))),
+                              (r.onloadeddata = () => {
+                                  (r.volume = Math.min((c.Z.getOutputVolume() / 100) * this._volume, 1)), d.isPlatformEmbedded && r.setSinkId(f), e(r);
+                              }),
+                              (r.onerror = () => t(Error('could not play audio'))),
+                              (r.onended = () => this._destroyAudio()),
+                              r.load();
+                      })),
+            this._audio
+        );
+    }
+    constructor(e, t, n) {
+        _(this, 'name', void 0), _(this, '_volume', void 0), _(this, '_audio', void 0), (this.name = e), (this._volume = n);
+    }
+}
+class g {
     get volume() {
         return this._volume;
     }

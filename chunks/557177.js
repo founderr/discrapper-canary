@@ -1,45 +1,50 @@
 let r;
 n.d(t, {
     GN: function () {
-        return d;
+        return _;
     },
     tu: function () {
-        return c;
+        return d;
     },
     uk: function () {
-        return u;
+        return c;
     }
 });
 var i = n(259443),
-    a = n(474873),
-    s = n(135906),
-    o = n(246946);
-r = n(902653).b;
-let l = new i.Y('SoundUtils');
-function u(e, t) {
+    a = n(292619),
+    s = n(474873),
+    o = n(135906),
+    l = n(246946);
+{
+    let e = (0, a.w)({ location: 'SoundUtils' }),
+        t = n(902653);
+    r = e ? t.WebAudioAPISound : t.WebAudioSound;
+}
+let u = new i.Y('SoundUtils');
+function c(e, t) {
     var n;
     let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-    return c(null !== (n = (0, s.Z)(t)[e]) && void 0 !== n ? n : e, e, r);
+    return d(null !== (n = (0, o.Z)(t)[e]) && void 0 !== n ? n : e, e, r);
 }
-function c(e, t) {
+function d(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
     return new r(e, t, n);
 }
-function d(e) {
+function _(e) {
     var t;
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
         r = arguments.length > 2 ? arguments[2] : void 0,
         i = arguments.length > 3 ? arguments[3] : void 0;
-    if (o.Z.disableSounds) return;
-    let u = (0, s.Z)(null != i ? i : a.Z.getSoundpack());
-    null == u && l.log('Unable to find sound for pack name: '.concat(i));
-    let d = c(null !== (t = u[e]) && void 0 !== t ? t : e, e, n);
+    if (l.Z.disableSounds) return;
+    let a = (0, o.Z)(null != i ? i : s.Z.getSoundpack());
+    null == a && u.log('Unable to find sound for pack name: '.concat(i));
+    let c = d(null !== (t = a[e]) && void 0 !== t ? t : e, e, n);
     return (
         null != r
-            ? d.playWithListener().then((e) => {
+            ? c.playWithListener().then((e) => {
                   e && r();
               })
-            : d.play(),
-        d
+            : c.play(),
+        c
     );
 }
