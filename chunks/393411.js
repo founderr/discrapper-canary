@@ -388,55 +388,50 @@ s.Z = function (e) {
                     });
                 case L.O0b.ACTIVE:
                 case L.O0b.PAST_DUE:
-                    let t = !1,
-                        r = null;
-                    return (
-                        null != a.renewalMutations && ((t = !0), (r = a.renewalMutations.planId !== a.planId ? b.Z.Messages.PREMIUM_SWITCH_PLAN_DISABLED_PENDING_MUTATION_PLAN : b.Z.Messages.PREMIUM_SWITCH_PLAN_DISABLED_PENDING_MUTATION_PREMIUM_GUILD_SUBSCRIPTION)),
-                        null != a.trialEndsAt && ((t = !0), (r = b.Z.Messages.PREMIUM_SWITCH_PLAN_DISABLED_IN_TRIAL)),
-                        e === L.O0b.PAST_DUE && (t = !0),
-                        (0, n.jsxs)('div', {
-                            className: Z.toolsButtons,
-                            children: [
-                                Y
-                                    ? (0, n.jsx)(c.Button, {
-                                          className: Z.toolsButton,
-                                          size: c.Button.Sizes.SMALL,
-                                          look: c.ButtonLooks.LINK,
-                                          color: c.ButtonColors.WHITE,
-                                          submitting: D,
-                                          onClick: z,
-                                          children: b.Z.Messages.PREMIUM_PAUSE_OR_CANCEL_SUBSCRIPTION
-                                      })
-                                    : (0, n.jsx)(c.Button, {
-                                          className: Z.toolsButton,
-                                          size: c.Button.Sizes.SMALL,
-                                          look: c.ButtonLooks.LINK,
-                                          color: c.ButtonColors.WHITE,
-                                          submitting: D,
-                                          onClick: Q,
-                                          children: b.Z.Messages.CANCEL
-                                      }),
-                                (0, n.jsx)(c.Tooltip, {
-                                    text: r,
-                                    children: (e) =>
-                                        (0, n.jsx)(f.Z, {
-                                            ...e,
-                                            disabled: t,
-                                            className: Z.toolsButton,
-                                            onClick: () => {
-                                                (0, T.Z)({
-                                                    analyticsLocations: V,
-                                                    analyticsLocation: y,
-                                                    analyticsObject: j,
-                                                    subscription: a
-                                                });
-                                            },
-                                            children: b.Z.Messages.PREMIUM_SWITCH_PLANS
-                                        })
-                                })
-                            ]
-                        })
-                    );
+                    let t = g.ZP.isSwitchingPlansDisabled(a),
+                        r = g.ZP.getSwitchingPlansDisabledMessage(a);
+                    return (0, n.jsxs)('div', {
+                        className: Z.toolsButtons,
+                        children: [
+                            Y
+                                ? (0, n.jsx)(c.Button, {
+                                      className: Z.toolsButton,
+                                      size: c.Button.Sizes.SMALL,
+                                      look: c.ButtonLooks.LINK,
+                                      color: c.ButtonColors.WHITE,
+                                      submitting: D,
+                                      onClick: z,
+                                      children: b.Z.Messages.PREMIUM_PAUSE_OR_CANCEL_SUBSCRIPTION
+                                  })
+                                : (0, n.jsx)(c.Button, {
+                                      className: Z.toolsButton,
+                                      size: c.Button.Sizes.SMALL,
+                                      look: c.ButtonLooks.LINK,
+                                      color: c.ButtonColors.WHITE,
+                                      submitting: D,
+                                      onClick: Q,
+                                      children: b.Z.Messages.CANCEL
+                                  }),
+                            (0, n.jsx)(c.Tooltip, {
+                                text: r,
+                                children: (e) =>
+                                    (0, n.jsx)(f.Z, {
+                                        ...e,
+                                        disabled: t,
+                                        className: Z.toolsButton,
+                                        onClick: () => {
+                                            (0, T.Z)({
+                                                analyticsLocations: V,
+                                                analyticsLocation: y,
+                                                analyticsObject: j,
+                                                subscription: a
+                                            });
+                                        },
+                                        children: b.Z.Messages.PREMIUM_SWITCH_PLANS
+                                    })
+                            })
+                        ]
+                    });
             }
         })(),
         statusClasses: ei,

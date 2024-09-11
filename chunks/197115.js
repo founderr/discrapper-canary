@@ -143,38 +143,41 @@ t.Z = function (e) {
         Q = null != q ? I.ZP.getPremiumType(q.planId) : null == V ? void 0 : V.premiumType,
         X = i === T.Si.TIER_2 && null != Q && [T.p9.TIER_0, T.p9.TIER_1].includes(Q);
     X && (z = g.Z.Messages.BILLING_SWITCH_PLAN_UPGRADE);
-    let $ = null != Z && Z.status !== S.O0b.ACCOUNT_HOLD && !(0, E.Q0)(Z.planId) && !X,
-        J = $
+    let $ = null != Z && I.ZP.isSwitchingPlansDisabled(Z),
+        J = (null != Z && Z.status !== S.O0b.ACCOUNT_HOLD && !(0, E.Q0)(Z.planId) && !X) || $,
+        ee = J
             ? null != G
                 ? G
                 : (function (e) {
-                      let { ctaSubscriptionSkuId: t, currentPremiumType: n } = e,
-                          r = null,
-                          i = null;
+                      let { ctaSubscriptionSkuId: t, currentPremiumType: n, isSwitchingDisabled: r, subscription: i } = e,
+                          a = null,
+                          s = null;
                       if (null != t && t !== T.Si.LEGACY && t !== T.Si.TIER_0 && t !== T.Si.TIER_1 && t !== T.Si.TIER_2)
                           return {
-                              disabledButtonText: r,
-                              disabledButtonTooltipText: i
+                              disabledButtonText: a,
+                              disabledButtonTooltipText: s
                           };
-                      let a = null != t ? T.y7[(0, I.Wz)(t)] : null,
-                          s = null != a ? T.$e[a] : null,
-                          o = null != n ? T.$e[n] : null;
+                      let o = null != t ? T.y7[(0, I.Wz)(t)] : null,
+                          l = null != o ? T.$e[o] : null,
+                          u = null != n ? T.$e[n] : null;
                       return (
-                          null != o && null != s && s < o ? ((r = g.Z.Messages.APPLICATION_STORE_GET_PREMIUM), (i = g.Z.Messages.PREMIUM_SUBSCRIPTION_BUTTON_DISABLED_MANAGE_PLAN_TOOLTIP)) : null != a && null != n && a === n ? ((r = g.Z.Messages.BILLING_SWITCH_PLAN_CURRENT_PLAN), (i = g.Z.Messages.PREMIUM_SUBSCRIPTION_BUTTON_DISABLED_MANAGE_PLAN_TOOLTIP)) : null == a && null != n && n === T.p9.TIER_2 && (i = g.Z.Messages.PREMIUM_SUBSCRIPTION_BUTTON_DISABLED_MANAGE_PLAN_TOOLTIP),
+                          r ? (s = I.ZP.getSwitchingPlansDisabledMessage(i)) : null != u && null != l && l < u ? ((a = g.Z.Messages.APPLICATION_STORE_GET_PREMIUM), (s = g.Z.Messages.PREMIUM_SUBSCRIPTION_BUTTON_DISABLED_MANAGE_PLAN_TOOLTIP)) : null != o && null != n && o === n ? ((a = g.Z.Messages.BILLING_SWITCH_PLAN_CURRENT_PLAN), (s = g.Z.Messages.PREMIUM_SUBSCRIPTION_BUTTON_DISABLED_MANAGE_PLAN_TOOLTIP)) : null == o && null != n && n === T.p9.TIER_2 && (s = g.Z.Messages.PREMIUM_SUBSCRIPTION_BUTTON_DISABLED_MANAGE_PLAN_TOOLTIP),
                           {
-                              disabledButtonText: r,
-                              disabledButtonTooltipText: i
+                              disabledButtonText: a,
+                              disabledButtonTooltipText: s
                           }
                       );
                   })({
                       ctaSubscriptionSkuId: i,
-                      currentPremiumType: Q
+                      currentPremiumType: Q,
+                      isSwitchingDisabled: $,
+                      subscription: Z
                   })
             : null;
-    function ee(e) {
+    function et(e) {
         var t, n;
         return (0, r.jsxs)(o.ShinyButton, {
-            disabled: $,
+            disabled: J,
             onClick: K,
             innerClassName: A.premiumSubscribeButton,
             color: i === T.Si.TIER_1 ? o.Button.Colors.PRIMARY : o.Button.Colors.GREEN,
@@ -199,15 +202,15 @@ t.Z = function (e) {
                     }),
                 (0, r.jsx)('span', {
                     className: a()(A.buttonText, y),
-                    children: null !== (n = null !== (t = null == J ? void 0 : J.disabledButtonText) && void 0 !== t ? t : C) && void 0 !== n ? n : z
+                    children: null !== (n = null !== (t = null == ee ? void 0 : ee.disabledButtonText) && void 0 !== t ? t : C) && void 0 !== n ? n : z
                 })
             ]
         });
     }
-    return (null == J ? void 0 : J.disabledButtonTooltipText) != null
+    return (null == ee ? void 0 : ee.disabledButtonTooltipText) != null
         ? (0, r.jsx)(o.Tooltip, {
-              text: J.disabledButtonTooltipText,
-              children: ee
+              text: ee.disabledButtonTooltipText,
+              children: et
           })
-        : ee();
+        : et();
 };

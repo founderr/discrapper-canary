@@ -1250,6 +1250,13 @@ t.ZP = Object.freeze({
                             price: r
                         });
     },
+    isSwitchingPlansDisabled: function (e) {
+        return null != e.renewalMutations || null != e.trialEndsAt || e.status === b.O0b.PAST_DUE;
+    },
+    getSwitchingPlansDisabledMessage: function (e) {
+        let t = null;
+        return null != e.renewalMutations && (t = e.renewalMutations.planId !== e.planId ? w.Z.Messages.PREMIUM_SWITCH_PLAN_DISABLED_PENDING_MUTATION_PLAN : w.Z.Messages.PREMIUM_SWITCH_PLAN_DISABLED_PENDING_MUTATION_PREMIUM_GUILD_SUBSCRIPTION), null != e.trialEndsAt && (t = w.Z.Messages.PREMIUM_SWITCH_PLAN_DISABLED_IN_TRIAL), t;
+    },
     isNoneSubscription: I.Q0,
     getPlanIdFromInvoice: function (e, t) {
         let { planId: n } = e;
