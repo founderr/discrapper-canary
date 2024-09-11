@@ -1,6 +1,5 @@
 e.exports = {
     clickableCard: 'clickableCard_e0fe28',
-    nonClickableCard: 'nonClickableCard_e0fe28',
     card: 'card_e0fe28',
     skeletonCard: 'skeletonCard_e0fe28',
     favoriteButton: 'favoriteButton_e0fe28',

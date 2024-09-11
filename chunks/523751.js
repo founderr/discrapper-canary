@@ -224,26 +224,28 @@ function D(e) {
     if (x === A.Q.CLAN) {
         var k;
         let e = (0, d.ky)(a.id, null === (k = a.clan) || void 0 === k ? void 0 : k.badge, D);
-        return (0, r.jsx)(c.Tooltip, {
-            color: l,
-            position: E,
-            'aria-label': M,
-            text: (0, r.jsx)(L, {
-                badgeType: x,
-                guildTraits: w
-            }),
-            tooltipContentClassName: v.tooltipRemovePadding,
-            children: (t) =>
-                (0, r.jsx)(c.Clickable, {
-                    ...t,
-                    onClick: G,
-                    className: s()(v.clanBadgeContainer, T),
-                    children: (0, r.jsx)(_.KQ, {
-                        src: e,
-                        size: D
-                    })
-                })
-        });
+        return null == e
+            ? null
+            : (0, r.jsx)(c.Tooltip, {
+                  color: l,
+                  position: E,
+                  'aria-label': M,
+                  text: (0, r.jsx)(L, {
+                      badgeType: x,
+                      guildTraits: w
+                  }),
+                  tooltipContentClassName: v.tooltipRemovePadding,
+                  children: (t) =>
+                      (0, r.jsx)(c.Clickable, {
+                          ...t,
+                          onClick: G,
+                          className: s()(v.clanBadgeContainer, T),
+                          children: (0, r.jsx)(_.KQ, {
+                              src: e,
+                              size: D
+                          })
+                      })
+              });
     }
     let { IconComponent: B, backgroundDarkColor: F, backgroundLightColor: V, foregroundDarkColor: H, foregroundLightColor: Z, premiumBackgroundColor: Y, premiumForegroundColor: j, sizeAdjustment: W } = C[x];
     if (null == B) return null;
