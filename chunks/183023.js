@@ -404,9 +404,10 @@ let W = () => ({
                 })(),
                 ep &&
                     (() => {
-                        let e = null != N && !J && ee,
-                            t = () => {
-                                if (!!e) null == b || b(), !ef && !x && w.default.track(V.rMx.EMOJI_UPSELL_POPOUT_MORE_EMOJIS_OPENED, ed), eh(!ef);
+                        var e, t;
+                        let n = null != N && !J && ee && (null !== (t = null == N ? void 0 : null === (e = N.emojis) || void 0 === e ? void 0 : e.length) && void 0 !== t ? t : 0) > 1,
+                            i = () => {
+                                if (!!n) null == b || b(), !ef && !x && w.default.track(V.rMx.EMOJI_UPSELL_POPOUT_MORE_EMOJIS_OPENED, ed), eh(!ef);
                             };
                         return (0, r.jsxs)('div', {
                             className: j.guildSection,
@@ -420,13 +421,13 @@ let W = () => ({
                                     hasJoinedExpressionSourceGuild: J,
                                     isDisplayingJoinGuildButtonInPopout: e_
                                 }),
-                                e &&
+                                n &&
                                     (0, r.jsxs)(r.Fragment, {
                                         children: [
                                             (() => {
                                                 let e = Y.Z.Messages.EMOJI_POPOUT_SHOW_MORE_EMOJIS;
                                                 return (0, r.jsx)(c.Clickable, {
-                                                    onClick: t,
+                                                    onClick: i,
                                                     className: j.showMoreEmojis,
                                                     children: (0, r.jsxs)(p.Z, {
                                                         children: [
@@ -472,10 +473,7 @@ let W = () => ({
                 .filter((e) => e.id !== n)
                 .slice(0, 12),
             { type: d, description: E } = s;
-        return (0, r.jsxs)(p.Z, {
-            wrap: p.Z.Wrap.WRAP,
-            align: p.Z.Align.CENTER,
-            justify: p.Z.Justify.CENTER,
+        return (0, r.jsxs)('div', {
             className: j.otherEmojisContainer,
             children: [
                 a

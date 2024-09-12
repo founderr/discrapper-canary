@@ -563,45 +563,47 @@ let el = o.memo((e) => {
         });
     }),
     er = (e) => {
-        var t;
-        let { emojiId: n, expressionSourceGuild: i, hasJoinedExpressionSourceGuild: o, onClose: a, popoutData: l, currentGuildId: r, nonce: c } = e;
+        var t, n, i;
+        let { emojiId: o, expressionSourceGuild: a, hasJoinedExpressionSourceGuild: l, onClose: r, popoutData: c, currentGuildId: d, nonce: u } = e;
         (0, R.u)({
-            emojiId: n,
-            currentGuildId: r,
-            popoutData: l,
-            emojiSourceGuildId: null == i ? void 0 : i.id,
-            nonce: c
+            emojiId: o,
+            currentGuildId: d,
+            popoutData: c,
+            emojiSourceGuildId: null == a ? void 0 : a.id,
+            nonce: u
         });
-        let d = null !== (t = null == i ? void 0 : i.isDiscoverable()) && void 0 !== t && t,
-            u = null != i && d;
+        let h = null !== (n = null == a ? void 0 : a.isDiscoverable()) && void 0 !== n && n,
+            p = null != a && h,
+            f = (null !== (i = null == a ? void 0 : null === (t = a.emojis) || void 0 === t ? void 0 : t.length) && void 0 !== i ? i : 0) > 1;
         return (0, s.jsx)(s.Fragment, {
-            children: u
-                ? null == i
+            children: p
+                ? null == a
                     ? null
                     : (0, s.jsxs)(s.Fragment, {
                           children: [
                               (0, s.jsx)('div', {
                                   className: $.reactionEmojiDetailsUnfurlGuildDetails,
                                   children: (0, s.jsx)(W.Oe, {
-                                      expressionSourceGuild: i,
-                                      hasJoinedExpressionSourceGuild: o,
-                                      isDisplayingJoinGuildButtonInPopout: l.type === G.$.JOIN_GUILD
+                                      expressionSourceGuild: a,
+                                      hasJoinedExpressionSourceGuild: l,
+                                      isDisplayingJoinGuildButtonInPopout: c.type === G.$.JOIN_GUILD
                                   })
                               }),
-                              (0, s.jsx)(W.n_, {
-                                  emojiId: n,
-                                  expressionSourceGuild: i,
-                                  hasJoinedEmojiSourceGuild: o,
-                                  onClose: a,
-                                  popoutData: l,
-                                  isDisplayingButtonInTopSection: !1
-                              })
+                              f &&
+                                  (0, s.jsx)(W.n_, {
+                                      emojiId: o,
+                                      expressionSourceGuild: a,
+                                      hasJoinedEmojiSourceGuild: l,
+                                      onClose: r,
+                                      popoutData: c,
+                                      isDisplayingButtonInTopSection: !1
+                                  })
                           ]
                       })
                 : (0, s.jsx)(m.Text, {
                       variant: 'text-sm/normal',
-                      'aria-label': l.type,
-                      children: l.emojiDescription
+                      'aria-label': c.type,
+                      children: c.emojiDescription
                   })
         });
     },

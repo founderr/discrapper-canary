@@ -18394,6 +18394,9 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 }
 
 .otherEmojisContainer_e58351 {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
     margin-top: 4px
 }
 
