@@ -414,7 +414,10 @@ class x extends D.C {
 let G = new x();
 class k extends D.C {
     create(e) {
-        let t = { guilds: {} };
+        let t = {
+            guilds: {},
+            leaderboardsDisabled: !1
+        };
         return (
             globalThis.Object.defineProperty(t, L.C, {
                 enumerable: !1,
@@ -429,12 +432,18 @@ class k extends D.C {
             a = e.pos + t;
         for (; e.pos < a; ) {
             let [t, r] = e.tag();
-            if (1 === t) this.binaryReadMap1(i.guilds, e, n);
-            else {
-                let a = n.readUnknownField;
-                if ('throw' === a) throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
-                let s = e.skip(r);
-                !1 !== a && (!0 === a ? C.z.onRead : a)(this.typeName, i, t, r, s);
+            switch (t) {
+                case 1:
+                    this.binaryReadMap1(i.guilds, e, n);
+                    break;
+                case 2:
+                    i.leaderboardsDisabled = e.bool();
+                    break;
+                default:
+                    let a = n.readUnknownField;
+                    if ('throw' === a) throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
+                    let s = e.skip(r);
+                    !1 !== a && (!0 === a ? C.z.onRead : a)(this.typeName, i, t, r, s);
             }
         }
         return i;
@@ -461,6 +470,7 @@ class k extends D.C {
     }
     internalBinaryWrite(e, t, n) {
         for (let r of Object.keys(e.guilds)) t.tag(1, C.TD.LengthDelimited).fork().tag(1, C.TD.Bit64).fixed64(r), t.tag(2, C.TD.LengthDelimited).fork(), V.internalBinaryWrite(e.guilds[r], t, n), t.join().join();
+        !1 !== e.leaderboardsDisabled && t.tag(2, C.TD.Varint).bool(e.leaderboardsDisabled);
         let r = n.writeUnknownFields;
         return !1 !== r && (!0 == r ? C.z.onWrite : r)(this.typeName, e, t), t;
     }
@@ -475,6 +485,12 @@ class k extends D.C {
                     kind: 'message',
                     T: () => V
                 }
+            },
+            {
+                no: 2,
+                name: 'leaderboards_disabled',
+                kind: 'scalar',
+                T: 8
             }
         ]);
     }
@@ -488,7 +504,8 @@ class F extends D.C {
             guildOnboardingProgress: 0,
             dismissedGuildContent: new Uint8Array(0),
             disableRaidAlertPush: !1,
-            disableRaidAlertNag: !1
+            disableRaidAlertNag: !1,
+            leaderboardsDisabled: !1
         };
         return (
             globalThis.Object.defineProperty(t, L.C, {
@@ -535,6 +552,9 @@ class F extends D.C {
                 case 10:
                     i.customNotificationSoundConfig = K.internalBinaryRead(e, e.uint32(), n, i.customNotificationSoundConfig);
                     break;
+                case 11:
+                    i.leaderboardsDisabled = e.bool();
+                    break;
                 default:
                     let a = n.readUnknownField;
                     if ('throw' === a) throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
@@ -566,7 +586,7 @@ class F extends D.C {
     }
     internalBinaryWrite(e, t, n) {
         for (let r of Object.keys(e.channels)) t.tag(1, C.TD.LengthDelimited).fork().tag(1, C.TD.Bit64).fixed64(r), t.tag(2, C.TD.LengthDelimited).fork(), j.internalBinaryWrite(e.channels[r], t, n), t.join().join();
-        0 !== e.hubProgress && t.tag(2, C.TD.Varint).uint32(e.hubProgress), 0 !== e.guildOnboardingProgress && t.tag(3, C.TD.Varint).uint32(e.guildOnboardingProgress), e.guildRecentsDismissedAt && M.E.internalBinaryWrite(e.guildRecentsDismissedAt, t.tag(4, C.TD.LengthDelimited).fork(), n).join(), e.dismissedGuildContent.length && t.tag(5, C.TD.LengthDelimited).bytes(e.dismissedGuildContent), e.joinSound && eK.internalBinaryWrite(e.joinSound, t.tag(6, C.TD.LengthDelimited).fork(), n).join(), e.mobileRedesignChannelListSettings && eR.internalBinaryWrite(e.mobileRedesignChannelListSettings, t.tag(7, C.TD.LengthDelimited).fork(), n).join(), !1 !== e.disableRaidAlertPush && t.tag(8, C.TD.Varint).bool(e.disableRaidAlertPush), !1 !== e.disableRaidAlertNag && t.tag(9, C.TD.Varint).bool(e.disableRaidAlertNag), e.customNotificationSoundConfig && K.internalBinaryWrite(e.customNotificationSoundConfig, t.tag(10, C.TD.LengthDelimited).fork(), n).join();
+        0 !== e.hubProgress && t.tag(2, C.TD.Varint).uint32(e.hubProgress), 0 !== e.guildOnboardingProgress && t.tag(3, C.TD.Varint).uint32(e.guildOnboardingProgress), e.guildRecentsDismissedAt && M.E.internalBinaryWrite(e.guildRecentsDismissedAt, t.tag(4, C.TD.LengthDelimited).fork(), n).join(), e.dismissedGuildContent.length && t.tag(5, C.TD.LengthDelimited).bytes(e.dismissedGuildContent), e.joinSound && eK.internalBinaryWrite(e.joinSound, t.tag(6, C.TD.LengthDelimited).fork(), n).join(), e.mobileRedesignChannelListSettings && eR.internalBinaryWrite(e.mobileRedesignChannelListSettings, t.tag(7, C.TD.LengthDelimited).fork(), n).join(), !1 !== e.disableRaidAlertPush && t.tag(8, C.TD.Varint).bool(e.disableRaidAlertPush), !1 !== e.disableRaidAlertNag && t.tag(9, C.TD.Varint).bool(e.disableRaidAlertNag), e.customNotificationSoundConfig && K.internalBinaryWrite(e.customNotificationSoundConfig, t.tag(10, C.TD.LengthDelimited).fork(), n).join(), !1 !== e.leaderboardsDisabled && t.tag(11, C.TD.Varint).bool(e.leaderboardsDisabled);
         let r = n.writeUnknownFields;
         return !1 !== r && (!0 == r ? C.z.onWrite : r)(this.typeName, e, t), t;
     }
@@ -635,6 +655,12 @@ class F extends D.C {
                 name: 'custom_notification_sound_config',
                 kind: 'message',
                 T: () => K
+            },
+            {
+                no: 11,
+                name: 'leaderboards_disabled',
+                kind: 'scalar',
+                T: 8
             }
         ]);
     }
