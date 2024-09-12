@@ -44,6 +44,7 @@ n.d(t, {
     (_.APP_LAUNCHER_LIST_VIEW_ALL = 'app_launcher_list_view_all'),
     (_.APP_LAUNCHER_APPLICATION_VIEW = 'app_launcher_application_view'),
     (_.APP_LAUNCHER_APPLICATION_VIEW_FRECENCT = 'app_launcher_application_view_frecent'),
+    (_.APP_LAUNCHER_APPLICATION_VIEW_MORE_MENU = 'app_launcher_application_view_more_menu'),
     (_.APP_LAUNCHER_SLASH_SEARCH = 'app_launcher_slash_search'),
     (_.APP_LAUNCHER_FRECENTS_VIEW_ALL = 'app_launcher_frecents_view_all'),
     (_.IMAGE_RECS_MENU = 'image_recs_menu'),

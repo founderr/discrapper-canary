@@ -31,18 +31,18 @@ function A(e) {
     );
 }
 function E(e) {
-    let { application: n, name: t, iconURL: h, scrollerRef: E } = e,
-        N = m.zQ.useExperiment({ location: 'AppLauncherAppHeader' }, { autoTrackExposure: !1 }).enabled,
-        x = (0, o.ap)((0, s.ZP)()),
-        v = a.useRef(null),
+    let { application: n, name: t, iconURL: h, scrollerRef: E, sectionName: N } = e,
+        x = m.zQ.useExperiment({ location: 'AppLauncherAppHeader' }, { autoTrackExposure: !1 }).enabled,
+        v = (0, o.ap)((0, s.ZP)()),
         I = a.useRef(null),
         g = a.useRef(null),
         P = a.useRef(null),
+        L = a.useRef(null),
         S = (0, r.useToken)(r.tokens.colors.BG_BASE_PRIMARY).hex(),
-        L = (0, c.ZP)('number' == typeof h ? '' : h, null != S ? S : ''),
-        b = a.useMemo(() => {
+        b = (0, c.ZP)('number' == typeof h ? '' : h, null != S ? S : ''),
+        R = a.useMemo(() => {
             var e, n;
-            let t = (0, l.compact)([d.Z.parseHexString(L), d.Z.parseHexString(x ? '#000000' : '#ffffff')]);
+            let t = (0, l.compact)([d.Z.parseHexString(b), d.Z.parseHexString(v ? '#000000' : '#ffffff')]);
             return null !==
                 (n =
                     null ===
@@ -54,18 +54,18 @@ function E(e) {
                         ? void 0
                         : e.toHexString()) && void 0 !== n
                 ? n
-                : L;
-        }, [L, x]),
-        R = A(v),
+                : b;
+        }, [b, v]),
         T = A(I),
-        M = a.useCallback(() => {
+        M = A(g),
+        y = a.useCallback(() => {
             var e, n, t, i, a, o, r, s, c, d;
             let u = E.current,
-                m = v.current,
-                p = g.current,
-                _ = null == P ? void 0 : P.current,
-                C = parseInt(null !== (e = null == R ? void 0 : R.height) && void 0 !== e ? e : ''),
-                f = parseInt(null !== (n = null == T ? void 0 : T.height) && void 0 !== n ? n : '');
+                m = I.current,
+                p = P.current,
+                _ = null == L ? void 0 : L.current,
+                C = parseInt(null !== (e = null == T ? void 0 : T.height) && void 0 !== e ? e : ''),
+                f = parseInt(null !== (n = null == M ? void 0 : M.height) && void 0 !== n ? n : '');
             if (null != u && null != m && null != p && !isNaN(C) && !isNaN(f)) {
                 let e = null !== (t = u.scrollTop) && void 0 !== t ? t : 0,
                     n = 0 !== u.scrollHeight ? u.scrollHeight : f + 20,
@@ -74,11 +74,11 @@ function E(e) {
                     E = (0, l.clamp)(n - h, A + 1, f + 20);
                 let N = ((i = e), (a = A) === (o = E) ? 1 : (0, l.clamp)((i - a) / (o - a), 0, 1));
                 if (
-                    ((m.style.filter = 'brightness('.concat(1 + ((x ? 1.4 : 0.6) - (r = 1)) * N, ')')),
+                    ((m.style.filter = 'brightness('.concat(1 + ((v ? 1.4 : 0.6) - (r = 1)) * N, ')')),
                     (m.style.backgroundColor = 'color-mix(in oklab,'
-                        .concat(L, ' ')
+                        .concat(b, ' ')
                         .concat((1 - N) * 100, '%, ')
-                        .concat(b, ')')),
+                        .concat(R, ')')),
                     (p.style.opacity = ''.concat(0 + (1 - (s = 0)) * N)),
                     (p.style.transform = 'translateY('.concat((c = C / 4) + (0 - c) * N, 'px)')),
                     null != _)
@@ -86,15 +86,15 @@ function E(e) {
                     _.style.opacity = ''.concat(1 + (0 - (d = 1)) * N);
                 }
             }
-        }, [b, L, null == T ? void 0 : T.height, x, E, null == R ? void 0 : R.height]);
+        }, [R, b, null == M ? void 0 : M.height, v, E, null == T ? void 0 : T.height]);
     return (
         a.useEffect(() => {
-            M();
-        }, [M, x]),
+            y();
+        }, [y, v]),
         a.useEffect(() => {
             let e = E.current,
                 n = () => {
-                    M();
+                    y();
                 };
             return (
                 null == e || e.addEventListener('scroll', n),
@@ -102,7 +102,7 @@ function E(e) {
                     null == e || e.removeEventListener('scroll', n);
                 }
             );
-        }, [E, M]),
+        }, [E, y]),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)('div', {
@@ -112,7 +112,7 @@ function E(e) {
                             className: f.stickyBannerContainer,
                             children: (0, i.jsx)('div', {
                                 className: f.stickyBanner,
-                                ref: v
+                                ref: I
                             })
                         }),
                         (0, i.jsx)('div', {
@@ -122,7 +122,7 @@ function E(e) {
                         (0, i.jsx)('div', {
                             className: f.nameContainer,
                             children: (0, i.jsx)(r.Heading, {
-                                ref: g,
+                                ref: P,
                                 className: f.textApplicationName,
                                 variant: 'heading-md/extrabold',
                                 children: t
@@ -130,20 +130,21 @@ function E(e) {
                         })
                     ]
                 }),
-                (0, p.BQ)(n) && N
+                (0, p.BQ)(n) && x
                     ? (0, i.jsx)('div', {
-                          ref: P,
+                          ref: L,
                           className: f.moreMenuButtonContainer,
                           children: (0, i.jsx)(C.Z, {
                               application: n,
-                              className: f.headerButton
+                              className: f.headerButton,
+                              sectionName: N
                           })
                       })
                     : null,
                 (0, i.jsx)('div', {
-                    ref: I,
+                    ref: g,
                     className: f.bannerBackground,
-                    style: { backgroundColor: L }
+                    style: { backgroundColor: b }
                 })
             ]
         })
