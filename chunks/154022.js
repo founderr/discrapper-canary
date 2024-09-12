@@ -76,7 +76,7 @@ function H(e) {
                 children: (0, n.jsx)(X, {})
             }),
             (0, n.jsx)(O.F, {
-                setting: b.s6.ACCESSIBILITY_SYNC_PROFILE_THEME,
+                setting: b.s6.ACCESSIBILITY_PROFILE_COLORS,
                 children: (0, n.jsx)(q, {})
             }),
             (0, S.b)()
@@ -97,18 +97,21 @@ function H(e) {
                 setting: b.s6.ACCESSIBILITY_MESSAGES,
                 children: (0, n.jsx)(es, {})
             }),
+            (0, n.jsx)(et, {}),
             (0, n.jsxs)(O.F, {
-                setting: b.s6.ACCESSIBILITY_TEXT_TO_SPEECH,
-                children: [(0, n.jsx)(et, {}), (0, n.jsx)(d.FormDivider, {})]
-            }),
-            (0, n.jsx)(d.Text, {
-                className: G.marginTop20,
-                variant: 'text-md/normal',
-                children: B.Z.Messages.ACCESSIBILITY_SETTINGS_APPEARANCE_LINK.format({
-                    onAppearanceClick() {
-                        _.Z.open(Z.oAB.APPEARANCE);
-                    }
-                })
+                setting: b.s6.ACCESSIBILITY_APPEARANCE_UPSELL,
+                children: [
+                    (0, n.jsx)(d.FormDivider, { className: G.marginTop20 }),
+                    (0, n.jsx)(d.Text, {
+                        className: G.marginTop20,
+                        variant: 'text-md/normal',
+                        children: B.Z.Messages.ACCESSIBILITY_SETTINGS_APPEARANCE_LINK.format({
+                            onAppearanceClick() {
+                                _.Z.open(Z.oAB.APPEARANCE);
+                            }
+                        })
+                    })
+                ]
             })
         ]
     });
@@ -202,13 +205,16 @@ function K() {
                 onValueChange: w,
                 onMarkerRender: (e) => ((100 * e) % 2 == 0 ? ''.concat(100 * e, '%') : void 0)
             }),
-            (0, n.jsx)(d.FormSwitch, {
-                hideBorder: !0,
-                className: r()(G.marginTop8, G.marginBottom20),
-                value: s,
-                onChange: E.f1,
-                note: B.Z.Messages.ACCESSIBILITY_SETTINGS_SATURATION_CUSTOM_COLORS_DESCRIPTION,
-                children: B.Z.Messages.ACCESSIBILITY_SETTINGS_SATURATION_CUSTOM_COLORS_LABEL
+            (0, n.jsx)(O.F, {
+                setting: b.s6.ACCESSIBILITY_SATURATION_CUSTOM_COLOR,
+                children: (0, n.jsx)(d.FormSwitch, {
+                    hideBorder: !0,
+                    className: r()(G.marginTop20, G.marginBottom20),
+                    value: s,
+                    onChange: E.f1,
+                    note: B.Z.Messages.ACCESSIBILITY_SETTINGS_SATURATION_CUSTOM_COLORS_DESCRIPTION,
+                    children: B.Z.Messages.ACCESSIBILITY_SETTINGS_SATURATION_CUSTOM_COLORS_LABEL
+                })
             })
         ]
     });
@@ -271,10 +277,13 @@ function X() {
     return (0, n.jsx)(d.FormItem, {
         title: B.Z.Messages.ACCESSIBILITY_SETTINGS_TAGS_TITLE,
         className: G.marginTop20,
-        children: (0, n.jsx)(d.FormSwitch, {
-            value: !e,
-            onChange: () => (0, E.Nv)(!e),
-            children: B.Z.Messages.ACCESSIBILITY_SETTINGS_TAGS_LABEL
+        children: (0, n.jsx)(O.F, {
+            setting: b.s6.ACCESSIBILITY_TAGS_NAMES,
+            children: (0, n.jsx)(d.FormSwitch, {
+                value: !e,
+                onChange: () => (0, E.Nv)(!e),
+                children: B.Z.Messages.ACCESSIBILITY_SETTINGS_TAGS_LABEL
+            })
         })
     });
 }
@@ -287,16 +296,19 @@ function q() {
             ref: s,
             title: B.Z.Messages.ACCESSIBILITY_SETTINGS_PROFILE_COLORS_TITLE,
             className: r()(G.marginTop20, U.syncProfileThemeWithUserTheme),
-            children: (0, n.jsx)(d.FormSwitch, {
-                note: B.Z.Messages.ACCESSIBILITY_SETTINGS_PROFILE_THEMES_NOTE.format({
-                    onThemeClick() {
-                        _.Z.open(Z.oAB.APPEARANCE);
-                    }
-                }),
-                className: G.marginTop20,
-                value: e,
-                onChange: E.Uv,
-                children: B.Z.Messages.ACCESSIBILITY_SETTINGS_PROFILE_THEMES_DESCRIPTION
+            children: (0, n.jsx)(O.F, {
+                setting: b.s6.ACCESSIBILITY_PROFILE_COLORS_SYNC_THEMES,
+                children: (0, n.jsx)(d.FormSwitch, {
+                    note: B.Z.Messages.ACCESSIBILITY_SETTINGS_PROFILE_THEMES_NOTE.format({
+                        onThemeClick() {
+                            _.Z.open(Z.oAB.APPEARANCE);
+                        }
+                    }),
+                    className: G.marginTop20,
+                    value: e,
+                    onChange: E.Uv,
+                    children: B.Z.Messages.ACCESSIBILITY_SETTINGS_PROFILE_THEMES_DESCRIPTION
+                })
             })
         })
     );
@@ -315,11 +327,14 @@ function J() {
     return (0, n.jsx)(d.FormItem, {
         title: B.Z.Messages.ACCESSIBILITY_SETTINGS_CONTRAST,
         className: G.marginTop20,
-        children: (0, n.jsx)(d.FormSwitch, {
-            value: s,
-            note: r,
-            onChange: t,
-            children: B.Z.Messages.ACCESSIBILITY_SETTINGS_SYNC_FORCED_COLORS_LABEL
+        children: (0, n.jsx)(O.F, {
+            setting: b.s6.ACCESSIBILITY_CONTRAST_SYNC_FORCED_COLORS,
+            children: (0, n.jsx)(d.FormSwitch, {
+                value: s,
+                note: r,
+                onChange: t,
+                children: B.Z.Messages.ACCESSIBILITY_SETTINGS_SYNC_FORCED_COLORS_LABEL
+            })
         })
     });
 }
@@ -361,7 +376,7 @@ function $() {
                 children: B.Z.Messages.ACCESSIBILITY_PREFERS_REDUCED_MOTION_DESCRIPTION.format({ helpdeskArticle: f.Z.getArticleURL(Z.BhN.REDUCED_MOTION) })
             }),
             (0, n.jsx)(d.Checkbox, {
-                className: G.marginTop20,
+                className: r()(G.marginTop20, G.marginBottom20),
                 value: 'auto' === i,
                 shape: d.Checkbox.Shapes.BOX,
                 type: d.Checkbox.Types.INVERTED,
@@ -371,25 +386,33 @@ function $() {
                     children: B.Z.Messages.ACCESSIBILITY_PREFERS_REDUCED_MOTION_AUTO
                 })
             }),
-            (0, n.jsx)(d.FormSwitch, {
-                className: G.marginTop20,
-                value: t,
-                onChange: I,
-                children: B.Z.Messages.ACCESSIBILITY_PREFERS_REDUCED_MOTION_ENABLE
+            (0, n.jsx)(O.F, {
+                setting: b.s6.ACCESSIBILITY_REDUCED_MOTION_ENABLE,
+                children: (0, n.jsx)(d.FormSwitch, {
+                    value: t,
+                    onChange: I,
+                    children: B.Z.Messages.ACCESSIBILITY_PREFERS_REDUCED_MOTION_ENABLE
+                })
             }),
-            (0, n.jsx)(d.FormSwitch, {
-                className: G.marginBottom40,
-                value: e,
-                note: null != l ? (0, h.Z)(l) : void 0,
-                onChange: M.QK.updateSetting,
-                children: B.Z.Messages.GIF_AUTO_PLAY_LABEL
+            (0, n.jsx)(O.F, {
+                setting: b.s6.ACCESSIBILITY_REDUCED_MOTION_AUTO_PLAY_GIFS,
+                children: (0, n.jsx)(d.FormSwitch, {
+                    className: G.marginBottom20,
+                    value: e,
+                    note: null != l ? (0, h.Z)(l) : void 0,
+                    onChange: M.QK.updateSetting,
+                    children: B.Z.Messages.GIF_AUTO_PLAY_LABEL
+                })
             }),
-            (0, n.jsx)(d.FormSwitch, {
-                className: r()(G.marginTop8, G.marginBottom20),
-                value: s,
-                note: null != _ ? (0, h.Z)(_) : void 0,
-                onChange: M.Yk.updateSetting,
-                children: B.Z.Messages.ANIMATE_EMOJI
+            (0, n.jsx)(O.F, {
+                setting: b.s6.ACCESSIBILITY_REDUCED_MOTION_PLAY_ANIMATED_EMOJI,
+                children: (0, n.jsx)(d.FormSwitch, {
+                    className: G.marginBottom20,
+                    value: s,
+                    note: null != _ ? (0, h.Z)(_) : void 0,
+                    onChange: M.Yk.updateSetting,
+                    children: B.Z.Messages.ANIMATE_EMOJI
+                })
             })
         ]
     });
@@ -401,7 +424,7 @@ function ee() {
             M.Wp.updateSetting(e.value);
         }, []);
     return (0, n.jsxs)(d.FormItem, {
-        className: G.marginBottom40,
+        className: G.marginTop20,
         title: B.Z.Messages.STICKERS_AUTO_PLAY_HEADING,
         children: [
             (0, n.jsx)(d.FormText, {
@@ -439,29 +462,36 @@ function es() {
         (0, P.Z)(t, L.rP.LEGACY_CHAT_INPUT),
         (0, n.jsxs)(d.FormItem, {
             ref: t,
+            className: G.marginTop20,
             children: [
                 (0, n.jsx)(d.FormTitle, {
                     className: G.marginBottom8,
                     children: B.Z.Messages.FORM_LABEL_ACCESSIBILITY_CHAT_INPUT
                 }),
-                (0, n.jsx)(d.FormSwitch, {
-                    className: G.marginTop20,
-                    value: e,
-                    onChange: E.eN,
-                    children: B.Z.Messages.DISPLAY_SUBMIT_BUTTON
+                (0, n.jsx)(O.F, {
+                    setting: b.s6.ACCESSIBILITY_MESSAGES_SEND_MESSAGE_BUTTON,
+                    children: (0, n.jsx)(d.FormSwitch, {
+                        className: G.marginTop20,
+                        value: e,
+                        onChange: E.eN,
+                        children: B.Z.Messages.DISPLAY_SUBMIT_BUTTON
+                    })
                 }),
-                (0, n.jsx)(d.FormSwitch, {
-                    className: G.marginTop8,
-                    value: s,
-                    note: B.Z.Messages.LEGACY_CHAT_INPUT_DESCRIPTION,
-                    onChange: (e) => {
-                        x.default.track(Z.rMx.LEGACY_CHAT_INPUT_TOGGLED, {
-                            enabled: e,
-                            location: { section: Z.jXE.SETTINGS_ACCESSIBILITY }
-                        }),
-                            M.dN.updateSetting(e);
-                    },
-                    children: B.Z.Messages.LEGACY_CHAT_INPUT
+                (0, n.jsx)(O.F, {
+                    setting: b.s6.ACCESSIBILITY_MESSAGES_LEGACY_CHAT_INPUT,
+                    children: (0, n.jsx)(d.FormSwitch, {
+                        className: G.marginTop8,
+                        value: s,
+                        note: B.Z.Messages.LEGACY_CHAT_INPUT_DESCRIPTION,
+                        onChange: (e) => {
+                            x.default.track(Z.rMx.LEGACY_CHAT_INPUT_TOGGLED, {
+                                enabled: e,
+                                location: { section: Z.jXE.SETTINGS_ACCESSIBILITY }
+                            }),
+                                M.dN.updateSetting(e);
+                        },
+                        children: B.Z.Messages.LEGACY_CHAT_INPUT
+                    })
                 })
             ]
         })
@@ -474,90 +504,100 @@ function et() {
     return u.Zh
         ? (0, n.jsxs)(n.Fragment, {
               children: [
-                  (0, n.jsxs)(d.FormItem, {
-                      children: [
-                          (0, n.jsx)(d.FormTitle, {
-                              className: G.marginBottom8,
-                              children: B.Z.Messages.FORM_LABEL_TTS
-                          }),
-                          (0, n.jsx)(d.FormSwitch, {
-                              className: G.marginTop20,
-                              value: e,
-                              onChange: M.OW.updateSetting,
-                              children: B.Z.Messages.ALLOW_TTS_COMMAND
-                          })
-                      ]
-                  }),
-                  (0, n.jsxs)(d.FormItem, {
-                      className: G.marginBottom20,
-                      children: [
-                          (0, n.jsx)(d.FormTitle, {
-                              id: Y,
-                              className: G.marginBottom20,
-                              children: B.Z.Messages.ACCESSIBILITY_SETTINGS_TTS_RATE_LABEL
-                          }),
-                          (0, n.jsx)('div', {
-                              className: U.ttsPreviewWrapper,
-                              children: (0, n.jsx)(d.Button, {
-                                  color: d.ButtonColors.BRAND,
-                                  onClick: () => {
-                                      if (t) {
-                                          (0, p.NB)(), i(!1);
-                                          return;
-                                      }
-                                      (0, p.cP)(
-                                          B.Z.Messages.ACCESSIBILITY_SETTINGS_TTS_RATE_TEST,
-                                          !0,
-                                          void 0,
-                                          () => i(!0),
-                                          () => i(!1)
-                                      ),
-                                          i(!0);
-                                  },
-                                  children: (0, n.jsxs)(I.Z, {
-                                      align: I.Z.Align.CENTER,
-                                      children: [
-                                          t
-                                              ? (0, n.jsx)(d.PauseIcon, {
-                                                    size: 'md',
-                                                    color: 'currentColor'
-                                                })
-                                              : (0, n.jsx)(d.PlayIcon, {
-                                                    size: 'md',
-                                                    color: 'currentColor'
-                                                }),
-                                          (0, n.jsx)('span', { children: B.Z.Messages.ACCESSIBILITY_SETTINGS_TTS_RATE_PREVIEW }),
-                                          (0, n.jsx)(d.HiddenVisually, { children: B.Z.Messages.ACCESSIBILITY_SETTINGS_TTS_RATE_LABEL })
-                                      ]
+                  (0, n.jsx)(O.F, {
+                      setting: b.s6.ACCESSIBILITY_TEXT_TO_SPEECH,
+                      children: (0, n.jsxs)(d.FormItem, {
+                          className: G.marginTop20,
+                          children: [
+                              (0, n.jsx)(d.FormTitle, {
+                                  className: G.marginBottom8,
+                                  children: B.Z.Messages.FORM_LABEL_TTS
+                              }),
+                              (0, n.jsx)(O.F, {
+                                  setting: b.s6.ACCESSIBILITY_TEXT_TO_SPEECH_TTS_COMMAND,
+                                  children: (0, n.jsx)(d.FormSwitch, {
+                                      className: G.marginTop20,
+                                      value: e,
+                                      onChange: M.OW.updateSetting,
+                                      children: B.Z.Messages.ALLOW_TTS_COMMAND
                                   })
                               })
-                          }),
-                          (0, n.jsx)(d.Slider, {
-                              markers: j.q,
-                              initialValue: s,
-                              defaultValue: 1,
-                              stickToMarkers: !0,
-                              onValueChange: k,
-                              onValueRender: (e) => 'x'.concat(e.toFixed(2)),
-                              onMarkerRender: (e) =>
-                                  0 === e
-                                      ? (0, n.jsx)('span', {
-                                            className: U.ttsSliderMarker,
-                                            children: B.Z.Messages.ACCESSIBILITY_SETTINGS_TTS_RATE_SLOWER
-                                        })
-                                      : 10 === e
-                                        ? (0, n.jsx)('span', {
-                                              className: U.ttsSliderMarker,
-                                              children: B.Z.Messages.ACCESSIBILITY_SETTINGS_TTS_RATE_FASTER
-                                          })
-                                        : 1 === e
-                                          ? (0, n.jsx)('span', { children: 'x1.0' })
-                                          : e % 1 == 0
-                                            ? ''
-                                            : void 0,
-                              'aria-labelledby': Y
-                          })
-                      ]
+                          ]
+                      })
+                  }),
+                  (0, n.jsx)(O.F, {
+                      setting: b.s6.ACCESSIBILITY_TEXT_TO_SPEECH_RATE,
+                      children: (0, n.jsxs)(d.FormItem, {
+                          className: G.marginTop20,
+                          children: [
+                              (0, n.jsx)(d.FormTitle, {
+                                  id: Y,
+                                  className: G.marginBottom20,
+                                  children: B.Z.Messages.ACCESSIBILITY_SETTINGS_TTS_RATE_LABEL
+                              }),
+                              (0, n.jsx)('div', {
+                                  className: U.ttsPreviewWrapper,
+                                  children: (0, n.jsx)(d.Button, {
+                                      color: d.ButtonColors.BRAND,
+                                      onClick: () => {
+                                          if (t) {
+                                              (0, p.NB)(), i(!1);
+                                              return;
+                                          }
+                                          (0, p.cP)(
+                                              B.Z.Messages.ACCESSIBILITY_SETTINGS_TTS_RATE_TEST,
+                                              !0,
+                                              void 0,
+                                              () => i(!0),
+                                              () => i(!1)
+                                          ),
+                                              i(!0);
+                                      },
+                                      children: (0, n.jsxs)(I.Z, {
+                                          align: I.Z.Align.CENTER,
+                                          children: [
+                                              t
+                                                  ? (0, n.jsx)(d.PauseIcon, {
+                                                        size: 'md',
+                                                        color: 'currentColor'
+                                                    })
+                                                  : (0, n.jsx)(d.PlayIcon, {
+                                                        size: 'md',
+                                                        color: 'currentColor'
+                                                    }),
+                                              (0, n.jsx)('span', { children: B.Z.Messages.ACCESSIBILITY_SETTINGS_TTS_RATE_PREVIEW }),
+                                              (0, n.jsx)(d.HiddenVisually, { children: B.Z.Messages.ACCESSIBILITY_SETTINGS_TTS_RATE_LABEL })
+                                          ]
+                                      })
+                                  })
+                              }),
+                              (0, n.jsx)(d.Slider, {
+                                  markers: j.q,
+                                  initialValue: s,
+                                  defaultValue: 1,
+                                  stickToMarkers: !0,
+                                  onValueChange: k,
+                                  onValueRender: (e) => 'x'.concat(e.toFixed(2)),
+                                  onMarkerRender: (e) =>
+                                      0 === e
+                                          ? (0, n.jsx)('span', {
+                                                className: U.ttsSliderMarker,
+                                                children: B.Z.Messages.ACCESSIBILITY_SETTINGS_TTS_RATE_SLOWER
+                                            })
+                                          : 10 === e
+                                            ? (0, n.jsx)('span', {
+                                                  className: U.ttsSliderMarker,
+                                                  children: B.Z.Messages.ACCESSIBILITY_SETTINGS_TTS_RATE_FASTER
+                                              })
+                                            : 1 === e
+                                              ? (0, n.jsx)('span', { children: 'x1.0' })
+                                              : e % 1 == 0
+                                                ? ''
+                                                : void 0,
+                                  'aria-labelledby': Y
+                              })
+                          ]
+                      })
                   })
               ]
           })

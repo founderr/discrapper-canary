@@ -748,6 +748,11 @@ let ej = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eZ.Z.Messages.ACCESSIBILITY_SETTINGS_SATURATION_TITLE],
                 parent: eD.s6.ACCESSIBILITY
             },
+            [eD.s6.ACCESSIBILITY_SATURATION_CUSTOM_COLOR]: {
+                section: eP.oAB.ACCESSIBILITY,
+                searchableTitles: [eZ.Z.Messages.ACCESSIBILITY_SETTINGS_SATURATION_CUSTOM_COLORS_LABEL],
+                parent: eD.s6.ACCESSIBILITY_SATURATION
+            },
             [eD.s6.ACCESSIBILITY_LINK_DECORATIONS]: {
                 section: eP.oAB.ACCESSIBILITY,
                 searchableTitles: [eZ.Z.Messages.ACCESSIBILITY_SETTINGS_ALWAYS_SHOW_LINK_DECORATIONS_LABEL],
@@ -763,20 +768,50 @@ let ej = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eZ.Z.Messages.ACCESSIBILITY_SETTINGS_TAGS_TITLE],
                 parent: eD.s6.ACCESSIBILITY
             },
-            [eD.s6.ACCESSIBILITY_SYNC_PROFILE_THEME]: {
+            [eD.s6.ACCESSIBILITY_TAGS_NAMES]: {
+                section: eP.oAB.ACCESSIBILITY,
+                searchableTitles: [eZ.Z.Messages.ACCESSIBILITY_SETTINGS_TAGS_LABEL],
+                parent: eD.s6.ACCESSIBILITY_TAGS
+            },
+            [eD.s6.ACCESSIBILITY_PROFILE_COLORS]: {
                 section: eP.oAB.ACCESSIBILITY,
                 searchableTitles: [eZ.Z.Messages.ACCESSIBILITY_SETTINGS_PROFILE_COLORS_TITLE],
                 parent: eD.s6.ACCESSIBILITY
+            },
+            [eD.s6.ACCESSIBILITY_PROFILE_COLORS_SYNC_THEMES]: {
+                section: eP.oAB.ACCESSIBILITY,
+                searchableTitles: [eZ.Z.Messages.ACCESSIBILITY_SETTINGS_PROFILE_THEMES_DESCRIPTION],
+                parent: eD.s6.ACCESSIBILITY_PROFILE_COLORS
             },
             [eD.s6.ACCESSIBILITY_CONTRAST]: {
                 section: eP.oAB.ACCESSIBILITY,
                 searchableTitles: [eZ.Z.Messages.ACCESSIBILITY_SETTINGS_CONTRAST],
                 parent: eD.s6.ACCESSIBILITY
             },
+            [eD.s6.ACCESSIBILITY_CONTRAST_SYNC_FORCED_COLORS]: {
+                section: eP.oAB.ACCESSIBILITY,
+                searchableTitles: [eZ.Z.Messages.ACCESSIBILITY_SETTINGS_SYNC_FORCED_COLORS_LABEL],
+                parent: eD.s6.ACCESSIBILITY_CONTRAST
+            },
             [eD.s6.ACCESSIBILITY_REDUCED_MOTION]: {
                 section: eP.oAB.ACCESSIBILITY,
                 searchableTitles: [eZ.Z.Messages.ACCESSIBILITY_PREFERS_REDUCED_MOTION],
                 parent: eD.s6.ACCESSIBILITY
+            },
+            [eD.s6.ACCESSIBILITY_REDUCED_MOTION_ENABLE]: {
+                section: eP.oAB.ACCESSIBILITY,
+                searchableTitles: [eZ.Z.Messages.ACCESSIBILITY_PREFERS_REDUCED_MOTION_ENABLE],
+                parent: eD.s6.ACCESSIBILITY_REDUCED_MOTION
+            },
+            [eD.s6.ACCESSIBILITY_REDUCED_MOTION_AUTO_PLAY_GIFS]: {
+                section: eP.oAB.ACCESSIBILITY,
+                searchableTitles: [eZ.Z.Messages.GIF_AUTO_PLAY_LABEL],
+                parent: eD.s6.ACCESSIBILITY_REDUCED_MOTION
+            },
+            [eD.s6.ACCESSIBILITY_REDUCED_MOTION_PLAY_ANIMATED_EMOJI]: {
+                section: eP.oAB.ACCESSIBILITY,
+                searchableTitles: [eZ.Z.Messages.ANIMATE_EMOJI],
+                parent: eD.s6.ACCESSIBILITY_REDUCED_MOTION
             },
             [eD.s6.ACCESSIBILITY_STICKERS]: {
                 section: eP.oAB.ACCESSIBILITY,
@@ -788,9 +823,34 @@ let ej = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eZ.Z.Messages.FORM_LABEL_ACCESSIBILITY_CHAT_INPUT],
                 parent: eD.s6.ACCESSIBILITY
             },
+            [eD.s6.ACCESSIBILITY_MESSAGES_SEND_MESSAGE_BUTTON]: {
+                section: eP.oAB.ACCESSIBILITY,
+                searchableTitles: [eZ.Z.Messages.DISPLAY_SUBMIT_BUTTON],
+                parent: eD.s6.ACCESSIBILITY_MESSAGES
+            },
+            [eD.s6.ACCESSIBILITY_MESSAGES_LEGACY_CHAT_INPUT]: {
+                section: eP.oAB.ACCESSIBILITY,
+                searchableTitles: [eZ.Z.Messages.LEGACY_CHAT_INPUT],
+                parent: eD.s6.ACCESSIBILITY_MESSAGES
+            },
             [eD.s6.ACCESSIBILITY_TEXT_TO_SPEECH]: {
                 section: eP.oAB.ACCESSIBILITY,
                 searchableTitles: [eZ.Z.Messages.FORM_LABEL_TTS],
+                parent: eD.s6.ACCESSIBILITY
+            },
+            [eD.s6.ACCESSIBILITY_TEXT_TO_SPEECH_TTS_COMMAND]: {
+                section: eP.oAB.ACCESSIBILITY,
+                searchableTitles: [eZ.Z.Messages.ALLOW_TTS_COMMAND],
+                parent: eD.s6.ACCESSIBILITY_TEXT_TO_SPEECH
+            },
+            [eD.s6.ACCESSIBILITY_TEXT_TO_SPEECH_RATE]: {
+                section: eP.oAB.ACCESSIBILITY,
+                searchableTitles: [eZ.Z.Messages.ACCESSIBILITY_SETTINGS_TTS_RATE_LABEL],
+                parent: eD.s6.ACCESSIBILITY
+            },
+            [eD.s6.ACCESSIBILITY_APPEARANCE_UPSELL]: {
+                section: eP.oAB.ACCESSIBILITY,
+                searchableTitles: [eD.CF],
                 parent: eD.s6.ACCESSIBILITY
             },
             [eD.s6.VOICE_AND_VIDEO]: {
