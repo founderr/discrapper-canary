@@ -198,7 +198,8 @@ var n,
     (z.SHOP = 'shop'),
     (z.AUTHORIZED_APPS = 'authorized-apps'),
     (z.DAVE_PROTOCOL_VERIFICATION = 'dave-protocol-verification'),
-    (z.ICYMI = 'icymi');
+    (z.ICYMI = 'icymi'),
+    (z.QUESTS = 'quests');
 let e_ = 'CacheStoreLazy',
     eE = 'CacheStoreChannelsLazy',
     es = 'CacheStore';

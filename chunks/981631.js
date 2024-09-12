@@ -4163,6 +4163,7 @@ let it = Object.freeze({
     (nf.QUEST_CONTENT_RENDERING_FAILURE = 'quest_content_rendering_failure'),
     (nf.QUEST_BAR_RENDER_PERFORMANCE_MEASURED = 'quest_bar_render_performance_measured'),
     (nf.QUEST_SHARE_LINK_DEEP_LINKED_INTO_DESKTOP_CLIENT = 'quest_share_link_deep_linked_into_desktop_client'),
+    (nf.QUEST_SHARE_LINK_DEEP_LINKED_INTO_MOBILE_CLIENT = 'quest_share_link_deep_linked_into_mobile_client'),
     (nf.USER_SETTINGS_KEYBIND_UPDATED = 'user_settings_keybind_updated'),
     (nf.USER_ATTRIBUTION_RECEIVED = 'user_attribution_received'),
     (nf.USER_AVATAR_UPDATED = 'user_avatar_updated'),
