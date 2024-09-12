@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return A;
+        return S;
     }
 });
 var i = n(735250);
@@ -10,96 +10,92 @@ var s = n(442837),
     l = n(246946),
     r = n(5192),
     o = n(621853),
-    c = n(910128),
-    u = n(172351),
-    d = n(648052),
-    h = n(280885),
-    m = n(483424),
-    p = n(681837),
-    _ = n(91433),
-    f = n(900927),
-    E = n(678738),
-    g = n(502762),
-    C = n(530),
-    I = n(7242),
-    x = n(827313),
-    T = n(228168),
-    v = n(981631),
-    S = n(689938),
-    N = n(299336);
-function A(e) {
-    let { user: t, currentUser: n, displayProfile: A, channel: Z, isHovering: M, onOpenProfile: b } = e,
-        { activeInviteToCallCtaEnabled: R } = (0, c.l)({ location: 'UserProfilePanelBody' }),
-        L = (0, s.e7)([a.Z], () => a.Z.getRelationshipType(t.id)),
-        j = (0, s.e7)([l.Z], () => l.Z.hidePersonalInformation),
-        P = (0, s.e7)([o.Z], () => {
+    c = n(172351),
+    u = n(648052),
+    d = n(280885),
+    h = n(483424),
+    m = n(681837),
+    p = n(91433),
+    _ = n(900927),
+    f = n(678738),
+    E = n(502762),
+    g = n(530),
+    C = n(827313),
+    I = n(228168),
+    x = n(981631),
+    T = n(689938),
+    v = n(299336);
+function S(e) {
+    let { user: t, currentUser: n, displayProfile: S, channel: N, isHovering: A, onOpenProfile: Z } = e,
+        M = (0, s.e7)([a.Z], () => a.Z.getRelationshipType(t.id)),
+        b = (0, s.e7)([l.Z], () => l.Z.hidePersonalInformation),
+        R = (0, s.e7)([o.Z], () => {
             var e;
             return null === (e = o.Z.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application;
         });
     return (0, i.jsxs)('div', {
-        className: N.body,
+        className: v.body,
         children: [
-            (0, i.jsx)(C.Z, {
+            (0, i.jsx)(g.Z, {
                 user: t,
-                profileType: T.y0.PANEL,
-                nickname: r.ZP.getName(null, Z.id, t),
-                pronouns: null == A ? void 0 : A.pronouns,
-                onOpenProfile: b,
-                tags: (0, i.jsx)(d.Z, {
-                    displayProfile: A,
-                    profileType: T.y0.PANEL
+                profileType: I.y0.PANEL,
+                nickname: r.ZP.getName(null, N.id, t),
+                pronouns: null == S ? void 0 : S.pronouns,
+                onOpenProfile: Z,
+                tags: (0, i.jsx)(u.Z, {
+                    displayProfile: S,
+                    profileType: I.y0.PANEL
                 }),
                 nicknameIcons: (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (0, i.jsx)(p.Z, { userId: t.id }),
-                        !j &&
-                            (0, i.jsx)(x.Z, {
+                        (0, i.jsx)(m.Z, { userId: t.id }),
+                        !b &&
+                            (0, i.jsx)(C.Z, {
                                 userId: t.id,
-                                isHovering: M,
-                                onOpenProfile: b
+                                isHovering: A,
+                                onOpenProfile: Z
                             })
                     ]
                 })
             }),
-            L === v.OGo.PENDING_INCOMING &&
-                (0, i.jsx)(g.Z.Overlay, {
-                    children: (0, i.jsx)(_.Z, {
+            M === x.OGo.PENDING_INCOMING &&
+                (0, i.jsx)(E.Z.Overlay, {
+                    children: (0, i.jsx)(p.Z, {
                         user: t,
-                        channelId: Z.id
+                        channelId: N.id
                     })
                 }),
-            R && (0, i.jsx)(I.Z, { user: t }),
-            (0, i.jsx)(m.Z, {
+            (0, i.jsx)(h.Z, {
                 user: t,
                 currentUser: n,
-                className: N.activity
+                className: v.activity
             }),
-            (0, i.jsxs)(g.Z.Overlay, {
-                className: N.overlay,
+            (0, i.jsxs)(E.Z.Overlay, {
+                className: v.overlay,
                 children: [
-                    !j &&
-                        (null == A ? void 0 : A.bio) != null &&
-                        (null == A ? void 0 : A.bio) !== '' &&
-                        (0, i.jsx)(E.Z, {
-                            heading: S.Z.Messages.USER_POPOUT_ABOUT_ME,
+                    !b &&
+                        (null == S ? void 0 : S.bio) != null &&
+                        (null == S ? void 0 : S.bio) !== '' &&
+                        (0, i.jsx)(f.Z, {
+                            heading: T.Z.Messages.USER_POPOUT_ABOUT_ME,
                             headingColor: 'header-primary',
-                            children: (0, i.jsx)(h.Z, {
-                                userBio: A.bio,
+                            children: (0, i.jsx)(d.Z, {
+                                userBio: S.bio,
                                 animateOnHover: !0,
-                                isHovering: M,
+                                isHovering: A,
                                 userId: t.id
                             })
                         }),
-                    (null == P ? void 0 : P.popularApplicationCommandIds) != null &&
-                        (0, i.jsx)(u.Z, {
-                            applicationId: P.id,
-                            commandIds: P.popularApplicationCommandIds,
-                            channel: Z
+                    (null == R ? void 0 : R.popularApplicationCommandIds) != null &&
+                        (0, i.jsx)(c.Z, {
+                            applicationId: R.id,
+                            commandIds: R.popularApplicationCommandIds,
+                            channel: N
                         }),
-                    (0, i.jsx)(E.Z, {
-                        heading: t.bot ? S.Z.Messages.BOT_PROFILE_CREATED_ON : S.Z.Messages.USER_PROFILE_MEMBER_SINCE,
+                    (0, i.jsx)(f.Z, {
+                        heading: t.bot ? T.Z.Messages.BOT_PROFILE_CREATED_ON : T.Z.Messages.USER_PROFILE_MEMBER_SINCE,
                         headingColor: 'header-primary',
-                        children: (0, i.jsx)(f.Z, { userId: t.id })
+                        children: (0, i.jsx)(_.Z, { userId: t.id })
                     })
                 ]
             })
