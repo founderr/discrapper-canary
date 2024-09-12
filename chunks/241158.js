@@ -3,96 +3,109 @@ var s = n(735250),
     a = n(470079),
     r = n(120356),
     i = n.n(r),
-    l = n(481060),
-    o = n(70097),
-    c = n(409100),
-    d = n(783589),
-    _ = n(689938),
-    u = n(916548);
-let E = (e) => {
-    let { title: t, description: n, descriptionCta: r, previewImage: d, videoUrl: _, shouldLoadVideo: E, index: T } = e,
-        I = a.useRef(null),
-        [R, g] = a.useState(0),
-        N = () => {
-            null != I.current && ((I.current.currentTime = R), I.current.play());
+    l = n(392711),
+    o = n(481060),
+    c = n(70097),
+    d = n(626135),
+    _ = n(526167),
+    u = n(409100),
+    E = n(783589),
+    T = n(981631),
+    I = n(869783),
+    R = n(689938),
+    g = n(916548);
+let N = (e) => {
+    let { name: t, title: n, description: r, descriptionCta: E, previewImage: R, videoUrl: N, shouldLoadVideo: C, index: m } = e,
+        p = (0, _.rO)(),
+        A = a.useRef(null),
+        [f, h] = a.useState(0),
+        M = (0, l.debounce)(() => {
+            d.default.track(T.rMx.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, l.snakeCase)(t) });
+        }, 800),
+        S = () => {
+            null != A.current && ((A.current.currentTime = f), A.current.play());
         },
-        C = () => {
-            null != I.current && (g(I.current.currentTime), I.current.pause());
+        x = () => {
+            null != A.current && (h(A.current.currentTime), A.current.pause());
         },
-        m = () =>
+        b = () =>
             (0, s.jsxs)('div', {
-                className: u.whatsNewTextBoxOuter,
+                className: g.whatsNewTextBoxOuter,
                 children: [
-                    (0, s.jsx)(l.Heading, {
+                    (0, s.jsx)(o.Heading, {
                         variant: 'display-md',
                         color: 'header-primary',
-                        className: u.whatsNewBoxHeader,
-                        children: t
-                    }),
-                    (0, s.jsx)(l.Text, {
-                        variant: 'text-sm/normal',
-                        color: 'text-normal',
-                        className: u.whatsNewBoxDescription,
+                        className: g.whatsNewBoxHeader,
                         children: n
                     }),
-                    (0, s.jsx)(c.Z, {
-                        className: u.whatsNewBoxButton,
-                        buttonText: r,
-                        color: l.Button.Colors.BRAND,
-                        look: l.Button.Looks.FILLED,
+                    (0, s.jsx)(o.Text, {
+                        variant: 'text-sm/normal',
+                        color: 'text-normal',
+                        className: g.whatsNewBoxDescription,
+                        children: r
+                    }),
+                    (0, s.jsx)(u.Z, {
+                        className: g.whatsNewBoxButton,
+                        onClick: M,
+                        buttonText: E,
+                        color: o.Button.Colors.BRAND,
+                        look: o.Button.Looks.FILLED,
                         showIcon: !1
                     })
                 ]
             }),
-        p = (e) => {
+        O = (e) => {
             let { isLeft: t } = e;
             return (0, s.jsx)('div', {
-                className: u.whatsNewArtContainer,
-                children: (0, s.jsx)(o.Z, {
-                    src: _,
+                className: g.whatsNewArtContainer,
+                children: (0, s.jsx)(c.Z, {
                     playsInline: !0,
-                    preload: E ? 'auto' : 'none',
+                    preload: C ? 'auto' : 'none',
                     muted: !0,
-                    poster: d,
+                    poster: R,
                     loop: !0,
-                    className: i()(u.perkBoxVideo, { [u.leftSideArt]: t }),
-                    ref: I
+                    className: i()(g.perkBoxVideo, { [g.leftSideArt]: t }),
+                    ref: A,
+                    children: (0, s.jsx)('source', {
+                        src: N,
+                        type: p ? I.m.MP4 : I.m.WEBM
+                    })
                 })
             });
         };
-    return T % 2 != 0
+    return m % 2 != 0
         ? (0, s.jsxs)('div', {
-              className: i()(u.whatsNewBoxContainer),
-              onMouseEnter: N,
-              onFocus: N,
-              onBlur: C,
-              onMouseLeave: C,
-              children: [(0, s.jsx)(m, {}), (0, s.jsx)(p, { isLeft: !1 })]
+              className: i()(g.whatsNewBoxContainer),
+              onMouseEnter: S,
+              onFocus: S,
+              onBlur: x,
+              onMouseLeave: x,
+              children: [(0, s.jsx)(b, {}), (0, s.jsx)(O, { isLeft: !1 })]
           })
         : (0, s.jsxs)('div', {
-              className: i()(u.whatsNewBoxContainer),
-              onMouseEnter: N,
-              onFocus: N,
-              onBlur: C,
-              onMouseLeave: C,
-              children: [(0, s.jsx)(p, { isLeft: !0 }), (0, s.jsx)(m, {})]
+              className: i()(g.whatsNewBoxContainer),
+              onMouseEnter: S,
+              onFocus: S,
+              onBlur: x,
+              onMouseLeave: x,
+              children: [(0, s.jsx)(O, { isLeft: !0 }), (0, s.jsx)(b, {})]
           });
 };
 t.Z = a.memo(function (e) {
     let { className: t, shouldLoadVideo: n } = e,
-        a = Object.values((0, d.Z)());
+        a = Object.values((0, E.Z)());
     return (0, s.jsx)(s.Fragment, {
         children: (0, s.jsxs)('div', {
-            className: i()(u.boxBackdrop, t),
+            className: i()(g.boxBackdrop, t),
             children: [
-                (0, s.jsx)(l.Heading, {
-                    className: u.whatsNewHeader,
+                (0, s.jsx)(o.Heading, {
+                    className: g.whatsNewHeader,
                     variant: 'heading-xxl/extrabold',
-                    children: _.Z.Messages.WHATS_NEW
+                    children: R.Z.Messages.WHATS_NEW
                 }),
                 a.map((e, t) =>
                     (0, s.jsx)(
-                        E,
+                        N,
                         {
                             shouldLoadVideo: n,
                             ...e,

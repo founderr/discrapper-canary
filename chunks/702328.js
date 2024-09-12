@@ -53,45 +53,67 @@ let z = (e) => {
         return t || n ? (0, s.jsx)(v.Z, { lifted: !t && n }) : null;
     },
     q = (e) => {
-        let { isFullscreen: t, inOfferExperience: n, setIsAllPerksVisible: a, whatsNewV2Enabled: r, setIsWhatsNewBoxVisible: l, hasRenderedOnce: o } = e;
-        return t
-            ? (0, s.jsxs)('div', {
-                  className: i()(V.whatsNewSectionBackground, { [V.whatsNewSectionBackgroundV2]: r }),
-                  children: [
-                      !r &&
+        let { isFullscreen: t, inOfferExperience: n, setIsAllPerksVisible: r, whatsNewV2Enabled: l, setIsWhatsNewBoxVisible: o, hasRenderedOnce: d } = e,
+            [_, u] = a.useState(!1),
+            E = a.useRef(0),
+            T = a.useRef(0);
+        return (a.useEffect(() => {
+            _ ? (E.current = Date.now()) : 0 !== E.current && ((T.current = T.current + Date.now() - E.current), (E.current = 0));
+        }, [_]),
+        a.useEffect(
+            () => () => {
+                0 !== E.current && (T.current = T.current + (Date.now() - E.current)),
+                    0 !== T.current &&
+                        g.default.track(F.rMx.PREMIUM_WHATS_NEW_VIEW_TIME, {
+                            view_time: T.current,
+                            is_v2: l
+                        });
+            },
+            []
+        ),
+        t)
+            ? (0, s.jsx)(c.$, {
+                  onChange: (e) => u(e),
+                  threshold: 0,
+                  active: !0,
+                  children: (0, s.jsxs)('div', {
+                      className: i()(V.whatsNewSectionBackground, { [V.whatsNewSectionBackgroundV2]: l }),
+                      children: [
+                          !l &&
+                              (0, s.jsx)(D.Z, {
+                                  variant: w.R0.WHATS_NEW,
+                                  isFullScreen: t
+                              }),
+                          l &&
+                              (0, s.jsx)(c.$, {
+                                  onChange: (e) => o(e),
+                                  threshold: 0,
+                                  active: !0,
+                                  children: (0, s.jsx)(O.Z, { shouldLoadVideo: d })
+                              }),
                           (0, s.jsx)(D.Z, {
-                              variant: w.R0.WHATS_NEW,
-                              isFullScreen: t
+                              isFullScreen: t,
+                              showAllPerksButton: t
+                                  ? (0, s.jsx)(H.Z, {
+                                        setIsAllPerksVisible: r,
+                                        previousComponent: w.MQ.MARKETING
+                                    })
+                                  : void 0
                           }),
-                      r &&
-                          (0, s.jsx)(c.$, {
-                              onChange: (e) => l(e),
-                              threshold: 0,
-                              active: !0,
-                              children: (0, s.jsx)(O.Z, { shouldLoadVideo: o })
-                          }),
-                      (0, s.jsx)(D.Z, {
-                          isFullScreen: t,
-                          showAllPerksButton: t
-                              ? (0, s.jsx)(H.Z, {
-                                    setIsAllPerksVisible: a,
-                                    previousComponent: w.MQ.MARKETING
-                                })
-                              : void 0
-                      }),
-                      n &&
-                          !r &&
-                          (0, s.jsx)(U.ZP, {
-                              className: V.pdSparklesTop,
-                              variant: U.u0.TOP
-                          }),
-                      n &&
-                          !r &&
-                          (0, s.jsx)(U.ZP, {
-                              className: V.pdSparklesBottom,
-                              variant: U.u0.BOTTOM
-                          })
-                  ]
+                          n &&
+                              !l &&
+                              (0, s.jsx)(U.ZP, {
+                                  className: V.pdSparklesTop,
+                                  variant: U.u0.TOP
+                              }),
+                          n &&
+                              !l &&
+                              (0, s.jsx)(U.ZP, {
+                                  className: V.pdSparklesBottom,
+                                  variant: U.u0.BOTTOM
+                              })
+                      ]
+                  })
               })
             : null;
     };
