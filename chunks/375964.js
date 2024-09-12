@@ -17844,6 +17844,7 @@ e.exports = Object.freeze({
     QUESTS_COMPLETION_COMPLETE: 'Quest Completed!',
     QUESTS_SHARE_LINK: 'Copy Link to Quest',
     QUESTS_CLAIM_THE_REWARD_HOOK: 'Claim the $[reward](rewardHook)',
+    QUESTS_CLAIM_REWARD_HOOK: 'Claim $[rewardWithArticle](rewardWithArticleHook)',
     QUESTS_MOBILE_QUEST_BAR_OVERFLOW_MENU_LABEL: 'Quest Actions',
     QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_HEADING: 'Console Requirements',
     QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_CONNECT_ACCOUNT: 'Connect your console to your Discord account',

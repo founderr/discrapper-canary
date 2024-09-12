@@ -25,73 +25,75 @@ let C = async () => await n.e('67963').then(n.t.bind(n, 145193, 19));
 function f(e) {
     var t, n, s;
     let { quest: f, questContent: N, isHovering: A, contentPosition: v, rowIndex: L, onReceiveErrorHints: Z } = e,
-        R = E.r.build(f.config).defaultReward.messages.name,
-        O = (null === (t = f.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
-        { ref: x, scrollHeight: b } = (0, d.Z)(),
-        P = 104 !== b,
-        { expansionSpring: M } = (0, c.useSpring)({
+        R = E.r.build(f.config),
+        O = R.defaultReward.messages.name,
+        x = R.defaultReward.messages.nameWithArticle,
+        b = (null === (t = f.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
+        { ref: P, scrollHeight: M } = (0, d.Z)(),
+        D = 104 !== M,
+        { expansionSpring: y } = (0, c.useSpring)({
             expansionSpring: A ? 1 : 0,
             config: {
                 ...p.Y,
                 clamp: !0
             }
         }),
-        D = (null === (n = f.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
-        y = (null === (s = f.userStatus) || void 0 === s ? void 0 : s.claimedAt) != null,
-        { completedRatio: j, completedRatioDisplay: U } = (0, _.I)(f),
-        G = (0, _.Bd)(f),
-        w = a.useCallback(
-            () =>
+        j = (null === (n = f.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
+        U = (null === (s = f.userStatus) || void 0 === s ? void 0 : s.claimedAt) != null,
+        { completedRatio: G, completedRatioDisplay: w } = (0, _.I)(f),
+        k = (0, _.Bd)(f),
+        B = a.useCallback(
+            (e) =>
                 (0, i.jsx)(c.Text, {
                     variant: 'text-md/semibold',
                     color: 'text-normal',
                     tag: 'span',
                     className: S.header,
-                    children: R
+                    children: e
                 }),
-            [R]
+            []
         ),
-        k = a.useMemo(() => (y ? w() : T.Z.Messages.QUESTS_CLAIM_THE_REWARD_HOOK.format({ rewardHook: w })), [y, w]),
-        B = a.useMemo(() => {
-            if (null != G)
+        H = a.useMemo(() => (U ? B(O) : T.Z.Messages.QUESTS_CLAIM_REWARD_HOOK.format({ rewardWithArticleHook: () => B(x) })), [O, x, U, B]),
+        V = a.useMemo(() => {
+            if (null != k)
                 return (0, i.jsx)(c.Text, {
                     variant: 'text-sm/medium',
                     color: 'text-muted',
                     className: r()(S.description),
-                    children: G
+                    children: k
                 });
-        }, [G]),
-        H = (0, o.e7)([u.Z], () => u.Z.useReducedMotion);
+        }, [k]),
+        F = (0, o.e7)([u.Z], () => u.Z.useReducedMotion);
     return (0, i.jsxs)('div', {
         className: r()(S.container),
         children: [
             (0, i.jsxs)(l.animated.div, {
                 style: {
-                    maxHeight: M.to([0, 1], [104, (null != b ? b : 0) + 12])
+                    maxHeight: y.to([0, 1], [104, (null != M ? M : 0) + 12])
                 },
                 className: r()(S.rewardDescriptionContainer),
                 children: [
                     (0, i.jsxs)('div', {
                         className: S.assetWrapper,
                         children: [
-                            !y && D && (0, i.jsx)('div', { className: S.completionAnimation }),
-                            O && !y
+                            !U && j && (0, i.jsx)('div', { className: S.completionAnimation }),
+                            b && !U
                                 ? (0, i.jsxs)('div', {
                                       className: S.progressWrapper,
                                       children: [
-                                          D &&
+                                          j &&
                                               (0, i.jsx)(c.LottieAnimation, {
                                                   importData: C,
                                                   className: S.confetti,
                                                   loop: !1,
                                                   autoplay: !1,
-                                                  shouldAnimate: !H
+                                                  shouldAnimate: !F
                                               }),
                                           (0, i.jsx)(h.Z, {
                                               quest: f,
                                               size: 76,
-                                              percentComplete: j,
-                                              percentCompleteText: A ? U : void 0,
+                                              percentComplete: G,
+                                              percentCompleteText: A ? w : void 0,
                                               children: (0, i.jsx)('div', {
                                                   className: S.circularRewardTileWrapper,
                                                   children: (0, i.jsx)(m.Z, {
@@ -114,8 +116,8 @@ function f(e) {
                         ]
                     }),
                     (0, i.jsxs)('div', {
-                        ref: x,
-                        className: r()(S.textContainer, { [S.justifyCenter]: !P }),
+                        ref: P,
+                        className: r()(S.textContainer, { [S.justifyCenter]: !D }),
                         children: [
                             (0, i.jsx)(c.Heading, {
                                 variant: 'eyebrow',
@@ -127,15 +129,15 @@ function f(e) {
                                 variant: 'text-md/semibold',
                                 color: 'header-primary',
                                 className: S.header,
-                                children: k
+                                children: H
                             }),
-                            B
+                            V
                         ]
                     }),
-                    P &&
+                    D &&
                         (0, i.jsx)(l.animated.div, {
                             style: {
-                                opacity: M.to([0, 1], [1, 0])
+                                opacity: y.to([0, 1], [1, 0])
                             },
                             className: S.textOverflowBlur
                         })
