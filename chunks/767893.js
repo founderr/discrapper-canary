@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return C;
+        return f;
     }
 });
 var i = n(735250),
@@ -16,63 +16,64 @@ var i = n(735250),
     E = n(565138),
     I = n(430824),
     m = n(594174),
-    T = n(689938),
-    N = n(239048);
-let h = {
+    T = n(686478),
+    N = n(689938),
+    h = n(239048);
+let C = {
     top: 8,
     bottom: 8,
     left: -4,
     right: -4
 };
-function C(e) {
+function f(e) {
     let { channel: t, children: n } = e;
     return (0, i.jsx)(r.tE, {
-        offset: h,
+        offset: C,
         children: (0, i.jsxs)('div', {
-            className: N.channelHeader,
+            className: h.channelHeader,
             'data-recents-channel': t.id,
-            children: [(0, i.jsx)(f, { channel: t }), t.isPrivate() ? null : (0, i.jsx)(l.Fbu, { size: 'xxs' }), (0, i.jsx)(p, { channel: t }), n]
+            children: [(0, i.jsx)(p, { channel: t }), t.isPrivate() ? null : (0, i.jsx)(l.Fbu, { size: 'xxs' }), (0, i.jsx)(g, { channel: t }), n]
         })
     });
 }
-function f(e) {
+function p(e) {
     let { channel: t } = e,
         n = (0, o.e7)([m.default], () => (t.isDM() ? m.default.getUser(t.getRecipientId()) : null)),
         s = (0, o.e7)([I.Z], () => I.Z.getGuild(t.guild_id));
     if (null != s)
         return (0, i.jsx)(E.Z, {
-            className: N.icon,
+            className: h.icon,
             guild: s,
             size: E.Z.Sizes.SMALLER,
             'aria-hidden': !0
         });
-    if (null != n)
+    if (null != n || t.guild_id === T.Dw)
         return (0, i.jsx)('div', {
-            className: a()(N.icon, N.dmIcon),
+            className: a()(h.icon, h.dmIcon),
             children: (0, i.jsx)(l.kBi, { size: 'xxs' })
         });
     let r = (0, u.x)(t);
     return (0, i.jsx)('img', {
-        className: N.icon,
+        className: h.icon,
         src: r,
         alt: '',
         'aria-hidden': !0
     });
 }
-function p(e) {
+function g(e) {
     let { channel: t } = e,
         n = (0, o.e7)([I.Z], () => I.Z.getGuild(t.guild_id)),
         s = (0, d.ZP)(t, !1),
         a = (0, _.KS)(t, n),
         r = t.isPrivate() || null == a,
-        l = t.isDM() ? T.Z.Messages.FOR_LATER_DIRECT_MESSAGE_WITH.format({ username: s }) : s;
+        l = t.isDM() ? N.Z.Messages.FOR_LATER_DIRECT_MESSAGE_WITH.format({ username: s }) : s;
     return (0, i.jsxs)('div', {
-        className: N.channelNameSection,
+        className: h.channelNameSection,
         children: [
             r
                 ? null
                 : (0, i.jsx)(a, {
-                      className: N.channelTypeIcon,
+                      className: h.channelTypeIcon,
                       size: 'xxs'
                   }),
             (0, i.jsx)(c.Heading, {
