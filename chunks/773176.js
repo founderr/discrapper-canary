@@ -134,7 +134,8 @@ let eo = s.memo(function (e) {
                         animated: e.animated,
                         size: 'reaction',
                         alt: '',
-                        className: ei.emoji
+                        className: ei.emoji,
+                        canSelect: !1
                     })
                 },
                 ''.concat(null !== (s = e.id) && void 0 !== s ? s : 0, ':').concat(e.name)

@@ -57,32 +57,47 @@ class S extends (r = a.PureComponent) {
         if (null != r) return p.ZP.getURL(r);
     }
     render() {
-        var e;
-        let t;
-        let { emojiName: n, animated: r, className: s, size: l = 'default', alt: u, shouldAnimate: c, isFocused: d, emojiId: _, autoplay: E, isInteracting: f, ...h } = this.props,
-            p = this.getSrc();
-        return null == p || '' === p
-            ? (0, i.jsx)('span', {
-                  className: o()('emoji', 'emoji-text'),
-                  children: n
+        var e, t;
+        let n, r;
+        let { emojiName: a, animated: s, className: l, size: u = 'default', alt: c, canSelect: d = !0, shouldAnimate: _, isFocused: E, emojiId: f, autoplay: h, isInteracting: p, ...I } = this.props,
+            m = this.getSrc();
+        if (null == m || '' === m)
+            return (0, i.jsx)('span', {
+                className: o()('emoji', 'emoji-text'),
+                children: a
+            });
+        s &&
+            (n = {
+                onMouseEnter: this.onMouseEnter,
+                onMouseLeave: this.onMouseLeave
+            }),
+            (r = null != f && '' !== f ? { 'data-id': f } : { 'data-name': a });
+        let T = {
+            ...I,
+            key: this.key,
+            className: o()('emoji', l, { jumboable: 'jumbo' === u }),
+            onError: this.onError,
+            ...n,
+            'data-type': 'emoji',
+            ...r
+        };
+        return d
+            ? (0, i.jsx)('img', {
+                  ...T,
+                  src: m,
+                  alt: null !== (e = null != c ? c : a) && void 0 !== e ? e : void 0,
+                  draggable: !1
               })
-            : (r &&
-                  (t = {
-                      onMouseEnter: this.onMouseEnter,
-                      onMouseLeave: this.onMouseLeave
-                  }),
-              (0, a.createElement)('img', {
-                  ...h,
-                  key: this.key,
-                  src: p,
-                  alt: null !== (e = null != u ? u : n) && void 0 !== e ? e : void 0,
-                  draggable: !1,
-                  ...t,
-                  className: o()('emoji', s, { jumboable: 'jumbo' === l }),
-                  onError: this.onError,
-                  'data-type': 'emoji',
-                  ...(null != _ && '' !== _ ? { 'data-id': _ } : { 'data-name': n })
-              }));
+            : (0, i.jsx)('div', {
+                  ...T,
+                  role: 'img',
+                  'aria-label': null !== (t = null != c ? c : a) && void 0 !== t ? t : void 0,
+                  style: {
+                      backgroundImage: 'url('.concat(m, ')'),
+                      backgroundSize: 'contain',
+                      backgroundRepeat: 'no-repeat'
+                  }
+              });
     }
     constructor(...e) {
         super(...e),
