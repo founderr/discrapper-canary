@@ -185,46 +185,48 @@ function B(e) {
         [W, K] = i.useState(!1),
         z = i.useRef(null),
         [q, Q] = i.useState(!1),
-        X = (0, L.GN)((e) => e.savedGuildIds.includes(n.id), o.Z),
-        $ = (0, f.iN)('guild_card'),
-        J = i.useCallback(
+        [X, $] = i.useState(!1),
+        J = (0, L.GN)((e) => e.savedGuildIds.includes(n.id), o.Z),
+        ee = (0, f.iN)('guild_card'),
+        et = i.useCallback(
             (e) => {
                 e.stopPropagation(),
                     e.preventDefault(),
+                    $(!0),
                     (0, E.j$)({
                         position: S,
                         guildId: n.id,
-                        isFavorited: !X
+                        isFavorited: !J
                     }),
-                    (0, L.qQ)(n.id, !X);
+                    (0, L.qQ)(n.id, !J);
             },
-            [n.id, X, S]
+            [n.id, J, S]
         ),
-        ee = i.useCallback(() => {
+        en = i.useCallback(() => {
             K(!0);
         }, []),
-        et = i.useCallback(() => {
+        er = i.useCallback(() => {
             K(!1);
         }, []),
-        en = P.Z.Messages.CLAN_DISCOVERY_MEMBER_COUNT.format({ count: n.memberCount }),
-        er = null != R ? R : (0, I.pY)(n.id, H),
-        ei = null == a && null == er ? { background: 'linear-gradient(90deg, '.concat(F, ', ').concat(V, ')') } : void 0,
-        ea =
+        ei = P.Z.Messages.CLAN_DISCOVERY_MEMBER_COUNT.format({ count: n.memberCount }),
+        ea = null != R ? R : (0, I.pY)(n.id, H),
+        es = null == a && null == ea ? { background: 'linear-gradient(90deg, '.concat(F, ', ').concat(V, ')') } : void 0,
+        eo =
             null != a
                 ? a
-                : null != er
+                : null != ea
                   ? (0, r.jsx)('img', {
                         alt: P.Z.Messages.CLAN_LOOK_BANNER,
-                        src: er,
+                        src: ea,
                         className: U.bannerImage
                     })
                   : null,
-        es = i.useMemo(() => (0, M.HR)(n.traits, d), [n.traits, d]);
+        el = i.useMemo(() => (0, M.HR)(n.traits, d), [n.traits, d]);
     i.useEffect(() => {
         let e = z.current;
         null != e && null != e.offsetWidth && null != e.scrollWidth && Q(e.offsetWidth < e.scrollWidth);
     }, []);
-    let eo = i.useCallback(
+    let eu = i.useCallback(
             (e) => () => {
                 (0, E.Gh)({
                     position: S,
@@ -234,28 +236,31 @@ function B(e) {
             },
             [S, n.id]
         ),
-        el = $ && (O || W || X);
+        ec = ee && (O || W || J);
     return (0, r.jsxs)('div', {
         className: s()(U.card, p, { [U.cardStaticHeight]: !u }),
-        onMouseEnter: ee,
-        onMouseLeave: et,
+        onMouseEnter: en,
+        onMouseLeave: er,
         children: [
             (0, r.jsxs)('div', {
                 className: U.cardBrandingHeader,
-                style: ei,
+                style: es,
                 children: [
-                    ea,
+                    eo,
                     (0, r.jsx)(k, {
                         hasPendingJoinRequest: C,
                         atMaxMemberCapacity: D,
                         isGuildMember: c
                     }),
-                    $ &&
+                    ee &&
                         (0, r.jsx)(l.Clickable, {
-                            className: s()(U.favoriteButton, el && U.shownFavoriteButton),
-                            onClick: J,
-                            focusProps: { enabled: el },
-                            children: X
+                            className: s()(U.favoriteButton, ec && U.shownFavoriteButton, {
+                                [U.animateButtonIn]: X && J,
+                                [U.animateButtonOut]: X && !J
+                            }),
+                            onClick: et,
+                            focusProps: { enabled: ec },
+                            children: J
                                 ? (0, r.jsx)(l.HeartIcon, {
                                       color: l.tokens.colors.INFO_DANGER_FOREGROUND,
                                       size: 'custom',
@@ -301,7 +306,7 @@ function B(e) {
                                         children: (0, r.jsx)(l.Tooltip, {
                                             text: P.Z.Messages.CLAN_DISCOVERY_CARD_TAG_TOOLTIP,
                                             position: 'top',
-                                            onTooltipShow: eo('tag'),
+                                            onTooltipShow: eu('tag'),
                                             shouldShow: !c && j,
                                             children: (e) =>
                                                 (0, r.jsxs)('div', {
@@ -374,7 +379,7 @@ function B(e) {
                         expanded: u
                     }),
                     (0, r.jsx)(G, {
-                        traits: es,
+                        traits: el,
                         traitsToHighlight: d
                     })
                 ]
@@ -389,7 +394,7 @@ function B(e) {
                             children: (0, r.jsx)(l.Text, {
                                 variant: 'text-xs/normal',
                                 color: 'text-muted',
-                                children: en
+                                children: ei
                             })
                         })
                     }),

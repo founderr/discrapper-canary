@@ -19718,6 +19718,11 @@ html.decorate-links .lowSaturationUnderline_c7819f {
     transform: translatey(-2px)scale(.99)
 }
 
+.clickableCard_e0fe28:active .card_e0fe28:has(.favoriteButton_e0fe28:hover) {
+    box-shadow: var(--shadow-high);
+    transform: translatey(-2px)
+}
+
 .card_e0fe28 {
     min-width: 240px;
     max-width: 500px;
@@ -19979,6 +19984,42 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 .selectedTrait_e0fe28:hover,
 .selectedTrait_e0fe28:active {
     border-color: var(--border-strong)
+}
+
+.full-motion .animateButtonIn_e0fe28 {
+    animation: pulseIn_e0fe28.3s
+}
+
+.full-motion .animateButtonOut_e0fe28 {
+    animation: pulseOut_e0fe28.2s
+}
+
+@keyframes pulseIn_e0fe28 {
+    0% {
+        transform: scale(1)
+    }
+
+    50% {
+        transform: scale(.9)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+@keyframes pulseOut_e0fe28 {
+    0% {
+        transform: scale(1)
+    }
+
+    50% {
+        transform: scale(.95)
+    }
+
+    to {
+        transform: scale(1)
+    }
 }
 
 .customButton_ff01f0 {

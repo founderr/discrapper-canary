@@ -1,8 +1,8 @@
 e.exports = {
     clickableCard: 'clickableCard_e0fe28',
     card: 'card_e0fe28',
-    skeletonCard: 'skeletonCard_e0fe28',
     favoriteButton: 'favoriteButton_e0fe28',
+    skeletonCard: 'skeletonCard_e0fe28',
     shownFavoriteButton: 'shownFavoriteButton_e0fe28',
     cardStaticHeight: 'cardStaticHeight_e0fe28',
     clanIconMask: 'clanIconMask_e0fe28',
@@ -30,5 +30,7 @@ e.exports = {
     wildCardText: 'wildCardText_e0fe28',
     nameText: 'nameText_e0fe28',
     bannerImage: 'bannerImage_e0fe28',
-    selectedTrait: 'selectedTrait_e0fe28'
+    selectedTrait: 'selectedTrait_e0fe28',
+    animateButtonIn: 'animateButtonIn_e0fe28',
+    animateButtonOut: 'animateButtonOut_e0fe28'
 };
