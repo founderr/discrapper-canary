@@ -3626,6 +3626,7 @@ e.exports = Object.freeze({
     SUB_ENABLED_SERVERS: 'Sub Enabled Servers',
     AUTHORIZATION: 'Authorization',
     AUTHORIZED_APPS: 'Authorized Apps',
+    AUTHORIZED_APPS_AUTHORIZED_ON: 'Authorized on {date}',
     MANAGE_AUTHORIZED_APP: 'Manage Authorized App',
     DEAUTHORIZE: 'Deauthorize',
     DEAUTHORIZE_APP: 'Deauthorize Application',
