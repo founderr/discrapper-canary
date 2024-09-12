@@ -1,47 +1,47 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
-        return h;
+        return f;
     }
 });
-var r = n(735250);
-n(470079);
-var i = n(442837),
-    a = n(481060),
-    s = n(493683),
-    o = n(40851),
-    l = n(740492),
-    u = n(314897),
-    c = n(592125),
-    d = n(699516),
-    _ = n(944486),
-    E = n(981631),
-    f = n(689938);
-function h(e) {
-    let { user: t, context: h, label: p, joinCallVideo: I, id: m, onCall: T } = e,
-        S = (0, o.Aq)(),
-        g = (0, i.e7)([u.default], () => u.default.getId() === t.id),
-        A = (0, i.e7)([d.Z], () => d.Z.isBlocked(t.id)),
-        N = (0, i.e7)([_.Z, c.Z], () => _.Z.getVoiceChannelId() === c.Z.getDMFromUserId(t.id));
-    if (g || h === E.IlC.POPOUT || N || t.bot) return null;
+var l = t(735250);
+t(470079);
+var i = t(442837),
+    a = t(481060),
+    s = t(493683),
+    o = t(40851),
+    u = t(740492),
+    d = t(314897),
+    r = t(592125),
+    c = t(699516),
+    Z = t(944486),
+    E = t(981631),
+    M = t(689938);
+function f(e) {
+    let { user: n, context: f, label: _, joinCallVideo: I, id: g, onCall: A } = e,
+        N = (0, o.Aq)(),
+        m = (0, i.e7)([d.default], () => d.default.getId() === n.id),
+        C = (0, i.e7)([c.Z], () => c.Z.isBlocked(n.id)),
+        T = (0, i.e7)([Z.Z, r.Z], () => Z.Z.getVoiceChannelId() === r.Z.getDMFromUserId(n.id));
+    if (m || f === E.IlC.POPOUT || T || n.bot) return null;
     let O = () => {
-            null == T || T(), s.Z.openPrivateChannel(t.id, !0, I), S.dispatch(E.CkL.POPOUT_CLOSE), (0, a.closeAllModals)();
+            null == A || A(), s.Z.openPrivateChannel(n.id, !0, I), N.dispatch(E.CkL.POPOUT_CLOSE), (0, a.closeAllModals)();
         },
-        R = !l.ZP.disableCallUserConfirmationPrompt;
-    return (0, r.jsx)(a.MenuItem, {
-        id: null != m ? m : 'call',
-        label: null != p ? p : f.Z.Messages.CALL,
-        action: R
+        v = !u.ZP.disableCallUserConfirmationPrompt;
+    return (0, l.jsx)(a.MenuItem, {
+        id: null != g ? g : 'call',
+        label: null != _ ? _ : M.Z.Messages.CALL,
+        action: v
             ? () => {
                   (0, a.openModalLazy)(async () => {
-                      let { default: e } = await n.e('27157').then(n.bind(n, 736454));
-                      return (t) =>
-                          (0, r.jsx)(e, {
+                      let { default: e } = await t.e('27157').then(t.bind(t, 736454));
+                      return (n) =>
+                          (0, l.jsx)(e, {
                               onSubmit: O,
-                              ...t
+                              ...n
                           });
                   });
               }
             : O,
-        disabled: A
+        disabled: C
     });
 }

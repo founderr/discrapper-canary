@@ -15,7 +15,7 @@ class u extends r.Z {
             n = s.g.getCurrentConfig(
                 { location: 'maybeFetchActiveOutboundPromotions' },
                 {
-                    autoTrackExposure: !t,
+                    autoTrackExposure: !1,
                     disable: t
                 }
             ).enabled;

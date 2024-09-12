@@ -4,9 +4,9 @@ l.d(n, {
     }
 });
 var t = l(735250),
-    r = l(470079),
+    a = l(470079),
     i = l(442837),
-    a = l(481060),
+    r = l(481060),
     s = l(58540),
     u = l(438536),
     d = l(346479),
@@ -15,35 +15,35 @@ var t = l(735250),
     Z = l(430824),
     E = l(496675),
     M = l(594174),
-    _ = l(981631),
-    f = l(689938);
+    f = l(981631),
+    _ = l(689938);
 function g(e, n, g) {
-    let I = r.useMemo(() => ({ [n]: [e.id] }), [n, e.id]);
+    let I = a.useMemo(() => ({ [n]: [e.id] }), [n, e.id]);
     (0, s.$)(I), (0, i.e7)([E.Z], () => E.Z.getGuildVersion(n), [n]);
     let m = (0, i.e7)([c.Z], () => c.Z.getChannel(g)),
         R = (0, i.e7)([Z.Z], () => Z.Z.getGuild(n), [n]),
         N = (0, i.e7)([M.default], () => M.default.getCurrentUser()),
-        A = (0, u.Z)(m, 'Context Menu'),
+        C = (0, u.Z)(m, 'Context Menu'),
         O = (0, o.Xb)(m);
-    if ((null == N ? void 0 : N.id) === e.id) return [A];
+    if ((null == N ? void 0 : N.id) === e.id) return [C];
     if (null == R || null == m || null == N) return [];
-    let C = O || (m.ownerId === N.id && m.type === _.d4z.PRIVATE_THREAD);
+    let A = O || (m.ownerId === N.id && m.type === f.d4z.PRIVATE_THREAD);
     return [
-        C
-            ? (0, t.jsx)(a.MenuItem, {
+        A
+            ? (0, t.jsx)(r.MenuItem, {
                   id: 'remove',
-                  label: m.isForumPost() ? f.Z.Messages.REMOVE_USER_FROM_FORUM_POST.format({ user: e.username }) : f.Z.Messages.REMOVE_USER_FROM_THREAD.format({ user: e.username }),
+                  label: m.isForumPost() ? _.Z.Messages.REMOVE_USER_FROM_FORUM_POST.format({ user: e.username }) : _.Z.Messages.REMOVE_USER_FROM_THREAD.format({ user: e.username }),
                   color: 'danger',
                   action: () => d.Z.removeMember(m, e.id, 'Context Menu')
               })
             : null,
-        E.Z.canManageUser(_.Plq.KICK_MEMBERS, e, R)
-            ? (0, t.jsx)(a.MenuItem, {
+        E.Z.canManageUser(f.Plq.KICK_MEMBERS, e, R)
+            ? (0, t.jsx)(r.MenuItem, {
                   id: 'kick',
-                  label: C ? f.Z.Messages.KICK_USER_FROM_SERVER.format({ user: e.username }) : f.Z.Messages.KICK_USER.format({ user: e.username }),
+                  label: A ? _.Z.Messages.KICK_USER_FROM_SERVER.format({ user: e.username }) : _.Z.Messages.KICK_USER.format({ user: e.username }),
                   color: 'danger',
                   action: () =>
-                      (0, a.openModalLazy)(async () => {
+                      (0, r.openModalLazy)(async () => {
                           let { default: n } = await l.e('5454').then(l.bind(l, 854360));
                           return (l) =>
                               (0, t.jsx)(n, {
@@ -54,13 +54,13 @@ function g(e, n, g) {
                       })
               })
             : null,
-        E.Z.canManageUser(_.Plq.BAN_MEMBERS, e, R)
-            ? (0, t.jsx)(a.MenuItem, {
+        E.Z.canManageUser(f.Plq.BAN_MEMBERS, e, R)
+            ? (0, t.jsx)(r.MenuItem, {
                   id: 'ban',
-                  label: C ? f.Z.Messages.BAN_USER_FROM_SERVER.format({ user: e.username }) : f.Z.Messages.BAN_USER.format({ user: e.username }),
+                  label: A ? _.Z.Messages.BAN_USER_FROM_SERVER.format({ user: e.username }) : _.Z.Messages.BAN_USER.format({ user: e.username }),
                   color: 'danger',
                   action: () =>
-                      (0, a.openModalLazy)(async () => {
+                      (0, r.openModalLazy)(async () => {
                           let { default: n } = await l.e('43350').then(l.bind(l, 98746));
                           return (l) =>
                               (0, t.jsx)(n, {

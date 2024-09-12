@@ -79,7 +79,7 @@ t.ZP = o.memo(function (e) {
         k = (0, A.GN)((e) => e.selectedTraits, u.Z),
         B = (0, A.GN)((e) => e.selectedGames, u.Z),
         H = (0, h.Z)(U),
-        { currentPage: V, updatePage: F, totalItems: Y, pageSize: W } = (0, N.$)(),
+        { currentPage: V, updatePage: F, totalItems: Y, pageSize: W } = (0, N.a)(),
         z = (0, _.e7)([I.default], () => I.default.getCurrentUser());
     o.useEffect(() => {
         if (null != U && !!(0, L.Pw)(U)) (!(null != H && (0, L.Pw)(H)) || !(H.loadedAt >= U.loadedAt)) && (0, m.Oe)('top_picks', G);

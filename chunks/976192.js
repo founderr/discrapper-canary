@@ -4,9 +4,9 @@ l.d(n, {
     }
 });
 var t = l(735250),
-    r = l(470079),
+    a = l(470079),
     i = l(442837),
-    a = l(481060),
+    r = l(481060),
     s = l(58540),
     u = l(40851),
     d = l(300284),
@@ -15,46 +15,46 @@ var t = l(735250),
     Z = l(271383),
     E = l(430824),
     M = l(496675),
-    _ = l(594174),
-    f = l(981631),
+    f = l(594174),
+    _ = l(981631),
     g = l(689938),
     I = l(745974);
 function m(e) {
-    let { guildId: n, userId: m, analyticsLocation: R, analyticsLocations: N, context: A, icon: O } = e,
-        C = E.Z.getGuild(n),
+    let { guildId: n, userId: m, analyticsLocation: R, analyticsLocations: N, context: C, icon: O } = e,
+        A = E.Z.getGuild(n),
         T = c.default.getId(),
-        h = (0, i.e7)([_.default], () => _.default.getUser(m)),
+        h = (0, i.e7)([f.default], () => f.default.getUser(m)),
         v = (0, i.e7)([Z.ZP], () => Z.ZP.isGuestOrLurker(n, m), [n, m]);
     (0, i.e7)([M.Z], () => M.Z.getGuildVersion(n), [n]);
-    let x = r.useMemo(() => ({ [n]: [m] }), [n, m]);
+    let x = a.useMemo(() => ({ [n]: [m] }), [n, m]);
     (0, s.$)(x);
-    let S = A === f.IlC.POPOUT,
-        p = (0, d.Z)({
-            guild: C,
+    let b = C === _.IlC.POPOUT,
+        S = (0, d.Z)({
+            guild: A,
             analyticsLocation: R
         }),
-        b = (0, u.Aq)();
-    if (null == C || S) return null;
-    let U = T === m && (M.Z.can(f.Plq.CHANGE_NICKNAME, C) || M.Z.can(f.Plq.MANAGE_NICKNAMES, C)),
-        P = T === m,
-        j = M.Z.canManageUser(f.Plq.MANAGE_NICKNAMES, m, C);
-    if (!(U || j || P) || null == h || v) return null;
-    let D = C.hasFeature(f.oNc.HUB) ? g.Z.Messages.HUB_EDIT_PROFILE : g.Z.Messages.CHANGE_IDENTITY,
-        L = P ? D : g.Z.Messages.CHANGE_NICKNAME;
-    return (0, t.jsx)(a.MenuItem, {
+        p = (0, u.Aq)();
+    if (null == A || b) return null;
+    let P = T === m && (M.Z.can(_.Plq.CHANGE_NICKNAME, A) || M.Z.can(_.Plq.MANAGE_NICKNAMES, A)),
+        U = T === m,
+        j = M.Z.canManageUser(_.Plq.MANAGE_NICKNAMES, m, A);
+    if (!(P || j || U) || null == h || v) return null;
+    let L = A.hasFeature(_.oNc.HUB) ? g.Z.Messages.HUB_EDIT_PROFILE : g.Z.Messages.CHANGE_IDENTITY,
+        D = U ? L : g.Z.Messages.CHANGE_NICKNAME;
+    return (0, t.jsx)(r.MenuItem, {
         id: 'change-nickname',
         label: (0, t.jsx)('div', {
             className: I.labelWrapper,
             children: (0, t.jsx)('span', {
                 className: I.label,
-                children: L
+                children: D
             })
         }),
         icon: O,
         action: () => {
-            P
-                ? ((0, o.Z)(h.id, h.getAvatarURL(n, 80), { guildId: n }), p(), b.dispatch(f.CkL.POPOUT_CLOSE), (0, a.closeAllModals)())
-                : (0, a.openModalLazy)(async () => {
+            U
+                ? ((0, o.Z)(h.id, h.getAvatarURL(n, 80), { guildId: n }), S(), p.dispatch(_.CkL.POPOUT_CLOSE), (0, r.closeAllModals)())
+                : (0, r.openModalLazy)(async () => {
                       let { default: e } = await l.e('17712').then(l.bind(l, 620021));
                       return (l) =>
                           (0, t.jsx)(e, {

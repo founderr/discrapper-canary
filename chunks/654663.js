@@ -1,9 +1,9 @@
 l.r(n);
 var t = l(735250);
 l(470079);
-var r = l(481060),
+var a = l(481060),
     i = l(239091),
-    a = l(883385),
+    r = l(883385),
     s = l(108843),
     u = l(911969),
     d = l(947440),
@@ -12,44 +12,44 @@ var r = l(481060),
     Z = l(976192),
     E = l(819403),
     M = l(777658),
-    _ = l(858488),
-    f = l(185457),
+    f = l(858488),
+    _ = l(185457),
     g = l(570870),
     I = l(389052),
     m = l(24311),
     R = l(710631),
     N = l(297047),
-    A = l(88966),
+    C = l(88966),
     O = l(712301),
-    C = l(520063),
+    A = l(520063),
     T = l(725119),
     h = l(931617),
     v = l(332031),
     x = l(981631),
-    S = l(689938);
+    b = l(689938);
 n.default = (0, s.Z)(
-    (0, a.Z)(
+    (0, r.Z)(
         function (e) {
-            let { user: n, guildId: l, channel: a, context: s, onSelect: o, onHeightUpdate: p } = e,
-                b = (0, T.Z)({
+            let { user: n, guildId: l, channel: r, context: s, onSelect: o, onHeightUpdate: S } = e,
+                p = (0, T.Z)({
                     userId: n.id,
                     guildId: l,
-                    channelId: a.id
+                    channelId: r.id
                 }),
-                U = (0, N.Z)(n, l, s),
-                P = (0, A.Z)(n.id, s),
+                P = (0, N.Z)(n, l, s),
+                U = (0, C.Z)(n.id, s),
                 j = (0, v.Z)(n.id),
-                D = (0, m.Z)({
+                L = (0, m.Z)({
                     user: n,
                     context: s
                 }),
-                L = (0, f.Z)({
+                D = (0, _.Z)({
                     user: n,
                     guildId: l,
-                    channelId: a.id,
+                    channelId: r.id,
                     context: s
                 }),
-                G = (0, _.Z)({ user: n }),
+                G = (0, f.Z)({ user: n }),
                 F = (0, Z.Z)({
                     guildId: l,
                     userId: n.id,
@@ -67,46 +67,46 @@ n.default = (0, s.Z)(
                 y = (0, d.Z)(null, n),
                 V = (0, M.Z)(n),
                 K = (0, I.Z)({ user: n }),
-                H = (0, C.Z)(n, l, a.id),
-                B = (0, h.Z)(n.id, l),
+                B = (0, A.Z)(n, l, r.id),
+                H = (0, h.Z)(n.id, l),
                 q = (0, O.Z)(n, l),
                 w = (0, c.Z)({
                     id: n.id,
-                    label: S.Z.Messages.COPY_ID_USER
+                    label: b.Z.Messages.COPY_ID_USER
                 }),
                 Y = (0, E.Z)(n),
                 W = (0, g.Z)({
                     commandType: u.yU.USER,
                     commandTargetId: n.id,
-                    channel: a,
+                    channel: r,
                     guildId: l,
-                    onHeightUpdate: p
+                    onHeightUpdate: S
                 }),
                 z = n.isNonUserBot();
-            return (0, t.jsxs)(r.Menu, {
+            return (0, t.jsxs)(a.Menu, {
                 navId: 'user-context',
                 onClose: i.Zy,
-                'aria-label': S.Z.Messages.USER_ACTIONS_MENU_LABEL,
+                'aria-label': b.Z.Messages.USER_ACTIONS_MENU_LABEL,
                 onSelect: o,
                 children: [
                     !z &&
                         (0, t.jsxs)(t.Fragment, {
                             children: [
-                                (0, t.jsx)(r.MenuGroup, { children: Y }),
-                                (0, t.jsxs)(r.MenuGroup, {
-                                    children: [b, U, P, D, L, G, j]
+                                (0, t.jsx)(a.MenuGroup, { children: Y }),
+                                (0, t.jsxs)(a.MenuGroup, {
+                                    children: [p, P, U, L, D, G, j]
                                 }),
-                                (0, t.jsx)(r.MenuGroup, { children: y }),
-                                (0, t.jsxs)(r.MenuGroup, {
+                                (0, t.jsx)(a.MenuGroup, { children: y }),
+                                (0, t.jsxs)(a.MenuGroup, {
                                     children: [F, W, k, V, K]
                                 }),
-                                (0, t.jsx)(r.MenuGroup, { children: H }),
-                                (0, t.jsxs)(r.MenuGroup, {
-                                    children: [B, q]
+                                (0, t.jsx)(a.MenuGroup, { children: B }),
+                                (0, t.jsxs)(a.MenuGroup, {
+                                    children: [H, q]
                                 })
                             ]
                         }),
-                    (0, t.jsx)(r.MenuGroup, { children: w })
+                    (0, t.jsx)(a.MenuGroup, { children: w })
                 ]
             });
         },

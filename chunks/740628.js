@@ -1,68 +1,68 @@
-s.d(n, {
+t.d(n, {
     Z: function () {
         return S;
     }
 }),
-    s(47120);
-var t = s(735250),
-    i = s(470079),
-    o = s(442837),
-    l = s(706898),
-    r = s(481060),
-    a = s(246946),
-    c = s(785717),
-    d = s(786366),
-    u = s(323090),
-    I = s(296391),
-    _ = s(384816),
-    E = s(389190),
-    f = s(428927),
-    x = s(228168),
-    m = s(689938),
-    Z = s(519294),
-    p = s(722849);
+    t(47120);
+var s = t(735250),
+    i = t(470079),
+    o = t(442837),
+    l = t(706898),
+    r = t(481060),
+    a = t(246946),
+    c = t(785717),
+    d = t(786366),
+    u = t(323090),
+    _ = t(296391),
+    I = t(384816),
+    E = t(389190),
+    f = t(428927),
+    m = t(228168),
+    x = t(689938),
+    Z = t(519294),
+    p = t(722849);
 function h(e) {
-    let { section: n, subsection: s, user: i, currentUser: o, displayProfile: l, onClose: r } = e;
-    return n === x.oh.ACTIVITY
-        ? (0, t.jsx)(I.Z, {
+    let { section: n, subsection: t, user: i, currentUser: o, displayProfile: l, onClose: r } = e;
+    return n === m.oh.ACTIVITY
+        ? (0, s.jsx)(_.Z, {
               user: i,
               currentUser: o,
               onClose: r
           })
-        : n === x.oh.MUTUAL_FRIENDS
-          ? (0, t.jsx)(E.Z, {
+        : n === m.oh.MUTUAL_FRIENDS
+          ? (0, s.jsx)(E.Z, {
                 user: i,
                 onClose: r
             })
-          : n === x.oh.MUTUAL_GUILDS
-            ? (0, t.jsx)(f.Z, {
+          : n === m.oh.MUTUAL_GUILDS
+            ? (0, s.jsx)(f.Z, {
                   user: i,
                   onClose: r
               })
-            : n === x.oh.BOT_DATA_ACCESS
-              ? (0, t.jsx)(d.Z, { user: i })
-              : n === x.oh.BOT_INFO
-                ? (0, t.jsx)(u.Z, {
+            : n === m.oh.BOT_DATA_ACCESS
+              ? (0, s.jsx)(d.Z, { user: i })
+              : n === m.oh.BOT_INFO
+                ? (0, s.jsx)(u.Z, {
                       user: i,
                       currentUser: o,
                       displayProfile: l,
-                      subsection: s,
+                      subsection: t,
                       onClose: r
                   })
-                : (0, t.jsx)(_.Z, {
+                : (0, s.jsx)(I.Z, {
                       user: i,
                       currentUser: o,
                       displayProfile: l,
-                      subsection: s,
+                      subsection: t,
                       onClose: r
                   });
 }
 function S(e) {
-    var n, s, d;
-    let { user: u, currentUser: I, displayProfile: _, items: E, initialSection: f = x.oh.USER_INFO, initialSubsection: S, onClose: v } = e,
+    var n, t, d;
+    let { user: u, currentUser: _, displayProfile: I, items: E, initialSection: f = m.oh.USER_INFO, initialSubsection: S, onClose: v } = e,
         { trackUserProfileAction: T } = (0, c.KZ)(),
         g = (0, o.e7)([a.Z], () => a.Z.hidePersonalInformation),
-        [{ section: A, subsection: N }, j] = i.useState({
+        [{ section: A, subsection: N }, L] = i.useState({
             section:
                 null !==
                     (d =
@@ -74,14 +74,14 @@ function S(e) {
                             ? void 0
                             : n.section) && void 0 !== d
                     ? d
-                    : null === (s = E[0]) || void 0 === s
+                    : null === (t = E[0]) || void 0 === t
                       ? void 0
-                      : s.section,
+                      : t.section,
             subsection: S
         });
     i.useEffect(() => {
         if (null == E.find((e) => e.section === A))
-            j({
+            L({
                 section: E[0].section,
                 subsection: void 0
             });
@@ -92,59 +92,59 @@ function S(e) {
                 action: 'PRESS_SECTION',
                 section: e
             }),
-                j({
+                L({
                     section: e,
                     subsection: void 0
                 });
         },
-        [T, j]
+        [T, L]
     );
     return g
-        ? (0, t.jsx)('div', {
+        ? (0, s.jsx)('div', {
               className: p.container,
-              children: (0, t.jsxs)('div', {
+              children: (0, s.jsxs)('div', {
                   className: Z.empty,
                   children: [
-                      (0, t.jsx)('div', { className: Z.emptyIconStreamerMode }),
-                      (0, t.jsx)('div', {
+                      (0, s.jsx)('div', { className: Z.emptyIconStreamerMode }),
+                      (0, s.jsx)('div', {
                           className: Z.emptyText,
-                          children: m.Z.Messages.STREAMER_MODE_ENABLED
+                          children: x.Z.Messages.STREAMER_MODE_ENABLED
                       })
                   ]
               })
           })
-        : (0, t.jsxs)('div', {
+        : (0, s.jsxs)('div', {
               className: p.container,
               children: [
-                  (0, t.jsx)(l.n, {
+                  (0, s.jsx)(l.n, {
                       className: p.tabBar,
                       type: 'top',
                       selectedItem: A,
                       onItemSelect: R,
                       children: E.map((e) => {
-                          let { section: n, text: s } = e;
-                          return (0, t.jsx)(
+                          let { section: n, text: t } = e;
+                          return (0, s.jsx)(
                               l.n.Item,
                               {
                                   className: p.tabBarItem,
                                   id: n,
-                                  'aria-label': s,
-                                  children: (0, t.jsx)(r.Text, {
+                                  'aria-label': t,
+                                  children: (0, s.jsx)(r.Text, {
                                       variant: 'text-sm/normal',
-                                      children: s
+                                      children: t
                                   })
                               },
                               n
                           );
                       })
                   }),
-                  (0, t.jsx)(h, {
+                  (0, s.jsx)(h, {
                       items: E,
                       section: A,
                       subsection: N,
                       user: u,
-                      currentUser: I,
-                      displayProfile: _,
+                      currentUser: _,
+                      displayProfile: I,
                       onClose: v
                   })
               ]

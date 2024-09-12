@@ -125,7 +125,7 @@ class Q extends s.Component {
         super(...e),
             Y(this, 'renderUserContextMenu', (e) => {
                 (0, _.jW)(e, async () => {
-                    let { default: e } = await Promise.all([n.e('79695'), n.e('90286'), n.e('12435'), n.e('53092')]).then(n.bind(n, 757387));
+                    let { default: e } = await Promise.all([n.e('79695'), n.e('92453'), n.e('12435'), n.e('53092')]).then(n.bind(n, 757387));
                     return (t) =>
                         (0, i.jsx)(e, {
                             ...t,

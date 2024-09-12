@@ -13,7 +13,7 @@ var i = n(442837),
 function u(e) {
     let t = e.isDM() && !e.isSystemDM() && !e.rawRecipients.some((e) => e.bot),
         n = t ? e.getRecipientId() : null,
-        u = (0, a.P)(e.id, 'dm_convo_starter');
+        u = (0, a.P)(e.id);
     return (0, i.e7)(
         [l.Z, s.Z, r.Z, o.default],
         () => {

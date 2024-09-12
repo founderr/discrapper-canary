@@ -26,7 +26,7 @@ function p() {
         { enabled: t, getNitroCTA: n } = m.g.useExperiment(
             { location: 'OutboundPromotionNotice' },
             {
-                autoTrackExposure: !e,
+                autoTrackExposure: !1,
                 disable: e
             }
         ),

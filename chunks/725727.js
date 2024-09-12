@@ -54,7 +54,7 @@ function I() {
             d.g.useExperiment(
                 { location: 'useOutboundPromotions' },
                 {
-                    autoTrackExposure: !O,
+                    autoTrackExposure: !1,
                     disable: O
                 }
             ).enabled || O;

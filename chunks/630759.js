@@ -68,8 +68,8 @@ var r = t(250683),
     C = t(615830),
     M = t(352954),
     h = t(571826),
-    O = t(760373),
-    g = t(981631),
+    g = t(760373),
+    O = t(981631),
     y = t(689938);
 function p(e, n, t, r, i) {
     t ? N.Z.createSecureFramesVerifiedKey(e, n) : N.Z.createSecureFramesTransientKey(e, n),
@@ -133,14 +133,14 @@ function m(e) {
 }
 function F(e) {
     let { isCurrentUserKeyPersistent: n, isOtherUserKeyPersistent: t, otherUserNickname: r } = e;
-    if (n && t) return y.Z.Messages.E2EE_PERSISTENT_VERIFICATION_DESC.format({ helpArticle: O.l4 });
+    if (n && t) return y.Z.Messages.E2EE_PERSISTENT_VERIFICATION_DESC.format({ helpArticle: g.l4 });
     if (n)
         return y.Z.Messages.E2EE_OTHER_USER_TRANSIENT_VERIFICATION_DESC.format({
             username: r,
-            helpArticle: O.l4
+            helpArticle: g.l4
         });
-    if (t) return y.Z.Messages.E2EE_CURRENT_USER_TRANSIENT_VERIFICATION_DESC.format({ helpArticle: O.l4 });
-    else return y.Z.Messages.E2EE_TRANSIENT_VERIFICATION_DESC.format({ helpArticle: O.l4 });
+    if (t) return y.Z.Messages.E2EE_CURRENT_USER_TRANSIENT_VERIFICATION_DESC.format({ helpArticle: g.l4 });
+    else return y.Z.Messages.E2EE_TRANSIENT_VERIFICATION_DESC.format({ helpArticle: g.l4 });
 }
 async function L(e) {
     let n = _.default.getStaticAuthSessionId();
@@ -154,7 +154,7 @@ async function P(e, n, t) {
     try {
         return (
             await o.tn.post({
-                url: g.ANM.VOICE_MATCH_PUBLIC_KEY(e),
+                url: O.ANM.VOICE_MATCH_PUBLIC_KEY(e),
                 body: {
                     public_key: V(n),
                     key_version: t
@@ -169,7 +169,7 @@ async function w(e) {
     let { key: n, signature: t } = await L(e);
     try {
         await o.tn.put({
-            url: g.ANM.VOICE_PUBLIC_KEYS(),
+            url: O.ANM.VOICE_PUBLIC_KEYS(),
             body: {
                 public_key: V(n),
                 signature: V(t),
@@ -214,8 +214,8 @@ function Y(e) {
     (0, h.CW)({
         userId: n,
         channelId: t,
-        keyVersion: O.GB,
-        reason: O.Xe.OTHER_USER_INCONSISTENT_KEYS
+        keyVersion: g.GB,
+        reason: g.Xe.OTHER_USER_INCONSISTENT_KEYS
     }),
         c.Z.show({
             title: y.Z.Messages.E2EE_INCONSISTENT_KEY_MISMATCH_TITLE,

@@ -95,7 +95,7 @@ function et(e) {
         em = d.length > 0 && (null === (t = d.first()) || void 0 === t ? void 0 : t.isFirstMessageInForumPost(r)),
         ep = (0, o.ts)(r),
         e_ = (0, a.e7)([S.Z], () => S.Z.shouldShowTopicsBar() && !ec),
-        ef = (0, I.P)(r.id, Q.zr),
+        ef = (0, I.P)(r.id),
         eE = (0, g.z)(r.id, Q.zr),
         eg = (0, U.Z)(),
         eC = (function (e, t) {

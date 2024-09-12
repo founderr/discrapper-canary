@@ -117,8 +117,8 @@ function g(e) {
 }
 async function p(e) {
     let t = c.Z.getSearchResult(e),
-        { resetPagination: n, updatePaginationResults: i } = d.$.getState();
-    if ('loaded' === t.status) return n(), i(t.guildIds), t;
+        { resetPagination: n, updatePaginationResults: i } = d.a.getState();
+    if ('loaded' === t.status) return n({ pageMemoryEnabled: !0 }), i(t.guildIds), t;
     let a = s().v3(JSON.stringify(e));
     try {
         var r, o;
@@ -163,7 +163,7 @@ async function T(e, t) {
                 })
             ).body.guilds.map(u.Gh),
             i = n.filter((t) => !e.some((e) => e.id === t));
-        i.length > 0 && d.$.getState().removeGuilds(i),
+        i.length > 0 && d.a.getState().removeGuilds(i),
             await l.Z.dispatch({
                 type: 'FETCH_CLAN_DISCOVERY_PROFILE_LIST_SUCCESS',
                 guilds: e,

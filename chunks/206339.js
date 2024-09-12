@@ -168,7 +168,7 @@ s.Z = function () {
             A.g.useExperiment(
                 { location: 'EntitlementGifts' },
                 {
-                    autoTrackExposure: !i,
+                    autoTrackExposure: !1,
                     disable: i
                 }
             ).enabled && W;

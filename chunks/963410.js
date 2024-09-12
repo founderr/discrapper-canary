@@ -45,19 +45,19 @@ function A(e) {
             return null === (e = o.Z.getChannel(A)) || void 0 === e ? void 0 : e.getGuildId();
         }),
         U = c.ZP.useName(x, null, p),
-        { fingerprint: b, userKey: F, loading: k } = (0, g.q)({ userId: n }),
-        j = (0, I.W)({
+        { fingerprint: b, userKey: F } = (0, g.q)({ userId: n }),
+        k = (0, I.W)({
             fingerprintBase64: b,
             chunkSize: N.iQ,
             desiredLength: N.KN
         }),
-        V = l.useCallback(() => {
+        j = l.useCallback(() => {
             (0, d.s$)({
                 userId: n,
                 channelId: A
             });
         }, [A, n]),
-        O = (0, S.wV)({
+        V = (0, S.wV)({
             userId: n,
             channelId: A,
             location: 'WebSecureFramesUserVerificationModal'
@@ -68,24 +68,24 @@ function A(e) {
         nickname: U,
         onAlertOpen: M
     });
-    let { isCurrentUserKeyPersistent: D, isOtherUserKeyPersistent: w, loading: K } = (0, E.y)({ userId: n }),
+    let { isCurrentUserKeyPersistent: O, isOtherUserKeyPersistent: D, loading: w } = (0, E.y)({ userId: n }),
+        K = l.useCallback(() => {
+            null != F && ((0, f.TQ)(n, F, D, A, T.Sbl.E2EE_USER_VERIFY_MODAL), M());
+        }, [F, n, D, A, M]),
         L = l.useCallback(() => {
-            null != F && ((0, f.TQ)(n, F, w, A, T.Sbl.E2EE_USER_VERIFY_MODAL), M());
-        }, [F, n, w, A, M]),
-        P = l.useCallback(() => {
-            null != F && ((0, f.LO)(n, F, w), M());
-        }, [F, n, w, M]),
-        [B, Y] = l.useMemo(() => (O ? [Z.Z.Messages.E2EE_VERIFIED, s.Z.BG_BRAND] : [Z.Z.Messages.NEW, s.Z.STATUS_DANGER]), [O]),
-        z = l.useMemo(
+            null != F && ((0, f.LO)(n, F, D), M());
+        }, [F, n, D, M]),
+        [P, B] = l.useMemo(() => (V ? [Z.Z.Messages.E2EE_VERIFIED, s.Z.BG_BRAND] : [Z.Z.Messages.NEW, s.Z.STATUS_DANGER]), [V]),
+        Y = l.useMemo(
             () =>
                 (0, f.kK)({
-                    isCurrentUserKeyPersistent: D,
-                    isOtherUserKeyPersistent: w,
+                    isCurrentUserKeyPersistent: O,
+                    isOtherUserKeyPersistent: D,
                     otherUserNickname: U
                 }),
-            [D, w, U]
+            [O, D, U]
         ),
-        G = (0, R.P)({
+        z = (0, R.P)({
             userId: n,
             keyToOmit: F
         });
@@ -104,11 +104,11 @@ function A(e) {
                 (0, r.jsxs)('div', {
                     className: v.verification,
                     children: [
-                        G > 0 &&
+                        z > 0 &&
                             (0, r.jsx)(u.HelpMessage, {
                                 messageType: u.HelpMessageTypes.INFO,
                                 className: v.helpMessage,
-                                children: Z.Z.Messages.E2EE_USER_EXISTING_PERSISTENT_VERIFICATIONS.format({ count: G })
+                                children: Z.Z.Messages.E2EE_USER_EXISTING_PERSISTENT_VERIFICATIONS.format({ count: z })
                             }),
                         (0, r.jsxs)('div', {
                             className: v.header,
@@ -118,31 +118,31 @@ function A(e) {
                                     color: 'header-primary',
                                     children: Z.Z.Messages.E2EE_VERIFICATION_CODE
                                 }),
-                                null != j &&
+                                null != k &&
                                     (0, r.jsx)(m.H, {
                                         className: v.copyIcon,
-                                        chunks: j,
+                                        chunks: k,
                                         color: u.tokens.colors.INTERACTIVE_NORMAL,
-                                        onCopy: V
+                                        onCopy: j
                                     }),
                                 (0, r.jsx)('div', {
                                     className: v.codeStatus,
                                     children:
-                                        K || k
+                                        null == k
                                             ? (0, r.jsx)(u.Spinner, {
                                                   className: v.spinner,
                                                   type: u.SpinnerTypes.SPINNING_CIRCLE
                                               })
                                             : (0, r.jsx)(y, {
-                                                  badgeText: B,
-                                                  badgeColor: Y
+                                                  badgeText: P,
+                                                  badgeColor: B
                                               })
                                 })
                             ]
                         }),
                         (0, r.jsx)(C.b, {
                             className: v.code,
-                            chunks: j,
+                            chunks: k,
                             columns: N.ak
                         })
                     ]
@@ -151,7 +151,7 @@ function A(e) {
                     className: v.footer,
                     variant: 'text-sm/normal',
                     color: 'text-muted',
-                    children: z
+                    children: Y
                 }),
                 (0, r.jsx)(u.Button, {
                     fullWidth: !0,
@@ -159,9 +159,9 @@ function A(e) {
                     color: u.ButtonColors.BRAND,
                     size: u.ButtonSizes.MEDIUM,
                     look: u.ButtonLooks.FILLED,
-                    disabled: null == b || K || k,
-                    onClick: O ? P : L,
-                    children: O ? Z.Z.Messages.E2EE_CLEAR_VERIFICATION : Z.Z.Messages.E2EE_MARK_AS_VERIFIED
+                    disabled: null == k || w,
+                    onClick: V ? L : K,
+                    children: V ? Z.Z.Messages.E2EE_CLEAR_VERIFICATION : Z.Z.Messages.E2EE_MARK_AS_VERIFIED
                 }),
                 (0, r.jsx)(u.Button, {
                     fullWidth: !0,
