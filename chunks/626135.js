@@ -202,14 +202,6 @@ let A = {
         throttlePeriod: 900000,
         throttleKeys: (e) => [e.tab]
     },
-    [f.rMx.BROADCAST_START_BUTTON_HOVERED]: {
-        throttlePeriod: 60000,
-        throttleKeys: () => []
-    },
-    [f.rMx.BROADCAST_LIST_VISITED]: {
-        throttlePeriod: 300000,
-        throttleKeys: () => []
-    },
     [f.rMx.CHANNEL_LIST_END_REACHED]: {
         throttlePeriod: 900000,
         throttleKeys: (e) => [e.guild_id]

@@ -1,45 +1,39 @@
 n.d(t, {
     L6: function () {
-        return F;
+        return G;
     },
     Rc: function () {
-        return k;
-    },
-    W1: function () {
-        return H;
-    },
-    WH: function () {
-        return y;
-    },
-    aP: function () {
         return w;
     },
-    dV: function () {
-        return B;
+    WH: function () {
+        return R;
     },
-    g: function () {
-        return U;
-    },
-    iV: function () {
-        return P;
-    },
-    n9: function () {
-        return x;
-    },
-    pR: function () {
+    aP: function () {
         return M;
     },
-    rn: function () {
+    dV: function () {
+        return x;
+    },
+    g: function () {
         return b;
     },
-    tE: function () {
-        return V;
+    iV: function () {
+        return D;
     },
-    tK: function () {
+    n9: function () {
+        return P;
+    },
+    pR: function () {
         return L;
     },
+    rn: function () {
+        return y;
+    },
+    tK: function () {
+        return v;
+    },
     xc: function () {
-        return G;
+        return U;
     }
 });
 var r = n(512722),
@@ -60,24 +54,23 @@ var r = n(512722),
     m = n(934415),
     T = n(70956),
     S = n(557457),
-    g = n(573261),
-    A = n(26151),
-    N = n(493683),
-    O = n(475179),
-    R = n(287734),
-    v = n(981631),
-    C = n(70722);
-function y(e, t, n) {
+    g = n(573261);
+n(26151), n(493683);
+var A = n(475179);
+n(287734);
+var N = n(981631),
+    O = n(70722);
+function R(e, t, n) {
     o.Z.dispatch({
         type: 'STREAM_START',
-        streamType: null != e ? C.lo.GUILD : C.lo.CALL,
+        streamType: null != e ? O.lo.GUILD : O.lo.CALL,
         guildId: e,
         channelId: t,
-        appContext: __OVERLAY__ ? v.IlC.OVERLAY : v.IlC.APP,
+        appContext: __OVERLAY__ ? N.IlC.OVERLAY : N.IlC.APP,
         ...n
     });
 }
-function L(e, t) {
+function v(e, t) {
     let n = (0, u.V9)(e);
     o.Z.dispatch({
         type: 'STREAM_SET_PAUSED',
@@ -85,14 +78,14 @@ function L(e, t) {
         paused: t
     });
 }
-function D(e, t) {
+function C(e, t) {
     let n = f.Z.getChannel(t);
     return i()(null != n, 'Cannot join a null voice channel'), !I.Z.isInChannel(t) && (0, m.rY)(n, I.Z, h.Z);
 }
-function b(e, t) {
+function y(e, t) {
     if (null != l.Z.getRemoteSessionId()) return;
     let { guildId: n, channelId: r } = e;
-    if (null != n && D(n, r)) return;
+    if (null != n && C(n, r)) return;
     let i = (0, u.V9)(e),
         a =
             (null == t ? void 0 : t.forceMultiple) ||
@@ -105,33 +98,33 @@ function b(e, t) {
         streamKey: i,
         allowMultiple: a
     }),
-        !a && (null == t || !t.noFocus) && O.Z.selectParticipant(e.channelId, i);
+        !a && (null == t || !t.noFocus) && A.Z.selectParticipant(e.channelId, i);
 }
-function M(e, t) {
+function L(e, t) {
     o.Z.dispatch({
         type: 'STREAM_UPDATE_SELF_HIDDEN',
         channelId: e,
         selfStreamHidden: t
     });
 }
-function P(e, t) {
+function D(e, t) {
     let { guildId: n, channelId: r } = e;
-    if (null != n && D(n, r)) return;
-    b(e, t);
-    let i = d.Z.getWindowOpen(v.KJ3.CHANNEL_CALL_POPOUT),
+    if (null != n && C(n, r)) return;
+    y(e, t);
+    let i = d.Z.getWindowOpen(N.KJ3.CHANNEL_CALL_POPOUT),
         a = p.Z.getVoiceChannelId();
     if (!i || a !== r) (0, c.Z)(e);
 }
-function U(e) {
+function b(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    w(e, t),
+    M(e, t),
         o.Z.dispatch({
             type: 'STREAM_STOP',
             streamKey: e,
-            appContext: __OVERLAY__ ? v.IlC.OVERLAY : v.IlC.APP
+            appContext: __OVERLAY__ ? N.IlC.OVERLAY : N.IlC.APP
         });
 }
-function w(e) {
+function M(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     o.Z.dispatch({
         type: 'STREAM_CLOSE',
@@ -139,9 +132,9 @@ function w(e) {
         canShowFeedback: t
     });
 }
-async function x(e, t, n) {
+async function P(e, t, n) {
     let r = (0, u.V9)({
-        streamType: null != e ? C.lo.GUILD : C.lo.CALL,
+        streamType: null != e ? O.lo.GUILD : O.lo.CALL,
         guildId: e,
         channelId: t,
         ownerId: n
@@ -152,7 +145,7 @@ async function x(e, t, n) {
     });
     try {
         let e = await s.tn.get({
-            url: v.ANM.STREAM_PREVIEW(r),
+            url: N.ANM.STREAM_PREVIEW(r),
             query: { version: Date.now() },
             oldFormErrors: !0
         });
@@ -171,61 +164,31 @@ async function x(e, t, n) {
             });
     }
 }
-async function G(e) {
+async function U(e) {
     try {
         await g.Z.post({
-            url: v.ANM.STREAM_NOTIFY(e),
+            url: N.ANM.STREAM_NOTIFY(e),
             oldFormErrors: !0,
             trackedActionData: { event: a.NetworkActionNames.STREAM_NOTIFY }
         });
     } catch (e) {}
 }
-function k(e) {
+function w(e) {
     (0, S.Ye)(e.preset, e.resolution, e.frameRate),
         o.Z.dispatch({
             type: 'STREAM_UPDATE_SETTINGS',
             ...e
         });
 }
-function B(e, t) {
+function x(e, t) {
     s.tn.patch({
-        url: v.ANM.STREAM(e),
+        url: N.ANM.STREAM(e),
         body: { region: t },
         oldFormErrors: !0
     });
 }
-function F() {
+function G() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
         t = _.Z.getCurrentUserActiveStream();
-    null != t && U((0, u.V9)(t), e);
-}
-function V(e) {
-    let { channelId: t, pid: n, sourceId: r, sourceName: i } = e;
-    (null != n || null != r || null != i) &&
-        (o.Z.dispatch({
-            type: 'START_BROADCAST_STREAM',
-            options: {
-                pid: n,
-                sourceId: r,
-                sourceName: i
-            }
-        }),
-        null == t
-            ? N.Z.createBroadcastPrivateChannel()
-            : y(null, t, {
-                  pid: n,
-                  sourceId: r,
-                  sourceName: i
-              }));
-}
-function H(e, t) {
-    let n = E.default.getId(),
-        r = (0, u.my)(t),
-        i = p.Z.getVoiceChannelId();
-    null != i && i !== e && R.default.disconnect(),
-        N.Z.addRecipient(e, n, void 0, () => {
-            A.Z.call(e, !1, !1, null, () => {
-                P(r);
-            });
-        });
+    null != t && b((0, u.V9)(t), e);
 }

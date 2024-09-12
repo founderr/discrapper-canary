@@ -48,16 +48,6 @@ t.Z = {
             throw ((null == e ? void 0 : null === (l = e.body) || void 0 === l ? void 0 : l.code) === S.evJ.QUARANTINED && (0, c.default)(), e);
         }
     },
-    async createBroadcastPrivateChannel() {
-        try {
-            let e = await r.tn.post({ url: S.ANM.BROADCAST_PRIVATE_CHANNEL }),
-                t = (0, E.q_)(e.body);
-            return m.Z.call(t.id, !1, !1, null), e.body.id;
-        } catch (t) {
-            var e;
-            throw ((null == t ? void 0 : null === (e = t.body) || void 0 === e ? void 0 : e.code) === S.evJ.QUARANTINED && (0, c.default)(), t);
-        }
-    },
     _openCachedDMChannel(e, t) {
         let n = f.Z.getDMFromUserId(e),
             r = null != n ? f.Z.getChannel(n) : null;

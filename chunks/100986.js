@@ -32,7 +32,6 @@ function d(e, t, n, d) {
         emoji_count: null != n.emojiId || null != n.emojiName ? 1 : 0,
         feature_selection: g,
         feature_selection_id: n.soundId,
-        sound_type: d,
-        is_broadcast: null != h && h.isBroadcastChannel()
+        sound_type: d
     });
 }

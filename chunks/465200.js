@@ -6,8 +6,6 @@ e.exports = {
     searchBarComponent: 'searchBarComponent_f0963d',
     familyCenterLinkButton: 'familyCenterLinkButton_f0963d',
     familyCenterPendingBadge: 'familyCenterPendingBadge_f0963d',
-    broadcastingBadge: 'broadcastingBadge_f0963d',
-    broadcastingIcon: 'broadcastingIcon_f0963d',
     themedHeaderMobile: 'themedHeaderMobile_f0963d',
     themedSearchBarMobile: 'themedSearchBarMobile_f0963d'
 };

@@ -134,7 +134,6 @@ class v {
                 [A.n0.GoLiveNudge]: new R(),
                 [A.n0.GoLiveNonVoiceNudge]: new R(),
                 [A.n0.OverlayCrashed]: new R(),
-                [A.n0.StartBroadcastNotification]: new R(),
                 [A.n0.ClipsReminderNotification]: new R(),
                 [A.n0.ClipsNotification]: new R(),
                 [A.n0.KeybindIndicatorsNotification]: new R()

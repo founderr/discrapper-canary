@@ -136,7 +136,6 @@ let R = async (e) => {
             emoji_managed: o,
             emoji_managed_external: l,
             emoji_animated: c,
-            animation_type: d,
-            is_broadcast: e.isBroadcastChannel()
+            animation_type: d
         });
     };

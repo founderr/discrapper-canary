@@ -182,19 +182,17 @@ function Y(e) {
         status: e.status,
         activities: e.activities,
         active: !!e.active,
-        clientInfo: e.client_info,
-        broadcast: e.broadcast
+        clientInfo: e.client_info
     }));
 }
 function j(e) {
-    let { guildId: t, user: n, status: r, activities: i, clientStatus: a, broadcast: s } = e;
+    let { guildId: t, user: n, status: r, activities: i, clientStatus: a } = e;
     x.add({
         guildId: t,
         user: n,
         status: r,
         clientStatus: a,
-        activities: i,
-        broadcast: s
+        activities: i
     });
 }
 B(
@@ -245,8 +243,7 @@ B(
                             user: e.user,
                             status: e.status,
                             clientStatus: e.client_status,
-                            activities: e.activities,
-                            broadcast: e.broadcast
+                            activities: e.activities
                         })),
                     i = e.guilds.filter((e) => !0 !== e.unavailable);
                 i.forEach((e) => {
@@ -699,14 +696,13 @@ B(
             }),
                 null != e.presences &&
                     e.presences.forEach((t) => {
-                        let { user: n, status: r, client_status: i, activities: a, broadcast: s } = t;
+                        let { user: n, status: r, client_status: i, activities: a } = t;
                         return j({
                             guildId: e.guild_id,
                             user: n,
                             status: r,
                             activities: a,
-                            clientStatus: i,
-                            broadcast: s
+                            clientStatus: i
                         });
                     }),
                 D.Z.flush('GUILD_MEMBERS_CHUNK');
@@ -722,14 +718,13 @@ B(
             }),
                 null != e.presences &&
                     e.presences.forEach((t) => {
-                        let { user: n, status: r, client_status: i, activities: a, broadcast: s } = t;
+                        let { user: n, status: r, client_status: i, activities: a } = t;
                         return j({
                             guildId: e.guild_id,
                             user: n,
                             status: r,
                             activities: a,
-                            clientStatus: i,
-                            broadcast: s
+                            clientStatus: i
                         });
                     }),
                 D.Z.flush();
@@ -898,8 +893,7 @@ B(
             user: e.user,
             status: e.status,
             activities: e.activities,
-            clientStatus: e.client_status,
-            broadcast: e.broadcast
+            clientStatus: e.client_status
         });
     }),
     k(['PRESENCES_REPLACE'], (e) => {
@@ -1155,8 +1149,7 @@ B(
                     user: r.user,
                     status: r.status,
                     activities: r.activities,
-                    clientStatus: r.client_status,
-                    broadcast: r.broadcast
+                    clientStatus: r.client_status
                 });
             };
             e.ops.forEach((e) => {

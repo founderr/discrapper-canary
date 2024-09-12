@@ -93,7 +93,7 @@ var a = t(990547),
 let ej = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BADGE],
     eB = eO.Z,
     eU = (e) => {
-        let { unseenGiftCount: s, showPrepaidPaymentPastDueWarning: eU, impressionSource: eG, numOfPendingFamilyRequests: eF, isOverlaySupported: ey, isClipsBetaTagShowing: eV = !1, shouldMergeGameSettings: eY, isUserSettingsSearchEnabled: ew, isKeywordFilteringEnabled: ek, isStaff: eH, isInappropriateConversationWarningEnabled: eW, paymentsBlocked: eK, isEligibleForQuests: ez, showGiftNitro: eQ, isStricterMessageRequestsEnabled: eX, hasLibraryApplication: eq, hasTOTPEnabled: eJ, canBroadcastActivity: e$, developerMode: e0, isSafetySettingsV2Enabled: e1, isAdultUser: e6, hasSecureFramesVerifiedUserIds: e2 } = e;
+        let { unseenGiftCount: s, showPrepaidPaymentPastDueWarning: eU, impressionSource: eG, numOfPendingFamilyRequests: eF, isOverlaySupported: ey, isClipsBetaTagShowing: eV = !1, shouldMergeGameSettings: eY, isUserSettingsSearchEnabled: ew, isKeywordFilteringEnabled: ek, isStaff: eH, isInappropriateConversationWarningEnabled: eW, paymentsBlocked: eK, isEligibleForQuests: ez, showGiftNitro: eQ, isStricterMessageRequestsEnabled: eX, hasLibraryApplication: eq, hasTOTPEnabled: eJ, developerMode: e$, isSafetySettingsV2Enabled: e0, isAdultUser: e1, hasSecureFramesVerifiedUserIds: e6 } = e;
         return Object.freeze({
             [eD.s6.SEARCH_NO_RESULTS]: {
                 section: u.ID.CUSTOM,
@@ -261,7 +261,7 @@ let ej = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eZ.Z.Messages.PRIVACY_AND_SAFETY],
                 ariaLabel: eZ.Z.Messages.PRIVACY_AND_SAFETY,
                 element: eI.Z,
-                predicate: () => !e1
+                predicate: () => !e0
             },
             [eD.s6.PRIVACY_AND_SAFETY_V2]: {
                 section: eP.oAB.PRIVACY_AND_SAFETY_V2,
@@ -269,7 +269,7 @@ let ej = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eZ.Z.Messages.PRIVACY_AND_SAFETY],
                 ariaLabel: eZ.Z.Messages.PRIVACY_AND_SAFETY,
                 element: eN.Z,
-                predicate: () => e1
+                predicate: () => e0
             },
             [eD.s6.PRIVACY_USER_SETTINGS]: {
                 section: eP.oAB.PRIVACY_AND_SAFETY,
@@ -522,7 +522,7 @@ let ej = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eP.oAB.PRIVACY_AND_SAFETY_V2,
                 searchableTitles: [eZ.Z.Messages.SAFETY_ALERTS_SETTING_TITLE],
                 parent: eD.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
-                predicate: () => eW && !e6
+                predicate: () => eW && !e1
             },
             [eD.s6.PRIVACY_ACCOUNT_STANDING]: {
                 section: eP.oAB.PRIVACY_AND_SAFETY,
@@ -548,7 +548,7 @@ let ej = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eP.oAB.PRIVACY_AND_SAFETY_V2,
                 searchableTitles: [eZ.Z.Messages.E2EE_VERIFIED_DEVICES],
                 parent: eD.s6.PRIVACY_AND_SAFETY_VOICE_SECURITY,
-                predicate: () => e2
+                predicate: () => e6
             },
             [eD.s6.PRIVACY_FAMILY_CENTER]: {
                 section: eP.oAB.FAMILY_CENTER,
@@ -613,7 +613,7 @@ let ej = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eZ.Z.Messages.FRIEND_REQUESTS],
                 label: eZ.Z.Messages.FRIEND_REQUESTS,
                 element: eo.Z,
-                predicate: () => !e1
+                predicate: () => !e0
             },
             [eD.s6.PREMIUM]: {
                 section: eP.oAB.PREMIUM,
@@ -1373,7 +1373,7 @@ let ej = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eP.oAB.ADVANCED,
                 searchableTitles: [eZ.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE],
                 parent: eD.s6.SETTINGS_ADVANCED,
-                predicate: () => e0
+                predicate: () => e$
             },
             [eD.s6.ACTIVITY_PRIVACY]: {
                 section: eP.oAB.ACTIVITY_PRIVACY,
@@ -1392,12 +1392,6 @@ let ej = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eY ? eP.oAB.GAMES : eP.oAB.ACTIVITY_PRIVACY,
                 searchableTitles: [eZ.Z.Messages.ACTIVITY_PARTY_PRIVACY],
                 parent: eY ? eD.s6.GAMES_ACTIVITY_PRIVACY : eD.s6.ACTIVITY_PRIVACY
-            },
-            [eD.s6.ACTIVITY_PRIVACY_BROADCASTING]: {
-                section: eY ? eP.oAB.GAMES : eP.oAB.ACTIVITY_PRIVACY,
-                searchableTitles: [eZ.Z.Messages.BROADCASTING_SETTINGS],
-                parent: eY ? eD.s6.GAMES_ACTIVITY_PRIVACY : eD.s6.ACTIVITY_PRIVACY,
-                predicate: () => e$
             },
             [eD.s6.ACTIVITY_PRIVACY_TOS]: {
                 section: eY ? eP.oAB.GAMES : eP.oAB.ACTIVITY_PRIVACY,

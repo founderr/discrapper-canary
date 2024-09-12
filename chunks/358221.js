@@ -245,9 +245,8 @@ class ea extends (r = d.ZP.Store) {
         var t, n;
         let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : y.IlC.APP;
         if (__OVERLAY__) return y.AEg.NORMAL;
-        let i = S.Z.getChannel(e),
-            a = ei(e) || (null == i ? void 0 : i.isBroadcastChannel());
-        return null !== (n = null === (t = x[e]) || void 0 === t ? void 0 : t[r]) && void 0 !== n ? n : a ? y.AEg.NO_CHAT : y.AEg.NORMAL;
+        let i = ei(e);
+        return null !== (n = null === (t = x[e]) || void 0 === t ? void 0 : t[r]) && void 0 !== n ? n : i ? y.AEg.NO_CHAT : y.AEg.NORMAL;
     }
     getChatOpen(e) {
         var t;
@@ -307,7 +306,6 @@ class ea extends (r = d.ZP.Store) {
                     var n, r;
                     return (x[t.id] = { [y.IlC.APP]: null !== (r = null === (n = x[e]) || void 0 === n ? void 0 : n[y.IlC.APP]) && void 0 !== r ? r : y.AEg.NORMAL }), !0;
                 }
-                t.isBroadcastChannel() && (x[t.id] = { [y.IlC.APP]: y.AEg.NO_CHAT });
             }
             return !1;
         },
