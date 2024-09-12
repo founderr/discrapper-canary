@@ -100,7 +100,15 @@ class v extends (r = u.ZP.Store) {
                 (I = {}),
                 (m = {}),
                 e.relationships.forEach((e) => {
-                    (p[e.id] = e.type), null != e.nickname && (I[e.id] = e.nickname), null != e.since && (m[e.id] = e.since), (0, d.A)({ location: 'friend_request_spam_inbox' }) && e.is_spam_request && T.add(e.id);
+                    (p[e.id] = e.type),
+                        null != e.nickname && (I[e.id] = e.nickname),
+                        null != e.since && (m[e.id] = e.since),
+                        e.is_spam_request &&
+                            (0, d.A)({
+                                location: 'friend_request_spam_inbox',
+                                trackExposure: !0
+                            }) &&
+                            T.add(e.id);
                 }),
                 R();
         },
