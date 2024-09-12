@@ -17,6 +17,6 @@ let r = (0, n(818083).B)({
     ]
 });
 function i(e) {
-    let { location: t } = e;
-    return r.getCurrentConfig({ location: t }, { autoTrackExposure: !1 }).enabled;
+    let { location: t, trackExposure: n = !1 } = e;
+    return r.getCurrentConfig({ location: t }, { autoTrackExposure: n }).enabled;
 }
