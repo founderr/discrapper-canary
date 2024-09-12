@@ -5,6 +5,9 @@ n.d(t, {
     T: function () {
         return a;
     },
+    aq: function () {
+        return c;
+    },
     m1: function () {
         return s;
     },
@@ -122,6 +125,34 @@ let o = (0, r.B)({
                 id: 1,
                 label: 'Enable app link sharing and install flow improvements on mobile',
                 config: { enabled: !0 }
+            }
+        ]
+    }),
+    c = (0, r.B)({
+        kind: 'user',
+        id: '2024-08_open_platform_app_launcher_holdout',
+        label: 'Open Platform App Launcher Holdout',
+        commonTriggerPoint: i.$P.VOICE_CALL,
+        defaultConfig: {
+            enabled: !1,
+            clickOnHomeActivityOpensAppDetail: !0
+        },
+        treatments: [
+            {
+                id: 1,
+                label: 'clicking activity in voice app launcher -> performs activity action',
+                config: {
+                    enabled: !0,
+                    clickOnHomeActivityOpensAppDetail: !1
+                }
+            },
+            {
+                id: 2,
+                label: 'clicking activity in voice app launcher -> opens activity detail page',
+                config: {
+                    enabled: !0,
+                    clickOnHomeActivityOpensAppDetail: !0
+                }
             }
         ]
     });
