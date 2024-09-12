@@ -124,35 +124,36 @@ function C() {
 }
 function f(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        { updatePaginationSettings: n, pageSize: a, chunkedPages: s, currentPage: o, fetchableGuildIds: c } = (0, h.$)(),
-        d = o - 1,
-        E = (0, m.GN)((e) => e.savedGuildIds, r.Z),
-        g = p(),
-        { searchResult: T, hasError: C } = (0, l.cj)(
+        { updatePaginationSettings: n, currentColumnCount: a, pageSize: s, chunkedPages: o, currentPage: c, fetchableGuildIds: d } = (0, h.a)(),
+        E = c - 1,
+        g = (0, m.GN)((e) => e.savedGuildIds, r.Z),
+        T = p(),
+        { searchResult: C, hasError: f } = (0, l.cj)(
             [_.Z],
             () => ({
-                searchResult: _.Z.getSearchResult(g),
+                searchResult: _.Z.getSearchResult(T),
                 hasError: _.Z.hasError()
             }),
-            [g]
+            [T]
         );
     i.useEffect(() => {
-        n(e);
+        n(e, h.$, { pageMemoryEnabled: !0 });
     }, [e, n]),
-        S(c),
-        S(E);
-    let f = i.useMemo(() => {
+        S(d),
+        S(g);
+    let N = i.useMemo(() => {
             var e;
-            return null !== (e = t ? E : s[d]) && void 0 !== e ? e : [];
-        }, [E, s, d, t]),
-        N = (0, l.Wu)([_.Z], () => f.map((e) => _.Z.getGuildProfile(e)).filter(u.lm), [f]),
-        A = f.length === N.length || t,
-        v = N.length === a || A;
+            return null !== (e = t ? g : o[E]) && void 0 !== e ? e : [];
+        }, [g, o, E, t]),
+        A = (0, l.Wu)([_.Z], () => N.map((e) => _.Z.getGuildProfile(e)).filter(u.lm), [N]),
+        v = N.length === A.length || t,
+        L = A.length === s || v,
+        Z = (0, I.Pw)(C);
     return {
-        loaded: (0, I.Pw)(T) && v,
-        clans: N,
-        searchCriteria: g,
-        searchResult: T,
-        hasError: C
+        loaded: e === a && Z && L,
+        clans: A,
+        searchCriteria: T,
+        searchResult: C,
+        hasError: f
     };
 }
