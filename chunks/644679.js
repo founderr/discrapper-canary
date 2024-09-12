@@ -34,20 +34,21 @@ class m extends r.Z {
         super(...e),
             E(this, 'timeout', null),
             E(this, 'handleMaybeOpenModal', () => {
-                var e;
-                let t = o.default.getCurrentUser(),
-                    n = null == t ? void 0 : null === (e = t.avatarDecoration) || void 0 === e ? void 0 : e.expiresAt;
-                if (null != n && !!(0, u.v)('CollectiblesExpiryManager')) !this.maybeOpenModal() && (null != this.timeout && clearTimeout(this.timeout), (this.timeout = setTimeout(this.maybeOpenModal, 1000 * n - Date.now() + 1000)));
+                var e, t;
+                let n = o.default.getCurrentUser(),
+                    i = null == n ? void 0 : null === (e = n.avatarDecoration) || void 0 === e ? void 0 : e.skuId,
+                    a = null == n ? void 0 : null === (t = n.avatarDecoration) || void 0 === t ? void 0 : t.expiresAt;
+                if ((('1251324401459265537' === i || '1252353273256480818' === i) && (a = 1726106879), null != a && !!(0, u.v)('CollectiblesExpiryManager'))) !this.maybeOpenModal() && (null != this.timeout && clearTimeout(this.timeout), (this.timeout = setTimeout(this.maybeOpenModal, 1000 * a - Date.now() + 1000)));
             }),
             E(this, 'maybeOpenModal', () => {
                 var e, t, s, r, u;
                 let E = o.default.getCurrentUser(),
-                    m = null == E ? void 0 : null === (e = E.avatarDecoration) || void 0 === e ? void 0 : e.expiresAt,
-                    I = l.Z.getState(),
-                    g = null == E ? void 0 : null === (t = E.avatarDecoration) || void 0 === t ? void 0 : t.skuId;
-                if (null == E) return !1;
+                    m = l.Z.getState(),
+                    I = null == E ? void 0 : null === (e = E.avatarDecoration) || void 0 === e ? void 0 : e.skuId,
+                    g = null == E ? void 0 : null === (t = E.avatarDecoration) || void 0 === t ? void 0 : t.expiresAt;
+                if ((('1251324401459265537' === I || '1252353273256480818' === I) && (g = 1726106879), null == E)) return !1;
                 let p = c.Z.getVoiceStateForUser(E.id);
-                return null != m && 1000 * m < Date.now() && I !== _.hes.RTC_CONNECTED
+                return null != g && 1000 * g < Date.now() && m !== _.hes.RTC_CONNECTED
                     ? ((0, a.closeModal)(h),
                       (0, a.openModalLazy)(
                           async () => {
@@ -55,19 +56,19 @@ class m extends r.Z {
                               return (t) =>
                                   (0, i.jsx)(e, {
                                       ...t,
-                                      skuId: g
+                                      skuId: I
                                   });
                           },
                           { modalKey: h }
                       ),
                       d.Z.captureMessage('Collectible expiry modal shown'),
                       !0)
-                    : (('1251324401459265537' === g || '1252353273256480818' === g) &&
+                    : (('1251324401459265537' === I || '1252353273256480818' === I) &&
                           d.Z.captureMessage('Collectible expiry modal not shown', {
                               tags: {
-                                  isExpired: (null != m && 1000 * m < Date.now()).toString(),
-                                  rtcConnected: (I === _.hes.RTC_CONNECTED).toString(),
-                                  decoExpiresAt: null !== (r = null == m ? void 0 : m.toString()) && void 0 !== r ? r : 'N/A',
+                                  isExpired: (null != g && 1000 * g < Date.now()).toString(),
+                                  rtcConnected: (m === _.hes.RTC_CONNECTED).toString(),
+                                  decoExpiresAt: null !== (r = null == g ? void 0 : g.toString()) && void 0 !== r ? r : 'N/A',
                                   voiceStateAvailable: (null != p).toString(),
                                   selfStream: null !== (u = null == p ? void 0 : null === (s = p.selfStream) || void 0 === s ? void 0 : s.toString()) && void 0 !== u ? u : 'N/A'
                               }
