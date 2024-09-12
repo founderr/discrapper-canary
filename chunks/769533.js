@@ -4,6 +4,5 @@ e.exports = {
     soundIcon: 'soundIcon_ec96b2',
     soundRow: 'soundRow_ec96b2',
     icon: 'icon_ec96b2',
-    soundpackSelect: 'soundpackSelect_ec96b2',
     titleWithBeta: 'titleWithBeta_ec96b2'
 };
