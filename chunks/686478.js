@@ -1,25 +1,21 @@
 n.d(t, {
     $_: function () {
-        return u;
-    },
-    Dw: function () {
-        return s;
+        return l;
     },
     _l: function () {
         return i;
     },
     jk: function () {
-        return l;
+        return o;
     },
     vL: function () {
-        return o;
+        return s;
     }
 });
 var r,
     i,
     a = n(786761);
-let s = '1337';
-function o(e) {
+function s(e) {
     return {
         channelId: e.channel_id,
         messageId: e.message_id,
@@ -33,13 +29,13 @@ function o(e) {
         dueAt: null != e.due_at ? new Date(e.due_at) : void 0
     };
 }
-function l(e) {
+function o(e) {
     return {
         message: null != e.message ? (0, a.e5)(e.message) : null,
-        saveData: o(e.save_data)
+        saveData: s(e.save_data)
     };
 }
-function u(e) {
+function l(e) {
     return {
         channelId: e.channel_id,
         messageId: e.message_id
