@@ -1,6 +1,6 @@
 n.d(t, {
     w: function () {
-        return h;
+        return C;
     }
 });
 var i = n(735250),
@@ -17,37 +17,63 @@ var i = n(735250),
     I = n(474936),
     m = n(689938),
     T = n(169458),
-    N = n(492764);
-function h() {
-    return (0, i.jsxs)('div', {
-        className: T.emptyContainer,
-        children: [
-            (0, i.jsxs)('div', {
-                className: T.emptyInner,
-                children: [
-                    (0, i.jsx)('img', {
-                        src: N,
-                        className: T.image,
-                        alt: ''
-                    }),
-                    (0, i.jsx)(l.Heading, {
-                        className: T.header,
-                        variant: 'heading-xl/semibold',
-                        color: 'text-muted',
-                        children: m.Z.Messages.FOR_LATER_EMPTY_ALL_TITLE
-                    }),
-                    (0, i.jsx)(r.x, {
-                        variant: 'text-md/medium',
-                        color: 'text-muted',
-                        children: m.Z.Messages.FOR_LATER_EMPTY_ALL_BODY_WEB
-                    })
-                ]
-            }),
-            (0, _.Z)() ? null : (0, i.jsx)(C, {})
-        ]
-    });
-}
+    N = n(492764),
+    h = n(235810);
 function C() {
+    return (0, _.Z)()
+        ? (0, i.jsx)('div', {
+              className: T.emptyContainer,
+              children: (0, i.jsxs)('div', {
+                  className: T.emptyInner,
+                  children: [
+                      (0, i.jsx)('img', {
+                          src: N,
+                          className: T.image,
+                          alt: ''
+                      }),
+                      (0, i.jsx)(l.Heading, {
+                          className: T.header,
+                          variant: 'heading-xl/semibold',
+                          color: 'text-normal',
+                          children: m.Z.Messages.FOR_LATER_EMPTY_ALL_TITLE
+                      }),
+                      (0, i.jsx)(r.x, {
+                          variant: 'text-md/medium',
+                          color: 'text-muted',
+                          children: m.Z.Messages.FOR_LATER_EMPTY_ALL_BODY_WEB
+                      })
+                  ]
+              })
+          })
+        : (0, i.jsxs)('div', {
+              className: T.emptyContainer,
+              children: [
+                  (0, i.jsxs)('div', {
+                      className: T.emptyInner,
+                      children: [
+                          (0, i.jsx)('img', {
+                              src: h,
+                              className: T.image,
+                              alt: ''
+                          }),
+                          (0, i.jsx)(l.Heading, {
+                              className: T.header,
+                              variant: 'heading-xl/semibold',
+                              color: 'text-normal',
+                              children: m.Z.Messages.FOR_LATER_UPSELL_MODAL_TITLE
+                          }),
+                          (0, i.jsx)(r.x, {
+                              variant: 'text-md/medium',
+                              color: 'text-muted',
+                              children: m.Z.Messages.FOR_LATER_UPSELL_MODAL_BODY
+                          })
+                      ]
+                  }),
+                  (0, i.jsx)(f, {})
+              ]
+          });
+}
+function f() {
     let e = (0, d.Px)(I.p9.TIER_2),
         t = s.useCallback(
             () =>
