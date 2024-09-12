@@ -188,8 +188,11 @@ function N(e, t, n, r) {
     });
 }
 function O(e) {
-    let { categoryId: t } = e;
-    E.default.track(f.rMx.GUILD_DISCOVERY_SEARCH_FAILED, { category_id: t });
+    let { categoryId: t, statusCode: n } = e;
+    E.default.track(f.rMx.GUILD_DISCOVERY_SEARCH_FAILED, {
+        category_id: t,
+        status_code: n
+    });
 }
 function R(e) {
     let { categoryId: t } = e;

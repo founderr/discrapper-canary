@@ -1,30 +1,30 @@
 n.d(t, {
     $z: function () {
-        return A;
+        return N;
     },
     AQ: function () {
-        return O;
+        return R;
     },
     G7: function () {
-        return S;
-    },
-    K5: function () {
         return g;
     },
+    K5: function () {
+        return A;
+    },
     Ue: function () {
-        return T;
+        return S;
     },
     bR: function () {
         return function e(t, n) {
             let r = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-                { categoryId: i = h.Hk, preferredLocale: a, offset: d, length: p, tag: I } = n,
-                T = c.ZP.getSearchIndex();
-            if (null == T) return;
+                { categoryId: i = p.Hk, preferredLocale: a, offset: _, length: I, tag: m } = n,
+                S = d.ZP.getSearchIndex();
+            if (null == S) return;
             r &&
                 !(function (e) {
                     let { query: t, preferredLocale: n, offset: r, limit: i, categoryId: a, tag: o } = e,
-                        l = (0, u.s1)(),
-                        c = s.stringify({
+                        l = (0, c.s1)(),
+                        u = s.stringify({
                             query: t,
                             offset: r,
                             limit: i,
@@ -33,39 +33,39 @@ n.d(t, {
                             tag: o
                         }),
                         d = l.location.search;
-                    (!(null != d && d.length > 0 && d.startsWith('?')) || (d.startsWith('?') && d.split('?')[1] !== c)) && (0, u.uL)(f.Z5c.GUILD_DISCOVERY, { search: c });
+                    (!(null != d && d.length > 0 && d.startsWith('?')) || (d.startsWith('?') && d.split('?')[1] !== u)) && (0, c.uL)(h.Z5c.GUILD_DISCOVERY, { search: u });
                 })({
                     query: t,
                     preferredLocale: a,
-                    offset: d,
-                    limit: p,
+                    offset: _,
+                    limit: I,
                     categoryId: i,
-                    tag: I
+                    tag: m
                 }),
-                l.Z.dispatch({
+                u.Z.dispatch({
                     type: 'GUILD_DISCOVERY_SEARCH_FETCH_START',
-                    section: f.Lcj.SEARCH,
+                    section: h.Lcj.SEARCH,
                     query: t,
                     categoryId: i
                 });
-            let S = Object.assign({}, m, n.filters),
-                g = Object.keys(S).map((e) => ''.concat(e).concat(S[e]));
-            i !== h.Hk && g.push('(primary_category_id='.concat(i, ' OR categories.id=').concat(i, ')'));
-            let A = g.join(' AND ');
+            let g = Object.assign({}, T, n.filters),
+                A = Object.keys(g).map((e) => ''.concat(e).concat(g[e]));
+            i !== p.Hk && A.push('(primary_category_id='.concat(i, ' OR categories.id=').concat(i, ')'));
+            let N = A.join(' AND ');
             try {
-                let s = T.search(t, {
-                        filters: A,
+                let s = S.search(t, {
+                        filters: N,
                         optionalFilters: ['preferred_locale: '.concat(a)],
-                        length: p,
-                        offset: d,
+                        length: I,
+                        offset: _,
                         restrictSearchableAttributes: ['name', 'description', 'keywords', 'categories.name', 'categories.name_localizations.'.concat(a), 'primary_category.name', 'primary_category.name_localizations.'.concat(a), 'vanity_url_code']
                     }),
-                    u = o.tn.get({
-                        url: f.ANM.GUILD_DISCOVERY_VALID_TERM,
+                    c = o.tn.get({
+                        url: h.ANM.GUILD_DISCOVERY_VALID_TERM,
                         query: { term: t },
                         oldFormErrors: !0
                     });
-                Promise.all([s, u])
+                Promise.all([s, c])
                     .then((e) => {
                         let [
                             { hits: n, nbHits: r },
@@ -73,9 +73,9 @@ n.d(t, {
                                 body: { valid: a }
                             }
                         ] = e;
-                        l.Z.dispatch({
+                        u.Z.dispatch({
                             type: 'GUILD_DISCOVERY_SEARCH_FETCH_SUCCESS',
-                            section: f.Lcj.SEARCH,
+                            section: h.Lcj.SEARCH,
                             query: t,
                             categoryId: i,
                             guilds: a
@@ -86,29 +86,39 @@ n.d(t, {
                                       }))
                                   ]
                                 : [],
-                            offset: d,
-                            limit: p,
-                            total: a ? Math.min(r, h.lA) : 0
+                            offset: _,
+                            limit: I,
+                            total: a ? Math.min(r, p.lA) : 0
                         });
                     })
                     .catch((a) => {
-                        a.body.retry_after > 0 && T === c.ZP.getSearchIndex()
-                            ? setTimeout(() => {
-                                  e(t, n, r);
-                              }, a.body.retry_after * _.Z.Millis.SECOND)
-                            : (E.m9({ categoryId: i }),
-                              l.Z.dispatch({
-                                  type: 'GUILD_DISCOVERY_SEARCH_FETCH_FAILURE',
-                                  section: f.Lcj.SEARCH,
-                                  categoryId: i,
-                                  query: t
-                              }));
+                        if (a.body.retry_after > 0 && S === d.ZP.getSearchIndex())
+                            setTimeout(() => {
+                                e(t, n, r);
+                            }, a.body.retry_after * E.Z.Millis.SECOND);
+                        else {
+                            let e = new l.Hx(a);
+                            f.m9({
+                                categoryId: i,
+                                statusCode: e.code
+                            }),
+                                u.Z.dispatch({
+                                    type: 'GUILD_DISCOVERY_SEARCH_FETCH_FAILURE',
+                                    section: h.Lcj.SEARCH,
+                                    categoryId: i,
+                                    query: t
+                                });
+                        }
                     });
-            } catch (e) {
-                E.m9({ categoryId: i }),
-                    l.Z.dispatch({
+            } catch (n) {
+                let e = new l.Hx(n);
+                f.m9({
+                    categoryId: i,
+                    statusCode: e.code
+                }),
+                    u.Z.dispatch({
                         type: 'GUILD_DISCOVERY_SEARCH_FETCH_FAILURE',
-                        section: f.Lcj.SEARCH,
+                        section: h.Lcj.SEARCH,
                         categoryId: i,
                         query: t
                     });
@@ -116,10 +126,10 @@ n.d(t, {
         };
     },
     gk: function () {
-        return N;
+        return O;
     },
     uY: function () {
-        return R;
+        return v;
     }
 }),
     n(653041),
@@ -129,35 +139,36 @@ var r = n(807034),
     a = n.n(i),
     s = n(664751),
     o = n(544891),
-    l = n(570140),
-    u = n(703656),
-    c = n(683301),
-    d = n(230307),
-    _ = n(70956),
-    E = n(900849),
-    f = n(981631),
-    h = n(731455);
-let p = window.GLOBAL_ENV.ALGOLIA_KEY,
-    I = 'production' === window.GLOBAL_ENV.PROJECT_ENV ? 'prod_discoverable_guilds' : 'staging' === window.GLOBAL_ENV.PROJECT_ENV ? 'stg_discoverable_guilds' : 'dev_discoverable_guilds',
-    m = {
+    l = n(343817),
+    u = n(570140),
+    c = n(703656),
+    d = n(683301),
+    _ = n(230307),
+    E = n(70956),
+    f = n(900849),
+    h = n(981631),
+    p = n(731455);
+let I = window.GLOBAL_ENV.ALGOLIA_KEY,
+    m = 'production' === window.GLOBAL_ENV.PROJECT_ENV ? 'prod_discoverable_guilds' : 'staging' === window.GLOBAL_ENV.PROJECT_ENV ? 'stg_discoverable_guilds' : 'dev_discoverable_guilds',
+    T = {
         'auto_removed:': !1,
         approximate_presence_count: '> 0',
         approximate_member_count: '> 0'
     };
-function T() {
-    if (null == p) return;
-    let e = a()('NKTZZ4AIZU', p, { responsesCache: (0, r.A)() }).initIndex(I);
-    l.Z.wait(() =>
-        l.Z.dispatch({
+function S() {
+    if (null == I) return;
+    let e = a()('NKTZZ4AIZU', I, { responsesCache: (0, r.A)() }).initIndex(m);
+    u.Z.wait(() =>
+        u.Z.dispatch({
             type: 'GUILD_DISCOVERY_SEARCH_INIT',
             index: e
         })
     );
 }
-function S(e, t) {
-    let n = c.ZP.getSearchIndex();
+function g(e, t) {
+    let n = d.ZP.getSearchIndex();
     if (null == n) return;
-    let r = Object.assign({}, m, t),
+    let r = Object.assign({}, T, t),
         i = Object.keys(r).map((e) => ''.concat(e).concat(r[e]));
     try {
         let t = n.search(e, {
@@ -165,7 +176,7 @@ function S(e, t) {
                 facets: ['categories.id']
             }),
             r = o.tn.get({
-                url: f.ANM.GUILD_DISCOVERY_VALID_TERM,
+                url: h.ANM.GUILD_DISCOVERY_VALID_TERM,
                 query: { term: e },
                 oldFormErrors: !0
             });
@@ -176,7 +187,7 @@ function S(e, t) {
                     body: { valid: i }
                 }
             ] = t;
-            l.Z.dispatch({
+            u.Z.dispatch({
                 type: 'GUILD_DISCOVERY_SEARCH_UPDATE_COUNTS',
                 query: e,
                 nbHits: i ? n : 0,
@@ -184,96 +195,96 @@ function S(e, t) {
             });
         });
     } catch (t) {
-        l.Z.dispatch({
+        u.Z.dispatch({
             type: 'GUILD_DISCOVERY_SEARCH_COUNTS_FAIL',
             query: e
         });
     }
 }
-async function g(e) {
-    l.Z.dispatch({
+async function A(e) {
+    u.Z.dispatch({
         type: 'GUILD_DISCOVERY_POPULAR_FETCH_START',
         categoryId: e
     });
     try {
         let { guilds: t } = (
             await o.tn.get({
-                url: f.ANM.GUILD_DISCOVERY,
+                url: h.ANM.GUILD_DISCOVERY,
                 query: s.stringify({ categories: [e] }),
                 oldFormErrors: !0
             })
         ).body;
-        l.Z.dispatch({
+        u.Z.dispatch({
             type: 'GUILD_DISCOVERY_POPULAR_FETCH_SUCCESS',
             categoryId: e,
             guilds: t
         });
     } catch (t) {
-        l.Z.dispatch({
+        u.Z.dispatch({
             type: 'GUILD_DISCOVERY_POPULAR_FETCH_FAILURE',
             categoryId: e
         }),
-            E.rC({ categoryId: e });
+            f.rC({ categoryId: e });
     }
 }
-async function A(e, t) {
-    l.Z.dispatch({
+async function N(e, t) {
+    u.Z.dispatch({
         type: 'GUILD_DISCOVERY_FETCH_START',
-        section: f.Lcj.FEATURED
+        section: h.Lcj.FEATURED
     });
     try {
         let n = await o.tn.get({
-            url: f.ANM.GUILD_DISCOVERY,
+            url: h.ANM.GUILD_DISCOVERY,
             query: s.stringify({
                 offset: e,
                 limit: t
             }),
             oldFormErrors: !0
         });
-        v(n.body, f.Lcj.FEATURED);
+        C(n.body, h.Lcj.FEATURED);
     } catch (e) {
-        l.Z.dispatch({
+        u.Z.dispatch({
             type: 'GUILD_DISCOVERY_FETCH_FAILURE',
-            section: f.Lcj.FEATURED
+            section: h.Lcj.FEATURED
         }),
-            E.rC({ categoryId: h.Hk });
+            f.rC({ categoryId: p.Hk });
     }
 }
-async function N() {
-    let e = Object.keys(d.Z.applicationStatistics);
-    l.Z.dispatch({
+async function O() {
+    let e = Object.keys(_.Z.applicationStatistics);
+    u.Z.dispatch({
         type: 'GUILD_DISCOVERY_FETCH_START',
-        section: f.Lcj.GAMES_YOU_PLAY
+        section: h.Lcj.GAMES_YOU_PLAY
     });
     try {
         let t = await o.tn.get({
-            url: f.ANM.GUILD_DISCOVERY,
+            url: h.ANM.GUILD_DISCOVERY,
             query: s.stringify({ application_ids: e }),
             oldFormErrors: !0
         });
-        v(t.body, f.Lcj.GAMES_YOU_PLAY);
+        C(t.body, h.Lcj.GAMES_YOU_PLAY);
     } catch (e) {
-        l.Z.dispatch({
+        u.Z.dispatch({
             type: 'GUILD_DISCOVERY_FETCH_FAILURE',
-            section: f.Lcj.GAMES_YOU_PLAY
+            section: h.Lcj.GAMES_YOU_PLAY
         });
     }
 }
-function O() {
+function R() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-    e && (0, u.uL)(f.Z5c.GUILD_DISCOVERY), l.Z.dispatch({ type: 'GUILD_DISCOVERY_CLEAR_SEARCH' });
+    e && (0, c.uL)(h.Z5c.GUILD_DISCOVERY), u.Z.dispatch({ type: 'GUILD_DISCOVERY_CLEAR_SEARCH' });
 }
-function R(e) {
+function v(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    l.Z.dispatch({
+    u.Z.dispatch({
         type: 'GUILD_DISCOVERY_SELECT_CATEGORY',
         categoryId: e,
         isHomepage: t
     });
 }
-function v(e, t) {
+function C(e, t) {
     let { offset: n, limit: r, guilds: i, total: a } = e;
-    l.Z.dispatch({
+    u.Z.dispatch({
         type: 'GUILD_DISCOVERY_FETCH_SUCCESS',
         section: t,
         guilds: i,
