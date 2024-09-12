@@ -32,9 +32,13 @@ t.Z = (e) => {
         }, [t]),
         b = N && j,
         y = (0, p.vI)(t, f.dr.QUESTS_BAR, !0),
-        I = (0, s.jsx)(i.Clickable, {
-            onClick: R,
-            className: a()({ [E.logo]: b }),
+        I = !1 === (0, u.KM)(t),
+        M = (0, s.jsx)(i.Clickable, {
+            onClick: I ? R : () => {},
+            className: a()({
+                [E.logo]: b,
+                [E.clickable]: I
+            }),
             children: (0, s.jsx)(x.Z, {
                 quest: t,
                 withGameTile: !1
@@ -95,7 +99,7 @@ t.Z = (e) => {
                       quest: t,
                       expansionSpring: r,
                       isFullyExpanded: b,
-                      partnerBranding: I,
+                      partnerBranding: M,
                       useReducedMotion: v
                   })
                 : (0, s.jsxs)(s.Fragment, {
@@ -131,7 +135,7 @@ t.Z = (e) => {
                                       (e, t) => 'translate('.concat(e, 'px, ').concat(t, 'px)')
                                   )
                               },
-                              children: I
+                              children: M
                           }),
                           (0, s.jsx)(l.animated.div, {
                               className: E.questAvailable,
