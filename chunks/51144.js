@@ -127,6 +127,7 @@ function A(e) {
 t.ZP = {
     getName: E,
     useName: f,
+    isNameConcealed: (e) => 4 === e.length && e.endsWith('...'),
     getUserTag: g,
     useUserTag: function (e, t) {
         let n = {
