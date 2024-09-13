@@ -9,16 +9,16 @@ var i = t(735250),
     o = t.n(l),
     r = t(481060),
     s = t(895924),
-    c = t(424602),
-    d = t(827498),
+    c = t(827498),
+    d = t(106066),
     u = t(98880),
     m = t(772606),
     p = t(689938),
     _ = t(400963);
 function C(e) {
     let { channel: n, entrypoint: t, title: l, look: C, items: f, sectionName: h } = e,
-        { clickOnHomeActivityOpensAppDetail: A } = c.m1.getCurrentConfig({ location: 'AppLauncherApplicationListViewScreen' }, { autoTrackExposure: !1 }),
-        E = a.useMemo(() => (t === d._b.TEXT ? u.kA : u.qR), [t]);
+        { clickOnHomeActivityOpensAppDetail: A } = (0, d.s)('AppLauncherApplicationListViewScreen'),
+        E = a.useMemo(() => (t === c._b.TEXT ? u.kA : u.qR), [t]);
     return (0, i.jsxs)('section', {
         className: _.container,
         'aria-label': p.Z.Messages.APP_LAUNCHER_SECTION_VIEW_MORE_ARIA_LABEL.format({ sectionTitle: l }),

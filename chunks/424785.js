@@ -19,8 +19,8 @@ var l = n(120356),
     p = n(111028),
     _ = n(305325),
     f = n(281956),
-    g = n(66999),
-    m = n(506936),
+    m = n(66999),
+    g = n(506936),
     C = n(359110),
     I = n(922482),
     E = n(431328),
@@ -90,7 +90,7 @@ class F extends y.ZP {
         return this.props.channelInfo;
     }
     render() {
-        let { channel: e, selected: t, connected: n, locked: l, connectChannelDropTarget: a, connectChannelDragSource: o, connectUserDropTarget: c, connectDragPreview: u, canReorderChannel: d, canMoveMembers: p, stageInstance: _, isSubscriptionGated: f, needSubscriptionToAccess: g, unread: m, resolvedUnreadSetting: C, mentionCount: I, isFavoriteSuggestion: E } = this.props,
+        let { channel: e, selected: t, connected: n, locked: l, connectChannelDropTarget: a, connectChannelDragSource: o, connectUserDropTarget: c, connectDragPreview: u, canReorderChannel: d, canMoveMembers: p, stageInstance: _, isSubscriptionGated: f, needSubscriptionToAccess: m, unread: g, resolvedUnreadSetting: C, mentionCount: I, isFavoriteSuggestion: E } = this.props,
             { shouldShowGuildVerificationPopout: N } = this.state,
             x = this.getVoiceStatesCount(),
             S = (0, i.jsxs)('li', {
@@ -114,7 +114,7 @@ class F extends y.ZP {
                                         channel: e,
                                         selected: !E && t,
                                         connected: n,
-                                        unread: n ? m : void 0,
+                                        unread: n ? g : void 0,
                                         resolvedUnreadSetting: C,
                                         mentionCount: I,
                                         locked: l,
@@ -129,11 +129,11 @@ class F extends y.ZP {
                                         isFavoriteSuggestion: E,
                                         'aria-label': (0, h.ZP)({
                                             channel: e,
-                                            unread: m,
+                                            unread: g,
                                             mentionCount: I,
                                             userCount: x,
                                             isSubscriptionGated: f,
-                                            needSubscriptionToAccess: g
+                                            needSubscriptionToAccess: m
                                         }),
                                         ...c,
                                         children: [E && this.renderAcceptSuggestionButton(), E && this.renderRemoveSuggestionButton(), !E && this.renderOpenChatButton(), !E && this.renderInviteButton(), !E && this.renderEditButton(), !E && this.renderChannelInfo()]
@@ -179,8 +179,8 @@ class F extends y.ZP {
                 let { channel: e } = this.props,
                     { shouldShowGuildVerificationPopout: t } = this.state;
                 if (t)
-                    return (0, i.jsx)(m.Z, {
-                        type: m.R.VOICE,
+                    return (0, i.jsx)(g.Z, {
+                        type: g.R.VOICE,
                         guildId: e.guild_id,
                         closePopout: this.closeGuildVerificationPopout
                     });
@@ -247,7 +247,7 @@ function z(e) {
         p = (0, v.ZP)(n.id),
         _ = (0, a.e7)([x.Z], () => x.Z.getStageInstanceByChannel(n.id), [n.id]),
         f = (0, E.Rk)(n.id, N.pV.AUDIENCE),
-        { isSubscriptionGated: m, needSubscriptionToAccess: C } = (0, g.Z)(n.id),
+        { isSubscriptionGated: g, needSubscriptionToAccess: C } = (0, m.Z)(n.id),
         I = (0, a.e7)([R.ZP], () => R.ZP.isFavorite(t.id, n.id)),
         L = (0, S.xJ)(n.id),
         O = (0, j.Z)({
@@ -255,7 +255,7 @@ function z(e) {
             isChannelSelected: !1,
             isChannelCollapsed: s,
             voiceStates: o,
-            isSubscriptionGated: m,
+            isSubscriptionGated: g,
             needSubscriptionToAccess: C,
             enableConnectedUserLimit: L || (n.userLimit > 0 && n.userLimit < G.xGv)
         }),
@@ -265,7 +265,7 @@ function z(e) {
         connectAction: p,
         numAudience: f,
         stageInstance: _,
-        isSubscriptionGated: m,
+        isSubscriptionGated: g,
         needSubscriptionToAccess: C,
         ...c,
         ...d,

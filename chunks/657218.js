@@ -27,8 +27,8 @@ var i = n(735250),
     v = n(294218),
     S = n(913663),
     N = n(268350),
-    A = n(695346),
-    Z = n(592125),
+    Z = n(695346),
+    A = n(592125),
     M = n(703558),
     b = n(375954),
     R = n(496675),
@@ -48,7 +48,7 @@ var i = n(735250),
 let F = f.I.THREAD_CREATION;
 function W(e) {
     let { parentChannelId: t, parentMessageId: n, location: s } = e,
-        a = (0, r.e7)([Z.Z], () => Z.Z.getChannel(t)),
+        a = (0, r.e7)([A.Z], () => A.Z.getChannel(t)),
         { analyticsLocations: l } = (0, _.ZP)(p.Z.CREATE_THREAD);
     return null == a
         ? null
@@ -149,7 +149,7 @@ function z(e) {
         {
             nameError: T,
             messageError: v,
-            submit: A
+            submit: Z
         } = (function (e) {
             let { parentChannel: t, parentMessageId: n, threadSettings: i, privateThreadMode: a, textAreaState: l, location: r } = e,
                 [o, c] = s.useState(null),
@@ -222,7 +222,7 @@ function z(e) {
             textAreaState: g,
             location: a
         }),
-        Z = (0, D.oD)(p, I) ? o.ThreadLockIcon : o.ThreadIcon;
+        A = (0, D.oD)(p, I) ? o.ThreadLockIcon : o.ThreadIcon;
     return (0, i.jsx)('div', {
         className: G.chat,
         onMouseDown: h,
@@ -231,7 +231,7 @@ function z(e) {
             className: l()(G.messagesWrapper, 'group-spacing-'.concat(u)),
             children: (0, i.jsxs)('form', {
                 onSubmit: (e) => {
-                    e.preventDefault(), A();
+                    e.preventDefault(), Z();
                 },
                 className: G.form,
                 children: [
@@ -246,7 +246,7 @@ function z(e) {
                                     children: [
                                         (0, i.jsx)('div', {
                                             className: V.iconWrapper,
-                                            children: (0, i.jsx)(Z, { className: V.icon })
+                                            children: (0, i.jsx)(A, { className: V.icon })
                                         }),
                                         (0, i.jsx)(K, {
                                             parentChannel: t,
@@ -279,7 +279,7 @@ function z(e) {
                                 parentChannel: t,
                                 textAreaState: g,
                                 setTextAreaState: C,
-                                submit: A,
+                                submit: Z,
                                 error: v
                             }),
                             (0, i.jsx)(d.Z, {
@@ -431,7 +431,7 @@ function q(e) {
 function X(e) {
     let { parentChannel: t, parentMessageId: n } = e,
         s = (0, r.e7)([b.Z], () => (null == n ? null : b.Z.getMessage(t.id, n))),
-        a = A.jU.useSetting();
+        a = Z.jU.useSetting();
     return null != s
         ? (0, i.jsx)(v.Z, {
               className: G.messagePreview,

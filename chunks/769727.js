@@ -37,11 +37,11 @@ let N = {
                 },
                 [o]
             ),
-            _ = (0, E.wE)(c.z.NEW_GAMING_DISCOVERY_NOTIF);
+            _ = (0, E.wE)(c.z.GLOBAL_DISCOVERY_RAPIDASH_NOTIF);
         switch (
             (r.useEffect(() => {
                 !_ &&
-                    (0, E.EW)(c.z.NEW_GAMING_DISCOVERY_NOTIF, {
+                    (0, E.EW)(c.z.GLOBAL_DISCOVERY_RAPIDASH_NOTIF, {
                         dismissAction: C.L.TAKE_ACTION,
                         forceTrack: !0
                     });

@@ -42,8 +42,8 @@ t.Z = function (e) {
         H = s.useCallback(() => w(!1), []),
         Y = s.useContext(I.h9),
         W = (0, l.e7)([T.default], () => T.default.getCurrentUser()),
-        K = (0, l.e7)([E.Z], () => E.Z.getState().theme),
-        z = (0, o.wj)(K) ? b.BRd.DARK : b.BRd.LIGHT,
+        z = (0, l.e7)([E.Z], () => E.Z.getState().theme),
+        K = (0, o.wj)(z) ? b.BRd.DARK : b.BRd.LIGHT,
         { isCurrentUserStreamingQuestApplication: Q, quest: q } = (0, l.cj)(
             [m.Z, u.Z, f.Z],
             () => {
@@ -201,7 +201,7 @@ t.Z = function (e) {
                                         : (0, i.jsx)('img', {
                                               className: y.gameTile,
                                               alt: q.config.messages.gameTitle,
-                                              src: (0, g.uo)(q, z)
+                                              src: (0, g.uo)(q, K)
                                           }),
                                     (0, i.jsxs)('div', {
                                         children: [

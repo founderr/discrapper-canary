@@ -22,8 +22,8 @@ var i = n(735250),
     v = n(223606),
     S = n(188597),
     N = n(41776),
-    A = n(222677),
-    Z = n(995774),
+    Z = n(222677),
+    A = n(995774),
     M = n(931651),
     b = n(280845),
     R = n(2818),
@@ -47,8 +47,8 @@ var i = n(735250),
     K = n(373662),
     q = n(996861),
     X = n(603490),
-    Q = n(225138),
-    J = n(717680),
+    J = n(225138),
+    Q = n(717680),
     $ = n(981631),
     ee = n(921944),
     et = n(185923),
@@ -61,7 +61,7 @@ function el(e) {
 }
 function er(e) {
     let { message: t, channel: n, canReport: i, onClose: s, updatePosition: a } = e;
-    return (0, Q.useMessageMenu)({
+    return (0, J.useMessageMenu)({
         message: t,
         channel: n,
         textSelection: '',
@@ -95,7 +95,7 @@ let eo = s.memo(function (e) {
     return (0, i.jsx)(i.Fragment, {
         children: a.map((e) => {
             var s;
-            let a = l.find((t) => (0, Z.ir)(t.emoji, (0, Z.g1)(e))),
+            let a = l.find((t) => (0, A.ir)(t.emoji, (0, A.g1)(e))),
                 r = null != a ? en.Z.Messages.MESSAGE_HOVER_BAR_REACTION_SUGGESTION_REMOVE : en.Z.Messages.MESSAGE_HOVER_BAR_REACTION_SUGGESTION_ADD,
                 o = null == e.id ? e.uniqueName : e.name,
                 c = null != a ? en.Z.Messages.MESSAGE_HOVER_BAR_REACTION_SUGGESTION_REMOVE_ALLY.format({ emojiName: o }) : en.Z.Messages.MESSAGE_HOVER_BAR_REACTION_SUGGESTION_ADD_ALLY.format({ emojiName: o });
@@ -125,7 +125,7 @@ let eo = s.memo(function (e) {
                             emoji: e,
                             channel: t,
                             message: n,
-                            location: A.TW.MESSAGE_HOVER_BAR
+                            location: Z.TW.MESSAGE_HOVER_BAR
                         }),
                     buttonClassName: es.reactionSuggestion,
                     children: (0, i.jsx)(h.Z, {
@@ -157,13 +157,13 @@ function ec(e) {
             canConfigureJoin: C,
             canReply: v,
             canStartThread: S,
-            canViewThread: A,
-            canForward: Z,
+            canViewThread: Z,
+            canForward: A,
             isExpanded: M,
             showMoreUtilities: y,
             showEmojiPicker: G,
             showMessageBookmarksActions: V,
-            isMessageBookmark: Q,
+            isMessageBookmark: J,
             setPopout: et,
             hasDeveloperMode: ei,
             isGuildInviteReminder: ea,
@@ -188,8 +188,8 @@ function ec(e) {
                 ),
                 v = (0, b.U)(t, n),
                 S = (0, j.NE)(t, n),
-                A = (0, j.Ek)(n),
-                Z = (0, c.e7)([N.Z], () => null != t.guild_id && N.Z.isLurking(t.guild_id), [t]),
+                Z = (0, j.Ek)(n),
+                A = (0, c.e7)([N.Z], () => null != t.guild_id && N.Z.isLurking(t.guild_id), [t]),
                 M = (0, c.e7)([D.ZP], () => null != t.guild_id && D.ZP.isCurrentUserGuest(t.guild_id), [t]),
                 y = o.id === d,
                 B = (C || n.canDeleteOwnMessage(d)) && h && !$.V$x.UNDELETABLE.has(n.type);
@@ -202,18 +202,18 @@ function ec(e) {
                     canChat: g,
                     renderReactions: f,
                     canAddNewReactions: T,
-                    isLurking: Z,
+                    isLurking: A,
                     isGuest: M,
                     isActiveChannelOrUnarchivableThread: h
                 }),
                 X = t.type === $.d4z.GUILD_ANNOUNCEMENT && null != u && u.hasFeature($.oNc.NEWS) && (y || C) && (0, p.Z)(n),
-                Q = t.getGuildId(),
-                ee = null != Q && (n.type === $.uaV.USER_JOIN || n.type === $.uaV.GUILD_INVITE_REMINDER) && w.Z.canWithPartialContext($.Plq.MANAGE_GUILD, { guildId: Q }),
+                J = t.getGuildId(),
+                ee = null != J && (n.type === $.uaV.USER_JOIN || n.type === $.uaV.GUILD_INVITE_REMINDER) && w.Z.canWithPartialContext($.Plq.MANAGE_GUILD, { guildId: J }),
                 { canForwardMessages: et } = (0, I.yk)({ location: 'useMessageUtilitiesProps' }, { autoTrackExposure: !1 }),
                 en = (0, x.a)(n),
                 { enabled: ei } = R.Z.useExperiment({ location: 'message_utilities' }),
                 es = (0, c.e7)([L.Z], () => L.Z.isMessageBookmarked(t.id, n.id)),
-                ea = (0, J.Z)(),
+                ea = (0, Q.Z)(),
                 el = (0, c.e7)([m.Z], () => m.Z.keyboardModeEnabled);
             return {
                 channel: t,
@@ -224,7 +224,7 @@ function ec(e) {
                 canReport: G,
                 canReply: v,
                 canStartThread: S,
-                canViewThread: A,
+                canViewThread: Z,
                 canForward: et && en,
                 canCopy: H.wS,
                 hasDeveloperMode: E,
@@ -255,7 +255,7 @@ function ec(e) {
         }, [G, et]),
         ed = (0, j.$R)(t),
         em = n.hasFlag($.iLy.CROSSPOSTED),
-        [ep, e_] = (0, _.cv)(Z ? [u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE] : []),
+        [ep, e_] = (0, _.cv)(A ? [u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE] : []),
         ef = ep === u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE,
         [eE, eg] = s.useState(!1),
         eC = s.useCallback(() => {
@@ -324,9 +324,9 @@ function ec(e) {
                               ? (0, i.jsx)(
                                     K.sF,
                                     {
-                                        label: Q ? en.Z.Messages.MESSAGE_BOOKMARKS_REMOVE : en.Z.Messages.MESSAGE_BOOKMARKS_CREATE,
-                                        icon: Q ? d.BookmarkIcon : d.BookmarkOutlineIcon,
-                                        onClick: () => (Q ? (0, q.eM)(t, n) : (0, q.dF)(t, n))
+                                        label: J ? en.Z.Messages.MESSAGE_BOOKMARKS_REMOVE : en.Z.Messages.MESSAGE_BOOKMARKS_CREATE,
+                                        icon: J ? d.BookmarkIcon : d.BookmarkOutlineIcon,
+                                        onClick: () => (J ? (0, q.eM)(t, n) : (0, q.dF)(t, n))
                                     },
                                     'bookmark'
                                 )
@@ -342,7 +342,7 @@ function ec(e) {
                                     'pin'
                                 )
                               : null,
-                          S && Z
+                          S && A
                               ? (0, i.jsx)(
                                     K.sF,
                                     {
@@ -414,7 +414,7 @@ function ec(e) {
                       'edit'
                   )
                 : null,
-            Z
+            A
                 ? (0, i.jsx)(
                       K.sF,
                       {
@@ -428,7 +428,7 @@ function ec(e) {
                       'forward'
                   )
                 : null,
-            S && !Z
+            S && !A
                 ? (0, i.jsx)(
                       K.sF,
                       {
@@ -439,7 +439,7 @@ function ec(e) {
                       'thread'
                   )
                 : null,
-            !S && A
+            !S && Z
                 ? (0, i.jsx)(
                       K.sF,
                       {
@@ -544,10 +544,10 @@ function eu(e) {
 function ed(e) {
     let { type: t, emoji: n, channel: i, message: s, location: a, isBurst: l = !1 } = e;
     if (null == n) return;
-    let r = (0, Z.g1)(n);
+    let r = (0, A.g1)(n);
     'add' === t
-        ? (0, A.rU)(i.id, s.id, r, a, { burst: l })
-        : (0, A.WO)({
+        ? (0, Z.rU)(i.id, s.id, r, a, { burst: l })
+        : (0, Z.WO)({
               channelId: i.id,
               messageId: s.id,
               emoji: r,
@@ -562,7 +562,7 @@ function eh(e, t, n) {
             ...(s && {
                 openPopoutType: 'message_super_reaction_emoji_picker',
                 page: null != e.getGuildId() ? $.ZY5.GUILD_CHANNEL : $.ZY5.DM_CHANNEL,
-                section: (0, Z.s4)(e),
+                section: (0, A.s4)(e),
                 object: $.qAy.EMOJI_REACTION_PICKER_POPOUT
             })
         };
@@ -575,7 +575,7 @@ function eh(e, t, n) {
                 emoji: i,
                 channel: e,
                 message: t,
-                location: A.TW.MESSAGE_REACTION_PICKER,
+                location: Z.TW.MESSAGE_REACTION_PICKER,
                 isBurst: a
             }),
                 s && (a ? o()(n, 150)() : n());

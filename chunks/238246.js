@@ -22,8 +22,8 @@ var i,
     v = n(597952),
     S = n(628123),
     N = n(686546),
-    A = n(80006),
-    Z = n(151851),
+    Z = n(80006),
+    A = n(151851),
     M = n(587061),
     b = n(392358),
     R = n(314910),
@@ -148,7 +148,7 @@ class F extends (i = a.Component) {
                                                                     className: G.popout,
                                                                     children: [
                                                                         h && null != x
-                                                                            ? (0, s.jsx)(Z.Z, {
+                                                                            ? (0, s.jsx)(A.Z, {
                                                                                   focused: n,
                                                                                   type: x,
                                                                                   windowKey: l,
@@ -213,7 +213,7 @@ let W = a.forwardRef(function (e, t) {
             theme: P.Z.theme
         })),
         o = (0, h.e7)([f.Z], () => (f.Z.useForcedColors ? 'yes' : 'no')),
-        { accessibilitySettings: u, appWrapperClassName: d } = (0, A.I)(),
+        { accessibilitySettings: u, appWrapperClassName: d } = (0, Z.I)(),
         p = (0, h.e7)([g.ZP], () => null != e.channelId && null !== g.ZP.getSelfEmbeddedActivityForChannel(e.channelId));
     (0, M.Z)(n, !1);
     let _ = (0, b.Z)(n, i),

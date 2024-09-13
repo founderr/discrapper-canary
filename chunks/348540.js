@@ -26,7 +26,7 @@ var s = n(442837),
     T = n(689938),
     v = n(299336);
 function S(e) {
-    let { user: t, currentUser: n, displayProfile: S, channel: N, isHovering: A, onOpenProfile: Z } = e,
+    let { user: t, currentUser: n, displayProfile: S, channel: N, isHovering: Z, onOpenProfile: A } = e,
         M = (0, s.e7)([a.Z], () => a.Z.getRelationshipType(t.id)),
         b = (0, s.e7)([l.Z], () => l.Z.hidePersonalInformation),
         R = (0, s.e7)([o.Z], () => {
@@ -41,7 +41,7 @@ function S(e) {
                 profileType: I.y0.PANEL,
                 nickname: r.ZP.getName(null, N.id, t),
                 pronouns: null == S ? void 0 : S.pronouns,
-                onOpenProfile: Z,
+                onOpenProfile: A,
                 tags: (0, i.jsx)(u.Z, {
                     displayProfile: S,
                     profileType: I.y0.PANEL
@@ -52,8 +52,8 @@ function S(e) {
                         !b &&
                             (0, i.jsx)(C.Z, {
                                 userId: t.id,
-                                isHovering: A,
-                                onOpenProfile: Z
+                                isHovering: Z,
+                                onOpenProfile: A
                             })
                     ]
                 })
@@ -82,7 +82,7 @@ function S(e) {
                             children: (0, i.jsx)(d.Z, {
                                 userBio: S.bio,
                                 animateOnHover: !0,
-                                isHovering: A,
+                                isHovering: Z,
                                 userId: t.id
                             })
                         }),

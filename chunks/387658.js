@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return D;
+        return k;
     }
 }),
     t(47120);
@@ -27,8 +27,8 @@ var i = t(735250),
     I = t(676161),
     g = t(660090),
     P = t(783097),
-    S = t(845936),
-    L = t(176412),
+    L = t(845936),
+    S = t(176412),
     b = t(870205),
     R = t(981631),
     T = t(689079),
@@ -60,7 +60,7 @@ function H(e) {
                 A.S.dispatch(R.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: l.id });
         }, [l.id, o, s, c]),
         m = (null !== (t = null === (n = o.options) || void 0 === n ? void 0 : n.length) && void 0 !== t ? t : 0) > 0,
-        _ = a.useMemo(() => (0, L.ae)(o.displayDescription, void 0), [o.displayDescription]),
+        _ = a.useMemo(() => (0, S.ae)(o.displayDescription, void 0), [o.displayDescription]),
         C = a.useMemo(
             () =>
                 (0, i.jsxs)('div', {
@@ -161,7 +161,7 @@ function B(e) {
                 e.stopPropagation();
                 let n = N.Z.lastShownEntrypoint();
                 try {
-                    (await (0, S.L)({
+                    (await (0, L.L)({
                         applicationId: t.applicationId,
                         userIndexState: o,
                         guildIndexState: r,
@@ -204,7 +204,7 @@ function B(e) {
         ]
     });
 }
-function k(e) {
+function D(e) {
     let { channel: n, commands: t, section: a, headerName: l, sectionName: o, children: r } = e;
     return 0 === t.length
         ? null
@@ -241,7 +241,7 @@ function k(e) {
               ]
           });
 }
-function D(e) {
+function k(e) {
     var n;
     let { channel: t, application: l, sectionName: o, installOnDemand: r, setHasCommands: s } = e,
         {
@@ -286,14 +286,14 @@ function D(e) {
         ? (0, i.jsxs)('ul', {
               className: j.contentContainer,
               children: [
-                  (0, i.jsx)(k, {
+                  (0, i.jsx)(D, {
                       channel: t,
                       section: _,
                       commands: N,
                       headerName: M.Z.Messages.APP_LAUNCHER_HOME_RECENT_COMMANDS_HEADER,
                       sectionName: o
                   }),
-                  (0, i.jsx)(k, {
+                  (0, i.jsx)(D, {
                       channel: t,
                       section: _,
                       commands: p.current ? O : A,

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return g;
     }
 });
 var i = n(735250);
@@ -49,7 +49,7 @@ let f = (e, t, n) => {
             };
     }
 };
-function g(e) {
+function m(e) {
     let { streamLengthRequirement: t, viewerCountRequirement: n } = e,
         a = (0, l.e7)([u.Z], () => u.Z.currentDropQuestStreamProgress),
         s = Math.floor((a / 100) * t).toString();
@@ -81,14 +81,14 @@ function g(e) {
         ]
     });
 }
-function m(e) {
+function g(e) {
     let { onClose: t, tooltipAction: n, partnerGame: u } = e,
-        m = (0, c.au)(u);
+        g = (0, c.au)(u);
     (0, c.op)(u);
     let C = (0, l.e7)([s.default], () => s.default.getId());
-    if (null == m) return null;
-    let { streamLengthRequirement: I, viewerCountRequirement: E } = m.config,
-        N = m.drop,
+    if (null == g) return null;
+    let { streamLengthRequirement: I, viewerCountRequirement: E } = g.config,
+        N = g.drop,
         { header: x, body: S, imgSrc: v, imgStyle: Z } = f(n, N, I),
         T = () => {
             o.default.track(h.rMx.DROPS_ACTIVITY_PANEL_POPOVER_CTA_CLICK, {
@@ -128,7 +128,7 @@ function m(e) {
                       children: x
                   }),
             n === d._e.TRACK_PROGRESS
-                ? (0, i.jsx)(g, {
+                ? (0, i.jsx)(m, {
                       streamLengthRequirement: I,
                       viewerCountRequirement: E
                   })

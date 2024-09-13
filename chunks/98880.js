@@ -37,8 +37,8 @@ var i,
     I = t(70097),
     g = t(695346),
     P = t(973616),
-    S = t(695103),
-    L = t(880448),
+    L = t(695103),
+    S = t(880448),
     b = t(768581),
     R = t(541099),
     T = t(783097),
@@ -50,8 +50,8 @@ var i,
     H = t(217702),
     U = t(689938),
     B = t(127935),
-    k = t(413097),
-    D = t(969728);
+    D = t(413097),
+    k = t(969728);
 function w(e) {
     var n;
     let { application: t, look: i = 'large_banner', onClick: a, imageStyle: o, enableVideoBanner: r = !0, children: s, sectionName: c, resultsPosition: d, tracksImpression: u = !0, disabled: p = !1 } = e,
@@ -98,7 +98,7 @@ function V(e) {
             },
             [n, C]
         ),
-        { name: h, description: A } = o.useMemo(() => (0, T.sl)(n, { fakeAppIconURL: k }), [n]),
+        { name: h, description: A } = o.useMemo(() => (0, T.sl)(n, { fakeAppIconURL: D }), [n]),
         { trackItemImpressionRef: E } = (0, j.Z)({
             applicationId: n.id,
             sectionName: a,
@@ -136,7 +136,7 @@ function V(e) {
 }
 function W(e) {
     let { application: n, imageStyle: t, children: i } = e,
-        { name: a, iconURL: r } = o.useMemo(() => (0, T.sl)(n, { fakeAppIconURL: k }), [n]);
+        { name: a, iconURL: r } = o.useMemo(() => (0, T.sl)(n, { fakeAppIconURL: D }), [n]);
     return (0, l.jsx)(d.Tooltip, {
         tooltipContentClassName: B.tooltipContent,
         text: a,
@@ -160,7 +160,7 @@ function W(e) {
 }
 function F(e) {
     let { application: n, look: t, imageStyle: i, enableVideoBanner: a, disableBannerFadeIn: r, children: u } = e,
-        { iconURL: m, name: p, description: C } = o.useMemo(() => (0, T.sl)(n, { fakeAppIconURL: k }), [n]),
+        { iconURL: m, name: p, description: C } = o.useMemo(() => (0, T.sl)(n, { fakeAppIconURL: D }), [n]),
         f = o.useMemo(() => (null == C ? null : (0, y.ae)(C)), [C]),
         h = (0, v.ZP)(m, ''),
         [A, E] = o.useState(!1),
@@ -170,7 +170,7 @@ function F(e) {
         x = (0, T.lf)(n),
         I = 'large_banner' === t || 'medium_banner' === t,
         g = o.useCallback(() => E(!1), []),
-        P = (0, c.e7)([_.Z, S.Z], () => _.Z.inDevModeForApplication(n.id) || S.Z.inTestModeForApplication(n.id), [n.id]);
+        P = (0, c.e7)([_.Z, L.Z], () => _.Z.inDevModeForApplication(n.id) || L.Z.inTestModeForApplication(n.id), [n.id]);
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsxs)('div', {
@@ -276,7 +276,7 @@ function Y() {
             (0, l.jsx)('div', {
                 className: B.devShelfBadge,
                 ...e,
-                children: (0, l.jsx)(L.Z, { className: B.devShelfIcon })
+                children: (0, l.jsx)(S.Z, { className: B.devShelfIcon })
             })
     });
 }
@@ -293,7 +293,7 @@ function G(e) {
                   (0, l.jsx)('img', {
                       className: B.staffBadge,
                       alt: i,
-                      src: D,
+                      src: k,
                       ...e
                   })
           });

@@ -47,8 +47,8 @@ function I(e) {
     s.useEffect(() => {
         T.current = S;
     });
-    let A = s.useRef(v),
-        { currentDocument: Z, rootNode: M } = s.useMemo(() => {
+    let Z = s.useRef(v),
+        { currentDocument: A, rootNode: M } = s.useMemo(() => {
             let e = null != u && x ? u.document : document,
                 t = I.document.getElementById('app-mount');
             return {
@@ -69,30 +69,30 @@ function I(e) {
             (e) => {
                 if (null != M)
                     e === E.AEg.FULL_SCREEN &&
-                        (L(e, A.current),
+                        (L(e, Z.current),
                         (0, f.Pr)((e) => {
-                            A.current = e;
-                        }, Z));
+                            Z.current = e;
+                        }, A));
             },
-            [Z, L, M]
+            [A, L, M]
         ),
         P = s.useCallback(
             (e) => () => {
-                null != M && (e !== E.AEg.FULL_SCREEN ? ((A.current = e), L(e, E.AEg.FULL_SCREEN), (0, f.Dj)(M)) : j(e));
+                null != M && (e !== E.AEg.FULL_SCREEN ? ((Z.current = e), L(e, E.AEg.FULL_SCREEN), (0, f.Dj)(M)) : j(e));
             },
             [L, j, M]
         );
     return (s.useEffect(() => {
         let e = () => {
-            null != M && !(0, f.rB)(M, Z) && v === E.AEg.FULL_SCREEN && P(v)();
+            null != M && !(0, f.rB)(M, A) && v === E.AEg.FULL_SCREEN && P(v)();
         };
         return (
-            Z.addEventListener(f.NO, e),
+            A.addEventListener(f.NO, e),
             () => {
-                Z.removeEventListener(f.NO, e);
+                A.removeEventListener(f.NO, e);
             }
         );
-    }, [Z, v, P, M]),
+    }, [A, v, P, M]),
     s.useEffect(
         () => (
             m.default.track(E.rMx.VIDEO_LAYOUT_TOGGLED, {
@@ -106,8 +106,8 @@ function I(e) {
         [v, x]
     ),
     s.useEffect(() => {
-        null != M && T.current === E.WtW.VIDEO && S === E.WtW.VOICE && (0, f.Pr)(M, Z);
-    }, [Z, S, T, M]),
+        null != M && T.current === E.WtW.VIDEO && S === E.WtW.VOICE && (0, f.Pr)(M, A);
+    }, [A, S, T, M]),
     s.useEffect(() => {
         !N && x && C();
     }, [N, x]),

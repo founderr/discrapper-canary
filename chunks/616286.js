@@ -58,8 +58,8 @@ function T(e) {
         S = s.useRef(null),
         N = (0, o.e7)([u.Z], () => u.Z.getChatOpen(n), [n]),
         {
-            isShowing: A,
-            unreadCount: Z,
+            isShowing: Z,
+            unreadCount: A,
             mentionCount: M
         } = (function (e) {
             let { unreadCount: t, mentionCount: n, isTyping: i } = I(e),
@@ -125,7 +125,7 @@ function T(e) {
     let y = [(t = h && v ? C.Z.Messages.TEXT_IN_VOICE_POPOUT_DISABLED : N ? C.Z.Messages.VIDEO_CALL_HIDE_CHAT : C.Z.Messages.VIDEO_CALL_SHOW_CHAT)];
     return (
         M > 0 && y.push(C.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({ mentionCount: M })),
-        Z > 0 && y.push(C.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD),
+        A > 0 && y.push(C.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD),
         (0, i.jsx)(E.Z, {
             buttonRef: S,
             onClick: b,
@@ -133,7 +133,7 @@ function T(e) {
             'aria-label': y.join(', '),
             iconComponent: R,
             tooltipPosition: 'bottom',
-            wrapperClassName: l()(a, null != r && { [r]: A }),
+            wrapperClassName: l()(a, null != r && { [r]: Z }),
             forceTooltipOpen: j,
             ...T
         })

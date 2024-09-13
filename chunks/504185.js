@@ -27,8 +27,8 @@ var i = n(735250),
     v = n(493754),
     S = n(880831),
     N = n(73563),
-    A = n(800965),
-    Z = n(107169),
+    Z = n(800965),
+    A = n(107169),
     M = n(891551),
     b = n(314897),
     R = n(979696),
@@ -52,8 +52,8 @@ var i = n(735250),
     K = n(903108),
     q = n(981631),
     X = n(354459),
-    Q = n(689938),
-    J = n(336496);
+    J = n(689938),
+    Q = n(336496);
 let $ = 'HasBeenInStageChannel',
     ee = (e, t) => () => {
         let n = e.getGuildId();
@@ -91,19 +91,19 @@ function ei(e) {
                       context: (0, E.Z)(c.type),
                       userId: c.user.id,
                       currentWindow: _,
-                      sliderClassName: J.volumeSlider
+                      sliderClassName: Q.volumeSlider
                   })
                 : null,
             C
-                ? (0, i.jsx)(Z.Z, {
-                      className: J.rightTrayIcon,
+                ? (0, i.jsx)(A.Z, {
+                      className: Q.rightTrayIcon,
                       popoutWindowAlwaysOnTop: r,
                       onToggleStayOnTop: en
                   })
                 : null,
             m
-                ? (0, i.jsx)(A.Z, {
-                      className: J.rightTrayIcon,
+                ? (0, i.jsx)(Z.Z, {
+                      className: Q.rightTrayIcon,
                       popoutOpen: a,
                       onOpenPopout: ee(t, d),
                       onClosePopout: et
@@ -124,7 +124,7 @@ function es(e) {
         ? (0, i.jsx)(v.Z, {
               channel: t,
               appContext: n,
-              className: J.__invalid_leftTrayIcon,
+              className: Q.__invalid_leftTrayIcon,
               analyticsLocation: q.ZY5.GUILD_CHANNEL
           })
         : null;
@@ -138,13 +138,13 @@ function ea(e) {
         I = (0, k.w8)(n.id, U.pV.SPEAKER),
         x = (0, o.e7)([f.Z], () => f.Z.getSelectedParticipant(n.id)),
         T = h && _ !== q.IlC.POPOUT,
-        [v, A] = s.useState(0),
-        { isOnStartStageScreen: Z } = (0, B.ZP)();
+        [v, Z] = s.useState(0),
+        { isOnStartStageScreen: A } = (0, B.ZP)();
     (0, B.MV)(n);
     let M = (0, o.e7)([R.Z], () => R.Z.getToastsEnabled(n.id)),
         b = (0, K.Z)(n) ? (null != x ? '84px' : '124px') : null != x ? '0px' : '48px';
     return (
-        (t = Z
+        (t = A
             ? (0, i.jsx)(z.Z, {
                   channel: n,
                   onContinueClick: () => {
@@ -156,7 +156,7 @@ function ea(e) {
                     channel: n,
                     onScroll: (e) => {
                         let { scrollTop: t } = e.target;
-                        (0, r.debounce)(() => A(t), 1000, { leading: !0 })();
+                        (0, r.debounce)(() => Z(t), 1000, { leading: !0 })();
                     }
                 })
               : (0, i.jsx)(G.Z, {
@@ -175,7 +175,7 @@ function ea(e) {
                 E
                     ? (0, i.jsx)(W.Z, {
                           channel: n,
-                          isOnStartStageScreen: Z
+                          isOnStartStageScreen: A
                       })
                     : null,
             renderBottomRight: () =>
@@ -201,7 +201,7 @@ function ea(e) {
                     ? null
                     : (0, i.jsx)(g.ZP, {
                           children: (0, i.jsx)(S.Z, {
-                              className: l()(J.chatToasts, { [J.rtsSidebarOpen]: c }),
+                              className: l()(Q.chatToasts, { [Q.rtsSidebarOpen]: c }),
                               channelId: n.id
                           })
                       }),
@@ -209,7 +209,7 @@ function ea(e) {
             onPreventIdle: () => {},
             onAllowIdle: () => {},
             onForceIdle: () => {},
-            screenMessage: T ? { mainText: Q.Z.Messages.POPOUT_PLAYER_OPENED } : null,
+            screenMessage: T ? { mainText: J.Z.Messages.POPOUT_PLAYER_OPENED } : null,
             idle: !1,
             children: !T && t
         })
@@ -229,7 +229,7 @@ function el(e) {
         { analyticsLocations: v } = (0, _.ZP)(p.Z.STAGE_CHANNEL_CALL),
         S = (0, m.bp)(),
         N = (0, o.e7)([f.Z], () => f.Z.getChatOpen(t.id), [t.id]),
-        A = (0, o.e7)([L.Z], () => L.Z.getGuild(t.guild_id), [t.guild_id]);
+        Z = (0, o.e7)([L.Z], () => L.Z.getGuild(t.guild_id), [t.guild_id]);
     s.useEffect(() => {
         null == c.K.get($) &&
             ((0, u.openModalLazy)(async () => {
@@ -238,22 +238,22 @@ function el(e) {
             }),
             c.K.set($, Date.now()));
     }, []);
-    let { width: Z = 0, ref: M } = (0, h.Z)();
+    let { width: A = 0, ref: M } = (0, h.Z)();
     return (0, i.jsx)(_.Gt, {
         value: v,
         children: (0, i.jsxs)(g.B2, {
             children: [
                 (0, i.jsxs)('div', {
-                    className: J.container,
+                    className: Q.container,
                     ref: M,
                     children: [
                         (0, i.jsx)(u.ThemeProvider, {
                             theme: q.BRd.DARK,
                             children: (e) =>
                                 (0, i.jsx)('div', {
-                                    className: l()(J.callContainer, e, {
-                                        [J.sidebarVisible]: a,
-                                        [J.sidebarOrChatVisible]: a || N
+                                    className: l()(Q.callContainer, e, {
+                                        [Q.sidebarVisible]: a,
+                                        [Q.sidebarOrChatVisible]: a || N
                                     }),
                                     children: (0, i.jsx)(ea, {
                                         channel: t,
@@ -274,14 +274,14 @@ function el(e) {
                               })
                             : null,
                         (0, i.jsx)('div', {
-                            className: J.channelChatWrapper,
+                            className: Q.channelChatWrapper,
                             children:
                                 N &&
                                 (!T || (T && S === q.IlC.POPOUT)) &&
                                 (0, i.jsx)(C.Z, {
                                     channel: t,
-                                    guild: A,
-                                    maxWidth: Z - 550
+                                    guild: Z,
+                                    maxWidth: A - 550
                                 })
                         })
                     ]

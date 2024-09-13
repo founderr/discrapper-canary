@@ -26,14 +26,14 @@ var i = n(735250),
     v = n(199649),
     C = n(1397),
     x = n(541716),
-    T = n(752305),
-    N = n(974251),
+    N = n(752305),
+    T = n(974251),
     O = n(893718),
     A = n(249458),
     y = n(552062),
-    R = n(957730),
+    b = n(957730),
     M = n(400023),
-    b = n(623292),
+    R = n(623292),
     L = n(807092),
     P = n(592125),
     D = n(703558),
@@ -41,9 +41,9 @@ var i = n(735250),
     j = n(430824),
     k = n(375954),
     V = n(944486),
-    B = n(914010),
-    U = n(594174),
-    z = n(556296),
+    U = n(914010),
+    z = n(594174),
+    B = n(556296),
     G = n(237997),
     W = n(585483),
     Y = n(838440),
@@ -140,7 +140,7 @@ class ei extends s.Component {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : t.props,
                     { textValue: n } = t.state,
                     i = D.Z.getDraft(e.channel.id, D.d.ChannelMessage);
-                n !== i && '' === i && t.setState((0, T.eK)(i));
+                n !== i && '' === i && t.setState((0, N.eK)(i));
             }),
             et(this, 'handleTextareaKeyDown', (e) => {
                 if (e.which === q.yXg.ARROW_UP && !e.shiftKey && !e.altKey && !e.ctrlKey && !e.metaKey && 0 === this.state.textValue.length) {
@@ -188,7 +188,7 @@ class ei extends s.Component {
                                         shouldRefocus: !1
                                     };
                           let r = p.Z.getSendMessageOptionsForReply(i);
-                          return (p.Z.sendMessage(n.id, R.ZP.parse(n, t), !0, r), this.setState((0, T.H2)()), (0, b.A6)(n.id), s)
+                          return (p.Z.sendMessage(n.id, b.ZP.parse(n, t), !0, r), this.setState((0, N.H2)()), (0, R.A6)(n.id), s)
                               ? (f.Z.deactivateAllRegions(),
                                 {
                                     shouldClear: !1,
@@ -207,19 +207,19 @@ class ei extends s.Component {
                 this.setState({ focused: !1 });
             }),
             et(this, 'renderAttachButton', (e, t) =>
-                (0, i.jsx)(N.Z, {
+                (0, i.jsx)(T.Z, {
                     className: t,
                     channel: this.props.channel,
                     draftType: D.d.ChannelMessage,
                     editorTextContent: this.state.textValue,
-                    setValue: (e) => this.handleTextareaChange(null, e, (0, T.JM)(e)),
+                    setValue: (e) => this.handleTextareaChange(null, e, (0, N.JM)(e)),
                     canOnlyUseTextCommands: e
                 })
             ),
             D.Z.addChangeListener(this.draftDidChange);
         let n = D.Z.getDraft(e.channel.id, D.d.ChannelMessage);
         (this.state = {
-            ...(0, T.eK)(n),
+            ...(0, N.eK)(n),
             focused: !1,
             contentWarningProps: null
         }),
@@ -443,17 +443,17 @@ class es extends s.PureComponent {
 }
 function ea(e) {
     let { contained: t = !1, ...n } = e,
-        s = (0, c.e7)([B.Z], () => B.Z.getGuildId()),
+        s = (0, c.e7)([U.Z], () => U.Z.getGuildId()),
         a = (0, c.e7)([V.Z], () => V.Z.getChannelId(s)),
         o = (0, c.e7)([P.Z], () => P.Z.getChannel(a)),
-        r = (0, c.e7)([z.Z], () => z.Z.getOverlayChatKeybind()),
+        r = (0, c.e7)([B.Z], () => B.Z.getOverlayChatKeybind()),
         l = null != r ? (0, H.BB)(r.shortcut, !0) : ']',
         [d, u, h] = (0, c.Wu)([G.Z], () => [G.Z.getTextWidgetOpacity(), G.Z.getActiveRegions(), !t && G.Z.isPreviewingInGame()]),
         p = (0, c.e7)([j.Z], () => j.Z.getGuild(s)),
         f = (0, c.e7)([w.Z], () => null != s && w.Z.didAgree(s)),
         _ = null != o && o.isPrivate() ? o.getRecipientId() : null,
         g = (0, c.e7)([L.Z], () => (null != a ? L.Z.getPendingReply(a) : void 0)),
-        m = (0, c.e7)([U.default], () => (null != _ ? U.default.getUser(_) : null)),
+        m = (0, c.e7)([z.default], () => (null != _ ? z.default.getUser(_) : null)),
         { placeholder: E } = (0, Z.Z)(o);
     return null != o && null != p && q.TPd.GUILD_THREADS_ONLY.has(o.type)
         ? (0, i.jsx)(I.Z, {})

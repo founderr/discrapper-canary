@@ -22,8 +22,8 @@ var i = n(735250),
     v = n(706454),
     S = n(695346),
     N = n(433355),
-    A = n(819640),
-    Z = n(375954),
+    Z = n(819640),
+    A = n(375954),
     M = n(496675),
     b = n(885110),
     R = n(627553),
@@ -44,8 +44,8 @@ t.Z = s.memo(function (e) {
     let V,
         { className: F, channel: W, draftType: z, editorTextContent: Y, setValue: K, canOnlyUseTextCommands: q } = e,
         X = (0, h.bp)(),
-        Q = s.useRef(null),
-        J = (0, r.e7)([b.Z], () => b.Z.getActivities()),
+        J = s.useRef(null),
+        Q = (0, r.e7)([b.Z], () => b.Z.getActivities()),
         $ = (0, r.e7)([E.Z], () => E.Z.getSettings().clipsEnabled),
         ee = (0, r.e7)([E.Z], () => E.Z.getLastClipsSession()),
         et = (0, r.Wu)([E.Z], () => E.Z.getNewClipIds()),
@@ -54,7 +54,7 @@ t.Z = s.memo(function (e) {
         { enabled: es } = _.T.useExperiment({ location: 'ChannelAttachButton' }, { autoTrackExposure: !1 }),
         ea = (0, r.e7)([I.qc], () => I.qc.hasHotspot(I.v6.CLIPS_CHANNEL_ATTACH_REMINDER)),
         el = (0, c.useModalsStore)((e) => (0, c.hasModalOpenSelector)(e, w.Qr)),
-        er = (0, r.e7)([A.Z], () => A.Z.hasLayers()),
+        er = (0, r.e7)([Z.Z], () => Z.Z.hasLayers()),
         eo = (0, r.e7)([E.Z], () => E.Z.hasClips()),
         [ec, eu] = s.useState(null),
         ed = (0, f.Go)() && ($ || eo),
@@ -73,7 +73,7 @@ t.Z = s.memo(function (e) {
                   }),
                 j.S.dispatchToLastSubscribed(U.CkL.TEXTAREA_FOCUS);
         },
-        eg = (0, r.e7)([Z.Z], () => Z.Z.hasCurrentUserSentMessageSinceAppStart());
+        eg = (0, r.e7)([A.Z], () => A.Z.hasCurrentUserSentMessageSinceAppStart());
     function eC() {
         (0, c.openModalLazy)(
             async () => {
@@ -91,7 +91,7 @@ t.Z = s.memo(function (e) {
     s.useEffect(() => {
         let e = () => {
             var e;
-            return null === (e = Q.current) || void 0 === e ? void 0 : e.activateUploadDialogue();
+            return null === (e = J.current) || void 0 === e ? void 0 : e.activateUploadDialogue();
         };
         return (
             j.S.subscribe(U.CkL.UPLOAD_FILE, e),
@@ -106,23 +106,23 @@ t.Z = s.memo(function (e) {
         ev = (0, x.UI)(null != W ? W : void 0),
         eS = (0, c.useRedesignIconContext)().enabled,
         eN = (0, m.qB)(W.id, 'ChannelAttachButton'),
-        eA = null !== (a = null == et ? void 0 : et.length) && void 0 !== a ? a : 0,
-        eZ = (0, k.Z)({
+        eZ = null !== (a = null == et ? void 0 : et.length) && void 0 !== a ? a : 0,
+        eA = (0, k.Z)({
             canAttachFiles: em,
             canStartThreads: eI || ex,
             useSlate: eT,
             hasClips: ed,
             canUseApplicationCommands: !q && !es,
             channel: W,
-            activities: J,
-            newClipsCount: eA,
+            activities: Q,
+            newClipsCount: eZ,
             canPostPolls: ev,
             canLaunchActivities: eN,
             appContext: X
         });
-    if (0 === eZ.length) return null;
-    let eM = J.some((e) => (0, p.Z)(e, U.xjy.SYNC)),
-        eb = J.some((e) => (0, p.Z)(e, U.xjy.JOIN) && !(0, p.Z)(e, U.xjy.EMBEDDED)) || eM;
+    if (0 === eA.length) return null;
+    let eM = Q.some((e) => (0, p.Z)(e, U.xjy.SYNC)),
+        eb = Q.some((e) => (0, p.Z)(e, U.xjy.JOIN) && !(0, p.Z)(e, U.xjy.EMBEDDED)) || eM;
     V = eS
         ? (0, i.jsx)(c.CirclePlusIcon, {
               className: G.__invalid_attachButtonIcon,
@@ -136,7 +136,7 @@ t.Z = s.memo(function (e) {
                 width: 24,
                 height: 24
             })
-          : eA > 0
+          : eZ > 0
             ? (0, i.jsx)(R.Z, {
                   className: G.__invalid_attachButtonIcon,
                   foreground: G.attachButtonClip,
@@ -174,11 +174,11 @@ t.Z = s.memo(function (e) {
                     return (0, i.jsx)(D.Z, {
                         ...e,
                         onClose: () => eu(null),
-                        options: eZ,
+                        options: eA,
                         channel: W,
                         onFileUpload: () => {
                             var e;
-                            return null === (e = Q.current) || void 0 === e ? void 0 : e.activateUploadDialogue();
+                            return null === (e = J.current) || void 0 === e ? void 0 : e.activateUploadDialogue();
                         },
                         draftType: z,
                         editorTextContent: Y,
@@ -199,7 +199,7 @@ t.Z = s.memo(function (e) {
                 onDoubleClick: em
                     ? () => {
                           var e;
-                          return null === (e = Q.current) || void 0 === e ? void 0 : e.activateUploadDialogue();
+                          return null === (e = J.current) || void 0 === e ? void 0 : e.activateUploadDialogue();
                       }
                     : void 0,
                 ...e,
@@ -211,7 +211,7 @@ t.Z = s.memo(function (e) {
             (0, i.jsx)('div', {
                 className: G.uploadInput,
                 children: (0, i.jsx)(u.Z, {
-                    ref: Q,
+                    ref: J,
                     onChange: (e) => {
                         eE(e.currentTarget.files, e.currentTarget.err), (e.currentTarget.value = '');
                     },

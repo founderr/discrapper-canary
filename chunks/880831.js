@@ -30,8 +30,8 @@ var i = n(735250),
     v = n(768581),
     S = n(70956),
     N = n(823379),
-    A = n(981631),
-    Z = n(217702),
+    Z = n(981631),
+    A = n(217702),
     M = n(837161);
 let b = 10 * S.Z.Millis.SECOND;
 function R(e) {
@@ -54,7 +54,7 @@ function R(e) {
             },
             [n.channel_id, n.id]
         ),
-        A =
+        Z =
             null != n.content && '' !== n.content
                 ? (0, f.ZP)(n, {
                       isInteracting: d,
@@ -66,10 +66,10 @@ function R(e) {
             renderedContent: R,
             trailingIcon: L,
             leadingIcon: j
-        } = (0, g.f)(n, A, a, M.messageContent, {
+        } = (0, g.f)(n, Z, a, M.messageContent, {
             trailingIconClass: M.messageContentTrailingIcon,
             leadingIconClass: M.messageContentLeadingIcon,
-            iconSize: Z.WW
+            iconSize: A.WW
         }),
         P = (0, C.cv)(n),
         O =
@@ -132,7 +132,7 @@ function L(e) {
             s.useEffect(() => {
                 function e(e) {
                     let { channelId: t, message: i } = e;
-                    if (t === n && i.type !== A.uaV.STAGE_START && i.type !== A.uaV.STAGE_END && i.type !== A.uaV.STAGE_TOPIC && i.type !== A.uaV.STAGE_SPEAKER && i.type !== A.uaV.STAGE_RAISE_HAND) clearTimeout(p.current), (p.current = setTimeout(_, l)), o((e) => [...e, i.id]);
+                    if (t === n && i.type !== Z.uaV.STAGE_START && i.type !== Z.uaV.STAGE_END && i.type !== Z.uaV.STAGE_TOPIC && i.type !== Z.uaV.STAGE_SPEAKER && i.type !== Z.uaV.STAGE_RAISE_HAND) clearTimeout(p.current), (p.current = setTimeout(_, l)), o((e) => [...e, i.id]);
                 }
                 return (
                     d.Z.subscribe('MESSAGE_CREATE', e),
@@ -210,7 +210,7 @@ function L(e) {
             }
         });
     return (0, i.jsx)(u.ThemeProvider, {
-        theme: A.BRd.DARK,
+        theme: Z.BRd.DARK,
         children: (e) =>
             (0, i.jsx)('div', {
                 className: l()(n, e),

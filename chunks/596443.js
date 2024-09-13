@@ -28,11 +28,11 @@ var i = n(735250),
     v = n(981631),
     S = n(689938),
     N = n(194898),
-    A = n(650464);
-function Z(e) {
+    Z = n(650464);
+function A(e) {
     var t, n, a, r;
     let { permission: o, roleIds: f, guild: C, specMap: I, categoryTitle: x, userId: N } = e,
-        Z = (0, c.e7)([E.Z], () => E.Z.getRoles(C.id)),
+        A = (0, c.e7)([E.Z], () => E.Z.getRoles(C.id)),
         M = v.Plq[o],
         b = null !== (a = null === (t = I[M.toString()]) || void 0 === t ? void 0 : t.title) && void 0 !== a ? a : (0, _.wt)(M),
         R = null !== (r = null === (n = I[M.toString()]) || void 0 === n ? void 0 : n.description) && void 0 !== r ? r : '',
@@ -47,13 +47,13 @@ function Z(e) {
             [O, C.id]
         );
     return (0, i.jsxs)('div', {
-        className: l()(A.permissionItemContainer, { [A.elevatedPermission]: L }),
+        className: l()(Z.permissionItemContainer, { [Z.elevatedPermission]: L }),
         children: [
             (0, i.jsxs)('div', {
-                className: A.permissionItemHeader,
+                className: Z.permissionItemHeader,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: A.permissionTitle,
+                        className: Z.permissionTitle,
                         children: [
                             (0, i.jsx)(u.Text, {
                                 variant: 'text-md/medium',
@@ -62,7 +62,7 @@ function Z(e) {
                             }),
                             null != x &&
                                 (0, i.jsxs)('div', {
-                                    className: A.permissionItemSubheader,
+                                    className: Z.permissionItemSubheader,
                                     children: [
                                         (0, i.jsx)(u.Text, {
                                             variant: 'text-xs/normal',
@@ -82,7 +82,7 @@ function Z(e) {
                                                         text: S.Z.Messages.GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_TOOLTIP,
                                                         children: (e) =>
                                                             (0, i.jsxs)(u.Clickable, {
-                                                                className: A.elevatedPermissionContainer,
+                                                                className: Z.elevatedPermissionContainer,
                                                                 ...e,
                                                                 children: [
                                                                     (0, i.jsx)(u.ShieldLockIcon, {
@@ -112,7 +112,7 @@ function Z(e) {
                                                         color: u.tokens.colors.INTERACTIVE_MUTED.css
                                                     }),
                                                     (0, i.jsx)('div', {
-                                                        className: A.elevatedPermissionContainer,
+                                                        className: Z.elevatedPermissionContainer,
                                                         children: (0, i.jsx)(u.Text, {
                                                             variant: 'text-xs/normal',
                                                             color: 'header-muted',
@@ -134,7 +134,7 @@ function Z(e) {
             }),
             null != R &&
                 (0, i.jsx)('div', {
-                    className: A.permissionItemDescription,
+                    className: Z.permissionItemDescription,
                     children: (0, i.jsx)(u.Text, {
                         variant: 'text-sm/normal',
                         color: 'text-secondary',
@@ -142,15 +142,15 @@ function Z(e) {
                     })
                 }),
             (0, i.jsx)('div', {
-                className: A.permissionItemRoleContainer,
+                className: Z.permissionItemRoleContainer,
                 children: f.map((e) =>
                     (0, T.Ov)(e, N)
                         ? (0, i.jsx)(
                               'div',
                               {
-                                  className: A.roleTooltipItem,
+                                  className: Z.roleTooltipItem,
                                   children: (0, i.jsx)('div', {
-                                      className: A.roleChiplet,
+                                      className: Z.roleChiplet,
                                       children: (0, i.jsx)(u.Text, {
                                           variant: 'text-xs/medium',
                                           color: 'text-normal',
@@ -163,12 +163,12 @@ function Z(e) {
                         : (0, i.jsx)(
                               u.Clickable,
                               {
-                                  className: l()(A.roleTooltipItem, { [A.editable]: O && !(0, d.pM)(C.id, e) }),
+                                  className: l()(Z.roleTooltipItem, { [Z.editable]: O && !(0, d.pM)(C.id, e) }),
                                   onClick: () => y(e),
                                   children: (0, i.jsx)(m.Z, {
-                                      role: Z[e],
+                                      role: A[e],
                                       guildId: C.id,
-                                      className: A.roleChiplet
+                                      className: Z.roleChiplet
                                   })
                               },
                               e
@@ -235,7 +235,7 @@ function b(e) {
                                 }
                                 e.push(
                                     (0, i.jsx)(
-                                        Z,
+                                        A,
                                         {
                                             permission: l,
                                             roleIds: r,
@@ -264,14 +264,14 @@ function b(e) {
                       onNavigate: d
                   }),
                   (0, i.jsx)(u.Scroller, {
-                      className: A.permissionsGroupContainer,
+                      className: Z.permissionsGroupContainer,
                       children: (0, i.jsx)(u.FormItem, {
                           title: S.Z.Messages.GUILD_MEMBER_MOD_VIEW_MOD_PERMSSISONS_PANEL_TITLE,
                           children: (0, i.jsxs)('div', {
-                              className: A.permissionsItemContainer,
+                              className: Z.permissionsItemContainer,
                               children: [
                                   (0, i.jsx)(u.SearchBar, {
-                                      className: A.searchBar,
+                                      className: Z.searchBar,
                                       query: j,
                                       placeholder: S.Z.Messages.GUILD_MEMBER_MOD_VIEW_PERMISSIONS_SEARCH_PLACEHOLDER,
                                       onChange: k,

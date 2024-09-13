@@ -114,8 +114,8 @@ t.Z = (e) => {
         { xboxAndPlaystationAccounts: H } = (0, E.z6)(),
         Y = (0, r.e7)([c.default], () => c.default.locale),
         W = (0, E.z)(t),
-        K = k && B,
-        z = I && !U,
+        z = k && B,
+        K = I && !U,
         Q = H.length > 0 && k && (0, T.$J)(t) && j && !U && !W,
         q = (0, i.jsx)(C.Z, {
             autoplay: o,
@@ -144,9 +144,9 @@ t.Z = (e) => {
                 'aria-hidden': !G,
                 children: [
                     (0, i.jsx)(l.Tooltip, {
-                        text: z ? x.Z.Messages.QUESTS_REWARD_TILE_EXPIRED_QUEST : null,
+                        text: K ? x.Z.Messages.QUESTS_REWARD_TILE_EXPIRED_QUEST : null,
                         tooltipContentClassName: M.rewardTileExpirationTooltip,
-                        shouldShow: z,
+                        shouldShow: K,
                         children: (e) =>
                             (0, i.jsxs)('div', {
                                 className: M.rewardTileWrapper,
@@ -157,7 +157,7 @@ t.Z = (e) => {
                                             className: M.rewardTileExpired,
                                             children: (0, i.jsx)(l.CircleWarningIcon, { color: l.tokens.colors.WHITE })
                                         }),
-                                    K
+                                    z
                                         ? (0, i.jsx)(A.Z, {
                                               questConfig: t.config,
                                               fallback: q,

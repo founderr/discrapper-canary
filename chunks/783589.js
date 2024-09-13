@@ -18,7 +18,7 @@ t.Z = () => {
         referralProgram: {
             name: 'referralProgram',
             title: c.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_REFERRAL_PROGRAM_TITLE,
-            description: c.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_BOXES_REFERRAL_PROGRAM_DESCRIPTION,
+            description: c.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_REFERRAL_PROGRAM_SUBTITLE,
             descriptionCta: c.Z.Messages.MARKETING_PAGE_CTA_GET_NITRO,
             previewImage: _,
             videoUrl: e ? i.Z : T.Z

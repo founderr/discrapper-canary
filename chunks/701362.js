@@ -27,8 +27,8 @@ var i = n(735250),
     v = n(718805),
     S = n(871118),
     N = n(981631),
-    A = n(689938),
-    Z = n(278552);
+    Z = n(689938),
+    A = n(278552);
 class M extends s.PureComponent {
     componentDidMount() {
         let { user: e, streamApplication: t } = this.props;
@@ -45,19 +45,19 @@ class M extends s.PureComponent {
         let { onWatch: t, activeStream: n, currentUserId: s, canWatch: a, unavailableReason: l } = this.props;
         return (0, i.jsxs)(o.Clickable, {
             onClick: t,
-            className: Z.previewContainer,
+            className: A.previewContainer,
             children: [
                 (0, i.jsx)(S.Z, {
-                    className: Z.previewImage,
+                    className: A.previewImage,
                     stream: e
                 }),
                 a
                     ? (0, i.jsx)('div', {
-                          className: Z.previewHover,
+                          className: A.previewHover,
                           children: (0, i.jsx)(o.Text, {
                               variant: 'text-sm/normal',
                               color: 'none',
-                              className: Z.white,
+                              className: A.white,
                               children: (0, v.Z)(e, n, s, l)
                           })
                       })
@@ -70,13 +70,13 @@ class M extends s.PureComponent {
         return null == n
             ? null
             : (0, i.jsx)('div', {
-                  className: l()(Z.streamPreviewWrapper, { [Z.mounted]: s }),
+                  className: l()(A.streamPreviewWrapper, { [A.mounted]: s }),
                   children: (0, i.jsxs)('div', {
-                      className: Z.streamPreview,
+                      className: A.streamPreview,
                       children: [
                           this.renderPreview(n),
                           (0, i.jsxs)('div', {
-                              className: Z.body,
+                              className: A.body,
                               children: [
                                   null != e
                                       ? (0, i.jsx)(c.Z, {
@@ -99,13 +99,13 @@ class M extends s.PureComponent {
                                             user: t,
                                             guildId: n.guildId,
                                             channelId: n.channelId,
-                                            className: Z.activityActions,
-                                            color: Z.watchButton
+                                            className: A.activityActions,
+                                            color: A.watchButton
                                         }),
                                   (0, i.jsx)(h.Z, {
                                       type: h.Z.Types.INLINE,
-                                      className: Z.protip,
-                                      children: __OVERLAY__ ? A.Z.Messages.WATCH_STREAM_IN_APP : A.Z.Messages.WATCH_STREAM_TIP
+                                      className: A.protip,
+                                      children: __OVERLAY__ ? Z.Z.Messages.WATCH_STREAM_IN_APP : Z.Z.Messages.WATCH_STREAM_TIP
                                   })
                               ]
                           })

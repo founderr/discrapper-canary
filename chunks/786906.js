@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return T;
     }
 }),
     n(47120);
@@ -38,7 +38,7 @@ function x(e, t, n) {
         e
     );
 }
-class T extends s.Component {
+class N extends s.Component {
     componentDidUpdate() {
         this.props.locked && this.state.showOpacitySlider && this.setState({ showOpacitySlider: !1 });
     }
@@ -154,7 +154,7 @@ class T extends s.Component {
             });
     }
 }
-function N(e) {
+function T(e) {
     let { channel: t, ...n } = e,
         s = (0, r.e7)([Z.Z, g.Z], () => {
             let e = Z.Z.getVoiceChannelId();
@@ -164,7 +164,7 @@ function N(e) {
         o = (0, r.e7)([_.Z], () => _.Z.isCallActive(t.id)),
         l = (0, u.ZP)(t),
         c = (0, r.e7)([E.Z], () => !!t.isDM() && null != t.getRecipientId() && E.Z.isBlocked(t.getRecipientId()));
-    return (0, i.jsx)(T, {
+    return (0, i.jsx)(N, {
         channel: t,
         channelName: l,
         guild: a,

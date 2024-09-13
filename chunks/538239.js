@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         activityInviteKey: function () {
-            return A;
+            return Z;
         }
     }),
     n(47120);
@@ -40,8 +40,8 @@ function N(e, t, n) {
         e
     );
 }
-let A = 'ActivityInvite';
-class Z extends s.PureComponent {
+let Z = 'ActivityInvite';
+class A extends s.PureComponent {
     componentDidMount() {
         this.fetchApplication();
     }
@@ -127,7 +127,7 @@ class Z extends s.PureComponent {
                                     onChange: this.handleTextChange,
                                     onSubmit: this.handleShare,
                                     type: _.I.FORM,
-                                    parentModalKey: A,
+                                    parentModalKey: Z,
                                     disableThemedBackground: !0
                                 })
                         })
@@ -247,4 +247,4 @@ t.default = r.ZP.connectStores([I.Z, p.Z], (e) => {
         cooldown: I.Z.getSlowmodeCooldownGuess(t.id),
         application: null != n.application_id ? p.Z.getApplication(n.application_id) : C.r9
     };
-})(Z);
+})(A);

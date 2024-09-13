@@ -33,8 +33,8 @@ var i = n(735250),
     b = n(474936),
     M = n(871465),
     R = n(689938),
-    P = n(342824);
-let O = {
+    O = n(342824);
+let P = {
     origin: {
         x: -16,
         y: 0
@@ -60,18 +60,18 @@ function y(e) {
     if (null == n) return null;
     let w = R.Z.Messages.DIRECT_MESSAGES;
     I && (w = s.K.get(A.wli) ? R.Z.Messages.DISCODO_ENABLED : R.Z.Messages.DISCODO_DISABLED);
-    let U = null;
+    let G = null;
     !t &&
         f &&
-        (U = (0, i.jsx)(c.Z, {
-            className: P.downloadProgress,
+        (G = (0, i.jsx)(c.Z, {
+            className: O.downloadProgress,
             determineOwnVisibility: !1
         }));
-    let G = t || g || m,
+    let U = t || g || m,
         k = (0, i.jsx)(o.BlobMask, {
-            selected: G,
+            selected: U,
             lowerBadge: h > 0 ? (0, L.Ne)(h) : null,
-            upperBadge: U,
+            upperBadge: G,
             lowerBadgeSize: { width: (0, o.getBadgeWidthForValue)(h) },
             children: (0, i.jsx)(o.NavItem, {
                 onMouseEnter: () => C(!0),
@@ -89,7 +89,7 @@ function y(e) {
                             }, 1000);
                     }
                 },
-                selected: G,
+                selected: U,
                 ariaLabel: R.Z.Messages.DIRECT_MESSAGES,
                 ...j,
                 to: {
@@ -106,9 +106,9 @@ function y(e) {
             })
         });
     return (0, i.jsx)('div', {
-        className: P.tutorialContainer,
+        className: O.tutorialContainer,
         children: (0, i.jsx)(p.Z, {
-            inlineSpecs: O,
+            inlineSpecs: P,
             tutorialId: 'friends-list',
             position: 'right',
             children: (0, i.jsxs)(Z.H, {
@@ -116,7 +116,7 @@ function y(e) {
                     (0, i.jsx)(v.Z, {
                         selected: t,
                         hovered: g,
-                        className: P.pill
+                        className: O.pill
                     }),
                     (0, i.jsx)(T.Z, {
                         color: o.Tooltip.Colors.PRIMARY,

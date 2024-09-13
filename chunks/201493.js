@@ -24,8 +24,8 @@ t.Z = (e) => {
     var t;
     let { channel: S, guild: N } = e,
         {
-            currentCategoryId: A,
-            directoryEntries: Z,
+            currentCategoryId: Z,
+            directoryEntries: A,
             categoryCounts: M,
             allEntriesCount: b,
             isLoading: R
@@ -52,7 +52,7 @@ t.Z = (e) => {
         },
         [S.id]
     );
-    let L = s.useMemo(() => (null != Z ? (0, C.v)(Object.values(Z), A) : null), [Z, A]),
+    let L = s.useMemo(() => (null != A ? (0, C.v)(Object.values(A), Z) : null), [A, Z]),
         {
             mostRecentQuery: j,
             searchFetching: P,
@@ -81,9 +81,9 @@ t.Z = (e) => {
             d.default.track(T.rMx.GUILD_DIRECTORY_CHANNEL_VIEWED, {
                 directory_channel_id: S.id,
                 directory_guild_id: N.id,
-                primary_category_id: A
+                primary_category_id: Z
             });
-        }, [S.id, N.id, A]);
+        }, [S.id, N.id, Z]);
     let w = (0, f.G)(S)
             ? () => {
                   (0, l.openModalLazy)(async () => {
@@ -94,7 +94,7 @@ t.Z = (e) => {
                               directoryGuildName: N.name,
                               directoryGuildId: N.id,
                               directoryChannelId: S.id,
-                              currentCategoryId: A === x.AR.ALL ? null : A
+                              currentCategoryId: Z === x.AR.ALL ? null : Z
                           });
                   });
               }
@@ -122,12 +122,12 @@ t.Z = (e) => {
               searchResults: O,
               searchFetching: P
           })
-        : null == L && null == A
+        : null == L && null == Z
           ? (0, i.jsx)('div', {
                 className: v.pageContainer,
                 children: (0, i.jsx)(l.Spinner, { className: v.spinner })
             })
-          : (null == L ? void 0 : L.length) === 0 && null == A
+          : (null == L ? void 0 : L.length) === 0 && null == Z
             ? (0, i.jsx)('div', {
                   className: v.pageContainer,
                   children: (0, i.jsx)(E.Z, {
@@ -142,7 +142,7 @@ t.Z = (e) => {
                   handleSearchKeyPress: B,
                   handleClearSearch: H,
                   handleCreateOrAddGuild: w,
-                  currentCategoryId: A,
+                  currentCategoryId: Z,
                   handleSelectCategory: (e) => {
                       m.Su(S.id, e);
                   },

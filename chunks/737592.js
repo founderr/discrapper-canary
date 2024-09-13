@@ -12,13 +12,13 @@ var l = n(120356),
     p = n(131704),
     _ = n(314897),
     f = n(594174),
-    g = n(768581),
-    m = n(51144),
+    m = n(768581),
+    g = n(51144),
     C = n(754231),
     I = n(51299);
 function E(e) {
     let { guildId: t, member: n, className: l } = e,
-        a = null != n.member ? (0, g.CA)(n.member) : null;
+        a = null != n.member ? (0, m.CA)(n.member) : null;
     return (0, i.jsx)(s.Tooltip, {
         text: n.nick,
         position: 'bottom',
@@ -28,7 +28,7 @@ function E(e) {
                 src: null != a ? a : n.user.getAvatarURL(t, 16),
                 size: s.AvatarSizes.SIZE_16,
                 className: r()(l, I.partyAvatar),
-                'aria-label': null !== (o = n.nick) && void 0 !== o ? o : m.ZP.getName(n.user),
+                'aria-label': null !== (o = n.nick) && void 0 !== o ? o : g.ZP.getName(n.user),
                 ...e
             });
         }
@@ -65,15 +65,15 @@ function N(e) {
 t.Z = (e) => {
     let { channel: t, presenceActivity: n, members: l, embeddedApp: r, onAction: s } = e,
         h = null != r,
-        g = h ? Array.from(r.embeddedActivity.userIds) : [],
-        m = (0, a.e7)([f.default, _.default], () => {
-            if (h) return f.default.getUser(g[0]);
+        m = h ? Array.from(r.embeddedActivity.userIds) : [],
+        g = (0, a.e7)([f.default, _.default], () => {
+            if (h) return f.default.getUser(m[0]);
             if (null != l) {
                 var e, t;
                 return l.length <= 0 ? null : null !== (t = null === (e = l.find((e) => e.user.id !== _.default.getId())) || void 0 === e ? void 0 : e.user) && void 0 !== t ? t : l[0].user;
             }
         });
-    if (null == m) return null;
+    if (null == g) return null;
     let E = h || (0, c.Z)(n),
         x = (0, p.vd)(t.type);
     return (0, i.jsxs)('div', {
@@ -85,7 +85,7 @@ t.Z = (e) => {
                     ? (0, i.jsx)(C.Z, {
                           activity: n,
                           embeddedApp: r,
-                          user: m,
+                          user: g,
                           channel: t,
                           sortedVoiceStates: l,
                           onOpenSpotifyTrack: x ? d.aG : void 0,
@@ -95,7 +95,7 @@ t.Z = (e) => {
                     : (0, i.jsx)(o.Z, {
                           type: o.P.VOICE_CHANNEL,
                           activity: n,
-                          user: m,
+                          user: g,
                           guildId: t.getGuildId(),
                           channelId: t.id,
                           renderHeaderAccessory:
@@ -115,7 +115,7 @@ t.Z = (e) => {
                     type: o.P.VOICE_CHANNEL,
                     activity: n,
                     embeddedActivity: null == r ? void 0 : r.embeddedActivity,
-                    user: m,
+                    user: g,
                     guildId: t.getGuildId(),
                     channelId: t.id,
                     color: I.button,

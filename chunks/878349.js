@@ -20,8 +20,8 @@ var i = n(735250),
     f = n(952009);
 function E(e) {
     let { checked: t, labelText: n, tooltipText: a, canToggle: E, iconAltText: g, onChange: C, tooltipColor: I, className: x, id: T = 'fancybutton-toggle', collapseWhenChecked: v = !0, onClick: S, disabled: N } = e,
-        A = (0, r.e7)([h.Z], () => h.Z.useReducedMotion),
-        [Z, M] = s.useState(!1),
+        Z = (0, r.e7)([h.Z], () => h.Z.useReducedMotion),
+        [A, M] = s.useState(!1),
         b = (0, d.ZP)(),
         R = (0, o.wj)(b) || t ? f : _,
         { width: L = 0, ref: j } = (0, u.Z)(),
@@ -54,7 +54,7 @@ function E(e) {
             (0, i.jsxs)('label', {
                 htmlFor: T,
                 className: l()(p.label, x, {
-                    [p.transition]: Z,
+                    [p.transition]: A,
                     [p.labelChecked]: t,
                     [p.labelUnchecked]: !t && !E
                 }),
@@ -63,7 +63,7 @@ function E(e) {
                     t
                         ? (0, i.jsx)(c.Shine, {
                               className: p.shine,
-                              shinePaused: A
+                              shinePaused: Z
                           })
                         : null,
                     (0, i.jsx)('img', {

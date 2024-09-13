@@ -21,8 +21,8 @@ t.Z = function (e) {
     let { className: t, style: n, channel: x, draftType: T } = e,
         [v, S] = s.useState(!0),
         N = (0, a.e7)([d.Z], () => d.Z.hasLayers()),
-        A = (0, a.e7)([h.Z], () => null != x && h.Z.can(C.Plq.ATTACH_FILES, x), [x]),
-        Z = null != (0, a.e7)([l.Z], () => l.Z.getActiveCommand(x.id)),
+        Z = (0, a.e7)([h.Z], () => null != x && h.Z.can(C.Plq.ATTACH_FILES, x), [x]),
+        A = null != (0, a.e7)([l.Z], () => l.Z.getActiveCommand(x.id)),
         M = x.getGuildId(),
         b = T === o.d.FirstThreadMessage,
         R = (0, a.e7)([p.default], () => {
@@ -30,9 +30,9 @@ t.Z = function (e) {
             return !0 == !(null === (e = p.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed);
         }),
         L = (0, a.e7)([c.Z], () => c.Z.didAgree(M)) && !R,
-        j = s.useMemo(() => !N && ((x.isPrivate() && !x.isManaged()) || (null != M && (!x.isNSFW() || L) && A && u.Z.canChatInGuild(M))), [A, L, x, M, N]),
+        j = s.useMemo(() => !N && ((x.isPrivate() && !x.isManaged()) || (null != M && (!x.isNSFW() || L) && Z && u.Z.canChatInGuild(M))), [Z, L, x, M, N]),
         P = b ? (C.TPd.GUILD_THREADS_ONLY.has(x.type) ? I.Z.Messages.UPLOAD_TO_NEW_POST : I.Z.Messages.UPLOAD_TO_NEW_THREAD) : v ? I.Z.Messages.UPLOAD_TO.format({ destination: (0, r.F6)(x, p.default, m.Z, !0) }) : I.Z.Messages.UPLOAD_AREA_TITLE_NO_CONFIRMATION;
-    return Z || !j
+    return A || !j
         ? null
         : (0, i.jsx)(E.Z, {
               className: t,
@@ -41,7 +41,7 @@ t.Z = function (e) {
               description: b ? I.Z.Messages.UPLOAD_AREA_NEW_THREAD_HELP : I.Z.Messages.UPLOAD_AREA_HELP,
               icons: g.J6,
               onDrop: (e) => {
-                  if (Z) return !1;
+                  if (A) return !1;
                   j &&
                       null != x &&
                       ((0, f.d)(e, x, T, {
@@ -52,7 +52,7 @@ t.Z = function (e) {
               },
               onDragClear: () => S(!0),
               onDragOver: (e) => {
-                  if (Z) return !1;
+                  if (A) return !1;
                   !b && e.shiftKey === v && S(!e.shiftKey);
               }
           });

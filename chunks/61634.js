@@ -17,8 +17,8 @@ var i = n(470079),
     p = n(750881),
     _ = n(554747),
     f = n(146085),
-    g = n(427679),
-    m = n(131704),
+    m = n(427679),
+    g = n(131704),
     C = n(199902),
     I = n(314897),
     E = n(592125),
@@ -117,7 +117,7 @@ function y(e) {
         ),
         U = I.default.getId();
     return (0, s.cj)(
-        [Z.Z, E.Z, d.ZP, g.Z, C.Z, S.Z],
+        [Z.Z, E.Z, d.ZP, m.Z, C.Z, S.Z],
         () => {
             var t, i, r;
             let s = Z.Z.getVoiceChannelId(),
@@ -139,7 +139,7 @@ function y(e) {
                     gaming: a,
                     isCurrentUserConnected: !1
                 };
-            let x = A.default.keys(g.Z.getStageInstancesByGuild(e)).some((e) => {
+            let x = A.default.keys(m.Z.getStageInstancesByGuild(e)).some((e) => {
                     let t = E.Z.getChannel(e);
                     return null != t && S.Z.can(f.gl, t);
                 }),
@@ -151,7 +151,7 @@ function y(e) {
                     if (j) return y.length > 0;
                     for (let e of y) {
                         let t = E.Z.getChannel(e.channelId);
-                        if (null != t && (0, m.vd)(t.type)) return !0;
+                        if (null != t && (0, g.vd)(t.type)) return !0;
                     }
                     return !1;
                 })(),

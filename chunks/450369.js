@@ -26,8 +26,8 @@ var i = n(735250),
     v = n(979651),
     S = n(88751),
     N = n(252132),
-    A = n(248400),
-    Z = n(981631),
+    Z = n(248400),
+    A = n(981631),
     M = n(354459),
     b = n(527938);
 let R = 16 / 9,
@@ -70,7 +70,7 @@ let R = 16 / 9,
                             paused: !1,
                             pulseSpeakingIndicator: !m.enabled,
                             width: c,
-                            children: u && (0, i.jsx)(A.Z, {})
+                            children: u && (0, i.jsx)(Z.Z, {})
                         },
                         _
                     )
@@ -88,7 +88,7 @@ let R = 16 / 9,
             })),
             y = s.useCallback(
                 (e, t) => {
-                    if (e.type === M.fO.STREAM && 0 === j.filter((t) => (0, _.V9)(t) === e.id && t.state !== Z.jm8.ENDED).length) {
+                    if (e.type === M.fO.STREAM && 0 === j.filter((t) => (0, _.V9)(t) === e.id && t.state !== A.jm8.ENDED).length) {
                         if (!(0, f.p9)(a, v.Z, x.Z, T.Z, p.Z)[0]) return;
                         (0, d.rn)((0, _.my)(e.id), { forceMultiple: t.shiftKey });
                     }
@@ -112,7 +112,7 @@ let R = 16 / 9,
                 paused: !1,
                 pulseSpeakingIndicator: !C.enabled,
                 width: l,
-                children: u && n.type === M.fO.USER && (0, i.jsx)(A.Z, {})
+                children: u && n.type === M.fO.USER && (0, i.jsx)(Z.Z, {})
             },
             S
         );
@@ -179,7 +179,7 @@ t.Z = s.memo(function (e) {
                   width: o,
                   isModerator: f,
                   onContextMenu: E,
-                  inPopout: c === Z.IlC.POPOUT
+                  inPopout: c === A.IlC.POPOUT
               })
             : (0, i.jsx)(j, {
                   stageParticipant: s,
@@ -190,7 +190,7 @@ t.Z = s.memo(function (e) {
                   width: o,
                   isModerator: f,
                   onContextMenu: E,
-                  inPopout: c === Z.IlC.POPOUT
+                  inPopout: c === A.IlC.POPOUT
               })
     });
 });

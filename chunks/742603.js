@@ -28,8 +28,8 @@ var s = n(120356),
     v = n(134483),
     S = n(210975),
     N = n(809244),
-    A = n(618158),
-    Z = n(358221),
+    Z = n(618158),
+    A = n(358221),
     M = n(362721),
     b = n(887012),
     R = n(613548),
@@ -44,8 +44,8 @@ var s = n(120356),
 function w(e) {
     let { focusedParticipant: t, channel: n } = e,
         s = (0, c.bp)(),
-        a = (0, l.e7)([Z.Z], () => Z.Z.getLayout(n.id, s));
-    return (0, i.jsx)(A.Z, {
+        a = (0, l.e7)([A.Z], () => A.Z.getLayout(n.id, s));
+    return (0, i.jsx)(Z.Z, {
         children: (0, i.jsx)(L.Z, {
             className: k.participants,
             participant: t,
@@ -140,18 +140,18 @@ function H(e) {
 function G(e) {
     let { channel: t, guild: s, appContext: o, inCall: c, isChatOpen: u, exitFullScreen: _ } = e,
         { focusedParticipant: f } = (0, l.cj)(
-            [Z.Z],
+            [A.Z],
             () => ({
-                focusedParticipant: Z.Z.getSelectedParticipant(t.id),
-                participantsOpen: Z.Z.getParticipantsOpen(t.id)
+                focusedParticipant: A.Z.getSelectedParticipant(t.id),
+                participantsOpen: A.Z.getParticipantsOpen(t.id)
             }),
             [t.id]
         ),
         E = (0, m.ZP)(t),
         g = (0, p.KS)(t),
         [N] = (0, d.Z)((null == f ? void 0 : f.type) === P.fO.ACTIVITY ? [f.id] : []),
-        A = D.Z.Messages.VOICE_CHANNEL;
-    t.isDM() ? (A = D.Z.Messages.DM) : t.isGroupDM() && (A = D.Z.Messages.GROUP_DM);
+        Z = D.Z.Messages.VOICE_CHANNEL;
+    t.isDM() ? (Z = D.Z.Messages.DM) : t.isGroupDM() && (Z = D.Z.Messages.GROUP_DM);
     let b = (0, l.e7)([h.Z], () => h.Z.getChannelStatus(t)),
         L = t.isGuildVoice() && c && null != b && b.length > 0,
         w = (0, M.Z)(t),
@@ -225,7 +225,7 @@ function G(e) {
                                 ? (0, i.jsx)(C.ZP.Icon, {
                                       icon: g,
                                       disabled: !0,
-                                      'aria-label': A
+                                      'aria-label': Z
                                   })
                                 : null,
                             (0, i.jsx)(C.ZP.Title, {

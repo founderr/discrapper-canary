@@ -113,7 +113,7 @@ function en() {
                                               onClick: I,
                                               look: u.ButtonLooks.LINK,
                                               color: u.ButtonColors.LINK,
-                                              size: u.ButtonSizes.SMALL,
+                                              size: u.ButtonSizes.NONE,
                                               className: ee.clearAllButton,
                                               'aria-label': $.Z.Messages.MESSAGE_REQUESTS_CLEAR_ALL,
                                               children: $.Z.Messages.MESSAGE_REQUESTS_CLEAR_ALL

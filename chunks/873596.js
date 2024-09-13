@@ -17,8 +17,8 @@ var i = n(735250),
     p = n(441894),
     _ = n(160038),
     f = n(586646),
-    g = n(760373),
-    m = n(689938),
+    m = n(760373),
+    g = n(689938),
     C = n(739949);
 function I(e) {
     let { lobbyId: t, connectionTypeText: n, closePopout: l } = e,
@@ -58,8 +58,8 @@ function N(e) {
             channelId: t,
             location: 'RTCConnectionDebugPanelContainer'
         })
-            ? m.Z.Messages.E2EE_END_TO_END_ENCRYPTED
-            : m.Z.Messages.SECURE_CONNECTION;
+            ? g.Z.Messages.E2EE_END_TO_END_ENCRYPTED
+            : g.Z.Messages.SECURE_CONNECTION;
     return n
         ? (0, i.jsx)(I, {
               lobbyId: l,
@@ -73,13 +73,13 @@ function N(e) {
 }
 function x(e) {
     let t = (0, r.e7)([c.Z], () => c.Z.hasVideo(e.channelId)),
-        [n, o] = l.useState(g.tu.RTC_DEBUG_PANEL),
+        [n, o] = l.useState(m.tu.RTC_DEBUG_PANEL),
         u = (0, s.Dt)(),
         p = l.useMemo(() => {
             switch (n) {
-                case g.tu.RTC_DEBUG_PANEL:
+                case m.tu.RTC_DEBUG_PANEL:
                     return (0, i.jsx)(N, { ...e });
-                case g.tu.RTC_SECURE_FRAMES:
+                case m.tu.RTC_SECURE_FRAMES:
                     return (0, i.jsx)(f.Z, { channelId: e.channelId });
             }
         }, [e, n]);
@@ -92,7 +92,7 @@ function x(e) {
     let _ = (0, h.r)();
     return (
         l.useEffect(() => {
-            _ && o(g.tu.RTC_DEBUG_PANEL);
+            _ && o(m.tu.RTC_DEBUG_PANEL);
         }, [_]),
         (0, i.jsxs)('div', {
             className: C.container,
@@ -101,7 +101,7 @@ function x(e) {
                     className: C.title,
                     variant: 'heading-lg/bold',
                     color: 'header-primary',
-                    children: t ? m.Z.Messages.E2EE_VIDEO_DETAILS : m.Z.Messages.E2EE_VOICE_DETAILS
+                    children: t ? g.Z.Messages.E2EE_VIDEO_DETAILS : g.Z.Messages.E2EE_VOICE_DETAILS
                 }),
                 (0, i.jsxs)(a.TabBar, {
                     className: C.tabs,
@@ -111,16 +111,16 @@ function x(e) {
                     onItemSelect: o,
                     children: [
                         (0, i.jsx)(a.TabBar.Item, {
-                            id: g.tu.RTC_DEBUG_PANEL,
+                            id: m.tu.RTC_DEBUG_PANEL,
                             className: C.tabBarItem,
-                            children: m.Z.Messages.E2EE_CONNECTION
+                            children: g.Z.Messages.E2EE_CONNECTION
                         }),
                         _
                             ? null
                             : (0, i.jsx)(a.TabBar.Item, {
-                                  id: g.tu.RTC_SECURE_FRAMES,
+                                  id: m.tu.RTC_SECURE_FRAMES,
                                   className: C.tabBarItem,
-                                  children: m.Z.Messages.E2EE_PRIVACY
+                                  children: g.Z.Messages.E2EE_PRIVACY
                               })
                     ]
                 }),

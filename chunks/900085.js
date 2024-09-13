@@ -18,8 +18,8 @@ var i,
     p = n(714338),
     _ = n(212819),
     f = n(14429),
-    g = n(951844),
-    m = n(313201),
+    m = n(951844),
+    g = n(313201),
     C = n(592125),
     I = n(888369),
     E = n(430824),
@@ -203,9 +203,9 @@ class H extends r.PureComponent {
         return 'quick-switcher-'.concat(this._listId, '-item-').concat(e);
     }
     renderProtip() {
-        return (0, l.jsx)(g.Z, {
+        return (0, l.jsx)(m.Z, {
             className: s()(O.protip, { [O.hasContent]: this.state.query.length > 0 }),
-            type: g.Z.Types.INLINE,
+            type: m.Z.Types.INLINE,
             children: R.Z.Messages.QUICKSWITCHER_PROTIP.format({
                 userSymbolHook: (e, t) => V(t, _.xQ.USER, R.Z.Messages.QUICKSWITCHER_PROTIP_USERNAMES),
                 textChannelSymbolHook: (e, t) => V(t, _.xQ.TEXT_CHANNEL, R.Z.Messages.QUICKSWITCHER_PROTIP_TEXT_CHANNELS),
@@ -238,7 +238,7 @@ class H extends r.PureComponent {
         super(...e),
             P(this, 'scrollerRef', r.createRef()),
             P(this, 'inputRef', r.createRef()),
-            P(this, '_listId', (0, m.hQ)()),
+            P(this, '_listId', (0, g.hQ)()),
             P(this, 'state', {
                 query: this.props.query,
                 mouseFocusDisabled: !0

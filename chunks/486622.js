@@ -24,15 +24,15 @@ function E(e) {
         [C, I] = i.useState(!1),
         [x, T] = i.useState(!1),
         [v, S] = i.useState(!1),
-        [N, A] = i.useState(!1),
-        [Z, M] = i.useState(!1),
+        [N, Z] = i.useState(!1),
+        [A, M] = i.useState(!1),
         b = C || x || v,
         R = i.useCallback(
             async (e) => {
                 if (!b) {
                     I(!0);
                     try {
-                        await (0, h.e4)(e), A(!0), null == n || n();
+                        await (0, h.e4)(e), Z(!0), null == n || n();
                     } catch (t) {
                         let e = new l.Hx(t);
                         null == E || E(e);
@@ -158,6 +158,6 @@ function E(e) {
         isRejectLoading: x,
         isUserProfileLoading: v,
         isOptimisticAccepted: N,
-        isOptimisticRejected: Z
+        isOptimisticRejected: A
     };
 }

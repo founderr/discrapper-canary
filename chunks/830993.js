@@ -18,8 +18,8 @@ var i = n(735250),
     p = n(496675),
     _ = n(158776),
     f = n(979651),
-    g = n(823379),
-    m = n(355363),
+    m = n(823379),
+    g = n(355363),
     C = n(737592),
     I = n(561788),
     E = n(135724),
@@ -29,7 +29,7 @@ var i = n(735250),
     v = n(289223);
 function Z(e) {
     var t, d;
-    let { channel: h, guild: p, onAction: f, voiceStates: m, isChannelSelected: I, shouldShowSettingNudge: E } = e;
+    let { channel: h, guild: p, onAction: f, voiceStates: g, isChannelSelected: I, shouldShowSettingNudge: E } = e;
     !(function (e, t) {
         let n = l.useMemo(() => {
             var n;
@@ -47,10 +47,10 @@ function Z(e) {
                   };
         }, [e, t]);
         (0, s.$)(n);
-    })(h, m);
+    })(h, g);
     let N = (0, o.ZP)(h),
         Z = Array.from((0, o.uF)(N).values()),
-        L = null !== (t = null == m ? void 0 : m.filter(g.lm)) && void 0 !== t ? t : [],
+        L = null !== (t = null == g ? void 0 : g.filter(m.lm)) && void 0 !== t ? t : [],
         A = (e) => (t) => ([x.IIU.PLAYING, x.IIU.WATCHING].includes(t.type) && (null != t.assets || null != t.state || null != t.details || null != t.party) && (null == t.session_id || t.session_id === e.voiceState.sessionId)) || t.type === x.IIU.LISTENING,
         b = (0, r.e7)(
             [_.Z],
@@ -86,7 +86,7 @@ function Z(e) {
                   (0, i.jsx)(T, {
                       channel: h,
                       isChannelSelected: I,
-                      voiceStatesCount: null !== (d = null == m ? void 0 : m.length) && void 0 !== d ? d : 0
+                      voiceStatesCount: null !== (d = null == g ? void 0 : g.length) && void 0 !== d ? d : 0
                   }),
                   (0, i.jsx)('div', { className: v.headerDivider }),
                   Z.map((e, t) => {
@@ -147,7 +147,7 @@ function T(e) {
     let { channel: t, isChannelSelected: n, voiceStatesCount: l } = e,
         a = (0, r.e7)([p.Z], () => !p.Z.can(x.Plq.CONNECT, t)),
         s = (0, r.e7)([f.Z], () => f.Z.hasVideo(t.id)),
-        o = (0, m.ZP)({
+        o = (0, g.ZP)({
             channel: t,
             locked: a,
             video: s,

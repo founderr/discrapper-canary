@@ -28,14 +28,14 @@ var i = n(735250),
     b = n(802718),
     M = n(796974),
     R = n(271383),
-    P = n(430824),
-    O = n(771845),
+    O = n(430824),
+    P = n(771845),
     y = n(358085),
     j = n(709054),
     D = n(727258),
     w = n(605951),
-    U = n(474109),
-    G = n(741616),
+    G = n(474109),
+    U = n(741616),
     k = n(187835),
     B = n(118122),
     V = n(193154),
@@ -187,16 +187,16 @@ class es {
 }
 function eo(e) {
     let { disableAppDownload: t = y.isPlatformEmbedded, isOverlay: n = !1, className: r, themeOverride: s } = e,
-        [o] = (0, p.Wu)([O.ZP], () => {
-            let e = O.ZP.getGuildsTree();
+        [o] = (0, p.Wu)([P.ZP], () => {
+            let e = P.ZP.getGuildsTree();
             return [e, e.version];
         }),
         c = (0, p.e7)([L.Z], () => L.Z.lurkingGuildIds()),
         h = l.useMemo(() => (n ? [] : c), [c, n]),
-        _ = (0, p.Wu)([P.Z, R.ZP], () => j.default.keys(P.Z.getGuilds()).filter((e) => R.ZP.isCurrentUserGuest(e))),
+        _ = (0, p.Wu)([O.Z, R.ZP], () => j.default.keys(O.Z.getGuilds()).filter((e) => R.ZP.isCurrentUserGuest(e))),
         g = h.concat(_),
         C = (0, p.e7)([N.Z], () => N.Z.isFullscreenInContext()),
-        en = (0, p.e7)([P.Z], () => P.Z.getGeoRestrictedGuilds()),
+        en = (0, p.e7)([O.Z], () => O.Z.getGeoRestrictedGuilds()),
         [ei, el] = l.useState(!1),
         er = l.useCallback(() => el(!0), []),
         ea = l.useCallback(() => el(!1), []),
@@ -270,7 +270,7 @@ function eo(e) {
             animate: !1
         });
     }, [eT]);
-    function eP(e) {
+    function eO(e) {
         switch (e.type) {
             case D.eD.FOLDER:
                 return (0, i.jsx)(
@@ -282,7 +282,7 @@ function eo(e) {
                         sorting: ei,
                         onDragStart: er,
                         onDragEnd: ea,
-                        renderChildNode: eP
+                        renderChildNode: eO
                     },
                     e.id
                 );
@@ -304,7 +304,7 @@ function eo(e) {
         }
     }
     (0, w.Z)(eT.scrollToGuild);
-    let eO = o.getRoots(),
+    let eP = o.getRoots(),
         ey = (0, v.Z)(),
         ej = (0, b.U)(),
         eD = en.map((e) =>
@@ -333,7 +333,7 @@ function eo(e) {
                         role: 'tree',
                         className: et.tree,
                         children: [
-                            (0, i.jsx)(U.Z, {
+                            (0, i.jsx)(G.Z, {
                                 ref: eu,
                                 isVisible: eT.isItemVisible,
                                 onJumpTo: eT.handleJumpToGuild,
@@ -351,21 +351,21 @@ function eo(e) {
                                     (0, i.jsx)(W.u, {}),
                                     ey ? (0, i.jsx)(Z.Z, {}) : null,
                                     (0, i.jsx)(z.Z, { isOnHubVerificationRoute: eM }),
-                                    (0, i.jsx)(G.Z, {}),
+                                    (0, i.jsx)(U.Z, {}),
                                     ej,
                                     g.map((e) => (0, i.jsx)(J.Z, { guildId: e }, e)),
                                     (0, i.jsx)(X.Z, { onActivate: eR }),
                                     (0, i.jsx)(Y.Z, {}),
                                     (0, i.jsx)('div', {
                                         'aria-label': ee.Z.Messages.SERVERS,
-                                        children: eO.map(eP)
+                                        children: eP.map(eO)
                                     }),
                                     eD,
                                     n
                                         ? null
                                         : (0, i.jsx)(B.Z, {
                                               disableTooltip: h.length > 0,
-                                              lastTargetNode: eO[eO.length - 1]
+                                              lastTargetNode: eP[eP.length - 1]
                                           }),
                                     n || eg
                                         ? null
@@ -406,7 +406,7 @@ function eo(e) {
                                         })
                                     })
                                   : null,
-                            (0, i.jsx)(U.Z, {
+                            (0, i.jsx)(G.Z, {
                                 reverse: !0,
                                 ref: ed,
                                 isVisible: eT.isItemVisible,

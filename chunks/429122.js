@@ -48,8 +48,8 @@ function f(e, t, n) {
         .concat(l ? '-voice-summary' : '');
 }
 t.ZP = l.memo(function (e) {
-    let { sectionIndex: t, guildChannels: n, guildChannelsVersion: u, voiceStates: d, guildId: _, selectedChannelId: f, selectedVoiceChannelId: g, optInEnabled: m } = e,
-        { hasDivider: C, canHaveVoiceSummary: I } = l.useMemo(() => (0, c.ie)(n, m, t), [n, m, t, u]),
+    let { sectionIndex: t, guildChannels: n, guildChannelsVersion: u, voiceStates: d, guildId: _, selectedChannelId: f, selectedVoiceChannelId: m, optInEnabled: g } = e,
+        { hasDivider: C, canHaveVoiceSummary: I } = l.useMemo(() => (0, c.ie)(n, g, t), [n, g, t, u]),
         E = l.useMemo(() => (t === o.wZ ? null : n.getCategoryFromSection(t)), [n, t, u]),
         N = l.useMemo(
             () =>
@@ -57,11 +57,11 @@ t.ZP = l.memo(function (e) {
                     ? (0, s.c4)({
                           channels: E.getChannelRecords(),
                           selectedChannelId: f,
-                          selectedVoiceChannelId: g,
+                          selectedVoiceChannelId: m,
                           voiceStates: d
                       })
                     : [],
-            [E, f, g, d]
+            [E, f, m, d]
         ),
         x = (0, a.Q)('ChannelListSectionFooter');
     if (t === n.voiceChannelsSectionNumber)

@@ -70,7 +70,7 @@ function I(e) {
                             className: A ? x.overviewContainerWithVideo : x.overviewContainerNoVideo,
                             children: [
                                 (0, i.jsx)(P, { application: t }),
-                                (0, i.jsx)(S, { application: t }),
+                                (0, i.jsx)(L, { application: t }),
                                 _.length > 0 ? (0, i.jsx)(R, { description: _ }) : null,
                                 C
                                     ? (0, i.jsx)('div', {
@@ -167,7 +167,7 @@ function P(e) {
         ]
     });
 }
-function S(e) {
+function L(e) {
     let { application: n } = e,
         t = a.useMemo(() => {
             var e;
@@ -177,7 +177,7 @@ function S(e) {
         ? (0, i.jsxs)('div', {
               className: x.tagsContainer,
               children: [
-                  (0, i.jsx)(L, { application: n }),
+                  (0, i.jsx)(S, { application: n }),
                   t.map((e, n) =>
                       (0, i.jsx)(
                           'div',
@@ -196,7 +196,7 @@ function S(e) {
           })
         : null;
 }
-function L(e) {
+function S(e) {
     var n;
     let { application: t } = e;
     if (!(0, f.ye)(t)) return null;

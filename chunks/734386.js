@@ -27,8 +27,8 @@ var i = n(735250),
     v = n(496675),
     S = n(594174),
     N = n(700785),
-    A = n(51144),
-    Z = n(396769),
+    Z = n(51144),
+    A = n(396769),
     M = n(967128),
     b = n(318374),
     R = n(981631),
@@ -116,7 +116,7 @@ function P(e) {
                 ? (0, i.jsxs)('div', {
                       className: j.channelSettingButtons,
                       children: [
-                          (0, i.jsx)(Z.Z, {
+                          (0, i.jsx)(A.Z, {
                               label: L.Z.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TITLE,
                               onClick: () => a(!0),
                               icon: (0, i.jsx)(h.GroupIcon, {
@@ -124,7 +124,7 @@ function P(e) {
                                   color: 'currentColor'
                               })
                           }),
-                          (0, i.jsx)(Z.Z, {
+                          (0, i.jsx)(A.Z, {
                               label: L.Z.Messages.EDIT_CHANNEL,
                               onClick: B,
                               icon: (0, i.jsx)(h.PencilIcon, {
@@ -147,7 +147,7 @@ function P(e) {
                                 users: U
                             });
                         let e = U[0],
-                            n = A.ZP.getName(e);
+                            n = Z.ZP.getName(e);
                         return (0, i.jsxs)('div', {
                             className: j.avatars,
                             children: [

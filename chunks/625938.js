@@ -1,6 +1,6 @@
 n.d(t, {
     y: function () {
-        return A;
+        return Z;
     }
 }),
     n(47120);
@@ -39,15 +39,15 @@ let N = (e) => {
                 })
         });
     },
-    A = (e) => {
+    Z = (e) => {
         let { currentStatus: t, channel: a } = e,
             r = s.useRef(E.Z.getRecentCustomStatuses()),
-            A = s.useRef((0, m.un)(u.z.HANG_STATUS_NEW_BADGE)).current,
-            Z = (0, g.V)(),
+            Z = s.useRef((0, m.un)(u.z.HANG_STATUS_NEW_BADGE)).current,
+            A = (0, g.V)(),
             [M, b] = s.useState(null != t ? t : null),
             R = (0, c.e7)([p.default], () => p.default.getCurrentUser()),
             L = () => {
-                !A && (0, m.EW)(u.z.HANG_STATUS_NEW_BADGE);
+                !Z && (0, m.EW)(u.z.HANG_STATUS_NEW_BADGE);
             },
             j = (e, t) => {
                 e.stopPropagation(), (0, f.Zx)(t, !0), L();
@@ -85,7 +85,7 @@ let N = (e) => {
         return (0, i.jsxs)('div', {
             className: S.popout,
             children: [
-                !A &&
+                !Z &&
                     (0, i.jsxs)(i.Fragment, {
                         children: [
                             (0, i.jsx)('div', { className: S.popoutBackground }),
@@ -145,7 +145,7 @@ let N = (e) => {
                         (0, i.jsxs)('div', {
                             className: S.iconsContainer,
                             children: [
-                                Object.entries(Z).map((e) => {
+                                Object.entries(A).map((e) => {
                                     let [n, s] = e;
                                     return (0, i.jsx)(
                                         d.Clickable,

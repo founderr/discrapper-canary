@@ -37,9 +37,9 @@ async function E(e) {
                 ? (a.Z.show({
                       title: _.Z.Messages.FOR_LATER_TOO_MANY_TITLE,
                       body: _.Z.Messages.FOR_LATER_TOO_MANY_BODY.format({ max: d.D }),
-                      confirmText: _.Z.Messages.OKAY,
-                      cancelText: _.Z.Messages.FOR_LATER_MANAGE_MESSAGES,
-                      onCancel: () => l.S.dispatch(u.CkL.TOGGLE_FOR_LATER)
+                      cancelText: _.Z.Messages.OKAY,
+                      confirmText: _.Z.Messages.FOR_LATER_MANAGE_MESSAGES,
+                      onConfirm: () => l.S.dispatch(u.CkL.TOGGLE_FOR_LATER)
                   }),
                   null)
                 : ((0, s.showToast)((0, s.createToast)(null !== (i = null == e ? void 0 : null === (n = e.body) || void 0 === n ? void 0 : n.message) && void 0 !== i ? i : _.Z.Messages.ERROR_GENERIC_TITLE, s.ToastType.FAILURE)), null);

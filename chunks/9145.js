@@ -27,8 +27,8 @@ var i = n(735250),
     v = n(566620),
     S = n(317381),
     N = n(619915),
-    A = n(988980),
-    Z = n(952561),
+    Z = n(988980),
+    A = n(952561),
     M = n(563218),
     b = n(884338),
     R = n(719296),
@@ -45,7 +45,7 @@ let D = b.u.SIZE_32,
 function U(e) {
     var t, n;
     let { maxHeight: a, connectedChannelId: U, renderExternalHeader: w } = e,
-        B = (0, Z.Z)(),
+        B = (0, A.Z)(),
         H = (0, r.Wu)([S.ZP], () => (null != U ? S.ZP.getEmbeddedActivitiesForChannel(U) : []), [U]),
         G = (0, r.e7)([E.Z], () => E.Z.getChannel(U)),
         V = (0, N.gb)(H),
@@ -57,29 +57,29 @@ function U(e) {
         Y = (0, r.e7)([S.ZP], () => S.ZP.getFocusedLayout()),
         K = Y !== j.MI.NO_CHAT,
         [q, X] = s.useState(null !== (t = p.ZP.activityPanelHeight) && void 0 !== t ? t : a),
-        Q = s.useCallback((e) => {
+        J = s.useCallback((e) => {
             u.ZP.updatedUnsyncedSettings({ activityPanelHeight: e });
         }, []),
-        J = s.useRef(null),
+        Q = s.useRef(null),
         [$, ee] = s.useState({
             width: 0,
             height: 0
         });
     s.useLayoutEffect(() => {
-        if (null == J.current) return;
+        if (null == Q.current) return;
         let e = new ResizeObserver(() => {
             var e, t, n, i;
             ee({
-                width: null !== (n = null === (e = J.current) || void 0 === e ? void 0 : e.clientWidth) && void 0 !== n ? n : 0,
-                height: null !== (i = null === (t = J.current) || void 0 === t ? void 0 : t.clientHeight) && void 0 !== i ? i : 0
+                width: null !== (n = null === (e = Q.current) || void 0 === e ? void 0 : e.clientWidth) && void 0 !== n ? n : 0,
+                height: null !== (i = null === (t = Q.current) || void 0 === t ? void 0 : t.clientHeight) && void 0 !== i ? i : 0
             });
         });
-        return e.observe(J.current), () => e.disconnect();
+        return e.observe(Q.current), () => e.disconnect();
     }, []);
     let et = $.width / Math.max($.height, 1) < j.I0,
         en = 0,
         ei = 0,
-        es = (0, A.Z)(null == B ? void 0 : B.id);
+        es = (0, Z.Z)(null == B ? void 0 : B.id);
     if (!es) {
         let e = $.width,
             t = $.height;
@@ -192,7 +192,7 @@ function U(e) {
                                     paddingTop: ei,
                                     paddingBottom: ei
                                 },
-                                ref: J,
+                                ref: Q,
                                 children: (0, i.jsx)(M.Z, {
                                     className: y.iframe,
                                     embedId: (0, R.Z)(U, B.id)
@@ -251,7 +251,7 @@ function U(e) {
                                   x.S.dispatch(P.CkL.MANUAL_IFRAME_RESIZING, { resizing: !0 }), X(e);
                               },
                               onResizeEnd: (e) => {
-                                  x.S.dispatch(P.CkL.MANUAL_IFRAME_RESIZING, { resizing: !1 }), Q(e);
+                                  x.S.dispatch(P.CkL.MANUAL_IFRAME_RESIZING, { resizing: !1 }), J(e);
                               }
                           })
                         : null

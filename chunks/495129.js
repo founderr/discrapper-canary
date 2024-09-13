@@ -75,10 +75,10 @@ function S(e) {
                     : x.rawValue,
         Y = null != H ? H.split(',') : [],
         W = (0, r.Wu)([N.default], () => Y.map((e) => N.default.getUser(e)).filter(Boolean)),
-        K = y && null != k ? p.Z.Messages.WAVED_AT_USER.format({ username: G }) : p.Z.Messages.WAVED_AT_YOU.format({ username: F.nick }),
-        z = null != b && null != j,
+        z = y && null != k ? p.Z.Messages.WAVED_AT_USER.format({ username: G }) : p.Z.Messages.WAVED_AT_YOU.format({ username: F.nick }),
+        K = null != b && null != j,
         Q = null;
-    (Q = z ? (y || V ? p.Z.Messages.YOU_ARE_IN_CHANNEL.format({ channelHook: (e, t) => (0, i.jsx)(_.Z, { channel: null != j ? j : void 0 }, t) }) : p.Z.Messages.THEY_ARE_IN_CHANNEL.format({ channelHook: (e, t) => (0, i.jsx)(_.Z, { channel: null != j ? j : void 0 }, t) })) : p.Z.Messages.CANNOT_ACCESS_HANGOUT), 0 === w.length && (Q = y ? p.Z.Messages.HANGOUT_OVER_SENDER : p.Z.Messages.HANGOUT_OVER_RECEIVER);
+    (Q = K ? (y || V ? p.Z.Messages.YOU_ARE_IN_CHANNEL.format({ channelHook: (e, t) => (0, i.jsx)(_.Z, { channel: null != j ? j : void 0 }, t) }) : p.Z.Messages.THEY_ARE_IN_CHANNEL.format({ channelHook: (e, t) => (0, i.jsx)(_.Z, { channel: null != j ? j : void 0 }, t) })) : p.Z.Messages.CANNOT_ACCESS_HANGOUT), 0 === w.length && (Q = y ? p.Z.Messages.HANGOUT_OVER_SENDER : p.Z.Messages.HANGOUT_OVER_RECEIVER);
     let q = y ? p.Z.Messages.WAVE_AGAIN : p.Z.Messages.WAVE_BACK;
     return (0, i.jsxs)('div', {
         children: [
@@ -88,7 +88,7 @@ function S(e) {
                     (0, i.jsx)(l.Text, {
                         variant: 'text-md/semibold',
                         color: 'header-primary',
-                        children: K
+                        children: z
                     }),
                     (0, i.jsx)(l.Text, {
                         variant: 'text-sm/normal',
@@ -134,7 +134,7 @@ function S(e) {
                         },
                         className: g.button,
                         innerClassName: g.buttonInner,
-                        disabled: V || !z,
+                        disabled: V || !K,
                         children: [
                             (0, i.jsx)(l.VoiceNormalIcon, {
                                 size: 'md',

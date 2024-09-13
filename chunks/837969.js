@@ -50,8 +50,8 @@ function d(e) {
             i.useEffect(() => {
                 S.current = C;
             }, [C]);
-            let [N, A] = i.useState(!1),
-                [Z] = i.useState(
+            let [N, Z] = i.useState(!1),
+                [A] = i.useState(
                     () =>
                         new l.$o((e) => () => {
                             let t = null != v.current && 'string' == typeof e ? v.current(e) : e;
@@ -63,7 +63,7 @@ function d(e) {
                                 });
                         })
                 );
-            i.useEffect(() => () => Z.clean(), [Z]);
+            i.useEffect(() => () => A.clean(), [A]);
             let M = i.useCallback(
                     (e, t) => {
                         S.current && m(e, t);
@@ -134,7 +134,7 @@ function d(e) {
                     [I, t, _, d, L, h]
                 ),
                 P = i.useCallback(() => {
-                    N || A(!0);
+                    N || Z(!0);
                 }, [N]),
                 O = i.useCallback(() => {
                     if (!N) f ? M(I(t, d), d) : L(!0);
@@ -147,7 +147,7 @@ function d(e) {
                                     M(t);
                                     return;
                                 }
-                                A(!1);
+                                Z(!1);
                             });
                     },
                     [I, t, d, M]
@@ -184,10 +184,10 @@ function d(e) {
                             'aria-posinset': E ? n + 1 : void 0,
                             id: I(t, n),
                             tabIndex: f && n === d ? 0 : -1,
-                            onFocus: Z.get(null != v.current ? I(t, n) : n)
+                            onFocus: A.get(null != v.current ? I(t, n) : n)
                         };
                     },
-                    [I, t, d, f, Z, E]
+                    [I, t, d, f, A, E]
                 );
             return i.useMemo(
                 () => ({

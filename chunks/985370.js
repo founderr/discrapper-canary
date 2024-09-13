@@ -20,13 +20,13 @@ t.Z = (e) => {
         v = s.useMemo(() => (null != T ? (T.getTime() - Date.now()) / 1000 : 0), [T]),
         { seconds: S } = (0, c.Z)(null != T ? T : new Date()),
         N = S > 0,
-        A = s.useCallback(
+        Z = s.useCallback(
             (e) => {
                 if ('focus' !== e.type) !I && !N && E();
             },
             [I, N, E]
         ),
-        Z = s.useCallback(() => {
+        A = s.useCallback(() => {
             !I && g();
         }, [g, I]),
         M = s.useCallback(
@@ -52,7 +52,7 @@ t.Z = (e) => {
                 channel: t,
                 closePopout: n,
                 onMouseEnter: E,
-                onMouseLeave: Z,
+                onMouseLeave: A,
                 onFocus: () => x(!0)
             });
         },
@@ -70,8 +70,8 @@ t.Z = (e) => {
                 onClick: (e) => {
                     M(e, t);
                 },
-                onMouseEnter: A,
-                onMouseLeave: Z,
+                onMouseEnter: Z,
+                onMouseLeave: A,
                 isActive: b
             });
         }

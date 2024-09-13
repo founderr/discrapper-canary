@@ -28,15 +28,15 @@ var i = n(735250),
     v = n(768581),
     S = n(585483),
     N = n(233870),
-    A = n(51144),
-    Z = n(998502),
+    Z = n(51144),
+    A = n(998502),
     M = n(276264),
     b = n(981631),
     R = n(689938),
     L = n(226686),
     j = n(204394);
 let P = [],
-    O = Z.ZP.getEnableHardwareAcceleration();
+    O = A.ZP.getEnableHardwareAcceleration();
 function y(e) {
     let { user: t, channel: s, status: u, activities: d } = e,
         h = (0, l.e7)([I.Z], () => null != I.Z.getTypingUsers(s.id)[t.id]),
@@ -65,7 +65,7 @@ function y(e) {
         position: a.tq ? 'window_center' : 'left',
         spacing: 16,
         onShiftClick: () => {
-            let e = '@'.concat(A.ZP.getUserTag(t, { decoration: 'never' })),
+            let e = '@'.concat(Z.ZP.getUserTag(t, { decoration: 'never' })),
                 n = '<@'.concat(t.id, '>');
             S.S.dispatchToLastSubscribed(b.CkL.INSERT_TEXT, {
                 plainText: e,
@@ -210,7 +210,7 @@ function U(e) {
                 [t],
                 k
             )),
-        { installedIntegrations: I, applicationsShelf: v, fetched: S, appsInGDMEnabled: A, availableApplications: Z } = (0, _.j)({ channelId: a.id });
+        { installedIntegrations: I, applicationsShelf: v, fetched: S, appsInGDMEnabled: Z, availableApplications: A } = (0, _.j)({ channelId: a.id });
     s.useEffect(() => {
         T.default.track(b.rMx.MEMBER_LIST_VIEWED, {
             channel_id: a.id,
@@ -243,7 +243,7 @@ function U(e) {
                             e.user.id
                         )
                     ),
-                    A &&
+                    Z &&
                         (I.length > 0 || (S && v.length > 0)) &&
                         (0, i.jsxs)(i.Fragment, {
                             children: [
@@ -261,7 +261,7 @@ function U(e) {
                                         e.application.id
                                     )
                                 ),
-                                Z.length > 0 &&
+                                A.length > 0 &&
                                     (0, i.jsx)(p.Z, {
                                         className: L.member,
                                         onClick: () => {

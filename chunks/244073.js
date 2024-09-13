@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return R;
     }
 }),
     n(47120);
@@ -26,12 +26,12 @@ var i = n(735250),
     v = n(594174),
     C = n(979651),
     x = n(362446),
-    T = n(518084),
-    N = n(981631),
+    N = n(518084),
+    T = n(981631),
     O = n(689938),
     A = n(945768),
     y = n(663031);
-function R(e, t, n) {
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -52,9 +52,9 @@ class M extends s.PureComponent {
         let { guild: t } = this.props,
             n = (0, p.F6)(e, v.default, S.Z),
             s = null != t ? ''.concat(n, ' / ').concat(t.name) : n,
-            a = null != t ? t.id : N.ME;
+            a = null != t ? t.id : T.ME;
         return (0, i.jsx)(r.rU, {
-            to: N.Z5c.CHANNEL(a),
+            to: T.Z5c.CHANNEL(a),
             onClick: (t) => {
                 t.stopPropagation(), u.Z.channelListScrollTo(a, e.id);
             },
@@ -68,9 +68,9 @@ class M extends s.PureComponent {
         let { className: e, contentClassName: t, pinned: n, lobbyId: s, channel: a, quality: r, lastPing: l, hasVideo: d, connectionState: u, deaf: h, mute: p } = this.props;
         return null == a
             ? null
-            : (0, i.jsx)(T.ZP.Bar, {
+            : (0, i.jsx)(N.ZP.Bar, {
                   className: o()(e, A.controls, { [A.unpinned]: !n }),
-                  children: (0, i.jsxs)(T.ZP.Content, {
+                  children: (0, i.jsxs)(N.ZP.Content, {
                       className: o()(t, A.content),
                       dynamicSize: !0,
                       children: [
@@ -122,15 +122,15 @@ class M extends s.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            R(this, 'handleToggleSelfMute', () => {
+            b(this, 'handleToggleSelfMute', () => {
                 let { context: e } = this.props;
                 d.Z.toggleSelfMute({ context: e });
             }),
-            R(this, 'handleToggleSelfDeaf', () => {
+            b(this, 'handleToggleSelfDeaf', () => {
                 let { context: e } = this.props;
                 d.Z.toggleSelfDeaf({ context: e });
             }),
-            R(this, 'renderPopout', (e) => {
+            b(this, 'renderPopout', (e) => {
                 let { lobbyId: t } = this.props;
                 return (0, i.jsx)(m.Z, {
                     channelId: e,
@@ -140,7 +140,7 @@ class M extends s.PureComponent {
             });
     }
 }
-function b(e) {
+function R(e) {
     let { context: t, lobbyId: n, channel: s, ...a } = e,
         o = (0, l.e7)([Z.Z], () => Z.Z.getGuild(null == s ? void 0 : s.getGuildId())),
         r = (0, l.e7)([C.Z], () => null != s && C.Z.hasVideo(s.id)),

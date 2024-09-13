@@ -16,8 +16,8 @@ var i,
     u = n(493683),
     r = n(475179),
     d = n(749210),
-    c = n(292556),
-    _ = n(287734),
+    _ = n(292556),
+    c = n(287734),
     E = n(802098),
     T = n(933557),
     I = n(456269),
@@ -139,32 +139,32 @@ z(el, 'displayName', 'NotificationStore'),
                       var t, i, l, s;
                       let { channelId: o, message: u, optimistic: d } = e;
                       if (d) return !1;
-                      let _ = p.Z.getChannel(o),
+                      let c = p.Z.getChannel(o),
                           T = G.default.getUser(null === (t = u.author) || void 0 === t ? void 0 : t.id),
                           I = G.default.getCurrentUser();
-                      if (null == _ || null == T || _.isBroadcastChannel()) return !1;
+                      if (null == c || null == T) return !1;
                       let f = (0, b.eF)(u, o, !Q),
                           g = R.Z.getNotifyMessagesInSelectedChannel() && (0, b.N_)(u, o);
                       if ((!f && !g) || (u.type === W.uaV.CHANGELOG && (null == u.changelog_id || E.Z.latestChangelogId() !== u.changelog_id))) return !1;
                       let A = !R.Z.isSoundDisabled(X),
                           Z = H.ZP.canUseCustomNotificationSounds(I),
                           h = S.Y.getCurrentConfig({ location: 'NotificationStore' }).enabled,
-                          m = Z && h && A ? (null !== (s = (0, C.bb)(null !== (l = _.guild_id) && void 0 !== l ? l : W.aIL, o)) && void 0 !== s ? s : (0, C.iD)(_.guild_id)) : void 0;
+                          m = Z && h && A ? (null !== (s = (0, C.bb)(null !== (l = c.guild_id) && void 0 !== l ? l : W.aIL, o)) && void 0 !== s ? s : (0, C.iD)(c.guild_id)) : void 0;
                       if ((g && (A && Y.GN('message3', 0.4, void 0, m), !Q)) || !f) return !1;
                       let v = n(808506).Z,
                           D = n(237997).Z;
                       if (null != v.getFocusedPID() && D.getTextChatNotificationMode() === W.Ypu.ENABLED && !P.Z.disableNotifications) return !1;
-                      let { icon: M, title: L, body: U } = (0, b.Xi)(_, u, T);
+                      let { icon: M, title: L, body: U } = (0, b.Xi)(c, u, T);
                       if (
                           (a.Z.dispatch({
                               type: 'RPC_NOTIFICATION_CREATE',
-                              channelId: _.id,
+                              channelId: c.id,
                               message: u,
                               icon: M,
                               title: L,
                               body: U
                           }),
-                          (0, N.R)(u, _.guild_id),
+                          (0, N.R)(u, c.guild_id),
                           R.Z.getDesktopType() === W.qrD.NEVER)
                       )
                           return A && Y.GN(X, J, void 0, m), !1;
@@ -177,9 +177,9 @@ z(el, 'displayName', 'NotificationStore'),
                               notif_user_id: null === (i = u.author) || void 0 === i ? void 0 : i.id,
                               message_id: u.id,
                               message_type: u.type,
-                              channel_id: _.id,
-                              channel_type: _.type,
-                              guild_id: _.guild_id
+                              channel_id: c.id,
+                              channel_type: c.type,
+                              guild_id: c.guild_id
                           },
                           {
                               omitViewTracking: !0,
@@ -188,11 +188,11 @@ z(el, 'displayName', 'NotificationStore'),
                               soundpack: m,
                               volume: J,
                               onClick() {
-                                  (0, O.Kh)(_.id), (_.type === W.d4z.GUILD_VOICE || _.type === W.d4z.GUILD_STAGE_VOICE) && r.Z.updateChatOpen(_.id, !0), c.default.clickedNotification();
+                                  (0, O.Kh)(c.id), (c.type === W.d4z.GUILD_VOICE || c.type === W.d4z.GUILD_STAGE_VOICE) && r.Z.updateChatOpen(c.id, !0), _.default.clickedNotification();
                               }
                           }
                       );
-                      null != y && et.track(_.id, y);
+                      null != y && et.track(c.id, y);
                   },
                   CHANNEL_SELECT: function (e) {
                       let { channelId: t } = e;
@@ -327,7 +327,7 @@ z(el, 'displayName', 'NotificationStore'),
                                         },
                                         {
                                             onClick() {
-                                                e.entity_type === x.WX.STAGE_INSTANCE && (0, Z.Cq)(s), e.entity_type === x.WX.VOICE && _.default.selectVoiceChannel(s.id);
+                                                e.entity_type === x.WX.STAGE_INSTANCE && (0, Z.Cq)(s), e.entity_type === x.WX.VOICE && c.default.selectVoiceChannel(s.id);
                                             }
                                         }
                                     );

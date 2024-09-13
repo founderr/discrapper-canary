@@ -22,8 +22,8 @@ var i = n(735250),
     v = n(474936),
     S = n(689938),
     N = n(659102);
-let A = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
-    Z = {
+let Z = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
+    A = {
         opacity: 0,
         transform: 'translate3d(100%, 0, 0)'
     },
@@ -33,8 +33,8 @@ let A = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
     },
     b = { opacity: 0 },
     R = { opacity: 1 },
-    L = { borderRadius: ''.concat(A, 'px ').concat(A, 'px ').concat(A, 'px ').concat(A, 'px') },
-    j = { borderRadius: '0px '.concat(A, 'px ').concat(A, 'px 0px') },
+    L = { borderRadius: ''.concat(Z, 'px ').concat(Z, 'px ').concat(Z, 'px ').concat(Z, 'px') },
+    j = { borderRadius: '0px '.concat(Z, 'px ').concat(Z, 'px 0px') },
     P = {
         mass: 1,
         tension: 500,
@@ -44,7 +44,7 @@ let A = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
     O = (e) => {
         let t,
             a,
-            { participant: r, isUpsellEnabled: o, shape: d, size: f, didTrackUpsellViewed: A, setDidTrackUpsellViewed: Z, className: M, premiumIndicator: b } = e,
+            { participant: r, isUpsellEnabled: o, shape: d, size: f, didTrackUpsellViewed: Z, setDidTrackUpsellViewed: A, className: M, premiumIndicator: b } = e,
             R = (0, I.Wc)(r),
             { analyticsLocations: L } = (0, p.ZP)(),
             j = null != (0, x.Z)(r);
@@ -76,7 +76,7 @@ let A = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
             }, [D, P, O]);
         if (
             (s.useEffect(() => {
-                !A &&
+                !Z &&
                     P &&
                     (g.default.track(T.rMx.PREMIUM_UPSELL_VIEWED, {
                         type: v.cd.STREAM_QUALITY_INDICATOR,
@@ -84,8 +84,8 @@ let A = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
                         has_premium_stream_resolution: a,
                         location_stack: L
                     }),
-                    Z(!0));
-            }, [t, a, P, A, Z, L]),
+                    A(!0));
+            }, [t, a, P, Z, A, L]),
             null == R)
         )
             return null;
@@ -134,10 +134,10 @@ t.Z = (e) => {
             g,
             {
                 enter: {
-                    from: E.enabled ? b : Z,
+                    from: E.enabled ? b : A,
                     to: E.enabled ? R : M
                 },
-                leave: E.enabled ? b : Z,
+                leave: E.enabled ? b : A,
                 config: P
             },
             'animate-always'

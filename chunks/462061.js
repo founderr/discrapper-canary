@@ -29,21 +29,21 @@ var i = n(735250),
     v = n(44136),
     S = n(981631),
     N = n(65154),
-    A = n(689938),
-    Z = n(810190);
+    Z = n(689938),
+    A = n(810190);
 let M = o.AvatarSizes.SIZE_80,
     b = o.AvatarSizes.SIZE_40;
 function R(e) {
     let { channelId: t, userId: n } = e;
     return (0, E.Eu)(t, n)
         ? (0, i.jsx)(o.Tooltip, {
-              text: A.Z.Messages.NOTICE_USER_DISCONNECTED,
+              text: Z.Z.Messages.NOTICE_USER_DISCONNECTED,
               position: 'bottom',
               color: o.TooltipColors.GREY,
               children: (e) =>
                   (0, i.jsx)('div', {
                       ...e,
-                      className: Z.interactive,
+                      className: A.interactive,
                       children: (0, i.jsx)(o.CircleWarningIcon, { color: o.tokens.colors.STATUS_WARNING_BACKGROUND })
                   })
           })
@@ -60,26 +60,26 @@ function L(e) {
         F = (0, r.e7)([_.Z], () => _.Z.getWindowFocused(S.KJ3.CHANNEL_CALL_POPOUT)),
         W = (0, r.e7)([I.Z], () => null != U.id && I.Z.isLocalVideoDisabled(U.id, (0, h.Z)(t.type)), [U.id, t.type]),
         z = (0, r.e7)([C.ZP], () => C.ZP.isGuestOrLurker(n.guild_id, U.id)),
-        Y = T.ZP.getName(n.getGuildId(), n.id, U) + (z ? ' '.concat(A.Z.Messages.GUEST_NAME_SUFFIX) : ''),
+        Y = T.ZP.getName(n.getGuildId(), n.id, U) + (z ? ' '.concat(Z.Z.Messages.GUEST_NAME_SUFFIX) : ''),
         K = B && (F || V),
         q = o < 124 ? b : M,
-        { avatarSrc: X, avatarDecorationSrc: Q } = (0, f.Z)({
+        { avatarSrc: X, avatarDecorationSrc: J } = (0, f.Z)({
             user: U,
             guildId: n.guild_id,
             size: q,
             animateOnHover: !K
         }),
-        J = (0, r.e7)([d.Z], () => d.Z.getSelectedParticipant(n.id));
+        Q = (0, r.e7)([d.Z], () => d.Z.getSelectedParticipant(n.id));
     return (s.useEffect(() => {
-        n.isGuildStageVoice() && !G && (null == J ? void 0 : J.id) === U.id && c.Z.selectParticipant(n.id, null);
+        n.isGuildStageVoice() && !G && (null == Q ? void 0 : Q.id) === U.id && c.Z.selectParticipant(n.id, null);
     }, [G]),
     a && !W && !O && G && !R && null != D && I.Z.supports(N.AN.VIDEO))
         ? (0, i.jsx)(
               p.Z,
               {
                   onResize: j,
-                  wrapperClassName: Z.videoWrapper,
-                  className: Z.content,
+                  wrapperClassName: A.videoWrapper,
+                  className: A.content,
                   mirror: H,
                   streamId: w,
                   videoComponent: D,
@@ -91,11 +91,11 @@ function L(e) {
               w
           )
         : (0, i.jsx)('div', {
-              className: l()(Z.content, { [Z.blockedAvatar]: P }),
+              className: l()(A.content, { [A.blockedAvatar]: P }),
               children: (0, i.jsx)(m.Z, {
                   'aria-label': Y,
                   src: X,
-                  avatarDecoration: Q,
+                  avatarDecoration: J,
                   backgroundSrc: U.getAvatarURL(n.guild_id, 80),
                   size: q,
                   pulseSpeakingIndicator: y,

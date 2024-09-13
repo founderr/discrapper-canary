@@ -27,8 +27,8 @@ var i = t(735250),
     I = t(561160),
     g = t(41558),
     P = t(106771),
-    S = t(79984),
-    L = t(314734),
+    L = t(79984),
+    S = t(314734),
     b = t(981631),
     R = t(689938),
     T = t(454093);
@@ -98,10 +98,10 @@ function O(e) {
             ];
         }, [N, f]),
         P = g.length > 0,
-        S = p && !P && !v;
+        L = p && !P && !v;
     return u
-        ? (0, i.jsx)(D, {})
-        : S
+        ? (0, i.jsx)(k, {})
+        : L
           ? (0, i.jsx)(I.A, {
                 type: h.LG.SEARCH_EMPTY,
                 searchQuery: t,
@@ -133,9 +133,9 @@ function H(e) {
         [E, N] = a.useState(!1),
         v = null !== (n = (0, s.Z)(E)) && void 0 !== n ? n : E,
         I = a.useCallback(() => N((e) => !e), []),
-        S = (null !== (t = (0, s.Z)(r)) && void 0 !== t ? t : r)[0] !== r[0],
-        M = E && !S;
-    a.useLayoutEffect(() => N(!1), [S]);
+        L = (null !== (t = (0, s.Z)(r)) && void 0 !== t ? t : r)[0] !== r[0],
+        M = E && !L;
+    a.useLayoutEffect(() => N(!1), [L]);
     let {
         ref: y,
         isTransitioning: j,
@@ -144,7 +144,7 @@ function H(e) {
         key: r,
         isExpanded: M,
         durationMs: 200,
-        maxAnimationHeight: L.K7
+        maxAnimationHeight: S.K7
     });
     a.useEffect(() => {
         !v &&
@@ -236,7 +236,7 @@ function B(e) {
                           n.map((e, n) => {
                               let { application: t, installOnDemand: l } = e;
                               return (0, i.jsx)(
-                                  k,
+                                  D,
                                   {
                                       application: t,
                                       location: u.Vh.APP_LAUNCHER_HOME_SEARCH,
@@ -248,7 +248,7 @@ function B(e) {
                                   t.id
                               );
                           }),
-                          t && y.map((e) => (0, i.jsx)(S.Z, {}, e))
+                          t && y.map((e) => (0, i.jsx)(L.Z, {}, e))
                       ]
                   })
               ]
@@ -281,7 +281,7 @@ function B(e) {
               ]
           });
 }
-function k(e) {
+function D(e) {
     let n = (0, E.cG)(e);
     return (0, i.jsx)(P.Z, {
         application: e.application,
@@ -290,18 +290,18 @@ function k(e) {
         searchResultsPosition: e.resultsPosition
     });
 }
-function D() {
+function k() {
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsx)(g.Z, { title: R.Z.Messages.COMMANDS }),
             (0, i.jsx)('div', {
                 className: T.sectionContentContainer,
-                children: M.map((e) => (0, i.jsx)(S.Z, {}, e))
+                children: M.map((e) => (0, i.jsx)(L.Z, {}, e))
             }),
             (0, i.jsx)(g.Z, { title: R.Z.Messages.APPS }),
             (0, i.jsx)('div', {
                 className: T.sectionContentContainer,
-                children: y.map((e) => (0, i.jsx)(S.Z, {}, e))
+                children: y.map((e) => (0, i.jsx)(L.Z, {}, e))
             })
         ]
     });

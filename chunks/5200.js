@@ -43,13 +43,13 @@ function x(e) {
             assetNames: C,
             commandOrigin: d.bB.VOICE_UI
         }),
-        [A, Z] = l.useState(!1),
+        [Z, A] = l.useState(!1),
         M = l.useCallback(() => {
-            Z(!0);
-        }, [Z]),
+            A(!0);
+        }, [A]),
         b = l.useCallback(() => {
-            Z(!1);
-        }, [Z]),
+            A(!1);
+        }, [A]),
         R = l.useMemo(
             () =>
                 (0, a.jsx)('div', {
@@ -108,7 +108,7 @@ function x(e) {
         children: (0, a.jsx)(u.Spring, {
             config: I,
             from: { value: 0 },
-            to: { value: A ? 1 : 0 },
+            to: { value: Z ? 1 : 0 },
             children: (e) => {
                 let { value: t } = e;
                 return (0, a.jsx)(u.ThemeProvider, {

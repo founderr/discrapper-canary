@@ -30,8 +30,8 @@ var i,
     v = n(224184),
     S = n(184301),
     N = n(347475),
-    A = n(597998),
-    Z = n(314897),
+    Z = n(597998),
+    A = n(314897),
     M = n(430824),
     b = n(496675),
     R = n(979651),
@@ -158,7 +158,7 @@ class w extends (i = a.PureComponent) {
                     channelId: t.id,
                     guildId: t.guild_id
                 };
-                Z.default.getId() !== e.id && m.default.selectVoiceChannel(t.id), n ? ((0, x.Z)(s), d.Z.selectParticipant(s.channelId, (0, C.V9)(s))) : (0, p.iV)(s), null == i || i(e.id);
+                A.default.getId() !== e.id && m.default.selectVoiceChannel(t.id), n ? ((0, x.Z)(s), d.Z.selectParticipant(s.channelId, (0, C.V9)(s))) : (0, p.iV)(s), null == i || i(e.id);
             }),
             D(this, 'handleJoinVoice', () => {
                 let { user: e, channel: t, hidePreview: n } = this.props;
@@ -210,7 +210,7 @@ class w extends (i = a.PureComponent) {
                 });
             }),
             D(this, 'renderUser', (e) => {
-                let { isSelfOnOtherClient: t, otherClientSessionType: n, voicePlatform: i, shouldShowPreview: a, mute: l, localMute: o, localVideoDisabled: c, speaking: d, disconnected: h, user: m, deaf: p, priority: _, collapsed: f, isStreaming: E, isGuest: C, nick: I, video: x, serverMute: T, serverDeaf: v, tabIndex: S, embeddedApplication: N, channel: Z, hangStatusActivity: M, showHangStatus: b, isSelf: R, application: L } = this.props,
+                let { isSelfOnOtherClient: t, otherClientSessionType: n, voicePlatform: i, shouldShowPreview: a, mute: l, localMute: o, localVideoDisabled: c, speaking: d, disconnected: h, user: m, deaf: p, priority: _, collapsed: f, isStreaming: E, isGuest: C, nick: I, video: x, serverMute: T, serverDeaf: v, tabIndex: S, embeddedApplication: N, channel: A, hangStatusActivity: M, showHangStatus: b, isSelf: R, application: L } = this.props,
                     { userPopoutOpen: P, isHoveringHangStatus: D } = this.state,
                     k = j.al.has(null != n ? n : ''),
                     U = {
@@ -240,12 +240,12 @@ class w extends (i = a.PureComponent) {
                         onClick: k ? void 0 : this.handleClickUser,
                         onDoubleClick: this.handleWatchStream,
                         onContextMenu: this.handleUserContextMenu,
-                        guildId: Z.guild_id,
+                        guildId: A.guild_id,
                         hangStatusActivity: M,
                         showHangStatus: b,
                         isSelf: R,
                         application: L,
-                        channelId: Z.id
+                        channelId: A.id
                     };
                 if (t) {
                     var w;
@@ -253,7 +253,7 @@ class w extends (i = a.PureComponent) {
                         text: null !== (w = (0, g.Z)(n)) && void 0 !== w ? w : O.Z.Messages.CONNECTED_ON_ANOTHER_CLIENT,
                         children: (e) => {
                             let { onClick: t, onContextMenu: n, ...i } = e;
-                            return (0, s.jsx)(A.Z, {
+                            return (0, s.jsx)(Z.Z, {
                                 ...U,
                                 ...i
                             });
@@ -267,7 +267,7 @@ class w extends (i = a.PureComponent) {
                     onRequestClose: this.handleHidePreview,
                     spacing: 0,
                     children: () =>
-                        (0, s.jsx)(A.Z, {
+                        (0, s.jsx)(Z.Z, {
                             ...U,
                             onMouseDown: e.onMouseDown,
                             onKeyDown: e.onKeyDown,

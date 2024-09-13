@@ -29,8 +29,8 @@ var i = n(735250),
     v = n(347102),
     S = n(765104),
     N = n(122707),
-    A = n(779836),
-    Z = n(23750),
+    Z = n(779836),
+    A = n(23750),
     M = n(496675),
     b = n(306680),
     R = n(944486),
@@ -54,8 +54,8 @@ var i = n(735250),
     K = n(226027),
     q = n(959517),
     X = n(981631),
-    Q = n(134612),
-    J = n(689938);
+    J = n(134612),
+    Q = n(689938);
 function $(e) {
     return null != e && e.type === X.ys_.MESSAGE && e.content.id === e.groupId;
 }
@@ -64,7 +64,7 @@ let ee = s.memo(function (e) {
     return (0, i.jsx)(B.Z, {
         isGroupStart: a,
         channel: n,
-        message: new Z.ZP({
+        message: new A.ZP({
             id: t.id,
             key: 'pending-upload-'.concat(t.id),
             type: X.uaV.DEFAULT,
@@ -96,7 +96,7 @@ function et(e) {
         ep = (0, o.ts)(r),
         e_ = (0, a.e7)([S.Z], () => S.Z.shouldShowTopicsBar() && !ec),
         ef = (0, I.P)(r.id),
-        eE = (0, g.z)(r.id, Q.zr),
+        eE = (0, g.z)(r.id, J.zr),
         eg = (0, U.Z)(),
         eC = (function (e, t) {
             return e.isDM() && null != t
@@ -127,7 +127,7 @@ function et(e) {
                 return null != er
                     ? null
                     : e.isSummaryDivider
-                      ? (0, i.jsx)(A.Z, {
+                      ? (0, i.jsx)(Z.Z, {
                             index: t,
                             item: e,
                             channel: r,
@@ -158,7 +158,7 @@ function et(e) {
             if (e.type === X.ys_.MESSAGE_GROUP_BLOCKED || e.type === X.ys_.MESSAGE_GROUP_SPAMMER) {
                 let t;
                 return (
-                    (t = e.type === X.ys_.MESSAGE_GROUP_BLOCKED ? J.Z.Messages.BLOCKED_MESSAGE_COUNT : J.Z.Messages.HIDDEN_SPAM_MESSAGE_COUNT),
+                    (t = e.type === X.ys_.MESSAGE_GROUP_BLOCKED ? Q.Z.Messages.BLOCKED_MESSAGE_COUNT : Q.Z.Messages.HIDDEN_SPAM_MESSAGE_COUNT),
                     (0, i.jsx)(
                         G.Z,
                         {
@@ -203,7 +203,7 @@ function et(e) {
                     (0, k.J)(
                         r,
                         eN,
-                        new Z.ZP({
+                        new A.ZP({
                             type: X.uaV.DEFAULT,
                             author: eu
                         })
@@ -279,7 +279,7 @@ function et(e) {
         let s = b.ZP.getOldestUnreadTimestamp(r.id),
             a = 0 !== s ? s : O.default.extractTimestamp(r.id),
             l = (0, j.KC)(new Date(), new Date(a));
-        if ((b.ZP.isEstimated(r.id) ? ((e = l ? J.Z.Messages.NEW_MESSAGES_ESTIMATED : J.Z.Messages.NEW_MESSAGES_ESTIMATED_WITH_DATE), (t = J.Z.Messages.NEW_MESSAGES_ESTIMATED_SUMMARIES)) : ((e = l ? J.Z.Messages.NEW_MESSAGES : J.Z.Messages.NEW_MESSAGES_WITH_DATE), (t = J.Z.Messages.NEW_MESSAGES_SUMMARIES)), ep && (0, o.tW)(r) && eg.includes(K.E.SUMMARIES))) {
+        if ((b.ZP.isEstimated(r.id) ? ((e = l ? Q.Z.Messages.NEW_MESSAGES_ESTIMATED : Q.Z.Messages.NEW_MESSAGES_ESTIMATED_WITH_DATE), (t = Q.Z.Messages.NEW_MESSAGES_ESTIMATED_SUMMARIES)) : ((e = l ? Q.Z.Messages.NEW_MESSAGES : Q.Z.Messages.NEW_MESSAGES_WITH_DATE), (t = Q.Z.Messages.NEW_MESSAGES_SUMMARIES)), ep && (0, o.tW)(r) && eg.includes(K.E.SUMMARIES))) {
             let s = b.ZP.ackMessageId(r.id),
                 l = (0, N.q)(r.id, b.ZP.getOldestUnreadMessageId(r.id));
             if (
@@ -319,7 +319,7 @@ function et(e) {
                                           height: 4,
                                           width: 4
                                       }),
-                                      J.Z.Messages.NEW_SUMMARIES.format({ count: l })
+                                      Q.Z.Messages.NEW_SUMMARIES.format({ count: l })
                                   ]
                               })
                             : (0, i.jsx)('div', {
@@ -357,7 +357,7 @@ function et(e) {
                                               height: 4,
                                               width: 4
                                           }),
-                                          J.Z.Messages.NEW_SUMMARIES.format({ count: l })
+                                          Q.Z.Messages.NEW_SUMMARIES.format({ count: l })
                                       ]
                                   })
                                 : (0, i.jsx)(i.Fragment, { children: s })

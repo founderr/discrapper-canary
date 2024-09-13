@@ -27,8 +27,8 @@ var i = n(735250),
     v = n(456631),
     S = n(963838),
     N = n(535879),
-    A = n(310892),
-    Z = n(12168),
+    Z = n(310892),
+    A = n(12168),
     M = n(353368),
     b = n(981631),
     R = n(354459),
@@ -80,7 +80,7 @@ function w(e) {
                 });
         },
         K = () => {
-            (0, A.openEffectsUpsellModal)({
+            (0, Z.openEffectsUpsellModal)({
                 analytics: {
                     type: j.cd.EMOJI_PICKER_EMOJI_CLICKED,
                     object: b.qAy.BUTTON_CTA,
@@ -93,20 +93,20 @@ function w(e) {
                 e &&
                     h.ZP.trackWithMetadata(b.rMx.VOICE_CHANNEL_EFFECT_EMOJI_PICKER_EXPANDED, {
                         channel_id: X,
-                        guild_id: Q
+                        guild_id: J
                     });
         },
-        { id: X, guild_id: Q } = n;
+        { id: X, guild_id: J } = n;
     s.useEffect(() => {
         h.ZP.trackWithMetadata(b.rMx.VOICE_CHANNEL_EFFECT_BAR_VIEWED, {
             channel_id: X,
-            guild_id: Q
+            guild_id: J
         });
-    }, [X, Q]);
-    let J = L ? [r.z.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP] : [],
+    }, [X, J]);
+    let Q = L ? [r.z.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP] : [],
         $ = H === M.q.PREMIUM;
     return (0, i.jsx)(m.ZP, {
-        contentTypes: J,
+        contentTypes: Q,
         children: (e) => {
             let { visibleContent: t, markAsDismissed: s } = e,
                 a = L && t === r.z.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP;
@@ -131,7 +131,7 @@ function w(e) {
                         })
                     }),
                 children: () =>
-                    (0, i.jsx)(Z.Z, {
+                    (0, i.jsx)(A.Z, {
                         title: O.Z.Messages.VOICE_CHANNEL_EFFECTS_HOTBAR_TITLE,
                         channel: n,
                         closePopout: _,
@@ -149,14 +149,14 @@ function w(e) {
                                         return (
                                             h.ZP.trackWithMetadata(b.rMx.VOICE_CHANNEL_EFFECT_FANCY_ANIMATION_TOGGLED, {
                                                 channel_id: X,
-                                                guild_id: Q,
+                                                guild_id: J,
                                                 enabled: !$
                                             }),
                                             c.Z.dispatch({ type: 'VOICE_CHANNEL_EFFECT_TOGGLE_ANIMATION_TYPE' })
                                         );
                                 },
                                 onShowUpsell: () =>
-                                    (0, A.openEffectsUpsellModal)({
+                                    (0, Z.openEffectsUpsellModal)({
                                         analytics: {
                                             type: G.current ? j.cd.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED_EXPANDED : j.cd.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED,
                                             object: b.qAy.VOICE_CHANNEL_EFFECTS_TOGGLE,

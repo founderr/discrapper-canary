@@ -21,8 +21,8 @@ var i,
     p = n(260300),
     _ = n(410575),
     f = n(607070),
-    g = n(100527),
-    m = n(906732),
+    m = n(100527),
+    g = n(906732),
     C = n(313201),
     I = n(540059),
     E = n(362658),
@@ -469,7 +469,7 @@ class eu extends (i = r.PureComponent) {
             }),
             ec(this, 'renderRow', (e) => {
                 let { section: t, row: n } = e,
-                    { guild: i, selectedChannel: a, selectedChannelId: s, selectedVoiceChannel: o, selectedVoiceChannelId: c, guildChannels: u, voiceStates: d, disableManageChannels: h, stageChannelSpeakerVoiceStates: p, optInEnabled: _, withGuildIcon: f, isRefreshEnabled: g } = this.props;
+                    { guild: i, selectedChannel: a, selectedChannelId: s, selectedVoiceChannel: o, selectedVoiceChannelId: c, guildChannels: u, voiceStates: d, disableManageChannels: h, stageChannelSpeakerVoiceStates: p, optInEnabled: _, withGuildIcon: f, isRefreshEnabled: m } = this.props;
                 if (t === y.wZ) {
                     let e = u.getGuildActionSection(),
                         t = e.getRow(n);
@@ -504,7 +504,7 @@ class eu extends (i = r.PureComponent) {
                                 ei.z.GUILD_HOME
                             );
                         case ei.z.GUILD_SCHEDULED_EVENTS:
-                            if (g) return null;
+                            if (m) return null;
                             return (0, l.jsx)(
                                 et.Z,
                                 {
@@ -543,7 +543,7 @@ class eu extends (i = r.PureComponent) {
                         case ei.z.GUILD_NEW_MEMBER_ACTIONS_PROGRESS_BAR:
                             return (0, l.jsx)(z.T, { guild: i });
                         case ei.z.CHANNELS_AND_ROLES:
-                            if (g) return null;
+                            if (m) return null;
                             return (0, l.jsx)(
                                 H.m,
                                 {
@@ -563,7 +563,7 @@ class eu extends (i = r.PureComponent) {
                                 ei.z.GUILD_DIRECTORY
                             );
                         case ei.z.GUILD_MOD_DASH_MEMBER_SAFETY:
-                            if (g) return null;
+                            if (m) return null;
                             return (0, l.jsx)(
                                 x.Z,
                                 {
@@ -577,9 +577,9 @@ class eu extends (i = r.PureComponent) {
                     }
                 }
                 if (u.isPlaceholderRow(t, n)) return null;
-                let m = u.getChannelFromSectionRow(t, n);
-                if (null == m) return null;
-                let { category: C, channel: I } = m,
+                let g = u.getChannelFromSectionRow(t, n);
+                if (null == g) return null;
+                let { category: C, channel: I } = g,
                     E = C instanceof y.VR,
                     v = I.record,
                     Z = ''.concat(t).concat(I.id);
@@ -735,7 +735,7 @@ ec(eu, 'contextType', o.qB);
 let ed = (e) => {
     let { guildId: t, selectedChannelId: n, selectedVoiceChannelId: i } = e,
         a = (0, u.e7)([f.Z], () => f.Z.keyboardModeEnabled),
-        { analyticsLocations: s } = (0, m.ZP)(g.Z.GUILD_CHANNEL_LIST),
+        { analyticsLocations: s } = (0, g.ZP)(m.Z.GUILD_CHANNEL_LIST),
         d = (0, u.e7)([M.Z], () => M.Z.getChannel(n)),
         h = (0, u.e7)([M.Z], () => M.Z.getChannel(i)),
         p = (0, u.e7)([P.Z], () => P.Z.getGuildId()),
@@ -788,7 +788,7 @@ let ed = (e) => {
         null != n && v(n);
     }, [n, v]);
     let T = (0, L.Z)(t);
-    return (0, l.jsx)(m.Gt, {
+    return (0, l.jsx)(g.Gt, {
         value: s,
         children: (0, l.jsx)(_.Z, {
             section: er.jXE.GUILD_CHANNEL_LIST,

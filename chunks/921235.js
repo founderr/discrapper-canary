@@ -39,8 +39,8 @@ function v(e) {
                     .find((e) => e.author.id !== m.default.getId() && e.state === C.yb.SENT && !(0, g.Z)(e))
         ),
         N = (0, r.e7)([_.default], () => _.default.getUser(n.isPrivate() ? n.getRecipientId() : null)),
-        A = null !== (t = E.ZP.useName(N)) && void 0 !== t ? t : I.Z.Messages.WAVE_DEFAULT_RECIPIENT,
-        Z = (0, r.e7)([d.Z], () => d.Z.getStickerById(T)),
+        Z = null !== (t = E.ZP.useName(N)) && void 0 !== t ? t : I.Z.Messages.WAVE_DEFAULT_RECIPIENT,
+        A = (0, r.e7)([d.Z], () => d.Z.getStickerById(T)),
         M = s.useCallback(async () => {
             if (null == a || '' === a)
                 try {
@@ -55,7 +55,7 @@ function v(e) {
                     !e.ok && 429 === e.status && v(I.Z.Messages.RATE_LIMITED);
                 }
         }, [n.id, n.type, a]),
-        b = I.Z.Messages.WAVE_TO.format({ username: A }),
+        b = I.Z.Messages.WAVE_TO.format({ username: Z }),
         R =
             null != a && '' !== a
                 ? (0, i.jsx)(o.Text, {
@@ -75,7 +75,7 @@ function v(e) {
                       onClick: M,
                       children: [
                           (0, i.jsx)(h.ZP, {
-                              sticker: Z,
+                              sticker: A,
                               size: 24
                           }),
                           (0, i.jsx)(o.Text, {
@@ -92,7 +92,7 @@ function v(e) {
               className: x.containerExpanded,
               children: [
                   (0, i.jsx)(h.ZP, {
-                      sticker: Z,
+                      sticker: A,
                       size: 160
                   }),
                   (0, i.jsx)(o.Button, {

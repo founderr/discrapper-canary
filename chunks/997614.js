@@ -27,9 +27,9 @@ function x(e) {
         T = t.getGuildId(),
         { mute: v, suppress: S } = (0, m.Z)(t),
         N = (0, a.e7)([f.Z], () => f.Z.isDeaf()),
-        A = v || S || N,
-        Z = (0, u.sR)({ isSoundboardButtonDisabled: A }),
-        [M, b] = (0, c.cv)(Z);
+        Z = v || S || N,
+        A = (0, u.sR)({ isSoundboardButtonDisabled: Z }),
+        [M, b] = (0, c.cv)(A);
     function R(e) {
         null != T &&
             (0, o.jW)(e, async () => {
@@ -55,7 +55,7 @@ function x(e) {
             ref: L,
             renderPopout: (e) => {
                 let { closePopout: n } = e;
-                return A
+                return Z
                     ? null
                     : (0, i.jsx)(p.Z, {
                           children: (0, i.jsx)(h.Z, {
@@ -81,7 +81,7 @@ function x(e) {
                         if (N) return I.Z.Messages.SOUNDBOARD_OPEN_SOUNBOARRD_ERROR_DEAFENED;
                     })(),
                     iconComponent: r.SoundboardIcon,
-                    disabled: A,
+                    disabled: Z,
                     onContextMenu: R,
                     ...e
                 })

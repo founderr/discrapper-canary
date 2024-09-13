@@ -84,7 +84,7 @@ function X() {
                                           var s, n, i;
                                           if (o) {
                                               if (a) {
-                                                  let s = e.trialId === w.dO ? 1 : 2;
+                                                  let s = b.ZP.getReverseTrialWeeks(e.trialId);
                                                   return H.Z.Messages.REVERSE_TRIAL_SUBSCRIBER_MANAGEMENT_SUBHEADER.format({ weeks: s });
                                               }
                                               return H.Z.Messages.PREMIUM_TIER_CARD_TRIAL_HEADER_AFTER_REDEMPTION.format({

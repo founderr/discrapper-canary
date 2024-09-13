@@ -35,8 +35,8 @@ function v(e) {
             guildId: null == t ? void 0 : t.guild_id,
             location: 'b7309a_1'
         }),
-        { enableViewerClipping: A } = c.Z.useExperiment({ location: 'VoiceEffectsActionBar' }, { autoTrackExposure: !1 }),
-        Z = (0, r.Z)(h.Z);
+        { enableViewerClipping: Z } = c.Z.useExperiment({ location: 'VoiceEffectsActionBar' }, { autoTrackExposure: !1 }),
+        A = (0, r.Z)(h.Z);
     if (null == t || null != S) return null;
     let M = (0, d.Z)(t),
         b = p.BT({
@@ -53,7 +53,7 @@ function v(e) {
                     themeable: s
                 }),
             b && (0, i.jsx)(g.Z, { channel: t }),
-            A && Z && (0, i.jsx)(_.Z, { channel: t }),
+            Z && A && (0, i.jsx)(_.Z, { channel: t }),
             N && n && (0, i.jsx)(f.Z, {}),
             N && n && (0, i.jsx)(E.Z, { channel: t }),
             N && n && (0, i.jsx)(I.Z, {})

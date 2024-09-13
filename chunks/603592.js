@@ -10,10 +10,10 @@ var i = n(735250),
     d = n(662146),
     h = n(322459);
 let p = l.forwardRef(function (e, t) {
-    let { id: n, onClick: r, onContextMenu: p, icon: _, selected: f, tooltip: g, upperBadge: m, lowerBadge: C, lowerBadgeSize: I, showPill: E = !0, className: N, 'aria-label': x, children: S, onMouseEnter: v, onMouseLeave: Z, onMouseDown: T } = e,
+    let { id: n, onClick: r, onContextMenu: p, icon: _, selected: f, tooltip: m, upperBadge: g, lowerBadge: C, lowerBadgeSize: I, showPill: E = !0, className: N, 'aria-label': x, children: S, onMouseEnter: v, onMouseLeave: Z, onMouseDown: T } = e,
         L = (0, s.Ie)(n),
         [A, b] = l.useState(!1),
-        M = 'string' == typeof g && null == x ? g : x;
+        M = 'string' == typeof m && null == x ? m : x;
     return (0, i.jsxs)(u.H, {
         children: [
             E
@@ -26,12 +26,12 @@ let p = l.forwardRef(function (e, t) {
                   })
                 : null,
             (0, i.jsx)(d.Z, {
-                text: g,
+                text: m,
                 selected: f,
                 children: (0, i.jsx)(o.BlobMask, {
                     className: h.__invalid_circleButtonMask,
                     selected: f || A,
-                    upperBadge: m,
+                    upperBadge: g,
                     lowerBadge: C,
                     lowerBadgeSize: I,
                     children: (0, i.jsx)(o.Clickable, {

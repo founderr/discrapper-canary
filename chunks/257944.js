@@ -5,7 +5,7 @@ n.d(t, {
 });
 let s = (0, n(818083).B)({
     kind: 'user',
-    id: '2024-05_whats_new_cards_v2_experiment',
+    id: '2024-09_whats_new_cards_v2_experiment',
     label: 'Whats new bento boxes',
     defaultConfig: { enabled: !1 },
     treatments: [

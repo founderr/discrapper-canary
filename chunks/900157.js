@@ -26,8 +26,8 @@ var i = n(735250),
     v = n(979651),
     S = n(664342),
     N = n(124368),
-    A = n(981631),
-    Z = n(689938),
+    Z = n(981631),
+    A = n(689938),
     M = n(972270);
 function b(e) {
     let { channelId: t, baseChannelId: a, channelViewSource: b = 'Split View' } = e,
@@ -52,12 +52,12 @@ function b(e) {
             if (null == R || P.current) return;
             P.current = !0;
             let e = (0, h.K)(I.Z.getChannel(R.id), !0);
-            (0, d.yw)(A.rMx.CHANNEL_OPENED, {
+            (0, d.yw)(Z.rMx.CHANNEL_OPENED, {
                 ...e,
                 ...(0, d.$H)(R.id),
                 channel_view: b
             }),
-                (0, m.a)(A.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: R.id });
+                (0, m.a)(Z.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: R.id });
         }, [R, b]),
         null == R || null == L)
     )
@@ -74,7 +74,7 @@ function b(e) {
             }),
             (0, i.jsx)(E.ZP, {
                 toolbar: O,
-                'aria-label': Z.Z.Messages.THREAD_HEADER_BAR_A11Y_LABEL,
+                'aria-label': A.Z.Messages.THREAD_HEADER_BAR_A11Y_LABEL,
                 children: (0, g.ud)({
                     channel: R,
                     channelName: j,

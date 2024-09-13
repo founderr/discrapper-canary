@@ -51,17 +51,17 @@ function D(e) {
         H = (0, A.ZP)(null !== (r = null == V ? void 0 : V.maxParticipants) && void 0 !== r ? r : 0),
         [Y] = (0, a.Wu)([p.ZP], () => (F ? p.ZP.getEmbeddedActivitiesForChannel(y).filter((e) => e.applicationId === D) : []), [D, y, F]),
         W = Array.from(null !== (f = null == Y ? void 0 : Y.userIds) && void 0 !== f ? f : []),
-        K = (0, a.Wu)([N.default], () => W.map((e) => N.default.getUser(e)).filter(C.lm), [W]),
-        z = (0, R.Z)({
+        z = (0, a.Wu)([N.default], () => W.map((e) => N.default.getUser(e)).filter(C.lm), [W]),
+        K = (0, R.Z)({
             applicationId: D,
             size: P,
             names: ['embedded_cover']
         }),
         Q = I.Z.getWindowOpen(v.KJ3.CHANNEL_CALL_POPOUT),
-        q = K.length > 0 ? L.Z.Messages.JOIN : L.Z.Messages.START,
+        q = z.length > 0 ? L.Z.Messages.JOIN : L.Z.Messages.START,
         X = async () => {
             if (F) {
-                if (null != Y && K.length > 0)
+                if (null != Y && z.length > 0)
                     await (0, g.Z)({
                         applicationId: Y.applicationId,
                         activityChannelId: y,
@@ -109,7 +109,7 @@ function D(e) {
                           children: (0, i.jsx)('img', {
                               className: Z.img,
                               alt: V.name,
-                              src: z.url
+                              src: K.url
                           })
                       }),
                       (0, i.jsxs)('div', {
@@ -136,12 +136,12 @@ function D(e) {
                               (0, i.jsxs)('div', {
                                   className: Z.cta,
                                   children: [
-                                      K.length > 0
+                                      z.length > 0
                                           ? (0, i.jsx)('div', {
                                                 className: Z.avatars,
                                                 children: (0, i.jsx)(O.Z, {
                                                     guildId: k,
-                                                    users: K,
+                                                    users: z,
                                                     max: 4
                                                 })
                                             })

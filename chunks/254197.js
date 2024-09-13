@@ -29,8 +29,8 @@ var s = n(735250),
     y = n(95985),
     I = n(50476),
     M = n(658590),
-    O = n(46140),
-    k = n(743294),
+    k = n(46140),
+    O = n(743294),
     U = n(689938),
     L = n(160443);
 function q(e) {
@@ -40,7 +40,7 @@ function q(e) {
         learnMoreStyle: 'text',
         quest: t,
         questContent: _.jn.QUEST_BAR_V2,
-        location: O.dr.QUESTS_BAR
+        location: k.dr.QUESTS_BAR
     });
 }
 function Z(e) {
@@ -48,12 +48,12 @@ function Z(e) {
         E = (0, c.e7)([g.Z], () => g.Z.isEnrolling(t.id), [t]),
         T = (0, C.ph)(t),
         v = o.useMemo(() => (0, C.nP)(t.config.assets.questBarHero), [t]),
-        N = (0, h.vI)(t, O.dr.QUESTS_BAR, !0),
+        N = (0, h.vI)(t, k.dr.QUESTS_BAR, !0),
         j = o.useRef(null),
-        { primaryVariant: B } = f.u.useExperiment({ location: O.dr.QUESTS_BAR }, { autoTrackExposure: !1 }),
+        { primaryVariant: B } = f.u.useExperiment({ location: k.dr.QUESTS_BAR }, { autoTrackExposure: !1 }),
         R = (0, S.D)({
             quest: t,
-            location: O.dr.QUESTS_BAR,
+            location: k.dr.QUESTS_BAR,
             questContent: _.jn.QUEST_BAR_V2,
             taskDetails: n,
             useV2Variants: B === f.P.V2 || (0, M.a)(t)
@@ -173,7 +173,7 @@ function P(e) {
         T = r.percentComplete > 0,
         A = (0, m.z)(n),
         [M, q, Z] = (0, m.me)(n, r),
-        P = (0, E.pF)({ location: O.dr.QUESTS_BAR }),
+        P = (0, E.pF)({ location: k.dr.QUESTS_BAR }),
         w = o.useRef(null),
         Q = (0, m.B6)(n.config.expiresAt),
         W = (0, m._s)({ quest: n });
@@ -182,7 +182,7 @@ function P(e) {
             (0, s.jsx)(l.animated.div, {
                 className: a()(L.postEnrollmentBackground, L.postEnrollmentBackgroundCollapsed),
                 style: {
-                    backgroundImage: 'linear-gradient(90deg, '.concat(k.aY, ', ').concat(k.v6, ')'),
+                    backgroundImage: 'linear-gradient(90deg, '.concat(O.aY, ', ').concat(O.v6, ')'),
                     opacity: c.to({
                         range: [0, 1],
                         output: [1, 0]
@@ -245,8 +245,8 @@ function P(e) {
                             (0, i.EQ)(M)
                                 .with(_.LI.SELECT, () =>
                                     (0, s.jsx)(I.Z, {
-                                        onConsole: () => Z(O.cd.CONSOLE),
-                                        onDesktop: () => Z(O.cd.DESKTOP)
+                                        onConsole: () => Z(k.cd.CONSOLE),
+                                        onDesktop: () => Z(k.cd.DESKTOP)
                                     })
                                 )
                                 .with(_.LI.DESKTOP, () => (0, s.jsx)(b.Z, { quest: n }))
@@ -275,7 +275,7 @@ function P(e) {
             }),
             (0, s.jsx)('div', {
                 className: a()(L.postEnrollmentBackground, L.postEnrollmentBackgroundExpanded),
-                style: { backgroundImage: 'linear-gradient(90deg, '.concat(k.aY, ', ').concat(k.v6, ')') }
+                style: { backgroundImage: 'linear-gradient(90deg, '.concat(O.aY, ', ').concat(O.v6, ')') }
             })
         ]
     });

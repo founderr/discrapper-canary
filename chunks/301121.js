@@ -673,7 +673,7 @@ class eA extends r.PureComponent {
                     setting: ea.s6.PRIVACY_DATA_QUESTS,
                     children: (0, i.jsx)(S.FormSwitch, {
                         value: !t,
-                        note: eo.Z.Messages.USER_DROPS_SETTINGS_DROPS_OPTED_OUT_FORMATTED.format({ helpdeskArticle: k.Z.getArticleURL(ei.BhN.DATA_PRIVACY_CONTROLS) }),
+                        note: eo.Z.Messages.USER_DROPS_SETTINGS_DROPS_OPTED_OUT_FORMATTED.format({ helpdeskArticle: k.Z.getArticleURL(ei.BhN.QUESTS_PRIVACY_CONTROLS) }),
                         onChange: this.handleChangeDropsOptedOut,
                         children: (0, i.jsx)('div', { children: eo.Z.Messages.USER_DROPS_SETTINGS_DROPS_OPTED_OUT })
                     })

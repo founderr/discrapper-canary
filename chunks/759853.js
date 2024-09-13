@@ -26,8 +26,8 @@ t.Z = (e) => {
         R = (0, d.e7)([x.Z], () => x.Z.hasLayers()),
         b = (0, u.Z)(R),
         [y, I] = o.useState(null),
-        [M, O] = o.useState(null),
-        k = o.useRef(
+        [M, k] = o.useState(null),
+        O = o.useRef(
             new l.qA({
                 gravity: 0,
                 wind: 0
@@ -134,10 +134,10 @@ t.Z = (e) => {
                           (0, s.jsx)(l.O_, {
                               ref: I,
                               className: _.confetti,
-                              environment: k.current
+                              environment: O.current
                           }),
                           (0, s.jsx)(l.Ji, {
-                              ref: O,
+                              ref: k,
                               sprites: [C],
                               colors: f,
                               spriteWidth: g.Ko,

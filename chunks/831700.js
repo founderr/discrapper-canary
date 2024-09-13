@@ -19,8 +19,8 @@ var l = n(120356),
     p = n(619915),
     _ = n(339340),
     f = n(201895),
-    g = n(718589),
-    m = n(933557),
+    m = n(718589),
+    g = n(933557),
     C = n(557135),
     I = n(873696),
     E = n(446226),
@@ -120,7 +120,7 @@ class q extends G.ZP {
               });
     }
     render() {
-        let { channel: e, selected: t, connected: n, unread: l, resolvedUnreadSetting: a, mentionCount: s, locked: c, sorting: u, isUserOver: d, connectChannelDropTarget: h, connectChannelDragSource: p, connectUserDropTarget: _, connectDragPreview: m, canReorderChannel: C, canMoveMembers: I, showTutorial: E, hasActiveEvent: N, embeddedApps: x, isSubscriptionGated: S, isFavoriteSuggestion: v, withGuildIcon: Z } = this.props,
+        let { channel: e, selected: t, connected: n, unread: l, resolvedUnreadSetting: a, mentionCount: s, locked: c, sorting: u, isUserOver: d, connectChannelDropTarget: h, connectChannelDragSource: p, connectUserDropTarget: _, connectDragPreview: g, canReorderChannel: C, canMoveMembers: I, showTutorial: E, hasActiveEvent: N, embeddedApps: x, isSubscriptionGated: S, isFavoriteSuggestion: v, withGuildIcon: Z } = this.props,
             { shouldShowActivities: T, shouldShowGuildVerificationPopout: L } = this.state,
             b = this.getVoiceStatesCount(),
             M = (0, i.jsxs)('li', {
@@ -158,7 +158,7 @@ class q extends G.ZP {
                                             onContextMenu: (e) => {
                                                 this.handleContextMenu(e), null == d || d();
                                             },
-                                            connectDragPreview: m,
+                                            connectDragPreview: g,
                                             isFavoriteSuggestion: v,
                                             'aria-label': (0, f.ZP)({
                                                 channel: e,
@@ -168,7 +168,7 @@ class q extends G.ZP {
                                                 embeddedActivitiesCount: x.length,
                                                 isSubscriptionGated: S
                                             }),
-                                            'aria-describedby': (0, g.Z)({
+                                            'aria-describedby': (0, m.Z)({
                                                 channel: e,
                                                 embeddedApps: x
                                             }),
@@ -346,7 +346,7 @@ function X(e) {
         }),
         _ = (0, a.e7)([D.Z], () => D.Z.hasVideo(n.id)),
         f = (0, p.ZP)(n),
-        g = (0, m.ZP)(n),
+        m = (0, g.ZP)(n),
         C = (0, v.qY)(n.id),
         { isSubscriptionGated: I, needSubscriptionToAccess: N } = (0, S.Z)(n.id),
         x = (0, E.Z)(),
@@ -371,7 +371,7 @@ function X(e) {
         }),
         w = L && null == R;
     return (0, i.jsx)(Q, {
-        channelName: g,
+        channelName: m,
         embeddedApps: f,
         embeddedActivityType: F.IIU.PLAYING,
         video: _,

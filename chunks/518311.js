@@ -26,11 +26,11 @@ var i,
     I = n(708690),
     x = n(194359),
     T = n(425493),
-    S = n(461745),
-    v = n(40851),
+    v = n(461745),
+    S = n(40851),
     N = n(367907),
-    A = n(43267),
-    Z = n(933557),
+    Z = n(43267),
+    A = n(933557),
     M = n(600164),
     b = n(313201),
     R = n(366980),
@@ -54,8 +54,8 @@ var i,
     K = n(709054),
     q = n(51144),
     X = n(73752),
-    Q = n(665149),
-    J = n(575464),
+    J = n(665149),
+    Q = n(575464),
     $ = n(981631),
     ee = n(689938),
     et = n(411542),
@@ -89,7 +89,7 @@ function er(e) {
 let eo = (e) => {
         var t;
         let { channel: n, onClose: i } = e,
-            a = null !== (t = (0, Z.ZP)(n)) && void 0 !== t ? t : '',
+            a = null !== (t = (0, A.ZP)(n)) && void 0 !== t ? t : '',
             l = (0, m.e7)([B.ZP], () => {
                 var e;
                 return null !== (e = B.ZP.lastMessageId(n.id)) && void 0 !== e ? e : n.id;
@@ -102,7 +102,7 @@ let eo = (e) => {
                 className: et.confirmChannelItemContainer,
                 children: [
                     (0, s.jsx)(p.Avatar, {
-                        src: (0, A.x)(n),
+                        src: (0, Z.x)(n),
                         size: p.AvatarSizes.SIZE_24,
                         'aria-label': a
                     }),
@@ -267,13 +267,13 @@ class eu extends (i = a.PureComponent) {
             (0, s.jsxs)(M.Z, {
                 className: r()(et.searchBar, ei.marginTop20),
                 children: [
-                    (0, s.jsx)(S.ZP, {
+                    (0, s.jsx)(v.ZP, {
                         ref: this.searchBarRef,
                         className: et.searchBarComponent,
                         autoFocus: !0,
                         placeholder: 0 === l.size ? ee.Z.Messages.GROUP_DM_SEARCH_PLACEHOLDER : void 0,
                         disabled: this.isPartyFull(),
-                        size: S.ZP.Sizes.MEDIUM,
+                        size: v.ZP.Sizes.MEDIUM,
                         query: t,
                         selectedRow: a,
                         sections: [null !== (e = null == i ? void 0 : i.length) && void 0 !== e ? e : 0],
@@ -541,7 +541,7 @@ class eu extends (i = a.PureComponent) {
                 let { user: c, comparator: u } = o,
                     d = a.has(c.id);
                 return (0, s.jsx)(
-                    J.Z,
+                    Q.Z,
                     {
                         row: n,
                         user: c,
@@ -751,7 +751,7 @@ function eh(e) {
             onRequestClose: () => h(!1),
             animation: p.Popout.Animation.NONE,
             children: (e) =>
-                (0, s.jsx)(Q.ZP.Icon, {
+                (0, s.jsx)(J.ZP.Icon, {
                     ...e,
                     onClick: m,
                     icon: null != i ? i : null == t ? p.ChatPlusIcon : p.GroupPlusIcon,
@@ -777,4 +777,4 @@ function em(e) {
 function ep(e) {
     return JSON.stringify(e.sort());
 }
-es(eu, 'contextType', v.ZP);
+es(eu, 'contextType', S.ZP);

@@ -28,8 +28,8 @@ var i,
     b = n(592125),
     M = n(158776),
     R = n(55589),
-    P = n(515753),
-    O = n(981631),
+    O = n(515753),
+    P = n(981631),
     y = n(689938),
     j = n(156762);
 function D(e, t, n) {
@@ -194,7 +194,7 @@ let w = s.memo(function () {
         ]
     });
 });
-class U extends (l = s.Component) {
+class G extends (l = s.Component) {
     static getDerivedStateFromProps(e) {
         let { children: t, privateChannelIds: n } = e;
         if (null == t)
@@ -299,7 +299,7 @@ class U extends (l = s.Component) {
                         num_users_visible_with_mobile_indicator: o.filter((e) => null != e && M.Z.isMobileOnline(e)).length
                     };
                 (this.hasReportedAnalytics = !0),
-                    g.ZP.trackWithMetadata(O.rMx.DM_LIST_VIEWED, {
+                    g.ZP.trackWithMetadata(P.rMx.DM_LIST_VIEWED, {
                         ...u,
                         ...(0, C.X)(),
                         changelog_dm_visible: c
@@ -315,7 +315,7 @@ class U extends (l = s.Component) {
                 c()(() => {
                     if (null != this._list) {
                         let e = this._list.getScrollerNode();
-                        null != e && f.Z.updateChannelListScroll(O.ME, e.scrollTop);
+                        null != e && f.Z.updateChannelListScroll(P.ME, e.scrollTop);
                     }
                 }, 100)
             ),
@@ -326,7 +326,7 @@ class U extends (l = s.Component) {
                 return null == o
                     ? null
                     : (0, a.jsx)(
-                          P.ZP,
+                          O.ZP,
                           {
                               channel: o,
                               selected: o.id === l,
@@ -384,7 +384,7 @@ class U extends (l = s.Component) {
             });
     }
 }
-D(U, 'defaultProps', { padding: 8 });
+D(G, 'defaultProps', { padding: 8 });
 t.Z = (e) => {
     let { version: t, theme: n, children: i, showDMHeader: l } = e,
         r = s.Children.count(i),
@@ -400,7 +400,7 @@ t.Z = (e) => {
         );
     (0, S.z)(x.R);
     let _ = (0, h.cj)([m.Z, A.Z, b.Z], () => ({
-            theme: A.Z.darkSidebar ? O.BRd.DARK : n,
+            theme: A.Z.darkSidebar ? P.BRd.DARK : n,
             keyboardModeEnabled: m.Z.keyboardModeEnabled,
             version: null != t ? ''.concat(t, ':').concat(b.Z.getPrivateChannelsVersion()) : b.Z.getPrivateChannelsVersion()
         })),
@@ -453,7 +453,7 @@ t.Z = (e) => {
         });
     return (0, a.jsx)(u.bG, {
         navigator: v,
-        children: (0, a.jsx)(U, {
+        children: (0, a.jsx)(G, {
             channels: c,
             privateChannelIds: p,
             listRef: f,

@@ -26,8 +26,8 @@ var i = n(735250),
     v = n(678738),
     S = n(502762),
     N = n(530),
-    A = n(679332),
-    Z = n(544989),
+    Z = n(679332),
+    A = n(544989),
     M = n(171368),
     b = n(228168),
     R = n(689938),
@@ -67,9 +67,9 @@ function P(e) {
                 children: [
                     (0, i.jsxs)(a.u2, {
                         children: [
-                            (0, i.jsx)(Z.Z, {
+                            (0, i.jsx)(A.Z, {
                                 profileType: b.y0.PANEL,
-                                children: (0, i.jsx)(A.Z, { user: t })
+                                children: (0, i.jsx)(Z.Z, { user: t })
                             }),
                             (0, i.jsxs)('header', {
                                 className: L.header,

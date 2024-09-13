@@ -23,9 +23,9 @@ var i = n(735250),
     T = n(494404),
     N = n(724757),
     h = n(213609),
-    C = n(294218),
-    f = n(373662),
-    p = n(703656),
+    C = n(336197),
+    f = n(294218),
+    p = n(373662),
     g = n(695346),
     S = n(131704),
     A = n(592125),
@@ -170,10 +170,10 @@ function V(e) {
         o = s.useMemo(
             () =>
                 null == l && null != t.message
-                    ? new S.DA({
+                    ? new S.mn({
                           id: t.saveData.channelId,
-                          guild_id: L.Dw,
-                          type: j.d4z.GUILD_TEXT,
+                          guild_id: null,
+                          type: j.d4z.UNKNOWN,
                           name: U.Z.Messages.UNKNOWN_CHANNEL_PLACEHOLDER
                       })
                     : l,
@@ -182,15 +182,15 @@ function V(e) {
         c = s.useCallback(
             (e) => {
                 var i;
-                if ((!e.shiftKey && n(), (null == o ? void 0 : o.getGuildId()) !== L.Dw))
-                    (0, p.uL)(j.Z5c.CHANNEL(null == o ? void 0 : o.getGuildId(), t.saveData.channelId, t.saveData.messageId)),
-                        R.default.track(j.rMx.FOR_LATER_SAVED_MESSAGE_JUMP, {
-                            channel_id: t.saveData.channelId,
-                            message_id: t.saveData.messageId,
-                            message_author_id: null === (i = t.message) || void 0 === i ? void 0 : i.author.id,
-                            type: null != t.saveData.dueAt ? L._l.REMINDER : L._l.BOOKMARK,
-                            due_duration: null != t.saveData.dueAt ? u()().diff(t.saveData.dueAt) : void 0
-                        });
+                !e.shiftKey && n(),
+                    (0, C.Z)(j.Z5c.CHANNEL(null == o ? void 0 : o.getGuildId(), t.saveData.channelId, t.saveData.messageId)),
+                    R.default.track(j.rMx.FOR_LATER_SAVED_MESSAGE_JUMP, {
+                        channel_id: t.saveData.channelId,
+                        message_id: t.saveData.messageId,
+                        message_author_id: null === (i = t.message) || void 0 === i ? void 0 : i.author.id,
+                        type: null != t.saveData.dueAt ? L._l.REMINDER : L._l.BOOKMARK,
+                        due_duration: null != t.saveData.dueAt ? u()().diff(t.saveData.dueAt) : void 0
+                    });
             },
             [n, t, o]
         );
@@ -210,10 +210,10 @@ function V(e) {
                       color: 'header-secondary',
                       children: null != t.saveData.dueAt ? U.Z.Messages.FOR_LATER_REMINDER_DELETED : U.Z.Messages.FOR_LATER_BOOKMARK_DELETED
                   }),
-                  (0, i.jsx)(f.ZP, {
+                  (0, i.jsx)(p.ZP, {
                       className: y.hoverBar,
                       children: (0, i.jsx)(
-                          f.sF,
+                          p.sF,
                           {
                               label: U.Z.Messages.FOR_LATER_REMOVE,
                               icon: I.TrashIcon,
@@ -241,7 +241,7 @@ function V(e) {
                       : null,
                   (0, i.jsx)(P.Z, { channel: o }),
                   (0, i.jsx)(
-                      C.Z,
+                      f.Z,
                       {
                           message: t.message,
                           channel: o,
@@ -253,7 +253,7 @@ function V(e) {
                       },
                       t.message.id
                   ),
-                  (0, i.jsx)(f.ZP, {
+                  (0, i.jsx)(p.ZP, {
                       className: y.hoverBar,
                       children: (0, i.jsx)(H, {
                           savedMessage: t,
@@ -269,7 +269,7 @@ function H(e) {
         ? (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsx)(
-                      f.sF,
+                      p.sF,
                       {
                           label: U.Z.Messages.MESSAGE_REMINDERS_MARK_COMPLETE,
                           icon: I.CheckmarkLargeIcon,
@@ -283,7 +283,7 @@ function H(e) {
                       'mark-complete'
                   ),
                   (0, i.jsx)(
-                      f.sF,
+                      p.sF,
                       {
                           label: U.Z.Messages.MESSAGE_REMINDERS_EDIT,
                           icon: I.PencilIcon,
@@ -300,9 +300,9 @@ function H(e) {
                       },
                       'edit-reminder'
                   ),
-                  (0, i.jsx)(f.fO, {}),
+                  (0, i.jsx)(p.fO, {}),
                   (0, i.jsx)(
-                      f.sF,
+                      p.sF,
                       {
                           label: U.Z.Messages.JUMP_TO_MESSAGE,
                           icon: I.ArrowLargeRightIcon,
@@ -311,7 +311,7 @@ function H(e) {
                       'jump-to-message'
                   ),
                   (0, i.jsx)(
-                      f.sF,
+                      p.sF,
                       {
                           label: U.Z.Messages.FOR_LATER_REMOVE,
                           icon: I.BookmarkOutlineIcon,
@@ -325,7 +325,7 @@ function H(e) {
         : (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsx)(
-                      f.sF,
+                      p.sF,
                       {
                           label: U.Z.Messages.MESSAGE_REMINDERS_CREATE,
                           icon: I.ClockIcon,
@@ -343,7 +343,7 @@ function H(e) {
                       'create-reminder'
                   ),
                   (0, i.jsx)(
-                      f.sF,
+                      p.sF,
                       {
                           label: U.Z.Messages.JUMP_TO_MESSAGE,
                           icon: I.ArrowLargeRightIcon,
@@ -352,7 +352,7 @@ function H(e) {
                       'jump-to-message'
                   ),
                   (0, i.jsx)(
-                      f.sF,
+                      p.sF,
                       {
                           label: U.Z.Messages.FOR_LATER_REMOVE,
                           icon: I.BookmarkOutlineIcon,

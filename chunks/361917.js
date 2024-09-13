@@ -28,10 +28,10 @@ var i = t(735250),
     v = t(10718),
     I = t(895924),
     g = t(148958),
-    P = t(424602),
-    S = t(541099),
+    P = t(541099),
     L = t(827498),
-    b = t(87005),
+    S = t(87005),
+    b = t(106066),
     R = t(783097),
     T = t(695676),
     M = t(98880),
@@ -42,8 +42,8 @@ var i = t(735250),
     H = t(105862),
     U = t(28147),
     B = t(981631),
-    k = t(689079),
-    D = t(689938),
+    D = t(689079),
+    k = t(689938),
     w = t(597976);
 let V = [],
     W = [, , , ,].fill(0).map((e, n) => n),
@@ -92,7 +92,7 @@ function Y(e) {
             (0, i.jsx)(z, {
                 searchQuery: l,
                 setSearchQuery: o,
-                placeholder: h ? D.Z.Messages.APP_LAUNCHER_SEARCH_PLACEHOLDER : D.Z.Messages.APP_LAUNCHER_SEARCH_ACTIVITIES_PLACEHOLDER
+                placeholder: h ? k.Z.Messages.APP_LAUNCHER_SEARCH_PLACEHOLDER : k.Z.Messages.APP_LAUNCHER_SEARCH_ACTIVITIES_PLACEHOLDER
             }),
             (0, i.jsx)(d.Scroller, {
                 ref: r,
@@ -131,7 +131,7 @@ function Y(e) {
                               S &&
                                   (0, i.jsx)(Z.A, {
                                       type: L.LG.HOME_EMPTY,
-                                      textContent: t === L._b.TEXT ? D.Z.Messages.APP_LAUNCHER_HOME_EMPTY_STATE_SEARCH_SUGGEST_BODY : D.Z.Messages.APP_LAUNCHER_HOME_EMPTY_STATE_ACTIVITIES_BODY
+                                      textContent: t === L._b.TEXT ? k.Z.Messages.APP_LAUNCHER_HOME_EMPTY_STATE_SEARCH_SUGGEST_BODY : k.Z.Messages.APP_LAUNCHER_HOME_EMPTY_STATE_ACTIVITIES_BODY
                                   }),
                               b && (0, i.jsx)(H.Z, {})
                           ]
@@ -147,7 +147,7 @@ function G() {
             (0, i.jsx)(d.Text, {
                 className: w.developerShelfControlsLabel,
                 variant: 'text-sm/normal',
-                children: D.Z.Messages.EMBEDDED_ACTIVITIES_DEVELOPER_SHELF_SUBTITLE
+                children: k.Z.Messages.EMBEDDED_ACTIVITIES_DEVELOPER_SHELF_SUBTITLE
             }),
             (0, i.jsx)(f.W, { hideSearch: !0 })
         ]
@@ -163,7 +163,7 @@ function z(e) {
                     (e) => {
                         (0, h.yw)(B.rMx.APP_LAUNCHER_SEARCH_QUERY_TYPED, {
                             query: e,
-                            source: S.Z.entrypoint(),
+                            source: P.Z.entrypoint(),
                             location: I.Vh.APP_LAUNCHER_HOME
                         });
                     },
@@ -179,7 +179,7 @@ function z(e) {
         p = a.useCallback(() => {
             c(!0),
                 (0, h.yw)(B.rMx.APP_LAUNCHER_SEARCH_FOCUSED, {
-                    source: S.Z.entrypoint(),
+                    source: P.Z.entrypoint(),
                     location: I.Vh.APP_LAUNCHER_HOME
                 });
         }, []),
@@ -227,15 +227,15 @@ function z(e) {
 function X(e) {
     let { channel: n, entrypoint: t, onEmptyState: l } = e,
         o = t === L._b.VOICE,
-        { frecentApps: r, loading: s } = (0, b.f)(n, o),
+        { frecentApps: r, loading: s } = (0, S.f)(n, o),
         c = a.useMemo(() => {
             let e = [];
             for (let n of r) null != n.application && e.push({ application: n.application });
             return e;
         }, [r]),
-        d = D.Z.Messages.APP_LAUNCHER_HOME_RECENT_APPS_HEADER,
+        d = k.Z.Messages.APP_LAUNCHER_HOME_RECENT_APPS_HEADER,
         u = d;
-    o && (u = D.Z.Messages.APP_LAUNCHER_HOME_RECENT_APPS_HEADER_ACTIVITIES);
+    o && (u = k.Z.Messages.APP_LAUNCHER_HOME_RECENT_APPS_HEADER_ACTIVITIES);
     let { items: m, handleViewMore: p } = ee(u, t === L._b.VOICE ? M.U4.LARGE_BANNER : M.U4.ROW, c, 8, L.L3.RECENT_APPS);
     a.useEffect(() => {
         if (!0 !== s.current)
@@ -308,7 +308,7 @@ function q(e) {
             numItems: l.length,
             numVisibleItems: l.length
         }),
-        { clickOnHomeActivityOpensAppDetail: s } = P.m1.getCurrentConfig({ location: 'ActivitiesShelfSection' }, { autoTrackExposure: !1 }),
+        { clickOnHomeActivityOpensAppDetail: s } = (0, b.s)('ActivitiesShelfSection'),
         c = 0 === l.length;
     return (a.useEffect(() => {
         t(c);
@@ -319,7 +319,7 @@ function q(e) {
               children: [
                   (0, i.jsx)('div', {
                       ref: (e) => (r.current = e),
-                      children: (0, i.jsx)(O.Z, { title: D.Z.Messages.EMBEDDED_ACTIVITIES_SHELF_TITLE })
+                      children: (0, i.jsx)(O.Z, { title: k.Z.Messages.EMBEDDED_ACTIVITIES_SHELF_TITLE })
                   }),
                   (0, i.jsx)('div', {
                       className: w.sectionTwoColumnContentContainer,
@@ -354,7 +354,7 @@ function J(e) {
             },
             {
                 placeholderCount: 0,
-                limit: k.tn,
+                limit: D.tn,
                 includeFrecency: !0
             }
         ),
@@ -389,7 +389,7 @@ function J(e) {
                     .map((e) => ({ application: e })),
             [p]
         ),
-        { items: f, handleViewMore: h } = ee(D.Z.Messages.APP_LAUNCHER_HOME_APPS_IN_SERVER_HEADER, M.U4.ROW, C, 4, _),
+        { items: f, handleViewMore: h } = ee(k.Z.Messages.APP_LAUNCHER_HOME_APPS_IN_SERVER_HEADER, M.U4.ROW, C, 4, _),
         { trackSectionImpressionRef: A } = (0, j.Z)({
             sectionName: _,
             numItems: C.length,
@@ -407,7 +407,7 @@ function J(e) {
                   (0, i.jsx)('div', {
                       ref: (e) => (A.current = e),
                       children: (0, i.jsx)(O.Z, {
-                          title: D.Z.Messages.APP_LAUNCHER_HOME_APPS_IN_SERVER_HEADER,
+                          title: k.Z.Messages.APP_LAUNCHER_HOME_APPS_IN_SERVER_HEADER,
                           buttonType: O.Z.buttonTypes.VIEW_MORE,
                           onClickViewButton: h
                       })
@@ -457,7 +457,7 @@ function Q(e) {
                     { commandTypes: [u.yU.CHAT] },
                     {
                         placeholderCount: 0,
-                        limit: k.tn,
+                        limit: D.tn,
                         includeFrecency: !0
                     }
                 ),
@@ -652,7 +652,7 @@ function ee(e, n, t, i, l) {
                       handleViewMore: () => {
                           (0, h.yw)(B.rMx.APP_LAUNCHER_SECTION_VIEW_MORE, {
                               section_name: l,
-                              source: S.Z.entrypoint(),
+                              source: P.Z.entrypoint(),
                               num: t.length
                           }),
                               o({

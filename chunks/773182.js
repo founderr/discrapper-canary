@@ -43,8 +43,8 @@ var i = n(735250),
     b = n(308083),
     M = n(731455),
     R = n(921944),
-    P = n(49898),
-    O = n(689938),
+    O = n(49898),
+    P = n(689938),
     y = n(877861);
 function j(e) {
     let { title: t, message: n, dismissibleContent: r, gameId: a, onPopoutVisible: c, onClick: h, children: p, isEligibleForUpsell: _ = !0, withInviteIcon: f = !0, backgroundImageUrl: g } = e,
@@ -165,12 +165,12 @@ function D(e) {
                 treatment: a,
                 gameApplicationId: n
             }),
-                (0, L.o)(P.F$.SERVERS, M.Gj.Clans);
+                (0, L.o)(O.F$.SERVERS, M.Gj.Clans);
         }, [a, n]);
     return a !== b.O7.GAME_SPECIFIC || s
         ? (0, i.jsx)(j, {
-              title: O.Z.Messages.RAPIDASH_GUILD_LIST_USER_UPSELL_TITLE,
-              message: O.Z.Messages.RAPIDASH_GUILD_LIST_USER_UPSELL_MESSAGE,
+              title: P.Z.Messages.RAPIDASH_GUILD_LIST_USER_UPSELL_TITLE,
+              message: P.Z.Messages.RAPIDASH_GUILD_LIST_USER_UPSELL_MESSAGE,
               gameId: n,
               backgroundImageUrl: r,
               dismissibleContent: c.z.RAPIDASH_M3_DISCOVERY_UPSELL,
@@ -194,8 +194,8 @@ function w(e) {
         s = l.useCallback(() => {
             (0, _._9)({ location: p.Z.GUILDS_LIST });
         }, []),
-        o = O.Z.Messages.RAPIDASH_CHANNEL_LIST_ADMIN_UPSELL_TITLE,
-        u = O.Z.Messages.RAPIDASH_CHANNEL_LIST_ADMIN_UPSELL_MESSAGE;
+        o = P.Z.Messages.RAPIDASH_CHANNEL_LIST_ADMIN_UPSELL_TITLE,
+        u = P.Z.Messages.RAPIDASH_CHANNEL_LIST_ADMIN_UPSELL_MESSAGE;
     return (0, i.jsx)(j, {
         title: o,
         message: u,
@@ -240,12 +240,12 @@ function G(e) {
                                             children: [
                                                 (0, i.jsx)(u.Heading, {
                                                     variant: 'heading-md/medium',
-                                                    children: O.Z.Messages.CLAN_USER_APPLICATION_COACHMARK_TITLE
+                                                    children: P.Z.Messages.CLAN_USER_APPLICATION_COACHMARK_TITLE
                                                 }),
                                                 (0, i.jsx)(u.Text, {
                                                     variant: 'text-xs/normal',
                                                     color: 'text-muted',
-                                                    children: O.Z.Messages.CLAN_USER_APPLICATION_COACHMARK_BODY
+                                                    children: P.Z.Messages.CLAN_USER_APPLICATION_COACHMARK_BODY
                                                 })
                                             ]
                                         }),
@@ -254,7 +254,7 @@ function G(e) {
                                             size: u.ButtonSizes.SMALL,
                                             color: u.ButtonColors.BRAND,
                                             onClick: a,
-                                            children: O.Z.Messages.CLAN_USER_APPLICATION_COACHMARK_CTA
+                                            children: P.Z.Messages.CLAN_USER_APPLICATION_COACHMARK_CTA
                                         })
                                     ]
                                 }),

@@ -1,6 +1,6 @@
 n.d(t, {
     e: function () {
-        return Z;
+        return A;
     }
 }),
     n(653041),
@@ -29,7 +29,7 @@ var i,
     v = n(927923),
     S = n(689938),
     N = n(557369);
-function A(e, t, n) {
+function Z(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -42,7 +42,7 @@ function A(e, t, n) {
         e
     );
 }
-let Z = (e) => {
+let A = (e) => {
         let { children: t, collapsed: n = !1, className: i } = e;
         return (0, s.jsx)('div', {
             className: r()(i, N.list, n ? N.listCollapse : N.listDefault),
@@ -139,7 +139,7 @@ class b extends (i = a.Component) {
             : null;
     }
     renderIcons() {
-        let { mute: e, localMute: t, localVideoDisabled: n, serverMute: i, deaf: a, serverDeaf: l, collapsed: c, video: d, isStreaming: m, disabled: p, isWatching: _, iconClassName: f, embeddedApplication: I, otherClientSessionType: A, voicePlatform: Z, hangStatusActivity: b, showHangStatus: j, isSelf: P, application: O, guildId: y, channelId: D, user: k, handleHoverHangStatus: U, handleHoverIcons: w, disconnected: B } = this.props;
+        let { mute: e, localMute: t, localVideoDisabled: n, serverMute: i, deaf: a, serverDeaf: l, collapsed: c, video: d, isStreaming: m, disabled: p, isWatching: _, iconClassName: f, embeddedApplication: I, otherClientSessionType: Z, voicePlatform: A, hangStatusActivity: b, showHangStatus: j, isSelf: P, application: O, guildId: y, channelId: D, user: k, handleHoverHangStatus: U, handleHoverIcons: w, disconnected: B } = this.props;
         if (c || p) return null;
         let H = [],
             G = (0, s.jsx)(L, {
@@ -214,7 +214,7 @@ class b extends (i = a.Component) {
                         'activity'
                     )
                 ),
-            A === v.YE.XBOX || Z === T.wR.XBOX
+            Z === v.YE.XBOX || A === T.wR.XBOX
                 ? H.push(
                       (0, s.jsx)(
                           'div',
@@ -225,7 +225,7 @@ class b extends (i = a.Component) {
                           'xbox'
                       )
                   )
-                : (A === v.YE.PLAYSTATION || Z === T.wR.PLAYSTATION) &&
+                : (Z === v.YE.PLAYSTATION || A === T.wR.PLAYSTATION) &&
                   H.push(
                       (0, s.jsx)(
                           'div',
@@ -332,27 +332,27 @@ class b extends (i = a.Component) {
     }
     constructor(...e) {
         super(...e),
-            A(this, 'handleClick', (e) => {
+            Z(this, 'handleClick', (e) => {
                 let { onClick: t, user: n } = this.props;
                 null == t || t(e, n);
             }),
-            A(this, 'handleDoubleClick', (e) => {
+            Z(this, 'handleDoubleClick', (e) => {
                 let { onDoubleClick: t, user: n } = this.props;
                 null == t || t(e, n);
             }),
-            A(this, 'handleContextMenu', (e) => {
+            Z(this, 'handleContextMenu', (e) => {
                 let { onContextMenu: t, user: n } = this.props;
                 null == t || t(e, n);
             }),
-            A(this, 'handleMouseLeave', (e) => {
+            Z(this, 'handleMouseLeave', (e) => {
                 let { onMouseLeave: t, user: n } = this.props;
                 null == t || t(e, n);
             }),
-            A(this, 'handleMouseEnter', (e) => {
+            Z(this, 'handleMouseEnter', (e) => {
                 let { onMouseEnter: t, user: n } = this.props;
                 null == t || t(e, n);
             }),
-            A(this, 'handleMouseDown', (e) => {
+            Z(this, 'handleMouseDown', (e) => {
                 let { onMouseDown: t, user: n } = this.props;
                 null == t || t(e, n);
             });
@@ -454,7 +454,7 @@ function L(e) {
     }
     return 0 === d.length ? null : (0, s.jsx)(s.Fragment, { children: d });
 }
-A(b, 'defaultProps', {
+Z(b, 'defaultProps', {
     avatarContainerClass: N.avatarContainer,
     userNameClassName: N.usernameFont,
     size: x.ipw.SMALL,

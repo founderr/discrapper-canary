@@ -12,7 +12,7 @@ var i = n(735250),
 t.Z = l.memo(function (e) {
     let { channel: t, selectedChannel: n, selectedVoiceChannelId: l, sortedThreadIds: r, withGuildIcon: _ } = e,
         f = (0, s.Wu)([o.Z], () => r.map((e) => o.Z.getChannel(e)).filter(u.lm), [r]),
-        g = (0, s.e7)([c.ZP], () => {
+        m = (0, s.e7)([c.ZP], () => {
             let e = f[f.length - 1];
             if (null == e) return 0;
             let t = c.ZP.getVoiceStates(e.guild_id)[e.id];
@@ -26,7 +26,7 @@ t.Z = l.memo(function (e) {
             children: [
                 (0, i.jsx)('div', {
                     className: a()(p.spineBorder, { [p.spineBorderWithGuildIcon]: _ }),
-                    style: { bottom: 24 + g }
+                    style: { bottom: 24 + m }
                 }),
                 f.map((e, t) =>
                     (0, i.jsx)(

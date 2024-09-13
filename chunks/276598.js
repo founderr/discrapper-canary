@@ -40,17 +40,17 @@ function S(e) {
 function N(e) {
     let { channel: t, showLeftDivider: n = !1, ...g } = e,
         N = (0, p.Z)(),
-        A = (0, a.e7)([m.Z], () => {
+        Z = (0, a.e7)([m.Z], () => {
             var e, t;
             return null === (e = m.Z.getSessionById(null !== (t = null == N ? void 0 : N.sessionId) && void 0 !== t ? t : '')) || void 0 === e ? void 0 : e.clientInfo.os;
         }),
-        Z = (0, a.e7)([h.Z], () => h.Z.hasLayers()),
+        A = (0, a.e7)([h.Z], () => h.Z.hasLayers()),
         [M, b] = (0, a.Wu)([o.Z], () => [o.Z.getMode(t.id), o.Z.getLayout(t.id)]),
         R = (0, r.useModalsStore)(r.hasAnyModalOpenSelector),
         L = (0, _.Z)(),
         j = L.filter((e) => e.twoWayLink),
         [P, O] = s.useState(!1);
-    if ((null == N && 0 === L.length) || t.isBroadcastChannel()) return null;
+    if (null == N && 0 === L.length) return null;
     let y = I.WtW.VOICE !== M && [I.AEg.NO_CHAT, I.AEg.FULL_SCREEN].includes(b) ? 'top' : 'bottom',
         D = [];
     return (
@@ -68,7 +68,7 @@ function N(e) {
                             spacing: o ? 16 : void 0,
                             positionKey: ''.concat(M, ':').concat(b),
                             onRequestClose: () => O(!1),
-                            shouldShow: (o || P) && !Z && !R,
+                            shouldShow: (o || P) && !A && !R,
                             renderPopout: (e) => {
                                 let { closePopout: n } = e;
                                 return (0, i.jsx)(u.Z, {
@@ -95,8 +95,8 @@ function N(e) {
                                     ...e,
                                     ...g,
                                     onClick: () => O(!0),
-                                    label: null != (t = A) ? (t === C.YE.XBOX ? T.Z.Messages.XBOX_REMOTE_CONNECTED_RAW : T.Z.Messages.PLAYSTATION_REMOTE_CONNECTED_RAW) : T.Z.Messages.CONSOLE_TRANSFER,
-                                    iconComponent: (0, E.Z)(A)
+                                    label: null != (t = Z) ? (t === C.YE.XBOX ? T.Z.Messages.XBOX_REMOTE_CONNECTED_RAW : T.Z.Messages.PLAYSTATION_REMOTE_CONNECTED_RAW) : T.Z.Messages.CONSOLE_TRANSFER,
+                                    iconComponent: (0, E.Z)(Z)
                                 });
                             }
                         })

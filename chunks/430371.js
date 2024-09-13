@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return A;
+        return Z;
     }
 }),
     n(47120);
@@ -27,10 +27,10 @@ var i = n(735250),
     v = n(512388);
 let S = 16 / 9,
     N = 8 + C.cF;
-function A(e) {
+function Z(e) {
     var t;
     let n,
-        { onSelectParticipant: a, onContextMenuParticipant: A, onFullscreenParticipant: Z, participants: M, filteredParticipants: b, popoutWindow: R, inCall: L, channel: j, selectedParticipant: P, showParticipants: O = !0, className: y, paused: D, width: k, height: U, layout: w, idle: B } = e,
+        { onSelectParticipant: a, onContextMenuParticipant: Z, onFullscreenParticipant: A, participants: M, filteredParticipants: b, popoutWindow: R, inCall: L, channel: j, selectedParticipant: P, showParticipants: O = !0, className: y, paused: D, width: k, height: U, layout: w, idle: B } = e,
         H = null != R,
         G = m.Z.getVideoComponent(),
         V = h.default.getId(),
@@ -38,8 +38,8 @@ function A(e) {
         [z, Y] = s.useState(!0),
         [K, q] = s.useState(!1),
         X = P.type === x.fO.ACTIVITY,
-        Q = (0, u.Z)(P.id),
-        J = !X && null != P.streamId,
+        J = (0, u.Z)(P.id),
+        Q = !X && null != P.streamId,
         $ = U <= 2 * N + 144,
         ee = O && !$,
         et = (0, c.Z)(ee),
@@ -49,9 +49,9 @@ function A(e) {
         ea = (null !== (t = (0, c.Z)(P.id)) && void 0 !== t ? t : P.id) !== P.id,
         el = 0;
     (X || ee) && (el += 72), X && !ee && (ei ? (el += 48) : (el += 8)), ee && (el += 0.5 * N + 8);
-    let er = s.useMemo(() => (X && Q ? k / (U - 2 * el) : J && null != F && F.width > 0 && F.height > 0 ? F.width / F.height : S), [J, F, X, k, U, el, Q]),
+    let er = s.useMemo(() => (X && J ? k / (U - 2 * el) : Q && null != F && F.width > 0 && F.height > 0 ? F.width / F.height : S), [Q, F, X, k, U, el, J]),
         eo = U - 2 * el,
-        ec = X && Q ? k : eo * er,
+        ec = X && J ? k : eo * er,
         eu = Math.floor(Math.min(k, ec) / er),
         ed = U > k / er + 72 + N + 8;
     (n = ee || X ? (ee ? -16 : -8) : 40 + Math.max(0, 72 - (U - eu) / 2)),
@@ -134,7 +134,7 @@ function A(e) {
         children: [
             (0, i.jsxs)('div', {
                 className: v.tileWrapper,
-                style: { opacity: J && z ? 0 : 1 },
+                style: { opacity: Q && z ? 0 : 1 },
                 children: [
                     (0, i.jsxs)(r.animated.div, {
                         className: v.videoFrame,
@@ -164,8 +164,8 @@ function A(e) {
                                                           width: k,
                                                           participant: t,
                                                           onClick: a,
-                                                          onDoubleClick: Z,
-                                                          onContextMenu: A,
+                                                          onDoubleClick: A,
+                                                          onContextMenu: Z,
                                                           onVideoResize: eE,
                                                           inCall: L,
                                                           inPopout: H
@@ -200,8 +200,8 @@ function A(e) {
                         children: (0, i.jsx)(C.ZP, {
                             channel: j,
                             onClick: a,
-                            onContextMenu: A,
-                            onDoubleClick: Z,
+                            onContextMenu: Z,
+                            onDoubleClick: A,
                             participants: eC,
                             participantTileWidth: eI,
                             selectedParticipantId: P.id,
@@ -214,7 +214,7 @@ function A(e) {
             }),
             eg.length > 0
                 ? (0, i.jsx)(E.Z, {
-                      onContextMenuParticipant: A,
+                      onContextMenuParticipant: Z,
                       width: k,
                       height: U,
                       channel: j,

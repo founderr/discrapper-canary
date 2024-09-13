@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return Z;
+        return A;
     }
 }),
     n(47120);
@@ -39,7 +39,7 @@ function N(e, t, n) {
         e
     );
 }
-class A {
+class Z {
     updateData(e) {
         let { userId: t, user: n, channelId: i, analyticsLocations: s } = e;
         (this.userId = t), (this.user = n), (this.channelId = i), (this.analyticsLocations = s);
@@ -134,7 +134,7 @@ class A {
             (this.analyticsLocations = s);
     }
 }
-function Z(e) {
+function A(e) {
     let { channel: t } = e,
         n = t.getRecipientId(),
         a = (0, m.gc)(n),
@@ -145,7 +145,7 @@ function Z(e) {
                 a = (0, r.e7)([E.default], () => E.default.getUser(t), [t]),
                 [l] = s.useState(
                     () =>
-                        new A({
+                        new Z({
                             user: a,
                             userId: t,
                             channelId: n,

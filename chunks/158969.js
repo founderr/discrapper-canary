@@ -65,26 +65,26 @@ t.Z = s.memo(function (e) {
     var t, n;
     let { className: a, compact: r, message: u, children: p, content: _, onUpdate: C } = e,
         N = null === (t = u.editedTimestamp) || void 0 === t ? void 0 : t.toString(),
-        A = s.useRef(!1),
-        Z = (0, c.e7)([m.Z], () => m.Z.getMessage(u.id), [u.id]),
+        Z = s.useRef(!1),
+        A = (0, c.e7)([m.Z], () => m.Z.getMessage(u.id), [u.id]),
         M = s.useCallback(() => {
-            (null == Z ? void 0 : Z.isBlockedEdit) ? (0, h.I)(u.id) : d.Z.deleteMessage(u.channel_id, u.id, !0);
-        }, [u, Z]);
+            (null == A ? void 0 : A.isBlockedEdit) ? (0, h.I)(u.id) : d.Z.deleteMessage(u.channel_id, u.id, !0);
+        }, [u, A]);
     return (
         s.useLayoutEffect(() => {
-            A.current ? null != C && C() : (A.current = !0);
+            Z.current ? null != C && C() : (Z.current = !0);
         }, [C, u.content, _, N, p]),
         (0, i.jsxs)('div', {
             id: (0, f.ut)(u),
             className: l()(a, v.markup, {
                 [T.messageContent]: !0,
                 [T.markupRtl]: 'rtl' === o()(u.content),
-                [x.blockedEdit]: null == Z ? void 0 : Z.isBlockedEdit,
-                [x.blockedSend]: !(null == Z ? void 0 : Z.isBlockedEdit)
+                [x.blockedEdit]: null == A ? void 0 : A.isBlockedEdit,
+                [x.blockedSend]: !(null == A ? void 0 : A.isBlockedEdit)
             }),
             children: [
                 null != p ? p : (0, E.L5)(u, _),
-                (null == Z ? void 0 : Z.isBlockedEdit) &&
+                (null == A ? void 0 : A.isBlockedEdit) &&
                     null != u.timestamp &&
                     (0, i.jsxs)(i.Fragment, {
                         children: [
@@ -101,7 +101,7 @@ t.Z = s.memo(function (e) {
                         ]
                     }),
                 (0, i.jsx)(S, {
-                    notice: null !== (n = null == Z ? void 0 : Z.errorMessage) && void 0 !== n ? n : I.Z.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_SEND_NOTICE,
+                    notice: null !== (n = null == A ? void 0 : A.errorMessage) && void 0 !== n ? n : I.Z.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_SEND_NOTICE,
                     message: u,
                     compact: r,
                     onDismiss: M

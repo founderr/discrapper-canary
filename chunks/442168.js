@@ -42,7 +42,7 @@ function C(e) {
         },
         [T]
     );
-    let A = () => {
+    let Z = () => {
             var e;
             let t = null === (e = I.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
             return null == t || n
@@ -54,7 +54,7 @@ function C(e) {
                       left: t.left
                   };
         },
-        Z = (e) => {
+        A = (e) => {
             let t = null == x ? void 0 : x.getBoundingClientRect();
             if (((N.current = t), e.timestamp !== v || null == t || n)) return _;
             let { top: i, left: s } = t;
@@ -87,13 +87,13 @@ function C(e) {
                     position: 'fixed',
                     visibility: 'hidden',
                     opacity: 1,
-                    ...(C.enabled ? Z(e) : A())
+                    ...(C.enabled ? A(e) : Z())
                 }),
                 enter: (e) => [
                     {
                         opacity: 1,
                         visibility: 'visible',
-                        ...Z(e)
+                        ...A(e)
                     }
                 ],
                 leave: {

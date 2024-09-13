@@ -11,7 +11,7 @@ var i = n(735250),
     h = n(689938),
     p = n(138592);
 t.Z = l.forwardRef(function (e, t) {
-    let { body: n, header: r, artClassName: _, headerClassName: f, contentClassName: g, tryItText: m, dismissText: C, onTryFeature: I, onClose: E, className: N, inlineArt: x = !1, isPremiumFeature: S = !1, shouldUseHorizontalButtons: v = !1, showGIFTag: Z = !1, dismissibleContent: T, position: L = 'top', align: A = 'center', art: b, isPremiumEarlyAccess: M = !1, maxWidth: R = 280, hideDismissButton: O = !1, pointerClassName: P, dismissIconClassName: y, dismissIcon: j, onDismissIconClick: D } = e,
+    let { body: n, header: r, artClassName: _, headerClassName: f, contentClassName: m, tryItText: g, dismissText: C, onTryFeature: I, onClose: E, className: N, inlineArt: x = !1, isPremiumFeature: S = !1, shouldUseHorizontalButtons: v = !1, showGIFTag: Z = !1, dismissibleContent: T, position: L = 'top', align: A = 'center', art: b, isPremiumEarlyAccess: M = !1, maxWidth: R = 280, hideDismissButton: O = !1, pointerClassName: P, dismissIconClassName: y, dismissIcon: j, onDismissIconClick: D } = e,
         w = v ? s.Button.Sizes.LARGE : s.Button.Sizes.MAX,
         [G, U] = l.useState(!1),
         { ref: k, width: B } = (0, o.Z)();
@@ -31,7 +31,7 @@ t.Z = l.forwardRef(function (e, t) {
             className: N,
             ref: t,
             children: (0, i.jsxs)('div', {
-                className: a()(p.content, g, {
+                className: a()(p.content, m, {
                     [p.contentNoArt]: null == _ || x,
                     [p.contentPremium]: S || M
                 }),
@@ -107,7 +107,7 @@ t.Z = l.forwardRef(function (e, t) {
                                                   null == E || E(e), I(e), V(d.L.PRIMARY);
                                               },
                                               color: S || M ? s.Button.Colors.BRAND_INVERTED : s.Button.Colors.WHITE,
-                                              children: null != m ? m : h.Z.Messages.EDUCATION_NEW_FEATURE_TRY_IT
+                                              children: null != g ? g : h.Z.Messages.EDUCATION_NEW_FEATURE_TRY_IT
                                           }),
                                           !O &&
                                               (0, i.jsx)(s.Button, {

@@ -16,8 +16,8 @@ var i = n(735250),
     p = n(650774),
     _ = n(443063),
     f = n(981631),
-    g = n(176505),
-    m = n(689938),
+    m = n(176505),
+    g = n(689938),
     C = n(347354);
 function I(e) {
     let { guild: t, guildChannels: l, hasBanner: I } = e,
@@ -56,7 +56,7 @@ function I(e) {
                 children: (0, i.jsx)(s.Text, {
                     variant: 'text-xs/normal',
                     color: 'text-low-contrast',
-                    children: m.Z.Messages.MEMBERS_HEADER.format({ members: S })
+                    children: g.Z.Messages.MEMBERS_HEADER.format({ members: S })
                 })
             }),
             (0, i.jsxs)('div', {
@@ -66,9 +66,9 @@ function I(e) {
                         switch (N.getRow(l)) {
                             case _.z.CHANNELS_AND_ROLES:
                                 return (0, i.jsx)(E, {
-                                    tooltip: m.Z.Messages.CHANNELS_AND_ROLES,
+                                    tooltip: g.Z.Messages.CHANNELS_AND_ROLES,
                                     onPress: () => {
-                                        (0, h.uL)(f.Z5c.CHANNEL(t.id, x ? g.oC.CUSTOMIZE_COMMUNITY : g.oC.CHANNEL_BROWSER));
+                                        (0, h.uL)(f.Z5c.CHANNEL(t.id, x ? m.oC.CUSTOMIZE_COMMUNITY : m.oC.CHANNEL_BROWSER));
                                     },
                                     children: (0, i.jsx)(s.ChannelListMagnifyingGlassIcon, { size: 'sm' })
                                 });
@@ -90,7 +90,7 @@ function I(e) {
                                 });
                             case _.z.GUILD_MOD_DASH_MEMBER_SAFETY:
                                 return (0, i.jsx)(E, {
-                                    tooltip: m.Z.Messages.MEMBERS,
+                                    tooltip: g.Z.Messages.MEMBERS,
                                     onPress: () => {
                                         (0, u._X)(t.id);
                                     },

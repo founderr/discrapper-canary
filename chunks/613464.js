@@ -27,7 +27,7 @@ var i = n(735250),
     v = n(327250),
     S = n(7340);
 function N(e) {
-    let { userId: t, guildId: n, onClose: a, className: N, infoPanelClassName: A, style: Z } = e,
+    let { userId: t, guildId: n, onClose: a, className: N, infoPanelClassName: Z, style: A } = e,
         M = (0, x.ms)(n),
         b = (0, r.e7)([I.default], () => I.default.getUser(t), [t]),
         R = (0, r.e7)([C.ZP], () => C.ZP.getMember(n, t), [n, t]),
@@ -73,7 +73,7 @@ function N(e) {
         ? L || null == b || null == R
             ? (0, i.jsx)('div', {
                   className: l()(S.sidebarContainer, S.loadingContainer, N),
-                  style: Z,
+                  style: A,
                   children: (0, i.jsx)(o.Spinner, {
                       animated: !0,
                       type: L ? o.Spinner.Type.SPINNING_CIRCLE : o.Spinner.Type.CHASING_DOTS
@@ -83,7 +83,7 @@ function N(e) {
                   value: y,
                   children: (0, i.jsx)('div', {
                       className: l()(S.sidebarContainer, N),
-                      style: Z,
+                      style: A,
                       children: (0, i.jsx)(g.Z, {
                           user: b,
                           displayProfile: D,
@@ -103,7 +103,7 @@ function N(e) {
                                       userId: t,
                                       guildId: n,
                                       onClose: a,
-                                      className: A
+                                      className: Z
                                   })
                               ]
                           })

@@ -26,14 +26,14 @@ var i = n(735250),
     v = n(878884),
     C = n(19780),
     x = n(944486),
-    T = n(9156),
-    N = n(938475),
+    N = n(9156),
+    T = n(938475),
     O = n(518084),
     A = n(669083),
     y = n(711553),
-    R = n(981631),
+    b = n(981631),
     M = n(647086),
-    b = n(689938),
+    R = n(689938),
     L = n(867144);
 function P(e, t, n) {
     return (
@@ -130,7 +130,7 @@ class w extends s.PureComponent {
                     children: (e) =>
                         (0, i.jsx)(O.ZP.Icon, {
                             icon: r.SettingsIcon,
-                            label: b.Z.Messages.SETTINGS,
+                            label: R.Z.Messages.SETTINGS,
                             ...e
                         })
                 })
@@ -147,7 +147,7 @@ class w extends s.PureComponent {
                 }),
                 (0, i.jsx)('section', {
                     className: L.panels,
-                    'aria-label': b.Z.Messages.ACCOUNT_A11Y_LABEL,
+                    'aria-label': R.Z.Messages.ACCOUNT_A11Y_LABEL,
                     children: (0, i.jsx)(h.Z, { guildId: n.id })
                 })
             ]
@@ -176,11 +176,11 @@ function j(e) {
         s = (0, o.e7)([I.Z], () => I.Z.getGuild(n)),
         a = (0, o.e7)([E.ZP], () => E.ZP.getChannels(n)),
         r = (0, o.e7)([m.Z], () => m.Z.getCategories(n)),
-        { mutedChannels: d, collapseMuted: u } = (0, o.cj)([T.ZP], () => ({
-            mutedChannels: T.ZP.getMutedChannels(n),
-            collapseMuted: T.ZP.isGuildCollapsed(n)
+        { mutedChannels: d, collapseMuted: u } = (0, o.cj)([N.ZP], () => ({
+            mutedChannels: N.ZP.getMutedChannels(n),
+            collapseMuted: N.ZP.isGuildCollapsed(n)
         })),
-        h = (0, o.e7)([N.ZP], () => N.ZP.getVoiceStates(n)),
+        h = (0, o.e7)([T.ZP], () => T.ZP.getVoiceStates(n)),
         O = (0, o.e7)([_.Z], () => _.Z.getCollapsed()),
         { scrollTo: A } = (0, o.e7)([g.Z], () => g.Z.getGuildDimensions(n)),
         y = (0, p.Z)((e) => {
@@ -188,14 +188,14 @@ function j(e) {
             return t;
         }),
         M = (0, o.e7)([x.Z], () => x.Z.getVoiceChannelId()),
-        b = (0, o.e7)([S.Z], () => S.Z.getGuildVersion(n)),
+        R = (0, o.e7)([S.Z], () => S.Z.getGuildVersion(n)),
         L = (0, o.e7)([f.Z], () => f.Z.version),
         P = (0, o.e7)([Z.default], () => Z.default.getGuildChangeSentinel(n)),
         D = (0, l.QN)(null == s ? void 0 : s.id),
         j = (0, c.gM)(null == s ? void 0 : s.id),
-        k = null !== (t = null == s ? void 0 : s.hasFeature(R.oNc.COMMUNITY)) && void 0 !== t && t,
+        k = null !== (t = null == s ? void 0 : s.hasFeature(b.oNc.COMMUNITY)) && void 0 !== t && t,
         V = (0, o.e7)([C.Z], () => C.Z.getChannelId()),
-        B = (0, o.e7)([v.Z], () => v.Z.desyncedVoiceStatesCount);
+        U = (0, o.e7)([v.Z], () => v.Z.desyncedVoiceStatesCount);
     return (0, i.jsx)(w, {
         guildId: n,
         guild: s,
@@ -207,11 +207,11 @@ function j(e) {
         selectedVoiceChannelId: M,
         voiceStates: h,
         rtcConnectedChannelId: V,
-        rtcDesyncedVoiceStatesCount: B,
+        rtcDesyncedVoiceStatesCount: U,
         collapsedChannels: O,
         collapseMuted: u,
         guildReadStateSentinel: P,
-        permissionVersion: b,
+        permissionVersion: R,
         categoryCollapseVersion: L,
         embeddedAppsByChannel: D,
         activeEventsByChannel: j,

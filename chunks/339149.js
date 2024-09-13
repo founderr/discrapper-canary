@@ -19,8 +19,8 @@ var i,
     p = n(812206),
     _ = n(707409),
     f = n(703656),
-    g = n(417363),
-    m = n(941128),
+    m = n(417363),
+    g = n(941128),
     C = n(780570),
     I = n(353042),
     E = n(981631),
@@ -102,7 +102,7 @@ class Z extends r.PureComponent {
             if (t) return N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_PAUSED;
             if (e.stage === E.f07.PATCHING || e.stage === E.f07.REPAIRING)
                 return (0, l.jsx)(I.Z, {
-                    getHistoricalTotalBytes: g.Z.getHistoricalTotalBytesWritten,
+                    getHistoricalTotalBytes: m.Z.getHistoricalTotalBytesWritten,
                     updateInterval: 5000,
                     children: this.renderProgressBody
                 });
@@ -201,13 +201,13 @@ function L(e, t) {
         return null != r && e.push(r), e;
     }, []);
 }
-t.Z = c.ZP.connectStores([m.Z, g.Z, p.Z], () => {
-    let e = m.Z.activeItems,
-        t = L(e, g.Z),
+t.Z = c.ZP.connectStores([g.Z, m.Z, p.Z], () => {
+    let e = g.Z.activeItems,
+        t = L(e, m.Z),
         { total: n, progress: i } = C.lK(t);
     return {
         percent: C.xI(i, n),
-        isPaused: m.Z.paused,
+        isPaused: g.Z.paused,
         firstApplication: e.length > 0 ? p.Z.getApplication(e[0].applicationId) : null,
         firstState: t.length > 0 ? t[0] : null
     };

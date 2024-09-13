@@ -27,12 +27,12 @@ function g(e) {
         { mutualFriends: x, isFetching: T } = (0, o.Z)(t.id, !t.bot),
         { mutualGuilds: v, isFetching: S } = (0, c.Z)(t.id, !0),
         N = !t.bot && null != x && x.length > 0,
-        A = null != v && v.length > 0;
-    return N || A
+        Z = null != v && v.length > 0;
+    return N || Z
         ? (0, i.jsxs)(d.Z.Overlay, {
               className: E.overlay,
               children: [
-                  A &&
+                  Z &&
                       (0, i.jsx)(_.Z, {
                           className: E.list,
                           header: f.Z.Messages.MUTUAL_GUILDS_COUNT.format({ count: v.length }),
@@ -59,7 +59,7 @@ function g(e) {
                               );
                           })
                       }),
-                  A && N && (0, i.jsx)(u.Z, { className: E.divider }),
+                  Z && N && (0, i.jsx)(u.Z, { className: E.divider }),
                   N &&
                       (0, i.jsx)(_.Z, {
                           className: E.list,

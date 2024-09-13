@@ -28,8 +28,8 @@ var i = n(735250),
     v = n(951211),
     S = n(981631),
     N = n(921944),
-    A = n(489887),
-    Z = n(689938),
+    Z = n(489887),
+    A = n(689938),
     M = n(695527);
 function b(e, t, s, a) {
     (0, o.openModalLazy)(
@@ -66,7 +66,7 @@ function L() {
                 let { visibleContent: t } = e;
                 return t === r.z.ACTIVITIES_CHAT_MENU_NEW_BADGE
                     ? (0, i.jsx)(o.TextBadge, {
-                          text: Z.Z.Messages.NEW,
+                          text: A.Z.Messages.NEW,
                           color: a.Z.BUTTON_DANGER_BACKGROUND
                       })
                     : null;
@@ -104,7 +104,7 @@ function j(e) {
                             channel: t
                         });
                 },
-                { modalKey: A.$z }
+                { modalKey: Z.$z }
             );
     }
     function B() {
@@ -139,7 +139,7 @@ function j(e) {
         onSelect: _,
         navId: 'channel-attach',
         onClose: p,
-        'aria-label': Z.Z.Messages.CHANNEL_ACTIONS_MENU_LABEL,
+        'aria-label': A.Z.Messages.CHANNEL_ACTIONS_MENU_LABEL,
         className: M.menu,
         children: l.map(function (e) {
             var n;

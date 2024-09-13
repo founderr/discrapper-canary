@@ -119,10 +119,10 @@ function T(e) {
 }
 t.Z = (e) => {
     let { channel: t, directoryEntries: n, handleCreateOrAddGuild: a, searchQuery: l, setSearchQuery: c, handleClearSearch: d, handleSearchKeyPress: h, currentCategoryId: C, handleSelectCategory: I, categoryCounts: v, allEntriesCount: S, isLoading: N } = e,
-        A = (0, r.e7)([u.Z], () => u.Z.getGuild(t.getGuildId()));
-    return null != A && A.hasFeature(_.oNc.SHARD)
+        Z = (0, r.e7)([u.Z], () => u.Z.getGuild(t.getGuildId()));
+    return null != Z && Z.hasFeature(_.oNc.SHARD)
         ? (0, i.jsx)(T, {
-              guild: A,
+              guild: Z,
               directoryEntries: n,
               handleCreateOrAddGuild: a,
               isLoading: N

@@ -84,8 +84,8 @@ function h(e) {
                 })(C, I, x),
             [C, I, x]
         ),
-        A = N + 1,
-        Z = A * v + (A - 1) * 8 <= E,
+        Z = N + 1,
+        A = Z * v + (Z - 1) * 8 <= E,
         M = Math.floor(v / c) + 8,
         b = Math.max(0, x - M * S) / 2;
     return (0, i.jsx)(r.Z, {
@@ -112,7 +112,7 @@ function h(e) {
                                         {
                                             style: T,
                                             className: l()(o.tile, {
-                                                [o.padColumn]: Z,
+                                                [o.padColumn]: A,
                                                 [o.noVerticalMargin]: a >= (S - 1) * N,
                                                 [o.noHorizontalMargin]: (a + 1) % N == 0 || a === C - 1
                                             }),

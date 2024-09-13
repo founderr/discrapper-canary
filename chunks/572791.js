@@ -143,7 +143,7 @@ function N(e) {
         })
     });
 }
-function A(e) {
+function Z(e) {
     let { variant: t, avatarSrc: n, username: s } = e;
     if (1 === t)
         return (0, i.jsx)(v, {
@@ -162,7 +162,7 @@ function A(e) {
         });
     return null;
 }
-let Z = s.memo(function (e) {
+let A = s.memo(function (e) {
     let { user: t, displayProfile: n } = e,
         { avatarSrc: s } = (0, _.Z)({
             user: t,
@@ -178,11 +178,11 @@ let Z = s.memo(function (e) {
             }
         );
     return o
-        ? (0, i.jsx)(A, {
+        ? (0, i.jsx)(Z, {
               variant: u,
               avatarSrc: s,
               username: t.username
           })
         : null;
 });
-t.Z = Z;
+t.Z = A;

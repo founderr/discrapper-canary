@@ -29,7 +29,7 @@ function N(e) {
         { renderWindow: x, windowDispatch: T } = s.useContext(c.ZP),
         v = null != d,
         N = (0, r.Jw)(null != d ? d : ''),
-        A = s.useCallback(
+        Z = s.useCallback(
             (e) => {
                 var t;
                 if ((!v && (0, r.$s)()) || (v && !(N && n))) return;
@@ -52,26 +52,26 @@ function N(e) {
         );
     s.useLayoutEffect(
         () => (
-            x.addEventListener('mousedown', A),
-            x.addEventListener('contextmenu', A),
+            x.addEventListener('mousedown', Z),
+            x.addEventListener('contextmenu', Z),
             T.subscribe(I.CkL.POPOUT_CLOSE, S),
             () => {
-                x.removeEventListener('mousedown', A), x.removeEventListener('contextmenu', A), T.unsubscribe(I.CkL.POPOUT_CLOSE, S);
+                x.removeEventListener('mousedown', Z), x.removeEventListener('contextmenu', Z), T.unsubscribe(I.CkL.POPOUT_CLOSE, S);
             }
         ),
-        [A, x, T]
+        [Z, x, T]
     ),
         (0, o.useFocusLock)(p),
         s.useEffect(() => {
             ((!v && (0, r.$s)()) || (v && !N)) && S();
         }, [N, v]);
-    let Z = (0, l.e7)([_.Z], () => _.Z.initialState(), []),
-        M = (0, u.q)(null == Z ? void 0 : Z.applicationId),
+    let A = (0, l.e7)([_.Z], () => _.Z.initialState(), []),
+        M = (0, u.q)(null == A ? void 0 : A.applicationId),
         b = s.useMemo(() => {
-            if (null == Z) return;
+            if (null == A) return;
             let e = [{ type: E.gc.HOME }];
             return (
-                null != Z.applicationId &&
+                null != A.applicationId &&
                     null != M &&
                     e.push({
                         type: E.gc.APPLICATION,
@@ -79,7 +79,7 @@ function N(e) {
                     }),
                 e
             );
-        }, [Z, M]);
+        }, [A, M]);
     return (0, i.jsx)(g.Z, {
         ref: p,
         channel: t,

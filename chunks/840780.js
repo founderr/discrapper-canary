@@ -28,14 +28,14 @@ var i = n(735250),
     b = n(524347),
     M = n(853197),
     R = n(616360),
-    P = n(858064),
-    O = n(594190),
+    O = n(858064),
+    P = n(594190),
     y = n(925329),
     j = n(810568),
     D = n(168524),
     w = n(382182),
-    U = n(74299),
-    G = n(914923),
+    G = n(74299),
+    U = n(914923),
     k = n(165393),
     B = n(989941),
     V = n(803647),
@@ -128,7 +128,7 @@ class eg extends l.PureComponent {
             align: 'center',
             onRequestClose: l,
             renderPopout: () =>
-                (0, i.jsx)(P.Z, {
+                (0, i.jsx)(O.Z, {
                     partnerGame: t,
                     tooltipAction: e,
                     onClose: l
@@ -241,7 +241,7 @@ class eg extends l.PureComponent {
     }
     renderScreenshare() {
         let { isStreaming: e, dropsPartnerGame: t, streamMetadata: n, streamQualityIndicator: l } = this.props,
-            { title: r, sanitizedTitle: s } = (0, G.Z)(n);
+            { title: r, sanitizedTitle: s } = (0, U.Z)(n);
         return (0, i.jsxs)('div', {
             className: e_.gameWrapper,
             children: [
@@ -432,7 +432,7 @@ t.Z = (0, g.Z)(function (e) {
     var t;
     let { guildId: n, ...l } = e,
         r = (0, c.e7)([K.default], () => K.default.getId()),
-        a = (0, c.e7)([O.ZP, el.Z], () => (0, B.Z)(O.ZP, el.Z)),
+        a = (0, c.e7)([P.ZP, el.Z], () => (0, B.Z)(P.ZP, el.Z)),
         s = (0, c.e7)([en.Z, q.Z], () => q.Z.getChannel(en.Z.getVoiceChannelId())),
         o = (0, c.e7)([E.ZP], () => E.ZP.getConnectedActivityChannelId()),
         d = (0, c.e7)([q.Z], () => q.Z.getChannel(o)),
@@ -453,10 +453,10 @@ t.Z = (0, g.Z)(function (e) {
                 ? t
                 : ''
         ]),
-        L = (0, c.e7)([J.Z], () => (0, U.Z)(J.Z) && (0, ea.isWindows)()),
+        L = (0, c.e7)([J.Z], () => (0, G.Z)(J.Z) && (0, ea.isWindows)()),
         M = (0, c.e7)([ee.Z], () => (null != r ? ee.Z.findActivity(r, (e) => e.type === eu.IIU.PLAYING) : null)),
         R = null != p && p.ownerId === r && p.state !== eu.jm8.ENDED,
-        P = (0, c.e7)([ei.default, et.Z], () => (null != d ? (0, v.F6)(d, ei.default, et.Z) : void 0)),
+        O = (0, c.e7)([ei.default, et.Z], () => (null != d ? (0, v.F6)(d, ei.default, et.Z) : void 0)),
         y = (0, F.Z)();
     return (0, i.jsx)(eg, {
         ...l,
@@ -477,7 +477,7 @@ t.Z = (0, g.Z)(function (e) {
         dropsTooltipAction: m,
         stream: p,
         streamMetadata: _,
-        channelName: P,
+        channelName: O,
         guildForConnectedChannel: h,
         streamQualityIndicator: y
     });

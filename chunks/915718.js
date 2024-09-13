@@ -28,8 +28,8 @@ var i = n(735250),
     v = n(699516),
     S = n(594174),
     N = n(979651),
-    A = n(585483),
-    Z = n(63063),
+    Z = n(585483),
+    A = n(63063),
     M = n(665149),
     b = n(981631),
     R = n(921944),
@@ -51,10 +51,10 @@ function O(e, t, n) {
 }
 class y extends s.PureComponent {
     componentDidMount() {
-        A.S.subscribe(b.CkL.CALL_START, this.handleVoiceClick);
+        Z.S.subscribe(b.CkL.CALL_START, this.handleVoiceClick);
     }
     componentWillUnmount() {
-        A.S.unsubscribe(b.CkL.CALL_START, this.handleVoiceClick);
+        Z.S.unsubscribe(b.CkL.CALL_START, this.handleVoiceClick);
     }
     renderVideoCallButton() {
         let e, t;
@@ -115,7 +115,7 @@ class y extends s.PureComponent {
                                             children: j.Z.Messages.EMBEDDED_ACTIVITIES_DM_TOOLTIP_BODY
                                         }),
                                         (0, i.jsx)(r.Anchor, {
-                                            href: Z.Z.getArticleURL(b.BhN.ACTIVITIES),
+                                            href: A.Z.getArticleURL(b.BhN.ACTIVITIES),
                                             children: j.Z.Messages.LEARN_MORE
                                         })
                                     ]
@@ -183,11 +183,11 @@ function D(e) {
             isBlocked: t.type === b.d4z.DM && null != E && v.Z.isBlocked(E)
         })),
         T = (0, a.e7)([S.default], () => S.default.getUser(E)),
-        A = (0, u.bp)(),
-        Z = [],
+        Z = (0, u.bp)(),
+        A = [],
         M = (0, h.Z)(t.id),
         R = (0, a.e7)([x.Z], () => x.Z.hasLayers());
-    M && !R && Z.push(l.z.ACTIVITY_GDM_CALL_TOOLTIP);
+    M && !R && A.push(l.z.ACTIVITY_GDM_CALL_TOOLTIP);
     let [L, j] = s.useState(!1);
     return (s.useEffect(() => {
         let e = setTimeout(() => {
@@ -205,10 +205,10 @@ function D(e) {
               callUnavailable: _,
               notFriend: g,
               isBlocked: C,
-              appContext: A,
+              appContext: Z,
               canShowTooltip: L,
               canShowActivityGdmTooltip: M,
-              dismissibleContentTypes: Z,
+              dismissibleContentTypes: A,
               useReducedMotion: c
           });
 }

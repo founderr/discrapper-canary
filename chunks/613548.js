@@ -27,8 +27,8 @@ var i = n(735250),
     v = n(954551),
     S = n(44136),
     N = n(651183),
-    A = n(618158),
-    Z = n(390322),
+    Z = n(618158),
+    A = n(390322),
     M = n(616286),
     b = n(961048),
     R = n(179424),
@@ -103,8 +103,8 @@ function z(e) {
         K = (0, I.So)(c.q.STREAM_HIGH_QUALITY),
         q = (0, C.o)(y, z),
         X = (0, g.lL)('CallHeader', !0, z, q),
-        { enabled: Q, inInbox: J } = T.Z.useExperiment({ location: 'ChannelCallHeaderToolbar' }),
-        { preventIdle: $, allowIdle: ee } = (0, A.Y)('popup'),
+        { enabled: J, inInbox: Q } = T.Z.useExperiment({ location: 'ChannelCallHeaderToolbar' }),
+        { preventIdle: $, allowIdle: ee } = (0, Z.Y)('popup'),
         et = [];
     if (Y) {
         let e = (null == y ? void 0 : y.type) === H.fO.STREAM ? (0, _.my)(y.id) : void 0,
@@ -176,7 +176,7 @@ function z(e) {
                     d.Popout,
                     {
                         position: 'bottom',
-                        renderPopout: () => (0, i.jsx)(Z.Z, { children: (0, i.jsx)(B.Z, { channel: n }) }),
+                        renderPopout: () => (0, i.jsx)(A.Z, { children: (0, i.jsx)(B.Z, { channel: n }) }),
                         children: (e, t) => {
                             let { isShown: n } = t;
                             return (0, s.createElement)(j.Z, {
@@ -224,7 +224,7 @@ function z(e) {
                 'recents'
             )
         ),
-        Q && !J && et.push((0, i.jsx)(v.Z, { className: F.button }, 'for-later')),
+        J && !Q && et.push((0, i.jsx)(v.Z, { className: F.button }, 'for-later')),
         et.push(
             (0, i.jsx)(
                 d.Popout,
@@ -232,7 +232,7 @@ function z(e) {
                     position: 'bottom',
                     renderPopout: (e) => {
                         let { closePopout: t } = e;
-                        return (0, i.jsx)(Z.Z, {
+                        return (0, i.jsx)(A.Z, {
                             children: (0, i.jsx)(w.Z, {
                                 channelId: S,
                                 onClose: t,

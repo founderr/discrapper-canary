@@ -26,8 +26,8 @@ var i = n(735250),
     v = n(689938),
     S = n(759486),
     N = n(722029),
-    A = n(194898);
-function Z(e) {
+    Z = n(194898);
+function A(e) {
     let { log: t, member: n, guild: a } = e,
         { analyticsLocations: r } = (0, h.ZP)(),
         d = m.nm(t),
@@ -35,8 +35,8 @@ function Z(e) {
         C = m.of(t),
         I = m.J5(t),
         T = (0, p.LJ)(t.id),
-        A = (0, c.e7)([g.ZP], () => (null != t.userId ? g.ZP.getMember(n.guildId, t.userId) : null), [n.guildId, t.userId]),
-        Z = s.useCallback(
+        Z = (0, c.e7)([g.ZP], () => (null != t.userId ? g.ZP.getMember(n.guildId, t.userId) : null), [n.guildId, t.userId]),
+        A = s.useCallback(
             (e) => (t) => {
                 t.preventDefault(), t.stopPropagation(), null != e && (0, _.RE)(e, r);
             },
@@ -54,7 +54,7 @@ function Z(e) {
                               return (0, i.jsx)(u.Clickable, {
                                   tag: 'span',
                                   className: S.username,
-                                  onClick: Z(A),
+                                  onClick: A(Z),
                                   onMouseEnter: a,
                                   onMouseLeave: l,
                                   children: (0, i.jsxs)(u.Text, {
@@ -64,14 +64,14 @@ function Z(e) {
                                           '@',
                                           (0, i.jsx)(u.NameWithRole, {
                                               name: x.ZP.getName(n.guildId, null, t.user),
-                                              color: null !== (s = null == A ? void 0 : A.colorString) && void 0 !== s ? s : void 0
+                                              color: null !== (s = null == Z ? void 0 : Z.colorString) && void 0 !== s ? s : void 0
                                           })
                                       ]
                                   })
                               });
                           }
                       }),
-            [Z, t.user, n.guildId, A]
+            [A, t.user, n.guildId, Z]
         )();
     return (0, i.jsxs)('div', {
         className: l()(N.modInfoItem, S.auditLogItem),
@@ -181,13 +181,13 @@ function M(e) {
         ? null
         : (0, i.jsx)(u.FormItem, {
               title: v.Z.Messages.GUILD_MEMBER_MOD_VIEW_RECENT_AUDIT_LOG,
-              titleClassName: A.infoTitle,
+              titleClassName: Z.infoTitle,
               children:
                   a.length > 0
                       ? (0, i.jsx)(T.WM, {
                             children: a.map((e) =>
                                 (0, i.jsx)(
-                                    Z,
+                                    A,
                                     {
                                         log: e,
                                         member: t,

@@ -61,7 +61,7 @@ let C = () => [
             name: Z.Z.Messages.DISPLAY_OPTION_NEVER
         }
     ],
-    T = () => [
+    N = () => [
         {
             value: E.OYC.ALWAYS,
             name: Z.Z.Messages.DISPLAY_OPTION_ALWAYS
@@ -71,7 +71,7 @@ let C = () => [
             name: Z.Z.Messages.DISPLAY_OPTION_ONLY_WHILE_SPEAKING
         }
     ];
-function N() {
+function T() {
     let e = f.Z.getNotificationPositionMode(),
         t = e !== E._vf.DISABLED,
         n = p.Z.getOverlayKeybind(),
@@ -95,7 +95,7 @@ class O extends o.PureComponent {
         });
     }
     handleChangeNotificationPositionMode(e, t) {
-        c.Z.setNotificationPositionMode(t), N();
+        c.Z.setNotificationPositionMode(t), T();
     }
     handleChangeAvatarSizeMode(e) {
         let { value: t } = e;
@@ -243,7 +243,7 @@ class O extends o.PureComponent {
                     className: S.marginBottom20,
                     children: (0, a.jsx)(l.RadioGroup, {
                         onChange: this.handleChangeDisplayUserMode,
-                        options: T(),
+                        options: N(),
                         value: n,
                         size: l.RadioGroup.Sizes.SMALL
                     })
@@ -305,7 +305,7 @@ class O extends o.PureComponent {
             v(this, 'handleToggleTextChatNotifications', () => {
                 let { ENABLED: e, DISABLED: t } = E.Ypu,
                     n = this.props.textChatNotificationMode === e ? t : e;
-                c.Z.setTextChatNotificationMode(n), N();
+                c.Z.setTextChatNotificationMode(n), T();
             });
     }
 }

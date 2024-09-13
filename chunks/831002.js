@@ -28,8 +28,8 @@ var s = n(512722),
 function S(e) {
     let { channelId: t, closePopout: n, appContext: s, onSelect: S } = e,
         N = (0, l.e7)([c.Z], () => c.Z.getSelectedParticipant(t)),
-        A = (null == N ? void 0 : N.type) === T.fO.STREAM ? N.stream : null,
-        Z = (0, m.Z)(t);
+        Z = (null == N ? void 0 : N.type) === T.fO.STREAM ? N.stream : null,
+        A = (0, m.Z)(t);
     return (0, i.jsxs)(r.Menu, {
         navId: 'stage-channel-call-overflow-popout',
         onClose: n,
@@ -66,8 +66,8 @@ function S(e) {
             })(t),
             (0, d.Z)(),
             (0, u.Z)(t),
-            Z,
-            (0, h.Z)(A, s)
+            A,
+            (0, h.Z)(Z, s)
         ]
     });
 }

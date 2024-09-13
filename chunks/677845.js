@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return A;
+        return Z;
     }
 }),
     n(653041);
@@ -27,8 +27,8 @@ var i = n(735250),
     v = n(695492),
     S = n(981631),
     N = n(301439);
-function A(e) {
-    let { participants: t, onClick: n, onDoubleClick: A, onContextMenu: Z, channel: M, className: b, inCall: R, totalNumberOfParticipants: L, paused: j = !1 } = e,
+function Z(e) {
+    let { participants: t, onClick: n, onDoubleClick: Z, onContextMenu: A, channel: M, className: b, inCall: R, totalNumberOfParticipants: L, paused: j = !1 } = e,
         P = (0, c.bp)() === S.IlC.POPOUT,
         O = (0, r.e7)([g.Z], () => g.Z.getGuild(M.guild_id), [M.guild_id]),
         { dismissedActivityEntryPointTileChannel: y } = (0, T.d)(),
@@ -63,8 +63,8 @@ function A(e) {
                         className: N.tile,
                         paused: j,
                         onClick: n,
-                        onDoubleClick: A,
-                        onContextMenu: Z,
+                        onDoubleClick: Z,
+                        onContextMenu: A,
                         inCall: R,
                         width: t,
                         inPopout: P

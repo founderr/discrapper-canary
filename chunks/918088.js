@@ -157,9 +157,9 @@ function L(e, t) {
         Z = N.layout_type,
         P = v(e, t, { formattedExpirationLabel: _ });
     if (null == P) return;
-    let { canTapAnswers: D, canRemoveVote: b, canShowVoteCounts: j, canSubmitVote: U, expirationLabel: y = A.Z.Messages.POLL_EXPIRED, hasSelectedAnswer: B, hasVoted: k, isEditingVote: F, isExpired: G, isInteractive: w, reactions: V, selectedAnswerIds: H, submitting: Y, tapShouldOpenVotersModal: W, showResults: K } = P,
-        z = (0, h.cZ)(V),
-        Q = A.Z.Messages.POLL_VOTES_COUNT.format({ count: z.toLocaleString() }),
+    let { canTapAnswers: D, canRemoveVote: b, canShowVoteCounts: j, canSubmitVote: U, expirationLabel: y = A.Z.Messages.POLL_EXPIRED, hasSelectedAnswer: B, hasVoted: k, isEditingVote: F, isExpired: G, isInteractive: w, reactions: V, selectedAnswerIds: H, submitting: Y, tapShouldOpenVotersModal: W, showResults: z } = P,
+        K = (0, h.cZ)(V),
+        Q = A.Z.Messages.POLL_VOTES_COUNT.format({ count: K.toLocaleString() }),
         q = Math.max(
             ...L.map((e) => {
                 var t, n;
@@ -172,7 +172,7 @@ function L(e, t) {
             let o = ''.concat(e.answer_id),
                 u = O(V, o),
                 d = null !== (n = null == u ? void 0 : null === (t = u.count_details) || void 0 === t ? void 0 : t.vote) && void 0 !== n ? n : 0,
-                _ = 0 === z ? 0 : d / z,
+                _ = 0 === K ? 0 : d / K,
                 E = H.has(o),
                 T = d >= q && 0 !== d,
                 N = k && null !== (a = null == u ? void 0 : u.me_vote) && void 0 !== a && a,
@@ -182,7 +182,7 @@ function L(e, t) {
                     isExpired: G,
                     isSelected: E,
                     isLeader: T,
-                    showResults: K
+                    showResults: z
                 });
             return {
                 answerId: o,
@@ -233,7 +233,7 @@ function L(e, t) {
             isEditingVote: F,
             canRemoveVote: b,
             isInteractive: w,
-            showResults: K
+            showResults: z
         })
             .with({ isInteractive: !1 }, () => void 0)
             .with({ isExpired: !0 }, () => void 0)
@@ -299,7 +299,7 @@ function L(e, t) {
                 type: 'showVoterDetails'
             })),
         et =
-            !w || G || k || K
+            !w || G || k || z
                 ? void 0
                 : {
                       label: A.Z.Messages.POLL_SHOW_VOTES,

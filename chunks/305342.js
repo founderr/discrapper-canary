@@ -234,9 +234,9 @@ t.Z = (e) => {
         [H] = T._T(n),
         [Y] = T.PK(n),
         [W] = T.TT(n),
-        [K] = T.F2(n),
-        z = (0, h.Z)(a, n),
-        Q = null != W && null == D && z,
+        [z] = T.F2(n),
+        K = (0, h.Z)(a, n),
+        Q = null != W && null == D && K,
         q = (0, c.Z)(M.iP),
         [X, J] = s.useState(!1),
         $ = X || !q,
@@ -261,7 +261,7 @@ t.Z = (e) => {
                               }),
                               (0, i.jsx)(o.Tooltip, {
                                   clickableOnMobile: !0,
-                                  text: L.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TRIAL_DISCLAIMER.format({ activeTrialUserLimit: null != K ? K : 0 }),
+                                  text: L.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TRIAL_DISCLAIMER.format({ activeTrialUserLimit: null != z ? z : 0 }),
                                   children: (e) =>
                                       (0, i.jsx)(o.CircleInformationIcon, {
                                           size: 'xs',

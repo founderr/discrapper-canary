@@ -20,8 +20,8 @@ var i = n(735250),
     p = n(481060),
     _ = n(493683),
     f = n(239091),
-    g = n(420660),
-    m = n(385499),
+    m = n(420660),
+    g = n(385499),
     C = n(570908),
     I = n(702321),
     E = n(201895),
@@ -81,7 +81,7 @@ let H = G.ZP.getEnableHardwareAcceleration() ? p.AnimatedAvatar : p.Avatar,
         });
 class Y extends l.Component {
     render() {
-        let { route: e, selected: t, icon: n, iconClassName: l, interactiveClassName: r, text: s, children: o, locationState: u, onClick: h, className: _, role: f, 'aria-posinset': g, 'aria-setsize': m, ...I } = this.props;
+        let { route: e, selected: t, icon: n, iconClassName: l, interactiveClassName: r, text: s, children: o, locationState: u, onClick: h, className: _, role: f, 'aria-posinset': m, 'aria-setsize': g, ...I } = this.props;
         return (0, i.jsx)(v.Z, {
             className: a()(V.channel, { [V.fullWidth]: d.tq }, _),
             onClick: h,
@@ -90,8 +90,8 @@ class Y extends l.Component {
                 within: !0,
                 ...F
             },
-            'aria-posinset': g,
-            'aria-setsize': m,
+            'aria-posinset': m,
+            'aria-setsize': g,
             children: (0, i.jsx)(p.Interactive, {
                 as: 'div',
                 selected: t,
@@ -252,7 +252,7 @@ function K(e) {
             o()(null != d, 'PrivateChannel.renderAvatar: Invalid prop configuration - no user or channel');
             let n = null;
             return (
-                !d.isSystemUser() && (n = (0, g.Z)(L) ? k.Skl.STREAMING : y),
+                !d.isSystemUser() && (n = (0, m.Z)(L) ? k.Skl.STREAMING : y),
                 (0, i.jsx)(H, {
                     ...$,
                     size: p.AvatarSizes.SIZE_32,
@@ -268,8 +268,8 @@ function K(e) {
         },
         e_ = t.isMultiUserDM(),
         ef = t.isSystemDM(),
-        eg = (0, b.Q)(),
-        em =
+        em = (0, b.Q)(),
+        eg =
             e_ || ef || t.type !== k.d4z.DM || (null == d ? void 0 : d.clan) == null
                 ? en
                 : (0, i.jsxs)(i.Fragment, {
@@ -305,7 +305,7 @@ function K(e) {
                 'aria-posinset': w,
                 children: (0, i.jsxs)(p.Interactive, {
                     className: a()(V.interactive, {
-                        [V.interactiveSystemDM]: eg && ef,
+                        [V.interactiveSystemDM]: em && ef,
                         [V.interactiveSelected]: s
                     }),
                     as: 'div',
@@ -330,12 +330,12 @@ function K(e) {
                                 subText: eh(),
                                 name: (0, i.jsx)(Z.Z, {
                                     tooltipClassName: V.overflowTooltip,
-                                    children: em
+                                    children: eg
                                 }),
                                 decorators: t.isSystemDM()
-                                    ? (0, i.jsx)(m.Z, {
+                                    ? (0, i.jsx)(g.Z, {
                                           className: V.decorator,
-                                          type: m.Z.Types.SYSTEM_DM,
+                                          type: g.Z.Types.SYSTEM_DM,
                                           verified: !0
                                       })
                                     : null

@@ -57,8 +57,8 @@ var i,
     H = n(41776),
     Y = n(628238),
     W = n(454585),
-    K = n(768494),
-    z = n(124347),
+    z = n(768494),
+    K = n(124347),
     Q = n(976853),
     q = n(346013),
     X = n(780088),
@@ -111,8 +111,8 @@ var i,
     eH = n(474936),
     eY = n(689938),
     eW = n(916315),
-    eK = n(287847),
-    ez = n(680674);
+    ez = n(287847),
+    eK = n(680674);
 function eQ(e, t, n) {
     return (
         t in e
@@ -128,11 +128,11 @@ function eQ(e, t, n) {
 }
 function eq() {
     return (0, s.jsxs)('div', {
-        className: eK.nitroFileSizeUpsell,
+        className: ez.nitroFileSizeUpsell,
         children: [
             (0, s.jsx)('img', {
-                src: ez,
-                className: eK.nitroBadgeSvg,
+                src: eK,
+                className: ez.nitroBadgeSvg,
                 alt: ''
             }),
             (0, s.jsx)(_.Text, {
@@ -155,19 +155,19 @@ let eX = 15 * eN.Z.Millis.MINUTE,
             src: null != r && '' !== r ? r : a,
             url: null != e && '' !== e ? e : null != r && '' !== r ? r : a,
             format: null != n ? u.EO.VIDEO : u.EO.IMAGE,
-            className: eK.gifFavoriteButton
+            className: ez.gifFavoriteButton
         });
     },
     e0 = (e) => () => {
         let { url: t, proxyUrl: n, width: i, height: a } = e;
-        return null != i && null != a && z.u.test(n)
+        return null != i && null != a && K.u.test(n)
             ? (0, s.jsx)(eZ.Z, {
                   width: i,
                   height: a,
                   src: n,
                   url: t,
                   format: u.EO.IMAGE,
-                  className: eK.gifFavoriteButton
+                  className: ez.gifFavoriteButton
               })
             : null;
     };
@@ -206,7 +206,7 @@ class e1 extends (i = a.Component) {
         let { message: e, channel: t, shouldRenderCtaButton: n } = this.props;
         return n
             ? (0, s.jsx)('div', {
-                  className: eK.ctaButtonContainer,
+                  className: ez.ctaButtonContainer,
                   children: (0, s.jsx)(M.Z, {
                       messageId: e.id,
                       channelId: t.id
@@ -299,7 +299,7 @@ class e1 extends (i = a.Component) {
                   (0, s.jsx)(
                       'div',
                       {
-                          className: eK.giftCodeContainer,
+                          className: ez.giftCodeContainer,
                           children: (0, s.jsx)(I.Z, {
                               code: e,
                               author: n,
@@ -323,7 +323,7 @@ class e1 extends (i = a.Component) {
             : (0, s.jsx)(
                   'div',
                   {
-                      className: eK.referralContainer,
+                      className: ez.referralContainer,
                       children: (0, s.jsx)(et.Z, {
                           userTrialOfferId: t,
                           canRenderReferralEmbed: null != i && i
@@ -380,14 +380,14 @@ class e1 extends (i = a.Component) {
             return (0, eS.dn)(e.originalItem, t);
         }
         let h = l.map((t) => {
-                let n = (0, K.VY)(t),
+                let n = (0, z.VY)(t),
                     s = {
                         message: e,
                         item: (0, eF.OB)(t, u),
                         autoPlayGif: o,
                         canRemoveItem: c && (l.length > 1 || '' !== e.content),
                         onRemoveItem: this.handleRemoveAttachment,
-                        className: eK.embedWrapper,
+                        className: ez.embedWrapper,
                         getObscureReason: N,
                         onContextMenu:
                             null != d
@@ -539,7 +539,7 @@ class e1 extends (i = a.Component) {
         if (!!e.hasFlag(eV.iLy.FAILED_TO_MENTION_SOME_ROLES_IN_THREAD) && !!this.props.isCurrentUser) {
             if (!(Date.now() - ep.default.extractTimestamp(e.id) >= eX))
                 return (0, s.jsx)('div', {
-                    className: eK.threadRoleMentionFailure,
+                    className: ez.threadRoleMentionFailure,
                     children: eY.Z.Messages.THREAD_ROLE_MENTION_FAILURE
                 });
         }
@@ -559,7 +559,7 @@ class e1 extends (i = a.Component) {
                 (0, s.jsx)(_.Text, {
                     variant: 'text-md/normal',
                     color: 'text-normal',
-                    className: eK.confirmText,
+                    className: ez.confirmText,
                     children: eY.Z.Messages.SUPPRESS_EMBED_BODY
                 }),
                 (0, s.jsx)(_.Text, {
@@ -598,7 +598,7 @@ class e1 extends (i = a.Component) {
             children: (0, s.jsx)(_.Text, {
                 variant: 'text-md/normal',
                 color: 'text-normal',
-                className: eK.confirmText,
+                className: ez.confirmText,
                 children: eY.Z.Messages.REMOVE_ATTACHMENT_BODY
             })
         });
@@ -660,7 +660,7 @@ class e1 extends (i = a.Component) {
             return (0, s.jsx)($.Z, {
                 message: e,
                 poll: t,
-                className: eK.pollContainer
+                className: ez.pollContainer
             });
     }
     renderForwardedMessage(e) {
@@ -697,7 +697,7 @@ class e1 extends (i = a.Component) {
             ? null
             : (0, s.jsxs)('div', {
                   id: (0, eb.bX)(t),
-                  className: l()(e, eK.container),
+                  className: l()(e, ez.container),
                   children: [Z, g, L, o, c, u, R, d, _, I, v, m, C, p, S, A, E, T, N, h, a && this.renderSuppressConfirmModal(), r && this.renderRemoveAttachmentConfirmModal(), f, O, x, M]
               });
     }
@@ -727,7 +727,7 @@ class e1 extends (i = a.Component) {
                     {
                         value: e$(e.url, e.image, e.video),
                         children: (0, s.jsx)(p.ZP, {
-                            className: eK.embedWrapper,
+                            className: ez.embedWrapper,
                             embed: e,
                             obscureReason: null != E ? E : void 0,
                             autoPlayGif: r,
@@ -746,7 +746,7 @@ class e1 extends (i = a.Component) {
                 );
                 return d
                     ? (0, s.jsxs)('div', {
-                          className: eK.embedContainer,
+                          className: ez.embedContainer,
                           children: [
                               I,
                               (0, s.jsx)(D.Z, {

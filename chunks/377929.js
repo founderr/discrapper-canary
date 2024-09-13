@@ -41,7 +41,7 @@ function N(e) {
         autoInvert: !1,
         onRequestClose: () => a(!1),
         renderPopout: function (e) {
-            return (0, i.jsx)(A, {
+            return (0, i.jsx)(Z, {
                 ...e,
                 channel: t
             });
@@ -59,13 +59,13 @@ function N(e) {
         }
     });
 }
-function A(e) {
+function Z(e) {
     let { channel: t, closePopout: n, onSelect: s } = e,
         a = (0, c.Z)(t),
         I = (0, p.Z)(t),
         N = (0, E.Z)(t.id),
-        A = (0, f.Z)(t),
-        Z = (0, C.Z)({
+        Z = (0, f.Z)(t),
+        A = (0, C.Z)({
             id: t.id,
             label: S.Z.Messages.COPY_ID_THREAD
         }),
@@ -88,7 +88,7 @@ function A(e) {
             }),
             (0, i.jsxs)(o.MenuGroup, {
                 children: [
-                    A,
+                    Z,
                     L,
                     N,
                     O && !y
@@ -106,7 +106,7 @@ function A(e) {
                 children: [P, a, I, b]
             }),
             (0, i.jsxs)(o.MenuGroup, {
-                children: [M, Z]
+                children: [M, A]
             })
         ]
     });

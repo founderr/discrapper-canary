@@ -44,8 +44,8 @@ function T(e) {
         S = E && T,
         {
             editingMessage: N,
-            editingTextValue: A,
-            editingRichValue: Z
+            editingTextValue: Z,
+            editingRichValue: A
         } = (0, a.cj)(
             [d.Z],
             () => ({
@@ -74,13 +74,13 @@ function T(e) {
                 }),
             [c]
         );
-    return null != A && null != Z
+    return null != Z && null != A
         ? (0, i.jsx)(g.Z, {
               ref: void 0,
               channel: t,
               message: n,
-              textValue: A,
-              richValue: Z,
+              textValue: Z,
+              richValue: A,
               onCancel: l.Z.endEditMessage,
               onChange: l.Z.updateEditMessage,
               onConfirmDelete: r.Z.confirmDelete,

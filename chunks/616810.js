@@ -30,8 +30,8 @@ class o extends r.Z {
         return this.socket.isSessionEstablished();
     }
     emitPresenceUpdate(e) {
-        let { status: t, since: n, activities: r, afk: i, broadcast: a } = e;
-        this.socket.presenceUpdate(t, n, r, i, a);
+        let { status: t, since: n, activities: r, afk: i } = e;
+        this.socket.presenceUpdate(t, n, r, i);
     }
     handleConnectionOpen() {
         let e = !this.switchingAccounts;

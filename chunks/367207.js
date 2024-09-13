@@ -13,8 +13,8 @@ var l = n(392711),
     p = n(93127),
     _ = n(361291),
     f = n(592125),
-    g = n(430824),
-    m = n(594174),
+    m = n(430824),
+    g = n(594174),
     C = n(295226),
     I = n(626135),
     E = n(74538),
@@ -78,7 +78,7 @@ class q extends c.Z {
         });
     }
     _getReferralIncentiveEligibility() {
-        let e = m.default.getCurrentUser();
+        let e = g.default.getCurrentUser();
         if (P.Z.getIsFetchingReferralIncentiveEligibility() || !(0, E.I5)(e)) return;
         let t = { location: 'PremiumManager' },
             n = { autoTrackExposure: !1 };
@@ -133,7 +133,7 @@ class q extends c.Z {
             K(this, '_premiumPaymentModalCloseResolve', null),
             K(this, '_premiumPaymentModalCloseReject', null),
             K(this, '_maybeFetchPremiumOffer', async () => {
-                let e = m.default.getCurrentUser();
+                let e = g.default.getCurrentUser();
                 if (null != e && e.verified) {
                     let t = !(0, E.I5)(e) && C.Z.shouldFetchOffer();
                     await (0, j.T)('PremiumManager', t);
@@ -141,11 +141,11 @@ class q extends c.Z {
                 s.Z.dispatch({ type: 'PREMIUM_MARKETING_DATA_READY' });
             }),
             K(this, '_maybeFetchCheckoutRecovery', async () => {
-                let e = m.default.getCurrentUser();
+                let e = g.default.getCurrentUser();
                 null != e && e.verified && !(0, E.I5)(e) && Z.Z.shouldFetchCheckoutRecovery() && (await (0, v.o)());
             }),
             K(this, '_maybeFetchCampaignContext', async () => {
-                let e = m.default.getCurrentUser();
+                let e = g.default.getCurrentUser();
                 null != e && e.verified && S.Z.shouldFetchCampaignContext() && (await (0, x.W)());
             }),
             K(this, '_maybeFetchUserAffinities', () => {
@@ -175,7 +175,7 @@ class q extends c.Z {
                 t && null != this._premiumPaymentModalCloseResolve ? this._premiumPaymentModalCloseResolve() : null != this._premiumPaymentModalCloseReject && this._premiumPaymentModalCloseReject(), (this._premiumPaymentModalCloseResolve = null), (this._premiumPaymentModalCloseReject = null);
             }),
             K(this, 'maybeShowHDStreamingViewerUpsellMessage', (e) => {
-                let t = m.default.getCurrentUser();
+                let t = g.default.getCurrentUser();
                 (null == t ? void 0 : t.id) !== e.senderUserId && this._maybeSendViewerUpsellMessage(e.channelId, e.guildId, t);
             }),
             K(
@@ -186,7 +186,7 @@ class q extends c.Z {
                     let r = d.Z.getSelectedParticipant(e),
                         a = (0, b.o)(r, n),
                         { sendNitroMessage: s } = (0, L.TD)(a),
-                        c = null !== (l = null === (i = g.Z.getGuild(t)) || void 0 === i ? void 0 : i.premiumTier) && void 0 !== l ? l : F.Eu4.NONE;
+                        c = null !== (l = null === (i = m.Z.getGuild(t)) || void 0 === i ? void 0 : i.premiumTier) && void 0 !== l ? l : F.Eu4.NONE;
                     if (A.Z.cooldownIsActive() || !s || c >= F.Eu4.TIER_2 || (null == r ? void 0 : r.type) !== W.fO.STREAM || (null == r ? void 0 : r.id) === (null == n ? void 0 : n.id) || null == r.maxResolution || null == r.maxFrameRate) return;
                     T.I();
                     let u = Y.Z.Messages.STREAM_PREMIUM_VIEWER_UPSELL_MESSAGE.format({

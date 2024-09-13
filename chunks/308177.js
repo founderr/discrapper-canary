@@ -30,8 +30,8 @@ let S = (e, t) => {
         };
     },
     N = (e, t) => (e < x ? 1 : e < T ? 2 : e < v ? 3 : t ? 3 : 4),
-    A = (e) => Math.floor((e - 32) / 102);
-function Z(e) {
+    Z = (e) => Math.floor((e - 32) / 102);
+function A(e) {
     return e.type === h.Ui.VOICE;
 }
 t.Z = (0, o.Z)((e) => {
@@ -54,9 +54,9 @@ t.Z = (0, o.Z)((e) => {
         b = (0, d.Rk)(i.id, h.pV.AUDIENCE),
         R = (0, r.e7)([u.Z], () => (null != x ? u.Z.getParticipant(i.id, x) : null)),
         L = (0, d.w8)(i.id, h.pV.SPEAKER),
-        j = L.filter(Z),
+        j = L.filter(A),
         P = null != L.find((e) => e.type === h.Ui.STREAM),
-        O = A(s),
+        O = Z(s),
         y = N(s, v),
         D = {
             [h.pV.SPEAKER]: y,

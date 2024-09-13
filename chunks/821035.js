@@ -49,7 +49,7 @@ function I() {
             scrollPosition: _.to.EXPLICIT_MEDIA_REDACTION_V2,
             children: [
                 (0, n.jsx)(d.H, {
-                    header: T.Z.Messages.OBSCURED_CONTENT_SETTINGS_HEADER,
+                    header: T.Z.Messages.USER_SETTINGS_SENSITIVE_MEDIA_TITLE,
                     description: T.Z.Messages.OBSCURED_CONTENT_SETTINGS_DESC.format({ learnMoreLink: c.Z.getArticleURL(E.BhN.EXPLICIT_MEDIA_REDACTION) })
                 }),
                 (0, n.jsx)(i.FormItem, {

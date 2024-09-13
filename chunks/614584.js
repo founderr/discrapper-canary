@@ -25,7 +25,7 @@ var i = n(735250),
     T = n(689938);
 let v = s.memo(function (e) {
     var t;
-    let { baseMessage: n, referencedMessage: v, channel: S, compact: N = !1, referencedUsernameProfile: A, referencedAvatarProfile: Z, setPopout: M } = e,
+    let { baseMessage: n, referencedMessage: v, channel: S, compact: N = !1, referencedUsernameProfile: Z, referencedAvatarProfile: A, setPopout: M } = e,
         b = v.state === m.Y.LOADED ? v.message : void 0,
         R = (0, E.Uj)(b),
         L = (0, c.p)(),
@@ -98,8 +98,8 @@ let v = s.memo(function (e) {
         O = (0, a.e7)([p.Z], () => null != b && p.Z.isBlockedForMessage(b), [b]),
         y = (0, I.wq)(null == b ? void 0 : b.author.id, S.id),
         D = (0, I.$3)(n, b, O),
-        k = (0, I.Wl)(b, S, A, M),
-        U = (0, I.rY)(Z, M),
+        k = (0, I.Wl)(b, S, Z, M),
+        U = (0, I.rY)(A, M),
         w = s.useCallback(
             () =>
                 M({
@@ -118,8 +118,8 @@ let v = s.memo(function (e) {
         content: P,
         compact: N,
         isReplyAuthorBlocked: O,
-        showAvatarPopout: Z,
-        showUsernamePopout: A,
+        showAvatarPopout: A,
+        showUsernamePopout: Z,
         renderPopout: C.Z,
         onClickAvatar: U,
         onClickUsername: k,

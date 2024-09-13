@@ -23,7 +23,7 @@ t.Z = s.memo(function (e) {
         T = (0, a.e7)([m.Z], () => m.Z.hasLayers()),
         v = s.useCallback(() => (C ? f.Z.Messages.INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP : null != I ? f.Z.Messages.INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP : null), [C, I]),
         S = s.useMemo(() => (C || null != I) && !x && !T, [C, I, x, T]),
-        [N, A] = s.useState(v());
+        [N, Z] = s.useState(v());
     s.useEffect(() => {
         null != I &&
             null != g &&
@@ -58,9 +58,9 @@ t.Z = s.memo(function (e) {
         }, []),
         s.useEffect(() => {
             let e = v();
-            null != e && A(e);
+            null != e && Z(e);
         }, [C, I, v]);
-    let Z = s.useCallback(() => {
+    let A = s.useCallback(() => {
         if ((null != I && (0, o.T)(t.id, [I.id]), null != g))
             (0, r.openModalLazy)(
                 async () => {
@@ -100,7 +100,7 @@ t.Z = s.memo(function (e) {
               children: () =>
                   (0, i.jsx)(p.ZP.Icon, {
                       icon: r.ShieldIcon,
-                      onClick: Z,
+                      onClick: A,
                       tooltip: f.Z.Messages.SAFETY_TOOLS_BUTTON_LABEL,
                       tooltipDisabled: null != I
                   })

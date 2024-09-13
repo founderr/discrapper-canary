@@ -27,8 +27,8 @@ var s = n(120356),
     v = n(5192),
     S = n(51144),
     N = n(981631),
-    A = n(308083),
-    Z = n(689938),
+    Z = n(308083),
+    A = n(689938),
     M = n(354418);
 function b(e) {
     let { user: t, guildId: n, onClose: s } = e,
@@ -66,7 +66,7 @@ function b(e) {
                                         clan: null == t ? void 0 : t.clan,
                                         userId: null == t ? void 0 : t.id,
                                         contextGuildId: n,
-                                        badgeSize: A.NC.SIZE_16,
+                                        badgeSize: Z.NC.SIZE_16,
                                         textVariant: 'heading-md/semibold',
                                         className: M.memberClanTag,
                                         containerClassName: M.memberClanTagContainer
@@ -127,10 +127,10 @@ function L(e) {
             [t, u]
         ),
         v = (0, d.b)(s),
-        { analyticsLocations: S, newestAnalyticsLocation: A } = (0, c.ZP)(),
+        { analyticsLocations: S, newestAnalyticsLocation: Z } = (0, c.ZP)(),
         b = (0, p.sE)(a, {
             targetUserId: t.id,
-            location: A,
+            location: Z,
             locations: S
         }),
         L = (0, l.e7)([_.default], () => _.default.getId() === (null == t ? void 0 : t.id));
@@ -139,7 +139,7 @@ function L(e) {
         children: [
             (0, i.jsxs)(R, {
                 disabled: L,
-                'aria-label': Z.Z.Messages.SEND_DM,
+                'aria-label': A.Z.Messages.SEND_DM,
                 onClick: () => {
                     o.Z.openPrivateChannel(t.id);
                 },
@@ -153,20 +153,20 @@ function L(e) {
                     (0, i.jsx)(r.Text, {
                         variant: 'text-sm/normal',
                         color: 'none',
-                        children: Z.Z.Messages.SEND_DM
+                        children: A.Z.Messages.SEND_DM
                     })
                 ]
             }),
             (0, i.jsxs)(R, {
                 disabled: !f,
-                'aria-label': Z.Z.Messages.KICK,
+                'aria-label': A.Z.Messages.KICK,
                 onClick: () => {
                     (0, r.openModalLazy)(async () => {
                         let { default: e } = await n.e('5454').then(n.bind(n, 854360));
                         return (n) =>
                             (0, i.jsx)(e, {
                                 ...n,
-                                location: A,
+                                location: Z,
                                 guildId: a,
                                 user: t
                             });
@@ -182,20 +182,20 @@ function L(e) {
                     (0, i.jsx)(r.Text, {
                         variant: 'text-sm/normal',
                         color: 'none',
-                        children: Z.Z.Messages.KICK
+                        children: A.Z.Messages.KICK
                     })
                 ]
             }),
             (0, i.jsxs)(R, {
                 disabled: !C,
-                'aria-label': Z.Z.Messages.BAN,
+                'aria-label': A.Z.Messages.BAN,
                 onClick: () => {
                     (0, r.openModalLazy)(async () => {
                         let { default: e } = await n.e('43350').then(n.bind(n, 98746));
                         return (n) =>
                             (0, i.jsx)(e, {
                                 ...n,
-                                location: A,
+                                location: Z,
                                 guildId: a,
                                 user: t
                             });
@@ -211,13 +211,13 @@ function L(e) {
                     (0, i.jsx)(r.Text, {
                         variant: 'text-sm/normal',
                         color: 'none',
-                        children: Z.Z.Messages.BAN
+                        children: A.Z.Messages.BAN
                     })
                 ]
             }),
             (0, i.jsxs)(R, {
                 disabled: !I,
-                'aria-label': Z.Z.Messages.TIMEOUT_USER,
+                'aria-label': A.Z.Messages.TIMEOUT_USER,
                 onClick: () => {
                     v ? (0, h.q)(s.guildId, s.userId, S) : (0, h.z)(s.guildId, s.userId, S);
                 },
@@ -231,12 +231,12 @@ function L(e) {
                     (0, i.jsx)(r.Text, {
                         variant: 'text-sm/normal',
                         color: 'none',
-                        children: v ? Z.Z.Messages.REMOVE : Z.Z.Messages.TIMEOUT_USER
+                        children: v ? A.Z.Messages.REMOVE : A.Z.Messages.TIMEOUT_USER
                     })
                 ]
             }),
             (0, i.jsxs)(R, {
-                'aria-label': Z.Z.Messages.COPY_ID,
+                'aria-label': A.Z.Messages.COPY_ID,
                 onClick: () => {
                     b(p.jQ.COPY_ID), (0, T.JG)(t.id);
                 },
@@ -251,7 +251,7 @@ function L(e) {
                     (0, i.jsx)(r.Text, {
                         variant: 'text-sm/normal',
                         color: 'none',
-                        children: Z.Z.Messages.COPY_ID
+                        children: A.Z.Messages.COPY_ID
                     })
                 ]
             })

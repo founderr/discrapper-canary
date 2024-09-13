@@ -21,8 +21,8 @@ var i = n(735250),
     v = n(692546),
     C = n(518084),
     x = n(987650),
-    T = n(981631),
-    N = n(689938),
+    N = n(981631),
+    T = n(689938),
     O = n(372049);
 function A(e, t, n) {
     return (
@@ -38,11 +38,11 @@ function A(e, t, n) {
     );
 }
 let y = 10 * Z.Z.Millis.SECOND;
-function R() {
+function b() {
     let e = (0, S.QF)(),
         t = (0, S.Ht)();
     (0, f.lW)({
-        type: T.BmY.DISPATCH,
+        type: N.BmY.DISPATCH,
         pid: e,
         token: t,
         payloads: [
@@ -56,7 +56,7 @@ function R() {
 }
 class M extends s.PureComponent {
     componentDidMount() {
-        (this.notificationTimer = setTimeout(this.hideNotification, y)), p.Z.track(T.rMx.NOTIFICATION_VIEWED, { notif_type: x.n0.OverlayCrashed });
+        (this.notificationTimer = setTimeout(this.hideNotification, y)), p.Z.track(N.rMx.NOTIFICATION_VIEWED, { notif_type: x.n0.OverlayCrashed });
     }
     componentWillUnmount() {
         let { notificationTimer: e } = this;
@@ -71,7 +71,7 @@ class M extends s.PureComponent {
             : (0, i.jsx)(v.Z, {
                   observe: !1,
                   children: (0, i.jsx)(h.ThemeProvider, {
-                      theme: T.BRd.DARK,
+                      theme: N.BRd.DARK,
                       children: (s) =>
                           (0, i.jsxs)(h.Clickable, {
                               className: o()(s, O.container),
@@ -85,8 +85,8 @@ class M extends s.PureComponent {
                                           height: 40,
                                           className: O.notificationIcon
                                       }),
-                                      title: N.Z.Messages.OVERLAY_CRASHED_TITLE,
-                                      confirmText: N.Z.Messages.OVERLAY_RELOAD,
+                                      title: T.Z.Messages.OVERLAY_CRASHED_TITLE,
+                                      confirmText: T.Z.Messages.OVERLAY_RELOAD,
                                       onNotificationClick: this.handleNotificationClick,
                                       onConfirmClick: this.handleReload,
                                       onDismissClick: this.hideNotification
@@ -119,15 +119,15 @@ class M extends s.PureComponent {
             }),
             A(this, 'notificationTimer', void 0),
             A(this, 'hideNotification', () => {
-                R();
+                b();
                 let { notificationTimer: e } = this;
                 null != e && clearTimeout(e), (this.notificationTimer = null);
             }),
             A(this, 'handleReload', (e) => {
                 this.setState({ busy: !0 }),
-                    R(),
+                    b(),
                     p.Z.track(
-                        T.rMx.NOTIFICATION_CLICKED,
+                        N.rMx.NOTIFICATION_CLICKED,
                         {
                             notif_type: x.n0.OverlayCrashed,
                             action_type: 'reload'
@@ -144,7 +144,7 @@ class M extends s.PureComponent {
             });
     }
 }
-let b = l().throttle(
+let R = l().throttle(
     () => {
         _.Z.increment(
             {
@@ -167,7 +167,7 @@ class L extends s.PureComponent {
         let i = (0, S.QF)(),
             s = (0, S.Ht)();
         (0, f.lW)({
-            type: T.BmY.DISPATCH,
+            type: N.BmY.DISPATCH,
             pid: (0, S.QF)(),
             token: s,
             payloads: [
@@ -182,9 +182,9 @@ class L extends s.PureComponent {
                 }
             ]
         }),
-            setImmediate(() => window.addEventListener('click', R));
+            setImmediate(() => window.addEventListener('click', b));
         let a = I.Z.captureCrash(e, { extra: t });
-        p.Z.track(T.rMx.APP_CRASHED, {
+        p.Z.track(N.rMx.APP_CRASHED, {
             path: n.pathname,
             extra: t,
             error_message: e.message,
@@ -192,7 +192,7 @@ class L extends s.PureComponent {
             sentry_issue_id: a,
             error_level: 'fatal'
         }),
-            b();
+            R();
     }
     render() {
         let { children: e, className: t } = this.props,

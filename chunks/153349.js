@@ -27,8 +27,8 @@ var i,
     v = n(431328),
     S = n(62526),
     N = n(590415),
-    A = n(614173),
-    Z = n(618896),
+    Z = n(614173),
+    A = n(618896),
     M = n(231338),
     b = n(689938),
     R = n(425205);
@@ -66,9 +66,9 @@ let L = l.memo(function (e) {
                 isMobile: x.Z.isMobileOnline(i.user.id),
                 status: x.Z.getStatus(i.user.id, f)
             })),
-            A = (0, d.e7)([C.ZP], () => C.ZP.getMember(f, i.user.id)),
-            Z = l.useMemo(() => ({ [f]: [i.user.id] }), [f, i.user.id]);
-        (0, _.$)(Z);
+            Z = (0, d.e7)([C.ZP], () => C.ZP.getMember(f, i.user.id)),
+            A = l.useMemo(() => ({ [f]: [i.user.id] }), [f, i.user.id]);
+        (0, _.$)(A);
         let M = i.rtsState === N.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
         function L() {
             (0, T.DT)(t, i.user.id, !1);
@@ -126,7 +126,7 @@ let L = l.memo(function (e) {
                                     children: [
                                         (0, a.jsx)(h.NameWithRole, {
                                             name: i.userNick,
-                                            color: null !== (t = null == A ? void 0 : A.colorString) && void 0 !== t ? t : void 0,
+                                            color: null !== (t = null == Z ? void 0 : Z.colorString) && void 0 !== t ? t : void 0,
                                             className: R.participantName
                                         }),
                                         (0, a.jsx)(h.Text, {
@@ -176,7 +176,7 @@ let L = l.memo(function (e) {
     }),
     P = l.memo(function (e) {
         let { channel: t } = e,
-            [n, i] = (0, A.h)(t.id);
+            [n, i] = (0, Z.h)(t.id);
         return (0, a.jsx)(h.FormSwitch, {
             className: R.toggle,
             onChange: i,
@@ -188,7 +188,7 @@ let L = l.memo(function (e) {
         return (0, a.jsxs)('div', {
             className: R.emptyStateContainer,
             children: [
-                (0, a.jsx)(Z.Z, {}),
+                (0, a.jsx)(A.Z, {}),
                 (0, a.jsx)(h.Text, {
                     className: R.emptyStateTitle,
                     variant: 'text-lg/semibold',

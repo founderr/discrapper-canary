@@ -17,8 +17,8 @@ var l = n(442837),
     p = n(496675),
     _ = n(306680),
     f = n(979651),
-    g = n(968358),
-    m = n(790901),
+    m = n(968358),
+    g = n(790901),
     C = n(714794),
     I = n(355363),
     E = n(687352),
@@ -75,12 +75,12 @@ function L(e) {
               video: k || B,
               channel: n
           })
-        : A && (0, g.a)(b) && W
+        : A && (0, m.a)(b) && W
           ? (0, i.jsx)(a.TextBadge, {
                 text: Z.Z.Messages.LIVE,
                 color: r.Z.unsafe_rawColors.RED_400.css
             })
-          : null != R && R && (0, m.u)(G)
+          : null != R && R && (0, g.u)(G)
             ? (0, i.jsx)(E.Z, {
                   embeddedApps: G,
                   muted: j

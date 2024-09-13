@@ -58,8 +58,8 @@ function S(e) {
         { channelAction: g, completed: C } = (0, E.P3)(h, m),
         S = (0, E.K_)(h, null == g ? void 0 : g.channelId),
         N = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
-        A = (null == g ? void 0 : g.actionType) === f.oi.VIEW,
-        Z = (0, c.useToken)(c.tokens.colors.WHITE),
+        Z = (null == g ? void 0 : g.actionType) === f.oi.VIEW,
+        A = (0, c.useToken)(c.tokens.colors.WHITE),
         [M, b] = s.useState(!1),
         [R] = s.useState(new r.Z.Value(0)),
         [L] = s.useState(new r.Z.Value(0));
@@ -69,7 +69,7 @@ function S(e) {
                   toValue: 0,
                   duration: N ? 1 : 350,
                   easing: r.Z.Easing.quad,
-                  delay: A ? 0 : 500
+                  delay: Z ? 0 : 500
               }).start(() => b(!0))
             : r.Z.timing(R, {
                   toValue: 1,
@@ -77,7 +77,7 @@ function S(e) {
                   easing: r.Z.Easing.quad,
                   delay: 400
               }).start();
-    }, [C, R, A, N]),
+    }, [C, R, Z, N]),
         s.useEffect(() => {
             C &&
                 M &&
@@ -91,7 +91,7 @@ function S(e) {
     let j = s.useCallback(() => {
         null != S && (0, _.gp)(h, S.channelId);
     }, [h, S]);
-    return null == g || (A && !M)
+    return null == g || (Z && !M)
         ? null
         : (0, i.jsx)('div', {
               className: l()(x.container, p),
@@ -128,7 +128,7 @@ function S(e) {
                                         className: x.iconCircle,
                                         children: (0, i.jsx)(c.ArrowSmallRightIcon, {
                                             size: 'xs',
-                                            color: Z.hex(),
+                                            color: A.hex(),
                                             className: x.nextIcon
                                         })
                                     })
@@ -169,7 +169,7 @@ function S(e) {
                                           size: 'custom',
                                           color: 'currentColor',
                                           className: x.completed,
-                                          secondaryColor: Z.hex(),
+                                          secondaryColor: A.hex(),
                                           width: 20,
                                           height: 20
                                       })

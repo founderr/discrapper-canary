@@ -18,8 +18,8 @@ var i = n(735250),
     p = n(727258),
     _ = n(234383),
     f = n(179809),
-    g = n(773182),
-    m = n(588275),
+    m = n(773182),
+    g = n(588275),
     C = n(689938),
     I = n(496657);
 function E(e) {
@@ -48,7 +48,7 @@ function E(e) {
     }, [n, T, v, N]),
     0 === S.length)
         ? null
-        : (0, i.jsx)(g.TH, {
+        : (0, i.jsx)(m.TH, {
               onActivate: t,
               children: (0, i.jsx)(f.Z, {
                   folderNode: Z,
@@ -68,7 +68,7 @@ function E(e) {
                       className: I.pendingIcon
                   }),
                   renderChildNode: function (e) {
-                      return e.type !== p.eD.GUILD ? null : (0, i.jsx)(m.Z, { guildNode: e }, e.id);
+                      return e.type !== p.eD.GUILD ? null : (0, i.jsx)(g.Z, { guildNode: e }, e.id);
                   }
               })
           });

@@ -16,12 +16,12 @@ var i = n(735250),
     p = n(496675),
     _ = n(669405),
     f = n(434479),
-    g = n(981631),
-    m = n(176505),
+    m = n(981631),
+    g = n(176505),
     C = n(689938);
 function I(e) {
     let { guild: t, selected: n } = e,
-        I = (0, r.e7)([p.Z], () => p.Z.can(g.Plq.KICK_MEMBERS, t)),
+        I = (0, r.e7)([p.Z], () => p.Z.can(m.Plq.KICK_MEMBERS, t)),
         E = (0, r.e7)([c.Z], () => c.Z.getSubmittedGuildJoinRequestTotal(t.id)),
         N = I && null != E ? E : 0;
     return (
@@ -46,10 +46,10 @@ function I(e) {
             onClick: () => {
                 (0, s.Q2)({
                     guildId: t.id,
-                    source: g.jXE.CHANNEL_LIST,
-                    tab: m.oC.MEMBER_APPLICATIONS
+                    source: m.jXE.CHANNEL_LIST,
+                    tab: g.oC.MEMBER_APPLICATIONS
                 }),
-                    (0, h.uL)(g.Z5c.CHANNEL(t.id, m.oC.MEMBER_APPLICATIONS));
+                    (0, h.uL)(m.Z5c.CHANNEL(t.id, g.oC.MEMBER_APPLICATIONS));
             },
             trailing: N > 0 ? (0, i.jsx)(a.NumberBadge, { count: N }) : null
         })

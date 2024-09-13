@@ -67,7 +67,7 @@ t.Z = (e) => {
             secondary: n,
             botType: T,
             botVerified: S,
-            showStreamerModeTooltip: p && e !== g,
+            showStreamerModeTooltip: p && d.ZP.isNameConcealed(e),
             ...h
         });
     }

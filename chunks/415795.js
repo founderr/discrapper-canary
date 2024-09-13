@@ -9,7 +9,7 @@ n.d(s, {
         return Z;
     },
     h4: function () {
-        return T;
+        return U;
     },
     ic: function () {
         return M;
@@ -18,10 +18,10 @@ n.d(s, {
         return L;
     },
     rU: function () {
-        return U;
+        return R;
     },
     s8: function () {
-        return R;
+        return T;
     }
 }),
     n(47120);
@@ -37,13 +37,13 @@ var r,
     h = n(790145),
     p = n(245216),
     m = n(925329),
-    x = n(565138),
-    C = n(754688),
+    C = n(565138),
+    x = n(754688),
     N = n(237583),
     f = n(430824),
     E = n(699516),
-    g = n(594174),
-    b = n(51144),
+    b = n(594174),
+    g = n(51144),
     _ = n(689938),
     I = n(30352);
 function v(e, s, n) {
@@ -119,10 +119,10 @@ class M extends i.Component {
         let { guild: e } = this.props;
         return (0, t.jsx)('div', {
             className: I.guildIconContainer,
-            children: (0, t.jsx)(x.Z, {
+            children: (0, t.jsx)(C.Z, {
                 tabIndex: -1,
                 guild: e,
-                size: x.Z.Sizes.MINI,
+                size: C.Z.Sizes.MINI,
                 className: I.guildIcon
             })
         });
@@ -201,14 +201,14 @@ class A extends (r = i.Component) {
             null != r &&
                 (s = (0, t.jsx)('span', {
                     className: I.note,
-                    children: (0, c.F6)(r, g.default, E.Z)
+                    children: (0, c.F6)(r, b.default, E.Z)
                 })),
             (0, t.jsxs)('div', {
                 className: I.name,
                 children: [
                     (0, t.jsx)('span', {
                         className: I.match,
-                        children: (0, c.F6)(i, g.default, E.Z)
+                        children: (0, c.F6)(i, b.default, E.Z)
                     }),
                     e,
                     this.renderVoiceStates(),
@@ -250,7 +250,7 @@ class A extends (r = i.Component) {
         var e;
         let { channel: s } = this.props,
             n = null === (e = f.Z.getGuild(this.props.channel.guild_id)) || void 0 === e ? void 0 : e.name,
-            r = (0, c.F6)(s, g.default, E.Z),
+            r = (0, c.F6)(s, b.default, E.Z),
             t = (0, u.Z)(s);
         return _.Z.Messages.QUICK_SWITCHER_RESULTS_CHANNEL_LABEL.format({
             name: r,
@@ -301,7 +301,7 @@ class Z extends i.Component {
                 children: [
                     (0, t.jsx)('span', {
                         className: I.match,
-                        children: (0, c.F6)(n, g.default, E.Z)
+                        children: (0, c.F6)(n, b.default, E.Z)
                     }),
                     e
                 ]
@@ -324,7 +324,7 @@ class Z extends i.Component {
     }
     getAccessibilityLabel() {
         let { channel: e, mentions: s } = this.props,
-            n = (0, c.F6)(e, g.default, E.Z);
+            n = (0, c.F6)(e, b.default, E.Z);
         return null != s && s > 0
             ? _.Z.Messages.QUICK_SWITCHER_RESULTS_GROUP_DM_UNREAD_LABEL.format({
                   name: n,
@@ -363,7 +363,7 @@ class L extends i.Component {
         let e;
         let { user: s, comparator: n } = this.props,
             r = E.Z.getNickname(s.id);
-        return ((e = n === s.tag || null == n || '' === n ? s.username : n) === s.username || e === s.id) && (e = null != r ? r : b.ZP.getName(s)), e;
+        return ((e = n === s.tag || null == n || '' === n ? s.username : n) === s.username || e === s.id) && (e = null != r ? r : g.ZP.getName(s)), e;
     }
     renderName() {
         let e;
@@ -386,7 +386,7 @@ class L extends i.Component {
                     e,
                     (0, t.jsx)('span', {
                         className: I.username,
-                        children: b.ZP.getUserTag(s)
+                        children: g.ZP.getUserTag(s)
                     })
                 ]
             })
@@ -409,7 +409,7 @@ class L extends i.Component {
     getAccessibilityLabel() {
         let { mentions: e, user: s } = this.props,
             n = this.getDisplayNickname(),
-            r = b.ZP.getUserTag(s);
+            r = g.ZP.getUserTag(s);
         return null != e && e > 0
             ? _.Z.Messages.QUICK_SWITCHER_RESULTS_USER_UNREAD_LABEL.format({
                   name: n,
@@ -471,7 +471,7 @@ class S extends i.Component {
         });
     }
 }
-class T extends i.Component {
+class U extends i.Component {
     render() {
         return (0, t.jsx)('div', {
             className: I.__invalid_resultDefault,
@@ -485,11 +485,11 @@ class T extends i.Component {
         });
     }
 }
-class U extends i.Component {
+class R extends i.Component {
     renderContent() {
         let e, s;
         let { link: n, children: r } = this.props,
-            i = (0, C.Qj)(n.path);
+            i = (0, x.Qj)(n.path);
         return (
             null == i || void 0 === i.messageId
                 ? ((e = _.Z.Messages.QUICKSWITCHER_LINK_UNKNOWN),
@@ -497,7 +497,7 @@ class U extends i.Component {
                       size: 'xs',
                       color: 'currentColor'
                   })))
-                : (0, C.VO)(i)
+                : (0, x.VO)(i)
                   ? ((e = _.Z.Messages.QUICKSWITCHER_LINK_MESSAGE),
                     (s = (0, t.jsx)(p.Z, {
                         size: 'xs',
@@ -538,7 +538,7 @@ class U extends i.Component {
         });
     }
 }
-class R extends i.Component {
+class T extends i.Component {
     renderContent() {
         let e;
         let { navigationRecord: s, children: n } = this.props,

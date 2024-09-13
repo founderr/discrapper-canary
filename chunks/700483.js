@@ -22,8 +22,8 @@ var i = n(735250),
     v = n(189771),
     S = n(294629),
     N = n(793319),
-    A = n(560688),
-    Z = n(390322),
+    Z = n(560688),
+    A = n(390322),
     M = n(871499),
     b = n(386000),
     R = n(25827),
@@ -47,8 +47,8 @@ var i = n(735250),
     K = n(184805),
     q = n(643632),
     X = n(270295),
-    Q = n(981631),
-    J = n(689938),
+    J = n(981631),
+    Q = n(689938),
     $ = n(135870);
 function ee(e) {
     let { channel: t, appContext: n } = e;
@@ -63,11 +63,11 @@ function et(e) {
     let { channel: s } = e,
         a = (0, K.Z)(s.id),
         [l, c] = (0, X.Z)(s),
-        u = (0, r.e7)([P.Z], () => P.Z.can(Q.Plq.REQUEST_TO_SPEAK, s));
+        u = (0, r.e7)([P.Z], () => P.Z.can(J.Plq.REQUEST_TO_SPEAK, s));
     if (a) return null;
     return (0, i.jsx)(M.d, {
         isActive: l,
-        label: ((t = l), (n = u), t ? J.Z.Messages.AUDIENCE_LOWER_HAND : n ? J.Z.Messages.AUDIENCE_RAISE_HAND_CTA : J.Z.Messages.AUDIENCE_RAISE_HAND_NO_PERMISSION),
+        label: ((t = l), (n = u), t ? Q.Z.Messages.AUDIENCE_LOWER_HAND : n ? Q.Z.Messages.AUDIENCE_RAISE_HAND_CTA : Q.Z.Messages.AUDIENCE_RAISE_HAND_NO_PERMISSION),
         iconComponent: () =>
             (0, i.jsx)(o.HandRequestSpeakIcon, {
                 size: 'md',
@@ -105,7 +105,7 @@ function ei(e) {
                 (0, i.jsx)(o.Text, {
                     color: 'none',
                     variant: 'text-sm/medium',
-                    children: J.Z.Messages.MODERATOR_RAISE_OWN_HAND
+                    children: Q.Z.Messages.MODERATOR_RAISE_OWN_HAND
                 })
             ]
         })
@@ -129,17 +129,17 @@ function es(e) {
             ? (0, i.jsx)(o.Popout, {
                   renderPopout: (e) => {
                       let { closePopout: a } = e;
-                      return (0, i.jsx)(Z.Z, {
+                      return (0, i.jsx)(A.Z, {
                           children: (0, i.jsx)(o.Menu, {
                               navId: 'exit-options',
-                              'aria-label': J.Z.Messages.SET_STATUS,
+                              'aria-label': Q.Z.Messages.SET_STATUS,
                               onClose: a,
                               onSelect: n,
                               children: (0, i.jsx)(o.MenuItem, {
                                   id: 'end-stage',
                                   color: 'danger',
                                   action: () => (0, D.Ev)(t, s),
-                                  label: J.Z.Messages.END_GUILD_EVENT_FOR_EVERYONE,
+                                  label: Q.Z.Messages.END_GUILD_EVENT_FOR_EVERYONE,
                                   icon: o.CircleXIcon
                               })
                           })
@@ -153,7 +153,7 @@ function es(e) {
                           { isShown: l } = n;
                       return (0, i.jsx)(M.d, {
                           className: $.buttonSpacing,
-                          label: J.Z.Messages.EXIT_EVENT_STAGE_OPTIONS_LABEL,
+                          label: Q.Z.Messages.EXIT_EVENT_STAGE_OPTIONS_LABEL,
                           color: 'red',
                           iconComponent: () =>
                               (0, i.jsx)(o.PhoneHangUpIcon, {
@@ -191,14 +191,14 @@ function es(e) {
                             (0, i.jsx)(o.Text, {
                                 color: 'none',
                                 variant: 'text-sm/medium',
-                                children: J.Z.Messages.AUDIENCE_DISCONNECT
+                                children: Q.Z.Messages.AUDIENCE_DISCONNECT
                             })
                         ]
                     })
                 })
               : (0, i.jsx)(M.d, {
                     className: $.buttonSpacing,
-                    label: J.Z.Messages.EXIT_EVENT_STAGE_OPTIONS_LABEL,
+                    label: Q.Z.Messages.EXIT_EVENT_STAGE_OPTIONS_LABEL,
                     color: 'red',
                     iconComponent: () =>
                         (0, i.jsx)(o.PhoneHangUpIcon, {
@@ -230,7 +230,7 @@ function es(e) {
                       (0, i.jsx)(o.Text, {
                           color: 'none',
                           variant: 'text-sm/medium',
-                          children: J.Z.Messages.STAGE_CHANNEL_JOIN
+                          children: Q.Z.Messages.STAGE_CHANNEL_JOIN
                       })
                   ]
               })
@@ -254,7 +254,7 @@ function ea(e) {
                 (0, i.jsx)(o.Text, {
                     color: 'none',
                     variant: 'text-sm/medium',
-                    children: J.Z.Messages.MOVE_ME_TO_AUDIENCE
+                    children: Q.Z.Messages.MOVE_ME_TO_AUDIENCE
                 })
             ]
         })
@@ -269,7 +269,7 @@ function el(e) {
         ? (0, i.jsx)(M.d, {
               isActive: n,
               className: $.buttonSpacing,
-              label: n ? J.Z.Messages.STAGE_MUSIC_UNMUTE : J.Z.Messages.STAGE_MUSIC_MUTE,
+              label: n ? Q.Z.Messages.STAGE_MUSIC_UNMUTE : Q.Z.Messages.STAGE_MUSIC_MUTE,
               iconComponent: () =>
                   n
                       ? (0, i.jsx)(o.MusicSlashIcon, {
@@ -285,7 +285,7 @@ function el(e) {
         : (0, i.jsx)(M.d, {
               isActive: a,
               className: $.buttonSpacing,
-              label: a ? J.Z.Messages.STAGE_MUSIC_MUTE : J.Z.Messages.STAGE_MUSIC_UNMUTE,
+              label: a ? Q.Z.Messages.STAGE_MUSIC_MUTE : Q.Z.Messages.STAGE_MUSIC_UNMUTE,
               iconComponent: () =>
                   a
                       ? (0, i.jsx)(o.MusicIcon, {
@@ -320,7 +320,7 @@ let er = s.memo(function (e) {
             (0, i.jsx)(o.Popout, {
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
-                    return (0, i.jsx)(Z.Z, { children: (0, i.jsx)(m.Z, { onClose: t }) });
+                    return (0, i.jsx)(A.Z, { children: (0, i.jsx)(m.Z, { onClose: t }) });
                 },
                 position: 'top',
                 align: 'center',
@@ -334,7 +334,7 @@ let er = s.memo(function (e) {
                         enabled: g,
                         cameraUnavailable: E,
                         onChange: N.r,
-                        onCameraUnavailable: A.Z,
+                        onCameraUnavailable: Z.Z,
                         channelLimitReached: M,
                         channelLimit: I,
                         popoutOpen: s,
@@ -365,7 +365,7 @@ let er = s.memo(function (e) {
                           (0, i.jsx)(o.Popout, {
                               renderPopout: (e) => {
                                   let { closePopout: t } = e;
-                                  return (0, i.jsx)(Z.Z, {
+                                  return (0, i.jsx)(A.Z, {
                                       children: (0, i.jsx)(h.default, {
                                           onClose: t,
                                           renderInputDevices: !0,

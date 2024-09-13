@@ -27,8 +27,8 @@ var i = n(735250),
     v = n(544989),
     S = n(481932),
     N = n(272510),
-    A = n(171368),
-    Z = n(348540),
+    Z = n(171368),
+    A = n(348540),
     M = n(179142),
     b = n(572791),
     R = n(228168),
@@ -57,12 +57,12 @@ function O(e) {
         [W, z] = s.useState(!1),
         [Y, K] = s.useState(!1),
         [q, X] = s.useState(),
-        [Q, J] = s.useState(),
+        [J, Q] = s.useState(),
         $ = (e) => {
-            X(e.interactionType), J(e.interactionSourceType);
+            X(e.interactionType), Q(e.interactionSourceType);
         },
         ee = (e) => {
-            (0, A.openUserProfileModal)({
+            (0, Z.openUserProfileModal)({
                 sourceAnalyticsLocations: B,
                 ...w,
                 ...e
@@ -116,30 +116,30 @@ function O(e) {
                                         displayProfile: D,
                                         channelId: O.id,
                                         profileType: R.y0.PANEL,
-                                        isInteractionSource: Q === R.n_.AVATAR || Q === R.n_.STATUS,
+                                        isInteractionSource: J === R.n_.AVATAR || J === R.n_.STATUS,
                                         onOpenProfile: y ? void 0 : ee,
                                         onInteraction: $,
                                         setInteractionToastShown: F,
                                         setInteractionSent: z,
                                         setIsReplyInteraction: K,
-                                        showReplyPopout: q === R.P.REPLY && Q === R.n_.AVATAR
+                                        showReplyPopout: q === R.P.REPLY && J === R.n_.AVATAR
                                     }),
                                     (0, i.jsx)(C.Z, {
                                         location: 'UserProfilePanel',
                                         user: t,
                                         channelId: O.id,
                                         profileType: R.y0.PANEL,
-                                        isInteractionSource: Q === R.n_.STATUS,
+                                        isInteractionSource: J === R.n_.STATUS,
                                         onInteraction: $,
                                         setInteractionToastShown: F,
                                         setInteractionSent: z,
                                         setIsReplyInteraction: K,
-                                        showReplyPopout: q === R.P.REPLY && Q === R.n_.STATUS
+                                        showReplyPopout: q === R.P.REPLY && J === R.n_.STATUS
                                     }),
                                     t.isClyde() && (0, i.jsx)(d.Z, { className: P.headerTag })
                                 ]
                             }),
-                            (0, i.jsx)(Z.Z, {
+                            (0, i.jsx)(A.Z, {
                                 user: t,
                                 currentUser: n,
                                 displayProfile: D,

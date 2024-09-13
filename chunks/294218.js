@@ -40,8 +40,8 @@ t.Z = s.memo(function (e) {
             previewLinkTarget: !0
         }),
         W = s.type === M.uaV.REPLY ? s.messageReference : void 0,
-        K = (0, o.e7)([d.Z], () => d.Z.getMessageByReference(W)),
-        z = (0, l.JA)(s.id),
+        z = (0, o.e7)([d.Z], () => d.Z.getMessageByReference(W)),
+        K = (0, l.JA)(s.id),
         Q = (0, N.ZP)(s),
         q = (0, o.e7)([_.Z], () => s.hasFlag(M.iLy.HAS_THREAD) && _.Z.getChannel(m.default.castMessageIdAsChannelId(s.id))),
         X = (0, c.p9)({
@@ -64,7 +64,7 @@ t.Z = s.memo(function (e) {
             [v.disableInteraction]: G
         }),
         disableInteraction: G,
-        childrenRepliedMessage: (0, x.Z)(s, b, W, K, a),
+        childrenRepliedMessage: (0, x.Z)(s, b, W, z, a),
         childrenExecutedCommand: (0, O.Z)(s, b, a),
         childrenHeader: (0, A.Z)({
             ...e,
@@ -85,7 +85,7 @@ t.Z = s.memo(function (e) {
         'aria-labelledby': ee,
         'aria-describedby': et,
         messageRef: $,
-        ...z,
+        ...K,
         ...F
     });
 });

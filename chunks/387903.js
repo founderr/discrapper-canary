@@ -28,8 +28,8 @@ var i,
     v = n(565138),
     S = n(833858),
     N = n(223135),
-    A = n(707409),
-    Z = n(769654),
+    Z = n(707409),
+    A = n(769654),
     M = n(424678),
     b = n(750154),
     R = n(768581),
@@ -338,7 +338,7 @@ class q extends (s = r.PureComponent) {
                 (t =
                     null != s
                         ? () => {
-                              (0, Z.X)(s.id);
+                              (0, A.X)(s.id);
                           }
                         : void 0);
         else if (!(0, y.Z)(e)) {
@@ -422,9 +422,9 @@ class q extends (s = r.PureComponent) {
             ? null
             : (0, O.Z)(e)
               ? (0, l.jsx)(Y, { timestamps: n })
-              : (0, l.jsx)(A.ZP, {
+              : (0, l.jsx)(Z.ZP, {
                     start: n.start,
-                    location: A.ZP.Locations.USER_ACTIVITY,
+                    location: Z.ZP.Locations.USER_ACTIVITY,
                     className: V.playTime,
                     isApplicationStreaming: null != t
                 });

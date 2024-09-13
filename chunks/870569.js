@@ -11,7 +11,7 @@ var l = n(120356),
     s = n(686546),
     o = n(904297);
 function c(e) {
-    let { tooltipText: t, children: n, onContextMenu: l, onClick: c, disabled: u, icon: d, iconForeground: h, innerClassName: p, tooltipClassName: _, onMouseEnter: f, onMouseLeave: g, 'aria-label': m, 'aria-checked': C, role: I, tooltipColor: E, tooltipForceOpen: N } = e,
+    let { tooltipText: t, children: n, onContextMenu: l, onClick: c, disabled: u, icon: d, iconForeground: h, innerClassName: p, tooltipClassName: _, onMouseEnter: f, onMouseLeave: m, 'aria-label': g, 'aria-checked': C, role: I, tooltipColor: E, tooltipForceOpen: N } = e,
         x =
             'function' == typeof d
                 ? (0, i.jsx)(d, {
@@ -25,7 +25,7 @@ function c(e) {
     return (0, i.jsx)(a.Tooltip, {
         tooltipClassName: _,
         text: t,
-        'aria-label': m,
+        'aria-label': g,
         color: E,
         forceOpen: N,
         children: (e) => {
@@ -48,7 +48,7 @@ function c(e) {
                     null == d || d(), null == f || f();
                 },
                 onMouseLeave: () => {
-                    null == h || h(), null == g || g();
+                    null == h || h(), null == m || m();
                 },
                 onContextMenu: l,
                 role: I,

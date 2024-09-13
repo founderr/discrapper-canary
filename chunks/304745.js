@@ -1,6 +1,6 @@
 n.d(t, {
     M: function () {
-        return Z;
+        return A;
     }
 }),
     n(653041);
@@ -27,13 +27,13 @@ var i = n(735250),
     v = n(981631),
     S = n(921944),
     N = n(689938),
-    A = n(892216);
-function Z(e) {
+    Z = n(892216);
+function A(e) {
     let { channel: t, idle: n } = e,
-        Z = (0, a.e7)([u.ZP], () => u.ZP.isLaunchingActivity()),
+        A = (0, a.e7)([u.ZP], () => u.ZP.isLaunchingActivity()),
         M = (0, m.KF)(t.id),
         b = (0, m.g5)(M),
-        R = M !== m.jy.CAN_LAUNCH || Z,
+        R = M !== m.jy.CAN_LAUNCH || A,
         { isHovered: L, setIsHovered: j, onMouseEnter: P, onMouseLeave: O } = (0, x.Z)(200, 300),
         y = (0, h.a)(),
         D = (0, d.Z)({ channelId: t.id }),
@@ -112,7 +112,7 @@ function Z(e) {
                                                 'aria-label': b,
                                                 label: k ? void 0 : b,
                                                 isActivityActive: D || L,
-                                                className: A.controlButton,
+                                                className: Z.controlButton,
                                                 onClick: () => {
                                                     V(), (s === l.z.ACTIVITIES_MINI_SHELF_SPARKLES || s === l.z.ACTIVITY_GDM_ROCKET_SPARKLE || s === l.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES || s === l.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES || s === l.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP) && a(S.L.TAKE_ACTION);
                                                 },

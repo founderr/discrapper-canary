@@ -11,8 +11,8 @@ var i = n(735250),
     p = n(98597),
     _ = n(473403),
     f = n(981631),
-    g = n(490897),
-    m = n(872356);
+    m = n(490897),
+    g = n(872356);
 let C = (0, c.B)(function (e) {
     let { guild: t, selectedChannelId: r, position: c, disableManageChannels: C, sorting: I, sortingType: E, sortingPosition: N, connectChannelDragSource: x, connectChannelDropTarget: S, tabIndex: v } = e,
         Z = (0, s.e7)([u.Z, d.ZP], () => {
@@ -41,18 +41,18 @@ let C = (0, c.B)(function (e) {
         R = (0, p.CN)(Z, I, E),
         O = (0, i.jsx)('div', {
             className: a()(M, {
-                [m.disabled]: R,
-                [m.selected]: L
+                [g.disabled]: R,
+                [g.selected]: L
             }),
             'data-dnd-name': Z.name,
             children: (0, i.jsxs)(_.Z, {
-                className: m.iconVisibility,
+                className: g.iconVisibility,
                 channel: Z,
                 guild: t,
                 selected: L,
                 onContextMenu: b,
                 forceInteractable: !0,
-                resolvedUnreadSetting: g.i.ONLY_MENTIONS,
+                resolvedUnreadSetting: m.i.ONLY_MENTIONS,
                 children: [
                     (0, i.jsx)(p.eP, {
                         channel: Z,

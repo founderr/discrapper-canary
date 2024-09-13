@@ -90,11 +90,11 @@ function x(e) {
     let { showReminders: V } = I.Z.useExperiment({ location: 'RecentsPopout' }),
         { enabled: H, inInbox: Y } = _.Z.useExperiment({ location: 'RecentsPopout' }),
         W = (0, r.e7)([E.Z], () => E.Z.hasOverdueReminder(G), [G]) && H && Y,
-        { enabled: K } = d.Z.useExperiment({ location: 'RecentsPopout' });
+        { enabled: z } = d.Z.useExperiment({ location: 'RecentsPopout' });
     s.useEffect(() => {
         (((!V || (H && Y)) && b === l.X.TODOS) || (b === l.X.BOOKMARKS && !(H || Y))) && j(l.X.MENTIONS);
     });
-    let z = s.useCallback(
+    let K = s.useCallback(
         (e) => {
             !e.shiftKey && B();
         },
@@ -122,11 +122,11 @@ function x(e) {
                             : b === l.X.MENTIONS
                               ? (0, i.jsx)(g.Z, {
                                     setTab: j,
-                                    onJump: z,
+                                    onJump: K,
                                     badgeState: M,
                                     closePopout: B
                                 })
-                              : K && b === l.X.GAME_INVITES
+                              : z && b === l.X.GAME_INVITES
                                 ? (0, i.jsx)(A.Z, {
                                       setTab: j,
                                       badgeState: M,
@@ -135,7 +135,7 @@ function x(e) {
                                 : V && b === l.X.TODOS
                                   ? (0, i.jsx)(p.Z, {
                                         setTab: j,
-                                        onJump: z,
+                                        onJump: K,
                                         closePopout: B
                                     })
                                   : H && Y && b === l.X.BOOKMARKS
@@ -152,7 +152,7 @@ function x(e) {
                                           }),
                                           children: (0, i.jsx)(S.Z, {
                                               setTab: j,
-                                              onJump: z,
+                                              onJump: K,
                                               showTutorial: U,
                                               setSeenTutorial: y,
                                               closePopout: B,

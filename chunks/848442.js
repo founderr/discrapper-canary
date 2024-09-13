@@ -17,8 +17,8 @@ var l = n(120356),
     p = n(357352),
     _ = n(652515),
     f = n(550951),
-    g = n(886176),
-    m = n(605236),
+    m = n(886176),
+    g = n(605236),
     C = n(703656),
     I = n(984933),
     E = n(430824),
@@ -44,7 +44,7 @@ function A(e) {
         }),
         innerClassName: L.previewChannelRowContent,
         renderIcon: (e) =>
-            (0, i.jsx)(g.Z, {
+            (0, i.jsx)(m.Z, {
                 width: 20,
                 height: 20,
                 className: r()([e, L.shopIcon])
@@ -72,7 +72,7 @@ function A(e) {
                         onClick: (e) => {
                             if (
                                 (e.stopPropagation(),
-                                (0, m.EW)(s.z.SERVER_SHOP_PHANTOM_PREVIEW),
+                                (0, g.EW)(s.z.SERVER_SHOP_PHANTOM_PREVIEW),
                                 N.default.track(S.rMx.GUILD_SHOP_PREVIEW_CLICK, {
                                     ...(0, h.hH)(t),
                                     action_taken: Z.mz.DISMISS_CHANNEL_ROW
@@ -108,7 +108,7 @@ function b(e) {
         : (0, i.jsx)(x.m, {
               id: 'shop-'.concat(t.id),
               renderIcon: (e) =>
-                  (0, i.jsx)(g.Z, {
+                  (0, i.jsx)(m.Z, {
                       width: 20,
                       height: 20,
                       className: e

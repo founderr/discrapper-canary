@@ -11,19 +11,19 @@ var i = n(735250),
     p = n(451478),
     _ = n(61634),
     f = n(325257),
-    g = n(941823);
+    m = n(941823);
 t.Z = l.memo(function (e) {
     let { guildNode: t, lowerBadge: n } = e,
-        m = t.id,
-        C = (0, r.e7)([h.Z], () => h.Z.getGuild(m)),
+        g = t.id,
+        C = (0, r.e7)([h.Z], () => h.Z.getGuild(g)),
         I = (0, s.E)(C),
         E = (0, r.e7)([p.Z], () => p.Z.isFocused()),
-        N = (0, r.e7)([u.Z], () => u.Z.isUnavailable(m)),
+        N = (0, r.e7)([u.Z], () => u.Z.isUnavailable(g)),
         x = (0, c.Z)((e) => e.guildId),
-        S = (0, _.Z)(m),
+        S = (0, _.Z)(g),
         { badge: v, unread: Z } = (0, r.cj)([d.default], () => ({
-            badge: d.default.getMentionCount(m),
-            unread: d.default.hasUnread(m)
+            badge: d.default.getMentionCount(g),
+            unread: d.default.hasUnread(g)
         })),
         T = (0, o.I)(C) && 0 === v,
         L = l.useMemo(
@@ -32,11 +32,11 @@ t.Z = l.memo(function (e) {
                     ? n
                     : T
                       ? (0, i.jsx)('div', {
-                            className: g.pauseBackground,
+                            className: m.pauseBackground,
                             children: (0, i.jsx)(a.PauseIcon, {
                                 size: 'custom',
                                 color: 'currentColor',
-                                className: g.pause,
+                                className: m.pause,
                                 width: 10,
                                 height: 10
                             })
@@ -49,7 +49,7 @@ t.Z = l.memo(function (e) {
         guild: C,
         unavailable: N,
         animatable: E,
-        selected: x === m,
+        selected: x === g,
         badge: v,
         lowerBadge: L,
         unread: Z,

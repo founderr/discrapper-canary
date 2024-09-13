@@ -1,10 +1,10 @@
-var n = a(735250),
-    l = a(470079),
-    s = a(461745),
-    r = a(631155);
+var s = n(735250),
+    l = n(470079),
+    a = n(461745),
+    r = n(631155);
 let i = l.forwardRef(function (e, t) {
-    let { query: a, onQueryChange: l, onRemoveTag: i, onSelect: o, onSelectionChange: c, selectedSection: d, selectedRow: u, tags: m, sections: h, placeholder: S = '', focusAfterReady: x, isReady: T, 'aria-labelledby': g, 'aria-controls': f } = e;
-    return (0, n.jsx)(s.ZP, {
+    let { query: n, onQueryChange: l, onRemoveTag: i, onSelect: o, onSelectionChange: c, selectedSection: d, selectedRow: u, tags: m, sections: h, placeholder: x = '', focusAfterReady: E, isReady: S, 'aria-labelledby': R, 'aria-controls': T } = e;
+    return (0, s.jsx)(a.ZP, {
         autoFocus: !0,
         className: r.searchBar,
         maxHeight: 100,
@@ -14,17 +14,17 @@ let i = l.forwardRef(function (e, t) {
         selectedRow: u,
         onSelect: o,
         onSelectionChange: c,
-        placeholder: 0 === m.length ? S : '',
-        query: a,
+        placeholder: 0 === m.length ? x : '',
+        query: n,
         ref: t,
-        size: s.ZP.Sizes.MEDIUM,
+        size: a.ZP.Sizes.MEDIUM,
         tags: m,
         sections: h,
-        focusAfterReady: x,
-        isReady: T,
+        focusAfterReady: E,
+        isReady: S,
         inputProps: {
-            'aria-labelledby': g,
-            'aria-controls': f,
+            'aria-labelledby': R,
+            'aria-controls': T,
             'aria-expanded': !0,
             'aria-activedescendant': 'user-row-'.concat(u)
         }

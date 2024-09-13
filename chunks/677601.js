@@ -22,8 +22,8 @@ var i = n(735250),
     v = n(40851),
     S = n(115130),
     N = n(317381),
-    A = n(596040),
-    Z = n(349619),
+    Z = n(596040),
+    A = n(349619),
     M = n(100527),
     b = n(367907),
     R = n(906732),
@@ -47,8 +47,8 @@ var i = n(735250),
     K = n(73563),
     q = n(751843),
     X = n(616286),
-    Q = n(268353),
-    J = n(786915),
+    J = n(268353),
+    Q = n(786915),
     $ = n(800965),
     ee = n(107169),
     et = n(891551),
@@ -76,8 +76,8 @@ var i = n(735250),
     ev = n(493010),
     eS = n(742603),
     eN = n(221888),
-    eA = n(900211),
-    eZ = n(18759),
+    eZ = n(900211),
+    eA = n(18759),
     eM = n(878752),
     eb = n(354459),
     eR = n(981631),
@@ -170,7 +170,7 @@ class eD extends s.PureComponent {
                 canInvite: r,
                 canPopout: a,
                 canFullscreen: s,
-                canSelectRegion: n.isPrivate() && !n.isBroadcastChannel(),
+                canSelectRegion: n.isPrivate(),
                 canChangeLayout: l,
                 canStayOnTop: c
             };
@@ -283,7 +283,7 @@ class eD extends s.PureComponent {
                         })
                 }),
                 p &&
-                    (0, i.jsx)(eA.Z, {
+                    (0, i.jsx)(eZ.Z, {
                         minHeight: 230,
                         maxHeight: c,
                         resizableNode: this._wrapperRef,
@@ -445,7 +445,7 @@ class eD extends s.PureComponent {
                         let t = e.getGuildId();
                         null != t && (0, B.uL)((0, ep.LY)(t)), U.hP(e);
                     };
-                t ? (0, Z.Z)(n) : n();
+                t ? (0, A.Z)(n) : n();
             }),
             eP(this, 'handleStayOnTop', (e) => {
                 U.hY(eR.KJ3.CHANNEL_CALL_POPOUT, e);
@@ -503,7 +503,7 @@ class eD extends s.PureComponent {
                               exitFullScreen: this.maybeLeaveFullScreen,
                               analyticsLocation: n.type === eR.d4z.GUILD_VOICE ? eR.ZY5.GUILD_CHANNEL : eR.ZY5.DM_CHANNEL
                           })
-                        : (0, i.jsx)(J.Z, {
+                        : (0, i.jsx)(Q.Z, {
                               channel: n,
                               stream: (null == r ? void 0 : r.type) === eb.fO.STREAM ? (0, D.my)(r.id) : void 0,
                               className: ej.leftTrayIcon,
@@ -592,7 +592,7 @@ class eD extends s.PureComponent {
                               })
                             : null,
                         a
-                            ? (0, i.jsx)(Q.Z, {
+                            ? (0, i.jsx)(J.Z, {
                                   themeable: o,
                                   node: this.getRootNode(),
                                   guestWindow: e,
@@ -627,7 +627,7 @@ class eD extends s.PureComponent {
             }),
             eP(this, 'renderVoiceChannelEffects', () => {
                 let { channel: e, callContainerDimensions: t } = this.props;
-                return (0, i.jsx)(eZ.ZP, {
+                return (0, i.jsx)(eA.ZP, {
                     children: (0, i.jsx)(en.Z, {
                         callHeight: t.height,
                         channelId: e.id
@@ -675,7 +675,7 @@ t.Z = function (e) {
             return (null !== (e = null == E ? void 0 : E.channelId) && void 0 !== e ? e : eu.Z.getVoiceChannelId()) === n.id;
         }),
         {
-            participants: Z,
+            participants: A,
             filteredParticipants: b,
             participantsVersion: L,
             mode: y,
@@ -717,14 +717,14 @@ t.Z = function (e) {
             popoutWindowAlwaysOnTop: w.Z.getIsAlwaysOnTop(eR.KJ3.CHANNEL_CALL_POPOUT)
         })),
         X = (0, c.e7)([eo.Z], () => eo.Z.can(eR.Plq.CONNECT, n)),
-        Q = (0, c.e7)([ea.Z], () => ea.Z.getToastsEnabled(n.id)),
-        J = (0, c.e7)([P.Z], () => P.Z.getAwaitingRemoteSessionInfo()),
+        J = (0, c.e7)([ea.Z], () => ea.Z.getToastsEnabled(n.id)),
+        Q = (0, c.e7)([P.Z], () => P.Z.getAwaitingRemoteSessionInfo()),
         $ = (0, c.e7)([H.ZP], () => H.ZP.callHeaderHeight),
         ee = s.useCallback((e) => {
             g.ZP.updatedUnsyncedSettings({ callHeaderHeight: e });
         }, []),
         et = null !== (t = null == F ? void 0 : F.id) && void 0 !== t ? t : null,
-        en = (0, A.Z)(et, n.id),
+        en = (0, Z.Z)(et, n.id),
         ed = (0, c.e7)([S.Z], () => S.Z.getFetchState(), []),
         eh = (0, T.Z)(ed);
     s.useEffect(() => {
@@ -752,7 +752,7 @@ t.Z = function (e) {
         children: (0, i.jsx)(I.Z, {
             page: eR.ZY5.CHANNEL_CALL,
             children: (0, i.jsx)(eT.B2, {
-                children: (0, i.jsxs)(eZ._A, {
+                children: (0, i.jsxs)(eA._A, {
                     children: [
                         (0, i.jsx)(eD, {
                             channel: n,
@@ -768,7 +768,7 @@ t.Z = function (e) {
                             selectedStream: V,
                             mode: y,
                             inCall: C,
-                            participants: Z,
+                            participants: A,
                             filteredParticipants: b,
                             participantsVersion: L,
                             layout: D,
@@ -780,7 +780,7 @@ t.Z = function (e) {
                             allActiveStreams: G,
                             useNewInviteButton: en,
                             connectedToEmbeddedActivity: null != em,
-                            showChatToasts: Q,
+                            showChatToasts: J,
                             storedCallHeaderHeight: $,
                             updateStoredCallHeaderHeight: ee,
                             wrapperRef: o,
@@ -793,10 +793,10 @@ t.Z = function (e) {
                             width: r,
                             maxHeight: l,
                             forceShowControls: e_,
-                            awaitingRemoteSessionInfo: J,
+                            awaitingRemoteSessionInfo: Q,
                             currentChannelActivities: eg
                         }),
-                        !n.isPrivate() && (0, i.jsx)(eZ.YR, {}),
+                        !n.isPrivate() && (0, i.jsx)(eA.YR, {}),
                         (0, i.jsx)(eT.H_, {})
                     ]
                 })

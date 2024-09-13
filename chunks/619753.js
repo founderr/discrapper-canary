@@ -29,8 +29,8 @@ var i = n(735250),
     v = n(131704),
     S = n(592125),
     N = n(430824),
-    A = n(496675),
-    Z = n(699516),
+    Z = n(496675),
+    A = n(699516),
     M = n(768119),
     b = n(944486),
     R = n(594174),
@@ -67,13 +67,13 @@ function D(e) {
             },
             [a]
         ),
-        A = s.useMemo(() => {
+        Z = s.useMemo(() => {
             let e;
             if (null == _) return [];
             let t = 0;
             return _.reduce((n, i) => {
                 let s = i.find((e) => e.isSearchHit);
-                if (!T && null != s && Z.Z.isBlockedForMessage(s)) return n;
+                if (!T && null != s && A.Z.isBlockedForMessage(s)) return n;
                 let a = S.Z.getChannel(i[0].channel_id);
                 return null == a
                     ? n
@@ -90,7 +90,7 @@ function D(e) {
             }, []);
         }, [_, T]),
         b = s.useRef([]),
-        R = A.reduce((e, t) => e + 1 + t.results.length, 0),
+        R = Z.reduce((e, t) => e + 1 + t.results.length, 0),
         j = s.useCallback(
             (e, t) => {
                 if (!m.Z.keyboardModeEnabled) return;
@@ -119,7 +119,7 @@ function D(e) {
         w = M.Z.getQuery(a),
         B = M.Z.getSearchType(a) === P.aib.FAVORITES,
         H = (0, h.nC)(null !== (t = null == w ? void 0 : w.content) && void 0 !== t ? t : ''),
-        G = A.map((e) => {
+        G = Z.map((e) => {
             let { channel: t, results: n, startIndex: s } = e;
             return (0, i.jsx)(
                 U,
@@ -223,14 +223,14 @@ function U(e) {
         B = s.useCallback((e) => {
             if (e === b.Z.getChannelId()) return;
             let t = S.Z.getChannel(e);
-            if (null != t && !!A.Z.can(P.Plq.VIEW_CHANNEL, t)) (0, x.Kh)(t.id);
+            if (null != t && !!Z.Z.can(P.Plq.VIEW_CHANNEL, t)) (0, x.Kh)(t.id);
         }, []),
-        H = null != l ? (0, p.F6)(l, R.default, Z.Z, !1) : '???',
+        H = null != l ? (0, p.F6)(l, R.default, A.Z, !1) : '???',
         G = D && null != l.guild_id ? (null === (t = N.Z.getGuild(l.guild_id)) || void 0 === t ? void 0 : t.name) : null,
         V = (null == l ? void 0 : l.parent_id) != null ? S.Z.getChannel(l.parent_id) : null,
         F = null !== (n = null == V ? void 0 : V.name) && void 0 !== n ? n : null,
         W = null !== (a = (0, _.KS)(l)) && void 0 !== a ? a : o.TextIcon,
-        z = A.Z.can(P.Plq.MANAGE_MESSAGES, l),
+        z = Z.Z.can(P.Plq.MANAGE_MESSAGES, l),
         { content: Y } = (0, C.ZP)(
             {
                 content: H,
@@ -247,13 +247,13 @@ function U(e) {
         let e = K.current;
         null != e && null != e.offsetWidth && null != e.scrollWidth && X(e.offsetWidth < e.scrollWidth);
     }, []);
-    let Q = [H, F, G].filter((e) => null != e).join(', ');
+    let J = [H, F, G].filter((e) => null != e).join(', ');
     return (0, i.jsx)(f.a.Provider, {
         value: (0, g.Z)(U, z),
         children: (0, i.jsxs)('ul', {
             role: 'group',
             className: y.searchResultGroup,
-            'aria-label': Q,
+            'aria-label': J,
             children: [
                 (0, i.jsx)(o.Clickable, {
                     onClick: () => B(l.id),

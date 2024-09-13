@@ -279,7 +279,7 @@ s.Z = function (e) {
         wordMark: er,
         subscriptionInfo: ((e) => {
             o()(null != r, 'Expected renewalInvoicePreview');
-            let s = a.trialId === P.dO ? 1 : 2;
+            let s = g.ZP.getReverseTrialWeeks(a.trialId);
             return (0, n.jsx)('div', {
                 className: Z.planInfo,
                 children: K

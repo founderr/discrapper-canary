@@ -21,7 +21,7 @@ var i = n(735250),
     v = n(921944),
     S = n(689938),
     N = n(786899);
-let A = s.forwardRef(function (e, t) {
+let Z = s.forwardRef(function (e, t) {
     let { type: n, animateRef: a } = e,
         m = (0, r.e7)([p.Z], () => p.Z.shouldShowPopup() && p.Z.activeViewType() === n),
         { Component: f, events: E, play: g } = (0, c.w)();
@@ -87,7 +87,7 @@ t.Z = s.memo(function (e) {
                       animationContainerClassName: N.entrypointAnimation,
                       glowClassName: N.animationGlow,
                       trinketsClassName: N.animationTrinkets,
-                      children: (0, i.jsx)(A, {
+                      children: (0, i.jsx)(Z, {
                           type: n,
                           ref: l,
                           animateRef: a

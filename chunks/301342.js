@@ -25,8 +25,8 @@ var i = n(735250),
     p = n(82295),
     _ = n(111028),
     f = n(680089),
-    g = n(430824),
-    m = n(496675),
+    m = n(430824),
+    g = n(496675),
     C = n(9156),
     I = n(203818),
     E = n(438144),
@@ -41,7 +41,7 @@ let Z = l.memo(function (e) {
         { channel: r, connectChannelDragSource: h, connectChannelDropTarget: I, disableManageChannels: E, position: Z, sortingPosition: T, hideIcon: L, children: A } = e,
         b = (0, o.e7)([C.ZP], () => C.ZP.isChannelMuted(r.getGuildId(), r.id)),
         M = (0, o.e7)([f.Z], () => f.Z.isCollapsed(r.id)),
-        R = (0, o.e7)([m.Z], () => m.Z.can(N.Plq.MANAGE_CHANNELS, r));
+        R = (0, o.e7)([g.Z], () => g.Z.can(N.Plq.MANAGE_CHANNELS, r));
     t = null != T ? (Z > T ? S.containerDragAfter : S.containerDragBefore) : S.containerDefault;
     let O = l.useCallback(() => {
             M ? (0, u.mJ)(r.id) : (0, u.c4)(r.id);
@@ -49,7 +49,7 @@ let Z = l.memo(function (e) {
         P = l.useCallback(
             (e) => {
                 if ('null' !== r.id) {
-                    let t = g.Z.getGuild(r.getGuildId());
+                    let t = m.Z.getGuild(r.getGuildId());
                     null != t &&
                         (0, d.jW)(e, async () => {
                             let { default: e } = await n.e('8965').then(n.bind(n, 139035));

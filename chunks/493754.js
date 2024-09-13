@@ -23,9 +23,9 @@ function E(e) {
     let { stream: l, applicationId: E, channel: g, exitFullScreen: C, appContext: I, analyticsLocation: x, className: T, ...v } = e,
         S = null == g ? void 0 : g.getGuildId(),
         N = null == g ? void 0 : g.id,
-        A = (0, o.e7)([h.Z], () => (null != S ? h.Z.getGuild(S) : null), [S]),
-        Z = (0, o.e7)([u.ZP], () => u.ZP.getActiveEventByChannel(N), [N]);
-    if (((t = A), (s = g), !(null != t && null != s && m.Z.can(p.Plq.CREATE_INSTANT_INVITE, s)))) return null;
+        Z = (0, o.e7)([h.Z], () => (null != S ? h.Z.getGuild(S) : null), [S]),
+        A = (0, o.e7)([u.ZP], () => u.ZP.getActiveEventByChannel(N), [N]);
+    if (((t = Z), (s = g), !(null != t && null != s && m.Z.can(p.Plq.CREATE_INSTANT_INVITE, s)))) return null;
     let M = _.Z.Messages.INSTANT_INVITE;
     return (
         null != l ? (M = _.Z.Messages.INVITE_STREAM_HEADER) : null != E && (M = _.Z.Messages.EMBEDDED_ACTIVITIES_INVITE_TO_ACTIVITY),
@@ -35,7 +35,7 @@ function E(e) {
                     size: c.Button.Sizes.SMALL,
                     color: f.buttonColor,
                     onClick: () => {
-                        r()(null != A, 'guild cannot be null'),
+                        r()(null != Z, 'guild cannot be null'),
                             r()(null != g, 'channel cannot be null'),
                             !(function (e) {
                                 let { guild: t, channel: s, streamUserId: a, applicationId: l, appContext: r, exitFullScreen: o, analyticsLocation: u, guildScheduledEvent: d } = e;
@@ -61,14 +61,14 @@ function E(e) {
                                         }
                                     );
                             })({
-                                guild: A,
+                                guild: Z,
                                 channel: g,
                                 streamUserId: null == l ? void 0 : l.ownerId,
                                 applicationId: E,
                                 appContext: I,
                                 exitFullScreen: C,
                                 analyticsLocation: x,
-                                guildScheduledEvent: Z
+                                guildScheduledEvent: A
                             });
                     },
                     className: a()(T, f.textButton),
@@ -82,7 +82,7 @@ function E(e) {
                     className: a()(T, f.iconButton),
                     exitFullScreen: C,
                     analyticsLocation: x,
-                    guildScheduledEvent: Z
+                    guildScheduledEvent: A
                 })
             ]
         })

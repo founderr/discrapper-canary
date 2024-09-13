@@ -22,17 +22,17 @@ var i = n(735250),
     S = n(689938),
     N = n(470154);
 t.Z = (e) => {
-    let { hangStatusActivity: t, userId: a, channel: A, previewIsOpen: Z } = e,
+    let { hangStatusActivity: t, userId: a, channel: Z, previewIsOpen: A } = e,
         { enableHangStatus: M } = g.n.useExperiment({
-            guildId: A.guild_id,
+            guildId: Z.guild_id,
             location: 'HangStatusPopout'
         }),
         b = (0, r.e7)([d.default], () => d.default.getId()),
         R = (0, r.e7)([_.default], () => _.default.getUser(a)),
-        L = (0, r.e7)([p.Z], () => p.Z.getChannelId() === A.id),
-        j = (0, r.e7)([m.Z], () => m.Z.can(v.Plq.CONNECT, A)),
-        P = (null == t ? void 0 : t.emoji) == null || (0, I.K)(t.emoji, A),
-        O = (0, r.e7)([h.ZP], () => (null != A.guild_id && null != R ? h.ZP.getMember(A.guild_id, a) : null)),
+        L = (0, r.e7)([p.Z], () => p.Z.getChannelId() === Z.id),
+        j = (0, r.e7)([m.Z], () => m.Z.can(v.Plq.CONNECT, Z)),
+        P = (null == t ? void 0 : t.emoji) == null || (0, I.K)(t.emoji, Z),
+        O = (0, r.e7)([h.ZP], () => (null != Z.guild_id && null != R ? h.ZP.getMember(Z.guild_id, a) : null)),
         y = s.useMemo(() => (null != R ? (0, u.SG)(void 0, O, R, { size: 40 }) : void 0), [O, R]);
     return (s.useEffect(() => {
         (0, E.UP)();
@@ -40,28 +40,28 @@ t.Z = (e) => {
     s.useEffect(() => {
         M &&
             null != t &&
-            Z &&
+            A &&
             null != R &&
             b !== a &&
             f.default.track(v.rMx.VIEW_HANG_STATUS, {
                 source: 'HangStatusPopout',
-                guild_id: A.guild_id,
-                channel_id: A.id
+                guild_id: Z.guild_id,
+                channel_id: Z.id
             });
-    }, [M, t, Z, R, b, a, A]),
+    }, [M, t, A, R, b, a, Z]),
     M && null != R)
         ? b === a
             ? (0, i.jsx)('div', {
-                  className: l()(N.popoutWrapper, { [N.mounted]: Z }),
+                  className: l()(N.popoutWrapper, { [N.mounted]: A }),
                   children: (0, i.jsx)(T.y, {
                       currentStatus: t,
-                      channel: A
+                      channel: Z
                   })
               })
             : null == t
               ? null
               : (0, i.jsx)('div', {
-                    className: l()(N.popoutWrapper, { [N.mounted]: Z }),
+                    className: l()(N.popoutWrapper, { [N.mounted]: A }),
                     children: (0, i.jsxs)('div', {
                         className: N.popout,
                         children: [
@@ -114,11 +114,11 @@ t.Z = (e) => {
                                       onClick: () => {
                                           !L &&
                                               j &&
-                                              (c.default.selectVoiceChannel(A.id),
+                                              (c.default.selectVoiceChannel(Z.id),
                                               f.default.track(v.rMx.HANG_STATUS_CTA_CLICKED, {
                                                   source: 'HangStatusPopout',
-                                                  guild_id: A.guild_id,
-                                                  channel_id: A.id
+                                                  guild_id: Z.guild_id,
+                                                  channel_id: Z.id
                                               }));
                                       },
                                       children: S.Z.Messages.CUSTOM_HANG_STATUS_CTA
@@ -142,8 +142,8 @@ t.Z = (e) => {
                                                 })
                                               : (0, E.Zx)(e, !0),
                                               f.default.track(v.rMx.SWIPE_HANG_STATUS, {
-                                                  guild_id: A.guild_id,
-                                                  channel_id: A.id,
+                                                  guild_id: Z.guild_id,
+                                                  channel_id: Z.id,
                                                   media_session_id: p.Z.getMediaSessionId()
                                               });
                                       },

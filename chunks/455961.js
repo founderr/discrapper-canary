@@ -28,8 +28,8 @@ var i = n(735250),
     v = n(981631),
     S = n(37113),
     N = n(689938),
-    A = n(351065);
-function Z(e) {
+    Z = n(351065);
+function A(e) {
     let { className: t, onDismiss: n } = e;
     return (0, i.jsx)(d.Button, {
         className: t,
@@ -39,7 +39,7 @@ function Z(e) {
         onClick: n,
         children: (0, i.jsx)(d.XSmallIcon, {
             size: 'xs',
-            className: A.closeIcon,
+            className: Z.closeIcon,
             color: 'white'
         })
     });
@@ -101,7 +101,7 @@ function R(e) {
         pauseAnimation: n,
         color: d.Button.Colors.GREEN,
         size: d.Button.Sizes.SMALL,
-        className: A.optInButton,
+        className: Z.optInButton,
         onClick: x,
         submitting: a,
         children: N.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_OPT_IN_POPOUT_CTA_V2
@@ -111,24 +111,24 @@ function L(e) {
     let { channel: t, hidden: n, onDismiss: s } = e,
         a = x.Z.useExperiment({ location: 'StreamButtonDemoOptInPopoutContent' }, { autoTrackExposure: !1 }).extendedDemoDuration;
     return (0, i.jsxs)('div', {
-        className: l()(A.optInPopout, A.variant2OptInPopout, { [A.hidden]: n }),
+        className: l()(Z.optInPopout, Z.variant2OptInPopout, { [Z.hidden]: n }),
         children: [
             (0, i.jsx)('img', {
-                className: A.image,
+                className: Z.image,
                 src: 'https://cdn.discordapp.com/assets/premium/roadblocks/hd_streaming.png',
                 alt: 'HD Streaming Nitro Perk'
             }),
-            (0, i.jsx)(Z, {
-                className: A.variant2CloseButton,
+            (0, i.jsx)(A, {
+                className: Z.variant2CloseButton,
                 onDismiss: s
             }),
             (0, i.jsx)('div', {
-                className: A.variant2InfoContainerParent,
+                className: Z.variant2InfoContainerParent,
                 children: (0, i.jsxs)('div', {
-                    className: A.variant2InfoContainer,
+                    className: Z.variant2InfoContainer,
                     children: [
                         (0, i.jsx)(o.x, {
-                            className: A.variant2Text,
+                            className: Z.variant2Text,
                             variant: 'text-sm/medium',
                             children: a ? N.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_OPT_IN_V2_DURATION_POPOUT_BODY : N.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_OPT_IN_POPOUT_BODY
                         }),

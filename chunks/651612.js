@@ -52,9 +52,9 @@ function C(e) {
         event: f.CkL.FOCUS_CHAT_BUTTON,
         handler: N
     });
-    let A = x ? E.Z.Messages.HIDE_CHAT : E.Z.Messages.SHOW_CHAT,
-        Z = [A];
-    S > 0 && Z.push(E.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({ mentionCount: S })), v > 0 && Z.push(E.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD);
+    let Z = x ? E.Z.Messages.HIDE_CHAT : E.Z.Messages.SHOW_CHAT,
+        A = [Z];
+    S > 0 && A.push(E.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({ mentionCount: S })), v > 0 && A.push(E.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD);
     let M = (0, l.e7)([p.ZP], () => p.ZP.getFocusedLayout()),
         b = S > 0 ? S : v,
         R = b > 0;
@@ -64,8 +64,8 @@ function C(e) {
             (0, i.jsx)(c.d, {
                 buttonRef: I,
                 onClick: T,
-                label: A,
-                'aria-label': Z.join(', '),
+                label: Z,
+                'aria-label': A.join(', '),
                 tooltipPosition: 'top',
                 iconComponent: M === _.MI.NO_CHAT ? r.ChevronLargeUpIcon : r.ChevronLargeDownIcon,
                 themeable: !0,

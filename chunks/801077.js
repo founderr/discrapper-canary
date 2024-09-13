@@ -12,8 +12,8 @@ var i,
     p = n(841784),
     _ = n(503438),
     f = n(802856),
-    g = n(420660),
-    m = n(728345),
+    m = n(420660),
+    g = n(728345),
     C = n(812206),
     I = n(750881),
     E = n(710845),
@@ -78,7 +78,7 @@ function $(e) {
 function ee(e) {
     if ((0, _.Z)(e)) return Z.r9;
     let t = null != e.application_id ? C.Z.getApplication(e.application_id) : null;
-    return null != t ? t : (0, f.Z)(e) ? X(e.name) : (0, g.Z)(e) && null != e.url ? J(e.url) : (null != e.application_id && $(e.application_id), t);
+    return null != t ? t : (0, f.Z)(e) ? X(e.name) : (0, m.Z)(e) && null != e.url ? J(e.url) : (null != e.application_id && $(e.application_id), t);
 }
 function et(e) {
     let t = G.Z.getVoiceStateForUser(e);
@@ -92,8 +92,8 @@ function ei(e, t, n) {
     let u;
     let _ = w.default.getCurrentUser(),
         f = null !== (i = null == _ ? void 0 : _.nsfwAllowed) && void 0 !== i && i,
-        g = t.map((e) => e.id),
-        m = t.filter((t) => e.has(t.id)),
+        m = t.map((e) => e.id),
+        g = t.filter((t) => e.has(t.id)),
         I = !1,
         N = [],
         v = new Set(),
@@ -121,7 +121,7 @@ function ei(e, t, n) {
                 let t = C.Z.getApplication(e);
                 return null != t ? t : 'string' != typeof e ? (new E.Z('NowPlayingViewStore').error('Unknown type for applicationId: '.concat(typeof e, ', value: ').concat(e), { tags: { source: 'ACTIVITIES' } }), null) : e === Z.XB ? Z.r9 : e.startsWith(L.H) ? X(e.slice(L.H.length)) : e.startsWith(T._) ? J(e.slice(T._.length)) : ($(e), null);
             })(c),
-            g = null === (l = s.timestamps) || void 0 === l ? void 0 : l.start;
+            m = null === (l = s.timestamps) || void 0 === l ? void 0 : l.start;
         if ((0, p.Z)(s)) {
             let t = (0, d.a)();
             if (
@@ -139,10 +139,10 @@ function ei(e, t, n) {
                 }) !== h.Fw.CAN_JOIN
             )
                 continue;
-        } else if (null == g) continue;
+        } else if (null == m) continue;
         if (!S.JE(s) || null == u || v.has(u.id)) continue;
-        let m = null != s ? ee(s) : null;
-        (null == m || m.id !== u.id) && (s = null);
+        let g = null != s ? ee(s) : null;
+        (null == g || g.id !== u.id) && (s = null);
         let j = [];
         (j =
             null != s && null != s.party && null != s.party.id
@@ -161,11 +161,11 @@ function ei(e, t, n) {
                 game: u,
                 activity: s,
                 activityUser: e,
-                startedPlayingTime: g,
+                startedPlayingTime: m,
                 playingMembers: j
             });
     }
-    let k = 1 === m.length,
+    let k = 1 === g.length,
         B = [],
         V = new Set(),
         H = new Set();
@@ -185,7 +185,7 @@ function ei(e, t, n) {
                     .filter(U.lm)
                     .orderBy([en], ['desc'])
                     .value();
-            a.filter((e) => !g.includes(e.id)).forEach((e) => t.push(e)),
+            a.filter((e) => !m.includes(e.id)).forEach((e) => t.push(e)),
                 k ? !H.has(l) && (u = null) : ((u = r), (k = !0)),
                 H.add(l),
                 V.add(n),
@@ -201,7 +201,7 @@ function ei(e, t, n) {
         id: n,
         voiceChannels: B,
         isSpotifyActivity: M,
-        priorityMembers: m.map((e) => ({
+        priorityMembers: g.map((e) => ({
             user: e,
             status: j.Z.getStatus(e.id)
         })),
@@ -281,7 +281,7 @@ let er = o().throttle(() => {
             !(function () {
                 if (Y.size > 0) {
                     let e = Array.from(Y);
-                    m.Z.fetchApplications(e), e.forEach((e) => K.add(e)), Y.clear();
+                    g.Z.fetchApplications(e), e.forEach((e) => K.add(e)), Y.clear();
                 }
             })(),
             (V = !0);

@@ -185,7 +185,7 @@ let x = a.ZP.connectStores([d.Z, u.Z], (e) => {
         isActiveRegion: null != n && n.type === I.Odu.TEXT && i.has(I.O0n.TEXT_WIDGET)
     };
 })(C);
-function T(e, t) {
+function N(e, t) {
     return (0, i.jsx)(
         x,
         {
@@ -198,5 +198,5 @@ function T(e, t) {
 t.Z = a.ZP.connectStores([d.Z, h.Z], () => ({
     layout: d.Z.getLayout(f.qU),
     layoutSize: h.Z.windowSize(),
-    renderWidget: T
+    renderWidget: N
 }))(l.Z);

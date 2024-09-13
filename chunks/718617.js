@@ -32,9 +32,9 @@ function I(e) {
     var t, n;
     let { userId: I, guildId: x, onClose: T, analyticsLocation: v, className: S } = e,
         N = (0, l.e7)([h.ZP], () => h.ZP.getGuildSidebarState(x), [x]),
-        A = null !== (t = null == N ? void 0 : N.details.modViewPanel) && void 0 !== t ? t : E.k.INFO,
-        Z = (0, c.Z)(I);
-    let M = null == (n = A) ? null : n === E.k.INFO ? 'backwards' : 'forwards',
+        Z = null !== (t = null == N ? void 0 : N.details.modViewPanel) && void 0 !== t ? t : E.k.INFO,
+        A = (0, c.Z)(I);
+    let M = null == (n = Z) ? null : n === E.k.INFO ? 'backwards' : 'forwards',
         b = (0, d.Z)(M),
         { reducedMotion: R } = s.useContext(r.S),
         L = s.useCallback(
@@ -49,23 +49,23 @@ function I(e) {
                     binds: ['esc'],
                     comboKeysBindGlobal: !0,
                     action() {
-                        if (A === E.k.INFO) return T();
+                        if (Z === E.k.INFO) return T();
                         return L(E.k.INFO);
                     }
                 }
             }),
-            [T, A, L]
+            [T, Z, L]
         );
     s.useEffect(() => (u.Z.enable(), u.Z.enableTemp(j), () => u.Z.disableTemp()), [j]);
     let P = (0, o.useTransition)(
-        A,
+        Z,
         {
             value: 0,
             from: { value: 1 },
             enter: { value: 0 },
             leave: { value: -1 }
         },
-        Z !== I ? 'animate-never' : 'animate-always'
+        A !== I ? 'animate-never' : 'animate-always'
     );
     return (0, i.jsx)(a.animated.div, {
         style: {

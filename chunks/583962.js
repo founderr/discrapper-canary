@@ -20,8 +20,8 @@ var i = n(735250),
     p = n(100527),
     _ = n(367907),
     f = n(906732),
-    g = n(434404),
-    m = n(496675),
+    m = n(434404),
+    g = n(496675),
     C = n(259580),
     I = n(267642),
     E = n(624138),
@@ -37,9 +37,9 @@ let A = (0, E.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
         let { guild: t, onSelect: n } = e,
             [r, a] = l.useState(t.premiumProgressBarEnabled),
             [s, o] = l.useState(!1),
-            u = (0, c.e7)([m.Z], () => m.Z.can(Z.Plq.MANAGE_GUILD, t)),
+            u = (0, c.e7)([g.Z], () => g.Z.can(Z.Plq.MANAGE_GUILD, t)),
             p = async () => {
-                if (!!u) o(!0), await g.Z.saveGuild(t.id, { premiumProgressBarEnabled: !r }), a(!r), o(!1);
+                if (!!u) o(!0), await m.Z.saveGuild(t.id, { premiumProgressBarEnabled: !r }), a(!r), o(!1);
             };
         return (0, i.jsx)(d.Menu, {
             navId: 'progress-bar-context',
@@ -64,19 +64,19 @@ let A = (0, E.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
 t.ZP = (e) => {
     let { guild: t, withMargin: n } = e,
         { analyticsLocations: r } = (0, f.ZP)(p.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY),
-        { premiumSubscriberCount: u, id: g } = t,
-        E = (0, I.rF)(u, g),
+        { premiumSubscriberCount: u, id: m } = t,
+        E = (0, I.rF)(u, m),
         A = (0, I.FZ)(E, t.id),
         M = null == A,
         R = null != A ? A : E,
         P = (0, c.e7)([x.Z], () => {
             var e;
-            return null !== (e = x.Z.getCountForGuild(g)) && void 0 !== e ? e : 0;
+            return null !== (e = x.Z.getCountForGuild(m)) && void 0 !== e ? e : 0;
         }),
-        y = (0, c.e7)([m.Z], () => m.Z.can(Z.Plq.MANAGE_GUILD, t));
+        y = (0, c.e7)([g.Z], () => g.Z.can(Z.Plq.MANAGE_GUILD, t));
     l.useEffect(() => {
-        P !== u && (0, N.v)(g, u);
-    }, [g, P, u]);
+        P !== u && (0, N.v)(m, u);
+    }, [m, P, u]);
     let j = ''.concat(Math.min(100, (u / (0, I.vn)(t.id)[R]) * 100), '%'),
         { current: D } = l.useRef(j),
         w = {
@@ -88,7 +88,7 @@ t.ZP = (e) => {
         k = () => {
             (0, _.yw)(Z.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
                 location: { section: Z.jXE.PREMIUM_GUILD_PROGRESS_BAR },
-                guild_id: g,
+                guild_id: m,
                 location_stack: r
             }),
                 (0, S.Z)({

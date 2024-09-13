@@ -77,8 +77,8 @@ t.Z = (e) => {
         H = (0, c.e7)([m.Z], () => m.Z.getState().theme),
         Y = (0, c.e7)([E.Z], () => E.Z.useReducedMotion),
         W = s.useMemo(() => (0, f.nP)(u.config.assets.hero), [u]),
-        K = s.useRef(null),
-        z = (0, O.uq)(I),
+        z = s.useRef(null),
+        K = (0, O.uq)(I),
         Q = I === C.jn.QUESTS_EMBED,
         q = (0, h.t5)(u, x.dr.QUESTS_CARD, I),
         X = (null === (t = u.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
@@ -104,17 +104,17 @@ t.Z = (e) => {
                 });
         };
     s.useEffect(() => {
-        W && null != K.current && (n ? K.current.play() : !n && (K.current.pause(), (K.current.currentTime = 0)));
+        W && null != z.current && (n ? z.current.play() : !n && (z.current.pause(), (z.current.currentTime = 0)));
     }, [n, W]);
     let et = (0, f.j8)(u);
     return (0, i.jsxs)('div', {
         className: r()(v.outerContainer, {
-            [v.outerContainerGiftInventory]: z,
+            [v.outerContainerGiftInventory]: K,
             [v.outerContainerEmbed]: Q,
             [v.outerContainerXs]: 'xs' === T
         }),
         'aria-label': M.Z.Messages.EXPAND,
-        style: { height: z ? F : void 0 },
+        style: { height: K ? F : void 0 },
         children: [
             (0, i.jsx)(Z, {
                 style: {
@@ -130,7 +130,7 @@ t.Z = (e) => {
                 className: v.questSplash,
                 controls: !1,
                 poster: et,
-                ref: K,
+                ref: z,
                 children:
                     !Y &&
                     W &&
@@ -146,7 +146,7 @@ t.Z = (e) => {
                     (0, i.jsxs)(l.animated.div, {
                         className: r()(v.headerContent, { [v.headerContentEmbed]: Q }),
                         style: {
-                            y: z
+                            y: K
                                 ? D.to({
                                       range: [0, 1],
                                       output: [O.DJ, 0]
@@ -154,7 +154,7 @@ t.Z = (e) => {
                                 : void 0
                         },
                         children: [
-                            z &&
+                            K &&
                                 (0, i.jsx)(l.animated.div, {
                                     className: v.headerCollapsedContent,
                                     style: {
@@ -208,7 +208,7 @@ t.Z = (e) => {
                                     k.current = e;
                                 },
                                 className: r()(v.headerExpandedContent, {
-                                    [v.outerContainerGiftInventory]: z,
+                                    [v.outerContainerGiftInventory]: K,
                                     [v.outerContainerEmbed]: Q
                                 }),
                                 style: {
@@ -259,7 +259,7 @@ t.Z = (e) => {
                                         ]
                                     }),
                                     !a &&
-                                        z &&
+                                        K &&
                                         (0, i.jsx)(P, {
                                             quest: u,
                                             location: I,
@@ -272,7 +272,7 @@ t.Z = (e) => {
                     (0, i.jsxs)(l.animated.div, {
                         className: v.iconsContainer,
                         style: {
-                            top: z
+                            top: K
                                 ? D.to({
                                       range: [0, 1],
                                       output: [O.DJ / 2 - O.Z$ / 2, O.jc]
@@ -285,7 +285,7 @@ t.Z = (e) => {
                                 quest: u,
                                 questContentPosition: y,
                                 shouldShowDisclosure: !0,
-                                hideLearnMore: z,
+                                hideLearnMore: K,
                                 showShareLink: !a && Q,
                                 children: (e) =>
                                     (0, i.jsx)(l.animated.div, {

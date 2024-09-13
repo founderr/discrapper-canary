@@ -30,8 +30,8 @@ var i,
     v = n(100527),
     S = n(906732),
     N = n(890280),
-    A = n(895924),
-    Z = n(835473),
+    Z = n(895924),
+    A = n(835473),
     M = n(522474),
     b = n(314897),
     R = n(819640),
@@ -86,7 +86,7 @@ function U(e) {
         ),
         T = (0, c.e7)([h.ZP], () => h.ZP.getEmbeddedActivitiesForChannel(E.id).find((e) => e.applicationId === f.id)),
         { analyticsLocations: v } = (0, S.ZP)(),
-        Z = (0, d.O)(),
+        A = (0, d.O)(),
         M = P.ZP.getName(E.getGuildId(), E.id, null == x ? void 0 : x[0]),
         R =
             (0, _.s5)({
@@ -143,10 +143,10 @@ function U(e) {
                                   (0, m.Z)({
                                       applicationId: T.applicationId,
                                       activityChannelId: E.id,
-                                      locationObject: Z.location,
+                                      locationObject: A.location,
                                       analyticsLocations: v,
                                       componentId: U,
-                                      commandOrigin: A.bB.VOICE_UI
+                                      commandOrigin: Z.bB.VOICE_UI
                                   });
                           },
                           submitting: H,
@@ -175,7 +175,7 @@ function w(e) {
         { id: u } = t,
         d = (0, f.Z)(),
         h = (null == d ? void 0 : d.channelId) === r.id && d.applicationId === u,
-        [m] = (0, Z.Z)([u]),
+        [m] = (0, A.Z)([u]),
         { url: p } = (0, E.Z)({
             applicationId: u,
             names: D,
@@ -184,7 +184,7 @@ function w(e) {
         _ = !i && h,
         I = !h,
         N = !h && !i,
-        A = (0, c.e7)([R.Z, M.Z], () =>
+        Z = (0, c.e7)([R.Z, M.Z], () =>
             (0, T.Z)({
                 LayerStore: R.Z,
                 PopoutWindowStore: M.Z
@@ -192,11 +192,11 @@ function w(e) {
         );
     return (
         l.useEffect(() => {
-            if (_ && null != d && !A) {
+            if (_ && null != d && !Z) {
                 let e = (0, x.Z)(d.channelId, d.applicationId);
                 (0, C.jy)(e);
             }
-        }, [_, d, A]),
+        }, [_, d, Z]),
         (0, a.jsx)(S.Gt, {
             value: o,
             children: (0, a.jsx)('div', {

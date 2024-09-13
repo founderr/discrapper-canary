@@ -28,8 +28,8 @@ var i = n(735250),
     v = n(493324),
     S = n(611064),
     N = n(677432),
-    A = n(178762),
-    Z = n(868671),
+    Z = n(178762),
+    A = n(868671),
     M = n(82295),
     b = n(91218),
     R = n(313201),
@@ -76,7 +76,7 @@ let K = V.ZP.getEnableHardwareAcceleration(),
             y: 0
         }
     };
-class Q extends s.Component {
+class J extends s.Component {
     shouldComponentUpdate(e) {
         return !(0, m.Z)(this.props, e, ['channelId']);
     }
@@ -169,7 +169,7 @@ class Q extends s.Component {
             );
     }
 }
-let J = s.memo((e) => {
+let Q = s.memo((e) => {
         let { colorRoleId: t, ...n } = e,
             { channel: s, user: a, index: l } = e,
             r = (0, c.JA)(''.concat(l)),
@@ -183,7 +183,7 @@ let J = s.memo((e) => {
                 },
                 [s, t]
             );
-        return (0, i.jsx)(Q, {
+        return (0, i.jsx)(J, {
             ...n,
             ...r,
             isTyping: o,
@@ -375,7 +375,7 @@ class et extends s.Component {
                     if (l.type === D.so.MEMBER && 'user' in l) {
                         let { colorString: e, colorRoleId: t, user: n, status: r, isOwner: o, isMobileOnline: c, nick: u, activities: d, applicationStream: h, premiumSince: m } = l;
                         return (0, i.jsx)(
-                            J,
+                            Q,
                             {
                                 colorString: e,
                                 colorRoleId: t,
@@ -399,7 +399,7 @@ class et extends s.Component {
                         return (
                             null != l.entry.original_id && (e += '-'.concat(l.entry.original_id)),
                             (0, i.jsx)(
-                                A.ZP,
+                                Z.ZP,
                                 {
                                     ...l,
                                     channel: this.props.channel,
@@ -427,7 +427,7 @@ class et extends s.Component {
                 }, 50)
             ),
             Y(this, 'getContentFeedGroup', () => {
-                let e = this.props.groups[Z.T];
+                let e = this.props.groups[A.T];
                 if ((0, S.R)(e)) return e;
             }),
             Y(this, 'hasContentFeed', () => null != this.getContentFeedGroup()),
@@ -437,9 +437,9 @@ class et extends s.Component {
                     let { rows: t } = this.props,
                         n = e.index;
                     return function (e, i) {
-                        if (e === Z.T) {
+                        if (e === A.T) {
                             let e = t[n + 1 + i];
-                            return (0, A.iZ)(e);
+                            return (0, Z.iZ)(e);
                         }
                         return q;
                     };
@@ -472,7 +472,7 @@ class et extends s.Component {
                 let t = null === (e = this._list) || void 0 === e ? void 0 : e.getItems(),
                     { rowsVisible: n } = this.getDimensions();
                 if (void 0 === n || 0 === n || null == t) return;
-                this.hasContentFeed() && (t = t.filter((e) => e.section !== Z.T));
+                this.hasContentFeed() && (t = t.filter((e) => e.section !== A.T));
                 let i = t
                     .map((e) => this.getRowProps(e))
                     .slice(0, n + 1)
@@ -499,7 +499,7 @@ function en(e) {
             groups: m,
             version: p,
             updateMaxRowSeen: _
-        } = (0, Z.H)({
+        } = (0, A.H)({
             memberStoreProps: o,
             channelId: t.id,
             guildId: t.guild_id

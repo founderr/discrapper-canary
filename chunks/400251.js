@@ -1,6 +1,6 @@
 n.d(t, {
     m: function () {
-        return A;
+        return Z;
     }
 }),
     n(47120);
@@ -27,7 +27,7 @@ var i = n(735250),
     v = n(689938),
     S = n(724850),
     N = n(883760);
-let A = (e) => {
+let Z = (e) => {
     let { onClick: t } = e;
     return (0, i.jsxs)(o.Clickable, {
         onClick: t,
@@ -46,7 +46,7 @@ let A = (e) => {
         ]
     });
 };
-function Z(e) {
+function A(e) {
     let { entry: t } = e,
         [a, r] = s.useState(!1),
         { canEdit: c } = (0, I.Z)(t);
@@ -134,7 +134,7 @@ t.Z = (e) => {
             splash: a.splash,
             size: 300 * (0, _.x_)()
         }),
-        A =
+        Z =
             null !==
                 (t = C.ZP.getGuildIconURL({
                     id: a.guildId,
@@ -182,7 +182,7 @@ t.Z = (e) => {
                                     className: S.iconMask,
                                     children: (0, i.jsx)(m.Z, {
                                         className: S.icon,
-                                        iconSrc: A,
+                                        iconSrc: Z,
                                         guild: new E.ZP(a),
                                         size: m.Z.Sizes.MEDIUM,
                                         active: !0
@@ -255,7 +255,7 @@ t.Z = (e) => {
                         })
                     ]
                 }),
-                (0, i.jsx)(Z, { entry: a })
+                (0, i.jsx)(A, { entry: a })
             ]
         })
     );

@@ -27,8 +27,8 @@ var i = n(735250),
     v = n(652730),
     S = n(41776),
     N = n(657352),
-    A = n(33154),
-    Z = n(144114),
+    Z = n(33154),
+    A = n(144114),
     M = n(703656),
     b = n(210887),
     R = n(237904),
@@ -194,7 +194,7 @@ class V extends s.PureComponent {
                         let { default: e } = await Promise.all([n.e('76540'), n.e('63461')]).then(n.bind(n, 607018));
                         return (t) =>
                             (0, i.jsx)(e, {
-                                reason: Z.L.GUILD_PHONE_REQUIRED,
+                                reason: A.L.GUILD_PHONE_REQUIRED,
                                 ...t
                             });
                     },
@@ -253,8 +253,8 @@ class V extends s.PureComponent {
                 let { guild: e } = this.props;
                 return (
                     l()(null != e, 'GuildVerification.renderLurkerModeUpsellPopout - guild cannot be undefined'),
-                    (0, i.jsx)(A.Z, {
-                        type: A.s.CHAT,
+                    (0, i.jsx)(Z.Z, {
+                        type: Z.s.CHAT,
                         guild: e,
                         closePopout: this.closeLurkerModeUpsellPopout
                     })
@@ -305,8 +305,8 @@ function F(e) {
             return null != E && null !== (t = null === (e = L.ZP.getMember(o, E.id)) || void 0 === e ? void 0 : e.isPending) && void 0 !== t && t;
         }),
         N = !!(null == c ? void 0 : c.hasVerificationGate()),
-        A = (T || u.notClaimed) && N,
-        Z = (0, r.e7)([v.Z], () => v.Z.shouldShowPopout(o)),
+        Z = (T || u.notClaimed) && N,
+        A = (0, r.e7)([v.Z], () => v.Z.shouldShowPopout(o)),
         M = (0, r.e7)([O.Z], () => O.Z.can(U.Plq.SEND_MESSAGES, a)),
         k = (0, r.e7)([x.Z], () => x.Z.getRequest(o)),
         [w, B] = (0, p.L_)(o),
@@ -320,13 +320,13 @@ function F(e) {
         guild: c,
         isLurking: f,
         isFollowable: d,
-        shouldShowLurkerModeSuccessPopout: Z,
+        shouldShowLurkerModeSuccessPopout: A,
         showLurkerModeUpsellPopout: f && null != c && D.Uu(U.Plq.SEND_MESSAGES, a),
         theme: b.Z.theme,
         canSendMessages: M,
         channelFollowingUsersSeen: null != m ? m.usersSeenEver : null,
         hasVerificationGate: N,
-        showMemberVerificationModal: A,
+        showMemberVerificationModal: Z,
         guildJoinRequestStatus: null !== (n = null == k ? void 0 : k.applicationStatus) && void 0 !== n ? n : I.wB.STARTED,
         guildJoinRequest: k,
         useReducedMotion: h.Z.useReducedMotion,

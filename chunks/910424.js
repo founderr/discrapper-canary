@@ -33,14 +33,14 @@ function g(e) {
         })),
         v = (0, s.e7)([h.Z], () => h.Z.getChannel(null == C ? void 0 : C.channelId)),
         [S, N] = (0, u.wq)(v),
-        A = (0, c.Aq)(),
-        Z = null != x && null != C && x.state !== _.jm8.ENDED && x.ownerId === C.ownerId,
+        Z = (0, c.Aq)(),
+        A = null != x && null != C && x.state !== _.jm8.ENDED && x.ownerId === C.ownerId,
         M = (e) => {
-            if (null != C) null == I || I(), r.default.selectVoiceChannel(C.channelId), !Z && (0, o.iV)(C, { forceMultiple: e }), A.dispatch(_.CkL.POPOUT_CLOSE), m.S.dispatch(_.CkL.MODAL_CLOSE), l.Z.popAll();
+            if (null != C) null == I || I(), r.default.selectVoiceChannel(C.channelId), !A && (0, o.iV)(C, { forceMultiple: e }), Z.dispatch(_.CkL.POPOUT_CLOSE), m.S.dispatch(_.CkL.MODAL_CLOSE), l.Z.popAll();
         };
     if (null == C) return null;
     let b = (0, u.P9)(N);
-    t ? (b = f.Z.Messages.WATCH_STREAM_STREAMING) : Z && (b = f.Z.Messages.WATCH_STREAM_WATCHING);
+    t ? (b = f.Z.Messages.WATCH_STREAM_STREAMING) : A && (b = f.Z.Messages.WATCH_STREAM_WATCHING);
     let R = {
         color: n,
         look: g
@@ -50,7 +50,7 @@ function g(e) {
             (0, i.jsxs)(
                 p.Z,
                 {
-                    disabled: t || Z || !S,
+                    disabled: t || A || !S,
                     onClick: () => M(!1),
                     ...R,
                     fullWidth: !0,
@@ -65,7 +65,7 @@ function g(e) {
                 },
                 'play'
             ),
-            T && !Z
+            T && !A
                 ? (0, i.jsx)(a.Tooltip, {
                       text: f.Z.Messages.STREAM_WATCH_MULTIPLE_TOOLTIP,
                       children: (e) =>

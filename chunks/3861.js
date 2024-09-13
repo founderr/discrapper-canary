@@ -16,13 +16,13 @@ var i = n(735250),
     g = n(354459),
     C = n(396602);
 t.Z = (0, r.Z)((e) => {
-    let { participants: t, filteredParticipants: n, selectedParticipant: a, participantsVersion: r, layout: I, onSelectParticipant: x, onContextMenuParticipant: T, onFullscreenParticipant: v, channel: S, hasConnectPermission: N, className: A, inCall: Z, showParticipants: M = !0, paused: b = !1, width: R, height: L, idle: j, mode: P, popoutWindow: O, awaitingRemoteSessionInfo: y, callContainerDimensions: D } = e;
+    let { participants: t, filteredParticipants: n, selectedParticipant: a, participantsVersion: r, layout: I, onSelectParticipant: x, onContextMenuParticipant: T, onFullscreenParticipant: v, channel: S, hasConnectPermission: N, className: Z, inCall: A, showParticipants: M = !0, paused: b = !1, width: R, height: L, idle: j, mode: P, popoutWindow: O, awaitingRemoteSessionInfo: y, callContainerDimensions: D } = e;
     s.useEffect(() => {
         d.S.dispatch(E.CkL.REMEASURE_TARGET);
     }, [R, L, D.width, D.height]);
     let k = s.useMemo(() => n.filter((e) => e.type !== g.fO.ACTIVITY || !e.participants.some((e) => (0, o.J)(e))), [n, r]);
     if ((null == y ? void 0 : y.channelId) === S.id) return (0, i.jsx)(m.Z, { height: L });
-    if ((null == S ? void 0 : S.isGuildVocal()) && !Z)
+    if ((null == S ? void 0 : S.isGuildVocal()) && !A)
         return (0, i.jsx)(h.Z, {
             channel: S,
             participants: t,
@@ -36,7 +36,7 @@ t.Z = (0, r.Z)((e) => {
             participants: t,
             onContextMenu: T
         });
-    if (((n = Z ? n : t), null == a))
+    if (((n = A ? n : t), null == a))
         return 0 === n.length
             ? (0, i.jsx)(f.Z, {
                   className: l()(C.videoGrid, C.hiddenParticipants),
@@ -56,7 +56,7 @@ t.Z = (0, r.Z)((e) => {
                       onDoubleClick: v,
                       onContextMenu: T,
                       paused: b,
-                      inCall: Z
+                      inCall: A
                   })
               });
     return (0, i.jsx)(_.Z, {
@@ -67,12 +67,12 @@ t.Z = (0, r.Z)((e) => {
         filteredParticipants: k,
         participants: t,
         popoutWindow: O,
-        className: A,
+        className: Z,
         idle: j,
         height: L,
         width: R,
         layout: I,
-        inCall: Z,
+        inCall: A,
         channel: S,
         showParticipants: M
     });

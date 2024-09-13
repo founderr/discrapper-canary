@@ -29,8 +29,8 @@ var i = n(735250),
     v = n(592125),
     S = n(131951),
     N = n(451478),
-    A = n(685203),
-    Z = n(112560),
+    Z = n(685203),
+    A = n(112560),
     M = n(442168),
     b = n(822296),
     R = n(916771),
@@ -74,13 +74,13 @@ function G(e) {
         K = (0, r.e7)([x.Z], () => x.Z.getActiveStreamForUser(W.id, F.guildId), [W.id, F.guildId]),
         q = (0, r.e7)([x.Z], () => x.Z.getAllActiveStreams().length > 0),
         X = (0, r.e7)([N.Z], () => N.Z.isFocused()),
-        Q = (null == K ? void 0 : K.ownerId) === G,
-        J = Q && !X && !E,
-        $ = null != K ? (0, _.Z)(K, W, W.id === G, J) : null,
+        J = (null == K ? void 0 : K.ownerId) === G,
+        Q = J && !X && !E,
+        $ = null != K ? (0, _.Z)(K, W, W.id === G, Q) : null,
         ee = P < 195;
     if (
         (s.useEffect(() => {
-            !q && (null == Y ? void 0 : Y.isGuildStageVoice()) && !Q && ((0, u.rn)(F), c.Z.updateStageStreamSize(F.channelId, !1));
+            !q && (null == Y ? void 0 : Y.isGuildStageVoice()) && !J && ((0, u.rn)(F), c.Z.updateStageStreamSize(F.channelId, !1));
         }, []),
         s.useEffect(() => {
             B.info(
@@ -139,15 +139,15 @@ function G(e) {
                         streamId: z,
                         videoComponent: H,
                         fit: m,
-                        paused: h || J,
-                        videoSpinnerContext: Q ? d.m.SELF_STREAM : d.m.REMOTE_STREAM,
+                        paused: h || Q,
+                        videoSpinnerContext: J ? d.m.SELF_STREAM : d.m.REMOTE_STREAM,
                         userId: W.id
                     },
                     z
                 ),
                 null != $
                     ? (0, i.jsx)(I.Z, {
-                          size: (0, Z.L)(P),
+                          size: (0, A.L)(P),
                           ...$
                       })
                     : null,
@@ -170,7 +170,7 @@ function G(e) {
                     ? null
                     : (0, i.jsxs)(i.Fragment, {
                           children: [
-                              (0, i.jsx)(A.a, {
+                              (0, i.jsx)(Z.a, {
                                   isSmall: ee,
                                   children: (0, i.jsx)(o.Text, {
                                       variant: ee ? 'text-sm/semibold' : 'text-md/semibold',
@@ -179,7 +179,7 @@ function G(e) {
                                   })
                               }),
                               q
-                                  ? (0, i.jsx)(A.a, {
+                                  ? (0, i.jsx)(Z.a, {
                                         className: w.addCTA,
                                         tooltip: U.Z.Messages.STREAM_WATCH_MULTIPLE_TOOLTIP,
                                         onClick: (e) => {

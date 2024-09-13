@@ -22,8 +22,8 @@ var s = n(120356),
     v = n(719216),
     S = n(429589),
     N = n(276149),
-    A = n(636245),
-    Z = n(697761),
+    Z = n(636245),
+    A = n(697761),
     M = n(611459),
     b = n(544671),
     R = n(757182),
@@ -112,7 +112,7 @@ t.Z = (0, u.Z)((e) => {
                 return null == e
                     ? null
                     : (0, i.jsx)(
-                          A.Z,
+                          Z.Z,
                           {
                               guildId: e.guildId,
                               channelId: e.channelId,
@@ -172,7 +172,7 @@ t.Z = (0, u.Z)((e) => {
                                 'join-activity-button'
                             ),
                             (0, i.jsx)(
-                                Z.Z,
+                                A.Z,
                                 {
                                     activity: t,
                                     user: s,

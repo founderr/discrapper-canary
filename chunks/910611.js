@@ -33,8 +33,8 @@ var i = n(735250),
     v = n(946734),
     S = n(99843),
     N = n(372564),
-    A = n(984370),
-    Z = n(217314),
+    Z = n(984370),
+    A = n(217314),
     M = n(981631),
     b = n(921944),
     R = n(689938),
@@ -168,7 +168,7 @@ function P(e) {
         });
     switch (t.type) {
         case M.d4z.DM:
-            return (0, i.jsx)(Z.Z, {
+            return (0, i.jsx)(A.Z, {
                 level: T,
                 channel: t,
                 handleClick: u,
@@ -199,7 +199,7 @@ function P(e) {
             return (0, i.jsxs)(s.Fragment, {
                 children: [
                     D(C, t.type === M.d4z.GUILD_ANNOUNCEMENT ? R.Z.Messages.NEWS_CHANNEL : R.Z.Messages.TEXT_CHANNEL),
-                    (0, i.jsx)(A.Z.Title, {
+                    (0, i.jsx)(Z.Z.Title, {
                         level: T,
                         onContextMenu: d,
                         onClick: u,
@@ -213,7 +213,7 @@ function P(e) {
             return (0, i.jsxs)(s.Fragment, {
                 children: [
                     D(C, R.Z.Messages.VOICE_CHANNEL),
-                    (0, i.jsx)(A.Z.Title, {
+                    (0, i.jsx)(Z.Z.Title, {
                         level: T,
                         onContextMenu: d,
                         onClick: u,
@@ -225,7 +225,7 @@ function P(e) {
             return (0, i.jsxs)(s.Fragment, {
                 children: [
                     D(C, R.Z.Messages.STAGE_CHANNEL),
-                    (0, i.jsx)(A.Z.Title, {
+                    (0, i.jsx)(Z.Z.Title, {
                         level: T,
                         onContextMenu: d,
                         onClick: u,
@@ -242,14 +242,14 @@ function P(e) {
                 N = (0, i.jsxs)(s.Fragment, {
                     children: [
                         D(e, R.Z.Messages.TEXT_CHANNEL),
-                        (0, i.jsx)(A.Z.Title, {
+                        (0, i.jsx)(Z.Z.Title, {
                             level: T,
                             onContextMenu: f,
                             onClick: p,
                             className: l()(L.parentChannelName, L.cursorPointer),
                             children: (0, h.F6)(a, I.default, g.Z)
                         }),
-                        (0, i.jsx)(A.Z.Caret, {})
+                        (0, i.jsx)(Z.Z.Caret, {})
                     ]
                 });
             }
@@ -258,7 +258,7 @@ function P(e) {
                 children: [
                     N,
                     D(b ? null : C, R.Z.Messages.THREAD),
-                    (0, i.jsx)(A.Z.Title, {
+                    (0, i.jsx)(Z.Z.Title, {
                         level: T,
                         onContextMenu: d,
                         onClick: u,
@@ -275,13 +275,13 @@ function P(e) {
             return (0, i.jsxs)(s.Fragment, {
                 children: [
                     null !== C
-                        ? (0, i.jsx)(A.Z.Icon, {
+                        ? (0, i.jsx)(Z.Z.Icon, {
                               iconClassName: L.__invalid_icon,
                               icon: C,
                               'aria-hidden': !0
                           })
                         : null,
-                    (0, i.jsxs)(A.Z.Title, {
+                    (0, i.jsxs)(Z.Z.Title, {
                         level: T,
                         onContextMenu: d,
                         onClick: u,
@@ -336,7 +336,7 @@ function D(e, t) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             null !== e &&
-                (0, i.jsx)(A.Z.Icon, {
+                (0, i.jsx)(Z.Z.Icon, {
                     iconClassName: L.__invalid_icon,
                     icon: e,
                     'aria-hidden': !0
@@ -352,21 +352,21 @@ function k(e) {
         : (0, i.jsxs)('div', {
               className: L.guildBreadcrumbContainer,
               children: [
-                  'left' === s && (0, i.jsx)(A.Z.Caret, { direction: 'left' }),
+                  'left' === s && (0, i.jsx)(Z.Z.Caret, { direction: 'left' }),
                   (0, i.jsx)(f.Z, {
                       guild: t,
                       size: f.Z.Sizes.SMALLER,
                       className: L.guildBreadcrumbIcon,
                       active: !0
                   }),
-                  (0, i.jsx)(A.Z.Title, {
+                  (0, i.jsx)(Z.Z.Title, {
                       onClick: () => {
                           (0, E.XU)(t.id, n.id);
                       },
                       className: l()(L.parentChannelName, L.cursorPointer),
                       children: t.name
                   }),
-                  'right' === s && (0, i.jsx)(A.Z.Caret, { direction: 'right' })
+                  'right' === s && (0, i.jsx)(Z.Z.Caret, { direction: 'right' })
               ]
           });
 }

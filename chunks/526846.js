@@ -1,6 +1,6 @@
 n.d(t, {
     m: function () {
-        return A;
+        return Z;
     }
 }),
     n(47120);
@@ -27,8 +27,8 @@ var i = n(735250),
     v = n(689938),
     S = n(735338);
 let N = 'vc-activities-'.concat((0, r.Z)()),
-    A = s.forwardRef(function (e, t) {
-        let { channel: n, isHovered: a, closePopout: r, onMouseEnter: A, onMouseLeave: Z, onClick: M, className: b } = e,
+    Z = s.forwardRef(function (e, t) {
+        let { channel: n, isHovered: a, closePopout: r, onMouseEnter: Z, onMouseLeave: A, onClick: M, className: b } = e,
             R = (0, o.e7)([h.Z], () => h.Z.useReducedMotion),
             { id: L, guild_id: j } = n;
         s.useEffect(() => {
@@ -62,18 +62,18 @@ let N = 'vc-activities-'.concat((0, r.Z)()),
                     analyticsLocations: O,
                     opensAppLauncherModal: !0
                 }),
-                    Z(),
+                    A(),
                     M();
-            }, [k, O, n, M, Z, D]),
+            }, [k, O, n, M, A, D]),
             B = s.useCallback(
                 (e) => {
-                    A(),
+                    Z(),
                         f.default.track(T.rMx.ACTIVITIES_MINI_SHELF_HOVERED, {
                             channel_id: n.id,
                             guild_id: n.getGuildId()
                         });
                 },
-                [A, n]
+                [Z, n]
             );
         return (0, i.jsx)(p.Gt, {
             value: O,
@@ -95,7 +95,7 @@ let N = 'vc-activities-'.concat((0, r.Z)()),
                         (0, i.jsxs)('div', {
                             className: S.container,
                             onMouseEnter: B,
-                            onMouseLeave: Z,
+                            onMouseLeave: A,
                             children: [
                                 (0, i.jsxs)('div', {
                                     className: S.titleContainer,

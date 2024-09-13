@@ -17,8 +17,8 @@ var i = n(735250),
     p = n(430824),
     _ = n(624138),
     f = n(674552),
-    g = n(981631),
-    m = n(689938),
+    m = n(981631),
+    g = n(689938),
     C = n(115376);
 let I = (0, _.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
     E = (0, _.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_SIZE);
@@ -43,9 +43,9 @@ function x(e) {
         n,
         { folderNode: r, hovered: a, expanded: c } = e,
         { color: u, children: h } = r,
-        p = null != u ? u : g.Wyy,
+        p = null != u ? u : m.Wyy,
         _ = h.map((e) => e.id),
-        [f, m] = l.useState(!1),
+        [f, g] = l.useState(!1),
         [x, S] = l.useState(c),
         v = c ? 0 : -E,
         Z = (0, d.useSpring)(
@@ -53,10 +53,10 @@ function x(e) {
                 transform: 'translate3d(0, '.concat(v, 'px, 0)'),
                 config: { duration: I },
                 onStart() {
-                    m(!0), S(c);
+                    g(!0), S(c);
                 },
                 onRest() {
-                    m(!1), S(c);
+                    g(!1), S(c);
                 }
             },
             'animate-always'
@@ -108,7 +108,7 @@ function S(e) {
             folderGroupId: h,
             folderIconContent: p,
             onClick: _,
-            onContextMenu: g,
+            onContextMenu: m,
             onHoverChange: I,
             onKeyDown: E,
             treeItemProps: { onFocus: N, ...S }
@@ -130,12 +130,12 @@ function S(e) {
         children: (0, i.jsx)(d.Clickable, {
             className: a()(C.folder, { [C.hover]: v }),
             onClick: _,
-            onContextMenu: g,
+            onContextMenu: m,
             onMouseEnter: T,
             onMouseLeave: L,
             onKeyDown: E,
             onFocus: N,
-            'aria-label': m.Z.Messages.GUILD_FOLDER_TOOLTIP_A11Y_LABEL.format({
+            'aria-label': g.Z.Messages.GUILD_FOLDER_TOOLTIP_A11Y_LABEL.format({
                 folderName: u,
                 mentions: c
             }),

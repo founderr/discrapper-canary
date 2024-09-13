@@ -16,8 +16,8 @@ var i = n(735250),
     p = n(678513),
     _ = n(981631),
     f = n(689938),
-    g = n(293992);
-function m(e) {
+    m = n(293992);
+function g(e) {
     let { target: t } = e,
         s = (0, r.Ie)('fakedoor'),
         p = l.useCallback(() => {
@@ -30,7 +30,7 @@ function m(e) {
                     });
             });
         }, [t]),
-        m = l.useCallback(
+        g = l.useCallback(
             (e) => {
                 (0, o.jW)(e, async () => {
                     let { default: e } = await n.e('39612').then(n.bind(n, 761624));
@@ -45,10 +45,10 @@ function m(e) {
         ),
         C = 'url('.concat(t.backgroundAssetUrl, ') black top / cover no-repeat'),
         I = (0, i.jsxs)('div', {
-            className: g.tooltipContainer,
+            className: m.tooltipContainer,
             children: [
                 (0, i.jsx)('div', {
-                    className: g.tooltipBackground,
+                    className: m.tooltipBackground,
                     style: { background: C }
                 }),
                 (0, i.jsx)(a.Heading, {
@@ -68,8 +68,8 @@ function m(e) {
                 theme: _.BRd.DARK,
                 children: (0, i.jsx)(h.Z, {
                     text: I,
-                    tooltipClass: g.tooltip,
-                    tooltipContentClass: g.tooltipContent,
+                    tooltipClass: m.tooltip,
+                    tooltipContentClass: m.tooltipContent,
                     children: (0, i.jsx)(a.ThemeContextProvider, {
                         theme: E,
                         children: (0, i.jsx)(a.BlobMask, {
@@ -80,7 +80,7 @@ function m(e) {
                             children: (0, i.jsx)(a.NavItem, {
                                 ...s,
                                 onClick: p,
-                                onContextMenu: m,
+                                onContextMenu: g,
                                 children: (0, i.jsx)(a.BellIcon, { color: u.Z.TEXT_NORMAL })
                             })
                         })
@@ -99,5 +99,5 @@ function m(e) {
 }
 function C() {
     let e = (0, s.e7)([p.Z], () => p.Z.getActiveUserSignUp());
-    return null == e ? null : (0, i.jsx)(m, { target: e });
+    return null == e ? null : (0, i.jsx)(g, { target: e });
 }

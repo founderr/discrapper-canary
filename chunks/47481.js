@@ -23,7 +23,7 @@ function u(e) {
         I = null;
     return (
         h.forEach((e) => {
-            var s, x, T, v, S, N, A, Z;
+            var s, x, T, v, S, N, Z, A;
             if (null != _ && _.length > 0) {
                 let t = l.default.extractTimestamp(e.id);
                 for (let e = 0; (s = e < (null == _ ? void 0 : _.length)), s; e++) {
@@ -82,11 +82,11 @@ function u(e) {
                 if (null != b && b.type === c.ys_.DIVIDER) (b.unreadId = e.id), (C = null);
                 else if (null !== R) {
                     (N = R),
-                        (A = d),
-                        (Z = e).isFirstMessageInForumPost(A) ||
+                        (Z = d),
+                        (A = e).isFirstMessageInForumPost(Z) ||
                             N.content.push({
                                 type: c.ys_.DIVIDER,
-                                unreadId: Z.id
+                                unreadId: A.id
                             }),
                         (N.hasUnread = !0),
                         (C = null);
