@@ -115,6 +115,10 @@ class M extends (a = d.ZP.Store) {
     getVoiceState(e, t) {
         return this.getVoiceStates(e)[t];
     }
+    getDiscoverableVoiceState(e, t) {
+        let n = this.getVoiceState(e, t);
+        return null == n || !1 === n.discoverable ? null : n;
+    }
     getVoiceStateForChannel(e) {
         var t;
         let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r;
@@ -122,6 +126,9 @@ class M extends (a = d.ZP.Store) {
     }
     getVoiceStateForUser(e) {
         return Object.values(v(N, e))[0];
+    }
+    getDiscoverableVoiceStateForUser(e) {
+        return Object.values(v(N, e)).find((e) => !1 !== e.discoverable);
     }
     getVoiceStateForSession(e, t) {
         var n;

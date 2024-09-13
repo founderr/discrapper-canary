@@ -122,6 +122,12 @@ class k extends (o = d.ZP.Store) {
         let n = i[e];
         return null == n ? null : null !== (t = Object.values(n).find((e) => G(e))) && void 0 !== t ? t : null;
     }
+    getAnyDiscoverableStreamForUser(e) {
+        var t;
+        if (!(0, I.Z)(A.Z)) return null;
+        let n = i[e];
+        return null == n ? null : null !== (t = Object.values(n).find((e) => G(e) && !1 !== e.discoverable)) && void 0 !== t ? t : null;
+    }
     getStreamForUser(e, t) {
         var n;
         if (!(0, I.Z)(A.Z)) return null;
