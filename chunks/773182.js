@@ -1,15 +1,15 @@
 n.d(t, {
     KF: function () {
-        return j;
-    },
-    LW: function () {
-        return G;
-    },
-    OO: function () {
         return D;
     },
-    TH: function () {
+    LW: function () {
+        return U;
+    },
+    OO: function () {
         return w;
+    },
+    TH: function () {
+        return G;
     }
 }),
     n(47120),
@@ -27,8 +27,8 @@ var i = n(735250),
     p = n(100527),
     _ = n(970606),
     f = n(963202),
-    g = n(824991),
-    m = n(564990),
+    m = n(824991),
+    g = n(564990),
     C = n(353647),
     I = n(243778),
     E = n(669764),
@@ -41,14 +41,15 @@ var i = n(735250),
     L = n(602147),
     A = n(981631),
     b = n(308083),
-    M = n(921944),
-    R = n(49898),
+    M = n(731455),
+    R = n(921944),
+    P = n(49898),
     O = n(689938),
-    P = n(877861);
-function y(e) {
-    let { title: t, message: n, dismissibleContent: r, gameId: a, onPopoutVisible: c, onClick: h, children: p, isEligibleForUpsell: _ = !0, withInviteIcon: f = !0, backgroundImageUrl: m } = e,
+    y = n(877861);
+function j(e) {
+    let { title: t, message: n, dismissibleContent: r, gameId: a, onPopoutVisible: c, onClick: h, children: p, isEligibleForUpsell: _ = !0, withInviteIcon: f = !0, backgroundImageUrl: g } = e,
         C = (0, s.TH)(),
-        [E, N] = (0, I.US)([r], M.R.SIDEBAR),
+        [E, N] = (0, I.US)([r], R.R.SIDEBAR),
         x = E !== r,
         S = (0, d.Z)(),
         v = _ && !S && !x && C.pathname !== A.Z5c.GUILD_DISCOVERY;
@@ -56,43 +57,43 @@ function y(e) {
         v && c();
     }, [v, c]);
     let Z = l.useCallback(() => {
-            N(M.L.TAKE_ACTION), h();
+            N(R.L.TAKE_ACTION), h();
         }, [N, h]),
         L = l.useCallback(
             (e) => {
-                e(), N(M.L.USER_DISMISS);
+                e(), N(R.L.USER_DISMISS);
             },
             [N]
         ),
         b = (0, o.e7)([T.Z], () => T.Z.hasConsented(A.pjP.PERSONALIZATION)),
-        R = l.useMemo(() => (null != m && b ? { backgroundImage: 'url('.concat(m, ')') } : {}), [m, b]);
+        M = l.useMemo(() => (null != g && b ? { backgroundImage: 'url('.concat(g, ')') } : {}), [g, b]);
     return (0, i.jsxs)('div', {
-        className: P.container,
+        className: y.container,
         children: [
             (0, i.jsx)(u.Popout, {
                 shouldShow: v,
                 renderPopout: (e) => {
                     let { closePopout: l } = e;
                     return (0, i.jsxs)('div', {
-                        className: P.popoutContainer,
+                        className: y.popoutContainer,
                         children: [
                             (0, i.jsx)('div', {
-                                className: P.genericBackgroundImage,
-                                style: R
+                                className: y.genericBackgroundImage,
+                                style: M
                             }),
                             (0, i.jsx)(u.Clickable, {
                                 onClick: () => L(l),
-                                className: P.close,
+                                className: y.close,
                                 children: (0, i.jsx)(u.XSmallIcon, {
                                     size: 'xs',
                                     color: u.tokens.colors.WHITE
                                 })
                             }),
                             (0, i.jsxs)('div', {
-                                className: P.popoutContent,
-                                children: [f && (0, i.jsx)(g.YV, {}), (0, i.jsx)(g.aF, { title: t }), (0, i.jsx)(g.To, { message: n }), (0, i.jsx)(g.Xu, { onClick: Z })]
+                                className: y.popoutContent,
+                                children: [f && (0, i.jsx)(m.YV, {}), (0, i.jsx)(m.aF, { title: t }), (0, i.jsx)(m.To, { message: n }), (0, i.jsx)(m.Xu, { onClick: Z })]
                             }),
-                            (0, i.jsx)('div', { className: P.popoutCaret })
+                            (0, i.jsx)('div', { className: y.popoutCaret })
                         ]
                     });
                 },
@@ -103,14 +104,14 @@ function y(e) {
                 children: (e) =>
                     (0, i.jsx)('div', {
                         ...e,
-                        className: P.popoutAnchor
+                        className: y.popoutAnchor
                     })
             }),
             p({ onClick: Z })
         ]
     });
 }
-function j(e) {
+function D(e) {
     let { children: t } = e,
         {
             gameId: n,
@@ -126,7 +127,7 @@ function j(e) {
                 s = null == i && r,
                 c = l.useMemo(() => (a ? n.reduce((e, t) => ('played_game_extra' !== t.extra.type || null == b.gQ.get(t.extra.application_id) ? e : e.concat(t.extra.application_id)), []) : []), [n, a]);
             l.useEffect(() => {
-                s && a && (0, m.JX)(t);
+                s && a && (0, g.JX)(t);
             }, [t, s, a]);
             let u = null !== (e = c[0]) && void 0 !== e ? e : null,
                 { isFetching: d } = (0, N.$)(u),
@@ -164,10 +165,10 @@ function j(e) {
                 treatment: a,
                 gameApplicationId: n
             }),
-                (0, L.o)(R.F$.SERVERS);
+                (0, L.o)(P.F$.SERVERS, M.Gj.Clans);
         }, [a, n]);
     return a !== b.O7.GAME_SPECIFIC || s
-        ? (0, i.jsx)(y, {
+        ? (0, i.jsx)(j, {
               title: O.Z.Messages.RAPIDASH_GUILD_LIST_USER_UPSELL_TITLE,
               message: O.Z.Messages.RAPIDASH_GUILD_LIST_USER_UPSELL_MESSAGE,
               gameId: n,
@@ -180,7 +181,7 @@ function j(e) {
           })
         : (0, i.jsx)(i.Fragment, { children: t({ onClick: d }) });
 }
-function D(e) {
+function w(e) {
     let { children: t } = e,
         { guilds: n } = (0, f.C3)({
             location: 'GuildsBarClanAdminUpsellPopout',
@@ -195,7 +196,7 @@ function D(e) {
         }, []),
         o = O.Z.Messages.RAPIDASH_CHANNEL_LIST_ADMIN_UPSELL_TITLE,
         u = O.Z.Messages.RAPIDASH_CHANNEL_LIST_ADMIN_UPSELL_MESSAGE;
-    return (0, i.jsx)(y, {
+    return (0, i.jsx)(j, {
         title: o,
         message: u,
         dismissibleContent: c.z.GUILD_LIST_CLAN_ADMIN_UPSELL,
@@ -206,7 +207,7 @@ function D(e) {
         children: t
     });
 }
-function w(e) {
+function G(e) {
     let { onActivate: t, children: n } = e,
         r = (0, o.e7)([S.Z], () => S.Z.hasJoinRequestCoackmark()),
         a = l.useCallback(() => {
@@ -222,20 +223,20 @@ function w(e) {
             }
         }, [c, r, s, t]),
         (0, i.jsxs)('div', {
-            className: P.container,
+            className: y.container,
             children: [
                 (0, i.jsx)(u.Popout, {
                     ref: c,
                     shouldShow: r,
                     renderPopout: () =>
                         (0, i.jsxs)('div', {
-                            className: P.popoutContainer,
+                            className: y.popoutContainer,
                             children: [
                                 (0, i.jsxs)('div', {
-                                    className: P.popoutContent,
+                                    className: y.popoutContent,
                                     children: [
                                         (0, i.jsxs)('div', {
-                                            className: P.coachmarkTextContainer,
+                                            className: y.coachmarkTextContainer,
                                             children: [
                                                 (0, i.jsx)(u.Heading, {
                                                     variant: 'heading-md/medium',
@@ -257,7 +258,7 @@ function w(e) {
                                         })
                                     ]
                                 }),
-                                (0, i.jsx)('div', { className: P.popoutCaretLeft })
+                                (0, i.jsx)('div', { className: y.popoutCaretLeft })
                             ]
                         }),
                     position: 'right',
@@ -267,7 +268,7 @@ function w(e) {
                     children: (e) =>
                         (0, i.jsx)('div', {
                             ...e,
-                            className: P.popoutAnchor
+                            className: y.popoutAnchor
                         })
                 }),
                 n
@@ -275,10 +276,10 @@ function w(e) {
         })
     );
 }
-function G(e) {
+function U(e) {
     let { hideGradient: t, children: n } = e;
     return (0, i.jsxs)('div', {
-        className: P.footer,
-        children: [(0, i.jsx)('div', { className: a()(P.gradient, { [P.gradientHidden]: t }) }), n]
+        className: y.footer,
+        children: [(0, i.jsx)('div', { className: a()(y.gradient, { [y.gradientHidden]: t }) }), n]
     });
 }

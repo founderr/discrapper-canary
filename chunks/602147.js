@@ -1,6 +1,6 @@
 n.d(t, {
     o: function () {
-        return E;
+        return N;
     }
 });
 var i = n(735250),
@@ -8,52 +8,56 @@ var i = n(735250),
     r = n(636977),
     a = n(481060),
     s = n(212093),
-    o = n(831565),
-    c = n(571457),
-    u = n(836768),
-    d = n(341907),
-    h = n(703656),
-    p = n(683301),
-    _ = n(603592),
-    f = n(981631),
+    o = n(963202),
+    c = n(831565),
+    u = n(571457),
+    d = n(836768),
+    h = n(341907),
+    p = n(703656),
+    _ = n(683301),
+    f = n(603592),
+    m = n(981631),
     g = n(731455),
-    m = n(49898),
-    C = n(46140),
-    I = n(689938);
-function E(e) {
-    let t = (0, o.a)({ location: 'discovery_button' }),
-        n = window.location.pathname.startsWith(f.Z5c.GUILD_DISCOVERY),
-        i = p.ZP.getCurrentCategoryId() === g.Gj.Clans;
-    if (t) {
-        if (e === m.F$.QUESTS) {
-            (0, d.navigateToQuestHome)(C.dr.DISCOVERY_COMPASS, r.j.DISCOVERY_COMPASS);
+    C = n(49898),
+    I = n(46140),
+    E = n(689938);
+function N(e, t) {
+    let n = (0, c.a)({ location: 'discovery_button' }),
+        i = window.location.pathname.startsWith(m.Z5c.GUILD_DISCOVERY),
+        l = _.ZP.getCurrentCategoryId() === g.Gj.Clans;
+    if (n) {
+        if (e === C.F$.QUESTS) {
+            (0, h.navigateToQuestHome)(I.dr.DISCOVERY_COMPASS, r.j.DISCOVERY_COMPASS);
             return;
         }
-        if (e === m.F$.SERVERS) {
-            (0, h.uL)(f.Z5c.GLOBAL_DISCOVERY_SERVERS);
+        if (e === C.F$.SERVERS) {
+            (0, p.uL)(m.Z5c.GLOBAL_DISCOVERY_SERVERS);
             return;
         }
-        (0, h.uL)(f.Z5c.GLOBAL_DISCOVERY);
+        (0, p.uL)(m.Z5c.GLOBAL_DISCOVERY);
         return;
     }
-    n && !i && ((0, s.AQ)(), (0, s.uY)(g.Hk, !0));
-    let l = (0, h.s1)().location.search;
-    (0, h.uL)(f.Z5c.GUILD_DISCOVERY, { search: l });
+    i && !l && ((0, s.AQ)(), (0, s.uY)(t, !0));
+    let a = (0, p.s1)().location.search;
+    (0, p.uL)(m.Z5c.GUILD_DISCOVERY, { search: a });
 }
-let N = l.forwardRef(function (e, t) {
-    let { selected: n, className: l, onClick: r } = e,
-        s = (0, o.v)({ location: 'guild_discovery_button' }) ? I.Z.Messages.DISCOVER : I.Z.Messages.GUILD_DISCOVERY_TOOLTIP,
-        d = u.d.getState().selectedTab;
-    return (0, i.jsx)(_.Z, {
+let x = l.forwardRef(function (e, t) {
+    let { selected: n, className: r, onClick: s } = e,
+        { clanDiscoveryEnabled: h } = (0, o.nk)('guild_discovery'),
+        p = (0, c.v)({ location: 'guild_discovery_button' }) ? E.Z.Messages.DISCOVER : E.Z.Messages.GUILD_DISCOVERY_TOOLTIP,
+        _ = d.d.getState().selectedTab,
+        m = h ? g.Gj.Clans : g.Hk,
+        I = l.useCallback(() => {
+            null == s || s(), (0, u.k5)({ source: C.JU.GUILDS_BAR_ICON }), N(_, m);
+        }, [s, _, m]);
+    return (0, i.jsx)(f.Z, {
         id: 'guild-discover-button',
         ref: t,
-        className: l,
-        onClick: () => {
-            null == r || r(), (0, c.k5)({ source: m.JU.GUILDS_BAR_ICON }), E(d);
-        },
+        className: r,
+        onClick: I,
         selected: n,
-        tooltip: s,
+        tooltip: p,
         icon: a.CompassIcon
     });
 });
-t.Z = N;
+t.Z = x;
