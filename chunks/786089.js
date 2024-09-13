@@ -44,7 +44,7 @@ t.Z = (0, a.memo)(function (e) {
     )
         return null;
     let G = (0, c.wj)(O),
-        w = (0, p.Sz)(f.id, f.config.assets.logotype, G ? 'dark' : 'light'),
+        w = (0, p.Sz)(f.id, f.config.assets.logotype, 'dark'),
         k = (0, p.Sz)(f.id, D.asset),
         B = (0, p.nP)(k),
         H = N ? R + 8 : 0;
@@ -107,11 +107,13 @@ t.Z = (0, a.memo)(function (e) {
                         (0, i.jsx)(d.Heading, {
                             className: S.title,
                             variant: 'heading-md/semibold',
+                            color: 'always-white',
                             children: T.Z.Messages.QUEST.format({ questName: f.config.messages.questName })
                         }),
                         (0, i.jsx)(d.Text, {
                             variant: 'text-sm/medium',
-                            color: 'text-muted',
+                            color: G ? 'text-muted' : 'always-white',
+                            style: { opacity: G ? 1 : 0.75 },
                             children: T.Z.Messages.QUEST_REWARD_CLAIMED.format({
                                 reward: D.name,
                                 claimedDate: P
