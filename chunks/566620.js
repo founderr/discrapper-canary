@@ -230,6 +230,7 @@ async function Q(e) {
                 guildId: L,
                 applicationId: i,
                 channelId: r,
+                isStart: s,
                 error: e instanceof T.Z || e instanceof d.Z || e instanceof S.Z ? e : new d.Z(e)
             }),
             !1
