@@ -21,7 +21,7 @@ var a = t(120356),
     h = t(500257);
 function A(e) {
     let { application: n, className: t, sectionName: a } = e,
-        A = (0, p.nB)(n),
+        A = (0, p.L1)(n),
         E = (0, u.E)(A),
         N = {
             location: s.Vh.APP_LAUNCHER_APPLICATION_VIEW_MORE_MENU,

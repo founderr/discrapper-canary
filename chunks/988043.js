@@ -24,21 +24,21 @@ function C() {
     let e = (0, _.i)(),
         s = (0, _.c)(),
         t = d.h2.useSetting().includes(e),
-        [C, A] = a.useState(d.iG.useSetting()),
-        g = a.useCallback(
+        C = d.iG.useSetting(),
+        A = a.useCallback(
             (s) => {
                 let t = new Set((0, c.YK)());
                 s ? t.delete(e) : t.add(e), d.h2.updateSetting(Array.from(t));
             },
             [e]
         );
-    function h(e, s) {
+    function g(e, s) {
         o.default.track(N.rMx.GUILD_DEFAULT_DMS_UPDATED, {
             default_guilds_restricted: e,
             applied_to_existing_guilds: s
         });
     }
-    let O = (e) => {
+    let h = (e) => {
         (0, T.V)({
             header: m.Z.Messages.USER_DM_SETTINGS_TITLE,
             body: m.Z.Messages.USER_DM_SETTINGS_DESCRIPTION,
@@ -46,10 +46,10 @@ function C() {
             cancelText: m.Z.Messages.YES_TEXT,
             confirmButtonColor: i.Button.Colors.BRAND,
             onConfirm: () => {
-                d.iG.updateSetting(e), h(e, !1);
+                d.iG.updateSetting(e), g(e, !1);
             },
             onCancel: () => {
-                d.iG.updateSetting(e), d.h2.updateSetting(e ? l.default.keys(r.Z.getGuilds()) : []), h(e, !0);
+                d.iG.updateSetting(e), d.h2.updateSetting(e ? l.default.keys(r.Z.getGuilds()) : []), g(e, !0);
             }
         });
     };
@@ -62,14 +62,14 @@ function C() {
                       note: m.Z.Messages.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_DM_SETTING_GLOBAL_NOTE,
                       value: !C,
                       onChange: (e) => {
-                          A(!e), O(!e);
+                          h(!e);
                       }
                   })
                 : (0, n.jsx)(E.Z, {
                       title: m.Z.Messages.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_DM_SETTING_TITLE,
                       note: s ? m.Z.Messages.PRIVACY_SETTINGS_DIRECT_MESSAGES_DESC_HUB : m.Z.Messages.PRIVACY_SETTINGS_DIRECT_MESSAGES_DESC,
                       value: !t,
-                      onChange: g
+                      onChange: A
                   })
     });
 }
