@@ -38,18 +38,22 @@ var n = t(735250),
     j = t(689938),
     B = t(129503);
 let U = () =>
-        (0, n.jsxs)(x.Z, {
+        (0, n.jsx)(x.Z, {
             title: j.Z.Messages.PRIVACY_AND_SAFETY_CATEGORY_TITLE_SOCIAL_PERMISSIONS,
             webSetting: Z.s6.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_CATEGORY,
-            children: [
-                (0, n.jsx)(c.F, {
-                    setting: Z.s6.PRIVACY_AND_SAFETY_SERVER_SELECTOR,
-                    children: (0, n.jsx)(p.Z, {})
-                }),
-                (0, n.jsxs)(R.Z, {
-                    children: [(0, n.jsx)(P.Z, {}), (0, n.jsx)(L.Z, {}), (0, n.jsx)(D.Z, {}), (0, n.jsx)(M.Z, {}), (0, n.jsx)(f.Z, {})]
-                })
-            ]
+            children: (0, n.jsxs)(R.Z, {
+                children: [
+                    (0, n.jsx)(c.F, {
+                        setting: Z.s6.PRIVACY_AND_SAFETY_SERVER_SELECTOR,
+                        children: (0, n.jsx)(p.Z, {})
+                    }),
+                    (0, n.jsx)(P.Z, {}),
+                    (0, n.jsx)(L.Z, {}),
+                    (0, n.jsx)(D.Z, {}),
+                    (0, n.jsx)(M.Z, {}),
+                    (0, n.jsx)(f.Z, {})
+                ]
+            })
         }),
     G = () =>
         (0, n.jsxs)(n.Fragment, {
