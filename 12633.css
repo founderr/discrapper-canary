@@ -24169,6 +24169,10 @@ h3.improved_f017d0:after {
     align-items: center
 }
 
+:where(.badgesContainer_d60c6d):empty {
+    display: none
+}
+
 .badgesContainerCard_d60c6d>:nth-child(n+3) {
     display: none
 }
