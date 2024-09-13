@@ -109,7 +109,6 @@ function f() {
                 size: l.ButtonSizes.TINY,
                 shinyButtonClassName: T.upsellButton,
                 subscriptionTier: I.Si.TIER_2,
-                buttonText: m.Z.Messages.FOR_LATER_PREMIUM_UPSELL_CTA,
                 premiumModalAnalyticsLocation: { section: E.jXE.FOR_LATER_POPOUT_UPSELL }
             })
         ]

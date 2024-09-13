@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return M;
+        return x;
     }
 }),
     n(47120);
@@ -22,73 +22,72 @@ var i = n(735250),
     h = n(592125),
     C = n(655354),
     f = n(324081),
-    p = n(240126),
-    g = n(791914),
-    S = n(981631),
-    A = n(689938),
-    R = n(816396),
-    O = n(42967);
-let x = {
+    p = n(791914),
+    g = n(981631),
+    S = n(689938),
+    A = n(816396),
+    R = n(42967);
+let O = {
     offset: {
         left: 4,
         right: -12
     }
 };
-function M(e) {
+function x(e) {
     let { setTab: t, closePopout: n } = e,
         a = (0, c.e7)([T.Z], () => T.Z.getMessageReminders()),
         [r, l] = s.useState(!1),
         o = s.useMemo(() => a.filter((e) => null == e.saveData.dueAt || e.saveData.dueAt < new Date()), [a]),
         _ = r ? a : o;
     return (0, i.jsxs)('div', {
-        className: R.container,
+        className: A.container,
         children: [
-            (0, i.jsx)(g.Z, {
+            (0, i.jsx)(p.Z, {
                 tab: u.X.TODOS,
                 setTab: t,
                 closePopout: n
             }),
             (0, i.jsxs)('div', {
-                className: R.headerText,
+                className: A.headerText,
                 children: [
                     (0, i.jsx)(d.Heading, {
                         variant: 'heading-lg/bold',
-                        children: r ? A.Z.Messages.MESSAGE_REMINDERS_HEADER_ALL : A.Z.Messages.MESSAGE_REMINDERS_HEADER_OVERDUE
+                        children: r ? S.Z.Messages.MESSAGE_REMINDERS_HEADER_ALL : S.Z.Messages.MESSAGE_REMINDERS_HEADER_OVERDUE
                     }),
                     (0, i.jsx)(d.Anchor, {
                         onClick: () => l(!r),
                         children: (0, i.jsx)(d.Text, {
                             variant: 'text-sm/normal',
                             color: 'text-link',
-                            children: r ? A.Z.Messages.MESSAGE_REMINDERS_HEADER_SHOW_OVERDUE.format({ count: o.length }) : A.Z.Messages.MESSAGE_REMINDERS_HEADER_SHOW_ALL.format({ count: a.length })
+                            children: r ? S.Z.Messages.MESSAGE_REMINDERS_HEADER_SHOW_OVERDUE.format({ count: o.length }) : S.Z.Messages.MESSAGE_REMINDERS_HEADER_SHOW_ALL.format({ count: a.length })
                         })
                     })
                 ]
             }),
-            0 === _.length ? (0, i.jsx)(L, {}) : (0, i.jsx)(d.AdvancedScrollerThin, { children: _.map((e) => (0, i.jsx)(v, { messageReminder: e }, e.saveData.messageId)) })
+            0 === _.length ? (0, i.jsx)(v, {}) : (0, i.jsx)(d.AdvancedScrollerThin, { children: _.map((e) => (0, i.jsx)(M, { messageReminder: e }, e.saveData.messageId)) })
         ]
     });
 }
-function v(e) {
+function M(e) {
     let t,
         { messageReminder: s } = e,
         a = s.saveData,
         l = s.message,
         u = (0, c.e7)([h.Z], () => h.Z.getChannel(a.channelId)),
         T = () => {
-            (0, I.uL)(S.Z5c.CHANNEL(null == u ? void 0 : u.getGuildId(), a.channelId, a.messageId));
+            (0, I.uL)(g.Z5c.CHANNEL(null == u ? void 0 : u.getGuildId(), a.channelId, a.messageId));
         },
         p = null;
     return (null != a.dueAt &&
         (a.dueAt > new Date()
             ? ((t = 'text-muted'),
-              (p = A.Z.Messages.MESSAGE_REMINDERS_DUE_IN.format({
+              (p = S.Z.Messages.MESSAGE_REMINDERS_DUE_IN.format({
                   duration: o()
                       .duration(a.dueAt.getTime() - Date.now(), 'millisecond')
                       .humanize()
               })))
             : ((t = 'text-danger'),
-              (p = A.Z.Messages.MESSAGE_REMINDERS_OVERDUE.format({
+              (p = S.Z.Messages.MESSAGE_REMINDERS_OVERDUE.format({
                   duration: o()
                       .duration(Date.now() - a.dueAt.getTime(), 'millisecond')
                       .humanize()
@@ -96,19 +95,19 @@ function v(e) {
     null == l || null == u)
         ? null
         : (0, i.jsxs)('div', {
-              className: O.container,
+              className: R.container,
               children: [
                   (0, i.jsx)(f.Z, {
                       channel: u,
                       gotoChannel: T,
                       children: (0, i.jsxs)('div', {
-                          className: R.reminderActions,
+                          className: A.reminderActions,
                           children: [
                               null != s.saveData.notes && s.saveData.notes.length > 0
                                   ? (0, i.jsxs)(d.Text, {
                                         variant: 'text-sm/normal',
                                         color: 'text-muted',
-                                        className: R.notes,
+                                        className: A.notes,
                                         selectable: !0,
                                         children: [
                                             (0, i.jsx)(d.FileIcon, {
@@ -127,7 +126,7 @@ function v(e) {
                                     })
                                   : null,
                               (0, i.jsx)(d.TooltipContainer, {
-                                  text: A.Z.Messages.MESSAGE_REMINDERS_SNOOZE,
+                                  text: S.Z.Messages.MESSAGE_REMINDERS_SNOOZE,
                                   children: (0, i.jsx)(d.Clickable, {
                                       onClick: (e) =>
                                           (0, _.jW)(e, async () => {
@@ -138,7 +137,7 @@ function v(e) {
                                                       message: l
                                                   });
                                           }),
-                                      className: R.clock,
+                                      className: A.clock,
                                       children: (0, i.jsx)(d.ClockIcon, {
                                           size: 'custom',
                                           width: 20,
@@ -148,10 +147,10 @@ function v(e) {
                                   })
                               }),
                               (0, i.jsx)(d.TooltipContainer, {
-                                  text: A.Z.Messages.MESSAGE_REMINDERS_MARK_AS_DONE,
+                                  text: S.Z.Messages.MESSAGE_REMINDERS_MARK_AS_DONE,
                                   children: (0, i.jsx)(d.Clickable, {
                                       onClick: () => (0, m.x)(a),
-                                      className: R.delete,
+                                      className: A.delete,
                                       children: (0, i.jsx)(d.TrashIcon, {
                                           size: 'custom',
                                           width: 20,
@@ -164,10 +163,10 @@ function v(e) {
                       })
                   }),
                   (0, i.jsxs)('div', {
-                      className: r()(O.messageContainer, R.unloadedMessage),
+                      className: r()(R.messageContainer, A.unloadedMessage),
                       children: [
                           (0, i.jsx)(C.Z, {
-                              className: O.jumpMessageButton,
+                              className: R.jumpMessageButton,
                               onJump: T
                           }),
                           (0, i.jsx)(
@@ -175,10 +174,10 @@ function v(e) {
                               {
                                   message: l,
                                   channel: u,
-                                  className: O.message,
+                                  className: R.message,
                                   compact: N.jU.getSetting(),
                                   animateAvatar: !1,
-                                  focusProps: x,
+                                  focusProps: O,
                                   trackAnnouncementViews: !0
                               },
                               l.id
@@ -188,10 +187,6 @@ function v(e) {
               ]
           });
 }
-function L() {
-    return (0, i.jsx)(p.Z, {
-        Icon: d.DoubleCheckmarkIcon,
-        header: A.Z.Messages.MESSAGE_REMINDERS_EMPTY,
-        tip: A.Z.Messages.MESSAGE_REMINDERS_EMPTY_TIP
-    });
+function v() {
+    return null;
 }
