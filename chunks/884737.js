@@ -588,12 +588,16 @@ function k(e) {
         case null != _:
             if ((null == _ ? void 0 : _.newValue) != null) {
                 let E = new Date(null == _ ? void 0 : _.newValue).getTime(),
-                    s = M.default.extractTimestamp(e.id),
-                    T = Math.round((E - s) / 1000 / 60),
+                    s = E - M.default.extractTimestamp(e.id),
+                    T = Math.round(s / 1000 / 60),
                     I = [t.J6.DAYS, t.J6.HOURS, t.J6.MINUTES, t.J6.SECONDS],
                     n = (0, t.CI)(T, I);
                 if (null == n.unit || null == n.time) return null;
-                if (n.unit in j) return j[n.unit](n.time);
+                if (n.unit in j) {
+                    let e = n.unit,
+                        _ = n.unit === t.J6.SECONDS ? Math.round(s / 1000) : n.time;
+                    return j[e](_);
+                }
                 return null;
             }
             if ((null == _ ? void 0 : _.oldValue) != null) return c.Z.Messages.GUILD_COMMUNICATION_DISABLED_REMOVED;
