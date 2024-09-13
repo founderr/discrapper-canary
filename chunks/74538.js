@@ -125,6 +125,9 @@ n.d(t, {
     qV: function () {
         return ee;
     },
+    u0: function () {
+        return ek;
+    },
     uV: function () {
         return ea;
     },
@@ -1104,6 +1107,9 @@ function ex(e) {
 function eG(e) {
     return 'isNitroLocked' in e;
 }
+function ek(e) {
+    return null != e && P.OT.includes(e) ? 1 : 2;
+}
 t.ZP = Object.freeze({
     isNewUser: (e) => null != e && Date.now() - e.createdAt.getTime() < 2592000000,
     isPremiumAtLeast: y.yd,
@@ -1128,6 +1134,7 @@ t.ZP = Object.freeze({
     getDisplayPremiumType: X,
     getPremiumPlanOptions: en,
     getUpgradeEligibilities: ei,
+    getReverseTrialWeeks: ek,
     getPlanDescription: J,
     isPremiumSku: function (e) {
         return e === P.Si.TIER_0 || e === P.Si.TIER_1 || e === P.Si.TIER_2;
