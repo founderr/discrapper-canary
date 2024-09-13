@@ -115,7 +115,7 @@ function K(e) {
                 r = (0, v.ZP)(t),
                 a = i.useMemo(() => r.map((e) => e.id), [r]),
                 s = (0, u.e7)([x.ZP], () => x.ZP.getVoiceStates(t), [t]),
-                o = (0, u.e7)([P.Z], () => P.Z.getBlockedIDs()),
+                o = (0, u.Wu)([P.Z], () => P.Z.getBlockedIDs()),
                 c = (0, f.aK)('guild-tooltip'),
                 _ = l().flatMap(n, (t) => {
                     var n;

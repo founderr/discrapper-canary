@@ -100,7 +100,7 @@ n.d(t, {
                             let e = new l.Hx(a);
                             f.m9({
                                 categoryId: i,
-                                statusCode: e.code
+                                statusCode: e.status
                             }),
                                 u.Z.dispatch({
                                     type: 'GUILD_DISCOVERY_SEARCH_FETCH_FAILURE',
@@ -114,7 +114,7 @@ n.d(t, {
                 let e = new l.Hx(n);
                 f.m9({
                     categoryId: i,
-                    statusCode: e.code
+                    statusCode: e.status
                 }),
                     u.Z.dispatch({
                         type: 'GUILD_DISCOVERY_SEARCH_FETCH_FAILURE',
