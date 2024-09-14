@@ -4,28 +4,37 @@ t.d(s, {
     }
 }),
     t(47120);
-var n = t(735250);
-t(470079);
-var a = t(603627),
-    i = t(302454),
-    r = t.n(i),
-    o = t(424395);
-let l = new a.IntlManagerReact('en-US', {
-    $_: () => o.w,
-    $i: (e) => (0, n.jsx)('em', { children: e }),
-    $b: (e) => (0, n.jsx)('strong', { children: e }),
-    $p: (e) => (0, n.jsx)('p', { children: e }),
-    $code: (e) => (0, n.jsx)('code', { children: e }),
-    $link: (e) => {
-        let [s, ...a] = e,
-            { Anchor: i } = t(756715),
-            o = {};
-        return (
-            'string' == typeof s ? (o.href = r().sanitizeUrl(s)) : (o.onClick = s),
-            (0, n.jsx)(i, {
-                ...o,
-                children: a
-            })
-        );
-    }
+var n = t(735250),
+    a = t(470079),
+    i = t(375986),
+    r = t(302454),
+    o = t.n(r);
+t(424395);
+let l = new i.IntlManager('en-US').withFormatters({
+    format: (0, i.makeReactFormatter)({
+        $_: () => '',
+        $i: (e, s) => (0, n.jsx)('em', { children: e }, s),
+        $b: (e, s) => (0, n.jsx)('strong', { children: e }, s),
+        $p: (e, s) => (0, n.jsx)('p', { children: e }, s),
+        $code: (e, s) => (0, n.jsx)('code', { children: e }, s),
+        $link: (e, s) => {
+            let [n, ...i] = e,
+                { Anchor: r } = t(756715),
+                l = {};
+            return (
+                'string' == typeof n ? (l.href = o().sanitizeUrl(n)) : (l.onClick = n),
+                (0, a.createElement)(
+                    r,
+                    {
+                        ...l,
+                        key: s
+                    },
+                    i
+                )
+            );
+        }
+    }),
+    formatToPlainString: i.stringFormatter,
+    formatToMarkdownString: i.markdownFormatter,
+    formatToParts: i.astFormatter
 });

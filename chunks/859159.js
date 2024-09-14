@@ -1,57 +1,44 @@
-r.r(e),
-    r.d(e, {
-        SKELETON_TYPE: function () {
-            return a.aV;
-        },
-        TYPE: function () {
-            return a.wD;
-        },
-        _Parser: function () {
-            return u;
-        },
-        createLiteralElement: function () {
-            return a.mD;
-        },
-        createNumberElement: function () {
-            return a.qx;
-        },
-        isArgumentElement: function () {
-            return a.VG;
-        },
-        isDateElement: function () {
-            return a.rp;
-        },
-        isDateTimeSkeleton: function () {
-            return a.Ii;
-        },
-        isLiteralElement: function () {
-            return a.O4;
-        },
-        isNumberElement: function () {
-            return a.uf;
-        },
-        isNumberSkeleton: function () {
-            return a.Wh;
-        },
-        isPluralElement: function () {
-            return a.Jo;
-        },
-        isPoundElement: function () {
-            return a.yx;
-        },
-        isSelectElement: function () {
-            return a.Wi;
-        },
-        isTagElement: function () {
-            return a.HI;
-        },
-        isTimeElement: function () {
-            return a.pe;
-        },
-        parse: function () {
-            return s;
-        }
-    });
+r.d(e, {
+    HI: function () {
+        return a.HI;
+    },
+    Ii: function () {
+        return a.Ii;
+    },
+    Jo: function () {
+        return a.Jo;
+    },
+    O4: function () {
+        return a.O4;
+    },
+    Qc: function () {
+        return s;
+    },
+    VG: function () {
+        return a.VG;
+    },
+    Wh: function () {
+        return a.Wh;
+    },
+    Wi: function () {
+        return a.Wi;
+    },
+    pe: function () {
+        return a.pe;
+    },
+    rp: function () {
+        return a.rp;
+    },
+    uf: function () {
+        return a.uf;
+    },
+    wD: function () {
+        return a.wD;
+    },
+    yx: function () {
+        return a.yx;
+    }
+});
 var n = r(146150),
     i = r(827671),
     o = r(596771),
@@ -81,4 +68,3 @@ function s(t, e) {
         r.val
     );
 }
-var u = o._;

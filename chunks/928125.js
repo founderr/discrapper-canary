@@ -20,10 +20,10 @@ function f(t) {
 function p(t) {
     return t.type === n.plural;
 }
-function m(t) {
+function d(t) {
     return t.type === n.pound;
 }
-function d(t) {
+function m(t) {
     return t.type === n.tag;
 }
 function v(t) {
@@ -32,22 +32,9 @@ function v(t) {
 function g(t) {
     return !!(t && 'object' == typeof t && t.type === i.dateTime);
 }
-function y(t) {
-    return {
-        type: n.literal,
-        value: t
-    };
-}
-function b(t, e) {
-    return {
-        type: n.number,
-        value: t,
-        style: e
-    };
-}
 r.d(e, {
     HI: function () {
-        return d;
+        return m;
     },
     Ii: function () {
         return g;
@@ -70,14 +57,8 @@ r.d(e, {
     aV: function () {
         return i;
     },
-    mD: function () {
-        return y;
-    },
     pe: function () {
         return h;
-    },
-    qx: function () {
-        return b;
     },
     rp: function () {
         return l;
@@ -89,7 +70,7 @@ r.d(e, {
         return n;
     },
     yx: function () {
-        return m;
+        return d;
     }
 }),
     ((o = n || (n = {}))[(o.literal = 0)] = 'literal'),
