@@ -6,7 +6,7 @@ a.d(t, {
 var n,
     o,
     i = a(818083);
-((n = o || (o = {}))[(n.DEFAULT = 0)] = 'DEFAULT'), (n[(n.WINTER_2023_DROP = 1)] = 'WINTER_2023_DROP'), (n[(n.MONSTER_DROP = 2)] = 'MONSTER_DROP'), (n[(n.SPRINGTOONS = 4)] = 'SPRINGTOONS'), (n[(n.SHY = 5)] = 'SHY'), (n[(n.GALAXY = 6)] = 'GALAXY'), (n[(n.TIDE = 7)] = 'TIDE'), (n[(n.ROBERT = 8)] = 'ROBERT'), (n[(n.STORM = 9)] = 'STORM');
+((n = o || (o = {}))[(n.DEFAULT = 0)] = 'DEFAULT'), (n[(n.WINTER_2023_DROP = 1)] = 'WINTER_2023_DROP'), (n[(n.MONSTER_DROP = 2)] = 'MONSTER_DROP'), (n[(n.SPRINGTOONS = 4)] = 'SPRINGTOONS'), (n[(n.SHY = 5)] = 'SHY'), (n[(n.GALAXY = 6)] = 'GALAXY'), (n[(n.TIDE = 7)] = 'TIDE'), (n[(n.ROBERT = 8)] = 'ROBERT'), (n[(n.STORM = 9)] = 'STORM'), (n[(n.EQUINOX_FALL = 10)] = 'EQUINOX_FALL');
 let r = (0, i.B)({
     kind: 'user',
     id: '2023-12_collectibles_shop_marketing',
@@ -27,6 +27,11 @@ let r = (0, i.B)({
             id: 9,
             label: 'Storm 2024',
             config: { variant: 9 }
+        },
+        {
+            id: 10,
+            label: 'Equinox/fall 2024',
+            config: { variant: 10 }
         }
     ]
 });

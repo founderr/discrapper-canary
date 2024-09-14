@@ -1,18 +1,18 @@
 a.d(t, {
     GX: function () {
-        return w;
+        return O;
     },
     M7: function () {
         return T;
     },
     UY: function () {
-        return b;
+        return g;
     },
     k2: function () {
         return n;
     },
     v: function () {
-        return g;
+        return h;
     }
 }),
     a(627341),
@@ -60,45 +60,45 @@ let T = (e) =>
             zIndex: 10
         }
     },
-    S = {
+    b = {
         imageSrc: d,
         style: {
             position: 'absolute',
             width: '600px'
         }
     },
-    h = {
+    S = {
         imageSrc: u,
         style: {
             position: 'absolute',
             width: '850px'
         }
     },
-    b = (e) =>
+    g = (e) =>
         (0, i.EQ)(e)
             .with('1252405010608951358', () => I)
             .with('1252405017688936508', () => I)
-            .with('1267521289330102344', () => h)
-            .with('1267521289355268154', () => h)
-            .with('1266160780928352268', () => h)
-            .with('1266160780978556969', () => h)
-            .with('1266161342801383434', () => h)
-            .with('1220513995308400680', () => h)
-            .with('1220513984273186816', () => h)
-            .with('1220513989729976411', () => h)
-            .with('1220514048068812901', () => h)
-            .with('1266493591207940133', () => h)
-            .with('1266493591275044903', () => h)
-            .with('1220432740638523543', () => h)
-            .with('1220513977683935373', () => S)
-            .with('1220432647453409384', () => S)
-            .with('1220432697718083614', () => S)
+            .with('1267521289330102344', () => S)
+            .with('1267521289355268154', () => S)
+            .with('1266160780928352268', () => S)
+            .with('1266160780978556969', () => S)
+            .with('1266161342801383434', () => S)
+            .with('1220513995308400680', () => S)
+            .with('1220513984273186816', () => S)
+            .with('1220513989729976411', () => S)
+            .with('1220514048068812901', () => S)
+            .with('1266493591207940133', () => S)
+            .with('1266493591275044903', () => S)
+            .with('1220432740638523543', () => S)
+            .with('1220513977683935373', () => b)
+            .with('1220432647453409384', () => b)
+            .with('1220432697718083614', () => b)
             .otherwise(() => null),
-    g = (e) =>
+    h = (e) =>
         (0, i.EQ)(e)
             .with('1262491137386614805', () => C)
             .otherwise(() => null),
-    w = {
+    O = {
         [f.C5.TIDE]: {
             artSrc: a(94899),
             backgroundSrc: a(987583),
@@ -110,5 +110,9 @@ let T = (e) =>
             backgroundSrc: a(619359),
             title: () => l.Z.Messages.COLLECTIBLES_ROBERT_SETTINGS_BANNER_TITLE,
             description: () => l.Z.Messages.COLLECTIBLES_ROBERT_SETTINGS_BANNER_DESCRIPTION
+        },
+        [f.C5.EQUINOX_FALL]: {
+            artSrc: a(148718),
+            backgroundSrc: a(866074)
         }
     };
