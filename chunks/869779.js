@@ -6,12 +6,12 @@ s.r(t),
     });
 var n = s(735250),
     l = s(470079),
-    a = s(442837),
-    i = s(481060),
+    i = s(442837),
+    a = s(481060),
     r = s(570140),
     o = s(787014),
-    d = s(37234),
-    c = s(503089),
+    c = s(37234),
+    d = s(503089),
     u = s(493544),
     h = s(367907),
     m = s(933557),
@@ -24,8 +24,8 @@ var n = s(735250),
     S = s(277053),
     x = s(388610),
     f = s(592125),
-    C = s(496675),
-    M = s(699516),
+    M = s(496675),
+    C = s(699516),
     I = s(594174),
     R = s(585483),
     Z = s(787263),
@@ -55,21 +55,21 @@ class w extends l.PureComponent {
     }
     componentDidUpdate(e) {
         let { formState: t, section: s } = e,
-            { formState: n, section: l, canManageRoles: a, canManageChannels: i, canManageWebhooks: r } = this.props;
-        (i || a || r) && (n !== j.QZA.CLOSED || n === t) && (a || l !== j.CoT.PERMISSIONS) && (r || l !== j.CoT.INTEGRATIONS) ? l !== s && y(l, s) : (0, d.xf)();
+            { formState: n, section: l, canManageRoles: i, canManageChannels: a, canManageWebhooks: r } = this.props;
+        (a || i || r) && (n !== j.QZA.CLOSED || n === t) && (i || l !== j.CoT.PERMISSIONS) && (r || l !== j.CoT.INTEGRATIONS) ? l !== s && y(l, s) : (0, c.xf)();
     }
     render() {
-        let { theme: e, sidebarTheme: t, section: s, channel: l, category: a, canManageRoles: r, canManageChannels: h, canDeleteChannels: T, canManageWebhooks: p } = this.props;
+        let { theme: e, sidebarTheme: t, section: s, channel: l, category: i, canManageRoles: r, canManageChannels: h, canDeleteChannels: T, canManageWebhooks: p } = this.props;
         return null == l
             ? null
-            : (0, n.jsx)(c.ZP, {
+            : (0, n.jsx)(d.ZP, {
                   theme: e,
                   sidebarTheme: t,
                   section: null != s ? s : j.CoT.OVERVIEW,
                   onSetSection: o.zc,
-                  onClose: d.xf,
+                  onClose: c.xf,
                   sections: (function (e) {
-                      let { channel: t, category: s, canManageRoles: l, canManageChannels: a, canDeleteChannels: r, canManageWebhooks: c } = e,
+                      let { channel: t, category: s, canManageRoles: l, canManageChannels: i, canDeleteChannels: r, canManageWebhooks: d } = e,
                           h = (0, g.KS)(t),
                           { GUILD_CATEGORY: T } = j.d4z,
                           p = N.Ec.has(t.type),
@@ -88,15 +88,15 @@ class w extends l.PureComponent {
                                                           className: D.channelIcon
                                                       })
                                                     : null,
-                                                (0, m.F6)(t, I.default, M.Z),
+                                                (0, m.F6)(t, I.default, C.Z),
                                                 null != s
-                                                    ? (0, n.jsx)(i.Text, {
+                                                    ? (0, n.jsx)(a.Text, {
                                                           tag: 'span',
                                                           variant: 'text-xs/semibold',
                                                           color: 'header-secondary',
                                                           lineClamp: 1,
                                                           className: D.category,
-                                                          children: (0, m.F6)(s, I.default, M.Z)
+                                                          children: (0, m.F6)(s, I.default, C.Z)
                                                       })
                                                     : null
                                             ]
@@ -128,7 +128,7 @@ class w extends l.PureComponent {
                               label: b.Z.Messages.INVITES,
                               element: A.Z,
                               type: u.bT.CUSTOM,
-                              predicate: () => t.type !== T && a && !p
+                              predicate: () => t.type !== T && i && !p
                           },
                           {
                               section: j.CoT.INTEGRATIONS,
@@ -139,7 +139,7 @@ class w extends l.PureComponent {
                                   stores: [_.Z],
                                   element: v.B
                               },
-                              predicate: () => !!c && N.Ti.has(t.type)
+                              predicate: () => !!d && N.Ti.has(t.type)
                           },
                           { section: u.ID.DIVIDER },
                           {
@@ -149,12 +149,12 @@ class w extends l.PureComponent {
                                       R.S.subscribeOnce(j.CkL.LAYER_POP_COMPLETE, () => {
                                           (0, o.zz)(t.id);
                                       }),
-                                          (0, d.xf)();
+                                          (0, c.xf)();
                                   });
                               },
                               label: f,
                               ariaLabel: f,
-                              icon: (0, n.jsx)(i.TrashIcon, {
+                              icon: (0, n.jsx)(a.TrashIcon, {
                                   size: 'xs',
                                   color: 'currentColor'
                               }),
@@ -163,7 +163,7 @@ class w extends l.PureComponent {
                       ];
                   })({
                       channel: l,
-                      category: a,
+                      category: i,
                       canManageRoles: r,
                       canManageChannels: h,
                       canDeleteChannels: T,
@@ -173,32 +173,32 @@ class w extends l.PureComponent {
     }
 }
 function P() {
-    let { channel: e, analyticsLocation: t } = (0, a.cj)([x.Z], () => x.Z.getProps()),
-        s = (0, a.e7)([x.Z], () => x.Z.getFormState()),
-        l = (0, a.e7)([x.Z], () => x.Z.getSection()),
-        i = (0, a.e7)([p.Z], () => p.Z.theme),
-        r = (0, a.e7)([p.Z], () => (p.Z.darkSidebar ? j.BRd.DARK : void 0)),
+    let { channel: e, analyticsLocation: t } = (0, i.cj)([x.Z], () => x.Z.getProps()),
+        s = (0, i.e7)([x.Z], () => x.Z.getFormState()),
+        l = (0, i.e7)([x.Z], () => x.Z.getSection()),
+        a = (0, i.e7)([p.Z], () => p.Z.theme),
+        r = (0, i.e7)([p.Z], () => (p.Z.darkSidebar ? j.BRd.DARK : void 0)),
         o = (0, T.C7)(e),
-        d = (0, T.Xb)(e),
+        c = (0, T.Xb)(e),
         {
-            canManageChannels: c,
+            canManageChannels: d,
             canManageRoles: u,
             canManageWebhooks: h
-        } = (0, a.cj)([C.Z], () => ({
-            canManageChannels: C.Z.can(j.Plq.MANAGE_CHANNELS, e),
-            canManageRoles: null != e && C.Z.can(j.Plq.MANAGE_ROLES, e),
-            canManageWebhooks: null != e && C.Z.can(j.Plq.MANAGE_WEBHOOKS, e)
+        } = (0, i.cj)([M.Z], () => ({
+            canManageChannels: M.Z.can(j.Plq.MANAGE_CHANNELS, e),
+            canManageRoles: null != e && M.Z.can(j.Plq.MANAGE_ROLES, e),
+            canManageWebhooks: null != e && M.Z.can(j.Plq.MANAGE_WEBHOOKS, e)
         })),
-        m = (0, a.e7)([f.Z], () => f.Z.getChannel(null == e ? void 0 : e.parent_id));
+        m = (0, i.e7)([f.Z], () => f.Z.getChannel(null == e ? void 0 : e.parent_id));
     return (0, n.jsx)(w, {
         channel: e,
         category: m,
-        canManageChannels: (null == e ? void 0 : e.isThread()) ? o : c,
-        canDeleteChannels: (null == e ? void 0 : e.isThread()) ? d : c,
+        canManageChannels: (null == e ? void 0 : e.isThread()) ? o : d,
+        canDeleteChannels: (null == e ? void 0 : e.isThread()) ? c : d,
         canManageRoles: u,
         canManageWebhooks: h,
         formState: s,
-        theme: i,
+        theme: a,
         sidebarTheme: r,
         section: l,
         analyticsLocation: t

@@ -1,15 +1,15 @@
 s.d(t, {
     Z: function () {
-        return a;
+        return i;
     }
 });
 var n = s(735250);
 s(470079);
 var l = s(325767);
-function a(e) {
-    let { color: t = 'currentColor', foreground: s, backgroundColor: a = 'none', ...i } = e;
+function i(e) {
+    let { color: t = 'currentColor', foreground: s, backgroundColor: i = 'none', ...a } = e;
     return (0, n.jsxs)('svg', {
-        ...(0, l.Z)(i),
+        ...(0, l.Z)(a),
         width: '272',
         height: '143',
         viewBox: '0 0 272 143',
@@ -22,7 +22,7 @@ function a(e) {
                 width: '272',
                 height: '112',
                 rx: '12',
-                fill: a
+                fill: i
             }),
             (0, n.jsx)('rect', {
                 className: s,

@@ -6,8 +6,8 @@ s.d(n, {
     s(47120);
 var a = s(735250),
     t = s(470079),
-    l = s(442837),
-    i = s(481060),
+    i = s(442837),
+    l = s(481060),
     o = s(570140),
     r = s(600164),
     c = s(103879),
@@ -16,72 +16,72 @@ var a = s(735250),
     E = s(613734),
     N = s(981631),
     u = s(689938),
-    x = s(6063),
-    A = s(487043);
+    A = s(6063),
+    x = s(487043);
 function I(e) {
-    let { className: n, onClose: s, onNext: I, onBack: C } = e,
-        S = (0, l.e7)([d.Z], () => d.Z.getAppealClassificationId()),
-        { classification: T } = (0, E.YG)(null != S ? S : N.lds),
-        m = (0, _.c7)(null == T ? void 0 : T.description),
-        h = (0, l.e7)([d.Z], () => d.Z.getIsSubmitting()),
-        M = (0, l.e7)([d.Z], () => d.Z.getAppealSignal()),
-        L = (0, l.e7)([d.Z], () => d.Z.getFreeTextAppealReason()),
-        [g, O] = t.useState(!1),
-        [p, j] = t.useState(''),
-        P = t.useCallback((e) => {
+    let { className: n, onClose: s, onNext: I, onBack: m } = e,
+        S = (0, i.e7)([d.Z], () => d.Z.getAppealClassificationId()),
+        { classification: C } = (0, E.YG)(null != S ? S : N.lds),
+        T = (0, _.c7)(null == C ? void 0 : C.description),
+        h = (0, i.e7)([d.Z], () => d.Z.getIsSubmitting()),
+        L = (0, i.e7)([d.Z], () => d.Z.getAppealSignal()),
+        M = (0, i.e7)([d.Z], () => d.Z.getFreeTextAppealReason()),
+        [p, P] = t.useState(!1),
+        [O, g] = t.useState(''),
+        j = t.useCallback((e) => {
             o.Z.dispatch({
                 type: 'SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE',
                 userInput: e
             });
         }, []),
-        b = t.useCallback(async () => {
+        Z = t.useCallback(async () => {
             if (null !== S)
                 try {
-                    j(''), await c.uR(S, M, L), null == I || I();
+                    g(''), await c.uR(S, L, M), null == I || I();
                 } catch (n) {
                     var e;
-                    j((0, _.Zs)(null === (e = n.body) || void 0 === e ? void 0 : e.code));
+                    g((0, _.Zs)(null === (e = n.body) || void 0 === e ? void 0 : e.code));
                 }
-        }, [S, M, L, I]);
+        }, [S, L, M, I]);
     return (0, a.jsxs)(a.Fragment, {
         children: [
-            (0, a.jsxs)(i.ModalHeader, {
+            (0, a.jsxs)(l.ModalHeader, {
                 direction: r.Z.Direction.VERTICAL,
-                className: A.header,
+                className: x.header,
                 separator: !1,
                 children: [
-                    (0, a.jsx)(i.Heading, {
-                        className: A.title,
+                    (0, a.jsx)(l.Heading, {
+                        className: x.title,
                         variant: 'heading-xl/semibold',
                         children: u.Z.Messages.APPEAL_INGESTION_MODAL_HEADER
                     }),
-                    (0, a.jsx)(i.Text, {
-                        className: A.subtitle,
+                    (0, a.jsx)(l.Text, {
+                        className: x.subtitle,
                         color: 'header-secondary',
                         variant: 'text-md/normal',
                         children: u.Z.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_SUBHEADER
                     }),
                     null != s &&
-                        (0, a.jsx)(i.ModalCloseButton, {
-                            className: A.closeButton,
+                        (0, a.jsx)(l.ModalCloseButton, {
+                            className: x.closeButton,
                             onClick: s
                         })
                 ]
             }),
-            (0, a.jsxs)(i.ModalContent, {
+            (0, a.jsxs)(l.ModalContent, {
                 className: n,
                 paddingFix: !1,
                 children: [
                     (0, a.jsx)('ul', {
-                        className: x.listContainer,
-                        children: [(0, _.ox)(M), L]
+                        className: A.listContainer,
+                        children: [(0, _.ox)(L), M]
                             .filter((e) => e.length > 0)
                             .map((e, n) =>
                                 (0, a.jsx)(
                                     'li',
                                     {
-                                        className: x.listItem,
-                                        children: (0, a.jsx)(i.Text, {
+                                        className: A.listItem,
+                                        children: (0, a.jsx)(l.Text, {
                                             tag: 'span',
                                             variant: 'text-md/normal',
                                             children: e
@@ -92,62 +92,62 @@ function I(e) {
                             )
                     }),
                     (0, a.jsx)('div', {
-                        className: x.anchorContainer,
-                        children: (0, a.jsx)(i.Anchor, {
-                            onClick: () => O((e) => !e),
-                            children: (0, a.jsx)(i.Heading, {
+                        className: A.anchorContainer,
+                        children: (0, a.jsx)(l.Anchor, {
+                            onClick: () => P((e) => !e),
+                            children: (0, a.jsx)(l.Heading, {
                                 variant: 'heading-md/normal',
                                 color: 'text-link',
-                                children: L.length > 0 ? u.Z.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_EDIT_DETAILS : u.Z.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_ADD_DETAILS
+                                children: M.length > 0 ? u.Z.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_EDIT_DETAILS : u.Z.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_ADD_DETAILS
                             })
                         })
                     }),
-                    g &&
+                    p &&
                         (0, a.jsx)('div', {
-                            className: x.inputContainer,
-                            children: (0, a.jsx)(i.TextArea, {
-                                value: L,
-                                onChange: P
+                            className: A.inputContainer,
+                            children: (0, a.jsx)(l.TextArea, {
+                                value: M,
+                                onChange: j
                             })
                         }),
                     (0, a.jsx)('div', {
-                        className: A.policyContainer,
-                        children: (0, a.jsx)(i.Text, {
+                        className: x.policyContainer,
+                        children: (0, a.jsx)(l.Text, {
                             variant: 'text-md/semibold',
-                            children: m
+                            children: T
                         })
                     }),
-                    (0, a.jsx)(i.Text, {
+                    (0, a.jsx)(l.Text, {
                         variant: 'text-xs/medium',
                         color: 'header-secondary',
-                        className: x.footerText,
+                        className: A.footerText,
                         children: u.Z.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_FOOTER
                     })
                 ]
             }),
-            (0, a.jsxs)(i.ModalFooter, {
+            (0, a.jsxs)(l.ModalFooter, {
                 direction: r.Z.Direction.VERTICAL,
                 children: [
-                    '' !== p &&
-                        (0, a.jsx)(i.Text, {
-                            className: x.errorText,
+                    '' !== O &&
+                        (0, a.jsx)(l.Text, {
+                            className: A.errorText,
                             variant: 'text-lg/normal',
                             color: 'text-danger',
-                            children: p
+                            children: O
                         }),
                     (0, a.jsxs)('div', {
-                        className: x.buttonContainer,
+                        className: A.buttonContainer,
                         children: [
-                            (0, a.jsx)(i.Button, {
-                                look: i.Button.Looks.LINK,
-                                color: i.Button.Colors.PRIMARY,
-                                onClick: C,
+                            (0, a.jsx)(l.Button, {
+                                look: l.Button.Looks.LINK,
+                                color: l.Button.Colors.PRIMARY,
+                                onClick: m,
                                 disabled: h,
                                 children: u.Z.Messages.BACK
                             }),
-                            (0, a.jsx)(i.Button, {
-                                onClick: b,
-                                color: i.Button.Colors.RED,
+                            (0, a.jsx)(l.Button, {
+                                onClick: Z,
+                                color: l.Button.Colors.RED,
                                 submitting: h,
                                 children: u.Z.Messages.SUBMIT
                             })

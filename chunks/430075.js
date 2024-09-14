@@ -15,7 +15,7 @@ var _ = n(442837),
     a = n(981631),
     o = n(689938),
     A = n(561306);
-function c() {
+function s() {
     return (0, E.jsxs)(i.Notice, {
         color: i.NoticeColors.DANGER,
         className: A.nagbar,
@@ -37,7 +37,7 @@ function c() {
         ]
     });
 }
-function s() {
+function c() {
     return (0, E.jsx)('div', {
         className: A.pageContainer,
         children: (0, E.jsx)(N.Z, {})
@@ -48,7 +48,7 @@ function u() {
         null == (0, _.e7)([I.default], () => I.default.getSuspendedUserToken()) && (0, r.uL)(a.Z5c.LOGIN),
         (0, E.jsxs)('div', {
             className: A.container,
-            children: [(0, E.jsx)(c, {}), (0, E.jsx)(s, {})]
+            children: [(0, E.jsx)(s, {}), (0, E.jsx)(c, {})]
         })
     );
 }

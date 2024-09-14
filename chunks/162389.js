@@ -5,12 +5,12 @@ s.d(t, {
 });
 var n = s(735250),
     l = s(470079),
-    a = s(120356),
-    i = s.n(a),
+    i = s(120356),
+    a = s.n(i),
     r = s(442837),
     o = s(692547),
-    d = s(481060),
-    c = s(787014),
+    c = s(481060),
+    d = s(787014),
     u = s(659388),
     h = s(710344),
     m = s(496675),
@@ -21,14 +21,14 @@ var n = s(735250),
     N = s(311475);
 function _(e) {
     let { channel: t } = e,
-        a = (0, r.e7)([m.Z], () => m.Z.can(T.Plq.MANAGE_CHANNELS, t), [t]),
+        i = (0, r.e7)([m.Z], () => m.Z.can(T.Plq.MANAGE_CHANNELS, t), [t]),
         u = t.availableTags.length >= E.pC,
         g = t.availableTags.length > 0,
         _ = l.useCallback(() => {
             let e = t.availableTags.length >= E.pC;
-            a &&
+            i &&
                 !e &&
-                (0, d.openModalLazy)(async () => {
+                (0, c.openModalLazy)(async () => {
                     let { default: e } = await s.e('21971').then(s.bind(s, 201049));
                     return (s) =>
                         (0, n.jsx)(e, {
@@ -37,11 +37,11 @@ function _(e) {
                             guildId: t.guild_id
                         });
                 });
-        }, [t, a]),
+        }, [t, i]),
         x = l.useCallback(
             (e) => {
-                a &&
-                    (0, d.openModalLazy)(async () => {
+                i &&
+                    (0, c.openModalLazy)(async () => {
                         let { default: l } = await s.e('21971').then(s.bind(s, 201049));
                         return (s) =>
                             (0, n.jsx)(l, {
@@ -52,14 +52,14 @@ function _(e) {
                             });
                     });
             },
-            [a, t]
+            [i, t]
         ),
         {
             handleDragStart: f,
-            handleDragReset: C,
-            handleDragComplete: M
+            handleDragReset: M,
+            handleDragComplete: C
         } = (0, h.Z)(t.availableTags, (e) => {
-            (0, c.pW)({ availableTags: e });
+            (0, d.pW)({ availableTags: e });
         });
     return (0, n.jsxs)('div', {
         className: N.tags,
@@ -71,10 +71,10 @@ function _(e) {
                           {
                               tag: e,
                               availableTags: t.availableTags,
-                              canManageChannels: a,
+                              canManageChannels: i,
                               onTagClick: x,
-                              onDragComplete: M,
-                              onDragReset: C,
+                              onDragComplete: C,
+                              onDragReset: M,
                               onDragStart: f
                           },
                           e.id
@@ -82,10 +82,10 @@ function _(e) {
                   )
                 : null,
             g
-                ? (0, n.jsx)(d.Clickable, {
+                ? (0, n.jsx)(c.Clickable, {
                       onClick: _,
-                      className: i()(N.addTags, { [N.disabled]: !a || u }),
-                      children: (0, n.jsx)(d.PlusSmallIcon, {
+                      className: a()(N.addTags, { [N.disabled]: !i || u }),
+                      children: (0, n.jsx)(c.PlusSmallIcon, {
                           size: 'custom',
                           'aria-label': p.Z.Messages.FORUM_TAG_CREATE,
                           color: o.Z.unsafe_rawColors.WHITE_500.css,
@@ -93,8 +93,8 @@ function _(e) {
                           height: 20
                       })
                   })
-                : (0, n.jsx)(d.Button, {
-                      disabled: !a,
+                : (0, n.jsx)(c.Button, {
+                      disabled: !i,
                       onClick: _,
                       children: p.Z.Messages.FORUM_TAG_CREATE
                   })
@@ -102,8 +102,8 @@ function _(e) {
     });
 }
 function S(e) {
-    let { tag: t, availableTags: s, canManageChannels: l, onTagClick: a, onDragComplete: r, onDragStart: o, onDragReset: d } = e,
-        c = s.findIndex((e) => e.id === t.id),
+    let { tag: t, availableTags: s, canManageChannels: l, onTagClick: i, onDragComplete: r, onDragStart: o, onDragReset: c } = e,
+        d = s.findIndex((e) => e.id === t.id),
         {
             drag: h,
             dragSourcePosition: m,
@@ -111,16 +111,16 @@ function S(e) {
             setIsDraggable: T
         } = (0, u.Z)({
             type: 'CHANNEL_SETTINGS_FORUM_TAGS',
-            index: c,
+            index: d,
             optionId: t.id,
             onDragStart: o,
             onDragComplete: r,
-            onDragReset: d
+            onDragReset: c
         });
     return (0, n.jsx)('div', {
-        className: i()(N.container, {
-            [N.dropIndicatorBefore]: null != m && c < m,
-            [N.dropIndicatorAfter]: null != m && c > m
+        className: a()(N.container, {
+            [N.dropIndicatorBefore]: null != m && d < m,
+            [N.dropIndicatorAfter]: null != m && d > m
         }),
         ref: (e) => h(E(e)),
         onMouseEnter: () => T(l),
@@ -129,7 +129,7 @@ function S(e) {
             tag: t,
             disabled: !l,
             ariaLabel: p.Z.Messages.FORUM_TAG_EDIT_LABEL.format({ name: t.name }),
-            onClick: l ? () => a(t) : void 0
+            onClick: l ? () => i(t) : void 0
         })
     });
 }

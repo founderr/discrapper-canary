@@ -5,7 +5,7 @@ s.d(t, {
 });
 var n = s(735250);
 function l(e) {
-    let { width: t = 18, height: s = 18, color: l = 'currentColor', foreground: a, background: i, className: r } = e;
+    let { width: t = 18, height: s = 18, color: l = 'currentColor', foreground: i, background: a, className: r } = e;
     return (0, n.jsx)('svg', {
         width: t,
         height: s,
@@ -23,12 +23,12 @@ function l(e) {
                     fillOpacity: '0.3',
                     fill: l,
                     fillRule: 'nonzero',
-                    className: i
+                    className: a
                 }),
                 (0, n.jsx)('path', {
                     d: 'M8.25,12.75 L8.25,11.25 L9.75,11.25 L9.75,12.75 L8.25,12.75 Z M8.25,9.75 L8.25,5.25 L9.75,5.25 L9.75,9.75 L8.25,9.75 Z',
                     fill: l,
-                    className: a
+                    className: i
                 })
             ]
         })
