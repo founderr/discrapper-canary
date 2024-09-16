@@ -19,8 +19,8 @@ var s = n(735250),
     p = n(119269),
     A = n(938736),
     f = n(981631),
-    h = n(689938),
-    M = n(837661),
+    M = n(689938),
+    h = n(837661),
     S = n(691766);
 let x = (e) => {
         let { userRecord: t, placement: n, trialStatus: a } = e,
@@ -40,24 +40,24 @@ let x = (e) => {
                   })
                 : (0, s.jsx)(o.Heading, {
                       variant: 'heading-md/semibold',
-                      className: M.userAvatarProgressBarUnitNum,
+                      className: h.userAvatarProgressBarUnitNum,
                       children: n
                   });
         return (0, s.jsx)(o.Tooltip, {
-            text: h.Z.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_UNSENT_TOOLTIP,
+            text: M.Z.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_UNSENT_TOOLTIP,
             shouldShow: !d,
-            tooltipContentClassName: M.unsentTooltipContent,
+            tooltipContentClassName: h.unsentTooltipContent,
             children: (e) =>
                 (0, s.jsx)('div', {
                     className: i()({
-                        [M.redeemedCircle]: c && (a === g.Fe.REDEEMED || a === g.Fe.CONVERTED),
-                        [M.convertedCircleGlow]: c && a === g.Fe.CONVERTED,
-                        [M.standardCircle]: c && (a === g.Fe.PENDING || null == a)
+                        [h.redeemedCircle]: c && (a === g.Fe.REDEEMED || a === g.Fe.CONVERTED),
+                        [h.convertedCircleGlow]: c && a === g.Fe.CONVERTED,
+                        [h.standardCircle]: c && (a === g.Fe.PENDING || null == a)
                     }),
                     children: (0, s.jsx)('div', {
-                        className: c ? M.content : void 0,
+                        className: c ? h.content : void 0,
                         children: (0, s.jsx)('div', {
-                            className: M.userAvatarProgressBarUnit,
+                            className: h.userAvatarProgressBarUnit,
                             ...e,
                             children: _
                         })
@@ -68,13 +68,13 @@ let x = (e) => {
     b = (e) => {
         let { numSentReferrals: t, placement: n } = e;
         return (0, s.jsxs)('div', {
-            className: M.avatarProgressBarUnitConnectorContainer,
+            className: h.avatarProgressBarUnitConnectorContainer,
             children: [
-                (0, s.jsx)('div', { className: M.avatarProgressBarUnitConnectorBase }),
+                (0, s.jsx)('div', { className: h.avatarProgressBarUnitConnectorBase }),
                 (0, s.jsx)('div', {
                     className: i()({
-                        [M.fullHighlight]: t > n,
-                        [M.halfHighlight]: t === n
+                        [h.fullHighlight]: t > n,
+                        [h.halfHighlight]: t === n
                     })
                 })
             ]
@@ -87,7 +87,7 @@ let x = (e) => {
             i = a < 2 ? null : t[1],
             l = a < 3 ? null : t[2];
         return (0, s.jsxs)('div', {
-            className: M.userAvatarProgressBarContainer,
+            className: h.userAvatarProgressBarContainer,
             children: [
                 (0, s.jsx)(x, {
                     userRecord: r,
@@ -151,22 +151,22 @@ t.Z = (e) => {
     v && null != D && ((V = 0 < (t = Math.ceil((new Date(D).getTime() - new Date().getTime()) / 86400000)) && t < A.AV), (r = (100 * (A.AV - t)) / A.AV));
     let W = V && null != t,
         K = (0, s.jsxs)('div', {
-            className: M.referralInfoContent,
+            className: h.referralInfoContent,
             children: [
                 (0, s.jsx)(p.Z, {
                     percentage: W ? 0 : F,
                     progressCircleVariation: p.Q.NITRO_LOGO,
                     iconClassName: i()({
-                        [M.referralProgressBarIcon]: !u,
-                        [M.referralProgressBarIconSettings]: u
+                        [h.referralProgressBarIcon]: !u,
+                        [h.referralProgressBarIconSettings]: u
                     })
                 }),
                 (0, s.jsxs)('div', {
-                    className: M.expandedProgressBarContent,
+                    className: h.expandedProgressBarContent,
                     children: [
                         (0, s.jsx)(o.Heading, {
                             variant: u ? 'heading-xl/extrabold' : 'heading-xxl/extrabold',
-                            className: M.expandedProgressBarHeader,
+                            className: h.expandedProgressBarHeader,
                             children: (0, A.$s)({
                                 referralIncentiveLifecycleState: P,
                                 hasSentAll: w,
@@ -177,16 +177,16 @@ t.Z = (e) => {
                             ? (0, s.jsxs)(s.Fragment, {
                                   children: [
                                       (0, s.jsx)('div', {
-                                          className: M.progressBar,
+                                          className: h.progressBar,
                                           children: (0, s.jsx)('div', {
                                               style: { width: ''.concat(r, '%') },
-                                              className: M.fill
+                                              className: h.fill
                                           })
                                       }),
                                       (0, s.jsx)(o.Heading, {
                                           variant: 'heading-sm/semibold',
-                                          className: M.referralCountdownDays,
-                                          children: h.Z.Messages.REFERRAL_INCENTIVE_COUNTDOWN_DAYS.format({ days: t })
+                                          className: h.referralCountdownDays,
+                                          children: M.Z.Messages.REFERRAL_INCENTIVE_COUNTDOWN_DAYS.format({ days: t })
                                       })
                                   ]
                               })
@@ -204,20 +204,20 @@ t.Z = (e) => {
                             })
                         }),
                         (0, s.jsxs)('div', {
-                            className: i()(M.expandedProgressBarButtonContainer, { [M.expandedProgressBarButtonContainerLayout]: !u }),
+                            className: i()(h.expandedProgressBarButtonContainer, { [h.expandedProgressBarButtonContainerLayout]: !u }),
                             children: [
                                 !u &&
                                     !j &&
                                     (0, s.jsx)(m.Z, {
                                         color: o.ButtonColors.CUSTOM,
-                                        buttonText: h.Z.Messages.GIFT_NITRO,
-                                        className: i()(M.expandedProgressBarGiftingCTA, { [M.expandedProgressBarGiftingCTALayout]: !u }),
+                                        buttonText: M.Z.Messages.GIFT_NITRO,
+                                        className: i()(h.expandedProgressBarGiftingCTA, { [h.expandedProgressBarGiftingCTALayout]: !u }),
                                         look: o.ButtonLooks.OUTLINED,
                                         isGift: !0
                                     }),
                                 !W &&
                                     (0, s.jsx)(o.ShinyButton, {
-                                        className: M.expandedProgressBarSelectFriendsCTA,
+                                        className: h.expandedProgressBarSelectFriendsCTA,
                                         color: o.ButtonColors.CUSTOM,
                                         onClick: () => {
                                             I.default.track(f.rMx.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, { location_stack: H }),
@@ -232,14 +232,14 @@ t.Z = (e) => {
                                         },
                                         onlyShineOnHover: !0,
                                         children: (0, s.jsxs)('div', {
-                                            className: M.expandedProgressBarSelectFriendsCTAInner,
+                                            className: h.expandedProgressBarSelectFriendsCTAInner,
                                             children: [
                                                 (0, s.jsx)('img', {
                                                     src: S,
                                                     alt: '',
-                                                    className: M.expandedProgressBarSelectFriendsIcon
+                                                    className: h.expandedProgressBarSelectFriendsIcon
                                                 }),
-                                                w ? h.Z.Messages.REFERRAL_PROGRAM_REMIND_FRIENDS : h.Z.Messages.REFERRAL_PROGRAM_SELECT_FRIENDS
+                                                w ? M.Z.Messages.REFERRAL_PROGRAM_REMIND_FRIENDS : M.Z.Messages.REFERRAL_PROGRAM_SELECT_FRIENDS
                                             ]
                                         })
                                     })
@@ -255,38 +255,38 @@ t.Z = (e) => {
         value: H,
         children: (0, s.jsx)('div', {
             className: i()({
-                [M.containerWithGlowWithoutBanner]: !W && z && !B,
-                [M.containerWithGlowWithBanner]: !W && z && B,
-                [M.containerWithoutGlow]: W || !z,
-                [M.containerWithMargins]: !u,
-                [M.marginWithBanner]: B,
-                [M.containerWithGlowOnSettingsPage]: !W && z && u
+                [h.containerWithGlowWithoutBanner]: !W && z && !B,
+                [h.containerWithGlowWithBanner]: !W && z && B,
+                [h.containerWithoutGlow]: W || !z,
+                [h.containerWithMargins]: !u,
+                [h.marginWithBanner]: B,
+                [h.containerWithGlowOnSettingsPage]: !W && z && u
             }),
             children: (0, s.jsxs)('div', {
                 ref: k,
                 className: i()({
-                    [M.expandedProgressBarContainer]: !u,
-                    [M.expandedProgressBarContainerSettingsPage]: u,
-                    [M.expandedProgressBarContainerVariant1]: !j && !u,
-                    [M.expandedProgressBarContainerVariant2]: j && !u,
-                    [M.allReferralsSentBorder]: !W && z,
-                    [M.containerWithBanner]: !W && B
+                    [h.expandedProgressBarContainer]: !u,
+                    [h.expandedProgressBarContainerSettingsPage]: u,
+                    [h.expandedProgressBarContainerVariant1]: !j && !u,
+                    [h.expandedProgressBarContainerVariant2]: j && !u,
+                    [h.allReferralsSentBorder]: !W && z,
+                    [h.containerWithBanner]: !W && B
                 }),
                 children: [
                     B &&
                         !W &&
                         (0, s.jsx)('div', {
-                            className: i()(M.banner, {
-                                [M.bannerWithContainerOutline]: Y,
-                                [M.settingsBanner]: u && !Y,
-                                [M.settingsBannerAllRedeemed]: u && Y
+                            className: i()(h.banner, {
+                                [h.bannerWithContainerOutline]: Y,
+                                [h.settingsBanner]: u && !Y,
+                                [h.settingsBannerAllRedeemed]: u && Y
                             }),
                             children: (0, s.jsx)(o.Heading, {
                                 color: 'always-white',
                                 variant: 'heading-md/extrabold',
-                                children: h.Z.Messages.REFERRAL_INCENTIVE_YOU_EARNED_DISCOUNT.format({
+                                children: M.Z.Messages.REFERRAL_INCENTIVE_YOU_EARNED_DISCOUNT.format({
                                     discountRate: A.Nq,
-                                    subscriptionInterval: h.Z.Messages.PREMIUM_SUBSCRIPTION_INTERVAL_MONTH
+                                    subscriptionInterval: M.Z.Messages.PREMIUM_SUBSCRIPTION_INTERVAL_MONTH
                                 })
                             })
                         }),

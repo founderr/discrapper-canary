@@ -20,8 +20,8 @@ var s = n(735250),
     p = n(91802),
     A = n(104494),
     f = n(639119),
-    h = n(8647),
-    M = n(568126),
+    M = n(8647),
+    h = n(568126),
     S = n(605289),
     x = n(248042),
     b = n(823188),
@@ -242,7 +242,7 @@ t.Z = (e) => {
                       }),
                 (0, s.jsxs)('div', {
                     className: V.promoBannerContainer,
-                    children: [(0, s.jsx)(h.Z, { isFullScreen: n }), n && eo && (0, s.jsx)(M.Z, { localizedPricingPromo: el })]
+                    children: [(0, s.jsx)(M.Z, { isFullScreen: n }), n && eo && (0, s.jsx)(h.Z, { localizedPricingPromo: el })]
                 }),
                 eN,
                 (0, s.jsx)(q, {

@@ -1,6 +1,6 @@
 n.d(t, {
     $s: function () {
-        return M;
+        return h;
     },
     AV: function () {
         return T;
@@ -9,7 +9,7 @@ n.d(t, {
         return S;
     },
     Kn: function () {
-        return h;
+        return M;
     },
     Nq: function () {
         return u;
@@ -107,13 +107,13 @@ let u = '40%',
             n = (0, r.wE)(a.z.REFERRAL_INCENTIVE_AWARDED_INFO);
         return t && !n;
     },
-    h = (e) => {
+    M = (e) => {
         let t = g(e),
             n = R(e),
             s = (0, r.wE)(a.z.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE);
         return !t && n && !s;
     },
-    M = (e) => {
+    h = (e) => {
         let { referralIncentiveLifecycleState: t, hasSentAll: n, referralsStatuses: s } = e;
         switch (t) {
             case d.g2L.NOT_ELIGIBLE:

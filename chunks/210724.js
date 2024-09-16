@@ -25,8 +25,8 @@ var s = n(735250),
     p = n(602667),
     A = n(78826),
     f = n(693900),
-    h = n(617889),
-    M = n(46140),
+    M = n(617889),
+    h = n(46140),
     S = n(981631),
     x = n(604330);
 function b(e) {
@@ -34,9 +34,9 @@ function b(e) {
     let { quest: I } = e,
         b = (0, m.T)({
             quest: I,
-            location: M.dr.QUESTS_BAR
+            location: h.dr.QUESTS_BAR
         }),
-        O = (0, C.Zy)({ location: M.dr.QUESTS_BAR }),
+        O = (0, C.Zy)({ location: h.dr.QUESTS_BAR }),
         P = (0, o.e7)([_.Z], () => _.Z.useReducedMotion),
         v = (0, o.e7)([u.Z], () => u.Z.hasLayers()),
         L = (null === (t = I.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
@@ -49,8 +49,8 @@ function b(e) {
         { hasError: w, isLoading: y } = (0, A.d7)(),
         H = O && !j && !B && !G && !y,
         k = a.useRef(H),
-        F = (0, h.B)(I, H && !w),
-        V = (0, N.vI)(I, M.dr.QUESTS_BAR) ? N.WV : F.collapsedHeight,
+        F = (0, M.B)(I, H && !w),
+        V = (0, N.vI)(I, h.dr.QUESTS_BAR) ? N.WV : F.collapsedHeight,
         W = a.useRef(-1),
         K = a.useRef(!1),
         [Y, z] = a.useState(!1),
@@ -117,7 +117,7 @@ function b(e) {
         a.useLayoutEffect(() => {
             H !== k.current && ee(!1), (k.current = H);
         }, [H]);
-    let eI = L ? M.XZ : M.R4,
+    let eI = L ? h.XZ : h.R4,
         [{ expansionSpring: eR }, eg] = (0, c.useSpring)(() => ({
             from: { expansionSpring: 0 },
             config: eI,
@@ -243,7 +243,7 @@ t.Z =
                   : (0, s.jsx)(
                         A.p,
                         {
-                            source: M.dr.QUESTS_BAR,
+                            source: h.dr.QUESTS_BAR,
                             questId: n.id,
                             children: (0, s.jsx)(b, { quest: n })
                         },

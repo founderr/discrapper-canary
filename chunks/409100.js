@@ -28,13 +28,13 @@ t.Z = (e) => {
         p = (0, i.ZP)(),
         A = (0, a.wj)(p) || t,
         f = (0, d.N)(),
-        h = null == f ? void 0 : f.subscription_trial,
-        M = (0, l.a5)({
-            intervalType: null == h ? void 0 : h.interval,
-            intervalCount: null == h ? void 0 : h.interval_count
+        M = null == f ? void 0 : f.subscription_trial,
+        h = (0, l.a5)({
+            intervalType: null == M ? void 0 : M.interval,
+            intervalCount: null == M ? void 0 : M.interval_count
         }),
         S = (0, c.Ng)(),
-        x = null != h && n === h.sku_id,
+        x = null != M && n === M.sku_id,
         { enabled: b } = o._.useExperiment({ location: 'SubscribeButton' }, { autoTrackExposure: !1 }),
         O = b && (null == f ? void 0 : f.trial_id) === u.a7,
         P = g
@@ -45,10 +45,10 @@ t.Z = (e) => {
                     showTrialCTA: x,
                     subscriptionTier: n,
                     shouldShowUpsells: !1,
-                    trialDurationCopy: M,
+                    trialDurationCopy: h,
                     isPersistentCTA: N,
                     shouldShowReferralTrialCopy: O,
-                    subscriptionTrial: h
+                    subscriptionTrial: M
                 });
     return (0, s.jsx)(_.Z, {
         color: A ? r.ButtonColors.BRAND_INVERTED : r.ButtonColors.BRAND,

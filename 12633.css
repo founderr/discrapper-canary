@@ -14277,6 +14277,10 @@ html.decorate-links .lowSaturationUnderline_c7819f {
     left: 16px
 }
 
+.avatar_f94206.withReactReply_f94206 {
+    position: static
+}
+
 .avatar_f94206.hoisted_f94206 {
     z-index: 4;
     pointer-events: none

@@ -35,12 +35,12 @@ let T = (0, d.uk)('poggermode_applause', r.Z.getSoundpack()),
     f = () => {
         g.pop(), (R = !1), A();
     },
-    h = function (e) {
+    M = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
             n = l.Z.isConnected();
         g.push([e, t * (n ? 0.1 : 1)]), A();
     };
-class M extends a.Z {
+class h extends a.Z {
     _initialize() {
         u.ZP.addChangeListener(this.startAudio), s.Z.subscribe('RTC_CONNECTION_STATE', this.setVolume), s.Z.subscribe('TYPING_STOP', this.stopAudio), s.Z.subscribe('TYPING_STOP_LOCAL', this.stopAudio), s.Z.subscribe('CHANNEL_SELECT', this.stopAudio), s.Z.subscribe('POGGERMODE_SETTINGS_UPDATE', this.stopAudio);
     }
@@ -70,7 +70,7 @@ class M extends a.Z {
         s && r >= 7 ? C() : m();
     }
     playAchievementUnlockSound() {
-        if (!!p()) h('poggermode_achievement_unlock');
+        if (!!p()) M('poggermode_achievement_unlock');
     }
 }
-t.Z = new M();
+t.Z = new h();

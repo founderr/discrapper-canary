@@ -5,28 +5,28 @@ t.d(s, {
 });
 var n = t(735250);
 t(470079);
-var a = t(921157),
-    i = t(76793),
-    r = t(838436),
-    o = t(726985),
-    l = t(760373),
+var a = t(630759),
+    i = t(921157),
+    r = t(76793),
+    o = t(838436),
+    l = t(726985),
     c = t(689938),
     d = t(605017);
 function _() {
-    let e = (0, a.s)();
-    return (0, n.jsxs)(r.U, {
-        setting: o.s6.PRIVACY_ENCRYPTION_VERIFIED_DEVICES_V2,
+    let e = (0, i.s)();
+    return (0, n.jsxs)(o.U, {
+        setting: l.s6.PRIVACY_ENCRYPTION_VERIFIED_DEVICES_V2,
         children: [
-            (0, n.jsx)(r.H, {
+            (0, n.jsx)(o.H, {
                 header: c.Z.Messages.E2EE_VERIFIED_DEVICES,
-                description: c.Z.Messages.E2EE_VERIFIED_DEVICES_DESCRIPTION.format({ helpArticle: l.s9 })
+                description: c.Z.Messages.E2EE_VERIFIED_DEVICES_DESCRIPTION.format({ helpArticle: (0, a.pL)() })
             }),
             e.map((e) =>
                 (0, n.jsx)(
                     'div',
                     {
                         className: d.item,
-                        children: (0, n.jsx)(i.q, { userId: e })
+                        children: (0, n.jsx)(r.q, { userId: e })
                     },
                     e
                 )

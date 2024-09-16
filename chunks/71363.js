@@ -20,11 +20,11 @@ var s = n(735250),
     p = n(981631),
     A = n(689938),
     f = n(170367),
-    h = n(865215);
+    M = n(865215);
 t.Z = (e) => {
     let t,
         n,
-        { isAllPerksVisible: r, setIsAllPerksVisible: M, previousComponent: S, isFullScreen: x } = e,
+        { isAllPerksVisible: r, setIsAllPerksVisible: h, previousComponent: S, isFullScreen: x } = e,
         b = a.useRef(null),
         O = Object.entries((0, N.Z)()).reduce((e, t) => {
             let [n, s] = t;
@@ -52,7 +52,7 @@ t.Z = (e) => {
                         (0, s.jsx)(R.Z, {
                             className: f.heroHeading,
                             onBackClick: () => {
-                                M(!1),
+                                h(!1),
                                     T.default.track(p.rMx.NITRO_HOME_NAVIGATION, {
                                         current_component: C.MQ.SEE_ALL,
                                         next_component: S,
@@ -127,7 +127,7 @@ t.Z = (e) => {
                             children: (0, s.jsx)('div', { className: f.bottomOfPageVisibilitySensor })
                         }),
                         (0, s.jsx)('img', {
-                            src: h,
+                            src: M,
                             className: f.bottomIllustration,
                             width: 112,
                             height: 85,

@@ -18,15 +18,15 @@ let N = (e) => {
     let { name: t, title: n, description: r, descriptionCta: E, previewImage: R, videoUrl: N, shouldLoadVideo: C, index: m } = e,
         p = (0, _.rO)(),
         A = a.useRef(null),
-        [f, h] = a.useState(0),
-        M = (0, l.debounce)(() => {
+        [f, M] = a.useState(0),
+        h = (0, l.debounce)(() => {
             d.default.track(T.rMx.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, l.snakeCase)(t) });
         }, 800),
         S = () => {
             null != A.current && ((A.current.currentTime = f), A.current.play());
         },
         x = () => {
-            null != A.current && (h(A.current.currentTime), A.current.pause());
+            null != A.current && (M(A.current.currentTime), A.current.pause());
         },
         b = () =>
             (0, s.jsxs)('div', {
@@ -46,7 +46,7 @@ let N = (e) => {
                     }),
                     (0, s.jsx)(u.Z, {
                         className: g.whatsNewBoxButton,
-                        onClick: M,
+                        onClick: h,
                         buttonText: E,
                         color: o.Button.Colors.BRAND,
                         look: o.Button.Looks.FILLED,

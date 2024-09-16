@@ -47,8 +47,8 @@ let C = (e) => {
 };
 t.Z = (e) => {
     var t;
-    let { className: n, variant: r = I.R0.PERKS_DISCOVERABILITY, noBackground: m = !1, leftAlignHeaders: p = !1, showAllPerksButton: A, headerClassname: f, isFullScreen: h = !0 } = e,
-        M = a.useRef(null),
+    let { className: n, variant: r = I.R0.PERKS_DISCOVERABILITY, noBackground: m = !1, leftAlignHeaders: p = !1, showAllPerksButton: A, headerClassname: f, isFullScreen: M = !0 } = e,
+        h = a.useRef(null),
         S = (0, _.yQ)(),
         x = (0, u.Ag)(S),
         b = (0, c.ZP)('perks-discoverability');
@@ -61,7 +61,7 @@ t.Z = (e) => {
         P && !x && (v(), L());
     }, [v, L, P, x]),
         a.useEffect(() => {
-            let e = M.current;
+            let e = h.current;
             if (null == e || !x || !P) return;
             let t = requestAnimationFrame(() => {
                 e.scrollIntoView({ behavior: 'smooth' }), P && v();
@@ -69,7 +69,7 @@ t.Z = (e) => {
             return () => {
                 cancelAnimationFrame(t), P && v();
             };
-        }, [M, x, P, v]);
+        }, [h, x, P, v]);
     let Z = (0, R.Op)(P),
         D = (0, E.Z)(),
         U = (0, R.mN)(),
@@ -77,7 +77,7 @@ t.Z = (e) => {
             perksCards: D,
             variant: r,
             shopMarketingVariation: b,
-            isFullScreen: h,
+            isFullScreen: M,
             showTenureCard: null == S ? void 0 : S.showCard,
             tileOrderVariant: O,
             isPremiumSubscriber: U
@@ -94,7 +94,7 @@ t.Z = (e) => {
                     environment: y.current
                 }),
             (0, s.jsxs)('div', {
-                ref: M,
+                ref: h,
                 className: i()(
                     N.section,
                     {
@@ -131,8 +131,8 @@ t.Z = (e) => {
                         }),
                     (0, s.jsx)('div', {
                         className: i()({
-                            [N.cardContainer]: h,
-                            [N.cardContainerNarrowWidth]: !h
+                            [N.cardContainer]: M,
+                            [N.cardContainerNarrowWidth]: !M
                         }),
                         children: B.map((e, t) =>
                             (0, s.jsx)(

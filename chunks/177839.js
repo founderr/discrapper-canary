@@ -84,7 +84,7 @@ t.Z = (e) => {
         E = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
         { analyticsLocations: N } = (0, _.ZP)(),
         f = (0, T._f)(),
-        h = [u.emoji, u.streaming, u.upload, u.customAppIcons, u.soundboard, f ? u.remix : u.videoBackground, u.superReactions, u.stickersPerkDiscoverability, u.badgeAlt];
+        M = [u.emoji, u.streaming, u.upload, u.customAppIcons, u.soundboard, f ? u.remix : u.videoBackground, u.superReactions, u.stickersPerkDiscoverability, u.badgeAlt];
     return (0, s.jsxs)('div', {
         className: i()(C.perksContainer, t, {
             [C.partiallyHidden]: n && !r,
@@ -99,7 +99,7 @@ t.Z = (e) => {
             }),
             (0, s.jsx)('div', {
                 className: i()(C.perkCardContainer, { [C.perkCardContainerExpanded]: r }),
-                children: h.map((e) => null != e && (0, s.jsx)(A, { ...e }, e.title))
+                children: M.map((e) => null != e && (0, s.jsx)(A, { ...e }, e.title))
             }),
             n &&
                 (0, s.jsxs)(s.Fragment, {

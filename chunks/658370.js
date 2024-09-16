@@ -16,9 +16,9 @@ var a = n(120356),
 t.Z = (e) => {
     var t;
     let n;
-    let { title: a, titleClassName: g = '', buttonClassName: N = '', subtitle: C = '', description: m = '', descriptionCta: p = '', isPremiumGetCta: A, onCtaClick: f, cardVariant: h } = e,
-        M = (0, d.N)(),
-        S = null == M ? void 0 : M.subscription_trial,
+    let { title: a, titleClassName: g = '', buttonClassName: N = '', subtitle: C = '', description: m = '', descriptionCta: p = '', isPremiumGetCta: A, onCtaClick: f, cardVariant: M } = e,
+        h = (0, d.N)(),
+        S = null == h ? void 0 : h.subscription_trial,
         x = (0, c.Ng)(),
         b = (0, l.Rt)({
             intervalType: null == S ? void 0 : S.interval,
@@ -31,7 +31,7 @@ t.Z = (e) => {
             onTier0TrialOffer: b,
             onDiscountOffer: I.Z.Messages.PREMIUM_DISCOUNT_CTA.format({ percent: null == x ? void 0 : x.discount.amount })
         }),
-        P = (0, _._)(h);
+        P = (0, _._)(M);
     return (0, s.jsxs)('div', {
         className: r()(R.cardDescription, null == P ? void 0 : null === (t = P.description) || void 0 === t ? void 0 : t.className),
         children: [

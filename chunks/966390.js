@@ -12,8 +12,8 @@ var a = t(481060),
     E = t(680287),
     I = t(163268),
     A = t(539573),
-    m = t(786761),
-    p = t(3148),
+    p = t(786761),
+    m = t(3148),
     T = t(48854),
     O = t(785359),
     g = t(79390),
@@ -23,28 +23,28 @@ var a = t(481060),
     h = t(703558),
     f = t(117530),
     C = t(630388),
-    M = t(226351),
-    L = t(981631),
+    L = t(226351),
+    M = t(981631),
     S = t(689938);
 async function x(e) {
     var n, t, a;
     let u,
         { channelId: _, uploads: x, draftType: v, parsedMessage: G, options: Z = {}, raiseEndpointErrors: j = !1 } = e,
-        b = new E.Z(L.ANM.MESSAGES(_)),
-        D = new M.o(),
+        b = new E.Z(M.ANM.MESSAGES(_)),
+        D = new L.o(),
         y = {
             content: '',
             nonce: '',
             channel_id: _,
-            type: L.uaV.DEFAULT,
+            type: M.uaV.DEFAULT,
             sticker_ids: null == Z ? void 0 : Z.stickerIds,
             poll: null == Z ? void 0 : Z.poll
         };
-    null != G && (y.content = null == G ? void 0 : G.content), null != N.Z.getPendingReply(_) && ((y.type = L.uaV.REPLY), (y.message_reference = Z.messageReference), (y.allowed_mentions = Z.allowedMentions), (0, R.A6)(_));
+    null != G && (y.content = null == G ? void 0 : G.content), null != N.Z.getPendingReply(_) && ((y.type = M.uaV.REPLY), (y.message_reference = Z.messageReference), (y.allowed_mentions = Z.allowedMentions), (0, R.A6)(_));
     let [U, w] = (0, P.Z)(y.content);
-    U && ((y.content = w), (y.flags = (0, C.pj)(null !== (n = y.flags) && void 0 !== n ? n : 0, L.iLy.SUPPRESS_NOTIFICATIONS)));
+    U && ((y.content = w), (y.flags = (0, C.pj)(null !== (n = y.flags) && void 0 !== n ? n : 0, M.iLy.SUPPRESS_NOTIFICATIONS)));
     let F = null !== (t = Z.nonce) && void 0 !== t ? t : (0, T.r)(),
-        k = (0, p.ZP)({
+        K = (0, m.ZP)({
             channelId: _,
             content: y.content,
             tts: null !== (a = null == G ? void 0 : G.tts) && void 0 !== a && a,
@@ -57,8 +57,8 @@ async function x(e) {
     return (
         ((y.nonce = F),
         b.on('start', (e) => {
-            (u = (0, m.e5)({
-                ...k,
+            (u = (0, p.e5)({
+                ...K,
                 id: e.id
             })),
                 r.Z.dispatch({
@@ -89,12 +89,12 @@ async function x(e) {
                     failureCode: n,
                     errorMessage: null == a ? void 0 : a.msg
                 }),
-                n === L.evJ.EXPLICIT_CONTENT)
+                n === M.evJ.EXPLICIT_CONTENT)
             ) {
                 o.Z.sendExplicitMediaClydeError(_, null == t ? void 0 : t.attachments, I.UU.EXPLICIT_MEDIA_MESSAGE_SEND_BLOCKED);
                 return;
             }
-            if (n === L.evJ.AUTOMOD_MESSAGE_BLOCKED) {
+            if (n === M.evJ.AUTOMOD_MESSAGE_BLOCKED) {
                 let e = {
                         code: n,
                         message: null == t ? void 0 : t.message
@@ -115,7 +115,7 @@ async function x(e) {
                 });
                 return;
             }
-            if (n !== L.evJ.GUILD_FILE_UPLOAD_RATE_LIMITED_ACCESS) {
+            if (n !== M.evJ.GUILD_FILE_UPLOAD_RATE_LIMITED_ACCESS) {
                 if (j)
                     D.reject(
                         new c.Hx(
@@ -190,26 +190,26 @@ n.Z = {
             let e = N.Z.getPendingReply(t);
             if (null != e) {
                 let n = o.Z.getSendMessageOptionsForReply(e);
-                (A.type = L.uaV.REPLY), (A.message_reference = n.messageReference), (A.allowed_mentions = n.allowedMentions), (0, R.A6)(t);
+                (A.type = M.uaV.REPLY), (A.message_reference = n.messageReference), (A.allowed_mentions = n.allowedMentions), (0, R.A6)(t);
             }
         }
-        let m = new E.Z(L.ANM.MESSAGES(t));
-        m.on('start', (e) => {
+        let p = new E.Z(M.ANM.MESSAGES(t));
+        p.on('start', (e) => {
             r.Z.dispatch({
                 type: 'UPLOAD_START',
                 channelId: t,
                 file: e,
-                uploader: m
+                uploader: p
             });
         }),
-            m.on('progress', (e) => {
+            p.on('progress', (e) => {
                 r.Z.dispatch({
                     type: 'UPLOAD_PROGRESS',
                     channelId: t,
                     file: e
                 });
             }),
-            m.on('error', (n, u, _) => {
+            p.on('error', (n, u, _) => {
                 if (
                     (r.Z.dispatch({
                         type: 'UPLOAD_FAIL',
@@ -220,7 +220,7 @@ n.Z = {
                         fileItems: n.items,
                         failureCode: u
                     }),
-                    u === L.evJ.EXPLICIT_CONTENT)
+                    u === M.evJ.EXPLICIT_CONTENT)
                 ) {
                     o.Z.sendExplicitMediaClydeError(t, null == _ ? void 0 : _.attachments, I.UU.EXPLICIT_MEDIA_MESSAGE_SEND_BLOCKED);
                     return;
@@ -241,14 +241,14 @@ n.Z = {
                 }),
                     '' !== A.content && '' === h.Z.getDraft(t, c) && s.Z.saveDraft(t, A.content, c);
             }),
-            m.on('complete', (e) => {
+            p.on('complete', (e) => {
                 r.Z.dispatch({
                     type: 'UPLOAD_COMPLETE',
                     channelId: t,
                     file: e
                 });
             }),
-            m.upload(i, A);
+            p.upload(i, A);
     },
     uploadFiles: x,
     cancel(e) {

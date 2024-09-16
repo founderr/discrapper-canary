@@ -15,10 +15,10 @@ let o = {
         let { confettiTarget: t, colors: n, emojiURL: d, numBursts: _, particlesPerBurst: u, offsetXPercentageMax: E, offsetXPercentageMin: T, offsetYPercentageMax: I, offsetYPercentageMin: R, customConfettiCanvas: g, speedValues: N = o, dragCoefficientValue: C = 0.001, onAnimationEnd: m } = e,
             [p, A] = a.useState(null),
             { confettiCanvas: f } = a.useContext(i.h),
-            h = (0, r.uR)(null != g ? g : f, p),
-            [M, S] = a.useState(!1);
+            M = (0, r.uR)(null != g ? g : f, p),
+            [h, S] = a.useState(!1);
         a.useEffect(() => {
-            M && (null == m || m());
+            h && (null == m || m());
         });
         let x = a.useMemo(() => {
             if (null != d)
@@ -36,7 +36,7 @@ let o = {
                 return (
                     (e = e.map((n, s) =>
                         setTimeout(() => {
-                            h.createMultipleConfetti(
+                            M.createMultipleConfetti(
                                 (function (e, t, n, s, a) {
                                     let r = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : o,
                                         i = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 0.001,
@@ -89,7 +89,7 @@ let o = {
                         for (let t of e) clearTimeout(t);
                     }
                 );
-            }, [h, t, _, u, E, T, I, R, N, C, m]),
+            }, [M, t, _, u, E, T, I, R, N, C, m]),
             (0, s.jsx)(r.Ji, {
                 ref: A,
                 sprites: null != x ? x : l.CA,

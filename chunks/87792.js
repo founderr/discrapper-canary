@@ -20,8 +20,8 @@ var s = n(735250),
     p = n(792258),
     A = n(657825),
     f = n(198952),
-    h = n(329242),
-    M = n(895328),
+    M = n(329242),
+    h = n(895328),
     S = n(292352),
     x = n(981631),
     b = n(689938),
@@ -57,11 +57,11 @@ function v(e) {
         g = S.tx.get(t),
         [C, m] = a.useState(S.iB),
         f = (0, E.Xi)({ location: 'family_center_activity_section_web' }),
-        h = a.useCallback(() => {
+        M = a.useCallback(() => {
             m((e) => e + S.iB), _(t);
         }, [t, _]);
     i()(g, 'No text for action type');
-    let M = g.sectionHeader(c),
+    let h = g.sectionHeader(c),
         x = a.useCallback(
             (e) => {
                 let { row: t } = e,
@@ -90,7 +90,7 @@ function v(e) {
                             className: O.sectionHeader,
                             variant: 'eyebrow',
                             color: 'header-secondary',
-                            children: M
+                            children: h
                         }),
                         void 0 !== g.sectionDescription
                             ? (0, s.jsx)(o.Text, {
@@ -102,7 +102,7 @@ function v(e) {
                             : null
                     ]
                 }),
-            [M, g, r, f]
+            [h, g, r, f]
         );
     if (0 === l.length) return null;
     let v = l.slice(0, C);
@@ -118,7 +118,7 @@ function v(e) {
             v.length !== c
                 ? (0, s.jsx)(o.Clickable, {
                       className: O.loadMoreBar,
-                      onClick: h,
+                      onClick: M,
                       role: 'button',
                       children: T
                           ? (0, s.jsx)(o.Spinner, {
@@ -177,7 +177,7 @@ let L = () => {
                       (0, s.jsxs)('div', {
                           className: O.headerText,
                           children: [
-                              (0, s.jsx)(h.Z, { user: r }),
+                              (0, s.jsx)(M.Z, { user: r }),
                               void 0 !== n
                                   ? (0, s.jsx)(o.Text, {
                                         variant: 'text-sm/medium',
@@ -278,7 +278,7 @@ t.Z = (e) => {
                                           let [t] = e;
                                           return (0, s.jsx)(v, { displayType: t }, ''.concat(t, '-list'));
                                       })
-                                    : (0, s.jsx)(M.Z, {
+                                    : (0, s.jsx)(h.Z, {
                                           className: O.emptyActivity,
                                           text: null != i ? i : ''
                                       })

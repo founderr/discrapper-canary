@@ -20,8 +20,8 @@ var s = n(735250),
     p = n(32173),
     A = n(391110),
     f = n(484239),
-    h = n(658370),
-    M = n(735825),
+    M = n(658370),
+    h = n(735825),
     S = n(981631),
     x = n(921944),
     b = n(689938),
@@ -33,7 +33,7 @@ let P = {
         yMax: -20
     },
     v = a.memo((e) => {
-        let { name: t, canReveal: n = !0, dismissibleContentType: r, forceShadow: C, cardType: f, confettiCanvas: h } = e,
+        let { name: t, canReveal: n = !0, dismissibleContentType: r, forceShadow: C, cardType: f, confettiCanvas: M } = e,
             Z = null == e ? void 0 : e.onCtaClick,
             D = (0, c.e7)([u.Z], () => u.Z.useReducedMotion),
             [U, B] = a.useState(!1),
@@ -41,9 +41,9 @@ let P = {
             w = (0, g.yQ)(),
             y = (0, g.IB)(),
             [H, k] = a.useState(!1),
-            [F, V] = a.useState(t === p.u.FREE_BOOST && y && (null == w ? void 0 : w.nitroTenureStatus) === M.EB.REDEEMABLE);
+            [F, V] = a.useState(t === p.u.FREE_BOOST && y && (null == w ? void 0 : w.nitroTenureStatus) === h.EB.REDEEMABLE);
         a.useEffect(() => {
-            t === p.u.FREE_BOOST && y && (null == w ? void 0 : w.nitroTenureStatus) === M.EB.REDEEMABLE && V(!0);
+            t === p.u.FREE_BOOST && y && (null == w ? void 0 : w.nitroTenureStatus) === h.EB.REDEEMABLE && V(!0);
         }, [y, t, w]);
         let W = a.useCallback(() => {
                 k(!0);
@@ -97,7 +97,7 @@ let P = {
                 properties: {
                     user_tenure_reward_id: null == w ? void 0 : w.tenureRewardStatusId,
                     tenure_reward_id: null == w ? void 0 : w.tenureRewardSkuId,
-                    reward_type: M.nW.SERVER_BOOST,
+                    reward_type: h.nW.SERVER_BOOST,
                     redeemable_at: null == w ? void 0 : w.redeemableAt,
                     reward_status: null == w ? void 0 : w.nitroTenureStatus
                 }
@@ -166,7 +166,7 @@ let P = {
                                         offsetXPercentageMin: -70,
                                         offsetYPercentageMax: 40,
                                         offsetYPercentageMin: 20,
-                                        customConfettiCanvas: h,
+                                        customConfettiCanvas: M,
                                         dragCoefficientValue: 0.00001,
                                         onAnimationEnd: W
                                     })
@@ -223,7 +223,7 @@ let P = {
 v.displayName = 'PerkDiscoverabilityCard';
 let L = a.forwardRef((e, t) => {
     var n;
-    let { title: r, titleClassName: l = '', subtitle: o = '', description: c = '', descriptionCta: d = '', isPremiumGetCta: u, onCtaClick: E, onMouseEnter: T, className: I, perkComponent: R, cardVariant: N, cardType: m, onClick: p, backgroundImage: M, pillText: S, perkImage: x } = e,
+    let { title: r, titleClassName: l = '', subtitle: o = '', description: c = '', descriptionCta: d = '', isPremiumGetCta: u, onCtaClick: E, onMouseEnter: T, className: I, perkComponent: R, cardVariant: N, cardType: m, onClick: p, backgroundImage: h, pillText: S, perkImage: x } = e,
         b = m === A.R0.CARD_CAROUSEL_FIRST_ROW || m === A.R0.CARD_CAROUSEL_SECOND_ROW || m === A.R0.CARD_CAROUSEL_THIRD_ROW,
         P = 0 !== c.length || 0 !== d.length || (0 !== o.length && N === A.zW.REWARD),
         v = (0, g.IB)(),
@@ -238,7 +238,7 @@ let L = a.forwardRef((e, t) => {
             [O.hideOverflow]: b
         }),
         onMouseEnter: T,
-        style: { backgroundImage: null != M ? 'url('.concat(M, ')') : void 0 },
+        style: { backgroundImage: null != h ? 'url('.concat(h, ')') : void 0 },
         onClick: p,
         children: [
             null != S &&
@@ -261,7 +261,7 @@ let L = a.forwardRef((e, t) => {
                 cardVariant: N
             }),
             P &&
-                (0, s.jsx)(h.Z, {
+                (0, s.jsx)(M.Z, {
                     title: r,
                     titleClassName: l,
                     subtitle: o,

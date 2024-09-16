@@ -24,8 +24,8 @@ var s = n(399606),
     p = n(507084),
     A = n(680313),
     f = n(926433),
-    h = n(302036),
-    M = n(994554),
+    M = n(302036),
+    h = n(994554),
     S = n(1549),
     x = n(13327),
     b = n(59137),
@@ -122,25 +122,25 @@ let w = (e, t, n) => ((0, a.wj)(e) ? t : n),
             soundboard: {
                 title: E.Z.Messages.SOUND_BOARD_MARKETING_USE_CUSTOM_SOUNDS,
                 description: E.Z.Messages.SOUNDBOARD_MARKETING_REACT_WITH_SOUNDBOARD,
-                imageSource: w(n, f, h),
+                imageSource: w(n, f, M),
                 imageClassName: t.soundboardImage
             },
             stickers: {
                 title: E.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE_OLD,
                 description: E.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_DESCRIPTION,
-                imageSource: w(n, M, B),
+                imageSource: w(n, h, B),
                 imageClassName: t.stickersImage
             },
             stickersBurst: {
                 title: E.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE,
                 description: E.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_DESCRIPTION,
-                imageSource: w(n, M, B),
+                imageSource: w(n, h, B),
                 imageClassName: t.stickersImage
             },
             stickersPerkDiscoverability: {
                 title: E.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE,
                 description: E.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_LONG_DESCRIPTION,
-                imageSource: w(n, M, B),
+                imageSource: w(n, h, B),
                 imageClassName: t.stickersImage
             },
             streaming: {

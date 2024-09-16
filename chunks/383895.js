@@ -11,8 +11,8 @@ var a = t(735250),
     E = t(944486),
     I = t(594174),
     A = t(5192),
-    m = t(810568),
-    p = t(689938),
+    p = t(810568),
+    m = t(689938),
     T = t(501345),
     O = t(51527);
 n.Z = (e) => {
@@ -37,8 +37,8 @@ n.Z = (e) => {
                       closePopout: r,
                       updatePopoutPosition: o,
                       onReaction: () => {
-                          (0, m.UE)({
-                              action: m.as.SendMessageUser,
+                          (0, p.UE)({
+                              action: p.as.SendMessageUser,
                               applicationId: n.extra.application_id,
                               gameName: n.extra.game_name,
                               recipientUserId: n.author_id,
@@ -53,8 +53,8 @@ n.Z = (e) => {
               },
               positionKey: 'game-profile-entry-'.concat(n.id),
               onRequestOpen: () => {
-                  (0, m.UE)({
-                      action: m.as.ClickMessageUser,
+                  (0, p.UE)({
+                      action: p.as.ClickMessageUser,
                       applicationId: n.extra.application_id,
                       gameName: n.extra.game_name,
                       recipientUserId: n.author_id,
@@ -77,7 +77,7 @@ n.Z = (e) => {
                                   (0, a.jsx)('img', {
                                       className: T.avatar,
                                       src: P,
-                                      alt: p.Z.Messages.GAME_PROFILE_USER_AVATAR_ALT.format({ userName: N })
+                                      alt: m.Z.Messages.GAME_PROFILE_USER_AVATAR_ALT.format({ userName: N })
                                   }),
                                   (0, a.jsx)('div', {
                                       className: o()(T.playerInfo),

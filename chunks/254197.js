@@ -166,15 +166,15 @@ function Z(e) {
         })
     );
 }
-function P(e) {
+function w(e) {
     var t;
     let { quest: n, taskDetails: r, expansionSpring: c, overlayRef: u, isExpanded: p, useReducedMotion: x, containerRef: g, onCtxMenuOpen: C, onCtxMenuClose: f, onCtxMenuSelect: h } = e,
         S = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
         T = r.percentComplete > 0,
         A = (0, m.z)(n),
         [M, q, Z] = (0, m.me)(n, r),
-        P = (0, E.pF)({ location: k.dr.QUESTS_BAR }),
-        w = o.useRef(null),
+        w = (0, E.pF)({ location: k.dr.QUESTS_BAR }),
+        P = o.useRef(null),
         Q = (0, m.B6)(n.config.expiresAt),
         W = (0, m._s)({ quest: n });
     return (0, s.jsxs)(s.Fragment, {
@@ -227,14 +227,14 @@ function P(e) {
                     (0, s.jsx)(B.Z, {
                         expansionSpring: c,
                         overlayRef: u,
-                        progressBarRef: w,
+                        progressBarRef: P,
                         quest: n,
                         isExpanded: p
                     }),
                     (0, s.jsx)(y.Z, {
                         contentLocation: 'expanded',
                         quest: n,
-                        progressBarRef: w,
+                        progressBarRef: P,
                         isExpanded: !0,
                         taskDetails: r,
                         activeScreen: M
@@ -267,7 +267,7 @@ function P(e) {
                             hasMadeProgress: T,
                             isProgressing: A,
                             activeScreen: M,
-                            showBackButton: M !== _.LI.SELECT && q.length > 1 && !T && !A && P,
+                            showBackButton: M !== _.LI.SELECT && q.length > 1 && !T && !A && w,
                             onBack: () => Z(null)
                         })
                     })
@@ -280,7 +280,7 @@ function P(e) {
         ]
     });
 }
-let w = o.forwardRef(function (e, t) {
+let P = o.forwardRef(function (e, t) {
     var n;
     let { children: r, className: i, collapsedHeight: c, isExpanded: d, isExpansionAnimationComplete: u, expansionSpring: m, onCtxMenuOpen: g, onCtxMenuClose: C, onCtxMenuSelect: f, overlayRef: h, quest: E, useReducedMotion: S, taskDetails: T } = e,
         A = o.useCallback(() => {
@@ -317,7 +317,7 @@ let w = o.forwardRef(function (e, t) {
             (0, s.jsx)(l.animated.div, {
                 style: { opacity: 1 },
                 children: v
-                    ? (0, s.jsx)(P, {
+                    ? (0, s.jsx)(w, {
                           quest: E,
                           taskDetails: T,
                           expansionSpring: m,
@@ -343,4 +343,4 @@ let w = o.forwardRef(function (e, t) {
         ]
     });
 });
-t.Z = w;
+t.Z = P;
