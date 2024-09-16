@@ -27,14 +27,18 @@ function f(e) {
         y = () => {
             v(!1);
         },
-        L = s()(E.avatar, {
+        L = () => {
+            var e;
+            null === (e = O.current) || void 0 === e || e.focus();
+        },
+        D = s()(E.avatar, {
             [E.hoisted]: h,
             [E.biteSize]: f === _.y0.BITE_SIZE,
             [E.fullSize]: f === _.y0.FULL_SIZE,
             [E.panel]: f === _.y0.PANEL
         });
     return (0, r.jsxs)('div', {
-        className: L,
+        className: D,
         onMouseOver: C,
         onMouseLeave: y,
         onFocus: (e) => {
@@ -59,7 +63,7 @@ function f(e) {
                         setInteractionToastShown: m,
                         setInteractionSent: T,
                         setIsReplyInteraction: S,
-                        onClose: y
+                        onClose: L
                     });
                 },
                 onRequestClose: () =>
@@ -75,20 +79,19 @@ function f(e) {
                 shouldShow: I,
                 children: g
             }),
-            !I &&
-                (0, r.jsx)(u.ZP, {
-                    user: t,
-                    sourceType: _.n_.AVATAR,
-                    isVisible: R,
-                    isExpandable: !1,
-                    onInteraction: p,
-                    setInteractionToastShown: m,
-                    setInteractionSent: T,
-                    setIsReplyInteraction: S,
-                    reactButtonRef: N,
-                    replyButtonRef: O,
-                    onClose: y
-                })
+            (0, r.jsx)(u.ZP, {
+                user: t,
+                sourceType: _.n_.AVATAR,
+                isVisible: R && !I,
+                isExpandable: !1,
+                onInteraction: p,
+                setInteractionToastShown: m,
+                setInteractionSent: T,
+                setIsReplyInteraction: S,
+                reactButtonRef: N,
+                replyButtonRef: O,
+                onClose: y
+            })
         ]
     });
 }
