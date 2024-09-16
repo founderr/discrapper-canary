@@ -3,13 +3,13 @@ n.d(t, {
         return d;
     },
     WG: function () {
-        return m;
+        return u;
     },
     ZD: function () {
         return _;
     },
     pD: function () {
-        return u;
+        return m;
     }
 }),
     n(653041);
@@ -22,10 +22,10 @@ n(358085);
 var s = n(573261),
     l = n(981631),
     c = n(689938);
-async function m() {
+async function u() {
     return (await r.tn.get({ url: l.ANM.BUG_REPORTS })).body;
 }
-function u(e) {
+function m(e) {
     var t, n;
     return null !== (n = null !== (t = null == e ? void 0 : e.name) && void 0 !== t ? t : '' + (null == e ? void 0 : e.squad)) && void 0 !== n ? n : '';
 }
@@ -59,7 +59,7 @@ function d() {
 }
 async function _(e, t, n) {
     var r, c;
-    let m = [
+    let u = [
         {
             name: 'name',
             value: e.name
@@ -78,55 +78,55 @@ async function _(e, t, n) {
         }
     ];
     '' !== e.description &&
-        m.push({
+        u.push({
             name: 'description',
             value: e.description
         }),
         '' !== e.url &&
-            m.push({
+            u.push({
                 name: 'external_url',
                 value: e.url
             });
-    let u = null === (r = e.feature) || void 0 === r ? void 0 : r.asana_inbox_id;
-    null != u &&
-        '' !== u &&
-        m.push({
+    let m = null === (r = e.feature) || void 0 === r ? void 0 : r.asana_inbox_id;
+    null != m &&
+        '' !== m &&
+        u.push({
             name: 'asana_inbox_id',
-            value: ''.concat(u)
+            value: ''.concat(m)
         });
     let d = null === (c = e.feature) || void 0 === c ? void 0 : c.name;
     null != d &&
         '' !== d &&
-        m.push({
+        u.push({
             name: 'feature_name',
             value: d
         }),
         t.overridePlatformInformation &&
-            (m.push({
+            (u.push({
                 name: 'device',
                 value: t.device
             }),
-            m.push({
+            u.push({
                 name: 'os',
                 value: t.operatingSystem
             }),
-            m.push({
+            u.push({
                 name: 'os_version',
                 value: t.operatingSystemVersion
             }),
-            m.push({
+            u.push({
                 name: 'client_version',
                 value: t.clientVersion
             }),
-            m.push({
+            u.push({
                 name: 'client_build_number',
                 value: t.clientBuildNumber
             }),
-            m.push({
+            u.push({
                 name: 'release_channel',
                 value: window.GLOBAL_ENV.RELEASE_CHANNEL
             }),
-            m.push({
+            u.push({
                 name: 'locale',
                 value: t.locale
             })),
@@ -135,12 +135,12 @@ async function _(e, t, n) {
         return await s.Z.post({
             url: l.ANM.BUG_REPORTS,
             attachments: n,
-            fields: m,
+            fields: u,
             trackedActionData: {
                 event: a.NetworkActionNames.BUG_REPORT_SUBMIT,
                 properties: {
                     priority: e.priority,
-                    asana_inbox_id: u
+                    asana_inbox_id: m
                 }
             }
         });

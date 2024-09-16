@@ -53,7 +53,7 @@ let f = i.forwardRef(function (e, t) {
                 query: m,
                 ref: I,
                 size: o.ZP.Sizes.MEDIUM,
-                placeholder: null != S ? S : p ? _.Z.Messages.SEARCH_FOR_STICKERS : _.Z.Messages.NO_STICKERS_TO_SEARCH_THROUGH,
+                placeholder: null != S ? S : p ? _.Z.Messages.SEARCH_FOR_STICKER : _.Z.Messages.NO_STICKERS_TO_SEARCH_THROUGH,
                 onClear: N,
                 onKeyDown: n,
                 onQueryChange: A,
