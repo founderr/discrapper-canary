@@ -5,8 +5,8 @@ l.d(n, {
 });
 var t = l(735250);
 l(470079);
-var a = l(442837),
-    i = l(481060),
+var i = l(442837),
+    a = l(481060),
     r = l(749210),
     s = l(287734),
     u = l(933557),
@@ -24,8 +24,8 @@ var a = l(442837),
     R = l(981631),
     N = l(689938);
 function C(e, n) {
-    let l = (0, a.e7)([c.ZP], () => c.ZP.getChannels(n)[c.Zb], [n]),
-        C = (0, a.e7)(
+    let l = (0, i.e7)([c.ZP], () => c.ZP.getChannels(n)[c.Zb], [n]),
+        C = (0, i.e7)(
             [g.Z, o.Z],
             () => {
                 let l = g.Z.getUserVoiceChannelId(n, e.id);
@@ -33,7 +33,7 @@ function C(e, n) {
             },
             [n, e.id]
         );
-    if ((0, a.e7)([Z.ZP], () => Z.ZP.isGuestOrLurker(n, e.id), [n, e.id]) || null == C) return null;
+    if ((0, i.e7)([Z.ZP], () => Z.ZP.isGuestOrLurker(n, e.id), [n, e.id]) || null == C) return null;
     let O = e.id === d.default.getId();
     if (!O && !M.Z.can(R.Plq.MOVE_MEMBERS, C)) return null;
     let A = l.filter((n) => {
@@ -54,22 +54,22 @@ function C(e, n) {
     });
     return 0 === A.length
         ? null
-        : (0, t.jsx)(i.MenuItem, {
+        : (0, t.jsx)(a.MenuItem, {
               id: 'voice-move',
               label: N.Z.Messages.MOVE_TO,
               children: A.map((l) => {
-                  let { channel: a } = l;
+                  let { channel: i } = l;
                   return (0, t.jsx)(
-                      i.MenuItem,
+                      a.MenuItem,
                       {
-                          id: a.id,
+                          id: i.id,
                           action: () => {
                               var l;
-                              return (l = a), void (e.id === d.default.getId() ? s.default.selectVoiceChannel(l.id) : r.Z.setChannel(n, e.id, l.id));
+                              return (l = i), void (e.id === d.default.getId() ? s.default.selectVoiceChannel(l.id) : r.Z.setChannel(n, e.id, l.id));
                           },
-                          label: (0, u.F6)(a, _.default, f.Z)
+                          label: (0, u.F6)(i, _.default, f.Z)
                       },
-                      a.id
+                      i.id
                   );
               })
           });

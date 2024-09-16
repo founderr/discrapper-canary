@@ -1,8 +1,8 @@
 l.r(n);
 var t = l(735250);
 l(470079);
-var a = l(481060),
-    i = l(239091),
+var i = l(481060),
+    a = l(239091),
     r = l(883385),
     s = l(108843),
     u = l(911969),
@@ -22,8 +22,8 @@ var a = l(481060),
     C = l(88966),
     O = l(712301),
     A = l(520063),
-    T = l(725119),
-    h = l(931617),
+    h = l(725119),
+    T = l(931617),
     v = l(332031),
     x = l(981631),
     b = l(689938);
@@ -31,7 +31,7 @@ n.default = (0, s.Z)(
     (0, r.Z)(
         function (e) {
             let { user: n, guildId: l, channel: r, context: s, onSelect: o, onHeightUpdate: S } = e,
-                p = (0, T.Z)({
+                p = (0, h.Z)({
                     userId: n.id,
                     guildId: l,
                     channelId: r.id
@@ -68,7 +68,7 @@ n.default = (0, s.Z)(
                 V = (0, M.Z)(n),
                 K = (0, I.Z)({ user: n }),
                 B = (0, A.Z)(n, l, r.id),
-                H = (0, h.Z)(n.id, l),
+                H = (0, T.Z)(n.id, l),
                 q = (0, O.Z)(n, l),
                 w = (0, c.Z)({
                     id: n.id,
@@ -83,30 +83,30 @@ n.default = (0, s.Z)(
                     onHeightUpdate: S
                 }),
                 z = n.isNonUserBot();
-            return (0, t.jsxs)(a.Menu, {
+            return (0, t.jsxs)(i.Menu, {
                 navId: 'user-context',
-                onClose: i.Zy,
+                onClose: a.Zy,
                 'aria-label': b.Z.Messages.USER_ACTIONS_MENU_LABEL,
                 onSelect: o,
                 children: [
                     !z &&
                         (0, t.jsxs)(t.Fragment, {
                             children: [
-                                (0, t.jsx)(a.MenuGroup, { children: Y }),
-                                (0, t.jsxs)(a.MenuGroup, {
+                                (0, t.jsx)(i.MenuGroup, { children: Y }),
+                                (0, t.jsxs)(i.MenuGroup, {
                                     children: [p, P, U, L, D, G, j]
                                 }),
-                                (0, t.jsx)(a.MenuGroup, { children: y }),
-                                (0, t.jsxs)(a.MenuGroup, {
+                                (0, t.jsx)(i.MenuGroup, { children: y }),
+                                (0, t.jsxs)(i.MenuGroup, {
                                     children: [F, W, k, V, K]
                                 }),
-                                (0, t.jsx)(a.MenuGroup, { children: B }),
-                                (0, t.jsxs)(a.MenuGroup, {
+                                (0, t.jsx)(i.MenuGroup, { children: B }),
+                                (0, t.jsxs)(i.MenuGroup, {
                                     children: [H, q]
                                 })
                             ]
                         }),
-                    (0, t.jsx)(a.MenuGroup, { children: w })
+                    (0, t.jsx)(i.MenuGroup, { children: w })
                 ]
             });
         },

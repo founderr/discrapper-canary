@@ -1,6 +1,6 @@
 l.d(t, {
     Z: function () {
-        return A;
+        return R;
     }
 }),
     l(47120);
@@ -24,10 +24,10 @@ var n = l(735250),
     T = l(42170),
     L = l(123846),
     g = l(42551),
-    I = l(981631),
-    p = l(689938),
+    H = l(981631),
+    I = l(689938),
     f = l(443547),
-    H = l(352533);
+    p = l(352533);
 function N(e) {
     let { label: t, onFilter: l, isFiltered: a, isSorted: o, className: i, ...r } = e,
         C = a ? 'header-primary' : 'header-secondary';
@@ -61,29 +61,29 @@ function N(e) {
         })
     );
 }
-let R = 'member-safety-force-show-signals-tooltip';
-function A(e) {
+let A = 'member-safety-force-show-signals-tooltip';
+function R(e) {
     let { guildId: t, currentPagedMembers: l } = e,
         o = (0, C.e7)([h.Z], () => h.Z.getSearchStateByGuildId(t), [t], r()),
-        i = (0, C.e7)([m.Z, u.Z], () => m.Z.can(I.Plq.MANAGE_GUILD, u.Z.getGuild(t)), [t]),
-        { selectedUserIds: A, addUsers: S, clearSelection: Z } = (0, M.Z)(t),
+        i = (0, C.e7)([m.Z, u.Z], () => m.Z.can(H.Plq.MANAGE_GUILD, u.Z.getGuild(t)), [t]),
+        { selectedUserIds: R, addUsers: S, clearSelection: Z } = (0, M.Z)(t),
         j = o.requireUnusualDmActivity || o.requireCommunicationDisabled || o.requireUnusualAccountActivity || o.requireUsernameQuarantined,
         v = o.selectedRoleIds.size > 0,
         D = null != o.selectedJoinDateOption.afterDate,
-        O = o.selectedSort === _.d$.ORDER_BY_GUILD_JOINED_AT_ASC,
-        B = null != o.selectedAccountAgeOption.afterDate,
+        B = o.selectedSort === _.d$.ORDER_BY_GUILD_JOINED_AT_ASC,
+        O = null != o.selectedAccountAgeOption.afterDate,
         V = o.selectedSort === _.d$.ORDER_BY_USER_ID_ASC || o.selectedSort === _.d$.ORDER_BY_USER_ID_DESC,
         U = null != o.selectedSourceInviteCode && '' !== o.selectedSourceInviteCode,
         w = null != o.selectedJoinSourceType,
         k = U || w,
-        [F, y] = a.useState(null == c.K.get(R, null)),
+        [F, y] = a.useState(null == c.K.get(A, null)),
         P = a.useCallback(() => {
-            c.K.set(R, Date.now()), y(!1);
+            c.K.set(A, Date.now()), y(!1);
         }, []),
         Y = (0, E.xC)(t),
         G = a.useMemo(() => l.filter((e) => (0, E.rX)(t, Y, e)), [Y, l, t]),
         z = G.length > 0,
-        q = 0 === G.filter((e) => !A.has(e)).length,
+        q = 0 === G.filter((e) => !R.has(e)).length,
         W = a.useCallback(() => {
             z && (q ? Z() : S(G));
         }, [z, q, Z, S, G]);
@@ -93,10 +93,10 @@ function A(e) {
             children: [
                 Y &&
                     (0, n.jsx)('th', {
-                        className: s()(f.tableHeaderCellContainer, H.xsmallCol),
+                        className: s()(f.tableHeaderCellContainer, p.xsmallCol),
                         children: (0, n.jsx)(d.Tooltip, {
                             shouldShow: !z,
-                            text: p.Z.Messages.MEMBER_SAFETY_CANNOT_SELECT_ALL,
+                            text: I.Z.Messages.MEMBER_SAFETY_CANNOT_SELECT_ALL,
                             children: (e) =>
                                 (0, n.jsx)(d.Clickable, {
                                     ...e,
@@ -110,7 +110,7 @@ function A(e) {
                                 })
                         })
                     }),
-                (0, n.jsx)(N, { label: p.Z.Messages.MEMBER_SAFETY_TABLE_HEADER_NAME }),
+                (0, n.jsx)(N, { label: I.Z.Messages.MEMBER_SAFETY_TABLE_HEADER_NAME }),
                 i
                     ? (0, n.jsxs)(n.Fragment, {
                           children: [
@@ -122,16 +122,16 @@ function A(e) {
                                   renderPopout: () =>
                                       (0, n.jsx)(T.Z, {
                                           guildId: t,
-                                          onClose: I.dG4
+                                          onClose: H.dG4
                                       }),
                                   children: (e) => {
                                       let { onClick: t, ...l } = e;
                                       return (0, n.jsx)(N, {
-                                          label: p.Z.Messages.MEMBER_SAFETY_TABLE_HEADER_JOINED_AT,
+                                          label: I.Z.Messages.MEMBER_SAFETY_TABLE_HEADER_JOINED_AT,
                                           onFilter: t,
                                           isFiltered: D,
-                                          isSorted: O,
-                                          className: H.smallCol,
+                                          isSorted: B,
+                                          className: p.smallCol,
                                           ...l
                                       });
                                   }
@@ -144,16 +144,16 @@ function A(e) {
                                   renderPopout: () =>
                                       (0, n.jsx)(x.Z, {
                                           guildId: t,
-                                          onClose: I.dG4
+                                          onClose: H.dG4
                                       }),
                                   children: (e) => {
                                       let { onClick: t, ...l } = e;
                                       return (0, n.jsx)(N, {
-                                          label: p.Z.Messages.MEMBER_SAFETY_TABLE_HEADER_ACCOUNT_AGE,
+                                          label: I.Z.Messages.MEMBER_SAFETY_TABLE_HEADER_ACCOUNT_AGE,
                                           onFilter: t,
-                                          isFiltered: B,
+                                          isFiltered: O,
                                           isSorted: V,
-                                          className: H.smallCol,
+                                          className: p.smallCol,
                                           ...l
                                       });
                                   }
@@ -163,12 +163,12 @@ function A(e) {
                     : (0, n.jsxs)(n.Fragment, {
                           children: [
                               (0, n.jsx)(N, {
-                                  label: p.Z.Messages.MEMBER_SAFETY_TABLE_HEADER_JOINED_AT,
-                                  className: H.smallCol
+                                  label: I.Z.Messages.MEMBER_SAFETY_TABLE_HEADER_JOINED_AT,
+                                  className: p.smallCol
                               }),
                               (0, n.jsx)(N, {
-                                  label: p.Z.Messages.MEMBER_SAFETY_TABLE_HEADER_ACCOUNT_AGE,
-                                  className: H.smallCol
+                                  label: I.Z.Messages.MEMBER_SAFETY_TABLE_HEADER_ACCOUNT_AGE,
+                                  className: p.smallCol
                               })
                           ]
                       }),
@@ -181,23 +181,23 @@ function A(e) {
                           renderPopout: () =>
                               (0, n.jsx)(L.Z, {
                                   guildId: t,
-                                  onClose: I.dG4
+                                  onClose: H.dG4
                               }),
                           children: (e) => {
                               let { onClick: t, ...l } = e;
                               return (0, n.jsx)(N, {
-                                  label: p.Z.Messages.MEMBER_SAFETY_TABLE_HEADER_JOIN_METHOD,
+                                  label: I.Z.Messages.MEMBER_SAFETY_TABLE_HEADER_JOIN_METHOD,
                                   onFilter: t,
                                   isFiltered: k,
-                                  className: H.smallCol,
+                                  className: p.smallCol,
                                   ...l
                               });
                           }
                       })
                     : i &&
                       (0, n.jsx)(N, {
-                          label: p.Z.Messages.MEMBER_SAFETY_TABLE_HEADER_JOIN_METHOD,
-                          className: H.smallCol
+                          label: I.Z.Messages.MEMBER_SAFETY_TABLE_HEADER_JOIN_METHOD,
+                          className: p.smallCol
                       }),
                 (0, n.jsx)(d.Popout, {
                     animation: d.Popout.Animation.FADE,
@@ -214,16 +214,16 @@ function A(e) {
                     children: (e) => {
                         let { onClick: t, ...l } = e;
                         return (0, n.jsx)(N, {
-                            label: p.Z.Messages.MEMBER_SAFETY_TABLE_HEADER_ROLES,
+                            label: I.Z.Messages.MEMBER_SAFETY_TABLE_HEADER_ROLES,
                             onFilter: t,
                             isFiltered: v,
-                            className: s()(H.mediumCol),
+                            className: s()(p.mediumCol),
                             ...l
                         });
                     }
                 }),
                 (0, n.jsx)(d.Tooltip, {
-                    text: p.Z.Messages.MEMBER_SAFETY_SIGNALS_DESCRIPTION,
+                    text: I.Z.Messages.MEMBER_SAFETY_SIGNALS_DESCRIPTION,
                     position: 'top',
                     align: 'left',
                     forceOpen: F,
@@ -244,14 +244,14 @@ function A(e) {
                             },
                             children: (t) =>
                                 (0, n.jsx)(N, {
-                                    label: p.Z.Messages.MEMBER_SAFETY_TABLE_HEADER_FLAGS,
-                                    'aria-label': p.Z.Messages.MEMBER_SAFETY_SIGNALS_DESCRIPTION,
+                                    label: I.Z.Messages.MEMBER_SAFETY_TABLE_HEADER_FLAGS,
+                                    'aria-label': I.Z.Messages.MEMBER_SAFETY_SIGNALS_DESCRIPTION,
                                     onFilter: (l) => {
                                         var n, a;
                                         P(), null === (n = t.onClick) || void 0 === n || n.call(t, l), null === (a = e.onClick) || void 0 === a || a.call(e);
                                     },
                                     isFiltered: j,
-                                    className: s()(H.smallCol),
+                                    className: s()(p.smallCol),
                                     onMouseEnter: () => {
                                         var l, n;
                                         P(), null === (l = e.onMouseEnter) || void 0 === l || l.call(e), null === (n = t.onMouseEnter) || void 0 === n || n.call(t);
@@ -267,8 +267,8 @@ function A(e) {
                         })
                 }),
                 (0, n.jsx)(N, {
-                    label: p.Z.Messages.MEMBER_SAFETY_TABLE_HEADER_ACTIONS,
-                    className: H.smallCol
+                    label: I.Z.Messages.MEMBER_SAFETY_TABLE_HEADER_ACTIONS,
+                    className: p.smallCol
                 })
             ]
         })

@@ -24,8 +24,8 @@ var t = n(735250),
     C = n(979651),
     f = n(630388),
     O = n(5192),
-    R = n(813872),
-    v = n(981631),
+    v = n(813872),
+    R = n(981631),
     N = n(590433),
     S = n(372897),
     A = n(689938);
@@ -62,7 +62,7 @@ function P(e, l, P, h) {
             };
         }),
         V = (0, i.e7)([I.ZP], () => I.ZP.getMember(l, e.id)),
-        k = (0, R.Z)({
+        k = (0, v.Z)({
             userId: e.id,
             guildId: l,
             channelId: P,
@@ -74,9 +74,9 @@ function P(e, l, P, h) {
         }),
         K = (0, c.Z)(l, e.id),
         w =
-            null != y && null != P && m.Z.canWithPartialContext(v.Plq.VIEW_CHANNEL, { channelId: y }) && !x
+            null != y && null != P && m.Z.canWithPartialContext(R.Plq.VIEW_CHANNEL, { channelId: y }) && !x
                 ? [
-                      (!D || (D && !q)) && m.Z.canWithPartialContext(v.Plq.MUTE_MEMBERS, { channelId: P })
+                      (!D || (D && !q)) && m.Z.canWithPartialContext(R.Plq.MUTE_MEMBERS, { channelId: P })
                           ? (0, t.jsx)(
                                 r.MenuCheckboxItem,
                                 {
@@ -91,7 +91,7 @@ function P(e, l, P, h) {
                                 'voice-mute'
                             )
                           : null,
-                      (!D || (D && !q)) && m.Z.canWithPartialContext(v.Plq.DEAFEN_MEMBERS, { channelId: P })
+                      (!D || (D && !q)) && m.Z.canWithPartialContext(R.Plq.DEAFEN_MEMBERS, { channelId: P })
                           ? (0, t.jsx)(
                                 r.MenuCheckboxItem,
                                 {
@@ -104,7 +104,7 @@ function P(e, l, P, h) {
                                 'voice-deafen'
                             )
                           : null,
-                      !L && null != b && m.Z.canWithPartialContext(v.Plq.MOVE_MEMBERS, { channelId: P })
+                      !L && null != b && m.Z.canWithPartialContext(R.Plq.MOVE_MEMBERS, { channelId: P })
                           ? (0, t.jsx)(
                                 r.MenuItem,
                                 {
@@ -128,9 +128,9 @@ function P(e, l, P, h) {
                 }
         },
         H = null,
-        W = null != b && m.Z.canManageUser(v.Plq.MODERATE_MEMBERS, e, b) && m.Z.canManageUser(v.Plq.KICK_MEMBERS, e, b) && m.Z.canManageUser(v.Plq.BAN_MEMBERS, e, b),
-        z = null != b && (m.Z.canManageUser(v.Plq.MANAGE_GUILD, e, b) || m.Z.canManageUser(v.Plq.MANAGE_ROLES, e, b));
-    if (!L && null != b && null != V && null != V.joinedAt && (W || z) && b.hasFeature(v.oNc.GUILD_ONBOARDING_EVER_ENABLED)) {
+        W = null != b && m.Z.canManageUser(R.Plq.MODERATE_MEMBERS, e, b) && m.Z.canManageUser(R.Plq.KICK_MEMBERS, e, b) && m.Z.canManageUser(R.Plq.BAN_MEMBERS, e, b),
+        z = null != b && (m.Z.canManageUser(R.Plq.MANAGE_GUILD, e, b) || m.Z.canManageUser(R.Plq.MANAGE_ROLES, e, b));
+    if (!L && null != b && null != V && null != V.joinedAt && (W || z) && b.hasFeature(R.oNc.GUILD_ONBOARDING_EVER_ENABLED)) {
         var Q;
         H = (0, f.yE)(null !== (Q = V.flags) && void 0 !== Q ? Q : 0, S.q.BYPASSES_VERIFICATION)
             ? (0, t.jsx)(
@@ -193,7 +193,7 @@ function P(e, l, P, h) {
                                 'timeout'
                             )
                       : null,
-                  m.Z.canManageUser(v.Plq.KICK_MEMBERS, e, b) && !e.isClyde()
+                  m.Z.canManageUser(R.Plq.KICK_MEMBERS, e, b) && !e.isClyde()
                       ? (0, t.jsx)(
                             r.MenuItem,
                             {
@@ -215,7 +215,7 @@ function P(e, l, P, h) {
                             'kick'
                         )
                       : null,
-                  m.Z.canManageUser(v.Plq.BAN_MEMBERS, e, b)
+                  m.Z.canManageUser(R.Plq.BAN_MEMBERS, e, b)
                       ? (0, t.jsx)(
                             r.MenuItem,
                             {

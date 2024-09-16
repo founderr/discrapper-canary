@@ -1,6 +1,6 @@
 l.d(t, {
     Z: function () {
-        return p;
+        return I;
     }
 }),
     l(47120),
@@ -26,13 +26,13 @@ var n = l(735250),
     T = l(689938),
     L = l(522492),
     g = l(352533);
-let I = new Set();
-function p(e) {
+let H = new Set();
+function I(e) {
     let { guildId: t, onClose: l } = e,
         o = (0, h.BG)(t),
         i = (0, m.e7)([M.Z], () => M.Z.getSearchStateByGuildId(t), [t], u()),
         [C, d] = a.useState(i.selectedRoleIds),
-        p = (0, E.h)(t, I, !0),
+        I = (0, E.h)(t, H, !0),
         f = (e, l) => {
             let { record: a } = e;
             return (0, n.jsx)(
@@ -69,8 +69,8 @@ function p(e) {
                 a.id
             );
         },
-        H = (e, t) =>
-            p.reduce((l, n) => {
+        p = (e, t) =>
+            I.reduce((l, n) => {
                 let { record: a } = n,
                     o = e.has(a.id);
                 return r()(t.toLowerCase(), a.name.toLowerCase()) ? l.push(f(n, o)) : o && l.push(f(n, o)), l;
@@ -81,25 +81,25 @@ function p(e) {
             },
             [t, o]
         ),
-        R = a.useCallback(c()(N, 300), [N]),
-        A = a.useCallback(
+        A = a.useCallback(c()(N, 300), [N]),
+        R = a.useCallback(
             (e) => {
                 let t;
-                d((t = C.has(e) ? new Set([...C].filter((t) => t !== e)) : new Set([...C, e]))), R(t);
+                d((t = C.has(e) ? new Set([...C].filter((t) => t !== e)) : new Set([...C, e]))), A(t);
             },
-            [C, R]
+            [C, A]
         );
     return (0, n.jsx)(_.ComboboxPopout, {
         className: s()(L.rolePopout),
         placeholder: T.Z.Messages.MEMBERS_TABLE_ROLE_SELECTION_PLACEHOLDER,
         value: C,
-        onChange: A,
+        onChange: R,
         onClose: () => {
             l();
         },
         multiSelect: !0,
         showScrollbar: !0,
         autoFocus: !0,
-        children: (e) => H(C, e)
+        children: (e) => p(C, e)
     });
 }

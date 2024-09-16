@@ -4,8 +4,8 @@ l.d(n, {
     }
 });
 var t = l(735250),
-    a = l(470079),
-    i = l(442837),
+    i = l(470079),
+    a = l(442837),
     r = l(481060),
     s = l(58540),
     u = l(40851),
@@ -22,11 +22,11 @@ var t = l(735250),
 function m(e) {
     let { guildId: n, userId: m, analyticsLocation: R, analyticsLocations: N, context: C, icon: O } = e,
         A = E.Z.getGuild(n),
-        T = c.default.getId(),
-        h = (0, i.e7)([f.default], () => f.default.getUser(m)),
-        v = (0, i.e7)([Z.ZP], () => Z.ZP.isGuestOrLurker(n, m), [n, m]);
-    (0, i.e7)([M.Z], () => M.Z.getGuildVersion(n), [n]);
-    let x = a.useMemo(() => ({ [n]: [m] }), [n, m]);
+        h = c.default.getId(),
+        T = (0, a.e7)([f.default], () => f.default.getUser(m)),
+        v = (0, a.e7)([Z.ZP], () => Z.ZP.isGuestOrLurker(n, m), [n, m]);
+    (0, a.e7)([M.Z], () => M.Z.getGuildVersion(n), [n]);
+    let x = i.useMemo(() => ({ [n]: [m] }), [n, m]);
     (0, s.$)(x);
     let b = C === _.IlC.POPOUT,
         S = (0, d.Z)({
@@ -35,10 +35,10 @@ function m(e) {
         }),
         p = (0, u.Aq)();
     if (null == A || b) return null;
-    let P = T === m && (M.Z.can(_.Plq.CHANGE_NICKNAME, A) || M.Z.can(_.Plq.MANAGE_NICKNAMES, A)),
-        U = T === m,
+    let P = h === m && (M.Z.can(_.Plq.CHANGE_NICKNAME, A) || M.Z.can(_.Plq.MANAGE_NICKNAMES, A)),
+        U = h === m,
         j = M.Z.canManageUser(_.Plq.MANAGE_NICKNAMES, m, A);
-    if (!(P || j || U) || null == h || v) return null;
+    if (!(P || j || U) || null == T || v) return null;
     let L = A.hasFeature(_.oNc.HUB) ? g.Z.Messages.HUB_EDIT_PROFILE : g.Z.Messages.CHANGE_IDENTITY,
         D = U ? L : g.Z.Messages.CHANGE_NICKNAME;
     return (0, t.jsx)(r.MenuItem, {
@@ -53,14 +53,14 @@ function m(e) {
         icon: O,
         action: () => {
             U
-                ? ((0, o.Z)(h.id, h.getAvatarURL(n, 80), { guildId: n }), S(), p.dispatch(_.CkL.POPOUT_CLOSE), (0, r.closeAllModals)())
+                ? ((0, o.Z)(T.id, T.getAvatarURL(n, 80), { guildId: n }), S(), p.dispatch(_.CkL.POPOUT_CLOSE), (0, r.closeAllModals)())
                 : (0, r.openModalLazy)(async () => {
                       let { default: e } = await l.e('17712').then(l.bind(l, 620021));
                       return (l) =>
                           (0, t.jsx)(e, {
                               ...l,
                               guildId: n,
-                              user: h,
+                              user: T,
                               analyticsSource: R,
                               analyticsLocations: N
                           });

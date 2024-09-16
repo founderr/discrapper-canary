@@ -33,13 +33,13 @@ function E(e) {
         T = new Intl.NumberFormat(m.Z.getLocale()).format(h),
         L = m.Z.Messages.MEMBER_SAFETY_TABLE_PAGINATION_LABEL.format({ count: x ? '...' : T }),
         g = h > M.pageSize || x,
-        I = h > C.LU['0'];
+        H = h > C.LU['0'];
     return (0, n.jsxs)('div', {
         className: s()(_.paginationContainer),
         children: [
             (0, n.jsx)('div', {
                 className: s()(_.pageSizeSelection),
-                children: I
+                children: H
                     ? (0, n.jsxs)(n.Fragment, {
                           children: [
                               (0, n.jsx)(r.Text, {

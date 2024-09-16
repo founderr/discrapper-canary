@@ -1,8 +1,8 @@
 t.d(s, {
-    T: function () {
+    Th: function () {
         return a;
     },
-    x: function () {
+    xu: function () {
         return r;
     }
 });

@@ -21,8 +21,8 @@ function g(e) {
         C = a.useContext(c.AnalyticsContext),
         f = (0, s.Aq)(),
         O = (0, i.e7)([o.Z], () => (null != g ? g : o.Z.getChannelId(n, !0)), [g, n]),
-        R = (0, d.ms)(n, !0);
-    return null != n && R
+        v = (0, d.ms)(n, !0);
+    return null != n && v
         ? (0, t.jsx)(r.MenuItem, {
               id: 'mod-view',
               label: I.Z.Messages.GUILD_MEMBER_MOD_VIEW_TITLE,

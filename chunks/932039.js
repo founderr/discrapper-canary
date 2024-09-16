@@ -32,8 +32,8 @@ let M = 'MMM Do, YYYY',
     });
 ((a = n || (n = {}))[(a.ALL = 0)] = 'ALL'), (a[(a['1_HOUR'] = 1)] = '1_HOUR'), (a[(a['24_HOURS'] = 2)] = '24_HOURS'), (a[(a['7_DAYS'] = 3)] = '7_DAYS'), (a[(a['2_WEEKS'] = 4)] = '2_WEEKS'), (a[(a['4_WEEKS'] = 5)] = '4_WEEKS'), (a[(a['3_MONTHS'] = 6)] = '3_MONTHS'), (a[(a.CUSTOM = 7)] = 'CUSTOM');
 function T(e) {
-    let { startDateLabel: t, endDateLabel: l, afterDate: n, beforeDate: a, selectedOption: i, isCustomDateRange: C, menuName: d, onClose: M, onSelectDateOption: T, onToggleCustomDateRange: L, onSelectStartDate: g, onSelectEndDate: I } = e,
-        p = [
+    let { startDateLabel: t, endDateLabel: l, afterDate: n, beforeDate: a, selectedOption: i, isCustomDateRange: C, menuName: d, onClose: M, onSelectDateOption: T, onToggleCustomDateRange: L, onSelectStartDate: g, onSelectEndDate: H } = e,
+        I = [
             {
                 id: 0,
                 option: null,
@@ -88,7 +88,7 @@ function T(e) {
                 label: E.Z.Messages.MEMBER_SAFETY_DATE_OPTION_LABEL_3_MONTHS
             }
         ],
-        [f, H] = s.useState(!1),
+        [f, p] = s.useState(!1),
         N = (function () {
             if (7 !== i) return null;
             if (null != t && null != l) return ''.concat(t, ' - ').concat(l);
@@ -96,10 +96,10 @@ function T(e) {
             if (null != l) return E.Z.Messages.MEMBER_SAFETY_DATE_OPTION_BEFORE_ONLY.format({ date: l });
             return null;
         })(),
-        R = s.useCallback(() => {
-            H(!0), L();
+        A = s.useCallback(() => {
+            p(!0), L();
         }, [L]),
-        A = s.useCallback(
+        R = s.useCallback(
             (e) => {
                 g(e);
             },
@@ -107,12 +107,12 @@ function T(e) {
         ),
         S = s.useCallback(
             (e) => {
-                I(e);
+                H(e);
             },
-            [I]
+            [H]
         ),
         Z = s.useCallback(() => {
-            null == a && null == n && T(0, null), H(!1);
+            null == a && null == n && T(0, null), p(!1);
         }, [n, a, T]);
     return (0, o.jsx)(u.Menu, {
         navId: 'member-safety-guild-member-'.concat(d, '-menu'),
@@ -157,7 +157,7 @@ function T(e) {
                                           ...e,
                                           calendarClassName: h.calendar,
                                           value: C && null != n ? c()(n) : void 0,
-                                          onSelect: A,
+                                          onSelect: R,
                                           maxDate: c()().local(),
                                           minDate: x
                                       })
@@ -185,7 +185,7 @@ function T(e) {
                   })
                 : (0, o.jsxs)(o.Fragment, {
                       children: [
-                          p.map((e) => {
+                          I.map((e) => {
                               let { id: t, option: l, label: n } = e;
                               return (0, o.jsx)(
                                   u.MenuRadioItem,
@@ -202,7 +202,7 @@ function T(e) {
                           (0, o.jsx)(u.MenuSeparator, {}),
                           (0, o.jsx)(u.MenuItem, {
                               id: 'guild-member-'.concat(d, '-custom-option}'),
-                              action: R,
+                              action: A,
                               render: (e) =>
                                   (0, o.jsxs)('div', {
                                       className: r()(h.otherDatesContainer, { [h.focused]: e.isFocused }),

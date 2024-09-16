@@ -39,7 +39,7 @@ function g(e) {
         ),
         C = (0, r.e7)([c.Z], () => c.Z.getEnhancedMember(t.guildId, t.userId), [t.guildId, t.userId]),
         I = (0, u.zq)(C),
-        x = (0, u.qr)(t),
+        x = (0, u.vN)(t),
         T = (0, r.e7)([m.Z], () => m.Z.can(_.Plq.MANAGE_ROLES, n), [n]);
     return null == n
         ? null

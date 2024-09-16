@@ -10,7 +10,7 @@ var n = t(442837),
     a = t(430824),
     i = t(997950),
     r = t(981631);
-let o = () => (0, i.x)().selectedGuildId,
+let o = () => (0, i.xu)().selectedGuildId,
     l = () => {
         var e;
         let s = o(),

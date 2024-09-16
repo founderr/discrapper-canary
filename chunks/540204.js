@@ -18,15 +18,15 @@ var n = t(735250),
     T = t(48143);
 let S = {
     label: () => E.Z.Messages.PRIVACY_AND_SAFETY_ALL_SERVERS_OPTION_TITLE,
-    value: _.T
+    value: _.Th
 };
 function I() {
-    let { selectedGuildId: e, setSelectedGuildId: s } = (0, _.x)(),
+    let { selectedGuildId: e, setSelectedGuildId: s } = (0, _.xu)(),
         t = (0, i.e7)([c.ZP], () => c.ZP.getFlattenedGuildIds()),
         E = (0, i.e7)([l.Z], () => l.Z.getGuilds()),
         { hideGuildOptions: I, hideGlobalOption: N } = (0, u.b)();
     a.useEffect(() => {
-        e === _.T && N && s(t[0]), e !== _.T && I && s(_.T);
+        e === _.Th && N && s(t[0]), e !== _.Th && I && s(_.Th);
     }, [e, s, N, I, t]);
     let m = a.useMemo(() => {
             let e = I

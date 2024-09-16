@@ -46,9 +46,9 @@ function x(e) {
                   });
         }, [T, b]),
         g = new Intl.NumberFormat(E.Z.getLocale()).format(i),
-        I = (0, u.nX)(t.id),
-        p = (0, u.xC)(t.id),
-        f = a.useMemo(() => 1 + (I ? 1 : 0) + (p ? 1 : 0), [I, p]);
+        H = (0, u.nX)(t.id),
+        I = (0, u.xC)(t.id),
+        f = a.useMemo(() => 1 + (H ? 1 : 0) + (I ? 1 : 0), [H, I]);
     return 0 === i
         ? null
         : (0, n.jsxs)('tr', {

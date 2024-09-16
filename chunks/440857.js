@@ -25,8 +25,8 @@ function T(e) {
     let { guildId: t } = e,
         T = (0, E.xC)(t),
         { selectedUserIds: L, clearSelection: g } = (0, h.Z)(t),
-        I = L.size > 0,
-        p = async (e, t, l, n) => {
+        H = L.size > 0,
+        I = async (e, t, l, n) => {
             try {
                 let a = await C.Z.banMultipleUsers(e, t, l, n);
                 (0, r.showToast)((0, r.createToast)(x.Z.Messages.BAN_MULTIPLE_SUCCESS_TOAST, r.ToastType.SUCCESS)),
@@ -46,7 +46,7 @@ function T(e) {
         f = a.useCallback(() => {
             g();
         }, [g]),
-        H = (0, n.jsxs)('span', {
+        p = (0, n.jsxs)('span', {
             className: b.messageContainer,
             children: [
                 (0, n.jsx)(r.UserIcon, {
@@ -89,7 +89,7 @@ function T(e) {
               component: 'div',
               className: b.saveNoticeContainer,
               children:
-                  I &&
+                  H &&
                   (0, n.jsx)(r.SlideIn, {
                       children: (0, n.jsx)(c.Z, {
                           onSave: () => {
@@ -108,13 +108,13 @@ function T(e) {
                                               guildId: t,
                                               canBulkBan: T,
                                               userIds: L,
-                                              onBanMultiple: p
+                                              onBanMultiple: I
                                           });
                                   });
                           },
                           onSaveText: N,
                           onSaveButtonColor: r.ButtonColors.RED,
-                          message: H
+                          message: p
                       })
                   })
           })

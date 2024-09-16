@@ -1,7 +1,7 @@
 n.r(l);
-var r = n(735250);
+var t = n(735250);
 n(470079);
-var t = n(481060),
+var r = n(481060),
     i = n(239091),
     o = n(410575),
     s = n(108843),
@@ -15,31 +15,31 @@ var t = n(481060),
 l.default = (0, s.Z)(
     function (e) {
         let { user: l, guildId: n, analyticsContext: s, onSelect: u } = e,
-            R = (0, c.Z)({
+            h = (0, c.Z)({
                 userId: l.id,
                 guildId: n
             }),
-            _ = (0, Z.Z)(l.id, n),
-            h = (0, d.Z)({
+            R = (0, Z.Z)(l.id, n),
+            _ = (0, d.Z)({
                 id: l.id,
                 label: M.Z.Messages.COPY_ID_USER
             }),
-            E = (0, a.Z)(l.id),
-            O = l.isNonUserBot();
-        return (0, r.jsx)(o.Z, {
+            g = (0, a.Z)(l.id),
+            E = l.isNonUserBot();
+        return (0, t.jsx)(o.Z, {
             context: s,
             object: f.qAy.CONTEXT_MENU,
-            children: (0, r.jsxs)(t.Menu, {
+            children: (0, t.jsxs)(r.Menu, {
                 navId: 'user-context',
                 onClose: i.Zy,
                 'aria-label': M.Z.Messages.USER_ACTIONS_MENU_LABEL,
                 onSelect: u,
                 children: [
-                    (0, r.jsxs)(t.MenuGroup, {
-                        children: [!O && R, !O && E]
+                    (0, t.jsxs)(r.MenuGroup, {
+                        children: [!E && h, !E && g]
                     }),
-                    (0, r.jsx)(t.MenuGroup, { children: !O && _ }),
-                    (0, r.jsx)(t.MenuGroup, { children: h })
+                    (0, t.jsx)(r.MenuGroup, { children: !E && R }),
+                    (0, t.jsx)(r.MenuGroup, { children: _ })
                 ]
             })
         });

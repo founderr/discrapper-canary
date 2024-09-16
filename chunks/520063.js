@@ -4,8 +4,8 @@ l.d(n, {
     }
 });
 var t = l(735250),
-    a = l(470079),
-    i = l(442837),
+    i = l(470079),
+    a = l(442837),
     r = l(481060),
     s = l(58540),
     u = l(438536),
@@ -18,11 +18,11 @@ var t = l(735250),
     f = l(981631),
     _ = l(689938);
 function g(e, n, g) {
-    let I = a.useMemo(() => ({ [n]: [e.id] }), [n, e.id]);
-    (0, s.$)(I), (0, i.e7)([E.Z], () => E.Z.getGuildVersion(n), [n]);
-    let m = (0, i.e7)([c.Z], () => c.Z.getChannel(g)),
-        R = (0, i.e7)([Z.Z], () => Z.Z.getGuild(n), [n]),
-        N = (0, i.e7)([M.default], () => M.default.getCurrentUser()),
+    let I = i.useMemo(() => ({ [n]: [e.id] }), [n, e.id]);
+    (0, s.$)(I), (0, a.e7)([E.Z], () => E.Z.getGuildVersion(n), [n]);
+    let m = (0, a.e7)([c.Z], () => c.Z.getChannel(g)),
+        R = (0, a.e7)([Z.Z], () => Z.Z.getGuild(n), [n]),
+        N = (0, a.e7)([M.default], () => M.default.getCurrentUser()),
         C = (0, u.Z)(m, 'Context Menu'),
         O = (0, o.Xb)(m);
     if ((null == N ? void 0 : N.id) === e.id) return [C];
