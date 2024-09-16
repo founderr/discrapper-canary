@@ -5419,6 +5419,7 @@ let iE = Object.freeze({
     (nV.SUMMER_BOGO_2024 = '24485661785495'),
     (nV.CHANNEL_LINKED_LOBBIES = '24485661785495'),
     (nV.NITRO_FAQ = '115000435108#h_01GFV3PWAGD4EGTD91ERBZ5R4S'),
+    (nV.END_TO_END_ENCRYPTION = '25968222946071'),
     ((tr || (tr = {})).INVALID_BILLING_ADDRESS = '#docs-internal-guid-1731ba7c-7fff-87a1-c976-f62cc1cd2618'),
     ((nk = tn || (tn = {}))[(nk.HIDDEN = 1)] = 'HIDDEN'),
     (nk[(nk.PRIVATE = 2)] = 'PRIVATE'),

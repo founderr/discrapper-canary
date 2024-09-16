@@ -5,64 +5,65 @@ var o = t(735250),
     r = t(481060),
     i = t(959457),
     l = t(571826),
-    a = t(301107),
-    d = t(785792),
-    u = t(190054),
-    h = t(245581),
-    f = t(760373),
-    x = t(689938),
-    _ = t(722041);
+    a = t(630759),
+    d = t(301107),
+    u = t(785792),
+    h = t(190054),
+    f = t(245581),
+    x = t(760373),
+    _ = t(689938),
+    m = t(722041);
 n.default = function (e) {
-    let { transitionState: n, streamKey: t, channelId: m } = e,
-        E = (0, c.e7)([i.Z], () => {
+    let { transitionState: n, streamKey: t, channelId: E } = e,
+        v = (0, c.e7)([i.Z], () => {
             var e;
             return null === (e = i.Z.getSecureFramesState(t)) || void 0 === e ? void 0 : e.epochAuthenticator;
         }),
-        v = (0, a.W)({
-            fingerprintBase64: E,
-            chunkSize: f.y6,
-            desiredLength: f.YP
+        p = (0, d.W)({
+            fingerprintBase64: v,
+            chunkSize: x.y6,
+            desiredLength: x.YP
         }),
-        p = s.useCallback(() => {
-            (0, l.ih)({ channelId: m });
-        }, [m]);
-    return (0, o.jsxs)(h.Z, {
+        I = s.useCallback(() => {
+            (0, l.ih)({ channelId: E });
+        }, [E]);
+    return (0, o.jsxs)(f.Z, {
         transitionState: n,
-        title: x.Z.Messages.E2EE_STREAM_PRIVACY_CODE,
-        subtitle: x.Z.Messages.E2EE_STREAM_VERIFICATION_SUBTITLE,
+        title: _.Z.Messages.E2EE_STREAM_PRIVACY_CODE,
+        subtitle: _.Z.Messages.E2EE_STREAM_VERIFICATION_SUBTITLE,
         children: [
             (0, o.jsxs)('div', {
-                className: _.verification,
+                className: m.verification,
                 children: [
                     (0, o.jsxs)('div', {
-                        className: _.header,
+                        className: m.header,
                         children: [
                             (0, o.jsx)(r.Heading, {
                                 variant: 'text-sm/bold',
                                 color: 'header-primary',
-                                children: x.Z.Messages.E2EE_PRIVACY_CODE
+                                children: _.Z.Messages.E2EE_PRIVACY_CODE
                             }),
-                            null != v &&
-                                (0, o.jsx)(u.H, {
-                                    className: _.copyIcon,
-                                    chunks: v,
+                            null != p &&
+                                (0, o.jsx)(h.H, {
+                                    className: m.copyIcon,
+                                    chunks: p,
                                     color: r.tokens.colors.INTERACTIVE_NORMAL,
-                                    onCopy: p
+                                    onCopy: I
                                 })
                         ]
                     }),
-                    (0, o.jsx)(d.b, {
-                        className: _.code,
-                        chunks: v,
-                        columns: f.WK
+                    (0, o.jsx)(u.b, {
+                        className: m.code,
+                        chunks: p,
+                        columns: x.WK
                     })
                 ]
             }),
             (0, o.jsx)(r.Text, {
-                className: _.footer,
+                className: m.footer,
                 variant: 'text-sm/normal',
                 color: 'text-muted',
-                children: x.Z.Messages.E2EE_STREAM_VERIFICATION_FOOTER_TEXT.format({ helpArticle: f.l4 })
+                children: _.Z.Messages.E2EE_STREAM_VERIFICATION_FOOTER_TEXT.format({ helpArticle: (0, a.uV)() })
             })
         ]
     });
