@@ -326,6 +326,7 @@ var n, r;
     (r.YOU_SCREEN = 'you screen'),
     (r.BILLING_PAUSED_SUBSCRIPTION_INVOICE_RESUME_PREVIEW = 'billing payment modal paused subscription resume invoice preview'),
     (r.BILLING_PAUSED_SUBSCRIPTION_INVOICE_RENEWAL_PREVIEW = 'billing payment modal paused subscription renewal invoice preview'),
+    (r.EDIT_CHANNEL_SYNCING = 'edit channel syncing'),
     (r.CLAN_GUILD_PROFILE = 'clan guild profile'),
     (r.CLAN_DISCOVERY = 'clan discovery'),
     (r.CLAN_REAPPLY = 'clan reapply'),
