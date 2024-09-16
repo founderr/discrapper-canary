@@ -13,14 +13,23 @@ n.d(t, {
     n(216116),
     n(78328),
     n(815648),
-    n(642549);
+    n(518263),
+    n(970173),
+    n(520712),
+    n(268111),
+    n(941497),
+    n(32026),
+    n(480839),
+    n(744285),
+    n(492257),
+    n(873817);
 var r = n(735250),
     a = n(470079),
     l = n(688619),
     i = n.n(l),
     o = n(392711),
-    s = n.n(o),
-    c = n(470716),
+    c = n.n(o),
+    s = n(470716),
     d = n(190558),
     u = n(203165),
     h = n(481060),
@@ -50,9 +59,9 @@ function T() {
                     if (null == i) return '';
                     let o = j(n);
                     if (l) return '--'.concat(o, ': magenta !important;');
-                    let s = j(i.color),
-                        c = i.opacity,
-                        d = c < 1 ? 'hsl(var(--'.concat(s, '-hsl) / ').concat(c, ')') : 'var(--'.concat(s, ')');
+                    let c = j(i.color),
+                        s = i.opacity,
+                        d = s < 1 ? 'hsl(var(--'.concat(c, '-hsl) / ').concat(s, ')') : 'var(--'.concat(c, ')');
                     return '--'.concat(o, ': color-mix(\n        in oklab,\n        ').concat(d, ' 100%,\n        var(--theme-base-color, black) var(--theme-base-color-amount, 0%)\n      );');
                 }),
                 n = Object.keys(_).flatMap((e) => {
@@ -63,29 +72,26 @@ function T() {
                             l: a
                         } = (function (e) {
                             let [t, n, r] = 'transparent' === e ? [0, 0, 0] : i()(e).hsl(),
-                                a = isNaN(t) ? 0 : s().round(t, 1),
-                                l = s().round(100 * r, 1);
+                                a = isNaN(t) ? 0 : c().round(t, 1),
+                                l = c().round(100 * r, 1);
                             return {
                                 h: a,
-                                s: s().round(100 * n, 1),
+                                s: c().round(100 * n, 1),
                                 l: l
                             };
                         })(t.highlight ? '#FF00FF' : t.color),
-                        l = s().kebabCase(e);
+                        l = c().kebabCase(e);
                     return ['--'.concat(l, '-hsl: ').concat(n, ' calc(var(--saturation-factor, 1) * ').concat(r, '%) ').concat(a, '% !important;'), '--'.concat(l, ': hsl(var(--').concat(l, '-hsl)) !important;')];
                 }),
                 r = T.reduce((e, t) => {
-                    let { name: n } = t,
-                        r = (0, b.XM)(t);
+                    let { name: n, useP3ColorSpace: r } = t,
+                        a = (0, b.XM)(t);
                     return (
                         e +
                         (0, b.A0)(n).reduce((e, t) => {
-                            let a = r[''.concat(n, '.').concat(t)];
-                            return ''
-                                .concat(e, '\n--')
-                                .concat(n, '-')
-                                .concat(t, ': ')
-                                .concat(a.to('srgb').toString({ format: 'hex' }), ';');
+                            let l = a[''.concat(n, '.').concat(t)],
+                                i = (0, b.HI)(l, r);
+                            return ''.concat(e, '\n--').concat(n, '-').concat(t, ': ').concat(i, ';');
                         }, '')
                     );
                 }, '');
@@ -168,12 +174,7 @@ function T() {
                                             try {
                                                 let t = JSON.parse(e);
                                                 if (null == t) return;
-                                                let { semanticColorOverrides: r, rawColorOverrides: a } = t;
-                                                n((e) => ({
-                                                    ...e,
-                                                    semanticColorOverrides: r,
-                                                    rawColorOverrides: a
-                                                }));
+                                                n(t);
                                             } catch (e) {}
                                     }),
                                         a.readAsText(r);
@@ -188,19 +189,17 @@ function T() {
                                 color: h.Button.Colors.TRANSPARENT,
                                 look: h.Button.Looks.BLANK,
                                 onClick: () => {
-                                    let e = JSON.stringify(
-                                            {
-                                                semanticColorOverrides: g,
-                                                rawColorOverrides: _
-                                            },
-                                            null,
-                                            2
-                                        ),
-                                        t = new Blob([e], { type: 'application/json' }),
-                                        n = URL.createObjectURL(t),
-                                        r = document.createElement('a'),
-                                        a = btoa(e).slice(0, 8);
-                                    (r.href = n), (r.download = 'color-overrides-'.concat(a, '.json')), r.click(), URL.revokeObjectURL(n);
+                                    let e = JSON.stringify({ ...t }, null, 2),
+                                        n = new Blob([e], { type: 'application/json' }),
+                                        r = URL.createObjectURL(n),
+                                        a = document.createElement('a'),
+                                        l = new TextEncoder().encode(e);
+                                    crypto.subtle.digest('SHA-256', l).then((e) => {
+                                        let t = Array.from(new Uint8Array(e))
+                                            .map((e) => e.toString(16).padStart(2, '0'))
+                                            .join('');
+                                        (a.href = r), (a.download = 'color-overrides-'.concat(t.slice(0, 8), '.json')), a.click(), URL.revokeObjectURL(r);
+                                    });
                                 },
                                 children: (0, r.jsx)(h.DownloadIcon, {})
                             })
@@ -224,7 +223,7 @@ function T() {
                     setState: n
                 })
             }),
-            (0, r.jsx)(c.ql, {
+            (0, r.jsx)(s.ql, {
                 children: (0, r.jsx)('style', {
                     id: 'devtools-color-overrides',
                     children: N
@@ -237,7 +236,7 @@ function S(e) {
     let { state: t, setState: n } = e,
         l = (0, m.Fg)(),
         { semanticColorOverrides: i, rawColorOverrides: o } = t,
-        s = a.useMemo(
+        c = a.useMemo(
             () =>
                 Object.keys(u.b).reduce(
                     (e, t) => [
@@ -251,7 +250,7 @@ function S(e) {
                 ),
             []
         ),
-        c = a.useCallback(
+        s = a.useCallback(
             (e) => {
                 n((t) => {
                     var n;
@@ -340,7 +339,7 @@ function S(e) {
                 options: p,
                 placeholder: 'Search for a semantic token...',
                 value: void 0,
-                onChange: c,
+                onChange: s,
                 renderOptionPrefix: (e) =>
                     null == e
                         ? null
@@ -358,7 +357,7 @@ function S(e) {
                         i = a.colors[l];
                     if (null == i) return null;
                     let o = C(i.color),
-                        c = i.opacity,
+                        s = i.opacity,
                         d = b.jC[t][l];
                     return (0, r.jsx)(
                         N,
@@ -387,7 +386,7 @@ function S(e) {
                                 children: [
                                     (0, r.jsx)(h.SearchableSelect, {
                                         value: o,
-                                        options: s,
+                                        options: c,
                                         onChange: (e) => {
                                             n((n) => {
                                                 let { semanticColorOverrides: r } = n,
@@ -419,7 +418,7 @@ function S(e) {
                                     (0, r.jsx)(h.TextInput, {
                                         inputClassName: v.opacityInput,
                                         type: 'number',
-                                        value: c,
+                                        value: s,
                                         min: 0,
                                         max: 1,
                                         step: 0.01,
@@ -565,7 +564,7 @@ function S(e) {
     });
 }
 function N(e) {
-    let { title: t, subtitle: n, highlight: a, onReset: l, onRemove: i, onHighlightToggle: o, children: s } = e;
+    let { title: t, subtitle: n, highlight: a, onReset: l, onRemove: i, onHighlightToggle: o, children: c } = e;
     return (0, r.jsxs)('li', {
         className: v.override,
         'data-highlight': a,
@@ -621,7 +620,7 @@ function N(e) {
             }),
             (0, r.jsx)('div', {
                 className: v.overrideContent,
-                children: s
+                children: c
             })
         ]
     });
