@@ -99,16 +99,16 @@ let N = 1800,
             )
             .exhaustive();
 function C(e) {
-    let { user: t, channel: n, sourceType: i, sourceDetails: s, isVisible: E, isExpandable: O, onInteraction: C, setInteractionToastShown: y, setInteractionSent: L, setIsReplyInteraction: D, onClose: b } = e,
-        { trackUserProfileAction: M } = (0, h.KZ)(),
-        P = (0, o.e7)([d.Z], () => d.Z.theme),
-        { sendReact: U, pressReact: w, pressReply: x } = (0, I.Q)(i),
-        G = (0, o.e7)([_.default], () => _.default.getId() === t.id),
-        k = (0, p.Z)(t.id);
-    if (t.bot || G || !k) return null;
-    let B = async (e) => {
+    let { user: t, channel: n, sourceType: i, sourceDetails: s, isVisible: E, isExpandable: O, onInteraction: C, setInteractionToastShown: y, setInteractionSent: L, setIsReplyInteraction: D, reactButtonRef: b, replyButtonRef: M, onClose: P } = e,
+        { trackUserProfileAction: U } = (0, h.KZ)(),
+        w = (0, o.e7)([d.Z], () => d.Z.theme),
+        { sendReact: x, pressReact: G, pressReply: k } = (0, I.Q)(i),
+        B = (0, o.e7)([_.default], () => _.default.getId() === t.id),
+        F = (0, p.Z)(t.id);
+    if (t.bot || B || !F) return null;
+    let V = async (e) => {
         if (null == e) return;
-        M({ action: U });
+        U({ action: x });
         let n = R({
             emoji: e,
             username: f.ZP.getName(t),
@@ -140,6 +140,7 @@ function C(e) {
         children: [
             (0, r.jsx)(l.TooltipContainer, {
                 text: g.Z.Messages.USER_PROFILE_SEND_REACTION,
+                shouldShow: E,
                 delay: 0,
                 'aria-label': !1,
                 children: (0, r.jsx)(l.Popout, {
@@ -160,13 +161,13 @@ function C(e) {
                     renderPopout: (e) => {
                         let { closePopout: t } = e;
                         return (0, r.jsx)(l.ThemeProvider, {
-                            theme: P,
+                            theme: w,
                             children: (e) =>
                                 (0, r.jsx)(c.Z, {
                                     guildId: null == n ? void 0 : n.guild_id,
                                     closePopout: t,
                                     onSelectEmoji: async (e, n) => {
-                                        await B(e), n && (t(), null == b || b());
+                                        await V(e), n && (t(), null == P || P());
                                     },
                                     pickerIntention: S.Hz.PROFILE,
                                     channel: n,
@@ -182,9 +183,10 @@ function C(e) {
                     align: 'top',
                     children: (e) =>
                         (0, r.jsx)(u.zx, {
+                            innerRef: b,
                             ...e,
                             onClick: (t) => {
-                                M({ action: w }), e.onClick(t);
+                                U({ action: G }), e.onClick(t);
                             },
                             className: a()(A.button, A.left),
                             'aria-label': v(T.P.REACT, i),
@@ -197,11 +199,13 @@ function C(e) {
             }),
             (0, r.jsx)(l.TooltipContainer, {
                 text: g.Z.Messages.USER_PROFILE_REPLY,
+                shouldShow: E,
                 delay: 0,
                 'aria-label': !1,
                 children: (0, r.jsx)(u.zx, {
+                    innerRef: M,
                     onClick: () => {
-                        M({ action: x }),
+                        U({ action: k }),
                             null == C ||
                                 C({
                                     interactionType: T.P.REPLY,
