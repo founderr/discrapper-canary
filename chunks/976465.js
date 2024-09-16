@@ -153,9 +153,10 @@ let S = () => {
     B = () => {
         let e = x(),
             { enabled: t } = (0, T.Z)(!0),
-            { enabled: n } = (0, I.Z)(!0),
-            [s] = (0, c.US)(t && n && null != e ? [l.z.WHATS_NEW_TENURE_BADGE_REWARD] : []);
-        return s === l.z.WHATS_NEW_TENURE_BADGE_REWARD ? g.Z.Messages.REWARD.toLocaleUpperCase() : null;
+            n = t && null != e,
+            { enabled: s } = (0, I.Z)(n),
+            [a] = (0, c.US)(n && s ? [l.z.WHATS_NEW_TENURE_BADGE_REWARD] : []);
+        return a === l.z.WHATS_NEW_TENURE_BADGE_REWARD ? g.Z.Messages.REWARD.toLocaleUpperCase() : null;
     },
     j = () => {
         let e = x(),
