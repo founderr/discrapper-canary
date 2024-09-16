@@ -50,8 +50,7 @@ let U = () =>
                     (0, n.jsx)(P.Z, {}),
                     (0, n.jsx)(L.Z, {}),
                     (0, n.jsx)(D.Z, {}),
-                    (0, n.jsx)(M.Z, {}),
-                    (0, n.jsx)(f.Z, {})
+                    (0, n.jsx)(M.Z, {})
                 ]
             })
         }),
@@ -61,7 +60,7 @@ let U = () =>
                 (0, n.jsxs)(x.Z, {
                     title: j.Z.Messages.PRIVACY_AND_SAFETY_CATEGORY_TITLE_CONTENT,
                     webSetting: Z.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
-                    children: [(0, n.jsx)(A.P, {}), (0, n.jsx)(T.Z, {}), (0, n.jsx)(h.Z, {}), (0, n.jsx)(E.Z, {}), (0, n.jsx)(u.Z, {})]
+                    children: [(0, n.jsx)(A.P, {}), (0, n.jsx)(T.Z, {}), (0, n.jsx)(h.Z, {}), (0, n.jsx)(E.Z, {}), (0, n.jsx)(u.Z, {}), (0, n.jsx)(f.Z, {})]
                 }),
                 (0, n.jsx)(U, {}),
                 (0, n.jsx)(x.Z, {
