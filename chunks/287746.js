@@ -325,18 +325,19 @@ class eG extends s.PureComponent {
                                 shouldRefocus: !0
                             })
                         );
-                    if (R.Z.getCommandOrigin(o.id) === L.bB.APPLICATION_LAUNCHER) {
+                    let e = R.Z.getCommandOrigin(o.id);
+                    if (e === L.bB.APPLICATION_LAUNCHER || e === L.bB.IMAGE_RECS_MENU || e === L.bB.IMAGE_RECS_SUBMENU) {
                         var m;
-                        let { location: e, sectionName: t } = null !== (m = (0, eL._U)(s)) && void 0 !== m ? m : {},
-                            n = S.Z.lastShownEntrypoint();
+                        let { location: t, sectionName: n } = null !== (m = (0, eL._U)(s)) && void 0 !== m ? m : {},
+                            i = e === L.bB.APPLICATION_LAUNCHER ? S.Z.lastShownEntrypoint() : v._b.TEXT;
                         if (
                             !(await (0, N.L)({
                                 applicationId: s.applicationId,
                                 userIndexState: Z.ZP.getUserState(),
                                 guildIndexState: Z.ZP.getGuildState(o.guild_id),
-                                location: e,
-                                sectionName: t,
-                                entrypoint: n
+                                location: t,
+                                sectionName: n,
+                                entrypoint: i
                             }))
                         )
                             return Promise.resolve({
@@ -345,7 +346,7 @@ class eG extends s.PureComponent {
                             });
                         (0, eL.SC)(s);
                     }
-                    let e = await (0, P.Z)({
+                    let n = await (0, P.Z)({
                         command: s,
                         optionValues: null != a ? a : {},
                         context: {
@@ -358,7 +359,7 @@ class eG extends s.PureComponent {
                             shouldClear: !0,
                             shouldRefocus: !0
                         });
-                    null != e && ((t = null != e.content && '' !== e.content ? e.content : t), (d = !0 === e.tts));
+                    null != n && ((t = null != n.content && '' !== n.content ? n.content : t), (d = !0 === n.tts));
                 }
                 return (0, eN.v)({
                     openWarningPopout: (e) => this.setState({ contentWarningProps: e }),
