@@ -8,7 +8,7 @@ E.d(_, {
     po: function () {
         return T;
     },
-    qr: function () {
+    vN: function () {
         return D;
     },
     xb: function () {
@@ -41,22 +41,23 @@ let l = (e, _) => {
         }
     });
 };
-function D(e, _, E) {
-    let { analyticsLocations: s } = (0, t.ZP)();
+function D(e, _, E, s) {
+    let { analyticsLocations: T } = (0, t.ZP)();
     return I.useCallback(
-        (T) => {
+        (I) => {
             if (null == e) return;
-            let I = a.default.getUser(e.userId);
-            if (null != I)
-                T.stopPropagation(),
-                    (0, N.n8)(T, {
-                        user: I,
+            let n = a.default.getUser(e.userId);
+            if (null != n)
+                I.stopPropagation(),
+                    (0, N.nm)(I, {
+                        user: n,
                         guildId: e.guildId,
-                        analyticsLocations: null != _ ? [_] : s,
-                        onCloseContextMenu: E
+                        analyticsLocations: null != E ? [E] : T,
+                        onCloseContextMenu: s,
+                        isViewOnly: _
                     });
         },
-        [e, s, E, _]
+        [e, T, s, E, _]
     );
 }
 function L(e, _, E) {

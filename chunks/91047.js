@@ -5,7 +5,7 @@ t.d(n, {
     _j: function () {
         return l;
     },
-    n8: function () {
+    nm: function () {
         return u;
     },
     xS: function () {
@@ -78,7 +78,7 @@ function l(e, n) {
         });
 }
 function u(e, n) {
-    let { user: o, guildId: l, analyticsLocations: u, onCloseContextMenu: s } = n;
+    let { user: o, guildId: l, analyticsLocations: u, onCloseContextMenu: s, isViewOnly: a } = n;
     (0, i.jW)(e, async () => {
         let { default: e } = await t.e('45130').then(t.bind(t, 246389));
         return (n) =>
@@ -87,7 +87,8 @@ function u(e, n) {
                 user: o,
                 guildId: l,
                 analyticsLocations: u,
-                onCloseContextMenu: s
+                onCloseContextMenu: s,
+                isViewOnly: a
             });
     });
 }
