@@ -756,8 +756,7 @@ class eo extends E.Z {
         !w.Z.supports(er.AN.NATIVE_PING) && this._handlePing(e);
     }
     _handlePing(e) {
-        var t;
-        if ((this.logger.info('Handling ping: '.concat(e)), null === (t = this._socket) || void 0 === t || t.sendHeartbeatIfOverdue(), void 0 !== e)) {
+        if (void 0 !== e) {
             for (
                 this._pings.push({
                     time: Date.now(),
