@@ -3,20 +3,20 @@ var r = n(735250),
     l = n(120356),
     i = n.n(l),
     o = n(661824),
-    s = n(916315);
-let c = a.forwardRef(function (e, t) {
+    c = n(916315);
+let s = a.forwardRef(function (e, t) {
     let { className: n, isBeforeGroup: a = !1, ...l } = e,
-        { children: c } = l;
+        { children: s } = l;
     return (0, r.jsx)(o.Z, {
         ...l,
         ref: t,
         role: 'separator',
-        'aria-label': 'string' == typeof c ? c : void 0,
+        'aria-label': 'string' == typeof s ? s : void 0,
         className: i()(n, {
-            [s.divider]: !0,
-            [s.hasContent]: null != c,
-            [s.beforeGroup]: a
+            [c.divider]: !0,
+            [c.hasContent]: null != s,
+            [c.beforeGroup]: a
         })
     });
 });
-t.Z = a.memo(c);
+t.Z = a.memo(s);

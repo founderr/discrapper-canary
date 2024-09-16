@@ -17,8 +17,8 @@ var i = t(735250),
     p = t(555573),
     _ = t(213459),
     C = t(10718),
-    f = t(895924),
-    h = t(583027),
+    h = t(895924),
+    f = t(583027),
     A = t(585483),
     E = t(499254),
     N = t(541099),
@@ -28,8 +28,8 @@ var i = t(735250),
     g = t(660090),
     P = t(783097),
     L = t(845936),
-    S = t(176412),
-    b = t(870205),
+    b = t(176412),
+    S = t(870205),
     R = t(981631),
     T = t(689079),
     M = t(689938),
@@ -43,24 +43,24 @@ function H(e) {
         u = a.useCallback(() => {
             let e = N.Z.entrypoint();
             E.y(x.ti.COMMAND),
-                (0, h.Mo)({
+                (0, f.Mo)({
                     command: o,
-                    location: f.Vh.APP_LAUNCHER_APPLICATION_VIEW,
+                    location: h.Vh.APP_LAUNCHER_APPLICATION_VIEW,
                     sectionName: c
                 }),
                 p.Po({
                     channelId: l.id,
                     command: o,
                     section: s,
-                    location: f.Vh.APP_LAUNCHER_APPLICATION_VIEW,
+                    location: h.Vh.APP_LAUNCHER_APPLICATION_VIEW,
                     sectionName: c,
                     source: e,
-                    commandOrigin: f.bB.APPLICATION_LAUNCHER
+                    commandOrigin: h.bB.APPLICATION_LAUNCHER
                 }),
                 A.S.dispatch(R.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: l.id });
         }, [l.id, o, s, c]),
         m = (null !== (t = null === (n = o.options) || void 0 === n ? void 0 : n.length) && void 0 !== t ? t : 0) > 0,
-        _ = a.useMemo(() => (0, S.ae)(o.displayDescription, void 0), [o.displayDescription]),
+        _ = a.useMemo(() => (0, b.ae)(o.displayDescription, void 0), [o.displayDescription]),
         C = a.useMemo(
             () =>
                 (0, i.jsxs)('div', {
@@ -166,7 +166,7 @@ function B(e) {
                         userIndexState: o,
                         guildIndexState: r,
                         sectionName: l,
-                        location: f.Vh.APP_LAUNCHER_APPLICATION_VIEW,
+                        location: h.Vh.APP_LAUNCHER_APPLICATION_VIEW,
                         entrypoint: n
                     })) &&
                         (await (0, P.Y$)({
@@ -263,8 +263,8 @@ function k(e) {
         ),
         _ = null !== (n = m.find((e) => e.id === l.id)) && void 0 !== n ? n : null,
         {
-            sortOrder: f,
-            setSortOrder: h,
+            sortOrder: h,
+            setSortOrder: f,
             commands: A,
             canSort: E
         } = (0, g.Z)({
@@ -301,9 +301,9 @@ function k(e) {
                       sectionName: o,
                       children:
                           E &&
-                          (0, i.jsx)(b.Z, {
-                              sortOrder: f,
-                              onSortOptionClick: h
+                          (0, i.jsx)(S.Z, {
+                              sortOrder: h,
+                              onSortOptionClick: f
                           })
                   })
               ]

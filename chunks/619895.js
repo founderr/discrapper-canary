@@ -10,8 +10,8 @@ n.d(t, {
     }
 });
 var o = n(470079),
-    i = n(892814),
-    a = n(442837),
+    a = n(892814),
+    i = n(442837),
     l = n(895924),
     r = n(581364),
     c = n(823379),
@@ -275,7 +275,7 @@ function _(e) {
     let { channelId: t } = e,
         { fetchState: n, recommendationsSections: m } = (function (e) {
             let { channelId: t } = e,
-                n = i.I.CONTEXTUAL_IMAGE,
+                n = a.I.CONTEXTUAL_IMAGE,
                 l = o.useMemo(
                     () => ({
                         channelId: t,
@@ -287,7 +287,7 @@ function _(e) {
             o.useEffect(() => {
                 (0, d.a)(l);
             }, [l]);
-            let { fetchState: r, recommendationsSections: c } = (0, a.cj)([u.ZP], () => ({
+            let { fetchState: r, recommendationsSections: c } = (0, i.cj)([u.ZP], () => ({
                 fetchState: u.ZP.getFetchState(l),
                 recommendationsSections: u.ZP.getRecommendations(l)
             }));
@@ -305,17 +305,17 @@ function _(e) {
                 : s
                       .map((t) => {
                           var n, o;
-                          let i;
-                          let a = e.find((e) => {
+                          let a;
+                          let i = e.find((e) => {
                               var n;
-                              return null != (i = null === (n = e.commands) || void 0 === n ? void 0 : n.find((e) => e.id === t));
+                              return null != (a = null === (n = e.commands) || void 0 === n ? void 0 : n.find((e) => e.id === t));
                           });
-                          if (null == a) return null;
-                          let { application: c } = a;
                           if (null == i) return null;
+                          let { application: c } = i;
+                          if (null == a) return null;
                           let d = (0, r.Z8)({
-                              rootCommand: i,
-                              command: i,
+                              rootCommand: a,
+                              command: a,
                               applicationId: c.id
                           });
                           return {

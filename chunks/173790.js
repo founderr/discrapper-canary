@@ -17,8 +17,8 @@ var i = t(735250),
     p = t(827498),
     _ = t(783097),
     C = t(753972),
-    f = t(387658),
-    h = t(536650),
+    h = t(387658),
+    f = t(536650),
     A = t(675993),
     E = t(689079),
     N = t(689938),
@@ -30,8 +30,8 @@ function I(e) {
         I = (0, l.e7)([m.Z], () => m.Z.entrypoint()),
         P = null !== (n = (0, u.q)(s.id === E.bi.BUILT_IN ? null : s.id)) && void 0 !== n ? n : s,
         L = (0, _.ye)(P) ? g : A.Z,
-        S = a.useRef(null),
-        [b, R] = a.useState(!1),
+        b = a.useRef(null),
+        [S, R] = a.useState(!1),
         { iconURL: T, name: M } = a.useMemo(
             () =>
                 (0, _.sl)(P, {
@@ -51,15 +51,15 @@ function I(e) {
         (0, i.jsxs)(r.ScrollerNone, {
             className: x.container,
             fade: !0,
-            ref: S,
+            ref: b,
             role: 'region',
             'aria-label': N.Z.Messages.APP_LAUNCHER_SECTION_APPLICATION_DETAILS_ARIA_LABEL.format({ applicationName: M }),
             children: [
-                (0, i.jsx)(h.Z, {
+                (0, i.jsx)(f.Z, {
                     application: P,
                     name: M,
                     iconURL: T,
-                    scrollerRef: S,
+                    scrollerRef: b,
                     sectionName: c
                 }),
                 null != T &&
@@ -72,10 +72,10 @@ function I(e) {
                     channel: t,
                     application: P,
                     sectionName: c,
-                    hasCommands: b
+                    hasCommands: S
                 }),
                 I === p._b.TEXT
-                    ? (0, i.jsx)(f.Z, {
+                    ? (0, i.jsx)(h.Z, {
                           channel: t,
                           application: P,
                           sectionName: c,

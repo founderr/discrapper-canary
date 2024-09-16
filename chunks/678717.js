@@ -11,8 +11,8 @@ var r = n(735250),
     l = n(120356),
     i = n.n(l),
     o = n(990547),
-    s = n(442837),
-    c = n(481060),
+    c = n(442837),
+    s = n(481060),
     d = n(347469),
     u = n(213609),
     h = n(213713),
@@ -40,14 +40,14 @@ var v = n(392750),
     Z = n(248526),
     A = n(958328),
     B = n(514866),
-    L = n(678639),
-    P = n(351930),
+    P = n(678639),
+    L = n(351930),
     M = n(771751),
     D = n(596768),
     F = n(621060),
     U = n(689938),
-    G = n(622331),
-    H = n(219299);
+    H = n(622331),
+    G = n(219299);
 function z(e) {
     let { resizableNode: t, onResize: n, onResizeEnd: a } = e,
         l = (0, d.Z)({
@@ -59,7 +59,7 @@ function z(e) {
         });
     return (0, r.jsx)('div', {
         onMouseDown: l,
-        className: G.resizeHandle
+        className: H.resizeHandle
     });
 }
 function V() {
@@ -79,7 +79,7 @@ function V() {
                 {
                     id: 'stores',
                     name: 'Stores',
-                    render: () => (0, r.jsx)(L.Z, {})
+                    render: () => (0, r.jsx)(P.Z, {})
                 },
                 {
                     id: 'dispatcher',
@@ -180,7 +180,7 @@ function V() {
                     e.push({
                         id: 'subscriptions',
                         name: 'Subscriptions',
-                        render: () => (0, r.jsx)(P.Z, {})
+                        render: () => (0, r.jsx)(L.Z, {})
                     }),
                     e.push({
                         id: 'billing',
@@ -213,15 +213,15 @@ function V() {
         (0, r.jsxs)(k.Gk, {
             children: [
                 (0, r.jsxs)(m.ZP, {
-                    className: H.headerBar,
+                    className: G.headerBar,
                     toolbar: (0, r.jsx)(m.ZP.Icon, {
-                        icon: c.XSmallIcon,
+                        icon: s.XSmallIcon,
                         tooltip: U.Z.Messages.CLOSE,
                         onClick: p.SO
                     }),
                     children: [
                         (0, r.jsx)(m.ZP.Icon, {
-                            icon: c.StaffBadgeIcon,
+                            icon: s.StaffBadgeIcon,
                             tooltip: 'DevTools'
                         }),
                         (0, r.jsx)(m.ZP.Title, { children: 'DevTools' })
@@ -229,14 +229,14 @@ function V() {
                 }),
                 (0, r.jsx)(n, {}),
                 l(),
-                (0, r.jsx)(k.Br, { className: G.layerContainer })
+                (0, r.jsx)(k.Br, { className: H.layerContainer })
             ]
         })
     );
 }
 function W() {
     let e = a.useRef(null),
-        t = (0, s.e7)([g.Z], () => g.Z.sidebarWidth),
+        t = (0, c.e7)([g.Z], () => g.Z.sidebarWidth),
         [n, l] = a.useState(null),
         o = a.useCallback((e) => (0, p.Qh)({ sidebarWidth: e }), []);
     return (a.useEffect(() => {
@@ -246,7 +246,7 @@ function W() {
         ? null
         : (0, r.jsxs)('div', {
               ref: e,
-              className: i()(G.container),
+              className: i()(H.container),
               style: {
                   minWidth: g.h,
                   width: n
@@ -258,32 +258,32 @@ function W() {
                       onResizeEnd: o
                   }),
                   (0, r.jsx)('div', {
-                      className: G.sidebarContent,
+                      className: H.sidebarContent,
                       children: (0, r.jsx)(V, {})
                   })
               ]
           });
 }
 function Y() {
-    let e = (0, s.e7)([g.Z], () => g.Z.displayTools);
+    let e = (0, c.e7)([g.Z], () => g.Z.displayTools);
     return e
         ? (0, r.jsx)('div', {
-              className: i()(G.container, G.mobileContainerExpanded),
+              className: i()(H.container, H.mobileContainerExpanded),
               children: (0, r.jsx)('div', {
-                  className: G.sidebarContent,
+                  className: H.sidebarContent,
                   children: (0, r.jsx)(V, {})
               })
           })
         : (0, r.jsx)('div', {
-              className: G.container,
-              children: (0, r.jsx)(c.Clickable, {
+              className: H.container,
+              children: (0, r.jsx)(s.Clickable, {
                   onClick: p.SO,
                   children: (0, r.jsxs)(m.ZP, {
-                      className: i()(H.headerBar, G.mobileHeaderCollapsed),
+                      className: i()(G.headerBar, H.mobileHeaderCollapsed),
                       toolbar: (0, r.jsx)(f.Z, { direction: f.Z.Directions.UP }),
                       children: [
                           (0, r.jsx)(m.ZP.Icon, {
-                              icon: c.StaffBadgeIcon,
+                              icon: s.StaffBadgeIcon,
                               tooltip: 'DevTools'
                           }),
                           (0, r.jsx)(m.ZP.Title, { children: 'DevTools' })

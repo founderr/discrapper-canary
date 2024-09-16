@@ -4,8 +4,8 @@ n.d(t, {
     }
 });
 var o,
-    i,
     a,
+    i,
     l,
     r,
     c,
@@ -43,14 +43,14 @@ class g extends (c = d.ZP.Store) {
     }
     getRecommendations(e) {
         var t;
-        let { location: n, channelId: o, withCommands: i } = e;
+        let { location: n, channelId: o, withCommands: a } = e;
         return null !==
             (t =
                 m[
                     _({
                         location: n,
                         channelId: o,
-                        withCommands: i
+                        withCommands: a
                     })
                 ]) && void 0 !== t
             ? t
@@ -58,14 +58,14 @@ class g extends (c = d.ZP.Store) {
     }
 }
 (l = void 0),
-    (a = 'displayName') in (i = g)
-        ? Object.defineProperty(i, a, {
+    (i = 'displayName') in (a = g)
+        ? Object.defineProperty(a, i, {
               value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (i[a] = l),
+        : (a[i] = l),
     (t.ZP = new g(u.Z, {
         APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS: function (e) {
             let { location: t, channelId: n, withCommands: o } = e;
@@ -79,24 +79,24 @@ class g extends (c = d.ZP.Store) {
             };
         },
         APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS_SUCCESS: function (e) {
-            let { recommendations: t, location: n, channelId: o, withCommands: i } = e,
-                a = _({
+            let { recommendations: t, location: n, channelId: o, withCommands: a } = e,
+                i = _({
                     location: n,
                     channelId: o,
-                    withCommands: i
+                    withCommands: a
                 });
             (m = {
                 ...m,
-                [a]: t
+                [i]: t
             }),
                 (s = {
                     ...s,
-                    [a]: 1
+                    [i]: 1
                 });
             let l = Date.now();
             p = {
                 ...p,
-                [a]: l
+                [i]: l
             };
         },
         APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS_FAILURE: function (e) {

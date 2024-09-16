@@ -17,8 +17,8 @@ var i = t(735250),
     p = t(70097),
     _ = t(240991),
     C = t(973616),
-    f = t(783097),
-    h = t(695676),
+    h = t(783097),
+    f = t(695676),
     A = t(520315),
     E = t(29380),
     N = t(689938),
@@ -28,11 +28,11 @@ function I(e) {
     let { channel: n, application: t, videoUrl: l, imageCoverUrl: s, sectionName: d, hasCommands: m } = e,
         _ = a.useMemo(() => {
             var e;
-            return null !== (e = (0, f.jD)(t)) && void 0 !== e ? e : '';
+            return null !== (e = (0, h.jD)(t)) && void 0 !== e ? e : '';
         }, [t]),
         C = (0, r.e7)([c.Z], () => c.Z.inDevModeForApplication(t.id)),
         A = null != l,
-        { isSlideReady: E } = (0, h.hH)(),
+        { isSlideReady: E } = (0, f.hH)(),
         [v, I] = a.useState(!1);
     return (
         a.useEffect(() => {
@@ -81,7 +81,7 @@ function I(e) {
                                           })
                                       })
                                     : null,
-                                (0, i.jsx)(b, {
+                                (0, i.jsx)(S, {
                                     channel: n,
                                     application: t,
                                     sectionName: d,
@@ -99,8 +99,8 @@ function I(e) {
 }
 function g(e) {
     let { application: n } = e,
-        t = (0, f.Cb)(n),
-        a = (0, f.Hu)(n);
+        t = (0, h.Cb)(n),
+        a = (0, h.Hu)(n);
     return t || a
         ? (0, i.jsxs)('div', {
               className: x.monetizationDisclosureContainerStyle,
@@ -144,8 +144,8 @@ function g(e) {
 function P(e) {
     var n;
     let { application: t } = e,
-        a = (0, f.BQ)(t) ? t.name : null !== (n = (0, f.$d)(t)) && void 0 !== n ? n : '',
-        l = (0, f.vJ)(t);
+        a = (0, h.BQ)(t) ? t.name : null !== (n = (0, h.$d)(t)) && void 0 !== n ? n : '',
+        l = (0, h.vJ)(t);
     return (0, i.jsxs)('div', {
         className: x.titleContainer,
         children: [
@@ -171,13 +171,13 @@ function L(e) {
     let { application: n } = e,
         t = a.useMemo(() => {
             var e;
-            return (0, f.BQ)(n) && null !== (e = null == n ? void 0 : n.tags) && void 0 !== e ? e : [];
+            return (0, h.BQ)(n) && null !== (e = null == n ? void 0 : n.tags) && void 0 !== e ? e : [];
         }, [n]);
-    return (0, f.ye)(n)
+    return (0, h.ye)(n)
         ? (0, i.jsxs)('div', {
               className: x.tagsContainer,
               children: [
-                  (0, i.jsx)(S, { application: n }),
+                  (0, i.jsx)(b, { application: n }),
                   t.map((e, n) =>
                       (0, i.jsx)(
                           'div',
@@ -196,11 +196,11 @@ function L(e) {
           })
         : null;
 }
-function S(e) {
+function b(e) {
     var n;
     let { application: t } = e;
-    if (!(0, f.ye)(t)) return null;
-    let a = null !== (n = (0, f.BQ)(t) ? (t instanceof C.Z ? t.maxParticipants : t.max_participants) : 0) && void 0 !== n ? n : 0;
+    if (!(0, h.ye)(t)) return null;
+    let a = null !== (n = (0, h.BQ)(t) ? (t instanceof C.Z ? t.maxParticipants : t.max_participants) : 0) && void 0 !== n ? n : 0;
     return (0, i.jsxs)('div', {
         className: x.tagContainer,
         children: [
@@ -216,10 +216,10 @@ function S(e) {
         ]
     });
 }
-function b(e) {
+function S(e) {
     let { channel: n, application: t, sectionName: a, hasCommands: l, isDeveloperOfThisApp: o } = e,
         r = (0, m.Fs)(n, t.id);
-    return (0, f.BQ)(t)
+    return (0, h.BQ)(t)
         ? null != r
             ? (0, i.jsx)('div', {
                   className: x.entrypointContainer,
@@ -231,7 +231,7 @@ function b(e) {
                       buttonSize: s.ButtonSizes.MAX
                   })
               })
-            : o && !l && (0, f.ye)(t)
+            : o && !l && (0, h.ye)(t)
               ? (0, i.jsx)(s.HelpMessage, {
                     className: x.primaryEntryPointWarningMessage,
                     messageType: s.HelpMessageTypes.WARNING,
@@ -284,7 +284,7 @@ function R(e) {
             isExpanded: t,
             ...u
         }),
-        f = t || p;
+        h = t || p;
     return (0, i.jsxs)('div', {
         className: x.descriptionContainer,
         children: [
@@ -296,8 +296,8 @@ function R(e) {
                     ref: r,
                     className: v.markup,
                     variant: 'text-sm/medium',
-                    lineClamp: f ? void 0 : 1,
-                    style: { maxHeight: f ? void 0 : u.minHeightOverride },
+                    lineClamp: h ? void 0 : 1,
+                    style: { maxHeight: h ? void 0 : u.minHeightOverride },
                     children: o
                 })
             }),
@@ -309,9 +309,9 @@ function R(e) {
                           (0, i.jsx)(s.Text, {
                               variant: 'text-sm/semibold',
                               color: 'text-brand',
-                              children: f ? N.Z.Messages.APP_LAUNCHER_SHOW_LESS : N.Z.Messages.APP_LAUNCHER_SHOW_MORE
+                              children: h ? N.Z.Messages.APP_LAUNCHER_SHOW_LESS : N.Z.Messages.APP_LAUNCHER_SHOW_MORE
                           }),
-                          f
+                          h
                               ? (0, i.jsx)(s.ChevronSmallUpIcon, {
                                     size: 'sm',
                                     color: s.tokens.colors.TEXT_BRAND

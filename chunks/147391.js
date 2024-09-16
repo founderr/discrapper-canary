@@ -4,8 +4,8 @@ n.d(t, {
     }
 });
 var o = n(373793),
-    i = n(367907),
-    a = n(69580),
+    a = n(367907),
+    i = n(69580),
     l = n(812206),
     r = n(981631),
     c = n(689079);
@@ -13,7 +13,7 @@ function d(e) {
     var t, n, d, u, m;
     let { applicationId: s, userIndexState: p, guildIndexState: _, sectionName: E, location: g, source: M } = e;
     if (s === c.bi.BUILT_IN || (null === (t = p.result) || void 0 === t ? void 0 : t.sections[s]) != null || (null === (n = _.result) || void 0 === n ? void 0 : n.sections[s]) != null) return Promise.resolve(!0);
-    (0, i.yw)(r.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, {
+    (0, a.yw)(r.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, {
         location: g,
         application_id: s,
         section_name: E,
@@ -23,7 +23,7 @@ function d(e) {
         C = o.Y.USER_INSTALL,
         A = null == x ? void 0 : null === (m = x.integrationTypesConfig) || void 0 === m ? void 0 : null === (u = m[C]) || void 0 === u ? void 0 : null === (d = u.oauth2InstallParams) || void 0 === d ? void 0 : d.scopes;
     return new Promise((e) => {
-        (0, a.openOAuth2Modal)(
+        (0, i.openOAuth2Modal)(
             {
                 clientId: s,
                 integrationType: C,
@@ -31,7 +31,7 @@ function d(e) {
                 callback: (t) => {
                     let { location: n } = t;
                     null != n
-                        ? ((0, i.yw)(r.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED, {
+                        ? ((0, a.yw)(r.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED, {
                               location: g,
                               application_id: s,
                               section_name: E,

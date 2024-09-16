@@ -17,8 +17,8 @@ var i = t(735250),
     p = t(583027),
     _ = t(585483),
     C = t(499254),
-    f = t(541099),
-    h = t(827498),
+    h = t(541099),
+    f = t(827498),
     A = t(392370),
     E = t(98880),
     N = t(804307),
@@ -28,8 +28,8 @@ var i = t(735250),
     g = t(41558),
     P = t(106771),
     L = t(79984),
-    S = t(314734),
-    b = t(981631),
+    b = t(314734),
+    S = t(981631),
     R = t(689938),
     T = t(454093);
 let M = Array(6)
@@ -42,14 +42,14 @@ function Z(e) {
 }
 function O(e) {
     let { channel: n, query: t, entrypoint: l, isScrollCloseToBottom: s } = e,
-        c = l === h._b.TEXT,
-        d = l === h._b.TEXT,
+        c = l === f._b.TEXT,
+        d = l === f._b.TEXT,
         {
             loading: u,
             isEmptyState: p,
             commandResults: _,
             hasCommandResults: C,
-            applicationResults: f
+            applicationResults: h
         } = (0, A.pe)({
             channel: n,
             query: t,
@@ -73,12 +73,12 @@ function O(e) {
     }, [x, E, s]);
     let v = null == E || E === m.M.FETCHING,
         g = a.useMemo(() => {
-            let e = f.map((e) => ({
+            let e = h.map((e) => ({
                     application: e,
                     installOnDemand: !0
                 })),
                 n = new Set(
-                    f.map((e) => {
+                    h.map((e) => {
                         let { id: n } = e;
                         return n;
                     })
@@ -96,16 +96,16 @@ function O(e) {
                     )
                 )
             ];
-        }, [N, f]),
+        }, [N, h]),
         P = g.length > 0,
         L = p && !P && !v;
     return u
         ? (0, i.jsx)(k, {})
         : L
           ? (0, i.jsx)(I.A, {
-                type: h.LG.SEARCH_EMPTY,
+                type: f.LG.SEARCH_EMPTY,
                 searchQuery: t,
-                textContent: l === h._b.TEXT ? R.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_BODY : R.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_ACTIVITIES_BODY
+                textContent: l === f._b.TEXT ? R.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_BODY : R.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_ACTIVITIES_BODY
             })
           : (0, i.jsxs)('div', {
                 children: [
@@ -144,14 +144,14 @@ function H(e) {
         key: r,
         isExpanded: M,
         durationMs: 200,
-        maxAnimationHeight: S.K7
+        maxAnimationHeight: b.K7
     });
     a.useEffect(() => {
         !v &&
             E &&
-            (0, c.yw)(b.rMx.APP_LAUNCHER_SECTION_VIEW_MORE, {
-                section_name: h.L3.SEARCH,
-                source: f.Z.entrypoint(),
+            (0, c.yw)(S.rMx.APP_LAUNCHER_SECTION_VIEW_MORE, {
+                section_name: f.L3.SEARCH,
+                source: h.Z.entrypoint(),
                 num: o.length
             });
     }, [o.length, v, E]);
@@ -179,12 +179,12 @@ function H(e) {
                             query: r,
                             searchResultsPosition: n,
                             onClick: () => {
-                                let e = f.Z.entrypoint();
-                                C.y(h.ti.DISMISSED),
+                                let e = h.Z.entrypoint();
+                                C.y(f.ti.DISMISSED),
                                     (0, p.Mo)({
                                         command: t,
                                         location: u.Vh.APP_LAUNCHER_HOME_SEARCH,
-                                        sectionName: h.L3.SEARCH
+                                        sectionName: f.L3.SEARCH
                                     }),
                                     d.Po({
                                         channelId: l.id,
@@ -193,12 +193,12 @@ function H(e) {
                                         location: u.Vh.APP_LAUNCHER_HOME_SEARCH,
                                         triggerSection: void 0,
                                         queryLength: r.length,
-                                        sectionName: h.L3.SEARCH,
+                                        sectionName: f.L3.SEARCH,
                                         query: r,
                                         searchResultsPosition: n,
                                         source: e
                                     }),
-                                    _.S.dispatch(b.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: l.id });
+                                    _.S.dispatch(S.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: l.id });
                             }
                         },
                         t.id
@@ -240,7 +240,7 @@ function B(e) {
                                   {
                                       application: t,
                                       location: u.Vh.APP_LAUNCHER_HOME_SEARCH,
-                                      sectionName: h.L3.SEARCH,
+                                      sectionName: f.L3.SEARCH,
                                       resultsPosition: n,
                                       installOnDemand: l,
                                       query: a
@@ -267,7 +267,7 @@ function B(e) {
                                       application: t,
                                       look: E.U4.LARGE_BANNER,
                                       location: u.Vh.APP_LAUNCHER_HOME_SEARCH,
-                                      sectionName: h.L3.SEARCH,
+                                      sectionName: f.L3.SEARCH,
                                       resultsPosition: n,
                                       installOnDemand: l,
                                       query: a
