@@ -72,6 +72,7 @@ function C(e) {
         H = w
             ? U
                 ? (0, I.T)({
+                      user: C,
                       onClick: () => {
                           window.open(f.Z.getArticleURL(N.BhN.NITRO_FAQ), '_blank');
                       }
