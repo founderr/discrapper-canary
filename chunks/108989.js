@@ -63,17 +63,18 @@ let o = [n(123353)],
         }
     };
 function c(e) {
-    let { className: t, firing: n = !0, wind: c = 2 } = e,
-        [l, f] = i.useState(null),
-        [_, b] = i.useState(null),
-        p = (0, a.uR)(_, l),
-        h = i.useMemo(() => new a.qA({ wind: c }), [c]),
-        m = i.useCallback(() => {
-            let e = null == _ ? void 0 : _.getCanvas();
+    let { className: t, firing: n = !0, wind: c = 2, sprites: l = o, spriteColors: f = s, confettiConfig: _ } = e,
+        [b, p] = i.useState(null),
+        [h, m] = i.useState(null),
+        g = (0, a.uR)(h, b),
+        I = i.useMemo(() => new a.qA({ wind: c }), [c]),
+        C = i.useCallback(() => {
+            let e = null == h ? void 0 : h.getCanvas();
             if (null == e) return;
             let t = e.getBoundingClientRect();
-            p.createConfetti({
+            g.createConfetti({
                 ...u,
+                ..._,
                 position: {
                     type: 'static-random',
                     minValue: {
@@ -86,23 +87,23 @@ function c(e) {
                     }
                 }
             });
-        }, [p, _]);
+        }, [g, h, _]);
     return (
         i.useEffect(() => {
-            let e = n ? setInterval(m, d) : null;
+            let e = n ? setInterval(C, d) : null;
             return () => clearInterval(e);
-        }, [n, m]),
+        }, [n, C]),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(a.O_, {
-                    ref: b,
+                    ref: m,
                     className: t,
-                    environment: h
+                    environment: I
                 }),
                 (0, r.jsx)(a.Ji, {
-                    ref: f,
-                    colors: s,
-                    sprites: o,
+                    ref: p,
+                    colors: f,
+                    sprites: l,
                     spriteWidth: 6,
                     spriteHeight: 6
                 })
