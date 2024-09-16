@@ -58,8 +58,8 @@ var u = (function () {
         ) {
             if (((this.message = e), !t.__parse)) throw TypeError('IntlMessageFormat.__parse must be set to process `message` of type `string`');
             var p = u || {},
-                m = (p.formatters, (0, n._T)(p, ['formatters']));
-            this.ast = t.__parse(e, (0, n.pi)((0, n.pi)({}, m), { locale: this.resolvedLocale }));
+                d = (p.formatters, (0, n._T)(p, ['formatters']));
+            this.ast = t.__parse(e, (0, n.pi)((0, n.pi)({}, d), { locale: this.resolvedLocale }));
         } else this.ast = e;
         if (!Array.isArray(this.ast)) throw TypeError('A message must be provided as a String or AST.');
         (this.formats =
@@ -141,7 +141,7 @@ var u = (function () {
                 return e.length > 0 ? new Intl.Locale(e[0]) : new Intl.Locale('string' == typeof t ? t : t[0]);
             }
         }),
-        (t.__parse = i.parse),
+        (t.__parse = i.Qc),
         (t.formats = {
             number: {
                 integer: { maximumFractionDigits: 0 },

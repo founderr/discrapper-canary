@@ -38,11 +38,11 @@ var e =
                             }
                     }
                 },
-                m = function (t) {
+                d = function (t) {
                     return /^\s*(?:text\/\S*|application\/xml|\S*\/\S*\+xml)\s*;.*charset\s*=\s*utf-8/i.test(t.type) ? new Blob(['ï\xBB\xBF', t], { type: t.type }) : t;
                 },
-                d = function (e, c, d) {
-                    !d && (e = m(e));
+                m = function (e, c, m) {
+                    !m && (e = d(e));
                     var v,
                         g,
                         y = this,
@@ -69,7 +69,7 @@ var e =
                                 if (y.readyState !== y.DONE) return t.apply(this, arguments);
                             };
                         },
-                        I = {
+                        L = {
                             create: !0,
                             exclusive: !1
                         };
@@ -91,12 +91,12 @@ var e =
                             A(function (t) {
                                 t.root.getDirectory(
                                     'saved',
-                                    I,
+                                    L,
                                     A(function (t) {
                                         var r = function () {
                                             t.getFile(
                                                 c,
-                                                I,
+                                                L,
                                                 A(function (t) {
                                                     t.createWriter(
                                                         A(function (r) {
@@ -139,10 +139,10 @@ var e =
                             _
                         );
                 },
-                v = d.prototype;
+                v = m.prototype;
             return 'undefined' != typeof navigator && navigator.msSaveOrOpenBlob
                 ? function (t, e, r) {
-                      return !r && (t = m(t)), navigator.msSaveOrOpenBlob(t, e || 'download');
+                      return !r && (t = d(t)), navigator.msSaveOrOpenBlob(t, e || 'download');
                   }
                 : ((v.abort = function () {
                       (this.readyState = this.DONE), p(this, 'abort');
@@ -152,7 +152,7 @@ var e =
                   (v.DONE = 2),
                   (v.error = v.onwritestart = v.onprogress = v.onwrite = v.onabort = v.onerror = v.onwriteend = null),
                   function (t, e, r) {
-                      return new d(t, e, r);
+                      return new m(t, e, r);
                   });
         }
     })(('undefined' != typeof self && self) || ('undefined' != typeof window && window) || this.content);

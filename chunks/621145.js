@@ -14,12 +14,12 @@ var t = n(735250),
     c = n(406432),
     d = n(169525),
     m = n(786761),
-    u = n(3148),
-    _ = n(492593),
-    h = n(219797),
-    A = n(524444),
-    p = n(884182),
-    x = n(546432),
+    u = n(499376),
+    _ = n(3148),
+    h = n(492593),
+    A = n(219797),
+    p = n(524444),
+    x = n(884182),
     I = n(25015),
     E = n(963550),
     T = n(845080),
@@ -48,7 +48,7 @@ let y = (e, i) => {
             };
         });
         return (0, m.e5)({
-            ...(0, u.ZP)({
+            ...(0, _.ZP)({
                 nonce: e.id,
                 content: e.content,
                 type: N.uaV.DEFAULT,
@@ -95,7 +95,7 @@ let y = (e, i) => {
                         fileName: i.filename,
                         fileSize: null == i.size ? void 0 : i.size.toString(),
                         playable: !0,
-                        renderLinkComponent: A.iT,
+                        renderLinkComponent: p.iT,
                         onClick: e.onClick,
                         onPlay: e.onPlay,
                         onEnded: e.onEnded,
@@ -111,12 +111,12 @@ let y = (e, i) => {
         }
         return (0, t.jsx)('div', {
             className: j.classificationEvidenceMessageAttachment,
-            children: (0, t.jsx)(p.Z, {
+            children: (0, t.jsx)(x.Z, {
                 items: n.map((e) => ({
                     item: {
                         uniqueId: e.id,
                         originalItem: e,
-                        type: (0, x.aw)(e, !0),
+                        type: (0, u.aw)(e, !0),
                         downloadUrl: e.proxy_url,
                         height: e.height,
                         width: e.width,
@@ -131,16 +131,16 @@ let y = (e, i) => {
                     onRemoveItem: l.noop,
                     renderVideoComponent: (i) => a(i, e, s),
                     renderImageComponent: (e) =>
-                        (0, t.jsx)(h.dS, {
+                        (0, t.jsx)(A.dS, {
                             ...e,
                             hiddenSpoilers: !0,
                             shouldHideMediaOptions: !0,
                             shouldLink: !1
                         }),
-                    renderAudioComponent: h.q7,
-                    renderPlaintextFilePreview: h.d4,
-                    renderGenericFileComponent: h.ZK,
-                    renderMosaicItemFooter: h.L9,
+                    renderAudioComponent: A.q7,
+                    renderPlaintextFilePreview: A.d4,
+                    renderGenericFileComponent: A.ZK,
+                    renderMosaicItemFooter: A.L9,
                     getObscureReason: o,
                     gifFavoriteButton: () => null
                 }))
@@ -153,8 +153,8 @@ function D(e) {
         l = (0, s.e7)([g.default], () => g.default.getCurrentUser()),
         [r, d] = a.useState({}),
         [m, u] = a.useState(!0),
-        h = n[0],
-        A = y(h, r),
+        _ = n[0],
+        A = y(_, r),
         p = (0, I.Z)(A, {
             hideSimpleEmbedContent: !1,
             allowList: !1,
@@ -164,7 +164,7 @@ function D(e) {
         });
     return (a.useEffect(() => {
         Promise.all(
-            h.attachments
+            _.attachments
                 .filter((e) => {
                     let { filename: i } = e;
                     return (0, c.CO)(i) || (0, c.NU)(i);
@@ -208,14 +208,14 @@ function D(e) {
                     );
                 })
         ).finally(() => u(!1));
-    }, [h.attachments]),
+    }, [_.attachments]),
     '' === A.content && 0 === A.attachments.length)
         ? null
         : (0, t.jsx)('div', {
               className: j.classificationEvidenceCard,
               children: m
                   ? (0, t.jsx)(o.Spinner, {})
-                  : (0, t.jsx)(_.Z, {
+                  : (0, t.jsx)(h.Z, {
                         compact: !1,
                         childrenHeader: (0, T.Z)({
                             author: {

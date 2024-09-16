@@ -35,8 +35,8 @@ var a = r(735250),
     M = r(390698),
     y = r(813083),
     w = r(680942),
-    H = r(558060),
-    F = r(237031),
+    F = r(558060),
+    H = r(237031),
     D = r(616066),
     U = r(216541),
     W = r(832149),
@@ -72,8 +72,8 @@ let Y = (e) => {
         });
     };
 t.Z = function (e) {
-    let { product: t, user: r, category: s, onMount: o, isGiftEasterEggEnabled: $, isInFeedView: X } = e,
-        { analyticsLocations: q } = (0, E.ZP)([...(X ? [b.Z.COLLECTIBLES_SHOP_HOME_SCREEN] : []), b.Z.COLLECTIBLES_SHOP_CARD]),
+    let { product: t, user: r, category: s, onMount: o, isGiftEasterEggEnabled: $, isInFeedView: q } = e,
+        { analyticsLocations: X } = (0, E.ZP)([...(q ? [b.Z.COLLECTIBLES_SHOP_HOME_SCREEN] : []), b.Z.COLLECTIBLES_SHOP_CARD]),
         J = n.useRef(null),
         Q = (0, g.Z)(J),
         [ee, et] = n.useState(!1),
@@ -108,7 +108,7 @@ t.Z = function (e) {
         n.useEffect(() => {
             null == o || o(J);
         }, [o]);
-    let eE = (0, T.Z)({ analyticsLocations: q }),
+    let eE = (0, T.Z)({ analyticsLocations: X }),
         eI = n.useRef(null),
         { handleUseNow: ex, isApplying: ev } = (0, Z.W)({ product: t }),
         eT = () => {
@@ -116,22 +116,22 @@ t.Z = function (e) {
                 l()(ea.type === t.type, "product type is equivlant to first item's check for avatar deco"),
                     (0, I.ps)({
                         initialSelectedDecoration: ea,
-                        analyticsLocations: q
+                        analyticsLocations: X
                     });
                 return;
             }
             t.type === f.Z.PROFILE_EFFECT &&
                 (0, L.H)({
                     initialSelectedEffectId: ea.id,
-                    analyticsLocations: q
+                    analyticsLocations: X
                 });
         },
         eS = (e) => (r) => {
             (eI.current = r.currentTarget),
-                (0, F.T)({
+                (0, H.T)({
                     product: t,
                     category: s,
-                    analyticsLocations: q,
+                    analyticsLocations: X,
                     analyticsSource: e,
                     returnRef: eI
                 });
@@ -162,7 +162,7 @@ t.Z = function (e) {
                         className: z.priceTag,
                         children: V.Z.Messages.COLLECTIBLES_INCLUDED_WITH_PREMIUM
                     })
-                  : (0, a.jsx)(H.Z, {
+                  : (0, a.jsx)(F.Z, {
                         product: t,
                         discount: eo,
                         isPremiumUser: es,
@@ -191,7 +191,7 @@ t.Z = function (e) {
                           await (0, B.fK)(t.skuId),
                               (0, W.Z)({
                                   product: t,
-                                  analyticsLocations: q
+                                  analyticsLocations: X
                               });
                       }
                   }
@@ -199,7 +199,7 @@ t.Z = function (e) {
                       onClick: () =>
                           (0, x.Z)({
                               skuId: t.skuId,
-                              analyticsLocations: q,
+                              analyticsLocations: X,
                               returnRef: J
                           })
                   };

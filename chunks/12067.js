@@ -7,10 +7,10 @@ var l = t(735250);
 t(470079);
 var i = t(442837),
     a = t(169525),
-    r = t(611170),
-    o = t(128854),
-    s = t(884182),
-    c = t(546432),
+    r = t(499376),
+    o = t(611170),
+    s = t(128854),
+    c = t(884182),
     u = t(780088),
     d = t(592125),
     m = t(52824),
@@ -20,7 +20,7 @@ var i = t(442837),
 function C(e) {
     let { message: n } = (0, _.CJ)(),
         t = (0, i.e7)([d.Z], () => d.Z.getChannel(null == n ? void 0 : n.channel_id)),
-        { shouldHideMediaOptions: C, shouldRedactExplicitContent: h, gifAutoPlay: I, getGifFavButton: x, getOnMediaItemContextMenu: E } = (0, o.c)();
+        { shouldHideMediaOptions: C, shouldRedactExplicitContent: h, gifAutoPlay: I, getGifFavButton: x, getOnMediaItemContextMenu: E } = (0, s.c)();
     if (null == n || null == t) return null;
     let v = e.items.map((e) => (0, u.j0)(e.media, p.VqG, C, h)).filter(f.lm),
         N = {
@@ -42,7 +42,7 @@ function C(e) {
                 item: {
                     uniqueId: t.proxyUrl,
                     originalItem: e,
-                    type: (0, c.pU)(t, !0),
+                    type: (0, r.pU)(t, !0),
                     downloadUrl: t.url,
                     height: t.height,
                     width: t.width,
@@ -52,8 +52,8 @@ function C(e) {
                 onContextMenu: l,
                 autoPlayGif: I,
                 getObscureReason: b,
-                renderImageComponent: r.a,
-                renderVideoComponent: r.r,
+                renderImageComponent: o.a,
+                renderVideoComponent: o.r,
                 renderAudioComponent: p.dG4,
                 renderPlaintextFilePreview: p.dG4,
                 renderGenericFileComponent: p.dG4,
@@ -69,5 +69,5 @@ function C(e) {
             });
         return a in T && (i.onClick = T[a]), i;
     });
-    return (0, l.jsx)('div', { children: (0, l.jsx)(s.Z, { items: g }) });
+    return (0, l.jsx)('div', { children: (0, l.jsx)(c.Z, { items: g }) });
 }

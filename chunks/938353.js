@@ -383,7 +383,7 @@ class e1 extends (i = a.Component) {
                 let n = (0, z.VY)(t),
                     s = {
                         message: e,
-                        item: (0, eF.OB)(t, u),
+                        item: (0, eF.O)(t, u),
                         autoPlayGif: o,
                         canRemoveItem: c && (l.length > 1 || '' !== e.content),
                         onRemoveItem: this.handleRemoveAttachment,
