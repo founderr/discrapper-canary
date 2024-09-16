@@ -35,22 +35,26 @@ function E(e) {
     i.useEffect(() => {
         if (null != E) (0, u.vY)(E);
     }, [E]);
-    let N = (0, a.e7)([f.Z], () => (null != e ? f.Z.getParentSKU(e) : void 0), [e]),
-        T = i.useCallback(() => {
-            if ((null == n ? void 0 : n.applicationId) == null || (null == n ? void 0 : n.id) == null || (null == N ? void 0 : N.id) == null || (null == n ? void 0 : n.flags) == null) return null;
+    let N = null == n ? void 0 : n.applicationId;
+    i.useEffect(() => {
+        if (null != N) (0, s.oJ)(N);
+    }, [N]);
+    let T = (0, a.e7)([f.Z], () => (null != e ? f.Z.getParentSKU(e) : void 0), [e]),
+        b = i.useCallback(() => {
+            if ((null == n ? void 0 : n.applicationId) == null || (null == n ? void 0 : n.id) == null || (null == T ? void 0 : T.id) == null || (null == n ? void 0 : n.flags) == null) return null;
             (0, r.openModal)((e) => {
                 let { onClose: t, transitionState: i } = e;
                 return (0, l.jsx)(h.SubscriptionDetailsModal, {
                     appId: n.applicationId,
-                    groupListingId: N.id,
+                    groupListingId: T.id,
                     subscriptionType: (0, d.KW)(n.flags) ? 'user' : 'guild',
                     onClose: t,
                     skuId: n.id,
                     transitionState: i
                 });
             });
-        }, [null == n ? void 0 : n.applicationId, null == n ? void 0 : n.id, null == N ? void 0 : N.id, null == n ? void 0 : n.flags]),
-        b = i.useCallback(() => {
+        }, [null == n ? void 0 : n.applicationId, null == n ? void 0 : n.id, null == T ? void 0 : T.id, null == n ? void 0 : n.flags]),
+        g = i.useCallback(() => {
             if (null == n) return null;
             (0, r.openModal)((e) => {
                 let { onClose: t, transitionState: i } = e;
@@ -62,7 +66,7 @@ function E(e) {
                 });
             });
         }, [n]);
-    if (null != n && null != v && (null == n || n.type !== I.epS.SUBSCRIPTION || null != N)) {
+    if (null != n && null != v && (null == n || n.type !== I.epS.SUBSCRIPTION || null != T)) {
         if (null == e || (null != n && !n.available))
             return {
                 disabled: !0,
@@ -81,7 +85,7 @@ function E(e) {
                     skuName: n.name,
                     price: (0, p.T4)(e.price, e.currency)
                 }),
-                onClick: T
+                onClick: b
             };
         }
         return null == n.price
@@ -95,7 +99,7 @@ function E(e) {
                       skuName: n.name,
                       price: (0, p.T4)(n.price.amount, n.price.currency)
                   }),
-                  onClick: b
+                  onClick: g
               };
     }
 }
