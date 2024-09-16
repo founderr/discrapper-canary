@@ -13,49 +13,50 @@ var i = n(735250),
     u = n(481060),
     d = n(480137),
     h = n(906732),
-    m = n(884737),
-    p = n(376923),
-    _ = n(472596),
-    f = n(987707),
+    m = n(376923),
+    p = n(472596),
+    _ = n(987707),
+    f = n(909746),
     E = n(501801),
     g = n(271383),
     C = n(430824),
-    I = n(274730),
-    x = n(5192),
+    I = n(5192),
     T = n(776767),
-    v = n(689938),
-    S = n(759486),
+    x = n(981631),
+    S = n(689938),
+    v = n(759486),
     N = n(722029),
-    Z = n(194898);
-function A(e) {
-    let { log: t, member: n, guild: a } = e,
-        { analyticsLocations: r } = (0, h.ZP)(),
-        d = m.nm(t),
-        f = m.QM(t),
-        C = m.of(t),
-        I = m.J5(t),
-        T = (0, p.LJ)(t.id),
-        Z = (0, c.e7)([g.ZP], () => (null != t.userId ? g.ZP.getMember(n.guildId, t.userId) : null), [n.guildId, t.userId]),
-        A = s.useCallback(
+    A = n(194898);
+function Z(e) {
+    var t;
+    let { log: n, member: a, guild: r } = e,
+        { analyticsLocations: d } = (0, h.ZP)(),
+        _ = f.nm(n),
+        C = f.QM(n),
+        T = null === (t = f.V$(x.zUn.REASON, n)) || void 0 === t ? void 0 : t.newValue,
+        A = f.J5(n),
+        Z = (0, m.LJ)(n.id),
+        M = (0, c.e7)([g.ZP], () => (null != n.userId ? g.ZP.getMember(a.guildId, n.userId) : null), [a.guildId, n.userId]),
+        b = s.useCallback(
             (e) => (t) => {
-                t.preventDefault(), t.stopPropagation(), null != e && (0, _.RE)(e, r);
+                t.preventDefault(), t.stopPropagation(), null != e && (0, p.RE)(e, d);
             },
-            [r]
+            [d]
         ),
-        M = s.useCallback(
+        R = s.useCallback(
             () =>
-                null == t.user
+                null == n.user
                     ? null
                     : (0, i.jsx)(u.Tooltip, {
-                          text: v.Z.Messages.GUILD_MEMBER_MOD_VIEW_AUDIT_LOG_SOURCE_USER,
+                          text: S.Z.Messages.GUILD_MEMBER_MOD_VIEW_AUDIT_LOG_SOURCE_USER,
                           children: (e) => {
-                              var s;
-                              let { onMouseEnter: a, onMouseLeave: l } = e;
+                              var t;
+                              let { onMouseEnter: s, onMouseLeave: l } = e;
                               return (0, i.jsx)(u.Clickable, {
                                   tag: 'span',
-                                  className: S.username,
-                                  onClick: A(Z),
-                                  onMouseEnter: a,
+                                  className: v.username,
+                                  onClick: b(M),
+                                  onMouseEnter: s,
                                   onMouseLeave: l,
                                   children: (0, i.jsxs)(u.Text, {
                                       variant: 'text-sm/medium',
@@ -63,97 +64,97 @@ function A(e) {
                                       children: [
                                           '@',
                                           (0, i.jsx)(u.NameWithRole, {
-                                              name: x.ZP.getName(n.guildId, null, t.user),
-                                              color: null !== (s = null == Z ? void 0 : Z.colorString) && void 0 !== s ? s : void 0
+                                              name: I.ZP.getName(a.guildId, null, n.user),
+                                              color: null !== (t = null == M ? void 0 : M.colorString) && void 0 !== t ? t : void 0
                                           })
                                       ]
                                   })
                               });
                           }
                       }),
-            [A, t.user, n.guildId, Z]
+            [b, n.user, a.guildId, M]
         )();
     return (0, i.jsxs)('div', {
-        className: l()(N.modInfoItem, S.auditLogItem),
+        className: l()(N.modInfoItem, v.auditLogItem),
         children: [
             (0, i.jsxs)('div', {
-                className: S.auditLogItemTitleContainer,
+                className: v.auditLogItemTitleContainer,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: S.auditLogItemTitle,
+                        className: v.auditLogItemTitle,
                         children: [
-                            null != d &&
+                            null != _ &&
                                 (0, i.jsx)(u.Text, {
                                     variant: 'text-sm/semibold',
                                     color: 'header-primary',
-                                    children: d
+                                    children: _
                                 }),
-                            null != f &&
+                            null != C &&
                                 (0, i.jsxs)(u.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'header-secondary',
-                                    children: ['(', 'string' == typeof f ? f : o()(f).fromNow(), ')']
+                                    children: ['(', 'string' == typeof C ? C : o()(C).fromNow(), ')']
                                 })
                         ]
                     }),
                     (0, i.jsx)('div', {
-                        className: S.auditLogItemDate,
+                        className: v.auditLogItemDate,
                         children: (0, i.jsx)(u.Text, {
                             variant: 'text-sm/medium',
                             color: 'header-primary',
-                            children: T
+                            children: Z
                         })
                     })
                 ]
             }),
-            null != C &&
+            null != T &&
                 (0, i.jsx)('div', {
-                    className: S.auditLogSecondaryContainer,
+                    className: v.auditLogSecondaryContainer,
                     children: (0, i.jsxs)('div', {
-                        className: S.auditLogReason,
+                        className: v.auditLogReason,
                         children: [
-                            M,
+                            R,
                             (0, i.jsx)(u.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'text-muted',
                                 tag: 'span',
-                                children: C
+                                children: T
                             })
                         ]
                     })
                 }),
-            null == C &&
-                null != I &&
+            null == T &&
+                null != A &&
                 (0, i.jsx)('div', {
-                    className: S.auditLogSecondaryContainer,
+                    className: v.auditLogSecondaryContainer,
                     children: (0, i.jsxs)('div', {
-                        className: S.auditLogSecondary,
+                        className: v.auditLogSecondary,
                         children: [
-                            M,
+                            R,
                             (0, i.jsx)(u.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'text-muted',
                                 tag: 'span',
-                                children: I
+                                children: A
                             })
                         ]
                     })
                 }),
-            null == C &&
-                null == I &&
+            null == T &&
+                null == A &&
                 (0, i.jsx)('div', {
-                    className: S.auditLogSecondaryContainer,
+                    className: v.auditLogSecondaryContainer,
                     children: (0, i.jsx)('div', {
-                        className: S.auditLogSecondary,
+                        className: v.auditLogSecondary,
                         children: (0, i.jsx)(u.Text, {
                             variant: 'text-sm/normal',
                             color: 'text-muted',
                             tag: 'span',
                             children: (0, i.jsx)(E.tP, {
-                                log: t,
-                                guild: a,
+                                log: n,
+                                guild: r,
                                 onContentClick: () => {},
-                                className: S.auditLogExpandedChangeDetails
+                                className: v.auditLogExpandedChangeDetails
                             })
                         })
                     })
@@ -165,10 +166,10 @@ function M(e) {
     let { member: t } = e,
         n = (0, c.e7)([C.Z], () => C.Z.getGuild(t.guildId), [t.guildId]),
         a = (0, c.e7)(
-            [f.Z],
+            [_.Z],
             () => {
-                let e = f.Z.logs;
-                return null == e || null == n ? [] : I._$(e, n);
+                let e = _.Z.logs;
+                return null == e || null == n ? [] : f._$(e, n);
             },
             [n]
         );
@@ -180,14 +181,14 @@ function M(e) {
     null == n || 0 === a.length)
         ? null
         : (0, i.jsx)(u.FormItem, {
-              title: v.Z.Messages.GUILD_MEMBER_MOD_VIEW_RECENT_AUDIT_LOG,
-              titleClassName: Z.infoTitle,
+              title: S.Z.Messages.GUILD_MEMBER_MOD_VIEW_RECENT_AUDIT_LOG,
+              titleClassName: A.infoTitle,
               children:
                   a.length > 0
                       ? (0, i.jsx)(T.WM, {
                             children: a.map((e) =>
                                 (0, i.jsx)(
-                                    A,
+                                    Z,
                                     {
                                         log: e,
                                         member: t,

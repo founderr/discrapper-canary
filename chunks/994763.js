@@ -1,10 +1,10 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return e$;
+            return eQ;
         },
         getGuildSettingsSections: function () {
-            return eq;
+            return ez;
         }
     }),
     n(47120);
@@ -24,155 +24,153 @@ var s = n(735250),
     m = n(147890),
     N = n(353093),
     S = n(593128),
-    h = n(979264),
-    g = n(223892),
+    g = n(979264),
+    h = n(223892),
     C = n(738774),
     x = n(296386),
     p = n(605236),
     R = n(688465),
-    f = n(826292),
-    L = n(404228),
-    O = n(676317),
-    A = n(874993),
-    M = n(745752),
-    D = n(45966),
-    v = n(637853),
-    j = n(526120),
-    Z = n(621923),
-    b = n(352981),
-    U = n(610403),
-    G = n(923726),
-    P = n(144507),
-    B = n(303737),
-    y = n(15030),
-    F = n(220685),
-    k = n(751189),
-    w = n(409059),
-    H = n(810788),
-    V = n(918658),
-    Y = n(84615),
-    W = n(210887),
-    z = n(524329),
-    K = n(575258),
-    q = n(995532),
-    X = n(276687),
-    Q = n(984933),
-    J = n(650774),
-    $ = n(496675),
-    ee = n(594174),
-    et = n(585483),
-    en = n(771212),
-    es = n(85001),
-    ea = n(434404),
-    ei = n(146596),
-    er = n(559368),
-    el = n(600553),
-    eo = n(360606),
-    ec = n(946724),
-    ed = n(999382),
-    eu = n(44550),
-    e_ = n(853714),
-    eI = n(359191),
-    eE = n(84658),
-    eT = n(142961),
-    em = n(730910),
-    eN = n(475013),
-    eS = n(213956),
-    eh = n(702478),
-    eg = n(247031),
-    eC = n(787561),
-    ex = n(579648),
-    ep = n(511480),
-    eR = n(460461),
-    ef = n(29605),
-    eL = n(365307),
-    eO = n(497666),
-    eA = n(324330),
-    eM = n(495300),
-    eD = n(312397),
-    ev = n(651780),
-    ej = n(279542),
-    eZ = n(413335),
-    eb = n(665324),
-    eU = n(208150),
-    eG = n(353398),
-    eP = n(365774),
-    eB = n(803288),
-    ey = n(804153),
-    eF = n(981631),
-    ek = n(308083),
-    ew = n(190378),
-    eH = n(135899),
-    eV = n(689938),
-    eY = n(9917);
-function eW(e) {
-    return '' !== e.toString() ? e.toString() : eV.Z.Messages.SERVER_SETTINGS;
+    L = n(676317),
+    f = n(874993),
+    O = n(745752),
+    A = n(45966),
+    M = n(637853),
+    D = n(526120),
+    v = n(621923),
+    j = n(352981),
+    Z = n(610403),
+    b = n(923726),
+    U = n(144507),
+    G = n(303737),
+    P = n(15030),
+    B = n(220685),
+    y = n(751189),
+    F = n(409059),
+    w = n(810788),
+    k = n(918658),
+    H = n(84615),
+    V = n(210887),
+    Y = n(524329),
+    W = n(575258),
+    z = n(995532),
+    K = n(276687),
+    q = n(984933),
+    X = n(650774),
+    Q = n(496675),
+    J = n(594174),
+    $ = n(585483),
+    ee = n(771212),
+    et = n(85001),
+    en = n(434404),
+    es = n(146596),
+    ea = n(559368),
+    ei = n(600553),
+    er = n(360606),
+    el = n(946724),
+    eo = n(999382),
+    ec = n(44550),
+    ed = n(853714),
+    eu = n(359191),
+    e_ = n(84658),
+    eI = n(142961),
+    eE = n(730910),
+    eT = n(475013),
+    em = n(213956),
+    eN = n(702478),
+    eS = n(247031),
+    eg = n(787561),
+    eh = n(579648),
+    eC = n(511480),
+    ex = n(460461),
+    ep = n(29605),
+    eR = n(365307),
+    eL = n(497666),
+    ef = n(324330),
+    eO = n(495300),
+    eA = n(312397),
+    eM = n(651780),
+    eD = n(279542),
+    ev = n(413335),
+    ej = n(665324),
+    eZ = n(208150),
+    eb = n(353398),
+    eU = n(365774),
+    eG = n(803288),
+    eP = n(804153),
+    eB = n(981631),
+    ey = n(308083),
+    eF = n(190378),
+    ew = n(135899),
+    ek = n(689938),
+    eH = n(9917);
+function eV(e) {
+    return '' !== e.toString() ? e.toString() : ek.Z.Messages.SERVER_SETTINGS;
 }
-function ez(e, t) {
-    let { homeSettingsEnabled: n } = (0, Z.l6)(e);
-    if (D.Z.getEnabled(e)) return eV.Z.Messages.GUILD_ONBOARDING_ON.toUpperCase();
-    if ((0, eT.C)(e)) return eV.Z.Messages.GUILD_ONBOARDING_OFF.toUpperCase();
-    let s = eE.ug.filter((e) => !!n || e !== eE.PG.HOME_SETTINGS || !1),
+function eY(e, t) {
+    let { homeSettingsEnabled: n } = (0, v.l6)(e);
+    if (A.Z.getEnabled(e)) return ek.Z.Messages.GUILD_ONBOARDING_ON.toUpperCase();
+    if ((0, eI.C)(e)) return ek.Z.Messages.GUILD_ONBOARDING_OFF.toUpperCase();
+    let s = e_.ug.filter((e) => !!n || e !== e_.PG.HOME_SETTINGS || !1),
         a = s.findIndex((e) => e === t);
     if (-1 !== a)
-        return eV.Z.Messages.GUILD_ONBOARDING_SETUP_STEP_COUNTER.format({
+        return ek.Z.Messages.GUILD_ONBOARDING_SETUP_STEP_COUNTER.format({
             count: a + 1,
             total: s.length
         });
 }
-function eK(e) {
+function eW(e) {
     var t;
-    let { guild: a, isGuildAdmin: r, canManageGuild: d, canViewAuditLog: _, canViewAuditLogV2: I, canManageRoles: E, canManageGuildExpressions: x, canManageWebhooks: f, canManageBans: M, canAccessMembersPage: D, canViewGuildAnalytics: j, isOwner: Z, isOwnerWithRequiredMfaLevel: k, showDirtyGuildTemplateIndicator: w, memberCount: V, isGuildAuditLogV2Enabled: W, showAccessRate: z, onboardingStep: q, onboardingEnabled: Q, welcomeScreenEmpty: J, guildMetadata: $, section: en, canAccessClanSettings: ei } = e,
-        er = el.$.getCurrentConfig({
+    let { guild: a, isGuildAdmin: r, canManageGuild: d, canViewAuditLog: _, canManageRoles: I, canManageGuildExpressions: E, canManageWebhooks: x, canManageBans: O, canAccessMembersPage: A, canViewGuildAnalytics: D, isOwner: v, isOwnerWithRequiredMfaLevel: y, showDirtyGuildTemplateIndicator: F, memberCount: k, showAccessRate: V, onboardingStep: Y, onboardingEnabled: z, welcomeScreenEmpty: q, guildMetadata: X, section: Q, canAccessClanSettings: ee } = e,
+        es = ei.$.getCurrentConfig({
             guildId: a.id,
             location: 'generateSections'
         }).enabled,
-        eE = () =>
-            (0, P.X$)({
+        ea = () =>
+            (0, U.X$)({
                 guild: a,
-                isOwner: Z,
-                canManageGuildRoleSubscriptions: (0, P.H2)(a),
-                isMonetizationWaitlistEnabledForGuild: (0, g.mG)(a.id),
-                isGuildEligibleForRoleSubscriptions: (0, G.kT)(a.id),
-                isExpeditedMonetizationOnboardingGuild: (0, g.Rw)(a),
-                isUserInCreatorMonetizationEligibleCountry: (0, g.DB)(),
+                isOwner: v,
+                canManageGuildRoleSubscriptions: (0, U.H2)(a),
+                isMonetizationWaitlistEnabledForGuild: (0, h.mG)(a.id),
+                isGuildEligibleForRoleSubscriptions: (0, b.kT)(a.id),
+                isExpeditedMonetizationOnboardingGuild: (0, h.Rw)(a),
+                isUserInCreatorMonetizationEligibleCountry: (0, h.DB)(),
                 shouldRestrictUpdatingRoleSubscriptionSettings: (0, C.cu)(a.id)
             }),
-        eT = (0, b.p)(a.id, 'guild_settings'),
-        eK = !1 === a.hasFeature(eF.oNc.CREATOR_MONETIZABLE) && !1 === a.hasFeature(eF.oNc.CREATOR_MONETIZABLE_PROVISIONAL),
-        eq =
-            eT && eK
+        e_ = (0, j.p)(a.id, 'guild_settings'),
+        eI = !1 === a.hasFeature(eB.oNc.CREATOR_MONETIZABLE) && !1 === a.hasFeature(eB.oNc.CREATOR_MONETIZABLE_PROVISIONAL),
+        eW =
+            e_ && eI
                 ? {
                       label: (0, s.jsx)('div', {
-                          className: eY.roleSubLabel,
-                          children: eV.Z.Messages.GUILD_SETTINGS_ENABLE_MONETIZATION_TAB_TITLE
+                          className: eH.roleSubLabel,
+                          children: ek.Z.Messages.GUILD_SETTINGS_ENABLE_MONETIZATION_TAB_TITLE
                       }),
-                      ariaLabel: eV.Z.Messages.GUILD_SETTINGS_ENABLE_MONETIZATION_TAB_TITLE
+                      ariaLabel: ek.Z.Messages.GUILD_SETTINGS_ENABLE_MONETIZATION_TAB_TITLE
                   }
                 : {
                       label: (0, s.jsx)('div', {
-                          className: eY.roleSubLabel,
-                          children: eV.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE
+                          className: eH.roleSubLabel,
+                          children: ek.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE
                       }),
-                      ariaLabel: eV.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE
+                      ariaLabel: ek.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE
                   },
-        eX = (null === (t = a.clan) || void 0 === t ? void 0 : t.badge) != null ? (0, N.ky)(a.id, a.clan.badge, ek.NC.SIZE_16) : null,
-        eQ = {
-            section: eF.pNK.DELETE,
+        ez = (null === (t = a.clan) || void 0 === t ? void 0 : t.badge) != null ? (0, N.ky)(a.id, a.clan.badge, ey.NC.SIZE_16) : null,
+        eK = {
+            section: eB.pNK.DELETE,
             onClick() {
-                let e = ee.default.getCurrentUser();
+                let e = J.default.getCurrentUser();
                 if (null == e) return;
                 let t = a.toString(),
                     i = {
-                        header: eV.Z.Messages.DELETE_SERVER_TITLE.format({ name: t }),
-                        confirmText: eV.Z.Messages.DELETE_SERVER,
-                        cancelText: eV.Z.Messages.CANCEL,
+                        header: ek.Z.Messages.DELETE_SERVER_TITLE.format({ name: t }),
+                        confirmText: ek.Z.Messages.DELETE_SERVER,
+                        cancelText: ek.Z.Messages.CANCEL,
                         onConfirm: () => {
-                            et.S.subscribeOnce(eF.CkL.LAYER_POP_COMPLETE, () => {
-                                ea.Z.deleteGuild(a.id, t).then(() => {
+                            $.S.subscribeOnce(eB.CkL.LAYER_POP_COMPLETE, () => {
+                                en.Z.deleteGuild(a.id, t).then(() => {
                                     if ((0, p.un)(l.z.GUILD_DELETE_FEEDBACK)) return;
-                                    es.Z.trackExposure({ location: 'e4be39_1' });
-                                    let { showFeedback: e } = es.Z.getCurrentConfig({ location: 'e4be39_2' }, { autoTrackExposure: !1 });
+                                    et.Z.trackExposure({ location: 'e4be39_1' });
+                                    let { showFeedback: e } = et.Z.getCurrentConfig({ location: 'e4be39_2' }, { autoTrackExposure: !1 });
                                     e &&
                                         (0, o.openModalLazy)(async () => {
                                             let { default: e } = await n.e('31811').then(n.bind(n, 945903));
@@ -194,7 +192,7 @@ function eK(e) {
                               ...i,
                               children: (0, s.jsx)(o.Text, {
                                   variant: 'text-md/normal',
-                                  children: eV.Z.Messages.DELETE_SERVER_BODY.format({ name: t })
+                                  children: ek.Z.Messages.DELETE_SERVER_BODY.format({ name: t })
                               })
                           })
                       )
@@ -205,316 +203,307 @@ function eK(e) {
                                   ...n,
                                   ...i,
                                   validationText: t,
-                                  instructionText: eV.Z.Messages.DELETE_SERVER_ENTER_NAME,
-                                  errorText: eV.Z.Messages.DELETE_SERVER_INCORRECT_NAME,
-                                  children: eV.Z.Messages.DELETE_SERVER_BODY.format({ name: t })
+                                  instructionText: ek.Z.Messages.DELETE_SERVER_ENTER_NAME,
+                                  errorText: ek.Z.Messages.DELETE_SERVER_INCORRECT_NAME,
+                                  children: ek.Z.Messages.DELETE_SERVER_BODY.format({ name: t })
                               });
                       });
             },
-            label: eV.Z.Messages.DELETE_SERVER,
-            ariaLabel: eV.Z.Messages.DELETE_SERVER,
+            label: ek.Z.Messages.DELETE_SERVER,
+            ariaLabel: ek.Z.Messages.DELETE_SERVER,
             icon: (0, s.jsx)(o.TrashIcon, {
                 size: 'xs',
                 color: 'currentColor'
             }),
-            predicate: () => k
+            predicate: () => y
         };
-    if (er) {
+    if (es) {
         let e = [
                 { section: u.ID.DIVIDER },
                 {
                     section: u.ID.HEADER,
-                    label: eV.Z.Messages.GUILD_SETTINGS_SECTION_TITLE_ADD_FUN_STUFF
+                    label: ek.Z.Messages.GUILD_SETTINGS_SECTION_TITLE_ADD_FUN_STUFF
                 },
                 {
-                    section: eF.pNK.EMOJI,
+                    section: eB.pNK.EMOJI,
                     impressionName: i.ImpressionNames.GUILD_SETTINGS_EMOJI,
-                    label: eV.Z.Messages.EMOJI,
-                    element: ef.ZP,
-                    predicate: () => x
+                    label: ek.Z.Messages.EMOJI,
+                    element: ep.ZP,
+                    predicate: () => E
                 },
                 {
-                    section: eF.pNK.STICKERS,
+                    section: eB.pNK.STICKERS,
                     impressionName: i.ImpressionNames.GUILD_SETTINGS_STICKERS,
-                    label: eV.Z.Messages.GUILD_SETTINGS_STICKERS,
-                    ariaLabel: eV.Z.Messages.GUILD_SETTINGS_STICKERS,
-                    element: eU.Z,
-                    predicate: () => x
+                    label: ek.Z.Messages.GUILD_SETTINGS_STICKERS,
+                    ariaLabel: ek.Z.Messages.GUILD_SETTINGS_STICKERS,
+                    element: eZ.Z,
+                    predicate: () => E
                 },
                 {
-                    section: eF.pNK.SOUNDBOARD,
+                    section: eB.pNK.SOUNDBOARD,
                     impressionName: i.ImpressionNames.GUILD_SETTINGS_SOUNDBOARD,
-                    label: eV.Z.Messages.GUILD_SETTINGS_SOUNDBOARD,
-                    ariaLabel: eV.Z.Messages.GUILD_SETTINGS_SOUNDBOARD,
-                    element: eb.Z,
-                    predicate: () => x
+                    label: ek.Z.Messages.GUILD_SETTINGS_SOUNDBOARD,
+                    ariaLabel: ek.Z.Messages.GUILD_SETTINGS_SOUNDBOARD,
+                    element: ej.Z,
+                    predicate: () => E
                 },
                 {
-                    section: eF.pNK.APP_DIRECTORY,
-                    label: eV.Z.Messages.APPS,
-                    ariaLabel: eV.Z.Messages.APPS,
+                    section: eB.pNK.APP_DIRECTORY,
+                    label: ek.Z.Messages.APPS,
+                    ariaLabel: ek.Z.Messages.APPS,
                     onClick() {
                         (0, m.goToAppDirectory)({
                             guildId: a.id,
                             entrypoint: {
                                 name: T.ApplicationDirectoryEntrypointNames.GUILD_SETTINGS,
-                                guildSettingsSection: en
+                                guildSettingsSection: Q
                             }
                         }),
                             (0, c.xf)();
                     }
                 },
                 {
-                    section: eF.pNK.INTEGRATIONS,
+                    section: eB.pNK.INTEGRATIONS,
                     impressionName: i.ImpressionNames.GUILD_SETTINGS_INTEGRATION,
-                    label: eV.Z.Messages.INTEGRATIONS,
-                    ariaLabel: eV.Z.Messages.INTEGRATIONS,
-                    element: eL.Z,
+                    label: ek.Z.Messages.INTEGRATIONS,
+                    ariaLabel: ek.Z.Messages.INTEGRATIONS,
+                    element: eR.Z,
                     notice: {
-                        stores: [eo.Z, ed.Z],
-                        element: eL.j
+                        stores: [er.Z, eo.Z],
+                        element: eR.j
                     },
-                    predicate: () => d || f
+                    predicate: () => d || x
                 }
             ],
             t =
-                E || D || d
+                I || A || d
                     ? [
                           { section: u.ID.DIVIDER },
                           {
                               section: u.ID.HEADER,
-                              label: eV.Z.Messages.GUILD_SETTINGS_SECTION_TITLE_MANAGE_USERS
+                              label: ek.Z.Messages.GUILD_SETTINGS_SECTION_TITLE_MANAGE_USERS
                           },
                           {
-                              section: eF.pNK.ROLES,
+                              section: eB.pNK.ROLES,
                               impressionName: i.ImpressionNames.GUILD_SETTINGS_ROLES,
-                              label: eV.Z.Messages.ROLES,
-                              element: eN.Z,
+                              label: ek.Z.Messages.ROLES,
+                              element: eT.Z,
                               type: u.bT.MINIMAL,
-                              ariaLabel: eV.Z.Messages.GUILD_SETTINGS_ROLE_ICON_SIDEBAR_NEW_ARIA_LABEL,
+                              ariaLabel: ek.Z.Messages.GUILD_SETTINGS_ROLE_ICON_SIDEBAR_NEW_ARIA_LABEL,
                               notice: {
-                                  stores: [ec.Z],
-                                  element: eN._
+                                  stores: [el.Z],
+                                  element: eT._
                               },
-                              predicate: () => E
+                              predicate: () => I
                           },
                           {
-                              section: eF.pNK.MEMBERS,
+                              section: eB.pNK.MEMBERS,
                               impressionName: i.ImpressionNames.GUILD_SETTINGS_MEMBERS,
-                              label: (0, s.jsx)(eA.$, {}),
-                              ariaLabel: eV.Z.Messages.MEMBERS,
-                              element: eA.Z,
+                              label: (0, s.jsx)(ef.$, {}),
+                              ariaLabel: ek.Z.Messages.MEMBERS,
+                              element: ef.Z,
                               type: u.bT.CUSTOM,
-                              predicate: () => D
+                              predicate: () => A
                           },
                           {
-                              section: eF.pNK.INSTANT_INVITES,
+                              section: eB.pNK.INSTANT_INVITES,
                               impressionName: i.ImpressionNames.GUILD_SETTINGS_INVITES,
-                              label: eV.Z.Messages.INVITES,
-                              element: eO.Z,
+                              label: ek.Z.Messages.INVITES,
+                              element: eL.Z,
                               type: u.bT.CUSTOM,
                               predicate: () => d
                           }
                       ]
                     : [],
-            n = a.hasFeature(eF.oNc.COMMUNITY),
+            n = a.hasFeature(eB.oNc.COMMUNITY),
             r = d && n,
             o = d && !n,
-            N = !n && ((0, O.Nb)(a.id) || (0, O.ze)(a.id)),
-            g = I && W,
-            C =
-                r || o || N || _ || g || M
+            N = !n && ((0, L.Nb)(a.id) || (0, L.ze)(a.id)),
+            h =
+                r || o || N || _ || O
                     ? [
                           { section: u.ID.DIVIDER },
                           {
                               section: u.ID.HEADER,
-                              label: eV.Z.Messages.GUILD_SETTINGS_SECTION_TITLE_KEEP_IT_SAFE
+                              label: ek.Z.Messages.GUILD_SETTINGS_SECTION_TITLE_KEEP_IT_SAFE
                           },
                           {
-                              section: eF.pNK.SAFETY,
+                              section: eB.pNK.SAFETY,
                               impressionName: i.ImpressionNames.GUILD_SETTINGS_SAFETY,
-                              label: eV.Z.Messages.SAFETY_SETUP,
-                              ariaLabel: eV.Z.Messages.SAFETY_SETUP,
-                              element: eS.Z,
+                              label: ek.Z.Messages.SAFETY_SETUP,
+                              ariaLabel: ek.Z.Messages.SAFETY_SETUP,
+                              element: em.Z,
                               newIndicatorDismissibleContentTypes: [l.z.COMMUNITY_GUILD_SETTINGS_SAFETY],
                               predicate: () => r
                           },
                           {
-                              section: eF.pNK.MODERATION,
+                              section: eB.pNK.MODERATION,
                               impressionName: i.ImpressionNames.GUILD_SETTINGS_MODERATION,
-                              label: eV.Z.Messages.SAFETY_SETUP,
-                              element: ej.ZP,
+                              label: ek.Z.Messages.SAFETY_SETUP,
+                              element: eD.ZP,
                               predicate: () => o
                           },
                           {
-                              section: eF.pNK.GUILD_AUTOMOD,
+                              section: eB.pNK.GUILD_AUTOMOD,
                               label: (0, s.jsx)('div', {
-                                  className: eY.landingPageTabLink,
-                                  children: eV.Z.Messages.GUILD_SETTINGS_AUTOMOD_TITLE
+                                  className: eH.landingPageTabLink,
+                                  children: ek.Z.Messages.GUILD_SETTINGS_AUTOMOD_TITLE
                               }),
-                              ariaLabel: eV.Z.Messages.GUILD_SETTINGS_AUTOMOD_TITLE,
-                              element: A.Z,
+                              ariaLabel: ek.Z.Messages.GUILD_SETTINGS_AUTOMOD_TITLE,
+                              element: f.Z,
                               newIndicatorDismissibleContentTypes: null,
                               predicate: () => N
                           },
                           {
-                              section: eF.pNK.AUDIT_LOG,
+                              section: eB.pNK.AUDIT_LOG,
                               impressionName: i.ImpressionNames.GUILD_SETTINGS_AUDIT_LOG,
-                              label: eV.Z.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG,
-                              element: e_.Z,
+                              label: ek.Z.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG,
+                              element: ed.Z,
                               type: u.bT.CUSTOM,
                               predicate: () => _
                           },
                           {
-                              section: eF.pNK.AUDIT_LOG_V2,
-                              impressionName: i.ImpressionNames.GUILD_SETTINGS_AUDIT_LOG_V2,
-                              label: eV.Z.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG,
-                              element: L.Z,
-                              type: u.bT.CUSTOM,
-                              predicate: () => g
-                          },
-                          {
-                              section: eF.pNK.BANS,
+                              section: eB.pNK.BANS,
                               impressionName: i.ImpressionNames.GUILD_SETTINGS_BANS,
-                              label: eV.Z.Messages.BANS,
-                              element: eg.Z,
-                              predicate: () => M
+                              label: ek.Z.Messages.BANS,
+                              element: eS.Z,
+                              predicate: () => O
                           }
                       ]
                     : [],
-            p = (0, v.wC)(a.id),
-            Z = n && j,
-            P = d && (a.hasFeature(eF.oNc.DISCOVERABLE) || !!(null == $ ? void 0 : $.isPublished)),
-            ee = d && !J && !a.hasFeature(eF.oNc.GUILD_SERVER_GUIDE),
-            et =
-                n && (d || p || Z || P || ee)
+            C = (0, M.wC)(a.id),
+            p = n && D,
+            v = d && (a.hasFeature(eB.oNc.DISCOVERABLE) || !!(null == X ? void 0 : X.isPublished)),
+            U = d && !q && !a.hasFeature(eB.oNc.GUILD_SERVER_GUIDE),
+            J =
+                n && (d || C || p || v || U)
                     ? [
                           { section: u.ID.DIVIDER },
                           {
                               section: u.ID.HEADER,
-                              label: eV.Z.Messages.COMMUNITY
+                              label: ek.Z.Messages.COMMUNITY
                           },
                           {
-                              section: eF.pNK.COMMUNITY,
+                              section: eB.pNK.COMMUNITY,
                               impressionName: i.ImpressionNames.GUILD_SETTINGS_COMMUNITY_OVERVIEW,
-                              label: eV.Z.Messages.OVERVIEW,
-                              element: eC.Z,
-                              ariaLabel: eV.Z.Messages.OVERVIEW,
+                              label: ek.Z.Messages.OVERVIEW,
+                              element: eg.Z,
+                              ariaLabel: ek.Z.Messages.OVERVIEW,
                               notice: {
-                                  stores: [ed.Z],
-                                  element: eC.X
+                                  stores: [eo.Z],
+                                  element: eg.X
                               },
                               predicate: () => d
                           },
                           {
-                              section: eF.pNK.ONBOARDING,
-                              label: eV.Z.Messages.ONBOARDING,
-                              element: eM.Z,
-                              ariaLabel: eV.Z.Messages.ONBOARDING,
-                              newIndicatorDismissibleContentTypes: Q ? null : [l.z.COMMUNITY_ONBOARDING_NEW_BADGE],
+                              section: eB.pNK.ONBOARDING,
+                              label: ek.Z.Messages.ONBOARDING,
+                              element: eO.Z,
+                              ariaLabel: ek.Z.Messages.ONBOARDING,
+                              newIndicatorDismissibleContentTypes: z ? null : [l.z.COMMUNITY_ONBOARDING_NEW_BADGE],
                               notice: {
-                                  stores: [eI.Z],
-                                  element: em.Z
+                                  stores: [eu.Z],
+                                  element: eE.Z
                               },
-                              predicate: () => p,
-                              decoration: ez(a.id, q)
+                              predicate: () => C,
+                              decoration: eY(a.id, Y)
                           },
                           {
-                              section: eF.pNK.ANALYTICS,
+                              section: eB.pNK.ANALYTICS,
                               impressionName: i.ImpressionNames.GUILD_SETTINGS_ANALYTICS,
-                              label: eV.Z.Messages.SERVER_INSIGHTS,
-                              ariaLabel: eV.Z.Messages.SERVER_INSIGHTS,
-                              element: eh.Z,
-                              newIndicator: H.Z.hasHotspot(ew.v.GUILD_ANALYTICS_GUILD_SETTINGS_MENU),
-                              newIndicatorDismissibleContentTypes: z ? [l.z.GUILD_INSIGHTS_ACCESS_RATE_NEW] : null,
-                              predicate: () => Z
+                              label: ek.Z.Messages.SERVER_INSIGHTS,
+                              ariaLabel: ek.Z.Messages.SERVER_INSIGHTS,
+                              element: eN.Z,
+                              newIndicator: w.Z.hasHotspot(eF.v.GUILD_ANALYTICS_GUILD_SETTINGS_MENU),
+                              newIndicatorDismissibleContentTypes: V ? [l.z.GUILD_INSIGHTS_ACCESS_RATE_NEW] : null,
+                              predicate: () => p
                           },
                           {
-                              section: eF.pNK.DISCOVERY,
+                              section: eB.pNK.DISCOVERY,
                               impressionName: i.ImpressionNames.GUILD_SETTINGS_DISCOVERY,
-                              label: eV.Z.Messages.DISCOVERY,
-                              element: ep.Z,
+                              label: ek.Z.Messages.DISCOVERY,
+                              element: eC.Z,
                               notice: {
-                                  stores: [ed.Z],
-                                  element: ep.s
+                                  stores: [eo.Z],
+                                  element: eC.s
                               },
                               predicate: () => d,
-                              ariaLabel: a.hasFeature(eF.oNc.DISCOVERABLE) ? eV.Z.Messages.DISCOVERY : eV.Z.Messages.GUILD_SETTINGS_ENABLE_DISCOVERABLE
+                              ariaLabel: a.hasFeature(eB.oNc.DISCOVERABLE) ? ek.Z.Messages.DISCOVERY : ek.Z.Messages.GUILD_SETTINGS_ENABLE_DISCOVERABLE
                           },
                           {
-                              section: eF.pNK.DISCOVERY_LANDING_PAGE,
+                              section: eB.pNK.DISCOVERY_LANDING_PAGE,
                               impressionName: i.ImpressionNames.GUILD_SETTINGS_DISCOVERY_LANDING_PAGE,
                               label: (0, s.jsxs)('div', {
-                                  className: eY.landingPageTabLink,
-                                  children: [eV.Z.Messages.DISCOVERY_LANDING_PAGE, ' ', (0, s.jsx)(R.Z, {})]
+                                  className: eH.landingPageTabLink,
+                                  children: [ek.Z.Messages.DISCOVERY_LANDING_PAGE, ' ', (0, s.jsx)(R.Z, {})]
                               }),
-                              ariaLabel: eV.Z.Messages.DISCOVERY_LANDING_PAGE,
-                              element: eR.Z,
-                              notice: {
-                                  stores: [ed.Z],
-                                  element: eR.J
-                              },
-                              type: u.bT.CUSTOM,
-                              predicate: () => P
-                          },
-                          {
-                              section: eF.pNK.COMMUNITY_WELCOME,
-                              impressionName: i.ImpressionNames.GUILD_SETTINGS_COMMUNITY_WELCOME,
-                              label: eV.Z.Messages.GUILD_SETTINGS_PUBLIC_WELCOME,
-                              ariaLabel: eV.Z.Messages.GUILD_SETTINGS_PUBLIC_WELCOME,
+                              ariaLabel: ek.Z.Messages.DISCOVERY_LANDING_PAGE,
                               element: ex.Z,
                               notice: {
-                                  stores: [K.Z],
-                                  element: X.Z
+                                  stores: [eo.Z],
+                                  element: ex.J
                               },
-                              predicate: () => ee
+                              type: u.bT.CUSTOM,
+                              predicate: () => v
+                          },
+                          {
+                              section: eB.pNK.COMMUNITY_WELCOME,
+                              impressionName: i.ImpressionNames.GUILD_SETTINGS_COMMUNITY_WELCOME,
+                              label: ek.Z.Messages.GUILD_SETTINGS_PUBLIC_WELCOME,
+                              ariaLabel: ek.Z.Messages.GUILD_SETTINGS_PUBLIC_WELCOME,
+                              element: eh.Z,
+                              notice: {
+                                  stores: [W.Z],
+                                  element: K.Z
+                              },
+                              predicate: () => U
                           }
                       ]
                     : [],
-            es = eE()
+            $ = ea()
                 ? [
                       { section: u.ID.DIVIDER },
                       {
                           section: u.ID.HEADER,
-                          label: eV.Z.Messages.MONETIZATION
+                          label: ek.Z.Messages.MONETIZATION
                       },
                       {
-                          ...eq,
-                          section: eF.pNK.ROLE_SUBSCRIPTIONS,
-                          element: y.Z,
+                          ...eW,
+                          section: eB.pNK.ROLE_SUBSCRIPTIONS,
+                          element: P.Z,
                           type: u.bT.CUSTOM,
-                          newIndicatorDismissibleContentTypes: (0, B.sO)(a) ? [l.z.SERVER_SUBSCRIPTION_SETTINGS_NEW_BADGE_TIER_TEMPLATE] : null
+                          newIndicatorDismissibleContentTypes: (0, G.sO)(a) ? [l.z.SERVER_SUBSCRIPTION_SETTINGS_NEW_BADGE_TIER_TEMPLATE] : null
                       },
                       {
-                          section: eF.pNK.GUILD_PRODUCTS,
-                          label: eV.Z.Messages.GUILD_PRODUCTS_TITLE,
-                          ariaLabel: eV.Z.Messages.GUILD_PRODUCTS_TITLE,
-                          element: U.Z,
-                          predicate: () => (0, b.p)(a.id, 'guild_product_settings_predicate') && (0, G.sy)(a)
+                          section: eB.pNK.GUILD_PRODUCTS,
+                          label: ek.Z.Messages.GUILD_PRODUCTS_TITLE,
+                          ariaLabel: ek.Z.Messages.GUILD_PRODUCTS_TITLE,
+                          element: Z.Z,
+                          predicate: () => (0, j.p)(a.id, 'guild_product_settings_predicate') && (0, b.sy)(a)
                       },
                       {
-                          section: eF.pNK.ROLE_SUBSCRIPTIONS_STORE_PAGE,
+                          section: eB.pNK.ROLE_SUBSCRIPTIONS_STORE_PAGE,
                           impressionName: i.ImpressionNames.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_GUILD_SETTINGS,
                           newIndicator: 2022 === new Date().getFullYear(),
-                          label: eV.Z.Messages.GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_STORE_PAGE,
-                          ariaLabel: eV.Z.Messages.GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_STORE_PAGE,
-                          element: F.Z,
-                          predicate: () => (0, G.sy)(a)
+                          label: ek.Z.Messages.GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_STORE_PAGE,
+                          ariaLabel: ek.Z.Messages.GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_STORE_PAGE,
+                          element: B.Z,
+                          predicate: () => (0, b.sy)(a)
                       }
                   ]
                 : [],
-            ea = null != ei && ei,
-            er = d && !a.hasFeature(eF.oNc.COMMUNITY),
-            el =
-                ea || er || d
+            et = null != ee && ee,
+            en = d && !a.hasFeature(eB.oNc.COMMUNITY),
+            es =
+                et || en || d
                     ? [
                           { section: u.ID.DIVIDER },
                           {
-                              section: eF.pNK.CLAN,
-                              label: eV.Z.Messages.CLAN_SETTINGS,
-                              ariaLabel: eV.Z.Messages.CLAN_SETTINGS,
+                              section: eB.pNK.CLAN,
+                              label: ek.Z.Messages.CLAN_SETTINGS,
+                              ariaLabel: ek.Z.Messages.CLAN_SETTINGS,
                               onClick() {
-                                  (0, Y.q4)(
+                                  (0, H.q4)(
                                       (e) => {
                                           let { closeLayer: t } = e;
                                           return (0, s.jsx)(S.Z, {
@@ -522,53 +511,53 @@ function eK(e) {
                                               guildId: a.id
                                           });
                                       },
-                                      { layerKey: ek.q2 }
+                                      { layerKey: ey.q2 }
                                   ),
                                       (0, c.xf)();
                               },
-                              predicate: () => ea,
-                              icon: null != eX ? (0, s.jsx)(h.KQ, { src: eX }) : null
+                              predicate: () => et,
+                              icon: null != ez ? (0, s.jsx)(g.KQ, { src: ez }) : null
                           },
                           {
-                              section: eF.pNK.COMMUNITY,
+                              section: eB.pNK.COMMUNITY,
                               impressionName: i.ImpressionNames.GUILD_SETTINGS_ENABLE_COMMUNITY,
-                              label: eV.Z.Messages.GUILD_SETTINGS_COMMUNITY_ENABLE_COMMUNITY,
-                              element: eC.Z,
-                              ariaLabel: eV.Z.Messages.GUILD_SETTINGS_COMMUNITY_ENABLE_COMMUNITY,
-                              newIndicator: null != V && V >= eH.U3 && H.Z.hasHotspot(ew.v.GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL),
+                              label: ek.Z.Messages.GUILD_SETTINGS_COMMUNITY_ENABLE_COMMUNITY,
+                              element: eg.Z,
+                              ariaLabel: ek.Z.Messages.GUILD_SETTINGS_COMMUNITY_ENABLE_COMMUNITY,
+                              newIndicator: null != k && k >= ew.U3 && w.Z.hasHotspot(eF.v.GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL),
                               notice: {
-                                  stores: [ed.Z],
-                                  element: eC.X
+                                  stores: [eo.Z],
+                                  element: eg.X
                               },
-                              predicate: () => er
+                              predicate: () => en
                           },
                           {
-                              section: eF.pNK.WIDGET,
+                              section: eB.pNK.WIDGET,
                               impressionName: i.ImpressionNames.GUILD_SETTINGS_WIDGET,
-                              label: eV.Z.Messages.WIDGET,
-                              element: ey.Z,
+                              label: ek.Z.Messages.WIDGET,
+                              element: eP.Z,
                               predicate: () => d
                           },
                           {
-                              section: eF.pNK.VANITY_URL,
+                              section: eB.pNK.VANITY_URL,
                               impressionName: i.ImpressionNames.GUILD_SETTINGS_VANITY_URL,
-                              label: eV.Z.Messages.VANITY_URL,
-                              element: eB.Z,
+                              label: ek.Z.Messages.VANITY_URL,
+                              element: eG.Z,
                               notice: {
-                                  stores: [eu.Z],
-                                  element: eB.T
+                                  stores: [ec.Z],
+                                  element: eG.T
                               },
                               predicate: () => d
                           },
                           {
-                              section: eF.pNK.GUILD_TEMPLATES,
+                              section: eB.pNK.GUILD_TEMPLATES,
                               impressionName: i.ImpressionNames.GUILD_SETTINGS_TEMPLATE,
-                              label: (0, s.jsx)(eP.Z, { showDirtyIndicator: w }),
-                              ariaLabel: eV.Z.Messages.GUILD_TEMPLATES,
-                              element: eG.ZP,
+                              label: (0, s.jsx)(eU.Z, { showDirtyIndicator: F }),
+                              ariaLabel: ek.Z.Messages.GUILD_TEMPLATES,
+                              element: eb.ZP,
                               notice: {
-                                  stores: [eG.Sf],
-                                  element: eG.Q5
+                                  stores: [eb.Sf],
+                                  element: eb.Q5
                               },
                               predicate: () => d
                           }
@@ -577,155 +566,155 @@ function eK(e) {
         return [
             {
                 section: u.ID.HEADER,
-                label: eW(a)
+                label: eV(a)
             },
             {
-                section: eF.pNK.OVERVIEW,
+                section: eB.pNK.OVERVIEW,
                 impressionName: i.ImpressionNames.GUILD_SETTINGS_OVERVIEW,
-                label: eV.Z.Messages.OVERVIEW,
-                ariaLabel: eV.Z.Messages.OVERVIEW,
-                element: eD.Z,
+                label: ek.Z.Messages.OVERVIEW,
+                ariaLabel: ek.Z.Messages.OVERVIEW,
+                element: eA.Z,
                 notice: {
-                    stores: [ed.Z],
-                    element: eD.O
+                    stores: [eo.Z],
+                    element: eA.O
                 }
             },
             ...e,
             ...t,
-            ...C,
-            ...et,
-            ...es,
+            ...h,
+            ...J,
+            ...$,
             { section: u.ID.DIVIDER },
             {
-                section: eF.pNK.GUILD_PREMIUM,
+                section: eB.pNK.GUILD_PREMIUM,
                 impressionName: i.ImpressionNames.GUILD_SETTINGS_BOOST_STATUS,
-                label: eV.Z.Messages.GUILD_PREMIUM,
-                ariaLabel: eV.Z.Messages.GUILD_PREMIUM,
-                element: ev.Z,
-                className: eY.serverBoostTabItem,
-                icon: (0, s.jsx)(eZ.Z, { className: eY.icon })
+                label: ek.Z.Messages.GUILD_PREMIUM,
+                ariaLabel: ek.Z.Messages.GUILD_PREMIUM,
+                element: eM.Z,
+                className: eH.serverBoostTabItem,
+                icon: (0, s.jsx)(ev.Z, { className: eH.icon })
             },
-            ...el,
+            ...es,
             {
                 section: u.ID.DIVIDER,
-                predicate: () => k
+                predicate: () => y
             },
-            eQ
+            eK
         ];
     }
     return [
         {
             section: u.ID.HEADER,
-            label: eW(a)
+            label: eV(a)
         },
         {
-            section: eF.pNK.OVERVIEW,
+            section: eB.pNK.OVERVIEW,
             impressionName: i.ImpressionNames.GUILD_SETTINGS_OVERVIEW,
-            label: eV.Z.Messages.OVERVIEW,
-            ariaLabel: eV.Z.Messages.OVERVIEW,
-            element: eD.Z,
+            label: ek.Z.Messages.OVERVIEW,
+            ariaLabel: ek.Z.Messages.OVERVIEW,
+            element: eA.Z,
             notice: {
-                stores: [ed.Z],
-                element: eD.O
+                stores: [eo.Z],
+                element: eA.O
             }
         },
         {
-            section: eF.pNK.ROLES,
+            section: eB.pNK.ROLES,
             impressionName: i.ImpressionNames.GUILD_SETTINGS_ROLES,
-            label: eV.Z.Messages.ROLES,
-            element: eN.Z,
+            label: ek.Z.Messages.ROLES,
+            element: eT.Z,
             type: u.bT.MINIMAL,
-            ariaLabel: eV.Z.Messages.GUILD_SETTINGS_ROLE_ICON_SIDEBAR_NEW_ARIA_LABEL,
+            ariaLabel: ek.Z.Messages.GUILD_SETTINGS_ROLE_ICON_SIDEBAR_NEW_ARIA_LABEL,
             notice: {
-                stores: [ec.Z],
-                element: eN._
+                stores: [el.Z],
+                element: eT._
             },
+            predicate: () => I
+        },
+        {
+            section: eB.pNK.EMOJI,
+            impressionName: i.ImpressionNames.GUILD_SETTINGS_EMOJI,
+            label: ek.Z.Messages.EMOJI,
+            element: ep.ZP,
             predicate: () => E
         },
         {
-            section: eF.pNK.EMOJI,
-            impressionName: i.ImpressionNames.GUILD_SETTINGS_EMOJI,
-            label: eV.Z.Messages.EMOJI,
-            element: ef.ZP,
-            predicate: () => x
-        },
-        {
-            section: eF.pNK.STICKERS,
+            section: eB.pNK.STICKERS,
             impressionName: i.ImpressionNames.GUILD_SETTINGS_STICKERS,
-            label: eV.Z.Messages.GUILD_SETTINGS_STICKERS,
-            ariaLabel: eV.Z.Messages.GUILD_SETTINGS_STICKERS,
-            element: eU.Z,
-            predicate: () => x
+            label: ek.Z.Messages.GUILD_SETTINGS_STICKERS,
+            ariaLabel: ek.Z.Messages.GUILD_SETTINGS_STICKERS,
+            element: eZ.Z,
+            predicate: () => E
         },
         {
-            section: eF.pNK.SOUNDBOARD,
+            section: eB.pNK.SOUNDBOARD,
             impressionName: i.ImpressionNames.GUILD_SETTINGS_SOUNDBOARD,
-            label: eV.Z.Messages.GUILD_SETTINGS_SOUNDBOARD,
-            ariaLabel: eV.Z.Messages.GUILD_SETTINGS_SOUNDBOARD,
-            element: eb.Z,
-            predicate: () => x
+            label: ek.Z.Messages.GUILD_SETTINGS_SOUNDBOARD,
+            ariaLabel: ek.Z.Messages.GUILD_SETTINGS_SOUNDBOARD,
+            element: ej.Z,
+            predicate: () => E
         },
         {
-            section: eF.pNK.WIDGET,
+            section: eB.pNK.WIDGET,
             impressionName: i.ImpressionNames.GUILD_SETTINGS_WIDGET,
-            label: eV.Z.Messages.WIDGET,
-            element: ey.Z,
+            label: ek.Z.Messages.WIDGET,
+            element: eP.Z,
             predicate: () => d
         },
         {
-            section: eF.pNK.GUILD_TEMPLATES,
+            section: eB.pNK.GUILD_TEMPLATES,
             impressionName: i.ImpressionNames.GUILD_SETTINGS_TEMPLATE,
-            label: (0, s.jsx)(eP.Z, { showDirtyIndicator: w }),
-            ariaLabel: eV.Z.Messages.GUILD_TEMPLATES,
-            element: eG.ZP,
+            label: (0, s.jsx)(eU.Z, { showDirtyIndicator: F }),
+            ariaLabel: ek.Z.Messages.GUILD_TEMPLATES,
+            element: eb.ZP,
             notice: {
-                stores: [eG.Sf],
-                element: eG.Q5
+                stores: [eb.Sf],
+                element: eb.Q5
             },
             predicate: () => d
         },
         {
-            section: eF.pNK.VANITY_URL,
+            section: eB.pNK.VANITY_URL,
             impressionName: i.ImpressionNames.GUILD_SETTINGS_VANITY_URL,
-            label: eV.Z.Messages.VANITY_URL,
-            element: eB.Z,
+            label: ek.Z.Messages.VANITY_URL,
+            element: eG.Z,
             notice: {
-                stores: [eu.Z],
-                element: eB.T
+                stores: [ec.Z],
+                element: eG.T
             },
             predicate: () => r
         },
         {
             section: u.ID.DIVIDER,
-            predicate: () => d || f
+            predicate: () => d || x
         },
         {
             section: u.ID.HEADER,
-            label: eV.Z.Messages.APPS,
-            predicate: () => d || f
+            label: ek.Z.Messages.APPS,
+            predicate: () => d || x
         },
         {
-            section: eF.pNK.INTEGRATIONS,
+            section: eB.pNK.INTEGRATIONS,
             impressionName: i.ImpressionNames.GUILD_SETTINGS_INTEGRATION,
-            label: eV.Z.Messages.INTEGRATIONS,
-            ariaLabel: eV.Z.Messages.INTEGRATIONS,
-            element: eL.Z,
+            label: ek.Z.Messages.INTEGRATIONS,
+            ariaLabel: ek.Z.Messages.INTEGRATIONS,
+            element: eR.Z,
             notice: {
-                stores: [eo.Z, ed.Z],
-                element: eL.j
+                stores: [er.Z, eo.Z],
+                element: eR.j
             },
-            predicate: () => d || f
+            predicate: () => d || x
         },
         {
-            section: eF.pNK.APP_DIRECTORY,
-            label: eV.Z.Messages.APP_DIRECTORY,
-            ariaLabel: eV.Z.Messages.APP_DIRECTORY,
+            section: eB.pNK.APP_DIRECTORY,
+            label: ek.Z.Messages.APP_DIRECTORY,
+            ariaLabel: ek.Z.Messages.APP_DIRECTORY,
             onClick() {
                 (0, m.goToAppDirectory)({
                     guildId: a.id,
                     entrypoint: {
                         name: T.ApplicationDirectoryEntrypointNames.GUILD_SETTINGS,
-                        guildSettingsSection: en
+                        guildSettingsSection: Q
                     }
                 }),
                     (0, c.xf)();
@@ -737,74 +726,66 @@ function eK(e) {
         },
         {
             section: u.ID.HEADER,
-            label: eV.Z.Messages.MODERATION,
+            label: ek.Z.Messages.MODERATION,
             predicate: () => d
         },
         {
-            section: eF.pNK.SAFETY,
+            section: eB.pNK.SAFETY,
             impressionName: i.ImpressionNames.GUILD_SETTINGS_SAFETY,
-            label: eV.Z.Messages.SAFETY_SETUP,
-            ariaLabel: eV.Z.Messages.SAFETY_SETUP,
-            element: eS.Z,
+            label: ek.Z.Messages.SAFETY_SETUP,
+            ariaLabel: ek.Z.Messages.SAFETY_SETUP,
+            element: em.Z,
             newIndicatorDismissibleContentTypes: [l.z.COMMUNITY_GUILD_SETTINGS_SAFETY],
-            predicate: () => d && a.hasFeature(eF.oNc.COMMUNITY)
+            predicate: () => d && a.hasFeature(eB.oNc.COMMUNITY)
         },
         {
-            section: eF.pNK.MODERATION,
+            section: eB.pNK.MODERATION,
             impressionName: i.ImpressionNames.GUILD_SETTINGS_MODERATION,
-            label: eV.Z.Messages.SAFETY_SETUP,
-            element: ej.ZP,
-            predicate: () => d && !a.hasFeature(eF.oNc.COMMUNITY)
+            label: ek.Z.Messages.SAFETY_SETUP,
+            element: eD.ZP,
+            predicate: () => d && !a.hasFeature(eB.oNc.COMMUNITY)
         },
         {
-            section: eF.pNK.GUILD_AUTOMOD,
+            section: eB.pNK.GUILD_AUTOMOD,
             label: (0, s.jsx)('div', {
-                className: eY.landingPageTabLink,
-                children: eV.Z.Messages.GUILD_SETTINGS_AUTOMOD_TITLE
+                className: eH.landingPageTabLink,
+                children: ek.Z.Messages.GUILD_SETTINGS_AUTOMOD_TITLE
             }),
-            ariaLabel: eV.Z.Messages.GUILD_SETTINGS_AUTOMOD_TITLE,
-            element: A.Z,
+            ariaLabel: ek.Z.Messages.GUILD_SETTINGS_AUTOMOD_TITLE,
+            element: f.Z,
             newIndicatorDismissibleContentTypes: null,
-            predicate: () => !a.hasFeature(eF.oNc.COMMUNITY) && ((0, O.Nb)(a.id) || (0, O.ze)(a.id))
+            predicate: () => !a.hasFeature(eB.oNc.COMMUNITY) && ((0, L.Nb)(a.id) || (0, L.ze)(a.id))
         },
         {
-            section: eF.pNK.AUDIT_LOG,
+            section: eB.pNK.AUDIT_LOG,
             impressionName: i.ImpressionNames.GUILD_SETTINGS_AUDIT_LOG,
-            label: eV.Z.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG,
-            element: e_.Z,
+            label: ek.Z.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG,
+            element: ed.Z,
             type: u.bT.CUSTOM,
             predicate: () => _
         },
         {
-            section: eF.pNK.AUDIT_LOG_V2,
-            impressionName: i.ImpressionNames.GUILD_SETTINGS_AUDIT_LOG_V2,
-            label: eV.Z.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG,
-            element: L.Z,
-            type: u.bT.CUSTOM,
-            predicate: () => I && W
-        },
-        {
-            section: eF.pNK.BANS,
+            section: eB.pNK.BANS,
             impressionName: i.ImpressionNames.GUILD_SETTINGS_BANS,
-            label: eV.Z.Messages.BANS,
-            element: eg.Z,
-            predicate: () => M
+            label: ek.Z.Messages.BANS,
+            element: eS.Z,
+            predicate: () => O
         },
         {
             section: u.ID.DIVIDER,
-            predicate: () => d || j
+            predicate: () => d || D
         },
         {
             section: u.ID.HEADER,
-            label: eV.Z.Messages.COMMUNITY,
-            predicate: () => !ei && (d || j)
+            label: ek.Z.Messages.COMMUNITY,
+            predicate: () => !ee && (d || D)
         },
         {
-            section: eF.pNK.CLAN,
-            label: eV.Z.Messages.CLAN_SETTINGS,
-            ariaLabel: eV.Z.Messages.CLAN_SETTINGS,
+            section: eB.pNK.CLAN,
+            label: ek.Z.Messages.CLAN_SETTINGS,
+            ariaLabel: ek.Z.Messages.CLAN_SETTINGS,
             onClick() {
-                (0, Y.q4)(
+                (0, H.q4)(
                     (e) => {
                         let { closeLayer: t } = e;
                         return (0, s.jsx)(S.Z, {
@@ -812,171 +793,170 @@ function eK(e) {
                             guildId: a.id
                         });
                     },
-                    { layerKey: ek.q2 }
+                    { layerKey: ey.q2 }
                 ),
                     (0, c.xf)();
             },
-            predicate: () => null != ei && ei,
-            icon: null != eX ? (0, s.jsx)(h.KQ, { src: eX }) : null
+            predicate: () => null != ee && ee,
+            icon: null != ez ? (0, s.jsx)(g.KQ, { src: ez }) : null
         },
         {
-            section: eF.pNK.COMMUNITY,
-            impressionName: a.hasFeature(eF.oNc.COMMUNITY) ? i.ImpressionNames.GUILD_SETTINGS_COMMUNITY_OVERVIEW : i.ImpressionNames.GUILD_SETTINGS_ENABLE_COMMUNITY,
-            label: a.hasFeature(eF.oNc.COMMUNITY) ? eV.Z.Messages.OVERVIEW : eV.Z.Messages.GUILD_SETTINGS_COMMUNITY_ENABLE_COMMUNITY,
-            element: eC.Z,
-            ariaLabel: a.hasFeature(eF.oNc.COMMUNITY) ? eV.Z.Messages.OVERVIEW : eV.Z.Messages.GUILD_SETTINGS_COMMUNITY_ENABLE_COMMUNITY,
-            newIndicator: !a.hasFeature(eF.oNc.COMMUNITY) && null != V && V >= eH.U3 && H.Z.hasHotspot(ew.v.GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL),
+            section: eB.pNK.COMMUNITY,
+            impressionName: a.hasFeature(eB.oNc.COMMUNITY) ? i.ImpressionNames.GUILD_SETTINGS_COMMUNITY_OVERVIEW : i.ImpressionNames.GUILD_SETTINGS_ENABLE_COMMUNITY,
+            label: a.hasFeature(eB.oNc.COMMUNITY) ? ek.Z.Messages.OVERVIEW : ek.Z.Messages.GUILD_SETTINGS_COMMUNITY_ENABLE_COMMUNITY,
+            element: eg.Z,
+            ariaLabel: a.hasFeature(eB.oNc.COMMUNITY) ? ek.Z.Messages.OVERVIEW : ek.Z.Messages.GUILD_SETTINGS_COMMUNITY_ENABLE_COMMUNITY,
+            newIndicator: !a.hasFeature(eB.oNc.COMMUNITY) && null != k && k >= ew.U3 && w.Z.hasHotspot(eF.v.GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL),
             notice: {
-                stores: [ed.Z],
-                element: eC.X
+                stores: [eo.Z],
+                element: eg.X
             },
             predicate: () => d
         },
         {
-            section: eF.pNK.ONBOARDING,
-            label: eV.Z.Messages.ONBOARDING,
-            element: eM.Z,
-            ariaLabel: eV.Z.Messages.ONBOARDING,
-            newIndicatorDismissibleContentTypes: Q ? null : [l.z.COMMUNITY_ONBOARDING_NEW_BADGE],
+            section: eB.pNK.ONBOARDING,
+            label: ek.Z.Messages.ONBOARDING,
+            element: eO.Z,
+            ariaLabel: ek.Z.Messages.ONBOARDING,
+            newIndicatorDismissibleContentTypes: z ? null : [l.z.COMMUNITY_ONBOARDING_NEW_BADGE],
             notice: {
-                stores: [eI.Z],
-                element: em.Z
+                stores: [eu.Z],
+                element: eE.Z
             },
-            predicate: () => (0, v.wC)(a.id),
-            decoration: ez(a.id, q)
+            predicate: () => (0, M.wC)(a.id),
+            decoration: eY(a.id, Y)
         },
         {
-            section: eF.pNK.ANALYTICS,
+            section: eB.pNK.ANALYTICS,
             impressionName: i.ImpressionNames.GUILD_SETTINGS_ANALYTICS,
-            label: eV.Z.Messages.SERVER_INSIGHTS,
-            ariaLabel: eV.Z.Messages.SERVER_INSIGHTS,
-            element: eh.Z,
-            newIndicator: H.Z.hasHotspot(ew.v.GUILD_ANALYTICS_GUILD_SETTINGS_MENU),
-            newIndicatorDismissibleContentTypes: z ? [l.z.GUILD_INSIGHTS_ACCESS_RATE_NEW] : null,
-            predicate: () => j && a.hasFeature(eF.oNc.COMMUNITY)
+            label: ek.Z.Messages.SERVER_INSIGHTS,
+            ariaLabel: ek.Z.Messages.SERVER_INSIGHTS,
+            element: eN.Z,
+            newIndicator: w.Z.hasHotspot(eF.v.GUILD_ANALYTICS_GUILD_SETTINGS_MENU),
+            newIndicatorDismissibleContentTypes: V ? [l.z.GUILD_INSIGHTS_ACCESS_RATE_NEW] : null,
+            predicate: () => D && a.hasFeature(eB.oNc.COMMUNITY)
         },
         {
-            section: eF.pNK.DISCOVERY,
+            section: eB.pNK.DISCOVERY,
             impressionName: i.ImpressionNames.GUILD_SETTINGS_DISCOVERY,
-            label: eV.Z.Messages.DISCOVERY,
-            element: ep.Z,
+            label: ek.Z.Messages.DISCOVERY,
+            element: eC.Z,
             notice: {
-                stores: [ed.Z],
-                element: ep.s
+                stores: [eo.Z],
+                element: eC.s
             },
-            predicate: () => d && a.hasFeature(eF.oNc.COMMUNITY),
-            ariaLabel: a.hasFeature(eF.oNc.DISCOVERABLE) ? eV.Z.Messages.DISCOVERY : eV.Z.Messages.GUILD_SETTINGS_ENABLE_DISCOVERABLE
+            predicate: () => d && a.hasFeature(eB.oNc.COMMUNITY),
+            ariaLabel: a.hasFeature(eB.oNc.DISCOVERABLE) ? ek.Z.Messages.DISCOVERY : ek.Z.Messages.GUILD_SETTINGS_ENABLE_DISCOVERABLE
         },
         {
-            section: eF.pNK.DISCOVERY_LANDING_PAGE,
+            section: eB.pNK.DISCOVERY_LANDING_PAGE,
             impressionName: i.ImpressionNames.GUILD_SETTINGS_DISCOVERY_LANDING_PAGE,
             label: (0, s.jsxs)('div', {
-                className: eY.landingPageTabLink,
-                children: [eV.Z.Messages.DISCOVERY_LANDING_PAGE, ' ', (0, s.jsx)(R.Z, {})]
+                className: eH.landingPageTabLink,
+                children: [ek.Z.Messages.DISCOVERY_LANDING_PAGE, ' ', (0, s.jsx)(R.Z, {})]
             }),
-            ariaLabel: eV.Z.Messages.DISCOVERY_LANDING_PAGE,
-            element: eR.Z,
-            notice: {
-                stores: [ed.Z],
-                element: eR.J
-            },
-            type: u.bT.CUSTOM,
-            predicate: () => d && (a.hasFeature(eF.oNc.DISCOVERABLE) || !!(null == $ ? void 0 : $.isPublished))
-        },
-        {
-            section: eF.pNK.COMMUNITY_WELCOME,
-            impressionName: i.ImpressionNames.GUILD_SETTINGS_COMMUNITY_WELCOME,
-            label: eV.Z.Messages.GUILD_SETTINGS_PUBLIC_WELCOME,
-            ariaLabel: eV.Z.Messages.GUILD_SETTINGS_PUBLIC_WELCOME,
+            ariaLabel: ek.Z.Messages.DISCOVERY_LANDING_PAGE,
             element: ex.Z,
             notice: {
-                stores: [K.Z],
-                element: X.Z
+                stores: [eo.Z],
+                element: ex.J
             },
-            predicate: () => d && a.hasFeature(eF.oNc.COMMUNITY) && !J && !a.hasFeature(eF.oNc.GUILD_SERVER_GUIDE)
+            type: u.bT.CUSTOM,
+            predicate: () => d && (a.hasFeature(eB.oNc.DISCOVERABLE) || !!(null == X ? void 0 : X.isPublished))
+        },
+        {
+            section: eB.pNK.COMMUNITY_WELCOME,
+            impressionName: i.ImpressionNames.GUILD_SETTINGS_COMMUNITY_WELCOME,
+            label: ek.Z.Messages.GUILD_SETTINGS_PUBLIC_WELCOME,
+            ariaLabel: ek.Z.Messages.GUILD_SETTINGS_PUBLIC_WELCOME,
+            element: eh.Z,
+            notice: {
+                stores: [W.Z],
+                element: K.Z
+            },
+            predicate: () => d && a.hasFeature(eB.oNc.COMMUNITY) && !q && !a.hasFeature(eB.oNc.GUILD_SERVER_GUIDE)
         },
         {
             section: u.ID.DIVIDER,
-            predicate: eE
+            predicate: ea
         },
         {
             section: u.ID.HEADER,
-            label: eV.Z.Messages.MONETIZATION,
-            predicate: eE
+            label: ek.Z.Messages.MONETIZATION,
+            predicate: ea
         },
         {
-            ...eq,
-            section: eF.pNK.ROLE_SUBSCRIPTIONS,
-            element: y.Z,
+            ...eW,
+            section: eB.pNK.ROLE_SUBSCRIPTIONS,
+            element: P.Z,
             type: u.bT.CUSTOM,
-            predicate: eE,
-            newIndicatorDismissibleContentTypes: (0, B.sO)(a) ? [l.z.SERVER_SUBSCRIPTION_SETTINGS_NEW_BADGE_TIER_TEMPLATE] : null
+            predicate: ea,
+            newIndicatorDismissibleContentTypes: (0, G.sO)(a) ? [l.z.SERVER_SUBSCRIPTION_SETTINGS_NEW_BADGE_TIER_TEMPLATE] : null
         },
         {
-            section: eF.pNK.GUILD_PRODUCTS,
-            label: eV.Z.Messages.GUILD_PRODUCTS_TITLE,
-            ariaLabel: eV.Z.Messages.GUILD_PRODUCTS_TITLE,
-            element: U.Z,
-            predicate: () => eE() && (0, b.p)(a.id, 'guild_product_settings_predicate') && (0, G.sy)(a)
+            section: eB.pNK.GUILD_PRODUCTS,
+            label: ek.Z.Messages.GUILD_PRODUCTS_TITLE,
+            ariaLabel: ek.Z.Messages.GUILD_PRODUCTS_TITLE,
+            element: Z.Z,
+            predicate: () => ea() && (0, j.p)(a.id, 'guild_product_settings_predicate') && (0, b.sy)(a)
         },
         {
-            section: eF.pNK.ROLE_SUBSCRIPTIONS_STORE_PAGE,
+            section: eB.pNK.ROLE_SUBSCRIPTIONS_STORE_PAGE,
             impressionName: i.ImpressionNames.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_GUILD_SETTINGS,
             newIndicator: 2022 === new Date().getFullYear(),
-            label: eV.Z.Messages.GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_STORE_PAGE,
-            ariaLabel: eV.Z.Messages.GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_STORE_PAGE,
-            element: F.Z,
-            predicate: () => eE() && (0, G.sy)(a)
+            label: ek.Z.Messages.GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_STORE_PAGE,
+            ariaLabel: ek.Z.Messages.GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_STORE_PAGE,
+            element: B.Z,
+            predicate: () => ea() && (0, b.sy)(a)
         },
         { section: u.ID.DIVIDER },
         {
-            section: eF.pNK.GUILD_PREMIUM,
+            section: eB.pNK.GUILD_PREMIUM,
             impressionName: i.ImpressionNames.GUILD_SETTINGS_BOOST_STATUS,
-            label: eV.Z.Messages.GUILD_PREMIUM,
-            ariaLabel: eV.Z.Messages.GUILD_PREMIUM,
-            element: ev.Z,
-            className: eY.serverBoostTabItem,
-            icon: (0, s.jsx)(eZ.Z, { className: eY.icon })
+            label: ek.Z.Messages.GUILD_PREMIUM,
+            ariaLabel: ek.Z.Messages.GUILD_PREMIUM,
+            element: eM.Z,
+            className: eH.serverBoostTabItem,
+            icon: (0, s.jsx)(ev.Z, { className: eH.icon })
         },
         { section: u.ID.DIVIDER },
         {
             section: u.ID.HEADER,
-            label: eV.Z.Messages.USER_MANAGEMENT
+            label: ek.Z.Messages.USER_MANAGEMENT
         },
         {
-            section: eF.pNK.MEMBERS,
+            section: eB.pNK.MEMBERS,
             impressionName: i.ImpressionNames.GUILD_SETTINGS_MEMBERS,
-            label: (0, s.jsx)(eA.$, {}),
-            ariaLabel: eV.Z.Messages.MEMBERS,
-            element: eA.Z,
+            label: (0, s.jsx)(ef.$, {}),
+            ariaLabel: ek.Z.Messages.MEMBERS,
+            element: ef.Z,
             type: u.bT.CUSTOM,
-            predicate: () => D
+            predicate: () => A
         },
         {
-            section: eF.pNK.INSTANT_INVITES,
+            section: eB.pNK.INSTANT_INVITES,
             impressionName: i.ImpressionNames.GUILD_SETTINGS_INVITES,
-            label: eV.Z.Messages.INVITES,
-            element: eO.Z,
+            label: ek.Z.Messages.INVITES,
+            element: eL.Z,
             type: u.bT.CUSTOM,
             predicate: () => d
         },
         {
             section: u.ID.DIVIDER,
-            predicate: () => k
+            predicate: () => y
         },
-        eQ
+        eK
     ];
 }
-function eq(e, t) {
-    let n = $.Z.getGuildPermissionProps(e);
-    return eK({
+function ez(e, t) {
+    let n = Q.Z.getGuildPermissionProps(e);
+    return eW({
         channels: t,
         showDirtyGuildTemplateIndicator: !1,
         ...n,
-        isGuildAuditLogV2Enabled: !1,
         showAccessRate: !1,
-        canAccessClanSettings: n.isGuildAdmin && e.hasFeature(eF.oNc.CLAN),
-        welcomeScreenEmpty: q.Z.isEmpty(e.id)
+        canAccessClanSettings: n.isGuildAdmin && e.hasFeature(eB.oNc.CLAN),
+        welcomeScreenEmpty: z.Z.isEmpty(e.id)
     })
         .filter((e) => {
             let { section: t } = e;
@@ -984,17 +964,17 @@ function eq(e, t) {
         })
         .filter((e) => null == e.predicate || e.predicate());
 }
-function eX(e) {
+function eK(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
         n = arguments.length > 2 ? arguments[2] : void 0;
-    I.ZP.trackWithMetadata(eF.rMx.SETTINGS_PANE_VIEWED, {
+    I.ZP.trackWithMetadata(eB.rMx.SETTINGS_PANE_VIEWED, {
         settings_type: 'guild',
         origin_pane: t,
         destination_pane: e,
         location: n
     });
 }
-let eQ = {
+let eq = {
     canManageGuild: !1,
     canManageChannels: !1,
     canManageRoles: !1,
@@ -1002,7 +982,6 @@ let eQ = {
     canManageNicknames: !1,
     canManageGuildExpressions: !1,
     canViewAuditLog: !1,
-    canViewAuditLogV2: !1,
     canManageWebhooks: !1,
     canAccessMembersPage: !1,
     canViewGuildAnalytics: !1,
@@ -1010,137 +989,133 @@ let eQ = {
     isOwnerWithRequiredMfaLevel: !1,
     isGuildAdmin: !1
 };
-class eJ extends a.PureComponent {
+class eX extends a.PureComponent {
     componentDidMount() {
-        eX(this.props.section, null, this.props.analyticsLocation);
+        eK(this.props.section, null, this.props.analyticsLocation);
     }
     componentWillUnmount() {
-        ea.Z.close();
+        en.Z.close();
     }
     componentDidUpdate(e) {
         let { section: t } = e,
-            { section: n, isGuildAdmin: s, canManageGuild: a, canManageRoles: i, canManageBans: r, canManageNicknames: l, canManageGuildExpressions: o, canViewAuditLog: d, canViewAuditLogV2: u, canManageWebhooks: _, canAccessMembersPage: I, canViewGuildAnalytics: E } = this.props;
-        n !== t && eX(n, t), ((!s && !a && !i && !r && !l && !o && !d && !u && !I && !_) || (!d && n === eF.pNK.AUDIT_LOG) || (!u && n === eF.pNK.AUDIT_LOG_V2) || (!i && n === eF.pNK.ROLES) || (!o && n === eF.pNK.EMOJI) || (!o && n === eF.pNK.STICKERS) || (!o && n === eF.pNK.SOUNDBOARD) || (!r && n === eF.pNK.BANS) || (!E && n === eF.pNK.ANALYTICS) || (!I && n === eF.pNK.MEMBERS)) && (0, c.xf)();
+            { section: n, isGuildAdmin: s, canManageGuild: a, canManageRoles: i, canManageBans: r, canManageNicknames: l, canManageGuildExpressions: o, canViewAuditLog: d, canManageWebhooks: u, canAccessMembersPage: _, canViewGuildAnalytics: I } = this.props;
+        n !== t && eK(n, t), ((!s && !a && !i && !r && !l && !o && !d && !_ && !u) || (!d && n === eB.pNK.AUDIT_LOG) || (!i && n === eB.pNK.ROLES) || (!o && n === eB.pNK.EMOJI) || (!o && n === eB.pNK.STICKERS) || (!o && n === eB.pNK.SOUNDBOARD) || (!r && n === eB.pNK.BANS) || (!I && n === eB.pNK.ANALYTICS) || (!_ && n === eB.pNK.MEMBERS)) && (0, c.xf)();
     }
     render() {
         var e, t;
-        let { theme: n, sidebarTheme: a, section: i, guild: r, channels: l, isGuildAdmin: o, canManageGuild: u, canViewAuditLog: _, canViewAuditLogV2: I, canManageRoles: E, canManageGuildExpressions: T, canManageWebhooks: m, canManageBans: N, canAccessMembersPage: S, canViewGuildAnalytics: h, isOwner: g, isOwnerWithRequiredMfaLevel: C, showDirtyGuildTemplateIndicator: x, memberCount: p, isGuildAuditLogV2Enabled: R, showAccessRate: f, onboardingStep: L, onboardingEnabled: O, welcomeScreenEmpty: A, guildMetadata: M, canAccessClanSettings: D } = this.props;
+        let { theme: n, sidebarTheme: a, section: i, guild: r, channels: l, isGuildAdmin: o, canManageGuild: u, canViewAuditLog: _, canManageRoles: I, canManageGuildExpressions: E, canManageWebhooks: T, canManageBans: m, canAccessMembersPage: N, canViewGuildAnalytics: S, isOwner: g, isOwnerWithRequiredMfaLevel: h, showDirtyGuildTemplateIndicator: C, memberCount: x, showAccessRate: p, onboardingStep: R, onboardingEnabled: L, welcomeScreenEmpty: f, guildMetadata: O, canAccessClanSettings: A } = this.props;
         if (null == r) return null;
-        let v = eK({
+        let M = eW({
                 guild: r,
                 channels: l,
                 isGuildAdmin: o,
                 canManageGuild: u,
                 canViewAuditLog: _,
-                canViewAuditLogV2: I,
-                canManageRoles: E,
-                canManageGuildExpressions: T,
-                canManageWebhooks: m,
-                canManageBans: N,
-                canAccessMembersPage: S,
-                canViewGuildAnalytics: h,
+                canManageRoles: I,
+                canManageGuildExpressions: E,
+                canManageWebhooks: T,
+                canManageBans: m,
+                canAccessMembersPage: N,
+                canViewGuildAnalytics: S,
                 isOwner: g,
-                isOwnerWithRequiredMfaLevel: C,
-                showDirtyGuildTemplateIndicator: x,
-                memberCount: p,
-                isGuildAuditLogV2Enabled: R,
-                showAccessRate: f,
-                onboardingStep: L,
-                onboardingEnabled: O,
-                welcomeScreenEmpty: A,
-                guildMetadata: M,
+                isOwnerWithRequiredMfaLevel: h,
+                showDirtyGuildTemplateIndicator: C,
+                memberCount: x,
+                showAccessRate: p,
+                onboardingStep: R,
+                onboardingEnabled: L,
+                welcomeScreenEmpty: f,
+                guildMetadata: O,
                 section: i,
-                canAccessClanSettings: D
+                canAccessClanSettings: A
             }),
-            j = (null === (t = v.find((e) => e.section === i)) || void 0 === t ? void 0 : null === (e = t.predicate) || void 0 === e ? void 0 : e.call(t)) !== !1;
+            D = (null === (t = M.find((e) => e.section === i)) || void 0 === t ? void 0 : null === (e = t.predicate) || void 0 === e ? void 0 : e.call(t)) !== !1;
         return (0, s.jsxs)('div', {
             children: [
                 (0, s.jsx)(d.ZP, {
                     theme: n,
                     sidebarTheme: a,
-                    section: j && null != i ? i : eF.pNK.OVERVIEW,
-                    onSetSection: ea.Z.setSection,
+                    section: D && null != i ? i : eB.pNK.OVERVIEW,
+                    onSetSection: en.Z.setSection,
                     onClose: c.xf,
-                    title: eW(r),
-                    sections: v
+                    title: eV(r),
+                    sections: M
                 }),
-                (0, s.jsx)(V.d, { guildId: r.id })
+                (0, s.jsx)(k.d, { guildId: r.id })
             ]
         });
     }
 }
-function e$() {
-    var e, t;
-    let { guild: n, section: i, analyticsLocation: l, guildMetadata: o, isGuildMetadataLoaded: c } = (0, r.cj)([ed.Z], () => ed.Z.getProps()),
-        { analyticsLocations: d } = (0, E.ZP)(_.Z.GUILD_SETTINGS),
-        u = (0, r.e7)([W.Z], () => W.Z.theme),
-        I = (0, r.e7)([W.Z], () => (W.Z.darkSidebar ? eF.BRd.DARK : void 0)),
-        T = (0, r.e7)([Q.ZP], () => (null != n ? Q.ZP.getChannels(n.id).SELECTABLE : null), [n]),
-        m = (0, r.cj)([$.Z], () => (null != n ? $.Z.getGuildPermissionProps(n) : eQ)),
-        N = null == n ? void 0 : n.id,
-        S = (0, r.e7)([$.Z], () => null != n && $.Z.canAccessGuildSettings(n)),
-        h = null != n && (0, en.Fv)(n.id),
-        g = h || S,
-        C = h || m.canViewGuildAnalytics,
-        { shouldFetchMemberInsights: p, hasAccessRate: R } = (0, r.cj)([er.Z], () => ({
-            shouldFetchMemberInsights: null != n && er.Z.shouldFetchMemberInsights(n.id),
-            hasAccessRate: null != n && er.Z.getMemberInsights(n.id).hasAccessRate
+function eQ() {
+    var e;
+    let { guild: t, section: n, analyticsLocation: i, guildMetadata: l, isGuildMetadataLoaded: o } = (0, r.cj)([eo.Z], () => eo.Z.getProps()),
+        { analyticsLocations: c } = (0, E.ZP)(_.Z.GUILD_SETTINGS),
+        d = (0, r.e7)([V.Z], () => V.Z.theme),
+        u = (0, r.e7)([V.Z], () => (V.Z.darkSidebar ? eB.BRd.DARK : void 0)),
+        I = (0, r.e7)([q.ZP], () => (null != t ? q.ZP.getChannels(t.id).SELECTABLE : null), [t]),
+        T = (0, r.cj)([Q.Z], () => (null != t ? Q.Z.getGuildPermissionProps(t) : eq)),
+        m = null == t ? void 0 : t.id,
+        N = (0, r.e7)([Q.Z], () => null != t && Q.Z.canAccessGuildSettings(t)),
+        S = null != t && (0, ee.Fv)(t.id),
+        g = S || N,
+        h = S || T.canViewGuildAnalytics,
+        { shouldFetchMemberInsights: C, hasAccessRate: p } = (0, r.cj)([ea.Z], () => ({
+            shouldFetchMemberInsights: null != t && ea.Z.shouldFetchMemberInsights(t.id),
+            hasAccessRate: null != t && ea.Z.getMemberInsights(t.id).hasAccessRate
         }));
     a.useEffect(() => {
-        !c && null != N && (0, x.aC)(N);
-    }, [c, N]),
+        !o && null != m && (0, x.aC)(m);
+    }, [o, m]),
         a.useEffect(() => {
-            g && C && p && null != N && (0, ei.r2)(N);
-        }, [g, C, p, N]);
-    let L = null !== (e = null == n ? void 0 : n.hasFeature(eF.oNc.COMMUNITY)) && void 0 !== e && e;
+            g && h && C && null != m && (0, es.r2)(m);
+        }, [g, h, C, m]);
+    let R = null !== (e = null == t ? void 0 : t.hasFeature(eB.oNc.COMMUNITY)) && void 0 !== e && e;
     a.useEffect(() => {
-        null != N && L && ((0, M.eM)(N), (0, z.RM)(N));
-    }, [N, L]);
-    let { homeSettingsEnabled: O } = (0, Z.kZ)(null != N ? N : eF.lds);
+        null != m && R && ((0, O.eM)(m), (0, Y.RM)(m));
+    }, [m, R]);
+    let { homeSettingsEnabled: L } = (0, v.kZ)(null != m ? m : eB.lds);
     a.useEffect(() => {
-        null != N && O && (0, j.cP)(N);
-    }, [O, N]);
-    let { showAccessRate: A } = (0, en.eA)(null == n ? void 0 : n.id, !R || !C || !g),
-        v = m.isGuildAdmin && (null == n ? void 0 : n.hasFeature(eF.oNc.CLAN)),
-        b = (0, r.e7)(
-            [w.Z],
+        null != m && L && (0, D.cP)(m);
+    }, [L, m]);
+    let { showAccessRate: f } = (0, ee.eA)(null == t ? void 0 : t.id, !p || !h || !g),
+        M = T.isGuildAdmin && (null == t ? void 0 : t.hasFeature(eB.oNc.CLAN)),
+        j = (0, r.e7)(
+            [F.Z],
             () => {
                 var e;
-                return (null == n ? void 0 : n.id) != null && (null === (e = w.Z.getForGuild(n.id)) || void 0 === e ? void 0 : e.isDirty) === !0;
+                return (null == t ? void 0 : t.id) != null && (null === (e = F.Z.getForGuild(t.id)) || void 0 === e ? void 0 : e.isDirty) === !0;
             },
-            [n]
+            [t]
         ),
-        U = (0, r.e7)([J.Z], () => J.Z.getMemberCount(null == n ? void 0 : n.id), [n]),
-        G = (0, f.pU)(null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : eF.lds);
+        Z = (0, r.e7)([X.Z], () => X.Z.getMemberCount(null == t ? void 0 : t.id), [t]);
     a.useEffect(() => {
-        null != N && m.canManageGuild && k.Z.loadTemplatesForGuild(N);
-    }, [N, m.canManageGuild]),
+        null != m && T.canManageGuild && y.Z.loadTemplatesForGuild(m);
+    }, [m, T.canManageGuild]),
         a.useEffect(() => {
-            !g && ea.Z.close();
+            !g && en.Z.close();
         }, [g]);
-    let P = (0, r.e7)([eI.Z], () => eI.Z.getCurrentPage()),
-        B = (0, r.e7)([D.Z], () => null != N && D.Z.getEnabled(N)),
-        y = (0, r.e7)([q.Z], () => null != N && q.Z.isEmpty(N));
+    let b = (0, r.e7)([eu.Z], () => eu.Z.getCurrentPage()),
+        U = (0, r.e7)([A.Z], () => null != m && A.Z.getEnabled(m)),
+        G = (0, r.e7)([z.Z], () => null != m && z.Z.isEmpty(m));
     return (0, s.jsx)(E.Gt, {
-        value: d,
-        children: (0, s.jsx)(eJ, {
-            guild: n,
-            section: i,
-            theme: u,
-            sidebarTheme: I,
-            channels: T,
-            showDirtyGuildTemplateIndicator: b,
-            analyticsLocation: l,
-            memberCount: U,
-            isGuildAuditLogV2Enabled: G,
-            ...m,
-            canViewGuildAnalytics: C,
-            showAccessRate: A,
-            onboardingStep: P,
-            onboardingEnabled: B,
-            welcomeScreenEmpty: y,
-            guildMetadata: o,
-            canAccessClanSettings: v
+        value: c,
+        children: (0, s.jsx)(eX, {
+            guild: t,
+            section: n,
+            theme: d,
+            sidebarTheme: u,
+            channels: I,
+            showDirtyGuildTemplateIndicator: j,
+            analyticsLocation: i,
+            memberCount: Z,
+            ...T,
+            canViewGuildAnalytics: h,
+            showAccessRate: f,
+            onboardingStep: b,
+            onboardingEnabled: U,
+            welcomeScreenEmpty: G,
+            guildMetadata: l,
+            canAccessClanSettings: M
         })
     });
 }
