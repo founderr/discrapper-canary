@@ -21,14 +21,14 @@ function f(e) {
     let { channelId: t, guildId: n, userId: f, containerDimensions: E } = e,
         g = (0, l.e7)([o.Z], () => o.Z.useReducedMotion),
         [C, I] = s.useState([]),
-        x = C.length < 50;
+        T = C.length < 50;
     s.useEffect(() => {
         function e(e) {
             var i;
             let { channelId: s, userId: l, emoji: r, animationType: o, animationId: m } = e;
             if ((null != f && f !== l) || (u.Z.getEnabled() && (0, d.Z)(null !== (i = null == r ? void 0 : r.name) && void 0 !== i ? i : ''))) return;
             let _ = null != r && null != o && null != m;
-            if (s === t && !g && x && _) {
+            if (s === t && !g && T && _) {
                 let e = (0, h._r)(r),
                     i = null != r.id && !r.animated,
                     s = {
@@ -52,8 +52,8 @@ function f(e) {
                 r.Z.unsubscribe('VOICE_CHANNEL_EFFECT_SEND', e);
             }
         );
-    }, [t, n, f, g, x]);
-    let T = s.useCallback((e) => {
+    }, [t, n, f, g, T]);
+    let x = s.useCallback((e) => {
         I((t) => {
             let n = [...t],
                 i = n.findIndex((t) => t.id === e);
@@ -73,7 +73,7 @@ function f(e) {
                           {
                               containerDimensions: E,
                               effect: e,
-                              onComplete: T
+                              onComplete: x
                           },
                           e.id
                       )

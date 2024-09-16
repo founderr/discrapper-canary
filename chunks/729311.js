@@ -23,14 +23,14 @@ var s = n(735250),
     m = n(958832),
     N = n(324067),
     S = n(984933),
-    h = n(259580),
-    g = n(999382),
+    g = n(259580),
+    h = n(999382),
     C = n(743475),
     x = n(889369),
     p = n(570961),
     R = n(208665),
-    f = n(868814),
-    L = n(974513),
+    L = n(868814),
+    f = n(974513),
     O = n(2348),
     A = n(353890),
     M = n(716130),
@@ -40,10 +40,10 @@ function j(e) {
     let { guild: t } = e,
         i = (0, l.e7)([_.Z], () => _.Z.getEnabled(t.id)),
         r = (0, l.e7)([m.Z], () => m.Z.hasFetched(t.id)),
-        c = (0, f.Z)(t),
+        c = (0, L.Z)(t),
         N = (0, l.e7)([x.Z], () => x.Z.editedDefaultChannelIds),
         S = c.filter((e) => !N.has(e.id)),
-        [h, g] = a.useState(!1);
+        [g, h] = a.useState(!1);
     a.useEffect(() => {
         !r && !i && (0, T.S)(t.id);
     }, [t.id, r, i]);
@@ -58,7 +58,7 @@ function j(e) {
                 });
         });
     };
-    return h || 0 === S.length
+    return g || 0 === S.length
         ? null
         : (0, s.jsxs)('div', {
               className: v.recommendations,
@@ -78,7 +78,7 @@ function j(e) {
                           }),
                           (0, s.jsxs)(o.Clickable, {
                               className: v.dismissAll,
-                              onClick: () => g(!0),
+                              onClick: () => h(!0),
                               children: [
                                   (0, s.jsx)(o.CheckmarkLargeIcon, {
                                       size: 'xxs',
@@ -178,7 +178,7 @@ function j(e) {
 }
 function Z(e) {
     let { saveOnClose: t = !1 } = e,
-        n = (0, l.e7)([g.Z], () => g.Z.getGuild()),
+        n = (0, l.e7)([h.Z], () => h.Z.getGuild()),
         i = (0, l.e7)([_.Z], () => _.Z.isLoading()),
         c = (0, l.e7)([S.ZP], () => S.ZP.getChannels(null == n ? void 0 : n.id)),
         d = (0, l.e7)([N.Z], () => N.Z.getCategories(null == n ? void 0 : n.id)),
@@ -209,8 +209,8 @@ function Z(e) {
                             (0, s.jsx)(o.Clickable, {
                                 className: v.collapseButton,
                                 onClick: () => T((e) => !e),
-                                children: (0, s.jsx)(h.Z, {
-                                    direction: E ? h.Z.Directions.DOWN : h.Z.Directions.UP,
+                                children: (0, s.jsx)(g.Z, {
+                                    direction: E ? g.Z.Directions.DOWN : g.Z.Directions.UP,
                                     height: 16,
                                     width: 16
                                 })
@@ -225,7 +225,7 @@ function Z(e) {
                                 color: 'header-secondary',
                                 children: D.Z.Messages.GUILD_SETTINGS_DEFAULT_CHANNELS_SUBHEADER
                             }),
-                            (0, s.jsx)(L.Wu, {
+                            (0, s.jsx)(f.Wu, {
                                 className: v.advancedModeToggle,
                                 guildId: n.id
                             }),
@@ -282,7 +282,7 @@ function Z(e) {
             });
 }
 function b() {
-    let e = (0, l.e7)([g.Z], () => g.Z.getProps().guild),
+    let e = (0, l.e7)([h.Z], () => h.Z.getProps().guild),
         t = (0, l.e7)([x.Z], () => x.Z.submitting),
         n = (0, l.e7)([R.Z], () => R.Z.advancedMode);
     return null == e

@@ -18,10 +18,10 @@ var s = n(120356),
     I = n(703656),
     m = n(592125),
     T = n(430824),
-    N = n(594174),
-    h = n(938475),
-    C = n(5192),
-    f = n(981631),
+    h = n(594174),
+    N = n(938475),
+    f = n(5192),
+    C = n(981631),
     p = n(689938),
     g = n(64182);
 function S(e) {
@@ -53,13 +53,13 @@ function S(e) {
                     : S.rawValue,
         b = (0, r.e7)([T.Z], () => T.Z.getGuild(P)),
         j = (0, r.e7)([m.Z], () => m.Z.getChannel(D)),
-        U = (0, r.e7)([N.default], () => N.default.getCurrentUser()),
+        U = (0, r.e7)([h.default], () => h.default.getCurrentUser()),
         y = (0, r.e7)([], () => L.author.id === (null == U ? void 0 : U.id)),
         B = null === (O = Z.recipients) || void 0 === O ? void 0 : O.find((e) => e !== L.author.id),
-        k = (0, r.e7)([N.default], () => (null != B ? N.default.getUser(B) : null)),
+        k = (0, r.e7)([h.default], () => (null != B ? h.default.getUser(B) : null)),
         F = (0, d.ZP)(L),
-        G = (0, C._T)(Z.getGuildId(), Z.id, k),
-        w = (0, r.Wu)([h.ZP], () => (null != j ? h.ZP.getVoiceStatesForChannel(j) : []), [j]),
+        G = (0, f._T)(Z.getGuildId(), Z.id, k),
+        w = (0, r.Wu)([N.ZP], () => (null != j ? N.ZP.getVoiceStatesForChannel(j) : []), [j]),
         V = w.some((e) => e.user.id === (null == U ? void 0 : U.id)),
         H =
             null === (v = L.embeds[0]) || void 0 === v
@@ -74,11 +74,11 @@ function S(e) {
                     ? void 0
                     : x.rawValue,
         Y = null != H ? H.split(',') : [],
-        W = (0, r.Wu)([N.default], () => Y.map((e) => N.default.getUser(e)).filter(Boolean)),
-        z = y && null != k ? p.Z.Messages.WAVED_AT_USER.format({ username: G }) : p.Z.Messages.WAVED_AT_YOU.format({ username: F.nick }),
-        K = null != b && null != j,
+        W = (0, r.Wu)([h.default], () => Y.map((e) => h.default.getUser(e)).filter(Boolean)),
+        K = y && null != k ? p.Z.Messages.WAVED_AT_USER.format({ username: G }) : p.Z.Messages.WAVED_AT_YOU.format({ username: F.nick }),
+        z = null != b && null != j,
         Q = null;
-    (Q = K ? (y || V ? p.Z.Messages.YOU_ARE_IN_CHANNEL.format({ channelHook: (e, t) => (0, i.jsx)(_.Z, { channel: null != j ? j : void 0 }, t) }) : p.Z.Messages.THEY_ARE_IN_CHANNEL.format({ channelHook: (e, t) => (0, i.jsx)(_.Z, { channel: null != j ? j : void 0 }, t) })) : p.Z.Messages.CANNOT_ACCESS_HANGOUT), 0 === w.length && (Q = y ? p.Z.Messages.HANGOUT_OVER_SENDER : p.Z.Messages.HANGOUT_OVER_RECEIVER);
+    (Q = z ? (y || V ? p.Z.Messages.YOU_ARE_IN_CHANNEL.format({ channelHook: (e, t) => (0, i.jsx)(_.Z, { channel: null != j ? j : void 0 }, t) }) : p.Z.Messages.THEY_ARE_IN_CHANNEL.format({ channelHook: (e, t) => (0, i.jsx)(_.Z, { channel: null != j ? j : void 0 }, t) })) : p.Z.Messages.CANNOT_ACCESS_HANGOUT), 0 === w.length && (Q = y ? p.Z.Messages.HANGOUT_OVER_SENDER : p.Z.Messages.HANGOUT_OVER_RECEIVER);
     let q = y ? p.Z.Messages.WAVE_AGAIN : p.Z.Messages.WAVE_BACK;
     return (0, i.jsxs)('div', {
         children: [
@@ -88,7 +88,7 @@ function S(e) {
                     (0, i.jsx)(l.Text, {
                         variant: 'text-md/semibold',
                         color: 'header-primary',
-                        children: z
+                        children: K
                     }),
                     (0, i.jsx)(l.Text, {
                         variant: 'text-sm/normal',
@@ -130,11 +130,11 @@ function S(e) {
                     (0, i.jsxs)(l.Button, {
                         color: l.Button.Colors.BRAND,
                         onClick: () => {
-                            null != D && null != P && ((0, I.uL)(f.Z5c.CHANNEL(P, D)), c.default.selectVoiceChannel(D));
+                            null != D && null != P && ((0, I.uL)(C.Z5c.CHANNEL(P, D)), c.default.selectVoiceChannel(D));
                         },
                         className: g.button,
                         innerClassName: g.buttonInner,
-                        disabled: V || !K,
+                        disabled: V || !z,
                         children: [
                             (0, i.jsx)(l.VoiceNormalIcon, {
                                 size: 'md',

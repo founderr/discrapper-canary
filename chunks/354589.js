@@ -37,7 +37,7 @@ n.default = (0, o.Z)(
     (0, s.Z)(
         function (e) {
             var n;
-            let { user: t, channel: s, context: o, showChatItems: u = !0, showMediaItems: D = !1, showChannelCallItems: U = !1, showModalItems: j = !0, onSelect: H, onHeightUpdate: L } = e,
+            let { user: t, channel: s, context: o, showChatItems: u = !0, showMediaItems: D = !1, showChannelCallItems: U = !1, showModalItems: j = !0, onSelect: L, onHeightUpdate: H } = e,
                 F = (0, y.Z)({
                     userId: t.id,
                     guildId: null
@@ -83,7 +83,7 @@ n.default = (0, o.Z)(
                     commandTargetId: t.id,
                     channel: s,
                     guildId: void 0,
-                    onHeightUpdate: L
+                    onHeightUpdate: H
                 }),
                 el = (0, f.Z)(t, s),
                 eu = t.isNonUserBot(),
@@ -93,7 +93,7 @@ n.default = (0, o.Z)(
                 navId: 'user-context',
                 onClose: a.Zy,
                 'aria-label': b.Z.Messages.USER_ACTIONS_MENU_LABEL,
-                onSelect: H,
+                onSelect: L,
                 children: [
                     !eu &&
                         (0, i.jsxs)(i.Fragment, {

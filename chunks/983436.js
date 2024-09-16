@@ -18,22 +18,22 @@ var i = n(735250),
 function m(e) {
     var t;
     let { guild: n, channel: m, messageData: T } = e,
-        N = u.Z.getGuildId(),
-        h = c.Z.getChannelId(N),
-        C = s.useCallback(() => {
+        h = u.Z.getGuildId(),
+        N = c.Z.getChannelId(h),
+        f = s.useCallback(() => {
             var e;
             d.default.track(_.rMx.CHANNEL_LINK_PREVIEW_JOINED, {
                 author_id: null === (e = T.author) || void 0 === e ? void 0 : e.id,
                 link_guild_id: n.id,
                 link_channel_id: m.id,
                 link_channel_type: m.type,
-                guild_id: N,
-                channel_id: h
+                guild_id: h,
+                channel_id: N
             }),
                 (0, r.K)(n.id, m.id),
                 a.default.selectVoiceChannel(m.id);
-        }, [null === (t = T.author) || void 0 === t ? void 0 : t.id, n.id, m.id, m.type, N, h]),
-        f = (0, i.jsx)(o.Z.Channel, { channel: m });
+        }, [null === (t = T.author) || void 0 === t ? void 0 : t.id, n.id, m.id, m.type, h, N]),
+        C = (0, i.jsx)(o.Z.Channel, { channel: m });
     return (0, i.jsx)(o.Z, {
         children: (0, i.jsxs)(o.Z.Body, {
             children: [
@@ -42,8 +42,8 @@ function m(e) {
                     children: [
                         (0, i.jsx)(o.Z.Icon, { guild: n }),
                         (0, i.jsx)(o.Z.Info, {
-                            title: f,
-                            onClick: C,
+                            title: C,
+                            onClick: f,
                             children: (0, i.jsxs)('span', {
                                 className: I.infoTitle,
                                 children: [
@@ -61,7 +61,7 @@ function m(e) {
                     ]
                 }),
                 (0, i.jsx)(o.Z.Button, {
-                    onClick: C,
+                    onClick: f,
                     color: o.Z.Button.Colors.GREEN,
                     children: m.isGuildStageVoice() ? E.Z.Messages.STAGE_CHANNEL_JOIN : E.Z.Messages.JOIN_VOICE
                 })

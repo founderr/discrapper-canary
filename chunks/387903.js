@@ -23,13 +23,13 @@ var i,
     g = n(686546),
     C = n(111028),
     I = n(925329),
-    x = n(810568),
-    T = n(168524),
-    v = n(565138),
-    S = n(833858),
+    T = n(810568),
+    x = n(168524),
+    S = n(565138),
+    v = n(833858),
     N = n(223135),
-    Z = n(707409),
-    A = n(769654),
+    A = n(707409),
+    Z = n(769654),
     M = n(424678),
     b = n(750154),
     R = n(768581),
@@ -39,8 +39,8 @@ var i,
     O = n(122810),
     y = n(833664),
     D = n(503438),
-    k = n(802856),
-    U = n(420660),
+    U = n(802856),
+    k = n(420660),
     w = n(39628),
     B = n(701488),
     H = n(981631),
@@ -106,7 +106,7 @@ class q extends (s = r.PureComponent) {
         return (0, j.l)(V, e, this.props.type, t);
     }
     isStreamerOnTypeActivityFeed() {
-        return (0, U.Z)(this.activity) && 'ActivityFeed' === this.props.type;
+        return (0, k.Z)(this.activity) && 'ActivityFeed' === this.props.type;
     }
     renderHeader(e) {
         let t;
@@ -175,7 +175,7 @@ class q extends (s = r.PureComponent) {
         let { type: o } = this.props,
             { assets: u, application_id: d } = e;
         if (null == u || (null == u.large_image && null == u.small_image)) return null;
-        (0, U.Z)(e) && (s = W[o]);
+        (0, k.Z)(e) && (s = W[o]);
         let h = (0, D.Z)(e),
             p =
                 null != u.large_image
@@ -301,7 +301,7 @@ class q extends (s = r.PureComponent) {
             o = e.name,
             u = o;
         return (a === H.IIU.HANG_STATUS
-            ? (u = (0, S.O8)(e))
+            ? (u = (0, v.O8)(e))
             : r && null != n
               ? (u = (0, l.jsx)('span', {
                     className: V.activityName,
@@ -338,7 +338,7 @@ class q extends (s = r.PureComponent) {
                 (t =
                     null != s
                         ? () => {
-                              (0, A.X)(s.id);
+                              (0, Z.X)(s.id);
                           }
                         : void 0);
         else if (!(0, y.Z)(e)) {
@@ -364,7 +364,7 @@ class q extends (s = r.PureComponent) {
         }
         return null == a || 0 === a.length
             ? null
-            : ((0, U.Z)(e) && (a = G.Z.Messages.STREAMER_PLAYING.format({ game: a })), null != t)
+            : ((0, k.Z)(e) && (a = G.Z.Messages.STREAMER_PLAYING.format({ game: a })), null != t)
               ? (0, l.jsx)(m.Clickable, {
                     onClick: t,
                     title: null != r ? r : void 0,
@@ -373,7 +373,7 @@ class q extends (s = r.PureComponent) {
                 })
               : (0, l.jsx)('div', {
                     title: null != r ? r : void 0,
-                    className: (0, U.Z)(e) || (0, D.Z)(e) ? V.detailsWrap : V.details,
+                    className: (0, k.Z)(e) || (0, D.Z)(e) ? V.detailsWrap : V.details,
                     children: a
                 });
     }
@@ -382,15 +382,15 @@ class q extends (s = r.PureComponent) {
         return n && null != t
             ? null == i
                 ? (0, l.jsx)('div', {
-                      className: (0, U.Z)(e) || (0, D.Z)(e) ? V.detailsWrap : V.details,
+                      className: (0, k.Z)(e) || (0, D.Z)(e) ? V.detailsWrap : V.details,
                       children: G.Z.Messages.USER_PROFILE_IN_GUILD_DETAILS.format({ guildName: t.name })
                   })
                 : (0, l.jsxs)('div', {
-                      className: c()((0, U.Z)(e) || (0, D.Z)(e) ? V.detailsWrap : V.details, V.guildDetails),
+                      className: c()((0, k.Z)(e) || (0, D.Z)(e) ? V.detailsWrap : V.details, V.guildDetails),
                       children: [
-                          (0, l.jsx)(v.Z, {
+                          (0, l.jsx)(S.Z, {
                               guild: t,
-                              size: v.Z.Sizes.SMOL,
+                              size: S.Z.Sizes.SMOL,
                               className: V.guildIcon
                           }),
                           (0, l.jsx)(m.ChevronSmallRightIcon, {
@@ -422,9 +422,9 @@ class q extends (s = r.PureComponent) {
             ? null
             : (0, O.Z)(e)
               ? (0, l.jsx)(Y, { timestamps: n })
-              : (0, l.jsx)(Z.ZP, {
+              : (0, l.jsx)(A.ZP, {
                     start: n.start,
-                    location: Z.ZP.Locations.USER_ACTIVITY,
+                    location: A.ZP.Locations.USER_ACTIVITY,
                     className: V.playTime,
                     isApplicationStreaming: null != t
                 });
@@ -509,19 +509,19 @@ class q extends (s = r.PureComponent) {
         let d = 'ActivityFeed' === t,
             h = 'StreamPreview' === t,
             p = !1;
-        (0, k.Z)(u) ? ((e = this.renderXboxImage()), (p = !0)) : null == (e = this.renderImage(u)) && (p = null != (e = this.renderGameImage(u)));
+        (0, U.Z)(u) ? ((e = this.renderXboxImage()), (p = !0)) : null == (e = this.renderImage(u)) && (p = null != (e = this.renderGameImage(u)));
         let _ = this.renderName(u),
             f = this.renderDetails(u),
             g = this.renderState(u, s),
             C = this.renderTimePlayed(u),
             I = this.renderChannelDetails(u),
-            x = null != n ? n() : null,
-            T = this.renderTimeBar(u),
-            v = ![e, _, f, g, C, T, x].some((e) => null != e);
+            T = null != n ? n() : null,
+            x = this.renderTimeBar(u),
+            S = ![e, _, f, g, C, x, T].some((e) => null != e);
         return (0, l.jsxs)('div', {
             className: c()(this.getTypeClass('activity'), i),
             children: [
-                this.renderHeader(v),
+                this.renderHeader(S),
                 (0, l.jsx)('div', {
                     className: c()(p ? V.bodyAlignCenter : V.bodyNormal, a && !h && V.wrap),
                     children: (0, l.jsxs)('div', {
@@ -544,14 +544,14 @@ class q extends (s = r.PureComponent) {
                                               children: [_, f, g, C]
                                           }),
                                           I,
-                                          h ? null : T,
-                                          d ? x : null
+                                          h ? null : x,
+                                          d ? T : null
                                       ]
                                   })
                         ]
                     })
                 }),
-                h ? x : null,
+                h ? T : null,
                 (0, l.jsx)(K, { activity: u })
             ]
         });
@@ -575,10 +575,10 @@ class q extends (s = r.PureComponent) {
 F(q, 'Types', i);
 let X = (e) => {
     var t, n, i;
-    let s = (0, T.Z)({
+    let s = (0, x.Z)({
         location: 'UserActivity',
         applicationId: null !== (i = null === (t = e.application) || void 0 === t ? void 0 : t.id) && void 0 !== i ? i : null === (n = e.activity) || void 0 === n ? void 0 : n.application_id,
-        source: x.m1.UserProfile,
+        source: T.m1.UserProfile,
         sourceUserId: e.user.id,
         trackEntryPointImpression: !0
     });

@@ -23,13 +23,13 @@ var i = n(735250),
     g = n(386542),
     C = n(933843),
     I = n(746599),
-    x = n(1163),
-    T = n(738672),
-    v = n(981631),
-    S = n(37113),
+    T = n(1163),
+    x = n(738672),
+    S = n(981631),
+    v = n(37113),
     N = n(689938),
-    Z = n(351065);
-function A(e) {
+    A = n(351065);
+function Z(e) {
     let { className: t, onDismiss: n } = e;
     return (0, i.jsx)(d.Button, {
         className: t,
@@ -39,27 +39,27 @@ function A(e) {
         onClick: n,
         children: (0, i.jsx)(d.XSmallIcon, {
             size: 'xs',
-            className: Z.closeIcon,
+            className: A.closeIcon,
             color: 'white'
         })
     });
 }
-let M = S.LY.RESOLUTION_1440,
-    b = S.ws.FPS_60;
+let M = v.LY.RESOLUTION_1440,
+    b = v.ws.FPS_60;
 function R(e) {
     let { channel: t } = e,
         n = (0, c.e7)([m.Z], () => m.Z.useReducedMotion),
         [a, l] = s.useState(!1),
         { preset: o } = (0, c.cj)([p.Z], () => p.Z.getState()),
         g = (0, c.e7)([_.Z], () => _.Z.getGoLiveSource()),
-        x = s.useCallback(() => {
+        T = s.useCallback(() => {
             l(!0),
                 (0, E.S)(r.q.STREAM_HIGH_QUALITY)
                     .then((e) => {
                         if (e) {
                             if (
                                 ((0, I.J1)(!(0, C.mc)(M, b)),
-                                f.default.track(v.rMx.PERK_DEMO_OFFER_ACCEPTED, {
+                                f.default.track(S.rMx.PERK_DEMO_OFFER_ACCEPTED, {
                                     guild_id: t.guild_id,
                                     channel_id: t.id,
                                     perk_type: r.q.STREAM_HIGH_QUALITY,
@@ -101,34 +101,34 @@ function R(e) {
         pauseAnimation: n,
         color: d.Button.Colors.GREEN,
         size: d.Button.Sizes.SMALL,
-        className: Z.optInButton,
-        onClick: x,
+        className: A.optInButton,
+        onClick: T,
         submitting: a,
         children: N.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_OPT_IN_POPOUT_CTA_V2
     });
 }
 function L(e) {
     let { channel: t, hidden: n, onDismiss: s } = e,
-        a = x.Z.useExperiment({ location: 'StreamButtonDemoOptInPopoutContent' }, { autoTrackExposure: !1 }).extendedDemoDuration;
+        a = T.Z.useExperiment({ location: 'StreamButtonDemoOptInPopoutContent' }, { autoTrackExposure: !1 }).extendedDemoDuration;
     return (0, i.jsxs)('div', {
-        className: l()(Z.optInPopout, Z.variant2OptInPopout, { [Z.hidden]: n }),
+        className: l()(A.optInPopout, A.variant2OptInPopout, { [A.hidden]: n }),
         children: [
             (0, i.jsx)('img', {
-                className: Z.image,
+                className: A.image,
                 src: 'https://cdn.discordapp.com/assets/premium/roadblocks/hd_streaming.png',
                 alt: 'HD Streaming Nitro Perk'
             }),
-            (0, i.jsx)(A, {
-                className: Z.variant2CloseButton,
+            (0, i.jsx)(Z, {
+                className: A.variant2CloseButton,
                 onDismiss: s
             }),
             (0, i.jsx)('div', {
-                className: Z.variant2InfoContainerParent,
+                className: A.variant2InfoContainerParent,
                 children: (0, i.jsxs)('div', {
-                    className: Z.variant2InfoContainer,
+                    className: A.variant2InfoContainer,
                     children: [
                         (0, i.jsx)(o.x, {
-                            className: Z.variant2Text,
+                            className: A.variant2Text,
                             variant: 'text-sm/medium',
                             children: a ? N.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_OPT_IN_V2_DURATION_POPOUT_BODY : N.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_OPT_IN_POPOUT_BODY
                         }),
@@ -142,7 +142,7 @@ function L(e) {
 function j(e) {
     let { channel: t, ...n } = e,
         { shouldShowOptInPopout: a } = (0, g.k)(r.q.STREAM_HIGH_QUALITY),
-        { enabled: l } = x.Z.useExperiment(
+        { enabled: l } = T.Z.useExperiment(
             { location: 'StreamButtonDemoOptInPopout' },
             {
                 autoTrackExposure: !1,
@@ -155,14 +155,14 @@ function j(e) {
             l &&
             !o.current &&
             ((o.current = !0),
-            f.default.track(v.rMx.PERK_DEMO_OFFER_VIEWED, {
+            f.default.track(S.rMx.PERK_DEMO_OFFER_VIEWED, {
                 guild_id: t.guild_id,
                 channel_id: t.id,
                 perk_type: r.q.STREAM_HIGH_QUALITY
             }));
     }, [a, l, t]),
     a && l)
-        ? (0, i.jsx)(T.h, {
+        ? (0, i.jsx)(x.h, {
               ...n,
               renderComponent: (e) =>
                   (0, i.jsx)(L, {

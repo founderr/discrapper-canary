@@ -61,10 +61,10 @@ var i = n(735250),
     I = n(375954),
     m = n(594174),
     T = n(585483),
-    N = n(5967),
-    h = n(630388),
-    C = n(358085),
-    f = n(51144),
+    h = n(5967),
+    N = n(630388),
+    f = n(358085),
+    C = n(51144),
     p = n(91047),
     g = n(901461),
     S = n(50284),
@@ -84,7 +84,7 @@ function x(e, t, n) {
                 n();
                 return;
             }
-            let a = '@'.concat(f.ZP.getUserTag(s, { decoration: 'never' })),
+            let a = '@'.concat(C.ZP.getUserTag(s, { decoration: 'never' })),
                 r = '<@'.concat(e, '>');
             T.S.dispatchToLastSubscribed(A.CkL.INSERT_TEXT, {
                 plainText: a,
@@ -127,13 +127,13 @@ function b(e, t) {
 function j(e, t, a, l) {
     let { id: o } = t,
         { id: u, flags: d } = e,
-        m = (0, h.yE)(d, A.iLy.EPHEMERAL),
+        m = (0, N.yE)(d, A.iLy.EPHEMERAL),
         T = (0, g.Z)(e),
-        N = (0, c.bp)();
+        h = (0, c.bp)();
     return s.useCallback(
         (e, t) => {
             if (m) return;
-            if (!C.isPlatformEmbedded) {
+            if (!f.isPlatformEmbedded) {
                 let t = e.target;
                 if (('A' === t.tagName && '' !== t.textContent) || null == window.getSelection) return;
                 let n = window.getSelection();
@@ -171,11 +171,11 @@ function j(e, t, a, l) {
                         },
                         {
                             onClose: () => a({ contextMenu: !1 }),
-                            context: N
+                            context: h
                         }
                     );
         },
-        [m, o, u, a, N, T, l]
+        [m, o, u, a, h, T, l]
     );
 }
 function U(e, t) {
@@ -250,7 +250,7 @@ function G(e, t) {
         l = s.useCallback(
             (t) => {
                 var n, s;
-                let a = null !== (s = null === (n = (0, N.uB)(t)) || void 0 === n ? void 0 : n.activeElement) && void 0 !== s ? s : null;
+                let a = null !== (s = null === (n = (0, h.uB)(t)) || void 0 === n ? void 0 : n.activeElement) && void 0 !== s ? s : null;
                 (t.target === t.currentTarget || t.currentTarget.contains(a)) && (r(!0), i(!0)), null != e && e(t);
             },
             [e]
@@ -260,7 +260,7 @@ function G(e, t) {
         handleBlur: s.useCallback(
             (e) => {
                 var n, s;
-                let a = null !== (s = null === (n = (0, N.uB)(e)) || void 0 === n ? void 0 : n.activeElement) && void 0 !== s ? s : null;
+                let a = null !== (s = null === (n = (0, h.uB)(e)) || void 0 === n ? void 0 : n.activeElement) && void 0 !== s ? s : null;
                 (e.target === e.currentTarget || !e.currentTarget.contains(a)) && i(!1), null != t && t(e);
             },
             [t]

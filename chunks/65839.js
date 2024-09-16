@@ -17,7 +17,7 @@ var i = n(735250),
     g = n(489766),
     C = n(584354),
     I = n(725060);
-let x = (0, c.Z)((e) => {
+let T = (0, c.Z)((e) => {
     let { searchQuery: t, setSearchQuery: n, handleClearSearch: s, handleSearchKeyPress: a, width: r } = e,
         c = null != r && r <= 800;
     return (0, i.jsxs)('div', {
@@ -62,7 +62,7 @@ let x = (0, c.Z)((e) => {
         ]
     });
 });
-function T(e) {
+function x(e) {
     let { guild: t, directoryEntries: n, handleCreateOrAddGuild: s, isLoading: a } = e,
         c = (0, r.e7)([d.Z], () => d.Z.can(_.Plq.ADMINISTRATOR, t)),
         u = [];
@@ -118,11 +118,11 @@ function T(e) {
     });
 }
 t.Z = (e) => {
-    let { channel: t, directoryEntries: n, handleCreateOrAddGuild: a, searchQuery: l, setSearchQuery: c, handleClearSearch: d, handleSearchKeyPress: h, currentCategoryId: C, handleSelectCategory: I, categoryCounts: v, allEntriesCount: S, isLoading: N } = e,
-        Z = (0, r.e7)([u.Z], () => u.Z.getGuild(t.getGuildId()));
-    return null != Z && Z.hasFeature(_.oNc.SHARD)
-        ? (0, i.jsx)(T, {
-              guild: Z,
+    let { channel: t, directoryEntries: n, handleCreateOrAddGuild: a, searchQuery: l, setSearchQuery: c, handleClearSearch: d, handleSearchKeyPress: h, currentCategoryId: C, handleSelectCategory: I, categoryCounts: S, allEntriesCount: v, isLoading: N } = e,
+        A = (0, r.e7)([u.Z], () => u.Z.getGuild(t.getGuildId()));
+    return null != A && A.hasFeature(_.oNc.SHARD)
+        ? (0, i.jsx)(x, {
+              guild: A,
               directoryEntries: n,
               handleCreateOrAddGuild: a,
               isLoading: N
@@ -132,7 +132,7 @@ t.Z = (e) => {
               children: (0, i.jsxs)(o.AdvancedScrollerAuto, {
                   className: E.scroller,
                   children: [
-                      (0, i.jsx)(x, {
+                      (0, i.jsx)(T, {
                           searchQuery: l,
                           setSearchQuery: c,
                           handleClearSearch: d,
@@ -154,7 +154,7 @@ t.Z = (e) => {
                                       {
                                           className: g.tabBarItem,
                                           id: p.AR.ALL,
-                                          children: ''.concat(f.Z.Messages.DIRECTORY_CATEGORY_ALL, ' (').concat(S, ')')
+                                          children: ''.concat(f.Z.Messages.DIRECTORY_CATEGORY_ALL, ' (').concat(v, ')')
                                       },
                                       p.AR.ALL
                                   ),
@@ -165,7 +165,7 @@ t.Z = (e) => {
                                           {
                                               className: g.tabBarItem,
                                               id: t,
-                                              children: ''.concat(n, ' ').concat(null != v[t] ? '('.concat(v[t], ')') : '')
+                                              children: ''.concat(n, ' ').concat(null != S[t] ? '('.concat(S[t], ')') : '')
                                           },
                                           t
                                       );

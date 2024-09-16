@@ -20,10 +20,10 @@ var s = n(613828),
     I = n(522474),
     m = n(523746),
     T = n(592125),
-    N = n(594174),
-    h = n(630388),
-    C = n(823379),
-    f = n(624138),
+    h = n(594174),
+    N = n(630388),
+    f = n(823379),
+    C = n(624138),
     p = n(317381),
     g = n(638880),
     S = n(122613),
@@ -35,9 +35,9 @@ var s = n(613828),
     v = n(981631),
     L = n(689938),
     Z = n(896219);
-let P = (0, f.Mg)(r.Z.ACTIVITY_BOOKMARK_EMBED_IMAGE_WIDTH);
+let P = (0, C.Mg)(r.Z.ACTIVITY_BOOKMARK_EMBED_IMAGE_WIDTH);
 function D(e) {
-    var t, n, r, f;
+    var t, n, r, C;
     let { applicationId: D, message: b } = e,
         { analyticsLocations: j } = (0, d.ZP)(u.Z.ACTIVITY_BOOKMARK),
         U = (0, c.O)(),
@@ -50,18 +50,18 @@ function D(e) {
         [V] = (0, E.Z)([D, null !== (n = null == G ? void 0 : G.applicationId) && void 0 !== n ? n : '']),
         H = (0, A.ZP)(null !== (r = null == V ? void 0 : V.maxParticipants) && void 0 !== r ? r : 0),
         [Y] = (0, a.Wu)([p.ZP], () => (F ? p.ZP.getEmbeddedActivitiesForChannel(y).filter((e) => e.applicationId === D) : []), [D, y, F]),
-        W = Array.from(null !== (f = null == Y ? void 0 : Y.userIds) && void 0 !== f ? f : []),
-        z = (0, a.Wu)([N.default], () => W.map((e) => N.default.getUser(e)).filter(C.lm), [W]),
-        K = (0, R.Z)({
+        W = Array.from(null !== (C = null == Y ? void 0 : Y.userIds) && void 0 !== C ? C : []),
+        K = (0, a.Wu)([h.default], () => W.map((e) => h.default.getUser(e)).filter(f.lm), [W]),
+        z = (0, R.Z)({
             applicationId: D,
             size: P,
             names: ['embedded_cover']
         }),
         Q = I.Z.getWindowOpen(v.KJ3.CHANNEL_CALL_POPOUT),
-        q = z.length > 0 ? L.Z.Messages.JOIN : L.Z.Messages.START,
+        q = K.length > 0 ? L.Z.Messages.JOIN : L.Z.Messages.START,
         X = async () => {
             if (F) {
-                if (null != Y && z.length > 0)
+                if (null != Y && K.length > 0)
                     await (0, g.Z)({
                         applicationId: Y.applicationId,
                         activityChannelId: y,
@@ -98,7 +98,7 @@ function D(e) {
                     analyticsLocations: j
                 });
         };
-    return null != V && (0, h.yE)(V.flags, v.udG.EMBEDDED)
+    return null != V && (0, N.yE)(V.flags, v.udG.EMBEDDED)
         ? (0, i.jsx)(d.Gt, {
               value: j,
               children: (0, i.jsxs)('div', {
@@ -109,7 +109,7 @@ function D(e) {
                           children: (0, i.jsx)('img', {
                               className: Z.img,
                               alt: V.name,
-                              src: K.url
+                              src: z.url
                           })
                       }),
                       (0, i.jsxs)('div', {
@@ -136,12 +136,12 @@ function D(e) {
                               (0, i.jsxs)('div', {
                                   className: Z.cta,
                                   children: [
-                                      z.length > 0
+                                      K.length > 0
                                           ? (0, i.jsx)('div', {
                                                 className: Z.avatars,
                                                 children: (0, i.jsx)(O.Z, {
                                                     guildId: k,
-                                                    users: z,
+                                                    users: K,
                                                     max: 4
                                                 })
                                             })

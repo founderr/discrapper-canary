@@ -23,28 +23,28 @@ var i = n(735250),
     g = n(420529),
     C = n(927923),
     I = n(981631),
-    x = n(921944),
-    T = n(689938),
-    v = n(798682);
-function S(e) {
+    T = n(921944),
+    x = n(689938),
+    S = n(798682);
+function v(e) {
     let { onClose: t, channel: n } = e,
         s = (0, g.Z)(n);
     return (0, i.jsx)(r.Menu, {
         onClose: t,
         onSelect: () => null,
         navId: 'transfer-menu',
-        'aria-label': T.Z.Messages.TRANSFER,
+        'aria-label': x.Z.Messages.TRANSFER,
         children: s
     });
 }
 function N(e) {
     let { channel: t, showLeftDivider: n = !1, ...g } = e,
         N = (0, p.Z)(),
-        Z = (0, a.e7)([m.Z], () => {
+        A = (0, a.e7)([m.Z], () => {
             var e, t;
             return null === (e = m.Z.getSessionById(null !== (t = null == N ? void 0 : N.sessionId) && void 0 !== t ? t : '')) || void 0 === e ? void 0 : e.clientInfo.os;
         }),
-        A = (0, a.e7)([h.Z], () => h.Z.hasLayers()),
+        Z = (0, a.e7)([h.Z], () => h.Z.hasLayers()),
         [M, b] = (0, a.Wu)([o.Z], () => [o.Z.getMode(t.id), o.Z.getLayout(t.id)]),
         R = (0, r.useModalsStore)(r.hasAnyModalOpenSelector),
         L = (0, _.Z)(),
@@ -62,26 +62,26 @@ function N(e) {
                     o = s === l.z.DONUT_DESKTOP_NUX;
                 return (0, i.jsxs)(i.Fragment, {
                     children: [
-                        n ? (0, i.jsx)('div', { className: v.leftDivider }) : null,
+                        n ? (0, i.jsx)('div', { className: S.leftDivider }) : null,
                         (0, i.jsx)(r.Popout, {
                             position: y,
                             spacing: o ? 16 : void 0,
                             positionKey: ''.concat(M, ':').concat(b),
                             onRequestClose: () => O(!1),
-                            shouldShow: (o || P) && !A && !R,
+                            shouldShow: (o || P) && !Z && !R,
                             renderPopout: (e) => {
                                 let { closePopout: n } = e;
                                 return (0, i.jsx)(u.Z, {
                                     children: o
                                         ? (0, i.jsx)(f.Z, {
                                               popoutPosition: y,
-                                              onDismiss: () => a(x.L.UNKNOWN),
+                                              onDismiss: () => a(T.L.UNKNOWN),
                                               onAccept: () => {
-                                                  a(x.L.UNKNOWN), O(!0);
+                                                  a(T.L.UNKNOWN), O(!0);
                                               },
                                               gameConsoleAccounts: j
                                           })
-                                        : (0, i.jsx)(S, {
+                                        : (0, i.jsx)(v, {
                                               onClose: () => {
                                                   n();
                                               },
@@ -95,8 +95,8 @@ function N(e) {
                                     ...e,
                                     ...g,
                                     onClick: () => O(!0),
-                                    label: null != (t = Z) ? (t === C.YE.XBOX ? T.Z.Messages.XBOX_REMOTE_CONNECTED_RAW : T.Z.Messages.PLAYSTATION_REMOTE_CONNECTED_RAW) : T.Z.Messages.CONSOLE_TRANSFER,
-                                    iconComponent: (0, E.Z)(Z)
+                                    label: null != (t = A) ? (t === C.YE.XBOX ? x.Z.Messages.XBOX_REMOTE_CONNECTED_RAW : x.Z.Messages.PLAYSTATION_REMOTE_CONNECTED_RAW) : x.Z.Messages.CONSOLE_TRANSFER,
+                                    iconComponent: (0, E.Z)(A)
                                 });
                             }
                         })

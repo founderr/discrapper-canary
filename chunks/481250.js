@@ -1,6 +1,6 @@
 n.d(t, {
     V: function () {
-        return R;
+        return D;
     },
     a: function () {
         return y;
@@ -59,21 +59,21 @@ function y(e) {
         );
     return t;
 }
-let S = {
+let R = {
     ssrc: 1,
     codec: 2
 };
-function R(e, t, n, a, R) {
-    return e.map((D, v) => {
+function D(e, t, n, a, D) {
+    return e.map((S, v) => {
         var b, E;
         let Z = [];
-        for (let e of Object.keys(D).sort((e, t) => {
-            let n = S[e],
-                r = S[t];
+        for (let e of Object.keys(S).sort((e, t) => {
+            let n = R[e],
+                r = R[t];
             if (n !== r) return void 0 === n ? 1 : void 0 === r ? -1 : n - r;
             return m.Pz[e] !== m.Pz[t] ? (m.Pz[e] ? 1 : -1) : e > t ? 1 : -1;
         })) {
-            let t = D[e];
+            let t = S[e];
             if (!p.al[e] && void 0 !== t)
                 Z.push(
                     (0, r.jsx)(
@@ -91,13 +91,13 @@ function R(e, t, n, a, R) {
             o.FormSection,
             {
                 className: f.marginBottom40,
-                title: D.type,
+                title: S.type,
                 titleClassName: g.sectionHeader,
                 children: [
-                    'video' === D.type &&
+                    'video' === S.type &&
                         null != n &&
                         null != a &&
-                        null != R &&
+                        null != D &&
                         (function (e, t, n, a) {
                             let o = a.get(t, n, e.ssrc);
                             return null != o
@@ -112,13 +112,13 @@ function R(e, t, n, a, R) {
                                       })
                                   })
                                 : null;
-                        })(D, n, a, R),
+                        })(S, n, a, D),
                     y(Z),
-                    'video' === D.type &&
+                    'video' === S.type &&
                         v === e.length - 1 &&
                         null != n &&
                         null != a &&
-                        null != R &&
+                        null != D &&
                         ((b = a),
                         (E = t),
                         (0, r.jsx)(c.Z, {
@@ -146,7 +146,7 @@ function R(e, t, n, a, R) {
                         }))
                 ]
             },
-            ''.concat(D.type, ' + ').concat(D.ssrc)
+            ''.concat(S.type, ' + ').concat(S.ssrc)
         );
     });
 }

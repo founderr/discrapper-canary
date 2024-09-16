@@ -27,9 +27,9 @@ function E(e) {
         g = (0, c.GG)(t),
         C = (0, c.YB)(t),
         I = (0, a.e7)([o.Z], () => o.Z.getGuild(t), [t]),
-        x = null == I ? void 0 : I.name,
-        T = (0, a.e7)([r.Z], () => r.Z.getChannel(n)),
-        v = s.useMemo(() => {
+        T = null == I ? void 0 : I.name,
+        x = (0, a.e7)([r.Z], () => r.Z.getChannel(n)),
+        S = s.useMemo(() => {
             let e = {};
             for (let t of g) for (let n of t.subscription_listings_ids) e[n] = t.id;
             return e;
@@ -51,8 +51,8 @@ function E(e) {
                       variant: 'heading-xl/semibold',
                       className: f.joinCtaTitle,
                       children: _.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_UPSELL_PAGE_CTA.format({
-                          serverName: x,
-                          channelName: null == T ? void 0 : T.name
+                          serverName: T,
+                          channelName: null == x ? void 0 : x.name
                       })
                   }),
                   (0, i.jsx)(l.Text, {
@@ -63,13 +63,13 @@ function E(e) {
                   }),
                   (0, i.jsx)(h.Z, {
                       guildId: t,
-                      children: E.filter((e) => null != v[e.id]).map((e) =>
+                      children: E.filter((e) => null != S[e.id]).map((e) =>
                           (0, i.jsx)(
                               m.Z,
                               {
                                   guildId: t,
                                   listingId: e.id,
-                                  groupListingId: v[e.id],
+                                  groupListingId: S[e.id],
                                   analyticsLocation: p.Sbl.ROLE_SUBSCRIPTION_GATED_CHANNEL
                               },
                               e.id

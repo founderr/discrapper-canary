@@ -20,21 +20,21 @@ var s = n(735250),
     m = n(594174),
     N = n(626135),
     S = n(243730),
-    h = n(434404),
-    g = n(946724),
+    g = n(434404),
+    h = n(946724),
     C = n(130341),
     x = n(95242),
     p = n(420966),
     R = n(566476),
-    f = n(203377),
-    L = n(981631),
+    L = n(203377),
+    f = n(981631),
     O = n(689938),
     A = n(465848),
     M = n(571621);
 async function D(e, t, n) {
     let a = e.roles.filter((e) => e !== n);
     try {
-        await h.Z.updateMemberRoles(t, e.id, a, [], [n]);
+        await g.Z.updateMemberRoles(t, e.id, a, [], [n]);
     } catch (t) {
         let e = new d.Z(t);
         (0, o.openModal)((t) =>
@@ -62,7 +62,7 @@ function v(e) {
                 return;
             }
             !(function (e, t, n) {
-                let a = g.Z.getRole(n);
+                let a = h.Z.getRole(n);
                 (0, o.openModal)((i) =>
                     (0, s.jsxs)(o.ConfirmModal, {
                         ...i,
@@ -261,15 +261,15 @@ function U(e) {
         [u, _] = a.useState(''),
         { headerHeight: I, headerRef: E } = (0, x.Z)(0),
         { scrolledToTop: T, handleScroll: m } = (0, p.V)(),
-        h = i.managed || c,
-        g = (0, C.e)(t.id, i.id),
+        g = i.managed || c,
+        h = (0, C.e)(t.id, i.id),
         R =
             (0, l.e7)([S.Z], () => {
                 var e, n;
                 return null !== (n = null === (e = S.Z.getRoleMemberCount(t.id)) || void 0 === e ? void 0 : e[i.id]) && void 0 !== n ? n : 0;
-            }) > g.length,
+            }) > h.length,
         D = () => {
-            N.default.track(L.rMx.OPEN_MODAL, {
+            N.default.track(f.rMx.OPEN_MODAL, {
                 type: 'Add Role Members',
                 location_page: 'Role Settings',
                 location_section: 'Members'
@@ -298,13 +298,13 @@ function U(e) {
                             (0, s.jsx)(p.Z, {
                                 guild: t,
                                 role: i,
-                                selectedSection: f.ZI.MEMBERS,
+                                selectedSection: L.ZI.MEMBERS,
                                 setSelectedSection: d
                             }),
                             (0, s.jsx)(b, {
                                 query: u,
                                 setQuery: _,
-                                locked: h,
+                                locked: g,
                                 handleAddClick: D
                             }),
                             R
@@ -323,9 +323,9 @@ function U(e) {
                 query: u,
                 guildId: t.id,
                 roleId: i.id,
-                locked: h,
+                locked: g,
                 onScroll: m,
-                roleMembers: g,
+                roleMembers: h,
                 handleAddClick: D
             })
         ]

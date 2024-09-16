@@ -11,8 +11,8 @@ var a = n(120356),
     o = n(110478),
     s = n(423932),
     c = n(601948),
-    u = n(594174),
-    d = n(820756),
+    d = n(594174),
+    u = n(820756),
     h = n(113207);
 let m = () => {
     Promise.all([n.e('52030'), n.e('47238')])
@@ -41,23 +41,23 @@ let m = () => {
         });
 };
 function x() {
-    let e = u.default.getCurrentUser(),
+    let e = d.default.getCurrentUser(),
         t = null == e ? void 0 : e.isStaff();
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)('div', {
-                className: l()(d.buttonsContainer, h.marginBottom20),
+                className: l()(u.buttonsContainer, h.marginBottom20),
                 children: (0, r.jsx)(c.S, { isDevTools: !0 })
             }),
             (0, r.jsx)('div', {
-                className: l()(d.buttonsContainer, h.marginBottom20),
+                className: l()(u.buttonsContainer, h.marginBottom20),
                 children: (0, r.jsx)(i.Button, {
                     onClick: m,
                     children: 'Launch MFA'
                 })
             }),
             (0, r.jsx)('div', {
-                className: l()(d.buttonsContainer, h.marginBottom20),
+                className: l()(u.buttonsContainer, h.marginBottom20),
                 children: (0, r.jsx)(i.Button, {
                     onClick: () => (0, s.Z)(),
                     children: 'Launch Vibing Wumpus'
@@ -65,7 +65,7 @@ function x() {
             }),
             t &&
                 (0, r.jsx)('div', {
-                    className: l()(d.buttonsContainer, h.marginBottom20),
+                    className: l()(u.buttonsContainer, h.marginBottom20),
                     children: (0, r.jsx)(i.Button, {
                         onClick: () => (0, o.N)(),
                         children: 'Launch Captcha Test Tool'

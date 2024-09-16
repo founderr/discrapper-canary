@@ -21,8 +21,8 @@ var l = n(735250),
     x = n(318766),
     E = n(907040),
     _ = n(633302),
-    p = n(806966),
-    v = n(176354),
+    v = n(806966),
+    p = n(176354),
     T = n(823379),
     f = n(354459),
     g = n(185923),
@@ -90,7 +90,7 @@ function M(e) {
         j = (0, s.uniqBy)([...R, ...P], 'name')
             .filter(
                 (e) =>
-                    !v.ZP.isEmojiFilteredOrLocked({
+                    !p.ZP.isEmojiFilteredOrLocked({
                         emoji: e,
                         channel: t,
                         intention: N
@@ -107,7 +107,7 @@ function M(e) {
                 return;
             }
             null != e && c(e);
-            w(!t), t && p.kJ.setSearchPlaceholder(null);
+            w(!t), t && v.kJ.setSearchPlaceholder(null);
         };
     return (0, l.jsxs)(u.Dialog, {
         'aria-labelledby': y,
@@ -152,7 +152,7 @@ function M(e) {
                         children: (0, l.jsx)('div', {
                             className: r()(C.slots, C.slotsWide),
                             children: j.map((e) => {
-                                let n = v.ZP.isEmojiDisabled({
+                                let n = p.ZP.isEmojiDisabled({
                                     emoji: e,
                                     channel: t,
                                     intention: g.Hz.CHAT

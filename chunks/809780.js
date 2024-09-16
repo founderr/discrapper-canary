@@ -28,10 +28,10 @@ var i,
     I = n(904245),
     m = n(45114),
     T = n(607070),
-    N = n(853856),
-    h = n(181945),
-    C = n(220444),
-    f = n(601070),
+    h = n(853856),
+    N = n(181945),
+    f = n(220444),
+    C = n(601070),
     p = n(344185),
     g = n(569471),
     S = n(723170),
@@ -221,7 +221,7 @@ class V extends o.EventEmitter {
                     this.maybeLoadMore();
             }),
             (this.markGuildRead = (e) => {
-                E.Z.wait(() => (0, h.Z)([e], k.jXE.INBOX)), this.setState({ channels: this.state.channels.filter((t) => t.guildId !== e) }), this.maybeLoadMore();
+                E.Z.wait(() => (0, N.Z)([e], k.jXE.INBOX)), this.setState({ channels: this.state.channels.filter((t) => t.guildId !== e) }), this.maybeLoadMore();
             }),
             (this.deleteChannel = (e) => {
                 this.setState({
@@ -325,7 +325,7 @@ function Y() {
                 b.ZP.getFlattenedGuildIds().forEach((n) => {
                     if (null == n) return;
                     let i = M.ZP.getSelectableChannelIds(n),
-                        s = f.Z.getActiveJoinedUnreadThreadsForGuild(n);
+                        s = C.Z.getActiveJoinedUnreadThreadsForGuild(n);
                     i.forEach((i) => {
                         var a;
                         W(e, t, n, i);
@@ -358,7 +358,7 @@ function W(e, t, n, i) {
     if (null == s || (!O.Ec.has(s.type) && j.ZP.isGuildOrCategoryOrChannelMuted(n, s.id))) return;
     if (s.isPrivate()) {
         if (0 === D.ZP.getMentionCount(i)) return;
-    } else if (!(0, C.d)(s) && 0 === D.ZP.getMentionCount(i)) return;
+    } else if (!(0, f.d)(s) && 0 === D.ZP.getMentionCount(i)) return;
     if (!s.isPrivate() && !P.Z.can(k.Plq.READ_MESSAGE_HISTORY, s)) return;
     let a = D.ZP.ackMessageId(i);
     if (null == a) {
@@ -386,13 +386,13 @@ function W(e, t, n, i) {
         mentionCount: o,
         sortOrder: (function (e, t, n) {
             let i = x.Z.getChannel(t);
-            if (N.Z.isFavorite(t)) return 0;
+            if (h.Z.isFavorite(t)) return 0;
             if (i.isPrivate()) return 1;
             if (D.ZP.getMentionCount(t) > 0) return 2;
             if (null != n) {
                 let e = B.default.extractTimestamp(n);
-                if (Date.now() - e > K) return 7;
-                if (Date.now() - e > z) return 5;
+                if (Date.now() - e > z) return 7;
+                if (Date.now() - e > K) return 5;
             }
             if (i.isThread()) {
                 let e = (0, S.J)(i);
@@ -421,8 +421,8 @@ function W(e, t, n, i) {
                 messages: []
             });
 }
-let z = 2 * U.Z.Millis.DAY,
-    K = 10 * U.Z.Millis.DAY;
+let K = 2 * U.Z.Millis.DAY,
+    z = 10 * U.Z.Millis.DAY;
 function Q(e) {
     let [t, n] = l.useState(() => new V(Y(), e)),
         [i, s] = l.useState(!1),

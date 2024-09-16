@@ -23,12 +23,12 @@ var i = n(735250),
 function C(e) {
     let { channelId: t, className: n, ...C } = e,
         I = s.useRef(null),
-        x = (0, l.e7)([p.ZP], () => p.ZP.getFocusedLayout() === _.MI.RESIZABLE),
-        T = s.useCallback(() => {
-            let e = x ? _.MI.NO_CHAT : _.MI.RESIZABLE;
+        T = (0, l.e7)([p.ZP], () => p.ZP.getFocusedLayout() === _.MI.RESIZABLE),
+        x = s.useCallback(() => {
+            let e = T ? _.MI.NO_CHAT : _.MI.RESIZABLE;
             (0, m.gC)(e);
-        }, [x]),
-        { unreadCount: v, mentionCount: S } = (function (e) {
+        }, [T]),
+        { unreadCount: S, mentionCount: v } = (function (e) {
             let t = (0, l.e7)([d.Z], () => !(0, a.isEmpty)(d.Z.getTypingUsers(e)), [e]),
                 { unreadCount: n, mentionCount: i } = (0, l.cj)(
                     [u.ZP],
@@ -52,20 +52,20 @@ function C(e) {
         event: f.CkL.FOCUS_CHAT_BUTTON,
         handler: N
     });
-    let Z = x ? E.Z.Messages.HIDE_CHAT : E.Z.Messages.SHOW_CHAT,
-        A = [Z];
-    S > 0 && A.push(E.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({ mentionCount: S })), v > 0 && A.push(E.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD);
+    let A = T ? E.Z.Messages.HIDE_CHAT : E.Z.Messages.SHOW_CHAT,
+        Z = [A];
+    v > 0 && Z.push(E.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({ mentionCount: v })), S > 0 && Z.push(E.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD);
     let M = (0, l.e7)([p.ZP], () => p.ZP.getFocusedLayout()),
-        b = S > 0 ? S : v,
+        b = v > 0 ? v : S,
         R = b > 0;
     return (0, i.jsxs)('div', {
         className: g.wrapper,
         children: [
             (0, i.jsx)(c.d, {
                 buttonRef: I,
-                onClick: T,
-                label: Z,
-                'aria-label': A.join(', '),
+                onClick: x,
+                label: A,
+                'aria-label': Z.join(', '),
                 tooltipPosition: 'top',
                 iconComponent: M === _.MI.NO_CHAT ? r.ChevronLargeUpIcon : r.ChevronLargeDownIcon,
                 themeable: !0,
@@ -74,7 +74,7 @@ function C(e) {
             }),
             R
                 ? (0, i.jsx)(o.Z, {
-                      hasMentions: S > 0,
+                      hasMentions: v > 0,
                       truncatedCount: b > 99 ? '99+' : b,
                       className: g.badge
                   })

@@ -1,6 +1,6 @@
 n.d(t, {
     B: function () {
-        return h;
+        return g;
     },
     Z: function () {
         return S;
@@ -25,8 +25,8 @@ var a = n(120356),
     N = n(926916);
 function S(e) {
     var t, a, r, c;
-    let { guild: u, prompt: S, singleColumn: h, promptIndex: g, option: C, hasError: x, onDragStart: p, onDragComplete: R, onDragReset: f } = e,
-        L = null,
+    let { guild: u, prompt: S, singleColumn: g, promptIndex: h, option: C, hasError: x, onDragStart: p, onDragComplete: R, onDragReset: L } = e,
+        f = null,
         O = l().findIndex(S.options, (e) => e.id === C.id),
         {
             drag: A,
@@ -39,17 +39,17 @@ function S(e) {
             optionId: C.id,
             onDragStart: p,
             onDragComplete: R,
-            onDragReset: f
+            onDragReset: L
         }),
         { customEmoji: j, unicodeEmoji: Z } = (0, _.Z)(null === (t = C.emoji) || void 0 === t ? void 0 : t.id, null === (a = C.emoji) || void 0 === a ? void 0 : a.name);
     return (
-        !((0, T.Oq)(C.emoji) || null != j || null != Z) && (L = m.Z.Messages.GUILD_SETTINGS_ONBOARDING_PROMPT_INVALID_EMOJI),
+        !((0, T.Oq)(C.emoji) || null != j || null != Z) && (f = m.Z.Messages.GUILD_SETTINGS_ONBOARDING_PROMPT_INVALID_EMOJI),
         (0, s.jsxs)(o.Clickable, {
             className: i()(N.optionCard, {
-                [N.hasError]: x || null != L,
+                [N.hasError]: x || null != f,
                 [N.dropIndicatorBefore]: null != M && O < M,
                 [N.dropIndicatorAfter]: null != M && O > M,
-                [N.singleColumn]: h
+                [N.singleColumn]: g
             }),
             onClick: () =>
                 (0, o.openModalLazy)(async () => {
@@ -60,7 +60,7 @@ function S(e) {
                             guild: u,
                             prompt: S,
                             option: C,
-                            index: g,
+                            index: h,
                             onSave: (e) => {
                                 (0, E.Kk)(u, S.id, { options: S.options.map((t) => (t.id === C.id ? e : t)) });
                             },
@@ -112,17 +112,17 @@ function S(e) {
                         })
                     ]
                 }),
-                null != L &&
+                null != f &&
                     (0, s.jsx)(o.Text, {
                         variant: 'text-xs/medium',
                         color: 'text-danger',
-                        children: L
+                        children: f
                     })
             ]
         })
     );
 }
-function h(e) {
+function g(e) {
     let { guild: t, prompt: a, promptIndex: r, singleColumn: l } = e,
         { dropdownsAllowed: d } = (0, u.Ug)(t.id),
         _ = () => {

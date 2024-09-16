@@ -17,7 +17,7 @@ let h = s.memo(function (e) {
             g = (0, u.wq)(t.author.id, n.id),
             C = (0, u.XO)(t, n, h, p),
             I = (0, u.R9)(m, p),
-            x = s.useCallback(
+            T = s.useCallback(
                 () =>
                     p({
                         usernameProfile: !1,
@@ -41,7 +41,7 @@ let h = s.memo(function (e) {
             onClickAvatar: I,
             onClickUsername: C,
             onContextMenu: g,
-            onPopoutRequestClose: x,
+            onPopoutRequestClose: T,
             roleIcon: E
         });
     }),

@@ -28,33 +28,33 @@ function d(e) {
             },
             [C]
         ),
-        [x, T] = i.useReducer(I, {
+        [T, x] = i.useReducer(I, {
             focusedIndex: d,
             itemCount: n
         }),
-        { itemCount: v, focusedIndex: S } = x,
-        [N] = i.useState(() => (0, l.P2)(T, 16));
+        { itemCount: S, focusedIndex: v } = T,
+        [N] = i.useState(() => (0, l.P2)(x, 16));
     return (
         i.useEffect(() => {
-            T({
+            x({
                 type: s.G.UPDATE_ITEM_COUNT,
                 itemCount: n
             });
         }, [n]),
         (function (e) {
-            let { navId: t, itemCount: n, focusedIndex: d, onSelect: h, setFocus: m = u, getNewFocusIndex: p, dispatch: _, maintainFocusPosition: f, includeSetSizes: E, focusOnMount: g, enabled: C, makeId: I = l.qR, getIndexFromId: x } = e,
-                T = i.useRef(n),
-                v = i.useRef(x);
-            (v.current = x), (T.current = n);
-            let S = i.useRef();
+            let { navId: t, itemCount: n, focusedIndex: d, onSelect: h, setFocus: m = u, getNewFocusIndex: p, dispatch: _, maintainFocusPosition: f, includeSetSizes: E, focusOnMount: g, enabled: C, makeId: I = l.qR, getIndexFromId: T } = e,
+                x = i.useRef(n),
+                S = i.useRef(T);
+            (S.current = T), (x.current = n);
+            let v = i.useRef();
             i.useEffect(() => {
-                S.current = C;
+                v.current = C;
             }, [C]);
-            let [N, Z] = i.useState(!1),
-                [A] = i.useState(
+            let [N, A] = i.useState(!1),
+                [Z] = i.useState(
                     () =>
                         new l.$o((e) => () => {
-                            let t = null != v.current && 'string' == typeof e ? v.current(e) : e;
+                            let t = null != S.current && 'string' == typeof e ? S.current(e) : e;
                             'number' == typeof t &&
                                 !(t < 0) &&
                                 _({
@@ -63,10 +63,10 @@ function d(e) {
                                 });
                         })
                 );
-            i.useEffect(() => () => A.clean(), [A]);
+            i.useEffect(() => () => Z.clean(), [Z]);
             let M = i.useCallback(
                     (e, t) => {
-                        S.current && m(e, t);
+                        v.current && m(e, t);
                     },
                     [m]
                 ),
@@ -93,7 +93,7 @@ function d(e) {
                 ),
                 j = i.useCallback(
                     (e) => {
-                        if (!S.current) return;
+                        if (!v.current) return;
                         if (r.includes(e.key) && !(e.shiftKey || e.altKey || e.metaKey || e.ctrlKey) && e.currentTarget === e.target) {
                             e.preventDefault(), e.stopPropagation(), L();
                             return;
@@ -134,7 +134,7 @@ function d(e) {
                     [I, t, _, d, L, h]
                 ),
                 P = i.useCallback(() => {
-                    N || Z(!0);
+                    N || A(!0);
                 }, [N]),
                 O = i.useCallback(() => {
                     if (!N) f ? M(I(t, d), d) : L(!0);
@@ -147,7 +147,7 @@ function d(e) {
                                     M(t);
                                     return;
                                 }
-                                Z(!1);
+                                A(!1);
                             });
                     },
                     [I, t, d, M]
@@ -165,7 +165,7 @@ function d(e) {
                         }
                     );
             }, [O, P, y]);
-            let k = i.useCallback(
+            let U = i.useCallback(
                     () => ({
                         role: 'list',
                         tabIndex: N && f ? -1 : 0,
@@ -175,32 +175,32 @@ function d(e) {
                     }),
                     [t, N, j, f]
                 ),
-                U = i.useCallback(
+                k = i.useCallback(
                     (e) => {
                         let { index: n } = e;
                         return {
                             role: 'listitem',
-                            'aria-setsize': E ? T.current : void 0,
+                            'aria-setsize': E ? x.current : void 0,
                             'aria-posinset': E ? n + 1 : void 0,
                             id: I(t, n),
                             tabIndex: f && n === d ? 0 : -1,
-                            onFocus: A.get(null != v.current ? I(t, n) : n)
+                            onFocus: Z.get(null != S.current ? I(t, n) : n)
                         };
                     },
-                    [I, t, d, f, A, E]
+                    [I, t, d, f, Z, E]
                 );
             return i.useMemo(
                 () => ({
                     dispatch: _,
-                    getContainerProps: k,
-                    getItemProps: U
+                    getContainerProps: U,
+                    getItemProps: k
                 }),
-                [_, k, U]
+                [_, U, k]
             );
         })({
             navId: t,
-            itemCount: v,
-            focusedIndex: S,
+            itemCount: S,
+            focusedIndex: v,
             dispatch: N,
             onSelect: h,
             setFocus: m,

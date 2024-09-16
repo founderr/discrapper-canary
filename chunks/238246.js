@@ -17,13 +17,13 @@ var i,
     g = n(317381),
     C = n(496616),
     I = n(100527),
-    x = n(906732),
-    T = n(168551),
-    v = n(597952),
-    S = n(628123),
+    T = n(906732),
+    x = n(168551),
+    S = n(597952),
+    v = n(628123),
     N = n(686546),
-    Z = n(80006),
-    A = n(151851),
+    A = n(80006),
+    Z = n(151851),
     M = n(587061),
     b = n(392358),
     R = n(314910),
@@ -33,8 +33,8 @@ var i,
     O = n(740492),
     y = n(451478),
     D = n(358085),
-    k = n(998502),
-    U = n(473159),
+    U = n(998502),
+    k = n(473159),
     w = n(928518),
     B = n(981631),
     H = n(689938),
@@ -56,7 +56,7 @@ class F extends (i = a.Component) {
     componentDidMount() {
         let { guestWindow: e } = this.props,
             t = e.document;
-        null == t.querySelector('title') && null != t.head && t.head.appendChild(t.createElement('title')), this.updateTitle(), this.updateFontScale(), this.updateLocale(), this.updateClientTheme(), this.updateSaturationFactor(), this.updateForcedColors(), (0, U.O)(e), e.addEventListener('blur', this.handleBlur), t.addEventListener('contextmenu', this.handleContextMenu, !0), e.addEventListener('beforeunload', this.warnPopoutClose);
+        null == t.querySelector('title') && null != t.head && t.head.appendChild(t.createElement('title')), this.updateTitle(), this.updateFontScale(), this.updateLocale(), this.updateClientTheme(), this.updateSaturationFactor(), this.updateForcedColors(), (0, k.O)(e), e.addEventListener('blur', this.handleBlur), t.addEventListener('contextmenu', this.handleContextMenu, !0), e.addEventListener('beforeunload', this.warnPopoutClose);
     }
     componentDidUpdate(e) {
         let { title: t, fontScale: n, locale: i, clientThemesCSS: s } = this.props;
@@ -100,13 +100,13 @@ class F extends (i = a.Component) {
             n = t.document,
             i = (0, n.head);
         c()(null != i, 'Window document '.concat('head', ' was null'));
-        let s = i.querySelector('style['.concat(T.PQ, ']'));
+        let s = i.querySelector('style['.concat(x.PQ, ']'));
         if (null != s) {
             s.textContent = e;
             return;
         }
         let a = n.createElement('style');
-        a.setAttribute(T.PQ, 'true'), (a.textContent = e), i.appendChild(a);
+        a.setAttribute(x.PQ, 'true'), (a.textContent = e), i.appendChild(a);
     }
     updateForcedColors() {
         let { useForcedColors: e, systemForcedColors: t, guestWindow: n } = this.props;
@@ -114,8 +114,8 @@ class F extends (i = a.Component) {
     }
     render() {
         let { theme: e, forcedColors: t, focused: n, appFocused: i, children: a, windowKey: l, mouseModeEnabled: o, reducedMotionEnabled: c, fontScaleClass: d, withTitleBar: h, guestWindow: f, clientThemesClassName: g, contentClassName: C, appWrapperClassName: I } = this.props,
-            x = (0, D.getPlatform)(),
-            T = r()(d, {
+            T = (0, D.getPlatform)(),
+            x = r()(d, {
                 'mouse-mode': o,
                 'reduce-motion': c,
                 'full-motion': !c,
@@ -132,11 +132,11 @@ class F extends (i = a.Component) {
                                 children: (0, s.jsx)('div', {
                                     'data-popout-root': !0,
                                     ref: this.rootRef,
-                                    className: r()(e, (0, v.Z)(), T, g, I),
+                                    className: r()(e, (0, S.Z)(), x, g, I),
                                     children: (0, s.jsx)(m.FocusRingScope, {
                                         containerRef: this.rootRef,
                                         children: (0, s.jsx)(E.Z, {
-                                            children: (0, s.jsxs)(S.Z, {
+                                            children: (0, s.jsxs)(v.Z, {
                                                 children: [
                                                     (0, s.jsx)(N.Co, {}),
                                                     (0, s.jsx)(_.Wu, {
@@ -147,10 +147,10 @@ class F extends (i = a.Component) {
                                                                 (0, s.jsxs)('div', {
                                                                     className: G.popout,
                                                                     children: [
-                                                                        h && null != x
-                                                                            ? (0, s.jsx)(A.Z, {
+                                                                        h && null != T
+                                                                            ? (0, s.jsx)(Z.Z, {
                                                                                   focused: n,
-                                                                                  type: x,
+                                                                                  type: T,
                                                                                   windowKey: l,
                                                                                   macOSFrame: !0
                                                                               })
@@ -187,7 +187,7 @@ class F extends (i = a.Component) {
                 if (this.props.connectedToEmbeddedActivity && !O.ZP.disableEmbeddedActivityPopOutAlert) {
                     if (((e.returnValue = H.Z.Messages.EMBEDDED_ACTIVITIES_ARE_YOU_SURE_WANT_TO_LEAVE), !!D.isPlatformEmbedded))
                         (0, C.Z)(() => {
-                            w.Z.unmountWindow(this.props.windowKey), D.isPlatformEmbedded && k.ZP.close(this.props.windowKey);
+                            w.Z.unmountWindow(this.props.windowKey), D.isPlatformEmbedded && U.ZP.close(this.props.windowKey);
                         });
                 }
             }),
@@ -213,16 +213,16 @@ let W = a.forwardRef(function (e, t) {
             theme: P.Z.theme
         })),
         o = (0, h.e7)([f.Z], () => (f.Z.useForcedColors ? 'yes' : 'no')),
-        { accessibilitySettings: u, appWrapperClassName: d } = (0, Z.I)(),
+        { accessibilitySettings: u, appWrapperClassName: d } = (0, A.I)(),
         p = (0, h.e7)([g.ZP], () => null != e.channelId && null !== g.ZP.getSelfEmbeddedActivityForChannel(e.channelId));
     (0, M.Z)(n, !1);
     let _ = (0, b.Z)(n, i),
-        { analyticsLocations: E } = (0, x.ZP)(I.Z.POPOUT_WINDOW),
-        { clientThemesClassName: C, clientThemesCSS: v } = (0, T.ZP)();
+        { analyticsLocations: E } = (0, T.ZP)(I.Z.POPOUT_WINDOW),
+        { clientThemesClassName: C, clientThemesCSS: S } = (0, x.ZP)();
     return null == n
         ? null
         : (0, s.jsx)(m.DnDProvider, {
-              children: (0, s.jsx)(x.Gt, {
+              children: (0, s.jsx)(T.Gt, {
                   value: E,
                   children: (0, s.jsx)(F, {
                       ref: t,
@@ -244,7 +244,7 @@ let W = a.forwardRef(function (e, t) {
                       saturation: u.saturation,
                       alwaysShowLinkDecorations: u.alwaysShowLinkDecorations,
                       clientThemesClassName: C,
-                      clientThemesCSS: v,
+                      clientThemesCSS: S,
                       appWrapperClassName: d
                   })
               })

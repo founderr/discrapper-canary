@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return C;
+        return j;
     }
 }),
     n(47120);
@@ -11,8 +11,8 @@ var r = n(735250),
     o = n(442837),
     s = n(481060),
     c = n(665149),
-    u = n(428530),
-    d = n(484036),
+    d = n(428530),
+    u = n(484036),
     h = n(681619),
     m = n(621060),
     x = n(219299),
@@ -36,7 +36,7 @@ function g(e) {
         }, [t, n]),
         (0, r.jsx)(s.ScrollerThin, {
             className: f.inspectorContainer,
-            children: (0, r.jsx)(u.Z, { data: l })
+            children: (0, r.jsx)(d.Z, { data: l })
         })
     );
 }
@@ -79,10 +79,10 @@ let b = [
             }
         }
     ];
-function j(e) {
+function _(e) {
     let { store: t, initialHeight: n } = e,
         { TabBar: a, renderSelectedTab: l } = (0, m.Z)({ tabs: v }, []);
-    return (0, r.jsxs)(d.Z, {
+    return (0, r.jsxs)(u.Z, {
         className: f.subPanel,
         minHeight: 100,
         initialHeight: n,
@@ -102,7 +102,7 @@ function j(e) {
         ]
     });
 }
-function C() {
+function j() {
     let e = a.useRef(null),
         [t, n] = a.useState(''),
         l = o.yh.getAll(),
@@ -123,8 +123,8 @@ function C() {
                     return n.getName().toLowerCase().includes(t.toLowerCase());
                 })(e, t)
             ),
-        [u, d] = a.useState(),
-        m = l.find((e) => e._dispatchToken === u);
+        [d, u] = a.useState(),
+        m = l.find((e) => e._dispatchToken === d);
     return (0, r.jsxs)('div', {
         ref: e,
         className: i()(x.panel, f.panel),
@@ -144,11 +144,11 @@ function C() {
             (0, r.jsx)(h.Z, {
                 columns: b,
                 data: c,
-                selectedRowKey: u,
-                onClickRow: (e) => d(e.key)
+                selectedRowKey: d,
+                onClickRow: (e) => u(e.key)
             }),
             null != m &&
-                (0, r.jsx)(j, {
+                (0, r.jsx)(_, {
                     store: m,
                     initialHeight: null != e.current ? e.current.clientHeight / 2 : 300
                 })

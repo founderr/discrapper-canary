@@ -12,11 +12,11 @@ var r = n(735250),
     o = n(246992),
     s = n(500949),
     c = n(806714);
-let u = s.M3.map((e) => ({
+let d = s.M3.map((e) => ({
         value: e.space,
         name: e.name
     })),
-    d = Object.values(s.iw).map((e) => ({
+    u = Object.values(s.iw).map((e) => ({
         value: e,
         name: e
     })),
@@ -33,8 +33,8 @@ let u = s.M3.map((e) => ({
     }));
 function m(e) {
     let { state: t, setState: n } = e,
-        { scales: u } = t,
-        [d, m] = a.useState(null),
+        { scales: d } = t,
+        [u, m] = a.useState(null),
         p = (0, r.jsxs)('div', {
             className: c.section,
             children: [
@@ -64,7 +64,7 @@ function m(e) {
                 }),
                 (0, r.jsx)('ul', {
                     className: c.overrides,
-                    children: u.map((e) =>
+                    children: d.map((e) =>
                         (0, r.jsx)(
                             'li',
                             {
@@ -87,7 +87,7 @@ function m(e) {
                 })
             ]
         }),
-        g = u.find((e) => e.name === d),
+        g = d.find((e) => e.name === u),
         b =
             null != g
                 ? (0, r.jsx)(x, {
@@ -143,7 +143,7 @@ function x(e) {
                         children: 'The color space used to generate the palette. Different color spaces will produce different results.'
                     }),
                     (0, r.jsx)(i.RadioGroup, {
-                        options: u,
+                        options: d,
                         value: f,
                         onChange: (e) => (0, s.t4)(l, e.value, n)
                     })
@@ -213,7 +213,7 @@ function x(e) {
                                     children: 'The easing function used to generate the palette. Different easing functions will produce different results.'
                                 }),
                                 (0, r.jsx)(i.RadioGroup, {
-                                    options: d,
+                                    options: u,
                                     value: p,
                                     onChange: (e) => {
                                         (0, s.BZ)(l, e.value, n);

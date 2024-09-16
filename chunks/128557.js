@@ -26,13 +26,13 @@ var i = n(735250),
     g = n(314897),
     C = n(430824),
     I = n(594174),
-    x = n(259580),
-    T = n(585483),
-    v = n(63063),
-    S = n(358085),
+    T = n(259580),
+    x = n(585483),
+    S = n(63063),
+    v = n(358085),
     N = n(709054),
-    Z = n(967128),
-    A = n(981631),
+    A = n(967128),
+    Z = n(981631),
     M = n(231873),
     b = n(689938),
     R = n(776187);
@@ -66,9 +66,9 @@ function L(e) {
                           color: 'currentColor',
                           className: l()(R.checkmark, { [R.animate]: u })
                       })
-                    : (0, i.jsx)(x.Z, {
+                    : (0, i.jsx)(T.Z, {
                           className: R.arrow,
-                          direction: x.Z.Directions.RIGHT
+                          direction: T.Z.Directions.RIGHT
                       })
             ]
         })
@@ -77,14 +77,14 @@ function L(e) {
 function j(e) {
     let { channel: t } = e,
         a = (0, c.e7)([C.Z], () => (null != t ? C.Z.getGuild(t.getGuildId()) : null), [t]),
-        h = null != a && N.default.extractTimestamp(a.id) < Date.now() - A._8R,
-        x = (0, c.e7)([g.default], () => (null == a ? void 0 : a.ownerId) === g.default.getId(), [a]),
+        h = null != a && N.default.extractTimestamp(a.id) < Date.now() - Z._8R,
+        T = (0, c.e7)([g.default], () => (null == a ? void 0 : a.ownerId) === g.default.getId(), [a]),
         { canInvite: j, canManageGuild: P, canMessage: O } = (0, _.TE)(t, a),
         y = (0, c.e7)([I.default], () => {
             var e, t;
             return (null === (e = I.default.getCurrentUser()) || void 0 === e ? void 0 : e.desktop) === !0 || (null === (t = I.default.getCurrentUser()) || void 0 === t ? void 0 : t.mobile) === !0;
         }),
-        { guildPopulated: D, guildMessaged: k, guildPersonalized: U } = (0, _.h_)(a),
+        { guildPopulated: D, guildMessaged: U, guildPersonalized: k } = (0, _.h_)(a),
         {
             handleInvite: w,
             handleMessage: B,
@@ -93,7 +93,7 @@ function j(e) {
             handleAddApplication: V
         } = (function (e) {
             let t = s.useCallback(() => {
-                    m.ZP.trackWithMetadata(A.rMx.SERVER_SETUP_CTA_CLICKED, {
+                    m.ZP.trackWithMetadata(Z.rMx.SERVER_SETUP_CTA_CLICKED, {
                         setup_type: M.Ft.CHANNEL_WELCOME,
                         action: M.j7.INVITE
                     }),
@@ -104,30 +104,30 @@ function j(e) {
                                     (0, i.jsx)(t, {
                                         ...n,
                                         guild: e,
-                                        source: A.t4x.CHANNEL_WELCOME,
-                                        analyticsLocation: { section: A.jXE.CHANNEL_WELCOME_CTA }
+                                        source: Z.t4x.CHANNEL_WELCOME,
+                                        analyticsLocation: { section: Z.jXE.CHANNEL_WELCOME_CTA }
                                     });
                             });
                 }, [e]),
                 a = s.useCallback(() => {
-                    m.ZP.trackWithMetadata(A.rMx.SERVER_SETUP_CTA_CLICKED, {
+                    m.ZP.trackWithMetadata(Z.rMx.SERVER_SETUP_CTA_CLICKED, {
                         setup_type: M.Ft.CHANNEL_WELCOME,
                         action: M.j7.SEND_MESSAGE
                     }),
-                        T.S.dispatch(A.CkL.TEXTAREA_FOCUS, {
+                        x.S.dispatch(Z.CkL.TEXTAREA_FOCUS, {
                             highlight: !0,
-                            channelId: A.lds
+                            channelId: Z.lds
                         });
                 }, []),
                 l = s.useCallback(() => {
-                    m.ZP.trackWithMetadata(A.rMx.SERVER_SETUP_CTA_CLICKED, {
+                    m.ZP.trackWithMetadata(Z.rMx.SERVER_SETUP_CTA_CLICKED, {
                         setup_type: M.Ft.CHANNEL_WELCOME,
                         action: M.j7.PERSONALIZE_SERVER
                     }),
-                        null != e && f.Z.open(e.id, A.pNK.OVERVIEW, { section: A.jXE.CHANNEL_WELCOME_CTA });
+                        null != e && f.Z.open(e.id, Z.pNK.OVERVIEW, { section: Z.jXE.CHANNEL_WELCOME_CTA });
                 }, [e]),
                 r = s.useCallback(() => {
-                    m.ZP.trackWithMetadata(A.rMx.SERVER_SETUP_CTA_CLICKED, {
+                    m.ZP.trackWithMetadata(Z.rMx.SERVER_SETUP_CTA_CLICKED, {
                         setup_type: M.Ft.CHANNEL_WELCOME,
                         action: M.j7.DOWNLOAD
                     }),
@@ -135,7 +135,7 @@ function j(e) {
                             let { default: e } = await Promise.resolve().then(n.bind(n, 431583));
                             return (t) =>
                                 (0, i.jsx)(e, {
-                                    source: A.jXE.CHANNEL_WELCOME_CTA,
+                                    source: Z.jXE.CHANNEL_WELCOME_CTA,
                                     ...t
                                 });
                         });
@@ -147,7 +147,7 @@ function j(e) {
                 handleDownload: r,
                 handleAddApplication: s.useCallback(() => {
                     null != e &&
-                        (m.ZP.trackWithMetadata(A.rMx.SERVER_SETUP_CTA_CLICKED, {
+                        (m.ZP.trackWithMetadata(Z.rMx.SERVER_SETUP_CTA_CLICKED, {
                             setup_type: M.Ft.CHANNEL_WELCOME,
                             action: M.j7.ADD_APP
                         }),
@@ -165,7 +165,7 @@ function j(e) {
                 }, [e])
             };
         })(a),
-        F = !(y || D || k || U),
+        F = !(y || D || U || k),
         { titleAnimatedStyle: W, opacities: z } = (function (e) {
             let t = (0, r.Z)(() => new o.Z.Value(0)),
                 n = (0, r.Z)(() => new o.Z.Value(0)),
@@ -229,7 +229,7 @@ function j(e) {
     if (
         (s.useEffect(() => {
             var e;
-            (0, E.i)(null !== (e = null == a ? void 0 : a.id) && void 0 !== e ? e : A.lds);
+            (0, E.i)(null !== (e = null == a ? void 0 : a.id) && void 0 !== e ? e : Z.lds);
         }, [a]),
         null == a)
     )
@@ -263,7 +263,7 @@ function j(e) {
                         children: (0, i.jsx)(L, {
                             iconUrl: n(753033),
                             header: b.Z.Messages.WELCOME_CTA_PERSONALIZE_TITLE,
-                            completed: U,
+                            completed: k,
                             onClick: H
                         })
                     },
@@ -280,14 +280,14 @@ function j(e) {
                         children: (0, i.jsx)(L, {
                             iconUrl: n(15717),
                             header: b.Z.Messages.WELCOME_CTA_MESSAGE_TITLE,
-                            completed: k,
+                            completed: U,
                             onClick: B
                         })
                     },
                     'message'
                 )
             ),
-        (0, S.isWeb)() &&
+        (0, v.isWeb)() &&
             K.push(
                 (0, i.jsx)(
                     o.Z.div,
@@ -320,10 +320,10 @@ function j(e) {
                 'addapp'
             )
         ));
-    let q = x ? b.Z.Messages.WELCOME_CTA_SUBTITLE_OWNER : b.Z.Messages.WELCOME_CTA_SUBTITLE_MEMBER;
+    let q = T ? b.Z.Messages.WELCOME_CTA_SUBTITLE_OWNER : b.Z.Messages.WELCOME_CTA_SUBTITLE_MEMBER;
     h && (q = b.Z.Messages.WELCOME_CTA_SUBTITLE_EXISTING_SERVER);
-    let X = ''.concat(v.Z.getArticleURL(A.BhN.GUILD_GETTING_STARTED), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm');
-    return (0, i.jsx)(Z.ZP, {
+    let X = ''.concat(S.Z.getArticleURL(Z.BhN.GUILD_GETTING_STARTED), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm');
+    return (0, i.jsx)(A.ZP, {
         channelId: t.id,
         children: (0, i.jsx)('div', {
             className: R.container,

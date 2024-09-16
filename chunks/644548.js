@@ -13,11 +13,11 @@ var l = n(735250),
     x = n(297781),
     E = n(591853),
     _ = n(410441),
-    p = n(797342),
-    v = n(689938);
+    v = n(797342),
+    p = n(689938);
 let T = (e, t, n, l) => {
         let a = (function (e) {
-                if (e === i._.WEEK) return v.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_GAME_WEEK_POPOUT;
+                if (e === i._.WEEK) return p.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_GAME_WEEK_POPOUT;
             })(l),
             r = s.ZP.getName(t.guild_id, t.id, n),
             o = e.extra.game_name;
@@ -29,14 +29,14 @@ let T = (e, t, n, l) => {
             .replaceAll('*', '');
     },
     f = (e, t) =>
-        v.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING.format({
+        p.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING.format({
             username: t.username,
             activity: e.extra.game_name
         });
 t.Z = (e) => {
     let { channel: t, entry: n, disableGameProfileLinks: i, onReaction: s, onVoiceChannelPreview: g } = e,
         { largeImage: I } = (0, o.rv)({ entry: n }),
-        { user: C, details: N, appName: P } = (0, p.n)(n),
+        { user: C, details: N, appName: P } = (0, v.n)(n),
         { primaryColor: Z, secondaryColor: S } = (0, d.Z)(null == I ? void 0 : I.src),
         M = (0, u.yA)(n),
         y = (0, u.Nq)(n),
@@ -48,7 +48,7 @@ t.Z = (e) => {
                         applicationImageSrc: null == I ? void 0 : I.src,
                         avatarSrcs: [C.getAvatarURL(null == t ? void 0 : t.guild_id, 128)],
                         description: T(n, t, C, y),
-                        timestamp: v.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_HOURS.format({ hours: Math.round(M / r.Z.Seconds.HOUR) }),
+                        timestamp: p.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_HOURS.format({ hours: Math.round(M / r.Z.Seconds.HOUR) }),
                         colors: [Z, S],
                         channelId: e
                     });
@@ -66,10 +66,10 @@ t.Z = (e) => {
                         ? null
                         : (0, l.jsx)(_.Z, {
                               Icon: O,
-                              'aria-label': v.Z.Messages.GAME_LIBRARY_LIST_HEADER_PLATFORM
+                              'aria-label': p.Z.Messages.GAME_LIBRARY_LIST_HEADER_PLATFORM
                           }),
                 entry: n,
-                userDescription: v.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED_V2,
+                userDescription: p.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED_V2,
                 title: P,
                 subtitle: N,
                 badges: (0, l.jsx)(x.Gk, {

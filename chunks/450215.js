@@ -20,14 +20,14 @@ var s = n(735250),
     m = n(723047),
     N = n(727843),
     S = n(290348),
-    h = n(857081),
-    g = n(869269),
+    g = n(857081),
+    h = n(869269),
     C = n(981631),
     x = n(689938),
     p = n(517194);
 function R(e) {
     var t, n;
-    let { guildId: i, initialEditStateId: l, allSubscriptionListings: R, priceTiers: f, onDeleteEditState: L, groupListingId: O, onBeforeDispatchNewListing: A, onAfterDispatchNewListing: M } = e,
+    let { guildId: i, initialEditStateId: l, allSubscriptionListings: R, priceTiers: L, onDeleteEditState: f, groupListingId: O, onBeforeDispatchNewListing: A, onAfterDispatchNewListing: M } = e,
         [D, v] = a.useState(l),
         j = (0, c.e7)([T.Z], () => T.Z.getSubscriptionListing(D)),
         Z = null == j,
@@ -37,13 +37,13 @@ function R(e) {
         B = null !== (n = null == j ? void 0 : j.archived) && void 0 !== n && n,
         y = !B && !P && void 0 !== j,
         F = void 0 === j,
-        k = (0, m.mY)(),
-        [w] = S._T(D),
+        w = (0, m.mY)(),
+        [k] = S._T(D),
         [H] = S.mR(D),
         [V] = S.PK(D),
         [Y] = S.d9(D, 1024),
-        W = '' !== w ? w : x.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INITIAL_TIER_NAME,
-        z = '' !== w && null != Y && '' !== V && null != H && !k,
+        W = '' !== k ? k : x.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INITIAL_TIER_NAME,
+        z = '' !== k && null != Y && '' !== V && null != H && !w,
         K = S.rU(D),
         { loading: q, error: X, handleCreateOrUpdateFromEditState: Q } = S.Xo(),
         { submitting: J, error: $, publishSubscriptionListing: ee } = (0, E.HQ)(),
@@ -58,7 +58,7 @@ function R(e) {
                         className: p.headerImageContainer,
                         children:
                             null == Y
-                                ? (0, s.jsx)(h.Z, {
+                                ? (0, s.jsx)(g.Z, {
                                       className: p.starIcon,
                                       'aria-hidden': !0
                                   })
@@ -115,7 +115,7 @@ function R(e) {
                                       look: d.Button.Looks.BLANK,
                                       className: p.cancel,
                                       onClick: () => {
-                                          S.GM(D), Z ? null == L || L() : U(!1);
+                                          S.GM(D), Z ? null == f || f() : U(!1);
                                       },
                                       children: x.Z.Messages.CANCEL
                                   }),
@@ -153,9 +153,9 @@ function R(e) {
                     editStateId: D,
                     guildId: i,
                     groupListingId: O,
-                    children: (0, s.jsx)(g.Z, {
+                    children: (0, s.jsx)(h.Z, {
                         allSubscriptionListings: R,
-                        priceTiers: f,
+                        priceTiers: L,
                         loading: et,
                         error: null != X ? X : $,
                         handlePublishTier: () => {
@@ -167,7 +167,7 @@ function R(e) {
                                     listingId: j.id
                                 });
                         },
-                        onDeleteEditState: L
+                        onDeleteEditState: f
                     })
                 })
         ]

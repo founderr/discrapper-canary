@@ -15,14 +15,14 @@ var s = n(735250),
     m = n(706454),
     N = n(650774),
     S = n(430824),
-    h = n(626135),
-    g = n(771212),
+    g = n(626135),
+    h = n(771212),
     C = n(434404),
     x = n(146596),
     p = n(559368),
     R = n(999382),
-    f = n(981631),
-    L = n(921944),
+    L = n(981631),
+    f = n(921944),
     O = n(190378),
     A = n(689938),
     M = n(396466),
@@ -50,7 +50,7 @@ let y = function (e, t, n) {
     },
     F = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return t || e === f.evJ.NOT_ENOUGH_GUILD_MEMBERS
+        return t || e === L.evJ.NOT_ENOUGH_GUILD_MEMBERS
             ? (0, s.jsx)(u.FormErrorBlock, {
                   icon: u.CircleInformationIcon,
                   className: M.notEnoughMembersError,
@@ -64,34 +64,34 @@ let y = function (e, t, n) {
                     children: A.Z.Messages.GUILD_ANALYTICS_ERROR_MESSAGE
                 });
     };
-function k(e) {
-    h.default.track(f.rMx.GUILD_INSIGHTS_SETTINGS_CTA_CLICKED, { guild_id: e });
-    let t = null == e ? f.E07.DEVELOPER_PORTAL : f.E07.DEVELOPER_PORTAL_GUILD_ANALYTICS(e),
+function w(e) {
+    g.default.track(L.rMx.GUILD_INSIGHTS_SETTINGS_CTA_CLICKED, { guild_id: e });
+    let t = null == e ? L.E07.DEVELOPER_PORTAL : L.E07.DEVELOPER_PORTAL_GUILD_ANALYTICS(e),
         n = (0, i.Z)();
     return o.tn
         .post({
-            url: f.ANM.HANDOFF,
+            url: L.ANM.HANDOFF,
             body: { key: n },
             oldFormErrors: !0
         })
         .then(
             (e) => {
                 let s = e.body.handoff_token;
-                window.open(f.EYA.DEVELOPER_PORTAL_LOGIN_HANDOFF(n, s, t));
+                window.open(L.EYA.DEVELOPER_PORTAL_LOGIN_HANDOFF(n, s, t));
             },
             () => {
                 window.open(t);
             }
         );
 }
-let w = () => {
+let k = () => {
     let [e, t] = a.useState(!1),
         n = (0, l.e7)([R.Z], () => R.Z.getGuildId());
     return (0, s.jsx)(u.Button, {
         className: M.developerPortalCta,
         onClick: () => {
             t(!0),
-                k(n).then(() => {
+                w(n).then(() => {
                     t(!1);
                 });
         },
@@ -106,10 +106,10 @@ function H(e) {
             var e;
             return null !== (e = N.Z.getMemberCount()) && void 0 !== e ? e : 0;
         }),
-        { showAccessRate: o } = (0, g.eA)(t, !n);
+        { showAccessRate: o } = (0, h.eA)(t, !n);
     if (
         (a.useEffect(() => {
-            o && ((0, I.kk)(c.z.GUILD_INSIGHTS_ACCESS_RATE_NEW), (0, I.EW)(c.z.GUILD_INSIGHTS_ACCESS_RATE_NEW, { dismissAction: L.L.AUTO }));
+            o && ((0, I.kk)(c.z.GUILD_INSIGHTS_ACCESS_RATE_NEW), (0, I.EW)(c.z.GUILD_INSIGHTS_ACCESS_RATE_NEW, { dismissAction: f.L.AUTO }));
         }, [o]),
         !o || !n || null == i)
     )
@@ -286,7 +286,7 @@ function H(e) {
                                                                   (0, s.jsx)(
                                                                       T.Z,
                                                                       {
-                                                                          onClick: () => C.Z.setSection(f.pNK.INTEGRATIONS),
+                                                                          onClick: () => C.Z.setSection(L.pNK.INTEGRATIONS),
                                                                           className: M.link,
                                                                           children: e
                                                                       },
@@ -334,7 +334,7 @@ function H(e) {
                                                       (0, s.jsx)(
                                                           T.Z,
                                                           {
-                                                              onClick: () => k(t),
+                                                              onClick: () => w(t),
                                                               className: M.link,
                                                               children: e
                                                           },
@@ -366,7 +366,7 @@ t.Z = () => {
             analytics: null != e ? p.Z.getOverviewAnalytics(e) : null,
             errorCode: p.Z.getError()
         })),
-        c = null == t || null == n || (null != t && t < 500 && null != n && !n.hasFeature(f.oNc.PARTNERED) && !n.hasFeature(f.oNc.VERIFIED));
+        c = null == t || null == n || (null != t && t < 500 && null != n && !n.hasFeature(L.oNc.PARTNERED) && !n.hasFeature(L.oNc.VERIFIED));
     a.useEffect(() => {
         null != e && !c && ((0, x.Vk)(e), (0, x.SR)(e), (0, x.xl)(e));
     }, [e, c]),
@@ -422,7 +422,7 @@ t.Z = () => {
                         variant: 'text-sm/normal',
                         children: A.Z.Messages.GUILD_ANALYTICS_DEVELOPERS_CTA
                     }),
-                    (0, s.jsx)(w, {})
+                    (0, s.jsx)(k, {})
                 ]
             }),
             d

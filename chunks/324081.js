@@ -18,10 +18,10 @@ var s = n(120356),
     I = n(313201),
     m = n(565138),
     T = n(199902),
-    N = n(592125),
-    h = n(430824),
-    C = n(158776),
-    f = n(594174),
+    h = n(592125),
+    N = n(430824),
+    f = n(158776),
+    C = n(594174),
     p = n(689938),
     g = n(699420);
 let S = {
@@ -72,7 +72,7 @@ function R(e) {
 }
 function O(e) {
     let { channel: t, gotoChannel: n } = e,
-        s = (0, l.e7)([f.default], () => (t.isDM() ? f.default.getUser(t.getRecipientId()) : null)),
+        s = (0, l.e7)([C.default], () => (t.isDM() ? C.default.getUser(t.getRecipientId()) : null)),
         a = null == s ? (0, u.x)(t) : s.getAvatarURL(void 0, 40);
     return (0, i.jsx)(o.Clickable, {
         onClick: n,
@@ -87,7 +87,7 @@ function O(e) {
 }
 function x(e) {
     let { channel: t, gotoChannel: n } = e,
-        s = (0, l.e7)([h.Z], () => h.Z.getGuild(t.guild_id));
+        s = (0, l.e7)([N.Z], () => N.Z.getGuild(t.guild_id));
     return null == s
         ? null
         : (0, i.jsx)(m.Z, {
@@ -102,8 +102,8 @@ function x(e) {
 }
 function M(e) {
     let { channel: t, gotoChannel: n, mentionCount: s } = e,
-        r = (0, l.e7)([h.Z], () => h.Z.getGuild(t.guild_id)),
-        c = (0, l.e7)([N.Z], () => N.Z.getChannel(t.parent_id)),
+        r = (0, l.e7)([N.Z], () => N.Z.getGuild(t.guild_id)),
+        c = (0, l.e7)([h.Z], () => h.Z.getChannel(t.parent_id)),
         u = (0, _.KS)(t, r),
         I = (0, d.ZP)(t, !1),
         m = null == c ? (null == r ? void 0 : r.name) : ''.concat(null == r ? void 0 : r.name, ' \u203A ').concat(c.name),
@@ -163,11 +163,11 @@ function v(e) {
             user: n,
             activities: s,
             applicationStream: a
-        } = (0, l.cj)([f.default, C.Z, T.Z], () => {
-            let e = f.default.getUser(t.getRecipientId());
+        } = (0, l.cj)([C.default, f.Z, T.Z], () => {
+            let e = C.default.getUser(t.getRecipientId());
             return {
                 user: e,
-                activities: null != e ? C.Z.getActivities(e.id) : null,
+                activities: null != e ? f.Z.getActivities(e.id) : null,
                 applicationStream: null != e ? T.Z.getAnyStreamForUser(e.id) : null
             };
         });

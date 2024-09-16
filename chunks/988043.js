@@ -21,8 +21,8 @@ var n = t(735250),
     N = t(981631),
     m = t(689938);
 function C() {
-    let e = (0, _.i)(),
-        s = (0, _.c)(),
+    let e = (0, _.is)(),
+        s = (0, _.c_)(),
         t = d.h2.useSetting().includes(e),
         C = d.iG.useSetting(),
         A = a.useCallback(

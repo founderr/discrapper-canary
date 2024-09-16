@@ -19,8 +19,8 @@ var s = n(735250),
     m = n(464610),
     N = n(733629),
     S = n(598622),
-    h = n(921944),
-    g = n(689938),
+    g = n(921944),
+    h = n(689938),
     C = n(176981);
 function x(e) {
     let t,
@@ -30,12 +30,12 @@ function x(e) {
         R = (0, i.e7)([E.Z], () => E.Z.getCurrentPage());
     if (
         (a.useEffect(() => {
-            (0, o.EW)(r.z.COMMUNITY_GUILD_SETTINGS_SAFETY, { dismissAction: h.L.AUTO });
+            (0, o.EW)(r.z.COMMUNITY_GUILD_SETTINGS_SAFETY, { dismissAction: g.L.AUTO });
         }, []),
         null == p)
     )
         return null;
-    let f = (0, S.Q)(p);
+    let L = (0, S.Q)(p);
     switch (R) {
         case T.u.OVERVIEW:
             t = (0, s.jsx)(m.Z, {
@@ -45,14 +45,14 @@ function x(e) {
             break;
         case T.u.CAPTCHA_AND_RAID_PROTECTION:
             t = (0, s.jsx)(N.Z, {
-                title: g.Z.Messages.GUILD_SETTINGS_SAFETY_CAPTCHA_RAID_PROTECTION,
-                settings: f[T.u.CAPTCHA_AND_RAID_PROTECTION]
+                title: h.Z.Messages.GUILD_SETTINGS_SAFETY_CAPTCHA_RAID_PROTECTION,
+                settings: L[T.u.CAPTCHA_AND_RAID_PROTECTION]
             });
             break;
         case T.u.DM_AND_SPAM_PROTECTION:
             t = (0, s.jsx)(N.Z, {
-                title: g.Z.Messages.GUILD_SETTINGS_SAFETY_DM_SPAM_PROTECTION,
-                settings: f[T.u.DM_AND_SPAM_PROTECTION]
+                title: h.Z.Messages.GUILD_SETTINGS_SAFETY_DM_SPAM_PROTECTION,
+                settings: L[T.u.DM_AND_SPAM_PROTECTION]
             });
             break;
         case T.u.AUTOMOD:
@@ -60,8 +60,8 @@ function x(e) {
             break;
         case T.u.PERMISSIONS:
             t = (0, s.jsx)(N.Z, {
-                title: g.Z.Messages.GUILD_SETTINGS_SAFETY_PERMISSIONS_TITLE,
-                settings: f[T.u.PERMISSIONS]
+                title: h.Z.Messages.GUILD_SETTINGS_SAFETY_PERMISSIONS_TITLE,
+                settings: L[T.u.PERMISSIONS]
             });
     }
     return (0, s.jsxs)(s.Fragment, {
@@ -83,7 +83,7 @@ function x(e) {
                         (0, s.jsx)(l.Text, {
                             variant: 'text-sm/semibold',
                             color: 'interactive-normal',
-                            children: g.Z.Messages.BACK
+                            children: h.Z.Messages.BACK
                         })
                     ]
                 }),

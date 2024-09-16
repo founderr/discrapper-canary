@@ -23,14 +23,14 @@ var s = n(735250),
     m = n(26323),
     N = n(307707),
     S = n(734893),
-    h = n(305762),
-    g = n(150512),
+    g = n(305762),
+    h = n(150512),
     C = n(516129),
     x = n(813197),
     p = n(210887),
     R = n(314897),
-    f = n(592125),
-    L = n(984933),
+    L = n(592125),
+    f = n(984933),
     O = n(430824),
     A = n(709586),
     M = n(768581),
@@ -45,8 +45,8 @@ var s = n(735250),
     B = n(486324),
     y = n(200299),
     F = n(689938),
-    k = n(812315),
-    w = n(91716),
+    w = n(812315),
+    k = n(91716),
     H = n(470264),
     V = n(710043),
     Y = n(847950);
@@ -76,10 +76,10 @@ function W(e) {
               })
           })
         : (0, s.jsxs)(c.Clickable, {
-              className: k.editWelcomeSection,
+              className: w.editWelcomeSection,
               onClick: o,
               children: [
-                  (0, s.jsx)(g.Z, {
+                  (0, s.jsx)(h.Z, {
                       guildId: t,
                       welcomeMessage: {
                           authorIds: i.authorIds.length > 0 ? i.authorIds : [d],
@@ -91,7 +91,7 @@ function W(e) {
                       children: (e) =>
                           (0, s.jsxs)('div', {
                               ...e,
-                              className: r()(k.actionItemEditButton, k.editWelcomeButton),
+                              className: r()(w.actionItemEditButton, w.editWelcomeButton),
                               children: [
                                   (0, s.jsx)(c.PencilIcon, {
                                       size: 'md',
@@ -106,8 +106,8 @@ function W(e) {
 }
 function z(e) {
     var t, i, o, d, u;
-    let { guildId: E, action: T, actionIndex: m, onChange: g, onDelete: C, onDragStart: x, onDragComplete: p, onDragReset: R } = e,
-        L = (0, l.e7)([f.Z], () => f.Z.getChannel(T.channelId)),
+    let { guildId: E, action: T, actionIndex: m, onChange: h, onDelete: C, onDragStart: x, onDragComplete: p, onDragReset: R } = e,
+        f = (0, l.e7)([L.Z], () => L.Z.getChannel(T.channelId)),
         A = (0, l.e7)([O.Z], () => O.Z.getGuild(E)),
         { customEmoji: D, unicodeEmoji: v } = (0, N.Z)(null === (t = T.emoji) || void 0 === t ? void 0 : t.id, null === (i = T.emoji) || void 0 === i ? void 0 : i.name),
         j = null == T.emoji || null != D || null != v,
@@ -116,7 +116,7 @@ function z(e) {
             icon: T.icon
         }),
         b = null;
-    null != L && (0, S.kb)(L) ? !j && (b = F.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_INVALID_ACTION_CHANNEL_EMOJI) : (b = F.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_INVALID_ACTION_CHANNEL);
+    null != f && (0, S.kb)(f) ? !j && (b = F.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_INVALID_ACTION_CHANNEL_EMOJI) : (b = F.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_INVALID_ACTION_CHANNEL);
     let {
             drag: U,
             dragSourcePosition: G,
@@ -139,40 +139,40 @@ function z(e) {
                             ...t,
                             guildId: E,
                             action: T,
-                            onSave: (e, t, n) => g(m, e, t, n),
+                            onSave: (e, t, n) => h(m, e, t, n),
                             onDelete: () => C(m)
                         });
                 });
-        }, [E, T, m, g, C]);
-    if (null == L || null == A) return null;
-    let w = null !== (u = (0, _.KS)(L)) && void 0 !== u ? u : c.TextIcon;
+        }, [E, T, m, h, C]);
+    if (null == f || null == A) return null;
+    let k = null !== (u = (0, _.KS)(f)) && void 0 !== u ? u : c.TextIcon;
     return (0, s.jsxs)('div', {
-        className: r()(k.actionItemContainer),
+        className: r()(w.actionItemContainer),
         children: [
             (0, s.jsxs)('div', {
-                className: r()(k.actionItem, {
-                    [k.dropIndicatorBefore]: null != G && m < G,
-                    [k.dropIndicatorAfter]: null != G && m > G,
-                    [k.actionItemError]: null != b
+                className: r()(w.actionItem, {
+                    [w.dropIndicatorBefore]: null != G && m < G,
+                    [w.dropIndicatorAfter]: null != G && m > G,
+                    [w.actionItemError]: null != b
                 }),
                 ref: (e) => U(P(e)),
                 children: [
                     (0, s.jsx)('div', {
-                        className: k.dragContainer,
+                        className: w.dragContainer,
                         onMouseEnter: () => B(!0),
                         onMouseLeave: () => B(!1),
                         children: (0, s.jsx)(c.DragIcon, {
                             size: 'xs',
                             color: 'currentColor',
-                            className: k.dragIcon
+                            className: w.dragIcon
                         })
                     }),
                     null != Z
                         ? (0, s.jsx)('div', {
-                              className: k.iconWrapper,
+                              className: w.iconWrapper,
                               children: (0, s.jsx)('img', {
                                   src: Z,
-                                  className: k.icon,
+                                  className: w.icon,
                                   width: 48,
                                   height: 48,
                                   alt: '',
@@ -180,16 +180,16 @@ function z(e) {
                               })
                           })
                         : (0, s.jsx)('div', {
-                              className: k.actionItemEmojiWrapper,
-                              children: (0, s.jsx)(h.Z, {
+                              className: w.actionItemEmojiWrapper,
+                              children: (0, s.jsx)(g.Z, {
                                   emojiId: null === (o = T.emoji) || void 0 === o ? void 0 : o.id,
                                   emojiName: null === (d = T.emoji) || void 0 === d ? void 0 : d.name,
-                                  size: h.R.MEDIUM,
-                                  defaultComponent: (0, s.jsx)(w, {})
+                                  size: g.R.MEDIUM,
+                                  defaultComponent: (0, s.jsx)(k, {})
                               })
                           }),
                     (0, s.jsxs)('div', {
-                        className: k.actionItemText,
+                        className: w.actionItemText,
                         children: [
                             (0, s.jsx)(c.Text, {
                                 variant: 'text-md/semibold',
@@ -199,7 +199,7 @@ function z(e) {
                             (0, s.jsx)(c.Text, {
                                 variant: 'text-xs/medium',
                                 color: 'header-secondary',
-                                children: F.Z.Messages.NEW_MEMBER_ACTION_CHANNEL.format({ channelName: L.name })
+                                children: F.Z.Messages.NEW_MEMBER_ACTION_CHANNEL.format({ channelName: f.name })
                             })
                         ]
                     }),
@@ -208,8 +208,8 @@ function z(e) {
                         children: (e) =>
                             (0, s.jsxs)(c.Button, {
                                 ...e,
-                                className: k.actionItemEditButton,
-                                innerClassName: k.actionItemEditButtonInner,
+                                className: w.actionItemEditButton,
+                                innerClassName: w.actionItemEditButtonInner,
                                 size: c.Button.Sizes.MIN,
                                 onClick: y,
                                 children: [
@@ -291,7 +291,7 @@ function K(e) {
     return null == t
         ? null
         : (0, s.jsxs)('div', {
-              className: k.section,
+              className: w.section,
               children: [
                   n.map((e, n) =>
                       (0, s.jsx)(
@@ -320,12 +320,12 @@ function K(e) {
 }
 function q() {
     return (0, s.jsx)('div', {
-        className: k.actionItemContainer,
+        className: w.actionItemContainer,
         children: (0, s.jsxs)('div', {
-            className: k.actionItem,
+            className: w.actionItem,
             children: [
                 (0, s.jsx)('div', {
-                    className: k.actionItemEmojiWrapper,
+                    className: w.actionItemEmojiWrapper,
                     children: (0, s.jsx)(c.BookCheckIcon, {
                         size: 'custom',
                         color: 'currentColor',
@@ -334,7 +334,7 @@ function q() {
                     })
                 }),
                 (0, s.jsx)('div', {
-                    className: k.actionItemText,
+                    className: w.actionItemText,
                     children: (0, s.jsx)(c.Text, {
                         variant: 'text-md/semibold',
                         color: 'header-primary',
@@ -360,7 +360,7 @@ function X(e) {
                 });
         }, [t, i]);
     return (0, s.jsxs)(c.Clickable, {
-        className: k.addActionItem,
+        className: w.addActionItem,
         onClick: r,
         children: [
             (0, s.jsx)(c.CirclePlusIcon, {
@@ -377,7 +377,7 @@ function X(e) {
 }
 function Q() {
     return (0, s.jsxs)('div', {
-        className: k.badExample,
+        className: w.badExample,
         children: [
             (0, s.jsx)(c.Text, {
                 variant: 'eyebrow',
@@ -385,10 +385,10 @@ function Q() {
                 children: F.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_TODOS_BAD_EXAMPLE_REASON
             }),
             (0, s.jsxs)('div', {
-                className: k.example,
+                className: w.example,
                 children: [
                     (0, s.jsx)('div', {
-                        className: k.badExampleIcon,
+                        className: w.badExampleIcon,
                         children: (0, s.jsx)(c.XSmallIcon, {
                             size: 'md',
                             color: 'currentColor'
@@ -486,15 +486,15 @@ function J(e) {
         ? (0, s.jsxs)(s.Fragment, {
               children: [
                   (0, s.jsxs)('div', {
-                      className: k.sectionHeader,
+                      className: w.sectionHeader,
                       children: [
                           (0, s.jsx)(c.Heading, {
-                              className: k.header,
+                              className: w.header,
                               variant: 'heading-lg/extrabold',
                               children: F.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_BANNER
                           }),
                           (0, s.jsx)(T.Z, {
-                              className: k.boostIndicator,
+                              className: w.boostIndicator,
                               guild: r,
                               guildFeature: G.oNc.BANNER,
                               onClick: _
@@ -502,10 +502,10 @@ function J(e) {
                       ]
                   }),
                   (0, s.jsxs)('div', {
-                      className: k.section,
+                      className: w.section,
                       children: [
                           (0, s.jsxs)('div', {
-                              className: k.homeBannerExplainer,
+                              className: w.homeBannerExplainer,
                               children: [
                                   (0, s.jsx)(c.Text, {
                                       variant: 'text-sm/normal',
@@ -514,7 +514,7 @@ function J(e) {
                                   }),
                                   (0, s.jsxs)(c.Button, {
                                       color: c.ButtonColors.BRAND,
-                                      className: k.uploadButton,
+                                      className: w.uploadButton,
                                       children: [
                                           F.Z.Messages.UPLOAD_BACKGROUND,
                                           (0, s.jsx)(x.ZP, {
@@ -533,15 +533,15 @@ function J(e) {
         : (0, s.jsxs)(s.Fragment, {
               children: [
                   (0, s.jsxs)('div', {
-                      className: k.sectionHeader,
+                      className: w.sectionHeader,
                       children: [
                           (0, s.jsx)(c.Heading, {
-                              className: k.header,
+                              className: w.header,
                               variant: 'heading-lg/extrabold',
                               children: F.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_BANNER
                           }),
                           (0, s.jsx)(T.Z, {
-                              className: k.boostIndicator,
+                              className: w.boostIndicator,
                               guild: r,
                               guildFeature: G.oNc.BANNER,
                               onClick: _
@@ -549,10 +549,10 @@ function J(e) {
                       ]
                   }),
                   (0, s.jsxs)('div', {
-                      className: k.section,
+                      className: w.section,
                       children: [
                           (0, s.jsxs)('div', {
-                              className: k.homeBannerExplainer,
+                              className: w.homeBannerExplainer,
                               children: [
                                   (0, s.jsx)(c.Text, {
                                       variant: 'text-sm/normal',
@@ -560,8 +560,8 @@ function J(e) {
                                       children: F.Z.Messages.GUILD_SETTINGS_HOME_HEADER_RECOMMEND
                                   }),
                                   (0, s.jsxs)(c.ShinyButton, {
-                                      className: k.upsellButton,
-                                      innerClassName: k.upsellButtonInner,
+                                      className: w.upsellButton,
+                                      innerClassName: w.upsellButtonInner,
                                       color: c.Button.Colors.GREEN,
                                       onClick: _,
                                       children: [
@@ -595,9 +595,9 @@ function $(e) {
     let { guildId: t, resourceChannel: i, index: o, onDragComplete: d, onDragStart: u, onDragReset: _ } = e,
         E = (0, l.e7)([O.Z], () => O.Z.getGuild(t)),
         { title: T, channelId: m, description: N } = i,
-        h = f.Z.getChannel(m),
-        g = null;
-    (null == h || !(0, S.k3)(h)) && (g = F.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_INVALID_RESOURCE_CHANNEL);
+        g = L.Z.getChannel(m),
+        h = null;
+    (null == g || !(0, S.k3)(g)) && (h = F.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_INVALID_RESOURCE_CHANNEL);
     let C = null == N || 0 === N.length,
         x = M.ZP.getResourceChannelIconURL({
             channelId: i.channelId,
@@ -606,7 +606,7 @@ function $(e) {
         {
             drag: p,
             dragSourcePosition: R,
-            drop: L,
+            drop: f,
             setIsDraggable: A
         } = (0, I.Z)({
             type: 'RESOURCE_CHANNEL',
@@ -649,35 +649,35 @@ function $(e) {
                         });
                 });
         }, [t, i, D, v]);
-    return null == E || null == h
+    return null == E || null == g
         ? null
         : (0, s.jsxs)('div', {
-              className: r()(k.resourceChannelContainer),
+              className: r()(w.resourceChannelContainer),
               children: [
                   (0, s.jsxs)('div', {
-                      className: r()(k.resourceChannel, {
-                          [k.dropIndicatorBefore]: null != R && o < R,
-                          [k.dropIndicatorAfter]: null != R && o > R,
-                          [k.resourceChannelError]: null != g
+                      className: r()(w.resourceChannel, {
+                          [w.dropIndicatorBefore]: null != R && o < R,
+                          [w.dropIndicatorAfter]: null != R && o > R,
+                          [w.resourceChannelError]: null != h
                       }),
-                      ref: (e) => p(L(e)),
+                      ref: (e) => p(f(e)),
                       children: [
                           (0, s.jsx)('div', {
-                              className: k.dragContainer,
+                              className: w.dragContainer,
                               onMouseEnter: () => A(!0),
                               onMouseLeave: () => A(!1),
                               children: (0, s.jsx)(c.DragIcon, {
                                   size: 'xs',
                                   color: 'currentColor',
-                                  className: k.dragIcon
+                                  className: w.dragIcon
                               })
                           }),
                           null != x &&
                               (0, s.jsx)('div', {
-                                  className: k.iconWrapper,
+                                  className: w.iconWrapper,
                                   children: (0, s.jsx)('img', {
                                       src: x,
-                                      className: k.icon,
+                                      className: w.icon,
                                       width: 32,
                                       height: 32,
                                       alt: '',
@@ -685,17 +685,17 @@ function $(e) {
                                   })
                               }),
                           (0, s.jsxs)('div', {
-                              className: k.resourceChannelContent,
+                              className: w.resourceChannelContent,
                               children: [
                                   (0, s.jsx)(c.Text, {
-                                      className: k.resourceChannelTitle,
+                                      className: w.resourceChannelTitle,
                                       variant: 'text-md/semibold',
                                       color: 'header-primary',
                                       children: T
                                   }),
                                   !C &&
                                       (0, s.jsx)(c.Text, {
-                                          className: k.resourceChannelDescription,
+                                          className: w.resourceChannelDescription,
                                           variant: 'text-xs/medium',
                                           color: 'text-muted',
                                           lineClamp: 1,
@@ -708,8 +708,8 @@ function $(e) {
                               children: (e) =>
                                   (0, s.jsxs)(c.Button, {
                                       ...e,
-                                      className: k.resourceChannelEditButton,
-                                      innerClassName: k.resourceChannelEditButtonInner,
+                                      className: w.resourceChannelEditButton,
+                                      innerClassName: w.resourceChannelEditButtonInner,
                                       size: c.Button.Sizes.MIN,
                                       onClick: j,
                                       children: [
@@ -723,11 +723,11 @@ function $(e) {
                           })
                       ]
                   }),
-                  null != g &&
+                  null != h &&
                       (0, s.jsx)(c.Text, {
                           variant: 'text-xs/medium',
                           color: 'text-danger',
-                          children: g
+                          children: h
                       })
               ]
           });
@@ -748,16 +748,16 @@ function ee(e) {
     return (0, s.jsxs)(s.Fragment, {
         children: [
             (0, s.jsxs)('div', {
-                className: k.suggestedChannel,
+                className: w.suggestedChannel,
                 children: [
-                    (0, s.jsx)(l, { className: k.suggestedChannelIcon }),
+                    (0, s.jsx)(l, { className: w.suggestedChannelIcon }),
                     (0, s.jsx)(c.Text, {
-                        className: k.suggestedChannelText,
+                        className: w.suggestedChannelText,
                         variant: 'text-sm/normal',
                         children: n.name
                     }),
                     (0, s.jsx)(c.Button, {
-                        className: k.suggestedChannelButton,
+                        className: w.suggestedChannelButton,
                         size: c.Button.Sizes.MIN,
                         onClick: r,
                         children: (0, s.jsx)(c.Text, {
@@ -768,7 +768,7 @@ function ee(e) {
                     })
                 ]
             }),
-            i && (0, s.jsx)('div', { className: k.suggestedSeparator })
+            i && (0, s.jsx)('div', { className: w.suggestedSeparator })
         ]
     });
 }
@@ -780,7 +780,7 @@ function et(e) {
             return null !== (t = null === (e = b.Z.getSettings().resourceChannels) || void 0 === e ? void 0 : e.map((e) => e.channelId)) && void 0 !== t ? t : [];
         }),
         r = (0, l.Wu)([b.Z], () => b.Z.getDismissedSuggestedChannelIds(t)),
-        o = (0, l.e7)([L.ZP], () => (null == t ? [] : L.ZP.getSelectableChannels(t)))
+        o = (0, l.e7)([f.ZP], () => (null == t ? [] : f.ZP.getSelectableChannels(t)))
             .filter((e) => !r.includes(e.channel.id) && !i.includes(e.channel.id) && e.channel.type === G.d4z.GUILD_TEXT && D.Uu(G.Plq.VIEW_CHANNEL, e.channel) && !D.Uu(G.Plq.SEND_MESSAGES, e.channel) && e.channel.id !== (null == n ? void 0 : n.rulesChannelId))
             .slice(0, 5),
         d = a.useCallback(() => {
@@ -792,14 +792,14 @@ function et(e) {
         : (0, s.jsxs)(s.Fragment, {
               children: [
                   (0, s.jsxs)('div', {
-                      className: k.suggestedChannelsSection,
+                      className: w.suggestedChannelsSection,
                       children: [
                           (0, s.jsx)(c.Text, {
                               variant: 'text-md/semibold',
                               children: F.Z.Messages.RECOMMENDED
                           }),
                           (0, s.jsxs)('div', {
-                              className: k.suggestedChannelsHeader,
+                              className: w.suggestedChannelsHeader,
                               children: [
                                   (0, s.jsx)(c.Text, {
                                       variant: 'text-xs/medium',
@@ -807,13 +807,13 @@ function et(e) {
                                       children: F.Z.Messages.GUILD_SETTINGS_ONBOARDING_SUGGESTED_RESOURCES_EXPLAINER
                                   }),
                                   (0, s.jsxs)(c.Clickable, {
-                                      className: k.suggestedChannelsDismiss,
+                                      className: w.suggestedChannelsDismiss,
                                       onClick: d,
                                       children: [
                                           (0, s.jsx)(c.CheckmarkLargeIcon, {
                                               size: 'md',
                                               color: 'currentColor',
-                                              className: k.suggestedChannelsDismissCheck
+                                              className: w.suggestedChannelsDismissCheck
                                           }),
                                           (0, s.jsx)(c.Text, {
                                               variant: 'text-xs/semibold',
@@ -825,7 +825,7 @@ function et(e) {
                               ]
                           }),
                           (0, s.jsx)('div', {
-                              className: k.suggestedChannels,
+                              className: w.suggestedChannels,
                               children: o.map((e, t) =>
                                   (0, s.jsx)(
                                       ee,
@@ -839,7 +839,7 @@ function et(e) {
                           })
                       ]
                   }),
-                  (0, s.jsx)('div', { className: k.sectionSeparator })
+                  (0, s.jsx)('div', { className: w.sectionSeparator })
               ]
           });
 }
@@ -880,7 +880,7 @@ function en(e) {
                 });
         }, [t, _]);
     return (0, s.jsxs)('div', {
-        className: k.editResources,
+        className: w.editResources,
         children: [
             i.map((e, n) =>
                 (0, s.jsx)(
@@ -898,7 +898,7 @@ function en(e) {
             ),
             i.length < S.x3 &&
                 (0, s.jsxs)(c.Clickable, {
-                    className: k.addActionItem,
+                    className: w.addActionItem,
                     onClick: I,
                     children: [
                         (0, s.jsx)(c.CirclePlusIcon, {
@@ -953,18 +953,18 @@ function ea(e) {
             [t, n]
         ),
         (0, s.jsxs)('div', {
-            className: k.page,
+            className: w.page,
             children: [
                 (0, s.jsxs)('div', {
-                    className: k.leftColumn,
+                    className: w.leftColumn,
                     children: [
                         (0, s.jsx)(c.Heading, {
-                            className: k.header,
+                            className: w.header,
                             variant: 'heading-lg/extrabold',
                             children: F.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_WELCOME_TITLE
                         }),
                         (0, s.jsx)('div', {
-                            className: k.descriptionSection,
+                            className: w.descriptionSection,
                             children: (0, s.jsx)(c.Text, {
                                 variant: 'text-sm/medium',
                                 color: 'header-secondary',
@@ -972,20 +972,20 @@ function ea(e) {
                             })
                         }),
                         (0, s.jsx)('div', {
-                            className: k.section,
+                            className: w.section,
                             children: (0, s.jsx)(W, {
                                 guildId: n,
                                 welcomeMessage: i
                             })
                         }),
-                        (0, s.jsx)('div', { className: k.sectionSeparator }),
+                        (0, s.jsx)('div', { className: w.sectionSeparator }),
                         (0, s.jsx)(c.Heading, {
-                            className: k.header,
+                            className: w.header,
                             variant: 'heading-lg/extrabold',
                             children: F.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_TODOS_TITLE
                         }),
                         (0, s.jsx)('div', {
-                            className: k.descriptionSection,
+                            className: w.descriptionSection,
                             children: (0, s.jsx)(c.Text, {
                                 variant: 'text-sm/medium',
                                 color: 'header-secondary',
@@ -993,18 +993,18 @@ function ea(e) {
                             })
                         }),
                         (0, s.jsx)('div', {
-                            className: k.section,
+                            className: w.section,
                             children: (0, s.jsx)(Q, {})
                         }),
                         (0, s.jsx)(K, { guildId: n }),
-                        (0, s.jsx)('div', { className: k.sectionSeparator }),
+                        (0, s.jsx)('div', { className: w.sectionSeparator }),
                         (0, s.jsx)(c.Heading, {
-                            className: k.header,
+                            className: w.header,
                             variant: 'heading-lg/extrabold',
                             children: F.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_RESOURCES_TITLE
                         }),
                         (0, s.jsxs)('div', {
-                            className: k.descriptionSection,
+                            className: w.descriptionSection,
                             children: [
                                 (0, s.jsx)(c.Text, {
                                     variant: 'text-sm/medium',
@@ -1012,7 +1012,7 @@ function ea(e) {
                                     children: F.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_RESOURCES_DESCRIPTION
                                 }),
                                 (0, s.jsxs)('ul', {
-                                    className: k.bulletList,
+                                    className: w.bulletList,
                                     children: [
                                         (0, s.jsx)('li', {
                                             children: (0, s.jsx)(c.Text, {
@@ -1043,18 +1043,18 @@ function ea(e) {
                             ]
                         }),
                         (0, s.jsxs)('div', {
-                            className: k.section,
+                            className: w.section,
                             children: [(0, s.jsx)(et, { guildId: n }), (0, s.jsx)(en, { guildId: n })]
                         }),
-                        (0, s.jsx)('div', { className: k.sectionSeparator }),
+                        (0, s.jsx)('div', { className: w.sectionSeparator }),
                         (0, s.jsx)(J, { guildId: n })
                     ]
                 }),
                 (0, s.jsxs)('div', {
-                    className: k.rightColumn,
+                    className: w.rightColumn,
                     children: [
                         (0, s.jsx)('div', {
-                            className: k.centeredSection,
+                            className: w.centeredSection,
                             children: (0, s.jsx)(c.Text, {
                                 variant: 'text-sm/medium',
                                 color: 'header-secondary',
@@ -1062,8 +1062,8 @@ function ea(e) {
                             })
                         }),
                         (0, s.jsx)('img', {
-                            className: k.previewImage,
-                            src: (0, o.ap)(_) ? ('existing' === r ? H : Y) : 'existing' === r ? w : V,
+                            className: w.previewImage,
+                            src: (0, o.ap)(_) ? ('existing' === r ? H : Y) : 'existing' === r ? k : V,
                             alt: F.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_GUIDE_EXAMPLE_ALT
                         }),
                         (0, s.jsx)(c.SegmentedControl, {

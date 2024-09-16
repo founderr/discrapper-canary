@@ -34,7 +34,7 @@ function N(e) {
             }),
             (0, s.jsxs)('div', {
                 className: m.channelList,
-                children: [(0, s.jsx)(g, {}), 0 === i.length && (0, s.jsx)(S, {}), (0, s.jsx)(h, { channels: i })]
+                children: [(0, s.jsx)(h, {}), 0 === i.length && (0, s.jsx)(S, {}), (0, s.jsx)(g, { channels: i })]
             })
         ]
     });
@@ -59,11 +59,11 @@ function S() {
         ]
     });
 }
-function h(e) {
+function g(e) {
     let { channels: t } = e;
     return (0, s.jsx)(s.Fragment, { children: t.map((e) => (e.isCategory() ? (0, s.jsx)(C, { label: e.name }, e.id) : (0, s.jsx)(x, { channel: e }, e.id))) });
 }
-function g() {
+function h() {
     return (0, s.jsx)('div', { className: m.divider });
 }
 function C(e) {

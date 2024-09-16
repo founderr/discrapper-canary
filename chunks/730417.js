@@ -6,16 +6,16 @@ n.d(t, {
         return m;
     },
     c: function () {
-        return C;
-    },
-    dy: function () {
-        return N;
-    },
-    hs: function () {
         return f;
     },
-    op: function () {
+    dy: function () {
         return h;
+    },
+    hs: function () {
+        return C;
+    },
+    op: function () {
+        return N;
     }
 });
 var i = n(470079),
@@ -73,11 +73,11 @@ function T(e) {
         null != I && !!d && !T && o && l
     );
 }
-function N() {
+function h() {
     let e = m(I.X2.FORTNITE);
     return null == e ? void 0 : e.config.dropsEnabled;
 }
-function h(e) {
+function N(e) {
     let t = m(e),
         n = null == t ? void 0 : t.drop,
         a = (0, s.e7)([_.Z], () => null != n && _.Z.serverEligibleByQuestIds[n.dropsQuestId]),
@@ -86,7 +86,7 @@ function h(e) {
         null != n && a && !r && (0, u.Vb)(n.dropsQuestId);
     }, [n, a, r]);
 }
-function C(e, t, n, i) {
+function f(e, t, n, i) {
     var a;
     let r = m(e),
         c = null == r ? void 0 : r.drop,
@@ -94,16 +94,16 @@ function C(e, t, n, i) {
         d = (0, s.e7)([_.Z], () => _.Z.getIsPartnerGameQuestComplete(e)),
         I = (0, E.wj)(null == t ? void 0 : t.name, null !== (a = null == c ? void 0 : c.gameSearchTerm) && void 0 !== a ? a : []),
         T = (0, l.ot)([n, i]),
-        N = (0, o.wE)(i),
-        h = null == c || (0, E.hM)(c),
-        C = !!(null != c && !h && I && (null == r ? void 0 : r.config.dropsEnabled) && u);
+        h = (0, o.wE)(i),
+        N = null == c || (0, E.hM)(c),
+        f = !!(null != c && !N && I && (null == r ? void 0 : r.config.dropsEnabled) && u);
     return {
-        partnerGame: C ? e : null,
+        partnerGame: f ? e : null,
         dropsActivityPanelExperienceBlocked: T,
-        showDropsSparkles: !d && !N
+        showDropsSparkles: !d && !h
     };
 }
-function f(e, t, n) {
+function C(e, t, n) {
     let i = (0, E.BS)(e);
     (0, r.Z)({
         type: t,

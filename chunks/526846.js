@@ -1,6 +1,6 @@
 n.d(t, {
     m: function () {
-        return Z;
+        return A;
     }
 }),
     n(47120);
@@ -22,17 +22,17 @@ var i = n(735250),
     g = n(127255),
     C = n(5200),
     I = n(558317),
-    x = n(403404),
-    T = n(981631),
-    v = n(689938),
-    S = n(735338);
+    T = n(403404),
+    x = n(981631),
+    S = n(689938),
+    v = n(735338);
 let N = 'vc-activities-'.concat((0, r.Z)()),
-    Z = s.forwardRef(function (e, t) {
-        let { channel: n, isHovered: a, closePopout: r, onMouseEnter: Z, onMouseLeave: A, onClick: M, className: b } = e,
+    A = s.forwardRef(function (e, t) {
+        let { channel: n, isHovered: a, closePopout: r, onMouseEnter: A, onMouseLeave: Z, onClick: M, className: b } = e,
             R = (0, o.e7)([h.Z], () => h.Z.useReducedMotion),
             { id: L, guild_id: j } = n;
         s.useEffect(() => {
-            f.default.track(T.rMx.ACTIVITIES_CENTER_CONTROL_TRAY_BUTTON_HOVERED, {
+            f.default.track(x.rMx.ACTIVITIES_CENTER_CONTROL_TRAY_BUTTON_HOVERED, {
                 channel_id: L,
                 guild_id: j
             });
@@ -43,9 +43,9 @@ let N = 'vc-activities-'.concat((0, r.Z)()),
         let P = (0, d.bp)(),
             { analyticsLocations: O } = (0, p.ZP)(m.Z.ACTIVITIES_MINI_SHELF),
             { analyticsLocations: y } = (0, p.ZP)([...O, m.Z.ACTIVITIES_MINI_SHELF_BANNER]),
-            D = P === T.IlC.POPOUT,
-            k = (0, u.O)(),
-            U = (function (e) {
+            D = P === x.IlC.POPOUT,
+            U = (0, u.O)(),
+            k = (function (e) {
                 return (0, g.Z)({ guildId: e }).slice(0, 5);
             })(n.getGuildId());
         s.useEffect(() => {
@@ -54,26 +54,26 @@ let N = 'vc-activities-'.concat((0, r.Z)()),
         }, []);
         let w = s.useCallback(() => {
                 var e;
-                (0, x.Z)({
+                (0, T.Z)({
                     channel: n,
                     guildId: null !== (e = n.getGuildId()) && void 0 !== e ? e : void 0,
-                    locationObject: k.location,
+                    locationObject: U.location,
                     openInPopout: D,
                     analyticsLocations: O,
                     opensAppLauncherModal: !0
                 }),
-                    A(),
+                    Z(),
                     M();
-            }, [k, O, n, M, A, D]),
+            }, [U, O, n, M, Z, D]),
             B = s.useCallback(
                 (e) => {
-                    Z(),
-                        f.default.track(T.rMx.ACTIVITIES_MINI_SHELF_HOVERED, {
+                    A(),
+                        f.default.track(x.rMx.ACTIVITIES_MINI_SHELF_HOVERED, {
                             channel_id: n.id,
                             guild_id: n.getGuildId()
                         });
                 },
-                [Z, n]
+                [A, n]
             );
         return (0, i.jsx)(p.Gt, {
             value: O,
@@ -88,46 +88,46 @@ let N = 'vc-activities-'.concat((0, r.Z)()),
                             children: (0, i.jsx)(c.HiddenVisually, {
                                 children: (0, i.jsx)(c.H, {
                                     id: N,
-                                    children: v.Z.Messages.EMBEDDED_ACTIVITIES_MINI_SHELF_TITLE
+                                    children: S.Z.Messages.EMBEDDED_ACTIVITIES_MINI_SHELF_TITLE
                                 })
                             })
                         }),
                         (0, i.jsxs)('div', {
-                            className: S.container,
+                            className: v.container,
                             onMouseEnter: B,
-                            onMouseLeave: A,
+                            onMouseLeave: Z,
                             children: [
                                 (0, i.jsxs)('div', {
-                                    className: S.titleContainer,
+                                    className: v.titleContainer,
                                     children: [
                                         (0, i.jsxs)('div', {
-                                            className: S.titleLeft,
+                                            className: v.titleLeft,
                                             children: [
                                                 (0, i.jsx)(c.ActivitiesIcon, {
                                                     size: 'md',
-                                                    className: S.titleLeftIcon,
+                                                    className: v.titleLeftIcon,
                                                     color: 'var(--interactive-active)'
                                                 }),
                                                 (0, i.jsx)(c.Text, {
                                                     variant: 'eyebrow',
-                                                    children: v.Z.Messages.EMBEDDED_ACTIVITIES_AUTO_SUGGEST_ACTIVITIES_TITLE
+                                                    children: S.Z.Messages.EMBEDDED_ACTIVITIES_AUTO_SUGGEST_ACTIVITIES_TITLE
                                                 })
                                             ]
                                         }),
                                         (0, i.jsxs)(c.Clickable, {
-                                            className: S.titleRight,
+                                            className: v.titleRight,
                                             onClick: w,
                                             children: [
                                                 (0, i.jsx)(c.Text, {
                                                     variant: 'eyebrow',
-                                                    children: v.Z.Messages.EMBEDDED_ACTIVITIES_AUTO_SUGGEST_SEE_ALL
+                                                    children: S.Z.Messages.EMBEDDED_ACTIVITIES_AUTO_SUGGEST_SEE_ALL
                                                 }),
                                                 (0, i.jsx)(c.ChevronSmallRightIcon, {
                                                     size: 'custom',
                                                     width: 12,
                                                     height: 12,
                                                     color: 'var(--interactive-active)',
-                                                    className: S.titleRightIcon
+                                                    className: v.titleRightIcon
                                                 })
                                             ]
                                         })
@@ -138,9 +138,9 @@ let N = 'vc-activities-'.concat((0, r.Z)()),
                                     children: null
                                 }),
                                 (0, i.jsxs)('div', {
-                                    className: S.activityContainer,
+                                    className: v.activityContainer,
                                     children: [
-                                        U.map((e) =>
+                                        k.map((e) =>
                                             (0, i.jsx)(
                                                 C.Y,
                                                 {
@@ -150,16 +150,16 @@ let N = 'vc-activities-'.concat((0, r.Z)()),
                                                         r(), M();
                                                     },
                                                     aspectRatio: C.Y.AspectRatio.THIRTEEN_BY_ELEVEN,
-                                                    animatedDivClass: S.activitySuggestion
+                                                    animatedDivClass: v.activitySuggestion
                                                 },
                                                 e.application.id
                                             )
                                         ),
                                         (0, i.jsx)('div', {
-                                            className: l()(S.wumpusRocketOuterContainer, { [S.wumpusReducedMotion]: R }),
+                                            className: l()(v.wumpusRocketOuterContainer, { [v.wumpusReducedMotion]: R }),
                                             children: (0, i.jsx)('div', {
-                                                className: S.wumpusRocketInnerContainer,
-                                                children: (0, i.jsx)(I.Z, { className: S.wumpusRocket })
+                                                className: v.wumpusRocketInnerContainer,
+                                                children: (0, i.jsx)(I.Z, { className: v.wumpusRocket })
                                             })
                                         })
                                     ]

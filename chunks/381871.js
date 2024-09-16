@@ -22,13 +22,13 @@ var i = n(735250),
     g = n(176354),
     C = n(823379),
     I = n(74538),
-    x = n(401062),
-    T = n(696900),
-    v = n(456631),
-    S = n(963838),
+    T = n(401062),
+    x = n(696900),
+    S = n(456631),
+    v = n(963838),
     N = n(535879),
-    Z = n(310892),
-    A = n(12168),
+    A = n(310892),
+    Z = n(12168),
     M = n(353368),
     b = n(981631),
     R = n(354459),
@@ -38,21 +38,21 @@ var i = n(735250),
     O = n(689938),
     y = n(742831);
 let D = L.Hz.CHAT,
-    k = {
+    U = {
         section: b.jXE.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER,
         openPopoutType: 'voice_channel_effect_emoji_picker'
     },
-    U = [_.ZP.getByName('thumbsup'), _.ZP.getByName('eyes'), _.ZP.getByName('laughing'), _.ZP.getByName('watermelon'), _.ZP.getByName('fork_and_knife'), _.ZP.getByName('yum')].filter(C.lm);
+    k = [_.ZP.getByName('thumbsup'), _.ZP.getByName('eyes'), _.ZP.getByName('laughing'), _.ZP.getByName('watermelon'), _.ZP.getByName('fork_and_knife'), _.ZP.getByName('yum')].filter(C.lm);
 function w(e) {
     var t;
     let { channel: n, closePopout: _, onFocus: C } = e,
         L = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
         w = (0, l.e7)([E.default], () => E.default.getCurrentUser()),
         B = I.ZP.canUseFancyVoiceChannelReactions(w),
-        H = (0, l.e7)([T.Z], () => T.Z.getState().animationType),
+        H = (0, l.e7)([x.Z], () => x.Z.getState().animationType),
         G = s.useRef(!1),
         V = (0, p.wC)(n.guild_id),
-        F = (0, a.uniqBy)([...V, ...U], 'name')
+        F = (0, a.uniqBy)([...V, ...k], 'name')
             .filter(
                 (e) =>
                     !g.ZP.isEmojiFilteredOrLocked({
@@ -62,25 +62,25 @@ function w(e) {
                     })
             )
             .slice(0, R.e5),
-        W = (null !== (t = v.Z.recentlyUsedEmojis) && void 0 !== t ? t : []).filter((e) => !F.slice(0, R.e5 - 1).some((t) => t.name === e.name));
+        W = (null !== (t = S.Z.recentlyUsedEmojis) && void 0 !== t ? t : []).filter((e) => !F.slice(0, R.e5 - 1).some((t) => t.name === e.name));
     W.length > 0 && F.splice(F.length - 1, 1, W[0]);
-    let z = (0, S.Iu)(H),
+    let z = (0, v.Iu)(H),
         Y = (e) => {
             c.Z.dispatch({
                 type: 'VOICE_CHANNEL_EFFECT_RECENT_EMOJI',
                 emoji: e
             }),
-                (0, x.Lx)({
+                (0, T.Lx)({
                     channel: n,
                     emoji: e,
-                    location: x.yX.EMOJI_PICKER,
+                    location: T.yX.EMOJI_PICKER,
                     animationType: H,
                     animationId: z,
                     isPremium: B
                 });
         },
         K = () => {
-            (0, Z.openEffectsUpsellModal)({
+            (0, A.openEffectsUpsellModal)({
                 analytics: {
                     type: j.cd.EMOJI_PICKER_EMOJI_CLICKED,
                     object: b.qAy.BUTTON_CTA,
@@ -131,7 +131,7 @@ function w(e) {
                         })
                     }),
                 children: () =>
-                    (0, i.jsx)(A.Z, {
+                    (0, i.jsx)(Z.Z, {
                         title: O.Z.Messages.VOICE_CHANNEL_EFFECTS_HOTBAR_TITLE,
                         channel: n,
                         closePopout: _,
@@ -139,7 +139,7 @@ function w(e) {
                         onSelectDisabledEmoji: K,
                         onFocus: C,
                         onExpandedToggle: q,
-                        analyticsOverride: k,
+                        analyticsOverride: U,
                         emojiSearchProps: {
                             accessory: (0, i.jsx)(N.Z, {
                                 labelText: O.Z.Messages.VOICE_CHANNEL_EFFECTS_TOGGLE,
@@ -156,7 +156,7 @@ function w(e) {
                                         );
                                 },
                                 onShowUpsell: () =>
-                                    (0, Z.openEffectsUpsellModal)({
+                                    (0, A.openEffectsUpsellModal)({
                                         analytics: {
                                             type: G.current ? j.cd.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED_EXPANDED : j.cd.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED,
                                             object: b.qAy.VOICE_CHANNEL_EFFECTS_TOGGLE,

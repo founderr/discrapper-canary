@@ -19,14 +19,14 @@ var s = n(735250),
     m = n(570961),
     N = n(208665),
     S = n(359191),
-    h = n(84658),
-    g = n(142961),
+    g = n(84658),
+    h = n(142961),
     C = n(729311),
     x = n(850864),
     p = n(729995),
     R = n(966301),
-    f = n(707076),
-    L = n(213956),
+    L = n(707076),
+    f = n(213956),
     O = n(689938),
     A = n(930261);
 function M() {
@@ -38,10 +38,10 @@ function D(e) {
         { guildId: n } = e,
         i = (0, l.e7)([S.Z], () => S.Z.getCurrentPage()),
         I = (0, l.e7)([S.Z], () => {
-            let e = (0, h.lg)(i);
+            let e = (0, g.lg)(i);
             return null != e && !S.Z.isEducationUpsellDismissed(e);
         }),
-        N = (0, g.Z)(n),
+        N = (0, h.Z)(n),
         M = !N && I,
         { homeSettingsEnabled: D } = (0, u.kZ)(n);
     switch (
@@ -50,27 +50,27 @@ function D(e) {
         }, []),
         i)
     ) {
-        case h.PG.LANDING:
+        case g.PG.LANDING:
             t = N
                 ? (0, s.jsx)(p.Z, {
                       completed: !0,
                       guildId: n
                   })
-                : (0, s.jsx)(f.Z, {});
+                : (0, s.jsx)(L.Z, {});
             break;
-        case h.PG.SAFETY_CHECK:
-            t = (0, s.jsx)(L.Z, { hideChangelog: !0 });
+        case g.PG.SAFETY_CHECK:
+            t = (0, s.jsx)(f.Z, { hideChangelog: !0 });
             break;
-        case h.PG.DEFAULT_CHANNELS:
+        case g.PG.DEFAULT_CHANNELS:
             t = (0, s.jsx)(C.Z, { saveOnClose: !N });
             break;
-        case h.PG.CUSTOMIZATION_QUESTIONS:
+        case g.PG.CUSTOMIZATION_QUESTIONS:
             t = (0, s.jsx)(R.ZP, { saveOnClose: !N });
             break;
-        case h.PG.HOME_SETTINGS:
+        case g.PG.HOME_SETTINGS:
             t = (0, s.jsx)(x.Z, { saveOnClose: !N });
             break;
-        case h.PG.REVIEW:
+        case g.PG.REVIEW:
             t = (0, s.jsx)(p.Z, {
                 completed: N,
                 guildId: n
@@ -80,21 +80,21 @@ function D(e) {
         className: r()(A.onboardingContainer, { [A.upsellOnTop]: M }),
         children: [
             !N &&
-                i !== h.PG.LANDING &&
+                i !== g.PG.LANDING &&
                 (0, s.jsx)(v, {
                     setOnboardingStep: T.$K,
                     page: i,
                     homeSettingsEnabled: D
                 }),
             N &&
-                i !== h.PG.LANDING &&
+                i !== g.PG.LANDING &&
                 (0, s.jsx)('div', {
                     children: (0, s.jsxs)(c.Button, {
                         innerClassName: A.backButton,
                         look: c.Button.Looks.BLANK,
                         size: c.Button.Sizes.MIN,
                         onClick: () => {
-                            (0, m.NB)(), (0, E.BG)(), (0, T.$K)(h.PG.LANDING);
+                            (0, m.NB)(), (0, E.BG)(), (0, T.$K)(g.PG.LANDING);
                         },
                         children: [
                             (0, s.jsx)(_.Z, {
@@ -125,11 +125,11 @@ function v(e) {
         children: [
             (0, s.jsxs)(c.Clickable, {
                 className: r()(A.progressBarContainer, A.clickableProgressBar),
-                onClick: o(h.PG.SAFETY_CHECK),
+                onClick: o(g.PG.SAFETY_CHECK),
                 children: [
-                    (0, s.jsx)('div', { className: r()(A.progressBar, { [A.progressBarCurrent]: t === h.PG.SAFETY_CHECK }) }),
+                    (0, s.jsx)('div', { className: r()(A.progressBar, { [A.progressBarCurrent]: t === g.PG.SAFETY_CHECK }) }),
                     (0, s.jsx)(c.Text, {
-                        color: t === h.PG.SAFETY_CHECK ? 'text-brand' : 'text-muted',
+                        color: t === g.PG.SAFETY_CHECK ? 'text-brand' : 'text-muted',
                         variant: 'text-xs/medium',
                         children: O.Z.Messages.GUILD_ONBOARDING_SETUP_STEP_SAFETY.format({ stepNumber: 1 })
                     })
@@ -137,11 +137,11 @@ function v(e) {
             }),
             (0, s.jsxs)(c.Clickable, {
                 className: r()(A.progressBarContainer, A.clickableProgressBar),
-                onClick: o(h.PG.DEFAULT_CHANNELS),
+                onClick: o(g.PG.DEFAULT_CHANNELS),
                 children: [
-                    (0, s.jsx)('div', { className: r()(A.progressBar, { [A.progressBarCurrent]: t === h.PG.DEFAULT_CHANNELS }) }),
+                    (0, s.jsx)('div', { className: r()(A.progressBar, { [A.progressBarCurrent]: t === g.PG.DEFAULT_CHANNELS }) }),
                     (0, s.jsx)(c.Text, {
-                        color: t === h.PG.DEFAULT_CHANNELS ? 'text-brand' : 'text-muted',
+                        color: t === g.PG.DEFAULT_CHANNELS ? 'text-brand' : 'text-muted',
                         variant: 'text-xs/medium',
                         children: d ? O.Z.Messages.GUILD_ONBOARDING_SETUP_STEP_CHANNELS_ADVANCED.format({ stepNumber: 2 }) : O.Z.Messages.GUILD_ONBOARDING_SETUP_STEP_CHANNELS.format({ stepNumber: 2 })
                     })
@@ -149,11 +149,11 @@ function v(e) {
             }),
             (0, s.jsxs)(c.Clickable, {
                 className: r()(A.progressBarContainer, A.clickableProgressBar),
-                onClick: o(h.PG.CUSTOMIZATION_QUESTIONS),
+                onClick: o(g.PG.CUSTOMIZATION_QUESTIONS),
                 children: [
-                    (0, s.jsx)('div', { className: r()(A.progressBar, { [A.progressBarCurrent]: t === h.PG.CUSTOMIZATION_QUESTIONS }) }),
+                    (0, s.jsx)('div', { className: r()(A.progressBar, { [A.progressBarCurrent]: t === g.PG.CUSTOMIZATION_QUESTIONS }) }),
                     (0, s.jsx)(c.Text, {
-                        color: t === h.PG.CUSTOMIZATION_QUESTIONS ? 'text-brand' : 'text-muted',
+                        color: t === g.PG.CUSTOMIZATION_QUESTIONS ? 'text-brand' : 'text-muted',
                         variant: 'text-xs/medium',
                         children: d ? O.Z.Messages.GUILD_ONBOARDING_SETUP_STEP_PROMPTS_ADVANCED.format({ stepNumber: 3 }) : O.Z.Messages.GUILD_ONBOARDING_SETUP_STEP_PROMPTS.format({ stepNumber: 3 })
                     })
@@ -162,11 +162,11 @@ function v(e) {
             a &&
                 (0, s.jsxs)(c.Clickable, {
                     className: r()(A.progressBarContainer, A.clickableProgressBar),
-                    onClick: o(h.PG.HOME_SETTINGS),
+                    onClick: o(g.PG.HOME_SETTINGS),
                     children: [
-                        (0, s.jsx)('div', { className: r()(A.progressBar, { [A.progressBarCurrent]: t === h.PG.HOME_SETTINGS }) }),
+                        (0, s.jsx)('div', { className: r()(A.progressBar, { [A.progressBarCurrent]: t === g.PG.HOME_SETTINGS }) }),
                         (0, s.jsx)(c.Text, {
-                            color: t === h.PG.HOME_SETTINGS ? 'text-brand' : 'text-muted',
+                            color: t === g.PG.HOME_SETTINGS ? 'text-brand' : 'text-muted',
                             variant: 'text-xs/medium',
                             children: O.Z.Messages.GUILD_ONBOARDING_SETUP_STEP_HOME.format({ stepNumber: 4 })
                         })
@@ -175,9 +175,9 @@ function v(e) {
             (0, s.jsxs)('div', {
                 className: A.progressBarContainer,
                 children: [
-                    (0, s.jsx)('div', { className: r()(A.progressBar, { [A.progressBarCurrent]: t === h.PG.REVIEW }) }),
+                    (0, s.jsx)('div', { className: r()(A.progressBar, { [A.progressBarCurrent]: t === g.PG.REVIEW }) }),
                     (0, s.jsx)(c.Text, {
-                        color: t === h.PG.REVIEW ? 'text-brand' : 'text-muted',
+                        color: t === g.PG.REVIEW ? 'text-brand' : 'text-muted',
                         variant: 'text-xs/medium',
                         children: O.Z.Messages.GUILD_ONBOARDING_SETUP_STEP_REVIEW.format({ stepNumber: 3 + (a ? 1 : 0) + 1 })
                     })

@@ -3,7 +3,7 @@ n.d(t, {
         return W;
     },
     K: function () {
-        return k;
+        return w;
     }
 }),
     n(47120),
@@ -24,14 +24,14 @@ var s,
     m = n(596454),
     N = n(471445),
     S = n(605436),
-    h = n(91218),
-    g = n(313201),
+    g = n(91218),
+    h = n(313201),
     C = n(339085),
     x = n(518738),
     p = n(131704),
     R = n(324067),
-    f = n(430824),
-    L = n(259580),
+    L = n(430824),
+    f = n(259580),
     O = n(624138),
     A = n(817460),
     M = n(166803),
@@ -40,8 +40,8 @@ var s,
     j = n(981631),
     Z = n(689938),
     b = n(954477);
-let U = (0, g.hQ)(),
-    G = (0, g.hQ)(),
+let U = (0, h.hQ)(),
+    G = (0, h.hQ)(),
     P = (0, O.Mg)(E.Z.IMPORT_BENEFITS_MODAL_ROLE_ICON_SIZE);
 function B(e) {
     var t;
@@ -162,7 +162,7 @@ function F(e) {
           })
         : null;
 }
-function k(e) {
+function w(e) {
     let { transitionState: t, fromSubscriptionListing: n, existingChannelBenefits: s, existingIntangibleBenefits: a, onSubmit: l, onClose: o } = e,
         c = n.role_benefits.benefits,
         [d, u] = r.useState(() => new Set(c)),
@@ -171,7 +171,7 @@ function k(e) {
         m = r.useMemo(() => c.filter(A.lL), [c]),
         N = r.useMemo(() => new Set(E.filter((e) => s.some((t) => t.ref_id === e.ref_id))), [E, s]),
         S = r.useMemo(() => new Set(m.filter((e) => a.some((t) => (0, I.Z)(e, t)))), [a, m]),
-        h = (0, g.Dt)();
+        g = (0, h.Dt)();
     function C(e, t) {
         u((n) => {
             let s = new Set(n);
@@ -191,12 +191,12 @@ function k(e) {
         },
         children: (0, i.jsxs)(T.ModalRoot, {
             transitionState: t,
-            'aria-labelledby': h,
+            'aria-labelledby': g,
             children: [
                 (0, i.jsxs)(T.ModalHeader, {
                     children: [
                         (0, i.jsx)(T.Heading, {
-                            id: h,
+                            id: g,
                             variant: 'heading-md/semibold',
                             children: Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_IMPORT_BENEFITS_MODAL_HEADER.format({ tierName: n.name })
                         }),
@@ -245,7 +245,7 @@ function k(e) {
         })
     });
 }
-function w(e) {
+function k(e) {
     var t;
     let { guildId: n, role: s, channelCount: a, onSelect: r } = e,
         l = (0, x.p9)({
@@ -261,7 +261,7 @@ function w(e) {
                 className: b.rowIconWrapper,
                 children:
                     null != l
-                        ? (0, i.jsx)(h.Z, { ...l })
+                        ? (0, i.jsx)(g.Z, { ...l })
                         : (0, i.jsx)(T.ShieldUserIcon, {
                               size: 'custom',
                               width: 23,
@@ -288,14 +288,14 @@ function w(e) {
             }),
             (0, i.jsx)('div', {
                 className: b.rowCheckbox,
-                children: (0, i.jsx)(L.Z, { direction: L.Z.Directions.RIGHT })
+                children: (0, i.jsx)(f.Z, { direction: f.Z.Directions.RIGHT })
             })
         ]
     });
 }
 function H(e) {
     let { guild: t, onSelect: n } = e,
-        s = (0, _.e7)([f.Z], () => f.Z.getRoles(t.id)),
+        s = (0, _.e7)([L.Z], () => L.Z.getRoles(t.id)),
         a = (0, _.e7)([R.Z], () => R.Z.getCategories(t.id)),
         l = r.useMemo(
             () =>
@@ -332,7 +332,7 @@ function H(e) {
               className: b.list,
               children: o.map((e) =>
                   (0, i.jsx)(
-                      w,
+                      k,
                       {
                           guildId: t.id,
                           role: e.role,
@@ -350,7 +350,7 @@ function H(e) {
 }
 function V(e) {
     let { onClose: t, guildId: n, onSelect: s } = e,
-        a = (0, _.e7)([f.Z], () => f.Z.getGuild(n));
+        a = (0, _.e7)([L.Z], () => L.Z.getGuild(n));
     return null == a
         ? null
         : (0, i.jsxs)(i.Fragment, {

@@ -21,18 +21,18 @@ var s = n(735250),
     m = n(65912),
     N = n(51248),
     S = n(546513),
-    h = n(572456),
-    g = n(273504),
+    g = n(572456),
+    h = n(273504),
     C = n(981631),
     x = n(689938),
     p = n(603211);
 function R(e) {
     var t, n;
-    let { guildId: R, setPreventNavigation: f = () => {} } = e,
-        { editingRule: L, setEditingRule: O } = (0, m.V)(),
+    let { guildId: R, setPreventNavigation: L = () => {} } = e,
+        { editingRule: f, setEditingRule: O } = (0, m.V)(),
         { guild: A, subsection: M } = (0, i.cj)([o.Z], () => o.Z.getProps()),
         D = null !== (n = null !== (t = null == A ? void 0 : A.id) && void 0 !== t ? t : R) && void 0 !== n ? n : C.lds,
-        v = null != L,
+        v = null != f,
         [j] = (0, I.RD)(D),
         { rulesByTriggerType: Z } = (0, I.pH)(D),
         b = {
@@ -71,11 +71,11 @@ function R(e) {
         ),
         P = a.useMemo(() => {
             var e, t;
-            return G(null !== (e = null == L ? void 0 : L.id) && void 0 !== e ? e : null, null !== (t = null == L ? void 0 : L.triggerType) && void 0 !== t ? t : null);
-        }, [G, L]);
+            return G(null !== (e = null == f ? void 0 : f.id) && void 0 !== e ? e : null, null !== (t = null == f ? void 0 : f.triggerType) && void 0 !== t ? t : null);
+        }, [G, f]);
     a.useEffect(() => {
-        f(v, (0, h.af)(P));
-    }, [f, v, P]);
+        L(v, (0, g.af)(P));
+    }, [L, v, P]);
     let B = (0, E.Z6)(D),
         y = (e) =>
             (0, s.jsx)(s.Fragment, {
@@ -87,7 +87,7 @@ function R(e) {
                             guildId: D,
                             triggerType: e,
                             rules: null !== (t = Z[e]) && void 0 !== t ? t : [],
-                            initWithEdit: M === C.KsC.AUTOMOD_MENTION_SPAM && e === g.fX.MENTION_SPAM
+                            initWithEdit: M === C.KsC.AUTOMOD_MENTION_SPAM && e === h.fX.MENTION_SPAM
                         },
                         e
                     );

@@ -17,10 +17,10 @@ let _ = (e) => {
         let { isFocused: t, navigatedAway: n, isDesktop: _, withMentions: E = !1, initialPageSize: I } = e,
             m = (0, s.e7)([u.Z], () => u.Z.shouldReload()),
             T = i.useRef(!1),
-            [N, h] = i.useState(!1),
+            [h, N] = i.useState(!1),
             {
-                initialized: C,
-                loading: f,
+                initialized: f,
+                loading: C,
                 items: p,
                 hasMore: g,
                 cursor: S,
@@ -39,8 +39,8 @@ let _ = (e) => {
             }));
         i.useEffect(() => ((0, o.Vk)(!0), () => (0, o.Vk)(!1)), []),
             i.useEffect(() => {
-                C && t && (0, a.FT)(d.W.NOTIFICATION_CENTER);
-            }, [t, C]);
+                f && t && (0, a.FT)(d.W.NOTIFICATION_CENTER);
+            }, [t, f]);
         let x = (0, r.Z)();
         i.useEffect(
             () => () => {
@@ -50,23 +50,23 @@ let _ = (e) => {
         ),
             i.useEffect(() => {
                 let e = m && t;
-                (!C || e) &&
+                (!f || e) &&
                     (0, o.jk)({
                         limit: null != I ? I : E ? 8 : 20,
                         with_mentions: E,
                         roles_filter: R,
                         everyone_filter: O
                     });
-            }, [C, m, t, E, R, O, I]);
+            }, [f, m, t, E, R, O, I]);
         let M = i.useCallback(
             async (e) => {
                 !T.current &&
-                    C &&
+                    f &&
                     g &&
                     null != S &&
                     (e || !A) &&
                     ((T.current = !0),
-                    h(!0),
+                    N(!0),
                     await (0, o.jk)(
                         {
                             after: S,
@@ -79,17 +79,17 @@ let _ = (e) => {
                             T.current = !1;
                         }
                     ),
-                    h(!1));
+                    N(!1));
             },
-            [C, g, S, A, E, R, O]
+            [f, g, S, A, E, R, O]
         );
         return {
-            initialized: C,
-            loading: f,
+            initialized: f,
+            loading: C,
             items: p,
             hasMore: g,
             loadMore: M,
-            loadingMore: N,
+            loadingMore: h,
             setReadNotifItemToAcked: (e) => {
                 !e.acked && (e.acked = !0);
             },

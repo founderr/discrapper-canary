@@ -41,19 +41,19 @@ function l(e, t, n) {
         m = s.useMemo(() => (null != I && I.length > t ? I.slice(0, t) : I), [I, t]),
         N = null != I && I.length > t ? I.length - t : null,
         S = null == u ? void 0 : u.slug,
-        h = null != S ? r.EYA.ROLE_SUBSCRIPTION_STORE_PAGE(S) : void 0,
-        g = null == _ ? void 0 : null === (l = _.guild) || void 0 === l ? void 0 : l.name,
+        g = null != S ? r.EYA.ROLE_SUBSCRIPTION_STORE_PAGE(S) : void 0,
+        h = null == _ ? void 0 : null === (l = _.guild) || void 0 === l ? void 0 : l.name,
         C = null == _ ? void 0 : null === (o = _.role_subscription) || void 0 === o ? void 0 : o.subscriber_count,
-        x = !c && null != g && null != E && null != T;
+        x = !c && null != h && null != E && null != T;
     return x
         ? {
               hasAllImperativeDetails: x,
               isLoading: c,
               details: {
-                  guildName: g,
+                  guildName: h,
                   guildIcon: E,
                   guildAvatarUrl: T,
-                  storePageUrl: h,
+                  storePageUrl: g,
                   subscriberCount: C,
                   emojisToShow: m,
                   notShownEmojiCount: N

@@ -28,7 +28,7 @@ t.Z = function (e) {
         I = s.useCallback(() => {
             !n && E((e) => !e);
         }, [n]);
-    function x(e) {
+    function T(e) {
         !(null == e ? void 0 : e.shiftKey) && C.dispatch(p.CkL.POPOUT_CLOSE);
     }
     return (
@@ -52,7 +52,7 @@ t.Z = function (e) {
             renderPopout: function (e) {
                 return (0, i.jsx)(r.Z, {
                     ...e,
-                    onJump: x,
+                    onJump: T,
                     channel: t
                 });
             },

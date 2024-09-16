@@ -7,22 +7,22 @@ var i = n(735250),
     c = n(433355),
     u = n(412178);
 t.Z = s.memo(function (e) {
-    let { message: t, subtitle: n, countdown: d, buttonText: h, buttonColor: m, buttonSubmitting: p, onButtonClick: _, imageSrc: f, animationSrc: E, secondaryButtonText: g, onSecondaryButtonClick: C, children: I, useReducedMotion: x = !1 } = e,
-        T = (0, l.e7)([c.ZP], () => c.ZP.getState().isMembersOpen);
-    if (a.tq && T) return null;
+    let { message: t, subtitle: n, countdown: d, buttonText: h, buttonColor: m, buttonSubmitting: p, onButtonClick: _, imageSrc: f, animationSrc: E, secondaryButtonText: g, onSecondaryButtonClick: C, children: I, useReducedMotion: T = !1 } = e,
+        x = (0, l.e7)([c.ZP], () => c.ZP.getState().isMembersOpen);
+    if (a.tq && x) return null;
     if (null == t) return (0, i.jsx)(i.Fragment, { children: s.Children.only(I) });
-    let v = null;
+    let S = null;
     return (
         null != f
-            ? (v = (0, i.jsx)('img', {
+            ? (S = (0, i.jsx)('img', {
                   alt: '',
                   src: f,
                   className: u.image
               }))
             : null != E &&
-              (v = (0, i.jsx)(r.LottieAnimation, {
+              (S = (0, i.jsx)(r.LottieAnimation, {
                   importData: E,
-                  shouldAnimate: !x,
+                  shouldAnimate: !T,
                   className: u.animation
               })),
         (0, i.jsxs)('div', {
@@ -31,7 +31,7 @@ t.Z = s.memo(function (e) {
                 (0, i.jsxs)('div', {
                     className: u.content,
                     children: [
-                        v,
+                        S,
                         (0, i.jsxs)('div', {
                             className: u.text,
                             children: [

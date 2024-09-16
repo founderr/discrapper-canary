@@ -96,24 +96,24 @@ let I = a.forwardRef(function (e, t) {
             });
 });
 function E(e) {
-    let { value: t, onChange: n, onBlur: i, onFocus: E, onRemove: T, isSelected: m, isSelecting: N, error: S, forceShowErrorTooltip: h } = e,
-        g = a.useRef(null),
+    let { value: t, onChange: n, onBlur: i, onFocus: E, onRemove: T, isSelected: m, isSelecting: N, error: S, forceShowErrorTooltip: g } = e,
+        h = a.useRef(null),
         C = a.useRef(null),
         [x, p] = a.useState(!1),
-        { ref: R, width: f = 0 } = (0, c.Z)(x),
-        { ref: L, width: O = 0 } = (0, c.Z)(x),
+        { ref: R, width: L = 0 } = (0, c.Z)(x),
+        { ref: f, width: O = 0 } = (0, c.Z)(x),
         A = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
-        [M, D] = a.useState(h),
+        [M, D] = a.useState(g),
         v = a.useRef(null),
-        j = f > O ? f : O;
+        j = L > O ? L : O;
     a.useEffect(() => {
-        h
+        g
             ? (D(!0),
               (v.current = setTimeout(() => {
                   D(!1), (v.current = null);
               }, u.I5)))
             : D(!1);
-    }, [h]),
+    }, [g]),
         a.useEffect(
             () => () => {
                 clearTimeout(v.current);
@@ -129,9 +129,9 @@ function E(e) {
         b = a.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                if ((t.trim().length <= 0 && T(), null != g.current && null != R.current && null != C.current)) {
+                if ((t.trim().length <= 0 && T(), null != h.current && null != R.current && null != C.current)) {
                     var n;
-                    g.current.scrollTo(0, 0), g.current.setSelectionRange(0, 0), (g.current.scrollLeft = 0), (R.current.scrollLeft = 0), (null === (n = C.current) || void 0 === n ? void 0 : n.ref) != null && (C.current.ref.scrollLeft = 0);
+                    h.current.scrollTo(0, 0), h.current.setSelectionRange(0, 0), (h.current.scrollLeft = 0), (R.current.scrollLeft = 0), (null === (n = C.current) || void 0 === n ? void 0 : n.ref) != null && (C.current.ref.scrollLeft = 0);
                 }
                 p(!1), i(e);
             },
@@ -160,7 +160,7 @@ function E(e) {
     return (0, s.jsx)('div', {
         className: _.chipletFlexContainer,
         children: (0, s.jsxs)('div', {
-            ref: L,
+            ref: f,
             className: r()(_.chipletContainer, {
                 [_.isEditing]: x,
                 [_.smallBlink]: !x && !A,
@@ -187,7 +187,7 @@ function E(e) {
                                 [_.isEditing]: x,
                                 [_.isSelecting]: N
                             }),
-                            ref: g,
+                            ref: h,
                             onChange: Z,
                             onKeyDownCapture: U,
                             value: t,

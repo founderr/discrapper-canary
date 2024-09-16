@@ -29,7 +29,7 @@ function I(e, t, n) {
         e
     );
 }
-function x(e) {
+function T(e) {
     var t;
     let { channel: n, onClose: s, guild: a, transitionState: l } = e,
         r = (0, m.KS)(n, a),
@@ -96,10 +96,10 @@ function x(e) {
         })
     });
 }
-function T(e) {
+function x(e) {
     return e.matches('a') || 'highlight' === e.className || e.className.includes('mention');
 }
-class v extends s.Component {
+class S extends s.Component {
     render() {
         let { channel: e } = this.props;
         return e.isMultiUserDM() || null == e.topic || 0 === e.topic.length
@@ -136,12 +136,12 @@ class v extends s.Component {
             I(this, 'handleOpenTopic', (e) => {
                 let t = e.target;
                 if ((0, r.k)(t)) {
-                    if (T(t)) return;
+                    if (x(t)) return;
                     let e = t.parentNode;
-                    if ((0, r.k)(e) && T(e)) return;
+                    if ((0, r.k)(e) && x(e)) return;
                 }
                 (0, o.openModal)((e) =>
-                    (0, i.jsx)(x, {
+                    (0, i.jsx)(T, {
                         ...e,
                         ...this.props
                     })
@@ -178,4 +178,4 @@ class v extends s.Component {
             });
     }
 }
-t.Z = v;
+t.Z = S;

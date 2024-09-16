@@ -15,17 +15,17 @@ var s = n(735250),
     m = n(583628),
     N = n(129512),
     S = n(330065);
-let h = [16, 16, 14, 14, 12, 10, 8];
+let g = [16, 16, 14, 14, 12, 10, 8];
 t.Z = function (e) {
     var t, n;
-    let { guild: i, disabled: g, small: C, loading: x = !1, description: p, memberCount: R, presenceCount: f, className: L } = e,
+    let { guild: i, disabled: h, small: C, loading: x = !1, description: p, memberCount: R, presenceCount: L, className: f } = e,
         O = (0, c.ZP)(),
         [A, M] = a.useState(!1);
     if (null == i || x)
         return (0, s.jsx)('div', {
-            className: r()(L, m.card, m.cardPlaceholder, {
+            className: r()(f, m.card, m.cardPlaceholder, {
                 [m.cardSmall]: C,
-                [m.cardDisabled]: g
+                [m.cardDisabled]: h
             })
         });
     let { name: D } = i,
@@ -49,7 +49,7 @@ t.Z = function (e) {
                 : void 0,
         b = null != i.description ? i.description : p,
         U = null != R ? R : null == i ? void 0 : i.memberCount,
-        G = null != f ? f : null == i ? void 0 : i.presenceCount,
+        G = null != L ? L : null == i ? void 0 : i.presenceCount,
         P = null;
     if (null != Z)
         P = (0, s.jsx)('img', {
@@ -63,16 +63,16 @@ t.Z = function (e) {
             className: m.defaultIcon,
             children: (0, s.jsx)(o.Text, {
                 className: m.acronym,
-                style: { fontSize: null !== (n = h[e.length]) && void 0 !== n ? n : h[h.length - 1] },
+                style: { fontSize: null !== (n = g[e.length]) && void 0 !== n ? n : g[g.length - 1] },
                 variant: 'text-sm/normal',
                 children: e
             })
         });
     }
     return (0, s.jsxs)('div', {
-        className: r()(L, m.card, {
+        className: r()(f, m.card, {
             [m.cardSmall]: C,
-            [m.cardDisabled]: g,
+            [m.cardDisabled]: h,
             [m.splashLoaded]: A
         }),
         children: [

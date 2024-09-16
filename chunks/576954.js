@@ -61,13 +61,13 @@ function f(e) {
                         warningId: f,
                         senderId: E,
                         handleBlock: () => {
-                            x(d.NM.USER_MODAL_BLOCK_CONFIRM, d.NM.USER_MODAL_BLOCK_CANCEL, I);
+                            T(d.NM.USER_MODAL_BLOCK_CONFIRM, d.NM.USER_MODAL_BLOCK_CANCEL, I);
                         }
                     });
                 };
             });
         },
-        x = (e, s, a) => {
+        T = (e, s, a) => {
             (0, l.openModalLazy)(async () => {
                 let { default: l } = await n.e('68747').then(n.bind(n, 744373));
                 return (n) =>
@@ -114,7 +114,7 @@ function f(e) {
             {
                 text: _.Z.Messages.STRANGER_DANGER_BANNER_BLOCK,
                 color: l.Button.Colors.RED,
-                onclick: () => x(d.NM.USER_BANNER_BLOCK_CONFIRM, d.NM.USER_BANNER_BLOCK_CANCEL)
+                onclick: () => T(d.NM.USER_BANNER_BLOCK_CONFIRM, d.NM.USER_BANNER_BLOCK_CANCEL)
             }
         ]
     });

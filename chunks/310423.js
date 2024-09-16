@@ -13,10 +13,10 @@ var i = n(735250),
     I = n(171368),
     m = n(592125),
     T = n(430824),
-    N = n(594174),
-    h = n(739566),
-    C = n(981631),
-    f = n(665692),
+    h = n(594174),
+    N = n(739566),
+    f = n(981631),
+    C = n(665692),
     p = n(689938),
     g = n(120584);
 let S = {
@@ -97,9 +97,9 @@ t.Z = s.memo(function (e) {
                         switch (O.type) {
                             case c.jw.USER: {
                                 let e = O.value.toString(),
-                                    t = N.default.getUser(e);
+                                    t = h.default.getUser(e);
                                 if (null != t) {
-                                    let e = (0, h.ij)(t, x);
+                                    let e = (0, N.ij)(t, x);
                                     g = (0, i.jsxs)(E.Z, {
                                         ...A,
                                         onClick: () =>
@@ -109,9 +109,9 @@ t.Z = s.memo(function (e) {
                                                 channelId: x.id,
                                                 messageId: v,
                                                 sourceAnalyticsLocations: P,
-                                                analyticsLocation: { section: C.jXE.CHANNEL_TEXT_AREA_AUTOCOMPLETE }
+                                                analyticsLocation: { section: f.jXE.CHANNEL_TEXT_AREA_AUTOCOMPLETE }
                                             }),
-                                        children: [f.ME, e.nick]
+                                        children: [C.ME, e.nick]
                                     });
                                 }
                                 break;
@@ -122,7 +122,7 @@ t.Z = s.memo(function (e) {
                                 null != t &&
                                     (g = (0, i.jsxs)(E.Z, {
                                         ...A,
-                                        children: [f.zy, t.name]
+                                        children: [C.zy, t.name]
                                     }));
                                 break;
                             }
@@ -132,7 +132,7 @@ t.Z = s.memo(function (e) {
                                 null != t &&
                                     (g = (0, i.jsxs)(E.Z, {
                                         ...A,
-                                        children: [f.ME, t.name]
+                                        children: [C.ME, t.name]
                                     }));
                                 break;
                             }
@@ -141,21 +141,21 @@ t.Z = s.memo(function (e) {
                                     t = null != M ? T.Z.getRole(M.id, e) : void 0;
                                 if (null != t)
                                     g = (0, i.jsxs)(E.Z, {
-                                        children: [f.ME, t.name]
+                                        children: [C.ME, t.name]
                                     });
                                 else {
-                                    let t = N.default.getUser(e);
+                                    let t = h.default.getUser(e);
                                     if (null != t) {
-                                        let e = (0, h.ij)(t, x);
+                                        let e = (0, N.ij)(t, x);
                                         g = (0, i.jsxs)(E.Z, {
                                             ...A,
                                             onClick: () =>
                                                 (0, I.openUserProfileModal)({
                                                     userId: t.id,
                                                     guildId: x.guild_id,
-                                                    analyticsLocation: { section: C.jXE.CHANNEL_TEXT_AREA_AUTOCOMPLETE }
+                                                    analyticsLocation: { section: f.jXE.CHANNEL_TEXT_AREA_AUTOCOMPLETE }
                                                 }),
-                                            children: [f.ME, e.nick]
+                                            children: [C.ME, e.nick]
                                         });
                                     }
                                 }

@@ -21,10 +21,10 @@ var s = n(735250),
     m = n(981631),
     N = n(689938),
     S = n(80204);
-function h(e) {
+function g(e) {
     return String(e);
 }
-function g(e) {
+function h(e) {
     let { icon: t, title: n, subtitle: a, className: i } = e;
     return (0, s.jsxs)('div', {
         className: r()(S.label, i),
@@ -53,7 +53,7 @@ function g(e) {
     });
 }
 function C() {
-    return (0, s.jsx)(g, {
+    return (0, s.jsx)(h, {
         icon: (0, s.jsx)(o.PlusSmallIcon, {
             size: 'md',
             color: 'currentColor',
@@ -72,7 +72,7 @@ function x(e) {
     let r = (0, d.KS)(a),
         l = (0, c.F6)(a, E.default, I.Z),
         o = null != i ? (0, c.F6)(i, E.default, I.Z) : void 0;
-    return (0, s.jsx)(g, {
+    return (0, s.jsx)(h, {
         icon: null != r && (0, s.jsx)(r, { className: S.labelIcon }),
         title: l,
         subtitle: o
@@ -83,11 +83,11 @@ function p(e) {
     return null != t ? (0, s.jsx)(x, { channelId: t }) : (0, s.jsx)(C, {});
 }
 function R(e) {
-    let { guildId: t, value: i, initialChannelId: r, omitChannelIds: d, 'aria-labelledby': S, onChange: g } = e,
+    let { guildId: t, value: i, initialChannelId: r, omitChannelIds: d, 'aria-labelledby': S, onChange: h } = e,
         C = N.Z.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_CHANNEL_SELECT_CREATE_LABEL,
         x = (0, l.e7)([_.Z], () => _.Z.getCategories(t), [t]),
         R = (0, T.m7)(null != i ? i : m.lds),
-        f = a.useMemo(() => {
+        L = a.useMemo(() => {
             let e = [
                     {
                         value: null,
@@ -118,7 +118,7 @@ function R(e) {
         }, [C, i, R, x, d, r]);
     return (0, s.jsx)(o.Select, {
         placeholder: N.Z.Messages.CHANNEL_SELECT,
-        options: f,
+        options: L,
         select: function (e) {
             null == e
                 ? (0, o.openModalLazy)(async () => {
@@ -127,13 +127,13 @@ function R(e) {
                           (0, s.jsx)(e, {
                               ...n,
                               guildId: t,
-                              onSubmit: g
+                              onSubmit: h
                           });
                   })
-                : g(e);
+                : h(e);
         },
-        isSelected: (e) => null != i && h(e) === h(i),
-        serialize: h,
+        isSelected: (e) => null != i && g(e) === g(i),
+        serialize: g,
         renderOptionLabel: p,
         renderOptionValue: (e) => {
             let [t] = e;

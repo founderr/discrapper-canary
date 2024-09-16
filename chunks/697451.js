@@ -17,10 +17,10 @@ var i = n(735250),
     I = n(403404),
     m = n(100527),
     T = n(906732),
-    N = n(783097),
-    h = n(592180),
-    C = n(347475),
-    f = n(768581),
+    h = n(783097),
+    N = n(592180),
+    f = n(347475),
+    C = n(768581),
     p = n(585483),
     g = n(55935),
     S = n(739566),
@@ -54,7 +54,7 @@ function Z(e) {
         Z = s.useMemo(
             () => (e, t, n) => (
                 o()(null != l && null != t, 'ExecuteCommand: user and channel cannot be undefined'),
-                (0, i.jsx)(C.Z, {
+                (0, i.jsx)(f.Z, {
                     ...e,
                     channelId: l.id,
                     messageId: a.id,
@@ -96,7 +96,7 @@ function Z(e) {
                     let e = (0, S.ij)(s.interaction.user, l);
                     n =
                         null !==
-                            (T = f.ZP.getGuildMemberAvatarURL({
+                            (T = C.ZP.getGuildMemberAvatarURL({
                                 avatar: null !== (I = e.guildMemberAvatar) && void 0 !== I ? I : void 0,
                                 userId: s.interaction.user.id,
                                 guildId: null !== (m = null == l ? void 0 : l.guild_id) && void 0 !== m ? m : ''
@@ -104,7 +104,7 @@ function Z(e) {
                             ? T
                             : void 0;
                 }
-                let N = () =>
+                let h = () =>
                     null != s.interaction &&
                     (function (e) {
                         let { user: t, guildId: n, guildAvatar: s, onClick: a, onContextMenu: l, onMouseDown: o } = e;
@@ -132,9 +132,9 @@ function Z(e) {
                           shouldShow: c,
                           position: 'right',
                           onRequestClose: E,
-                          children: N
+                          children: h
                       })
-                    : N();
+                    : h();
             })(e, (e) => Z(e, U.user, [m.Z.AVATAR])),
             n = (function (e, t, n) {
                 var s;
@@ -160,7 +160,7 @@ function Z(e) {
             'user'
         );
     };
-    if ((null == a ? void 0 : a.activityInstance) === null || (0, h.g)(a))
+    if ((null == a ? void 0 : a.activityInstance) === null || (0, N.g)(a))
         n = M.Z.Messages.APPLICATION_COMMAND_USED_SHORT.format({
             userHook: y,
             commandHook: () => {
@@ -196,13 +196,13 @@ function Z(e) {
                                         ]
                                     })
                                 });
-                            if (!(0, h.g)(s))
+                            if (!(0, N.g)(s))
                                 return (0, i.jsx)('div', {
                                     className: v.commandName,
                                     children: o
                                 });
                             {
-                                let e = (0, N.XZ)(o);
+                                let e = (0, h.XZ)(o);
                                 return (0, i.jsx)(d.Clickable, {
                                     ...n,
                                     tag: 'span',

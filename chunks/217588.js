@@ -13,10 +13,10 @@ var i = n(735250),
     I = n(697568),
     m = n(183023),
     T = n(524444),
-    N = n(98278),
-    h = n(197115),
-    C = n(430824),
-    f = n(594174),
+    h = n(98278),
+    N = n(197115),
+    f = n(430824),
+    C = n(594174),
     p = n(626135),
     g = n(74538),
     S = n(453070),
@@ -39,7 +39,7 @@ function j(e) {
         location_page: null != e.guild_id ? M.ZY5.GUILD_CHANNEL : M.ZY5.DM_CHANNEL,
         location_section: M.jXE.STICKER_POPOUT
     }),
-        (0, N.z)();
+        (0, h.z)();
 }
 function U(e) {
     let { sticker: t, description: n } = e;
@@ -143,12 +143,12 @@ let y = (e) => {
     },
     B = (e) => {
         let t,
-            { sticker: n, channel: a, closePopout: _, refreshPositionKey: N } = e,
+            { sticker: n, channel: a, closePopout: _, refreshPositionKey: h } = e,
             [S, A] = s.useState(null),
             [R, x] = s.useState(!1),
-            D = f.default.getCurrentUser(),
+            D = C.default.getCurrentUser(),
             b = g.ZP.canUseCustomStickersEverywhere(D),
-            y = (0, l.e7)([C.Z], () => C.Z.getGuild(n.guild_id)),
+            y = (0, l.e7)([f.Z], () => f.Z.getGuild(n.guild_id)),
             B = null != y,
             [k, F] = s.useState(!1),
             [G, w] = s.useState(null),
@@ -170,27 +170,27 @@ let y = (e) => {
         }, [n.id, B]);
         let Y = n.guild_id === a.getGuildId(),
             W = null != S,
-            z = !1,
-            K = 'Custom Sticker Popout';
+            K = !1,
+            z = 'Custom Sticker Popout';
         b
             ? (t = B ? (Y ? L.Z.Messages.STICKER_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION : L.Z.Messages.STICKER_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION) : W ? L.Z.Messages.STICKER_POPOUT_PREMIUM_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION : L.Z.Messages.STICKER_POPOUT_PREMIUM_UNJOINED_PRIVATE_GUILD_DESCRIPTION)
             : B
-              ? (Y ? (t = L.Z.Messages.STICKER_POPOUT_CURRENT_GUILD_DESCRIPTION) : (t = L.Z.Messages.STICKER_POPOUT_JOINED_GUILD_DESCRIPTION), (z = !0), (K = 'Custom Sticker Popout (Upsell)'))
+              ? (Y ? (t = L.Z.Messages.STICKER_POPOUT_CURRENT_GUILD_DESCRIPTION) : (t = L.Z.Messages.STICKER_POPOUT_JOINED_GUILD_DESCRIPTION), (K = !0), (z = 'Custom Sticker Popout (Upsell)'))
               : W
-                ? ((t = L.Z.Messages.STICKER_POPOUT_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION), (z = !0), (K = 'Custom Sticker Popout (Upsell)'))
+                ? ((t = L.Z.Messages.STICKER_POPOUT_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION), (K = !0), (z = 'Custom Sticker Popout (Upsell)'))
                 : ((t = L.Z.Messages.STICKER_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION.format({
                       openPremiumSettings: () => {
                           j(a), _();
                       }
                   })),
-                  (K = 'Custom Sticker Popout (Soft Upsell)'));
-        let Q = !z && !B && W && b;
+                  (z = 'Custom Sticker Popout (Soft Upsell)'));
+        let Q = !K && !B && W && b;
         return (s.useEffect(() => {
-            N();
+            h();
         }, [R, S]),
         s.useEffect(() => {
             p.default.track(M.rMx.OPEN_POPOUT, {
-                type: K,
+                type: z,
                 ...H
             });
         }, []),
@@ -214,8 +214,8 @@ let y = (e) => {
                                       description: t,
                                       sticker: n
                                   }),
-                                  z &&
-                                      (0, i.jsx)(h.Z, {
+                                  K &&
+                                      (0, i.jsx)(N.Z, {
                                           className: P.ctaButton,
                                           subscriptionTier: v.Si.TIER_2,
                                           size: o.Button.Sizes.SMALL,
@@ -262,7 +262,7 @@ let y = (e) => {
                                               children: [
                                                   (0, i.jsx)(o.Clickable, {
                                                       onClick: () => {
-                                                          N(), F(!k);
+                                                          h(), F(!k);
                                                       },
                                                       className: P.showMoreEmojis,
                                                       children: (0, i.jsxs)(d.Z, {

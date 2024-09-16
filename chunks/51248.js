@@ -17,12 +17,12 @@ function _(e) {
     let { guildId: t, existingRules: n } = e,
         { cancelEditingRule: _, isLoading: I, hasChanges: E, editingRule: T, errorMessage: m, saveEditingRule: N } = (0, c.w)(),
         { updateRule: S } = (0, o.pH)(t),
-        h = null != T,
-        g = h && !(0, l.Vb)(T),
-        C = h || E || g,
+        g = null != T,
+        h = g && !(0, l.Vb)(T),
+        C = g || E || h,
         x = async () => {
-            if (!E && !g) return _();
-            null != T && !g && S(T);
+            if (!E && !h) return _();
+            null != T && !h && S(T);
             let e = n.find((e) => {
                 let { id: t } = e;
                 return t === (null == T ? void 0 : T.id);
@@ -35,7 +35,7 @@ function _(e) {
             }
         },
         p = d.Z.Messages.CANCEL,
-        R = !E && h ? d.Z.Messages.GUILD_AUTOMOD_EDIT_NO_CHANGES.format({ ruleName: null == T ? void 0 : T.name }) : void 0;
+        R = !E && g ? d.Z.Messages.GUILD_AUTOMOD_EDIT_NO_CHANGES.format({ ruleName: null == T ? void 0 : T.name }) : void 0;
     return (
         null != m &&
             (R = (0, s.jsx)(i.Text, {

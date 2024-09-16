@@ -17,21 +17,21 @@ var i = n(735250),
     C = n(689938),
     I = n(972270);
 t.Z = function (e) {
-    let { channel: t, guild: n, maxWidth: x } = e;
+    let { channel: t, guild: n, maxWidth: T } = e;
     s.useEffect(() => {
         (0, h.EW)(a.z.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK, { dismissAction: g.L.AUTO });
     }, []);
-    let T = s.useCallback(() => {
+    let x = s.useCallback(() => {
             r.Z.updateChatOpen(t.id, !1), _.S.safeDispatch(E.CkL.FOCUS_CHAT_BUTTON);
         }, [t.id]),
-        v = (0, i.jsx)(m.ZP.Icon, {
+        S = (0, i.jsx)(m.ZP.Icon, {
             icon: l.XSmallIcon,
             tooltip: C.Z.Messages.CLOSE,
-            onClick: T
+            onClick: x
         });
     return (0, i.jsxs)(u.Z, {
         sidebarType: u.y.CallChatSidebar,
-        maxWidth: x,
+        maxWidth: T,
         floatingLayer: f.ZP,
         children: [
             (0, i.jsx)(o.Z, {
@@ -39,7 +39,7 @@ t.Z = function (e) {
                 draftType: p.d.ChannelMessage
             }),
             (0, i.jsxs)(m.ZP, {
-                toolbar: v,
+                toolbar: S,
                 'aria-label': C.Z.Messages.CHANNEL_HEADER_BAR_A11Y_LABEL,
                 children: [
                     (0, i.jsx)(m.ZP.Icon, {

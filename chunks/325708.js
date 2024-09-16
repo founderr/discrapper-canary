@@ -60,28 +60,28 @@ function E(e) {
             },
             [E]
         ),
-        x = (0, p.W)({ maxWidth: n }),
-        T = (0, c.clamp)(g, p.C, n),
-        v = x ? T : T + u.Z.modules.chat.RESIZE_HANDLE_WIDTH;
+        T = (0, p.W)({ maxWidth: n }),
+        x = (0, c.clamp)(g, p.C, n),
+        S = T ? x : x + u.Z.modules.chat.RESIZE_HANDLE_WIDTH;
     l.useEffect(() => {
-        null == i || i(T, x);
-    }, [T, i, x]);
-    let S = null != r ? r : l.Fragment;
+        null == i || i(x, T);
+    }, [x, i, T]);
+    let v = null != r ? r : l.Fragment;
     return (0, a.jsxs)(a.Fragment, {
         children: [
-            !x && (0, a.jsx)('div', { style: { minWidth: v } }),
-            (0, a.jsx)(S, {
+            !T && (0, a.jsx)('div', { style: { minWidth: S } }),
+            (0, a.jsx)(v, {
                 children: (0, a.jsxs)('div', {
                     className: _.chatLayerWrapper,
                     children: [
                         (0, a.jsx)('div', {
                             className: o()(_.chatTarget, {
-                                [_.floating]: x,
-                                [_.notFloating]: !x
+                                [_.floating]: T,
+                                [_.notFloating]: !T
                             }),
-                            style: { width: v }
+                            style: { width: S }
                         }),
-                        !x &&
+                        !T &&
                             (0, a.jsx)(f, {
                                 maxWidth: n,
                                 resizableNode: h,
@@ -90,8 +90,8 @@ function E(e) {
                             }),
                         (0, a.jsx)('div', {
                             ref: h,
-                            className: o()(_.container, { [_.floating]: x }),
-                            style: { width: T },
+                            className: o()(_.container, { [_.floating]: T }),
+                            style: { width: x },
                             children: s
                         })
                     ]

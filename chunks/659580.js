@@ -20,10 +20,10 @@ var s = n(481060),
 function _(e) {
     let { onClose: t, renderOutputDevices: n = !1, renderInputDevices: _ = !1, renderInputModes: f = !1, renderInputVolume: E = !1, renderOutputVolume: g = !1, onSelect: C } = e,
         I = (0, d.Z)(),
-        x = (0, c.Z)(),
-        T = (0, u.Z)(),
-        v = (0, l.Z)(),
-        S = (0, r.Z)(),
+        T = (0, c.Z)(),
+        x = (0, u.Z)(),
+        S = (0, l.Z)(),
+        v = (0, r.Z)(),
         N = (0, o.Z)();
     return (0, i.jsx)(a.Z, {
         object: h.qAy.CONTEXT_MENU,
@@ -37,23 +37,23 @@ function _(e) {
                 _
                     ? (0, i.jsx)(s.MenuGroup, {
                           label: m.Z.Messages.INPUT_DEVICE,
-                          children: x
+                          children: T
                       })
                     : null,
                 n
                     ? (0, i.jsx)(s.MenuGroup, {
                           label: m.Z.Messages.OUTPUT_DEVICE,
-                          children: T
+                          children: x
                       })
                     : null,
                 f
                     ? (0, i.jsx)(s.MenuGroup, {
                           label: m.Z.Messages.FORM_LABEL_INPUT_MODE,
-                          children: v
+                          children: S
                       })
                     : null,
                 (0, i.jsxs)(s.MenuGroup, {
-                    children: [E ? S : null, g ? N : null, I]
+                    children: [E ? v : null, g ? N : null, I]
                 })
             ]
         })

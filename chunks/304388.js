@@ -43,10 +43,10 @@ t.Z = s.forwardRef(function (e, t) {
         }),
         [p, h]
     );
-    let x = m || d;
+    let T = m || d;
     return (0, i.jsx)(a.Popout, {
         animation: a.Popout.Animation.FADE,
-        shouldShow: x,
+        shouldShow: T,
         animationPosition: 'top',
         position: 'top',
         align: 'left',
@@ -56,7 +56,7 @@ t.Z = s.forwardRef(function (e, t) {
         },
         renderPopout: (e) =>
             (0, i.jsx)(c, {
-                isHovered: x,
+                isHovered: T,
                 onFocus: () => h(!0),
                 onMouseEnter: _,
                 onMouseLeave: C,
@@ -75,7 +75,7 @@ t.Z = s.forwardRef(function (e, t) {
                     className: o.actionBarButton,
                     onMouseEnter: g,
                     onMouseLeave: C,
-                    isActive: x
+                    isActive: T
                 })
             });
         }

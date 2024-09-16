@@ -24,7 +24,7 @@ function d(e) {
         var e, t;
         _(String(I.current)), E(void 0 !== g && g < (null !== (t = null === (e = C.current) || void 0 === e ? void 0 : e.clientHeight) && void 0 !== t ? t : 300) + 24), (I.current += 1);
     }, [g, C]);
-    let { preventIdle: x, allowIdle: T } = (0, u.Y)('popup');
+    let { preventIdle: T, allowIdle: x } = (0, u.Y)('popup');
     return (null == t ? void 0 : t.current) == null
         ? null
         : (0, i.jsx)(r.ZP, {
@@ -38,10 +38,10 @@ function d(e) {
                   children: () =>
                       (0, i.jsx)('div', {
                           ref: C,
-                          onMouseOver: x,
-                          onFocus: x,
-                          onBlur: T,
-                          onMouseLeave: T,
+                          onMouseOver: T,
+                          onFocus: T,
+                          onBlur: x,
+                          onMouseLeave: x,
                           children: h({
                               hidden: f || m || n,
                               onDismiss: d

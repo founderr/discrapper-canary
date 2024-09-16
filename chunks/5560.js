@@ -1,6 +1,6 @@
 n.d(t, {
     V: function () {
-        return T;
+        return x;
     }
 }),
     n(47120);
@@ -22,7 +22,7 @@ var i = n(735250),
     g = n(232495),
     C = n(10401),
     I = n(755059);
-function x(e, t, n) {
+function T(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -35,7 +35,7 @@ function x(e, t, n) {
         e
     );
 }
-class T extends s.PureComponent {
+class x extends s.PureComponent {
     componentDidMount() {
         this.updateCache();
     }
@@ -91,7 +91,7 @@ class T extends s.PureComponent {
                 left: null != f ? s.x + f : void 0,
                 top: null != g ? s.y + g : void 0
             },
-            x = (e) => {
+            T = (e) => {
                 let t = n && !e;
                 return !0 !== u
                     ? null
@@ -112,7 +112,7 @@ class T extends s.PureComponent {
                           ]
                       });
             },
-            T = (e) => {
+            x = (e) => {
                 let t = n && !e;
                 return {
                     [I.animating]: t,
@@ -120,7 +120,7 @@ class T extends s.PureComponent {
                     [I.highPriority]: u
                 };
             },
-            v = this.getTutorialPopoutText();
+            S = this.getTutorialPopoutText();
         return (0, i.jsx)(p.ZP, {
             position: _,
             renderMedia: r,
@@ -132,7 +132,7 @@ class T extends s.PureComponent {
             arrowAlignment: m,
             onSkipAll: this.handleSkipTips,
             onComplete: this.handleDismiss,
-            ...v,
+            ...S,
             children: (e, t) => {
                 let { isShown: n } = t;
                 return (0, i.jsx)(h.Clickable, {
@@ -140,8 +140,8 @@ class T extends s.PureComponent {
                     className: I.indicator,
                     style: C,
                     children: (0, i.jsxs)('div', {
-                        className: l()(I.animationContainer, T(n)),
-                        children: [x(n), (0, i.jsx)('div', { className: l()(I.innerCircle, T(n)) }), (0, i.jsx)('div', { className: l()(I.outerCircle, T(n)) })]
+                        className: l()(I.animationContainer, x(n)),
+                        children: [T(n), (0, i.jsx)('div', { className: l()(I.innerCircle, x(n)) }), (0, i.jsx)('div', { className: l()(I.outerCircle, x(n)) })]
                     })
                 });
             }
@@ -149,11 +149,11 @@ class T extends s.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            x(this, 'state', {
+            T(this, 'state', {
                 offsetX: null,
                 offsetY: null
             }),
-            x(this, 'handleDismiss', () => {
+            T(this, 'handleDismiss', () => {
                 m.Z.dismiss(this.props.tutorialId);
             });
     }
@@ -180,7 +180,7 @@ t.Z =
                             return (
                                 o()(null != l, 'Missing tutorial definition for '.concat(s)),
                                 (0, i.jsx)(
-                                    T,
+                                    x,
                                     {
                                         tutorialId: s,
                                         tutorialDefinition: l,

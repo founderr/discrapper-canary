@@ -23,7 +23,7 @@ function u(e) {
         I = null;
     return (
         h.forEach((e) => {
-            var s, x, T, v, S, N, Z, A;
+            var s, T, x, S, v, N, A, Z;
             if (null != _ && _.length > 0) {
                 let t = l.default.extractTimestamp(e.id);
                 for (let e = 0; (s = e < (null == _ ? void 0 : _.length)), s; e++) {
@@ -64,29 +64,29 @@ function u(e) {
             if (null !== j) {
                 let t, n;
                 [R, b] =
-                    ((x = E),
-                    (T = e),
-                    (v = j),
-                    (n = S = b),
-                    null == S || S.type !== v
+                    ((T = E),
+                    (x = e),
+                    (S = j),
+                    (n = v = b),
+                    null == v || v.type !== S
                         ? ((t = {
-                              type: v,
+                              type: S,
                               content: [],
-                              key: T.id
+                              key: x.id
                           }),
-                          x.push(t))
-                        : (n = (t = S).content[t.content.length - 1]),
+                          T.push(t))
+                        : (n = (t = v).content[t.content.length - 1]),
                     [t, n]);
             }
             if (m === e.id && null != C) {
                 if (null != b && b.type === c.ys_.DIVIDER) (b.unreadId = e.id), (C = null);
                 else if (null !== R) {
                     (N = R),
-                        (Z = d),
-                        (A = e).isFirstMessageInForumPost(Z) ||
+                        (A = d),
+                        (Z = e).isFirstMessageInForumPost(A) ||
                             N.content.push({
                                 type: c.ys_.DIVIDER,
-                                unreadId: A.id
+                                unreadId: Z.id
                             }),
                         (N.hasUnread = !0),
                         (C = null);
@@ -114,8 +114,8 @@ function u(e) {
                 groupId: n
             };
             n === e.id && (u = O);
-            let { jumpSequenceId: y, jumpFlash: D, jumpTargetId: k } = h;
-            D && e.id === k && null != y && (O.flashKey = y),
+            let { jumpSequenceId: y, jumpFlash: D, jumpTargetId: U } = h;
+            D && e.id === U && null != y && (O.flashKey = y),
                 h.jumpTargetId === e.id && (O.jumpTarget = !0),
                 null != f &&
                     e.id === f.startId &&

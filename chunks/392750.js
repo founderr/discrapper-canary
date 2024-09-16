@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return d;
+        return u;
     }
 });
 var r = n(735250);
@@ -11,7 +11,7 @@ var a = n(442837),
     o = n(681619),
     s = n(14136),
     c = n(219299);
-let u = [
+let d = [
     {
         key: 'user',
         cellClassName: s.userCell,
@@ -30,7 +30,7 @@ let u = [
         }
     }
 ];
-function d() {
+function u() {
     let e = (0, a.Wu)([l.Z, i.default], () =>
         l.Z.getUserAffinities().map((e) => {
             let { user_id: t, affinity: n } = e;
@@ -45,7 +45,7 @@ function d() {
         ? null
         : (0, r.jsx)(o.Z, {
               className: c.panel,
-              columns: u,
+              columns: d,
               rowClassName: s.row,
               data: e
           });

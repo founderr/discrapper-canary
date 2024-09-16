@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return h;
     }
 });
 var i = n(735250);
@@ -18,9 +18,9 @@ var s = n(399606),
     I = n(818186),
     m = n(689938),
     T = n(811304);
-function N(e) {
-    let { tab: t, setTab: n, children: N, badgeState: h, closePopout: C } = e,
-        { showReminders: f } = E.Z.useExperiment({ location: 'RecentsHeader' }, { autoTrackExposure: !1 }),
+function h(e) {
+    let { tab: t, setTab: n, children: h, badgeState: N, closePopout: f } = e,
+        { showReminders: C } = E.Z.useExperiment({ location: 'RecentsHeader' }, { autoTrackExposure: !1 }),
         { enabled: p, inInbox: g } = d.Z.useExperiment({ location: 'RecentsPopout' }),
         { enabled: S } = u.Z.useExperiment({ location: 'RecentsHeader' }),
         A = (0, s.e7)([c.Z], () => c.Z.getUnseenInviteCount()),
@@ -44,7 +44,7 @@ function N(e) {
                     }),
                     (0, i.jsxs)('div', {
                         className: T.controls,
-                        children: [N, (0, i.jsx)(I.Z, { closePopout: C })]
+                        children: [h, (0, i.jsx)(I.Z, { closePopout: f })]
                     })
                 ]
             }),
@@ -63,7 +63,7 @@ function N(e) {
                             className: T.tab,
                             children: [
                                 m.Z.Messages.FOR_YOU,
-                                (null == h ? void 0 : h.badgeForYou)
+                                (null == N ? void 0 : N.badgeForYou)
                                     ? (0, i.jsx)(r.CircleBadge, {
                                           color: o.Z.STATUS_DANGER,
                                           className: T.iconBadge
@@ -106,7 +106,7 @@ function N(e) {
                                   children: 0 === R ? m.Z.Messages.FOR_LATER : m.Z.Messages.FOR_LATER_COUNT.format({ count: R })
                               })
                             : null,
-                        f && !p
+                        C && !p
                             ? (0, i.jsx)(r.TabBar.Item, {
                                   'aria-label': 'todos',
                                   id: a.X.TODOS,

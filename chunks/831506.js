@@ -13,26 +13,26 @@ var i,
     I = n(981631);
 let m = {},
     T = {};
-function N(e, t) {
+function h(e, t) {
     var n;
     return (null !== (n = m[e]) && void 0 !== n ? n : {})[t];
 }
-function h(e, t) {
-    let n = N(e, t);
+function N(e, t) {
+    let n = h(e, t);
     if (null == n) return;
     let i = m[e];
     delete i[t], o().isEmpty(i) && delete m[e];
     let s = T[n];
     null != s && (s.delete(e), 0 === s.size && delete T[n]);
 }
-function C(e, t, n, i) {
+function f(e, t, n, i) {
     let s = n.find((e) => null != e.party && e.party.id),
         a = null != s && null != s.party ? s.party.id : null,
-        r = N(t, e);
-    if (null == a || i === I.Skl.OFFLINE) return null != r && (h(t, e), void 0);
+        r = h(t, e);
+    if (null == a || i === I.Skl.OFFLINE) return null != r && (N(t, e), void 0);
     if (null != r) {
         if (r === a) return !1;
-        h(t, e);
+        N(t, e);
     }
     !(function (e, t, n) {
         var i;
@@ -42,17 +42,17 @@ function C(e, t, n, i) {
         (T[n] = a), a.add(e);
     })(t, e, a);
 }
-function f(e) {
+function C(e) {
     let { guild: t } = e,
         n = !1;
-    for (let { user: e, status: i, activities: s } of t.presences) !1 !== C(t.id, e.id, s, i) && (n = !0);
+    for (let { user: e, status: i, activities: s } of t.presences) !1 !== f(t.id, e.id, s, i) && (n = !0);
     return n;
 }
 function p(e, t) {
     let n = !1;
     return (
         t.forEach((t) => {
-            null != t && C(e, t.user.id, t.activities, t.status) && (n = !0);
+            null != t && f(e, t.user.id, t.activities, t.status) && (n = !0);
         }),
         n
     );
@@ -60,7 +60,7 @@ function p(e, t) {
 function g() {
     let e = d.default.getId(),
         t = E.Z.getActivities();
-    return C(I.ME, e, t);
+    return f(I.ME, e, t);
 }
 class S extends (i = c.ZP.Store) {
     initialize() {
@@ -89,19 +89,19 @@ class S extends (i = c.ZP.Store) {
         CONNECTION_OPEN_SUPPLEMENTAL: function (e) {
             let { guilds: t, presences: n } = e,
                 i = !1;
-            for (let { user: e, status: t, activities: s } of n) null != e && !1 !== C(I.ME, e.id, s, t) && (i = !0);
-            for (let e of t) !1 !== f({ guild: e }) && (i = !0);
+            for (let { user: e, status: t, activities: s } of n) null != e && !1 !== f(I.ME, e.id, s, t) && (i = !0);
+            for (let e of t) !1 !== C({ guild: e }) && (i = !0);
             return i;
         },
         OVERLAY_INITIALIZE: function (e) {
             let { parties: t, userParties: n } = e;
             (T = {}), (m = { ...n }), Object.keys(t).forEach((e) => (T[e] = new Set(t[e])));
         },
-        GUILD_CREATE: f,
+        GUILD_CREATE: C,
         PRESENCES_REPLACE: function (e) {
             let { presences: t } = e,
                 n = !1;
-            for (let { user: e, activities: i } of t) null != e && !1 !== C(I.ME, e.id, i) && (n = !0);
+            for (let { user: e, activities: i } of t) null != e && !1 !== f(I.ME, e.id, i) && (n = !0);
             return n;
         },
         PRESENCE_UPDATES: function (e) {
@@ -109,7 +109,7 @@ class S extends (i = c.ZP.Store) {
             return t
                 .map((e) => {
                     let { guildId: t, user: n, status: i, activities: s } = e;
-                    return C(null != t ? t : I.ME, n.id, s, i);
+                    return f(null != t ? t : I.ME, n.id, s, i);
                 })
                 .some((e) => e);
         },

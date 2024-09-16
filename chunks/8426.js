@@ -15,7 +15,7 @@ n.d(t, {
         return T;
     },
     ad: function () {
-        return g;
+        return h;
     },
     bj: function () {
         return D;
@@ -24,16 +24,16 @@ n.d(t, {
         return N;
     },
     hS: function () {
-        return h;
+        return g;
     },
     lq: function () {
         return R;
     },
     mM: function () {
-        return f;
+        return L;
     },
     oo: function () {
-        return L;
+        return f;
     },
     q6: function () {
         return M;
@@ -83,13 +83,13 @@ function S(e) {
         channelId: e
     });
 }
-function h(e) {
+function g(e) {
     r.Z.dispatch({
         type: 'GUILD_SETTINGS_ONBOARDING_REORDER_NEW_MEMBER_ACTION',
         actions: e
     });
 }
-async function g(e, t, n, s) {
+async function h(e, t, n, s) {
     if (!s) return Promise.resolve();
     try {
         let s = await i.tn.patch({
@@ -143,7 +143,7 @@ function R(e) {
         resourceChannels: e
     });
 }
-async function f(e, t, n) {
+async function L(e, t, n) {
     try {
         let s = await i.tn.put({
                 url: I.ANM.RESOURCE_CHANNEL(e, t),
@@ -168,7 +168,7 @@ async function f(e, t, n) {
         });
     }
 }
-function L(e, t) {
+function f(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     if (!n && !_.Z.hasChanges()) return Promise.resolve();
     let { serverGuideOptional: s } = (0, d.FJ)(e);

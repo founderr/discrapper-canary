@@ -34,7 +34,7 @@ function f(e) {
     let I = (e) => {
             e.shiftKey ? r.Z.updateChannelOverrideSettings(t.guild_id, t.id, { muted: !f }, u.UE.muted(!f)) : C((e) => !e);
         },
-        x = p.Z.Messages.NOTIFICATION_SETTINGS;
+        T = p.Z.Messages.NOTIFICATION_SETTINGS;
     return (0, i.jsx)(l.Popout, {
         shouldShow: g,
         animation: l.Popout.Animation.NONE,
@@ -54,10 +54,10 @@ function f(e) {
             return (0, i.jsx)(d.ZP.Icon, {
                 ...e,
                 onClick: I,
-                tooltip: s ? null : x,
+                tooltip: s ? null : T,
                 icon: f || E !== m.bL.ALL_MESSAGES ? l.BellSlashIcon : l.BellIcon,
                 foreground: f && !n ? _.strikethrough : null,
-                'aria-label': x,
+                'aria-label': T,
                 selected: s
             });
         }

@@ -23,13 +23,13 @@ var i = n(735250),
     g = n(276264),
     C = n(607070),
     I = n(100527),
-    x = n(367907),
-    T = n(906732),
-    v = n(493324),
-    S = n(611064),
+    T = n(367907),
+    x = n(906732),
+    S = n(493324),
+    v = n(611064),
     N = n(677432),
-    Z = n(178762),
-    A = n(868671),
+    A = n(178762),
+    Z = n(868671),
     M = n(82295),
     b = n(91218),
     R = n(313201),
@@ -39,8 +39,8 @@ var i = n(735250),
     O = n(184301),
     y = n(347475),
     D = n(439170),
-    k = n(430824),
-    U = n(111583),
+    U = n(430824),
+    k = n(111583),
     w = n(594174),
     B = n(585483),
     H = n(823379),
@@ -173,13 +173,13 @@ let Q = s.memo((e) => {
         let { colorRoleId: t, ...n } = e,
             { channel: s, user: a, index: l } = e,
             r = (0, c.JA)(''.concat(l)),
-            o = (0, h.e7)([U.Z], () => U.Z.isTyping(s.id, a.id)),
+            o = (0, h.e7)([k.Z], () => k.Z.isTyping(s.id, a.id)),
             u = (0, h.e7)([w.default], () => w.default.getCurrentUser()),
             d = (0, h.e7)(
-                [k.Z],
+                [U.Z],
                 () => {
                     var e;
-                    return null != t ? (null === (e = k.Z.getRole(s.guild_id, t)) || void 0 === e ? void 0 : e.name) : void 0;
+                    return null != t ? (null === (e = U.Z.getRole(s.guild_id, t)) || void 0 === e ? void 0 : e.name) : void 0;
                 },
                 [s, t]
             );
@@ -239,7 +239,7 @@ class et extends s.Component {
         return e.channel.id !== this.props.channel.id || e.version !== this.props.version || e.groups.length !== this.props.groups.length;
     }
     componentDidMount() {
-        this.updateSubscription(), this.trackMemberListViewed(), (this._areActivitiesExperimentallyHidden = (0, v.$)('ChannelMembers'));
+        this.updateSubscription(), this.trackMemberListViewed(), (this._areActivitiesExperimentallyHidden = (0, S.$)('ChannelMembers'));
     }
     componentDidUpdate(e) {
         e.channel.id !== this.props.channel.id && this.updateSubscription(), this.trackMemberListViewed(), this.updateMaxContentFeedRowSeen();
@@ -335,8 +335,8 @@ class et extends s.Component {
                 let { section: t } = e,
                     { groups: n, channel: a } = this.props,
                     l = n[t];
-                return (0, S.R)(l)
-                    ? (0, s.createElement)(S.Z, {
+                return (0, v.R)(l)
+                    ? (0, s.createElement)(v.Z, {
                           ...l,
                           key: 'section-'.concat(t)
                       })
@@ -399,7 +399,7 @@ class et extends s.Component {
                         return (
                             null != l.entry.original_id && (e += '-'.concat(l.entry.original_id)),
                             (0, i.jsx)(
-                                Z.ZP,
+                                A.ZP,
                                 {
                                     ...l,
                                     channel: this.props.channel,
@@ -427,8 +427,8 @@ class et extends s.Component {
                 }, 50)
             ),
             Y(this, 'getContentFeedGroup', () => {
-                let e = this.props.groups[A.T];
-                if ((0, S.R)(e)) return e;
+                let e = this.props.groups[Z.T];
+                if ((0, v.R)(e)) return e;
             }),
             Y(this, 'hasContentFeed', () => null != this.getContentFeedGroup()),
             Y(this, 'getRowHeightComputer', () => {
@@ -437,9 +437,9 @@ class et extends s.Component {
                     let { rows: t } = this.props,
                         n = e.index;
                     return function (e, i) {
-                        if (e === A.T) {
+                        if (e === Z.T) {
                             let e = t[n + 1 + i];
-                            return (0, Z.iZ)(e);
+                            return (0, A.iZ)(e);
                         }
                         return q;
                     };
@@ -472,7 +472,7 @@ class et extends s.Component {
                 let t = null === (e = this._list) || void 0 === e ? void 0 : e.getItems(),
                     { rowsVisible: n } = this.getDimensions();
                 if (void 0 === n || 0 === n || null == t) return;
-                this.hasContentFeed() && (t = t.filter((e) => e.section !== A.T));
+                this.hasContentFeed() && (t = t.filter((e) => e.section !== Z.T));
                 let i = t
                     .map((e) => this.getRowProps(e))
                     .slice(0, n + 1)
@@ -485,13 +485,13 @@ class et extends s.Component {
                     num_users_visible_with_activity: 0,
                     num_users_visible_with_avatar_decoration: 0
                 });
-                (this.lastReportedAnalyticsChannel = this.props.channel.id), x.ZP.trackWithMetadata(F.rMx.MEMBER_LIST_VIEWED, { ...s });
+                (this.lastReportedAnalyticsChannel = this.props.channel.id), T.ZP.trackWithMetadata(F.rMx.MEMBER_LIST_VIEWED, { ...s });
             });
     }
 }
 function en(e) {
     let { channel: t, className: n } = e,
-        { analyticsLocations: a } = (0, T.ZP)(I.Z.MEMBER_LIST),
+        { analyticsLocations: a } = (0, x.ZP)(I.Z.MEMBER_LIST),
         r = (0, h.e7)([C.Z], () => C.Z.keyboardModeEnabled),
         o = (0, h.cj)([D.ZP], () => D.ZP.getProps(t.guild_id, t.id)),
         {
@@ -499,7 +499,7 @@ function en(e) {
             groups: m,
             version: p,
             updateMaxRowSeen: _
-        } = (0, A.H)({
+        } = (0, Z.H)({
             memberStoreProps: o,
             channelId: t.id,
             guildId: t.guild_id
@@ -532,7 +532,7 @@ function en(e) {
                 }),
             []
         ),
-        x = s.useCallback(
+        T = s.useCallback(
             () =>
                 new Promise((e) => {
                     let t = f.current;
@@ -545,19 +545,19 @@ function en(e) {
                 }),
             []
         ),
-        v = (0, u.ZP)({
+        S = (0, u.ZP)({
             id: 'members-'.concat(t.id),
             setFocus: E,
             isEnabled: r,
             scrollToStart: g,
-            scrollToEnd: x
+            scrollToEnd: T
         });
-    return (0, i.jsx)(T.Gt, {
+    return (0, i.jsx)(x.Gt, {
         value: a,
         children: (0, i.jsx)('div', {
             className: l()(z.container, n),
             children: (0, i.jsx)(c.bG, {
-                navigator: v,
+                navigator: S,
                 children: (0, i.jsx)(et, {
                     ...e,
                     ...o,

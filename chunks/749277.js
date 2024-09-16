@@ -18,10 +18,10 @@ var s = n(442837),
     I = n(636629),
     m = n(33885),
     T = n(963249),
-    N = n(346585),
-    h = n(303172),
-    C = n(212332),
-    f = n(463230),
+    h = n(346585),
+    N = n(303172),
+    f = n(212332),
+    C = n(463230),
     p = n(246965),
     g = n(703656),
     S = n(706454),
@@ -193,7 +193,7 @@ let b = (e) => {
                         ]
                     });
                 case a.z.NAGBAR_NOTICE_LOCALIZED_PRICING:
-                    return (0, i.jsx)(f.Z, {
+                    return (0, i.jsx)(C.Z, {
                         notice: j,
                         noticeType: b,
                         dismissCurrentNotice: () => A(M.L.UNKNOWN)
@@ -259,7 +259,7 @@ let b = (e) => {
                             }),
                             P.Z.Messages.POMELO_ACTION_NEEDED.format(),
                             (0, i.jsx)(r.PrimaryCTANoticeButton, {
-                                onClick: () => (0, h.Z)(L.Kq.NOTICE),
+                                onClick: () => (0, N.Z)(L.Kq.NOTICE),
                                 noticeType: b,
                                 children: P.Z.Messages.GET_STARTED
                             })
@@ -273,9 +273,9 @@ let b = (e) => {
                                 onClick: () => A(M.L.UNKNOWN),
                                 noticeType: b
                             }),
-                            P.Z.Messages.POMELO_ACTION_NEEDED_FORCE.format({ date: (0, N.IE)(U) }),
+                            P.Z.Messages.POMELO_ACTION_NEEDED_FORCE.format({ date: (0, h.IE)(U) }),
                             (0, i.jsx)(r.PrimaryCTANoticeButton, {
-                                onClick: () => (0, h.Z)(L.Kq.NOTICE),
+                                onClick: () => (0, N.Z)(L.Kq.NOTICE),
                                 noticeType: b,
                                 children: P.Z.Messages.GET_STARTED
                             })
@@ -305,7 +305,7 @@ let b = (e) => {
                         ]
                     });
                 case a.z.CASH_APP_PAY_AWARENESS_NAGBAR:
-                    return (0, i.jsx)(C.Z, { onClose: () => A(M.L.TAKE_ACTION) });
+                    return (0, i.jsx)(f.Z, { onClose: () => A(M.L.TAKE_ACTION) });
             }
         }
     });

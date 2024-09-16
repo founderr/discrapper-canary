@@ -1,29 +1,29 @@
 E.d(_, {
     Z: function () {
-        return A;
+        return a;
     }
 });
 var s = E(735250),
-    T = E(470079),
-    I = E(481060),
-    n = E(412899),
-    t = E(231338);
-function A(e) {
+    n = E(470079),
+    t = E(481060),
+    r = E(412899),
+    T = E(231338);
+function a(e) {
     var _;
-    let { guildId: E, role: A, className: r, canRemove: a = !1, onRemove: N = t.dG } = e,
-        S = (0, I.useToken)(I.tokens.unsafe_rawColors.PRIMARY_300).hex(),
-        l = null !== (_ = null == A ? void 0 : A.colorString) && void 0 !== _ ? _ : S,
-        D = T.useMemo(() => ({ backgroundColor: ''.concat(l, '27') }), [l]);
-    return null == A
+    let { guildId: E, role: a, className: I, canRemove: l = !1, onRemove: o = T.dG } = e,
+        A = (0, t.useToken)(t.tokens.unsafe_rawColors.PRIMARY_300).hex(),
+        i = null !== (_ = null == a ? void 0 : a.colorString) && void 0 !== _ ? _ : A,
+        N = n.useMemo(() => ({ backgroundColor: ''.concat(i, '27') }), [i]);
+    return null == a
         ? null
-        : (0, s.jsx)(I.Clickable, {
-              children: (0, s.jsx)(n.UB, {
-                  className: r,
-                  style: D,
-                  role: A,
+        : (0, s.jsx)(t.Clickable, {
+              children: (0, s.jsx)(r.UB, {
+                  className: I,
+                  style: N,
+                  role: a,
                   guildId: E,
-                  canRemove: a,
-                  onRemove: N
+                  canRemove: l,
+                  onRemove: o
               })
           });
 }

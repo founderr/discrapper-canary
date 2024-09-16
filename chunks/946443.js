@@ -21,10 +21,10 @@ var i = n(735250),
     I = n(607070),
     m = n(724757),
     T = n(626135),
-    N = n(585483),
-    h = n(143316),
-    C = n(240126),
-    f = n(791914),
+    h = n(585483),
+    N = n(143316),
+    f = n(240126),
+    C = n(791914),
     p = n(147522),
     g = n(809780),
     S = n(981631),
@@ -58,9 +58,9 @@ function O(e) {
                     null != n && t.markChannelRead(n);
                 };
                 return (
-                    N.S.subscribe(S.CkL.MARK_TOP_INBOX_CHANNEL_READ, n),
+                    h.S.subscribe(S.CkL.MARK_TOP_INBOX_CHANNEL_READ, n),
                     () => {
-                        N.S.unsubscribe(S.CkL.MARK_TOP_INBOX_CHANNEL_READ, n);
+                        h.S.unsubscribe(S.CkL.MARK_TOP_INBOX_CHANNEL_READ, n);
                     }
                 );
             }, [t, e.channels]);
@@ -84,13 +84,13 @@ function O(e) {
         return (0, i.jsxs)('div', {
             className: R.container,
             children: [
-                (0, i.jsx)(f.Z, {
+                (0, i.jsx)(C.Z, {
                     tab: d.X.UNREADS,
                     setTab: t,
                     badgeState: M,
                     closePopout: O
                 }),
-                (0, i.jsx)(C.Z, {
+                (0, i.jsx)(f.Z, {
                     Icon: _.InboxIcon,
                     header: A.Z.Messages.UNREADS_EMPTY_STATE_HEADER,
                     tip: (null === (B = o().os) || void 0 === B ? void 0 : B.family) === 'OS X' ? A.Z.Messages.UNREADS_EMPTY_STATE_TIP_MAC : A.Z.Messages.UNREADS_EMPTY_STATE_TIP
@@ -102,12 +102,12 @@ function O(e) {
         className: r()(R.container, 'group-spacing-'.concat(U)),
         'aria-label': A.Z.Messages.UNREADS_TAB_LABEL,
         children: [
-            (0, i.jsx)(f.Z, {
+            (0, i.jsx)(C.Z, {
                 tab: d.X.UNREADS,
                 setTab: t,
                 badgeState: M,
                 closePopout: O,
-                children: (0, i.jsx)(h.Z, {
+                children: (0, i.jsx)(N.Z, {
                     type: 'top-header',
                     onClick: j
                 })
@@ -173,13 +173,13 @@ function M(e) {
     return (0, i.jsxs)('div', {
         className: R.container,
         children: [
-            (0, i.jsx)(f.Z, {
+            (0, i.jsx)(C.Z, {
                 tab: d.X.UNREADS,
                 setTab: t,
                 badgeState: n,
                 closePopout: s
             }),
-            (0, i.jsx)(C.Z, {
+            (0, i.jsx)(f.Z, {
                 Icon: _.InboxIcon,
                 disableStars: !0,
                 header: A.Z.Messages.UNREADS_EMPTY_STATE_ERROR_HEADER,

@@ -10,7 +10,7 @@ var r = n(735250),
     o = n(481060),
     s = n(219299);
 function c(e) {
-    let { columns: t, data: n, className: l, rowClassName: c, onClickRow: u, selectedRowKey: d, rowHeight: h = 40 } = e,
+    let { columns: t, data: n, className: l, rowClassName: c, onClickRow: d, selectedRowKey: u, rowHeight: h = 40 } = e,
         m = a.useMemo(
             () =>
                 t.map((e) => ({
@@ -62,14 +62,14 @@ function c(e) {
                     a = n[t],
                     l = a.key,
                     x = i()(s.tableRow, {
-                        [s.selectedTableRow]: l === d,
+                        [s.selectedTableRow]: l === u,
                         rowClassName: c
                     });
                 return (0, r.jsx)(
                     o.Clickable,
                     {
                         className: x,
-                        onClick: () => (null == u ? void 0 : u(a)),
+                        onClick: () => (null == d ? void 0 : d(a)),
                         children: m.map((e) => {
                             var n, l;
                             let o = i()(e.cellClassName),

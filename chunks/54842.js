@@ -15,14 +15,14 @@ var s = n(735250),
     m = n(689938),
     N = n(333913),
     S = n(438825),
-    h = n(236140),
-    g = n(37069),
+    g = n(236140),
+    h = n(37069),
     C = n(518513),
     x = n(168179),
     p = n(348986),
     R = n(930065),
-    f = n(345669);
-let L = () => [
+    L = n(345669);
+let f = () => [
         {
             icon: c.AnalyticsIcon,
             color: o.Z.unsafe_rawColors.GREEN_360.css,
@@ -100,12 +100,12 @@ let L = () => [
             rightAlign: !0
         },
         {
-            iconSrc: f,
+            iconSrc: L,
             name: 'Sneaker Fans',
             position: [-250, 40]
         },
         {
-            iconSrc: g,
+            iconSrc: h,
             name: 'Hogwarts School',
             position: [-270, 40],
             faded: !0,
@@ -169,17 +169,17 @@ t.Z = (e) => {
     let { guild: t } = e,
         [n, i] = a.useState(0),
         [r, o] = a.useState(0),
-        [g, C] = a.useState(),
+        [h, C] = a.useState(),
         x = (0, l.e7)([_.Z], () => _.Z.can(E.Plq.ADMINISTRATOR, t)),
-        p = null == g ? void 0 : g.offsetWidth,
-        R = null == g ? void 0 : g.offsetHeight;
+        p = null == h ? void 0 : h.offsetWidth,
+        R = null == h ? void 0 : h.offsetHeight;
     a.useEffect(() => {
         null != p && i(p / 2), null != R && o(R / 2);
     }, [p, R, i, o]),
         a.useEffect(() => {
             (0, d.Kw)(T.v.GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL);
         }, []);
-    let f = () => {
+    let L = () => {
         u.Z.open();
     };
     return (0, s.jsxs)('div', {
@@ -207,7 +207,7 @@ t.Z = (e) => {
                     }),
                     (0, s.jsx)('img', {
                         alt: '',
-                        src: h,
+                        src: g,
                         className: N.sparkles
                     })
                 ]
@@ -227,7 +227,7 @@ t.Z = (e) => {
                 'aria-label': x ? void 0 : m.Z.Messages.GUILD_SETTINGS_COMMUNITY_ADMINISTRATOR_ONLY,
                 children: (e) =>
                     (0, s.jsx)(c.Button, {
-                        onClick: f,
+                        onClick: L,
                         className: N.button,
                         disabled: !x,
                         ...e,
@@ -248,7 +248,7 @@ t.Z = (e) => {
             }),
             (0, s.jsx)('div', {
                 className: N.features,
-                children: L().map((e, t) => (0, s.jsx)(A, { ...e }, t))
+                children: f().map((e, t) => (0, s.jsx)(A, { ...e }, t))
             })
         ]
     });

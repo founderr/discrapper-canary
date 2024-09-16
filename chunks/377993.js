@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return U;
+        return k;
     }
 }),
     n(47120),
@@ -23,27 +23,27 @@ var i = n(735250),
     g = n(158776),
     C = n(699516),
     I = n(111583),
-    x = n(594174),
-    T = n(626135),
-    v = n(768581),
-    S = n(585483),
+    T = n(594174),
+    x = n(626135),
+    S = n(768581),
+    v = n(585483),
     N = n(233870),
-    Z = n(51144),
-    A = n(998502),
+    A = n(51144),
+    Z = n(998502),
     M = n(276264),
     b = n(981631),
     R = n(689938),
     L = n(226686),
     j = n(204394);
 let P = [],
-    O = A.ZP.getEnableHardwareAcceleration();
+    O = Z.ZP.getEnableHardwareAcceleration();
 function y(e) {
     let { user: t, channel: s, status: u, activities: d } = e,
         h = (0, l.e7)([I.Z], () => null != I.Z.getTypingUsers(s.id)[t.id]),
-        m = (0, l.e7)([x.default], () => x.default.getCurrentUser()),
+        m = (0, l.e7)([T.default], () => T.default.getCurrentUser()),
         p = (0, l.e7)([g.Z], () => g.Z.isMobileOnline(t.id)),
         _ = (0, l.e7)([C.Z], () => C.Z.getNickname(t.id)),
-        T = (e) => {
+        x = (e) => {
             (0, o.jW)(e, async () => {
                 let { default: e } = await Promise.all([n.e('79695'), n.e('92453'), n.e('18283')]).then(n.bind(n, 354589));
                 return (n) =>
@@ -65,9 +65,9 @@ function y(e) {
         position: a.tq ? 'window_center' : 'left',
         spacing: 16,
         onShiftClick: () => {
-            let e = '@'.concat(Z.ZP.getUserTag(t, { decoration: 'never' })),
+            let e = '@'.concat(A.ZP.getUserTag(t, { decoration: 'never' })),
                 n = '<@'.concat(t.id, '>');
-            S.S.dispatchToLastSubscribed(b.CkL.INSERT_TEXT, {
+            v.S.dispatchToLastSubscribed(b.CkL.INSERT_TEXT, {
                 plainText: e,
                 rawText: n
             }),
@@ -86,7 +86,7 @@ function y(e) {
                     status: u,
                     activities: d,
                     channel: s,
-                    onContextMenu: T,
+                    onContextMenu: x,
                     isMobile: p,
                     nick: _,
                     ...e
@@ -113,7 +113,7 @@ function D(e) {
             [l, c]
         ),
         d = l.application.bot,
-        m = v.ZP.getApplicationIconURL({
+        m = S.ZP.getApplicationIconURL({
             id: l.application.id,
             icon: l.application.icon,
             bot: null === (t = l.application) || void 0 === t ? void 0 : t.bot,
@@ -162,7 +162,7 @@ function D(e) {
           })
         : null;
 }
-function k(e, t) {
+function U(e, t) {
     if (e.listItems.length !== t.listItems.length) return !1;
     for (let n = 0; n < e.listItems.length; n++) {
         let i = e.listItems[n],
@@ -171,22 +171,22 @@ function k(e, t) {
     }
     return !0;
 }
-function U(e) {
+function k(e) {
     var t;
     let { channel: a } = e,
-        o = x.default.getCurrentUser(),
+        o = T.default.getCurrentUser(),
         c = null == o ? void 0 : o.isStaff(),
         { analyticsLocations: f } = (0, d.ZP)(u.Z.MEMBER_LIST);
     let { listItems: E } =
             ((t = a),
             (0, l.e7)(
-                [C.Z, x.default, g.Z],
+                [C.Z, T.default, g.Z],
                 () => {
-                    let e = (0, N.T)(t.recipients, x.default),
+                    let e = (0, N.T)(t.recipients, T.default),
                         n = {};
                     for (let t of e) {
                         var i, s, a;
-                        C.Z.isFriend(t.id) || t.id === (null === (i = x.default.getCurrentUser()) || void 0 === i ? void 0 : i.id)
+                        C.Z.isFriend(t.id) || t.id === (null === (i = T.default.getCurrentUser()) || void 0 === i ? void 0 : i.id)
                             ? (n[t.id] = {
                                   status: null !== (s = g.Z.getStatus(t.id)) && void 0 !== s ? s : b.Skl.OFFLINE,
                                   activities: null !== (a = g.Z.getActivities(t.id)) && void 0 !== a ? a : P
@@ -208,11 +208,11 @@ function U(e) {
                     return { listItems: l };
                 },
                 [t],
-                k
+                U
             )),
-        { installedIntegrations: I, applicationsShelf: v, fetched: S, appsInGDMEnabled: Z, availableApplications: A } = (0, _.j)({ channelId: a.id });
+        { installedIntegrations: I, applicationsShelf: S, fetched: v, appsInGDMEnabled: A, availableApplications: Z } = (0, _.j)({ channelId: a.id });
     s.useEffect(() => {
-        T.default.track(b.rMx.MEMBER_LIST_VIEWED, {
+        x.default.track(b.rMx.MEMBER_LIST_VIEWED, {
             channel_id: a.id,
             channel_type: a.type,
             guild_id: a.guild_id
@@ -243,8 +243,8 @@ function U(e) {
                             e.user.id
                         )
                     ),
-                    Z &&
-                        (I.length > 0 || (S && v.length > 0)) &&
+                    A &&
+                        (I.length > 0 || (v && S.length > 0)) &&
                         (0, i.jsxs)(i.Fragment, {
                             children: [
                                 (0, i.jsx)(m.Z, {
@@ -261,7 +261,7 @@ function U(e) {
                                         e.application.id
                                     )
                                 ),
-                                A.length > 0 &&
+                                Z.length > 0 &&
                                     (0, i.jsx)(p.Z, {
                                         className: L.member,
                                         onClick: () => {

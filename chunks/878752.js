@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return v;
+        return S;
     }
 });
 var i = n(735250);
@@ -22,30 +22,30 @@ var s = n(512722),
     g = n(933686),
     C = n(997614),
     I = n(159909),
-    x = n(981631),
-    T = n(307410);
-function v(e) {
+    T = n(981631),
+    x = n(307410);
+function S(e) {
     let { channel: t, hasActiveStream: n, themeable: s = !1 } = e,
-        v = (0, l.e7)([m.default], () => {
+        S = (0, l.e7)([m.default], () => {
             let e = m.default.getCurrentUser();
             return a()(null != e, 'CenterControlTray: currentUser cannot be undefined'), e;
         }),
-        S = (0, o.Z)(),
+        v = (0, o.Z)(),
         { isSharedCanvasEnabled: N } = u.Z.useExperiment({
             guildId: null == t ? void 0 : t.guild_id,
             location: 'b7309a_1'
         }),
-        { enableViewerClipping: Z } = c.Z.useExperiment({ location: 'VoiceEffectsActionBar' }, { autoTrackExposure: !1 }),
-        A = (0, r.Z)(h.Z);
-    if (null == t || null != S) return null;
+        { enableViewerClipping: A } = c.Z.useExperiment({ location: 'VoiceEffectsActionBar' }, { autoTrackExposure: !1 }),
+        Z = (0, r.Z)(h.Z);
+    if (null == t || null != v) return null;
     let M = (0, d.Z)(t),
         b = p.BT({
-            permission: x.Plq.ADD_REACTIONS,
-            user: v,
+            permission: T.Plq.ADD_REACTIONS,
+            user: S,
             context: t
         });
     return (0, i.jsxs)('div', {
-        className: T.voiceEffectsActionBar,
+        className: x.voiceEffectsActionBar,
         children: [
             M &&
                 (0, i.jsx)(C.Z, {
@@ -53,7 +53,7 @@ function v(e) {
                     themeable: s
                 }),
             b && (0, i.jsx)(g.Z, { channel: t }),
-            Z && A && (0, i.jsx)(_.Z, { channel: t }),
+            A && Z && (0, i.jsx)(_.Z, { channel: t }),
             N && n && (0, i.jsx)(f.Z, {}),
             N && n && (0, i.jsx)(E.Z, { channel: t }),
             N && n && (0, i.jsx)(I.Z, {})

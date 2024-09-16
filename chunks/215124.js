@@ -25,8 +25,8 @@ function _(e) {
             return (null == n ? void 0 : n.status) === d.x_.OPEN || (null == n ? void 0 : n.status) === d.x_.PAYOUT_DEFERRED;
         }),
         S = E.length > 0,
-        h = T.length > 0,
-        g = N.length > 0;
+        g = T.length > 0,
+        h = N.length > 0;
     return null == I
         ? null
         : (0, s.jsxs)('div', {
@@ -37,7 +37,7 @@ function _(e) {
                   }),
                   (0, s.jsx)(i.Spacer, { size: 16 }),
                   (0, s.jsx)(i.Button, {
-                      disabled: !m || S || h || g,
+                      disabled: !m || S || g || h,
                       look: i.Button.Looks.FILLED,
                       color: i.Button.Colors.RED,
                       onClick: () => {

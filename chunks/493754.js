@@ -20,12 +20,12 @@ var s = n(120356),
     f = n(632189);
 function E(e) {
     var t, s;
-    let { stream: l, applicationId: E, channel: g, exitFullScreen: C, appContext: I, analyticsLocation: x, className: T, ...v } = e,
-        S = null == g ? void 0 : g.getGuildId(),
+    let { stream: l, applicationId: E, channel: g, exitFullScreen: C, appContext: I, analyticsLocation: T, className: x, ...S } = e,
+        v = null == g ? void 0 : g.getGuildId(),
         N = null == g ? void 0 : g.id,
-        Z = (0, o.e7)([h.Z], () => (null != S ? h.Z.getGuild(S) : null), [S]),
-        A = (0, o.e7)([u.ZP], () => u.ZP.getActiveEventByChannel(N), [N]);
-    if (((t = Z), (s = g), !(null != t && null != s && m.Z.can(p.Plq.CREATE_INSTANT_INVITE, s)))) return null;
+        A = (0, o.e7)([h.Z], () => (null != v ? h.Z.getGuild(v) : null), [v]),
+        Z = (0, o.e7)([u.ZP], () => u.ZP.getActiveEventByChannel(N), [N]);
+    if (((t = A), (s = g), !(null != t && null != s && m.Z.can(p.Plq.CREATE_INSTANT_INVITE, s)))) return null;
     let M = _.Z.Messages.INSTANT_INVITE;
     return (
         null != l ? (M = _.Z.Messages.INVITE_STREAM_HEADER) : null != E && (M = _.Z.Messages.EMBEDDED_ACTIVITIES_INVITE_TO_ACTIVITY),
@@ -35,7 +35,7 @@ function E(e) {
                     size: c.Button.Sizes.SMALL,
                     color: f.buttonColor,
                     onClick: () => {
-                        r()(null != Z, 'guild cannot be null'),
+                        r()(null != A, 'guild cannot be null'),
                             r()(null != g, 'channel cannot be null'),
                             !(function (e) {
                                 let { guild: t, channel: s, streamUserId: a, applicationId: l, appContext: r, exitFullScreen: o, analyticsLocation: u, guildScheduledEvent: d } = e;
@@ -61,28 +61,28 @@ function E(e) {
                                         }
                                     );
                             })({
-                                guild: Z,
+                                guild: A,
                                 channel: g,
                                 streamUserId: null == l ? void 0 : l.ownerId,
                                 applicationId: E,
                                 appContext: I,
                                 exitFullScreen: C,
-                                analyticsLocation: x,
-                                guildScheduledEvent: A
+                                analyticsLocation: T,
+                                guildScheduledEvent: Z
                             });
                     },
-                    className: a()(T, f.textButton),
-                    ...v,
+                    className: a()(x, f.textButton),
+                    ...S,
                     children: M
                 }),
                 (0, i.jsx)(d.Z, {
                     channel: g,
                     stream: l,
                     appContext: I,
-                    className: a()(T, f.iconButton),
+                    className: a()(x, f.iconButton),
                     exitFullScreen: C,
-                    analyticsLocation: x,
-                    guildScheduledEvent: A
+                    analyticsLocation: T,
+                    guildScheduledEvent: Z
                 })
             ]
         })

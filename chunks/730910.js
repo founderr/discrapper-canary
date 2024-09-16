@@ -20,14 +20,14 @@ var s = n(735250),
     m = n(626135),
     N = n(585483),
     S = n(999382),
-    h = n(743475),
-    g = n(983135),
+    g = n(743475),
+    h = n(983135),
     C = n(8426),
     x = n(969632),
     p = n(570961),
     R = n(208665),
-    f = n(359191),
-    L = n(84658),
+    L = n(359191),
+    f = n(84658),
     O = n(142961),
     A = n(232764),
     M = n(729311),
@@ -43,24 +43,24 @@ function U() {
 function G(e) {
     let { guild: t } = e,
         i = t.id,
-        S = (0, o.e7)([f.Z], () => f.Z.getCurrentPage()),
+        S = (0, o.e7)([L.Z], () => L.Z.getCurrentPage()),
         U = (0, O.Z)(i),
         {
             hasChanges: G,
             hasConfiguredAnythingForCurrentStep: P,
             hasErrors: B
-        } = (0, o.cj)([f.Z], () => ({
-            hasChanges: f.Z.hasChanges(),
-            hasConfiguredAnythingForCurrentStep: f.Z.hasConfiguredAnythingForCurrentStep(),
-            hasErrors: f.Z.hasErrors()
+        } = (0, o.cj)([L.Z], () => ({
+            hasChanges: L.Z.hasChanges(),
+            hasConfiguredAnythingForCurrentStep: L.Z.hasConfiguredAnythingForCurrentStep(),
+            hasErrors: L.Z.hasErrors()
         })),
-        y = (0, o.e7)([f.Z], () => {
-            let e = (0, L.lg)(S);
-            return null != e && !f.Z.isEducationUpsellDismissed(e);
+        y = (0, o.e7)([L.Z], () => {
+            let e = (0, f.lg)(S);
+            return null != e && !L.Z.isEducationUpsellDismissed(e);
         }),
         F = (0, I.ZP)(),
-        k = a.useRef(null),
-        [{ spring: w }, H] = (0, _.useSpring)(() => ({ spring: 0 }), 'animate-always');
+        w = a.useRef(null),
+        [{ spring: k }, H] = (0, _.useSpring)(() => ({ spring: 0 }), 'animate-always');
     a.useEffect(() => {
         function e() {
             H({
@@ -83,27 +83,27 @@ function G(e) {
     let V = (0, _.useToken)(c.Z.colors.BACKGROUND_FLOATING).hex(),
         Y = (0, _.useToken)(c.Z.unsafe_rawColors.PRIMARY_160).hex(),
         W = (0, u.wj)(F) ? V : Y,
-        z = w.to({
+        z = k.to({
             range: [0, 1],
             output: [(0, _.useToken)(c.Z.unsafe_rawColors.WHITE_500).hex(), (0, _.useToken)(c.Z.colors.TEXT_NORMAL).hex()]
         }),
-        K = w.to({
+        K = k.to({
             range: [0, 1],
             output: [W, (0, _.useToken)(c.Z.colors.STATUS_DANGER).hex()]
         });
     if (U) {
-        if (S === L.PG.DEFAULT_CHANNELS) return (0, s.jsx)(M.j, {});
-        if (S === L.PG.CUSTOMIZATION_QUESTIONS) return (0, s.jsx)(v.Zm, {});
-        else if (S === L.PG.HOME_SETTINGS) return (0, s.jsx)(D.T, {});
+        if (S === f.PG.DEFAULT_CHANNELS) return (0, s.jsx)(M.j, {});
+        if (S === f.PG.CUSTOMIZATION_QUESTIONS) return (0, s.jsx)(v.Zm, {});
+        else if (S === f.PG.HOME_SETTINGS) return (0, s.jsx)(D.T, {});
     }
-    let q = S === L.xh[L.xh.length - 1],
+    let q = S === f.xh[f.xh.length - 1],
         X = async () => {
             let e = R.Z.advancedMode;
             if (G)
                 try {
-                    if (S === L.PG.DEFAULT_CHANNELS) await (0, h.DO)(t).then(() => (e ? (0, p.rS)(t, { ignoreDefaultPrompt: !0 }) : Promise.resolve()));
-                    else if (S === L.PG.CUSTOMIZATION_QUESTIONS) await (0, p.rS)(t, { ignoreDefaultPrompt: !0 });
-                    else if (S === L.PG.HOME_SETTINGS) {
+                    if (S === f.PG.DEFAULT_CHANNELS) await (0, g.DO)(t).then(() => (e ? (0, p.rS)(t, { ignoreDefaultPrompt: !0 }) : Promise.resolve()));
+                    else if (S === f.PG.CUSTOMIZATION_QUESTIONS) await (0, p.rS)(t, { ignoreDefaultPrompt: !0 });
+                    else if (S === f.PG.HOME_SETTINGS) {
                         let e = x.Z.getSettings();
                         await (0, C.oo)(t.id, e);
                     }
@@ -115,24 +115,24 @@ function G(e) {
         Q = async () => {
             m.default.track(j.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
                 ...(0, E.hH)(i),
-                step: L.PG[S],
+                step: f.PG[S],
                 back: !1,
                 skip: !G
             }),
-                (0, g.Nb)((0, L.lg)(S)),
-                (await X()) && (0, g.IG)(i, S);
+                (0, h.Nb)((0, f.lg)(S)),
+                (await X()) && (0, h.IG)(i, S);
         },
         J = async () => {
             m.default.track(j.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
                 ...(0, E.hH)(i),
-                step: L.PG[S],
+                step: f.PG[S],
                 back: !0,
                 skip: !1
             }),
-                (await X()) && (0, g.Wy)(i, S);
+                (await X()) && (0, h.Wy)(i, S);
         },
         $ = null;
-    y && (S === L.PG.SAFETY_CHECK ? ($ = (0, s.jsx)(A.j7, {})) : S === L.PG.DEFAULT_CHANNELS ? ($ = (0, s.jsx)(A.Io, {})) : S === L.PG.CUSTOMIZATION_QUESTIONS ? ($ = (0, s.jsx)(A.cZ, {})) : S === L.PG.HOME_SETTINGS && ($ = (0, s.jsx)(A.g6, {})));
+    y && (S === f.PG.SAFETY_CHECK ? ($ = (0, s.jsx)(A.j7, {})) : S === f.PG.DEFAULT_CHANNELS ? ($ = (0, s.jsx)(A.Io, {})) : S === f.PG.CUSTOMIZATION_QUESTIONS ? ($ = (0, s.jsx)(A.cZ, {})) : S === f.PG.HOME_SETTINGS && ($ = (0, s.jsx)(A.g6, {})));
     let ee = (0, s.jsx)(_.Button, {
             className: r()(b.button, { [b.hidden]: y }),
             color: _.Button.Colors.PRIMARY,
@@ -179,7 +179,7 @@ function G(e) {
                 style: { backgroundColor: K },
                 children: (0, s.jsxs)('div', {
                     className: b.flexContainer,
-                    ref: k,
+                    ref: w,
                     children: [
                         y
                             ? (0, s.jsxs)('div', {
@@ -198,7 +198,7 @@ function G(e) {
                               })
                             : null,
                         (0, s.jsx)(_.FocusRingScope, {
-                            containerRef: k,
+                            containerRef: w,
                             children: (0, s.jsxs)('div', {
                                 className: b.actions,
                                 children: [

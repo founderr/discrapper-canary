@@ -33,9 +33,9 @@ let o = (e, t, n) => ({
     c = async (e) => {
         let { mediaImageSrc: t, entry: n, avatarSrc: c, description: d, timestamp: h, episodeDescription: m, colors: x, channelId: E } = e,
             _ = n.extra.media_title,
-            p = o(c, t);
+            v = o(c, t);
         return await (0, i.f)({
-            assetsToLoad: p,
+            assetsToLoad: v,
             drawImage: (e) => {
                 let t = x.map((e, t) => ({
                     color: e,

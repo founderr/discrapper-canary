@@ -1,12 +1,12 @@
 n.d(t, {
     B: function () {
-        return l;
+        return s;
     },
     t: function () {
-        return i;
+        return r;
     }
 });
-var r = n(652874);
+var i = n(652874);
 let a = Object.freeze({
         selectedTab: null,
         isSearchVisible: !1,
@@ -17,7 +17,7 @@ let a = Object.freeze({
         initialSearchCategoryId: null,
         searchScrollPosition: null
     }),
-    l = (0, r.Z)(() => a);
-function i() {
-    l.setState(a);
+    s = (0, i.Z)(() => a);
+function r() {
+    s.setState(a);
 }

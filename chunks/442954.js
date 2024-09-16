@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return d;
+        return u;
     }
 }),
     n(47120);
@@ -11,8 +11,8 @@ var r = n(735250),
     o = n(481060),
     s = n(246992),
     c = n(219299),
-    u = n(423705);
-function d() {
+    d = n(423705);
+function u() {
     let e = {
             BOGOAnnouncementModal: async () => {
                 let { default: e } = await n.e('34049').then(n.bind(n, 868508));
@@ -31,28 +31,28 @@ function d() {
             label: e,
             value: e
         })),
-        [l, d] = a.useState(t[0].value);
+        [l, u] = a.useState(t[0].value);
     return (0, r.jsx)(o.ScrollerThin, {
         className: i()(c.panel),
         children: (0, r.jsx)('div', {
-            className: u.panelInner,
+            className: d.panelInner,
             children: (0, r.jsxs)('section', {
-                className: u.section,
+                className: d.section,
                 children: [
                     (0, r.jsx)(o.Heading, {
                         variant: 'heading-md/semibold',
                         children: 'Open a Modal'
                     }),
                     (0, r.jsxs)('div', {
-                        className: u.inputRow,
+                        className: d.inputRow,
                         children: [
                             (0, r.jsx)(o.Select, {
-                                className: u.input,
+                                className: d.input,
                                 options: t,
                                 isSelected: (e) => l === e,
                                 placeholder: 'Trial ID',
                                 serialize: (e) => String(e),
-                                select: (e) => d(e),
+                                select: (e) => u(e),
                                 popoutLayerContext: s.O$
                             }),
                             (0, r.jsx)(o.Button, {

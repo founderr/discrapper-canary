@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return v;
     }
 });
 var i = n(735250);
@@ -22,36 +22,36 @@ var s = n(512722),
     g = n(496675),
     C = n(881824),
     I = n(146085),
-    x = n(427679),
-    T = n(354459),
-    v = n(689938);
-function S(e) {
-    let { channelId: t, closePopout: n, appContext: s, onSelect: S } = e,
+    T = n(427679),
+    x = n(354459),
+    S = n(689938);
+function v(e) {
+    let { channelId: t, closePopout: n, appContext: s, onSelect: v } = e,
         N = (0, l.e7)([c.Z], () => c.Z.getSelectedParticipant(t)),
-        Z = (null == N ? void 0 : N.type) === T.fO.STREAM ? N.stream : null,
-        A = (0, m.Z)(t);
+        A = (null == N ? void 0 : N.type) === x.fO.STREAM ? N.stream : null,
+        Z = (0, m.Z)(t);
     return (0, i.jsxs)(r.Menu, {
         navId: 'stage-channel-call-overflow-popout',
         onClose: n,
-        'aria-label': v.Z.Messages.CHANNEL_CALL_OVERFLOW_MENU_LABEL,
-        onSelect: S,
+        'aria-label': S.Z.Messages.CHANNEL_CALL_OVERFLOW_MENU_LABEL,
+        onSelect: v,
         children: [
             (function (e) {
                 let t = (0, l.e7)([E.Z], () => E.Z.getChannel(e), [e]),
                     n = (0, l.e7)([g.Z], () => g.Z.can(I.yP, t)),
-                    s = (0, l.e7)([x.Z], () => x.Z.getStageInstanceByChannel(e), [e]),
+                    s = (0, l.e7)([T.Z], () => T.Z.getStageInstanceByChannel(e), [e]),
                     a = (0, o.bp)(),
                     c = () => null != t && (0, C.T)(t, a);
                 return (null == t ? void 0 : t.isGuildStageVoice()) && n
                     ? null != s
                         ? (0, i.jsx)(r.MenuItem, {
                               id: 'edit-stage',
-                              label: v.Z.Messages.EDIT_STAGE_SUBTITLE,
+                              label: S.Z.Messages.EDIT_STAGE_SUBTITLE,
                               action: c
                           })
                         : (0, i.jsx)(r.MenuItem, {
                               id: 'start-stage',
-                              label: v.Z.Messages.STAGE_CHANNEL_START_TITLE,
+                              label: S.Z.Messages.STAGE_CHANNEL_START_TITLE,
                               action: c
                           })
                     : null;
@@ -66,8 +66,8 @@ function S(e) {
             })(t),
             (0, d.Z)(),
             (0, u.Z)(t),
-            A,
-            (0, h.Z)(Z, s)
+            Z,
+            (0, h.Z)(A, s)
         ]
     });
 }

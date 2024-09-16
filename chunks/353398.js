@@ -26,13 +26,13 @@ var s,
     m = n(881052),
     N = n(751189),
     S = n(409059),
-    h = n(518936),
-    g = n(999382),
+    g = n(518936),
+    h = n(999382),
     C = n(58346),
     x = n(689938),
     p = n(759985),
     R = n(113207);
-function f(e, t, n) {
+function L(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -45,9 +45,9 @@ function f(e, t, n) {
         e
     );
 }
-class L extends (s = d.ZP.Store) {
+class f extends (s = d.ZP.Store) {
     getTemplate() {
-        let e = g.Z.getProps().guild;
+        let e = h.Z.getProps().guild;
         if (null == e) return null;
         let t = S.Z.getForGuild(e.id);
         return null != t && t.state !== C.Rj.RESOLVING ? t : null;
@@ -58,10 +58,10 @@ class L extends (s = d.ZP.Store) {
     }
     constructor(...e) {
         super(...e),
-            f(this, 'name', ''),
-            f(this, 'description', ''),
-            f(this, 'error', null),
-            f(this, 'reset', () => {
+            L(this, 'name', ''),
+            L(this, 'description', ''),
+            L(this, 'error', null),
+            L(this, 'reset', () => {
                 let e = this.getTemplate();
                 if (null != e) {
                     var t, n;
@@ -69,22 +69,22 @@ class L extends (s = d.ZP.Store) {
                 } else (this.name = ''), (this.description = '');
                 this.emitChange();
             }),
-            f(this, 'setName', (e) => {
+            L(this, 'setName', (e) => {
                 (this.name = e), this.emitChange();
             }),
-            f(this, 'setDescription', (e) => {
+            L(this, 'setDescription', (e) => {
                 (this.description = e), this.emitChange();
             }),
-            f(this, 'setError', (e) => {
+            L(this, 'setError', (e) => {
                 (this.error = e), this.emitChange();
             }),
-            f(this, 'save', async () => {
-                await N.Z.updateGuildTemplate(g.Z.getProps().guild.id, this.getTemplate().code, this.name, this.description), this.emitChange();
+            L(this, 'save', async () => {
+                await N.Z.updateGuildTemplate(h.Z.getProps().guild.id, this.getTemplate().code, this.name, this.description), this.emitChange();
             });
     }
 }
-f(L, 'displayName', 'GuildSettingsTemplateMetadataStore_');
-let O = new L(I.Z);
+L(f, 'displayName', 'GuildSettingsTemplateMetadataStore_');
+let O = new f(I.Z);
 function A() {
     let [e, t] = i.useState(!1),
         n = async () => {
@@ -118,7 +118,7 @@ function M() {
     });
 }
 function D() {
-    let { guild: e } = g.Z.getProps();
+    let { guild: e } = h.Z.getProps();
     c()(null != e, 'guild cannot be null');
     let t = (0, d.e7)([O], () => O.error),
         [n, s] = i.useState(!0),
@@ -340,7 +340,7 @@ function b(e) {
                       children: (0, a.jsx)(E.Z, {
                           buttonLook: _.Button.Looks.FILLED,
                           buttonColor: _.Button.Colors.BRAND,
-                          value: (0, h.Z)(n.code)
+                          value: (0, g.Z)(n.code)
                       })
                   }),
                   n.isDirty &&

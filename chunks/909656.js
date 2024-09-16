@@ -20,14 +20,14 @@ var s = n(735250),
     m = n(393238),
     N = n(313201),
     S = n(345861),
-    h = n(208567),
-    g = n(73346),
+    g = n(208567),
+    h = n(73346),
     C = n(624138),
     x = n(584825),
     p = n(723047),
     R = n(927954),
-    f = n(164000),
-    L = n(587431),
+    L = n(164000),
+    f = n(587431),
     O = n(293810),
     A = n(333866),
     M = n(689938),
@@ -91,19 +91,19 @@ function Z(e) {
 function b(e) {
     var t;
     let { guild: n, isGuildProducts: i = !1 } = e,
-        { format: r } = (0, f.Z)(n.id),
+        { format: r } = (0, L.Z)(n.id),
         l = (0, x.YB)(n.id),
         c = a.useCallback(() => {
             var e;
-            return (null == l ? void 0 : null === (e = l.cover_image_asset) || void 0 === e ? void 0 : e.application_id) == null ? null : (0, g._W)(l.cover_image_asset.application_id, l.cover_image_asset, v);
+            return (null == l ? void 0 : null === (e = l.cover_image_asset) || void 0 === e ? void 0 : e.application_id) == null ? null : (0, h._W)(l.cover_image_asset.application_id, l.cover_image_asset, v);
         }, [l]),
         [u, I] = a.useState(r),
         [m, C] = a.useState(null !== (t = null == l ? void 0 : l.description) && void 0 !== t ? t : ''),
         [j, b] = a.useState(c),
         [U, G] = a.useState(null == l ? void 0 : l.store_page_guild_products_default_sort),
         [P, B] = a.useState(null == l ? void 0 : l.server_shop_tab_order),
-        { loading: y, error: F, updateSubscriptionsSettings: k } = (0, x.QV)(),
-        { imageCTA: w, imageAriaLabel: H, setFilename: V } = (0, R.Z)(null == l ? void 0 : l.cover_image_asset),
+        { loading: y, error: F, updateSubscriptionsSettings: w } = (0, x.QV)(),
+        { imageCTA: k, imageAriaLabel: H, setFilename: V } = (0, R.Z)(null == l ? void 0 : l.cover_image_asset),
         Y = (0, N.Dt)(),
         W = (0, N.Dt)(),
         z = (0, N.Dt)();
@@ -117,7 +117,7 @@ function b(e) {
         X = null != m && '' !== m && null != j;
     a.useEffect(() => {
         var e;
-        (null == l ? void 0 : null === (e = l.cover_image_asset) || void 0 === e ? void 0 : e.application_id) != null && b((0, g._W)(l.cover_image_asset.application_id, l.cover_image_asset, v));
+        (null == l ? void 0 : null === (e = l.cover_image_asset) || void 0 === e ? void 0 : e.application_id) != null && b((0, h._W)(l.cover_image_asset.application_id, l.cover_image_asset, v));
     }, [null == l ? void 0 : l.cover_image_asset]);
     let Q = (0, p.mY)(),
         J = a.useMemo(
@@ -146,7 +146,7 @@ function b(e) {
         children: [
             null != F &&
                 (0, s.jsxs)(s.Fragment, {
-                    children: [(0, s.jsx)(L.Z, { children: F.getAnyErrorMessage() }), (0, s.jsx)(E.Spacer, { size: 16 })]
+                    children: [(0, s.jsx)(f.Z, { children: F.getAnyErrorMessage() }), (0, s.jsx)(E.Spacer, { size: 16 })]
                 }),
             i
                 ? null
@@ -216,9 +216,9 @@ function b(e) {
                         disabled: Q,
                         children: M.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INFO_COVER_IMAGE_DESCRIPTION
                     }),
-                    (0, s.jsx)(h.Z, {
+                    (0, s.jsx)(g.Z, {
                         image: j,
-                        hint: w,
+                        hint: k,
                         showIcon: !0,
                         showRemoveButton: !1,
                         hideSize: !0,
@@ -233,7 +233,7 @@ function b(e) {
                     (0, s.jsx)(E.Spacer, { size: 16 }),
                     (0, s.jsx)(S.Z, {
                         onChange: K,
-                        buttonCTA: w,
+                        buttonCTA: k,
                         'aria-label': H,
                         disabled: Q,
                         look: E.Button.Looks.OUTLINED,
@@ -308,7 +308,7 @@ function b(e) {
                             onSave: () => {
                                 o()(null != l, 'Settings must be defined');
                                 let e = {};
-                                m !== l.description && (e.description = m), null != j && j.startsWith('data:') && (e.cover_image = j), u !== r && (e.full_server_gate = u === O.e3.ALL_CHANNELS), U !== l.store_page_guild_products_default_sort && (e.store_page_guild_products_default_sort = U), P !== l.server_shop_tab_order && (e.server_shop_tab_order = P), !d().isEmpty(e) && k(n.id, e);
+                                m !== l.description && (e.description = m), null != j && j.startsWith('data:') && (e.cover_image = j), u !== r && (e.full_server_gate = u === O.e3.ALL_CHANNELS), U !== l.store_page_guild_products_default_sort && (e.store_page_guild_products_default_sort = U), P !== l.server_shop_tab_order && (e.server_shop_tab_order = P), !d().isEmpty(e) && w(n.id, e);
                             },
                             saveButtonTooltip: X ? void 0 : M.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INFO_FULL_OUT_ALL_INFO
                         })

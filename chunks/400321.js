@@ -29,8 +29,8 @@ function l(e) {
             }
             return n.stroke(), i;
         },
-        { fillColor: I, outlineColor: x } = (0, i.bg)(t.userId, c, u, o),
-        T = C(x, 6 + a.q2),
-        v = null != T && E(T);
-    v && (0, s.I)(n, T.x, T.y, x, a.q2), C(I, 6), v && (0, s.T)(n, T.x, T.y, t.userId);
+        { fillColor: I, outlineColor: T } = (0, i.bg)(t.userId, c, u, o),
+        x = C(T, 6 + a.q2),
+        S = null != x && E(x);
+    S && (0, s.I)(n, x.x, x.y, T, a.q2), C(I, 6), S && (0, s.T)(n, x.x, x.y, t.userId);
 }

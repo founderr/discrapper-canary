@@ -1,24 +1,24 @@
-t.d(e, {
+t.d(n, {
     C: function () {
-        return function n(e) {
-            return null == e
-                ? e
-                : Object.keys(e).reduce((t, u) => {
-                      let i = (0, r.camelCase)(u);
-                      return 'object' != typeof e[u] || Array.isArray(e[u]) ? (t[i] = e[u]) : (t[i] = n(e[u])), t;
+        return function e(n) {
+            return null == n
+                ? n
+                : Object.keys(n).reduce((t, r) => {
+                      let l = (0, i.camelCase)(r);
+                      return 'object' != typeof n[r] || Array.isArray(n[r]) ? (t[l] = n[r]) : (t[l] = e(n[r])), t;
                   }, {});
         };
     },
     X: function () {
-        return function n(e) {
-            return null == e
-                ? e
-                : Object.keys(e).reduce((t, u) => {
-                      let i = (0, r.snakeCase)(u);
-                      return 'object' != typeof e[u] || Array.isArray(e[u]) ? (t[i] = e[u]) : (t[i] = n(e[u])), (t[i] = e[u]), t;
+        return function e(n) {
+            return null == n
+                ? n
+                : Object.keys(n).reduce((t, r) => {
+                      let l = (0, i.snakeCase)(r);
+                      return 'object' != typeof n[r] || Array.isArray(n[r]) ? (t[l] = n[r]) : (t[l] = e(n[r])), (t[l] = n[r]), t;
                   }, {});
         };
     }
 }),
     t(724458);
-var r = t(392711);
+var i = t(392711);

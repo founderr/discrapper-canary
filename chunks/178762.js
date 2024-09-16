@@ -24,8 +24,8 @@ var l = n(735250),
     x = n(594174),
     E = n(69259),
     _ = n(370370),
-    p = n(107062),
-    v = n(91140),
+    v = n(107062),
+    p = n(91140),
     T = n(227172),
     f = n(551228),
     g = n(678869),
@@ -45,7 +45,7 @@ let R = (e) => {
         let { entry: t, ...n } = e;
         switch (t.content_type) {
             case o.s.PLAYED_GAME:
-                return (0, l.jsx)(v.Z, {
+                return (0, l.jsx)(p.Z, {
                     ...n,
                     entry: t
                 });
@@ -136,7 +136,7 @@ let R = (e) => {
                     entry: t
                 });
             case o.s.LAUNCHED_ACTIVITY:
-                return (0, l.jsx)(p.ZP, {
+                return (0, l.jsx)(v.ZP, {
                     ...n,
                     entry: t
                 });
@@ -148,8 +148,8 @@ t.ZP = a.memo((e) => {
     var t;
     let { index: i, ...o } = e,
         [m, _] = a.useState('default'),
-        p = (0, s.JA)(''.concat(i)),
-        v = null === (t = x.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff(),
+        v = (0, s.JA)(''.concat(i)),
+        p = null === (t = x.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff(),
         { isRich: T, appName: f } = (0, M.n)(o.entry),
         g = {
             entry: o.entry,
@@ -167,7 +167,7 @@ t.ZP = a.memo((e) => {
     }, [C, S]);
     let A = a.useCallback(
             (e) => {
-                if (!!v)
+                if (!!p)
                     (0, d.jW)(e, async () => {
                         let { default: e } = await n.e('153').then(n.bind(n, 330150));
                         return () =>
@@ -177,7 +177,7 @@ t.ZP = a.memo((e) => {
                             });
                     });
             },
-            [o, v]
+            [o, p]
         ),
         O = a.useCallback(() => {
             _(String(Date.now()));
@@ -230,7 +230,7 @@ t.ZP = a.memo((e) => {
                 let { isShown: n } = t;
                 return (0, l.jsx)(c.Clickable, {
                     ...e,
-                    ...p,
+                    ...v,
                     focusProps: {
                         offset: {
                             top: 4,

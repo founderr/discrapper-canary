@@ -18,10 +18,10 @@ var s = n(120356),
     I = n(208450),
     m = n(358085),
     T = n(998502),
-    N = n(665149),
-    h = n(300986),
-    C = n(314451),
-    f = n(35583),
+    h = n(665149),
+    N = n(300986),
+    f = n(314451),
+    C = n(35583),
     p = n(981631),
     g = n(176505),
     S = n(228856);
@@ -36,7 +36,7 @@ function R(e) {
     let { children: t, className: n, channelId: s, guildId: a, innerClassname: l, transparent: o = !1, toolbar: m, mobileToolbar: T, 'aria-label': p, 'aria-labelledby': g, scrollable: R, role: O, hideSearch: x, showDivider: M } = e,
         { hasBugReporterAccess: v } = c.Z.useExperiment({ location: 'HeaderBar' }, { autoTrackExposure: !1 }),
         { enabled: L, inInbox: Z } = _.Z.useExperiment({ location: 'HeaderBar' });
-    return (0, i.jsx)(N.ZP, {
+    return (0, i.jsx)(h.ZP, {
         className: n,
         innerClassName: l,
         toolbar: (function () {
@@ -45,7 +45,7 @@ function R(e) {
             return r.tq
                 ? T
                 : (0, i.jsxs)(i.Fragment, {
-                      children: [m, e ? (0, i.jsx)(I.Z, { className: S.search }, null != a ? a : s) : null, M && (0, i.jsx)(N.ZP.Divider, {}), (0, i.jsx)(f.Z, {}), (0, i.jsx)(u.Z, { canShowReminder: !0 }), (0, i.jsx)(d.Z, {}), L && !Z ? (0, i.jsx)(E.Z, {}) : null, v ? (0, i.jsx)(C.Z, {}) : (0, i.jsx)(h.Z, {})]
+                      children: [m, e ? (0, i.jsx)(I.Z, { className: S.search }, null != a ? a : s) : null, M && (0, i.jsx)(h.ZP.Divider, {}), (0, i.jsx)(C.Z, {}), (0, i.jsx)(u.Z, { canShowReminder: !0 }), (0, i.jsx)(d.Z, {}), L && !Z ? (0, i.jsx)(E.Z, {}) : null, v ? (0, i.jsx)(f.Z, {}) : (0, i.jsx)(N.Z, {})]
                   });
         })(),
         transparent: o,
@@ -59,7 +59,7 @@ function R(e) {
 }
 function O(e) {
     let { children: t, className: n, 'aria-label': s, 'aria-labelledby': a, role: r } = e;
-    return (0, i.jsx)(N.ZP, {
+    return (0, i.jsx)(h.ZP, {
         className: n,
         onDoubleClick: A,
         'aria-label': s,
@@ -85,4 +85,4 @@ function x(e) {
               })
     });
 }
-(x.Title = N.ZP.Title), (x.Icon = N.ZP.Icon), (x.Divider = N.ZP.Divider), (x.Caret = N.ZP.Caret), (t.Z = x);
+(x.Title = h.ZP.Title), (x.Icon = h.ZP.Icon), (x.Divider = h.ZP.Divider), (x.Caret = h.ZP.Caret), (t.Z = x);

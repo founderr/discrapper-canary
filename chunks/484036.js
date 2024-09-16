@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return u;
+        return d;
     }
 }),
     n(47120);
@@ -24,20 +24,20 @@ function c(e) {
         className: s.resizeHandle
     });
 }
-function u(e) {
+function d(e) {
     let { children: t, className: n, initialHeight: l, minHeight: o } = e,
-        u = a.useRef(null),
-        [d, h] = a.useState(l);
+        d = a.useRef(null),
+        [u, h] = a.useState(l);
     return (0, r.jsxs)('div', {
-        ref: u,
+        ref: d,
         className: s.container,
         style: {
             minHeight: o,
-            height: d
+            height: u
         },
         children: [
             (0, r.jsx)(c, {
-                resizableNode: u,
+                resizableNode: d,
                 minHeight: o,
                 onResize: h
             }),

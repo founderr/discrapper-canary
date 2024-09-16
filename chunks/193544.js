@@ -18,28 +18,28 @@ var s = n(735250),
     E = n(441519);
 function T(e) {
     var t, n, i;
-    let { changeTitle: T, value: m, options: N, className: S, onChange: h } = e,
-        [g, C] = a.useState(m),
+    let { changeTitle: T, value: m, options: N, className: S, onChange: g } = e,
+        [h, C] = a.useState(m),
         [x, p] = a.useState(!1),
-        [R, f] = a.useState(!1),
-        L = a.useRef(null);
+        [R, L] = a.useState(!1),
+        f = a.useRef(null);
     a.useEffect(() => {
         C(m);
     }, [m]),
         a.useEffect(
             () => () => {
-                clearTimeout(L.current);
+                clearTimeout(f.current);
             },
             []
         );
-    let O = N.find((e) => e.value === g),
+    let O = N.find((e) => e.value === h),
         A = (e) => {
-            if (!e.disabled && e.value !== g)
-                f(!0),
-                    null == h || h(e),
+            if (!e.disabled && e.value !== h)
+                L(!0),
+                    null == g || g(e),
                     C(e.value),
-                    (L.current = setTimeout(() => {
-                        f(!1), p(!1);
+                    (f.current = setTimeout(() => {
+                        L(!1), p(!1);
                     }, 1000));
         };
     return (0, s.jsx)(u.Z, {
@@ -61,9 +61,9 @@ function T(e) {
                     title: e.title,
                     description: e.description,
                     highlightColor: e.highlightColor,
-                    className: r()(E.groupCollapsedRow, g === e.value && E.selected),
-                    selected: g === e.value,
-                    action: g === e.value ? (0, s.jsx)(c.Z, { className: E.radioItem }) : (0, s.jsx)(o.Z, { className: E.radioItem }),
+                    className: r()(E.groupCollapsedRow, h === e.value && E.selected),
+                    selected: h === e.value,
+                    action: h === e.value ? (0, s.jsx)(c.Z, { className: E.radioItem }) : (0, s.jsx)(o.Z, { className: E.radioItem }),
                     onClick: () => A(e),
                     disabled: e.disabled
                 },

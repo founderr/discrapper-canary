@@ -11,8 +11,8 @@ var r = n(735250),
     o = n(570140),
     s = n(178635),
     c = n(115470),
-    u = n(511010),
-    d = n(246992),
+    d = n(511010),
+    u = n(246992),
     h = n(501775);
 let m = 60000,
     x = 3600000,
@@ -39,8 +39,8 @@ function g() {
     let [e, t] = a.useState(null),
         [n, g] = a.useState(0),
         [b, v] = a.useState(1000),
-        [j, C] = a.useState(0),
-        _ = (0, l.e7)([c.Z], () => {
+        [_, j] = a.useState(0),
+        C = (0, l.e7)([c.Z], () => {
             var t;
             return null === e ? null : null !== (t = c.Z.getFeedbackConfig(e)) && void 0 !== t ? t : s.R[e];
         }),
@@ -48,7 +48,7 @@ function g() {
             label: e,
             value: e
         })),
-        S = a.useMemo(() => null != e && j >= 0 && j <= 100 && n >= 0, [e, j, n]);
+        S = a.useMemo(() => null != e && _ >= 0 && _ <= 100 && n >= 0, [e, _, n]);
     return (0, r.jsxs)('div', {
         className: h.container,
         children: [
@@ -62,7 +62,7 @@ function g() {
                     onChange: (e) => {
                         t(e);
                     },
-                    popoutLayerContext: d.O$,
+                    popoutLayerContext: u.O$,
                     placeholder: 'Select Feedback Survey'
                 })
             }),
@@ -71,10 +71,10 @@ function g() {
                 className: h.formElement,
                 tag: i.FormTitleTags.H3,
                 children: [
-                    null != _ &&
+                    null != C &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
-                                (0, r.jsx)(u.Z, {
+                                (0, r.jsx)(d.Z, {
                                     className: h.formDividerTitle,
                                     children: (0, r.jsx)(i.Text, {
                                         variant: 'text-sm/semibold',
@@ -83,23 +83,23 @@ function g() {
                                 }),
                                 (0, r.jsx)(i.Text, {
                                     variant: 'text-sm/normal',
-                                    children: ''.concat(_.cooldown / 1000, ' second(s) or')
+                                    children: ''.concat(C.cooldown / 1000, ' second(s) or')
                                 }),
                                 (0, r.jsx)(i.Text, {
                                     variant: 'text-sm/normal',
-                                    children: ''.concat(_.cooldown / m, ' minute(s) or')
+                                    children: ''.concat(C.cooldown / m, ' minute(s) or')
                                 }),
                                 (0, r.jsx)(i.Text, {
                                     variant: 'text-sm/normal',
-                                    children: ''.concat(_.cooldown / x, ' hour(s) or')
+                                    children: ''.concat(C.cooldown / x, ' hour(s) or')
                                 }),
                                 (0, r.jsx)(i.Text, {
                                     variant: 'text-sm/normal',
-                                    children: ''.concat(_.cooldown / f, ' day(s)')
+                                    children: ''.concat(C.cooldown / f, ' day(s)')
                                 })
                             ]
                         }),
-                    (0, r.jsx)(u.Z, {
+                    (0, r.jsx)(d.Z, {
                         className: h.formDividerTitle,
                         children: (0, r.jsx)(i.Text, {
                             variant: 'text-sm/semibold',
@@ -122,7 +122,7 @@ function g() {
                                 onChange: (e) => {
                                     v(e);
                                 },
-                                popoutLayerContext: d.O$
+                                popoutLayerContext: u.O$
                             })
                         ]
                     })
@@ -133,10 +133,10 @@ function g() {
                 className: h.formElement,
                 tag: i.FormTitleTags.H3,
                 children: [
-                    null != _ &&
+                    null != C &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
-                                (0, r.jsx)(u.Z, {
+                                (0, r.jsx)(d.Z, {
                                     className: h.formDividerTitle,
                                     children: (0, r.jsx)(i.Text, {
                                         variant: 'text-sm/semibold',
@@ -145,11 +145,11 @@ function g() {
                                 }),
                                 (0, r.jsx)(i.Text, {
                                     variant: 'text-sm/normal',
-                                    children: ''.concat(100 * _.chance, '%')
+                                    children: ''.concat(100 * C.chance, '%')
                                 })
                             ]
                         }),
-                    (0, r.jsx)(u.Z, {
+                    (0, r.jsx)(d.Z, {
                         className: h.formDividerTitle,
                         children: (0, r.jsx)(i.Text, {
                             variant: 'text-sm/semibold',
@@ -162,9 +162,9 @@ function g() {
                             (0, r.jsx)(i.TextInput, {
                                 min: 0,
                                 max: 100,
-                                value: j.toString(),
+                                value: _.toString(),
                                 type: 'number',
-                                onChange: (e) => C(parseFloat(e))
+                                onChange: (e) => j(parseFloat(e))
                             }),
                             (0, r.jsx)(i.Text, {
                                 variant: 'text-md/normal',
@@ -183,7 +183,7 @@ function g() {
                                 type: 'FEEDBACK_OVERRIDE_SET',
                                 feedbackType: e,
                                 cooldown: n * b,
-                                chance: j / 100
+                                chance: _ / 100
                             }),
                         disabled: !S,
                         children: 'Update'
@@ -211,7 +211,7 @@ function g() {
                     color: 'text-danger',
                     children: 'Error: cooldown needs to be a number greater than 0'
                 }),
-            !(j >= 0 && j <= 100) &&
+            !(_ >= 0 && _ <= 100) &&
                 (0, r.jsx)(i.Text, {
                     variant: 'text-sm/normal',
                     color: 'text-danger',

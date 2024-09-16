@@ -15,18 +15,18 @@ var s = n(735250),
     m = n(650774),
     N = n(845377),
     S = n(981631),
-    h = n(689938),
-    g = n(445314),
+    g = n(689938),
+    h = n(445314),
     C = n(716455);
 let x = ['322850917248663552', '172018499005317120', '414234792121597953', '228406572756369408'],
     p = ['620723483965653003', '662246299369734154', '181970867549503489', '102860784329052160'];
 t.Z = (e) => {
     let { guild: t, onEnableDiscovery: n, isGuildAdmin: i } = e,
-        [R, f] = (0, l.Z)(() => [r().sample(x), r().sample(p)], []);
+        [R, L] = (0, l.Z)(() => [r().sample(x), r().sample(p)], []);
     a.useEffect(() => {
-        _.z([R, f]);
-    }, [R, f]);
-    let [L, O] = (0, o.Wu)([I.Z], () => [I.Z.getGuild(R), I.Z.getGuild(f)], [R, f]),
+        _.z([R, L]);
+    }, [R, L]);
+    let [f, O] = (0, o.Wu)([I.Z], () => [I.Z.getGuild(R), I.Z.getGuild(L)], [R, L]),
         { canEnableDiscovery: A, isPendingSuccess: M } = (0, o.cj)(
             [d.ZP],
             () => ({
@@ -41,34 +41,34 @@ t.Z = (e) => {
         }, [n]),
         Z = null;
     return (
-        i ? (M ? (Z = h.Z.Messages.GUILD_SETTINGS_DISCOVERY_PENDING_HEALTHY) : !A && (Z = h.Z.Messages.GUILD_SETTINGS_DISCOVERY_REQUIREMENTS_NOT_MET)) : (Z = h.Z.Messages.GUILD_SETTINGS_DISCOVERY_ADMIN_ONLY),
+        i ? (M ? (Z = g.Z.Messages.GUILD_SETTINGS_DISCOVERY_PENDING_HEALTHY) : !A && (Z = g.Z.Messages.GUILD_SETTINGS_DISCOVERY_REQUIREMENTS_NOT_MET)) : (Z = g.Z.Messages.GUILD_SETTINGS_DISCOVERY_ADMIN_ONLY),
         (0, s.jsxs)('div', {
-            className: g.container,
+            className: h.container,
             children: [
                 (0, s.jsx)('img', {
                     alt: '',
                     src: C,
-                    className: g.sparkles
+                    className: h.sparkles
                 }),
                 (0, s.jsxs)('div', {
-                    className: g.discoverPreview,
+                    className: h.discoverPreview,
                     children: [
                         (0, s.jsx)(E.Z, {
-                            className: g.placeholderCard,
+                            className: h.placeholderCard,
                             disabled: !0,
                             small: !0,
-                            loading: null == L,
-                            guild: L
+                            loading: null == f,
+                            guild: f
                         }),
                         (0, s.jsx)(E.Z, {
-                            className: g.previewCard,
+                            className: h.previewCard,
                             guild: t,
-                            description: h.Z.Messages.GUILD_SETTINGS_DISCOVERY_PREVIEW_DESCRIPTION,
+                            description: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_PREVIEW_DESCRIPTION,
                             presenceCount: D,
                             memberCount: v
                         }),
                         (0, s.jsx)(E.Z, {
-                            className: g.placeholderCard,
+                            className: h.placeholderCard,
                             disabled: !0,
                             small: !0,
                             loading: null == O,
@@ -77,15 +77,15 @@ t.Z = (e) => {
                     ]
                 }),
                 (0, s.jsx)(c.Heading, {
-                    className: g.header,
+                    className: h.header,
                     variant: 'heading-xl/semibold',
-                    children: h.Z.Messages.GUILD_SETTINGS_DISCOVERY_HEADER
+                    children: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_HEADER
                 }),
                 (0, s.jsx)(c.Text, {
                     variant: 'text-md/normal',
-                    className: g.valueProp,
+                    className: h.valueProp,
                     color: 'header-secondary',
-                    children: h.Z.Messages.GUILD_SETTINGS_DISCOVERY_PAGE_DESCRIPTION.format({
+                    children: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_PAGE_DESCRIPTION.format({
                         onLinkClick: () =>
                             (0, T.lW)({
                                 articleId: S.BhN.SERVER_DISCOVERY,
@@ -96,9 +96,9 @@ t.Z = (e) => {
                 }),
                 (0, s.jsx)(c.Text, {
                     variant: 'text-md/normal',
-                    className: g.byline,
+                    className: h.byline,
                     color: 'header-secondary',
-                    children: h.Z.Messages.GUILD_SETTINGS_DISCOVERY_PAGE_DESCRIPTION_SUBHEADING.format({
+                    children: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_PAGE_DESCRIPTION_SUBHEADING.format({
                         onGuidelinesClick: () =>
                             (0, T.lW)({
                                 articleId: S.BhN.SERVER_DISCOVERY_GUIDELINES,
@@ -112,16 +112,16 @@ t.Z = (e) => {
                     children: (e) =>
                         (0, s.jsx)(c.Button, {
                             ...e,
-                            className: g.enableButton,
+                            className: h.enableButton,
                             color: c.Button.Colors.BRAND,
                             size: c.Button.Sizes.LARGE,
                             disabled: !A || !i,
                             onClick: j,
-                            children: h.Z.Messages.GUILD_SETTINGS_SET_UP_DISCOVERY
+                            children: g.Z.Messages.GUILD_SETTINGS_SET_UP_DISCOVERY
                         })
                 }),
                 (0, s.jsx)(N.Z, {
-                    className: g.checklist,
+                    className: h.checklist,
                     guild: t,
                     guildId: t.id
                 })

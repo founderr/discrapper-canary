@@ -26,21 +26,21 @@ var s = n(735250),
     m = n(594174),
     N = n(63063),
     S = n(78451),
-    h = n(434404),
-    g = n(999382),
+    g = n(434404),
+    h = n(999382),
     C = n(181339),
     x = n(193544),
     p = n(981631),
     R = n(689938),
-    f = n(10105);
-function L(e) {
+    L = n(10105);
+function f(e) {
     let { guild: t } = e,
         n = (0, o.e7)([E.Z], () => null != t && E.Z.can(p.Plq.MANAGE_GUILD, t), [t]),
         i = a.useCallback(
             async (e) => {
                 let { value: n } = e;
                 try {
-                    await h.Z.saveGuild(t.id, { verificationLevel: n }), h.Z.updateGuild({ verificationLevel: n });
+                    await g.Z.saveGuild(t.id, { verificationLevel: n }), g.Z.updateGuild({ verificationLevel: n });
                 } catch (e) {
                     (0, c.showToast)((0, c.createToast)(R.Z.Messages.GUILD_ANTIRAID_SAFETY_SETUP_ERROR, c.ToastType.FAILURE));
                 }
@@ -56,10 +56,10 @@ function L(e) {
         }, [t]),
         l = a.useMemo(() => r.find((e) => e.value === (null == t ? void 0 : t.verificationLevel)), [t, r]);
     return (0, s.jsxs)('div', {
-        className: f.setupContainer,
+        className: L.setupContainer,
         children: [
             (0, s.jsxs)('div', {
-                className: f.switchItemTextContent,
+                className: L.switchItemTextContent,
                 children: [
                     (0, s.jsx)(c.Text, {
                         color: 'header-primary',
@@ -90,7 +90,7 @@ function O(e) {
             async (e) => {
                 let { value: n } = e;
                 try {
-                    await h.Z.saveGuild(t.id, { explicitContentFilter: n }), h.Z.updateGuild({ explicitContentFilter: n });
+                    await g.Z.saveGuild(t.id, { explicitContentFilter: n }), g.Z.updateGuild({ explicitContentFilter: n });
                 } catch (e) {
                     (0, c.showToast)((0, c.createToast)(R.Z.Messages.GUILD_ANTIRAID_SAFETY_SETUP_ERROR, c.ToastType.FAILURE));
                 }
@@ -107,12 +107,12 @@ function O(e) {
         _ = a.useMemo(() => u.find((e) => e.value === (null == t ? void 0 : t.explicitContentFilter)), [t, u]);
     return (0, s.jsxs)(s.Fragment, {
         children: [
-            i && (0, s.jsx)(c.FormDivider, { className: f.divider }),
+            i && (0, s.jsx)(c.FormDivider, { className: L.divider }),
             (0, s.jsxs)('div', {
-                className: r()(f.setupContainer, n),
+                className: r()(L.setupContainer, n),
                 children: [
                     (0, s.jsxs)('div', {
-                        className: f.switchItemTextContent,
+                        className: L.switchItemTextContent,
                         children: [
                             (0, s.jsx)(c.Text, {
                                 color: 'header-primary',
@@ -141,7 +141,7 @@ function O(e) {
 async function A(e, t) {
     if (e.hasFeature(p.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY) === t) return;
     let n = e.features;
-    return t ? n.add(p.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY) : n.delete(p.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY), await h.Z.saveGuild(e.id, { features: n });
+    return t ? n.add(p.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY) : n.delete(p.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY), await g.Z.saveGuild(e.id, { features: n });
 }
 function M(e) {
     let { guild: t } = e,
@@ -160,21 +160,21 @@ function M(e) {
         : (0, s.jsxs)(s.Fragment, {
               children: [
                   (0, s.jsxs)('div', {
-                      className: f.setupContainer,
+                      className: L.setupContainer,
                       children: [
                           (0, s.jsx)(c.FormSwitch, {
                               value: l,
                               onChange: u,
-                              className: f.switchItem,
+                              className: L.switchItem,
                               disabled: !n,
                               hideBorder: !0,
                               children: (0, s.jsxs)('div', {
-                                  className: f.switchItemTextContent,
+                                  className: L.switchItemTextContent,
                                   children: [
                                       (0, s.jsxs)(c.Text, {
                                           color: 'header-primary',
                                           variant: 'text-md/semibold',
-                                          children: [R.Z.Messages.GUILD_SETTINGS_SAFETY_ENABLE_MODERATION_EXPERIENCE, (0, s.jsx)(_.Z, { className: f.betaTag })]
+                                          children: [R.Z.Messages.GUILD_SETTINGS_SAFETY_ENABLE_MODERATION_EXPERIENCE, (0, s.jsx)(_.Z, { className: L.betaTag })]
                                       }),
                                       (0, s.jsx)(c.Text, {
                                           color: 'header-secondary',
@@ -191,7 +191,7 @@ function M(e) {
                           })
                       ]
                   }),
-                  (0, s.jsx)(c.FormDivider, { className: f.divider })
+                  (0, s.jsx)(c.FormDivider, { className: L.divider })
               ]
           });
 }
@@ -215,7 +215,7 @@ function D(e) {
         I = n === p.BpS.ELEVATED,
         T = (0, l.throttle)(async (e) => {
             if (!!u && !_)
-                await h.Z.updateMFALevel({
+                await g.Z.updateMFALevel({
                     guildId: t.id,
                     level: e ? p.BpS.ELEVATED : p.BpS.NONE,
                     isEnabled: !e
@@ -224,18 +224,18 @@ function D(e) {
     return i
         ? (0, s.jsxs)(s.Fragment, {
               children: [
-                  (0, s.jsx)(c.FormDivider, { className: f.divider }),
+                  (0, s.jsx)(c.FormDivider, { className: L.divider }),
                   (0, s.jsxs)('div', {
-                      className: f.setupContainer,
+                      className: L.setupContainer,
                       children: [
                           (0, s.jsx)(c.FormSwitch, {
                               value: I,
                               onChange: T,
-                              className: f.switchItem,
+                              className: L.switchItem,
                               disabled: !u,
                               hideBorder: !0,
                               children: (0, s.jsxs)('div', {
-                                  className: f.switchItemTextContent,
+                                  className: L.switchItemTextContent,
                                   children: [
                                       (0, s.jsx)(c.Text, {
                                           color: 'header-primary',
@@ -267,7 +267,7 @@ function D(e) {
         : null;
 }
 function v() {
-    let { guild: e, mfaLevel: t } = (0, o.cj)([g.Z], () => g.Z.getProps(), []),
+    let { guild: e, mfaLevel: t } = (0, o.cj)([h.Z], () => h.Z.getProps(), []),
         n = (0, o.e7)([T.Z], () => T.Z.enabled, []);
     return null == e
         ? null
@@ -276,18 +276,18 @@ function v() {
           : (0, s.jsxs)(c.FormSection, {
                 title: R.Z.Messages.SAFETY_SETUP,
                 tag: c.FormTitleTags.H1,
-                titleClassName: f.headerContainer,
+                titleClassName: L.headerContainer,
                 children: [
                     (0, s.jsx)(M, { guild: e }),
-                    (0, s.jsx)(L, { guild: e }),
+                    (0, s.jsx)(f, { guild: e }),
                     (0, s.jsx)(D, {
                         guild: e,
                         mfaLevel: t
                     }),
                     (0, s.jsx)(O, { guild: e }),
-                    (0, s.jsx)(c.FormDivider, { className: f.divider }),
+                    (0, s.jsx)(c.FormDivider, { className: L.divider }),
                     (0, s.jsx)('div', {
-                        className: r()(f.setupContainer),
+                        className: r()(L.setupContainer),
                         children: (0, s.jsx)(C.w, { guild: e })
                     })
                 ]

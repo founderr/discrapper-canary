@@ -22,13 +22,13 @@ var i = n(735250),
     g = n(645896),
     C = n(905362),
     I = n(603368),
-    x = n(353093),
-    T = n(940725),
-    v = n(114487),
-    S = n(979264),
+    T = n(353093),
+    x = n(940725),
+    S = n(114487),
+    v = n(979264),
     N = n(981631),
-    Z = n(921944),
-    A = n(689938),
+    A = n(921944),
+    Z = n(689938),
     M = n(882070);
 function b(e) {
     var t;
@@ -36,14 +36,14 @@ function b(e) {
         [p, _] = s.useState(!1),
         E = s.useRef(null),
         C = (0, g.Cc)(n.id),
-        T = (0, d.ZP)(),
+        x = (0, d.ZP)(),
         N = (0, u.e7)([h.Z], () => h.Z.useReducedMotion),
-        Z = (0, I.nP)(null == C ? void 0 : null === (t = C.branding) || void 0 === t ? void 0 : t.primaryColor, [c.tokens.colors.BG_BRAND, 0.5]),
+        A = (0, I.nP)(null == C ? void 0 : null === (t = C.branding) || void 0 === t ? void 0 : t.primaryColor, [c.tokens.colors.BG_BRAND, 0.5]),
         b = c.tokens.colors.BG_SURFACE_OVERLAY.resolve({
-            theme: T,
+            theme: x,
             saturation: 1
         }).hex(),
-        R = (0, I.nj)(Z, b, 'top left', 0.3, '30%'),
+        R = (0, I.nj)(A, b, 'top left', 0.3, '30%'),
         L = (0, u.e7)(
             [f.default],
             () => {
@@ -103,10 +103,10 @@ function b(e) {
             },
             'animate-always'
         ),
-        y = (0, x.Zp)(n, L),
-        D = y ? A.Z.Messages.CLAN_USER_ADOPT_TAG_NEW_IDENTITY_TITLE.format({ guildName: n.name }) : A.Z.Messages.CLAN_USER_ADOPT_TAG_UPSELL_TITLE.format({ guildName: n.name }),
-        k = y ? A.Z.Messages.CLAN_USER_ADOPT_TAG_NEW_IDENTITY_DESCRIPTION : A.Z.Messages.CLAN_USER_ADOPT_TAG_UPSELL_DESCRIPTION,
-        U = y ? A.Z.Messages.CLAN_USER_ADOPT_TAG_NEW_IDENTITY_ARIA_LABEL.format({ guildName: n.name }) : A.Z.Messages.CLAN_USER_ADOPT_TAG_UPSELL_ARIA_LABEL.format({ guildName: n.name });
+        y = (0, T.Zp)(n, L),
+        D = y ? Z.Z.Messages.CLAN_USER_ADOPT_TAG_NEW_IDENTITY_TITLE.format({ guildName: n.name }) : Z.Z.Messages.CLAN_USER_ADOPT_TAG_UPSELL_TITLE.format({ guildName: n.name }),
+        U = y ? Z.Z.Messages.CLAN_USER_ADOPT_TAG_NEW_IDENTITY_DESCRIPTION : Z.Z.Messages.CLAN_USER_ADOPT_TAG_UPSELL_DESCRIPTION,
+        k = y ? Z.Z.Messages.CLAN_USER_ADOPT_TAG_NEW_IDENTITY_ARIA_LABEL.format({ guildName: n.name }) : Z.Z.Messages.CLAN_USER_ADOPT_TAG_UPSELL_ARIA_LABEL.format({ guildName: n.name });
     return O((e, t) => {
         var s, a;
         return (
@@ -121,7 +121,7 @@ function b(e) {
                 },
                 ref: E,
                 children: (0, i.jsx)(c.ClickableContainer, {
-                    'aria-label': U,
+                    'aria-label': k,
                     onClick: P,
                     children: (0, i.jsxs)('div', {
                         className: l()(M.toastContainerInner, p ? M.hovered : null),
@@ -129,13 +129,13 @@ function b(e) {
                             (0, i.jsxs)('div', {
                                 className: M.guildIconContainer,
                                 children: [
-                                    (0, i.jsx)(v.Z, {
+                                    (0, i.jsx)(S.Z, {
                                         guild: n,
                                         iconSize: 64
                                     }),
                                     (0, i.jsx)('div', {
                                         className: M.guildTagContainer,
-                                        children: (0, i.jsx)(S.aG, {
+                                        children: (0, i.jsx)(v.aG, {
                                             guildId: n.id,
                                             clanTag: null === (s = n.clan) || void 0 === s ? void 0 : s.tag,
                                             clanBadge: null === (a = n.clan) || void 0 === a ? void 0 : a.badge,
@@ -157,7 +157,7 @@ function b(e) {
                                         children: (0, i.jsx)(c.Text, {
                                             variant: 'text-sm/medium',
                                             color: 'header-secondary',
-                                            children: k
+                                            children: U
                                         })
                                     })
                                 ]
@@ -183,7 +183,7 @@ function b(e) {
 function R(e) {
     let {} = e,
         t = (0, u.e7)([_.Z], () => _.Z.getGuildId()),
-        n = (0, T.h)(t, 'clan_tag_upsell_toast'),
+        n = (0, x.h)(t, 'clan_tag_upsell_toast'),
         a = (0, u.e7)([p.Z], () => p.Z.getGuild(t), [t]),
         [l, r] = s.useState(!1),
         c = s.useRef(null);
@@ -207,7 +207,7 @@ function R(e) {
             if ((r(!1), null != t)) (0, C.SJ)(t);
         }, [, t]),
         h = s.useCallback(() => {
-            if ((r(!1), null != t)) (0, m.Qd)(o.C.ADOPT_CLAN_IDENTITY_NOTICE, null != t ? t : N.lds, !0, Z.L.DISMISS);
+            if ((r(!1), null != t)) (0, m.Qd)(o.C.ADOPT_CLAN_IDENTITY_NOTICE, null != t ? t : N.lds, !0, A.L.DISMISS);
         }, [t]);
     return n && null != t && null != a
         ? (0, i.jsx)(b, {

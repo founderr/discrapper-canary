@@ -18,10 +18,10 @@ var i,
     I = n(477690),
     m = n(481060),
     T = n(230711),
-    N = n(745510),
-    h = n(549006),
-    C = n(64078),
-    f = n(29270),
+    h = n(745510),
+    N = n(549006),
+    f = n(64078),
+    C = n(29270),
     p = n(709586),
     g = n(267642),
     S = n(739566),
@@ -150,9 +150,9 @@ function k(e) {
                       }
                   })()
         ),
-        { createMultipleConfettiAt: T, confettiCanvas: h } = o.useContext(N.h),
-        [C, f] = o.useState(null),
-        p = (0, d.uR)(h, C),
+        { createMultipleConfettiAt: T, confettiCanvas: N } = o.useContext(h.h),
+        [f, C] = o.useState(null),
+        p = (0, d.uR)(N, f),
         g = (function (e, t) {
             if (null == e) return 'enter';
             switch (e) {
@@ -270,7 +270,7 @@ function k(e) {
         (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsx)(d.Ji, {
-                    ref: f,
+                    ref: C,
                     sprites: y,
                     colors: b,
                     spriteWidth: 45,
@@ -313,8 +313,8 @@ function F(e) {
             }
             return null;
         })(n),
-        u = (0, f.Z)(n),
-        { createMultipleConfettiAt: d, addClickListener: _ } = o.useContext(N.h),
+        u = (0, C.Z)(n),
+        { createMultipleConfettiAt: d, addClickListener: _ } = o.useContext(h.h),
         [E, I] = o.useState(!1),
         M = o.useRef(null),
         { reducedMotion: v } = o.useContext(m.AccessibilityPreferencesContext),
@@ -360,7 +360,7 @@ function F(e) {
             I(!1);
         }, []),
         U = o.useCallback(() => {
-            (0, C.AI)({ settingsVisible: !0 }), T.Z.open(R.oAB.POGGERMODE), I(!1);
+            (0, f.AI)({ settingsVisible: !0 }), T.Z.open(R.oAB.POGGERMODE), I(!1);
         }, []),
         y = o.useCallback(
             (e, t) => {
@@ -389,7 +389,7 @@ function F(e) {
                 children: t
             }),
             E
-                ? (0, l.jsx)(h.ZP, {
+                ? (0, l.jsx)(N.ZP, {
                       children: (0, l.jsx)('div', {
                           className: x.cannonWrapper,
                           children: (0, l.jsx)(k, {

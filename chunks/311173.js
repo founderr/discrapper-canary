@@ -40,7 +40,7 @@ function m(e) {
 function N(e) {
     var t, n;
     let { rule: i, onChangeText: l, className: o } = e,
-        { patterns: _, valueError: N, errors: S, validatePatternsChanged: h, validateEditingValueChanged: g } = (0, d.Z)(i, l),
+        { patterns: _, valueError: N, errors: S, validatePatternsChanged: g, validateEditingValueChanged: h } = (0, d.Z)(i, l),
         [C] = a.useState(() => ({
             tags: _,
             value: '',
@@ -65,15 +65,15 @@ function N(e) {
         ),
         p = a.useCallback(
             (e) => {
-                h(e, _);
+                g(e, _);
             },
-            [h, _]
+            [g, _]
         ),
         R = a.useCallback(
             (e) => {
-                g(e);
+                h(e);
             },
-            [g]
+            [h]
         );
     return (0, s.jsxs)('div', {
         className: r()(E.keywordsContainer, o),

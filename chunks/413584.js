@@ -15,14 +15,14 @@ var s = n(735250),
     m = n(933557),
     N = n(471445),
     S = n(339085),
-    h = n(565138),
-    g = n(372769),
+    g = n(565138),
+    h = n(372769),
     C = n(621923),
     x = n(690221),
     p = n(524329),
     R = n(575258),
-    f = n(514698),
-    L = n(592125),
+    L = n(514698),
+    f = n(592125),
     O = n(4912),
     A = n(626135),
     M = n(700785),
@@ -36,43 +36,43 @@ let G = 'WELCOME_CHANNEL',
     P = (e) => {
         var t;
         let i,
-            { guildId: l, welcomeChannel: o, onEdit: T, onChannelReorder: h, isDropHovered: g, index: x } = e,
+            { guildId: l, welcomeChannel: o, onEdit: T, onChannelReorder: g, isDropHovered: h, index: x } = e,
             [p, R] = a.useState(!1),
             A = a.useRef(null),
-            D = (0, u.e7)([L.Z], () => L.Z.getChannel(o.channel_id)),
+            D = (0, u.e7)([f.Z], () => f.Z.getChannel(o.channel_id)),
             v = (0, u.e7)([S.ZP], () => (null != o.emoji_id ? S.ZP.getUsableCustomEmojiById(o.emoji_id) : null)),
             P = null != D && M.Uu(j.Plq.VIEW_CHANNEL, D),
             B = null !== (t = (0, N.KS)(D)) && void 0 !== t ? t : _.TextIcon,
             y = (0, m.ZP)(D, !1),
             { homeSettingsEnabled: F } = (0, C.kZ)(l),
-            [, k] = (0, c.c)({
+            [, w] = (0, c.c)({
                 type: G,
                 item: {
                     channel: o,
                     index: x
                 },
                 end: (e, t) => {
-                    null != e && !t.didDrop() && h(e.channel, null, !0);
+                    null != e && !t.didDrop() && g(e.channel, null, !0);
                 }
             }),
-            [, w] = (0, d.L)({
+            [, k] = (0, d.L)({
                 accept: G,
                 hover: (e) => {
-                    h(e.channel, x, !1);
+                    g(e.channel, x, !1);
                 },
                 drop: (e) => {
-                    h(e.channel, x, !0);
+                    g(e.channel, x, !0);
                 }
             });
         return (
             a.useLayoutEffect(
                 () => (
-                    k(w(A)),
+                    w(k(A)),
                     () => {
-                        k(null), w(null);
+                        w(null), k(null);
                     }
                 ),
-                [k, w]
+                [w, k]
             ),
             (i = P
                 ? null != v || null != o.emoji_name
@@ -92,7 +92,7 @@ let G = 'WELCOME_CHANNEL',
                       className: U.warningIcon
                   })),
             (0, s.jsxs)('div', {
-                className: r()(U.welcomeChannel, { [U.dragging]: g }),
+                className: r()(U.welcomeChannel, { [U.dragging]: h }),
                 ref: A,
                 'data-dnd-name': o.description,
                 onContextMenu: (e) => {
@@ -103,7 +103,7 @@ let G = 'WELCOME_CHANNEL',
                                 ...t,
                                 guildId: l,
                                 welcomeChannel: o,
-                                onChannelReorder: h,
+                                onChannelReorder: g,
                                 setShowConfirmModal: R,
                                 onEdit: T,
                                 index: x
@@ -156,7 +156,7 @@ let G = 'WELCOME_CHANNEL',
                         children: b.Z.Messages.EDIT
                     }),
                     p &&
-                        (0, s.jsx)(f.Z, {
+                        (0, s.jsx)(L.Z, {
                             onConfirm: () => T(),
                             onCancel: () => R(!1),
                             channelId: o.channel_id
@@ -172,26 +172,26 @@ t.Z = (e) => {
         d = (0, u.e7)([T.Z], () => T.Z.useReducedMotion),
         [I, E] = a.useState(null),
         [m, N] = a.useState(!1),
-        [S, f] = a.useState(!1),
-        { description: L, channels: M, enabled: G } = l,
+        [S, L] = a.useState(!1),
+        { description: f, channels: M, enabled: G } = l,
         { homeSettingsEnabled: B } = (0, C.kZ)(null !== (t = null == i ? void 0 : i.id) && void 0 !== t ? t : j.lds),
         y = () => {
-            if (null != i) L !== c.description && ((0, p.Es)(i.id, { description: null == L ? void 0 : L.trim() }), N(!0));
+            if (null != i) f !== c.description && ((0, p.Es)(i.id, { description: null == f ? void 0 : f.trim() }), N(!0));
         },
         F = (e) => {
             if (null != i) !o()(e, c.channels) && ((0, p.Es)(i.id, { channels: e }), N(!0));
         },
-        k = (e) => {
-            if (null != i) e !== c.enabled && ((0, p.Es)(i.id, { enabled: e }), f(!d), N(!0));
-        },
         w = (e) => {
+            if (null != i) e !== c.enabled && ((0, p.Es)(i.id, { enabled: e }), L(!d), N(!0));
+        },
+        k = (e) => {
             if (null == e) return;
             let t = [...(null != M ? M : []), e];
             (0, p.VP)({ channels: t }), F(t);
         },
         H = (e) => (t) => {
             let n = [...(null != M ? M : [])];
-            null == t ? n.splice(e, 1) : (n[e] = t), (0, p.VP)({ channels: n }), F(n), 0 === n.length && G && ((0, p.VP)({ enabled: !1 }), k(!1));
+            null == t ? n.splice(e, 1) : (n[e] = t), (0, p.VP)({ channels: n }), F(n), 0 === n.length && G && ((0, p.VP)({ enabled: !1 }), w(!1));
         },
         V = (e, t, n) => {
             if (null == M) return;
@@ -211,7 +211,7 @@ t.Z = (e) => {
                             (0, s.jsx)(e, {
                                 ...t,
                                 guildId: i.id,
-                                onSave: w
+                                onSave: k
                             });
                     },
                     { onCloseRequest: () => Z.Vq }
@@ -236,13 +236,13 @@ t.Z = (e) => {
                             guild_id: null == i ? void 0 : i.id,
                             options: e,
                             options_channel_ids: t,
-                            guild_description: L,
+                            guild_description: f,
                             has_custom_emojis: n,
                             is_enabled: G
                         });
                 }
             },
-            [m, M, L, G, i, Y]
+            [m, M, f, G, i, Y]
         ),
         a.useEffect(() => () => (0, p.sm)(), []);
     let W = a.useCallback(() => {
@@ -296,7 +296,7 @@ t.Z = (e) => {
                       onToggle:
                           G || (null == M ? void 0 : M.length) !== 0
                               ? () => {
-                                    k(!G);
+                                    w(!G);
                                 }
                               : void 0,
                       animateStatus: S,
@@ -309,8 +309,8 @@ t.Z = (e) => {
                           (0, s.jsxs)('div', {
                               className: U.welcomeHeader,
                               children: [
-                                  (0, s.jsx)(h.Z, {
-                                      size: h.Z.Sizes.LARGER,
+                                  (0, s.jsx)(g.Z, {
+                                      size: g.Z.Sizes.LARGER,
                                       className: U.icon,
                                       guild: i,
                                       animate: !0,
@@ -326,7 +326,7 @@ t.Z = (e) => {
                                                   'span',
                                                   {
                                                       children: [
-                                                          (0, s.jsx)(g.Z, {
+                                                          (0, s.jsx)(h.Z, {
                                                               guild: i,
                                                               className: U.headerGuildBadge,
                                                               flowerStarClassName: U.flowerStar
@@ -352,7 +352,7 @@ t.Z = (e) => {
                                           onKeyDown: (e) => {
                                               e.keyCode === j.yXg.ENTER && e.preventDefault();
                                           },
-                                          value: L,
+                                          value: f,
                                           maxLength: 140,
                                           disabled: B
                                       })
@@ -395,7 +395,7 @@ t.Z = (e) => {
                                                           (0, s.jsx)(e, {
                                                               ...t,
                                                               guildId: i.id,
-                                                              onSave: w
+                                                              onSave: k
                                                           });
                                                   },
                                                   { onCloseRequest: () => Z.Vq }

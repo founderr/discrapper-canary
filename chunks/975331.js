@@ -23,9 +23,9 @@ function S() {
     var e;
     let { editStateId: t } = (0, u.N)(),
         [n, i] = _.TT(t),
-        [S, h] = _.F2(t),
-        g = (0, c.oC)(t),
-        { options: C } = (0, E.Z)(null !== (e = null == g ? void 0 : g.active_trial) && void 0 !== e ? e : null),
+        [S, g] = _.F2(t),
+        h = (0, c.oC)(t),
+        { options: C } = (0, E.Z)(null !== (e = null == h ? void 0 : h.active_trial) && void 0 !== e ? e : null),
         x = (0, I.Z)(),
         p = null != n,
         R = a.useCallback(
@@ -35,8 +35,8 @@ function S() {
             },
             [i, C]
         ),
-        f = (0, d.mY)(),
-        L = (0, o.Dt)(),
+        L = (0, d.mY)(),
+        f = (0, o.Dt)(),
         O = (0, o.Dt)();
     return (0, s.jsxs)(T.Z, {
         title: m.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FREE_TRIAL_TITLE,
@@ -45,31 +45,31 @@ function S() {
             (0, s.jsx)(l.FormSwitch, {
                 onChange: (e, t) => R(e),
                 value: p,
-                disabled: f,
+                disabled: L,
                 hideBorder: !0,
                 children: m.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_ENABLE_FREE_TRIAL_CTA
             }),
             (0, s.jsxs)(l.FormSection, {
                 title: m.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FREE_TRIAL_TIME_LIMIT_TITLE,
-                titleId: L,
-                disabled: !p || f,
+                titleId: f,
+                disabled: !p || L,
                 children: [
                     (0, s.jsx)(l.FormText, {
                         type: l.FormText.Types.DESCRIPTION,
                         className: N.formDescription,
-                        disabled: !p || f,
+                        disabled: !p || L,
                         children: m.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FREE_TRIAL_TIME_LIMIT_DESCRIPTION
                     }),
                     (0, s.jsx)(l.Spacer, { size: 8 }),
                     (0, s.jsx)(l.SingleSelect, {
-                        'aria-labelledby': L,
+                        'aria-labelledby': f,
                         options: C,
                         className: N.formInput,
                         placeholder: m.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FREE_TRIAL_DISABLED,
                         value: n,
                         onChange: i,
                         maxVisibleItems: 5,
-                        isDisabled: !p || f,
+                        isDisabled: !p || L,
                         look: l.SelectLooks.CUSTOM
                     })
                 ]
@@ -78,12 +78,12 @@ function S() {
             (0, s.jsxs)(l.FormSection, {
                 title: m.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ACTIVE_TRIAL_USER_LIMIT_TITLE,
                 titleId: O,
-                disabled: !p || f,
+                disabled: !p || L,
                 children: [
                     (0, s.jsx)(l.FormText, {
                         type: l.FormText.Types.DESCRIPTION,
                         className: N.formDescription,
-                        disabled: !p || f,
+                        disabled: !p || L,
                         children: m.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ACTIVE_TRIAL_USER_LIMIT_DESCRIPTION
                     }),
                     (0, s.jsx)(l.SingleSelect, {
@@ -91,9 +91,9 @@ function S() {
                         options: x,
                         className: N.formInput,
                         value: S,
-                        onChange: h,
+                        onChange: g,
                         maxVisibleItems: 5,
-                        isDisabled: !p || f,
+                        isDisabled: !p || L,
                         look: l.SelectLooks.CUSTOM
                     })
                 ]

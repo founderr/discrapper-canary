@@ -1,75 +1,75 @@
 E.d(_, {
     RE: function () {
-        return l;
+        return i;
     },
     RN: function () {
-        return L;
-    },
-    po: function () {
-        return T;
-    },
-    vN: function () {
         return D;
     },
+    po: function () {
+        return n;
+    },
+    vN: function () {
+        return N;
+    },
     xb: function () {
-        return O;
+        return S;
     },
     zq: function () {
-        return U;
+        return L;
     }
 });
 var s,
-    T,
-    I = E(470079),
-    n = E(399606),
-    t = E(906732),
-    A = E(171368),
-    r = E(430824),
-    a = E(594174),
-    N = E(91047),
-    S = E(981631);
-let l = (e, _) => {
-    let { guildId: E, userId: s, colorRoleId: T } = e;
-    (0, A.openUserProfileModal)({
+    n,
+    t = E(470079),
+    r = E(399606),
+    T = E(906732),
+    a = E(171368),
+    I = E(430824),
+    l = E(594174),
+    o = E(91047),
+    A = E(981631);
+let i = (e, _) => {
+    let { guildId: E, userId: s, colorRoleId: n } = e;
+    (0, a.openUserProfileModal)({
         userId: s,
         guildId: E,
         sourceAnalyticsLocations: _,
-        roleId: T,
+        roleId: n,
         analyticsLocation: {
-            section: S.jXE.MEMBER_SAFETY_PAGE,
-            object: S.qAy.ACTIONED_BY_USER
+            section: A.jXE.MEMBER_SAFETY_PAGE,
+            object: A.qAy.ACTIONED_BY_USER
         }
     });
 };
-function D(e, _, E, s) {
-    let { analyticsLocations: T } = (0, t.ZP)();
-    return I.useCallback(
-        (I) => {
+function N(e, _, E, s) {
+    let { analyticsLocations: n } = (0, T.ZP)();
+    return t.useCallback(
+        (t) => {
             if (null == e) return;
-            let n = a.default.getUser(e.userId);
-            if (null != n)
-                I.stopPropagation(),
-                    (0, N.nm)(I, {
-                        user: n,
+            let r = l.default.getUser(e.userId);
+            if (null != r)
+                t.stopPropagation(),
+                    (0, o.nm)(t, {
+                        user: r,
                         guildId: e.guildId,
-                        analyticsLocations: null != E ? [E] : T,
+                        analyticsLocations: null != E ? [E] : n,
                         onCloseContextMenu: s,
                         isViewOnly: _
                     });
         },
-        [e, T, s, E, _]
+        [e, n, s, E, _]
     );
 }
-function L(e, _, E) {
-    let { analyticsLocations: s } = (0, t.ZP)();
-    return I.useCallback(
-        (T) => {
+function D(e, _, E) {
+    let { analyticsLocations: s } = (0, T.ZP)();
+    return t.useCallback(
+        (n) => {
             if (null == e) return;
-            let I = a.default.getUser(e.userId);
-            if (null != I)
-                T.stopPropagation(),
-                    (0, N._j)(T, {
-                        user: I,
+            let t = l.default.getUser(e.userId);
+            if (null != t)
+                n.stopPropagation(),
+                    (0, o._j)(n, {
+                        user: t,
                         guildId: e.guildId,
                         analyticsLocations: null != _ ? [_] : s,
                         onCloseContextMenu: E,
@@ -79,19 +79,19 @@ function L(e, _, E) {
         [e, E, s, _]
     );
 }
-function U(e) {
-    return (0, n.e7)(
-        [r.Z],
+function L(e) {
+    return (0, r.e7)(
+        [I.Z],
         () => {
             var _;
             if (null == e) return null;
-            let E = r.Z.getGuild(e.guildId);
-            return null == E || null == e.highestRoleId ? null : null !== (_ = r.Z.getRole(E.id, e.highestRoleId)) && void 0 !== _ ? _ : null;
+            let E = I.Z.getGuild(e.guildId);
+            return null == E || null == e.highestRoleId ? null : null !== (_ = I.Z.getRole(E.id, e.highestRoleId)) && void 0 !== _ ? _ : null;
         },
         [e]
     );
 }
-function O(e, _, E) {
+function S(e, _, E) {
     return _ ? 0 : e ? 1 : E <= 0 ? 2 : 3;
 }
-((s = T || (T = {}))[(s.LOADING = 0)] = 'LOADING'), (s[(s.SUCCESS_STILL_INDEXING = 1)] = 'SUCCESS_STILL_INDEXING'), (s[(s.SUCCESS_EMPTY = 2)] = 'SUCCESS_EMPTY'), (s[(s.SUCCESS_FULL = 3)] = 'SUCCESS_FULL');
+((s = n || (n = {}))[(s.LOADING = 0)] = 'LOADING'), (s[(s.SUCCESS_STILL_INDEXING = 1)] = 'SUCCESS_STILL_INDEXING'), (s[(s.SUCCESS_EMPTY = 2)] = 'SUCCESS_EMPTY'), (s[(s.SUCCESS_FULL = 3)] = 'SUCCESS_FULL');

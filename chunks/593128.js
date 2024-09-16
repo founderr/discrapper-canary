@@ -15,14 +15,14 @@ var s = n(735250),
     m = n(389134),
     N = n(35313),
     S = n(94963),
-    h = n(745628),
-    g = n(950279),
+    g = n(745628),
+    h = n(950279),
     C = n(796918),
     x = n(513532),
     p = n(741595),
     R = n(974842),
-    f = n(359380),
-    L = n(308083),
+    L = n(359380),
+    f = n(308083),
     O = n(981631),
     A = n(231338),
     M = n(689938),
@@ -33,12 +33,12 @@ let v = (e) => [
             label: M.Z.Messages.CLAN_SETTINGS_BASIC_INFO
         },
         {
-            section: L.Wy.GAMES,
+            section: f.Wy.GAMES,
             label: M.Z.Messages.CLAN_SETTTINGS_SELECT_GAMES,
             hasError: (null == e ? void 0 : e.gameApplicationIds) != null
         },
         {
-            section: L.Wy.PLAYSTYLE,
+            section: f.Wy.PLAYSTYLE,
             label: M.Z.Messages.CLAN_SETTTINGS_SELECT_PLAYSTYLE,
             hasError: (null == e ? void 0 : e.playstyle) != null
         },
@@ -48,16 +48,16 @@ let v = (e) => [
             label: M.Z.Messages.CLAN_SETTINGS_PERSONALITY_INFO
         },
         {
-            section: L.Wy.UTILITY_TRAITS,
+            section: f.Wy.UTILITY_TRAITS,
             label: M.Z.Messages.CLAN_SETTINGS_SELECT_TRAITS
         },
         {
-            section: L.Wy.INTERESTS,
+            section: f.Wy.INTERESTS,
             label: M.Z.Messages.CLAN_SETTINGS_SELECT_INTERESTS,
             hasError: (null == e ? void 0 : e.interests) != null
         },
         {
-            section: L.Wy.DESCRIPTION,
+            section: f.Wy.DESCRIPTION,
             label: M.Z.Messages.CLAN_SETTINGS_WRITE_DESCRIPTION,
             hasError: (null == e ? void 0 : e.description) != null || (null == e ? void 0 : e.wildcardDescriptors) != null
         },
@@ -67,18 +67,18 @@ let v = (e) => [
             label: M.Z.Messages.CLAN_SETTINGS_CUSTOMIZE_IDENTITY
         },
         {
-            section: L.Wy.CUSTOMIZE_TAG_BADGE,
+            section: f.Wy.CUSTOMIZE_TAG_BADGE,
             label: M.Z.Messages.CLAN_SETTINGS_CLAN_BADGE,
             hasError: (null == e ? void 0 : e.tag) != null || (null == e ? void 0 : e.badgeKind) != null || (null == e ? void 0 : e.badgePrimaryColor) != null || (null == e ? void 0 : e.badgeSecondaryColor) != null
         },
         {
-            section: L.Wy.CUSTOMIZE_BANNER,
+            section: f.Wy.CUSTOMIZE_BANNER,
             label: M.Z.Messages.CLAN_SETTINGS_CLAN_PROFILE,
             hasError: (null == e ? void 0 : e.banner) != null || (null == e ? void 0 : e.brandPrimaryColor) != null || (null == e ? void 0 : e.brandSecondaryColor) != null
         },
         { section: _.ID.DIVIDER },
         {
-            section: L.Wy.MEMBER_APPLICATION,
+            section: f.Wy.MEMBER_APPLICATION,
             label: M.Z.Messages.MEMBER_VERIFICATION_MEMBER_APPLICATION_SETUP,
             hasError: (null == e ? void 0 : e.verificationForm) != null
         },
@@ -173,7 +173,7 @@ let v = (e) => [
     };
 t.Z = (e) => {
     let { guildId: t, onClose: n } = e,
-        [A, j] = a.useState(L.Wy.GAMES),
+        [A, j] = a.useState(f.Wy.GAMES),
         {
             initialSettings: b,
             settings: U,
@@ -198,7 +198,7 @@ t.Z = (e) => {
             [B]
         ),
         F = (0, N.f)(),
-        k = a.useCallback(
+        w = a.useCallback(
             (e) => {
                 'Escape' === e.key && (e.stopPropagation(), n());
             },
@@ -209,12 +209,12 @@ t.Z = (e) => {
     }, [t, A]),
         a.useEffect(
             () => (
-                window.addEventListener('keydown', k),
+                window.addEventListener('keydown', w),
                 () => {
-                    window.removeEventListener('keydown', k);
+                    window.removeEventListener('keydown', w);
                 }
             ),
-            [k]
+            [w]
         ),
         a.useEffect(() => {
             c.Z.getDetectableGames();
@@ -222,7 +222,7 @@ t.Z = (e) => {
         a.useEffect(() => {
             (0, E.aH)(t);
         }, [t]);
-    let w = a.useCallback((e) => (0, E.mf)(t, { gameApplicationIds: e }), [t]),
+    let k = a.useCallback((e) => (0, E.mf)(t, { gameApplicationIds: e }), [t]),
         H = a.useCallback((e) => (0, E.mf)(t, { playstyle: e }), [t]),
         V = a.useCallback((e) => (0, E.mf)(t, { interests: e }), [t]),
         Y = a.useCallback((e) => (0, E.mf)(t, e), [t]),
@@ -320,18 +320,18 @@ t.Z = (e) => {
                             (0, s.jsx)(o.ScrollerThin, {
                                 children: (() => {
                                     switch (A) {
-                                        case L.Wy.GAMES:
+                                        case f.Wy.GAMES:
                                             var e;
-                                            return (0, s.jsx)(g.Z, {
+                                            return (0, s.jsx)(h.Z, {
                                                 title: M.Z.Messages.CLAN_SETUP_GAMES_TITLE,
                                                 description: M.Z.Messages.CLAN_SETUP_GAMES_SUBTITLE,
-                                                onUpdateGames: w,
+                                                onUpdateGames: k,
                                                 gameApplicationIds: null !== (e = U.gameApplicationIds) && void 0 !== e ? e : new Set(),
                                                 error: G.gameApplicationIds,
                                                 guildId: t,
                                                 includeSuggestedGames: !0
                                             });
-                                        case L.Wy.PLAYSTYLE:
+                                        case f.Wy.PLAYSTYLE:
                                             return (0, s.jsx)(p.Z, {
                                                 title: M.Z.Messages.CLAN_SETUP_PLAYSTYLE_TITLE,
                                                 description: M.Z.Messages.CLAN_SETUP_PLAYSTYLE_SUBTITLE,
@@ -339,29 +339,29 @@ t.Z = (e) => {
                                                 playstyle: U.playstyle,
                                                 error: G.playstyle
                                             });
-                                        case L.Wy.UTILITY_TRAITS:
-                                            return (0, s.jsx)(f.Z, {
+                                        case f.Wy.UTILITY_TRAITS:
+                                            return (0, s.jsx)(L.Z, {
                                                 guildId: t,
                                                 title: M.Z.Messages.CLAN_SETUP_UTILITY_TRAITS_TITLE,
                                                 description: M.Z.Messages.CLAN_SETUP_UTILITY_TRAITS_SUBTITLE,
                                                 onUpdateTraits: V,
                                                 progress: U
                                             });
-                                        case L.Wy.INTERESTS:
+                                        case f.Wy.INTERESTS:
                                             return (0, s.jsx)(C.Z, {
                                                 guildId: t,
                                                 handleUpdate: Y,
                                                 progress: U,
                                                 error: G.interests
                                             });
-                                        case L.Wy.DESCRIPTION:
-                                            return (0, s.jsx)(h.Z, {
+                                        case f.Wy.DESCRIPTION:
+                                            return (0, s.jsx)(g.Z, {
                                                 guildId: t,
                                                 handleUpdate: Y,
                                                 progress: U,
                                                 errors: G
                                             });
-                                        case L.Wy.CUSTOMIZE_TAG_BADGE:
+                                        case f.Wy.CUSTOMIZE_TAG_BADGE:
                                             return (0, s.jsx)(R.Z, {
                                                 handleUpdate: Y,
                                                 tag: U.tag,
@@ -369,16 +369,16 @@ t.Z = (e) => {
                                                 badge: U.badgeKind,
                                                 primaryColor: U.badgePrimaryColor,
                                                 secondaryColor: U.badgeSecondaryColor,
-                                                furthestStep: L.Wy.CUSTOMIZE_TAG_BADGE,
+                                                furthestStep: f.Wy.CUSTOMIZE_TAG_BADGE,
                                                 inSettings: !0
                                             });
-                                        case L.Wy.MEMBER_APPLICATION:
+                                        case f.Wy.MEMBER_APPLICATION:
                                             return (0, s.jsx)(x.Z, {
                                                 guildId: t,
                                                 inSettings: !0,
                                                 error: G.verificationForm
                                             });
-                                        case L.Wy.CUSTOMIZE_BANNER:
+                                        case f.Wy.CUSTOMIZE_BANNER:
                                             return (0, s.jsx)(S.Z, {
                                                 guildId: t,
                                                 handleUpdate: Y,

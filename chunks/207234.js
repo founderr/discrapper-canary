@@ -2,7 +2,7 @@ t.d(n, {
     M: function () {
         return a;
     },
-    P: function () {
+    a: function () {
         return E;
     }
 });
@@ -13,7 +13,7 @@ var i = t(392711),
 let E = {
         binds: ['mod+i'],
         comboKeysBindGlobal: !0,
-        action: () => (o.S.dispatch(r.CkL.TOGGLE_INBOX_UNREADS_TAB), !1)
+        action: () => (o.S.dispatch(r.CkL.TOGGLE_INBOX), !1)
     },
     a = {
         binds: ['mod+shift+e'],

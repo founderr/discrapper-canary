@@ -21,29 +21,29 @@ var s,
     m = n(962086),
     N = n(225675),
     S = n(703656),
-    h = n(430824),
-    g = n(594174),
+    g = n(430824),
+    h = n(594174),
     C = n(63063),
     x = n(267101),
     p = n(294294),
     R = n(310800),
-    f = n(833695),
-    L = n(981631),
+    L = n(833695),
+    f = n(981631),
     O = n(176505),
     A = n(689938),
     M = n(85490);
 function D(e) {
     let { guildId: t, hasValidApplication: n } = e,
         { listingsLoaded: s } = (0, x.eD)(t),
-        a = (0, o.e7)([h.Z], () => h.Z.getGuild(t)),
-        D = (0, o.e7)([g.default], () => g.default.getCurrentUser()),
+        a = (0, o.e7)([g.Z], () => g.Z.getGuild(t)),
+        D = (0, o.e7)([h.default], () => h.default.getCurrentUser()),
         v = (null == a ? void 0 : a.isOwner(D)) === !0,
         { loading: j } = (0, d.H)(t),
         [Z, b] = r.useState(n ? 'manage_listings' : 'payment');
     (0, I.P)(a);
     let U = r.useCallback(() => {
         if (null == a) return;
-        let e = h.Z.getRole(a.id, a.getEveryoneRoleId());
+        let e = g.Z.getRole(a.id, a.getEveryoneRoleId());
         if (null == e) return;
         T.Z.close();
         let t = { [e.id]: e };
@@ -51,9 +51,9 @@ function D(e) {
             type: N.z.SERVER_SHOP,
             roles: t,
             initialTab: 'guild_products',
-            returnToSection: L.pNK.GUILD_PRODUCTS
+            returnToSection: f.pNK.GUILD_PRODUCTS
         }),
-            (0, S.uL)(L.Z5c.CHANNEL(a.id, O.oC.GUILD_SHOP));
+            (0, S.uL)(f.Z5c.CHANNEL(a.id, O.oC.GUILD_SHOP));
     }, [a]);
     if (!s || j) return (0, i.jsx)(c.Spinner, {});
     if (null == a) return null;
@@ -66,8 +66,8 @@ function D(e) {
                 (0, i.jsx)(c.FormText, {
                     type: c.FormText.Types.DESCRIPTION,
                     children: A.Z.Messages.GUILD_PRODUCTS_SETTINGS_DESCRIPTION.format({
-                        monetizationPolicyLink: C.Z.getArticleURL(L.BhN.CREATOR_POLICY),
-                        serverProductsSupportLink: C.Z.getCreatorSupportArticleURL(L.BhN.SERVER_PRODUCTS)
+                        monetizationPolicyLink: C.Z.getArticleURL(f.BhN.CREATOR_POLICY),
+                        serverProductsSupportLink: C.Z.getCreatorSupportArticleURL(f.BhN.SERVER_PRODUCTS)
                     })
                 })
             ]
@@ -116,7 +116,7 @@ function D(e) {
         B = (0, l.EQ)(Z)
             .with('basic_info', () => (0, i.jsx)(p.Z, { guildId: t }))
             .with('manage_listings', () => (0, i.jsx)(R.Z, { guildId: t }))
-            .with('payment', () => (0, i.jsx)(f.Z, { guildId: t }))
+            .with('payment', () => (0, i.jsx)(L.Z, { guildId: t }))
             .exhaustive(),
         y = s
             ? (0, i.jsx)(c.TabBar.Panel, {

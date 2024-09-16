@@ -24,8 +24,8 @@ function E(e) {
     (0, r.Z)(t.id);
     let C = (0, o.Z)(t.id),
         I = t.isSystemDM(),
-        x = g && !I && !t.isMultiUserDM(),
-        T = {};
+        T = g && !I && !t.isMultiUserDM(),
+        x = {};
     if (I) {
         let e = C
             ? (0, i.jsxs)(i.Fragment, {
@@ -38,10 +38,10 @@ function E(e) {
                   ]
               })
             : f.Z.Messages.LEARN_MORE;
-        (T.message = f.Z.Messages.SYSTEM_DM_CHANNEL_DESCRIPTION),
-            (T.subtitle = f.Z.Messages.SYSTEM_DM_CHANNEL_DESCRIPTION_SUBTEXT),
-            (T.buttonText = e),
-            (T.onButtonClick = () => {
+        (x.message = f.Z.Messages.SYSTEM_DM_CHANNEL_DESCRIPTION),
+            (x.subtitle = f.Z.Messages.SYSTEM_DM_CHANNEL_DESCRIPTION_SUBTEXT),
+            (x.buttonText = e),
+            (x.onButtonClick = () => {
                 if (C) {
                     open(_.D2),
                         d.default.track(p.rMx.CHANGE_LOG_CTA_CLICKED, {
@@ -52,16 +52,16 @@ function E(e) {
                 }
                 open(h.Z.getArticleURL(p.BhN.SYSTEM_DMS));
             }),
-            (T.imageSrc = n(780961));
+            (x.imageSrc = n(780961));
     } else
-        x &&
-            ((T.message = f.Z.Messages.DM_VERIFICATION_TEXT_BLOCKED),
-            (T.buttonText = f.Z.Messages.UNBLOCK),
-            (T.onButtonClick = () => {
+        T &&
+            ((x.message = f.Z.Messages.DM_VERIFICATION_TEXT_BLOCKED),
+            (x.buttonText = f.Z.Messages.UNBLOCK),
+            (x.onButtonClick = () => {
                 l.Z.unblockUser(t.getRecipientId());
             }));
     return (0, i.jsx)(m.Z, {
-        ...T,
+        ...x,
         children: E
     });
 }

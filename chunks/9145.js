@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return U;
+        return k;
     }
 }),
     n(47120);
@@ -22,13 +22,13 @@ var i = n(735250),
     g = n(271383),
     C = n(944486),
     I = n(594174),
-    x = n(585483),
-    T = n(51144),
-    v = n(566620),
-    S = n(317381),
+    T = n(585483),
+    x = n(51144),
+    S = n(566620),
+    v = n(317381),
     N = n(619915),
-    Z = n(988980),
-    A = n(952561),
+    A = n(988980),
+    Z = n(952561),
     M = n(563218),
     b = n(884338),
     R = n(719296),
@@ -38,23 +38,23 @@ var i = n(735250),
     O = n(689938),
     y = n(735299);
 let D = b.u.SIZE_32,
-    k = {
+    U = {
         [j.MI.NO_CHAT]: y.noChat,
         [j.MI.RESIZABLE]: y.resizable
     };
-function U(e) {
+function k(e) {
     var t, n;
-    let { maxHeight: a, connectedChannelId: U, renderExternalHeader: w } = e,
-        B = (0, A.Z)(),
-        H = (0, r.Wu)([S.ZP], () => (null != U ? S.ZP.getEmbeddedActivitiesForChannel(U) : []), [U]),
-        G = (0, r.e7)([E.Z], () => E.Z.getChannel(U)),
+    let { maxHeight: a, connectedChannelId: k, renderExternalHeader: w } = e,
+        B = (0, Z.Z)(),
+        H = (0, r.Wu)([v.ZP], () => (null != k ? v.ZP.getEmbeddedActivitiesForChannel(k) : []), [k]),
+        G = (0, r.e7)([E.Z], () => E.Z.getChannel(k)),
         V = (0, N.gb)(H),
         F = (0, N.uF)(V),
         W = s.useCallback(() => {
-            (0, v.tg)(j.Ez.PIP);
+            (0, S.tg)(j.Ez.PIP);
         }, []),
         z = s.useRef(null),
-        Y = (0, r.e7)([S.ZP], () => S.ZP.getFocusedLayout()),
+        Y = (0, r.e7)([v.ZP], () => v.ZP.getFocusedLayout()),
         K = Y !== j.MI.NO_CHAT,
         [q, X] = s.useState(null !== (t = p.ZP.activityPanelHeight) && void 0 !== t ? t : a),
         J = s.useCallback((e) => {
@@ -79,7 +79,7 @@ function U(e) {
     let et = $.width / Math.max($.height, 1) < j.I0,
         en = 0,
         ei = 0,
-        es = (0, Z.Z)(null == B ? void 0 : B.id);
+        es = (0, A.Z)(null == B ? void 0 : B.id);
     if (!es) {
         let e = $.width,
             t = $.height;
@@ -142,7 +142,7 @@ function U(e) {
         var n;
         if (null == e || void 0 === e || void 0 === t) return null;
         let s = eo.get(e.id),
-            a = null !== (n = null == s ? void 0 : s.nick) && void 0 !== n ? n : T.ZP.getName(e);
+            a = null !== (n = null == s ? void 0 : s.nick) && void 0 !== n ? n : x.ZP.getName(e);
         return (0, i.jsx)(
             c.TooltipContainer,
             {
@@ -165,7 +165,7 @@ function U(e) {
         theme: P.BRd.DARK,
         children: (e) =>
             (0, i.jsxs)('div', {
-                className: l()(y.wrapper, k[Y], e),
+                className: l()(y.wrapper, U[Y], e),
                 ref: z,
                 style: ec,
                 children: [
@@ -195,7 +195,7 @@ function U(e) {
                                 ref: Q,
                                 children: (0, i.jsx)(M.Z, {
                                     className: y.iframe,
-                                    embedId: (0, R.Z)(U, B.id)
+                                    embedId: (0, R.Z)(k, B.id)
                                 })
                             }),
                             null != el
@@ -221,7 +221,7 @@ function U(e) {
                                                       className: y.leaveButtonContainer,
                                                       children: (0, i.jsx)(f.Z, {
                                                           applicationId: B.id,
-                                                          channelId: U,
+                                                          channelId: k,
                                                           centerButton: !0,
                                                           color: 'red',
                                                           className: y.leaveActivityButton
@@ -248,10 +248,10 @@ function U(e) {
                               maxHeight: a,
                               resizableNode: z,
                               onResize: (e) => {
-                                  x.S.dispatch(P.CkL.MANUAL_IFRAME_RESIZING, { resizing: !0 }), X(e);
+                                  T.S.dispatch(P.CkL.MANUAL_IFRAME_RESIZING, { resizing: !0 }), X(e);
                               },
                               onResizeEnd: (e) => {
-                                  x.S.dispatch(P.CkL.MANUAL_IFRAME_RESIZING, { resizing: !1 }), J(e);
+                                  T.S.dispatch(P.CkL.MANUAL_IFRAME_RESIZING, { resizing: !1 }), J(e);
                               }
                           })
                         : null

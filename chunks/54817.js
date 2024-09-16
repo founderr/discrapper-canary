@@ -20,10 +20,10 @@ var s = n(120356),
 function T(e) {
     let { message: t, compact: n, usernameHook: s } = e,
         T = (0, o.ZP)(t),
-        N = s(T),
+        h = s(T),
         {
-            avatarSrc: h,
-            eventHandlers: { onMouseEnter: C, onMouseLeave: f }
+            avatarSrc: N,
+            eventHandlers: { onMouseEnter: f, onMouseLeave: C }
         } = (0, u.m)(!0),
         p =
             '' !== t.content
@@ -36,11 +36,11 @@ function T(e) {
                   })
                 : '';
     return (0, i.jsx)('div', {
-        onMouseEnter: C,
-        onMouseLeave: f,
+        onMouseEnter: f,
+        onMouseLeave: C,
         children: (0, i.jsx)(d.Z, {
             className: a()(m.mainContainer, { [m.compact]: n }),
-            iconNode: n ? null : (0, i.jsx)(u.S, { src: h }),
+            iconNode: n ? null : (0, i.jsx)(u.S, { src: N }),
             iconContainerClassName: m.iconContainer,
             compact: n,
             children: (0, i.jsxs)('div', {
@@ -75,12 +75,12 @@ function T(e) {
                             t.type === _.uaV.GUILD_INCIDENT_ALERT_MODE_ENABLED
                                 ? I.Z.Messages.GUILD_SERVER_LOCKDOWN_ENABLED_SYSTEM_MESSAGE_SHORT.format({
                                       username: T.nick,
-                                      usernameHook: N,
+                                      usernameHook: h,
                                       time: p
                                   })
                                 : I.Z.Messages.GUILD_SERVER_LOCKDOWN_DISABLED_SYSTEM_MESSAGE.format({
                                       username: T.nick,
-                                      usernameHook: N
+                                      usernameHook: h
                                   })
                     })
                 ]

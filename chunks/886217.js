@@ -13,8 +13,8 @@ var l = n(735250),
     x = n(256726),
     E = n(206295),
     _ = n(278399),
-    p = n(297781),
-    v = n(591853),
+    v = n(297781),
+    p = n(591853),
     T = n(410441),
     f = n(616922),
     g = n(689938);
@@ -62,9 +62,9 @@ t.Z = (e) => {
             t = o.Z.isProtocolRegistered() ? f.C7.PLAYER_OPEN(e, n.extra.media.external_parent_id) : f.C7.WEB_OPEN(e, n.extra.media.external_parent_id);
         window.open(t);
     };
-    return (0, l.jsxs)(v.yR, {
+    return (0, l.jsxs)(p.yR, {
         children: [
-            (0, l.jsx)(v.wG, {
+            (0, l.jsx)(p.wG, {
                 onClickTitle: j,
                 onClickSubtitle: () => {
                     let e = f.Hw.ARTIST,
@@ -84,13 +84,13 @@ t.Z = (e) => {
                 userDescription: g.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENED_V2,
                 title: N,
                 subtitle: S,
-                badges: (0, l.jsx)(p.Gk, {
-                    location: p.Gt.POPOUT,
+                badges: (0, l.jsx)(v.Gk, {
+                    location: v.Gt.POPOUT,
                     children: _.Ho.map((e, t) => (0, l.jsx)(e, { entry: n }, t))
                 })
             }),
-            (0, l.jsx)(v.St, {
-                children: (0, l.jsx)(v.WT, {
+            (0, l.jsx)(p.St, {
+                children: (0, l.jsx)(p.WT, {
                     onReaction: i,
                     onVoiceChannelPreview: h,
                     user: M,

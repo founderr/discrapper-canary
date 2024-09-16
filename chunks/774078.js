@@ -1,23 +1,23 @@
 t.d(n, {
     Z: function () {
-        return l;
+        return o;
     }
 });
-var r = t(718922),
-    i = t(55935),
-    o = t(745735);
-function l(e) {
+var i = t(718922),
+    r = t(55935),
+    l = t(745735);
+function o(e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1000,
         t = arguments.length > 2 ? arguments[2] : void 0,
-        l = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-        u = (0, i.TD)(Date.now(), e),
-        s = (0, r.Z)();
+        o = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+        u = (0, r.TD)(Date.now(), e),
+        s = (0, i.Z)();
     return (
-        (0, o.Z)(
+        (0, l.Z)(
             () => {
-                if ((0 !== u.days || 0 !== u.hours || 0 !== u.minutes || 0 !== u.seconds) && !l) s(), null == t || t();
+                if ((0 !== u.days || 0 !== u.hours || 0 !== u.minutes || 0 !== u.seconds) && !o) s(), null == t || t();
             },
-            l ? null : n
+            o ? null : n
         ),
         u
     );

@@ -13,28 +13,28 @@ t.Z = function (e) {
     let { items: t, carouselClassName: n, paginationCaretClassName: i, intervalBetweenAutomaticItemRotations: I, renderItem: E } = e,
         T = a.useMemo(() => new l.Xp(), []),
         [m, N] = a.useState(d.n.LEFT),
-        [S, h] = a.useState(0),
-        [g, C] = a.useState(!1),
+        [S, g] = a.useState(0),
+        [h, C] = a.useState(!1),
         [x, p] = a.useState(!1),
         R = a.useCallback(
             (e, t) => {
-                h((n) => {
+                g((n) => {
                     let s = n + t;
                     return s < 0 ? (s = e.length - 1) : s > e.length - 1 && (s = 0), s;
                 });
             },
-            [h]
+            [g]
         ),
-        f = a.useCallback(() => {
+        L = a.useCallback(() => {
             if (!x) R(t, 1);
         }, [R, t, x]),
-        L = a.useCallback(() => {
+        f = a.useCallback(() => {
             if (!x) R(t, -1);
         }, [R, t, x]);
     return (
         a.useEffect(() => {
-            null != I && (g ? g && T.stop() : T.start(I, f));
-        }, [g, T, I, f]),
+            null != I && (h ? h && T.stop() : T.start(I, L));
+        }, [h, T, I, L]),
         (0, s.jsxs)('div', {
             className: _.root,
             onMouseEnter: () => C(!0),
@@ -42,7 +42,7 @@ t.Z = function (e) {
             children: [
                 (0, s.jsx)(o.Clickable, {
                     className: r()(_.carouselCaret, i),
-                    onClick: L,
+                    onClick: f,
                     onMouseEnter: () => N(d.n.RIGHT),
                     ignoreKeyPress: x,
                     children: (0, s.jsx)(c.Z, {
@@ -62,7 +62,7 @@ t.Z = function (e) {
                 }),
                 (0, s.jsx)(o.Clickable, {
                     className: r()(_.carouselCaret, i),
-                    onClick: f,
+                    onClick: L,
                     onMouseEnter: () => N(d.n.LEFT),
                     ignoreKeyPress: x,
                     children: (0, s.jsx)(c.Z, {

@@ -1,6 +1,6 @@
 n.d(t, {
     al: function () {
-        return S;
+        return R;
     },
     ck: function () {
         return b;
@@ -123,7 +123,7 @@ let d = {
     screenCaptureKitFrames: 'ScreenCaptureKit frames',
     screenshareFrames: 'WebRTC Frames',
     secondaryDecodedRate: 'Secondary Decode Rate',
-    secureFramesProtocolVersion: 'SF Protocol',
+    secureFramesProtocolVersion: 'DAVE Protocol',
     sinkWant: 'Sink Quality Level (Remote)',
     sinkWantLocal: 'Sink Quality Level (Local)',
     speechExpandRate: 'Speech Expand Rate',
@@ -160,7 +160,7 @@ function y(e) {
     let { last: t } = e;
     return ''.concat(t, ' ms');
 }
-let S = {
+let R = {
         audioJitterBuffer: !0,
         audioJitterDelay: !0,
         audioJitterTarget: !0,
@@ -185,7 +185,7 @@ let S = {
         encryptMaxAttempts: !0,
         lqSimulcastStreamEncoded: !0
     },
-    R = {
+    D = {
         accelerateRate: g,
         audioDetected: f,
         audioLevel: C,
@@ -232,7 +232,7 @@ let S = {
         },
         secondaryDecodedRate: g,
         secureFramesProtocolVersion: function (e) {
-            return e >= 100 ? 'MLS Test ('.concat(e, ')') : e > 0 ? 'Static Key Test ('.concat(e, ')') : 'Disabled';
+            return e > 0 ? 'Version '.concat(e) : 'Disabled';
         },
         speechExpandRate: g,
         targetDelay: h,
@@ -241,7 +241,7 @@ let S = {
             return e < t.length ? t[e] : 'Unknown';
         }
     },
-    D = (e) => e,
+    S = (e) => e,
     v = (e) => {
         let [t] = a.useState([]);
         return (
@@ -260,7 +260,7 @@ let S = {
 function b(e) {
     var t, n, a, i;
     let { label: o, value: u, section: m } = e,
-        p = null !== (n = R[o]) && void 0 !== n ? n : D;
+        p = null !== (n = D[o]) && void 0 !== n ? n : S;
     let h =
             s.Pz[o] &&
             (Array.isArray((i = u)) && i.length > 0 && 'number' == typeof i[0].value

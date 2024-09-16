@@ -19,8 +19,8 @@ function E(e) {
     let { channelId: t, messageId: n, transitionState: E, onClose: I } = e,
         m = (0, s.e7)([c.Z], () => c.Z.getFpMessageInfo(n)),
         T = m.attachments.map((e) => e.id),
-        N = m.attachments.map((e) => e.filename),
-        { reportFalsePositive: h, isReportFalsePositiveLoading: C } = (0, u.$)({
+        h = m.attachments.map((e) => e.filename),
+        { reportFalsePositive: N, isReportFalsePositiveLoading: f } = (0, u.$)({
             onSuccess: () => {
                 (0, d.s)(I), r.Z.disableFalsePositiveButton(t, n);
             },
@@ -28,7 +28,7 @@ function E(e) {
                 (0, a.showToast)((0, a.createToast)(_.Z.Messages.ERROR_GENERIC_TITLE, a.ToastType.FAILURE));
             },
             report: () => {
-                (0, l.Eq)(t, n, T, N);
+                (0, l.Eq)(t, n, T, h);
             }
         });
     return (
@@ -36,9 +36,9 @@ function E(e) {
         (0, i.jsx)(d.$, {
             messageId: n,
             channelId: t,
-            isReportFalsePositiveLoading: C,
+            isReportFalsePositiveLoading: f,
             analyticsContext: o.UU.EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_FLOW,
-            onConfirmPress: h,
+            onConfirmPress: N,
             transitionState: E,
             onClose: I
         })

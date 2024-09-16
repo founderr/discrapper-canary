@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return k;
     }
 }),
     n(47120);
@@ -11,8 +11,8 @@ var r = n(735250),
     o = n(913527),
     s = n.n(o),
     c = n(442837),
-    u = n(481060),
-    d = n(129861),
+    d = n(481060),
+    u = n(129861),
     h = n(665149),
     m = n(594174),
     x = n(55935),
@@ -21,14 +21,14 @@ var r = n(735250),
     g = n(257785),
     b = n(484036),
     v = n(681619),
-    j = n(621060),
-    C = n(689938),
-    _ = n(574001),
+    _ = n(621060),
+    j = n(689938),
+    C = n(574001),
     T = n(219299);
 let S = [
     {
         key: 'event',
-        cellClassName: _.eventColumn,
+        cellClassName: C.eventColumn,
         render(e) {
             let { event: t } = e;
             return t;
@@ -36,7 +36,7 @@ let S = [
     },
     {
         key: 'location',
-        cellClassName: _.locationColumn,
+        cellClassName: C.locationColumn,
         render(e) {
             let { properties: t } = e;
             return null == t.location ? null : t.location;
@@ -45,8 +45,8 @@ let S = [
 ];
 function N(e) {
     let { children: t } = e;
-    return (0, r.jsx)(u.ScrollerThin, {
-        className: _.customPropertiesContainer,
+    return (0, r.jsx)(d.ScrollerThin, {
+        className: C.customPropertiesContainer,
         children: (0, r.jsx)('dl', { children: t })
     });
 }
@@ -55,11 +55,11 @@ function y(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)('dt', {
-                className: _.customPropertiesName,
+                className: C.customPropertiesName,
                 children: t
             }),
             (0, r.jsx)('dd', {
-                className: _.customPropertiesValue,
+                className: C.customPropertiesValue,
                 children: n
             })
         ]
@@ -79,10 +79,10 @@ let I = [
                 return (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsxs)(h.ZP, {
-                            className: i()(T.headerBar, _.subPanelHeaderBar),
+                            className: i()(T.headerBar, C.subPanelHeaderBar),
                             children: [
                                 (0, r.jsx)(h.ZP.Icon, {
-                                    icon: u.AnalyticsIcon,
+                                    icon: d.AnalyticsIcon,
                                     tooltip: t
                                 }),
                                 (0, r.jsx)(h.ZP.Title, {
@@ -90,14 +90,14 @@ let I = [
                                     children: t
                                 }),
                                 (0, r.jsx)(h.ZP.Icon, {
-                                    icon: u.CircleXIcon,
+                                    icon: d.CircleXIcon,
                                     tooltip: 'Close',
                                     onClick: o
                                 })
                             ]
                         }),
                         (0, r.jsxs)(g.E, {
-                            className: _.commonProperties,
+                            className: C.commonProperties,
                             children: [
                                 (0, r.jsx)(g.Z9, {
                                     name: 'Timestamp (local)',
@@ -110,7 +110,7 @@ let I = [
                                 null != c &&
                                     (0, r.jsx)(g.Z9, {
                                         name: 'User',
-                                        children: (0, r.jsx)(d.Z, { user: c })
+                                        children: (0, r.jsx)(u.Z, { user: c })
                                     }),
                                 (0, r.jsx)(g.Z9, {
                                     name: 'Fingerprint',
@@ -129,7 +129,7 @@ let I = [
                                             null != n
                                                 ? (0, r.jsx)('code', { children: JSON.stringify(n) })
                                                 : (0, r.jsx)('code', {
-                                                      className: _.emptyProperty,
+                                                      className: C.emptyProperty,
                                                       children: 'null'
                                                   })
                                     },
@@ -170,7 +170,7 @@ let I = [
             filter: (e) => e.event.startsWith('network_action')
         }
     };
-function E() {
+function k() {
     let e = a.useRef(null),
         t = (0, c.e7)([f.Z], () => f.Z.loggedEvents),
         [n, l] = a.useState(Object.keys(w)),
@@ -178,39 +178,39 @@ function E() {
             for (let t of n) if (w[t].filter(e)) return !0;
             return !1;
         }),
-        [s, d] = a.useState(void 0),
+        [s, u] = a.useState(void 0),
         h = o.find((e) => e.key === s),
-        { TabBar: m, renderSelectedTab: x } = (0, j.Z)({ tabs: I }, []);
+        { TabBar: m, renderSelectedTab: x } = (0, _.Z)({ tabs: I }, []);
     return (0, r.jsxs)('div', {
         ref: e,
-        className: i()(T.panel, _.panel),
+        className: i()(T.panel, C.panel),
         children: [
             (0, r.jsxs)('div', {
-                className: _.toolbar,
+                className: C.toolbar,
                 children: [
-                    (0, r.jsx)(u.Button, {
-                        className: _.toolbarButton,
-                        look: u.Button.Looks.BLANK,
-                        size: u.Button.Sizes.ICON,
+                    (0, r.jsx)(d.Button, {
+                        className: C.toolbarButton,
+                        look: d.Button.Looks.BLANK,
+                        size: d.Button.Sizes.ICON,
                         onClick: p.Zw,
                         children: (0, r.jsx)('span', {
-                            title: C.Z.Messages.CLEAR,
-                            children: (0, r.jsx)(u.TrashIcon, {
+                            title: j.Z.Messages.CLEAR,
+                            children: (0, r.jsx)(d.TrashIcon, {
                                 size: 'md',
                                 color: 'currentColor',
-                                'aria-label': C.Z.Messages.CLEAR
+                                'aria-label': j.Z.Messages.CLEAR
                             })
                         })
                     }),
-                    (0, r.jsx)('div', { className: _.toolbarDivider }),
+                    (0, r.jsx)('div', { className: C.toolbarDivider }),
                     (0, r.jsx)('div', {
-                        className: _.filters,
+                        className: C.filters,
                         children: Object.entries(w).map((e) => {
                             let [t, a] = e;
                             return (0, r.jsx)(
-                                u.Clickable,
+                                d.Clickable,
                                 {
-                                    className: i()(_.filter, n.includes(t) && _.activeFilter),
+                                    className: i()(C.filter, n.includes(t) && C.activeFilter),
                                     onClick: () => {
                                         var e;
                                         return (e = t), void l((t) => (t.includes(e) ? t.filter((t) => t !== e) : [...t, e]));
@@ -227,18 +227,18 @@ function E() {
                 columns: S,
                 data: o,
                 selectedRowKey: s,
-                onClickRow: (e) => d(e.key)
+                onClickRow: (e) => u(e.key)
             }),
             null != h &&
                 (0, r.jsxs)(b.Z, {
-                    className: _.subPanel,
+                    className: C.subPanel,
                     minHeight: 100,
                     initialHeight: null != e.current ? e.current.clientHeight / 2 : 300,
                     children: [
                         (0, r.jsx)(m, {}),
                         x({
                             loggedEvent: h,
-                            onClose: () => d(void 0)
+                            onClose: () => u(void 0)
                         })
                     ]
                 })

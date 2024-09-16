@@ -1,9 +1,9 @@
 n.d(t, {
     p: function () {
-        return h;
+        return g;
     },
     s: function () {
-        return g;
+        return h;
     }
 });
 var s = n(735250),
@@ -22,18 +22,18 @@ var s = n(735250),
     m = n(689938),
     N = n(178959);
 function S(e) {
-    let { guildId: t, emojiId: n, emojiName: i, title: l, description: c, targetType: d, index: u, dndName: I, onEdit: E, onMove: S, disabled: h = !1 } = e,
-        g = a.useRef(null),
+    let { guildId: t, emojiId: n, emojiName: i, title: l, description: c, targetType: d, index: u, dndName: I, onEdit: E, onMove: S, disabled: g = !1 } = e,
+        h = a.useRef(null),
         C = a.useRef(null),
-        { drag: x, dragPreview: p, drop: R, isDragging: f } = (0, T.Z)(g, d, u, S);
+        { drag: x, dragPreview: p, drop: R, isDragging: L } = (0, T.Z)(h, d, u, S);
     return (
         x(C),
-        p(R(g)),
+        p(R(h)),
         (0, s.jsxs)('div', {
-            ref: g,
+            ref: h,
             className: r()(N.card, {
-                [N.cardDragging]: f,
-                [N.disabled]: h
+                [N.cardDragging]: L,
+                [N.disabled]: g
             }),
             children: [
                 (0, s.jsxs)('div', {
@@ -45,7 +45,7 @@ function S(e) {
                             emojiName: i,
                             className: N.emoji
                         }),
-                        !h &&
+                        !g &&
                             (0, s.jsx)('div', {
                                 ref: C,
                                 className: N.dragIconWrapper,
@@ -76,12 +76,12 @@ function S(e) {
                 (0, s.jsx)('div', {
                     className: N.cardActions,
                     children:
-                        !h &&
+                        !g &&
                         (0, s.jsx)(o.Clickable, {
                             className: N.cardActionButton,
-                            onClick: h ? void 0 : E,
+                            onClick: g ? void 0 : E,
                             'aria-label': m.Z.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_EDIT_ARIA_LABEL,
-                            'aria-disabled': h,
+                            'aria-disabled': g,
                             children: (0, s.jsx)(o.PencilIcon, {
                                 size: 'xs',
                                 color: 'currentColor',
@@ -93,7 +93,7 @@ function S(e) {
         })
     );
 }
-function h(e) {
+function g(e) {
     let { benefits: t, onEdit: n, onMove: i, guildId: o } = e,
         _ = (0, c.Dt)(),
         { isDragging: T } = (0, l.f)((e) => ({ isDragging: e.getItemType() === _ })),
@@ -128,7 +128,7 @@ function h(e) {
               )
           });
 }
-function g(e) {
+function h(e) {
     let { onClick: t, children: n, disabled: a = !1 } = e;
     return (0, s.jsx)(o.Clickable, {
         className: N.container,

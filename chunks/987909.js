@@ -18,19 +18,19 @@ var i = n(735250),
     I = n(626135),
     m = n(709054),
     T = n(838440),
-    N = n(981631),
-    h = n(385920);
-function C(e) {
+    h = n(981631),
+    N = n(385920);
+function f(e) {
     let { assets: t, currentUser: n, message: i } = e,
         s = (m.default.extractTimestamp(n.id) + m.default.extractTimestamp(i.id)) % t.length;
     return t[s];
 }
-function f(e) {
+function C(e) {
     let { currentUser: t, channel: n, message: a, buttonLabels: u, stickers: d, event: _, eventProperties: E } = e,
-        [m, N] = s.useState(!1),
-        f = s.useMemo(
+        [m, h] = s.useState(!1),
+        C = s.useMemo(
             () =>
-                C({
+                f({
                     assets: d,
                     currentUser: t,
                     message: a
@@ -39,7 +39,7 @@ function f(e) {
         ),
         p = s.useMemo(
             () =>
-                C({
+                f({
                     assets: u,
                     currentUser: t,
                     message: a
@@ -68,7 +68,7 @@ function f(e) {
                 })({
                     channel: n,
                     message: a,
-                    sticker: f
+                    sticker: C
                 }),
                 !(function (e) {
                     let { sticker: t, event: n, eventProperties: i } = e;
@@ -78,23 +78,23 @@ function f(e) {
                             sticker_id: t.id
                         });
                 })({
-                    sticker: f,
+                    sticker: C,
                     event: _,
                     eventProperties: E
                 }));
-        }, [n, a, f, _, E]);
+        }, [n, a, C, _, E]);
     return (0, i.jsxs)(r.Button, {
-        className: h.CTAMessageButtonOuter,
-        innerClassName: h.CTAMessageButton,
+        className: N.CTAMessageButtonOuter,
+        innerClassName: N.CTAMessageButton,
         color: r.ButtonColors.PRIMARY,
-        onMouseEnter: () => N(!0),
-        onMouseLeave: () => N(!1),
+        onMouseEnter: () => h(!0),
+        onMouseLeave: () => h(!1),
         onClick: g,
         children: [
             (0, i.jsx)(c.ZP, {
-                className: h.CTAMessageSticker,
+                className: N.CTAMessageSticker,
                 isInteracting: m,
-                sticker: f,
+                sticker: C,
                 size: 28
             }),
             p
@@ -111,7 +111,7 @@ function p(e) {
                 let s = t.guild_id;
                 if (null == i || null == s) return !1;
                 let a = (0, u.xl)(t),
-                    r = _.Z.can(N.Plq.SEND_MESSAGES, t),
+                    r = _.Z.can(h.Plq.SEND_MESSAGES, t),
                     l = null === (e = d.ZP.getMember(s, i.id)) || void 0 === e ? void 0 : e.isPending,
                     o = n.author.bot;
                 return r && !a && !l && !o;
@@ -123,8 +123,8 @@ function p(e) {
         });
     return null != c && I
         ? (0, i.jsx)('div', {
-              className: h.CTAMessage,
-              children: (0, i.jsx)(f, {
+              className: N.CTAMessage,
+              children: (0, i.jsx)(C, {
                   currentUser: c,
                   channel: t,
                   message: n,

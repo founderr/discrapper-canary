@@ -21,25 +21,25 @@ function E(e) {
         E = (0, a.e7)([l.Z], () => l.Z.isAdvancedMode(t)),
         T = (0, a.e7)([c.Z], () => c.Z.editedDefaultChannelIds),
         [m, N] = (0, o.VF)(t, T),
-        [S, h] = (0, d.OA)(t, [...T]),
-        g = E ? h.length : N.length,
+        [S, g] = (0, d.OA)(t, [...T]),
+        h = E ? g.length : N.length,
         C = E ? S.length : m.length,
-        x = g < u.md,
+        x = h < u.md,
         p = C >= u.X,
-        R = h.length - N.length,
-        f = (0, s.jsx)(r.CircleCheckIcon, {
+        R = g.length - N.length,
+        L = (0, s.jsx)(r.CircleCheckIcon, {
             size: 'sm',
             color: i.Z.unsafe_rawColors.BRAND_500.css,
             secondaryColor: i.Z.unsafe_rawColors.WHITE_100.css,
             className: I.icon
         }),
-        L = (0, s.jsx)(r.CircleXIcon, {
+        f = (0, s.jsx)(r.CircleXIcon, {
             size: 'sm',
             className: I.icon,
             color: i.Z.colors.WHITE.css,
             secondaryColor: i.Z.colors.BACKGROUND_ACCENT.css
         }),
-        O = [(Math.min(u.X, C) / u.md) * 100, (Math.min(u.md, g) / u.md) * 100],
+        O = [(Math.min(u.X, C) / u.md) * 100, (Math.min(u.md, h) / u.md) * 100],
         A = !x && p ? [i.Z.colors.TEXT_POSITIVE.css, i.Z.colors.TEXT_POSITIVE.css] : [i.Z.colors.TEXT_BRAND.css, i.Z.colors.TEXT_MUTED.css];
     return (0, s.jsxs)('div', {
         className: I.container,
@@ -55,7 +55,7 @@ function E(e) {
                     (0, s.jsx)(r.Text, {
                         variant: 'text-xs/bold',
                         color: 'text-muted',
-                        children: _.Z.Messages.DEFAULT_CHANNELS_TOTAL_COUNT.format({ count: g })
+                        children: _.Z.Messages.DEFAULT_CHANNELS_TOTAL_COUNT.format({ count: h })
                     })
                 ]
             }),
@@ -67,7 +67,7 @@ function E(e) {
             (0, s.jsxs)('div', {
                 className: I.requiredItem,
                 children: [
-                    x ? L : f,
+                    x ? f : L,
                     (0, s.jsx)(r.Text, {
                         variant: 'text-xs/normal',
                         color: 'text-muted',
@@ -78,7 +78,7 @@ function E(e) {
             (0, s.jsxs)('div', {
                 className: I.requiredItem,
                 children: [
-                    p ? f : L,
+                    p ? L : f,
                     (0, s.jsx)(r.Text, {
                         variant: 'text-xs/normal',
                         color: 'text-muted',

@@ -23,13 +23,13 @@ var i = n(735250),
     g = n(560688),
     C = n(173507),
     I = n(523746),
-    x = n(819640),
-    T = n(131951),
-    v = n(699516),
-    S = n(594174),
+    T = n(819640),
+    x = n(131951),
+    S = n(699516),
+    v = n(594174),
     N = n(979651),
-    Z = n(585483),
-    A = n(63063),
+    A = n(585483),
+    Z = n(63063),
     M = n(665149),
     b = n(981631),
     R = n(921944),
@@ -51,10 +51,10 @@ function O(e, t, n) {
 }
 class y extends s.PureComponent {
     componentDidMount() {
-        Z.S.subscribe(b.CkL.CALL_START, this.handleVoiceClick);
+        A.S.subscribe(b.CkL.CALL_START, this.handleVoiceClick);
     }
     componentWillUnmount() {
-        Z.S.unsubscribe(b.CkL.CALL_START, this.handleVoiceClick);
+        A.S.unsubscribe(b.CkL.CALL_START, this.handleVoiceClick);
     }
     renderVideoCallButton() {
         let e, t;
@@ -64,7 +64,7 @@ class y extends s.PureComponent {
             d = null,
             h = !1;
         return (
-            T.Z.supports(L.AN.VIDEO) ? (l ? ((d = j.Z.Messages.CALL_UNAVAILABLE_BLOCKED_USERS), (e = r.Tooltip.Colors.RED), (h = !0)) : s && c === b.WtW.VIDEO ? ((t = this.handleJoinVideoCall), (d = u ? j.Z.Messages.CONNECT : j.Z.Messages.JOIN_VIDEO_CALL)) : ((t = this.handleStartVideoCall), (d = u ? j.Z.Messages.CONNECT : j.Z.Messages.START_VIDEO_CALL))) : ((h = !0), (t = this.handleBrowserNotSupported), (d = j.Z.Messages.BROWSER_NOT_SUPPORTED)),
+            x.Z.supports(L.AN.VIDEO) ? (l ? ((d = j.Z.Messages.CALL_UNAVAILABLE_BLOCKED_USERS), (e = r.Tooltip.Colors.RED), (h = !0)) : s && c === b.WtW.VIDEO ? ((t = this.handleJoinVideoCall), (d = u ? j.Z.Messages.CONNECT : j.Z.Messages.JOIN_VIDEO_CALL)) : ((t = this.handleStartVideoCall), (d = u ? j.Z.Messages.CONNECT : j.Z.Messages.START_VIDEO_CALL))) : ((h = !0), (t = this.handleBrowserNotSupported), (d = j.Z.Messages.BROWSER_NOT_SUPPORTED)),
             (0, i.jsx)(M.ZP.Icon, {
                 icon: r.VideoIcon,
                 onClick: t,
@@ -115,7 +115,7 @@ class y extends s.PureComponent {
                                             children: j.Z.Messages.EMBEDDED_ACTIVITIES_DM_TOOLTIP_BODY
                                         }),
                                         (0, i.jsx)(r.Anchor, {
-                                            href: A.Z.getArticleURL(b.BhN.ACTIVITIES),
+                                            href: Z.Z.getArticleURL(b.BhN.ACTIVITIES),
                                             children: j.Z.Messages.LEARN_MORE
                                         })
                                     ]
@@ -178,16 +178,16 @@ function D(e) {
             callUnavailable: I.Z.isCallUnavailable(t.id)
         })),
         E = t.getRecipientId(),
-        { notFriend: g, isBlocked: C } = (0, a.cj)([v.Z], () => ({
-            notFriend: t.type === b.d4z.DM && null != E && !v.Z.isFriend(E),
-            isBlocked: t.type === b.d4z.DM && null != E && v.Z.isBlocked(E)
+        { notFriend: g, isBlocked: C } = (0, a.cj)([S.Z], () => ({
+            notFriend: t.type === b.d4z.DM && null != E && !S.Z.isFriend(E),
+            isBlocked: t.type === b.d4z.DM && null != E && S.Z.isBlocked(E)
         })),
-        T = (0, a.e7)([S.default], () => S.default.getUser(E)),
-        Z = (0, u.bp)(),
-        A = [],
+        x = (0, a.e7)([v.default], () => v.default.getUser(E)),
+        A = (0, u.bp)(),
+        Z = [],
         M = (0, h.Z)(t.id),
-        R = (0, a.e7)([x.Z], () => x.Z.hasLayers());
-    M && !R && A.push(l.z.ACTIVITY_GDM_CALL_TOOLTIP);
+        R = (0, a.e7)([T.Z], () => T.Z.hasLayers());
+    M && !R && Z.push(l.z.ACTIVITY_GDM_CALL_TOOLTIP);
     let [L, j] = s.useState(!1);
     return (s.useEffect(() => {
         let e = setTimeout(() => {
@@ -195,7 +195,7 @@ function D(e) {
         }, 250);
         return () => clearTimeout(e);
     }, []),
-    n || (null == T ? void 0 : T.bot))
+    n || (null == x ? void 0 : x.bot))
         ? null
         : (0, i.jsx)(y, {
               channel: t,
@@ -205,10 +205,10 @@ function D(e) {
               callUnavailable: _,
               notFriend: g,
               isBlocked: C,
-              appContext: Z,
+              appContext: A,
               canShowTooltip: L,
               canShowActivityGdmTooltip: M,
-              dismissibleContentTypes: A,
+              dismissibleContentTypes: Z,
               useReducedMotion: c
           });
 }

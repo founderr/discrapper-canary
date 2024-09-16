@@ -21,13 +21,13 @@ var i = n(735250),
     g = n(899007),
     C = n(648052),
     I = n(867176),
-    x = n(280885),
-    T = n(900927),
-    v = n(678738),
-    S = n(502762),
+    T = n(280885),
+    x = n(900927),
+    S = n(678738),
+    v = n(502762),
     N = n(530),
-    Z = n(679332),
-    A = n(544989),
+    A = n(679332),
+    Z = n(544989),
     M = n(171368),
     b = n(228168),
     R = n(689938),
@@ -39,26 +39,26 @@ function P(e) {
         O = (0, E.ZP)(t.id),
         y = (0, o.ZP)(),
         { analyticsLocations: D } = (0, u.ZP)(c.Z.PROFILE_PANEL),
-        k = (0, _.ZB)({
+        U = (0, _.ZB)({
             layout: 'SIMPLIFIED_DM_PANEL',
             userId: t.id,
             channelId: n.id
         }),
-        U = s.useRef(null),
-        w = (0, r.Z)(U),
+        k = s.useRef(null),
+        w = (0, r.Z)(k),
         B = (e) => {
             (0, M.openUserProfileModal)({
                 sourceAnalyticsLocations: D,
-                ...k,
+                ...U,
                 ...e
             });
         };
     return (0, i.jsx)(u.Gt, {
         value: D,
         children: (0, i.jsx)(_.Mt, {
-            value: k,
-            children: (0, i.jsxs)(S.Z, {
-                ref: U,
+            value: U,
+            children: (0, i.jsxs)(v.Z, {
+                ref: k,
                 user: t,
                 displayProfile: O,
                 profileType: b.y0.PANEL,
@@ -67,9 +67,9 @@ function P(e) {
                 children: [
                     (0, i.jsxs)(a.u2, {
                         children: [
-                            (0, i.jsx)(A.Z, {
+                            (0, i.jsx)(Z.Z, {
                                 profileType: b.y0.PANEL,
-                                children: (0, i.jsx)(Z.Z, { user: t })
+                                children: (0, i.jsx)(A.Z, { user: t })
                             }),
                             (0, i.jsxs)('header', {
                                 className: L.header,
@@ -104,23 +104,23 @@ function P(e) {
                                             profileType: b.y0.PANEL
                                         })
                                     }),
-                                    (0, i.jsxs)(S.Z.Overlay, {
+                                    (0, i.jsxs)(v.Z.Overlay, {
                                         className: j.overlay,
                                         children: [
-                                            (0, i.jsx)(v.Z, {
+                                            (0, i.jsx)(S.Z, {
                                                 heading: R.Z.Messages.USER_POPOUT_ABOUT_ME,
                                                 headingColor: 'header-primary',
-                                                children: (0, i.jsx)(x.Z, {
+                                                children: (0, i.jsx)(T.Z, {
                                                     userBio: null == O ? void 0 : O.bio,
                                                     userId: t.id,
                                                     animateOnHover: !0,
                                                     isHovering: w
                                                 })
                                             }),
-                                            (0, i.jsx)(v.Z, {
+                                            (0, i.jsx)(S.Z, {
                                                 heading: R.Z.Messages.BOT_PROFILE_CREATED_ON,
                                                 headingColor: 'header-primary',
-                                                children: (0, i.jsx)(T.Z, { userId: t.id })
+                                                children: (0, i.jsx)(x.Z, { userId: t.id })
                                             })
                                         ]
                                     })
@@ -141,7 +141,7 @@ function P(e) {
                                         (0, f.pQ)({
                                             action: 'PRESS_VIEW_PROFILE',
                                             analyticsLocations: D,
-                                            ...k
+                                            ...U
                                         });
                                 },
                                 children: R.Z.Messages.VIEW_FULL_PROFILE

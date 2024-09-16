@@ -19,10 +19,10 @@ var i,
     I = n(757266),
     m = n(417363),
     T = n(358085),
-    N = n(346329),
-    h = n(981631),
-    C = n(689938),
-    f = n(201219);
+    h = n(346329),
+    N = n(981631),
+    f = n(689938),
+    C = n(201219);
 function p(e, t, n) {
     return (
         t in e
@@ -40,22 +40,22 @@ class g extends (i = a.PureComponent) {
     get analyticsLocation() {
         return {
             ...this.props.analyticsContext.location,
-            object: h.qAy.BUTTON_CTA
+            object: N.qAy.BUTTON_CTA
         };
     }
     renderDropdown() {
         let { dispatchState: e } = this.props;
         return null != e && null != e.launchOptions && Object.keys(e.launchOptions).length > 1
             ? (0, s.jsxs)(c.Clickable, {
-                  'aria-label': C.Z.Messages.APPLICATION_CONTEXT_MENU_LAUNCH_OPTIONS,
-                  className: f.dropdownArrowHitbox,
+                  'aria-label': f.Z.Messages.APPLICATION_CONTEXT_MENU_LAUNCH_OPTIONS,
+                  className: C.dropdownArrowHitbox,
                   onClick: this.handleDropdownClick,
                   children: [
-                      (0, s.jsx)('div', { className: f.arrowSeparator }),
+                      (0, s.jsx)('div', { className: C.arrowSeparator }),
                       (0, s.jsx)(c.ChevronSmallDownIcon, {
                           size: 'md',
                           color: 'currentColor',
-                          className: f.dropdownArrow
+                          className: C.dropdownArrow
                       })
                   ]
               })
@@ -64,13 +64,13 @@ class g extends (i = a.PureComponent) {
     renderDisabledButton(e, t) {
         let { className: n, fullWidth: i, size: a, customDisabledColor: r, tooltipPosition: l } = this.props;
         return (0, s.jsxs)('div', {
-            className: f.disabledButtonWrapper,
+            className: C.disabledButtonWrapper,
             children: [
                 (0, s.jsx)(c.Button, {
                     className: n,
                     fullWidth: i,
                     size: a,
-                    color: null != r ? r : f.disabledButtonColor,
+                    color: null != r ? r : C.disabledButtonColor,
                     disabled: !0,
                     children: e
                 }),
@@ -79,7 +79,7 @@ class g extends (i = a.PureComponent) {
                     position: l,
                     children: (e) =>
                         (0, s.jsx)('div', {
-                            className: f.disabledButtonOverlay,
+                            className: C.disabledButtonOverlay,
                             ...e
                         })
                 })
@@ -88,12 +88,12 @@ class g extends (i = a.PureComponent) {
     }
     render() {
         let { className: e, fullWidth: t, size: n, color: i, isLaunchable: a, isLaunching: r, isRunning: o, isShiny: u, hideNotLaunchable: d } = this.props;
-        if (!a) return d ? null : this.renderDisabledButton(C.Z.Messages.GAME_ACTION_BUTTON_PLAY, T.isPlatformEmbedded ? C.Z.Messages.GAME_ACTION_BUTTON_GAME_NOT_DETECTED : C.Z.Messages.GAME_ACTION_BUTTON_PLAY_DISABLED_DESKTOP_APP);
-        if (o) return this.renderDisabledButton(C.Z.Messages.GAME_ACTION_BUTTON_NOW_PLAYING);
+        if (!a) return d ? null : this.renderDisabledButton(f.Z.Messages.GAME_ACTION_BUTTON_PLAY, T.isPlatformEmbedded ? f.Z.Messages.GAME_ACTION_BUTTON_GAME_NOT_DETECTED : f.Z.Messages.GAME_ACTION_BUTTON_PLAY_DISABLED_DESKTOP_APP);
+        if (o) return this.renderDisabledButton(f.Z.Messages.GAME_ACTION_BUTTON_NOW_PLAYING);
         let _ = u ? c.ShinyButton : c.Button;
         return (0, s.jsxs)(_, {
-            className: l()(f.playButton, e),
-            innerClassName: f.playButtonContents,
+            className: l()(C.playButton, e),
+            innerClassName: C.playButtonContents,
             fullWidth: t,
             size: n,
             color: null != i ? i : c.Button.Colors.GREEN,
@@ -101,8 +101,8 @@ class g extends (i = a.PureComponent) {
             onClick: this.handleClick,
             children: [
                 (0, s.jsx)('div', {
-                    className: f.buttonText,
-                    children: C.Z.Messages.GAME_ACTION_BUTTON_PLAY
+                    className: C.buttonText,
+                    children: f.Z.Messages.GAME_ACTION_BUTTON_PLAY
                 }),
                 this.renderDropdown()
             ]
@@ -130,7 +130,7 @@ class g extends (i = a.PureComponent) {
             }),
             p(this, 'handleClick', () => {
                 let { applicationId: e, libraryApplication: t, analyticsListSort: n, analyticsListIndex: i } = this.props;
-                N.playApplication(e, t, {
+                h.playApplication(e, t, {
                     analyticsParams: {
                         location: this.analyticsLocation,
                         list_sort: n,

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return L;
+        return f;
     }
 }),
     n(47120);
@@ -20,8 +20,8 @@ var s = n(735250),
     m = n(295141),
     N = n(723047),
     S = n(290348),
-    h = n(450215),
-    g = n(981631),
+    g = n(450215),
+    h = n(981631),
     C = n(689938),
     x = n(443305);
 let p = 'guild-role-subscription-tier-template-selector',
@@ -41,18 +41,18 @@ let p = 'guild-role-subscription-tier-template-selector',
             }
         );
     };
-function f(e) {
+function L(e) {
     let { guildId: t, priceTiers: i, groupListingId: m } = e,
         R = (0, T._k)(m),
-        { editStateIds: f, addNewEditStateId: L, addNewEditStateFromTemplate: O, removeEditStateId: A } = S.B7(m, t, { includeSoftDeleted: !0 }),
+        { editStateIds: L, addNewEditStateId: f, addNewEditStateFromTemplate: O, removeEditStateId: A } = S.B7(m, t, { includeSoftDeleted: !0 }),
         [M, D] = a.useState({}),
         v = a.useMemo(() => {
-            let e = f.map((e) => {
+            let e = L.map((e) => {
                 var t;
                 return null !== (t = M[e]) && void 0 !== t ? t : e;
             });
             return (0, l.uniq)(e);
-        }, [f, M]),
+        }, [L, M]),
         j = (e, t) => {
             D((n) => ({
                 ...n,
@@ -76,14 +76,14 @@ function f(e) {
                                       ...n,
                                       guildId: t,
                                       addNewEditStateFromTemplate: O,
-                                      addNewEditStateFromScratch: L,
+                                      addNewEditStateFromScratch: f,
                                       priceTiers: i
                                   });
                           },
                           { modalKey: p }
                       )
-                    : L();
-        }, [t, O, L, i, b, Z]),
+                    : f();
+        }, [t, O, f, i, b, Z]),
         G = S.Lo(v),
         P = a.useCallback(() => v.forEach(S.GM), [v]),
         B = (0, N.mY)(),
@@ -91,7 +91,7 @@ function f(e) {
     return (
         a.useEffect(
             () => (
-                y === g.KsC.ROLE_SUBSCRIPTION_TIER_TEMPLATE && U(),
+                y === h.KsC.ROLE_SUBSCRIPTION_TIER_TEMPLATE && U(),
                 () => {
                     (0, d.closeModal)(p);
                 }
@@ -105,7 +105,7 @@ function f(e) {
                     children: [
                         v.map((e) =>
                             (0, s.jsx)(
-                                h.Z,
+                                g.Z,
                                 {
                                     guildId: t,
                                     initialEditStateId: e,
@@ -147,7 +147,7 @@ function f(e) {
         })
     );
 }
-function L(e) {
+function f(e) {
     let { guildId: t } = e,
         { priceTiers: n } = R(t),
         a = (0, T.GG)(t),
@@ -162,7 +162,7 @@ function L(e) {
                 children: C.Z.Messages.GUILD_SETTINGS_ROLE_SUBSCRIPTION_TIERS_TAB_DESCRIPTION.format({ maxTiers: i })
             }),
             (0, s.jsx)(d.Spacer, { size: 16 }),
-            (0, s.jsx)(f, {
+            (0, s.jsx)(L, {
                 priceTiers: n,
                 guildId: t,
                 groupListingId: r[0]

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return h;
     }
 }),
     n(47120);
@@ -20,14 +20,14 @@ var s = n(735250),
     m = n(574085),
     N = n(293810),
     S = n(689938),
-    h = n(517194);
-function g(e) {
+    g = n(517194);
+function h(e) {
     let { allSubscriptionListings: t } = e,
-        { editStateId: n, guildId: g } = (0, o.N)(),
+        { editStateId: n, guildId: h } = (0, o.N)(),
         [C, x] = c.UE(n),
         [p, R] = c.R7(n),
-        f = a.useMemo(() => t.filter((e) => e.id !== n), [t, n]),
-        { isFullServerGating: L } = (0, d.Z)(g),
+        L = a.useMemo(() => t.filter((e) => e.id !== n), [t, n]),
+        { isFullServerGating: f } = (0, d.Z)(h),
         O = (0, r.Dt)(),
         A = (0, l.mY)();
     return (0, s.jsxs)(u.Z, {
@@ -40,21 +40,21 @@ function g(e) {
                 children: [
                     (0, s.jsx)(i.FormText, {
                         type: i.FormText.Types.DESCRIPTION,
-                        className: h.formDescription,
+                        className: g.formDescription,
                         disabled: A,
                         children: S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_IMPORT_HEADER_SUBTITLE
                     }),
                     (0, s.jsx)(_.Z, {
                         channelBenefits: C,
                         intangibleBenefits: p,
-                        subscriptionListings: f,
+                        subscriptionListings: L,
                         onImport: function (e, t) {
                             x((t) => t.concat(e)), R((e) => e.concat(t));
                         }
                     }),
                     (0, s.jsx)(i.Spacer, { size: 8 }),
                     (0, s.jsx)(_.w, {
-                        guildId: g,
+                        guildId: h,
                         onImport: function (e) {
                             x((t) => {
                                 let n = new Set(
@@ -86,11 +86,11 @@ function g(e) {
                 children: [
                     (0, s.jsx)(i.FormText, {
                         type: i.FormText.Types.DESCRIPTION,
-                        className: h.formDescription,
+                        className: g.formDescription,
                         disabled: A,
                         children: S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_CHANNEL_BENEFITS_CHANNELS_DESCRIPTION
                     }),
-                    L &&
+                    f &&
                         (0, s.jsxs)(s.Fragment, {
                             children: [
                                 (0, s.jsx)(I.Z, {
@@ -110,7 +110,7 @@ function g(e) {
                 children: [
                     (0, s.jsx)(i.FormText, {
                         type: i.FormText.Types.DESCRIPTION,
-                        className: h.formDescription,
+                        className: g.formDescription,
                         disabled: A,
                         children: S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INTANGIBLE_BENEFITS_DESCRIPTION
                     }),

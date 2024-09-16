@@ -1121,11 +1121,11 @@ class tI extends (l = p.ZP.Store) {
                           guildId: e,
                           location: 'MediaEngineStore'
                       })
-                    : null,
-            a = r.canSupportSecureFrames || (null == i ? void 0 : i.canSupportSecureFrames),
-            s = r.canSupportMls || (null == i ? void 0 : i.canSupportMls),
-            o = Math.max(r.protocolVersionFloor, null !== (t = null == i ? void 0 : i.protocolVersionFloor) && void 0 !== t ? t : 0);
-        return a && n % 100 >= o ? (s ? n : n % 100) : 0;
+                    : null;
+        n > 5 && (n = 114 === n ? 1 : 0);
+        let a = r.canSupportDaveProtocol || (null == i ? void 0 : i.canSupportDaveProtocol),
+            s = Math.max(r.protocolVersionFloor, null !== (t = null == i ? void 0 : i.protocolVersionFloor) && void 0 !== t ? t : 0);
+        return a && n >= s ? n : 0;
     }
     hasClipsSource() {
         return null != s;

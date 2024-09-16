@@ -36,7 +36,7 @@ function m(e) {
             },
             [N]
         ),
-        h = (0, i.e7)(
+        g = (0, i.e7)(
             [d.Z],
             () => {
                 var e;
@@ -44,11 +44,11 @@ function m(e) {
             },
             [T.id, t.id]
         ),
-        g = (0, o.pM)(t.id, T.id),
+        h = (0, o.pM)(t.id, T.id),
         C = (0, u.Z)(T);
     a.useEffect(() => {
-        g && N(_.ZI.PERMISSIONS);
-    }, [g, N]);
+        h && N(_.ZI.PERMISSIONS);
+    }, [h, N]);
     let x = (0, c.useHasGuildRoleItems)(t, T);
     return (0, s.jsxs)(s.Fragment, {
         children: [
@@ -101,7 +101,7 @@ function m(e) {
                     (0, s.jsx)(r.TabBar.Item, {
                         className: E.tabBarItem,
                         id: _.ZI.DISPLAY,
-                        disabled: g,
+                        disabled: h,
                         children: I.Z.Messages.ROLE_EDIT_TAB_DISPLAY
                     }),
                     (0, s.jsx)(r.TabBar.Item, {
@@ -112,14 +112,14 @@ function m(e) {
                     (0, s.jsx)(r.TabBar.Item, {
                         className: E.tabBarItem,
                         id: _.ZI.VERIFICATIONS,
-                        disabled: g,
+                        disabled: h,
                         children: I.Z.Messages.ROLE_EDIT_TAB_VERIFICATION
                     }),
                     (0, s.jsx)(r.TabBar.Item, {
                         className: E.tabBarItem,
                         id: _.ZI.MEMBERS,
-                        disabled: g,
-                        children: g ? I.Z.Messages.ROLE_EDIT_TAB_MANAGE_MEMBERS : I.Z.Messages.ROLE_EDIT_TAB_MEMBERS_WITH_LIST.format({ numMembers: String(h) })
+                        disabled: h,
+                        children: h ? I.Z.Messages.ROLE_EDIT_TAB_MANAGE_MEMBERS : I.Z.Messages.ROLE_EDIT_TAB_MEMBERS_WITH_LIST.format({ numMembers: String(g) })
                     })
                 ]
             })

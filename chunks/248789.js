@@ -39,7 +39,7 @@ function f(e) {
         }),
             o.Z.increment({ name: a.V.SAFETY_WARNING_VIEW });
     }, [I]);
-    let x = s.useCallback(
+    let T = s.useCallback(
             (e) => {
                 (0, h.qc)({
                     ...I,
@@ -48,7 +48,7 @@ function f(e) {
             },
             [I]
         ),
-        T = s.useCallback(() => {
+        x = s.useCallback(() => {
             (0, r.openModalLazy)(
                 async () => {
                     let { default: e } = await Promise.all([n.e('37229'), n.e('89650')]).then(n.bind(n, 611446));
@@ -66,14 +66,14 @@ function f(e) {
                 },
                 { modalKey: p.X_ }
             ),
-                x(h.NM.USER_BANNER_OPEN_SAFETY_TOOLS);
-        }, [t, E, f, x]),
-        v = s.useCallback(() => {
-            g(), x(h.NM.USER_BANNER_BLOCK_CONFIRM);
-        }, [g, x]),
+                T(h.NM.USER_BANNER_OPEN_SAFETY_TOOLS);
+        }, [t, E, f, T]),
         S = s.useCallback(() => {
-            g(), x(h.NM.USER_BANNER_BLOCK_AND_REPORT_CONFIRM);
-        }, [g, x]),
+            g(), T(h.NM.USER_BANNER_BLOCK_CONFIRM);
+        }, [g, T]),
+        v = s.useCallback(() => {
+            g(), T(h.NM.USER_BANNER_BLOCK_AND_REPORT_CONFIRM);
+        }, [g, T]),
         N = s.useCallback(() => {
             (0, r.openModalLazy)(async () => {
                 let { default: e } = await n.e('19538').then(n.bind(n, 699783));
@@ -81,10 +81,10 @@ function f(e) {
                     let { transitionState: s, onClose: a } = n;
                     return (0, i.jsx)(e, {
                         transitionState: s,
-                        onBlock: v,
-                        onBlockAndReport: S,
+                        onBlock: S,
+                        onBlockAndReport: v,
                         onCancel: () => {
-                            null == a || a(), x(h.NM.USER_BANNER_BLOCK_CANCEL);
+                            null == a || a(), T(h.NM.USER_BANNER_BLOCK_CANCEL);
                         },
                         onClose: a,
                         userId: E,
@@ -92,7 +92,7 @@ function f(e) {
                     });
                 };
             });
-        }, [v, S, E, t, x]);
+        }, [S, v, E, t, T]);
     return (0, i.jsx)(m.Q, {
         channelId: t,
         warningId: f,
@@ -105,7 +105,7 @@ function f(e) {
             {
                 text: _.Z.Messages.INAPPROPRIATE_CONVERSATION_BANNER_OPEN_SAFETY_TOOLS_BUTTON,
                 color: r.Button.Colors.BRAND,
-                onclick: T
+                onclick: x
             },
             ...(C
                 ? []

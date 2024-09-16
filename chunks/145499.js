@@ -15,14 +15,14 @@ var s = n(735250),
     m = n(267642),
     N = n(268350),
     S = n(926491),
-    h = n(386937),
-    g = n(316350),
+    g = n(386937),
+    h = n(316350),
     C = n(863562),
     x = n(981631),
     p = n(689938),
     R = n(444466);
-let f = (e, t) => (e < (0, m.A3)(x.Eu4.NONE) ? x.Eu4.NONE : e < (0, m.A3)(x.Eu4.TIER_1) ? x.Eu4.TIER_1 : e < (0, m.A3)(x.Eu4.TIER_2) ? x.Eu4.TIER_2 : e < (0, m.A3)(x.Eu4.TIER_3) || (null != t && t.hasFeature(x.oNc.MORE_STICKERS) && e < c.D.MAX_STICKER_SLOTS) ? x.Eu4.TIER_3 : x.Eu4.NONE),
-    L = (e) => {
+let L = (e, t) => (e < (0, m.A3)(x.Eu4.NONE) ? x.Eu4.NONE : e < (0, m.A3)(x.Eu4.TIER_1) ? x.Eu4.TIER_1 : e < (0, m.A3)(x.Eu4.TIER_2) ? x.Eu4.TIER_2 : e < (0, m.A3)(x.Eu4.TIER_3) || (null != t && t.hasFeature(x.oNc.MORE_STICKERS) && e < c.D.MAX_STICKER_SLOTS) ? x.Eu4.TIER_3 : x.Eu4.NONE),
+    f = (e) => {
         let { children: t, currentGuildTier: n, guildStickers: a, tier: i } = e,
             r = n < i,
             l = (0, m.ig)(i);
@@ -132,7 +132,7 @@ t.Z = (e) => {
         j = [
             {
                 tier: x.Eu4.NONE,
-                title: (0, s.jsx)(L, {
+                title: (0, s.jsx)(f, {
                     guildStickers: d,
                     currentGuildTier: O,
                     tier: x.Eu4.NONE,
@@ -141,7 +141,7 @@ t.Z = (e) => {
             },
             {
                 tier: x.Eu4.TIER_1,
-                title: (0, s.jsx)(L, {
+                title: (0, s.jsx)(f, {
                     guildStickers: d,
                     currentGuildTier: O,
                     tier: x.Eu4.TIER_1,
@@ -150,7 +150,7 @@ t.Z = (e) => {
             },
             {
                 tier: x.Eu4.TIER_2,
-                title: (0, s.jsx)(L, {
+                title: (0, s.jsx)(f, {
                     guildStickers: d,
                     currentGuildTier: O,
                     tier: x.Eu4.TIER_2,
@@ -159,7 +159,7 @@ t.Z = (e) => {
             },
             {
                 tier: x.Eu4.TIER_3,
-                title: (0, s.jsx)(L, {
+                title: (0, s.jsx)(f, {
                     guildStickers: d,
                     currentGuildTier: O,
                     tier: x.Eu4.TIER_3,
@@ -167,28 +167,28 @@ t.Z = (e) => {
                 })
             }
         ];
-    return (0, s.jsx)(h.Z, {
+    return (0, s.jsx)(g.Z, {
         tiers: j,
         renderTier: (e) => {
             let a,
                 { isAnimatedTo: i, onSetRef: l, tier: c, tiers: u, tierIndex: I } = e,
                 { canCreateExpressions: T, canManageGuildExpression: N } = (0, E.G)(t),
                 S = u[I - 1],
-                h = null != S ? (0, m.A3)(S.tier) : 0,
-                L = (0, m.A3)(c.tier, t),
+                g = null != S ? (0, m.A3)(S.tier) : 0,
+                f = (0, m.A3)(c.tier, t),
                 j = (0, m.ig)(c.tier),
-                Z = d.slice(h, L),
+                Z = d.slice(g, f),
                 b = Z.length > 0,
                 U = O < c.tier,
-                G = f(d.length, t),
-                P = T && !U && G === c.tier && L !== Z.length,
+                G = L(d.length, t),
+                P = T && !U && G === c.tier && f !== Z.length,
                 B = P || Z.length > 0,
-                y = L - h,
+                y = f - g,
                 F = n(872732),
-                k = j - Z.length,
-                w = P ? Math.min(5 - ((Z.length + 0) % 5), k) : 0,
+                w = j - Z.length,
+                k = P ? Math.min(5 - ((Z.length + 0) % 5), w) : 0,
                 H = [];
-            for (let e = 0; e < w; e++) H.push((0, s.jsx)(A, {}, 'placeholder-'.concat(e)));
+            for (let e = 0; e < k; e++) H.push((0, s.jsx)(A, {}, 'placeholder-'.concat(e)));
             let V = G === I + 1 && G > O,
                 Y = P || V || I > O;
             return (
@@ -208,7 +208,7 @@ t.Z = (e) => {
                       }))
                     : P && (a = (0, s.jsx)(M, { guild: t })),
                 (0, s.jsxs)(
-                    g.Z,
+                    h.Z,
                     {
                         subscriptionCount: D,
                         tier: c,
@@ -268,7 +268,7 @@ t.Z = (e) => {
                                                     ? p.Z.Messages.GUILD_STICKER_SETTINGS_ADDITIONAL_SLOTS_WITHOUT_TOTAL.format({ numAdditional: y })
                                                     : p.Z.Messages.GUILD_STICKER_SETTINGS_ADDITIONAL_SLOTS.format({
                                                           numAdditional: y,
-                                                          numTotal: L
+                                                          numTotal: f
                                                       })
                                         }),
                                         (0, s.jsx)(o.Button, {

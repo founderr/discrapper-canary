@@ -21,14 +21,14 @@ var s = n(735250),
     m = n(764260),
     N = n(631969),
     S = n(95242),
-    h = n(420966),
-    g = n(275296),
+    g = n(420966),
+    h = n(275296),
     C = n(203377),
     x = n(981631),
     p = n(689938),
     R = n(366468),
-    f = n(571621);
-function L(e) {
+    L = n(571621);
+function f(e) {
     let { guild: t, role: n, locked: i } = e,
         r = (0, o.e7)([_.default], () => _.default.getCurrentUser()),
         d = a.useMemo(
@@ -107,7 +107,7 @@ function O(e) {
     return (0, s.jsxs)('div', {
         className: R.permissionsWrapper,
         children: [
-            (0, s.jsx)(L, {
+            (0, s.jsx)(f, {
                 guild: t,
                 role: n,
                 locked: i
@@ -146,7 +146,7 @@ function A(e) {
             }))
             .filter((e) => e.permissions.length > 0),
         { headerHeight: T, headerRef: m } = (0, S.Z)(0),
-        { scrolledToTop: N, handleScroll: L } = (0, h.V)(),
+        { scrolledToTop: N, handleScroll: f } = (0, g.V)(),
         A = a.useRef(!1);
     return (
         a.useEffect(() => {
@@ -155,15 +155,15 @@ function A(e) {
         (0, s.jsx)(c.AdvancedScrollerAuto, {
             className: R.scroller,
             style: { scrollPaddingTop: T },
-            onScroll: L,
+            onScroll: f,
             children: (0, s.jsxs)('div', {
-                className: f.contentWidth,
+                className: L.contentWidth,
                 children: [
                     (0, s.jsxs)('div', {
-                        className: r()(f.header, f.stickyHeader, { [f.stickyHeaderElevated]: !N }),
+                        className: r()(L.header, L.stickyHeader, { [L.stickyHeaderElevated]: !N }),
                         ref: m,
                         children: [
-                            (0, s.jsx)(h.Z, {
+                            (0, s.jsx)(g.Z, {
                                 guild: t,
                                 role: n,
                                 selectedSection: C.ZI.PERMISSIONS,
@@ -171,7 +171,7 @@ function A(e) {
                             }),
                             (0, s.jsx)('div', {
                                 className: R.noticeContainer,
-                                children: (0, s.jsx)(g.Z, { role: n })
+                                children: (0, s.jsx)(h.Z, { role: n })
                             }),
                             (0, s.jsx)('div', {
                                 className: R.searchContainer,

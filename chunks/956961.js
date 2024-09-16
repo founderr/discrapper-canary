@@ -18,10 +18,10 @@ var i = n(735250),
     I = n(703656),
     m = n(324701),
     T = n(768943),
-    N = n(695346),
-    h = n(592125),
-    C = n(655354),
-    f = n(324081),
+    h = n(695346),
+    N = n(592125),
+    f = n(655354),
+    C = n(324081),
     p = n(791914),
     g = n(981631),
     S = n(689938),
@@ -73,7 +73,7 @@ function M(e) {
         { messageReminder: s } = e,
         a = s.saveData,
         l = s.message,
-        u = (0, c.e7)([h.Z], () => h.Z.getChannel(a.channelId)),
+        u = (0, c.e7)([N.Z], () => N.Z.getChannel(a.channelId)),
         T = () => {
             (0, I.uL)(g.Z5c.CHANNEL(null == u ? void 0 : u.getGuildId(), a.channelId, a.messageId));
         },
@@ -97,7 +97,7 @@ function M(e) {
         : (0, i.jsxs)('div', {
               className: R.container,
               children: [
-                  (0, i.jsx)(f.Z, {
+                  (0, i.jsx)(C.Z, {
                       channel: u,
                       gotoChannel: T,
                       children: (0, i.jsxs)('div', {
@@ -165,7 +165,7 @@ function M(e) {
                   (0, i.jsxs)('div', {
                       className: r()(R.messageContainer, A.unloadedMessage),
                       children: [
-                          (0, i.jsx)(C.Z, {
+                          (0, i.jsx)(f.Z, {
                               className: R.jumpMessageButton,
                               onJump: T
                           }),
@@ -175,7 +175,7 @@ function M(e) {
                                   message: l,
                                   channel: u,
                                   className: R.message,
-                                  compact: N.jU.getSetting(),
+                                  compact: h.jU.getSetting(),
                                   animateAvatar: !1,
                                   focusProps: O,
                                   trackAnnouncementViews: !0

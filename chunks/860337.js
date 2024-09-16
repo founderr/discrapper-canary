@@ -10,8 +10,8 @@ var r = n(735250),
     o = n(481060),
     s = n(931240),
     c = n(207796),
-    u = n(836768),
-    d = n(859921),
+    d = n(836768),
+    u = n(859921),
     h = n(785287),
     m = n(219299);
 function x() {
@@ -32,12 +32,12 @@ function x() {
             }),
             (0, r.jsx)(o.Button, {
                 size: o.Button.Sizes.SMALL,
-                onClick: u.u,
+                onClick: d.u,
                 children: 'Reset Global Discovery State'
             }),
             (0, r.jsx)(o.Button, {
                 size: o.Button.Sizes.SMALL,
-                onClick: d.t,
+                onClick: u.t,
                 children: 'Reset Global Discovery Servers State'
             })
         ]

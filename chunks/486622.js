@@ -22,17 +22,17 @@ function E(e) {
     let { user: t, onAcceptSuccess: n, onRejectSuccess: s, onError: E } = e,
         g = (0, p.Z)(),
         [C, I] = i.useState(!1),
-        [x, T] = i.useState(!1),
-        [v, S] = i.useState(!1),
-        [N, Z] = i.useState(!1),
-        [A, M] = i.useState(!1),
-        b = C || x || v,
+        [T, x] = i.useState(!1),
+        [S, v] = i.useState(!1),
+        [N, A] = i.useState(!1),
+        [Z, M] = i.useState(!1),
+        b = C || T || S,
         R = i.useCallback(
             async (e) => {
                 if (!b) {
                     I(!0);
                     try {
-                        await (0, h.e4)(e), Z(!0), null == n || n();
+                        await (0, h.e4)(e), A(!0), null == n || n();
                     } catch (t) {
                         let e = new l.Hx(t);
                         null == E || E(e);
@@ -46,14 +46,14 @@ function E(e) {
         L = i.useCallback(
             async (e) => {
                 if (!b) {
-                    T(!0);
+                    x(!0);
                     try {
                         await (0, h.gN)(e), M(!0), null == s || s();
                     } catch (t) {
                         let e = new l.Hx(t);
                         null == E || E(e);
                     } finally {
-                        T(!1);
+                        x(!1);
                     }
                 }
             },
@@ -62,7 +62,7 @@ function E(e) {
         j = i.useCallback(
             async (e) => {
                 if (b) return;
-                T(!0);
+                x(!0);
                 let t = a()(e, _.t$);
                 try {
                     for (let e of t) await (0, h.r_)(e);
@@ -71,7 +71,7 @@ function E(e) {
                     let e = new l.Hx(t);
                     null == E || E(e);
                 } finally {
-                    T(!1);
+                    x(!1);
                 }
             },
             [b, s, E]
@@ -80,7 +80,7 @@ function E(e) {
             async (e) => {
                 if (b) return;
                 if (null != t && null == o.Z.getMutualGuilds(t.id)) {
-                    S(!0);
+                    v(!0);
                     try {
                         await (0, c.Z)(t.id, t.getAvatarURL(void 0, 80), {
                             withMutualGuilds: !0,
@@ -88,7 +88,7 @@ function E(e) {
                         });
                     } catch (e) {
                     } finally {
-                        S(!1);
+                        v(!1);
                     }
                 }
                 let n = async () => {
@@ -155,9 +155,9 @@ function E(e) {
         rejectAll: j,
         markAsNotSpam: O,
         isAcceptLoading: C,
-        isRejectLoading: x,
-        isUserProfileLoading: v,
+        isRejectLoading: T,
+        isUserProfileLoading: S,
         isOptimisticAccepted: N,
-        isOptimisticRejected: A
+        isOptimisticRejected: Z
     };
 }

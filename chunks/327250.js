@@ -22,13 +22,13 @@ var s = n(120356),
     g = n(496675),
     C = n(158776),
     I = n(885110),
-    x = n(594174),
-    T = n(572004),
-    v = n(5192),
-    S = n(51144),
+    T = n(594174),
+    x = n(572004),
+    S = n(5192),
+    v = n(51144),
     N = n(981631),
-    Z = n(308083),
-    A = n(689938),
+    A = n(308083),
+    Z = n(689938),
     M = n(354418);
 function b(e) {
     let { user: t, guildId: n, onClose: s } = e,
@@ -58,7 +58,7 @@ function b(e) {
                                     (0, i.jsx)(r.Text, {
                                         variant: 'text-lg/medium',
                                         children: (0, i.jsx)(r.NameWithRole, {
-                                            name: v.ZP.getName(n, null, t),
+                                            name: S.ZP.getName(n, null, t),
                                             color: r.tokens.colors.HEADER_PRIMARY.css
                                         })
                                     }),
@@ -66,7 +66,7 @@ function b(e) {
                                         clan: null == t ? void 0 : t.clan,
                                         userId: null == t ? void 0 : t.id,
                                         contextGuildId: n,
-                                        badgeSize: Z.NC.SIZE_16,
+                                        badgeSize: A.NC.SIZE_16,
                                         textVariant: 'heading-md/semibold',
                                         className: M.memberClanTag,
                                         containerClassName: M.memberClanTagContainer
@@ -76,7 +76,7 @@ function b(e) {
                             (0, i.jsx)(r.Text, {
                                 variant: 'text-md/medium',
                                 color: 'text-normal',
-                                children: S.ZP.getUserTag(t)
+                                children: v.ZP.getUserTag(t)
                             })
                         ]
                     })
@@ -118,20 +118,20 @@ function L(e) {
             canBanUser: C,
             canModerateMembers: I
         } = (0, l.cj)(
-            [g.Z, x.default, E.Z],
+            [g.Z, T.default, E.Z],
             () => ({
                 canKickUser: null != u && g.Z.canManageUser(N.Plq.KICK_MEMBERS, t, u),
                 canBanUser: null != u && g.Z.canManageUser(N.Plq.BAN_MEMBERS, t, u),
-                canModerateMembers: null != u && (0, m.F)(u.id, t.id, [x.default, E.Z, g.Z])
+                canModerateMembers: null != u && (0, m.F)(u.id, t.id, [T.default, E.Z, g.Z])
             }),
             [t, u]
         ),
-        v = (0, d.b)(s),
-        { analyticsLocations: S, newestAnalyticsLocation: Z } = (0, c.ZP)(),
+        S = (0, d.b)(s),
+        { analyticsLocations: v, newestAnalyticsLocation: A } = (0, c.ZP)(),
         b = (0, p.sE)(a, {
             targetUserId: t.id,
-            location: Z,
-            locations: S
+            location: A,
+            locations: v
         }),
         L = (0, l.e7)([_.default], () => _.default.getId() === (null == t ? void 0 : t.id));
     return (0, i.jsxs)('div', {
@@ -139,7 +139,7 @@ function L(e) {
         children: [
             (0, i.jsxs)(R, {
                 disabled: L,
-                'aria-label': A.Z.Messages.SEND_DM,
+                'aria-label': Z.Z.Messages.SEND_DM,
                 onClick: () => {
                     o.Z.openPrivateChannel(t.id);
                 },
@@ -153,20 +153,20 @@ function L(e) {
                     (0, i.jsx)(r.Text, {
                         variant: 'text-sm/normal',
                         color: 'none',
-                        children: A.Z.Messages.SEND_DM
+                        children: Z.Z.Messages.SEND_DM
                     })
                 ]
             }),
             (0, i.jsxs)(R, {
                 disabled: !f,
-                'aria-label': A.Z.Messages.KICK,
+                'aria-label': Z.Z.Messages.KICK,
                 onClick: () => {
                     (0, r.openModalLazy)(async () => {
                         let { default: e } = await n.e('5454').then(n.bind(n, 854360));
                         return (n) =>
                             (0, i.jsx)(e, {
                                 ...n,
-                                location: Z,
+                                location: A,
                                 guildId: a,
                                 user: t
                             });
@@ -182,20 +182,20 @@ function L(e) {
                     (0, i.jsx)(r.Text, {
                         variant: 'text-sm/normal',
                         color: 'none',
-                        children: A.Z.Messages.KICK
+                        children: Z.Z.Messages.KICK
                     })
                 ]
             }),
             (0, i.jsxs)(R, {
                 disabled: !C,
-                'aria-label': A.Z.Messages.BAN,
+                'aria-label': Z.Z.Messages.BAN,
                 onClick: () => {
                     (0, r.openModalLazy)(async () => {
                         let { default: e } = await n.e('43350').then(n.bind(n, 98746));
                         return (n) =>
                             (0, i.jsx)(e, {
                                 ...n,
-                                location: Z,
+                                location: A,
                                 guildId: a,
                                 user: t
                             });
@@ -211,15 +211,15 @@ function L(e) {
                     (0, i.jsx)(r.Text, {
                         variant: 'text-sm/normal',
                         color: 'none',
-                        children: A.Z.Messages.BAN
+                        children: Z.Z.Messages.BAN
                     })
                 ]
             }),
             (0, i.jsxs)(R, {
                 disabled: !I,
-                'aria-label': A.Z.Messages.TIMEOUT_USER,
+                'aria-label': Z.Z.Messages.TIMEOUT_USER,
                 onClick: () => {
-                    v ? (0, h.q)(s.guildId, s.userId, S) : (0, h.z)(s.guildId, s.userId, S);
+                    S ? (0, h.q)(s.guildId, s.userId, v) : (0, h.z)(s.guildId, s.userId, v);
                 },
                 children: [
                     (0, i.jsx)(r.ClockWarningIcon, {
@@ -231,16 +231,16 @@ function L(e) {
                     (0, i.jsx)(r.Text, {
                         variant: 'text-sm/normal',
                         color: 'none',
-                        children: v ? A.Z.Messages.REMOVE : A.Z.Messages.TIMEOUT_USER
+                        children: S ? Z.Z.Messages.REMOVE : Z.Z.Messages.TIMEOUT_USER
                     })
                 ]
             }),
             (0, i.jsxs)(R, {
-                'aria-label': A.Z.Messages.COPY_ID,
+                'aria-label': Z.Z.Messages.COPY_ID,
                 onClick: () => {
-                    b(p.jQ.COPY_ID), (0, T.JG)(t.id);
+                    b(p.jQ.COPY_ID), (0, x.JG)(t.id);
                 },
-                disabled: !T.wS,
+                disabled: !x.wS,
                 children: [
                     (0, i.jsx)(r.IdIcon, {
                         size: 'custom',
@@ -251,7 +251,7 @@ function L(e) {
                     (0, i.jsx)(r.Text, {
                         variant: 'text-sm/normal',
                         color: 'none',
-                        children: A.Z.Messages.COPY_ID
+                        children: Z.Z.Messages.COPY_ID
                     })
                 ]
             })
@@ -260,7 +260,7 @@ function L(e) {
 }
 function j(e) {
     let { userId: t, guildId: n, onClose: s } = e,
-        a = (0, l.e7)([x.default], () => x.default.getUser(t), [t]),
+        a = (0, l.e7)([T.default], () => T.default.getUser(t), [t]),
         r = (0, l.e7)([f.ZP], () => f.ZP.getMember(n, t), [n, t]);
     return null == a || null == r
         ? null

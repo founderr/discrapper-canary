@@ -13,10 +13,10 @@ let c = Object.freeze([]),
     x = {},
     E = {};
 function _(e, t) {}
-function p() {
+function v() {
     E = {};
 }
-function v(e, t) {
+function p(e, t) {
     let n = d[e];
     return null != n && ((d[e] = n.filter((e) => e.id !== t)), delete h[t], delete m[t], n.length !== d[e].length);
 }
@@ -97,11 +97,11 @@ class f extends (l = s.ZP.Store) {
         },
         UPLOAD_COMPLETE: function (e) {
             let { channelId: t, file: n } = e;
-            return v(t, n.id);
+            return p(t, n.id);
         },
         UPLOAD_FAIL: function (e) {
             let { channelId: t, file: n } = e;
-            return v(t, n.id);
+            return p(t, n.id);
         },
         UPLOAD_CANCEL_REQUEST: function (e) {
             let { file: t } = e,

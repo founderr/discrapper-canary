@@ -20,18 +20,18 @@ function I(e) {
         n,
         I,
         { author: m, banned: T } = e,
-        N = (0, s.e7)([l.default], () => l.default.getId()),
-        h = (0, s.e7)([o.Z], () => o.Z.getChannelId()),
-        C = u.ZP.useName(m),
-        f = N === m.id;
+        h = (0, s.e7)([l.default], () => l.default.getId()),
+        N = (0, s.e7)([o.Z], () => o.Z.getChannelId()),
+        f = u.ZP.useName(m),
+        C = h === m.id;
     return (
-        f
+        C
             ? ((t = _.Z.Messages.INVITE_BUTTON_INVALID_OWNER), (I = _.Z.Messages.INVITE_BUTTON_TITLE_INVITER_INVALID))
             : ((I = _.Z.Messages.INVITE_BUTTON_TITLE_INVITED_INVALID),
               T
                   ? (t = _.Z.Messages.INSTANT_INVITE_BANNED_INFO)
-                  : null != C
-                    ? ((t = _.Z.Messages.INSTANT_INVITE_ASK_USER_FOR_NEW_INVITE.format({ username: C })),
+                  : null != f
+                    ? ((t = _.Z.Messages.INSTANT_INVITE_ASK_USER_FOR_NEW_INVITE.format({ username: f })),
                       (n = (0, i.jsx)(r.Z.Button, {
                           onClick: function () {
                               let { id: e } = m,
@@ -40,7 +40,7 @@ function I(e) {
                                   plainText: t,
                                   rawText: '<@'.concat(e, '>')
                               }),
-                                  null != h && a.Z.startTyping(h);
+                                  null != N && a.Z.startTyping(N);
                           },
                           children: _.Z.Messages.MENTION
                       })))

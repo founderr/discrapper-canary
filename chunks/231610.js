@@ -22,7 +22,7 @@ function T() {
         [, T] = l.p9(e, t),
         [m, N] = l.Ek(e, t),
         S = l.qs(e, t);
-    function h() {
+    function g() {
         (0, a.openModalLazy)(async () => {
             let { default: e } = await n.e('22942').then(n.bind(n, 660727));
             return (n) =>
@@ -42,18 +42,18 @@ function T() {
                 });
         });
     }
-    let g = (0, i.mY)();
+    let h = (0, i.mY)();
     return (0, s.jsxs)(o.Z, {
         title: _.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_FLAIR_HEADER_TITLE,
         description: _.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_FLAIR_HEADER_SUBTITLE,
         children: [
             (0, s.jsx)(a.FormSection, {
                 title: _.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FLAIR_COLOR_TITLE,
-                disabled: g,
+                disabled: h,
                 children: (0, s.jsx)(d.Z, {
                     value: m,
                     onChange: N,
-                    disabled: g
+                    disabled: h
                 })
             }),
             (0, s.jsx)(a.Spacer, { size: 24 }),
@@ -61,12 +61,12 @@ function T() {
                 className: I.__invalid_iconSection,
                 children: (0, s.jsxs)(a.FormSection, {
                     title: _.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FLAIR_BADGE_TITLE,
-                    disabled: g,
+                    disabled: h,
                     children: [
                         (0, s.jsx)(a.FormText, {
                             type: a.FormText.Types.DESCRIPTION,
                             className: I.formDescription,
-                            disabled: g,
+                            disabled: h,
                             children: _.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FLAIR_BADGE_DESCRIPTION
                         }),
                         (0, s.jsxs)('div', {
@@ -75,15 +75,15 @@ function T() {
                                 (0, s.jsx)(u.Z, {
                                     role: S,
                                     'aria-label': _.Z.Messages.ROLE_ICON_CHOOSE_IMAGE,
-                                    onClick: h,
-                                    disabled: g
+                                    onClick: g,
+                                    disabled: h
                                 }),
                                 (0, s.jsx)(a.Button, {
                                     look: a.Button.Looks.OUTLINED,
                                     color: a.Button.Colors.PRIMARY,
                                     className: I.__invalid_imageUploadButtonCTA,
-                                    onClick: h,
-                                    disabled: g,
+                                    onClick: g,
+                                    disabled: h,
                                     children: _.Z.Messages.ROLE_ICON_CHOOSE_IMAGE
                                 })
                             ]

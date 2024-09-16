@@ -32,7 +32,7 @@ function f(e) {
         t = null !== (C = null == f ? void 0 : f.window) && void 0 !== C ? C : window;
     }
     let I = s.useRef(null),
-        x = s.useMemo(() => {
+        T = s.useMemo(() => {
             let e = null;
             return () => {
                 null == e &&
@@ -45,28 +45,28 @@ function f(e) {
     return (
         s.useEffect(
             () => (
-                t.addEventListener('resize', x),
-                c.S.subscribe(p.CkL.REMEASURE_TARGET, x),
+                t.addEventListener('resize', T),
+                c.S.subscribe(p.CkL.REMEASURE_TARGET, T),
                 () => {
-                    t.removeEventListener('resize', x), c.S.unsubscribe(p.CkL.REMEASURE_TARGET, x);
+                    t.removeEventListener('resize', T), c.S.unsubscribe(p.CkL.REMEASURE_TARGET, T);
                 }
             ),
-            [x, t]
+            [T, t]
         ),
         s.useLayoutEffect(() => {
             let e = I.current;
             if (null == e) return;
             let t = e.ownerDocument.defaultView;
             if (null == t) return;
-            x();
-            let i = new t.ResizeObserver(x);
+            T();
+            let i = new t.ResizeObserver(T);
             return (
                 i.observe(e),
                 () => {
                     i.disconnect(), _(n, null);
                 }
             );
-        }, [n, x]),
+        }, [n, T]),
         (0, i.jsx)('div', {
             ref: I,
             style: r,

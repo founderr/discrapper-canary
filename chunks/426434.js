@@ -23,9 +23,9 @@ function T(e) {
         m = (0, i.e7)([o.Z], () => null != n && o.Z.can(_.Plq.MANAGE_GUILD, n), [n]),
         N = (0, i.e7)([c.default], () => c.default.getCurrentUser()),
         S = n.isOwner(N),
-        h = null == N ? void 0 : N.mfaEnabled,
-        g = T === _.BpS.ELEVATED,
-        C = S && h,
+        g = null == N ? void 0 : N.mfaEnabled,
+        h = T === _.BpS.ELEVATED,
+        C = S && g,
         x = (0, a.throttle)(async (e) => {
             if (!!C)
                 await d.Z.updateMFALevel({
@@ -55,12 +55,12 @@ function T(e) {
                     })
                 ]
             }),
-            !C || (g && p)
+            !C || (h && p)
                 ? (0, s.jsx)(r.Tooltip, {
                       text: p ? I.Z.Messages.GUILD_SETTINGS_SAFETY_MFA_DISCOVERABLE_DISABLED_TOOLTIP : S ? I.Z.Messages.GUILD_SETTINGS_SAFETY_MFA_OWNER_TOOLTIP : I.Z.Messages.GUILD_SETTINGS_SAFETY_MFA_NON_OWNER_TOOLTIP,
                       children: (e) =>
                           (0, s.jsx)(u.Z, {
-                              checked: g,
+                              checked: h,
                               disabled: !0,
                               onChange: x,
                               className: E.bringToFront,
@@ -68,7 +68,7 @@ function T(e) {
                           })
                   })
                 : (0, s.jsx)(u.Z, {
-                      checked: g,
+                      checked: h,
                       onChange: x,
                       className: E.bringToFront
                   })

@@ -15,8 +15,8 @@ var s = n(735250),
     m = n(63063),
     N = n(709054),
     S = n(434404),
-    h = n(981631),
-    g = n(689938),
+    g = n(981631),
+    h = n(689938),
     C = n(23387);
 let x = (e) => {
     let { name: t, failingName: n, description: a, checked: i, pending: r, pendingDescription: l, failingDescription: o } = e,
@@ -93,9 +93,9 @@ function p(e, t) {
 t.Z = (e) => {
     let { guild: t, guildId: i, className: l, noHeader: o = !1, failedItemsOnly: c = !1 } = e,
         [_, R] = (0, u.Wu)([E.ZP], () => [E.ZP.getDiscoveryChecklist(i), E.ZP.isLoading()], [i]),
-        { nsfwProperties: f } = null != _ ? _ : {},
-        L = null == t ? void 0 : t.hasFeature(h.oNc.PARTNERED),
-        O = null == f ? void 0 : f.channels_banned_keywords,
+        { nsfwProperties: L } = null != _ ? _ : {},
+        f = null == t ? void 0 : t.hasFeature(g.oNc.PARTNERED),
+        O = null == L ? void 0 : L.channels_banned_keywords,
         A = (0, u.e7)(
             [T.ZP],
             () => {
@@ -136,65 +136,65 @@ t.Z = (e) => {
                     className: C.loadingText,
                     variant: 'heading-md/semibold',
                     color: 'header-secondary',
-                    children: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_LOADING
+                    children: h.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_LOADING
                 }),
                 (0, s.jsx)(I.Spinner, { className: C.__invalid_spinner })
             ]
         });
-    let M = L ? g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_SIZE_DESCRIPTION_FAILING_PARTNERS : g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_SIZE_DESCRIPTION_FAIL,
+    let M = f ? h.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_SIZE_DESCRIPTION_FAILING_PARTNERS : h.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_SIZE_DESCRIPTION_FAIL,
         D = [
             {
-                name: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_SAFE,
-                failingName: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_SAFE_FAILING,
-                description: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_SAFE_DESCRIPTION,
-                failingDescription: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_SAFE_DESCRIPTION_FAILING_GUIDELINES.format({
-                    termsURL: h.EYA.TERMS,
-                    guidelinesURL: m.Z.getArticleURL(h.BhN.PUBLIC_GUILD_GUILDLINES)
+                name: h.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_SAFE,
+                failingName: h.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_SAFE_FAILING,
+                description: h.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_SAFE_DESCRIPTION,
+                failingDescription: h.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_SAFE_DESCRIPTION_FAILING_GUIDELINES.format({
+                    termsURL: g.EYA.TERMS,
+                    guidelinesURL: m.Z.getArticleURL(g.BhN.PUBLIC_GUILD_GUILDLINES)
                 }),
                 checked: null == _ ? void 0 : _.safeEnvironment
             },
             {
-                name: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_SIZE.format({ minMembers: _.minimumGuildSize }),
-                failingName: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_SIZE_FAIL.format({ minMembers: _.minimumGuildSize.toLocaleString() }),
+                name: h.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_SIZE.format({ minMembers: _.minimumGuildSize }),
+                failingName: h.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_SIZE_FAIL.format({ minMembers: _.minimumGuildSize.toLocaleString() }),
                 description: null,
                 failingDescription: M.format({ minMembers: _.minimumGuildSize.toLocaleString() }),
                 checked: null == _ ? void 0 : _.size
             },
             {
-                name: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_AGE,
-                failingName: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_AGE_FAILING,
-                description: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_AGE_DESCRIPTION.format({ minimumGuildAge: Math.ceil(_.minimumGuildAge / 7) }),
-                failingDescription: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_AGE_DESCRIPTION_FAILING.format({
+                name: h.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_AGE,
+                failingName: h.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_AGE_FAILING,
+                description: h.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_AGE_DESCRIPTION.format({ minimumGuildAge: Math.ceil(_.minimumGuildAge / 7) }),
+                failingDescription: h.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_AGE_DESCRIPTION_FAILING.format({
                     minimumGuildAge: Math.ceil(_.minimumGuildAge / 7),
                     passDate: d()(N.default.extractTimestamp(i)).add(_.minimumGuildAge, 'days').format('LL')
                 }),
                 checked: null == _ ? void 0 : _.age
             },
             {
-                name: (null == _ ? void 0 : _.healthScorePending) ? g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_HEALTHY_PENDING : g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_HEALTHY,
-                failingName: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_HEALTHY_FAILING,
-                description: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_HEALTHY_DESCRIPTION,
+                name: (null == _ ? void 0 : _.healthScorePending) ? h.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_HEALTHY_PENDING : h.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_HEALTHY,
+                failingName: h.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_HEALTHY_FAILING,
+                description: h.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_HEALTHY_DESCRIPTION,
                 failingDescription: (0, s.jsxs)(s.Fragment, {
                     children: [
                         (0, s.jsx)(I.Text, {
                             color: 'text-muted',
                             className: C.healthFailingDescription,
                             variant: 'text-sm/normal',
-                            children: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_HEALTHY_DESCRIPTION_FAILING
+                            children: h.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_HEALTHY_DESCRIPTION_FAILING
                         }),
                         (null == _ ? void 0 : _.engagementHealthy)
                             ? null
                             : (0, s.jsx)(I.Text, {
                                   color: 'text-danger',
                                   variant: 'text-sm/normal',
-                                  children: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_ENGAGEMENT_FAILING
+                                  children: h.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_ENGAGEMENT_FAILING
                               }),
                         (null == _ ? void 0 : _.retentionHealthy)
                             ? null
                             : (0, s.jsx)(I.Text, {
                                   color: 'text-danger',
                                   variant: 'text-sm/normal',
-                                  children: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_RETENTION_FAILING
+                                  children: h.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_RETENTION_FAILING
                               }),
                         (() => {
                             if (null == _ || null == _.healthScore) return !1;
@@ -216,12 +216,12 @@ t.Z = (e) => {
                                                 guildChecklist: _
                                             });
                                     }),
-                                children: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_HEALTH_VIEW_DETAILS
+                                children: h.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_HEALTH_VIEW_DETAILS
                             })
                     ]
                 }),
                 pendingDescription: (null == _ ? void 0 : _.size)
-                    ? g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_HEALTHY_DESCRIPTION_PENDING.format({
+                    ? h.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_HEALTHY_DESCRIPTION_PENDING.format({
                           checkBackHook: (e, t) =>
                               (0, s.jsx)(
                                   'strong',
@@ -232,21 +232,21 @@ t.Z = (e) => {
                                   t
                               )
                       })
-                    : g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_HEALTHY_DESCRIPTION_PENDING_SIZE.format({ minMembers: 200 }),
+                    : h.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_HEALTHY_DESCRIPTION_PENDING_SIZE.format({ minMembers: 200 }),
                 checked: null == _ ? void 0 : _.healthy,
                 pending: null == _ ? void 0 : _.healthScorePending
             },
             {
-                name: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_NSFW,
-                failingName: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_NSFW_FAILING,
-                description: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_NSFW_DESCRIPTION,
+                name: h.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_NSFW,
+                failingName: h.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_NSFW_FAILING,
+                description: h.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_NSFW_DESCRIPTION,
                 failingDescription: (0, s.jsxs)(s.Fragment, {
                     children: [
-                        (null == f ? void 0 : f.channels) != null
+                        (null == L ? void 0 : L.channels) != null
                             ? (0, s.jsx)(I.Text, {
                                   color: 'text-muted',
                                   variant: 'text-sm/normal',
-                                  children: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_CHANGE_CHANNEL_NAMES_2.format({
+                                  children: h.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_CHANGE_CHANNEL_NAMES_2.format({
                                       channelHook: (e, t) =>
                                           (0, s.jsx)(
                                               'span',
@@ -278,11 +278,11 @@ t.Z = (e) => {
                                   })
                               })
                             : null,
-                        (null == f ? void 0 : f.name) != null
+                        (null == L ? void 0 : L.name) != null
                             ? (0, s.jsx)(I.Text, {
                                   color: 'text-muted',
                                   variant: 'text-sm/normal',
-                                  children: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_CHANGE_NAME.format({
+                                  children: h.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_CHANGE_NAME.format({
                                       nameHook: (e, t) =>
                                           (0, s.jsx)(
                                               'span',
@@ -295,11 +295,11 @@ t.Z = (e) => {
                                   })
                               })
                             : null,
-                        (null == f ? void 0 : f.description) != null
+                        (null == L ? void 0 : L.description) != null
                             ? (0, s.jsx)(I.Text, {
                                   color: 'text-muted',
                                   variant: 'text-sm/normal',
-                                  children: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_CHANGE_DESCRIPTION.format({
+                                  children: h.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_CHANGE_DESCRIPTION.format({
                                       descriptionHook: (e, t) =>
                                           (0, s.jsx)(
                                               'span',
@@ -314,13 +314,13 @@ t.Z = (e) => {
                             : null
                     ]
                 }),
-                checked: null == f || 0 === Object.keys(f).length
+                checked: null == L || 0 === Object.keys(L).length
             },
             {
-                name: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_2FA,
-                failingName: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_2FA_FAILING,
-                description: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_2FA_DESCRIPTION,
-                failingDescription: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_2FA_DESCRIPTION_FAILING.format({ onClick: () => S.Z.setSection(h.pNK.SAFETY, h.KsC.SAFETY_PERMISSIONS) }),
+                name: h.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_2FA,
+                failingName: h.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_2FA_FAILING,
+                description: h.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_2FA_DESCRIPTION,
+                failingDescription: h.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_2FA_DESCRIPTION_FAILING.format({ onClick: () => S.Z.setSection(g.pNK.SAFETY, g.KsC.SAFETY_PERMISSIONS) }),
                 checked: null == _ ? void 0 : _.protected
             }
         ];
@@ -328,7 +328,7 @@ t.Z = (e) => {
         className: r()(C.container, l),
         children: [
             (() => {
-                let e = g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_DOES_NOT_PASS,
+                let e = h.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_DOES_NOT_PASS,
                     t = (null == _ ? void 0 : _.sufficient) ? n(909425) : n(177266);
                 return o
                     ? null
@@ -344,7 +344,7 @@ t.Z = (e) => {
                               (0, s.jsx)(I.Heading, {
                                   variant: 'heading-md/semibold',
                                   children: (null == _ ? void 0 : _.sufficient)
-                                      ? g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_GOOD_STANDING
+                                      ? h.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_GOOD_STANDING
                                       : e.format({
                                             doesNotHook: (e, t) =>
                                                 (0, s.jsx)(

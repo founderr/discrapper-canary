@@ -1,68 +1,68 @@
 E.d(_, {
     mp: function () {
-        return g;
+        return C;
     },
     tP: function () {
         return f;
     },
     xO: function () {
-        return c;
+        return M;
     }
 }),
     E(653041);
 var s = E(735250),
-    T = E(470079),
-    I = E(120356),
-    n = E.n(I),
-    t = E(392711),
-    A = E.n(t),
-    r = E(913527),
-    a = E.n(r),
-    N = E(481060),
-    S = E(596454),
-    l = E(479099),
-    D = E(592125),
-    L = E(430824),
-    U = E(594174),
-    O = E(274730),
-    G = E(934415),
-    o = E(823379),
-    i = E(624138),
-    M = E(981631),
-    R = E(689938),
-    u = E(451316);
-function c(e, _) {
+    n = E(470079),
+    t = E(120356),
+    r = E.n(t),
+    T = E(392711),
+    a = E.n(T),
+    I = E(913527),
+    l = E.n(I),
+    o = E(481060),
+    A = E(596454),
+    i = E(479099),
+    N = E(592125),
+    D = E(430824),
+    L = E(594174),
+    S = E(934415),
+    u = E(823379),
+    c = E(624138),
+    O = E(909746),
+    U = E(981631),
+    d = E(689938),
+    G = E(451316);
+function M(e, _) {
     let E = O.vc[e.targetType];
     return null != E && !0 === E[_.key];
 }
-let C = {
-    [M.vB8.CREATE]: u.typeCreate,
-    [M.vB8.UPDATE]: u.typeUpdate,
-    [M.vB8.DELETE]: u.typeDelete
+let R = {
+    [U.vB8.CREATE]: G.typeCreate,
+    [U.vB8.UPDATE]: G.typeUpdate,
+    [U.vB8.DELETE]: G.typeDelete
 };
-function d(e) {
-    let { changeItem: _, subChanges: E, changeNumber: T, log: I, oldValue: n, newValue: t, change: A } = e,
-        r = null;
-    if (('string' == typeof _ && (r = _), null != _ && 'object' == typeof _)) {
+function g(e) {
+    let { changeItem: _, subChanges: E, changeNumber: n, log: t, oldValue: r, newValue: T, change: a } = e,
+        I = null;
+    if (('string' == typeof _ && (I = _), null != _ && 'object' == typeof _)) {
         if (null == _.format) {
-            let e = _[A.newValue];
+            let e = _[a.newValue];
             null == e && null != _[O.Et] ? (_ = _[O.Et]) : null != e && (_ = e);
         }
         if (null != _ && null != _.format) {
-            var a, D;
-            r = _.format({
-                user: I.user,
-                target: I.target,
-                oldValue: n,
-                newValue: t,
-                count: Array.isArray(t) ? t.length : null,
-                subtarget: null !== (D = null !== (a = I.options.subtarget) && void 0 !== a ? a : A.subtarget) && void 0 !== D ? D : null,
+            var l, N;
+            I = _.format({
+                user: t.user,
+                target: t.target,
+                oldValue: r,
+                newValue: T,
+                count: Array.isArray(T) ? T.length : null,
+                subtarget: null !== (N = null !== (l = t.options.subtarget) && void 0 !== l ? l : a.subtarget) && void 0 !== N ? N : null,
                 newColorHook: (e, _) =>
                     (0, s.jsx)(
                         'div',
                         {
-                            className: u.colorHook,
-                            style: { backgroundColor: A.newValue }
+                            className: G.colorHook,
+                            style: { backgroundColor: a.newValue }
                         },
                         _
                     ),
@@ -70,182 +70,182 @@ function d(e) {
                     (0, s.jsx)(
                         'div',
                         {
-                            className: u.colorHook,
-                            style: { backgroundColor: A.oldValue }
+                            className: G.colorHook,
+                            style: { backgroundColor: a.oldValue }
                         },
                         _
                     ),
                 oldTagHook: (e, _) =>
                     (0, s.jsx)(
-                        l.Z,
+                        i.Z,
                         {
-                            tag: n,
-                            size: l.Z.Sizes.SMALL
+                            tag: r,
+                            size: i.Z.Sizes.SMALL
                         },
                         _
                     ),
                 newTagHook: (e, _) =>
                     (0, s.jsx)(
-                        l.Z,
+                        i.Z,
                         {
-                            tag: t,
-                            size: l.Z.Sizes.SMALL
+                            tag: T,
+                            size: i.Z.Sizes.SMALL
                         },
                         _
                     ),
-                oldEmojiHook: (e, _) => (0, s.jsx)(S.Z, { emojiId: n }, _),
-                newEmojiHook: (e, _) => (0, s.jsx)(S.Z, { emojiId: t }, _)
+                oldEmojiHook: (e, _) => (0, s.jsx)(A.Z, { emojiId: r }, _),
+                newEmojiHook: (e, _) => (0, s.jsx)(A.Z, { emojiId: T }, _)
             });
-        } else r = _;
+        } else I = _;
     }
-    return null == r
-        ? (console.warn('No change string for', A), null)
-        : '' === r
+    return null == I
+        ? (console.warn('No change string for', a), null)
+        : '' === I
           ? null
           : (0, s.jsxs)(
                 'div',
                 {
-                    className: u.detail,
+                    className: G.detail,
                     style: {
                         position: 'relative',
                         top: 1
                     },
                     children: [
-                        (0, s.jsxs)(N.Text, {
-                            className: u.prefix,
+                        (0, s.jsxs)(o.Text, {
+                            className: G.prefix,
                             variant: 'code',
                             color: (function (e) {
                                 switch (e) {
-                                    case M.vB8.CREATE:
+                                    case U.vB8.CREATE:
                                         return 'text-positive';
-                                    case M.vB8.DELETE:
+                                    case U.vB8.DELETE:
                                         return 'status-danger';
                                     default:
                                         return 'text-warning';
                                 }
-                            })(I.actionType),
+                            })(t.actionType),
                             children: [
-                                T < 10 ? '0'.concat(T) : T,
+                                n < 10 ? '0'.concat(n) : n,
                                 (0, s.jsx)('span', {
-                                    className: u.dash,
+                                    className: G.dash,
                                     children: '\u2014'
                                 })
                             ]
                         }),
                         (0, s.jsxs)('div', {
-                            className: u.change,
+                            className: G.change,
                             children: [
                                 (0, s.jsx)('div', {
-                                    className: u.changeStr,
-                                    children: r
+                                    className: G.changeStr,
+                                    children: I
                                 }),
                                 null != E ? (0, s.jsx)('div', { children: E }) : null
                             ]
                         })
                     ]
                 },
-                T
+                n
             );
 }
-class g extends T.PureComponent {
+class C extends n.PureComponent {
     render() {
         var e, _;
-        let { actionType: E, targetType: T, action: I, themeOverride: t } = this.props,
-            A = null != t ? u['themeOverride'.concat((0, i.De)(t))] : null;
-        let r = n()(
-            u.icon,
-            C[E],
-            ((e = T),
-            (_ = I) === M.rsA.MESSAGE_DELETE
-                ? u.targetMessage
-                : _ === M.rsA.AUTO_MODERATION_BLOCK_MESSAGE || _ === M.rsA.AUTO_MODERATION_FLAG_TO_CHANNEL || _ === M.rsA.AUTO_MODERATION_USER_COMMUNICATION_DISABLED || _ === M.rsA.AUTO_MODERATION_QUARANTINE_USER
-                  ? u.autoModerationBlockMessage
+        let { actionType: E, targetType: n, action: t, themeOverride: T } = this.props,
+            a = null != T ? G['themeOverride'.concat((0, c.De)(T))] : null;
+        let I = r()(
+            G.icon,
+            R[E],
+            ((e = n),
+            (_ = t) === U.rsA.MESSAGE_DELETE
+                ? G.targetMessage
+                : _ === U.rsA.AUTO_MODERATION_BLOCK_MESSAGE || _ === U.rsA.AUTO_MODERATION_FLAG_TO_CHANNEL || _ === U.rsA.AUTO_MODERATION_USER_COMMUNICATION_DISABLED || _ === U.rsA.AUTO_MODERATION_QUARANTINE_USER
+                  ? G.autoModerationBlockMessage
                   : {
-                        [M.KFR.ALL]: u.targetAll,
-                        [M.KFR.GUILD]: u.targetGuild,
-                        [M.KFR.CHANNEL]: u.targetChannel,
-                        [M.KFR.CHANNEL_OVERWRITE]: u.targetChannel,
-                        [M.KFR.USER]: u.targetMember,
-                        [M.KFR.ROLE]: u.targetRole,
-                        [M.KFR.ONBOARDING_PROMPT]: u.targetOnboarding,
-                        [M.KFR.GUILD_ONBOARDING]: u.targetOnboarding,
-                        [M.KFR.HOME_SETTINGS]: u.targetOnboarding,
-                        [M.KFR.INTEGRATION]: u.targetIntegration,
-                        [M.KFR.INVITE]: u.targetInvite,
-                        [M.KFR.WEBHOOK]: u.targetWebhook,
-                        [M.KFR.EMOJI]: u.targetEmoji,
-                        [M.KFR.STICKER]: u.targetSticker,
-                        [M.KFR.STAGE_INSTANCE]: u.targetStageInstance,
-                        [M.KFR.GUILD_SCHEDULED_EVENT]: u.targetGuildScheduledEvent,
-                        [M.KFR.GUILD_SCHEDULED_EVENT_EXCEPTION]: u.targetGuildScheduledEvent,
-                        [M.KFR.THREAD]: u.thread,
-                        [M.KFR.APPLICATION_COMMAND]: u.applicationCommand,
-                        [M.KFR.AUTO_MODERATION_RULE]: u.autoModerationRule,
-                        [M.KFR.GUILD_HOME]: u.targetGuildHome,
-                        [M.KFR.GUILD_SOUNDBOARD]: u.targetGuildSoundboard,
-                        [M.KFR.VOICE_CHANNEL_STATUS]: u.targetChannel
+                        [U.KFR.ALL]: G.targetAll,
+                        [U.KFR.GUILD]: G.targetGuild,
+                        [U.KFR.CHANNEL]: G.targetChannel,
+                        [U.KFR.CHANNEL_OVERWRITE]: G.targetChannel,
+                        [U.KFR.USER]: G.targetMember,
+                        [U.KFR.ROLE]: G.targetRole,
+                        [U.KFR.ONBOARDING_PROMPT]: G.targetOnboarding,
+                        [U.KFR.GUILD_ONBOARDING]: G.targetOnboarding,
+                        [U.KFR.HOME_SETTINGS]: G.targetOnboarding,
+                        [U.KFR.INTEGRATION]: G.targetIntegration,
+                        [U.KFR.INVITE]: G.targetInvite,
+                        [U.KFR.WEBHOOK]: G.targetWebhook,
+                        [U.KFR.EMOJI]: G.targetEmoji,
+                        [U.KFR.STICKER]: G.targetSticker,
+                        [U.KFR.STAGE_INSTANCE]: G.targetStageInstance,
+                        [U.KFR.GUILD_SCHEDULED_EVENT]: G.targetGuildScheduledEvent,
+                        [U.KFR.GUILD_SCHEDULED_EVENT_EXCEPTION]: G.targetGuildScheduledEvent,
+                        [U.KFR.THREAD]: G.thread,
+                        [U.KFR.APPLICATION_COMMAND]: G.applicationCommand,
+                        [U.KFR.AUTO_MODERATION_RULE]: G.autoModerationRule,
+                        [U.KFR.GUILD_HOME]: G.targetGuildHome,
+                        [U.KFR.GUILD_SOUNDBOARD]: G.targetGuildSoundboard,
+                        [U.KFR.VOICE_CHANNEL_STATUS]: G.targetChannel
                     }[e]),
-            A
+            a
         );
-        return (0, s.jsx)('div', { className: r });
+        return (0, s.jsx)('div', { className: I });
     }
 }
 function f(e) {
-    let { log: _, guild: E, onContentClick: I, className: t } = e,
-        r = T.useCallback(
+    let { log: _, guild: E, onContentClick: t, className: T } = e,
+        I = n.useCallback(
             (e) => {
                 if (null == _.changes) return null;
-                let T = 0,
-                    r = A()
+                let n = 0,
+                    I = a()
                         .flatten(
-                            _.changes.map((I) => {
-                                let { oldValue: n, newValue: t } = I,
-                                    r = null;
+                            _.changes.map((t) => {
+                                let { oldValue: r, newValue: T } = t,
+                                    I = null;
                                 if (
-                                    (_.action === M.rsA.MEMBER_ROLE_UPDATE
-                                        ? (r = (function (e) {
+                                    (_.action === U.rsA.MEMBER_ROLE_UPDATE
+                                        ? (I = (function (e) {
                                               let { newValue: _ } = e;
                                               return Array.isArray(_)
                                                   ? _.map((e) =>
                                                         (0, s.jsx)(
                                                             'div',
                                                             {
-                                                                className: u.subListItem,
+                                                                className: G.subListItem,
                                                                 children: e.name
                                                             },
                                                             e.id
                                                         )
                                                     )
                                                   : null;
-                                          })(I))
-                                        : _.targetType === M.KFR.ROLE || _.action === M.rsA.CHANNEL_OVERWRITE_CREATE || _.action === M.rsA.CHANNEL_OVERWRITE_UPDATE
-                                          ? (r = (function (e, _) {
+                                          })(t))
+                                        : _.targetType === U.KFR.ROLE || _.action === U.rsA.CHANNEL_OVERWRITE_CREATE || _.action === U.rsA.CHANNEL_OVERWRITE_UPDATE
+                                          ? (I = (function (e, _) {
                                                 let { newValue: E } = e;
                                                 return Array.isArray(E)
                                                     ? E.map((e, E) =>
                                                           (0, s.jsx)(
                                                               'div',
                                                               {
-                                                                  className: u.subListItem,
+                                                                  className: G.subListItem,
                                                                   children: O.hQ(e, _)
                                                               },
                                                               E
                                                           )
                                                       )
                                                     : null;
-                                            })(I, _))
-                                          : (_.action === M.rsA.CHANNEL_UPDATE || _.action === M.rsA.THREAD_UPDATE) &&
-                                            I.key === M.zUn.FLAGS &&
-                                            (r = (function (e) {
+                                            })(t, _))
+                                          : (_.action === U.rsA.CHANNEL_UPDATE || _.action === U.rsA.THREAD_UPDATE) &&
+                                            t.key === U.zUn.FLAGS &&
+                                            (I = (function (e) {
                                                 let { newValue: _, oldValue: E } = e,
-                                                    T = [];
+                                                    n = [];
                                                 return (Array.isArray(E) &&
-                                                    (T = T.concat(
+                                                    (n = n.concat(
                                                         E.map((e) =>
                                                             (0, s.jsx)(
                                                                 'div',
                                                                 {
-                                                                    className: u.subListItem,
+                                                                    className: G.subListItem,
                                                                     children: O.cT(e)
                                                                 },
                                                                 e
@@ -253,188 +253,188 @@ function f(e) {
                                                         )
                                                     )),
                                                 Array.isArray(_) &&
-                                                    (T = T.concat(
+                                                    (n = n.concat(
                                                         _.map((e) =>
                                                             (0, s.jsx)(
                                                                 'div',
                                                                 {
-                                                                    className: u.subListItem,
+                                                                    className: G.subListItem,
                                                                     children: O.em(e)
                                                                 },
                                                                 e
                                                             )
                                                         )
                                                     )),
-                                                T.length > 0)
-                                                    ? T
+                                                n.length > 0)
+                                                    ? n
                                                     : null;
-                                            })(I)),
-                                    (_.action === M.rsA.CHANNEL_UPDATE || _.action === M.rsA.CHANNEL_CREATE) && I.key === M.zUn.TYPE && (null != n && (n = (0, G.a5)({ type: n })), null != t && (t = (0, G.a5)({ type: t }))),
-                                    _.action === M.rsA.MEMBER_UPDATE && I.key === M.zUn.COMMUNICATION_DISABLED_UNTIL)
+                                            })(t)),
+                                    (_.action === U.rsA.CHANNEL_UPDATE || _.action === U.rsA.CHANNEL_CREATE) && t.key === U.zUn.TYPE && (null != r && (r = (0, S.a5)({ type: r })), null != T && (T = (0, S.a5)({ type: T }))),
+                                    _.action === U.rsA.MEMBER_UPDATE && t.key === U.zUn.COMMUNICATION_DISABLED_UNTIL)
                                 ) {
-                                    if (null == (t = a()(t)) || !t.isValid()) return null;
-                                    t = t.calendar();
+                                    if (null == (T = l()(T)) || !T.isValid()) return null;
+                                    T = T.calendar();
                                 }
-                                (_.action === M.rsA.ONBOARDING_PROMPT_UPDATE || _.action === M.rsA.ONBOARDING_PROMPT_CREATE) &&
-                                    I.key === M.zUn.OPTIONS &&
-                                    (r = (function (e, _, E) {
-                                        let { newValue: T, oldValue: I } = e,
-                                            n = (e) => {
+                                (_.action === U.rsA.ONBOARDING_PROMPT_UPDATE || _.action === U.rsA.ONBOARDING_PROMPT_CREATE) &&
+                                    t.key === U.zUn.OPTIONS &&
+                                    (I = (function (e, _, E) {
+                                        let { newValue: n, oldValue: t } = e,
+                                            r = (e) => {
                                                 var _;
-                                                let s = null != E ? (null === (_ = L.Z.getRole(E.id, e)) || void 0 === _ ? void 0 : _.name) : void 0;
+                                                let s = null != E ? (null === (_ = D.Z.getRole(E.id, e)) || void 0 === _ ? void 0 : _.name) : void 0;
                                                 return null == s ? null : '@'.concat(s);
                                             },
-                                            t = (e) => {
+                                            T = (e) => {
                                                 var _;
-                                                let E = null === (_ = D.Z.getChannel(e)) || void 0 === _ ? void 0 : _.name;
+                                                let E = null === (_ = N.Z.getChannel(e)) || void 0 === _ ? void 0 : _.name;
                                                 return null == E ? null : '#'.concat(E);
                                             },
-                                            r = (e, E) => {
-                                                let { title: T, id: I } = E,
-                                                    r = e.role_ids.map(n).filter(o.lm),
-                                                    a = e.channel_ids.map(t).filter(o.lm),
-                                                    S = E.role_ids.map(n).filter(o.lm),
-                                                    l = E.channel_ids.map(t).filter(o.lm),
-                                                    D = A().difference(S, r),
-                                                    L = A().difference(r, S),
-                                                    U = A().difference(l, a),
-                                                    O = A().difference(a, l),
-                                                    G = [];
-                                                return (!A().isEqual(e.title, E.title) && G.push('title'), !A().isEqual(e.description, E.description) && G.push('description'), 0 === D.length && 0 === L.length && 0 === U.length && 0 === O.length && 0 === G.length)
+                                            I = (e, E) => {
+                                                let { title: n, id: t } = E,
+                                                    I = e.role_ids.map(r).filter(u.lm),
+                                                    l = e.channel_ids.map(T).filter(u.lm),
+                                                    A = E.role_ids.map(r).filter(u.lm),
+                                                    i = E.channel_ids.map(T).filter(u.lm),
+                                                    N = a().difference(A, I),
+                                                    D = a().difference(I, A),
+                                                    L = a().difference(i, l),
+                                                    S = a().difference(l, i),
+                                                    c = [];
+                                                return (!a().isEqual(e.title, E.title) && c.push('title'), !a().isEqual(e.description, E.description) && c.push('description'), 0 === N.length && 0 === D.length && 0 === L.length && 0 === S.length && 0 === c.length)
                                                     ? null
                                                     : (0, s.jsxs)(
                                                           'li',
                                                           {
                                                               children: [
                                                                   (0, s.jsxs)('div', {
-                                                                      className: u.onboardingChangeLogItemTitle,
+                                                                      className: G.onboardingChangeLogItemTitle,
                                                                       children: [
-                                                                          (0, s.jsx)(g, {
-                                                                              actionType: M.vB8.UPDATE,
+                                                                          (0, s.jsx)(C, {
+                                                                              actionType: U.vB8.UPDATE,
                                                                               targetType: _.targetType,
                                                                               action: _.action
                                                                           }),
-                                                                          (0, s.jsx)(N.Text, {
+                                                                          (0, s.jsx)(o.Text, {
                                                                               variant: 'text-md/normal',
-                                                                              children: R.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_UPDATED_OPTION.format({ title: T })
+                                                                              children: d.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_UPDATED_OPTION.format({ title: n })
                                                                           })
                                                                       ]
                                                                   }),
                                                                   (0, s.jsxs)('div', {
-                                                                      className: u.onboardingChangeLogItemChanges,
+                                                                      className: G.onboardingChangeLogItemChanges,
                                                                       children: [
-                                                                          D.length > 0 &&
-                                                                              (0, s.jsx)(N.Text, {
+                                                                          N.length > 0 &&
+                                                                              (0, s.jsx)(o.Text, {
                                                                                   variant: 'text-md/normal',
-                                                                                  children: R.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_ADD_ROLES.format({ roles: D.join(', ') })
+                                                                                  children: d.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_ADD_ROLES.format({ roles: N.join(', ') })
+                                                                              }),
+                                                                          D.length > 0 &&
+                                                                              (0, s.jsx)(o.Text, {
+                                                                                  variant: 'text-md/normal',
+                                                                                  children: d.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_REMOVE_ROLES.format({ roles: D.join(', ') })
                                                                               }),
                                                                           L.length > 0 &&
-                                                                              (0, s.jsx)(N.Text, {
+                                                                              (0, s.jsx)(o.Text, {
                                                                                   variant: 'text-md/normal',
-                                                                                  children: R.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_REMOVE_ROLES.format({ roles: L.join(', ') })
+                                                                                  children: d.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_ADD_CHANNELS.format({ channels: L.join(', ') })
                                                                               }),
-                                                                          U.length > 0 &&
-                                                                              (0, s.jsx)(N.Text, {
+                                                                          S.length > 0 &&
+                                                                              (0, s.jsx)(o.Text, {
                                                                                   variant: 'text-md/normal',
-                                                                                  children: R.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_ADD_CHANNELS.format({ channels: U.join(', ') })
+                                                                                  children: d.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_REMOVE_CHANNELS.format({ channels: S.join(', ') })
                                                                               }),
-                                                                          O.length > 0 &&
-                                                                              (0, s.jsx)(N.Text, {
-                                                                                  variant: 'text-md/normal',
-                                                                                  children: R.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_REMOVE_CHANNELS.format({ channels: O.join(', ') })
-                                                                              }),
-                                                                          G.map((_, T) =>
+                                                                          c.map((_, n) =>
                                                                               (0, s.jsx)(
-                                                                                  N.Text,
+                                                                                  o.Text,
                                                                                   {
                                                                                       variant: 'text-md/normal',
-                                                                                      children: R.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_VALUE_CHANGE.format({
+                                                                                      children: d.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_VALUE_CHANGE.format({
                                                                                           key: _,
                                                                                           oldValue: e[_],
                                                                                           newValue: E[_]
                                                                                       })
                                                                                   },
-                                                                                  T
+                                                                                  n
                                                                               )
                                                                           )
                                                                       ]
                                                                   })
                                                               ]
                                                           },
-                                                          I
+                                                          t
                                                       );
                                             },
-                                            a = A().keyBy(null != I ? I : [], 'id'),
-                                            S = A().keyBy(null != T ? T : [], 'id'),
-                                            l = A()
-                                                .difference(Object.keys(S), Object.keys(a))
-                                                .map((e) => S[e]),
-                                            U = A()
-                                                .difference(Object.keys(a), Object.keys(S))
-                                                .map((e) => a[e]),
-                                            O = A().intersection(Object.keys(S), Object.keys(a));
+                                            l = a().keyBy(null != t ? t : [], 'id'),
+                                            A = a().keyBy(null != n ? n : [], 'id'),
+                                            i = a()
+                                                .difference(Object.keys(A), Object.keys(l))
+                                                .map((e) => A[e]),
+                                            L = a()
+                                                .difference(Object.keys(l), Object.keys(A))
+                                                .map((e) => l[e]),
+                                            S = a().intersection(Object.keys(A), Object.keys(l));
                                         return (0, s.jsxs)(
                                             'ul',
                                             {
-                                                className: u.onboardingChangeLogContainer,
+                                                className: G.onboardingChangeLogContainer,
                                                 children: [
-                                                    l.map((e) => {
-                                                        let { role_ids: E, channel_ids: T, title: I, id: A } = e,
-                                                            r = (null != E ? E : []).map(n).filter(o.lm),
-                                                            a = (null != T ? T : []).map(t).filter(o.lm);
+                                                    i.map((e) => {
+                                                        let { role_ids: E, channel_ids: n, title: t, id: a } = e,
+                                                            I = (null != E ? E : []).map(r).filter(u.lm),
+                                                            l = (null != n ? n : []).map(T).filter(u.lm);
                                                         return (0, s.jsxs)(
                                                             'li',
                                                             {
                                                                 children: [
                                                                     (0, s.jsxs)('div', {
-                                                                        className: u.onboardingChangeLogItemTitle,
+                                                                        className: G.onboardingChangeLogItemTitle,
                                                                         children: [
-                                                                            (0, s.jsx)(g, {
-                                                                                actionType: M.vB8.CREATE,
+                                                                            (0, s.jsx)(C, {
+                                                                                actionType: U.vB8.CREATE,
                                                                                 targetType: _.targetType,
                                                                                 action: _.action
                                                                             }),
-                                                                            (0, s.jsx)(N.Text, {
+                                                                            (0, s.jsx)(o.Text, {
                                                                                 variant: 'text-md/normal',
-                                                                                children: R.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_CREATED_OPTION.format({ title: I })
+                                                                                children: d.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_CREATED_OPTION.format({ title: t })
                                                                             })
                                                                         ]
                                                                     }),
                                                                     (0, s.jsxs)('div', {
-                                                                        className: u.onboardingChangeLogItemChanges,
+                                                                        className: G.onboardingChangeLogItemChanges,
                                                                         children: [
-                                                                            r.length > 0 &&
-                                                                                (0, s.jsx)(N.Text, {
+                                                                            I.length > 0 &&
+                                                                                (0, s.jsx)(o.Text, {
                                                                                     variant: 'text-md/normal',
-                                                                                    children: R.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_WITH_ROLES.format({ roles: r.join(', ') })
+                                                                                    children: d.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_WITH_ROLES.format({ roles: I.join(', ') })
                                                                                 }),
-                                                                            a.length > 0 &&
-                                                                                (0, s.jsx)(N.Text, {
+                                                                            l.length > 0 &&
+                                                                                (0, s.jsx)(o.Text, {
                                                                                     variant: 'text-md/normal',
-                                                                                    children: R.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_WITH_CHANNELS.format({ channels: a.join(', ') })
+                                                                                    children: d.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_WITH_CHANNELS.format({ channels: l.join(', ') })
                                                                                 })
                                                                         ]
                                                                     })
                                                                 ]
                                                             },
-                                                            A
+                                                            a
                                                         );
                                                     }),
-                                                    U.map((e) =>
+                                                    L.map((e) =>
                                                         (0, s.jsx)(
                                                             'li',
                                                             {
                                                                 children: (0, s.jsxs)('div', {
-                                                                    className: u.onboardingChangeLogItemTitle,
+                                                                    className: G.onboardingChangeLogItemTitle,
                                                                     children: [
-                                                                        (0, s.jsx)(g, {
-                                                                            actionType: M.vB8.DELETE,
+                                                                        (0, s.jsx)(C, {
+                                                                            actionType: U.vB8.DELETE,
                                                                             targetType: _.targetType,
                                                                             action: _.action
                                                                         }),
-                                                                        (0, s.jsx)(N.Text, {
+                                                                        (0, s.jsx)(o.Text, {
                                                                             variant: 'text-md/normal',
-                                                                            children: R.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_DELETED_OPTION.format({ title: e.title })
+                                                                            children: d.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_DELETED_OPTION.format({ title: e.title })
                                                                         })
                                                                     ]
                                                                 })
@@ -442,46 +442,46 @@ function f(e) {
                                                             e.id
                                                         )
                                                     ),
-                                                    O.map((e) => r(a[e], S[e]))
+                                                    S.map((e) => I(l[e], A[e]))
                                                 ]
                                             },
                                             'options'
                                         );
-                                    })(I, _, E)),
-                                    (_.action === M.rsA.HOME_SETTINGS_CREATE || _.action === M.rsA.HOME_SETTINGS_UPDATE) &&
-                                        (r = (function (e, _) {
-                                            let { oldValue: E, newValue: T, key: I } = e,
-                                                { targetType: n, action: t } = _;
-                                            switch (I) {
-                                                case M.zUn.WELCOME_MESSAGE:
+                                    })(t, _, E)),
+                                    (_.action === U.rsA.HOME_SETTINGS_CREATE || _.action === U.rsA.HOME_SETTINGS_UPDATE) &&
+                                        (I = (function (e, _) {
+                                            let { oldValue: E, newValue: n, key: t } = e,
+                                                { targetType: r, action: T } = _;
+                                            switch (t) {
+                                                case U.zUn.WELCOME_MESSAGE:
                                                     return ((e, _) => {
-                                                        var E, T, I, n, t;
-                                                        let A = U.default.getUser(null == _ ? void 0 : null === (E = _.author_ids) || void 0 === E ? void 0 : E[0]),
-                                                            r = U.default.getUser(null === (T = e.author_ids) || void 0 === T ? void 0 : T[0]),
-                                                            a =
-                                                                (null == A ? void 0 : A.id) !== (null == r ? void 0 : r.id)
+                                                        var E, n, t, r, T;
+                                                        let a = L.default.getUser(null == _ ? void 0 : null === (E = _.author_ids) || void 0 === E ? void 0 : E[0]),
+                                                            I = L.default.getUser(null === (n = e.author_ids) || void 0 === n ? void 0 : n[0]),
+                                                            l =
+                                                                (null == a ? void 0 : a.id) !== (null == I ? void 0 : I.id)
                                                                     ? (0, s.jsx)('li', {
                                                                           children: (0, s.jsx)('div', {
-                                                                              className: u.onboardingChangeLogItemTitle,
-                                                                              children: (0, s.jsx)(N.Text, {
+                                                                              className: G.onboardingChangeLogItemTitle,
+                                                                              children: (0, s.jsx)(o.Text, {
                                                                                   variant: 'text-md/normal',
-                                                                                  children: R.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_AUTHOR_CHANGE.format({
-                                                                                      oldUser: null !== (I = null == A ? void 0 : A.username) && void 0 !== I ? I : R.Z.Messages.NONE,
-                                                                                      newUser: null !== (n = null == r ? void 0 : r.username) && void 0 !== n ? n : R.Z.Messages.NONE
+                                                                                  children: d.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_AUTHOR_CHANGE.format({
+                                                                                      oldUser: null !== (t = null == a ? void 0 : a.username) && void 0 !== t ? t : d.Z.Messages.NONE,
+                                                                                      newUser: null !== (r = null == I ? void 0 : I.username) && void 0 !== r ? r : d.Z.Messages.NONE
                                                                                   })
                                                                               })
                                                                           })
                                                                       })
                                                                     : null,
-                                                            S =
+                                                            A =
                                                                 (null == _ ? void 0 : _.message) !== e.message
                                                                     ? (0, s.jsx)('li', {
                                                                           children: (0, s.jsx)('div', {
-                                                                              className: u.onboardingChangeLogItemTitle,
-                                                                              children: (0, s.jsx)(N.Text, {
+                                                                              className: G.onboardingChangeLogItemTitle,
+                                                                              children: (0, s.jsx)(o.Text, {
                                                                                   variant: 'text-md/normal',
-                                                                                  children: R.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_MESSAGE_CHANGE.format({
-                                                                                      oldMessage: null !== (t = null == _ ? void 0 : _.message) && void 0 !== t ? t : R.Z.Messages.NONE,
+                                                                                  children: d.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_MESSAGE_CHANGE.format({
+                                                                                      oldMessage: null !== (T = null == _ ? void 0 : _.message) && void 0 !== T ? T : d.Z.Messages.NONE,
                                                                                       newMessage: e.message
                                                                                   })
                                                                               })
@@ -489,34 +489,34 @@ function f(e) {
                                                                       })
                                                                     : null;
                                                         return (0, s.jsxs)('ul', {
-                                                            children: [a, S]
+                                                            children: [l, A]
                                                         });
-                                                    })(T, E);
-                                                case M.zUn.NEW_MEMBER_ACTIONS:
+                                                    })(n, E);
+                                                case U.zUn.NEW_MEMBER_ACTIONS:
                                                     return ((e, _) => {
                                                         let E = e.map((e) => e.channel_id),
-                                                            T = _.map((e) => e.channel_id),
-                                                            I = A().difference(T, E),
-                                                            r = A().difference(E, T),
-                                                            a = _.filter((e) => I.includes(e.channel_id)),
-                                                            S = e.filter((e) => r.includes(e.channel_id));
+                                                            n = _.map((e) => e.channel_id),
+                                                            t = a().difference(n, E),
+                                                            I = a().difference(E, n),
+                                                            l = _.filter((e) => t.includes(e.channel_id)),
+                                                            A = e.filter((e) => I.includes(e.channel_id));
                                                         return (0, s.jsxs)('ul', {
                                                             children: [
-                                                                a.map((e) =>
+                                                                l.map((e) =>
                                                                     (0, s.jsx)(
                                                                         'li',
                                                                         {
                                                                             children: (0, s.jsxs)('div', {
-                                                                                className: u.onboardingChangeLogItemTitle,
+                                                                                className: G.onboardingChangeLogItemTitle,
                                                                                 children: [
-                                                                                    (0, s.jsx)(g, {
-                                                                                        actionType: M.vB8.CREATE,
-                                                                                        targetType: n,
-                                                                                        action: t
+                                                                                    (0, s.jsx)(C, {
+                                                                                        actionType: U.vB8.CREATE,
+                                                                                        targetType: r,
+                                                                                        action: T
                                                                                     }),
-                                                                                    (0, s.jsx)(N.Text, {
+                                                                                    (0, s.jsx)(o.Text, {
                                                                                         variant: 'text-md/normal',
-                                                                                        children: R.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_NEW_MEMBER_ACTION_ADDED.format({ name: e.title })
+                                                                                        children: d.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_NEW_MEMBER_ACTION_ADDED.format({ name: e.title })
                                                                                     })
                                                                                 ]
                                                                             })
@@ -524,21 +524,21 @@ function f(e) {
                                                                         e.channel_id
                                                                     )
                                                                 ),
-                                                                S.map((e) =>
+                                                                A.map((e) =>
                                                                     (0, s.jsx)(
                                                                         'li',
                                                                         {
                                                                             children: (0, s.jsxs)('div', {
-                                                                                className: u.onboardingChangeLogItemTitle,
+                                                                                className: G.onboardingChangeLogItemTitle,
                                                                                 children: [
-                                                                                    (0, s.jsx)(g, {
-                                                                                        actionType: M.vB8.DELETE,
-                                                                                        targetType: n,
-                                                                                        action: t
+                                                                                    (0, s.jsx)(C, {
+                                                                                        actionType: U.vB8.DELETE,
+                                                                                        targetType: r,
+                                                                                        action: T
                                                                                     }),
-                                                                                    (0, s.jsx)(N.Text, {
+                                                                                    (0, s.jsx)(o.Text, {
                                                                                         variant: 'text-md/normal',
-                                                                                        children: R.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_NEW_MEMBER_ACTION_REMOVED.format({ name: e.title })
+                                                                                        children: d.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_NEW_MEMBER_ACTION_REMOVED.format({ name: e.title })
                                                                                     })
                                                                                 ]
                                                                             })
@@ -548,32 +548,32 @@ function f(e) {
                                                                 )
                                                             ]
                                                         });
-                                                    })(null != E ? E : [], T);
-                                                case M.zUn.RESOURCE_CHANNELS:
+                                                    })(null != E ? E : [], n);
+                                                case U.zUn.RESOURCE_CHANNELS:
                                                     return ((e, _) => {
                                                         let E = e.map((e) => e.channel_id),
-                                                            T = _.map((e) => e.channel_id),
-                                                            I = A().difference(T, E),
-                                                            r = A().difference(E, T),
-                                                            a = _.filter((e) => I.includes(e.channel_id)),
-                                                            S = e.filter((e) => r.includes(e.channel_id));
+                                                            n = _.map((e) => e.channel_id),
+                                                            t = a().difference(n, E),
+                                                            I = a().difference(E, n),
+                                                            l = _.filter((e) => t.includes(e.channel_id)),
+                                                            A = e.filter((e) => I.includes(e.channel_id));
                                                         return (0, s.jsxs)('ul', {
                                                             children: [
-                                                                a.map((e) =>
+                                                                l.map((e) =>
                                                                     (0, s.jsx)(
                                                                         'li',
                                                                         {
                                                                             children: (0, s.jsxs)('div', {
-                                                                                className: u.onboardingChangeLogItemTitle,
+                                                                                className: G.onboardingChangeLogItemTitle,
                                                                                 children: [
-                                                                                    (0, s.jsx)(g, {
-                                                                                        actionType: M.vB8.CREATE,
-                                                                                        targetType: n,
-                                                                                        action: t
+                                                                                    (0, s.jsx)(C, {
+                                                                                        actionType: U.vB8.CREATE,
+                                                                                        targetType: r,
+                                                                                        action: T
                                                                                     }),
-                                                                                    (0, s.jsx)(N.Text, {
+                                                                                    (0, s.jsx)(o.Text, {
                                                                                         variant: 'text-md/normal',
-                                                                                        children: R.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_RESOURCE_CHANNEL_ADDED.format({ name: e.title })
+                                                                                        children: d.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_RESOURCE_CHANNEL_ADDED.format({ name: e.title })
                                                                                     })
                                                                                 ]
                                                                             })
@@ -581,21 +581,21 @@ function f(e) {
                                                                         e.channel_id
                                                                     )
                                                                 ),
-                                                                S.map((e) =>
+                                                                A.map((e) =>
                                                                     (0, s.jsx)(
                                                                         'li',
                                                                         {
                                                                             children: (0, s.jsxs)('div', {
-                                                                                className: u.onboardingChangeLogItemTitle,
+                                                                                className: G.onboardingChangeLogItemTitle,
                                                                                 children: [
-                                                                                    (0, s.jsx)(g, {
-                                                                                        actionType: M.vB8.DELETE,
-                                                                                        targetType: n,
-                                                                                        action: t
+                                                                                    (0, s.jsx)(C, {
+                                                                                        actionType: U.vB8.DELETE,
+                                                                                        targetType: r,
+                                                                                        action: T
                                                                                     }),
-                                                                                    (0, s.jsx)(N.Text, {
+                                                                                    (0, s.jsx)(o.Text, {
                                                                                         variant: 'text-md/normal',
-                                                                                        children: R.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_RESOURCE_CHANNEL_REMOVED.format({ name: e.title })
+                                                                                        children: d.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_RESOURCE_CHANNEL_REMOVED.format({ name: e.title })
                                                                                     })
                                                                                 ]
                                                                             })
@@ -605,94 +605,94 @@ function f(e) {
                                                                 )
                                                             ]
                                                         });
-                                                    })(null != E ? E : [], T);
+                                                    })(null != E ? E : [], n);
                                                 default:
                                                     return null;
                                             }
-                                        })(I, _));
-                                let S = e[I.key];
-                                return c(_, I)
+                                        })(t, _));
+                                let A = e[t.key];
+                                return M(_, t)
                                     ? null
-                                    : ('function' == typeof S && (S = S(I)), Array.isArray(S))
-                                      ? S.map(
+                                    : ('function' == typeof A && (A = A(t)), Array.isArray(A))
+                                      ? A.map(
                                             (e) => (
-                                                T++,
-                                                d({
+                                                n++,
+                                                g({
                                                     changeItem: e,
-                                                    subChanges: r,
-                                                    changeNumber: T,
+                                                    subChanges: I,
+                                                    changeNumber: n,
                                                     log: _,
-                                                    oldValue: n,
-                                                    newValue: t,
-                                                    change: I
+                                                    oldValue: r,
+                                                    newValue: T,
+                                                    change: t
                                                 })
                                             )
                                         )
-                                      : (T++,
-                                        d({
-                                            changeItem: S,
-                                            subChanges: r,
-                                            changeNumber: T,
+                                      : (n++,
+                                        g({
+                                            changeItem: A,
+                                            subChanges: I,
+                                            changeNumber: n,
                                             log: _,
-                                            oldValue: n,
-                                            newValue: t,
-                                            change: I
+                                            oldValue: r,
+                                            newValue: T,
+                                            change: t
                                         }));
                             })
                         )
-                        .filter(o.lm);
-                return (0, s.jsx)(N.Clickable, {
-                    onClick: I,
-                    className: n()(u.changeDetails, t),
-                    children: r
+                        .filter(u.lm);
+                return (0, s.jsx)(o.Clickable, {
+                    onClick: t,
+                    className: r()(G.changeDetails, T),
+                    children: I
                 });
             },
-            [_, E, I, t]
+            [_, E, t, T]
         ),
-        S = T.useMemo(() => {
+        A = n.useMemo(() => {
             switch (_.targetType) {
-                case M.KFR.GUILD:
-                    return r(O.pY());
-                case M.KFR.CHANNEL:
-                case M.KFR.CHANNEL_OVERWRITE:
-                    return r(O.ML());
-                case M.KFR.USER:
-                    return r(O.lU());
-                case M.KFR.ROLE:
-                    return r(O.HE());
-                case M.KFR.ONBOARDING_PROMPT:
-                    return r(O.oD());
-                case M.KFR.GUILD_ONBOARDING:
-                    return r(O.EN());
-                case M.KFR.HOME_SETTINGS:
-                    return r(O.hx());
-                case M.KFR.INVITE:
-                    return r(O.HN());
-                case M.KFR.WEBHOOK:
-                    return r(O.lR());
-                case M.KFR.EMOJI:
-                    return r(O.N$());
-                case M.KFR.STICKER:
-                    return r(O.Bq());
-                case M.KFR.INTEGRATION:
-                    return r(O.K());
-                case M.KFR.STAGE_INSTANCE:
-                    return r(O.C2());
-                case M.KFR.GUILD_SCHEDULED_EVENT:
-                    return r(O.uB());
-                case M.KFR.GUILD_SCHEDULED_EVENT_EXCEPTION:
-                    return r(O.pi());
-                case M.KFR.THREAD:
-                    return r(O.pA());
-                case M.KFR.APPLICATION_COMMAND:
-                    return r(O.vm(_.changes));
-                case M.KFR.AUTO_MODERATION_RULE:
-                    return r(O.rK());
-                case M.KFR.GUILD_SOUNDBOARD:
-                    return r(O.C0());
-                case M.KFR.VOICE_CHANNEL_STATUS:
-                    return r(O.F1());
+                case U.KFR.GUILD:
+                    return I(O.pY());
+                case U.KFR.CHANNEL:
+                case U.KFR.CHANNEL_OVERWRITE:
+                    return I(O.ML());
+                case U.KFR.USER:
+                    return I(O.lU());
+                case U.KFR.ROLE:
+                    return I(O.HE());
+                case U.KFR.ONBOARDING_PROMPT:
+                    return I(O.oD());
+                case U.KFR.GUILD_ONBOARDING:
+                    return I(O.EN());
+                case U.KFR.HOME_SETTINGS:
+                    return I(O.hx());
+                case U.KFR.INVITE:
+                    return I(O.HN());
+                case U.KFR.WEBHOOK:
+                    return I(O.lR());
+                case U.KFR.EMOJI:
+                    return I(O.N$());
+                case U.KFR.STICKER:
+                    return I(O.Bq());
+                case U.KFR.INTEGRATION:
+                    return I(O.K());
+                case U.KFR.STAGE_INSTANCE:
+                    return I(O.C2());
+                case U.KFR.GUILD_SCHEDULED_EVENT:
+                    return I(O.uB());
+                case U.KFR.GUILD_SCHEDULED_EVENT_EXCEPTION:
+                    return I(O.pi());
+                case U.KFR.THREAD:
+                    return I(O.pA());
+                case U.KFR.APPLICATION_COMMAND:
+                    return I(O.vm(_.changes));
+                case U.KFR.AUTO_MODERATION_RULE:
+                    return I(O.rK());
+                case U.KFR.GUILD_SOUNDBOARD:
+                    return I(O.C0());
+                case U.KFR.VOICE_CHANNEL_STATUS:
+                    return I(O.F1());
             }
-        }, [_.targetType, _.changes, r]);
-    return (0, s.jsx)(s.Fragment, { children: S });
+        }, [_.targetType, _.changes, I]);
+    return (0, s.jsx)(s.Fragment, { children: A });
 }

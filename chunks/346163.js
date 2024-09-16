@@ -24,17 +24,17 @@ function T(e) {
             let t = r.default.getCurrentUser();
             return (null == e ? void 0 : e.isOwner(t)) === !0;
         }),
-        { error: S, loading: h, createEnableRequest: g, submittedRequest: C } = (0, c.Z)(null == e ? void 0 : e.id),
-        { loading: x, error: p, refresh: R, eligibility: f } = (0, d.Z)(null == e ? void 0 : e.id),
-        { isApplicationRejected: L, requestCooldownDuration: O } = (0, u.Z)(f),
+        { error: S, loading: g, createEnableRequest: h, submittedRequest: C } = (0, c.Z)(null == e ? void 0 : e.id),
+        { loading: x, error: p, refresh: R, eligibility: L } = (0, d.Z)(null == e ? void 0 : e.id),
+        { isApplicationRejected: f, requestCooldownDuration: O } = (0, u.Z)(L),
         A = (null == e ? void 0 : e.hasFeature(I.oNc.CREATOR_MONETIZABLE_RESTRICTED)) === !0 || (null == e ? void 0 : e.hasFeature(I.oNc.CREATOR_MONETIZABLE_DISABLED)) === !0,
         { isMonetizationReapplicationDisabled: M } = (0, i.eC)(null == e ? void 0 : e.id),
-        D = C || (null == f ? void 0 : f.isApplicationPending) === !0,
-        v = (null == f ? void 0 : f.canApply) === !0,
+        D = C || (null == L ? void 0 : L.isApplicationPending) === !0,
+        v = (null == L ? void 0 : L.canApply) === !0,
         j = E.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUIREMENTS_DESCRIPTION.format({ faqUrl: l.Z.getArticleURL(I.BhN.CREATOR_FAQ) });
-    L && M
+    f && M
         ? (t = !0 === T ? E.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_REJECTED_HIGH_HARM.format({ communityGuidelineUrl: I.EYA.GUIDELINES }) : E.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_REJECTED_HIGH_HARM_ALT.format({ communityGuidelineUrl: I.EYA.GUIDELINES }))
-        : L &&
+        : f &&
           null != O &&
           (t = E.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_REJECTED_V2.format({
               requestCooldownDuration: O,
@@ -43,28 +43,28 @@ function T(e) {
     let Z = n && N && !1 === m,
         b = n && !1 === T,
         U = (0, _.f)(),
-        G = L && v && N ? E.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_RESUBMIT_V2.format() : void 0;
+        G = f && v && N ? E.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_RESUBMIT_V2.format() : void 0;
     return (
         s.useEffect(() => {
             Z && R();
         }, [R, Z]),
         {
-            resubmittingEnableRequest: h,
+            resubmittingEnableRequest: g,
             resubmissionError: S,
             isGuildOwner: N,
-            createEnableRequest: g,
+            createEnableRequest: h,
             resubmittedRequest: C,
             eligibilityLoading: x,
             eligibilityError: p,
             refreshEligibility: R,
-            eligibility: f,
+            eligibility: L,
             eligibleForMonetization: v,
             isApplicationPending: D,
-            hasPreviousApplicationRejection: L,
+            hasPreviousApplicationRejection: f,
             requestRejectedNoticeText: t,
             reapplyNoticeText: G,
             showAcceptTermsFlow: b,
-            wasRejectedInV1: b && (A || L),
+            wasRejectedInV1: b && (A || f),
             requirementsFinePrintText: j,
             acceptTermsCheckboxText: U
         }

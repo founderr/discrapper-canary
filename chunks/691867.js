@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return u;
+        return d;
     }
 }),
     n(47120);
@@ -11,7 +11,7 @@ var r = n(735250),
     o = n(581612),
     s = n(91311),
     c = n(638135);
-function u() {
+function d() {
     let e = (0, l.e7)([s.Z], () => s.Z.allWithDescriptions(), [], l.pF),
         t = a.useMemo(
             () =>

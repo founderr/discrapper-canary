@@ -15,13 +15,13 @@ var s = n(735250),
     m = n(237583),
     N = n(899667),
     S = n(271383),
-    h = n(594174),
-    g = n(267642),
+    g = n(594174),
+    h = n(267642),
     C = n(624138),
     x = n(981631),
     p = n(689938),
     R = n(366667);
-function f(e, t, n) {
+function L(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -34,7 +34,7 @@ function f(e, t, n) {
         e
     );
 }
-let L = (0, C.Mg)(d.Z.GUILD_SETTINGS_PREMIUM_TIER_STATUS_PROGRESS_WITH_SUBSCRIPTIONS_MARGIN_TOP);
+let f = (0, C.Mg)(d.Z.GUILD_SETTINGS_PREMIUM_TIER_STATUS_PROGRESS_WITH_SUBSCRIPTIONS_MARGIN_TOP);
 class O extends a.Component {
     componentDidMount() {
         this.measure();
@@ -61,12 +61,12 @@ class O extends a.Component {
                 y: 0,
                 key: T.x
             },
-            r = (0, g.vn)(n),
+            r = (0, h.vn)(n),
             l = e.map((e) => {
                 var n;
                 return {
                     numRequired: r[e.tier],
-                    name: (0, g.nW)(e.tier),
+                    name: (0, h.nW)(e.tier),
                     y: null !== (n = t[e.tier]) && void 0 !== n ? n : 0,
                     key: e.tier
                 };
@@ -120,7 +120,7 @@ class O extends a.Component {
         let { guildId: e, renderTier: t, subscriptions: n, subscriberCount: a, tiers: i } = this.props;
         if (null == n) return (0, s.jsx)(u.Spinner, { type: u.Spinner.Type.SPINNING_CIRCLE });
         if (null == e) return null;
-        let r = (0, g.vn)(e);
+        let r = (0, h.vn)(e);
         return (0, s.jsx)('div', {
             children: (0, s.jsxs)('div', {
                 className: R.content,
@@ -149,13 +149,13 @@ class O extends a.Component {
     }
     constructor(...e) {
         super(...e),
-            f(this, 'tierRefs', {}),
-            f(this, 'defaultTierRef', a.createRef()),
-            f(this, 'state', {
+            L(this, 'tierRefs', {}),
+            L(this, 'defaultTierRef', a.createRef()),
+            L(this, 'state', {
                 tierPositions: null,
                 animatedTier: x.Eu4.NONE
             }),
-            f(this, 'measure', () => {
+            L(this, 'measure', () => {
                 let { subscriberCount: e } = this.props,
                     t = this.defaultTierRef.current;
                 if (null == t) return;
@@ -164,18 +164,18 @@ class O extends a.Component {
                 for (let [t, a] of Object.entries(this.tierRefs)) {
                     if (null == a) return;
                     let { top: i } = a.getBoundingClientRect(),
-                        r = e > 0 ? L : 0;
+                        r = e > 0 ? f : 0;
                     s[t] = i - n + 32 - r;
                 }
                 this.setState({ tierPositions: s });
             }),
-            f(this, 'setTierRef', (e, t) => {
+            L(this, 'setTierRef', (e, t) => {
                 this.tierRefs[t.tier] = e;
             }),
-            f(this, 'handleAnimatedTier', (e) => {
+            L(this, 'handleAnimatedTier', (e) => {
                 this.setState({ animatedTier: e.key });
             }),
-            f(this, 'renderSubscriber', (e, t, n) => {
+            L(this, 'renderSubscriber', (e, t, n) => {
                 var a;
                 return null == e
                     ? null
@@ -199,7 +199,7 @@ class O extends a.Component {
                           n
                       );
             }),
-            f(this, 'renderSubscribersPopout', () =>
+            L(this, 'renderSubscribersPopout', () =>
                 (0, s.jsx)(u.Scroller, {
                     className: R.subscribersPopout,
                     children: this.props.subscribers.map((e) =>
@@ -228,7 +228,7 @@ class O extends a.Component {
                     )
                 })
             ),
-            f(this, 'renderMoreSubscribers', (e, t, n) =>
+            L(this, 'renderMoreSubscribers', (e, t, n) =>
                 (0, s.jsx)(
                     u.Popout,
                     {
@@ -247,13 +247,13 @@ class O extends a.Component {
             );
     }
 }
-let A = c.ZP.connectStores([E.Z, h.default, N.Z, S.ZP], () => {
+let A = c.ZP.connectStores([E.Z, g.default, N.Z, S.ZP], () => {
     let e = E.Z.getGuildId(),
         t = null != e ? N.Z.getAppliedGuildBoostsForGuild(e) : null,
         n = o()(null != t ? t : []).uniqBy((e) => e.userId),
         s = n
             .map((t) => ({
-                user: h.default.getUser(t.userId),
+                user: g.default.getUser(t.userId),
                 nick: S.ZP.getNick(e, t.userId)
             }))
             .filter((e) => null != e.user)

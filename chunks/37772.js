@@ -13,10 +13,10 @@ var i = n(735250),
     I = n(869765),
     m = n(695346),
     T = n(592125),
-    N = n(699516),
-    h = n(630388),
-    C = n(709054),
-    f = n(493892),
+    h = n(699516),
+    N = n(630388),
+    f = n(709054),
+    C = n(493892),
     p = n(901461),
     g = n(739566),
     S = n(443877),
@@ -62,22 +62,22 @@ t.Z = s.memo(function e(t) {
         H = b.OBS.has(o.type) ? o.messageReference : void 0,
         Y = (0, l.e7)([I.Z], () => I.Z.getMessageByReference(H)),
         W = (0, l.e7)([T.Z], () => (o.type === b.uaV.THREAD_STARTER_MESSAGE && Y.state === I.Y.LOADED ? T.Z.getChannel(Y.message.channel_id) : null)),
-        z = m.x4.useSetting(),
-        K = m.RS.useSetting(),
+        K = m.x4.useSetting(),
+        z = m.RS.useSetting(),
         Q = m.NA.useSetting(),
         q = m.QK.useSetting(),
         X = (0, d.A)((null !== (n = o.editedTimestamp) && void 0 !== n ? n : o.timestamp).valueOf()),
         J = (0, _.Z)(null == a ? void 0 : a.id),
         { disableReactionCreates: $ } = (0, S.Z)(a),
         { content: ee, hasSpoilerEmbeds: et } = (0, O.Z)(o, {
-            hideSimpleEmbedContent: K && Q,
+            hideSimpleEmbedContent: z && Q,
             allowList: X,
             allowHeading: X,
             allowLinks: !0,
             previewLinkTarget: !0
         }),
         en = (0, g.ZP)(o),
-        ei = (0, l.e7)([T.Z], () => o.hasFlag(b.iLy.HAS_THREAD) && T.Z.getChannel(C.default.castMessageIdAsChannelId(o.id))),
+        ei = (0, l.e7)([T.Z], () => o.hasFlag(b.iLy.HAS_THREAD) && T.Z.getChannel(f.default.castMessageIdAsChannelId(o.id))),
         es = o.type === b.uaV.THREAD_STARTER_MESSAGE && Y.state === I.Y.LOADED && null != W,
         ea = !es && void 0 === s,
         er = (0, x.Z)({
@@ -95,7 +95,7 @@ t.Z = s.memo(function e(t) {
               channel: W,
               hasThread: !1
           })
-        : (N.Z.isBlockedForMessage(o) ? (s = j.Z.Messages.BLOCKED_MESSAGE_COUNT) : (0, f.DQ)(o) && V && (s = j.Z.Messages.HIDDEN_SPAM_MESSAGE_COUNT), void 0 !== s)
+        : (h.Z.isBlockedForMessage(o) ? (s = j.Z.Messages.BLOCKED_MESSAGE_COUNT) : (0, C.DQ)(o) && V && (s = j.Z.Messages.HIDDEN_SPAM_MESSAGE_COUNT), void 0 !== s)
           ? (0, i.jsx)(B, {
                 className: U,
                 compact: D,
@@ -105,7 +105,7 @@ t.Z = s.memo(function e(t) {
           : (0, i.jsx)(A.Z, {
                 compact: D,
                 className: r()(U, {
-                    [y.ephemeral]: (0, h.yE)(o.flags, b.iLy.EPHEMERAL),
+                    [y.ephemeral]: (0, N.yE)(o.flags, b.iLy.EPHEMERAL),
                     [y.disableInteraction]: G,
                     [y.groupStart]: t.isGroupStart
                 }),
@@ -127,8 +127,8 @@ t.Z = s.memo(function e(t) {
                     disableReactionUpdates: !1,
                     renderThreadAccessory: w,
                     renderComponentAccessory: !1,
-                    inlineAttachmentMedia: z,
-                    inlineEmbedMedia: K,
+                    inlineAttachmentMedia: K,
+                    inlineEmbedMedia: z,
                     renderEmbeds: Q,
                     gifAutoPlay: q,
                     poll: ec,

@@ -9,10 +9,10 @@ var s = n(27457),
     a = n(131951),
     l = n(464820);
 function r(e) {
-    let { aspectRatio: t, blocked: n, channel: r, className: o, focused: c, children: u, inCall: d, inPopout: h, noBorder: m, onClick: p, onContextMenu: _, onDoubleClick: f, onVideoResize: E, paused: g, pulseSpeakingIndicator: C, participant: I, width: x, ...T } = e,
-        v = a.Z.getVideoComponent();
+    let { aspectRatio: t, blocked: n, channel: r, className: o, focused: c, children: u, inCall: d, inPopout: h, noBorder: m, onClick: p, onContextMenu: _, onDoubleClick: f, onVideoResize: E, paused: g, pulseSpeakingIndicator: C, participant: I, width: T, ...x } = e,
+        S = a.Z.getVideoComponent();
     return (0, i.jsx)('div', {
-        style: { width: x },
+        style: { width: T },
         className: l.spaceBetweenTiles,
         children: (0, i.jsxs)('div', {
             className: l.tileSizer,
@@ -33,9 +33,9 @@ function r(e) {
                     participant: I,
                     paused: g,
                     pulseSpeakingIndicator: C,
-                    videoComponent: v,
-                    width: x,
-                    ...T
+                    videoComponent: S,
+                    width: T,
+                    ...x
                 }),
                 u
             ]

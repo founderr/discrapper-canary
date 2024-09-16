@@ -1,76 +1,76 @@
-t.d(e, {
+t.d(n, {
     I3: function () {
-        return d;
+        return c;
     },
     Ic: function () {
-        return T;
+        return p;
     },
     Lg: function () {
-        return I;
+        return C;
     },
     OU: function () {
-        return A;
+        return S;
     },
     RH: function () {
-        return l;
+        return s;
     },
     Ux: function () {
-        return u;
+        return r;
     },
     VW: function () {
-        return _;
+        return d;
     },
     Vg: function () {
-        return O;
+        return T;
     },
     Vk: function () {
         return E;
     },
     _6: function () {
-        return L;
-    },
-    aj: function () {
-        return f;
-    },
-    dc: function () {
         return N;
     },
+    aj: function () {
+        return I;
+    },
+    dc: function () {
+        return A;
+    },
     fX: function () {
-        return o.f;
+        return u.f;
     },
     hu: function () {
-        return s;
+        return _;
     },
     jj: function () {
-        return i.j;
+        return l.j;
     },
     n4: function () {
-        return c;
+        return a;
     },
     q4: function () {
-        return a.q;
+        return o.q;
     },
     uE: function () {
-        return M;
+        return f;
     }
 });
-var r,
-    u,
-    i = t(401653),
-    a = t(95930),
-    o = t(41381);
-((r = u || (u = {}))[(r.PROFANITY = 1)] = 'PROFANITY'), (r[(r.SEXUAL_CONTENT = 2)] = 'SEXUAL_CONTENT'), (r[(r.SLURS = 3)] = 'SLURS'), o.f.USER_PROFILE, o.f.SERVER_POLICY, o.f.MENTION_SPAM, o.f.ML_SPAM, o.f.DEFAULT_KEYWORD_LIST, o.f.KEYWORD;
-let l = 1000,
-    c = 100,
-    d = 1000,
-    _ = 10,
-    s = 60,
+var i,
+    r,
+    l = t(401653),
+    o = t(95930),
+    u = t(41381);
+((i = r || (r = {}))[(i.PROFANITY = 1)] = 'PROFANITY'), (i[(i.SEXUAL_CONTENT = 2)] = 'SEXUAL_CONTENT'), (i[(i.SLURS = 3)] = 'SLURS'), u.f.USER_PROFILE, u.f.SERVER_POLICY, u.f.MENTION_SPAM, u.f.ML_SPAM, u.f.DEFAULT_KEYWORD_LIST, u.f.KEYWORD;
+let s = 1000,
+    a = 100,
+    c = 1000,
+    d = 10,
+    _ = 60,
     E = 1,
-    M = 1,
-    f = 260,
-    A = 100,
-    O = 1,
-    I = 50,
-    T = 20,
-    L = 150,
-    N = 'automod-profile-quarantine-alert';
+    f = 1,
+    I = 260,
+    S = 100,
+    T = 1,
+    C = 50,
+    p = 20,
+    N = 150,
+    A = 'automod-profile-quarantine-alert';

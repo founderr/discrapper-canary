@@ -13,10 +13,10 @@ var i = n(735250),
     I = n(112724),
     m = n(607070),
     T = n(884697),
-    N = n(600164),
-    h = n(479446),
-    C = n(930114),
-    f = n(981632),
+    h = n(600164),
+    N = n(479446),
+    f = n(930114),
+    C = n(981632),
     p = n(108989),
     g = n(703656),
     S = n(314897),
@@ -113,10 +113,10 @@ class V extends s.Component {
     }
     renderActions(e) {
         let { libraryApplication: t } = this.props;
-        return (0, i.jsxs)(N.Z, {
-            justify: N.Z.Justify.BETWEEN,
+        return (0, i.jsxs)(h.Z, {
+            justify: h.Z.Justify.BETWEEN,
             children: [
-                (0, i.jsxs)(N.Z, {
+                (0, i.jsxs)(h.Z, {
                     children: [
                         this.renderButton(e),
                         null == t || e.isSubscription
@@ -127,11 +127,11 @@ class V extends s.Component {
                               })
                     ]
                 }),
-                (0, i.jsxs)(N.Z, {
-                    align: N.Z.Align.END,
-                    justify: N.Z.Justify.END,
+                (0, i.jsxs)(h.Z, {
+                    align: h.Z.Align.END,
+                    justify: h.Z.Justify.END,
                     className: k.metadata,
-                    direction: N.Z.Direction.VERTICAL,
+                    direction: h.Z.Direction.VERTICAL,
                     children: [e.hasMultipleCopies ? (0, i.jsx)('div', { children: this.renderGiftCodeCopiesLeft(e) }) : null, e.redeemed || e.isClaimed || null != t || null == e.expiresAt ? null : (0, i.jsx)('div', { children: B.Z.Messages.GIFT_EMBED_EXPIRATION.format({ hours: e.expiresAt.diff(o()(), 'h') }) })]
                 })
             ]
@@ -295,7 +295,7 @@ class V extends s.Component {
                         }
                     });
                 let r = s !== U.uaV.CUSTOM_GIFT ? void 0 : i;
-                (0, C.V)({
+                (0, f.V)({
                     processedCode: n,
                     channelContext: t,
                     customGiftMessage: r,
@@ -337,8 +337,8 @@ class V extends s.Component {
                             }),
                         s && (0, i.jsx)(v.Z, { className: k.headerIcon }),
                         null != e.giftStyle &&
-                            (0, i.jsx)(f.Z, {
-                                defaultAnimationState: e.redeemed ? h.SR.LOOP : h.SR.IDLE,
+                            (0, i.jsx)(C.Z, {
+                                defaultAnimationState: e.redeemed ? N.SR.LOOP : N.SR.IDLE,
                                 giftStyle: e.giftStyle,
                                 className: l
                             })

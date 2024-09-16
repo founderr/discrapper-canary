@@ -1,6 +1,6 @@
 n.d(t, {
     $$: function () {
-        return h;
+        return g;
     },
     P_: function () {
         return x;
@@ -9,7 +9,7 @@ n.d(t, {
         return C;
     },
     ku: function () {
-        return g;
+        return h;
     }
 }),
     n(47120);
@@ -147,24 +147,24 @@ function S(e) {
         [s, r] = (0, o.VF)(e, n);
     return r.length >= E.md && s.length >= E.X;
 }
-function h(e) {
+function g(e) {
     let t = S(e),
         n = (0, I.O4)(e);
     return t || n;
 }
-function g(e) {
+function h(e) {
     var t, n, c, d;
-    let { guildId: u, onEdit: _, disableGoodStatus: h } = e,
-        g = (0, i.Wu)([l.Z], () => l.Z.getDefaultChannelIds(u)),
+    let { guildId: u, onEdit: _, disableGoodStatus: g } = e,
+        h = (0, i.Wu)([l.Z], () => l.Z.getDefaultChannelIds(u)),
         C = (0, i.e7)([l.Z], () => (0, o.kl)(u, l.Z.getDefaultChannelIds(u), l.Z.getOnboardingPrompts(u)).length),
-        x = a.useMemo(() => new Set(g), [g]),
+        x = a.useMemo(() => new Set(h), [h]),
         [, p] = (0, o.VF)(u, x),
         R = p.length,
-        f = S(u),
-        L = (0, I.O4)(u),
+        L = S(u),
+        f = (0, I.O4)(u),
         O = (0, i.e7)([l.Z], () => l.Z.isAdvancedMode(u));
     let A =
-        ((t = f),
+        ((t = L),
         (n = O),
         (c = R),
         (d = C),
@@ -188,7 +188,7 @@ function g(e) {
             className: m.channelIcon
         }),
         hasStarted: R > 0 || O,
-        status: f || L ? (h ? 'none' : 'good') : 'required',
+        status: L || f ? (g ? 'none' : 'good') : 'required',
         onEdit: _
     });
 }
@@ -200,14 +200,14 @@ function C(e) {
         [_, I] = (0, o.dF)(t, d, c),
         E = _.length,
         S = _.length + I.length,
-        h = (E / S) * 100,
-        g = (0, i.e7)([l.Z], () => l.Z.isAdvancedMode(t)),
+        g = (E / S) * 100,
+        h = (0, i.e7)([l.Z], () => l.Z.isAdvancedMode(t)),
         C = u > 0,
         x = 'none';
     return (
-        C && (h >= 85 && !a ? (x = 'good') : h < 85 && (x = 'warning')),
+        C && (g >= 85 && !a ? (x = 'good') : g < 85 && (x = 'warning')),
         (0, s.jsx)(N, {
-            title: g ? T.Z.Messages.ONBOARDING_PROMPT_SETTINGS_HEADER_ADVANCED : T.Z.Messages.ONBOARDING_PROMPT_SETTINGS_HEADER,
+            title: h ? T.Z.Messages.ONBOARDING_PROMPT_SETTINGS_HEADER_ADVANCED : T.Z.Messages.ONBOARDING_PROMPT_SETTINGS_HEADER,
             description: T.Z.Messages.ONBOARDING_PROMPT_CHANNEL_COVERAGE.format({
                 numChannels: E,
                 numTotalChannels: S,
@@ -215,7 +215,7 @@ function C(e) {
                     (0, s.jsx)(
                         'span',
                         {
-                            style: { color: h > 85 ? 'var(--header-primary)' : 'var(--status-warning)' },
+                            style: { color: g > 85 ? 'var(--header-primary)' : 'var(--status-warning)' },
                             children: e
                         },
                         t
@@ -237,26 +237,26 @@ function x(e) {
         I = (0, i.e7)([_.Z], () => _.Z.getSettings()),
         E = (0, i.e7)([l.Z], () => l.Z.getEnabled(t)),
         { serverGuideOptional: S } = (0, d.hl)(t),
-        h = (0, c.uo)(I),
-        g = I.enabled,
+        g = (0, c.uo)(I),
+        h = I.enabled,
         C = a.useCallback(() => {
-            (0, u.To)(t, !g);
-        }, [t, g]),
+            (0, u.To)(t, !h);
+        }, [t, h]),
         x = !(0, c.av)(I),
         p = 'none';
-    x && (h && !o ? (p = 'good') : !h && (p = 'required'));
+    x && (g && !o ? (p = 'good') : !g && (p = 'required'));
     let R = T.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_REVIEW_DESCRIPTION;
-    h ? !x && (R = T.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_REVIEW_NOT_STARTED_DESCRIPTION) : (R = T.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_REVIEW_INVALID_DESCRIPTION);
-    let f = null;
+    g ? !x && (R = T.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_REVIEW_NOT_STARTED_DESCRIPTION) : (R = T.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_REVIEW_INVALID_DESCRIPTION);
+    let L = null;
     return (
         x &&
             S &&
             E &&
-            (f = (0, s.jsx)(r.Switch, {
+            (L = (0, s.jsx)(r.Switch, {
                 className: m.inlineSwitch,
-                checked: g,
+                checked: h,
                 onChange: C,
-                disabled: !h
+                disabled: !g
             })),
         (0, s.jsx)(N, {
             title: T.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_REVIEW_TITLE,
@@ -269,7 +269,7 @@ function x(e) {
             hasStarted: x,
             status: p,
             onEdit: n,
-            extra: f
+            extra: L
         })
     );
 }

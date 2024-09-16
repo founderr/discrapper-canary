@@ -23,51 +23,51 @@ var i = n(735250),
     g = n(496675),
     C = n(594174),
     I = n(233608),
-    x = n(370595),
-    T = n(351127),
-    v = n(981631),
-    S = n(689938),
+    T = n(370595),
+    x = n(351127),
+    S = n(981631),
+    v = n(689938),
     N = n(194898),
-    Z = n(650464);
-function A(e) {
+    A = n(650464);
+function Z(e) {
     var t, n, a, r;
-    let { permission: o, roleIds: f, guild: C, specMap: I, categoryTitle: x, userId: N } = e,
-        A = (0, c.e7)([E.Z], () => E.Z.getRoles(C.id)),
-        M = v.Plq[o],
+    let { permission: o, roleIds: f, guild: C, specMap: I, categoryTitle: T, userId: N } = e,
+        Z = (0, c.e7)([E.Z], () => E.Z.getRoles(C.id)),
+        M = S.Plq[o],
         b = null !== (a = null === (t = I[M.toString()]) || void 0 === t ? void 0 : t.title) && void 0 !== a ? a : (0, _.wt)(M),
         R = null !== (r = null === (n = I[M.toString()]) || void 0 === n ? void 0 : n.description) && void 0 !== r ? r : '',
-        L = T._o.has(M),
-        j = T.Qn.includes(o),
+        L = x._o.has(M),
+        j = x.Qn.includes(o),
         P = f.length,
-        O = (0, c.e7)([g.Z], () => g.Z.can(v.Plq.MANAGE_ROLES, C), [C]),
+        O = (0, c.e7)([g.Z], () => g.Z.can(S.Plq.MANAGE_ROLES, C), [C]),
         y = s.useCallback(
             async (e) => {
-                if (!!O) await p.Z.open(C.id, v.pNK.ROLES), await p.Z.selectRole(e);
+                if (!!O) await p.Z.open(C.id, S.pNK.ROLES), await p.Z.selectRole(e);
             },
             [O, C.id]
         );
     return (0, i.jsxs)('div', {
-        className: l()(Z.permissionItemContainer, { [Z.elevatedPermission]: L }),
+        className: l()(A.permissionItemContainer, { [A.elevatedPermission]: L }),
         children: [
             (0, i.jsxs)('div', {
-                className: Z.permissionItemHeader,
+                className: A.permissionItemHeader,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: Z.permissionTitle,
+                        className: A.permissionTitle,
                         children: [
                             (0, i.jsx)(u.Text, {
                                 variant: 'text-md/medium',
                                 color: 'header-primary',
                                 children: b
                             }),
-                            null != x &&
+                            null != T &&
                                 (0, i.jsxs)('div', {
-                                    className: Z.permissionItemSubheader,
+                                    className: A.permissionItemSubheader,
                                     children: [
                                         (0, i.jsx)(u.Text, {
                                             variant: 'text-xs/normal',
                                             color: 'header-muted',
-                                            children: x
+                                            children: T
                                         }),
                                         L &&
                                             (0, i.jsxs)(i.Fragment, {
@@ -79,10 +79,10 @@ function A(e) {
                                                         color: u.tokens.colors.INTERACTIVE_MUTED.css
                                                     }),
                                                     (0, i.jsx)(u.Tooltip, {
-                                                        text: S.Z.Messages.GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_TOOLTIP,
+                                                        text: v.Z.Messages.GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_TOOLTIP,
                                                         children: (e) =>
                                                             (0, i.jsxs)(u.Clickable, {
-                                                                className: Z.elevatedPermissionContainer,
+                                                                className: A.elevatedPermissionContainer,
                                                                 ...e,
                                                                 children: [
                                                                     (0, i.jsx)(u.ShieldLockIcon, {
@@ -94,7 +94,7 @@ function A(e) {
                                                                     (0, i.jsx)(u.Text, {
                                                                         variant: 'text-xs/normal',
                                                                         color: 'text-brand',
-                                                                        children: S.Z.Messages.GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION
+                                                                        children: v.Z.Messages.GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION
                                                                     })
                                                                 ]
                                                             })
@@ -112,11 +112,11 @@ function A(e) {
                                                         color: u.tokens.colors.INTERACTIVE_MUTED.css
                                                     }),
                                                     (0, i.jsx)('div', {
-                                                        className: Z.elevatedPermissionContainer,
+                                                        className: A.elevatedPermissionContainer,
                                                         children: (0, i.jsx)(u.Text, {
                                                             variant: 'text-xs/normal',
                                                             color: 'header-muted',
-                                                            children: S.Z.Messages.GUILD_MEMBER_MOD_VIEW_MOD_PERMISSION
+                                                            children: v.Z.Messages.GUILD_MEMBER_MOD_VIEW_MOD_PERMISSION
                                                         })
                                                     })
                                                 ]
@@ -128,13 +128,13 @@ function A(e) {
                     (0, i.jsx)(u.Text, {
                         variant: 'text-sm/medium',
                         color: 'text-normal',
-                        children: S.Z.Messages.GUILD_MEMBER_MOD_VIEW_ROLE_COUNT.format({ roleCount: P })
+                        children: v.Z.Messages.GUILD_MEMBER_MOD_VIEW_ROLE_COUNT.format({ roleCount: P })
                     })
                 ]
             }),
             null != R &&
                 (0, i.jsx)('div', {
-                    className: Z.permissionItemDescription,
+                    className: A.permissionItemDescription,
                     children: (0, i.jsx)(u.Text, {
                         variant: 'text-sm/normal',
                         color: 'text-secondary',
@@ -142,19 +142,19 @@ function A(e) {
                     })
                 }),
             (0, i.jsx)('div', {
-                className: Z.permissionItemRoleContainer,
+                className: A.permissionItemRoleContainer,
                 children: f.map((e) =>
-                    (0, T.Ov)(e, N)
+                    (0, x.Ov)(e, N)
                         ? (0, i.jsx)(
                               'div',
                               {
-                                  className: Z.roleTooltipItem,
+                                  className: A.roleTooltipItem,
                                   children: (0, i.jsx)('div', {
-                                      className: Z.roleChiplet,
+                                      className: A.roleChiplet,
                                       children: (0, i.jsx)(u.Text, {
                                           variant: 'text-xs/medium',
                                           color: 'text-normal',
-                                          children: S.Z.Messages.GUILD_OWNER
+                                          children: v.Z.Messages.GUILD_OWNER
                                       })
                                   })
                               },
@@ -163,12 +163,12 @@ function A(e) {
                         : (0, i.jsx)(
                               u.Clickable,
                               {
-                                  className: l()(Z.roleTooltipItem, { [Z.editable]: O && !(0, d.pM)(C.id, e) }),
+                                  className: l()(A.roleTooltipItem, { [A.editable]: O && !(0, d.pM)(C.id, e) }),
                                   onClick: () => y(e),
                                   children: (0, i.jsx)(m.Z, {
-                                      role: A[e],
+                                      role: Z[e],
                                       guildId: C.id,
-                                      className: Z.roleChiplet
+                                      className: A.roleChiplet
                                   })
                               },
                               e
@@ -186,20 +186,20 @@ function b(e) {
         h = (0, c.e7)([C.default], () => C.default.getUser(t), [t]),
         m = (0, c.e7)([E.Z], () => E.Z.getGuild(n), [n]),
         p = (0, c.e7)([f.ZP], () => f.ZP.getMember(n, t), [n, t]),
-        g = (0, T.B2)(t, n, T.pd),
+        g = (0, x.B2)(t, n, x.pd),
         b = Object.keys(g).length,
         R = s.useMemo(() => (null != m ? I.Z.getGuildPermissionSpecMap(m) : null), [m]),
         L = s.useMemo(() => (null != m ? I.Z.generateGuildPermissionSpec(m) : null), [m]),
         [j, P] = s.useState(''),
         [O, y] = s.useState(''),
         D = s.useCallback(o()(y, 300), []),
-        k = s.useCallback(
+        U = s.useCallback(
             (e) => {
                 P(e), D(e);
             },
             [D]
         ),
-        U = s.useCallback(() => {
+        k = s.useCallback(() => {
             P(''), y('');
         }, []),
         w = s.useMemo(() => {
@@ -207,7 +207,7 @@ function b(e) {
             if (0 === b)
                 return (0, i.jsx)(u.Text, {
                     variant: 'text-sm/normal',
-                    children: S.Z.Messages.ROLE_PERMISSIONS_EMPTY_TEXT
+                    children: v.Z.Messages.ROLE_PERMISSIONS_EMPTY_TEXT
                 });
             let e = [];
             return (
@@ -215,7 +215,7 @@ function b(e) {
                     L.forEach((n) => {
                         n.permissions.forEach((s) => {
                             let a = s.flag,
-                                l = T.pd.find((e) => v.Plq[e] === a);
+                                l = x.pd.find((e) => S.Plq[e] === a);
                             if (null == l) return;
                             let r = g[l];
                             if (null != r) {
@@ -224,9 +224,9 @@ function b(e) {
                                     let e = null !== (d = null === (o = R[a.toString()]) || void 0 === o ? void 0 : o.title) && void 0 !== d ? d : (0, _.wt)(a),
                                         t = null !== (h = null === (u = R[a.toString()]) || void 0 === u ? void 0 : null === (c = u.description) || void 0 === c ? void 0 : c.toString()) && void 0 !== h ? h : '',
                                         i = n.title,
-                                        s = T._o.has(a),
-                                        r = T.Qn.includes(l),
-                                        m = s ? S.Z.Messages.GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION : r ? S.Z.Messages.GUILD_MEMBER_MOD_VIEW_MOD_PERMISSION : null,
+                                        s = x._o.has(a),
+                                        r = x.Qn.includes(l),
+                                        m = s ? v.Z.Messages.GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION : r ? v.Z.Messages.GUILD_MEMBER_MOD_VIEW_MOD_PERMISSION : null,
                                         p = M(O, e),
                                         f = M(O, t),
                                         E = M(O, i),
@@ -235,7 +235,7 @@ function b(e) {
                                 }
                                 e.push(
                                     (0, i.jsx)(
-                                        A,
+                                        Z,
                                         {
                                             permission: l,
                                             roleIds: r,
@@ -258,24 +258,24 @@ function b(e) {
         : (0, i.jsxs)('div', {
               className: l()(N.container, r),
               children: [
-                  (0, i.jsx)(x.Z, {
+                  (0, i.jsx)(T.Z, {
                       guildId: n,
                       userId: t,
                       onNavigate: d
                   }),
                   (0, i.jsx)(u.Scroller, {
-                      className: Z.permissionsGroupContainer,
+                      className: A.permissionsGroupContainer,
                       children: (0, i.jsx)(u.FormItem, {
-                          title: S.Z.Messages.GUILD_MEMBER_MOD_VIEW_MOD_PERMSSISONS_PANEL_TITLE,
+                          title: v.Z.Messages.GUILD_MEMBER_MOD_VIEW_MOD_PERMSSISONS_PANEL_TITLE,
                           children: (0, i.jsxs)('div', {
-                              className: Z.permissionsItemContainer,
+                              className: A.permissionsItemContainer,
                               children: [
                                   (0, i.jsx)(u.SearchBar, {
-                                      className: Z.searchBar,
+                                      className: A.searchBar,
                                       query: j,
-                                      placeholder: S.Z.Messages.GUILD_MEMBER_MOD_VIEW_PERMISSIONS_SEARCH_PLACEHOLDER,
-                                      onChange: k,
-                                      onClear: U,
+                                      placeholder: v.Z.Messages.GUILD_MEMBER_MOD_VIEW_PERMISSIONS_SEARCH_PLACEHOLDER,
+                                      onChange: U,
+                                      onClear: k,
                                       autoComplete: 'off',
                                       inputProps: {
                                           autoCapitalize: 'none',

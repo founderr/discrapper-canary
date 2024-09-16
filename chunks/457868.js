@@ -22,13 +22,13 @@ var i = n(735250),
     g = n(906732),
     C = n(82295),
     I = n(91218),
-    x = n(623624),
-    T = n(518738),
-    v = n(965376),
-    S = n(159299),
+    T = n(623624),
+    x = n(518738),
+    S = n(965376),
+    v = n(159299),
     N = n(184301),
-    Z = n(347475),
-    A = n(199902),
+    A = n(347475),
+    Z = n(199902),
     M = n(271383),
     b = n(430824),
     R = n(158776),
@@ -38,8 +38,8 @@ var i = n(735250),
     O = n(499033),
     y = n(626135),
     D = n(585483),
-    k = n(700785),
-    U = n(51144),
+    U = n(700785),
+    k = n(51144),
     w = n(998502),
     B = n(276264),
     H = n(981631),
@@ -64,11 +64,11 @@ let W = w.ZP.getEnableHardwareAcceleration(),
             g = (0, h.e7)([P.default], () => P.default.getCurrentUser()),
             C = (null == E ? void 0 : E.id) === (null == g ? void 0 : g.id),
             I = (0, h.e7)([R.Z, L.Z], () => (C ? L.Z.getStatus() : R.Z.getStatus(l, t.guild_id))),
-            T = (0, h.e7)([R.Z], () => R.Z.isMobileOnline(l)),
-            v = (0, h.e7)([R.Z, L.Z], () => (C ? L.Z.getActivities() : R.Z.getActivities(l, t.guild_id))),
-            O = (0, h.e7)([A.Z], () => A.Z.getAnyStreamForUser(l)),
+            x = (0, h.e7)([R.Z], () => R.Z.isMobileOnline(l)),
+            S = (0, h.e7)([R.Z, L.Z], () => (C ? L.Z.getActivities() : R.Z.getActivities(l, t.guild_id))),
+            O = (0, h.e7)([Z.Z], () => Z.Z.getAnyStreamForUser(l)),
             y = (0, c.JA)(l),
-            k = (0, h.e7)([S.Z], () => S.Z.canUserViewChannel(t.id, a, l)),
+            U = (0, h.e7)([v.Z], () => v.Z.canUserViewChannel(t.id, a, l)),
             w = (null == E ? void 0 : E.id) != null && E.id === r,
             V = s.useCallback(
                 (e) => {
@@ -88,7 +88,7 @@ let W = w.ZP.getEnableHardwareAcceleration(),
             ),
             F = s.useCallback(() => {
                 if (null == E) return;
-                let e = '@'.concat(U.ZP.getUserTag(E, { decoration: 'never' })),
+                let e = '@'.concat(k.ZP.getUserTag(E, { decoration: 'never' })),
                     n = '<@'.concat(E.id, '>');
                 D.S.dispatchToLastSubscribed(H.CkL.INSERT_TEXT, {
                     plainText: e,
@@ -99,7 +99,7 @@ let W = w.ZP.getEnableHardwareAcceleration(),
             z = s.useCallback(
                 (e) => {
                     e.stopPropagation(),
-                        (0, x.f)({
+                        (0, T.f)({
                             guildId: t.guild_id,
                             location: {
                                 section: H.jXE.THREAD_MEMBER_LIST,
@@ -118,7 +118,7 @@ let W = w.ZP.getEnableHardwareAcceleration(),
                     channelId: t.id
                 }),
             renderPopout: (e) =>
-                (0, i.jsx)(Z.Z, {
+                (0, i.jsx)(A.Z, {
                     ...e,
                     userId: E.id,
                     guildId: t.guild_id,
@@ -136,19 +136,19 @@ let W = w.ZP.getEnableHardwareAcceleration(),
                     currentUser: g,
                     nick: null == u ? void 0 : u.nick,
                     status: I,
-                    activities: v,
+                    activities: S,
                     colorString: null == u ? void 0 : u.colorString,
                     colorRoleName: f,
                     isTyping: o,
                     channel: t,
                     guildId: t.guild_id,
-                    isMobile: T,
+                    isMobile: x,
                     selected: s,
                     applicationStream: O,
                     premiumSince: null == Y ? null : new Date(Y),
                     onClickPremiumGuildIcon: z,
                     itemProps: y,
-                    lostPermissionTooltipText: k ? void 0 : G.Z.Messages.THREAD_MEMBER_WITHOUT_ACCESS,
+                    lostPermissionTooltipText: U ? void 0 : G.Z.Messages.THREAD_MEMBER_WITHOUT_ACCESS,
                     isOwner: w,
                     ...e
                 });
@@ -157,7 +157,7 @@ let W = w.ZP.getEnableHardwareAcceleration(),
     }),
     K = s.memo(function (e) {
         let { id: t, label: n, count: s, guildId: a } = e,
-            l = (0, T.p9)({
+            l = (0, x.p9)({
                 roleId: t,
                 guildId: a,
                 size: 16
@@ -220,7 +220,7 @@ function X(e) {
     let { channel: t, guild: n } = e,
         a = 'members-'.concat(t.id),
         { analyticsLocations: r } = (0, g.ZP)(E.Z.MEMBER_LIST),
-        d = (0, v.D)(t.id, n),
+        d = (0, S.D)(t.id, n),
         p = d.filter((e) => e.userIds.length > 0).reverse()[0],
         { navigator: _, listRef: C } = (function (e, t) {
             let n = (0, h.e7)([f.Z], () => f.Z.keyboardModeEnabled),
@@ -291,8 +291,8 @@ function X(e) {
         I)
     )
         return (0, i.jsx)(J, { channel: t });
-    let x = o().omit(_.containerProps, ['ref']),
-        T = k.iJ(n);
+    let T = o().omit(_.containerProps, ['ref']),
+        x = U.iJ(n);
     return (0, i.jsx)(g.Gt, {
         value: r,
         children: (0, i.jsx)(c.bG, {
@@ -332,7 +332,7 @@ function X(e) {
                                             channel: t,
                                             sectionId: l,
                                             userId: a[s],
-                                            guildOwnerId: T
+                                            guildOwnerId: x
                                         },
                                         a[s]
                                     );
@@ -343,7 +343,7 @@ function X(e) {
                                 innerTag: 'ul',
                                 sections: d.map((e) => e.userIds.length),
                                 fade: !0,
-                                ...x,
+                                ...T,
                                 ...e
                             },
                             a

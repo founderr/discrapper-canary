@@ -19,8 +19,8 @@ var s = n(735250),
     m = n(899667),
     N = n(626135),
     S = n(267642),
-    h = n(63063),
-    g = n(999382),
+    g = n(63063),
+    h = n(999382),
     C = n(981631),
     x = n(689938),
     p = n(720898);
@@ -44,7 +44,7 @@ function R(e) {
                         })
           });
 }
-function f(e) {
+function L(e) {
     let { appliedGuildBoosts: t, guildId: n } = e,
         a = (0, S.gZ)(t, n),
         i = (0, S.nW)((0, S.rF)(t.length, n));
@@ -65,7 +65,7 @@ function f(e) {
         ]
     });
 }
-let L = (e) => {
+let f = (e) => {
     let { isAnimatedTo: t, onSetRef: n, subscriptionCount: a, tier: i, tiers: r, tierIndex: l, guildId: o } = e;
     return (0, s.jsx)(
         T.Z,
@@ -86,7 +86,7 @@ function O() {
             (0, o.tZ)(), (0, c.Y2)();
         });
     }, []);
-    let e = (0, i.e7)([g.Z], () => g.Z.getGuild()),
+    let e = (0, i.e7)([h.Z], () => h.Z.getGuild()),
         t = (0, i.e7)([m.Z], () => (null != e ? m.Z.getAppliedGuildBoostsForGuild(e.id) : null)),
         n = (0, u.V)();
     return (0, s.jsxs)(s.Fragment, {
@@ -98,7 +98,7 @@ function O() {
                         children: x.Z.Messages.GUILD_SETTINGS_PREMIUM_GUILD_TITLE
                     }),
                     null != t && null != e
-                        ? (0, s.jsx)(f, {
+                        ? (0, s.jsx)(L, {
                               appliedGuildBoosts: t,
                               guildId: e.id
                           })
@@ -106,13 +106,13 @@ function O() {
                     (0, s.jsx)(r.FormText, {
                         type: r.FormText.Types.DESCRIPTION,
                         className: p.titleBlurb,
-                        children: x.Z.Messages.GUILD_SETTINGS_PREMIUM_GUILD_BLURB.format({ helpdeskArticle: h.Z.getArticleURL(C.BhN.GUILD_SUBSCRIPTIONS) })
+                        children: x.Z.Messages.GUILD_SETTINGS_PREMIUM_GUILD_BLURB.format({ helpdeskArticle: g.Z.getArticleURL(C.BhN.GUILD_SUBSCRIPTIONS) })
                     })
                 ]
             }),
             (0, s.jsx)(E.Z, {
                 tiers: (0, S.cP)(null != e && e.hasFeature(C.oNc.COMMUNITY) && e.maxStageVideoChannelUsers >= C.B9o),
-                renderTier: L
+                renderTier: f
             }),
             (0, s.jsx)('div', { className: p.divider }),
             n ? (0, s.jsx)(I.Z, {}) : null,

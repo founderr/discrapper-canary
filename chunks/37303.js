@@ -20,10 +20,10 @@ var o = n(497505),
     I = n(46140),
     m = n(271074);
 function T(e) {
-    let { quest: t, location: n, initiallyExpanded: T, contentPosition: N } = e,
-        [h, C] = s.useState(!1),
-        f = s.useCallback(() => C(!0), []),
-        p = s.useCallback(() => C(!1), []),
+    let { quest: t, location: n, initiallyExpanded: T, contentPosition: h } = e,
+        [N, f] = s.useState(!1),
+        C = s.useCallback(() => f(!0), []),
+        p = s.useCallback(() => f(!1), []),
         g = (0, l.tP)(t),
         { containerRef: S, size: A, height: R } = (0, E.h)(),
         O = (0, r.q)({ location: I.dr.QUESTS_CARD }),
@@ -45,7 +45,7 @@ function T(e) {
     return (0, i.jsx)(c.A, {
         questOrQuests: t,
         questContent: n,
-        questContentPosition: N,
+        questContentPosition: h,
         trackGuildAndChannelMetadata: n === o.jn.QUESTS_EMBED,
         children: (e) =>
             (0, i.jsx)(i.Fragment, {
@@ -60,8 +60,8 @@ function T(e) {
                                   })
                     },
                     className: m.questsCard,
-                    onFocus: f,
-                    onMouseEnter: f,
+                    onFocus: C,
+                    onMouseEnter: C,
                     onBlur: p,
                     onMouseLeave: p,
                     children: (0, i.jsxs)('div', {
@@ -70,7 +70,7 @@ function T(e) {
                         },
                         children: [
                             (0, i.jsx)(_.Z, {
-                                isFocused: h,
+                                isFocused: N,
                                 isQuestExpired: g,
                                 location: n,
                                 quest: t,
@@ -79,7 +79,7 @@ function T(e) {
                                 isAnimating: M,
                                 isExpanded: v,
                                 isInConcurrentQuestExperiment: O,
-                                contentPosition: N,
+                                contentPosition: h,
                                 toggleExpanded: L
                             }),
                             (0, i.jsx)(d.Z, {
@@ -87,10 +87,10 @@ function T(e) {
                                 isQuestExpired: g,
                                 location: n,
                                 size: A,
-                                isFocused: h,
+                                isFocused: N,
                                 isExpanded: v,
                                 isAnimating: M,
-                                contentPosition: N
+                                contentPosition: h
                             })
                         ]
                     })

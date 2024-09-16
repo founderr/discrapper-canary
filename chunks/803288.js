@@ -24,14 +24,14 @@ var s = n(735250),
     m = n(26323),
     N = n(366980),
     S = n(246946),
-    h = n(709586),
-    g = n(267642),
+    g = n(709586),
+    h = n(267642),
     C = n(999382),
     x = n(621319),
     p = n(44550),
     R = n(770270),
-    f = n(981631),
-    L = n(30513),
+    L = n(981631),
+    f = n(30513),
     O = n(689938),
     A = n(279404);
 function M(e, t, n) {
@@ -69,7 +69,7 @@ class v extends a.PureComponent {
         let { isRemoving: e } = this.state,
             { hasError: t, originalVanityURLCode: n, vanityURLCode: a, vanityURLUses: i, guild: r } = this.props;
         if (null == a) return (0, s.jsx)(o.Spinner, {});
-        let l = (null == r ? void 0 : r.hasFeature(f.oNc.VANITY_URL)) === !0;
+        let l = (null == r ? void 0 : r.hasFeature(L.oNc.VANITY_URL)) === !0;
         return (0, s.jsxs)(o.Card, {
             editable: !0,
             className: A.editVanityUrlCard,
@@ -114,7 +114,7 @@ class v extends a.PureComponent {
             innerClassName: A.upsellButton,
             onClick: this.handleVanityUrlUpsellButton,
             children: [
-                (0, s.jsx)(h.Z, {
+                (0, s.jsx)(g.Z, {
                     height: 16,
                     width: 16,
                     className: A.premiumUpsellBadge
@@ -166,7 +166,7 @@ class v extends a.PureComponent {
                                 (0, s.jsx)('div', { children: O.Z.Messages.VANITY_URL }),
                                 (0, s.jsx)(T.Z, {
                                     guild: t,
-                                    guildFeature: f.oNc.VANITY_URL,
+                                    guildFeature: L.oNc.VANITY_URL,
                                     className: A.guildFeatureAvailabilityIndicator,
                                     onClick: this.handleVanityUrlUpsellIndicator
                                 })
@@ -199,11 +199,11 @@ class v extends a.PureComponent {
                 e.preventDefault(), e.stopPropagation();
                 let { guild: i, analyticsLocations: r } = this.props;
                 null != i &&
-                    ((0, _.yw)(f.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
+                    ((0, _.yw)(L.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
                         location: {
                             section: n,
-                            object: f.qAy.LEARN_MORE,
-                            objectType: (0, g.ge)(t),
+                            object: L.qAy.LEARN_MORE,
+                            objectType: (0, h.ge)(t),
                             location_stack: r
                         },
                         guild_id: null == i ? void 0 : i.id
@@ -213,17 +213,17 @@ class v extends a.PureComponent {
                         analyticsSourceLocation: {
                             section: n,
                             object: s,
-                            page: f.ZY5.GUILD_SETTINGS
+                            page: L.ZY5.GUILD_SETTINGS
                         },
                         guild: i,
                         perks: a
                     }));
             }),
             M(this, 'handleVanityUrlUpsellIndicator', (e) => {
-                this.handleShowModalUpsell(e, f.Eu4.TIER_3, f.jXE.GUILD_SETTINGS_VANITY_URL, f.qAy.BADGE, (0, L.WW)());
+                this.handleShowModalUpsell(e, L.Eu4.TIER_3, L.jXE.GUILD_SETTINGS_VANITY_URL, L.qAy.BADGE, (0, f.WW)());
             }),
             M(this, 'handleVanityUrlUpsellButton', (e) => {
-                this.handleShowModalUpsell(e, f.Eu4.TIER_3, f.jXE.GUILD_SETTINGS_VANITY_URL, f.qAy.BUTTON_CTA, (0, L.WW)());
+                this.handleShowModalUpsell(e, L.Eu4.TIER_3, L.jXE.GUILD_SETTINGS_VANITY_URL, L.qAy.BUTTON_CTA, (0, f.WW)());
             });
     }
 }

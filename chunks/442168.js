@@ -31,18 +31,18 @@ function C(e) {
     let { stream: t, inPopout: n } = e,
         { reducedMotion: C } = s.useContext(r.Sf),
         I = (0, s.useRef)(null),
-        x = d.n.getState().clipsButtonRef,
-        T = (0, h.V9)(t),
-        v = (0, l.e7)([c.Z], () => c.Z.getActiveAnimation()),
-        S = (0, l.Wu)([c.Z], () => c.Z.getStreamClipAnimations(T)),
+        T = d.n.getState().clipsButtonRef,
+        x = (0, h.V9)(t),
+        S = (0, l.e7)([c.Z], () => c.Z.getActiveAnimation()),
+        v = (0, l.Wu)([c.Z], () => c.Z.getStreamClipAnimations(x)),
         N = (0, s.useRef)();
     s.useEffect(
         () => () => {
-            (0, u.Gh)(T);
+            (0, u.Gh)(x);
         },
-        [T]
+        [x]
     );
-    let Z = () => {
+    let A = () => {
             var e;
             let t = null === (e = I.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
             return null == t || n
@@ -54,9 +54,9 @@ function C(e) {
                       left: t.left
                   };
         },
-        A = (e) => {
-            let t = null == x ? void 0 : x.getBoundingClientRect();
-            if (((N.current = t), e.timestamp !== v || null == t || n)) return _;
+        Z = (e) => {
+            let t = null == T ? void 0 : T.getBoundingClientRect();
+            if (((N.current = t), e.timestamp !== S || null == t || n)) return _;
             let { top: i, left: s } = t;
             return {
                 top: i + 36,
@@ -67,7 +67,7 @@ function C(e) {
         },
         M = (0, s.useRef)(null),
         b = (0, o.useTransition)(
-            S,
+            v,
             {
                 keys: (e) => e.timestamp,
                 ref: M,
@@ -79,7 +79,7 @@ function C(e) {
         ),
         R = (0, s.useRef)(null),
         L = (0, o.useTransition)(
-            S,
+            v,
             {
                 ref: R,
                 keys: (e) => e.timestamp,
@@ -87,13 +87,13 @@ function C(e) {
                     position: 'fixed',
                     visibility: 'hidden',
                     opacity: 1,
-                    ...(C.enabled ? A(e) : Z())
+                    ...(C.enabled ? Z(e) : A())
                 }),
                 enter: (e) => [
                     {
                         opacity: 1,
                         visibility: 'visible',
-                        ...A(e)
+                        ...Z(e)
                     }
                 ],
                 leave: {
@@ -112,7 +112,7 @@ function C(e) {
                 },
                 config: C.enabled ? g : E,
                 onRest: (e, t) => {
-                    null != t.item && null != S.find((e) => e.timestamp === t.item.timestamp) && (0, u.Gh)(T, t.item.timestamp);
+                    null != t.item && null != v.find((e) => e.timestamp === t.item.timestamp) && (0, u.Gh)(x, t.item.timestamp);
                 }
             },
             'animate-always'

@@ -24,9 +24,9 @@ function g(e) {
         C = d.default.cast(t),
         {
             joinRequest: I,
-            isModmin: x,
-            guildId: T,
-            maxMembers: v
+            isModmin: T,
+            guildId: x,
+            maxMembers: S
         } = (0, s.cj)([h.Z, c.Z, u.Z], () => {
             let e = h.Z.getRequest(C),
                 t = c.Z.getGuild(null == e ? void 0 : e.guildId);
@@ -37,10 +37,10 @@ function g(e) {
                 maxMembers: null == t ? void 0 : t.maxMembers
             };
         }),
-        S = (0, s.e7)([o.Z], () => (null != T ? o.Z.getMemberCount(T) : 0)),
-        N = null != v && (null != S ? S : 0) >= v,
-        { approveRequest: Z, rejectRequest: A, submitting: M } = (0, p.s)(null == I ? void 0 : I.guildId, null == I ? void 0 : I.userId, null == I ? void 0 : I.joinRequestId);
-    return null != I && I.applicationStatus === m.wB.SUBMITTED && x
+        v = (0, s.e7)([o.Z], () => (null != x ? o.Z.getMemberCount(x) : 0)),
+        N = null != S && (null != v ? v : 0) >= S,
+        { approveRequest: A, rejectRequest: Z, submitting: M } = (0, p.s)(null == I ? void 0 : I.guildId, null == I ? void 0 : I.userId, null == I ? void 0 : I.joinRequestId);
+    return null != I && I.applicationStatus === m.wB.SUBMITTED && T
         ? (0, i.jsxs)('div', {
               className: E.buttons,
               children: [
@@ -52,7 +52,7 @@ function g(e) {
                               ...e,
                               color: a.Button.Colors.GREEN,
                               submitting: M,
-                              onClick: Z,
+                              onClick: A,
                               size: a.ButtonSizes.SMALL,
                               disabled: N,
                               children: f.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_APPROVE_APPLICATION
@@ -60,7 +60,7 @@ function g(e) {
                   }),
                   (0, i.jsx)(a.Button, {
                       color: a.Button.Colors.RED,
-                      onClick: A,
+                      onClick: Z,
                       size: a.ButtonSizes.SMALL,
                       disabled: M || I.applicationStatus !== m.wB.SUBMITTED,
                       children: f.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DENY_APPLICATION

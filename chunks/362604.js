@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return C;
+        return f;
     }
 }),
     n(47120),
@@ -19,39 +19,39 @@ var i = n(735250),
     I = n(585483),
     m = n(115610),
     T = n(981631),
-    N = n(689938),
-    h = n(809858);
-function C(e) {
-    let { message: t, channel: a, compact: C } = e,
-        f = (0, l.Wu)([d.Z], () => Array.from(d.Z.getAllGuildStickers().values()).flat()).slice(0, 20),
+    h = n(689938),
+    N = n(809858);
+function f(e) {
+    let { message: t, channel: a, compact: f } = e,
+        C = (0, l.Wu)([d.Z], () => Array.from(d.Z.getAllGuildStickers().values()).flat()).slice(0, 20),
         [p, g] = s.useState(null);
     return (s.useEffect(() => {
         let e = setInterval(() => {
-            f.length > 0 && g(f[Math.floor(Math.random() * f.length)]);
+            C.length > 0 && g(C[Math.floor(Math.random() * C.length)]);
         }, 500);
         return () => clearInterval(e);
-    }, [f]),
+    }, [C]),
     null == a.guild_id)
         ? null
         : (0, i.jsxs)('div', {
               children: [
                   (0, i.jsx)(c.Z, {
-                      className: r()(h.mainContainer, { [h.compact]: C }),
+                      className: r()(N.mainContainer, { [N.compact]: f }),
                       icon: n(570111),
-                      compact: C,
+                      compact: f,
                       children: (0, i.jsx)('div', {
-                          className: r()(h.__invalid_content, { [h.compact]: C }),
+                          className: r()(N.__invalid_content, { [N.compact]: f }),
                           children: (0, i.jsx)('div', {
-                              className: r()(h.__invalid_messageContent, { [h.compact]: C }),
-                              children: '' !== t.content ? t.content : N.Z.Messages.DEADCHAT_PROMPT_1
+                              className: r()(N.__invalid_messageContent, { [N.compact]: f }),
+                              children: '' !== t.content ? t.content : h.Z.Messages.DEADCHAT_PROMPT_1
                           })
                       })
                   }),
                   (0, i.jsxs)('div', {
-                      className: h.actions,
+                      className: N.actions,
                       children: [
                           (0, i.jsx)(o.TooltipContainer, {
-                              text: N.Z.Messages.CHANNEL_PROMPT_UPLOAD_IMAGE_CTA,
+                              text: h.Z.Messages.CHANNEL_PROMPT_UPLOAD_IMAGE_CTA,
                               children: (0, i.jsx)(o.Button, {
                                   color: o.Button.Colors.PRIMARY,
                                   onClick: () => {
@@ -75,7 +75,7 @@ function C(e) {
                               })
                           }),
                           (0, i.jsx)(o.TooltipContainer, {
-                              text: N.Z.Messages.CHANNEL_PROMPT_RANDOM_STICKER_CTA,
+                              text: h.Z.Messages.CHANNEL_PROMPT_RANDOM_STICKER_CTA,
                               children: (0, i.jsx)(o.Button, {
                                   color: o.Button.Colors.PRIMARY,
                                   onClick: () => {

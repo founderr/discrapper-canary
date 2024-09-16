@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return h;
     }
 });
 var i = n(735250);
@@ -18,12 +18,12 @@ var s = n(120356),
     I = n(674563),
     m = n(689938),
     T = n(38814);
-function N(e) {
+function h(e) {
     var t;
-    let { message: n, compact: s, usernameHook: N, channel: h } = e,
-        C = (0, r.e7)([c.Z], () => c.Z.getGuild(h.guild_id)),
-        f = (0, u.ZP)(n),
-        p = N(f),
+    let { message: n, compact: s, usernameHook: h, channel: N } = e,
+        f = (0, r.e7)([c.Z], () => c.Z.getGuild(N.guild_id)),
+        C = (0, u.ZP)(n),
+        p = h(C),
         {
             avatarSrc: g,
             eventHandlers: { onMouseEnter: S, onMouseLeave: A }
@@ -65,9 +65,9 @@ function N(e) {
                     (0, i.jsx)('div', {
                         className: a()(T.__invalid_messageContent, { [T.compact]: s }),
                         children: m.Z.Messages.GUILD_RAID_REPORT_SYSTEM_MESSAGE.format({
-                            username: f.nick,
+                            username: C.nick,
                             usernameHook: p,
-                            guildName: null !== (t = null == C ? void 0 : C.name) && void 0 !== t ? t : ''
+                            guildName: null !== (t = null == f ? void 0 : f.name) && void 0 !== t ? t : ''
                         })
                     })
                 ]

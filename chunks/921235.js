@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return v;
+        return S;
     }
 }),
     n(47120);
@@ -22,16 +22,16 @@ var i = n(735250),
     g = n(901461),
     C = n(981631),
     I = n(689938),
-    x = n(546764);
-let T = '749054660769218631';
-function v(e) {
+    T = n(546764);
+let x = '749054660769218631';
+function S(e) {
     var t;
     let { channel: n } = e,
-        [a, v] = s.useState('');
+        [a, S] = s.useState('');
     s.useEffect(() => {
         (0, u.FQ)('847199849233514549', !0);
     }, []);
-    let S = (0, r.e7)(
+    let v = (0, r.e7)(
             [p.Z, m.default],
             () =>
                 !!l()(p.Z.getMessages(n.id).toArray())
@@ -39,12 +39,12 @@ function v(e) {
                     .find((e) => e.author.id !== m.default.getId() && e.state === C.yb.SENT && !(0, g.Z)(e))
         ),
         N = (0, r.e7)([_.default], () => _.default.getUser(n.isPrivate() ? n.getRecipientId() : null)),
-        Z = null !== (t = E.ZP.useName(N)) && void 0 !== t ? t : I.Z.Messages.WAVE_DEFAULT_RECIPIENT,
-        A = (0, r.e7)([d.Z], () => d.Z.getStickerById(T)),
+        A = null !== (t = E.ZP.useName(N)) && void 0 !== t ? t : I.Z.Messages.WAVE_DEFAULT_RECIPIENT,
+        Z = (0, r.e7)([d.Z], () => d.Z.getStickerById(x)),
         M = s.useCallback(async () => {
             if (null == a || '' === a)
                 try {
-                    await c.Z.sendGreetMessage(n.id, T),
+                    await c.Z.sendGreetMessage(n.id, x),
                         f.default.track(C.rMx.DM_EMPTY_ACTION, {
                             channel_id: n.id,
                             channel_type: n.type,
@@ -52,34 +52,34 @@ function v(e) {
                             type: 'Send wave'
                         });
                 } catch (e) {
-                    !e.ok && 429 === e.status && v(I.Z.Messages.RATE_LIMITED);
+                    !e.ok && 429 === e.status && S(I.Z.Messages.RATE_LIMITED);
                 }
         }, [n.id, n.type, a]),
-        b = I.Z.Messages.WAVE_TO.format({ username: Z }),
+        b = I.Z.Messages.WAVE_TO.format({ username: A }),
         R =
             null != a && '' !== a
                 ? (0, i.jsx)(o.Text, {
-                      className: x.error,
+                      className: T.error,
                       color: 'text-danger',
                       variant: 'text-sm/normal',
                       children: a
                   })
                 : null;
-    return S
+    return v
         ? (0, i.jsxs)('div', {
-              className: x.containerCompact,
+              className: T.containerCompact,
               children: [
                   (0, i.jsxs)(o.Clickable, {
-                      className: null != a && '' !== a ? x.compactButtonDisabled : x.compactButton,
+                      className: null != a && '' !== a ? T.compactButtonDisabled : T.compactButton,
                       'aria-label': I.Z.Messages.SEND_WAVE,
                       onClick: M,
                       children: [
                           (0, i.jsx)(h.ZP, {
-                              sticker: A,
+                              sticker: Z,
                               size: 24
                           }),
                           (0, i.jsx)(o.Text, {
-                              className: x.text,
+                              className: T.text,
                               variant: 'text-md/medium',
                               children: b
                           })
@@ -89,14 +89,14 @@ function v(e) {
               ]
           })
         : (0, i.jsxs)('div', {
-              className: x.containerExpanded,
+              className: T.containerExpanded,
               children: [
                   (0, i.jsx)(h.ZP, {
-                      sticker: A,
+                      sticker: Z,
                       size: 160
                   }),
                   (0, i.jsx)(o.Button, {
-                      className: x.button,
+                      className: T.button,
                       onClick: M,
                       disabled: !!a,
                       children: b

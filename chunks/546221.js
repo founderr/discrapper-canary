@@ -20,8 +20,8 @@ var a = n(481060),
     m = n(215124),
     N = n(981631),
     S = n(689938),
-    h = n(772236);
-function g(e) {
+    g = n(772236);
+function h(e) {
     let { payoutsByPeriod: t, team: n } = e,
         i = (0, c.mY)() ? null : S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_EDIT_PAYMENT_METHOD_LINK.format({ url: null != n ? N.EYA.DEVELOPER_PORTAL_PAYOUT_SETTINGS(n.id) : null });
     return 0 === t.length
@@ -48,30 +48,30 @@ function C(e) {
         : (0, s.jsx)(_.Z, {
               totalPayoutsForPeriod: n,
               guildId: t,
-              className: h.currentMonthEarningsTable
+              className: g.currentMonthEarningsTable
           });
 }
 let x = (e) => {
     var t, n;
     let { guildId: l, application: o } = e,
         { loading: _, team: I, currentPeriod: x, allPeriods: p, metrics: R } = (0, d.Z)(l, o),
-        f = (0, u.u)(l),
-        L = (0, c.mY)();
+        L = (0, u.u)(l),
+        f = (0, c.mY)();
     return _
         ? (0, s.jsx)(a.Spinner, {})
         : (0, s.jsxs)(s.Fragment, {
               children: [
-                  f &&
+                  L &&
                       (0, s.jsxs)(s.Fragment, {
                           children: [(0, s.jsx)(i.Z, { children: S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_INSIGHTS_NOTICE_TEXT.format({ insightsURL: N.EYA.DEVELOPER_PORTAL_GUILD_ANALYTICS_ROLE_SUBSCRIPTION(l) }) }), (0, s.jsx)(a.Spacer, { size: 32 })]
                       }),
                   (0, s.jsxs)(a.FormSection, {
                       title: S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_HEADER,
-                      className: h.formSection,
+                      className: g.formSection,
                       children: [
                           (0, s.jsx)(a.Spacer, { size: 8 }),
                           (0, s.jsxs)('div', {
-                              className: h.metricsContainer,
+                              className: g.metricsContainer,
                               children: [
                                   (0, s.jsx)(E.Z, {
                                       label: S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_METRIC_REVENUE,
@@ -90,7 +90,7 @@ let x = (e) => {
                                               (0, s.jsx)(a.UserIcon, {
                                                   size: 'md',
                                                   color: 'currentColor',
-                                                  className: h.totalMembersIcon,
+                                                  className: g.totalMembersIcon,
                                                   'aria-hidden': !0
                                               })
                                           ]
@@ -107,16 +107,16 @@ let x = (e) => {
                   }),
                   (0, s.jsx)(a.FormSection, {
                       title: S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_EARNINGS_HISTORY_HEADER,
-                      className: h.formSection,
-                      children: (0, s.jsx)(g, {
+                      className: g.formSection,
+                      children: (0, s.jsx)(h, {
                           payoutsByPeriod: p,
                           team: I
                       })
                   }),
                   (0, s.jsx)(a.FormSection, {
                       title: S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TITLE,
-                      disabled: L,
-                      className: h.formSection,
+                      disabled: f,
+                      className: g.formSection,
                       children: (0, s.jsx)(T.Z, {
                           guildId: l,
                           application: o
@@ -124,7 +124,7 @@ let x = (e) => {
                   }),
                   (0, s.jsx)(a.FormSection, {
                       title: S.Z.Messages.CREATOR_MONETIZATION_SETTINGS_DISABLE_MONETIZATION_SECTION_TITLE,
-                      className: h.formSection,
+                      className: g.formSection,
                       children: (0, s.jsx)(m.Z, {
                           guildId: l,
                           allPeriods: p

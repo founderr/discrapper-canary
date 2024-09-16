@@ -1,6 +1,6 @@
 n.d(t, {
     ZP: function () {
-        return S;
+        return v;
     }
 }),
     n(47120),
@@ -35,7 +35,7 @@ function I(e, t, n) {
         e
     );
 }
-function x(e) {
+function T(e) {
     var t, n;
     if (null == e.jumpTargetId || !e.ready) return null;
     let { jumpTargetId: i, jumpTargetOffset: s } = e;
@@ -55,12 +55,12 @@ function x(e) {
         r = null !== (n = a[l + (Math.abs(s) > 0 ? s : 1)]) && void 0 !== n ? n : a[l - 1];
     return null != r ? r : null;
 }
-let T = {
+let x = {
     scrollTop: 0,
     scrollHeight: 0,
     offsetHeight: 0
 };
-class v {
+class S {
     isReady() {
         return this.props.messages.ready;
     }
@@ -120,7 +120,7 @@ class v {
         }
         if (null != e.messages.jumpTargetId) {
             if (this.isLoading()) return;
-            let n = x(e.messages);
+            let n = T(e.messages);
             if (null == n || this.isJumping() || e.messages.jumpSequenceId === t.jumpSequenceId) {
                 if (this.isJumping()) {
                     null != n ? this.scrollToMessage(n, !0) : (this.jumping = !1);
@@ -301,7 +301,7 @@ class v {
     }
     getScrollerState() {
         var e, t;
-        return null !== (t = null === (e = this.ref.current) || void 0 === e ? void 0 : e.getScrollerState()) && void 0 !== t ? t : T;
+        return null !== (t = null === (e = this.ref.current) || void 0 === e ? void 0 : e.getScrollerState()) && void 0 !== t ? t : x;
     }
     isHeightChange(e, t) {
         return e !== this.offsetHeightCache || t !== this.scrollHeightCache;
@@ -343,7 +343,7 @@ class v {
         if (!this.isJumping()) return;
         let { messages: e, hasUnreads: t } = this.props;
         if (null != e.jumpTargetId) {
-            let n = x(e);
+            let n = T(e);
             if (null == n) return;
             let i = this.getElementFromMessageId(n);
             (0, l.k)(i) ? this.scrollTo(this.getOffsetOrientationFromNode(i, 'middle', t ? this.newMessageBarBuffer() : g.kQ), !0) : this.scrollToNewMessages(!0, 'middle');
@@ -373,7 +373,7 @@ class v {
         if (this.isInitialized()) return;
         let { initialScrollTop: e } = this;
         this.initialScrollTop = void 0;
-        let t = x(this.props.messages);
+        let t = T(this.props.messages);
         null != t ? this.scrollToMessage(t, !1) : this.props.hasUnreads && this.props.channel.type !== C.d4z.GUILD_VOICE && this.props.channel.type !== C.d4z.GUILD_STAGE_VOICE ? this.scrollToNewMessages() : null != e ? this.scrollTo(e + this.props.placeholderHeight, !1, this.handleScroll) : this.setScrollToBottom();
     }
     scrollTo(e) {
@@ -574,12 +574,12 @@ class v {
         }
     }
 }
-function S(e) {
+function v(e) {
     let { messages: t, channel: n, compact: s, hasUnreads: a, focusId: l, placeholderHeight: r, canLoadMore: o = !0, handleScrollToBottom: c, handleScrollFromBottom: d } = e,
         { windowId: h } = i.useContext(u.ZP),
         [m] = i.useState(
             () =>
-                new v({
+                new S({
                     messages: t,
                     channel: n,
                     compact: s,

@@ -20,10 +20,10 @@ var i = n(735250),
     I = n(778569),
     m = n(182906),
     T = n(884338),
-    N = n(100527),
-    h = n(906732),
-    C = n(835473),
-    f = n(471445),
+    h = n(100527),
+    N = n(906732),
+    f = n(835473),
+    C = n(471445),
     p = n(111028),
     g = n(955415),
     S = n(601964),
@@ -93,7 +93,7 @@ function y(e) {
 function B(e) {
     let { channel: t, guild: n, isStacked: s, hasEnded: a } = e;
     if (null != t && null != n) {
-        let e = (0, f.KS)(t, n);
+        let e = (0, C.KS)(t, n);
         return (0, i.jsxs)('div', {
             className: r()(D.channel, {
                 [D.stacked]: s,
@@ -138,7 +138,7 @@ function k(e) {
     var t, n;
     let a,
         l,
-        { invite: u, getAcceptInviteContext: f } = e,
+        { invite: u, getAcceptInviteContext: C } = e,
         { approximate_member_count: p, approximate_presence_count: M, target_type: k, target_application: F } = u;
     o()(k === Z.Iq.EMBEDDED_APPLICATION && null != F, 'invalid application invite');
     let G = s.useRef(null),
@@ -161,8 +161,8 @@ function k(e) {
         );
     }, [G, V, Y]);
     let W = (0, c.e7)([R.Z], () => (null != u.guild ? R.Z.getGuild(u.guild.id) : null), [u]),
-        z = (0, C.Z)([F.id])[0],
-        K = (0, c.e7)([E.ZP], () => {
+        K = (0, f.Z)([F.id])[0],
+        z = (0, c.e7)([E.ZP], () => {
             var e;
             return (null == u ? void 0 : u.channel) != null && (null === (e = E.ZP.getSelfEmbeddedActivityForChannel(u.channel.id)) || void 0 === e ? void 0 : e.applicationId) === F.id;
         }),
@@ -175,7 +175,7 @@ function k(e) {
         }),
         q = A.Z.getChannel(null === (t = u.channel) || void 0 === t ? void 0 : t.id),
         X = (0, c.e7)([O.Z], () => null != q && O.Z.can(L.Plq.USE_EMBEDDED_ACTIVITIES, q), [q]),
-        { analyticsLocations: J } = (0, h.ZP)(N.Z.INVITE_EMBED),
+        { analyticsLocations: J } = (0, N.ZP)(h.Z.INVITE_EMBED),
         $ = (0, I.Z)({
             applicationId: F.id,
             size: b,
@@ -198,15 +198,15 @@ function k(e) {
         if (null == u.guild) return (0, i.jsx)(v.Z, {});
         W = new S.ZP(u.guild);
     }
-    let es = (ei && !X) || (ei && K),
+    let es = (ei && !X) || (ei && z),
         ea = () => {
             _.Z.acceptInviteAndTransitionToInviteChannel({
                 inviteKey: u.code,
-                context: f('Invite Button Embed'),
+                context: C('Invite Button Embed'),
                 analyticsLocations: J
             });
         };
-    return (ei && K && (a = P.Z.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY), !X && (a = P.Z.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS), (l = K ? P.Z.Messages.INVITE_EMBED_JOINED : Q || !ei ? P.Z.Messages.JOIN : P.Z.Messages.START), null == u.code || '' === u.code)
+    return (ei && z && (a = P.Z.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY), !X && (a = P.Z.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS), (l = z ? P.Z.Messages.INVITE_EMBED_JOINED : Q || !ei ? P.Z.Messages.JOIN : P.Z.Messages.START), null == u.code || '' === u.code)
         ? null
         : (0, i.jsxs)('div', {
               className: D.container,
@@ -219,7 +219,7 @@ function k(e) {
                       }),
                       children: (0, i.jsx)(m.Z, {
                           imageBackground: $,
-                          applicationName: null !== (n = null == z ? void 0 : z.name) && void 0 !== n ? n : '',
+                          applicationName: null !== (n = null == K ? void 0 : K.name) && void 0 !== n ? n : '',
                           imageClassName: r()(D.img, {
                               [D.large]: w,
                               [D.stacked]: H
@@ -243,7 +243,7 @@ function k(e) {
                                   (0, i.jsx)(d.Heading, {
                                       className: D.heading,
                                       variant: 'heading-xl/semibold',
-                                      children: null == z ? void 0 : z.name
+                                      children: null == K ? void 0 : K.name
                                   }),
                                   (0, i.jsx)(B, {
                                       channel: q,

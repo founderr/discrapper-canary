@@ -24,13 +24,13 @@ function _(e) {
             ...(0, o.v_)(E)
         });
     }, [g, E]);
-    let x = s.useCallback(() => {
+    let T = s.useCallback(() => {
             null == _ || _(), t();
         }, [_, t]),
-        T = s.useCallback(() => {
+        x = s.useCallback(() => {
             null == f || f(), t();
         }, [f, t]),
-        v = s.useRef(null);
+        S = s.useRef(null);
     return (
         s.useEffect(() => {
             let e;
@@ -41,9 +41,9 @@ function _(e) {
                     (async () => {
                         let [{ default: s }, a] = await Promise.all([Promise.resolve().then(n.t.bind(n, 500923, 23)), (0, l.wj)(t) ? I.dark() : I.light()]);
                         !i &&
-                            null != v.current &&
+                            null != S.current &&
                             (e = s.loadAnimation({
-                                container: v.current,
+                                container: S.current,
                                 renderer: 'svg',
                                 loop: !0,
                                 autoplay: !0,
@@ -59,7 +59,7 @@ function _(e) {
             'aria-labelledby': 'content-warning-popout-label',
             children: (0, i.jsxs)('form', {
                 className: m.contentWarningPopout,
-                onSubmit: x,
+                onSubmit: T,
                 children: [
                     (0, i.jsxs)('div', {
                         className: m.body,
@@ -67,7 +67,7 @@ function _(e) {
                             null != I &&
                                 (0, i.jsx)('div', {
                                     className: m.animation,
-                                    ref: v
+                                    ref: S
                                 }),
                             (0, i.jsxs)('div', {
                                 className: m.content,
@@ -91,7 +91,7 @@ function _(e) {
                                                     (0, i.jsx)(r.Button, {
                                                         className: m.button,
                                                         color: r.Button.Colors.PRIMARY,
-                                                        onClick: T,
+                                                        onClick: x,
                                                         children: h.Z.Messages.EDIT_MESSAGE
                                                     }),
                                                     (0, i.jsx)(r.Text, {
@@ -106,7 +106,7 @@ function _(e) {
                                                 children: [
                                                     (0, i.jsx)(r.Button, {
                                                         className: m.button,
-                                                        onClick: x,
+                                                        onClick: T,
                                                         type: 'submit',
                                                         autoFocus: !0,
                                                         children: h.Z.Messages.EVERYONE_POPOUT_SEND_NOW

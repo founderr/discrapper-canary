@@ -50,8 +50,8 @@ function C() {
 function I(e) {
     let { userId: t, guildId: n, location: s, className: u, onNavigate: E } = e,
         I = (0, l.e7)([c.default], () => c.default.getUser(t), [t]),
-        x = (0, l.e7)([o.ZP], () => o.ZP.getMember(n, t), [n, t]);
-    return null == I || null == x
+        T = (0, l.e7)([o.ZP], () => o.ZP.getMember(n, t), [n, t]);
+    return null == I || null == T
         ? null
         : (0, i.jsxs)('div', {
               className: a()(g.container, u),
@@ -60,18 +60,18 @@ function I(e) {
                   (0, i.jsxs)(r.Scroller, {
                       className: g.innerContainer,
                       children: [
-                          (0, i.jsx)(_.Z, { member: x }),
+                          (0, i.jsx)(_.Z, { member: T }),
                           (0, i.jsx)(f.Z, {
                               userId: t,
                               guildId: n
                           }),
                           (0, i.jsx)(p.Z, {
-                              member: x,
+                              member: T,
                               onNavigate: E
                           }),
-                          (0, i.jsx)(h.Z, { member: x }),
-                          (0, i.jsx)(d.Z, { member: x }),
-                          (0, i.jsx)(m.Z, { member: x })
+                          (0, i.jsx)(h.Z, { member: T }),
+                          (0, i.jsx)(d.Z, { member: T }),
+                          (0, i.jsx)(m.Z, { member: T })
                       ]
                   })
               ]

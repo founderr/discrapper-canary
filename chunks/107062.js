@@ -13,8 +13,8 @@ var l = n(735250),
     x = n(823379),
     E = n(5192),
     _ = n(379357),
-    p = n(192918),
-    v = n(561308),
+    v = n(192918),
+    p = n(561308),
     T = n(907152),
     f = n(206295),
     g = n(297781),
@@ -53,7 +53,7 @@ t.ZP = (e) => {
         { user: O, details: R, activity: j, embeddedActivity: w } = (0, C.n)(n),
         { primaryColor: L, secondaryColor: b } = (0, f.Z)(null == A ? void 0 : A.src),
         U = (0, i.e7)([m.default], () => m.default.locale),
-        { displayParticipants: D, participant1: B, participant2: k, numOtherParticipants: F } = (0, p.Z)(n, 3),
+        { displayParticipants: D, participant1: B, participant2: k, numOtherParticipants: F } = (0, v.Z)(n, 3),
         G = () => {
             c._(d._b.TEXT, h.I.NORMAL, { applicationId: n.extra.application_id });
         },
@@ -74,7 +74,7 @@ t.ZP = (e) => {
                     applicationImageSrc: null == A ? void 0 : A.src,
                     avatarSrcs: D.map((e) => e.getAvatarURL(t.guild_id, 128)),
                     description: l,
-                    timestamp: (0, v.yh)(n, U),
+                    timestamp: (0, p.yh)(n, U),
                     colors: [L, b],
                     channelId: e
                 });
@@ -88,7 +88,7 @@ t.ZP = (e) => {
         }),
         Y = (0, l.jsx)(I.wG, {
             channel: t,
-            userDescription: (0, v.kr)(n) ? P.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING_V2 : P.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED_V2,
+            userDescription: (0, p.kr)(n) ? P.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING_V2 : P.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED_V2,
             title: n.extra.activity_name,
             subtitle: R,
             badges: V,

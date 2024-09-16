@@ -20,31 +20,31 @@ var s = n(735250),
     m = n(134433),
     N = n(325476),
     S = n(496675),
-    h = n(671533),
-    g = n(946724),
+    g = n(671533),
+    h = n(946724),
     C = n(970129),
     x = n(712181),
     p = n(420966),
     R = n(203377),
-    f = n(981631),
-    L = n(689938),
+    L = n(981631),
+    f = n(689938),
     O = n(100161);
 let A = 'DRAGGABLE_ROLE';
 function M(e) {
     var t, a;
     let i,
-        { guild: d, role: I, highestRole: E, selectedItem: N, onClick: S, currentPosition: h, onDragStart: g, onDragReset: x, onDragComplete: p, roleStyle: R } = e,
-        L = (0, C.T)(d, E, I),
+        { guild: d, role: I, highestRole: E, selectedItem: N, onClick: S, currentPosition: g, onDragStart: h, onDragReset: x, onDragComplete: p, roleStyle: R } = e,
+        f = (0, C.T)(d, E, I),
         M = (0, T.pM)(d.id, I.id),
-        D = null == L && !M,
+        D = null == f && !M,
         v = (null === (t = I.tags) || void 0 === t ? void 0 : t.guild_connections) !== void 0,
         [, j] = (0, l.c)({
             type: A,
             item: () => (
-                g(I.id),
+                h(I.id),
                 {
                     id: I.id,
-                    position: h
+                    position: g
                 }
             ),
             canDrag: () => D,
@@ -66,7 +66,7 @@ function M(e) {
             },
             drop: () => ({ roleId: I.id })
         }),
-        U = null !== (a = I.colorString) && void 0 !== a ? a : (0, c.Rf)(f.p6O);
+        U = null !== (a = I.colorString) && void 0 !== a ? a : (0, c.Rf)(L.p6O);
     return (
         (i = v
             ? (0, s.jsx)(m.Z, {
@@ -83,8 +83,8 @@ function M(e) {
               : (0, s.jsx)(u.RoleCircle, { color: U })),
         (0, s.jsxs)(u.TabBar.Item, {
             className: r()(O.row, {
-                [O.dragBefore]: null !== Z && h < Z,
-                [O.dragAfter]: null !== Z && h > Z
+                [O.dragBefore]: null !== Z && g < Z,
+                [O.dragAfter]: null !== Z && g > Z
             }),
             id: I.id,
             selectedItem: N,
@@ -108,10 +108,10 @@ function M(e) {
             },
             children: [
                 i,
-                null != L
+                null != f
                     ? (0, s.jsx)(C.Z, {
                           className: O.lock,
-                          tooltipText: L
+                          tooltipText: f
                       })
                     : null,
                 (0, s.jsx)(u.Text, {
@@ -126,11 +126,11 @@ function M(e) {
 }
 function D(e) {
     let { guild: t, currentRoleId: n, setCurrentRoleId: i, setSelectedSection: l } = e,
-        o = (0, d.e7)([g.Z], () => g.Z.roles),
+        o = (0, d.e7)([h.Z], () => h.Z.roles),
         c = (0, d.e7)([S.Z], () => S.Z.getHighestRole(t)),
         _ = (0, d.e7)([E.Z], () => E.Z.roleStyle),
         [T, m] = a.useState(o.length),
-        { scrolledToTop: C, handleScroll: f } = (0, p.V)(),
+        { scrolledToTop: C, handleScroll: L } = (0, p.V)(),
         { handleDragStart: A, handleDragReset: D, handleDragComplete: v } = (0, x.Z)(o),
         j = a.useRef(null),
         Z = a.useCallback(
@@ -162,22 +162,22 @@ function D(e) {
                             className: O.title,
                             onClick: () => i(null),
                             children: [
-                                (0, s.jsx)(h.Z, { direction: h.Z.Directions.LEFT }),
+                                (0, s.jsx)(g.Z, { direction: g.Z.Directions.LEFT }),
                                 (0, s.jsx)(u.Text, {
                                     className: O.titleText,
                                     variant: 'text-md/semibold',
                                     color: 'none',
-                                    children: L.Z.Messages.BACK
+                                    children: f.Z.Messages.BACK
                                 })
                             ]
                         }),
                         (0, s.jsx)(u.Tooltip, {
                             position: 'top',
-                            'aria-label': L.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_ROLE_CREATE,
+                            'aria-label': f.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_ROLE_CREATE,
                             text: (0, s.jsx)(u.Text, {
                                 className: O.tooltip,
                                 variant: 'text-sm/normal',
-                                children: L.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_ROLE_CREATE
+                                children: f.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_ROLE_CREATE
                             }),
                             children: (e) =>
                                 (0, s.jsx)(u.Clickable, {
@@ -197,7 +197,7 @@ function D(e) {
                 (0, s.jsx)(u.AdvancedScroller, {
                     className: O.list,
                     ref: j,
-                    onScroll: f,
+                    onScroll: L,
                     children: (0, s.jsx)(u.TabBar, {
                         selectedItem: n,
                         onItemSelect: (e) => i(e),

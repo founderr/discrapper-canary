@@ -330,7 +330,7 @@ let ej = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
             [eD.s6.PRIVACY_SENSITIVE_MEDIA]: {
                 section: eP.oAB.PRIVACY_AND_SAFETY,
                 searchableTitles: [eZ.Z.Messages.OBSCURED_CONTENT_SETTINGS_HEADER, eZ.Z.Messages.OBSCURED_CONTENT_SEARCH_TERM_FILTER, eZ.Z.Messages.OBSCURED_CONTENT_SEARCH_TERM_BLUR, eZ.Z.Messages.OBSCURED_CONTENT_SEARCH_TERM_SENSITIVE_CONTENT, eZ.Z.Messages.OBSCURED_CONTENT_SEARCH_TERM_EXPLICIT],
-                parent: eD.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY
+                parent: eD.s6.PRIVACY_USER_SETTINGS
             },
             [eD.s6.PRIVACY_SENSITIVE_MEDIA_V2]: {
                 section: eP.oAB.PRIVACY_AND_SAFETY_V2,
@@ -365,7 +365,7 @@ let ej = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
             [eD.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS_AGE_RESTRICTED_IOS_V2]: {
                 section: eP.oAB.PRIVACY_AND_SAFETY_V2,
                 searchableTitles: [eZ.Z.Messages.NSFW_GUILDS_TOGGLE_HEADER],
-                parent: eD.s6.PRIVACY_AND_SAFETY_SERVER_SELECTOR
+                parent: eD.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY
             },
             [eD.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS_MESSAGE_REQUESTS]: {
                 section: eP.oAB.PRIVACY_AND_SAFETY,
@@ -381,7 +381,7 @@ let ej = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
             [eD.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS_AGE_RESTRICTED_APPS_V2]: {
                 section: eP.oAB.PRIVACY_AND_SAFETY_V2,
                 searchableTitles: [eZ.Z.Messages.NSFW_DM_COMMANDS_HEADER],
-                parent: eD.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS
+                parent: eD.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY
             },
             [eD.s6.PRIVACY_AND_SAFETY_SERVER_SELECTOR]: {
                 section: eP.oAB.PRIVACY_AND_SAFETY_V2,

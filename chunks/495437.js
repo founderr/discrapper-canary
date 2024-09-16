@@ -1,6 +1,6 @@
 t.d(n, {
     EB: function () {
-        return l;
+        return o;
     },
     Je: function () {
         return s;
@@ -12,37 +12,37 @@ t.d(n, {
         return a;
     }
 });
-var r = t(570140),
-    i = t(881052),
-    o = t(824389);
-let l = async (e) => {
-        r.Z.dispatch({
+var i = t(570140),
+    r = t(881052),
+    l = t(824389);
+let o = async (e) => {
+        i.Z.dispatch({
             type: 'GUILD_PRODUCTS_FETCH',
             guildId: e
         });
         try {
-            let n = await o.uV(e);
-            r.Z.dispatch({
+            let n = await l.uV(e);
+            i.Z.dispatch({
                 type: 'GUILD_PRODUCTS_FETCH_SUCCESS',
                 guildId: e,
                 products: n
             });
         } catch (n) {
-            r.Z.dispatch({
+            i.Z.dispatch({
                 type: 'GUILD_PRODUCTS_FETCH_FAILURE',
                 guildId: e
             });
         }
     },
     u = async (e, n) => {
-        r.Z.dispatch({
+        i.Z.dispatch({
             type: 'GUILD_PRODUCT_FETCH',
             productId: n
         });
         try {
-            let t = await o.p9(e, n);
+            let t = await l.p9(e, n);
             return (
-                r.Z.dispatch({
+                i.Z.dispatch({
                     type: 'GUILD_PRODUCT_FETCH_SUCCESS',
                     product: t
                 }),
@@ -50,29 +50,29 @@ let l = async (e) => {
             );
         } catch (e) {
             throw (
-                (r.Z.dispatch({
+                (i.Z.dispatch({
                     type: 'GUILD_PRODUCT_FETCH_FAILURE',
                     productId: n,
-                    error: new i.Hx(e)
+                    error: new r.Hx(e)
                 }),
                 e)
             );
         }
     };
 async function s(e, n, t) {
-    let i = await o.Je(e, n, t);
+    let r = await l.Je(e, n, t);
     return (
-        r.Z.dispatch({
+        i.Z.dispatch({
             type: 'GUILD_PRODUCT_UPDATE',
-            product: i
+            product: r
         }),
-        i
+        r
     );
 }
 async function a(e, n) {
     return (
-        await o.mh(e, n),
-        r.Z.dispatch({
+        await l.mh(e, n),
+        i.Z.dispatch({
             type: 'GUILD_PRODUCT_DELETE',
             productId: n
         }),

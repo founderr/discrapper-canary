@@ -23,7 +23,7 @@ function u(e) {
     if (null == e) return !1;
     let n = s.Z.getChannel(e.parent_id);
     if (null != n && (null == n ? void 0 : n.type) !== r.d.GUILD_CATEGORY) return !1;
-    return (t = e.type), [r.d.GUILD_TEXT, r.d.GROUP_DM, r.d.DM].includes(t);
+    return (t = e.type), [r.d.GUILD_TEXT, r.d.GUILD_VOICE, r.d.GROUP_DM, r.d.DM].includes(t);
 }
 function c(e) {
     return _(e, o.Z);

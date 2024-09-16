@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return T;
+        return x;
     }
 });
 var i = n(735250);
@@ -38,7 +38,7 @@ function I(e) {
         onClick: t
     });
 }
-function x(e) {
+function T(e) {
     let { channel: t } = e,
         { participants: n, usersInSummary: s } = (0, _.Z)(t.id);
     return (0, i.jsxs)('div', {
@@ -72,13 +72,13 @@ function x(e) {
         ]
     });
 }
-function T(e) {
+function x(e) {
     let { channel: t, onContinueClick: n } = e,
         a = (0, s.e7)([m.Z], () => m.Z.can(p.yP, t), [t]),
         r = t.guild_id,
         { canCreateGuildEvent: o } = (0, h.X)(t),
-        T = (0, f.Z)(t.id),
-        { usersInSummary: v } = (0, _.Z)(t.id);
+        x = (0, f.Z)(t.id),
+        { usersInSummary: S } = (0, _.Z)(t.id);
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsx)(E.Z, {
@@ -108,7 +108,7 @@ function T(e) {
                     })
                 ]
             }),
-            T ? null : (0, i.jsx)(u.Z, { channelId: t.id }),
+            x ? null : (0, i.jsx)(u.Z, { channelId: t.id }),
             a
                 ? (0, i.jsx)(d.Z, {
                       className: C.eventPrompt,
@@ -121,9 +121,9 @@ function T(e) {
                       guildId: r
                   })
                 : null,
-            (a || v.length > 0) && (0, i.jsx)('hr', { className: C.separator }),
+            (a || S.length > 0) && (0, i.jsx)('hr', { className: C.separator }),
             a ? (0, i.jsx)(I, { onClick: n }) : null,
-            (0, i.jsx)(x, { channel: t })
+            (0, i.jsx)(T, { channel: t })
         ]
     });
 }

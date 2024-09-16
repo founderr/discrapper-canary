@@ -12,7 +12,7 @@ var a = n(346652),
     o = n(95398),
     s = n(981631),
     c = n(219299);
-let u = {
+let d = {
     base00: l.Z.colors.BACKGROUND_SECONDARY.css,
     base03: l.Z.colors.TEXT_WARNING.css,
     base07: l.Z.colors.TEXT_NORMAL.css,
@@ -21,13 +21,13 @@ let u = {
     base0B: l.Z.colors.TEXT_WARNING.css,
     base0D: l.Z.colors.TEXT_BRAND.css
 };
-function d(e) {
+function u(e) {
     let t = {};
     for (let [n, r] of Object.entries(e)) t[n] = r;
     return t;
 }
-let h = d(u),
-    m = d(u);
+let h = u(d),
+    m = u(d);
 function x(e) {
     return s.Jn9.test(e)
         ? (0, r.jsx)(o.Z, {

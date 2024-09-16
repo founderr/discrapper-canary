@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return L;
     }
 });
 var s = n(735250);
@@ -20,10 +20,10 @@ var a = n(780384),
     m = n(458050),
     N = n(334364),
     S = n(431712);
-function h(e) {
+function g(e) {
     return (0, a.wj)(e) ? c.revenueSharePercentageDark : c.revenueSharePercentageLight;
 }
-function g() {
+function h() {
     let e = (0, r.ZP)(),
         t = { backgroundColor: (0, a.wj)(e) ? '#2e3638' : 'var(--background-primary)' };
     return (0, s.jsxs)('div', {
@@ -40,7 +40,7 @@ function g() {
                     (0, s.jsx)(i.Spacer, { size: 8 }),
                     (0, s.jsx)(i.Heading, {
                         variant: 'heading-md/bold',
-                        className: h(e),
+                        className: g(e),
                         children: o.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CREATOR_BENEFIT_REVENUE_INCREASE
                     })
                 ]
@@ -134,7 +134,7 @@ function x() {
                 children: o.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CREATOR_BENEFIT_1
             }),
             (0, s.jsx)(i.Spacer, { size: 32 }),
-            (0, s.jsx)(g, {}),
+            (0, s.jsx)(h, {}),
             (0, s.jsx)(i.Spacer, { size: 24 }),
             (0, s.jsx)(C, {})
         ]
@@ -171,7 +171,7 @@ function R() {
             (0, s.jsxs)('div', {
                 children: [
                     (0, s.jsxs)(i.Heading, {
-                        className: h(e),
+                        className: g(e),
                         style: {
                             fontSize: '50px',
                             lineHeight: '52px'
@@ -194,7 +194,7 @@ function R() {
         ]
     });
 }
-function f() {
+function L() {
     return (0, s.jsxs)('div', {
         children: [
             (0, s.jsx)(i.Heading, {

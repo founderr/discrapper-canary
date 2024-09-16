@@ -1,9 +1,9 @@
 t(653041), t(47120);
-var r,
-    i = t(735250),
-    o = t(470079),
-    l = t(120356),
-    u = t.n(l),
+var i,
+    r = t(735250),
+    l = t(470079),
+    o = t(120356),
+    u = t.n(o),
     s = t(481060),
     a = t(598077),
     c = t(908860),
@@ -21,27 +21,27 @@ function _(e, n, t) {
         e
     );
 }
-class f extends (r = o.PureComponent) {
+class E extends (i = l.PureComponent) {
     renderUsers() {
-        let { users: e, max: n, renderUser: t = this.defaultRenderUser, renderMoreUsers: r } = this.props,
-            i = [],
-            o = e.length === n ? e.length : n - 1,
-            l = 0;
-        for (; l < o && l < e.length; ) {
-            let n = l === e.length - 1;
-            i.push(t(e[l] || null, n ? null : c.avatarMasked, 'user-'.concat(l), n)), l++;
+        let { users: e, max: n, renderUser: t = this.defaultRenderUser, renderMoreUsers: i } = this.props,
+            r = [],
+            l = e.length === n ? e.length : n - 1,
+            o = 0;
+        for (; o < l && o < e.length; ) {
+            let n = o === e.length - 1;
+            r.push(t(e[o] || null, n ? null : c.avatarMasked, 'user-'.concat(o), n)), o++;
         }
-        if (l < e.length) {
-            let n = Math.min(e.length - l, 99);
-            i.push(r('+'.concat(n), c.moreUsers, 'more-users', n));
+        if (o < e.length) {
+            let n = Math.min(e.length - o, 99);
+            r.push(i('+'.concat(n), c.moreUsers, 'more-users', n));
         }
-        return i;
+        return r;
     }
     renderIcon() {
         return this.props.icon
-            ? (0, i.jsx)('div', {
+            ? (0, r.jsx)('div', {
                   className: c.iconContainer,
-                  children: (0, i.jsx)(s.VoiceNormalIcon, {
+                  children: (0, r.jsx)(s.VoiceNormalIcon, {
                       size: 'xs',
                       color: 'currentColor',
                       colorClass: c.foreground,
@@ -52,7 +52,7 @@ class f extends (r = o.PureComponent) {
     }
     render() {
         let { className: e } = this.props;
-        return (0, i.jsxs)('div', {
+        return (0, r.jsxs)('div', {
             className: u()(e, c.container),
             ref: (e) => (this._ref = e),
             children: [this.renderIcon(), this.renderUsers()]
@@ -61,30 +61,30 @@ class f extends (r = o.PureComponent) {
     constructor(...e) {
         super(...e),
             _(this, '_ref', void 0),
-            _(this, 'defaultRenderUser', (e, n, t, r) => {
-                let { onClick: o, size: l, guildId: _ } = this.props,
-                    f = e instanceof a.Z ? e : null != e ? e.user : null;
-                return null == f
-                    ? (0, i.jsx)('div', { className: u()(c.emptyUser, n) }, t)
-                    : (0, i.jsx)(
+            _(this, 'defaultRenderUser', (e, n, t, i) => {
+                let { onClick: l, size: o, guildId: _ } = this.props,
+                    E = e instanceof a.Z ? e : null != e ? e.user : null;
+                return null == E
+                    ? (0, r.jsx)('div', { className: u()(c.emptyUser, n) }, t)
+                    : (0, r.jsx)(
                           s.Avatar,
                           {
                               tabIndex: 0,
-                              src: f.getAvatarURL(_, (0, s.getAvatarSize)(l)),
-                              size: l,
-                              'aria-label': f.username,
+                              src: E.getAvatarURL(_, (0, s.getAvatarSize)(o)),
+                              size: o,
+                              'aria-label': E.username,
                               className: u()(n, d.cursorPointer, c.avatarSize),
-                              onClick: (e) => (null != o ? o(e, f, this._ref) : null)
+                              onClick: (e) => (null != l ? l(e, E, this._ref) : null)
                           },
-                          f.id
+                          E.id
                       );
             });
     }
 }
-_(f, 'defaultProps', {
+_(E, 'defaultProps', {
     max: 10,
     renderMoreUsers: function (e, n, t) {
-        return (0, i.jsx)(
+        return (0, r.jsx)(
             'div',
             {
                 className: n,
@@ -95,4 +95,4 @@ _(f, 'defaultProps', {
     },
     size: s.AvatarSizes.SIZE_24
 }),
-    (n.Z = f);
+    (n.Z = E);

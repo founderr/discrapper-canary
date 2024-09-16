@@ -24,19 +24,19 @@ function E(e) {
         g = (0, p.qY)(t),
         C = (0, s.e7)([u.Z], () => u.Z.getChannel(t), [t]),
         { canManageGuildEvent: I } = (0, r.X)(C),
-        x = I(g);
+        T = I(g);
     if (null == g) return null;
-    let T = () => {
+    let x = () => {
             if (null != C && (0, m.Z)(C)) {
                 (0, d.lC)(C, E);
                 return;
             }
             n();
         },
-        v = () => {
+        S = () => {
             h.Z.endEvent(g.id, g.guild_id);
         };
-    return x
+    return T
         ? (0, i.jsx)(a.Popout, {
               renderPopout: (e) => {
                   let { closePopout: t } = e;
@@ -49,7 +49,7 @@ function E(e) {
                           children: (0, i.jsx)(a.MenuItem, {
                               id: 'end-voice-event',
                               color: 'danger',
-                              action: v,
+                              action: S,
                               label: _.Z.Messages.END_EVENT,
                               icon: a.CircleXIcon
                           })
@@ -65,7 +65,7 @@ function E(e) {
                       label: _.Z.Messages.DISCONNECT_SELF,
                       color: 'red',
                       iconComponent: a.PhoneHangUpIcon,
-                      onClick: T,
+                      onClick: x,
                       onPopoutClick: t,
                       className: f.buttonSpacing
                   });

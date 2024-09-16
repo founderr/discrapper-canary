@@ -54,8 +54,8 @@ async function N(e) {
                     channelIds: t
                 });
         } catch (n) {
-            var h;
-            let { fieldName: e, error: t } = null !== (h = new i.Hx(n).getAnyErrorMessageAndField()) && void 0 !== h ? h : {};
+            var g;
+            let { fieldName: e, error: t } = null !== (g = new i.Hx(n).getAnyErrorMessageAndField()) && void 0 !== g ? g : {};
             a.Z.show({
                 title: E.Z.Messages.ONBOARDING_PROMPT_SAVE_FAILED,
                 body: [e, t].filter(c.lm).join(': ')

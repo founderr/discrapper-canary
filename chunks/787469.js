@@ -39,8 +39,8 @@ function g(e) {
         ),
         C = (0, r.e7)([c.Z], () => c.Z.getEnhancedMember(t.guildId, t.userId), [t.guildId, t.userId]),
         I = (0, u.zq)(C),
-        x = (0, u.vN)(t),
-        T = (0, r.e7)([m.Z], () => m.Z.can(_.Plq.MANAGE_ROLES, n), [n]);
+        T = (0, u.vN)(t),
+        x = (0, r.e7)([m.Z], () => m.Z.can(_.Plq.MANAGE_ROLES, n), [n]);
     return null == n
         ? null
         : (0, i.jsx)(o.FormItem, {
@@ -49,7 +49,7 @@ function g(e) {
               children: (0, i.jsx)(p.WM, {
                   children: (0, i.jsx)(p._2, {
                       description:
-                          t.roles.length > 0 || T
+                          t.roles.length > 0 || x
                               ? (0, i.jsxs)('div', {
                                     className: E.roleContainer,
                                     children: [
@@ -81,7 +81,7 @@ function g(e) {
                                                 e
                                             )
                                         ),
-                                        T &&
+                                        x &&
                                             (0, i.jsx)(o.Tooltip, {
                                                 'aria-label': f.Z.Messages.ADD_ROLE_A11Y_LABEL,
                                                 allowOverflow: !0,
@@ -90,7 +90,7 @@ function g(e) {
                                                     let { onMouseEnter: t, onMouseLeave: n } = e;
                                                     return (0, i.jsx)(o.Clickable, {
                                                         className: E.addRoleContainer,
-                                                        onClick: x,
+                                                        onClick: T,
                                                         onMouseEnter: t,
                                                         onMouseLeave: n,
                                                         children: (0, i.jsx)(o.CirclePlusIcon, {

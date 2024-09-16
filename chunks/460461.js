@@ -27,14 +27,14 @@ var s = n(735250),
     m = n(134432),
     N = n(813197),
     S = n(208567),
-    h = n(496675),
-    g = n(768581),
+    g = n(496675),
+    h = n(768581),
     C = n(63063),
     x = n(434404),
     p = n(999382),
     R = n(450474),
-    f = n(190287),
-    L = n(981631),
+    L = n(190287),
+    f = n(981631),
     O = n(731455),
     A = n(689938),
     M = n(825267);
@@ -83,17 +83,17 @@ let D = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
         a.useEffect(() => {
             !d && null != n && (u.le(), u.aC(n.id), u.i3(n.id), v(!0));
         }, [n, d]);
-        let { canManageGuild: j } = (0, i.cj)([h.Z], () => ({ canManageGuild: h.Z.can(L.Plq.MANAGE_GUILD, n) })),
+        let { canManageGuild: j } = (0, i.cj)([g.Z], () => ({ canManageGuild: g.Z.can(f.Plq.MANAGE_GUILD, n) })),
             Z = (0, i.e7)([p.Z], () => p.Z.isGuildMetadataLoaded()),
             b = (0, i.e7)([p.Z], () => (null != n ? p.Z.getMetadata() : null)),
             U = (0, i.e7)([p.Z], () => (null != n && (null == b ? void 0 : b.isPublished) ? p.Z.getSlug() : null)),
             [G, P] = a.useState([!0]),
             [B, y] = a.useState(!0),
-            [F, k] = a.useState([!1]),
-            [w, H] = a.useState(['']),
+            [F, w] = a.useState([!1]),
+            [k, H] = a.useState(['']),
             V = (e) => {
                 let t = Object.entries(O.zo)
-                    .filter((e) => !w.includes(e[1].presentation))
+                    .filter((e) => !k.includes(e[1].presentation))
                     .map((e) => ({
                         label: e[1].presentation,
                         value: e[0]
@@ -184,12 +184,12 @@ let D = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
             $ = () => {
                 if (b.socialLinks.length < 9) {
                     let e = [...b.socialLinks];
-                    u.t$(n.id, e.concat('')), H(w.concat(''));
+                    u.t$(n.id, e.concat('')), H(k.concat(''));
                 }
             },
             ee = (e, t) => {
                 let s = [...b.socialLinks],
-                    a = [...w],
+                    a = [...k],
                     i = [...G];
                 (a[t] = e), (s[t] = O.zo[e].baseUrl), (i[t] = !0), P(i), H(a), y(i.every((e) => !0 === e)), u.t$(n.id, s);
             },
@@ -201,10 +201,10 @@ let D = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
             },
             en = (e) => {
                 let t = [...F];
-                t.splice(e, 1), k(t);
+                t.splice(e, 1), w(t);
                 let s = [...G];
                 s.splice(e, 1), P(s);
-                let a = [...w];
+                let a = [...k];
                 a.splice(e, 1), H(a);
                 let i = [...b.socialLinks];
                 i.splice(e, 1), u.t$(n.id, i);
@@ -246,7 +246,7 @@ let D = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
             })),
             el = (e, t) => {
                 let n = [...F];
-                (n[e] = t), k(n);
+                (n[e] = t), w(n);
             };
         return (0, s.jsx)('div', {
             className: M.settingsColumn,
@@ -272,7 +272,7 @@ let D = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                             (0, s.jsxs)(l.FormText, {
                                                 className: M.tabMainDescription,
                                                 type: l.FormTextTypes.DESCRIPTION,
-                                                children: [A.Z.Messages.DISCOVERY_LANDING_PAGE_DESCRIPTION.format({ discordURL: window.GLOBAL_ENV.MARKETING_ENDPOINT }), ' ', A.Z.Messages.DISCOVERY_LANDING_PAGE_LEARN_MORE.format({ learnMoreURL: C.Z.getArticleURL(L.BhN.SERVER_WEB_PAGES) })]
+                                                children: [A.Z.Messages.DISCOVERY_LANDING_PAGE_DESCRIPTION.format({ discordURL: window.GLOBAL_ENV.MARKETING_ENDPOINT }), ' ', A.Z.Messages.DISCOVERY_LANDING_PAGE_LEARN_MORE.format({ learnMoreURL: C.Z.getArticleURL(f.BhN.SERVER_WEB_PAGES) })]
                                             }),
                                             (() => {
                                                 if (!b.isPublished || null == U) return;
@@ -384,7 +384,7 @@ let D = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                                     (0, s.jsx)(S.Z, {
                                                                         image: n.discoverySplash,
                                                                         makeURL: (e) =>
-                                                                            g.ZP.getGuildDiscoverySplashURL({
+                                                                            h.ZP.getGuildDiscoverySplashURL({
                                                                                 id: n.id,
                                                                                 splash: e,
                                                                                 size: 512 * (0, m.x_)()
@@ -451,7 +451,7 @@ let D = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                         }),
                                                         (0, s.jsx)('div', {
                                                             className: M.reasonToJoin,
-                                                            children: (0, s.jsx)(f.Z, {
+                                                            children: (0, s.jsx)(L.Z, {
                                                                 reasonMinLength: 10,
                                                                 reasonMaxLength: 128,
                                                                 guildId: n.id,
@@ -535,9 +535,9 @@ let D = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                                             l.SingleSelect,
                                                                             {
                                                                                 className: b.isPublished ? M.socialLinksDropdownMax : M.socialLinksDropdownMin,
-                                                                                options: V(w[t]),
+                                                                                options: V(k[t]),
                                                                                 placeholder: A.Z.Messages.DISCOVERY_LANDING_PAGE_SOCIAL_LINKS_DROPDOWN_PLACEHOLDER,
-                                                                                value: w[t],
+                                                                                value: k[t],
                                                                                 onChange: (e) => ee(e, t),
                                                                                 isDisabled: !j
                                                                             },

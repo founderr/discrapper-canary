@@ -22,8 +22,8 @@ function m() {
     let { editStateId: e, guildId: t } = (0, o.N)(),
         [m, N] = c.XZ(e, t),
         S = (0, d.Z)(t, e),
-        { setCurrentTab: h } = (0, I.dw)(),
-        g = () => h(I.ue.EMOJIS),
+        { setCurrentTab: g } = (0, I.dw)(),
+        h = () => g(I.ue.EMOJIS),
         C = (0, a.e7)([r.Z], () => r.Z.getGuild(t)),
         x = null == C ? void 0 : C.getMaxRoleSubscriptionEmojiSlots();
     function p(e) {
@@ -33,16 +33,16 @@ function m() {
         let t = new Set(m);
         t.delete(e), N(t);
     }
-    let f = (0, l.mY)();
+    let L = (0, l.mY)();
     return (0, s.jsxs)(i.FormSection, {
         title: E.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_EMOJI_TITLE,
-        disabled: f,
+        disabled: L,
         children: [
             (0, s.jsxs)(i.FormText, {
                 type: i.FormText.Types.DESCRIPTION,
                 className: T.formDescription,
-                disabled: f,
-                children: [E.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_EMOJI_DESCRIPTION.format({ premiumEmojiMaximum: x }), (0, s.jsx)('br', {}), E.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_EMOJI_MANAGE_LINK.format({ handleTransitionToManageEmoji: g })]
+                disabled: L,
+                children: [E.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_EMOJI_DESCRIPTION.format({ premiumEmojiMaximum: x }), (0, s.jsx)('br', {}), E.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_EMOJI_MANAGE_LINK.format({ handleTransitionToManageEmoji: h })]
             }),
             (0, s.jsx)(_.E, {
                 tierEmojiIds: m,
@@ -74,12 +74,12 @@ function m() {
                                 initialTierEmojiIds: m,
                                 onSubmit: p,
                                 transitionToManageEmoji: () => {
-                                    g(), n.onClose();
+                                    h(), n.onClose();
                                 }
                             });
                     });
                 },
-                disabled: f,
+                disabled: L,
                 children: E.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_EMOJI_ADD_BUTTON_TEXT
             })
         ]

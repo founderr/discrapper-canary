@@ -75,15 +75,15 @@ t.Z = (e) => {
     let { onChange: t, multiple: o = !0, disabled: c, className: d, tabIndex: _ = -1, 'aria-label': I, filters: E, setLoading: T } = e,
         m = a.createRef(),
         N = a.useRef(null),
-        [S, h] = a.useState(!1);
+        [S, g] = a.useState(!1);
     a.useEffect(() => {
-        S && g();
+        S && h();
     }, [S]);
-    let g = () => {
+    let h = () => {
             null !== N.current && ((0, i.closeModal)(N.current), (N.current = null));
         },
         C = async (e) => {
-            null == T || T(!0), await u(e, t), h(!0), null == T || T(!1);
+            null == T || T(!0), await u(e, t), g(!0), null == T || T(!1);
         },
         x = async (e) => {
             var t, a, r;

@@ -13,10 +13,10 @@ var i = n(735250),
     I = n(70097),
     m = n(210887),
     T = n(572004),
-    N = n(617136),
-    h = n(113434),
-    C = n(497505),
-    f = n(918701),
+    h = n(617136),
+    N = n(113434),
+    f = n(497505),
+    C = n(918701),
     p = n(566078),
     g = n(685613),
     S = n(611855),
@@ -39,17 +39,17 @@ let L = (0, l.animated)(d.ChevronSmallDownIcon),
                     e.stop();
                 };
             }, []),
-            (0, f.zK)(t, x.S7.FRACTIONS_QUEST))
+            (0, C.zK)(t, x.S7.FRACTIONS_QUEST))
         )
             return null;
         let _ = () => {
-            (0, N._3)({
+            (0, h._3)({
                 questId: t.id,
                 questContent: n,
-                questContentCTA: N.jZ.COPY_QUEST_URL,
+                questContentCTA: h.jZ.COPY_QUEST_URL,
                 questContentPosition: a
             }),
-                (0, T.JG)((0, f.Rs)(t.id)),
+                (0, T.JG)((0, C.Rs)(t.id)),
                 o(!0),
                 c.current.start(1000, () => o(!1));
         };
@@ -76,18 +76,18 @@ t.Z = (e) => {
         { ref: G, width: w, scrollWidth: V } = (0, _.Z)(),
         H = (0, c.e7)([m.Z], () => m.Z.getState().theme),
         Y = (0, c.e7)([E.Z], () => E.Z.useReducedMotion),
-        W = s.useMemo(() => (0, f.nP)(u.config.assets.hero), [u]),
-        z = s.useRef(null),
-        K = (0, O.uq)(I),
-        Q = I === C.jn.QUESTS_EMBED,
-        q = (0, h.t5)(u, x.dr.QUESTS_CARD, I),
+        W = s.useMemo(() => (0, C.nP)(u.config.assets.hero), [u]),
+        K = s.useRef(null),
+        z = (0, O.uq)(I),
+        Q = I === f.jn.QUESTS_EMBED,
+        q = (0, N.t5)(u, x.dr.QUESTS_CARD, I),
         X = (null === (t = u.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
-        J = (0, h.B6)(u.config.expiresAt, {
+        J = (0, N.B6)(u.config.expiresAt, {
             year: 'numeric',
             month: 'long',
             day: 'numeric'
         }),
-        $ = (0, h.B6)(p.r.build(u.config).rewardsExpireAt, {
+        $ = (0, N.B6)(p.r.build(u.config).rewardsExpireAt, {
             year: 'numeric',
             month: 'long',
             day: 'numeric'
@@ -96,25 +96,25 @@ t.Z = (e) => {
             e.stopPropagation(),
                 e.currentTarget.blur(),
                 B(),
-                (0, N._3)({
+                (0, h._3)({
                     questId: u.id,
                     questContent: I,
-                    questContentCTA: j ? N.jZ.COLLAPSE : N.jZ.EXPAND,
+                    questContentCTA: j ? h.jZ.COLLAPSE : h.jZ.EXPAND,
                     questContentPosition: y
                 });
         };
     s.useEffect(() => {
-        W && null != z.current && (n ? z.current.play() : !n && (z.current.pause(), (z.current.currentTime = 0)));
+        W && null != K.current && (n ? K.current.play() : !n && (K.current.pause(), (K.current.currentTime = 0)));
     }, [n, W]);
-    let et = (0, f.j8)(u);
+    let et = (0, C.j8)(u);
     return (0, i.jsxs)('div', {
         className: r()(v.outerContainer, {
-            [v.outerContainerGiftInventory]: K,
+            [v.outerContainerGiftInventory]: z,
             [v.outerContainerEmbed]: Q,
             [v.outerContainerXs]: 'xs' === T
         }),
         'aria-label': M.Z.Messages.EXPAND,
-        style: { height: K ? F : void 0 },
+        style: { height: z ? F : void 0 },
         children: [
             (0, i.jsx)(Z, {
                 style: {
@@ -130,13 +130,13 @@ t.Z = (e) => {
                 className: v.questSplash,
                 controls: !1,
                 poster: et,
-                ref: z,
+                ref: K,
                 children:
                     !Y &&
                     W &&
                     (0, i.jsx)('source', {
                         src: et,
-                        type: (0, f.mN)(et)
+                        type: (0, C.mN)(et)
                     })
             }),
             (0, i.jsxs)('div', {
@@ -146,7 +146,7 @@ t.Z = (e) => {
                     (0, i.jsxs)(l.animated.div, {
                         className: r()(v.headerContent, { [v.headerContentEmbed]: Q }),
                         style: {
-                            y: K
+                            y: z
                                 ? D.to({
                                       range: [0, 1],
                                       output: [O.DJ, 0]
@@ -154,7 +154,7 @@ t.Z = (e) => {
                                 : void 0
                         },
                         children: [
-                            K &&
+                            z &&
                                 (0, i.jsx)(l.animated.div, {
                                     className: v.headerCollapsedContent,
                                     style: {
@@ -208,7 +208,7 @@ t.Z = (e) => {
                                     k.current = e;
                                 },
                                 className: r()(v.headerExpandedContent, {
-                                    [v.outerContainerGiftInventory]: K,
+                                    [v.outerContainerGiftInventory]: z,
                                     [v.outerContainerEmbed]: Q
                                 }),
                                 style: {
@@ -259,7 +259,7 @@ t.Z = (e) => {
                                         ]
                                     }),
                                     !a &&
-                                        K &&
+                                        z &&
                                         (0, i.jsx)(P, {
                                             quest: u,
                                             location: I,
@@ -272,7 +272,7 @@ t.Z = (e) => {
                     (0, i.jsxs)(l.animated.div, {
                         className: v.iconsContainer,
                         style: {
-                            top: K
+                            top: z
                                 ? D.to({
                                       range: [0, 1],
                                       output: [O.DJ / 2 - O.Z$ / 2, O.jc]
@@ -285,7 +285,7 @@ t.Z = (e) => {
                                 quest: u,
                                 questContentPosition: y,
                                 shouldShowDisclosure: !0,
-                                hideLearnMore: K,
+                                hideLearnMore: z,
                                 showShareLink: !a && Q,
                                 children: (e) =>
                                     (0, i.jsx)(l.animated.div, {

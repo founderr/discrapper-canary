@@ -13,14 +13,14 @@ var r,
     m = n(561654),
     N = n(430824),
     S = n(990492),
-    h = n(823379),
-    g = n(700785),
+    g = n(823379),
+    h = n(700785),
     C = n(999382),
     x = n(981631);
 let p = new Set(),
     R = x.QZA.CLOSED,
-    f = !1,
     L = !1,
+    f = !1,
     O = [],
     A = [],
     M = !1,
@@ -59,8 +59,8 @@ function b(e) {
 function U() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     (s = C.Z.getProps().guild),
-        (f = !1),
         (L = !1),
+        (f = !1),
         (i = void 0),
         p.clear(),
         (R = x.QZA.OPEN),
@@ -86,7 +86,7 @@ function U() {
 }
 let G = u().debounce(() => {
     let e = !1;
-    L && !(L = Z().length > 0) && (e = !0),
+    f && !(f = Z().length > 0) && (e = !0),
         [...p].forEach((t) => {
             u().isEqual(
                 B(t),
@@ -98,9 +98,9 @@ let G = u().debounce(() => {
                 })(t)
             ) && (p.delete(t), (e = !0));
         }),
-        0 === p.size && (f = !1),
+        0 === p.size && (L = !1),
         M && u().isEqual(v, j) && ((e = !0), (M = !1)),
-        e && k.emitChange();
+        e && w.emitChange();
 }, 500);
 function P(e, t) {
     let n = O.indexOf(e);
@@ -109,7 +109,7 @@ function P(e, t) {
         ...e,
         ...t
     };
-    (O[n] = s), (O = [...O]), (f = !0), p.add(s.id), G();
+    (O[n] = s), (O = [...O]), (L = !0), p.add(s.id), G();
 }
 function B(e) {
     return O.find((t) => {
@@ -142,8 +142,8 @@ function y(e) {
                 ? p.delete(e)
                 : (n[s] = t);
         }),
-        0 === p.size && (f = !1),
-        (L = !1),
+        0 === p.size && (L = !1),
+        (f = !1),
         (O = [...n]);
 }
 class F extends (r = E.ZP.Store) {
@@ -151,13 +151,13 @@ class F extends (r = E.ZP.Store) {
         this.waitFor(C.Z, m.Z, N.Z);
     }
     hasChanges() {
-        return f || L || M;
+        return L || f || M;
     }
     get errorMessage() {
         return i;
     }
     get hasSortChanges() {
-        return L;
+        return f;
     }
     get hasRoleConfigurationChanges() {
         return M;
@@ -202,7 +202,7 @@ class F extends (r = E.ZP.Store) {
               writable: !0
           })
         : (l[o] = c);
-let k = new F(
+let w = new F(
     T.Z,
     __OVERLAY__
         ? {}
@@ -213,7 +213,7 @@ let k = new F(
               GUILD_SETTINGS_ROLES_SORT_UPDATE: function (e) {
                   let { roles: t } = e;
                   if (null != O && t.length !== O.length) return !1;
-                  (O = t.map((e) => B(e)).filter(h.lm)), (L = !0), G();
+                  (O = t.map((e) => B(e)).filter(g.lm)), (f = !0), G();
               },
               GUILD_SETTINGS_ROLES_UPDATE_PERMISSIONS: function (e) {
                   let { id: t, flag: n, allow: s } = e,
@@ -230,7 +230,7 @@ let k = new F(
               GUILD_SETTINGS_ROLES_CLEAR_PERMISSIONS: function (e) {
                   let { id: t } = e,
                       n = B(t);
-                  return null != n && P(n, { permissions: g.Hn });
+                  return null != n && P(n, { permissions: h.Hn });
               },
               GUILD_SETTINGS_ROLES_UPDATE_NAME: function (e) {
                   let { id: t, name: n } = e,
@@ -301,7 +301,7 @@ let k = new F(
                   (M = !0), D.add(s.id), j.set(s.id, n), G();
               },
               GUILD_SETTINGS_CLOSE: function () {
-                  (s = null), (A = O = []), v.clear(), p.clear(), j.clear(), (D = new Set()), (f = !1), (L = !1), (M = !1), (R = x.QZA.CLOSED);
+                  (s = null), (A = O = []), v.clear(), p.clear(), j.clear(), (D = new Set()), (L = !1), (f = !1), (M = !1), (R = x.QZA.CLOSED);
               },
               GUILD_ROLE_CREATE: y,
               GUILD_ROLE_UPDATE: y,
@@ -320,4 +320,4 @@ let k = new F(
               }
           }
 );
-t.Z = k;
+t.Z = w;

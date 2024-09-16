@@ -33,10 +33,10 @@ var i,
     I = n(124347),
     m = n(695346),
     T = n(186523),
-    N = n(553826),
-    h = n(506071),
-    C = n(203143),
-    f = n(79390),
+    h = n(553826),
+    N = n(506071),
+    f = n(203143),
+    C = n(79390),
     p = n(839963),
     g = n(294608),
     S = n(65145),
@@ -150,7 +150,7 @@ function D(e) {
         _ = (0, g.$B)(n.style),
         E = !0 === n.isSelected,
         I = r.useCallback(() => {
-            C.Z.handlePollAnswerTapped({
+            f.Z.handlePollAnswerTapped({
                 channelId: u,
                 messageId: d,
                 answerId: n.answerId
@@ -185,13 +185,13 @@ function D(e) {
 function b(e) {
     var t;
     let { attachment: n, className: i } = e,
-        s = (0, h.n)(),
+        s = (0, N.n)(),
         r = m.QK.useSetting();
     return (0, a.jsx)(I.Z, {
         className: i,
         imageClassName: O.attachmentImage,
         src: null != n.proxy_url && '' !== n.proxy_url ? n.proxy_url : n.url,
-        alt: null !== (t = n.description) && void 0 !== t ? t : (0, f.fw)(n.filename),
+        alt: null !== (t = n.description) && void 0 !== t ? t : (0, C.fw)(n.filename),
         responsive: !0,
         width: 212,
         height: 212,
@@ -295,7 +295,7 @@ function k(e) {
             'aria-hidden': !0
         };
     return t
-        ? (0, a.jsx)(N.Z, {
+        ? (0, a.jsx)(h.Z, {
               ...s,
               foreground: O.radioForeground,
               className: i

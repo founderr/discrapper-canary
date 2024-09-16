@@ -21,10 +21,10 @@ var i = n(735250),
     I = n(481060),
     m = n(239091),
     T = n(494404),
-    N = n(724757),
-    h = n(213609),
-    C = n(336197),
-    f = n(294218),
+    h = n(724757),
+    N = n(213609),
+    f = n(336197),
+    C = n(294218),
     p = n(373662),
     g = n(695346),
     S = n(131704),
@@ -53,7 +53,7 @@ function k(e) {
         s = (0, E.e7)([v.Z], () => v.Z.getSavedMessages()),
         a = (0, E.e7)([v.Z], () => v.Z.getOverdueMessageReminderCount());
     return (
-        (0, h.Z)(
+        (0, N.Z)(
             {
                 type: d.ImpressionTypes.POPOUT,
                 name: d.ImpressionNames.FOR_LATER_LIST_VIEWED,
@@ -135,7 +135,7 @@ function G(e) {
 function w(e) {
     let { savedMessages: t, closePopout: n, throttledNow: a } = e,
         r = s.useRef(null),
-        l = (0, N.Z)('for-later', r);
+        l = (0, h.Z)('for-later', r);
     return (0, i.jsx)(_.bG, {
         navigator: l,
         children: (0, i.jsx)(_.SJ, {
@@ -183,7 +183,7 @@ function V(e) {
             (e) => {
                 var i;
                 !e.shiftKey && n(),
-                    (0, C.Z)(j.Z5c.CHANNEL(null == o ? void 0 : o.getGuildId(), t.saveData.channelId, t.saveData.messageId)),
+                    (0, f.Z)(j.Z5c.CHANNEL(null == o ? void 0 : o.getGuildId(), t.saveData.channelId, t.saveData.messageId)),
                     R.default.track(j.rMx.FOR_LATER_SAVED_MESSAGE_JUMP, {
                         channel_id: t.saveData.channelId,
                         message_id: t.saveData.messageId,
@@ -241,7 +241,7 @@ function V(e) {
                       : null,
                   (0, i.jsx)(P.Z, { channel: o }),
                   (0, i.jsx)(
-                      f.Z,
+                      C.Z,
                       {
                           message: t.message,
                           channel: o,

@@ -20,8 +20,8 @@ var l = n(735250),
     x = n(314897),
     E = n(908841),
     _ = n(5192),
-    p = n(379357),
-    v = n(561308),
+    v = n(379357),
+    p = n(561308),
     T = n(256726),
     f = n(206295),
     g = n(551228),
@@ -58,7 +58,7 @@ function O(e) {
                 s = Math.floor((Math.max(a - n, 0) / r) * 100);
             return {
                 seekBarStyles: { width: ''.concat(s, '%') },
-                durationTimestamp: (0, v.T_)({ start: 0 }, r)
+                durationTimestamp: (0, p.T_)({ start: 0 }, r)
             };
         }, [t, i]);
     return null == s
@@ -90,7 +90,7 @@ function R(e) {
         M,
         R,
         { channel: j, entry: w, closePopout: L, onReaction: b, onVoiceChannelPreview: U } = e,
-        { largeImage: D } = (0, p.rv)({ entry: w }),
+        { largeImage: D } = (0, v.rv)({ entry: w }),
         { activity: B, currentEntry: k, artist: F, title: G, user: H } = (0, g.pi)(w),
         { primaryColor: V, secondaryColor: Y } = (0, f.Z)(null == D ? void 0 : D.src),
         z = (0, r.e7)([c.Z, x.default], () => ((null == B ? void 0 : B.type) === P.IIU.LISTENING && null != H ? (0, h.Z)(c.Z, x.default, H, B) : void 0), [B, H], s.Z),
@@ -98,7 +98,7 @@ function R(e) {
             var e;
             if (null == j || null == H) return;
             let t = null === (e = B.timestamps) || void 0 === e ? void 0 : e.start,
-                n = (0, v.T_)(null != t ? { start: t } : w, Date.now());
+                n = (0, p.T_)(null != t ? { start: t } : w, Date.now());
             return (0, T.CR)({
                 user: H,
                 channel: j,
@@ -164,7 +164,7 @@ function R(e) {
                       Icon: E.Z
                   })
                 : null,
-        userDescription: (0, v.kr)(w) ? S.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENING_V2 : S.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENED_V2,
+        userDescription: (0, p.kr)(w) ? S.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENING_V2 : S.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENED_V2,
         title: G,
         onClickTitle: M,
         subtitle: J,

@@ -1,6 +1,6 @@
 n.d(t, {
     M: function () {
-        return A;
+        return Z;
     }
 }),
     n(653041);
@@ -22,30 +22,30 @@ var i = n(735250),
     g = n(906732),
     C = n(424602),
     I = n(243778),
-    x = n(579185),
-    T = n(301076),
-    v = n(981631),
-    S = n(921944),
+    T = n(579185),
+    x = n(301076),
+    S = n(981631),
+    v = n(921944),
     N = n(689938),
-    Z = n(892216);
-function A(e) {
+    A = n(892216);
+function Z(e) {
     let { channel: t, idle: n } = e,
-        A = (0, a.e7)([u.ZP], () => u.ZP.isLaunchingActivity()),
+        Z = (0, a.e7)([u.ZP], () => u.ZP.isLaunchingActivity()),
         M = (0, m.KF)(t.id),
         b = (0, m.g5)(M),
-        R = M !== m.jy.CAN_LAUNCH || A,
-        { isHovered: L, setIsHovered: j, onMouseEnter: P, onMouseLeave: O } = (0, x.Z)(200, 300),
+        R = M !== m.jy.CAN_LAUNCH || Z,
+        { isHovered: L, setIsHovered: j, onMouseEnter: P, onMouseLeave: O } = (0, T.Z)(200, 300),
         y = (0, h.a)(),
         D = (0, d.Z)({ channelId: t.id }),
-        k = !R,
-        U = s.useCallback(
+        U = !R,
+        k = s.useCallback(
             (e) => {
                 'focus' !== e.type && P();
             },
             [P]
         ),
         w = (0, o.O)(),
-        B = (0, c.bp)() === v.IlC.POPOUT,
+        B = (0, c.bp)() === S.IlC.POPOUT,
         { analyticsLocations: H } = (0, g.ZP)(),
         G = H.length > 0 ? H[H.length - 1] : 'open-activity-shelf';
     C.m1.useExperiment({ location: G }, { autoTrackExposure: !0 });
@@ -70,7 +70,7 @@ function A(e) {
             let { visibleContent: s, markAsDismissed: a } = e,
                 o = s === l.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP && !n && !L;
             return (
-                !0 === z.current && !1 === o && a(S.L.AUTO_DISMISS),
+                !0 === z.current && !1 === o && a(v.L.AUTO_DISMISS),
                 z.current !== o && (z.current = o),
                 (0, i.jsx)(r.Popout, {
                     fixed: !0,
@@ -84,7 +84,7 @@ function A(e) {
                     },
                     renderPopout: (e) => {
                         let { closePopout: n, setPopoutRef: s } = e;
-                        return k
+                        return U
                             ? (0, i.jsx)(_.m, {
                                   ref: s,
                                   channel: t,
@@ -92,7 +92,7 @@ function A(e) {
                                   onMouseEnter: P,
                                   onMouseLeave: O,
                                   isHovered: L,
-                                  onClick: () => a(S.L.UNKNOWN)
+                                  onClick: () => a(v.L.UNKNOWN)
                               })
                             : (0, i.jsx)(i.Fragment, {});
                     },
@@ -107,16 +107,16 @@ function A(e) {
                                     children: (e) =>
                                         (0, i.jsx)('div', {
                                             ...e,
-                                            children: (0, i.jsx)(T.Z, {
+                                            children: (0, i.jsx)(x.Z, {
                                                 disabled: R,
                                                 'aria-label': b,
-                                                label: k ? void 0 : b,
+                                                label: U ? void 0 : b,
                                                 isActivityActive: D || L,
-                                                className: Z.controlButton,
+                                                className: A.controlButton,
                                                 onClick: () => {
-                                                    V(), (s === l.z.ACTIVITIES_MINI_SHELF_SPARKLES || s === l.z.ACTIVITY_GDM_ROCKET_SPARKLE || s === l.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES || s === l.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES || s === l.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP) && a(S.L.TAKE_ACTION);
+                                                    V(), (s === l.z.ACTIVITIES_MINI_SHELF_SPARKLES || s === l.z.ACTIVITY_GDM_ROCKET_SPARKLE || s === l.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES || s === l.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES || s === l.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP) && a(v.L.TAKE_ACTION);
                                                 },
-                                                onMouseEnter: U,
+                                                onMouseEnter: k,
                                                 onMouseLeave: O
                                             })
                                         })

@@ -6,13 +6,13 @@ n.d(t, {
         return I;
     },
     P2: function () {
-        return v;
+        return S;
     },
     mw: function () {
         return i;
     },
     z0: function () {
-        return x;
+        return T;
     }
 }),
     n(47120);
@@ -92,13 +92,13 @@ function I(e, t, n) {
             };
     }
 }
-function x(e, t, n) {
+function T(e, t, n) {
     return (function (e, t, n, i) {
         let { addtionalQuery: s, shouldDispatch: l = !1 } = i,
             r = a.useMemo(() => _(e, t, n, s), [e, t, n, s]),
             o = C(r),
             E = (0, u.Z)(r),
-            [x, T] = a.useState({});
+            [T, x] = a.useState({});
         return (
             a.useEffect(() => {
                 if (E !== r) {
@@ -121,7 +121,7 @@ function x(e, t, n) {
                                             messageCount: n.total_results,
                                             lastMessage: i
                                         }),
-                                        T({}),
+                                        x({}),
                                         l)
                                     ) {
                                         var s, o;
@@ -147,7 +147,7 @@ function x(e, t, n) {
                                         messageCount: 0,
                                         lastMessage: null
                                     }),
-                                        T({});
+                                        x({});
                                 }
                             );
                         });
@@ -158,7 +158,7 @@ function x(e, t, n) {
         );
     })(e, t, 'messages', n);
 }
-function T(e, t, n, i) {
+function x(e, t, n, i) {
     let s = a.useMemo(() => _(e, t, n, i, !0), [e, t, n, i]),
         l = C(s),
         r = (0, u.Z)(s);
@@ -168,11 +168,11 @@ function T(e, t, n, i) {
         state: l
     };
 }
-function v(e, t, n) {
+function S(e, t, n) {
     var i, s, l;
-    let { key: r, state: o } = T(e, t, 'messages', n),
-        { key: c, state: u } = T(e, t, 'links', n),
-        { key: h, state: _ } = T(e, t, 'media', n),
+    let { key: r, state: o } = x(e, t, 'messages', n),
+        { key: c, state: u } = x(e, t, 'links', n),
+        { key: h, state: _ } = x(e, t, 'media', n),
         f = a.useMemo(() => I(e, 'all_counts', n), [e, n]),
         E = a.useMemo(
             () => ({
@@ -194,7 +194,7 @@ function v(e, t, n) {
             },
             [c, h, r]
         ),
-        x = a.useCallback(
+        T = a.useCallback(
             (e) => {
                 C({
                     messages: e,
@@ -206,7 +206,7 @@ function v(e, t, n) {
         );
     a.useEffect(() => {
         let e = new d.tJ(t, m.aib.GUILD, f, E);
-        x({
+        T({
             searchTabFetcher: e,
             messageCount: p,
             lastMessage: null
@@ -220,7 +220,7 @@ function v(e, t, n) {
                 t = null;
             }
             if (null == t)
-                x({
+                T({
                     messageCount: 0,
                     lastMessage: null
                 });
@@ -244,13 +244,13 @@ function v(e, t, n) {
                     }
                 });
             }
-            S({});
+            v({});
         });
         return () => {
             e.cancel(), clearTimeout(n);
         };
-    }, [e, t, f, E, x, C]);
-    let [v, S] = a.useState({});
+    }, [e, t, f, E, T, C]);
+    let [S, v] = a.useState({});
     return {
         messagesCount: null !== (i = null == o ? void 0 : o.messageCount) && void 0 !== i ? i : p,
         linksCount: null !== (s = null == u ? void 0 : u.messageCount) && void 0 !== s ? s : p,

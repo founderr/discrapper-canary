@@ -23,12 +23,12 @@ function _(e) {
         E = (0, s.e7)([l.Z], () => l.Z.hasHidden(_.id)),
         g = (0, d.c)(_.id),
         { sortOrder: C, tagFilter: I } = (0, c.H)(_.id),
-        x = (0, s.e7)([o.Z, h.Z], () => !!(o.Z.getThreadIds(_.id, C, I).length > 0) || !!(h.Z.getThreads(_.id, C, I).length > 0) || !1, [_.id, C, I]),
-        T = _.isMediaChannel();
-    if (!f || g || (T && x)) return null;
-    let v = ((t = E), (n = T), t ? (n ? p.Z.Messages.MEDIA_CHANNEL_ADMIN_EDUCATION_SHOW : p.Z.Messages.FORUM_CHANNEL_ONBOARDING_SHOW) : n ? p.Z.Messages.MEDIA_CHANNEL_ADMIN_EDUCATION_HIDE : p.Z.Messages.FORUM_CHANNEL_ONBOARDING_HIDE);
+        T = (0, s.e7)([o.Z, h.Z], () => !!(o.Z.getThreadIds(_.id, C, I).length > 0) || !!(h.Z.getThreads(_.id, C, I).length > 0) || !1, [_.id, C, I]),
+        x = _.isMediaChannel();
+    if (!f || g || (x && T)) return null;
+    let S = ((t = E), (n = x), t ? (n ? p.Z.Messages.MEDIA_CHANNEL_ADMIN_EDUCATION_SHOW : p.Z.Messages.FORUM_CHANNEL_ONBOARDING_SHOW) : n ? p.Z.Messages.MEDIA_CHANNEL_ADMIN_EDUCATION_HIDE : p.Z.Messages.FORUM_CHANNEL_ONBOARDING_HIDE);
     return (0, i.jsx)(m.JO, {
-        tooltip: v,
+        tooltip: S,
         icon: a.CircleInformationIcon,
         onClick: () => r.Z.hideAdminOnboarding(_.id, !E),
         selected: !E

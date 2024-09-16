@@ -17,7 +17,7 @@ var n = t(735250),
     E = t(981631),
     T = t(689938);
 function S() {
-    let e = (0, l.i)(),
+    let e = (0, l.is)(),
         s = o.SE.useSetting().includes(e),
         t = a.useCallback(
             (s) => {

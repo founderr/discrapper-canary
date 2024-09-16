@@ -12,8 +12,8 @@ var r = n(735250),
     o = n(171368),
     s = n(594174),
     c = n(719247),
-    u = n(71585),
-    d = n(146282),
+    d = n(71585),
+    u = n(146282),
     h = n(897674),
     m = n(561308),
     x = n(206583),
@@ -39,8 +39,8 @@ function p(e) {
 }
 function g() {
     var e;
-    let t = (0, a.e7)([d.Z], () => d.Z.getFeed(x.YN.GLOBAL_FEED)),
-        n = (0, a.e7)([d.Z], () => d.Z.getFilters()),
+    let t = (0, a.e7)([u.Z], () => u.Z.getFeed(x.YN.GLOBAL_FEED)),
+        n = (0, a.e7)([u.Z], () => u.Z.getFilters()),
         i = (0, a.cj)(
             [c.Z],
             () => {
@@ -51,7 +51,7 @@ function g() {
             },
             [t]
         ),
-        o = (0, a.e7)([u.Z], () => u.Z.getImpressionCappedItemIds());
+        o = (0, a.e7)([d.Z], () => d.Z.getImpressionCappedItemIds());
     if (null == n) return null;
     let s =
         null == t

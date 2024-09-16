@@ -24,13 +24,13 @@ var i = n(735250),
     g = n(255269),
     C = n(937889),
     I = n(703656),
-    x = n(359110),
-    T = n(695346),
-    v = n(131704),
-    S = n(592125),
+    T = n(359110),
+    x = n(695346),
+    S = n(131704),
+    v = n(592125),
     N = n(430824),
-    Z = n(496675),
-    A = n(699516),
+    A = n(496675),
+    Z = n(699516),
     M = n(768119),
     b = n(944486),
     R = n(594174),
@@ -42,14 +42,14 @@ var i = n(735250),
 function D(e) {
     var t;
     let { search: n, searchId: a, renderEmbeds: l, scrollTo: p, searchResults: _, blockCount: f, onChangePage: E } = e,
-        { offset: g, totalResults: C, isSearching: x, showBlockedResults: T } = n,
-        v = s.useCallback(
+        { offset: g, totalResults: C, isSearching: T, showBlockedResults: x } = n,
+        S = s.useCallback(
             (e) => {
-                if (x) return;
+                if (T) return;
                 let t = e - 1;
                 null == E || E(t), d.oO(a, t);
             },
-            [a, x, E]
+            [a, T, E]
         ),
         N = s.useCallback(
             (e) => {
@@ -60,21 +60,21 @@ function D(e) {
                         confirmText: O.Z.Messages.OKAY
                     });
                 else {
-                    let t = S.Z.getChannel(e.channel_id),
+                    let t = v.Z.getChannel(e.channel_id),
                         n = null != t ? t.getGuildId() : null;
                     u.Z.trackJump(e.channel_id, e.id, 'Search Results', { search_id: M.Z.getAnalyticsId(a) }), (0, I.uL)(P.Z5c.CHANNEL(n, e.channel_id, e.id));
                 }
             },
             [a]
         ),
-        Z = s.useMemo(() => {
+        A = s.useMemo(() => {
             let e;
             if (null == _) return [];
             let t = 0;
             return _.reduce((n, i) => {
                 let s = i.find((e) => e.isSearchHit);
-                if (!T && null != s && A.Z.isBlockedForMessage(s)) return n;
-                let a = S.Z.getChannel(i[0].channel_id);
+                if (!x && null != s && Z.Z.isBlockedForMessage(s)) return n;
+                let a = v.Z.getChannel(i[0].channel_id);
                 return null == a
                     ? n
                     : ((null == e || e !== a.id) &&
@@ -88,9 +88,9 @@ function D(e) {
                       (e = null == a ? void 0 : a.id),
                       n);
             }, []);
-        }, [_, T]),
+        }, [_, x]),
         b = s.useRef([]),
-        R = Z.reduce((e, t) => e + 1 + t.results.length, 0),
+        R = A.reduce((e, t) => e + 1 + t.results.length, 0),
         j = s.useCallback(
             (e, t) => {
                 if (!m.Z.keyboardModeEnabled) return;
@@ -109,7 +109,7 @@ function D(e) {
             let t = b.current[e];
             null == t || t.jumpTo();
         }, []),
-        k = (0, r.ZP)({
+        U = (0, r.ZP)({
             navId: 'search-results',
             itemCount: R,
             focusedIndex: 0,
@@ -119,10 +119,10 @@ function D(e) {
         w = M.Z.getQuery(a),
         B = M.Z.getSearchType(a) === P.aib.FAVORITES,
         H = (0, h.nC)(null !== (t = null == w ? void 0 : w.content) && void 0 !== t ? t : ''),
-        G = Z.map((e) => {
+        G = A.map((e) => {
             let { channel: t, results: n, startIndex: s } = e;
             return (0, i.jsx)(
-                U,
+                k,
                 {
                     channel: t,
                     results: n,
@@ -135,7 +135,7 @@ function D(e) {
                     renderEmbeds: l,
                     offset: g,
                     jumpToMessage: N,
-                    listNavigator: k,
+                    listNavigator: U,
                     favoriteSearch: B
                 },
                 ''.concat(t.id, '-').concat(s)
@@ -152,29 +152,29 @@ function D(e) {
         children: [
             (0, i.jsx)('div', {
                 ref: V,
-                ...k.getContainerProps(),
+                ...U.getContainerProps(),
                 ...F,
-                'aria-busy': x,
+                'aria-busy': T,
                 children: G
             }),
             f > 0
                 ? (0, i.jsxs)(o.Clickable, {
                       tag: 'div',
                       className: y.resultsBlocked,
-                      onClick: () => d.QY(a, !T),
+                      onClick: () => d.QY(a, !x),
                       children: [
                           (0, i.jsx)('div', { className: y.resultsBlockedImage }),
                           (0, i.jsx)('div', {
                               className: y.__invalid_resultsBlockedText,
-                              children: T ? O.Z.Messages.SEARCH_HIDE_BLOCKED_MESSAGES.format({ count: f }) : O.Z.Messages.SEARCH_NUM_RESULTS_BLOCKED_NOT_SHOWN.format({ count: f })
+                              children: x ? O.Z.Messages.SEARCH_HIDE_BLOCKED_MESSAGES.format({ count: f }) : O.Z.Messages.SEARCH_NUM_RESULTS_BLOCKED_NOT_SHOWN.format({ count: f })
                           })
                       ]
                   })
                 : null,
-            !x &&
+            !T &&
                 !B &&
                 (0, i.jsx)(L.Z, {
-                    changePage: v,
+                    changePage: S,
                     offset: g,
                     totalResults: C,
                     pageLength: P.vpv
@@ -182,7 +182,7 @@ function D(e) {
         ]
     });
 }
-function k(e) {
+function U(e) {
     let { parentChannel: t, onSelectChannel: n } = e;
     if ((null == t ? void 0 : t.name) == null) return null;
     let s = null != t ? (0, _.KS)(t) : null;
@@ -202,7 +202,7 @@ function k(e) {
             })
         ]
     });
-    return (0, v.Em)(t.type)
+    return (0, S.Em)(t.type)
         ? (0, i.jsx)(o.Clickable, {
               className: l()(y.parentChannelName, y.parentChannelNameClickable),
               onClick: (e) => {
@@ -215,22 +215,22 @@ function k(e) {
               children: a
           });
 }
-function U(e) {
+function k(e) {
     var t, n, a;
-    let { channel: l, results: r, highlighter: c, startIndex: u, resultRefs: d, totalResults: h, scrollTo: m, searchId: I, renderEmbeds: v, offset: M, jumpToMessage: L, listNavigator: O, favoriteSearch: D } = e,
-        U = T.cC.useSetting(),
+    let { channel: l, results: r, highlighter: c, startIndex: u, resultRefs: d, totalResults: h, scrollTo: m, searchId: I, renderEmbeds: S, offset: M, jumpToMessage: L, listNavigator: O, favoriteSearch: D } = e,
+        k = x.cC.useSetting(),
         w = (0, E.p)(),
         B = s.useCallback((e) => {
             if (e === b.Z.getChannelId()) return;
-            let t = S.Z.getChannel(e);
-            if (null != t && !!Z.Z.can(P.Plq.VIEW_CHANNEL, t)) (0, x.Kh)(t.id);
+            let t = v.Z.getChannel(e);
+            if (null != t && !!A.Z.can(P.Plq.VIEW_CHANNEL, t)) (0, T.Kh)(t.id);
         }, []),
-        H = null != l ? (0, p.F6)(l, R.default, A.Z, !1) : '???',
+        H = null != l ? (0, p.F6)(l, R.default, Z.Z, !1) : '???',
         G = D && null != l.guild_id ? (null === (t = N.Z.getGuild(l.guild_id)) || void 0 === t ? void 0 : t.name) : null,
-        V = (null == l ? void 0 : l.parent_id) != null ? S.Z.getChannel(l.parent_id) : null,
+        V = (null == l ? void 0 : l.parent_id) != null ? v.Z.getChannel(l.parent_id) : null,
         F = null !== (n = null == V ? void 0 : V.name) && void 0 !== n ? n : null,
         W = null !== (a = (0, _.KS)(l)) && void 0 !== a ? a : o.TextIcon,
-        z = Z.Z.can(P.Plq.MANAGE_MESSAGES, l),
+        z = A.Z.can(P.Plq.MANAGE_MESSAGES, l),
         { content: Y } = (0, C.ZP)(
             {
                 content: H,
@@ -249,7 +249,7 @@ function U(e) {
     }, []);
     let J = [H, F, G].filter((e) => null != e).join(', ');
     return (0, i.jsx)(f.a.Provider, {
-        value: (0, g.Z)(U, z),
+        value: (0, g.Z)(k, z),
         children: (0, i.jsxs)('ul', {
             role: 'group',
             className: y.searchResultGroup,
@@ -276,7 +276,7 @@ function U(e) {
                                         children: [D && null !== G && ''.concat(G, ' : '), Y]
                                     })
                             }),
-                            (0, i.jsx)(k, {
+                            (0, i.jsx)(U, {
                                 parentChannel: V,
                                 onSelectChannel: B
                             })
@@ -292,7 +292,7 @@ function U(e) {
                             totalResults: h,
                             scrollTo: m,
                             searchId: I,
-                            renderEmbeds: v,
+                            renderEmbeds: S,
                             searchOffset: M,
                             pageResultsLength: r.length,
                             result: e,

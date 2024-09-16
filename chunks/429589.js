@@ -18,8 +18,8 @@ var l = n(735250),
     x = n(592745),
     E = n(592125),
     _ = n(757266),
-    p = n(650774),
-    v = n(430824),
+    v = n(650774),
+    p = n(430824),
     T = n(283595),
     f = n(496675),
     g = n(699516),
@@ -81,7 +81,7 @@ function k(e) {
             channelId: Q,
             application: el
         }),
-        ei = (0, i.e7)([E.Z, v.Z, p.Z, g.Z, I.Z, N.Z, f.Z], () =>
+        ei = (0, i.e7)([E.Z, p.Z, v.Z, g.Z, I.Z, N.Z, f.Z], () =>
             null != F
                 ? ea === j.Fw.CAN_JOIN
                 : null != k
@@ -93,8 +93,8 @@ function k(e) {
                         currentUser: K,
                         isEmbedded: V,
                         ChannelStore: E.Z,
-                        GuildStore: v.Z,
-                        GuildMemberCountStore: p.Z,
+                        GuildStore: p.Z,
+                        GuildMemberCountStore: v.Z,
                         RelationshipStore: g.Z,
                         SelectedChannelStore: I.Z,
                         VoiceStateStore: N.Z,

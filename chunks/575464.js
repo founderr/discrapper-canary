@@ -17,9 +17,9 @@ var s = n(120356),
     m = n(51144),
     p = n(611782);
 function _(e) {
-    let { user: t, row: n, hideDiscriminator: s, comparator: _, selected: f, checked: E, onClick: g, onMouseEnter: C, 'aria-setsize': I, 'aria-posinset': x } = e,
-        T = (0, r.e7)([h.Z], () => h.Z.getStatus(t.id)),
-        v = (0, l.JA)(String(t.id));
+    let { user: t, row: n, hideDiscriminator: s, comparator: _, selected: f, checked: E, onClick: g, onMouseEnter: C, 'aria-setsize': I, 'aria-posinset': T } = e,
+        x = (0, r.e7)([h.Z], () => h.Z.getStatus(t.id)),
+        S = (0, l.JA)(String(t.id));
     return (0, i.jsx)(o.Clickable, {
         id: 'user-row-'.concat(n),
         className: p.friendWrapper,
@@ -29,18 +29,18 @@ function _(e) {
         onMouseEnter: () => {
             null != C && C(n);
         },
-        ...v,
+        ...S,
         role: 'option',
         'aria-selected': E,
         'aria-setsize': I,
-        'aria-posinset': x,
+        'aria-posinset': T,
         children: (0, i.jsxs)(d.Z, {
             align: d.Z.Align.CENTER,
             className: a()(p.friend, { [p.friendSelected]: f }),
             children: [
                 (0, i.jsx)(u.Z, {
                     user: t,
-                    status: T,
+                    status: x,
                     className: p.avatar
                 }),
                 (0, i.jsxs)(d.Z, {

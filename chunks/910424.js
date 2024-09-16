@@ -22,7 +22,7 @@ var s = n(442837),
     E = n(511292);
 function g(e) {
     let { isCurrentUser: t, color: n, look: g, applicationStream: C, onAction: I } = e,
-        { activeStream: x, watchingOtherStream: T } = (0, s.cj)([d.Z], () => ({
+        { activeStream: T, watchingOtherStream: x } = (0, s.cj)([d.Z], () => ({
             activeStream: d.Z.getActiveStreamForApplicationStream(C),
             watchingOtherStream:
                 null != C &&
@@ -31,16 +31,16 @@ function g(e) {
                     return t !== C.ownerId;
                 }).length > 0
         })),
-        v = (0, s.e7)([h.Z], () => h.Z.getChannel(null == C ? void 0 : C.channelId)),
-        [S, N] = (0, u.wq)(v),
-        Z = (0, c.Aq)(),
-        A = null != x && null != C && x.state !== _.jm8.ENDED && x.ownerId === C.ownerId,
+        S = (0, s.e7)([h.Z], () => h.Z.getChannel(null == C ? void 0 : C.channelId)),
+        [v, N] = (0, u.wq)(S),
+        A = (0, c.Aq)(),
+        Z = null != T && null != C && T.state !== _.jm8.ENDED && T.ownerId === C.ownerId,
         M = (e) => {
-            if (null != C) null == I || I(), r.default.selectVoiceChannel(C.channelId), !A && (0, o.iV)(C, { forceMultiple: e }), Z.dispatch(_.CkL.POPOUT_CLOSE), m.S.dispatch(_.CkL.MODAL_CLOSE), l.Z.popAll();
+            if (null != C) null == I || I(), r.default.selectVoiceChannel(C.channelId), !Z && (0, o.iV)(C, { forceMultiple: e }), A.dispatch(_.CkL.POPOUT_CLOSE), m.S.dispatch(_.CkL.MODAL_CLOSE), l.Z.popAll();
         };
     if (null == C) return null;
     let b = (0, u.P9)(N);
-    t ? (b = f.Z.Messages.WATCH_STREAM_STREAMING) : A && (b = f.Z.Messages.WATCH_STREAM_WATCHING);
+    t ? (b = f.Z.Messages.WATCH_STREAM_STREAMING) : Z && (b = f.Z.Messages.WATCH_STREAM_WATCHING);
     let R = {
         color: n,
         look: g
@@ -50,7 +50,7 @@ function g(e) {
             (0, i.jsxs)(
                 p.Z,
                 {
-                    disabled: t || A || !S,
+                    disabled: t || Z || !v,
                     onClick: () => M(!1),
                     ...R,
                     fullWidth: !0,
@@ -65,7 +65,7 @@ function g(e) {
                 },
                 'play'
             ),
-            T && !A
+            x && !Z
                 ? (0, i.jsx)(a.Tooltip, {
                       text: f.Z.Messages.STREAM_WATCH_MULTIPLE_TOOLTIP,
                       children: (e) =>

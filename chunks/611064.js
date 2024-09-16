@@ -24,7 +24,7 @@ t.Z = s.memo(function (e) {
     let t,
         { title: h, onToggleExpand: E, expanded: g, expandedCount: C } = e,
         I = (0, a.e7)([u.Z], () => u.Z.hidden),
-        x = s.useCallback((e) => {
+        T = s.useCallback((e) => {
             (0, r.jW)(e, async () => {
                 let { MemberListContentSettingsMenu: e } = await Promise.resolve().then(n.bind(n, 703180));
                 return () => (0, i.jsx)(e, { closePopout: r.Zy });
@@ -43,7 +43,7 @@ t.Z = s.memo(function (e) {
                 onClick: (e) => {
                     if (e.currentTarget === e.target || e.currentTarget.contains(e.target)) return I ? (0, c.lY)() : C > 3 ? E() : (0, m.dG4)();
                 },
-                onContextMenu: x,
+                onContextMenu: T,
                 tag: 'span',
                 'aria-hidden': !0,
                 className: _.headerContainer,

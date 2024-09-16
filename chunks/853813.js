@@ -19,14 +19,14 @@ var s = n(735250),
     m = n(946724),
     N = n(999382),
     S = n(130341),
-    h = n(981975),
-    g = n(660962),
+    g = n(981975),
+    h = n(660962),
     C = n(442182),
     x = n(322816),
     p = n(266665),
     R = n(203377),
-    f = n(981631),
-    L = n(77473);
+    L = n(981631),
+    f = n(77473);
 function O(e) {
     let t,
         { editRoleId: n, setEditRoleId: i, selectedSection: O, setSelectedSection: A } = e,
@@ -52,7 +52,7 @@ function O(e) {
             var e, t;
             let s = (0, S.UT)(O),
                 a = null !== (t = null === (e = T.Z.getRoleMemberCount(M.id)) || void 0 === e ? void 0 : e[n]) && void 0 !== t ? t : 0;
-            I.default.track(f.rMx.ROLE_PAGE_VIEWED, {
+            I.default.track(L.rMx.ROLE_PAGE_VIEWED, {
                 tab_opened: s,
                 is_everyone: (0, d.pM)(M.id, n),
                 role_id: n,
@@ -71,7 +71,7 @@ function O(e) {
         return null;
     switch (O) {
         case R.ZI.DISPLAY:
-            t = (0, s.jsx)(g.ZP, {
+            t = (0, s.jsx)(h.ZP, {
                 guild: M,
                 role: D,
                 locked: Z,
@@ -89,7 +89,7 @@ function O(e) {
             });
             break;
         case R.ZI.VERIFICATIONS:
-            t = (0, s.jsx)(h.Z, {
+            t = (0, s.jsx)(g.Z, {
                 guild: M,
                 role: D,
                 locked: Z,
@@ -109,7 +109,7 @@ function O(e) {
             (0, E.vE)(O);
     }
     return (0, s.jsxs)(o.FormSection, {
-        className: L.page,
+        className: f.page,
         children: [
             (0, s.jsx)(p.Z, {
                 guild: M,
@@ -118,7 +118,7 @@ function O(e) {
                 setSelectedSection: A
             }),
             (0, s.jsx)('div', {
-                className: L.contentContainer,
+                className: f.contentContainer,
                 ref: b,
                 children: (0, s.jsx)(o.FocusRingScope, {
                     containerRef: b,

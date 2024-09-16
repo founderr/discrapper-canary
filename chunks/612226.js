@@ -111,7 +111,7 @@ let x = {
     [V.EkH.MARK_SERVER_READ]: A.l,
     [V.EkH.TOGGLE_CHANNEL_PINS]: M.u,
     [V.EkH.TOGGLE_FOR_LATER]: b.f,
-    [V.EkH.TOGGLE_INBOX_UNREADS_TAB]: m.P,
+    [V.EkH.TOGGLE_INBOX]: m.a,
     [V.EkH.MARK_TOP_INBOX_CHANNEL_READ]: m.M,
     [V.EkH.TOGGLE_USERS]: k.r,
     [V.EkH.TOGGLE_HELP]: U.O,
@@ -233,7 +233,7 @@ function X() {
         },
         {
             description: F.Z.Messages.KEYBIND_DESCRIPTION_MODAL_TOGGLE_INBOX,
-            binds: W(V.EkH.TOGGLE_INBOX_UNREADS_TAB),
+            binds: W(V.EkH.TOGGLE_INBOX),
             group: 'CHAT'
         },
         {

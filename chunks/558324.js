@@ -9,7 +9,7 @@ var s = n(735250),
 t.Z = (e) => {
     let { className: t, tags: n, value: i, onRemoveTag: d, onAddTag: u, maxTaxLength: _, maxTags: I, disabled: E, placeholder: T, ...m } = e,
         [N, S] = a.useState(null != i ? i : ''),
-        h = n.map((e, t) =>
+        g = n.map((e, t) =>
             (0, s.jsxs)(
                 'span',
                 {
@@ -31,7 +31,7 @@ t.Z = (e) => {
                 t
             )
         ),
-        g = a.useCallback(() => {
+        h = a.useCallback(() => {
             let e = N.trim();
             if (0 !== e.length) (null == I || !(n.length >= I)) && (u(e), S(''));
         }, [N, I, u, n.length]),
@@ -44,15 +44,15 @@ t.Z = (e) => {
                     case o.yXg.ENTER:
                     case o.yXg.TAB:
                     case o.yXg.COMMA:
-                        e.preventDefault(), e.stopPropagation(), g();
+                        e.preventDefault(), e.stopPropagation(), h();
                 }
             },
-            [g, N.length, d, n.length]
+            [h, N.length, d, n.length]
         );
     return (0, s.jsxs)('div', {
         className: r()(t, c.inputWrapper, { [c.disabled]: E }),
         children: [
-            h,
+            g,
             (0, s.jsx)(l.TextInput, {
                 className: c.inputOuter,
                 inputClassName: c.inputInner,
@@ -62,7 +62,7 @@ t.Z = (e) => {
                 onChange: S,
                 maxLength: _,
                 disabled: E,
-                onBlur: g,
+                onBlur: h,
                 placeholder: T
             })
         ]

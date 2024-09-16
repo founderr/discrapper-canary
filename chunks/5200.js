@@ -1,6 +1,6 @@
 n.d(t, {
     Y: function () {
-        return x;
+        return T;
     }
 }),
     n(47120);
@@ -25,13 +25,13 @@ let C = ['embedded_cover'],
         tension: 800,
         friction: 24
     };
-function x(e) {
+function T(e) {
     var t;
-    let { channel: n, activityItem: i, onClick: s, aspectRatio: r = 0, animatedDivClass: x } = e,
+    let { channel: n, activityItem: i, onClick: s, aspectRatio: r = 0, animatedDivClass: T } = e,
         {
-            onActivityItemSelected: T,
-            imageBackground: v,
-            activityAction: S,
+            onActivityItemSelected: x,
+            imageBackground: S,
+            activityAction: v,
             labelType: N
         } = (0, h.ZP)({
             channel: n,
@@ -43,13 +43,13 @@ function x(e) {
             assetNames: C,
             commandOrigin: d.bB.VOICE_UI
         }),
-        [Z, A] = l.useState(!1),
+        [A, Z] = l.useState(!1),
         M = l.useCallback(() => {
-            A(!0);
-        }, [A]),
+            Z(!0);
+        }, [Z]),
         b = l.useCallback(() => {
-            A(!1);
-        }, [A]),
+            Z(!1);
+        }, [Z]),
         R = l.useMemo(
             () =>
                 (0, a.jsx)('div', {
@@ -65,7 +65,7 @@ function x(e) {
             [i.application.name, N]
         ),
         L = l.useMemo(() => {
-            switch (S) {
+            switch (v) {
                 case h.JS.JOIN:
                     return (0, a.jsx)('div', {
                         className: g.activityAction,
@@ -94,9 +94,9 @@ function x(e) {
                 default:
                     return (0, a.jsx)(a.Fragment, {});
             }
-        }, [S]);
+        }, [v]);
     return (0, a.jsx)(u.Button, {
-        onClick: T,
+        onClick: x,
         color: 'transparent',
         look: u.Button.Looks.BLANK,
         size: u.Button.Sizes.NONE,
@@ -108,14 +108,14 @@ function x(e) {
         children: (0, a.jsx)(u.Spring, {
             config: I,
             from: { value: 0 },
-            to: { value: Z ? 1 : 0 },
+            to: { value: A ? 1 : 0 },
             children: (e) => {
                 let { value: t } = e;
                 return (0, a.jsx)(u.ThemeProvider, {
                     theme: f.BRd.DARK,
                     children: (e) =>
                         (0, a.jsx)(c.animated.div, {
-                            className: o()(e, g.activityItem, x, {
+                            className: o()(e, g.activityItem, T, {
                                 [g.activityItem_13_11]: 0 === r,
                                 [g.activityItem_16_9]: 1 === r
                             }),
@@ -125,7 +125,7 @@ function x(e) {
                             children: (0, a.jsxs)(a.Fragment, {
                                 children: [
                                     (0, a.jsx)(m.Z, {
-                                        imageBackground: v,
+                                        imageBackground: S,
                                         applicationName: i.application.name,
                                         imageClassName: g.activitySuggestionImage,
                                         imageNotFoundClassName: g.brokenImageIconWrapper
@@ -140,4 +140,4 @@ function x(e) {
         })
     });
 }
-((s = i || (i = {}))[(s.THIRTEEN_BY_ELEVEN = 0)] = 'THIRTEEN_BY_ELEVEN'), (s[(s.SIXTEEN_BY_NINE = 1)] = 'SIXTEEN_BY_NINE'), (x.AspectRatio = i);
+((s = i || (i = {}))[(s.THIRTEEN_BY_ELEVEN = 0)] = 'THIRTEEN_BY_ELEVEN'), (s[(s.SIXTEEN_BY_NINE = 1)] = 'SIXTEEN_BY_NINE'), (T.AspectRatio = i);

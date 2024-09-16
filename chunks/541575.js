@@ -15,9 +15,9 @@ var a = n(780384),
     m = n(689938),
     N = n(691440);
 t.Z = function (e) {
-    let { guild: t, disabled: S, role: h } = e,
-        g = (0, r.ZP)(),
-        C = (0, u.oC)(t.id, h),
+    let { guild: t, disabled: S, role: g } = e,
+        h = (0, r.ZP)(),
+        C = (0, u.oC)(t.id, g),
         { analyticsLocations: x } = (0, o.ZP)(),
         p = () => {
             (0, i.openModalLazy)(async () => {
@@ -26,13 +26,13 @@ t.Z = function (e) {
                     (0, s.jsx)(e, {
                         ...n,
                         guildId: t.id,
-                        onUploadIcon: (e) => (0, I._l)(h.id, e, null),
-                        onSelectUnicodeEmoji: (e) => (0, I._l)(h.id, null, e)
+                        onUploadIcon: (e) => (0, I._l)(g.id, e, null),
+                        onSelectUnicodeEmoji: (e) => (0, I._l)(g.id, null, e)
                     });
             });
         },
         R = t.features.has(E.oNc.ROLE_ICONS),
-        f = (e) => {
+        L = (e) => {
             !R &&
                 ((0, l.yw)(E.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
                     location: {
@@ -53,14 +53,14 @@ t.Z = function (e) {
                     perks: (0, T.Yp)()
                 }));
         },
-        L = (0, s.jsx)(d.Z, {
+        f = (0, s.jsx)(d.Z, {
             className: N.availabilityIndicator,
             guild: t,
             guildFeature: E.oNc.ROLE_ICONS,
             tooltipPosition: 'top',
             hideTooltip: R,
             onClick: () =>
-                f({
+                L({
                     object: E.qAy.LEARN_MORE,
                     objectType: E.Qqv.TIER_2
                 })
@@ -70,7 +70,7 @@ t.Z = function (e) {
         children: [
             (0, s.jsxs)(i.FormTitle, {
                 className: N.formTitle,
-                children: [(0, s.jsx)('div', { children: m.Z.Messages.FORM_LABEL_ROLE_ICON }), L]
+                children: [(0, s.jsx)('div', { children: m.Z.Messages.FORM_LABEL_ROLE_ICON }), f]
             }),
             (0, s.jsx)(i.FormText, {
                 className: N.description,
@@ -98,19 +98,19 @@ t.Z = function (e) {
                     }),
                     (0, s.jsx)(i.Button, {
                         className: N.button,
-                        color: (0, a.ap)(g) ? i.Button.Colors.PRIMARY : i.Button.Colors.WHITE,
+                        color: (0, a.ap)(h) ? i.Button.Colors.PRIMARY : i.Button.Colors.WHITE,
                         look: i.Button.Looks.OUTLINED,
-                        onClick: () => (t.hasFeature(E.oNc.ROLE_ICONS) ? p() : f({ object: E.qAy.UPLOAD_IMAGE })),
+                        onClick: () => (t.hasFeature(E.oNc.ROLE_ICONS) ? p() : L({ object: E.qAy.UPLOAD_IMAGE })),
                         disabled: S,
                         children: m.Z.Messages.ROLE_ICON_CHOOSE_IMAGE
                     }),
                     null != C
                         ? (0, s.jsx)(i.Button, {
                               className: N.button,
-                              color: (0, a.ap)(g) ? i.Button.Colors.PRIMARY : i.Button.Colors.TRANSPARENT,
+                              color: (0, a.ap)(h) ? i.Button.Colors.PRIMARY : i.Button.Colors.TRANSPARENT,
                               look: i.Button.Looks.BLANK,
                               onClick: () => {
-                                  (0, I._l)(h.id, null, null);
+                                  (0, I._l)(g.id, null, null);
                               },
                               disabled: S,
                               children: m.Z.Messages.REMOVE_ICON

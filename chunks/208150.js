@@ -15,8 +15,8 @@ var a = n(442837),
     m = n(999382),
     N = n(981631),
     S = n(611480),
-    h = n(689938),
-    g = n(580765);
+    g = n(689938),
+    h = n(580765);
 let C = {
         page: N.ZY5.GUILD_SETTINGS,
         section: N.jXE.GUILD_SETTINGS_STICKERS,
@@ -27,24 +27,24 @@ let C = {
             { analyticsLocations: n } = (0, l.ZP)(),
             a = (0, E.vn)(t.id)[N.Eu4.TIER_1] - t.premiumSubscriberCount;
         return (0, s.jsxs)('div', {
-            className: g.upsellContainer,
+            className: h.upsellContainer,
             children: [
                 (0, s.jsx)(i.Heading, {
-                    className: g.upsellHeader,
+                    className: h.upsellHeader,
                     variant: 'heading-xl/semibold',
-                    children: h.Z.Messages.GUILD_SETTINGS_STICKERS_UPSELL_TITLE
+                    children: g.Z.Messages.GUILD_SETTINGS_STICKERS_UPSELL_TITLE
                 }),
                 (0, s.jsx)(i.Text, {
-                    className: g.upsellDescription,
+                    className: h.upsellDescription,
                     variant: 'text-md/normal',
-                    children: h.Z.Messages.GUILD_SETTINGS_STICKERS_UPSELL_DESCRIPTION_FREE_SLOTS
+                    children: g.Z.Messages.GUILD_SETTINGS_STICKERS_UPSELL_DESCRIPTION_FREE_SLOTS
                 }),
                 (0, s.jsxs)('div', {
-                    className: g.upsellButtons,
+                    className: h.upsellButtons,
                     children: [
                         (0, s.jsx)(i.Button, {
-                            className: g.upsellButtonPrimary,
-                            innerClassName: g.upsellButton,
+                            className: h.upsellButtonPrimary,
+                            innerClassName: h.upsellButton,
                             color: i.Button.Colors.WHITE,
                             onClick: () =>
                                 (0, d.Z)({
@@ -53,17 +53,17 @@ let C = {
                                     guildId: t.id,
                                     totalNumberOfSlotsToAssign: a
                                 }),
-                            children: h.Z.Messages.GUILD_SETTINGS_STICKERS_BOOST_SERVER
+                            children: g.Z.Messages.GUILD_SETTINGS_STICKERS_BOOST_SERVER
                         }),
                         (0, s.jsx)(i.Button, {
-                            innerClassName: g.upsellButton,
+                            innerClassName: h.upsellButton,
                             color: i.Button.Colors.WHITE,
                             onClick: () =>
                                 (0, o.f)({
                                     guildId: t.id,
                                     location: { section: N.jXE.GUILD_SETTINGS_STICKERS }
                                 }),
-                            children: h.Z.Messages.LEARN_MORE
+                            children: g.Z.Messages.LEARN_MORE
                         })
                     ]
                 })
@@ -72,15 +72,15 @@ let C = {
     },
     p = () =>
         (0, s.jsxs)(i.FormSection, {
-            title: h.Z.Messages.GUILD_SETTINGS_STICKERS_UPLOAD_AUTO_RESIZE_HEADING,
+            title: g.Z.Messages.GUILD_SETTINGS_STICKERS_UPLOAD_AUTO_RESIZE_HEADING,
             children: [
                 (0, s.jsx)(i.FormText, {
                     type: i.FormTextTypes.DESCRIPTION,
-                    children: h.Z.Messages.GUILD_SETTINGS_STICKERS_UPLOAD_AUTO_RESIZE_INSTRUCTIONS.format({ fileSize: (0, I.IC)(S.Ht, { useKibibytes: !0 }) })
+                    children: g.Z.Messages.GUILD_SETTINGS_STICKERS_UPLOAD_AUTO_RESIZE_INSTRUCTIONS.format({ fileSize: (0, I.IC)(S.Ht, { useKibibytes: !0 }) })
                 }),
                 (0, s.jsx)(i.FormText, {
                     type: i.FormTextTypes.DESCRIPTION,
-                    children: h.Z.Messages.GUILD_SETTINGS_STICKERS_UPLOAD_AUTO_RESIZE_HELP.format({ articleUrl: T.Z.getArticleURL(N.BhN.STICKERS_UPLOAD) })
+                    children: g.Z.Messages.GUILD_SETTINGS_STICKERS_UPLOAD_AUTO_RESIZE_HELP.format({ articleUrl: T.Z.getArticleURL(N.BhN.STICKERS_UPLOAD) })
                 })
             ]
         }),
@@ -97,9 +97,9 @@ let C = {
         return null == d || l === N.Eu4.TIER_3 || o > 0
             ? (0, s.jsx)(s.Fragment, {})
             : (_ > u
-                  ? ((t = h.Z.Messages.GUILD_SETTINGS_STICKERS_UPSELL_BANNER_TOO_MANY_STICKERS_HEADER.format({ level: d })), (n = h.Z.Messages.GUILD_SETTINGS_STICKERS_UPSELL_BANNER_TOO_MANY_STICKERS_TEXT.format({ level: d })), (a = N.qAy.BOOST_UPSELL_BANNER_LOST_LEVEL))
-                  : ((t = h.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_BANNER_HEADER),
-                    (n = h.Z.Messages.GUILD_SETTINGS_STICKERS_UPSELL_BANNER_TEXT.format({
+                  ? ((t = g.Z.Messages.GUILD_SETTINGS_STICKERS_UPSELL_BANNER_TOO_MANY_STICKERS_HEADER.format({ level: d })), (n = g.Z.Messages.GUILD_SETTINGS_STICKERS_UPSELL_BANNER_TOO_MANY_STICKERS_TEXT.format({ level: d })), (a = N.qAy.BOOST_UPSELL_BANNER_LOST_LEVEL))
+                  : ((t = g.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_BANNER_HEADER),
+                    (n = g.Z.Messages.GUILD_SETTINGS_STICKERS_UPSELL_BANNER_TEXT.format({
                         level: d,
                         numAdditional: (0, E.ig)(d)
                     })),
@@ -132,7 +132,7 @@ t.Z = () => {
     return (0, s.jsx)(l.Gt, {
         value: n,
         children: (0, s.jsxs)(i.FormSection, {
-            title: h.Z.Messages.GUILD_SETTINGS_STICKERS,
+            title: g.Z.Messages.GUILD_SETTINGS_STICKERS,
             tag: i.FormTitleTags.H1,
             children: [
                 o
@@ -146,7 +146,7 @@ t.Z = () => {
                           ]
                       })
                     : (0, s.jsx)(x, { guild: e }),
-                (0, s.jsx)(i.FormDivider, { className: g.divider }),
+                (0, s.jsx)(i.FormDivider, { className: h.divider }),
                 (0, s.jsx)(_.Z, { guild: e })
             ]
         })

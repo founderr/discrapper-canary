@@ -22,9 +22,9 @@ function E(e, t, n, E) {
     let g = (0, l.useToken)(a.Z.unsafe_rawColors.BRAND_500).hex(),
         C = (0, l.useToken)(a.Z.unsafe_rawColors.BLACK_500).hex(),
         I = (0, l.useToken)(a.Z.unsafe_rawColors.WHITE_500).hex(),
-        x = i.useRef({}),
-        T = i.useRef(new s.Xp()),
-        v = i.useCallback(
+        T = i.useRef({}),
+        x = i.useRef(new s.Xp()),
+        S = i.useCallback(
             (t) => {
                 let n = u.Z.getDrawables(t);
                 (0, h.UN)(e),
@@ -88,7 +88,7 @@ function E(e, t, n, E) {
                         canvasRef: e,
                         drawables: n,
                         fallbackColor: g,
-                        linesDrawnAt: x,
+                        linesDrawnAt: T,
                         streamerId: t,
                         outlineColorDark: C,
                         outlineColorLight: I,
@@ -102,24 +102,24 @@ function E(e, t, n, E) {
             let t = e.current;
             if (null == t) return;
             let { width: i, height: s } = t.getBoundingClientRect();
-            (t.width = i * window.devicePixelRatio), (t.height = s * window.devicePixelRatio), v(n);
+            (t.width = i * window.devicePixelRatio), (t.height = s * window.devicePixelRatio), S(n);
         });
         return null != e.current && t.observe(e.current), () => t.disconnect();
-    }, [e, v, n]);
-    let S = i.useCallback(() => {
+    }, [e, S, n]);
+    let v = i.useCallback(() => {
         let t = u.Z.getDrawables(n),
             i = m.U.getState().particles,
             s = t.length > 0 || Object.keys(i).length > 0;
-        s && null == T.current._ref && (null == T.current._ref ? (v(n), T.current.start(f, () => v(n))) : !s && null != T.current._ref && (T.current.stop(), (0, h.UN)(e)));
-    }, [e, v, n]);
+        s && null == x.current._ref && (null == x.current._ref ? (S(n), x.current.start(f, () => S(n))) : !s && null != x.current._ref && (x.current.stop(), (0, h.UN)(e)));
+    }, [e, S, n]);
     i.useEffect(() => {
-        let e = T.current;
+        let e = x.current;
         return (
-            u.Z.addChangeListener(S),
-            S(),
+            u.Z.addChangeListener(v),
+            v(),
             (0, r.vM)(t.getAvatarURL(null, _.Ks)),
             () => {
-                u.Z.removeChangeListener(S), e.stop();
+                u.Z.removeChangeListener(v), e.stop();
             }
         );
     });

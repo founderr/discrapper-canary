@@ -1,6 +1,6 @@
 n.d(t, {
     T: function () {
-        return T;
+        return x;
     }
 }),
     n(47120),
@@ -40,7 +40,7 @@ function I(e) {
         isTyping: t
     };
 }
-function x(e) {
+function T(e) {
     let { className: t, channelId: n } = e,
         { unreadCount: s, mentionCount: a, isTyping: l, voiceChannelIsSelected: r } = I(n);
     return (0, i.jsx)(f.Z, {
@@ -51,15 +51,15 @@ function x(e) {
         canBadge: r
     });
 }
-function T(e) {
+function x(e) {
     let t,
-        { channelId: n, className: a, showingClassName: r, onClick: d, inPopout: h, showRequestToSpeakSidebar: m, toggleRequestToSpeakSidebar: f, ...T } = e,
-        { disabled: v } = T,
-        S = s.useRef(null),
+        { channelId: n, className: a, showingClassName: r, onClick: d, inPopout: h, showRequestToSpeakSidebar: m, toggleRequestToSpeakSidebar: f, ...x } = e,
+        { disabled: S } = x,
+        v = s.useRef(null),
         N = (0, o.e7)([u.Z], () => u.Z.getChatOpen(n), [n]),
         {
-            isShowing: Z,
-            unreadCount: A,
+            isShowing: A,
+            unreadCount: Z,
             mentionCount: M
         } = (function (e) {
             let { unreadCount: t, mentionCount: n, isTyping: i } = I(e),
@@ -87,7 +87,7 @@ function T(e) {
         R = s.useCallback(
             (e) => {
                 let { className: t } = e;
-                return (0, i.jsx)(x, {
+                return (0, i.jsx)(T, {
                     className: t,
                     channelId: n
                 });
@@ -96,11 +96,11 @@ function T(e) {
         ),
         L = s.useCallback(() => {
             var e;
-            null === (e = S.current) || void 0 === e || e.focus();
+            null === (e = v.current) || void 0 === e || e.focus();
         }, []);
     (0, p.yp)({
         event: g.CkL.FOCUS_CHAT_BUTTON,
-        handler: v ? null : L
+        handler: S ? null : L
     });
     let [j, P] = s.useState(!1),
         O = s.useCallback(() => {
@@ -122,20 +122,20 @@ function T(e) {
                 }
             );
         }, [j]);
-    let y = [(t = h && v ? C.Z.Messages.TEXT_IN_VOICE_POPOUT_DISABLED : N ? C.Z.Messages.VIDEO_CALL_HIDE_CHAT : C.Z.Messages.VIDEO_CALL_SHOW_CHAT)];
+    let y = [(t = h && S ? C.Z.Messages.TEXT_IN_VOICE_POPOUT_DISABLED : N ? C.Z.Messages.VIDEO_CALL_HIDE_CHAT : C.Z.Messages.VIDEO_CALL_SHOW_CHAT)];
     return (
         M > 0 && y.push(C.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({ mentionCount: M })),
-        A > 0 && y.push(C.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD),
+        Z > 0 && y.push(C.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD),
         (0, i.jsx)(E.Z, {
-            buttonRef: S,
+            buttonRef: v,
             onClick: b,
             label: t,
             'aria-label': y.join(', '),
             iconComponent: R,
             tooltipPosition: 'bottom',
-            wrapperClassName: l()(a, null != r && { [r]: Z }),
+            wrapperClassName: l()(a, null != r && { [r]: A }),
             forceTooltipOpen: j,
-            ...T
+            ...x
         })
     );
 }

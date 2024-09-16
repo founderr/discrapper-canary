@@ -18,10 +18,10 @@ var i = n(735250),
     I = n(100527),
     m = n(367907),
     T = n(676742),
-    N = n(1585),
-    h = n(841762),
-    C = n(336197),
-    f = n(406432),
+    h = n(1585),
+    N = n(841762),
+    f = n(336197),
+    C = n(406432),
     p = n(348238),
     g = n(38267),
     S = n(184301),
@@ -48,7 +48,7 @@ function B(e) {
         V = R.QK.useSetting(),
         H = (0, L.n)(),
         [Y, W] = s.useState(!1),
-        [z, K] = s.useState((null == F ? void 0 : F.coverImage) == null),
+        [K, z] = s.useState((null == F ? void 0 : F.coverImage) == null),
         Q = (0, d.e7)([E.Z], () => E.Z.useReducedMotion),
         q = (0, d.e7)(
             [O.ZP, x.default],
@@ -80,7 +80,7 @@ function B(e) {
                     can_access: F.canAccess,
                     is_member: q
                 }),
-                F.canAccess ? (0, C.Z)(D.Z5c.CHANNEL(F.guildId, F.threadId, F.messageId)) : q ? (0, C.Z)(D.Z5c.CHANNEL(F.guildId, F.parentChannelId)) : await v.Ub(F.guildId, {}, { channelId: F.parentChannelId }));
+                F.canAccess ? (0, f.Z)(D.Z5c.CHANNEL(F.guildId, F.threadId, F.messageId)) : q ? (0, f.Z)(D.Z5c.CHANNEL(F.guildId, F.parentChannelId)) : await v.Ub(F.guildId, {}, { channelId: F.parentChannelId }));
         }, [F, k, q]),
         el = s.useCallback(
             () => (
@@ -107,7 +107,7 @@ function B(e) {
         ),
         ec = (0, M.NZ)({
             avatarDecoration: J,
-            size: (0, N.y9)(_.AvatarSizes.SIZE_40),
+            size: (0, h.y9)(_.AvatarSizes.SIZE_40),
             canAnimate: en
         }),
         eu = null === (n = F.user) || void 0 === n ? void 0 : n.getAvatarURL(F.guildId, 40, en),
@@ -115,7 +115,7 @@ function B(e) {
             if (!et.enabled) ei((e) => !e);
         },
         e_ = F.coverImage,
-        eE = null != e_ && (0, f.d$)(e_);
+        eE = null != e_ && (0, C.d$)(e_);
     return (0, i.jsxs)('div', {
         className: U.postPreviewContainer,
         children: [
@@ -124,16 +124,16 @@ function B(e) {
                 onMouseEnter: es,
                 onMouseLeave: ea,
                 children: [
-                    !z &&
+                    !K &&
                         (!0 === F.shouldShowBlurredThumbnailImage
                             ? (0, i.jsx)('img', {
                                   src: y,
                                   alt: j.Z.Messages.MEDIA_POST_EMBED_THUMBNAIL_ALT,
                                   className: r()(U.thumbnail, { [U.spoiler]: F.shouldSpoiler }),
                                   onContextMenu: w,
-                                  onError: () => K(!0)
+                                  onError: () => z(!0)
                               })
-                            : (0, i.jsx)(h.Z, {
+                            : (0, i.jsx)(N.Z, {
                                   src: !(H && (V || Y)) && eE ? ''.concat(e_, '?format=png') : e_,
                                   backgroundSrc: ''.concat(e_, '?format=png'),
                                   alt: j.Z.Messages.MEDIA_POST_EMBED_THUMBNAIL_ALT,
@@ -141,7 +141,7 @@ function B(e) {
                                   className: r()(U.thumbnail, { [U.spoiler]: F.shouldSpoiler }),
                                   imageChildClassName: U.thumbnailImage,
                                   onContextMenu: w,
-                                  onError: () => K(!0)
+                                  onError: () => z(!0)
                               })),
                     null != F.coverImageOverlayText &&
                         (0, i.jsx)(_.Clickable, {

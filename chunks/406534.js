@@ -24,13 +24,13 @@ var i = n(735250),
     g = n(13279),
     C = n(248789),
     I = n(88101),
-    x = n(576954),
-    T = n(280006),
-    v = n(347102),
-    S = n(765104),
+    T = n(576954),
+    x = n(280006),
+    S = n(347102),
+    v = n(765104),
     N = n(122707),
-    Z = n(779836),
-    A = n(23750),
+    A = n(779836),
+    Z = n(23750),
     M = n(496675),
     b = n(306680),
     R = n(944486),
@@ -40,8 +40,8 @@ var i = n(735250),
     O = n(709054),
     y = n(534091),
     D = n(900164),
-    k = n(554838),
-    U = n(481369),
+    U = n(554838),
+    k = n(481369),
     w = n(186877),
     B = n(294218),
     H = n(534469),
@@ -64,7 +64,7 @@ let ee = s.memo(function (e) {
     return (0, i.jsx)(B.Z, {
         isGroupStart: a,
         channel: n,
-        message: new A.ZP({
+        message: new Z.ZP({
             id: t.id,
             key: 'pending-upload-'.concat(t.id),
             type: X.uaV.DEFAULT,
@@ -94,14 +94,14 @@ function et(e) {
         eh = (0, w.$)(r),
         em = d.length > 0 && (null === (t = d.first()) || void 0 === t ? void 0 : t.isFirstMessageInForumPost(r)),
         ep = (0, o.ts)(r),
-        e_ = (0, a.e7)([S.Z], () => S.Z.shouldShowTopicsBar() && !ec),
+        e_ = (0, a.e7)([v.Z], () => v.Z.shouldShowTopicsBar() && !ec),
         ef = (0, I.P)(r.id),
         eE = (0, g.z)(r.id, J.zr),
-        eg = (0, U.Z)(),
+        eg = (0, k.Z)(),
         eC = (function (e, t) {
             return e.isDM() && null != t
                 ? t.type === E.pj.STRANGER_DANGER
-                    ? (0, i.jsx)(x.M, {
+                    ? (0, i.jsx)(T.M, {
                           channelId: e.id,
                           warningId: t.id,
                           senderId: e.getRecipientId()
@@ -111,23 +111,23 @@ function et(e) {
                           warningId: t.id,
                           senderId: e.getRecipientId()
                       })
-                : e.isGroupDM() && (0, T.f)({ location: 'blocked_user_banner' })
-                  ? (0, i.jsx)(v.e, { channel: e })
+                : e.isGroupDM() && (0, x.f)({ location: 'blocked_user_banner' })
+                  ? (0, i.jsx)(S.e, { channel: e })
                   : null;
         })(r, null != ef ? ef : eE),
         eI = r.isForumPost() && !em ? (0, i.jsx)(m.Z, { postId: r.id }) : null,
-        ex = (0, _.Z)(r.id);
+        eT = (0, _.Z)(r.id);
     (0, Y.Z)();
-    let eT = null,
-        ev = [],
-        eS = ei.map((e, t) => {
+    let ex = null,
+        eS = [],
+        ev = ei.map((e, t) => {
             if (e.type === X.ys_.DIVIDER) {
                 var n, s;
                 let a = null != e.unreadId;
                 return null != er
                     ? null
                     : e.isSummaryDivider
-                      ? (0, i.jsx)(Z.Z, {
+                      ? (0, i.jsx)(A.Z, {
                             index: t,
                             item: e,
                             channel: r,
@@ -175,8 +175,8 @@ function et(e) {
             if (null != er && er > e.content.timestamp.getTime() * P.Z.Millis.SECOND) return;
             let a = M.Z.can(X.Plq.CREATE_INSTANT_INVITE, r);
             if ((0, D.Z)(e.content, a)) return;
-            e.type === X.ys_.MESSAGE && null == eT && (eT = e);
-            let l = e.groupId === (null == eT ? void 0 : eT.groupId) ? eT.content.id : e.groupId,
+            e.type === X.ys_.MESSAGE && null == ex && (ex = e);
+            let l = e.groupId === (null == ex ? void 0 : ex.groupId) ? ex.content.id : e.groupId,
                 o = e.type === X.ys_.THREAD_STARTER_MESSAGE ? H.Ru : H.ZP;
             return (0, i.jsx)(
                 o,
@@ -188,27 +188,27 @@ function et(e) {
                     flashKey: e.flashKey,
                     id: (0, y.p)(r.id, e.content.id),
                     isLastItem: t >= ei.length - 1,
-                    renderContentOnly: ex
+                    renderContentOnly: eT
                 },
                 e.content.id
             );
         });
-    ev.push(...eS);
+    eS.push(...ev);
     let eN = ei[ei.length - 1];
     if (
         (null != eu &&
             es.forEach((e, t) => {
                 let n =
                     0 === t &&
-                    (0, k.J)(
+                    (0, U.J)(
                         r,
                         eN,
-                        new A.ZP({
+                        new Z.ZP({
                             type: X.uaV.DEFAULT,
                             author: eu
                         })
                     );
-                ev.push(
+                eS.push(
                     (0, i.jsx)(
                         ee,
                         {
@@ -224,7 +224,7 @@ function et(e) {
         d.hasMoreBefore && null == er)
     ) {
         d.length > 0 &&
-            ev.unshift(
+            eS.unshift(
                 (0, i.jsx)(
                     'div',
                     {
@@ -238,7 +238,7 @@ function et(e) {
             );
         let { useReducedMotion: e } = c.Z;
         ((e && ed()) || !e) &&
-            ev.unshift(
+            eS.unshift(
                 (0, i.jsx)(
                     W.ZP,
                     {
@@ -251,7 +251,7 @@ function et(e) {
     }
     if (
         ((!d.hasMoreBefore || null != er) &&
-            ev.unshift(
+            eS.unshift(
                 (0, i.jsx)(
                     h.Z,
                     {
@@ -262,7 +262,7 @@ function et(e) {
                 )
             ),
         d.hasMoreAfter &&
-            ev.push(
+            eS.push(
                 (0, i.jsx)(
                     W.ZP,
                     {
@@ -272,7 +272,7 @@ function et(e) {
                     'has-more-after'
                 )
             ),
-        !eo && eh && ed() && ev.push((0, i.jsx)(z.Z, { channel: r })),
+        !eo && eh && ed() && eS.push((0, i.jsx)(z.Z, { channel: r })),
         B > 0 && et && ed())
     ) {
         let e, t;
@@ -434,7 +434,7 @@ function et(e) {
                     });
     }
     return {
-        channelStreamMarkup: ev,
+        channelStreamMarkup: eS,
         newMessagesBar: n,
         jumpToPresentBar: s,
         forumPostActionBar: eI,

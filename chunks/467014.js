@@ -21,7 +21,7 @@ function p(e) {
         g = new Intl.NumberFormat(h.Z.getLocale()).format(_),
         C = new Intl.NumberFormat(h.Z.getLocale()).format(f),
         I = new Intl.NumberFormat(h.Z.getLocale()).format(E),
-        x = s.useCallback(
+        T = s.useCallback(
             async (e) => {
                 if (null == p) return;
                 let i = (0, c.Ow)(t, e);
@@ -60,7 +60,7 @@ function p(e) {
                                   color: 'interactive-normal',
                                   children: g
                               }),
-                    onNavigate: _ > 0 ? () => x(c.mw.MESSAGES) : void 0
+                    onNavigate: _ > 0 ? () => T(c.mw.MESSAGES) : void 0
                 }),
                 (0, i.jsx)(u._2, {
                     icon: (0, i.jsx)(l.LinkIcon, {
@@ -84,7 +84,7 @@ function p(e) {
                                   color: 'interactive-normal',
                                   children: C
                               }),
-                    onNavigate: f > 0 ? () => x(c.mw.LINKS) : void 0
+                    onNavigate: f > 0 ? () => T(c.mw.LINKS) : void 0
                 }),
                 (0, i.jsx)(u._2, {
                     icon: (0, i.jsx)(l.ImagesIcon, {
@@ -108,7 +108,7 @@ function p(e) {
                                   color: 'interactive-normal',
                                   children: I
                               }),
-                    onNavigate: E > 0 ? () => x(c.mw.MEDIA) : void 0
+                    onNavigate: E > 0 ? () => T(c.mw.MEDIA) : void 0
                 })
             ]
         })

@@ -11,12 +11,12 @@ var r = n(735250),
     o = n(442837),
     s = n(481060),
     c = n(98357),
-    u = n(432877),
-    d = n(756192),
+    d = n(432877),
+    u = n(756192),
     h = n(219299);
 function m(e) {
     let { devSettingsCategory: t } = e,
-        n = (0, o.e7)([u.ZP], () => u.ZP.allByCategory(t), [t], o.pF),
+        n = (0, o.e7)([d.ZP], () => d.ZP.allByCategory(t), [t], o.pF),
         l = a.useMemo(
             () =>
                 n.map((e) => {
@@ -27,7 +27,7 @@ function m(e) {
                             value: n,
                             onChange: (e) => (0, c.Z)(t, e),
                             hideBorder: !0,
-                            className: d.switch,
+                            className: u.switch,
                             children: a
                         },
                         t
@@ -36,7 +36,7 @@ function m(e) {
             [n]
         );
     return (0, r.jsx)('div', {
-        className: i()(h.panel, d.panel),
+        className: i()(h.panel, u.panel),
         children: l
     });
 }

@@ -18,10 +18,10 @@ var i = n(735250),
     I = n(906732),
     m = n(895924),
     T = n(973616),
-    N = n(314897),
-    h = n(592125),
-    C = n(158776),
-    f = n(594174),
+    h = n(314897),
+    N = n(592125),
+    f = n(158776),
+    C = n(594174),
     p = n(823379),
     g = n(226378),
     S = n(701488),
@@ -32,9 +32,9 @@ function O(e) {
     let { application: n, channelId: O, guildId: x } = e,
         { analyticsLocations: M } = (0, I.ZP)(E.Z.ACTIVITY_INSTANCE_EMBED),
         v = (0, l.O)(),
-        L = (0, a.e7)([h.Z], () => h.Z.getChannel(O)),
+        L = (0, a.e7)([N.Z], () => N.Z.getChannel(O)),
         Z = (null == L ? void 0 : null === (t = L.isThread) || void 0 === t ? void 0 : t.call(L)) ? (null == L ? void 0 : L.parent_id) : O,
-        P = (0, a.e7)([N.default], () => N.default.getId()),
+        P = (0, a.e7)([h.default], () => h.default.getId()),
         {
             embeddedActivity: D,
             currentEmbeddedActivity: b,
@@ -44,16 +44,16 @@ function O(e) {
             currentEmbeddedActivity: o.ZP.getCurrentEmbeddedActivity(),
             activityLaunchState: o.ZP.getLaunchState(n.id, null != Z ? Z : void 0)
         })),
-        U = (0, a.Wu)([f.default], () => {
+        U = (0, a.Wu)([C.default], () => {
             var e;
             return Array.from(null !== (e = null == D ? void 0 : D.userIds) && void 0 !== e ? e : [])
-                .map((e) => f.default.getUser(e))
+                .map((e) => C.default.getUser(e))
                 .filter(p.lm);
         }),
-        y = (0, a.e7)([C.Z], () => {
+        y = (0, a.e7)([f.Z], () => {
             var e;
             let t = null == D ? void 0 : D.userIds.values().next().value;
-            return null == t ? null : null === (e = C.Z.findActivity(t, (e) => e.application_id === n.id)) || void 0 === e ? void 0 : e.details;
+            return null == t ? null : null === (e = f.Z.findActivity(t, (e) => e.application_id === n.id)) || void 0 === e ? void 0 : e.details;
         }),
         B = s.useMemo(() => {
             let e = new T.Z(n);

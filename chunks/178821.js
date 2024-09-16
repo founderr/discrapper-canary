@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return j;
+        return _;
     }
 }),
     n(47120);
@@ -11,8 +11,8 @@ var r = n(735250),
     o = n(442837),
     s = n(481060),
     c = n(38618),
-    u = n(980361),
-    d = n(219299);
+    d = n(980361),
+    u = n(219299);
 let h = 1000 / 60,
     m = 1000 / 45,
     x = 3 * h,
@@ -34,7 +34,7 @@ function p(e) {
         {
             currentFPS: o,
             averageFrameTime: c,
-            timeSinceLastDrop: d,
+            timeSinceLastDrop: u,
             onResetFrameData: m,
             droppedFramesRef: p,
             renderedFrameCount: g,
@@ -48,23 +48,23 @@ function p(e) {
                 o = a.useRef(0),
                 s = a.useRef(0),
                 c = a.useRef(0),
-                u = a.useRef(0),
-                d = a.useCallback(() => {
+                d = a.useRef(0),
+                u = a.useCallback(() => {
                     n.current.fill(0), (l.current = 0), (i.current = 0), (s.current = 0), (c.current = 0), (r.current = performance.now()), (o.current = 0);
                 }, []),
                 m = a.useCallback(
                     function () {
                         let a = performance.now(),
-                            d = a - r.current;
+                            u = a - r.current;
                         if (((r.current = a), t.current)) return;
-                        if (((i.current -= n.current[c.current]), (n.current[c.current] = d), (i.current += d), s.current < f && (s.current += 1), (c.current = (c.current + 1) % f), d > x)) {
+                        if (((i.current -= n.current[c.current]), (n.current[c.current] = u), (i.current += u), s.current < f && (s.current += 1), (c.current = (c.current + 1) % f), u > x)) {
                             let t = 0 === s.current ? h : i.current / s.current,
                                 n = Math.min(2 * h, t),
-                                r = Math.floor(d / (e ? n : h));
-                            r > 0 && (u.current = performance.now()), (l.current += r);
+                                r = Math.floor(u / (e ? n : h));
+                            r > 0 && (d.current = performance.now()), (l.current += r);
                         }
                         let m = 0 === s.current ? h : i.current / s.current;
-                        o.current += d / m;
+                        o.current += u / m;
                     },
                     [e, t]
                 ),
@@ -72,15 +72,15 @@ function p(e) {
             return {
                 currentFPS: 0 === p ? 0 : (h / p) * 60,
                 averageFrameTime: p,
-                timeSinceLastDrop: (performance.now() - u.current) / 1000,
+                timeSinceLastDrop: (performance.now() - d.current) / 1000,
                 droppedFramesRef: l,
                 bufferFramecountRef: s,
                 renderedFrameCount: o,
                 frameCheckerEffect: m,
-                onResetFrameData: d
+                onResetFrameData: u
             };
         })(n, l),
-        [j, C, _] = (function (e) {
+        [_, j, C] = (function (e) {
             let t = a.useRef(Array(f).fill(0)),
                 n = a.useRef(performance.now()),
                 r = a.useRef(0),
@@ -93,13 +93,13 @@ function p(e) {
             a.useEffect(() => {
                 e.dispatcher.getIsSchedulerBackgrounded() && (c.current = performance.now());
             });
-            let u = a.useCallback(function () {
+            let d = a.useCallback(function () {
                 let e = performance.now(),
                     a = e - n.current;
                 if (((n.current = e), !s.current)) (r.current -= t.current[i.current]), (t.current[i.current] = a), (r.current += a), l.current < f && (l.current += 1), (i.current = (i.current + 1) % f);
             }, []);
             return [
-                u,
+                d,
                 (e, t) => {
                     var n;
                     let a = null !== (n = l.current) && void 0 !== n ? n : 1,
@@ -132,9 +132,9 @@ function p(e) {
                 }, [i, o]),
                 i
             ];
-        })(j, v),
+        })(_, v),
         N = performance.now() - i.current < 5000,
-        y = C(c, b.current);
+        y = j(c, b.current);
     a.useEffect(
         () => (
             T(),
@@ -145,10 +145,10 @@ function p(e) {
         []
     );
     let I = a.useCallback(() => {
-        m(), _(), T();
-    }, [m, _, T]);
+        m(), C(), T();
+    }, [m, C, T]);
     return (0, r.jsxs)('div', {
-        className: u.panelGroup,
+        className: d.panelGroup,
         children: [
             (0, r.jsxs)(s.Text, {
                 variant: 'text-md/normal',
@@ -173,14 +173,14 @@ function p(e) {
                     (0, r.jsx)(s.Text, {
                         tag: 'span',
                         variant: 'text-md/bold',
-                        color: d < 2 ? 'text-danger' : d < 5 ? 'text-warning' : 'text-primary',
+                        color: u < 2 ? 'text-danger' : u < 5 ? 'text-warning' : 'text-primary',
                         children: p.current
                     }),
                     (0, r.jsxs)(s.Text, {
                         tag: 'span',
                         variant: 'text-sm/normal',
                         color: 'text-muted',
-                        className: u.secondaryInfoText,
+                        className: d.secondaryInfoText,
                         children: ['(Dropped: ', ((p.current / g.current) * 100).toFixed(4), '%)']
                     }),
                     N &&
@@ -194,7 +194,7 @@ function p(e) {
                                         tag: 'span',
                                         variant: 'text-xs/bold',
                                         color: 'text-danger',
-                                        className: u.secondaryInfoText,
+                                        className: d.secondaryInfoText,
                                         children: '(Backgrounded)'
                                     })
                                 })
@@ -258,7 +258,7 @@ function p(e) {
                                                     tag: 'span',
                                                     variant: 'text-xs/bold',
                                                     color: 'text-danger',
-                                                    className: u.secondaryInfoText,
+                                                    className: d.secondaryInfoText,
                                                     children: '(Backgrounded)'
                                                 })
                                             })
@@ -268,7 +268,7 @@ function p(e) {
                     })
             }),
             (0, r.jsx)('div', {
-                className: u.bottomPanelButton,
+                className: d.bottomPanelButton,
                 children: (0, r.jsx)(s.Button, {
                     size: s.Button.Sizes.SMALL,
                     onClick: I,
@@ -293,11 +293,11 @@ function g(e) {
             }
         );
     }, [t.dispatcher]);
-    let d = (e) => {
+    let u = (e) => {
         t.dispatcher.toggleRequestIdleCallback(e), o(e);
     };
     return (0, r.jsxs)('div', {
-        className: u.panelGroup,
+        className: d.panelGroup,
         children: [
             (0, r.jsx)(s.Tooltip, {
                 position: 'left',
@@ -322,7 +322,7 @@ function g(e) {
             }),
             (0, r.jsx)(s.Checkbox, {
                 value: i,
-                onChange: () => d(!i),
+                onChange: () => u(!i),
                 size: 18,
                 type: s.Checkbox.Types.INVERTED,
                 shape: s.Checkbox.Shapes.BOX,
@@ -341,10 +341,10 @@ function b(e) {
         n = t.dispatcher.getDispatchTimings(),
         [l, o] = a.useState(!1);
     return (0, r.jsxs)('div', {
-        className: u.panelGroup,
+        className: d.panelGroup,
         children: [
             (0, r.jsx)('div', {
-                className: i()(l && u.topPanelToggle),
+                className: i()(l && d.topPanelToggle),
                 children: (0, r.jsx)(s.Checkbox, {
                     value: l,
                     onChange: () => o((e) => !e),
@@ -414,12 +414,12 @@ function v(e) {
     let { socket: t } = e,
         n = t.dispatcher.getSchedulerTelemetry(),
         [l, o] = a.useState(n.isTelemetryEnabled),
-        [c, d] = a.useState(n.isTelemetryEnabled),
+        [c, u] = a.useState(n.isTelemetryEnabled),
         h = (e) => {
-            d(e), n.toggleTelemetry(e);
+            u(e), n.toggleTelemetry(e);
         };
     return (0, r.jsxs)('div', {
-        className: u.panelGroup,
+        className: d.panelGroup,
         children: [
             (0, r.jsx)(s.Checkbox, {
                 value: c,
@@ -435,7 +435,7 @@ function v(e) {
                 })
             }),
             (0, r.jsx)('div', {
-                className: i()(l && u.topPanelToggle),
+                className: i()(l && d.topPanelToggle),
                 children: (0, r.jsx)(s.Checkbox, {
                     value: l,
                     onChange: () => {
@@ -493,7 +493,7 @@ function v(e) {
                               })
                           }),
                           (0, r.jsx)('div', {
-                              className: u.bottomPanelButton,
+                              className: d.bottomPanelButton,
                               children: (0, r.jsx)(s.Button, {
                                   size: s.Button.Sizes.SMALL,
                                   onClick: () => {
@@ -508,7 +508,7 @@ function v(e) {
         ]
     });
 }
-function j() {
+function _() {
     let e = (0, o.e7)([c.Z], () => c.Z.getSocket()),
         [t, n] = a.useState(!1);
     return (
@@ -524,9 +524,9 @@ function j() {
             }, []);
         })(),
         (0, r.jsx)('div', {
-            className: i()(d.panel, u.panel),
+            className: i()(u.panel, d.panel),
             children: (0, r.jsxs)(s.ScrollerThin, {
-                className: u.panel,
+                className: d.panel,
                 children: [
                     (0, r.jsx)(p, {
                         socket: e,

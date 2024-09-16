@@ -21,7 +21,7 @@ function C(e) {
         _ = f.Plq[s],
         C = null !== (n = null === (t = m[_.toString()]) || void 0 === t ? void 0 : t.title) && void 0 !== n ? n : (0, u.wt)(_),
         I = p._o.has(_),
-        x = (0, r.e7)([d.Z], () => d.Z.getRoles(h.id));
+        T = (0, r.e7)([d.Z], () => d.Z.getRoles(h.id));
     return (0, i.jsx)(o.Tooltip, {
         'aria-label': E.Z.Messages.GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL,
         tooltipClassName: g.roleTooltipContainer,
@@ -39,7 +39,7 @@ function C(e) {
                         {
                             className: g.roleTooltipItem,
                             children: (0, i.jsx)(c.Z, {
-                                role: x[e],
+                                role: T[e],
                                 guildId: h.id
                             })
                         },
@@ -78,11 +78,11 @@ t.Z = s.memo(function (e) {
         c = (0, p.B2)(t.userId, t.guildId, p.Qn),
         u = (0, p.B2)(t.userId, t.guildId, p.pd),
         I = Object.keys(c).length,
-        x = Object.keys(u).length,
-        T = s.useMemo(() => (null != a ? h.Z.getGuildPermissionSpecMap(a) : null), [a]),
-        v = s.useMemo(() => (null != a ? h.Z.generateGuildPermissionSpec(a) : null), [a]),
-        S = s.useMemo(() => {
-            if (null == a || null == T) return null;
+        T = Object.keys(u).length,
+        x = s.useMemo(() => (null != a ? h.Z.getGuildPermissionSpecMap(a) : null), [a]),
+        S = s.useMemo(() => (null != a ? h.Z.generateGuildPermissionSpec(a) : null), [a]),
+        v = s.useMemo(() => {
+            if (null == a || null == x) return null;
             if (0 === I)
                 return (0, i.jsx)('div', {
                     className: l()(g.permissionChiplet, g.noModPerms),
@@ -94,8 +94,8 @@ t.Z = s.memo(function (e) {
                 });
             let e = [];
             return (
-                null == v ||
-                    v.forEach((t) => {
+                null == S ||
+                    S.forEach((t) => {
                         t.permissions.forEach((t) => {
                             let n = t.flag,
                                 s = p.pd.find((e) => f.Plq[e] === n);
@@ -109,7 +109,7 @@ t.Z = s.memo(function (e) {
                                             permission: s,
                                             roleIds: l,
                                             guild: a,
-                                            specMap: T
+                                            specMap: x
                                         },
                                         s
                                     )
@@ -118,7 +118,7 @@ t.Z = s.memo(function (e) {
                     }),
                 e
             );
-        }, [a, I, c, v, T]);
+        }, [a, I, c, S, x]);
     return null == a
         ? null
         : (0, i.jsx)(o.FormItem, {
@@ -137,7 +137,7 @@ t.Z = s.memo(function (e) {
                               (0, i.jsx)(o.Text, {
                                   variant: 'eyebrow',
                                   color: 'interactive-normal',
-                                  children: E.Z.Messages.GUILD_MEMBER_MOD_VIEW_VIEW_ALL_PERMISSIONS.format({ count: x })
+                                  children: E.Z.Messages.GUILD_MEMBER_MOD_VIEW_VIEW_ALL_PERMISSIONS.format({ count: T })
                               }),
                               (0, i.jsx)(o.ChevronSmallRightIcon, {
                                   size: 'custom',
@@ -152,7 +152,7 @@ t.Z = s.memo(function (e) {
                   children: (0, i.jsx)(m._2, {
                       description: (0, i.jsx)('div', {
                           className: g.permissionsContainer,
-                          children: S
+                          children: v
                       })
                   })
               })

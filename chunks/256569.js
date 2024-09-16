@@ -64,27 +64,27 @@ function T(e) {
     let { initialValue: n, onChangeTags: i, onChangeNewTagValue: o, tagErrors: d = {}, placeholder: I, className: T, maxTags: m } = e,
         N = a.useRef(null),
         S = a.useRef(null),
-        h = a.useRef(null),
-        g = (0, u.V)(n),
+        g = a.useRef(null),
+        h = (0, u.V)(n),
         {
             handlePasteEvent: C,
             handleInputChange: x,
             handleKeyDown: p,
             handleContainerKeyUp: R,
-            handleRemoveTag: f,
-            handleTagChangeEvent: L,
+            handleRemoveTag: L,
+            handleTagChangeEvent: f,
             handleSelectTag: O,
             handleUnselectTag: A,
             handleResetTagSelections: M,
             handleInputBlurEvent: D
-        } = (0, u.Q)(g, {
-            scrollerRef: h,
+        } = (0, u.Q)(h, {
+            scrollerRef: g,
             mainInputRef: N,
             mainContainerRef: S
         }),
         {
             state: { value: v, tags: j, selections: Z, isSelecting: b }
-        } = g,
+        } = h,
         [U, G] = a.useState(!1),
         P = a.useCallback(() => {
             var e;
@@ -131,7 +131,7 @@ function T(e) {
         onKeyUp: R,
         children: [
             (0, s.jsxs)(E, {
-                ref: h,
+                ref: g,
                 onClick: P,
                 children: [
                     j.map((e, t) =>
@@ -139,10 +139,10 @@ function T(e) {
                             c.Z,
                             {
                                 value: e,
-                                onChange: L(t),
+                                onChange: f(t),
                                 onBlur: B,
                                 onFocus: y(t),
-                                onRemove: () => f(t),
+                                onRemove: () => L(t),
                                 isSelected: Z.includes(e),
                                 isSelecting: b,
                                 error: d[e],

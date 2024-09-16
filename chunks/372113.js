@@ -13,10 +13,10 @@ var s = n(120356),
     I = n(569984),
     m = n(497505),
     T = n(918701),
-    N = n(566078),
-    h = n(340100),
-    C = n(644646),
-    f = n(667105),
+    h = n(566078),
+    N = n(340100),
+    f = n(644646),
+    C = n(667105),
     p = n(341907),
     g = n(128535),
     S = n(87894),
@@ -54,23 +54,23 @@ function P(e) {
         d = n >= E.OH.COMPLETED,
         _ = (0, r.e7)([o.Z], () => o.Z.useReducedMotion),
         m = (0, r.e7)([I.Z], () => I.Z.isEnrolling(t.id)),
-        N = (0, T.zK)(t, R.S7.IN_HOUSE_CONSOLE_QUEST),
-        h = (0, f.Ks)({
+        h = (0, T.zK)(t, R.S7.IN_HOUSE_CONSOLE_QUEST),
+        N = (0, C.Ks)({
             progressState: n,
             quest: t,
-            isInHouseQuest: N,
+            isInHouseQuest: h,
             location: a,
             isCollectibleQuest: s,
             questContentPosition: c,
             inGiftInventory: u
         }),
-        C = N && u && d,
-        p = C ? M.inHouseButton : l.ButtonColors.BRAND,
+        f = h && u && d,
+        p = f ? M.inHouseButton : l.ButtonColors.BRAND,
         g = d && !_ ? l.ShinyButton : l.Button;
     return (0, i.jsx)(
         l.Tooltip,
         {
-            text: h.tooltipText,
+            text: N.tooltipText,
             tooltipContentClassName: M.ctaTooltipText,
             children: (e) => {
                 var t;
@@ -78,29 +78,29 @@ function P(e) {
                     ...e,
                     wrapperClassName: M.ctaButtonWrapper,
                     color: p,
-                    disabled: null == h.onClick,
+                    disabled: null == N.onClick,
                     submitting: m,
-                    onClick: null !== (t = h.onClick) && void 0 !== t ? t : () => {},
+                    onClick: null !== (t = N.onClick) && void 0 !== t ? t : () => {},
                     children: (0, i.jsxs)('div', {
                         className: M.ctaButtonInner,
                         children: [
-                            C &&
+                            f &&
                                 (0, i.jsx)('img', {
                                     src: v,
                                     alt: '',
                                     className: M.inHouseIcon
                                 }),
-                            h.text
+                            N.text
                         ]
                     })
                 });
             }
         },
-        h.tooltipText
+        N.tooltipText
     );
 }
 t.Z = (e) => {
-    let { quest: t, location: n, size: s, isFocused: o, isQuestExpired: I, isExpanded: f, isAnimating: v, contentPosition: D } = e,
+    let { quest: t, location: n, size: s, isFocused: o, isQuestExpired: I, isExpanded: C, isAnimating: v, contentPosition: D } = e,
         b = (0, E._Q)(t),
         j = b >= E.OH.ACCEPTED,
         U = b >= E.OH.COMPLETED,
@@ -108,16 +108,16 @@ t.Z = (e) => {
         B = (0, T.Xv)(t.config),
         k = (0, S.uq)(n),
         F = n === m.jn.QUESTS_EMBED,
-        G = f || v,
+        G = C || v,
         w = j && !y && k,
         V = (0, E.t5)(t, R.dr.QUESTS_CARD, n),
         { xboxAndPlaystationAccounts: H } = (0, E.z6)(),
         Y = (0, r.e7)([c.default], () => c.default.locale),
         W = (0, E.z)(t),
-        z = k && B,
-        K = I && !U,
+        K = k && B,
+        z = I && !U,
         Q = H.length > 0 && k && (0, T.$J)(t) && j && !U && !W,
-        q = (0, i.jsx)(C.Z, {
+        q = (0, i.jsx)(f.Z, {
             autoplay: o,
             className: a()(M.gridImg, {
                 [M.questRewardGiftInventory]: k && 'lg' === s,
@@ -144,9 +144,9 @@ t.Z = (e) => {
                 'aria-hidden': !G,
                 children: [
                     (0, i.jsx)(l.Tooltip, {
-                        text: K ? x.Z.Messages.QUESTS_REWARD_TILE_EXPIRED_QUEST : null,
+                        text: z ? x.Z.Messages.QUESTS_REWARD_TILE_EXPIRED_QUEST : null,
                         tooltipContentClassName: M.rewardTileExpirationTooltip,
-                        shouldShow: K,
+                        shouldShow: z,
                         children: (e) =>
                             (0, i.jsxs)('div', {
                                 className: M.rewardTileWrapper,
@@ -157,7 +157,7 @@ t.Z = (e) => {
                                             className: M.rewardTileExpired,
                                             children: (0, i.jsx)(l.CircleWarningIcon, { color: l.tokens.colors.WHITE })
                                         }),
-                                    z
+                                    K
                                         ? (0, i.jsx)(A.Z, {
                                               questConfig: t.config,
                                               fallback: q,
@@ -183,18 +183,18 @@ t.Z = (e) => {
                                     let { quest: l, location: o, locale: c, isQuestExpired: _ } = e,
                                         I = (null === (t = l.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
                                         m = I && (null === (n = l.userStatus) || void 0 === n ? void 0 : n.claimedAt) != null,
-                                        h = (0, T.zK)(l, R.S7.IN_HOUSE_CONSOLE_QUEST),
-                                        C = (0, S.uq)(o),
-                                        f = (0, E.B6)(null === (i = l.userStatus) || void 0 === i ? void 0 : i.completedAt, {
+                                        N = (0, T.zK)(l, R.S7.IN_HOUSE_CONSOLE_QUEST),
+                                        f = (0, S.uq)(o),
+                                        C = (0, E.B6)(null === (i = l.userStatus) || void 0 === i ? void 0 : i.completedAt, {
                                             year: 'numeric',
                                             month: 'long',
                                             day: 'numeric'
                                         }),
                                         p = (0, T.oo)({ quest: l }),
-                                        g = N.r.build(l.config).defaultReward.messages.nameWithArticle,
+                                        g = h.r.build(l.config).defaultReward.messages.nameWithArticle,
                                         A = (0, T.Kr)(l.config),
                                         M = (0, T.b7)(l);
-                                    if (I && h && C) return x.Z.Messages.QUEST_REWARD_COMPLETED_UNCLAIMED.format({ date: f });
+                                    if (I && N && f) return x.Z.Messages.QUEST_REWARD_COMPLETED_UNCLAIMED.format({ date: C });
                                     if (m) {
                                         let e = p
                                                 ? (0, T.o9)({
@@ -206,19 +206,19 @@ t.Z = (e) => {
                                         return null != t
                                             ? x.Z.Messages.QUEST_REWARD_COMPLETED_CLAIMED.format({
                                                   reward: t,
-                                                  date: f
+                                                  date: C
                                               })
                                             : x.Z.Messages.QUEST_REWARD_COMPLETED.format({
                                                   reward: g,
-                                                  date: f
+                                                  date: C
                                               });
                                     }
                                     if (I)
                                         return p
-                                            ? x.Z.Messages.QUEST_REWARD_COMPLETED_UNCLAIMED.format({ date: f })
+                                            ? x.Z.Messages.QUEST_REWARD_COMPLETED_UNCLAIMED.format({ date: C })
                                             : x.Z.Messages.QUEST_REWARD_COMPLETED.format({
                                                   reward: g,
-                                                  date: f
+                                                  date: C
                                               });
                                     let v = p
                                         ? (0, T.o9)({
@@ -280,7 +280,7 @@ t.Z = (e) => {
                         ]
                     }),
                     w &&
-                        (0, i.jsx)(h.Z, {
+                        (0, i.jsx)(N.Z, {
                             className: M.gridProgressBar,
                             color: U ? l.tokens.colors.TEXT_POSITIVE : l.tokens.colors.BG_BRAND,
                             quest: t,

@@ -24,13 +24,13 @@ var i,
     g = n(758059),
     C = n(447543),
     I = n(708690),
-    x = n(194359),
-    T = n(425493),
-    v = n(461745),
-    S = n(40851),
+    T = n(194359),
+    x = n(425493),
+    S = n(461745),
+    v = n(40851),
     N = n(367907),
-    Z = n(43267),
-    A = n(933557),
+    A = n(43267),
+    Z = n(933557),
     M = n(600164),
     b = n(313201),
     R = n(366980),
@@ -40,8 +40,8 @@ var i,
     O = n(428598),
     y = n(131704),
     D = n(592125),
-    k = n(341165),
-    U = n(544610),
+    U = n(341165),
+    k = n(544610),
     w = n(19780),
     B = n(306680),
     H = n(699516),
@@ -89,7 +89,7 @@ function er(e) {
 let eo = (e) => {
         var t;
         let { channel: n, onClose: i } = e,
-            a = null !== (t = (0, A.ZP)(n)) && void 0 !== t ? t : '',
+            a = null !== (t = (0, Z.ZP)(n)) && void 0 !== t ? t : '',
             l = (0, m.e7)([B.ZP], () => {
                 var e;
                 return null !== (e = B.ZP.lastMessageId(n.id)) && void 0 !== e ? e : n.id;
@@ -102,7 +102,7 @@ let eo = (e) => {
                 className: et.confirmChannelItemContainer,
                 children: [
                     (0, s.jsx)(p.Avatar, {
-                        src: (0, Z.x)(n),
+                        src: (0, A.x)(n),
                         size: p.AvatarSizes.SIZE_24,
                         'aria-label': a
                     }),
@@ -267,13 +267,13 @@ class eu extends (i = a.PureComponent) {
             (0, s.jsxs)(M.Z, {
                 className: r()(et.searchBar, ei.marginTop20),
                 children: [
-                    (0, s.jsx)(v.ZP, {
+                    (0, s.jsx)(S.ZP, {
                         ref: this.searchBarRef,
                         className: et.searchBarComponent,
                         autoFocus: !0,
                         placeholder: 0 === l.size ? ee.Z.Messages.GROUP_DM_SEARCH_PLACEHOLDER : void 0,
                         disabled: this.isPartyFull(),
-                        size: v.ZP.Sizes.MEDIUM,
+                        size: S.ZP.Sizes.MEDIUM,
                         query: t,
                         selectedRow: a,
                         sections: [null !== (e = null == i ? void 0 : i.length) && void 0 !== e ? e : 0],
@@ -477,7 +477,7 @@ class eu extends (i = a.PureComponent) {
     }
     handleAddFriend(e) {
         this.props.onClose(),
-            x.Z.sendRequest({
+            T.Z.sendRequest({
                 discordTag: q.ZP.getUserTag(e, { identifiable: 'always' }),
                 context: { location: 'Group DM' }
             });
@@ -518,7 +518,7 @@ class eu extends (i = a.PureComponent) {
                     children: (0, s.jsx)(p.FocusRingScope, {
                         containerRef: this._mobileCloseRef,
                         children: (0, s.jsx)('div', {
-                            children: (0, s.jsx)(T.Z, {
+                            children: (0, s.jsx)(x.Z, {
                                 className: et.mobileToolsCloseIcon,
                                 closeAction: this.props.onClose,
                                 keybind: 'ESC'
@@ -703,12 +703,12 @@ class eu extends (i = a.PureComponent) {
 function ed(e) {
     let { channel: t, ...n } = e;
     P.Z.useExperiment({ location: 'desktop_dm_list' });
-    let i = (0, m.cj)([U.Z, k.Z, G.Z], () => {
+    let i = (0, m.cj)([k.Z, U.Z, G.Z], () => {
         let e;
         return (
-            null != t && null != (e = k.Z.getInvite(t.id)) && e.isExpired() && (e = null),
+            null != t && null != (e = U.Z.getInvite(t.id)) && e.isExpired() && (e = null),
             {
-                ...U.Z.getState(),
+                ...k.Z.getState(),
                 invite: e,
                 hideDiscriminator: G.Z.hidePersonalInformation,
                 hideInstantInvites: G.Z.hideInstantInvites
@@ -777,4 +777,4 @@ function em(e) {
 function ep(e) {
     return JSON.stringify(e.sort());
 }
-es(eu, 'contextType', S.ZP);
+es(eu, 'contextType', v.ZP);

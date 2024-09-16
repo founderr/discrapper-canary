@@ -16,12 +16,12 @@ var i = n(735250),
     g = n(873387),
     C = n(605236),
     I = n(291407),
-    x = n(981631),
-    T = n(314734),
-    v = n(921944),
-    S = n(689938),
+    T = n(981631),
+    x = n(314734),
+    S = n(921944),
+    v = n(689938),
     N = n(786899);
-let Z = s.forwardRef(function (e, t) {
+let A = s.forwardRef(function (e, t) {
     let { type: n, animateRef: a } = e,
         m = (0, r.e7)([p.Z], () => p.Z.shouldShowPopup() && p.Z.activeViewType() === n),
         { Component: f, events: E, play: g } = (0, c.w)();
@@ -35,10 +35,10 @@ let Z = s.forwardRef(function (e, t) {
         [E]
     );
     let I = s.useCallback(() => {
-        (0, d.yw)(x.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED), m ? h.y(_.ti.DISMISSED) : ((0, C.EW)(o.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: v.L.TAKE_ACTION }), h._(_._b.TEXT, n)), g();
+        (0, d.yw)(T.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED), m ? h.y(_.ti.DISMISSED) : ((0, C.EW)(o.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: S.L.TAKE_ACTION }), h._(_._b.TEXT, n)), g();
     }, [m, n, g]);
     return (0, i.jsx)('div', {
-        className: l()(N.buttonContainer, T.t4),
+        className: l()(N.buttonContainer, x.t4),
         ref: t,
         children: (0, i.jsx)(u.Button, {
             look: u.Button.Looks.BLANK,
@@ -46,7 +46,7 @@ let Z = s.forwardRef(function (e, t) {
             tabIndex: 0,
             className: l()(N.button, { [N.buttonActive]: m }),
             onClick: I,
-            'aria-label': S.Z.Messages.APP_LAUNCHER_ENTRYPOINT_BUTTON_ARIA_LABEL,
+            'aria-label': v.Z.Messages.APP_LAUNCHER_ENTRYPOINT_BUTTON_ARIA_LABEL,
             focusProps: {
                 offset: {
                     top: 4,
@@ -87,7 +87,7 @@ t.Z = s.memo(function (e) {
                       animationContainerClassName: N.entrypointAnimation,
                       glowClassName: N.animationGlow,
                       trinketsClassName: N.animationTrinkets,
-                      children: (0, i.jsx)(Z, {
+                      children: (0, i.jsx)(A, {
                           type: n,
                           ref: l,
                           animateRef: a

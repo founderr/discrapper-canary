@@ -17,13 +17,13 @@ var i = n(735250),
     g = n(626135),
     C = n(74538),
     I = n(557457),
-    x = n(475674),
-    T = n(981631),
-    v = n(474936),
-    S = n(689938),
+    T = n(475674),
+    x = n(981631),
+    S = n(474936),
+    v = n(689938),
     N = n(659102);
-let Z = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
-    A = {
+let A = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
+    Z = {
         opacity: 0,
         transform: 'translate3d(100%, 0, 0)'
     },
@@ -33,8 +33,8 @@ let Z = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
     },
     b = { opacity: 0 },
     R = { opacity: 1 },
-    L = { borderRadius: ''.concat(Z, 'px ').concat(Z, 'px ').concat(Z, 'px ').concat(Z, 'px') },
-    j = { borderRadius: '0px '.concat(Z, 'px ').concat(Z, 'px 0px') },
+    L = { borderRadius: ''.concat(A, 'px ').concat(A, 'px ').concat(A, 'px ').concat(A, 'px') },
+    j = { borderRadius: '0px '.concat(A, 'px ').concat(A, 'px 0px') },
     P = {
         mass: 1,
         tension: 500,
@@ -44,10 +44,10 @@ let Z = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
     O = (e) => {
         let t,
             a,
-            { participant: r, isUpsellEnabled: o, shape: d, size: f, didTrackUpsellViewed: Z, setDidTrackUpsellViewed: A, className: M, premiumIndicator: b } = e,
+            { participant: r, isUpsellEnabled: o, shape: d, size: f, didTrackUpsellViewed: A, setDidTrackUpsellViewed: Z, className: M, premiumIndicator: b } = e,
             R = (0, I.Wc)(r),
             { analyticsLocations: L } = (0, p.ZP)(),
-            j = null != (0, x.Z)(r);
+            j = null != (0, T.Z)(r);
         try {
             t = (0, I.nG)(R);
         } catch (e) {
@@ -61,8 +61,8 @@ let Z = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
         let P = t || a,
             { location: O } = (0, m.O)(),
             y = (0, c.e7)([E.default], () => E.default.getCurrentUser()),
-            D = o && !C.ZP.isPremium(y, v.p9.TIER_1) && !C.ZP.canStreamQuality(C.ZP.StreamQuality.MID, y),
-            k = s.useCallback(() => {
+            D = o && !C.ZP.isPremium(y, S.p9.TIER_1) && !C.ZP.canStreamQuality(C.ZP.StreamQuality.MID, y),
+            U = s.useCallback(() => {
                 D &&
                     P &&
                     (0, h.openModalLazy)(async () => {
@@ -76,27 +76,27 @@ let Z = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
             }, [D, P, O]);
         if (
             (s.useEffect(() => {
-                !Z &&
+                !A &&
                     P &&
-                    (g.default.track(T.rMx.PREMIUM_UPSELL_VIEWED, {
-                        type: v.cd.STREAM_QUALITY_INDICATOR,
+                    (g.default.track(x.rMx.PREMIUM_UPSELL_VIEWED, {
+                        type: S.cd.STREAM_QUALITY_INDICATOR,
                         has_premium_stream_fps: t,
                         has_premium_stream_resolution: a,
                         location_stack: L
                     }),
-                    A(!0));
-            }, [t, a, P, Z, A, L]),
+                    Z(!0));
+            }, [t, a, P, A, Z, L]),
             null == R)
         )
             return null;
-        let U = (0, i.jsx)(h.Tooltip, {
-            text: j ? S.Z.Messages.SCREENSHARE_QUALITY_TOOLTIP_REDUCED : P ? S.Z.Messages.SCREENSHARE_QUALITY_TOOLTIP_PREMIUM : S.Z.Messages.SCREENSHARE_QUALITY_TOOLTIP_NORMAL,
+        let k = (0, i.jsx)(h.Tooltip, {
+            text: j ? v.Z.Messages.SCREENSHARE_QUALITY_TOOLTIP_REDUCED : P ? v.Z.Messages.SCREENSHARE_QUALITY_TOOLTIP_PREMIUM : v.Z.Messages.SCREENSHARE_QUALITY_TOOLTIP_NORMAL,
             position: 'bottom',
             color: h.Tooltip.Colors.GREY,
             children: (e) =>
                 (0, i.jsxs)(h.Clickable, {
                     ...e,
-                    onClick: k,
+                    onClick: U,
                     className: l()(N.qualityIndicator, f, _.eE[d], j ? N.qualityIndicatorLowQuality : N.qualityIndicatorFullQuality, { [N.clickable]: D && P }),
                     children: [
                         P
@@ -115,7 +115,7 @@ let Z = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
                 })
         });
         return (0, i.jsx)(h.TextBadge, {
-            text: U,
+            text: k,
             className: l()(M, N.qualityIndicatorBadge, { [N.qualityIndicatorBadgePremium]: P && b }),
             color: u.Z.unsafe_rawColors.PRIMARY_500.css,
             shape: d
@@ -134,15 +134,15 @@ t.Z = (e) => {
             g,
             {
                 enter: {
-                    from: E.enabled ? b : A,
+                    from: E.enabled ? b : Z,
                     to: E.enabled ? R : M
                 },
-                leave: E.enabled ? b : A,
+                leave: E.enabled ? b : Z,
                 config: P
             },
             'animate-always'
         ),
-        x = (0, h.useSpring)(
+        T = (0, h.useSpring)(
             {
                 to: g ? j : L,
                 config: P
@@ -173,7 +173,7 @@ t.Z = (e) => {
                         : null
                 ),
                 (0, i.jsx)(r.animated.div, {
-                    style: x,
+                    style: T,
                     className: N.liveIndicator,
                     children: (0, i.jsx)(_.ZP, {
                         look: _.jZ.RED,

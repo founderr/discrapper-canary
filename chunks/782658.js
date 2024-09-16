@@ -17,10 +17,10 @@ var i = n(735250),
     I = n(314897),
     m = n(430824),
     T = n(701190),
-    N = n(610699),
-    h = n(313876),
-    C = n(778333),
-    f = n(949981),
+    h = n(610699),
+    N = n(313876),
+    f = n(778333),
+    C = n(949981),
     p = n(680668),
     g = n(143708),
     S = n(358595),
@@ -96,7 +96,7 @@ function x(e) {
             });
             break;
         case O.r2o.ERROR:
-            y = (0, i.jsx)(h.Z, {
+            y = (0, i.jsx)(N.Z, {
                 author: n,
                 inviteError: v
             });
@@ -104,7 +104,7 @@ function x(e) {
         default:
             switch ((0, d.VR)(L)) {
                 case d.wx.GROUP_DM:
-                    y = (0, i.jsx)(f.Z, {
+                    y = (0, i.jsx)(C.Z, {
                         onTransitionToInviteChannel: j,
                         onAcceptInstantInvite: U,
                         currentUserId: D,
@@ -113,7 +113,7 @@ function x(e) {
                     });
                     break;
                 case d.wx.FRIEND:
-                    y = (0, i.jsx)(C.Z, {
+                    y = (0, i.jsx)(f.Z, {
                         invite: L,
                         author: n,
                         getAcceptInviteContext: x
@@ -152,7 +152,7 @@ function x(e) {
                         break;
                     }
                     (0, d.P1)(L) &&
-                        (y = (0, i.jsx)(N.Z, {
+                        (y = (0, i.jsx)(h.Z, {
                             invite: L,
                             getAcceptInviteContext: x
                         }));

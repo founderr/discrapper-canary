@@ -20,8 +20,8 @@ function E(e) {
         E = a.useMemo(() => () => (0, o.ep)(t, n), [t, n]),
         [T] = a.useState(E),
         [m, N] = a.useState(!1),
-        { editingRule: S, createNewEditingRule: h } = (0, d.V)(),
-        { getDefaultRuleName: g } = c.I6[n],
+        { editingRule: S, createNewEditingRule: g } = (0, d.V)(),
+        { getDefaultRuleName: h } = c.I6[n],
         C = !(0, o.Vb)(S) && (null == S ? void 0 : S.triggerType) === n,
         [x, p] = a.useState(C ? S : T),
         R = (0, l.useSpring)({
@@ -32,7 +32,7 @@ function E(e) {
                 clamp: !0
             }
         }),
-        f = (0, l.useSpring)({
+        L = (0, l.useSpring)({
             opacity: C ? 1 : 0,
             pointerEvents: C ? 'all' : 'none',
             config: {
@@ -53,7 +53,7 @@ function E(e) {
               children: [
                   (0, s.jsx)(i.animated.div, {
                       className: I.animatedRuleCardContainer,
-                      style: f,
+                      style: L,
                       children: (0, s.jsx)(u.Z, {
                           rule: x,
                           persistEdit: m
@@ -65,7 +65,7 @@ function E(e) {
                       children: (0, s.jsxs)(l.Clickable, {
                           className: I.addAnotherRuleCardContainer,
                           onClick: () => {
-                              h(t, n);
+                              g(t, n);
                           },
                           children: [
                               (0, s.jsx)(l.CirclePlusIcon, {
@@ -78,7 +78,7 @@ function E(e) {
                               (0, s.jsx)(l.Text, {
                                   variant: 'text-md/semibold',
                                   color: 'text-link',
-                                  children: _.Z.Messages.GUILD_AUTOMOD_ADD_ADDITIONAL_RULE.format({ ruleName: g() })
+                                  children: _.Z.Messages.GUILD_AUTOMOD_ADD_ADDITIONAL_RULE.format({ ruleName: h() })
                               })
                           ]
                       })

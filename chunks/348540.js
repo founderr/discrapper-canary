@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return v;
     }
 });
 var i = n(735250);
@@ -22,11 +22,11 @@ var s = n(442837),
     g = n(530),
     C = n(827313),
     I = n(228168),
-    x = n(981631),
-    T = n(689938),
-    v = n(299336);
-function S(e) {
-    let { user: t, currentUser: n, displayProfile: S, channel: N, isHovering: Z, onOpenProfile: A } = e,
+    T = n(981631),
+    x = n(689938),
+    S = n(299336);
+function v(e) {
+    let { user: t, currentUser: n, displayProfile: v, channel: N, isHovering: A, onOpenProfile: Z } = e,
         M = (0, s.e7)([a.Z], () => a.Z.getRelationshipType(t.id)),
         b = (0, s.e7)([l.Z], () => l.Z.hidePersonalInformation),
         R = (0, s.e7)([o.Z], () => {
@@ -34,16 +34,16 @@ function S(e) {
             return null === (e = o.Z.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application;
         });
     return (0, i.jsxs)('div', {
-        className: v.body,
+        className: S.body,
         children: [
             (0, i.jsx)(g.Z, {
                 user: t,
                 profileType: I.y0.PANEL,
                 nickname: r.ZP.getName(null, N.id, t),
-                pronouns: null == S ? void 0 : S.pronouns,
-                onOpenProfile: A,
+                pronouns: null == v ? void 0 : v.pronouns,
+                onOpenProfile: Z,
                 tags: (0, i.jsx)(u.Z, {
-                    displayProfile: S,
+                    displayProfile: v,
                     profileType: I.y0.PANEL
                 }),
                 nicknameIcons: (0, i.jsxs)(i.Fragment, {
@@ -52,13 +52,13 @@ function S(e) {
                         !b &&
                             (0, i.jsx)(C.Z, {
                                 userId: t.id,
-                                isHovering: Z,
-                                onOpenProfile: A
+                                isHovering: A,
+                                onOpenProfile: Z
                             })
                     ]
                 })
             }),
-            M === x.OGo.PENDING_INCOMING &&
+            M === T.OGo.PENDING_INCOMING &&
                 (0, i.jsx)(E.Z.Overlay, {
                     children: (0, i.jsx)(p.Z, {
                         user: t,
@@ -68,21 +68,21 @@ function S(e) {
             (0, i.jsx)(h.Z, {
                 user: t,
                 currentUser: n,
-                className: v.activity
+                className: S.activity
             }),
             (0, i.jsxs)(E.Z.Overlay, {
-                className: v.overlay,
+                className: S.overlay,
                 children: [
                     !b &&
-                        (null == S ? void 0 : S.bio) != null &&
-                        (null == S ? void 0 : S.bio) !== '' &&
+                        (null == v ? void 0 : v.bio) != null &&
+                        (null == v ? void 0 : v.bio) !== '' &&
                         (0, i.jsx)(f.Z, {
-                            heading: T.Z.Messages.USER_POPOUT_ABOUT_ME,
+                            heading: x.Z.Messages.USER_POPOUT_ABOUT_ME,
                             headingColor: 'header-primary',
                             children: (0, i.jsx)(d.Z, {
-                                userBio: S.bio,
+                                userBio: v.bio,
                                 animateOnHover: !0,
-                                isHovering: Z,
+                                isHovering: A,
                                 userId: t.id
                             })
                         }),
@@ -93,7 +93,7 @@ function S(e) {
                             channel: N
                         }),
                     (0, i.jsx)(f.Z, {
-                        heading: t.bot ? T.Z.Messages.BOT_PROFILE_CREATED_ON : T.Z.Messages.USER_PROFILE_MEMBER_SINCE,
+                        heading: t.bot ? x.Z.Messages.BOT_PROFILE_CREATED_ON : x.Z.Messages.USER_PROFILE_MEMBER_SINCE,
                         headingColor: 'header-primary',
                         children: (0, i.jsx)(_.Z, { userId: t.id })
                     })

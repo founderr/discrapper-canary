@@ -3,7 +3,7 @@ n.d(t, {
         return p;
     },
     Zm: function () {
-        return f;
+        return L;
     }
 }),
     n(47120);
@@ -23,8 +23,8 @@ var s = n(735250),
     m = n(974513),
     N = n(716130),
     S = n(981631),
-    h = n(290511),
-    g = n(689938),
+    g = n(290511),
+    h = n(689938),
     C = n(84877);
 function x(e) {
     let { guildId: t, prompts: n } = e,
@@ -35,7 +35,7 @@ function x(e) {
         T = (I / E) * 100,
         m = Math.max(Math.ceil((85 * E) / 100) - I, 0),
         [N, S] = a.useState(!1),
-        h = N ? r.ChevronSmallDownIcon : r.ChevronSmallUpIcon;
+        g = N ? r.ChevronSmallDownIcon : r.ChevronSmallUpIcon;
     return (0, s.jsxs)('div', {
         className: C.channelCoverage,
         children: [
@@ -56,7 +56,7 @@ function x(e) {
                                 className: C.coverageTitle,
                                 variant: 'text-xs/medium',
                                 color: 'text-muted',
-                                children: g.Z.Messages.ONBOARDING_PROMPT_CHANNEL_COVERAGE_MISSING_CHANNELS.format({ numChannelsMissing: E - I })
+                                children: h.Z.Messages.ONBOARDING_PROMPT_CHANNEL_COVERAGE_MISSING_CHANNELS.format({ numChannelsMissing: E - I })
                             })
                         ]
                     }),
@@ -68,7 +68,7 @@ function x(e) {
                                 foregroundColor: T > 85 ? 'var(--status-positive)' : 'var(--status-warning)',
                                 percent: T
                             }),
-                            (0, s.jsx)(h, {
+                            (0, s.jsx)(g, {
                                 size: 'md',
                                 color: 'currentColor',
                                 className: C.caret
@@ -84,7 +84,7 @@ function x(e) {
                           (0, s.jsx)(r.Text, {
                               variant: 'text-xs/semibold',
                               color: 'text-muted',
-                              children: g.Z.Messages.ONBOARDING_PROMPT_CHANNEL_COVERAGE_CHANNELS
+                              children: h.Z.Messages.ONBOARDING_PROMPT_CHANNEL_COVERAGE_CHANNELS
                           }),
                           (0, s.jsx)('div', {
                               className: C.channels,
@@ -125,14 +125,14 @@ function x(e) {
                                                 (0, s.jsx)(r.Text, {
                                                     variant: 'text-xs/normal',
                                                     color: 'text-muted',
-                                                    children: g.Z.Messages.ONBOARDING_PROMPT_CHANNEL_COVERAGE_ADD_HELP.format({ numChannels: m })
+                                                    children: h.Z.Messages.ONBOARDING_PROMPT_CHANNEL_COVERAGE_ADD_HELP.format({ numChannels: m })
                                                 })
                                             ]
                                         })
                                       : (0, s.jsx)(r.Text, {
                                             variant: 'text-xs/normal',
                                             color: 'text-muted',
-                                            children: g.Z.Messages.GUILD_NO_CHANNELS_HEADER
+                                            children: h.Z.Messages.GUILD_NO_CHANNELS_HEADER
                                         })
                           })
                       ]
@@ -159,7 +159,7 @@ function R(e) {
         u = a.useRef(!1);
     if (
         (a.useEffect(() => {
-            !l && !u.current && 0 === o.length && ((u.current = !0), !d && (0, E.tS)(t, [(0, h.ae)()], !1));
+            !l && !u.current && 0 === o.length && ((u.current = !0), !d && (0, E.tS)(t, [(0, g.ae)()], !1));
         }),
         a.useEffect(() => {
             if (n)
@@ -180,12 +180,12 @@ function R(e) {
             (0, s.jsx)(r.Heading, {
                 className: C.header,
                 variant: 'heading-lg/extrabold',
-                children: d ? g.Z.Messages.ONBOARDING_PROMPT_SETTINGS_HEADER_ADVANCED : g.Z.Messages.ONBOARDING_PROMPT_SETTINGS_HEADER
+                children: d ? h.Z.Messages.ONBOARDING_PROMPT_SETTINGS_HEADER_ADVANCED : h.Z.Messages.ONBOARDING_PROMPT_SETTINGS_HEADER
             }),
             (0, s.jsx)(r.Text, {
                 variant: 'text-sm/normal',
                 color: 'header-secondary',
-                children: g.Z.Messages.ONBOARDING_PROMPT_SETTINGS_SUBHEADER
+                children: h.Z.Messages.ONBOARDING_PROMPT_SETTINGS_SUBHEADER
             }),
             (0, s.jsxs)('div', {
                 className: C.links,
@@ -196,7 +196,7 @@ function R(e) {
                         children: (0, s.jsx)(r.Text, {
                             variant: 'text-sm/medium',
                             color: 'text-link',
-                            children: g.Z.Messages.GUILD_ONBOARDING_OVERVIEW_SEE_EXAMPLES
+                            children: h.Z.Messages.GUILD_ONBOARDING_OVERVIEW_SEE_EXAMPLES
                         })
                     }),
                     (0, s.jsx)('div', { className: C.dot }),
@@ -205,7 +205,7 @@ function R(e) {
                         children: (0, s.jsx)(r.Text, {
                             variant: 'text-sm/medium',
                             color: 'text-link',
-                            children: g.Z.Messages.GUILD_ONBOARDING_SETUP_PREVIEW
+                            children: h.Z.Messages.GUILD_ONBOARDING_SETUP_PREVIEW
                         })
                     }),
                     (0, s.jsx)('div', { className: C.dot }),
@@ -228,7 +228,7 @@ function R(e) {
         ]
     });
 }
-function f() {
+function L() {
     let e = (0, i.e7)([u.Z], () => u.Z.getGuild()),
         t = (0, i.e7)([T.Z], () => T.Z.submitting);
     return null == e
@@ -241,6 +241,6 @@ function f() {
               },
               onReset: E.NB,
               submitting: t,
-              onSaveText: g.Z.Messages.SAVE
+              onSaveText: h.Z.Messages.SAVE
           });
 }

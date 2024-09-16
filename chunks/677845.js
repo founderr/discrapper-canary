@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return Z;
+        return A;
     }
 }),
     n(653041);
@@ -22,28 +22,28 @@ var i = n(735250),
     g = n(430824),
     C = n(496675),
     I = n(434488),
-    x = n(27457),
-    T = n(251564),
-    v = n(695492),
-    S = n(981631),
+    T = n(27457),
+    x = n(251564),
+    S = n(695492),
+    v = n(981631),
     N = n(301439);
-function Z(e) {
-    let { participants: t, onClick: n, onDoubleClick: Z, onContextMenu: A, channel: M, className: b, inCall: R, totalNumberOfParticipants: L, paused: j = !1 } = e,
-        P = (0, c.bp)() === S.IlC.POPOUT,
+function A(e) {
+    let { participants: t, onClick: n, onDoubleClick: A, onContextMenu: Z, channel: M, className: b, inCall: R, totalNumberOfParticipants: L, paused: j = !1 } = e,
+        P = (0, c.bp)() === v.IlC.POPOUT,
         O = (0, r.e7)([g.Z], () => g.Z.getGuild(M.guild_id), [M.guild_id]),
-        { dismissedActivityEntryPointTileChannel: y } = (0, T.d)(),
+        { dismissedActivityEntryPointTileChannel: y } = (0, x.d)(),
         D = (0, r.e7)([m.Z], () => m.Z.getUserParticipantCount(M.id), [M]),
-        k = (0, E.bt)(M.id, t),
-        U = s.useCallback(() => {
+        U = (0, E.bt)(M.id, t),
+        k = s.useCallback(() => {
             (0, l.j)(() => {
-                T.d.setState({ dismissedActivityEntryPointTileChannel: M.id });
+                x.d.setState({ dismissedActivityEntryPointTileChannel: M.id });
             });
         }, [M.id]);
     s.useEffect(() => {
         null != y &&
             M.id !== y &&
             (0, l.j)(() => {
-                T.d.setState({ dismissedActivityEntryPointTileChannel: null });
+                x.d.setState({ dismissedActivityEntryPointTileChannel: null });
             });
     }, [M.id, y]);
     let w = (0, r.e7)([C.Z], () => M.isPrivate() || (0, _.b)(C.Z, O, M), [O, M]),
@@ -53,18 +53,18 @@ function Z(e) {
         V = (0, p.N)(o.z.VC_TILE_ACTIVITIES_ENTRY_POINT),
         F = (0, d.KF)(M.id) !== d.jy.CAN_LAUNCH,
         W = null != y && y === M.id,
-        z = k.map(
+        z = U.map(
             (e) => (t) =>
                 (0, i.jsx)(
-                    x.ZP,
+                    T.ZP,
                     {
                         participant: e,
                         channel: M,
                         className: N.tile,
                         paused: j,
                         onClick: n,
-                        onDoubleClick: Z,
-                        onContextMenu: A,
+                        onDoubleClick: A,
+                        onContextMenu: Z,
                         inCall: R,
                         width: t,
                         inPopout: P
@@ -99,12 +99,12 @@ function Z(e) {
                                 guild: O,
                                 width: e,
                                 inPopout: P,
-                                handleClose: U,
+                                handleClose: k,
                                 userParticipantCount: D
                             })
                         )
                       : z.push((e) =>
-                            (0, i.jsx)(v.Z, {
+                            (0, i.jsx)(S.Z, {
                                 width: e,
                                 channel: M,
                                 guild: O,
@@ -117,16 +117,16 @@ function Z(e) {
                           guild: O,
                           width: e,
                           inPopout: P,
-                          handleClose: U,
+                          handleClose: k,
                           userParticipantCount: D
                       })
                   ));
     let Y = s.useCallback(
         (e) => {
             var t, n;
-            return null !== (n = null === (t = k[e]) || void 0 === t ? void 0 : t.id) && void 0 !== n ? n : 'empty-tile';
+            return null !== (n = null === (t = U[e]) || void 0 === t ? void 0 : t.id) && void 0 !== n ? n : 'empty-tile';
         },
-        [k]
+        [U]
     );
     return (0, i.jsx)(f.Z, {
         className: b,

@@ -77,8 +77,8 @@ var r = t(250683),
     C = t(718629),
     M = t(615830),
     h = t(352954),
-    O = t(571826),
-    g = t(760373),
+    g = t(571826),
+    O = t(760373),
     y = t(981631),
     U = t(689938);
 function p() {
@@ -92,7 +92,7 @@ function D() {
 }
 function m(e, n, t, r, i) {
     t ? C.Z.createSecureFramesVerifiedKey(e, n) : C.Z.createSecureFramesTransientKey(e, n),
-        (0, O.M1)({
+        (0, g.M1)({
             channelId: r,
             userId: e,
             analyticsLocation: i
@@ -109,7 +109,7 @@ function L(e, n) {
         title: U.Z.Messages.E2EE_CLEAR_VERIFICATION_CONFIRM_TITLE,
         subtitle: U.Z.Messages.E2EE_CLEAR_VERIFICATION_CONFIRM_SUBTITLE,
         onConfirm: () => {
-            C.Z.deleteSecureFramesVerifiedKey(e, n), (0, O.Pn)();
+            C.Z.deleteSecureFramesVerifiedKey(e, n), (0, g.Pn)();
         }
     });
 }
@@ -120,7 +120,7 @@ function P(e) {
         title: U.Z.Messages.E2EE_CLEAR_USER_VERIFICATION_CONFIRM_TITLE.format({ username: t }),
         subtitle: U.Z.Messages.E2EE_CLEAR_USER_VERIFICATION_CONFIRM_SUBTITLE,
         onConfirm: () => {
-            C.Z.deleteSecureFramesUserVerifiedKeys(e), (0, O.DF)();
+            C.Z.deleteSecureFramesUserVerifiedKeys(e), (0, g.DF)();
         }
     });
 }
@@ -161,11 +161,11 @@ function w(e) {
     if (t) return U.Z.Messages.E2EE_CURRENT_USER_TRANSIENT_VERIFICATION_DESC.format({ helpArticle: p() });
     else return U.Z.Messages.E2EE_TRANSIENT_VERIFICATION_DESC.format({ helpArticle: p() });
 }
-async function K(e) {
+async function b(e) {
     let n = _.default.getStaticAuthSessionId();
     return E()(null != n, '[getCurrentUserPublicKey] session id should not be null'), await l.Z.getMLSSigningKey(n, e);
 }
-function b(e) {
+function K(e) {
     let n = r.fromByteArray(new Uint8Array(e));
     return 'data:application/octet-stream;base64,'.concat(n);
 }
@@ -175,7 +175,7 @@ async function v(e, n, t) {
             await o.tn.post({
                 url: y.ANM.VOICE_MATCH_PUBLIC_KEY(e),
                 body: {
-                    public_key: b(n),
+                    public_key: K(n),
                     key_version: t
                 }
             })
@@ -185,13 +185,13 @@ async function v(e, n, t) {
     }
 }
 async function Y(e) {
-    let { key: n, signature: t } = await K(e);
+    let { key: n, signature: t } = await b(e);
     try {
         await o.tn.put({
             url: y.ANM.VOICE_PUBLIC_KEYS(),
             body: {
-                public_key: b(n),
-                signature: b(t),
+                public_key: K(n),
+                signature: K(t),
                 key_version: e
             }
         }),
@@ -209,9 +209,9 @@ async function B(e) {
 async function G(e) {
     if (!k(e)) return await Y(e), !0;
     let n = _.default.getId(),
-        { key: t } = await K(e),
+        { key: t } = await b(e),
         r = await v(n, t, e);
-    return !r && (0, O.KA)(e), r;
+    return !r && (0, g.KA)(e), r;
 }
 function x(e, n) {
     let [t, r] = n;
@@ -230,11 +230,11 @@ function x(e, n) {
 }
 function H(e) {
     let { userId: n, channelId: t, nickname: r } = e;
-    (0, O.CW)({
+    (0, g.CW)({
         userId: n,
         channelId: t,
-        keyVersion: g.GB,
-        reason: g.Xe.OTHER_USER_INCONSISTENT_KEYS
+        keyVersion: O.GB,
+        reason: O.Xe.OTHER_USER_INCONSISTENT_KEYS
     }),
         c.Z.show({
             title: U.Z.Messages.E2EE_INCONSISTENT_KEY_MISMATCH_TITLE,

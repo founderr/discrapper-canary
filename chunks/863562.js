@@ -13,8 +13,8 @@ var s = n(735250),
 t.Z = (e) => {
     let { className: t, isDisabled: i, sticker: E, canManageSticker: T } = e,
         [m, N] = a.useState(!1),
-        [S, h] = (0, c.Z)(null, 4000),
-        g = () => {
+        [S, g] = (0, c.Z)(null, 4000),
+        h = () => {
             (0, l.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([n.e('93626'), n.e('2901')]).then(n.bind(n, 136735));
                 return (t) =>
@@ -26,11 +26,11 @@ t.Z = (e) => {
             });
         },
         C = async () => {
-            h(null), N(!0);
+            g(null), N(!0);
             try {
                 await (0, d.Um)(E);
             } catch (e) {
-                h(e.body.message), N(!1);
+                g(e.body.message), N(!1);
             }
         };
     return (0, s.jsx)(l.Tooltip, {
@@ -81,7 +81,7 @@ t.Z = (e) => {
                                       children: [
                                           (0, s.jsx)(l.Clickable, {
                                               className: r()(I.action, I.__invalid_actionEdit),
-                                              onClick: g,
+                                              onClick: h,
                                               'aria-label': _.Z.Messages.EDIT,
                                               children: (0, s.jsx)(l.PencilIcon, {
                                                   size: 'xs',

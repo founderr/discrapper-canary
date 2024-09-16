@@ -1,6 +1,6 @@
 n.d(t, {
     SO: function () {
-        return v;
+        return p;
     }
 }),
     n(653041),
@@ -90,7 +90,7 @@ let E = (e, t) => ({
         }
         return n;
     },
-    p = (e, t) => {
+    v = (e, t) => {
         let { timestamp: n, colors: l, description: a, entry: i, numAvatars: o } = t,
             u = l.map((e, t) => ({
                 color: e,
@@ -177,14 +177,14 @@ let E = (e, t) => ({
             maxWidth: m.kC
         });
     },
-    v = async (e) => {
+    p = async (e) => {
         let { applicationImageSrc: t, entry: n, avatarSrcs: l, description: a, timestamp: i, colors: r, channelId: u } = e,
             c = n.extra.game_name,
             d = E(l, t);
         return await (0, o.f)({
             assetsToLoad: d,
             drawImage: (e) =>
-                p(e, {
+                v(e, {
                     timestamp: i,
                     colors: r,
                     description: a,

@@ -24,13 +24,13 @@ var i = n(735250),
     g = n(352978),
     C = n(590076),
     I = n(507675),
-    x = n(199902),
-    T = n(314897),
-    v = n(592125),
-    S = n(131951),
+    T = n(199902),
+    x = n(314897),
+    S = n(592125),
+    v = n(131951),
     N = n(451478),
-    Z = n(685203),
-    A = n(112560),
+    A = n(685203),
+    Z = n(112560),
     M = n(442168),
     b = n(822296),
     R = n(916771),
@@ -40,13 +40,13 @@ var i = n(735250),
     O = n(623825),
     y = n(981631),
     D = n(354459),
-    k = n(65154),
-    U = n(689938),
+    U = n(65154),
+    k = n(689938),
     w = n(810190);
 let B = new m.Z('StreamTile');
 function H(e) {
     let { participant: t, selected: n, focused: s, idle: a, width: l, premiumIndicator: o } = e,
-        c = (0, r.e7)([x.Z], () => x.Z.getActiveStreamForUser(t.user.id, t.stream.guildId)),
+        c = (0, r.e7)([T.Z], () => T.Z.getActiveStreamForUser(t.user.id, t.stream.guildId)),
         u = (0, O.K)(l);
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -66,13 +66,13 @@ function H(e) {
 }
 function G(e) {
     let { participant: t, selected: n, onVideoResize: a, paused: h, fit: m, inPopout: E, width: P, focused: O } = e,
-        H = S.Z.getVideoComponent(),
-        G = (0, r.e7)([T.default], () => T.default.getId()),
+        H = v.Z.getVideoComponent(),
+        G = (0, r.e7)([x.default], () => x.default.getId()),
         V = (0, p.Z)(),
         { stream: F, user: W, streamId: z } = t,
-        Y = (0, r.e7)([v.Z], () => v.Z.getChannel(F.channelId)),
-        K = (0, r.e7)([x.Z], () => x.Z.getActiveStreamForUser(W.id, F.guildId), [W.id, F.guildId]),
-        q = (0, r.e7)([x.Z], () => x.Z.getAllActiveStreams().length > 0),
+        Y = (0, r.e7)([S.Z], () => S.Z.getChannel(F.channelId)),
+        K = (0, r.e7)([T.Z], () => T.Z.getActiveStreamForUser(W.id, F.guildId), [W.id, F.guildId]),
+        q = (0, r.e7)([T.Z], () => T.Z.getAllActiveStreams().length > 0),
         X = (0, r.e7)([N.Z], () => N.Z.isFocused()),
         J = (null == K ? void 0 : K.ownerId) === G,
         Q = J && !X && !E,
@@ -88,7 +88,7 @@ function G(e) {
                     .concat(null != K, ' | selected: ')
                     .concat(n, ' | Video: ')
                     .concat(null != H, ' | MediaEngine: ')
-                    .concat(S.Z.supports(k.AN.VIDEO))
+                    .concat(v.Z.supports(U.AN.VIDEO))
             );
         }, [H, K, n]),
         V)
@@ -117,7 +117,7 @@ function G(e) {
             participant: t,
             width: P
         });
-    else if (null != K && !n && null != H && S.Z.supports(k.AN.VIDEO))
+    else if (null != K && !n && null != H && v.Z.supports(U.AN.VIDEO))
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 null != Y
@@ -147,7 +147,7 @@ function G(e) {
                 ),
                 null != $
                     ? (0, i.jsx)(I.Z, {
-                          size: (0, A.L)(P),
+                          size: (0, Z.L)(P),
                           ...$
                       })
                     : null,
@@ -170,18 +170,18 @@ function G(e) {
                     ? null
                     : (0, i.jsxs)(i.Fragment, {
                           children: [
-                              (0, i.jsx)(Z.a, {
+                              (0, i.jsx)(A.a, {
                                   isSmall: ee,
                                   children: (0, i.jsx)(o.Text, {
                                       variant: ee ? 'text-sm/semibold' : 'text-md/semibold',
                                       color: 'none',
-                                      children: P < 175 ? U.Z.Messages.WATCH : U.Z.Messages.WATCH_STREAM
+                                      children: P < 175 ? k.Z.Messages.WATCH : k.Z.Messages.WATCH_STREAM
                                   })
                               }),
                               q
-                                  ? (0, i.jsx)(Z.a, {
+                                  ? (0, i.jsx)(A.a, {
                                         className: w.addCTA,
-                                        tooltip: U.Z.Messages.STREAM_WATCH_MULTIPLE_TOOLTIP,
+                                        tooltip: k.Z.Messages.STREAM_WATCH_MULTIPLE_TOOLTIP,
                                         onClick: (e) => {
                                             e.stopPropagation(), (0, u.rn)(F, { forceMultiple: !0 });
                                         },

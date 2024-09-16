@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return A;
+        return Z;
     }
 }),
     n(47120);
@@ -22,10 +22,10 @@ var i = n(735250),
     g = n(251625),
     C = n(823379),
     I = n(665149),
-    x = n(981631),
-    T = n(228168),
-    v = n(689938),
-    S = n(289304);
+    T = n(981631),
+    x = n(228168),
+    S = n(689938),
+    v = n(289304);
 function N(e, t, n) {
     return (
         t in e
@@ -39,7 +39,7 @@ function N(e, t, n) {
         e
     );
 }
-class Z {
+class A {
     updateData(e) {
         let { userId: t, user: n, channelId: i, analyticsLocations: s } = e;
         (this.userId = t), (this.user = n), (this.channelId = i), (this.analyticsLocations = s);
@@ -58,7 +58,7 @@ class Z {
             return (
                 a.length > 0 &&
                     (l = (0, i.jsx)(o.TooltipContainer, {
-                        className: S.tooltip,
+                        className: v.tooltip,
                         text: a.join(', '),
                         position: 'bottom',
                         children: l
@@ -104,15 +104,15 @@ class Z {
                 (0, i.jsx)(
                     o.TooltipContainer,
                     {
-                        text: v.Z.Messages.AKA_MORE_AVATARS_OVERFLOW,
+                        text: S.Z.Messages.AKA_MORE_AVATARS_OVERFLOW,
                         position: 'bottom',
                         children: (0, i.jsx)(o.Clickable, {
-                            className: S.moreAvatars,
+                            className: v.moreAvatars,
                             onClick: this.handleClick,
                             children: (0, i.jsx)(o.CirclePlusIcon, {
                                 size: 'xs',
                                 color: 'currentColor',
-                                className: S.plusIcon
+                                className: v.plusIcon
                             })
                         })
                     },
@@ -124,8 +124,8 @@ class Z {
                     userId: this.userId,
                     channelId: this.channelId,
                     sourceAnalyticsLocations: this.analyticsLocations,
-                    section: T.oh.MUTUAL_GUILDS,
-                    analyticsLocation: { section: x.jXE.CHANNEL_HEADER }
+                    section: x.oh.MUTUAL_GUILDS,
+                    analyticsLocation: { section: T.jXE.CHANNEL_HEADER }
                 });
             }),
             (this.userId = e),
@@ -134,7 +134,7 @@ class Z {
             (this.analyticsLocations = s);
     }
 }
-function A(e) {
+function Z(e) {
     let { channel: t } = e,
         n = t.getRecipientId(),
         a = (0, m.gc)(n),
@@ -145,7 +145,7 @@ function A(e) {
                 a = (0, r.e7)([E.default], () => E.default.getUser(t), [t]),
                 [l] = s.useState(
                     () =>
-                        new Z({
+                        new A({
                             user: a,
                             userId: t,
                             channelId: n,
@@ -167,15 +167,15 @@ function A(e) {
             channelId: t.id
         });
     return 0 === _.getNicknameGuildPairs().length && 0 === a.length
-        ? (0, i.jsx)('div', { className: S.spacer })
+        ? (0, i.jsx)('div', { className: v.spacer })
         : (0, i.jsxs)(d.Gt, {
               value: p,
               children: [
                   (0, i.jsx)(I.iz, {}),
                   (0, i.jsx)(o.TextBadge, {
-                      text: v.Z.Messages.AKA,
+                      text: S.Z.Messages.AKA,
                       disableColor: !0,
-                      className: S.akaBadge
+                      className: v.akaBadge
                   }),
                   a.length > 0
                       ? (0, i.jsx)(c.Z, {
@@ -195,7 +195,7 @@ function A(e) {
                                               position: 'bottom',
                                               children: (0, i.jsx)('img', {
                                                   alt: '',
-                                                  className: S.avatar,
+                                                  className: v.avatar,
                                                   onClick: _.handleClick,
                                                   src: l.getAvatarURL(r, 16),
                                                   'aria-hidden': !0
@@ -207,13 +207,13 @@ function A(e) {
                             renderMoreUsers: _.renderMoreAvatars,
                             guildId: void 0,
                             max: 3,
-                            className: S.avatars
+                            className: v.avatars
                         })
                       : null,
                   _.getNicknameGuildPairs().length > 0
                       ? (0, i.jsx)(h.Z, {
                             position: 'bottom',
-                            className: S.nicknames,
+                            className: v.nicknames,
                             children: _.renderNicknamePairs()
                         })
                       : null

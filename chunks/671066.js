@@ -20,7 +20,7 @@ function I(e) {
         m = (e) => () => T(e),
         N = (0, d.c)(n.type, n, I),
         S = null === (t = n.metadata) || void 0 === t ? void 0 : t.channelId,
-        h = (0, a.e7)(
+        g = (0, a.e7)(
             [c.default, o.Z, l.Z],
             () => {
                 let e = l.Z.getChannel(S);
@@ -29,7 +29,7 @@ function I(e) {
             [S]
         );
     if (null == N) return null;
-    let { headerText: g, descriptionText: C, icon: x } = N;
+    let { headerText: h, descriptionText: C, icon: x } = N;
     return (0, s.jsxs)('div', {
         className: _.actionContainer,
         children: [
@@ -46,7 +46,7 @@ function I(e) {
                 children: [
                     (0, s.jsx)(i.Heading, {
                         variant: 'heading-sm/semibold',
-                        children: g
+                        children: h
                     }),
                     (0, s.jsx)(i.Text, {
                         color: 'interactive-normal',
@@ -58,7 +58,7 @@ function I(e) {
                             color: 'text-muted',
                             variant: 'text-xs/medium',
                             children: [
-                                null != h && u.Z.Messages.GUILD_AUTOMOD_ACTIONS_FLAG_TO_CHANNEL_EDIT_HELPER.format({ channelName: h }),
+                                null != g && u.Z.Messages.GUILD_AUTOMOD_ACTIONS_FLAG_TO_CHANNEL_EDIT_HELPER.format({ channelName: g }),
                                 (0, s.jsx)(i.Clickable, {
                                     onClick: m(!0),
                                     className: _.editChannel,

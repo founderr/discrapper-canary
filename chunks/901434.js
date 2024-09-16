@@ -17,19 +17,19 @@ t.Z = function (e) {
     var t, n;
     let { participants: m, channel: g, hasConnectPermission: C } = e,
         I = (0, u.J)(g.guild_id),
-        x = s.useCallback(() => {
+        T = s.useCallback(() => {
             I ? (0, c.hk)(g.guild_id, () => r.default.selectVoiceChannel(g.id)) : r.default.selectVoiceChannel(g.id);
         }, [g.id, g.guild_id, I]),
-        T = m.filter((e) => e.type === p.Ui.VOICE),
-        v = 4 === T.length ? 2 : 3,
-        S = (0, a.Wu)([o.Z], () => T.map((e) => o.Z.getParticipant(g.id, e.id)).filter(h.lm), [g.id, T]);
+        x = m.filter((e) => e.type === p.Ui.VOICE),
+        S = 4 === x.length ? 2 : 3,
+        v = (0, a.Wu)([o.Z], () => x.map((e) => o.Z.getParticipant(g.id, e.id)).filter(h.lm), [g.id, x]);
     return (0, i.jsxs)('div', {
         className: f.container,
         children: [
             (0, i.jsx)('div', {
                 className: f.tiles,
-                style: { maxWidth: 168 * v },
-                children: S.slice(0, 5).map((e) =>
+                style: { maxWidth: 168 * S },
+                children: v.slice(0, 5).map((e) =>
                     (0, i.jsx)(
                         d.ZP,
                         {
@@ -58,7 +58,7 @@ t.Z = function (e) {
                     variant: 'text-sm/normal',
                     children:
                         ((t = g),
-                        0 === (n = T).length
+                        0 === (n = x).length
                             ? _.Z.Messages.CURRENTLY_IN_STAGE_EMPTY
                             : 1 === n.length
                               ? _.Z.Messages.CURRENTLY_IN_STAGE_1.format({ a: E(t, n[0]) })
@@ -80,7 +80,7 @@ t.Z = function (e) {
                 disabled: !C,
                 className: f.joinButton,
                 color: C ? l.Button.Colors.GREEN : l.Button.Colors.PRIMARY,
-                onClick: x,
+                onClick: T,
                 size: l.Button.Sizes.MEDIUM,
                 children: C ? _.Z.Messages.STAGE_CHANNEL_JOIN : _.Z.Messages.CHANNEL_LOCKED_SHORT
             })

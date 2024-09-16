@@ -21,13 +21,13 @@ var i = n(735250),
     g = n(51144),
     C = n(7782),
     I = n(967128),
-    x = n(320781),
-    T = n(269203),
-    v = n(753898),
-    S = n(734386),
+    T = n(320781),
+    x = n(269203),
+    S = n(753898),
+    v = n(734386),
     N = n(184279),
-    Z = n(438306),
-    A = n(544142),
+    A = n(438306),
+    Z = n(544142),
     M = n(128557),
     b = n(981631),
     R = n(176505),
@@ -38,11 +38,11 @@ function P(e) {
         s = t && (0, c.Yk)(n),
         l = (0, a.e7)([_.ZP], () => null != n.guild_id && n === _.ZP.getDefaultChannel(n.guild_id), [n]);
     if ((0, u.Z)(n.id)) return null;
-    if (n.isForumPost()) return (0, i.jsx)(x.Z, { channel: n });
-    if (p.Ec.has(n.type)) return (0, i.jsx)(A.Z, { channel: n });
+    if (n.isForumPost()) return (0, i.jsx)(T.Z, { channel: n });
+    if (p.Ec.has(n.type)) return (0, i.jsx)(Z.Z, { channel: n });
     else if (l) return (0, i.jsx)(M.Z, { channel: n });
-    else if (s) return (0, i.jsx)(S.Z, { channel: n });
-    return (0, i.jsx)(Z.Z, { channel: n });
+    else if (s) return (0, i.jsx)(v.Z, { channel: n });
+    return (0, i.jsx)(A.Z, { channel: n });
 }
 function O(e) {
     var t;
@@ -50,27 +50,27 @@ function O(e) {
         u = (0, o.ZP)(n),
         { type: p } = n,
         _ = (0, a.e7)([E.default], () => (n.isPrivate() ? E.default.getUser(n.getRecipientId()) : null)),
-        x = g.ZP.useUserTag(_),
-        { canManageRoles: S, canReadMessageHistory: Z } = (0, a.cj)([f.Z], () => ({
+        T = g.ZP.useUserTag(_),
+        { canManageRoles: v, canReadMessageHistory: A } = (0, a.cj)([f.Z], () => ({
             canManageRoles: f.Z.can(b.Plq.MANAGE_ROLES, n),
             canReadMessageHistory: f.Z.can(b.Plq.READ_MESSAGE_HISTORY, n)
         })),
-        A = (0, a.e7)([h.Z], () => (p === b.d4z.DM ? h.Z.getMutualGuilds(n.getRecipientId()) : null), [n, p]),
+        Z = (0, a.e7)([h.Z], () => (p === b.d4z.DM ? h.Z.getMutualGuilds(n.getRecipientId()) : null), [n, p]),
         { systemDMRedesignEnabled: M } = d.Z.useExperiment({ location: 'bf1a4f_1' }, { autoTrackExposure: null !== (t = n.isSystemDM()) && void 0 !== t && t });
     if (
         (s.useEffect(() => {
-            p === b.d4z.DM && null == A && null != _ && r.Z.wait(() => (0, m.Z)(n.getRecipientId(), _.getAvatarURL(null, 80), { withMutualGuilds: !0 }));
-        }, [A, p, n, _]),
+            p === b.d4z.DM && null == Z && null != _ && r.Z.wait(() => (0, m.Z)(n.getRecipientId(), _.getAvatarURL(null, 80), { withMutualGuilds: !0 }));
+        }, [Z, p, n, _]),
         n.isSystemDM())
     )
         return M
             ? (0, i.jsx)(N.Z, { channel: n })
-            : (0, i.jsx)(v.Z, {
+            : (0, i.jsx)(S.Z, {
                   channel: n,
                   children: L.Z.Messages.SYSTEM_DM_EMPTY_MESSAGE
               });
     if (p === b.d4z.DM)
-        return (0, i.jsxs)(v.Z, {
+        return (0, i.jsxs)(S.Z, {
             channel: n,
             user: _,
             children: [
@@ -78,7 +78,7 @@ function O(e) {
                     (0, i.jsx)(l.Heading, {
                         variant: 'heading-xl/medium',
                         className: j.marginBottom20,
-                        children: x
+                        children: T
                     }),
                 L.Z.Messages.BEGINNING_DM.format({ username: u }),
                 (0, i.jsx)(C.Z, {
@@ -95,15 +95,15 @@ function O(e) {
                   children: [(0, i.jsx)(I.Ot, { children: L.Z.Messages.BEGINNING_CHANNEL_WELCOME.format({ channelName: u }) }), (0, i.jsx)(I.jz, { children: L.Z.Messages.BEGINNING_GROUP_DM_MANAGED })]
               })
             : n.hasFlag(R.zZ.IS_JOIN_REQUEST_INTERVIEW_CHANNEL)
-              ? (0, i.jsx)(T.Z, { channel: n })
-              : (0, i.jsx)(v.Z, {
+              ? (0, i.jsx)(x.Z, { channel: n })
+              : (0, i.jsx)(S.Z, {
                     channel: n,
                     children: L.Z.Messages.BEGINNING_GROUP_DM.format({ name: u })
                 });
-    return Z
+    return A
         ? (0, i.jsx)(P, {
               channel: n,
-              canManageRoles: S
+              canManageRoles: v
           })
         : (0, i.jsx)(I.ZP, {
               channelId: n.id,

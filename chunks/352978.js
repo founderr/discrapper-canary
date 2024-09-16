@@ -18,11 +18,11 @@ var i,
 let m = l.memo(function (e) {
     let { streamId: t, onResize: n, wrapperClassName: i, videoComponent: s, className: r, fit: m = 'contain', mirror: p = !1, paused: _ = !1, streamPreviewURL: f, videoSpinnerContext: E, userId: g } = e,
         [C, I] = l.useState(!0),
-        [x] = l.useState(() => new u.o('VideoStream'));
+        [T] = l.useState(() => new u.o('VideoStream'));
     l.useEffect(() => {
-        !_ && (C ? x.onSpinnerStarted() : null != t && x.trackSpinnerDuration(E, g, t));
-    }, [C, _, t, x, E, g]);
-    let T = l.useCallback(() => {
+        !_ && (C ? T.onSpinnerStarted() : null != t && T.trackSpinnerDuration(E, g, t));
+    }, [C, _, t, T, E, g]);
+    let x = l.useCallback(() => {
         I(!1);
     }, []);
     return (0, a.jsxs)('div', {
@@ -33,7 +33,7 @@ let m = l.memo(function (e) {
                     className: o()(h.video, (0, d.l)(h, 'video', m), { [h.mirror]: p }, r),
                     streamId: t,
                     onResize: n,
-                    onReady: T,
+                    onReady: x,
                     paused: _
                 }),
             _

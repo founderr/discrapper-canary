@@ -21,22 +21,22 @@ var s = n(735250),
 function S(e) {
     var t;
     let { onDeleteEditState: i } = e,
-        { editStateId: S, guildId: h, groupListingId: g } = (0, _.N)(),
+        { editStateId: S, guildId: g, groupListingId: h } = (0, _.N)(),
         C = (0, l.e7)([u.Z], () => u.Z.getSubscriptionListing(S)),
         x = null == C ? void 0 : C.id,
-        p = (0, I.Z)(h),
+        p = (0, I.Z)(g),
         R = a.useMemo(() => {
             var e;
             return null != p && null != C && (null !== (e = p[C.role_id]) && void 0 !== e ? e : 0);
         }, [p, C]),
-        f = 0 === R,
-        L = null == x,
+        L = 0 === R,
+        f = null == x,
         O = null !== (t = null == C ? void 0 : C.archived) && void 0 !== t && t,
         { deleteSubscriptionListing: A, submitting: M } = (0, d.r4)(),
         { archiveSubscriptionListing: D, submitting: v } = (0, d._1)(),
         j = () => {
             let e = async () => {
-                if (!!L || (r()(null != g, 'group listing doesnt exist'), r()(null != x, 'subscription listing doesnt exist'), !!(await A(h, g, x)))) null == i || i();
+                if (!!f || (r()(null != h, 'group listing doesnt exist'), r()(null != x, 'subscription listing doesnt exist'), !!(await A(g, h, x)))) null == i || i();
             };
             (0, o.openModalLazy)(async () => {
                 let { ConfirmModal: t } = await Promise.resolve().then(n.bind(n, 481060));
@@ -57,7 +57,7 @@ function S(e) {
                     });
             });
         },
-        { allowSelfRemoveMonetization: Z } = (0, c.gX)(h);
+        { allowSelfRemoveMonetization: Z } = (0, c.gX)(g);
     return null == C
         ? null
         : (0, s.jsx)(E.Z, {
@@ -74,7 +74,7 @@ function S(e) {
                                 children: T.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DELETE_DESCRIPTION
                             }),
                             (0, s.jsx)(o.Tooltip, {
-                                shouldShow: !f,
+                                shouldShow: !L,
                                 text: T.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DELETE_TOOLTIP.format({ listingMemberCount: R }),
                                 children: (e) =>
                                     (0, s.jsx)(o.Button, {
@@ -83,7 +83,7 @@ function S(e) {
                                         color: o.Button.Colors.RED,
                                         onClick: j,
                                         submitting: M,
-                                        disabled: !Z || !f,
+                                        disabled: !Z || !L,
                                         children: T.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DELETE_BUTTON
                                     })
                             })
@@ -103,7 +103,7 @@ function S(e) {
                                 wrapperClassName: N.deleteListingButton,
                                 color: o.Button.Colors.RED,
                                 onClick: () => {
-                                    r()(null != g, 'group listing doesnt exist'),
+                                    r()(null != h, 'group listing doesnt exist'),
                                         r()(null != x, 'subscription listing doesnt exist'),
                                         (0, o.openModalLazy)(async () => {
                                             let { ConfirmModal: e } = await Promise.resolve().then(n.bind(n, 481060));
@@ -113,7 +113,7 @@ function S(e) {
                                                     confirmText: T.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ARCHIVE_BUTTON,
                                                     cancelText: T.Z.Messages.CANCEL,
                                                     onConfirm: () => {
-                                                        D(h, g, x);
+                                                        D(g, h, x);
                                                     },
                                                     confirmButtonColor: o.Button.Colors.RED,
                                                     ...t,

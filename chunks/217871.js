@@ -17,9 +17,9 @@ var i = n(735250),
     g = n(843693),
     C = n(641033),
     I = n(989830),
-    x = n(689938),
-    T = n(443528);
-let v = s.memo(function (e) {
+    T = n(689938),
+    x = n(443528);
+let S = s.memo(function (e) {
         let { channelId: t, width: n } = e,
             a = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
             l = (0, o.e7)([g.ZP], () => g.ZP.getMostRecentMessageCombo(t), [t]),
@@ -50,46 +50,46 @@ let v = s.memo(function (e) {
             children:
                 null != l &&
                 (0, i.jsx)(r.animated.div, {
-                    className: T.messageComboScore,
+                    className: x.messageComboScore,
                     style: p,
                     children: (0, i.jsx)(c.Text, {
-                        className: T.comboScore,
+                        className: x.comboScore,
                         variant: 'text-sm/bold',
                         children: (0, C.Eo)(l.combo)
                     })
                 })
         });
     }),
-    S = s.memo(function (e) {
+    v = s.memo(function (e) {
         let { value: t, multiplier: n } = e,
             { color: a, square: r, flair: o } = s.useMemo(() => (0, C.yz)(n), [n]),
             u = (0, h.Lq)(a);
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(c.Text, {
-                    className: T.comboValue,
+                    className: x.comboValue,
                     variant: 'text-sm/bold',
                     children: t
                 }),
                 (0, i.jsxs)('div', {
-                    className: T.comboNameplate,
+                    className: x.comboNameplate,
                     style: { color: u },
                     children: [
                         (0, i.jsx)(c.Text, {
-                            className: T.comboMultiplier,
+                            className: x.comboMultiplier,
                             style: { color: u },
                             variant: 'text-sm/bold',
-                            children: x.Z.Messages.POGGERMODE_COMBO.format({ multiplier: n })
+                            children: T.Z.Messages.POGGERMODE_COMBO.format({ multiplier: n })
                         }),
                         r &&
                             (0, i.jsxs)(i.Fragment, {
                                 children: [
                                     (0, i.jsx)('div', {
-                                        className: l()(T.comboSquare, T.left),
+                                        className: l()(x.comboSquare, x.left),
                                         style: { backgroundColor: u }
                                     }),
                                     (0, i.jsx)('div', {
-                                        className: l()(T.comboSquare, T.right),
+                                        className: l()(x.comboSquare, x.right),
                                         style: { backgroundColor: u }
                                     })
                                 ]
@@ -98,14 +98,14 @@ let v = s.memo(function (e) {
                             (0, i.jsxs)(i.Fragment, {
                                 children: [
                                     (0, i.jsx)('div', {
-                                        className: l()(T.confettiIcon, T.left),
+                                        className: l()(x.confettiIcon, x.left),
                                         children: (0, i.jsx)(_.Z, {
                                             width: 24,
                                             height: 24
                                         })
                                     }),
                                     (0, i.jsx)('div', {
-                                        className: l()(T.confettiIcon, T.right),
+                                        className: l()(x.confettiIcon, x.right),
                                         children: (0, i.jsx)(_.Z, {
                                             width: 24,
                                             height: 24
@@ -115,9 +115,9 @@ let v = s.memo(function (e) {
                             }),
                         1 === n &&
                             (0, i.jsx)(c.Text, {
-                                className: T.tip,
+                                className: x.tip,
                                 variant: 'text-sm/bold',
-                                children: x.Z.Messages.POGGERMODE_COMBO_TIP
+                                children: T.Z.Messages.POGGERMODE_COMBO_TIP
                             })
                     ]
                 })
@@ -132,51 +132,51 @@ t.Z = s.memo(function (e) {
         d = (0, o.e7)([g.ZP], () => g.ZP.isComboing(n, t), [t, n]),
         { ref: h, width: _ = 0 } = (0, u.Z)(),
         [f, C] = s.useState(!1),
-        x = (0, I.Z)(t),
+        T = (0, I.Z)(t),
         N = l && d && a;
     s.useEffect(() => {
         N && C(!0);
         let e = setTimeout(() => C(N), 1000);
         return () => clearTimeout(e);
     }, [N]);
-    let Z = (0, c.useSpring)({
+    let A = (0, c.useSpring)({
             opacity: f ? 1 : 0,
             transform: f ? 'translateY(0)' : 'translateY(100%)',
             pointerEvents: 'none',
             config: r.config.stiff
         }),
-        A = s.useMemo(
+        Z = s.useMemo(
             () =>
-                null != x
-                    ? x
+                null != T
+                    ? T
                     : {
                           value: 0,
                           multiplier: 1
                       },
-            [x]
+            [T]
         ),
-        M = s.useRef(A);
+        M = s.useRef(Z);
     s.useEffect(() => {
-        (A.multiplier > 1 || A.value > 0) && (M.current = A);
-    }, [A]);
+        (Z.multiplier > 1 || Z.value > 0) && (M.current = Z);
+    }, [Z]);
     let { multiplier: b, value: R } = s.useMemo(
         () => ({
-            value: N ? A.value : M.current.value,
-            multiplier: N ? A.multiplier : M.current.multiplier
+            value: N ? Z.value : M.current.value,
+            multiplier: N ? Z.multiplier : M.current.multiplier
         }),
-        [N, A, M]
+        [N, Z, M]
     );
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(v, {
+            (0, i.jsx)(S, {
                 channelId: t,
                 width: _
             }),
             (0, i.jsx)(r.animated.div, {
                 ref: h,
-                className: T.combo,
-                style: Z,
-                children: (0, i.jsx)(S, {
+                className: x.combo,
+                style: A,
+                children: (0, i.jsx)(v, {
                     value: R,
                     multiplier: b
                 })

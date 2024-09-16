@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         activityInviteKey: function () {
-            return Z;
+            return A;
         }
     }),
     n(47120);
@@ -23,10 +23,10 @@ var i = n(735250),
     g = n(957730),
     C = n(789407),
     I = n(300429),
-    x = n(838440),
-    T = n(981631),
-    v = n(689938),
-    S = n(940083);
+    T = n(838440),
+    x = n(981631),
+    S = n(689938),
+    v = n(940083);
 function N(e, t, n) {
     return (
         t in e
@@ -40,8 +40,8 @@ function N(e, t, n) {
         e
     );
 }
-let Z = 'ActivityInvite';
-class A extends s.PureComponent {
+let A = 'ActivityInvite';
+class Z extends s.PureComponent {
     componentDidMount() {
         this.fetchApplication();
     }
@@ -56,19 +56,19 @@ class A extends s.PureComponent {
     renderTitle() {
         let { activity: e } = this.props;
         switch (e.type) {
-            case T.IIU.LISTENING:
-                return v.Z.Messages.INVITE_EMBED_LISTENING_INVITE;
-            case T.IIU.PLAYING:
-            case T.IIU.STREAMING:
+            case x.IIU.LISTENING:
+                return S.Z.Messages.INVITE_EMBED_LISTENING_INVITE;
+            case x.IIU.PLAYING:
+            case x.IIU.STREAMING:
             default:
-                return v.Z.Messages.INVITE_EMBED_GAME_INVITE;
+                return S.Z.Messages.INVITE_EMBED_GAME_INVITE;
         }
     }
     render() {
         let { textValue: e, richValue: t, textFocused: n, contentWarningProps: s } = this.state,
             { activity: a, analyticsLocations: r, channel: c, activityActionType: h, cooldown: m, application: p, transitionState: f, onClose: g } = this.props,
             C = m > 0,
-            I = C ? v.Z.Messages.CHANNEL_SLOWMODE_COOLDOWN.format({ seconds: Math.round((m + 1000) / 1000) }) : null;
+            I = C ? S.Z.Messages.CHANNEL_SLOWMODE_COOLDOWN.format({ seconds: Math.round((m + 1000) / 1000) }) : null;
         return (0, i.jsxs)(o.ModalRoot, {
             size: o.ModalSize.SMALL,
             transitionState: f,
@@ -84,21 +84,21 @@ class A extends s.PureComponent {
                 (0, i.jsxs)(o.ModalContent, {
                     children: [
                         (0, i.jsx)('div', {
-                            className: S.subHeader,
-                            children: v.Z.Messages.MESSAGE_PREVIEW
+                            className: v.subHeader,
+                            children: S.Z.Messages.MESSAGE_PREVIEW
                         }),
                         (0, i.jsx)(u.Z, {
                             activityActionType: h,
                             activity: a,
-                            className: S.preview,
+                            className: v.preview,
                             application: p,
                             partyId: null != a.party ? a.party.id : null,
                             isPreview: !0,
                             analyticsLocations: r
                         }),
                         (0, i.jsx)('div', {
-                            className: S.subHeader,
-                            children: v.Z.Messages.ADD_A_COMMENT_OPTIONAL
+                            className: v.subHeader,
+                            children: S.Z.Messages.ADD_A_COMMENT_OPTIONAL
                         }),
                         (0, i.jsx)(o.Popout, {
                             position: 'top',
@@ -119,7 +119,7 @@ class A extends s.PureComponent {
                             },
                             children: () =>
                                 (0, i.jsx)(E.Z, {
-                                    className: S.textArea,
+                                    className: v.textArea,
                                     textValue: e,
                                     richValue: t,
                                     focused: n,
@@ -127,7 +127,7 @@ class A extends s.PureComponent {
                                     onChange: this.handleTextChange,
                                     onSubmit: this.handleShare,
                                     type: _.I.FORM,
-                                    parentModalKey: Z,
+                                    parentModalKey: A,
                                     disableThemedBackground: !0
                                 })
                         })
@@ -143,7 +143,7 @@ class A extends s.PureComponent {
                                     children: (0, i.jsx)(o.Button, {
                                         disabled: C,
                                         onClick: this.handleShare,
-                                        children: v.Z.Messages.INVITE_EMBED_SEND_INVITE
+                                        children: S.Z.Messages.INVITE_EMBED_SEND_INVITE
                                     })
                                 })
                         }),
@@ -151,7 +151,7 @@ class A extends s.PureComponent {
                             look: o.Button.Looks.LINK,
                             color: o.Button.Colors.PRIMARY,
                             onClick: g,
-                            children: v.Z.Messages.CANCEL
+                            children: S.Z.Messages.CANCEL
                         })
                     ]
                 })
@@ -170,19 +170,19 @@ class A extends s.PureComponent {
                     let { activity: t, channel: n, activityActionType: i } = this.props,
                         s = '';
                     switch (i) {
-                        case T.mFx.JOIN:
+                        case x.mFx.JOIN:
                             s = 'Invite to Join';
                             break;
-                        case T.mFx.LISTEN:
+                        case x.mFx.LISTEN:
                             s = 'Invite to Listen';
                             break;
-                        case T.mFx.WATCH:
+                        case x.mFx.WATCH:
                             s = 'Invite to Watch';
                     }
                     return (
-                        h.ZP.trackWithMetadata(T.rMx.INVITE_SENT, {
+                        h.ZP.trackWithMetadata(x.rMx.INVITE_SENT, {
                             location: 'Channel Text Area - '.concat(s),
-                            invite_type: t.type === T.IIU.LISTENING ? T.dAT.SPOTIFY : T.dAT.APPLICATION,
+                            invite_type: t.type === x.IIU.LISTENING ? x.dAT.SPOTIFY : x.dAT.APPLICATION,
                             application_id: t.application_id,
                             guild_id: n.getGuildId(),
                             channel_id: n.id,
@@ -219,7 +219,7 @@ class A extends s.PureComponent {
                           shouldClear: !0,
                           shouldRefocus: !0
                       }))
-                    : (0, x.v)({
+                    : (0, T.v)({
                           openWarningPopout: (e) => this.setState({ contentWarningProps: e }),
                           type: _.I.FORM,
                           content: a,
@@ -247,4 +247,4 @@ t.default = r.ZP.connectStores([I.Z, p.Z], (e) => {
         cooldown: I.Z.getSlowmodeCooldownGuess(t.id),
         application: null != n.application_id ? p.Z.getApplication(n.application_id) : C.r9
     };
-})(A);
+})(Z);

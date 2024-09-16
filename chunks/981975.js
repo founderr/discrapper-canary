@@ -22,14 +22,14 @@ var s = n(735250),
     m = n(764260),
     N = n(946724),
     S = n(95242),
-    h = n(530198),
-    g = n(420966),
+    g = n(530198),
+    h = n(420966),
     C = n(203377),
     x = n(981631),
     p = n(856651),
     R = n(689938),
-    f = n(16297),
-    L = n(571621);
+    L = n(16297),
+    f = n(571621);
 let O = (0, I.hQ)();
 function A(e, t) {
     return t !== _.O1.AND ? Object.values(o().groupBy(e, (e) => ''.concat(e.connectionType, ':').concat(e.applicationId))) : 0 === e.length ? [] : [[...e]];
@@ -37,10 +37,10 @@ function A(e, t) {
 function M(e) {
     let { handleAddVerificationClicked: t, locked: n } = e;
     return (0, s.jsxs)('div', {
-        className: f.headerNoConfigContainer,
+        className: L.headerNoConfigContainer,
         children: [
             (0, s.jsx)(d.Heading, {
-                className: f.headerHeading,
+                className: L.headerHeading,
                 variant: 'eyebrow',
                 children: R.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_HEADER
             }),
@@ -51,7 +51,7 @@ function M(e) {
             }),
             (0, s.jsx)(d.Button, {
                 disabled: n,
-                className: f.addVerificationButton,
+                className: L.addVerificationButton,
                 size: d.Button.Sizes.MEDIUM,
                 look: d.Button.Looks.FILLED,
                 color: d.Button.Colors.BRAND,
@@ -64,7 +64,7 @@ function M(e) {
 function D(e) {
     let { guild: t, role: n, locked: i, setSelectedSection: l, integrations: o } = e,
         { headerHeight: I, headerRef: D } = (0, S.Z)(0),
-        { scrolledToTop: v, handleScroll: j } = (0, g.V)(),
+        { scrolledToTop: v, handleScroll: j } = (0, h.V)(),
         Z = (0, c.e7)(
             [T.Z],
             () => {
@@ -108,18 +108,18 @@ function D(e) {
             locked: i
         });
     else if (G.length > 0) {
-        var k, w;
+        var w, k;
         let e = null;
         G.length < 10 &&
             (e = (0, s.jsx)(d.Button, {
-                className: r()(f.addVerificationButton, f.addVerificationButtonAppend),
+                className: r()(L.addVerificationButton, L.addVerificationButtonAppend),
                 size: d.Button.Sizes.LARGE,
                 look: d.Button.Looks.BLANK,
                 color: d.Button.Colors.LINK,
                 onClick: y,
                 disabled: i,
                 children: (0, s.jsxs)('div', {
-                    className: f.addVerificationButtonAppendTextContainer,
+                    className: L.addVerificationButtonAppendTextContainer,
                     children: [
                         (0, s.jsx)(d.CirclePlusIcon, {
                             size: 'xs',
@@ -131,27 +131,27 @@ function D(e) {
             })),
             (F = (0, s.jsxs)(s.Fragment, {
                 children: [
-                    ((k = () => (0, m.d_)(n.id, [])),
-                    (w = i),
+                    ((w = () => (0, m.d_)(n.id, [])),
+                    (k = i),
                     (0, s.jsxs)(s.Fragment, {
                         children: [
                             (0, s.jsxs)('div', {
-                                className: f.headerTitleContainer,
+                                className: L.headerTitleContainer,
                                 children: [
                                     (0, s.jsx)('div', {
-                                        className: f.headerTitleTextContainer,
+                                        className: L.headerTitleTextContainer,
                                         children: (0, s.jsx)(d.Heading, {
                                             variant: 'eyebrow',
                                             children: R.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_HEADER
                                         })
                                     }),
                                     (0, s.jsx)(d.Button, {
-                                        className: f.headerTitleButton,
+                                        className: L.headerTitleButton,
                                         size: d.Button.Sizes.TINY,
                                         look: d.Button.Looks.LINK,
                                         color: d.Button.Colors.LINK,
-                                        onClick: k,
-                                        disabled: w,
+                                        onClick: w,
+                                        disabled: k,
                                         children: R.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_CLEAR_ALL
                                     })
                                 ]
@@ -165,7 +165,7 @@ function D(e) {
                     (function (e, t, n, a, i) {
                         let r = A(a, _.O1.OR);
                         return (0, s.jsx)(d.FormItem, {
-                            className: f.operatorContainer,
+                            className: L.operatorContainer,
                             title: R.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_REQUIREMENTS,
                             children: (0, s.jsx)(d.RadioGroup, {
                                 options: [
@@ -234,10 +234,10 @@ function D(e) {
                             });
                         }
                         return (0, s.jsx)('div', {
-                            className: f.configurationsContainer,
+                            className: L.configurationsContainer,
                             children: Array.from(l.values()).map((e) =>
                                 (0, s.jsx)(
-                                    h.Z,
+                                    g.Z,
                                     {
                                         configurationItems: e,
                                         onConfigurationChange: r,
@@ -254,16 +254,16 @@ function D(e) {
             }));
     }
     return (0, s.jsx)(d.AdvancedScrollerAuto, {
-        className: f.scroller,
+        className: L.scroller,
         style: { scrollPaddingTop: I },
         onScroll: j,
         children: (0, s.jsxs)('div', {
-            className: L.contentWidth,
+            className: f.contentWidth,
             children: [
                 (0, s.jsx)('div', {
-                    className: r()(L.header, L.stickyHeader, { [L.stickyHeaderElevated]: !v }),
+                    className: r()(f.header, f.stickyHeader, { [f.stickyHeaderElevated]: !v }),
                     ref: D,
-                    children: (0, s.jsx)(g.Z, {
+                    children: (0, s.jsx)(h.Z, {
                         guild: t,
                         role: n,
                         selectedSection: C.ZI.VERIFICATIONS,
@@ -272,14 +272,14 @@ function D(e) {
                 }),
                 (null != Z ? Z : 0) > 0
                     ? (0, s.jsxs)('div', {
-                          className: f.warningContainer,
+                          className: L.warningContainer,
                           children: [
                               (0, s.jsx)(d.CircleWarningIcon, {
                                   size: 'custom',
                                   width: 20,
                                   height: 20,
                                   color: 'currentColor',
-                                  className: f.warningIcon
+                                  className: L.warningIcon
                               }),
                               (0, s.jsx)(d.Text, {
                                   variant: 'text-sm/normal',

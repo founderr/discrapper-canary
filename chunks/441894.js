@@ -22,7 +22,7 @@ function s(e) {
                 let s = a.getChannel(e);
                 if (null == s || s.isGuildStageVoice()) return !1;
                 let l = null === (t = i.getSecureFramesState()) || void 0 === t ? void 0 : t.version;
-                return null != l && l > u.HK;
+                return null != l && l !== u.Eg;
             })(n, s, [o.Z, r.Z]),
         [n, s]
     );

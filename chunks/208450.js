@@ -13,10 +13,10 @@ var i = n(735250),
     I = n(349033),
     m = n(999650),
     T = n(857595),
-    N = n(607070),
-    h = n(367907),
-    C = n(313201),
-    f = n(592125),
+    h = n(607070),
+    N = n(367907),
+    f = n(313201),
+    C = n(592125),
     p = n(984933),
     g = n(768119),
     S = n(944486),
@@ -43,7 +43,7 @@ function D(e, t, n) {
     );
 }
 n(49637);
-let b = (0, C.hQ)(),
+let b = (0, f.hQ)(),
     j = c()(_.yC, 500);
 class U extends s.PureComponent {
     componentDidMount() {
@@ -210,8 +210,8 @@ class U extends s.PureComponent {
                     return;
                 }
                 let n = S.Z.getChannelId(),
-                    i = f.Z.getChannel(n);
-                if (((null == i ? void 0 : i.isThread()) && (i = f.Z.getChannel(null == i ? void 0 : i.parent_id)), null == i || i.isPrivate())) {
+                    i = C.Z.getChannel(n);
+                if (((null == i ? void 0 : i.isThread()) && (i = C.Z.getChannel(null == i ? void 0 : i.parent_id)), null == i || i.isPrivate())) {
                     this.focusEditor();
                     return;
                 }
@@ -239,7 +239,7 @@ class U extends s.PureComponent {
             }),
             D(this, 'onFocus', () => {
                 let { searchType: e } = this.props;
-                h.ZP.trackWithMetadata(L.rMx.SEARCH_OPENED, { search_type: e }), this.setState({ focused: !0 });
+                N.ZP.trackWithMetadata(L.rMx.SEARCH_OPENED, { search_type: e }), this.setState({ focused: !0 });
             }),
             D(this, 'onBlur', () => {
                 this.setState({ focused: !1 }, () => {
@@ -323,13 +323,13 @@ class U extends s.PureComponent {
             O.WU();
     }
 }
-t.Z = u.ZP.connectStores([N.Z, g.Z], () => {
+t.Z = u.ZP.connectStores([h.Z, g.Z], () => {
     var e;
     let t = g.Z.getCurrentSearchId(),
         n = g.Z.getSearchType(),
         i = null != t && g.Z.isSearching(t),
         s = null != t && null !== (e = g.Z.getEditorState(t)) && void 0 !== e ? e : R.nR(x.Jl(m.ZP)),
-        a = N.Z.keyboardModeEnabled;
+        a = h.Z.keyboardModeEnabled;
     return {
         searchId: t,
         searchType: n,

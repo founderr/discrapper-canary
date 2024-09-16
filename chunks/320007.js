@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return N;
     }
 });
 var i = n(735250),
@@ -17,11 +17,11 @@ var i = n(735250),
     I = n(175470),
     m = n(203259),
     T = n(356659),
-    N = n(689938);
-function h(e) {
-    let { canShowReminder: t = !1, className: h } = e,
-        C = (0, E.Z)(u.Z),
-        { showClipsHeaderEntrypoint: f } = d.NV.useExperiment({ location: 'ClipsButton' }, { autoTrackExposure: !1 }),
+    h = n(689938);
+function N(e) {
+    let { canShowReminder: t = !1, className: N } = e,
+        f = (0, E.Z)(u.Z),
+        { showClipsHeaderEntrypoint: C } = d.NV.useExperiment({ location: 'ClipsButton' }, { autoTrackExposure: !1 }),
         {
             hasClips: p,
             hasNewClips: g,
@@ -49,7 +49,7 @@ function h(e) {
             { modalKey: T.Qr }
         );
     }
-    return (s.useEffect(() => (R ? L() : Z(), () => Z()), [R, L, Z]), f && C && p)
+    return (s.useEffect(() => (R ? L() : Z(), () => Z()), [R, L, Z]), C && f && p)
         ? (0, i.jsxs)(i.Fragment, {
               children: [
                   null != x &&
@@ -66,10 +66,10 @@ function h(e) {
                   (0, i.jsx)('div', {
                       ref: M,
                       children: (0, i.jsx)(l.JO, {
-                          className: h,
+                          className: N,
                           icon: r.ClipsIcon,
                           showBadge: g,
-                          tooltip: N.Z.Messages.CLIPS_GALLERY_TOOLTIP,
+                          tooltip: h.Z.Messages.CLIPS_GALLERY_TOOLTIP,
                           onClick: P
                       })
                   })

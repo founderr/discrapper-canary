@@ -68,18 +68,18 @@ function S(e) {
         ]
     });
 }
-function h(e) {
+function g(e) {
     var t, n, i;
     let { inputRef: r, existingPendingConfiguration: l, locked: o, onConfigurationChange: c, platform: u, applicationId: _, metadataField: I, operator: E } = e,
         m = null !== (n = null == l ? void 0 : l.index) && void 0 !== n ? n : -1,
         S = null != E ? E : T.iO.GREATER_THAN,
-        h = Math.round(Number(null !== (i = null == l ? void 0 : null === (t = l.configuration) || void 0 === t ? void 0 : t.value) && void 0 !== i ? i : 0));
-    S === T.iO.GREATER_THAN ? (h = Math.max(1, h + 1)) : S === T.iO.LESS_THAN && (h = Math.max(0, h - 1));
-    let [g, C] = a.useState(h.toString());
+        g = Math.round(Number(null !== (i = null == l ? void 0 : null === (t = l.configuration) || void 0 === t ? void 0 : t.value) && void 0 !== i ? i : 0));
+    S === T.iO.GREATER_THAN ? (g = Math.max(1, g + 1)) : S === T.iO.LESS_THAN && (g = Math.max(0, g - 1));
+    let [h, C] = a.useState(g.toString());
     return (
         a.useEffect(() => {
-            C(g);
-        }, [g]),
+            C(h);
+        }, [h]),
         (0, s.jsx)(
             d.TextInput,
             {
@@ -87,7 +87,7 @@ function h(e) {
                 type: 'number',
                 className: N.numericalRuleInput,
                 size: d.TextInput.Sizes.MINI,
-                value: g,
+                value: h,
                 onChange: (e) => {
                     if (null != l) {
                         if ('' !== e) {
@@ -114,7 +114,7 @@ function h(e) {
         )
     );
 }
-function g(e) {
+function h(e) {
     let { titleText: t, fieldText: n, metadataField: a, existingPendingConfiguration: i, platform: r, applicationId: l, onConfigurationChange: o, locked: c } = e;
     return (0, s.jsxs)(
         'div',
@@ -166,7 +166,7 @@ function C(e) {
         E = a.createRef(),
         m = (null == l ? void 0 : l.configuration) != null,
         S = (0, s.jsx)(
-            h,
+            g,
             {
                 inputRef: E,
                 metadataField: r,
@@ -179,7 +179,7 @@ function C(e) {
             },
             r
         ),
-        g =
+        h =
             null != i
                 ? i.format({ metadataHook: () => S })
                 : (0, s.jsxs)(s.Fragment, {
@@ -209,7 +209,7 @@ function C(e) {
                             children: (0, s.jsx)(d.Text, {
                                 variant: 'text-md/normal',
                                 className: N.numericalRuleSubText,
-                                children: g
+                                children: h
                             })
                         })
                     ]
@@ -317,7 +317,7 @@ function p(e) {
                 onConfigurationChange: n,
                 locked: a
             }),
-            (0, s.jsx)(g, {
+            (0, s.jsx)(h, {
                 titleText: m.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_HEADER_VERIFIED,
                 fieldText: m.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_MUST_BE_VERIFIED,
                 metadataField: T.PC.TWITTER_VERIFIED,
@@ -352,7 +352,7 @@ function R(e) {
                 onConfigurationChange: n,
                 locked: a
             }),
-            (0, s.jsx)(g, {
+            (0, s.jsx)(h, {
                 titleText: m.Z.Messages.CONNECTIONS_REDDIT_MOD,
                 fieldText: m.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_MUST_BE_MOD,
                 metadataField: T.PC.REDDIT_MOD,
@@ -361,7 +361,7 @@ function R(e) {
                 onConfigurationChange: n,
                 locked: a
             }),
-            (0, s.jsx)(g, {
+            (0, s.jsx)(h, {
                 titleText: m.Z.Messages.CONNECTIONS_REDDIT_GOLD,
                 fieldText: m.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_MUST_HAVE_GOLD,
                 metadataField: T.PC.REDDIT_GOLD,
@@ -373,7 +373,7 @@ function R(e) {
         ]
     });
 }
-function f(e) {
+function L(e) {
     let { configMetadataMap: t, onConfigurationChange: n, locked: a } = e,
         i = I.Z.get(E.ABu.PAYPAL);
     return (0, s.jsxs)(s.Fragment, {
@@ -387,7 +387,7 @@ function f(e) {
                 onConfigurationChange: n,
                 locked: a
             }),
-            (0, s.jsx)(g, {
+            (0, s.jsx)(h, {
                 titleText: m.Z.Messages.CONNECTIONS_PAYPAL_VERIFIED,
                 fieldText: m.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_MUST_HAVE_PAYPAL_VERIFIED_BANK_ACCOUNT,
                 metadataField: T.PC.PAYPAL_VERIFIED,
@@ -399,7 +399,7 @@ function f(e) {
         ]
     });
 }
-function L(e) {
+function f(e) {
     let { configMetadataMap: t, onConfigurationChange: n, locked: a } = e,
         i = I.Z.get(E.ABu.EBAY);
     return (0, s.jsxs)(s.Fragment, {
@@ -441,7 +441,7 @@ function L(e) {
                 locked: a,
                 operator: T.iO.LESS_THAN
             }),
-            (0, s.jsx)(g, {
+            (0, s.jsx)(h, {
                 titleText: m.Z.Messages.CONNECTIONS_EBAY_TOP_RATED_SELLER,
                 fieldText: m.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_MUST_BE_TOP_RATED_SELLER,
                 metadataField: T.PC.EBAY_TOP_RATED_SELLER,
@@ -458,7 +458,7 @@ function O(e) {
         i = I.Z.get(E.ABu.TIKTOK);
     return (0, s.jsxs)(s.Fragment, {
         children: [
-            (0, s.jsx)(g, {
+            (0, s.jsx)(h, {
                 titleText: m.Z.Messages.CONNECTIONS_TIKTOK_VERIFIED,
                 fieldText: m.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_MUST_BE_VERIFIED,
                 metadataField: T.PC.TIKTOK_VERIFIED,
@@ -548,7 +548,7 @@ function A(e) {
             case T.xn.BOOLEAN_EQUAL:
             case T.xn.BOOLEAN_NOT_EQUAL:
                 return (0, s.jsx)(
-                    g,
+                    h,
                     {
                         titleText: e.name,
                         fieldText: e.description,
@@ -607,10 +607,10 @@ function M(e) {
             m = (0, s.jsx)(R, { ...T });
             break;
         case E.ABu.PAYPAL:
-            m = (0, s.jsx)(f, { ...T });
+            m = (0, s.jsx)(L, { ...T });
             break;
         case E.ABu.EBAY:
-            m = (0, s.jsx)(L, { ...T });
+            m = (0, s.jsx)(f, { ...T });
             break;
         case E.ABu.TIKTOK:
             m = (0, s.jsx)(O, { ...T });

@@ -25,7 +25,7 @@ function I(e) {
         (i.src = n), (f[e] = i);
     }
 }
-class x extends (i = r.ZP.Store) {
+class T extends (i = r.ZP.Store) {
     get visibleOverlayCanvas() {
         return g;
     }
@@ -43,7 +43,7 @@ class x extends (i = r.ZP.Store) {
     }
 }
 (l = 'SharedCanvasStore'),
-    (a = 'displayName') in (s = x)
+    (a = 'displayName') in (s = T)
         ? Object.defineProperty(s, a, {
               value: l,
               enumerable: !0,
@@ -51,7 +51,7 @@ class x extends (i = r.ZP.Store) {
               writable: !0
           })
         : (s[a] = l);
-let T = new x(o.Z, {
+let x = new T(o.Z, {
     SHARED_CANVAS_UPDATE_LINE_POINTS: function (e) {
         let { lineId: t, newPoints: n, userId: i, streamerId: s } = e,
             a = _[s];
@@ -125,4 +125,4 @@ let T = new x(o.Z, {
         g = !g;
     }
 });
-t.Z = T;
+t.Z = x;

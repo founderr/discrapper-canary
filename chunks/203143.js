@@ -21,10 +21,10 @@ var i = n(512722),
     I = n(367907),
     m = n(41776),
     T = n(566006),
-    N = n(48854),
-    h = n(869765),
-    C = n(314897),
-    f = n(592125),
+    h = n(48854),
+    N = n(869765),
+    f = n(314897),
+    C = n(592125),
     p = n(703558),
     g = n(607744),
     S = n(375954),
@@ -65,7 +65,7 @@ function D(e) {
 }
 function b(e) {
     let { channelId: t, messageId: n, answerId: i } = e,
-        s = f.Z.getChannel(t);
+        s = C.Z.getChannel(t);
     if (null == s) return;
     if (m.Z.isLurking(s.guild_id)) {
         D({
@@ -109,7 +109,7 @@ async function y(e) {
         }),
         a = r().difference(s, i),
         l = r().difference(i, s),
-        u = C.default.getId(),
+        u = f.default.getId(),
         d = [
             ...a.map((e) => ({
                 type: 'MESSAGE_REACTION_REMOVE',
@@ -141,7 +141,7 @@ async function y(e) {
 }
 async function B(e) {
     let { channelId: t, messageId: n } = e,
-        i = f.Z.getChannel(t);
+        i = C.Z.getChannel(t);
     if (null == i) return;
     if (m.Z.isLurking(i.guild_id)) {
         D({
@@ -212,7 +212,7 @@ async function B(e) {
 }
 async function k(e) {
     let { channelId: t, messageId: n } = e,
-        i = f.Z.getChannel(t);
+        i = C.Z.getChannel(t);
     if (null != i) {
         if (m.Z.isLurking(i.guild_id)) {
             D({
@@ -337,13 +337,13 @@ async function G(e) {
     try {
         if (null != c && c.length > 0) {
             var I;
-            let e = null !== (I = C.default.getToken()) && void 0 !== I ? I : '';
+            let e = null !== (I = f.default.getToken()) && void 0 !== I ? I : '';
             await O.sk({
                 channel: t,
                 items: c,
                 token: e,
                 poll: d,
-                nonce: (0, N.r)(),
+                nonce: (0, h.r)(),
                 maxSizeCallback: () => {}
             });
         } else await _.Z.sendPollMessage(t.id, d);
@@ -385,7 +385,7 @@ t.Z = {
                         channelId: t,
                         messageId: n
                     };
-                let a = h.Z.getMessage(t, n);
+                let a = N.Z.getMessage(t, n);
                 if (null != a.message)
                     return {
                         channelId: t,

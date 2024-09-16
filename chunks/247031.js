@@ -21,14 +21,14 @@ var s = n(735250),
     m = n(246946),
     N = n(594174),
     S = n(251625),
-    h = n(226951),
-    g = n(51144),
+    g = n(226951),
+    h = n(51144),
     C = n(434404),
     x = n(372454),
     p = n(999382),
     R = n(84613),
-    f = n(740903),
-    L = n(1080),
+    L = n(740903),
+    f = n(1080),
     O = n(981631),
     A = n(689938),
     M = n(828965),
@@ -71,7 +71,7 @@ function j(e) {
                     (0, s.jsx)(E.Z, {
                         size: E.Z.Sizes.SIZE_24,
                         className: M.userUsername,
-                        children: g.ZP.getUserTag(i, {
+                        children: h.ZP.getUserTag(i, {
                             mode: 'username',
                             identifiable: l ? 'never' : 'always'
                         })
@@ -143,7 +143,7 @@ class Z extends a.PureComponent {
                 (0, s.jsxs)('div', {
                     className: M.username,
                     children: [
-                        g.ZP.getUserTag(e, {
+                        h.ZP.getUserTag(e, {
                             mode: 'username',
                             identifiable: t ? 'never' : 'always'
                         }),
@@ -188,7 +188,7 @@ class b extends a.PureComponent {
     makeFilter(e) {
         if (null == e || 0 === e.length) return (e) => null != e;
         {
-            let t = RegExp('^'.concat(h.Z.escape(e)), 'i');
+            let t = RegExp('^'.concat(g.Z.escape(e)), 'i');
             return (n) => null != n && (n.id === e || t.test(n.username));
         }
     }
@@ -205,7 +205,7 @@ class b extends a.PureComponent {
         });
     }
     handleModerationClick() {
-        C.Z.setSection(O.pNK.SAFETY), (0, R.K)(f.u.DM_AND_SPAM_PROTECTION);
+        C.Z.setSection(O.pNK.SAFETY), (0, R.K)(L.u.DM_AND_SPAM_PROTECTION);
     }
     handleQueryChange(e) {
         C.Z.setSearchQuery(e);
@@ -351,5 +351,5 @@ function G() {
             },
             { autoTrackExposure: !0 }
         );
-    return n ? (0, s.jsx)(L.Z, {}) : (0, s.jsx)(U, {});
+    return n ? (0, s.jsx)(f.Z, {}) : (0, s.jsx)(U, {});
 }

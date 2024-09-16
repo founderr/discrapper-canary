@@ -20,14 +20,14 @@ var s = n(735250),
     m = n(753206),
     N = n(598077),
     S = n(496675),
-    h = n(764260),
-    g = n(95242),
+    g = n(764260),
+    h = n(95242),
     C = n(541575),
     x = n(420966),
     p = n(337344),
     R = n(275296),
-    f = n(203377),
-    L = n(981631),
+    L = n(203377),
+    f = n(981631),
     O = n(689938),
     A = n(281654),
     M = n(571621),
@@ -37,7 +37,7 @@ let j = (0, _.Un)({
         createPromise: () => n.e('5609').then(n.bind(n, 336231)),
         webpackId: 336231
     }),
-    Z = o().debounce((e, t) => (0, h.Uv)(e, t), 200);
+    Z = o().debounce((e, t) => (0, g.Uv)(e, t), 200);
 function b(e) {
     let { role: t, disabled: n } = e,
         [i, r] = a.useState(t.name);
@@ -51,7 +51,7 @@ function b(e) {
             children: (0, s.jsx)(d.TextInput, {
                 type: 'text',
                 value: i,
-                maxLength: L.VKK,
+                maxLength: f.VKK,
                 onChange: function (e) {
                     r(e), Z(t.id, e);
                 },
@@ -74,13 +74,13 @@ function U(e) {
             (0, s.jsx)(
                 j,
                 {
-                    defaultColor: L.p6O,
-                    colors: L.pmI,
+                    defaultColor: f.p6O,
+                    colors: f.pmI,
                     value: t.color,
                     disabled: n,
                     onChange: (e) =>
                         (function (e, t) {
-                            if (e.color !== t && (t !== L.p6O || 0 !== e.color)) t === L.p6O && (t = 0), (0, h.OW)(e.id, t);
+                            if (e.color !== t && (t !== f.p6O || 0 !== e.color)) t === f.p6O && (t = 0), (0, g.OW)(e.id, t);
                         })(t, e),
                     customPickerPosition: 'right'
                 },
@@ -100,7 +100,7 @@ function G(e) {
                         channelId: '1337',
                         content: i
                     }),
-                    state: L.yb.SENT,
+                    state: f.yb.SENT,
                     id: '31337'
                 });
                 return (
@@ -134,7 +134,7 @@ function G(e) {
             'data-disable-adaptive-theme': !0,
             children: [
                 (0, s.jsx)(d.ThemeProvider, {
-                    theme: L.BRd.LIGHT,
+                    theme: f.BRd.LIGHT,
                     children: (e) =>
                         (0, s.jsx)('div', {
                             className: e,
@@ -150,7 +150,7 @@ function G(e) {
                         })
                 }),
                 (0, s.jsx)(d.ThemeProvider, {
-                    theme: L.BRd.DARK,
+                    theme: f.BRd.DARK,
                     children: (e) =>
                         (0, s.jsx)('div', {
                             className: e,
@@ -176,7 +176,7 @@ function P(e) {
             (0, s.jsx)(d.FormSwitch, {
                 disabled: n,
                 value: t.hoist,
-                onChange: (e) => (0, h.we)(t.id, e, t.mentionable),
+                onChange: (e) => (0, g.we)(t.id, e, t.mentionable),
                 hideBorder: !0,
                 children: O.Z.Messages.FORM_LABEL_HOIST_DESCRIPTION
             }),
@@ -184,7 +184,7 @@ function P(e) {
             (0, s.jsx)(d.FormSwitch, {
                 disabled: n,
                 value: t.mentionable,
-                onChange: (e) => (0, h.we)(t.id, t.hoist, e),
+                onChange: (e) => (0, g.we)(t.id, t.hoist, e),
                 note: O.Z.Messages.FORM_LABEL_MENTIONABLE_DESCRIPTION,
                 hideBorder: !0,
                 children: O.Z.Messages.FORM_LABEL_MENTIONABLE.format()
@@ -197,7 +197,7 @@ function B(e) {
         l = (0, u.pM)(null == t ? void 0 : t.id, n.id),
         o = a || l,
         _ = (0, c.e7)([S.Z], () => S.Z.canImpersonateRole(t, n)),
-        { headerHeight: I, headerRef: E } = (0, g.Z)(0),
+        { headerHeight: I, headerRef: E } = (0, h.Z)(0),
         { scrolledToTop: T, handleScroll: m } = (0, x.V)();
     return (0, s.jsx)(d.AdvancedScrollerAuto, {
         className: A.scroller,
@@ -212,7 +212,7 @@ function B(e) {
                     children: (0, s.jsx)(x.Z, {
                         guild: t,
                         role: n,
-                        selectedSection: f.ZI.DISPLAY,
+                        selectedSection: L.ZI.DISPLAY,
                         setSelectedSection: i
                     })
                 }),

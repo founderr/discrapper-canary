@@ -19,14 +19,14 @@ var s = n(735250),
     m = n(305473),
     N = n(113679),
     S = n(440857),
-    h = n(472596),
-    g = n(598948),
+    g = n(472596),
+    h = n(598948),
     C = n(428936),
     x = n(41586),
     p = n(918192),
     R = n(981631),
-    f = n(689938),
-    L = n(444383);
+    L = n(689938),
+    f = n(444383);
 function O(e) {
     let { guildId: t } = e,
         n = (0, l.e7)([I.Z], () => I.Z.getGuild(t)),
@@ -51,26 +51,26 @@ function O(e) {
             null === (e = D.current) || void 0 === e || e.resetSearchText();
         }, []);
     if (null == n) return null;
-    let j = (0, h.xb)(!1, !1, A);
+    let j = (0, g.xb)(!1, !1, A);
     return (0, s.jsx)(d.Gt, {
         value: i,
         children: (0, s.jsx)('div', {
-            className: L.settingsColumn,
+            className: f.settingsColumn,
             children: (0, s.jsx)('div', {
-                className: L.settingsContainer,
+                className: f.settingsContainer,
                 children: (0, s.jsx)(o.ScrollerAuto, {
-                    className: L.settingsScroller,
+                    className: f.settingsScroller,
                     orientation: 'auto',
                     children: (0, s.jsxs)('main', {
-                        className: L.settingsContent,
+                        className: f.settingsContent,
                         children: [
                             (0, s.jsx)(
                                 o.FormSection,
                                 {
-                                    className: r()(L.header),
+                                    className: r()(f.header),
                                     children: (0, s.jsx)(o.FormTitle, {
                                         tag: o.FormTitleTags.H1,
-                                        children: f.Z.Messages.GUILD_SETTINGS_MEMBERS_SERVER_MEMBERS
+                                        children: L.Z.Messages.GUILD_SETTINGS_MEMBERS_SERVER_MEMBERS
                                     })
                                 },
                                 'header'
@@ -79,41 +79,41 @@ function O(e) {
                                 o.FormSection,
                                 {
                                     children: (0, s.jsxs)('div', {
-                                        className: r()(L.tableContainer),
+                                        className: r()(f.tableContainer),
                                         children: [
                                             (0, s.jsx)(N.Z, { guild: n }),
                                             (0, s.jsx)(m.Z, { guild: n }),
                                             O
                                                 ? (0, s.jsxs)('div', {
-                                                      className: r()(L.mainTableContainer),
+                                                      className: r()(f.mainTableContainer),
                                                       children: [
                                                           (0, s.jsx)(x.Z, {
                                                               guild: n,
                                                               ref: D
                                                           }),
-                                                          (0, s.jsx)(g.Z, {
+                                                          (0, s.jsx)(h.Z, {
                                                               guild: n,
                                                               searchState: j,
                                                               compact: !0,
                                                               onSelectRow: M,
                                                               onResetForNewMembers: v
                                                           }),
-                                                          j !== h.po.SUCCESS_STILL_INDEXING && (0, s.jsx)(C.Z, { guildId: n.id })
+                                                          j !== g.po.SUCCESS_STILL_INDEXING && (0, s.jsx)(C.Z, { guildId: n.id })
                                                       ]
                                                   })
                                                 : (0, s.jsx)('div', {
-                                                      className: r()(L.movedTable),
+                                                      className: r()(f.movedTable),
                                                       children: (0, s.jsxs)('div', {
-                                                          className: r()(L.noResultsContainer),
+                                                          className: r()(f.noResultsContainer),
                                                           children: [
                                                               (0, s.jsx)('div', {
-                                                                  className: r()(L.__invalid_noResultsIconContainer),
+                                                                  className: r()(f.__invalid_noResultsIconContainer),
                                                                   children: (0, s.jsx)(p.Z, {})
                                                               }),
                                                               (0, s.jsx)(o.Text, {
                                                                   variant: 'text-md/normal',
                                                                   color: 'text-muted',
-                                                                  children: f.Z.Messages.GUILD_SETTINGS_SAFETY_MODERATION_EXPERIENCE_ENABLED.format({
+                                                                  children: L.Z.Messages.GUILD_SETTINGS_SAFETY_MODERATION_EXPERIENCE_ENABLED.format({
                                                                       onClick: (e) => {
                                                                           if (null != n) e.preventDefault(), u.Z.close(), (0, T._X)(n.id);
                                                                       }

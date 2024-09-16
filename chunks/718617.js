@@ -30,18 +30,18 @@ function C(e, t) {
 }
 function I(e) {
     var t, n;
-    let { userId: I, guildId: x, onClose: T, analyticsLocation: v, className: S } = e,
-        N = (0, l.e7)([h.ZP], () => h.ZP.getGuildSidebarState(x), [x]),
-        Z = null !== (t = null == N ? void 0 : N.details.modViewPanel) && void 0 !== t ? t : E.k.INFO,
-        A = (0, c.Z)(I);
-    let M = null == (n = Z) ? null : n === E.k.INFO ? 'backwards' : 'forwards',
+    let { userId: I, guildId: T, onClose: x, analyticsLocation: S, className: v } = e,
+        N = (0, l.e7)([h.ZP], () => h.ZP.getGuildSidebarState(T), [T]),
+        A = null !== (t = null == N ? void 0 : N.details.modViewPanel) && void 0 !== t ? t : E.k.INFO,
+        Z = (0, c.Z)(I);
+    let M = null == (n = A) ? null : n === E.k.INFO ? 'backwards' : 'forwards',
         b = (0, d.Z)(M),
         { reducedMotion: R } = s.useContext(r.S),
         L = s.useCallback(
             (e) => {
-                null != N && (0, m.r)(x, I, N.baseChannelId, { modViewPanel: e });
+                null != N && (0, m.r)(T, I, N.baseChannelId, { modViewPanel: e });
             },
-            [N, x, I]
+            [N, T, I]
         ),
         j = s.useMemo(
             () => ({
@@ -49,23 +49,23 @@ function I(e) {
                     binds: ['esc'],
                     comboKeysBindGlobal: !0,
                     action() {
-                        if (Z === E.k.INFO) return T();
+                        if (A === E.k.INFO) return x();
                         return L(E.k.INFO);
                     }
                 }
             }),
-            [T, Z, L]
+            [x, A, L]
         );
     s.useEffect(() => (u.Z.enable(), u.Z.enableTemp(j), () => u.Z.disableTemp()), [j]);
     let P = (0, o.useTransition)(
-        Z,
+        A,
         {
             value: 0,
             from: { value: 1 },
             enter: { value: 0 },
             leave: { value: -1 }
         },
-        A !== I ? 'animate-never' : 'animate-always'
+        Z !== I ? 'animate-never' : 'animate-always'
     );
     return (0, i.jsx)(a.animated.div, {
         style: {
@@ -99,23 +99,23 @@ function I(e) {
                             case E.k.INFO:
                                 return (0, i.jsx)(p.Z, {
                                     userId: I,
-                                    guildId: x,
+                                    guildId: T,
                                     onNavigate: L,
-                                    className: S
+                                    className: v
                                 });
                             case E.k.MESSAGE_HISTORY:
                                 return (0, i.jsx)(_.Z, {
                                     userId: I,
-                                    guildId: x,
+                                    guildId: T,
                                     onNavigate: () => L(E.k.INFO),
-                                    className: S
+                                    className: v
                                 });
                             case E.k.PERMISSIONS:
                                 return (0, i.jsx)(f.Z, {
                                     userId: I,
-                                    guildId: x,
+                                    guildId: T,
                                     onNavigate: () => L(E.k.INFO),
-                                    className: S
+                                    className: v
                                 });
                             default:
                                 return null;

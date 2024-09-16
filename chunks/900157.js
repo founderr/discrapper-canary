@@ -21,21 +21,21 @@ var i = n(735250),
     g = n(910611),
     C = n(359110),
     I = n(592125),
-    x = n(703558),
-    T = n(430824),
-    v = n(979651),
-    S = n(664342),
+    T = n(703558),
+    x = n(430824),
+    S = n(979651),
+    v = n(664342),
     N = n(124368),
-    Z = n(981631),
-    A = n(689938),
+    A = n(981631),
+    Z = n(689938),
     M = n(972270);
 function b(e) {
     let { channelId: t, baseChannelId: a, channelViewSource: b = 'Split View' } = e,
         R = (0, r.e7)([I.Z], () => I.Z.getChannel(t)),
-        L = (0, r.e7)([T.Z], () => T.Z.getGuild(null == R ? void 0 : R.getGuildId())),
+        L = (0, r.e7)([x.Z], () => x.Z.getGuild(null == R ? void 0 : R.getGuildId())),
         j = (0, p.ZP)(R);
     (function (e) {
-        let t = (0, r.e7)([v.Z], () => null != e && !l().isEmpty(v.Z.getVoiceStatesForChannel(e.id)));
+        let t = (0, r.e7)([S.Z], () => null != e && !l().isEmpty(S.Z.getVoiceStatesForChannel(e.id)));
         s.useEffect(() => {
             t &&
                 null != e &&
@@ -52,17 +52,17 @@ function b(e) {
             if (null == R || P.current) return;
             P.current = !0;
             let e = (0, h.K)(I.Z.getChannel(R.id), !0);
-            (0, d.yw)(Z.rMx.CHANNEL_OPENED, {
+            (0, d.yw)(A.rMx.CHANNEL_OPENED, {
                 ...e,
                 ...(0, d.$H)(R.id),
                 channel_view: b
             }),
-                (0, m.a)(Z.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: R.id });
+                (0, m.a)(A.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: R.id });
         }, [R, b]),
         null == R || null == L)
     )
         return null;
-    let O = (0, i.jsx)(S.Z, {
+    let O = (0, i.jsx)(v.Z, {
         channel: R,
         baseChannelId: a
     });
@@ -70,11 +70,11 @@ function b(e) {
         children: [
             (0, i.jsx)(u.Z, {
                 channel: R,
-                draftType: x.d.ChannelMessage
+                draftType: T.d.ChannelMessage
             }),
             (0, i.jsx)(E.ZP, {
                 toolbar: O,
-                'aria-label': A.Z.Messages.THREAD_HEADER_BAR_A11Y_LABEL,
+                'aria-label': Z.Z.Messages.THREAD_HEADER_BAR_A11Y_LABEL,
                 children: (0, g.ud)({
                     channel: R,
                     channelName: j,

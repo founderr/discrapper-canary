@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return x;
+        return T;
     }
 });
 var i = n(735250),
@@ -21,35 +21,35 @@ var i = n(735250),
     g = n(228392),
     C = n(689938),
     I = n(474923);
-function x(e) {
+function T(e) {
     let { channelId: t } = e,
-        x = (0, a.e7)([_.Z], () => _.Z.getChannel(t)),
-        T = (0, a.e7)([_.Z], () => _.Z.getChannel(null == x ? void 0 : x.parent_id)),
-        v = (0, a.e7)([E.Z], () => E.Z.getGuild(null == x ? void 0 : x.getGuildId())),
-        S = (0, o.ZP)(x),
+        T = (0, a.e7)([_.Z], () => _.Z.getChannel(t)),
+        x = (0, a.e7)([_.Z], () => _.Z.getChannel(null == T ? void 0 : T.parent_id)),
+        S = (0, a.e7)([E.Z], () => E.Z.getGuild(null == T ? void 0 : T.getGuildId())),
+        v = (0, o.ZP)(T),
         N = s.useRef(!1);
     if (
         (s.useEffect(() => {
-            null != x && !N.current && ((N.current = !0), (0, g.lN)(x));
-        }, [x]),
-        null == x || null == v)
+            null != T && !N.current && ((N.current = !0), (0, g.lN)(T));
+        }, [T]),
+        null == T || null == S)
     )
         return null;
-    let Z = (0, i.jsx)(p.Z, { channel: x });
+    let A = (0, i.jsx)(p.Z, { channel: T });
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(r.Z, {
-                channel: x,
+                channel: T,
                 draftType: f.d.ChannelMessage
             }),
             (0, i.jsx)(d.ZP, {
-                toolbar: Z,
+                toolbar: A,
                 'aria-label': C.Z.Messages.THREAD_HEADER_BAR_A11Y_LABEL,
                 children: (0, h.ud)({
-                    channel: x,
-                    parentChannel: T,
-                    channelName: S,
-                    guild: v,
+                    channel: T,
+                    parentChannel: x,
+                    channelName: v,
+                    guild: S,
                     inSidebar: !0,
                     handleContextMenu: function (e) {
                         (0, l.jW)(e, async () => {
@@ -57,12 +57,12 @@ function x(e) {
                             return (t) =>
                                 (0, i.jsx)(e, {
                                     ...t,
-                                    channel: x
+                                    channel: T
                                 });
                         });
                     },
                     handleClick: function () {
-                        null != x && (0, m.XU)(x.guild_id, x.id);
+                        null != T && (0, m.XU)(T.guild_id, T.id);
                     }
                 })
             }),
@@ -71,8 +71,8 @@ function x(e) {
                 children: (0, i.jsx)(
                     c.Z,
                     {
-                        channel: x,
-                        guild: v,
+                        channel: T,
+                        guild: S,
                         chatInputType: u.I.SIDEBAR
                     },
                     t

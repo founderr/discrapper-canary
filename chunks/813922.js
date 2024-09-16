@@ -17,30 +17,30 @@ var s = n(735250),
     E = n(739864);
 function T(e) {
     var t, n, T, m, N, S;
-    let { rule: h, onChangeRule: g } = e,
+    let { rule: g, onChangeRule: h } = e,
         C = a.useCallback(
             (e) => {
-                g({
-                    ...h,
+                h({
+                    ...g,
                     triggerMetadata: {
-                        ...h.triggerMetadata,
+                        ...g.triggerMetadata,
                         keywordFilter: e
                     }
                 });
             },
-            [g, h]
+            [h, g]
         ),
         x = a.useCallback(
             (e) => {
-                g({
-                    ...h,
+                h({
+                    ...g,
                     triggerMetadata: {
-                        ...h.triggerMetadata,
+                        ...g.triggerMetadata,
                         allowList: e
                     }
                 });
             },
-            [g, h]
+            [h, g]
         );
     return (0, s.jsx)(s.Fragment, {
         children: (0, s.jsxs)('div', {
@@ -53,18 +53,18 @@ function T(e) {
                         (0, s.jsx)(o.Z, {
                             onChangeText: C,
                             maxWordCount: _.RH,
-                            initialValue: null === (t = h.triggerMetadata) || void 0 === t ? void 0 : t.keywordFilter
+                            initialValue: null === (t = g.triggerMetadata) || void 0 === t ? void 0 : t.keywordFilter
                         }),
                         (0, s.jsx)(l.Z, {
-                            rule: h,
-                            onChangeRule: g,
-                            collapsed: (null == h ? void 0 : null === (n = h.triggerMetadata) || void 0 === n ? void 0 : n.regexPatterns) == null || (null == h ? void 0 : null === (T = h.triggerMetadata) || void 0 === T ? void 0 : T.regexPatterns.length) === 0
+                            rule: g,
+                            onChangeRule: h,
+                            collapsed: (null == g ? void 0 : null === (n = g.triggerMetadata) || void 0 === n ? void 0 : n.regexPatterns) == null || (null == g ? void 0 : null === (T = g.triggerMetadata) || void 0 === T ? void 0 : T.regexPatterns.length) === 0
                         }),
                         (0, s.jsx)(i.Z, {
                             onChange: x,
-                            initialValue: null === (m = h.triggerMetadata) || void 0 === m ? void 0 : m.allowList,
+                            initialValue: null === (m = g.triggerMetadata) || void 0 === m ? void 0 : m.allowList,
                             maxWordCount: _.n4,
-                            collapsed: (null === (N = h.triggerMetadata) || void 0 === N ? void 0 : N.allowList) == null || (null === (S = h.triggerMetadata) || void 0 === S ? void 0 : S.allowList.length) === 0
+                            collapsed: (null === (N = g.triggerMetadata) || void 0 === N ? void 0 : N.allowList) == null || (null === (S = g.triggerMetadata) || void 0 === S ? void 0 : S.allowList.length) === 0
                         })
                     ]
                 }),
@@ -73,8 +73,8 @@ function T(e) {
                     step: 2,
                     header: I.Z.Messages.GUILD_AUTOMOD_ACTIONS_HEADER,
                     children: (0, s.jsx)(r.Z, {
-                        rule: h,
-                        onChangeRule: g
+                        rule: g,
+                        onChangeRule: h
                     })
                 }),
                 (0, s.jsx)(u.Z, { type: u.Z.Type.CROSS }),
@@ -82,8 +82,8 @@ function T(e) {
                     step: 3,
                     header: I.Z.Messages.GUILD_AUTOMOD_ROLES_EXEMPTION_HEADER,
                     children: (0, s.jsx)(c.Z, {
-                        rule: h,
-                        onChangeRule: g,
+                        rule: g,
+                        onChangeRule: h,
                         onlyRoles: !0
                     })
                 })

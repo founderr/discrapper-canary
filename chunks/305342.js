@@ -18,10 +18,10 @@ var i = n(735250),
     I = n(817460),
     m = n(584825),
     T = n(290348),
-    N = n(934826),
-    h = n(768318),
-    C = n(570533),
-    f = n(971792),
+    h = n(934826),
+    N = n(768318),
+    f = n(570533),
+    C = n(971792),
     p = n(629262),
     g = n(761966),
     S = n(893729),
@@ -85,7 +85,7 @@ let P = (e) => {
     },
     D = (e) => {
         let { guildId: t, listingId: n } = e,
-            s = (0, C.Z)(t),
+            s = (0, f.Z)(t),
             [a] = T.XZ(n, t),
             r = s.filter((e) => a.has(e.id));
         return 0 === r.length
@@ -136,7 +136,7 @@ let P = (e) => {
     },
     b = (e) => {
         let { listingId: t, guildId: n, className: s } = e,
-            a = (0, f.Z)(n, t),
+            a = (0, C.Z)(n, t),
             [l] = T.UE(t),
             c = (0, p.Z)(l),
             [u] = T.R7(t),
@@ -219,10 +219,10 @@ let P = (e) => {
 t.Z = (e) => {
     var t;
     let { listingId: n, guildId: a, groupListingId: u, analyticsLocation: E } = e,
-        C = (0, m.jO)(n),
-        { openModal: f, canOpenModal: p, cannotOpenReason: S, isCheckingTrialEligibility: A } = (0, x.Z)(C, a, u, E),
+        f = (0, m.jO)(n),
+        { openModal: C, canOpenModal: p, cannotOpenReason: S, isCheckingTrialEligibility: A } = (0, x.Z)(f, a, u, E),
         P = (0, l.e7)([_.Z], () => _.Z.isSyncing),
-        { activeSubscription: D, activeSubscriptionListing: U } = (0, N.Z)(u),
+        { activeSubscription: D, activeSubscriptionListing: U } = (0, h.Z)(u),
         y = (null == U ? void 0 : U.id) === n,
         B = (null == D ? void 0 : D.status) === v.O0b.CANCELED,
         [k, F] = s.useState(!1),
@@ -234,15 +234,15 @@ t.Z = (e) => {
         [H] = T._T(n),
         [Y] = T.PK(n),
         [W] = T.TT(n),
-        [z] = T.F2(n),
-        K = (0, h.Z)(a, n),
-        Q = null != W && null == D && K,
+        [K] = T.F2(n),
+        z = (0, N.Z)(a, n),
+        Q = null != W && null == D && z,
         q = (0, c.Z)(M.iP),
         [X, J] = s.useState(!1),
         $ = X || !q,
         ee = (0, l.e7)([d.Z], () => d.Z.isViewingServerShop(a)),
-        et = (null == C ? void 0 : C.published) === !0,
-        en = (null == C ? void 0 : C.soft_deleted) === !0,
+        et = (null == f ? void 0 : f.published) === !0,
+        en = (null == f ? void 0 : f.soft_deleted) === !0,
         ei = L.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_SHOW_MORE_DESCRIPTION;
     return (et || ee) && !en
         ? (0, i.jsxs)('article', {
@@ -261,7 +261,7 @@ t.Z = (e) => {
                               }),
                               (0, i.jsx)(o.Tooltip, {
                                   clickableOnMobile: !0,
-                                  text: L.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TRIAL_DISCLAIMER.format({ activeTrialUserLimit: null != z ? z : 0 }),
+                                  text: L.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TRIAL_DISCLAIMER.format({ activeTrialUserLimit: null != K ? K : 0 }),
                                   children: (e) =>
                                       (0, i.jsx)(o.CircleInformationIcon, {
                                           size: 'xs',
@@ -310,7 +310,7 @@ t.Z = (e) => {
                                                                 fullWidth: !0,
                                                                 disabled: !p || P,
                                                                 submitting: A,
-                                                                onClick: f,
+                                                                onClick: C,
                                                                 onlyShineOnHover: !0,
                                                                 children: L.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_REVIEW_SUBSCRIBE_LABEL
                                                             })

@@ -22,25 +22,25 @@ var i = n(735250),
     C = n(321975);
 function I(e) {
     let { user: t, channel: n, onViewBlockedProfileClick: I } = e,
-        x = (0, h.ZP)(t.id),
-        T = (0, r.ZP)(),
-        { analyticsLocations: v } = (0, c.ZP)(o.Z.BLOCKED_PROFILE_PANEL),
-        S = (0, u.ZB)({
+        T = (0, h.ZP)(t.id),
+        x = (0, r.ZP)(),
+        { analyticsLocations: S } = (0, c.ZP)(o.Z.BLOCKED_PROFILE_PANEL),
+        v = (0, u.ZB)({
             layout: 'BLOCKED_PROFILE_PANEL',
             userId: t.id,
             channelId: n.id
         }),
         N = s.useRef(null);
     return (0, i.jsx)(c.Gt, {
-        value: v,
+        value: S,
         children: (0, i.jsx)(u.Mt, {
-            value: S,
+            value: v,
             children: (0, i.jsx)(p.Z, {
                 ref: N,
                 user: t,
-                displayProfile: x,
+                displayProfile: T,
                 profileType: f.y0.PANEL,
-                themeOverride: T,
+                themeOverride: x,
                 className: g.container,
                 children: (0, i.jsx)(a.u2, {
                     children: (0, i.jsxs)('div', {
@@ -82,8 +82,8 @@ function I(e) {
                                             null == I || I(),
                                                 (0, d.pQ)({
                                                     action: 'VIEW_BLOCKED_PROFILE',
-                                                    analyticsLocations: v,
-                                                    ...S
+                                                    analyticsLocations: S,
+                                                    ...v
                                                 });
                                         }
                                     })

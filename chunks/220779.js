@@ -21,8 +21,8 @@ var l = n(735250),
     x = n(131704),
     E = n(142550),
     _ = n(981631),
-    p = n(689938),
-    v = n(793834);
+    v = n(689938),
+    p = n(793834);
 let T = (0, x.kt)({
         id: '1',
         type: _.d4z.DM
@@ -40,7 +40,7 @@ let T = (0, x.kt)({
                     theme: m,
                     children: (e) =>
                         (0, l.jsx)('div', {
-                            className: r()([v.reply, e]),
+                            className: r()([p.reply, e]),
                             ref: t,
                             children: (0, l.jsx)(s.FocusLock, {
                                 containerRef: t,
@@ -48,15 +48,15 @@ let T = (0, x.kt)({
                                     children: [
                                         (0, l.jsx)(s.Text, {
                                             variant: 'text-xs/bold',
-                                            className: v.replyHeader,
-                                            children: null != a ? a : p.Z.Messages.CHAT
+                                            className: p.replyHeader,
+                                            children: null != a ? a : v.Z.Messages.CHAT
                                         }),
                                         d,
                                         (0, l.jsx)(g, {
                                             onEnter: (e) => {
                                                 i(e), h();
                                             },
-                                            placeholder: null != n ? n : p.Z.Messages.CHAT
+                                            placeholder: null != n ? n : v.Z.Messages.CHAT
                                         })
                                     ]
                                 })
@@ -68,7 +68,7 @@ let T = (0, x.kt)({
     });
 function g(e) {
     let { placeholder: t, onEnter: n, setEditorRef: i, showEmojiButton: s = !1, renderAttachButton: o, autoFocus: h = !0, onFocus: m, channel: x, className: _ } = e,
-        [p, f] = a.useState(''),
+        [v, f] = a.useState(''),
         [g, I] = a.useState((0, c.JM)('')),
         C = () => {
             f(''), I((0, c.JM)(''));
@@ -79,7 +79,7 @@ function g(e) {
         ref: P,
         placeholder: t,
         editorClassName: _,
-        className: r()(v.replyInput, _),
+        className: r()(p.replyInput, _),
         showRemainingCharsAfterCount: -1,
         allowNewLines: !1,
         maxCharacterCount: E.z,
@@ -93,7 +93,7 @@ function g(e) {
                   emojis: { button: !0 }
               }
             : N,
-        textValue: p,
+        textValue: v,
         richValue: g,
         onSubmit: (e) => {
             let { value: t } = e;
@@ -175,11 +175,11 @@ let I = (e, t) => {
                     }),
                 children: () =>
                     (0, l.jsx)(s.Tooltip, {
-                        text: p.Z.Messages.ADD_REACTION,
+                        text: v.Z.Messages.ADD_REACTION,
                         children: (e) =>
                             (0, l.jsx)('div', {
                                 ...e,
-                                className: v.reaction,
+                                className: p.reaction,
                                 children: (0, l.jsx)(h.Z, {
                                     active: !1,
                                     tabIndex: 0,
@@ -201,7 +201,7 @@ t.ZP = (e) => {
         I(() => m(!1), x),
         (0, l.jsx)(l.Fragment, {
             children: (0, l.jsxs)('div', {
-                className: v.reactions,
+                className: p.reactions,
                 children: [
                     n &&
                         (0, l.jsx)(C, {
@@ -238,11 +238,11 @@ t.ZP = (e) => {
                                 });
                             },
                             children: (0, l.jsx)(s.Tooltip, {
-                                text: p.Z.Messages.MESSAGE_ACTION_REPLY,
+                                text: v.Z.Messages.MESSAGE_ACTION_REPLY,
                                 children: (e) =>
                                     (0, l.jsx)('button', {
                                         ...e,
-                                        className: r()(v.reaction, v.emojiButton),
+                                        className: r()(p.reaction, p.emojiButton),
                                         onClick: () => {
                                             t({
                                                 interactionType: E.L.ReplyBegin,

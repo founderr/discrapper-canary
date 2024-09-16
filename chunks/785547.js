@@ -19,10 +19,10 @@ var i,
     I = n(703656),
     m = n(173747),
     T = n(7956),
-    N = n(293245),
-    h = n(417363),
-    C = n(941128),
-    f = n(780570),
+    h = n(293245),
+    N = n(417363),
+    f = n(941128),
+    C = n(780570),
     p = n(358085),
     g = n(814225),
     S = n(346329),
@@ -137,9 +137,9 @@ class Z extends (s = l.Component) {
     renderProgressBar() {
         let { hideProgress: e, dispatchState: t } = this.props;
         if (e) return null;
-        let n = f.KJ(t);
+        let n = C.KJ(t);
         if (null == n) return null;
-        let i = n.type === R.vxO.UNINSTALLING ? u.Progress.INDETERMINATE : f.xI(Number(n.progress), Number(n.total));
+        let i = n.type === R.vxO.UNINSTALLING ? u.Progress.INDETERMINATE : C.xI(Number(n.progress), Number(n.total));
         return (0, r.jsx)(u.Progress, {
             percent: i,
             size: u.Progress.Sizes.XSMALL,
@@ -210,8 +210,8 @@ class Z extends (s = l.Component) {
 function P(e) {
     let { libraryApplication: t } = e,
         n = (0, _.O)(),
-        [i, s] = (0, o.Wu)([h.Z, C.Z], () => [(0, T.i)(t, h.Z, C.Z), h.Z.getState(t.id, t.branchId)], [t]),
-        a = (0, o.e7)([N.Z], () => N.Z.isSyncing(t.id, t.branchId), [t]),
+        [i, s] = (0, o.Wu)([N.Z, f.Z], () => [(0, T.i)(t, N.Z, f.Z), N.Z.getState(t.id, t.branchId)], [t]),
+        a = (0, o.e7)([h.Z], () => h.Z.isSyncing(t.id, t.branchId), [t]),
         l = (0, o.e7)([m.Z], () => m.Z.hasNoBuild(t.id, t.branchId), [t]);
     return (0, r.jsx)(Z, {
         ...e,

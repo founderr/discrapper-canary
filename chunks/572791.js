@@ -17,24 +17,24 @@ var i = n(735250),
     g = n(921944),
     C = n(474936),
     I = n(689938),
-    x = n(932132);
-function T() {
+    T = n(932132);
+function x() {
     m.default.track(E.rMx.PREMIUM_UPSELL_INTERACTED, {
         cta_type: 'Learn more button',
         target: 'premium marketing page'
     }),
         (0, d.uL)(E.Z5c.APPLICATION_STORE);
 }
-function v(e) {
+function S(e) {
     let { avatarSrc: t, username: n } = e,
         [s, c] = (0, o.US)([a.z.NITRO_ON_PROFILE_SIDE_PANEL], g.R.SIDEBAR, !0);
     return s !== a.z.NITRO_ON_PROFILE_SIDE_PANEL
         ? null
         : (0, i.jsxs)(f.Z.Overlay, {
-              className: x.overlay,
+              className: T.overlay,
               children: [
                   (0, i.jsxs)('div', {
-                      className: x.contentGroup,
+                      className: T.contentGroup,
                       children: [
                           (0, i.jsx)(l.qE, {
                               src: t,
@@ -44,33 +44,33 @@ function v(e) {
                           }),
                           (0, i.jsx)(r.Text, {
                               variant: 'text-sm/medium',
-                              className: x.contentText,
+                              className: T.contentText,
                               children: I.Z.Messages.AFFINITIES_MARKETING_HEADER_V2_1.format({ username: n })
                           }),
                           (0, i.jsx)(r.Clickable, {
                               onClick: () => c(g.L.USER_DISMISS),
                               'aria-label': I.Z.Messages.DISMISS,
-                              className: x.closeIconWrapper,
+                              className: T.closeIconWrapper,
                               children: (0, i.jsx)(r.XSmallIcon, {
                                   size: 'md',
                                   color: 'currentColor',
-                                  className: x.closeIcon
+                                  className: T.closeIcon
                               })
                           })
                       ]
                   }),
                   (0, i.jsxs)('div', {
-                      className: x.buttonGroup,
+                      className: T.buttonGroup,
                       children: [
                           (0, i.jsx)(r.Button, {
-                              className: x.learnMoreButton,
+                              className: T.learnMoreButton,
                               size: r.Button.Sizes.TINY,
                               color: r.Button.Colors.CUSTOM,
-                              onClick: T,
+                              onClick: x,
                               children: I.Z.Messages.LEARN_MORE
                           }),
                           (0, i.jsx)(u.Z, {
-                              className: x.getNitroButton,
+                              className: T.getNitroButton,
                               size: r.Button.Sizes.TINY,
                               color: r.Button.Colors.CUSTOM,
                               buttonText: I.Z.Messages.MARKETING_PAGE_CTA_GET_NITRO
@@ -80,15 +80,15 @@ function v(e) {
               ]
           });
 }
-function S(e) {
+function v(e) {
     let { avatarSrc: t, username: n } = e,
         [s, c] = (0, o.US)([a.z.NITRO_ON_PROFILE_SIDE_PANEL], g.R.SIDEBAR, !0);
     return s !== a.z.NITRO_ON_PROFILE_SIDE_PANEL
         ? null
         : (0, i.jsx)(f.Z.Overlay, {
-              className: x.overlay2,
+              className: T.overlay2,
               children: (0, i.jsxs)('div', {
-                  className: x.contentGroup,
+                  className: T.contentGroup,
                   children: [
                       (0, i.jsx)(l.qE, {
                           src: t,
@@ -98,20 +98,20 @@ function S(e) {
                       }),
                       (0, i.jsx)(r.Text, {
                           variant: 'text-sm/medium',
-                          className: x.contentText,
+                          className: T.contentText,
                           children: I.Z.Messages.AFFINITIES_MARKETING_HEADER_V2_1_WITH_LINK.format({
                               username: n,
-                              onClickLearnMore: T
+                              onClickLearnMore: x
                           })
                       }),
                       (0, i.jsx)(r.Clickable, {
                           onClick: () => c(g.L.USER_DISMISS),
                           'aria-label': I.Z.Messages.DISMISS,
-                          className: x.closeIconWrapper,
+                          className: T.closeIconWrapper,
                           children: (0, i.jsx)(r.XSmallIcon, {
                               size: 'md',
                               color: 'currentColor',
-                              className: x.closeIcon
+                              className: T.closeIcon
                           })
                       })
                   ]
@@ -121,9 +121,9 @@ function S(e) {
 function N(e) {
     let { avatarSrc: t, username: n } = e;
     return (0, i.jsx)(f.Z.Overlay, {
-        className: x.overlay2,
+        className: T.overlay2,
         children: (0, i.jsxs)('div', {
-            className: x.contentGroup,
+            className: T.contentGroup,
             children: [
                 (0, i.jsx)(l.qE, {
                     src: t,
@@ -133,25 +133,25 @@ function N(e) {
                 }),
                 (0, i.jsx)(r.Text, {
                     variant: 'text-sm/medium',
-                    className: x.contentText,
+                    className: T.contentText,
                     children: I.Z.Messages.AFFINITIES_MARKETING_HEADER_V2_1_WITH_LINK.format({
                         username: n,
-                        onClickLearnMore: T
+                        onClickLearnMore: x
                     })
                 })
             ]
         })
     });
 }
-function Z(e) {
+function A(e) {
     let { variant: t, avatarSrc: n, username: s } = e;
     if (1 === t)
-        return (0, i.jsx)(v, {
+        return (0, i.jsx)(S, {
             avatarSrc: n,
             username: s
         });
     if (2 === t)
-        return (0, i.jsx)(S, {
+        return (0, i.jsx)(v, {
             avatarSrc: n,
             username: s
         });
@@ -162,7 +162,7 @@ function Z(e) {
         });
     return null;
 }
-let A = s.memo(function (e) {
+let Z = s.memo(function (e) {
     let { user: t, displayProfile: n } = e,
         { avatarSrc: s } = (0, _.Z)({
             user: t,
@@ -178,11 +178,11 @@ let A = s.memo(function (e) {
             }
         );
     return o
-        ? (0, i.jsx)(Z, {
+        ? (0, i.jsx)(A, {
               variant: u,
               avatarSrc: s,
               username: t.username
           })
         : null;
 });
-t.Z = A;
+t.Z = Z;

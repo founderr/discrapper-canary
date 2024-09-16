@@ -76,7 +76,7 @@ function I(e) {
           });
 }
 function m(e) {
-    let { imageUrl: t, name: n, description: s, formattedPrice: c, role: m, ctaComponent: T, shouldShowFullDescriptionButton: N = !0, onShowFullDescription: h, productType: C, onTapCard: f, actionMenu: p, showOpaqueBackground: g = !1, hideRoleTag: S = !1, lineClamp: A = 1, cardWidth: R = 332, cardHeight: O, thumbnailHeight: x = 187, descriptionTextVariant: M = 'text-sm/normal', isDraft: v = !1 } = e,
+    let { imageUrl: t, name: n, description: s, formattedPrice: c, role: m, ctaComponent: T, shouldShowFullDescriptionButton: h = !0, onShowFullDescription: N, productType: f, onTapCard: C, actionMenu: p, showOpaqueBackground: g = !1, hideRoleTag: S = !1, lineClamp: A = 1, cardWidth: R = 332, cardHeight: O, thumbnailHeight: x = 187, descriptionTextVariant: M = 'text-sm/normal', isDraft: v = !1 } = e,
         L = (0, l.hQ)(),
         Z = (0, i.jsxs)(i.Fragment, {
             children: [
@@ -111,9 +111,9 @@ function m(e) {
                                         text: s
                                     })
                                 }),
-                                N &&
+                                h &&
                                     (0, i.jsx)(I, {
-                                        onShowFullDescription: h,
+                                        onShowFullDescription: N,
                                         variant: M
                                     }),
                                 S || null == m || '' === m.name
@@ -139,7 +139,7 @@ function m(e) {
                             variant: 'text-xxs/normal',
                             color: 'text-normal',
                             className: _.__invalid_productType,
-                            children: C
+                            children: f
                         }),
                         (0, i.jsx)('div', {
                             className: _.productActionButton,
@@ -152,7 +152,7 @@ function m(e) {
                 })
             ]
         });
-    return null == f
+    return null == C
         ? (0, i.jsx)('article', {
               className: a()(_.productCard, g ? _.opaqueBackground : _.solidBackground),
               'aria-labelledby': L,
@@ -167,7 +167,7 @@ function m(e) {
                   tag: 'article',
                   'aria-label': d.Z.Messages.GUILD_SHOP_LISTING_CARD_A11Y_LABEL.format({ productName: n }),
                   className: a()(_.productCard, g ? _.opaqueBackground : _.solidBackground, _.cardClickableContainer),
-                  onClick: f,
+                  onClick: C,
                   children: Z
               })
           });

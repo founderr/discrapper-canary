@@ -1,9 +1,9 @@
 n.d(t, {
     $d: function () {
-        return C;
+        return f;
     },
     BQ: function () {
-        return h;
+        return N;
     },
     Cb: function () {
         return x;
@@ -15,7 +15,7 @@ n.d(t, {
         return P;
     },
     Wx: function () {
-        return N;
+        return h;
     },
     XZ: function () {
         return L;
@@ -27,7 +27,7 @@ n.d(t, {
         return v;
     },
     jD: function () {
-        return f;
+        return C;
     },
     lf: function () {
         return S;
@@ -67,30 +67,30 @@ var i = n(668781),
     I = n(981631),
     m = n(689079),
     T = n(689938);
-let N = { id: m.bi.BUILT_IN };
-function h(e) {
+let h = { id: m.bi.BUILT_IN };
+function N(e) {
     return e.id !== m.bi.BUILT_IN;
 }
-function C(e) {
-    return h(e) ? e.name : T.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_NAME;
-}
 function f(e) {
-    return h(e) ? e.description : T.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_DESCRIPTION;
+    return N(e) ? e.name : T.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_NAME;
+}
+function C(e) {
+    return N(e) ? e.description : T.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_DESCRIPTION;
 }
 function p(e) {
     var t;
-    return h(e) && (0, d.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, I.udG.EMBEDDED);
+    return N(e) && (0, d.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, I.udG.EMBEDDED);
 }
 function g(e) {
     var t;
-    return h(e) && (0, d.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, I.udG.PARTNER);
+    return N(e) && (0, d.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, I.udG.PARTNER);
 }
 function S(e) {
     var t;
-    return h(e) && (0, d.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, I.udG.PROMOTED);
+    return N(e) && (0, d.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, I.udG.PROMOTED);
 }
 function A(e) {
-    return h(e) && p(e) ? (e instanceof c.Z ? e.embeddedActivityConfig : e.embedded_activity_config) : null;
+    return N(e) && p(e) ? (e instanceof c.Z ? e.embeddedActivityConfig : e.embedded_activity_config) : null;
 }
 function R(e) {
     let { command: t, optionValues: n, context: a, commandTargetId: c, maxSizeCallback: u, sectionName: d } = e,
@@ -129,7 +129,7 @@ function R(e) {
 function O(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { fakeAppIconURL: n, ...i } = t;
-    return h(e)
+    return N(e)
         ? {
               iconURL: u.ZP.getApplicationIconURL({
                   ...i,
@@ -146,7 +146,7 @@ function O(e) {
           };
 }
 function x(e) {
-    return !!h(e) && (e instanceof c.Z ? e.isMonetized : e.is_monetized);
+    return !!N(e) && (e instanceof c.Z ? e.isMonetized : e.is_monetized);
 }
 function M(e) {
     let t = A(e);

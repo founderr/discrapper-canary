@@ -19,10 +19,10 @@ var i,
     I = n(568836),
     m = n(730749),
     T = n(112724),
-    N = n(812206),
-    h = n(283595),
-    C = n(558314),
-    f = n(55563),
+    h = n(812206),
+    N = n(283595),
+    f = n(558314),
+    C = n(55563),
     p = n(551428),
     g = n(73346),
     S = n(981631),
@@ -170,18 +170,18 @@ class x extends (i = a.Component) {
     }
 }
 O(x, 'defaultProps', { renderFallback: S.dG4 });
-let M = [f.Z, C.Z, h.Z, p.Z];
+let M = [C.Z, f.Z, N.Z, p.Z];
 function v(e) {
     let { skuId: t } = e,
-        n = f.Z.get(t),
-        i = null != n ? N.Z.getApplication(n.applicationId) : null;
+        n = C.Z.get(t),
+        i = null != n ? h.Z.getApplication(n.applicationId) : null;
     return {
         sku: n,
         application: i,
-        fetchFailed: f.Z.didFetchingSkuFail(t),
-        inLibrary: null != n && h.Z.hasApplication(n.applicationId, n.applicationId, !0),
+        fetchFailed: C.Z.didFetchingSkuFail(t),
+        inLibrary: null != n && N.Z.hasApplication(n.applicationId, n.applicationId, !0),
         storeListing: null != n ? p.Z.getForSKU(n.id) : null,
-        libraryApplication: null != n ? h.Z.getLibraryApplication(n.applicationId, n.applicationId, !0) : null
+        libraryApplication: null != n ? N.Z.getLibraryApplication(n.applicationId, n.applicationId, !0) : null
     };
 }
 let L = (0, T.Z)((0, m.Z)(x));

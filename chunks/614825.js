@@ -18,10 +18,10 @@ var i = n(735250),
     I = n(906732),
     m = n(963249),
     T = n(594174),
-    N = n(78839),
-    h = n(55935),
-    C = n(63063),
-    f = n(74538),
+    h = n(78839),
+    N = n(55935),
+    f = n(63063),
+    C = n(74538),
     p = n(276444),
     g = n(790368),
     S = n(786397),
@@ -45,7 +45,7 @@ class M extends s.Component {
     }
     renderBody(e, t, n) {
         let { trialOffer: i } = this.props;
-        return e && !n && void 0 === i.redeemed_at ? O.Z.Messages.REFERRAL_PROGRAM_LEARN_MORE_ABOUT_SHARING.format({ helpdeskArticle: C.Z.getArticleURL(R.BhN.REFERRAL_PROGRAM) }) : t ? null : O.Z.Messages.REFERRAL_PROGRAM_EMBED_BODY;
+        return e && !n && void 0 === i.redeemed_at ? O.Z.Messages.REFERRAL_PROGRAM_LEARN_MORE_ABOUT_SHARING.format({ helpdeskArticle: f.Z.getArticleURL(R.BhN.REFERRAL_PROGRAM) }) : t ? null : O.Z.Messages.REFERRAL_PROGRAM_EMBED_BODY;
     }
     renderActions(e, t, n) {
         let { trialOffer: s, currentUser: a, analyticsLocations: r } = this.props,
@@ -55,7 +55,7 @@ class M extends s.Component {
                 },
                 color: d.Button.Colors.BRAND
             },
-            o = a.id !== s.user_id || (0, f.I5)(a) || !a.verified || (0, S.B)(s),
+            o = a.id !== s.user_id || (0, C.I5)(a) || !a.verified || (0, S.B)(s),
             c = this.renderExpirationDate(e, t, n);
         return (
             (l.disabled = o),
@@ -88,10 +88,10 @@ class M extends s.Component {
     }
     renderExpirationDate(e, t, n) {
         let { trialOffer: i, trialEndsAt: s } = this.props;
-        if (void 0 !== i.redeemed_at && !n && null !== s) return O.Z.Messages.TRIAL_EXPIRES.format({ date: (0, h.vc)(o()(s), 'LL') });
+        if (void 0 !== i.redeemed_at && !n && null !== s) return O.Z.Messages.TRIAL_EXPIRES.format({ date: (0, N.vc)(o()(s), 'LL') });
         if (e || void 0 === i.expires_at) return null;
         let a = o()(i.expires_at);
-        if (t) return O.Z.Messages.EXPIRED_DATE.format({ date: (0, h.vc)(o()(a), 'LL') });
+        if (t) return O.Z.Messages.EXPIRED_DATE.format({ date: (0, N.vc)(o()(a), 'LL') });
         let r = a.diff(o()(), 'h');
         if (r > 48) {
             let e = a.diff(o()(), 'd');
@@ -174,10 +174,10 @@ function v(e) {
             [n, t]
         ),
         r = T.default.getCurrentUser(),
-        l = (0, u.e7)([T.default], () => null != s && (0, f.I5)(void 0 !== r && s.user_id === r.id ? r : T.default.getUser(s.user_id))),
-        o = (0, u.e7)([N.ZP], () => {
+        l = (0, u.e7)([T.default], () => null != s && (0, C.I5)(void 0 !== r && s.user_id === r.id ? r : T.default.getUser(s.user_id))),
+        o = (0, u.e7)([h.ZP], () => {
             var e;
-            return l ? (null === (e = N.ZP.getPremiumTypeSubscription()) || void 0 === e ? void 0 : e.trialEndsAt) : null;
+            return l ? (null === (e = h.ZP.getPremiumTypeSubscription()) || void 0 === e ? void 0 : e.trialEndsAt) : null;
         }),
         { analyticsLocations: d } = (0, I.ZP)(E.Z.SHARE_NITRO_EMBED),
         { enabled: m } = g.Z.useExperiment({ location: 'f4ff1d_1' }, { autoTrackExposure: !0 });

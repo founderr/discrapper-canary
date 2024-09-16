@@ -32,8 +32,8 @@ let E = (e, t, n, s) => (
         });
     },
     m = async (e) => {
-        let { data: t, file: n, guildId: c, uploadId: m, roles: N, image: S, hideErrorModal: h } = e,
-            g = o.ZP.sanitizeEmojiName(n.name.split('.')[0]);
+        let { data: t, file: n, guildId: c, uploadId: m, roles: N, image: S, hideErrorModal: g } = e,
+            h = o.ZP.sanitizeEmojiName(n.name.split('.')[0]);
         if (o.ZP.isFileTooBig(n)) {
             if ('image/gif' === n.type) return E(n.name, n.size, c, m);
             if (null != S) {
@@ -51,7 +51,7 @@ let E = (e, t, n, s) => (
             await (0, i.rS)({
                 guildId: c,
                 image: t,
-                name: g,
+                name: h,
                 roles: N
             }),
                 l.default.track(u.rMx.EMOJI_UPLOAD_COMPLETED, {
@@ -78,7 +78,7 @@ let E = (e, t, n, s) => (
                             : (null != s.image || s.code === u.evJ.INVALID_FILE_ASSET_SIZE_RESIZE_GIF) && (n = r.d.RESIZE_GIF)),
                 429 === i && ((e = _.Z.Messages.RATE_LIMITED), (n = r.d.RATE_LIMIT)),
                 null != e &&
-                    !h &&
+                    !g &&
                     a.Z.show({
                         title: _.Z.Messages.GENERIC_ERROR_TITLE,
                         body: e

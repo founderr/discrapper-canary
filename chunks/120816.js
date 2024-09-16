@@ -6,8 +6,8 @@ var r,
     o = n(772848),
     s = n(756647),
     c = n(442837),
-    u = n(570140),
-    d = n(314897),
+    d = n(570140),
+    u = n(314897),
     h = n(906467);
 let m = 0,
     x = [],
@@ -36,7 +36,7 @@ class g extends (r = c.ZP.Store) {
               writable: !0
           })
         : (a[l] = i),
-    (t.Z = new g(u.Z, {
+    (t.Z = new g(d.Z, {
         TRACK: function (e) {
             let { event: t, properties: n, fingerprint: r } = e;
             if (h.Z.isDeveloper) {
@@ -47,7 +47,7 @@ class g extends (r = c.ZP.Store) {
                         key: (m++).toString(),
                         event: t,
                         properties: n,
-                        fingerprint: null != (a = r) ? (0, s.s)(a) : d.default.getId(),
+                        fingerprint: null != (a = r) ? (0, s.s)(a) : u.default.getId(),
                         timestamp: new Date()
                     }
                 ]).length > 500 && x.shift();

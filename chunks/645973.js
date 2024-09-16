@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return d;
+        return u;
     }
 });
 var r = n(735250),
@@ -10,12 +10,12 @@ var r = n(735250),
     o = n(481060),
     s = n(718629),
     c = n(124849),
-    u = n(219299);
-function d() {
+    d = n(219299);
+function u() {
     let e = a.useRef(null);
     return (0, r.jsx)('div', {
         ref: e,
-        className: i()(u.panel, c.panel),
+        className: i()(d.panel, c.panel),
         children: (0, r.jsx)(o.Button, {
             size: o.Button.Sizes.SMALL,
             onClick: s.Z.clearUploadedKeyVersions,

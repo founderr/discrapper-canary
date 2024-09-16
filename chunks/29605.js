@@ -3,7 +3,7 @@ n.d(t, {
         return H;
     },
     L3: function () {
-        return w;
+        return k;
     }
 }),
     n(47120);
@@ -23,14 +23,14 @@ var s = n(735250),
     m = n(225433),
     N = n(327802),
     S = n(110924),
-    h = n(200876),
-    g = n(730089),
+    g = n(200876),
+    h = n(730089),
     C = n(372444),
     x = n(889564),
     p = n(372129),
     R = n(357156),
-    f = n(210887),
-    L = n(626135),
+    L = n(210887),
+    f = n(626135),
     O = n(768581),
     A = n(176354),
     M = n(267642),
@@ -145,7 +145,7 @@ let B = d().throttle(T.OQ, 1000),
             ]
         });
     },
-    k = (e) => {
+    w = (e) => {
         let { isLoading: t, staticEmojis: a, animatedEmojis: i, theme: r, guild: l } = e;
         return t
             ? (0, s.jsx)(I.Spinner, {
@@ -171,7 +171,7 @@ let B = d().throttle(T.OQ, 1000),
                 })
               : (0, s.jsxs)('div', {
                     children: [
-                        (0, s.jsx)(w, {
+                        (0, s.jsx)(k, {
                             title: U.Z.Messages.EMOJI,
                             maxSlots: l.getMaxEmojiSlots(),
                             emojiCount: a.length
@@ -180,7 +180,7 @@ let B = d().throttle(T.OQ, 1000),
                             emojis: a,
                             guild: l
                         }),
-                        (0, s.jsx)(w, {
+                        (0, s.jsx)(k, {
                             title: U.Z.Messages.ANIMATED_EMOJI,
                             maxSlots: l.getMaxEmojiSlots(),
                             emojiCount: i.length
@@ -192,7 +192,7 @@ let B = d().throttle(T.OQ, 1000),
                     ]
                 });
     },
-    w = (e) => {
+    k = (e) => {
         let { title: t, maxSlots: n, emojiCount: a } = e;
         return (0, s.jsxs)(I.FormTitle, {
             tag: I.FormTitleTags.H2,
@@ -281,7 +281,7 @@ t.ZP = () => {
     let e = (0, _.e7)([j.Z], () => j.Z.getGuild()),
         [t, i] = a.useState('');
     o()(null != e, 'ConnectedGuildSettingsEmoji must be rendered within a guild context');
-    let r = (0, _.e7)([f.Z], () => f.Z.theme),
+    let r = (0, _.e7)([L.Z], () => L.Z.theme),
         { canCreateExpressions: l } = (0, R.X)(e),
         { revision: c, emojis: E } = (0, _.cj)([v.Z], () => ({
             revision: v.Z.getEmojiRevision(e.id),
@@ -306,9 +306,9 @@ t.ZP = () => {
             return [n, s];
         }, [E, e.id]),
         F = e.getMaxEmojiSlots(),
-        w = Math.max(F - P.length, F - y.length),
+        k = Math.max(F - P.length, F - y.length),
         H = (n, s, a) =>
-            (0, g.G)({
+            (0, h.G)({
                 data: n,
                 file: s,
                 image: a,
@@ -318,7 +318,7 @@ t.ZP = () => {
             }),
         Y = async (n) => {
             i((0, u.Z)()),
-                L.default.track(Z.rMx.EMOJI_UPLOAD_STARTED, {
+                f.default.track(Z.rMx.EMOJI_UPLOAD_STARTED, {
                     guild_id: e.id,
                     upload_id: t
                 }),
@@ -338,11 +338,11 @@ t.ZP = () => {
                     });
             });
         },
-        K = (0, h.l)(e);
+        K = (0, g.l)(e);
     return (0, s.jsxs)('div', {
         className: G.emojiSettings,
         children: [
-            0 === w
+            0 === k
                 ? null
                 : (0, s.jsx)(N.Z, {
                       className: G.emojiUploadContainer,
@@ -413,19 +413,19 @@ t.ZP = () => {
                                 onClick: () => {
                                     let t = (0, u.Z)();
                                     i(t),
-                                        L.default.track(Z.rMx.EMOJI_UPLOAD_STARTED, {
+                                        f.default.track(Z.rMx.EMOJI_UPLOAD_STARTED, {
                                             guild_id: e.id,
                                             upload_id: t
                                         });
                                 },
-                                disabled: O || 0 === w || !l,
+                                disabled: O || 0 === k || !l,
                                 submitting: O,
                                 focusProps: { within: !0 },
                                 children: [
                                     U.Z.Messages.UPLOAD_EMOJI,
-                                    w > 0
+                                    k > 0
                                         ? (0, s.jsx)(p.Z, {
-                                              disabled: O || 0 === w || !l,
+                                              disabled: O || 0 === k || !l,
                                               tabIndex: 0,
                                               onChange: H,
                                               setLoading: A,
@@ -436,7 +436,7 @@ t.ZP = () => {
                             })
                         ]
                     }),
-                    (0, s.jsx)(k, {
+                    (0, s.jsx)(w, {
                         isLoading: null == E,
                         staticEmojis: P,
                         animatedEmojis: y,

@@ -17,14 +17,14 @@ var s = n(512722),
     m = n(689938);
 function p(e) {
     var t, s;
-    let { applicationId: p, stream: _, channel: f, exitFullScreen: E, appContext: g, analyticsLocation: C, guildScheduledEvent: I, ...x } = e,
-        T = (0, o.bp)(),
-        v = null == f ? void 0 : f.getGuildId(),
-        S = (0, l.e7)([c.Z], () => (null != v ? c.Z.getGuild(v) : null), [v]);
-    return ((t = S), (s = f), null != t && null != s && u.Z.can(h.Plq.CREATE_INSTANT_INVITE, s))
+    let { applicationId: p, stream: _, channel: f, exitFullScreen: E, appContext: g, analyticsLocation: C, guildScheduledEvent: I, ...T } = e,
+        x = (0, o.bp)(),
+        S = null == f ? void 0 : f.getGuildId(),
+        v = (0, l.e7)([c.Z], () => (null != S ? c.Z.getGuild(S) : null), [S]);
+    return ((t = v), (s = f), null != t && null != s && u.Z.can(h.Plq.CREATE_INSTANT_INVITE, s))
         ? (0, i.jsx)(d.Z, {
               onClick: () => {
-                  a()(null != S, 'guild cannot be null'),
+                  a()(null != v, 'guild cannot be null'),
                       a()(null != f, 'channel cannot be null'),
                       !(function (e) {
                           let { guild: t, channel: s, streamUserId: a, applicationId: l, appContext: o, exitFullScreen: c, analyticsLocation: u, guildScheduledEvent: d } = e;
@@ -50,11 +50,11 @@ function p(e) {
                                   }
                               );
                       })({
-                          guild: S,
+                          guild: v,
                           channel: f,
                           streamUserId: null == _ ? void 0 : _.ownerId,
                           applicationId: p,
-                          appContext: null != g ? g : T,
+                          appContext: null != g ? g : x,
                           exitFullScreen: E,
                           analyticsLocation: C,
                           guildScheduledEvent: I
@@ -62,7 +62,7 @@ function p(e) {
               },
               iconComponent: null != p ? r.ActivitiesPlusIcon : r.GroupPlusIcon,
               label: null != p ? m.Z.Messages.EMBEDDED_ACTIVITIES_INVITE_TO_ACTIVITY : m.Z.Messages.ACTIVITY_INVITE_MODAL_INVITE,
-              ...x
+              ...T
           })
         : null;
 }

@@ -35,13 +35,13 @@ function N(e) {
     }
     let N = t === _.p6O,
         S = N ? c : t,
-        h = (0, s.jsx)(o.CheckmarkLargeIcon, {
+        g = (0, s.jsx)(o.CheckmarkLargeIcon, {
             size: 'custom',
             width: 32,
             height: 24,
             color: m(t)
         }),
-        g = (0, o.useRadioGroup)({
+        h = (0, o.useRadioGroup)({
             orientation: 'horizontal',
             isDisabled: i
         }),
@@ -56,7 +56,7 @@ function N(e) {
     return (0, s.jsxs)('div', {
         className: E.buttonsContainer,
         'aria-label': I.Z.Messages.USER_SETTINGS_PROFILE_COLOR,
-        ...g,
+        ...h,
         children: [
             (0, s.jsx)('div', {
                 className: r()(E.colorSwatch, { [E.disabled]: i }),
@@ -72,7 +72,7 @@ function N(e) {
                         (0, s.jsx)('div', {
                             className: E.swatch,
                             style: { backgroundColor: (0, l.Rf)(_.p6O) },
-                            children: N ? h : null
+                            children: N ? g : null
                         }),
                         (0, s.jsx)(o.Text, {
                             className: E.swatchDescription,
@@ -95,7 +95,7 @@ function N(e) {
                             (0, s.jsx)('div', {
                                 className: r()(E.customSwatch, { [E.defaultSwatch]: S === _.p6O }),
                                 style: { '--custom-color': (0, l.Rf)(S) },
-                                children: N ? null : h
+                                children: N ? null : g
                             }),
                             (0, s.jsx)(o.Text, {
                                 className: E.swatchDescription,

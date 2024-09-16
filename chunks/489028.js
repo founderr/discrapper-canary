@@ -15,14 +15,14 @@ var s = n(735250),
     m = n(626135),
     N = n(584825),
     S = n(723047),
-    h = n(416867),
-    g = n(903773),
+    g = n(416867),
+    h = n(903773),
     C = n(215124),
     x = n(326578),
     p = n(981631),
     R = n(674563),
-    f = n(829857),
-    L = n(689938),
+    L = n(829857),
+    f = n(689938),
     O = n(383470);
 function A(e) {
     let { onCreateTeamClick: t, isGuildOwner: n } = e;
@@ -33,7 +33,7 @@ function A(e) {
             onClick: t,
             className: O.enableTicketingButton,
             fullWidth: !0,
-            children: L.Z.Messages.GUILD_MONETIZATION_ENABLE_CREATE_TEAM
+            children: f.Z.Messages.GUILD_MONETIZATION_ENABLE_CREATE_TEAM
         })
     });
 }
@@ -54,10 +54,10 @@ function M(e) {
         m = async () => {
             (await d(t, l, R.wW.GUILD_ROLE_SUBSCRIPTIONS)) &&
                 (I(t.id),
-                (0, h.B)({
+                (0, g.B)({
                     Icon: x.Z,
-                    title: L.Z.Messages.GUILD_MONETIZATION_ENABLE_CONFIRMATION_TITLE,
-                    body: L.Z.Messages.GUILD_MONETIZATION_ENABLE_CONFIRMATION_SUBTITLE
+                    title: f.Z.Messages.GUILD_MONETIZATION_ENABLE_CONFIRMATION_TITLE,
+                    body: f.Z.Messages.GUILD_MONETIZATION_ENABLE_CONFIRMATION_SUBTITLE
                 }));
         };
     return (0, s.jsxs)(s.Fragment, {
@@ -68,18 +68,18 @@ function M(e) {
                     (0, s.jsx)(r.SingleSelect, {
                         className: O.teamSelect,
                         options: T,
-                        placeholder: L.Z.Messages.GUILD_MONETIZATION_ENABLE_SELECT_PLACEHOLDER,
+                        placeholder: f.Z.Messages.GUILD_MONETIZATION_ENABLE_SELECT_PLACEHOLDER,
                         value: l,
                         isDisabled: 0 === T.length || E || !i,
                         onChange: (e) => o(e),
-                        'aria-label': L.Z.Messages.GUILD_MONETIZATION_ENABLE_SELECT_PLACEHOLDER
+                        'aria-label': f.Z.Messages.GUILD_MONETIZATION_ENABLE_SELECT_PLACEHOLDER
                     }),
                     (0, s.jsx)(r.Button, {
                         onClick: m,
                         className: O.enableTicketingButton,
                         submitting: u,
                         disabled: null == l || E || !i,
-                        children: L.Z.Messages.GUILD_MONETIZATION_ENABLE_CTA
+                        children: f.Z.Messages.GUILD_MONETIZATION_ENABLE_CTA
                     })
                 ]
             }),
@@ -98,14 +98,14 @@ t.Z = (e) => {
         c = t.isOwner(n),
         N = (0, o.Ob)(t),
         S = (0, i.e7)([T.Z], () => T.Z.isFocused()),
-        { teams: h, loading: x } = (0, I.Z)({ refreshOnDepChange: S }),
+        { teams: g, loading: x } = (0, I.Z)({ refreshOnDepChange: S }),
         R = a.useMemo(
             () =>
-                h.filter((e) => {
+                g.filter((e) => {
                     var t;
-                    return e.payout_account_status !== f.C.BLOCKED && (0, _.Z)(null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : p.lds, e);
+                    return e.payout_account_status !== L.C.BLOCKED && (0, _.Z)(null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : p.lds, e);
                 }),
-            [h, n]
+            [g, n]
         ),
         D = R.length > 0,
         v = a.useCallback(async () => {
@@ -133,19 +133,19 @@ t.Z = (e) => {
         : (0, s.jsxs)(s.Fragment, {
               children: [
                   !c &&
-                      (0, s.jsx)(g.Z, {
+                      (0, s.jsx)(h.Z, {
                           className: O.nonOwnerNotice,
-                          children: L.Z.Messages.GUILD_MONETIZATION_ENABLE_NON_OWNER_WARNING
+                          children: f.Z.Messages.GUILD_MONETIZATION_ENABLE_NON_OWNER_WARNING
                       }),
                   (0, s.jsxs)(r.FormSection, {
-                      title: L.Z.Messages.GUILD_MONETIZATION_ENABLE_HEADER,
+                      title: f.Z.Messages.GUILD_MONETIZATION_ENABLE_HEADER,
                       disabled: !c,
                       children: [
                           (0, s.jsx)(r.FormText, {
                               type: r.FormText.Types.DESCRIPTION,
                               className: O.description,
                               disabled: !c,
-                              children: L.Z.Messages.GUILD_MONETIZATION_ENABLE_DESCRIPTION.format({ onCreateTeamHook: j })
+                              children: f.Z.Messages.GUILD_MONETIZATION_ENABLE_DESCRIPTION.format({ onCreateTeamHook: j })
                           }),
                           D
                               ? (0, s.jsx)(M, {
@@ -160,7 +160,7 @@ t.Z = (e) => {
                       ]
                   }),
                   (0, s.jsx)(r.FormSection, {
-                      title: L.Z.Messages.CREATOR_MONETIZATION_SETTINGS_DISABLE_MONETIZATION_SECTION_TITLE,
+                      title: f.Z.Messages.CREATOR_MONETIZATION_SETTINGS_DISABLE_MONETIZATION_SECTION_TITLE,
                       className: O.selfDemonetization,
                       children: (0, s.jsx)(C.Z, {
                           guildId: t.id,

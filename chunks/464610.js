@@ -116,7 +116,7 @@ function N(e) {
     (0, r.RD)(t.id);
     let N = (0, l.Z6)(t.id),
         { rulesByTriggerType: S } = (0, r.pH)(t.id),
-        { numEnabledRules: h, numRules: g } = a.useMemo(() => {
+        { numEnabledRules: g, numRules: h } = a.useMemo(() => {
             let e = 0,
                 t = 0;
             return null == S
@@ -146,7 +146,7 @@ function N(e) {
         x = C[u.u.CAPTCHA_AND_RAID_PROTECTION],
         p = C[u.u.DM_AND_SPAM_PROTECTION],
         R = C[u.u.PERMISSIONS],
-        f = (0, o.pr)(t.id);
+        L = (0, o.pr)(t.id);
     return (0, s.jsxs)('div', {
         children: [
             (0, s.jsx)(i.Heading, {
@@ -179,15 +179,15 @@ function N(e) {
                         page: u.u.DM_AND_SPAM_PROTECTION
                     }),
                     (0, s.jsx)('div', { className: E.divider }),
-                    f &&
+                    L &&
                         (0, s.jsxs)(s.Fragment, {
                             children: [
                                 (0, s.jsx)(m, {
                                     icon: n(145136),
                                     title: I.Z.Messages.GUILD_SETTINGS_AUTOMOD_TITLE,
                                     subtitle: I.Z.Messages.GUILD_SETTINGS_SAFETY_OVERVIEW_NUM_ENABLED.format({
-                                        enabled: h,
-                                        total: g
+                                        enabled: g,
+                                        total: h
                                     }),
                                     page: u.u.AUTOMOD
                                 }),

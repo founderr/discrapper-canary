@@ -20,16 +20,16 @@ var s = n(735250),
     m = n(570961),
     N = n(208665),
     S = n(976983),
-    h = n(290511),
-    g = n(689938),
+    g = n(290511),
+    h = n(689938),
     C = n(277767);
 let x = { optionErrors: [] };
 function p(e) {
     var t;
-    let { guild: n, prompt: i, disableAutofocus: d, promptIndex: S, dragIndex: p, includeCount: L, singleColumn: O, onPromptDragComplete: A, onPromptDragStart: M, onPromptDragReset: D } = e,
+    let { guild: n, prompt: i, disableAutofocus: d, promptIndex: S, dragIndex: p, includeCount: f, singleColumn: O, onPromptDragComplete: A, onPromptDragStart: M, onPromptDragReset: D } = e,
         { dropdownsAllowed: v } = (0, _.Ug)(n.id),
         j = (0, l.e7)([T.Z], () => T.Z.editedDefaultChannelIds),
-        Z = v ? h.qm : h.M$,
+        Z = v ? g.qm : g.M$,
         {
             drag: b,
             dragSourcePosition: U,
@@ -48,10 +48,10 @@ function p(e) {
             return null !== (e = N.Z.errors[S]) && void 0 !== e ? e : x;
         }),
         [y, F] = a.useState(!1),
-        [k, w] = a.useState(!1),
+        [w, k] = a.useState(!1),
         H = null !== (t = B.options) && void 0 !== t ? t : B.optionErrors.filter(E.lm)[0],
         V = B.config,
-        Y = v && i.options.length >= h.fY,
+        Y = v && i.options.length >= g.fY,
         W = (0, u.kl)(n.id, Array.from(j), [i]).length - j.size,
         z = a.useRef(null);
     return (a.useLayoutEffect(() => {
@@ -66,13 +66,13 @@ function p(e) {
         ? (0, s.jsx)(o.FocusRing, {
               children: (0, s.jsxs)('div', {
                   tabIndex: 0,
-                  onFocus: () => w(!0),
-                  onBlur: () => w(!1),
-                  onMouseLeave: () => w(!1),
+                  onFocus: () => k(!0),
+                  onBlur: () => k(!1),
+                  onMouseLeave: () => k(!1),
                   className: r()(C.container, {
                       [C.dropIndicatorBefore]: null != U && S < U,
                       [C.dropIndicatorAfter]: null != U && S > U,
-                      [C.containerFocused]: k
+                      [C.containerFocused]: w
                   }),
                   ref: (e) => b(G(e)),
                   children: [
@@ -90,7 +90,7 @@ function p(e) {
                           className: C.questionNumber,
                           variant: 'text-xs/semibold',
                           color: 'text-muted',
-                          children: g.Z.Messages.ONBOARDING_PROMPT_OPTION_QUESTION_NUMBER.format({ index: S + 1 })
+                          children: h.Z.Messages.ONBOARDING_PROMPT_OPTION_QUESTION_NUMBER.format({ index: S + 1 })
                       }),
                       (0, s.jsx)(o.Text, {
                           variant: 'text-lg/semibold',
@@ -107,7 +107,7 @@ function p(e) {
                           })
                       }),
                       (0, s.jsx)(o.TooltipContainer, {
-                          text: g.Z.Messages.ONBOARDING_PROMPT_DELETE,
+                          text: h.Z.Messages.ONBOARDING_PROMPT_DELETE,
                           className: C.removeButton,
                           children: (0, s.jsx)(o.Clickable, {
                               className: C.closeIcon,
@@ -124,12 +124,12 @@ function p(e) {
         : (0, s.jsx)(o.FocusRing, {
               children: (0, s.jsxs)('div', {
                   tabIndex: 0,
-                  onFocus: () => w(!0),
-                  onBlur: () => w(!1),
+                  onFocus: () => k(!0),
+                  onBlur: () => k(!1),
                   className: r()(C.container, {
                       [C.dropIndicatorBefore]: null != U && S < U,
                       [C.dropIndicatorAfter]: null != U && S > U,
-                      [C.containerFocused]: k
+                      [C.containerFocused]: w
                   }),
                   ref: (e) => b(G(e)),
                   children: [
@@ -147,7 +147,7 @@ function p(e) {
                           className: C.questionNumber,
                           variant: 'text-xs/semibold',
                           color: 'text-muted',
-                          children: g.Z.Messages.ONBOARDING_PROMPT_OPTION_QUESTION_NUMBER.format({ index: S + 1 })
+                          children: h.Z.Messages.ONBOARDING_PROMPT_OPTION_QUESTION_NUMBER.format({ index: S + 1 })
                       }),
                       (0, s.jsx)(o.TextInput, {
                           className: C.title,
@@ -155,8 +155,8 @@ function p(e) {
                           inputRef: z,
                           value: i.title,
                           onChange: (e) => (0, m.Kk)(n, i.id, { title: e }),
-                          placeholder: g.Z.Messages.ONBOARDING_PROMPT_TITLE_PLACEHOLDER,
-                          maxLength: h.iU,
+                          placeholder: h.Z.Messages.ONBOARDING_PROMPT_TITLE_PLACEHOLDER,
+                          maxLength: g.iU,
                           error: B.title
                       }),
                       (0, s.jsx)(R, {
@@ -168,16 +168,16 @@ function p(e) {
                           variant: 'text-xs/semibold',
                           color: 'text-muted',
                           children: Y
-                              ? g.Z.Messages.ONBOARDING_PROMPT_DROPDOWN_OPTIONS_HEADER.format({
+                              ? h.Z.Messages.ONBOARDING_PROMPT_DROPDOWN_OPTIONS_HEADER.format({
                                     count: i.options.length,
                                     total: Z
                                 })
-                              : g.Z.Messages.ONBOARDING_PROMPT_OPTIONS_HEADER.format({
+                              : h.Z.Messages.ONBOARDING_PROMPT_OPTIONS_HEADER.format({
                                     count: i.options.length,
                                     total: Z
                                 })
                       }),
-                      (0, s.jsx)(f, {
+                      (0, s.jsx)(L, {
                           guild: n,
                           prompt: i,
                           promptIndex: S,
@@ -199,7 +199,7 @@ function p(e) {
                                           children: (0, s.jsx)(o.Text, {
                                               variant: 'text-sm/normal',
                                               color: 'interactive-normal',
-                                              children: g.Z.Messages.ONBOARDING_PROMPT_ALLOW_MULTIPLE_LABEL
+                                              children: h.Z.Messages.ONBOARDING_PROMPT_ALLOW_MULTIPLE_LABEL
                                           })
                                       }),
                                       i.inOnboarding
@@ -212,7 +212,7 @@ function p(e) {
                                                 children: (0, s.jsx)(o.Text, {
                                                     variant: 'text-sm/normal',
                                                     color: 'interactive-normal',
-                                                    children: L ? g.Z.Messages.ONBOARDING_PROMPT_REQUIRED_LABEL_WITH_COUNT.format({ count: W }) : g.Z.Messages.ONBOARDING_PROMPT_REQUIRED_LABEL
+                                                    children: f ? h.Z.Messages.ONBOARDING_PROMPT_REQUIRED_LABEL_WITH_COUNT.format({ count: W }) : h.Z.Messages.ONBOARDING_PROMPT_REQUIRED_LABEL
                                                 })
                                             })
                                           : null
@@ -228,7 +228,7 @@ function p(e) {
                                   })
                               }),
                               (0, s.jsx)(o.TooltipContainer, {
-                                  text: g.Z.Messages.ONBOARDING_PROMPT_DELETE,
+                                  text: h.Z.Messages.ONBOARDING_PROMPT_DELETE,
                                   className: C.removeButton,
                                   children: (0, s.jsx)(o.Clickable, {
                                       className: C.closeIcon,
@@ -272,19 +272,19 @@ function R(e) {
             (0, s.jsx)(o.Text, {
                 variant: 'text-xs/normal',
                 color: 'text-muted',
-                children: g.Z.Messages.ONBOARDING_PROMPT_EXAMPLES_HEADER
+                children: h.Z.Messages.ONBOARDING_PROMPT_EXAMPLES_HEADER
             }),
             (0, s.jsxs)('div', {
                 className: C.examples,
-                children: [l(g.Z.Messages.ONBOARDING_PROMPT_EXAMPLES_1), l(g.Z.Messages.ONBOARDING_PROMPT_EXAMPLES_2), l(g.Z.Messages.ONBOARDING_PROMPT_EXAMPLES_3), l(g.Z.Messages.ONBOARDING_PROMPT_EXAMPLES_4)]
+                children: [l(h.Z.Messages.ONBOARDING_PROMPT_EXAMPLES_1), l(h.Z.Messages.ONBOARDING_PROMPT_EXAMPLES_2), l(h.Z.Messages.ONBOARDING_PROMPT_EXAMPLES_3), l(h.Z.Messages.ONBOARDING_PROMPT_EXAMPLES_4)]
             })
         ]
     });
 }
-function f(e) {
+function L(e) {
     let { guild: t, prompt: n, promptIndex: a, singleColumn: i, errors: r } = e,
         { dropdownsAllowed: l } = (0, _.Ug)(t.id),
-        o = l ? h.qm : h.M$,
+        o = l ? g.qm : g.M$,
         { handleDragStart: c, handleDragReset: u, handleDragComplete: I } = (0, d.Z)(n.options, (e) => (0, m.Kk)(t, n.id, { options: e }));
     return (0, s.jsxs)('div', {
         className: C.options,

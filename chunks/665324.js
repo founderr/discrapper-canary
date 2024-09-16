@@ -21,14 +21,14 @@ var s = n(735250),
     m = n(357156),
     N = n(208049),
     S = n(763296),
-    h = n(22382),
-    g = n(747071),
+    g = n(22382),
+    h = n(747071),
     C = n(171368),
     x = n(430824),
     p = n(594174),
     R = n(15385),
-    f = n(768581),
-    L = n(267642),
+    L = n(768581),
+    f = n(267642),
     O = n(358085),
     A = n(999382),
     M = n(70409),
@@ -59,7 +59,7 @@ function G(e) {
 function P(e) {
     let { currentTier: t, availableSounds: n, guildId: a } = e,
         i = x.Z.getGuild(a),
-        r = (0, L.U2)(t, i);
+        r = (0, f.U2)(t, i);
     return 0 === t
         ? (0, s.jsx)(s.Fragment, {
               children: j.Z.Messages.GUILD_SETTINGS_SOUND_LIST_SOUNDS_AVAILABLE.format({
@@ -147,17 +147,17 @@ function F(e) {
         o = a.useRef(null),
         d = (0, E.ZP)(),
         _ = t.premiumTier,
-        I = (0, L.yw)(t, i, _);
+        I = (0, f.yw)(t, i, _);
     a.useEffect(() => {
         (0, N.w)();
     }, []);
-    let T = a.useMemo(() => i.reduce((e, t) => ((e[t.soundId] = new Audio((0, h.Z)(t.soundId))), e), {}), [i]),
+    let T = a.useMemo(() => i.reduce((e, t) => ((e[t.soundId] = new Audio((0, g.Z)(t.soundId))), e), {}), [i]),
         C = 0 === i.length && !r;
     function x(e) {
         var t;
         null === (t = o.current) || void 0 === t || t.pause();
         let n = T[e.soundId];
-        null != n && ((o.current = n), (n.currentTime = 0), (n.volume = (0, g.Z)(e.volume)), n.play());
+        null != n && ((o.current = n), (n.currentTime = 0), (n.volume = (0, h.Z)(e.volume)), n.play());
     }
     a.useEffect(
         () => () => {
@@ -245,7 +245,7 @@ function F(e) {
                                   }),
                                   i.map((e) =>
                                       (0, s.jsx)(
-                                          k,
+                                          w,
                                           {
                                               sound: e,
                                               isPlaying: !1,
@@ -262,13 +262,13 @@ function F(e) {
         ]
     });
 }
-function k(e) {
+function w(e) {
     let { sound: t, isPlaying: i, onPlaySound: l, guild: o } = e,
-        { soundId: d, name: E, user: T, userId: S, emojiId: h, emojiName: g } = t,
+        { soundId: d, name: E, user: T, userId: S, emojiId: g, emojiName: h } = t,
         x = (0, c.e7)([p.default], () => (null != T ? T : p.default.getUser(S)), [S, T]),
         { canManageGuildExpression: R } = (0, m.X)(o),
-        L = a.useMemo(() => R(t), [t, R]),
-        O = null != h || null != g,
+        f = a.useMemo(() => R(t), [t, R]),
+        O = null != g || null != h,
         [A, M] = a.useState(!1);
     async function v() {
         if (!A) {
@@ -299,8 +299,8 @@ function k(e) {
         children: [
             O
                 ? (0, s.jsx)(I.Z, {
-                      emojiId: h,
-                      emojiName: g,
+                      emojiId: g,
+                      emojiName: h,
                       className: Z.emoji
                   })
                 : (0, s.jsx)(u.ImageIcon, {
@@ -336,7 +336,7 @@ function k(e) {
                             'aria-label': null == x ? void 0 : x.username,
                             size: u.AvatarSizes.SIZE_24,
                             className: Z.uploaderAvatar,
-                            src: (0, f.ov)(x, !1, 24)
+                            src: (0, L.ov)(x, !1, 24)
                         }),
                         (0, s.jsx)(u.Text, {
                             variant: 'text-sm/normal',
@@ -345,7 +345,7 @@ function k(e) {
                         })
                     ]
                 }),
-            L
+            f
                 ? (0, s.jsxs)('div', {
                       className: Z.soundEditContainer,
                       children: [

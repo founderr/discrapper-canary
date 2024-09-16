@@ -20,8 +20,8 @@ var a = n(442837),
     m = n(969632),
     N = n(570961),
     S = n(84658),
-    h = n(974513),
-    g = n(677892),
+    g = n(974513),
+    h = n(677892),
     C = n(981631),
     x = n(689938),
     p = n(14360);
@@ -56,7 +56,7 @@ function R(e) {
                             completed: !0
                         }));
         },
-        h = () => {
+        g = () => {
             I.default.track(C.rMx.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED, {
                 ...(0, l.hH)(t),
                 action_taken: S.W$[S.W$.PREVIEW],
@@ -66,7 +66,7 @@ function R(e) {
         },
         x = (0, s.jsxs)(s.Fragment, {
             children: [
-                (0, s.jsx)(g.ku, {
+                (0, s.jsx)(h.ku, {
                     guildId: t,
                     onEdit: () => {
                         I.default.track(C.rMx.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED, {
@@ -79,7 +79,7 @@ function R(e) {
                     disableGoodStatus: n
                 }),
                 (0, s.jsx)(u.Z, { className: p.divider }),
-                (0, s.jsx)(g.ap, {
+                (0, s.jsx)(h.ap, {
                     guildId: t,
                     onEdit: () => {
                         I.default.track(C.rMx.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED, {
@@ -95,7 +95,7 @@ function R(e) {
                     (0, s.jsxs)(s.Fragment, {
                         children: [
                             (0, s.jsx)(u.Z, { className: p.divider }),
-                            (0, s.jsx)(g.P_, {
+                            (0, s.jsx)(h.P_, {
                                 guildId: t,
                                 onEdit: () => {
                                     I.default.track(C.rMx.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED, {
@@ -114,11 +114,11 @@ function R(e) {
     return n
         ? (0, s.jsxs)(s.Fragment, {
               children: [
-                  (0, s.jsx)(f, {
+                  (0, s.jsx)(L, {
                       guildId: t,
-                      handlePreview: h
+                      handlePreview: g
                   }),
-                  (0, s.jsx)(L, {}),
+                  (0, s.jsx)(f, {}),
                   (0, s.jsxs)('div', {
                       className: p.content,
                       children: [
@@ -139,7 +139,7 @@ function R(e) {
                           (0, s.jsx)(A, {
                               guildId: t,
                               handleOnboardingToggle: m,
-                              handlePreview: h
+                              handlePreview: g
                           }),
                           x
                       ]
@@ -148,7 +148,7 @@ function R(e) {
               ]
           });
 }
-function f(e) {
+function L(e) {
     let { guildId: t, handlePreview: n } = e;
     return (0, s.jsxs)(s.Fragment, {
         children: [
@@ -186,13 +186,13 @@ function f(e) {
                         })
                     }),
                     (0, s.jsx)('div', { className: p.helpSeparator }),
-                    (0, s.jsx)(h.Wu, { guildId: t })
+                    (0, s.jsx)(g.Wu, { guildId: t })
                 ]
             })
         ]
     });
 }
-function L() {
+function f() {
     let e = '\u2022 ';
     return (0, s.jsxs)('div', {
         className: p.notice,
@@ -227,7 +227,7 @@ function L() {
 }
 function O(e) {
     let { guildId: t, handleOnboardingToggle: n } = e,
-        r = (0, g.$$)(t),
+        r = (0, h.$$)(t),
         l = (0, a.e7)([o.Z], () => o.Z.getEnabled(t));
     return (0, s.jsxs)('div', {
         className: p.review,
@@ -256,7 +256,7 @@ function O(e) {
 }
 function A(e) {
     let { guildId: t, handleOnboardingToggle: n, handlePreview: r } = e,
-        l = (0, g.$$)(t),
+        l = (0, h.$$)(t),
         o = (0, a.e7)([m.Z], () => m.Z.getSettings()),
         d = (0, c.uo)(o);
     return (0, s.jsxs)('div', {

@@ -14,29 +14,29 @@ var s = n(735250),
     m = n(210887),
     N = n(699516),
     S = n(594174),
-    h = n(259580),
-    g = n(274730),
-    C = n(51144),
-    x = n(426563),
+    g = n(259580),
+    h = n(51144),
+    C = n(426563),
+    x = n(909746),
     p = n(501801),
     R = n(981631),
-    f = n(689938),
-    L = n(451316);
+    L = n(689938),
+    f = n(451316);
 class O extends a.PureComponent {
     render() {
         let { user: e, onContextMenu: t } = this.props;
         return (0, s.jsxs)('span', {
             onContextMenu: t,
-            className: L.userHook,
+            className: f.userHook,
             children: [
                 (0, s.jsx)(d.Text, {
                     variant: 'text-md/normal',
-                    children: C.ZP.getUserTag(e, { mode: 'username' })
+                    children: h.ZP.getUserTag(e, { mode: 'username' })
                 }),
                 '0' !== e.discriminator &&
                     (0, s.jsxs)(d.Text, {
                         variant: 'text-xs/normal',
-                        className: L.discrim,
+                        className: f.discrim,
                         children: ['#', e.discriminator]
                     })
             ]
@@ -52,10 +52,10 @@ class A extends a.PureComponent {
     renderTitle() {
         let { log: e, onUserContextMenu: t, onTargetContextMenu: n, onChannelContextMenu: a } = this.props,
             { user: i, target: r, options: l } = e,
-            o = g.N5(e);
+            o = x.N5(e);
         return null != o
             ? (0, s.jsx)('div', {
-                  className: L.overflowEllipsis,
+                  className: f.overflowEllipsis,
                   children: o.format({
                       user: i,
                       target: r,
@@ -72,9 +72,9 @@ class A extends a.PureComponent {
                           if (null != e.options.integration_type) {
                               var i;
                               let t = u.Z.get(e.options.integration_type);
-                              return null !== (i = null == t ? void 0 : t.name) && void 0 !== i ? i : f.Z.Messages.UNKNOWN_INTEGRATION;
+                              return null !== (i = null == t ? void 0 : t.name) && void 0 !== i ? i : L.Z.Messages.UNKNOWN_INTEGRATION;
                           }
-                          return f.Z.Messages.UNKNOWN_USER;
+                          return L.Z.Messages.UNKNOWN_USER;
                       },
                       targetHook: (t, a) =>
                           e.targetType === R.KFR.USER
@@ -146,8 +146,8 @@ class A extends a.PureComponent {
                         onClick: (e) => {
                             e.stopPropagation(), n.onClick(e);
                         },
-                        className: L.avatar,
-                        src: ((a = e), (i = t), a.action === R.rsA.AUTO_MODERATION_BLOCK_MESSAGE || a.action === R.rsA.AUTO_MODERATION_FLAG_TO_CHANNEL || a.action === R.rsA.AUTO_MODERATION_USER_COMMUNICATION_DISABLED || a.action === R.rsA.AUTO_MODERATION_QUARANTINE_USER ? (0, x.j)() : null === (r = a.user) || void 0 === r ? void 0 : r.getAvatarURL(i, 40)),
+                        className: f.avatar,
+                        src: ((a = e), (i = t), a.action === R.rsA.AUTO_MODERATION_BLOCK_MESSAGE || a.action === R.rsA.AUTO_MODERATION_FLAG_TO_CHANNEL || a.action === R.rsA.AUTO_MODERATION_USER_COMMUNICATION_DISABLED || a.action === R.rsA.AUTO_MODERATION_QUARANTINE_USER ? (0, C.j)() : null === (r = a.user) || void 0 === r ? void 0 : r.getAvatarURL(i, 40)),
                         'aria-hidden': !0,
                         size: d.AvatarSizes.SIZE_40
                     });
@@ -158,7 +158,7 @@ class A extends a.PureComponent {
             if (null != e) {
                 let t = (0, c.wj)(n) ? e.icon.darkSVG : e.icon.lightSVG;
                 return (0, s.jsx)(d.Avatar, {
-                    className: L.avatar,
+                    className: f.avatar,
                     src: t,
                     'aria-hidden': !0,
                     size: d.AvatarSizes.SIZE_40
@@ -171,19 +171,19 @@ class A extends a.PureComponent {
         let e;
         let { log: t, className: n, expanded: a, onHeaderClick: i } = this.props,
             o = this.hasChangesToRender(),
-            c = L.headerDefault;
-        a ? (c = L.headerExpanded) : o && (c = L.headerClickable);
+            c = f.headerDefault;
+        a ? (c = f.headerExpanded) : o && (c = f.headerClickable);
         let u = t.timestampStart.calendar(),
             _ = t.timestampEnd.calendar();
         e =
             u === _
                 ? (0, s.jsx)(d.Text, {
-                      className: L.timestamp,
+                      className: f.timestamp,
                       variant: 'text-sm/normal',
                       children: u
                   })
                 : (0, s.jsxs)(d.Text, {
-                      className: L.timestamp,
+                      className: f.timestamp,
                       variant: 'text-sm/normal',
                       children: [u, '\u2014', _]
                   });
@@ -192,7 +192,7 @@ class A extends a.PureComponent {
             id: t.id,
             children: (i) =>
                 (0, s.jsxs)('div', {
-                    className: r()(L.auditLog, n),
+                    className: r()(f.auditLog, n),
                     children: [
                         (0, s.jsxs)(d.Clickable, {
                             className: c,
@@ -207,26 +207,26 @@ class A extends a.PureComponent {
                                 }),
                                 this.renderEntryAvatar(),
                                 (0, s.jsxs)('div', {
-                                    className: L.timeWrap,
+                                    className: f.timeWrap,
                                     children: [
                                         (0, s.jsx)('div', {
-                                            className: L.title,
+                                            className: f.title,
                                             children: this.renderTitle()
                                         }),
                                         e
                                     ]
                                 }),
                                 o
-                                    ? (0, s.jsx)(h.Z, {
-                                          className: L.expand,
-                                          foreground: L.expandForeground,
+                                    ? (0, s.jsx)(g.Z, {
+                                          className: f.expand,
+                                          foreground: f.expandForeground,
                                           expanded: a,
                                           'aria-hidden': !0
                                       })
                                     : null
                             ]
                         }),
-                        a ? (0, s.jsx)('div', { className: L.divider }) : null,
+                        a ? (0, s.jsx)('div', { className: f.divider }) : null,
                         this.renderChangeSummary()
                     ]
                 })

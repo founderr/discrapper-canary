@@ -14,7 +14,7 @@ var s = n(120356),
 function u(e) {
     let { activity: t, user: n, channelId: s, guildId: u, source: d, size: h, look: m, color: p, className: _, onAction: f } = e,
         { tooltip: E, loading: g, disabled: C, onClick: I } = (0, o.Fe)(t, n, d, r.ZP.getNickname(u, s, n)),
-        x = () => {
+        T = () => {
             null == f || f(), I();
         };
     return (0, i.jsx)(l.Tooltip, {
@@ -27,7 +27,7 @@ function u(e) {
                 innerClassName: c.syncButtonInner,
                 look: m,
                 color: p,
-                onClick: x,
+                onClick: T,
                 onMouseEnter: n,
                 onMouseLeave: s,
                 disabled: C,

@@ -3,7 +3,7 @@ n.d(t, {
         return v;
     },
     bL: function () {
-        return L;
+        return f;
     },
     kA: function () {
         return O;
@@ -27,20 +27,20 @@ var s,
     m = n(289393),
     N = n(264451),
     S = n(759178),
-    h = n(462087),
-    g = n(685201),
+    g = n(462087),
+    h = n(685201),
     C = n(981631),
     x = n(198139),
     p = n(689938),
     R = n(539918);
 ((a = s || (s = {})).DROPDOWN = 'dropdown'), (a.PERIOD = 'period'), (a.SUBSCRIBERS = 'subscribers'), (a.AMOUNT = 'amount'), (a.STATUS = 'status');
-let f = (e, t, n, s) => {
+let L = (e, t, n, s) => {
         let a = null != s ? d()(s).add(15, 'days').toISOString() : void 0,
             r = (0, N.Zo)(a, 'MMM D');
         switch (e) {
             case x.x_.OPEN:
                 return (0, i.jsxs)(i.Fragment, {
-                    children: [null != r ? p.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_PENDING_OR_SCHEDULED_WITH_DATE.format({ payoutDate: r }) : p.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_PENDING, (0, i.jsx)(h.Z, { className: R.statusScheduledIcon })]
+                    children: [null != r ? p.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_PENDING_OR_SCHEDULED_WITH_DATE.format({ payoutDate: r }) : p.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_PENDING, (0, i.jsx)(g.Z, { className: R.statusScheduledIcon })]
                 });
             case x.x_.CANCELED:
                 return (0, i.jsxs)(i.Fragment, {
@@ -66,7 +66,7 @@ let f = (e, t, n, s) => {
                         ]
                     });
                 return (0, i.jsxs)(i.Fragment, {
-                    children: [p.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_DEFERRED, (0, i.jsx)(g.Z, { className: R.statusDeferredIcon })]
+                    children: [p.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_DEFERRED, (0, i.jsx)(h.Z, { className: R.statusDeferredIcon })]
                 });
         }
         switch (t) {
@@ -79,7 +79,7 @@ let f = (e, t, n, s) => {
             case x.jw.CANCELED:
             case x.jw.ERROR:
                 return (0, i.jsxs)(i.Fragment, {
-                    children: [null != r ? p.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_PENDING_OR_SCHEDULED_WITH_DATE.format({ payoutDate: r }) : p.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_SCHEDULED, (0, i.jsx)(h.Z, { className: R.statusScheduledIcon })]
+                    children: [null != r ? p.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_PENDING_OR_SCHEDULED_WITH_DATE.format({ payoutDate: r }) : p.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_SCHEDULED, (0, i.jsx)(g.Z, { className: R.statusScheduledIcon })]
                 });
             case x.jw.PAID:
                 return (0, i.jsxs)(i.Fragment, {
@@ -109,7 +109,7 @@ let f = (e, t, n, s) => {
         }
         return null;
     },
-    L = (e) => {
+    f = (e) => {
         let { children: t, className: n } = e;
         return (0, i.jsx)('div', {
             className: o()(R.cell, n),
@@ -125,14 +125,14 @@ let f = (e, t, n, s) => {
     },
     A = (e) => {
         let { children: t } = e;
-        return (0, i.jsx)(L, {
+        return (0, i.jsx)(f, {
             className: R.statusCell,
             children: null != t ? t : '-'
         });
     },
     M = (e) => {
         let { children: t } = e;
-        return (0, i.jsx)(L, {
+        return (0, i.jsx)(f, {
             className: R.periodCell,
             children: d()(t).utc().format('MMMM YYYY')
         });
@@ -142,11 +142,11 @@ let f = (e, t, n, s) => {
         let { listingId: n } = e,
             s = (0, u.e7)([m.Z], () => m.Z.getSubscriptionListing(n)),
             a = null !== (t = null == s ? void 0 : s.name) && void 0 !== t ? t : '['.concat(p.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_TIER_DELETED, ']');
-        return (0, i.jsx)(L, { children: a });
+        return (0, i.jsx)(f, { children: a });
     },
     v = (e) => {
         let { children: t } = e;
-        return (0, i.jsxs)(L, {
+        return (0, i.jsxs)(f, {
             className: R.subscribersCell,
             children: [
                 null != t ? t : '-',
@@ -241,7 +241,7 @@ let f = (e, t, n, s) => {
             renderHeader: () => (0, i.jsx)(Z, {}),
             render(e) {
                 let { ppgStatus: t, payoutStatus: n, ppgDeferralReasons: s, periodEndDate: a } = (0, E.j0)(e);
-                return (0, i.jsx)(A, { children: f(t, n, s, a) });
+                return (0, i.jsx)(A, { children: L(t, n, s, a) });
             }
         }
     ];

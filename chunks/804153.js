@@ -15,8 +15,8 @@ var s = n(735250),
     m = n(246946),
     N = n(594174),
     S = n(434404),
-    h = n(999382),
-    g = n(981631),
+    g = n(999382),
+    h = n(981631),
     C = n(689938),
     x = n(991680);
 function p(e, t, n) {
@@ -33,8 +33,8 @@ function p(e, t, n) {
     );
 }
 let R = 'NO_INSTANT_INVITE',
-    f = l.$e(g.Plq.VIEW_CHANNEL, g.Plq.CREATE_INSTANT_INVITE);
-class L extends a.PureComponent {
+    L = l.$e(h.Plq.VIEW_CHANNEL, h.Plq.CREATE_INSTANT_INVITE);
+class f extends a.PureComponent {
     static getDerivedStateFromProps(e, t) {
         let { widgetEnabled: n } = e,
             { widgetEnabledProp: s } = t;
@@ -55,7 +55,7 @@ class L extends a.PureComponent {
                 })
                 .filter((e) => {
                     let { channel: n } = e;
-                    return n.id === t || E.Z.can(f, n);
+                    return n.id === t || E.Z.can(L, n);
                 })
                 .map((e) => {
                     let { channel: t } = e;
@@ -168,12 +168,12 @@ class L extends a.PureComponent {
             });
     }
 }
-t.Z = o.ZP.connectStores([h.Z, m.Z], () => {
-    let { guild: e, embedChannelId: t, embedEnabled: n } = h.Z.getProps();
+t.Z = o.ZP.connectStores([g.Z, m.Z], () => {
+    let { guild: e, embedChannelId: t, embedEnabled: n } = g.Z.getProps();
     return {
         guild: e,
         widgetChannelId: t,
         widgetEnabled: n,
         hide: m.Z.enabled
     };
-})(L);
+})(f);

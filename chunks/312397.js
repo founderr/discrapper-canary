@@ -3,7 +3,7 @@ n.d(t, {
         return eN;
     },
     Z: function () {
-        return eh;
+        return eg;
     }
 }),
     n(47120),
@@ -24,14 +24,14 @@ var s = n(735250),
     m = n(902840),
     N = n(410030),
     S = n(100527),
-    h = n(367907),
-    g = n(906732),
+    g = n(367907),
+    h = n(906732),
     C = n(740504),
     x = n(933557),
     p = n(471445),
     R = n(890477),
-    f = n(34586),
-    L = n(600164),
+    L = n(34586),
+    f = n(600164),
     O = n(688465),
     A = n(807582),
     M = n(48217),
@@ -46,8 +46,8 @@ var s = n(735250),
     B = n(592125),
     y = n(324067),
     F = n(650774),
-    k = n(496675),
-    w = n(699516),
+    w = n(496675),
+    k = n(699516),
     H = n(594174),
     V = n(709586),
     Y = n(768581),
@@ -92,7 +92,7 @@ function eT(e) {
     if (null == e) return;
     let { label: t, channel: n, category: a } = e,
         i = (0, p.KS)(n),
-        r = null != a ? (0, x.F6)(a, H.default, w.Z) : null;
+        r = null != a ? (0, x.F6)(a, H.default, k.Z) : null;
     return (0, s.jsx)(E.IconSelectOption, {
         title: t,
         icon: i,
@@ -102,7 +102,7 @@ function eT(e) {
 function em(e) {
     return {
         value: e.id,
-        label: (0, x.F6)(e, H.default, w.Z),
+        label: (0, x.F6)(e, H.default, k.Z),
         channel: e,
         category: B.Z.getChannel(e.parent_id)
     };
@@ -188,14 +188,14 @@ class eS extends a.PureComponent {
     }
     renderBaseSettings() {
         let { guild: e, errors: t, canManageGuild: n } = this.props;
-        return (0, s.jsxs)(L.Z, {
+        return (0, s.jsxs)(f.Z, {
             className: r()(es.__invalid_baseSection),
             children: [
-                (0, s.jsxs)(L.Z, {
+                (0, s.jsxs)(f.Z, {
                     basis: '50%',
-                    justify: L.Z.Justify.BETWEEN,
+                    justify: f.Z.Justify.BETWEEN,
                     children: [
-                        (0, s.jsxs)(L.Z.Child, {
+                        (0, s.jsxs)(f.Z.Child, {
                             wrap: !0,
                             children: [
                                 (0, s.jsx)(P.Z, {
@@ -226,9 +226,9 @@ class eS extends a.PureComponent {
                                     : null
                             ]
                         }),
-                        (0, s.jsxs)(L.Z, {
-                            direction: L.Z.Direction.VERTICAL,
-                            align: L.Z.Align.START,
+                        (0, s.jsxs)(f.Z, {
+                            direction: f.Z.Direction.VERTICAL,
+                            align: f.Z.Align.START,
                             style: { maxWidth: 180 },
                             children: [
                                 (0, s.jsx)(E.FormText, {
@@ -255,7 +255,7 @@ class eS extends a.PureComponent {
                         })
                     ]
                 }),
-                (0, s.jsx)(L.Z.Child, {
+                (0, s.jsx)(f.Z.Child, {
                     basis: '50%',
                     children: (0, s.jsx)(E.FormItem, {
                         title: en.Z.Messages.FORM_LABEL_SERVER_NAME,
@@ -318,9 +318,9 @@ class eS extends a.PureComponent {
             (0, s.jsxs)(E.FormSection, {
                 className: es.divider,
                 children: [
-                    (0, s.jsxs)(L.Z, {
+                    (0, s.jsxs)(f.Z, {
                         children: [
-                            (0, s.jsx)(L.Z.Child, {
+                            (0, s.jsx)(f.Z.Child, {
                                 basis: '50%',
                                 children: (0, s.jsx)(E.FormItem, {
                                     title: en.Z.Messages.FORM_LABEL_AFK_CHANNEL,
@@ -334,7 +334,7 @@ class eS extends a.PureComponent {
                                     })
                                 })
                             }),
-                            (0, s.jsx)(L.Z.Child, {
+                            (0, s.jsx)(f.Z.Child, {
                                 basis: '50%',
                                 children: (0, s.jsx)(E.FormItem, {
                                     title: en.Z.Messages.FORM_LABEL_AFK_TIMEOUT,
@@ -575,12 +575,12 @@ class eS extends a.PureComponent {
             ref: this._inviteSectionRef,
             children: (0, s.jsx)(E.FormSection, {
                 className: es.divider,
-                children: (0, s.jsxs)(L.Z, {
+                children: (0, s.jsxs)(f.Z, {
                     basis: '50%',
-                    direction: L.Z.Direction.HORIZONTAL,
-                    align: L.Z.Justify.START,
+                    direction: f.Z.Direction.HORIZONTAL,
+                    align: f.Z.Justify.START,
                     children: [
-                        (0, s.jsxs)(L.Z.Child, {
+                        (0, s.jsxs)(f.Z.Child, {
                             wrap: !0,
                             basis: '50%',
                             children: [
@@ -623,7 +623,7 @@ class eS extends a.PureComponent {
                                     : this.uploadBGUpsellButton(this.handleInviteSplashUpsellButton)
                             ]
                         }),
-                        (0, s.jsx)(L.Z.Child, {
+                        (0, s.jsx)(f.Z.Child, {
                             wrap: !0,
                             basis: '50%',
                             children: n
@@ -662,7 +662,7 @@ class eS extends a.PureComponent {
                 onChange: this.handleBannerChange,
                 hint: en.Z.Messages.CHANGE_SPLASH,
                 onOpenImageSelectModal: () =>
-                    eg(
+                    eh(
                         ee.pC.GUILD_BANNER,
                         et.B,
                         this.handleBannerChange,
@@ -680,7 +680,7 @@ class eS extends a.PureComponent {
                 color: E.Button.Colors.BRAND,
                 className: es.marginTop16,
                 onClick: () =>
-                    eg(
+                    eh(
                         ee.pC.GUILD_BANNER,
                         et.B,
                         this.handleBannerChange,
@@ -695,12 +695,12 @@ class eS extends a.PureComponent {
             });
         return (0, s.jsx)(E.FormSection, {
             className: es.divider,
-            children: (0, s.jsxs)(L.Z, {
+            children: (0, s.jsxs)(f.Z, {
                 basis: '50%',
-                direction: L.Z.Direction.HORIZONTAL,
-                align: L.Z.Justify.START,
+                direction: f.Z.Direction.HORIZONTAL,
+                align: f.Z.Justify.START,
                 children: [
-                    (0, s.jsxs)(L.Z.Child, {
+                    (0, s.jsxs)(f.Z.Child, {
                         wrap: !0,
                         basis: '50%',
                         children: [
@@ -728,7 +728,7 @@ class eS extends a.PureComponent {
                             a ? o : this.uploadBGUpsellButton(this.handleBannerUpsellButton)
                         ]
                     }),
-                    (0, s.jsx)(L.Z.Child, {
+                    (0, s.jsx)(f.Z.Child, {
                         wrap: !0,
                         basis: '50%',
                         children: a
@@ -748,13 +748,13 @@ class eS extends a.PureComponent {
     renderProgressBar() {
         let { guild: e, canManageGuild: t, theme: n } = this.props;
         return (0, s.jsx)(E.FormSection, {
-            children: (0, s.jsxs)(L.Z, {
-                align: L.Z.Align.START,
+            children: (0, s.jsxs)(f.Z, {
+                align: f.Z.Align.START,
                 children: [
-                    (0, s.jsxs)(L.Z, {
+                    (0, s.jsxs)(f.Z, {
                         basis: '50%',
-                        direction: L.Z.Direction.VERTICAL,
-                        align: L.Z.Align.STRETCH,
+                        direction: f.Z.Direction.VERTICAL,
+                        align: f.Z.Align.STRETCH,
                         children: [
                             (0, s.jsx)(E.FormSwitch, {
                                 className: r()(es.marginTop8, es.marginBottom8),
@@ -771,7 +771,7 @@ class eS extends a.PureComponent {
                             })
                         ]
                     }),
-                    (0, s.jsx)(L.Z.Child, {
+                    (0, s.jsx)(f.Z.Child, {
                         wrap: !0,
                         basis: '50%',
                         children: (0, s.jsx)('img', {
@@ -897,7 +897,7 @@ class eS extends a.PureComponent {
             er(this, 'handleShowModalUpsell', (e, t, n, s) => {
                 e.preventDefault(), e.stopPropagation();
                 let { guild: a, analyticsLocations: i } = this.props;
-                (0, h.yw)(J.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
+                (0, g.yw)(J.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
                     location: {
                         section: t,
                         object: J.qAy.LEARN_MORE
@@ -963,24 +963,24 @@ class eS extends a.PureComponent {
             );
     }
 }
-function eh() {
+function eg() {
     var e;
     let { guild: t, errors: n, submitting: i, subsection: r } = (0, u.cj)([X.Z], () => X.Z.getProps()),
         l = (0, N.ZP)(),
-        { analyticsLocations: c } = (0, g.ZP)(S.Z.OVERVIEW);
+        { analyticsLocations: c } = (0, h.ZP)(S.Z.OVERVIEW);
     a.useEffect(() => {
         (0, Z.Kw)(j.v6.ANIMATED_GUILD_BANNER_SETTINGS_NEW_PILL);
     }, []);
     let d = (0, u.e7)([y.Z], () => y.Z.getCategories(null == t ? void 0 : t.id)),
         _ = a.useMemo(() => (0, C.Z)(d._categories, d), [d]),
-        { canManageGuild: I, isGuildAdmin: E } = (0, u.cj)([k.Z], () => ({
-            canManageGuild: k.Z.can(J.Plq.MANAGE_GUILD, t),
-            isGuildAdmin: k.Z.can(J.Plq.ADMINISTRATOR, t)
+        { canManageGuild: I, isGuildAdmin: E } = (0, u.cj)([w.Z], () => ({
+            canManageGuild: w.Z.can(J.Plq.MANAGE_GUILD, t),
+            isGuildAdmin: w.Z.can(J.Plq.ADMINISTRATOR, t)
         })),
         T = (0, u.e7)([F.Z], () => F.Z.getMemberCount(null == t ? void 0 : t.id)),
-        m = (0, f.E)(t),
-        h = (0, u.e7)([H.default], () => H.default.getCurrentUser());
-    o()(null != h, 'GuildSettingsOverview: currentUser cannot be undefined');
+        m = (0, L.E)(t),
+        g = (0, u.e7)([H.default], () => H.default.getCurrentUser());
+    o()(null != g, 'GuildSettingsOverview: currentUser cannot be undefined');
     let { enableDeadchat: x } = R.Z.useExperiment(
         {
             guildId: null !== (e = null == t ? void 0 : t.id) && void 0 !== e ? e : J.lds,
@@ -993,7 +993,7 @@ function eh() {
     );
     return null == t
         ? null
-        : (0, s.jsx)(g.Gt, {
+        : (0, s.jsx)(h.Gt, {
               value: c,
               children: (0, s.jsx)(eS, {
                   channels: _,
@@ -1003,7 +1003,7 @@ function eh() {
                   guild: t,
                   errors: n,
                   submitting: i,
-                  currentUser: h,
+                  currentUser: g,
                   guildMemberCount: T,
                   isInventoryFeedEnabled: m,
                   theme: l,
@@ -1012,7 +1012,7 @@ function eh() {
               })
           });
 }
-function eg(e, t, a) {
+function eh(e, t, a) {
     let i = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3],
         r = arguments.length > 4 ? arguments[4] : void 0,
         l = arguments.length > 5 ? arguments[5] : void 0;

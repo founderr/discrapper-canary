@@ -27,7 +27,7 @@ n.Z = (e) => {
             context: h
         }),
         { commands: Z, sectionDescriptors: M, loading: G } = l.wi(A, { commandTypes: [t] }, { limit: f.lr }),
-        { sections: P } = r.useMemo(() => {
+        { sections: g } = r.useMemo(() => {
             let e = {};
             return (
                 M.forEach((n) => {
@@ -36,14 +36,14 @@ n.Z = (e) => {
                 { sections: e }
             );
         }, [M]),
-        g = r.useRef(G.current);
+        P = r.useRef(G.current);
     r.useEffect(() => {
-        G.current !== g.current && ((g.current = G.current), null == C || C());
+        G.current !== P.current && ((P.current = G.current), null == C || C());
     }, [G, C]);
     let y = r.useCallback(
         (e) => {
             a()(null != A, 'menu item should not show if channel is null');
-            let n = P[e.applicationId],
+            let n = g[e.applicationId],
                 t = null != n ? (0, E.ky)(n) : void 0;
             return (0, i.jsx)(
                 s.MenuItem,
@@ -75,7 +75,7 @@ n.Z = (e) => {
                 e.id
             );
         },
-        [A, R, o, P]
+        [A, R, o, g]
     );
     if (
         (G.current

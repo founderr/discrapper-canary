@@ -23,8 +23,8 @@ var n = t(735250),
     C = t(981631),
     A = t(689938);
 function g() {
-    let e = (0, u.i)(),
-        s = (0, u.c)(),
+    let e = (0, u.is)(),
+        s = (0, u.c_)(),
         t = _.iG.useSetting(),
         g = _.h2.useSetting().includes(e),
         h = _.mX.useSetting(),

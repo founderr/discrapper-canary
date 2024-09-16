@@ -6,7 +6,7 @@ n.d(t, {
         return c;
     },
     wl: function () {
-        return u;
+        return d;
     }
 });
 var r = n(735250);
@@ -34,7 +34,7 @@ function c(e) {
         ]
     });
 }
-function u(e) {
+function d(e) {
     let { value: t } = e;
     return (0, r.jsx)(i.Checkbox, {
         size: 16,

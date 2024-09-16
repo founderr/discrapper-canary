@@ -22,13 +22,13 @@ var i = n(735250),
     g = n(443877),
     C = n(60174),
     I = n(216337),
-    x = n(920888),
-    T = n(287151),
-    v = n(569471),
-    S = n(346479),
+    T = n(920888),
+    x = n(287151),
+    S = n(569471),
+    v = n(346479),
     N = n(592125),
-    Z = n(934415),
-    A = n(456269),
+    A = n(934415),
+    Z = n(456269),
     M = n(109590),
     b = n(228392),
     R = n(981631),
@@ -38,15 +38,15 @@ var i = n(735250),
 function O(e) {
     let { postId: t, isFirstMessage: n, isLastItem: a = !1, parentChannelId: O } = e,
         { ref: y, width: D } = (0, m.Z)(),
-        [k, U] = s.useState(3),
+        [U, k] = s.useState(3),
         [w, B] = s.useState(!n),
         [H, G] = (0, p.Z)(!1, 2000),
         V = (0, o.e7)([N.Z], () => N.Z.getChannel(t), [t]),
         { firstMessage: F } = (0, M.cl)(V),
-        W = (0, o.e7)([v.Z], () => v.Z.hasJoined(t)),
+        W = (0, o.e7)([S.Z], () => S.Z.hasJoined(t)),
         { disableReactionUpdates: z, disableReactionCreates: Y, isLurking: K, isGuest: q, isPendingMember: X } = (0, g.Z)(V),
         J = (0, o.e7)([N.Z], () => N.Z.getChannel(O)),
-        Q = (0, A.Bs)(J),
+        Q = (0, Z.Bs)(J),
         $ = (0, o.e7)([_.Z], () => _.Z.shouldDisplayPrompt(t) && !0 === n, [t, n]),
         ee = s.useCallback(
             (e) => {
@@ -73,21 +73,21 @@ function O(e) {
     let [et, en] = s.useState(!0);
     if (
         (s.useEffect(() => {
-            if (null != D) U(Math.floor((D - 280) / 58)), en(!1);
+            if (null != D) k(Math.floor((D - 280) / 58)), en(!1);
         }, [D]),
         null == V || null == F)
     )
         return null;
     let ei = F.reactions.length > 0,
         es = () => {
-            W ? S.Z.leaveThread(V, 'Forum Toolbar') : S.Z.joinThread(V, 'Forum Toolbar');
+            W ? v.Z.leaveThread(V, 'Forum Toolbar') : v.Z.joinThread(V, 'Forum Toolbar');
         },
         ea = () => {
             (0, b.B)({
                 postId: V.id,
                 location: { section: R.jXE.CHANNEL_HEADER }
             }),
-                (0, r.J)((0, Z.EO)(V, J)),
+                (0, r.J)((0, A.EO)(V, J)),
                 G(!0);
         },
         el = () => {
@@ -113,7 +113,7 @@ function O(e) {
                                 null != Q &&
                                 (0, i.jsx)('div', {
                                     className: P.reactions,
-                                    children: (0, i.jsx)(T.le, {
+                                    children: (0, i.jsx)(x.le, {
                                         message: F,
                                         readOnly: !1,
                                         useChatFontScaling: !1,
@@ -129,7 +129,7 @@ function O(e) {
                                         me_burst: !1
                                     })
                                 }),
-                            (0, i.jsx)(x.Z, {
+                            (0, i.jsx)(T.Z, {
                                 message: F,
                                 channel: V,
                                 disableReactionCreates: !0,
@@ -137,7 +137,7 @@ function O(e) {
                                 isLurking: K,
                                 isGuest: q,
                                 isPendingMember: X,
-                                maxReactions: k,
+                                maxReactions: U,
                                 className: j.reactions,
                                 useChatFontScaling: !1,
                                 isForumToolbar: !0,

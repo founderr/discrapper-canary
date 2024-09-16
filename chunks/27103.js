@@ -21,15 +21,15 @@ function m(e) {
         m = (0, o.ZP)(t),
         T = s(m),
         {
-            avatarSrc: N,
-            eventHandlers: { onMouseEnter: h, onMouseLeave: C }
+            avatarSrc: h,
+            eventHandlers: { onMouseEnter: N, onMouseLeave: f }
         } = (0, u.m)(!0);
     return (0, i.jsx)('div', {
-        onMouseEnter: h,
-        onMouseLeave: C,
+        onMouseEnter: N,
+        onMouseLeave: f,
         children: (0, i.jsx)(d.Z, {
             className: a()(I.mainContainer, { [I.compact]: n }),
-            iconNode: n ? null : (0, i.jsx)(u.S, { src: N }),
+            iconNode: n ? null : (0, i.jsx)(u.S, { src: h }),
             iconContainerClassName: I.iconContainer,
             compact: n,
             children: (0, i.jsxs)('div', {

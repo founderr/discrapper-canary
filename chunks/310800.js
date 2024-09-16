@@ -22,10 +22,10 @@ function N(e) {
     let { guildId: t, handleCreateOrEditProduct: u } = e,
         N = (0, c.ue)(t, { publishedOnly: !1 }),
         { shouldRestrictUpdatingCreatorMonetizationSettings: S } = (0, l.gX)(t),
-        h = (e) => {
+        g = (e) => {
             (0, o.Je)(t, e, { published: !1 });
         },
-        g = (e, a) => {
+        h = (e, a) => {
             (0, i.openModalLazy)(async () => {
                 let { default: i } = await n.e('95925').then(n.bind(n, 673078));
                 return (n) =>
@@ -60,8 +60,8 @@ function N(e) {
                                       guildId: t,
                                       product: e,
                                       onEditProduct: () => u(e.id),
-                                      onUnpublishProduct: () => h(e.id),
-                                      onDeleteProduct: () => g(e.id, e.name),
+                                      onUnpublishProduct: () => g(e.id),
+                                      onDeleteProduct: () => h(e.id, e.name),
                                       onCopyProductLink: () => C(t, e.id),
                                       onTestDownload: () =>
                                           _.Z.open({

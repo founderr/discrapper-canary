@@ -18,10 +18,10 @@ var i = n(735250),
     I = n(267101),
     m = n(336197),
     T = n(661824),
-    N = n(430824),
-    h = n(626135),
-    C = n(76535),
-    f = n(866104),
+    h = n(430824),
+    N = n(626135),
+    f = n(76535),
+    C = n(866104),
     p = n(886176),
     g = n(981631),
     S = n(689938),
@@ -29,12 +29,12 @@ var i = n(735250),
 function R(e) {
     var t;
     let { guildId: n } = e,
-        a = (0, c.e7)([N.Z], () => N.Z.getGuild(n)),
-        { loading: R, subscriptionsSettings: O } = (0, C.H)(n),
+        a = (0, c.e7)([h.Z], () => h.Z.getGuild(n)),
+        { loading: R, subscriptionsSettings: O } = (0, f.H)(n),
         { listingsLoaded: x } = (0, I.eD)(n),
         M = (0, I.ue)(n, { publishedOnly: !0 }),
         v = s.useCallback(async () => {
-            h.default.track(g.rMx.GUILD_SHOP_EMBED_CLICKED, { ...(0, d.hH)(n) }), await (0, m.Z)(g.Z5c.SERVER_SHOP(n));
+            N.default.track(g.rMx.GUILD_SHOP_EMBED_CLICKED, { ...(0, d.hH)(n) }), await (0, m.Z)(g.Z5c.SERVER_SHOP(n));
         }, [n]);
     (0, _.Z)(
         {
@@ -54,7 +54,7 @@ function R(e) {
           : (0, i.jsxs)('div', {
                 className: A.guildShopEmbed,
                 children: [
-                    (0, i.jsx)(f.Z, { coverImageAsset: null !== (t = O.cover_image_asset) && void 0 !== t ? t : null }),
+                    (0, i.jsx)(C.Z, { coverImageAsset: null !== (t = O.cover_image_asset) && void 0 !== t ? t : null }),
                     (0, i.jsx)(u.Spacer, { size: 16 }),
                     (0, i.jsxs)('div', {
                         className: A.serverShopLabel,

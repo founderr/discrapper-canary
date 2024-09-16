@@ -22,13 +22,13 @@ var i,
     g = n(347475),
     C = n(271383),
     I = n(496675),
-    x = n(158776),
-    T = n(471253),
-    v = n(431328),
-    S = n(62526),
+    T = n(158776),
+    x = n(471253),
+    S = n(431328),
+    v = n(62526),
     N = n(590415),
-    Z = n(614173),
-    A = n(618896),
+    A = n(614173),
+    Z = n(618896),
     M = n(231338),
     b = n(689938),
     R = n(425205);
@@ -62,19 +62,19 @@ let L = l.memo(function (e) {
         }, []);
         let f = t.getGuildId();
         u()(null != f, 'Channel cannot be guildless');
-        let { isMobile: I, status: v } = (0, d.cj)([x.Z], () => ({
-                isMobile: x.Z.isMobileOnline(i.user.id),
-                status: x.Z.getStatus(i.user.id, f)
+        let { isMobile: I, status: S } = (0, d.cj)([T.Z], () => ({
+                isMobile: T.Z.isMobileOnline(i.user.id),
+                status: T.Z.getStatus(i.user.id, f)
             })),
-            Z = (0, d.e7)([C.ZP], () => C.ZP.getMember(f, i.user.id)),
-            A = l.useMemo(() => ({ [f]: [i.user.id] }), [f, i.user.id]);
-        (0, _.$)(A);
+            A = (0, d.e7)([C.ZP], () => C.ZP.getMember(f, i.user.id)),
+            Z = l.useMemo(() => ({ [f]: [i.user.id] }), [f, i.user.id]);
+        (0, _.$)(Z);
         let M = i.rtsState === N.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
         function L() {
-            (0, T.DT)(t, i.user.id, !1);
+            (0, x.DT)(t, i.user.id, !1);
         }
         function j() {
-            (0, T.DT)(t, i.user.id, !0);
+            (0, x.DT)(t, i.user.id, !0);
         }
         let P = (e) => {
             (0, m.jW)(e, async () => {
@@ -119,20 +119,20 @@ let L = l.memo(function (e) {
                                     className: R.participantAvatar,
                                     user: i.user,
                                     isMobile: I,
-                                    status: v
+                                    status: S
                                 }),
                                 (0, a.jsxs)('div', {
                                     className: R.participantTextContainer,
                                     children: [
                                         (0, a.jsx)(h.NameWithRole, {
                                             name: i.userNick,
-                                            color: null !== (t = null == Z ? void 0 : Z.colorString) && void 0 !== t ? t : void 0,
+                                            color: null !== (t = null == A ? void 0 : A.colorString) && void 0 !== t ? t : void 0,
                                             className: R.participantName
                                         }),
                                         (0, a.jsx)(h.Text, {
                                             variant: 'text-xs/normal',
                                             color: 'header-secondary',
-                                            children: (0, S.$)(i)
+                                            children: (0, v.$)(i)
                                         })
                                     ]
                                 })
@@ -176,7 +176,7 @@ let L = l.memo(function (e) {
     }),
     P = l.memo(function (e) {
         let { channel: t } = e,
-            [n, i] = (0, Z.h)(t.id);
+            [n, i] = (0, A.h)(t.id);
         return (0, a.jsx)(h.FormSwitch, {
             className: R.toggle,
             onChange: i,
@@ -188,7 +188,7 @@ let L = l.memo(function (e) {
         return (0, a.jsxs)('div', {
             className: R.emptyStateContainer,
             children: [
-                (0, a.jsx)(A.Z, {}),
+                (0, a.jsx)(Z.Z, {}),
                 (0, a.jsx)(h.Text, {
                     className: R.emptyStateTitle,
                     variant: 'text-lg/semibold',
@@ -206,7 +206,7 @@ let L = l.memo(function (e) {
     });
 function y(e) {
     let { channel: t, toggleRequestToSpeakSidebar: n, chatOpen: i } = e,
-        s = (0, v.Fd)(t.id),
+        s = (0, S.Fd)(t.id),
         l = [(0, d.e7)([I.Z], () => I.Z.can(M.Pl.MANAGE_CHANNELS, t) || I.Z.can(M.Pl.MANAGE_ROLES, t)) ? 1 : 0, Math.max(1, s.length)];
     return (0, a.jsxs)('div', {
         className: o()(R.container, { [R.chatOpen]: i }),

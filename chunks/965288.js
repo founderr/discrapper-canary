@@ -1,6 +1,6 @@
 n.d(t, {
     y: function () {
-        return v;
+        return S;
     }
 });
 var i = n(735250),
@@ -21,7 +21,7 @@ var i = n(735250),
     g = n(5192),
     C = n(590415),
     I = n(914648);
-let x = s.memo(function (e) {
+let T = s.memo(function (e) {
         let { guildId: t, channelId: n, user: s, isPremium: a, isBlocked: l } = e;
         return (0, i.jsxs)('div', {
             className: I.textContainer,
@@ -48,7 +48,7 @@ let x = s.memo(function (e) {
             ]
         });
     }),
-    T = s.memo(function (e) {
+    x = s.memo(function (e) {
         var t;
         let { participant: n, guildId: s, channel: a, isPremium: r } = e,
             { user: o, blocked: c, rtsState: u } = n,
@@ -73,7 +73,7 @@ let x = s.memo(function (e) {
                         })
                     ]
                 }),
-                (0, i.jsx)(x, {
+                (0, i.jsx)(T, {
                     guildId: s,
                     channelId: a.id,
                     user: o,
@@ -83,7 +83,7 @@ let x = s.memo(function (e) {
             ]
         });
     }),
-    v = () => (0, i.jsx)('div', { className: I.tileBaseContainer });
+    S = () => (0, i.jsx)('div', { className: I.tileBaseContainer });
 t.Z = s.memo(function (e) {
     let { participant: t, channel: a } = e,
         { user: r, blocked: u } = t,
@@ -98,7 +98,7 @@ t.Z = s.memo(function (e) {
             [E, r.id]
         );
     o()(null != E, 'Channel cannot be guildless');
-    let x = s.useCallback(
+    let T = s.useCallback(
             (e) => {
                 (0, h.jW)(
                     e,
@@ -120,7 +120,7 @@ t.Z = s.memo(function (e) {
             },
             [r, E, a, g]
         ),
-        v = s.useCallback(
+        S = s.useCallback(
             (e) =>
                 (0, i.jsx)(_.Z, {
                     ...e,
@@ -136,7 +136,7 @@ t.Z = s.memo(function (e) {
                 guildId: a.guild_id,
                 channelId: a.id
             }),
-        renderPopout: v,
+        renderPopout: S,
         position: 'right',
         spacing: 8,
         children: (e) =>
@@ -145,9 +145,9 @@ t.Z = s.memo(function (e) {
                     [I.singleIcon]: C || u,
                     [I.doubleIcon]: C && u
                 }),
-                onContextMenu: x,
+                onContextMenu: T,
                 ...e,
-                children: (0, i.jsx)(T, {
+                children: (0, i.jsx)(x, {
                     participant: t,
                     guildId: E,
                     channel: a,

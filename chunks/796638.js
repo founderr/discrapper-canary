@@ -78,25 +78,25 @@ function E(e, t) {
                 g = Math.min((m - 8) / E - 8, p),
                 C = Math.max(0, E - o.length),
                 I = o.slice(0, E),
-                x = s.slice(0, C),
-                T = Array(C);
+                T = s.slice(0, C),
+                x = Array(C);
             if (C > 0) {
                 let e = [];
-                for (let t of x) {
+                for (let t of T) {
                     let n = r.current[t.id];
-                    null != n && n < C ? (T[n] = t) : e.push(t);
+                    null != n && n < C ? (x[n] = t) : e.push(t);
                 }
-                for (let t = 0; t < T.length; t++) {
-                    if (null != T[t]) continue;
+                for (let t = 0; t < x.length; t++) {
+                    if (null != x[t]) continue;
                     let n = e.shift();
                     if (null == n) break;
-                    T[t] = n;
+                    x[t] = n;
                 }
             }
-            let v = T.filter(c.lm),
-                S = (0, a.keyBy)((0, a.range)(v.length), (e) => v[e].id);
-            r.current = S;
-            let N = [...I, ...v];
+            let S = x.filter(c.lm),
+                v = (0, a.keyBy)((0, a.range)(S.length), (e) => S[e].id);
+            r.current = v;
+            let N = [...I, ...S];
             return (
                 null != h && N.push(h),
                 {

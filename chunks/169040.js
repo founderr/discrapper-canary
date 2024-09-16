@@ -1,6 +1,6 @@
 n.d(t, {
     $S: function () {
-        return v;
+        return p;
     },
     As: function () {
         return m;
@@ -27,7 +27,7 @@ n.d(t, {
         return C;
     },
     Pu: function () {
-        return p;
+        return v;
     },
     Ue: function () {
         return Z;
@@ -86,8 +86,8 @@ let l = 'M20.97 4.06c0 .18.08.35.24.43.55.28.9.82 1.04 1.42.3 1.24.75 3.7.75 7.0
     x = 400,
     E = 120,
     _ = 12,
-    p = 96,
-    v = 32,
+    v = 96,
+    p = 32,
     T = 120,
     f = 260,
     g = 88,

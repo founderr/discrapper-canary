@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return h;
     }
 }),
     n(789020);
@@ -19,11 +19,11 @@ var s = n(533800),
     I = n(981631),
     m = n(689938),
     T = n(691784);
-function N(e) {
-    var t, N;
-    let h,
-        C,
+function h(e) {
+    var t, h;
+    let N,
         f,
+        C,
         { onTransitionToInviteChannel: p, onAcceptInstantInvite: g, guild: S, invite: A, author: R, currentUserId: O } = e,
         x = O === R.id,
         { channel: M, approximate_member_count: v, approximate_presence_count: L } = A,
@@ -34,7 +34,7 @@ function N(e) {
         j = null != P && P.isGuildVocal(),
         U = null != P && P.isGuildStageVoice(),
         y = (0, c.yE)(null !== (t = A.flags) && void 0 !== t ? t : 0, s.$.IS_GUEST_INVITE),
-        B = null !== (N = null == S ? void 0 : S.hasFeature(I.oNc.HUB)) && void 0 !== N && N;
+        B = null !== (h = null == S ? void 0 : S.hasFeature(I.oNc.HUB)) && void 0 !== h && h;
     if (null == S) {
         if (null == A.guild) return (0, i.jsx)(E.Z, {});
         S = d.Qs(A.guild);
@@ -51,7 +51,7 @@ function N(e) {
             isStream: !1
         });
     return (
-        (C = (0, i.jsxs)('span', {
+        (f = (0, i.jsxs)('span', {
             className: T.infoTitle,
             children: [
                 (0, i.jsx)(l.Z.GuildName, { guild: S }),
@@ -66,7 +66,7 @@ function N(e) {
             ]
         })),
         y &&
-            (f = (0, i.jsx)(a.TooltipContainer, {
+            (C = (0, i.jsx)(a.TooltipContainer, {
                 className: T.tooltipContainer,
                 text: m.Z.Messages.GUEST_MEMBERSHIP_EXPLANATION,
                 children: (0, i.jsx)(a.CircleInformationIcon, {
@@ -76,8 +76,8 @@ function N(e) {
                 })
             })),
         j
-            ? ((C = (0, i.jsx)(l.Z.Channel, { channel: P })),
-              (h = (0, i.jsxs)('span', {
+            ? ((f = (0, i.jsx)(l.Z.Channel, { channel: P })),
+              (N = (0, i.jsxs)('span', {
                   className: T.infoTitle,
                   children: [
                       m.Z.Messages.INVITE_BUTTON_BODY_IN_GUILD.format({ guildName: S.name }),
@@ -91,12 +91,12 @@ function N(e) {
                   ]
               })))
             : (null != v && v >= 5) || (null != L && L > 0)
-              ? (h = (0, i.jsx)(l.Z.Data, {
+              ? (N = (0, i.jsx)(l.Z.Data, {
                     members: v,
                     membersOnline: L
                 }))
               : b &&
-                (h = (0, i.jsx)(l.Z.Channel, {
+                (N = (0, i.jsx)(l.Z.Channel, {
                     channel: P,
                     guild: S
                 })),
@@ -105,7 +105,7 @@ function N(e) {
                 (0, i.jsx)(l.Z.GuildSplash, { guild: S }),
                 (0, i.jsx)(l.Z.Header, {
                     text: F,
-                    extra: f
+                    extra: C
                 }),
                 (0, i.jsxs)(l.Z.Body, {
                     children: [
@@ -114,9 +114,9 @@ function N(e) {
                             children: [
                                 (0, i.jsx)(l.Z.Icon, { guild: S }),
                                 (0, i.jsx)(l.Z.Info, {
-                                    title: C,
+                                    title: f,
                                     onClick: D ? k : null,
-                                    children: h
+                                    children: N
                                 })
                             ]
                         }),

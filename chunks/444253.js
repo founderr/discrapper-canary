@@ -21,13 +21,13 @@ function p(e) {
         g = (null == E ? void 0 : E.type) === h.fO.STREAM ? E.stream : null,
         C = (0, r.Z)(t),
         I = (0, c.Z)(),
-        x = (0, o.Z)(t),
-        T = (0, d.Z)(t);
+        T = (0, o.Z)(t),
+        x = (0, d.Z)(t);
     return (0, i.jsxs)(a.Menu, {
         navId: 'channel-call-overflow-popout',
         onClose: n,
         'aria-label': m.Z.Messages.CHANNEL_CALL_OVERFLOW_MENU_LABEL,
         onSelect: f,
-        children: [C, I, x, T, (0, u.Z)(g, p, _)]
+        children: [C, I, T, x, (0, u.Z)(g, p, _)]
     });
 }

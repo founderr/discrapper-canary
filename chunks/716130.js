@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return h;
     }
 }),
     n(47120);
@@ -20,15 +20,15 @@ var s = n(735250),
     m = n(290511),
     N = n(689938),
     S = n(84877);
-function h(e) {
+function g(e) {
     let { guild: t, prejoinOnly: n, postjoinOnly: i } = e,
         c = (0, l.e7)([E.Z], () => E.Z.editedOnboardingPrompts),
         u = c.filter((e) => e.inOnboarding),
         _ = u.length,
         {
             drag: T,
-            drop: h,
-            dragSourcePosition: g,
+            drop: g,
+            dragSourcePosition: h,
             setIsDraggable: C
         } = (0, d.Z)({
             type: 'ONBOARDING_PROMPT_CARD',
@@ -44,13 +44,13 @@ function h(e) {
             C(!1);
         }, [C]),
         a.useEffect(() => {
-            T(h(x));
-        }, [T, h, x]),
+            T(g(x));
+        }, [T, g, x]),
         (0, s.jsxs)('div', {
             ref: x,
             className: r()(S.separatorSection, {
-                [S.dropIndicatorBefore]: null != g && _ < g,
-                [S.dropIndicatorAfter]: null != g && _ > g
+                [S.dropIndicatorBefore]: null != h && _ < h,
+                [S.dropIndicatorAfter]: null != h && _ > h
             }),
             children: [
                 !i && u.length < m.b3
@@ -94,12 +94,12 @@ function h(e) {
         })
     );
 }
-function g(e) {
+function h(e) {
     let { guildId: t, prejoinOnly: n, postjoinOnly: a, includeCount: i, singleColumn: r } = e,
         d = (0, l.e7)([_.Z], () => _.Z.getGuild(t)),
-        g = (0, l.e7)([E.Z], () => E.Z.editedOnboardingPrompts),
-        C = g.filter((e) => e.inOnboarding),
-        x = g.filter((e) => !0 !== e.inOnboarding),
+        h = (0, l.e7)([E.Z], () => E.Z.editedOnboardingPrompts),
+        C = h.filter((e) => e.inOnboarding),
+        x = h.filter((e) => !0 !== e.inOnboarding),
         p = [
             ...C.map((e) => ({
                 id: e.id,
@@ -116,8 +116,8 @@ function g(e) {
         ],
         {
             handleDragStart: R,
-            handleDragReset: f,
-            handleDragComplete: L
+            handleDragReset: L,
+            handleDragComplete: f
         } = (0, u.Z)(p, (e) => {
             let t = e.findIndex((e) => 'separator' === e.id),
                 n = e.slice(0, t).map((e) => ({
@@ -174,15 +174,15 @@ function g(e) {
                                             promptIndex: t,
                                             dragIndex: t,
                                             onPromptDragStart: R,
-                                            onPromptDragReset: f,
-                                            onPromptDragComplete: L
+                                            onPromptDragReset: L,
+                                            onPromptDragComplete: f
                                         },
                                         e.id
                                     )
                                 )
                             ]
                         }),
-                  (0, s.jsx)(h, {
+                  (0, s.jsx)(g, {
                       guild: d,
                       prejoinOnly: n,
                       postjoinOnly: a
@@ -200,16 +200,16 @@ function g(e) {
                                             promptIndex: t + C.length,
                                             dragIndex: t + C.length + 1,
                                             onPromptDragStart: R,
-                                            onPromptDragReset: f,
-                                            onPromptDragComplete: L
+                                            onPromptDragReset: L,
+                                            onPromptDragComplete: f
                                         },
                                         e.id
                                     )
                                 ),
-                                g.length < m.YW
+                                h.length < m.YW
                                     ? (0, s.jsxs)(o.Clickable, {
                                           className: S.addPrompt,
-                                          onClick: () => (0, I.tS)(d, [...g, (0, m.yZ)(!1)], !1),
+                                          onClick: () => (0, I.tS)(d, [...h, (0, m.yZ)(!1)], !1),
                                           children: [
                                               (0, s.jsx)(o.CirclePlusIcon, {
                                                   size: 'custom',

@@ -17,22 +17,22 @@ var i = n(735250),
     g = n(421591),
     C = n(314734),
     I = n(981631),
-    x = n(689938),
-    T = n(767346);
-let v = { height: C.lv };
-function S() {
+    T = n(689938),
+    x = n(767346);
+let S = { height: C.lv };
+function v() {
     p.y(f.ti.DISMISSED);
 }
 function N(e) {
     let { channel: t, closeOnModalOuterClick: n = !1, parentModalKey: d } = e,
         p = s.useRef(null),
-        { renderWindow: x, windowDispatch: T } = s.useContext(c.ZP),
-        v = null != d,
+        { renderWindow: T, windowDispatch: x } = s.useContext(c.ZP),
+        S = null != d,
         N = (0, r.Jw)(null != d ? d : ''),
-        Z = s.useCallback(
+        A = s.useCallback(
             (e) => {
                 var t;
-                if ((!v && (0, r.$s)()) || (v && !(N && n))) return;
+                if ((!S && (0, r.$s)()) || (S && !(N && n))) return;
                 let { target: i } = e;
                 if ((0, a.k)(i) && null != i.closest('.' + C.Jh)) return;
                 for (; (0, a.k)(i); ) {
@@ -44,34 +44,34 @@ function N(e) {
                     if (i.classList.contains(C.NN)) return;
                     i = i.parentNode;
                 }
-                S();
+                v();
                 let s = null === (t = (0, m.uB)(e)) || void 0 === t ? void 0 : t.activeElement;
                 (null == s || 'BODY' === s.tagName) && h.S.dispatchToLastSubscribed(I.CkL.TEXTAREA_FOCUS);
             },
-            [n, N, v]
+            [n, N, S]
         );
     s.useLayoutEffect(
         () => (
-            x.addEventListener('mousedown', Z),
-            x.addEventListener('contextmenu', Z),
-            T.subscribe(I.CkL.POPOUT_CLOSE, S),
+            T.addEventListener('mousedown', A),
+            T.addEventListener('contextmenu', A),
+            x.subscribe(I.CkL.POPOUT_CLOSE, v),
             () => {
-                x.removeEventListener('mousedown', Z), x.removeEventListener('contextmenu', Z), T.unsubscribe(I.CkL.POPOUT_CLOSE, S);
+                T.removeEventListener('mousedown', A), T.removeEventListener('contextmenu', A), x.unsubscribe(I.CkL.POPOUT_CLOSE, v);
             }
         ),
-        [Z, x, T]
+        [A, T, x]
     ),
         (0, o.useFocusLock)(p),
         s.useEffect(() => {
-            ((!v && (0, r.$s)()) || (v && !N)) && S();
-        }, [N, v]);
-    let A = (0, l.e7)([_.Z], () => _.Z.initialState(), []),
-        M = (0, u.q)(null == A ? void 0 : A.applicationId),
+            ((!S && (0, r.$s)()) || (S && !N)) && v();
+        }, [N, S]);
+    let Z = (0, l.e7)([_.Z], () => _.Z.initialState(), []),
+        M = (0, u.q)(null == Z ? void 0 : Z.applicationId),
         b = s.useMemo(() => {
-            if (null == A) return;
+            if (null == Z) return;
             let e = [{ type: E.gc.HOME }];
             return (
-                null != A.applicationId &&
+                null != Z.applicationId &&
                     null != M &&
                     e.push({
                         type: E.gc.APPLICATION,
@@ -79,7 +79,7 @@ function N(e) {
                     }),
                 e
             );
-        }, [A, M]);
+        }, [Z, M]);
     return (0, i.jsx)(g.Z, {
         ref: p,
         channel: t,
@@ -92,7 +92,7 @@ t.Z = s.memo(function (e) {
     return (0, i.jsx)('span', {
         style: C.u$,
         children: (0, i.jsx)(d.W5, {
-            className: T.positionLayer,
+            className: x.positionLayer,
             targetRef: t,
             position: 'top',
             align: 'right',
@@ -101,10 +101,10 @@ t.Z = s.memo(function (e) {
             children: (e) => {
                 let { isPositioned: t } = e;
                 return (0, i.jsx)('section', {
-                    className: T.positionContainer,
+                    className: x.positionContainer,
                     role: 'dialog',
-                    style: v,
-                    'aria-label': x.Z.Messages.APP_LAUNCHER_SECTION_APPLICATION_LAUNCHER_ARIA_LABEL,
+                    style: S,
+                    'aria-label': T.Z.Messages.APP_LAUNCHER_SECTION_APPLICATION_LAUNCHER_ARIA_LABEL,
                     children: t && (0, i.jsx)(N, { ...n })
                 });
             }

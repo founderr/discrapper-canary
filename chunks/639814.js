@@ -1,8 +1,8 @@
 t.d(s, {
-    c: function () {
+    c_: function () {
         return l;
     },
-    i: function () {
+    is: function () {
         return o;
     }
 });

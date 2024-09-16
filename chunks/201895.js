@@ -4,10 +4,10 @@ t.d(n, {
     }
 }),
     t(653041);
-var r = t(131704),
-    i = t(699516),
-    o = t(594174),
-    l = t(933557),
+var i = t(131704),
+    r = t(699516),
+    l = t(594174),
+    o = t(933557),
     u = t(981631),
     s = t(689938);
 function a(e) {
@@ -16,8 +16,8 @@ function a(e) {
 }
 function c(e) {
     let n,
-        { channel: t, unread: c = !1, mentionCount: d = 0, userCount: _, embeddedActivitiesCount: f, isSubscriptionGated: E, needSubscriptionToAccess: I } = e,
-        S = (0, l.F6)(t, o.default, i.Z);
+        { channel: t, unread: c = !1, mentionCount: d = 0, userCount: _, embeddedActivitiesCount: E, isSubscriptionGated: f, needSubscriptionToAccess: I } = e,
+        S = (0, o.F6)(t, l.default, r.Z);
     switch (t.type) {
         case u.d4z.DM:
             n = c ? s.Z.Messages.DIRECT_MESSAGE_A11Y_LABEL_WITH_UNREADS : s.Z.Messages.DIRECT_MESSAGE_A11Y_LABEL;
@@ -47,17 +47,17 @@ function c(e) {
                       )
                     : T.push(s.Z.Messages.GUILD_SIDEBAR_VOICE_CHANNEL_A11Y_LABEL_USERS.format({ userCount: _ }));
             }
-            null != f && f > 0 && T.push(s.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_ACTIVITIES.format({ activitiesCount: f }));
-            let g = a({
-                isSubscriptionGated: E,
+            null != E && E > 0 && T.push(s.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_ACTIVITIES.format({ activitiesCount: E }));
+            let C = a({
+                isSubscriptionGated: f,
                 needSubscriptionToAccess: I
             });
-            return null != g && T.push(g), T.join(', ');
+            return null != C && T.push(C), T.join(', ');
         case u.d4z.GUILD_STAGE_VOICE:
             n = s.Z.Messages.GUILD_SIDEBAR_STAGE_CHANNEL_A11Y_LABEL;
             break;
         default:
-            n = r.Ec.has(t.type) ? (d > 0 ? s.Z.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL_WITH_MENTIONS : c ? s.Z.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL_WITH_UNREADS : s.Z.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL) : d > 0 ? s.Z.Messages.GUILD_SIDEBAR_DEFAULT_CHANNEL_A11Y_LABEL_WITH_MENTIONS : c ? s.Z.Messages.GUILD_SIDEBAR_DEFAULT_CHANNEL_A11Y_LABEL_WITH_UNREADS : s.Z.Messages.GUILD_SIDEBAR_DEFAULT_CHANNEL_A11Y_LABEL;
+            n = i.Ec.has(t.type) ? (d > 0 ? s.Z.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL_WITH_MENTIONS : c ? s.Z.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL_WITH_UNREADS : s.Z.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL) : d > 0 ? s.Z.Messages.GUILD_SIDEBAR_DEFAULT_CHANNEL_A11Y_LABEL_WITH_MENTIONS : c ? s.Z.Messages.GUILD_SIDEBAR_DEFAULT_CHANNEL_A11Y_LABEL_WITH_UNREADS : s.Z.Messages.GUILD_SIDEBAR_DEFAULT_CHANNEL_A11Y_LABEL;
     }
     let p = [
             n.format({
@@ -65,9 +65,9 @@ function c(e) {
                 mentionCount: d
             })
         ],
-        C = a({
-            isSubscriptionGated: E,
+        N = a({
+            isSubscriptionGated: f,
             needSubscriptionToAccess: I
         });
-    return null != C && p.push(C), p.join(', ');
+    return null != N && p.push(N), p.join(', ');
 }

@@ -135,11 +135,11 @@ class g extends (i = r.ZP.Store) {
             };
             let C = null !== (s = null == g ? void 0 : g.primaryCategoryId) && void 0 !== s ? s : u.AR.UNCATEGORIZED,
                 I = null !== (a = E.primaryCategoryId) && void 0 !== a ? a : u.AR.UNCATEGORIZED,
-                x = Object.assign({}, null === (n = _[h]) || void 0 === n ? void 0 : n[C]);
-            null != g && C !== I && delete x[E.guildId],
+                T = Object.assign({}, null === (n = _[h]) || void 0 === n ? void 0 : n[C]);
+            null != g && C !== I && delete T[E.guildId],
                 (_[h] = {
                     ..._[h],
-                    [C]: x,
+                    [C]: T,
                     [I]: {
                         ...(null === (i = _[h]) || void 0 === i ? void 0 : i[I]),
                         [E.guildId]: {

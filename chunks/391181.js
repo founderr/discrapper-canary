@@ -6,76 +6,76 @@ t.d(n, {
         return S;
     }
 });
-var r = t(735250);
+var i = t(735250);
 t(470079);
-var i = t(120356),
-    o = t.n(i),
-    l = t(481060),
+var r = t(120356),
+    l = t.n(r),
+    o = t(481060),
     u = t(239091),
     s = t(166081),
     a = t(937615),
     c = t(942833),
     d = t(48691),
     _ = t(231338),
-    f = t(689938),
-    E = t(772103);
+    E = t(689938),
+    f = t(772103);
 function I(e) {
-    let { showEditProduct: n, showUnpublishProduct: t, showCopyLink: i, showTestDownload: o, showDeleteProduct: u, showReportProduct: s, onEditProduct: a, onUnpublishProduct: c, onDeleteProduct: d, onCopyLink: _, onTestDownload: I, onReportProduct: S, closePopout: T, onSelect: g } = e;
-    return (0, r.jsx)('div', {
-        className: E.menuContainer,
-        children: (0, r.jsxs)(l.Menu, {
+    let { showEditProduct: n, showUnpublishProduct: t, showCopyLink: r, showTestDownload: l, showDeleteProduct: u, showReportProduct: s, onEditProduct: a, onUnpublishProduct: c, onDeleteProduct: d, onCopyLink: _, onTestDownload: I, onReportProduct: S, closePopout: T, onSelect: C } = e;
+    return (0, i.jsx)('div', {
+        className: f.menuContainer,
+        children: (0, i.jsxs)(o.Menu, {
             navId: 'guild-product-context',
             onClose: T,
-            'aria-label': f.Z.Messages.GUILD_PRODUCTS_ACTION_MENU_LABEL,
-            onSelect: g,
+            'aria-label': E.Z.Messages.GUILD_PRODUCTS_ACTION_MENU_LABEL,
+            onSelect: C,
             children: [
-                (0, r.jsxs)(l.MenuGroup, {
+                (0, i.jsxs)(o.MenuGroup, {
                     children: [
                         n &&
-                            (0, r.jsx)(l.MenuItem, {
+                            (0, i.jsx)(o.MenuItem, {
                                 id: 'guild-product-edit',
-                                label: f.Z.Messages.GUILD_PRODUCT_EDIT,
+                                label: E.Z.Messages.GUILD_PRODUCT_EDIT,
                                 action: a
                             }),
-                        i &&
-                            (0, r.jsx)(l.MenuItem, {
+                        r &&
+                            (0, i.jsx)(o.MenuItem, {
                                 id: 'guild-product-copy-link',
-                                label: f.Z.Messages.GUILD_PRODUCT_COPY_LINK,
-                                icon: l.LinkIcon,
+                                label: E.Z.Messages.GUILD_PRODUCT_COPY_LINK,
+                                icon: o.LinkIcon,
                                 action: _
                             }),
-                        o &&
-                            (0, r.jsx)(l.MenuItem, {
+                        l &&
+                            (0, i.jsx)(o.MenuItem, {
                                 id: 'guild-product-test-download',
-                                label: f.Z.Messages.GUILD_PRODUCT_TEST_DOWNLOAD,
-                                icon: l.DownloadIcon,
+                                label: E.Z.Messages.GUILD_PRODUCT_TEST_DOWNLOAD,
+                                icon: o.DownloadIcon,
                                 action: I
                             })
                     ]
                 }),
-                (0, r.jsxs)(l.MenuGroup, {
+                (0, i.jsxs)(o.MenuGroup, {
                     children: [
                         t &&
-                            (0, r.jsx)(l.MenuItem, {
+                            (0, i.jsx)(o.MenuItem, {
                                 id: 'guild-product-unpublish',
-                                label: f.Z.Messages.GUILD_PRODUCT_UNPUBLISH,
+                                label: E.Z.Messages.GUILD_PRODUCT_UNPUBLISH,
                                 action: c
                             }),
                         u &&
-                            (0, r.jsx)(l.MenuItem, {
+                            (0, i.jsx)(o.MenuItem, {
                                 id: 'guild-product-delete',
-                                label: f.Z.Messages.GUILD_PRODUCT_DELETE,
+                                label: E.Z.Messages.GUILD_PRODUCT_DELETE,
                                 color: 'danger',
                                 action: d
                             })
                     ]
                 }),
-                (0, r.jsx)(l.MenuGroup, {
+                (0, i.jsx)(o.MenuGroup, {
                     children:
                         s &&
-                        (0, r.jsx)(l.MenuItem, {
+                        (0, i.jsx)(o.MenuItem, {
                             id: 'guild-product-report',
-                            label: f.Z.Messages.GUILD_PRODUCT_REPORT,
+                            label: E.Z.Messages.GUILD_PRODUCT_REPORT,
                             color: 'danger',
                             action: S
                         })
@@ -85,23 +85,23 @@ function I(e) {
     });
 }
 function S(e) {
-    let { product: n, guildId: t, showEditProduct: i, showUnpublishProduct: o, showTestDownload: u, showCopyLink: s, showDeleteProduct: a, showReportProduct: c, onEditProduct: d, onUnpublishProduct: _, onDeleteProduct: S, onCopyProductLink: T, onTestDownload: g, onReportProduct: p } = e;
-    return (0, r.jsx)('div', {
+    let { product: n, guildId: t, showEditProduct: r, showUnpublishProduct: l, showTestDownload: u, showCopyLink: s, showDeleteProduct: a, showReportProduct: c, onEditProduct: d, onUnpublishProduct: _, onDeleteProduct: S, onCopyProductLink: T, onTestDownload: C, onReportProduct: p } = e;
+    return (0, i.jsx)('div', {
         onClick: (e) => {
             e.stopPropagation();
         },
-        children: (0, r.jsx)(l.Popout, {
+        children: (0, i.jsx)(o.Popout, {
             position: 'right',
             align: 'top',
             spacing: -8,
-            animation: l.Popout.Animation.FADE,
+            animation: o.Popout.Animation.FADE,
             renderPopout: (e) =>
-                (0, r.jsx)(I, {
+                (0, i.jsx)(I, {
                     ...e,
                     guildId: t,
                     productId: n.id,
-                    showEditProduct: i,
-                    showUnpublishProduct: o,
+                    showEditProduct: r,
+                    showUnpublishProduct: l,
                     showCopyLink: s,
                     showTestDownload: u,
                     showReportProduct: c,
@@ -110,21 +110,21 @@ function S(e) {
                     onUnpublishProduct: _,
                     onDeleteProduct: S,
                     onCopyLink: T,
-                    onTestDownload: g,
+                    onTestDownload: C,
                     onReportProduct: p
                 }),
             children: (e, t) => {
-                let { isShown: i } = t;
-                return (0, r.jsx)(l.Clickable, {
+                let { isShown: r } = t;
+                return (0, i.jsx)(o.Clickable, {
                     ...e,
-                    'aria-label': f.Z.Messages.GUILD_PRODUCTS_ACTION_MENU_BUTTON_ARIA_LABEL.format({ productName: n.name }),
+                    'aria-label': E.Z.Messages.GUILD_PRODUCTS_ACTION_MENU_BUTTON_ARIA_LABEL.format({ productName: n.name }),
                     'aria-haspopup': 'listbox',
-                    'aria-expanded': i,
-                    className: E.productActionMenuButton,
-                    children: (0, r.jsx)(l.MoreVerticalIcon, {
+                    'aria-expanded': r,
+                    className: f.productActionMenuButton,
+                    children: (0, i.jsx)(o.MoreVerticalIcon, {
                         size: 'md',
                         color: 'currentColor',
-                        className: E.productActionMenuIcon,
+                        className: f.productActionMenuIcon,
                         'aria-hidden': !0
                     })
                 });
@@ -133,18 +133,18 @@ function S(e) {
     });
 }
 function T(e) {
-    let { product: n, guildId: t, onEditProduct: i, onUnpublishProduct: T, onDeleteProduct: g, onCopyProductLink: p, onTestDownload: C, disabled: m = !1 } = e,
-        N = (0, s.U)(n, 600),
-        A = null !== n.price_tier ? (0, a.T4)(n.price_tier, _.pK.USD) : void 0,
-        h = (0, c.C)(n);
-    return (0, r.jsxs)(l.ClickableContainer, {
+    let { product: n, guildId: t, onEditProduct: r, onUnpublishProduct: T, onDeleteProduct: C, onCopyProductLink: p, onTestDownload: N, disabled: A = !1 } = e,
+        g = (0, s.U)(n, 600),
+        m = null !== n.price_tier ? (0, a.T4)(n.price_tier, _.pK.USD) : void 0,
+        L = (0, c.C)(n);
+    return (0, i.jsxs)(o.ClickableContainer, {
         tag: 'article',
-        className: o()(E.productCardClickable, E.productCard, { [E.disabled]: m }),
-        onClick: m ? void 0 : i,
+        className: l()(f.productCardClickable, f.productCard, { [f.disabled]: A }),
+        onClick: A ? void 0 : r,
         onContextMenu: function (e) {
             (0, u.jW)(e, () =>
                 Promise.resolve((e) =>
-                    (0, r.jsx)(I, {
+                    (0, i.jsx)(I, {
                         ...e,
                         closePopout: u.Zy,
                         guildId: t,
@@ -155,64 +155,64 @@ function T(e) {
                         showTestDownload: null != n.attachments,
                         showDeleteProduct: !0,
                         showReportProduct: !1,
-                        onEditProduct: i,
+                        onEditProduct: r,
                         onUnpublishProduct: T,
-                        onDeleteProduct: g,
+                        onDeleteProduct: C,
                         onCopyLink: p,
-                        onTestDownload: C,
+                        onTestDownload: N,
                         onReportProduct: () => {}
                     })
                 )
             );
         },
-        'aria-label': f.Z.Messages.GUILD_PRODUCT_EDIT_ARIA_LABEL.format({ productName: n.name }),
+        'aria-label': E.Z.Messages.GUILD_PRODUCT_EDIT_ARIA_LABEL.format({ productName: n.name }),
         children: [
-            (0, r.jsx)('img', {
+            (0, i.jsx)('img', {
                 alt: '',
-                src: N,
-                className: E.productThumbnail
+                src: g,
+                className: f.productThumbnail
             }),
-            (0, r.jsxs)('div', {
-                className: E.productInfo,
+            (0, i.jsxs)('div', {
+                className: f.productInfo,
                 children: [
-                    (0, r.jsxs)('div', {
-                        className: E.productInfoContent,
+                    (0, i.jsxs)('div', {
+                        className: f.productInfoContent,
                         children: [
-                            (0, r.jsx)(l.Heading, {
+                            (0, i.jsx)(o.Heading, {
                                 variant: 'text-md/semibold',
                                 color: 'header-primary',
-                                className: E.productName,
+                                className: f.productName,
                                 children: n.name
                             }),
-                            (0, r.jsx)(l.Spacer, { size: 8 }),
-                            (0, r.jsxs)('div', {
-                                className: E.productDetails,
+                            (0, i.jsx)(o.Spacer, { size: 8 }),
+                            (0, i.jsxs)('div', {
+                                className: f.productDetails,
                                 children: [
-                                    (0, r.jsx)(l.Text, {
+                                    (0, i.jsx)(o.Text, {
                                         variant: 'text-md/normal',
                                         color: 'header-secondary',
-                                        children: A
+                                        children: m
                                     }),
-                                    null != h
-                                        ? (0, r.jsxs)(r.Fragment, {
+                                    null != L
+                                        ? (0, i.jsxs)(i.Fragment, {
                                               children: [
-                                                  (0, r.jsx)('div', { className: E.dotSeparator }),
-                                                  (0, r.jsx)(l.Text, {
+                                                  (0, i.jsx)('div', { className: f.dotSeparator }),
+                                                  (0, i.jsx)(o.Text, {
                                                       variant: 'text-md/normal',
                                                       color: 'header-secondary',
-                                                      children: h
+                                                      children: L
                                                   })
                                               ]
                                           })
                                         : null
                                 ]
                             }),
-                            (0, r.jsx)(l.Spacer, { size: 16 }),
-                            n.published ? (0, r.jsx)(d.t, {}) : (0, r.jsx)(d.b, {})
+                            (0, i.jsx)(o.Spacer, { size: 16 }),
+                            n.published ? (0, i.jsx)(d.t, {}) : (0, i.jsx)(d.b, {})
                         ]
                     }),
-                    !m &&
-                        (0, r.jsx)(S, {
+                    !A &&
+                        (0, i.jsx)(S, {
                             product: n,
                             guildId: t,
                             showEditProduct: !0,
@@ -221,11 +221,11 @@ function T(e) {
                             showTestDownload: null != n.attachments,
                             showDeleteProduct: !0,
                             showReportProduct: !1,
-                            onEditProduct: i,
+                            onEditProduct: r,
                             onUnpublishProduct: T,
-                            onDeleteProduct: g,
+                            onDeleteProduct: C,
                             onCopyProductLink: p,
-                            onTestDownload: C,
+                            onTestDownload: N,
                             onReportProduct: () => {}
                         })
                 ]

@@ -21,10 +21,10 @@ var i = n(735250),
     I = n(695346),
     m = n(271383),
     T = n(594174),
-    N = n(671533),
-    h = n(51144),
-    C = n(506071),
-    f = n(696014),
+    h = n(671533),
+    N = n(51144),
+    f = n(506071),
+    C = n(696014),
     p = n(847033),
     g = n(544978),
     S = n(893182),
@@ -45,8 +45,8 @@ function O(e) {
                 size: 4,
                 horizontal: !0
             }),
-            (0, i.jsx)(N.Z, {
-                direction: N.Z.Directions.RIGHT,
+            (0, i.jsx)(h.Z, {
+                direction: h.Z.Directions.RIGHT,
                 className: R.showMoreArrow
             })
         ]
@@ -55,7 +55,7 @@ function O(e) {
 function x(e) {
     let { coverImageAsset: t, isPreview: n = !1 } = e,
         s = I.QK.useSetting(),
-        a = (0, C.n)() && s,
+        a = (0, f.n)() && s,
         [r, l] = (0, E.Z)(t, a),
         o = a
             ? (0, i.jsx)(d.Z, {
@@ -88,7 +88,7 @@ function M(e) {
     var t, n, a;
     let { guild: d, subscriptionsSettings: E } = e,
         I = d.id;
-    let { nickname: N, nickcolor: C } =
+    let { nickname: h, nickcolor: f } =
             ((a = I),
             (0, l.cj)(
                 [m.ZP, T.default],
@@ -98,13 +98,13 @@ function M(e) {
                     r()(null != n, 'user cannot be null');
                     let i = m.ZP.getMember(a, n.id);
                     return {
-                        nickname: null !== (e = null == i ? void 0 : i.nick) && void 0 !== e ? e : h.ZP.getName(n),
+                        nickname: null !== (e = null == i ? void 0 : i.nick) && void 0 !== e ? e : N.ZP.getName(n),
                         nickcolor: null !== (t = null == i ? void 0 : i.colorString) && void 0 !== t ? t : void 0
                     };
                 },
                 [a]
             )),
-        { isTruncated: M, ExpandableTextContainer: v } = (0, f.s)(),
+        { isTruncated: M, ExpandableTextContainer: v } = (0, C.s)(),
         L = (null !== (n = null == E ? void 0 : null === (t = E.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0,
         [Z, P] = s.useState(1),
         D = (0, c.Z)('(max-width: 1439px)'),
@@ -169,12 +169,12 @@ function M(e) {
                                         variant: 'text-md/normal',
                                         color: 'text-normal',
                                         children: A.Z.Messages.GUILD_STORE_HERO_DESCRIPTION_GREETING.format({
-                                            username: N,
+                                            username: h,
                                             usernameHook: function (e, t) {
                                                 return (0, i.jsx)(
                                                     'span',
                                                     {
-                                                        style: { color: C },
+                                                        style: { color: f },
                                                         children: e
                                                     },
                                                     t

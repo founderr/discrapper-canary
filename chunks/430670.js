@@ -35,19 +35,19 @@ function E(e) {
             });
         }, [g, t.id]);
     let I = (0, r.e7)([c.Z], () => c.Z.isBlocked(g.id)),
-        [x, T] = s.useState(I),
-        v = (0, d.sS)({ location: 'UserProfilePanelWrapper' });
+        [T, x] = s.useState(I),
+        S = (0, d.sS)({ location: 'UserProfilePanelWrapper' });
     return (s.useEffect(() => {
-        T(I);
+        x(I);
     }, [I]),
     a)
         ? null
-        : x && v
+        : T && S
           ? (0, i.jsx)(p.Z, {
                 user: g,
                 currentUser: C,
                 channel: t,
-                onViewBlockedProfileClick: () => T(!1),
+                onViewBlockedProfileClick: () => x(!1),
                 ...n
             })
           : g.isNonUserBot()

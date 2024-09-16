@@ -17,13 +17,13 @@ var i = n(735250),
     g = n(459502),
     C = n(856691),
     I = n(357156),
-    x = n(923973),
-    T = n(829750),
-    v = n(189771),
-    S = n(294629),
+    T = n(923973),
+    x = n(829750),
+    S = n(189771),
+    v = n(294629),
     N = n(793319),
-    Z = n(560688),
-    A = n(390322),
+    A = n(560688),
+    Z = n(390322),
     M = n(871499),
     b = n(386000),
     R = n(25827),
@@ -33,8 +33,8 @@ var i = n(735250),
     O = n(944486),
     y = n(594174),
     D = n(881824),
-    k = n(471253),
-    U = n(922482),
+    U = n(471253),
+    k = n(922482),
     w = n(200498),
     B = n(146085),
     H = n(88751),
@@ -118,7 +118,7 @@ function es(e) {
         c = (0, r.e7)([G.Z], () => G.Z.getStageInstanceByChannel(t.id), [t.id]),
         d = (0, r.e7)([E.ZP], () => E.ZP.getGuildScheduledEvent(null == c ? void 0 : c.guild_scheduled_event_id)),
         h = (0, r.e7)([O.Z], () => O.Z.getVoiceChannelId() === t.id, [t.id]),
-        { suppress: m } = (0, S.Z)(t),
+        { suppress: m } = (0, v.Z)(t),
         p = L.default.getId(),
         [_] = (0, X.Z)(t),
         f = H.ZP.isModerator(p, t.id),
@@ -129,7 +129,7 @@ function es(e) {
             ? (0, i.jsx)(o.Popout, {
                   renderPopout: (e) => {
                       let { closePopout: a } = e;
-                      return (0, i.jsx)(A.Z, {
+                      return (0, i.jsx)(Z.Z, {
                           children: (0, i.jsx)(o.Menu, {
                               navId: 'exit-options',
                               'aria-label': Q.Z.Messages.SET_STATUS,
@@ -217,7 +217,7 @@ function es(e) {
               className: l()($.buttonSpacing, $.buttonWithTextButton),
               onClick: () => {
                   var e;
-                  return (e = t), void (0, U.TM)(e);
+                  return (e = t), void (0, k.TM)(e);
               },
               children: (0, i.jsxs)('div', {
                   className: $.buttonWithTextInnerContainer,
@@ -301,26 +301,26 @@ function el(e) {
 }
 let er = s.memo(function (e) {
     let { channel: t } = e,
-        { suppress: n, selfMute: s, mute: a } = (0, S.Z)(t),
+        { suppress: n, selfMute: s, mute: a } = (0, v.Z)(t),
         c = (0, w.B)(t.id),
         u = (0, r.e7)([_.Z], () => null != _.Z.getAwaitingRemoteSessionInfo()),
-        { cameraUnavailable: E, enabled: g } = (0, x.Z)(),
-        C = (0, v.Z)(t),
-        { limit: I, reachedLimit: M } = (0, T.Z)(t),
+        { cameraUnavailable: E, enabled: g } = (0, T.Z)(),
+        C = (0, S.Z)(t),
+        { limit: I, reachedLimit: M } = (0, x.Z)(t),
         L = (0, r.e7)([y.default], () => y.default.getCurrentUser()),
         P = (0, r.e7)([j.Z], () => (0, f.Z)(j.Z)),
         D = (0, r.e7)([O.Z], () => O.Z.getVoiceChannelId() === t.id, [t.id]),
-        U = (0, r.e7)([d.Z], () => d.Z.getStreamParticipants(t.id)[0], [t.id]),
+        k = (0, r.e7)([d.Z], () => d.Z.getStreamParticipants(t.id)[0], [t.id]),
         B = (0, V.PK)(t.id),
         H = I > 0,
-        G = (M && !B) || (null != U && U.user.id !== (null == L ? void 0 : L.id));
+        G = (M && !B) || (null != k && k.user.id !== (null == L ? void 0 : L.id));
     if (null == L) return null;
     let F = (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(o.Popout, {
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
-                    return (0, i.jsx)(A.Z, { children: (0, i.jsx)(m.Z, { onClose: t }) });
+                    return (0, i.jsx)(Z.Z, { children: (0, i.jsx)(m.Z, { onClose: t }) });
                 },
                 position: 'top',
                 align: 'center',
@@ -334,7 +334,7 @@ let er = s.memo(function (e) {
                         enabled: g,
                         cameraUnavailable: E,
                         onChange: N.r,
-                        onCameraUnavailable: Z.Z,
+                        onCameraUnavailable: A.Z,
                         channelLimitReached: M,
                         channelLimit: I,
                         popoutOpen: s,
@@ -365,7 +365,7 @@ let er = s.memo(function (e) {
                           (0, i.jsx)(o.Popout, {
                               renderPopout: (e) => {
                                   let { closePopout: t } = e;
-                                  return (0, i.jsx)(A.Z, {
+                                  return (0, i.jsx)(Z.Z, {
                                       children: (0, i.jsx)(h.default, {
                                           onClose: t,
                                           renderInputDevices: !0,
@@ -394,8 +394,8 @@ let er = s.memo(function (e) {
                       ]
                   })
                 : null,
-            D && c && n && (0, i.jsx)(ei, { onClick: () => (0, k.RK)(t, !1) }),
-            D && !n && (0, i.jsx)(ea, { onClick: () => (0, k.yi)(t) }),
+            D && c && n && (0, i.jsx)(ei, { onClick: () => (0, U.RK)(t, !1) }),
+            D && !n && (0, i.jsx)(ea, { onClick: () => (0, U.yi)(t) }),
             (0, i.jsx)(es, { channel: t })
         ]
     });

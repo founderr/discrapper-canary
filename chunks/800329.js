@@ -33,11 +33,11 @@ function h(e) {
         { width: E, height: g } = _,
         C = null !== (t = null == a ? void 0 : a.length) && void 0 !== t ? t : 0,
         I = E - 16,
-        x = g - (m + p),
+        T = g - (m + p),
         {
-            tileStyle: T,
-            tileWidth: v,
-            rows: S,
+            tileStyle: x,
+            tileWidth: S,
+            rows: v,
             columns: N
         } = s.useMemo(
             () =>
@@ -81,13 +81,13 @@ function h(e) {
                         rows: i,
                         columns: s
                     };
-                })(C, I, x),
-            [C, I, x]
+                })(C, I, T),
+            [C, I, T]
         ),
-        Z = N + 1,
-        A = Z * v + (Z - 1) * 8 <= E,
-        M = Math.floor(v / c) + 8,
-        b = Math.max(0, x - M * S) / 2;
+        A = N + 1,
+        Z = A * S + (A - 1) * 8 <= E,
+        M = Math.floor(S / c) + 8,
+        b = Math.max(0, T - M * v) / 2;
     return (0, i.jsx)(r.Z, {
         fade: !0,
         className: n,
@@ -110,15 +110,15 @@ function h(e) {
                                     return (0, i.jsx)(
                                         'div',
                                         {
-                                            style: T,
+                                            style: x,
                                             className: l()(o.tile, {
-                                                [o.padColumn]: A,
-                                                [o.noVerticalMargin]: a >= (S - 1) * N,
+                                                [o.padColumn]: Z,
+                                                [o.noVerticalMargin]: a >= (v - 1) * N,
                                                 [o.noHorizontalMargin]: (a + 1) % N == 0 || a === C - 1
                                             }),
                                             children: (0, i.jsx)('div', {
                                                 className: o.tileSizer,
-                                                children: e(v)
+                                                children: e(S)
                                             })
                                         },
                                         null !== (s = null == h ? void 0 : h(a)) && void 0 !== s ? s : a
@@ -128,8 +128,8 @@ function h(e) {
                 e
             );
         },
-        rowCount: S,
-        rowCountBySection: [S],
+        rowCount: v,
+        rowCountBySection: [v],
         rowHeight: M,
         onResize: f
     });

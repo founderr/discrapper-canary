@@ -1,11 +1,11 @@
 E(47120);
 var s = E(735250),
-    T = E(470079),
-    I = E(525654),
-    n = E.n(I),
-    t = E(748780),
-    A = E(88604);
-function r(e, _, E) {
+    n = E(470079),
+    t = E(525654),
+    r = E.n(t),
+    T = E(748780),
+    a = E(88604);
+function I(e, _, E) {
     return (
         _ in e
             ? Object.defineProperty(e, _, {
@@ -18,7 +18,7 @@ function r(e, _, E) {
         e
     );
 }
-function a(e) {
+function l(e) {
     let _ = (e) =>
         e.interpolate({
             inputRange: [0, 1],
@@ -28,12 +28,12 @@ function a(e) {
         transform: [{ translateX: _(e.x) }, { translateY: _(e.y) }]
     };
 }
-class N extends T.Component {
+class o extends n.Component {
     componentDidMount() {
         this._isMounted = !0;
         let { x: e, y: _ } = this.state;
-        'Firefox' !== n().name &&
-            (t.Z.animate(e, {
+        'Firefox' !== r().name &&
+            (T.Z.animate(e, {
                 loop: !0,
                 toValueMin: -74,
                 toValueMax: 95,
@@ -42,7 +42,7 @@ class N extends T.Component {
                 tension: 1,
                 shouldLoop: this.shouldLoop
             }),
-            t.Z.animate(_, {
+            T.Z.animate(_, {
                 loop: !0,
                 toValueMin: -59,
                 toValueMax: 75,
@@ -57,11 +57,11 @@ class N extends T.Component {
     }
     render() {
         return (0, s.jsxs)('div', {
-            className: A.searchIndexAnimation,
+            className: a.searchIndexAnimation,
             children: [
-                (0, s.jsx)('div', { className: A.searchIndexBackground }),
+                (0, s.jsx)('div', { className: a.searchIndexBackground }),
                 (0, s.jsxs)('svg', {
-                    className: A.searchIndexForeground,
+                    className: a.searchIndexForeground,
                     width: '320',
                     height: '280',
                     children: [
@@ -83,9 +83,9 @@ class N extends T.Component {
                                         (0, s.jsx)('mask', {
                                             id: 'search-index-foreground-mask-b',
                                             fill: '#fff',
-                                            children: (0, s.jsx)(t.Z.use, {
-                                                style: a(this.state),
-                                                className: A.mask,
+                                            children: (0, s.jsx)(T.Z.use, {
+                                                style: l(this.state),
+                                                className: a.mask,
                                                 xlinkHref: '#search-index-foreground-mask-a'
                                             })
                                         }),
@@ -409,9 +409,9 @@ class N extends T.Component {
                                         })
                                     ]
                                 }),
-                                (0, s.jsxs)(t.Z.g, {
-                                    className: A.magnifyingGlass,
-                                    style: a(this.state),
+                                (0, s.jsxs)(T.Z.g, {
+                                    className: a.magnifyingGlass,
+                                    style: l(this.state),
                                     children: [
                                         (0, s.jsx)('path', {
                                             fill: '#C9D2F0',
@@ -465,12 +465,12 @@ class N extends T.Component {
     }
     constructor(...e) {
         super(...e),
-            r(this, 'state', {
-                x: new t.Z.Value(0),
-                y: new t.Z.Value(0)
+            I(this, 'state', {
+                x: new T.Z.Value(0),
+                y: new T.Z.Value(0)
             }),
-            r(this, '_isMounted', !1),
-            r(this, 'shouldLoop', () => this._isMounted);
+            I(this, '_isMounted', !1),
+            I(this, 'shouldLoop', () => this._isMounted);
     }
 }
-_.Z = N;
+_.Z = o;
