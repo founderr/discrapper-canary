@@ -8,7 +8,10 @@ var l = n(735250),
 let c = [s.OV, s.EE, s.Af, s.U9, s.n8, s.pQ];
 t.Z = a.memo((e) => {
     let { entry: t, channel: n, selected: a, hovered: d } = e,
-        { largeImage: h } = (0, i.rv)({ entry: t });
+        { largeImage: h } = (0, i.rv)({
+            entry: t,
+            showCoverImage: !1
+        });
     return (0, l.jsxs)(o.Zb, {
         selected: a,
         children: [
