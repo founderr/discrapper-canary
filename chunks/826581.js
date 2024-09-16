@@ -87,8 +87,9 @@ class B extends (r = u.ZP.Store) {
     getSelectedApplicationTab(e) {
         var t;
         let n = _.Z.getGuild(e),
-            r = (null == n ? void 0 : n.hasFeature(m.oNc.CLAN)) ? 'REVIEW_APPLICATION' : p.wB.SUBMITTED;
-        return null !== (t = U[e]) && void 0 !== t ? t : r;
+            r = this.getRequests(e, p.wB.SUBMITTED).length > 0,
+            i = (null == n ? void 0 : n.hasFeature(m.oNc.CLAN)) && !r ? 'REVIEW_APPLICATION' : p.wB.SUBMITTED;
+        return null !== (t = U[e]) && void 0 !== t ? t : i;
     }
     getSelectedSortOrder(e) {
         var t;
