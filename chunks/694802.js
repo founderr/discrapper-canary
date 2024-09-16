@@ -33,6 +33,7 @@ function u(e) {
             (0, s.jsx)(o.Text, {
                 color: 'text-muted',
                 variant: 'text-xs/normal',
+                className: d.warningBody,
                 children: n
             })
         ]
@@ -52,8 +53,8 @@ t.Z = function (e) {
               })
             : d === c.Z.Messages.QUESTS_PROGRESS_MAC_STREAMING_TIP
               ? (0, s.jsx)(u, {
-                    header: c.Z.Messages.QUEST_BAR_MAC_WARNING_HEADER,
-                    children: c.Z.Messages.QUEST_BAR_MAC_WARNING_BODY
+                    header: c.Z.Messages.QUEST_BAR_MAC_WARNING_HEADER_WINDOWS,
+                    children: c.Z.Messages.QUESTS_PROGRESS_MAC_STREAMING_TIP
                 })
               : null
         : (0, s.jsx)(l.Z, { children: d });
