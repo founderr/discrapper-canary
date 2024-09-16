@@ -3417,6 +3417,7 @@ let oq = 'help_center_cta';
     (r2.UPSELL_HEADER = 'Upsell Header'),
     (r2.TRY_IT_CTA = 'Try It CTA'),
     (r2.SEASONAL_BUTTON_ICON = 'Seasonal button icon'),
+    (r2.NITROWEEN_BUTTON_ICON = 'Nitroween button icon'),
     (r2.ACTIONED_BY_USER = 'Actioned By User'),
     (r2.JOIN_REQUEST = 'Join Request'),
     (r2.SERVER_BANNER_TOOLTIP = 'Server Banner Tooltip'),
