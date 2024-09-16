@@ -1,7 +1,7 @@
 n(47120);
 var r = n(147913),
     i = n(710845),
-    a = n(880027);
+    a = n(276344);
 let s = new i.Z('LeagueOfLegendsLifecycleManager');
 class o extends r.Z {
     handleRunningGameChange(e) {
