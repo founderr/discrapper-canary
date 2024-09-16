@@ -337,4 +337,5 @@ var n, r;
     (r.DEV_TOOLS = 'devtools'),
     (r.IN_CASE_YOU_MISSED_IT_TAB = 'ICYMI Tab'),
     (r.REVERSE_TRIAL_UPSELL_MODAL = 'reverse trial upsell modal'),
+    (r.NITROWEEN_COACHMARK = 'nitroween coachmark'),
     (t.Z = n);
