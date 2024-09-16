@@ -18,10 +18,10 @@ var i = n(735250),
     I = n(742989),
     m = n(675478),
     T = n(581883),
-    N = n(585483),
-    h = n(70956),
-    C = n(400445),
-    f = n(153209),
+    h = n(585483),
+    N = n(70956),
+    f = n(400445),
+    C = n(153209),
     p = n(956961),
     g = n(903672),
     S = n(946443),
@@ -75,24 +75,21 @@ function x(e) {
         }, [n, P]),
         k = s.useCallback(() => {
             D(!P), P ? null == n || n() : null == t || t();
-        }, [n, t, P]),
-        F = s.useCallback(() => {
-            k(), j(l.X.UNREADS);
-        }, [j, k]);
-    s.useEffect(() => (N.S.subscribe(R.CkL.TOGGLE_INBOX_UNREADS_TAB, F), () => void N.S.unsubscribe(R.CkL.TOGGLE_INBOX_UNREADS_TAB, F)), [F]);
-    let [G, w] = s.useState(new Date());
+        }, [n, t, P]);
+    s.useEffect(() => (h.S.subscribe(R.CkL.TOGGLE_INBOX, k), () => void h.S.unsubscribe(R.CkL.TOGGLE_INBOX, k)), [k]);
+    let [F, G] = s.useState(new Date());
     s.useEffect(() => {
-        let e = setInterval(() => w(new Date()), h.Z.Millis.MINUTE);
+        let e = setInterval(() => G(new Date()), N.Z.Millis.MINUTE);
         return () => {
             clearInterval(e);
         };
     }, []);
-    let { showReminders: V } = I.Z.useExperiment({ location: 'RecentsPopout' }),
-        { enabled: H, inInbox: Y } = _.Z.useExperiment({ location: 'RecentsPopout' }),
-        W = (0, r.e7)([E.Z], () => E.Z.hasOverdueReminder(G), [G]) && H && Y,
-        { enabled: z } = d.Z.useExperiment({ location: 'RecentsPopout' });
+    let { showReminders: w } = I.Z.useExperiment({ location: 'RecentsPopout' }),
+        { enabled: V, inInbox: H } = _.Z.useExperiment({ location: 'RecentsPopout' }),
+        Y = (0, r.e7)([E.Z], () => E.Z.hasOverdueReminder(F), [F]) && V && H,
+        { enabled: W } = d.Z.useExperiment({ location: 'RecentsPopout' });
     s.useEffect(() => {
-        (((!V || (H && Y)) && b === l.X.TODOS) || (b === l.X.BOOKMARKS && !(H || Y))) && j(l.X.MENTIONS);
+        (((!w || (V && H)) && b === l.X.TODOS) || (b === l.X.BOOKMARKS && !(V || H))) && j(l.X.MENTIONS);
     });
     let K = s.useCallback(
         (e) => {
@@ -114,7 +111,7 @@ function x(e) {
                     'aria-label': O.Z.Messages.INBOX,
                     children:
                         b === l.X.FOR_YOU
-                            ? (0, i.jsx)(f.Z, {
+                            ? (0, i.jsx)(C.Z, {
                                   setTab: j,
                                   badgeState: M,
                                   closePopout: B
@@ -126,23 +123,23 @@ function x(e) {
                                     badgeState: M,
                                     closePopout: B
                                 })
-                              : z && b === l.X.GAME_INVITES
+                              : W && b === l.X.GAME_INVITES
                                 ? (0, i.jsx)(A.Z, {
                                       setTab: j,
                                       badgeState: M,
                                       closePopout: B
                                   })
-                                : V && b === l.X.TODOS
+                                : w && b === l.X.TODOS
                                   ? (0, i.jsx)(p.Z, {
                                         setTab: j,
                                         onJump: K,
                                         closePopout: B
                                     })
-                                  : H && Y && b === l.X.BOOKMARKS
-                                    ? (0, i.jsx)(C.Z, {
+                                  : V && H && b === l.X.BOOKMARKS
+                                    ? (0, i.jsx)(f.Z, {
                                           setTab: j,
                                           closePopout: B,
-                                          throttledNow: G
+                                          throttledNow: F
                                       })
                                     : (0, i.jsx)(a.SV, {
                                           fallback: (0, i.jsx)(S.h, {
@@ -164,7 +161,7 @@ function x(e) {
             ignoreModalClicks: !0,
             children: (e, t) => {
                 let { isShown: n } = t;
-                return x(k, n, e, W);
+                return x(k, n, e, Y);
             }
         })
     });
