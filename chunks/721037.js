@@ -99,17 +99,19 @@ t.Z = a.ZP.connectStores([E.Z, o.ZP, S.Z, f.Z, I.Z, T.Z, m.Z, d.Z, h.ZP], (e) =>
         x = T.Z.getVoiceChannelId(),
         G = T.Z.getChannelId() === x,
         k = null != x && d.Z.getChatOpen(x),
-        B = (v || C) && null != _ && (0, l.q)(_.applicationId);
+        B = v || C,
+        F = B && null != _ && (0, l.q)(_.applicationId),
+        V = !B && null != a && G;
     return {
         selectedPIPWindow: a,
         pipWindows: U,
         pipWidth: M,
         pipType: D,
-        maxX: y.width - (G && k ? w : 0),
+        maxX: y.width - (V && k ? w : 0),
         maxY: y.height,
         theme: f.Z.theme,
         dockedRect: m.Z.getDockedRect(null !== (i = null == a ? void 0 : a.id) && void 0 !== i ? i : ''),
         appContext: L,
-        roundCorners: !B
+        roundCorners: !F
     };
 })(C);
