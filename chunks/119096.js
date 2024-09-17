@@ -8,22 +8,23 @@ var i = n(120356),
     u = n(493683),
     c = n(607070),
     d = n(785717),
-    _ = n(689938),
-    E = n(920163),
-    f = n(482617);
-let h = (e) => {
+    _ = n(228168),
+    E = n(689938),
+    f = n(920163),
+    h = n(482617);
+let p = (e) => {
         let { message: t, userId: n, onClose: i } = e,
             { trackUserProfileAction: s } = (0, d.KZ)();
         return (0, r.jsxs)('div', {
-            className: a()(f.toast, E.toastPadding),
+            className: a()(h.toast, f.toastPadding),
             children: [
                 (0, r.jsx)(l.CheckmarkLargeIcon, {
                     size: 'sm',
-                    className: E.toastIcon,
+                    className: f.toastIcon,
                     color: l.tokens.colors.STATUS_POSITIVE.css
                 }),
                 (0, r.jsxs)('div', {
-                    className: E.successToast,
+                    className: f.successToast,
                     children: [
                         (0, r.jsx)(l.Text, {
                             color: 'header-primary',
@@ -32,7 +33,7 @@ let h = (e) => {
                         }),
                         (0, r.jsx)(l.Text, {
                             variant: 'text-sm/semibold',
-                            children: _.Z.Messages.USER_PROFILE_TOAST_VIEW.format({
+                            children: E.Z.Messages.USER_PROFILE_TOAST_VIEW.format({
                                 onClick: () => {
                                     s({ action: 'PRESS_REACT_REPLY_TOAST' }), null == i || i(), u.Z.openPrivateChannel(n);
                                 }
@@ -43,27 +44,27 @@ let h = (e) => {
             ]
         });
     },
-    p = () =>
+    I = () =>
         (0, r.jsxs)('div', {
-            className: a()(f.toast, E.toastPadding),
+            className: a()(h.toast, f.toastPadding),
             children: [
                 (0, r.jsx)(l.Spinner, {
                     type: l.SpinnerTypes.SPINNING_CIRCLE_SIMPLE,
-                    className: E.toastIcon
+                    className: f.toastIcon
                 }),
                 (0, r.jsx)(l.Text, {
                     color: 'header-primary',
                     variant: 'text-sm/semibold',
-                    children: _.Z.Messages.USER_PROFILE_SENDING
+                    children: E.Z.Messages.USER_PROFILE_SENDING
                 })
             ]
         });
 t.Z = (e) => {
-    let { shown: t, sent: n, isReply: i, userId: u, onClose: d, className: f } = e,
-        I = i ? _.Z.Messages.USER_PROFILE_REPLY_SENT : _.Z.Messages.USER_PROFILE_REACTION_SENT,
+    let { interactionTypeSent: t, isVisible: n, userId: i, onClose: u, className: d } = e,
+        h = t === _.P.REPLY ? E.Z.Messages.USER_PROFILE_REPLY_SENT : E.Z.Messages.USER_PROFILE_REACTION_SENT,
         m = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
         T = (0, l.useTransition)(
-            t,
+            n,
             {
                 from: {
                     transform: m ? 'translateY(0)' : 'translateY(16px)',
@@ -89,30 +90,31 @@ t.Z = (e) => {
         );
     return (0, r.jsx)(r.Fragment, {
         children: T(
-            (e, t) =>
-                t &&
+            (e, n) =>
+                n &&
                 (0, r.jsx)(s.animated.div, {
-                    className: a()(E.toastContainer, f),
+                    className: a()(f.toastContainer, d),
                     style: e,
-                    children: n
-                        ? (0, r.jsx)(l.Toast, {
-                              message: '',
-                              type: l.ToastType.CUSTOM,
-                              id: 'react_reply_success_toast',
-                              options: {
-                                  component: (0, r.jsx)(h, {
-                                      userId: u,
-                                      message: I,
-                                      onClose: d
-                                  })
-                              }
-                          })
-                        : (0, r.jsx)(l.Toast, {
-                              message: '',
-                              type: l.ToastType.CUSTOM,
-                              id: 'react_reply_loading_toast',
-                              options: { component: (0, r.jsx)(p, {}) }
-                          })
+                    children:
+                        null != t
+                            ? (0, r.jsx)(l.Toast, {
+                                  message: '',
+                                  type: l.ToastType.CUSTOM,
+                                  id: 'react_reply_success_toast',
+                                  options: {
+                                      component: (0, r.jsx)(p, {
+                                          userId: i,
+                                          message: h,
+                                          onClose: u
+                                      })
+                                  }
+                              })
+                            : (0, r.jsx)(l.Toast, {
+                                  message: '',
+                                  type: l.ToastType.CUSTOM,
+                                  id: 'react_reply_loading_toast',
+                                  options: { component: (0, r.jsx)(I, {}) }
+                              })
                 })
         )
     });

@@ -16,10 +16,11 @@ var r = n(735250),
     _ = n(228168),
     E = n(8621);
 function f(e) {
-    let { user: t, displayProfile: n, guildId: a, channelId: l, profileType: f, isInteractionSource: h, onInteraction: p, showReplyPopout: I = !1, setInteractionToastShown: m, setInteractionSent: T, setIsReplyInteraction: S, children: g } = e,
-        A = f === _.y0.FULL_SIZE ? (0, d.z)(t.id, null == n ? void 0 : n.guildId) : void 0,
+    let { user: t, displayProfile: n, guildId: a, channelId: l, profileType: f, interactionType: h, interactionSource: p, onInteraction: I, setInteractionToastShown: m, setInteractionTypeSent: T, children: S } = e,
+        g = f === _.y0.FULL_SIZE ? (0, d.z)(t.id, null == n ? void 0 : n.guildId) : void 0,
+        A = i.useRef(null),
         N = i.useRef(null),
-        O = i.useRef(null),
+        O = h === _.P.REPLY && p === _.n_.AVATAR,
         [R, v] = i.useState(!1),
         C = () => {
             v(!0);
@@ -29,10 +30,10 @@ function f(e) {
         },
         L = () => {
             var e;
-            null === (e = O.current) || void 0 === e || e.focus();
+            null === (e = N.current) || void 0 === e || e.focus();
         },
         D = s()(E.avatar, {
-            [E.hoisted]: h,
+            [E.hoisted]: p === _.n_.AVATAR || p === _.n_.STATUS,
             [E.biteSize]: f === _.y0.BITE_SIZE,
             [E.fullSize]: f === _.y0.FULL_SIZE,
             [E.panel]: f === _.y0.PANEL
@@ -42,10 +43,10 @@ function f(e) {
         onMouseOver: C,
         onMouseLeave: y,
         onFocus: (e) => {
-            (e.target === N.current || e.target === O.current) && C();
+            (e.target === A.current || e.target === N.current) && C();
         },
         onBlur: (e) => {
-            e.relatedTarget !== N.current && e.relatedTarget !== O.current && y();
+            e.relatedTarget !== A.current && e.relatedTarget !== N.current && y();
         },
         children: [
             (0, r.jsx)(o.Popout, {
@@ -57,39 +58,37 @@ function f(e) {
                         channelId: l,
                         profileType: f,
                         sourceType: _.n_.AVATAR,
-                        modalKey: A,
+                        modalKey: g,
                         setPopoutRef: n,
-                        onInteraction: p,
+                        onInteraction: I,
                         setInteractionToastShown: m,
-                        setInteractionSent: T,
-                        setIsReplyInteraction: S,
+                        setInteractionTypeSent: T,
                         onClose: L
                     });
                 },
                 onRequestClose: () =>
-                    null == p
+                    null == I
                         ? void 0
-                        : p({
+                        : I({
                               interactionType: null,
                               interactionSourceType: null
                           }),
                 animationPosition: 'top',
                 position: 'bottom',
                 align: f === _.y0.FULL_SIZE ? 'center' : 'left',
-                shouldShow: I,
-                children: g
+                shouldShow: O,
+                children: S
             }),
             (0, r.jsx)(u.ZP, {
                 user: t,
                 sourceType: _.n_.AVATAR,
-                isVisible: R && !I,
+                isVisible: R && null == h && null == p,
                 isExpandable: !1,
-                onInteraction: p,
+                onInteraction: I,
                 setInteractionToastShown: m,
-                setInteractionSent: T,
-                setIsReplyInteraction: S,
-                reactButtonRef: N,
-                replyButtonRef: O,
+                setInteractionTypeSent: T,
+                reactButtonRef: A,
+                replyButtonRef: N,
                 onClose: y
             })
         ]

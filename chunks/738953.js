@@ -57,19 +57,18 @@ function U(e) {
     (0, l.$)(K);
     let z = i.useRef(null),
         q = (0, p.ZP)(t.id, U),
-        Q = (0, o.Z)(z),
-        [X, $] = i.useState(!1),
-        [J, ee] = i.useState(!1),
-        [et, en] = i.useState(!1);
+        Q = (0, o.Z)(z);
     i.useEffect(() => {
         null == B || B(null == z ? void 0 : z.current);
     }, [z, B]);
-    let [er, ei] = i.useState(),
-        [ea, es] = i.useState(),
-        eo = (e) => {
-            ei(e.interactionType), es(e.interactionSourceType);
+    let [X, $] = i.useState(null),
+        [J, ee] = i.useState(null),
+        et = (e) => {
+            $(e.interactionType), ee(e.interactionSourceType);
         },
-        el = (e) => {
+        [en, er] = i.useState(!1),
+        [ei, ea] = i.useState(null),
+        es = (e) => {
             null == k || k(),
                 (0, C.openUserProfileModal)({
                     sourceAnalyticsLocations: H,
@@ -91,7 +90,7 @@ function U(e) {
                         displayProfile: q,
                         profileType: D.y0.BITE_SIZE,
                         children: [
-                            null != er && (0, r.jsx)('div', { className: P.backdrop }),
+                            null != X && (0, r.jsx)('div', { className: P.backdrop }),
                             (0, r.jsxs)(N.Z, {
                                 profileType: D.y0.BITE_SIZE,
                                 children: [
@@ -115,7 +114,7 @@ function U(e) {
                                                       id: 'view-profile',
                                                       label: M.Z.Messages.VIEW_FULL_PROFILE,
                                                       action: () => {
-                                                          el(),
+                                                          es(),
                                                               (0, h.pQ)({
                                                                   action: 'PRESS_VIEW_PROFILE',
                                                                   analyticsLocations: H,
@@ -136,9 +135,8 @@ function U(e) {
                                         profileType: D.y0.BITE_SIZE
                                     }),
                                     (0, r.jsx)(g.Z, {
-                                        isReply: et,
-                                        sent: J,
-                                        shown: X,
+                                        interactionTypeSent: ei,
+                                        isVisible: en,
                                         userId: t.id,
                                         className: P.toast
                                     }),
@@ -149,13 +147,12 @@ function U(e) {
                                         guildId: U,
                                         channelId: w,
                                         profileType: D.y0.BITE_SIZE,
-                                        onOpenProfile: F ? void 0 : el,
-                                        isInteractionSource: ea === D.n_.AVATAR || ea === D.n_.STATUS,
-                                        onInteraction: eo,
-                                        setInteractionToastShown: $,
-                                        setInteractionSent: ee,
-                                        setIsReplyInteraction: en,
-                                        showReplyPopout: er === D.P.REPLY && ea === D.n_.AVATAR
+                                        onOpenProfile: F ? void 0 : es,
+                                        interactionType: X,
+                                        interactionSource: J,
+                                        onInteraction: et,
+                                        setInteractionToastShown: er,
+                                        setInteractionTypeSent: ea
                                     }),
                                     (0, r.jsx)(S.Z, {
                                         location: 'UserProfilePopout',
@@ -163,13 +160,12 @@ function U(e) {
                                         guildId: U,
                                         channelId: w,
                                         profileType: D.y0.BITE_SIZE,
-                                        isInteractionSource: ea === D.n_.STATUS,
-                                        onInteraction: eo,
-                                        onClose: k,
-                                        setInteractionToastShown: $,
-                                        setInteractionSent: ee,
-                                        setIsReplyInteraction: en,
-                                        showReplyPopout: er === D.P.REPLY && ea === D.n_.STATUS
+                                        interactionType: X,
+                                        interactionSource: J,
+                                        onInteraction: et,
+                                        setInteractionToastShown: er,
+                                        setInteractionTypeSent: ea,
+                                        onClose: k
                                     })
                                 ]
                             }),
@@ -179,7 +175,7 @@ function U(e) {
                                 displayProfile: q,
                                 guild: j,
                                 isHovering: Q,
-                                onOpenProfile: F ? void 0 : el,
+                                onOpenProfile: F ? void 0 : es,
                                 channelId: w,
                                 onClose: k
                             }),

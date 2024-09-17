@@ -53,15 +53,14 @@ function O(e) {
         { analyticsLocations: B } = (0, u.ZP)(c.Z.PROFILE_PANEL),
         H = s.useRef(null),
         G = (0, r.Z)(H),
-        [V, F] = s.useState(!1),
-        [W, z] = s.useState(!1),
-        [Y, K] = s.useState(!1),
-        [q, X] = s.useState(),
-        [J, Q] = s.useState(),
-        $ = (e) => {
-            X(e.interactionType), Q(e.interactionSourceType);
+        [V, F] = s.useState(null),
+        [W, z] = s.useState(null),
+        Y = (e) => {
+            F(e.interactionType), z(e.interactionSourceType);
         },
-        ee = (e) => {
+        [K, q] = s.useState(!1),
+        [X, J] = s.useState(null),
+        Q = (e) => {
             (0, A.openUserProfileModal)({
                 sourceAnalyticsLocations: B,
                 ...w,
@@ -80,7 +79,7 @@ function O(e) {
                 themeOverride: U,
                 className: P.container,
                 children: [
-                    null != q && (0, i.jsx)('div', { className: P.backdrop }),
+                    null != V && (0, i.jsx)('div', { className: P.backdrop }),
                     (0, i.jsxs)(a.u2, {
                         children: [
                             (0, i.jsxs)(S.Z, {
@@ -104,9 +103,8 @@ function O(e) {
                                         className: P.banner
                                     }),
                                     (0, i.jsx)(I.Z, {
-                                        isReply: Y,
-                                        sent: W,
-                                        shown: V,
+                                        interactionTypeSent: X,
+                                        isVisible: K,
                                         userId: t.id,
                                         className: P.toast
                                     }),
@@ -116,25 +114,23 @@ function O(e) {
                                         displayProfile: D,
                                         channelId: O.id,
                                         profileType: R.y0.PANEL,
-                                        isInteractionSource: J === R.n_.AVATAR || J === R.n_.STATUS,
-                                        onOpenProfile: y ? void 0 : ee,
-                                        onInteraction: $,
-                                        setInteractionToastShown: F,
-                                        setInteractionSent: z,
-                                        setIsReplyInteraction: K,
-                                        showReplyPopout: q === R.P.REPLY && J === R.n_.AVATAR
+                                        interactionType: V,
+                                        interactionSource: W,
+                                        onOpenProfile: y ? void 0 : Q,
+                                        onInteraction: Y,
+                                        setInteractionToastShown: q,
+                                        setInteractionTypeSent: J
                                     }),
                                     (0, i.jsx)(C.Z, {
                                         location: 'UserProfilePanel',
                                         user: t,
                                         channelId: O.id,
                                         profileType: R.y0.PANEL,
-                                        isInteractionSource: J === R.n_.STATUS,
-                                        onInteraction: $,
-                                        setInteractionToastShown: F,
-                                        setInteractionSent: z,
-                                        setIsReplyInteraction: K,
-                                        showReplyPopout: q === R.P.REPLY && J === R.n_.STATUS
+                                        interactionType: V,
+                                        interactionSource: W,
+                                        onInteraction: Y,
+                                        setInteractionToastShown: q,
+                                        setInteractionTypeSent: J
                                     }),
                                     t.isClyde() && (0, i.jsx)(d.Z, { className: P.headerTag })
                                 ]
@@ -145,7 +141,7 @@ function O(e) {
                                 displayProfile: D,
                                 channel: O,
                                 isHovering: G,
-                                onOpenProfile: y ? void 0 : ee
+                                onOpenProfile: y ? void 0 : Q
                             }),
                             (0, i.jsx)(M.Z, { user: t }),
                             (0, i.jsx)(b.Z, {
@@ -163,7 +159,7 @@ function O(e) {
                                 look: l.Button.Looks.BLANK,
                                 color: P.footerButtonColor,
                                 onClick: () => {
-                                    ee(),
+                                    Q(),
                                         (0, p.pQ)({
                                             action: 'PRESS_VIEW_PROFILE',
                                             analyticsLocations: B,

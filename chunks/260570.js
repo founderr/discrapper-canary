@@ -32,117 +32,118 @@ let C = 'text-sm/medium',
     y = 36,
     L = 144;
 function D(e) {
-    let { statusActivity: t, user: a, displayProfile: h, guildId: I, channelId: T, profileType: D, hasEntered: b = !0, animate: M = !0, editEnabled: P, onInteraction: U, isInteractionSource: w, showReplyPopout: x = !1, onClose: G, setInteractionToastShown: k, setInteractionSent: B, setIsReplyInteraction: F } = e,
-        { analyticsLocations: V } = (0, f.ZP)(E.Z.PROFILE_CUSTOM_STATUS),
-        { trackUserProfileAction: H } = (0, m.KZ)(),
-        Z = (0, l.e7)([_.Z], () => _.Z.useReducedMotion),
-        [Y] = i.useState(() => new u.V7()),
-        [j, W] = i.useState(!0),
+    let { statusActivity: t, user: a, displayProfile: h, guildId: I, channelId: T, profileType: D, hasEntered: b = !0, animate: M = !0, editEnabled: P, interactionType: U, interactionSource: w, onInteraction: x, setInteractionToastShown: G, setInteractionTypeSent: k, onClose: B } = e,
+        { analyticsLocations: F } = (0, f.ZP)(E.Z.PROFILE_CUSTOM_STATUS),
+        { trackUserProfileAction: V } = (0, m.KZ)(),
+        H = (0, l.e7)([_.Z], () => _.Z.useReducedMotion),
+        [Z] = i.useState(() => new u.V7()),
+        [Y, j] = i.useState(!0),
+        W = i.useRef(null),
         K = i.useRef(null),
         z = i.useRef(null),
         q = i.useRef(null),
-        Q = i.useRef(null),
-        { emoji: X, state: $ } = null != t ? t : {},
-        J = null != $ && '' !== $ ? $ : null,
-        ee = null != J && J.length > 0,
-        et = null != X,
-        en = et && !ee,
-        er = et ? 1.25 : 0,
-        ei = 18 + er,
-        ea = L + er,
-        es = y + er,
-        eo = et || ee,
-        el = P && !eo,
-        eu = P && eo,
-        [ec, ed] = i.useState(en),
-        [e_, eE] = i.useState(!en),
-        [ef, eh] = i.useState(!1),
-        ep = D === O.y0.FULL_SIZE ? (0, N.z)(a.id, null == h ? void 0 : h.guildId) : void 0;
+        { emoji: Q, state: X } = null != t ? t : {},
+        $ = null != X && '' !== X ? X : null,
+        J = null != $ && $.length > 0,
+        ee = null != Q,
+        et = ee && !J,
+        en = ee ? 1.25 : 0,
+        er = 18 + en,
+        ei = L + en,
+        ea = y + en,
+        es = ee || J,
+        eo = P && !es,
+        el = P && es,
+        [eu, ec] = i.useState(et),
+        [ed, e_] = i.useState(!et),
+        [eE, ef] = i.useState(!1),
+        eh = D === O.y0.FULL_SIZE ? (0, N.z)(a.id, null == h ? void 0 : h.guildId) : void 0,
+        ep = U === O.P.REPLY && w === O.n_.STATUS;
     i.useLayoutEffect(() => {
-        if (null == K.current || en) return;
-        let e = K.current.getBoundingClientRect().height;
-        if ((ed(en || e <= ei), b)) {
+        if (null == W.current || et) return;
+        let e = W.current.getBoundingClientRect().height;
+        if ((ec(et || e <= er), b)) {
             var t, n, r, i;
-            let e = null !== (r = null === (t = K.current) || void 0 === t ? void 0 : t.getBoundingClientRect().height) && void 0 !== r ? r : ea,
-                a = null !== (i = null === (n = q.current) || void 0 === n ? void 0 : n.getBoundingClientRect().height) && void 0 !== i ? i : es;
-            eE(!en && e > a), (z.current = e), (Q.current = a);
+            let e = null !== (r = null === (t = W.current) || void 0 === t ? void 0 : t.getBoundingClientRect().height) && void 0 !== r ? r : ei,
+                a = null !== (i = null === (n = z.current) || void 0 === n ? void 0 : n.getBoundingClientRect().height) && void 0 !== i ? i : ea;
+            e_(!et && e > a), (K.current = e), (q.current = a);
         }
-    }, [b, en, ei, ea, es]);
+    }, [b, et, er, ei, ea]);
     let [eI, em] = (0, c.useSpring)(() => ({
-        maxHeight: ''.concat(es, 'px'),
+        maxHeight: ''.concat(ea, 'px'),
         config: {
             clamp: !0,
             duration: 150
         }
     }));
-    i.useEffect(() => () => Y.stop(), [Y]);
+    i.useEffect(() => () => Z.stop(), [Z]);
     let eT = i.useRef(t);
     if (
         (i.useEffect(() => {
-            w &&
+            w === O.n_.STATUS &&
                 (null == t || eT.current !== t) &&
-                (null == U ||
-                    U({
+                (null == x ||
+                    x({
                         interactionType: null,
                         interactionSourceType: null
                     })),
                 (eT.current = t);
-        }, [t, U, w]),
-        !eo && !el)
+        }, [t, x, w]),
+        !es && !eo)
     )
         return null;
     let eS = (e) => {
             var t, n;
-            if (!!e_) {
+            if (!!ed) {
                 if (e) {
-                    let e = Math.min(null !== (t = z.current) && void 0 !== t ? t : ea, ea);
+                    let e = Math.min(null !== (t = K.current) && void 0 !== t ? t : ei, ei);
                     em({
                         maxHeight: ''.concat(e, 'px'),
-                        delay: Z ? 0 : 300,
+                        delay: H ? 0 : 300,
                         config: {
                             clamp: !0,
-                            duration: Z ? 0 : 150
+                            duration: H ? 0 : 150
                         }
                     });
                 } else {
-                    let e = Math.min(null !== (n = Q.current) && void 0 !== n ? n : es, es);
+                    let e = Math.min(null !== (n = q.current) && void 0 !== n ? n : ea, ea);
                     em({
                         maxHeight: ''.concat(e, 'px'),
                         delay: 0
                     });
                 }
-                if (Z) {
-                    W(!e);
+                if (H) {
+                    j(!e);
                     return;
                 }
-                Y.start(e ? 300 : 150, () => {
-                    W(!e);
+                Z.start(e ? 300 : 150, () => {
+                    j(!e);
                 });
             }
         },
         eg = () =>
-            et
+            ee
                 ? (0, r.jsx)(d.I, {
-                      className: ee ? v.statusEmojiInline : v.statusEmojiOnly,
-                      emoji: X,
+                      className: J ? v.statusEmojiInline : v.statusEmojiOnly,
+                      emoji: Q,
                       animate: M,
                       hideTooltip: !1,
                       tooltipDelay: O.vB
                   })
                 : null,
         eA = () =>
-            ee
+            J
                 ? (0, r.jsx)(c.Text, {
                       variant: C,
                       className: v.statusText,
-                      children: J
+                      children: $
                   })
                 : null,
         eN = () => {
             let e = s()(v.content, {
-                [v.clamp]: j,
-                [v.unclamp]: !j,
-                [v.singleLineAlign]: ec
+                [v.clamp]: Y,
+                [v.unclamp]: !Y,
+                [v.singleLineAlign]: eu
             });
             return (0, r.jsxs)(o.animated.div, {
                 style: eI,
@@ -153,13 +154,13 @@ function D(e) {
         eO = () =>
             (0, r.jsxs)('div', {
                 className: s()(v.content, v.clamp, v.placeholderWidth, { [v.panel]: D === O.y0.PANEL }),
-                ref: q,
+                ref: z,
                 children: [eg(), eA()]
             }),
         eR = () =>
             (0, r.jsxs)('div', {
                 className: s()(v.content, v.unclamp, v.placeholderWidth, v.incorporeal, { [v.panel]: D === O.y0.PANEL }),
-                ref: K,
+                ref: W,
                 children: [eg(), eA()]
             }),
         ev = () =>
@@ -179,22 +180,22 @@ function D(e) {
             }),
         eC = () => {
             var e;
-            return el
+            return eo
                 ? R.Z.Messages.CUSTOM_STATUS_ADD_CUSTOM_STATUS_A11Y_LABEL
                 : R.Z.Messages.CUSTOM_STATUS_CUSTOM_STATUS_A11Y_LABEL.format({
-                      emoji: null !== (e = null == X ? void 0 : X.name) && void 0 !== e ? e : '',
-                      status: $
+                      emoji: null !== (e = null == Q ? void 0 : Q.name) && void 0 !== e ? e : '',
+                      status: X
                   });
         },
         ey = () => {
-            H({ action: 'PRESS_ADD_CUSTOM_STATUS' }),
-                null == G || G(),
+            V({ action: 'PRESS_ADD_CUSTOM_STATUS' }),
+                null == B || B(),
                 (0, c.openModalLazy)(async () => {
                     let { default: e } = await n.e('51714').then(n.bind(n, 211065));
                     return (t) =>
                         (0, r.jsx)(e, {
                             ...t,
-                            sourceAnalyticsLocations: V
+                            sourceAnalyticsLocations: F
                         });
                 });
         },
@@ -203,73 +204,70 @@ function D(e) {
             [v.fullSize]: D === O.y0.FULL_SIZE,
             [v.panel]: D === O.y0.PANEL
         },
-        eD = s()(v.background, { [v.editable]: eu }),
-        eb = { [v.hoisted]: w },
+        eD = s()(v.background, { [v.editable]: el }),
+        eb = { [v.hoisted]: w === O.n_.STATUS },
         eM = s()({
-            [v.statusBubbleShape]: (!ee && et) || !ec,
-            [v.statusBubbleSingleLineWithTextShape]: (ec && ee) || el
+            [v.statusBubbleShape]: (!J && ee) || !eu,
+            [v.statusBubbleSingleLineWithTextShape]: (eu && J) || eo
         }),
-        eP = s()(v.statusBubbleOuter, eL, eM, { [v.statusBubbleOuterAddStatusCursor]: el }),
+        eP = s()(v.statusBubbleOuter, eL, eM, { [v.statusBubbleOuterAddStatusCursor]: eo }),
         eU = s()(v.statusBubble, eM, {
-            [v.statusBubbleEmojiOnlyPadding]: en,
-            [v.statusBubbleWithTextPadding]: ee || el,
-            [v.statusBubbleWithTextMinWidth]: ee,
-            [v.statusBubbleCopyStatusCursor]: eo
+            [v.statusBubbleEmojiOnlyPadding]: et,
+            [v.statusBubbleWithTextPadding]: J || eo,
+            [v.statusBubbleWithTextMinWidth]: J,
+            [v.statusBubbleCopyStatusCursor]: es
         }),
         ew = () => {
-            if (et) {
-                let e = null != X.id ? '`' + ':'.concat(X.name, ':') + '`' : p.ZP.translateSurrogatesToInlineEmoji(X.name);
-                return en ? ''.concat(e) : ''.concat(e, ' ').concat($);
+            if (ee) {
+                let e = null != Q.id ? '`' + ':'.concat(Q.name, ':') + '`' : p.ZP.translateSurrogatesToInlineEmoji(Q.name);
+                return et ? ''.concat(e) : ''.concat(e, ' ').concat(X);
             }
-            if (!en) return ''.concat($);
+            if (!et) return ''.concat(X);
         },
         ex = () =>
             (0, r.jsxs)(c.ClickableContainer, {
                 className: s()(v.visibleContainer, eL, eD, eb),
                 'aria-label': eC(),
                 focusProps: { ringClassName: eM },
-                onClick: el ? ey : void 0,
+                onClick: eo ? ey : void 0,
                 onFocus: () => {
-                    eh(!0), eS(!0);
+                    ef(!0), eS(!0);
                 },
                 onBlur: (e) => {
-                    !e.currentTarget.contains(e.relatedTarget) && (eh(!1), eS(!1));
+                    !e.currentTarget.contains(e.relatedTarget) && (ef(!1), eS(!1));
                 },
                 onMouseOver: () => {
-                    H({ action: 'HOVER_CUSTOM_STATUS' }), eh(!0), eS(!0);
+                    V({ action: 'HOVER_CUSTOM_STATUS' }), ef(!0), eS(!0);
                 },
                 onMouseLeave: () => {
-                    !x && (eh(!1), eS(!1));
+                    !ep && (ef(!1), eS(!1));
                 },
                 children: [
                     (0, r.jsx)('div', {
                         className: eP,
                         children: (0, r.jsxs)('span', {
                             className: eU,
-                            children: [eo && eN(), el && ev()]
+                            children: [es && eN(), eo && ev()]
                         })
                     }),
-                    eo &&
-                        !x &&
-                        (0, r.jsx)(g.ZP, {
-                            user: a,
-                            sourceDetails: ew(),
-                            sourceType: O.n_.STATUS,
-                            isVisible: ef,
-                            isExpandable: e_,
-                            onInteraction: U,
-                            setInteractionToastShown: k,
-                            setInteractionSent: B,
-                            setIsReplyInteraction: F,
-                            onClose: () => {
-                                eh(!1), eS(!1);
-                            }
-                        }),
-                    eu &&
+                    (0, r.jsx)(g.ZP, {
+                        user: a,
+                        sourceDetails: ew(),
+                        sourceType: O.n_.STATUS,
+                        isVisible: eE && null == U && null == w,
+                        isExpandable: ed,
+                        onInteraction: x,
+                        setInteractionToastShown: G,
+                        setInteractionTypeSent: k,
+                        onClose: () => {
+                            ef(!1), eS(!1);
+                        }
+                    }),
+                    el &&
                         (0, r.jsx)(S.Z, {
-                            isVisible: ef,
-                            isExpandable: e_,
-                            onClose: G
+                            isVisible: eE,
+                            isExpandable: ed,
+                            onClose: B
                         })
                 ]
             });
@@ -281,7 +279,7 @@ function D(e) {
                     className: eP,
                     children: (0, r.jsxs)('span', {
                         className: eU,
-                        children: [el && ev(), eo && eO(), eo && eR()]
+                        children: [eo && ev(), es && eO(), es && eR()]
                     })
                 })
             }),
@@ -296,20 +294,19 @@ function D(e) {
                         sourceDetails: ew(),
                         sourceType: O.n_.STATUS,
                         setPopoutRef: t,
-                        modalKey: ep,
-                        onInteraction: U,
-                        setInteractionToastShown: k,
-                        setInteractionSent: B,
-                        setIsReplyInteraction: F,
+                        modalKey: eh,
+                        onInteraction: x,
+                        setInteractionToastShown: G,
+                        setInteractionTypeSent: k,
                         onClose: () => {
-                            eh(!1), eS(!1);
+                            ef(!1), eS(!1);
                         }
                     });
                 },
                 onRequestClose: () =>
-                    null == U
+                    null == x
                         ? void 0
-                        : U({
+                        : x({
                               interactionType: null,
                               interactionSourceType: null
                           }),
@@ -317,7 +314,7 @@ function D(e) {
                 position: 'bottom',
                 align: D === O.y0.FULL_SIZE ? 'center' : 'left',
                 spacing: 6,
-                shouldShow: x,
+                shouldShow: ep,
                 children: () => ex()
             })
         ]
