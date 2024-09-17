@@ -18324,5 +18324,7 @@ e.exports = Object.freeze({
     CHANNEL_LINKED_LOBBY_CHANNEL_HEADER_COACHMARK_DESCRIPTION: 'This channel is syncing with a game that uses Discord to power its chat.\n\n[Learn more]({helpdeskArticle})',
     CHANNEL_LINKED_LOBBY_CHANNEL_TOPIC_TOOLTIP: 'This channel is syncing messages with a game.',
     CHANNEL_LINKED_LOBBY_CHANNEL_TOPIC_NOTICE: 'This channel is syncing with **!!{applicationName}!!** $[\u2022](separatorHook) [Learn more]({helpdeskArticle})',
-    CHANNEL_LINKED_LOBBY_CHANNEL_NSFW_DISABLED_REASON: 'Channels syncing with games cannot be age restricted'
+    CHANNEL_LINKED_LOBBY_CHANNEL_NSFW_DISABLED_REASON: 'Channels syncing with games cannot be age restricted',
+    GUILD_SETTINGS_AUDIT_LOG_CHANNEL_LOBBY_LINK_CREATE: 'Started syncing channel with $[](applicationHook)',
+    GUILD_SETTINGS_AUDIT_LOG_CHANNEL_LOBBY_LINK_DELETE: 'Stopped syncing channel with $[](applicationHook)'
 });

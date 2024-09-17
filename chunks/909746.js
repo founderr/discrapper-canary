@@ -24,7 +24,7 @@ E.d(_, {
         return Y;
     },
     Iv: function () {
-        return ea;
+        return eT;
     },
     J5: function () {
         return eN;
@@ -90,7 +90,7 @@ E.d(_, {
         return ee;
     },
     vc: function () {
-        return eT;
+        return ea;
     },
     vm: function () {
         return es;
@@ -102,8 +102,8 @@ var s = E(654861),
     n = E.n(s),
     t = E(913527),
     r = E.n(t),
-    T = E(536402),
-    a = E(533800),
+    a = E(536402),
+    T = E(533800),
     I = E(149765),
     l = E(866442),
     o = E(379649),
@@ -210,7 +210,8 @@ let F = new N.Z('AuditLogUtils'),
         [P.zUn.FLAGS]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_FLAGS_CHANGE,
         [P.zUn.AVAILABLE_TAG_ADD]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_AVAILABLE_TAGS_ADD,
         [P.zUn.AVAILABLE_TAG_EDIT]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_AVAILABLE_TAGS_UPDATE,
-        [P.zUn.AVAILABLE_TAG_DELETE]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_AVAILABLE_TAGS_DELETE
+        [P.zUn.AVAILABLE_TAG_DELETE]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_AVAILABLE_TAGS_DELETE,
+        [P.zUn.LINKED_LOBBY]: eg(H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_LOBBY_LINK_DELETE, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_LOBBY_LINK_CREATE)
     }),
     k = () => ({
         [P.zUn.NICK]: eC(H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_NICK_CHANGE, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_NICK_CREATE, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_NICK_DELETE),
@@ -332,7 +333,7 @@ let F = new N.Z('AuditLogUtils'),
                 let { newValue: _ } = e;
                 return _.map((e) =>
                     (function (e) {
-                        if (e === a.$.IS_GUEST_INVITE) return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_INVITE_GUEST_INVITE;
+                        if (e === T.$.IS_GUEST_INVITE) return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_INVITE_GUEST_INVITE;
                         return null;
                     })(e)
                 ).filter(f.lm);
@@ -472,7 +473,7 @@ let F = new N.Z('AuditLogUtils'),
         [P.zUn.STATUS]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_VOICE_CHANNEL_STATUS_STATUS_CREATE,
         ...V()
     }),
-    eT = {
+    ea = {
         [P.KFR.CHANNEL]: {
             [P.zUn.ID]: !0,
             [P.zUn.PERMISSION_OVERWRITES]: !0
@@ -510,7 +511,7 @@ let F = new N.Z('AuditLogUtils'),
             [P.zUn.SOUND_ID]: !0
         }
     },
-    ea = () => [
+    eT = () => [
         {
             value: P.rsA.ALL,
             label: H.Z.Messages.GUILD_SETTINGS_FILTER_ALL_ACTIONS,
@@ -789,7 +790,7 @@ function el(e, _) {
 }
 function eo(e) {
     var _;
-    let E = ea().find((_) => _.value === e.action);
+    let E = eT().find((_) => _.value === e.action);
     return null != eI(P.zUn.COMMUNICATION_DISABLED_UNTIL, e) ? H.Z.Messages.MEMBER_SAFETY_COMMUNICATION_DISABLED : null !== (_ = null == E ? void 0 : E.label) && void 0 !== _ ? _ : null;
 }
 let eA = {
@@ -1018,9 +1019,9 @@ function eD(e) {
             let n = null != e.changes ? e.changes.find((e) => e.key === P.zUn.ENTITY_TYPE) : null;
             if (null == n) return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_HOME_FEATURE_ITEM;
             switch (n.newValue) {
-                case T.w.MESSAGE:
+                case a.w.MESSAGE:
                     return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_HOME_FEATURE_MESSAGE;
-                case T.w.FORUM_POST:
+                case a.w.FORUM_POST:
                     return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_HOME_FEATURE_FORUM_POST;
                 default:
                     return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_HOME_FEATURE_ITEM;
@@ -1441,14 +1442,14 @@ function ec(e, _) {
                                                 n = C.Ge(s, E),
                                                 t = C.Ge(E, s),
                                                 r = [],
-                                                T = [];
+                                                a = [];
                                             for (let e in Z.zZ) {
                                                 let _ = Z.zZ[e];
-                                                C.yE(n, _) && r.push(_), C.yE(t, _) && T.push(_);
+                                                C.yE(n, _) && r.push(_), C.yE(t, _) && a.push(_);
                                             }
                                             return {
                                                 added: r,
-                                                removed: T
+                                                removed: a
                                             };
                                         })(e.oldValue, e.newValue);
                                     if (E.length > 0) {
@@ -1592,14 +1593,14 @@ function eO(e, _) {
         n = I.Od(s, E),
         t = I.Od(E, s),
         r = [],
-        T = [];
+        a = [];
     for (let e in P.Plq) {
         let _ = P.Plq[e];
-        I.e$(n, _) && r.push(_), I.e$(t, _) && T.push(_);
+        I.e$(n, _) && r.push(_), I.e$(t, _) && a.push(_);
     }
     return {
         added: r,
-        removed: T
+        removed: a
     };
 }
 function eU(e) {
