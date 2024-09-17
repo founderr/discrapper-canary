@@ -22,19 +22,18 @@ var r = n(735250),
     N = n(443603),
     O = n(981631),
     R = n(921944),
-    v = n(474936),
-    C = n(689938),
-    y = n(679583),
-    L = n(933283);
-let D = S.Z.Millis.DAYS_30;
-function b(e) {
+    v = n(689938),
+    C = n(679583),
+    y = n(933283);
+let L = S.Z.Millis.DAYS_30;
+function D(e) {
     let { animatedIconComponent: t, hovered: i, isCoachmarkDismissed: a } = e,
         o = !a || i;
     return (0, r.jsxs)('div', {
-        className: y.iconContainer,
+        className: C.iconContainer,
         children: [
             (0, r.jsx)('div', {
-                className: s()(y.decorativeLayer, { [y.decorativeLayerActive]: o }),
+                className: s()(C.decorativeLayer, { [C.decorativeLayerActive]: o }),
                 style: { zIndex: 3 },
                 children: (0, r.jsx)(c.LottieAnimation, {
                     shouldAnimate: !0,
@@ -42,12 +41,12 @@ function b(e) {
                 })
             }),
             (0, r.jsx)('div', {
-                className: s()(y.giftIconButton, { [y.giftIconButtonActive]: o }),
+                className: s()(C.giftIconButton, { [C.giftIconButtonActive]: o }),
                 style: { zIndex: 2 },
                 children: (0, r.jsx)(t, { color: 'currentColor' })
             }),
             (0, r.jsx)('div', {
-                className: s()(y.decorativeLayer, { [y.decorativeLayerActive]: o }),
+                className: s()(C.decorativeLayer, { [C.decorativeLayerActive]: o }),
                 style: { zIndex: 1 },
                 children: (0, r.jsx)(c.LottieAnimation, {
                     shouldAnimate: !0,
@@ -61,23 +60,23 @@ t.Z = i.memo(function (e) {
     let { disabled: t, channel: n } = e,
         { analyticsLocations: a } = (0, _.ZP)(d.Z.GIFT_BUTTON),
         [s, S] = i.useState(!1),
-        M = (0, o.e7)([m.Z], () => !(null === m.Z || void 0 === m.Z ? void 0 : m.Z.hasLayers())),
-        P = (0, o.e7)([T.default], () => T.default.getCurrentUser()),
-        U = null != P ? g.default.age(P.id) : 0,
-        { enabled: w } = p.O.useExperiment({ location: 'gift-button' }),
-        x = [];
-    w && !t && M && U >= D && x.push(l.z.NITROWEEN_ANIMATED_GIFTING_ICON);
-    let [G, k] = (0, f.US)(x),
-        B = null != G,
-        F = (0, A.Ft)(n),
-        { Component: V, events: H, play: Z } = (0, u.$)();
+        b = (0, o.e7)([m.Z], () => !(null === m.Z || void 0 === m.Z ? void 0 : m.Z.hasLayers())),
+        M = (0, o.e7)([T.default], () => T.default.getCurrentUser()),
+        P = null != M ? g.default.age(M.id) : 0,
+        { enabled: U } = p.O.useExperiment({ location: 'gift-button' }),
+        w = [];
+    U && !t && b && P >= L && w.push(l.z.NITROWEEN_ANIMATED_GIFTING_ICON);
+    let [x, G] = (0, f.US)(w),
+        k = null != x,
+        B = (0, A.Ft)(n),
+        { Component: F, events: V, play: H } = (0, u.$)();
     if (t) return null;
-    let Y = () => {
+    let Z = () => {
             (0, h.Z)({
                 isGift: !0,
-                giftRecipient: null == F ? void 0 : F,
+                giftRecipient: null == B ? void 0 : B,
+                giftMessage: v.Z.Messages.NITROWEEN_DESKTOP_GIFT_PURCHASE_PLACEHOLDER,
                 initialPlanId: null,
-                subscriptionTier: v.Si.TIER_2,
                 analyticsLocations: a,
                 analyticsObject: {
                     page: n.isPrivate() ? O.ZY5.DM_CHANNEL : O.ZY5.GUILD_CHANNEL,
@@ -87,8 +86,8 @@ t.Z = i.memo(function (e) {
                 }
             });
         },
-        j = (0, r.jsxs)('div', {
-            className: y.container,
+        Y = (0, r.jsxs)('div', {
+            className: C.container,
             onMouseEnter: () => {
                 !s && S(!0);
             },
@@ -96,33 +95,33 @@ t.Z = i.memo(function (e) {
                 S(!1);
             },
             children: [
-                B &&
+                k &&
                     (0, r.jsx)(I.Z, {
                         onComplete: () => S(!1),
-                        onCheckItOutClick: Y,
-                        markAsDismissed: k
+                        onCheckItOutClick: Z,
+                        markAsDismissed: G
                     }),
                 (0, r.jsx)(N.Z, {
-                    innerClassName: L.button,
-                    'aria-label': C.Z.Messages.PREMIUM_GIFT_BUTTON_LABEL,
+                    innerClassName: y.button,
+                    'aria-label': v.Z.Messages.PREMIUM_GIFT_BUTTON_LABEL,
                     isActive: !1,
                     onClick: () => {
-                        Z(), S(!1), (0, E.EW)(l.z.NITROWEEN_ANIMATED_GIFTING_ICON, { dismissAction: R.L.TAKE_ACTION }), Y();
+                        H(), S(!1), (0, E.EW)(l.z.NITROWEEN_ANIMATED_GIFTING_ICON, { dismissAction: R.L.TAKE_ACTION }), Z();
                     },
-                    ...H,
-                    children: (0, r.jsx)(b, {
-                        animatedIconComponent: V,
+                    ...V,
+                    children: (0, r.jsx)(D, {
+                        animatedIconComponent: F,
                         hovered: s,
-                        isCoachmarkDismissed: !B
+                        isCoachmarkDismissed: !k
                     })
                 })
             ]
         });
-    return B
-        ? j
+    return k
+        ? Y
         : (0, r.jsx)(c.TooltipContainer, {
-              className: y.container,
-              text: C.Z.Messages.NITROWEEN_GIFT_UPSELL_TITLE,
-              children: j
+              className: C.container,
+              text: v.Z.Messages.NITROWEEN_GIFT_UPSELL_TITLE,
+              children: Y
           });
 });

@@ -13805,6 +13805,38 @@ html.decorate-links .lowSaturationUnderline_c7819f {
     margin-bottom: 18px
 }
 
+.withHalloweenTier2_c87d73 {
+    background-image: linear-gradient(100.98deg, rgba(133, 71, 198, .64)25.21%, rgba(184, 69, 193, .64)62.43%, rgba(171, 93, 138, .64)95.57%), url(https://cdn.discordapp.com/assets/content/2fb8950c84e002f2db23d1e206a2c7300a8f511449a86e3f7ef3dfe89eaa076d.png);
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 139, 13, .8);
+    transform: scale(1);
+    border-bottom-left-radius: 17px;
+    border-bottom-right-radius: 17px
+}
+
+.halloweenGiftMessage_c87d73 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    -moz-column-gap: 12px;
+    column-gap: 12px;
+    margin: 24px -24px -24px;
+    padding: 12px 24px;
+    background: linear-gradient(0deg, rgba(255, 139, 13, .9)0%, rgba(255, 139, 13, .9)100%);
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px
+}
+
+.halloweenGiftMessageText_c87d73 {
+    color: black
+}
+
+.halloweenAvatar_c87d73 {
+    margin-top: -52px
+}
+
 .heading_aac415 {
     margin-bottom: 8px
 }
