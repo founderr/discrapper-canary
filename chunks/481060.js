@@ -2034,6 +2034,9 @@ n.r(t),
         closeModal: function () {
             return e_.Mr;
         },
+        closeModalInAllContexts: function () {
+            return e_.Fv;
+        },
         createAdvancedScroller: function () {
             return eD.I;
         },
