@@ -86,7 +86,7 @@ function S(e) {
                 subsection: void 0
             });
     }, [E, A]);
-    let R = i.useCallback(
+    let j = i.useCallback(
         (e) => {
             T({
                 action: 'PRESS_SECTION',
@@ -120,7 +120,7 @@ function S(e) {
                       className: p.tabBar,
                       type: 'top',
                       selectedItem: A,
-                      onItemSelect: R,
+                      onItemSelect: j,
                       children: E.map((e) => {
                           let { section: n, text: t } = e;
                           return (0, s.jsx)(

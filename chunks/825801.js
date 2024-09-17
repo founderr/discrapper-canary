@@ -99,23 +99,23 @@ let N = 1800,
             )
             .exhaustive();
 function C(e) {
-    let { user: t, channel: n, sourceType: i, sourceDetails: s, isVisible: E, isExpandable: O, onInteraction: C, setInteractionToastShown: y, setInteractionSent: L, setIsReplyInteraction: D, reactButtonRef: b, replyButtonRef: M, onClose: P } = e,
-        { trackUserProfileAction: U } = (0, h.KZ)(),
-        w = (0, o.e7)([d.Z], () => d.Z.theme),
-        { sendReact: x, pressReact: G, pressReply: k } = (0, I.Q)(i),
-        B = (0, o.e7)([_.default], () => _.default.getId() === t.id),
-        F = (0, p.Z)(t.id);
-    if (t.bot || B || !F) return null;
-    let V = async (e) => {
+    let { user: t, channel: n, sourceType: i, sourceDetails: s, isVisible: E, isExpandable: O, onInteraction: C, setInteractionToastShown: y, setInteractionTypeSent: L, reactButtonRef: D, replyButtonRef: b, onClose: M } = e,
+        { trackUserProfileAction: P } = (0, h.KZ)(),
+        U = (0, o.e7)([d.Z], () => d.Z.theme),
+        { sendReact: w, pressReact: x, pressReply: G } = (0, I.Q)(i),
+        k = (0, o.e7)([_.default], () => _.default.getId() === t.id),
+        B = (0, p.Z)(t.id);
+    if (t.bot || k || !B) return null;
+    let F = async (e) => {
         if (null == e) return;
-        U({ action: x });
+        P({ action: w });
         let n = R({
             emoji: e,
             username: f.ZP.getName(t),
             sourceType: i,
             sourceDetails: s
         });
-        D(!1), L(!1), y(!0);
+        L(null), y(!0);
         try {
             await (0, m.Z)({
                 userId: t.id,
@@ -125,7 +125,7 @@ function C(e) {
                 whenReady: !1
             });
         } catch (e) {}
-        L(!0),
+        L(T.P.REACT),
             setTimeout(() => {
                 y(!1);
             }, N);
@@ -161,13 +161,13 @@ function C(e) {
                     renderPopout: (e) => {
                         let { closePopout: t } = e;
                         return (0, r.jsx)(l.ThemeProvider, {
-                            theme: w,
+                            theme: U,
                             children: (e) =>
                                 (0, r.jsx)(c.Z, {
                                     guildId: null == n ? void 0 : n.guild_id,
                                     closePopout: t,
                                     onSelectEmoji: async (e, n) => {
-                                        await V(e), n && (t(), null == P || P());
+                                        await F(e), n && (t(), null == M || M());
                                     },
                                     pickerIntention: S.Hz.PROFILE,
                                     channel: n,
@@ -183,10 +183,10 @@ function C(e) {
                     align: 'top',
                     children: (e) =>
                         (0, r.jsx)(u.zx, {
-                            innerRef: b,
+                            innerRef: D,
                             ...e,
                             onClick: (t) => {
-                                U({ action: G }), e.onClick(t);
+                                P({ action: x }), e.onClick(t);
                             },
                             className: a()(A.button, A.left),
                             'aria-label': v(T.P.REACT, i),
@@ -203,9 +203,9 @@ function C(e) {
                 delay: 0,
                 'aria-label': !1,
                 children: (0, r.jsx)(u.zx, {
-                    innerRef: M,
+                    innerRef: b,
                     onClick: () => {
-                        U({ action: k }),
+                        P({ action: G }),
                             null == C ||
                                 C({
                                     interactionType: T.P.REPLY,

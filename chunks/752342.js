@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return R;
+        return j;
     }
 }),
     t(47120);
@@ -30,9 +30,9 @@ var i = t(481060),
     A = t(981631),
     N = t(689938),
     L = t(272216);
-function R(e) {
-    let { user: n, currentUser: t, guildId: R, channelId: j, messageId: M, roleId: b, sessionId: O, initialSection: C, initialSubsection: P, transitionState: y, onClose: U, sourceAnalyticsLocations: D = [] } = e,
-        F = R === A.ME ? void 0 : R,
+function j(e) {
+    let { user: n, currentUser: t, guildId: j, channelId: M, messageId: b, roleId: R, sessionId: O, initialSection: C, initialSubsection: P, transitionState: y, onClose: U, sourceAnalyticsLocations: D = [] } = e,
+        F = j === A.ME ? void 0 : j,
         B = (0, c.ZP)(n.id, F),
         { analyticsLocations: G } = (0, l.ZP)([...D, o.Z.SIMPLIFIED_PROFILE_MODAL]),
         w = (0, a.ZB)({
@@ -40,11 +40,11 @@ function R(e) {
             userId: n.id,
             sourceSessionId: O,
             guildId: F,
-            channelId: j,
-            messageId: M,
-            roleId: b
+            channelId: M,
+            messageId: b,
+            roleId: R
         }),
-        V = (0, T.Z)(n);
+        k = (0, T.Z)(n);
     return (0, s.jsx)(l.Gt, {
         value: G,
         children: (0, s.jsx)(a.Mt, {
@@ -80,7 +80,7 @@ function R(e) {
                                             user: n,
                                             displayProfile: B,
                                             guildId: F,
-                                            channelId: j,
+                                            channelId: M,
                                             profileType: g.y0.FULL_SIZE
                                         }),
                                         (0, s.jsx)(I.Z, {
@@ -119,7 +119,7 @@ function R(e) {
                                 (0, s.jsx)(m.Z, {
                                     user: n,
                                     profileType: g.y0.FULL_SIZE,
-                                    nickname: r.ZP.getName(F, j, n),
+                                    nickname: r.ZP.getName(F, M, n),
                                     pronouns: null == B ? void 0 : B.pronouns,
                                     nicknameVariant: 'heading-xl/bold',
                                     nicknameIcons: (0, s.jsx)(E.Z, { userId: n.id }),
@@ -135,7 +135,7 @@ function R(e) {
                                         user: n,
                                         currentUser: t,
                                         displayProfile: B,
-                                        items: V,
+                                        items: k,
                                         initialSection: null != C ? C : g.oh.BOT_INFO,
                                         initialSubsection: P,
                                         onClose: U

@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return j;
+        return M;
     }
 }),
     t(47120);
@@ -29,9 +29,9 @@ var s = t(735250),
     A = t(689938),
     N = t(272216),
     L = t(11633),
-    R = t(722849);
-function j(e) {
-    let { user: n, guildId: t, channelId: j, messageId: M, roleId: b, sessionId: O, transitionState: C, onClose: P, sourceAnalyticsLocations: y = [] } = e,
+    j = t(722849);
+function M(e) {
+    let { user: n, guildId: t, channelId: M, messageId: b, roleId: R, sessionId: O, transitionState: C, onClose: P, sourceAnalyticsLocations: y = [] } = e,
         U = t === g.ME ? void 0 : t,
         D = (0, _.ZP)(n.id, U),
         { analyticsLocations: F } = (0, a.ZP)([...y, r.Z.SIMPLIFIED_PROFILE_MODAL]),
@@ -40,9 +40,9 @@ function j(e) {
             userId: n.id,
             sourceSessionId: O,
             guildId: U,
-            channelId: j,
-            messageId: M,
-            roleId: b
+            channelId: M,
+            messageId: b,
+            roleId: R
         }),
         G = i.createRef(),
         w = (0, l.Z)(G);
@@ -79,7 +79,7 @@ function j(e) {
                                             user: n,
                                             displayProfile: D,
                                             guildId: U,
-                                            channelId: j,
+                                            channelId: M,
                                             profileType: T.y0.FULL_SIZE
                                         })
                                     })
@@ -91,7 +91,7 @@ function j(e) {
                                     (0, s.jsx)(h.Z, {
                                         user: n,
                                         profileType: T.y0.FULL_SIZE,
-                                        nickname: d.ZP.getName(U, j, n),
+                                        nickname: d.ZP.getName(U, M, n),
                                         pronouns: null == D ? void 0 : D.pronouns,
                                         nicknameVariant: 'heading-xl/bold',
                                         tags: (0, s.jsx)(E.Z, {
@@ -103,17 +103,17 @@ function j(e) {
                                     (0, s.jsx)(p.Z.Overlay, {
                                         className: N.overlay,
                                         children: (0, s.jsxs)('div', {
-                                            className: R.container,
+                                            className: j.container,
                                             children: [
                                                 (0, s.jsx)(o.TabBar, {
-                                                    className: R.tabBar,
+                                                    className: j.tabBar,
                                                     type: 'top',
                                                     selectedItem: T.oh.BOT_INFO,
                                                     onItemSelect: g.dG4,
                                                     children: (0, s.jsx)(
                                                         o.TabBar.Item,
                                                         {
-                                                            className: R.tabBarItem,
+                                                            className: j.tabBarItem,
                                                             id: T.oh.BOT_INFO,
                                                             'aria-label': A.Z.Messages.USER_PROFILE_ABOUT_ME,
                                                             children: (0, s.jsx)(o.Text, {

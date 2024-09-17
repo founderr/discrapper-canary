@@ -28,10 +28,10 @@ function v(e) {
         { theme: A } = (0, x.z)(),
         { trackUserProfileAction: N } = (0, d.KZ)(),
         L = null == v ? void 0 : v.guildId,
-        R = (0, i.e7)([a.Z], () => (null != L ? a.Z.getGuild(L) : null)),
-        j = (0, i.e7)([c.Z], () => c.Z.getGuildId()),
-        M = (0, i.e7)([r.default], () => r.default.locale),
-        b = (0, _.Z)(n.id),
+        j = (0, i.e7)([a.Z], () => (null != L ? a.Z.getGuild(L) : null)),
+        M = (0, i.e7)([c.Z], () => c.Z.getGuildId()),
+        b = (0, i.e7)([r.default], () => r.default.locale),
+        R = (0, _.Z)(n.id),
         O = (0, u.Z)(n.id);
     return (0, s.jsxs)(o.ScrollerThin, {
         fade: !0,
@@ -43,11 +43,11 @@ function v(e) {
                     userBio: v.bio,
                     setLineClamp: !1
                 }),
-            null != R &&
+            null != j &&
                 (0, s.jsx)(Z.Z, {
                     user: n,
                     currentUser: t,
-                    guild: R,
+                    guild: j,
                     scrollIntoView: T === p.Tb.ROLES
                 }),
             (0, s.jsx)(m.Z, {
@@ -58,16 +58,16 @@ function v(e) {
                     tooltipDelay: p.vB
                 })
             }),
-            b.length > 0 &&
+            R.length > 0 &&
                 (0, s.jsx)(m.Z, {
                     heading: h.Z.Messages.CONNECTIONS,
                     scrollIntoView: T === p.Tb.CONNECTIONS,
                     children: (0, s.jsx)(E.OA, {
-                        connectedAccounts: b,
+                        connectedAccounts: R,
                         className: S.connections,
                         userId: n.id,
                         theme: A,
-                        locale: M
+                        locale: b
                     })
                 }),
             O.length > 0 &&
@@ -79,11 +79,11 @@ function v(e) {
                             {
                                 className: S.appsConnections,
                                 applicationRoleConnection: e,
-                                locale: M,
+                                locale: b,
                                 onApplicationClicked: () => {
                                     N({ action: 'PRESS_APP_CONNECTION' }), g();
                                 },
-                                selectedGuildId: null != j ? j : void 0
+                                selectedGuildId: null != M ? M : void 0
                             },
                             e.application.id
                         )

@@ -9,8 +9,8 @@ var r = n(735250),
     l = n(120356),
     i = n.n(l),
     o = n(913527),
-    c = n.n(o),
-    s = n(442837),
+    s = n.n(o),
+    c = n(442837),
     d = n(481060),
     u = n(129861),
     h = n(665149),
@@ -74,8 +74,8 @@ let I = [
                         loggedEvent: { event: t, properties: n, timestamp: a, fingerprint: l },
                         onClose: o
                     } = e,
-                    s = m.default.getUser(l),
-                    f = c()(a);
+                    c = m.default.getUser(l),
+                    f = s()(a);
                 return (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsxs)(h.ZP, {
@@ -107,10 +107,10 @@ let I = [
                                         children: (0, x.Y4)(f)
                                     })
                                 }),
-                                null != s &&
+                                null != c &&
                                     (0, r.jsx)(g.Z9, {
                                         name: 'User',
-                                        children: (0, r.jsx)(u.Z, { user: s })
+                                        children: (0, r.jsx)(u.Z, { user: c })
                                     }),
                                 (0, r.jsx)(g.Z9, {
                                     name: 'Fingerprint',
@@ -172,14 +172,14 @@ let I = [
     };
 function k() {
     let e = a.useRef(null),
-        t = (0, s.e7)([f.Z], () => f.Z.loggedEvents),
+        t = (0, c.e7)([f.Z], () => f.Z.loggedEvents),
         [n, l] = a.useState(Object.keys(w)),
         o = t.filter((e) => {
             for (let t of n) if (w[t].filter(e)) return !0;
             return !1;
         }),
-        [c, u] = a.useState(void 0),
-        h = o.find((e) => e.key === c),
+        [s, u] = a.useState(void 0),
+        h = o.find((e) => e.key === s),
         { TabBar: m, renderSelectedTab: x } = (0, _.Z)({ tabs: I }, []);
     return (0, r.jsxs)('div', {
         ref: e,
@@ -226,7 +226,7 @@ function k() {
             (0, r.jsx)(v.Z, {
                 columns: S,
                 data: o,
-                selectedRowKey: c,
+                selectedRowKey: s,
                 onClickRow: (e) => u(e.key)
             }),
             null != h &&

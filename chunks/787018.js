@@ -24,8 +24,8 @@ var s = t(735250),
 function h(e) {
     let { user: n, guildId: t, channelId: h, messageId: S, roleId: v, transitionState: T, onViewBlockedProfileClick: g, showGuildProfile: A = !0, sourceAnalyticsLocations: N = [] } = e,
         L = t === m.ME ? void 0 : t,
-        { analyticsLocations: R } = (0, r.ZP)([...N, l.Z.BLOCKED_PROFILE_MODAL]),
-        j = (0, c.ZB)({
+        { analyticsLocations: j } = (0, r.ZP)([...N, l.Z.BLOCKED_PROFILE_MODAL]),
+        M = (0, c.ZB)({
             layout: 'BLOCKED_PROFILE_MODAL',
             userId: n.id,
             guildId: L,
@@ -34,7 +34,7 @@ function h(e) {
             roleId: v,
             showGuildProfile: A
         }),
-        M = [
+        b = [
             {
                 icon: o.BellSlashIcon,
                 description: x.Z.Messages.USER_PROFILE_BLOCKED_SPEED_BUMP_ACTION_SHEET_NOTIFIED
@@ -44,12 +44,12 @@ function h(e) {
                 description: x.Z.Messages.USER_PROFILE_BLOCKED_SPEED_BUMP_ACTION_SHEET_STILL_BLOCKED
             }
         ],
-        b = (0, u.ZP)(n.id, A ? L : void 0),
+        R = (0, u.ZP)(n.id, A ? L : void 0),
         O = i.createRef();
     return (0, s.jsx)(r.Gt, {
-        value: R,
+        value: j,
         children: (0, s.jsx)(c.Mt, {
-            value: j,
+            value: M,
             children: (0, s.jsx)(o.ModalRoot, {
                 transitionState: T,
                 className: Z.root,
@@ -57,7 +57,7 @@ function h(e) {
                 'aria-label': x.Z.Messages.USER_PROFILE_MODAL,
                 children: (0, s.jsx)(I.Z, {
                     user: n,
-                    displayProfile: b,
+                    displayProfile: R,
                     profileType: f.y0.FULL_SIZE,
                     ref: O,
                     children: (0, s.jsxs)('div', {
@@ -91,7 +91,7 @@ function h(e) {
                                     }),
                                     (0, s.jsx)('div', {
                                         className: Z.safetyTable,
-                                        children: M.map((e, n) => {
+                                        children: b.map((e, n) => {
                                             let { icon: t, description: i } = e;
                                             return (0, s.jsx)(
                                                 a.Z,
@@ -114,8 +114,8 @@ function h(e) {
                                             null == g || g(),
                                                 (0, d.pQ)({
                                                     action: 'VIEW_BLOCKED_PROFILE',
-                                                    analyticsLocations: R,
-                                                    ...j
+                                                    analyticsLocations: j,
+                                                    ...M
                                                 });
                                         }
                                     })
