@@ -76,23 +76,24 @@ t.Z = (e) => {
         { ref: G, width: w, scrollWidth: V } = (0, _.Z)(),
         H = (0, c.e7)([m.Z], () => m.Z.getState().theme),
         Y = (0, c.e7)([E.Z], () => E.Z.useReducedMotion),
-        W = s.useMemo(() => (0, C.nP)(u.config.assets.hero), [u]),
-        K = s.useRef(null),
-        z = (0, O.uq)(I),
-        Q = I === f.jn.QUESTS_EMBED,
-        q = (0, N.t5)(u, x.dr.QUESTS_CARD, I),
-        X = (null === (t = u.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
-        J = (0, N.B6)(u.config.expiresAt, {
+        W = (0, C.j8)(u),
+        K = s.useMemo(() => (0, C.nP)(W), [W]),
+        z = s.useRef(null),
+        Q = (0, O.uq)(I),
+        q = I === f.jn.QUESTS_EMBED,
+        X = (0, N.t5)(u, x.dr.QUESTS_CARD, I),
+        J = (null === (t = u.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
+        $ = (0, N.B6)(u.config.expiresAt, {
             year: 'numeric',
             month: 'long',
             day: 'numeric'
         }),
-        $ = (0, N.B6)(p.r.build(u.config).rewardsExpireAt, {
+        ee = (0, N.B6)(p.r.build(u.config).rewardsExpireAt, {
             year: 'numeric',
             month: 'long',
             day: 'numeric'
         }),
-        ee = (e) => {
+        et = (e) => {
             e.stopPropagation(),
                 e.currentTarget.blur(),
                 B(),
@@ -103,228 +104,229 @@ t.Z = (e) => {
                     questContentPosition: y
                 });
         };
-    s.useEffect(() => {
-        W && null != K.current && (n ? K.current.play() : !n && (K.current.pause(), (K.current.currentTime = 0)));
-    }, [n, W]);
-    let et = (0, C.j8)(u);
-    return (0, i.jsxs)('div', {
-        className: r()(v.outerContainer, {
-            [v.outerContainerGiftInventory]: z,
-            [v.outerContainerEmbed]: Q,
-            [v.outerContainerXs]: 'xs' === T
-        }),
-        'aria-label': M.Z.Messages.EXPAND,
-        style: { height: z ? F : void 0 },
-        children: [
-            (0, i.jsx)(Z, {
-                style: {
-                    opacity: D.to({
-                        range: [0, 1],
-                        output: [0.25, 1]
-                    })
-                },
-                autoPlay: !1,
-                loop: !1,
-                muted: !0,
-                playsInline: !0,
-                className: v.questSplash,
-                controls: !1,
-                poster: et,
-                ref: K,
-                children:
-                    !Y &&
-                    W &&
-                    (0, i.jsx)('source', {
-                        src: et,
-                        type: (0, C.mN)(et)
-                    })
+    return (
+        s.useEffect(() => {
+            K && null != z.current && (n ? z.current.play() : !n && (z.current.pause(), (z.current.currentTime = 0)));
+        }, [n, K]),
+        (0, i.jsxs)('div', {
+            className: r()(v.outerContainer, {
+                [v.outerContainerGiftInventory]: Q,
+                [v.outerContainerEmbed]: q,
+                [v.outerContainerXs]: 'xs' === T
             }),
-            (0, i.jsxs)('div', {
-                className: v.header,
-                'aria-expanded': j,
-                children: [
-                    (0, i.jsxs)(l.animated.div, {
-                        className: r()(v.headerContent, { [v.headerContentEmbed]: Q }),
-                        style: {
-                            y: z
-                                ? D.to({
-                                      range: [0, 1],
-                                      output: [O.DJ, 0]
-                                  })
-                                : void 0
-                        },
-                        children: [
-                            z &&
-                                (0, i.jsx)(l.animated.div, {
-                                    className: v.headerCollapsedContent,
+            'aria-label': M.Z.Messages.EXPAND,
+            style: { height: Q ? F : void 0 },
+            children: [
+                (0, i.jsx)(Z, {
+                    style: {
+                        opacity: D.to({
+                            range: [0, 1],
+                            output: [0.25, 1]
+                        })
+                    },
+                    autoPlay: !1,
+                    loop: !1,
+                    muted: !0,
+                    playsInline: !0,
+                    className: v.questSplash,
+                    controls: !1,
+                    poster: W,
+                    ref: z,
+                    children:
+                        !Y &&
+                        K &&
+                        (0, i.jsx)('source', {
+                            src: W,
+                            type: (0, C.mN)(W)
+                        })
+                }),
+                (0, i.jsxs)('div', {
+                    className: v.header,
+                    'aria-expanded': j,
+                    children: [
+                        (0, i.jsxs)(l.animated.div, {
+                            className: r()(v.headerContent, { [v.headerContentEmbed]: q }),
+                            style: {
+                                y: Q
+                                    ? D.to({
+                                          range: [0, 1],
+                                          output: [O.DJ, 0]
+                                      })
+                                    : void 0
+                            },
+                            children: [
+                                Q &&
+                                    (0, i.jsx)(l.animated.div, {
+                                        className: v.headerCollapsedContent,
+                                        style: {
+                                            opacity: D.to({
+                                                range: [0, 1],
+                                                output: [1, 0]
+                                            }),
+                                            visibility: b || !j ? 'inherit' : 'hidden'
+                                        },
+                                        'aria-hidden': !b && j,
+                                        children: (0, i.jsxs)(d.ClickableContainer, {
+                                            'aria-label': M.Z.Messages.EXPAND,
+                                            onClick: et,
+                                            className: v.headerCollapsedClickableContainer,
+                                            children: [
+                                                (0, i.jsx)('div', {
+                                                    className: v.headerCollapsedContentRewardWrapper,
+                                                    children: (0, i.jsx)(A.Z, {
+                                                        quest: u,
+                                                        questContent: I,
+                                                        className: v.headerCollapsedRewardTile,
+                                                        location: x.dr.QUESTS_CARD
+                                                    })
+                                                }),
+                                                (0, i.jsxs)('div', {
+                                                    className: v.headerCollapsedContentCopyWrapper,
+                                                    children: [
+                                                        (0, i.jsxs)('div', {
+                                                            className: v.headerCollapsedContentCopyLogos,
+                                                            children: [
+                                                                (0, i.jsx)(g.Z, {
+                                                                    className: v.partnerBranding,
+                                                                    gameTileSize: g.f.MEDIUM,
+                                                                    quest: u,
+                                                                    theme: H
+                                                                }),
+                                                                (0, i.jsx)(S.Z, { color: 'always-white' })
+                                                            ]
+                                                        }),
+                                                        (0, i.jsx)(d.Text, {
+                                                            variant: 'text-xs/medium',
+                                                            children: X
+                                                        })
+                                                    ]
+                                                })
+                                            ]
+                                        })
+                                    }),
+                                (0, i.jsxs)(l.animated.div, {
+                                    ref: (e) => {
+                                        k.current = e;
+                                    },
+                                    className: r()(v.headerExpandedContent, {
+                                        [v.outerContainerGiftInventory]: Q,
+                                        [v.outerContainerEmbed]: q
+                                    }),
                                     style: {
                                         opacity: D.to({
                                             range: [0, 1],
-                                            output: [1, 0]
+                                            output: [0, 1]
                                         }),
-                                        visibility: b || !j ? 'inherit' : 'hidden'
+                                        visibility: b || j ? 'inherit' : 'hidden'
                                     },
-                                    'aria-hidden': !b && j,
-                                    children: (0, i.jsxs)(d.ClickableContainer, {
-                                        'aria-label': M.Z.Messages.EXPAND,
-                                        onClick: ee,
-                                        className: v.headerCollapsedClickableContainer,
-                                        children: [
-                                            (0, i.jsx)('div', {
-                                                className: v.headerCollapsedContentRewardWrapper,
-                                                children: (0, i.jsx)(A.Z, {
-                                                    quest: u,
-                                                    questContent: I,
-                                                    className: v.headerCollapsedRewardTile,
-                                                    location: x.dr.QUESTS_CARD
+                                    'aria-hidden': !b && !j,
+                                    children: [
+                                        (0, i.jsxs)('div', {
+                                            className: v.headerExpandedWrapper,
+                                            children: [
+                                                (0, i.jsxs)('div', {
+                                                    className: v.iconLogotypeContainer,
+                                                    children: [
+                                                        (0, i.jsx)(g.Z, {
+                                                            className: v.partnerBranding,
+                                                            gameTileSize: g.f.MEDIUM,
+                                                            quest: u,
+                                                            theme: H
+                                                        }),
+                                                        q ? null : (0, i.jsx)(S.Z, { color: 'always-white' })
+                                                    ]
+                                                }),
+                                                (0, i.jsxs)('div', {
+                                                    className: v.questInfo,
+                                                    children: [
+                                                        (0, i.jsx)(d.Tooltip, {
+                                                            text: u.config.messages.questName,
+                                                            shouldShow: null != w && null != V && w < V,
+                                                            children: (e) =>
+                                                                (0, i.jsx)(d.Heading, {
+                                                                    ref: G,
+                                                                    variant: 'lg' === T ? 'heading-xxl/bold' : 'sm' === T ? 'heading-xl/bold' : 'heading-lg/bold',
+                                                                    className: v.heading,
+                                                                    ...e,
+                                                                    children: M.Z.Messages.QUEST.format({ questName: u.config.messages.questName })
+                                                                })
+                                                        }),
+                                                        (0, i.jsx)(d.Text, {
+                                                            variant: 'text-xs/normal',
+                                                            children: J ? M.Z.Messages.QUESTS_CLAIM_BY_DATE.format({ expirationDate: ee }) : a ? M.Z.Messages.QUESTS_EXPIRED_ON.format({ expirationDate: $ }) : M.Z.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({ expirationDate: $ })
+                                                        })
+                                                    ]
                                                 })
-                                            }),
-                                            (0, i.jsxs)('div', {
-                                                className: v.headerCollapsedContentCopyWrapper,
-                                                children: [
-                                                    (0, i.jsxs)('div', {
-                                                        className: v.headerCollapsedContentCopyLogos,
-                                                        children: [
-                                                            (0, i.jsx)(g.Z, {
-                                                                className: v.partnerBranding,
-                                                                gameTileSize: g.f.MEDIUM,
-                                                                quest: u,
-                                                                theme: H
-                                                            }),
-                                                            (0, i.jsx)(S.Z, { color: 'always-white' })
-                                                        ]
-                                                    }),
-                                                    (0, i.jsx)(d.Text, {
-                                                        variant: 'text-xs/medium',
-                                                        children: q
-                                                    })
-                                                ]
+                                            ]
+                                        }),
+                                        !a &&
+                                            Q &&
+                                            (0, i.jsx)(P, {
+                                                quest: u,
+                                                location: I,
+                                                questContentPosition: y
                                             })
-                                        ]
-                                    })
-                                }),
-                            (0, i.jsxs)(l.animated.div, {
-                                ref: (e) => {
-                                    k.current = e;
-                                },
-                                className: r()(v.headerExpandedContent, {
-                                    [v.outerContainerGiftInventory]: z,
-                                    [v.outerContainerEmbed]: Q
-                                }),
-                                style: {
-                                    opacity: D.to({
-                                        range: [0, 1],
-                                        output: [0, 1]
-                                    }),
-                                    visibility: b || j ? 'inherit' : 'hidden'
-                                },
-                                'aria-hidden': !b && !j,
-                                children: [
-                                    (0, i.jsxs)('div', {
-                                        className: v.headerExpandedWrapper,
-                                        children: [
-                                            (0, i.jsxs)('div', {
-                                                className: v.iconLogotypeContainer,
-                                                children: [
-                                                    (0, i.jsx)(g.Z, {
-                                                        className: v.partnerBranding,
-                                                        gameTileSize: g.f.MEDIUM,
-                                                        quest: u,
-                                                        theme: H
-                                                    }),
-                                                    Q ? null : (0, i.jsx)(S.Z, { color: 'always-white' })
-                                                ]
-                                            }),
-                                            (0, i.jsxs)('div', {
-                                                className: v.questInfo,
-                                                children: [
-                                                    (0, i.jsx)(d.Tooltip, {
-                                                        text: u.config.messages.questName,
-                                                        shouldShow: null != w && null != V && w < V,
-                                                        children: (e) =>
-                                                            (0, i.jsx)(d.Heading, {
-                                                                ref: G,
-                                                                variant: 'lg' === T ? 'heading-xxl/bold' : 'sm' === T ? 'heading-xl/bold' : 'heading-lg/bold',
-                                                                className: v.heading,
-                                                                ...e,
-                                                                children: M.Z.Messages.QUEST.format({ questName: u.config.messages.questName })
-                                                            })
-                                                    }),
-                                                    (0, i.jsx)(d.Text, {
-                                                        variant: 'text-xs/normal',
-                                                        children: X ? M.Z.Messages.QUESTS_CLAIM_BY_DATE.format({ expirationDate: $ }) : a ? M.Z.Messages.QUESTS_EXPIRED_ON.format({ expirationDate: J }) : M.Z.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({ expirationDate: J })
-                                                    })
-                                                ]
-                                            })
-                                        ]
-                                    }),
-                                    !a &&
-                                        z &&
-                                        (0, i.jsx)(P, {
-                                            quest: u,
-                                            location: I,
-                                            questContentPosition: y
-                                        })
-                                ]
-                            })
-                        ]
-                    }),
-                    (0, i.jsxs)(l.animated.div, {
-                        className: v.iconsContainer,
-                        style: {
-                            top: z
-                                ? D.to({
-                                      range: [0, 1],
-                                      output: [O.DJ / 2 - O.Z$ / 2, O.jc]
-                                  })
-                                : O.jc
-                        },
-                        children: [
-                            (0, i.jsx)(R.r, {
-                                questContent: I,
-                                quest: u,
-                                questContentPosition: y,
-                                shouldShowDisclosure: !0,
-                                hideLearnMore: z,
-                                showShareLink: !a && Q,
-                                children: (e) =>
-                                    (0, i.jsx)(l.animated.div, {
-                                        style: {
-                                            opacity: D,
-                                            visibility: b || j ? 'inherit' : 'hidden'
-                                        },
-                                        'aria-hidden': !b && !j,
-                                        children: (0, i.jsx)(d.Clickable, {
-                                            ...e,
-                                            className: v.iconWrapper,
-                                            'aria-label': M.Z.Messages.ACTIONS,
-                                            children: (0, i.jsx)(d.MoreHorizontalIcon, {
-                                                size: 'md',
-                                                color: o.Z.WHITE
-                                            })
-                                        })
-                                    })
-                            }),
-                            U &&
-                                !(0, O.W_)(I) &&
-                                (0, i.jsx)(d.Clickable, {
-                                    onClick: ee,
-                                    className: v.iconWrapper,
-                                    'aria-label': j ? M.Z.Messages.COLLAPSE : M.Z.Messages.EXPAND,
-                                    children: (0, i.jsx)(L, {
-                                        style: {
-                                            rotate: D.to({
-                                                range: [0, 1],
-                                                output: [0, 180]
-                                            })
-                                        },
-                                        color: o.Z.WHITE
-                                    })
+                                    ]
                                 })
-                        ]
-                    })
-                ]
-            })
-        ]
-    });
+                            ]
+                        }),
+                        (0, i.jsxs)(l.animated.div, {
+                            className: v.iconsContainer,
+                            style: {
+                                top: Q
+                                    ? D.to({
+                                          range: [0, 1],
+                                          output: [O.DJ / 2 - O.Z$ / 2, O.jc]
+                                      })
+                                    : O.jc
+                            },
+                            children: [
+                                (0, i.jsx)(R.r, {
+                                    questContent: I,
+                                    quest: u,
+                                    questContentPosition: y,
+                                    shouldShowDisclosure: !0,
+                                    hideLearnMore: Q,
+                                    showShareLink: !a && q,
+                                    children: (e) =>
+                                        (0, i.jsx)(l.animated.div, {
+                                            style: {
+                                                opacity: D,
+                                                visibility: b || j ? 'inherit' : 'hidden'
+                                            },
+                                            'aria-hidden': !b && !j,
+                                            children: (0, i.jsx)(d.Clickable, {
+                                                ...e,
+                                                className: v.iconWrapper,
+                                                'aria-label': M.Z.Messages.ACTIONS,
+                                                children: (0, i.jsx)(d.MoreHorizontalIcon, {
+                                                    size: 'md',
+                                                    color: o.Z.WHITE
+                                                })
+                                            })
+                                        })
+                                }),
+                                U &&
+                                    !(0, O.W_)(I) &&
+                                    (0, i.jsx)(d.Clickable, {
+                                        onClick: et,
+                                        className: v.iconWrapper,
+                                        'aria-label': j ? M.Z.Messages.COLLAPSE : M.Z.Messages.EXPAND,
+                                        children: (0, i.jsx)(L, {
+                                            style: {
+                                                rotate: D.to({
+                                                    range: [0, 1],
+                                                    output: [0, 180]
+                                                })
+                                            },
+                                            color: o.Z.WHITE
+                                        })
+                                    })
+                            ]
+                        })
+                    ]
+                })
+            ]
+        })
+    );
 };

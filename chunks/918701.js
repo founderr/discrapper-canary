@@ -312,7 +312,8 @@ function Z(e) {
         type: e.type,
         name: e.name,
         nameWithArticle: e.name_with_article,
-        asset: e.asset
+        asset: e.asset,
+        assetVideo: e.asset_video
     };
 }
 function Y(e) {
@@ -330,7 +331,9 @@ function Y(e) {
             },
             assets: {
                 hero: t.assets.hero,
+                heroVideo: t.assets.hero_video,
                 questBarHero: t.assets.quest_bar_hero,
+                questBarHeroVideo: t.assets.quest_bar_hero_video,
                 gameTile: t.assets.game_tile,
                 logotype: t.assets.logotype
             },
@@ -399,8 +402,14 @@ let q = (e) => {
             url: z(a, ''.concat(D).concat(e.id, '/').concat(a))
         };
     },
-    Q = (e) => z(e.config.assets.hero, ''.concat(D).concat(e.id, '/').concat(e.config.assets.hero)),
-    X = (e) => z(e.config.assets.questBarHero, ''.concat(D).concat(e.id, '/').concat(e.config.assets.questBarHero)),
+    Q = (e) => {
+        let t = null != e.config.assets.heroVideo ? e.config.assets.heroVideo : e.config.assets.hero;
+        return z(t, ''.concat(D).concat(e.id, '/').concat(t));
+    },
+    X = (e) => {
+        let t = null != e.config.assets.questBarHeroVideo ? e.config.assets.questBarHeroVideo : e.config.assets.questBarHero;
+        return z(t, ''.concat(D).concat(e.id, '/').concat(t));
+    },
     $ = (e, t) => z(e.config.assets.gameTile, ''.concat(D).concat(e.id, '/').concat(t, '/').concat(e.config.assets.gameTile)),
     J = (e, t) => z(e.config.assets.logotype, ''.concat(D).concat(e.id, '/').concat(t, '/').concat(e.config.assets.logotype)),
     ee = (e, t, n) => {
