@@ -22302,10 +22302,9 @@ span.clanTag_a31c43 {
 @use postcss-pxtorem;
 
 .gameIcon_aaf548 {
-    position: relative;
-    top: .1875rem;
     cursor: pointer;
-    margin-left: 4px
+    margin-left: 4px;
+    vertical-align: middle
 }
 
 .gameMessageTooltip_aaf548 {
