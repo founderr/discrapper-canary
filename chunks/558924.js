@@ -10,25 +10,24 @@ var r = t(442837),
     a = t(481060),
     s = t(26151),
     o = t(358221),
-    d = t(314897),
+    d = t(985588),
     l = t(354459),
     u = t(689938);
 function c(e, n) {
-    let t = (0, r.e7)([d.default], () => d.default.getId() === e, [e]),
-        [c, I] = (0, r.Wu)([o.Z], () => [o.Z.getParticipants(n), o.Z.getParticipant(n, e)], [n, e]);
-    return t || 0 === c.length
-        ? null
-        : null == I
-          ? (0, i.jsx)(a.MenuItem, {
-                id: 'ring',
-                label: u.Z.Messages.RING,
-                action: () => s.Z.ring(n, [e])
-            })
-          : I.type === l.fO.USER && I.ringing
+    let [t, c] = (0, r.Wu)([o.Z], () => [o.Z.getParticipants(n), o.Z.getParticipant(n, e.id)], [n, e.id]);
+    return (0, d.s)(e) && 0 !== t.length
+        ? null == c
             ? (0, i.jsx)(a.MenuItem, {
-                  id: 'stop-ringing',
-                  label: u.Z.Messages.STOP_RINGING,
-                  action: () => s.Z.stopRinging(n, [e])
+                  id: 'ring',
+                  label: u.Z.Messages.RING,
+                  action: () => s.Z.ring(n, [e.id])
               })
-            : null;
+            : c.type === l.fO.USER && c.ringing
+              ? (0, i.jsx)(a.MenuItem, {
+                    id: 'stop-ringing',
+                    label: u.Z.Messages.STOP_RINGING,
+                    action: () => s.Z.stopRinging(n, [e.id])
+                })
+              : null
+        : null;
 }

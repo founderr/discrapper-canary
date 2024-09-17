@@ -5779,6 +5779,7 @@ e.exports = Object.freeze({
     REGION: 'region',
     CALL_UNAVAILABLE: 'Call Unavailable',
     CALL_UNAVAILABLE_BLOCKED_USERS: 'You cannot call a user you have blocked',
+    CALL_UNAVAILABLE_PROVISIONAL_USER: 'You cannot call a game account',
     VOICE_UNAVAILABLE: 'Voice Unavailable',
     VIDEO_UNAVAILABLE: 'Video Unavailable',
     GROUPS: 'Groups',

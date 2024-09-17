@@ -722,46 +722,48 @@ function ed(e) {
     });
 }
 function eh(e) {
-    let { channel: t, iconClassName: n, icon: i, tooltip: l, tooltipPosition: r = 'bottom', popoutPosition: o = 'bottom', popoutAlign: c = 'right', subscribeToGlobalHotkey: u = !1 } = e,
-        [d, h] = a.useState(null != t && t.isGroupDM() && 0 === t.recipients.length),
-        m = a.useCallback(() => h((e) => !e), []);
-    return (
-        a.useEffect(
-            () => (
-                u && z.S.subscribe($.CkL.TOGGLE_DM_CREATE, m),
-                () => {
-                    z.S.unsubscribe($.CkL.TOGGLE_DM_CREATE, m);
-                }
-            ),
-            [u, m]
+    var t, n;
+    let { channel: i, iconClassName: l, icon: r, tooltip: o, tooltipPosition: c = 'bottom', popoutPosition: u = 'bottom', popoutAlign: d = 'right', subscribeToGlobalHotkey: h = !1 } = e,
+        [_, f] = a.useState(null != i && i.isGroupDM() && 0 === i.recipients.length),
+        E = a.useCallback(() => f((e) => !e), []);
+    a.useEffect(
+        () => (
+            h && z.S.subscribe($.CkL.TOGGLE_DM_CREATE, E),
+            () => {
+                z.S.unsubscribe($.CkL.TOGGLE_DM_CREATE, E);
+            }
         ),
-        a.useEffect(() => {
-            (0, j._)();
-        }, []),
-        (0, s.jsx)(p.Popout, {
-            renderPopout: (e) =>
-                (0, s.jsx)(ed, {
-                    ...e,
-                    onClose: e.closePopout,
-                    channel: t
-                }),
-            position: o,
-            shouldShow: d,
-            align: c,
-            onRequestClose: () => h(!1),
-            animation: p.Popout.Animation.NONE,
-            children: (e) =>
-                (0, s.jsx)(J.ZP.Icon, {
-                    ...e,
-                    onClick: m,
-                    icon: null != i ? i : null == t ? p.ChatPlusIcon : p.GroupPlusIcon,
-                    className: n,
-                    iconClassName: n,
-                    tooltip: l,
-                    tooltipPosition: r
-                })
-        })
+        [h, E]
     );
+    let g = (0, m.e7)([V.default], () => V.default.getUser(null == i ? void 0 : i.getRecipientId()));
+    return (a.useEffect(() => {
+        (0, j._)();
+    }, []),
+    (null !== (t = null == g ? void 0 : g.bot) && void 0 !== t && t) || (null !== (n = null == g ? void 0 : g.isProvisional()) && void 0 !== n && n))
+        ? null
+        : (0, s.jsx)(p.Popout, {
+              renderPopout: (e) =>
+                  (0, s.jsx)(ed, {
+                      ...e,
+                      onClose: e.closePopout,
+                      channel: i
+                  }),
+              position: u,
+              shouldShow: _,
+              align: d,
+              onRequestClose: () => f(!1),
+              animation: p.Popout.Animation.NONE,
+              children: (e) =>
+                  (0, s.jsx)(J.ZP.Icon, {
+                      ...e,
+                      onClick: E,
+                      icon: null != r ? r : null == i ? p.ChatPlusIcon : p.GroupPlusIcon,
+                      className: l,
+                      iconClassName: l,
+                      tooltip: o,
+                      tooltipPosition: c
+                  })
+          });
 }
 function em(e) {
     let t = ep(e);

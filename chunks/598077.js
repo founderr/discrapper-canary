@@ -152,6 +152,9 @@ class E extends i.Z {
     isPomelo() {
         return '0' === this.discriminator;
     }
+    isProvisional() {
+        return this.hasFlag(l.xW$.PROVISIONAL_ACCOUNT);
+    }
     get avatarDecoration() {
         return this.avatarDecorationData;
     }

@@ -46,7 +46,7 @@ function P() {
                     t
                         .reduce((e, t) => {
                             let n = x.default.getUser(t);
-                            return null == n ? e : (e.push({ user: n }), e);
+                            return null == n || n.isProvisional() ? e : (e.push({ user: n }), e);
                         }, [])
                         .sort(y)
                 );
@@ -58,7 +58,10 @@ function P() {
         null != i &&
             i.setQuery(
                 N,
-                { friends: !0 },
+                {
+                    friends: !0,
+                    provisional: !1
+                },
                 t,
                 (function () {
                     let e = I.Z.getFrequentlyWithoutFetchingLatest().filter((e) => e instanceof _.mn && e.isDM()),

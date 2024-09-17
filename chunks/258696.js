@@ -70,22 +70,20 @@ t.Z = i.memo(function (e) {
             let e = M.recipients[0];
             return d.Z.getSentUserIds().includes(e);
         }),
-        [z, q] = (0, s.Wu)([d.Z, I.default], () => {
+        z = (0, s.e7)([I.default], () => (!M.isDM() || void 0 === M.recipients || M.recipients.length > 1 ? null : I.default.getUser(M.recipients[0]))),
+        [q, Q] = (0, s.Wu)([d.Z], () => {
             let e = [!1, !1];
-            if (!M.isDM() || void 0 === M.recipients || M.recipients.length > 1) return e;
-            let t = M.recipients[0],
-                n = I.default.getUser(t);
-            if (null == n || n.bot) return e;
-            let r = K || W > 0,
-                i = d.Z.getRecipientEligibility(t);
-            return [Y && r && i, i];
+            if (!M.isDM() || void 0 === M.recipients || M.recipients.length > 1 || null == z || z.bot) return e;
+            let t = K || W > 0,
+                n = d.Z.getRecipientEligibility(z.id);
+            return [Y && t && n, n];
         });
     return (!a.tq &&
         (M.isDM() &&
             (null === (E = D.gifts) || void 0 === E ? void 0 : E.button) != null &&
             null == F &&
-            (m.ZP.isPremiumExactly(j, C.p9.TIER_2) && q && f.Z.trackExposure({ location: 'dc120b_5' }),
-            z &&
+            (m.ZP.isPremiumExactly(j, C.p9.TIER_2) && Q && f.Z.trackExposure({ location: 'dc120b_5' }),
+            q &&
                 Z.push(
                     (0, r.jsx)(
                         N.Z,
@@ -101,6 +99,7 @@ t.Z = i.memo(function (e) {
         (null === (g = D.gifts) || void 0 === g ? void 0 : g.button) != null &&
             null == F &&
             !H &&
+            (null == z || m.ZP.isPremiumEligible(z)) &&
             Z.push(
                 (0, r.jsx)(
                     L,

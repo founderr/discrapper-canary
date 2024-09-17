@@ -67,12 +67,12 @@ function m(e, n) {
             [e, n, m]
         );
     if (__OVERLAY__ || null == O || null == m || !A) return null;
-    let T = E.Z.getHighestRole(m),
-        v = Object.values(R).filter((e) => !(0, u.pM)(m.id, e.id)),
+    let v = E.Z.getHighestRole(m),
+        T = Object.values(R).filter((e) => !(0, u.pM)(m.id, e.id)),
         x =
             h && !g
-                ? v.map((l) => {
-                      let i = l.managed || !E.Z.isRoleHigher(m, T, l),
+                ? T.map((l) => {
+                      let i = l.managed || !E.Z.isRoleHigher(m, v, l),
                           a = -1 !== O.indexOf(l.id);
                       return i && !a
                           ? null
@@ -103,20 +103,18 @@ function m(e, n) {
                                 l.id
                             );
                   })
-                : v
-                      .filter((e) => -1 !== O.indexOf(e.id))
-                      .map((e) =>
-                          (0, u.pM)(m.id, e.id)
-                              ? null
-                              : (0, t.jsx)(
-                                    r.MenuItem,
-                                    {
-                                        id: e.id,
-                                        label: () => I(e, N)
-                                    },
-                                    e.id
-                                )
-                      );
+                : T.filter((e) => -1 !== O.indexOf(e.id)).map((e) =>
+                      (0, u.pM)(m.id, e.id)
+                          ? null
+                          : (0, t.jsx)(
+                                r.MenuItem,
+                                {
+                                    id: e.id,
+                                    label: () => I(e, N)
+                                },
+                                e.id
+                            )
+                  );
     return 0 === x.filter(M.lm).length
         ? null
         : l
