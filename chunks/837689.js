@@ -96,8 +96,10 @@ class L extends o.Z {
                     let t = await (0, S.r)(e.userTrialOffer);
                     null != t && (0, C.Z)({ upsellType: t });
                 }
-                if (!(0, r.hasAnyModalOpen)() && h.Z.getCurrentConfig({ location: 'OfferAnnouncementManager' }).enabled && !a.tq) {
-                    for (let t of await (0, g.H)(e)) if (await this.maybeOpenServerDriveAnnouncementModal(t, !1)) break;
+                if (null == i || !!i.verified) {
+                    if (!(0, r.hasAnyModalOpen)() && h.Z.getCurrentConfig({ location: 'OfferAnnouncementManager' }).enabled && !a.tq) {
+                        for (let t of await (0, g.H)(e)) if (await this.maybeOpenServerDriveAnnouncementModal(t, !1)) break;
+                    }
                 }
             });
     }
