@@ -1,47 +1,47 @@
-var t = n(735250);
-n(470079);
-var r = n(780384),
-    i = n(481060),
-    l = n(410030),
-    a = n(518950),
-    o = n(51144),
-    C = n(105759),
-    d = n(898969),
-    u = n(703614),
-    c = n(182294),
-    _ = n(689938),
-    p = n(279521);
-s.Z = () => {
+var r = t(735250);
+t(470079);
+var a = t(780384),
+    i = t(481060),
+    s = t(410030),
+    o = t(518950),
+    l = t(51144),
+    C = t(105759),
+    d = t(898969),
+    c = t(703614),
+    u = t(182294),
+    _ = t(689938),
+    p = t(279521);
+n.Z = () => {
     let e = (0, C.Z)(),
-        { avatarSrc: s, eventHandlers: n } = (0, a.Z)({
+        { avatarSrc: n, eventHandlers: t } = (0, o.Z)({
             user: e,
-            size: c.EF.SIZE_32,
+            size: u.EF.SIZE_32,
             animateOnHover: !0
         }),
-        x = (0, l.Fg)(),
-        L = (0, r.ap)(x),
-        h = o.ZP.getName(e),
-        f = L ? d.Z : u.Z;
+        f = (0, s.Fg)(),
+        h = (0, a.ap)(f),
+        x = l.ZP.getName(e),
+        L = h ? d.Z : c.Z;
     return null == e
         ? null
-        : (0, t.jsxs)('div', {
+        : (0, r.jsxs)('div', {
               className: p.attributionBannerContainer,
               children: [
-                  (0, t.jsx)('div', {
+                  (0, r.jsx)('div', {
                       className: p.avatarContainer,
-                      children: (0, t.jsx)(i.Avatar, {
-                          src: s,
+                      children: (0, r.jsx)(i.Avatar, {
+                          src: n,
                           'aria-label': e.username,
-                          size: c.EF.SIZE_32,
-                          ...n
+                          size: u.EF.SIZE_32,
+                          ...t
                       })
                   }),
-                  (0, t.jsx)(i.Text, {
+                  (0, r.jsx)(i.Text, {
                       variant: 'text-xs/bold',
                       className: p.bannerHeader,
-                      children: _.Z.Messages.REFERRAL_PRORAM_PAYMENT_MODAL_BANNER.format({ userName: h })
+                      children: _.Z.Messages.REFERRAL_PRORAM_PAYMENT_MODAL_BANNER.format({ userName: x })
                   }),
-                  (0, t.jsx)(f, { className: p.bannerIcon })
+                  (0, r.jsx)(L, { className: p.bannerIcon })
               ]
           });
 };

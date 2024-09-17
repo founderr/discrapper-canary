@@ -7,8 +7,8 @@ n.r(t),
 var a = n(735250);
 n(470079);
 var r = n(355467),
-    i = n(106976),
-    l = n(703656),
+    l = n(106976),
+    i = n(703656),
     s = n(914010),
     d = n(598),
     o = n(791785),
@@ -22,7 +22,7 @@ function c(e) {
         onClose: (e) => {
             t(e);
             let a = null == h ? void 0 : h.guild_id;
-            e && null != a && (r.jg(), (0, i.i1)(a), null == n || n(), null != a && (c || s.Z.getGuildId() !== a) && (0, l.uL)(u.Z5c.CHANNEL(a)));
+            e && null != a && (r.jg(), (0, l.i1)(a), null == n || n(), null != a && (c || s.Z.getGuildId() !== a) && (0, i.uL)(u.Z5c.CHANNEL(a)));
         },
         forceNewPaymentModal: !0
     });

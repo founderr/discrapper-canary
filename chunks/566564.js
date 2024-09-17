@@ -32,7 +32,7 @@ t.Z = (e) => {
         M = (0, m.U)('CollectiblesFeedShop'),
         y = (0, l.cj)([u.Z], () => ({ feature: u.Z.getCategory(M ? '1282816432056569866' : o.T.THE_VAULT) })),
         w = M ? b.v7 : b.s8,
-        F = n.useMemo(
+        H = n.useMemo(
             () =>
                 w
                     .map((e) => u.Z.getProduct(e))
@@ -50,7 +50,7 @@ t.Z = (e) => {
                     .slice(0, 4),
             [P]
         ),
-        H = n.useMemo(
+        F = n.useMemo(
             () =>
                 b.yo
                     .map((e) => u.Z.getProduct(e))
@@ -127,7 +127,7 @@ t.Z = (e) => {
                                       children: [void 0, void 0, void 0, void 0].map((e, t) => (0, a.jsx)(g.K, {}, t))
                                   })
                                 : (0, a.jsx)(a.Fragment, {
-                                      children: F.map((e) => {
+                                      children: H.map((e) => {
                                           if (null == e || null == e.category) return null;
                                           let { category: t, ...r } = e;
                                           return (0, a.jsx)(
@@ -211,7 +211,7 @@ t.Z = (e) => {
                             children: P
                                 ? (0, a.jsx)(a.Fragment, { children: [...Array(12)].map((e, t) => (0, a.jsx)(g.K, {}, t + 1)) })
                                 : (0, a.jsx)(a.Fragment, {
-                                      children: H.slice(0, R).map((e) => {
+                                      children: F.slice(0, R).map((e) => {
                                           if (null == e || null == e.category) return null;
                                           let { category: t, ...r } = e;
                                           return (0, a.jsx)(

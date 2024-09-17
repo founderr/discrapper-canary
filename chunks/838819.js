@@ -35,8 +35,8 @@ var a = r(735250),
     M = r(853748),
     y = r(426171),
     w = r(823941),
-    F = r(752053),
-    H = r(963102),
+    H = r(752053),
+    F = r(963102),
     D = r(508498),
     U = r(38900),
     W = r(709999),
@@ -280,7 +280,7 @@ t.default = function (e) {
                                     [er.out]: M === X.f7.OUT
                                 }),
                                 children: [
-                                    (0, a.jsx)(H.I, {
+                                    (0, a.jsx)(F.I, {
                                         isFullScreen: t,
                                         isLayer: ed,
                                         onClose: ef,
@@ -301,7 +301,7 @@ t.default = function (e) {
                                     [er.out]: w === X.f7.OUT
                                 }),
                                 children: [
-                                    (0, a.jsx)(H.I, {
+                                    (0, a.jsx)(F.I, {
                                         isFullScreen: t,
                                         isLayer: ed,
                                         onClose: ef,
@@ -316,7 +316,7 @@ t.default = function (e) {
                                             children: e_
                                                 ? (0, a.jsx)(U.Z, {})
                                                 : eg
-                                                  ? (0, a.jsx)(F.Z, { onRetry: eT })
+                                                  ? (0, a.jsx)(H.Z, { onRetry: eT })
                                                   : (0, a.jsx)('div', {
                                                         className: er.categories,
                                                         children: eb

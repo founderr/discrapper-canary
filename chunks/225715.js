@@ -3,10 +3,10 @@ t.d(n, {
         return u;
     },
     G9: function () {
-        return x;
+        return f;
     },
     K9: function () {
-        return f;
+        return x;
     },
     q$: function () {
         return h;
@@ -49,7 +49,7 @@ let u = (e) => {
 function m() {
     return (0, r.jsx)('hr', { className: c.divider });
 }
-let f = (e) => {
+let x = (e) => {
         let { className: n, title: t, description: i, ...l } = e;
         return (0, r.jsxs)('div', {
             className: n,
@@ -68,7 +68,7 @@ let f = (e) => {
             ]
         });
     },
-    x = (e) => {
+    f = (e) => {
         let { applicationId: n, storeListingBenefits: t, skuBenefits: i, className: a, ...s } = e;
         return (0, r.jsx)('div', {
             className: l()(c.benefitsContainer, a),

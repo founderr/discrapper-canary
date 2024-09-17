@@ -42,7 +42,7 @@ class _ extends (r = o.ZP.Store) {
           })
         : (i[a] = s),
     (t.Z = new _(l.Z, {
-        CONNECTION_OPEN: function () {
+        LOGOUT: function () {
             (u = new Map()), (c = new Set()), (d = new Set());
         },
         DETECTABLE_GAME_SUPPLEMENTAL_FETCH: function (e) {

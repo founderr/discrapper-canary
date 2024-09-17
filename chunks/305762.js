@@ -1,9 +1,9 @@
 E.d(_, {
     R: function () {
-        return T;
+        return a;
     },
     Z: function () {
-        return a;
+        return T;
     }
 });
 var s = E(735250);
@@ -11,13 +11,13 @@ E(470079);
 var n = E(596454),
     t = E(307707),
     r = E(683090);
-let T = {
+let a = {
     SMALL: r.small,
     MEDIUM: r.medium,
     LARGE: r.large
 };
-function a(e) {
-    let { emojiId: _, emojiName: E, defaultComponent: r, size: a = T.MEDIUM } = e,
+function T(e) {
+    let { emojiId: _, emojiName: E, defaultComponent: r, size: T = a.MEDIUM } = e,
         { customEmoji: I, unicodeEmoji: l } = (0, t.Z)(_, E);
     return null == I && null == l
         ? (0, s.jsx)(s.Fragment, { children: r })
@@ -26,6 +26,6 @@ function a(e) {
               animated: null != I && I.animated,
               emojiId: null == I ? void 0 : I.id,
               autoplay: !0,
-              className: a
+              className: T
           });
 }
