@@ -13,8 +13,8 @@ var a = n(735250),
     _ = n(406432),
     g = n(169525),
     x = n(255269),
-    f = n(930282),
-    C = n(524444),
+    C = n(930282),
+    f = n(524444),
     p = n(695346),
     T = n(433355),
     I = n(592125),
@@ -35,8 +35,8 @@ var a = n(735250),
     y = n(689938),
     D = n(127403);
 function F(e) {
-    let { id: t, channel: n, goToThread: r, overrideMedia: u, className: m, coords: h, gridCoords: _, gridSectionBoundaries: g, observePostVisibilityAnalytics: f } = e,
-        C = (0, o.e7)([I.Z], () => I.Z.getChannel(n.parent_id)),
+    let { id: t, channel: n, goToThread: r, overrideMedia: u, className: m, coords: h, gridCoords: _, gridSectionBoundaries: g, observePostVisibilityAnalytics: C } = e,
+        f = (0, o.e7)([I.Z], () => I.Z.getChannel(n.parent_id)),
         S = n.id,
         j = s.useRef(null),
         F = (0, o.e7)([T.ZP], () => T.ZP.getCurrentSidebarChannelId(n.parent_id) === n.id),
@@ -55,13 +55,13 @@ function F(e) {
             channel: n
         });
     s.useEffect(() => {
-        null == f || f(j.current, S);
-    }, [f, S]);
+        null == C || C(j.current, S);
+    }, [C, S]);
     let J = (0, o.e7)([E.Z], () => E.Z.can(w.Plq.MANAGE_MESSAGES, n)),
         Q = p.QK.useSetting(),
         $ = p.cC.useSetting(),
         ee = (0, x.Z)($, J),
-        et = (0, v.aU)(k, C, !1),
+        et = (0, v.aU)(k, f, !1),
         [en, ea] = (0, A.rI)(h.width - 2 * A.LT),
         es = (0, N.xw)(n, i.z.CREATION_DATE, P.R6.POSTED_DURATION_AGO),
         er = (0, M.NN)(n),
@@ -270,30 +270,30 @@ t.Z = s.memo(function (e) {
 });
 let k = (e) => e.preventDefault(),
     H = s.memo(function (e) {
-        return (0, a.jsx)(a.Fragment, { children: (0, C.Yi)(e) });
+        return (0, a.jsx)(a.Fragment, { children: (0, f.Yi)(e) });
     }),
     B = s.memo(function (e) {
         let { mediaAttachments: t, globalSpoilerRenderSetting: n, containerWidth: r, containerHeight: i, canAutoPlay: o, shouldMaintainAspectRatio: c = !1 } = e,
             { containsVideo: u, containsGif: x } = s.useMemo(() => (0, v.cp)(t), [t]),
-            f = s.useMemo(() => t.slice(j.$x, j.GV), [t]),
-            C = (0, j.tu)({
-                numAttachments: f.length,
+            C = s.useMemo(() => t.slice(j.$x, j.GV), [t]),
+            f = (0, j.tu)({
+                numAttachments: C.length,
                 containerWidth: r,
                 containerHeight: i
             }),
             p = (0, j.S$)({
-                imageContainerStyles: C,
+                imageContainerStyles: f,
                 containerWidth: r,
                 containerHeight: i
             }),
             T = (0, h.m)(),
             I = s.useMemo(
                 () =>
-                    f.map((e, t) => {
+                    C.map((e, t) => {
                         var s;
                         let [r, i] = (0, g.As)(e, !n, T),
                             h = (0, g.MC)(i),
-                            f = {
+                            C = {
                                 ...p[t],
                                 src: e.src,
                                 width: e.width,
@@ -309,26 +309,26 @@ let k = (e) => e.preventDefault(),
                             'div',
                             {
                                 className: D.bodyMediaFrame,
-                                style: C[t],
+                                style: f[t],
                                 children: [
                                     c
                                         ? (0, a.jsx)(m.Z, {
-                                              ...f,
+                                              ...C,
                                               src: E,
                                               backgroundSrc: I,
-                                              aspectRatio: f.maxWidth / f.maxHeight,
-                                              alt: null !== (s = f.alt) && void 0 !== s ? s : '',
+                                              aspectRatio: C.maxWidth / C.maxHeight,
+                                              alt: null !== (s = C.alt) && void 0 !== s ? s : '',
                                               className: l()(D.mediaPostContainer, { [D.obscured]: r }),
                                               imageChildClassName: D.mediaPostThumbnail
                                           })
                                         : e.src.startsWith('data:')
                                           ? (0, a.jsx)(d.Image, {
-                                                ...f,
+                                                ...C,
                                                 className: D.mediaContainer,
                                                 imageClassName: l()(D.thumbnailOverride, { [D.obscured]: r })
                                             })
                                           : (0, a.jsx)(H, {
-                                                ...f,
+                                                ...C,
                                                 autoPlay: o && !r,
                                                 containerClassName: D.mosaicMediaContainer,
                                                 imageClassName: l()(D.imageCover, { [D.obscured]: r }),
@@ -347,7 +347,7 @@ let k = (e) => e.preventDefault(),
                             e.src
                         );
                     }),
-                [o, x, u, n, C, p, f, c, T]
+                [o, x, u, n, f, p, C, c, T]
             );
         return (0, a.jsxs)('div', {
             className: D.bodyMedia,
@@ -444,7 +444,7 @@ function z(e) {
                             }),
                         r &&
                             null != n &&
-                            (0, a.jsx)(f.ZP, {
+                            (0, a.jsx)(C.ZP, {
                                 message: n,
                                 content: m,
                                 className: g

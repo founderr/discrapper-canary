@@ -19,8 +19,8 @@ var a = n(735250),
     _ = n(442837),
     g = n(704215),
     x = n(481060),
-    f = n(561472),
-    C = n(393238),
+    C = n(561472),
+    f = n(393238),
     p = n(607070),
     T = n(933557),
     I = n(243778),
@@ -72,7 +72,7 @@ function ed(e) {
         X.oL,
         {
             createStore: () => (0, X.NU)(t),
-            children: (0, a.jsx)(eC, {
+            children: (0, a.jsx)(ef, {
                 channel: t,
                 guild: n,
                 sidebarState: s
@@ -135,14 +135,14 @@ function eg(e) {
 function ex(e, t) {
     return 'card-'.concat(e, '-').concat(t);
 }
-function ef(e) {
+function eC(e) {
     if ('string' == typeof e) {
         let t = e.match(/card-{\d+}-({\d+})$/);
         return null == t ? null : t[1];
     }
     return null;
 }
-function eC(e) {
+function ef(e) {
     let { channel: t, sidebarState: n } = e,
         {
             editorHeight: r,
@@ -162,7 +162,7 @@ function eC(e) {
         {
             activeThreadIds: m,
             archivedThreadIds: g,
-            searchResults: C,
+            searchResults: f,
             canLoadMore: T,
             loadMore: I,
             activeThreadsLoading: E,
@@ -257,9 +257,9 @@ function eC(e) {
             guildId: t.guild_id
         }),
         en = w === h.X.GRID,
-        ed = null != C,
+        ed = null != f,
         e_ = s.useRef(null),
-        { containerRef: eC, containerWidth: eE } = (0, ea.Z)();
+        { containerRef: ef, containerWidth: eE } = (0, ea.Z)();
     s.useEffect(
         () => () => {
             null != t.id && U.Z.clearForumSearch(t.id);
@@ -284,20 +284,20 @@ function eC(e) {
             if (en) {
                 if (!K && ed) return [1, 0];
                 if (!J) return [1, m.length + eS, 0];
-                else if (ed) return [1, C.length + eA, 0];
+                else if (ed) return [1, f.length + eA, 0];
                 else return [1, m.length + eS, g.length + eM];
             }
             if (!K && ed) return [1, 1];
             if (!J) return [1, m.length, 1];
-            else if (ed) return [1, C.length, 0, ev];
+            else if (ed) return [1, f.length, 0, ev];
             else return [1, m.length, g.length, ev];
-        }, [en, ed, m.length, g.length, K, J, ev, C, eS, eM, eA]),
+        }, [en, ed, m.length, g.length, K, J, ev, f, eS, eM, eA]),
         eR = s.useMemo(() => {
             if (!K && ed) return [[], []];
             if (!J) return [[], m, []];
-            if (ed) return [[], C, [], []];
+            if (ed) return [[], f, [], []];
             else return [[], m, g, []];
-        }, [ed, K, J, C, m, g]),
+        }, [ed, K, J, f, m, g]),
         eO = s.useCallback(
             (e, n) => {
                 (0, V.B5)({
@@ -323,7 +323,7 @@ function eC(e) {
                               channel: t,
                               isEmpty: !y,
                               isSearchLoading: P,
-                              numResults: null == C ? void 0 : C.length,
+                              numResults: null == f ? void 0 : f.length,
                               coords: n,
                               onHeightChange: eL,
                               children:
@@ -358,7 +358,7 @@ function eC(e) {
                             },
                             'archived-missing-reading-history-perm'
                         ),
-            [ed, J, C, K, t, y, P, j, D]
+            [ed, J, f, K, t, y, P, j, D]
         ),
         ew = (0, _.e7)([F.Z], () => F.Z.hasHidden(t.id));
     s.useEffect(() => {
@@ -391,7 +391,7 @@ function eC(e) {
                         })(),
                     [n, h]
                 ),
-                f = s.useCallback(
+                C = s.useCallback(
                     (e) =>
                         d(e.section, void 0, () => {
                             if (3 === e.section)
@@ -425,7 +425,7 @@ function eC(e) {
                         }),
                     [d, r, u, m]
                 ),
-                C = s.useCallback(
+                f = s.useCallback(
                     (e, t) => {
                         if (0 === e) return o + c;
                         let n = i[r[e][t]];
@@ -436,9 +436,9 @@ function eC(e) {
             return {
                 updateListScrollerRef: _,
                 renderListSection: g,
-                renderListItem: f,
+                renderListItem: C,
                 getListSectionHeight: s.useCallback((e) => (2 === e && n ? 40 : 0), [n]),
-                getListItemHeight: C
+                getListItemHeight: f
             };
         })({
             listRef: $,
@@ -470,7 +470,7 @@ function eC(e) {
                     },
                     [t]
                 ),
-                f = s.useCallback(
+                C = s.useCallback(
                     (e, n) => {
                         let { current: a } = t;
                         if (null == a) return;
@@ -488,13 +488,13 @@ function eC(e) {
                                 });
                             }
                         }),
-                            (h.current = ef(n));
+                            (h.current = eC(n));
                     },
                     [t, h]
                 ),
-                C = s.useCallback(
+                f = s.useCallback(
                     (e) => {
-                        let t = ef(e);
+                        let t = eC(e);
                         if (null == t) return;
                         let n = Z.Z.getChannel(t);
                         null != n && r(n, !0);
@@ -574,8 +574,8 @@ function eC(e) {
                 updateMasonryListScrollerRef: x,
                 masonryListContainerRef: g,
                 focusedThreadId: h,
-                handleGridFocus: f,
-                handleGridSelect: C,
+                handleGridFocus: C,
+                handleGridSelect: f,
                 getItemKey: p,
                 renderGridSection: T,
                 renderGridItem: E,
@@ -659,13 +659,13 @@ function eC(e) {
         e6 = null != e1 && (0, O.D5)(e1);
     return (0, a.jsx)('div', {
         className: ec.container,
-        ref: eC,
+        ref: ef,
         children: (0, a.jsx)(x.FocusJumpSection, {
             children: (e) =>
                 (0, a.jsxs)(a.Fragment, {
                     children: [
                         u &&
-                            (0, a.jsx)(f.Z, {
+                            (0, a.jsx)(C.Z, {
                                 channel: t,
                                 draftType: L.d.FirstThreadMessage,
                                 className: ec.uploadArea,
@@ -789,7 +789,7 @@ function eE() {
 }
 function eN(e) {
     var t, n, r;
-    let { channel: i, isEmpty: f, isSearchLoading: T, numResults: b, children: v, coords: S, onHeightChange: M } = e,
+    let { channel: i, isEmpty: C, isSearchLoading: T, numResults: b, children: v, coords: S, onHeightChange: M } = e,
         {
             name: A,
             formOpen: R,
@@ -823,7 +823,7 @@ function eN(e) {
     s.useEffect(() => {
         ea && er(!0);
     }, [ea]);
-    let { ref: em, height: eh } = (0, C.Z)();
+    let { ref: em, height: eh } = (0, f.Z)();
     s.useEffect(() => {
         null != eh && M(eh);
     }, [M, eh]);
@@ -832,25 +832,25 @@ function eN(e) {
             null != em.current && Y.getState().setEditorHeight(em.current.offsetHeight);
         });
     }, [em, Y]);
-    s.useLayoutEffect(e_, [e_, f, ed, k]),
+    s.useLayoutEffect(e_, [e_, C, ed, k]),
         (0, D.yp)({
             event: el.CkL.REMEASURE_TARGET,
             handler: e_
         });
     let eg = (0, _.e7)([w.Z], () => w.Z.getUploads(i.id, L.d.FirstThreadMessage)),
         ex = (0, B.ql)(i),
-        ef = s.useRef(null),
         eC = s.useRef(null),
+        ef = s.useRef(null),
         [ep, eT] = s.useState(0),
         { width: eI } = (0, _.e7)([y.Z], () => y.Z.windowSize()),
-        eN = null === (n = ef.current) || void 0 === n ? void 0 : null === (t = n.getBoundingClientRect()) || void 0 === t ? void 0 : t.width,
+        eN = null === (n = eC.current) || void 0 === n ? void 0 : null === (t = n.getBoundingClientRect()) || void 0 === t ? void 0 : t.width,
         ev = s.useRef(null);
     s.useLayoutEffect(() => {
         var e;
-        let t = eC.current,
+        let t = ef.current,
             n = null == t ? void 0 : null === (e = t.children) || void 0 === e ? void 0 : e[0];
-        if (null != ef.current && null != n && null != n.children) {
-            let { left: e, top: t } = ef.current.getBoundingClientRect(),
+        if (null != eC.current && null != n && null != n.children) {
+            let { left: e, top: t } = eC.current.getBoundingClientRect(),
                 a = 0;
             for (let s of n.children) {
                 let { right: n, top: r, height: l } = s.getBoundingClientRect();
@@ -905,7 +905,7 @@ function eN(e) {
         })(),
         ew = s.useCallback(
             (e) => {
-                if ((eO(e), e.target === em.current && !eP.current)) {
+                if ((eO(), e.target === em.current && !eP.current)) {
                     var t;
                     null === (t = eL.current) || void 0 === t || t.focus();
                 }
@@ -1035,7 +1035,7 @@ function eN(e) {
                     }),
                     (0, a.jsxs)('div', {
                         className: ec.tagsContainer,
-                        ref: ef,
+                        ref: eC,
                         children: [
                             (0, a.jsx)(eb, { channel: i }),
                             i.availableTags.length > 0
@@ -1044,7 +1044,7 @@ function eN(e) {
                                           (0, a.jsx)('div', { className: ec.divider }),
                                           (0, a.jsx)('div', {
                                               className: ec.tagList,
-                                              ref: eC,
+                                              ref: ef,
                                               children: (0, a.jsx)(d.bG, {
                                                   navigator: ej,
                                                   children: (0, a.jsx)(d.SJ, {

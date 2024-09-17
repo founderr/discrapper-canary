@@ -1,12 +1,12 @@
 n.d(t, {
     KT: function () {
-        return C;
+        return f;
     },
     ZP: function () {
         return h;
     },
     nX: function () {
-        return f;
+        return C;
     }
 }),
     n(47120);
@@ -39,13 +39,13 @@ function h(e) {
             var t;
             return (null !== (t = _.current) && void 0 !== t ? t : document).querySelector(e);
         }, []),
-        f = s.useCallback(
+        C = s.useCallback(
             (e, t) => {
                 g.current && a(e, t);
             },
             [a]
         ),
-        C = s.useCallback((e) => {
+        f = s.useCallback((e) => {
             if (g.current) {
                 var t;
                 null === (t = document.querySelector(e)) || void 0 === t || t.focus();
@@ -56,9 +56,9 @@ function h(e) {
                 c.current = e;
                 let n = (0, i.P1)(e, o),
                     a = (0, i.x3)(e);
-                f(n, a), (0, r.h)(t, a, !0);
+                C(n, a), (0, r.h)(t, a, !0);
             },
-            [t, f]
+            [t, C]
         ),
         [T, I] = s.useState(!1),
         E = s.useRef(T);
@@ -85,7 +85,7 @@ function h(e) {
                     I(!1),
                         requestAnimationFrame(() => {
                             let e = c.current;
-                            null !== e && null == x((0, i.P1)(e, o)) && C((0, i.P1)(t, 'data-grid-id'));
+                            null !== e && null == x((0, i.P1)(e, o)) && f((0, i.P1)(t, 'data-grid-id'));
                         });
             }
             function s() {
@@ -95,7 +95,7 @@ function h(e) {
             function r() {
                 h.current = !0;
             }
-        }, [t, f, C, p, x]);
+        }, [t, C, f, p, x]);
     let N = s.useCallback(
             (e) => {
                 var t, n;
@@ -106,15 +106,15 @@ function h(e) {
                 let r = (0, i.P1)(a, o),
                     h = null == s ? void 0 : s.querySelector(r);
                 if (null == h) return;
-                let f = parseInt(null !== (t = h.getAttribute('data-grid-section')) && void 0 !== t ? t : ''),
-                    C = parseInt(h.getAttribute('aria-rowindex')),
+                let C = parseInt(null !== (t = h.getAttribute('data-grid-section')) && void 0 !== t ? t : ''),
+                    f = parseInt(h.getAttribute('aria-rowindex')),
                     T = parseInt(h.getAttribute('aria-colindex'));
                 switch ((u.has(e.key) && (e.stopPropagation(), e.preventDefault()), e.key)) {
                     case l.R8.RIGHT: {
                         let e = x(
                             m({
-                                section: f,
-                                row: C,
+                                section: C,
+                                row: f,
                                 column: T + 1
                             })
                         );
@@ -127,8 +127,8 @@ function h(e) {
                     case l.R8.LEFT: {
                         let e = x(
                             m({
-                                section: f,
-                                row: C,
+                                section: C,
+                                row: f,
                                 column: T - 1
                             })
                         );
@@ -141,8 +141,8 @@ function h(e) {
                     case l.R8.DOWN: {
                         let e = x(
                             m({
-                                section: f,
-                                row: C + 1,
+                                section: C,
+                                row: f + 1,
                                 column: T
                             })
                         );
@@ -150,7 +150,7 @@ function h(e) {
                             (null == e &&
                                 (e = x(
                                     m({
-                                        section: f + 1,
+                                        section: C + 1,
                                         row: 0,
                                         column: T
                                     })
@@ -164,19 +164,19 @@ function h(e) {
                     }
                     case l.R8.UP: {
                         let e;
-                        if (0 === C) {
+                        if (0 === f) {
                             let t = parseInt(h.getAttribute(d));
                             null ==
                                 (e = x(
                                     m({
-                                        section: f - 1,
+                                        section: C - 1,
                                         row: t,
                                         column: T
                                     })
                                 )) &&
                                 (e = x(
                                     m({
-                                        section: f - 1,
+                                        section: C - 1,
                                         row: t - 1,
                                         column: T
                                     })
@@ -184,8 +184,8 @@ function h(e) {
                         } else
                             e = x(
                                 m({
-                                    section: f,
-                                    row: C - 1,
+                                    section: C,
+                                    row: f - 1,
                                     column: T
                                 })
                             );
@@ -239,11 +239,11 @@ let _ = {
         setFocus() {}
     }),
     x = s.createContext(_);
-function f(e) {
+function C(e) {
     let { id: t, section: n, row: a, column: l, boundaries: u } = e,
         [m, h] = s.useState(0 === a && 0 === l ? 0 : -1),
         { id: _, setFocus: x } = s.useContext(g),
-        f = s.useCallback(() => x(t), [t, x]);
+        C = s.useCallback(() => x(t), [t, x]);
     return (
         s.useLayoutEffect(
             () =>
@@ -260,11 +260,11 @@ function f(e) {
             'aria-rowindex': a,
             'aria-colindex': l,
             tabIndex: m,
-            onFocus: f
+            onFocus: C
         }
     );
 }
-function C(e) {
+function f(e) {
     let { children: t, navigator: n } = e,
         {
             id: r,

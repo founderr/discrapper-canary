@@ -12,8 +12,8 @@ var a = n(735250),
     _ = n(961675),
     g = n(883429),
     x = n(432771),
-    f = n(406074),
-    C = n(434404),
+    C = n(406074),
+    f = n(434404),
     p = n(430824),
     T = n(63063),
     I = n(595433),
@@ -129,7 +129,7 @@ t.Z = (e) => {
         Z = (0, o.e7)([p.Z], () => p.Z.getGuild(r.guild_id)),
         L = (0, o.e7)([m.Z], () => m.Z.useReducedMotion),
         P = (0, o.e7)([_.Z], () => _.Z.hasHidden(r.id)),
-        w = (0, f.C)({
+        w = (0, C.C)({
             guildId: r.guild_id,
             channelId: r.id
         }),
@@ -143,7 +143,7 @@ t.Z = (e) => {
     let U = s.useMemo(() => [N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_FAN_ART_TAG, N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_DESK_SETUP_TAG, N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_PETS_TAG, N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_HOUSEPLANTS_TAG], []),
         k = s.useMemo(() => [N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_BEHIND_THE_SCENES_TAG, N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_EXCLUSIVE_ART_TAG, N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_PRERELEASES_TAG, N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_TUTORIALS_TAG], []),
         H = () => {
-            C.Z.open(r.guild_id, E.pNK.ROLE_SUBSCRIPTIONS);
+            f.Z.open(r.guild_id, E.pNK.ROLE_SUBSCRIPTIONS);
         },
         B = null !== (t = null == Z ? void 0 : Z.hasFeature(E.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) && void 0 !== t && t ? N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_HAS_TIERS_CTA : N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_NO_TIERS_CTA,
         G = null !== (n = (null == Z ? void 0 : Z.hasFeature(E.oNc.CREATOR_MONETIZABLE)) || (null == Z ? void 0 : Z.hasFeature(E.oNc.CREATOR_MONETIZABLE_PROVISIONAL))) && void 0 !== n && n,

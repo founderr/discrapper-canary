@@ -13,8 +13,8 @@ var a = n(735250),
     _ = n(787014),
     g = n(412899),
     x = n(447003),
-    f = n(605436),
-    C = n(621516),
+    C = n(605436),
+    f = n(621516),
     p = n(430824),
     T = n(186523),
     I = n(585483),
@@ -258,9 +258,9 @@ let B = (e) => {
                             s.addStep(
                                 (function (e, t, s, r) {
                                     let l = (0, x.Z)(s) ? u.$e(P.Plq.VIEW_CHANNEL, P.Plq.SEND_MESSAGES) : P.Plq.SEND_MESSAGES,
-                                        i = null != e ? (0, S.E$)(e, t, s, l).filter((t) => s.permissionOverwrites.hasOwnProperty(t.id) || (0, f.pM)(e.id, t.id)) : [],
+                                        i = null != e ? (0, S.E$)(e, t, s, l).filter((t) => s.permissionOverwrites.hasOwnProperty(t.id) || (0, C.pM)(e.id, t.id)) : [],
                                         o = i.length > 0,
-                                        c = i.some((t) => (0, f.pM)(e.id, t.id));
+                                        c = i.some((t) => (0, C.pM)(e.id, t.id));
                                     return {
                                         name: w.Z.Messages.FORUM_CHANNEL_ONBOARDING_CHECKLIST_PERMISSION_TITLE,
                                         description: w.Z.Messages.FORUM_CHANNEL_ONBOARDING_CHECKLIST_PERMISSION_DESCRIPTION,
@@ -307,14 +307,14 @@ let B = (e) => {
                     );
                 }, [t, e, o, r, l]);
             })(t, r, l, c),
-            C = g.isAllDone();
+            f = g.isAllDone();
         return (
-            Y(C, d || _ || !q(r.id), o, i),
+            Y(f, d || _ || !q(r.id), o, i),
             {
                 onboardingSteps: g,
                 isHidden: _,
                 isDismissed: d,
-                isAllDone: C
+                isAllDone: f
             }
         );
     },
@@ -366,7 +366,7 @@ t.Z = (e) => {
         u = (0, A.r_)(n),
         { transitions: _, setVisible: g } = Q(),
         x = $(r),
-        f = ea(),
+        C = ea(),
         I = W(n.id, g),
         {
             onboardingSteps: E,
@@ -401,7 +401,7 @@ t.Z = (e) => {
           ? R
               ? t
                   ? null
-                  : (0, a.jsx)(C.Z, { channel: n })
+                  : (0, a.jsx)(f.Z, { channel: n })
               : (0, a.jsx)(a.Fragment, {
                     children: _((e, t) =>
                         t
@@ -460,7 +460,7 @@ t.Z = (e) => {
                                                                     {
                                                                         tag: 'li',
                                                                         'aria-label': e.name,
-                                                                        onClick: () => f(e),
+                                                                        onClick: () => C(e),
                                                                         className: l()(y.stepContainer, { [y.completed]: e.isDone }),
                                                                         children: [
                                                                             e.shouldWarn

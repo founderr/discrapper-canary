@@ -2,7 +2,7 @@ function r() {
     return !0;
 }
 n.d(t, {
-    Z: function () {
+    _: function () {
         return r;
     }
 });

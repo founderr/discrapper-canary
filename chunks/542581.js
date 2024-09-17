@@ -15,8 +15,8 @@ var a = n(735250),
     x = n(554034);
 t.Z = s.memo(function (e) {
     let { channel: t, onChange: r } = e,
-        f = (0, m.AF)(),
-        { guidelinesOpen: C } = (0, m.xH)((e) => {
+        C = (0, m.AF)(),
+        { guidelinesOpen: f } = (0, m.xH)((e) => {
             let { guidelinesOpen: t } = e;
             return { guidelinesOpen: t };
         }),
@@ -32,13 +32,13 @@ t.Z = s.memo(function (e) {
         );
     s.useLayoutEffect(() => {
         setTimeout(r, 350);
-    }, [C, r]);
-    let [N, b] = s.useState(!C),
+    }, [f, r]);
+    let [N, b] = s.useState(!f),
         v = (0, o.useSpring)({
-            opacity: C ? 1 : 0,
-            maxHeight: C ? 500 : 0,
+            opacity: f ? 1 : 0,
+            maxHeight: f ? 500 : 0,
             config: { duration: 300 },
-            onRest: () => b(!C)
+            onRest: () => b(!f)
         });
     return null != t.topic && t.topic.length > 0
         ? (0, a.jsx)(i.animated.div, {
@@ -79,7 +79,7 @@ t.Z = s.memo(function (e) {
                                   'aria-label': _.Z.Messages.CLOSE,
                                   className: g.clickable,
                                   onClick: () => {
-                                      f.getState().setGuidelinesOpen(!1);
+                                      C.getState().setGuidelinesOpen(!1);
                                   },
                                   children: (0, a.jsx)(o.XSmallIcon, {
                                       size: 'xs',

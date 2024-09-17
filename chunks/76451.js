@@ -21,8 +21,8 @@ var a = n(735250),
     _ = n(898463),
     g = n(592125),
     x = n(703558),
-    f = n(117530),
-    C = n(585483),
+    C = n(117530),
+    f = n(585483),
     p = n(127654),
     T = n(228392),
     I = n(981631),
@@ -66,7 +66,7 @@ function M(e) {
                     className: E.fileInput,
                     ref: u,
                     onChange: (e) => {
-                        null == r || r(), (0, p.d)(e.currentTarget.files, m, x.d.FirstThreadMessage, { requireConfirm: !0 }), C.S.dispatch(I.CkL.TEXTAREA_FOCUS), (e.currentTarget.value = null);
+                        null == r || r(), (0, p.d)(e.currentTarget.files, m, x.d.FirstThreadMessage, { requireConfirm: !0 }), f.S.dispatch(I.CkL.TEXTAREA_FOCUS), (e.currentTarget.value = null);
                     },
                     multiple: m.rateLimitPerUser <= 0,
                     tabIndex: -1,
@@ -96,7 +96,7 @@ function A(e) {
             'animate-always'
         ),
         x = (0, o.e7)([u.Z], () => u.Z.keyboardModeEnabled),
-        C = (0, o.e7)([f.Z], () => f.Z.getUploads(t, m.I.CREATE_FORUM_POST.drafts.type));
+        f = (0, o.e7)([C.Z], () => C.Z.getUploads(t, m.I.CREATE_FORUM_POST.drafts.type));
     return (0, a.jsx)(i.animated.div, {
         className: E.popoutContainer,
         onMouseLeave: () => {
@@ -120,7 +120,7 @@ function A(e) {
                 }),
                 (0, a.jsx)('div', {
                     className: E.uploads,
-                    children: C.map((e) =>
+                    children: f.map((e) =>
                         (0, a.jsx)(
                             _.Z,
                             {
@@ -142,7 +142,7 @@ function A(e) {
 function j(e) {
     let { channelId: t } = e,
         [n, r] = s.useState(!1),
-        l = (0, o.e7)([f.Z], () => f.Z.getUploads(t, m.I.CREATE_FORUM_POST.drafts.type)),
+        l = (0, o.e7)([C.Z], () => C.Z.getUploads(t, m.I.CREATE_FORUM_POST.drafts.type)),
         i = l.length,
         c = i > 0;
     s.useEffect(() => {

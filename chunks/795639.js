@@ -17,8 +17,8 @@ var a = n(735250),
     _ = n(273031),
     g = n(859235),
     x = n(313201),
-    f = n(70097),
-    C = n(374794),
+    C = n(70097),
+    f = n(374794),
     p = n(470623),
     T = n(983200),
     I = n(127654),
@@ -48,7 +48,7 @@ function M(e) {
                     style: r[t],
                     children:
                         !0 === e.isVideo
-                            ? (0, a.jsx)(f.Z, {
+                            ? (0, a.jsx)(C.Z, {
                                   src: e.src,
                                   className: b.thumbnail,
                                   'aria-hidden': !0
@@ -73,16 +73,16 @@ let A = (e) => {
             return { textAreaState: t };
         }),
         x = (0, c.e7)([m.Z], () => m.Z.keyboardModeEnabled),
-        f = (0, E.Z)(r, null === (t = i.textValue) || void 0 === t ? void 0 : t.trim()),
-        T = s.useMemo(() => f.find((e) => e.isThumbnail), [f]),
-        A = null != f && f.length > 0,
+        C = (0, E.Z)(r, null === (t = i.textValue) || void 0 === t ? void 0 : t.trim()),
+        T = s.useMemo(() => C.find((e) => e.isThumbnail), [C]),
+        A = null != C && C.length > 0,
         j = s.useMemo(() => {
-            let e = (null == f ? void 0 : f.length) > 1 ? 1.15 : 1;
+            let e = (null == C ? void 0 : C.length) > 1 ? 1.15 : 1;
             return {
                 width: 153 * e,
                 height: 86 * e
             };
-        }, [f]),
+        }, [C]),
         R = s.useCallback(
             (e) => {
                 null != T && u.Z.remove(r.id, T.id, h.I.CREATE_FORUM_POST.drafts.type),
@@ -118,7 +118,7 @@ let A = (e) => {
                         });
                 });
         },
-        Z = (0, a.jsx)(C.Z, {
+        Z = (0, a.jsx)(f.Z, {
             color: d.ButtonColors.CUSTOM,
             className: l()(b.uploadFileInputContainer),
             innerClassName: b.uploadThumbnailContainer,
@@ -132,12 +132,12 @@ let A = (e) => {
                 ? (0, a.jsxs)(a.Fragment, {
                       children: [
                           (0, a.jsx)(M, {
-                              mediaAttachments: f,
+                              mediaAttachments: C,
                               containerWidth: j.width,
                               containerHeight: j.height
                           }),
                           (0, a.jsxs)('div', {
-                              className: l()(b.changeThumbnailLabelContainer, { [b.changeThumbnailLabelOverflow]: (null == f ? void 0 : f.length) > 2 }),
+                              className: l()(b.changeThumbnailLabelContainer, { [b.changeThumbnailLabelOverflow]: (null == C ? void 0 : C.length) > 2 }),
                               children: [
                                   (0, a.jsx)(d.Text, {
                                       variant: 'text-xs/medium',

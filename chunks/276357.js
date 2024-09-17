@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return C;
+        return f;
     }
 }),
     n(47120);
@@ -18,11 +18,11 @@ var a = n(735250),
     _ = n(981631),
     g = n(689938),
     x = n(120160);
-function f() {
+function C() {
     return Promise.resolve();
 }
-function C(e) {
-    let { channel: t, closePopout: n, setPopoutRef: C } = e,
+function f(e) {
+    let { channel: t, closePopout: n, setPopoutRef: f } = e,
         p = (0, u.Vm)(t),
         { tagFilter: T } = (0, d.H)(t.id),
         I = (0, d.v)(),
@@ -52,8 +52,8 @@ function C(e) {
             id: ''.concat(t.id, '-all-tags-dropdown-navigator'),
             isEnabled: !0,
             wrap: !0,
-            scrollToStart: f,
-            scrollToEnd: f
+            scrollToStart: C,
+            scrollToEnd: C
         }),
         S = s.useRef(null);
     return (
@@ -66,7 +66,7 @@ function C(e) {
             });
         }, []),
         (0, a.jsxs)(o.Dialog, {
-            ref: C,
+            ref: f,
             'aria-label': g.Z.Messages.FORUM_TAG_FILTER_HEADER,
             className: x.container,
             children: [
