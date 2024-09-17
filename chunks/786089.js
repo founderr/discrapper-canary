@@ -13,110 +13,122 @@ var i = n(735250),
     h = n(583434),
     m = n(70097),
     I = n(594174),
-    g = n(113434),
-    p = n(918701),
-    T = n(689938),
-    S = n(874976);
+    g = n(626135),
+    p = n(617136),
+    T = n(113434),
+    S = n(497505),
+    C = n(918701),
+    f = n(981631),
+    N = n(689938),
+    A = n(874976);
 t.Z = (0, a.memo)(function (e) {
-    var t, n, s, C;
-    let { quest: f } = e,
-        [N, A] = (0, a.useState)(!1),
-        v = (0, a.useRef)(null),
-        L = (0, o.e7)([I.default], () => I.default.getCurrentUser()),
-        { ref: Z, height: R = 0 } = (0, u.Z)(),
-        O = (0, _.ZP)(),
-        [x, b] = (0, a.useState)(d.AvatarSizes.SIZE_120),
-        P = (0, g.B6)(null === (t = f.userStatus) || void 0 === t ? void 0 : t.claimedAt, {
+    var t, n, s, v;
+    let { quest: L } = e,
+        [Z, R] = (0, a.useState)(!1),
+        O = (0, a.useRef)(null),
+        x = (0, o.e7)([I.default], () => I.default.getCurrentUser()),
+        { ref: b, height: P = 0 } = (0, u.Z)(),
+        M = (0, _.ZP)(),
+        [D, y] = (0, a.useState)(d.AvatarSizes.SIZE_120),
+        j = (0, T.B6)(null === (t = L.userStatus) || void 0 === t ? void 0 : t.claimedAt, {
             month: 'numeric',
             day: 'numeric'
         }),
-        M = null !== (C = null === (n = f.userStatus) || void 0 === n ? void 0 : n.claimedTier) && void 0 !== C ? C : 0,
-        D = f.config.rewards[M],
-        y = (null == D ? void 0 : D.type) === l.w.COLLECTIBLE,
-        { product: j } = (0, h.T)(y && null != D ? D.skuId : null),
-        U = null == j ? void 0 : null === (s = j.items) || void 0 === s ? void 0 : s[0];
+        U = null !== (v = null === (n = L.userStatus) || void 0 === n ? void 0 : n.claimedTier) && void 0 !== v ? v : 0,
+        G = L.config.rewards[U],
+        w = (null == G ? void 0 : G.type) === l.w.COLLECTIBLE,
+        { product: k } = (0, h.T)(w && null != G ? G.skuId : null),
+        B = null == k ? void 0 : null === (s = k.items) || void 0 === s ? void 0 : s[0];
     if (
-        ((0, u.P)(v, (e) => {
+        ((0, u.P)(O, (e) => {
             let { height: t } = e;
-            if (!!y && null != t) t >= 230 && t < 280 ? b(d.AvatarSizes.SIZE_120) : t >= 280 && b(d.AvatarSizes.SIZE_152);
+            if (!!w && null != t) t >= 230 && t < 280 ? y(d.AvatarSizes.SIZE_120) : t >= 280 && y(d.AvatarSizes.SIZE_152);
         }),
-        null == D)
+        null == G)
     )
         return null;
-    let G = (0, c.wj)(O),
-        w = (0, p.Sz)(f.id, f.config.assets.logotype, 'dark'),
-        k = (0, p.Sz)(f.id, D.asset),
-        B = (0, p.nP)(k),
-        H = N ? R + 8 : 0;
+    let H = (0, c.wj)(M),
+        V = (0, C.Sz)(L.id, L.config.assets.logotype, 'dark'),
+        F = (0, C.Sz)(L.id, G.asset),
+        Y = (0, C.nP)(F),
+        W = Z ? P + 8 : 0,
+        z = () => {
+            R(!0),
+                g.default.track(f.rMx.QUEST_HOVER, {
+                    quest_id: L.id,
+                    ...(0, p.mH)(S.jn.TROPHY_CASE_CARD)
+                });
+        },
+        K = () => R(!1);
     return (0, i.jsx)(d.FocusRing, {
         children: (0, i.jsxs)('div', {
+            ref: O,
             tabIndex: 0,
-            onFocus: () => A(!0),
-            onBlur: () => A(!1),
-            ref: v,
-            onMouseEnter: () => A(!0),
-            onMouseLeave: () => A(!1),
-            className: r()(S.container, { [S.hovered]: N }),
+            onFocus: z,
+            onBlur: K,
+            onMouseEnter: z,
+            onMouseLeave: K,
+            className: r()(A.container, { [A.hovered]: Z }),
             children: [
-                null != L &&
-                    y &&
+                null != x &&
+                    w &&
                     (0, i.jsx)('div', {
-                        className: S.decoWrapper,
+                        className: A.decoWrapper,
                         children: (0, i.jsx)(E.Z, {
-                            avatarSize: x,
-                            avatarDecorationOverride: U,
-                            user: L,
+                            avatarSize: D,
+                            avatarDecorationOverride: B,
+                            user: x,
                             guildId: null
                         })
                     }),
-                B
+                Y
                     ? (0, i.jsx)(i.Fragment, {
                           children: (0, i.jsx)(m.Z, {
-                              className: S.assetBlurred,
+                              className: A.assetBlurred,
                               autoPlay: !1,
                               children: (0, i.jsx)('source', {
-                                  src: k,
-                                  type: (0, p.mN)(k)
+                                  src: F,
+                                  type: (0, C.mN)(F)
                               })
                           })
                       })
                     : (0, i.jsx)('img', {
-                          className: S.image,
-                          src: k,
-                          alt: f.config.messages.questName
+                          className: A.image,
+                          src: F,
+                          alt: L.config.messages.questName
                       }),
                 (0, i.jsx)('div', {
-                    className: r()(S.overlay, {
-                        [S.darkThemeGradient]: G,
-                        [S.lightThemeGradient]: !G
+                    className: r()(A.overlay, {
+                        [A.darkThemeGradient]: H,
+                        [A.lightThemeGradient]: !H
                     })
                 }),
                 (0, i.jsx)('div', {
-                    className: S.logoContainer,
-                    style: { transform: 'translateY(-'.concat(H, 'px)') },
+                    className: A.logoContainer,
+                    style: { transform: 'translateY(-'.concat(W, 'px)') },
                     children: (0, i.jsx)('img', {
-                        className: S.logo,
-                        src: w,
-                        alt: f.config.messages.gameTitle
+                        className: A.logo,
+                        src: V,
+                        alt: L.config.messages.gameTitle
                     })
                 }),
                 (0, i.jsxs)('div', {
-                    ref: Z,
-                    className: S.details,
+                    ref: b,
+                    className: A.details,
                     children: [
                         (0, i.jsx)(d.Heading, {
-                            className: S.title,
+                            className: A.title,
                             variant: 'heading-md/semibold',
                             color: 'always-white',
-                            children: T.Z.Messages.QUEST.format({ questName: f.config.messages.questName })
+                            children: N.Z.Messages.QUEST.format({ questName: L.config.messages.questName })
                         }),
                         (0, i.jsx)(d.Text, {
                             variant: 'text-sm/medium',
-                            color: G ? 'text-muted' : 'always-white',
-                            style: { opacity: G ? 1 : 0.75 },
-                            children: T.Z.Messages.QUEST_REWARD_CLAIMED.format({
-                                reward: D.name,
-                                claimedDate: P
+                            color: H ? 'text-muted' : 'always-white',
+                            style: { opacity: H ? 1 : 0.75 },
+                            children: N.Z.Messages.QUEST_REWARD_CLAIMED.format({
+                                reward: G.name,
+                                claimedDate: j
                             })
                         })
                     ]

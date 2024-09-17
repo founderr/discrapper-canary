@@ -33,10 +33,11 @@ t.Z = function () {
                 utm_source_current: Z.utmSourceCurrent,
                 utm_medium_current: Z.utmMediumCurrent,
                 utm_campaign_current: Z.utmCampaignCurrent,
-                utm_content_current: Z.utmContentCurrent
+                utm_content_current: Z.utmContentCurrent,
+                tab: t
             }
         });
-    }, []);
+    }, [t]);
     let O = a.useCallback(() => {
         window.open(h.Z.getArticleURL(f.BhN.QUESTS_LEARN_MORE));
     }, []);
