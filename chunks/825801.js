@@ -31,7 +31,7 @@ var i = n(120356),
     S = n(185923),
     g = n(689938),
     A = n(374729);
-let N = 1800,
+let N = 2700,
     O = '> -# *',
     R = (e) => {
         let { emoji: t, username: n, sourceType: r, sourceDetails: i } = e,
