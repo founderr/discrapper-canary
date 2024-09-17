@@ -17221,6 +17221,7 @@ e.exports = Object.freeze({
     USER_SETTINGS_ACTIVITY_STATUS_GUILD_NOTE: 'Share your activity status in this server.',
     USER_SETTINGS_ACTIVITY_JOINING_TITLE: 'Activity joining',
     USER_SETTINGS_ACTIVITY_JOINING_GUILD_NOTE: 'Allow users to join your activity in this server.',
+    USER_SETTINGS_CHOOSE_GUILD_TITLE: 'Choose a server',
     SAFETY_HUB_ACCOUNT_STANDING_ALL_GOOD_TITLE: 'Your account is $[all good!](hook)',
     SAFETY_HUB_ACCOUNT_STANDING_ALL_GOOD_TITLE_V2: 'Your account is $[all good](hook)',
     SAFETY_HUB_ACCOUNT_STANDING_ALL_GOOD_DESCRIPTION: "Thanks for upholding Discord's [Terms of Service]({termsOfService}) and [Community Guidelines]({communityGuidelines}).",

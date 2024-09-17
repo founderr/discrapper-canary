@@ -130,7 +130,6 @@ e.exports = Object.freeze({
     ACCESS_RATE_ACTION_EXTRA_STEPS: 'Remove unnecessary verification steps, so members can check out your community.',
     ACCESS_RATE_ACTION_BOTS: 'If your server is using $[third party integrations](integrationsHook) to restrict access, switch to integrations that are easier to understand.',
     ACCESS_RATE_ACTION_AUDIT: "Audit your server's onboarding as a new member. Look for any broken or confusing steps.",
-    USER_SETTINGS_CHOOSE_GUILD_TITLE: 'Choose a server',
     USER_SETTINGS_OTHER_QUICK_ACTIONS: 'Other Actions',
     USER_SETTINGS_QUICK_ACTION_FORCE_NEW_USER_ONBOARDING: 'Force new user onboarding flow',
     BETA: 'Beta',
