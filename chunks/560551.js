@@ -8,6 +8,7 @@ e.exports = {
     emptyStateSearchImage: 'emptyStateSearchImage_fab929',
     footerPlaceholder: 'footerPlaceholder_fab929',
     footerImage: 'footerImage_fab929',
+    linkedLobbyIcon: 'linkedLobbyIcon_fab929',
     platformIcon: 'platformIcon_fab929',
     searchContainer: 'searchContainer_fab929'
 };
