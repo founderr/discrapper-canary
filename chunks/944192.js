@@ -60,10 +60,11 @@ function f(e) {
                   (0, r.jsx)(s.Clickable, {
                       tag: 'span',
                       ...e,
-                      children: (0, r.jsx)(l.Z, {
+                      children: (0, r.jsx)(s.GameControllerIcon, {
                           className: _.gameIcon,
-                          size: l.Z.Sizes.XXSMALL,
-                          game: n
+                          size: 'custom',
+                          width: 14,
+                          height: 14
                       })
                   })
           })

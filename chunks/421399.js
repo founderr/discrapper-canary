@@ -145,19 +145,17 @@ function v(e) {
                 : null,
             n,
             !v &&
-                (0, a.jsxs)(a.Fragment, {
-                    children: [
-                        (0, a.jsx)(p.ZP, {
-                            clan: r.clan,
-                            userId: i.author.id,
-                            contextGuildId: G,
-                            className: O.clanTagChiplet,
-                            profileViewedAnalytics: j
-                        }),
-                        (0, a.jsx)(A.Z, { message: i })
-                    ]
+                (0, a.jsx)(a.Fragment, {
+                    children: (0, a.jsx)(p.ZP, {
+                        clan: r.clan,
+                        userId: i.author.id,
+                        contextGuildId: G,
+                        className: O.clanTagChiplet,
+                        profileViewedAnalytics: j
+                    })
                 }),
             null != q ? (0, a.jsx)(a.Fragment, { children: q }) : null,
+            (0, a.jsx)(A.Z, { message: i }),
             null == z || v ? null : z,
             null != i && (0, g.f)(i) && Y && U ? (0, a.jsx)(R, {}) : null
         ]
