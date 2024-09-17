@@ -18,9 +18,9 @@ var s = n(735250),
     T = n(19780),
     I = n(626135),
     R = n(981631),
-    g = n(689938),
-    N = n(456849);
-function C(e, t, n) {
+    m = n(689938),
+    g = n(456849);
+function N(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +33,7 @@ function C(e, t, n) {
         e
     );
 }
-class m extends a.PureComponent {
+class C extends a.PureComponent {
     componentDidMount() {
         this._initTimeout.start(1000, this.setupVoiceActivity);
     }
@@ -81,7 +81,7 @@ class m extends a.PureComponent {
         let { captionVoice: e, captionNoVoice: t } = this.props,
             { isMicTesting: n, isDetectingInput: a } = this.state;
         return (0, s.jsx)(d.FormText, {
-            className: N.micTestCaption,
+            className: g.micTestCaption,
             type: d.FormText.Types.DESCRIPTION,
             children: n ? (a ? e : t) : null
         });
@@ -89,25 +89,25 @@ class m extends a.PureComponent {
     render() {
         let { isVoiceConnected: e, title: t, description: n, notchBackground: a, buttonTest: r, buttonStop: i, buttonClassName: l, buttonColor: o, isDeafened: c } = this.props,
             { isMicTesting: _, volume: E } = this.state,
-            T = e && !_ ? g.Z.Messages.MIC_TEST_VOICE_CHANNEL_WARNING : null;
+            T = e && !_ ? m.Z.Messages.MIC_TEST_VOICE_CHANNEL_WARNING : null;
         return (
             _ && e && !c && this._micTestStop(),
             (0, s.jsxs)('div', {
-                className: N.container,
+                className: g.container,
                 children: [
                     (0, s.jsx)(d.FormTitle, {
                         tag: d.FormTitleTags.H5,
-                        className: N.title,
+                        className: g.title,
                         children: t
                     }),
                     null != n &&
                         (0, s.jsx)(d.FormText, {
                             type: d.FormText.Types.DESCRIPTION,
-                            className: N.description,
+                            className: g.description,
                             children: n
                         }),
                     (0, s.jsxs)('div', {
-                        className: N.micTest,
+                        className: g.micTest,
                         children: [
                             (0, s.jsx)(d.Tooltip, {
                                 text: T,
@@ -138,20 +138,20 @@ class m extends a.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            C(this, '_initTimeout', new c.V7()),
-            C(this, '_silenceTimeout', new c.V7()),
-            C(this, '_messageTimeout', new c.V7()),
-            C(this, '_micTestStartTime', void 0),
-            C(this, 'state', {
+            N(this, '_initTimeout', new c.V7()),
+            N(this, '_silenceTimeout', new c.V7()),
+            N(this, '_messageTimeout', new c.V7()),
+            N(this, '_micTestStartTime', void 0),
+            N(this, 'state', {
                 volume: -100,
                 isMicTesting: !1,
                 isDetectingInput: !0,
                 didDeafenUser: !1
             }),
-            C(this, 'setupVoiceActivity', () => {
+            N(this, 'setupVoiceActivity', () => {
                 E.Z.getMediaEngine().on(o.aB.VoiceActivity, this.handleVoiceActivity);
             }),
-            C(this, 'handleVoiceActivity', (e) => {
+            N(this, 'handleVoiceActivity', (e) => {
                 let { isMicTesting: t } = this.state;
                 if (t && e <= -100) {
                     !this._silenceTimeout.isStarted() &&
@@ -167,7 +167,7 @@ class m extends a.PureComponent {
                         isDetectingInput: !0
                     });
             }),
-            C(this, 'handleToggleMicTest', () => {
+            N(this, 'handleToggleMicTest', () => {
                 this.state.isMicTesting ? this._micTestStop() : this._micTestStart();
             });
     }
@@ -197,4 +197,4 @@ t.Z = l.ZP.connectStores([T.Z, E.Z], () => {
         inputDeviceName: null != n ? n.name : '',
         outputDeviceName: null != r ? r.name : ''
     };
-})(m);
+})(C);

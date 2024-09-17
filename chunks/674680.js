@@ -29,21 +29,21 @@ function T(e) {
         I = (0, i.ZP)(),
         R = (0, c.oX)(n);
     if (null == R) return null;
-    let g = (0, r.getAvatarSpecs)(T),
-        { name: N, rarity: C } = R,
-        { color: m } = (0, c.F7)(C),
+    let m = (0, r.getAvatarSpecs)(T),
+        { name: g, rarity: N } = R,
+        { color: C } = (0, c.F7)(N),
         p = (0, a.wj)(I) ? u : E,
-        A = (g.size - g.offset - 2 * g.stroke) * 0.8,
-        f = g.size - g.stroke,
-        M = {
+        A = (m.size - m.offset - 2 * m.stroke) * 0.8,
+        f = m.size - m.stroke,
+        h = {
             width: 0.4 * A,
             height: 0.4 * A
         },
-        h = {
-            width: M.width + 1,
-            height: M.height + 1,
-            right: g.stroke + 1,
-            bottom: g.stroke + 1,
+        S = {
+            width: h.width + 1,
+            height: h.height + 1,
+            right: m.stroke + 1,
+            bottom: m.stroke + 1,
             padding: 0
         };
     return (0, s.jsxs)('div', {
@@ -51,15 +51,15 @@ function T(e) {
         style: {
             width: f,
             height: f,
-            padding: g.stroke
+            padding: m.stroke
         },
-        'aria-label': ''.concat(null !== (t = N()) && void 0 !== t ? t : ''),
+        'aria-label': ''.concat(null !== (t = g()) && void 0 !== t ? t : ''),
         children: [
             (0, s.jsx)('div', {
                 className: _.trophyIconContainer,
                 children: (0, s.jsx)(r.TrophyIcon, {
                     size: 'custom',
-                    color: d ? m : (0, l.Lq)(p.trophy),
+                    color: d ? C : (0, l.Lq)(p.trophy),
                     width: A,
                     height: A
                 })
@@ -67,21 +67,21 @@ function T(e) {
             !d &&
                 (0, s.jsx)('div', {
                     className: _.lockContainer,
-                    style: h,
+                    style: S,
                     children: (0, s.jsx)(r.LockIcon, {
                         size: 'custom',
                         color: (0, l.Lq)(p.locked),
-                        ...M
+                        ...h
                     })
                 }),
             d &&
-                C === c.EP.LEGENDARY &&
+                N === c.EP.LEGENDARY &&
                 (0, s.jsx)('div', {
                     className: _.lockContainer,
-                    style: h,
+                    style: S,
                     children: (0, s.jsx)(o.Z, {
                         className: _.confettiIcon,
-                        ...M
+                        ...h
                     })
                 })
         ]

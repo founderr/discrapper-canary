@@ -37,20 +37,20 @@ let c = 'url(#gradient)',
     };
 t.Z = (e) => {
     let { percentage: t = 0, children: n, animationClassName: c, initialPercentage: E = 0, progressCircleStrokeSize: T = 2, progressCircleVariation: I, progressCircleStroke: R } = e,
-        g = 43 + T / 2,
-        N = 2 * Math.PI * g,
-        [C, m] = a.useState(E);
+        m = 43 + T / 2,
+        g = 2 * Math.PI * m,
+        [N, C] = a.useState(E);
     a.useEffect(() => {
         let e = setTimeout(() => {
-            m(t);
+            C(t);
         }, 200);
         return () => clearTimeout(e);
     }, [t]);
     let p = (0, i.ZP)(),
         A = (0, r.ap)(p),
         f = _(I),
-        M = d(I, A),
-        h = null != R ? R : u(A, I);
+        h = d(I, A),
+        S = null != R ? R : u(A, I);
     return (0, s.jsxs)('div', {
         className: o.circleContainer,
         children: [
@@ -62,20 +62,20 @@ t.Z = (e) => {
                         className: I === l.Q.NITRO_GEM ? o.baseProgressCircle : void 0,
                         fill: 'transparent',
                         strokeWidth: T,
-                        r: ''.concat(g),
+                        r: ''.concat(m),
                         cx: '50%',
                         cy: '50%',
                         stroke: f,
-                        strokeOpacity: M
+                        strokeOpacity: h
                     }),
                     (0, s.jsx)('circle', {
-                        stroke: h,
+                        stroke: S,
                         strokeWidth: T,
                         strokeLinecap: 'round',
-                        strokeDasharray: ''.concat(N, ' ').concat(N),
+                        strokeDasharray: ''.concat(g, ' ').concat(g),
                         className: c,
-                        style: { strokeDashoffset: (1 - C / 100) * N },
-                        r: ''.concat(g),
+                        style: { strokeDashoffset: (1 - N / 100) * g },
+                        r: ''.concat(m),
                         cx: '50%',
                         cy: '50%'
                     })

@@ -68,8 +68,8 @@ function b(e) {
         }, [s.role_id]),
         {
             serviceName: U,
-            channelURL: w,
-            expireBehaviorLabel: H,
+            channelURL: H,
+            expireBehaviorLabel: w,
             syncLabel: W,
             subscribersText: F
         } = a.useMemo(() => {
@@ -142,12 +142,12 @@ function b(e) {
             }
         ];
     else {
-        let e = new URL(w);
+        let e = new URL(H);
         n = [
             {
                 text: S.Z.Messages.INTEGRATIONS_ACCOUNT_DESCRIPTION.format({
                     serviceName: U,
-                    accountUrl: w,
+                    accountUrl: H,
                     accountUrlText: e.hostname + e.pathname
                 })
             }
@@ -325,7 +325,7 @@ function b(e) {
                         });
                     })({
                         integration: o,
-                        labelText: H,
+                        labelText: w,
                         onBehaviorChange: function (e) {
                             u.Z.updateIntegration({ expireBehavior: e });
                         },

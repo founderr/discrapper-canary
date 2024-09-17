@@ -13,46 +13,46 @@ var s = n(735250),
     T = n(497321),
     I = n(100527),
     R = n(906732),
-    g = n(211242),
-    N = n(15640),
-    C = n(89057),
-    m = n(433811),
+    m = n(211242),
+    g = n(15640),
+    N = n(89057),
+    C = n(433811),
     p = n(214852),
     A = n(621853),
     f = n(246946),
-    M = n(594174),
-    h = n(78839),
-    S = n(626135),
+    h = n(594174),
+    S = n(78839),
+    M = n(626135),
     x = n(111361),
     b = n(357355),
     O = n(937579),
-    P = n(471309),
-    v = n(827686),
+    v = n(471309),
+    P = n(827686),
     L = n(91802),
     Z = n(104494),
     D = n(639119),
-    U = n(2359),
-    B = n(132547),
+    B = n(2359),
+    U = n(132547),
     j = n(474936),
     G = n(981631),
     w = n(700199);
 t.Z = function (e) {
     let { entrypoint: t = j.EZ.UserSettings } = e;
-    (0, p.z)(m.X);
-    let n = (0, g.Q)(),
+    (0, p.z)(C.X);
+    let n = (0, m.Q)(),
         { sourceAnalyticsLocations: r, analyticsLocations: y } = (0, R.ZP)(I.Z.PREMIUM_MARKETING),
-        H = (0, l.e7)([h.ZP], () => h.ZP.hasFetchedSubscriptions()),
-        k = (0, l.e7)([M.default], () => M.default.getCurrentUser()),
+        H = (0, l.e7)([S.ZP], () => S.ZP.hasFetchedSubscriptions()),
+        k = (0, l.e7)([h.default], () => h.default.getCurrentUser()),
         F = (0, D.N)(),
         V = (0, Z.Ng)(),
-        W = (0, N.V)(),
+        W = (0, g.V)(),
         [K, Y] = a.useState(!0),
         z = a.useRef(0),
         Q = (0, x.M5)(k, j.p9.TIER_2),
         q = (0, L.n)(),
         X = null == q ? void 0 : q.countryCode,
-        { enabled: J } = (0, P.Z)(),
-        { enabled: $ } = (0, v.Z)(),
+        { enabled: J } = (0, v.Z)(),
+        { enabled: $ } = (0, P.Z)(),
         ee = J && $,
         et = (0, l.e7)([A.Z], () => (null != k ? A.Z.getUserProfile(k.id) : null)),
         en = (0, l.e7)([b.Z], () => b.Z.hasFetched);
@@ -71,7 +71,7 @@ t.Z = function (e) {
         }, [n, F, V]),
         a.useEffect(() => {
             !K &&
-                S.default.track(G.rMx.PREMIUM_MARKETING_PAGE_VIEWED, {
+                M.default.track(G.rMx.PREMIUM_MARKETING_PAGE_VIEWED, {
                     location_stack: r,
                     load_duration_ms: z.current
                 });
@@ -79,7 +79,7 @@ t.Z = function (e) {
         (0, l.e7)([f.Z], () => f.Z.enabled))
     )
         return (0, s.jsx)(T.Z, {});
-    if (n) return (0, s.jsx)(C.c8, {});
+    if (n) return (0, s.jsx)(N.c8, {});
     if (t === j.EZ.ApplicationStoreHome && Q)
         return ee && null == et
             ? (0, s.jsx)('div', {
@@ -88,12 +88,12 @@ t.Z = function (e) {
               })
             : (0, s.jsx)(R.Gt, {
                   value: y,
-                  children: (0, s.jsx)(B.Z, {})
+                  children: (0, s.jsx)(U.Z, {})
               });
     return H && W && !K
         ? (0, s.jsx)(R.Gt, {
               value: y,
-              children: (0, s.jsx)(U.Z, { entrypoint: t })
+              children: (0, s.jsx)(B.Z, { entrypoint: t })
           })
         : (0, s.jsx)('div', {
               className: i()(w.container, w.loading),

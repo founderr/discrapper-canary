@@ -51,14 +51,14 @@ function O(e) {
         D = a.useContext(h.AnalyticsContext),
         [y, j] = a.useState((0, u.P)()),
         [U, G] = a.useState(!0),
-        w = a.useRef(U),
-        [k, B] = a.useState(3),
-        H = a.useRef(k),
+        k = a.useRef(U),
+        [w, B] = a.useState(3),
+        H = a.useRef(w),
         V = (0, c.y)((e) => {
             let t = null == e ? void 0 : e.getBoundingClientRect();
             if (null == t) return;
             let n = t.width;
-            n < 1024 && w.current ? ((w.current = !1), G(!1)) : n > 1024 && !w.current && ((w.current = !0), G(!0));
+            n < 1024 && k.current ? ((k.current = !1), G(!1)) : n > 1024 && !k.current && ((k.current = !0), G(!0));
             let i = 1;
             for (n -= U ? 420 : 0, n -= 250; n > 0; ) (n -= 234), (i += 1);
             i !== H.current && ((H.current = i), B(i));
@@ -79,8 +79,8 @@ function O(e) {
         }, [D, O, t, M, y, b]);
     let F = a.useCallback((e) => n(e, M), [n, M]),
         Y = a.useMemo(() => (x ? [O.length, 0] : [O.length]), [O.length, x]),
-        W = 0 === O.length && !x,
-        z = a.useCallback(
+        z = 0 === O.length && !x,
+        W = a.useCallback(
             (e, n, a) => {
                 switch (e) {
                     case 0:
@@ -102,7 +102,7 @@ function O(e) {
                                             className: N.headingFilters,
                                             children: [(0, i.jsx)(T.Z, { loadId: t }), (0, i.jsx)(C.Z, { loadId: t })]
                                         }),
-                                    W && (0, i.jsx)(S.Z, { loadId: t })
+                                    z && (0, i.jsx)(S.Z, { loadId: t })
                                 ]
                             },
                             a
@@ -111,21 +111,21 @@ function O(e) {
                         return (0, i.jsx)(o.Spinner, { className: N.spinner }, a);
                 }
             },
-            [W, U, t, b]
+            [z, U, t, b]
         ),
         K = a.useCallback(
             (e) => {
                 switch (e) {
                     case 0:
                         let t = U ? A : v;
-                        return W ? t + 400 : t;
+                        return z ? t + 400 : t;
                     case 1:
                         return 120;
                     default:
                         throw Error('[getSectionHeight] Failed for section: '.concat(e));
                 }
             },
-            [W, U]
+            [z, U]
         ),
         q = a.useCallback(
             (e, t) => {
@@ -234,11 +234,11 @@ function O(e) {
                 ref: $,
                 className: N.masonryList,
                 sections: Y,
-                columns: k,
+                columns: w,
                 itemGutter: 16,
                 padding: et,
                 renderItem: J,
-                renderSection: z,
+                renderSection: W,
                 getSectionHeight: K,
                 getItemKey: q,
                 getItemHeight: Q,

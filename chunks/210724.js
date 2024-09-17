@@ -18,39 +18,39 @@ var s = n(735250),
     T = n(113434),
     I = n(569984),
     R = n(497505),
-    g = n(918701),
-    N = n(302245),
-    C = n(977156),
-    m = n(5881),
+    m = n(918701),
+    g = n(302245),
+    N = n(977156),
+    C = n(5881),
     p = n(602667),
     A = n(78826),
     f = n(693900),
-    M = n(617889),
-    h = n(46140),
-    S = n(981631),
+    h = n(617889),
+    S = n(46140),
+    M = n(981631),
     x = n(604330);
 function b(e) {
     var t, n, r;
     let { quest: I } = e,
-        b = (0, m.T)({
+        b = (0, C.T)({
             quest: I,
-            location: h.dr.QUESTS_BAR
+            location: S.dr.QUESTS_BAR
         }),
-        O = (0, C.Zy)({ location: h.dr.QUESTS_BAR }),
-        P = (0, o.e7)([_.Z], () => _.Z.useReducedMotion),
-        v = (0, o.e7)([u.Z], () => u.Z.hasLayers()),
+        O = (0, N.Zy)({ location: S.dr.QUESTS_BAR }),
+        v = (0, o.e7)([_.Z], () => _.Z.useReducedMotion),
+        P = (0, o.e7)([u.Z], () => u.Z.hasLayers()),
         L = (null === (t = I.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
         Z = (0, d.Z)(L),
         D = (null === (n = I.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
-        U = (0, d.Z)(D),
-        B = (null === (r = I.userStatus) || void 0 === r ? void 0 : r.claimedAt) != null,
-        j = null != I.userStatus && (0, g.zE)(I.userStatus, R.jn.QUEST_BAR),
+        B = (0, d.Z)(D),
+        U = (null === (r = I.userStatus) || void 0 === r ? void 0 : r.claimedAt) != null,
+        j = null != I.userStatus && (0, m.zE)(I.userStatus, R.jn.QUEST_BAR),
         G = (0, T.tP)(I),
         { hasError: w, isLoading: y } = (0, A.d7)(),
-        H = O && !j && !B && !G && !y,
+        H = O && !j && !U && !G && !y,
         k = a.useRef(H),
-        F = (0, M.B)(I, H && !w),
-        V = (0, N.vI)(I, h.dr.QUESTS_BAR) ? N.WV : F.collapsedHeight,
+        F = (0, h.B)(I, H && !w),
+        V = (0, g.vI)(I, S.dr.QUESTS_BAR) ? g.WV : F.collapsedHeight,
         W = a.useRef(-1),
         K = a.useRef(!1),
         [Y, z] = a.useState(!1),
@@ -96,7 +96,7 @@ function b(e) {
         eE = a.useCallback(() => {
             (0, E.dA)({
                 questId: I.id,
-                event: S.rMx.QUEST_HOVER,
+                event: M.rMx.QUEST_HOVER,
                 properties: (0, E.mH)(R.jn.QUEST_BAR)
             }),
                 (K.current = !0),
@@ -117,8 +117,8 @@ function b(e) {
         a.useLayoutEffect(() => {
             H !== k.current && ee(!1), (k.current = H);
         }, [H]);
-    let eI = L ? h.XZ : h.R4,
-        [{ expansionSpring: eR }, eg] = (0, c.useSpring)(() => ({
+    let eI = L ? S.XZ : S.R4,
+        [{ expansionSpring: eR }, em] = (0, c.useSpring)(() => ({
             from: { expansionSpring: 0 },
             config: eI,
             onRest: () => {
@@ -129,12 +129,12 @@ function b(e) {
             }
         }));
     a.useEffect(() => {
-        eg({
+        em({
             expansionSpring: Q ? 1 : 0,
-            immediate: P
+            immediate: v
         });
-    }, [Q, eg, P]);
-    let { visibilitySpring: eN } = (0, c.useSpring)({
+    }, [Q, em, v]);
+    let { visibilitySpring: eg } = (0, c.useSpring)({
         from: { visibilitySpring: 0 },
         to: { visibilitySpring: H ? 1 : 0 },
         config: {
@@ -150,13 +150,13 @@ function b(e) {
         }
     });
     return (a.useLayoutEffect(() => {
-        D && !U && F.canCollapseOnBlur && er();
-    }, [D, ei, F.canCollapseOnBlur, er, U]),
+        D && !B && F.canCollapseOnBlur && er();
+    }, [D, ei, F.canCollapseOnBlur, er, B]),
     a.useEffect(() => {
         w &&
             (0, E.dA)({
                 questId: I.id,
-                event: S.rMx.QUEST_CONTENT_RENDERING_FAILURE,
+                event: M.rMx.QUEST_CONTENT_RENDERING_FAILURE,
                 properties: {
                     ...(0, E.mH)(R.jn.QUEST_BAR),
                     reason: 'asset_loading_error'
@@ -165,7 +165,7 @@ function b(e) {
             !O &&
                 (0, E.dA)({
                     questId: I.id,
-                    event: S.rMx.QUEST_CONTENT_RENDERING_FAILURE,
+                    event: M.rMx.QUEST_CONTENT_RENDERING_FAILURE,
                     properties: {
                         ...(0, E.mH)(R.jn.QUEST_BAR),
                         reason: 'not_eligible_for_quest'
@@ -176,7 +176,7 @@ function b(e) {
         ? (0, s.jsx)(p.A, {
               questOrQuests: I,
               questContent: F.trackingCtx.content,
-              overrideVisibility: !v && H,
+              overrideVisibility: !P && H,
               children: () => {
                   let e = F.component;
                   return (0, s.jsx)('div', {
@@ -193,7 +193,7 @@ function b(e) {
                           }),
                           style: {
                               color: I.config.colors.secondary,
-                              height: eN.to({
+                              height: eg.to({
                                   range: [0, 1],
                                   output: [0, !F.canCollapseOnBlur && Q ? et : V]
                               })
@@ -219,7 +219,7 @@ function b(e) {
                                       onCtxMenuOpened: el,
                                       onCtxMenuSelection: ec,
                                       quest: I,
-                                      useReducedMotion: P,
+                                      useReducedMotion: v,
                                       collapsedHeight: V
                                   })
                               })
@@ -236,14 +236,14 @@ t.Z =
               let { overrideQuest: t } = e,
                   n = (0, o.e7)([I.Z], () => {
                       var e;
-                      return null !== (e = null != t ? t : I.Z.questDeliveryOverride) && void 0 !== e ? e : (0, g._)(I.Z.quests, R.jn.QUEST_BAR);
+                      return null !== (e = null != t ? t : I.Z.questDeliveryOverride) && void 0 !== e ? e : (0, m._)(I.Z.quests, R.jn.QUEST_BAR);
                   });
               return null == n
                   ? null
                   : (0, s.jsx)(
                         A.p,
                         {
-                            source: h.dr.QUESTS_BAR,
+                            source: S.dr.QUESTS_BAR,
                             questId: n.id,
                             children: (0, s.jsx)(b, { quest: n })
                         },

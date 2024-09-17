@@ -33,7 +33,7 @@ var s = n(735250),
     O = n(743294),
     U = n(689938),
     L = n(160443);
-function q(e) {
+function Z(e) {
     let { quest: t, isHighlightedReward: n } = e;
     return (0, s.jsx)(T.Z, {
         className: a()(L.rewardTile, { [L.hiddenRewardTile]: n }),
@@ -43,11 +43,11 @@ function q(e) {
         location: k.dr.QUESTS_BAR
     });
 }
-function Z(e) {
+function q(e) {
     let { quest: t, taskDetails: n, expansionSpring: r, isInteractable: a, useReducedMotion: i, containerRef: p, isExpanded: x, onAcceptQuest: m } = e,
         E = (0, c.e7)([g.Z], () => g.Z.isEnrolling(t.id), [t]),
         T = (0, C.ph)(t),
-        v = o.useMemo(() => (0, C.nP)(t.config.assets.questBarHero), [t]),
+        v = o.useMemo(() => (0, C.nP)(T), [T]),
         N = (0, h.vI)(t, k.dr.QUESTS_BAR, !0),
         j = o.useRef(null),
         { primaryVariant: B } = f.u.useExperiment({ location: k.dr.QUESTS_BAR }, { autoTrackExposure: !1 }),
@@ -72,7 +72,7 @@ function Z(e) {
                             (0, s.jsxs)('div', {
                                 className: L.details,
                                 children: [
-                                    (0, s.jsx)(q, {
+                                    (0, s.jsx)(Z, {
                                         quest: t,
                                         isHighlightedReward: N
                                     }),
@@ -172,7 +172,7 @@ function w(e) {
         S = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
         T = r.percentComplete > 0,
         A = (0, m.z)(n),
-        [M, q, Z] = (0, m.me)(n, r),
+        [M, Z, q] = (0, m.me)(n, r),
         w = (0, E.pF)({ location: k.dr.QUESTS_BAR }),
         P = o.useRef(null),
         Q = (0, m.B6)(n.config.expiresAt),
@@ -245,8 +245,8 @@ function w(e) {
                             (0, i.EQ)(M)
                                 .with(_.LI.SELECT, () =>
                                     (0, s.jsx)(I.Z, {
-                                        onConsole: () => Z(k.cd.CONSOLE),
-                                        onDesktop: () => Z(k.cd.DESKTOP)
+                                        onConsole: () => q(k.cd.CONSOLE),
+                                        onDesktop: () => q(k.cd.DESKTOP)
                                     })
                                 )
                                 .with(_.LI.DESKTOP, () => (0, s.jsx)(b.Z, { quest: n }))
@@ -267,8 +267,8 @@ function w(e) {
                             hasMadeProgress: T,
                             isProgressing: A,
                             activeScreen: M,
-                            showBackButton: M !== _.LI.SELECT && q.length > 1 && !T && !A && w,
-                            onBack: () => Z(null)
+                            showBackButton: M !== _.LI.SELECT && Z.length > 1 && !T && !A && w,
+                            onBack: () => q(null)
                         })
                     })
                 ]
@@ -329,7 +329,7 @@ let P = o.forwardRef(function (e, t) {
                           onCtxMenuSelect: f,
                           containerRef: t
                       })
-                    : (0, s.jsx)(Z, {
+                    : (0, s.jsx)(q, {
                           quest: E,
                           taskDetails: T,
                           expansionSpring: m,

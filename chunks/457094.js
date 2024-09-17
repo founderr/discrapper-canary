@@ -35,15 +35,15 @@ var i = n(735250),
     j = n(96051),
     U = n(750995),
     G = n(696287),
-    w = n(408026),
-    k = n(763916),
+    k = n(408026),
+    w = n(763916),
     B = n(306721),
     H = n(531551),
     V = n(38618),
     F = n(972830),
     Y = n(981283),
-    W = n(584233),
-    z = n(15274),
+    z = n(584233),
+    W = n(15274),
     K = n(434404),
     q = n(543842),
     Q = n(879064),
@@ -89,15 +89,15 @@ var i = n(735250),
     ej = n(592125),
     eU = n(896797),
     eG = n(430824),
-    ew = n(819640),
-    ek = n(283595),
+    ek = n(819640),
+    ew = n(283595),
     eB = n(944486),
     eH = n(914010),
     eV = n(695103),
     eF = n(241890),
     eY = n(897607),
-    eW = n(417363),
-    ez = n(900974),
+    ez = n(417363),
+    eW = n(900974),
     eK = n(358085),
     eq = n(998502),
     eQ = n(346329),
@@ -124,10 +124,10 @@ let e1 = !1;
     eg.Z.loadServer(),
     eK.isPlatformEmbedded &&
         (eq.ZP.on('USER_SETTINGS_OPEN', () => {
-            !ew.Z.getLayers().includes(eX.S9g.USER_SETTINGS) && h.Z.open(eX.oAB.ACCOUNT);
+            !ek.Z.getLayers().includes(eX.S9g.USER_SETTINGS) && h.Z.open(eX.oAB.ACCOUNT);
         }),
         eq.ZP.on('LAUNCH_APPLICATION', (e, t) => {
-            let n = ek.Z.getActiveLibraryApplication(t);
+            let n = ew.Z.getActiveLibraryApplication(t);
             eQ.playApplication(t, n, {
                 analyticsParams: {
                     location: {
@@ -146,7 +146,7 @@ let e4 = l.ZP.connectStores([V.Z, eU.Z, eD.default], () => ({
         class extends a.Component {
             componentDidMount() {
                 let { match: e } = this.props;
-                null != e && null != e.params.inviteCode && (0, W.x)({ code: e.params.inviteCode });
+                null != e && null != e.params.inviteCode && (0, z.x)({ code: e.params.inviteCode });
             }
             render() {
                 let { isConnected: e, defaultRoute: t, token: n, defaultRouteFallback: a } = this.props;
@@ -211,11 +211,11 @@ let e9 = [
             let { match: t } = e,
                 { gameId: n, action: a } = t.params;
             return (
-                eW.Z.whenInitialized(() => {
-                    ek.Z.whenInitialized(() => {
+                ez.Z.whenInitialized(() => {
+                    ew.Z.whenInitialized(() => {
                         switch (a) {
                             case 'launch': {
-                                let e = ek.Z.getActiveLibraryApplication(n);
+                                let e = ew.Z.getActiveLibraryApplication(n);
                                 if (null == e) return;
                                 eQ.playApplication(e.id, e, {
                                     analyticsParams: {
@@ -231,7 +231,7 @@ let e9 = [
                                 eV.Z.whenInitialized(() => E.Wt(n));
                                 break;
                             case 'uninstall': {
-                                let e = ek.Z.getActiveLibraryApplication(n);
+                                let e = ew.Z.getActiveLibraryApplication(n);
                                 if (null == e) return;
                                 (0, d.W)(e.id, e.branchId, eX.Sbl.URI_SCHEME);
                             }
@@ -331,7 +331,7 @@ let e9 = [
                 { guildId: n, guildEventId: a } = t.params;
             return (
                 (0, F.h)(() => {
-                    (0, z.bO)({ eventId: a });
+                    (0, W.bO)({ eventId: a });
                 }),
                 (0, i.jsx)(r.l_, { to: eX.Z5c.CHANNEL(n) })
             );
@@ -385,9 +385,9 @@ class te extends a.PureComponent {
             eg.Z.init(),
             L.Z.initialize(),
             ec.Z.initialize(),
-            w.Z.initialize(),
-            eM.Z.initialize(),
             k.Z.initialize(),
+            eM.Z.initialize(),
+            w.Z.initialize(),
             eu.Z.initialize(),
             $.Z.initialize(),
             I.Z.init(),
@@ -404,7 +404,7 @@ class te extends a.PureComponent {
             Y.Z.init(),
             X.Z.init(),
             eY.Z.init(),
-            ez.Z.init(),
+            eW.Z.init(),
             p.Z.initialize(),
             eL.Z.init(),
             eF.Z.init(),

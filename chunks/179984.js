@@ -13,21 +13,21 @@ var s = n(735250),
     T = n(15640),
     I = n(594174),
     R = n(78839),
-    g = n(74538),
-    N = n(775412),
-    C = n(104494),
-    m = n(639119),
+    m = n(74538),
+    g = n(775412),
+    N = n(104494),
+    C = n(639119),
     p = n(230916),
     A = n(248042),
     f = n(823188),
-    M = n(21023),
-    h = n(318747),
-    S = n(409100),
+    h = n(21023),
+    S = n(318747),
+    M = n(409100),
     x = n(474936),
     b = n(689938),
     O = n(515846),
-    P = n(102655),
-    v = n(768236),
+    v = n(102655),
+    P = n(768236),
     L = n(314907),
     Z = n(826701);
 let D = () => {
@@ -38,7 +38,7 @@ let D = () => {
             colorOptions: f.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL
         });
     },
-    U = () =>
+    B = () =>
         (0, s.jsx)('div', {
             className: O.mostPopularPill,
             children: (0, s.jsx)(c.Heading, {
@@ -47,12 +47,12 @@ let D = () => {
                 children: b.Z.Messages.MOST_POPULAR
             })
         }),
-    B = (e) => {
+    U = (e) => {
         let t,
             { premiumType: n } = e,
             a = (0, _.ZP)();
-        t = n === x.p9.TIER_0 ? ((0, o.wj)(a) ? P : v) : (0, o.wj)(a) ? L : Z;
-        let r = (0, g.Px)(n);
+        t = n === x.p9.TIER_0 ? ((0, o.wj)(a) ? v : P) : (0, o.wj)(a) ? L : Z;
+        let r = (0, m.Px)(n);
         return (0, s.jsx)('img', {
             src: t,
             className: O.logo,
@@ -116,7 +116,7 @@ let D = () => {
 t.Z = (e) => {
     var t;
     let n,
-        { className: r, hideCTAs: P = !1, headingOverride: v, hidePill: L = !1, selectedPlanColumnClassName: Z, selectedPlanTier: w = x.p9.TIER_2 } = e,
+        { className: r, hideCTAs: v = !1, headingOverride: P, hidePill: L = !1, selectedPlanColumnClassName: Z, selectedPlanTier: w = x.p9.TIER_2 } = e,
         { analyticsLocations: y } = (0, E.ZP)(u.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
         H = (0, l.e7)([R.ZP], () => R.ZP.hasFetchedSubscriptions()),
         k = (0, T.V)(),
@@ -132,17 +132,17 @@ t.Z = (e) => {
     let V = (0, _.ZP)(),
         W = (0, o.ap)(V),
         K = (0, l.e7)([I.default], () => I.default.getCurrentUser()),
-        Y = (0, g.M5)(K, x.p9.TIER_2),
-        z = (0, m.N)(),
+        Y = (0, m.M5)(K, x.p9.TIER_2),
+        z = (0, C.N)(),
         Q = null == z ? void 0 : null === (t = z.subscription_trial) || void 0 === t ? void 0 : t.sku_id,
-        q = (0, N.rT)(),
-        X = (0, C.Ng)(),
-        J = null != X && (0, C.Wp)(X, x.Si.TIER_2),
+        q = (0, g.rT)(),
+        X = (0, N.Ng)(),
+        J = null != X && (0, N.Wp)(X, x.Si.TIER_2),
         $ = (0, p.A)(x.Xh.PREMIUM_MONTH_TIER_2),
-        ee = ''.concat($, '/').concat((0, g.eP)(x.rV.MONTH)),
-        et = (0, g.CY)(x.Xh.PREMIUM_MONTH_TIER_0),
-        en = (0, g.CY)(x.Xh.PREMIUM_MONTH_TIER_2),
-        es = (0, M.n)(et, en, J, ee),
+        ee = ''.concat($, '/').concat((0, m.eP)(x.rV.MONTH)),
+        et = (0, m.CY)(x.Xh.PREMIUM_MONTH_TIER_0),
+        en = (0, m.CY)(x.Xh.PREMIUM_MONTH_TIER_2),
+        es = (0, h.n)(et, en, J, ee),
         ea = (0, A.Vi)();
     if (!H || !k) return null;
     let er = {
@@ -151,10 +151,10 @@ t.Z = (e) => {
             variant: 'heading-lg/extrabold',
             children: b.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_HEADER
         }),
-        column1: (0, s.jsx)(B, { premiumType: x.p9.TIER_0 }),
-        column2: (0, s.jsx)(B, { premiumType: x.p9.TIER_2 })
+        column1: (0, s.jsx)(U, { premiumType: x.p9.TIER_0 }),
+        column2: (0, s.jsx)(U, { premiumType: x.p9.TIER_2 })
     };
-    P
+    v
         ? es.push({
               label: null,
               column1: null,
@@ -169,7 +169,7 @@ t.Z = (e) => {
               column1: (0, s.jsxs)(s.Fragment, {
                   children: [
                       Q === x.Si.TIER_2 || ea
-                          ? (0, s.jsx)(S.Z, {
+                          ? (0, s.jsx)(M.Z, {
                                 className: O.button,
                                 subscriptionTier: x.Si.TIER_0,
                                 showIcon: !1,
@@ -177,14 +177,14 @@ t.Z = (e) => {
                                 color: W ? c.ButtonColors.BRAND : c.ButtonColors.WHITE,
                                 buttonShineClassName: void 0
                             })
-                          : (0, s.jsx)(S.Z, {
+                          : (0, s.jsx)(M.Z, {
                                 className: O.button,
                                 subscriptionTier: x.Si.TIER_0,
                                 showIcon: !1
                             }),
                       q === x.p9.TIER_2 || null != Q
                           ? null
-                          : (0, s.jsx)(h.Z, {
+                          : (0, s.jsx)(S.Z, {
                                 className: O.button,
                                 subscriptionTier: x.Si.TIER_0
                             })
@@ -193,7 +193,7 @@ t.Z = (e) => {
               column2: (0, s.jsxs)(s.Fragment, {
                   children: [
                       Q === x.Si.TIER_0
-                          ? (0, s.jsx)(S.Z, {
+                          ? (0, s.jsx)(M.Z, {
                                 className: O.button,
                                 subscriptionTier: x.Si.TIER_2,
                                 showIcon: !1,
@@ -201,7 +201,7 @@ t.Z = (e) => {
                                 color: W ? c.ButtonColors.BRAND : c.ButtonColors.WHITE,
                                 buttonShineClassName: void 0
                             })
-                          : (0, s.jsx)(S.Z, {
+                          : (0, s.jsx)(M.Z, {
                                 className: O.button,
                                 subscriptionTier: x.Si.TIER_2,
                                 showIcon: !1,
@@ -209,7 +209,7 @@ t.Z = (e) => {
                             }),
                       q === x.p9.TIER_0 || null != Q
                           ? null
-                          : (0, s.jsx)(h.Z, {
+                          : (0, s.jsx)(S.Z, {
                                 className: O.button,
                                 subscriptionTier: x.Si.TIER_2
                             })
@@ -229,7 +229,7 @@ t.Z = (e) => {
                 })
               : ea
                 ? (0, s.jsx)(D, {})
-                : (0, s.jsx)(U, {}));
+                : (0, s.jsx)(B, {}));
     let ei = Q === x.Si.TIER_0 || q === x.p9.TIER_0 || w === x.p9.TIER_0;
     return (0, s.jsx)(E.Gt, {
         value: y,
@@ -240,7 +240,7 @@ t.Z = (e) => {
                 (0, s.jsx)(c.Heading, {
                     className: i()(O.titleText, O.__invalid_textColor),
                     variant: 'heading-xxl/extrabold',
-                    children: null != v ? v : b.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_TITLE
+                    children: null != P ? P : b.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_TITLE
                 }),
                 (0, s.jsxs)('div', {
                     className: O.tableWrapper,

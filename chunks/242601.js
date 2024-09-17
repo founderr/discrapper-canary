@@ -41,15 +41,15 @@ var i = n(735250),
     j = n(972264),
     U = n(11352),
     G = n(304445),
-    w = n(344185),
-    k = n(155409),
+    k = n(344185),
+    w = n(155409),
     B = n(10401),
     H = n(970731),
     V = n(210887),
     F = n(592125),
     Y = n(796974),
-    W = n(486472),
-    z = n(984933),
+    z = n(486472),
+    W = n(984933),
     K = n(650774),
     q = n(430824),
     Q = n(819640),
@@ -127,7 +127,7 @@ class eT extends a.PureComponent {
         if (n)
             return (0, i.jsx)('div', {
                 onClick: (t) => (e ? null : t.stopPropagation()),
-                children: (0, i.jsx)(k.Z, {
+                children: (0, i.jsx)(w.Z, {
                     tutorialId: eg,
                     position: 'bottom',
                     inlineSpecs: ep,
@@ -249,7 +249,7 @@ class eT extends a.PureComponent {
                 className: eh.hubContainer,
                 children: (0, i.jsx)(y.Z, {
                     guild: t,
-                    channel: null != n ? n : z.ZP.getDefaultChannel(t.id)
+                    channel: null != n ? n : W.ZP.getDefaultChannel(t.id)
                 })
             });
         {
@@ -424,18 +424,18 @@ function eS(e) {
         E = (0, o.e7)([Y.Z], () => Y.Z.getGuildDimensions(n).scrollTo),
         h = (0, o.e7)([$.Z], () => $.Z.getChannelId()),
         [C, L, P] = (0, o.Wu)([X.Z], () => [X.Z.can(ec.Plq.MANAGE_GUILD, d), X.Z.can(ec.Plq.MANAGE_ROLES, d), X.Z.can(ec.Plq.MANAGE_THREADS, d)]),
-        y = (0, o.e7)([W.Z], () => W.Z.isUnavailable(n)),
+        y = (0, o.e7)([z.Z], () => z.Z.isUnavailable(n)),
         G = (0, o.e7)([ee.default], () => ee.default.getCurrentUser()),
-        k = (0, o.e7)([V.Z], () => (V.Z.darkSidebar ? ec.BRd.DARK : V.Z.theme)),
+        w = (0, o.e7)([V.Z], () => (V.Z.darkSidebar ? ec.BRd.DARK : V.Z.theme)),
         { enableStudyGroup: H } = (0, D.s)(d),
-        z = (0, A.ZP)((e) => e.currentlyShown.has(c.z.NAGBAR_NOTICE_CONNECT_PLAYSTATION)),
-        [ei, ea] = a.useState(!z),
+        W = (0, A.ZP)((e) => e.currentlyShown.has(c.z.NAGBAR_NOTICE_CONNECT_PLAYSTATION)),
+        [ei, ea] = a.useState(!W),
         es = (0, I.Z)(n),
         { analyticsLocations: er } = (0, p.ZP)(g.Z.GUILD_HEADER),
         { analyticsLocations: el } = (0, p.ZP)(g.Z.GUILD_CHANNEL_LIST_FOOTER);
     a.useEffect(() => {
-        n !== es && ea(!z);
-    }, [n, es, z]);
+        n !== es && ea(!W);
+    }, [n, es, W]);
     let [eo, e_] = (0, A.ZP)((e) => [ed.XN.some((t) => e.currentlyShown.has(t.dismissibleContentType)), e.currentlyShownGroup.has(eu.R.GUILD_HEADER_TOOLTIPS)]),
         eE = (0, S.Z)(d),
         eh = (0, u.useModalsStore)(u.hasAnyModalOpenSelector),
@@ -455,15 +455,15 @@ function eS(e) {
         ex = (0, o.e7)([F.Z], () => F.Z.getChannel(l)),
         { isPopoutOpen: eb } = (0, R.y)(),
         eP = null !== (t = null == d ? void 0 : d.hasFeature(ec.oNc.COMMUNITY)) && void 0 !== t && t,
-        eM = (0, o.e7)([w.Z], () => !r().isEmpty(w.Z.getThreadsForGuild(n))),
+        eM = (0, o.e7)([k.Z], () => !r().isEmpty(k.Z.getThreadsForGuild(n))),
         eD = et.ZP.isNewUser(G),
         ey = ei && !eD,
         ej = (0, f.Z)(G);
     (0, O.Z)(d);
     let eU = (0, v.wE)(c.z.PREMIUM_TUTORIAL_SERVER_MENU_TOOLTIP),
         eG = (0, j.Z)(n),
-        ew = (0, x.Z)(n),
-        ek = (0, o.e7)([$.Z], () => $.Z.getChannelId()),
+        ek = (0, x.Z)(n),
+        ew = (0, o.e7)([$.Z], () => $.Z.getChannelId()),
         eB = (0, o.e7)([J.Z], () => J.Z.desyncedVoiceStatesCount),
         eH = U.Y.useExperiment({ location: 'GuildSidebar' }, { autoTrackExposure: !0 }).enabled;
     return (0, i.jsx)(eT, {
@@ -475,10 +475,10 @@ function eS(e) {
         selectedChannel: ex,
         selectedVoiceChannelId: h,
         voiceStates: _,
-        rtcConnectedChannelId: ek,
+        rtcConnectedChannelId: ew,
         rtcDesyncedVoiceStatesCount: eB,
         isUnavailable: y,
-        theme: k,
+        theme: w,
         user: G,
         hasChannelNotice: null != eE || eo,
         anyLayerOpen: eh || em,
@@ -495,7 +495,7 @@ function eS(e) {
         showActiveThreadsNotice: P && null != eS && eS >= 200 && eM,
         showGuildSoundboardPermissionUpsell: ef,
         showMediaChannelUpsell: eG,
-        showTierTemplatesUpsell: ew,
+        showTierTemplatesUpsell: ek,
         isHeaderPopoutOpen: eb,
         enableStudyGroup: H,
         isGuildHeaderDismissibleTooltipShown: e_,

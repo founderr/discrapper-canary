@@ -13,13 +13,13 @@ t.Z = (e) => {
     let { className: t, forceWhite: n, giftMessage: a, subscriptionTier: E, ...T } = e,
         I = (0, o.ZP)(),
         R = (0, i.wj)(I) || n,
-        g = R ? l.ButtonColors.WHITE : l.ButtonColors.BRAND,
-        N = E === d.Si.TIER_0 ? _.Z.Messages.GIFT_NITRO_TIER_0 : _.Z.Messages.GIFT_NITRO;
+        m = R ? l.ButtonColors.WHITE : l.ButtonColors.BRAND,
+        g = E === d.Si.TIER_0 ? _.Z.Messages.GIFT_NITRO_TIER_0 : _.Z.Messages.GIFT_NITRO;
     return (0, s.jsx)(c.Z, {
         isGift: !0,
-        color: g,
+        color: m,
         look: l.ButtonLooks.OUTLINED,
-        buttonText: N,
+        buttonText: g,
         giftMessage: a,
         className: r()(t, u.giftButton, R ? u.buttonWhite : u.buttonBrand),
         subscriptionTier: E,

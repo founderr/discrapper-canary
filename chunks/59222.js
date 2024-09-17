@@ -66,7 +66,7 @@ t.Z = (e) => {
     let { loadId: t, searchResults: n, mostRecentQuery: s, defaultLanguage: l, availableLanguages: u, isFetchingSearch: v, scroller: L, loadingGuildId: Z, theme: R, currentCategoryId: O, currentCategoryName: x, onViewGuild: b, onGuildCardSeen: P, placeholder: M, onTagClick: D } = e,
         y = r().uniqueId('GuildDiscovery'),
         { guilds: j, loading: U, total: G } = n,
-        [w, k] = a.useState(!1),
+        [k, w] = a.useState(!1),
         { tag: B } = f(),
         [H, V] = a.useState(B),
         F = (0, o.e7)([_.ZP], () => _.ZP.hasSearchError()),
@@ -78,17 +78,17 @@ t.Z = (e) => {
                 length: t,
                 filters: { approximate_member_count: h.sq }
             }),
-                k(!1);
+                w(!1);
         },
-        W = () => {
+        z = () => {
             null == L || L.scrollTo({ to: 0 });
         };
     a.useEffect(() => {
         let { offset: e, tag: t } = f(),
             n = null != e ? Math.floor(parseInt(e, 10) / C) + 1 : 1;
-        V(!!t), 1 === n && k(!0);
+        V(!!t), 1 === n && w(!0);
     }, [s]);
-    let z =
+    let W =
         O === p.Hk
             ? T.Z.Messages.GUILD_DISCOVERY_SEARCH_RESULTS_HEADER.format({
                   count: null != G ? G.toLocaleString() : '0',
@@ -116,7 +116,7 @@ t.Z = (e) => {
                     (0, i.jsx)(c.Heading, {
                         variant: 'heading-xl/semibold',
                         className: S.header,
-                        children: z
+                        children: W
                     })
                 ]
             }),
@@ -147,9 +147,9 @@ t.Z = (e) => {
                         children: (0, i.jsx)(m.Z, {
                             pageSize: C,
                             totalCount: G,
-                            resetCurrentPage: w,
+                            resetCurrentPage: k,
                             onPageChange: (e) => {
-                                Y((e - 1) * C, C), W();
+                                Y((e - 1) * C, C), z();
                             },
                             children: (e) => {
                                 let { controller: t } = e;

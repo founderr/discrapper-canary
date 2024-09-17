@@ -221,8 +221,8 @@ t.Z = a.memo(function (e) {
         y = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
         j = (0, N.L)({ guild: O }),
         U = (0, A.n)(),
-        [G, w] = a.useState(!0),
-        k = (0, c.useSpring)(
+        [G, k] = a.useState(!0),
+        w = (0, c.useSpring)(
             {
                 from: { opacity: 0 },
                 to: { opacity: 1 },
@@ -287,17 +287,17 @@ t.Z = a.memo(function (e) {
             },
             'animate-always'
         ),
-        W = (0, c.useSpring)(
+        z = (0, c.useSpring)(
             {
                 from: y ? { transform: 'translateY(0px)' } : { transform: 'translateY(240px)' },
                 to: { transform: 'translateY(0px)' },
                 config: x,
                 delay: 250,
-                onRest: () => w(!1)
+                onRest: () => k(!1)
             },
             'animate-always'
         ),
-        z = a.useMemo(() => (s ? L.Z.Messages.CLAN_DISCOVERY_UPSELL_ADMIN_LIST_SERVER : null == P ? L.Z.Messages.CLAN_DISCOVERY_UPSELL_RESERVE : L.Z.Messages.CLAN_DISCOVERY_UPSELL_CONTINUE_SETUP), [P, s]),
+        W = a.useMemo(() => (s ? L.Z.Messages.CLAN_DISCOVERY_UPSELL_ADMIN_LIST_SERVER : null == P ? L.Z.Messages.CLAN_DISCOVERY_UPSELL_RESERVE : L.Z.Messages.CLAN_DISCOVERY_UPSELL_CONTINUE_SETUP), [P, s]),
         K = a.useCallback(async () => {
             await (0, E.Zx)(f), d.Z.transitionToGuildSync('936317138904440892');
         }, [f]),
@@ -326,7 +326,7 @@ t.Z = a.memo(function (e) {
                         className: Z.clanCardOuterContainer,
                         style: {
                             ...B,
-                            ...k
+                            ...w
                         },
                         children: (0, i.jsx)(C.xV, {
                             clan: U[0],
@@ -337,7 +337,7 @@ t.Z = a.memo(function (e) {
                         className: Z.clanCardInnerContainer,
                         style: {
                             ...H,
-                            ...k
+                            ...w
                         },
                         children: (0, i.jsx)(C.xV, {
                             clan: U[1],
@@ -353,7 +353,7 @@ t.Z = a.memo(function (e) {
                                     className: Z.clanCardCenterContainer,
                                     style: { overflow: G ? 'hidden' : 'visible' },
                                     children: (0, i.jsx)(l.animated.div, {
-                                        style: W,
+                                        style: z,
                                         children: (0, i.jsx)(C.xV, {
                                             clan: j,
                                             className: Z.clanCardCenter,
@@ -367,7 +367,7 @@ t.Z = a.memo(function (e) {
                         className: Z.clanCardInnerContainer,
                         style: {
                             ...V,
-                            ...k
+                            ...w
                         },
                         children: (0, i.jsx)(C.xV, {
                             clan: U[2],
@@ -378,7 +378,7 @@ t.Z = a.memo(function (e) {
                         className: Z.clanCardOuterContainer,
                         style: {
                             ...F,
-                            ...k
+                            ...w
                         },
                         children: (0, i.jsx)(C.xV, {
                             clan: U[3],
@@ -394,7 +394,7 @@ t.Z = a.memo(function (e) {
                     setSelectedGuildId: R,
                     eligibleGuilds: t,
                     onButtonClick: D,
-                    buttonText: z,
+                    buttonText: W,
                     hasCompletedUpsell: r
                 })
             }),

@@ -13,18 +13,18 @@ var s = n(735250),
 t.Z = (e) => {
     let { userId: t, children: n, isLast: r, className: T } = e,
         [I, R] = a.useState(!1),
-        { analyticsLocations: g } = (0, d.ZP)(),
-        N = a.useCallback(() => {
+        { analyticsLocations: m } = (0, d.ZP)(),
+        g = a.useCallback(() => {
             (0, _.openUserProfileModal)({
                 userId: t,
-                sourceAnalyticsLocations: g,
+                sourceAnalyticsLocations: m,
                 analyticsLocation: { section: u.jXE.FAMILY_CENTER }
             });
-        }, [t, g]),
-        C = () => {
+        }, [t, m]),
+        N = () => {
             R(!0);
         },
-        m = () => {
+        C = () => {
             R(!1);
         };
     return (0, s.jsx)(c.mh, {
@@ -41,9 +41,9 @@ t.Z = (e) => {
                         [E.last]: r,
                         [E.active]: I
                     }),
-                    onMouseEnter: C,
-                    onMouseLeave: m,
-                    onClick: N,
+                    onMouseEnter: N,
+                    onMouseLeave: C,
+                    onClick: g,
                     ...e,
                     children: n(I)
                 })

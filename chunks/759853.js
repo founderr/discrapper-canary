@@ -90,10 +90,10 @@ t.Z = (e) => {
                 );
             }
         }, [E, B, U, j]),
-        q = (0, u.Z)(S);
+        Z = (0, u.Z)(S);
     return (o.useEffect(() => {
-        v && S && !q && (A(), L());
-    }, [S, v, A, L, q]),
+        v && S && !Z && (A(), L());
+    }, [S, v, A, L, Z]),
     o.useEffect(() => {
         v &&
             !R &&

@@ -35,15 +35,15 @@ var i = n(735250),
     j = n(600164),
     U = n(258609),
     G = n(446226),
-    w = n(935261),
-    k = n(74299),
+    k = n(935261),
+    w = n(74299),
     B = n(803647),
     H = n(142497),
     V = n(810788),
     F = n(160404),
     Y = n(703656),
-    W = n(917405),
-    z = n(641015),
+    z = n(917405),
+    W = n(641015),
     K = n(848543),
     q = n(565799),
     Q = n(501655),
@@ -160,7 +160,7 @@ function eG() {
         ]
     });
 }
-function ew() {
+function ek() {
     let e = (0, d.e7)([ee.Z], () => ee.Z.isMuted()),
         t = e ? eM.Z.Messages.STAGE_MUSIC_UNMUTE : eM.Z.Messages.STAGE_MUSIC_MUTE;
     return (0, i.jsx)(eZ.Z, {
@@ -170,12 +170,12 @@ function ew() {
         onClick: () => (0, J.v)(!e)
     });
 }
-function ek(e) {
+function ew(e) {
     let { channel: t, enableActivities: n, disabled: s } = e,
         l = (0, ei.Z)(),
         o = (0, es.Z)(t),
         c = (0, d.cj)([A.ZP], () => null != A.ZP.getSelfEmbeddedActivityForChannel(t.id)),
-        u = (0, z.Z)(t),
+        u = (0, W.Z)(t),
         { reachedLimit: _, limit: E } = (0, ea.Z)(t),
         m = a.useCallback(() => {
             (0, el.Z)();
@@ -355,7 +355,7 @@ function eH(e) {
         _ = (0, es.Z)(n),
         h = n.getGuildId(),
         m = (0, d.cj)([A.ZP], () => null != A.ZP.getSelfEmbeddedActivityForChannel(n.id)),
-        g = (0, z.Z)(n),
+        g = (0, W.Z)(n),
         p = a.useCallback(() => {
             (0, ec.Z)(h, n.id, eb.jXE.ACTIVITY_PANEL);
         }, [h, n.id]),
@@ -433,7 +433,7 @@ class eV extends a.PureComponent {
         let o = (0, y.F6)(t, eC.default, eS.Z);
         return (
             null != n ? ((e = eb.Z5c.CHANNEL(n.id, t.id)), (o = ''.concat(o, ' / ').concat(n.name))) : (e = eb.Z5c.CHANNEL(eb.ME, t.id)),
-            (0, i.jsx)(W.Z, {
+            (0, i.jsx)(z.Z, {
                 channelId: t.id,
                 quality: a,
                 state: s,
@@ -458,7 +458,7 @@ class eV extends a.PureComponent {
         return null != a
             ? null
             : (null == s ? void 0 : s.isGuildStageVoice()) && !(null != r.find((e) => e.user.id === eE.default.getId() && (0, et.gf)(e.voiceState) === et.xO.ON_STAGE)) && (0, $.U5)(s.id)
-              ? (0, i.jsx)(ew, {})
+              ? (0, i.jsx)(ek, {})
               : !n && t
                 ? (0, i.jsx)(I.Tooltip, {
                       text: eM.Z.Messages.NOISE_CANCELLATION_CPU_OVERUSE,
@@ -517,7 +517,7 @@ class eV extends a.PureComponent {
         return (0, i.jsxs)('div', {
             className: eD.actionButtons,
             children: [
-                (0, i.jsx)(ek, {
+                (0, i.jsx)(ew, {
                     channel: e,
                     enableActivities: d,
                     disabled: !_ && u
@@ -536,7 +536,7 @@ class eV extends a.PureComponent {
                                   enableActivities: a
                               })
                             : null,
-                        (0, z.Z)(e)
+                        (0, W.Z)(e)
                             ? (0, i.jsx)(K.Z, {
                                   className: r()(eD.button, eD.buttonColor),
                                   innerClassName: eD.buttonContents,
@@ -689,7 +689,7 @@ t.Z = (0, C.Z)(function (e) {
             noiseCancellationSupported: eg.Z.isNoiseCancellationSupported(),
             noiseCancellationActive: eg.Z.getNoiseCancellation(),
             noiseCancellationError: eg.Z.isNoiseCancellationError(),
-            canGoLive: (0, k.Z)(eg.Z)
+            canGoLive: (0, w.Z)(eg.Z)
         })),
         E = (0, d.e7)([eg.Z, V.Z], () => V.Z.hasHotspot(eP.v.VOICE_PANEL_INTRODUCTION) && (0, eL.EO)(s) && !eg.Z.isInteractionRequired() && !(null == o ? void 0 : o.isGuildStageVoice())),
         h = (0, d.e7)([ef.Z], () => null != r && ef.Z.hasVideo(r), [r]),
@@ -733,7 +733,7 @@ t.Z = (0, C.Z)(function (e) {
             className: eD.wrapper,
             children: [
                 null != t || null != n
-                    ? (0, i.jsx)(w.Z, {
+                    ? (0, i.jsx)(k.Z, {
                           voiceState: t,
                           awaitingRemoteSessionInfo: n
                       })

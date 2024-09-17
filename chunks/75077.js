@@ -1,27 +1,27 @@
 n.d(t, {
     BS: function () {
-        return m;
+        return C;
     },
     Op: function () {
-        return S;
+        return M;
     },
     gx: function () {
         return A;
     },
     k3: function () {
-        return N;
+        return g;
     },
     mN: function () {
         return x;
     },
     sP: function () {
-        return h;
+        return S;
     },
     t2: function () {
         return p;
     },
     vZ: function () {
-        return C;
+        return N;
     }
 }),
     n(653041),
@@ -40,40 +40,40 @@ var s = n(278074),
     T = n(391110),
     I = n(474936),
     R = n(735825),
-    g = n(689938);
-let N = (e) => {
+    m = n(689938);
+let g = (e) => {
         switch (e) {
             case R.EB.PENDING:
-                return g.Z.Messages.NITRO_HOME_REWARDING_LOCKED_STATE_TITLE;
+                return m.Z.Messages.NITRO_HOME_REWARDING_LOCKED_STATE_TITLE;
             case R.EB.REDEEMABLE:
-                return g.Z.Messages.NITRO_HOME_REWARDING_REDEEMABLE_STATE_TITLE;
+                return m.Z.Messages.NITRO_HOME_REWARDING_REDEEMABLE_STATE_TITLE;
             case R.EB.REDEEMED:
-                return g.Z.Messages.NITRO_HOME_REWARDING_REDEEMED_LABEL;
+                return m.Z.Messages.NITRO_HOME_REWARDING_REDEEMED_LABEL;
             default:
                 return '';
         }
     },
-    C = (e, t, n) => {
+    N = (e, t, n) => {
         switch (e) {
             case R.EB.PENDING:
-                return t === R.Ft.FREE_GUILD_BOOST_1_MONTH ? g.Z.Messages.NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_1_MONTH_VARIANT : g.Z.Messages.NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_3_MONTHS_VARIANT;
+                return t === R.Ft.FREE_GUILD_BOOST_1_MONTH ? m.Z.Messages.NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_1_MONTH_VARIANT : m.Z.Messages.NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_3_MONTHS_VARIANT;
             case R.EB.REDEEMABLE:
-                if (t === R.Ft.FREE_GUILD_BOOST_1_MONTH) return n ? g.Z.Messages.NITRO_HOME_REWARDING_FREE_BOOST_REDEEMABLE_STATE_SUBTITLE_BACKFILL_VARIANT : g.Z.Messages.NITRO_HOME_REWARDING_FREE_BOOST_REDEEMABLE_STATE_SUBTITLE_1_MONTH_VARIANT;
-                return g.Z.Messages.NITRO_HOME_REWARDING_FREE_BOOST_REDEEMABLE_STATE_SUBTITLE_3_MONTHS_VARIANT;
+                if (t === R.Ft.FREE_GUILD_BOOST_1_MONTH) return n ? m.Z.Messages.NITRO_HOME_REWARDING_FREE_BOOST_REDEEMABLE_STATE_SUBTITLE_BACKFILL_VARIANT : m.Z.Messages.NITRO_HOME_REWARDING_FREE_BOOST_REDEEMABLE_STATE_SUBTITLE_1_MONTH_VARIANT;
+                return m.Z.Messages.NITRO_HOME_REWARDING_FREE_BOOST_REDEEMABLE_STATE_SUBTITLE_3_MONTHS_VARIANT;
             case R.EB.REDEEMED:
-                return g.Z.Messages.NITRO_HOME_REWARDING_REDEEMED_STATE_SUBTITLE;
+                return m.Z.Messages.NITRO_HOME_REWARDING_REDEEMED_STATE_SUBTITLE;
             default:
                 return;
         }
     },
-    m = (e) => {
+    C = (e) => {
         switch (e) {
             case R.EB.PENDING:
-                return g.Z.Messages.NITRO_HOME_REWARDING_LOCKED_STATE_DESCRIPTION;
+                return m.Z.Messages.NITRO_HOME_REWARDING_LOCKED_STATE_DESCRIPTION;
             case R.EB.REDEEMABLE:
                 return;
             case R.EB.REDEEMED:
-                return g.Z.Messages.NITRO_HOME_REWARDING_REDEEMED_STATE_DESCRIPTION;
+                return m.Z.Messages.NITRO_HOME_REWARDING_REDEEMED_STATE_DESCRIPTION;
             default:
                 return;
         }
@@ -81,18 +81,18 @@ let N = (e) => {
 function p(e, t) {
     switch (e) {
         case R.EB.PENDING:
-            return null != t ? g.Z.Messages.NITRO_HOME_REWARDING_TENURE_BOOST_AVAILABLE_DATE.format({ days: t }) : '';
+            return null != t ? m.Z.Messages.NITRO_HOME_REWARDING_TENURE_BOOST_AVAILABLE_DATE.format({ days: t }) : '';
         case R.EB.REDEEMABLE:
-            return g.Z.Messages.REDEEM;
+            return m.Z.Messages.REDEEM;
         case R.EB.REDEEMED:
-            return g.Z.Messages.NITRO_HOME_REWARDING_REDEEMED_LABEL;
+            return m.Z.Messages.NITRO_HOME_REWARDING_REDEEMED_LABEL;
         default:
             return '';
     }
 }
 let A = (e, t, n) => ((0, r.wj)(e) ? t : n),
     f = 'getWhatsNewRow',
-    M = (e) => {
+    h = (e) => {
         let { cards: t, perksCards: n, isFullScreen: s, showTenureCard: a, shopMarketingVariation: r } = e,
             l = s ? 3 : 2,
             o = (e) => {
@@ -106,10 +106,10 @@ let A = (e, t, n) => ((0, r.wj)(e) ? t : n),
             { enabled: T } = _.r.getCurrentConfig({ location: f }, { autoTrackExposure: !1 }),
             { enabled: I } = d.C.getCurrentConfig({ location: f }, { autoTrackExposure: !1 }),
             R = u && !T && !I,
-            g = b();
-        return null != n.tenureBadge && o({ card: n.tenureBadge }), null != n.freeBoost && !0 === a && o({ card: n.freeBoost }), null != n.shyProject && o({ card: n.shyProject }), s && g ? (0 === t.length && c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })) : s && !g && (R || null != n.shyProject ? R && o({ card: n.referralProgram }) : c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })), o({ card: n.earlyAccess }), c(), o({ card: n.unlimitedSuperReactions }), t;
+            m = b();
+        return null != n.tenureBadge && o({ card: n.tenureBadge }), null != n.freeBoost && !0 === a && o({ card: n.freeBoost }), null != n.shyProject && o({ card: n.shyProject }), s && m ? (0 === t.length && c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })) : s && !m && (R || null != n.shyProject ? R && o({ card: n.referralProgram }) : c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })), o({ card: n.earlyAccess }), c(), o({ card: n.unlimitedSuperReactions }), t;
     },
-    h = (e) => {
+    S = (e) => {
         let { perksCards: t, variant: n, shopMarketingVariation: a, isFullScreen: r, showTenureCard: i, tileOrderVariant: l, isPremiumSubscriber: o } = e,
             c = [];
         switch (n) {
@@ -135,7 +135,7 @@ let A = (e, t, n) => ((0, r.wj)(e) ? t : n),
                     .otherwise(() => [t.profiles, t.clientThemes, t.serverBoosts]);
                 break;
             case T.R0.WHATS_NEW:
-                c = M({
+                c = h({
                     cards: c,
                     perksCards: t,
                     isFullScreen: r,
@@ -190,23 +190,23 @@ let A = (e, t, n) => ((0, r.wj)(e) ? t : n),
         }
         return !r && (c = c.filter((e) => !e.hideOnNarrowScreen)), c;
     },
-    S = (e) => {
+    M = (e) => {
         let t = (0, a.e7)([o.ZP], () => o.ZP.getPremiumTypeSubscription()),
             n = null != t ? c.ZP.getPremiumPlanItem(t) : null,
             s = (null != n ? c.ZP.getSkuIdForPlan(n.planId) : null) === I.Si.TIER_2;
         if (e)
             return s
                 ? {
-                      title: g.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_TITLE_SUB,
-                      subtitle: g.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_SUBTITLE_SUB
+                      title: m.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_TITLE_SUB,
+                      subtitle: m.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_SUBTITLE_SUB
                   }
                 : {
-                      title: g.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_TITLE_NON_SUB,
-                      subtitle: g.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_SUBTITLE_NON_SUB
+                      title: m.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_TITLE_NON_SUB,
+                      subtitle: m.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_SUBTITLE_NON_SUB
                   };
         return {
-            title: g.Z.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_TITLE,
-            subtitle: g.Z.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_SUBTITLE
+            title: m.Z.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_TITLE,
+            subtitle: m.Z.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_SUBTITLE
         };
     },
     x = () => {

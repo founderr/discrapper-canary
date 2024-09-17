@@ -12,9 +12,9 @@ var s = n(735250),
     T = n(695346),
     I = n(981631),
     R = n(930441),
-    g = n(689938),
-    N = n(35411),
-    C = n(113207);
+    m = n(689938),
+    g = n(35411),
+    N = n(113207);
 t.Z = () => {
     let e = T.Ex.useSetting(),
         { categories: t, initialized: n } = (0, c.cj)([E.Z], () => E.Z.getEmailSettings());
@@ -23,24 +23,24 @@ t.Z = () => {
             null == n && (0, u.Y7)();
         }, [n]),
         (0, s.jsxs)('div', {
-            className: N.container,
+            className: g.container,
             children: [
                 (0, s.jsx)(d.Text, {
                     variant: 'eyebrow',
                     color: 'text-muted',
-                    children: g.Z.Messages.FAMILY_CENTER_SETTINGS_FORM_TITLE
+                    children: m.Z.Messages.FAMILY_CENTER_SETTINGS_FORM_TITLE
                 }),
                 (0, s.jsx)(d.FormSwitch, {
-                    className: i()(C.marginTop8, C.marginBottom20),
+                    className: i()(N.marginTop8, N.marginBottom20),
                     value: e,
-                    note: g.Z.Messages.FAMILY_CENTER_SETTINGS_ENABLE_SWITCH_NOTE,
+                    note: m.Z.Messages.FAMILY_CENTER_SETTINGS_ENABLE_SWITCH_NOTE,
                     hideBorder: !0,
                     onChange: T.Ex.updateSetting,
-                    children: g.Z.Messages.FAMILY_CENTER_SETTINGS_ENABLE_SWITCH
+                    children: m.Z.Messages.FAMILY_CENTER_SETTINGS_ENABLE_SWITCH
                 }),
                 e
                     ? (0, s.jsx)(d.Card, {
-                          className: N.enableCard,
+                          className: g.enableCard,
                           type: d.Card.Types.CUSTOM,
                           outline: !0,
                           children: (0, s.jsxs)(o.k, {
@@ -50,7 +50,7 @@ t.Z = () => {
                                       children: (0, s.jsx)(d.Text, {
                                           variant: 'text-sm/semibold',
                                           color: 'text-normal',
-                                          children: g.Z.Messages.FAMILY_CENTER_SETTINGS_ENABLE_PROMPT
+                                          children: m.Z.Messages.FAMILY_CENTER_SETTINGS_ENABLE_PROMPT
                                       })
                                   }),
                                   (0, s.jsx)(d.Clickable, {
@@ -60,12 +60,12 @@ t.Z = () => {
                                               pathname: I.Z5c.FAMILY_CENTER,
                                               state: { scrollRestoration: !1 }
                                           },
-                                          children: g.Z.Messages.FAMILY_CENTER_SETTINGS_ENABLE_CTA
+                                          children: m.Z.Messages.FAMILY_CENTER_SETTINGS_ENABLE_CTA
                                       })
                                   }),
                                   (0, s.jsx)(d.IconBadge, {
                                       icon: d.ArrowSmallRightIcon,
-                                      className: N.arrow,
+                                      className: g.arrow,
                                       disableColor: !0
                                   })
                               ]
@@ -73,14 +73,14 @@ t.Z = () => {
                       })
                     : null,
                 (0, s.jsx)(d.FormSwitch, {
-                    className: i()(C.marginTop20, C.marginBottom20),
+                    className: i()(N.marginTop20, N.marginBottom20),
                     value: !!t[R.$Z.FAMILY_CENTER_DIGEST],
-                    note: g.Z.Messages.FAMILY_CENTER_SETTINGS_EMAIL_DIGEST_ENABLE_SWITCH_NOTE,
+                    note: m.Z.Messages.FAMILY_CENTER_SETTINGS_EMAIL_DIGEST_ENABLE_SWITCH_NOTE,
                     hideBorder: !0,
                     onChange: function (e) {
                         (0, u.pR)(R.$Z.FAMILY_CENTER_DIGEST, e);
                     },
-                    children: g.Z.Messages.FAMILY_CENTER_SETTINGS_EMAIL_DIGEST_ENABLE_SWITCH
+                    children: m.Z.Messages.FAMILY_CENTER_SETTINGS_EMAIL_DIGEST_ENABLE_SWITCH
                 })
             ]
         })

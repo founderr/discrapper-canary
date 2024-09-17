@@ -35,18 +35,18 @@ var i,
     j = n(594174),
     U = n(395361),
     G = n(639351),
-    w = n(81063),
-    k = n(823379),
+    k = n(81063),
+    w = n(823379),
     B = n(51144),
     H = n(599706),
     V = n(981631),
     F = n(689938),
     Y = n(534255);
-let W = {
+let z = {
         SMALL: 64,
         LARGE: 160
     },
-    z = [14, 14, 12, 12, 10, 8, 6],
+    W = [14, 14, 12, 12, 10, 8, 6],
     K = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
         return (0, s.jsx)(u.Text, {
@@ -111,13 +111,13 @@ class J extends r.Component {
                               children: [
                                   (0, s.jsx)('img', {
                                       alt: null !== (e = i.large_text) && void 0 !== e ? e : '',
-                                      src: c(l, i.large_image, [W.LARGE, W.LARGE]),
+                                      src: c(l, i.large_image, [z.LARGE, z.LARGE]),
                                       className: o()(Y.largeImage, { [Y.largeImageMask]: null != i.small_image })
                                   }),
                                   null != i.small_image
                                       ? (0, s.jsx)('img', {
                                             alt: null !== (t = i.small_text) && void 0 !== t ? t : '',
-                                            src: c(l, i.small_image, [W.SMALL, W.SMALL]),
+                                            src: c(l, i.small_image, [z.SMALL, z.SMALL]),
                                             className: Y.smallImage
                                         })
                                       : null
@@ -270,7 +270,7 @@ let et = (e) => {
                                           className: Y.voiceSectionNoGuildImageWrapper,
                                           children: (0, s.jsx)('div', {
                                               className: Y.voiceSectionNoGuildImage,
-                                              style: { fontSize: null !== (n = z[i.acronym.length]) && void 0 !== n ? n : z[z.length - 1] },
+                                              style: { fontSize: null !== (n = W[i.acronym.length]) && void 0 !== n ? n : W[W.length - 1] },
                                               children: i.acronym
                                           })
                                       }),
@@ -361,7 +361,7 @@ let et = (e) => {
                               children: [
                                   (0, s.jsx)('img', {
                                       alt: null !== (t = n.large_text) && void 0 !== t ? t : '',
-                                      src: _(r, n.large_image, [W.LARGE, W.LARGE]),
+                                      src: _(r, n.large_image, [z.LARGE, z.LARGE]),
                                       className: o()(Y.largeImage, Y.borderRadius0, { [Y.largeImageMask]: null != n.small_image })
                                   }),
                                   u
@@ -493,7 +493,7 @@ let et = (e) => {
             d = t.application_id;
         r.useEffect(() => {
             if (null != d)
-                (0, w.fetchAssetIds)(d, ['embedded_background']).then((e) => {
+                (0, k.fetchAssetIds)(d, ['embedded_background']).then((e) => {
                     let [t] = e;
                     return o(t);
                 });
@@ -501,7 +501,7 @@ let et = (e) => {
         let _ = (0, c.Wu)([j.default, D.default], () =>
                 Array.from(a)
                     .map((e) => (D.default.getId() === e ? null : j.default.getUser(e)))
-                    .filter(k.lm)
+                    .filter(w.lm)
             ),
             h = (0, E.O)(),
             { analyticsLocations: I } = (0, f.ZP)();
@@ -509,7 +509,7 @@ let et = (e) => {
         let g = A.Z.getApplication(d);
         if (null == g) return null;
         let p = null != t.created_at && t.created_at > 0 ? { start: t.created_at } : void 0,
-            T = (0, w.getAssetImage)(g.id, l, 300);
+            T = (0, k.getAssetImage)(g.id, l, 300);
         return (0, s.jsxs)(X, {
             children: [
                 (0, s.jsxs)('div', {

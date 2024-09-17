@@ -1,18 +1,18 @@
 n.d(t, {
     Rw: function () {
-        return U;
-    },
-    V6: function () {
         return B;
     },
+    V6: function () {
+        return U;
+    },
     f9: function () {
-        return P;
+        return v;
     },
     g_: function () {
         return b;
     },
     kG: function () {
-        return S;
+        return M;
     },
     sf: function () {
         return L;
@@ -37,16 +37,16 @@ var s = n(470079),
     T = n(471309),
     I = n(827686),
     R = n(474936),
-    g = n(689938),
-    N = n(888300),
-    C = n(665321),
-    m = n(256017),
+    m = n(689938),
+    g = n(888300),
+    N = n(665321),
+    C = n(256017),
     p = n(126807),
     A = n(432119),
     f = n(205119),
-    M = n(145007),
-    h = n(937264);
-let S = () => {
+    h = n(145007),
+    S = n(937264);
+let M = () => {
         var e;
         let t;
         let n = (0, i.e7)([u.default], () => u.default.getCurrentUser()),
@@ -77,86 +77,86 @@ let S = () => {
     b = (e) => {
         switch (e) {
             case R.VU.PREMIUM_TENURE_1_MONTH:
-                return N;
+                return g;
             case R.VU.PREMIUM_TENURE_3_MONTH:
-                return h;
+                return S;
             case R.VU.PREMIUM_TENURE_6_MONTH:
                 return A;
             case R.VU.PREMIUM_TENURE_12_MONTH:
                 return f;
             case R.VU.PREMIUM_TENURE_24_MONTH:
-                return C;
+                return N;
             case R.VU.PREMIUM_TENURE_36_MONTH:
-                return m;
+                return C;
             case R.VU.PREMIUM_TENURE_60_MONTH:
-                return M;
+                return h;
             case R.VU.PREMIUM_TENURE_72_MONTH:
                 return p;
             default:
                 return;
         }
     },
-    O = () => b(S()),
-    P = (e) => {
+    O = () => b(M()),
+    v = (e) => {
         switch (e) {
             case R.VU.PREMIUM_TENURE_1_MONTH:
-                return g.Z.Messages.TIERED_TENURE_BADGE_BRONZE;
+                return m.Z.Messages.TIERED_TENURE_BADGE_BRONZE;
             case R.VU.PREMIUM_TENURE_3_MONTH:
-                return g.Z.Messages.TIERED_TENURE_BADGE_SILVER;
+                return m.Z.Messages.TIERED_TENURE_BADGE_SILVER;
             case R.VU.PREMIUM_TENURE_6_MONTH:
-                return g.Z.Messages.TIERED_TENURE_BADGE_GOLD;
+                return m.Z.Messages.TIERED_TENURE_BADGE_GOLD;
             case R.VU.PREMIUM_TENURE_12_MONTH:
-                return g.Z.Messages.TIERED_TENURE_BADGE_PLATINUM;
+                return m.Z.Messages.TIERED_TENURE_BADGE_PLATINUM;
             case R.VU.PREMIUM_TENURE_24_MONTH:
-                return g.Z.Messages.TIERED_TENURE_BADGE_DIAMOND;
+                return m.Z.Messages.TIERED_TENURE_BADGE_DIAMOND;
             case R.VU.PREMIUM_TENURE_36_MONTH:
-                return g.Z.Messages.TIERED_TENURE_BADGE_EMERALD;
+                return m.Z.Messages.TIERED_TENURE_BADGE_EMERALD;
             case R.VU.PREMIUM_TENURE_60_MONTH:
-                return g.Z.Messages.TIERED_TENURE_BADGE_RUBY;
+                return m.Z.Messages.TIERED_TENURE_BADGE_RUBY;
             case R.VU.PREMIUM_TENURE_72_MONTH:
-                return g.Z.Messages.TIERED_TENURE_BADGE_FIRE;
+                return m.Z.Messages.TIERED_TENURE_BADGE_FIRE;
             default:
                 return '';
         }
     },
-    v = () => P(S()),
+    P = () => v(M()),
     L = (e) => {
         switch (e) {
             case R.VU.PREMIUM_TENURE_1_MONTH:
             case R.VU.PREMIUM_TENURE_3_MONTH:
             case R.VU.PREMIUM_TENURE_6_MONTH:
-                return g.Z.Messages.DURATION_MONTHS_CAPITALIZE.format({ months: R.eG[e] });
+                return m.Z.Messages.DURATION_MONTHS_CAPITALIZE.format({ months: R.eG[e] });
             case R.VU.PREMIUM_TENURE_12_MONTH:
             case R.VU.PREMIUM_TENURE_24_MONTH:
             case R.VU.PREMIUM_TENURE_36_MONTH:
             case R.VU.PREMIUM_TENURE_60_MONTH:
-                return g.Z.Messages.DURATION_YEARS_CAPITALIZE.format({ years: R.eG[e] / 12 });
+                return m.Z.Messages.DURATION_YEARS_CAPITALIZE.format({ years: R.eG[e] / 12 });
             case R.VU.PREMIUM_TENURE_72_MONTH:
-                return g.Z.Messages.DURATION_YEARS_CAPITALIZE.format({ years: '6+' });
+                return m.Z.Messages.DURATION_YEARS_CAPITALIZE.format({ years: '6+' });
             default:
                 return '';
         }
     },
-    Z = () => L(S()),
+    Z = () => L(M()),
     D = () => {
-        let e = S(),
+        let e = M(),
             t = (0, i.e7)([E.ZP], () => E.ZP.getPremiumTypeSubscription());
         return null == e || null == t || null == t.premiumSince ? null : (0, d.RZ)(e, t.premiumSince);
     },
-    U = () => ({
-        badge: S(),
+    B = () => ({
+        badge: M(),
         image: O(),
-        name: v(),
+        name: P(),
         earnedOnDate: D(),
         tenureRequirement: Z()
     }),
-    B = () => {
+    U = () => {
         let e = x(),
             { enabled: t } = (0, T.Z)(!0),
             n = t && null != e,
             { enabled: s } = (0, I.Z)(n),
             [a] = (0, c.US)(n && s ? [l.z.WHATS_NEW_TENURE_BADGE_REWARD] : []);
-        return a === l.z.WHATS_NEW_TENURE_BADGE_REWARD ? g.Z.Messages.REWARD.toLocaleUpperCase() : null;
+        return a === l.z.WHATS_NEW_TENURE_BADGE_REWARD ? m.Z.Messages.REWARD.toLocaleUpperCase() : null;
     },
     j = () => {
         let e = x(),

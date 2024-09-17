@@ -112,7 +112,7 @@ function R(e) {
             },
             [h, R]
         ),
-        w = a.useCallback(
+        H = a.useCallback(
             (e, t) => {
                 let i = {};
                 for (let [e, n] of Object.entries(R))
@@ -129,13 +129,13 @@ function R(e) {
             },
             [n, R, B, k, U]
         ),
-        H = a.useCallback(() => {
+        w = a.useCallback(() => {
             let e = Object.keys(y);
             return (0, d.openModalLazy)(async () => {
                 let { default: n } = await t.e('64908').then(t.bind(t, 46851));
                 return (t) =>
                     (0, i.jsx)(n, {
-                        editPermissions: w,
+                        editPermissions: H,
                         guildId: h,
                         headerText: S.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_CHANNEL_ADD_BUTTON,
                         hasMemberSearch: !1,
@@ -146,14 +146,14 @@ function R(e) {
                         ...t
                     });
             });
-        }, [w, y, h, L]),
+        }, [H, y, h, L]),
         W = a.useCallback(() => {
             let e = Object.keys(G);
             return (0, d.openModalLazy)(async () => {
                 let { default: n } = await t.e('64908').then(t.bind(t, 46851));
                 return (t) =>
                     (0, i.jsx)(n, {
-                        editPermissions: w,
+                        editPermissions: H,
                         guildId: h,
                         hasMemberSearch: !0,
                         headerText: S.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_ROLE_MEMBER_ADD_BUTTON,
@@ -164,7 +164,7 @@ function R(e) {
                         ...t
                     });
             });
-        }, [w, h, G, L]),
+        }, [H, h, G, L]),
         F = a.useCallback(
             () =>
                 (0, d.openModalLazy)(async () => {
@@ -192,7 +192,7 @@ function R(e) {
                 title: null == s ? S.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_ROLE_MEMBER_ADD : S.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_OVERRIDE_SECTION_ROLE_MEMBER_HEADER
             },
             {
-                buttonClick: H,
+                buttonClick: w,
                 buttonText: S.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_CHANNEL_ADD_BUTTON,
                 noneSelectedText: S.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_OVERRIDE_SECTION_CHANNEL_NO_ENTRIES,
                 overwrites: y,
@@ -262,7 +262,7 @@ function R(e) {
                                     commandId: s,
                                     noneSelectedText: e.noneSelectedText,
                                     overwrites: e.overwrites,
-                                    editPermissions: w,
+                                    editPermissions: H,
                                     hasAccessToMutatePermissions: P
                                 })
                             })

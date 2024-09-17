@@ -16,13 +16,13 @@ var a = n(120356),
 t.Z = (e) => {
     var t;
     let n;
-    let { title: a, titleClassName: g = '', buttonClassName: N = '', subtitle: C = '', description: m = '', descriptionCta: p = '', isPremiumGetCta: A, onCtaClick: f, cardVariant: M } = e,
-        h = (0, d.N)(),
-        S = null == h ? void 0 : h.subscription_trial,
+    let { title: a, titleClassName: m = '', buttonClassName: g = '', subtitle: N = '', description: C = '', descriptionCta: p = '', isPremiumGetCta: A, onCtaClick: f, cardVariant: h } = e,
+        S = (0, d.N)(),
+        M = null == S ? void 0 : S.subscription_trial,
         x = (0, c.Ng)(),
         b = (0, l.Rt)({
-            intervalType: null == S ? void 0 : S.interval,
-            intervalCount: null == S ? void 0 : S.interval_count
+            intervalType: null == M ? void 0 : M.interval,
+            intervalCount: null == M ? void 0 : M.interval_count
         }),
         O = (0, o._)({
             defaultResponse: I.Z.Messages.PREMIUM_SETTINGS_GET,
@@ -31,30 +31,30 @@ t.Z = (e) => {
             onTier0TrialOffer: b,
             onDiscountOffer: I.Z.Messages.PREMIUM_DISCOUNT_CTA.format({ percent: null == x ? void 0 : x.discount.amount })
         }),
-        P = (0, _._)(M);
+        v = (0, _._)(h);
     return (0, s.jsxs)('div', {
-        className: r()(R.cardDescription, null == P ? void 0 : null === (t = P.description) || void 0 === t ? void 0 : t.className),
+        className: r()(R.cardDescription, null == v ? void 0 : null === (t = v.description) || void 0 === t ? void 0 : t.className),
         children: [
             (0, s.jsx)(u.Z, {
                 title: a,
-                cardVariantStyleInfo: P,
-                titleClassName: g,
-                subtitle: C,
-                description: m
+                cardVariantStyleInfo: v,
+                titleClassName: m,
+                subtitle: N,
+                description: C
             }),
             A &&
                 (0, s.jsx)(E.Z, {
-                    className: N,
+                    className: g,
                     subscriptionTier: T.Si.TIER_2,
                     buttonText: O,
                     color: i.Button.Colors.GREEN,
                     look: i.Button.Looks.FILLED
                 }),
             0 !== p.length &&
-                (null == (n = null == P ? void 0 : P.descriptionCta) ? void 0 : n.hideOnHoverComponent) !== !0 &&
+                (null == (n = null == v ? void 0 : v.descriptionCta) ? void 0 : n.hideOnHoverComponent) !== !0 &&
                 null != f &&
                 (0, s.jsx)(i.Button, {
-                    className: N,
+                    className: g,
                     onClick: f,
                     children: p
                 })

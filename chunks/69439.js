@@ -1,233 +1,233 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return A;
     }
 }),
     n(47120);
-var i = n(735250),
+var s = n(735250),
     a = n(470079),
-    s = n(120356),
-    r = n.n(s),
+    r = n(120356),
+    i = n.n(r),
     l = n(442837),
     o = n(481060),
     c = n(607070),
     d = n(617136),
-    u = n(113434),
-    _ = n(569984),
+    _ = n(113434),
+    u = n(569984),
     E = n(497505),
-    h = n(918701),
-    m = n(667105),
-    I = n(284851),
-    g = n(46140),
-    p = n(689938),
-    T = n(632946);
-let S = [
+    T = n(918701),
+    I = n(667105),
+    R = n(284851),
+    m = n(46140),
+    g = n(689938),
+    N = n(632946);
+let C = [
     {
-        value: g.cd.DESKTOP,
+        value: m.cd.DESKTOP,
         get label() {
-            return p.Z.Messages.QUEST_MULTIPLATFORM_SELECT_DESKTOP;
+            return g.Z.Messages.QUEST_MULTIPLATFORM_SELECT_DESKTOP;
         }
     },
     {
-        value: g.cd.CONSOLE,
+        value: m.cd.CONSOLE,
         get label() {
-            return p.Z.Messages.QUEST_MULTIPLATFORM_SELECT_CONSOLE;
+            return g.Z.Messages.QUEST_MULTIPLATFORM_SELECT_CONSOLE;
         }
     }
 ];
-function C(e) {
+function p(e) {
     let t,
         n,
         { value: a } = e;
     switch (a) {
-        case g.cd.DESKTOP:
-            (n = (0, i.jsx)(o.ScreenIcon, {})), (t = p.Z.Messages.QUEST_MULTIPLATFORM_SELECT_DESKTOP);
+        case m.cd.DESKTOP:
+            (n = (0, s.jsx)(o.ScreenIcon, {})), (t = g.Z.Messages.QUEST_MULTIPLATFORM_SELECT_DESKTOP);
             break;
-        case g.cd.CONSOLE:
-            (n = (0, i.jsx)(o.GameControllerIcon, {})), (t = p.Z.Messages.QUEST_MULTIPLATFORM_SELECT_CONSOLE);
+        case m.cd.CONSOLE:
+            (n = (0, s.jsx)(o.GameControllerIcon, {})), (t = g.Z.Messages.QUEST_MULTIPLATFORM_SELECT_CONSOLE);
             break;
         default:
             return null;
     }
-    return (0, i.jsxs)('div', {
-        className: T.platformSelectorPrimaryLabel,
+    return (0, s.jsxs)('div', {
+        className: N.platformSelectorPrimaryLabel,
         children: [n, t]
     });
 }
-function f(e) {
-    var t, n, s, f;
-    let { quest: N, location: A, onReceiveErrorHints: v, contentPosition: L, rowIndex: Z } = e,
-        R = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
-        O = (0, m.g2)({ useReducedMotion: R }),
-        x = (0, u._s)({ quest: N }),
-        b = (0, u.z)(N),
-        P = (0, u.B6)(N.config.expiresAt, {
+function A(e) {
+    var t, n, r, A;
+    let { quest: f, location: h, onReceiveErrorHints: S, contentPosition: M, rowIndex: x } = e,
+        b = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
+        O = (0, I.g2)({ useReducedMotion: b }),
+        v = (0, _._s)({ quest: f }),
+        P = (0, _.z)(f),
+        L = (0, _.B6)(f.config.expiresAt, {
             month: 'numeric',
             day: 'numeric'
         }),
-        { isClaiming: M, isEnrolling: D } = (0, l.cj)([_.Z], () => ({
-            isClaiming: _.Z.isClaimingReward(N.id) || _.Z.isFetchingRewardCode(N.id),
-            isEnrolling: _.Z.isEnrolling(N.id)
+        { isClaiming: Z, isEnrolling: D } = (0, l.cj)([u.Z], () => ({
+            isClaiming: u.Z.isClaimingReward(f.id) || u.Z.isFetchingRewardCode(f.id),
+            isEnrolling: u.Z.isEnrolling(f.id)
         })),
-        y = (null === (t = N.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
-        j = (null === (n = N.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
-        U = j && (null === (s = N.userStatus) || void 0 === s ? void 0 : s.claimedAt) == null,
-        G = (0, h.iQ)(N),
-        w = !(0, h.zi)(N),
-        k = (0, u._Q)(N),
-        B = (0, h.zK)(N, g.S7.IN_HOUSE_CONSOLE_QUEST),
-        H = (0, h.Xv)(N.config),
-        V = (0, u.Rf)(N),
-        [F, Y, W] = (0, u.me)(N, V),
-        z = w && k === u.OH.ACCEPTED,
-        K = z && F === E.LI.SELECT,
-        q = z && !K && Y.length > 1,
-        Q = a.useCallback(
+        B = (null === (t = f.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
+        U = (null === (n = f.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
+        j = U && (null === (r = f.userStatus) || void 0 === r ? void 0 : r.claimedAt) == null,
+        G = (0, T.iQ)(f),
+        w = !(0, T.zi)(f),
+        y = (0, _._Q)(f),
+        H = (0, T.zK)(f, m.S7.IN_HOUSE_CONSOLE_QUEST),
+        k = (0, T.Xv)(f.config),
+        F = (0, _.Rf)(f),
+        [V, W, K] = (0, _.me)(f, F),
+        Y = w && y === _.OH.ACCEPTED,
+        z = Y && V === E.LI.SELECT,
+        Q = Y && !z && W.length > 1,
+        q = a.useCallback(
             (e) => {
-                W(e), e === g.cd.DESKTOP && v([]);
+                K(e), e === m.cd.DESKTOP && S([]);
             },
-            [W, v]
+            [K, S]
         ),
-        { text: X, onClick: J } = (0, m.Ks)({
-            progressState: k,
-            quest: N,
-            isInHouseQuest: B,
-            location: A,
-            isCollectibleQuest: H,
-            questContentPosition: L,
-            questContentRowIndex: Z,
+        { text: X, onClick: J } = (0, I.Ks)({
+            progressState: y,
+            quest: f,
+            isInHouseQuest: H,
+            location: h,
+            isCollectibleQuest: k,
+            questContentPosition: M,
+            questContentRowIndex: x,
             inGiftInventory: !0
         }),
-        { startingConsoleQuest: $, startConsoleQuest: ee } = (0, u.GI)({
-            questId: N.id,
+        { startingConsoleQuest: $, startConsoleQuest: ee } = (0, _.GI)({
+            questId: f.id,
             beforeRequest: () => {
                 O.startAnimation(),
                     (0, d._3)({
-                        questId: N.id,
-                        questContent: A,
+                        questId: f.id,
+                        questContent: h,
                         questContentCTA: d.jZ.DEFIBRILLATOR,
-                        questContentPosition: L,
-                        questContentRowIndex: Z
+                        questContentPosition: M,
+                        questContentRowIndex: x
                     });
             },
             afterRequest: (e) => {
-                O.stopAnimation(), v(e);
+                O.stopAnimation(), S(e);
             }
         }),
-        et = (null === (f = N.userStatus) || void 0 === f ? void 0 : f.claimedAt) != null,
+        et = (null === (A = f.userStatus) || void 0 === A ? void 0 : A.claimedAt) != null,
         en = null;
-    return (G && U
-        ? (en = (0, i.jsx)(o.Button, {
+    return (G && j
+        ? (en = (0, s.jsx)(o.Button, {
               color: o.ButtonColors.BRAND,
-              submitting: M,
+              submitting: Z,
               onClick: null != J ? J : void 0,
-              className: T.button,
+              className: N.button,
               children: X
           }))
-        : j
-          ? (en = (0, i.jsx)(o.Button, {
+        : U
+          ? (en = (0, s.jsx)(o.Button, {
                 color: o.ButtonColors.BRAND,
-                className: T.button,
+                className: N.button,
                 onClick: null != J ? J : void 0,
                 children: X
             }))
           : w
-            ? w && U
-                ? (en = (0, i.jsx)(o.Button, {
+            ? w && j
+                ? (en = (0, s.jsx)(o.Button, {
                       color: o.ButtonColors.BRAND,
-                      submitting: M,
+                      submitting: Z,
                       onClick: null != J ? J : void 0,
-                      className: T.button,
+                      className: N.button,
                       children: X
                   }))
-                : w && y && !et
-                  ? (en = K
-                        ? (0, i.jsx)(o.Select, {
-                              className: T.platformSelectorPrimary,
+                : w && B && !et
+                  ? (en = z
+                        ? (0, s.jsx)(o.Select, {
+                              className: N.platformSelectorPrimary,
                               isSelected: () => !1,
-                              options: S,
-                              placeholder: p.Z.Messages.QUEST_MULTIPLATFORM_SELECT_SUBTITLE,
-                              renderOptionLabel: C,
-                              select: Q,
+                              options: C,
+                              placeholder: g.Z.Messages.QUEST_MULTIPLATFORM_SELECT_SUBTITLE,
+                              renderOptionLabel: p,
+                              select: q,
                               serialize: (e) => {
                                   switch (e) {
-                                      case g.cd.DESKTOP:
-                                          return p.Z.Messages.QUEST_MULTIPLATFORM_SELECT_DESKTOP;
-                                      case g.cd.CONSOLE:
-                                          return p.Z.Messages.QUEST_MULTIPLATFORM_SELECT_CONSOLE;
+                                      case m.cd.DESKTOP:
+                                          return g.Z.Messages.QUEST_MULTIPLATFORM_SELECT_DESKTOP;
+                                      case m.cd.CONSOLE:
+                                          return g.Z.Messages.QUEST_MULTIPLATFORM_SELECT_CONSOLE;
                                   }
                               }
                           })
-                        : (0, h.$J)(N) && !b && F !== E.LI.DESKTOP
-                          ? x
-                              ? (0, i.jsx)(o.Button, {
+                        : (0, T.$J)(f) && !P && V !== E.LI.DESKTOP
+                          ? v
+                              ? (0, s.jsx)(o.Button, {
                                     color: o.ButtonColors.PRIMARY,
-                                    className: T.button,
+                                    className: N.button,
                                     onClick: null != J ? J : void 0,
                                     children: X
                                 })
-                              : (0, i.jsx)(o.Button, {
+                              : (0, s.jsx)(o.Button, {
                                     color: o.ButtonColors.PRIMARY,
                                     onClick: ee,
                                     disabled: $,
-                                    className: T.button,
-                                    children: (0, i.jsxs)('div', {
-                                        className: T.ctaInner,
-                                        children: [O.render(), p.Z.Messages.QUESTS_MICROHPONE_UNIT_BUTTON_CTA]
+                                    className: N.button,
+                                    children: (0, s.jsxs)('div', {
+                                        className: N.ctaInner,
+                                        children: [O.render(), g.Z.Messages.QUESTS_MICROHPONE_UNIT_BUTTON_CTA]
                                     })
                                 })
-                          : (0, i.jsx)(o.Button, {
+                          : (0, s.jsx)(o.Button, {
                                 color: o.ButtonColors.PRIMARY,
                                 disabled: !0,
-                                className: T.button,
-                                children: p.Z.Messages.QUEST_ACCEPTED
+                                className: N.button,
+                                children: g.Z.Messages.QUEST_ACCEPTED
                             }))
                   : w &&
-                    !y &&
-                    (en = (0, i.jsx)(o.Button, {
+                    !B &&
+                    (en = (0, s.jsx)(o.Button, {
                         submitting: D,
                         color: o.ButtonColors.BRAND,
                         onClick: null != J ? J : void 0,
-                        className: T.button,
+                        className: N.button,
                         children: X
                     }))
-            : (en = (0, i.jsx)(o.Button, {
+            : (en = (0, s.jsx)(o.Button, {
                   color: o.ButtonColors.PRIMARY,
                   disabled: !0,
-                  className: T.button,
-                  children: p.Z.Messages.QUESTS_ENDED_ON_DATE.format({ expiryDate: P })
+                  className: N.button,
+                  children: g.Z.Messages.QUESTS_ENDED_ON_DATE.format({ expiryDate: L })
               })),
     null == en)
         ? null
-        : (0, i.jsxs)('div', {
-              className: T.container,
+        : (0, s.jsxs)('div', {
+              className: N.container,
               children: [
                   en,
-                  q &&
-                      (0, i.jsx)(I.U, {
-                          onSelect: Q,
-                          quest: N,
+                  Q &&
+                      (0, s.jsx)(R.U, {
+                          onSelect: q,
+                          quest: f,
                           questContent: E.jn.ACTIVITY_PANEL,
                           children: (e) =>
-                              (0, i.jsx)(o.Button, {
-                                  className: r()(T.button, T.platformSelectorSecondary),
+                              (0, s.jsx)(o.Button, {
+                                  className: i()(N.button, N.platformSelectorSecondary),
                                   color: o.ButtonColors.PRIMARY,
                                   ...e,
-                                  children: (0, i.jsxs)('div', {
-                                      className: T.platformSelectorSecondaryContent,
+                                  children: (0, s.jsxs)('div', {
+                                      className: N.platformSelectorSecondaryContent,
                                       children: [
                                           (function (e) {
                                               switch (e) {
                                                   case E.LI.DESKTOP:
-                                                      return (0, i.jsx)(o.ScreenIcon, { color: 'currentColor' });
+                                                      return (0, s.jsx)(o.ScreenIcon, { color: 'currentColor' });
                                                   case E.LI.CONSOLE:
-                                                      return (0, i.jsx)(o.GameControllerIcon, { color: 'currentColor' });
+                                                      return (0, s.jsx)(o.GameControllerIcon, { color: 'currentColor' });
                                                   default:
                                                       return null;
                                               }
-                                          })(F),
-                                          (0, i.jsx)(o.ChevronSmallDownIcon, {
-                                              className: T.platformSelectorSecondaryChevron,
+                                          })(V),
+                                          (0, s.jsx)(o.ChevronSmallDownIcon, {
+                                              className: N.platformSelectorSecondaryChevron,
                                               color: 'currentColor'
                                           })
                                       ]

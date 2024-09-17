@@ -27,8 +27,8 @@ var i = t(735250),
 function O(e) {
     var n, t, s, O, x, C, S;
     let { name: A, icon: R, imageSrc: b, iconBackgroundColor: Z, iconClassName: v, details: M, integration: L, buttonText: j, buttonDisabled: D, hasNextSection: P, onButtonClick: B, guildId: y, isScrolling: G, canShowMigrationTooltip: k } = e,
-        [U, w] = a.useState(!1),
-        [H, W] = a.useState(!1);
+        [U, H] = a.useState(!1),
+        [w, W] = a.useState(!1);
     let F =
             ((O = j),
             (x = D),
@@ -63,7 +63,7 @@ function O(e) {
                         onClick: S,
                         children: O
                     })),
-        V = k && !G && !H && void 0 !== y && null != L;
+        V = k && !G && !w && void 0 !== y && null != L;
     a.useEffect(() => {
         V &&
             E.default.track(g.rMx.COMMANDS_MIGRATION_TOOLTIP_VIEWED, {
@@ -185,8 +185,8 @@ function O(e) {
               onClick: () => {
                   k && null != y && null != L && h.Z.dismissOverviewTooltip(y, L.integration), null == B || B();
               },
-              onFocus: () => w(!0),
-              onBlur: () => w(!1),
+              onFocus: () => H(!0),
+              onBlur: () => H(!1),
               children: (0, i.jsx)(d.Card, {
                   editable: !0,
                   className: l()(f.card, f.clickable),

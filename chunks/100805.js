@@ -32,47 +32,47 @@ var s = n(735250),
     O = n(609706);
 let U = o.forwardRef(function (e, t) {
     var n, r;
-    let { children: S, className: U, collapsedHeight: q, expansionSpring: Z, isExpanded: w, isExpansionAnimationComplete: P, onCtxMenuOpen: Q, onCtxMenuClose: W, onCtxMenuSelect: D, quest: H, useReducedMotion: V } = e,
+    let { children: S, className: U, collapsedHeight: Z, expansionSpring: q, isExpanded: w, isExpansionAnimationComplete: P, onCtxMenuOpen: Q, onCtxMenuClose: W, onCtxMenuSelect: D, quest: H, useReducedMotion: V } = e,
         z = (0, i.e7)([f.Z], () => f.Z.isEnrolling(H.id), [H]),
         G = (0, C.B6)(H.config.expiresAt),
         F = A.r.build(H.config),
         Y = (0, C.B6)(F.rewardsExpireAt),
-        K = o.useMemo(() => (0, E.nP)(H.config.assets.questBarHero), [H]),
-        X = (0, b.tP)(F.application.id),
-        J = F.features.has(y.S7.START_QUEST_CTA) ? g.jZ.START_QUEST : g.jZ.ACCEPT_QUEST,
-        $ = F.features.has(y.S7.START_QUEST_CTA) ? k.Z.Messages.QUESTS_START_QUEST : k.Z.Messages.QUESTS_ACCEPT_QUEST,
-        ee = o.useCallback(() => {
+        K = (0, E.ph)(H),
+        X = o.useMemo(() => (0, E.nP)(K), [K]),
+        J = (0, b.tP)(F.application.id),
+        $ = F.features.has(y.S7.START_QUEST_CTA) ? g.jZ.START_QUEST : g.jZ.ACCEPT_QUEST,
+        ee = F.features.has(y.S7.START_QUEST_CTA) ? k.Z.Messages.QUESTS_START_QUEST : k.Z.Messages.QUESTS_ACCEPT_QUEST,
+        et = o.useCallback(() => {
             (0, _.AH)(H.id, {
                 questContent: h.jn.QUEST_BAR,
-                questContentCTA: J
+                questContentCTA: $
             }),
                 F.features.has(y.S7.START_QUEST_CTA) && (0, x.uL)(I.Z5c.ACTIVITY_DETAILS(M.In), void 0);
-        }, [H, J, F.features]),
-        et = (0, b.hf)({
+        }, [H, $, F.features]),
+        en = (0, b.hf)({
             quest: H,
             location: h.jn.QUEST_BAR
         }),
-        en = o.useCallback(() => {
+        es = o.useCallback(() => {
             (0, E.FE)(H, {
                 content: h.jn.QUEST_BAR,
                 ctaContent: g.jZ.OPEN_GAME_LINK
             });
         }, [H]),
-        es = F.features.has(y.S7.POST_ENROLLMENT_CTA),
-        eo = (0, C.Rf)(H),
-        er = (0, C.Jf)(H),
-        ea = null != er ? er.progress > 0 : eo.progressSeconds > 0,
-        el = (null === (n = H.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null,
-        ei = (null === (r = H.userStatus) || void 0 === r ? void 0 : r.completedAt) != null,
-        ec = o.useMemo(() => (0, E.Xv)(H.config), [H.config]),
-        ed = w && P,
-        eu = (0, E.ph)(H),
+        eo = F.features.has(y.S7.POST_ENROLLMENT_CTA),
+        er = (0, C.Rf)(H),
+        ea = (0, C.Jf)(H),
+        el = null != ea ? ea.progress > 0 : er.progressSeconds > 0,
+        ei = (null === (n = H.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null,
+        ec = (null === (r = H.userStatus) || void 0 === r ? void 0 : r.completedAt) != null,
+        ed = o.useMemo(() => (0, E.Xv)(H.config), [H.config]),
+        eu = w && P,
         ep = (0, T.D)({
             quest: H,
-            taskDetails: eo,
+            taskDetails: er,
             location: y.dr.QUESTS_BAR,
             questContent: h.jn.QUEST_BAR,
-            thirdPartyTaskDetails: null != er ? er : void 0
+            thirdPartyTaskDetails: null != ea ? ea : void 0
         }),
         ex = (0, m.isWeb)(),
         em = o.useMemo(() => {
@@ -87,20 +87,20 @@ let U = o.forwardRef(function (e, t) {
             };
         }, [H.config.colors.primary]);
     return (0, s.jsxs)(l.animated.div, {
-        className: a()(U, O.contentExpanded, { [O.contentInteractable]: ed }),
+        className: a()(U, O.contentExpanded, { [O.contentInteractable]: eu }),
         style: {
             backgroundColor: H.config.colors.secondary,
-            transform: ei
+            transform: ec
                 ? void 0
                 : (0, l.to)(
                       [
-                          Z.to({
+                          q.to({
                               range: [0, 1],
                               output: [0, -100]
                           }),
-                          Z.to({
+                          q.to({
                               range: [0, 1],
-                              output: [0, q]
+                              output: [0, Z]
                           })
                       ],
                       (e, t) => 'translateY(calc('.concat(e, '% + ').concat(t, 'px))')
@@ -109,8 +109,8 @@ let U = o.forwardRef(function (e, t) {
         children: [
             S,
             (0, s.jsx)('div', {
-                'aria-hidden': !ed,
-                children: el
+                'aria-hidden': !eu,
+                children: ei
                     ? (0, s.jsxs)('div', {
                           className: O.questAcceptedContent,
                           ref: t,
@@ -135,15 +135,15 @@ let U = o.forwardRef(function (e, t) {
                                                           variant: 'heading-sm/semibold',
                                                           children: (0, E.AV)({
                                                               quest: H,
-                                                              taskDetails: eo,
-                                                              thirdPartyTaskDetails: null != er ? er : void 0
+                                                              taskDetails: er,
+                                                              thirdPartyTaskDetails: null != ea ? ea : void 0
                                                           })
                                                       }),
                                                       (0, s.jsx)(u.Text, {
                                                           className: O.questAcceptedContentCopySubheading,
                                                           color: 'always-white',
                                                           variant: 'text-xxs/normal',
-                                                          children: ei ? k.Z.Messages.QUESTS_CLAIM_BY_DATE.format({ expirationDate: Y }) : k.Z.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({ expirationDate: G })
+                                                          children: ec ? k.Z.Messages.QUESTS_CLAIM_BY_DATE.format({ expirationDate: Y }) : k.Z.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({ expirationDate: G })
                                                       })
                                                   ]
                                               })
@@ -171,13 +171,13 @@ let U = o.forwardRef(function (e, t) {
                                       })
                                   ]
                               }),
-                              ei
+                              ec
                                   ? (0, s.jsx)(u.Button, {
                                         className: a()(O.cta, O.ctaClaimReward),
-                                        style: ec ? em : void 0,
+                                        style: ed ? em : void 0,
                                         color: u.Button.Colors.CUSTOM,
                                         fullWidth: !0,
-                                        onClick: et,
+                                        onClick: en,
                                         size: u.Button.Sizes.NONE,
                                         children: k.Z.Messages.QUESTS_CLAIM_REWARD
                                     })
@@ -188,7 +188,7 @@ let U = o.forwardRef(function (e, t) {
                                         children: ep
                                     }),
                               (0, s.jsx)(v.Z, { quest: H }),
-                              !ex && !ea && !X && es && (0, s.jsx)(L, { onClick: ed ? en : void 0 })
+                              !ex && !el && !J && eo && (0, s.jsx)(L, { onClick: eu ? es : void 0 })
                           ]
                       })
                     : (0, s.jsxs)('div', {
@@ -252,17 +252,17 @@ let U = o.forwardRef(function (e, t) {
                                           style: '1232852290197655573' !== H.id ? em : void 0,
                                           color: u.Button.Colors.CUSTOM,
                                           fullWidth: !0,
-                                          onClick: ed ? ee : void 0,
+                                          onClick: eu ? et : void 0,
                                           size: u.Button.Sizes.NONE,
                                           submitting: z,
-                                          children: $
+                                          children: ee
                                       })
                                   ]
                               }),
                               (0, s.jsx)('div', {
                                   className: O.heroAssetWrapper,
                                   style: { color: H.config.colors.secondary },
-                                  children: K
+                                  children: X
                                       ? (0, s.jsx)(B.Fl, {
                                             id: 'QuestBarContentExpanded_heroAnimated',
                                             children: (e) =>
@@ -275,8 +275,8 @@ let U = o.forwardRef(function (e, t) {
                                                     className: O.heroAsset,
                                                     controls: !1,
                                                     children: (0, s.jsx)('source', {
-                                                        src: eu,
-                                                        type: (0, E.mN)(eu)
+                                                        src: K,
+                                                        type: (0, E.mN)(K)
                                                     })
                                                 })
                                         })
@@ -287,7 +287,7 @@ let U = o.forwardRef(function (e, t) {
                                                     ref: e,
                                                     alt: '',
                                                     className: O.heroAsset,
-                                                    src: eu
+                                                    src: K
                                                 })
                                         })
                               })

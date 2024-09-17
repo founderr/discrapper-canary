@@ -75,17 +75,17 @@ function L(e) {
     let { className: t, renderModalProps: n, heroArt: s, heroArtClassName: A, modalDismissibleContent: L, modalTopExtra: Z, header: R, headerClassName: O, subHeader: x, subHeaderExtra: b, featureCards: P, changeLogId: M, button: D, body: y } = e,
         { onClose: j, transitionState: U } = n,
         G = (0, E.Dt)(),
-        w = P.length % 2 == 0,
-        k = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
+        k = P.length % 2 == 0,
+        w = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
         [B, H] = a.useState(Date.now()),
         [V, F] = a.useState(0),
-        [Y, W] = a.useState(0),
-        [z, K] = a.useState(!1),
+        [Y, z] = a.useState(0),
+        [W, K] = a.useState(!1),
         [q, Q] = a.useState(!0),
         X = a.useRef(B),
         J = a.useRef(V),
         $ = a.useRef(Y),
-        ee = a.useRef(z),
+        ee = a.useRef(W),
         et = a.useRef(q),
         [en, ei] = a.useState(N),
         ea = a.useRef(!1);
@@ -94,7 +94,7 @@ function L(e) {
             t = e - X.current,
             n = J.current,
             i = $.current;
-        return ee.current && (F((n += t)), !et.current && W((i += t))), H(e), [n, i];
+        return ee.current && (F((n += t)), !et.current && z((i += t))), H(e), [n, i];
     }
     return (
         a.useEffect(() => {
@@ -133,8 +133,8 @@ function L(e) {
             [en]
         ),
         a.useEffect(() => {
-            (X.current = B), (J.current = V), ($.current = Y), (ee.current = z), (et.current = q);
-        }, [B, V, Y, z, q]),
+            (X.current = B), (J.current = V), ($.current = Y), (ee.current = W), (et.current = q);
+        }, [B, V, Y, W, q]),
         a.useEffect(
             () => () => {
                 if ('video' === s.type || 'embed' === s.type) {
@@ -187,7 +187,7 @@ function L(e) {
                         'video' === s.type
                             ? (0, i.jsx)(h.Z, {
                                   className: r()(f.video, A),
-                                  autoPlay: !k,
+                                  autoPlay: !w,
                                   loop: !0,
                                   muted: !0,
                                   controls: !0,
@@ -264,13 +264,13 @@ function L(e) {
                                 children: y
                             }),
                         (0, i.jsx)('div', {
-                            className: r()(f.featureCardGroup, { [f.wideStyle]: w }),
+                            className: r()(f.featureCardGroup, { [f.wideStyle]: k }),
                             children: P.map((e, t) =>
                                 (0, i.jsx)(
                                     v,
                                     {
                                         ...e,
-                                        wideStyle: w
+                                        wideStyle: k
                                     },
                                     ''.concat(e.header, '_').concat(t)
                                 )

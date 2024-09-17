@@ -36,23 +36,23 @@ t.Z = (0, a.memo)(function (e) {
         }),
         U = null !== (v = null === (n = L.userStatus) || void 0 === n ? void 0 : n.claimedTier) && void 0 !== v ? v : 0,
         G = L.config.rewards[U],
-        w = (null == G ? void 0 : G.type) === l.w.COLLECTIBLE,
-        { product: k } = (0, h.T)(w && null != G ? G.skuId : null),
-        B = null == k ? void 0 : null === (s = k.items) || void 0 === s ? void 0 : s[0];
+        k = (null == G ? void 0 : G.type) === l.w.COLLECTIBLE,
+        { product: w } = (0, h.T)(k && null != G ? G.skuId : null),
+        B = null == w ? void 0 : null === (s = w.items) || void 0 === s ? void 0 : s[0];
     if (
         ((0, u.P)(O, (e) => {
             let { height: t } = e;
-            if (!!w && null != t) t >= 230 && t < 280 ? y(d.AvatarSizes.SIZE_120) : t >= 280 && y(d.AvatarSizes.SIZE_152);
+            if (!!k && null != t) t >= 230 && t < 280 ? y(d.AvatarSizes.SIZE_120) : t >= 280 && y(d.AvatarSizes.SIZE_152);
         }),
         null == G)
     )
         return null;
     let H = (0, c.wj)(M),
         V = (0, C.Sz)(L.id, L.config.assets.logotype, 'dark'),
-        F = (0, C.Sz)(L.id, G.asset),
+        F = (0, C.Sz)(L.id, null != G.assetVideo ? G.assetVideo : G.asset),
         Y = (0, C.nP)(F),
-        W = Z ? P + 8 : 0,
-        z = () => {
+        z = Z ? P + 8 : 0,
+        W = () => {
             R(!0),
                 g.default.track(f.rMx.QUEST_HOVER, {
                     quest_id: L.id,
@@ -64,14 +64,14 @@ t.Z = (0, a.memo)(function (e) {
         children: (0, i.jsxs)('div', {
             ref: O,
             tabIndex: 0,
-            onFocus: z,
+            onFocus: W,
             onBlur: K,
-            onMouseEnter: z,
+            onMouseEnter: W,
             onMouseLeave: K,
             className: r()(A.container, { [A.hovered]: Z }),
             children: [
                 null != x &&
-                    w &&
+                    k &&
                     (0, i.jsx)('div', {
                         className: A.decoWrapper,
                         children: (0, i.jsx)(E.Z, {
@@ -105,7 +105,7 @@ t.Z = (0, a.memo)(function (e) {
                 }),
                 (0, i.jsx)('div', {
                     className: A.logoContainer,
-                    style: { transform: 'translateY(-'.concat(W, 'px)') },
+                    style: { transform: 'translateY(-'.concat(z, 'px)') },
                     children: (0, i.jsx)('img', {
                         className: A.logo,
                         src: V,

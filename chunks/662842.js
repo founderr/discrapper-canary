@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return w;
+        return k;
     }
 }),
     n(47120);
@@ -41,12 +41,12 @@ var i,
     U = n(689938),
     G = n(599293);
 ((a = i || (i = {}))[(a.STAGE = 0)] = 'STAGE'), (a[(a.EVENT_EXTERNAL = 1)] = 'EVENT_EXTERNAL'), (a[(a.EVENT_VOICE = 2)] = 'EVENT_VOICE'), (a[(a.STUDY_ROOM = 3)] = 'STUDY_ROOM');
-function w(e) {
+function k(e) {
     let { guild: t, isStudyRoomNotice: n = !1 } = e,
         i = (0, S.y)(t.id),
         a = (0, C.k5)(t.id),
         l = (0, c.e7)([R.Z], () => R.Z.getStageInstanceByChannel(null == i ? void 0 : i.id), [i]),
-        { isStageNoticeHidden: w, isEventNoticeHidden: k } = (0, c.cj)(
+        { isStageNoticeHidden: k, isEventNoticeHidden: w } = (0, c.cj)(
             [p.Z],
             () => ({
                 isStageNoticeHidden: p.Z.isLiveChannelNoticeHidden({ stageId: null == l ? void 0 : l.id }),
@@ -59,11 +59,11 @@ function w(e) {
         V = (0, c.e7)([L.Z], () => (null != B ? L.Z.getParticipantCount(B, Z.pV.AUDIENCE) : 0), [B]),
         F = (0, c.e7)([P.Z], () => P.Z.can(y.Plq.CONNECT, i)),
         Y = (0, O.Z)(null == i ? void 0 : i.id),
-        W = null == a ? void 0 : a.creator_id,
-        z = (0, c.e7)([M.default], () => M.default.getUser(W), [W]);
+        z = null == a ? void 0 : a.creator_id,
+        W = (0, c.e7)([M.default], () => M.default.getUser(z), [z]);
     r.useEffect(() => {
-        null != W && (0, _.PR)(W);
-    }, [W]);
+        null != z && (0, _.PR)(z);
+    }, [z]);
     let {
         noticeType: K,
         title: q,
@@ -279,14 +279,14 @@ function w(e) {
                 activeChannel: i,
                 canConnect: F,
                 myRole: Y,
-                eventCreator: z,
+                eventCreator: W,
                 speakers: H,
                 listenerCount: V,
-                isEventNoticeHidden: k,
-                isStageNoticeHidden: w,
+                isEventNoticeHidden: w,
+                isStageNoticeHidden: k,
                 isStudyRoomNotice: n
             }),
-        [a, l, i, F, Y, z, H, V, k, w, n]
+        [a, l, i, F, Y, W, H, V, w, k, n]
     );
     return null == K
         ? null

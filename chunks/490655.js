@@ -58,8 +58,8 @@ n.Z = a.memo(function (e) {
                 'id'
             )
         ),
-        w = null != b ? b : y,
-        H = n === C.b4C.APPLICATION ? t : null,
+        H = null != b ? b : y,
+        w = n === C.b4C.APPLICATION ? t : null,
         [W, F] = a.useState(c.$x),
         V = a.useCallback(
             () =>
@@ -121,9 +121,9 @@ n.Z = a.memo(function (e) {
                     null == q[C.ABu.YOUTUBE] && d.Z.setSection(C.b4C.OVERVIEW);
                     break;
                 case C.b4C.APPLICATION:
-                    (null == H || !(H in z || H in Y)) && d.Z.setSection(C.b4C.OVERVIEW);
+                    (null == w || !(w in z || w in Y)) && d.Z.setSection(C.b4C.OVERVIEW);
             }
-    }, [Y, z, q, H, n, j]),
+    }, [Y, z, q, w, n, j]),
         a.useEffect(() => {
             if ((null == s ? void 0 : s.id) != null) _.Z.getEntitlementsForGuildFetchState(s.id) === _.M.NOT_FETCHED && m.i1(s.id);
         }, [null == s ? void 0 : s.id]);
@@ -167,7 +167,7 @@ n.Z = a.memo(function (e) {
             break;
         case C.b4C.APPLICATION:
             var $;
-            let ee = null != H ? (null !== ($ = Y[z[H]]) && void 0 !== $ ? $ : Y[H]) : null;
+            let ee = null != w ? (null !== ($ = Y[z[w]]) && void 0 !== $ ? $ : Y[w]) : null;
             null != ee &&
                 (Q = (0, i.jsx)(g.Z, {
                     guild: s,
@@ -211,7 +211,7 @@ n.Z = a.memo(function (e) {
                 customWebhooks: X,
                 followedChannelWebhooks: J,
                 isLoading: j || null == s,
-                canCreateWebhook: null != w,
+                canCreateWebhook: null != H,
                 onManageCustomWebhooks: () => {
                     d.Z.setSection(C.b4C.WEBHOOKS);
                 },
@@ -247,7 +247,7 @@ n.Z = a.memo(function (e) {
                               activeId: n.toString(),
                               breadcrumbs: [C.b4C.OVERVIEW, n].map((e) => ({
                                   id: e.toString(),
-                                  label: R(e, Y[H])
+                                  label: R(e, Y[w])
                               })),
                               onBreadcrumbClick: (e) => {
                                   if (n !== parseInt(e.id)) K(parseInt(e.id));

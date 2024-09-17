@@ -36,8 +36,8 @@ function T(e) {
     let { groupListingId: t, subscription: n, className: r } = e,
         { analyticsLocations: l } = (0, c.ZP)(o.Z.PENDING_PLAN_CHANGE_NOTICE),
         { resetRenewalMutation: T, submitting: I, error: R } = E(l),
-        g = (0, d._k)(t, { includeSoftDeleted: !0 }),
-        { currentListing: N, nextListing: C } = a.useMemo(() => {
+        m = (0, d._k)(t, { includeSoftDeleted: !0 }),
+        { currentListing: g, nextListing: N } = a.useMemo(() => {
             if ((null == n ? void 0 : n.renewalMutations) == null)
                 return {
                     currentListing: void 0,
@@ -45,19 +45,19 @@ function T(e) {
                 };
             let e = n.items[0].planId,
                 t = n.renewalMutations.items[0].planId,
-                s = g.find((t) => t.subscription_plans[0].id === e);
+                s = m.find((t) => t.subscription_plans[0].id === e);
             return {
                 currentListing: s,
-                nextListing: g.find((e) => e.subscription_plans[0].id === t)
+                nextListing: m.find((e) => e.subscription_plans[0].id === t)
             };
-        }, [n, g]);
-    if (null == n || null == N || null == C) return null;
-    let m = i()(n.currentPeriodEnd).format('MMM DD, YYYY');
+        }, [n, m]);
+    if (null == n || null == g || null == N) return null;
+    let C = i()(n.currentPeriodEnd).format('MMM DD, YYYY');
     return (0, s.jsx)(_.Z, {
         message: u.Z.Messages.GUILD_ROLE_CANCEL_SUBSCRIPTION_DELETE_MUTATION_DESCRIPTION.format({
-            currentListing: N.name,
-            nextListing: C.name,
-            changeDate: m
+            currentListing: g.name,
+            nextListing: N.name,
+            changeDate: C
         }),
         error: null == R ? void 0 : R.message,
         onClick: () => T(n),

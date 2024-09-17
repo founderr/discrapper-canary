@@ -35,15 +35,15 @@ var i = n(735250),
     j = n(551428),
     U = n(695103),
     G = n(451478),
-    w = n(626135),
-    k = n(572004),
+    k = n(626135),
+    w = n(572004),
     B = n(630388),
     H = n(937615),
     V = n(73346),
     F = n(3570),
     Y = n(689796),
-    W = n(15470),
-    z = n(506648),
+    z = n(15470),
+    W = n(506648),
     K = n(449275),
     q = n(445986),
     Q = n(119520),
@@ -106,7 +106,7 @@ class ec extends a.PureComponent {
             analyticsContext: { loadId: e, loadDate: t }
         } = this.props;
         null != t &&
-            w.default.track(ea.rMx.STORE_LISTING_EXITED, {
+            k.default.track(ea.rMx.STORE_LISTING_EXITED, {
                 load_id: e,
                 duration_ms: Date.now() - t
             });
@@ -119,7 +119,7 @@ class ec extends a.PureComponent {
             images: 0,
             videos: 0
         });
-        w.default.track(ea.rMx.STORE_LISTING_VIEWED, {
+        k.default.track(ea.rMx.STORE_LISTING_VIEWED, {
             ...this._extraAnalyticsProperties,
             load_id: i.loadId,
             has_description: null != t.description && t.description.length > 0,
@@ -241,7 +241,7 @@ class ec extends a.PureComponent {
         });
     }
     renderFeatures(e) {
-        return (0, i.jsx)(z.Z, { sku: e });
+        return (0, i.jsx)(W.Z, { sku: e });
     }
     renderSystemRequirements(e) {
         return null == e.systemRequirements || 0 === Object.keys(e.systemRequirements).length
@@ -262,7 +262,7 @@ class ec extends a.PureComponent {
                     children: er.Z.Messages.APPLICATION_STORE_ABOUT_HEADER.format({ name: n.name })
                 }),
                 (0, i.jsx)(I.Z, {}),
-                (0, i.jsx)(W.Z, {
+                (0, i.jsx)(z.Z, {
                     applicationId: e.id,
                     blurb: t.summary,
                     description: s,
@@ -395,7 +395,7 @@ class ec extends a.PureComponent {
             eo(this, 'trackCarouselScroll', (e, t, n) => {
                 let { sku: i } = this.props;
                 null != i &&
-                    w.default.track(ea.rMx.STORE_LISTING_MEDIA_SCROLLED, {
+                    k.default.track(ea.rMx.STORE_LISTING_MEDIA_SCROLLED, {
                         ...(0, v.Z)(i),
                         card_index: n,
                         card_type: e.type === ea.s9s.IMG ? 'image' : 'video'
@@ -404,7 +404,7 @@ class ec extends a.PureComponent {
             eo(this, 'copyCurrentUrl', () => {
                 var e;
                 let { location: t } = this.props;
-                (0, k.JG)(((e = t.pathname), ''.concat(location.protocol, '//').concat(location.host).concat(e))),
+                (0, w.JG)(((e = t.pathname), ''.concat(location.protocol, '//').concat(location.host).concat(e))),
                     this.setState({ showLinkCopied: !0 }, () => {
                         this.showCopyLinkTextTimeout.start(1500, () => {
                             this.setState({ showLinkCopied: !1 });

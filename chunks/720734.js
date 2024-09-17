@@ -41,15 +41,15 @@ var i = n(735250),
     j = n(605236),
     U = n(243778),
     G = n(730417),
-    w = n(524347),
-    k = n(853197),
+    k = n(524347),
+    w = n(853197),
     B = n(810280),
     H = n(60762),
     V = n(258609),
     F = n(278464),
     Y = n(331541),
-    W = n(332473),
-    z = n(240504),
+    z = n(332473),
+    W = n(240504),
     K = n(637906),
     q = n(39370),
     Q = n(19199),
@@ -261,7 +261,7 @@ class eU extends a.PureComponent {
                           grow: 0,
                           className: eP.buttons,
                           children: [
-                              (0, i.jsx)(ek, {
+                              (0, i.jsx)(ew, {
                                   selfMute: n,
                                   serverMute: s,
                                   suppress: l,
@@ -502,7 +502,7 @@ class eU extends a.PureComponent {
                     : (this.setState({ shouldShowSpeakingWhileMutedTooltip: !1 }), this.speakingWhileMutedTooltipTimeout.stop());
             }),
             eM(this, 'renderSettingsGear', () =>
-                (0, i.jsx)(ew, {
+                (0, i.jsx)(ek, {
                     isEligibleForPomelo: this.props.isEligibleForPomelo,
                     webBuildOverride: this.props.webBuildOverride,
                     onClick: this.handleOpenAccountSettings,
@@ -538,10 +538,10 @@ function eG() {
         b = (0, l.e7)([eu.Z], () => eu.Z.getEverSpeakingWhileMuted()),
         P = (0, l.e7)([ed.Z], () => ed.Z.hasLayers()),
         M = (0, E.useModalsStore)(E.hasAnyModalOpenSelector) || P || ef.s.isDisallowPopupsSet(),
-        y = (0, W.b)(),
+        y = (0, z.b)(),
         U = (0, l.e7)([V.Z], () => null != V.Z.getAwaitingRemoteSessionInfo()),
-        B = (0, l.e7)([w.Z], () => w.Z.isCurrentQuestCompleted),
-        H = (0, l.e7)([w.Z], () => w.Z.currentDropQuestGameTitle),
+        B = (0, l.e7)([k.Z], () => k.Z.isCurrentQuestCompleted),
+        H = (0, l.e7)([k.Z], () => k.Z.currentDropQuestGameTitle),
         Y = (0, F.n)(),
         q = (0, T.O)(),
         J = (0, Q.D)(),
@@ -561,7 +561,7 @@ function eG() {
     let es = (0, l.e7)([et.Z], () => et.Z.hasHadOtherUserPlaySoundInSession()),
         eg = (function () {
             let e = (0, j.wE)(o.z.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2),
-                [t, n] = (0, l.Wu)([z.Z], () => [z.Z.hasFetchedRelevance, z.Z.profileThemesRelevanceExceeded]),
+                [t, n] = (0, l.Wu)([W.Z], () => [W.Z.hasFetchedRelevance, W.Z.profileThemesRelevanceExceeded]),
                 [i, s] = (0, l.Wu)([eI.ZP], () => [eI.ZP.hasFetchedMostRecentPremiumTypeSubscription(), eI.ZP.getMostRecentPremiumTypeSubscription()]),
                 { enabled: r } = K.Z.useExperiment({ location: '08bd40_1' }, { autoTrackExposure: !0 }),
                 c = a.useMemo(() => {
@@ -587,7 +587,7 @@ function eG() {
             settings: []
         };
     return (
-        !M && (eg && ep.settings.push(o.z.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2), s && (ep.settings.push(o.z.QUEST_2_ENROLLMENT_TOOLTIP), B && H === (null === (t = (0, k.BS)(ex.X2.FORTNITE)) || void 0 === t ? void 0 : t.title) && ep.settings.push(o.z.QUEST_2_COMPLETION_TOOLTIP)), Y && q && ep.settings.push(o.z.USER_SAFETY_SAFE_DIRECT_MESSAGING), J && (1 === $ ? ep.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_MUTE) : ep.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_BLOCK)), es && ep.settings.push(o.z.SOUNDBOARD_VOLUME_EDUCATION), ee && ep.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_REPORTING), en && ep.settings.push(o.z.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK), ei && ep.avatar.push(o.z.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP)),
+        !M && (eg && ep.settings.push(o.z.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2), s && (ep.settings.push(o.z.QUEST_2_ENROLLMENT_TOOLTIP), B && H === (null === (t = (0, w.BS)(ex.X2.FORTNITE)) || void 0 === t ? void 0 : t.title) && ep.settings.push(o.z.QUEST_2_COMPLETION_TOOLTIP)), Y && q && ep.settings.push(o.z.USER_SAFETY_SAFE_DIRECT_MESSAGING), J && (1 === $ ? ep.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_MUTE) : ep.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_BLOCK)), es && ep.settings.push(o.z.SOUNDBOARD_VOLUME_EDUCATION), ee && ep.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_REPORTING), en && ep.settings.push(o.z.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK), ei && ep.avatar.push(o.z.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP)),
         (0, i.jsx)(eU, {
             currentUser: n,
             customStatusActivity: c,
@@ -611,7 +611,7 @@ function eG() {
         })
     );
 }
-function ew(e) {
+function ek(e) {
     let { webBuildOverride: t, isEligibleForPomelo: n, onClick: a, onContextMenu: s } = e,
         r = (0, E.useRedesignIconContext)().enabled,
         l = null,
@@ -646,7 +646,7 @@ function ew(e) {
         })
     );
 }
-function ek(e) {
+function ew(e) {
     let { selfMute: t, serverMute: n, suppress: s, awaitingRemote: r, tooltipText: l, tooltipColor: o, tooltipForceOpen: c, onMouseEnter: d, onMouseLeave: _, onClick: h, onContextMenu: m } = e,
         I = t || s || n,
         { Component: g, play: p, events: T } = (0, u.O)(I ? 'unmute' : 'mute'),

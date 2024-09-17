@@ -1,15 +1,15 @@
 n.d(t, {
     $s: function () {
-        return h;
+        return S;
     },
     AV: function () {
         return T;
     },
     Hg: function () {
-        return S;
+        return M;
     },
     Kn: function () {
-        return M;
+        return h;
     },
     Nq: function () {
         return u;
@@ -18,19 +18,19 @@ n.d(t, {
         return E;
     },
     TW: function () {
-        return g;
+        return m;
     },
     bD: function () {
         return R;
     },
     pn: function () {
-        return N;
+        return g;
     },
     uv: function () {
         return p;
     },
     vx: function () {
-        return C;
+        return N;
     },
     wG: function () {
         return f;
@@ -68,24 +68,24 @@ let u = '40%',
         let a = (0, s.e7)([i.Z], () => i.Z.getIsEligibleToSendReferrals());
         return t && a;
     },
-    g = (e) => {
+    m = (e) => {
         let t = p(e);
         return null != t && t !== d.g2L.NOT_ELIGIBLE;
     },
-    N = (e) => {
-        let t = g(e),
+    g = (e) => {
+        let t = m(e),
             n = R('PremiumManagementSettings'),
             a = (0, s.e7)([i.Z], () => i.Z.getRecipientStatus());
         if (!t) return !1;
         if (!n) return !!(a.size > 0) || !1;
         return !0;
     },
-    C = (e) => {
-        let t = m(e),
+    N = (e) => {
+        let t = C(e),
             n = (0, r.wE)(a.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR);
         return t && !n;
     },
-    m = (e) => {
+    C = (e) => {
         let { enabled: t } = o.g.useExperiment({ location: e }, { autoTrackExposure: !1 }),
             { enabled: n } = l.$.useExperiment({ location: e }, { autoTrackExposure: !0 }),
             a = (0, s.e7)([i.Z], () => i.Z.getIsSenderEligibleForIncentive());
@@ -107,13 +107,13 @@ let u = '40%',
             n = (0, r.wE)(a.z.REFERRAL_INCENTIVE_AWARDED_INFO);
         return t && !n;
     },
-    M = (e) => {
-        let t = g(e),
+    h = (e) => {
+        let t = m(e),
             n = R(e),
             s = (0, r.wE)(a.z.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE);
         return !t && n && !s;
     },
-    h = (e) => {
+    S = (e) => {
         let { referralIncentiveLifecycleState: t, hasSentAll: n, referralsStatuses: s } = e;
         switch (t) {
             case d.g2L.NOT_ELIGIBLE:
@@ -128,7 +128,7 @@ let u = '40%',
                 return s.redeemed === E ? _.Z.Messages.REFERRAL_INCENTIVE_NITRO_FRIEND_PASSES_INCOMING : _.Z.Messages.REFERRAL_INCENTIVE_DISCOUNT_UNLOCKED;
         }
     },
-    S = (e) => {
+    M = (e) => {
         let { helpdeskArticle: t, referralIncentiveLifecycleState: n, referralsStatuses: s, isWithinCountdownRange: a } = e;
         switch (n) {
             case d.g2L.NOT_ELIGIBLE:

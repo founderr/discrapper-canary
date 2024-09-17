@@ -15,14 +15,14 @@ function o(e) {
         [d, _] = s.useState(!1),
         [u, E] = s.useState(!1),
         [T, I] = s.useState(!1),
-        [R, g] = s.useState(!1),
-        [N, C] = s.useState(!1),
-        [m, p] = s.useState(!1),
+        [R, m] = s.useState(!1),
+        [g, N] = s.useState(!1),
+        [C, p] = s.useState(!1),
         [A, f] = s.useState(!1),
-        M = o || d || u || T || N || A,
-        h = s.useCallback(
+        h = o || d || u || T || g || A,
+        S = s.useCallback(
             async (e) => {
-                if (!M) {
+                if (!h) {
                     c(!0);
                     try {
                         await (0, r.Yw)(e.id, l.ne.ACTIVE), null == n || n();
@@ -34,11 +34,11 @@ function o(e) {
                     }
                 }
             },
-            [M, t, n]
+            [h, t, n]
         ),
-        S = s.useCallback(
+        M = s.useCallback(
             async (e) => {
-                if (!M) {
+                if (!h) {
                     _(!0);
                     try {
                         await (0, r.Yw)(e.id, l.ne.DECLINED), null == n || n();
@@ -50,11 +50,11 @@ function o(e) {
                     }
                 }
             },
-            [M, t, n]
+            [h, t, n]
         ),
         x = s.useCallback(
             async (e) => {
-                if (!M) {
+                if (!h) {
                     E(!0);
                     try {
                         await (0, r.Yw)(e.id, l.ne.INACTIVE), null == n || n();
@@ -66,11 +66,11 @@ function o(e) {
                     }
                 }
             },
-            [M, t, n]
+            [h, t, n]
         ),
         b = s.useCallback(
             async (e) => {
-                if (!M) {
+                if (!h) {
                     I(!0);
                     try {
                         await (0, r.fc)(e.id), null == n || n();
@@ -82,24 +82,24 @@ function o(e) {
                     }
                 }
             },
-            [M, t, n]
+            [h, t, n]
         ),
         O = s.useCallback(async () => {
             if (!R) {
-                g(!0);
+                m(!0);
                 try {
                     await (0, r.qd)(), null == n || n();
                 } catch (n) {
                     let e = new a.Hx(n);
                     null == t || t(e);
                 } finally {
-                    g(!1);
+                    m(!1);
                 }
             }
         }, [R, t, n]),
-        P = s.useCallback(
+        v = s.useCallback(
             async (e) => {
-                if (!m) {
+                if (!C) {
                     p(!0);
                     try {
                         await r.ZP.fetchTeenActivity(e), null == n || n();
@@ -111,32 +111,32 @@ function o(e) {
                     }
                 }
             },
-            [m, t, n]
+            [C, t, n]
         ),
-        v = s.useCallback(
+        P = s.useCallback(
             async (e, s) => {
-                if (!N) {
-                    C(!0);
+                if (!g) {
+                    N(!0);
                     try {
                         await r.ZP.requestLink(e, s), null == n || n();
                     } catch (n) {
                         let e = new a.Hx(n);
                         null == t || t(e);
                     } finally {
-                        C(!1);
+                        N(!1);
                     }
                 }
             },
-            [N, t, n]
+            [g, t, n]
         );
     return {
-        acceptLinkRequest: h,
-        declineLinkRequest: S,
+        acceptLinkRequest: S,
+        declineLinkRequest: M,
         disconnectLinkRequest: x,
         cancelLinkRequest: b,
-        selectTeenUser: P,
+        selectTeenUser: v,
         getLinkCode: O,
-        requestLink: v,
+        requestLink: P,
         loadMore: s.useCallback(
             async (e) => {
                 let n = i.Z.getActionsForDisplayType(e),
@@ -162,8 +162,8 @@ function o(e) {
         isDisconnectLoading: u,
         isCancelLoading: T,
         isGetLinkCodeLoading: R,
-        isSelectTeenUserLoading: m,
-        isRequestingLink: N,
+        isSelectTeenUserLoading: C,
+        isRequestingLink: g,
         isMoreLoading: A
     };
 }

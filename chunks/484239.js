@@ -15,8 +15,8 @@ t.Z = (e) => {
     var t;
     let n,
         a,
-        { title: I, titleClassName: R, buttonClassName: g, perkImage: N, isCarousel: C, onCtaClick: m, perkComponent: p, subtitle: A = '', descriptionCta: f = '', cardVariant: M, subtitleClassName: h } = e,
-        S = (0, o._)(M),
+        { title: I, titleClassName: R, buttonClassName: m, perkImage: g, isCarousel: N, onCtaClick: C, perkComponent: p, subtitle: A = '', descriptionCta: f = '', cardVariant: h, subtitleClassName: S } = e,
+        M = (0, o._)(h),
         x = (0, l.yQ)(),
         b = (null == x ? void 0 : x.nitroTenureStatus) === d.EB.REDEEMABLE;
     switch (null == x ? void 0 : x.nitroTenureStatus) {
@@ -38,18 +38,18 @@ t.Z = (e) => {
             (0, s.jsx)(c.Z, {
                 title: I,
                 shouldShowElement: (e) => (null == e ? void 0 : e.onlyShowOnHover) !== !0,
-                cardVariantStyleInfo: S,
+                cardVariantStyleInfo: M,
                 titleClassName: R,
                 subtitle: A,
-                subtitleClassName: h
+                subtitleClassName: S
             }),
-            null != N &&
+            null != g &&
                 (0, s.jsx)('img', {
-                    src: N,
+                    src: g,
                     alt: '',
                     className: r()({
-                        [_.cardImage]: !C,
-                        [_.carouselCardImage]: C
+                        [_.cardImage]: !N,
+                        [_.carouselCardImage]: N
                     })
                 }),
             null != p &&
@@ -59,14 +59,14 @@ t.Z = (e) => {
                         children: [
                             p,
                             0 !== f.length &&
-                                null != m &&
+                                null != C &&
                                 (0, s.jsx)(i.Button, {
-                                    className: g,
+                                    className: m,
                                     disabled: !b,
                                     fullWidth: !0,
-                                    onClick: m,
+                                    onClick: C,
                                     children: (0, s.jsxs)('div', {
-                                        className: null == S ? void 0 : null === (t = S.descriptionCta) || void 0 === t ? void 0 : t.className,
+                                        className: null == M ? void 0 : null === (t = M.descriptionCta) || void 0 === t ? void 0 : t.className,
                                         children: [
                                             (0, s.jsx)('img', {
                                                 alt: a,

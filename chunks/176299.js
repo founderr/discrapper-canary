@@ -40,15 +40,15 @@ var i = n(735250),
     j = n(269675),
     U = n(242601),
     G = n(416568),
-    w = n(613609),
-    k = n(160404),
+    k = n(613609),
+    w = n(160404),
     B = n(225675),
     H = n(745052),
     V = n(285865),
     F = n(659971),
     Y = n(179742),
-    W = n(270759),
-    z = n(918701),
+    z = n(270759),
+    W = n(918701),
     K = n(905423),
     q = n(304445),
     Q = n(210887),
@@ -121,9 +121,9 @@ let em = 'resizable-sidebar-width',
             { guildId: a, channelId: s, messageId: r } = t.params,
             l = (0, u.e7)([$.Z], () => $.Z.getGuild(a)),
             o = (0, u.e7)([J.ZP], () => (null == a ? null : J.ZP.getSelfMember(a))),
-            c = (0, u.e7)([k.Z], () => {
+            c = (0, u.e7)([w.Z], () => {
                 if (null == a) return;
-                let e = k.Z.getData(a);
+                let e = w.Z.getData(a);
                 if ((null == e ? void 0 : e.type) === B.z.SERVER_SHOP)
                     switch (e.initialTab) {
                         case 'role_subscriptions':
@@ -198,7 +198,7 @@ let em = 'resizable-sidebar-width',
                 return window.location.pathname.startsWith(eu.Z5c.GLOBAL_DISCOVERY);
             })() ||
             (function () {
-                return window.location.pathname.startsWith(eu.Z5c.GUILD_DISCOVERY) || (0, z.OG)();
+                return window.location.pathname.startsWith(eu.Z5c.GUILD_DISCOVERY) || (0, W.OG)();
             })()
         )
             return a ? (0, i.jsx)(b.Z, {}) : (0, i.jsx)(R.Z, {});
@@ -230,7 +230,7 @@ let em = 'resizable-sidebar-width',
     eR = (e) => {
         let { match: t } = e;
         return null != t.params.guildId
-            ? (0, i.jsx)(w.Z, {
+            ? (0, i.jsx)(k.Z, {
                   guildId: t.params.guildId,
                   inviteCode: t.params.inviteCode
               })
@@ -248,16 +248,16 @@ let em = 'resizable-sidebar-width',
         };
     },
     eP = (e) => (0, i.jsx)(p.Z, { ...e }),
-    eM = () => (0, i.jsx)(W.Z, {}),
+    eM = () => (0, i.jsx)(z.Z, {}),
     eD = () => (0, i.jsx)(H.Z, {}),
     ey = () => (0, i.jsx)(Y.Z, {}),
     ej = (e) => {
         let { match: t } = e;
         switch (t.params.feature) {
             case 'addFriends':
-                return (0, i.jsx)(W.Z, { initialSection: eu.pJs.ADD_FRIEND });
+                return (0, i.jsx)(z.Z, { initialSection: eu.pJs.ADD_FRIEND });
             case 'pendingFriends':
-                return (0, i.jsx)(W.Z, { initialSection: eu.pJs.PENDING });
+                return (0, i.jsx)(z.Z, { initialSection: eu.pJs.PENDING });
             case 'sessionManagement':
                 return (0, i.jsx)(l.l_, { to: eu.Z5c.SETTINGS('sessions') });
             case 'connections':

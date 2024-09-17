@@ -17,26 +17,26 @@ var s = n(399606),
     T = n(323780),
     I = n(101732),
     R = n(450598),
-    g = n(633030),
-    N = n(97942),
-    C = n(269987),
-    m = n(548629),
+    m = n(633030),
+    g = n(97942),
+    N = n(269987),
+    C = n(548629),
     p = n(507084),
     A = n(680313),
     f = n(926433),
-    M = n(302036),
-    h = n(994554),
-    S = n(1549),
+    h = n(302036),
+    S = n(994554),
+    M = n(1549),
     x = n(13327),
     b = n(59137),
     O = n(405991),
-    P = n(24615),
-    v = n(193943),
+    v = n(24615),
+    P = n(193943),
     L = n(334347),
     Z = n(943734),
     D = n(603076),
-    U = n(472656),
-    B = n(912429),
+    B = n(472656),
+    U = n(912429),
     j = n(772969),
     G = n(926262);
 let w = (e, t, n) => ((0, a.wj)(e) ? t : n),
@@ -65,13 +65,13 @@ let w = (e, t, n) => ((0, a.wj)(e) ? t : n),
                 title: E.Z.Messages.PREMIUM_MARKETING_VARIANT_2_FEATURE_CLIENT_THEMES_TITLE,
                 description: E.Z.Messages.PREMIUM_MARKETING_VARIANT_2_FEATURE_CLIENT_THEMES_DESCRIPTION,
                 className: t.clientThemesCard,
-                imageSource: P,
+                imageSource: v,
                 imageClassName: t.clientThemesImage
             },
             customAppIcons: {
                 title: E.Z.Messages.PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_TITLE,
                 description: E.Z.Messages.PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_DESCRIPTION,
-                imageSource: v,
+                imageSource: P,
                 imageClassName: t.customAppIconImage
             },
             emoji: {
@@ -91,7 +91,7 @@ let w = (e, t, n) => ((0, a.wj)(e) ? t : n),
                     };
                     return a ? E.Z.Messages.PREMIUM_MARKETING_PER_GUILD_PROFILE_THEMES_PERK_DESCRIPTION_CHECK_IT_OUT.format({ onCheckItOutClick: t }) : E.Z.Messages.PREMIUM_MARKETING_PER_GUILD_PROFILE_THEMES_PERK_DESCRIPTION_TRY_IT_OUT.format({ onTryItOutClick: t });
                 },
-                imageSource: N,
+                imageSource: g,
                 imageClassName: t.perGuildProfilesImage
             },
             longerMessages: {
@@ -103,7 +103,7 @@ let w = (e, t, n) => ((0, a.wj)(e) ? t : n),
             moreGuilds: {
                 title: E.Z.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_TITLE,
                 description: E.Z.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_DESCRIPTION,
-                imageSource: w(n, g, U),
+                imageSource: w(n, m, B),
                 imageClassName: t.moreGuildsImage
             },
             moreGuildsAlt: {
@@ -115,32 +115,32 @@ let w = (e, t, n) => ((0, a.wj)(e) ? t : n),
             remix: {
                 title: E.Z.Messages.REMIXING_PERKS_CARD_TITLE,
                 description: E.Z.Messages.REMIXING_PERKS_CARD_DESCRIPTION,
-                imageSource: w(n, C, m),
+                imageSource: w(n, N, C),
                 imageClassName: t.remixingImage,
                 isEarlyAccess: !0
             },
             soundboard: {
                 title: E.Z.Messages.SOUND_BOARD_MARKETING_USE_CUSTOM_SOUNDS,
                 description: E.Z.Messages.SOUNDBOARD_MARKETING_REACT_WITH_SOUNDBOARD,
-                imageSource: w(n, f, M),
+                imageSource: w(n, f, h),
                 imageClassName: t.soundboardImage
             },
             stickers: {
                 title: E.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE_OLD,
                 description: E.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_DESCRIPTION,
-                imageSource: w(n, h, B),
+                imageSource: w(n, S, U),
                 imageClassName: t.stickersImage
             },
             stickersBurst: {
                 title: E.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE,
                 description: E.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_DESCRIPTION,
-                imageSource: w(n, h, B),
+                imageSource: w(n, S, U),
                 imageClassName: t.stickersImage
             },
             stickersPerkDiscoverability: {
                 title: E.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE,
                 description: E.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_LONG_DESCRIPTION,
-                imageSource: w(n, h, B),
+                imageSource: w(n, S, U),
                 imageClassName: t.stickersImage
             },
             streaming: {
@@ -152,7 +152,7 @@ let w = (e, t, n) => ((0, a.wj)(e) ? t : n),
             superReactions: {
                 title: E.Z.Messages.PREMIUM_MARKETING_SUPER_REACTIONS_PERK_TITLE_V2,
                 description: E.Z.Messages.PREMIUM_MARKETING_SUPER_REACTIONS_PERK_DESCRIPTION_V2,
-                imageSource: w(n, S, x),
+                imageSource: w(n, M, x),
                 imageClassName: t.superReactionsImage
             },
             upload: {
