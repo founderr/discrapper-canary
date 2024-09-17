@@ -11,8 +11,8 @@ var n = t(735250),
     u = t(497505),
     E = t(210724),
     T = t(130653),
-    S = t(78826),
-    I = t(37303),
+    S = t(415104),
+    I = t(78826),
     N = t(134483),
     m = t(478977),
     C = t(456799),
@@ -268,6 +268,12 @@ function j() {
                         initialValue: r.config.messages.gameTitle
                     }),
                     (0, n.jsx)(g.Z, {
+                        title: 'Game Publisher',
+                        assetKey: 'gamePublisher',
+                        onMessageChange: w,
+                        initialValue: r.config.messages.gamePublisher
+                    }),
+                    (0, n.jsx)(g.Z, {
                         title: 'Reward Name',
                         assetKey: 'rewardName',
                         onMessageChange: k,
@@ -505,7 +511,7 @@ function j() {
                                         }),
                                     (0, n.jsx)('div', {
                                         className: f.questBarPreview,
-                                        children: (0, n.jsx)(S.p, {
+                                        children: (0, n.jsx)(I.p, {
                                             isPreview: !0,
                                             source: 'preview',
                                             questId: '0',
@@ -520,14 +526,17 @@ function j() {
                         theme: F,
                         withBorder: !0,
                         children: [
-                            (0, n.jsx)(d.FormTitle, { children: 'Gift Inventory' }),
-                            (0, n.jsx)(S.p, {
+                            (0, n.jsx)(d.FormTitle, { children: 'Quest Home Card' }),
+                            (0, n.jsx)(I.p, {
                                 isPreview: !0,
                                 source: 'preview',
                                 questId: '0',
-                                children: (0, n.jsx)(I.Z, {
+                                children: (0, n.jsx)(S.Z, {
                                     quest: r,
-                                    location: u.jn.GIFT_INVENTORY_FOR_YOU
+                                    className: f.questTile,
+                                    questContent: u.jn.QUEST_HOME_DESKTOP,
+                                    contentPosition: 0,
+                                    rowIndex: 0
                                 })
                             })
                         ]
@@ -545,7 +554,7 @@ function j() {
                                 }),
                             (0, n.jsx)('div', {
                                 className: f.questBarPreviewWrapper,
-                                children: (0, n.jsx)(S.p, {
+                                children: (0, n.jsx)(I.p, {
                                     isPreview: !0,
                                     source: 'preview',
                                     questId: '0',

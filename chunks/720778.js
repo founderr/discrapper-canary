@@ -17,5 +17,6 @@ e.exports = {
     errorBoundaryIcon: 'errorBoundaryIcon_e92711',
     headingWithTooltip: 'headingWithTooltip_e92711',
     errorMessageWrapper: 'errorMessageWrapper_e92711',
-    errorMessage: 'errorMessage_e92711'
+    errorMessage: 'errorMessage_e92711',
+    questTile: 'questTile_e92711'
 };
