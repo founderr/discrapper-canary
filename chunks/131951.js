@@ -1135,11 +1135,10 @@ class tA extends (l = I.ZP.Store) {
                           guildId: e,
                           location: 'MediaEngineStore'
                       })
-                    : null;
-        n > 5 && (n = 114 === n ? 1 : 0);
-        let a = r.canSupportDaveProtocol || (null == i ? void 0 : i.canSupportDaveProtocol),
+                    : null,
+            a = r.canSupportDaveProtocol || (null == i ? void 0 : i.canSupportDaveProtocol),
             s = Math.max(r.protocolVersionFloor, null !== (t = null == i ? void 0 : i.protocolVersionFloor) && void 0 !== t ? t : 0);
-        return a && n >= s ? n : 0;
+        return a && (n >= s || (n > 5 && 114 === n)) ? n : 0;
     }
     hasClipsSource() {
         return null != s;
