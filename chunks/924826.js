@@ -191,9 +191,10 @@ function c(e) {
         ),
         B = r.useCallback(
             (e) => {
-                D(null != e ? (0, l.jb)(t, e) : null);
+                let n = null != e ? (0, l.jb)(t, e) : null;
+                (A.current = n), (0, a.h)(t, e, I);
             },
-            [t, D]
+            [t, I]
         );
     return r.useMemo(
         () => ({
