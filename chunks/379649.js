@@ -1,5 +1,5 @@
 n.d(t, {
-    AE: function () {
+    A3: function () {
         return f;
     },
     CI: function () {
@@ -100,51 +100,61 @@ function E(e) {
         setTimeout(() => e(), t);
     });
 }
+function f(e, t) {
+    switch (t) {
+        case 'NONE':
+            return 0;
+        case 'SECONDS':
+            return 60 * e;
+        case 'MINUTES':
+            return e;
+        case 'HOURS':
+            return e / 60;
+        case 'DAYS':
+            return e / 60 / 24;
+        case 'WEEKS':
+            return e / 60 / 24 / 7;
+        case 'MONTHS':
+            return e / 60 / 24 / 31;
+        case 'YEARS':
+            return e / 60 / 24 / 365;
+    }
+}
 ((i = r || (r = {})).NONE = 'NONE'), (i.SECONDS = 'SECONDS'), (i.MINUTES = 'MINUTES'), (i.HOURS = 'HOURS'), (i.DAYS = 'DAYS'), (i.WEEKS = 'WEEKS'), (i.MONTHS = 'MONTHS'), (i.YEARS = 'YEARS');
-let f = {
-        NONE: (e) => 0,
-        SECONDS: (e) => 60 * e,
-        MINUTES: (e) => e,
-        HOURS: (e) => e / 60,
-        DAYS: (e) => e / 60 / 24,
-        WEEKS: (e) => e / 60 / 24 / 7,
-        MONTHS: (e) => e / 60 / 24 / 31,
-        YEARS: (e) => e / 60 / 24 / 365
+let h = [
+    {
+        unit: 'NONE',
+        max: 0
     },
-    h = [
-        {
-            unit: 'NONE',
-            max: 0
-        },
-        {
-            unit: 'SECONDS',
-            max: 1
-        },
-        {
-            unit: 'MINUTES',
-            max: 60
-        },
-        {
-            unit: 'HOURS',
-            max: 1440
-        },
-        {
-            unit: 'DAYS',
-            max: 44640
-        },
-        {
-            unit: 'WEEKS',
-            max: 40320
-        },
-        {
-            unit: 'MONTHS',
-            max: 525600
-        },
-        {
-            unit: 'YEARS',
-            max: 1 / 0
-        }
-    ];
+    {
+        unit: 'SECONDS',
+        max: 1
+    },
+    {
+        unit: 'MINUTES',
+        max: 60
+    },
+    {
+        unit: 'HOURS',
+        max: 1440
+    },
+    {
+        unit: 'DAYS',
+        max: 44640
+    },
+    {
+        unit: 'WEEKS',
+        max: 40320
+    },
+    {
+        unit: 'MONTHS',
+        max: 525600
+    },
+    {
+        unit: 'YEARS',
+        max: 1 / 0
+    }
+];
 function p(e, t) {
     let n = h.findIndex((t) => {
             let { max: n, unit: r } = t;
@@ -166,10 +176,15 @@ function p(e, t) {
     return null != i ? i.unit : null;
 }
 function I(e, t) {
-    let n = null != e ? p(e, (e) => t.includes(e)) : 'NONE',
-        r = null != n ? f[n] : null;
+    if (null == e)
+        return {
+            unit: 'NONE',
+            time: 0
+        };
+    let n = p(e, (e) => t.includes(e)),
+        r = null != n ? f(e, n) : null;
     return {
         unit: n,
-        time: null != e && null != r ? Math.floor(r(e)) : null
+        time: null != r ? Math.floor(r) : null
     };
 }

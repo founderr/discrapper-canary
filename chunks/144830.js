@@ -147,22 +147,19 @@ function _(e) {
                 if (null != n) return 'TIME';
                 return null;
             }
-            transformTime(e, t) {
-                return c.AE[e](t);
-            }
             render() {
                 let { location: t, messageProps: n, isApplicationStreaming: i, ...s } = this.props,
                     { time: a } = this.state,
                     l = this.getType();
                 if (null == l) return null;
                 let o = this.getTimeUnit(a, t, l),
-                    c = p[t][l];
-                if (null == c) return null;
-                let u = c[o],
-                    d = Math.floor(this.transformTime(o, a));
+                    u = p[t][l];
+                if (null == u) return null;
+                let d = u[o],
+                    h = Math.floor((0, c.A3)(a, o));
                 return (0, r.jsx)(e, {
                     ...s,
-                    children: null == u ? void 0 : u(d, n, i)
+                    children: null == d ? void 0 : d(h, n, i)
                 });
             }
             constructor(...e) {
