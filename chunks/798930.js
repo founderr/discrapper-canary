@@ -1,10 +1,10 @@
-var n, r;
-t.d(a, {
+var a, r;
+n.d(t, {
     O: function () {
-        return n;
+        return a;
     }
 }),
-    ((r = n || (n = {})).LANDING = 'landing'),
+    ((r = a || (a = {})).LANDING = 'landing'),
     (r.PRE_CONNECT = 'pre-connect'),
     (r.PRE_CONNECT_WAITING = 'pre-connect-waiting'),
     (r.DISCORD_CONSENT = 'discord-consent'),

@@ -26,8 +26,8 @@ var i = t(735250),
     E = t(767157),
     N = t(112440),
     T = t(671105),
-    A = t(552958),
-    Z = t(981631),
+    Z = t(552958),
+    A = t(981631),
     g = t(921944),
     C = t(871465),
     h = t(689938),
@@ -64,8 +64,8 @@ function R(e, n, r, O) {
         j = _.ZP.canUseCustomNotificationSounds(U),
         G = j ? (null != p ? p : R) : C.YC.CLASSIC,
         P = M.Y.useExperiment({ location: 'guild_context_menu' }, { autoTrackExposure: !0 }).enabled,
-        [y, D] = a.useState(!1),
-        { playSound: b } = (0, A.Z)(),
+        [y, b] = a.useState(!1),
+        { playSound: D } = (0, Z.Z)(),
         [L, F] = (0, o.cv)([r]),
         V = L === r;
     if (
@@ -79,7 +79,7 @@ function R(e, n, r, O) {
     )
         return null;
     let k = (t) => {
-            if ((b(t), F(g.L.TAKE_ACTION), !j && t !== C.YC.CLASSIC)) {
+            if ((D(t), F(g.L.TAKE_ACTION), !j && t !== C.YC.CLASSIC)) {
                 (0, E.Z)(t, 'contextMenu'), (0, N.Z)();
                 return;
             }
@@ -97,7 +97,7 @@ function R(e, n, r, O) {
         label: (e) => {
             let { isFocused: n } = e;
             return (
-                n && D(n),
+                n && b(n),
                 (0, i.jsxs)('div', {
                     className: x.rootContainer,
                     children: [
@@ -135,7 +135,7 @@ function R(e, n, r, O) {
             );
         },
         action:
-            e !== Z.aIL
+            e !== A.aIL
                 ? () =>
                       (0, u.openModalLazy)(async () => {
                           let { default: n } = await Promise.all([t.e('5863'), t.e('17468')]).then(t.bind(t, 751212));

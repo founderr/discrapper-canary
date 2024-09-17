@@ -1,4 +1,4 @@
-t.d(a, {
+n.d(t, {
     Ux: function () {
         return o;
     },
@@ -9,57 +9,57 @@ t.d(a, {
         return c;
     }
 });
-var n = t(735250);
-t(470079);
-var r = t(481060),
-    s = t(879137);
+var a = n(735250);
+n(470079);
+var r = n(481060),
+    s = n(879137);
 function o(e) {
-    let { text: a, children: t } = e;
-    return (0, n.jsxs)('div', {
+    let { text: t, children: n } = e;
+    return (0, a.jsxs)('div', {
         className: s.valueProp,
         children: [
-            (0, n.jsx)('div', {
+            (0, a.jsx)('div', {
                 className: s.valuePropIconContainer,
-                children: t
+                children: n
             }),
-            (0, n.jsx)(r.Text, {
+            (0, a.jsx)(r.Text, {
                 variant: 'text-sm/medium',
-                children: a
+                children: t
             })
         ]
     });
 }
 function l(e) {
-    let { title: a, bulletPoints: t, icon: o } = e;
-    return (0, n.jsxs)('div', {
+    let { title: t, bulletPoints: n, icon: o } = e;
+    return (0, a.jsxs)('div', {
         className: s.bulletedValueProp,
         children: [
-            (0, n.jsx)('div', {
+            (0, a.jsx)('div', {
                 className: s.valuePropIconContainer,
                 children: o
             }),
-            (0, n.jsxs)('div', {
+            (0, a.jsxs)('div', {
                 className: s.bulletPointsContainer,
                 children: [
-                    (0, n.jsx)(r.Text, {
+                    (0, a.jsx)(r.Text, {
                         variant: 'text-md/bold',
                         color: 'header-primary',
-                        children: a
+                        children: t
                     }),
-                    (0, n.jsx)('div', {
+                    (0, a.jsx)('div', {
                         className: s.bulletPoints,
-                        children: t.map((e) =>
-                            (0, n.jsxs)(
+                        children: n.map((e) =>
+                            (0, a.jsxs)(
                                 'div',
                                 {
                                     className: s.bulletPoint,
                                     children: [
-                                        (0, n.jsx)(r.Text, {
+                                        (0, a.jsx)(r.Text, {
                                             variant: 'text-sm/medium',
                                             color: 'header-secondary',
                                             children: '\u2022'
                                         }),
-                                        (0, n.jsx)(r.Text, {
+                                        (0, a.jsx)(r.Text, {
                                             variant: 'text-sm/medium',
                                             color: 'header-secondary',
                                             className: s.bulletPointText,
@@ -77,9 +77,9 @@ function l(e) {
     });
 }
 function c(e) {
-    let { children: a } = e;
-    return (0, n.jsx)('div', {
+    let { children: t } = e;
+    return (0, a.jsx)('div', {
         className: s.valuePropContainer,
-        children: a
+        children: t
     });
 }

@@ -9,8 +9,8 @@ var r = n(735250),
     l = n(120356),
     i = n.n(l),
     o = n(392711),
-    s = n.n(o),
-    c = n(876215),
+    c = n.n(o),
+    s = n(876215),
     d = n(442837),
     u = n(433517),
     h = n(481060),
@@ -37,7 +37,7 @@ let w = [
             let { type: t } = e;
             return (0, r.jsx)(h.Text, {
                 variant: 'text-md/semibold',
-                children: c.s[t]
+                children: s.s[t]
             });
         }
     },
@@ -88,8 +88,8 @@ function E() {
     let n = (0, d.e7)([C.Z], () => C.Z.getFeed(N.YN.GLOBAL_FEED)),
         l = (0, d.e7)([C.Z], () => C.Z.getDebugImpressionCappingDisabled()),
         o = (0, d.e7)([j.Z], () => j.Z.getDebugFastImpressionCappingEnabled()),
-        c = (function (e) {
-            let t = s().groupBy(e, (e) => e.content_type);
+        s = (function (e) {
+            let t = c().groupBy(e, (e) => e.content_type);
             return Object.keys(t).map((e) => {
                 let n = t[e];
                 return {
@@ -135,10 +135,10 @@ function E() {
                 (0, r.jsxs)(h.FormSection, {
                     children: [
                         (0, r.jsx)(h.FormTitle, { children: 'Inventory' }),
-                        c.length > 0 &&
+                        s.length > 0 &&
                             (0, r.jsx)(p.Z, {
                                 columns: w,
-                                data: c
+                                data: s
                             }),
                         (0, r.jsx)(h.Spacer, { size: 8 }),
                         (0, r.jsx)(S.Z, {}),

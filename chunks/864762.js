@@ -1,22 +1,22 @@
-t.d(a, {
+n.d(t, {
     k: function () {
         return c;
     }
 }),
-    t(47120);
-var n = t(470079),
-    r = t(110924),
-    s = t(626135),
-    o = t(798930),
-    l = t(981631);
-function c(e, a) {
-    let [t, c] = n.useState(o.O.LANDING),
-        i = (0, r.Z)(t),
-        [d, u] = n.useState(null),
-        [x, N] = n.useState(null),
-        [h, m] = n.useState(void 0),
-        C = n.useCallback(() => {
-            switch (t) {
+    n(47120);
+var a = n(470079),
+    r = n(110924),
+    s = n(626135),
+    o = n(798930),
+    l = n(981631);
+function c(e, t) {
+    let [n, c] = a.useState(o.O.LANDING),
+        i = (0, r.Z)(n),
+        [d, u] = a.useState(null),
+        [x, N] = a.useState(null),
+        [h, C] = a.useState(void 0),
+        m = a.useCallback(() => {
+            switch (n) {
                 case o.O.LANDING:
                     c(o.O.PRE_CONNECT);
                     break;
@@ -26,32 +26,32 @@ function c(e, a) {
                 case o.O.ERROR:
                     c(o.O.PRE_CONNECT);
             }
-        }, [t]),
-        j = n.useCallback((e) => {
-            u(null), m(e), c(o.O.ERROR);
+        }, [n]),
+        j = a.useCallback((e) => {
+            u(null), C(e), c(o.O.ERROR);
         }, []),
-        E = n.useCallback((e) => {
+        E = a.useCallback((e) => {
             u(e), c(o.O.PRE_CONNECT_WAITING);
         }, []),
-        v = n.useCallback((e) => {
+        f = a.useCallback((e) => {
             u(null), N(e), c(o.O.DISCORD_CONSENT);
         }, []);
     return (
-        n.useEffect(() => {
-            if (t !== i)
+        a.useEffect(() => {
+            if (n !== i)
                 s.default.track(l.rMx.ACCOUNT_LINK_STEP, {
                     location_stack: e,
                     previous_step: i,
-                    current_step: t,
-                    platform_type: a
+                    current_step: n,
+                    platform_type: t
                 });
-        }, [t, i, e, a]),
+        }, [n, i, e, t]),
         {
-            slide: t,
-            gotoNext: C,
+            slide: n,
+            gotoNext: m,
             gotoError: j,
             handleWaitingForConnection: E,
-            handleAuthToken: v,
+            handleAuthToken: f,
             expectedCallbackState: d,
             callbackData: x,
             errorCode: h

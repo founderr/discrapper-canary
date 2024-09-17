@@ -20,8 +20,8 @@ var l = n(735250),
     m = n(543241),
     x = n(318766),
     E = n(907040),
-    _ = n(633302),
-    v = n(806966),
+    v = n(633302),
+    _ = n(806966),
     p = n(176354),
     T = n(823379),
     f = n(354459),
@@ -29,7 +29,7 @@ var l = n(735250),
     I = n(420212),
     C = n(264699);
 let N = g.Hz.CHAT,
-    P = [_.ZP.getByName('thumbsup'), _.ZP.getByName('eyes'), _.ZP.getByName('laughing'), _.ZP.getByName('watermelon'), _.ZP.getByName('fork_and_knife'), _.ZP.getByName('yum')].filter(T.lm);
+    P = [v.ZP.getByName('thumbsup'), v.ZP.getByName('eyes'), v.ZP.getByName('laughing'), v.ZP.getByName('watermelon'), v.ZP.getByName('fork_and_knife'), v.ZP.getByName('yum')].filter(T.lm);
 function Z(e) {
     let { emoji: t, isDisabled: n = !1, onClick: i, className: s } = e,
         h = a.useRef(null),
@@ -83,7 +83,7 @@ function S(e) {
     });
 }
 function M(e) {
-    let { channel: t, title: n, closePopout: i, onFocus: o, onSelectEmoji: c, onSelectDisabledEmoji: d, onExpandedToggle: x, emojiSearchProps: _, recentlyUsedEmojis: T, analyticsOverride: M } = e,
+    let { channel: t, title: n, closePopout: i, onFocus: o, onSelectEmoji: c, onSelectDisabledEmoji: d, onExpandedToggle: x, emojiSearchProps: v, recentlyUsedEmojis: T, analyticsOverride: M } = e,
         y = (0, h.Dt)(),
         [A, O] = a.useState(!1),
         R = (0, m.wC)(t.guild_id),
@@ -107,7 +107,7 @@ function M(e) {
                 return;
             }
             null != e && c(e);
-            w(!t), t && v.kJ.setSearchPlaceholder(null);
+            w(!t), t && _.kJ.setSearchPlaceholder(null);
         };
     return (0, l.jsxs)(u.Dialog, {
         'aria-labelledby': y,
@@ -135,9 +135,9 @@ function M(e) {
                         wrapper: 'div',
                         pickerIntention: N,
                         searchProps: {
-                            ..._,
+                            ...v,
                             accessory: (0, l.jsx)(S, {
-                                otherAccessories: null == _ ? void 0 : _.accessory,
+                                otherAccessories: null == v ? void 0 : v.accessory,
                                 isEmojiPickerExpanded: A,
                                 onSetExpanded: w,
                                 onFocus: o

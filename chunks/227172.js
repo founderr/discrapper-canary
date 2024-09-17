@@ -16,8 +16,8 @@ var l = n(735250),
     m = n(706454),
     x = n(374129),
     E = n(639351),
-    _ = n(823379),
-    v = n(379357),
+    v = n(823379),
+    _ = n(379357),
     p = n(192918),
     T = n(22211),
     f = n(561308),
@@ -43,10 +43,10 @@ let O = {
 };
 t.Z = (e) => {
     let { channel: t, entry: n, disableGameProfileLinks: i, onReaction: x, onVoiceChannelPreview: E, onUserPopoutClosed: R } = e,
-        { largeImage: j } = (0, v.rv)({ entry: n }),
+        { largeImage: j } = (0, _.rv)({ entry: n }),
         { user: w, details: L, appName: b, activity: U } = (0, M.n)(n),
-        { primaryColor: D, secondaryColor: B } = (0, C.Z)(null == j ? void 0 : j.src),
-        k = (0, r.e7)([m.default], () => m.default.locale),
+        { primaryColor: D, secondaryColor: k } = (0, C.Z)(null == j ? void 0 : j.src),
+        B = (0, r.e7)([m.default], () => m.default.locale),
         { streamPreviewUrl: F, stream: G } = (0, T.Z)(n),
         { displayParticipants: H, participant1: V, participant2: Y, numOtherParticipants: z } = (0, p.Z)(n, 3),
         W = a.useCallback(
@@ -66,12 +66,12 @@ t.Z = (e) => {
                     applicationImageSrc: null == j ? void 0 : j.src,
                     avatarSrcs: H.map((e) => e.getAvatarURL(t.guild_id, 128)),
                     description: l,
-                    timestamp: (0, f.yh)(n, k),
-                    colors: [D, B],
+                    timestamp: (0, f.yh)(n, B),
+                    colors: [D, k],
                     channelId: e
                 });
             },
-            [null == j ? void 0 : j.src, t, H, n, k, z, V, Y, D, B, w]
+            [null == j ? void 0 : j.src, t, H, n, B, z, V, Y, D, k, w]
         );
     if (null == w) return null;
     let J = null != n.extra.platform ? O[n.extra.platform] : null,
@@ -133,7 +133,7 @@ t.Z = (e) => {
                           })
                   })
                 : null
-        ].filter(_.lm);
+        ].filter(v.lm);
     return (0, l.jsxs)(Z.yR, {
         children: [
             K,

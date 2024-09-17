@@ -9,8 +9,8 @@ var s = o(481060),
     r = o(726542),
     i = o(198993),
     c = o(63063),
-    a = o(376340),
-    l = o(981631),
+    l = o(376340),
+    a = o(981631),
     d = o(927923),
     u = o(689938),
     _ = o(277379),
@@ -29,7 +29,7 @@ function x() {
                             (0, t.jsx)('div', {
                                 className: _.xboxLogoBox,
                                 children: (0, t.jsx)('img', {
-                                    src: r.Z.get(l.ABu.XBOX).icon.whiteSVG,
+                                    src: r.Z.get(a.ABu.XBOX).icon.whiteSVG,
                                     alt: ''
                                 })
                             }),
@@ -46,7 +46,7 @@ function x() {
                         variant: 'text-sm/medium',
                         color: 'header-secondary',
                         children: (0, t.jsx)(s.Anchor, {
-                            href: c.Z.getArticleURL(l.BhN.XBOX_CONNECTION),
+                            href: c.Z.getArticleURL(a.BhN.XBOX_CONNECTION),
                             children: u.Z.Messages.LEARN_MORE
                         })
                     })
@@ -62,7 +62,7 @@ function x() {
 }
 function p(e) {
     let { onClose: n } = e;
-    return (0, t.jsx)(a.L, {
+    return (0, t.jsx)(l.L, {
         img: (0, t.jsx)('img', {
             src: C,
             width: '232',

@@ -9,19 +9,19 @@ var s = o(212598),
     r = o(981631),
     i = o(927923),
     c = o(689938),
-    a = o(397995),
-    l = o(848499);
+    l = o(397995),
+    a = o(848499);
 function d(e) {
     let { isWaitingForConnection: n, onWaitingForConnection: o, expectedCallbackState: d, onAuthToken: u, onError: _, onClose: C } = e,
         x = n
             ? (0, t.jsx)('img', {
-                  src: l,
+                  src: a,
                   width: '168',
                   height: '124',
                   alt: ''
               })
             : (0, t.jsx)('img', {
-                  src: a,
+                  src: l,
                   width: '152',
                   height: '124',
                   alt: ''

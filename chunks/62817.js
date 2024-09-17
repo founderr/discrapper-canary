@@ -12,8 +12,8 @@ let c = Object.freeze([]),
     m = {},
     x = {},
     E = {};
-function _(e, t) {}
-function v() {
+function v(e, t) {}
+function _() {
     E = {};
 }
 function p(e, t) {
@@ -85,7 +85,7 @@ class f extends (l = s.ZP.Store) {
                     ...l,
                     items: s
                 }),
-                _(i.nonce, l);
+                v(i.nonce, l);
         },
         UPLOAD_COMPRESSION_PROGRESS: function (e) {
             let { channelId: t, file: n } = e;
@@ -121,7 +121,7 @@ class f extends (l = s.ZP.Store) {
         UPLOAD_FILE_UPDATE: function (e) {
             let { channelId: t, file: n } = e,
                 l = m[n.id];
-            null != l && _(l.nonce, n), T(t, n);
+            null != l && v(l.nonce, n), T(t, n);
         },
         UPLOAD_RESTORE_FAILED_UPLOAD: function (e) {
             let { file: t, messageId: n } = e;

@@ -11,8 +11,8 @@ var r = n(735250),
     l = n(120356),
     i = n.n(l),
     o = n(990547),
-    s = n(442837),
-    c = n(481060),
+    c = n(442837),
+    s = n(481060),
     d = n(347469),
     u = n(213609),
     h = n(213713),
@@ -215,13 +215,13 @@ function V() {
                 (0, r.jsxs)(m.ZP, {
                     className: G.headerBar,
                     toolbar: (0, r.jsx)(m.ZP.Icon, {
-                        icon: c.XSmallIcon,
+                        icon: s.XSmallIcon,
                         tooltip: U.Z.Messages.CLOSE,
                         onClick: p.SO
                     }),
                     children: [
                         (0, r.jsx)(m.ZP.Icon, {
-                            icon: c.StaffBadgeIcon,
+                            icon: s.StaffBadgeIcon,
                             tooltip: 'DevTools'
                         }),
                         (0, r.jsx)(m.ZP.Title, { children: 'DevTools' })
@@ -236,7 +236,7 @@ function V() {
 }
 function W() {
     let e = a.useRef(null),
-        t = (0, s.e7)([g.Z], () => g.Z.sidebarWidth),
+        t = (0, c.e7)([g.Z], () => g.Z.sidebarWidth),
         [n, l] = a.useState(null),
         o = a.useCallback((e) => (0, p.Qh)({ sidebarWidth: e }), []);
     return (a.useEffect(() => {
@@ -265,7 +265,7 @@ function W() {
           });
 }
 function Y() {
-    let e = (0, s.e7)([g.Z], () => g.Z.displayTools);
+    let e = (0, c.e7)([g.Z], () => g.Z.displayTools);
     return e
         ? (0, r.jsx)('div', {
               className: i()(H.container, H.mobileContainerExpanded),
@@ -276,14 +276,14 @@ function Y() {
           })
         : (0, r.jsx)('div', {
               className: H.container,
-              children: (0, r.jsx)(c.Clickable, {
+              children: (0, r.jsx)(s.Clickable, {
                   onClick: p.SO,
                   children: (0, r.jsxs)(m.ZP, {
                       className: i()(G.headerBar, H.mobileHeaderCollapsed),
                       toolbar: (0, r.jsx)(f.Z, { direction: f.Z.Directions.UP }),
                       children: [
                           (0, r.jsx)(m.ZP.Icon, {
-                              icon: c.StaffBadgeIcon,
+                              icon: s.StaffBadgeIcon,
                               tooltip: 'DevTools'
                           }),
                           (0, r.jsx)(m.ZP.Title, { children: 'DevTools' })

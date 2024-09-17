@@ -10,8 +10,8 @@ var r = n(735250),
     l = n(570540),
     i = n(203165),
     o = n(481060),
-    s = n(789654),
-    c = n(246992),
+    c = n(789654),
+    s = n(246992),
     d = n(500949),
     u = n(806714);
 let h = d.M3.map((e) => ({
@@ -36,7 +36,7 @@ let h = d.M3.map((e) => ({
 function f(e) {
     let { state: t, setState: n } = e,
         { scales: l } = t,
-        [s, h] = a.useState(null),
+        [c, h] = a.useState(null),
         m = (0, r.jsxs)('div', {
             className: u.section,
             children: [
@@ -64,7 +64,7 @@ function f(e) {
                                     scales: [...t.scales, r]
                                 });
                     },
-                    popoutLayerContext: c.O$
+                    popoutLayerContext: s.O$
                 }),
                 (0, r.jsx)('ul', {
                     className: u.overrides,
@@ -91,7 +91,7 @@ function f(e) {
                 })
             ]
         }),
-        f = l.find((e) => e.name === s),
+        f = l.find((e) => e.name === c),
         b =
             null != f
                 ? (0, r.jsx)(p, {
@@ -104,7 +104,7 @@ function f(e) {
 }
 function p(e) {
     let { scale: t, setState: n, onClose: a } = e,
-        { name: i, base: c, darkness: x, lightness: f, useEquidistantLuminance: p, showColumnarPalettePreview: g, colorSpace: v, easing: _ = d.iw.LINEAR, easingStrength: j = 1, useP3ColorSpace: C } = t,
+        { name: i, base: s, darkness: x, lightness: f, useEquidistantLuminance: p, showColumnarPalettePreview: g, colorSpace: v, easing: _ = d.iw.LINEAR, easingStrength: j = 1, useP3ColorSpace: C } = t,
         T = (0, d.XM)(t);
     return (0, r.jsxs)(o.FormSection, {
         className: u.paletteSettings,
@@ -133,7 +133,7 @@ function p(e) {
                                     e
                                 );
                             }, {});
-                            (0, s.q)('figma-'.concat(t.name), JSON.stringify(e, null, 4));
+                            (0, c.q)('figma-'.concat(t.name), JSON.stringify(e, null, 4));
                         },
                         style: { cursor: 'pointer' },
                         children: (0, r.jsx)(b, {})
@@ -151,7 +151,7 @@ function p(e) {
                     }),
                     (0, r.jsx)('input', {
                         type: 'color',
-                        value: c,
+                        value: s,
                         onChange: (e) => (0, d.Ib)(i, e.target.value, n)
                     })
                 ]

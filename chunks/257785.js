@@ -1,9 +1,9 @@
 n.d(t, {
     E: function () {
-        return s;
+        return c;
     },
     Z9: function () {
-        return c;
+        return s;
     },
     wl: function () {
         return d;
@@ -15,14 +15,14 @@ var a = n(120356),
     l = n.n(a),
     i = n(481060),
     o = n(219299);
-function s(e) {
+function c(e) {
     let { className: t, children: n } = e;
     return (0, r.jsx)('dl', {
         className: l()(o.properties, t),
         children: n
     });
 }
-function c(e) {
+function s(e) {
     let { name: t, children: n } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [

@@ -1,11 +1,11 @@
-var n, r;
-t.d(a, {
+var a, r;
+n.d(t, {
     g: function () {
-        return n;
+        return a;
     }
 }),
-    t(47120),
-    ((r = n || (n = {})).MOBILE = 'mobile'),
+    n(47120),
+    ((r = a || (a = {})).MOBILE = 'mobile'),
     (r.DESKTOP = 'desktop'),
     (r.WEB = 'web'),
     (r.DEVICE_CODE = 'device_code');

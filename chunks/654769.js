@@ -4,8 +4,8 @@ var r,
     l = n.n(a),
     i = n(525654),
     o = n.n(i),
-    s = n(579806),
-    c = n(292959),
+    c = n(579806),
+    s = n(292959),
     d = n(246946),
     u = n(626135),
     h = n(358085),
@@ -26,10 +26,10 @@ function p(e, t, n) {
     );
 }
 let g = h.isPlatformEmbedded && (0, h.isWindows)(),
-    b = g && 10 > parseFloat(s.Z.os.release),
+    b = g && 10 > parseFloat(c.Z.os.release),
     v = !0;
 if (g && !b) {
-    let [e, , t] = s.Z.os.release.split('.');
+    let [e, , t] = c.Z.os.release.split('.');
     v = parseInt(e) > 10 || parseInt(t) >= 15063;
 }
 let _ = (g && v) || ('Chrome' === o().name && 47 > parseFloat(o().version)) || ('Firefox' === o().name && 52 > parseFloat(o().version)),
@@ -96,13 +96,13 @@ t.Z = {
             });
     },
     showNotification: function (e, t, n, r, a) {
-        var i, o, s, d;
+        var i, o, c, d;
         let m;
         if (y(a)) {
             null != a.sound && !1 !== a.playSoundIfDisabled && N(a.sound, null !== (o = a.volume) && void 0 !== o ? o : 1, a.soundpack);
             return;
         }
-        null != a.sound && N(a.sound, null !== (s = a.volume) && void 0 !== s ? s : 1, a.soundpack);
+        null != a.sound && N(a.sound, null !== (c = a.volume) && void 0 !== c ? c : 1, a.soundpack);
         let p = null !== (d = null == a ? void 0 : a.tag) && void 0 !== d ? d : null;
         (0, h.isLinux)() && (n = l().escape(n));
         let b = {
@@ -111,7 +111,7 @@ t.Z = {
             tag: p,
             silent: !0
         };
-        g && c.Z.taskbarFlash && x.ZP.flashFrame(!0);
+        g && s.Z.taskbarFlash && x.ZP.flashFrame(!0);
         try {
             m = new T(t, b);
         } catch (e) {

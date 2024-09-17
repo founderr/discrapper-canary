@@ -12,8 +12,8 @@ var i = t(362470),
     c = t(514161),
     a = t(981631),
     C = t(689938),
-    d = t(913045);
-function u() {
+    u = t(913045);
+function d() {
     let e = [C.Z.Messages.PS_VALUE_PROP_VOICE, C.Z.Messages.PS_VALUE_PROP_GAME],
         n = [C.Z.Messages.PS_VALUE_PROP_GAME];
     return (0, o.jsxs)(o.Fragment, {
@@ -45,12 +45,12 @@ function _(e) {
         onClose: i,
         onContinue: t,
         img: (0, o.jsx)('img', {
-            src: d,
+            src: u,
             width: 230,
             height: 138,
             alt: ''
         }),
-        valueProps: (0, o.jsx)(u, {}),
+        valueProps: (0, o.jsx)(d, {}),
         learnMoreLink: r.Z.getArticleURL(a.BhN.PS_CONNECTION)
     });
 }

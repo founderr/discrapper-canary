@@ -72,8 +72,8 @@ var r,
     l,
     i,
     o,
-    s,
-    c = n(470079),
+    c,
+    s = n(470079),
     d = n(570540),
     u = n(433517),
     h = n(190558),
@@ -83,12 +83,12 @@ let { SemanticColors: f } = h.V,
     p = f,
     g = CSS.supports('color', 'color(display-p3 1 0 0)') && CSS.supports('color', 'color(display-p3 1 0 0 / 1)');
 function b(e, t) {
-    let [n, r] = c.useState(() => {
+    let [n, r] = s.useState(() => {
         let n = u.K.get(e);
         return null != n ? n : t;
     });
     return (
-        c.useEffect(() => {
+        s.useEffect(() => {
             u.K.set(e, n);
         }, [e, n]),
         [n, r]
@@ -138,20 +138,20 @@ function T() {
         let [n, r] = b(''.concat(e, '-states'), [t]),
             [a, l] = b(''.concat(e, '-index'), 0),
             i = n[a],
-            o = c.useCallback(
+            o = s.useCallback(
                 (e) => {
                     r(['function' == typeof e ? e(i) : e, ...n].slice(0, 20)), l(0);
                 },
                 [l, r, n, i]
             ),
-            s = c.useCallback(() => {
+            c = s.useCallback(() => {
                 l(Math.min(n.length - 1, a + 1));
             }, [a, l, n.length]),
-            d = c.useCallback(() => {
+            d = s.useCallback(() => {
                 l(Math.max(0, a - 1));
             }, [a, l]),
             u = a < n.length - 1;
-        return [i, o, s, d, u, a > 0];
+        return [i, o, c, d, u, a > 0];
     })('color-override-9-10-2024', {
         semanticColorOverrides: {},
         rawColorOverrides: {},
@@ -205,19 +205,19 @@ let k = (e) => e,
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
         return e < 0.5 ? Math.pow(2, t - 1) * Math.pow(e, t) : 1 - Math.pow(-2 * e + 2, t) / 2;
     };
-((s = l || (l = {})).LINEAR = 'Linear'), (s.EASE_IN = 'Ease In'), (s.EASE_OUT = 'Ease Out'), (s.EASE_IN_OUT = 'Ease In Out');
+((c = l || (l = {})).LINEAR = 'Linear'), (c.EASE_IN = 'Ease In'), (c.EASE_OUT = 'Ease Out'), (c.EASE_IN_OUT = 'Ease In Out');
 function Z(e) {
-    let { name: t, base: n, colorSpace: r, useEquidistantLuminance: a, darkness: l, lightness: i, easing: o = 'Linear', easingStrength: s = 1 } = e,
-        c = new d.Z('hsl(0, 0%, '.concat(l, '%)')),
+    let { name: t, base: n, colorSpace: r, useEquidistantLuminance: a, darkness: l, lightness: i, easing: o = 'Linear', easingStrength: c = 1 } = e,
+        s = new d.Z('hsl(0, 0%, '.concat(l, '%)')),
         u = new d.Z('hsl(0, 0%, '.concat(i, '%)')),
         h = y(t),
-        x = w(c, r),
+        x = w(s, r),
         f = w(u, r),
         p = (f - x) / h.length,
         g = h.map((e) => w(new d.Z(m.b[''.concat(t, '.').concat(e)].hex).to(r), r));
     return Object.fromEntries(
         h.map((e, l) => {
-            var i, c, u;
+            var i, s, u;
             let m = new d.Z(n).to(r);
             return (
                 !(function (e, t, n) {
@@ -229,7 +229,7 @@ function Z(e) {
                     r,
                     a
                         ? ((i = l),
-                          (c = h.length),
+                          (s = h.length),
                           (u = p),
                           f -
                               (function (e, t, n) {
@@ -243,8 +243,8 @@ function Z(e) {
                                       case 'Ease In Out':
                                           return O(t, n);
                                   }
-                              })(o, i / c, s) *
-                                  c *
+                              })(o, i / s, c) *
+                                  s *
                                   u)
                         : g[l]
                 ),

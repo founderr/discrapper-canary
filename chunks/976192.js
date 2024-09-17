@@ -23,8 +23,8 @@ function m(e) {
     let { guildId: n, userId: m, analyticsLocation: R, analyticsLocations: N, context: C, icon: O } = e,
         A = E.Z.getGuild(n),
         h = c.default.getId(),
-        T = (0, a.e7)([f.default], () => f.default.getUser(m)),
-        v = (0, a.e7)([Z.ZP], () => Z.ZP.isGuestOrLurker(n, m), [n, m]);
+        v = (0, a.e7)([f.default], () => f.default.getUser(m)),
+        T = (0, a.e7)([Z.ZP], () => Z.ZP.isGuestOrLurker(n, m), [n, m]);
     (0, a.e7)([M.Z], () => M.Z.getGuildVersion(n), [n]);
     let x = i.useMemo(() => ({ [n]: [m] }), [n, m]);
     (0, s.$)(x);
@@ -38,7 +38,7 @@ function m(e) {
     let P = h === m && (M.Z.can(_.Plq.CHANGE_NICKNAME, A) || M.Z.can(_.Plq.MANAGE_NICKNAMES, A)),
         U = h === m,
         j = M.Z.canManageUser(_.Plq.MANAGE_NICKNAMES, m, A);
-    if (!(P || j || U) || null == T || v) return null;
+    if (!(P || j || U) || null == v || T) return null;
     let L = A.hasFeature(_.oNc.HUB) ? g.Z.Messages.HUB_EDIT_PROFILE : g.Z.Messages.CHANGE_IDENTITY,
         D = U ? L : g.Z.Messages.CHANGE_NICKNAME;
     return (0, t.jsx)(r.MenuItem, {
@@ -53,14 +53,14 @@ function m(e) {
         icon: O,
         action: () => {
             U
-                ? ((0, o.Z)(T.id, T.getAvatarURL(n, 80), { guildId: n }), S(), p.dispatch(_.CkL.POPOUT_CLOSE), (0, r.closeAllModals)())
+                ? ((0, o.Z)(v.id, v.getAvatarURL(n, 80), { guildId: n }), S(), p.dispatch(_.CkL.POPOUT_CLOSE), (0, r.closeAllModals)())
                 : (0, r.openModalLazy)(async () => {
                       let { default: e } = await l.e('17712').then(l.bind(l, 620021));
                       return (l) =>
                           (0, t.jsx)(e, {
                               ...l,
                               guildId: n,
-                              user: T,
+                              user: v,
                               analyticsSource: R,
                               analyticsLocations: N
                           });

@@ -23,8 +23,8 @@ var l = n(735250),
     m = n(439170),
     x = n(594174),
     E = n(69259),
-    _ = n(370370),
-    v = n(107062),
+    v = n(370370),
+    _ = n(107062),
     p = n(91140),
     T = n(227172),
     f = n(551228),
@@ -70,7 +70,7 @@ let R = (e) => {
                     entry: t
                 });
             case o.s.LAUNCHED_ACTIVITY:
-                return (0, l.jsx)(_.Z, {
+                return (0, l.jsx)(v.Z, {
                     ...n,
                     entry: t
                 });
@@ -136,7 +136,7 @@ let R = (e) => {
                     entry: t
                 });
             case o.s.LAUNCHED_ACTIVITY:
-                return (0, l.jsx)(v.ZP, {
+                return (0, l.jsx)(_.ZP, {
                     ...n,
                     entry: t
                 });
@@ -147,8 +147,8 @@ let R = (e) => {
 t.ZP = a.memo((e) => {
     var t;
     let { index: i, ...o } = e,
-        [m, _] = a.useState('default'),
-        v = (0, s.JA)(''.concat(i)),
+        [m, v] = a.useState('default'),
+        _ = (0, s.JA)(''.concat(i)),
         p = null === (t = x.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff(),
         { isRich: T, appName: f } = (0, M.n)(o.entry),
         g = {
@@ -180,7 +180,7 @@ t.ZP = a.memo((e) => {
             [o, p]
         ),
         O = a.useCallback(() => {
-            _(String(Date.now()));
+            v(String(Date.now()));
         }, []),
         w = a.useCallback(
             r().throttle(
@@ -230,7 +230,7 @@ t.ZP = a.memo((e) => {
                 let { isShown: n } = t;
                 return (0, l.jsx)(c.Clickable, {
                     ...e,
-                    ...v,
+                    ..._,
                     focusProps: {
                         offset: {
                             top: 4,

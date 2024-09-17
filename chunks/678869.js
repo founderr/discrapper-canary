@@ -19,8 +19,8 @@ var l = n(735250),
     m = n(894344),
     x = n(314897),
     E = n(908841),
-    _ = n(5192),
-    v = n(379357),
+    v = n(5192),
+    _ = n(379357),
     p = n(561308),
     T = n(256726),
     f = n(206295),
@@ -36,7 +36,7 @@ var l = n(735250),
 let A = (e, t, n) => {
     let { artist: l, media: a } = e,
         i = S.Z.Messages.MEMBER_LIST_CONTENT_FEED_USER_LISTENING_TO_MEDIA_ARTIST,
-        r = _.ZP.getName(t.guild_id, t.id, n);
+        r = v.ZP.getName(t.guild_id, t.id, n);
     return i
         .plainFormat({
             artist: l,
@@ -85,19 +85,19 @@ function O(e) {
           });
 }
 function R(e) {
-    var t, n, _;
+    var t, n, v;
     let C,
         M,
         R,
         { channel: j, entry: w, closePopout: L, onReaction: b, onVoiceChannelPreview: U } = e,
-        { largeImage: D } = (0, v.rv)({ entry: w }),
-        { activity: B, currentEntry: k, artist: F, title: G, user: H } = (0, g.pi)(w),
+        { largeImage: D } = (0, _.rv)({ entry: w }),
+        { activity: k, currentEntry: B, artist: F, title: G, user: H } = (0, g.pi)(w),
         { primaryColor: V, secondaryColor: Y } = (0, f.Z)(null == D ? void 0 : D.src),
-        z = (0, r.e7)([c.Z, x.default], () => ((null == B ? void 0 : B.type) === P.IIU.LISTENING && null != H ? (0, h.Z)(c.Z, x.default, H, B) : void 0), [B, H], s.Z),
+        z = (0, r.e7)([c.Z, x.default], () => ((null == k ? void 0 : k.type) === P.IIU.LISTENING && null != H ? (0, h.Z)(c.Z, x.default, H, k) : void 0), [k, H], s.Z),
         W = a.useCallback(() => {
             var e;
             if (null == j || null == H) return;
-            let t = null === (e = B.timestamps) || void 0 === e ? void 0 : e.start,
+            let t = null === (e = k.timestamps) || void 0 === e ? void 0 : e.start,
                 n = (0, p.T_)(null != t ? { start: t } : w, Date.now());
             return (0, T.CR)({
                 user: H,
@@ -115,26 +115,26 @@ function R(e) {
                 colors: [V, Y],
                 badges: (0, T.jE)({ timestamp: n })
             });
-        }, [B, F, j, w, null == D ? void 0 : D.src, V, Y, G, H]);
-    if (null == B || null == k) return null;
+        }, [k, F, j, w, null == D ? void 0 : D.src, V, Y, G, H]);
+    if (null == k || null == B) return null;
     let J = F,
         q = [];
-    if (k.media.provider === i.p.SPOTIFY) {
+    if (B.media.provider === i.p.SPOTIFY) {
         (M = () => {
-            (0, u.aG)(B);
+            (0, u.aG)(k);
         }),
             (R = () => {
-                (0, u.Z5)(B, H.id);
+                (0, u.Z5)(k, H.id);
             }),
             (C = () => {
-                (0, u.aG)(B);
+                (0, u.aG)(k);
             });
         (J = (0, l.jsx)(d.Z, {
             artists: F,
-            canOpen: null != B.sync_id,
+            canOpen: null != k.sync_id,
             linkClassName: y.popoutTextSecondary,
             onOpenSpotifyArtist: (e) => {
-                (0, u.d$)(B, H.id, e);
+                (0, u.d$)(k, H.id, e);
             }
         })),
             (null == z ? void 0 : z.syncDisabled) === !1 &&
@@ -157,7 +157,7 @@ function R(e) {
         channel: j,
         entry: w,
         headerIcons:
-            k.media.provider === i.p.SPOTIFY
+            B.media.provider === i.p.SPOTIFY
                 ? (0, l.jsx)(N.Z, {
                       onClick: C,
                       'aria-label': S.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_ACTION_PLAY_ON_SPOTIFY,
@@ -169,7 +169,7 @@ function R(e) {
         onClickTitle: M,
         subtitle: J,
         badges: null,
-        children: (null === (t = B.timestamps) || void 0 === t ? void 0 : t.start) != null && (0, l.jsx)(O, { activity: B })
+        children: (null === (t = k.timestamps) || void 0 === t ? void 0 : t.start) != null && (0, l.jsx)(O, { activity: k })
     });
     return (0, l.jsxs)(I.yR, {
         children: [
@@ -183,9 +183,9 @@ function R(e) {
                     generateReactionImage: W,
                     reactionImageAltText:
                         ((n = F),
-                        (_ = H),
+                        (v = H),
                         S.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_LISTENING.format({
-                            username: _.username,
+                            username: v.username,
                             activity: n
                         })),
                     entry: w,

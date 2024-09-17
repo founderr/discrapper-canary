@@ -12,8 +12,8 @@ var l = n(735250),
     m = n(706454),
     x = n(823379),
     E = n(5192),
-    _ = n(379357),
-    v = n(192918),
+    v = n(379357),
+    _ = n(192918),
     p = n(561308),
     T = n(907152),
     f = n(206295),
@@ -49,11 +49,11 @@ let Z = (e, t) =>
     };
 t.ZP = (e) => {
     let { channel: t, entry: n, onReaction: E, onVoiceChannelPreview: y } = e,
-        { largeImage: A } = (0, _.rv)({ entry: n }),
+        { largeImage: A } = (0, v.rv)({ entry: n }),
         { user: O, details: R, activity: j, embeddedActivity: w } = (0, C.n)(n),
         { primaryColor: L, secondaryColor: b } = (0, f.Z)(null == A ? void 0 : A.src),
         U = (0, i.e7)([m.default], () => m.default.locale),
-        { displayParticipants: D, participant1: B, participant2: k, numOtherParticipants: F } = (0, v.Z)(n, 3),
+        { displayParticipants: D, participant1: k, participant2: B, numOtherParticipants: F } = (0, _.Z)(n, 3),
         G = () => {
             c._(d._b.TEXT, h.I.NORMAL, { applicationId: n.extra.application_id });
         },
@@ -65,7 +65,7 @@ t.ZP = (e) => {
                         ? M({
                               entry: n,
                               channel: t,
-                              users: [B, k],
+                              users: [k, B],
                               countOthers: F
                           })
                         : S(n, t, O);
@@ -79,7 +79,7 @@ t.ZP = (e) => {
                     channelId: e
                 });
             },
-            [null == A ? void 0 : A.src, t, D, n, U, F, B, k, L, b, O]
+            [null == A ? void 0 : A.src, t, D, n, U, F, k, B, L, b, O]
         );
     if (null == O) return null;
     let V = (0, l.jsx)(g.PZ, {
