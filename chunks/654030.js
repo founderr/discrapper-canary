@@ -86,25 +86,27 @@ class F extends (i = a.PureComponent) {
         super(...e),
             B(this, 'state', { sending: !1 }),
             B(this, 'handleJoin', () => {
-                let { activity: e, analyticsLocations: t, userId: n, message: i, channelId: s } = this.props;
+                let { activity: e, analyticsLocations: t, userId: n, message: i, guildId: s, channelId: a } = this.props;
                 if (null != e && null != n && null != i && null != e.session_id && null != e.application_id) {
-                    var a, r;
+                    var r, l;
                     c.Z.join({
                         userId: n,
                         sessionId: e.session_id,
                         applicationId: e.application_id,
-                        channelId: s,
+                        channelId: a,
                         messageId: i.id,
                         source: U.Sbl.MESSAGE_EMBED,
                         analyticsLocations: t,
-                        partyId: null === (a = e.party) || void 0 === a ? void 0 : a.id
+                        partyId: null === (r = e.party) || void 0 === r ? void 0 : r.id
                     }),
                         (0, I.Z)({
                             type: U.q5t.JOIN,
                             source: U.Sbl.MESSAGE_EMBED,
                             userId: n,
+                            guildId: s,
+                            channelId: a,
                             applicationId: e.application_id,
-                            partyId: null === (r = e.party) || void 0 === r ? void 0 : r.id,
+                            partyId: null === (l = e.party) || void 0 === l ? void 0 : l.id,
                             messageId: i.id,
                             analyticsLocations: t
                         });

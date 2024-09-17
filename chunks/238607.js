@@ -111,11 +111,13 @@ function B(e) {
             }
             if ($ && null != W && null != K) {
                 var e, n;
+                let r = L.Z.getVoiceChannelId(),
+                    i = A.Z.getChannel(r);
                 await l.Z.join({
                     userId: t.id,
                     sessionId: K,
                     applicationId: W,
-                    channelId: L.Z.getVoiceChannelId(),
+                    channelId: r,
                     messageId: null,
                     intent: G.Ws.PLAY,
                     embedded: j,
@@ -127,6 +129,9 @@ function B(e) {
                         (0, I.Z)({
                             type: x.q5t.JOIN,
                             userId: t.id,
+                            guildId: null == i ? void 0 : i.guild_id,
+                            channelId: r,
+                            channelType: null == i ? void 0 : i.type,
                             partyId: null == B ? void 0 : null === (n = B.party) || void 0 === n ? void 0 : n.id,
                             applicationId: W,
                             analyticsLocations: H

@@ -117,6 +117,9 @@ async function Q(e) {
             (0, Z.Z)({
                 type: s ? j.q5t.LAUNCH : j.q5t.JOIN,
                 userId: null == e ? void 0 : e.id,
+                guildId: L,
+                channelId: r,
+                channelType: null == C ? void 0 : C.type,
                 applicationId: i,
                 locationObject: l,
                 analyticsLocations: null != o ? o : [],
