@@ -45,7 +45,10 @@ function c(e) {
         ),
         D = r.useCallback(
             (e) => {
-                A.current = e;
+                if (((A.current = e), null == e)) {
+                    (0, a.h)(t, null, I);
+                    return;
+                }
                 let n = (0, l.P1)(e),
                     r = (0, l.x3)(e);
                 y(n, r), (0, a.h)(t, r, I);
@@ -188,10 +191,9 @@ function c(e) {
         ),
         B = r.useCallback(
             (e) => {
-                let n = null != e ? (0, l.jb)(t, e) : null;
-                A.current = n;
+                D(null != e ? (0, l.jb)(t, e) : null);
             },
-            [t]
+            [t, D]
         );
     return r.useMemo(
         () => ({
