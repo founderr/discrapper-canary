@@ -6529,10 +6529,6 @@ html.decorate-links .lowSaturationUnderline_c7819f {
     position: absolute
 }
 
-.emoji_c5a065 {
-    display: inline-block
-}
-
 .full-motion .emoji_c5a065 {
     animation: moveUpDown_c5a065 1s ease-in-out infinite
 }
@@ -6549,8 +6545,11 @@ html.decorate-links .lowSaturationUnderline_c7819f {
     }
 }
 
-.buttonOverflow_c5a065 {
-    overflow: visible !important
+.buttonWithEmoji_c5a065 {
+    overflow: visible !important;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px
 }
 
 .errorCodeMessage_c78a6e {
