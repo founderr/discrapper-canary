@@ -158,10 +158,16 @@ function D(e) {
                                 null == U || U());
                         },
                         onSubmit: async (e) => {
-                            let { value: t } = e;
+                            let { value: t } = e,
+                                n = t.trim();
+                            if (0 === n.length)
+                                return {
+                                    shouldClear: !1,
+                                    shouldRefocus: !1
+                                };
                             try {
                                 return (
-                                    await j(t.trim()),
+                                    await j(n),
                                     null == R ||
                                         R({
                                             interactionType: null,
