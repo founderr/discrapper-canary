@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return C;
+        return Z;
     }
 }),
     n(757143);
@@ -18,77 +18,77 @@ var a = n(735250),
     M = n(217590),
     S = n(453070),
     g = n(926491),
-    b = n(378233),
-    f = n(981631),
-    O = n(689938);
-function Z(e) {
+    O = n(378233),
+    C = n(981631),
+    b = n(689938);
+function f(e) {
     return I.ZP.getByName(e.replace(/(^:|:$)/g, ''));
 }
-function C(e) {
-    let { type: t, id: n, name: C, isInExpressionPicker: T = !1 } = e,
-        { location: _ } = (0, o.O)(),
-        p = i.useMemo(
+function Z(e) {
+    let { type: t, id: n, name: Z, isInExpressionPicker: _ = !1 } = e,
+        { location: p } = (0, o.O)(),
+        R = i.useMemo(
             () => ({
-                ..._,
-                section: T ? f.jXE.EXPRESSION_PICKER : f.jXE.CONTEXT_MENU
+                ...p,
+                section: _ ? C.jXE.EXPRESSION_PICKER : C.jXE.CONTEXT_MENU
             }),
-            [_, T]
+            [p, _]
         ),
-        v = (0, S.Go)(),
-        A = (0, l.e7)([g.Z], () => (t === d.S.STICKER && null != n ? g.Z.getStickerById(n) : null)),
-        m = null != A && v.includes(A.id),
-        R = (0, l.e7)([c.ZP], () => {
+        T = (0, S.Go)(),
+        v = (0, l.e7)([g.Z], () => (t === d.S.STICKER && null != n ? g.Z.getStickerById(n) : null)),
+        A = null != v && T.includes(v.id),
+        m = (0, l.e7)([c.ZP], () => {
             if (t === d.S.EMOJI) {
                 if (null != n) return c.ZP.getDisambiguatedEmojiContext().getById(n);
-                if (null != C) {
+                if (null != Z) {
                     var e;
-                    return null !== (e = Z(C)) && void 0 !== e ? e : Z(I.ZP.convertSurrogateToName(C));
+                    return null !== (e = f(Z)) && void 0 !== e ? e : f(I.ZP.convertSurrogateToName(Z));
                 }
             }
         }),
-        j = (0, r.C1)(null, R);
-    if (null != A && t === d.S.STICKER)
-        return (0, b.J8)(A) && !(0, b.V9)(A)
+        j = (0, r.C1)(null, m);
+    if (null != v && t === d.S.STICKER)
+        return (0, O.J8)(v) && !(0, O.V9)(v)
             ? null
-            : m
+            : A
               ? (0, a.jsx)(u.MenuItem, {
                     id: 'unfavorite',
-                    action: () => (0, E.hW)(A.id),
-                    label: O.Z.Messages.UNFAVORITE_ITEM
+                    action: () => (0, E.hW)(v.id),
+                    label: b.Z.Messages.UNFAVORITE_STICKER
                 })
               : (0, a.jsx)(u.MenuItem, {
                     id: 'favorite',
                     action: () => {
                         (0, M.cQ)({
-                            sticker: A,
+                            sticker: v,
                             location: {
-                                ...p,
-                                object: f.qAy.STICKER
+                                ...R,
+                                object: C.qAy.STICKER
                             }
                         }),
-                            (0, E.SA)(null == A ? void 0 : A.id);
+                            (0, E.SA)(null == v ? void 0 : v.id);
                     },
-                    label: O.Z.Messages.FAVORITE_ITEM
+                    label: b.Z.Messages.FAVORITE_STICKER
                 });
-    if (null != R && t === d.S.EMOJI)
+    if (null != m && t === d.S.EMOJI)
         return j
             ? (0, a.jsx)(u.MenuItem, {
                   id: 'unfavorite',
-                  action: () => (0, s.Xe)(R),
-                  label: O.Z.Messages.UNFAVORITE_ITEM
+                  action: () => (0, s.Xe)(m),
+                  label: b.Z.Messages.UNFAVORITE_EMOJI
               })
             : (0, a.jsx)(u.MenuItem, {
                   id: 'favorite',
                   action: () => {
                       (0, r.J1)({
-                          emoji: R,
+                          emoji: m,
                           location: {
-                              ...p,
-                              object: f.qAy.EMOJI
+                              ...R,
+                              object: C.qAy.EMOJI
                           }
                       }),
-                          (0, s.$K)(R);
+                          (0, s.$K)(m);
                   },
-                  label: O.Z.Messages.FAVORITE_ITEM
+                  label: b.Z.Messages.FAVORITE_EMOJI
               });
 }

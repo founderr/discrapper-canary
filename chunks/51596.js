@@ -6,7 +6,7 @@ n.d(t, {
         return Z;
     },
     F_: function () {
-        return b;
+        return v;
     },
     Se: function () {
         return P;
@@ -49,7 +49,7 @@ let N = Object.freeze({
         [o.xQ.APPLICATION]: o.h8.APPLICATION
     }),
     L = new RegExp('^'.concat(o.xQ.USER, '|').concat(o.xQ.TEXT_CHANNEL, '|').concat(o.xQ.VOICE_CHANNEL, '|\\').concat(o.xQ.GUILD, '|\\').concat(o.xQ.APPLICATION));
-function b(e) {
+function v(e) {
     var t, n;
     let l;
     let [a, s] = ((l = null !== (n = N[(t = e).charAt(0)]) && void 0 !== n ? n : null), [t.replace(L, ''), l]);
@@ -58,7 +58,7 @@ function b(e) {
         queryMode: s
     };
 }
-function v(e, t) {
+function b(e, t) {
     let { results: n, queryMode: l, query: a, maxQueryLength: s } = A.Z.getProps(),
         i = g.Z.getGuildId(),
         r = E.Z.getChannelId(i),
@@ -135,16 +135,16 @@ function x() {
     })(e),
         l.Z.dispatch({
             type: 'QUICKSWITCHER_SHOW',
-            ...b(t)
+            ...v(t)
         });
 }
 function Z() {
-    v(I.rMx.QUICKSWITCHER_CLOSED), T();
+    b(I.rMx.QUICKSWITCHER_CLOSED), T();
 }
 function y(e) {
     l.Z.dispatch({
         type: 'QUICKSWITCHER_SEARCH',
-        ...b(e)
+        ...v(e)
     });
 }
 function M(e) {
@@ -156,7 +156,7 @@ function M(e) {
 function P(e) {
     let t,
         n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    T(), v(I.rMx.QUICKSWITCHER_RESULT_SELECTED, e);
+    T(), b(I.rMx.QUICKSWITCHER_RESULT_SELECTED, e);
     let { type: h, record: E } = e,
         g = { page: I.ZY5.QUICK_SWITCHER };
     switch (h) {

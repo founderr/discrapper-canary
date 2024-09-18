@@ -210,7 +210,7 @@ class eu extends (i = a.PureComponent) {
     getMaxParticipants() {
         let { channel: e } = this.props,
             t = V.default.getCurrentUser();
-        return null != t && t.isStaff() ? $.p3w : null != e && e.isBroadcastChannel() ? $.keq : null != e && e.userLimit > 0 ? e.userLimit : $.pAY;
+        return null != t && t.isStaff() ? $.p3w : null != e && e.userLimit > 0 ? e.userLimit : $.pAY;
     }
     getRemaining() {
         let { channel: e, selectedUsers: t } = this.props,

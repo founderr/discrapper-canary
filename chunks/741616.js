@@ -22,7 +22,7 @@ function d() {
         })),
         h = t.map((t) => {
             let n = e[t];
-            return null == n || n.id === d || n.isBroadcastChannel() ? null : (0, i.jsx)(u.Z, { channel: n }, n.id);
+            return null == n || n.id === d ? null : (0, i.jsx)(u.Z, { channel: n }, n.id);
         }),
         p = null == n && null != d ? e[d] : null;
     return (

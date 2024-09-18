@@ -21,15 +21,15 @@ function E(e) {
         M = t.getAttribute('data-id'),
         S = t.getAttribute('data-name'),
         g = t.getAttribute('data-surrogates'),
-        b = 'true' === t.getAttribute('data-animated'),
-        f = r.Sb.useSetting(),
-        O = (0, o.Z)({
+        O = 'true' === t.getAttribute('data-animated'),
+        C = r.Sb.useSetting(),
+        b = (0, o.Z)({
             type: E,
             id: M,
             name: S,
             isInExpressionPicker: !0
         }),
-        Z =
+        f =
             null != g
                 ? (0, a.jsx)(i.sN, {
                       id: 'copy',
@@ -37,12 +37,12 @@ function E(e) {
                       action: () => (0, c.JG)(g)
                   })
                 : null,
-        C = (0, s.Z)({
+        Z = (0, s.Z)({
             id: M,
             shiftId:
                 E === I.S.EMOJI
                     ? '<'
-                          .concat(b ? 'a' : '', ':')
+                          .concat(O ? 'a' : '', ':')
                           .concat(null == S ? void 0 : S.split('~')[0], ':')
                           .concat(M, '>')
                     : void 0,
@@ -55,7 +55,7 @@ function E(e) {
         onSelect: n,
         className: 'context-menu',
         children: (0, a.jsxs)(l.MenuGroup, {
-            children: [O, c.wS && f ? (null != Z ? Z : C) : null]
+            children: [b, c.wS && C ? (null != f ? f : Z) : null]
         })
     });
 }

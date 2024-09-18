@@ -33,8 +33,8 @@ var a = r(735250),
     Z = r(635552),
     A = r(724994),
     M = r(390698),
-    y = r(813083),
-    w = r(680942),
+    w = r(813083),
+    y = r(680942),
     H = r(558060),
     F = r(237031),
     D = r(616066),
@@ -173,7 +173,7 @@ t.Z = function (e) {
                 ? null
                 : ec
                   ? (0, a.jsx)(K, { onClick: eN })
-                  : (0, a.jsx)(w.Z, {
+                  : (0, a.jsx)(y.Z, {
                         product: t,
                         returnRef: J,
                         isGiftEasterEggEnabled: $,
@@ -331,7 +331,7 @@ t.Z = function (e) {
                               })
                           ]
                       }),
-                      (0, a.jsx)(y.Z, {
+                      (0, a.jsx)(w.Z, {
                           category: s,
                           className: z.limitedTimeBadge,
                           display: 'card'

@@ -45,7 +45,7 @@ function A(e) {
         B = (0, c.useToken)(u.Z.unsafe_rawColors.PRIMARY_800).hex(),
         F = n.getAvatarURL(T, (0, c.getAvatarSize)(R)),
         V = (0, o._i)((0, d.ZP)(F, B, !1)),
-        H = (0, _.Z)(null !== (t = null == a ? void 0 : a.primaryColor) && void 0 !== t ? t : V).hsl,
+        H = (0, _.Z)(null !== (t = null == a ? void 0 : a.primaryColor) && void 0 !== t ? t : V).hex,
         Z = g(R),
         Y = L - C - D;
     return (0, r.jsxs)('svg', {

@@ -49,7 +49,7 @@ function E(e) {
 }
 function T(e, n) {
     let t = (0, r.e7)([u.default], () => u.default.getCurrentUser());
-    return null == t || n.ownerId !== t.id || e.id === t.id || (null == n ? void 0 : n.isBroadcastChannel())
+    return null == t || n.ownerId !== t.id || e.id === t.id
         ? null
         : (0, i.jsx)(s.MenuItem, {
               id: 'make-dm-owner',

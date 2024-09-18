@@ -32,8 +32,8 @@ n.Z = (e) => {
         D = null == b ? void 0 : b.applicationId,
         k = (null == j ? void 0 : j.published) === !0 && null != b && (0, h.yE)(b.flags, E.l4R.AVAILABLE),
         y = null == M ? void 0 : M.skuId,
-        { data: U } = (0, f.I)(D),
-        B = (0, g._k)(Z, { includeSoftDeleted: !0 }).map((e) => e.subscription_plans[0].id),
+        { data: B } = (0, f.I)(D),
+        U = (0, g._k)(Z, { includeSoftDeleted: !0 }).map((e) => e.subscription_plans[0].id),
         { analyticsLocations: F } = (0, c.ZP)(),
         { activeSubscription: G, activeEntitlement: w } = (0, g.F5)(D, r, Z),
         K = (0, g.CR)(D, r),
@@ -41,10 +41,10 @@ n.Z = (e) => {
         H = null != b && (0, x.KW)(b.flags),
         z = null != w && w.userId === (null === (n = m.default.getCurrentUser()) || void 0 === n ? void 0 : n.id),
         W = null == w || z,
-        V = null == w || B.length > 1,
+        V = null == w || U.length > 1,
         q = null != r || K.length > 0,
         Q = H && z,
-        X = null != M && null != U && W && V && (q || H) && !Q;
+        X = null != M && null != B && W && V && (q || H) && !Q;
     return (
         W ? (q ? Q && null != M && (t = T.Z.Messages.APPLICATION_USER_SUBSCRIPTION_ALREADY_SUBSCRIBED.format({ tierName: M.name })) : (t = T.Z.Messages.APPLICATION_SUBSCRIPTION_NO_GUILD_AVAILABLE)) : (t = T.Z.Messages.APPLICATION_SUBSCRIPTIONS_CANNOT_MANAGE_SUBSCRIPTION),
         i.useEffect(() => {
@@ -58,7 +58,7 @@ n.Z = (e) => {
         }, [k, y, Y]),
         {
             openModal: i.useCallback(() => {
-                s()(null != U, 'No application'), s()(null != M, 'No subscription plan'), s()(k, 'Cannot purchase this unpublished plan');
+                s()(null != B, 'No application'), s()(null != M, 'No subscription plan'), s()(k, 'Cannot purchase this unpublished plan');
                 let e = () => {
                     (0, p.h)({
                         activeSubscription: G,
@@ -74,8 +74,8 @@ n.Z = (e) => {
                         skuId: M.skuId,
                         guildId: r,
                         eligibleApplicationSubscriptionGuilds: K,
-                        planGroup: B,
-                        applicationId: U.id,
+                        planGroup: U,
+                        applicationId: B.id,
                         showBenefitsFirst: A,
                         onComplete: O,
                         forcesTransitionToGuild: R
@@ -83,12 +83,12 @@ n.Z = (e) => {
                 };
                 !q && H
                     ? (0, N.i)({
-                          applicationName: U.name,
+                          applicationName: B.name,
                           onConfirm: e,
                           onCancel: () => {}
                       })
                     : e();
-            }, [k, M, B, U, r, q, H, F, C, G, A, K, O, R]),
+            }, [k, M, U, B, r, q, H, F, C, G, A, K, O, R]),
             canOpenModal: X,
             cannotOpenReason: t
         }

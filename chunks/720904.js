@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return T;
+        return v;
     }
 });
 var a = t(735250);
@@ -64,7 +64,7 @@ function A(e) {
         )
     );
 }
-function T(e, n) {
+function v(e, n) {
     let t = (0, o.MZ)(n.guild_id).filter((e) => {
         var t;
         return (

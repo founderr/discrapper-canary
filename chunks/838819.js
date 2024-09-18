@@ -33,8 +33,8 @@ var a = r(735250),
     Z = r(937510),
     A = r(309956),
     M = r(853748),
-    y = r(426171),
-    w = r(823941),
+    w = r(426171),
+    y = r(823941),
     H = r(752053),
     F = r(963102),
     D = r(508498),
@@ -138,7 +138,7 @@ function es(e) {
                         giftStyle: et.Cj.BOX
                     })
                 }),
-            (0, a.jsx)(w.Z, {
+            (0, a.jsx)(y.Z, {
                 category: t,
                 hideLimitedTimeBadge: null != _
             }),
@@ -166,7 +166,7 @@ t.default = function (e) {
         { analyticsSource: s, analyticsLocations: o } = (0, c.cj)([k.Z], () => k.Z.getAnalytics()),
         { analyticsLocations: m } = (0, _.ZP)([...o, C.Z.COLLECTIBLES_SHOP]),
         { sessionId: I, scrollerRef: x, scrollHandler: Z } = (0, g._)(J.rMx.COLLECTIBLES_SHOP_SCROLLED, s),
-        { feedState: M, catalogState: w, transitionToCatalog: W, transitionToFeed: V } = (0, A.B)(r, x),
+        { feedState: M, catalogState: y, transitionToCatalog: W, transitionToFeed: V } = (0, A.B)(r, x),
         [z, q] = n.useState(!1),
         [ea, en] = n.useState(X.IV),
         [ei, eo] = n.useState(),
@@ -181,17 +181,17 @@ t.default = function (e) {
     let eb = (0, P.O)(eC),
         eE = n.useRef(null),
         [eI, ex] = n.useState(!1);
-    (0, y.Kp)({
+    (0, w.Kp)({
         categories: eC,
         isFetchingCategories: e_,
         isLayer: ed,
         initialItemCardRef: eE
     }),
         n.useEffect(() => {
-            if (M === X.f7.VISIBLE || w === X.f7.VISIBLE) {
+            if (M === X.f7.VISIBLE || y === X.f7.VISIBLE) {
                 var e;
                 let t;
-                (t = r ? (w === X.f7.VISIBLE ? el : s) : s),
+                (t = r ? (y === X.f7.VISIBLE ? el : s) : s),
                     L.default.track(J.rMx.COLLECTIBLES_SHOP_VIEWED, {
                         location_stack: m,
                         source: t,
@@ -205,7 +205,7 @@ t.default = function (e) {
                     type: et.cd.COLLECTIBLES_SHOP,
                     location_stack: m
                 });
-        }, [r, em, m, s, I, M, w, ei, eo, el]);
+        }, [r, em, m, s, I, M, y, ei, eo, el]);
     let { dismissCollectiblesShopTabNewBadge: ev } = (0, Y.Z)();
     n.useEffect(() => {
         if ((ev(), !(0, h.un)(d.z.COLLECTIBLES_GIFTING_COACHMARK)))
@@ -247,7 +247,7 @@ t.default = function (e) {
                 }
             );
         })(),
-        { setCategoryRef: eL, handleScrollToCategory: eN } = (0, y.xV)(x.current),
+        { setCategoryRef: eL, handleScrollToCategory: eN } = (0, w.xV)(x.current),
         { reducedMotion: eO } = n.useContext(f.AccessibilityPreferencesContext),
         eB = n.useCallback(
             async (e, r, a) => {
@@ -293,12 +293,12 @@ t.default = function (e) {
                                     })
                                 ]
                             }),
-                        w !== X.f7.HIDDEN &&
+                        y !== X.f7.HIDDEN &&
                             (0, a.jsxs)('div', {
                                 className: i()(er.shopViewWrapper, {
-                                    [er.visible]: w === X.f7.VISIBLE,
-                                    [er.in]: w === X.f7.IN,
-                                    [er.out]: w === X.f7.OUT
+                                    [er.visible]: y === X.f7.VISIBLE,
+                                    [er.in]: y === X.f7.IN,
+                                    [er.out]: y === X.f7.OUT
                                 }),
                                 children: [
                                     (0, a.jsx)(F.I, {
@@ -352,7 +352,7 @@ t.default = function (e) {
             }),
             eI && (0, a.jsx)(G.Z, {}),
             !t &&
-                w !== X.f7.VISIBLE &&
+                y !== X.f7.VISIBLE &&
                 (0, a.jsxs)(a.Fragment, {
                     children: [
                         (0, a.jsx)($.Z, {

@@ -24,11 +24,11 @@ let g = 'https://media.discordapp.net',
     Z = ''.concat(g, '/stickers'),
     S = new Set(['jpg', 'jpeg', 'png', 'webp', 'gif', 'tiff', 'bmp']),
     A = new Set(['jpg', 'jpeg', 'png']),
-    T = (e) => {
+    v = (e) => {
         var n, t, a, i;
         return null === (i = c.Z.toURLSafe(e)) || void 0 === i ? void 0 : null === (a = i.pathname) || void 0 === a ? void 0 : null === (t = a.split('.')) || void 0 === t ? void 0 : null === (n = t.pop()) || void 0 === n ? void 0 : n.toLowerCase();
     };
-function v(e, n) {
+function T(e, n) {
     l.Z.show({
         title: m.Z.Messages.ERROR,
         body: e
@@ -44,7 +44,7 @@ function R(e, n, t) {
         !(function (e) {
             let n = c.Z.toURLSafe(e);
             if (null == n) return !1;
-            let t = T(e);
+            let t = v(e);
             return (_.test(n.hostname) || n.host === f) && !e.startsWith(Z) && !(0, r.zt)(e) && null != t && S.has(t);
         })(e)
     )
@@ -57,20 +57,20 @@ function R(e, n, t) {
             try {
                 await E.ZP.saveImage(l), o.default.track(I.rMx.CONTEXT_MENU_IMAGE_SAVED, { ...(0, M.v)() });
             } catch (e) {
-                o.default.track(I.rMx.CONTEXT_MENU_IMAGE_SAVE_FAILED, { ...(0, M.v)() }), v(m.Z.Messages.ERROR_SAVING_IMAGE, e);
+                o.default.track(I.rMx.CONTEXT_MENU_IMAGE_SAVE_FAILED, { ...(0, M.v)() }), T(m.Z.Messages.ERROR_SAVING_IMAGE, e);
             }
         },
         R = async () => {
             try {
                 await E.ZP.copyImage(l), o.default.track(I.rMx.CONTEXT_MENU_IMAGE_COPIED, { ...(0, M.v)() });
             } catch (e) {
-                v(m.Z.Messages.ERROR_COPYING_IMAGE, e), o.default.track(I.rMx.CONTEXT_MENU_IMAGE_COPY_FAILED, { ...(0, M.v)() });
+                T(m.Z.Messages.ERROR_COPYING_IMAGE, e), o.default.track(I.rMx.CONTEXT_MENU_IMAGE_COPY_FAILED, { ...(0, M.v)() });
             }
         };
     return [
         E.ZP.canCopyImage() &&
         (function (e) {
-            let n = T(e);
+            let n = v(e);
             return null != n && A.has(n);
         })(e)
             ? (0, a.jsx)(

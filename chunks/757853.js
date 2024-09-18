@@ -29,8 +29,8 @@ var l,
     C = n(987509),
     N = n(592125),
     L = n(430824),
-    b = n(158776),
-    v = n(306680),
+    v = n(158776),
+    b = n(306680),
     T = n(699516),
     x = n(594174),
     Z = n(626135),
@@ -170,7 +170,7 @@ function U(e) {
         a = P.ZP.useName(t),
         i = P.ZP.useUserTag(t, { decoration: 'never' }),
         r = (0, h.e7)([T.Z], () => T.Z.getNickname(t.id)),
-        o = (0, h.e7)([b.Z], () => b.Z.getStatus(t.id));
+        o = (0, h.e7)([v.Z], () => v.Z.getStatus(t.id));
     return (0, s.jsx)(j, {
         ...l,
         icon: (0, s.jsx)(f.Z, {
@@ -207,7 +207,7 @@ function F(e) {
             let e = N.Z.getChannel(t.parent_id);
             return null == e ? null : (0, S.F6)(e, x.default, T.Z, !1);
         }),
-        o = (0, h.e7)([v.ZP], () => v.ZP.lastMessageTimestamp(t.id, D.W.CHANNEL)),
+        o = (0, h.e7)([b.ZP], () => b.ZP.lastMessageTimestamp(t.id, D.W.CHANNEL)),
         c = null == a ? void 0 : a.name;
     if (t.isThread() || t.isForumPost()) {
         let e = t.isForumPost() ? _.ForumIcon : _.TextIcon;

@@ -47,7 +47,7 @@ function m(e) {
         N = null,
         L = null;
     if (p > 0 || m.length > 0) {
-        var b, v, T, x;
+        var v, b, T, x;
         let e = (0, r.countBy)(s, (e) => (0, d.aw)(e, !0)),
             t = null !== (T = e.IMAGE) && void 0 !== T ? T : 0,
             n = null !== (x = e.VIDEO) && void 0 !== x ? x : 0;
@@ -88,7 +88,7 @@ function m(e) {
                             height: 56
                         })
                     }))
-                  : (null === (v = m[0]) || void 0 === v ? void 0 : null === (b = v.thumbnail) || void 0 === b ? void 0 : b.proxyURL) != null &&
+                  : (null === (b = m[0]) || void 0 === b ? void 0 : null === (v = b.thumbnail) || void 0 === v ? void 0 : v.proxyURL) != null &&
                     (L = (0, l.jsx)('div', {
                         className: g.attachmentPreview,
                         children: (0, l.jsx)(u.Z, {

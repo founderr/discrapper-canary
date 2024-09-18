@@ -24,8 +24,8 @@ var a = t(735250),
 let Z = g.fX.KEYWORD;
 function S(e, n) {
     let { perGuildMaxCount: t } = u.I6[Z],
-        { isLoading: S, saveRule: A, errorMessage: T } = (0, c.w)(),
-        { createNewEditingRule: v } = (0, c.V)(),
+        { isLoading: S, saveRule: A, errorMessage: v } = (0, c.w)(),
+        { createNewEditingRule: T } = (0, c.V)(),
         [R, h] = i.useState(!1),
         [O, N] = (0, o.I2)(n),
         { rulesByTriggerType: p, updateRule: x } = (0, o.pH)(n),
@@ -48,7 +48,7 @@ function S(e, n) {
                 (0, r.Zy)(),
                     I.Z.open(n, m.pNK.GUILD_AUTOMOD),
                     setTimeout(() => {
-                        v(n, Z, {
+                        T(n, Z, {
                             triggerMetadata: {
                                 keywordFilter: [e],
                                 regexPatterns: [],
@@ -67,7 +67,7 @@ function S(e, n) {
                     keywordFilter: [...(null !== (a = null === (t = n.triggerMetadata) || void 0 === t ? void 0 : t.keywordFilter) && void 0 !== a ? a : []), e]
                 }
             };
-            await A(i, j), x(i), null != T ? (0, l.showToast)((0, l.createToast)(_.Z.Messages.GUILD_AUTOMOD_ADD_SELECTION_TOAST_ERROR, l.ToastType.FAILURE)) : (0, l.showToast)((0, l.createToast)(_.Z.Messages.GUILD_AUTOMOD_ADD_SELECTION_TOAST_SUCCESS, l.ToastType.SUCCESS));
+            await A(i, j), x(i), null != v ? (0, l.showToast)((0, l.createToast)(_.Z.Messages.GUILD_AUTOMOD_ADD_SELECTION_TOAST_ERROR, l.ToastType.FAILURE)) : (0, l.showToast)((0, l.createToast)(_.Z.Messages.GUILD_AUTOMOD_ADD_SELECTION_TOAST_SUCCESS, l.ToastType.SUCCESS));
         },
         y = (0, a.jsx)(a.Fragment, {
             children: (0, a.jsx)(l.MenuItem, {

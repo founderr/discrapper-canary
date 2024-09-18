@@ -117,8 +117,8 @@ t.Z = function (e) {
     let { backSrc: o, frontSrc: f, size: E, isTyping: A, status: I, style: p, className: C, ...N } = e,
         { size: L } = c.AvatarSizeSpecs[E],
         {
-            statusCoords: b,
-            frontAvatarOffsetPx: v,
+            statusCoords: v,
+            frontAvatarOffsetPx: b,
             frontAvatarSizePx: T,
             backAvatarSizePx: x
         } = a.useMemo(() => {
@@ -166,8 +166,8 @@ t.Z = function (e) {
                     (0, l.jsx)('div', {
                         style: {
                             position: 'absolute',
-                            top: v,
-                            left: v
+                            top: b,
+                            left: b
                         },
                         children: (0, l.jsx)(m, {
                             src: f,
@@ -179,7 +179,7 @@ t.Z = function (e) {
                 ]
             }),
             (0, l.jsx)(g, {
-                statusCoords: b,
+                statusCoords: v,
                 status: I,
                 isTyping: A
             })
