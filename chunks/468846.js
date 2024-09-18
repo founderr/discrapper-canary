@@ -17,7 +17,7 @@ function d(e) {
         l = a.useRef(null),
         r = a.useCallback(
             (e) => {
-                if (!!e.data['x-tiktok-embed'] && 'https://www.tiktok.com' === e.origin) {
+                if (!!e.data['x-tiktok-player'] && 'https://www.tiktok.com' === e.origin) {
                     if ('onPlayerReady' === e.data.type) {
                         var n, r, i, a;
                         t &&
@@ -28,7 +28,7 @@ function d(e) {
                                 i.postMessage(
                                     {
                                         type: 'mute',
-                                        'x-tiktok-embed': !0
+                                        'x-tiktok-player': !0
                                     },
                                     e.origin
                                 )),
@@ -39,7 +39,7 @@ function d(e) {
                                 n.postMessage(
                                     {
                                         type: 'play',
-                                        'x-tiktok-embed': !0
+                                        'x-tiktok-player': !0
                                     },
                                     e.origin
                                 );

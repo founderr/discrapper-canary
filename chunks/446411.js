@@ -25,8 +25,8 @@ var l,
     f = n(283756),
     v = n(169525),
     x = n(780088),
-    I = n(785992),
-    y = n(400266),
+    y = n(785992),
+    I = n(400266),
     w = n(592125),
     _ = n(52824),
     C = n(626135),
@@ -58,7 +58,7 @@ function P(e, t, n) {
     );
 }
 function W(e) {
-    let { className: t, iframeWrapperClassName: n, maxWidth: l, maxHeight: a, thumbnail: s, video: d, provider: u, allowFullScreen: m = !0, responsive: h = !1, renderImageComponent: c, renderVideoComponent: p, renderLinkComponent: b, renderForwardComponent: g = F.VqG, playable: v = !0, autoPlay: x = !1, autoMute: I, volume: y, onPlay: w, onPause: C, onEnded: S, onControlsHide: j, onControlsShow: N, onVolumeChange: A, onMute: k, href: L, messageId: V, channelId: R, placeholder: B, placeholderVersion: P } = e,
+    let { className: t, iframeWrapperClassName: n, maxWidth: l, maxHeight: a, thumbnail: s, video: d, provider: u, allowFullScreen: m = !0, responsive: h = !1, renderImageComponent: c, renderVideoComponent: p, renderLinkComponent: b, renderForwardComponent: g = F.VqG, playable: v = !0, autoPlay: x = !1, autoMute: y, volume: I, onPlay: w, onPause: C, onEnded: S, onControlsHide: j, onControlsShow: N, onVolumeChange: A, onMute: k, href: L, messageId: V, channelId: R, placeholder: B, placeholderVersion: P } = e,
         [W, O] = i.useState(x),
         G = null != d && null == d.proxyURL,
         D = i.useCallback(() => O(!1), [O]),
@@ -98,8 +98,8 @@ function W(e) {
                 naturalHeight: d.height,
                 onVolumeChange: A,
                 playable: v,
-                autoMute: I,
-                volume: y,
+                autoMute: y,
+                volume: I,
                 onPlay: w,
                 onPause: C,
                 onMute: k,
@@ -110,7 +110,7 @@ function W(e) {
         });
     if (W && null != d) {
         let e;
-        let i = !0 === I || ('function' == typeof I && I()),
+        let i = !0 === y || ('function' == typeof y && y()),
             s = {
                 width: U,
                 height: q
@@ -477,8 +477,8 @@ class G extends (l = i.PureComponent) {
             { maxMediaWidth: b, maxMediaHeight: f } = this.state;
         if (null == i) return null;
         let v = (0, _.q)(i),
-            I = null == d ? {} : (0, x.Cx)(d.map((e) => (0, x.nP)(e, p))),
-            y = g.Z.isAnimated({
+            y = null == d ? {} : (0, x.Cx)(d.map((e) => (0, x.nP)(e, p))),
+            I = g.Z.isAnimated({
                 src: (0, _.q)(i),
                 original: i.url,
                 animated: !1
@@ -507,7 +507,7 @@ class G extends (l = i.PureComponent) {
                 placeholderVersion: i.placeholderVersion,
                 renderForwardComponent: p
             };
-        v in I && (w.onClick = I[v]);
+        v in y && (w.onClick = y[v]);
         let C = null !== (t = null === (e = i.url.split('.').pop()) || void 0 === e ? void 0 : e.split('?')[0]) && void 0 !== t ? t : '';
         'jpg' === C && (C = 'jpeg');
         let E = null != i && !g.u.test(null == i ? void 0 : i.url),
@@ -531,7 +531,7 @@ class G extends (l = i.PureComponent) {
                             return u({
                                 ...w,
                                 autoPlay: h && !l && !n,
-                                renderAccessory: y ? e : null,
+                                renderAccessory: I ? e : null,
                                 onMouseEnter: () => this.handleImageHover(!0, i, S),
                                 onMouseLeave: () => this.handleImageHover(!1, i, S),
                                 renderAdjacentContent: () => {
@@ -806,8 +806,8 @@ class G extends (l = i.PureComponent) {
                   embed: t,
                   className: l
               })
-            : (0, I.Z)(t)
-              ? (0, r.jsx)(y.Z, {
+            : (0, y.Z)(t)
+              ? (0, r.jsx)(I.Z, {
                     embed: t,
                     className: l
                 })
