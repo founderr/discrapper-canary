@@ -18169,6 +18169,7 @@ e.exports = Object.freeze({
     MESSAGE_FORWARD_STAFF_NON_STAFF_CONTENT: "You're forwarding content from a staff-only server to a non-staff channel!",
     MESSAGE_FORWARD_STAFF_NON_STAFF_CONFIRM: "Yes, I'm sure",
     MESSAGE_FORWARD_MESSAGE_PLACEHOLDER: 'Add an optional message...',
+    FORWARD_CHAT_INPUT_A11Y_LABEL: 'Compose message included with forward',
     CHECKOUT_RECOVERY_NAGBAR_CONTENT: 'Heads up! You\u2019re a few clicks away from unlocking Nitro.',
     CHECKOUT_RECOVERY_NAGBAR_CTA: 'Complete Checkout',
     CASH_APP_PAY_AWARENESS_SUBSCRIBER_CONTENT: 'Cash App Pay is now available as a Nitro payment method!',
