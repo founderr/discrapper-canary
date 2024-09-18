@@ -58,10 +58,10 @@ function Y() {
     });
 }
 function w() {
-    let e = (0, o.e7)([P.Z], () => P.Z.getForApplication(B.RQ));
+    let e = (0, o.e7)([P.Z], () => P.Z.getForApplication(B.CL));
     return (
         a.useEffect(() => {
-            (0, u.yD)(B.RQ);
+            (0, u.yD)(B.CL);
         }, []),
         (0, n.jsxs)('section', {
             children: [

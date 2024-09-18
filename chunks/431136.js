@@ -1,49 +1,49 @@
-n.d(t, {
+t.d(n, {
     m: function () {
-        return d;
+        return f;
     }
 });
-var a = n(735250);
-n(470079);
-var i = n(468194),
-    l = n(399606),
-    s = n(481060),
-    o = n(430824),
-    r = n(768581),
-    c = n(419091);
-function d(e) {
-    let { guildId: t } = e,
-        n = (0, l.e7)([o.Z], () => o.Z.getGuild(t));
-    if (null == n) return null;
-    let d = null;
-    if (null != n.icon) {
-        let e = r.ZP.getGuildIconURL({
-            id: n.id,
-            icon: n.icon,
+var a = t(735250);
+t(470079);
+var c = t(468194),
+    s = t(399606),
+    d = t(481060),
+    i = t(430824),
+    o = t(768581),
+    l = t(419091);
+function f(e) {
+    let { guildId: n } = e,
+        t = (0, s.e7)([i.Z], () => i.Z.getGuild(n));
+    if (null == t) return null;
+    let f = null;
+    if (null != t.icon) {
+        let e = o.ZP.getGuildIconURL({
+            id: t.id,
+            icon: t.icon,
             size: 40
         });
-        d = (0, a.jsx)(s.Avatar, {
+        f = (0, a.jsx)(d.Avatar, {
             src: e,
-            'aria-label': n.name,
-            size: s.AvatarSizes.SIZE_24
+            'aria-label': t.name,
+            size: d.AvatarSizes.SIZE_24
         });
     } else {
-        let e = (0, i.Zg)(n.name).slice(0, 2);
-        d = (0, a.jsx)(s.Text, {
+        let e = (0, c.Zg)(t.name).slice(0, 2);
+        f = (0, a.jsx)(d.Text, {
             variant: 'text-xs/semibold',
-            className: c.acronym,
+            className: l.acronym,
             'aria-hidden': !0,
             children: e
         });
     }
     return (0, a.jsxs)('div', {
-        className: c.container,
+        className: l.container,
         children: [
-            d,
-            (0, a.jsx)(s.Text, {
+            f,
+            (0, a.jsx)(d.Text, {
                 variant: 'text-md/semibold',
-                className: c.text,
-                children: n.name
+                className: l.text,
+                children: t.name
             })
         ]
     });

@@ -4,17 +4,17 @@ t.d(n, {
     }
 });
 var i = t(735250),
-    s = t(470079),
-    l = t(512722),
-    a = t.n(l),
+    a = t(470079),
+    s = t(512722),
+    l = t.n(s),
     r = t(481060),
     o = t(626135),
     u = t(358085),
     d = t(981631),
     c = t(689938);
 function E(e) {
-    let n = s.useCallback(() => {
-        a()(null != e, 'text cannot be null'), o.default.track(d.rMx.MESSAGE_MENU_GOOGLE_SEARCHED), window.open('https://www.google.com/search?q='.concat(encodeURIComponent(e)), '_blank');
+    let n = a.useCallback(() => {
+        l()(null != e, 'text cannot be null'), o.default.track(d.rMx.MESSAGE_MENU_GOOGLE_SEARCHED), window.open('https://www.google.com/search?q='.concat(encodeURIComponent(e)), '_blank');
     }, [e]);
     return u.isPlatformEmbedded && null != e && (null == e ? void 0 : e.length) !== 0
         ? [

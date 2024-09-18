@@ -125,7 +125,7 @@ function O() {
             [I.Z],
             () => {
                 var e;
-                return null !== (e = I.Z.getForApplication(f.RQ)) && void 0 !== e ? e : b;
+                return null !== (e = I.Z.getForApplication(f.CL)) && void 0 !== e ? e : b;
             },
             [],
             m.OL
@@ -187,8 +187,8 @@ let v = (e) => {
     };
 function D() {
     let { hasFetchedPremiumApplicationEntitlements: e, isFetchingPremiumApplicationEntitlements: t } = (0, i.cj)([I.Z], () => ({
-            hasFetchedPremiumApplicationEntitlements: I.Z.isFetchedForApplication(f.RQ),
-            isFetchingPremiumApplicationEntitlements: I.Z.isFetchingForApplication(f.RQ)
+            hasFetchedPremiumApplicationEntitlements: I.Z.isFetchedForApplication(f.CL),
+            isFetchingPremiumApplicationEntitlements: I.Z.isFetchingForApplication(f.CL)
         })),
         n = (0, i.e7)([E.default], () => {
             let e = E.default.getCurrentUser();
@@ -196,7 +196,7 @@ function D() {
         }),
         a = s.useRef(!1);
     s.useEffect(() => {
-        !1 === e && !1 === t && !0 === n && !1 === a.current && (o.yD(f.RQ), (a.current = !0));
+        !1 === e && !1 === t && !0 === n && !1 === a.current && (o.yD(f.CL), (a.current = !0));
     }, [e, t, n]);
 }
 function B() {

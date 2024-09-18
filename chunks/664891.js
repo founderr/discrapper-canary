@@ -40,7 +40,7 @@ var i = t(735250),
 function D(e) {
     var n;
     let t,
-        { premiumSubscription: r, paymentSources: m, priceOptions: I, onPaymentSourceChange: P, onPaymentSourceAdd: M, planId: O, setHasAcceptedTerms: j, legalTermsNodeRef: D, hasLegalTermsFlash: F, onInvoiceError: H, planGroup: W, currencies: Y, onCurrencyChange: V, hasOpenInvoice: K, purchaseState: z, handleClose: X } = e,
+        { premiumSubscription: r, paymentSources: m, priceOptions: I, onPaymentSourceChange: P, onPaymentSourceAdd: M, planId: O, setHasAcceptedTerms: j, legalTermsNodeRef: D, hasLegalTermsFlash: F, onInvoiceError: W, planGroup: H, currencies: Y, onCurrencyChange: V, hasOpenInvoice: K, purchaseState: z, handleClose: X } = e,
         { selectedSkuId: q, defaultPlanId: J, isPremium: Q, startedPaymentFlowWithPaymentSourcesRef: $ } = (0, E.usePaymentContext)(),
         { isGift: ee } = (0, f.wD)(),
         en = I.paymentSourceId,
@@ -77,30 +77,30 @@ function D(e) {
             (ec = K
                 ? (0, i.jsx)(w, {
                       premiumSubscription: r,
-                      onInvoiceError: H,
+                      onInvoiceError: W,
                       priceOptions: I,
                       preventFetch: !1
                   })
                 : el
                   ? (0, i.jsx)(U, {
                         premiumSubscription: r,
-                        onInvoiceError: H,
+                        onInvoiceError: W,
                         priceOptions: I,
                         preventFetch: er
                     })
-                  : (0, g.R4)(r, O, W)
+                  : (0, g.R4)(r, O, H)
                     ? (0, i.jsx)(G, {
                           premiumSubscription: r,
                           newPlan: et,
-                          onInvoiceError: H,
-                          planGroup: W,
+                          onInvoiceError: W,
+                          planGroup: H,
                           priceOptions: I,
                           preventFetch: er
                       })
                     : (0, i.jsx)(k, {
                           premiumSubscription: r,
                           newPlan: et,
-                          planGroup: W,
+                          planGroup: H,
                           priceOptions: I,
                           preventFetch: er
                       })),
@@ -168,12 +168,12 @@ function D(e) {
                     isActive: F,
                     ref: D,
                     children:
-                        null != r && (0, g.R4)(r, O, W)
+                        null != r && (0, g.R4)(r, O, H)
                             ? (0, i.jsx)(B, {
                                   premiumSubscription: r,
                                   newPlan: et,
-                                  onInvoiceError: H,
-                                  planGroup: W,
+                                  onInvoiceError: W,
+                                  planGroup: H,
                                   priceOptions: I,
                                   preventFetch: er,
                                   disabled: er,
@@ -188,7 +188,7 @@ function D(e) {
                                       paymentSourceType: null === (n = m[null != en ? en : '']) || void 0 === n ? void 0 : n.type,
                                       basePrice: (0, b.aS)(et.id, !1, ee, I),
                                       currentSubscription: r,
-                                      planGroup: W
+                                      planGroup: H
                                   }),
                                   forceShow: !0,
                                   showPricingLink: et.currency !== R.pKx.USD,
@@ -196,7 +196,7 @@ function D(e) {
                                   disabled: er,
                                   subscriptionPlan: et,
                                   currentSubscription: r,
-                                  planGroup: W
+                                  planGroup: H
                               })
                 })
             ]

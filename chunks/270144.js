@@ -1,6 +1,6 @@
 t.d(n, {
     CR: function () {
-        return O;
+        return L;
     },
     F5: function () {
         return Z;
@@ -15,7 +15,7 @@ t.d(n, {
         return l;
     },
     qz: function () {
-        return L;
+        return O;
     },
     sp: function () {
         return A;
@@ -163,7 +163,7 @@ let A = (e) => {
             { loading: n }
         );
     },
-    L = () => {
+    O = () => {
         let [e, n] = r.useState(0);
         return (
             r.useEffect(() => {
@@ -183,7 +183,7 @@ let A = (e) => {
             { loadState: e }
         );
     };
-function O(e, n) {
+function L(e, n) {
     let t = (0, s.e7)([a.Z], () => a.Z.isLoaded()),
         [l, i] = r.useState([]);
     return (

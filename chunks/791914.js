@@ -100,7 +100,7 @@ function h(e) {
                             : null,
                         p && g
                             ? (0, i.jsx)(r.TabBar.Item, {
-                                  'aria-label': 'for_later',
+                                  'aria-label': m.Z.Messages.FOR_LATER,
                                   id: a.X.BOOKMARKS,
                                   className: T.tab,
                                   children: 0 === R ? m.Z.Messages.FOR_LATER : m.Z.Messages.FOR_LATER_COUNT.format({ count: R })

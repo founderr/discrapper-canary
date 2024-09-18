@@ -32,7 +32,7 @@ async function f() {
                 i = d.Z.consumedInboundPromotionId;
             if (!d.Z.hasFetchedConsumedInboundPromotionId) {
                 var e;
-                let t = (await (0, s.yD)(_.RQ, !1)).find((e) => null != e.promotion_id && !0 === e.consumed);
+                let t = (await (0, s.yD)(_.CL, !1)).find((e) => null != e.promotion_id && !0 === e.consumed);
                 i = null !== (e = null == t ? void 0 : t.promotion_id) && void 0 !== e ? e : null;
             }
             a.Z.dispatch({

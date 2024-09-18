@@ -1,63 +1,63 @@
-n.d(t, {
+t.d(n, {
     O: function () {
-        return u;
+        return r;
     }
 });
-var a = n(735250);
-n(470079);
-var i = n(481060),
-    l = n(447003),
-    s = n(687352),
-    o = n(237583),
-    r = n(823379),
-    c = n(619915),
-    d = n(267027);
-function u(e) {
-    let { channel: t, users: n } = e,
-        u = (0, c.ZP)(t);
+var a = t(735250);
+t(470079);
+var c = t(481060),
+    s = t(447003),
+    d = t(687352),
+    i = t(237583),
+    o = t(823379),
+    l = t(619915),
+    f = t(267027);
+function r(e) {
+    let { channel: n, users: t } = e,
+        r = (0, l.ZP)(n);
     return (0, a.jsxs)('div', {
-        className: d.channelInfo,
+        className: f.channelInfo,
         children: [
-            (0, l.Z)(t)
-                ? (0, a.jsx)(i.VoiceLockIcon, {
+            (0, s.Z)(n)
+                ? (0, a.jsx)(c.VoiceLockIcon, {
                       size: 'md',
                       color: 'currentColor',
-                      className: d.speakerIcon
+                      className: f.speakerIcon
                   })
-                : (0, a.jsx)(i.VoiceNormalIcon, {
+                : (0, a.jsx)(c.VoiceNormalIcon, {
                       size: 'md',
                       color: 'currentColor',
-                      className: d.speakerIcon
+                      className: f.speakerIcon
                   }),
             (0, a.jsx)('div', {
-                className: d.channelName,
-                children: t.name
+                className: f.channelName,
+                children: n.name
             }),
-            u.length > 0
+            r.length > 0
                 ? (0, a.jsxs)(a.Fragment, {
                       children: [
-                          (0, a.jsx)('div', { className: d.divider }),
-                          (0, a.jsx)(s.Z, {
-                              embeddedApps: u,
-                              className: d.channelItemActivities
+                          (0, a.jsx)('div', { className: f.divider }),
+                          (0, a.jsx)(d.Z, {
+                              embeddedApps: r,
+                              className: f.channelItemActivities
                           }),
                           (0, a.jsx)('div', {
-                              className: d.channelActivitiesText,
-                              children: u
+                              className: f.channelActivitiesText,
+                              children: r
                                   .map((e) => {
-                                      var t;
-                                      return null === (t = e.application) || void 0 === t ? void 0 : t.name;
+                                      var n;
+                                      return null === (n = e.application) || void 0 === n ? void 0 : n.name;
                                   })
-                                  .filter(r.lm)
+                                  .filter(o.lm)
                                   .join(', ')
                           })
                       ]
                   })
                 : null,
             (0, a.jsx)('div', {
-                className: d.voiceUserContainer,
-                children: (0, a.jsx)(o.Z, {
-                    users: n,
+                className: f.voiceUserContainer,
+                children: (0, a.jsx)(i.Z, {
+                    users: t,
                     max: 4
                 })
             })

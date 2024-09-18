@@ -17,7 +17,7 @@ async function E(e) {
     });
     try {
         let i = await (0, d.bT)(e, t, n);
-        if (null != i.application_id && i.application_id !== _.RQ) {
+        if (null != i.application_id && i.application_id !== _.CL) {
             let e = a.Z.getApplication(i.application_id);
             if (null == e)
                 try {

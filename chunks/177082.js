@@ -35,7 +35,7 @@ class f extends a.Z {
                 if (d.ZP.isPremium(e)) {
                     !l.ZP.hasFetchedSubscriptions() && (await (0, r.jg)());
                     let e = l.ZP.getPremiumSubscription();
-                    (null == e ? void 0 : e.paymentSourceId) == null && !u.Z.applicationIdsFetched.has(_.RQ) && (await (0, i.yD)(_.RQ));
+                    (null == e ? void 0 : e.paymentSourceId) == null && !u.Z.applicationIdsFetched.has(_.CL) && (await (0, i.yD)(_.CL));
                 }
             }),
             E(this, 'maybeFetchMostRecentSubscription', () => {

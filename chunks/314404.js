@@ -45,14 +45,14 @@ var i = t(735250),
     G = t(133130);
 function B(e) {
     var n, t, r, m;
-    let { premiumSubscription: f, skuId: C, selectedPlanId: O, setSelectedPlanId: B, priceOptions: U, planOptions: k, eligibleForMultiMonthPlans: F, referralTrialOfferId: H, subscriptionPeriodEnd: W, showTotal: Y = !0, discountInvoiceItems: V, handleClose: K } = e,
+    let { premiumSubscription: f, skuId: C, selectedPlanId: O, setSelectedPlanId: B, priceOptions: U, planOptions: k, eligibleForMultiMonthPlans: F, referralTrialOfferId: W, subscriptionPeriodEnd: H, showTotal: Y = !0, discountInvoiceItems: V, handleClose: K } = e,
         { activeSubscription: z, setSelectedPlanId: X, selectedSkuId: q, selectedPlan: J, priceOptions: Q } = (0, p.usePaymentContext)(),
         { isGift: $, giftRecipient: ee, selectedGiftStyle: en, customGiftMessage: et, setCustomGiftMessage: ei } = (0, _.wD)(),
         ea = (0, E.MY)(ee),
         er = $ && (0, E.pO)(ee);
     (C = null != C ? C : q), (f = null != f ? f : z), s()(void 0 !== f, 'should not be undefined');
     let [es, el] = (0, l.Wu)([I.Z], () => [null != f ? I.Z.get(f.planId) : null, null != O ? I.Z.get(O) : null]),
-        eo = (0, g.N)(H),
+        eo = (0, g.N)(W),
         ec = null == eo ? void 0 : eo.subscription_trial,
         eu = (0, b.Ng)(),
         ed = null == eu ? void 0 : null === (n = eu.discount) || void 0 === n ? void 0 : n.plan_ids,
@@ -91,7 +91,7 @@ function B(e) {
             if ((null == ec ? void 0 : ec.interval) === j.rV.DAY) return (null == ec ? void 0 : ec.interval_count) > 7 ? w.Z.Messages.BILLING_TRIAL_2_WEEK_PERIOD : w.Z.Messages.BILLING_TRIAL_1_WEEK_PERIOD;
             return w.Z.Messages.BILLING_TRIAL_30_DAY_PERIOD;
         }, [ec]),
-        ev = !$ && (ef || (null != ec && eI && null != W)),
+        ev = !$ && (ef || (null != ec && eI && null != H)),
         eA = null == V ? void 0 : null === (m = V.find((e) => e.subscriptionPlanId === j.Xh.PREMIUM_MONTH_TIER_2)) || void 0 === m ? void 0 : null === (r = m.discounts) || void 0 === r ? void 0 : null === (t = r.find((e) => e.type === u.eW.SUBSCRIPTION_PLAN)) || void 0 === t ? void 0 : t.amount;
     return (0, i.jsx)(i.Fragment, {
         children: (0, i.jsxs)('div', {
@@ -186,9 +186,9 @@ function B(e) {
                                             variant: 'text-sm/normal',
                                             className: G.trialPlanSelectHeader,
                                             children: n
-                                                ? w.Z.Messages.REFERRAL_PROGRAM_PAYMENT_MODAL_COPY.format({ endDate: W })
+                                                ? w.Z.Messages.REFERRAL_PROGRAM_PAYMENT_MODAL_COPY.format({ endDate: H })
                                                 : w.Z.Messages.BILLING_TRIAL_PAYMENT_MODAL_INFO.format({
-                                                      trialEnd: W,
+                                                      trialEnd: H,
                                                       trialPeriod: eP
                                                   })
                                         }),

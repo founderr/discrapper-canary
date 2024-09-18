@@ -1,32 +1,32 @@
 t.d(n, {
     Z: function () {
-        return s;
+        return r;
     }
 });
-var a = t(735250);
+var i = t(735250);
 t(470079);
-var i = t(481060),
-    l = t(163268),
-    r = t(689938);
-function s(e, n) {
+var a = t(481060),
+    s = t(163268),
+    l = t(689938);
+function r(e, n) {
     return null != n &&
-        (0, l.KP)(
+        (0, s.KP)(
             {
-                type: l.lJ.GenericMedia,
+                type: s.lJ.GenericMedia,
                 media: n
             },
-            (0, l.HH)(e)
+            (0, s.HH)(e)
         )
-        ? (0, a.jsx)(
-              i.MenuItem,
+        ? (0, i.jsx)(
+              a.MenuItem,
               {
                   id: 'report-image-false-positive',
-                  label: r.Z.Messages.OBSCURED_CONTENT_MARK_FALSE_POSITIVE,
+                  label: l.Z.Messages.OBSCURED_CONTENT_MARK_FALSE_POSITIVE,
                   action: () => {
-                      (0, i.openModalLazy)(async () => {
-                          let { default: i } = await t(788679);
+                      (0, a.openModalLazy)(async () => {
+                          let { default: a } = await t(788679);
                           return (t) =>
-                              (0, a.jsx)(i, {
+                              (0, i.jsx)(a, {
                                   channelId: e.channel_id,
                                   messageId: e.id,
                                   mediaItemUrl: n.url,
@@ -34,7 +34,7 @@ function s(e, n) {
                               });
                       });
                   },
-                  icon: i.ImageWarningIcon
+                  icon: a.ImageWarningIcon
               },
               'report-image-false-positive'
           )

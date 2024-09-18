@@ -49,7 +49,7 @@ async function f(e) {
             a()(null != U, 'Missing invoicePreview');
             let n = U.total,
                 t = U.currency;
-            e = await (0, c.ZZ)(I.RQ, g.skuId, {
+            e = await (0, c.ZZ)(I.CL, g.skuId, {
                 expectedAmount: n,
                 expectedCurrency: t,
                 paymentSource: M,

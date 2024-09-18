@@ -88,16 +88,16 @@ function D(e) {
 }
 function w(e) {
     let { hasLegalTermsFlash: n, legalTermsNodeRef: t, onPaymentSourceChange: r, handlePaymentSourceAdd: f } = e,
-        { application: A, purchaseState: w, paymentSources: G, paymentSourceId: B, setHasAcceptedTerms: U, skusById: k, skuPricePreviewsById: F, selectedSkuId: H, isEmbeddedIAP: W, purchaseType: Y, purchasePreviewError: V } = (0, y.usePaymentContext)(),
+        { application: A, purchaseState: w, paymentSources: G, paymentSourceId: B, setHasAcceptedTerms: U, skusById: k, skuPricePreviewsById: F, selectedSkuId: W, isEmbeddedIAP: H, purchaseType: Y, purchasePreviewError: V } = (0, y.usePaymentContext)(),
         { isGift: K, giftRecipient: z } = (0, M.wD)(),
         X = K && (0, v.pO)(z),
         { defaultPaymentSourceId: q, hasFetchedPaymentSources: J } = (0, o.cj)([h.Z], () => ({
             defaultPaymentSourceId: h.Z.defaultPaymentSourceId,
             hasFetchedPaymentSources: h.Z.hasFetchedPaymentSources
         }));
-    s()(null != H, 'Expected selectedSkuId');
-    let Q = k[H],
-        $ = F[H],
+    s()(null != W, 'Expected selectedSkuId');
+    let Q = k[W],
+        $ = F[W],
         ee = null != B ? B : b.c,
         en = null != $ ? $[ee] : null;
     s()(null != Q, 'SKU must exist and be fetched.'), s()(null != A, 'Application must exist.');
@@ -128,7 +128,7 @@ function w(e) {
                 (0, i.jsx)(D, {
                     application: A,
                     sku: Q,
-                    isEmbeddedIAP: W
+                    isEmbeddedIAP: H
                 }),
                 X && (0, i.jsx)(O.Z, { sku: Q }),
                 null != z ? (0, i.jsx)(N.s, { giftRecipient: z }) : null,
@@ -185,7 +185,7 @@ function w(e) {
                         checkboxLabel: Q.productLine === R.POd.COLLECTIBLES ? L.Z.Messages.BILLING_LEGAL_MUMBO_JUMBO_TERMS_LABEL_SIMPLE.format({ paidURL: R.EYA.PAID_TERMS }) : void 0,
                         finePrint: (0, i.jsx)(d.Z, {
                             paymentSourceType: es,
-                            isEmbeddedIAP: W,
+                            isEmbeddedIAP: H,
                             purchaseType: Y,
                             productLine: Q.productLine,
                             isGift: K

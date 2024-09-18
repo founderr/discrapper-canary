@@ -27,15 +27,15 @@ function h(e) {
     var t;
     let { renderHeader: n, referralTrialOfferId: u, handleClose: h } = e,
         { selectedSkuId: v, step: I, selectedPlan: y, purchaseState: N, purchaseType: R, selectedSku: C } = (0, p.usePaymentContext)(),
-        { isGift: k, selectedGiftStyle: L, giftRecipient: Z } = (0, T.wD)(),
-        O = k && (0, m.pO)(Z) && I === g.h8.CONFIRM && null != L && (null == C ? void 0 : C.productLine) !== A.POd.COLLECTIBLES,
+        { isGift: L, selectedGiftStyle: k, giftRecipient: Z } = (0, T.wD)(),
+        O = L && (0, m.pO)(Z) && I === g.h8.CONFIRM && null != k && (null == C ? void 0 : C.productLine) !== A.POd.COLLECTIBLES,
         b = null != n && null != I,
         w = I !== g.h8.SKU_SELECT && null != v,
         D = (0, c.N)(u),
-        x = !k && null != D && null != v && P.nG[D.trial_id].skus.includes(v),
+        x = !L && null != D && null != v && P.nG[D.trial_id].skus.includes(v),
         U = (0, d.Ng)(),
         G = null == U ? void 0 : null === (t = U.discount) || void 0 === t ? void 0 : t.plan_ids.some((e) => P.GP[e].skuId === v),
-        Y = !k && null != U && null != v && G,
+        Y = !L && null != U && null != v && G,
         { enabled: W } = s.ZP.useExperiment({ location: 'PaymentModalHeader' }, { autoTrackExposure: !1 }),
         F = (0, s.rK)(),
         H = W && F;
@@ -48,7 +48,7 @@ function h(e) {
                 children: [
                     (0, l.jsx)(_.Z, {
                         defaultAnimationState: r.SR.LOOP,
-                        giftStyle: L,
+                        giftStyle: k,
                         className: M.seasonalGiftBoxHeaderIcon
                     }),
                     (0, l.jsx)(a.ModalCloseButton, {
@@ -72,10 +72,10 @@ function h(e) {
                     onClose: h,
                     showTrialBadge: x,
                     showDiscountBadge: Y,
-                    isGift: k,
+                    isGift: L,
                     giftRecipient: Z,
                     useWinterTheme: H
                 }));
         return e;
-    }, [L, h, N, n, y, v, I, x, Y, O, w, b, R, k, Z, H]);
+    }, [k, h, N, n, y, v, I, x, Y, O, w, b, R, L, Z, H]);
 }

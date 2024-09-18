@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return u;
+        return c;
     }
 });
 var s = t(735250);
@@ -11,14 +11,14 @@ var o = t(481060),
     a = t(907040),
     r = t(273039),
     d = t(185923);
-function u(e) {
-    let { className: n, emojiClassName: t, emoji: u, setEmoji: c, channel: m } = e,
+function c(e) {
+    let { className: n, emojiClassName: t, emoji: c, setEmoji: u, channel: m } = e,
         N = (e) => (n, t) => {
             var s, o;
             null != n &&
                 (null == n.id
-                    ? c({ name: null !== (s = n.optionallyDiverseSequence) && void 0 !== s ? s : '' })
-                    : c({
+                    ? u({ name: null !== (s = n.optionallyDiverseSequence) && void 0 !== s ? s : '' })
+                    : u({
                           id: n.id,
                           name: null !== (o = n.originalName) && void 0 !== o ? o : n.name,
                           animated: n.animated
@@ -26,21 +26,21 @@ function u(e) {
                 t && e());
         },
         _ =
-            null == u || null == u.name
+            null == c || null == c.name
                 ? null
                 : () => {
                       var e;
                       return (0, s.jsx)(i.Z, {
                           className: t,
-                          animated: null !== (e = u.animated) && void 0 !== e && e,
-                          emojiId: u.id,
-                          emojiName: u.name
+                          animated: null !== (e = c.animated) && void 0 !== e && e,
+                          emojiId: c.id,
+                          emojiName: c.name
                       });
                   };
     return (0, s.jsx)(r.Z, {
-        hasSetEmoji: null != u && null != u.name,
+        hasSetEmoji: null != c && null != c.name,
         onClick: () => {
-            c(null);
+            u(null);
         },
         children: (0, s.jsx)(o.Popout, {
             position: 'bottom',

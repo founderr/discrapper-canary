@@ -3,20 +3,20 @@ t.d(n, {
         return o;
     }
 });
-var a = t(735250);
+var i = t(735250);
 t(470079);
-var i = t(481060),
-    l = t(665906),
-    r = t(996861),
-    s = t(689938);
+var a = t(481060),
+    s = t(665906),
+    l = t(996861),
+    r = t(689938);
 function o(e, n) {
-    return (0, l.NE)(n, e)
-        ? (0, a.jsx)(i.MenuItem, {
+    return (0, s.NE)(n, e)
+        ? (0, i.jsx)(a.MenuItem, {
               id: 'thread',
-              label: s.Z.Messages.CREATE_THREAD,
-              icon: i.ThreadIcon,
+              label: r.Z.Messages.CREATE_THREAD,
+              icon: a.ThreadIcon,
               action: () => {
-                  (0, r.gK)(n, e);
+                  (0, l.gK)(n, e);
               }
           })
         : null;

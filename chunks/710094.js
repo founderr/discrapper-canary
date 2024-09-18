@@ -34,7 +34,7 @@ function M(e) {
     var n, t;
     let r,
         { handleStepChange: M, trialId: y, trialFooterMessageOverride: C, reviewWarningMessage: O, planGroup: R, openInvoiceId: L, analyticsData: j, analyticsLocation: Z, referralTrialOfferId: D, initialPlanId: w, subscriptionTier: G, handleClose: B } = e,
-        { activeSubscription: U, setUpdatedSubscription: k, contextMetadata: F, currencies: H, paymentSourceId: W, paymentSources: Y, priceOptions: V, purchaseError: K, purchaseTokenAuthState: z, selectedPlan: X, selectedSkuId: q, setCurrency: J, setPaymentSourceId: Q, setPurchaseState: $, setPurchaseError: ee, step: en, purchaseState: et, isPremium: ei, setHasAcceptedTerms: ea, purchaseType: er, setEntitlementsGranted: es, startedPaymentFlowWithPaymentSourcesRef: el, invoicePreview: eo, inReverseTrial: ec } = (0, f.usePaymentContext)(),
+        { activeSubscription: U, setUpdatedSubscription: k, contextMetadata: F, currencies: W, paymentSourceId: H, paymentSources: Y, priceOptions: V, purchaseError: K, purchaseTokenAuthState: z, selectedPlan: X, selectedSkuId: q, setCurrency: J, setPaymentSourceId: Q, setPurchaseState: $, setPurchaseError: ee, step: en, purchaseState: et, isPremium: ei, setHasAcceptedTerms: ea, purchaseType: er, setEntitlementsGranted: es, startedPaymentFlowWithPaymentSourcesRef: el, invoicePreview: eo, inReverseTrial: ec } = (0, f.usePaymentContext)(),
         { isGift: eu, giftMessage: ed, giftRecipient: e_ } = (0, I.wD)();
     s()(null != en, 'Step should be set');
     let ep = a.useRef(null),
@@ -61,7 +61,7 @@ function M(e) {
             },
             [M, k, es]
         ),
-        eh = null != W ? Y[W] : null,
+        eh = null != H ? Y[H] : null,
         eb = null != X && P.o4.has(X.id) && null != eh && !(0, o.aQ)(eh) ? Error(A.Z.Messages.BILLING_ERROR_INVALID_PLAN_FOR_PAYMENT_SOURCE) : null,
         eg = a.useRef(null),
         [eP, ev] = a.useState(null),
@@ -102,7 +102,7 @@ function M(e) {
                         paymentSources: Y,
                         onPaymentSourceChange: (e) => Q(null != e ? e.id : null),
                         priceOptions: V,
-                        currencies: H,
+                        currencies: W,
                         onCurrencyChange: (e) => J(e),
                         handlePaymentSourceAdd: () => M(E.h8.ADD_PAYMENT_STEPS),
                         setHasAcceptedTerms: ea,
@@ -134,7 +134,7 @@ function M(e) {
                         hasLegalTermsFlash: em,
                         onInvoiceError: (e) => ev(e),
                         planGroup: R,
-                        currencies: H,
+                        currencies: W,
                         onCurrencyChange: (e) => J(e),
                         hasOpenInvoice: null != L,
                         purchaseState: et,

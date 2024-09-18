@@ -32,7 +32,7 @@ var i = t(735250),
     M = t(981631),
     y = t(38569);
 function C(e) {
-    let { premiumSubscription: n, setPurchaseState: t, onBack: r, onNext: C, legalTermsNodeRef: O, flashLegalTerms: R, invoiceError: L, planError: j, onPurchaseError: Z, baseAnalyticsData: D, flowStartTime: w, trialId: G, planGroup: B, analyticsLocation: U, purchaseTokenAuthState: k, openInvoiceId: F, metadata: H, backButtonEligible: W, disablePurchase: Y, isTrial: V = !1 } = e,
+    let { premiumSubscription: n, setPurchaseState: t, onBack: r, onNext: C, legalTermsNodeRef: O, flashLegalTerms: R, invoiceError: L, planError: j, onPurchaseError: Z, baseAnalyticsData: D, flowStartTime: w, trialId: G, planGroup: B, analyticsLocation: U, purchaseTokenAuthState: k, openInvoiceId: F, metadata: W, backButtonEligible: H, disablePurchase: Y, isTrial: V = !1 } = e,
         { selectedPlan: K, priceOptions: z, setHasAcceptedTerms: X, setPurchaseError: q, purchaseType: J, paymentSourceId: Q, paymentSources: $, selectedSkuId: ee, skusById: en, skuPricePreviewsById: et, referralCode: ei, contextMetadata: ea, invoicePreview: er, inReverseTrial: es } = (0, b.usePaymentContext)(),
         { isGift: el, selectedGiftStyle: eo, customGiftMessage: ec, emojiConfetti: eu, soundEffect: ed, giftRecipient: e_ } = (0, h.wD)(),
         ep = (0, S.MY)(e_),
@@ -80,7 +80,7 @@ function C(e) {
             openInvoiceId: F,
             premiumSubscription: n,
             onNext: C,
-            metadata: H,
+            metadata: W,
             sku: eM,
             skuPricePreview: ey,
             purchaseType: J,
@@ -139,7 +139,7 @@ function C(e) {
                       inReverseTrial: es
                   }),
                   (0, i.jsx)(A.Z, {}),
-                  W && !eR
+                  H && !eR
                       ? (0, i.jsx)('div', {
                             className: y.back,
                             children: (0, i.jsx)(p.Z, { onClick: r })

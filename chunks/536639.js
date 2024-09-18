@@ -3,35 +3,35 @@ t.d(n, {
         return E;
     }
 });
-var a = t(735250);
+var i = t(735250);
 t(470079);
-var i = t(442837),
-    l = t(481060),
-    r = t(332148),
-    s = t(257559),
+var a = t(442837),
+    s = t(481060),
+    l = t(332148),
+    r = t(257559),
     o = t(496675),
     u = t(151007),
     d = t(981631),
     c = t(689938);
 function E(e, n) {
-    let t = (0, i.e7)([o.Z], () => o.Z.can(d.Plq.MANAGE_MESSAGES, n), [n]);
+    let t = (0, a.e7)([o.Z], () => o.Z.can(d.Plq.MANAGE_MESSAGES, n), [n]);
     return e.state !== d.yb.SEND_FAILED && (0, u.Z)(e, n, t)
         ? !1 === e.pinned
-            ? (0, a.jsx)(l.MenuItem, {
+            ? (0, i.jsx)(s.MenuItem, {
                   id: 'pin',
                   action: function (t) {
-                      t.shiftKey ? r.Z.pinMessage(n, e.id) : s.Z.confirmPin(n, e);
+                      t.shiftKey ? l.Z.pinMessage(n, e.id) : r.Z.confirmPin(n, e);
                   },
                   label: c.Z.Messages.PIN_MESSAGE,
-                  icon: l.PinIcon
+                  icon: s.PinIcon
               })
-            : (0, a.jsx)(l.MenuItem, {
+            : (0, i.jsx)(s.MenuItem, {
                   id: 'unpin',
                   action: function (t) {
-                      t.shiftKey ? r.Z.unpinMessage(n, e.id) : s.Z.confirmUnpin(n, e);
+                      t.shiftKey ? l.Z.unpinMessage(n, e.id) : r.Z.confirmUnpin(n, e);
                   },
                   label: c.Z.Messages.UNPIN_MESSAGE,
-                  icon: l.PinIcon
+                  icon: s.PinIcon
               })
         : null;
 }

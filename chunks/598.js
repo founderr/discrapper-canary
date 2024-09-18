@@ -50,8 +50,8 @@ function m(e) {
     var t, n, c;
     let { loadId: H, activeSubscription: y, stepConfigs: m, breadcrumbs: Y = [], skuIDs: h, isGift: w = !1, children: W, defaultPlanId: g, purchaseType: V = B.GZQ.SUBSCRIPTION, applicationId: v, referralCode: b, repeatPurchase: k = !1 } = e,
         J = (0, Z.Z)(),
-        Q = (0, l.Q)(),
-        X = (0, P.Z)(),
+        X = (0, l.Q)(),
+        Q = (0, P.Z)(),
         {
             paymentSources: x,
             hasPaymentSources: j,
@@ -117,11 +117,11 @@ function m(e) {
     }, [y]);
     let {
             skusById: eJ,
-            hasFetchedSkus: eQ,
-            skuPricePreviewsById: eX,
+            hasFetchedSkus: eX,
+            skuPricePreviewsById: eQ,
             previewErrorsById: ex
         } = (0, p.Z)({
-            applicationId: null != v ? v : F.RQ,
+            applicationId: null != v ? v : F.CL,
             skuIDs: h,
             currentPaymentSourceId: q,
             isGift: w
@@ -129,9 +129,9 @@ function m(e) {
         ej = null != eU ? ex[eU] : null,
         eq = r.useMemo(() => {
             if (null == eU) return null;
-            let e = eX[eU];
+            let e = eQ[eU];
             return null == e ? null : e[null != q ? q : T.c];
-        }, [eU, eX, q]),
+        }, [eU, eQ, q]),
         { data: ez } = (0, A.I)(v),
         e$ = (0, R.yE)(null !== (t = null == ez ? void 0 : ez.flags) && void 0 !== t ? t : 0, B.udG.EMBEDDED) && (0, R.yE)(null !== (n = null == ez ? void 0 : ez.flags) && void 0 !== n ? n : 0, B.udG.EMBEDDED_IAP),
         e0 = (0, _.e7)([o.ZP], () =>
@@ -149,9 +149,9 @@ function m(e) {
         value: {
             stripe: J,
             contextMetadata: eP,
-            blockedPayments: Q,
+            blockedPayments: X,
             activeSubscription: y,
-            hasFetchedSubscriptions: X,
+            hasFetchedSubscriptions: Q,
             hasFetchedSubscriptionPlans: et,
             updatedSubscription: em,
             setUpdatedSubscription: eY,
@@ -205,9 +205,9 @@ function m(e) {
             isPremium: eb,
             startedPaymentFlowWithPaymentSourcesRef: ee,
             startingPremiumSubscriptionPlanIdRef: ek,
-            hasFetchedSkus: eQ,
+            hasFetchedSkus: eX,
             skusById: eJ,
-            skuPricePreviewsById: eX,
+            skuPricePreviewsById: eQ,
             selectedSkuPricePreview: eq,
             application: ez,
             purchaseType: V,

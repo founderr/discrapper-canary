@@ -24,10 +24,10 @@ var l = t(735250),
 n.Z = (e) => {
     var n;
     let t,
-        { guildId: r, groupListingId: Z, analyticsLocation: C, showBenefitsFirst: A, skuId: L, onComplete: O, forcesTransitionToGuild: R } = e,
-        b = (0, o.e7)([I.Z], () => (null != L ? I.Z.get(L) : void 0), [L]),
-        j = (0, o.e7)([S.Z], () => (null != L ? S.Z.getForSKU(L) : void 0), [L]),
-        P = (0, o.Wu)([v.Z], () => (null != L ? v.Z.getForSKU(L) : []), [L]),
+        { guildId: r, groupListingId: Z, analyticsLocation: C, showBenefitsFirst: A, skuId: O, onComplete: L, forcesTransitionToGuild: R } = e,
+        b = (0, o.e7)([I.Z], () => (null != O ? I.Z.get(O) : void 0), [O]),
+        j = (0, o.e7)([S.Z], () => (null != O ? S.Z.getForSKU(O) : void 0), [O]),
+        P = (0, o.Wu)([v.Z], () => (null != O ? v.Z.getForSKU(O) : []), [O]),
         M = null != P ? P[0] : void 0,
         D = null == b ? void 0 : b.applicationId,
         k = (null == j ? void 0 : j.published) === !0 && null != b && (0, h.yE)(b.flags, E.l4R.AVAILABLE),
@@ -77,7 +77,7 @@ n.Z = (e) => {
                         planGroup: U,
                         applicationId: B.id,
                         showBenefitsFirst: A,
-                        onComplete: O,
+                        onComplete: L,
                         forcesTransitionToGuild: R
                     });
                 };
@@ -88,7 +88,7 @@ n.Z = (e) => {
                           onCancel: () => {}
                       })
                     : e();
-            }, [k, M, U, B, r, q, H, F, C, G, A, K, O, R]),
+            }, [k, M, U, B, r, q, H, F, C, G, A, K, L, R]),
             canOpenModal: X,
             cannotOpenReason: t
         }

@@ -3,12 +3,12 @@ t.d(n, {
         return M;
     }
 });
-var a = t(735250);
+var i = t(735250);
 t(470079);
-var i = t(442837),
-    l = t(481060),
-    r = t(668781),
-    s = t(79390),
+var a = t(442837),
+    s = t(481060),
+    l = t(668781),
+    r = t(79390),
     o = t(222677),
     u = t(665906),
     d = t(496675),
@@ -16,16 +16,16 @@ var i = t(442837),
     E = t(689938);
 function M(e, n) {
     let t = (0, u.$R)(n),
-        M = (0, i.e7)([d.Z], () => d.Z.can(c.Plq.MANAGE_MESSAGES, n) && t, [n, t]);
-    return !M || null == e.reactions || 0 === e.reactions.length || (e.isPoll() && !(0, s.eQ)(e))
+        M = (0, a.e7)([d.Z], () => d.Z.can(c.Plq.MANAGE_MESSAGES, n) && t, [n, t]);
+    return !M || null == e.reactions || 0 === e.reactions.length || (e.isPoll() && !(0, r.eQ)(e))
         ? null
-        : (0, a.jsx)(l.MenuItem, {
+        : (0, i.jsx)(s.MenuItem, {
               id: 'remove-reactions',
               label: E.Z.Messages.REMOVE_ALL_REACTIONS,
               action: function (t) {
                   t.shiftKey
                       ? (0, o.wX)(n.id, e.id)
-                      : r.Z.show({
+                      : l.Z.show({
                             title: E.Z.Messages.REMOVE_ALL_REACTIONS_CONFIRM_TITLE,
                             body: E.Z.Messages.REMOVE_ALL_REACTIONS_CONFIRM_BODY,
                             confirmText: E.Z.Messages.YES_TEXT,

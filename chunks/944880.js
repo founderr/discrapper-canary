@@ -29,7 +29,7 @@ function T(e) {
 function S() {
     let { forceRefresh: e = !1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     A();
-    let t = u.Z.getForApplication(h.RQ),
+    let t = u.Z.getForApplication(h.CL),
         n = (0, f.kG)(t),
         r = (0, f.MR)([p.Ft.FREE_GUILD_BOOST_1_MONTH, p.Ft.FREE_GUILD_BOOST_3_MONTHS], t),
         s = l.default.getCurrentUser();
@@ -60,7 +60,7 @@ function S() {
         )
             g();
         else {
-            let e = u.Z.getForApplication(h.RQ);
+            let e = u.Z.getForApplication(h.CL);
             if (null == e) return;
             let t = Array.from(e)
                 .filter((e) => null != E.Z.getTenureRewardStatusForRewardId(e.skuId))

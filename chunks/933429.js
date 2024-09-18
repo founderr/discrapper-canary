@@ -382,8 +382,8 @@ let eW = [eL.kVF.QUARANTINED, eL.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eL.kVF.VI
                     i = null != t ? o()(t.currentPeriodEnd).diff(o()().startOf('day'), 'days') : 0,
                     s = null != t ? o()(t.currentPeriodEnd).diff(o()(t.currentPeriodStart).startOf('day'), 'days') : 0,
                     a = null != t && o()(t.currentPeriodEnd).isBefore(o()()),
-                    r = eS.Z.applicationIdsFetched.has(eD.RQ),
-                    l = eS.Z.getForApplication(eD.RQ),
+                    r = eS.Z.applicationIdsFetched.has(eD.CL),
+                    l = eS.Z.getForApplication(eD.CL),
                     c = null != t ? (0, eO.Af)(t) : null,
                     u = null != c ? eO.ZP.getSkuIdForPlan(c.planId) : null,
                     d =

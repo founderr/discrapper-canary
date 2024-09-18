@@ -1,84 +1,84 @@
-n.d(t, {
+t.d(n, {
     F: function () {
-        return x;
+        return Z;
     },
     d: function () {
-        return p;
+        return g;
     }
 }),
-    n(653041),
-    n(47120);
-var a = n(442837),
-    i = n(592125),
-    l = n(324067),
-    s = n(430824),
-    o = n(496675),
-    r = n(944486),
-    c = n(979651),
-    d = n(938475),
-    u = n(823379),
-    g = n(374065),
-    m = n(981631);
-function v(e, t, n, a, i) {
-    let l = (0, g.e4)({
+    t(653041),
+    t(47120);
+var a = t(442837),
+    c = t(592125),
+    s = t(324067),
+    d = t(430824),
+    i = t(496675),
+    o = t(944486),
+    l = t(979651),
+    f = t(938475),
+    r = t(823379),
+    u = t(374065),
+    p = t(981631);
+function b(e, n, t, a, c) {
+    let s = (0, u.e4)({
         channelId: e.id,
-        ChannelStore: t,
-        GuildStore: n,
+        ChannelStore: n,
+        GuildStore: t,
         PermissionStore: a,
-        VoiceStateStore: i
+        VoiceStateStore: c
     });
-    return (e.type === m.d4z.GUILD_VOICE && l === g.jy.CAN_LAUNCH) || !1;
+    return (e.type === p.d4z.GUILD_VOICE && s === u.jy.CAN_LAUNCH) || !1;
 }
-function p(e) {
-    var t, n, a;
-    let { guildId: g, allowGdmActivityChannelSuggestion: m = !1 } = e;
-    if (null == g && !m) return null;
-    let p = r.Z.getVoiceChannelId(),
-        I = i.Z.getChannel(p);
-    if (null != I && (null != I.guild_id || m)) return I.id;
-    let x = [];
-    for (let e of Object.values(l.Z.getCategories(g)))
-        for (let t of e)
-            v(t.channel, i.Z, s.Z, o.Z, c.Z) &&
-                x.push({
-                    channel: t.channel,
-                    users: d.ZP.getVoiceStatesForChannel(t.channel).filter(u.lm)
+function g(e) {
+    var n, t, a;
+    let { guildId: u, allowGdmActivityChannelSuggestion: p = !1 } = e;
+    if (null == u && !p) return null;
+    let g = o.Z.getVoiceChannelId(),
+        m = c.Z.getChannel(g);
+    if (null != m && (null != m.guild_id || p)) return m.id;
+    let Z = [];
+    for (let e of Object.values(s.Z.getCategories(u)))
+        for (let n of e)
+            b(n.channel, c.Z, d.Z, i.Z, l.Z) &&
+                Z.push({
+                    channel: n.channel,
+                    users: f.ZP.getVoiceStatesForChannel(n.channel).filter(r.lm)
                 });
-    return null !== (a = null === (n = x.sort((e, t) => (e.users.length > t.users.length ? -1 : 1))[0]) || void 0 === n ? void 0 : null === (t = n.channel) || void 0 === t ? void 0 : t.id) && void 0 !== a ? a : null;
+    return null !== (a = null === (t = Z.sort((e, n) => (e.users.length > n.users.length ? -1 : 1))[0]) || void 0 === t ? void 0 : null === (n = t.channel) || void 0 === n ? void 0 : n.id) && void 0 !== a ? a : null;
 }
-function I(e, t) {
-    if (e.length !== t.length) return !1;
-    for (let n = 0; n < e.length; n++) if (e[n].value.channel.id !== t[n].value.channel.id) return !1;
+function m(e, n) {
+    if (e.length !== n.length) return !1;
+    for (let t = 0; t < e.length; t++) if (e[t].value.channel.id !== n[t].value.channel.id) return !1;
     return !0;
 }
-function x(e) {
+function Z(e) {
     return (0, a.e7)(
-        [l.Z, i.Z, s.Z, o.Z, c.Z, d.ZP],
+        [s.Z, c.Z, d.Z, i.Z, l.Z, f.ZP],
         () => {
             if (null == e) return [];
-            let t = [];
+            let n = [];
             return (
-                Object.values(l.Z.getCategories(e)).forEach((e) => {
+                Object.values(s.Z.getCategories(e)).forEach((e) => {
                     e.forEach((e) => {
-                        let { channel: n } = e;
-                        v(n, i.Z, s.Z, o.Z, c.Z) && t.push(n);
+                        let { channel: t } = e;
+                        b(t, c.Z, d.Z, i.Z, l.Z) && n.push(t);
                     });
                 }),
-                t
+                n
                     .map((e) => {
-                        let t = d.ZP.getVoiceStatesForChannel(e).filter(u.lm);
+                        let n = f.ZP.getVoiceStatesForChannel(e).filter(r.lm);
                         return {
                             value: {
                                 channel: e,
-                                users: t
+                                users: n
                             },
                             label: e.name
                         };
                     })
-                    .sort((e, t) => (e.value.users.length > t.value.users.length ? -1 : 1))
+                    .sort((e, n) => (e.value.users.length > n.value.users.length ? -1 : 1))
             );
         },
         [e],
-        I
+        m
     );
 }

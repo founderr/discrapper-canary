@@ -1,140 +1,140 @@
-n.d(t, {
+t.d(n, {
     o: function () {
-        return V;
+        return z;
     }
 });
-var a = n(701488),
-    i = n(114954),
-    l = n(956089),
-    s = n(407407),
-    o = n(942006),
-    r = n(836479),
-    c = n(779337),
-    d = n(694111),
-    u = n(442405),
-    g = n(974379),
-    m = n(873444),
-    v = n(216989),
-    p = n(188225),
-    I = n(337664),
-    x = n(585681),
-    f = n(288021),
-    _ = n(114089),
-    T = n(8361),
-    h = n(655297),
-    C = n(616297),
-    E = n(213860),
-    S = n(747604),
-    N = n(237931),
-    j = n(992910),
-    b = n(652120),
-    A = n(824046),
-    M = n(943615),
-    y = n(669001),
-    Z = n(248313),
-    D = n(928119),
-    L = n(497664),
-    O = n(685358),
-    B = n(33218),
-    R = n(975570);
-let V = {
-    [a.MO]: {
+var a = t(799911),
+    c = t(222013),
+    s = t(38161),
+    d = t(15259),
+    i = t(517288),
+    o = t(724491),
+    l = t(271359),
+    f = t(241976),
+    r = t(783466),
+    u = t(128584),
+    p = t(469999),
+    b = t(607865),
+    g = t(265661),
+    m = t(121517),
+    Z = t(295597),
+    h = t(327510),
+    S = t(465087),
+    y = t(920496),
+    M = t(39417),
+    v = t(641322),
+    x = t(829463),
+    w = t(966310),
+    I = t(710227),
+    U = t(820836),
+    j = t(179603),
+    C = t(838116),
+    N = t(697333),
+    G = t(168191),
+    P = t(499900),
+    A = t(420648),
+    V = t(303865),
+    _ = t(993190),
+    k = t(555852),
+    F = t(701488);
+let z = {
+    [F.MO]: {
         playersSuggestionMin: 1,
         playersSuggestionMax: 8,
         timeSuggestionMinutes: 1,
-        gameplayImageUrls: [I, x]
+        gameplayImageUrls: [g.Z, m.Z]
     },
-    [a.js]: {
+    [F.js]: {
         playersSuggestionMin: 4,
         playersSuggestionMax: 12,
         timeSuggestionMinutes: 10,
-        gameplayImageUrls: [v, p]
+        gameplayImageUrls: [p.Z, b.Z]
     },
-    [a.mI]: {
+    [F.mI]: {
         playersSuggestionMin: 1,
         playersSuggestionMax: 16,
         timeSuggestionMinutes: 5,
         gameplayImageUrls: []
     },
-    [a.GR]: {
+    [F.GR]: {
         playersSuggestionMin: 1,
         playersSuggestionMax: 8,
         timeSuggestionMinutes: 10,
-        gameplayImageUrls: [L, O]
+        gameplayImageUrls: [A.Z, V.Z]
     },
-    [a.PD]: {
+    [F.PD]: {
         playersSuggestionMin: 1,
         playersSuggestionMax: 8,
         timeSuggestionMinutes: 5,
-        gameplayImageUrls: [E, S]
+        gameplayImageUrls: [v.Z, x.Z]
     },
-    [a.jT]: {
+    [F.jT]: {
         playersSuggestionMin: 1,
         playersSuggestionMax: 16,
         timeSuggestionMinutes: 2,
-        gameplayImageUrls: [B, R]
+        gameplayImageUrls: [_.Z, k.Z]
     },
-    [a.am]: {
+    [F.am]: {
         playersSuggestionMin: 3,
         playersSuggestionMax: 8,
         timeSuggestionMinutes: 10,
-        gameplayImageUrls: [h, C]
+        gameplayImageUrls: [y.Z, M.Z]
     },
-    [a.Ec]: {
+    [F.Ec]: {
         playersSuggestionMin: 2,
         playersSuggestionMax: 8,
         timeSuggestionMinutes: 15,
-        gameplayImageUrls: [s, o]
+        gameplayImageUrls: [s.Z, d.Z]
     },
-    [a.l4]: {
+    [F.l4]: {
         playersSuggestionMin: 2,
         playersSuggestionMax: 16,
         timeSuggestionMinutes: 10,
-        gameplayImageUrls: [r, c]
+        gameplayImageUrls: [i.Z, o.Z]
     },
-    [a.fE]: {
+    [F.fE]: {
         playersSuggestionMin: 2,
         playersSuggestionMax: 16,
         timeSuggestionMinutes: 15,
-        gameplayImageUrls: [g, m]
+        gameplayImageUrls: [r.Z, u.Z]
     },
-    [a.IF]: {
+    [F.IF]: {
         playersSuggestionMin: 2,
         playersSuggestionMax: 5,
         timeSuggestionMinutes: 5,
-        gameplayImageUrls: [i, l]
+        gameplayImageUrls: [a.Z, c.Z]
     },
-    [a.Zc]: {
+    [F.Zc]: {
         playersSuggestionMin: 1,
         playersSuggestionMax: 7,
         timeSuggestionMinutes: 15,
-        gameplayImageUrls: [b, A]
+        gameplayImageUrls: [U.Z, j.Z]
     },
-    [a.Gv]: {
+    [F.Gv]: {
         playersSuggestionMin: 2,
         playersSuggestionMax: 8,
         timeSuggestionMinutes: 15,
-        gameplayImageUrls: [N, j]
+        gameplayImageUrls: [w.Z, I.Z]
     },
-    [a.Cb]: {
+    [F.Cb]: {
         playersSuggestionMin: 2,
         playersSuggestionMax: 8,
         timeSuggestionMinutes: 15,
-        gameplayImageUrls: [Z, D]
+        gameplayImageUrls: [G.Z, P.Z]
     },
-    [a.qG]: {
+    [F.qG]: {
         playersSuggestionMin: 2,
         playersSuggestionMax: 4,
         timeSuggestionMinutes: 5,
-        gameplayImageUrls: [d, u]
+        gameplayImageUrls: [l.Z, f.Z]
     },
-    [a.f9]: {
+    [F.f9]: {
         playersSuggestionMin: 1,
         playersSuggestionMax: 8,
         timeSuggestionMinutes: 10,
-        gameplayImageUrls: [M, y]
+        gameplayImageUrls: [C.Z, N.Z]
     },
-    [a.In]: {
-        gameplayImageUrls: [f, _, T]
+    [F.In]: {
+        gameplayImageUrls: [Z.Z, h.Z, S.Z]
     }
 };
