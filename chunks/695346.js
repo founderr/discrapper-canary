@@ -12,7 +12,7 @@ n.d(t, {
         return Q;
     },
     Ex: function () {
-        return ev;
+        return eR;
     },
     Fg: function () {
         return Z;
@@ -27,10 +27,10 @@ n.d(t, {
         return y;
     },
     L1: function () {
-        return eI;
+        return ep;
     },
     NA: function () {
-        return ed;
+        return ec;
     },
     OW: function () {
         return J;
@@ -45,7 +45,7 @@ n.d(t, {
         return P;
     },
     QK: function () {
-        return em;
+        return eI;
     },
     QZ: function () {
         return T;
@@ -54,19 +54,19 @@ n.d(t, {
         return E;
     },
     RS: function () {
-        return ec;
+        return eu;
     },
     R_: function () {
-        return eC;
+        return ev;
     },
     SE: function () {
-        return eA;
+        return eg;
     },
     Sb: function () {
-        return ep;
+        return eh;
     },
     Sh: function () {
-        return ey;
+        return eC;
     },
     T4: function () {
         return O;
@@ -75,10 +75,10 @@ n.d(t, {
         return ee;
     },
     Wp: function () {
-        return eS;
+        return eT;
     },
     Wz: function () {
-        return eR;
+        return eO;
     },
     Xc: function () {
         return M;
@@ -90,7 +90,7 @@ n.d(t, {
         return et;
     },
     Yk: function () {
-        return eT;
+        return em;
     },
     _O: function () {
         return N;
@@ -135,7 +135,7 @@ n.d(t, {
         return m;
     },
     gw: function () {
-        return eL;
+        return ey;
     },
     h2: function () {
         return V;
@@ -144,7 +144,7 @@ n.d(t, {
         return F;
     },
     iH: function () {
-        return eO;
+        return eN;
     },
     jU: function () {
         return j;
@@ -156,22 +156,22 @@ n.d(t, {
         return W;
     },
     l4: function () {
-        return eD;
+        return eL;
     },
     mX: function () {
         return k;
     },
     nc: function () {
-        return e_;
+        return ed;
     },
     qF: function () {
         return C;
     },
     rN: function () {
-        return eE;
+        return e_;
     },
     tU: function () {
-        return el;
+        return eo;
     },
     uL: function () {
         return D;
@@ -183,7 +183,7 @@ n.d(t, {
         return I;
     },
     x4: function () {
-        return eu;
+        return el;
     },
     xM: function () {
         return X;
@@ -626,35 +626,7 @@ let er = new Set(Object.values(c.Skl)),
         (e) => e,
         (e) => e
     ),
-    eo = [];
-(0, o.Zc)(
-    'broadcast',
-    'allowFriends',
-    (e) => (null == e ? void 0 : e.value),
-    (e) => a.D5.create({ value: e })
-),
-    (0, o.Zc)(
-        'broadcast',
-        'allowedGuildIds',
-        (e) => (null != e ? e : eo),
-        (e) => e
-    ),
-    (0, o.Zc)(
-        'broadcast',
-        'allowedUserIds',
-        (e) => (null != e ? e : eo),
-        (e) => e
-    ),
-    (0, o.Zc)(
-        'broadcast',
-        'autoBroadcast',
-        (e) => {
-            var t;
-            return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t;
-        },
-        (e) => a.D5.create({ value: e })
-    );
-let el = (0, o.Zc)(
+    eo = (0, o.Zc)(
         'clips',
         'allowVoiceRecording',
         (e) => {
@@ -663,7 +635,7 @@ let el = (0, o.Zc)(
         },
         (e) => a.D5.create({ value: e })
     ),
-    eu = (0, o.KM)(
+    el = (0, o.KM)(
         (0, o.Zc)(
             'textAndImages',
             'inlineAttachmentMedia',
@@ -676,7 +648,7 @@ let el = (0, o.Zc)(
         'text',
         'inlineAttachmentMedia'
     ),
-    ec = (0, o.KM)(
+    eu = (0, o.KM)(
         (0, o.Zc)(
             'textAndImages',
             'inlineEmbedMedia',
@@ -689,7 +661,7 @@ let el = (0, o.Zc)(
         'text',
         'inlineEmbedMedia'
     ),
-    ed = (0, o.KM)(
+    ec = (0, o.KM)(
         (0, o.Zc)(
             'textAndImages',
             'renderEmbeds',
@@ -702,7 +674,7 @@ let el = (0, o.Zc)(
         'text',
         'renderEmbeds'
     ),
-    e_ = (0, o.KM)(
+    ed = (0, o.KM)(
         (0, o.Zc)(
             'textAndImages',
             'renderReactions',
@@ -715,7 +687,7 @@ let el = (0, o.Zc)(
         'text',
         'renderReactions'
     ),
-    eE = (0, o.Zc)(
+    e_ = (0, o.Zc)(
         'localization',
         'timezoneOffset',
         (e) => {
@@ -724,21 +696,21 @@ let el = (0, o.Zc)(
         },
         (e) => a.T4.create({ value: null != e ? e : 0 })
     ),
-    ef = new Set([s.l.COZY, s.l.COMPACT]);
+    eE = new Set([s.l.COZY, s.l.COMPACT]);
 (0, o.Zc)(
     'appearance',
     'channelListLayout',
-    (e) => (null != e && ef.has(e.value) ? e.value : s.l.COZY),
+    (e) => (null != e && eE.has(e.value) ? e.value : s.l.COZY),
     (e) => a.Gm.create({ value: e })
 );
-let eh = new Set([s.Z.ALL, s.Z.UNREADS, s.Z.NONE]);
+let ef = new Set([s.Z.ALL, s.Z.UNREADS, s.Z.NONE]);
 (0, o.Zc)(
     'appearance',
     'messagePreviews',
-    (e) => (null != e && eh.has(e.value) ? e.value : s.Z.ALL),
+    (e) => (null != e && ef.has(e.value) ? e.value : s.Z.ALL),
     (e) => a.Gm.create({ value: e })
 );
-let ep = (0, o.KM)(
+let eh = (0, o.KM)(
         (0, o.Zc)(
             'appearance',
             'developerMode',
@@ -748,7 +720,7 @@ let ep = (0, o.KM)(
         'appearance',
         'developerMode'
     ),
-    eI = (0, o.Zc)(
+    ep = (0, o.Zc)(
         'appearance',
         'clientThemeSettings',
         (e) => {
@@ -757,7 +729,7 @@ let ep = (0, o.KM)(
         },
         (e) => ({ backgroundGradientPresetId: null != e.backgroundGradientPresetId ? a.yC.create({ value: e.backgroundGradientPresetId }) : void 0 })
     ),
-    em = (0, o.R2)(
+    eI = (0, o.R2)(
         (0, o.KM)(
             (0, o.Zc)(
                 'textAndImages',
@@ -782,7 +754,7 @@ let ep = (0, o.KM)(
                 return null === (e = l.Z.getOverride('gifAutoPlay')) || void 0 === e ? void 0 : e.value;
             })
     ),
-    eT = (0, o.R2)(
+    em = (0, o.R2)(
         (0, o.KM)(
             (0, o.Zc)(
                 'textAndImages',
@@ -807,7 +779,7 @@ let ep = (0, o.KM)(
                 return null === (e = l.Z.getOverride('animateEmoji')) || void 0 === e ? void 0 : e.value;
             })
     ),
-    eS = (0, o.R2)(
+    eT = (0, o.R2)(
         (0, o.KM)(
             (0, o.Zc)(
                 'textAndImages',
@@ -832,33 +804,33 @@ let ep = (0, o.KM)(
                 return null === (e = l.Z.getOverride('animateStickers')) || void 0 === e ? void 0 : e.value;
             })
     ),
-    eg = [],
-    eA = (0, o.Zc)(
+    eS = [],
+    eg = (0, o.Zc)(
         'privacy',
         'activityRestrictedGuildIds',
-        (e) => (null != e ? e : eg),
+        (e) => (null != e ? e : eS),
         (e) => e
     ),
-    eN = [],
-    eO = (0, o.Zc)(
+    eA = [],
+    eN = (0, o.Zc)(
         'privacy',
         'activityJoiningRestrictedGuildIds',
-        (e) => (null != e ? e : eN),
+        (e) => (null != e ? e : eA),
         (e) => e
     ),
-    eR = (0, o.Zc)(
+    eO = (0, o.Zc)(
         'privacy',
         'defaultGuildsActivityRestricted',
         (e) => e === i.E5.ON_FOR_LARGE_GUILDS,
         (e) => (!0 === e ? i.E5.ON_FOR_LARGE_GUILDS : i.E5.OFF)
     ),
-    ev = (0, o.Zc)(
+    eR = (0, o.Zc)(
         'privacy',
         'familyCenterEnabledV2',
         (e) => (null == e ? void 0 : e.value),
         (e) => a.D5.create({ value: e })
     ),
-    eC = (0, o.Zc)(
+    ev = (0, o.Zc)(
         'privacy',
         'hideLegacyUsername',
         (e) => {
@@ -867,7 +839,7 @@ let ep = (0, o.KM)(
         },
         (e) => a.D5.create({ value: e })
     ),
-    ey = (0, o.Zc)(
+    eC = (0, o.Zc)(
         'textAndImages',
         'explicitContentSettings',
         (e) => {
@@ -887,7 +859,7 @@ let ep = (0, o.KM)(
             };
         }
     ),
-    eL = (0, o.Zc)(
+    ey = (0, o.Zc)(
         'textAndImages',
         'keywordFilterSettings',
         (e) => {
@@ -916,7 +888,7 @@ let ep = (0, o.KM)(
     },
     (e) => a.D5.create({ value: e })
 );
-let eD = (0, o.Zc)(
+let eL = (0, o.Zc)(
     'userContent',
     'lastReceivedChangelogId',
     (e) => (null != e ? e : '0'),

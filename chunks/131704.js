@@ -344,9 +344,6 @@ class e_ extends eu {
     isScheduledForDeletion() {
         return this.hasFlag(p.zZ.IS_SCHEDULED_FOR_DELETION);
     }
-    isBroadcastChannel() {
-        return this.hasFlag(p.zZ.IS_BROADCASTING);
-    }
     isArchivedLockedThread() {
         var e, t;
         return B.has(this.type) && (null === (e = this.threadMetadata) || void 0 === e ? void 0 : e.archived) === !0 && (null === (t = this.threadMetadata) || void 0 === t ? void 0 : t.locked) === !0;
