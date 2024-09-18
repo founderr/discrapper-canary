@@ -522,5 +522,6 @@ function M(e) {
                 if (t < s[e]) return !1;
             }
             return !0;
-        }
+        },
+        fetchRiotGamesLiveClientData: (e, t) => (m.isPlatformEmbedded ? (null == A.riotGames ? Promise.reject(Error('Riot Games module not available')) : A.riotGames.fetchLiveClientData(e, t)) : Promise.reject(Error('Not embedded!')))
     });
