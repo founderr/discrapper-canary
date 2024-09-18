@@ -549,18 +549,22 @@ function ea(e) {
                                                             });
                                                         }
                                                     }),
-                                                    (0, i.jsx)('div', { className: $.menuDivider }),
                                                     !__OVERLAY__ &&
                                                         H.wS &&
                                                         em &&
-                                                        (0, i.jsx)(K.Mv, {
-                                                            id: 'copy-user-id',
-                                                            action: 'COPY_USER_ID',
-                                                            icon: c.IdIcon,
-                                                            label: J.Z.Messages.COPY_ID_USER,
-                                                            onClick: () => {
-                                                                (0, l.J)(V.id), z();
-                                                            }
+                                                        (0, i.jsxs)(i.Fragment, {
+                                                            children: [
+                                                                (0, i.jsx)('div', { className: $.menuDivider }),
+                                                                (0, i.jsx)(K.Mv, {
+                                                                    id: 'copy-user-id',
+                                                                    action: 'COPY_USER_ID',
+                                                                    icon: c.IdIcon,
+                                                                    label: J.Z.Messages.COPY_ID_USER,
+                                                                    onClick: () => {
+                                                                        (0, l.J)(V.id), z();
+                                                                    }
+                                                                })
+                                                            ]
                                                         })
                                                 ]
                                             })
