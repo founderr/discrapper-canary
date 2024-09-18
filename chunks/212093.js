@@ -17,9 +17,10 @@ n.d(t, {
     bR: function () {
         return function e(t, n) {
             let r = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-                { categoryId: i = p.Hk, preferredLocale: a, offset: _, length: I, tag: m } = n,
-                S = d.ZP.getSearchIndex();
-            if (null == S) return;
+                i = arguments.length > 3 ? arguments[3] : void 0,
+                { categoryId: a = p.Hk, preferredLocale: _, offset: I, length: m, tag: S } = n,
+                g = d.ZP.getSearchIndex();
+            if (null == g) return;
             r &&
                 !(function (e) {
                     let { query: t, preferredLocale: n, offset: r, limit: i, categoryId: a, tag: o } = e,
@@ -36,29 +37,29 @@ n.d(t, {
                     (!(null != d && d.length > 0 && d.startsWith('?')) || (d.startsWith('?') && d.split('?')[1] !== u)) && (0, c.uL)(h.Z5c.GUILD_DISCOVERY, { search: u });
                 })({
                     query: t,
-                    preferredLocale: a,
-                    offset: _,
-                    limit: I,
-                    categoryId: i,
-                    tag: m
+                    preferredLocale: _,
+                    offset: I,
+                    limit: m,
+                    categoryId: a,
+                    tag: S
                 }),
                 u.Z.dispatch({
                     type: 'GUILD_DISCOVERY_SEARCH_FETCH_START',
                     section: h.Lcj.SEARCH,
                     query: t,
-                    categoryId: i
+                    categoryId: a
                 });
-            let g = Object.assign({}, T, n.filters),
-                A = Object.keys(g).map((e) => ''.concat(e).concat(g[e]));
-            i !== p.Hk && A.push('(primary_category_id='.concat(i, ' OR categories.id=').concat(i, ')'));
-            let N = A.join(' AND ');
+            let A = Object.assign({}, T, n.filters),
+                N = Object.keys(A).map((e) => ''.concat(e).concat(A[e]));
+            a !== p.Hk && N.push('(primary_category_id='.concat(a, ' OR categories.id=').concat(a, ')'));
+            let O = N.join(' AND ');
             try {
-                let s = S.search(t, {
-                        filters: N,
-                        optionalFilters: ['preferred_locale: '.concat(a)],
-                        length: I,
-                        offset: _,
-                        restrictSearchableAttributes: ['name', 'description', 'keywords', 'categories.name', 'categories.name_localizations.'.concat(a), 'primary_category.name', 'primary_category.name_localizations.'.concat(a), 'vanity_url_code']
+                let s = g.search(t, {
+                        filters: O,
+                        optionalFilters: ['preferred_locale: '.concat(_)],
+                        length: m,
+                        offset: I,
+                        restrictSearchableAttributes: ['name', 'description', 'keywords', 'categories.name', 'categories.name_localizations.'.concat(_), 'primary_category.name', 'primary_category.name_localizations.'.concat(_), 'vanity_url_code']
                     }),
                     c = o.tn.get({
                         url: h.ANM.GUILD_DISCOVERY_VALID_TERM,
@@ -70,15 +71,15 @@ n.d(t, {
                         let [
                             { hits: n, nbHits: r },
                             {
-                                body: { valid: a }
+                                body: { valid: i }
                             }
                         ] = e;
                         u.Z.dispatch({
                             type: 'GUILD_DISCOVERY_SEARCH_FETCH_SUCCESS',
                             section: h.Lcj.SEARCH,
                             query: t,
-                            categoryId: i,
-                            guilds: a
+                            categoryId: a,
+                            guilds: i
                                 ? [
                                       ...n.map((e) => ({
                                           ...e,
@@ -86,40 +87,52 @@ n.d(t, {
                                       }))
                                   ]
                                 : [],
-                            offset: _,
-                            limit: I,
-                            total: a ? Math.min(r, p.lA) : 0
+                            offset: I,
+                            limit: m,
+                            total: i ? Math.min(r, p.lA) : 0
                         });
                     })
-                    .catch((a) => {
-                        if (a.body.retry_after > 0 && S === d.ZP.getSearchIndex())
-                            setTimeout(() => {
-                                e(t, n, r);
-                            }, a.body.retry_after * E.Z.Millis.SECOND);
-                        else {
-                            let e = new l.Hx(a);
-                            f.m9({
-                                categoryId: i,
-                                statusCode: e.status
-                            }),
-                                u.Z.dispatch({
-                                    type: 'GUILD_DISCOVERY_SEARCH_FETCH_FAILURE',
-                                    section: h.Lcj.SEARCH,
-                                    categoryId: i,
-                                    query: t
-                                });
-                        }
+                    .catch((s) => {
+                        var o;
+                        let c = new l.Hx(s),
+                            _ = null !== (o = null == i ? void 0 : i.isRetry) && void 0 !== o && o;
+                        s.body.retry_after > 0 && g === d.ZP.getSearchIndex()
+                            ? (f.m9({
+                                  categoryId: a,
+                                  error: c,
+                                  willRequestRetry: !0,
+                                  isRequestRetry: _
+                              }),
+                              setTimeout(() => {
+                                  e(t, n, r, { isRetry: !0 });
+                              }, s.body.retry_after * E.Z.Millis.SECOND))
+                            : (f.m9({
+                                  categoryId: a,
+                                  error: c,
+                                  willRequestRetry: !1,
+                                  isRequestRetry: _
+                              }),
+                              u.Z.dispatch({
+                                  type: 'GUILD_DISCOVERY_SEARCH_FETCH_FAILURE',
+                                  section: h.Lcj.SEARCH,
+                                  categoryId: a,
+                                  query: t
+                              }));
                     });
-            } catch (n) {
-                let e = new l.Hx(n);
+            } catch (r) {
+                var R;
+                let e = new l.Hx(r),
+                    n = null !== (R = null == i ? void 0 : i.isRetry) && void 0 !== R && R;
                 f.m9({
-                    categoryId: i,
-                    statusCode: e.status
+                    categoryId: a,
+                    error: e,
+                    willRequestRetry: !1,
+                    isRequestRetry: n
                 }),
                     u.Z.dispatch({
                         type: 'GUILD_DISCOVERY_SEARCH_FETCH_FAILURE',
                         section: h.Lcj.SEARCH,
-                        categoryId: i,
+                        categoryId: a,
                         query: t
                     });
             }

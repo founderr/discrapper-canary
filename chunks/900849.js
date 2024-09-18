@@ -188,10 +188,13 @@ function N(e, t, n, r) {
     });
 }
 function O(e) {
-    let { categoryId: t, statusCode: n } = e;
+    let { categoryId: t, error: n, willRequestRetry: r, isRequestRetry: i } = e;
     E.default.track(f.rMx.GUILD_DISCOVERY_SEARCH_FAILED, {
         category_id: t,
-        status_code: n
+        request_status: n.status,
+        request_error_code: n.code,
+        will_request_retry: r,
+        is_request_retry: i
     });
 }
 function R(e) {
