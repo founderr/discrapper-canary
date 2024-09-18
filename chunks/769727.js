@@ -91,15 +91,24 @@ let N = {
                 return (0, s.jsxs)('div', {
                     className: C.discoveryContainer,
                     children: [
-                        (0, s.jsx)('div', {
+                        (0, s.jsxs)('div', {
                             className: C.toolbar,
-                            children: (0, s.jsx)(I.Z, {})
+                            children: [
+                                (0, s.jsx)(l.animated.div, {
+                                    className: C.toolbarBackground,
+                                    style: {
+                                        opacity: null == a ? void 0 : a.to([0, 100], [0, 1])
+                                    }
+                                }),
+                                (0, s.jsx)(I.Z, {})
+                            ]
                         }),
                         (0, s.jsx)('div', {
                             className: C.content,
                             children: (0, s.jsx)(T.Z, {
                                 inGlobalDiscovery: !1,
                                 width: n,
+                                onScroll: u,
                                 variant: (0, S.s)(t),
                                 withAdminContent: i
                             })
