@@ -1,12 +1,12 @@
 n.d(t, {
     ZP: function () {
-        return C;
+        return S;
     },
     _1: function () {
-        return N;
+        return I;
     },
     jd: function () {
-        return O;
+        return m;
     }
 }),
     n(627341);
@@ -18,208 +18,125 @@ var i = n(120356),
     o = n(442837),
     l = n(481060),
     u = n(951394),
-    c = n(907040),
-    d = n(210887),
-    _ = n(314897),
-    E = n(823379),
-    f = n(51144),
-    h = n(785717),
-    p = n(837411),
-    I = n(448197),
-    m = n(698305),
-    T = n(228168),
-    S = n(185923),
-    g = n(689938),
-    A = n(374729);
-let N = 2700,
-    O = '> -# *',
-    R = (e) => {
-        let { emoji: t, username: n, sourceType: r, sourceDetails: i } = e,
-            a = ':'.concat(t.name, ':');
-        switch (r) {
-            case T.n_.ACTIVITY:
-                let s = g.Z.Messages.USER_PROFILE_REACTED_TO_ACTIVITY.format({ username: n });
-                return ''.concat(O).concat(s, '*\n').concat(a);
-            case T.n_.AVATAR:
-                let o = g.Z.Messages.USER_PROFILE_REACTED_TO_AVATAR.format({ username: n });
-                return ''.concat(O).concat(o, '*\n').concat(a);
-            case T.n_.STATUS:
-                let l = g.Z.Messages.USER_PROFILE_REACTED_TO_STATUS.format({ username: n });
-                return null != i ? ''.concat(O).concat(l, '*').concat('\n > '.concat(i), '\n').concat(a) : ''.concat(O).concat(l, '*\n').concat(a);
-            default:
-                (0, E.vE)(r);
-        }
-    },
-    v = (e, t) =>
+    c = n(314897),
+    d = n(785717),
+    _ = n(837411),
+    E = n(448197),
+    f = n(228168),
+    h = n(689938),
+    p = n(374729);
+let I = 2700,
+    m = '> -# *',
+    T = (e, t) =>
         (0, s.EQ)({
             interactionType: e,
             sourceType: t
         })
             .with(
                 {
-                    interactionType: T.P.REPLY,
-                    sourceType: T.n_.AVATAR
+                    interactionType: f.P.REPLY,
+                    sourceType: f.n_.AVATAR
                 },
-                () => g.Z.Messages.USER_PROFILE_REPLY_TO_AVATAR_A11Y_LABEL
+                () => h.Z.Messages.USER_PROFILE_REPLY_TO_AVATAR_A11Y_LABEL
             )
             .with(
                 {
-                    interactionType: T.P.REACT,
-                    sourceType: T.n_.AVATAR
+                    interactionType: f.P.REACT,
+                    sourceType: f.n_.AVATAR
                 },
-                () => g.Z.Messages.USER_PROFILE_REACT_TO_AVATAR_A11Y_LABEL
+                () => h.Z.Messages.USER_PROFILE_REACT_TO_AVATAR_A11Y_LABEL
             )
             .with(
                 {
-                    interactionType: T.P.REPLY,
-                    sourceType: T.n_.STATUS
+                    interactionType: f.P.REPLY,
+                    sourceType: f.n_.STATUS
                 },
-                () => g.Z.Messages.USER_PROFILE_REPLY_TO_STATUS_A11Y_LABEL
+                () => h.Z.Messages.USER_PROFILE_REPLY_TO_STATUS_A11Y_LABEL
             )
             .with(
                 {
-                    interactionType: T.P.REACT,
-                    sourceType: T.n_.STATUS
+                    interactionType: f.P.REACT,
+                    sourceType: f.n_.STATUS
                 },
-                () => g.Z.Messages.USER_PROFILE_REACT_TO_STATUS_A11Y_LABEL
+                () => h.Z.Messages.USER_PROFILE_REACT_TO_STATUS_A11Y_LABEL
             )
             .with(
                 {
-                    interactionType: T.P.REPLY,
-                    sourceType: T.n_.ACTIVITY
+                    interactionType: f.P.REPLY,
+                    sourceType: f.n_.ACTIVITY
                 },
-                () => g.Z.Messages.USER_PROFILE_REPLY_TO_ACTIVITY_A11Y_LABEL
+                () => h.Z.Messages.USER_PROFILE_REPLY_TO_ACTIVITY_A11Y_LABEL
             )
             .with(
                 {
-                    interactionType: T.P.REACT,
-                    sourceType: T.n_.ACTIVITY
+                    interactionType: f.P.REACT,
+                    sourceType: f.n_.ACTIVITY
                 },
-                () => g.Z.Messages.USER_PROFILE_REACT_TO_ACTIVITY_A11Y_LABEL
+                () => h.Z.Messages.USER_PROFILE_REACT_TO_ACTIVITY_A11Y_LABEL
             )
             .exhaustive();
-function C(e) {
-    let { user: t, channel: n, sourceType: i, sourceDetails: s, isVisible: E, isExpandable: O, onInteraction: C, setInteractionToastShown: y, setInteractionTypeSent: L, reactButtonRef: D, replyButtonRef: b, onClose: M } = e,
-        { trackUserProfileAction: P } = (0, h.KZ)(),
-        U = (0, o.e7)([d.Z], () => d.Z.theme),
-        { sendReact: w, pressReact: x, pressReply: G } = (0, I.Q)(i),
-        k = (0, o.e7)([_.default], () => _.default.getId() === t.id),
-        B = (0, p.Z)(t.id);
-    if (t.bot || k || !B) return null;
-    let F = async (e) => {
-        if (null == e) return;
-        P({ action: w });
-        let n = R({
-            emoji: e,
-            username: f.ZP.getName(t),
-            sourceType: i,
-            sourceDetails: s
-        });
-        L(null), y(!0);
-        try {
-            await (0, m.Z)({
-                userId: t.id,
-                content: n,
-                location: 'UserProfileReactReplyBar',
-                openChannel: !1,
-                whenReady: !1
-            });
-        } catch (e) {}
-        L(T.P.REACT),
-            setTimeout(() => {
-                y(!1);
-            }, N);
-    };
-    return (0, r.jsxs)(u.ZP, {
-        className: a()(A.popover, {
-            [A.visible]: E,
-            [A.expandable]: O,
-            [A.statusPopover]: i === T.n_.STATUS,
-            [A.avatarPopover]: i === T.n_.AVATAR
-        }),
-        children: [
-            (0, r.jsx)(l.TooltipContainer, {
-                text: g.Z.Messages.USER_PROFILE_SEND_REACTION,
-                shouldShow: E,
-                delay: 0,
-                'aria-label': !1,
-                children: (0, r.jsx)(l.Popout, {
-                    onRequestClose: () => {
-                        null == C ||
-                            C({
-                                interactionType: null,
-                                interactionSourceType: null
-                            });
-                    },
-                    onRequestOpen: () => {
-                        null == C ||
-                            C({
-                                interactionType: T.P.REACT,
-                                interactionSourceType: i
-                            });
-                    },
-                    renderPopout: (e) => {
-                        let { closePopout: t } = e;
-                        return (0, r.jsx)(l.ThemeProvider, {
-                            theme: U,
-                            children: (e) =>
-                                (0, r.jsx)(c.Z, {
-                                    guildId: null == n ? void 0 : n.guild_id,
-                                    closePopout: t,
-                                    onSelectEmoji: async (e, n) => {
-                                        await F(e), n && (t(), null == M || M());
-                                    },
-                                    pickerIntention: S.Hz.PROFILE,
-                                    channel: n,
-                                    className: e,
-                                    headerClassName: e,
-                                    listHeaderClassName: e,
-                                    categoryListClassName: e
-                                })
-                        });
-                    },
-                    position: 'left',
-                    animation: l.Popout.Animation.NONE,
-                    align: 'top',
-                    children: (e) =>
-                        (0, r.jsx)(u.zx, {
-                            innerRef: D,
-                            ...e,
-                            onClick: (t) => {
-                                P({ action: x }), e.onClick(t);
-                            },
-                            className: a()(A.button, A.left),
-                            'aria-label': v(T.P.REACT, i),
-                            children: (0, r.jsx)(l.ReactionIcon, {
-                                size: 'xs',
-                                className: A.icon
-                            })
-                        })
-                })
-            }),
-            (0, r.jsx)(l.TooltipContainer, {
-                text: g.Z.Messages.USER_PROFILE_REPLY,
-                shouldShow: E,
-                delay: 0,
-                'aria-label': !1,
-                children: (0, r.jsx)(u.zx, {
-                    innerRef: b,
-                    onClick: () => {
-                        P({ action: G }),
-                            null == C ||
-                                C({
-                                    interactionType: T.P.REPLY,
-                                    interactionSourceType: i
-                                });
-                    },
-                    className: a()(A.button, A.right),
-                    'aria-label': v(T.P.REPLY, i),
-                    children: (0, r.jsx)(l.ArrowAngleLeftUpIcon, {
-                        size: 'xs',
-                        className: A.icon
-                    })
-                })
-            })
-        ]
-    });
+function S(e) {
+    let { user: t, sourceType: n, isVisible: i, isExpandable: s, onInteraction: I, reactButtonRef: m, replyButtonRef: S } = e,
+        { trackUserProfileAction: g } = (0, d.KZ)(),
+        { pressReact: A, pressReply: N } = (0, E.Q)(n),
+        O = (0, o.e7)([c.default], () => c.default.getId() === t.id),
+        R = (0, _.Z)(t.id);
+    return t.bot || O || !R
+        ? null
+        : (0, r.jsxs)(u.ZP, {
+              className: a()(p.popover, {
+                  [p.visible]: i,
+                  [p.expandable]: s,
+                  [p.statusPopover]: n === f.n_.STATUS,
+                  [p.avatarPopover]: n === f.n_.AVATAR
+              }),
+              children: [
+                  (0, r.jsx)(l.TooltipContainer, {
+                      text: h.Z.Messages.USER_PROFILE_SEND_REACTION,
+                      shouldShow: i,
+                      delay: 0,
+                      'aria-label': !1,
+                      children: (0, r.jsx)(u.zx, {
+                          innerRef: m,
+                          onClick: () => {
+                              g({ action: A }),
+                                  null == I ||
+                                      I({
+                                          interactionType: f.P.REACT,
+                                          interactionSourceType: n
+                                      });
+                          },
+                          className: a()(p.button, p.left),
+                          'aria-label': T(f.P.REACT, n),
+                          children: (0, r.jsx)(l.ReactionIcon, {
+                              size: 'xs',
+                              className: p.icon
+                          })
+                      })
+                  }),
+                  (0, r.jsx)(l.TooltipContainer, {
+                      text: h.Z.Messages.USER_PROFILE_REPLY,
+                      shouldShow: i,
+                      delay: 0,
+                      'aria-label': !1,
+                      children: (0, r.jsx)(u.zx, {
+                          innerRef: S,
+                          onClick: () => {
+                              g({ action: N }),
+                                  null == I ||
+                                      I({
+                                          interactionType: f.P.REPLY,
+                                          interactionSourceType: n
+                                      });
+                          },
+                          className: a()(p.button, p.right),
+                          'aria-label': T(f.P.REPLY, n),
+                          children: (0, r.jsx)(l.ArrowAngleLeftUpIcon, {
+                              size: 'xs',
+                              className: p.icon
+                          })
+                      })
+                  })
+              ]
+          });
 }

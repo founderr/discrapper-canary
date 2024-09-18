@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return I;
     }
 }),
     n(47120);
@@ -9,100 +9,95 @@ var r = n(735250),
     a = n(120356),
     s = n.n(a),
     o = n(481060),
-    l = n(899007),
-    u = n(825801),
-    c = n(215105),
-    d = n(429974),
-    _ = n(228168),
-    E = n(8621);
-function f(e) {
-    let { user: t, displayProfile: n, guildId: a, channelId: l, profileType: f, interactionType: h, interactionSource: p, onInteraction: I, setInteractionToastShown: m, setInteractionTypeSent: T, children: S } = e,
-        g = f === _.y0.FULL_SIZE ? (0, d.z)(t.id, null == n ? void 0 : n.guildId) : void 0,
-        A = i.useRef(null),
-        N = i.useRef(null),
-        O = h === _.P.REPLY && p === _.n_.AVATAR,
-        [R, v] = i.useState(!1),
-        C = () => {
-            v(!0);
+    l = n(214135),
+    u = n(899007),
+    c = n(511341),
+    d = n(825801),
+    _ = n(215105),
+    E = n(429974),
+    f = n(228168),
+    h = n(8621);
+function p(e) {
+    let { user: t, displayProfile: n, guildId: a, channelId: u, profileType: p, interactionType: I, interactionSource: m, onInteraction: T, setInteractionToastShown: S, setInteractionTypeSent: g, children: A } = e,
+        N = p === f.y0.FULL_SIZE ? (0, E.z)(t.id, null == n ? void 0 : n.guildId) : void 0,
+        O = i.useRef(null),
+        R = i.useRef(null),
+        v = m === f.n_.AVATAR && I === f.P.REACT,
+        C = m === f.n_.AVATAR && I === f.P.REPLY,
+        y = v || C,
+        [L, D] = i.useState(!1),
+        b = () => {
+            D(!0);
         },
-        y = () => {
-            v(!1);
+        M = () => {
+            D(!1);
         },
-        L = () => {
-            var e;
-            null === (e = N.current) || void 0 === e || e.focus();
-        },
-        D = s()(E.avatar, {
-            [E.hoisted]: p === _.n_.AVATAR || p === _.n_.STATUS,
-            [E.biteSize]: f === _.y0.BITE_SIZE,
-            [E.fullSize]: f === _.y0.FULL_SIZE,
-            [E.panel]: f === _.y0.PANEL
+        P = s()(h.avatar, {
+            [h.hoisted]: m === f.n_.AVATAR || m === f.n_.STATUS,
+            [h.biteSize]: p === f.y0.BITE_SIZE,
+            [h.fullSize]: p === f.y0.FULL_SIZE,
+            [h.panel]: p === f.y0.PANEL
         });
     return (0, r.jsxs)('div', {
-        className: D,
-        onMouseOver: C,
-        onMouseLeave: y,
+        className: P,
+        onMouseOver: b,
+        onMouseLeave: M,
         onFocus: (e) => {
-            (e.target === A.current || e.target === N.current) && C();
+            (e.target === O.current || e.target === R.current) && b();
         },
         onBlur: (e) => {
-            e.relatedTarget !== A.current && e.relatedTarget !== N.current && y();
+            e.relatedTarget !== O.current && e.relatedTarget !== R.current && M();
         },
         children: [
             (0, r.jsx)(o.Popout, {
                 renderPopout: (e) => {
-                    let { setPopoutRef: n } = e;
-                    return (0, r.jsx)(c.Z, {
+                    let { setPopoutRef: n } = e,
+                        i = v ? c.Z : _.Z;
+                    return (0, r.jsx)(i, {
                         user: t,
                         guildId: a,
-                        channelId: l,
-                        profileType: f,
-                        sourceType: _.n_.AVATAR,
-                        modalKey: g,
+                        channelId: u,
+                        profileType: p,
+                        sourceType: f.n_.AVATAR,
+                        modalKey: N,
                         setPopoutRef: n,
-                        onInteraction: I,
-                        setInteractionToastShown: m,
-                        setInteractionTypeSent: T,
-                        onClose: L
+                        onInteraction: T,
+                        setInteractionToastShown: S,
+                        setInteractionTypeSent: g
                     });
                 },
                 onRequestClose: () =>
-                    null == I
+                    null == T
                         ? void 0
-                        : I({
+                        : T({
                               interactionType: null,
                               interactionSourceType: null
                           }),
-                animationPosition: 'top',
-                position: 'bottom',
-                align: f === _.y0.FULL_SIZE ? 'center' : 'left',
-                shouldShow: O,
-                children: S
+                shouldShow: y,
+                ...(0, l.Z)(I, p),
+                children: A
             }),
-            (0, r.jsx)(u.ZP, {
+            (0, r.jsx)(d.ZP, {
                 user: t,
-                sourceType: _.n_.AVATAR,
-                isVisible: R && null == h && null == p,
+                sourceType: f.n_.AVATAR,
+                isVisible: L && !y,
                 isExpandable: !1,
-                onInteraction: I,
-                setInteractionToastShown: m,
-                setInteractionTypeSent: T,
-                reactButtonRef: A,
-                replyButtonRef: N,
-                onClose: y
+                onInteraction: T,
+                reactButtonRef: O,
+                replyButtonRef: R
             })
         ]
     });
 }
-function h(e) {
+function I(e) {
     let { animateOnHover: t, onOpenProfile: n, ...i } = e;
-    return (0, r.jsx)(f, {
+    return (0, r.jsx)(p, {
         ...i,
         children: () =>
-            (0, r.jsx)(l.Z, {
+            (0, r.jsx)(u.Z, {
                 animateOnHover: t,
                 onOpenProfile: n,
-                className: E.withReactReply,
+                className: h.withReactReply,
                 ...i
             })
     });
