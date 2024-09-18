@@ -32,8 +32,8 @@ var i,
     h = n(427679),
     m = n(488131),
     v = n(695346),
-    p = n(592125),
-    D = n(430824),
+    D = n(592125),
+    p = n(430824),
     R = n(292959),
     M = n(496675),
     L = n(699516),
@@ -51,8 +51,8 @@ var i,
     B = n(51144),
     W = n(981631),
     x = n(765305),
-    q = n(689938);
-function z(e, t, n) {
+    z = n(689938);
+function q(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -85,7 +85,7 @@ let X = 'message1',
             null != t && (delete this._channels[e], t.forEach((e) => e.close()));
         }
         constructor() {
-            z(this, '_channels', {});
+            q(this, '_channels', {});
         }
     })();
 function en() {
@@ -96,10 +96,10 @@ function ei(e) {
 }
 class el extends (i = s.ZP.Store) {
     initialize() {
-        this.waitFor(G.default, p.Z, R.Z, D.Z, h.Z, L.Z, M.Z, F.Z, g.Z);
+        this.waitFor(G.default, D.Z, R.Z, p.Z, h.Z, L.Z, M.Z, F.Z, g.Z);
     }
 }
-z(el, 'displayName', 'NotificationStore'),
+q(el, 'displayName', 'NotificationStore'),
     new el(
         a.Z,
         __OVERLAY__
@@ -111,8 +111,8 @@ z(el, 'displayName', 'NotificationStore'),
                           !V.isPlatformEmbedded &&
                           k.Z.showNotification(
                               n(185672),
-                              q.Z.Messages.NOTIFICATION_TITLE_DISCORD,
-                              q.Z.Messages.BROWSER_NOTIFICATIONS_ENABLED_BODY,
+                              z.Z.Messages.NOTIFICATION_TITLE_DISCORD,
+                              z.Z.Messages.BROWSER_NOTIFICATIONS_ENABLED_BODY,
                               { notif_type: 'NOTIFICATIONS_SET_PERMISSION_STATE' },
                               {
                                   omitViewTracking: !0,
@@ -139,7 +139,7 @@ z(el, 'displayName', 'NotificationStore'),
                       var t, i, l, s;
                       let { channelId: o, message: u, optimistic: d } = e;
                       if (d) return !1;
-                      let c = p.Z.getChannel(o),
+                      let c = D.Z.getChannel(o),
                           T = G.default.getUser(null === (t = u.author) || void 0 === t ? void 0 : t.id),
                           I = G.default.getCurrentUser();
                       if (null == c || null == T) return !1;
@@ -152,8 +152,8 @@ z(el, 'displayName', 'NotificationStore'),
                           m = Z && h && A ? (null !== (s = (0, C.bb)(null !== (l = c.guild_id) && void 0 !== l ? l : W.aIL, o)) && void 0 !== s ? s : (0, C.iD)(c.guild_id)) : void 0;
                       if ((g && (A && Y.GN('message3', 0.4, void 0, m), !Q)) || !f) return !1;
                       let v = n(808506).Z,
-                          D = n(237997).Z;
-                      if (null != v.getFocusedPID() && D.getTextChatNotificationMode() === W.Ypu.ENABLED && !P.Z.disableNotifications) return !1;
+                          p = n(237997).Z;
+                      if (null != v.getFocusedPID() && p.getTextChatNotificationMode() === W.Ypu.ENABLED && !P.Z.disableNotifications) return !1;
                       let { icon: M, title: L, body: U } = (0, b.Xi)(c, u, T);
                       if (
                           (a.Z.dispatch({
@@ -211,8 +211,8 @@ z(el, 'displayName', 'NotificationStore'),
                           let i = B.ZP.getName(e),
                               l = n.name,
                               s = e.getAvatarURL(void 0, 128),
-                              o = q.Z.Messages.NOTIFICATION_TITLE_START_GAME,
-                              a = q.Z.Messages.NOTIFICATION_BODY_START_GAME.format({
+                              o = z.Z.Messages.NOTIFICATION_TITLE_START_GAME,
+                              a = z.Z.Messages.NOTIFICATION_BODY_START_GAME.format({
                                   username: i,
                                   gameName: l
                               });
@@ -250,8 +250,8 @@ z(el, 'displayName', 'NotificationStore'),
                       if (null == i) return;
                       let { channelId: l, guildId: s, suppress: o, requestToSpeakTimestamp: a } = i;
                       if (null == l || null == s || !(!o && null != a)) return;
-                      let u = D.Z.getGuild(s),
-                          r = p.Z.getChannel(l),
+                      let u = p.Z.getGuild(s),
+                          r = D.Z.getChannel(l),
                           d = h.Z.getStageInstanceByChannel(l);
                       null != u &&
                           null != r &&
@@ -259,7 +259,7 @@ z(el, 'displayName', 'NotificationStore'),
                           k.Z.showNotification(
                               u.getIconURL(128),
                               r.name,
-                              q.Z.Messages.STAGE_SPEAK_INVITE_PUSH_NOTIFICATION.format({
+                              z.Z.Messages.STAGE_SPEAK_INVITE_PUSH_NOTIFICATION.format({
                                   channelName: (0, T.F6)(r, G.default, L.Z),
                                   channelTopic: null == d ? void 0 : d.topic
                               }),
@@ -271,15 +271,15 @@ z(el, 'displayName', 'NotificationStore'),
                       let { instance: t } = e;
                       if (en() || !t.send_start_notification || ei(t.channel_id)) return !1;
                       let n = G.default.getCurrentUser(),
-                          i = D.Z.getGuild(t.guild_id),
-                          s = p.Z.getChannel(t.channel_id),
+                          i = p.Z.getGuild(t.guild_id),
+                          s = D.Z.getChannel(t.channel_id),
                           o = G.default.getUser(t.host_id);
                       if (null == n || null == s || null == i || null == o || !(0, b.LL)(n, o, s) || !M.Z.can(l.$e(W.Plq.CONNECT, W.Plq.VIEW_CHANNEL), s) || j.has(t.id)) return !1;
                       j.add(t.id),
                           k.Z.showNotification(
                               i.getIconURL(128),
-                              q.Z.Messages.STAGE_START_PUSH_NOTIFICATION_TITLE.format({ guildName: i.name }),
-                              q.Z.Messages.STAGE_START_PUSH_NOTIFICATION_BODY.format({
+                              z.Z.Messages.STAGE_START_PUSH_NOTIFICATION_TITLE.format({ guildName: i.name }),
+                              z.Z.Messages.STAGE_START_PUSH_NOTIFICATION_BODY.format({
                                   username: w.ZP.getName(i.id, s.id, o),
                                   topic: t.topic
                               }),
@@ -309,14 +309,14 @@ z(el, 'displayName', 'NotificationStore'),
                                     let t = e.channel_id;
                                     if (null == t || ei(t)) return !1;
                                     let n = G.default.getCurrentUser(),
-                                        i = D.Z.getGuild(e.guild_id),
-                                        s = p.Z.getChannel(e.channel_id),
+                                        i = p.Z.getGuild(e.guild_id),
+                                        s = D.Z.getChannel(e.channel_id),
                                         o = G.default.getUser(e.host_id);
                                     if (null == n || null == s || null == i || null == o || !M.Z.can(l.$e(W.Plq.CONNECT, W.Plq.VIEW_CHANNEL), s)) return !1;
                                     k.Z.showNotification(
                                         i.getIconURL(128),
-                                        q.Z.Messages.GUILD_SCHEDULED_EVENT_STAGE_START_TITLE.format({ guildName: i.name }),
-                                        q.Z.Messages.GUILD_SCHEDULED_EVENT_STAGE_START_BODY.format({
+                                        z.Z.Messages.GUILD_SCHEDULED_EVENT_STAGE_START_TITLE.format({ guildName: i.name }),
+                                        z.Z.Messages.GUILD_SCHEDULED_EVENT_STAGE_START_BODY.format({
                                             topic: e.name,
                                             username: w.ZP.getName(i.id, s.id, o)
                                         }),
@@ -336,12 +336,12 @@ z(el, 'displayName', 'NotificationStore'),
                                 !(function (e) {
                                     if (en()) return !1;
                                     let t = G.default.getCurrentUser(),
-                                        n = D.Z.getGuild(e.guild_id);
+                                        n = p.Z.getGuild(e.guild_id);
                                     if (null == t || null == n) return !1;
                                     k.Z.showNotification(
                                         n.getIconURL(128),
-                                        q.Z.Messages.GUILD_SCHEDULED_EVENT_STAGE_START_TITLE.format({ guildName: n.name }),
-                                        q.Z.Messages.GUILD_SCHEDULED_EVENT_EXTERNAL_START_BODY.format({ topic: e.name }),
+                                        z.Z.Messages.GUILD_SCHEDULED_EVENT_STAGE_START_TITLE.format({ guildName: n.name }),
+                                        z.Z.Messages.GUILD_SCHEDULED_EVENT_EXTERNAL_START_BODY.format({ topic: e.name }),
                                         {
                                             notif_type: 'GUILD_SCHEDULED_EVENT_UPDATE',
                                             guild_id: n.id
@@ -358,17 +358,17 @@ z(el, 'displayName', 'NotificationStore'),
                       var t;
                       let { channel: n, isNewlyCreated: i } = e;
                       if (en()) return !1;
-                      let l = p.Z.getChannel(n.parent_id);
+                      let l = D.Z.getChannel(n.parent_id);
                       if (null == l || !W.TPd.GUILD_THREADS_ONLY.has(l.type) || !i || !(0, b.FI)(n, l, !Q)) return !1;
                       let { author: s, user: o } = (0, I.MC)(n);
                       if (null == o) return !1;
-                      let a = D.Z.getGuild(l.guild_id);
+                      let a = p.Z.getGuild(l.guild_id);
                       if (null == a) return !1;
-                      let u = q.Z.Messages.FORUM_CHANNEL_THREAD_CREATED_PUSH_TITLE_MOBILE.format({
+                      let u = z.Z.Messages.FORUM_CHANNEL_THREAD_CREATED_PUSH_TITLE_MOBILE.format({
                               channelName: l.name,
                               guildName: a.name
                           }),
-                          r = q.Z.Messages.FORUM_CHANNEL_THREAD_CREATED_PUSH_BODY_MOBILE.format({
+                          r = z.Z.Messages.FORUM_CHANNEL_THREAD_CREATED_PUSH_BODY_MOBILE.format({
                               channelName: n.name,
                               userUsername: null !== (t = null == s ? void 0 : s.nick) && void 0 !== t ? t : null == o ? void 0 : o.username
                           }),
@@ -420,8 +420,8 @@ z(el, 'displayName', 'NotificationStore'),
                           !!i &&
                               (k.Z.showNotification(
                                   n(95045),
-                                  q.Z.Messages.NOTIFICATION_TITLE_DISCORD,
-                                  q.Z.Messages.NOTIFICATION_BODY_DISCORD_HIDDEN,
+                                  z.Z.Messages.NOTIFICATION_TITLE_DISCORD,
+                                  z.Z.Messages.NOTIFICATION_BODY_DISCORD_HIDDEN,
                                   { notif_type: 'WINDOW_HIDDEN' },
                                   {
                                       overrideStreamerMode: !0,
