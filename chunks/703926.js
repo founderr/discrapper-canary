@@ -27,7 +27,8 @@ let f = {
         [s.Cj.SEASONAL_CAKE]: c,
         [s.Cj.SEASONAL_CHEST]: u,
         [s.Cj.SEASONAL_COFFEE]: d,
-        [s.Cj.SEASONAL_STANDARD_BOX]: o
+        [s.Cj.SEASONAL_STANDARD_BOX]: o,
+        [s.Cj.NITROWEEN_STANDARD]: d
     },
     E = a.forwardRef(function (e, n) {
         let { isSelected: t, giftStyle: a, setSelectedGiftStyle: s, onFocus: o, onBlur: c } = e;
