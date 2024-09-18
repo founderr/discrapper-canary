@@ -324,7 +324,7 @@ R(ed, 'displayName', 'GravityStore'),
     R(ed, 'persistKey', 'GravityStore'),
     (t.Z = new ed(r.Z, {
         POST_CONNECTION_OPEN: function () {
-            if (O.length > 0) {
+            if (O.length > 0 && (!Y || 0 === H)) {
                 let [e, t] = en(O);
                 (q = e), (Q = t), ee(), (X = 0), (0, v.em)([...q, ...Q], 0, N.xy);
             }
