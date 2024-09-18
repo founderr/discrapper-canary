@@ -45,6 +45,7 @@ let f = (0, u.Z)(
             game: 'none',
             completedNux: !1,
             userUpsellScreen: 'user_upsell',
+            loadingGameApplication: !1,
             savedGuildIds: [],
             selectedGames: [],
             selectedPlaystyle: null,
