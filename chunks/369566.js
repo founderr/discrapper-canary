@@ -1,52 +1,54 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return T;
     }
 }),
     n(47120);
 var r = n(470079),
     i = n(392711),
     a = n(442837),
-    s = n(353647),
-    o = n(26033),
-    l = n(180335),
-    u = n(561308),
-    c = n(199902),
-    d = n(314897),
-    _ = n(158776),
-    E = n(27144),
-    f = n(579264),
-    h = n(981631);
-let p = [],
-    I = [];
-function m(e) {
-    let { pastActivityEnabled: t } = (0, E.z)({
+    s = n(750881),
+    o = n(353647),
+    l = n(26033),
+    u = n(180335),
+    c = n(561308),
+    d = n(199902),
+    _ = n(314897),
+    E = n(158776),
+    f = n(27144),
+    h = n(579264),
+    p = n(981631);
+let I = [],
+    m = [];
+function T(e) {
+    let { pastActivityEnabled: t } = (0, f.z)({
             location: 'useUserProfileActivity',
             autoTrackExposure: !0
         }),
-        n = (0, a.e7)([d.default], () => d.default.getId() === e),
-        m = t || n,
-        T = (0, a.e7)([_.Z], () => _.Z.getActivities(e)),
-        S = (0, a.e7)([s.Z], () => (m ? s.Z.getUserOutbox(e) : void 0)),
-        g = (0, a.e7)([c.Z], () => c.Z.getAnyStreamForUser(e)),
-        { live: A, recent: N } = (0, r.useMemo)(() => {
+        n = (0, a.e7)([_.default], () => _.default.getId() === e),
+        T = t || n,
+        S = (0, a.e7)([E.Z], () => E.Z.getActivities(e)),
+        g = (0, a.e7)([o.Z], () => (T ? o.Z.getUserOutbox(e) : void 0)),
+        A = (0, s.aK)('use-user-profile-activity'),
+        N = (0, a.e7)([d.Z], () => (A ? d.Z.getAnyDiscoverableStreamForUser(e) : d.Z.getAnyStreamForUser(e)), [A, e]),
+        { live: O, recent: R } = (0, r.useMemo)(() => {
             let e = (0, i.uniqWith)(
-                    T.filter((e) => {
+                    S.filter((e) => {
                         let { type: t } = e;
-                        return t !== h.IIU.CUSTOM_STATUS;
+                        return t !== p.IIU.CUSTOM_STATUS;
                     }),
                     (e, t) => null != e.application_id && null != t.application_id && e.application_id === t.application_id
                 ),
-                t = null == S ? void 0 : S.entries.filter((t) => ((0, o.y0)(t) ? !e.some((e) => null != e && (0, l.RL)(t, e)) : (0, f.Z)(t) && !(0, u.kr)(t)));
+                t = null == g ? void 0 : g.entries.filter((t) => ((0, l.y0)(t) ? !e.some((e) => null != e && (0, u.RL)(t, e)) : (0, h.Z)(t) && !(0, c.kr)(t)));
             return {
-                live: 0 === e.length ? p : e,
-                recent: null == t || 0 === t.length ? I : t
+                live: 0 === e.length ? I : e,
+                recent: null == t || 0 === t.length ? m : t
             };
-        }, [T, S]);
+        }, [S, g]);
     return {
-        live: A,
-        recent: N,
-        stream: g,
-        outbox: S
+        live: O,
+        recent: R,
+        stream: N,
+        outbox: g
     };
 }
