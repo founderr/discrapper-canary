@@ -27,8 +27,8 @@ var i = t(374470),
     Z = t(449751),
     S = t(749339),
     A = t(601184),
-    T = t(6148),
-    v = t(519110),
+    v = t(6148),
+    T = t(519110),
     R = t(759875),
     h = t(168405),
     O = t(536639),
@@ -79,14 +79,14 @@ function w(e) {
     });
 }
 function k(e) {
-    let { message: n, channel: t, mediaItem: i, textSelection: r, favoriteableType: w, favoriteableId: k, favoriteableName: F, itemHref: V, itemSrc: z, itemSafeSrc: K, itemTextContent: X, canReport: H, onHeightUpdate: Y, onSelect: B, onClose: W, navId: q, ariaLabel: J, shouldHideMediaOptions: $ = !1 } = e,
+    let { message: n, channel: t, mediaItem: i, textSelection: r, favoriteableType: w, favoriteableId: k, favoriteableName: F, itemHref: V, itemSrc: K, itemSafeSrc: z, itemTextContent: X, canReport: H, onHeightUpdate: Y, onSelect: B, onClose: W, navId: J, ariaLabel: q, shouldHideMediaOptions: $ = !1 } = e,
         Q = (0, u.Z)(r),
         ee = (0, E.Z)(r),
         en = (0, N.Z)(n, t),
         et = (0, _.Z)(n, t),
-        ea = (0, T.Z)(n, t),
+        ea = (0, v.Z)(n, t),
         ei = (0, O.Z)(n, t),
-        el = (0, v.Z)({
+        el = (0, T.Z)({
             type: w,
             id: k,
             name: F
@@ -101,8 +101,8 @@ function k(e) {
         eM = (0, A.Z)(n, t),
         eI = (0, C.Z)(n),
         em = (0, L.Z)(n, t),
-        eg = (0, c.Z)(null != V ? V : z, X, n, { shouldHideMediaOptions: $ }),
-        e_ = (0, d.Z)(K, n, { shouldHideMediaOptions: $ }),
+        eg = (0, c.Z)(null != V ? V : K, X, n, { shouldHideMediaOptions: $ }),
+        e_ = (0, d.Z)(z, n, { shouldHideMediaOptions: $ }),
         ef = (0, y.Z)(n, i),
         eZ = (0, o.Z)({
             id: n.id,
@@ -111,8 +111,8 @@ function k(e) {
         }),
         eS = (0, b.Z)(n, t),
         eA = (0, R.Z)(n, t),
-        eT = (0, P.Z)(n, t),
-        ev = (0, m.Z)(r, t.getGuildId()),
+        ev = (0, P.Z)(n, t),
+        eT = (0, m.Z)(r, t.getGuildId()),
         eR = (0, g.Z)(n),
         eh = (0, S.Z)(n),
         eO = (0, I.Z)({
@@ -125,19 +125,27 @@ function k(e) {
         eN = (0, G.Z)(n),
         ep = (0, M.Z)(n);
     return (0, a.jsxs)(l.Menu, {
-        navId: q,
+        navId: J,
         onClose: W,
-        'aria-label': J,
+        'aria-label': q,
         onSelect: B,
         children: [
             (0, a.jsx)(l.MenuGroup, { children: Q }),
             (0, a.jsx)(l.MenuGroup, { children: ee }),
             (0, a.jsxs)(l.MenuGroup, {
-                children: ['' === r ? en : null, et, eo, ea, ei, eR, el, eS, eA, eT, eh, eO, er, es, eu, ed, em, ep, eE, ec, eN, eM, H && eI]
+                children: ['' === r ? en : null, et, eo]
             }),
-            null != ev && (0, a.jsx)(l.MenuGroup, { children: ev }),
             (0, a.jsxs)(l.MenuGroup, {
-                children: [e_, ef]
+                children: [ea, eS, eA, ev]
+            }),
+            (0, a.jsxs)(l.MenuGroup, {
+                children: [eh, ei, eR, eO, er, es, eu, ed, em, ep, eN]
+            }),
+            (0, a.jsxs)(l.MenuGroup, {
+                children: [eE, ec, eM, H && eI]
+            }),
+            (0, a.jsxs)(l.MenuGroup, {
+                children: [el, eT, e_, ef]
             }),
             (0, a.jsx)(l.MenuGroup, { children: eg }),
             (0, a.jsx)(l.MenuGroup, { children: eZ })
