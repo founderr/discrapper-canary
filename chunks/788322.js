@@ -22,8 +22,8 @@ var i = n(735250),
     p = n(879484),
     T = n(26580),
     S = n(206887),
-    C = n(981631),
-    f = n(689938),
+    f = n(981631),
+    C = n(689938),
     N = n(932901),
     A = n(129512),
     v = n(330065);
@@ -33,7 +33,7 @@ t.Z = (e) => {
     let { guild: s, theme: L, onView: Z, onTagClick: R } = e,
         { id: O, discoverySplash: x, icon: b, name: P, description: M, presenceCount: D, memberCount: y, keywords: j } = s,
         [U, G] = a.useState(!1),
-        [k, w] = a.useState(!1),
+        [w, k] = a.useState(!1),
         { analyticsLocations: B } = (0, c.ZP)(),
         H = m.ZP.getGuildDiscoverySplashURL({
             id: O,
@@ -45,9 +45,9 @@ t.Z = (e) => {
                 ? H
                 : (function (e) {
                       switch (e) {
-                          case C.BRd.DARK:
+                          case f.BRd.DARK:
                               return A;
-                          case C.BRd.LIGHT:
+                          case f.BRd.LIGHT:
                               return v;
                       }
                   })(L),
@@ -65,20 +65,20 @@ t.Z = (e) => {
             if (!t.includes('Menu')) {
                 if ((0, E.yU)()) {
                     (0, h.Z)({
-                        analyticsSource: { page: C.ZY5.GUILD_DISCOVERY },
+                        analyticsSource: { page: f.ZY5.GUILD_DISCOVERY },
                         analyticsLocation: {
-                            page: C.ZY5.GUILD_DISCOVERY,
-                            section: C.jXE.GUILD_CAP_UPSELL_MODAL
+                            page: f.ZY5.GUILD_DISCOVERY,
+                            section: f.jXE.GUILD_CAP_UPSELL_MODAL
                         },
                         analyticsLocations: B
                     });
                     return;
                 }
-                w(!0);
+                k(!0);
                 try {
                     null != Z && (await Z(s.id));
                 } finally {
-                    w(!1);
+                    k(!1);
                 }
             }
         };
@@ -90,7 +90,7 @@ t.Z = (e) => {
             (0, i.jsxs)('div', {
                 className: N.card,
                 children: [
-                    k
+                    w
                         ? (0, i.jsx)(l.Spinner, {
                               type: l.Spinner.Type.PULSING_ELLIPSIS,
                               className: N.spinner
@@ -99,7 +99,7 @@ t.Z = (e) => {
                     (0, i.jsxs)(l.Clickable, {
                         className: r()(N.container, {
                             [N.hover]: U,
-                            [N.submitting]: k
+                            [N.submitting]: w
                         }),
                         onClick: Y,
                         onContextMenu: (e) => {
@@ -183,7 +183,7 @@ t.Z = (e) => {
                                                     children: (0, i.jsx)(l.Text, {
                                                         variant: 'text-xs/normal',
                                                         color: 'header-secondary',
-                                                        children: f.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({ membersOnline: D })
+                                                        children: C.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({ membersOnline: D })
                                                     })
                                                 }),
                                             null != y &&
@@ -195,7 +195,7 @@ t.Z = (e) => {
                                                             children: (0, i.jsx)(l.Text, {
                                                                 variant: 'text-xs/normal',
                                                                 color: 'header-secondary',
-                                                                children: f.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({ count: y })
+                                                                children: C.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({ count: y })
                                                             })
                                                         })
                                                     ]

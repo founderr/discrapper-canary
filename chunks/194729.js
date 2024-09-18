@@ -17,8 +17,8 @@ var i = n(735250),
     p = n(963202),
     T = n(252618),
     S = n(571457),
-    C = n(440190),
-    f = n(665149),
+    f = n(440190),
+    C = n(665149),
     N = n(5955),
     A = n(918701),
     v = n(121711),
@@ -35,8 +35,8 @@ var i = n(735250),
     j = n(117496),
     U = n(296386),
     G = n(150192),
-    k = n(769727),
-    w = n(229765),
+    w = n(769727),
+    k = n(229765),
     B = n(584885),
     H = n(59222),
     V = n(749436),
@@ -259,7 +259,7 @@ class J extends a.PureComponent {
         return (0, i.jsxs)('div', {
             className: K.pageWrapper,
             children: [
-                (0, i.jsx)(w.KY, {
+                (0, i.jsx)(k.KY, {
                     location: 'guild_discovery',
                     query: this._getLoadTestQuery()
                 }),
@@ -268,7 +268,7 @@ class J extends a.PureComponent {
                     location: m
                 }),
                 (0, i.jsx)('div', { className: r()(K.dragRegion, K.pageHeaderDrag, { [K.searchPageDrag]: d }) }),
-                u.tq && (0, i.jsx)(f.ZP, { children: (0, i.jsx)(a.Fragment, {}) }),
+                u.tq && (0, i.jsx)(C.ZP, { children: (0, i.jsx)(a.Fragment, {}) }),
                 (0, i.jsx)(E.AdvancedScrollerAuto, {
                     className: K.scroller,
                     ref: this._scroller,
@@ -451,10 +451,10 @@ function ee(e) {
             fetching: n,
             loadId: a,
             recommendedGuilds: s
-        } = (0, _.cj)([C.Z], () => ({
-            recommendedGuilds: C.Z.getRecommendedGuilds(),
-            loadId: C.Z.getLoadId(),
-            fetching: C.Z.isFetching()
+        } = (0, _.cj)([f.Z], () => ({
+            recommendedGuilds: f.Z.getRecommendedGuilds(),
+            loadId: f.Z.getLoadId(),
+            fetching: f.Z.isFetching()
         }));
     return (0, i.jsx)($, {
         searchRoute: t,
@@ -479,7 +479,7 @@ t.Z = function (e) {
         c && (0, m.uY)(Y.Gj.Quests);
     }, [c]),
     (s || r) && (!o || l === Y.Gj.Clans))
-        ? (0, i.jsx)(k.Z, {})
+        ? (0, i.jsx)(w.Z, {})
         : l === Y.Gj.Quests
           ? (0, i.jsx)(v.Z, {})
           : (0, i.jsx)(ee, { searchRoute: t });

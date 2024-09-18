@@ -1,50 +1,50 @@
 n.d(t, {
     d: function () {
-        return C;
+        return v;
     }
 });
-var a = n(735250);
+var r = n(735250);
 n(470079);
-var r = n(120356),
-    s = n.n(r),
+var a = n(120356),
+    s = n.n(a),
     o = n(780384),
-    l = n(481060),
-    i = n(410030),
+    i = n(481060),
+    l = n(410030),
     c = n(876917),
     d = n(328456),
     u = n(616066),
     f = n(746443),
     g = n(63243),
     p = n(244488);
-let C = (e) => {
-    let { product: t, isPurchased: n, isHighlighted: r, user: C, forCollectedModal: m, profileEffectClassName: E } = e,
-        { firstProfileEffect: v, firstAvatarDecoration: h } = (0, d.R)(t),
-        b = (0, i.ZP)(),
+let v = (e) => {
+    let { product: t, isPurchased: n, isHighlighted: a, user: v, forCollectedModal: C, profileEffectClassName: m } = e,
+        { firstProfileEffect: E, firstAvatarDecoration: h } = (0, d.R)(t),
+        b = (0, l.ZP)(),
         y = (0, o.ap)(b);
-    return (0, a.jsxs)('div', {
+    return (0, r.jsxs)('div', {
         className: f.container,
         children: [
-            null != v
-                ? (0, a.jsx)('div', {
-                      className: s()(f.profileEffectShopPreview, E),
-                      children: (0, a.jsx)(c.Z, {
-                          isHovering: r,
-                          profileEffectId: v.id,
+            null != E
+                ? (0, r.jsx)('div', {
+                      className: s()(f.profileEffectShopPreview, m),
+                      children: (0, r.jsx)(c.Z, {
+                          isHovering: a,
+                          profileEffectId: E.id,
                           isPurchased: n,
-                          forCollectedModal: m,
+                          forCollectedModal: C,
                           removeSetHeight: !0
                       })
                   })
                 : null,
             null != h
-                ? (0, a.jsx)('div', {
+                ? (0, r.jsx)('div', {
                       className: f.avatarDecorationPreview,
-                      children: (0, a.jsx)(u.R, {
+                      children: (0, r.jsx)(u.R, {
                           item: h,
-                          user: C,
-                          avatarSize: l.AvatarSizes.SIZE_120,
+                          user: v,
+                          avatarSize: i.AvatarSizes.SIZE_120,
                           isPurchased: n,
-                          isHighlighted: r,
+                          isHighlighted: a,
                           avatarPlaceholderSrc: y ? p : g
                       })
                   })

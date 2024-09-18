@@ -4,7 +4,7 @@ var n = s(481060);
 t.Z = (e) => {
     let { product: t, analyticsLocations: a } = e;
     (0, n.openModalLazy)(async () => {
-        let { default: e } = await Promise.all([s.e('87624'), s.e('76566')]).then(s.bind(s, 331042));
+        let { default: e } = await Promise.all([s.e('87624'), s.e('28428')]).then(s.bind(s, 331042));
         return (s) =>
             (0, i.jsx)(e, {
                 product: t,

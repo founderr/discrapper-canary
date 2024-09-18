@@ -22,7 +22,7 @@ var i = n(735250),
     p = n(308083),
     T = n(689938),
     S = n(899115);
-function C(e) {
+function f(e) {
     let { icon: t, text: n, ariaLabel: s, tooltip: l, onClick: o, isActive: d, autoWidth: u = !1 } = e,
         [_, E] = a.useState(!1),
         [h, m] = a.useState(!1),
@@ -32,7 +32,7 @@ function C(e) {
         p && (E(!1), m(!1));
     }, [p]);
     let T = d && (h || _),
-        C = a.useMemo(
+        f = a.useMemo(
             () =>
                 null != l
                     ? (0, i.jsxs)(c.Clickable, {
@@ -49,7 +49,7 @@ function C(e) {
                     : null,
             [l, o, p]
         ),
-        f = a.useCallback(
+        C = a.useCallback(
             (e) =>
                 (0, i.jsxs)(c.Button, {
                     ...e,
@@ -74,7 +74,7 @@ function C(e) {
                                     color: 'none',
                                     children: n
                                 }),
-                                null != C &&
+                                null != f &&
                                     (0, i.jsx)(c.ChevronSmallDownIcon, {
                                         className: S.chevron,
                                         color: 'currentColor'
@@ -83,12 +83,12 @@ function C(e) {
                         })
                     ]
                 }),
-            [t, n, d, o, C]
+            [t, n, d, o, f]
         );
-    return null == C
-        ? f({})
+    return null == f
+        ? C({})
         : (0, i.jsx)(c.Tooltip, {
-              text: C,
+              text: f,
               position: 'bottom',
               'aria-label': s,
               shouldShow: T,
@@ -97,10 +97,10 @@ function C(e) {
               disableTooltipPointerEvents: !1,
               tooltipClassName: r()(S.filterTooltip, { [S.filterTooltipAutoWidth]: u }),
               tooltipContentClassName: S.filterTooltipContent,
-              children: f
+              children: C
           });
 }
-function f() {
+function C() {
     var e;
     let t = (0, g.GN)((e) => e.selectedGames, l.Z),
         n = a.useCallback(() => {
@@ -126,7 +126,7 @@ function f() {
             className: S.filterPillIcon,
             color: 'currentColor'
         });
-    return (0, i.jsx)(C, {
+    return (0, i.jsx)(f, {
         icon: E,
         text: T.Z.Messages.CLAN_DISCOVERY_GAME_FILTER.format({ count: t.length }),
         tooltip: d,
@@ -171,7 +171,7 @@ function N() {
             className: S.filterPillIcon,
             color: 'currentColor'
         });
-    return (0, i.jsx)(C, {
+    return (0, i.jsx)(f, {
         icon: d,
         text: null != s ? s : T.Z.Messages.CLAN_DISCOVERY_ANY_PLAYSTYLE,
         tooltip: o,
@@ -207,7 +207,7 @@ function A() {
             className: S.filterPillIcon,
             color: 'currentColor'
         });
-    return (0, i.jsx)(C, {
+    return (0, i.jsx)(f, {
         icon: s,
         text: T.Z.Messages.CLAN_DISCOVERY_PREFERENCES_FILTER,
         tooltip: n,
@@ -240,7 +240,7 @@ function v(e) {
                     : null
             ]
         });
-    return (0, i.jsx)(C, {
+    return (0, i.jsx)(f, {
         icon: u,
         text: _,
         onClick: t,
@@ -281,7 +281,7 @@ function L() {
                     : null
             ]
         });
-    return (0, i.jsx)(C, {
+    return (0, i.jsx)(f, {
         icon: (0, i.jsx)(c.FiltersHorizontalIcon, {
             className: S.filterPillIcon,
             color: 'currentColor'
@@ -402,7 +402,7 @@ t.Z = function (e) {
                         : null,
                     (0, i.jsxs)('div', {
                         className: S.preferences,
-                        children: [(0, i.jsx)(f, {}), (0, i.jsx)(N, {}), (0, i.jsx)(A, {})]
+                        children: [(0, i.jsx)(C, {}), (0, i.jsx)(N, {}), (0, i.jsx)(A, {})]
                     }),
                     (0, i.jsx)('div', { className: S.actions })
                 ]

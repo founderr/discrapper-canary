@@ -28,7 +28,7 @@ function T(e) {
         S = (e) => {
             if (e !== (null == t ? void 0 : t.id)) d.default.track(I.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, { location: { section: I.jXE.USER_PROFILE } }), _.yD(e);
         },
-        C = T.map((a) => {
+        f = T.map((a) => {
             let o = new l.Z(a),
                 c = o.id === (null == t ? void 0 : t.id),
                 d = a.tokenStatus === E.q.INVALID,
@@ -92,7 +92,7 @@ function T(e) {
             );
         });
     return (
-        C.push(
+        f.push(
             (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsx)(s.MenuSeparator, {}),
@@ -106,6 +106,6 @@ function T(e) {
                 ]
             })
         ),
-        C
+        f
     );
 }

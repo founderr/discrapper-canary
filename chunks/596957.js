@@ -17,8 +17,8 @@ var i = n(735250),
     p = n(451478),
     T = n(434184),
     S = n(701861),
-    C = n(437314),
-    f = n(696577),
+    f = n(437314),
+    C = n(696577),
     N = n(163417),
     A = n(492347),
     v = n(42575),
@@ -52,22 +52,22 @@ t.Z = function (e) {
             },
             [y, t]
         ),
-        k = a.useCallback(() => {
+        w = a.useCallback(() => {
             j({
                 ...y,
                 [t]: ''
             });
         }, [y, t]),
-        w = (0, m.A)({ location: 'people_list' }) && t === Z.pJs.PENDING && b.filter(Z.pJs.SPAM).length > 0,
+        k = (0, m.A)({ location: 'people_list' }) && t === Z.pJs.PENDING && b.filter(Z.pJs.SPAM).length > 0,
         B = b.filter(t, y[t]);
     if (0 === B.length && '' === y[t])
         return (0, i.jsx)('div', {
             className: O.emptyStateContainer,
             children: (0, i.jsx)(
-                C.Z,
+                f.Z,
                 {
                     type: t,
-                    onClick: w
+                    onClick: k
                         ? U
                         : t !== Z.pJs.PENDING
                           ? () => {
@@ -91,7 +91,7 @@ t.Z = function (e) {
                     className: r()(O.searchBar, V ? O.searchEmptyState : null),
                     query: y[t],
                     onChange: G,
-                    onClear: k,
+                    onClear: w,
                     size: o.SearchBar.Sizes.MEDIUM
                 }),
                 (0, i.jsxs)('div', {
@@ -131,7 +131,7 @@ t.Z = function (e) {
                 V
                     ? (0, i.jsx)('div', {
                           className: O.emptyStateContainer,
-                          children: (0, i.jsx)(C.Z, { type: C.j.SECTION_NO_RESULTS }, P)
+                          children: (0, i.jsx)(f.Z, { type: f.j.SECTION_NO_RESULTS }, P)
                       })
                     : (0, i.jsx)(N.Z, {
                           relationshipCount: D,
@@ -144,7 +144,7 @@ t.Z = function (e) {
                                           isFocused: M
                                       });
                                   case Z.pJs.PENDING:
-                                      return (0, i.jsx)(f.Z, {
+                                      return (0, i.jsx)(C.Z, {
                                           ...e,
                                           isFocused: M
                                       });
@@ -165,7 +165,7 @@ t.Z = function (e) {
                           sectionFilter: t,
                           searchQuery: y[t],
                           useReducedMotion: _.Z.useReducedMotion,
-                          footer: w
+                          footer: k
                               ? (0, i.jsx)(o.Button, {
                                     look: o.Button.Looks.LINK,
                                     color: O.viewSpamButtonColor,

@@ -7,14 +7,14 @@ var s = t(735250);
 t(470079);
 var a = t(481060),
     l = t(131388),
-    r = t(409813),
-    i = t(750143),
+    i = t(409813),
+    r = t(750143),
     o = t(264499),
     d = t(60314);
 function c(e) {
     let { step: n, onClose: t } = e,
-        c = (0, l.Z)(i.X);
-    return n === r.h8.BENEFITS || n === r.h8.CONFIRM
+        c = (0, l.Z)(r.X);
+    return n === i.h8.BENEFITS || n === i.h8.CONFIRM
         ? null
         : (0, s.jsxs)('div', {
               className: o.headerContainer,

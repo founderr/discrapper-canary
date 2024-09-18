@@ -24,9 +24,9 @@ let h = [
     ];
 t.Z = (e) => {
     let t,
-        { title: n, subtitle: I, guildsData: g, analyticsContext: p, theme: T, onViewGuild: S, fetchGuilds: C, onGuildCardSeen: f, currentCategoryId: N, loadId: A, onTagClick: v, showMoreCards: L = !1 } = e;
+        { title: n, subtitle: I, guildsData: g, analyticsContext: p, theme: T, onViewGuild: S, fetchGuilds: f, onGuildCardSeen: C, currentCategoryId: N, loadId: A, onTagClick: v, showMoreCards: L = !1 } = e;
     a.useEffect(() => {
-        r.Z.wait(() => C());
+        r.Z.wait(() => f());
     }, [N]);
     let Z = (0, u.Z)(L ? m : h),
         { analyticsLocations: R } = (0, l.ZP)();
@@ -62,7 +62,7 @@ t.Z = (e) => {
                     guild: e,
                     onView: P,
                     theme: T,
-                    onGuildCardSeen: f,
+                    onGuildCardSeen: C,
                     onTagClick: v
                 },
                 e.id

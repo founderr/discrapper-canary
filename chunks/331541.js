@@ -21,8 +21,8 @@ var i = n(735250),
     p = n(734934),
     T = n(158238),
     S = n(300284),
-    C = n(680295),
-    f = n(785717),
+    f = n(680295),
+    C = n(785717),
     N = n(221292),
     A = n(481046),
     v = n(687158),
@@ -39,8 +39,8 @@ var i = n(735250),
     j = n(969205),
     U = n(171368),
     G = n(420654),
-    k = n(695346),
-    w = n(158776),
+    w = n(695346),
+    k = n(158776),
     B = n(246946),
     H = n(572004),
     V = n(70956),
@@ -168,7 +168,7 @@ function ea(e) {
         er = (0, v.ZP)(V.id),
         el = (0, u.O)(),
         { analyticsLocations: eo } = (0, m.ZP)(h.Z.ACCOUNT_PROFILE_POPOUT),
-        ec = (0, f.ZB)({
+        ec = (0, C.ZB)({
             layout: 'SIMPLIFIED_ACCOUNT_POPOUT',
             userId: V.id
         }),
@@ -177,17 +177,17 @@ function ea(e) {
     a.useEffect(() => {
         null == ea || ea(ed.current);
     }, [ed, ea]);
-    let e_ = (0, o.e7)([w.Z], () => w.Z.getStatus(V.id)),
+    let e_ = (0, o.e7)([k.Z], () => k.Z.getStatus(V.id)),
         eE = (0, o.e7)([B.Z], () => B.Z.hidePersonalInformation),
         eh = (0, p.p)(),
-        em = k.Sb.useSetting(),
+        em = w.Sb.useSetting(),
         eI = (0, I.a)(),
         eg = (function (e) {
             let t = g.Y.useExperiment({ location: 'AccountProfilePopout' }).expiringStatus,
-                n = k.Cr.useSetting(),
+                n = w.Cr.useSetting(),
                 a = (0, p.p)(),
                 r = T.e.useExperiment({ location: 'AccountProfilePopout' }).allowQuietMode || a,
-                l = k.fv.useSetting(),
+                l = w.fv.useSetting(),
                 o = e === Q.Skl.DND,
                 d = (t) => {
                     let i =
@@ -298,7 +298,7 @@ function ea(e) {
         ep = (0, W.g)(z),
         eT = (0, S.Z)({ analyticsLocations: eo }),
         { customStatusBubbleEditEnabled: eS } = (0, A.K)({ location: 'AccountProfilePopout' }),
-        eC = (e) => {
+        ef = (e) => {
             null == z || z(),
                 (0, U.openUserProfileModal)({
                     sourceAnalyticsLocations: eo,
@@ -306,7 +306,7 @@ function ea(e) {
                     ...e
                 });
         },
-        ef = () => {
+        eC = () => {
             (0, c.openModalLazy)(async () => {
                 let { default: e } = await n.e('51714').then(n.bind(n, 211065));
                 return (t) =>
@@ -319,7 +319,7 @@ function ea(e) {
         };
     return (0, i.jsx)(m.Gt, {
         value: eo,
-        children: (0, i.jsx)(f.Mt, {
+        children: (0, i.jsx)(C.Mt, {
             value: ec,
             children: (0, i.jsx)(c.Dialog, {
                 ref: ed,
@@ -350,7 +350,7 @@ function ea(e) {
                                     user: V,
                                     displayProfile: er,
                                     profileType: X.y0.BITE_SIZE,
-                                    onOpenProfile: es ? void 0 : eC
+                                    onOpenProfile: es ? void 0 : ef
                                 }),
                                 (0, i.jsx)(O.Z, {
                                     user: V,
@@ -360,7 +360,7 @@ function ea(e) {
                             ]
                         }),
                         (null == er ? void 0 : er.profileEffectId) != null &&
-                            (0, i.jsx)(C.Z, {
+                            (0, i.jsx)(f.Z, {
                                 profileEffectId: null == er ? void 0 : er.profileEffectId,
                                 isHovering: eu
                             }),
@@ -372,7 +372,7 @@ function ea(e) {
                                     className: $.username,
                                     profileType: X.y0.BITE_SIZE,
                                     nickname: F.ZP.getName(null, null, V),
-                                    onOpenProfile: es ? void 0 : eC,
+                                    onOpenProfile: es ? void 0 : ef,
                                     pronouns: null == er ? void 0 : er.pronouns,
                                     tags: (0, i.jsx)(Z.Z, {
                                         displayProfile: er,
@@ -486,7 +486,7 @@ function ea(e) {
                                                                           label: J.Z.Messages.CUSTOM_STATUS_SET_CUSTOM_STATUS_CTA,
                                                                           icon: () => (0, i.jsx)('div', { className: $.customEmojiPlaceholder }),
                                                                           onClick: () => {
-                                                                              z(), ef();
+                                                                              z(), eC();
                                                                           }
                                                                       })
                                                                     : (0, i.jsx)(K.Mv, {
@@ -510,7 +510,7 @@ function ea(e) {
                                                                                           action: 'PRESS_CLEAR_CUSTOM_STATUS',
                                                                                           analyticsLocations: eo
                                                                                       }),
-                                                                                      k.Ok.updateSetting(void 0);
+                                                                                      w.Ok.updateSetting(void 0);
                                                                               },
                                                                               children: (0, i.jsx)(c.CircleXIcon, {
                                                                                   size: 'sm',
@@ -518,7 +518,7 @@ function ea(e) {
                                                                               })
                                                                           }),
                                                                           onClick: () => {
-                                                                              z(), ef();
+                                                                              z(), eC();
                                                                           }
                                                                       })
                                                             ]

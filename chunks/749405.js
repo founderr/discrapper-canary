@@ -29,8 +29,8 @@ function h(e) {
         {
             acceptMessageRequest: T,
             rejectMessageRequest: S,
-            isAcceptLoading: C,
-            isRejectLoading: f,
+            isAcceptLoading: f,
+            isRejectLoading: C,
             isUserProfileLoading: N,
             isOptimisticAccepted: A,
             isOptimisticRejected: v
@@ -40,7 +40,7 @@ function h(e) {
             onRejectSuccess: g,
             onError: I
         }),
-        L = C || f || N || A || v;
+        L = f || C || N || A || v;
     return (0, i.jsxs)('div', {
         className: E.container,
         children: [
@@ -60,7 +60,7 @@ function h(e) {
                             e.stopPropagation(), S(h.id);
                         },
                         disabled: L,
-                        submitting: f || v,
+                        submitting: C || v,
                         children: _.Z.Messages.MESSAGE_REQUEST_IGNORE
                     }),
                     (0, i.jsx)(s.Button, {
@@ -71,7 +71,7 @@ function h(e) {
                             e.stopPropagation(), T(h.id);
                         },
                         disabled: L,
-                        submitting: C || N || A,
+                        submitting: f || N || A,
                         children: _.Z.Messages.MESSAGE_REQUEST_ACCEPT
                     })
                 ]

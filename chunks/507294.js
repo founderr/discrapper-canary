@@ -24,8 +24,8 @@ var i = n(735250),
     p = n(314897),
     T = n(271383),
     S = n(430824),
-    C = n(626135),
-    f = n(63063),
+    f = n(626135),
+    C = n(63063),
     N = n(134433),
     A = n(225104),
     v = n(981631),
@@ -54,7 +54,7 @@ t.default = function (e) {
     if (
         (a.useEffect(() => {
             if (0 !== D.length)
-                C.default.track(v.rMx.PASSPORT_ENTRY_VIEWED, {
+                f.default.track(v.rMx.PASSPORT_ENTRY_VIEWED, {
                     role_ids: D.map((e) => {
                         let { role_id: t } = e;
                         return t;
@@ -101,7 +101,7 @@ t.default = function (e) {
                     (0, i.jsx)(c.Heading, {
                         variant: 'heading-md/semibold',
                         color: 'header-primary',
-                        children: L.Z.Messages.CONNECTIONS_ROLES_CHANNEL_CALL_TO_ACTION_LEARN_MORE.format({ helpdeskArticleUrl: f.Z.getArticleURL(v.BhN.CONNECTION_DETAILS) })
+                        children: L.Z.Messages.CONNECTIONS_ROLES_CHANNEL_CALL_TO_ACTION_LEARN_MORE.format({ helpdeskArticleUrl: C.Z.getArticleURL(v.BhN.CONNECTION_DETAILS) })
                     }),
                     (0, i.jsx)('div', {
                         className: Z.verifiedRoles,

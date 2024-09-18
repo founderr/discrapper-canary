@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return h;
+        return S;
     }
 });
 var s = t(735250);
@@ -11,81 +11,81 @@ var r = t(120356),
     c = t(481060),
     l = t(607070),
     L = t(409813),
-    C = t(669079),
-    o = t(170579),
-    u = t(616030),
+    o = t(669079),
+    u = t(170579),
+    C = t(616030),
     d = t(474936),
-    S = t(689938),
-    f = t(251300);
-function h(e) {
-    let { currentStep: n, className: t, purchaseState: r, premiumType: h, useWinterTheme: p = !1, onClose: T, hideCloseButton: N, showTrialBadge: R, showDiscountBadge: I, isGift: E, giftRecipient: m } = e,
+    f = t(689938),
+    p = t(251300);
+function S(e) {
+    let { currentStep: n, className: t, purchaseState: r, premiumType: S, useWinterTheme: h = !1, onClose: T, hideCloseButton: N, showTrialBadge: R, showDiscountBadge: E, isGift: I, giftRecipient: m } = e,
         M = (0, i.e7)([l.Z], () => l.Z.useReducedMotion),
-        _ = p ? d.nL.WINTER : d.nL.DEFAULT;
-    return E && (0, C.pO)(m) && n !== L.h8.CONFIRM
+        _ = h ? d.nL.WINTER : d.nL.DEFAULT;
+    return I && (0, o.pO)(m) && n !== L.h8.CONFIRM
         ? (0, s.jsxs)(c.ModalHeader, {
-              className: f.modalHeaderCustomGift,
+              className: p.modalHeaderCustomGift,
               separator: !1,
               children: [
                   (0, s.jsx)('div', {
-                      className: f.giftNitroInfo,
+                      className: p.giftNitroInfo,
                       children: (0, s.jsx)(c.Heading, {
                           variant: 'heading-lg/semibold',
                           children: (() => {
                               switch (n) {
                                   case L.h8.PLAN_SELECT:
-                                      return h === d.p9.TIER_0 ? S.Z.Messages.GIFT_NITRO_TIER_0 : S.Z.Messages.GIFT_NITRO_ACTION;
+                                      return S === d.p9.TIER_0 ? f.Z.Messages.GIFT_NITRO_TIER_0 : f.Z.Messages.GIFT_NITRO_ACTION;
                                   case L.h8.ADD_PAYMENT_STEPS:
-                                      return S.Z.Messages.PAYMENT_METHOD_SELECTION;
+                                      return f.Z.Messages.PAYMENT_METHOD_SELECTION;
                                   case L.h8.REVIEW:
-                                      return S.Z.Messages.GIFT_PURCHASE_REVIEW;
+                                      return f.Z.Messages.GIFT_PURCHASE_REVIEW;
                                   default:
-                                      return S.Z.Messages.GIFT_NITRO_ACTION;
+                                      return f.Z.Messages.GIFT_NITRO_ACTION;
                               }
                           })()
                       })
                   }),
                   (0, s.jsx)(c.ModalCloseButton, {
                       onClick: T,
-                      className: f.closeButton
+                      className: p.closeButton
                   })
               ]
           })
         : (0, s.jsx)(c.ModalHeader, {
-              className: a()(f.modalHeader, t),
+              className: a()(p.modalHeader, t),
               separator: !1,
-              children: (0, s.jsx)(o.Z, {
+              children: (0, s.jsx)(u.Z, {
                   hideCloseOnFullScreen: !0,
                   hideCloseButton: N,
                   shouldShowPrice: !0,
-                  upgradeToPremiumType: h,
+                  upgradeToPremiumType: S,
                   renderAnimation: () =>
-                      h === d.p9.TIER_0
-                          ? (0, s.jsx)(u.zC, {
-                                className: f.headerAnimation,
+                      S === d.p9.TIER_0
+                          ? (0, s.jsx)(C.zC, {
+                                className: p.headerAnimation,
                                 currentStep: n,
                                 purchaseState: r,
                                 pause: M
                             })
-                          : h === d.p9.TIER_1
-                            ? (0, s.jsx)(u.tK, {
-                                  className: f.headerAnimation,
+                          : S === d.p9.TIER_1
+                            ? (0, s.jsx)(C.tK, {
+                                  className: p.headerAnimation,
                                   currentStep: n,
                                   purchaseState: r,
                                   pause: M
                               })
-                            : (0, s.jsx)(u.Bk, {
-                                  className: f.headerAnimation,
+                            : (0, s.jsx)(C.Bk, {
+                                  className: p.headerAnimation,
                                   currentStep: n,
                                   purchaseState: r,
                                   pause: M
                               }),
                   plan: null,
                   isGift: !1,
-                  className: f.header,
+                  className: p.header,
                   onClose: T,
                   headerTheme: _,
                   showTrialBadge: R,
-                  showDiscountBadge: I
+                  showDiscountBadge: E
               })
           });
 }

@@ -22,8 +22,8 @@ var i = n(735250),
     p = n(672775),
     T = n(601463),
     S = n(192565),
-    C = n(641037),
-    f = n(689938),
+    f = n(641037),
+    C = n(689938),
     N = n(837275);
 let A = {
     mass: 1,
@@ -46,7 +46,7 @@ function v(e) {
                 submitting: null === (i = m.ZP.getStateForGuild(t)) || void 0 === i ? void 0 : i.submitting
             };
         }),
-        R = a.useMemo(() => (0, C.G)(L), [L]),
+        R = a.useMemo(() => (0, f.G)(L), [L]),
         [O, x] = a.useState(!1),
         [b, P] = a.useState(window.innerWidth),
         [M, D] = a.useState(1),
@@ -58,14 +58,14 @@ function v(e) {
             onStart: () => j(!0),
             onRest: () => j(1 === M)
         }),
-        k = (0, d.useSpring)(
+        w = (0, d.useSpring)(
             {
                 transform: 'translateX('.concat(1 === M ? 0 : (-1 * (b - 380)) / 2 + 47.5, 'px)'),
                 config: A
             },
             'respect-motion-settings'
         ),
-        w = (0, d.useTransition)(0 === M, {
+        k = (0, d.useTransition)(0 === M, {
             from: { opacity: 0 },
             enter: {
                 opacity: 1,
@@ -101,7 +101,7 @@ function v(e) {
             return (0, _.YP)(e, document.body), () => (0, _.UC)(e, document.body);
         }, [M, y]);
     let V = a.useMemo(() => null != L && Object.values(L).some((e) => null != e), [L]),
-        F = a.useMemo(() => (null != L && Object.values(L).length > 0 ? (0, C.G)(L).find((e) => e.hasError) : null), [L]),
+        F = a.useMemo(() => (null != L && Object.values(L).length > 0 ? (0, f.G)(L).find((e) => e.hasError) : null), [L]),
         Y = a.useCallback(() => {
             D(1), E._9(t, { currentStep: null == F ? void 0 : F.index });
         }, [null == F ? void 0 : F.index, t]),
@@ -109,7 +109,7 @@ function v(e) {
             (0, u.fH)(u.v0.ADMIN_UPSELL);
         }, []),
         W = a.useCallback(() => {
-            (0, C.V)({
+            (0, f.V)({
                 guildId: t,
                 onSuccess: () => {
                     z(), n();
@@ -133,12 +133,12 @@ function v(e) {
                                   (0, i.jsx)(d.Text, {
                                       variant: 'text-sm/medium',
                                       color: 'header-primary',
-                                      children: f.Z.Messages.CLAN_SUBMIT_ERROR_TITLE
+                                      children: C.Z.Messages.CLAN_SUBMIT_ERROR_TITLE
                                   }),
                                   (0, i.jsx)(d.Text, {
                                       variant: 'text-xs/normal',
                                       color: 'text-muted',
-                                      children: f.Z.Messages.CLAN_SUBMIT_ERROR_TEXT.format({
+                                      children: C.Z.Messages.CLAN_SUBMIT_ERROR_TEXT.format({
                                           backHook: (e, t) =>
                                               (0, i.jsx)(
                                                   d.Anchor,
@@ -169,7 +169,7 @@ function v(e) {
                     size: d.Button.Sizes.MEDIUM,
                     color: d.Button.Colors.PRIMARY,
                     onClick: n,
-                    children: f.Z.Messages.CLAN_SETUP_MODAL_SAVE_AND_QUIT
+                    children: C.Z.Messages.CLAN_SETUP_MODAL_SAVE_AND_QUIT
                 }),
                 (0, i.jsxs)('div', {
                     className: N.content,
@@ -202,7 +202,7 @@ function v(e) {
                             })
                         }),
                         (0, i.jsx)(o.animated.div, {
-                            style: k,
+                            style: w,
                             className: r()(N.sidebar, { [N.sidebarResponsive]: y }),
                             children: (0, i.jsx)(T.Z, {
                                 guildId: t,
@@ -210,7 +210,7 @@ function v(e) {
                                 setSigned: y ? void 0 : x,
                                 sidebarWidth: 380,
                                 windowWidth: b,
-                                transition: w,
+                                transition: k,
                                 brandPrimaryColor: v.brandPrimaryColor
                             })
                         })
@@ -226,7 +226,7 @@ function v(e) {
                                 color: d.Tooltip.Colors.GREY,
                                 tooltipClassName: N.tooltip,
                                 text: q,
-                                'aria-label': null != F ? f.Z.Messages.CLAN_SUBMIT_ERROR_TITLE : void 0,
+                                'aria-label': null != F ? C.Z.Messages.CLAN_SUBMIT_ERROR_TITLE : void 0,
                                 shouldShow: null != F,
                                 forceOpen: null != F,
                                 children: (e) =>
@@ -239,7 +239,7 @@ function v(e) {
                                         size: d.Button.Sizes.MEDIUM,
                                         color: d.Button.Colors.BRAND,
                                         onClick: W,
-                                        children: f.Z.Messages.FINISH
+                                        children: C.Z.Messages.FINISH
                                     })
                             })
                         })

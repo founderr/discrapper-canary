@@ -19,8 +19,8 @@ var a = r(735250),
     E = r(906732),
     I = r(1585),
     x = r(333867),
-    v = r(197115),
-    T = r(300284),
+    T = r(197115),
+    v = r(300284),
     S = r(876917),
     L = r(642619),
     N = r(210887),
@@ -33,8 +33,8 @@ var a = r(735250),
     Z = r(635552),
     A = r(724994),
     M = r(390698),
-    w = r(813083),
-    y = r(680942),
+    y = r(813083),
+    w = r(680942),
     H = r(558060),
     F = r(237031),
     D = r(616066),
@@ -108,10 +108,10 @@ t.Z = function (e) {
         n.useEffect(() => {
             null == o || o(J);
         }, [o]);
-    let eE = (0, T.Z)({ analyticsLocations: X }),
+    let eE = (0, v.Z)({ analyticsLocations: X }),
         eI = n.useRef(null),
-        { handleUseNow: ex, isApplying: ev } = (0, Z.W)({ product: t }),
-        eT = () => {
+        { handleUseNow: ex, isApplying: eT } = (0, Z.W)({ product: t }),
+        ev = () => {
             if (((0, _.xf)(), eE(), t.type === f.Z.AVATAR_DECORATION && null != ea)) {
                 l()(ea.type === t.type, "product type is equivlant to first item's check for avatar deco"),
                     (0, I.ps)({
@@ -141,7 +141,7 @@ t.Z = function (e) {
         eO = () =>
             (0, a.jsx)('div', {
                 className: z.hoverUpsellContainer,
-                children: (0, a.jsx)(v.Z, {
+                children: (0, a.jsx)(T.Z, {
                     fullWidth: !0,
                     className: z.__invalid_premiumSubscribeButton,
                     disabled: ep,
@@ -173,7 +173,7 @@ t.Z = function (e) {
                 ? null
                 : ec
                   ? (0, a.jsx)(K, { onClick: eN })
-                  : (0, a.jsx)(y.Z, {
+                  : (0, a.jsx)(w.Z, {
                         product: t,
                         returnRef: J,
                         isGiftEasterEggEnabled: $,
@@ -211,8 +211,8 @@ t.Z = function (e) {
                         : ed
                           ? (0, a.jsx)(Y, {
                                 disabled: ep,
-                                onClick: e_ ? ex : eT,
-                                submitting: ev,
+                                onClick: e_ ? ex : ev,
+                                submitting: eT,
                                 children: V.Z.Messages.COLLECTIBLES_USE_NOW
                             })
                           : (0, a.jsx)(Y, {
@@ -331,7 +331,7 @@ t.Z = function (e) {
                               })
                           ]
                       }),
-                      (0, a.jsx)(w.Z, {
+                      (0, a.jsx)(y.Z, {
                           category: s,
                           className: z.limitedTimeBadge,
                           display: 'card'

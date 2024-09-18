@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return C;
+        return f;
     }
 }),
     n(47120);
@@ -125,7 +125,7 @@ class S extends a.Component {
             });
     }
 }
-function C() {
+function f() {
     let e = (0, l.e7)([u.Z], () => u.Z.hasLayers()),
         t = (0, o.useModalsStore)(o.hasAnyModalOpenSelector);
     return (0, i.jsx)(S, {

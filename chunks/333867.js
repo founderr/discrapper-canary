@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return f;
+        return x;
     }
 }),
     t(47120);
@@ -8,21 +8,21 @@ var s = t(735250);
 t(470079);
 var a = t(772848),
     l = t(481060),
-    r = t(976255),
-    i = t(667),
+    i = t(976255),
+    r = t(667),
     o = t(335131),
     d = t(626135),
     c = t(409813),
     u = t(608579),
     E = t(981631);
-let h = 'payment-modal',
-    C = new Set([c.h8.REVIEW, c.h8.CONFIRM]);
-function f(e) {
+let C = 'payment-modal',
+    h = new Set([c.h8.REVIEW, c.h8.CONFIRM]);
+function x(e) {
     let n;
-    let { skuId: t, isGift: c = !1, giftMessage: f, onClose: x, onComplete: p, analyticsLocations: m, analyticsObject: T } = e,
-        I = !1,
+    let { skuId: t, isGift: c = !1, giftMessage: x, onClose: f, onComplete: T, analyticsLocations: p, analyticsObject: I } = e,
+        m = !1,
         S = (0, a.Z)(),
-        v = (e) => {
+        g = (e) => {
             n = e;
         };
     (0, l.openModalLazy)(
@@ -33,36 +33,36 @@ function f(e) {
                 loadId: S,
                 skuId: t,
                 isGift: c,
-                giftMessage: f,
-                analyticsLocations: m,
+                giftMessage: x,
+                analyticsLocations: p,
                 onClose: (e) => {
-                    n(), null == x || x(e);
+                    n(), null == f || f(e);
                 },
                 onComplete: () => {
-                    (I = !0), null == p || p();
+                    (m = !0), null == T || T();
                 },
                 returnRef: a,
-                onStepChange: v
+                onStepChange: g
             });
         },
         {
-            modalKey: h,
+            modalKey: C,
             onCloseCallback: () => {
-                !I &&
+                !m &&
                     d.default.track(E.rMx.PAYMENT_FLOW_CANCELED, {
                         load_id: S,
                         payment_type: E.Zuq[E.GZQ.ONE_TIME],
-                        location: T,
+                        location: I,
                         is_gift: c,
-                        location_stack: m
+                        location_stack: p
                     }),
-                    (0, r.fw)(),
-                    (0, i.p)(),
-                    null == x || x(I),
-                    I && (0, o.qg)();
+                    (0, i.fw)(),
+                    (0, r.p)(),
+                    null == f || f(m),
+                    m && (0, o.qg)();
             },
             onCloseRequest: () => {
-                null != n && C.has(n) && (0, l.closeModal)(h);
+                null != n && h.has(n) && (0, l.closeModal)(C);
             }
         }
     );

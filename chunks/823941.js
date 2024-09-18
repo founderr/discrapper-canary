@@ -26,8 +26,8 @@ var a = r(735250),
     E = r(372654),
     I = r(215023),
     x = r(474936),
-    v = r(689938),
-    T = r(462972);
+    T = r(689938),
+    v = r(462972);
 let S = (0, C.IC)(96),
     L = (e) => {
         let { category: t } = e,
@@ -37,11 +37,11 @@ let S = (0, C.IC)(96),
         return m.ZP.canUseCollectibles(i)
             ? (0, a.jsx)(a.Fragment, { children: t.summary })
             : (0, a.jsx)(a.Fragment, {
-                  children: v.Z.Messages.COLLECTIBLES_SFA_STARTER_BANNER_DESCRIPTION.format({
+                  children: T.Z.Messages.COLLECTIBLES_SFA_STARTER_BANNER_DESCRIPTION.format({
                       getPremium: (e) =>
                           (0, a.jsx)(c.Clickable, {
                               innerRef: s,
-                              className: T.getPremiumHook,
+                              className: v.getPremiumHook,
                               onClick: () => {
                                   (0, u.Z)({
                                       subscriptionTier: x.Si.TIER_2,
@@ -69,7 +69,7 @@ function N(e) {
         ? (0, a.jsx)(b.G, { category: l })
         : (0, a.jsxs)(g.Z, {
               asset: l.banner,
-              className: i()(T.shopBanner, d),
+              className: i()(v.shopBanner, d),
               style:
                   null != f
                       ? {
@@ -80,36 +80,36 @@ function N(e) {
               children: [
                   (null === (r = I.Ve[l.skuId]) || void 0 === r ? void 0 : r.addAttributionLogo)
                       ? (0, a.jsxs)('div', {
-                            className: T.discordLogo,
+                            className: v.discordLogo,
                             children: [
                                 (0, a.jsx)(c.ClydeIcon, {
                                     size: 'custom',
                                     width: 28,
                                     height: 28,
                                     color: 'currentColor',
-                                    className: T.discordIcon
+                                    className: v.discordIcon
                                 }),
-                                (0, a.jsx)(p.Z, { className: T.discordWordmark })
+                                (0, a.jsx)(p.Z, { className: v.discordWordmark })
                             ]
                         })
                       : (0, a.jsx)(c.Spacer, { size: 28 }),
                   (null === (n = I.Ve[l.skuId]) || void 0 === n ? void 0 : n.addLogo)
                       ? (0, a.jsx)('img', {
-                            className: T.categoryLogo,
+                            className: v.categoryLogo,
                             src: (0, C.uV)(l.logo, { size: S }),
                             alt: l.name,
                             style: { maxWidth: null === (s = I.Ve[l.skuId]) || void 0 === s ? void 0 : s.logoMaxWidth }
                         })
                       : (0, a.jsx)(c.Spacer, { size: 96 }),
                   (0, a.jsx)(c.Text, {
-                      className: i()(T.summary, { [T.blackSummary]: m }),
+                      className: i()(v.summary, { [v.blackSummary]: m }),
                       variant: 'text-md/normal',
                       children: l.skuId === o.T.DISXCORE ? (0, a.jsx)(L, { category: l }) : l.summary
                   }),
                   !u &&
                       (0, a.jsx)(h.Z, {
                           category: l,
-                          className: T.limitedTimeBadge,
+                          className: v.limitedTimeBadge,
                           display: 'banner'
                       })
               ]

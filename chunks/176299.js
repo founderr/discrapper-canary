@@ -22,8 +22,8 @@ var i = n(735250),
     p = n(279240),
     T = n(765717),
     S = n(358221),
-    C = n(823748),
-    f = n(626421),
+    f = n(823748),
+    C = n(626421),
     N = n(118379),
     A = n(652515),
     v = n(544978),
@@ -40,8 +40,8 @@ var i = n(735250),
     j = n(269675),
     U = n(242601),
     G = n(416568),
-    k = n(613609),
-    w = n(160404),
+    w = n(613609),
+    k = n(160404),
     B = n(225675),
     H = n(745052),
     V = n(285865),
@@ -100,13 +100,13 @@ let em = 'resizable-sidebar-width',
         name: 'MemberSafetyPage',
         renderLoader: eI
     }),
-    eC = (0, c.Un)({
+    ef = (0, c.Un)({
         createPromise: () => Promise.all([n.e('96427'), n.e('44156'), n.e('58227'), n.e('38359'), n.e('31072')]).then(n.bind(n, 603072)),
         webpackId: 603072,
         name: 'ChannelsAndRolesPage',
         renderLoader: eI
     }),
-    ef = (0, c.Un)({
+    eC = (0, c.Un)({
         createPromise: () => Promise.all([n.e('96427'), n.e('44156'), n.e('19878'), n.e('38359'), n.e('74277')]).then(n.bind(n, 599263)),
         webpackId: 599263,
         name: 'GuildOnboardingPage',
@@ -121,9 +121,9 @@ let em = 'resizable-sidebar-width',
             { guildId: a, channelId: s, messageId: r } = t.params,
             l = (0, u.e7)([$.Z], () => $.Z.getGuild(a)),
             o = (0, u.e7)([J.ZP], () => (null == a ? null : J.ZP.getSelfMember(a))),
-            c = (0, u.e7)([w.Z], () => {
+            c = (0, u.e7)([k.Z], () => {
                 if (null == a) return;
-                let e = w.Z.getData(a);
+                let e = k.Z.getData(a);
                 if ((null == e ? void 0 : e.type) === B.z.SERVER_SHOP)
                     switch (e.initialTab) {
                         case 'role_subscriptions':
@@ -155,14 +155,14 @@ let em = 'resizable-sidebar-width',
                 case e_.oC.GUILD_HOME:
                     return (0, i.jsx)(eT, { guildId: a });
                 case e_.oC.CHANNEL_BROWSER:
-                    return (0, i.jsx)(eC, {
+                    return (0, i.jsx)(ef, {
                         guildId: a,
                         selectedSection: eE.l7.BROWSE
                     });
                 case e_.oC.GUILD_ONBOARDING:
-                    return (0, i.jsx)(ef, { guildId: a });
+                    return (0, i.jsx)(eC, { guildId: a });
                 case e_.oC.CUSTOMIZE_COMMUNITY:
-                    return (0, i.jsx)(eC, {
+                    return (0, i.jsx)(ef, {
                         guildId: a,
                         selectedSection: eE.l7.CUSTOMIZE
                     });
@@ -187,7 +187,7 @@ let em = 'resizable-sidebar-width',
                 n.id
             );
         }
-        return (0, i.jsx)(C.Z, {});
+        return (0, i.jsx)(f.Z, {});
     },
     eA = a.memo(function () {
         let { guildId: e, channelId: t } = (0, K.Z)(),
@@ -230,7 +230,7 @@ let em = 'resizable-sidebar-width',
     eR = (e) => {
         let { match: t } = e;
         return null != t.params.guildId
-            ? (0, i.jsx)(k.Z, {
+            ? (0, i.jsx)(w.Z, {
                   guildId: t.params.guildId,
                   inviteCode: t.params.inviteCode
               })
@@ -300,24 +300,24 @@ function eU(e) {
         T = a.useCallback(() => {
             document.body.classList.add(eh.dragging);
         }, []),
-        C = a.useCallback((e) => {
+        f = a.useCallback((e) => {
             document.body.classList.remove(eh.dragging), _.K.set(em, e);
         }, []),
-        f = (0, I.Z)({
+        C = (0, I.Z)({
             minDimension: 240,
             maxDimension: 420,
             resizableDomNodeRef: g,
             onElementResize: p,
             onElementResizeStart: T,
-            onElementResizeEnd: C,
+            onElementResizeEnd: f,
             orientation: I.y.HORIZONTAL_RIGHT,
             throttleDuration: 0
         }),
         N = a.useCallback(
             (e) => {
-                e.stopPropagation(), f(e);
+                e.stopPropagation(), C(e);
             },
-            [f]
+            [C]
         );
     return s
         ? null
@@ -408,7 +408,7 @@ function eG() {
                             (0, i.jsxs)('div', {
                                 className: eh.content,
                                 children: [
-                                    (0, i.jsx)(f.Z, {}),
+                                    (0, i.jsx)(C.Z, {}),
                                     (0, i.jsx)(eU, {
                                         hasNotice: t,
                                         sidebarTheme: n,

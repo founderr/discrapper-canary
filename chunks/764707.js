@@ -1,17 +1,17 @@
 n(47120);
-var a = n(979590),
-    r = n.n(a),
+var r = n(979590),
+    a = n.n(r),
     s = n(399606),
     o = n(607070),
-    l = n(168631);
-let i = (e, t) => {
+    i = n(168631);
+let l = (e, t) => {
         let n = e.toRgb(),
-            a = t.toRgb(),
-            [s, o, i] = (0, l.J2)([n.r, n.g, n.b], [a.r, a.g, a.b], 50);
-        return r()({
+            r = t.toRgb(),
+            [s, o, l] = (0, i.J2)([n.r, n.g, n.b], [r.r, r.g, r.b], 50);
+        return a()({
             r: s,
             g: o,
-            b: i
+            b: l
         });
     },
     c = (e, t) =>
@@ -27,8 +27,8 @@ let i = (e, t) => {
               : {
                     primary: t[0],
                     secondary: t[1],
-                    border: i(t[0], t[1]).setAlpha(0.4),
-                    label: i(t[0], t[1]).isLight() ? e.dark : e.light
+                    border: l(t[0], t[1]).setAlpha(0.4),
+                    label: l(t[0], t[1]).isLight() ? e.dark : e.light
                 },
     d = (e, t) =>
         0 === t.length
@@ -42,44 +42,44 @@ let i = (e, t) => {
               : {
                     primary: t[0],
                     secondary: t[1],
-                    text: i(t[0], t[1]).isLight() ? e.dark : e.light
+                    text: l(t[0], t[1]).isLight() ? e.dark : e.light
                 },
     u = (e, t) => {
-        let { h: n, s: a, l: s } = e.toHsl();
-        return r()({
+        let { h: n, s: r, l: s } = e.toHsl();
+        return a()({
             h: n,
-            s: a * t,
+            s: r * t,
             l: s
         });
     };
 t.Z = (e) => (t) => {
     let n = (0, s.e7)([o.Z], () => o.Z.saturation);
     if (null == t) return {};
-    let a = {
+    let r = {
         backgroundColors: c(e, t.backgroundColors),
         buttonColors: d(e, t.buttonColors),
         confettiColors: t.confettiColors
     };
     return 1 === n
-        ? { ...a }
+        ? { ...r }
         : {
               backgroundColors:
-                  null != a.backgroundColors
+                  null != r.backgroundColors
                       ? {
-                            primary: u(a.backgroundColors.primary, n),
-                            secondary: u(a.backgroundColors.secondary, n),
-                            border: u(a.backgroundColors.border, n),
-                            label: u(a.backgroundColors.label, n)
+                            primary: u(r.backgroundColors.primary, n),
+                            secondary: u(r.backgroundColors.secondary, n),
+                            border: u(r.backgroundColors.border, n),
+                            label: u(r.backgroundColors.label, n)
                         }
                       : void 0,
               buttonColors:
-                  null != a.buttonColors
+                  null != r.buttonColors
                       ? {
-                            primary: u(a.buttonColors.primary, n),
-                            secondary: u(a.buttonColors.secondary, n),
-                            text: u(a.buttonColors.text, n)
+                            primary: u(r.buttonColors.primary, n),
+                            secondary: u(r.buttonColors.secondary, n),
+                            text: u(r.buttonColors.text, n)
                         }
                       : void 0,
-              confettiColors: a.confettiColors.map((e) => u(e, n))
+              confettiColors: r.confettiColors.map((e) => u(e, n))
           };
 };

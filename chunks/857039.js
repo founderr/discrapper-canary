@@ -1,13 +1,13 @@
 t.d(n, {
     Z: function () {
-        return u;
+        return a;
     }
 });
-var l = t(987209),
-    i = t(599659);
-function u(e) {
+var s = t(987209),
+    r = t(599659);
+function a(e) {
     let { location: n } = e,
-        { enabled: t } = i.O.useExperiment({ location: n }, { autoTrackExposure: !1 }),
-        { alreadyHasHalloweenDeco: u, isGift: o } = (0, l.wD)();
-    return t && o && !u;
+        { enabled: t } = r.O.useExperiment({ location: n }, { autoTrackExposure: !1 }),
+        { alreadyHasHalloweenDeco: a, isGift: i } = (0, s.wD)();
+    return t && i && !a;
 }

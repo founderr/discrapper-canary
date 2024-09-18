@@ -3,10 +3,10 @@ n.d(t, {
         return T;
     },
     ML: function () {
-        return f;
+        return C;
     },
     Qc: function () {
-        return C;
+        return f;
     }
 }),
     n(47120);
@@ -87,7 +87,7 @@ function S(e) {
         t && r.length > 0
     );
 }
-function C() {
+function f() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
         t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = (0, m.GN)((e) => e.savedGuildIds, r.Z),
@@ -122,13 +122,13 @@ function C() {
               searchResult: c
           };
 }
-function f(e) {
+function C(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         { updatePaginationSettings: n, currentColumnCount: a, pageSize: s, chunkedPages: o, currentPage: c, fetchableGuildIds: d } = (0, h.a)(),
         E = c - 1,
         g = (0, m.GN)((e) => e.savedGuildIds, r.Z),
         T = p(),
-        { searchResult: C, hasError: f } = (0, l.cj)(
+        { searchResult: f, hasError: C } = (0, l.cj)(
             [_.Z],
             () => ({
                 searchResult: _.Z.getSearchResult(T),
@@ -148,12 +148,12 @@ function f(e) {
         A = (0, l.Wu)([_.Z], () => N.map((e) => _.Z.getGuildProfile(e)).filter(u.lm), [N]),
         v = N.length === A.length || t,
         L = A.length === s || v,
-        Z = (0, I.Pw)(C);
+        Z = (0, I.Pw)(f);
     return {
         loaded: e === a && Z && L,
         clans: A,
         searchCriteria: T,
-        searchResult: C,
-        hasError: f
+        searchResult: f,
+        hasError: C
     };
 }

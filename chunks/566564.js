@@ -19,25 +19,25 @@ var a = r(735250),
     E = r(709999),
     I = r(215023),
     x = r(689938),
-    v = r(632007),
-    T = r(367815),
+    T = r(632007),
+    v = r(367815),
     S = r(933285),
     L = r(80995),
     N = r(725763),
     O = r(83498);
-let B = { [c.T.AUTUMN_EQUINOX]: { hero: { left: v.darker } } },
+let B = { [c.T.AUTUMN_EQUINOX]: { hero: { left: T.darker } } },
     k = (e) => (null == e ? {} : l()(B, e, {}));
 t.Z = (e) => {
     var t, r, s, o, B, j, R;
     let { handleTransition: P, numVisibleItems: Z } = e,
         { isFetchingCategories: A } = (0, g.Z)(),
         M = (0, d.e7)([f.default], () => f.default.getCurrentUser()),
-        w = n.createRef(),
-        y = (0, _.U)('CollectiblesFeedShop'),
-        H = y ? c.T.AUTUMN_EQUINOX : c.T.THE_VAULT,
+        y = n.createRef(),
+        w = (0, _.U)('CollectiblesFeedShop'),
+        H = w ? c.T.AUTUMN_EQUINOX : c.T.THE_VAULT,
         F = k(H),
         D = (0, d.cj)([p.Z], () => ({ feature: p.Z.getCategory(H) })),
-        U = y ? I.v7 : I.s8,
+        U = w ? I.v7 : I.s8,
         W = n.useMemo(
             () =>
                 U.map((e) => p.Z.getProduct(e))
@@ -73,56 +73,56 @@ t.Z = (e) => {
             [A]
         );
     if (null == M) return null;
-    let V = y ? x.Z.Messages.COLLECTIBLES_SHOP_CATEGORY_COLLECTION.format({ category_name: null === (t = D.feature) || void 0 === t ? void 0 : t.name }) : x.Z.Messages.COLLECTIBLES_SHOP_THE_VAULT_COLLECTION;
+    let V = w ? x.Z.Messages.COLLECTIBLES_SHOP_CATEGORY_COLLECTION.format({ category_name: null === (t = D.feature) || void 0 === t ? void 0 : t.name }) : x.Z.Messages.COLLECTIBLES_SHOP_THE_VAULT_COLLECTION;
     return (0, a.jsx)(a.Fragment, {
         children: (0, a.jsxs)('div', {
-            className: v.shop,
+            className: T.shop,
             children: [
                 (0, a.jsxs)('div', {
-                    className: v.banner,
+                    className: T.banner,
                     children: [
                         (0, a.jsx)('div', {
-                            className: v.bannerImage,
-                            style: { backgroundImage: 'url('.concat(y ? L : O, ')') }
+                            className: T.bannerImage,
+                            style: { backgroundImage: 'url('.concat(w ? L : O, ')') }
                         }),
-                        (0, a.jsx)('div', { className: i()(v.bannerShadow, v.left, l()(F, 'hero.left')) }),
-                        (0, a.jsx)('div', { className: i()(v.bannerShadow, v.right, l()(F, 'hero.right')) })
+                        (0, a.jsx)('div', { className: i()(T.bannerShadow, T.left, l()(F, 'hero.left')) }),
+                        (0, a.jsx)('div', { className: i()(T.bannerShadow, T.right, l()(F, 'hero.right')) })
                     ]
                 }),
                 (0, a.jsxs)('div', {
-                    className: i()(v.content, v.mainContent),
+                    className: i()(T.content, T.mainContent),
                     children: [
                         (0, a.jsxs)('div', {
-                            className: i()(v.heroHeaderContainer),
+                            className: i()(T.heroHeaderContainer),
                             children: [
                                 A
-                                    ? (0, a.jsx)('div', { className: i()(v.heroHeaderBadgeLogoSummaryContainer) })
+                                    ? (0, a.jsx)('div', { className: i()(T.heroHeaderBadgeLogoSummaryContainer) })
                                     : (0, a.jsxs)('div', {
-                                          className: i()(v.heroHeaderBadgeLogoSummaryContainer),
+                                          className: i()(T.heroHeaderBadgeLogoSummaryContainer),
                                           children: [
                                               (null === (s = D.feature) || void 0 === s ? void 0 : s.unpublishedAt) != null &&
                                                   (0, a.jsx)(u.TextBadge, {
                                                       disableColor: !0,
                                                       text: x.Z.Messages.LIMITED_TIME,
-                                                      className: v.limitedTimeBadge
+                                                      className: T.limitedTimeBadge
                                                   }),
                                               (0, a.jsx)('img', {
-                                                  className: v.heroHeaderLogo,
+                                                  className: T.heroHeaderLogo,
                                                   src: (0, C.uV)(null !== (R = null === (o = D.feature) || void 0 === o ? void 0 : o.logo) && void 0 !== R ? R : '', { size: h.n }),
                                                   alt: null === (B = D.feature) || void 0 === B ? void 0 : B.name
                                               }),
                                               (0, a.jsx)(u.Text, {
                                                   color: 'always-white',
                                                   variant: 'text-md/normal',
-                                                  className: v.subHeaderText,
+                                                  className: T.subHeaderText,
                                                   children: null === (j = D.feature) || void 0 === j ? void 0 : j.summary
                                               })
                                           ]
                                       }),
                                 (0, a.jsx)('div', {
-                                    className: v.heroHeaderButtonContainer,
+                                    className: T.heroHeaderButtonContainer,
                                     children: (0, a.jsx)(u.Button, {
-                                        className: v.heroHeaderButton,
+                                        className: T.heroHeaderButton,
                                         color: u.ButtonColors.WHITE,
                                         onClick: () => P('shop latest category hero'),
                                         children: V
@@ -131,7 +131,7 @@ t.Z = (e) => {
                             ]
                         }),
                         (0, a.jsx)('div', {
-                            className: i()(v.row, v.feed, v.feedSingleRow),
+                            className: i()(T.row, T.feed, T.feedSingleRow),
                             children: A
                                 ? (0, a.jsx)(a.Fragment, {
                                       children: [void 0, void 0, void 0, void 0].map((e, t) => (0, a.jsx)(b.K, {}, t))
@@ -154,21 +154,21 @@ t.Z = (e) => {
                                   })
                         }),
                         (0, a.jsxs)('div', {
-                            className: i()(v.section, v.col2, v.featuredBlocksContainer),
+                            className: i()(T.section, T.col2, T.featuredBlocksContainer),
                             children: [
                                 (0, a.jsxs)(u.Clickable, {
-                                    className: i()(v.featuredBlock),
-                                    style: { backgroundImage: 'url('.concat(y ? N : S, ')') },
-                                    onClick: () => P('shop marketing tile', y ? '1157406994873991284' : c.T.DOJO),
+                                    className: i()(T.featuredBlock),
+                                    style: { backgroundImage: 'url('.concat(w ? N : S, ')') },
+                                    onClick: () => P('shop marketing tile', w ? '1157406994873991284' : c.T.DOJO),
                                     children: [
-                                        (null === (r = p.Z.getCategory(y ? '1157406994873991284' : c.T.DOJO)) || void 0 === r ? void 0 : r.unpublishedAt) != null &&
+                                        (null === (r = p.Z.getCategory(w ? '1157406994873991284' : c.T.DOJO)) || void 0 === r ? void 0 : r.unpublishedAt) != null &&
                                             (0, a.jsx)(u.TextBadge, {
                                                 disableColor: !0,
                                                 text: x.Z.Messages.LIMITED_TIME,
-                                                className: v.featuredBlockBadge
+                                                className: T.featuredBlockBadge
                                             }),
                                         (0, a.jsx)(u.Button, {
-                                            className: v.featuredBlockButton,
+                                            className: T.featuredBlockButton,
                                             color: u.ButtonColors.WHITE,
                                             onClick: () => {},
                                             children: x.Z.Messages.TAKE_ME_THERE
@@ -176,17 +176,17 @@ t.Z = (e) => {
                                     ]
                                 }),
                                 (0, a.jsxs)(u.Clickable, {
-                                    className: i()(v.featuredBlock),
-                                    style: { backgroundImage: 'url('.concat(T, ')') },
+                                    className: i()(T.featuredBlock),
+                                    style: { backgroundImage: 'url('.concat(v, ')') },
                                     onClick: () => P('shop marketing tile', c.T.ANIME_V2),
                                     children: [
                                         (0, a.jsx)(u.TextBadge, {
                                             disableColor: !0,
                                             text: x.Z.Messages.MOST_POPULAR,
-                                            className: v.featuredBlockBadge
+                                            className: T.featuredBlockBadge
                                         }),
                                         (0, a.jsx)(u.Button, {
-                                            className: v.featuredBlockButton,
+                                            className: T.featuredBlockButton,
                                             color: u.ButtonColors.WHITE,
                                             onClick: () => {},
                                             children: x.Z.Messages.TAKE_ME_THERE
@@ -196,14 +196,14 @@ t.Z = (e) => {
                             ]
                         }),
                         (0, a.jsxs)('div', {
-                            className: i()(v.row, v.between, v.section),
+                            className: i()(T.row, T.between, T.section),
                             children: [
                                 (0, a.jsx)(u.Heading, {
                                     variant: 'heading-lg/semibold',
                                     children: x.Z.Messages.COLLECTIBLES_POPULAR_PICKS
                                 }),
                                 (0, a.jsxs)(u.Clickable, {
-                                    className: v.shopAll,
+                                    className: T.shopAll,
                                     onClick: () => P('shop all top'),
                                     children: [
                                         (0, a.jsx)(u.ServerGridIcon, {}),
@@ -216,8 +216,8 @@ t.Z = (e) => {
                             ]
                         }),
                         (0, a.jsx)('div', {
-                            className: v.feed,
-                            ref: w,
+                            className: T.feed,
+                            ref: y,
                             children: A
                                 ? (0, a.jsx)(a.Fragment, { children: [...Array(12)].map((e, t) => (0, a.jsx)(b.K, {}, t + 1)) })
                                 : (0, a.jsx)(a.Fragment, {
@@ -239,14 +239,14 @@ t.Z = (e) => {
                         }),
                         Z >= I.iA &&
                             (0, a.jsxs)('div', {
-                                className: v.endOfFeed,
+                                className: T.endOfFeed,
                                 children: [
                                     (0, a.jsx)(u.Heading, {
                                         variant: 'heading-md/semibold',
                                         children: x.Z.Messages.COLLECTIBLES_SHOP_FEED_END_OF_SCROLL_TEXT
                                     }),
                                     (0, a.jsx)(u.Button, {
-                                        className: v.endOfFeedButton,
+                                        className: T.endOfFeedButton,
                                         onClick: () => {
                                             P('shop all bottom', void 0, !0);
                                         },

@@ -21,7 +21,7 @@ function g(e) {
     let { user: t, nickname: n, status: g, isFocused: p } = e,
         T = a.useContext(d.AnalyticsContext),
         { analyticsLocations: S } = (0, l.ZP)(),
-        C = (e) => {
+        f = (e) => {
             null == e || e.stopPropagation(),
                 r.Z.addRelationship({
                     userId: t.id,
@@ -31,7 +31,7 @@ function g(e) {
                     fromFriendSuggestion: !0
                 });
         },
-        f = (e) => {
+        C = (e) => {
             null == e || e.stopPropagation(), o.Z.ignore(t.id);
         },
         N = g === h.Skl.OFFLINE ? h.Skl.UNKNOWN : g;
@@ -51,14 +51,14 @@ function g(e) {
                         icon: s.CheckmarkLargeIcon,
                         actionType: u.Z.ActionTypes.ACCEPT,
                         tooltip: m.Z.Messages.FRIEND_REQUEST_ACCEPT,
-                        onClick: C,
+                        onClick: f,
                         shouldHighlight: e
                     }),
                     (0, i.jsx)(u.Z, {
                         icon: s.XSmallIcon,
                         actionType: u.Z.ActionTypes.DENY,
                         tooltip: m.Z.Messages.FRIEND_REQUEST_IGNORE,
-                        onClick: f,
+                        onClick: C,
                         shouldHighlight: e
                     })
                 ]

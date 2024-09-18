@@ -38,7 +38,7 @@ function S(e) {
         }),
         I = a.useMemo(() => s.filter((e) => !(0, u.EJ)(e)), [s]),
         S = (0, c.ZP)(),
-        C = a.useMemo(() => T(n, S), [n, S]);
+        f = a.useMemo(() => T(n, S), [n, S]);
     return 0 === s.length
         ? null
         : (0, i.jsx)('div', {
@@ -49,7 +49,7 @@ function S(e) {
                   onScroll: t,
                   children: [
                       (0, i.jsxs)('div', {
-                          className: r()(C, p.adminUpsell),
+                          className: r()(f, p.adminUpsell),
                           children: [
                               n !== E.hz.NONE && (0, i.jsx)('div', { className: p.backgroundImageBlur }),
                               (0, i.jsx)(_.Z, {}),

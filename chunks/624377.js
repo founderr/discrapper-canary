@@ -1,11 +1,11 @@
-var a = n(979590),
-    r = n.n(a),
+var r = n(979590),
+    a = n.n(r),
     s = n(692547),
     o = n(764707);
-let l = r()(s.Z.unsafe_rawColors.WHITE_500.resolve({ saturation: 1 }).hex()),
-    i = r()(s.Z.unsafe_rawColors.BLACK_500.resolve({ saturation: 1 }).hex()),
+let i = a()(s.Z.unsafe_rawColors.WHITE_500.resolve({ saturation: 1 }).hex()),
+    l = a()(s.Z.unsafe_rawColors.BLACK_500.resolve({ saturation: 1 }).hex()),
     c = (0, o.Z)({
-        dark: i,
-        light: l
+        dark: l,
+        light: i
     });
 t.Z = c;

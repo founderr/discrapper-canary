@@ -1,25 +1,25 @@
-t(411104);
-var l = t(470079),
-    i = t(960048);
-n.Z = (e, n, t, u, o) => {
+n(411104);
+var l = n(470079),
+    i = n(960048);
+t.Z = (e, t, n, u, o) => {
     let a = (0, l.useRef)(!1);
     (0, l.useEffect)(() => {
-        if (n && !a.current) {
+        if (t && !a.current) {
             a.current = !0;
-            let n = setTimeout(() => {
-                let n = Error(''.concat(e, ' is taking too long to load.'));
+            let t = setTimeout(() => {
+                let t = Error(''.concat(e, ' is taking too long to load.'));
                 i.Z.setExtra({
                     loadingState: u,
-                    loadingTimeSeconds: t
+                    loadingTimeSeconds: n
                 }),
-                    i.Z.captureException(n, {
+                    i.Z.captureException(t, {
                         ...o,
                         tags: { ...(null == o ? void 0 : o.tags) }
                     });
-            }, 1000 * t);
+            }, 1000 * n);
             return () => {
-                clearTimeout(n);
+                clearTimeout(t);
             };
         }
-    }, [n, t]);
+    }, [t, n]);
 };

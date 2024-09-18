@@ -17,8 +17,8 @@ var i,
     p = n(543550),
     T = n(86014),
     S = n(895068),
-    C = n(921944),
-    f = n(866147);
+    f = n(921944),
+    C = n(866147);
 ((a = i || (i = {})).TOP_PICKS = 'top_picks'), (a.OTHER_GUILDS = 'other_guilds');
 let N = {
         mass: 1,
@@ -42,7 +42,7 @@ let N = {
             (r.useEffect(() => {
                 !_ &&
                     (0, E.EW)(c.z.GLOBAL_DISCOVERY_RAPIDASH_NOTIF, {
-                        dismissAction: C.L.TAKE_ACTION,
+                        dismissAction: f.L.TAKE_ACTION,
                         forceTrack: !0
                     });
             }, [_]),
@@ -57,13 +57,13 @@ let N = {
             case g.v0.TRAITS:
             case g.v0.PREFERENCES:
                 return (0, s.jsxs)('div', {
-                    className: f.discoveryContainer,
+                    className: C.discoveryContainer,
                     children: [
                         (0, s.jsxs)('div', {
-                            className: f.toolbar,
+                            className: C.toolbar,
                             children: [
                                 (0, s.jsx)(l.animated.div, {
-                                    className: f.toolbarBackground,
+                                    className: C.toolbarBackground,
                                     style: {
                                         opacity: null == a ? void 0 : a.to([0, 100], [0, 1])
                                     }
@@ -72,7 +72,7 @@ let N = {
                             ]
                         }),
                         (0, s.jsx)('div', {
-                            className: f.content,
+                            className: C.content,
                             children: (0, s.jsx)(T.Z, {
                                 inGlobalDiscovery: !1,
                                 width: n,
@@ -82,21 +82,21 @@ let N = {
                             })
                         }),
                         (0, s.jsx)('div', {
-                            className: f.selectors,
+                            className: C.selectors,
                             children: (0, s.jsx)(m.Z, { mode: t })
                         })
                     ]
                 });
             case g.v0.SAVED_GUILDS:
                 return (0, s.jsxs)('div', {
-                    className: f.discoveryContainer,
+                    className: C.discoveryContainer,
                     children: [
                         (0, s.jsx)('div', {
-                            className: f.toolbar,
+                            className: C.toolbar,
                             children: (0, s.jsx)(I.Z, {})
                         }),
                         (0, s.jsx)('div', {
-                            className: f.content,
+                            className: C.content,
                             children: (0, s.jsx)(T.Z, {
                                 inGlobalDiscovery: !1,
                                 width: n,
@@ -105,7 +105,7 @@ let N = {
                             })
                         }),
                         (0, s.jsx)('div', {
-                            className: f.selectors,
+                            className: C.selectors,
                             children: (0, s.jsx)(m.Z, { mode: t })
                         })
                     ]
@@ -144,13 +144,13 @@ t.Z = r.memo(function () {
         }),
         r = (0, _.iN)('global_discovery_guilds_tab');
     return (0, s.jsxs)('main', {
-        className: f.container,
+        className: C.container,
         ref: n,
         children: [
-            (0, s.jsx)('div', { className: f.dragRegion }),
+            (0, s.jsx)('div', { className: C.dragRegion }),
             e
                 ? (0, s.jsx)('div', {
-                      className: f.loading,
+                      className: C.loading,
                       children: (0, s.jsx)(d.Spinner, {})
                   })
                 : (0, s.jsx)(v, {

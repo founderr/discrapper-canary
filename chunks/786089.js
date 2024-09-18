@@ -17,8 +17,8 @@ var i = n(735250),
     p = n(617136),
     T = n(113434),
     S = n(497505),
-    C = n(918701),
-    f = n(981631),
+    f = n(918701),
+    C = n(981631),
     N = n(689938),
     A = n(874976);
 t.Z = (0, a.memo)(function (e) {
@@ -36,25 +36,25 @@ t.Z = (0, a.memo)(function (e) {
         }),
         U = null !== (v = null === (n = L.userStatus) || void 0 === n ? void 0 : n.claimedTier) && void 0 !== v ? v : 0,
         G = L.config.rewards[U],
-        k = (null == G ? void 0 : G.type) === l.w.COLLECTIBLE,
-        { product: w } = (0, h.T)(k && null != G ? G.skuId : null),
-        B = null == w ? void 0 : null === (s = w.items) || void 0 === s ? void 0 : s[0];
+        w = (null == G ? void 0 : G.type) === l.w.COLLECTIBLE,
+        { product: k } = (0, h.T)(w && null != G ? G.skuId : null),
+        B = null == k ? void 0 : null === (s = k.items) || void 0 === s ? void 0 : s[0];
     if (
         ((0, u.P)(O, (e) => {
             let { height: t } = e;
-            if (!!k && null != t) t >= 230 && t < 280 ? y(d.AvatarSizes.SIZE_120) : t >= 280 && y(d.AvatarSizes.SIZE_152);
+            if (!!w && null != t) t >= 230 && t < 280 ? y(d.AvatarSizes.SIZE_120) : t >= 280 && y(d.AvatarSizes.SIZE_152);
         }),
         null == G)
     )
         return null;
     let H = (0, c.wj)(M),
-        V = (0, C.Sz)(L.id, L.config.assets.logotype, 'dark'),
-        F = (0, C.Sz)(L.id, null != G.assetVideo ? G.assetVideo : G.asset),
-        Y = (0, C.nP)(F),
+        V = (0, f.Sz)(L.id, L.config.assets.logotype, 'dark'),
+        F = (0, f.Sz)(L.id, null != G.assetVideo ? G.assetVideo : G.asset),
+        Y = (0, f.nP)(F),
         z = Z ? P + 8 : 0,
         W = () => {
             R(!0),
-                g.default.track(f.rMx.QUEST_HOVER, {
+                g.default.track(C.rMx.QUEST_HOVER, {
                     quest_id: L.id,
                     ...(0, p.mH)(S.jn.TROPHY_CASE_CARD)
                 });
@@ -71,7 +71,7 @@ t.Z = (0, a.memo)(function (e) {
             className: r()(A.container, { [A.hovered]: Z }),
             children: [
                 null != x &&
-                    k &&
+                    w &&
                     (0, i.jsx)('div', {
                         className: A.decoWrapper,
                         children: (0, i.jsx)(E.Z, {
@@ -88,7 +88,7 @@ t.Z = (0, a.memo)(function (e) {
                               autoPlay: !1,
                               children: (0, i.jsx)('source', {
                                   src: F,
-                                  type: (0, C.mN)(F)
+                                  type: (0, f.mN)(F)
                               })
                           })
                       })

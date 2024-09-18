@@ -9,8 +9,8 @@ var n = t(780384),
     u = t(299156);
 s.Z = function (e) {
     let { churnUserDiscountOffer: s, onDiscountClaim: t, onContinue: _ } = e,
-        d = (0, r.ZP)(),
-        I = (0, n.wj)(d) ? c : u;
+        I = (0, r.ZP)(),
+        d = (0, n.wj)(I) ? c : u;
     return null == s
         ? null
         : (0, a.jsxs)('div', {
@@ -25,7 +25,7 @@ s.Z = function (e) {
                           children: [
                               (0, a.jsx)('img', {
                                   alt: '',
-                                  src: I,
+                                  src: d,
                                   className: o.churnFooterIcon
                               }),
                               (0, a.jsxs)('div', {

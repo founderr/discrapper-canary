@@ -17,8 +17,8 @@ var i = n(735250),
     p = n(666743),
     T = n(115130),
     S = n(812206),
-    C = n(770146),
-    f = n(600164),
+    f = n(770146),
+    C = n(600164),
     N = n(811066),
     A = n(252618),
     v = n(100159),
@@ -35,8 +35,8 @@ var i = n(735250),
     j = n(551428),
     U = n(695103),
     G = n(451478),
-    k = n(626135),
-    w = n(572004),
+    w = n(626135),
+    k = n(572004),
     B = n(630388),
     H = n(937615),
     V = n(73346),
@@ -106,7 +106,7 @@ class ec extends a.PureComponent {
             analyticsContext: { loadId: e, loadDate: t }
         } = this.props;
         null != t &&
-            k.default.track(ea.rMx.STORE_LISTING_EXITED, {
+            w.default.track(ea.rMx.STORE_LISTING_EXITED, {
                 load_id: e,
                 duration_ms: Date.now() - t
             });
@@ -119,7 +119,7 @@ class ec extends a.PureComponent {
             images: 0,
             videos: 0
         });
-        k.default.track(ea.rMx.STORE_LISTING_VIEWED, {
+        w.default.track(ea.rMx.STORE_LISTING_VIEWED, {
             ...this._extraAnalyticsProperties,
             load_id: i.loadId,
             has_description: null != t.description && t.description.length > 0,
@@ -257,7 +257,7 @@ class ec extends a.PureComponent {
         if (null == s) throw Error('Rendering ApplicationStoreListing without description');
         return (0, i.jsxs)(a.Fragment, {
             children: [
-                (0, i.jsx)(C.Z, {
+                (0, i.jsx)(f.Z, {
                     tag: 'h1',
                     children: er.Z.Messages.APPLICATION_STORE_ABOUT_HEADER.format({ name: n.name })
                 }),
@@ -344,9 +344,9 @@ class ec extends a.PureComponent {
             return (0, i.jsxs)(a.Fragment, {
                 children: [
                     this.renderHeader(e, t),
-                    (0, i.jsx)(f.Z, {
-                        align: f.Z.Align.CENTER,
-                        justify: f.Z.Justify.CENTER,
+                    (0, i.jsx)(C.Z, {
+                        align: C.Z.Align.CENTER,
+                        justify: C.Z.Justify.CENTER,
                         children: (0, i.jsx)(d.Spinner, { className: el.spinner })
                     })
                 ]
@@ -395,7 +395,7 @@ class ec extends a.PureComponent {
             eo(this, 'trackCarouselScroll', (e, t, n) => {
                 let { sku: i } = this.props;
                 null != i &&
-                    k.default.track(ea.rMx.STORE_LISTING_MEDIA_SCROLLED, {
+                    w.default.track(ea.rMx.STORE_LISTING_MEDIA_SCROLLED, {
                         ...(0, v.Z)(i),
                         card_index: n,
                         card_type: e.type === ea.s9s.IMG ? 'image' : 'video'
@@ -404,7 +404,7 @@ class ec extends a.PureComponent {
             eo(this, 'copyCurrentUrl', () => {
                 var e;
                 let { location: t } = this.props;
-                (0, w.JG)(((e = t.pathname), ''.concat(location.protocol, '//').concat(location.host).concat(e))),
+                (0, k.JG)(((e = t.pathname), ''.concat(location.protocol, '//').concat(location.host).concat(e))),
                     this.setState({ showLinkCopied: !0 }, () => {
                         this.showCopyLinkTextTimeout.start(1500, () => {
                             this.setState({ showLinkCopied: !1 });
@@ -543,9 +543,9 @@ class ec extends a.PureComponent {
             eo(this, 'renderListing', () => {
                 let { application: e, storeListing: t, sku: n, pageSize: a } = this.props;
                 return null == e || null == n || null == t || t.isSlimDirectoryVersion()
-                    ? (0, i.jsx)(f.Z, {
-                          align: f.Z.Align.CENTER,
-                          justify: f.Z.Justify.CENTER,
+                    ? (0, i.jsx)(C.Z, {
+                          align: C.Z.Align.CENTER,
+                          justify: C.Z.Justify.CENTER,
                           children: (0, i.jsx)(d.Spinner, {})
                       })
                     : a === ei.b.SMALL

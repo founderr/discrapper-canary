@@ -21,8 +21,8 @@ var i = n(735250),
     p = n(791734),
     T = n(444324),
     S = n(726115),
-    C = n(859921),
-    f = n(750910),
+    f = n(859921),
+    C = n(750910),
     N = n(28494),
     A = n(29086),
     v = n(590771),
@@ -38,7 +38,7 @@ function b() {
         D = (0, S.lg)(P),
         y = !Z.MU.has(P),
         j = (0, d.iN)('global_discovery_servers_layout'),
-        { searchBarState: U, onTabsAvailableWidthChange: G, onCollapsedSearchBarClick: k, onSearchBarBlur: w, tabsClassName: B } = (0, m.U)({ isSearchBarVisible: y }),
+        { searchBarState: U, onTabsAvailableWidthChange: G, onCollapsedSearchBarClick: w, onSearchBarBlur: k, tabsClassName: B } = (0, m.U)({ isSearchBarVisible: y }),
         { searchQuery: H, onSearchTextChange: V, onClearSearch: F, onSearchSubmit: Y, isSearchVisible: z } = (0, N.H)({ loadId: e.current }),
         W = (0, E.GN)((e) => e.mode, l.Z),
         K = a.useCallback(
@@ -59,7 +59,7 @@ function b() {
         ),
         Q = W === E.v0.SAVED_GUILDS,
         X = a.useRef(new T.Z(D)),
-        { onGuildCardSeen: J, onGuildCardClick: $ } = (0, f.H)({
+        { onGuildCardSeen: J, onGuildCardClick: $ } = (0, C.H)({
             guildDiscoveryCardSeenManager: X.current,
             loadId: e.current
         });
@@ -70,7 +70,7 @@ function b() {
             s();
         }, [P, s]),
         a.useEffect(() => {
-            !z && C.B.setState({ searchScrollPosition: null });
+            !z && f.B.setState({ searchScrollPosition: null });
         }, [z]),
         a.useEffect(() => {
             (0, c.N)();
@@ -89,12 +89,12 @@ function b() {
                     onTextChange: V,
                     onClear: F,
                     onSubmit: Y,
-                    onCollapsedClick: k,
+                    onCollapsedClick: w,
                     state: U,
-                    onBlur: w
+                    onBlur: k
                 });
         }
-    }, [P, j, H, D, V, F, Y, k, U, w, Q]);
+    }, [P, j, H, D, V, F, Y, w, U, k, Q]);
     return (0, i.jsxs)('div', {
         className: x.container,
         children: [

@@ -17,8 +17,8 @@ var i = n(735250),
     p = n(503737),
     T = n(513202),
     S = n(318891),
-    C = n(687751),
-    f = n(912471),
+    f = n(687751),
+    C = n(912471),
     N = n(100527),
     A = n(838134),
     v = n(77987),
@@ -35,8 +35,8 @@ var i = n(735250),
     j = n(96051),
     U = n(750995),
     G = n(696287),
-    k = n(408026),
-    w = n(763916),
+    w = n(408026),
+    k = n(763916),
     B = n(306721),
     H = n(531551),
     V = n(38618),
@@ -71,8 +71,8 @@ var i = n(735250),
     ep = n(719256),
     eT = n(6025),
     eS = n(897473),
-    eC = n(377368),
-    ef = n(262702),
+    ef = n(377368),
+    eC = n(262702),
     eN = n(639033),
     eA = n(479313),
     ev = n(911560),
@@ -89,8 +89,8 @@ var i = n(735250),
     ej = n(592125),
     eU = n(896797),
     eG = n(430824),
-    ek = n(819640),
-    ew = n(283595),
+    ew = n(819640),
+    ek = n(283595),
     eB = n(944486),
     eH = n(914010),
     eV = n(695103),
@@ -119,15 +119,15 @@ function e0(e, t, n) {
 }
 n(117240), n(801077), n(967368), n(272053), n(974180), n(574254), n(551428), n(55563), n(455173), n(882029), n(959457), n(653255), n(663389), n(25990), n(778825), n(999382), n(388610), n(533947), n(277053), n(371398), n(141233), n(471073), n(628566);
 let e1 = !1;
-(0, f.DL)(),
+(0, C.DL)(),
     l.ZP.initialize(),
     eg.Z.loadServer(),
     eK.isPlatformEmbedded &&
         (eq.ZP.on('USER_SETTINGS_OPEN', () => {
-            !ek.Z.getLayers().includes(eX.S9g.USER_SETTINGS) && h.Z.open(eX.oAB.ACCOUNT);
+            !ew.Z.getLayers().includes(eX.S9g.USER_SETTINGS) && h.Z.open(eX.oAB.ACCOUNT);
         }),
         eq.ZP.on('LAUNCH_APPLICATION', (e, t) => {
-            let n = ew.Z.getActiveLibraryApplication(t);
+            let n = ek.Z.getActiveLibraryApplication(t);
             eQ.playApplication(t, n, {
                 analyticsParams: {
                     location: {
@@ -212,10 +212,10 @@ let e9 = [
                 { gameId: n, action: a } = t.params;
             return (
                 ez.Z.whenInitialized(() => {
-                    ew.Z.whenInitialized(() => {
+                    ek.Z.whenInitialized(() => {
                         switch (a) {
                             case 'launch': {
-                                let e = ew.Z.getActiveLibraryApplication(n);
+                                let e = ek.Z.getActiveLibraryApplication(n);
                                 if (null == e) return;
                                 eQ.playApplication(e.id, e, {
                                     analyticsParams: {
@@ -231,7 +231,7 @@ let e9 = [
                                 eV.Z.whenInitialized(() => E.Wt(n));
                                 break;
                             case 'uninstall': {
-                                let e = ew.Z.getActiveLibraryApplication(n);
+                                let e = ek.Z.getActiveLibraryApplication(n);
                                 if (null == e) return;
                                 (0, d.W)(e.id, e.branchId, eX.Sbl.URI_SCHEME);
                             }
@@ -385,16 +385,16 @@ class te extends a.PureComponent {
             eg.Z.init(),
             L.Z.initialize(),
             ec.Z.initialize(),
-            k.Z.initialize(),
-            eM.Z.initialize(),
             w.Z.initialize(),
+            eM.Z.initialize(),
+            k.Z.initialize(),
             eu.Z.initialize(),
             $.Z.initialize(),
             I.Z.init(),
             H.Z.init(),
             B.Z.init(),
             ea.Z.initialize(),
-            C.Z.initialize(),
+            f.Z.initialize(),
             U.Z.initialize(),
             e_.Z.initialize(),
             S.ZP.initialize(),
@@ -409,14 +409,14 @@ class te extends a.PureComponent {
             eL.Z.init(),
             eF.Z.init(),
             eO.Z.init(),
-            ef.Z.initialize(),
+            eC.Z.initialize(),
             eN.Z.initialize(),
             eR.Z.initialize(),
             ex.Z.init(),
             j.Z.initialize(),
             g.Z.initialize(),
             ep.Z.initialize(),
-            eC.Z.initialize(),
+            ef.Z.initialize(),
             er.Z.initialize(),
             es.Z.initialize(),
             el.Z.initialize(),
@@ -441,7 +441,7 @@ class te extends a.PureComponent {
             (this.historyUnlisten = eh.Z.addRouteChangeListener(this.handleHistoryChange));
     }
     componentWillUnmount() {
-        eM.Z.terminate(), eu.Z.terminate(), ec.Z.terminate(), L.Z.terminate(), S.ZP.terminate(), eP.Z.terminate(), T.Z.terminate(), e_.Z.terminate(), eo.Z.terminate(), eR.Z.terminate(), p.Z.terminate(), j.Z.terminate(), ee.Z.terminate(), g.Z.terminate(), eE.Z.terminate(), ep.Z.terminate(), eC.Z.terminate(), er.Z.terminate(), es.Z.terminate(), el.Z.terminate(), x.Z.terminate(), b.Z.terminate(), ed.Z.terminate(), D.Z.terminate(), G.Z.terminate(), R.Z.terminate(), O.Z.terminate(), this.historyUnlisten(), this.rewriterUnlisten();
+        eM.Z.terminate(), eu.Z.terminate(), ec.Z.terminate(), L.Z.terminate(), S.ZP.terminate(), eP.Z.terminate(), T.Z.terminate(), e_.Z.terminate(), eo.Z.terminate(), eR.Z.terminate(), p.Z.terminate(), j.Z.terminate(), ee.Z.terminate(), g.Z.terminate(), eE.Z.terminate(), ep.Z.terminate(), ef.Z.terminate(), er.Z.terminate(), es.Z.terminate(), el.Z.terminate(), x.Z.terminate(), b.Z.terminate(), ed.Z.terminate(), D.Z.terminate(), G.Z.terminate(), R.Z.terminate(), O.Z.terminate(), this.historyUnlisten(), this.rewriterUnlisten();
     }
     handleHistoryChange(e) {
         let { pathname: t, search: n } = e;
