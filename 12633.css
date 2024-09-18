@@ -46466,8 +46466,7 @@ code {
     --custom-list-items-list-item-width: 72px;
     --custom-folder-item-animation-duration: 150ms;
     --custom-folder-item-guild-icon-size: 48px;
-    --custom-folder-item-guild-icon-margin: 8px;
-    --custom-list-items-list-item-width: 72px
+    --custom-folder-item-guild-icon-margin: 8px
 }
 
 :root {
