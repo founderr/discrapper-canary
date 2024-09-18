@@ -57,7 +57,8 @@ function f(e) {
                                 darkness: 0,
                                 lightness: 100,
                                 easing: d.iw.LINEAR,
-                                easingStrength: 1
+                                easingStrength: 1,
+                                steps: 26
                             }),
                                 n({
                                     ...t,
@@ -104,8 +105,9 @@ function f(e) {
 }
 function p(e) {
     let { scale: t, setState: n, onClose: a } = e,
-        { name: i, base: s, darkness: x, lightness: f, useEquidistantLuminance: p, showColumnarPalettePreview: g, colorSpace: v, easing: _ = d.iw.LINEAR, easingStrength: j = 1, useP3ColorSpace: C } = t,
-        T = (0, d.XM)(t);
+        { name: i, base: s, darkness: x, lightness: f, useEquidistantLuminance: p, showColumnarPalettePreview: g, colorSpace: v, easing: _ = d.iw.LINEAR, easingStrength: j = 1, useP3ColorSpace: C, steps: T = 26 } = t,
+        S = (0, d.XM)(t),
+        N = (0, d.W6)(S, i);
     return (0, r.jsxs)(o.FormSection, {
         className: u.paletteSettings,
         children: [
@@ -123,7 +125,7 @@ function p(e) {
                     }),
                     (0, r.jsx)(o.Clickable, {
                         onClick: function () {
-                            let e = Object.entries(T).reduce((e, t) => {
+                            let e = Object.entries(S).reduce((e, t) => {
                                 let [n, r] = t;
                                 return (
                                     (e[n] = {
@@ -173,53 +175,41 @@ function p(e) {
             (0, r.jsxs)(o.FormSection, {
                 title: 'Luminance',
                 children: [
-                    (0, r.jsx)(o.FormItem, {
-                        children: (0, r.jsx)(o.FormSwitch, {
-                            note: 'By default this will use the luminance steps of the existing scale. Enable this to use equidistant luminance steps instead. Turn this on to enable advanced color options.',
-                            value: p,
-                            onChange: (e) => (0, d.VS)(i, e, n),
-                            children: 'Use equidistant luminance steps'
-                        })
+                    (0, r.jsx)(o.FormItem, {}),
+                    (0, r.jsxs)(o.FormItem, {
+                        title: 'Darkness ('.concat(x.toFixed(), '%)'),
+                        disabled: !p,
+                        children: [
+                            (0, r.jsx)(o.FormText, {
+                                type: o.FormTextTypes.DESCRIPTION,
+                                children: 'Adjust the minimum lumiance of the darkest step in the palette.'
+                            }),
+                            (0, r.jsx)(o.Slider, {
+                                onValueRender: () => null,
+                                initialValue: 0,
+                                minValue: 0,
+                                maxValue: 20,
+                                onValueChange: (e) => (0, d.YE)(i, e, n)
+                            })
+                        ]
                     }),
-                    p &&
-                        (0, r.jsxs)(r.Fragment, {
-                            children: [
-                                (0, r.jsxs)(o.FormItem, {
-                                    title: 'Darkness ('.concat(x.toFixed(), '%)'),
-                                    disabled: !p,
-                                    children: [
-                                        (0, r.jsx)(o.FormText, {
-                                            type: o.FormTextTypes.DESCRIPTION,
-                                            children: 'Adjust the minimum lumiance of the darkest step in the palette.'
-                                        }),
-                                        (0, r.jsx)(o.Slider, {
-                                            onValueRender: () => null,
-                                            initialValue: 0,
-                                            minValue: 0,
-                                            maxValue: 20,
-                                            onValueChange: (e) => (0, d.YE)(i, e, n)
-                                        })
-                                    ]
-                                }),
-                                (0, r.jsxs)(o.FormItem, {
-                                    title: 'Lightness ('.concat(f.toFixed(), '%)'),
-                                    disabled: !p,
-                                    children: [
-                                        (0, r.jsx)(o.FormText, {
-                                            type: o.FormTextTypes.DESCRIPTION,
-                                            children: 'Adjust the maximum lumiance of the lightest step in the palette.'
-                                        }),
-                                        (0, r.jsx)(o.Slider, {
-                                            onValueRender: () => null,
-                                            initialValue: f,
-                                            minValue: 80,
-                                            maxValue: 100,
-                                            onValueChange: (e) => (0, d.h9)(i, e, n)
-                                        })
-                                    ]
-                                })
-                            ]
-                        })
+                    (0, r.jsxs)(o.FormItem, {
+                        title: 'Lightness ('.concat(f.toFixed(), '%)'),
+                        disabled: !p,
+                        children: [
+                            (0, r.jsx)(o.FormText, {
+                                type: o.FormTextTypes.DESCRIPTION,
+                                children: 'Adjust the maximum lumiance of the lightest step in the palette.'
+                            }),
+                            (0, r.jsx)(o.Slider, {
+                                onValueRender: () => null,
+                                initialValue: f,
+                                minValue: 80,
+                                maxValue: 100,
+                                onValueChange: (e) => (0, d.h9)(i, e, n)
+                            })
+                        ]
+                    })
                 ]
             }),
             p &&
@@ -281,33 +271,48 @@ function p(e) {
                         })
                     }),
                     (0, r.jsx)(o.FormItem, {
+                        title: 'Steps ('.concat(T, ')'),
+                        children: (0, r.jsx)(o.Slider, {
+                            onValueRender: () => null,
+                            initialValue: T,
+                            minValue: (0, d.A0)(i).length,
+                            maxValue: 100,
+                            onValueChange: (e) => (0, d.YC)(i, Math.round(e), n),
+                            onMarkerRender: () => null
+                        })
+                    }),
+                    (0, r.jsx)(o.FormItem, {
                         title: 'Palette Preview',
                         children: (0, r.jsx)('div', {
                             className: u.paletteOverrides,
                             'data-columnar': g,
-                            children: Object.entries(T).map((e) => {
-                                let [t, n] = e,
-                                    a = (0, d.HI)(n, C),
-                                    i = new l.Z('black').contrastWCAG21(n) > 4.5 ? 'black' : 'white';
+                            children: Object.entries(S).map((e, t) => {
+                                let [n, a] = e,
+                                    i = (0, d.HI)(a, C),
+                                    c = new l.Z('black').contrastWCAG21(a) > 4.5 ? 'black' : 'white',
+                                    s = N[n];
                                 return (0, r.jsxs)(
                                     'div',
                                     {
-                                        style: { backgroundColor: a },
+                                        style: { backgroundColor: i },
                                         children: [
-                                            (0, r.jsx)(o.Text, {
+                                            (0, r.jsxs)(o.Text, {
                                                 variant: g ? 'text-sm/medium' : 'text-xs/medium',
-                                                style: { color: i },
-                                                children: t
+                                                style: { color: c },
+                                                children: [t, g && null != s ? (0, r.jsx)('strong', { children: ' - '.concat(s) }) : '']
                                             }),
                                             g &&
                                                 (0, r.jsxs)(o.Text, {
-                                                    variant: 'text-xs/medium',
-                                                    style: { color: i },
-                                                    children: [n.to('sRGB').toString({ format: 'hex' }).toUpperCase(), ' - ', a]
+                                                    variant: 'text-xxs/medium',
+                                                    style: {
+                                                        opacity: 0.75,
+                                                        color: c
+                                                    },
+                                                    children: [a.to('sRGB').toString({ format: 'hex' }).toUpperCase(), ' - ', i]
                                                 })
                                         ]
                                     },
-                                    t
+                                    n
                                 );
                             })
                         })
@@ -319,11 +324,7 @@ function p(e) {
 }
 function g(e) {
     let { scale: t, onRemove: n } = e,
-        l = a.useMemo(() => {
-            let e = (0, d.A0)(t.name),
-                n = (0, d.XM)(t);
-            return e.map((e) => n[''.concat(t.name, '.').concat(e)].to('srgb').toString({ format: 'hex' }));
-        }, [t]);
+        l = a.useMemo(() => Object.values((0, d.XM)(t)).map((e) => e.to('srgb').toString({ format: 'hex' })), [t]);
     return (0, r.jsxs)('li', {
         className: u.override,
         children: [

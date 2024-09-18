@@ -100,13 +100,15 @@ function S() {
                 }),
                 r = S.reduce((e, t) => {
                     let { name: n, useP3ColorSpace: r } = t,
-                        a = (0, b.XM)(t);
+                        a = (0, b.XM)(t),
+                        l = (0, b.W6)(a, n);
                     return (
                         e +
-                        (0, b.A0)(n).reduce((e, t) => {
-                            let l = a[''.concat(n, '.').concat(t)],
-                                i = (0, b.HI)(l, r);
-                            return ''.concat(e, '\n--').concat(n, '-').concat(t, ': ').concat(i, ';');
+                        Object.keys(l).reduce((e, t) => {
+                            let n = l[t],
+                                i = a[t],
+                                o = (0, b.HI)(i, r);
+                            return ''.concat(e, '\n--').concat(n, ': ').concat(o, ';');
                         }, '')
                     );
                 }, '');

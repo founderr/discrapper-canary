@@ -1,72 +1,76 @@
 n.d(t, {
     $R: function () {
-        return v;
+        return b;
     },
     A0: function () {
-        return y;
+        return N;
     },
     BZ: function () {
-        return F;
+        return U;
     },
     GU: function () {
-        return j;
+        return _;
     },
     H8: function () {
         return a;
     },
     HI: function () {
-        return C;
+        return j;
     },
     Ib: function () {
-        return M;
+        return D;
     },
     KB: function () {
-        return H;
+        return G;
     },
     M3: function () {
-        return I;
+        return y;
     },
     S2: function () {
-        return g;
+        return p;
     },
-    VS: function () {
-        return P;
+    W6: function () {
+        return A;
     },
     XM: function () {
-        return Z;
-    },
-    YE: function () {
         return B;
     },
+    YC: function () {
+        return V;
+    },
+    YE: function () {
+        return P;
+    },
     h9: function () {
-        return L;
+        return M;
     },
     iw: function () {
         return l;
     },
     jC: function () {
-        return p;
+        return f;
     },
     lT: function () {
-        return _;
+        return v;
     },
     rd: function () {
-        return U;
+        return H;
     },
     t4: function () {
-        return D;
+        return F;
     },
     uF: function () {
-        return G;
+        return z;
     },
     uH: function () {
         return r;
     },
     zn: function () {
-        return T;
+        return C;
     }
 }),
-    n(47120);
+    n(47120),
+    n(724458);
 var r,
     a,
     l,
@@ -77,12 +81,11 @@ var r,
     d = n(570540),
     u = n(433517),
     h = n(190558),
-    m = n(203165),
-    x = n(231338);
-let { SemanticColors: f } = h.V,
-    p = f,
-    g = CSS.supports('color', 'color(display-p3 1 0 0)') && CSS.supports('color', 'color(display-p3 1 0 0 / 1)');
-function b(e, t) {
+    m = n(231338);
+let { SemanticColors: x } = h.V,
+    f = x,
+    p = CSS.supports('color', 'color(display-p3 1 0 0)') && CSS.supports('color', 'color(display-p3 1 0 0 / 1)');
+function g(e, t) {
     let [n, r] = s.useState(() => {
         let n = u.K.get(e);
         return null != n ? n : t;
@@ -94,12 +97,12 @@ function b(e, t) {
         [n, r]
     );
 }
-function v(e) {
-    let t = p[e];
+function b(e) {
+    let t = f[e];
     return {
         name: e,
         colors: Object.fromEntries(
-            Object.values(x.BR).map((e) => [
+            Object.values(m.BR).map((e) => [
                 e,
                 {
                     color: t[e].raw,
@@ -110,7 +113,7 @@ function v(e) {
         highlight: !1
     };
 }
-function _(e, t, n, r, a) {
+function v(e, t, n, r, a) {
     return {
         name: t,
         colors: {
@@ -123,20 +126,20 @@ function _(e, t, n, r, a) {
         highlight: !1
     };
 }
-function j(e) {
+function _(e) {
     return {
         ...e,
         highlight: !e.highlight
     };
 }
-function C(e, t) {
+function j(e, t) {
     let n = e.toString();
     return t && !CSS.supports('color', n) && (n = e.to('p3').toString()), !CSS.supports('color', n) && (n = e.to('srgb').toString()), n;
 }
-function T() {
+function C() {
     return (function (e, t) {
-        let [n, r] = b(''.concat(e, '-states'), [t]),
-            [a, l] = b(''.concat(e, '-index'), 0),
+        let [n, r] = g(''.concat(e, '-states'), [t]),
+            [a, l] = g(''.concat(e, '-index'), 0),
             i = n[a],
             o = s.useCallback(
                 (e) => {
@@ -152,108 +155,145 @@ function T() {
             }, [a, l]),
             u = a < n.length - 1;
         return [i, o, c, d, u, a > 0];
-    })('color-override-9-10-2024', {
+    })('color-override-9-18-2024', {
         semanticColorOverrides: {},
         rawColorOverrides: {},
         tab: 'Tokens',
         scales: []
     });
 }
-((i = r || (r = {})).JzAzBz = 'jzazbz'), (i.ICtCp = 'ictcp'), (i.OKLch = 'oklch'), (i.HSLuv = 'hsluv'), ((o = a || (a = {})).TOKENS = 'Tokens'), (o.PALETTES = 'Palettes');
-let S = [100, 130, 160, 200, 230, 260, 300, 330, 345, 360, 400, 430, 460, 500, 530, 560, 600, 630, 660, 700, 730, 760, 800, 830, 860, 900],
-    N = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26];
-function y(e) {
-    return 'plum' === e ? N : S;
+((i = r || (r = {})).JzAzBz = 'jzazbz'), (i.ICtCp = 'ictcp'), (i.OKLch = 'oklch'), (i.HSLuv = 'hsluv'), (i.HPLuv = 'hpluv'), (i.Cam16 = 'cam16-jmh'), ((o = a || (a = {})).TOKENS = 'Tokens'), (o.PALETTES = 'Palettes');
+let T = [100, 130, 160, 200, 230, 260, 300, 330, 345, 360, 400, 430, 460, 500, 530, 560, 600, 630, 660, 700, 730, 760, 800, 830, 860, 900],
+    S = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26];
+function N(e) {
+    return 'plum' === e ? S : T;
 }
-let I = [
-    {
-        name: 'JzAzBz',
-        space: 'jzazbz',
-        key: 'jz'
-    },
-    {
-        name: 'ICtCp',
-        space: 'ictcp',
-        key: 'i'
-    },
-    {
-        name: 'OKLch',
-        space: 'oklch',
-        key: 'l'
-    },
-    {
-        name: 'HSLuv',
-        space: 'hsluv',
-        key: 'l'
-    }
-];
+let y = [
+        {
+            name: 'JzAzBz',
+            space: 'jzazbz'
+        },
+        {
+            name: 'Cam16_jmh',
+            space: 'cam16-jmh'
+        },
+        {
+            name: 'HPLuv',
+            space: 'hpluv'
+        },
+        {
+            name: 'ICtCp',
+            space: 'ictcp'
+        },
+        {
+            name: 'OKLch',
+            space: 'oklch'
+        },
+        {
+            name: 'HSLuv',
+            space: 'hsluv'
+        }
+    ],
+    I = [
+        {
+            space: 'jzazbz',
+            property: 'jzazbz',
+            key: 'jz'
+        },
+        {
+            space: 'ictcp',
+            property: 'ictcp',
+            key: 'i'
+        },
+        {
+            space: 'oklch',
+            property: 'oklch',
+            key: 'l'
+        },
+        {
+            space: 'hsluv',
+            property: 'hsluv',
+            key: 'l'
+        },
+        {
+            space: 'hpluv',
+            property: 'hpluv',
+            key: 'l'
+        },
+        {
+            space: 'cam16-jmh',
+            property: 'cam16_jmh',
+            key: 'j'
+        }
+    ];
 function w(e, t) {
-    var n;
-    let r = null === (n = I.find((e) => e.space === t)) || void 0 === n ? void 0 : n.key;
-    return e.to(t)[t][r];
+    let { property: n, key: r } = I.find((e) => e.space === t);
+    return e.to(t)[n][r];
 }
-let k = (e) => e,
-    E = function (e) {
+function k(e, t, n) {
+    let { property: r, key: a } = I.find((e) => e.space === t);
+    e[r][a] = n;
+}
+let E = (e) => e,
+    R = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
         return Math.pow(e, t);
     },
-    R = function (e) {
+    O = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
         return 1 - Math.pow(1 - e, t);
     },
-    O = function (e) {
+    Z = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
         return e < 0.5 ? Math.pow(2, t - 1) * Math.pow(e, t) : 1 - Math.pow(-2 * e + 2, t) / 2;
     };
 ((c = l || (l = {})).LINEAR = 'Linear'), (c.EASE_IN = 'Ease In'), (c.EASE_OUT = 'Ease Out'), (c.EASE_IN_OUT = 'Ease In Out');
-function Z(e) {
-    let { name: t, base: n, colorSpace: r, useEquidistantLuminance: a, darkness: l, lightness: i, easing: o = 'Linear', easingStrength: c = 1 } = e,
-        s = new d.Z('hsl(0, 0%, '.concat(l, '%)')),
+function A(e, t) {
+    let n = N(t),
+        r = Object.keys(e).map((e) => parseInt(e.split('-')[1])),
+        a = Math.max(...r) / (n.length - 1),
+        l = {};
+    return (
+        n.forEach((e, n) => {
+            let i = Math.round(n * a),
+                o = r.reduce((e, t) => (Math.abs(t - i) < Math.abs(e - i) ? t : e));
+            l[''.concat(t, '-').concat(o)] = ''.concat(t, '-').concat(e);
+        }),
+        l
+    );
+}
+function B(e) {
+    let { name: t, base: n, steps: r = 26, colorSpace: a, useP3ColorSpace: l, darkness: i, lightness: o, easing: c = 'Linear', easingStrength: s = 1 } = e,
         u = new d.Z('hsl(0, 0%, '.concat(i, '%)')),
-        h = y(t),
-        x = w(s, r),
-        f = w(u, r),
-        p = (f - x) / h.length,
-        g = h.map((e) => w(new d.Z(m.b[''.concat(t, '.').concat(e)].hex).to(r), r));
+        h = new d.Z('hsl(0, 0%, '.concat(o, '%)')),
+        m = w(u, a),
+        x = w(h, a),
+        f = new d.Z(n).to(a),
+        p = new d.Z(n).to(a);
+    k(f, a, x), k(p, a, m);
+    let g = f.range(p, {
+        space: a,
+        outputSpace: l ? 'P3' : 'sRGB'
+    });
     return Object.fromEntries(
-        h.map((e, l) => {
-            var i, s, u;
-            let m = new d.Z(n).to(r);
-            return (
-                !(function (e, t, n) {
-                    var r;
-                    let a = null === (r = I.find((e) => e.space === t)) || void 0 === r ? void 0 : r.key;
-                    e[t][a] = n;
-                })(
-                    m,
-                    r,
-                    a
-                        ? ((i = l),
-                          (s = h.length),
-                          (u = p),
-                          f -
-                              (function (e, t, n) {
-                                  switch (e) {
-                                      case 'Linear':
-                                          return k(t);
-                                      case 'Ease In':
-                                          return E(t, n);
-                                      case 'Ease Out':
-                                          return R(t, n);
-                                      case 'Ease In Out':
-                                          return O(t, n);
-                                  }
-                              })(o, i / s, c) *
-                                  s *
-                                  u)
-                        : g[l]
-                ),
-                [''.concat(t, '.').concat(e), m]
-            );
+        Array.from({ length: r }, (e, n) => {
+            let a = (function (e, t, n) {
+                switch (e) {
+                    case 'Linear':
+                        return E(t);
+                    case 'Ease In':
+                        return R(t, n);
+                    case 'Ease Out':
+                        return O(t, n);
+                    case 'Ease In Out':
+                        return Z(t, n);
+                }
+            })(c, n / r, s);
+            return [''.concat(t, '-').concat(n), g(a)];
         })
     );
 }
-function A(e, t, n) {
+function L(e, t, n) {
     n((n) =>
         null == n.scales.find((t) => t.name === e)
             ? n
@@ -263,8 +303,8 @@ function A(e, t, n) {
               }
     );
 }
-function B(e, t, n) {
-    A(
+function P(e, t, n) {
+    L(
         e,
         (e) => ({
             ...e,
@@ -273,8 +313,8 @@ function B(e, t, n) {
         n
     );
 }
-function L(e, t, n) {
-    A(
+function M(e, t, n) {
+    L(
         e,
         (e) => ({
             ...e,
@@ -283,18 +323,8 @@ function L(e, t, n) {
         n
     );
 }
-function P(e, t, n) {
-    A(
-        e,
-        (e) => ({
-            ...e,
-            useEquidistantLuminance: t
-        }),
-        n
-    );
-}
-function M(e, t, n) {
-    A(
+function D(e, t, n) {
+    L(
         e,
         (e) => ({
             ...e,
@@ -303,8 +333,8 @@ function M(e, t, n) {
         n
     );
 }
-function D(e, t, n) {
-    A(
+function F(e, t, n) {
+    L(
         e,
         (e) => ({
             ...e,
@@ -313,8 +343,8 @@ function D(e, t, n) {
         n
     );
 }
-function F(e, t, n) {
-    A(
+function U(e, t, n) {
+    L(
         e,
         (e) => ({
             ...e,
@@ -323,8 +353,8 @@ function F(e, t, n) {
         n
     );
 }
-function U(e, t, n) {
-    A(
+function H(e, t, n) {
+    L(
         e,
         (e) => ({
             ...e,
@@ -333,8 +363,8 @@ function U(e, t, n) {
         n
     );
 }
-function H(e, t, n) {
-    A(
+function G(e, t, n) {
+    L(
         e,
         (e) => ({
             ...e,
@@ -343,12 +373,22 @@ function H(e, t, n) {
         n
     );
 }
-function G(e, t, n) {
-    A(
+function z(e, t, n) {
+    L(
         e,
         (e) => ({
             ...e,
             useP3ColorSpace: t
+        }),
+        n
+    );
+}
+function V(e, t, n) {
+    L(
+        e,
+        (e) => ({
+            ...e,
+            steps: t
         }),
         n
     );
