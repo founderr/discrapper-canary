@@ -408,113 +408,120 @@ function ea(e) {
                                             children: (0, i.jsxs)(K.PB, {
                                                 id: 'profile-'.concat(V.id),
                                                 children: [
-                                                    (0, i.jsx)(K.Mv, {
-                                                        id: 'edit-profile',
-                                                        action: 'EDIT_PROFILE',
-                                                        label: J.Z.Messages.EDIT_PROFILE,
-                                                        icon: c.PencilIcon,
-                                                        onClick: () => {
-                                                            eT(), z();
-                                                        }
-                                                    }),
-                                                    (0, i.jsx)('div', { className: $.menuDivider }),
                                                     eS &&
-                                                        (0, i.jsx)(K.Mv, {
-                                                            id: 'set-status',
-                                                            action: 'PRESS_SET_STATUS',
-                                                            label: null !== (t = (0, Y.u5)(e_)) && void 0 !== t ? t : '',
-                                                            icon: () =>
-                                                                (0, i.jsx)(c.Status, {
-                                                                    status: e_,
-                                                                    size: 12
+                                                        (0, i.jsxs)(i.Fragment, {
+                                                            children: [
+                                                                (0, i.jsx)(K.Mv, {
+                                                                    id: 'edit-profile',
+                                                                    action: 'EDIT_PROFILE',
+                                                                    label: J.Z.Messages.EDIT_PROFILE,
+                                                                    icon: c.PencilIcon,
+                                                                    onClick: () => {
+                                                                        eT(), z();
+                                                                    }
                                                                 }),
-                                                            hint: (eh || e_ === Q.Skl.DND) && (0, i.jsx)(c.BellSlashIcon, { size: 'xxs' }),
-                                                            renderSubmenu: r.tq
-                                                                ? void 0
-                                                                : (e) => {
-                                                                      let { closePopout: t } = e;
-                                                                      return (0, i.jsx)(K.eq, {
-                                                                          navId: 'set-status-submenu',
-                                                                          className: $.statusPickerModalMenu,
-                                                                          'aria-label': J.Z.Messages.STATUS_MENU_LABEL,
-                                                                          onClose: t,
-                                                                          children: eg
-                                                                      });
-                                                                  },
-                                                            onClick: r.tq
-                                                                ? () => {
-                                                                      z(),
-                                                                          (0, c.openModalLazy)(
-                                                                              () =>
-                                                                                  new Promise((e) =>
-                                                                                      e((e) => {
-                                                                                          let { onClose: t, ...n } = e;
-                                                                                          return (0, i.jsx)(c.ModalRoot, {
-                                                                                              ...n,
-                                                                                              size: c.ModalSize.SMALL,
-                                                                                              'aria-label': J.Z.Messages.SET_STATUS,
-                                                                                              className: $.statusPickerModal,
-                                                                                              children: (0, i.jsx)(c.Menu, {
-                                                                                                  navId: 'set-status-submenu-mobile-web',
-                                                                                                  variant: 'fixed',
-                                                                                                  'aria-label': J.Z.Messages.STATUS_MENU_LABEL,
-                                                                                                  className: $.statusPickerModalMenu,
-                                                                                                  hideScroller: !0,
-                                                                                                  onClose: t,
-                                                                                                  onSelect: void 0,
-                                                                                                  children: eg
-                                                                                              })
-                                                                                          });
-                                                                                      })
-                                                                                  )
-                                                                          );
-                                                                  }
-                                                                : void 0
+                                                                (0, i.jsx)('div', { className: $.menuDivider })
+                                                            ]
                                                         }),
-                                                    !eS &&
-                                                        null == eI &&
-                                                        (0, i.jsx)(K.Mv, {
-                                                            id: 'add-custom-status',
-                                                            action: 'PRESS_ADD_CUSTOM_STATUS',
-                                                            label: J.Z.Messages.CUSTOM_STATUS_SET_CUSTOM_STATUS_CTA,
-                                                            icon: () => (0, i.jsx)('div', { className: $.customEmojiPlaceholder }),
-                                                            onClick: () => {
-                                                                z(), ef();
-                                                            }
-                                                        }),
-                                                    !eS &&
-                                                        null != eI &&
-                                                        (0, i.jsx)(K.Mv, {
-                                                            id: 'edit-custom-status',
-                                                            action: 'PRESS_EDIT_CUSTOM_STATUS',
-                                                            label: J.Z.Messages.CUSTOM_STATUS_EDIT_CUSTOM_STATUS_PLACEHOLDER,
-                                                            icon: () =>
-                                                                null != eI.emoji
-                                                                    ? (0, i.jsx)(d.I, {
-                                                                          emoji: eI.emoji,
-                                                                          animate: !0,
-                                                                          hideTooltip: !0
-                                                                      })
-                                                                    : null,
-                                                            hint: (0, i.jsx)(c.Clickable, {
-                                                                tabIndex: -1,
-                                                                className: $.clearCustomStatusHint,
-                                                                onClick: (e) => {
-                                                                    e.stopPropagation(),
-                                                                        (0, N.pQ)({
-                                                                            action: 'PRESS_CLEAR_CUSTOM_STATUS',
-                                                                            analyticsLocations: eo
-                                                                        }),
-                                                                        k.Ok.updateSetting(void 0);
-                                                                },
-                                                                children: (0, i.jsx)(c.CircleXIcon, {
-                                                                    size: 'sm',
-                                                                    color: 'currentColor'
-                                                                })
+                                                    (0, i.jsx)(K.Mv, {
+                                                        id: 'set-status',
+                                                        action: 'PRESS_SET_STATUS',
+                                                        label: null !== (t = (0, Y.u5)(e_)) && void 0 !== t ? t : '',
+                                                        icon: () =>
+                                                            (0, i.jsx)(c.Status, {
+                                                                status: e_,
+                                                                size: 12
                                                             }),
-                                                            onClick: () => {
-                                                                z(), ef();
-                                                            }
+                                                        hint: (eh || e_ === Q.Skl.DND) && (0, i.jsx)(c.BellSlashIcon, { size: 'xxs' }),
+                                                        renderSubmenu: r.tq
+                                                            ? void 0
+                                                            : (e) => {
+                                                                  let { closePopout: t } = e;
+                                                                  return (0, i.jsx)(K.eq, {
+                                                                      navId: 'set-status-submenu',
+                                                                      className: $.statusPickerModalMenu,
+                                                                      'aria-label': J.Z.Messages.STATUS_MENU_LABEL,
+                                                                      onClose: t,
+                                                                      children: eg
+                                                                  });
+                                                              },
+                                                        onClick: r.tq
+                                                            ? () => {
+                                                                  z(),
+                                                                      (0, c.openModalLazy)(
+                                                                          () =>
+                                                                              new Promise((e) =>
+                                                                                  e((e) => {
+                                                                                      let { onClose: t, ...n } = e;
+                                                                                      return (0, i.jsx)(c.ModalRoot, {
+                                                                                          ...n,
+                                                                                          size: c.ModalSize.SMALL,
+                                                                                          'aria-label': J.Z.Messages.SET_STATUS,
+                                                                                          className: $.statusPickerModal,
+                                                                                          children: (0, i.jsx)(c.Menu, {
+                                                                                              navId: 'set-status-submenu-mobile-web',
+                                                                                              variant: 'fixed',
+                                                                                              'aria-label': J.Z.Messages.STATUS_MENU_LABEL,
+                                                                                              className: $.statusPickerModalMenu,
+                                                                                              hideScroller: !0,
+                                                                                              onClose: t,
+                                                                                              onSelect: void 0,
+                                                                                              children: eg
+                                                                                          })
+                                                                                      });
+                                                                                  })
+                                                                              )
+                                                                      );
+                                                              }
+                                                            : void 0
+                                                    }),
+                                                    !eS &&
+                                                        (0, i.jsxs)(i.Fragment, {
+                                                            children: [
+                                                                (0, i.jsx)('div', { className: $.menuDivider }),
+                                                                null == eI
+                                                                    ? (0, i.jsx)(K.Mv, {
+                                                                          id: 'add-custom-status',
+                                                                          action: 'PRESS_ADD_CUSTOM_STATUS',
+                                                                          label: J.Z.Messages.CUSTOM_STATUS_SET_CUSTOM_STATUS_CTA,
+                                                                          icon: () => (0, i.jsx)('div', { className: $.customEmojiPlaceholder }),
+                                                                          onClick: () => {
+                                                                              z(), ef();
+                                                                          }
+                                                                      })
+                                                                    : (0, i.jsx)(K.Mv, {
+                                                                          id: 'edit-custom-status',
+                                                                          action: 'PRESS_EDIT_CUSTOM_STATUS',
+                                                                          label: J.Z.Messages.CUSTOM_STATUS_EDIT_CUSTOM_STATUS_PLACEHOLDER,
+                                                                          icon: () =>
+                                                                              null != eI.emoji
+                                                                                  ? (0, i.jsx)(d.I, {
+                                                                                        emoji: eI.emoji,
+                                                                                        animate: !0,
+                                                                                        hideTooltip: !0
+                                                                                    })
+                                                                                  : null,
+                                                                          hint: (0, i.jsx)(c.Clickable, {
+                                                                              tabIndex: -1,
+                                                                              className: $.clearCustomStatusHint,
+                                                                              onClick: (e) => {
+                                                                                  e.stopPropagation(),
+                                                                                      (0, N.pQ)({
+                                                                                          action: 'PRESS_CLEAR_CUSTOM_STATUS',
+                                                                                          analyticsLocations: eo
+                                                                                      }),
+                                                                                      k.Ok.updateSetting(void 0);
+                                                                              },
+                                                                              children: (0, i.jsx)(c.CircleXIcon, {
+                                                                                  size: 'sm',
+                                                                                  color: 'currentColor'
+                                                                              })
+                                                                          }),
+                                                                          onClick: () => {
+                                                                              z(), ef();
+                                                                          }
+                                                                      })
+                                                            ]
                                                         })
                                                 ]
                                             })
