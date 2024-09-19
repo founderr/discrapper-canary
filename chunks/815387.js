@@ -649,7 +649,8 @@ let ex = Object.freeze({
             channel: n,
             compact: s
         });
-    }
+    },
+    [ep.uaV.GIFTING_PROMPT]: void 0
 });
 t.Z = s.memo(function (e) {
     let { message: t, channel: n, compact: s, disableInteraction: a } = e,
