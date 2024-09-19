@@ -70,6 +70,7 @@ function p(e) {
                 channelId: p.id,
                 maxUsers: h,
                 size: a.AvatarSizes.SIZE_16,
+                onClick: () => (null == I ? void 0 : I({ action: 'PRESS_VOICE_CHANNEL_AVATARS' })),
                 disableUserPopout: T !== E.y0.FULL_SIZE || ((e) => e === t.id),
                 overflowCountVariant: 'text-xs/normal'
             })
