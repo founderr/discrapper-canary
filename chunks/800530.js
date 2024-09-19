@@ -11,6 +11,9 @@ n.d(t, {
     I5: function () {
         return g;
     },
+    JQ: function () {
+        return x;
+    },
     RY: function () {
         return S;
     },
@@ -25,12 +28,6 @@ n.d(t, {
     },
     bK: function () {
         return I;
-    },
-    c6: function () {
-        return M;
-    },
-    d9: function () {
-        return x;
     },
     n0: function () {
         return _;
@@ -121,31 +118,21 @@ let S = [0, 1, 2, 3],
     O = { impression_group: h.ImpressionGroups.APPEAL_INGESTION };
 ((o = m || (m = {})).SPEED_BUMP = 'speed-bump'), (o.COLLECT_SIGNAL = 'collect-signal'), (o.CONFIRM_SUBMISSION = 'confirm-submission'), (o.REQUEST_SENT = 'request-sent'), (o.THANKS = 'thanks');
 let x = {
-        'speed-bump': {
-            next: 'collect-signal',
-            prev: null
-        },
-        'collect-signal': {
-            next: 'confirm-submission',
-            prev: 'speed-bump'
-        },
-        'confirm-submission': {
-            next: 'request-sent',
-            prev: 'collect-signal'
-        },
-        'request-sent': {
-            next: null,
-            prev: null
-        }
+    'speed-bump': {
+        next: 'collect-signal',
+        prev: null
     },
-    M = {
-        'collect-signal': {
-            next: 'thanks',
-            prev: null
-        },
-        thanks: {
-            next: null,
-            prev: null
-        }
-    };
+    'collect-signal': {
+        next: 'confirm-submission',
+        prev: 'speed-bump'
+    },
+    'confirm-submission': {
+        next: 'request-sent',
+        prev: 'collect-signal'
+    },
+    'request-sent': {
+        next: null,
+        prev: null
+    }
+};
 ((c = T || (T = {}))[(c.USER = 1)] = 'USER'), (c[(c.GUILD_OWNER = 2)] = 'GUILD_OWNER'), (c[(c.GUILD_MEMBER = 3)] = 'GUILD_MEMBER');

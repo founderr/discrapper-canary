@@ -25,21 +25,21 @@ function x(e) {
         h = (null == C ? void 0 : C.is_spam) || !1,
         L = (null == C ? void 0 : C.is_coppa) || !1;
     t.useEffect(() => {
-        T ? S(x) : S(N.Cs.COLLECT_SIGNAL);
-    }, [S, x, T]);
+        S(x);
+    }, [S, x]);
     let M = t.useCallback(() => {
             d.Z.close(), I();
         }, [I]),
         p = t.useCallback(() => {
-            var e, n;
-            let s = null;
-            (s = T ? (null === (e = N.d9[m]) || void 0 === e ? void 0 : e.next) : null === (n = N.c6[m]) || void 0 === n ? void 0 : n.next) ? S(s) : M();
-        }, [m, T, M]),
+            var e;
+            let n = null === (e = N.JQ[m]) || void 0 === e ? void 0 : e.next;
+            n ? S(n) : M();
+        }, [m, M]),
         P = t.useCallback(() => {
-            var e, n;
-            let s;
-            (s = T ? (null === (e = N.d9[m]) || void 0 === e ? void 0 : e.prev) : null === (n = N.c6[m]) || void 0 === n ? void 0 : n.prev) ? S(s) : M();
-        }, [m, T, M]);
+            var e;
+            let n = null === (e = N.JQ[m]) || void 0 === e ? void 0 : e.prev;
+            n ? S(n) : M();
+        }, [m, M]);
     return (0, a.jsx)(l.ModalRoot, {
         transitionState: s,
         disableTrack: !0,
@@ -59,7 +59,8 @@ function x(e) {
                             onClose: M,
                             onNext: p,
                             isSpam: h,
-                            isCoppa: L
+                            isCoppa: L,
+                            isDsaEligible: T
                         })
                     }),
                     (0, a.jsx)(l.Slide, {
@@ -67,7 +68,6 @@ function x(e) {
                         impressionName: i.ImpressionNames.APPEAL_INGESTION_COLLECT_SIGNAL,
                         impressionProperties: N.ZW,
                         children: (0, a.jsx)(r.Z, {
-                            isDsaEligible: T,
                             onClose: M,
                             onNext: p,
                             onBack: P
@@ -88,17 +88,6 @@ function x(e) {
                         impressionName: i.ImpressionNames.APPEAL_INGESTION_REQUEST_SENT,
                         impressionProperties: N.ZW,
                         children: (0, a.jsx)(_.Z, { onNext: p })
-                    }),
-                    (0, a.jsx)(l.Slide, {
-                        id: N.Cs.THANKS,
-                        impressionName: i.ImpressionNames.APPEAL_INGESTION_THANKS,
-                        impressionProperties: N.ZW,
-                        children: (0, a.jsx)(r.Z, {
-                            isDsaEligible: T,
-                            onClose: M,
-                            onNext: p,
-                            onBack: P
-                        })
                     })
                 ]
             })

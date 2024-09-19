@@ -19,14 +19,14 @@ var t = s(120356),
     A = s(487043);
 function x(e) {
     var n, s;
-    let { classification: t, isSpam: x = !1, isCoppa: I = !1, className: m, onClose: S, onNext: C } = e,
-        T = (0, d.n)(),
-        h = null !== (n = null == t ? void 0 : t.explainer_link) && void 0 !== n ? n : '',
-        L = null != t && null != t.flagged_content && t.flagged_content.length > 0,
-        M = (0, c.c7)(null == t ? void 0 : t.description),
-        p = !x && !I,
-        P = (0, r.B)('classification_evidence'),
-        O = null != t && (((0, c.FB)(t) && P) || L);
+    let { classification: t, isDsaEligible: x = !1, isSpam: I = !1, isCoppa: m = !1, className: S, onClose: C, onNext: T } = e,
+        h = (0, d.n)(),
+        L = null !== (n = null == t ? void 0 : t.explainer_link) && void 0 !== n ? n : '',
+        M = null != t && null != t.flagged_content && t.flagged_content.length > 0,
+        p = (0, c.c7)(null == t ? void 0 : t.description),
+        P = !I && !m,
+        O = (0, r.B)('classification_evidence'),
+        g = null != t && (((0, c.FB)(t) && O) || M);
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsxs)(l.ModalHeader, {
@@ -45,18 +45,18 @@ function x(e) {
                         variant: 'text-md/normal',
                         children: u.Z.Messages.APPEAL_INGESTION_MODAL_SPEED_BUMP_SUBHEADER
                     }),
-                    null != S &&
+                    null != C &&
                         (0, a.jsx)(l.ModalCloseButton, {
                             className: A.closeButton,
-                            onClick: S
+                            onClick: C
                         })
                 ]
             }),
             (0, a.jsxs)(l.ModalContent, {
-                className: i()(A.modalContent, !O && A.evidenceOffset, m),
+                className: i()(A.modalContent, !g && A.evidenceOffset, S),
                 paddingFix: !1,
                 children: [
-                    O && (0, a.jsx)(E.s, { flaggedContent: null !== (s = t.flagged_content) && void 0 !== s ? s : [] }),
+                    g && (0, a.jsx)(E.s, { flaggedContent: null !== (s = t.flagged_content) && void 0 !== s ? s : [] }),
                     (0, a.jsx)(l.Text, {
                         className: A.optionHeader,
                         color: 'header-secondary',
@@ -67,29 +67,30 @@ function x(e) {
                         className: A.policyContainer,
                         children: (0, a.jsx)(l.Text, {
                             variant: 'text-md/semibold',
-                            children: M
+                            children: p
                         })
                     }),
-                    I &&
+                    m &&
                         (0, a.jsx)(_.Z, {
                             url: N.sQ.AGE_VERIFICATION_LINK,
                             text: u.Z.Messages.APPEAL_INGESTION_AGE_VERIFICATION_LINK_TITLE,
-                            onClick: () => T(N.n0.ClickAgeVerificationLink)
+                            onClick: () => h(N.n0.ClickAgeVerificationLink)
                         }),
-                    x &&
-                        !I &&
+                    I &&
+                        !m &&
                         (0, a.jsx)(_.Z, {
                             url: N.sQ.SPAM_LINK,
                             text: u.Z.Messages.APPEAL_INGESTION_MODAL_SPEED_BUMP_SUBMIT_SPAM,
-                            onClick: () => T(N.n0.ClickSpamWebformLink)
+                            onClick: () => h(N.n0.ClickSpamWebformLink)
                         }),
-                    !I &&
+                    !m &&
                         (0, a.jsx)(_.Z, {
                             text: u.Z.Messages.APPEAL_INGESTION_LEARN_MORE_LINK_TITLE,
-                            url: h,
-                            onClick: () => T(N.n0.ClickLearnMoreLink)
+                            url: L,
+                            onClick: () => h(N.n0.ClickLearnMoreLink)
                         }),
-                    p &&
+                    P &&
+                        x &&
                         (0, a.jsx)(l.Text, {
                             className: A.learnMore,
                             variant: 'text-xs/normal',
@@ -97,10 +98,10 @@ function x(e) {
                         })
                 ]
             }),
-            p &&
+            P &&
                 (0, a.jsx)(l.ModalFooter, {
                     children: (0, a.jsx)(l.Button, {
-                        onClick: C,
+                        onClick: T,
                         color: l.Button.Colors.BRAND,
                         children: u.Z.Messages.NEXT
                     })
