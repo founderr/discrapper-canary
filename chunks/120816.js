@@ -10,18 +10,18 @@ var r,
     u = n(314897),
     h = n(906467);
 let m = 0,
-    x = [],
     f = [],
+    x = [],
     p = !1;
 class g extends (r = s.ZP.Store) {
     initialize() {
         this.waitFor(h.Z);
     }
     get loggedEvents() {
-        return x;
+        return f;
     }
     get loggedTriggers() {
-        return f;
+        return x;
     }
     get trackTriggers() {
         return p;
@@ -41,8 +41,8 @@ class g extends (r = s.ZP.Store) {
             let { event: t, properties: n, fingerprint: r } = e;
             if (h.Z.isDeveloper) {
                 var a;
-                (x = [
-                    ...x,
+                (f = [
+                    ...f,
                     {
                         key: (m++).toString(),
                         event: t,
@@ -50,15 +50,15 @@ class g extends (r = s.ZP.Store) {
                         fingerprint: null != (a = r) ? (0, c.s)(a) : u.default.getId(),
                         timestamp: new Date()
                     }
-                ]).length > 500 && x.shift();
+                ]).length > 500 && f.shift();
             }
         },
         TRACK_TRIGGER: function (e) {
             let { experimentId: t, descriptor: n, exposureType: r, excluded: a, location: l, previouslyTracked: i } = e;
             if (!!h.Z.isDeveloper)
                 p &&
-                    (f = [
-                        ...f,
+                    (x = [
+                        ...x,
                         {
                             key: (0, o.Z)(),
                             experimentId: t,
@@ -70,13 +70,13 @@ class g extends (r = s.ZP.Store) {
                             timestamp: new Date()
                         }
                     ]).length > 500 &&
-                    f.shift();
+                    x.shift();
         },
         SET_TRACK_TRIGGERS: function (e) {
             let { enabled: t } = e;
             p = t;
         },
         ANALYTICS_LOG_CLEAR: function () {
-            (x = []), (f = []);
+            (f = []), (x = []);
         }
     }));

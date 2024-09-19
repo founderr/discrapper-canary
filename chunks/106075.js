@@ -19,9 +19,9 @@ var i = n(735250),
     I = n(611928),
     g = n(680180),
     p = n(791734),
-    T = n(444324),
-    S = n(726115),
-    f = n(859921),
+    T = n(164991),
+    S = n(444324),
+    f = n(726115),
     C = n(750910),
     N = n(28494),
     A = n(29086),
@@ -35,30 +35,30 @@ function b() {
     let e = a.useRef((0, u.P)()),
         { onScroll: t, scrollPosition: n, resetScrollPosition: s } = (0, h.M)(),
         { tabs: b, selectedTab: P, setSelectedTab: M } = (0, A.Y)(),
-        D = (0, S.lg)(P),
+        D = (0, f.lg)(P),
         y = !Z.MU.has(P),
         j = (0, d.iN)('global_discovery_servers_layout'),
         { searchBarState: U, onTabsAvailableWidthChange: G, onCollapsedSearchBarClick: w, onSearchBarBlur: k, tabsClassName: B } = (0, m.U)({ isSearchBarVisible: y }),
-        { searchQuery: H, onSearchTextChange: V, onClearSearch: F, onSearchSubmit: Y, isSearchVisible: z } = (0, N.H)({ loadId: e.current }),
-        W = (0, E.GN)((e) => e.mode, l.Z),
+        { searchQuery: H, onSearchTextChange: V, onClearSearch: F, onSearchSubmit: Y, isSearchVisible: W } = (0, N.H)({ loadId: e.current }),
+        z = (0, E.GN)((e) => e.mode, l.Z),
         K = a.useCallback(
             (e) => {
-                M(e), z && F();
+                M(e), W && F();
             },
-            [z, F, M]
+            [W, F, M]
         ),
         q = a.useMemo(
             () =>
-                z
+                W
                     ? b.filter((e) => {
                           let { id: t } = e;
                           return !Z.MU.has(t);
                       })
                     : b,
-            [b, z]
+            [b, W]
         ),
-        Q = W === E.v0.SAVED_GUILDS,
-        X = a.useRef(new T.Z(D)),
+        Q = z === E.v0.SAVED_GUILDS,
+        X = a.useRef(new S.Z(D)),
         { onGuildCardSeen: J, onGuildCardClick: $ } = (0, C.H)({
             guildDiscoveryCardSeenManager: X.current,
             loadId: e.current
@@ -70,8 +70,8 @@ function b() {
             s();
         }, [P, s]),
         a.useEffect(() => {
-            !z && f.B.setState({ searchScrollPosition: null });
-        }, [z]),
+            !W && (0, T.LD)({ scrollPosition: null });
+        }, [W]),
         a.useEffect(() => {
             (0, c.N)();
         }, []);
@@ -85,7 +85,7 @@ function b() {
             default:
                 return (0, i.jsx)(g.Z, {
                     query: H,
-                    placeholder: D === R.Hk ? O.Z.Messages.SEARCH : O.Z.Messages.GLOBAL_DISCOVERY_SEARCH_PLACEHOLDER.format({ title: (0, S.vb)(P) }),
+                    placeholder: D === R.Hk ? O.Z.Messages.SEARCH : O.Z.Messages.GLOBAL_DISCOVERY_SEARCH_PLACEHOLDER.format({ title: (0, f.vb)(P) }),
                     onTextChange: V,
                     onClear: F,
                     onSubmit: Y,
@@ -99,26 +99,26 @@ function b() {
         className: x.container,
         children: [
             (0, i.jsxs)(I.ZP, {
-                className: z ? x.search : void 0,
+                className: W ? x.search : void 0,
                 children: [
-                    !z && (0, i.jsx)(I.z6, { scrollPosition: n }),
+                    !W && (0, i.jsx)(I.z6, { scrollPosition: n }),
                     !Q &&
                         (0, i.jsx)(I.aV, {
-                            icon: z ? o.ArrowLargeLeftIcon : o.ServerIcon,
-                            onClick: z ? F : void 0
+                            icon: W ? o.ArrowLargeLeftIcon : o.ServerIcon,
+                            onClick: W ? F : void 0
                         }),
                     !Q &&
                         (0, i.jsx)(p.Z, {
                             className: B,
                             tabs: q,
-                            selectedTab: z ? null : P,
+                            selectedTab: W ? null : P,
                             onTabSelect: K,
                             onAvailableWidthChange: G
                         }),
                     ee
                 ]
             }),
-            z
+            W
                 ? (0, i.jsx)(L.Z, {
                       loadId: e.current,
                       onGuildCardClick: $,

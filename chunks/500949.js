@@ -48,7 +48,7 @@ n.d(t, {
         return l;
     },
     jC: function () {
-        return f;
+        return x;
     },
     lT: function () {
         return v;
@@ -82,8 +82,8 @@ var r,
     u = n(433517),
     h = n(190558),
     m = n(231338);
-let { SemanticColors: x } = h.V,
-    f = x,
+let { SemanticColors: f } = h.V,
+    x = f,
     p = CSS.supports('color', 'color(display-p3 1 0 0)') && CSS.supports('color', 'color(display-p3 1 0 0 / 1)');
 function g(e, t) {
     let [n, r] = s.useState(() => {
@@ -98,7 +98,7 @@ function g(e, t) {
     );
 }
 function b(e) {
-    let t = f[e];
+    let t = x[e];
     return {
         name: e,
         colors: Object.fromEntries(
@@ -267,11 +267,11 @@ function B(e) {
         u = new d.Z('hsl(0, 0%, '.concat(i, '%)')),
         h = new d.Z('hsl(0, 0%, '.concat(o, '%)')),
         m = w(u, a),
-        x = w(h, a),
-        f = new d.Z(n).to(a),
+        f = w(h, a),
+        x = new d.Z(n).to(a),
         p = new d.Z(n).to(a);
-    k(f, a, x), k(p, a, m);
-    let g = f.range(p, {
+    k(x, a, f), k(p, a, m);
+    let g = x.range(p, {
         space: a,
         outputSpace: l ? 'P3' : 'sRGB'
     });

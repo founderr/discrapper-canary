@@ -47,8 +47,8 @@ var i = n(735250),
     V = n(745052),
     F = n(285865),
     Y = n(659971),
-    z = n(179742),
-    W = n(270759),
+    W = n(179742),
+    z = n(270759),
     K = n(918701),
     q = n(905423),
     Q = n(304445),
@@ -253,16 +253,16 @@ let eI = 'resizable-sidebar-width',
         };
     },
     eD = (e) => (0, i.jsx)(p.Z, { ...e }),
-    ey = () => (0, i.jsx)(W.Z, {}),
+    ey = () => (0, i.jsx)(z.Z, {}),
     ej = () => (0, i.jsx)(V.Z, {}),
-    eU = () => (0, i.jsx)(z.Z, {}),
+    eU = () => (0, i.jsx)(W.Z, {}),
     eG = (e) => {
         let { match: t } = e;
         switch (t.params.feature) {
             case 'addFriends':
-                return (0, i.jsx)(W.Z, { initialSection: e_.pJs.ADD_FRIEND });
+                return (0, i.jsx)(z.Z, { initialSection: e_.pJs.ADD_FRIEND });
             case 'pendingFriends':
-                return (0, i.jsx)(W.Z, { initialSection: e_.pJs.PENDING });
+                return (0, i.jsx)(z.Z, { initialSection: e_.pJs.PENDING });
             case 'sessionManagement':
                 return (0, i.jsx)(l.l_, { to: e_.Z5c.SETTINGS('sessions') });
             case 'connections':

@@ -15,8 +15,8 @@ var a = n(120356),
     u = n(430824),
     h = n(496675),
     m = n(944486),
-    x = n(914010),
-    f = n(233608),
+    f = n(914010),
+    x = n(233608),
     p = n(71080),
     g = n(644715),
     b = n(219299);
@@ -43,14 +43,14 @@ function v(e) {
 }
 function _() {
     let e = (0, o.e7)([m.Z], () => m.Z.getChannelId()),
-        t = (0, o.e7)([x.Z], () => x.Z.getGuildId()),
+        t = (0, o.e7)([f.Z], () => f.Z.getGuildId()),
         n = (0, o.e7)([d.Z], () => d.Z.getChannel(e)),
         a = (0, o.e7)([u.Z], () => u.Z.getGuild(t)),
         _ = (0, o.e7)([h.Z], () => h.Z.computePermissions(n)),
         j = (0, o.e7)([h.Z], () => h.Z.computePermissions(a)),
         C = (0, s.ZP)(n, !0),
         T = null != n ? (0, p.IG)(n, !1, !0) : null,
-        S = null != a ? f.Z.getGuildPermissionSpecMap(a) : null,
+        S = null != a ? x.Z.getGuildPermissionSpecMap(a) : null,
         N = Object.values(null != T ? T : {}).map((e) => {
             let { title: t, flag: n } = e,
                 a = i.e$(_, n);

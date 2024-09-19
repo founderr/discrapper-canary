@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return x;
+        return f;
     }
 }),
     n(47120),
@@ -28,16 +28,16 @@ function m(e) {
     let { tabs: t, selectedTabId: n, onSelectTab: l } = e,
         i = a.useRef(null),
         m = a.useRef(0),
-        x = a.useRef(new Map()),
-        [f, p] = a.useState([]),
+        f = a.useRef(new Map()),
+        [x, p] = a.useState([]),
         g = a.useCallback(() => {
             var e, r, a, l;
             if (null == i.current) return;
             let o = [],
                 c = i.current.getBoundingClientRect().width;
             if (c !== m.current) {
-                for (let i of ((m.current = c), (c -= null !== (r = null === (e = x.current.get(n)) || void 0 === e ? void 0 : e.width) && void 0 !== r ? r : 0), t)) {
-                    if (i.id !== n) (c -= null !== (l = null === (a = x.current.get(i.id)) || void 0 === a ? void 0 : a.width) && void 0 !== l ? l : 0) < 0 && o.push(i.id);
+                for (let i of ((m.current = c), (c -= null !== (r = null === (e = f.current.get(n)) || void 0 === e ? void 0 : e.width) && void 0 !== r ? r : 0), t)) {
+                    if (i.id !== n) (c -= null !== (l = null === (a = f.current.get(i.id)) || void 0 === a ? void 0 : a.width) && void 0 !== l ? l : 0) < 0 && o.push(i.id);
                 }
                 p(o);
             }
@@ -66,7 +66,7 @@ function m(e) {
                 children: t
                     .map((e) => {
                         let { id: t, name: a } = e;
-                        return f.includes(t) && n !== t
+                        return x.includes(t) && n !== t
                             ? (0, r.jsx)(
                                   o.MenuItem,
                                   {
@@ -81,7 +81,7 @@ function m(e) {
                     .filter(s.lm)
             });
         },
-        [t, f, l, n]
+        [t, x, l, n]
     );
     return (0, r.jsxs)('div', {
         className: u.tabBar,
@@ -90,7 +90,7 @@ function m(e) {
             t
                 .map((e) => {
                     let { id: t, name: a } = e;
-                    if (!f.includes(t))
+                    if (!x.includes(t))
                         return (0, r.jsx)(
                             h,
                             {
@@ -98,8 +98,8 @@ function m(e) {
                                 selected: n === t,
                                 ref: (e) => {
                                     var n, r, a;
-                                    let l = null !== (r = null === (n = x.current.get(t)) || void 0 === n ? void 0 : n.width) && void 0 !== r ? r : 0;
-                                    x.current.set(t, {
+                                    let l = null !== (r = null === (n = f.current.get(t)) || void 0 === n ? void 0 : n.width) && void 0 !== r ? r : 0;
+                                    f.current.set(t, {
                                         node: e,
                                         width: null !== (a = null == e ? void 0 : e.getBoundingClientRect().width) && void 0 !== a ? a : l
                                     });
@@ -111,7 +111,7 @@ function m(e) {
                         );
                 })
                 .filter(s.lm),
-            f.length > 0 &&
+            x.length > 0 &&
                 (0, r.jsx)(r.Fragment, {
                     children: (0, r.jsx)(o.Popout, {
                         layerContext: d.O$,
@@ -136,7 +136,7 @@ function m(e) {
         ]
     });
 }
-function x(e, t) {
+function f(e, t) {
     var n, l, i;
     let { tabs: o, initialSelectedTabId: c, onChangeTab: s } = e,
         [d, u] = a.useState(null != c ? c : null === (n = o[0]) || void 0 === n ? void 0 : n.id),

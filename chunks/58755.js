@@ -1,6 +1,6 @@
 n.d(t, {
     P: function () {
-        return f;
+        return x;
     }
 }),
     n(724458),
@@ -22,7 +22,7 @@ let h = d.M3.map((e) => ({
         value: e,
         name: e
     })),
-    x = Array.from(
+    f = Array.from(
         Array.from(
             Object.keys(i.b).reduce((e, t) => {
                 let [n] = t.split('.');
@@ -33,7 +33,7 @@ let h = d.M3.map((e) => ({
         value: e,
         label: e
     }));
-function f(e) {
+function x(e) {
     let { state: t, setState: n } = e,
         { scales: l } = t,
         [c, h] = a.useState(null),
@@ -41,7 +41,7 @@ function f(e) {
             className: u.section,
             children: [
                 (0, r.jsx)(o.SearchableSelect, {
-                    options: x,
+                    options: f,
                     placeholder: 'Select a scale to edit...',
                     value: void 0,
                     onChange: (e) => {
@@ -92,12 +92,12 @@ function f(e) {
                 })
             ]
         }),
-        f = l.find((e) => e.name === c),
+        x = l.find((e) => e.name === c),
         b =
-            null != f
+            null != x
                 ? (0, r.jsx)(p, {
                       onClose: () => h(null),
-                      scale: f,
+                      scale: x,
                       setState: n
                   })
                 : m;
@@ -105,7 +105,7 @@ function f(e) {
 }
 function p(e) {
     let { scale: t, setState: n, onClose: a } = e,
-        { name: i, base: s, darkness: x, lightness: f, useEquidistantLuminance: p, showColumnarPalettePreview: g, colorSpace: v, easing: _ = d.iw.LINEAR, easingStrength: j = 1, useP3ColorSpace: C, steps: T = 26 } = t,
+        { name: i, base: s, darkness: f, lightness: x, useEquidistantLuminance: p, showColumnarPalettePreview: g, colorSpace: v, easing: _ = d.iw.LINEAR, easingStrength: j = 1, useP3ColorSpace: C, steps: T = 26 } = t,
         S = (0, d.XM)(t),
         N = (0, d.W6)(S, i);
     return (0, r.jsxs)(o.FormSection, {
@@ -177,7 +177,7 @@ function p(e) {
                 children: [
                     (0, r.jsx)(o.FormItem, {}),
                     (0, r.jsxs)(o.FormItem, {
-                        title: 'Darkness ('.concat(x.toFixed(), '%)'),
+                        title: 'Darkness ('.concat(f.toFixed(), '%)'),
                         disabled: !p,
                         children: [
                             (0, r.jsx)(o.FormText, {
@@ -194,7 +194,7 @@ function p(e) {
                         ]
                     }),
                     (0, r.jsxs)(o.FormItem, {
-                        title: 'Lightness ('.concat(f.toFixed(), '%)'),
+                        title: 'Lightness ('.concat(x.toFixed(), '%)'),
                         disabled: !p,
                         children: [
                             (0, r.jsx)(o.FormText, {
@@ -203,7 +203,7 @@ function p(e) {
                             }),
                             (0, r.jsx)(o.Slider, {
                                 onValueRender: () => null,
-                                initialValue: f,
+                                initialValue: x,
                                 minValue: 80,
                                 maxValue: 100,
                                 onValueChange: (e) => (0, d.h9)(i, e, n)

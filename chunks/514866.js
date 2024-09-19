@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return x;
+        return f;
     }
 });
 var r = n(735250);
@@ -40,7 +40,7 @@ let m = () => {
             );
         });
 };
-function x() {
+function f() {
     let e = d.default.getCurrentUser(),
         t = null == e ? void 0 : e.isStaff();
     return (0, r.jsxs)(r.Fragment, {

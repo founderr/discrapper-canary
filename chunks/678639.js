@@ -15,8 +15,8 @@ var r = n(735250),
     u = n(484036),
     h = n(681619),
     m = n(621060),
-    x = n(219299),
-    f = n(152622);
+    f = n(219299),
+    x = n(152622);
 function p(e, t) {
     return e.store.getName().localeCompare(t.store.getName());
 }
@@ -35,7 +35,7 @@ function g(e) {
             );
         }, [t, n]),
         (0, r.jsx)(c.ScrollerThin, {
-            className: f.inspectorContainer,
+            className: x.inspectorContainer,
             children: (0, r.jsx)(d.Z, { data: l })
         })
     );
@@ -43,7 +43,7 @@ function g(e) {
 let b = [
         {
             key: 'name',
-            cellClassName: f.__invalid_eventColumn,
+            cellClassName: x.__invalid_eventColumn,
             render(e) {
                 let { store: t } = e;
                 return t.getName();
@@ -58,7 +58,7 @@ let b = [
                 let { store: t } = e;
                 return null == t.__getLocalVars
                     ? (0, r.jsxs)('div', {
-                          className: f.inspectorContainer,
+                          className: x.inspectorContainer,
                           children: ['Store is missing ', (0, r.jsx)('code', { children: '__getLocalVars' }), ' method.']
                       })
                     : (0, r.jsx)(g, {
@@ -83,13 +83,13 @@ function _(e) {
     let { store: t, initialHeight: n } = e,
         { TabBar: a, renderSelectedTab: l } = (0, m.Z)({ tabs: v }, []);
     return (0, r.jsxs)(u.Z, {
-        className: f.subPanel,
+        className: x.subPanel,
         minHeight: 100,
         initialHeight: n,
         children: [
             (0, r.jsx)(a, {}),
             (0, r.jsxs)(s.ZP, {
-                className: i()(x.headerBar, f.subPanelHeaderBar),
+                className: i()(f.headerBar, x.subPanelHeaderBar),
                 children: [
                     (0, r.jsx)(s.ZP.Icon, {
                         icon: c.TagIcon,
@@ -127,12 +127,12 @@ function j() {
         m = l.find((e) => e._dispatchToken === d);
     return (0, r.jsxs)('div', {
         ref: e,
-        className: i()(x.panel, f.panel),
+        className: i()(f.panel, x.panel),
         children: [
             (0, r.jsx)('div', {
-                className: f.toolbar,
+                className: x.toolbar,
                 children: (0, r.jsx)(c.SearchBar, {
-                    className: f.searchBar,
+                    className: x.searchBar,
                     size: c.SearchBar.Sizes.SMALL,
                     query: t,
                     onChange: n,

@@ -54,8 +54,8 @@ let O = [],
     V = !1,
     F = !1,
     Y = !1,
-    z = null,
     W = null,
+    z = null,
     K = 0,
     q = [],
     Q = [],
@@ -296,10 +296,10 @@ class ed extends (i = s.ZP.PersistedStore) {
         return F;
     }
     getSelectedSummary(e) {
-        return null == z || z.channelId !== e ? null : z;
+        return null == W || W.channelId !== e ? null : W;
     }
     isGravitySelectedChannel(e) {
-        return null != W && W === e;
+        return null != z && z === e;
     }
     getLoadId() {
         return x;
@@ -448,18 +448,18 @@ R(ed, 'displayName', 'GravityStore'),
         },
         SET_GRAVITY_SELECTED_SUMMARY: function (e) {
             if (null == e.summaryId) {
-                z = null;
+                W = null;
                 return;
             }
             let t = G[e.summaryId];
             if (null == t || t.type !== N.Rr.SUMMARY) {
-                z = null;
+                W = null;
                 return;
             }
-            z = t.summary;
+            W = t.summary;
         },
         SET_GRAVITY_SELECTED_CHANNEL: function (e) {
-            W = e.channelId;
+            z = e.channelId;
         },
         MESSAGE_REACTION_ADD: eo,
         MESSAGE_REACTION_ADD_MANY: function (e) {

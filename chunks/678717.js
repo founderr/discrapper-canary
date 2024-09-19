@@ -17,8 +17,8 @@ var r = n(735250),
     u = n(213609),
     h = n(213713),
     m = n(665149),
-    x = n(906467),
-    f = n(259580),
+    f = n(906467),
+    x = n(259580),
     p = n(31336),
     g = n(19759),
     b = n(432877);
@@ -88,7 +88,7 @@ function V() {
                 }
             ];
             return (
-                x.Z.isDeveloper &&
+                f.Z.isDeveloper &&
                     (e.push({
                         id: 'quick_actions',
                         name: 'Quick Actions',
@@ -99,7 +99,7 @@ function V() {
                         name: 'Perks Demos',
                         render: () => (0, r.jsx)(Z.Z, {})
                     })),
-                x.Z.isDeveloper &&
+                f.Z.isDeveloper &&
                     (e.push({
                         id: 'end_to_end_encryption',
                         name: 'E2EE',
@@ -160,7 +160,7 @@ function V() {
                     name: 'Affinity',
                     render: () => (0, r.jsx)(v.Z, {})
                 }),
-                x.Z.isDeveloper &&
+                f.Z.isDeveloper &&
                     e.push({
                         id: 'content_inventory',
                         name: 'Content Inventory',
@@ -280,7 +280,7 @@ function Y() {
                   onClick: p.SO,
                   children: (0, r.jsxs)(m.ZP, {
                       className: i()(G.headerBar, H.mobileHeaderCollapsed),
-                      toolbar: (0, r.jsx)(f.Z, { direction: f.Z.Directions.UP }),
+                      toolbar: (0, r.jsx)(x.Z, { direction: x.Z.Directions.UP }),
                       children: [
                           (0, r.jsx)(m.ZP.Icon, {
                               icon: s.StaffBadgeIcon,

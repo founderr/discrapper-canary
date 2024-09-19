@@ -51,8 +51,8 @@ t.Z = (0, a.memo)(function (e) {
         V = (0, f.Sz)(L.id, L.config.assets.logotype, 'dark'),
         F = (0, f.Sz)(L.id, null != G.assetVideo ? G.assetVideo : G.asset),
         Y = (0, f.nP)(F),
-        z = Z ? P + 8 : 0,
-        W = () => {
+        W = Z ? P + 8 : 0,
+        z = () => {
             R(!0),
                 g.default.track(C.rMx.QUEST_HOVER, {
                     quest_id: L.id,
@@ -64,9 +64,9 @@ t.Z = (0, a.memo)(function (e) {
         children: (0, i.jsxs)('div', {
             ref: O,
             tabIndex: 0,
-            onFocus: W,
+            onFocus: z,
             onBlur: K,
-            onMouseEnter: W,
+            onMouseEnter: z,
             onMouseLeave: K,
             className: r()(A.container, { [A.hovered]: Z }),
             children: [
@@ -105,7 +105,7 @@ t.Z = (0, a.memo)(function (e) {
                 }),
                 (0, i.jsx)('div', {
                     className: A.logoContainer,
-                    style: { transform: 'translateY(-'.concat(z, 'px)') },
+                    style: { transform: 'translateY(-'.concat(W, 'px)') },
                     children: (0, i.jsx)('img', {
                         className: A.logo,
                         src: V,

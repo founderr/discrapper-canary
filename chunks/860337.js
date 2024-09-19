@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return x;
+        return f;
     }
 });
 var r = n(735250),
@@ -14,7 +14,7 @@ var r = n(735250),
     u = n(859921),
     h = n(785287),
     m = n(219299);
-function x() {
+function f() {
     let e = a.useRef(null);
     return (0, r.jsxs)('div', {
         ref: e,
@@ -37,7 +37,7 @@ function x() {
             }),
             (0, r.jsx)(o.Button, {
                 size: o.Button.Sizes.SMALL,
-                onClick: u.t,
+                onClick: u.OI,
                 children: 'Reset Global Discovery Servers State'
             })
         ]

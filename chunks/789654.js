@@ -37,8 +37,8 @@ var r = n(735250),
     u = n(203165),
     h = n(481060),
     m = n(410030),
-    x = n(705262),
-    f = n(374794),
+    f = n(705262),
+    x = n(374794),
     p = n(58755),
     g = n(246992),
     b = n(500949),
@@ -146,9 +146,9 @@ function S() {
                             })
                         ]
                     }),
-                    (0, r.jsx)(x.ZP, {
-                        type: x.yH.SETTINGS,
-                        children: (0, r.jsx)(x.ZP.Basic, {
+                    (0, r.jsx)(f.ZP, {
+                        type: f.yH.SETTINGS,
+                        children: (0, r.jsx)(f.ZP.Basic, {
                             className: v.toolbarThemeSelector,
                             hideSystemSelector: !0
                         })
@@ -172,7 +172,7 @@ function S() {
                                 disabled: !u,
                                 children: (0, r.jsx)(h.RedoIcon, {})
                             }),
-                            (0, r.jsx)(f.Z, {
+                            (0, r.jsx)(x.Z, {
                                 'aria-label': 'Import',
                                 filters: [
                                     {
@@ -294,7 +294,7 @@ function N(e) {
             },
             [n]
         ),
-        x = a.useCallback(
+        f = a.useCallback(
             (e) => {
                 n((t) => {
                     let { semanticColorOverrides: n } = t,
@@ -310,7 +310,7 @@ function N(e) {
             },
             [n]
         ),
-        f = a.useCallback(
+        x = a.useCallback(
             (e) => {
                 n((t) => {
                     let { semanticColorOverrides: n } = t,
@@ -386,8 +386,8 @@ function N(e) {
                                     };
                                 });
                             },
-                            onRemove: () => x(t),
-                            onHighlightToggle: () => f(t),
+                            onRemove: () => f(t),
+                            onHighlightToggle: () => x(t),
                             children: (0, r.jsxs)('div', {
                                 className: v.semanticOverride,
                                 children: [

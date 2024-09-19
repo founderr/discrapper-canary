@@ -51,8 +51,8 @@ let B = (e) => {
         { selected: a, route: B, locationState: H, ...V } = e,
         F = (0, l.e7)([h.default], () => h.default.getCurrentUser()),
         Y = (0, l.e7)([I.ZP], () => I.ZP.getPremiumTypeSubscription()),
-        z = (0, p.Qo)(F, Y),
-        W = (0, r.JA)('nitro'),
+        W = (0, p.Qo)(F, Y),
+        z = (0, r.JA)('nitro'),
         K = (0, C.N)(),
         q = (0, f.Ng)(),
         Q = (0, l.e7)([I.ZP], () => I.ZP.inReverseTrial()),
@@ -67,7 +67,7 @@ let B = (e) => {
         es = (0, l.e7)([T.Z], () => T.Z.getCreatedAtOverride()),
         er = (0, l.e7)([E.Z], () => E.Z.hasLayers()),
         el = null != es ? es : null == F ? void 0 : F.createdAt,
-        eo = a || null != K || null != q || J || ei || ea || $ || null != ee || null != et || z,
+        eo = a || null != K || null != q || J || ei || ea || $ || null != ee || null != et || W,
         { enabled: ec } = S._.useExperiment({ location: w }, { autoTrackExposure: !1 }),
         ed = ec && (null == K ? void 0 : K.trial_id) === D.a7,
         [eu, e_] = (0, _.US)(Q ? [o.z.REVERSE_TRIAL_NITRO_TAB_BADGE] : [], void 0, !0);
@@ -119,12 +119,12 @@ let B = (e) => {
         onClick: () => {
             g.default.track(y.rMx.NITRO_TAB_VISITED, {
                 badge_decorator: i,
-                has_premium: z
+                has_premium: W
             }),
                 ei || ea ? ((0, u.EW)(o.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR, { dismissAction: j.L.TAKE_ACTION }), ea && (0, u.EW)(o.z.REFERRAL_INCENTIVE_AWARDED_INFO, { dismissAction: j.L.TAKE_ACTION })) : null != eu && e_(j.L.USER_DISMISS);
         },
         ...V,
-        ...W,
+        ...z,
         className: t,
         children: n
     });

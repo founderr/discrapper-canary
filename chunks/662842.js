@@ -59,11 +59,11 @@ function w(e) {
         V = (0, c.e7)([L.Z], () => (null != B ? L.Z.getParticipantCount(B, Z.pV.AUDIENCE) : 0), [B]),
         F = (0, c.e7)([P.Z], () => P.Z.can(y.Plq.CONNECT, i)),
         Y = (0, O.Z)(null == i ? void 0 : i.id),
-        z = null == a ? void 0 : a.creator_id,
-        W = (0, c.e7)([M.default], () => M.default.getUser(z), [z]);
+        W = null == a ? void 0 : a.creator_id,
+        z = (0, c.e7)([M.default], () => M.default.getUser(W), [W]);
     r.useEffect(() => {
-        null != z && (0, _.PR)(z);
-    }, [z]);
+        null != W && (0, _.PR)(W);
+    }, [W]);
     let {
         noticeType: K,
         title: q,
@@ -279,14 +279,14 @@ function w(e) {
                 activeChannel: i,
                 canConnect: F,
                 myRole: Y,
-                eventCreator: W,
+                eventCreator: z,
                 speakers: H,
                 listenerCount: V,
                 isEventNoticeHidden: k,
                 isStageNoticeHidden: w,
                 isStudyRoomNotice: n
             }),
-        [a, l, i, F, Y, W, H, V, k, w, n]
+        [a, l, i, F, Y, z, H, V, k, w, n]
     );
     return null == K
         ? null

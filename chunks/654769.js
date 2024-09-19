@@ -10,8 +10,8 @@ var r,
     u = n(626135),
     h = n(358085),
     m = n(557177),
-    x = n(998502),
-    f = n(981631);
+    f = n(998502),
+    x = n(981631);
 function p(e, t, n) {
     return (
         t in e
@@ -35,22 +35,22 @@ if (g && !b) {
 let _ = (g && v) || ('Chrome' === o().name && 47 > parseFloat(o().version)) || ('Firefox' === o().name && 52 > parseFloat(o().version)),
     j = l().throttle(m.GN, 1000, { leading: !0 });
 function C() {
-    x.ZP.flashFrame(!1);
+    f.ZP.flashFrame(!1);
 }
-g && (window.addEventListener('focus', C), x.ZP.on('MAIN_WINDOW_FOCUS', C));
+g && (window.addEventListener('focus', C), f.ZP.on('MAIN_WINDOW_FOCUS', C));
 let T = window.Notification;
 b &&
-    (x.ZP.on('NOTIFICATION_CLICK', (e, t) => {
+    (f.ZP.on('NOTIFICATION_CLICK', (e, t) => {
         let n = null[t];
         null != n && (n.onclick(), n.close());
     }),
-    x.ZP.send('NOTIFICATIONS_CLEAR'),
+    f.ZP.send('NOTIFICATIONS_CLEAR'),
     (r = class {
         static requestPermission(e) {
             e();
         }
         close() {
-            null != null[this.id] && (delete null[this.id], x.ZP.send('NOTIFICATION_CLOSE', this.id), this.onclose());
+            null != null[this.id] && (delete null[this.id], f.ZP.send('NOTIFICATION_CLOSE', this.id), this.onclose());
         }
         constructor(e, { body: t, icon: n }) {
             p(this, 'id', T._id++),
@@ -65,7 +65,7 @@ b &&
                 (this.icon = n),
                 setImmediate(() => this.onshow()),
                 (null[this.id] = this),
-                x.ZP.send('NOTIFICATION_SHOW', {
+                f.ZP.send('NOTIFICATION_SHOW', {
                     id: this.id,
                     title: this.title,
                     body: this.body,
@@ -85,7 +85,7 @@ function N(e) {
     e.includes('message') ? j(e, t, void 0, n) : (0, m.GN)(e, t);
 }
 function y(e) {
-    return (d.Z.disableNotifications && null == e.overrideStreamerMode) || !S() || (h.isPlatformEmbedded && !x.ZP.shouldDisplayNotifications());
+    return (d.Z.disableNotifications && null == e.overrideStreamerMode) || !S() || (h.isPlatformEmbedded && !f.ZP.shouldDisplayNotifications());
 }
 t.Z = {
     hasPermission: S,
@@ -111,17 +111,17 @@ t.Z = {
             tag: p,
             silent: !0
         };
-        g && s.Z.taskbarFlash && x.ZP.flashFrame(!0);
+        g && s.Z.taskbarFlash && f.ZP.flashFrame(!0);
         try {
             m = new T(t, b);
         } catch (e) {
             return null;
         }
         return (null === (i = a.onShown) || void 0 === i || i.call(a),
-        !a.omitViewTracking && u.default.track(f.rMx.NOTIFICATION_VIEWED, r),
+        !a.omitViewTracking && u.default.track(x.rMx.NOTIFICATION_VIEWED, r),
         (m.onclick = () => {
             var e;
-            h.isPlatformEmbedded ? x.ZP.focus() : (window.focus(), m.close()), !a.omitClickTracking && u.default.track(f.rMx.NOTIFICATION_CLICKED, r), null === (e = a.onClick) || void 0 === e || e.call(a);
+            h.isPlatformEmbedded ? f.ZP.focus() : (window.focus(), m.close()), !a.omitClickTracking && u.default.track(x.rMx.NOTIFICATION_CLICKED, r), null === (e = a.onClick) || void 0 === e || e.call(a);
         }),
         _ && setTimeout(() => m.close(), 5000),
         v)

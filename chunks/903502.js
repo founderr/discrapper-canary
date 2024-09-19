@@ -15,8 +15,8 @@ var r = n(735250),
     u = n(246992),
     h = n(501775);
 let m = 60000,
-    x = 3600000,
-    f = 86400000,
+    f = 3600000,
+    x = 86400000,
     p = [
         {
             label: 'second(s)',
@@ -91,11 +91,11 @@ function g() {
                                 }),
                                 (0, r.jsx)(i.Text, {
                                     variant: 'text-sm/normal',
-                                    children: ''.concat(C.cooldown / x, ' hour(s) or')
+                                    children: ''.concat(C.cooldown / f, ' hour(s) or')
                                 }),
                                 (0, r.jsx)(i.Text, {
                                     variant: 'text-sm/normal',
-                                    children: ''.concat(C.cooldown / f, ' day(s)')
+                                    children: ''.concat(C.cooldown / x, ' day(s)')
                                 })
                             ]
                         }),

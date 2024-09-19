@@ -83,8 +83,8 @@ t.Z = (e) => {
             }
         };
     a.useEffect(() => p.w.trackExposure({ location: '4302e4_1' }));
-    let { shouldDisplayTags: z } = p.w.useExperiment({ location: '4302e4_2' }, { autoTrackExposure: !1 }),
-        W = (0, g.I)();
+    let { shouldDisplayTags: W } = p.w.useExperiment({ location: '4302e4_2' }, { autoTrackExposure: !1 }),
+        z = (0, g.I)();
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)('div', {
@@ -116,7 +116,7 @@ t.Z = (e) => {
                         onMouseLeave: () => G(!1),
                         children: [
                             (0, i.jsx)('div', {
-                                className: r()(N.splashContainer, { [N.splashContainerWithTags]: z }),
+                                className: r()(N.splashContainer, { [N.splashContainerWithTags]: W }),
                                 children: (0, i.jsx)('img', {
                                     src: V,
                                     alt: '',
@@ -125,7 +125,7 @@ t.Z = (e) => {
                                 })
                             }),
                             (0, i.jsxs)('div', {
-                                className: r()(N.content, { [N.contentWithTags]: z }),
+                                className: r()(N.content, { [N.contentWithTags]: W }),
                                 children: [
                                     (0, i.jsxs)('div', {
                                         className: N.header,
@@ -164,7 +164,7 @@ t.Z = (e) => {
                                         variant: 'text-sm/normal',
                                         children: M
                                     }),
-                                    z &&
+                                    W &&
                                         null != j &&
                                         null != R &&
                                         (0, i.jsx)(T.F, {
@@ -204,7 +204,7 @@ t.Z = (e) => {
                                     })
                                 ]
                             }),
-                            W
+                            z
                                 ? (0, i.jsx)('div', {
                                       className: N.actionButtons,
                                       children: (0, i.jsx)(S.Z, { guild: s })

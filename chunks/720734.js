@@ -48,8 +48,8 @@ var i = n(735250),
     V = n(331541),
     F = n(332473),
     Y = n(240504),
-    z = n(637906),
-    W = n(39370),
+    W = n(637906),
+    z = n(39370),
     K = n(19199),
     q = n(111653),
     Q = n(866483),
@@ -288,7 +288,7 @@ class eD extends a.PureComponent {
                                                   position: 'top',
                                                   align: 'center',
                                                   shouldShow: !0,
-                                                  renderPopout: () => (0, i.jsx)(W.Z, {}),
+                                                  renderPopout: () => (0, i.jsx)(z.Z, {}),
                                                   children: this.renderSettingsGear
                                               });
                                           case o.z.QUEST_2_ENROLLMENT_TOOLTIP:
@@ -532,7 +532,7 @@ function ey() {
         k = (0, l.e7)([G.Z], () => G.Z.isCurrentQuestCompleted),
         B = (0, l.e7)([G.Z], () => G.Z.currentDropQuestGameTitle),
         V = (0, K.D)(),
-        W = (0, p.u)(),
+        z = (0, p.u)(),
         Q = (0, q.t)(),
         X = ep.ZP.canUsePremiumGuildMemberProfile(n),
         J = (null == n ? void 0 : null === (e = n.avatarDecoration) || void 0 === e ? void 0 : e.skuId) === eL.rL,
@@ -550,7 +550,7 @@ function ey() {
             let e = (0, y.wE)(o.z.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2),
                 [t, n] = (0, l.Wu)([Y.Z], () => [Y.Z.hasFetchedRelevance, Y.Z.profileThemesRelevanceExceeded]),
                 [i, s] = (0, l.Wu)([eE.ZP], () => [eE.ZP.hasFetchedMostRecentPremiumTypeSubscription(), eE.ZP.getMostRecentPremiumTypeSubscription()]),
-                { enabled: r } = z.Z.useExperiment({ location: '08bd40_1' }, { autoTrackExposure: !0 }),
+                { enabled: r } = W.Z.useExperiment({ location: '08bd40_1' }, { autoTrackExposure: !0 }),
                 c = a.useMemo(() => {
                     let e = new Date().getTime();
                     return null != s && (s.status === ev.O0b.ACTIVE || e - s.currentPeriodEnd.getTime() < eP);
@@ -574,7 +574,7 @@ function ey() {
             settings: []
         };
     return (
-        !P && (en && eh.settings.push(o.z.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2), s && (eh.settings.push(o.z.QUEST_2_ENROLLMENT_TOOLTIP), k && B === (null === (t = (0, w.BS)(eZ.X2.FORTNITE)) || void 0 === t ? void 0 : t.title) && eh.settings.push(o.z.QUEST_2_COMPLETION_TOOLTIP)), V && (1 === W ? eh.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_MUTE) : eh.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_BLOCK)), et && eh.settings.push(o.z.SOUNDBOARD_VOLUME_EDUCATION), Q && eh.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_REPORTING), X && eh.settings.push(o.z.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK), J && eh.avatar.push(o.z.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP)),
+        !P && (en && eh.settings.push(o.z.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2), s && (eh.settings.push(o.z.QUEST_2_ENROLLMENT_TOOLTIP), k && B === (null === (t = (0, w.BS)(eZ.X2.FORTNITE)) || void 0 === t ? void 0 : t.title) && eh.settings.push(o.z.QUEST_2_COMPLETION_TOOLTIP)), V && (1 === z ? eh.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_MUTE) : eh.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_BLOCK)), et && eh.settings.push(o.z.SOUNDBOARD_VOLUME_EDUCATION), Q && eh.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_REPORTING), X && eh.settings.push(o.z.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK), J && eh.avatar.push(o.z.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP)),
         (0, i.jsx)(eD, {
             currentUser: n,
             customStatusActivity: c,

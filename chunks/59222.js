@@ -80,7 +80,7 @@ t.Z = (e) => {
             }),
                 k(!1);
         },
-        z = () => {
+        W = () => {
             null == L || L.scrollTo({ to: 0 });
         };
     a.useEffect(() => {
@@ -88,7 +88,7 @@ t.Z = (e) => {
             n = null != e ? Math.floor(parseInt(e, 10) / f) + 1 : 1;
         V(!!t), 1 === n && k(!0);
     }, [s]);
-    let W =
+    let z =
         O === p.Hk
             ? T.Z.Messages.GUILD_DISCOVERY_SEARCH_RESULTS_HEADER.format({
                   count: null != G ? G.toLocaleString() : '0',
@@ -116,7 +116,7 @@ t.Z = (e) => {
                     (0, i.jsx)(c.Heading, {
                         variant: 'heading-xl/semibold',
                         className: S.header,
-                        children: W
+                        children: z
                     })
                 ]
             }),
@@ -149,7 +149,7 @@ t.Z = (e) => {
                             totalCount: G,
                             resetCurrentPage: w,
                             onPageChange: (e) => {
-                                Y((e - 1) * f, f), z();
+                                Y((e - 1) * f, f), W();
                             },
                             children: (e) => {
                                 let { controller: t } = e;
