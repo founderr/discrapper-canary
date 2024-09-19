@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return k;
+        return R;
     }
 }),
     n(47120);
@@ -8,27 +8,29 @@ var r = n(735250),
     a = n(470079),
     l = n(120356),
     i = n.n(l),
-    o = n(913527),
-    c = n.n(o),
-    s = n(442837),
-    d = n(481060),
-    u = n(129861),
-    h = n(665149),
-    m = n(594174),
-    f = n(55935),
-    x = n(120816),
-    p = n(31336),
-    g = n(257785),
-    b = n(484036),
-    v = n(681619),
-    _ = n(621060),
-    j = n(689938),
-    C = n(574001),
-    T = n(219299);
-let S = [
+    o = n(392711),
+    c = n(913527),
+    s = n.n(c),
+    d = n(442837),
+    u = n(481060),
+    h = n(129861),
+    m = n(665149),
+    f = n(301801),
+    x = n(594174),
+    p = n(55935),
+    g = n(120816),
+    b = n(31336),
+    v = n(257785),
+    _ = n(484036),
+    j = n(681619),
+    C = n(621060),
+    T = n(689938),
+    S = n(574001),
+    N = n(219299);
+let y = [
     {
         key: 'event',
-        cellClassName: C.eventColumn,
+        cellClassName: S.eventColumn,
         render(e) {
             let { event: t } = e;
             return t;
@@ -36,36 +38,36 @@ let S = [
     },
     {
         key: 'location',
-        cellClassName: C.locationColumn,
+        cellClassName: S.locationColumn,
         render(e) {
             let { properties: t } = e;
             return null == t.location ? null : t.location;
         }
     }
 ];
-function N(e) {
+function I(e) {
     let { children: t } = e;
-    return (0, r.jsx)(d.ScrollerThin, {
-        className: C.customPropertiesContainer,
+    return (0, r.jsx)(u.ScrollerThin, {
+        className: S.customPropertiesContainer,
         children: (0, r.jsx)('dl', { children: t })
     });
 }
-function y(e) {
+function w(e) {
     let { name: t, children: n } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)('dt', {
-                className: C.customPropertiesName,
+                className: S.customPropertiesName,
                 children: t
             }),
             (0, r.jsx)('dd', {
-                className: C.customPropertiesValue,
+                className: S.customPropertiesValue,
                 children: n
             })
         ]
     });
 }
-let I = [
+let k = [
         {
             id: 'details',
             name: 'Details',
@@ -74,62 +76,62 @@ let I = [
                         loggedEvent: { event: t, properties: n, timestamp: a, fingerprint: l },
                         onClose: o
                     } = e,
-                    s = m.default.getUser(l),
-                    x = c()(a);
+                    c = x.default.getUser(l),
+                    d = s()(a);
                 return (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, r.jsxs)(h.ZP, {
-                            className: i()(T.headerBar, C.subPanelHeaderBar),
+                        (0, r.jsxs)(m.ZP, {
+                            className: i()(N.headerBar, S.subPanelHeaderBar),
                             children: [
-                                (0, r.jsx)(h.ZP.Icon, {
-                                    icon: d.AnalyticsIcon,
+                                (0, r.jsx)(m.ZP.Icon, {
+                                    icon: u.AnalyticsIcon,
                                     tooltip: t
                                 }),
-                                (0, r.jsx)(h.ZP.Title, {
-                                    wrapperClassName: T.headerTitle,
+                                (0, r.jsx)(m.ZP.Title, {
+                                    wrapperClassName: N.headerTitle,
                                     children: t
                                 }),
-                                (0, r.jsx)(h.ZP.Icon, {
-                                    icon: d.CircleXIcon,
+                                (0, r.jsx)(m.ZP.Icon, {
+                                    icon: u.CircleXIcon,
                                     tooltip: 'Close',
                                     onClick: o
                                 })
                             ]
                         }),
-                        (0, r.jsxs)(g.E, {
-                            className: C.commonProperties,
+                        (0, r.jsxs)(v.E, {
+                            className: S.commonProperties,
                             children: [
-                                (0, r.jsx)(g.Z9, {
+                                (0, r.jsx)(v.Z9, {
                                     name: 'Timestamp (local)',
                                     children: (0, r.jsx)('time', {
                                         dateTime: a.toISOString(),
-                                        title: (0, f.vc)(x, 'LLLL'),
-                                        children: (0, f.Y4)(x)
+                                        title: (0, p.vc)(d, 'LLLL'),
+                                        children: (0, p.Y4)(d)
                                     })
                                 }),
-                                null != s &&
-                                    (0, r.jsx)(g.Z9, {
+                                null != c &&
+                                    (0, r.jsx)(v.Z9, {
                                         name: 'User',
-                                        children: (0, r.jsx)(u.Z, { user: s })
+                                        children: (0, r.jsx)(h.Z, { user: c })
                                     }),
-                                (0, r.jsx)(g.Z9, {
+                                (0, r.jsx)(v.Z9, {
                                     name: 'Fingerprint',
                                     children: (0, r.jsx)('code', { children: l })
                                 })
                             ]
                         }),
-                        (0, r.jsx)(N, {
+                        (0, r.jsx)(I, {
                             children: Object.entries(n).map((e) => {
                                 let [t, n] = e;
                                 return (0, r.jsx)(
-                                    y,
+                                    w,
                                     {
                                         name: ''.concat(t, ':'),
                                         children:
                                             null != n
                                                 ? (0, r.jsx)('code', { children: JSON.stringify(n) })
                                                 : (0, r.jsx)('code', {
-                                                      className: C.emptyProperty,
+                                                      className: S.emptyProperty,
                                                       children: 'null'
                                                   })
                                     },
@@ -142,11 +144,11 @@ let I = [
             }
         }
     ],
-    w = {
+    E = {
         events: {
             label: 'Events',
             filter: (e) =>
-                Object.entries(w)
+                Object.entries(E)
                     .filter((e) => {
                         let [t] = e;
                         return 'events' !== t;
@@ -170,52 +172,86 @@ let I = [
             filter: (e) => e.event.startsWith('network_action')
         }
     };
-function k() {
+function R() {
     let e = a.useRef(null),
-        t = (0, s.e7)([x.Z], () => x.Z.loggedEvents),
-        [n, l] = a.useState(Object.keys(w)),
-        o = t.filter((e) => {
-            for (let t of n) if (w[t].filter(e)) return !0;
-            return !1;
-        }),
-        [c, u] = a.useState(void 0),
-        h = o.find((e) => e.key === c),
-        { TabBar: m, renderSelectedTab: f } = (0, _.Z)({ tabs: I }, []);
+        [t, n] = a.useState(''),
+        l = (0, d.e7)([g.Z], () => g.Z.loggedEvents),
+        [c, s] = a.useState(Object.keys(E)),
+        [h, m] = a.useState(l),
+        x = a.useRef(null),
+        p = a.useCallback(
+            (0, o.throttle)(
+                async (e, t) => {
+                    if ('' === e) {
+                        m(t);
+                        return;
+                    }
+                    x.current = (0, o.uniqueId)();
+                    let n = await (0, f.H)(
+                        t,
+                        (e) => {
+                            let { event: t } = e;
+                            return t;
+                        },
+                        e,
+                        !0
+                    );
+                    if (null != x.current) m(n);
+                },
+                300,
+                { leading: !0 }
+            ),
+            []
+        ),
+        v = a.useMemo(
+            () =>
+                h.filter((e) => {
+                    for (let t of c) if (E[t].filter(e)) return !0;
+                    return !1;
+                }),
+            [h, c]
+        );
+    a.useEffect(() => {
+        p(t, l);
+    }, [t, p, l]);
+    let [I, w] = a.useState(void 0),
+        R = v.find((e) => e.key === I),
+        { TabBar: O, renderSelectedTab: Z } = (0, C.Z)({ tabs: k }, []);
     return (0, r.jsxs)('div', {
         ref: e,
-        className: i()(T.panel, C.panel),
+        className: i()(N.panel, S.panel),
         children: [
             (0, r.jsxs)('div', {
-                className: C.toolbar,
+                className: S.toolbar,
                 children: [
-                    (0, r.jsx)(d.Button, {
-                        className: C.toolbarButton,
-                        look: d.Button.Looks.BLANK,
-                        size: d.Button.Sizes.ICON,
-                        onClick: p.Zw,
+                    (0, r.jsx)(u.Button, {
+                        className: S.toolbarButton,
+                        look: u.Button.Looks.BLANK,
+                        size: u.Button.Sizes.ICON,
+                        onClick: b.Zw,
                         children: (0, r.jsx)('span', {
-                            title: j.Z.Messages.CLEAR,
-                            children: (0, r.jsx)(d.TrashIcon, {
+                            title: T.Z.Messages.CLEAR,
+                            children: (0, r.jsx)(u.TrashIcon, {
                                 size: 'md',
                                 color: 'currentColor',
-                                'aria-label': j.Z.Messages.CLEAR
+                                'aria-label': T.Z.Messages.CLEAR
                             })
                         })
                     }),
-                    (0, r.jsx)('div', { className: C.toolbarDivider }),
+                    (0, r.jsx)('div', { className: S.toolbarDivider }),
                     (0, r.jsx)('div', {
-                        className: C.filters,
-                        children: Object.entries(w).map((e) => {
-                            let [t, a] = e;
+                        className: S.filters,
+                        children: Object.entries(E).map((e) => {
+                            let [t, n] = e;
                             return (0, r.jsx)(
-                                d.Clickable,
+                                u.Clickable,
                                 {
-                                    className: i()(C.filter, n.includes(t) && C.activeFilter),
+                                    className: i()(S.filter, c.includes(t) && S.activeFilter),
                                     onClick: () => {
                                         var e;
-                                        return (e = t), void l((t) => (t.includes(e) ? t.filter((t) => t !== e) : [...t, e]));
+                                        return (e = t), void s((t) => (t.includes(e) ? t.filter((t) => t !== e) : [...t, e]));
                                     },
-                                    children: a.label
+                                    children: n.label
                                 },
                                 t
                             );
@@ -223,22 +259,32 @@ function k() {
                     })
                 ]
             }),
-            (0, r.jsx)(v.Z, {
-                columns: S,
-                data: o,
-                selectedRowKey: c,
-                onClickRow: (e) => u(e.key)
+            (0, r.jsx)('div', {
+                className: S.toolbar,
+                children: (0, r.jsx)(u.SearchBar, {
+                    className: S.searchBar,
+                    query: t,
+                    onChange: n,
+                    onClear: () => n(''),
+                    placeholder: 'Search by event name'
+                })
             }),
-            null != h &&
-                (0, r.jsxs)(b.Z, {
-                    className: C.subPanel,
+            (0, r.jsx)(j.Z, {
+                columns: y,
+                data: v,
+                selectedRowKey: I,
+                onClickRow: (e) => w(e.key)
+            }),
+            null != R &&
+                (0, r.jsxs)(_.Z, {
+                    className: S.subPanel,
                     minHeight: 100,
                     initialHeight: null != e.current ? e.current.clientHeight / 2 : 300,
                     children: [
-                        (0, r.jsx)(m, {}),
-                        f({
-                            loggedEvent: h,
-                            onClose: () => u(void 0)
+                        (0, r.jsx)(O, {}),
+                        Z({
+                            loggedEvent: R,
+                            onClose: () => w(void 0)
                         })
                     ]
                 })
