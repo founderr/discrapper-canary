@@ -1,24 +1,24 @@
 n.d(t, {
     Rw: function () {
-        return D;
-    },
-    V6: function () {
         return U;
     },
+    V6: function () {
+        return B;
+    },
     f9: function () {
-        return O;
+        return v;
     },
     g_: function () {
-        return x;
+        return b;
     },
     kG: function () {
-        return S;
+        return M;
     },
     sf: function () {
-        return P;
+        return L;
     },
     x$: function () {
-        return B;
+        return j;
     }
 }),
     n(724458),
@@ -34,18 +34,19 @@ var s = n(470079),
     _ = n(621853),
     u = n(594174),
     E = n(78839),
-    T = n(471309),
-    I = n(474936),
-    R = n(689938),
-    m = n(888300),
-    g = n(665321),
-    N = n(256017),
-    C = n(126807),
-    p = n(432119),
-    A = n(205119),
-    f = n(145007),
-    h = n(937264);
-let S = () => {
+    T = n(111361),
+    I = n(471309),
+    R = n(474936),
+    m = n(689938),
+    g = n(888300),
+    N = n(665321),
+    C = n(256017),
+    p = n(126807),
+    A = n(432119),
+    f = n(205119),
+    h = n(145007),
+    S = n(937264);
+let M = () => {
         var e;
         let t;
         let n = (0, i.e7)([u.default], () => u.default.getCurrentUser()),
@@ -62,102 +63,103 @@ let S = () => {
             t
         );
     },
-    M = () => {
-        let e = (0, i.e7)([E.ZP], () => E.ZP.getPremiumTypeSubscription());
-        if (null == e || null == e.premiumSince) return null;
-        let t = r()(),
-            n = r()(e.premiumSince).add(1, 'day'),
-            s = t.diff(n, 'months');
-        return Object.entries(I.eG).reduce((e, t) => {
-            let [n, a] = t;
-            return s >= a ? n : e;
+    x = () => {
+        let e = (0, i.e7)([u.default], () => u.default.getCurrentUser()),
+            t = (0, i.e7)([E.ZP], () => E.ZP.getPremiumTypeSubscription());
+        if (!(0, T.M5)(e, R.p9.TIER_2) || null == t || null == t.premiumSince) return null;
+        let n = r()(),
+            s = r()(t.premiumSince).add(1, 'day'),
+            a = n.diff(s, 'months');
+        return Object.entries(R.eG).reduce((e, t) => {
+            let [n, s] = t;
+            return a >= s ? n : e;
         }, null);
     },
-    x = (e) => {
+    b = (e) => {
         switch (e) {
-            case I.VU.PREMIUM_TENURE_1_MONTH:
-                return m;
-            case I.VU.PREMIUM_TENURE_3_MONTH:
-                return h;
-            case I.VU.PREMIUM_TENURE_6_MONTH:
-                return p;
-            case I.VU.PREMIUM_TENURE_12_MONTH:
-                return A;
-            case I.VU.PREMIUM_TENURE_24_MONTH:
+            case R.VU.PREMIUM_TENURE_1_MONTH:
                 return g;
-            case I.VU.PREMIUM_TENURE_36_MONTH:
-                return N;
-            case I.VU.PREMIUM_TENURE_60_MONTH:
+            case R.VU.PREMIUM_TENURE_3_MONTH:
+                return S;
+            case R.VU.PREMIUM_TENURE_6_MONTH:
+                return A;
+            case R.VU.PREMIUM_TENURE_12_MONTH:
                 return f;
-            case I.VU.PREMIUM_TENURE_72_MONTH:
+            case R.VU.PREMIUM_TENURE_24_MONTH:
+                return N;
+            case R.VU.PREMIUM_TENURE_36_MONTH:
                 return C;
+            case R.VU.PREMIUM_TENURE_60_MONTH:
+                return h;
+            case R.VU.PREMIUM_TENURE_72_MONTH:
+                return p;
             default:
                 return;
         }
     },
-    b = () => x(S()),
-    O = (e) => {
+    O = () => b(M()),
+    v = (e) => {
         switch (e) {
-            case I.VU.PREMIUM_TENURE_1_MONTH:
-                return R.Z.Messages.TIERED_TENURE_BADGE_BRONZE;
-            case I.VU.PREMIUM_TENURE_3_MONTH:
-                return R.Z.Messages.TIERED_TENURE_BADGE_SILVER;
-            case I.VU.PREMIUM_TENURE_6_MONTH:
-                return R.Z.Messages.TIERED_TENURE_BADGE_GOLD;
-            case I.VU.PREMIUM_TENURE_12_MONTH:
-                return R.Z.Messages.TIERED_TENURE_BADGE_PLATINUM;
-            case I.VU.PREMIUM_TENURE_24_MONTH:
-                return R.Z.Messages.TIERED_TENURE_BADGE_DIAMOND;
-            case I.VU.PREMIUM_TENURE_36_MONTH:
-                return R.Z.Messages.TIERED_TENURE_BADGE_EMERALD;
-            case I.VU.PREMIUM_TENURE_60_MONTH:
-                return R.Z.Messages.TIERED_TENURE_BADGE_RUBY;
-            case I.VU.PREMIUM_TENURE_72_MONTH:
-                return R.Z.Messages.TIERED_TENURE_BADGE_FIRE;
+            case R.VU.PREMIUM_TENURE_1_MONTH:
+                return m.Z.Messages.TIERED_TENURE_BADGE_BRONZE;
+            case R.VU.PREMIUM_TENURE_3_MONTH:
+                return m.Z.Messages.TIERED_TENURE_BADGE_SILVER;
+            case R.VU.PREMIUM_TENURE_6_MONTH:
+                return m.Z.Messages.TIERED_TENURE_BADGE_GOLD;
+            case R.VU.PREMIUM_TENURE_12_MONTH:
+                return m.Z.Messages.TIERED_TENURE_BADGE_PLATINUM;
+            case R.VU.PREMIUM_TENURE_24_MONTH:
+                return m.Z.Messages.TIERED_TENURE_BADGE_DIAMOND;
+            case R.VU.PREMIUM_TENURE_36_MONTH:
+                return m.Z.Messages.TIERED_TENURE_BADGE_EMERALD;
+            case R.VU.PREMIUM_TENURE_60_MONTH:
+                return m.Z.Messages.TIERED_TENURE_BADGE_RUBY;
+            case R.VU.PREMIUM_TENURE_72_MONTH:
+                return m.Z.Messages.TIERED_TENURE_BADGE_FIRE;
             default:
                 return '';
         }
     },
-    v = () => O(S()),
-    P = (e) => {
+    P = () => v(M()),
+    L = (e) => {
         switch (e) {
-            case I.VU.PREMIUM_TENURE_1_MONTH:
-            case I.VU.PREMIUM_TENURE_3_MONTH:
-            case I.VU.PREMIUM_TENURE_6_MONTH:
-                return R.Z.Messages.DURATION_MONTHS_CAPITALIZE.format({ months: I.eG[e] });
-            case I.VU.PREMIUM_TENURE_12_MONTH:
-            case I.VU.PREMIUM_TENURE_24_MONTH:
-            case I.VU.PREMIUM_TENURE_36_MONTH:
-            case I.VU.PREMIUM_TENURE_60_MONTH:
-                return R.Z.Messages.DURATION_YEARS_CAPITALIZE.format({ years: I.eG[e] / 12 });
-            case I.VU.PREMIUM_TENURE_72_MONTH:
-                return R.Z.Messages.DURATION_YEARS_CAPITALIZE.format({ years: '6+' });
+            case R.VU.PREMIUM_TENURE_1_MONTH:
+            case R.VU.PREMIUM_TENURE_3_MONTH:
+            case R.VU.PREMIUM_TENURE_6_MONTH:
+                return m.Z.Messages.DURATION_MONTHS_CAPITALIZE.format({ months: R.eG[e] });
+            case R.VU.PREMIUM_TENURE_12_MONTH:
+            case R.VU.PREMIUM_TENURE_24_MONTH:
+            case R.VU.PREMIUM_TENURE_36_MONTH:
+            case R.VU.PREMIUM_TENURE_60_MONTH:
+                return m.Z.Messages.DURATION_YEARS_CAPITALIZE.format({ years: R.eG[e] / 12 });
+            case R.VU.PREMIUM_TENURE_72_MONTH:
+                return m.Z.Messages.DURATION_YEARS_CAPITALIZE.format({ years: '6+' });
             default:
                 return '';
         }
     },
-    L = () => P(S()),
-    Z = () => {
-        let e = S(),
+    Z = () => L(M()),
+    D = () => {
+        let e = M(),
             t = (0, i.e7)([E.ZP], () => E.ZP.getPremiumTypeSubscription());
         return null == e || null == t || null == t.premiumSince ? null : (0, d.RZ)(e, t.premiumSince);
     },
-    D = () => ({
-        badge: S(),
-        image: b(),
-        name: v(),
-        earnedOnDate: Z(),
-        tenureRequirement: L()
+    U = () => ({
+        badge: M(),
+        image: O(),
+        name: P(),
+        earnedOnDate: D(),
+        tenureRequirement: Z()
     }),
-    U = () => {
-        let e = M(),
-            { enabled: t } = (0, T.Z)(!0),
-            [n] = (0, c.US)(t && null != e ? [l.z.WHATS_NEW_TENURE_BADGE_REWARD] : []);
-        return n === l.z.WHATS_NEW_TENURE_BADGE_REWARD ? R.Z.Messages.REWARD.toLocaleUpperCase() : null;
-    },
     B = () => {
-        let e = M(),
-            { enabled: t } = (0, T.Z)(),
+        let e = x(),
+            { enabled: t } = (0, I.Z)(!0),
+            [n] = (0, c.US)(t && null != e ? [l.z.WHATS_NEW_TENURE_BADGE_REWARD] : []);
+        return n === l.z.WHATS_NEW_TENURE_BADGE_REWARD ? m.Z.Messages.REWARD.toLocaleUpperCase() : null;
+    },
+    j = () => {
+        let e = x(),
+            { enabled: t } = (0, I.Z)(),
             [n] = (0, c.US)(t && null != e ? [l.z.WHATS_NEW_TENURE_BADGE_REWARD] : []);
         return s.useCallback(() => {
             n === l.z.WHATS_NEW_TENURE_BADGE_REWARD && (0, o.EW)(n);
