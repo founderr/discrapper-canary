@@ -131,9 +131,7 @@ function eT() {
         aecDumpEnabled: !1,
         sidechainCompression: !1,
         sidechainCompressionSettingVersion: 0,
-        sidechainCompressionStrength: 50,
-        audioSubsystemSettingVersion: 0,
-        automaticAudioSubsystem: !1
+        sidechainCompressionStrength: 50
     };
 }
 let eS = (0, m.Mt)((0, m.jj)()),
@@ -500,16 +498,10 @@ async function tm() {
     }
 }
 function tT(e) {
-    e === e_.iA.AUTOMATIC ? (ta({ automaticAudioSubsystem: !0 }), tS()) : (ta({ automaticAudioSubsystem: !1 }), eS.setAudioSubsystem(e));
-}
-function tS() {
-    eS.setAudioSubsystem(e_.iA.STANDARD);
-}
-function tg(e) {
     let { section: t } = e;
     return t === el.oAB.VOICE && ts(), !1;
 }
-class tA extends (l = I.ZP.Store) {
+class tS extends (l = I.ZP.Store) {
     initialize() {
         eS.on(m.aB.Connection, (e) => {
             var t, n;
@@ -1046,7 +1038,7 @@ class tA extends (l = I.ZP.Store) {
         return e4().attenuateWhileSpeakingOthers;
     }
     getAudioSubsystem() {
-        return e4().automaticAudioSubsystem ? e_.iA.AUTOMATIC : eS.getAudioSubsystem();
+        return eS.getAudioSubsystem();
     }
     getMLSSigningKey(e, t) {
         return eS.getMLSSigningKey(e, t);
@@ -1144,8 +1136,8 @@ class tA extends (l = I.ZP.Store) {
         return null != s;
     }
 }
-ef(tA, 'displayName', 'MediaEngineStore'),
-    (r = new tA(g.Z, {
+ef(tS, 'displayName', 'MediaEngineStore'),
+    (r = new tS(g.Z, {
         VOICE_CHANNEL_SELECT: function (e) {
             let { guildId: t, channelId: n, currentVoiceChannelId: r, video: i } = e;
             if ((r !== n && e8(i, null), null != t || null == n)) {
@@ -1175,8 +1167,6 @@ ef(tA, 'displayName', 'MediaEngineStore'),
                         let t = e4();
                         !e.sidechainAvailable && t.sidechainCompression ? (ta({ sidechainCompressionSettingVersion: 0 }), th(!1)) : e.sidechainAvailable && t.sidechainCompressionSettingVersion < 1 && (ta({ sidechainCompressionSettingVersion: 1 }), th(e.sidechainEnabled));
                     }),
-                e4().automaticAudioSubsystem && tS(),
-                (0, z.isWindows)() && e4().audioSubsystemSettingVersion < 1 && (ta({ audioSubsystemSettingVersion: 1 }), !e4().automaticAudioSubsystem && eS.getAudioSubsystem() === e_.iA.STANDARD && tT(e_.iA.AUTOMATIC)),
                 tc();
         },
         CONNECTION_CLOSED: function () {
@@ -1410,7 +1400,7 @@ ef(tA, 'displayName', 'MediaEngineStore'),
             (eB = t), !eF && eB && ((eF = !0), ti.update());
         },
         AUDIO_SET_SUBSYSTEM: function (e) {
-            tT(e.subsystem);
+            eS.setAudioSubsystem(e.subsystem);
         },
         MEDIA_ENGINE_SET_AUDIO_ENABLED: function (e) {
             (eN = e.enabled),
@@ -1502,8 +1492,8 @@ ef(tA, 'displayName', 'MediaEngineStore'),
         MEDIA_ENGINE_INTERACTION_REQUIRED: function (e) {
             return eO !== e.required && ((eO = e.required), !e.required && eS.interact(), !0);
         },
-        USER_SETTINGS_MODAL_INIT: tg,
-        USER_SETTINGS_MODAL_SET_SECTION: tg,
+        USER_SETTINGS_MODAL_INIT: tT,
+        USER_SETTINGS_MODAL_SET_SECTION: tT,
         CERTIFIED_DEVICES_SET: function () {
             return eS.eachConnection(te), !1;
         },

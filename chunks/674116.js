@@ -241,10 +241,6 @@ function F() {
                                                 {
                                                     value: Z.iA.STANDARD,
                                                     label: 'Standard'
-                                                },
-                                                {
-                                                    value: Z.iA.AUTOMATIC,
-                                                    label: 'Automatic'
                                                 }
                                             ];
                                             return (
