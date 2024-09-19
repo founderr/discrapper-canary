@@ -89,10 +89,12 @@ class G extends a.PureComponent {
                     (0, I.jW)(e, async () => {
                         let { default: e } = await n.e('51529').then(n.bind(n, 228620));
                         return (n) =>
-                            (0, s.jsx)(e, {
-                                ...n,
-                                channel: t.options.channel
-                            });
+                            null != t.options.channel
+                                ? (0, s.jsx)(e, {
+                                      ...n,
+                                      channel: t.options.channel
+                                  })
+                                : null;
                     });
             }),
             U(this, 'handleTargetContextMenu', (e) => {
