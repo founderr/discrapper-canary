@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return D;
+        return C;
     }
 }),
     n(47120);
@@ -9,94 +9,90 @@ var r = n(735250),
     a = n(120356),
     s = n.n(a),
     o = n(106351),
-    l = n(399606),
-    u = n(507274),
-    c = n(481060),
-    d = n(541716),
-    _ = n(752305),
-    E = n(893718),
-    f = n(210887),
-    h = n(131704),
-    p = n(823379),
-    I = n(5192),
-    m = n(51144),
-    T = n(785717),
-    S = n(448197),
-    g = n(698305),
-    A = n(825801),
-    N = n(228168),
-    O = n(420212),
-    R = n(689938),
-    v = n(639899);
-let C = (0, h.kt)({
+    l = n(507274),
+    u = n(541716),
+    c = n(752305),
+    d = n(893718),
+    _ = n(131704),
+    E = n(823379),
+    f = n(5192),
+    h = n(51144),
+    p = n(785717),
+    I = n(448197),
+    m = n(698305),
+    T = n(825801),
+    S = n(228168),
+    g = n(420212),
+    A = n(689938),
+    N = n(639899);
+let O = (0, _.kt)({
         id: '1',
         type: o.d.DM
     }),
-    y = (e) => {
+    R = (e) => {
         let { input: t, username: n, sourceType: r, sourceDetails: i } = e;
         switch (r) {
-            case N.n_.ACTIVITY:
-                let a = R.Z.Messages.USER_PROFILE_REPLIED_TO_ACTIVITY.format({ username: n });
-                return ''.concat(A.jd).concat(a, '*\n').concat(t);
-            case N.n_.AVATAR:
-                let s = R.Z.Messages.USER_PROFILE_REPLIED_TO_AVATAR.format({ username: n });
-                return ''.concat(A.jd).concat(s, '*\n').concat(t);
-            case N.n_.STATUS:
-                let o = R.Z.Messages.USER_PROFILE_REPLIED_TO_STATUS.format({ username: n });
-                return null != i ? ''.concat(A.jd).concat(o, '*').concat('\n> '.concat(i), '\n').concat(t) : ''.concat(A.jd).concat(o, '*\n').concat(t);
+            case S.n_.ACTIVITY:
+                let a = A.Z.Messages.USER_PROFILE_REPLIED_TO_ACTIVITY.format({ username: n });
+                return ''.concat(T.jd).concat(a, '*\n').concat(t);
+            case S.n_.AVATAR:
+                let s = A.Z.Messages.USER_PROFILE_REPLIED_TO_AVATAR.format({ username: n });
+                return ''.concat(T.jd).concat(s, '*\n').concat(t);
+            case S.n_.STATUS:
+                let o = A.Z.Messages.USER_PROFILE_REPLIED_TO_STATUS.format({ username: n });
+                return null != i ? ''.concat(T.jd).concat(o, '*').concat('\n> '.concat(i), '\n').concat(t) : ''.concat(T.jd).concat(o, '*\n').concat(t);
             default:
-                (0, p.vE)(r);
+                (0, E.vE)(r);
         }
     },
-    L = (e) => {
+    v = (e) => {
         switch (e) {
-            case N.n_.ACTIVITY:
-                return R.Z.Messages.USER_PROFILE_REPLY_TO_ACTIVITY_PLACEHOLDER;
-            case N.n_.AVATAR:
-                return R.Z.Messages.USER_PROFILE_REPLY_TO_AVATAR_PLACEHOLDER;
-            case N.n_.STATUS:
-                return R.Z.Messages.USER_PROFILE_REPLY_TO_STATUS_PLACEHOLDER;
+            case S.n_.ACTIVITY:
+                return A.Z.Messages.USER_PROFILE_REPLY_TO_ACTIVITY_PLACEHOLDER;
+            case S.n_.AVATAR:
+                return A.Z.Messages.USER_PROFILE_REPLY_TO_AVATAR_PLACEHOLDER;
+            case S.n_.STATUS:
+                return A.Z.Messages.USER_PROFILE_REPLY_TO_STATUS_PLACEHOLDER;
             default:
-                (0, p.vE)(e);
+                (0, E.vE)(e);
         }
     };
-function D(e) {
-    let { user: t, guildId: n, channelId: a, profileType: o, sourceType: h, sourceDetails: p, onInteraction: R, setPopoutRef: D, modalKey: b, setInteractionToastShown: M, setInteractionTypeSent: P, onClose: U } = e,
-        { trackUserProfileAction: w } = (0, T.KZ)(),
-        x = (0, l.e7)([f.Z], () => f.Z.theme),
-        { sendReply: G } = (0, S.Q)(h),
-        [k, B] = i.useState(''),
-        [F, V] = i.useState((0, _.JM)(k)),
-        H = i.useRef(!1),
-        Z = i.useRef(null),
-        Y = i.useCallback(
+function C(e) {
+    let { user: t, guildId: n, channelId: a, profileType: o, sourceType: _, sourceDetails: E, onInteraction: A, setPopoutRef: C, modalKey: y, setInteractionToastShown: L, setInteractionTypeSent: D, onClose: b } = e,
+        { trackUserProfileAction: M } = (0, p.KZ)(),
+        { sendReply: P } = (0, I.Q)(_),
+        [U, w] = i.useState(''),
+        [x, G] = i.useState((0, c.JM)(U)),
+        k = i.useRef(!1),
+        B = i.useRef(null),
+        F = i.useCallback(
             (e) => {
-                e.key === O.vn.ESCAPE &&
+                e.key === g.vn.ESCAPE &&
                     (e.stopPropagation(),
-                    null == R ||
-                        R({
+                    null == A ||
+                        A({
                             interactionType: null,
                             interactionSourceType: null
                         }),
-                    null == U || U());
+                    null == b || b());
             },
-            [U, R]
+            [b, A]
         );
     i.useEffect(() => {
-        null == D || D(null == Z ? void 0 : Z.current);
-    }, [Z, D]);
-    let j = async (e) => {
+        null == C || C(null == B ? void 0 : B.current);
+    }, [B, C]);
+    let V = async (e) => {
             if (null == e) return;
-            w({ action: G });
-            let n = y({
+            M({ action: P });
+            let n = R({
                 input: e,
-                username: m.ZP.getName(t),
-                sourceType: h,
-                sourceDetails: p
+                username: h.ZP.getName(t),
+                sourceType: _,
+                sourceDetails: E
             });
-            P(null), M(!0);
+            D(null), L(!0);
             try {
-                await (0, g.Z)({
+                await (0, m.Z)({
                     userId: t.id,
                     content: n,
                     location: 'UserProfileReactReplyBar',
@@ -104,90 +100,86 @@ function D(e) {
                     whenReady: !1
                 });
             } catch (e) {}
-            P(N.P.REPLY),
+            D(S.P.REPLY),
                 setTimeout(() => {
-                    M(!1);
-                }, A._1);
+                    L(!1);
+                }, T._1);
         },
-        W = {
-            [v.biteSize]: o === N.y0.BITE_SIZE,
-            [v.panel]: o === N.y0.PANEL
+        H = {
+            [N.biteSize]: o === S.y0.BITE_SIZE,
+            [N.panel]: o === S.y0.PANEL
         },
-        K = {
-            [v.status]: h === N.n_.STATUS,
-            [v.avatar]: h === N.n_.AVATAR
+        Z = {
+            [N.status]: _ === S.n_.STATUS,
+            [N.avatar]: _ === S.n_.AVATAR
         };
-    return (0, r.jsx)(u.V, {
-        ref: Z,
-        onKeyDown: Y,
-        children: (0, r.jsx)(c.ThemeProvider, {
-            theme: x,
-            children: (e) =>
-                (0, r.jsx)('div', {
-                    className: s()(v.container, W, K, e),
-                    children: (0, r.jsx)(E.Z, {
-                        parentModalKey: b,
-                        emojiPickerCloseOnModalOuterClick: !0,
-                        innerClassName: v.inner,
-                        editorClassName: v.editor,
-                        type: d.I.USER_PROFILE_REPLY,
-                        placeholder: L(h).format({ username: I.ZP.getName(n, a, t) }),
-                        channel: C,
-                        textValue: k,
-                        richValue: F,
-                        onChange: (e, t, n) => {
-                            if (t !== k) B(t), V(n);
-                        },
-                        focused: H.current,
-                        onFocus: () => {
-                            H.current = !0;
-                        },
-                        onBlur: (e) => {
-                            var t;
-                            if (null === (t = Z.current) || void 0 === t ? void 0 : t.contains(e.relatedTarget)) {
-                                H.current = !1;
-                                return;
+    return (0, r.jsx)(l.V, {
+        ref: B,
+        onKeyDown: F,
+        children: (0, r.jsx)('div', {
+            className: s()(N.container, H, Z),
+            children: (0, r.jsx)(d.Z, {
+                parentModalKey: y,
+                emojiPickerCloseOnModalOuterClick: !0,
+                innerClassName: N.inner,
+                editorClassName: N.editor,
+                type: u.I.USER_PROFILE_REPLY,
+                placeholder: v(_).format({ username: f.ZP.getName(n, a, t) }),
+                channel: O,
+                textValue: U,
+                richValue: x,
+                onChange: (e, t, n) => {
+                    if (t !== U) w(t), G(n);
+                },
+                focused: k.current,
+                onFocus: () => {
+                    k.current = !0;
+                },
+                onBlur: (e) => {
+                    var t;
+                    if (null === (t = B.current) || void 0 === t ? void 0 : t.contains(e.relatedTarget)) {
+                        k.current = !1;
+                        return;
+                    }
+                    null !== B.current &&
+                        ((k.current = !1),
+                        null == A ||
+                            A({
+                                interactionType: null,
+                                interactionSourceType: null
+                            }),
+                        null == b || b());
+                },
+                onSubmit: async (e) => {
+                    let { value: t } = e,
+                        n = t.trim();
+                    if (0 === n.length)
+                        return {
+                            shouldClear: !1,
+                            shouldRefocus: !1
+                        };
+                    try {
+                        return (
+                            await V(n),
+                            null == A ||
+                                A({
+                                    interactionType: null,
+                                    interactionSourceType: null
+                                }),
+                            null == b || b(),
+                            {
+                                shouldClear: !0,
+                                shouldRefocus: !1
                             }
-                            null !== Z.current &&
-                                ((H.current = !1),
-                                null == R ||
-                                    R({
-                                        interactionType: null,
-                                        interactionSourceType: null
-                                    }),
-                                null == U || U());
-                        },
-                        onSubmit: async (e) => {
-                            let { value: t } = e,
-                                n = t.trim();
-                            if (0 === n.length)
-                                return {
-                                    shouldClear: !1,
-                                    shouldRefocus: !1
-                                };
-                            try {
-                                return (
-                                    await j(n),
-                                    null == R ||
-                                        R({
-                                            interactionType: null,
-                                            interactionSourceType: null
-                                        }),
-                                    null == U || U(),
-                                    {
-                                        shouldClear: !0,
-                                        shouldRefocus: !1
-                                    }
-                                );
-                            } catch {
-                                return {
-                                    shouldClear: !1,
-                                    shouldRefocus: !1
-                                };
-                            }
-                        }
-                    })
-                })
+                        );
+                    } catch {
+                        return {
+                            shouldClear: !1,
+                            shouldRefocus: !1
+                        };
+                    }
+                }
+            })
         })
     });
 }
