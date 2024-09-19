@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return A;
+            return f;
         },
         openConsoleConnectionErrorsModal: function () {
             return h;
@@ -23,14 +23,14 @@ var s = n(735250),
     I = n(497505),
     R = n(918701),
     m = n(667105),
-    g = n(981631),
-    N = n(689938),
+    N = n(981631),
+    g = n(689938),
     C = n(24444),
     p = n(708901);
-function A(e) {
-    let { questId: t, errorHints: n, transitionState: r, onClose: A } = e,
+function f(e) {
+    let { questId: t, errorHints: n, transitionState: r, onClose: f } = e,
         h = (0, T.B4)(t);
-    null == h && A();
+    null == h && f();
     let [S, M] = (0, a.useState)(n),
         x = (0, T.KX)(),
         b = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
@@ -41,8 +41,8 @@ function A(e) {
         v = S.filter((e) => ['xbox', 'playstation'].includes(e.connected_account_type)),
         P = (0, R.Bz)(h),
         L = (0, l.e7)([u.Z], () => u.Z.getState().theme),
-        Z = (0, o.wj)(L) ? g.BRd.DARK : g.BRd.LIGHT,
-        { startConsoleQuest: D, startingConsoleQuest: U } = (0, T.GI)({
+        Z = (0, o.wj)(L) ? N.BRd.DARK : N.BRd.LIGHT,
+        { startConsoleQuest: D, startingConsoleQuest: B } = (0, T.GI)({
             questId: h.id,
             beforeRequest: () => {
                 O.startAnimation(),
@@ -79,13 +79,13 @@ function A(e) {
                             }),
                             (0, s.jsx)(c.ModalCloseButton, {
                                 className: C.closeBtn,
-                                onClick: A
+                                onClick: f
                             })
                         ]
                     }),
                     (0, s.jsx)(c.Heading, {
                         variant: 'heading-xl/bold',
-                        children: N.Z.Messages.QUESTS_CONNECTION_MODAL_ERROR_HEADER
+                        children: g.Z.Messages.QUESTS_CONNECTION_MODAL_ERROR_HEADER
                     }),
                     (0, s.jsx)(c.Text, {
                         variant: 'text-sm/medium',
@@ -104,10 +104,10 @@ function A(e) {
                             (0, s.jsx)(c.Text, {
                                 variant: 'eyebrow',
                                 color: 'header-secondary',
-                                children: N.Z.Messages.CONNECTED_ACCOUNTS
+                                children: g.Z.Messages.CONNECTED_ACCOUNTS
                             }),
                             (0, s.jsxs)(c.Clickable, {
-                                className: i()(C.refreshWrapper, { [C.disabled]: U }),
+                                className: i()(C.refreshWrapper, { [C.disabled]: B }),
                                 onClick: D,
                                 children: [
                                     O.render(),
@@ -115,7 +115,7 @@ function A(e) {
                                         variant: 'text-sm/medium',
                                         color: 'currentColor',
                                         className: C.colorTransition,
-                                        children: N.Z.Messages.REFRESH
+                                        children: g.Z.Messages.REFRESH
                                     })
                                 ]
                             })
@@ -124,13 +124,13 @@ function A(e) {
                     (0, s.jsxs)('div', {
                         className: C.accountsWrapper,
                         children: [
-                            (0, s.jsx)(f, {
+                            (0, s.jsx)(A, {
                                 icon: (0, s.jsx)(c.ScreenIcon, { size: 'sm' }),
-                                text: N.Z.Messages.QUESTS_THIS_PC
+                                text: g.Z.Messages.QUESTS_THIS_PC
                             }),
-                            (0, s.jsx)(f, {
+                            (0, s.jsx)(A, {
                                 icon: (0, s.jsx)(c.GameControllerIcon, { size: 'sm' }),
-                                text: N.Z.Messages.QUESTS_CONNECTED_CONSOLES,
+                                text: g.Z.Messages.QUESTS_CONNECTED_CONSOLES,
                                 errors: P ? void 0 : v.map((e) => e.message),
                                 gameTile: P
                                     ? (0, s.jsx)(c.Tooltip, {
@@ -146,7 +146,7 @@ function A(e) {
                                                       (0, s.jsx)(c.Text, {
                                                           variant: 'text-xs/normal',
                                                           color: 'text-muted',
-                                                          children: N.Z.Messages.QUESTS_GAME_DETECTED
+                                                          children: g.Z.Messages.QUESTS_GAME_DETECTED
                                                       })
                                                   ]
                                               }),
@@ -169,15 +169,15 @@ function A(e) {
                 children: [
                     (0, s.jsx)(c.Button, {
                         size: c.ButtonSizes.MIN,
-                        onClick: A,
+                        onClick: f,
                         className: C.footerCloseButton,
-                        children: N.Z.Messages.CLOSE
+                        children: g.Z.Messages.CLOSE
                     }),
                     (0, s.jsx)(c.Button, {
                         look: c.ButtonLooks.LINK,
                         color: c.ButtonColors.PRIMARY,
                         onClick: () => {
-                            A(),
+                            f(),
                                 (0, R.V$)(
                                     { quest: h },
                                     {
@@ -186,14 +186,14 @@ function A(e) {
                                     }
                                 );
                         },
-                        children: N.Z.Messages.QUESTS_SHOW_CONNECTIONS
+                        children: g.Z.Messages.QUESTS_SHOW_CONNECTIONS
                     })
                 ]
             })
         ]
     });
 }
-function f(e) {
+function A(e) {
     let { icon: t, text: n, errors: a = [], gameTile: r } = e,
         l = a.length > 0,
         o = l ? c.ConnectionUnknownIcon : c.ConnectionFineIcon;

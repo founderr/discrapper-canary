@@ -18,8 +18,8 @@ t.Z = () => {
     let e = (0, c.mq)(I.ne.ACTIVE),
         t = (0, o.c)(),
         n = (0, a.e7)([i.default], () => i.default.getCurrentUser()),
-        g = (0, l.o)(R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_MESSAGES_DESCRIPTION_TEEN, R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_MESSAGES_DESCRIPTION_PARENT),
-        N = (0, l.o)(R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_SHARING_DESCRIPTION_TEEN, R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_SHARING_DESCRIPTION_PARENT),
+        N = (0, l.o)(R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_MESSAGES_DESCRIPTION_TEEN, R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_MESSAGES_DESCRIPTION_PARENT),
+        g = (0, l.o)(R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_SHARING_DESCRIPTION_TEEN, R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_SHARING_DESCRIPTION_PARENT),
         C = (0, l.o)(R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_PAIRING_DESCRIPTION_TEEN, R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_PAIRING_DESCRIPTION_PARENT),
         p = (0, r.useRedesignIconContext)().enabled;
     return void 0 === n
@@ -38,12 +38,12 @@ t.Z = () => {
                               iconClassName: m.chatCheckIcon,
                               icon: r.ChatCheckIcon,
                               header: R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_MESSAGES_HEADER,
-                              description: g
+                              description: N
                           }),
                           (0, s.jsx)(E.Z, {
                               icon: r.EyeIcon,
                               header: R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_SHARING_HEADER,
-                              description: N
+                              description: g
                           }),
                           (0, s.jsx)(E.Z, {
                               icon: p ? r.QrCodeIcon : (0, r.makeIconCompat)(T.Z),

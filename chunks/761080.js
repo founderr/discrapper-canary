@@ -20,4 +20,4 @@ let r = 15,
     l = 3;
 ((a = i || (i = {}))[(a.MESSAGE = 0)] = 'MESSAGE'), (a[(a.SUMMARY = 1)] = 'SUMMARY'), (a[(a.ACTIVITY = 2)] = 'ACTIVITY'), (a[(a.CUSTOM_STATUS = 3)] = 'CUSTOM_STATUS'), (a[(a.GUILD_EVENT = 4)] = 'GUILD_EVENT');
 let o = new Set([0, 1, 3]);
-s.hBH.IMAGE, s.hBH.VIDEO, s.hBH.GIFV;
+s.hBH.IMAGE, s.hBH.GIFV;

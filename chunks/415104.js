@@ -18,20 +18,20 @@ var s = n(735250),
     T = n(968470);
 function I(e) {
     let { quest: t, className: n, questContent: r, contentPosition: I, rowIndex: R } = e,
-        [m, g] = a.useState(!1),
-        [N, C] = a.useState([]),
+        [m, N] = a.useState(!1),
+        [g, C] = a.useState([]),
         p = (0, o.qb)(t),
-        A = a.useCallback(() => {
-            g(!0),
+        f = a.useCallback(() => {
+            N(!0),
                 (0, l.dA)({
                     questId: t.id,
                     event: E.rMx.QUEST_HOVER,
                     properties: (0, l.mH)(r)
                 });
-        }, [g, r, t.id]),
-        f = a.useCallback(() => {
-            g(!1);
-        }, [g]);
+        }, [N, r, t.id]),
+        A = a.useCallback(() => {
+            N(!1);
+        }, [N]);
     return (0, s.jsx)(d.A, {
         questOrQuests: t,
         questContent: r,
@@ -45,13 +45,13 @@ function I(e) {
                     e.current = t;
                 },
                 className: i()(T.container, n),
-                onMouseEnter: A,
-                onMouseLeave: f,
+                onMouseEnter: f,
+                onMouseLeave: A,
                 children: [
                     (0, s.jsx)(_.Z, {
                         quest: t,
                         isHovering: m,
-                        errorHints: N,
+                        errorHints: g,
                         warningHints: p
                     }),
                     (0, s.jsx)(u.Z, {

@@ -14,12 +14,12 @@ var a = n(120356),
     I = n(105759),
     R = n(248042),
     m = n(422034),
-    g = n(206127),
-    N = n(710220),
+    N = n(206127),
+    g = n(710220),
     C = n(318747),
     p = n(409100),
-    A = n(474936),
-    f = n(689938),
+    f = n(474936),
+    A = n(689938),
     h = n(679757);
 let S = (e) => {
         let { inOfferExperience: t, inTrial: n, subscriptionTier: a, buttonClassName: i } = e,
@@ -62,24 +62,24 @@ let S = (e) => {
     };
 function x(e) {
     let { variant: t = 'text-lg/normal', withBottomMargin: n = !0 } = e,
-        a = (0, g.$)();
+        a = (0, N.$)();
     return (0, s.jsx)(l.Text, {
         variant: t,
         color: 'always-white',
         className: r()(h.description, { [h.descriptionBottomMargin]: n }),
-        children: f.Z.Messages.PREMIUM_MARKETING_HERO_HEADER_DESCRIPTION.format({ cheapestMonthlyPrice: a })
+        children: A.Z.Messages.PREMIUM_MARKETING_HERO_HEADER_DESCRIPTION.format({ cheapestMonthlyPrice: a })
     });
 }
 t.Z = (e) => {
-    let { isFullscreen: t, className: n, buttonClassName: a, subscriptionTier: d, hideSparkles: g, hideSubscribeAndGiftButton: p, entrypoint: b } = e,
+    let { isFullscreen: t, className: n, buttonClassName: a, subscriptionTier: d, hideSparkles: N, hideSubscribeAndGiftButton: p, entrypoint: b } = e,
         { analyticsLocations: O } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_HERO_CTA),
         v = (0, E._O)(),
         P = (0, u.Nx)(),
         L = (0, R.Vi)(),
         Z = (0, i.e7)([_.Z], () => _.Z.affinities),
         D = (0, I.Z)(),
-        { enabled: U } = T._.useExperiment({ location: 'HeroHeading' }, { autoTrackExposure: !1 }),
-        B = b === A.EZ.ApplicationStoreHome && null != D && U,
+        { enabled: B } = T._.useExperiment({ location: 'HeroHeading' }, { autoTrackExposure: !1 }),
+        U = b === f.EZ.ApplicationStoreHome && null != D && B,
         j = Z.length > 0;
     return (0, s.jsx)(c.Gt, {
         value: O,
@@ -96,10 +96,10 @@ t.Z = (e) => {
                         (0, s.jsx)(l.Heading, {
                             variant: t ? 'display-lg' : 'display-md',
                             color: 'always-white',
-                            children: f.Z.Messages.PREMIUM_MARKETING_HERO_HEADER_TITLE_V3
+                            children: A.Z.Messages.PREMIUM_MARKETING_HERO_HEADER_TITLE_V3
                         }),
-                        B
-                            ? (0, s.jsx)(N.Z, { referrer: D })
+                        U
+                            ? (0, s.jsx)(g.Z, { referrer: D })
                             : j
                               ? (0, s.jsx)('div', {
                                     className: r()(h.affinityDescription),
@@ -126,14 +126,14 @@ t.Z = (e) => {
                                     buttonClassName: a
                                 }),
                         j &&
-                            !B &&
+                            !U &&
                             (0, s.jsx)(x, {
                                 variant: 'text-md/normal',
                                 withBottomMargin: !1
                             })
                     ]
                 }),
-                !(P || g) && (0, s.jsx)(M, { isFullscreen: t })
+                !(P || N) && (0, s.jsx)(M, { isFullscreen: t })
             ]
         })
     });

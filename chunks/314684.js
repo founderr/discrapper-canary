@@ -3,7 +3,7 @@ n.d(t, {
         return P;
     },
     FM: function () {
-        return U;
+        return B;
     },
     IB: function () {
         return L;
@@ -43,12 +43,12 @@ var s = n(470079),
     I = n(580130),
     R = n(626135),
     m = n(823379),
-    g = n(111361),
-    N = n(595878),
+    N = n(111361),
+    g = n(595878),
     C = n(944880),
     p = n(513785),
-    A = n(106255),
-    f = n(474936),
+    f = n(106255),
+    A = n(474936),
     h = n(735825),
     S = n(981631);
 function M() {
@@ -83,7 +83,7 @@ function M() {
                 showNotification: !0,
                 showCard: !0
             };
-        if (!(null != e && (0, A.u7)(e))) return null;
+        if (!(null != e && (0, f.u7)(e))) return null;
         else {
             if (null == e.redeemable_at || null == e.next_tenure_reward_id) return null;
             let t = r()(e.redeemable_at).diff(r().utc(), 'days'),
@@ -125,16 +125,16 @@ function O() {
             [I.Z],
             () => {
                 var e;
-                return null !== (e = I.Z.getForApplication(f.CL)) && void 0 !== e ? e : b;
+                return null !== (e = I.Z.getForApplication(A.CL)) && void 0 !== e ? e : b;
             },
             [],
             m.OL
         ),
         t = (0, i.e7)([E.default], () => {
             let e = E.default.getCurrentUser();
-            return null != e && (0, g.M5)(e, f.p9.TIER_2);
+            return null != e && (0, N.M5)(e, A.p9.TIER_2);
         });
-    if (null != (0, A.kG)(e) || !!t) return (0, A.MR)([h.Ft.FREE_GUILD_BOOST_1_MONTH, h.Ft.FREE_GUILD_BOOST_3_MONTHS], e);
+    if (null != (0, f.kG)(e) || !!t) return (0, f.MR)([h.Ft.FREE_GUILD_BOOST_1_MONTH, h.Ft.FREE_GUILD_BOOST_3_MONTHS], e);
 }
 let v = (e) => {
         if (null == e || (null == e ? void 0 : e.showNotification) === !1) return [];
@@ -150,17 +150,17 @@ let v = (e) => {
     P = () => {
         let e = M(),
             [t, n] = s.useState(v(e)),
-            a = (0, N.cG)({ location: 'Home' });
+            a = (0, g.cG)({ location: 'Home' });
         s.useEffect(() => {
             if (!1 !== a) n(v(e));
         }, [e, a]);
         let [r] = (0, u.US)(a ? t : []);
-        return a ? (null != e && !0 === e.showNotification && (r === l.z.TENURE_REWARD_REDEEMABLE || r === l.z.TENURE_REWARD_PENDING) ? (0, A.Wb)(e.nitroTenureStatus) : null) : null;
+        return a ? (null != e && !0 === e.showNotification && (r === l.z.TENURE_REWARD_REDEEMABLE || r === l.z.TENURE_REWARD_PENDING) ? (0, f.Wb)(e.nitroTenureStatus) : null) : null;
     },
     L = () => {
         var e;
         let t = null === (e = M()) || void 0 === e ? void 0 : e.nitroTenureStatus,
-            n = (0, N.cG)({ location: 'Home' }) && null != t && t === h.EB.REDEEMABLE,
+            n = (0, g.cG)({ location: 'Home' }) && null != t && t === h.EB.REDEEMABLE,
             [s] = (0, u.US)(n ? [l.z.TENURE_REWARD_REDEEMABLE_CONFETTI] : []);
         return !!n && s === l.z.TENURE_REWARD_REDEEMABLE_CONFETTI;
     },
@@ -187,19 +187,19 @@ let v = (e) => {
     };
 function D() {
     let { hasFetchedPremiumApplicationEntitlements: e, isFetchingPremiumApplicationEntitlements: t } = (0, i.cj)([I.Z], () => ({
-            hasFetchedPremiumApplicationEntitlements: I.Z.isFetchedForApplication(f.CL),
-            isFetchingPremiumApplicationEntitlements: I.Z.isFetchingForApplication(f.CL)
+            hasFetchedPremiumApplicationEntitlements: I.Z.isFetchedForApplication(A.CL),
+            isFetchingPremiumApplicationEntitlements: I.Z.isFetchingForApplication(A.CL)
         })),
         n = (0, i.e7)([E.default], () => {
             let e = E.default.getCurrentUser();
-            return null != e && (0, g.M5)(e, f.p9.TIER_2);
+            return null != e && (0, N.M5)(e, A.p9.TIER_2);
         }),
         a = s.useRef(!1);
     s.useEffect(() => {
-        !1 === e && !1 === t && !0 === n && !1 === a.current && (o.yD(f.CL), (a.current = !0));
+        !1 === e && !1 === t && !0 === n && !1 === a.current && (o.yD(A.CL), (a.current = !0));
     }, [e, t, n]);
 }
-function U() {
+function B() {
     var e;
     D();
     let t = M(),

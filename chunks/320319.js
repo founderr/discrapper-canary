@@ -14,12 +14,12 @@ var s = n(735250),
     I = n(706140),
     R = n(626135),
     m = n(314684),
-    g = n(715627),
-    N = n(176782),
+    N = n(715627),
+    g = n(176782),
     C = n(238108),
     p = n(32173),
-    A = n(391110),
-    f = n(484239),
+    f = n(391110),
+    A = n(484239),
     h = n(658370),
     S = n(735825),
     M = n(981631),
@@ -33,10 +33,10 @@ let v = {
         yMax: -20
     },
     P = a.memo((e) => {
-        let { name: t, canReveal: n = !0, dismissibleContentType: r, forceShadow: N, cardType: f, confettiCanvas: h } = e,
+        let { name: t, canReveal: n = !0, dismissibleContentType: r, forceShadow: g, cardType: A, confettiCanvas: h } = e,
             Z = null == e ? void 0 : e.onCtaClick,
             D = (0, c.e7)([u.Z], () => u.Z.useReducedMotion),
-            [U, B] = a.useState(!1),
+            [B, U] = a.useState(!1),
             [j, G] = a.useState(!1),
             w = (0, m.yQ)(),
             y = (0, m.IB)(),
@@ -48,7 +48,7 @@ let v = {
         let W = a.useCallback(() => {
                 k(!0);
             }, []),
-            K = f === A.R0.CARD_CAROUSEL_FIRST_ROW || f === A.R0.CARD_CAROUSEL_SECOND_ROW || f === A.R0.CARD_CAROUSEL_THIRD_ROW,
+            K = A === f.R0.CARD_CAROUSEL_FIRST_ROW || A === f.R0.CARD_CAROUSEL_SECOND_ROW || A === f.R0.CARD_CAROUSEL_THIRD_ROW,
             Y = (0, p.Z)(),
             [z, Q] = (0, I.cv)((null != r && n) || r === d.z.TENURE_REWARD_REDEEMABLE_CONFETTI ? [r] : []);
         a.useEffect(
@@ -88,8 +88,8 @@ let v = {
         };
         let es = z !== r || null == r || j || r === d.z.TENURE_REWARD_REDEEMABLE_CONFETTI;
         return (a.useEffect(() => {
-            D && U && (G(!0), R.default.track(M.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }), null != r && Q(x.L.TAKE_ACTION));
-        }, [D, U, r, t, Q]),
+            D && B && (G(!0), R.default.track(M.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }), null != r && Q(x.L.TAKE_ACTION));
+        }, [D, B, r, t, Q]),
         (0, E.Z)(
             {
                 type: o.ImpressionTypes.VIEW,
@@ -112,7 +112,7 @@ let v = {
         n)
             ? t === p.u.UPCOMING_DROP_UNTIMED
                 ? (0, s.jsx)('div', {
-                      className: i()(O.flipCardContainer, { [O.forceShadow]: N }),
+                      className: i()(O.flipCardContainer, { [O.forceShadow]: g }),
                       onMouseEnter: J,
                       onFocus: J,
                       onMouseLeave: $,
@@ -148,7 +148,7 @@ let v = {
                             className: i()({
                                 [O.noFlipCardContainer]: !K,
                                 [O.noFlipCardContainerCarousel]: K,
-                                [O.forceShadow]: N,
+                                [O.forceShadow]: g,
                                 [O.reducedMotion]: D
                             }),
                             children: [
@@ -157,7 +157,7 @@ let v = {
                                     ref: t === p.u.FREE_BOOST ? en : void 0
                                 }),
                                 F &&
-                                    (0, s.jsx)(g.Z, {
+                                    (0, s.jsx)(N.Z, {
                                         speedValues: v,
                                         numBursts: 3,
                                         particlesPerBurst: 15,
@@ -174,16 +174,16 @@ let v = {
                         })
                     })
                   : (0, s.jsx)('div', {
-                        className: i()(O.flipCardContainer, { [O.forceShadow]: N }),
+                        className: i()(O.flipCardContainer, { [O.forceShadow]: g }),
                         children: (0, s.jsxs)(_.Clickable, {
-                            onClick: () => B(!0),
+                            onClick: () => U(!0),
                             className: i()(O.flipCard, O.clickable, {
-                                [O.flipped]: U,
-                                [O.partialFlipCard]: !j && !U,
+                                [O.flipped]: B,
+                                [O.partialFlipCard]: !j && !B,
                                 [O.reducedMotion]: D
                             }),
                             onTransitionEnd: (e) => {
-                                if (!!U && 'transform' === e.propertyName && !!e.target.classList.contains(O.flipCard)) G(!0), R.default.track(M.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }), null != r && Q(x.L.TAKE_ACTION);
+                                if (!!B && 'transform' === e.propertyName && !!e.target.classList.contains(O.flipCard)) G(!0), R.default.track(M.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }), null != r && Q(x.L.TAKE_ACTION);
                             },
                             children: [
                                 (0, s.jsx)('div', {
@@ -208,7 +208,7 @@ let v = {
                                 (0, s.jsx)('div', {
                                     className: O.flipCardButtonContainer,
                                     children: (0, s.jsx)(_.Button, {
-                                        onClick: () => B(!0),
+                                        onClick: () => U(!0),
                                         children: b.Z.Messages.REVEAL
                                     })
                                 })
@@ -217,21 +217,21 @@ let v = {
                     })
             : (0, s.jsx)(P, {
                   ...Y.upcomingDropUntimed,
-                  forceShadow: N
+                  forceShadow: g
               });
     });
 P.displayName = 'PerkDiscoverabilityCard';
 let L = a.forwardRef((e, t) => {
     var n;
-    let { title: r, titleClassName: l = '', subtitle: o = '', description: c = '', descriptionCta: d = '', isPremiumGetCta: u, onCtaClick: E, onMouseEnter: T, className: I, perkComponent: R, cardVariant: g, cardType: C, onClick: p, backgroundImage: S, pillText: M, perkImage: x } = e,
-        b = C === A.R0.CARD_CAROUSEL_FIRST_ROW || C === A.R0.CARD_CAROUSEL_SECOND_ROW || C === A.R0.CARD_CAROUSEL_THIRD_ROW,
-        v = 0 !== c.length || 0 !== d.length || (0 !== o.length && g === A.zW.REWARD),
+    let { title: r, titleClassName: l = '', subtitle: o = '', description: c = '', descriptionCta: d = '', isPremiumGetCta: u, onCtaClick: E, onMouseEnter: T, className: I, perkComponent: R, cardVariant: N, cardType: C, onClick: p, backgroundImage: S, pillText: M, perkImage: x } = e,
+        b = C === f.R0.CARD_CAROUSEL_FIRST_ROW || C === f.R0.CARD_CAROUSEL_SECOND_ROW || C === f.R0.CARD_CAROUSEL_THIRD_ROW,
+        v = 0 !== c.length || 0 !== d.length || (0 !== o.length && N === f.zW.REWARD),
         P = (0, m.IB)(),
-        [L, Z] = a.useState(g !== A.zW.REWARD || P);
+        [L, Z] = a.useState(N !== f.zW.REWARD || P);
     a.useEffect(() => {
         P && Z(!0);
     }, [P]);
-    let D = (0, N._)(g);
+    let D = (0, g._)(N);
     return (0, s.jsxs)(_.Clickable, {
         className: i()(O.card, I, !0 === L ? (null === (n = D.cardContainer) || void 0 === n ? void 0 : n.className) : void 0, {
             [O.clickable]: null != p,
@@ -248,7 +248,7 @@ let L = a.forwardRef((e, t) => {
                     children: M
                 }),
             (0, s.jsx)('div', { ref: t }),
-            (0, s.jsx)(f.Z, {
+            (0, s.jsx)(A.Z, {
                 title: r,
                 titleClassName: l,
                 subtitle: o,
@@ -258,7 +258,7 @@ let L = a.forwardRef((e, t) => {
                 onCtaClick: E,
                 perkComponent: R,
                 subtitleClassName: O.cardSubtitle,
-                cardVariant: g
+                cardVariant: N
             }),
             v &&
                 (0, s.jsx)(h.Z, {
@@ -269,7 +269,7 @@ let L = a.forwardRef((e, t) => {
                     descriptionCta: d,
                     isPremiumGetCta: u,
                     onCtaClick: E,
-                    cardVariant: g,
+                    cardVariant: N,
                     perkComponent: R
                 }),
             (0, s.jsx)('div', {

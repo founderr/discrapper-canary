@@ -14,12 +14,12 @@ var s = n(735250),
     I = n(100527),
     R = n(906732),
     m = n(211242),
-    g = n(15640),
-    N = n(89057),
+    N = n(15640),
+    g = n(89057),
     C = n(433811),
     p = n(214852),
-    A = n(621853),
-    f = n(246946),
+    f = n(621853),
+    A = n(246946),
     h = n(594174),
     S = n(78839),
     M = n(626135),
@@ -31,12 +31,12 @@ var s = n(735250),
     L = n(104494),
     Z = n(639119),
     D = n(2359),
-    U = n(132547),
-    B = n(474936),
+    B = n(132547),
+    U = n(474936),
     j = n(981631),
     G = n(700199);
 t.Z = function (e) {
-    let { entrypoint: t = B.EZ.UserSettings } = e;
+    let { entrypoint: t = U.EZ.UserSettings } = e;
     (0, p.z)(C.X);
     let n = (0, m.Q)(),
         { sourceAnalyticsLocations: r, analyticsLocations: w } = (0, R.ZP)(I.Z.PREMIUM_MARKETING),
@@ -44,14 +44,14 @@ t.Z = function (e) {
         H = (0, l.e7)([h.default], () => h.default.getCurrentUser()),
         k = (0, Z.N)(),
         F = (0, L.Ng)(),
-        V = (0, g.V)(),
+        V = (0, N.V)(),
         [W, K] = a.useState(!0),
         Y = a.useRef(0),
-        z = (0, x.M5)(H, B.p9.TIER_2),
+        z = (0, x.M5)(H, U.p9.TIER_2),
         Q = (0, P.n)(),
         q = null == Q ? void 0 : Q.countryCode,
         { enabled: X } = (0, v.Z)(),
-        J = (0, l.e7)([A.Z], () => (null != H ? A.Z.getUserProfile(H.id) : null)),
+        J = (0, l.e7)([f.Z], () => (null != H ? f.Z.getUserProfile(H.id) : null)),
         $ = (0, l.e7)([b.Z], () => b.Z.hasFetched);
     if (
         (a.useEffect(() => {
@@ -73,11 +73,11 @@ t.Z = function (e) {
                     load_duration_ms: Y.current
                 });
         }, [r, W]),
-        (0, l.e7)([f.Z], () => f.Z.enabled))
+        (0, l.e7)([A.Z], () => A.Z.enabled))
     )
         return (0, s.jsx)(T.Z, {});
-    if (n) return (0, s.jsx)(N.c8, {});
-    if (t === B.EZ.ApplicationStoreHome && z)
+    if (n) return (0, s.jsx)(g.c8, {});
+    if (t === U.EZ.ApplicationStoreHome && z)
         return X && null == J
             ? (0, s.jsx)('div', {
                   className: i()(G.container, G.loading),
@@ -85,7 +85,7 @@ t.Z = function (e) {
               })
             : (0, s.jsx)(R.Gt, {
                   value: w,
-                  children: (0, s.jsx)(U.Z, {})
+                  children: (0, s.jsx)(B.Z, {})
               });
     return y && V && !W
         ? (0, s.jsx)(R.Gt, {

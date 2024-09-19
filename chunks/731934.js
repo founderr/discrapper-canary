@@ -14,12 +14,12 @@ var s = n(735250),
     I = n(880257),
     R = n(631885),
     m = n(895328),
-    g = n(568671),
-    N = n(419821),
+    N = n(568671),
+    g = n(419821),
     C = n(367515),
     p = n(250285),
-    A = n(292352),
-    f = n(134612),
+    f = n(292352),
+    A = n(134612),
     h = n(689938),
     S = n(776710),
     M = n(113207),
@@ -124,7 +124,7 @@ function v() {
                         className: M.marginBottom20,
                         children: h.Z.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_DESCRIPTION_TEEN.format({ link: 'https://support.discord.com/hc/articles/14155060633623' })
                     }),
-                    e ? null : (0, s.jsx)(g.Z, {})
+                    e ? null : (0, s.jsx)(N.Z, {})
                 ]
             }),
             (0, s.jsx)('img', {
@@ -152,7 +152,7 @@ function P(e) {
                           {
                               userId: i.id,
                               isLast: l,
-                              children: () => (t === A.ne.ACTIVE ? (0, s.jsx)(N.u, { user: i }) : (0, s.jsx)(C.B, { user: i }))
+                              children: () => (t === f.ne.ACTIVE ? (0, s.jsx)(g.u, { user: i }) : (0, s.jsx)(C.B, { user: i }))
                           },
                           i.id
                       );
@@ -193,8 +193,8 @@ function P(e) {
                                 var n;
                                 (i.current = e), (t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null);
                             },
-                            sectionHeight: A.zE,
-                            rowHeight: A.ip,
+                            sectionHeight: f.zE,
+                            rowHeight: f.ip,
                             renderSection: T,
                             renderRow: E,
                             sections: [r.length],
@@ -211,8 +211,8 @@ function P(e) {
 }
 let L = () => {
         let e = (0, I.Z)(),
-            t = (0, R.mq)(A.ne.ACTIVE),
-            n = e ? A.AG : A.i0,
+            t = (0, R.mq)(f.ne.ACTIVE),
+            n = e ? f.AG : f.i0,
             a = {
                 count: t.length,
                 max: n
@@ -222,7 +222,7 @@ let L = () => {
             children:
                 t.length > 0
                     ? (0, s.jsx)(P, {
-                          sectionType: A.ne.ACTIVE,
+                          sectionType: f.ne.ACTIVE,
                           sectionTitle: r,
                           requests: t
                       })
@@ -245,7 +245,7 @@ let L = () => {
     },
     Z = () => {
         let e = (0, R.VM)(),
-            t = (0, I.Z)() ? A.AG : A.i0,
+            t = (0, I.Z)() ? f.AG : f.i0,
             n = (0, E.o)(h.Z.Messages.FAMILY_CENTER_REQUESTS_LIMIT_INFO_TEEN.format({ maxConnections: t }), h.Z.Messages.FAMILY_CENTER_REQUESTS_LIMIT_INFO_PARENT.format({ maxConnections: t }));
         return e
             ? (0, s.jsx)('div', {
@@ -266,7 +266,7 @@ let L = () => {
                 throughline: t
             })
                 .with({ helpline: !0 }, () => h.Z.Messages.FAMILY_CENTER_HELP_LINE_CONTENT.format({ helpLink: 'https://support.discord.com/hc/articles/7925648993943-Crisis-Text-Line' }))
-                .with({ throughline: !0 }, () => h.Z.Messages.FAMILY_CENTER_THROUGHLINE_CONTENT.format({ helpLink: f.$l }))
+                .with({ throughline: !0 }, () => h.Z.Messages.FAMILY_CENTER_THROUGHLINE_CONTENT.format({ helpLink: A.$l }))
                 .otherwise(() => null);
         return null == n
             ? null
@@ -286,13 +286,13 @@ let L = () => {
                   ]
               });
     },
-    U = () => {
-        let e = (0, R.mq)(A.ne.PENDING),
+    B = () => {
+        let e = (0, R.mq)(f.ne.PENDING),
             t = (0, E.o)(h.Z.Messages.FAMILY_CENTER_PENDING_REQUESTS_TITLE_TEEN.format({ count: e.length }), h.Z.Messages.FAMILY_CENTER_PENDING_REQUESTS_TITLE_PARENT.format({ count: e.length }));
         return 0 === e.length
             ? null
             : (0, s.jsx)(P, {
-                  sectionType: A.ne.PENDING,
+                  sectionType: f.ne.PENDING,
                   sectionTitle: t,
                   requests: e
               });
@@ -301,6 +301,6 @@ t.Z = () => {
     let e = (0, I.Z)();
     return (0, s.jsxs)('div', {
         className: S.container,
-        children: [e ? (0, s.jsx)(O, {}) : (0, s.jsx)(v, {}), (0, s.jsx)(L, {}), (0, s.jsx)(U, {}), (0, s.jsx)(Z, {}), (0, s.jsx)(D, {})]
+        children: [e ? (0, s.jsx)(O, {}) : (0, s.jsx)(v, {}), (0, s.jsx)(L, {}), (0, s.jsx)(B, {}), (0, s.jsx)(Z, {}), (0, s.jsx)(D, {})]
     });
 };

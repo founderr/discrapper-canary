@@ -14,12 +14,12 @@ var s = n(735250),
     I = n(594174),
     R = n(78839),
     m = n(74538),
-    g = n(775412),
-    N = n(104494),
+    N = n(775412),
+    g = n(104494),
     C = n(639119),
     p = n(230916),
-    A = n(248042),
-    f = n(823188),
+    f = n(248042),
+    A = n(823188),
     h = n(21023),
     S = n(318747),
     M = n(409100),
@@ -31,14 +31,14 @@ var s = n(735250),
     L = n(314907),
     Z = n(826701);
 let D = () => {
-        let e = (0, A.W1)();
-        return (0, s.jsx)(f.Cy, {
+        let e = (0, f.W1)();
+        return (0, s.jsx)(A.Cy, {
             text: e,
             className: O.bogoPillWithSparkles,
-            colorOptions: f.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL
+            colorOptions: A.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL
         });
     },
-    U = () =>
+    B = () =>
         (0, s.jsx)('div', {
             className: O.mostPopularPill,
             children: (0, s.jsx)(c.Heading, {
@@ -47,7 +47,7 @@ let D = () => {
                 children: b.Z.Messages.MOST_POPULAR
             })
         }),
-    B = (e) => {
+    U = (e) => {
         let t,
             { premiumType: n } = e,
             a = (0, _.ZP)();
@@ -135,15 +135,15 @@ t.Z = (e) => {
         Y = (0, m.M5)(K, x.p9.TIER_2),
         z = (0, C.N)(),
         Q = null == z ? void 0 : null === (t = z.subscription_trial) || void 0 === t ? void 0 : t.sku_id,
-        q = (0, g.rT)(),
-        X = (0, N.Ng)(),
-        J = null != X && (0, N.Wp)(X, x.Si.TIER_2),
+        q = (0, N.rT)(),
+        X = (0, g.Ng)(),
+        J = null != X && (0, g.Wp)(X, x.Si.TIER_2),
         $ = (0, p.A)(x.Xh.PREMIUM_MONTH_TIER_2),
         ee = ''.concat($, '/').concat((0, m.eP)(x.rV.MONTH)),
         et = (0, m.CY)(x.Xh.PREMIUM_MONTH_TIER_0),
         en = (0, m.CY)(x.Xh.PREMIUM_MONTH_TIER_2),
         es = (0, h.n)(et, en, J, ee),
-        ea = (0, A.Vi)();
+        ea = (0, f.Vi)();
     if (!H || !k) return null;
     let er = {
         label: (0, s.jsx)(c.Heading, {
@@ -151,8 +151,8 @@ t.Z = (e) => {
             variant: 'heading-lg/extrabold',
             children: b.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_HEADER
         }),
-        column1: (0, s.jsx)(B, { premiumType: x.p9.TIER_0 }),
-        column2: (0, s.jsx)(B, { premiumType: x.p9.TIER_2 })
+        column1: (0, s.jsx)(U, { premiumType: x.p9.TIER_0 }),
+        column2: (0, s.jsx)(U, { premiumType: x.p9.TIER_2 })
     };
     v
         ? es.push({
@@ -222,14 +222,14 @@ t.Z = (e) => {
         (n = L
             ? null
             : null != Q || null != q
-              ? (0, s.jsx)(f.Cy, {
+              ? (0, s.jsx)(A.Cy, {
                     text: null != Q ? b.Z.Messages.BILLING_TRIAL_FREE_TRIAL_TEXT : b.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_PLAN_ACTIVATED_PILL,
                     className: O.freeTrialPillWithSparkles,
-                    colorOptions: Q === x.Si.TIER_0 ? (W ? f.VE.PREMIUM_TIER_0_GRADIENT_FILL : f.VE.PREMIUM_TIER_0_WHITE_FILL) : W ? (Y ? f.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL : f.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL) : f.VE.PREMIUM_TIER_2_WHITE_FILL
+                    colorOptions: Q === x.Si.TIER_0 ? (W ? A.VE.PREMIUM_TIER_0_GRADIENT_FILL : A.VE.PREMIUM_TIER_0_WHITE_FILL) : W ? (Y ? A.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL : A.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL) : A.VE.PREMIUM_TIER_2_WHITE_FILL
                 })
               : ea
                 ? (0, s.jsx)(D, {})
-                : (0, s.jsx)(U, {}));
+                : (0, s.jsx)(B, {}));
     let ei = Q === x.Si.TIER_0 || q === x.p9.TIER_0 || w === x.p9.TIER_0;
     return (0, s.jsx)(E.Gt, {
         value: y,

@@ -20,12 +20,12 @@ var s,
     I = n(44315),
     R = n(70097),
     m = n(113434),
-    g = n(497505),
-    N = n(918701),
+    N = n(497505),
+    g = n(918701),
     C = n(623249),
     p = n(78826),
-    A = n(670638),
-    f = n(642145),
+    f = n(670638),
+    A = n(642145),
     h = n(981631),
     S = n(689938),
     M = n(411702);
@@ -35,7 +35,7 @@ function x(e) {
         { ref: o, height: d = 0 } = (0, E.Z)([s]),
         _ = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
         T = (0, m.z)(n),
-        { type: R, hints: g } = i.useMemo(
+        { type: R, hints: N } = i.useMemo(
             () =>
                 _ || T
                     ? {
@@ -58,13 +58,13 @@ function x(e) {
                           },
             [s, _, T, a]
         ),
-        N = 2 !== R,
+        g = 2 !== R,
         p = (0, u.useSpring)({
-            opacity: N ? 1 : 0,
-            height: N ? d : 0,
-            config: f.Y
+            opacity: g ? 1 : 0,
+            height: g ? d : 0,
+            config: A.Y
         }),
-        A = 0 === R ? u.CircleWarningIcon : u.CircleInformationIcon,
+        f = 0 === R ? u.CircleWarningIcon : u.CircleInformationIcon,
         S = (0, I.Lq)(h.Ilk.RED_345),
         x = 0 === R ? S : l ? u.tokens.colors.TEXT_NORMAL : u.tokens.colors.WHITE;
     return (0, r.jsx)(r.Fragment, {
@@ -77,14 +77,14 @@ function x(e) {
                     (0, r.jsxs)('div', {
                         className: M.hintsContainer,
                         children: [
-                            (0, r.jsx)(A, {
+                            (0, r.jsx)(f, {
                                 size: 'xs',
                                 color: x
                             }),
                             (0, r.jsx)(u.Text, {
                                 variant: 'text-xs/medium',
                                 color: l ? 'text-muted' : 'always-white',
-                                children: g.at(0)
+                                children: N.at(0)
                             })
                         ]
                     }),
@@ -109,29 +109,29 @@ function x(e) {
 function b(e) {
     var t;
     let { quest: n, isHovering: s, errorHints: a, warningHints: l, onCtxMenuClose: c, onCtxMenuOpen: E, onCtxMenuSelect: I } = e,
-        C = (0, N.j8)(n),
-        f = (0, T.ZP)(),
-        b = ((0, _.wj)(f) ? h.BRd.DARK : h.BRd.LIGHT) === h.BRd.DARK,
-        O = i.useMemo(() => (0, N.nP)(C), [C]),
+        C = (0, g.j8)(n),
+        A = (0, T.ZP)(),
+        b = ((0, _.wj)(A) ? h.BRd.DARK : h.BRd.LIGHT) === h.BRd.DARK,
+        O = i.useMemo(() => (0, g.nP)(C), [C]),
         v = i.useContext(d.S).reducedMotion.enabled,
-        P = (0, N.Mi)(n, g.jn.GIFT_INVENTORY_FOR_YOU),
+        P = (0, g.Mi)(n, N.jn.GIFT_INVENTORY_FOR_YOU),
         L = (0, m.tP)(n),
         Z = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null,
         D = i.useRef(s),
-        U = i.useRef(null),
-        B = (0, m.B6)(n.config.expiresAt, {
+        B = i.useRef(null),
+        U = (0, m.B6)(n.config.expiresAt, {
             month: 'numeric',
             day: 'numeric'
         });
     return (
         i.useEffect(() => {
-            if (O && null != U.current)
+            if (O && null != B.current)
                 return (
-                    D.current !== s && (s && !v ? U.current.play() : (U.current.pause(), (U.current.currentTime = 0))),
+                    D.current !== s && (s && !v ? B.current.play() : (B.current.pause(), (B.current.currentTime = 0))),
                     (D.current = s),
                     () => {
                         var e;
-                        null === (e = U.current) || void 0 === e || e.pause();
+                        null === (e = B.current) || void 0 === e || e.pause();
                     }
                 );
         }, [s, O, v]),
@@ -144,7 +144,7 @@ function b(e) {
                         ? (0, r.jsx)(p.Fl, {
                               id: 'QuestTileBanner_heroAnimated',
                               children: (e) => (
-                                  null != e.current && (U.current = e.current),
+                                  null != e.current && (B.current = e.current),
                                   (0, r.jsx)(R.Z, {
                                       ref: e,
                                       autoPlay: !v && s,
@@ -155,7 +155,7 @@ function b(e) {
                                       controls: !1,
                                       children: (0, r.jsx)('source', {
                                           src: C,
-                                          type: (0, N.mN)(C)
+                                          type: (0, g.mN)(C)
                                       })
                                   })
                               )
@@ -198,11 +198,11 @@ function b(e) {
                                                     children: S.Z.Messages.RECOMMENDED
                                                 })
                                             }),
-                                        (0, r.jsx)(A.r, {
+                                        (0, r.jsx)(f.r, {
                                             onOpen: E,
                                             onClose: c,
                                             onSelect: I,
-                                            questContent: g.jn.QUEST_HOME_DESKTOP,
+                                            questContent: N.jn.QUEST_HOME_DESKTOP,
                                             quest: n,
                                             hideLearnMore: !0,
                                             shouldShowDisclosure: !0,
@@ -228,7 +228,7 @@ function b(e) {
                                             ref: e,
                                             className: M.partnerBranding,
                                             alt: n.config.messages.gameTitle,
-                                            src: (0, N.Gs)(n, 'dark')
+                                            src: (0, g.Gs)(n, 'dark')
                                         })
                                 }),
                                 (0, r.jsxs)('div', {
@@ -244,7 +244,7 @@ function b(e) {
                                             : (0, r.jsx)(u.Text, {
                                                   variant: 'text-sm/medium',
                                                   color: b ? 'text-muted' : 'always-white',
-                                                  children: S.Z.Messages.QUESTS_TILE_BANNER_ENDS_DATE.format({ expiryDate: B })
+                                                  children: S.Z.Messages.QUESTS_TILE_BANNER_ENDS_DATE.format({ expiryDate: U })
                                               })
                                     ]
                                 })

@@ -6,10 +6,10 @@ n.d(t, {
         return M;
     },
     gx: function () {
-        return A;
+        return f;
     },
     k3: function () {
-        return g;
+        return N;
     },
     mN: function () {
         return x;
@@ -21,7 +21,7 @@ n.d(t, {
         return p;
     },
     vZ: function () {
-        return N;
+        return g;
     }
 }),
     n(653041),
@@ -41,7 +41,7 @@ var s = n(278074),
     I = n(474936),
     R = n(735825),
     m = n(689938);
-let g = (e) => {
+let N = (e) => {
         switch (e) {
             case R.EB.PENDING:
                 return m.Z.Messages.NITRO_HOME_REWARDING_LOCKED_STATE_TITLE;
@@ -53,7 +53,7 @@ let g = (e) => {
                 return '';
         }
     },
-    N = (e, t, n) => {
+    g = (e, t, n) => {
         switch (e) {
             case R.EB.PENDING:
                 return t === R.Ft.FREE_GUILD_BOOST_1_MONTH ? m.Z.Messages.NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_1_MONTH_VARIANT : m.Z.Messages.NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_3_MONTHS_VARIANT;
@@ -90,8 +90,8 @@ function p(e, t) {
             return '';
     }
 }
-let A = (e, t, n) => ((0, r.wj)(e) ? t : n),
-    f = 'getWhatsNewRow',
+let f = (e, t, n) => ((0, r.wj)(e) ? t : n),
+    A = 'getWhatsNewRow',
     h = (e) => {
         let { cards: t, perksCards: n, isFullScreen: s, showTenureCard: a, shopMarketingVariation: r } = e,
             l = s ? 3 : 2,
@@ -102,9 +102,9 @@ let A = (e, t, n) => ((0, r.wj)(e) ? t : n),
             c = () => {
                 r !== i.C5.DEFAULT ? o({ card: n.specialShopPerks }) : o({ card: n.specialMemberPricing });
             },
-            { enabled: u } = E._.getCurrentConfig({ location: f }, { autoTrackExposure: !1 }),
-            { enabled: T } = _.r.getCurrentConfig({ location: f }, { autoTrackExposure: !1 }),
-            { enabled: I } = d.C.getCurrentConfig({ location: f }, { autoTrackExposure: !1 }),
+            { enabled: u } = E._.getCurrentConfig({ location: A }, { autoTrackExposure: !1 }),
+            { enabled: T } = _.r.getCurrentConfig({ location: A }, { autoTrackExposure: !1 }),
+            { enabled: I } = d.C.getCurrentConfig({ location: A }, { autoTrackExposure: !1 }),
             R = u && !T && !I,
             m = b();
         return null != n.tenureBadge && o({ card: n.tenureBadge }), null != n.freeBoost && !0 === a && o({ card: n.freeBoost }), null != n.shyProject && o({ card: n.shyProject }), s && m ? (0 === t.length && c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })) : s && !m && (R || null != n.shyProject ? R && o({ card: n.referralProgram }) : c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })), o({ card: n.earlyAccess }), c(), o({ card: n.unlimitedSuperReactions }), t;

@@ -24,16 +24,16 @@ n.d(t, {
         return R;
     },
     pn: function () {
-        return g;
+        return N;
     },
     uv: function () {
         return p;
     },
     vx: function () {
-        return N;
+        return g;
     },
     wG: function () {
-        return f;
+        return A;
     }
 });
 var s = n(442837),
@@ -72,7 +72,7 @@ let u = '40%',
         let t = p(e);
         return null != t && t !== d.g2L.NOT_ELIGIBLE;
     },
-    g = (e) => {
+    N = (e) => {
         let t = m(e),
             n = R('PremiumManagementSettings'),
             a = (0, s.e7)([i.Z], () => i.Z.getRecipientStatus());
@@ -80,7 +80,7 @@ let u = '40%',
         if (!n) return !!(a.size > 0) || !1;
         return !0;
     },
-    N = (e) => {
+    g = (e) => {
         let t = C(e),
             n = (0, r.wE)(a.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR);
         return t && !n;
@@ -98,12 +98,12 @@ let u = '40%',
             r = (0, s.e7)([i.Z], () => i.Z.getSenderIncentiveState());
         return a ? d.g2L.NOT_ELIGIBLE : n && t ? r : d.g2L.NOT_ELIGIBLE;
     },
-    A = (e) => {
+    f = (e) => {
         let t = p(e);
         return t === d.g2L.COOLDOWN || t === d.g2L.UNAPPLIED || t === d.g2L.QUALIFIED;
     },
-    f = (e) => {
-        let t = A(e),
+    A = (e) => {
+        let t = f(e),
             n = (0, r.wE)(a.z.REFERRAL_INCENTIVE_AWARDED_INFO);
         return t && !n;
     },

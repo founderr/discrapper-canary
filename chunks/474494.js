@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return U;
+        return B;
     }
 }),
     n(47120);
@@ -20,12 +20,12 @@ var a = n(319147),
     I = n(56790),
     R = n(90718),
     m = n(897482),
-    g = n(4515),
-    N = n(474472),
+    N = n(4515),
+    g = n(474472),
     C = n(156129),
     p = n(799303),
-    A = n(245630),
-    f = n(842272),
+    f = n(245630),
+    A = n(842272),
     h = n(486731),
     S = n(346943),
     M = n(55826),
@@ -44,12 +44,12 @@ let D = new Map([
     ['SE', P],
     ['CY', o],
     ['EE', _],
-    ['IS', N],
-    ['IE', g],
+    ['IS', g],
+    ['IE', N],
     ['LV', h],
     ['LI', p],
-    ['LT', A],
-    ['LU', f],
+    ['LT', f],
+    ['LU', A],
     ['MT', S],
     ['SK', Z],
     ['SI', L],
@@ -68,7 +68,7 @@ let D = new Map([
     ['PL', b],
     ['HR', R]
 ]);
-function U(e) {
+function B(e) {
     let { className: t, countryCode: n } = e;
     if (null == n || !D.has(n)) return null;
     let a = D.get(n);

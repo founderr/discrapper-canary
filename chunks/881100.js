@@ -18,12 +18,12 @@ var s = n(399606),
     I = n(101732),
     R = n(450598),
     m = n(633030),
-    g = n(97942),
-    N = n(269987),
+    N = n(97942),
+    g = n(269987),
     C = n(548629),
     p = n(507084),
-    A = n(680313),
-    f = n(926433),
+    f = n(680313),
+    A = n(926433),
     h = n(302036),
     S = n(994554),
     M = n(1549),
@@ -35,8 +35,8 @@ var s = n(399606),
     L = n(334347),
     Z = n(943734),
     D = n(603076),
-    U = n(472656),
-    B = n(912429),
+    B = n(472656),
+    U = n(912429),
     j = n(772969),
     G = n(926262);
 let w = (e, t, n) => ((0, a.wj)(e) ? t : n),
@@ -91,7 +91,7 @@ let w = (e, t, n) => ((0, a.wj)(e) ? t : n),
                     };
                     return a ? E.Z.Messages.PREMIUM_MARKETING_PER_GUILD_PROFILE_THEMES_PERK_DESCRIPTION_CHECK_IT_OUT.format({ onCheckItOutClick: t }) : E.Z.Messages.PREMIUM_MARKETING_PER_GUILD_PROFILE_THEMES_PERK_DESCRIPTION_TRY_IT_OUT.format({ onTryItOutClick: t });
                 },
-                imageSource: g,
+                imageSource: N,
                 imageClassName: t.perGuildProfilesImage
             },
             longerMessages: {
@@ -103,44 +103,44 @@ let w = (e, t, n) => ((0, a.wj)(e) ? t : n),
             moreGuilds: {
                 title: E.Z.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_TITLE,
                 description: E.Z.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_DESCRIPTION,
-                imageSource: w(n, m, U),
+                imageSource: w(n, m, B),
                 imageClassName: t.moreGuildsImage
             },
             moreGuildsAlt: {
                 title: E.Z.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_TITLE,
                 description: E.Z.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_DESCRIPTION,
-                imageSource: w(n, p, A),
+                imageSource: w(n, p, f),
                 imageClassName: t.moreGuildsAltImage
             },
             remix: {
                 title: E.Z.Messages.REMIXING_PERKS_CARD_TITLE,
                 description: E.Z.Messages.REMIXING_PERKS_CARD_DESCRIPTION,
-                imageSource: w(n, N, C),
+                imageSource: w(n, g, C),
                 imageClassName: t.remixingImage,
                 isEarlyAccess: !0
             },
             soundboard: {
                 title: E.Z.Messages.SOUND_BOARD_MARKETING_USE_CUSTOM_SOUNDS,
                 description: E.Z.Messages.SOUNDBOARD_MARKETING_REACT_WITH_SOUNDBOARD,
-                imageSource: w(n, f, h),
+                imageSource: w(n, A, h),
                 imageClassName: t.soundboardImage
             },
             stickers: {
                 title: E.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE_OLD,
                 description: E.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_DESCRIPTION,
-                imageSource: w(n, S, B),
+                imageSource: w(n, S, U),
                 imageClassName: t.stickersImage
             },
             stickersBurst: {
                 title: E.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE,
                 description: E.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_DESCRIPTION,
-                imageSource: w(n, S, B),
+                imageSource: w(n, S, U),
                 imageClassName: t.stickersImage
             },
             stickersPerkDiscoverability: {
                 title: E.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE,
                 description: E.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_LONG_DESCRIPTION,
-                imageSource: w(n, S, B),
+                imageSource: w(n, S, U),
                 imageClassName: t.stickersImage
             },
             streaming: {

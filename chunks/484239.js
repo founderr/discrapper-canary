@@ -15,7 +15,7 @@ t.Z = (e) => {
     var t;
     let n,
         a,
-        { title: I, titleClassName: R, buttonClassName: m, perkImage: g, isCarousel: N, onCtaClick: C, perkComponent: p, subtitle: A = '', descriptionCta: f = '', cardVariant: h, subtitleClassName: S } = e,
+        { title: I, titleClassName: R, buttonClassName: m, perkImage: N, isCarousel: g, onCtaClick: C, perkComponent: p, subtitle: f = '', descriptionCta: A = '', cardVariant: h, subtitleClassName: S } = e,
         M = (0, o._)(h),
         x = (0, l.yQ)(),
         b = (null == x ? void 0 : x.nitroTenureStatus) === d.EB.REDEEMABLE;
@@ -40,16 +40,16 @@ t.Z = (e) => {
                 shouldShowElement: (e) => (null == e ? void 0 : e.onlyShowOnHover) !== !0,
                 cardVariantStyleInfo: M,
                 titleClassName: R,
-                subtitle: A,
+                subtitle: f,
                 subtitleClassName: S
             }),
-            null != g &&
+            null != N &&
                 (0, s.jsx)('img', {
-                    src: g,
+                    src: N,
                     alt: '',
                     className: r()({
-                        [_.cardImage]: !N,
-                        [_.carouselCardImage]: N
+                        [_.cardImage]: !g,
+                        [_.carouselCardImage]: g
                     })
                 }),
             null != p &&
@@ -58,7 +58,7 @@ t.Z = (e) => {
                         className: _.cardIllustrationNoHover,
                         children: [
                             p,
-                            0 !== f.length &&
+                            0 !== A.length &&
                                 null != C &&
                                 (0, s.jsx)(i.Button, {
                                     className: m,
@@ -72,7 +72,7 @@ t.Z = (e) => {
                                                 alt: a,
                                                 src: n
                                             }),
-                                            f
+                                            A
                                         ]
                                     })
                                 })

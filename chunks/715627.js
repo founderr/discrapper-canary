@@ -12,10 +12,10 @@ let o = {
     },
     c = (e, t, n) => (null == n ? t : (e * n) / 100),
     d = a.memo(function (e) {
-        let { confettiTarget: t, colors: n, emojiURL: d, numBursts: _, particlesPerBurst: u, offsetXPercentageMax: E, offsetXPercentageMin: T, offsetYPercentageMax: I, offsetYPercentageMin: R, customConfettiCanvas: m, speedValues: g = o, dragCoefficientValue: N = 0.001, onAnimationEnd: C } = e,
-            [p, A] = a.useState(null),
-            { confettiCanvas: f } = a.useContext(i.h),
-            h = (0, r.uR)(null != m ? m : f, p),
+        let { confettiTarget: t, colors: n, emojiURL: d, numBursts: _, particlesPerBurst: u, offsetXPercentageMax: E, offsetXPercentageMin: T, offsetYPercentageMax: I, offsetYPercentageMin: R, customConfettiCanvas: m, speedValues: N = o, dragCoefficientValue: g = 0.001, onAnimationEnd: C } = e,
+            [p, f] = a.useState(null),
+            { confettiCanvas: A } = a.useContext(i.h),
+            h = (0, r.uR)(null != m ? m : A, p),
             [S, M] = a.useState(!1);
         a.useEffect(() => {
             S && (null == C || C());
@@ -79,7 +79,7 @@ let o = {
                                             value: i
                                         }
                                     };
-                                })(t.getBoundingClientRect(), E, T, I, R, g, N),
+                                })(t.getBoundingClientRect(), E, T, I, R, N, g),
                                 null != u ? u : 50
                             ),
                                 s === e.length - 1 && null != C && M(!0);
@@ -89,9 +89,9 @@ let o = {
                         for (let t of e) clearTimeout(t);
                     }
                 );
-            }, [h, t, _, u, E, T, I, R, g, N, C]),
+            }, [h, t, _, u, E, T, I, R, N, g, C]),
             (0, s.jsx)(r.Ji, {
-                ref: A,
+                ref: f,
                 sprites: null != x ? x : l.CA,
                 colors: null != n ? n : l.Br,
                 spriteWidth: l.Ko,

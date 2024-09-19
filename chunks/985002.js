@@ -16,10 +16,10 @@ function o(e) {
         [u, E] = s.useState(!1),
         [T, I] = s.useState(!1),
         [R, m] = s.useState(!1),
-        [g, N] = s.useState(!1),
+        [N, g] = s.useState(!1),
         [C, p] = s.useState(!1),
-        [A, f] = s.useState(!1),
-        h = o || d || u || T || g || A,
+        [f, A] = s.useState(!1),
+        h = o || d || u || T || N || f,
         S = s.useCallback(
             async (e) => {
                 if (!h) {
@@ -115,19 +115,19 @@ function o(e) {
         ),
         P = s.useCallback(
             async (e, s) => {
-                if (!g) {
-                    N(!0);
+                if (!N) {
+                    g(!0);
                     try {
                         await r.ZP.requestLink(e, s), null == n || n();
                     } catch (n) {
                         let e = new a.Hx(n);
                         null == t || t(e);
                     } finally {
-                        N(!1);
+                        g(!1);
                     }
                 }
             },
-            [g, t, n]
+            [N, t, n]
         );
     return {
         acceptLinkRequest: S,
@@ -143,19 +143,19 @@ function o(e) {
                     s = n[n.length - 1],
                     l = i.Z.getStartId(),
                     o = i.Z.getSelectedTeenId();
-                if (!A && null != l && null != o) {
-                    f(!0);
+                if (!f && null != l && null != o) {
+                    A(!0);
                     try {
                         await r.ZP.fetchMoreTeenActivity(o, e, l, s.event_id);
                     } catch (n) {
                         let e = new a.Hx(n);
                         null == t || t(e);
                     } finally {
-                        f(!1);
+                        A(!1);
                     }
                 }
             },
-            [A, t]
+            [f, t]
         ),
         isAcceptLoading: o,
         isDeclineLoading: d,
@@ -163,7 +163,7 @@ function o(e) {
         isCancelLoading: T,
         isGetLinkCodeLoading: R,
         isSelectTeenUserLoading: C,
-        isRequestingLink: g,
-        isMoreLoading: A
+        isRequestingLink: N,
+        isMoreLoading: f
     };
 }

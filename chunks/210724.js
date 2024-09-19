@@ -19,12 +19,12 @@ var s = n(735250),
     I = n(569984),
     R = n(497505),
     m = n(918701),
-    g = n(302245),
-    N = n(977156),
+    N = n(302245),
+    g = n(977156),
     C = n(5881),
     p = n(602667),
-    A = n(78826),
-    f = n(693900),
+    f = n(78826),
+    A = n(693900),
     h = n(617889),
     S = n(46140),
     M = n(981631),
@@ -36,21 +36,21 @@ function b(e) {
             quest: I,
             location: S.dr.QUESTS_BAR
         }),
-        O = (0, N.Zy)({ location: S.dr.QUESTS_BAR }),
+        O = (0, g.Zy)({ location: S.dr.QUESTS_BAR }),
         v = (0, o.e7)([_.Z], () => _.Z.useReducedMotion),
         P = (0, o.e7)([u.Z], () => u.Z.hasLayers()),
         L = (null === (t = I.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
         Z = (0, d.Z)(L),
         D = (null === (n = I.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
-        U = (0, d.Z)(D),
-        B = (null === (r = I.userStatus) || void 0 === r ? void 0 : r.claimedAt) != null,
+        B = (0, d.Z)(D),
+        U = (null === (r = I.userStatus) || void 0 === r ? void 0 : r.claimedAt) != null,
         j = null != I.userStatus && (0, m.zE)(I.userStatus, R.jn.QUEST_BAR),
         G = (0, T.tP)(I),
-        { hasError: w, isLoading: y } = (0, A.d7)(),
-        H = O && !j && !B && !G && !y,
+        { hasError: w, isLoading: y } = (0, f.d7)(),
+        H = O && !j && !U && !G && !y,
         k = a.useRef(H),
         F = (0, h.B)(I, H && !w),
-        V = (0, g.vI)(I, S.dr.QUESTS_BAR) ? g.WV : F.collapsedHeight,
+        V = (0, N.vI)(I, S.dr.QUESTS_BAR) ? N.WV : F.collapsedHeight,
         W = a.useRef(-1),
         K = a.useRef(!1),
         [Y, z] = a.useState(!1),
@@ -134,7 +134,7 @@ function b(e) {
             immediate: v
         });
     }, [Q, em, v]);
-    let { visibilitySpring: eg } = (0, c.useSpring)({
+    let { visibilitySpring: eN } = (0, c.useSpring)({
         from: { visibilitySpring: 0 },
         to: { visibilitySpring: H ? 1 : 0 },
         config: {
@@ -150,8 +150,8 @@ function b(e) {
         }
     });
     return (a.useLayoutEffect(() => {
-        D && !U && F.canCollapseOnBlur && er();
-    }, [D, ei, F.canCollapseOnBlur, er, U]),
+        D && !B && F.canCollapseOnBlur && er();
+    }, [D, ei, F.canCollapseOnBlur, er, B]),
     a.useEffect(() => {
         w &&
             (0, E.dA)({
@@ -193,7 +193,7 @@ function b(e) {
                           }),
                           style: {
                               color: I.config.colors.secondary,
-                              height: eg.to({
+                              height: eN.to({
                                   range: [0, 1],
                                   output: [0, !F.canCollapseOnBlur && Q ? et : V]
                               })
@@ -207,7 +207,7 @@ function b(e) {
                                   backgroundColor: F.preEnrollmentBackgroundColor,
                                   backgroundImage: L ? F.postEnrollmentBackgroundImage : void 0
                               },
-                              children: (0, s.jsx)(f.t, {
+                              children: (0, s.jsx)(A.t, {
                                   springConfig: eI,
                                   isExpanded: Q,
                                   children: (0, s.jsx)(e, {
@@ -241,7 +241,7 @@ t.Z =
               return null == n
                   ? null
                   : (0, s.jsx)(
-                        A.p,
+                        f.p,
                         {
                             source: S.dr.QUESTS_BAR,
                             questId: n.id,

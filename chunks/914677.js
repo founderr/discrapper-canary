@@ -38,8 +38,8 @@ let c = 'url(#gradient)',
 t.Z = (e) => {
     let { percentage: t = 0, children: n, animationClassName: c, initialPercentage: E = 0, progressCircleStrokeSize: T = 2, progressCircleVariation: I, progressCircleStroke: R } = e,
         m = 43 + T / 2,
-        g = 2 * Math.PI * m,
-        [N, C] = a.useState(E);
+        N = 2 * Math.PI * m,
+        [g, C] = a.useState(E);
     a.useEffect(() => {
         let e = setTimeout(() => {
             C(t);
@@ -47,10 +47,10 @@ t.Z = (e) => {
         return () => clearTimeout(e);
     }, [t]);
     let p = (0, i.ZP)(),
-        A = (0, r.ap)(p),
-        f = _(I),
-        h = d(I, A),
-        S = null != R ? R : u(A, I);
+        f = (0, r.ap)(p),
+        A = _(I),
+        h = d(I, f),
+        S = null != R ? R : u(f, I);
     return (0, s.jsxs)('div', {
         className: o.circleContainer,
         children: [
@@ -65,16 +65,16 @@ t.Z = (e) => {
                         r: ''.concat(m),
                         cx: '50%',
                         cy: '50%',
-                        stroke: f,
+                        stroke: A,
                         strokeOpacity: h
                     }),
                     (0, s.jsx)('circle', {
                         stroke: S,
                         strokeWidth: T,
                         strokeLinecap: 'round',
-                        strokeDasharray: ''.concat(g, ' ').concat(g),
+                        strokeDasharray: ''.concat(N, ' ').concat(N),
                         className: c,
-                        style: { strokeDashoffset: (1 - N / 100) * g },
+                        style: { strokeDashoffset: (1 - g / 100) * N },
                         r: ''.concat(m),
                         cx: '50%',
                         cy: '50%'
