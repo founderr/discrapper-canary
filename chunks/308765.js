@@ -186,6 +186,11 @@ let i = {
         actions: ['POST_CONNECTION_OPEN'],
         inlineRequire: () => n(736401).Z
     },
+    PremiumGiftingIntentManager: {
+        actions: ['POST_CONNECTION_OPEN', 'CHANNEL_SELECT'],
+        inlineRequire: () => n(666086).Z,
+        neverLoadBeforeConnectionOpen: !0
+    },
     PromotionsManager: {
         actions: ['POST_CONNECTION_OPEN', 'EXPERIMENTS_FETCH_SUCCESS'],
         inlineRequire: () => n(349540).Z
