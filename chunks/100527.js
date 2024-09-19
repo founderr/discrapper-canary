@@ -40,6 +40,8 @@ var n, r;
     (r.CHANNEL_CALL_CONNECTING_SCREEN = 'channel call connecting screen'),
     (r.CHANNEL_DETAILS = 'channel details'),
     (r.RTC_PANEL = 'rtc panel'),
+    (r.AUDIO_INPUT_BUTTON = 'audio input button'),
+    (r.AUDIO_OUTPUT_BUTTON = 'audio output button'),
     (r.SOUNDBOARD_BUTTON = 'soundboard button'),
     (r.SOUNDBOARD_POPOUT = 'soundboard popout'),
     (r.SOUNDBOARD_WHEEL = 'soundboard wheel'),
