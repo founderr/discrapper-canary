@@ -21,28 +21,28 @@ var t = l(481060),
     v = l(88966),
     b = l(712301),
     m = l(991307),
-    p = l(725119),
-    C = l(931617),
+    C = l(725119),
+    p = l(931617),
     O = l(700994),
-    D = l(332031),
-    T = l(981631),
-    x = l(689938);
+    x = l(332031),
+    D = l(981631),
+    T = l(689938);
 n.default = (0, o.Z)(
     (0, s.Z)(
         function (e) {
             let { user: n, guildId: l, showModalItems: s = !0, showMediaItems: o = !1, showChatItems: u = !0, context: U, onSelect: L } = e,
                 h = {
-                    page: T.ZY5.GUILD_CHANNEL,
-                    section: T.jXE.CHAT_USERNAME,
-                    object: T.qAy.CONTEXT_MENU_ITEM
+                    page: D.ZY5.GUILD_CHANNEL,
+                    section: D.jXE.CHAT_USERNAME,
+                    object: D.qAy.CONTEXT_MENU_ITEM
                 },
-                S = (0, p.Z)({
+                S = (0, C.Z)({
                     userId: n.id,
                     guildId: l
                 }),
                 j = (0, N.Z)(n, l, U),
                 R = (0, v.Z)(n.id, U),
-                P = (0, D.Z)(n.id),
+                P = (0, x.Z)(n.id),
                 k = (0, A.Z)({
                     user: n,
                     context: U
@@ -73,17 +73,17 @@ n.default = (0, o.Z)(
                 W = (0, M.Z)(n),
                 H = (0, I.Z)({ user: n }),
                 q = (0, _.Z)(n, l),
-                X = (0, C.Z)(n.id, l),
+                X = (0, p.Z)(n.id, l),
                 K = (0, b.Z)(n, l),
                 J = (0, r.Z)({
                     id: n.id,
-                    label: x.Z.Messages.COPY_ID_USER
+                    label: T.Z.Messages.COPY_ID_USER
                 }),
                 Q = n.isNonUserBot();
             return (0, i.jsxs)(t.Menu, {
                 navId: 'user-context',
                 onClose: a.Zy,
-                'aria-label': x.Z.Messages.USER_ACTIONS_MENU_LABEL,
+                'aria-label': T.Z.Messages.USER_ACTIONS_MENU_LABEL,
                 onSelect: L,
                 children: [
                     !Q &&
@@ -107,7 +107,7 @@ n.default = (0, o.Z)(
                 ]
             });
         },
-        { object: T.qAy.CONTEXT_MENU }
+        { object: D.qAy.CONTEXT_MENU }
     ),
     [u.Z.CONTEXT_MENU, u.Z.GUILD_USER_MENU]
 );

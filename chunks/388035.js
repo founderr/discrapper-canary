@@ -40,17 +40,17 @@ let E = s.z.FOR_LATER_POPOUT_COACHMARK,
             caretPosition: l.DF.TOP_RIGHT
         });
 function T(e) {
-    let { children: t } = e,
-        { enabled: n, inInbox: s } = o.Z.useExperiment({ location: 'ForLaterCoachmarkWeb' }, { autoTrackExposure: !1 }),
-        [l, c] = (0, r.US)(n && !s ? [E] : [], void 0);
-    return l !== E
-        ? (0, i.jsx)(i.Fragment, { children: t })
+    let { location: t, children: n } = e,
+        { enabled: s, inInbox: l } = o.Z.useExperiment({ location: 'ForLaterCoachmarkWeb' }, { autoTrackExposure: !1 }),
+        [c, u] = (0, r.US)(s && t === (l ? 'inbox-button' : 'bookmarks-button') ? [E] : [], void 0);
+    return c !== E
+        ? (0, i.jsx)(i.Fragment, { children: n })
         : (0, i.jsx)(a.Popout, {
-              renderPopout: () => m(c),
+              renderPopout: () => m(u),
               position: 'bottom',
               align: 'right',
               animation: a.Popout.Animation.TRANSLATE,
               shouldShow: !0,
-              children: () => t
+              children: () => n
           });
 }

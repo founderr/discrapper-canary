@@ -493,7 +493,7 @@ t.ZP = function (e) {
                                     suppress: f,
                                     popoutOpen: i,
                                     awaitingRemote: N,
-                                    onClick: () => (0, b.Z)(g, f)
+                                    onClick: () => (0, b.Z)(g, f, eg.jXE.VOICE_CONTROL_TRAY)
                                 });
                             }
                         }),

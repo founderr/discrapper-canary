@@ -10,7 +10,7 @@ var s = n(481060),
     l = n(468026),
     r = n(503856),
     o = n(689938);
-function c(e, t) {
+function c(e, t, c) {
     if (t && (0, r.p)()) {
         (0, s.openModalLazy)(async () => {
             let { default: e } = await n.e('41281').then(n.bind(n, 669732));
@@ -38,5 +38,5 @@ function c(e, t) {
         );
         return;
     }
-    a.Z.toggleSelfMute();
+    a.Z.toggleSelfMute({ location: c });
 }

@@ -51,7 +51,7 @@ class T extends s.PureComponent {
 }
 let S = () => null;
 m.isPlatformEmbedded &&
-    (I.ZP.on('SYSTEM_TRAY_TOGGLE_MUTE', () => l.Z.toggleSelfMute()),
+    (I.ZP.on('SYSTEM_TRAY_TOGGLE_MUTE', () => l.Z.toggleSelfMute({ location: 'System Tray' })),
     I.ZP.on('SYSTEM_TRAY_TOGGLE_DEAFEN', () => l.Z.toggleSelfDeaf()),
     I.ZP.on('SYSTEM_TRAY_OPEN_VOICE_SETTINGS', () => {
         o.Z.open(g.oAB.VOICE);

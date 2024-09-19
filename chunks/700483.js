@@ -386,7 +386,7 @@ let er = s.memo(function (e) {
                                       serverMute: a,
                                       suppress: n,
                                       popoutOpen: r,
-                                      onClick: () => (0, p.Z)(a, n),
+                                      onClick: () => (0, p.Z)(a, n, 'Stage Channel Controls'),
                                       awaitingRemote: u
                                   });
                               }

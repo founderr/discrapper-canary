@@ -26,19 +26,19 @@ n.default = (0, o.Z)(
     (0, a.Z)(
         function (e) {
             let { user: n, guildId: t, channelId: a, showMediaItems: o = !1, mediaEngineContext: u, onSelect: O } = e,
-                S = (0, N.Z)({
+                U = (0, N.Z)({
                     userId: n.id,
                     guildId: t,
                     channelId: a
                 }),
-                U = (0, A.Z)(n.id),
+                S = (0, A.Z)(n.id),
                 v = (0, f.Z)({ user: n }),
-                b = (0, M.Z)({
+                x = (0, M.Z)({
                     user: n,
                     guildId: t,
                     channelId: a
                 }),
-                x = (0, E.Z)({ user: n }),
+                b = (0, E.Z)({ user: n }),
                 D = (0, m.Z)(n.id),
                 L = (0, C.Z)(n.id),
                 h = (0, I.Z)(n.id, u),
@@ -63,7 +63,7 @@ n.default = (0, o.Z)(
                             children: [
                                 (0, l.jsx)(s.MenuGroup, { children: V }),
                                 (0, l.jsxs)(s.MenuGroup, {
-                                    children: [S, U, v, b, x, D]
+                                    children: [U, S, v, x, b, D]
                                 }),
                                 o && (0, l.jsx)(s.MenuGroup, { children: L }),
                                 (0, l.jsx)(s.MenuGroup, { children: j }),
