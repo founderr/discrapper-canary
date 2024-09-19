@@ -313,9 +313,8 @@ function V(e) {
                       p.sF,
                       {
                           label: j.Z.Messages.FOR_LATER_REMOVE,
-                          icon: I.BookmarkOutlineIcon,
-                          onClick: () => (0, M.x)(t.saveData),
-                          dangerous: !0
+                          icon: I.BookmarkIcon,
+                          onClick: () => (0, M.x)(t.saveData)
                       },
                       'remove-reminder'
                   )
@@ -354,9 +353,8 @@ function V(e) {
                       p.sF,
                       {
                           label: j.Z.Messages.FOR_LATER_REMOVE,
-                          icon: I.BookmarkOutlineIcon,
-                          onClick: () => (0, M.x)(t.saveData),
-                          dangerous: !0
+                          icon: I.BookmarkIcon,
+                          onClick: () => (0, M.x)(t.saveData)
                       },
                       'remove-bookmark'
                   )
