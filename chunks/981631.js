@@ -2433,7 +2433,8 @@ let aq = '@me',
         CAMPAIGN_CONTEXT: '/users/@me/billing/campaign-context',
         SIMILAR_GAMES: (e) => '/content-inventory/users/@me/similar-games/'.concat(e),
         VOICE_PUBLIC_KEYS: () => '/voice/public-keys',
-        VOICE_MATCH_PUBLIC_KEY: (e) => '/voice/'.concat(e, '/match-public-key')
+        VOICE_MATCH_PUBLIC_KEY: (e) => '/voice/'.concat(e, '/match-public-key'),
+        GUILD_LEADERBOARD: (e, t) => '/guilds/'.concat(e, '/leaderboards/').concat(t)
     }),
     a2 = Object.freeze({
         INDEX: '/',

@@ -343,6 +343,11 @@ let i = {
         inlineRequire: () => n(342879).Z,
         neverLoadBeforeConnectionOpen: !0
     },
+    GuildLeaderboardManager: {
+        actions: ['POST_CONNECTION_OPEN', 'CONNECTION_CLOSED', 'IDLE', 'WINDOW_FOCUS', 'CHANNEL_SELECT'],
+        inlineRequire: () => n(434382).Z,
+        neverLoadBeforeConnectionOpen: !0
+    },
     RunningGameDetectionManager: {
         actions: ['RUNNING_GAME_DELETE_ENTRY', 'RUNNING_GAME_TOGGLE_DETECTION'],
         inlineRequire: () => n(611184).Z,
