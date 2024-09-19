@@ -25,9 +25,9 @@ function a() {
 function T(e, _) {
     let E = (function (e) {
         let { before: _, userId: E, targetId: s, action: n } = e,
-            a = null == E ? t.Z.userIdFilter : E,
-            T = null == n ? t.Z.actionFilter : n,
-            I = null == s ? t.Z.targetIdFilter : s,
+            a = null != E ? E : t.Z.userIdFilter,
+            T = null != n ? n : t.Z.actionFilter,
+            I = null != s ? s : t.Z.targetIdFilter,
             l = { limit: r.Rg9 };
         return null != _ && (l.before = _), null != a && (l.user_id = a), null != T && (l.action_type = T), null != I && (l.target_id = I), l;
     })(_);

@@ -32,7 +32,7 @@ let S = (e) => {
             return ''.concat(f.jd).concat(o, '*\n').concat(a);
         case h.n_.STATUS:
             let l = T.Z.Messages.USER_PROFILE_REACTED_TO_STATUS.format({ username: n });
-            return null != i ? ''.concat(f.jd).concat(l, '*').concat('\n > '.concat(i), '\n').concat(a) : ''.concat(f.jd).concat(l, '*\n').concat(a);
+            return null != i ? ''.concat(f.jd).concat(l, '*').concat('\n> '.concat(i), '\n').concat(a) : ''.concat(f.jd).concat(l, '*\n').concat(a);
         default:
             (0, u.vE)(r);
     }

@@ -57,7 +57,7 @@ t.Z = (e) => {
                           quest: t,
                           questContent: a.jn.QUEST_BAR_V2,
                           location: c.dr.QUESTS_BAR,
-                          autoplay: !m
+                          autoplay: p && !m
                       })
                   }),
                   (0, s.jsxs)('div', {

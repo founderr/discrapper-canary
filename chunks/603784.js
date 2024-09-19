@@ -95,7 +95,7 @@ class A extends a.PureComponent {
                                     a
                                 ),
                       count: l.count,
-                      channel: l.channel ? ('string' == typeof l.channel ? l.channel : (0, I.F6)(l.channel, S.default, N.Z, !0)) : null,
+                      channel: null == l.channel || 'string' == typeof l.channel ? l.channel : (0, I.F6)(l.channel, S.default, N.Z, !0),
                       channelHook: (e, t) =>
                           (0, s.jsx)(
                               'span',
