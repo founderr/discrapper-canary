@@ -31,7 +31,7 @@ function _(e) {
 }
 class E extends o.W {
     _queueIdleCallback() {
-        if (!this._enableRequestIdleCallback) return this._processWorkCallback();
+        if (!this._enableRequestIdleCallback || this._criticalWorkScheduled) return this._processWorkCallback();
         this.telemetry.time(l.JV.TIME_TO_FIRE_IDLE_CALLBACK),
             this._scheduleRequestIdleCallback(
                 (e) => {

@@ -43,7 +43,7 @@ let C = (0, h.kt)({
                 return ''.concat(A.jd).concat(s, '*\n').concat(t);
             case N.n_.STATUS:
                 let o = R.Z.Messages.USER_PROFILE_REPLIED_TO_STATUS.format({ username: n });
-                return null != i ? ''.concat(A.jd).concat(o, '*').concat('\n > '.concat(i), '\n').concat(t) : ''.concat(A.jd).concat(o, '*\n').concat(t);
+                return null != i ? ''.concat(A.jd).concat(o, '*').concat('\n> '.concat(i), '\n').concat(t) : ''.concat(A.jd).concat(o, '*\n').concat(t);
             default:
                 (0, p.vE)(r);
         }

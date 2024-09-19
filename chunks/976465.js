@@ -66,7 +66,7 @@ let S = () => {
         let e = (0, i.e7)([E.ZP], () => E.ZP.getPremiumTypeSubscription());
         if (null == e || null == e.premiumSince) return null;
         let t = r()(),
-            n = r()(e.premiumSince),
+            n = r()(e.premiumSince).add(1, 'day'),
             s = t.diff(n, 'months');
         return Object.entries(I.eG).reduce((e, t) => {
             let [n, a] = t;

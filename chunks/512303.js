@@ -18,9 +18,9 @@ function M(e) {
     var n, t, M;
     if (!(0, r.a)(e)) return null;
     let g = null === (n = e.interactionMetadata) || void 0 === n ? void 0 : n.authorizing_integration_owners[a.Y.USER_INSTALL],
-        f = null === (t = e.interactionMetadata) || void 0 === t ? void 0 : t.authorizing_integration_owners[a.Y.GUILD_INSTALL],
-        m = d.default.getUser(g),
-        I = u.Z.getGuild(f),
+        m = null === (t = e.interactionMetadata) || void 0 === t ? void 0 : t.authorizing_integration_owners[a.Y.GUILD_INSTALL],
+        f = d.default.getUser(g),
+        I = u.Z.getGuild(m),
         _ = d.default.getUser(null === (M = e.interactionMetadata) || void 0 === M ? void 0 : M.user.id),
         Z = null;
     return (
@@ -37,17 +37,17 @@ function M(e) {
                   label: I.name,
                   subtext: c.Z.Messages.INTERACTION_RESPONSE_CONTEXT_INSTALLED_BY.format({ application: e.author.username })
               }))
-            : null != m &&
+            : null != f &&
               (Z = (0, i.jsx)(s.MenuItem, {
                   className: E.interactionInfoMenuItem,
                   disabled: !0,
                   iconLeft: () =>
                       (0, i.jsx)(l.Z, {
-                          user: m,
+                          user: f,
                           size: s.AvatarSizes.SIZE_20
                       }),
                   id: 'integration-owner',
-                  label: m.username,
+                  label: f.username,
                   subtext: c.Z.Messages.INTERACTION_RESPONSE_CONTEXT_INSTALLED_BY.format({ application: e.author.username })
               })),
         (0, i.jsxs)(s.MenuItem, {

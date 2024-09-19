@@ -5,7 +5,7 @@ n.d(t, {
 });
 var s = n(735250),
     o = n(470079),
-    r = n(56217),
+    r = n(526629),
     a = n(613087);
 function l(e) {
     let { expansionSpring: t, isExpanded: n } = e,

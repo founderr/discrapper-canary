@@ -1,15 +1,15 @@
 n.d(t, {
     F7: function () {
-        return m;
+        return E;
     },
     WA: function () {
         return _;
     },
     s2: function () {
-        return f;
+        return h;
     },
     wo: function () {
-        return S;
+        return m;
     },
     yp: function () {
         return p;
@@ -30,7 +30,7 @@ let _ = {
         key: null,
         renderStep: (e) => (0, r.jsx)(d.v, { ...e })
     },
-    f = {
+    h = {
         key: i.h8.ADD_PAYMENT_STEPS,
         renderStep: (e) =>
             (0, r.jsx)(r.Fragment, {
@@ -44,22 +44,22 @@ let _ = {
             }),
         options: { renderHeader: !0 }
     },
-    h = {
+    f = {
         key: i.h8.AWAITING_PURCHASE_TOKEN_AUTH,
         renderStep: () => (0, r.jsx)(o.Z, {})
     },
-    E = {
+    S = {
         key: i.h8.AWAITING_AUTHENTICATION,
         renderStep: () => (0, r.jsx)(s.Z, {}),
         options: { renderHeader: !0 }
     },
-    S = {
+    m = {
         key: i.h8.REVIEW,
         renderStep: (e) => (0, r.jsx)(c.l, { ...e }),
         options: { useBreadcrumbLabel: () => I.Z.Messages.BILLING_STEP_REVIEW }
     },
-    m = {
+    E = {
         key: i.h8.CONFIRM,
         renderStep: (e) => (0, r.jsx)(u.w, { ...e })
     },
-    p = [h, E];
+    p = [f, S];

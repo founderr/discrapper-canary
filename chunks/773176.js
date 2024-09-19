@@ -212,7 +212,7 @@ function ec(e) {
                 { canForwardMessages: et } = (0, I.yk)({ location: 'useMessageUtilitiesProps' }, { autoTrackExposure: !1 }),
                 en = (0, T.a)(n),
                 { enabled: ei } = R.Z.useExperiment({ location: 'message_utilities' }),
-                es = (0, c.e7)([L.Z], () => L.Z.isMessageBookmarked(t.id, n.id)),
+                es = (0, c.e7)([L.Z], () => null != L.Z.getSavedMessage(t.id, n.id)),
                 ea = (0, Q.Z)(),
                 el = (0, c.e7)([m.Z], () => m.Z.keyboardModeEnabled);
             return {

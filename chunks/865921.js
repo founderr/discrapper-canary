@@ -16,27 +16,27 @@ var r = n(735250),
     I = n(981631);
 function _(e) {
     let { handleStepChange: t, handleClose: n } = e,
-        { blockedPayments: i, hasFetchedSkus: _, paymentSources: f, hasFetchedPaymentSources: h, application: E, skusById: S, selectedSkuId: m } = (0, u.usePaymentContext)(),
+        { blockedPayments: i, hasFetchedSkus: _, paymentSources: h, hasFetchedPaymentSources: f, application: S, skusById: m, selectedSkuId: E } = (0, u.usePaymentContext)(),
         { isGift: p } = (0, o.wD)(),
         [T, C] = a.useState(!0);
     return (a.useEffect(() => {
-        let e = null != E;
-        if (!!_ && !!h && !!e) C(!1);
-    }, [_, h, E]),
+        let e = null != S;
+        if (!!_ && !!f && !!e) C(!1);
+    }, [_, f, S]),
     a.useEffect(() => {
         if (T || i) return;
-        l()(null != m, 'Expected selectedSkuId');
-        let e = S[m];
+        l()(null != E, 'Expected selectedSkuId');
+        let e = m[E];
         if (p && (null == e ? void 0 : e.productLine) === I.POd.COLLECTIBLES) {
             t(c.h8.GIFT_CUSTOMIZATION);
             return;
         }
-        if (0 === Object.keys(f).length) {
+        if (0 === Object.keys(h).length) {
             t(c.h8.ADD_PAYMENT_STEPS);
             return;
         }
         t(c.h8.REVIEW);
-    }, [T, i, t, f, p, S, m]),
+    }, [T, i, t, h, p, m, E]),
     T)
         ? (0, r.jsx)(d.Z, {})
         : i

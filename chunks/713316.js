@@ -19,7 +19,7 @@ function I(e) {
     i()(null != a, 'Expected selectedSkuId'), i()(null != I, 'Expected application');
     let _ = n[a];
     i()(null != _, 'Expected sku');
-    let f = c.Z.Messages.APPLICATION_ADDON_PURCHASE_CONFIRMATION_BLURB.format({
+    let h = c.Z.Messages.APPLICATION_ADDON_PURCHASE_CONFIRMATION_BLURB.format({
         applicationName: I.name,
         itemName: _.name
     });
@@ -36,7 +36,7 @@ function I(e) {
                     }),
                     (0, r.jsx)(l.Text, {
                         variant: 'text-md/normal',
-                        children: f
+                        children: h
                     }),
                     (0, r.jsx)('div', { className: d.divider }),
                     (0, r.jsx)(l.Button, {

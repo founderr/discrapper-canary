@@ -36,7 +36,7 @@ function S(e) {
         }
         n.type === N.ABu.XBOX
             ? (0, u.openModalLazy)(async () => {
-                  let { default: n } = await Promise.all([t.e('12429'), t.e('522')]).then(t.bind(t, 200623));
+                  let { default: n } = await Promise.all([t.e('78776'), t.e('522')]).then(t.bind(t, 200623));
                   return (t) =>
                       (0, l.jsx)(n, {
                           ...t,

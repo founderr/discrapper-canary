@@ -15,12 +15,12 @@ var a = t(481060),
     d = t(160877),
     c = t(689938);
 function E(e) {
-    let { channelId: n, messageId: t, mediaItemUrl: E, embedId: M, transitionState: g, onClose: f } = e,
-        m = (0, l.yh)(),
+    let { channelId: n, messageId: t, mediaItemUrl: E, embedId: M, transitionState: g, onClose: m } = e,
+        f = (0, l.yh)(),
         I = (0, u.K)(n, t, E),
         _ = (0, u.b)(n, t, M),
         { reportFalsePositive: Z, isReportFalsePositiveLoading: S } = (0, o.$)({
-            onSuccess: () => (0, d.s)(f),
+            onSuccess: () => (0, d.s)(m),
             onError: () => {
                 (0, a.showToast)((0, a.createToast)(c.Z.Messages.ERROR_GENERIC_TITLE, a.ToastType.FAILURE));
             },
@@ -34,7 +34,7 @@ function E(e) {
             }
         });
     return (
-        !(m && (I.length > 0 || _.length > 0)) && f(),
+        !(f && (I.length > 0 || _.length > 0)) && m(),
         (0, i.jsx)(d.$, {
             messageId: t,
             channelId: n,
@@ -44,7 +44,7 @@ function E(e) {
             attachmentPreview: 1 === I.length && 0 === _.length ? I[0] : void 0,
             embedPreview: 1 === _.length && 0 === I.length ? _[0] : void 0,
             transitionState: g,
-            onClose: f
+            onClose: m
         })
     );
 }

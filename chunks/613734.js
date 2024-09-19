@@ -42,7 +42,7 @@ function f(t) {
             classification: i,
             classificationRequestState: o,
             isDsaEligible: d,
-            isAppealEligible: d && null != i && null == i.appeal_status && (!(0, r.FB)(i) || f),
+            isAppealEligible: null != i && null == i.appeal_status && (!(0, r.FB)(i) || f),
             violationType: n
         }
     );
