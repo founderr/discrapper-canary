@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return f;
     }
 });
 var i = n(735250),
@@ -9,60 +9,59 @@ var i = n(735250),
     l = n(780384),
     r = n(481060),
     o = n(332148),
-    c = n(796798),
-    u = n(198620),
-    d = n(624453),
-    h = n(306680),
-    m = n(494404),
-    p = n(257559),
-    _ = n(689938);
-let f = [];
-function E(e) {
-    let { channel: t, onJump: E } = e,
-        { messages: g, loading: C } = (0, a.cj)([d.Z], () => {
-            let e = d.Z.getPinnedMessages(t.id),
-                n = null != e ? e.messages : f;
+    c = n(198620),
+    u = n(624453),
+    d = n(306680),
+    h = n(494404),
+    m = n(257559),
+    p = n(689938);
+let _ = [];
+function f(e) {
+    let { channel: t, onJump: f } = e,
+        { messages: E, loading: g } = (0, a.cj)([u.Z], () => {
+            let e = u.Z.getPinnedMessages(t.id),
+                n = null != e ? e.messages : _;
             return {
                 messages: n,
                 loading: null == n || (null != e && e.loading)
             };
         }),
-        I = (0, a.e7)([h.ZP], () => h.ZP.hasUnreadPins(t.id));
+        C = (0, a.e7)([d.ZP], () => d.ZP.hasUnreadPins(t.id));
     return (
         s.useEffect(() => {
-            c.l.getCurrentConfig({ location: 'pins' }).enabled && g.some(u.k5) && o.Z.fetchPins(t.id, !0);
+            E.some(c.k5) && o.Z.fetchPins(t.id, !0);
         }, []),
         s.useEffect(() => {
-            I && o.Z.ackPins(t.id);
-        }, [I, t.id]),
+            C && o.Z.ackPins(t.id);
+        }, [C, t.id]),
         (0, i.jsx)(r.Dialog, {
-            'aria-label': _.Z.Messages.PINNED_MESSAGES,
-            children: (0, i.jsx)(m.ZP, {
+            'aria-label': p.Z.Messages.PINNED_MESSAGES,
+            children: (0, i.jsx)(h.ZP, {
                 onFetch: function () {
                     o.Z.ackPins(t.id), o.Z.fetchPins(t.id);
                 },
                 channel: t,
-                messages: g,
-                loading: C,
+                messages: E,
+                loading: g,
                 analyticsName: 'Channel Pins',
                 onCloseMessage: function (e, n) {
-                    null != e && (n.shiftKey ? o.Z.unpinMessage(t, e.id) : p.Z.confirmUnpin(t, e));
+                    null != e && (n.shiftKey ? o.Z.unpinMessage(t, e.id) : m.Z.confirmUnpin(t, e));
                 },
-                onJump: E,
+                onJump: f,
                 getProTip: function () {
-                    return t.isPrivate() ? _.Z.Messages.PINNED_MESSAGES_PRO_TIP_BODY_DMS : _.Z.Messages.PINNED_MESSAGES_PRO_TIP_BODY_CHANNEL;
+                    return t.isPrivate() ? p.Z.Messages.PINNED_MESSAGES_PRO_TIP_BODY_DMS : p.Z.Messages.PINNED_MESSAGES_PRO_TIP_BODY_CHANNEL;
                 },
                 renderHeader: () =>
-                    (0, i.jsx)(m.h4, {
+                    (0, i.jsx)(h.h4, {
                         icon: r.PinIcon,
-                        title: _.Z.Messages.PINNED_MESSAGES
+                        title: p.Z.Messages.PINNED_MESSAGES
                     }),
                 renderEmptyState: function (e) {
-                    let s = _.Z.Messages.NO_PINS_IN_CHANNEL;
-                    t.isPrivate() && (s = _.Z.Messages.NO_PINS_IN_DM);
+                    let s = p.Z.Messages.NO_PINS_IN_CHANNEL;
+                    t.isPrivate() && (s = p.Z.Messages.NO_PINS_IN_DM);
                     let a = (0, l.ap)(e) ? n(306059) : n(281485);
                     return (0, i.jsx)(
-                        m.nH,
+                        h.nH,
                         {
                             msg: s,
                             image: a
