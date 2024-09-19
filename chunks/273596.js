@@ -54,18 +54,31 @@ function x(e) {
         w = a.useRef(U),
         [k, B] = a.useState(3),
         H = a.useRef(k),
-        V = (0, c.y)((e) => {
+        V = a.useRef(null),
+        F = a.useCallback(
+            (e) => {
+                var t;
+                let n = null === (t = V.current) || void 0 === t ? void 0 : t.getScrollerState();
+                null != n && null != e && n.scrollHeight < e.height && P();
+            },
+            [P]
+        ),
+        Y = (0, c.y)((e) => {
             let t = null == e ? void 0 : e.getBoundingClientRect();
             if (null == t) return;
             let n = t.width;
             n < 1024 && w.current ? ((w.current = !1), G(!1)) : n > 1024 && !w.current && ((w.current = !0), G(!0));
             let i = 1;
             for (n -= U ? 420 : 0, n -= 250; n > 0; ) (n -= 234), (i += 1);
-            i !== H.current && ((H.current = i), B(i));
+            i !== H.current && ((H.current = i), B(i)), F(t);
         });
-    a.useEffect(() => {
-        j((0, d.P)());
-    }, [b]),
+    a.useLayoutEffect(() => {
+        var e;
+        F(null === (e = Y.current) || void 0 === e ? void 0 : e.getBoundingClientRect());
+    }, [Y, h, F]),
+        a.useEffect(() => {
+            j((0, d.P)());
+        }, [b]),
         a.useEffect(() => {
             O({
                 loadId: t,
@@ -77,10 +90,10 @@ function x(e) {
                 isTagSearch: !1
             });
         }, [D, h, t, M, y, b]);
-    let F = a.useCallback((e) => n(e, M), [n, M]),
-        Y = a.useMemo(() => (x ? [h.length, 0] : [h.length]), [h.length, x]),
-        W = 0 === h.length && !x,
-        z = a.useCallback(
+    let W = a.useCallback((e) => n(e, M), [n, M]),
+        z = a.useMemo(() => (x ? [h.length, 0] : [h.length]), [h.length, x]),
+        K = 0 === h.length && !x,
+        q = a.useCallback(
             (e, n, a) => {
                 switch (e) {
                     case 0:
@@ -102,7 +115,7 @@ function x(e) {
                                             className: A.headingFilters,
                                             children: [(0, i.jsx)(T.Z, { loadId: t }), (0, i.jsx)(f.Z, { loadId: t })]
                                         }),
-                                    W && (0, i.jsx)(S.Z, { loadId: t })
+                                    K && (0, i.jsx)(S.Z, { loadId: t })
                                 ]
                             },
                             a
@@ -111,23 +124,23 @@ function x(e) {
                         return (0, i.jsx)(o.Spinner, { className: A.spinner }, a);
                 }
             },
-            [W, U, t, b]
+            [K, U, t, b]
         ),
-        K = a.useCallback(
+        Q = a.useCallback(
             (e) => {
                 switch (e) {
                     case 0:
                         let t = U ? v : L;
-                        return W ? t + 400 : t;
+                        return K ? t + 400 : t;
                     case 1:
                         return 120;
                     default:
                         throw Error('[getSectionHeight] Failed for section: '.concat(e));
                 }
             },
-            [W, U]
+            [K, U]
         ),
-        q = a.useCallback(
+        X = a.useCallback(
             (e, t) => {
                 switch (e) {
                     case 0:
@@ -140,7 +153,7 @@ function x(e) {
             },
             [h]
         ),
-        Q = a.useCallback((e) => {
+        J = a.useCallback((e) => {
             switch (e) {
                 case 0:
                     return 320;
@@ -150,16 +163,16 @@ function x(e) {
                     throw Error('[getItemHeight] Failed for section: '.concat(e));
             }
         }, []),
-        X = a.useCallback(
+        $ = a.useCallback(
             (e, t, n) => {
                 var i, a;
                 r(e, t, n);
-                let s = null === (a = $.current) || void 0 === a ? void 0 : null === (i = a.getScrollerState()) || void 0 === i ? void 0 : i.scrollTop;
+                let s = null === (a = V.current) || void 0 === a ? void 0 : null === (i = a.getScrollerState()) || void 0 === i ? void 0 : i.scrollTop;
                 null != s && (0, I.LD)({ scrollPosition: s });
             },
             [r]
         ),
-        J = a.useCallback(
+        ee = a.useCallback(
             (e, t, n, a) => {
                 if (0 === e) {
                     let e = h[t];
@@ -169,8 +182,8 @@ function x(e) {
                             style: n,
                             children: (0, i.jsx)(C.v, {
                                 guildId: e,
-                                onGuildCardClick: X,
-                                onGuildCardSeen: F,
+                                onGuildCardClick: $,
+                                onGuildCardSeen: W,
                                 index: t,
                                 categoryId: M
                             })
@@ -180,11 +193,10 @@ function x(e) {
                 }
                 return null;
             },
-            [h, X, F, M]
-        ),
-        $ = a.useRef(null);
+            [h, $, W, M]
+        );
     a.useEffect(() => {
-        let e = $.current;
+        let e = V.current;
         return () => {
             var t;
             let n = null == e ? void 0 : null === (t = e.getScrollerState()) || void 0 === t ? void 0 : t.scrollTop;
@@ -196,7 +208,7 @@ function x(e) {
             null != e &&
                 setTimeout(() => {
                     var t;
-                    null === (t = $.current) ||
+                    null === (t = V.current) ||
                         void 0 === t ||
                         t.scrollTo({
                             to: e,
@@ -207,40 +219,40 @@ function x(e) {
                         });
                 });
         }, []);
-    let ee = a.useMemo(
+    let et = a.useMemo(
             () =>
                 (0, s.debounce)(() => {
                     var e;
-                    let t = null === (e = $.current) || void 0 === e ? void 0 : e.getScrollerState();
+                    let t = null === (e = V.current) || void 0 === e ? void 0 : e.getScrollerState();
                     if (null == t) return;
                     let n = t.scrollTop + t.offsetHeight;
                     t.scrollHeight - n < 200 && P();
                 }, 250),
             [P]
         ),
-        et = U ? Z : R;
+        en = U ? Z : R;
     return (0, i.jsxs)('div', {
         className: A.container,
-        ref: V,
+        ref: Y,
         children: [
             (0, i.jsx)(u.KY, {
                 location: 'global_discovery_search',
                 query: b
             }),
             (0, i.jsx)(o.MasonryList, {
-                ref: $,
+                ref: V,
                 className: A.masonryList,
-                sections: Y,
+                sections: z,
                 columns: k,
                 itemGutter: 16,
-                padding: et,
-                renderItem: J,
-                renderSection: z,
-                getSectionHeight: K,
-                getItemKey: q,
-                getItemHeight: Q,
+                padding: en,
+                renderItem: ee,
+                renderSection: q,
+                getSectionHeight: Q,
+                getItemKey: X,
+                getItemHeight: J,
                 chunkSize: 24,
-                onScroll: ee,
+                onScroll: et,
                 renderAccessory: (e) =>
                     U
                         ? (0, i.jsx)('div', {
