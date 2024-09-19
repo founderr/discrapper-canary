@@ -72,17 +72,17 @@ t.Z = (e) => {
         }, [S, x, v, P]);
     let Z = (0, R.Op)(v),
         D = (0, E.Z)(),
-        B = (0, R.mN)(),
-        U = (0, R.sP)({
+        U = (0, R.mN)(),
+        B = (0, R.sP)({
             perksCards: D,
             variant: r,
             shopMarketingVariation: b,
             isFullScreen: h,
             showTenureCard: null == M ? void 0 : M.showCard,
             tileOrderVariant: O,
-            isPremiumSubscriber: B
+            isPremiumSubscriber: U
         }),
-        j = U.some((e) => null != e.pillText),
+        j = B.some((e) => null != e.pillText),
         [G, w] = a.useState(null),
         y = a.useRef(new l.qA());
     return (0, s.jsxs)(s.Fragment, {
@@ -134,7 +134,7 @@ t.Z = (e) => {
                             [g.cardContainer]: h,
                             [g.cardContainerNarrowWidth]: !h
                         }),
-                        children: U.map((e, t) =>
+                        children: B.map((e, t) =>
                             (0, s.jsx)(
                                 m.Z,
                                 {

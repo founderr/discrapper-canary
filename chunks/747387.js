@@ -12,7 +12,7 @@ var r = n(735250),
     u = n(353250),
     f = n(981631);
 t.Z = (e) => {
-    let { captchaService: t = p.hP.RECAPTCHA, sitekey: n, rqdata: v, onRender: m, onVerify: C, onError: y, onOpen: E, onClose: b, onChalExpired: _, size: R, urlPath: x, ...g } = e,
+    let { captchaService: t = p.hP.RECAPTCHA, sitekey: n, rqdata: v, onRender: m, onVerify: C, onError: y, onOpen: E, onClose: b, onChalExpired: _, size: R, userflow: x, ...g } = e,
         S = a.useRef(null),
         w = (0, h.H)('captcha'),
         k = (0, o.Z)(),
@@ -41,16 +41,16 @@ t.Z = (e) => {
             var e, t;
             null != v && '' !== v && null != S.current && (null === (e = S.current) || void 0 === e || e.setData({ rqdata: v })), 'invisible' === R && (null === (t = S.current) || void 0 === t || t.execute());
         }, [v, S, R]),
-        P = a.useCallback(() => {
+        Z = a.useCallback(() => {
             !A && (j('initial-load'), O('initial-load'), I(!0)), T();
         }, [O, A, j, T]);
     a.useEffect(() => {
         T();
     }, [T]),
         a.useEffect(() => {
-            P();
-        }, [P]);
-    let Z = a.useCallback(() => {
+            Z();
+        }, [Z]);
+    let P = a.useCallback(() => {
             j('error'), O('error'), T(), null == y || y();
         }, [j, O, T, y]),
         N = a.useCallback(
@@ -74,10 +74,10 @@ t.Z = (e) => {
     return ((null == n || '' === n) && (n = f.OL7), t === p.hP.RECAPTCHA)
         ? (0, r.jsx)(c.Z, {
               ...g,
-              onLoad: P,
+              onLoad: Z,
               onRender: L,
               onVerify: N,
-              onError: Z,
+              onError: P,
               sitekey: n
           })
         : t === p.hP.HCAPTCHA
@@ -85,8 +85,8 @@ t.Z = (e) => {
                 ref: S,
                 ...g,
                 sitekey: n,
-                onLoad: P,
-                onError: Z,
+                onLoad: Z,
+                onError: P,
                 onVerify: N,
                 onChalExpired: M,
                 onOpen: V,
@@ -96,9 +96,9 @@ t.Z = (e) => {
           : (0, r.jsx)(c.Z, {
                 ...g,
                 sitekey: n,
-                onLoad: P,
+                onLoad: Z,
                 onRender: L,
                 onVerify: N,
-                onError: Z
+                onError: P
             });
 };

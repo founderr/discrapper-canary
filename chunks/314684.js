@@ -3,7 +3,7 @@ n.d(t, {
         return P;
     },
     FM: function () {
-        return B;
+        return U;
     },
     IB: function () {
         return L;
@@ -199,7 +199,7 @@ function D() {
         !1 === e && !1 === t && !0 === n && !1 === a.current && (o.yD(f.CL), (a.current = !0));
     }, [e, t, n]);
 }
-function B() {
+function U() {
     var e;
     D();
     let t = M(),

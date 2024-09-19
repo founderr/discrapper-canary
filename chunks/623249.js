@@ -42,7 +42,7 @@ function A(e) {
         P = (0, R.Bz)(h),
         L = (0, l.e7)([u.Z], () => u.Z.getState().theme),
         Z = (0, o.wj)(L) ? g.BRd.DARK : g.BRd.LIGHT,
-        { startConsoleQuest: D, startingConsoleQuest: B } = (0, T.GI)({
+        { startConsoleQuest: D, startingConsoleQuest: U } = (0, T.GI)({
             questId: h.id,
             beforeRequest: () => {
                 O.startAnimation(),
@@ -107,7 +107,7 @@ function A(e) {
                                 children: N.Z.Messages.CONNECTED_ACCOUNTS
                             }),
                             (0, s.jsxs)(c.Clickable, {
-                                className: i()(C.refreshWrapper, { [C.disabled]: B }),
+                                className: i()(C.refreshWrapper, { [C.disabled]: U }),
                                 onClick: D,
                                 children: [
                                     O.render(),

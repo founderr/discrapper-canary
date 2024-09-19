@@ -31,8 +31,8 @@ var s = n(735250),
     L = n(635921),
     Z = n(177839),
     D = n(794484),
-    B = n(392521),
-    U = n(349803),
+    U = n(392521),
+    B = n(349803),
     j = n(179984),
     G = n(409100),
     w = n(391110),
@@ -102,15 +102,15 @@ let z = (e) => {
                           }),
                           n &&
                               !l &&
-                              (0, s.jsx)(B.ZP, {
+                              (0, s.jsx)(U.ZP, {
                                   className: V.pdSparklesTop,
-                                  variant: B.u0.TOP
+                                  variant: U.u0.TOP
                               }),
                           n &&
                               !l &&
-                              (0, s.jsx)(B.ZP, {
+                              (0, s.jsx)(U.ZP, {
                                   className: V.pdSparklesBottom,
-                                  variant: B.u0.BOTTOM
+                                  variant: U.u0.BOTTOM
                               })
                       ]
                   })
@@ -124,7 +124,7 @@ t.Z = (e) => {
     let O = (0, C.z7)('PremiumMarketingHome'),
         P = a.useRef(null),
         [Z, D] = a.useState(!1),
-        [B, H] = a.useState(!1),
+        [U, H] = a.useState(!1),
         [X, J] = a.useState(!1),
         [$, ee] = a.useState(!1),
         [et, en] = a.useState(!1),
@@ -284,8 +284,8 @@ t.Z = (e) => {
                     ]
                 }),
                 (0, s.jsx)('div', { className: n ? V.footerSpacingFullscreen : V.footerSpacing }),
-                (0, s.jsx)(U.Z, {
-                    isVisible: !Z && !B && !X && et,
+                (0, s.jsx)(B.Z, {
+                    isVisible: !Z && !U && !X && et,
                     isFullscreen: n,
                     subscriptionTier: ei
                 }),

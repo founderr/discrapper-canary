@@ -31,14 +31,14 @@ function A(e) {
         P = (null === (t = A.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
         { ref: L, scrollHeight: Z } = (0, d.Z)(),
         D = 104 !== Z,
-        { expansionSpring: B } = (0, c.useSpring)({
+        { expansionSpring: U } = (0, c.useSpring)({
             expansionSpring: h ? 1 : 0,
             config: {
                 ...g.Y,
                 clamp: !0
             }
         }),
-        U = (null === (n = A.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
+        B = (null === (n = A.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
         j = (null === (r = A.userStatus) || void 0 === r ? void 0 : r.claimedAt) != null,
         { completedRatio: G, completedRatioDisplay: w } = (0, u.I)(A),
         y = (0, u.Bd)(A),
@@ -69,19 +69,19 @@ function A(e) {
         children: [
             (0, s.jsxs)(l.animated.div, {
                 style: {
-                    maxHeight: B.to([0, 1], [104, (null != Z ? Z : 0) + 12])
+                    maxHeight: U.to([0, 1], [104, (null != Z ? Z : 0) + 12])
                 },
                 className: i()(C.rewardDescriptionContainer),
                 children: [
                     (0, s.jsxs)('div', {
                         className: C.assetWrapper,
                         children: [
-                            !j && U && (0, s.jsx)('div', { className: C.completionAnimation }),
+                            !j && B && (0, s.jsx)('div', { className: C.completionAnimation }),
                             P && !j
                                 ? (0, s.jsxs)('div', {
                                       className: C.progressWrapper,
                                       children: [
-                                          U &&
+                                          B &&
                                               (0, s.jsx)(c.LottieAnimation, {
                                                   importData: p,
                                                   className: C.confetti,
@@ -137,7 +137,7 @@ function A(e) {
                     D &&
                         (0, s.jsx)(l.animated.div, {
                             style: {
-                                opacity: B.to([0, 1], [1, 0])
+                                opacity: U.to([0, 1], [1, 0])
                             },
                             className: C.textOverflowBlur
                         })

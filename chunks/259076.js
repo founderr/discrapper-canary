@@ -1,5 +1,5 @@
-var t, o;
-n.d(s, {
+var n, o;
+t.d(s, {
     Mr: function () {
         return l;
     },
@@ -7,14 +7,14 @@ n.d(s, {
         return r;
     },
     pw: function () {
-        return t;
+        return n;
     },
     zf: function () {
         return a;
     }
 }),
-    n(47120),
-    ((o = t || (t = {}))[(o.DISCORD_EMPLOYEE_ASKED_ME_TO = 0)] = 'DISCORD_EMPLOYEE_ASKED_ME_TO'),
+    t(47120),
+    ((o = n || (n = {}))[(o.DISCORD_EMPLOYEE_ASKED_ME_TO = 0)] = 'DISCORD_EMPLOYEE_ASKED_ME_TO'),
     (o[(o.SOMEONE_ASKED_ME_TO = 1)] = 'SOMEONE_ASKED_ME_TO'),
     (o[(o.NEW_EMAIL = 2)] = 'NEW_EMAIL'),
     (o[(o.SOMETHING_ELSE = 3)] = 'SOMETHING_ELSE');

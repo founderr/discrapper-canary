@@ -1,44 +1,44 @@
-n.d(s, {
+t.d(s, {
     Z: function () {
         return d;
     }
 });
-var t = n(735250);
-n(470079);
-var o = n(481060),
-    a = n(488889),
-    l = n(626135),
-    r = n(981631),
-    i = n(259076),
-    E = n(689938),
-    _ = n(810452),
-    N = n(859565);
+var n = t(735250);
+t(470079);
+var o = t(481060),
+    a = t(488889),
+    l = t(626135),
+    r = t(981631),
+    i = t(259076),
+    E = t(689938),
+    _ = t(810452),
+    N = t(859565);
 function d(e) {
-    let { onNext: s, onClose: n, reason: d, onReasonChange: c } = e,
+    let { onNext: s, onClose: t, reason: d, onReasonChange: c } = e,
         A = i.zf.map((e) => ({
             value: e,
             name: (0, a.S)(e)
         }));
-    return (0, t.jsxs)('form', {
+    return (0, n.jsxs)('form', {
         onSubmit: s,
         children: [
-            (0, t.jsxs)(o.ModalHeader, {
+            (0, n.jsxs)(o.ModalHeader, {
                 separator: !1,
                 className: N.header,
                 children: [
-                    (0, t.jsx)(o.Heading, {
+                    (0, n.jsx)(o.Heading, {
                         variant: 'heading-xl/extrabold',
                         children: E.Z.Messages.EMAIL_CHANGE_REASONING_HEADER
                     }),
-                    (0, t.jsx)(o.ModalCloseButton, {
-                        onClick: n,
+                    (0, n.jsx)(o.ModalCloseButton, {
+                        onClick: t,
                         className: N.modalCloseButton
                     })
                 ]
             }),
-            (0, t.jsx)(o.ModalContent, {
+            (0, n.jsx)(o.ModalContent, {
                 className: _.content,
-                children: (0, t.jsx)(o.RadioGroup, {
+                children: (0, n.jsx)(o.RadioGroup, {
                     radioPosition: 'right',
                     radioItemClassName: _.radioItem,
                     size: o.RadioGroup.Sizes.NOT_SET,
@@ -50,20 +50,20 @@ function d(e) {
                     }
                 })
             }),
-            (0, t.jsxs)(o.ModalFooter, {
+            (0, n.jsxs)(o.ModalFooter, {
                 className: N.modalFooter,
                 children: [
-                    (0, t.jsx)(o.Button, {
+                    (0, n.jsx)(o.Button, {
                         color: o.Button.Colors.BRAND,
                         disabled: null == d,
                         size: o.Button.Sizes.MEDIUM,
                         onClick: s,
                         children: E.Z.Messages.CONTINUE
                     }),
-                    (0, t.jsx)(o.Button, {
+                    (0, n.jsx)(o.Button, {
                         look: o.Button.Looks.LINK,
                         color: o.Button.Colors.PRIMARY,
-                        onClick: n,
+                        onClick: t,
                         children: E.Z.Messages.CANCEL
                     })
                 ]

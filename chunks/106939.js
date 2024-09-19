@@ -38,20 +38,20 @@ var s = n(735250),
     L = n(830746),
     Z = n(731934),
     D = n(521450),
-    B = n(292352),
-    U = n(981631),
+    U = n(292352),
+    B = n(981631),
     j = n(723359),
     G = n(921944),
     w = n(689938),
     y = n(379493);
 let H = {
-        [B.dG.REQUESTS]: () => (0, s.jsx)(Z.Z, {}),
-        [B.dG.ACTIVITY]: () => (0, s.jsx)(L.Z, {}),
-        [B.dG.SETTINGS]: () => (0, s.jsx)(D.Z, {})
+        [U.dG.REQUESTS]: () => (0, s.jsx)(Z.Z, {}),
+        [U.dG.ACTIVITY]: () => (0, s.jsx)(L.Z, {}),
+        [U.dG.SETTINGS]: () => (0, s.jsx)(D.Z, {})
     },
     k = {
-        [B.dG.REQUESTS]: () => (0, s.jsx)(Z.Z, {}),
-        [B.dG.ACTIVITY]: () => (0, s.jsx)(L.Z, {})
+        [U.dG.REQUESTS]: () => (0, s.jsx)(Z.Z, {}),
+        [U.dG.ACTIVITY]: () => (0, s.jsx)(L.Z, {})
     };
 function F(e) {
     let { section: t, handleItemSelect: n } = e,
@@ -67,12 +67,12 @@ function F(e) {
         children: [
             (0, s.jsx)(_.TabBar.Item, {
                 className: y.settingsTabBarItem,
-                id: B.dG.ACTIVITY,
+                id: U.dG.ACTIVITY,
                 children: w.Z.Messages.FAMILY_CENTER_ACTIVITY_TAB
             }),
             (0, s.jsxs)(_.TabBar.Item, {
                 className: y.settingsTabBarItem,
-                id: B.dG.REQUESTS,
+                id: U.dG.REQUESTS,
                 'aria-label': w.Z.Messages.FAMILY_CENTER_REQUESTS_TAB,
                 children: [
                     w.Z.Messages.FAMILY_CENTER_REQUESTS_TAB,
@@ -87,7 +87,7 @@ function F(e) {
             r
                 ? (0, s.jsx)(_.TabBar.Item, {
                       className: y.settingsTabBarItem,
-                      id: B.dG.SETTINGS,
+                      id: U.dG.SETTINGS,
                       children: w.Z.Messages.SETTINGS
                   })
                 : null
@@ -125,12 +125,12 @@ function V(e) {
                         className: y.__invalid_tabBar,
                         children: [
                             (0, s.jsx)(_.TabBar.Item, {
-                                id: B.dG.ACTIVITY,
+                                id: U.dG.ACTIVITY,
                                 className: y.item,
                                 children: w.Z.Messages.FAMILY_CENTER_ACTIVITY_TAB
                             }),
                             (0, s.jsxs)(_.TabBar.Item, {
-                                id: B.dG.REQUESTS,
+                                id: U.dG.REQUESTS,
                                 className: y.item,
                                 'aria-label': w.Z.Messages.FAMILY_CENTER_REQUESTS_TAB,
                                 children: [
@@ -172,12 +172,12 @@ function W() {
     a.useEffect(() => {
         r &&
             A &&
-            (S.default.track(U.rMx.FAMILY_CENTER_VIEWED, {
+            (S.default.track(B.rMx.FAMILY_CENTER_VIEWED, {
                 is_considered_adult: e,
                 num_of_accepted_links: t,
                 selected_teen_id: l,
-                initial_page: B.QH[u],
-                source: B._6[B.Mu.SIDENAV]
+                initial_page: U.QH[u],
+                source: U._6[U.Mu.SIDENAV]
             }),
             C.Z.increment({ name: o.V.FAMILY_CENTER_VIEW }));
     }, [r, A]),
@@ -218,7 +218,7 @@ function K() {
         K = l && null != F && !W;
     if (
         (a.useEffect(() => {
-            u.Y(U.Z5c.FAMILY_CENTER),
+            u.Y(B.Z5c.FAMILY_CENTER),
                 (0, p.e)('family-center'),
                 !x.Z.isLoading() && x.Z.canRefetch() && M.ZP.initialPageLoad(),
                 !r &&
@@ -230,12 +230,12 @@ function K() {
         a.useEffect(() => {
             l &&
                 W &&
-                (S.default.track(U.rMx.FAMILY_CENTER_VIEWED, {
+                (S.default.track(B.rMx.FAMILY_CENTER_VIEWED, {
                     is_considered_adult: t,
                     num_of_accepted_links: n,
                     selected_teen_id: N,
-                    initial_page: B.QH[Z],
-                    source: B._6[B.Mu.SIDENAV]
+                    initial_page: U.QH[Z],
+                    source: U._6[U.Mu.SIDENAV]
                 }),
                 C.Z.increment({ name: o.V.FAMILY_CENTER_VIEW }));
         }, [l, W]),
@@ -246,7 +246,7 @@ function K() {
         K)
     )
         return (0, E.mN)(j.L0.FAMILY_CENTER), null;
-    let Y = Z !== B.dG.SETTINGS ? Z : B.dG.ACTIVITY,
+    let Y = Z !== U.dG.SETTINGS ? Z : U.dG.ACTIVITY,
         z = k[Y];
     return (0, s.jsx)(I.Gt, {
         value: e,

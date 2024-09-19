@@ -38,7 +38,7 @@ let D = () => {
             colorOptions: f.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL
         });
     },
-    B = () =>
+    U = () =>
         (0, s.jsx)('div', {
             className: O.mostPopularPill,
             children: (0, s.jsx)(c.Heading, {
@@ -47,7 +47,7 @@ let D = () => {
                 children: b.Z.Messages.MOST_POPULAR
             })
         }),
-    U = (e) => {
+    B = (e) => {
         let t,
             { premiumType: n } = e,
             a = (0, _.ZP)();
@@ -151,8 +151,8 @@ t.Z = (e) => {
             variant: 'heading-lg/extrabold',
             children: b.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_HEADER
         }),
-        column1: (0, s.jsx)(U, { premiumType: x.p9.TIER_0 }),
-        column2: (0, s.jsx)(U, { premiumType: x.p9.TIER_2 })
+        column1: (0, s.jsx)(B, { premiumType: x.p9.TIER_0 }),
+        column2: (0, s.jsx)(B, { premiumType: x.p9.TIER_2 })
     };
     v
         ? es.push({
@@ -229,7 +229,7 @@ t.Z = (e) => {
                 })
               : ea
                 ? (0, s.jsx)(D, {})
-                : (0, s.jsx)(B, {}));
+                : (0, s.jsx)(U, {}));
     let ei = Q === x.Si.TIER_0 || q === x.p9.TIER_0 || w === x.p9.TIER_0;
     return (0, s.jsx)(E.Gt, {
         value: y,

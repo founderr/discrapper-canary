@@ -110,7 +110,7 @@ let E = ['https://cdn.discordapp.com/bad-domains/updated_hashes.json', 'https://
             ? (Promise.all([n.e('36514').then(n.bind(n, 475271)), n.e('31177').then(n.bind(n, 353250))])
                   .then((t) => {
                       let [{ default: n }, { extractCaptchaPropsFromResponse: r }] = t;
-                      return n.showCaptchaAsync(r(e.body, e.xhr.responseURL));
+                      return n.showCaptchaAsync(r(e.body));
                   })
                   .then((e) => {
                       let { captcha_key: n, captcha_rqtoken: r } = e,

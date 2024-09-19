@@ -126,9 +126,9 @@ t.Z = (e) => {
         L = (0, l.Wu)([T.default], () => x.map((e) => T.default.getUser(e)).filter((e) => null != e)),
         Z = a.useMemo(() => L.map((e) => new E.Z(e)), [L]),
         D = (0, l.e7)([g.Z], () => g.Z.getRefreshAt()),
-        { subscriberHomeVariant: B } = N.g.useExperiment({ location: 'ReferralProgramProgressBar' }, { autoTrackExposure: !1 }),
-        U = v === f.g2L.UNAPPLIED || v === f.g2L.QUALIFIED,
-        j = B === N.p.VARIANT_2;
+        { subscriberHomeVariant: U } = N.g.useExperiment({ location: 'ReferralProgramProgressBar' }, { autoTrackExposure: !1 }),
+        B = v === f.g2L.UNAPPLIED || v === f.g2L.QUALIFIED,
+        j = U === N.p.VARIANT_2;
     a.useEffect(() => {
         x.forEach((e) => {
             (0, c.PR)(e);
@@ -255,11 +255,11 @@ t.Z = (e) => {
         value: H,
         children: (0, s.jsx)('div', {
             className: i()({
-                [S.containerWithGlowWithoutBanner]: !W && z && !U,
-                [S.containerWithGlowWithBanner]: !W && z && U,
+                [S.containerWithGlowWithoutBanner]: !W && z && !B,
+                [S.containerWithGlowWithBanner]: !W && z && B,
                 [S.containerWithoutGlow]: W || !z,
                 [S.containerWithMargins]: !u,
-                [S.marginWithBanner]: U,
+                [S.marginWithBanner]: B,
                 [S.containerWithGlowOnSettingsPage]: !W && z && u
             }),
             children: (0, s.jsxs)('div', {
@@ -270,10 +270,10 @@ t.Z = (e) => {
                     [S.expandedProgressBarContainerVariant1]: !j && !u,
                     [S.expandedProgressBarContainerVariant2]: j && !u,
                     [S.allReferralsSentBorder]: !W && z,
-                    [S.containerWithBanner]: !W && U
+                    [S.containerWithBanner]: !W && B
                 }),
                 children: [
-                    U &&
+                    B &&
                         !W &&
                         (0, s.jsx)('div', {
                             className: i()(S.banner, {

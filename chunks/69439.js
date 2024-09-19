@@ -69,9 +69,9 @@ function A(e) {
             isClaiming: u.Z.isClaimingReward(f.id) || u.Z.isFetchingRewardCode(f.id),
             isEnrolling: u.Z.isEnrolling(f.id)
         })),
-        B = (null === (t = f.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
-        U = (null === (n = f.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
-        j = U && (null === (r = f.userStatus) || void 0 === r ? void 0 : r.claimedAt) == null,
+        U = (null === (t = f.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
+        B = (null === (n = f.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
+        j = B && (null === (r = f.userStatus) || void 0 === r ? void 0 : r.claimedAt) == null,
         G = (0, T.iQ)(f),
         w = !(0, T.zi)(f),
         y = (0, _._Q)(f),
@@ -124,7 +124,7 @@ function A(e) {
               className: N.button,
               children: X
           }))
-        : U
+        : B
           ? (en = (0, s.jsx)(o.Button, {
                 color: o.ButtonColors.BRAND,
                 className: N.button,
@@ -140,7 +140,7 @@ function A(e) {
                       className: N.button,
                       children: X
                   }))
-                : w && B && !et
+                : w && U && !et
                   ? (en = z
                         ? (0, s.jsx)(o.Select, {
                               className: N.platformSelectorPrimary,
@@ -183,7 +183,7 @@ function A(e) {
                                 children: g.Z.Messages.QUEST_ACCEPTED
                             }))
                   : w &&
-                    !B &&
+                    !U &&
                     (en = (0, s.jsx)(o.Button, {
                         submitting: D,
                         color: o.ButtonColors.BRAND,

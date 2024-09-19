@@ -42,12 +42,12 @@ function b(e) {
         L = (null === (t = I.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
         Z = (0, d.Z)(L),
         D = (null === (n = I.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
-        B = (0, d.Z)(D),
-        U = (null === (r = I.userStatus) || void 0 === r ? void 0 : r.claimedAt) != null,
+        U = (0, d.Z)(D),
+        B = (null === (r = I.userStatus) || void 0 === r ? void 0 : r.claimedAt) != null,
         j = null != I.userStatus && (0, m.zE)(I.userStatus, R.jn.QUEST_BAR),
         G = (0, T.tP)(I),
         { hasError: w, isLoading: y } = (0, A.d7)(),
-        H = O && !j && !U && !G && !y,
+        H = O && !j && !B && !G && !y,
         k = a.useRef(H),
         F = (0, h.B)(I, H && !w),
         V = (0, g.vI)(I, S.dr.QUESTS_BAR) ? g.WV : F.collapsedHeight,
@@ -150,8 +150,8 @@ function b(e) {
         }
     });
     return (a.useLayoutEffect(() => {
-        D && !B && F.canCollapseOnBlur && er();
-    }, [D, ei, F.canCollapseOnBlur, er, B]),
+        D && !U && F.canCollapseOnBlur && er();
+    }, [D, ei, F.canCollapseOnBlur, er, U]),
     a.useEffect(() => {
         w &&
             (0, E.dA)({

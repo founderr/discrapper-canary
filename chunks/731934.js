@@ -286,7 +286,7 @@ let L = () => {
                   ]
               });
     },
-    B = () => {
+    U = () => {
         let e = (0, R.mq)(A.ne.PENDING),
             t = (0, E.o)(h.Z.Messages.FAMILY_CENTER_PENDING_REQUESTS_TITLE_TEEN.format({ count: e.length }), h.Z.Messages.FAMILY_CENTER_PENDING_REQUESTS_TITLE_PARENT.format({ count: e.length }));
         return 0 === e.length
@@ -301,6 +301,6 @@ t.Z = () => {
     let e = (0, I.Z)();
     return (0, s.jsxs)('div', {
         className: S.container,
-        children: [e ? (0, s.jsx)(O, {}) : (0, s.jsx)(v, {}), (0, s.jsx)(L, {}), (0, s.jsx)(B, {}), (0, s.jsx)(Z, {}), (0, s.jsx)(D, {})]
+        children: [e ? (0, s.jsx)(O, {}) : (0, s.jsx)(v, {}), (0, s.jsx)(L, {}), (0, s.jsx)(U, {}), (0, s.jsx)(Z, {}), (0, s.jsx)(D, {})]
     });
 };

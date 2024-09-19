@@ -34,14 +34,14 @@ t.Z = (e) => {
         { analyticsLocations: P } = (0, u.ZP)(_.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
         [L, Z] = a.useState(!1),
         D = (0, E.ZP)('perks-discoverability'),
-        B = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
-        U = (0, C.mN)();
+        U = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
+        B = (0, C.mN)();
     return (
         v === I.mJ.DEFAULT ? ((t = A.Z.Messages.MARKETING_PAGE_CAROUSEL_TITLE), (n = A.Z.Messages.NITRO_HOME_ENJOY_UPDATED_DISCORD)) : ((t = A.Z.Messages.NITRO_HOME_ENJOY_UPDATED_DISCORD), (n = A.Z.Messages.MARKETING_PAGE_CAROUSEL_TITLE)),
         (0, s.jsx)(c.AdvancedScrollerAuto, {
             className: i()(f.allPerksScroller, {
                 [f.open]: r,
-                [f.openCloseReduceMotion]: B
+                [f.openCloseReduceMotion]: U
             }),
             ref: b,
             children: (0, s.jsx)('div', {
@@ -76,7 +76,7 @@ t.Z = (e) => {
                                         variant: N.R0.CARD_CAROUSEL_FIRST_ROW,
                                         shopMarketingVariation: D,
                                         tileOrderVariant: v,
-                                        isPremiumSubscriber: U,
+                                        isPremiumSubscriber: B,
                                         isFullScreen: x
                                     }),
                                     cardType: N.R0.CARD_CAROUSEL_FIRST_ROW
@@ -94,7 +94,7 @@ t.Z = (e) => {
                                         variant: N.R0.CARD_CAROUSEL_SECOND_ROW,
                                         shopMarketingVariation: D,
                                         tileOrderVariant: v,
-                                        isPremiumSubscriber: U,
+                                        isPremiumSubscriber: B,
                                         isFullScreen: x
                                     }),
                                     cardType: N.R0.CARD_CAROUSEL_SECOND_ROW
@@ -112,7 +112,7 @@ t.Z = (e) => {
                                         variant: N.R0.CARD_CAROUSEL_THIRD_ROW,
                                         shopMarketingVariation: D,
                                         tileOrderVariant: v,
-                                        isPremiumSubscriber: U,
+                                        isPremiumSubscriber: B,
                                         isFullScreen: x
                                     }),
                                     cardType: N.R0.CARD_CAROUSEL_THIRD_ROW

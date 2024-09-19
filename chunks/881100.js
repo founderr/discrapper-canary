@@ -35,8 +35,8 @@ var s = n(399606),
     L = n(334347),
     Z = n(943734),
     D = n(603076),
-    B = n(472656),
-    U = n(912429),
+    U = n(472656),
+    B = n(912429),
     j = n(772969),
     G = n(926262);
 let w = (e, t, n) => ((0, a.wj)(e) ? t : n),
@@ -103,7 +103,7 @@ let w = (e, t, n) => ((0, a.wj)(e) ? t : n),
             moreGuilds: {
                 title: E.Z.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_TITLE,
                 description: E.Z.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_DESCRIPTION,
-                imageSource: w(n, m, B),
+                imageSource: w(n, m, U),
                 imageClassName: t.moreGuildsImage
             },
             moreGuildsAlt: {
@@ -128,19 +128,19 @@ let w = (e, t, n) => ((0, a.wj)(e) ? t : n),
             stickers: {
                 title: E.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE_OLD,
                 description: E.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_DESCRIPTION,
-                imageSource: w(n, S, U),
+                imageSource: w(n, S, B),
                 imageClassName: t.stickersImage
             },
             stickersBurst: {
                 title: E.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE,
                 description: E.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_DESCRIPTION,
-                imageSource: w(n, S, U),
+                imageSource: w(n, S, B),
                 imageClassName: t.stickersImage
             },
             stickersPerkDiscoverability: {
                 title: E.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE,
                 description: E.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_LONG_DESCRIPTION,
-                imageSource: w(n, S, U),
+                imageSource: w(n, S, B),
                 imageClassName: t.stickersImage
             },
             streaming: {

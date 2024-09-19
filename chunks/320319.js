@@ -36,7 +36,7 @@ let v = {
         let { name: t, canReveal: n = !0, dismissibleContentType: r, forceShadow: N, cardType: f, confettiCanvas: h } = e,
             Z = null == e ? void 0 : e.onCtaClick,
             D = (0, c.e7)([u.Z], () => u.Z.useReducedMotion),
-            [B, U] = a.useState(!1),
+            [U, B] = a.useState(!1),
             [j, G] = a.useState(!1),
             w = (0, m.yQ)(),
             y = (0, m.IB)(),
@@ -88,8 +88,8 @@ let v = {
         };
         let es = z !== r || null == r || j || r === d.z.TENURE_REWARD_REDEEMABLE_CONFETTI;
         return (a.useEffect(() => {
-            D && B && (G(!0), R.default.track(M.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }), null != r && Q(x.L.TAKE_ACTION));
-        }, [D, B, r, t, Q]),
+            D && U && (G(!0), R.default.track(M.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }), null != r && Q(x.L.TAKE_ACTION));
+        }, [D, U, r, t, Q]),
         (0, E.Z)(
             {
                 type: o.ImpressionTypes.VIEW,
@@ -176,14 +176,14 @@ let v = {
                   : (0, s.jsx)('div', {
                         className: i()(O.flipCardContainer, { [O.forceShadow]: N }),
                         children: (0, s.jsxs)(_.Clickable, {
-                            onClick: () => U(!0),
+                            onClick: () => B(!0),
                             className: i()(O.flipCard, O.clickable, {
-                                [O.flipped]: B,
-                                [O.partialFlipCard]: !j && !B,
+                                [O.flipped]: U,
+                                [O.partialFlipCard]: !j && !U,
                                 [O.reducedMotion]: D
                             }),
                             onTransitionEnd: (e) => {
-                                if (!!B && 'transform' === e.propertyName && !!e.target.classList.contains(O.flipCard)) G(!0), R.default.track(M.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }), null != r && Q(x.L.TAKE_ACTION);
+                                if (!!U && 'transform' === e.propertyName && !!e.target.classList.contains(O.flipCard)) G(!0), R.default.track(M.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }), null != r && Q(x.L.TAKE_ACTION);
                             },
                             children: [
                                 (0, s.jsx)('div', {
@@ -208,7 +208,7 @@ let v = {
                                 (0, s.jsx)('div', {
                                     className: O.flipCardButtonContainer,
                                     children: (0, s.jsx)(_.Button, {
-                                        onClick: () => U(!0),
+                                        onClick: () => B(!0),
                                         children: b.Z.Messages.REVEAL
                                     })
                                 })

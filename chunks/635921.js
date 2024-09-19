@@ -78,8 +78,8 @@ t.Z = (e) => {
         L = (0, R.Vi)(),
         Z = (0, i.e7)([_.Z], () => _.Z.affinities),
         D = (0, I.Z)(),
-        { enabled: B } = T._.useExperiment({ location: 'HeroHeading' }, { autoTrackExposure: !1 }),
-        U = b === A.EZ.ApplicationStoreHome && null != D && B,
+        { enabled: U } = T._.useExperiment({ location: 'HeroHeading' }, { autoTrackExposure: !1 }),
+        B = b === A.EZ.ApplicationStoreHome && null != D && U,
         j = Z.length > 0;
     return (0, s.jsx)(c.Gt, {
         value: O,
@@ -98,7 +98,7 @@ t.Z = (e) => {
                             color: 'always-white',
                             children: f.Z.Messages.PREMIUM_MARKETING_HERO_HEADER_TITLE_V3
                         }),
-                        U
+                        B
                             ? (0, s.jsx)(N.Z, { referrer: D })
                             : j
                               ? (0, s.jsx)('div', {
@@ -126,7 +126,7 @@ t.Z = (e) => {
                                     buttonClassName: a
                                 }),
                         j &&
-                            !U &&
+                            !B &&
                             (0, s.jsx)(x, {
                                 variant: 'text-md/normal',
                                 withBottomMargin: !1
