@@ -29,12 +29,12 @@ class _ {
     }
     handleSearchSuccess(e) {
         let { total: t, guilds: n } = e;
-        (this.error = null), (this.isFetching = !1), (this.isInitialFetchComplete = !0), (this.total = t);
+        (this.error = null), (this.isFetching = !1), (this.isInitialFetchComplete = !0), (this.lastFetchTimestamp = Date.now()), (this.total = t);
         let i = [...this.guildIds];
         n.forEach((e) => i.push(e.id)), (this.guildIds = i), (this.offset = i.length);
     }
     constructor() {
-        o(this, 'guildIds', []), o(this, 'error', null), o(this, 'offset', null), o(this, 'total', null), o(this, 'isFetching', !1), o(this, 'isInitialFetchComplete', !1);
+        o(this, 'guildIds', []), o(this, 'error', null), o(this, 'offset', null), o(this, 'total', null), o(this, 'isFetching', !1), o(this, 'isInitialFetchComplete', !1), o(this, 'lastFetchTimestamp', null);
     }
 }
 function E(e) {
@@ -62,6 +62,12 @@ class m extends (i = a.ZP.Store) {
     getOffset(e) {
         return h(e, (e) => e.offset);
     }
+    getTotal(e) {
+        return h(e, (e) => e.total);
+    }
+    getLastFetchTimestamp(e) {
+        return h(e, (e) => e.lastFetchTimestamp);
+    }
     getAlgoliaSearchIndex() {
         return u;
     }
@@ -70,17 +76,17 @@ class m extends (i = a.ZP.Store) {
     }
 }
 o(m, 'displayName', 'GlobalDiscoveryServersSearchResultsStore'),
-    new m(s.Z, {
+    (t.Z = new m(s.Z, {
         CONNECTION_OPEN: function () {
-            c.clear(), (u = null);
+            c.clear(), d.clear(), (u = null);
         },
         GLOBAL_DISCOVERY_SERVERS_SEARCH_INITIALIZED: function (e) {
             let { algoliaSearchIndex: t } = e;
             u = t;
         },
         GLOBAL_DISCOVERY_SERVERS_SEARCH_START: function (e) {
-            let { id: t } = e;
-            E(t).handleSearchStart();
+            let { id: t, reset: n } = e;
+            n && c.delete(t), E(t).handleSearchStart();
         },
         GLOBAL_DISCOVERY_SERVERS_SEARCH_SUCCESS: function (e) {
             let { id: t, total: n, guilds: i } = e;
@@ -100,4 +106,4 @@ o(m, 'displayName', 'GlobalDiscoveryServersSearchResultsStore'),
             let { ids: t } = e;
             return t.reduce((e, t) => !!c.delete(t) || e, !1);
         }
-    });
+    }));

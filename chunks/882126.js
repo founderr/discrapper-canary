@@ -1,59 +1,58 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return E;
     }
 });
 var i = n(735250),
     a = n(470079),
-    s = n(143927),
-    r = n(731965),
-    l = n(442837),
-    o = n(89182),
-    c = n(706454),
-    d = n(859921),
-    u = n(416771),
-    _ = n(731455),
-    E = n(689938);
-function h(e) {
+    s = n(442837),
+    r = n(89182),
+    l = n(706454),
+    o = n(762692),
+    c = n(164991),
+    d = n(726115),
+    u = n(731455),
+    _ = n(689938);
+function E(e) {
     let { loadId: t } = e,
-        n = (0, l.e7)([c.default], () => c.default.locale),
-        h = (0, d.B)((e) => {
-            let { searchLanguageCode: t } = e;
-            return t;
-        }, s.Z),
-        m = null != h ? h : n,
-        I = a.useCallback(
+        n = (0, s.e7)([l.default], () => l.default.locale),
+        E = (0, c.Dm)(),
+        h = null != E ? E : n,
+        m = a.useCallback(
             (e) => {
-                (0, r.j)(() => d.B.setState({ searchLanguageCode: e }));
-                let n = d.B.getState();
-                (0, u.y)({
-                    loadId: t,
-                    categoryId: n.searchCategoryId,
-                    offset: 0,
-                    searchQuery: n.searchQuery,
-                    languageCode: e
-                });
+                (0, c.LD)({ languageCode: e });
+                let n = (0, c.WF)();
+                o.Z.clearAlgoliaSearchResults(n);
+                let i = (0, c.uP)();
+                (0, d.II)({ searchQuery: i }),
+                    (0, d.LO)({
+                        loadId: t,
+                        categoryId: (0, c.lx)(),
+                        searchQuery: (0, c.uP)(),
+                        languageCode: e,
+                        offset: 0
+                    });
             },
             [t]
         ),
-        g = a.useMemo(
+        I = a.useMemo(
             () =>
-                _.dU.map((e) => ({
+                u.dU.map((e) => ({
                     id: e.code,
                     label: e.name
                 })),
             []
         ),
-        p = a.useMemo(() => {
+        g = a.useMemo(() => {
             var e;
-            let t = _.dU.find((e) => e.code === m);
-            return null !== (e = null == t ? void 0 : t.name) && void 0 !== e ? e : E.Z.Messages.en;
-        }, [m]);
-    return (0, i.jsx)(o.Z, {
-        items: g,
-        title: p,
-        onSelect: I,
-        selected: m,
-        'aria-label': E.Z.Messages.GLOBAL_DISCOVERY_SERVERS_LANGUAGE_FILTER
+            let t = u.dU.find((e) => e.code === h);
+            return null !== (e = null == t ? void 0 : t.name) && void 0 !== e ? e : _.Z.Messages.en;
+        }, [h]);
+    return (0, i.jsx)(r.Z, {
+        items: I,
+        title: g,
+        onSelect: m,
+        selected: h,
+        'aria-label': _.Z.Messages.GLOBAL_DISCOVERY_SERVERS_LANGUAGE_FILTER
     });
 }

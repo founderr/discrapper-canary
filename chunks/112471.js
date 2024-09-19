@@ -6,25 +6,24 @@ n.d(t, {
     n(47120),
     n(653041);
 var i = n(470079),
-    a = n(143927),
-    s = n(442837),
-    r = n(36867),
-    l = n(683301),
-    o = n(859921);
+    a = n(442837),
+    s = n(537883),
+    r = n(356164),
+    l = n(164991),
+    o = n(726115);
 function c() {
-    let e = (0, o.B)((e) => {
-            let { searchResultsQuery: t } = e;
-            return t;
-        }, a.Z),
-        t = (0, o.B)((e) => {
-            let { initialSearchCategoryId: t } = e;
-            return t;
-        }, a.Z),
-        n = (0, s.e7)([r.Z], () => {
-            var n, i;
-            return null != t && null !== (i = null === (n = r.Z.getResults(e, t)) || void 0 === n ? void 0 : n.total) && void 0 !== i ? i : 0;
+    let e = (0, l.$G)(),
+        t = (0, l.D1)(),
+        n = (0, a.e7)([r.Z], () => {
+            var n;
+            if (null == t) return 0;
+            let i = (0, o.a1)({
+                categoryId: t,
+                query: e
+            });
+            return null !== (n = r.Z.getTotal(i)) && void 0 !== n ? n : 0;
         }),
-        c = (0, s.e7)([l.ZP], () => l.ZP.getTopCategoryCounts(e));
+        c = (0, a.e7)([s.Z], () => s.Z.getVisibleTabs());
     return i.useMemo(() => {
         if (null == c) return null;
         if (null == t) return c;

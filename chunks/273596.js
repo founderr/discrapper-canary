@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return O;
+        return x;
     }
 }),
     n(47120),
@@ -12,44 +12,44 @@ var i = n(735250),
     l = n(260034),
     o = n(481060),
     c = n(393903),
-    d = n(410030),
-    u = n(117496),
-    _ = n(225784),
-    E = n(229765),
-    h = n(626135),
-    m = n(900849),
-    I = n(859921),
+    d = n(117496),
+    u = n(229765),
+    _ = n(626135),
+    E = n(823379),
+    h = n(900849),
+    m = n(356164),
+    I = n(164991),
     g = n(28494),
     p = n(746728),
     T = n(140700),
     S = n(665807),
     f = n(882126),
-    C = n(689938),
-    N = n(179596);
-let A = 56,
-    v = 94,
-    L = Object.freeze({
+    C = n(962486),
+    N = n(689938),
+    A = n(179596);
+let v = 56,
+    L = 94,
+    Z = Object.freeze({
         top: 0,
         bottom: 0,
         left: 32,
         right: 202
     }),
-    Z = Object.freeze({
+    R = Object.freeze({
         top: 0,
         bottom: 0,
         left: 32,
         right: 32
     }),
-    R = r().throttle(m.c6, 1000, {
+    O = r().throttle(h.c6, 1000, {
         leading: !1,
         trailing: !0
     });
-function O(e) {
+function x(e) {
     let { loadId: t, onGuildCardSeen: n, onGuildCardClick: r } = e,
-        m = (0, d.ZP)(),
-        { guilds: O, loading: x, searchResultsQuery: b, loadMore: P, searchCategoryId: M } = (0, g.f)({ loadId: t }),
-        D = a.useContext(h.AnalyticsContext),
-        [y, j] = a.useState((0, u.P)()),
+        { guildIds: h, loading: x, searchResultsQuery: b, loadMore: P, searchCategoryId: M } = (0, g.f)({ loadId: t }),
+        D = a.useContext(_.AnalyticsContext),
+        [y, j] = a.useState((0, d.P)()),
         [U, G] = a.useState(!0),
         w = a.useRef(U),
         [k, B] = a.useState(3),
@@ -64,23 +64,23 @@ function O(e) {
             i !== H.current && ((H.current = i), B(i));
         });
     a.useEffect(() => {
-        j((0, u.P)());
+        j((0, d.P)());
     }, [b]),
         a.useEffect(() => {
-            R({
+            O({
                 loadId: t,
                 searchId: y,
                 query: b,
-                guildResults: O,
+                guildResults: h.map(m.Z.getGuild).filter(E.lm),
                 analyticsContext: D,
                 categoryId: M,
                 isTagSearch: !1
             });
-        }, [D, O, t, M, y, b]);
+        }, [D, h, t, M, y, b]);
     let F = a.useCallback((e) => n(e, M), [n, M]),
-        Y = a.useMemo(() => (x ? [O.length, 0] : [O.length]), [O.length, x]),
-        z = 0 === O.length && !x,
-        W = a.useCallback(
+        Y = a.useMemo(() => (x ? [h.length, 0] : [h.length]), [h.length, x]),
+        W = 0 === h.length && !x,
+        z = a.useCallback(
             (e, n, a) => {
                 switch (e) {
                     case 0:
@@ -94,51 +94,51 @@ function O(e) {
                                 children: [
                                     (0, i.jsx)(l.X, {
                                         variant: 'heading-lg/semibold',
-                                        className: N.heading,
-                                        children: C.Z.Messages.GLOBAL_DISCOVERY_SERVERS_SEARCH_RESULTS_HEADER.format({ query: b })
+                                        className: A.heading,
+                                        children: N.Z.Messages.GLOBAL_DISCOVERY_SERVERS_SEARCH_RESULTS_HEADER.format({ query: b })
                                     }),
                                     !U &&
                                         (0, i.jsxs)('div', {
-                                            className: N.headingFilters,
+                                            className: A.headingFilters,
                                             children: [(0, i.jsx)(T.Z, { loadId: t }), (0, i.jsx)(f.Z, { loadId: t })]
                                         }),
-                                    z && (0, i.jsx)(S.Z, { loadId: t })
+                                    W && (0, i.jsx)(S.Z, { loadId: t })
                                 ]
                             },
                             a
                         );
                     case 1:
-                        return (0, i.jsx)(o.Spinner, { className: N.spinner }, a);
+                        return (0, i.jsx)(o.Spinner, { className: A.spinner }, a);
                 }
             },
-            [z, U, t, b]
+            [W, U, t, b]
         ),
         K = a.useCallback(
             (e) => {
                 switch (e) {
                     case 0:
-                        let t = U ? A : v;
-                        return z ? t + 400 : t;
+                        let t = U ? v : L;
+                        return W ? t + 400 : t;
                     case 1:
                         return 120;
                     default:
                         throw Error('[getSectionHeight] Failed for section: '.concat(e));
                 }
             },
-            [z, U]
+            [W, U]
         ),
         q = a.useCallback(
             (e, t) => {
                 switch (e) {
                     case 0:
-                        return O[t].id;
+                        return h[t];
                     case 1:
                         return 'loading';
                     default:
                         throw Error('[getItemKey] Failed for section: '.concat(e));
                 }
             },
-            [O]
+            [h]
         ),
         Q = a.useCallback((e) => {
             switch (e) {
@@ -155,35 +155,32 @@ function O(e) {
                 var i, a;
                 r(e, t, n);
                 let s = null === (a = $.current) || void 0 === a ? void 0 : null === (i = a.getScrollerState()) || void 0 === i ? void 0 : i.scrollTop;
-                null != s && I.B.setState({ searchScrollPosition: s });
+                null != s && (0, I.LD)({ scrollPosition: s });
             },
             [r]
         ),
         J = a.useCallback(
             (e, t, n, a) => {
                 if (0 === e) {
-                    let e = O[t];
+                    let e = h[t];
                     return (0, i.jsx)(
                         'div',
                         {
                             style: n,
-                            children: (0, i.jsx)(
-                                _.Z,
-                                {
-                                    guild: e,
-                                    onView: (e) => X(e, t, M),
-                                    onGuildCardSeen: F,
-                                    theme: m
-                                },
-                                e.id
-                            )
+                            children: (0, i.jsx)(C.v, {
+                                guildId: e,
+                                onGuildCardClick: X,
+                                onGuildCardSeen: F,
+                                index: t,
+                                categoryId: M
+                            })
                         },
                         a
                     );
                 }
                 return null;
             },
-            [O, X, F, M, m]
+            [h, X, F, M]
         ),
         $ = a.useRef(null);
     a.useEffect(() => {
@@ -191,11 +188,11 @@ function O(e) {
         return () => {
             var t;
             let n = null == e ? void 0 : null === (t = e.getScrollerState()) || void 0 === t ? void 0 : t.scrollTop;
-            null != n && I.B.setState({ searchScrollPosition: n });
+            null != n && (0, I.LD)({ scrollPosition: n });
         };
     }, []),
         a.useLayoutEffect(() => {
-            let { searchScrollPosition: e } = I.B.getState();
+            let e = (0, I.BK)();
             null != e &&
                 setTimeout(() => {
                     var t;
@@ -205,7 +202,7 @@ function O(e) {
                             to: e,
                             animate: !1,
                             callback: () => {
-                                I.B.setState({ searchScrollPosition: null });
+                                (0, I.LD)({ scrollPosition: null });
                             }
                         });
                 });
@@ -221,24 +218,24 @@ function O(e) {
                 }, 250),
             [P]
         ),
-        et = U ? L : Z;
+        et = U ? Z : R;
     return (0, i.jsxs)('div', {
-        className: N.container,
+        className: A.container,
         ref: V,
         children: [
-            (0, i.jsx)(E.KY, {
+            (0, i.jsx)(u.KY, {
                 location: 'global_discovery_search',
                 query: b
             }),
             (0, i.jsx)(o.MasonryList, {
                 ref: $,
-                className: N.masonryList,
+                className: A.masonryList,
                 sections: Y,
                 columns: k,
                 itemGutter: 16,
                 padding: et,
                 renderItem: J,
-                renderSection: W,
+                renderSection: z,
                 getSectionHeight: K,
                 getItemKey: q,
                 getItemHeight: Q,
@@ -247,13 +244,13 @@ function O(e) {
                 renderAccessory: (e) =>
                     U
                         ? (0, i.jsx)('div', {
-                              className: N.sidebar,
+                              className: A.sidebar,
                               style: { height: e },
                               children: (0, i.jsxs)('div', {
-                                  className: N.sidebarContent,
+                                  className: A.sidebarContent,
                                   children: [
                                       (0, i.jsx)('div', {
-                                          className: N.sidebarLanguageSelect,
+                                          className: A.sidebarLanguageSelect,
                                           children: (0, i.jsx)(f.Z, { loadId: t })
                                       }),
                                       (0, i.jsx)(p.Z, { loadId: t })
