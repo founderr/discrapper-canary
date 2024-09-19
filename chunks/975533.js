@@ -61,7 +61,11 @@ let L = {
         isPressed: !1
     },
     [A.kg4.TOGGLE_MUTE]: {
-        onTrigger: () => a.Z.toggleSelfMute({ usedKeybind: !0 }),
+        onTrigger: () =>
+            a.Z.toggleSelfMute({
+                usedKeybind: !0,
+                location: 'Custom Keybind'
+            }),
         keyEvents: {
             keyup: !0,
             keydown: !1

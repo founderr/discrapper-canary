@@ -124,7 +124,10 @@ class M extends s.PureComponent {
         super(...e),
             b(this, 'handleToggleSelfMute', () => {
                 let { context: e } = this.props;
-                d.Z.toggleSelfMute({ context: e });
+                d.Z.toggleSelfMute({
+                    context: e,
+                    location: 'Overlay Controls'
+                });
             }),
             b(this, 'handleToggleSelfDeaf', () => {
                 let { context: e } = this.props;

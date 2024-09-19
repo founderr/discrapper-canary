@@ -115,7 +115,11 @@ function g(e) {
                   {
                       id: 'mute',
                       label: _.Z.Messages.SOUND_MUTE,
-                      action: () => o.Z.toggleSelfMute({ context: n }),
+                      action: () =>
+                          o.Z.toggleSelfMute({
+                              context: n,
+                              location: 'User Context Menu'
+                          }),
                       checked: A
                   },
                   'self-mute'

@@ -95,13 +95,14 @@ function T() {
               .then(() => !0));
 }
 function S(e) {
-    let { usedKeybind: t = !1 } = e,
-        n = l.Z.getKeybindForAction(_.kg4.TOGGLE_MUTE, !1, !0);
+    let { usedKeybind: t = !1, location: n } = e,
+        r = l.Z.getKeybindForAction(_.kg4.TOGGLE_MUTE, !1, !0);
     c.default.track(_.rMx.INPUT_MUTE_TOGGLED, {
         enabled: !o.Z.isSelfMute(),
-        custom_keybind_assigned: null != n && n.id !== l.E.id,
+        custom_keybind_assigned: null != r && r.id !== l.E.id,
         used_keybind: t,
         app_in_focus: u.Z.isFocused(),
-        overlay_activated: null != (0, d.Z)()
+        overlay_activated: null != (0, d.Z)(),
+        location: n
     });
 }

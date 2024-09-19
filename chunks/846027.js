@@ -32,10 +32,14 @@ let h = {
 t.Z = {
     enable: p,
     toggleSelfMute() {
-        let { context: e = _.Yn.DEFAULT, syncRemote: t = !0, usedKeybind: n = !1, playSoundEffect: i = !0 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        let { context: e = _.Yn.DEFAULT, syncRemote: t = !0, usedKeybind: n = !1, playSoundEffect: i = !0, location: a } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
         return I()
             ? Promise.resolve()
-            : (m({ usedKeybind: n }), o.Z.isEnabled())
+            : (m({
+                    usedKeybind: n,
+                    location: a
+                }),
+                o.Z.isEnabled())
               ? r.Z.dispatch({
                     type: 'AUDIO_TOGGLE_SELF_MUTE',
                     context: e,
