@@ -90,83 +90,76 @@ function S(e) {
 function f() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
         t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        n = p(),
-        { savedGuildIds: a, loaded: s } = (0, l.cj)([_.Z], () => ({
-            savedGuildIds: _.Z.getSavedGuildIds(),
-            loaded: _.Z.hasLoadedStaticClanDiscovery()
-        })),
-        r = (0, d.iN)('clan_discovery'),
-        o = (0, l.e7)([_.Z], () => _.Z.getSearchResult(n), [n]),
-        c = (0, l.Wu)([_.Z], () => (t && null != a ? a.map((e) => _.Z.getGuildProfile(e)).filter(u.lm) : []), [t, a]),
-        E = i.useMemo(() => {
-            if ((0, I.Pw)(o)) {
-                let t = o.items;
+        n = (0, m.GN)((e) => e.savedGuildIds, r.Z),
+        a = p(),
+        s = (0, l.e7)([_.Z], () => _.Z.hasLoadedStaticClanDiscovery()),
+        o = (0, d.iN)('clan_discovery'),
+        c = (0, l.e7)([_.Z], () => _.Z.getSearchResult(a), [a]),
+        E = (0, l.Wu)([_.Z], () => (t && null != n ? n.map((e) => _.Z.getGuildProfile(e)).filter(u.lm) : []), [t, n]),
+        h = i.useMemo(() => {
+            if ((0, I.Pw)(c)) {
+                let t = c.items;
                 return null != e ? t.slice(0, e) : t;
             }
             return [];
-        }, [e, o]);
+        }, [e, c]);
     return t
         ? {
-              loaded: s || r,
-              clans: c,
-              searchCriteria: n,
+              loaded: s || o,
+              clans: E,
+              searchCriteria: a,
               searchResult: {
-                  items: c,
+                  items: E,
                   loadedAt: Date.now(),
                   status: 'loaded',
-                  guildIds: a
+                  guildIds: n
               }
           }
         : {
-              loaded: s || r,
-              clans: E,
-              searchCriteria: n,
-              searchResult: o
+              loaded: s || o,
+              clans: h,
+              searchCriteria: a,
+              searchResult: c
           };
 }
 function C(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         { updatePaginationSettings: n, currentColumnCount: a, pageSize: s, chunkedPages: o, currentPage: c, fetchableGuildIds: d } = (0, h.a)(),
-        g = c - 1,
-        T = (0, m.GN)((e) => e.loadingGameApplication, r.Z),
-        f = (0, l.e7)([_.Z], () => _.Z.getSavedGuildIds()),
-        C = (0, m.GN)((e) => e.savedGuildIds, r.Z),
-        N = p(),
-        { searchResult: A, hasError: v } = (0, l.cj)(
+        E = c - 1,
+        { loadingGameApplication: g, savedGuildIds: T } = (0, m.GN)(
+            (e) => ({
+                savedGuildIds: e.savedGuildIds,
+                loadingGameApplication: e.loadingGameApplication
+            }),
+            r.Z
+        ),
+        f = p(),
+        { searchResult: C, hasError: N } = (0, l.cj)(
             [_.Z],
             () => ({
-                searchResult: _.Z.getSearchResult(N),
+                searchResult: _.Z.getSearchResult(f),
                 hasError: _.Z.hasError()
             }),
-            [N]
+            [f]
         );
     i.useEffect(() => {
         n(e, h.$, { pageMemoryEnabled: !0 });
     }, [e, n]),
         S(d),
-        i.useEffect(() => {
-            (0, E.IS)();
-        }, []),
-        S(C),
-        !(function () {
-            let e = (0, l.e7)([_.Z], () => !_.Z.hasLoadedSavedGuilds());
-            i.useEffect(() => {
-                e && (0, E.bO)();
-            }, [e]);
-        })();
-    let L = i.useMemo(() => {
+        S(T);
+    let A = i.useMemo(() => {
             var e;
-            return null !== (e = t ? f : o[g]) && void 0 !== e ? e : [];
-        }, [f, o, g, t]),
-        Z = (0, l.Wu)([_.Z], () => L.map((e) => _.Z.getGuildProfile(e)).filter(u.lm), [L]),
-        R = L.length === Z.length || t,
-        O = Z.length === s || R,
-        x = (0, I.Pw)(A);
+            return null !== (e = t ? T : o[E]) && void 0 !== e ? e : [];
+        }, [T, o, E, t]),
+        v = (0, l.Wu)([_.Z], () => A.map((e) => _.Z.getGuildProfile(e)).filter(u.lm), [A]),
+        L = A.length === v.length || t,
+        Z = v.length === s || L,
+        R = (0, I.Pw)(C);
     return {
-        loaded: e === a && x && O && !T,
-        clans: Z,
-        searchCriteria: N,
-        searchResult: A,
-        hasError: v
+        loaded: e === a && R && Z && !g,
+        clans: v,
+        searchCriteria: f,
+        searchResult: C,
+        hasError: N
     };
 }

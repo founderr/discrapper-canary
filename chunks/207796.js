@@ -1,12 +1,12 @@
 n.d(t, {
     Ce: function () {
-        return m;
+        return T;
     },
     GN: function () {
         return f;
     },
     PJ: function () {
-        return p;
+        return I;
     },
     fH: function () {
         return h;
@@ -14,8 +14,11 @@ n.d(t, {
     hz: function () {
         return i;
     },
+    qQ: function () {
+        return p;
+    },
     t1: function () {
-        return I;
+        return m;
     },
     v0: function () {
         return r;
@@ -112,7 +115,12 @@ function h(e, t) {
         });
     });
 }
-function p() {
+function p(e, t) {
+    let n = f.getState().savedGuildIds,
+        r = t ? [...n, e] : n.filter((t) => t !== e);
+    (0, d.j)(() => f.setState({ savedGuildIds: r }));
+}
+function I() {
     (0, d.j)(() => {
         f.setState({
             completedNux: !1,
@@ -128,7 +136,7 @@ function p() {
         });
     });
 }
-function I(e) {
+function m(e) {
     var t;
     let n = e.selectedGames,
         r = null !== (t = e.selectedPlaystyle) && void 0 !== t ? t : void 0;
@@ -138,7 +146,7 @@ function I(e) {
         traits: e.selectedTraits
     };
 }
-function m() {
+function T() {
     (0, d.j)(() => {
         f.setState({ dismissedPilotAdminNux: !0 }), h('discovery');
     });
