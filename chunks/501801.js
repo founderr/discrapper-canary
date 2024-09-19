@@ -14,8 +14,8 @@ var s = E(735250),
     n = E(470079),
     t = E(120356),
     r = E.n(t),
-    a = E(392711),
-    T = E.n(a),
+    T = E(392711),
+    a = E.n(T),
     I = E(913527),
     l = E.n(I),
     o = E(481060),
@@ -52,69 +52,63 @@ function C(e) {
           });
 }
 function f(e) {
-    let { changeItem: _, subChanges: E, changeNumber: n, log: t, oldValue: r, newValue: a, change: T } = e,
+    let { changeItem: _, subChanges: E, changeNumber: n, log: t, oldValue: r, newValue: T, change: a } = e,
         I = null;
-    if (('string' == typeof _ && (I = _), null != _ && 'object' == typeof _)) {
-        if (null == _.format) {
-            let e = _[T.newValue];
-            null == e && null != _[U.Et] ? (_ = _[U.Et]) : null != e && (_ = e);
-        }
-        if (null != _ && null != _.format) {
-            var l, i;
-            I = _.format({
-                user: t.user,
-                target: t.target,
-                oldValue: r,
-                newValue: a,
-                count: Array.isArray(a) ? a.length : null,
-                subtarget: null !== (i = null !== (l = t.options.subtarget) && void 0 !== l ? l : T.subtarget) && void 0 !== i ? i : null,
-                newColorHook: (e, _) =>
-                    (0, s.jsx)(
-                        'div',
-                        {
-                            className: M.colorHook,
-                            style: { backgroundColor: T.newValue }
-                        },
-                        _
-                    ),
-                oldColorHook: (e, _) =>
-                    (0, s.jsx)(
-                        'div',
-                        {
-                            className: M.colorHook,
-                            style: { backgroundColor: T.oldValue }
-                        },
-                        _
-                    ),
-                oldTagHook: (e, _) =>
-                    (0, s.jsx)(
-                        N.Z,
-                        {
-                            tag: r,
-                            size: N.Z.Sizes.SMALL
-                        },
-                        _
-                    ),
-                newTagHook: (e, _) =>
-                    (0, s.jsx)(
-                        N.Z,
-                        {
-                            tag: a,
-                            size: N.Z.Sizes.SMALL
-                        },
-                        _
-                    ),
-                oldEmojiHook: (e, _) => (0, s.jsx)(A.Z, { emojiId: r }, _),
-                newEmojiHook: (e, _) => (0, s.jsx)(A.Z, { emojiId: a }, _),
-                applicationHook: (e, _) => {
-                    var E;
-                    return (0, s.jsx)(C, { applicationId: null !== (E = null == r ? void 0 : r.application_id) && void 0 !== E ? E : null == a ? void 0 : a.application_id }, _);
-                }
-            });
-        } else I = _;
+    if (('string' == typeof _ && (I = _), null != _ && 'string' != typeof _ && null != _.format)) {
+        var l, i;
+        I = _.format({
+            user: t.user,
+            target: t.target,
+            oldValue: r,
+            newValue: T,
+            count: Array.isArray(T) ? T.length : null,
+            subtarget: null !== (i = null !== (l = t.options.subtarget) && void 0 !== l ? l : a.subtarget) && void 0 !== i ? i : null,
+            newColorHook: (e, _) =>
+                (0, s.jsx)(
+                    'div',
+                    {
+                        className: M.colorHook,
+                        style: { backgroundColor: a.newValue }
+                    },
+                    _
+                ),
+            oldColorHook: (e, _) =>
+                (0, s.jsx)(
+                    'div',
+                    {
+                        className: M.colorHook,
+                        style: { backgroundColor: a.oldValue }
+                    },
+                    _
+                ),
+            oldTagHook: (e, _) =>
+                (0, s.jsx)(
+                    N.Z,
+                    {
+                        tag: r,
+                        size: N.Z.Sizes.SMALL
+                    },
+                    _
+                ),
+            newTagHook: (e, _) =>
+                (0, s.jsx)(
+                    N.Z,
+                    {
+                        tag: T,
+                        size: N.Z.Sizes.SMALL
+                    },
+                    _
+                ),
+            oldEmojiHook: (e, _) => (0, s.jsx)(A.Z, { emojiId: r }, _),
+            newEmojiHook: (e, _) => (0, s.jsx)(A.Z, { emojiId: T }, _),
+            applicationHook: (e, _) => {
+                var E;
+                return (0, s.jsx)(C, { applicationId: null !== (E = null == r ? void 0 : r.application_id) && void 0 !== E ? E : null == T ? void 0 : T.application_id }, _);
+            }
+        });
     }
     return null == I
-        ? (console.warn('No change string for', T), null)
+        ? (console.warn('No change string for', a), null)
         : '' === I
           ? null
           : (0, s.jsxs)(
@@ -165,8 +159,8 @@ function f(e) {
 class p extends n.PureComponent {
     render() {
         var e, _;
-        let { actionType: E, targetType: n, action: t, themeOverride: a } = this.props,
-            T = null != a ? M['themeOverride'.concat((0, O.De)(a))] : null;
+        let { actionType: E, targetType: n, action: t, themeOverride: T } = this.props,
+            a = null != T ? M['themeOverride'.concat((0, O.De)(T))] : null;
         let I = r()(
             M.icon,
             g[E],
@@ -200,21 +194,21 @@ class p extends n.PureComponent {
                         [d.KFR.GUILD_SOUNDBOARD]: M.targetGuildSoundboard,
                         [d.KFR.VOICE_CHANNEL_STATUS]: M.targetChannel
                     }[e]),
-            T
+            a
         );
         return (0, s.jsx)('div', { className: I });
     }
 }
 function h(e) {
-    let { log: _, guild: E, onContentClick: t, className: a } = e,
+    let { log: _, guild: E, onContentClick: t, className: T } = e,
         I = n.useCallback(
             (e) => {
                 if (null == _.changes) return null;
                 let n = 0,
-                    I = T()
+                    I = a()
                         .flatten(
                             _.changes.map((t) => {
-                                let { oldValue: r, newValue: a } = t,
+                                let { oldValue: r, newValue: T } = t,
                                     I = null;
                                 if (
                                     (_.action === d.rsA.MEMBER_ROLE_UPDATE
@@ -284,11 +278,11 @@ function h(e) {
                                                     ? n
                                                     : null;
                                             })(t)),
-                                    (_.action === d.rsA.CHANNEL_UPDATE || _.action === d.rsA.CHANNEL_CREATE) && t.key === d.zUn.TYPE && (null != r && (r = (0, u.a5)({ type: r })), null != a && (a = (0, u.a5)({ type: a }))),
+                                    (_.action === d.rsA.CHANNEL_UPDATE || _.action === d.rsA.CHANNEL_CREATE) && t.key === d.zUn.TYPE && (null != r && (r = (0, u.a5)({ type: r })), null != T && (T = (0, u.a5)({ type: T }))),
                                     _.action === d.rsA.MEMBER_UPDATE && t.key === d.zUn.COMMUNICATION_DISABLED_UNTIL)
                                 ) {
-                                    if (null == (a = l()(a)) || !a.isValid()) return null;
-                                    a = a.calendar();
+                                    if (null == (T = l()(T)) || !T.isValid()) return null;
+                                    T = T.calendar();
                                 }
                                 (_.action === d.rsA.ONBOARDING_PROMPT_UPDATE || _.action === d.rsA.ONBOARDING_PROMPT_CREATE) &&
                                     t.key === d.zUn.OPTIONS &&
@@ -299,7 +293,7 @@ function h(e) {
                                                 let s = null != E ? (null === (_ = L.Z.getRole(E.id, e)) || void 0 === _ ? void 0 : _.name) : void 0;
                                                 return null == s ? null : '@'.concat(s);
                                             },
-                                            a = (e) => {
+                                            T = (e) => {
                                                 var _;
                                                 let E = null === (_ = D.Z.getChannel(e)) || void 0 === _ ? void 0 : _.name;
                                                 return null == E ? null : '#'.concat(E);
@@ -307,15 +301,15 @@ function h(e) {
                                             I = (e, E) => {
                                                 let { title: n, id: t } = E,
                                                     I = e.role_ids.map(r).filter(c.lm),
-                                                    l = e.channel_ids.map(a).filter(c.lm),
+                                                    l = e.channel_ids.map(T).filter(c.lm),
                                                     A = E.role_ids.map(r).filter(c.lm),
-                                                    i = E.channel_ids.map(a).filter(c.lm),
-                                                    N = T().difference(A, I),
-                                                    D = T().difference(I, A),
-                                                    L = T().difference(i, l),
-                                                    S = T().difference(l, i),
+                                                    i = E.channel_ids.map(T).filter(c.lm),
+                                                    N = a().difference(A, I),
+                                                    D = a().difference(I, A),
+                                                    L = a().difference(i, l),
+                                                    S = a().difference(l, i),
                                                     u = [];
-                                                return (!T().isEqual(e.title, E.title) && u.push('title'), !T().isEqual(e.description, E.description) && u.push('description'), 0 === N.length && 0 === D.length && 0 === L.length && 0 === S.length && 0 === u.length)
+                                                return (!a().isEqual(e.title, E.title) && u.push('title'), !a().isEqual(e.description, E.description) && u.push('description'), 0 === N.length && 0 === D.length && 0 === L.length && 0 === S.length && 0 === u.length)
                                                     ? null
                                                     : (0, s.jsxs)(
                                                           'li',
@@ -379,24 +373,24 @@ function h(e) {
                                                           t
                                                       );
                                             },
-                                            l = T().keyBy(null != t ? t : [], 'id'),
-                                            A = T().keyBy(null != n ? n : [], 'id'),
-                                            i = T()
+                                            l = a().keyBy(null != t ? t : [], 'id'),
+                                            A = a().keyBy(null != n ? n : [], 'id'),
+                                            i = a()
                                                 .difference(Object.keys(A), Object.keys(l))
                                                 .map((e) => A[e]),
-                                            N = T()
+                                            N = a()
                                                 .difference(Object.keys(l), Object.keys(A))
                                                 .map((e) => l[e]),
-                                            S = T().intersection(Object.keys(A), Object.keys(l));
+                                            S = a().intersection(Object.keys(A), Object.keys(l));
                                         return (0, s.jsxs)(
                                             'ul',
                                             {
                                                 className: M.onboardingChangeLogContainer,
                                                 children: [
                                                     i.map((e) => {
-                                                        let { role_ids: E, channel_ids: n, title: t, id: T } = e,
+                                                        let { role_ids: E, channel_ids: n, title: t, id: a } = e,
                                                             I = (null != E ? E : []).map(r).filter(c.lm),
-                                                            l = (null != n ? n : []).map(a).filter(c.lm);
+                                                            l = (null != n ? n : []).map(T).filter(c.lm);
                                                         return (0, s.jsxs)(
                                                             'li',
                                                             {
@@ -432,7 +426,7 @@ function h(e) {
                                                                     })
                                                                 ]
                                                             },
-                                                            T
+                                                            a
                                                         );
                                                     }),
                                                     N.map((e) =>
@@ -466,22 +460,22 @@ function h(e) {
                                     (_.action === d.rsA.HOME_SETTINGS_CREATE || _.action === d.rsA.HOME_SETTINGS_UPDATE) &&
                                         (I = (function (e, _) {
                                             let { oldValue: E, newValue: n, key: t } = e,
-                                                { targetType: r, action: a } = _;
+                                                { targetType: r, action: T } = _;
                                             switch (t) {
                                                 case d.zUn.WELCOME_MESSAGE:
                                                     return ((e, _) => {
-                                                        var E, n, t, r, a;
-                                                        let T = S.default.getUser(null == _ ? void 0 : null === (E = _.author_ids) || void 0 === E ? void 0 : E[0]),
+                                                        var E, n, t, r, T;
+                                                        let a = S.default.getUser(null == _ ? void 0 : null === (E = _.author_ids) || void 0 === E ? void 0 : E[0]),
                                                             I = S.default.getUser(null === (n = e.author_ids) || void 0 === n ? void 0 : n[0]),
                                                             l =
-                                                                (null == T ? void 0 : T.id) !== (null == I ? void 0 : I.id)
+                                                                (null == a ? void 0 : a.id) !== (null == I ? void 0 : I.id)
                                                                     ? (0, s.jsx)('li', {
                                                                           children: (0, s.jsx)('div', {
                                                                               className: M.onboardingChangeLogItemTitle,
                                                                               children: (0, s.jsx)(o.Text, {
                                                                                   variant: 'text-md/normal',
                                                                                   children: G.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_AUTHOR_CHANGE.format({
-                                                                                      oldUser: null !== (t = null == T ? void 0 : T.username) && void 0 !== t ? t : G.Z.Messages.NONE,
+                                                                                      oldUser: null !== (t = null == a ? void 0 : a.username) && void 0 !== t ? t : G.Z.Messages.NONE,
                                                                                       newUser: null !== (r = null == I ? void 0 : I.username) && void 0 !== r ? r : G.Z.Messages.NONE
                                                                                   })
                                                                               })
@@ -496,7 +490,7 @@ function h(e) {
                                                                               children: (0, s.jsx)(o.Text, {
                                                                                   variant: 'text-md/normal',
                                                                                   children: G.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_MESSAGE_CHANGE.format({
-                                                                                      oldMessage: null !== (a = null == _ ? void 0 : _.message) && void 0 !== a ? a : G.Z.Messages.NONE,
+                                                                                      oldMessage: null !== (T = null == _ ? void 0 : _.message) && void 0 !== T ? T : G.Z.Messages.NONE,
                                                                                       newMessage: e.message
                                                                                   })
                                                                               })
@@ -511,8 +505,8 @@ function h(e) {
                                                     return ((e, _) => {
                                                         let E = e.map((e) => e.channel_id),
                                                             n = _.map((e) => e.channel_id),
-                                                            t = T().difference(n, E),
-                                                            I = T().difference(E, n),
+                                                            t = a().difference(n, E),
+                                                            I = a().difference(E, n),
                                                             l = _.filter((e) => t.includes(e.channel_id)),
                                                             A = e.filter((e) => I.includes(e.channel_id));
                                                         return (0, s.jsxs)('ul', {
@@ -527,7 +521,7 @@ function h(e) {
                                                                                     (0, s.jsx)(p, {
                                                                                         actionType: d.vB8.CREATE,
                                                                                         targetType: r,
-                                                                                        action: a
+                                                                                        action: T
                                                                                     }),
                                                                                     (0, s.jsx)(o.Text, {
                                                                                         variant: 'text-md/normal',
@@ -549,7 +543,7 @@ function h(e) {
                                                                                     (0, s.jsx)(p, {
                                                                                         actionType: d.vB8.DELETE,
                                                                                         targetType: r,
-                                                                                        action: a
+                                                                                        action: T
                                                                                     }),
                                                                                     (0, s.jsx)(o.Text, {
                                                                                         variant: 'text-md/normal',
@@ -568,8 +562,8 @@ function h(e) {
                                                     return ((e, _) => {
                                                         let E = e.map((e) => e.channel_id),
                                                             n = _.map((e) => e.channel_id),
-                                                            t = T().difference(n, E),
-                                                            I = T().difference(E, n),
+                                                            t = a().difference(n, E),
+                                                            I = a().difference(E, n),
                                                             l = _.filter((e) => t.includes(e.channel_id)),
                                                             A = e.filter((e) => I.includes(e.channel_id));
                                                         return (0, s.jsxs)('ul', {
@@ -584,7 +578,7 @@ function h(e) {
                                                                                     (0, s.jsx)(p, {
                                                                                         actionType: d.vB8.CREATE,
                                                                                         targetType: r,
-                                                                                        action: a
+                                                                                        action: T
                                                                                     }),
                                                                                     (0, s.jsx)(o.Text, {
                                                                                         variant: 'text-md/normal',
@@ -606,7 +600,7 @@ function h(e) {
                                                                                     (0, s.jsx)(p, {
                                                                                         actionType: d.vB8.DELETE,
                                                                                         targetType: r,
-                                                                                        action: a
+                                                                                        action: T
                                                                                     }),
                                                                                     (0, s.jsx)(o.Text, {
                                                                                         variant: 'text-md/normal',
@@ -638,7 +632,7 @@ function h(e) {
                                                     changeNumber: n,
                                                     log: _,
                                                     oldValue: r,
-                                                    newValue: a,
+                                                    newValue: T,
                                                     change: t
                                                 })
                                             )
@@ -650,7 +644,7 @@ function h(e) {
                                             changeNumber: n,
                                             log: _,
                                             oldValue: r,
-                                            newValue: a,
+                                            newValue: T,
                                             change: t
                                         }));
                             })
@@ -658,11 +652,11 @@ function h(e) {
                         .filter(c.lm);
                 return (0, s.jsx)(o.Clickable, {
                     onClick: t,
-                    className: r()(M.changeDetails, a),
+                    className: r()(M.changeDetails, T),
                     children: I
                 });
             },
-            [_, E, t, a]
+            [_, E, t, T]
         ),
         A = n.useMemo(() => {
             switch (_.targetType) {
