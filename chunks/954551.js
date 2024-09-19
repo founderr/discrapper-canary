@@ -19,6 +19,7 @@ function c(e) {
         popoutAlign: 'right',
         children: (e, t, n, l) =>
             (0, i.jsx)(r.U, {
+                location: 'bookmarks-button',
                 children: (0, i.jsx)(a.JO, {
                     ...n,
                     className: c,
