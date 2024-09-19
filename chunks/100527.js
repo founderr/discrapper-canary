@@ -161,6 +161,7 @@ var n, r;
     (r.PREMIUM_MARKETING_SURFACE_TIER_1_CTA = 'premium marketing surface tier 1 cta'),
     (r.PREMIUM_MARKETING_TIER_CARD = 'premium marketing tier card'),
     (r.PREMIUM_MARKETING_PERK_CARD = 'premium marketing perk card'),
+    (r.PREMIUM_MARKETING_BENTO_BOX = 'premium marketing bento box'),
     (r.PREMIUM_MARKETING_FEATURE = 'premium marketing feature'),
     (r.PREMIUM_MARKETING_COMPARISON_TABLE = 'premium marketing comparison table'),
     (r.PREMIUM_MARKETING_FOOTER = 'premium marketing footer'),

@@ -26,6 +26,7 @@ e.exports = {
     trialMarketingMargin: 'trialMarketingMargin_a8b566',
     whatsNewSectionBackground: 'whatsNewSectionBackground_a8b566',
     whatsNewSectionBackgroundV2: 'whatsNewSectionBackgroundV2_a8b566',
+    whatsNewSectionBackgroundNoGap: 'whatsNewSectionBackgroundNoGap_a8b566',
     pdSparklesTop: 'pdSparklesTop_a8b566',
     pdSparklesBottom: 'pdSparklesBottom_a8b566',
     bottomOfPageVisibilitySensor: 'bottomOfPageVisibilitySensor_a8b566',

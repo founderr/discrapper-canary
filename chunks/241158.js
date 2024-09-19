@@ -9,33 +9,39 @@ var s = n(735250),
     d = n(626135),
     _ = n(526167),
     u = n(409100),
-    E = n(783589),
+    E = n(831964),
     T = n(981631),
     I = n(869783),
     R = n(689938),
     m = n(916548);
-let g = (e) => {
-    let { name: t, title: n, description: r, descriptionCta: E, previewImage: R, videoUrl: g, shouldLoadVideo: N, index: C } = e,
-        p = (0, _.rO)(),
-        A = a.useRef(null),
-        [f, h] = a.useState(0),
-        S = (0, l.debounce)(() => {
+let N = (e) => {
+    let { name: t, title: n, description: r, descriptionCta: E, previewImage: R, videoUrl: N, shouldLoadVideo: g, isCompact: C, onClick: p, index: f } = e,
+        A = (0, _.rO)(),
+        h = a.useRef(null),
+        [S, M] = a.useState(0),
+        x = (0, l.debounce)(() => {
             d.default.track(T.rMx.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, l.snakeCase)(t) });
         }, 800),
-        M = () => {
-            null != A.current && ((A.current.currentTime = f), A.current.play());
+        b = () => {
+            null != h.current && ((h.current.currentTime = S), h.current.play());
         },
-        x = () => {
-            null != A.current && (h(A.current.currentTime), A.current.pause());
+        O = () => {
+            null != h.current && (M(h.current.currentTime), h.current.pause());
         },
-        b = () =>
+        v = () =>
             (0, s.jsxs)('div', {
-                className: m.whatsNewTextBoxOuter,
+                className: i()({
+                    [m.whatsNewTextBoxOuter]: !C,
+                    [m.compactTextBox]: C
+                }),
                 children: [
                     (0, s.jsx)(o.Heading, {
                         variant: 'display-md',
                         color: 'header-primary',
-                        className: m.whatsNewBoxHeader,
+                        className: i()({
+                            [m.whatsNewBoxHeader]: !C,
+                            [m.compactBoxHeader]: C
+                        }),
                         children: n
                     }),
                     (0, s.jsx)(o.Text, {
@@ -44,56 +50,79 @@ let g = (e) => {
                         className: m.whatsNewBoxDescription,
                         children: r
                     }),
-                    (0, s.jsx)(u.Z, {
-                        className: m.whatsNewBoxButton,
-                        onClick: S,
-                        buttonText: E,
-                        color: o.Button.Colors.BRAND,
-                        look: o.Button.Looks.FILLED,
-                        showIcon: !1
-                    })
+                    null != E &&
+                        (null != p
+                            ? (0, s.jsx)(o.Button, {
+                                  className: m.whatsNewBoxButton,
+                                  onClick: () => {
+                                      x(), p();
+                                  },
+                                  children: E
+                              })
+                            : (0, s.jsx)(u.Z, {
+                                  className: m.whatsNewBoxButton,
+                                  onClick: x,
+                                  buttonText: E,
+                                  color: o.Button.Colors.BRAND,
+                                  look: o.Button.Looks.FILLED,
+                                  showIcon: !1
+                              }))
                 ]
             }),
-        O = (e) => {
+        P = (e) => {
             let { isLeft: t } = e;
             return (0, s.jsx)('div', {
-                className: m.whatsNewArtContainer,
+                className: i()({
+                    [m.whatsNewArtContainer]: !C,
+                    [m.compactBoxArtContainer]: C
+                }),
                 children: (0, s.jsx)(c.Z, {
                     playsInline: !0,
-                    preload: N ? 'auto' : 'none',
+                    preload: g ? 'auto' : 'none',
                     muted: !0,
                     poster: R,
                     loop: !0,
-                    className: i()(m.perkBoxVideo, { [m.leftSideArt]: t }),
-                    ref: A,
+                    className: i()({
+                        [m.perkBoxVideo]: !C,
+                        [m.leftSideArt]: t && !C,
+                        [m.compactBoxVideo]: C
+                    }),
+                    ref: h,
                     children: (0, s.jsx)('source', {
-                        src: g,
-                        type: p ? I.m.MP4 : I.m.WEBM
+                        src: N,
+                        type: A ? I.m.MP4 : I.m.WEBM
                     })
                 })
             });
         };
-    return C % 2 != 0
+    return f % 2 != 0
         ? (0, s.jsxs)('div', {
-              className: i()(m.whatsNewBoxContainer),
-              onMouseEnter: M,
-              onFocus: M,
-              onBlur: x,
-              onMouseLeave: x,
-              children: [(0, s.jsx)(b, {}), (0, s.jsx)(O, { isLeft: !1 })]
+              className: i()({
+                  [m.whatsNewBoxContainer]: !C,
+                  [m.compactBoxContainer]: C
+              }),
+              onMouseEnter: b,
+              onFocus: b,
+              onBlur: O,
+              onMouseLeave: O,
+              children: [(0, s.jsx)(v, {}), (0, s.jsx)(P, { isLeft: !1 })]
           })
         : (0, s.jsxs)('div', {
-              className: i()(m.whatsNewBoxContainer),
-              onMouseEnter: M,
-              onFocus: M,
-              onBlur: x,
-              onMouseLeave: x,
-              children: [(0, s.jsx)(O, { isLeft: !0 }), (0, s.jsx)(b, {})]
+              className: i()({
+                  [m.whatsNewBoxContainer]: !C,
+                  [m.compactBoxContainer]: C
+              }),
+              onMouseEnter: b,
+              onFocus: b,
+              onBlur: O,
+              onMouseLeave: O,
+              children: [(0, s.jsx)(P, { isLeft: !0 }), (0, s.jsx)(v, {})]
           });
 };
 t.Z = a.memo(function (e) {
-    let { className: t, shouldLoadVideo: n } = e,
-        a = Object.values((0, E.Z)());
+    let { className: t, shouldLoadVideo: n, isBestOfNitro: a = !1 } = e,
+        r = Object.values((0, E.ZP)(a)),
+        l = a ? Object.values((0, E.__)()) : null;
     return (0, s.jsx)(s.Fragment, {
         children: (0, s.jsxs)('div', {
             className: i()(m.boxBackdrop, t),
@@ -101,11 +130,11 @@ t.Z = a.memo(function (e) {
                 (0, s.jsx)(o.Heading, {
                     className: m.whatsNewHeader,
                     variant: 'heading-xxl/extrabold',
-                    children: R.Z.Messages.WHATS_NEW
+                    children: a ? R.Z.Messages.PREMIUM_MARKETING_BEST_OF_NITRO : R.Z.Messages.WHATS_NEW
                 }),
-                a.map((e, t) =>
+                r.map((e, t) =>
                     (0, s.jsx)(
-                        g,
+                        N,
                         {
                             shouldLoadVideo: n,
                             ...e,
@@ -113,7 +142,22 @@ t.Z = a.memo(function (e) {
                         },
                         e.name
                     )
-                )
+                ),
+                null != l &&
+                    (0, s.jsx)('div', {
+                        className: m.compactBoxOuterContainer,
+                        children: l.map((e, t) =>
+                            (0, s.jsx)(
+                                N,
+                                {
+                                    shouldLoadVideo: n,
+                                    ...e,
+                                    index: t
+                                },
+                                e.name
+                            )
+                        )
+                    })
             ]
         })
     });
