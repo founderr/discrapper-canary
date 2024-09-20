@@ -20,9 +20,6 @@ function l(e) {
     }
 }
 class u extends r.Z {
-    intialize() {
-        s.E.getCurrentConfig({ location: 'initializer' }, { autoTrackExposure: !1 });
-    }
     constructor(...e) {
         var t, n, r;
         super(...e),
