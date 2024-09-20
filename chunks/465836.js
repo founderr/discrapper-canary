@@ -1,50 +1,52 @@
-s.r(n),
-    s.d(n, {
+n.r(s),
+    n.d(s, {
         default: function () {
-            return c;
+            return A;
         }
     });
-var t = s(735250);
-s(470079);
-var a = s(703558),
-    o = s(403182),
-    _ = s(127654),
-    E = s(98278),
-    L = s(790527),
-    M = s(474936),
-    r = s(981631),
-    i = s(689938);
-function c(e) {
-    var n;
-    let { channel: c, onClose: l, content: A, ...u } = e;
-    function O() {
-        l(), (0, E.z)(!0);
+var t = n(735250);
+n(470079);
+var a = n(703558),
+    o = n(585483),
+    L = n(403182),
+    E = n(127654),
+    _ = n(98278),
+    M = n(790527),
+    i = n(474936),
+    r = n(981631),
+    c = n(689938);
+function A(e) {
+    var s;
+    let { channel: A, onClose: l, content: u, ...S } = e;
+    function d() {
+        l(), (0, _.z)(!0);
     }
-    return (0, t.jsx)(L.Z, {
-        artURL: s(990158),
-        type: M.cd.MESSAGE_LENGTH_UPSELL,
-        title: i.Z.Messages.PREMIUM_MESSAGE_LENGTH_ROADBLOCK_MODAL_HEADER,
-        body: i.Z.Messages.PREMIUM_MESSAGE_LENGTH_ROADBLOCK_MODAL_BODY.format({
+    return (0, t.jsx)(M.Z, {
+        artURL: n(990158),
+        type: i.cd.MESSAGE_LENGTH_UPSELL,
+        title: c.Z.Messages.PREMIUM_MESSAGE_LENGTH_ROADBLOCK_MODAL_HEADER,
+        body: c.Z.Messages.PREMIUM_MESSAGE_LENGTH_ROADBLOCK_MODAL_BODY.format({
             maxLength: r.J6R,
-            onLearnMore: O
+            onLearnMore: d
         }),
-        context: i.Z.Messages.PREMIUM_MESSAGE_LENGTH_ROADBLOCK_MODAL_CONTEXT.format({ maxLength: r.J6R }),
-        glowUp: i.Z.Messages.PREMIUM_MESSAGE_LENGTH_ROADBLOCK_MODAL_GLOW_UP.format({ onLearnMore: O }),
-        analyticsSource: { page: (null == (n = c) ? void 0 : n.getGuildId()) != null ? r.ZY5.GUILD_CHANNEL : (null == n ? void 0 : n.isGroupDM()) || (null == n ? void 0 : n.isPrivate()) ? r.ZY5.DM_CHANNEL : null },
+        context: c.Z.Messages.PREMIUM_MESSAGE_LENGTH_ROADBLOCK_MODAL_CONTEXT.format({ maxLength: r.J6R }),
+        glowUp: c.Z.Messages.PREMIUM_MESSAGE_LENGTH_ROADBLOCK_MODAL_GLOW_UP.format({ onLearnMore: d }),
+        analyticsSource: { page: (null == (s = A) ? void 0 : s.getGuildId()) != null ? r.ZY5.GUILD_CHANNEL : (null == s ? void 0 : s.isGroupDM()) || (null == s ? void 0 : s.isPrivate()) ? r.ZY5.DM_CHANNEL : null },
         analyticsLocation: {
             section: r.jXE.MESSAGE_LENGTH_UPSELL_MODAL,
             object: r.qAy.BUTTON_CTA
         },
         onClose: l,
-        secondaryCTA: i.Z.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_MODAL_UPLOAD,
+        secondaryCTA: c.Z.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_MODAL_UPLOAD,
         onSecondaryClick: function () {
             l();
-            let e = new Blob([A], { type: 'text/plain' });
-            (0, _.d)([(0, o.dp)(e, 'message.txt')], c, a.d.ChannelMessage, {
+            let e = new Blob([u], { type: 'text/plain' });
+            (0, E.d)([(0, L.dp)(e, 'message.txt')], A, a.d.ChannelMessage, {
                 requireConfirm: !0,
                 showLargeMessageDialog: !0
-            });
+            }),
+                o.S.dispatchToLastSubscribed(r.CkL.CLEAR_TEXT);
         },
-        ...u
+        ...S
     });
 }
