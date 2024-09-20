@@ -8,23 +8,24 @@ var i = n(120356),
     u = n(493683),
     c = n(607070),
     d = n(785717),
-    _ = n(228168),
-    E = n(689938),
-    f = n(920163),
-    h = n(482617);
-let p = (e) => {
+    _ = n(510659),
+    E = n(228168),
+    f = n(689938),
+    h = n(920163),
+    p = n(482617);
+let I = (e) => {
         let { message: t, userId: n, onClose: i } = e,
             { trackUserProfileAction: s } = (0, d.KZ)();
         return (0, r.jsxs)('div', {
-            className: a()(h.toast, f.toastPadding),
+            className: a()(p.toast, h.toastPadding),
             children: [
                 (0, r.jsx)(l.CheckmarkLargeIcon, {
                     size: 'sm',
-                    className: f.toastIcon,
+                    className: h.toastIcon,
                     color: l.tokens.colors.STATUS_POSITIVE.css
                 }),
                 (0, r.jsxs)('div', {
-                    className: f.successToast,
+                    className: h.successToast,
                     children: [
                         (0, r.jsx)(l.Text, {
                             color: 'header-primary',
@@ -33,7 +34,7 @@ let p = (e) => {
                         }),
                         (0, r.jsx)(l.Text, {
                             variant: 'text-sm/semibold',
-                            children: E.Z.Messages.USER_PROFILE_TOAST_VIEW.format({
+                            children: f.Z.Messages.USER_PROFILE_TOAST_VIEW.format({
                                 onClick: () => {
                                     s({ action: 'PRESS_REACT_REPLY_TOAST' }), null == i || i(), u.Z.openPrivateChannel(n);
                                 }
@@ -44,30 +45,31 @@ let p = (e) => {
             ]
         });
     },
-    I = () =>
+    m = () =>
         (0, r.jsxs)('div', {
-            className: a()(h.toast, f.toastPadding),
+            className: a()(p.toast, h.toastPadding),
             children: [
                 (0, r.jsx)(l.Spinner, {
                     type: l.SpinnerTypes.SPINNING_CIRCLE_SIMPLE,
-                    className: f.toastIcon
+                    className: h.toastIcon
                 }),
                 (0, r.jsx)(l.Text, {
                     color: 'header-primary',
                     variant: 'text-sm/semibold',
-                    children: E.Z.Messages.USER_PROFILE_SENDING
+                    children: f.Z.Messages.USER_PROFILE_SENDING
                 })
             ]
         });
 t.Z = (e) => {
-    let { interactionTypeSent: t, isVisible: n, userId: i, onClose: u, className: d } = e,
-        h = t === _.P.REPLY ? E.Z.Messages.USER_PROFILE_REPLY_SENT : E.Z.Messages.USER_PROFILE_REACTION_SENT,
-        m = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
-        T = (0, l.useTransition)(
-            n,
+    let { userId: t, onClose: n, className: i } = e,
+        { interactionTypeSent: u, interactionToastShown: d } = (0, _.X)(),
+        p = u === E.P.REPLY ? f.Z.Messages.USER_PROFILE_REPLY_SENT : f.Z.Messages.USER_PROFILE_REACTION_SENT,
+        T = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
+        S = (0, l.useTransition)(
+            d,
             {
                 from: {
-                    transform: m ? 'translateY(0)' : 'translateY(16px)',
+                    transform: T ? 'translateY(0)' : 'translateY(16px)',
                     opacity: 0
                 },
                 enter: {
@@ -75,7 +77,7 @@ t.Z = (e) => {
                     opacity: 1
                 },
                 leave: {
-                    transform: m ? 'translateY(0)' : 'translateY(16px)',
+                    transform: T ? 'translateY(0)' : 'translateY(16px)',
                     opacity: 0
                 },
                 config: {
@@ -89,23 +91,23 @@ t.Z = (e) => {
             'animate-always'
         );
     return (0, r.jsx)(r.Fragment, {
-        children: T(
-            (e, n) =>
-                n &&
+        children: S(
+            (e, o) =>
+                o &&
                 (0, r.jsx)(s.animated.div, {
-                    className: a()(f.toastContainer, d),
+                    className: a()(h.toastContainer, i),
                     style: e,
                     children:
-                        null != t
+                        null != u
                             ? (0, r.jsx)(l.Toast, {
                                   message: '',
                                   type: l.ToastType.CUSTOM,
                                   id: 'react_reply_success_toast',
                                   options: {
-                                      component: (0, r.jsx)(p, {
-                                          userId: i,
-                                          message: h,
-                                          onClose: u
+                                      component: (0, r.jsx)(I, {
+                                          userId: t,
+                                          message: p,
+                                          onClose: n
                                       })
                                   }
                               })
@@ -113,7 +115,7 @@ t.Z = (e) => {
                                   message: '',
                                   type: l.ToastType.CUSTOM,
                                   id: 'react_reply_loading_toast',
-                                  options: { component: (0, r.jsx)(I, {}) }
+                                  options: { component: (0, r.jsx)(m, {}) }
                               })
                 })
         )

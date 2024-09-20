@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return C;
+        return y;
     }
 }),
     n(47120);
@@ -20,77 +20,72 @@ var r = n(735250),
     p = n(785717),
     I = n(448197),
     m = n(698305),
-    T = n(825801),
-    S = n(228168),
-    g = n(420212),
-    A = n(689938),
-    N = n(639899);
-let O = (0, _.kt)({
+    T = n(510659),
+    S = n(825801),
+    g = n(228168),
+    A = n(420212),
+    N = n(689938),
+    O = n(639899);
+let R = (0, _.kt)({
         id: '1',
         type: o.d.DM
     }),
-    R = (e) => {
+    v = (e) => {
         let { input: t, username: n, sourceType: r, sourceDetails: i } = e;
         switch (r) {
-            case S.n_.ACTIVITY:
-                let a = A.Z.Messages.USER_PROFILE_REPLIED_TO_ACTIVITY.format({ username: n });
-                return ''.concat(T.jd).concat(a, '*\n').concat(t);
-            case S.n_.AVATAR:
-                let s = A.Z.Messages.USER_PROFILE_REPLIED_TO_AVATAR.format({ username: n });
-                return ''.concat(T.jd).concat(s, '*\n').concat(t);
-            case S.n_.STATUS:
-                let o = A.Z.Messages.USER_PROFILE_REPLIED_TO_STATUS.format({ username: n });
-                return null != i ? ''.concat(T.jd).concat(o, '*').concat('\n> '.concat(i), '\n').concat(t) : ''.concat(T.jd).concat(o, '*\n').concat(t);
+            case g.n_.ACTIVITY:
+                let a = N.Z.Messages.USER_PROFILE_REPLIED_TO_ACTIVITY.format({ username: n });
+                return ''.concat(S.jd).concat(a, '*\n').concat(t);
+            case g.n_.AVATAR:
+                let s = N.Z.Messages.USER_PROFILE_REPLIED_TO_AVATAR.format({ username: n });
+                return ''.concat(S.jd).concat(s, '*\n').concat(t);
+            case g.n_.STATUS:
+                let o = N.Z.Messages.USER_PROFILE_REPLIED_TO_STATUS.format({ username: n });
+                return null != i ? ''.concat(S.jd).concat(o, '*').concat('\n> '.concat(i), '\n').concat(t) : ''.concat(S.jd).concat(o, '*\n').concat(t);
             default:
                 (0, E.vE)(r);
         }
     },
-    v = (e) => {
+    C = (e) => {
         switch (e) {
-            case S.n_.ACTIVITY:
-                return A.Z.Messages.USER_PROFILE_REPLY_TO_ACTIVITY_PLACEHOLDER;
-            case S.n_.AVATAR:
-                return A.Z.Messages.USER_PROFILE_REPLY_TO_AVATAR_PLACEHOLDER;
-            case S.n_.STATUS:
-                return A.Z.Messages.USER_PROFILE_REPLY_TO_STATUS_PLACEHOLDER;
+            case g.n_.ACTIVITY:
+                return N.Z.Messages.USER_PROFILE_REPLY_TO_ACTIVITY_PLACEHOLDER;
+            case g.n_.AVATAR:
+                return N.Z.Messages.USER_PROFILE_REPLY_TO_AVATAR_PLACEHOLDER;
+            case g.n_.STATUS:
+                return N.Z.Messages.USER_PROFILE_REPLY_TO_STATUS_PLACEHOLDER;
             default:
                 (0, E.vE)(e);
         }
     };
-function C(e) {
-    let { user: t, guildId: n, channelId: a, profileType: o, sourceType: _, sourceDetails: E, onInteraction: A, setPopoutRef: C, modalKey: y, setInteractionToastShown: L, setInteractionTypeSent: D, onClose: b } = e,
-        { trackUserProfileAction: M } = (0, p.KZ)(),
-        { sendReply: P } = (0, I.Q)(_),
-        [U, w] = i.useState(''),
-        [x, G] = i.useState((0, c.JM)(U)),
-        k = i.useRef(!1),
-        B = i.useRef(null),
-        F = i.useCallback(
+function y(e) {
+    let { user: t, guildId: n, channelId: a, profileType: o, sourceType: _, sourceDetails: E, setPopoutRef: N, modalKey: y, onClose: L } = e,
+        { trackUserProfileAction: D } = (0, p.KZ)(),
+        { sendReply: b } = (0, I.Q)(_),
+        { resetInteraction: M, setInteractionToastShown: P, setInteractionTypeSent: U } = (0, T.X)(),
+        [w, x] = i.useState(''),
+        [G, k] = i.useState((0, c.JM)(w)),
+        B = i.useRef(!1),
+        F = i.useRef(null),
+        V = i.useCallback(
             (e) => {
-                e.key === g.vn.ESCAPE &&
-                    (e.stopPropagation(),
-                    null == A ||
-                        A({
-                            interactionType: null,
-                            interactionSourceType: null
-                        }),
-                    null == b || b());
+                e.key === A.vn.ESCAPE && (e.stopPropagation(), M(), null == L || L());
             },
-            [b, A]
+            [M, L]
         );
     i.useEffect(() => {
-        null == C || C(null == B ? void 0 : B.current);
-    }, [B, C]);
-    let V = async (e) => {
+        null == N || N(null == F ? void 0 : F.current);
+    }, [F, N]);
+    let H = async (e) => {
             if (null == e) return;
-            M({ action: P });
-            let n = R({
+            D({ action: b });
+            let n = v({
                 input: e,
                 username: h.ZP.getName(t),
                 sourceType: _,
                 sourceDetails: E
             });
-            D(null), L(!0);
+            U(null), P(!0);
             try {
                 await (0, m.Z)({
                     userId: t.id,
@@ -100,55 +95,48 @@ function C(e) {
                     whenReady: !1
                 });
             } catch (e) {}
-            D(S.P.REPLY),
+            U(g.P.REPLY),
                 setTimeout(() => {
-                    L(!1);
-                }, T._1);
-        },
-        H = {
-            [N.biteSize]: o === S.y0.BITE_SIZE,
-            [N.panel]: o === S.y0.PANEL
+                    P(!1);
+                }, S._1);
         },
         Z = {
-            [N.status]: _ === S.n_.STATUS,
-            [N.avatar]: _ === S.n_.AVATAR
+            [O.biteSize]: o === g.y0.BITE_SIZE,
+            [O.panel]: o === g.y0.PANEL
+        },
+        Y = {
+            [O.status]: _ === g.n_.STATUS,
+            [O.avatar]: _ === g.n_.AVATAR
         };
     return (0, r.jsx)(l.V, {
-        ref: B,
-        onKeyDown: F,
+        ref: F,
+        onKeyDown: V,
         children: (0, r.jsx)('div', {
-            className: s()(N.container, H, Z),
+            className: s()(O.container, Z, Y),
             children: (0, r.jsx)(d.Z, {
                 parentModalKey: y,
                 emojiPickerCloseOnModalOuterClick: !0,
-                innerClassName: N.inner,
-                editorClassName: N.editor,
+                innerClassName: O.inner,
+                editorClassName: O.editor,
                 type: u.I.USER_PROFILE_REPLY,
-                placeholder: v(_).format({ username: f.ZP.getName(n, a, t) }),
-                channel: O,
-                textValue: U,
-                richValue: x,
+                placeholder: C(_).format({ username: f.ZP.getName(n, a, t) }),
+                channel: R,
+                textValue: w,
+                richValue: G,
                 onChange: (e, t, n) => {
-                    if (t !== U) w(t), G(n);
+                    if (t !== w) x(t), k(n);
                 },
-                focused: k.current,
+                focused: B.current,
                 onFocus: () => {
-                    k.current = !0;
+                    B.current = !0;
                 },
                 onBlur: (e) => {
                     var t;
-                    if (null === (t = B.current) || void 0 === t ? void 0 : t.contains(e.relatedTarget)) {
-                        k.current = !1;
+                    if (null === (t = F.current) || void 0 === t ? void 0 : t.contains(e.relatedTarget)) {
+                        B.current = !1;
                         return;
                     }
-                    null !== B.current &&
-                        ((k.current = !1),
-                        null == A ||
-                            A({
-                                interactionType: null,
-                                interactionSourceType: null
-                            }),
-                        null == b || b());
+                    null !== F.current && ((B.current = !1), M(), null == L || L());
                 },
                 onSubmit: async (e) => {
                     let { value: t } = e,
@@ -160,13 +148,9 @@ function C(e) {
                         };
                     try {
                         return (
-                            await V(n),
-                            null == A ||
-                                A({
-                                    interactionType: null,
-                                    interactionSourceType: null
-                                }),
-                            null == b || b(),
+                            await H(n),
+                            M(),
+                            null == L || L(),
                             {
                                 shouldClear: !0,
                                 shouldRefocus: !1

@@ -1,12 +1,12 @@
 n.d(t, {
     ZP: function () {
-        return S;
+        return g;
     },
     _1: function () {
-        return I;
+        return m;
     },
     jd: function () {
-        return m;
+        return T;
     }
 }),
     n(627341);
@@ -22,77 +22,79 @@ var i = n(120356),
     d = n(785717),
     _ = n(837411),
     E = n(448197),
-    f = n(228168),
-    h = n(689938),
-    p = n(374729);
-let I = 2700,
-    m = '> -# *',
-    T = (e, t) =>
+    f = n(510659),
+    h = n(228168),
+    p = n(689938),
+    I = n(374729);
+let m = 2700,
+    T = '> -# *',
+    S = (e, t) =>
         (0, s.EQ)({
             interactionType: e,
             sourceType: t
         })
             .with(
                 {
-                    interactionType: f.P.REPLY,
-                    sourceType: f.n_.AVATAR
+                    interactionType: h.P.REPLY,
+                    sourceType: h.n_.AVATAR
                 },
-                () => h.Z.Messages.USER_PROFILE_REPLY_TO_AVATAR_A11Y_LABEL
+                () => p.Z.Messages.USER_PROFILE_REPLY_TO_AVATAR_A11Y_LABEL
             )
             .with(
                 {
-                    interactionType: f.P.REACT,
-                    sourceType: f.n_.AVATAR
+                    interactionType: h.P.REACT,
+                    sourceType: h.n_.AVATAR
                 },
-                () => h.Z.Messages.USER_PROFILE_REACT_TO_AVATAR_A11Y_LABEL
+                () => p.Z.Messages.USER_PROFILE_REACT_TO_AVATAR_A11Y_LABEL
             )
             .with(
                 {
-                    interactionType: f.P.REPLY,
-                    sourceType: f.n_.STATUS
+                    interactionType: h.P.REPLY,
+                    sourceType: h.n_.STATUS
                 },
-                () => h.Z.Messages.USER_PROFILE_REPLY_TO_STATUS_A11Y_LABEL
+                () => p.Z.Messages.USER_PROFILE_REPLY_TO_STATUS_A11Y_LABEL
             )
             .with(
                 {
-                    interactionType: f.P.REACT,
-                    sourceType: f.n_.STATUS
+                    interactionType: h.P.REACT,
+                    sourceType: h.n_.STATUS
                 },
-                () => h.Z.Messages.USER_PROFILE_REACT_TO_STATUS_A11Y_LABEL
+                () => p.Z.Messages.USER_PROFILE_REACT_TO_STATUS_A11Y_LABEL
             )
             .with(
                 {
-                    interactionType: f.P.REPLY,
-                    sourceType: f.n_.ACTIVITY
+                    interactionType: h.P.REPLY,
+                    sourceType: h.n_.ACTIVITY
                 },
-                () => h.Z.Messages.USER_PROFILE_REPLY_TO_ACTIVITY_A11Y_LABEL
+                () => p.Z.Messages.USER_PROFILE_REPLY_TO_ACTIVITY_A11Y_LABEL
             )
             .with(
                 {
-                    interactionType: f.P.REACT,
-                    sourceType: f.n_.ACTIVITY
+                    interactionType: h.P.REACT,
+                    sourceType: h.n_.ACTIVITY
                 },
-                () => h.Z.Messages.USER_PROFILE_REACT_TO_ACTIVITY_A11Y_LABEL
+                () => p.Z.Messages.USER_PROFILE_REACT_TO_ACTIVITY_A11Y_LABEL
             )
             .exhaustive();
-function S(e) {
-    let { user: t, sourceType: n, isVisible: i, isExpandable: s, onInteraction: I, reactButtonRef: m, replyButtonRef: S } = e,
+function g(e) {
+    let { user: t, sourceType: n, isVisible: i, isExpandable: s, reactButtonRef: m, replyButtonRef: T } = e,
         { trackUserProfileAction: g } = (0, d.KZ)(),
         { pressReact: A, pressReply: N } = (0, E.Q)(n),
         O = (0, o.e7)([c.default], () => c.default.getId() === t.id),
-        R = (0, _.Z)(t.id);
+        R = (0, _.Z)(t.id),
+        { handleInteraction: v } = (0, f.X)();
     return t.bot || O || !R
         ? null
         : (0, r.jsxs)(u.ZP, {
-              className: a()(p.popover, {
-                  [p.visible]: i,
-                  [p.expandable]: s,
-                  [p.statusPopover]: n === f.n_.STATUS,
-                  [p.avatarPopover]: n === f.n_.AVATAR
+              className: a()(I.popover, {
+                  [I.visible]: i,
+                  [I.expandable]: s,
+                  [I.statusPopover]: n === h.n_.STATUS,
+                  [I.avatarPopover]: n === h.n_.AVATAR
               }),
               children: [
                   (0, r.jsx)(l.TooltipContainer, {
-                      text: h.Z.Messages.USER_PROFILE_SEND_REACTION,
+                      text: p.Z.Messages.USER_PROFILE_SEND_REACTION,
                       shouldShow: i,
                       delay: 0,
                       'aria-label': !1,
@@ -100,40 +102,40 @@ function S(e) {
                           innerRef: m,
                           onClick: () => {
                               g({ action: A }),
-                                  null == I ||
-                                      I({
-                                          interactionType: f.P.REACT,
+                                  null == v ||
+                                      v({
+                                          interactionType: h.P.REACT,
                                           interactionSourceType: n
                                       });
                           },
-                          className: a()(p.button, p.left),
-                          'aria-label': T(f.P.REACT, n),
+                          className: a()(I.button, I.left),
+                          'aria-label': S(h.P.REACT, n),
                           children: (0, r.jsx)(l.ReactionIcon, {
                               size: 'xs',
-                              className: p.icon
+                              className: I.icon
                           })
                       })
                   }),
                   (0, r.jsx)(l.TooltipContainer, {
-                      text: h.Z.Messages.USER_PROFILE_REPLY,
+                      text: p.Z.Messages.USER_PROFILE_REPLY,
                       shouldShow: i,
                       delay: 0,
                       'aria-label': !1,
                       children: (0, r.jsx)(u.zx, {
-                          innerRef: S,
+                          innerRef: T,
                           onClick: () => {
                               g({ action: N }),
-                                  null == I ||
-                                      I({
-                                          interactionType: f.P.REPLY,
+                                  null == v ||
+                                      v({
+                                          interactionType: h.P.REPLY,
                                           interactionSourceType: n
                                       });
                           },
-                          className: a()(p.button, p.right),
-                          'aria-label': T(f.P.REPLY, n),
+                          className: a()(I.button, I.right),
+                          'aria-label': S(h.P.REPLY, n),
                           children: (0, r.jsx)(l.ArrowAngleLeftUpIcon, {
                               size: 'xs',
-                              className: p.icon
+                              className: I.icon
                           })
                       })
                   })
