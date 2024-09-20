@@ -18352,5 +18352,20 @@ e.exports = Object.freeze({
     CHANNEL_LINKED_LOBBY_CHANNEL_TOPIC_NOTICE: 'This channel is syncing with **!!{applicationName}!!** $[\u2022](separatorHook) [Learn more]({helpdeskArticle})',
     CHANNEL_LINKED_LOBBY_CHANNEL_NSFW_DISABLED_REASON: 'Channels syncing with games cannot be age restricted',
     GUILD_SETTINGS_AUDIT_LOG_CHANNEL_LOBBY_LINK_CREATE: 'Started syncing channel with $[](applicationHook)',
-    GUILD_SETTINGS_AUDIT_LOG_CHANNEL_LOBBY_LINK_DELETE: 'Stopped syncing channel with $[](applicationHook)'
+    GUILD_SETTINGS_AUDIT_LOG_CHANNEL_LOBBY_LINK_DELETE: 'Stopped syncing channel with $[](applicationHook)',
+    DEVELOPER_SETTINGS: 'Developer Settings',
+    DEVELOPER_SETTINGS_MANIFEST: 'Manifest',
+    DEVELOPER_SETTINGS_APP_VERSION: 'App Version',
+    DEVELOPER_SETTINGS_JS_BUILD_NUMBER: 'JS Build Number',
+    DEVELOPER_SETTINGS_OS: 'OS',
+    DEVELOPER_SETTINGS_DEVICE_INFO: 'Device Info',
+    DEVELOPER_SETTINGS_RELEASE_CHANNEL: 'Release Channel',
+    DEVELOPER_SETTINGS_DEBUG_LOGS: 'Debug Logs',
+    DEVELOPER_SETTINGS_PUSH_NOTIF_LOGS: 'Push Notification Logs',
+    DEVELOPER_SETTINGS_STARTUP_TIMING: 'Startup Timing',
+    DEVELOPER_SETTINGS_DATABASE_CONTROLS: 'Database Controls',
+    DEVELOPER_SETTINGS_COPY_CLIENT: 'Copy Client Info',
+    DEVELOPER_SETTINGS_CLEAR_CACHES: 'Clear Caches',
+    DEVELOPER_SETTINGS_WRITE_CACHES: 'Write Caches',
+    DEVELOPER_SETTINGS_ENABLE_ANIMATION: 'Enable animations in chat'
 });
