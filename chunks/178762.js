@@ -1,12 +1,12 @@
 n.d(t, {
     J: function () {
-        return w;
+        return b;
     },
     YN: function () {
-        return A;
+        return R;
     },
     iZ: function () {
-        return O;
+        return j;
     }
 }),
     n(47120);
@@ -20,69 +20,73 @@ var l = n(735250),
     c = n(481060),
     d = n(239091),
     h = n(607070),
-    m = n(439170),
-    x = n(594174),
-    E = n(69259),
-    v = n(370370),
-    _ = n(107062),
-    p = n(91140),
-    T = n(227172),
-    f = n(551228),
-    g = n(678869),
-    I = n(278399),
-    C = n(886217),
-    N = n(555672),
-    P = n(644548),
-    Z = n(335326),
-    S = n(268010),
-    M = n(797342),
-    y = n(206583);
-let A = 72;
-function O(e) {
-    return (null == e ? void 0 : e.type) === m.so.CONTENT_INVENTORY ? A : 0;
+    m = n(704041),
+    x = n(475676),
+    E = n(439170),
+    v = n(594174),
+    _ = n(69259),
+    p = n(370370),
+    f = n(107062),
+    T = n(91140),
+    g = n(227172),
+    I = n(551228),
+    C = n(678869),
+    N = n(278399),
+    P = n(886217),
+    Z = n(555672),
+    S = n(644548),
+    M = n(335326),
+    A = n(268010),
+    y = n(797342),
+    O = n(206583);
+let R = 72;
+function j(e) {
+    return (null == e ? void 0 : e.type) === E.so.CONTENT_INVENTORY ? R : 0;
 }
-let R = (e) => {
+let w = (e) => {
         let { entry: t, ...n } = e;
         switch (t.content_type) {
             case o.s.PLAYED_GAME:
-                return (0, l.jsx)(p.Z, {
+                return (0, l.jsx)(T.Z, {
                     ...n,
                     entry: t
                 });
             case o.s.WATCHED_MEDIA:
-                return (0, l.jsx)(Z.Z, {
+                return (0, l.jsx)(M.Z, {
                     ...n,
                     entry: t
                 });
             case o.s.TOP_GAME:
-                return (0, l.jsx)(N.ZP, {
+                return (0, l.jsx)(Z.ZP, {
                     ...n,
                     entry: t
                 });
             case o.s.TOP_ARTIST:
-                return (0, l.jsx)(I.ZP, {
+                return (0, l.jsx)(N.ZP, {
                     ...n,
                     entry: t
                 });
             case o.s.LISTENED_SESSION:
-                return (0, l.jsx)(f.ZP, {
+                return (0, l.jsx)(I.ZP, {
                     ...n,
                     entry: t
                 });
             case o.s.LAUNCHED_ACTIVITY:
-                return (0, l.jsx)(v.Z, {
+                return (0, l.jsx)(p.Z, {
                     ...n,
                     entry: t
                 });
+            case o.s.LEADERBOARD:
+                return (0, l.jsx)(x.Z, { ...n });
             default:
                 return null;
         }
     },
-    j = (e) => {
+    L = (e) => {
         let { requestId: t, closePopout: n, ...a } = e;
-        return (0, l.jsx)(w, {
+        return (0, l.jsx)(b, {
             onReaction: (e, l) => {
-                (0, E.L)(e, {
+                (0, _.L)(e, {
                     entry: a.entry,
                     channelId: a.channel.id,
                     guildId: a.channel.guild_id,
@@ -94,7 +98,7 @@ let R = (e) => {
             },
             closePopout: n,
             onVoiceChannelPreview: (e, n) => {
-                (0, E.L)(y.xP.VOICE_CHANNEL_PREVIEWED, {
+                (0, _.L)(O.xP.VOICE_CHANNEL_PREVIEWED, {
                     entry: a.entry,
                     channelId: a.channel.id,
                     guildId: a.channel.guild_id,
@@ -107,39 +111,41 @@ let R = (e) => {
             ...a
         });
     },
-    w = (e) => {
+    b = (e) => {
         let { entry: t, ...n } = e;
         switch (t.content_type) {
             case o.s.PLAYED_GAME:
-                return (0, l.jsx)(T.Z, {
-                    ...n,
-                    entry: t
-                });
-            case o.s.WATCHED_MEDIA:
-                return (0, l.jsx)(S.Z, {
-                    ...n,
-                    entry: t
-                });
-            case o.s.TOP_GAME:
-                return (0, l.jsx)(P.Z, {
-                    ...n,
-                    entry: t
-                });
-            case o.s.TOP_ARTIST:
-                return (0, l.jsx)(C.Z, {
-                    ...n,
-                    entry: t
-                });
-            case o.s.LISTENED_SESSION:
                 return (0, l.jsx)(g.Z, {
                     ...n,
                     entry: t
                 });
-            case o.s.LAUNCHED_ACTIVITY:
-                return (0, l.jsx)(_.ZP, {
+            case o.s.WATCHED_MEDIA:
+                return (0, l.jsx)(A.Z, {
                     ...n,
                     entry: t
                 });
+            case o.s.TOP_GAME:
+                return (0, l.jsx)(S.Z, {
+                    ...n,
+                    entry: t
+                });
+            case o.s.TOP_ARTIST:
+                return (0, l.jsx)(P.Z, {
+                    ...n,
+                    entry: t
+                });
+            case o.s.LISTENED_SESSION:
+                return (0, l.jsx)(C.Z, {
+                    ...n,
+                    entry: t
+                });
+            case o.s.LAUNCHED_ACTIVITY:
+                return (0, l.jsx)(f.ZP, {
+                    ...n,
+                    entry: t
+                });
+            case o.s.LEADERBOARD:
+                return (0, l.jsx)(m.Z, { channel: n.channel });
             default:
                 return null;
         }
@@ -147,16 +153,16 @@ let R = (e) => {
 t.ZP = a.memo((e) => {
     var t;
     let { index: i, ...o } = e,
-        [m, v] = a.useState('default'),
-        _ = (0, s.JA)(''.concat(i)),
-        p = null === (t = x.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff(),
-        { isRich: T, appName: f } = (0, M.n)(o.entry),
+        [m, x] = a.useState('default'),
+        E = (0, s.JA)(''.concat(i)),
+        p = null === (t = v.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff(),
+        { isRich: f, appName: T } = (0, y.n)(o.entry),
         g = {
             entry: o.entry,
             channelId: o.channel.id,
             guildId: o.channel.guild_id,
             requestId: o.requestId,
-            richPresenceName: T ? f : void 0
+            richPresenceName: f ? T : void 0
         },
         I = a.useRef(!1),
         [C, N] = a.useState(!1),
@@ -165,7 +171,7 @@ t.ZP = a.memo((e) => {
     a.useEffect(() => {
         C && S && Z(!0);
     }, [C, S]);
-    let A = a.useCallback(
+    let M = a.useCallback(
             (e) => {
                 if (!!p)
                     (0, d.jW)(e, async () => {
@@ -179,13 +185,13 @@ t.ZP = a.memo((e) => {
             },
             [o, p]
         ),
-        O = a.useCallback(() => {
-            v(String(Date.now()));
+        A = a.useCallback(() => {
+            x(String(Date.now()));
         }, []),
-        w = a.useCallback(
+        R = a.useCallback(
             r().throttle(
                 (e) => {
-                    (0, E.L)(y.xP.CARD_POPOUT_OPEN, e);
+                    (0, _.L)(O.xP.CARD_POPOUT_OPEN, e);
                 },
                 2000,
                 {
@@ -195,7 +201,7 @@ t.ZP = a.memo((e) => {
             ),
             []
         ),
-        L = () => {
+        j = () => {
             (I.current = !1),
                 setTimeout(() => {
                     !I.current && (N(!1), Z(S));
@@ -205,32 +211,32 @@ t.ZP = a.memo((e) => {
         onMouseEnter: () => {
             (I.current = !0),
                 setTimeout(() => {
-                    I.current && N(!0), w(g);
+                    I.current && N(!0), R(g);
                 }, 100);
         },
-        onMouseLeave: L,
+        onMouseLeave: j,
         children: (0, l.jsx)(c.Popout, {
             renderPopout: (e) => {
                 let { closePopout: t } = e;
-                return (0, l.jsx)(j, {
+                return (0, l.jsx)(L, {
                     closePopout: t,
-                    updatePopoutPosition: O,
+                    updatePopoutPosition: A,
                     ...o
                 });
             },
             position: 'left',
             shouldShow: C,
             positionKey: m,
-            onRequestOpen: () => w(g),
+            onRequestOpen: () => R(g),
             onRequestClose: () => {
-                P && L();
+                P && j();
             },
             spacing: 8,
             children: (e, t) => {
                 let { isShown: n } = t;
                 return (0, l.jsx)(c.Clickable, {
                     ...e,
-                    ..._,
+                    ...E,
                     focusProps: {
                         offset: {
                             top: 4,
@@ -242,8 +248,8 @@ t.ZP = a.memo((e) => {
                     onClick: () => {
                         !C && N(!0);
                     },
-                    onContextMenu: A,
-                    children: (0, l.jsx)(R, {
+                    onContextMenu: M,
+                    children: (0, l.jsx)(w, {
                         ...o,
                         selected: n,
                         hovered: I.current

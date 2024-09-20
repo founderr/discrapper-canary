@@ -7,6 +7,11 @@ var r,
     l = n(570140);
 let u = new Map();
 class c extends (r = o.ZP.Store) {
+    getLeaderboards(e) {
+        var t;
+        let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return null === (t = u.get(n)) || void 0 === t ? void 0 : t.get(e);
+    }
     get(e, t) {
         var n;
         let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
