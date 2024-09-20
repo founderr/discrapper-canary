@@ -1,15 +1,15 @@
 n.d(t, {
     Q4: function () {
-        return T;
+        return S;
     },
     Vv: function () {
-        return p;
+        return I;
     },
     oO: function () {
-        return m;
+        return T;
     },
     po: function () {
-        return I;
+        return m;
     },
     x_: function () {
         return c.Z;
@@ -25,9 +25,10 @@ var r = n(392711),
     u = n(931619),
     c = n(921948),
     d = n(981631);
-let _ = [16, 20, 22, 24, 28, 32, 40, 44, 48, 56, 60, 64, 80, 96, 100, 128, 160, 240, 256, 300, 320, 480, 512, 600, 640, 1024, 1280, 1536, 2048, 3072, 4096],
-    E = new (s())({ max: 1000 });
-function f(e) {
+let _ = /\.webp($|\?|#)/i,
+    E = [16, 20, 22, 24, 28, 32, 40, 44, 48, 56, 60, 64, 80, 96, 100, 128, 160, 240, 256, 300, 320, 480, 512, 600, 640, 1024, 1280, 1536, 2048, 3072, 4096],
+    f = new (s())({ max: 1000 });
+function h(e) {
     let t = new Image();
     (t.onerror = (function (e, t) {
         null == e.backoff && (e.backoff = new l.Z());
@@ -36,20 +37,20 @@ function f(e) {
             await u.Z.isOnline(),
                 n.fails < 5
                     ? n.fail(() => {
-                          f(e);
+                          h(e);
                       })
-                    : h(!0, e, t);
+                    : p(!0, e, t);
         };
     })(e, t)),
         (t.onload = () => {
             let { backoff: n } = e;
-            null != n && n.succeed(), h(!1, e, t);
+            null != n && n.succeed(), p(!1, e, t);
         }),
         (t.src = e.url);
 }
-function h(e, t, n) {
+function p(e, t, n) {
     let { callbacks: r, url: i } = t;
-    if (e) E.del(i);
+    if (e) f.del(i);
     else {
         let { width: e, height: r } = n;
         (t = {
@@ -58,16 +59,16 @@ function h(e, t, n) {
             width: e,
             height: r
         }),
-            E.set(i, t);
+            f.set(i, t);
     }
     null != r && r.forEach((n) => n(e, t));
 }
-function p(e) {
-    let t = E.get(e);
+function I(e) {
+    let t = f.get(e);
     return null != t && t.loaded;
 }
-function I(e, t) {
-    let n = E.get(e);
+function m(e, t) {
+    let n = f.get(e);
     if (null != n && n.loaded)
         return (
             null != t &&
@@ -93,8 +94,8 @@ function I(e, t) {
                     url: e,
                     loaded: !1
                 }),
-                E.set(e, n),
-                f(n)),
+                f.set(e, n),
+                h(n)),
             null != t && ((r = t.bind(null)), null == n.callbacks && (n.callbacks = new Set()), n.callbacks.add(r)),
             () => {
                 null != r && null != n && (null != n.callbacks && n.callbacks.delete(r), null != n.backoff && n.backoff.cancel());
@@ -102,38 +103,39 @@ function I(e, t) {
         );
     }
 }
-function m(e) {
+function T(e) {
     var t;
     let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     if (n) {
-        let t = _.filter((t) => t <= e).pop();
+        let t = E.filter((t) => t <= e).pop();
         if (null != t && e / t <= 1.25) return t;
     }
-    return null !== (t = _.find((t) => e <= t)) && void 0 !== t ? t : _[_.length - 1];
+    return null !== (t = E.find((t) => e <= t)) && void 0 !== t ? t : E[E.length - 1];
 }
-function T(e) {
-    let { src: t, width: n, height: r, maxWidth: a, maxHeight: s, ratio: l = 1, format: u = null, quality: d = null } = e,
-        _ = n,
-        E = r;
-    l < 1 && ((_ = Math.round(n * l)), (E = Math.round(r * l))), null != a && (_ = Math.min(_, a)), null != s && (E = Math.min(E, s));
-    let f = (0, c.Z)();
+function S(e) {
+    let { src: t, width: n, height: r, maxWidth: a, maxHeight: s, ratio: l = 1, format: u = null, quality: d = null, animated: E = !1 } = e,
+        f = n,
+        h = r;
+    l < 1 && ((f = Math.round(n * l)), (h = Math.round(r * l))), null != a && (f = Math.min(f, a)), null != s && (h = Math.min(h, s));
+    let p = (0, c.Z)();
     return (
-        (_ *= f),
+        (f *= p),
         (function (e) {
-            let { src: t, sourceWidth: n, sourceHeight: r, targetWidth: a, targetHeight: s, format: l = null, quality: u = null } = e,
-                [c, d] = (function (e) {
+            let { src: t, sourceWidth: n, sourceHeight: r, targetWidth: a, targetHeight: s, format: l = null, quality: u = null, animated: c = !1 } = e,
+                [d, E] = (function (e) {
                     let [t, n] = e.split('?');
                     return [t, o.parse(n)];
                 })(t);
-            return null != l && (d.format = l), null != u && (d.quality = u), (a !== n || s !== r) && ((d.width = 0 | a), (d.height = 0 | s)), !i().isEmpty(d) && (c += '?' + o.stringify(d)), c;
+            return null != l && (E.format = l), null != u && (E.quality = u), c && _.test(t) && (E.animated = !0), (a !== n || s !== r) && ((E.width = 0 | a), (E.height = 0 | s)), !i().isEmpty(E) && (d += '?' + o.stringify(E)), d;
         })({
             src: t,
             sourceWidth: n,
             sourceHeight: r,
-            targetWidth: _,
-            targetHeight: (E *= f),
+            targetWidth: f,
+            targetHeight: (h *= p),
             format: u,
-            quality: d
+            quality: d,
+            animated: E
         })
     );
 }

@@ -1,9 +1,9 @@
 n.d(t, {
+    W: function () {
+        return O;
+    },
     Z: function () {
         return v;
-    },
-    u: function () {
-        return O;
     }
 }),
     n(47120);
@@ -40,7 +40,7 @@ function N(e, t, n) {
         e
     );
 }
-let O = /\.gif($|\?|#)/i,
+let O = /\.(gif|webp)($|\?|#)/i,
     R = /\.png($|\?|#)/i;
 ((a = r || (r = {})).LOAD = 'LOAD'), (a.PRELOAD = 'PRELOAD'), (a.CLICK = 'CLICK');
 class v extends (i = o.Component) {
@@ -75,7 +75,8 @@ class v extends (i = o.Component) {
             maxWidth: o === A.hV.MOSAIC ? a : void 0,
             maxHeight: o === A.hV.MOSAIC ? s : void 0,
             format: l,
-            quality: u
+            quality: u,
+            animated: !t
         });
     }
     getFormatQuality() {
