@@ -1,10 +1,12 @@
 var n = t(735250);
 t(470079);
 var a = t(481060),
-    i = t(583901),
-    r = t(981631);
-s.Z = function (e) {
-    let { onSelect: s, theme: t } = e;
+    i = t(153867),
+    r = t(410030),
+    o = t(583901),
+    l = t(231338);
+s.Z = function () {
+    let e = (0, r.ZP)();
     return (0, n.jsxs)(a.FormItem, {
         children: [
             (0, n.jsx)(a.FormTitle, {
@@ -17,15 +19,15 @@ s.Z = function (e) {
                     justifyContent: 'space-between'
                 },
                 children: [
-                    (0, n.jsx)(i.bD, {
-                        theme: r.BRd.LIGHT,
-                        isSelected: t === r.BRd.LIGHT,
-                        onSelect: () => s(r.BRd.LIGHT)
+                    (0, n.jsx)(o.bD, {
+                        theme: l.BR.LIGHT,
+                        isSelected: e === l.BR.LIGHT,
+                        onSelect: () => (0, i.ZI)({ theme: l.BR.LIGHT })
                     }),
-                    (0, n.jsx)(i.bD, {
-                        theme: r.BRd.DARK,
-                        isSelected: t === r.BRd.DARK,
-                        onSelect: () => s(r.BRd.DARK)
+                    (0, n.jsx)(o.bD, {
+                        theme: l.BR.DARK,
+                        isSelected: e === l.BR.DARK,
+                        onSelect: () => (0, i.ZI)({ theme: l.BR.DARK })
                     })
                 ]
             })

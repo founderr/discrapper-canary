@@ -21,12 +21,10 @@ var n = t(735250),
     h = t(210851),
     O = t(602683),
     p = t(916028),
-    R = t(15033),
-    x = t(815183),
-    f = t(899457),
-    M = t(231338),
-    D = t(720778);
-function P(e, s, t) {
+    R = t(815183),
+    x = t(899457),
+    f = t(720778);
+function M(e, s, t) {
     return (
         s in e
             ? Object.defineProperty(e, s, {
@@ -39,10 +37,10 @@ function P(e, s, t) {
         e
     );
 }
-let L = ['svg', 'png', 'gif', 'webp'],
-    b = [...L, 'jpg', 'jpeg'],
-    Z = Array.from(new Set([...b, 'gif', 'mp4', 'webm']));
-function v() {
+let D = ['svg', 'png', 'gif', 'webp'],
+    P = [...D, 'jpg', 'jpeg'],
+    L = Array.from(new Set([...P, 'gif', 'mp4', 'webm']));
+function b() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         { streamProgressSeconds: s = 0, completedAt: t = null, enrolledAt: n = null, claimedAt: a = null } = e;
     return {
@@ -58,12 +56,12 @@ function v() {
         progress: {}
     };
 }
-let j = '1193992107035983872',
-    B = {
-        id: j,
+let Z = '1193992107035983872',
+    v = {
+        id: Z,
         preview: !0,
         config: {
-            id: j,
+            id: Z,
             configVersion: 2,
             startsAt: '2024-01-01T00:00:00+00:00',
             expiresAt: '2030-01-01T00:00:00+00:00',
@@ -129,38 +127,21 @@ let j = '1193992107035983872',
         userStatus: null,
         targetedContent: []
     };
-function U() {
+function j() {
     var e, s, t, r, o;
-    let [l, c] = a.useState(B),
-        [P, j] = a.useState(f.a.UNENROLLED),
-        [U, G] = a.useState([]),
-        [F, y] = a.useState(!1),
-        [V, Y] = a.useState(!1),
-        [w, k] = a.useState(null),
-        [H, W] = a.useState(M.BR.DARK);
-    let K =
+    let [l, c] = a.useState(v),
+        [M, Z] = a.useState(x.a.UNENROLLED),
+        [j, B] = a.useState(!1),
+        [U, G] = a.useState(!1),
+        [F, y] = a.useState(null);
+    let V =
         ((o = l.config),
         (0, i.EQ)(o)
-            .with({ configVersion: 2 }, (e) => {
-                let s = e.rewardsConfig.rewards[0];
-                return {
-                    ...s.messages,
-                    rewardTile: s.asset
-                };
-            })
+            .with({ configVersion: 2 }, (e) => e.rewardsConfig.rewards)
             .exhaustive());
-    a.useEffect(() => {
-        var e;
-        G(
-            ((e = l.config),
-            (0, i.EQ)(e)
-                .with({ configVersion: 2 }, (e) => e.features)
-                .exhaustive())
-        );
-    }, [l]);
-    function z(e, s) {
+    function Y(e, s) {
         var t, n;
-        if ('hero' === e || 'questBarHero' === e || 'gameTile' === e || 'logotype' === e)
+        if ('hero' === e || 'questBarHero' === e || 'gameTile' === e || 'logotype' === e || 'heroVideo' === e || 'questBarHeroVideo' === e)
             c({
                 ...l,
                 config:
@@ -177,7 +158,7 @@ function U() {
                         .exhaustive())
             });
     }
-    function Q(e, s) {
+    function w(e, s) {
         var t, n;
         if ('questName' === e || 'gameTitle' === e || 'gamePublisher' === e)
             c({
@@ -196,26 +177,27 @@ function U() {
                         .exhaustive())
             });
     }
-    function X(e, s) {
-        var t, n;
-        if ('rewardName' === e || 'rewardNameWithArticle' === e)
+    function k(e, s, t) {
+        var n, a, r;
+        if ('name' === e || 'nameWithArticle' === e)
             c({
                 ...l,
                 config:
-                    ((t = l.config),
-                    (n = { [e]: s }),
-                    (0, i.EQ)(t)
+                    ((n = l.config),
+                    (a = { [e]: s }),
+                    (r = t),
+                    (0, i.EQ)(n)
                         .with({ configVersion: 2 }, (e) => ({
                             ...e,
                             rewardsConfig: {
                                 ...e.rewardsConfig,
                                 rewards: e.rewardsConfig.rewards.map((e, s) =>
-                                    0 === s
+                                    s === r
                                         ? {
                                               ...e,
                                               messages: {
                                                   ...e.messages,
-                                                  ...n
+                                                  ...a
                                               }
                                           }
                                         : e
@@ -225,7 +207,7 @@ function U() {
                         .exhaustive())
             });
     }
-    function q(e, s) {
+    function H(e, s) {
         c({
             ...l,
             config: {
@@ -241,260 +223,250 @@ function U() {
         children: [
             (0, n.jsx)(d.Heading, {
                 variant: 'heading-lg/bold',
-                className: D.heading,
+                className: f.heading,
                 children: 'Quest Preview Tool'
             }),
             (0, n.jsx)('div', {
-                className: D.fields,
+                className: f.fields,
                 children: (0, n.jsx)(p.Z, {
                     onSelect: function (e) {
-                        if ((k(e), null != e)) c(e);
+                        if ((y(e), null != e)) c(e);
                     },
-                    quest: w
+                    quest: F
                 })
             }),
             (0, n.jsx)(d.Heading, {
                 variant: 'heading-md/semibold',
-                className: D.subheading,
+                className: f.subheading,
                 children: 'Messages'
             }),
             (0, n.jsxs)('div', {
-                className: D.fields,
+                className: f.fields,
                 children: [
                     (0, n.jsx)(O.Z, {
                         title: 'Quest Name',
                         assetKey: 'questName',
-                        onMessageChange: Q,
+                        onMessageChange: w,
                         initialValue: l.config.messages.questName
                     }),
                     (0, n.jsx)(O.Z, {
                         title: 'Game Title',
                         assetKey: 'gameTitle',
-                        onMessageChange: Q,
+                        onMessageChange: w,
                         initialValue: l.config.messages.gameTitle
                     }),
                     (0, n.jsx)(O.Z, {
                         title: 'Game Publisher',
                         assetKey: 'gamePublisher',
-                        onMessageChange: Q,
+                        onMessageChange: w,
                         initialValue: l.config.messages.gamePublisher
-                    }),
-                    (0, n.jsx)(O.Z, {
-                        title: 'Reward Name',
-                        assetKey: 'rewardName',
-                        onMessageChange: X,
-                        initialValue: K.name
-                    }),
-                    (0, n.jsx)(O.Z, {
-                        title: 'Reward Name With Article',
-                        assetKey: 'rewardNameWithArticle',
-                        onMessageChange: X,
-                        initialValue: K.nameWithArticle
                     })
                 ]
             }),
             (0, n.jsx)(d.Heading, {
                 variant: 'heading-md/semibold',
-                className: D.subheading,
+                className: f.subheading,
                 children: 'Assets'
             }),
             (0, n.jsxs)('div', {
-                className: D.fields,
+                className: f.fields,
                 children: [
                     (0, n.jsx)(h.Z, {
                         title: 'Hero',
                         assetKey: 'hero',
-                        onFileChange: z,
-                        filters: Z,
+                        onFileChange: Y,
+                        filters: L,
                         initialValue: l.config.assets.hero
                     }),
                     (0, n.jsx)(h.Z, {
-                        title: 'Hero Video',
+                        title: 'Hero Video (optional)',
                         assetKey: 'heroVideo',
-                        onFileChange: z,
-                        filters: Z,
+                        onFileChange: Y,
+                        filters: L,
                         initialValue: null !== (t = l.config.assets.heroVideo) && void 0 !== t ? t : void 0
                     }),
                     (0, n.jsx)(h.Z, {
                         title: 'Quest Bar Hero',
                         assetKey: 'questBarHero',
-                        onFileChange: z,
-                        filters: Z,
+                        onFileChange: Y,
+                        filters: L,
                         initialValue: l.config.assets.questBarHero
                     }),
                     (0, n.jsx)(h.Z, {
-                        title: 'Quest Bar Hero Video',
+                        title: 'Quest Bar Hero Video (optional)',
                         assetKey: 'questBarHeroVideo',
-                        onFileChange: z,
-                        filters: Z,
+                        onFileChange: Y,
+                        filters: L,
                         initialValue: null !== (r = l.config.assets.questBarHeroVideo) && void 0 !== r ? r : void 0
                     }),
                     (0, n.jsx)(h.Z, {
                         title: 'Game Tile',
                         assetKey: 'gameTile',
-                        onFileChange: z,
-                        filters: b,
+                        onFileChange: Y,
+                        filters: P,
                         initialValue: l.config.assets.gameTile
                     }),
                     (0, n.jsx)(h.Z, {
                         title: 'Logotype',
                         assetKey: 'logotype',
-                        onFileChange: z,
-                        filters: L,
+                        onFileChange: Y,
+                        filters: D,
                         initialValue: l.config.assets.logotype
-                    }),
-                    (0, n.jsx)(h.Z, {
-                        title: 'Reward Tile',
-                        assetKey: 'rewardTile',
-                        onFileChange: function (e, s) {
-                            var t, n;
-                            if ('rewardTile' === e)
-                                c({
-                                    ...l,
-                                    config:
-                                        ((t = l.config),
-                                        (n = { [e]: s }),
-                                        (0, i.EQ)(t)
-                                            .with({ configVersion: 2 }, (e) => ({
-                                                ...e,
-                                                assets: {
-                                                    ...e.assets,
-                                                    ...n
-                                                },
-                                                rewardsConfig: {
-                                                    ...e.rewardsConfig,
-                                                    rewards: e.rewardsConfig.rewards.map((e, s) =>
-                                                        0 === s
-                                                            ? {
-                                                                  ...e,
-                                                                  asset: n.rewardTile
-                                                              }
-                                                            : e
-                                                    )
-                                                }
-                                            }))
-                                            .exhaustive())
-                                });
-                        },
-                        filters: Z,
-                        initialValue: K.rewardTile
                     })
                 ]
             }),
-            (0, n.jsx)('div', {
-                className: D.fields,
-                children: (0, n.jsx)('div', {
-                    className: D.fullWidthField,
-                    children: (0, n.jsx)(R.Z, {
-                        onChange: function (e) {
-                            var s, t;
-                            c({
-                                ...l,
-                                config:
-                                    ((s = l.config),
-                                    (t = e),
-                                    (0, i.EQ)(s)
-                                        .with({ configVersion: 2 }, (e) => ({
-                                            ...e,
-                                            features: t
-                                        }))
-                                        .exhaustive())
+            V.map((e, s) =>
+                (0, n.jsxs)(
+                    'div',
+                    {
+                        children: [
+                            (0, n.jsxs)(d.Heading, {
+                                variant: 'heading-md/semibold',
+                                className: f.subheading,
+                                children: ['Reward #', s + 1]
                             }),
-                                G(e);
-                        },
-                        values: U
-                    })
-                })
-            }),
+                            (0, n.jsxs)('div', {
+                                className: f.fields,
+                                children: [
+                                    (0, n.jsx)(O.Z, {
+                                        title: 'Name',
+                                        assetKey: 'name',
+                                        onMessageChange: (e, t) => k(e, t, s),
+                                        initialValue: e.messages.name
+                                    }),
+                                    (0, n.jsx)(O.Z, {
+                                        title: 'Name With Article',
+                                        assetKey: 'nameWithArticle',
+                                        onMessageChange: (e, t) => k(e, t, s),
+                                        initialValue: e.messages.nameWithArticle
+                                    }),
+                                    (0, n.jsx)(h.Z, {
+                                        title: 'Asset',
+                                        assetKey: 'asset',
+                                        onFileChange: (e, t) =>
+                                            (function (e, s, t) {
+                                                var n, a, r;
+                                                if ('asset' === e)
+                                                    c({
+                                                        ...l,
+                                                        config:
+                                                            ((n = l.config),
+                                                            (a = s),
+                                                            (r = t),
+                                                            (0, i.EQ)(n)
+                                                                .with({ configVersion: 2 }, (e) => ({
+                                                                    ...e,
+                                                                    rewardsConfig: {
+                                                                        ...e.rewardsConfig,
+                                                                        rewards: e.rewardsConfig.rewards.map((e, s) =>
+                                                                            s === r
+                                                                                ? {
+                                                                                      ...e,
+                                                                                      asset: a
+                                                                                  }
+                                                                                : e
+                                                                        )
+                                                                    }
+                                                                }))
+                                                                .exhaustive())
+                                                    });
+                                            })(e, t, s),
+                                        filters: L,
+                                        initialValue: e.asset
+                                    })
+                                ]
+                            })
+                        ]
+                    },
+                    s
+                )
+            ),
             (0, n.jsx)(d.Heading, {
                 variant: 'heading-md/semibold',
-                className: D.subheading,
+                className: f.subheading,
                 children: 'Colors & Quest States'
             }),
             (0, n.jsxs)('div', {
-                className: D.fields,
+                className: f.fields,
                 children: [
                     (0, n.jsxs)('div', {
-                        className: D.fields,
+                        className: f.fields,
                         style: { marginBottom: 0 },
                         children: [
                             (0, n.jsx)(A.Z, {
                                 title: 'Primary',
                                 colorKey: 'primary',
-                                onChange: q,
+                                onChange: H,
                                 value: l.config.colors.primary
                             }),
                             (0, n.jsx)(A.Z, {
                                 title: 'Secondary',
                                 colorKey: 'secondary',
-                                onChange: q,
+                                onChange: H,
                                 value: l.config.colors.secondary
                             })
                         ]
                     }),
                     (0, n.jsx)('div', {
-                        className: D.fields,
-                        children: (0, n.jsx)(x.Z, {
-                            onSelect: W,
-                            theme: H
-                        })
+                        className: f.fields,
+                        children: (0, n.jsx)(R.Z, {})
                     }),
-                    (0, n.jsx)(f.Z, {
+                    (0, n.jsx)(x.Z, {
                         onChange: function (e) {
-                            switch ((j(e), e)) {
-                                case f.a.UNENROLLED:
+                            switch ((Z(e), e)) {
+                                case x.a.UNENROLLED:
                                     c({
                                         ...l,
                                         userStatus: null
                                     });
                                     break;
-                                case f.a.ENROLLED:
+                                case x.a.ENROLLED:
                                     c({
                                         ...l,
-                                        userStatus: v({ enrolledAt: new Date().toISOString() })
+                                        userStatus: b({ enrolledAt: new Date().toISOString() })
                                     });
                                     break;
-                                case f.a.COMPLETED_25:
+                                case x.a.COMPLETED_25:
                                     c({
                                         ...l,
-                                        userStatus: v({
+                                        userStatus: b({
                                             enrolledAt: new Date().toISOString(),
                                             streamProgressSeconds: 10 * _.Z.Seconds.MINUTE * 0.25
                                         })
                                     });
                                     break;
-                                case f.a.COMPLETED_50:
+                                case x.a.COMPLETED_50:
                                     c({
                                         ...l,
-                                        userStatus: v({
+                                        userStatus: b({
                                             enrolledAt: new Date().toISOString(),
                                             streamProgressSeconds: 10 * _.Z.Seconds.MINUTE * 0.5
                                         })
                                     });
                                     break;
-                                case f.a.COMPLETED_75:
+                                case x.a.COMPLETED_75:
                                     c({
                                         ...l,
-                                        userStatus: v({
+                                        userStatus: b({
                                             enrolledAt: new Date().toISOString(),
                                             streamProgressSeconds: 10 * _.Z.Seconds.MINUTE * 0.75
                                         })
                                     });
                                     break;
-                                case f.a.COMPLETED_100:
+                                case x.a.COMPLETED_100:
                                     c({
                                         ...l,
-                                        userStatus: v({
+                                        userStatus: b({
                                             completedAt: new Date().toISOString(),
                                             enrolledAt: new Date().toISOString(),
                                             streamProgressSeconds: 10 * _.Z.Seconds.MINUTE
                                         })
                                     });
                                     break;
-                                case f.a.CLAIMED:
+                                case x.a.CLAIMED:
                                     c({
                                         ...l,
-                                        userStatus: v({
+                                        userStatus: b({
                                             claimedAt: new Date().toISOString(),
                                             completedAt: new Date().toISOString(),
                                             enrolledAt: new Date().toISOString(),
@@ -503,25 +475,24 @@ function U() {
                                     });
                             }
                         },
-                        value: P
+                        value: M
                     })
                 ]
             }),
             (0, n.jsx)(d.Heading, {
                 variant: 'heading-lg/bold',
-                className: D.heading,
+                className: f.heading,
                 children: 'Component Previews'
             }),
             (0, n.jsxs)('div', {
-                className: D.componentPreviews,
+                className: f.componentPreviews,
                 children: [
                     (0, n.jsxs)(g.Z, {
-                        theme: H,
                         withBorder: !0,
                         children: [
                             (0, n.jsx)(d.FormTitle, { children: 'Quest Bar' }),
                             (0, n.jsxs)('div', {
-                                className: D.questBarPreviewWrapper,
+                                className: f.questBarPreviewWrapper,
                                 children: [
                                     (null === (e = l.userStatus) || void 0 === e ? void 0 : e.claimedAt) != null &&
                                         (0, n.jsx)(d.Text, {
@@ -530,7 +501,7 @@ function U() {
                                             children: 'The Quest Bar is hidden when the user has claimed the reward.'
                                         }),
                                     (0, n.jsx)('div', {
-                                        className: D.questBarPreview,
+                                        className: f.questBarPreview,
                                         children: (0, n.jsx)(I.p, {
                                             isPreview: !0,
                                             source: 'preview',
@@ -543,7 +514,6 @@ function U() {
                         ]
                     }),
                     (0, n.jsxs)(g.Z, {
-                        theme: H,
                         withBorder: !0,
                         children: [
                             (0, n.jsx)(d.FormTitle, { children: 'Quest Home Card' }),
@@ -553,7 +523,7 @@ function U() {
                                 questId: '0',
                                 children: (0, n.jsx)(S.Z, {
                                     quest: l,
-                                    className: D.questTile,
+                                    className: f.questTile,
                                     questContent: u.jn.QUEST_HOME_DESKTOP,
                                     contentPosition: 0,
                                     rowIndex: 0
@@ -562,7 +532,6 @@ function U() {
                         ]
                     }),
                     (0, n.jsxs)(g.Z, {
-                        theme: H,
                         withBorder: !0,
                         children: [
                             (0, n.jsx)(d.FormTitle, { children: 'Channel Call Header' }),
@@ -573,17 +542,17 @@ function U() {
                                     children: 'The Quest Channel Call Header is hidden when the user has claimed the reward.'
                                 }),
                             (0, n.jsx)('div', {
-                                className: D.questBarPreviewWrapper,
+                                className: f.questBarPreviewWrapper,
                                 children: (0, n.jsx)(I.p, {
                                     isPreview: !0,
                                     source: 'preview',
                                     questId: '0',
                                     children: (0, n.jsx)('div', {
-                                        className: D.questChannelCallHeaderPreview,
+                                        className: f.questChannelCallHeaderPreview,
                                         children: (0, n.jsx)(m.Z, {
                                             channelId: '123',
                                             previewQuest: l,
-                                            isParticipatingOverride: F
+                                            isParticipatingOverride: j
                                         })
                                     })
                                 })
@@ -591,12 +560,12 @@ function U() {
                         ]
                     }),
                     (0, n.jsx)('div', {
-                        className: D.toggleSwitch,
+                        className: f.toggleSwitch,
                         children: (0, n.jsx)(d.FormItem, {
                             children: (0, n.jsx)(d.FormSwitch, {
-                                value: F,
+                                value: j,
                                 onChange: function (e) {
-                                    y(e);
+                                    B(e);
                                 },
                                 hideBorder: !0,
                                 children: 'Is Participating:'
@@ -604,11 +573,10 @@ function U() {
                         })
                     }),
                     (0, n.jsxs)(g.Z, {
-                        theme: H,
                         withBorder: !0,
                         children: [
                             (0, n.jsx)(d.FormTitle, { children: 'Quest Card Embed' }),
-                            V
+                            U
                                 ? (0, n.jsx)(C.o, {})
                                 : (0, n.jsx)(
                                       N.Z,
@@ -621,11 +589,11 @@ function U() {
                         ]
                     }),
                     (0, n.jsx)('div', {
-                        className: D.toggleSwitch,
+                        className: f.toggleSwitch,
                         children: (0, n.jsx)(d.FormItem, {
                             children: (0, n.jsx)(d.FormSwitch, {
-                                value: V,
-                                onChange: Y,
+                                value: U,
+                                onChange: G,
                                 hideBorder: !0,
                                 children: 'Invalid Quests Embed:'
                             })
@@ -636,7 +604,7 @@ function U() {
         ]
     });
 }
-class G extends a.Component {
+class B extends a.Component {
     componentDidCatch(e) {
         this.setState({ error: e });
     }
@@ -644,9 +612,9 @@ class G extends a.Component {
         let { error: e, renderKey: s } = this.state;
         return null != e
             ? (0, n.jsxs)('div', {
-                  className: D.errorBoundary,
+                  className: f.errorBoundary,
                   children: [
-                      (0, n.jsx)(d.CircleWarningIcon, { className: D.errorBoundaryIcon }),
+                      (0, n.jsx)(d.CircleWarningIcon, { className: f.errorBoundaryIcon }),
                       (0, n.jsx)(d.Heading, {
                           variant: 'heading-lg/semibold',
                           children: 'Something broke in the Quest preview tool :('
@@ -658,23 +626,23 @@ class G extends a.Component {
                       }),
                       null != e.message &&
                           (0, n.jsx)(d.Card, {
-                              className: D.errorMessageWrapper,
+                              className: f.errorMessageWrapper,
                               children: (0, n.jsx)('code', {
-                                  className: D.errorMessage,
+                                  className: f.errorMessage,
                                   children: e.message
                               })
                           })
                   ]
               })
-            : (0, n.jsx)(U, {}, s);
+            : (0, n.jsx)(j, {}, s);
     }
     constructor(...e) {
         super(...e),
-            P(this, 'state', {
+            M(this, 'state', {
                 error: null,
                 renderKey: 0
             }),
-            P(this, 'handleResetState', () => {
+            M(this, 'handleResetState', () => {
                 this.setState((e) => ({
                     error: null,
                     renderKey: e.renderKey + 1
@@ -682,4 +650,4 @@ class G extends a.Component {
             });
     }
 }
-s.Z = G;
+s.Z = B;

@@ -10,7 +10,6 @@ e.exports = {
     questChannelCallHeaderPreview: 'questChannelCallHeaderPreview_e92711',
     toggleSwitch: 'toggleSwitch_e92711',
     fields: 'fields_e92711',
-    fullWidthField: 'fullWidthField_e92711',
     swatchContainer: 'swatchContainer_e92711',
     swatchIcon: 'swatchIcon_e92711',
     errorBoundary: 'errorBoundary_e92711',
