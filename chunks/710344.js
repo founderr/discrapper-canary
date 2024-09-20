@@ -13,7 +13,7 @@ function a(e, n) {
         l = i.useCallback(() => {
             a(null);
         }, []),
-        o = i.useCallback(
+        r = i.useCallback(
             (i) => {
                 l();
                 let a = e.find((e) => {
@@ -25,11 +25,11 @@ function a(e, n) {
                         return i === n;
                     });
                 if (null == a || null == s || a === s) return;
-                let o = [...e],
-                    r = o.indexOf(a),
-                    d = o.indexOf(s),
-                    c = d - r > 0 ? 1 : 0;
-                o.splice(r, 1), (d = o.indexOf(s)), o.splice(d + c, 0, a), n(o);
+                let r = [...e],
+                    o = r.indexOf(a),
+                    c = r.indexOf(s),
+                    d = c - o > 0 ? 1 : 0;
+                r.splice(o, 1), (c = r.indexOf(s)), r.splice(c + d, 0, a), n(r);
             },
             [e, t, l, n]
         );
@@ -37,6 +37,6 @@ function a(e, n) {
         draggingId: t,
         handleDragStart: s,
         handleDragReset: l,
-        handleDragComplete: o
+        handleDragComplete: r
     };
 }

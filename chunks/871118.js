@@ -44,12 +44,12 @@ function v(e) {
             url: v ? u.Z.getPreviewURL(t.guildId, t.channelId, t.ownerId) : null,
             isLoading: v && u.Z.getIsPreviewLoading(t.guildId, t.channelId, t.ownerId)
         })),
-        T = a.useRef(p ? null : _);
+        f = a.useRef(p ? null : _);
     a.useEffect(() => {
-        !p && (T.current = _);
+        !p && (f.current = _);
     }, [_, p]);
-    let f = null == _ || p ? T.current : _;
-    return null == f
+    let T = null == _ || p ? f.current : _;
+    return null == T
         ? (0, l.jsx)(E, {
               className: n,
               isLoading: p,
@@ -59,7 +59,7 @@ function v(e) {
         : (0, l.jsx)('div', {
               className: r()(n, x.root),
               children: (0, l.jsx)('img', {
-                  src: f,
+                  src: T,
                   alt: '',
                   className: x.image
               })

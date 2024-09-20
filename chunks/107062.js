@@ -15,8 +15,8 @@ var l = n(735250),
     v = n(379357),
     _ = n(192918),
     p = n(561308),
-    T = n(907152),
-    f = n(206295),
+    f = n(907152),
+    T = n(206295),
     g = n(297781),
     I = n(591853),
     C = n(797342),
@@ -48,38 +48,38 @@ let Z = (e, t) =>
         }).replaceAll('*', '');
     };
 t.ZP = (e) => {
-    let { channel: t, entry: n, onReaction: E, onVoiceChannelPreview: y } = e,
-        { largeImage: A } = (0, v.rv)({ entry: n }),
+    let { channel: t, entry: n, onReaction: E, onVoiceChannelPreview: A } = e,
+        { largeImage: y } = (0, v.rv)({ entry: n }),
         { user: O, details: R, activity: j, embeddedActivity: w } = (0, C.n)(n),
-        { primaryColor: L, secondaryColor: b } = (0, f.Z)(null == A ? void 0 : A.src),
-        U = (0, i.e7)([m.default], () => m.default.locale),
-        { displayParticipants: D, participant1: k, participant2: B, numOtherParticipants: F } = (0, _.Z)(n, 3),
+        { primaryColor: L, secondaryColor: b } = (0, T.Z)(null == y ? void 0 : y.src),
+        D = (0, i.e7)([m.default], () => m.default.locale),
+        { displayParticipants: U, participant1: B, participant2: k, numOtherParticipants: F } = (0, _.Z)(n, 3),
         G = () => {
             c._(d._b.TEXT, h.I.NORMAL, { applicationId: n.extra.application_id });
         },
         H = a.useCallback(
             (e) => {
-                if ((null == A ? void 0 : A.src) == null || null == t || null == O) return;
+                if ((null == y ? void 0 : y.src) == null || null == t || null == O) return;
                 let l =
                     F > 0
                         ? M({
                               entry: n,
                               channel: t,
-                              users: [k, B],
+                              users: [B, k],
                               countOthers: F
                           })
                         : S(n, t, O);
-                return (0, T.C4)({
+                return (0, f.C4)({
                     entry: n,
-                    applicationImageSrc: null == A ? void 0 : A.src,
-                    avatarSrcs: D.map((e) => e.getAvatarURL(t.guild_id, 128)),
+                    applicationImageSrc: null == y ? void 0 : y.src,
+                    avatarSrcs: U.map((e) => e.getAvatarURL(t.guild_id, 128)),
                     description: l,
-                    timestamp: (0, p.yh)(n, U),
+                    timestamp: (0, p.yh)(n, D),
                     colors: [L, b],
                     channelId: e
                 });
             },
-            [null == A ? void 0 : A.src, t, D, n, U, F, k, B, L, b, O]
+            [null == y ? void 0 : y.src, t, U, n, D, F, B, k, L, b, O]
         );
     if (null == O) return null;
     let V = (0, l.jsx)(g.PZ, {
@@ -123,7 +123,7 @@ t.ZP = (e) => {
             (0, l.jsx)(I.St, {
                 children: (0, l.jsx)(I.WT, {
                     onReaction: E,
-                    onVoiceChannelPreview: y,
+                    onVoiceChannelPreview: A,
                     user: O,
                     channel: t,
                     generateReactionImage: H,

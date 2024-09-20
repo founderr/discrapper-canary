@@ -23,13 +23,13 @@ var l = n(735250),
     v = n(633302),
     _ = n(806966),
     p = n(176354),
-    T = n(823379),
-    f = n(354459),
+    f = n(823379),
+    T = n(354459),
     g = n(185923),
     I = n(420212),
     C = n(264699);
 let N = g.Hz.CHAT,
-    P = [v.ZP.getByName('thumbsup'), v.ZP.getByName('eyes'), v.ZP.getByName('laughing'), v.ZP.getByName('watermelon'), v.ZP.getByName('fork_and_knife'), v.ZP.getByName('yum')].filter(T.lm);
+    P = [v.ZP.getByName('thumbsup'), v.ZP.getByName('eyes'), v.ZP.getByName('laughing'), v.ZP.getByName('watermelon'), v.ZP.getByName('fork_and_knife'), v.ZP.getByName('yum')].filter(f.lm);
 function Z(e) {
     let { emoji: t, isDisabled: n = !1, onClick: i, className: s } = e,
         h = a.useRef(null),
@@ -83,9 +83,9 @@ function S(e) {
     });
 }
 function M(e) {
-    let { channel: t, title: n, closePopout: i, onFocus: o, onSelectEmoji: c, onSelectDisabledEmoji: d, onExpandedToggle: x, emojiSearchProps: v, recentlyUsedEmojis: T, analyticsOverride: M } = e,
-        y = (0, h.Dt)(),
-        [A, O] = a.useState(!1),
+    let { channel: t, title: n, closePopout: i, onFocus: o, onSelectEmoji: c, onSelectDisabledEmoji: d, onExpandedToggle: x, emojiSearchProps: v, recentlyUsedEmojis: f, analyticsOverride: M } = e,
+        A = (0, h.Dt)(),
+        [y, O] = a.useState(!1),
         R = (0, m.wC)(t.guild_id),
         j = (0, s.uniqBy)([...R, ...P], 'name')
             .filter(
@@ -96,8 +96,8 @@ function M(e) {
                         intention: N
                     })
             )
-            .slice(0, f.e5);
-    null != T && T.length > 0 && j.splice(j.length - 1, 1, T[0]);
+            .slice(0, T.e5);
+    null != f && f.length > 0 && j.splice(j.length - 1, 1, f[0]);
     let w = (e) => {
             O(e), null == x || x(e);
         },
@@ -110,13 +110,13 @@ function M(e) {
             w(!t), t && _.kJ.setSearchPlaceholder(null);
         };
     return (0, l.jsxs)(u.Dialog, {
-        'aria-labelledby': y,
+        'aria-labelledby': A,
         children: [
             (0, l.jsx)(u.HeadingLevel, {
                 forceLevel: 2,
                 children: (0, l.jsx)(u.HiddenVisually, {
                     children: (0, l.jsx)(u.H, {
-                        id: y,
+                        id: A,
                         children: n
                     })
                 })
@@ -127,23 +127,23 @@ function M(e) {
                     (0, l.jsx)(E.Z, {
                         analyticsOverride: M,
                         channel: t,
-                        className: r()(C.animatedPicker, { [C.animatedPickerTall]: A }),
-                        headerClassName: r()(C.emojiPickerHeader, { [C.emojiPickerHeaderExpanded]: A }),
+                        className: r()(C.animatedPicker, { [C.animatedPickerTall]: y }),
+                        headerClassName: r()(C.emojiPickerHeader, { [C.emojiPickerHeaderExpanded]: y }),
                         closePopout: i,
-                        onSelectEmoji: A ? L : () => {},
-                        shouldHidePickerActions: !A,
+                        onSelectEmoji: y ? L : () => {},
+                        shouldHidePickerActions: !y,
                         wrapper: 'div',
                         pickerIntention: N,
                         searchProps: {
                             ...v,
                             accessory: (0, l.jsx)(S, {
                                 otherAccessories: null == v ? void 0 : v.accessory,
-                                isEmojiPickerExpanded: A,
+                                isEmojiPickerExpanded: y,
                                 onSetExpanded: w,
                                 onFocus: o
                             }),
                             onKeyDown: (e) => {
-                                null != e && e.key !== I.vn.TAB && (e.key !== I.vn.ENTER || e.shiftKey ? w(!0) : w(!A));
+                                null != e && e.key !== I.vn.TAB && (e.key !== I.vn.ENTER || e.shiftKey ? w(!0) : w(!y));
                             }
                         }
                     }),

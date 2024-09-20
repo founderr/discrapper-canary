@@ -9,10 +9,10 @@ var i = t(735250),
     a = t(470079),
     s = t(481060),
     l = t(139387),
-    o = t(933557),
-    r = t(699516),
-    d = t(594174),
-    c = t(491302),
+    r = t(933557),
+    o = t(699516),
+    c = t(594174),
+    d = t(491302),
     u = t(936726),
     I = t(981631),
     m = t(689938),
@@ -23,7 +23,7 @@ function N(e) {
             () =>
                 Object.values(t).map((e) => ({
                     value: e.id,
-                    label: (0, o.F6)(e, d.default, r.Z, !0)
+                    label: (0, r.F6)(e, c.default, o.Z, !0)
                 })),
             [t]
         ),
@@ -65,7 +65,7 @@ function N(e) {
                                             'span',
                                             {
                                                 className: _.channelName,
-                                                children: (0, o.F6)(n, d.default, r.Z, !0)
+                                                children: (0, r.F6)(n, c.default, o.Z, !0)
                                             },
                                             n.id
                                         )
@@ -75,7 +75,7 @@ function N(e) {
                                 var n;
                                 if (e.type === I.ylB.CHANNEL_FOLLOWER)
                                     return (0, i.jsx)(
-                                        c.Z,
+                                        d.Z,
                                         {
                                             webhook: e,
                                             editedWebhook: N,

@@ -15,7 +15,7 @@ var l = n(735250),
     v = n(410441),
     _ = n(797342),
     p = n(689938);
-let T = (e, t, n, l) => {
+let f = (e, t, n, l) => {
         let a = (function (e) {
                 if (e === i._.WEEK) return p.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_GAME_WEEK_POPOUT;
             })(l),
@@ -28,7 +28,7 @@ let T = (e, t, n, l) => {
             })
             .replaceAll('*', '');
     },
-    f = (e, t) =>
+    T = (e, t) =>
         p.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING.format({
             username: t.username,
             activity: e.extra.game_name
@@ -39,23 +39,23 @@ t.Z = (e) => {
         { user: C, details: N, appName: P } = (0, _.n)(n),
         { primaryColor: Z, secondaryColor: S } = (0, d.Z)(null == I ? void 0 : I.src),
         M = (0, u.yA)(n),
-        y = (0, u.Nq)(n),
-        A = a.useCallback(
+        A = (0, u.Nq)(n),
+        y = a.useCallback(
             (e) => {
-                if (null != t && null != C && null != M && null != y && !!(0, m.qy)(y))
+                if (null != t && null != C && null != M && null != A && !!(0, m.qy)(A))
                     return (0, c.SO)({
                         entry: n,
                         applicationImageSrc: null == I ? void 0 : I.src,
                         avatarSrcs: [C.getAvatarURL(null == t ? void 0 : t.guild_id, 128)],
-                        description: T(n, t, C, y),
+                        description: f(n, t, C, A),
                         timestamp: p.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_HOURS.format({ hours: Math.round(M / r.Z.Seconds.HOUR) }),
                         colors: [Z, S],
                         channelId: e
                     });
             },
-            [null == I ? void 0 : I.src, t, M, n, Z, y, S, C]
+            [null == I ? void 0 : I.src, t, M, n, Z, A, S, C]
         );
-    if (null == C || null == M || null == y || !(0, m.qy)(y)) return null;
+    if (null == C || null == M || null == A || !(0, m.qy)(A)) return null;
     let O = null != n.extra.platform ? h.v[n.extra.platform] : null;
     return (0, l.jsxs)(E.yR, {
         children: [
@@ -84,8 +84,8 @@ t.Z = (e) => {
                     onVoiceChannelPreview: g,
                     user: C,
                     channel: t,
-                    generateReactionImage: A,
-                    reactionImageAltText: f(n, C),
+                    generateReactionImage: y,
+                    reactionImageAltText: T(n, C),
                     entry: n
                 })
             })

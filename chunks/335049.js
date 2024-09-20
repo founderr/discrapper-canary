@@ -7,10 +7,10 @@ var i = t(735250),
     a = t(470079),
     s = t(120356),
     l = t.n(s),
-    o = t(512722),
-    r = t.n(o),
-    d = t(866442),
-    c = t(442837),
+    r = t(512722),
+    o = t.n(r),
+    c = t(866442),
+    d = t(442837),
     u = t(481060),
     I = t(239091),
     m = t(895924),
@@ -22,15 +22,15 @@ var i = t(735250),
     g = t(271383),
     p = t(430824),
     f = t(246946),
-    O = t(594174),
-    x = t(51144),
-    C = t(981631),
+    x = t(594174),
+    C = t(51144),
+    O = t(981631),
     S = t(689938),
     A = t(142208);
 function R(e) {
-    let { guild: n, id: s, type: l, isLocked: o, lockTooltipText: d } = e,
-        c = !o || null != d;
-    r()(c, 'No lockTooltipText provided while isLocked=true');
+    let { guild: n, id: s, type: l, isLocked: r, lockTooltipText: c } = e,
+        d = !r || null != c;
+    o()(d, 'No lockTooltipText provided while isLocked=true');
     let u = a.useCallback(
         (e) => {
             (0, I.jW)(e, async () => {
@@ -50,39 +50,39 @@ function R(e) {
             return (0, i.jsx)(b, {
                 guild: n,
                 id: s,
-                isLocked: o,
-                lockTooltipText: d,
+                isLocked: r,
+                lockTooltipText: c,
                 openEntryContextMenu: u
             });
         case m.Kw.ROLE:
             return (0, i.jsx)(Z, {
                 guild: n,
                 id: s,
-                isLocked: o,
-                lockTooltipText: d,
+                isLocked: r,
+                lockTooltipText: c,
                 openEntryContextMenu: u
             });
         case m.Kw.USER:
             return (0, i.jsx)(v, {
                 guild: n,
                 id: s,
-                isLocked: o,
-                lockTooltipText: d,
+                isLocked: r,
+                lockTooltipText: c,
                 openEntryContextMenu: u
             });
     }
 }
 function b(e) {
-    let { guild: n, id: t, isLocked: s, lockTooltipText: o, openEntryContextMenu: r } = e,
-        d = (0, _.bD)(n.id),
+    let { guild: n, id: t, isLocked: s, lockTooltipText: r, openEntryContextMenu: o } = e,
+        c = (0, _.bD)(n.id),
         {
             icon: I,
             name: m,
             categoryName: E
-        } = (0, c.cj)(
+        } = (0, d.cj)(
             [h.Z],
             () => {
-                if (d === t)
+                if (c === t)
                     return {
                         name: S.Z.Messages.INTEGRATIONS_APPLICATION_ALL_CHANNELS,
                         icon: u.TextIcon
@@ -95,13 +95,13 @@ function b(e) {
                     categoryName: null == i ? void 0 : i.name
                 };
             },
-            [d, n, t]
+            [c, n, t]
         ),
         T = a.useCallback(
             (e) => {
-                t !== d && r(e);
+                t !== c && o(e);
             },
-            [d, t, r]
+            [c, t, o]
         );
     return null == I || null == m
         ? null
@@ -129,17 +129,17 @@ function b(e) {
                             children: ['(', E, ')']
                         })
                       : null,
-                  s ? (0, i.jsx)(M, { tooltipText: o }) : null
+                  s ? (0, i.jsx)(M, { tooltipText: r }) : null
               ]
           });
 }
 function Z(e) {
     var n;
-    let { guild: s, id: o, isLocked: r, lockTooltipText: m } = e,
-        _ = (0, c.e7)([p.Z], () => p.Z.getRole(s.id, o)),
+    let { guild: s, id: r, isLocked: o, lockTooltipText: m } = e,
+        _ = (0, d.e7)([p.Z], () => p.Z.getRole(s.id, r)),
         N = (0, T.p9)({
             guildId: s.id,
-            roleId: o,
+            roleId: r,
             size: 24
         }),
         h = a.useCallback(
@@ -173,7 +173,7 @@ function Z(e) {
                             width: 23,
                             height: 23,
                             className: l()(A.shield, A.image),
-                            color: null !== (n = _.colorString) && void 0 !== n ? n : (0, d.Rf)(C.p6O)
+                            color: null !== (n = _.colorString) && void 0 !== n ? n : (0, c.Rf)(O.p6O)
                         }),
                   (0, i.jsx)(u.Text, {
                       className: A.roleName,
@@ -181,14 +181,14 @@ function Z(e) {
                       variant: 'text-md/normal',
                       children: _.name
                   }),
-                  r ? (0, i.jsx)(M, { tooltipText: m }) : null
+                  o ? (0, i.jsx)(M, { tooltipText: m }) : null
               ]
           });
 }
 function v(e) {
     let { guild: n, id: t, isLocked: a, lockTooltipText: s, openEntryContextMenu: l } = e,
-        o = (0, c.e7)([O.default], () => O.default.getUser(t)),
-        r = (0, c.e7)(
+        r = (0, d.e7)([x.default], () => x.default.getUser(t)),
+        o = (0, d.e7)(
             [g.ZP],
             () => {
                 var e;
@@ -196,8 +196,8 @@ function v(e) {
             },
             [n.id, t]
         ),
-        d = (0, c.e7)([f.Z], () => f.Z.hidePersonalInformation);
-    return null == o
+        c = (0, d.e7)([f.Z], () => f.Z.hidePersonalInformation);
+    return null == r
         ? null
         : (0, i.jsxs)('div', {
               onContextMenu: l,
@@ -205,22 +205,22 @@ function v(e) {
               children: [
                   (0, i.jsx)(u.Avatar, {
                       className: A.image,
-                      src: o.getAvatarURL(n.id, 24),
-                      'aria-label': o.username,
+                      src: r.getAvatarURL(n.id, 24),
+                      'aria-label': r.username,
                       size: u.AvatarSizes.SIZE_24
                   }),
                   (0, i.jsx)(u.Text, {
                       className: A.roleName,
                       color: 'header-primary',
                       variant: 'text-md/normal',
-                      children: null != r ? r : o.username
+                      children: null != o ? o : r.username
                   }),
-                  d
+                  c
                       ? null
                       : (0, i.jsx)(u.Text, {
                             className: A.tag,
                             variant: 'text-sm/normal',
-                            children: x.ZP.getUserTag(o)
+                            children: C.ZP.getUserTag(r)
                         }),
                   a ? (0, i.jsx)(M, { tooltipText: s }) : null
               ]

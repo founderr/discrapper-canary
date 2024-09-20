@@ -117,7 +117,7 @@ function f(e, n, r) {
             }, o);
         case s.QJ.MULTIPLE_CHOICE:
             return (0, i.openModalLazy)(async () => {
-                let { default: e } = await t.e('94064').then(t.bind(t, 607569));
+                let { default: e } = await t.e('91197').then(t.bind(t, 607569));
                 return (t) =>
                     (0, a.jsx)(e, {
                         ...t,
@@ -163,7 +163,7 @@ function C(e, n, r) {
             }, o);
         case s.QJ.MULTIPLE_CHOICE:
             return (0, i.openModalLazy)(async () => {
-                let { default: r } = await t.e('94064').then(t.bind(t, 607569));
+                let { default: r } = await t.e('91197').then(t.bind(t, 607569));
                 return (t) =>
                     (0, a.jsx)(r, {
                         ...t,

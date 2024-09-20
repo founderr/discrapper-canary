@@ -15,8 +15,8 @@ var l = n(735250),
     v = n(278399),
     _ = n(297781),
     p = n(591853),
-    T = n(410441),
-    f = n(616922),
+    f = n(410441),
+    T = n(616922),
     g = n(689938);
 let I = (e, t, n, l) => {
         let a = (function (e) {
@@ -41,7 +41,7 @@ t.Z = (e) => {
         { parent_title: N, provider: P, image_url: Z } = n.extra.media,
         S = n.extra.artist.name,
         M = (0, s.e7)([u.default], () => u.default.getUser(n.author_id)),
-        { primaryColor: y, secondaryColor: A } = (0, E.Z)(Z),
+        { primaryColor: A, secondaryColor: y } = (0, E.Z)(Z),
         O = (0, m.Nq)(n),
         R = a.useCallback(() => {
             if (null == t || null == M || !(0, d.Hi)(O, v.y9)) return;
@@ -52,14 +52,14 @@ t.Z = (e) => {
                 mediaImageSrc: Z,
                 artist: S,
                 description: e,
-                colors: [y, A],
+                colors: [A, y],
                 badges: (0, x.UU)(n)
             });
-        }, [Z, S, t, n, y, O, A, M]);
+        }, [Z, S, t, n, A, O, y, M]);
     if (null == M || !(0, d.Hi)(O, v.y9)) return null;
     let j = () => {
-        let e = f.Hw.ALBUM,
-            t = o.Z.isProtocolRegistered() ? f.C7.PLAYER_OPEN(e, n.extra.media.external_parent_id) : f.C7.WEB_OPEN(e, n.extra.media.external_parent_id);
+        let e = T.Hw.ALBUM,
+            t = o.Z.isProtocolRegistered() ? T.C7.PLAYER_OPEN(e, n.extra.media.external_parent_id) : T.C7.WEB_OPEN(e, n.extra.media.external_parent_id);
         window.open(t);
     };
     return (0, l.jsxs)(p.yR, {
@@ -67,8 +67,8 @@ t.Z = (e) => {
             (0, l.jsx)(p.wG, {
                 onClickTitle: j,
                 onClickSubtitle: () => {
-                    let e = f.Hw.ARTIST,
-                        t = o.Z.isProtocolRegistered() ? f.C7.PLAYER_OPEN(e, n.extra.artist.external_id) : f.C7.WEB_OPEN(e, n.extra.artist.external_id);
+                    let e = T.Hw.ARTIST,
+                        t = o.Z.isProtocolRegistered() ? T.C7.PLAYER_OPEN(e, n.extra.artist.external_id) : T.C7.WEB_OPEN(e, n.extra.artist.external_id);
                     window.open(t);
                 },
                 onClickThumbnail: j,
@@ -76,7 +76,7 @@ t.Z = (e) => {
                 entry: n,
                 headerIcons:
                     P === r.p.SPOTIFY
-                        ? (0, l.jsx)(T.Z, {
+                        ? (0, l.jsx)(f.Z, {
                               Icon: c.Z,
                               'aria-label': g.Z.Messages.SPOTIFY
                           })

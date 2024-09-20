@@ -8,12 +8,12 @@ t(470079);
 var a = t(481060),
     s = t(600164),
     l = t(313201),
-    o = t(63063),
-    r = t(453628),
-    d = t(689938),
-    c = t(113207);
+    r = t(63063),
+    o = t(453628),
+    c = t(689938),
+    d = t(113207);
 function u(e) {
-    let { value: n, onChange: t, children: u, note: I, helpdeskArticleId: m, style: _, disabled: N = !1, hideBorder: E = !1, className: T = c.marginBottom20 } = e,
+    let { value: n, onChange: t, children: u, note: I, helpdeskArticleId: m, style: _, disabled: N = !1, hideBorder: E = !1, className: T = d.marginBottom20 } = e,
         h = (0, l.Dt)();
     return (0, i.jsxs)(s.Z, {
         style: _,
@@ -25,7 +25,7 @@ function u(e) {
                     (0, i.jsx)(s.Z.Child, {
                         children: (0, i.jsx)(a.FormTitle, {
                             id: h,
-                            className: c.marginReset,
+                            className: d.marginReset,
                             tag: a.FormTitleTags.H3,
                             disabled: N,
                             children: u
@@ -34,7 +34,7 @@ function u(e) {
                     (0, i.jsx)(s.Z.Child, {
                         grow: 0,
                         shrink: 0,
-                        children: (0, i.jsx)(r.Z, {
+                        children: (0, i.jsx)(o.Z, {
                             value: n,
                             onChange: t,
                             disabled: N,
@@ -45,7 +45,7 @@ function u(e) {
             }),
             null != I &&
                 (0, i.jsx)(s.Z.Child, {
-                    className: c.marginTop4,
+                    className: d.marginTop4,
                     children: (0, i.jsx)(a.FormText, {
                         type: a.FormTextTypes.DESCRIPTION,
                         children: I
@@ -53,22 +53,22 @@ function u(e) {
                 }),
             null != m &&
                 (0, i.jsx)(s.Z.Child, {
-                    className: c.marginTop4,
+                    className: d.marginTop4,
                     children: (0, i.jsx)(a.FormText, {
                         disabled: N,
                         type: a.FormTextTypes.DESCRIPTION,
                         children: (0, i.jsx)(a.Anchor, {
-                            href: o.Z.getArticleURL(m),
-                            children: d.Z.Messages.LEARN_MORE
+                            href: r.Z.getArticleURL(m),
+                            children: c.Z.Messages.LEARN_MORE
                         })
                     })
                 }),
             !E &&
                 (0, i.jsx)(s.Z.Child, {
-                    className: c.marginTop20,
+                    className: d.marginTop20,
                     children: (0, i.jsx)(a.FormDivider, {})
                 })
         ]
     });
 }
-r.Z.Types, (u.Types = r.Z.Types);
+o.Z.Types, (u.Types = o.Z.Types);

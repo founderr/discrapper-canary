@@ -1,6 +1,6 @@
 t.d(n, {
     w: function () {
-        return c;
+        return d;
     }
 }),
     t(47120),
@@ -10,10 +10,10 @@ var i = t(470079),
     a = t(581364),
     s = t(984933),
     l = t(496675),
-    o = t(282923),
-    r = t(981631),
-    d = t(689938);
-function c(e) {
+    r = t(282923),
+    o = t(981631),
+    c = t(689938);
+function d(e) {
     let n = i.useMemo(() => {
             let n = s.ZP.getChannels(e),
                 t = [...n[s.sH]];
@@ -21,28 +21,28 @@ function c(e) {
             let i = t.map((e) => ({
                 id: e.channel.id,
                 name: e.channel.name,
-                canManage: l.Z.can(r.Plq.MANAGE_ROLES, e.channel)
+                canManage: l.Z.can(o.Plq.MANAGE_ROLES, e.channel)
             }));
             return (
                 i.unshift({
                     id: (0, a.bD)(e),
-                    name: d.Z.Messages.INTEGRATIONS_APPLICATION_ALL_CHANNELS,
+                    name: c.Z.Messages.INTEGRATIONS_APPLICATION_ALL_CHANNELS,
                     canManage: !0
                 }),
                 i
             );
         }, [e]),
-        [t, c] = i.useState(''),
+        [t, d] = i.useState(''),
         I = i.useMemo(() => {
             let e = (function (e) {
                 return e.startsWith('#') ? e.substr(1) : e;
             })(t);
-            return (0, o.B)(n, u, e);
+            return (0, r.B)(n, u, e);
         }, [n, t]);
     return {
         query: t,
         results: I,
-        setQuery: c,
+        setQuery: d,
         unfilteredCount: n.length
     };
 }

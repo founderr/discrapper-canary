@@ -7,10 +7,10 @@ var i = t(735250),
     a = t(470079),
     s = t(481060),
     l = t(239091),
-    o = t(911969),
-    r = t(399860),
-    d = t(689938),
-    c = t(83956);
+    r = t(911969),
+    o = t(399860),
+    c = t(689938),
+    d = t(83956);
 function u(e) {
     let { applicationIcon: n, applicationName: u, canNavigate: I, command: m, guildId: _ } = e,
         N = a.useMemo(() => {
@@ -41,24 +41,24 @@ function u(e) {
                         (0, i.jsx)(e, {
                             ...n,
                             id: m.id,
-                            label: d.Z.Messages.COPY_ID_COMMAND
+                            label: c.Z.Messages.COPY_ID_COMMAND
                         });
                 });
             },
             [m]
         ),
-        h = m.type === o.yU.CHAT ? s.SlashBoxIcon : s.PaperIcon,
-        g = (0, r.gw)(m.type, m.displayName);
+        h = m.type === r.yU.CHAT ? s.SlashBoxIcon : s.PaperIcon,
+        g = (0, o.gw)(m.type, m.displayName);
     return (0, i.jsxs)(s.Clickable, {
         onClick: E,
-        className: c.item,
+        className: d.item,
         onContextMenu: T,
         children: [
             (0, i.jsxs)('div', {
-                className: c.identifier,
+                className: d.identifier,
                 children: [
                     (0, i.jsx)(h, {
-                        className: c.icon,
+                        className: d.icon,
                         size: 'md',
                         color: 'currentColor'
                     }),
@@ -69,19 +69,19 @@ function u(e) {
                 ]
             }),
             (0, i.jsx)('div', {
-                className: c.statusContainer,
+                className: d.statusContainer,
                 children: N
                     ? (0, i.jsxs)('div', {
-                          className: c.statusLine,
+                          className: d.statusLine,
                           children: [
                               (0, i.jsx)(s.Text, {
                                   variant: 'text-md/normal',
-                                  children: d.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_STATUS_HAS_OVERRIDES
+                                  children: c.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_STATUS_HAS_OVERRIDES
                               }),
                               (0, i.jsx)(s.CircleInformationIcon, {
                                   size: 'sm',
                                   color: 'currentColor',
-                                  className: c.statusIcon
+                                  className: d.statusIcon
                               })
                           ]
                       })

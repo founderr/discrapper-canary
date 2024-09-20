@@ -22,14 +22,14 @@ function m(e) {
             guildId: m,
             channelId: null == x ? void 0 : x.id
         }),
-        T = (0, r.Z)({
+        f = (0, r.Z)({
             id: n.id,
             label: d.Z.Messages.COPY_ID_USER
         }),
-        f = (0, c.dX)(E),
+        T = (0, c.dX)(E),
         g = (0, o.Z)({
             location: 'ContentPopoutContextMenu',
-            applicationId: f && !0 !== _ ? (null === (t = E.extra) || void 0 === t ? void 0 : t.application_id) : void 0,
+            applicationId: T && !0 !== _ ? (null === (t = E.extra) || void 0 === t ? void 0 : t.application_id) : void 0,
             source: s.m1.ActivityCardContextMenu,
             trackEntryPointImpression: !0,
             sourceUserId: E.author_id
@@ -60,7 +60,7 @@ function m(e) {
                                     })
                             ]
                         }),
-                        (0, l.jsx)(a.MenuGroup, { children: T })
+                        (0, l.jsx)(a.MenuGroup, { children: f })
                     ]
                 })
             });

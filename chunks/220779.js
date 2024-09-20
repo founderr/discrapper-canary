@@ -23,11 +23,11 @@ var l = n(735250),
     v = n(981631),
     _ = n(689938),
     p = n(793834);
-let T = (0, x.kt)({
+let f = (0, x.kt)({
         id: '1',
         type: v.d4z.DM
     }),
-    f = a.forwardRef(function (e, t) {
+    T = a.forwardRef(function (e, t) {
         let { placeholder: n, headerText: a, onEnter: i, showPopout: u, children: c, body: d, hide: h } = e,
             m = (0, o.ZP)();
         return (0, l.jsx)(s.Popout, {
@@ -68,10 +68,10 @@ let T = (0, x.kt)({
     });
 function g(e) {
     let { placeholder: t, onEnter: n, setEditorRef: i, showEmojiButton: s = !1, renderAttachButton: o, autoFocus: h = !0, onFocus: m, channel: x, className: v } = e,
-        [_, f] = a.useState(''),
+        [_, T] = a.useState(''),
         [g, I] = a.useState((0, c.JM)('')),
         C = () => {
-            f(''), I((0, c.JM)(''));
+            T(''), I((0, c.JM)(''));
         },
         N = u.I.ATOMIC_REACTOR_REPLY_INPUT,
         P = a.useRef(null);
@@ -83,9 +83,9 @@ function g(e) {
         showRemainingCharsAfterCount: -1,
         allowNewLines: !1,
         maxCharacterCount: E.z,
-        channel: null != x ? x : T,
+        channel: null != x ? x : f,
         onChange: (e, t, n) => {
-            f(t), I(n);
+            T(t), I(n);
         },
         type: s
             ? {
@@ -163,7 +163,7 @@ let I = (e, t) => {
                                 ref: c,
                                 children: (0, l.jsx)(m.$, {
                                     messageId: v.lds,
-                                    channel: T,
+                                    channel: f,
                                     closePopout: () => {
                                         u(!1);
                                     },
@@ -223,7 +223,7 @@ t.ZP = (e) => {
                             }
                         }),
                     i &&
-                        (0, l.jsx)(f, {
+                        (0, l.jsx)(T, {
                             hide: () => m(!1),
                             ref: x,
                             headerText: u,

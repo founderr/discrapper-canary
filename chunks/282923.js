@@ -12,9 +12,9 @@ function s(e, n, t) {
     let i = t.toLowerCase(),
         s = [];
     for (let l of e) {
-        let { id: e, names: o } = n(l);
+        let { id: e, names: r } = n(l);
         if (e === t) return [l];
-        o.some((e) => a()(i, e.toLowerCase())) && s.push(l);
+        r.some((e) => a()(i, e.toLowerCase())) && s.push(l);
     }
     return s;
 }

@@ -8,10 +8,10 @@ var i = t(735250),
     a = t(470079),
     s = t(481060),
     l = t(668781),
-    o = t(139387),
-    r = t(308063),
-    d = t(600164),
-    c = t(259580),
+    r = t(139387),
+    o = t(308063),
+    c = t(600164),
+    d = t(259580),
     u = t(768581),
     I = t(486199),
     m = t(981631),
@@ -40,7 +40,7 @@ function E(e) {
                     confirmText: _.Z.Messages.INTEGRATIONS_FOLLOWED_CHANNEL_DELETE,
                     cancelText: _.Z.Messages.CANCEL,
                     onConfirm: () => {
-                        r.Z.delete(n.guild_id, n.id).catch(() => {
+                        o.Z.delete(n.guild_id, n.id).catch(() => {
                             l.Z.show({
                                 title: _.Z.Messages.INTEGRATIONS_FOLLOWED_CHANNEL_ERROR_DELETING,
                                 body: _.Z.Messages.WEBHOOK_ERROR_INTERNAL_SERVER_ERROR
@@ -54,14 +54,14 @@ function E(e) {
                 })
             );
         }, [n.guild_id, n.id, n.name]),
-        O = [];
+        x = [];
     null != n.source_channel &&
         null != n.source_guild &&
-        (O.push({
+        (x.push({
             icon: s.AnnouncementsIcon,
             text: n.source_channel.name
         }),
-        O.push({
+        x.push({
             text: (0, i.jsx)(
                 'span',
                 {
@@ -81,35 +81,35 @@ function E(e) {
                 'guild-source'
             )
         }));
-    let x = null;
+    let C = null;
     return (
         T &&
             null != t &&
-            (x = (0, i.jsxs)('div', {
+            (C = (0, i.jsxs)('div', {
                 className: N.body,
                 children: [
                     (0, i.jsx)(s.FormDivider, { className: N.topDivider }),
-                    (0, i.jsx)(d.Z, {
-                        children: (0, i.jsxs)(d.Z, {
-                            direction: d.Z.Direction.VERTICAL,
+                    (0, i.jsx)(c.Z, {
+                        children: (0, i.jsxs)(c.Z, {
+                            direction: c.Z.Direction.VERTICAL,
                             children: [
-                                (0, i.jsxs)(d.Z, {
+                                (0, i.jsxs)(c.Z, {
                                     children: [
-                                        (0, i.jsx)(d.Z.Child, {
+                                        (0, i.jsx)(c.Z.Child, {
                                             basis: '50%',
                                             children: (0, i.jsx)(s.FormItem, {
                                                 title: _.Z.Messages.INTEGRATIONS_FOLLOWED_CHANNEL_NAME,
                                                 children: (0, i.jsx)(s.TextInput, {
                                                     value: t.name,
                                                     onChange: (e) => {
-                                                        o.Z.updateWebhook({ name: e });
+                                                        r.Z.updateWebhook({ name: e });
                                                     },
                                                     maxLength: 80,
                                                     error: h.name
                                                 })
                                             })
                                         }),
-                                        (0, i.jsx)(d.Z.Child, {
+                                        (0, i.jsx)(c.Z.Child, {
                                             basis: '50%',
                                             children: (0, i.jsx)(s.FormItem, {
                                                 title: _.Z.Messages.INTEGRATIONS_FOLLOWED_CHANNEL_DEST_CHANNEL,
@@ -117,7 +117,7 @@ function E(e) {
                                                     value: t.channel_id,
                                                     options: E,
                                                     onChange: (e) => {
-                                                        o.Z.updateWebhook({ channelId: e });
+                                                        r.Z.updateWebhook({ channelId: e });
                                                     }
                                                 })
                                             })
@@ -125,7 +125,7 @@ function E(e) {
                                     ]
                                 }),
                                 (0, i.jsx)(s.FormDivider, { className: N.bottomDivider }),
-                                (0, i.jsx)(d.Z, {
+                                (0, i.jsx)(c.Z, {
                                     children: (0, i.jsx)(s.Button, {
                                         onClick: f,
                                         size: s.Button.Sizes.SMALL,
@@ -143,23 +143,23 @@ function E(e) {
         (0, i.jsx)(s.Card, {
             editable: !0,
             className: N.card,
-            children: (0, i.jsxs)(d.Z, {
-                direction: d.Z.Direction.VERTICAL,
+            children: (0, i.jsxs)(c.Z, {
+                direction: c.Z.Direction.VERTICAL,
                 children: [
                     (0, i.jsx)(s.Clickable, {
                         className: N.header,
                         'aria-expanded': T,
                         onClick: g,
-                        children: (0, i.jsxs)(d.Z, {
-                            align: d.Z.Align.CENTER,
+                        children: (0, i.jsxs)(c.Z, {
+                            align: c.Z.Align.CENTER,
                             children: [
                                 (0, i.jsx)(I.Z, {
                                     name: n.name,
                                     imageSrc: p,
                                     detailsClassName: N.__invalid_description,
-                                    details: O
+                                    details: x
                                 }),
-                                (0, i.jsx)(c.Z, {
+                                (0, i.jsx)(d.Z, {
                                     className: N.expandIcon,
                                     expanded: T,
                                     'aria-hidden': !0
@@ -167,7 +167,7 @@ function E(e) {
                             ]
                         })
                     }),
-                    x
+                    C
                 ]
             })
         })

@@ -30,8 +30,8 @@ var n = s(735250),
     S = s(541716),
     x = s(752305),
     f = s(893718),
-    M = s(600164),
-    C = s(313201),
+    C = s(600164),
+    M = s(313201),
     I = s(907040),
     R = s(633302),
     Z = s(109434),
@@ -77,17 +77,17 @@ function en(e, t, s) {
         e
     );
 }
-let el = (0, C.hQ)(),
-    ei = (0, C.hQ)(),
-    ea = (0, C.hQ)(),
-    er = (0, C.hQ)(),
-    eo = (0, C.hQ)(),
-    ec = (0, C.hQ)(),
-    ed = (0, C.hQ)(),
-    eu = (0, C.hQ)(),
-    eh = (0, C.hQ)(),
-    em = (0, C.hQ)(),
-    eg = (0, C.hQ)(),
+let el = (0, M.hQ)(),
+    ei = (0, M.hQ)(),
+    ea = (0, M.hQ)(),
+    er = (0, M.hQ)(),
+    eo = (0, M.hQ)(),
+    ec = (0, M.hQ)(),
+    ed = (0, M.hQ)(),
+    eu = (0, M.hQ)(),
+    eh = (0, M.hQ)(),
+    em = (0, M.hQ)(),
+    eg = (0, M.hQ)(),
     eE = (0, y.kt)({
         id: '1',
         type: q.d4z.DM
@@ -208,7 +208,7 @@ class e_ extends l.PureComponent {
     renderChannelInfo(e, t) {
         var s, l, i, c, u, m;
         let g, T;
-        let { canManageChannels: p, canSendMessages: N, isThreadModerator: _, canManageThread: x, guild: M, isForumPost: C, isOwner: I, showAdvancedSlowModeSetting: Z } = this.props,
+        let { canManageChannels: p, canSendMessages: N, isThreadModerator: _, canManageThread: x, guild: C, isForumPost: M, isOwner: I, showAdvancedSlowModeSetting: Z } = this.props,
             L = y.Ec.has(e.type),
             j = e.isForumLikeChannel(),
             D = j && (null === (s = e.availableTags) || void 0 === s ? void 0 : s.every((e) => e.moderated)),
@@ -520,7 +520,7 @@ class e_ extends l.PureComponent {
                                       page: q.ZY5.CHANNEL_SETTINGS,
                                       children: (0, n.jsx)(b.Z, {
                                           autoArchiveDuration: null !== (m = e.threadMetadata.autoArchiveDuration) && void 0 !== m ? m : J.AX,
-                                          guild: M,
+                                          guild: C,
                                           channel: e,
                                           onChange: this.handleAutoArchiveDurationChanged,
                                           isDisabled: !x
@@ -530,7 +530,7 @@ class e_ extends l.PureComponent {
                               (0, n.jsx)(h.FormText, {
                                   className: es.marginTop8,
                                   type: h.FormText.Types.DESCRIPTION,
-                                  children: C ? ee.Z.Messages.FORM_HELP_AUTO_ARCHIVE_DURATION_FORUM_POST : ee.Z.Messages.FORM_HELP_AUTO_ARCHIVE_DURATION
+                                  children: M ? ee.Z.Messages.FORM_HELP_AUTO_ARCHIVE_DURATION_FORUM_POST : ee.Z.Messages.FORM_HELP_AUTO_ARCHIVE_DURATION
                               })
                           ]
                       })
@@ -562,7 +562,7 @@ class e_ extends l.PureComponent {
                   })
                 : null,
             ed =
-                y.Y0.has(e.type) && null != M && M.hasFeature(q.oNc.NEWS) && e.id !== (null == M ? void 0 : M.rulesChannelId) && e.id !== (null == M ? void 0 : M.publicUpdatesChannelId)
+                y.Y0.has(e.type) && null != C && C.hasFeature(q.oNc.NEWS) && e.id !== (null == C ? void 0 : C.rulesChannelId) && e.id !== (null == C ? void 0 : C.publicUpdatesChannelId)
                     ? (0, n.jsx)('div', {
                           children: (0, n.jsx)(h.FormSwitch, {
                               note: ee.Z.Messages.FORM_HELP_NEWS.format({ documentationLink: W.Z.getArticleURL(q.BhN.ANNOUNCEMENT_CHANNELS) }),
@@ -582,7 +582,7 @@ class e_ extends l.PureComponent {
                               page: q.ZY5.CHANNEL_SETTINGS,
                               children: (0, n.jsx)(b.Z, {
                                   autoArchiveDuration: (0, O.WD)(e, null),
-                                  guild: M,
+                                  guild: C,
                                   channel: e,
                                   onChange: this.handleChangeDefaultAutoArchiveDuration,
                                   isDisabled: !p
@@ -600,9 +600,9 @@ class e_ extends l.PureComponent {
                 ? (0, n.jsx)(h.FormSwitch, {
                       note: ee.Z.Messages.CHANNEL_SETTINGS_SUMMARIES_TOGGLE_DESCRIPTION.format({ helpdeskArticle: W.Z.getArticleURL(q.BhN.CONVERSATION_SUMMARIES) }),
                       onChange: this.handleChannelSummariesToggled,
-                      value: !e.hasFlag(X.zZ.SUMMARIES_DISABLED) && (null == M ? void 0 : M.hasFeature(q.oNc.SUMMARIES_ENABLED_BY_USER)),
+                      value: !e.hasFlag(X.zZ.SUMMARIES_DISABLED) && (null == C ? void 0 : C.hasFeature(q.oNc.SUMMARIES_ENABLED_BY_USER)),
                       hideBorder: !0,
-                      disabled: !p || !(null == M ? void 0 : M.hasFeature(q.oNc.SUMMARIES_ENABLED_BY_USER)),
+                      disabled: !p || !(null == C ? void 0 : C.hasFeature(q.oNc.SUMMARIES_ENABLED_BY_USER)),
                       children: (0, n.jsxs)('div', {
                           className: et.badgedItem,
                           children: [
@@ -674,8 +674,8 @@ class e_ extends l.PureComponent {
         if (!this.showVoiceSettings()) return null;
         let l = (0, G.g7)(t, e),
             i = this.getError('bitrate');
-        return (0, n.jsxs)(M.Z, {
-            direction: M.Z.Direction.VERTICAL,
+        return (0, n.jsxs)(C.Z, {
+            direction: C.Z.Direction.VERTICAL,
             className: es.marginBottom40,
             children: [
                 (0, n.jsx)(h.FormTitle, {
@@ -740,8 +740,8 @@ class e_ extends l.PureComponent {
                 name: ee.Z.Messages.VIDEO_QUALITY_MODE_FULL
             }
         ];
-        return (0, n.jsxs)(M.Z, {
-            direction: M.Z.Direction.VERTICAL,
+        return (0, n.jsxs)(C.Z, {
+            direction: C.Z.Direction.VERTICAL,
             className: es.marginBottom40,
             children: [
                 (0, n.jsx)(h.FormItem, {
@@ -771,8 +771,8 @@ class e_ extends l.PureComponent {
         if (!this.showVoiceSettings()) return null;
         let s = this.getError('user_limit'),
             l = e.isGuildStageVoice() ? q.xGv : q.$pe;
-        return (0, n.jsxs)(M.Z, {
-            direction: M.Z.Direction.VERTICAL,
+        return (0, n.jsxs)(C.Z, {
+            direction: C.Z.Direction.VERTICAL,
             className: es.marginBottom40,
             children: [
                 (0, n.jsx)(h.FormTitle, {
@@ -823,8 +823,8 @@ class e_ extends l.PureComponent {
                 value: eT
             });
         let r = null !== (t = e.rtcRegion) && void 0 !== t ? t : eT;
-        return (0, n.jsxs)(M.Z, {
-            direction: M.Z.Direction.VERTICAL,
+        return (0, n.jsxs)(C.Z, {
+            direction: C.Z.Direction.VERTICAL,
             children: [
                 (0, n.jsx)(h.FormTitle, { children: ee.Z.Messages.FORM_LABEL_REGION_OVERRIDE }),
                 (0, n.jsx)(h.SingleSelect, {
@@ -845,8 +845,8 @@ class e_ extends l.PureComponent {
         let { theme: l } = this.props;
         return (
             (t = e.type === q.d4z.GUILD_CATEGORY ? ((0, u.wj)(l) ? s(309095) : s(925442)) : (0, u.wj)(l) ? s(316491) : s(301358)),
-            (0, n.jsx)(M.Z, {
-                justify: M.Z.Justify.CENTER,
+            (0, n.jsx)(C.Z, {
+                justify: C.Z.Justify.CENTER,
                 className: es.marginTop60,
                 children: (0, n.jsx)('img', {
                     alt: '',
@@ -1029,7 +1029,7 @@ function eS() {
             guildId: null == t ? void 0 : t.guild_id,
             location: 'ChannelSettingsOverview'
         }).enabled,
-        M = l.useCallback(
+        C = l.useCallback(
             (e) => {
                 null != S && T.getState().setLayoutType(S, e);
             },
@@ -1050,7 +1050,7 @@ function eS() {
         subsection: i,
         isForumPost: null != t && t.isForumPost(),
         isOwner: null == t ? void 0 : t.isOwner(E),
-        handleSetDefaultLayout: M,
+        handleSetDefaultLayout: C,
         showChannelSummariesSettings: x,
         showAdvancedSlowModeSetting: f
     });

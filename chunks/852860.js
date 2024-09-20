@@ -12,14 +12,14 @@ t.Z = function (e) {
     var t;
     let { message: s, errorMessage: h, submitting: m, onReset: g, onSave: E, onSaveText: T, onResetText: p, onSaveButtonColor: N, disabled: _, saveButtonTooltip: S } = e,
         x = l.useRef(null),
-        [{ spring: f }, M] = (0, r.useSpring)(() => ({ spring: 0 }));
+        [{ spring: f }, C] = (0, r.useSpring)(() => ({ spring: 0 }));
     l.useEffect(() => {
         function e() {
-            M({
+            C({
                 spring: 1,
                 config: i.config.gentle
             }),
-                M({
+                C({
                     spring: 0,
                     config: i.config.gentle,
                     delay: 1000
@@ -31,8 +31,8 @@ t.Z = function (e) {
                 o.S.unsubscribe(c.CkL.EMPHASIZE_NOTICE, e);
             }
         );
-    }, [M]);
-    let C = f.to({
+    }, [C]);
+    let M = f.to({
             range: [0, 1],
             output: [(0, r.useToken)(a.Z.colors.TEXT_NORMAL).hex(), (0, r.useToken)(a.Z.unsafe_rawColors.WHITE_500).hex()]
         }),
@@ -57,7 +57,7 @@ t.Z = function (e) {
                         className: u.shrinkingContainer,
                         children: (0, n.jsx)(i.animated.div, {
                             className: u.message,
-                            style: { color: null != h ? R : C },
+                            style: { color: null != h ? R : M },
                             children: null !== (t = null != h ? h : s) && void 0 !== t ? t : d.Z.Messages.SETTINGS_NOTICE_MESSAGE
                         })
                     }),
@@ -72,7 +72,7 @@ t.Z = function (e) {
                                     look: r.Button.Looks.LINK,
                                     onClick: g,
                                     children: (0, n.jsx)(i.animated.span, {
-                                        style: { color: C },
+                                        style: { color: M },
                                         children: null != p ? p : d.Z.Messages.RESET
                                     })
                                 }),

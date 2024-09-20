@@ -1,19 +1,19 @@
 t.d(n, {
     Z: function () {
-        return s;
+        return l;
     }
 });
-var l = t(735250),
-    i = t(120356),
-    a = t.n(i),
-    r = t(481060),
-    o = t(615934);
-function s(e) {
-    let { className: n, onClick: t, ...i } = e,
-        s = (0, l.jsx)(r.Clickable, {
-            ...i,
-            className: a()(null != t && o.clickable, n),
+var a = t(735250),
+    r = t(120356),
+    s = t.n(r),
+    o = t(481060),
+    i = t(615934);
+function l(e) {
+    let { className: n, onClick: t, ...r } = e,
+        l = (0, a.jsx)(o.Clickable, {
+            ...r,
+            className: s()(null != t && i.clickable, n),
             onClick: t
         });
-    return null == t ? (0, l.jsx)(r.BlockInteractions, { children: s }) : s;
+    return null == t ? (0, a.jsx)(o.BlockInteractions, { children: l }) : l;
 }

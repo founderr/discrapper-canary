@@ -19,8 +19,8 @@ var n = s(735250),
     S = s(200498),
     x = s(146085),
     f = s(192079),
-    M = s(277053),
-    C = s(271383),
+    C = s(277053),
+    M = s(271383),
     I = s(430824),
     R = s(496675),
     Z = s(594174),
@@ -48,9 +48,9 @@ function B(e) {
                 f = !1;
             switch (_) {
                 case D.m$.ROLES:
-                    var M;
+                    var C;
                     (N =
-                        (p = s[x]).rowType === D.aC.ROLE && (null === (M = p.tags) || void 0 === M ? void 0 : M.guild_connections) === null
+                        (p = s[x]).rowType === D.aC.ROLE && (null === (C = p.tags) || void 0 === C ? void 0 : C.guild_connections) === null
                             ? (0, n.jsx)(E.Z, {
                                   className: F.shield,
                                   color: p.colorString,
@@ -112,7 +112,7 @@ function B(e) {
                     p = null;
             }
             if (null == p) return null;
-            let C = !f && null == i && null != p.id;
+            let M = !f && null == i && null != p.id;
             return (0, n.jsxs)(
                 T.Z,
                 {
@@ -139,7 +139,7 @@ function B(e) {
                                     onClick: () => {
                                         var e, s, n;
                                         return (
-                                            C &&
+                                            M &&
                                             null != p &&
                                             ((e = p.id),
                                             (s = p.name),
@@ -158,7 +158,7 @@ function B(e) {
                                             }))
                                         );
                                     },
-                                    'aria-disabled': !C,
+                                    'aria-disabled': !M,
                                     'aria-label': P.Z.Messages.REMOVE,
                                     children: (0, n.jsx)(o.CircleXIcon, {
                                         size: 'md',
@@ -189,7 +189,7 @@ function H(e) {
     let { guild: t, channel: l, permissionUpdates: i } = e,
         c = (0, r.e7)([I.Z], () => I.Z.getRoles(t.id)),
         d = O.RZ(t, c, l, x.yP, i),
-        u = (0, r.e7)([C.ZP], () => O.cR(C.ZP.getMemberIds(t.id), l, t, x.yP, i)),
+        u = (0, r.e7)([M.ZP], () => O.cR(M.ZP.getMemberIds(t.id), l, t, x.yP, i)),
         h = (0, S.nG)(l.id);
     function m() {
         (0, o.openModalLazy)(async () => {
@@ -390,21 +390,21 @@ function G(e) {
         ]
     });
 }
-t.Z = r.ZP.connectStores([M.Z, R.Z, C.ZP, I.Z], () => {
+t.Z = r.ZP.connectStores([C.Z, R.Z, M.ZP, I.Z], () => {
     let e;
-    let t = M.Z.channel,
-        s = M.Z.category,
+    let t = C.Z.channel,
+        s = C.Z.category,
         n = [],
         l = [],
         i = {},
         a = !1;
     if (null != t) {
         e = I.Z.getGuild(t.getGuildId());
-        let s = C.ZP.getMemberIds(null == e ? void 0 : e.id);
+        let s = M.ZP.getMemberIds(null == e ? void 0 : e.id);
         if (null != e) {
             let r = I.Z.getRoles(e.id);
-            (i = M.Z.editedPermissionIds.reduce((e, t) => {
-                let s = M.Z.getPermissionOverwrite(t);
+            (i = C.Z.editedPermissionIds.reduce((e, t) => {
+                let s = C.Z.getPermissionOverwrite(t);
                 return null != s && (e[t] = s), e;
             }, {})),
                 (n = O.kA(e, r, t, t.accessPermissions, i)),
@@ -420,7 +420,7 @@ t.Z = r.ZP.connectStores([M.Z, R.Z, C.ZP, I.Z], () => {
         filteredRoles: n,
         guild: e,
         isPrivateGuildChannel: a,
-        locked: M.Z.locked,
+        locked: C.Z.locked,
         permissionUpdates: i
     };
 })(function (e) {

@@ -47,7 +47,7 @@ function g(e) {
         : null;
 }
 function E(e) {
-    let { color: t, id: i, role: a, guild: d, children: E, isDragging: T, selectedItem: p, onItemSelect: N, itemType: _, locked: S, lockTooltip: x, showContextMenu: f, theme: M, roleStyle: C, 'aria-label': I } = e,
+    let { color: t, id: i, role: a, guild: d, children: E, isDragging: T, selectedItem: p, onItemSelect: N, itemType: _, locked: S, lockTooltip: x, showContextMenu: f, theme: C, roleStyle: M, 'aria-label': I } = e,
         R = l.useCallback(
             (e) => {
                 (0, c.jW)(e, async () => {
@@ -74,7 +74,7 @@ function E(e) {
               children: (0, n.jsxs)('div', {
                   className: m.roleContent,
                   children: [
-                      'dot' === C
+                      'dot' === M
                           ? (0, n.jsx)(o.RoleDot, {
                                 color: null != t ? t : void 0,
                                 className: m.roleDot,
@@ -87,7 +87,7 @@ function E(e) {
                             }),
                       (function () {
                           if (!S) return null;
-                          let e = (0, r.wj)(M) ? s(27377) : s(514811);
+                          let e = (0, r.wj)(C) ? s(27377) : s(514811);
                           return (0, n.jsx)(o.Tooltip, {
                               text: x,
                               color: o.Tooltip.Colors.RED,

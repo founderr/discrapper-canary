@@ -29,8 +29,8 @@ var n = s(735250),
     S = s(940639),
     x = s(325476),
     f = s(146085),
-    M = s(598077),
-    C = s(277053),
+    C = s(598077),
+    M = s(277053),
     I = s(388610),
     R = s(271383),
     Z = s(430824),
@@ -48,17 +48,17 @@ var n = s(735250),
     B = s(981631),
     H = s(689938),
     U = s(942648);
-let G = o.ZP.connectStores([C.Z, I.Z], () => {
+let G = o.ZP.connectStores([M.Z, I.Z], () => {
     let e = I.Z.getChannel();
     return {
-        submitting: C.Z.formState === B.QZA.SUBMITTING,
+        submitting: M.Z.formState === B.QZA.SUBMITTING,
         onReset() {
             (0, m.S1)();
         },
         onSave() {
             if (null == e) return;
-            let t = C.Z.editedPermissionIds.reduce((e, t) => {
-                let s = C.Z.getPermissionOverwrite(t);
+            let t = M.Z.editedPermissionIds.reduce((e, t) => {
+                let s = M.Z.getPermissionOverwrite(t);
                 return null != s && e.push(s), e;
             }, []);
             (0, m.hw)(e.id, t);
@@ -67,7 +67,7 @@ let G = o.ZP.connectStores([C.Z, I.Z], () => {
 })(T.Z);
 function k(e) {
     let { overwrite: t } = e,
-        s = (0, o.e7)([C.Z], () => C.Z.channel),
+        s = (0, o.e7)([M.Z], () => M.Z.channel),
         l = (0, o.e7)([Z.Z], () => (null != s ? Z.Z.getGuild(s.getGuildId()) : null)),
         i = (0, o.e7)([Z.Z], () => (null != l ? Z.Z.getRoles(l.id) : void 0));
     if (null == s || null == l || null == t) return null;
@@ -129,11 +129,11 @@ function k(e) {
             let t = v.Z.can(B.Plq.ADMINISTRATOR, l) || v.Z.can(B.Plq.MANAGE_ROLES, s, void 0, void 0, !0);
             return s.isGuildStageVoice() && f.xS.has(e) ? H.Z.Messages.STAGE_CHANNEL_CANNOT_OVERWRITE_PERMISSION : !((!r.fS(e, B.Plq.MANAGE_ROLES) || t) && (null == e || v.Z.can(e, l) || t)) && H.Z.Messages.HELP_MISSING_PERMISSION;
         },
-        M = g === a,
+        C = g === a,
         I = s.isForumLikeChannel() && r.e$(t.deny, B.Plq.SEND_MESSAGES),
         R = r.e$(t.deny, B.Plq.SEND_MESSAGES),
         O = r.e$(t.deny, B.Plq.READ_MESSAGE_HISTORY),
-        L = D.Z.generateChannelPermissionSpec(a, s, M, {
+        L = D.Z.generateChannelPermissionSpec(a, s, C, {
             createPostsDisabled: I,
             sendMessagesDisabled: R,
             readMessageHistoryDisabled: O
@@ -241,7 +241,7 @@ function z(e) {
                     })
                 );
             }
-            if (e instanceof M.Z)
+            if (e instanceof C.Z)
                 return (0, n.jsx)(V, {
                     guildId: t.id,
                     channelId: s.id,
@@ -265,14 +265,14 @@ function z(e) {
             L.Z.requestMembers(t.id, e, 20);
         },
         onSelect: (e) => {
-            if (null != e) W(e) ? r(e.id, p.BN.ROLE) : e instanceof M.Z && r(e.id, p.BN.MEMBER);
+            if (null != e) W(e) ? r(e.id, p.BN.ROLE) : e instanceof C.Z && r(e.id, p.BN.MEMBER);
         },
         onClose: i,
         position: c
     });
 }
 function Y() {
-    let { channel: e, permissionOverwrites: t, selectedOverwriteId: i } = (0, o.cj)([C.Z], () => C.Z),
+    let { channel: e, permissionOverwrites: t, selectedOverwriteId: i } = (0, o.cj)([M.Z], () => M.Z),
         r = null == e ? void 0 : e.getGuildId(),
         { guild: u, guildRoles: E } = (0, o.cj)(
             [Z.Z],
@@ -290,7 +290,7 @@ function Y() {
         S = (0, N.ZP)(),
         f = (0, o.e7)([_.Z], () => _.Z.roleStyle);
     if (null == u || null == E || null == e || null == t) return null;
-    let M = (s) => {
+    let C = (s) => {
             let { position: l, closePopout: i } = s;
             return (0, n.jsx)(z, {
                 guild: u,
@@ -375,7 +375,7 @@ function Y() {
                 (() => {
                     let e = (0, c.wj)(S) ? s(521715) : s(299603);
                     return (0, n.jsx)(d.Popout, {
-                        renderPopout: M,
+                        renderPopout: C,
                         position: 'bottom',
                         autoInvert: !1,
                         children: (t) =>
@@ -422,7 +422,7 @@ function Y() {
     });
 }
 function Q() {
-    let { channel: e, permissionOverwrites: t, selectedOverwriteId: s } = (0, o.cj)([C.Z], () => C.Z);
+    let { channel: e, permissionOverwrites: t, selectedOverwriteId: s } = (0, o.cj)([M.Z], () => M.Z);
     if (null == (0, o.e7)([Z.Z], () => (null != e ? Z.Z.getGuild(e.getGuildId()) : null)) || null == e || null == t || null == s) return null;
     let l = t[s];
     return (0, n.jsxs)(x.ZP, {
