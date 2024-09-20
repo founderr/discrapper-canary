@@ -963,6 +963,9 @@ n.r(t),
         LazyPopout: function () {
             return eA.K;
         },
+        LeagueOfLegendsBrandIcon: function () {
+            return tC.EVB;
+        },
         LettersIcon: function () {
             return tC.jdy;
         },
