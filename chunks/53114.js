@@ -101,6 +101,9 @@ class p extends s.Z {
     setViewedSimulcastQuality(e) {
         e !== this.hqSimulcastStreamWatched.value && (this.hqSimulcastStreamWatched.totalDuration() > 0 || this.lqSimulcastStreamWatched.totalDuration() > 0) && this.simulcastQualityChanges++, (this.hqSimulcastStreamWatched.value = e), (this.lqSimulcastStreamWatched.value = !e);
     }
+    setEligibleSimulcastQuality(e) {
+        (this.hqSimulcastStreamEligible.value = e), (this.lqSimulcastStreamEligible.value = !e);
+    }
     getNetworkStats() {
         return this.networkQuality.getStats();
     }
@@ -305,6 +308,8 @@ class p extends s.Z {
                 duration_both_simulcast_streams_encoded: f(this.bothSimulcastStreamsEncoded.totalDurationSeconds()),
                 duration_hq_simulcast_stream_watched: f(this.hqSimulcastStreamWatched.totalDurationSeconds()),
                 duration_lq_simulcast_stream_watched: f(this.lqSimulcastStreamWatched.totalDurationSeconds()),
+                duration_hq_simulcast_stream_eligible: f(this.hqSimulcastStreamEligible.totalDurationSeconds()),
+                duration_lq_simulcast_stream_eligible: f(this.lqSimulcastStreamEligible.totalDurationSeconds()),
                 num_quality_changes: this.simulcastQualityChanges,
                 duration_window_occluded: f(this.windowOccluded.totalDurationSeconds()),
                 duration_incoming_video_stopped_for_occlusion: f(this.videoStoppedForOcclusion.totalDurationSeconds()),
@@ -456,6 +461,8 @@ class p extends s.Z {
             E(this, 'bothSimulcastStreamsEncoded', void 0),
             E(this, 'hqSimulcastStreamWatched', void 0),
             E(this, 'lqSimulcastStreamWatched', void 0),
+            E(this, 'hqSimulcastStreamEligible', void 0),
+            E(this, 'lqSimulcastStreamEligible', void 0),
             E(this, 'simulcastQualityChanges', void 0),
             E(this, 'windowOccluded', void 0),
             E(this, 'videoStoppedForOcclusion', void 0),
@@ -495,6 +502,8 @@ class p extends s.Z {
             (this.bothSimulcastStreamsEncoded = new h(!1, t)),
             (this.hqSimulcastStreamWatched = new h(!1, t)),
             (this.lqSimulcastStreamWatched = new h(!1, t)),
+            (this.hqSimulcastStreamEligible = new h(!1, t)),
+            (this.lqSimulcastStreamEligible = new h(!1, t)),
             (this.windowOccluded = new h(!1, t)),
             (this.videoStoppedForOcclusion = new h(!1, t));
     }
