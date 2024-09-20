@@ -25,5 +25,6 @@ e.exports = {
     actionText: 'actionText_cfaf72',
     actionIcon: 'actionIcon_cfaf72',
     ratingVeryGood: 'ratingVeryGood_cfaf72',
-    link: 'link_cfaf72'
+    link: 'link_cfaf72',
+    streamerMode: 'streamerMode_cfaf72'
 };
