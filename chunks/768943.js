@@ -104,6 +104,9 @@ class p extends (r = o.ZP.Store) {
           })
         : (i[a] = s),
     (t.Z = new p(u.Z, {
+        LOGOUT: function () {
+            (E = 0), _.clear();
+        },
         SAVED_MESSAGES_UPDATE: function (e) {
             let { savedMessages: t } = e;
             for (let e of ((E = new Date().getTime()), _.clear(), t)) _.set(f(e.saveData), e);
