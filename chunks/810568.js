@@ -44,7 +44,7 @@ let _ = () => (0, o.Z)(),
         );
     },
     f = (e) => {
-        let { viewId: t, gameName: n, applicationId: r, playedFriendIds: i, playedFriendsData: a, similarGames: s } = e;
+        let { viewId: t, gameName: n, applicationId: r, playedFriendIds: i, playedFriendsData: a, similarGames: s, officialGuildId: o } = e;
         u.default.track(c.rMx.GAME_PROFILE_CLOSE, {
             view_id: t,
             game_name: n,
@@ -52,17 +52,19 @@ let _ = () => (0, o.Z)(),
             played_friend_ids: i,
             played_friends_data: a,
             similar_games: s,
-            request_id: l.Z.getFeedRequestId(d.YN.GAME_PROFILE_FEED)
+            request_id: l.Z.getFeedRequestId(d.YN.GAME_PROFILE_FEED),
+            official_guild_id: o
         });
     },
     h = (e) => {
-        let { gameName: t, applicationId: n, action: r, recipientUserId: i, similarGameId: a, viewId: s } = e;
+        let { gameName: t, applicationId: n, action: r, recipientUserId: i, similarGameId: a, viewId: s, officialGuildId: o } = e;
         u.default.track(c.rMx.GAME_PROFILE_ACTION, {
             game_name: t,
             application_id: n,
             action: r,
             recipient_user_id: i,
             similar_game_id: a,
-            view_id: s
+            view_id: s,
+            official_guild_id: o
         });
     };

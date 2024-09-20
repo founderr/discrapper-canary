@@ -16,17 +16,17 @@ var a = t(735250),
     T = t(501345),
     O = t(51527);
 n.Z = (e) => {
-    let { entry: n, viewId: t, onClose: s } = e,
-        g = (0, i.e7)([E.Z, _.Z], () => _.Z.getChannel(E.Z.getChannelId())),
-        R = (0, i.e7)([I.default], () => I.default.getUser(n.author_id)),
-        { nick: N, avatar: P } = r.useMemo(() => {
-            let e = null == R ? void 0 : R.getAvatarURL(null == g ? void 0 : g.guild_id, 48, !1);
+    let { entry: n, viewId: t, officialGuildId: s, onClose: g } = e,
+        R = (0, i.e7)([E.Z, _.Z], () => _.Z.getChannel(E.Z.getChannelId())),
+        N = (0, i.e7)([I.default], () => I.default.getUser(n.author_id)),
+        { nick: P, avatar: h } = r.useMemo(() => {
+            let e = null == N ? void 0 : N.getAvatarURL(null == R ? void 0 : R.guild_id, 48, !1);
             return {
-                nick: A.ZP.getName(null == g ? void 0 : g.guild_id, null == g ? void 0 : g.id, R),
+                nick: A.ZP.getName(null == R ? void 0 : R.guild_id, null == R ? void 0 : R.id, N),
                 avatar: e
             };
-        }, [R, g]);
-    return null == R
+        }, [N, R]);
+    return null == N
         ? null
         : (0, a.jsx)(l.Popout, {
               position: 'right',
@@ -42,9 +42,10 @@ n.Z = (e) => {
                               applicationId: n.extra.application_id,
                               gameName: n.extra.game_name,
                               recipientUserId: n.author_id,
-                              viewId: t
+                              viewId: t,
+                              officialGuildId: s
                           }),
-                              s(),
+                              g(),
                               r();
                       },
                       onUserPopoutClosed: () => r(),
@@ -58,7 +59,8 @@ n.Z = (e) => {
                       applicationId: n.extra.application_id,
                       gameName: n.extra.game_name,
                       recipientUserId: n.author_id,
-                      viewId: t
+                      viewId: t,
+                      officialGuildId: s
                   });
               },
               children: (e) =>
@@ -76,8 +78,8 @@ n.Z = (e) => {
                               children: [
                                   (0, a.jsx)('img', {
                                       className: T.avatar,
-                                      src: P,
-                                      alt: m.Z.Messages.GAME_PROFILE_USER_AVATAR_ALT.format({ userName: N })
+                                      src: h,
+                                      alt: m.Z.Messages.GAME_PROFILE_USER_AVATAR_ALT.format({ userName: P })
                                   }),
                                   (0, a.jsx)('div', {
                                       className: o()(T.playerInfo),
@@ -88,7 +90,7 @@ n.Z = (e) => {
                                                   variant: 'text-md/medium',
                                                   color: 'text-primary',
                                                   lineClamp: 1,
-                                                  children: N
+                                                  children: P
                                               }),
                                               (0, a.jsx)(u.Gk, {
                                                   location: u.Gt.GAME_PROFILE,
