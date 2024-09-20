@@ -48,8 +48,8 @@ var u = n(442837),
     M = n(382182),
     A = n(871118),
     y = n(565138),
-    O = n(66999),
-    R = n(790642),
+    R = n(66999),
+    O = n(790642),
     j = n(359110),
     w = n(12168),
     L = n(237583),
@@ -65,8 +65,8 @@ var u = n(442837),
     Y = n(626135),
     z = n(768581),
     W = n(5192),
-    J = n(379357),
-    q = n(26033),
+    q = n(379357),
+    J = n(26033),
     K = n(91907),
     X = n(358696),
     $ = n(656709),
@@ -138,11 +138,11 @@ function eE(e) {
         S = (0, u.e7)([B.Z], () => null != t && B.Z.can(eo.Plq.SEND_MESSAGES, t)),
         [M, A] = a.useState(!1),
         [w, z] = a.useState(!1),
-        { voiceBar: J, joinVoiceButton: q } = (function (e) {
+        { voiceBar: q, joinVoiceButton: J } = (function (e) {
             let { channel: t, entry: n, onVoiceChannelPreview: i } = e,
                 { streamPreviewUrl: r, channel: s } = (0, ee.Z)(n),
                 { isRich: o, appName: c } = (0, ea.n)(n),
-                { needSubscriptionToAccess: m } = (0, O.Z)(null == t ? void 0 : t.id),
+                { needSubscriptionToAccess: m } = (0, R.Z)(null == t ? void 0 : t.id),
                 E = (0, u.e7)([U.Z], () => (null != s ? U.Z.getGuild(s.guild_id) : void 0)),
                 v = (0, u.Wu)([V.ZP], () => (null != s ? V.ZP.getVoiceStatesForChannel(s) : []), [s]),
                 _ = (0, u.e7)([H.Z], () => H.Z.isInChannel(null == s ? void 0 : s.id)),
@@ -354,7 +354,7 @@ function eE(e) {
                   })
                 : null;
         })(K),
-        Q = null != q && 0 === v.length ? [q] : v,
+        Q = null != J && 0 === v.length ? [J] : v,
         en = Q.length > 0,
         ei = Q.length >= 2,
         [ed, eh] = a.useState(!en),
@@ -392,7 +392,8 @@ function eE(e) {
                                     A(!1), s(e, t);
                                 }, 600);
                         },
-                        interactionType: es.xP.REACTION_EMOJI_REACT_SENT
+                        interactionType: es.xP.REACTION_EMOJI_REACT_SENT,
+                        requiresChannelReadiness: !1
                     })
                 );
             }
@@ -410,25 +411,26 @@ function eE(e) {
                 reply: e,
                 sendToChannel: l,
                 interactionType: a,
-                onComplete: s
+                onComplete: s,
+                requiresChannelReadiness: !0
             });
         },
         ef = async (e) => {
-            let { reply: t, sendToChannel: n, onComplete: l, interactionType: a } = e;
-            if ((null == P || P.focus(), (0, R.Io)('ContentPopout Reactor')))
+            let { reply: t, sendToChannel: n, onComplete: l, interactionType: a, requiresChannelReadiness: s } = e;
+            if ((null == P || P.focus(), (0, O.Io)('ContentPopout Reactor')))
                 await (0, $.p)({
                     channel: n,
                     content: t,
                     entry: E,
-                    whenReady: !1
+                    whenReady: s
                 });
             else {
-                var s;
-                let e = await ((s = i),
+                var u;
+                let e = await ((u = i),
                 async function () {
                     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
                     try {
-                        return await s(...t);
+                        return await u(...t);
                     } catch (e) {
                         throw e;
                     }
@@ -443,7 +445,7 @@ function eE(e) {
             }
             null == l || l(a, n);
         },
-        eT = null != _ ? _ : null != J ? J : null != X ? X : void 0;
+        eT = null != _ ? _ : null != q ? q : null != X ? X : void 0;
     return (
         a.useEffect(() => {
             ed && (null == P || P.focus());
@@ -700,7 +702,7 @@ function ef(e) {
     var t;
     let { title: n, subtitle: a, badges: i, children: s, onClickThumbnail: o, onClickTitle: u, onClickSubtitle: c, headerIcons: d, disableGameProfileLinks: m = !1, onUserPopoutClosed: x, ...E } = e,
         { entry: v } = E,
-        _ = (0, q.dX)(v),
+        _ = (0, J.dX)(v),
         p = (0, S.Z)({
             location: 'ContentPopout',
             applicationId: _ && !m ? (null === (t = v.extra) || void 0 === t ? void 0 : t.application_id) : void 0,
@@ -708,7 +710,7 @@ function ef(e) {
             trackEntryPointImpression: !0,
             sourceUserId: v.author_id
         }),
-        { largeImage: f, smallImage: T } = (0, J.rv)({ entry: v }),
+        { largeImage: f, smallImage: T } = (0, q.rv)({ entry: v }),
         g = _ ? p : void 0;
     return (0, l.jsxs)('div', {
         className: ec.popoutContentWrapper,
@@ -777,7 +779,7 @@ function eT(e) {
         _ = (0, u.e7)([D.Z], () => D.Z.getChannel(null == s ? void 0 : s.channelId)),
         [p] = a.useMemo(() => (0, M.p9)(_, H.Z, U.Z, B.Z, P.Z), [_]),
         { entry: f } = x,
-        T = (0, q.dX)(f),
+        T = (0, J.dX)(f),
         g = (0, S.Z)({
             location: 'ContentPopout',
             applicationId: T ? (null === (t = f.extra) || void 0 === t ? void 0 : t.application_id) : void 0,
@@ -787,7 +789,7 @@ function eT(e) {
         }),
         I = T ? g : void 0,
         { activity: C, activityApplication: N, fallbackApplication: y } = (0, et.qy)(f),
-        { largeImage: O, smallImage: R } = (0, J.YC)(C, null != N ? N : y);
+        { largeImage: R, smallImage: O } = (0, q.YC)(C, null != N ? N : y);
     return null == s
         ? null
         : (0, l.jsxs)('div', {
@@ -827,12 +829,12 @@ function eT(e) {
                           (0, l.jsxs)('div', {
                               className: ec.streamingPopoutHeader,
                               children: [
-                                  null != O &&
+                                  null != R &&
                                       (0, l.jsx)('div', {
                                           className: ec.popoutThumbnailContainer,
                                           children: (0, l.jsx)(X.E, {
-                                              image: O,
-                                              smallImage: R,
+                                              image: R,
+                                              smallImage: O,
                                               onClick: null != o ? o : I,
                                               size: X.J.SIZE_72
                                           })
