@@ -65,13 +65,18 @@ function O(e) {
         [el, ec] = r.useState(!1),
         [eu, em] = r.useState(!1),
         [ed, e_] = r.useState(!1),
-        eh = () => {
+        eh = (0, o.e7)([p.Z], () => p.Z.theme),
+        ep = (0, o.e7)([f.default], () => {
+            let e = f.default.getCurrentUser();
+            return (null == e ? void 0 : e.isStaff()) || (null == e ? void 0 : e.isStaffPersonal());
+        }),
+        ef = () => {
             null == M || M();
         },
-        ep = (e) => {
+        ev = (e) => {
             V(k.filter((t) => t.id !== e));
         };
-    async function ef() {
+    async function eI() {
         var e;
         if ((e_(!1), '' === y || null == A)) {
             ec(!0);
@@ -108,25 +113,26 @@ function O(e) {
                 i,
                 r
             ).catch(() => e_(!0));
-        if ((em(!1), null != o && o.ok)) {
-            let e = f.default.getCurrentUser();
-            ((null == e ? void 0 : e.isStaff()) || (null == e ? void 0 : e.isStaffPersonal())) && window.open(o.body.permalink_url, '_blank'),
-                eh(),
-                (0, l.openModalLazy)(async () => {
-                    let { default: e } = await n.e('64648').then(n.bind(n, 81155));
-                    return (t) =>
-                        (0, a.jsx)(e, {
-                            ...t,
-                            asanaTask: o.body
-                        });
-                });
-        } else e_(!0);
+        em(!1),
+            null != o && o.ok
+                ? (ep && window.open(o.body.permalink_url, '_blank'),
+                  ef(),
+                  (0, l.openModalLazy)(async () => {
+                      let { default: e } = await n.e('64648').then(n.bind(n, 81155));
+                      return (t) =>
+                          (0, a.jsx)(e, {
+                              ...t,
+                              asanaTask: o.body
+                          });
+                  }))
+                : e_(!0);
     }
     r.useEffect(() => {
-        (async function e() {
+        async function e() {
             W(await (0, R.WG)());
-        })();
-    }, []),
+        }
+        ep && e();
+    }, [ep]),
         r.useEffect(() => {
             if (k.length > 0) {
                 var e;
@@ -138,8 +144,7 @@ function O(e) {
                     });
             }
         }, [k]);
-    let ev = (0, o.e7)([p.Z], () => p.Z.theme),
-        eI = (0, s.wj)(ev) ? E : j;
+    let eR = (0, s.wj)(eh) ? E : j;
     return (0, a.jsx)(l.ModalRoot, {
         className: g.modalRoot,
         transitionState: B,
@@ -166,11 +171,11 @@ function O(e) {
                             (0, a.jsx)('img', {
                                 className: g.contentIcon,
                                 alt: '',
-                                src: eI
+                                src: eR
                             }),
                             (0, a.jsxs)('form', {
                                 className: g.form,
-                                onSubmit: ef,
+                                onSubmit: eI,
                                 children: [
                                     (0, a.jsx)(l.FormItem, {
                                         error: el && '' === y ? T.Z.Messages.REQUIRED : null,
@@ -251,36 +256,37 @@ function O(e) {
                                             closeOnSelect: !0
                                         })
                                     }),
-                                    (0, a.jsx)(l.FormItem, {
-                                        title: T.Z.Messages.BUG_REPORT_FEATURE_AREA,
-                                        className: g.formInput,
-                                        children: (0, a.jsx)(l.SearchableSelect, {
-                                            value: H,
-                                            options:
-                                                null !==
-                                                    (S =
-                                                        null == (t = Y)
-                                                            ? void 0
-                                                            : null === (N = t.features) || void 0 === N
-                                                              ? void 0
-                                                              : null === (P = N.filter((e) => '' !== (0, R.pD)(e))) || void 0 === P
+                                    ep &&
+                                        (0, a.jsx)(l.FormItem, {
+                                            title: T.Z.Messages.BUG_REPORT_FEATURE_AREA,
+                                            className: g.formInput,
+                                            children: (0, a.jsx)(l.SearchableSelect, {
+                                                value: H,
+                                                options:
+                                                    null !==
+                                                        (S =
+                                                            null == (t = Y)
                                                                 ? void 0
-                                                                : null ===
-                                                                        (O = P.map((e) => {
-                                                                            var t;
-                                                                            return {
-                                                                                label: null !== (t = e.name) && void 0 !== t ? t : '',
-                                                                                value: (0, R.pD)(e)
-                                                                            };
-                                                                        })) || void 0 === O
+                                                                : null === (N = t.features) || void 0 === N
                                                                   ? void 0
-                                                                  : O.sort((e, t) => e.label.localeCompare(t.label))) && void 0 !== S
-                                                    ? S
-                                                    : [],
-                                            isDisabled: null == Y,
-                                            onChange: (e) => z(e)
-                                        })
-                                    }),
+                                                                  : null === (P = N.filter((e) => '' !== (0, R.pD)(e))) || void 0 === P
+                                                                    ? void 0
+                                                                    : null ===
+                                                                            (O = P.map((e) => {
+                                                                                var t;
+                                                                                return {
+                                                                                    label: null !== (t = e.name) && void 0 !== t ? t : '',
+                                                                                    value: (0, R.pD)(e)
+                                                                                };
+                                                                            })) || void 0 === O
+                                                                      ? void 0
+                                                                      : O.sort((e, t) => e.label.localeCompare(t.label))) && void 0 !== S
+                                                        ? S
+                                                        : [],
+                                                isDisabled: null == Y,
+                                                onChange: (e) => z(e)
+                                            })
+                                        }),
                                     (0, a.jsx)(l.FormItem, {
                                         title: T.Z.Messages.BUG_REPORT_URL,
                                         className: g.formInput,
@@ -420,7 +426,7 @@ function O(e) {
                                                                                       children: (0, a.jsx)(h.ZP, {
                                                                                           children: (0, a.jsx)(m.Z, {
                                                                                               tooltip: T.Z.Messages.ATTACHMENT_UTILITIES_REMOVE,
-                                                                                              onClick: () => ep(e.id),
+                                                                                              onClick: () => ev(e.id),
                                                                                               dangerous: !0,
                                                                                               children: (0, a.jsx)(l.TrashIcon, {
                                                                                                   size: 'md',
@@ -455,7 +461,7 @@ function O(e) {
                                     (0, a.jsx)(l.Button, {
                                         className: g.formButton,
                                         look: l.ButtonLooks.BLANK,
-                                        onClick: eh,
+                                        onClick: ef,
                                         children: (0, a.jsx)(l.Text, {
                                             variant: 'text-sm/normal',
                                             children: T.Z.Messages.CANCEL
@@ -464,7 +470,7 @@ function O(e) {
                                     (0, a.jsx)(l.Button, {
                                         submitting: eu,
                                         className: g.formButton,
-                                        onClick: ef,
+                                        onClick: eI,
                                         children: 'Submit and Open Report'
                                     })
                                 ]
