@@ -92,8 +92,9 @@ function x(e) {
         }, [D, h, t, M, y, b]);
     let W = a.useCallback((e) => n(e, M), [n, M]),
         z = a.useMemo(() => (x ? [h.length, 0] : [h.length]), [h.length, x]),
-        K = 0 === h.length && !x,
-        q = a.useCallback(
+        K = (0, I.NL)(),
+        q = 0 === h.length && !x,
+        Q = a.useCallback(
             (e, n, a) => {
                 switch (e) {
                     case 0:
@@ -108,14 +109,14 @@ function x(e) {
                                     (0, i.jsx)(l.X, {
                                         variant: 'heading-lg/semibold',
                                         className: A.heading,
-                                        children: N.Z.Messages.GLOBAL_DISCOVERY_SERVERS_SEARCH_RESULTS_HEADER.format({ query: b })
+                                        children: N.Z.Messages.GLOBAL_DISCOVERY_SERVERS_SEARCH_RESULTS_HEADER.format({ query: K })
                                     }),
                                     !U &&
                                         (0, i.jsxs)('div', {
                                             className: A.headingFilters,
                                             children: [(0, i.jsx)(T.Z, { loadId: t }), (0, i.jsx)(f.Z, { loadId: t })]
                                         }),
-                                    K && (0, i.jsx)(S.Z, { loadId: t })
+                                    q && (0, i.jsx)(S.Z, { loadId: t })
                                 ]
                             },
                             a
@@ -124,23 +125,23 @@ function x(e) {
                         return (0, i.jsx)(o.Spinner, { className: A.spinner }, a);
                 }
             },
-            [K, U, t, b]
+            [q, U, t, K]
         ),
-        Q = a.useCallback(
+        X = a.useCallback(
             (e) => {
                 switch (e) {
                     case 0:
                         let t = U ? v : L;
-                        return K ? t + 400 : t;
+                        return q ? t + 400 : t;
                     case 1:
                         return 120;
                     default:
                         throw Error('[getSectionHeight] Failed for section: '.concat(e));
                 }
             },
-            [K, U]
+            [q, U]
         ),
-        X = a.useCallback(
+        J = a.useCallback(
             (e, t) => {
                 switch (e) {
                     case 0:
@@ -153,7 +154,7 @@ function x(e) {
             },
             [h]
         ),
-        J = a.useCallback((e) => {
+        $ = a.useCallback((e) => {
             switch (e) {
                 case 0:
                     return 320;
@@ -163,7 +164,7 @@ function x(e) {
                     throw Error('[getItemHeight] Failed for section: '.concat(e));
             }
         }, []),
-        $ = a.useCallback(
+        ee = a.useCallback(
             (e, t, n) => {
                 var i, a;
                 r(e, t, n);
@@ -172,7 +173,7 @@ function x(e) {
             },
             [r]
         ),
-        ee = a.useCallback(
+        et = a.useCallback(
             (e, t, n, a) => {
                 if (0 === e) {
                     let e = h[t];
@@ -182,7 +183,7 @@ function x(e) {
                             style: n,
                             children: (0, i.jsx)(C.v, {
                                 guildId: e,
-                                onGuildCardClick: $,
+                                onGuildCardClick: ee,
                                 onGuildCardSeen: W,
                                 index: t,
                                 categoryId: M
@@ -193,7 +194,7 @@ function x(e) {
                 }
                 return null;
             },
-            [h, $, W, M]
+            [h, ee, W, M]
         );
     a.useEffect(() => {
         let e = V.current;
@@ -219,18 +220,18 @@ function x(e) {
                         });
                 });
         }, []);
-    let et = a.useMemo(
+    let en = a.useMemo(
             () =>
                 (0, s.debounce)(() => {
                     var e;
                     let t = null === (e = V.current) || void 0 === e ? void 0 : e.getScrollerState();
                     if (null == t) return;
                     let n = t.scrollTop + t.offsetHeight;
-                    t.scrollHeight - n < 200 && P();
+                    t.scrollHeight - n < 300 && P();
                 }, 250),
             [P]
         ),
-        en = U ? Z : R;
+        ei = U ? Z : R;
     return (0, i.jsxs)('div', {
         className: A.container,
         ref: Y,
@@ -245,14 +246,14 @@ function x(e) {
                 sections: z,
                 columns: k,
                 itemGutter: 16,
-                padding: en,
-                renderItem: ee,
-                renderSection: q,
-                getSectionHeight: Q,
-                getItemKey: X,
-                getItemHeight: J,
+                padding: ei,
+                renderItem: et,
+                renderSection: Q,
+                getSectionHeight: X,
+                getItemKey: J,
+                getItemHeight: $,
                 chunkSize: 24,
-                onScroll: et,
+                onScroll: en,
                 renderAccessory: (e) =>
                     U
                         ? (0, i.jsx)('div', {

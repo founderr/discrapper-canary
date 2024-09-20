@@ -30,7 +30,7 @@ function E(e) {
         }),
         u = (0, a.e7)([o.Z], () => {
             var e;
-            return null !== (e = o.Z.getIsFetching(r)) && void 0 !== e && e;
+            return null === (e = o.Z.getIsFetching(r)) || void 0 === e || e;
         }),
         E = i.useCallback(() => {
             let e = (0, c.WF)(),
@@ -45,13 +45,12 @@ function E(e) {
             let r = o.Z.getIsFetching(i),
                 l = o.Z.getIsInitialFetchComplete(i);
             if (r || !l || a.length >= s) return;
-            let u = (0, c.a7)(),
-                _ = (0, c.uP)();
+            let u = (0, c.a7)();
             (0, d.AS)({
                 loadId: t,
                 categoryId: n,
                 offset: a.length,
-                searchQuery: _,
+                searchQuery: e,
                 languageCode: u
             });
         }, [t]);

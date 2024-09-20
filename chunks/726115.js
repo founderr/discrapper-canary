@@ -200,13 +200,14 @@ function v(e) {
         s = o.Z.getIsFetchingCounts(n);
     if (!a && !s && '' !== t.trim())
         !(0, i.x)(t) &&
+            ((0, d.LD)({ fetchedQuery: t }),
             l.Z.fetchAlgoliaSearchResultCounts({
                 query: t,
                 algoliaFilters: { approximate_member_count: r.sq },
                 onSuccess: () => {
                     (0, d.LD)({ resultsQuery: t });
                 }
-            });
+            }));
 }
 function L(e) {
     let { loadId: t, categoryId: n, offset: s, searchQuery: o, languageCode: c } = e;

@@ -3,34 +3,37 @@ n.d(t, {
         return _;
     },
     A3: function () {
-        return p;
+        return T;
     },
     BK: function () {
-        return S;
-    },
-    D1: function () {
         return f;
     },
+    D1: function () {
+        return C;
+    },
     Dm: function () {
-        return I;
+        return g;
     },
     LD: function () {
-        return C;
+        return N;
+    },
+    NL: function () {
+        return h;
     },
     WF: function () {
         return E;
     },
     a7: function () {
-        return g;
+        return p;
     },
     lZ: function () {
-        return h;
-    },
-    lx: function () {
         return m;
     },
+    lx: function () {
+        return I;
+    },
     uP: function () {
-        return T;
+        return S;
     }
 });
 var i = n(470079),
@@ -41,6 +44,7 @@ let l = Object.freeze({
         query: '',
         languageCode: null,
         categoryId: n(731455).Hk,
+        fetchedQuery: '',
         resultsQuery: '',
         resultsInitialCategoryId: null,
         scrollPosition: null
@@ -60,14 +64,15 @@ function u(e) {
 }
 let _ = () => d('resultsQuery'),
     E = () => u('resultsQuery'),
-    h = () => d('categoryId'),
-    m = () => u('categoryId'),
-    I = () => d('languageCode'),
-    g = () => u('languageCode'),
-    p = () => d('query'),
-    T = () => u('query'),
-    S = () => u('scrollPosition'),
-    f = () => d('resultsInitialCategoryId'),
-    C = (e) => {
+    h = () => d('fetchedQuery'),
+    m = () => d('categoryId'),
+    I = () => u('categoryId'),
+    g = () => d('languageCode'),
+    p = () => u('languageCode'),
+    T = () => d('query'),
+    S = () => u('query'),
+    f = () => u('scrollPosition'),
+    C = () => d('resultsInitialCategoryId'),
+    N = (e) => {
         (0, r.j)(() => o.setState(e));
     };
