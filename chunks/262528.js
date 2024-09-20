@@ -1,63 +1,75 @@
 t.r(a);
 var s = t(735250),
     n = t(470079),
-    o = t(481060),
-    i = t(925329),
-    d = t(296023),
-    r = t(689938),
-    l = t(164933);
+    d = t(481060),
+    r = t(933557),
+    o = t(925329),
+    i = t(296023),
+    l = t(689938),
+    c = t(164933);
 a.default = (e) => {
-    let { channel: a, application: c, onClose: x, transitionState: h } = e,
-        N = (0, d.w)(a),
-        u = n.useCallback(
+    let { channel: a, application: N, onClose: x, transitionState: h } = e,
+        m = (0, i.w)(a),
+        _ = n.useCallback(
             () => (
                 x(),
-                (0, o.openModalLazy)(async () => {
+                (0, d.openModalLazy)(async () => {
                     let { default: e } = await t.e('39955').then(t.bind(t, 547653));
                     return (t) =>
                         (0, s.jsx)(e, {
                             ...t,
                             channelId: a.id,
-                            application: c
+                            application: N
                         });
                 })
             ),
-            [c, a.id, x]
-        );
-    return (0, s.jsxs)(o.ModalRoot, {
+            [N, a.id, x]
+        ),
+        C = (0, r.ZP)(a, !0);
+    return (0, s.jsxs)(d.ModalRoot, {
         transitionState: h,
-        'aria-label': r.Z.Messages.EDIT_CHANNEL_SYNCING_TITLE,
+        'aria-label': l.Z.Messages.EDIT_CHANNEL_SYNCING_TITLE,
         children: [
-            (0, s.jsx)(o.ModalHeader, {
+            (0, s.jsx)(d.ModalHeader, {
                 separator: !1,
-                children: (0, s.jsx)(o.Heading, {
+                children: (0, s.jsx)(d.Heading, {
                     variant: 'heading-lg/semibold',
-                    children: r.Z.Messages.EDIT_CHANNEL_SYNCING_TITLE
+                    children: l.Z.Messages.EDIT_CHANNEL_SYNCING_TITLE
                 })
             }),
-            (0, s.jsxs)(o.ModalContent, {
-                className: l.content,
+            (0, s.jsxs)(d.ModalContent, {
+                className: c.content,
                 children: [
-                    (0, s.jsx)(i.Z, {
-                        game: c,
-                        size: i.Z.Sizes.LARGE
+                    (0, s.jsx)(o.Z, {
+                        game: N,
+                        size: o.Z.Sizes.LARGE
                     }),
                     (0, s.jsxs)('div', {
-                        className: l.metadata,
+                        className: c.metadata,
                         children: [
-                            (0, s.jsx)(o.Text, {
-                                variant: 'text-md/semibold',
-                                color: 'header-primary',
-                                children: c.name
+                            (0, s.jsxs)('div', {
+                                className: c.metadataHeader,
+                                children: [
+                                    (0, s.jsx)(d.Text, {
+                                        variant: 'text-md/semibold',
+                                        color: 'header-primary',
+                                        children: N.name
+                                    }),
+                                    (0, s.jsx)(d.Text, {
+                                        variant: 'text-sm/normal',
+                                        color: 'header-secondary',
+                                        children: l.Z.Messages.INTEGRATIONS_LINKED_LOBBY_SYNCING_WITH_CHANNEL.format({ channelName: C })
+                                    })
+                                ]
                             }),
-                            null != N &&
+                            null != m &&
                                 (0, s.jsxs)(s.Fragment, {
                                     children: [
-                                        (0, s.jsx)('div', { className: l.divider }),
-                                        (0, s.jsx)(o.Text, {
+                                        (0, s.jsx)('div', { className: c.divider }),
+                                        (0, s.jsx)(d.Text, {
                                             variant: 'text-xs/normal',
                                             color: 'text-secondary',
-                                            children: N
+                                            children: m
                                         })
                                     ]
                                 })
@@ -65,18 +77,18 @@ a.default = (e) => {
                     })
                 ]
             }),
-            (0, s.jsxs)(o.ModalFooter, {
+            (0, s.jsxs)(d.ModalFooter, {
                 children: [
-                    (0, s.jsx)(o.Button, {
-                        onClick: u,
-                        color: o.Button.Colors.RED,
-                        children: r.Z.Messages.CHANNEL_SYNCING_STOP_SYNCING
+                    (0, s.jsx)(d.Button, {
+                        onClick: _,
+                        color: d.Button.Colors.RED,
+                        children: l.Z.Messages.CHANNEL_SYNCING_STOP_SYNCING
                     }),
-                    (0, s.jsx)(o.Button, {
+                    (0, s.jsx)(d.Button, {
                         onClick: x,
-                        look: o.Button.Looks.LINK,
-                        color: o.Button.Colors.PRIMARY,
-                        children: r.Z.Messages.CANCEL
+                        look: d.Button.Looks.LINK,
+                        color: d.Button.Colors.PRIMARY,
+                        children: l.Z.Messages.CANCEL
                     })
                 ]
             })
