@@ -41,7 +41,7 @@ function l(e, n, l) {
             })
           : null != l.guild_id
             ? (0, r.jW)(e, async () => {
-                  let { default: e } = await Promise.all([t.e('50506'), t.e('79695'), t.e('79107'), t.e('92453'), t.e('12435'), t.e('80785')]).then(t.bind(t, 757387));
+                  let { default: e } = await Promise.all([t.e('50506'), t.e('79695'), t.e('79107'), t.e('92453'), t.e('13125'), t.e('34879')]).then(t.bind(t, 757387));
                   return (t) =>
                       (0, i.jsx)(e, {
                           ...t,
@@ -65,7 +65,7 @@ function o(e, n) {
     let c = null != s ? s : null == o ? void 0 : o.getGuildId();
     null != c &&
         (0, r.jW)(e, async () => {
-            let { default: e } = await Promise.all([t.e('12435'), t.e('65483')]).then(t.bind(t, 833737));
+            let { default: e } = await Promise.all([t.e('13125'), t.e('33685')]).then(t.bind(t, 833737));
             return (n) =>
                 (0, i.jsx)(e, {
                     ...n,

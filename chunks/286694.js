@@ -1,33 +1,33 @@
-t.d(n, {
+l.d(n, {
     Z: function () {
-        return _;
+        return M;
     }
 });
-var i = t(735250);
-t(470079);
-var r = t(442837),
-    a = t(481060),
-    o = t(592125),
-    l = t(430824),
-    u = t(496675),
-    d = t(594174),
-    s = t(471253),
-    c = t(88751),
-    E = t(981631),
-    I = t(689938);
-function _(e, n, t) {
-    var _;
-    let T = o.Z.getChannel(t),
-        N = (0, r.e7)([l.Z], () => l.Z.getGuild(n), [n]),
-        S = (0, r.e7)([c.ZP], () => c.ZP.getPermissionsForUser(e.id, t), [t, e.id]),
-        p = (null === (_ = d.default.getCurrentUser()) || void 0 === _ ? void 0 : _.id) === e.id,
-        A = (0, r.e7)([u.Z], () => null != t && u.Z.canWithPartialContext(E.Plq.MUTE_MEMBERS, { channelId: t }), [t]);
-    return null != T && null != N && (A || p) && S.speaker
-        ? (0, i.jsx)(a.MenuItem, {
+var i = l(735250);
+l(470079);
+var a = l(442837),
+    r = l(481060),
+    s = l(592125),
+    d = l(430824),
+    u = l(496675),
+    t = l(594174),
+    c = l(471253),
+    o = l(88751),
+    Z = l(981631),
+    E = l(689938);
+function M(e, n, l) {
+    var M;
+    let _ = s.Z.getChannel(l),
+        N = (0, a.e7)([d.Z], () => d.Z.getGuild(n), [n]),
+        C = (0, a.e7)([o.ZP], () => o.ZP.getPermissionsForUser(e.id, l), [l, e.id]),
+        h = (null === (M = t.default.getCurrentUser()) || void 0 === M ? void 0 : M.id) === e.id,
+        p = (0, a.e7)([u.Z], () => null != l && u.Z.canWithPartialContext(Z.Plq.MUTE_MEMBERS, { channelId: l }), [l]);
+    return null != _ && null != N && (p || h) && C.speaker
+        ? (0, i.jsx)(r.MenuItem, {
               id: 'audience',
-              label: p ? I.Z.Messages.STAGE_CHANNEL_USER_MOVE_TO_AUDIENCE : I.Z.Messages.STAGE_CHANNEL_USER_MOVE_TO_AUDIENCE_OTHER,
+              label: h ? E.Z.Messages.STAGE_CHANNEL_USER_MOVE_TO_AUDIENCE : E.Z.Messages.STAGE_CHANNEL_USER_MOVE_TO_AUDIENCE_OTHER,
               action: () => {
-                  p ? (0, s.yi)(T) : (0, s.hz)(e, T);
+                  h ? (0, c.yi)(_) : (0, c.hz)(e, _);
               }
           })
         : null;

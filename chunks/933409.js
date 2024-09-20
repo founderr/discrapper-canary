@@ -1,6 +1,6 @@
 n.d(l, {
     Z: function () {
-        return P;
+        return N;
     }
 }),
     n(47120),
@@ -22,16 +22,16 @@ var t = n(735250),
     m = n(496675),
     _ = n(594174),
     C = n(979651),
-    f = n(630388),
-    O = n(5192),
-    v = n(813872),
-    R = n(981631),
-    N = n(590433),
-    S = n(372897),
-    A = n(689938);
-function P(e, l, P, h) {
+    R = n(630388),
+    v = n(5192),
+    f = n(813872),
+    S = n(981631),
+    O = n(590433),
+    P = n(372897),
+    h = n(689938);
+function N(e, l, N, A) {
     let U = a.useMemo(() => ({ [l]: [e.id] }), [l, e.id]),
-        T = null != h ? [h] : [];
+        T = null != A ? [A] : [];
     (0, d.$)(U), (0, i.e7)([m.Z], () => m.Z.getGuildVersion(l), [l]);
     let b = (0, i.e7)([g.Z], () => g.Z.getGuild(l), [l]),
         L = (0, i.e7)(
@@ -43,13 +43,13 @@ function P(e, l, P, h) {
             [e.id]
         ),
         x = (0, i.e7)([I.ZP], () => I.ZP.isGuestOrLurker(l, e.id), [l, e.id]),
-        j = (0, i.e7)([Z.Z], () => Z.Z.getChannel(P), [P]),
+        j = (0, i.e7)([Z.Z], () => Z.Z.getChannel(N), [N]),
         [, p] = (0, E.ZP)(e.id, l),
         D = null == j ? void 0 : j.isGuildStageVoice(),
         {
             muted: B,
-            deafened: G,
-            suppressed: q,
+            deafened: q,
+            suppressed: V,
             voiceChannelId: y
         } = (0, i.cj)([C.Z], () => {
             var n, t, a;
@@ -61,27 +61,27 @@ function P(e, l, P, h) {
                 voiceChannelId: null == i ? void 0 : i.channelId
             };
         }),
-        V = (0, i.e7)([I.ZP], () => I.ZP.getMember(l, e.id)),
-        k = (0, v.Z)({
+        k = (0, i.e7)([I.ZP], () => I.ZP.getMember(l, e.id)),
+        G = (0, f.Z)({
             userId: e.id,
             guildId: l,
-            channelId: P,
-            location: h
+            channelId: N,
+            location: A
         }),
         F = (0, M.sE)(l, {
-            location: h,
+            location: A,
             targetUserId: e.id
         }),
-        K = (0, c.Z)(l, e.id),
-        w =
-            null != y && null != P && m.Z.canWithPartialContext(R.Plq.VIEW_CHANNEL, { channelId: y }) && !x
+        w = (0, c.Z)(l, e.id),
+        K =
+            null != y && null != N && m.Z.canWithPartialContext(S.Plq.VIEW_CHANNEL, { channelId: y }) && !x
                 ? [
-                      (!D || (D && !q)) && m.Z.canWithPartialContext(R.Plq.MUTE_MEMBERS, { channelId: P })
+                      (!D || (D && !V)) && m.Z.canWithPartialContext(S.Plq.MUTE_MEMBERS, { channelId: N })
                           ? (0, t.jsx)(
                                 r.MenuCheckboxItem,
                                 {
                                     id: 'voice-mute',
-                                    label: A.Z.Messages.SERVER_VOICE_MUTE,
+                                    label: h.Z.Messages.SERVER_VOICE_MUTE,
                                     checked: B,
                                     color: 'danger',
                                     action: () => {
@@ -91,25 +91,25 @@ function P(e, l, P, h) {
                                 'voice-mute'
                             )
                           : null,
-                      (!D || (D && !q)) && m.Z.canWithPartialContext(R.Plq.DEAFEN_MEMBERS, { channelId: P })
+                      (!D || (D && !V)) && m.Z.canWithPartialContext(S.Plq.DEAFEN_MEMBERS, { channelId: N })
                           ? (0, t.jsx)(
                                 r.MenuCheckboxItem,
                                 {
                                     id: 'voice-deafen',
-                                    label: A.Z.Messages.SERVER_DEAFEN,
-                                    checked: G,
+                                    label: h.Z.Messages.SERVER_DEAFEN,
+                                    checked: q,
                                     color: 'danger',
-                                    action: () => u.Z.setServerDeaf(l, e.id, !G)
+                                    action: () => u.Z.setServerDeaf(l, e.id, !q)
                                 },
                                 'voice-deafen'
                             )
                           : null,
-                      !L && null != b && m.Z.canWithPartialContext(R.Plq.MOVE_MEMBERS, { channelId: P })
+                      !L && null != b && m.Z.canWithPartialContext(S.Plq.MOVE_MEMBERS, { channelId: N })
                           ? (0, t.jsx)(
                                 r.MenuItem,
                                 {
                                     id: 'voice-disconnect',
-                                    label: L ? A.Z.Messages.DISCONNECT_SELF : A.Z.Messages.DISCONNECT_OTHER,
+                                    label: L ? h.Z.Messages.DISCONNECT_SELF : h.Z.Messages.DISCONNECT_OTHER,
                                     color: 'danger',
                                     action: () => u.Z.setChannel(l, e.id, null)
                                 },
@@ -122,25 +122,25 @@ function P(e, l, P, h) {
             if (l.ctrlKey || l.metaKey)
                 try {
                     var a;
-                    await s.Z.setCommunicationDisabledDuration(n, t, N.UK.DURATION_60_SEC, null, h), F(M.jQ.TIMEOUT), (0, r.showToast)((0, r.createToast)(A.Z.Messages.GUILD_COMMUNICATION_DISABLED_SUCCESS.format({ user: null !== (a = O.ZP.getName(n, null, e)) && void 0 !== a ? a : '' }), r.ToastType.SUCCESS));
+                    await s.Z.setCommunicationDisabledDuration(n, t, O.UK.DURATION_60_SEC, null, A), F(M.jQ.TIMEOUT), (0, r.showToast)((0, r.createToast)(h.Z.Messages.GUILD_COMMUNICATION_DISABLED_SUCCESS.format({ user: null !== (a = v.ZP.getName(n, null, e)) && void 0 !== a ? a : '' }), r.ToastType.SUCCESS));
                 } catch (e) {
-                    (0, r.showToast)((0, r.createToast)(A.Z.Messages.APPLICATION_STORE_LISTING_PURCHASE_GENERIC_ERROR, r.ToastType.FAILURE));
+                    (0, r.showToast)((0, r.createToast)(h.Z.Messages.APPLICATION_STORE_LISTING_PURCHASE_GENERIC_ERROR, r.ToastType.FAILURE));
                 }
         },
-        H = null,
-        W = null != b && m.Z.canManageUser(R.Plq.MODERATE_MEMBERS, e, b) && m.Z.canManageUser(R.Plq.KICK_MEMBERS, e, b) && m.Z.canManageUser(R.Plq.BAN_MEMBERS, e, b),
-        z = null != b && (m.Z.canManageUser(R.Plq.MANAGE_GUILD, e, b) || m.Z.canManageUser(R.Plq.MANAGE_ROLES, e, b));
-    if (!L && null != b && null != V && null != V.joinedAt && (W || z) && b.hasFeature(R.oNc.GUILD_ONBOARDING_EVER_ENABLED)) {
-        var Q;
-        H = (0, f.yE)(null !== (Q = V.flags) && void 0 !== Q ? Q : 0, S.q.BYPASSES_VERIFICATION)
+        W = null,
+        H = null != b && m.Z.canManageUser(S.Plq.MODERATE_MEMBERS, e, b) && m.Z.canManageUser(S.Plq.KICK_MEMBERS, e, b) && m.Z.canManageUser(S.Plq.BAN_MEMBERS, e, b),
+        Q = null != b && (m.Z.canManageUser(S.Plq.MANAGE_GUILD, e, b) || m.Z.canManageUser(S.Plq.MANAGE_ROLES, e, b));
+    if (!L && null != b && null != k && null != k.joinedAt && (H || Q) && b.hasFeature(S.oNc.GUILD_ONBOARDING_EVER_ENABLED)) {
+        var z;
+        W = (0, R.yE)(null !== (z = k.flags) && void 0 !== z ? z : 0, P.q.BYPASSES_VERIFICATION)
             ? (0, t.jsx)(
                   r.MenuItem,
                   {
                       id: 'verify',
-                      label: A.Z.Messages.MANUALLY_UNVERIFY_MEMBER,
+                      label: h.Z.Messages.MANUALLY_UNVERIFY_MEMBER,
                       action: () => {
                           var l;
-                          return u.Z.setMemberFlags(b.id, e.id, (0, f.mB)(null !== (l = V.flags) && void 0 !== l ? l : 0, S.q.BYPASSES_VERIFICATION, !1));
+                          return u.Z.setMemberFlags(b.id, e.id, (0, R.mB)(null !== (l = k.flags) && void 0 !== l ? l : 0, P.q.BYPASSES_VERIFICATION, !1));
                       }
                   },
                   'verify'
@@ -149,29 +149,29 @@ function P(e, l, P, h) {
                   r.MenuItem,
                   {
                       id: 'verify',
-                      label: A.Z.Messages.MANUALLY_VERIFY_MEMBER,
+                      label: h.Z.Messages.MANUALLY_VERIFY_MEMBER,
                       action: () => {
                           var l;
-                          return u.Z.setMemberFlags(b.id, e.id, (0, f.mB)(null !== (l = V.flags) && void 0 !== l ? l : 0, S.q.BYPASSES_VERIFICATION, !0));
+                          return u.Z.setMemberFlags(b.id, e.id, (0, R.mB)(null !== (l = k.flags) && void 0 !== l ? l : 0, P.q.BYPASSES_VERIFICATION, !0));
                       }
                   },
                   'verify'
               );
     }
     return [
-        ...w,
+        ...K,
         ...(L || null == b
             ? []
             : [
-                  k,
-                  H,
-                  K && !x
+                  G,
+                  W,
+                  w && !x
                       ? p
                           ? (0, t.jsx)(
                                 r.MenuItem,
                                 {
                                     id: 'removetimeout',
-                                    label: A.Z.Messages.ENABLE_GUILD_COMMUNICATION_FOR_USER.format({ user: e.username }),
+                                    label: h.Z.Messages.ENABLE_GUILD_COMMUNICATION_FOR_USER.format({ user: e.username }),
                                     color: 'danger',
                                     action: () => {
                                         (0, o.q)(l, e.id, T);
@@ -183,7 +183,7 @@ function P(e, l, P, h) {
                                 r.MenuItem,
                                 {
                                     id: 'timeout',
-                                    label: A.Z.Messages.DISABLE_GUILD_COMMUNICATION_FOR_USER.format({ user: e.username }),
+                                    label: h.Z.Messages.DISABLE_GUILD_COMMUNICATION_FOR_USER.format({ user: e.username }),
                                     color: 'danger',
                                     action: (n) => {
                                         if (n.ctrlKey || n.metaKey) return Y(n, l, e.id);
@@ -193,12 +193,12 @@ function P(e, l, P, h) {
                                 'timeout'
                             )
                       : null,
-                  m.Z.canManageUser(R.Plq.KICK_MEMBERS, e, b) && !e.isClyde()
+                  m.Z.canManageUser(S.Plq.KICK_MEMBERS, e, b) && !e.isClyde()
                       ? (0, t.jsx)(
                             r.MenuItem,
                             {
                                 id: 'kick',
-                                label: A.Z.Messages.KICK_USER.format({ user: e.username }),
+                                label: h.Z.Messages.KICK_USER.format({ user: e.username }),
                                 color: 'danger',
                                 action: () =>
                                     (0, r.openModalLazy)(async () => {
@@ -206,7 +206,7 @@ function P(e, l, P, h) {
                                         return (n) =>
                                             (0, t.jsx)(a, {
                                                 ...n,
-                                                location: h,
+                                                location: A,
                                                 guildId: l,
                                                 user: e
                                             });
@@ -215,12 +215,12 @@ function P(e, l, P, h) {
                             'kick'
                         )
                       : null,
-                  m.Z.canManageUser(R.Plq.BAN_MEMBERS, e, b)
+                  m.Z.canManageUser(S.Plq.BAN_MEMBERS, e, b)
                       ? (0, t.jsx)(
                             r.MenuItem,
                             {
                                 id: 'ban',
-                                label: A.Z.Messages.BAN_USER.format({ user: e.username }),
+                                label: h.Z.Messages.BAN_USER.format({ user: e.username }),
                                 color: 'danger',
                                 action: () =>
                                     (0, r.openModalLazy)(async () => {
@@ -228,7 +228,7 @@ function P(e, l, P, h) {
                                         return (n) =>
                                             (0, t.jsx)(a, {
                                                 ...n,
-                                                location: h,
+                                                location: A,
                                                 guildId: l,
                                                 user: e
                                             });

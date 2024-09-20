@@ -15,7 +15,7 @@ var i = n(735250),
     _ = n(689938);
 function E(e) {
     let { loadId: t } = e,
-        n = (0, s.e7)([l.default], () => l.default.locale),
+        n = (0, s.e7)([l.default], () => (0, d.Xp)([l.default])),
         E = (0, c.Dm)(),
         h = null != E ? E : n,
         m = a.useCallback(

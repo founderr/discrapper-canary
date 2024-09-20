@@ -167,7 +167,7 @@ class w extends (i = a.PureComponent) {
             D(this, 'handleUserContextMenu', (e) => {
                 let { channel: t, user: i } = this.props;
                 (0, h.jW)(e, async () => {
-                    let { default: e } = await Promise.all([n.e('79695'), n.e('92453'), n.e('12435'), n.e('53092')]).then(n.bind(n, 757387));
+                    let { default: e } = await Promise.all([n.e('79695'), n.e('92453'), n.e('13125'), n.e('91864')]).then(n.bind(n, 757387));
                     return (n) =>
                         (0, s.jsx)(e, {
                             ...n,

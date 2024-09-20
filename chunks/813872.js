@@ -19,20 +19,20 @@ var t = n(735250),
 function g(e) {
     let { userId: l, guildId: n, channelId: g, location: m, onAction: _ } = e,
         C = a.useContext(c.AnalyticsContext),
-        f = (0, s.Aq)(),
-        O = (0, i.e7)([o.Z], () => (null != g ? g : o.Z.getChannelId(n, !0)), [g, n]),
-        v = (0, d.ms)(n, !0);
-    return null != n && v
+        R = (0, s.Aq)(),
+        v = (0, i.e7)([o.Z], () => (null != g ? g : o.Z.getChannelId(n, !0)), [g, n]),
+        f = (0, d.ms)(n, !0);
+    return null != n && f
         ? (0, t.jsx)(r.MenuItem, {
               id: 'mod-view',
               label: I.Z.Messages.GUILD_MEMBER_MOD_VIEW_TITLE,
               action: () => {
                   null == _ || _(),
-                      (0, u.r)(n, l, null != O ? O : M.oC.MEMBER_SAFETY, {
+                      (0, u.r)(n, l, null != v ? v : M.oC.MEMBER_SAFETY, {
                           modViewPanel: Z.k.INFO,
                           sourceLocation: null != m ? m : C.location
                       }),
-                      f.dispatch(E.CkL.POPOUT_CLOSE);
+                      R.dispatch(E.CkL.POPOUT_CLOSE);
               }
           })
         : null;

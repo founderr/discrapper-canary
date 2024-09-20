@@ -510,7 +510,7 @@ class G extends (l = i.PureComponent) {
         v in y && (w.onClick = y[v]);
         let C = null !== (t = null === (e = i.url.split('.').pop()) || void 0 === e ? void 0 : e.split('?')[0]) && void 0 !== t ? t : '';
         'jpg' === C && (C = 'jpeg');
-        let E = null != i && !g.u.test(null == i ? void 0 : i.url),
+        let E = null != i && !g.W.test(null == i ? void 0 : i.url),
             S =
                 !0 !== this.props.isSearchResult &&
                 l &&

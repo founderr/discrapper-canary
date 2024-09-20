@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return u;
+        return r;
     }
 });
 var a = t(735250);
@@ -9,11 +9,11 @@ var i = t(481060),
     l = t(518756),
     s = t(576749),
     o = t(689938);
-function u(e) {
+function r(e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        u = (0, l.Z)(e),
-        r = (0, s.Z)();
-    return u
+        r = (0, l.Z)(e),
+        u = (0, s.Z)();
+    return r
         ? (0, a.jsx)(i.MenuItem, {
               id: 'create-event',
               label: o.Z.Messages.SCHEDULE_EVENT,
@@ -26,7 +26,7 @@ function u(e) {
                               ...t,
                               guildId: e
                           });
-                  }, r);
+                  }, u);
               }
           })
         : null;

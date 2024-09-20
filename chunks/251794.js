@@ -1,35 +1,35 @@
-l.d(n, {
+n.d(l, {
     q: function () {
-        return s;
+        return u;
     },
     z: function () {
-        return a;
+        return t;
     }
 });
-var i = l(735250);
-l(470079);
-var t = l(481060);
-function a(e, n, a) {
-    (0, t.openModalLazy)(async () => {
-        let { default: t } = await l.e('72920').then(l.bind(l, 109730));
-        return (l) =>
-            (0, i.jsx)(t, {
+var i = n(735250);
+n(470079);
+var a = n(481060);
+function t(e, l, t) {
+    (0, a.openModalLazy)(async () => {
+        let { default: a } = await n.e('72920').then(n.bind(n, 109730));
+        return (n) =>
+            (0, i.jsx)(a, {
                 guildId: e,
-                userId: n,
-                anaylticsLocations: a,
-                ...l
+                userId: l,
+                anaylticsLocations: t,
+                ...n
             });
     });
 }
-function s(e, n, a) {
-    (0, t.openModalLazy)(async () => {
-        let { default: t } = await l.e('76233').then(l.bind(l, 171494));
-        return (l) =>
-            (0, i.jsx)(t, {
+function u(e, l, t) {
+    (0, a.openModalLazy)(async () => {
+        let { default: a } = await n.e('76233').then(n.bind(n, 171494));
+        return (n) =>
+            (0, i.jsx)(a, {
                 guildId: e,
-                userId: n,
-                anaylticsLocations: a,
-                ...l
+                userId: l,
+                anaylticsLocations: t,
+                ...n
             });
     });
 }

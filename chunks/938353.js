@@ -160,7 +160,7 @@ let eX = 15 * eh.Z.Millis.MINUTE,
     },
     e0 = (e) => () => {
         let { url: t, proxyUrl: n, width: i, height: a } = e;
-        return null != i && null != a && z.u.test(n)
+        return null != i && null != a && z.W.test(n)
             ? (0, s.jsx)(eZ.Z, {
                   width: i,
                   height: a,

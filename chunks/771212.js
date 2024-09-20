@@ -1,9 +1,9 @@
 t.d(n, {
     Fv: function () {
-        return u;
+        return r;
     },
     eA: function () {
-        return r;
+        return u;
     }
 });
 var a = t(470079),
@@ -23,7 +23,7 @@ let o = (0, i.B)({
         }
     ]
 });
-function u(e) {
+function r(e) {
     var n;
     return (
         (null === (n = l.default.getCurrentUser()) || void 0 === n ? void 0 : n.isStaff()) &&
@@ -33,7 +33,7 @@ function u(e) {
         }).showAccessRate
     );
 }
-function r(e) {
+function u(e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return (
         a.useEffect(() => {

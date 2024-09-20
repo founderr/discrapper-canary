@@ -111,7 +111,7 @@ function L(e) {
         ei = (0, C.Z)(en),
         eo = d.P.useExperiment({ location: 'MediaMosaicItem' }, { autoTrackExposure: !0 }).imageRecsEnabled,
         el = o.useMemo(() => (null != $ && -1 !== $.indexOf('/') ? $.split('/') : ['unknown', 'unknown']), [$]),
-        es = 'IMAGE' === J && !p.u.test(t.downloadUrl),
+        es = 'IMAGE' === J && !p.W.test(t.downloadUrl),
         ea = !1;
     if (B) {
         (null == X || null == q) && (ea = !0);

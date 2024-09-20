@@ -1,68 +1,68 @@
 l.d(n, {
     Z: function () {
-        return m;
+        return p;
     }
 });
-var t = l(735250),
-    i = l(470079),
-    a = l(442837),
-    r = l(481060),
-    s = l(58540),
+var i = l(735250),
+    a = l(470079),
+    r = l(442837),
+    s = l(481060),
+    d = l(58540),
     u = l(40851),
-    d = l(300284),
-    o = l(484459),
-    c = l(314897),
+    t = l(300284),
+    c = l(484459),
+    o = l(314897),
     Z = l(271383),
     E = l(430824),
     M = l(496675),
-    f = l(594174),
-    _ = l(981631),
-    g = l(689938),
-    I = l(745974);
-function m(e) {
-    let { guildId: n, userId: m, analyticsLocation: R, analyticsLocations: N, context: C, icon: O } = e,
-        A = E.Z.getGuild(n),
-        h = c.default.getId(),
-        v = (0, a.e7)([f.default], () => f.default.getUser(m)),
-        T = (0, a.e7)([Z.ZP], () => Z.ZP.isGuestOrLurker(n, m), [n, m]);
-    (0, a.e7)([M.Z], () => M.Z.getGuildVersion(n), [n]);
-    let x = i.useMemo(() => ({ [n]: [m] }), [n, m]);
-    (0, s.$)(x);
-    let b = C === _.IlC.POPOUT,
-        S = (0, d.Z)({
-            guild: A,
-            analyticsLocation: R
+    _ = l(594174),
+    N = l(981631),
+    C = l(689938),
+    h = l(745974);
+function p(e) {
+    let { guildId: n, userId: p, analyticsLocation: I, analyticsLocations: U, context: A, icon: g } = e,
+        G = E.Z.getGuild(n),
+        x = o.default.getId(),
+        T = (0, r.e7)([_.default], () => _.default.getUser(p)),
+        f = (0, r.e7)([Z.ZP], () => Z.ZP.isGuestOrLurker(n, p), [n, p]);
+    (0, r.e7)([M.Z], () => M.Z.getGuildVersion(n), [n]);
+    let b = a.useMemo(() => ({ [n]: [p] }), [n, p]);
+    (0, d.$)(b);
+    let j = A === N.IlC.POPOUT,
+        P = (0, t.Z)({
+            guild: G,
+            analyticsLocation: I
         }),
-        p = (0, u.Aq)();
-    if (null == A || b) return null;
-    let P = h === m && (M.Z.can(_.Plq.CHANGE_NICKNAME, A) || M.Z.can(_.Plq.MANAGE_NICKNAMES, A)),
-        U = h === m,
-        j = M.Z.canManageUser(_.Plq.MANAGE_NICKNAMES, m, A);
-    if (!(P || j || U) || null == v || T) return null;
-    let L = A.hasFeature(_.oNc.HUB) ? g.Z.Messages.HUB_EDIT_PROFILE : g.Z.Messages.CHANGE_IDENTITY,
-        D = U ? L : g.Z.Messages.CHANGE_NICKNAME;
-    return (0, t.jsx)(r.MenuItem, {
+        O = (0, u.Aq)();
+    if (null == G || j) return null;
+    let S = x === p && (M.Z.can(N.Plq.CHANGE_NICKNAME, G) || M.Z.can(N.Plq.MANAGE_NICKNAMES, G)),
+        L = x === p,
+        v = M.Z.canManageUser(N.Plq.MANAGE_NICKNAMES, p, G);
+    if (!(S || v || L) || null == T || f) return null;
+    let R = G.hasFeature(N.oNc.HUB) ? C.Z.Messages.HUB_EDIT_PROFILE : C.Z.Messages.CHANGE_IDENTITY,
+        m = L ? R : C.Z.Messages.CHANGE_NICKNAME;
+    return (0, i.jsx)(s.MenuItem, {
         id: 'change-nickname',
-        label: (0, t.jsx)('div', {
-            className: I.labelWrapper,
-            children: (0, t.jsx)('span', {
-                className: I.label,
-                children: D
+        label: (0, i.jsx)('div', {
+            className: h.labelWrapper,
+            children: (0, i.jsx)('span', {
+                className: h.label,
+                children: m
             })
         }),
-        icon: O,
+        icon: g,
         action: () => {
-            U
-                ? ((0, o.Z)(v.id, v.getAvatarURL(n, 80), { guildId: n }), S(), p.dispatch(_.CkL.POPOUT_CLOSE), (0, r.closeAllModals)())
-                : (0, r.openModalLazy)(async () => {
+            L
+                ? ((0, c.Z)(T.id, T.getAvatarURL(n, 80), { guildId: n }), P(), O.dispatch(N.CkL.POPOUT_CLOSE), (0, s.closeAllModals)())
+                : (0, s.openModalLazy)(async () => {
                       let { default: e } = await l.e('17712').then(l.bind(l, 620021));
                       return (l) =>
-                          (0, t.jsx)(e, {
+                          (0, i.jsx)(e, {
                               ...l,
                               guildId: n,
-                              user: v,
-                              analyticsSource: R,
-                              analyticsLocations: N
+                              user: T,
+                              analyticsSource: I,
+                              analyticsLocations: U
                           });
                   });
         }
