@@ -132,7 +132,6 @@ function v(e, t, n, s, a) {
     let { message: l, channel: r, compact: o } = e,
         { referencedUsernameProfile: c, referencedAvatarProfile: u } = n,
         d =
-            l.type === T.uaV.REPLY &&
             null != s &&
             (0, i.jsx)(S, {
                 baseMessage: l,

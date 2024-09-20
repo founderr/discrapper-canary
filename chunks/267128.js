@@ -156,48 +156,53 @@ function P(e) {
     let t;
     let { repliedAuthor: n, baseAuthor: a, baseMessage: o, referencedMessage: _, renderPopout: E } = e,
         f = i.useMemo(() => (null != E && _.state === p.Y.LOADED ? (e) => E(e, _.message) : void 0), [_, E]),
-        h = (function (e, t) {
-            let { referencedMessage: n, channel: i, compact: a, isReplyAuthorBlocked: o, repliedAuthor: l, showAvatarPopout: _, onClickAvatar: E, onContextMenu: f, onPopoutRequestClose: h } = e,
-                { analyticsLocations: I } = (0, d.ZP)(c.Z.AVATAR);
-            if (a || n.state !== p.Y.LOADED || o)
-                return (0, r.jsx)('div', {
-                    className: L.replyBadge,
-                    children: (0, r.jsx)(D, { className: L.replyIcon })
-                });
-            if (n.message.type === C.uaV.USER_JOIN || n.message.type === C.uaV.ROLE_SUBSCRIPTION_PURCHASE || n.message.type === C.uaV.GUILD_DEADCHAT_REVIVE_PROMPT || n.message.type === C.uaV.GUILD_GAMING_STATS_PROMPT) return (0, r.jsx)(b, { className: L.userJoinSystemMessageIcon });
-            if (n.message.type === C.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION)
+        h = (function (e, t, n) {
+            let { referencedMessage: i, channel: a, compact: o, isReplyAuthorBlocked: l, repliedAuthor: _, showAvatarPopout: E, onClickAvatar: f, onContextMenu: h, onPopoutRequestClose: I } = e,
+                { analyticsLocations: m } = (0, d.ZP)(c.Z.AVATAR);
+            if (o || i.state !== p.Y.LOADED || l)
+                return n === C.uaV.CONTEXT_MENU_COMMAND
+                    ? (0, r.jsx)('div', {
+                          className: L.replyChatIconContainer,
+                          children: (0, r.jsx)(u.ChatIcon, { size: 'xs' })
+                      })
+                    : (0, r.jsx)('div', {
+                          className: L.replyBadge,
+                          children: (0, r.jsx)(D, { className: L.replyIcon })
+                      });
+            if (i.message.type === C.uaV.USER_JOIN || i.message.type === C.uaV.ROLE_SUBSCRIPTION_PURCHASE || i.message.type === C.uaV.GUILD_DEADCHAT_REVIVE_PROMPT || i.message.type === C.uaV.GUILD_GAMING_STATS_PROMPT) return (0, r.jsx)(b, { className: L.userJoinSystemMessageIcon });
+            if (i.message.type === C.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION)
                 return (0, r.jsx)(u.TicketIcon, {
                     size: 'md',
                     color: 'currentColor',
                     className: L.ticketIcon
                 });
-            if (n.message.type === C.uaV.POLL_RESULT)
+            if (i.message.type === C.uaV.POLL_RESULT)
                 return (0, r.jsx)(u.PollsIcon, {
                     className: L.repliedTextContentLeadingIcon,
                     width: v.WW,
                     height: v.WW,
                     size: 'custom'
                 });
-            let m = () => {
-                var e, t, a, o, u;
+            let S = () => {
+                var e, t, n, o, l;
                 return (
-                    (e = n.message.author),
-                    (t = l),
-                    (a = i.guild_id),
-                    (o = E),
-                    (u = f),
+                    (e = i.message.author),
+                    (t = _),
+                    (n = a.guild_id),
+                    (o = f),
+                    (l = h),
                     (0, r.jsx)('img', {
                         alt: '',
                         src:
-                            (null == t ? void 0 : t.guildMemberAvatar) != null && null != a
+                            (null == t ? void 0 : t.guildMemberAvatar) != null && null != n
                                 ? (0, T.JM)({
-                                      guildId: a,
+                                      guildId: n,
                                       userId: e.id,
                                       avatar: t.guildMemberAvatar
                                   })
-                                : e.getAvatarURL(a, 16),
+                                : e.getAvatarURL(n, 16),
                         onClick: o,
-                        onContextMenu: u,
+                        onContextMenu: l,
                         className: s()({
                             [L.replyAvatar]: !0,
                             [L.clickable]: null != o
@@ -205,22 +210,22 @@ function P(e) {
                     })
                 );
             };
-            return null != t && null != _
+            return null != t && null != E
                 ? (0, r.jsx)(d.Gt, {
-                      value: I,
+                      value: m,
                       children: (0, r.jsx)(u.Popout, {
                           renderPopout: t,
-                          shouldShow: _,
+                          shouldShow: E,
                           position: 'right',
-                          onRequestClose: h,
-                          children: m
+                          onRequestClose: I,
+                          children: S
                       })
                   })
                 : (0, r.jsx)(d.Gt, {
-                      value: I,
-                      children: m()
+                      value: m,
+                      children: S()
                   });
-        })(e, f),
+        })(e, f, o.type),
         m = (function (e, t) {
             let { baseMessage: n, channel: i, referencedMessage: a, showUsernamePopout: s, onClickUsername: o, onContextMenu: l, onPopoutRequestClose: u } = e,
                 c = (null == a ? void 0 : a.state) === p.Y.LOADED ? a.message : void 0;

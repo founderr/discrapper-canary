@@ -1,21 +1,24 @@
 n.d(t, {
     $3: function () {
-        return G;
+        return w;
     },
     Go: function () {
-        return B;
+        return k;
+    },
+    JC: function () {
+        return L;
     },
     NU: function () {
-        return D;
+        return b;
     },
     Nk: function () {
         return v;
     },
     R9: function () {
-        return Z;
+        return P;
     },
     RN: function () {
-        return U;
+        return y;
     },
     Wl: function () {
         return M;
@@ -24,25 +27,25 @@ n.d(t, {
         return x;
     },
     Xn: function () {
-        return w;
+        return V;
     },
     bb: function () {
-        return F;
+        return G;
     },
     qo: function () {
-        return b;
+        return j;
     },
     rY: function () {
-        return P;
+        return D;
     },
     sR: function () {
-        return y;
+        return B;
     },
     tn: function () {
-        return k;
+        return F;
     },
     wq: function () {
-        return j;
+        return U;
     }
 }),
     n(789020),
@@ -106,7 +109,11 @@ function v(e, t, n, i) {
     let s = R('interactionUsernameProfile', n, i);
     return O(null == e ? void 0 : e.user.id, t.id, s);
 }
-function L(e) {
+function L(e, t, n, i) {
+    let s = R('referencedUsernameProfile', n, i);
+    return O(e, t.id, s);
+}
+function Z(e) {
     return s.useCallback(
         (t) => {
             t.preventDefault(), t.stopPropagation(), e();
@@ -114,16 +121,16 @@ function L(e) {
         [e]
     );
 }
-function Z(e, t) {
-    return L(R('avatarProfile', e, t));
-}
 function P(e, t) {
-    return L(R('referencedAvatarProfile', e, t));
+    return Z(R('avatarProfile', e, t));
 }
 function D(e, t) {
-    return L(R('interactionAvatarProfile', e, t));
+    return Z(R('referencedAvatarProfile', e, t));
 }
-function b(e, t, a, l) {
+function b(e, t) {
+    return Z(R('interactionAvatarProfile', e, t));
+}
+function j(e, t, a, l) {
     let { id: o } = t,
         { id: u, flags: d } = e,
         m = (0, N.yE)(d, S.iLy.EPHEMERAL),
@@ -164,7 +171,7 @@ function b(e, t, a, l) {
         [m, o, u, a, T, l]
     );
 }
-function j(e, t) {
+function U(e, t) {
     return s.useCallback(
         (n) => {
             let i = m.default.getUser(e),
@@ -174,7 +181,7 @@ function j(e, t) {
         [e, t]
     );
 }
-function U(e, t, n) {
+function y(e, t, n) {
     return s.useCallback(
         (i) => {
             let s = m.default.getUser(e),
@@ -191,7 +198,7 @@ function U(e, t, n) {
         [e, t, n]
     );
 }
-function y(e, t) {
+function B(e, t) {
     return s.useCallback(
         (n) => {
             let i = m.default.getUser(e),
@@ -201,7 +208,7 @@ function y(e, t) {
         [e, t]
     );
 }
-function B(e, t) {
+function k(e, t) {
     let { id: n } = e,
         { id: i } = t;
     return s.useCallback(
@@ -211,7 +218,7 @@ function B(e, t) {
         [i, n]
     );
 }
-function k(e, t, n) {
+function F(e, t, n) {
     let { canShowReactionsOnMessageHover: i } = u.ZP.useExperiment({ location: 'useHoveredMessage' }, { autoTrackExposure: !1 }),
         a = ''.concat(e, ':').concat(t),
         r = s.useRef(n),
@@ -230,7 +237,7 @@ function k(e, t, n) {
         handleMouseLeave: _
     };
 }
-function F(e, t) {
+function G(e, t) {
     let [n, i] = s.useState(!1),
         [a, r] = s.useState(!1),
         l = s.useCallback(
@@ -255,7 +262,7 @@ function F(e, t) {
         hasFocused: a
     };
 }
-function G(e, t) {
+function w(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     return s.useCallback(() => {
         null != t &&
@@ -273,7 +280,7 @@ function G(e, t) {
                   }));
     }, [n, e.id, t]);
 }
-function w(e, t) {
+function V(e, t) {
     let n = R('interactionData', e, t);
     return s.useCallback(
         (e) => {

@@ -35,6 +35,9 @@ n.d(t, {
     qJ: function () {
         return P;
     },
+    t0: function () {
+        return U;
+    },
     tI: function () {
         return L;
     },
@@ -359,4 +362,8 @@ function P(e) {
         search_results_position: u,
         source: c
     });
+}
+function U(e) {
+    let t = e.interactionMetadata;
+    return null == t ? null : 'triggering_interaction_metadata' in t ? t.triggering_interaction_metadata : t;
 }
