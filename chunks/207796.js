@@ -50,13 +50,14 @@ let f = (0, u.Z)(
             dismissedPilotAdminNux: !1,
             setSavedGuildIds: (t) => (0, d.j)(() => e({ savedGuildIds: t })),
             setGame: (t) => (0, d.j)(() => e({ game: t })),
-            setSelectedGames: (t) =>
+            setSelectedGames: (t) => {
                 (0, d.j)(() =>
                     e({
                         selectedGames: t,
                         completedNux: !0
                     })
-                ),
+                );
+            },
             setSelectedPlaystyle: (t) =>
                 (0, d.j)(() =>
                     e({

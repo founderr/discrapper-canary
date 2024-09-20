@@ -40,8 +40,8 @@ var i = n(735250),
     j = n(326145),
     U = n(269675),
     G = n(242601),
-    w = n(416568),
-    k = n(613609),
+    k = n(416568),
+    w = n(613609),
     B = n(160404),
     H = n(225675),
     V = n(745052),
@@ -215,15 +215,12 @@ let eI = 'resizable-sidebar-width',
             : (0, i.jsx)(ec.Z, {});
     }),
     eL = (e) => (0, i.jsx)(eA, { ...e }),
-    eZ = (e) => {
-        let t = null != e && e.length > 0 && e.startsWith('?') ? e.split('?')[1] : null;
-        return (0, x.a)({ location: 'sidebar' }) ? (0, i.jsx)(b.Z, {}) : (0, i.jsx)(R.Z, { searchRoute: t });
+    eZ = (e, t) => {
+        let n = null != e && e.length > 0 && e.startsWith('?') ? e.split('?')[1] : null,
+            a = (0, x.a)({ location: 'sidebar' });
+        return (0, N.rx)('game_discovery_entry_point') && a && null != t ? (0, i.jsx)(b.V, { gameId: t }) : a ? (0, i.jsx)(b.Z, {}) : (0, i.jsx)(R.Z, { searchRoute: n });
     },
     eR = (e) => {
-        let { match: t } = e;
-        return (0, N.rx)('game_discovery_entry_point') ? (0, i.jsx)(b.V, { gameId: t.params.gameId }) : (0, i.jsx)(l.l_, { to: e_.Z5c.GLOBAL_DISCOVERY });
-    },
-    eO = (e) => {
         let { match: t } = e;
         return null != t.params.guildId
             ? (0, i.jsx)(D.Z, {
@@ -232,18 +229,18 @@ let eI = 'resizable-sidebar-width',
               })
             : null;
     },
-    ex = (e) => {
+    eO = (e) => {
         let { match: t } = e;
         return null != t.params.guildId
-            ? (0, i.jsx)(k.Z, {
+            ? (0, i.jsx)(w.Z, {
                   guildId: t.params.guildId,
                   inviteCode: t.params.inviteCode
               })
             : null;
     },
-    eb = () => (0, i.jsx)(ed.Z, {}),
-    eP = () => (0, i.jsx)(eu.Z, {}),
-    eM = function () {
+    ex = () => (0, i.jsx)(ed.Z, {}),
+    eb = () => (0, i.jsx)(eu.Z, {}),
+    eP = function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         return function (t) {
             return (0, i.jsx)(A.Z, {
@@ -252,11 +249,11 @@ let eI = 'resizable-sidebar-width',
             });
         };
     },
-    eD = (e) => (0, i.jsx)(p.Z, { ...e }),
-    ey = () => (0, i.jsx)(z.Z, {}),
-    ej = () => (0, i.jsx)(V.Z, {}),
-    eU = () => (0, i.jsx)(W.Z, {}),
-    eG = (e) => {
+    eM = (e) => (0, i.jsx)(p.Z, { ...e }),
+    eD = () => (0, i.jsx)(z.Z, {}),
+    ey = () => (0, i.jsx)(V.Z, {}),
+    ej = () => (0, i.jsx)(W.Z, {}),
+    eU = (e) => {
         let { match: t } = e;
         switch (t.params.feature) {
             case 'addFriends':
@@ -284,7 +281,7 @@ let eI = 'resizable-sidebar-width',
                 return (0, i.jsx)(l.l_, { to: e_.Z5c.ME });
         }
     };
-function ew(e) {
+function eG(e) {
     let { hasNotice: t, sidebarTheme: n, hideSidebar: s } = e;
     (0, m.t)(!0);
     let l = 'app view user trigger debugging';
@@ -400,7 +397,7 @@ function ek() {
             children: [
                 E &&
                     !_ &&
-                    (0, i.jsx)(w.Z, {
+                    (0, i.jsx)(k.Z, {
                         className: em.guilds,
                         themeOverride: n
                     }),
@@ -414,7 +411,7 @@ function ek() {
                                 className: em.content,
                                 children: [
                                     (0, i.jsx)(C.Z, {}),
-                                    (0, i.jsx)(ew, {
+                                    (0, i.jsx)(eG, {
                                         hasNotice: t,
                                         sidebarTheme: n,
                                         hideSidebar: s || r || c || _ || m || !E
@@ -430,7 +427,7 @@ function ek() {
                                                 }),
                                                 (0, i.jsx)(T.Z, {
                                                     path: e_.Z5c.ACTIVITY_DETAILS(':applicationId'),
-                                                    render: eD,
+                                                    render: eM,
                                                     impressionName: o.ImpressionNames.ACTIVITY_DETAILS,
                                                     impressionProperties: (e) => {
                                                         let { computedMatch: t } = e;
@@ -439,45 +436,45 @@ function ek() {
                                                 }),
                                                 (0, i.jsx)(T.Z, {
                                                     path: e_.Z5c.APPLICATION_LIBRARY,
-                                                    render: eb,
+                                                    render: ex,
                                                     impressionName: o.ImpressionNames.APPLICATION_LIBRARY,
                                                     disableTrack: !0
                                                 }),
                                                 (0, i.jsx)(T.Z, {
                                                     path: e_.Z5c.APPLICATION_STORE,
-                                                    render: eP,
+                                                    render: eb,
                                                     impressionName: o.ImpressionNames.APPLICATION_STORE,
                                                     disableTrack: !0
                                                 }),
                                                 (0, i.jsx)(T.Z, {
                                                     path: e_.Z5c.COLLECTIBLES_SHOP_FULLSCREEN,
-                                                    render: eM(!0),
+                                                    render: eP(!0),
                                                     disableTrack: !0
                                                 }),
                                                 (0, i.jsx)(T.Z, {
                                                     path: e_.Z5c.COLLECTIBLES_SHOP,
-                                                    render: eM(!1),
+                                                    render: eP(!1),
                                                     disableTrack: !0
                                                 }),
                                                 (0, i.jsx)(T.Z, {
                                                     path: e_.Z5c.COLLECTIBLES_SHOP_PRODUCT_DETAIL(':skuId'),
-                                                    render: eM(!1),
+                                                    render: eP(!1),
                                                     disableTrack: !0
                                                 }),
                                                 (0, i.jsx)(T.Z, {
                                                     path: e_.Z5c.MESSAGE_REQUESTS,
-                                                    render: ej,
+                                                    render: ey,
                                                     disableTrack: !0
                                                 }),
                                                 (0, i.jsx)(T.Z, {
                                                     path: e_.Z5c.FAMILY_CENTER,
-                                                    render: eU,
+                                                    render: ej,
                                                     disableTrack: !0
                                                 }),
                                                 (0, i.jsx)(T.Z, {
                                                     path: e_.Z5c.ME,
                                                     exact: !0,
-                                                    render: ey,
+                                                    render: eD,
                                                     impressionName: o.ImpressionNames.FRIENDS,
                                                     disableTrack: !0
                                                 }),
@@ -488,16 +485,20 @@ function ek() {
                                                     disableTrack: !0
                                                 }),
                                                 (0, i.jsx)(T.Z, {
-                                                    path: e_.Z5c.DISCOVERY_GUILD_GAME_RESULTS(':gameId'),
-                                                    render: eR,
-                                                    impressionName: o.ImpressionNames.GUILD_DISCOVERY,
-                                                    disableTrack: !0
-                                                }),
-                                                (0, i.jsx)(T.Z, {
                                                     path: e_.Z5c.GLOBAL_DISCOVERY,
                                                     render: (e) => {
                                                         let { location: t } = e;
                                                         return eZ(t.search);
+                                                    },
+                                                    impressionName: o.ImpressionNames.GLOBAL_DISCOVERY,
+                                                    disableTrack: !0,
+                                                    exact: !0
+                                                }),
+                                                (0, i.jsx)(T.Z, {
+                                                    path: e_.Z5c.DISCOVERY_GUILD_GAME_RESULTS(':gameId'),
+                                                    render: (e) => {
+                                                        let { location: t, match: n } = e;
+                                                        return eZ(t.search, n.params.gameId);
                                                     },
                                                     impressionName: o.ImpressionNames.GLOBAL_DISCOVERY,
                                                     disableTrack: !0
@@ -531,13 +532,13 @@ function ek() {
                                                 }),
                                                 (0, i.jsx)(T.Z, {
                                                     path: e_.Z5c.GUILD_MEMBER_VERIFICATION(':guildId', ':inviteCode?'),
-                                                    render: eO,
+                                                    render: eR,
                                                     impressionName: o.ImpressionNames.GUILD_MEMBER_VERIFICATION,
                                                     disableTrack: !0
                                                 }),
                                                 (0, i.jsx)(T.Z, {
                                                     path: e_.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB(':guildId', ':inviteCode?'),
-                                                    render: ex,
+                                                    render: eO,
                                                     impressionName: o.ImpressionNames.HUB_EMAIL_SIGNUP,
                                                     impressionProperties: (e) => {
                                                         let { computedMatch: t } = e;
@@ -547,7 +548,7 @@ function ek() {
                                                 (0, i.jsx)(T.Z, {
                                                     path: e_.Z5c.FEATURE(':feature'),
                                                     exact: !0,
-                                                    render: eG,
+                                                    render: eU,
                                                     disableTrack: !0
                                                 })
                                             ]
