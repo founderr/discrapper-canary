@@ -10,7 +10,7 @@ var i = n(818083),
     l = n(987338);
 let r = (0, i.B)({
     kind: 'user',
-    id: '2024-09_browse_channel_visible',
+    id: '2024-09_browsechannelbuttonoptin',
     label: "Don't show guild Browse Channels when all channels are already visible",
     defaultConfig: { alwaysShowDirectory: !0 },
     commonTriggerPoint: l.$P.CONNECTION_OPEN,

@@ -8,7 +8,7 @@ var i = n(442837),
     a = n(430824),
     s = n(981631);
 function r() {
-    return (0, i.e7)([a.Z], () =>
+    return (0, i.Wu)([a.Z], () =>
         Object.entries(a.Z.getGuilds())
             .filter((e) => {
                 let [t, n] = e;

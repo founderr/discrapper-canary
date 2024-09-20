@@ -85,9 +85,9 @@ function S(e) {
 function M(e) {
     let { channel: t, title: n, closePopout: i, onFocus: o, onSelectEmoji: c, onSelectDisabledEmoji: d, onExpandedToggle: x, emojiSearchProps: v, recentlyUsedEmojis: f, analyticsOverride: M } = e,
         A = (0, h.Dt)(),
-        [y, O] = a.useState(!1),
-        R = (0, m.wC)(t.guild_id),
-        j = (0, s.uniqBy)([...R, ...P], 'name')
+        [y, R] = a.useState(!1),
+        O = (0, m.wC)(t.guild_id),
+        j = (0, s.uniqBy)([...O, ...P], 'name')
             .filter(
                 (e) =>
                     !p.ZP.isEmojiFilteredOrLocked({
@@ -99,7 +99,7 @@ function M(e) {
             .slice(0, T.e5);
     null != f && f.length > 0 && j.splice(j.length - 1, 1, f[0]);
     let w = (e) => {
-            O(e), null == x || x(e);
+            R(e), null == x || x(e);
         },
         L = (e, t) => {
             if (null == e && t) {

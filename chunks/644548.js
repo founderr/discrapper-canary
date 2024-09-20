@@ -56,16 +56,16 @@ t.Z = (e) => {
             [null == I ? void 0 : I.src, t, M, n, Z, A, S, C]
         );
     if (null == C || null == M || null == A || !(0, m.qy)(A)) return null;
-    let O = null != n.extra.platform ? h.v[n.extra.platform] : null;
+    let R = null != n.extra.platform ? h.v[n.extra.platform] : null;
     return (0, l.jsxs)(E.yR, {
         children: [
             (0, l.jsx)(E.wG, {
                 channel: t,
                 headerIcons:
-                    null == O
+                    null == R
                         ? null
                         : (0, l.jsx)(v.Z, {
-                              Icon: O,
+                              Icon: R,
                               'aria-label': p.Z.Messages.GAME_LIBRARY_LIST_HEADER_PLATFORM
                           }),
                 entry: n,

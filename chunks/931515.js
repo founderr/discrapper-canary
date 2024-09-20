@@ -142,7 +142,7 @@ function C(e) {
         );
     i.useEffect(() => {
         n(e, h.$, { pageMemoryEnabled: !0 });
-    }, [e, n]),
+    }, [e, n, A]),
         S(d),
         i.useEffect(() => {
             (0, E.IS)();

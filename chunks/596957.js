@@ -52,13 +52,13 @@ t.Z = function (e) {
             },
             [y, t]
         ),
-        w = a.useCallback(() => {
+        k = a.useCallback(() => {
             j({
                 ...y,
                 [t]: ''
             });
         }, [y, t]),
-        k = (0, m.A)({ location: 'people_list' }) && t === Z.pJs.PENDING && b.filter(Z.pJs.SPAM).length > 0,
+        w = (0, m.A)({ location: 'people_list' }) && t === Z.pJs.PENDING && b.filter(Z.pJs.SPAM).length > 0,
         B = b.filter(t, y[t]);
     if (0 === B.length && '' === y[t])
         return (0, i.jsx)('div', {
@@ -67,7 +67,7 @@ t.Z = function (e) {
                 f.Z,
                 {
                     type: t,
-                    onClick: k
+                    onClick: w
                         ? U
                         : t !== Z.pJs.PENDING
                           ? () => {
@@ -91,7 +91,7 @@ t.Z = function (e) {
                     className: r()(O.searchBar, V ? O.searchEmptyState : null),
                     query: y[t],
                     onChange: G,
-                    onClear: w,
+                    onClear: k,
                     size: o.SearchBar.Sizes.MEDIUM
                 }),
                 (0, i.jsxs)('div', {
@@ -165,7 +165,7 @@ t.Z = function (e) {
                           sectionFilter: t,
                           searchQuery: y[t],
                           useReducedMotion: _.Z.useReducedMotion,
-                          footer: k
+                          footer: w
                               ? (0, i.jsx)(o.Button, {
                                     look: o.Button.Looks.LINK,
                                     color: O.viewSpamButtonColor,

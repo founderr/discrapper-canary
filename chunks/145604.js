@@ -41,8 +41,8 @@ var i = n(735250),
     j = n(594174),
     U = n(774343),
     G = n(974042),
-    w = n(808506),
-    k = n(626135),
+    k = n(808506),
+    w = n(626135),
     B = n(630388),
     H = n(823379),
     V = n(998502),
@@ -61,7 +61,7 @@ class W extends a.PureComponent {
                 n = null != t ? t.name : '',
                 i = N.Z.getStageInstanceByChannel(e.voiceChannelId),
                 a = S.ZP.getActiveEventByChannel(e.voiceChannelId);
-            k.default.track(F.rMx.LEAVE_VOICE_CHANNEL, {
+            w.default.track(F.rMx.LEAVE_VOICE_CHANNEL, {
                 channel_id: e.voiceChannelId,
                 channel_type: e.voiceChannelType,
                 channel_bitrate: e.voiceChannelBitrate,
@@ -86,7 +86,7 @@ class W extends a.PureComponent {
                 i = S.ZP.getActiveEventByChannel(a);
             (0, c.yw)(F.rMx.CHANNEL_OPENED, { ...(0, c.$H)(a) }),
                 (0, u.a)(F.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: a }),
-                k.default.track(F.rMx.JOIN_VOICE_CHANNEL, {
+                w.default.track(F.rMx.JOIN_VOICE_CHANNEL, {
                     channel_id: a,
                     channel_type: o,
                     channel_bitrate: p,
@@ -114,7 +114,7 @@ class W extends a.PureComponent {
                     var t;
                     let n = V.ZP.GetWindowFullscreenTypeByPid(Z.pid, Z.name, Z.fullscreenType),
                         { gameName: i, gameId: r, exe: _, distributor: E } = (0, I.G8)(Z);
-                    k.default.track(F.rMx.LAUNCH_GAME, {
+                    w.default.track(F.rMx.LAUNCH_GAME, {
                         game: i,
                         game_id: r,
                         verified: null != e && (0, I.vp)(_, null == e ? void 0 : e.executables),
@@ -123,7 +123,7 @@ class W extends a.PureComponent {
                         game_platform: F.M7m.DESKTOP,
                         detection_method: d,
                         distributor: E,
-                        is_overlay_enabled: w.Z.enabled,
+                        is_overlay_enabled: k.Z.enabled,
                         is_overlay_game_enabled: u.enabled,
                         is_overlay_game_source: u.source,
                         fullscreen_type: l.Jx[n],
@@ -153,7 +153,7 @@ class W extends a.PureComponent {
                 t = [C ? 'screen' : null, T ? 'camera' : null].filter(H.lm),
                 n = null;
             C ? ((e = 'screen'), (n = (0, E.t)())) : T && (e = 'camera'),
-                k.default.track(F.rMx.VIDEO_INPUT_TOGGLED, {
+                w.default.track(F.rMx.VIDEO_INPUT_TOGGLED, {
                     video_input_type: e,
                     video_toggle_source: __OVERLAY__ ? 'overlay' : 'app',
                     enabled_inputs: t,
@@ -177,7 +177,7 @@ class W extends a.PureComponent {
                 num_recent_channels: f.Z.recentsChannelCount(j)
             };
             (0, c.yw)(F.rMx.GUILD_VIEWED, e), (0, u.a)(F.rMx.GUILD_VIEWED_CLICKSTREAM, { guildId: j });
-        } else U && null == j && G === F.Z5c.FRIENDS && (!e.connected || W !== e.friendsTabSection || G !== e.homeLink) ? (0, _.Z)({ tab_opened: W }) : U && null == j && G === F.Z5c.MESSAGE_REQUESTS && (!e.connected || G !== e.homeLink) && !this.isMessageRequestsInitialized && ((this.isMessageRequestsInitialized = !0), k.default.track(F.rMx.MESSAGE_REQUESTS_INITIALIZED, { num_message_requests: J }));
+        } else U && null == j && G === F.Z5c.FRIENDS && (!e.connected || W !== e.friendsTabSection || G !== e.homeLink) ? (0, _.Z)({ tab_opened: W }) : U && null == j && G === F.Z5c.MESSAGE_REQUESTS && (!e.connected || G !== e.homeLink) && !this.isMessageRequestsInitialized && ((this.isMessageRequestsInitialized = !0), w.default.track(F.rMx.MESSAGE_REQUESTS_INITIALIZED, { num_message_requests: J }));
         if (U && null != P && (!e.connected || P !== e.selectedChannelId || j !== e.selectedGuildId)) {
             let t = e.selectedChannelId,
                 n = v.Z.getChannel(t),
@@ -191,7 +191,7 @@ class W extends a.PureComponent {
                             var t;
                             return (0, B.yE)(e.flags, F.iLy.IS_CROSSPOST) && (null === (t = e.messageReference) || void 0 === t ? void 0 : t.guild_id) === '667560445975986187';
                         });
-                k.default.track(F.rMx.ACK_COMMUNITY_MESSAGES, {
+                w.default.track(F.rMx.ACK_COMMUNITY_MESSAGES, {
                     last_message_id: null == s ? void 0 : s.id,
                     last_message_reference_message_id: null == s ? void 0 : null === (i = s.messageReference) || void 0 === i ? void 0 : i.message_id,
                     messages_loaded: e.hasFetched,

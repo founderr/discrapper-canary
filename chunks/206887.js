@@ -9,16 +9,16 @@ var i = n(735250),
     d = n(689938),
     u = n(271183);
 t.Z = function (e) {
-    let { guild: t } = e,
-        [n, s] = a.useState(!1),
-        _ = a.useCallback(() => s(!0), [s]),
-        E = a.useCallback(() => s(!0), [s]);
+    let { guild: t, className: n } = e,
+        [s, _] = a.useState(!1),
+        E = a.useCallback(() => _(!0), [_]),
+        h = a.useCallback(() => _(!0), [_]);
     return (0, i.jsx)('div', {
-        className: r()(u.actionButtonsContainer, { [u.forceButtonsShow]: n }),
+        className: r()(u.actionButtonsContainer, n, { [u.forceButtonsShow]: s }),
         children: (0, i.jsx)(o.ZP, {
             children: (0, i.jsx)(c.GuildDiscoveryMenuPopout, {
-                onRequestOpen: _,
-                onRequestClose: E,
+                onRequestOpen: E,
+                onRequestClose: h,
                 guild: t,
                 children: (e) => {
                     let { onClick: t, ...n } = e;

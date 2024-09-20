@@ -221,8 +221,8 @@ t.Z = a.memo(function (e) {
         y = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
         j = (0, N.L)({ guild: O }),
         U = (0, A.n)(),
-        [G, w] = a.useState(!0),
-        k = (0, c.useSpring)(
+        [G, k] = a.useState(!0),
+        w = (0, c.useSpring)(
             {
                 from: { opacity: 0 },
                 to: { opacity: 1 },
@@ -293,7 +293,7 @@ t.Z = a.memo(function (e) {
                 to: { transform: 'translateY(0px)' },
                 config: x,
                 delay: 250,
-                onRest: () => w(!1)
+                onRest: () => k(!1)
             },
             'animate-always'
         ),
@@ -326,7 +326,7 @@ t.Z = a.memo(function (e) {
                         className: Z.clanCardOuterContainer,
                         style: {
                             ...B,
-                            ...k
+                            ...w
                         },
                         children: (0, i.jsx)(f.xV, {
                             clan: U[0],
@@ -337,7 +337,7 @@ t.Z = a.memo(function (e) {
                         className: Z.clanCardInnerContainer,
                         style: {
                             ...H,
-                            ...k
+                            ...w
                         },
                         children: (0, i.jsx)(f.xV, {
                             clan: U[1],
@@ -367,7 +367,7 @@ t.Z = a.memo(function (e) {
                         className: Z.clanCardInnerContainer,
                         style: {
                             ...V,
-                            ...k
+                            ...w
                         },
                         children: (0, i.jsx)(f.xV, {
                             clan: U[2],
@@ -378,7 +378,7 @@ t.Z = a.memo(function (e) {
                         className: Z.clanCardOuterContainer,
                         style: {
                             ...F,
-                            ...k
+                            ...w
                         },
                         children: (0, i.jsx)(f.xV, {
                             clan: U[3],

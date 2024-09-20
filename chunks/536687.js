@@ -52,8 +52,8 @@ function A(e) {
         j = (0, E.h6)(e),
         { enableStudyGroup: U } = (0, u.s)(e),
         G = j.length > 0,
-        w = U && !(null == e ? void 0 : e.hasFeature(N.oNc.HUB)),
-        k = (0, d.Vm)(n),
+        k = U && !(null == e ? void 0 : e.hasFeature(N.oNc.HUB)),
+        w = (0, d.Vm)(n),
         B = (0, r.e7)([m.Z], () => null != m.Z.getActiveGuildSignUp(n));
     if (
         (s.useEffect(() => {
@@ -79,11 +79,11 @@ function A(e) {
         return 0;
     if (A) return 1;
     if (L) return 2;
-    else if (M || null != k) return 3;
+    else if (M || null != w) return 3;
     else if (D) return 4;
     else if (y) return 5;
     else if (G) return 6;
-    else if (w) return 7;
+    else if (k) return 7;
     else if (B) return 8;
     return null;
 }

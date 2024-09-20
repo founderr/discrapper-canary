@@ -1,6 +1,6 @@
 n.d(t, {
     v: function () {
-        return O;
+        return R;
     }
 });
 var l = n(735250),
@@ -31,7 +31,7 @@ var l = n(735250),
     M = n(797342),
     A = n(981631),
     y = n(689938);
-let O = {
+let R = {
     [i.z.DESKTOP]: null,
     [i.z.LINUX]: null,
     [i.z.MACOS]: null,
@@ -42,7 +42,7 @@ let O = {
     [i.z.PLAYSTATION]: x.Z
 };
 t.Z = (e) => {
-    let { channel: t, entry: n, disableGameProfileLinks: i, onReaction: x, onVoiceChannelPreview: E, onUserPopoutClosed: R } = e,
+    let { channel: t, entry: n, disableGameProfileLinks: i, onReaction: x, onVoiceChannelPreview: E, onUserPopoutClosed: O } = e,
         { largeImage: j } = (0, _.rv)({ entry: n }),
         { user: w, details: L, appName: b, activity: D } = (0, M.n)(n),
         { primaryColor: U, secondaryColor: B } = (0, C.Z)(null == j ? void 0 : j.src),
@@ -74,8 +74,8 @@ t.Z = (e) => {
             [null == j ? void 0 : j.src, t, H, n, k, z, V, Y, U, B, w]
         );
     if (null == w) return null;
-    let J = null != n.extra.platform ? O[n.extra.platform] : null,
-        q = (0, l.jsx)(P.Gk, {
+    let q = null != n.extra.platform ? R[n.extra.platform] : null,
+        J = (0, l.jsx)(P.Gk, {
             location: null == F ? P.Gt.POPOUT : P.Gt.STREAMING_POPOUT,
             children: N.W.map((e, t) => (0, l.jsx)(e, { entry: n }, t))
         }),
@@ -84,30 +84,30 @@ t.Z = (e) => {
                 ? (0, l.jsx)(Z.wG, {
                       channel: t,
                       headerIcons:
-                          null == J
+                          null == q
                               ? null
                               : (0, l.jsx)(S.Z, {
-                                    Icon: J,
+                                    Icon: q,
                                     'aria-label': y.Z.Messages.GAME_LIBRARY_LIST_HEADER_PLATFORM
                                 }),
                       userDescription: (0, T.kr)(n) ? y.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING_V2 : y.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED_V2,
                       title: b,
                       subtitle: L,
-                      badges: q,
+                      badges: J,
                       entry: n,
                       disableGameProfileLinks: i,
-                      onUserPopoutClosed: R
+                      onUserPopoutClosed: O
                   })
                 : (0, l.jsx)(Z.jL, {
                       channel: t,
                       streamPreviewSrc: F,
                       title: n.extra.game_name,
                       subtitle: L,
-                      badges: q,
+                      badges: J,
                       userDescription: y.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_STREAMING_V2,
                       entry: n,
                       stream: G,
-                      onUserPopoutClosed: R
+                      onUserPopoutClosed: O
                   }),
         X =
             (0, o.Z)(D, A.xjy.JOIN) || (0, u.Z)(D)

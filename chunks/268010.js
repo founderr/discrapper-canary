@@ -57,7 +57,7 @@ t.Z = (e) => {
             },
             [t, n, A, M, null == P ? void 0 : P.src, Z, S, N]
         ),
-        O = () => {
+        R = () => {
             if (null == n.extra.url) return;
             let e = d.Z.safeParseWithQuery(n.extra.url);
             if (null != e && null != e.protocol && null != e.hostname)
@@ -84,8 +84,8 @@ t.Z = (e) => {
                           location: _.Gt.POPOUT,
                           children: v.t.map((e, t) => (0, l.jsx)(e, { entry: n }, t))
                       }),
-                      onClickTitle: O,
-                      onClickThumbnail: O
+                      onClickTitle: R,
+                      onClickThumbnail: R
                   }),
                   (0, l.jsx)(p.St, {
                       children: (0, l.jsx)(p.WT, {

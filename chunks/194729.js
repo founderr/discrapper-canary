@@ -35,8 +35,8 @@ var i = n(735250),
     j = n(117496),
     U = n(296386),
     G = n(150192),
-    w = n(769727),
-    k = n(229765),
+    k = n(769727),
+    w = n(229765),
     B = n(584885),
     H = n(59222),
     V = n(749436),
@@ -259,7 +259,7 @@ class J extends a.PureComponent {
         return (0, i.jsxs)('div', {
             className: K.pageWrapper,
             children: [
-                (0, i.jsx)(k.KY, {
+                (0, i.jsx)(w.KY, {
                     location: 'guild_discovery',
                     query: this._getLoadTestQuery()
                 }),
@@ -479,7 +479,7 @@ t.Z = function (e) {
         c && (0, m.uY)(Y.Gj.Quests);
     }, [c]),
     (s || r) && (!o || l === Y.Gj.Clans))
-        ? (0, i.jsx)(w.Z, {})
+        ? (0, i.jsx)(k.Z, {})
         : l === Y.Gj.Quests
           ? (0, i.jsx)(v.Z, {})
           : (0, i.jsx)(ee, { searchRoute: t });

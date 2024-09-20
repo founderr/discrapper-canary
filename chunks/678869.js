@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return R;
+        return O;
     }
 }),
     n(627494),
@@ -45,7 +45,7 @@ let y = (e, t, n) => {
         })
         .replaceAll('*', '');
 };
-function O(e) {
+function R(e) {
     let { activity: t } = e,
         n = t.timestamps,
         i = (0, C.tS)(),
@@ -84,11 +84,11 @@ function O(e) {
               ]
           });
 }
-function R(e) {
+function O(e) {
     var t, n, v;
     let C,
         M,
-        R,
+        O,
         { channel: j, entry: w, closePopout: L, onReaction: b, onVoiceChannelPreview: D } = e,
         { largeImage: U } = (0, _.rv)({ entry: w }),
         { activity: B, currentEntry: k, artist: F, title: G, user: H } = (0, g.pi)(w),
@@ -117,19 +117,19 @@ function R(e) {
             });
         }, [B, F, j, w, null == U ? void 0 : U.src, V, Y, G, H]);
     if (null == B || null == k) return null;
-    let J = F,
-        q = [];
+    let q = F,
+        J = [];
     if (k.media.provider === i.p.SPOTIFY) {
         (M = () => {
             (0, u.aG)(B);
         }),
-            (R = () => {
+            (O = () => {
                 (0, u.Z5)(B, H.id);
             }),
             (C = () => {
                 (0, u.aG)(B);
             });
-        (J = (0, l.jsx)(d.Z, {
+        (q = (0, l.jsx)(d.Z, {
             artists: F,
             canOpen: null != B.sync_id,
             linkClassName: A.popoutTextSecondary,
@@ -138,7 +138,7 @@ function R(e) {
             }
         })),
             (null == z ? void 0 : z.syncDisabled) === !1 &&
-                q.push(
+                J.push(
                     (0, l.jsx)(
                         I.Ll,
                         {
@@ -153,7 +153,7 @@ function R(e) {
                 );
     }
     let K = (0, l.jsx)(I.wG, {
-        onClickThumbnail: R,
+        onClickThumbnail: O,
         channel: j,
         entry: w,
         headerIcons:
@@ -167,9 +167,9 @@ function R(e) {
         userDescription: (0, p.kr)(w) ? S.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENING_V2 : S.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENED_V2,
         title: G,
         onClickTitle: M,
-        subtitle: J,
+        subtitle: q,
         badges: null,
-        children: (null === (t = B.timestamps) || void 0 === t ? void 0 : t.start) != null && (0, l.jsx)(O, { activity: B })
+        children: (null === (t = B.timestamps) || void 0 === t ? void 0 : t.start) != null && (0, l.jsx)(R, { activity: B })
     });
     return (0, l.jsxs)(I.yR, {
         children: [
@@ -189,7 +189,7 @@ function R(e) {
                             activity: n
                         })),
                     entry: w,
-                    buttons: q
+                    buttons: J
                 })
             })
         ]

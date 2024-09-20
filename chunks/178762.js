@@ -3,7 +3,7 @@ n.d(t, {
         return b;
     },
     YN: function () {
-        return R;
+        return O;
     },
     iZ: function () {
         return j;
@@ -38,10 +38,10 @@ var l = n(735250),
     M = n(335326),
     A = n(268010),
     y = n(797342),
-    O = n(206583);
-let R = 72;
+    R = n(206583);
+let O = 72;
 function j(e) {
-    return (null == e ? void 0 : e.type) === E.so.CONTENT_INVENTORY ? R : 0;
+    return (null == e ? void 0 : e.type) === E.so.CONTENT_INVENTORY ? O : 0;
 }
 let w = (e) => {
         let { entry: t, ...n } = e;
@@ -98,7 +98,7 @@ let w = (e) => {
             },
             closePopout: n,
             onVoiceChannelPreview: (e, n) => {
-                (0, _.L)(O.xP.VOICE_CHANNEL_PREVIEWED, {
+                (0, _.L)(R.xP.VOICE_CHANNEL_PREVIEWED, {
                     entry: a.entry,
                     channelId: a.channel.id,
                     guildId: a.channel.guild_id,
@@ -188,10 +188,10 @@ t.ZP = a.memo((e) => {
         A = a.useCallback(() => {
             x(String(Date.now()));
         }, []),
-        R = a.useCallback(
+        O = a.useCallback(
             r().throttle(
                 (e) => {
-                    (0, _.L)(O.xP.CARD_POPOUT_OPEN, e);
+                    (0, _.L)(R.xP.CARD_POPOUT_OPEN, e);
                 },
                 2000,
                 {
@@ -211,7 +211,7 @@ t.ZP = a.memo((e) => {
         onMouseEnter: () => {
             (I.current = !0),
                 setTimeout(() => {
-                    I.current && N(!0), R(g);
+                    I.current && N(!0), O(g);
                 }, 100);
         },
         onMouseLeave: j,
@@ -227,7 +227,7 @@ t.ZP = a.memo((e) => {
             position: 'left',
             shouldShow: C,
             positionKey: m,
-            onRequestOpen: () => R(g),
+            onRequestOpen: () => O(g),
             onRequestClose: () => {
                 P && j();
             },

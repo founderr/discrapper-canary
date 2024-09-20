@@ -74,30 +74,30 @@ let m = [i.p.OFFICIAL, i.p.TWITTER, i.p.YOUTUBE],
         });
     };
 n.Z = (e) => {
-    let { websites: n, trackClick: t } = e,
-        s =
+    let { websites: n, trackClick: t, onInviteResolved: s } = e,
+        c =
             null == n
                 ? void 0
                 : n.find((e) => {
                       let { category: n } = e;
                       return n === i.p.DISCORD;
                   }),
-        [c, u] = r.useState();
+        [u, _] = r.useState();
     if (
         (r.useEffect(() => {
             let e = async (e) => {
                 let n = e.split('/').pop();
                 if (null != n) {
                     let e = await (0, d.Z)(n);
-                    !0 !== e.banned && u(e.invite);
+                    !0 !== e.banned && (_(e.invite), null != e.invite && (null == s || s(e.invite)));
                 }
             };
-            null != s && e(s.url);
-        }, [s]),
+            null != c && e(c.url);
+        }, [c, s]),
         null == n || 0 === n.length)
     )
         return null;
-    let _ = n
+    let I = n
         .filter((e) => {
             let { category: n } = e;
             return m.includes(n);
@@ -106,9 +106,9 @@ n.Z = (e) => {
     return (0, a.jsxs)('div', {
         className: o()(p.column),
         children: [
-            null != c &&
+            null != u &&
                 (0, a.jsx)(T, {
-                    invite: c,
+                    invite: u,
                     trackClick: t
                 }),
             (0, a.jsxs)('div', {
@@ -121,7 +121,7 @@ n.Z = (e) => {
                     }),
                     (0, a.jsx)('div', {
                         className: p.row,
-                        children: _.map((e) => {
+                        children: I.map((e) => {
                             let n,
                                 r,
                                 { category: s, url: o } = e,

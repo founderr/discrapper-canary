@@ -26,10 +26,10 @@ var a = t(481060),
     L = t(226351),
     M = t(981631),
     S = t(689938);
-async function x(e) {
+async function v(e) {
     var n, t, a;
     let u,
-        { channelId: _, uploads: x, draftType: v, parsedMessage: G, options: Z = {}, raiseEndpointErrors: j = !1 } = e,
+        { channelId: _, uploads: v, draftType: x, parsedMessage: G, options: Z = {}, raiseEndpointErrors: j = !1 } = e,
         b = new E.Z(M.ANM.MESSAGES(_)),
         D = new L.o(),
         y = {
@@ -133,12 +133,12 @@ async function x(e) {
                         help: null !== (E = null == t ? void 0 : t.message) && void 0 !== E ? E : S.Z.Messages.UPLOAD_AREA_UPLOAD_FAILED_RETRY_HELP
                     });
                 }
-                '' !== y.content && '' === h.Z.getDraft(_, v) && s.Z.saveDraft(_, y.content, v),
-                    0 === f.Z.getUploadCount(_, v) &&
+                '' !== y.content && '' === h.Z.getDraft(_, x) && s.Z.saveDraft(_, y.content, x),
+                    0 === f.Z.getUploadCount(_, x) &&
                         i.Z.setUploads({
                             channelId: _,
-                            uploads: x,
-                            draftType: v
+                            uploads: v,
+                            draftType: x
                         });
             }
         }),
@@ -151,7 +151,7 @@ async function x(e) {
                 messageRecord: n
             });
         }),
-        await b.uploadFiles(x, y),
+        await b.uploadFiles(v, y),
         D.resolve(),
         D.promise
     );
@@ -171,7 +171,7 @@ n.Z = {
                     n
                 );
             });
-        x({
+        v({
             channelId: n,
             uploads: o,
             draftType: a
@@ -250,7 +250,7 @@ n.Z = {
             }),
             p.upload(i, A);
     },
-    uploadFiles: x,
+    uploadFiles: v,
     cancel(e) {
         r.Z.dispatch({
             type: 'UPLOAD_CANCEL_REQUEST',

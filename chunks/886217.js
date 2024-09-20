@@ -42,10 +42,10 @@ t.Z = (e) => {
         S = n.extra.artist.name,
         M = (0, s.e7)([u.default], () => u.default.getUser(n.author_id)),
         { primaryColor: A, secondaryColor: y } = (0, E.Z)(Z),
-        O = (0, m.Nq)(n),
-        R = a.useCallback(() => {
-            if (null == t || null == M || !(0, d.Hi)(O, v.y9)) return;
-            let e = I(n, t, M, O);
+        R = (0, m.Nq)(n),
+        O = a.useCallback(() => {
+            if (null == t || null == M || !(0, d.Hi)(R, v.y9)) return;
+            let e = I(n, t, M, R);
             return (0, x.CR)({
                 user: M,
                 channel: t,
@@ -55,8 +55,8 @@ t.Z = (e) => {
                 colors: [A, y],
                 badges: (0, x.UU)(n)
             });
-        }, [Z, S, t, n, A, O, y, M]);
-    if (null == M || !(0, d.Hi)(O, v.y9)) return null;
+        }, [Z, S, t, n, A, R, y, M]);
+    if (null == M || !(0, d.Hi)(R, v.y9)) return null;
     let j = () => {
         let e = T.Hw.ALBUM,
             t = o.Z.isProtocolRegistered() ? T.C7.PLAYER_OPEN(e, n.extra.media.external_parent_id) : T.C7.WEB_OPEN(e, n.extra.media.external_parent_id);
@@ -95,7 +95,7 @@ t.Z = (e) => {
                     onVoiceChannelPreview: h,
                     user: M,
                     channel: t,
-                    generateReactionImage: R,
+                    generateReactionImage: O,
                     reactionImageAltText: C(n, M),
                     entry: n
                 })

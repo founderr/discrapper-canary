@@ -69,7 +69,7 @@ function x(e) {
             let n = t.width;
             n < 1024 && k.current ? ((k.current = !1), G(!1)) : n > 1024 && !k.current && ((k.current = !0), G(!0));
             let i = 1;
-            for (n -= U ? 420 : 0, n -= 250; n > 0; ) (n -= 234), (i += 1);
+            for (n -= U ? 450 : 0, n -= 280; n > 0; ) (n -= 264), (i += 1);
             i !== H.current && ((H.current = i), B(i)), F(t);
         });
     a.useLayoutEffect(() => {
@@ -165,9 +165,9 @@ function x(e) {
             }
         }, []),
         ee = a.useCallback(
-            (e, t, n) => {
+            async (e, t, n) => {
                 var i, a;
-                r(e, t, n);
+                await r(e, t, n);
                 let s = null === (a = V.current) || void 0 === a ? void 0 : null === (i = a.getScrollerState()) || void 0 === i ? void 0 : i.scrollTop;
                 null != s && (0, I.LD)({ scrollPosition: s });
             },
@@ -183,7 +183,7 @@ function x(e) {
                             style: n,
                             children: (0, i.jsx)(C.Z, {
                                 guildId: e,
-                                onClick: (e) => ee(e, t, M),
+                                onClick: async (e) => await ee(e, t, M),
                                 onView: (e) => W(e)
                             })
                         },

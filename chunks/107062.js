@@ -50,7 +50,7 @@ let Z = (e, t) =>
 t.ZP = (e) => {
     let { channel: t, entry: n, onReaction: E, onVoiceChannelPreview: A } = e,
         { largeImage: y } = (0, v.rv)({ entry: n }),
-        { user: O, details: R, activity: j, embeddedActivity: w } = (0, C.n)(n),
+        { user: R, details: O, activity: j, embeddedActivity: w } = (0, C.n)(n),
         { primaryColor: L, secondaryColor: b } = (0, T.Z)(null == y ? void 0 : y.src),
         D = (0, i.e7)([m.default], () => m.default.locale),
         { displayParticipants: U, participant1: B, participant2: k, numOtherParticipants: F } = (0, _.Z)(n, 3),
@@ -59,7 +59,7 @@ t.ZP = (e) => {
         },
         H = a.useCallback(
             (e) => {
-                if ((null == y ? void 0 : y.src) == null || null == t || null == O) return;
+                if ((null == y ? void 0 : y.src) == null || null == t || null == R) return;
                 let l =
                     F > 0
                         ? M({
@@ -68,7 +68,7 @@ t.ZP = (e) => {
                               users: [B, k],
                               countOthers: F
                           })
-                        : S(n, t, O);
+                        : S(n, t, R);
                 return (0, f.C4)({
                     entry: n,
                     applicationImageSrc: null == y ? void 0 : y.src,
@@ -79,9 +79,9 @@ t.ZP = (e) => {
                     channelId: e
                 });
             },
-            [null == y ? void 0 : y.src, t, U, n, D, F, B, k, L, b, O]
+            [null == y ? void 0 : y.src, t, U, n, D, F, B, k, L, b, R]
         );
-    if (null == O) return null;
+    if (null == R) return null;
     let V = (0, l.jsx)(g.PZ, {
             location: g.Gt.POPOUT,
             entry: n
@@ -90,7 +90,7 @@ t.ZP = (e) => {
             channel: t,
             userDescription: (0, p.kr)(n) ? P.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING_V2 : P.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED_V2,
             title: n.extra.activity_name,
-            subtitle: R,
+            subtitle: O,
             badges: V,
             entry: n,
             onClickTitle: G,
@@ -103,7 +103,7 @@ t.ZP = (e) => {
                   isEmbedded: (0, o.Z)(j),
                   embeddedActivity: w,
                   activity: j,
-                  user: O,
+                  user: R,
                   ButtonComponent: (e) =>
                       (0, l.jsx)(I.Ll, {
                           IconComponent: r.DoorEnterIcon,
@@ -111,12 +111,12 @@ t.ZP = (e) => {
                       })
               })
             : null,
-        J = (0, l.jsx)(I.Ll, {
+        q = (0, l.jsx)(I.Ll, {
             onClick: G,
             IconComponent: r.AppsIcon,
             children: P.Z.Messages.CONTENT_INVENTORY_VIEW_ACTIVITY
         }),
-        q = [z ? W : J].filter(x.lm);
+        J = [z ? W : q].filter(x.lm);
     return (0, l.jsxs)(I.yR, {
         children: [
             Y,
@@ -124,12 +124,12 @@ t.ZP = (e) => {
                 children: (0, l.jsx)(I.WT, {
                     onReaction: E,
                     onVoiceChannelPreview: A,
-                    user: O,
+                    user: R,
                     channel: t,
                     generateReactionImage: H,
-                    reactionImageAltText: Z(n, O),
+                    reactionImageAltText: Z(n, R),
                     entry: n,
-                    buttons: q
+                    buttons: J
                 })
             })
         ]

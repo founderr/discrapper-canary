@@ -40,8 +40,8 @@ var i = n(735250),
     j = n(814225),
     U = n(515753),
     G = n(831218),
-    w = n(339149),
-    k = n(981631),
+    k = n(339149),
+    w = n(981631),
     B = n(675654),
     H = n(689938),
     V = n(465200);
@@ -57,7 +57,7 @@ let F = (e) => {
                 (0, i.jsx)(U.Qj, {
                     interactiveClassName: l ? V.friendsBadge : void 0,
                     selected: t,
-                    route: k.Z5c.FRIENDS,
+                    route: w.Z5c.FRIENDS,
                     icon: E.FriendsIcon,
                     text: H.Z.Messages.FRIENDS,
                     onMouseEnter: () => {
@@ -92,12 +92,12 @@ let F = (e) => {
             s = (0, o.JA)('library');
         return (0, i.jsx)(U.Qj, {
             selected: t,
-            route: k.Z5c.APPLICATION_LIBRARY,
+            route: w.Z5c.APPLICATION_LIBRARY,
             icon: E.InventoryIcon,
             text: H.Z.Messages.LIBRARY,
             ...a,
             ...s,
-            children: (0, i.jsx)(w.Z, { className: r()(V.downloadProgressCircle, { [V.hideGameUpdateProgressIndicator]: n }) })
+            children: (0, i.jsx)(k.Z, { className: r()(V.downloadProgressCircle, { [V.hideGameUpdateProgressIndicator]: n }) })
         });
     },
     W = () => {
@@ -109,10 +109,10 @@ let F = (e) => {
             n = (0, o.JA)('messageRequests'),
             { channelId: a } = (0, p._)();
         if (!(0, S.a)()) return null;
-        let s = null == a ? void 0 : () => h.Z.preload(k.ME, a);
+        let s = null == a ? void 0 : () => h.Z.preload(w.ME, a);
         return (0, i.jsx)(U.Qj, {
             selected: t,
-            route: k.Z5c.MESSAGE_REQUESTS,
+            route: w.Z5c.MESSAGE_REQUESTS,
             icon: E.EnvelopeIcon,
             text: H.Z.Messages.MESSAGE_REQUESTS,
             onClick: s,
@@ -130,7 +130,7 @@ let F = (e) => {
         return r && l
             ? (0, i.jsx)(U.Qj, {
                   selected: t,
-                  route: k.Z5c.FAMILY_CENTER,
+                  route: w.Z5c.FAMILY_CENTER,
                   icon: E.GroupIcon,
                   text: n,
                   onMouseEnter: () => {
@@ -179,15 +179,15 @@ let F = (e) => {
     Q = () => (0, L.$Z)('DM_SEARCH');
 function X(e) {
     switch (e) {
-        case k.Z5c.APPLICATION_LIBRARY:
-            return k.ZY5.LIBRARY;
-        case k.Z5c.FRIENDS:
-            return k.ZY5.FRIENDS_LIST;
-        case k.Z5c.COLLECTIBLES_SHOP:
-            return k.ZY5.COLLECTIBLES_SHOP;
+        case w.Z5c.APPLICATION_LIBRARY:
+            return w.ZY5.LIBRARY;
+        case w.Z5c.FRIENDS:
+            return w.ZY5.FRIENDS_LIST;
+        case w.Z5c.COLLECTIBLES_SHOP:
+            return w.ZY5.COLLECTIBLES_SHOP;
     }
-    if (e.startsWith(k.Z5c.APPLICATION_STORE)) return e === k.Z5c.APPLICATION_STORE ? k.ZY5.STORE_DIRECTORY_HOME : e.startsWith(k.Z5c.APPLICATION_STORE) ? k.ZY5.STORE_DIRECTORY_BROWSE : k.ZY5.STORE_LISTING;
-    return k.ZY5.DM_CHANNEL;
+    if (e.startsWith(w.Z5c.APPLICATION_STORE)) return e === w.Z5c.APPLICATION_STORE ? w.ZY5.STORE_DIRECTORY_HOME : e.startsWith(w.Z5c.APPLICATION_STORE) ? w.ZY5.STORE_DIRECTORY_BROWSE : w.ZY5.STORE_LISTING;
+    return w.ZY5.DM_CHANNEL;
 }
 let J = (e) => {
     let { showLibrary: t, hasLibraryApplication: n, homeLink: a, storeLink: s, premiumTabSelected: o } = e,
@@ -219,13 +219,13 @@ let J = (e) => {
                 selectedChannelId: d,
                 showDMHeader: !0,
                 children: [
-                    (0, i.jsx)(F, { selected: null != u ? u === k.Z5c.FRIENDS : a === k.Z5c.FRIENDS }, 'friends'),
+                    (0, i.jsx)(F, { selected: null != u ? u === w.Z5c.FRIENDS : a === w.Z5c.FRIENDS }, 'friends'),
                     n && t
                         ? (0, i.jsx)(
                               Y,
                               {
-                                  selected: null == u ? null != a && a.startsWith(k.Z5c.APPLICATION_LIBRARY) : u.startsWith(k.Z5c.APPLICATION_LIBRARY),
-                                  hideGameUpdateProgressIndicator: a === k.Z5c.APPLICATION_LIBRARY
+                                  selected: null == u ? null != a && a.startsWith(w.Z5c.APPLICATION_LIBRARY) : u.startsWith(w.Z5c.APPLICATION_LIBRARY),
+                                  hideGameUpdateProgressIndicator: a === w.Z5c.APPLICATION_LIBRARY
                               },
                               'library'
                           )
@@ -233,34 +233,34 @@ let J = (e) => {
                     (0, i.jsx)(
                         A.g,
                         {
-                            selected: null == u ? o : u.startsWith(k.Z5c.APPLICATION_STORE),
-                            route: null == s || location.pathname.startsWith(k.Z5c.ACTIVITIES) || location.pathname.startsWith(k.Z5c.APPLICATION_STORE) ? k.Z5c.APPLICATION_STORE : s,
+                            selected: null == u ? o : u.startsWith(w.Z5c.APPLICATION_STORE),
+                            route: null == s || location.pathname.startsWith(w.Z5c.ACTIVITIES) || location.pathname.startsWith(w.Z5c.APPLICATION_STORE) ? w.Z5c.APPLICATION_STORE : s,
                             locationState: {
                                 analyticsSource: {
                                     page: X(a),
-                                    section: k.jXE.NAVIGATION,
-                                    object: k.qAy.NAVIGATION_LINK
+                                    section: w.jXE.NAVIGATION,
+                                    object: w.qAy.NAVIGATION_LINK
                                 }
                             }
                         },
                         'premium'
                     ),
-                    (0, i.jsx)(z, { selected: null == u ? null != a && a.startsWith(k.Z5c.MESSAGE_REQUESTS) : u === k.Z5c.MESSAGE_REQUESTS }, 'message-requests'),
+                    (0, i.jsx)(z, { selected: null == u ? null != a && a.startsWith(w.Z5c.MESSAGE_REQUESTS) : u === w.Z5c.MESSAGE_REQUESTS }, 'message-requests'),
                     (0, i.jsx)(
                         m.i,
                         {
-                            selected: u === k.Z5c.COLLECTIBLES_SHOP || (null == a ? void 0 : a.startsWith(k.Z5c.COLLECTIBLES_SHOP)),
+                            selected: u === w.Z5c.COLLECTIBLES_SHOP || (null == a ? void 0 : a.startsWith(w.Z5c.COLLECTIBLES_SHOP)),
                             locationState: {
                                 analyticsSource: {
                                     page: X(a),
-                                    section: k.jXE.NAVIGATION,
-                                    object: k.qAy.NAVIGATION_LINK
+                                    section: w.jXE.NAVIGATION,
+                                    object: w.qAy.NAVIGATION_LINK
                                 }
                             }
                         },
                         'discord-shop'
                     ),
-                    (0, i.jsx)(K, { selected: (null != a && a.startsWith(k.Z5c.FAMILY_CENTER)) || (null != u && u.startsWith(k.Z5c.FAMILY_CENTER)) }, 'family-center')
+                    (0, i.jsx)(K, { selected: (null != a && a.startsWith(w.Z5c.FAMILY_CENTER)) || (null != u && u.startsWith(w.Z5c.FAMILY_CENTER)) }, 'family-center')
                 ]
             })
         ]
@@ -271,7 +271,7 @@ function $() {
         t = (0, d.e7)(
             [D.Z],
             () => {
-                if (e === k.Z5c.APPLICATION_STORE) return !0;
+                if (e === w.Z5c.APPLICATION_STORE) return !0;
                 let t = (0, j.ZK)(e);
                 if (null != t) {
                     var n, i;

@@ -38,7 +38,7 @@ function _(e, t) {
     let s = (0, o.e7)([d.default], () => d.default.getUser(e), [e]),
         a = (0, o.e7)([c.ZP], () => c.ZP.getMember(t, e), [t, e]),
         l = (0, o.e7)([u.Z], () => u.Z.getGuild(t), [t]);
-    return (null == l ? void 0 : l.hasVerificationGate()) ? (null == s || null == a || null == l ? 1 : (0, h.yE)(null !== (n = a.flags) && void 0 !== n ? n : 0, p.q.BYPASSES_VERIFICATION) || (0, h.yE)(null !== (i = a.flags) && void 0 !== i ? i : 0, p.q.COMPLETED_ONBOARDING) ? 2 : 1) : 0;
+    return (null == l ? void 0 : l.hasVerificationGate()) ? (null == s || null == a || null == l ? 1 : (0, h.yE)(null !== (n = a.flags) && void 0 !== n ? n : 0, p.q.BYPASSES_VERIFICATION) || (0, h.yE)(null !== (i = a.flags) && void 0 !== i ? i : 0, p.q.COMPLETED_ONBOARDING) || (null != a.isPending && !a.isPending) ? 2 : 1) : 0;
 }
 function f(e, t) {
     var n;
