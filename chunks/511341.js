@@ -44,7 +44,7 @@ function O(e) {
     let { user: t, guildId: n, sourceType: u, sourceDetails: g, setPopoutRef: O, onClose: R } = e,
         { trackUserProfileAction: v } = (0, d.KZ)(),
         { sendReact: C } = (0, _.Q)(u),
-        { setInteractionTypeSent: y, setInteractionToastShown: L, resetInteraction: D } = (0, f.X)(),
+        { setInteractionTypeSent: y, setInteractionToastShown: L, resetInteraction: D } = (0, f.Xo)(),
         { theme: b } = (0, p.z)(),
         M = (0, a.e7)([l.Z], () => l.Z.theme),
         P = (0, s.wj)(M) ? !(0, s.wj)(b) : (0, s.wj)(b),

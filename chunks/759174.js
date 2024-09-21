@@ -50,7 +50,7 @@ class l {
         return null == e ? this.valueArray.length : null !== (n = null === (t = this.valueIndexes[e]) || void 0 === t ? void 0 : t.length) && void 0 !== n ? n : 0;
     }
     clear() {
-        this.valueMap.clear(), (this.valueArray = []), (this.valueIndexes = {});
+        this.valueMap.clear(), (this.valueArray = []), (this.valueIndexes = {}), (this.valueIndexesForGetter = {});
     }
     has(e) {
         return this.valueMap.has(e);

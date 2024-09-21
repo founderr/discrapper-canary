@@ -18,7 +18,7 @@ function E(e) {
     let { user: t, guildId: n, fullWidth: E, onClose: f } = e,
         h = (0, i.e7)([o.default], () => o.default.getId() === t.id),
         p = (0, i.e7)([l.Z], () => (null != n ? l.Z.getGuild(n) : null)),
-        I = (0, s.Z)(),
+        I = (0, s.Z)({ guild: p }),
         m = (0, s.Z)(),
         { trackUserProfileAction: T } = (0, u.KZ)();
     return h

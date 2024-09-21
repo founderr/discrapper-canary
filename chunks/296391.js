@@ -1,55 +1,55 @@
-t.d(n, {
+s.d(n, {
     Z: function () {
         return Z;
     }
 });
-var s = t(735250),
-    i = t(470079),
-    o = t(704215),
-    l = t(481060),
-    r = t(605236),
-    a = t(63063),
-    c = t(369566),
-    d = t(678738),
-    u = t(151545),
-    _ = t(527790),
-    I = t(304042),
-    E = t(981631),
-    f = t(921944),
-    m = t(689938),
-    x = t(505865);
+var t = s(735250),
+    i = s(470079),
+    o = s(704215),
+    l = s(481060),
+    r = s(605236),
+    c = s(63063),
+    a = s(369566),
+    d = s(678738),
+    u = s(151545),
+    _ = s(527790),
+    I = s(304042),
+    E = s(981631),
+    f = s(921944),
+    m = s(689938),
+    x = s(505865);
 function Z(e) {
-    let { user: n, currentUser: t, onClose: Z } = e,
-        { live: p, recent: h, stream: S } = (0, c.Z)(n.id),
-        v = n.id === t.id,
+    let { user: n, currentUser: s, onClose: Z } = e,
+        { live: h, recent: p, stream: v } = (0, a.Z)(n.id),
+        S = n.id === s.id,
         T = (0, r.wE)(o.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP);
     return (
         i.useEffect(() => {
-            if (!!v && !T)
+            if (!!S && !T)
                 (0, r.EW)(o.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP, {
                     dismissAction: f.L.AUTO_DISMISS,
                     forceTrack: !0
                 });
-        }, [v, T]),
-        (0, s.jsxs)(l.ScrollerThin, {
+        }, [S, T]),
+        (0, t.jsxs)(l.ScrollerThin, {
             className: x.scroller,
             fade: !0,
             children: [
-                (0, s.jsxs)(d.Z, {
+                (0, t.jsxs)(d.Z, {
                     children: [
-                        null != S &&
-                            (0, s.jsx)(I.Z, {
+                        null != v &&
+                            (0, t.jsx)(I.Z, {
                                 user: n,
-                                currentUser: t,
-                                stream: S,
+                                currentUser: s,
+                                stream: v,
                                 onClose: Z
                             }),
-                        p.map((e, i) =>
-                            (0, s.jsx)(
+                        h.map((e, i) =>
+                            (0, t.jsx)(
                                 u.Z,
                                 {
                                     user: n,
-                                    currentUser: t,
+                                    currentUser: s,
                                     activity: e,
                                     onClose: Z
                                 },
@@ -58,23 +58,23 @@ function Z(e) {
                         )
                     ]
                 }),
-                (0, s.jsx)(d.Z, {
+                (0, t.jsx)(d.Z, {
                     heading: m.Z.Messages.USER_PROFILE_ACTIVITY_RECENT_ACTIVITY,
-                    subheading: v
+                    subheading: S
                         ? m.Z.Messages.USER_RECENT_ACTIVITY_LEARN_MORE.format({
                               learnMoreHook: (e, n) =>
-                                  (0, s.jsx)(
+                                  (0, t.jsx)(
                                       l.Anchor,
                                       {
-                                          href: a.Z.getArticleURL(E.BhN.ACTIVITY_STATUS_SETTINGS),
+                                          href: c.Z.getArticleURL(E.BhN.ACTIVITY_STATUS_SETTINGS),
                                           children: e
                                       },
                                       n
                                   )
                           })
                         : null,
-                    children: h.map((e) =>
-                        (0, s.jsx)(
+                    children: p.map((e) =>
+                        (0, t.jsx)(
                             _.Z,
                             {
                                 user: n,

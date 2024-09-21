@@ -62,7 +62,7 @@ function y(e) {
     let { user: t, guildId: n, channelId: a, profileType: o, sourceType: _, sourceDetails: E, setPopoutRef: N, modalKey: y, onClose: L } = e,
         { trackUserProfileAction: D } = (0, p.KZ)(),
         { sendReply: b } = (0, I.Q)(_),
-        { resetInteraction: M, setInteractionToastShown: P, setInteractionTypeSent: U } = (0, T.X)(),
+        { resetInteraction: M, setInteractionToastShown: P, setInteractionTypeSent: U } = (0, T.Xo)(),
         [w, x] = i.useState(''),
         [G, k] = i.useState((0, c.JM)(w)),
         B = i.useRef(!1),

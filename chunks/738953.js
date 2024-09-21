@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return x;
+        return w;
     }
 }),
     n(47120);
@@ -59,7 +59,7 @@ function w(e) {
     let q = i.useRef(null),
         Q = (0, p.ZP)(t.id, w),
         X = (0, o.Z)(q),
-        { interactionType: $ } = (0, m.X)();
+        $ = (0, m.$m)();
     i.useEffect(() => {
         null == F || F(null == q ? void 0 : q.current);
     }, [q, F]);
@@ -76,110 +76,110 @@ function w(e) {
         children: (0, r.jsx)(f.Mt, {
             value: j,
             shouldTrackViewOnMount: null == K || null != K.fullProfileLoadedTimestamp,
-            children: (0, r.jsxs)(s.Dialog, {
-                ref: q,
-                'aria-label': t.username,
-                children: [
-                    (0, r.jsxs)(N.Z, {
-                        user: t,
-                        displayProfile: Q,
-                        profileType: b.y0.BITE_SIZE,
-                        children: [
-                            null != $ && (0, r.jsx)('div', { className: U.backdrop }),
-                            (0, r.jsxs)(O.Z, {
-                                profileType: b.y0.BITE_SIZE,
-                                children: [
-                                    (0, r.jsx)(v.Z, {
-                                        user: t,
-                                        guildId: w,
-                                        channelId: x,
-                                        onClose: B
-                                    }),
-                                    (0, r.jsx)(R.Z, {
-                                        profileType: b.y0.BITE_SIZE,
-                                        user: t
-                                    }),
-                                    t.id !== n.id &&
-                                        (0, r.jsx)(C.Z, {
+            children: (0, r.jsx)(m.NJ, {
+                value: $,
+                children: (0, r.jsxs)(s.Dialog, {
+                    ref: q,
+                    'aria-label': t.username,
+                    children: [
+                        (0, r.jsxs)(N.Z, {
+                            user: t,
+                            displayProfile: Q,
+                            profileType: b.y0.BITE_SIZE,
+                            children: [
+                                null != $.interactionType && (0, r.jsx)('div', { className: U.backdrop }),
+                                (0, r.jsxs)(O.Z, {
+                                    profileType: b.y0.BITE_SIZE,
+                                    children: [
+                                        (0, r.jsx)(v.Z, {
                                             user: t,
                                             guildId: w,
-                                            viewProfileItem: V
-                                                ? null
-                                                : (0, r.jsx)(s.MenuItem, {
-                                                      id: 'view-profile',
-                                                      label: P.Z.Messages.VIEW_FULL_PROFILE,
-                                                      action: () => {
-                                                          J(),
-                                                              (0, h.pQ)({
-                                                                  action: 'PRESS_VIEW_PROFILE',
-                                                                  analyticsLocations: Z,
-                                                                  ...j
-                                                              });
-                                                      }
-                                                  })
+                                            channelId: x,
+                                            onClose: B
+                                        }),
+                                        (0, r.jsx)(R.Z, {
+                                            profileType: b.y0.BITE_SIZE,
+                                            user: t
+                                        }),
+                                        t.id !== n.id &&
+                                            (0, r.jsx)(C.Z, {
+                                                user: t,
+                                                guildId: w,
+                                                viewProfileItem: V
+                                                    ? null
+                                                    : (0, r.jsx)(s.MenuItem, {
+                                                          id: 'view-profile',
+                                                          label: P.Z.Messages.VIEW_FULL_PROFILE,
+                                                          action: () => {
+                                                              J(),
+                                                                  (0, h.pQ)({
+                                                                      action: 'PRESS_VIEW_PROFILE',
+                                                                      analyticsLocations: Z,
+                                                                      ...j
+                                                                  });
+                                                          }
+                                                      })
+                                            })
+                                    ]
+                                }),
+                                (0, r.jsxs)('header', {
+                                    className: U.header,
+                                    children: [
+                                        (0, r.jsx)(S.Z, {
+                                            user: t,
+                                            displayProfile: Q,
+                                            guildId: w,
+                                            profileType: b.y0.BITE_SIZE
+                                        }),
+                                        (0, r.jsx)(A.Z, {
+                                            userId: t.id,
+                                            className: U.toast
+                                        }),
+                                        (0, r.jsx)(T.Z, {
+                                            location: 'UserProfilePopout',
+                                            user: t,
+                                            displayProfile: Q,
+                                            guildId: w,
+                                            channelId: x,
+                                            profileType: b.y0.BITE_SIZE,
+                                            onOpenProfile: V ? void 0 : J
+                                        }),
+                                        (0, r.jsx)(g.Z, {
+                                            location: 'UserProfilePopout',
+                                            user: t,
+                                            guildId: w,
+                                            channelId: x,
+                                            profileType: b.y0.BITE_SIZE,
+                                            onClose: B
                                         })
-                                ]
-                            }),
-                            (0, r.jsxs)('header', {
-                                className: U.header,
-                                children: [
-                                    (0, r.jsx)(S.Z, {
-                                        user: t,
-                                        displayProfile: Q,
-                                        guildId: w,
-                                        profileType: b.y0.BITE_SIZE
-                                    }),
-                                    (0, r.jsx)(A.Z, {
-                                        userId: t.id,
-                                        className: U.toast
-                                    }),
-                                    (0, r.jsx)(T.Z, {
-                                        location: 'UserProfilePopout',
-                                        user: t,
-                                        displayProfile: Q,
-                                        guildId: w,
-                                        channelId: x,
-                                        profileType: b.y0.BITE_SIZE,
-                                        onOpenProfile: V ? void 0 : J
-                                    }),
-                                    (0, r.jsx)(g.Z, {
-                                        location: 'UserProfilePopout',
-                                        user: t,
-                                        guildId: w,
-                                        channelId: x,
-                                        profileType: b.y0.BITE_SIZE,
-                                        onClose: B
-                                    })
-                                ]
-                            }),
-                            (0, r.jsx)(L.Z, {
-                                user: t,
-                                currentUser: n,
-                                displayProfile: Q,
-                                guild: W,
-                                isHovering: X,
-                                onOpenProfile: V ? void 0 : J,
-                                channelId: x,
-                                onClose: B
-                            }),
-                            (0, r.jsx)(D.Z, {
-                                user: t,
-                                guildId: w,
-                                channelId: x,
-                                onClose: B
+                                    ]
+                                }),
+                                (0, r.jsx)(L.Z, {
+                                    user: t,
+                                    currentUser: n,
+                                    displayProfile: Q,
+                                    guild: W,
+                                    isHovering: X,
+                                    onOpenProfile: V ? void 0 : J,
+                                    channelId: x,
+                                    onClose: B
+                                }),
+                                (0, r.jsx)(D.Z, {
+                                    user: t,
+                                    guildId: w,
+                                    channelId: x,
+                                    onClose: B
+                                })
+                            ]
+                        }),
+                        (null == Q ? void 0 : Q.profileEffectId) != null &&
+                            (0, r.jsx)(d.Z, {
+                                profileEffectId: null == Q ? void 0 : Q.profileEffectId,
+                                isHovering: X
                             })
-                        ]
-                    }),
-                    (null == Q ? void 0 : Q.profileEffectId) != null &&
-                        (0, r.jsx)(d.Z, {
-                            profileEffectId: null == Q ? void 0 : Q.profileEffectId,
-                            isHovering: X
-                        })
-                ]
+                    ]
+                })
             })
         })
     });
-}
-function x(e) {
-    return (0, r.jsx)(m.N, { children: (0, r.jsx)(w, { ...e }) });
 }

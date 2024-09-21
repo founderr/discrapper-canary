@@ -172,7 +172,7 @@ function X(e) {
                 onKeyDown: ec,
                 onFocus: k,
                 onBlur: H,
-                childrenRepliedMessage: (0, G.Z)(e, X, K, N, $),
+                childrenRepliedMessage: r.type === W.uaV.REPLY && (0, G.Z)(e, X, K, N, $),
                 childrenHeader: (0, w.Z)({
                     messageProps: e,
                     setPopout: X,
@@ -302,7 +302,7 @@ t.ZP = s.memo(function (e) {
                         [Y.automodMessage]: ew
                     }),
                     zalgo: !eI,
-                    childrenRepliedMessage: ee ? void 0 : (0, G.Z)(e, ec, er, et, el),
+                    childrenRepliedMessage: ee || g.type !== W.uaV.REPLY ? void 0 : (0, G.Z)(e, ec, er, et, el),
                     childrenExecutedCommand: (0, H.Z)(e, ec, er),
                     childrenHeader: ee
                         ? void 0
