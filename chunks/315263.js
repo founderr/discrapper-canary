@@ -163,8 +163,11 @@ function M(e) {
         };
     }
     if (null != g && U && v.Z.isAppRoute(g)) {
-        let e = {};
-        return null != M && (e.search = M), null != P && (e.hash = P), (t) => (null == t || t.preventDefault(), (0, I.Z)(g, Object.keys(e).length > 0 ? e : null), !0);
+        let e = {
+            navigationReplace: !1,
+            openChannel: !0
+        };
+        return null != M && (e.search = M), null != P && (e.hash = P), (t) => (null == t || t.preventDefault(), (0, I.Z)(g, e), !0);
     }
     if (null != g && U) {
         let { getOAuth2AuthorizeProps: t, openOAuth2ModalWithCreateGuildModal: r } = n(69580),

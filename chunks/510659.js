@@ -1,47 +1,56 @@
 n.d(t, {
-    N: function () {
-        return s;
+    $m: function () {
+        return u;
     },
-    X: function () {
-        return o;
+    NJ: function () {
+        return l;
+    },
+    Xo: function () {
+        return c;
     }
 }),
-    n(47120),
-    n(411104);
+    n(47120);
 var r = n(735250),
-    i = n(470079);
-let a = i.createContext(void 0);
-function s(e) {
-    let { children: t } = e,
-        [n, s] = i.useState(null),
-        [o, l] = i.useState(null),
-        u = i.useCallback((e) => {
-            s(e.interactionType), l(e.interactionSourceType);
-        }, []),
-        c = i.useCallback(() => {
-            u({
-                interactionType: null,
-                interactionSourceType: null
-            });
-        }, [u]),
-        [d, _] = i.useState(!1),
-        [E, f] = i.useState(null);
-    return (0, r.jsx)(a.Provider, {
-        value: {
-            interactionType: n,
-            interactionSourceType: o,
-            handleInteraction: u,
-            resetInteraction: c,
-            interactionToastShown: d,
-            setInteractionToastShown: _,
-            interactionTypeSent: E,
-            setInteractionTypeSent: f
-        },
-        children: t
+    i = n(470079),
+    a = n(512722),
+    s = n.n(a);
+let o = i.createContext(void 0);
+function l(e) {
+    let { value: t, children: n } = e;
+    return (0, r.jsx)(o.Provider, {
+        value: t,
+        children: n
     });
 }
-function o() {
-    let e = i.useContext(a);
-    if (null == e) throw Error('useUserProfileInteractionContext must be used within a InteractionContextProvider');
-    return e;
+function u() {
+    let [e, t] = i.useState(null),
+        [n, r] = i.useState(null),
+        a = i.useCallback((e) => {
+            t(e.interactionType), r(e.interactionSource);
+        }, []),
+        s = i.useCallback(() => {
+            a({
+                interactionType: null,
+                interactionSource: null
+            });
+        }, [a]),
+        [o, l] = i.useState(!1),
+        [u, c] = i.useState(null);
+    return i.useMemo(
+        () => ({
+            interactionType: e,
+            interactionSource: n,
+            onInteraction: a,
+            resetInteraction: s,
+            interactionToastShown: o,
+            setInteractionToastShown: l,
+            interactionTypeSent: u,
+            setInteractionTypeSent: c
+        }),
+        [a, n, o, e, u, s]
+    );
+}
+function c() {
+    let e = i.useContext(o);
+    return s()(null != e, 'must use useUserProfileInteractionContext within a UserProfileInteractionContextProvider'), e;
 }
