@@ -77,13 +77,13 @@ let m = 2700,
             )
             .exhaustive();
 function g(e) {
-    let { user: t, sourceType: n, isVisible: i, isExpandable: s, reactButtonRef: m, replyButtonRef: T } = e,
-        { trackUserProfileAction: g } = (0, d.KZ)(),
-        { pressReact: A, pressReply: N } = (0, E.Q)(n),
-        O = (0, o.e7)([c.default], () => c.default.getId() === t.id),
-        R = (0, _.Z)(t.id),
-        { handleInteraction: v } = (0, f.X)();
-    return t.bot || O || !R
+    let { user: t, sourceType: n, isVisible: i, isExpandable: s } = e,
+        { trackUserProfileAction: m } = (0, d.KZ)(),
+        { pressReact: T, pressReply: g } = (0, E.Q)(n),
+        A = (0, o.e7)([c.default], () => c.default.getId() === t.id),
+        N = (0, _.Z)(t.id),
+        { onInteraction: O } = (0, f.Xo)();
+    return t.bot || A || !N
         ? null
         : (0, r.jsxs)(u.ZP, {
               className: a()(I.popover, {
@@ -99,13 +99,12 @@ function g(e) {
                       delay: 0,
                       'aria-label': !1,
                       children: (0, r.jsx)(u.zx, {
-                          innerRef: m,
                           onClick: () => {
-                              g({ action: A }),
-                                  null == v ||
-                                      v({
+                              m({ action: T }),
+                                  null == O ||
+                                      O({
                                           interactionType: h.P.REACT,
-                                          interactionSourceType: n
+                                          interactionSource: n
                                       });
                           },
                           className: a()(I.button, I.left),
@@ -122,13 +121,12 @@ function g(e) {
                       delay: 0,
                       'aria-label': !1,
                       children: (0, r.jsx)(u.zx, {
-                          innerRef: T,
                           onClick: () => {
-                              g({ action: N }),
-                                  null == v ||
-                                      v({
+                              m({ action: g }),
+                                  null == O ||
+                                      O({
                                           interactionType: h.P.REPLY,
-                                          interactionSourceType: n
+                                          interactionSource: n
                                       });
                           },
                           className: a()(I.button, I.right),
