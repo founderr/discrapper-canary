@@ -26,11 +26,11 @@ var n = t(735250),
     f = t(703656),
     M = t(246946),
     D = t(78839),
-    P = t(483444),
-    L = t(626135),
+    L = t(483444),
+    P = t(626135),
     b = t(74538),
     Z = t(140465),
-    v = t(646476),
+    v = t(599659),
     j = t(91802),
     B = t(898997),
     U = t(197115),
@@ -44,9 +44,11 @@ var n = t(735250),
     H = t(689938),
     W = t(957781),
     K = t(881188),
-    z = t(520314),
-    Q = t(434691);
-function X() {
+    z = t(434691),
+    Q = t(507579);
+let X = 'gifting_button',
+    q = 'payment modal';
+function J() {
     let e = (0, c.e7)([D.ZP], () => D.ZP.getPremiumTypeSubscription()),
         s = (0, Z.t7)(),
         t = (0, Z.lr)(),
@@ -65,7 +67,7 @@ function X() {
             (0, n.jsxs)('div', {
                 className: W.tierInfo,
                 children: [
-                    (0, n.jsx)(P.Z, { className: W.tierTitle }),
+                    (0, n.jsx)(L.Z, { className: W.tierTitle }),
                     E
                         ? (0, n.jsxs)(n.Fragment, {
                               children: [
@@ -116,7 +118,7 @@ function X() {
                         className: W.tierCardButton,
                         color: u.Button.Colors.WHITE,
                         onClick: () => {
-                            L.default.track(k.rMx.PREMIUM_SETTINGS_INTERACTED, {
+                            P.default.track(k.rMx.PREMIUM_SETTINGS_INTERACTED, {
                                 cta_type: 'to_premium_home_button',
                                 target: 'premium home page'
                             }),
@@ -134,7 +136,7 @@ function X() {
                         look: u.Button.Looks.OUTLINED,
                         color: u.Button.Colors.WHITE,
                         onClick: () => {
-                            L.default.track(k.rMx.PREMIUM_SETTINGS_INTERACTED, {
+                            P.default.track(k.rMx.PREMIUM_SETTINGS_INTERACTED, {
                                 cta_type: 'to_subscriptions_button',
                                 target: 'subscriptions settings'
                             }),
@@ -160,49 +162,46 @@ function X() {
         ]
     });
 }
-function q() {
-    let e = (0, v.rK)(),
-        { enabled: s } = v.RO.useExperiment({ location: 'GiftNitro' }, { autoTrackExposure: e }),
-        t = s && e;
+function $() {
     return (0, n.jsxs)('div', {
-        className: r()(W.giftCard, { [W.giftCardSeasonal]: t }),
+        className: r()(W.giftCard, W.giftCardHalloween),
         children: [
-            t &&
-                (0, n.jsx)('img', {
-                    className: W.seasonalGiftImage,
-                    alt: '',
-                    src: z
-                }),
             (0, n.jsx)('img', {
-                className: W.giftImage,
-                style: { visibility: t ? 'hidden' : 'visible' },
                 alt: '',
-                src: Q
+                className: r()(W.giftImage, W.giftImageHalloween),
+                'aria-hidden': !0,
+                src: Q.Z
+            }),
+            (0, n.jsx)('div', {
+                className: r()(W.giftImage, W.giftImageHalloweenSpacer),
+                'aria-hidden': !0
             }),
             (0, n.jsxs)('div', {
                 className: W.giftInfo,
                 children: [
                     (0, n.jsx)(u.Heading, {
-                        className: r()(W.giftTitle, { [W.seasonalColor]: t }),
+                        className: W.giftTitle,
+                        color: 'always-white',
                         variant: 'heading-xl/extrabold',
-                        children: t ? H.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_HEADING : H.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_HEADING
+                        children: H.Z.Messages.NITROWEEN_GIFT_UPSELL_TITLE
                     }),
                     (0, n.jsx)(u.Text, {
-                        className: r()(W.giftText, { [W.seasonalColor]: t }),
+                        className: W.giftText,
+                        color: 'always-white',
                         variant: 'text-sm/normal',
-                        children: t ? H.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_BODY : H.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_BODY
+                        children: H.Z.Messages.NITROWEEN_DESKTOP_BILLING_SETTINGS_SUBTITLE
                     }),
                     (0, n.jsx)(U.Z, {
                         isGift: !0,
-                        className: r()(W.giftCardButton, t ? W.seasonalColor : W.giftCardButtonColor),
+                        className: r()(W.giftCardButton, W.halloweenColor),
                         look: u.Button.Looks.OUTLINED,
                         buttonText: H.Z.Messages.GIFT_NITRO,
                         buttonTextClassName: W.giftButtonCTA,
                         color: u.Button.Colors.CUSTOM,
                         onClick: () => {
-                            L.default.track(k.rMx.PREMIUM_SETTINGS_INTERACTED, {
-                                cta_type: 'gifting_button',
-                                target: 'payment modal'
+                            P.default.track(k.rMx.PREMIUM_SETTINGS_INTERACTED, {
+                                cta_type: X,
+                                target: q
                             });
                         }
                     })
@@ -210,6 +209,50 @@ function q() {
             })
         ]
     });
+}
+function ee() {
+    let { enabled: e } = v.O.useExperiment({ location: 'GiftNitro' }, { autoTrackExposure: !1 });
+    return e
+        ? (0, n.jsx)($, {})
+        : (0, n.jsxs)('div', {
+              className: r()(W.giftCard),
+              children: [
+                  (0, n.jsx)('img', {
+                      className: W.giftImage,
+                      alt: '',
+                      src: z
+                  }),
+                  (0, n.jsxs)('div', {
+                      className: W.giftInfo,
+                      children: [
+                          (0, n.jsx)(u.Heading, {
+                              className: W.giftTitle,
+                              variant: 'heading-xl/extrabold',
+                              children: H.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_HEADING
+                          }),
+                          (0, n.jsx)(u.Text, {
+                              className: W.giftText,
+                              variant: 'text-sm/normal',
+                              children: H.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_BODY
+                          }),
+                          (0, n.jsx)(U.Z, {
+                              isGift: !0,
+                              className: r()(W.giftCardButton, W.giftCardButtonColor),
+                              look: u.Button.Looks.OUTLINED,
+                              buttonText: H.Z.Messages.GIFT_NITRO,
+                              buttonTextClassName: W.giftButtonCTA,
+                              color: u.Button.Colors.CUSTOM,
+                              onClick: () => {
+                                  P.default.track(k.rMx.PREMIUM_SETTINGS_INTERACTED, {
+                                      cta_type: X,
+                                      target: q
+                                  });
+                              }
+                          })
+                      ]
+                  })
+              ]
+          });
 }
 s.Z = function () {
     let e = (0, O.Q)(),
@@ -232,7 +275,7 @@ s.Z = function () {
         }),
         (0, B.B)('PremiumManagementSettings');
     let f = (0, V.bD)('PremiumManagementSettings'),
-        P = (0, V.pn)('PremiumManagementSettings');
+        L = (0, V.pn)('PremiumManagementSettings');
     a.useEffect(() => {
         E.Z.wait(async () => {
             !N && !e && (await Promise.all([T.jg(), T.tZ(), (0, I.Y2)(S, null, k.JjL.DISCOVERY)])), l(!1);
@@ -255,9 +298,9 @@ s.Z = function () {
                 (0, n.jsxs)('div', {
                     className: W.__invalid_container,
                     children: [
-                        (0, n.jsx)(X, {}),
-                        (f || P) && (0, n.jsx)(Y.Z, { isInSettings: !0 }),
-                        (0, n.jsx)(q, {}),
+                        (0, n.jsx)(J, {}),
+                        (f || L) && (0, n.jsx)(Y.Z, { isInSettings: !0 }),
+                        (0, n.jsx)(ee, {}),
                         (0, n.jsx)(y.Z, {
                             className: W.__invalid_planComparisonTable,
                             hideCTAs: !0,
@@ -270,7 +313,7 @@ s.Z = function () {
                 }),
                 (0, n.jsx)(d.$, {
                     onChange: (e) => {
-                        e && !b && (L.default.track(k.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: s }), Z(!0));
+                        e && !b && (P.default.track(k.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: s }), Z(!0));
                     },
                     children: (0, n.jsx)('div', { className: W.bottomOfPageVisibilitySensor })
                 })
