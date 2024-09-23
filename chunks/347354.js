@@ -4,5 +4,6 @@ e.exports = {
     subheader: 'subheader_c29ea9',
     buttons: 'buttons_c29ea9',
     buttonIcon: 'buttonIcon_c29ea9',
-    button: 'button_c29ea9'
+    button: 'button_c29ea9',
+    heading: 'heading_c29ea9'
 };

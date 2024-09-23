@@ -47,6 +47,8 @@ function I(e) {
                     (0, i.jsx)(c.Z, { guild: t }),
                     (0, i.jsx)(s.Heading, {
                         variant: 'heading-lg/semibold',
+                        className: C.heading,
+                        lineClamp: 1,
                         children: t.name
                     })
                 ]
