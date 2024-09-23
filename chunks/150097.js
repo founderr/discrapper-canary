@@ -30,10 +30,10 @@ var c = n(569471),
     _ = n(723170),
     E = n(695346),
     T = n(131704),
-    I = n(433355),
-    f = n(592125),
-    g = n(430824),
-    N = n(19780),
+    f = n(433355),
+    I = n(592125),
+    N = n(430824),
+    g = n(19780),
     C = n(699516),
     S = n(944486),
     A = n(914010),
@@ -58,8 +58,8 @@ function U(e, t) {
     let i = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
         l = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
     if (null != e.flags && (0, v.yE)(e.flags, M.iLy.SUPPRESS_NOTIFICATIONS)) return !1;
-    let s = f.Z.getChannel(t);
-    e.type === M.uaV.THREAD_STARTER_MESSAGE && (s = f.Z.getChannel(null == s ? void 0 : s.parent_id));
+    let s = I.Z.getChannel(t);
+    e.type === M.uaV.THREAD_STARTER_MESSAGE && (s = I.Z.getChannel(null == s ? void 0 : s.parent_id));
     let o = h.default.getCurrentUser(),
         a = h.default.getUser(null === (n = e.author) || void 0 === n ? void 0 : n.id);
     if (
@@ -76,7 +76,7 @@ function U(e, t) {
         return !1;
     if (!i) {
         let e = S.Z.getChannelId(A.Z.getGuildId());
-        if (e === s.id || I.ZP.getCurrentSidebarChannelId(e) === s.id) return !1;
+        if (e === s.id || f.ZP.getCurrentSidebarChannelId(e) === s.id) return !1;
     }
     if (C.Z.isBlockedForMessage(e) || (void 0 !== e.activity_instance && null != e.interaction && e.interaction.user.id === o.id)) return !1;
     if (T.Ec.has(s.type)) {
@@ -94,7 +94,7 @@ function U(e, t) {
         );
     }
     {
-        let t = !T.tx.has(s.type) || N.Z.getChannelId() === s.id;
+        let t = !T.tx.has(s.type) || g.Z.getChannelId() === s.id;
         if (O.ZP.allowAllMessages(s) && t) return !0;
         let n = O.ZP.isSuppressEveryoneEnabled(s.getGuildId()),
             i = O.ZP.isSuppressRolesEnabled(s.getGuildId());
@@ -109,8 +109,8 @@ function U(e, t) {
 function G(e, t) {
     var n;
     if (S.Z.getChannelId(A.Z.getGuildId()) !== t) return !1;
-    let i = f.Z.getChannel(t);
-    e.type === M.uaV.THREAD_STARTER_MESSAGE && (i = f.Z.getChannel(null == i ? void 0 : i.parent_id));
+    let i = I.Z.getChannel(t);
+    e.type === M.uaV.THREAD_STARTER_MESSAGE && (i = I.Z.getChannel(null == i ? void 0 : i.parent_id));
     let l = h.default.getCurrentUser(),
         s = h.default.getUser(null === (n = e.author) || void 0 === n ? void 0 : n.id);
     return !(null == i || null == l || null == s || i.isManaged() || s.hasFlag(M.xW$.SPAMMER) || C.Z.isBlockedForMessage(e) || s.id === l.id || Z.Z.getStatus() === M.Skl.DND || E.QZ.getSetting() || O.ZP.allowNoMessages(i)) && !0;
@@ -156,7 +156,7 @@ function w(e, t, n) {
     var o, u, r, c, _;
     let E;
     let T = m.ZP.getName(e.getGuildId(), e.id, n),
-        I = T;
+        f = T;
     switch (e.type) {
         case M.d4z.GUILD_ANNOUNCEMENT:
         case M.d4z.GUILD_TEXT:
@@ -164,11 +164,11 @@ function w(e, t, n) {
         case M.d4z.ANNOUNCEMENT_THREAD:
         case M.d4z.PUBLIC_THREAD:
         case M.d4z.PRIVATE_THREAD:
-            let N = f.Z.getChannel(e.parent_id);
-            t.type === M.uaV.THREAD_STARTER_MESSAGE && null != N ? (I = F(I, N, f.Z.getChannel(N.parent_id))) : (0, d.Z)(t) ? null != g.Z.getGuild(e.getGuildId()) && (I = F(I, e, N)) : (I = F(I, e, N));
+            let g = I.Z.getChannel(e.parent_id);
+            t.type === M.uaV.THREAD_STARTER_MESSAGE && null != g ? (f = F(f, g, I.Z.getChannel(g.parent_id))) : (0, d.Z)(t) ? null != N.Z.getGuild(e.getGuildId()) && (f = F(f, e, g)) : (f = F(f, e, g));
             break;
         case M.d4z.GROUP_DM:
-            !(e.isManaged() && n.bot && I === (0, i.F6)(e, h.default, C.Z)) && (I = ''.concat(I, ' (').concat((0, i.F6)(e, h.default, C.Z, !0), ')'));
+            !(e.isManaged() && n.bot && f === (0, i.F6)(e, h.default, C.Z)) && (f = ''.concat(f, ' (').concat((0, i.F6)(e, h.default, C.Z, !0), ')'));
     }
     let S = t.content;
     if ((0, d.Z)(t) && null == (S = p.Z.stringify(t, e))) throw (new l.Z('NotificationTextUtils').warn('SystemMessageUtils.stringify(...) could not convert', t), Error('failed to stringify system message'));
@@ -218,7 +218,7 @@ function w(e, t, n) {
             })(t)),
         {
             icon: n.getAvatarURL(e.guild_id, 128),
-            title: I,
+            title: f,
             body: E
         }
     );

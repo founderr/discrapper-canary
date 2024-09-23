@@ -54,8 +54,8 @@ t.Z = (0, a.memo)(function (e) {
         null == H || b)
     )
         return null;
-    let W = (0, c.wj)(k),
-        z = (0, f.Sz)(L.id, L.config.assets.logotype, 'dark'),
+    let z = (0, c.wj)(k),
+        W = (0, f.Sz)(L.id, L.config.assets.logotype, 'dark'),
         K = (0, f.Sz)(L.id, null != H.assetVideo ? H.assetVideo : H.asset),
         q = (0, f.nP)(K),
         Q = Z ? G + 8 : 0,
@@ -117,8 +117,8 @@ t.Z = (0, a.memo)(function (e) {
                       }),
                 (0, i.jsx)('div', {
                     className: r()(A.overlay, {
-                        [A.darkThemeGradient]: W,
-                        [A.lightThemeGradient]: !W
+                        [A.darkThemeGradient]: z,
+                        [A.lightThemeGradient]: !z
                     })
                 }),
                 (0, i.jsx)('div', {
@@ -127,7 +127,7 @@ t.Z = (0, a.memo)(function (e) {
                     style: { transform: 'translateY(-'.concat(Q, 'px)') },
                     children: (0, i.jsx)('img', {
                         className: A.logo,
-                        src: z,
+                        src: W,
                         alt: L.config.messages.gameTitle
                     })
                 }),
@@ -143,8 +143,8 @@ t.Z = (0, a.memo)(function (e) {
                         }),
                         (0, i.jsx)(d.Text, {
                             variant: 'text-sm/medium',
-                            color: W ? 'text-muted' : 'always-white',
-                            style: { opacity: W ? 1 : 0.75 },
+                            color: z ? 'text-muted' : 'always-white',
+                            style: { opacity: z ? 1 : 0.75 },
                             children: N.Z.Messages.QUEST_REWARD_CLAIMED.format({
                                 reward: H.name,
                                 claimedDate: w

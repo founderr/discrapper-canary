@@ -100,11 +100,11 @@ let F = (e) => {
             children: (0, i.jsx)(k.Z, { className: r()(V.downloadProgressCircle, { [V.hideGameUpdateProgressIndicator]: n }) })
         });
     },
-    W = () => {
+    z = () => {
         let e = (0, T.q)();
         return e > 0 ? (0, i.jsx)(E.NumberBadge, { count: e }) : null;
     },
-    z = (e) => {
+    W = (e) => {
         let { selected: t } = e,
             n = (0, o.JA)('messageRequests'),
             { channelId: a } = (0, p._)();
@@ -117,7 +117,7 @@ let F = (e) => {
             text: H.Z.Messages.MESSAGE_REQUESTS,
             onClick: s,
             ...n,
-            children: (0, i.jsx)(W, {})
+            children: (0, i.jsx)(z, {})
         });
     },
     K = (e) => {
@@ -245,7 +245,7 @@ let J = (e) => {
                         },
                         'premium'
                     ),
-                    (0, i.jsx)(z, { selected: null == u ? null != a && a.startsWith(w.Z5c.MESSAGE_REQUESTS) : u === w.Z5c.MESSAGE_REQUESTS }, 'message-requests'),
+                    (0, i.jsx)(W, { selected: null == u ? null != a && a.startsWith(w.Z5c.MESSAGE_REQUESTS) : u === w.Z5c.MESSAGE_REQUESTS }, 'message-requests'),
                     (0, i.jsx)(
                         m.i,
                         {

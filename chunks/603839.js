@@ -105,18 +105,18 @@ function v(e) {
         Y = a.useCallback(() => {
             D(1), E._9(t, { currentStep: null == F ? void 0 : F.index });
         }, [null == F ? void 0 : F.index, t]),
-        W = a.useCallback(() => {
+        z = a.useCallback(() => {
             (0, u.fH)(u.v0.ADMIN_UPSELL);
         }, []),
-        z = a.useCallback(() => {
+        W = a.useCallback(() => {
             (0, f.V)({
                 guildId: t,
                 onSuccess: () => {
-                    W(), n();
+                    z(), n();
                 },
                 progress: v
             });
-        }, [t, v, W, n]),
+        }, [t, v, z, n]),
         K = a.useRef(null),
         q =
             null != F
@@ -238,7 +238,7 @@ function v(e) {
                                         look: d.Button.Looks.FILLED,
                                         size: d.Button.Sizes.MEDIUM,
                                         color: d.Button.Colors.BRAND,
-                                        onClick: z,
+                                        onClick: W,
                                         children: C.Z.Messages.FINISH
                                     })
                             })

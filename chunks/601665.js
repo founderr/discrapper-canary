@@ -109,7 +109,7 @@ function C(e) {
                                 (0, r.jsx)(I.Z, {
                                     user: t,
                                     profileType: O.y0.BITE_SIZE,
-                                    onClose: b
+                                    onCloseProfile: b
                                 })
                             ]
                         }),

@@ -20,10 +20,10 @@ var i,
     _ = n(287734),
     E = n(802098),
     T = n(933557),
-    I = n(456269),
-    f = n(15274),
-    g = n(355298),
-    N = n(601992),
+    f = n(456269),
+    I = n(15274),
+    N = n(355298),
+    g = n(601992),
     C = n(11352),
     S = n(671105),
     A = n(703656),
@@ -96,7 +96,7 @@ function ei(e) {
 }
 class el extends (i = s.ZP.Store) {
     initialize() {
-        this.waitFor(P.default, p.Z, M.Z, D.Z, h.Z, y.Z, R.Z, F.Z, g.Z);
+        this.waitFor(P.default, p.Z, M.Z, D.Z, h.Z, y.Z, R.Z, F.Z, N.Z);
     }
 }
 q(el, 'displayName', 'NotificationStore'),
@@ -141,16 +141,16 @@ q(el, 'displayName', 'NotificationStore'),
                       if (d) return !1;
                       let _ = p.Z.getChannel(o),
                           T = P.default.getUser(null === (t = a.author) || void 0 === t ? void 0 : t.id),
-                          I = P.default.getCurrentUser();
+                          f = P.default.getCurrentUser();
                       if (null == _ || null == T) return !1;
-                      let f = (0, w.eF)(a, o, !Q),
-                          g = M.Z.getNotifyMessagesInSelectedChannel() && (0, w.N_)(a, o);
-                      if ((!f && !g) || (a.type === W.uaV.CHANGELOG && (null == a.changelog_id || E.Z.latestChangelogId() !== a.changelog_id))) return !1;
+                      let I = (0, w.eF)(a, o, !Q),
+                          N = M.Z.getNotifyMessagesInSelectedChannel() && (0, w.N_)(a, o);
+                      if ((!I && !N) || (a.type === W.uaV.CHANGELOG && (null == a.changelog_id || E.Z.latestChangelogId() !== a.changelog_id))) return !1;
                       let A = !M.Z.isSoundDisabled(X),
-                          O = H.ZP.canUseCustomNotificationSounds(I),
+                          O = H.ZP.canUseCustomNotificationSounds(f),
                           h = C.Y.getCurrentConfig({ location: 'NotificationStore' }).enabled,
                           v = O && h && A ? (null !== (s = (0, S.bb)(null !== (l = _.guild_id) && void 0 !== l ? l : W.aIL, o)) && void 0 !== s ? s : (0, S.iD)(_.guild_id)) : void 0;
-                      if ((g && (A && Y.GN('message3', 0.4, void 0, v), !Q)) || !f) return !1;
+                      if ((N && (A && Y.GN('message3', 0.4, void 0, v), !Q)) || !I) return !1;
                       let m = n(808506).Z,
                           D = n(237997).Z;
                       if (null != m.getFocusedPID() && D.getTextChatNotificationMode() === W.Ypu.ENABLED && !G.Z.disableNotifications) return !1;
@@ -164,7 +164,7 @@ q(el, 'displayName', 'NotificationStore'),
                               title: y,
                               body: L
                           }),
-                          (0, N.R)(a, _.guild_id),
+                          (0, g.R)(a, _.guild_id),
                           M.Z.getDesktopType() === W.qrD.NEVER)
                       )
                           return A && Y.GN(X, J, void 0, v), !1;
@@ -348,7 +348,7 @@ q(el, 'displayName', 'NotificationStore'),
                                         },
                                         {
                                             onClick() {
-                                                d.Z.transitionToGuildSync(e.guild_id), (0, f.bO)({ eventId: e.id });
+                                                d.Z.transitionToGuildSync(e.guild_id), (0, I.bO)({ eventId: e.id });
                                             }
                                         }
                                     );
@@ -360,7 +360,7 @@ q(el, 'displayName', 'NotificationStore'),
                       if (en()) return !1;
                       let l = p.Z.getChannel(n.parent_id);
                       if (null == l || !W.TPd.GUILD_THREADS_ONLY.has(l.type) || !i || !(0, w.FI)(n, l, !Q)) return !1;
-                      let { author: s, user: o } = (0, I.MC)(n);
+                      let { author: s, user: o } = (0, f.MC)(n);
                       if (null == o) return !1;
                       let u = D.Z.getGuild(l.guild_id);
                       if (null == u) return !1;
@@ -402,7 +402,7 @@ q(el, 'displayName', 'NotificationStore'),
                               { notif_type: s },
                               {
                                   onClick() {
-                                      null != l && (0, A.uL)(l);
+                                      null != l && ((0, A.uL)(l), c.default.clickedNotification());
                                   },
                                   tag: o
                               }

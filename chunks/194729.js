@@ -42,8 +42,8 @@ var i = n(735250),
     V = n(749436),
     F = n(26580),
     Y = n(731455),
-    W = n(981631),
-    z = n(689938),
+    z = n(981631),
+    W = n(689938),
     K = n(289505),
     q = n(368179),
     Q = n(52518);
@@ -76,7 +76,7 @@ class J extends a.PureComponent {
             (0, U.le)(),
             null == b.ZP.getSearchIndex() && (0, m.Ue)(),
             h.Z.wait(() => {
-                (0, g.M)(W.x8Z.SERVER_DISCOVERY_BADGE);
+                (0, g.M)(z.x8Z.SERVER_DISCOVERY_BADGE);
             }),
             !i &&
                 0 === d.length &&
@@ -134,13 +134,13 @@ class J extends a.PureComponent {
     renderGamesYouPlay() {
         let { guilds: e, mightHaveGamesYouPlay: t, theme: n, userGuilds: a } = this.props,
             s = Object.keys(a),
-            r = e[W.Lcj.GAMES_YOU_PLAY];
+            r = e[z.Lcj.GAMES_YOU_PLAY];
         r.guilds = r.guilds.filter((e) => !s.includes(e.id));
         let { loadingGuildId: l } = this.state;
         return t
             ? (0, i.jsx)(B.Z, {
                   loadId: this.loadId,
-                  title: z.Z.Messages.GUILD_DISCOVERY_HEADER_GAMES_YOU_PLAY,
+                  title: W.Z.Messages.GUILD_DISCOVERY_HEADER_GAMES_YOU_PLAY,
                   guildsData: r,
                   loadingGuildId: l,
                   analyticsContext: D.P1.RECOMMENDED,
@@ -164,7 +164,7 @@ class J extends a.PureComponent {
         } = this.props;
         y.w.trackExposure({ location: '54961b_1' });
         let { shouldDisplayRecommendedSearchTags: d } = y.w.getCurrentConfig({ location: '54961b_2' }, { autoTrackExposure: !1 }),
-            u = d ? (l === Y.Hk ? z.Z.Messages.GUILD_DISCOVERY_SEARCH_PLACEHOLDER_TAGS : z.Z.Messages.GUILD_DISCOVERY_CATEGORY_SEARCH_PLACEHOLDER_TAGS.format({ categoryName: c })) : l === Y.Hk ? z.Z.Messages.GUILD_DISCOVERY_SEARCH_PLACEHOLDER : z.Z.Messages.GUILD_DISCOVERY_CATEGORY_SEARCH_PLACEHOLDER.format({ categoryName: c }),
+            u = d ? (l === Y.Hk ? W.Z.Messages.GUILD_DISCOVERY_SEARCH_PLACEHOLDER_TAGS : W.Z.Messages.GUILD_DISCOVERY_CATEGORY_SEARCH_PLACEHOLDER_TAGS.format({ categoryName: c })) : l === Y.Hk ? W.Z.Messages.GUILD_DISCOVERY_SEARCH_PLACEHOLDER : W.Z.Messages.GUILD_DISCOVERY_CATEGORY_SEARCH_PLACEHOLDER.format({ categoryName: c }),
             _ = null !== (t = null === (e = a[n]) || void 0 === e ? void 0 : e[l]) && void 0 !== t ? t : b.xk;
         return (0, i.jsx)(V.Z, {
             loadId: this.loadId,
@@ -190,7 +190,7 @@ class J extends a.PureComponent {
                 currentCategoryName: d
             } = this.props,
             { loadingGuildId: u } = this.state,
-            _ = c === Y.Hk ? z.Z.Messages.GUILD_DISCOVERY_SEARCH_PLACEHOLDER : z.Z.Messages.GUILD_DISCOVERY_CATEGORY_SEARCH_PLACEHOLDER.format({ categoryName: d }),
+            _ = c === Y.Hk ? W.Z.Messages.GUILD_DISCOVERY_SEARCH_PLACEHOLDER : W.Z.Messages.GUILD_DISCOVERY_CATEGORY_SEARCH_PLACEHOLDER.format({ categoryName: d }),
             E = null !== (t = null === (e = a[n]) || void 0 === e ? void 0 : e[c]) && void 0 !== t ? t : b.xk;
         return (0, i.jsx)(H.Z, {
             loadId: this.loadId,
@@ -215,7 +215,7 @@ class J extends a.PureComponent {
             { loadingGuildId: n } = this.state;
         return (0, i.jsx)(B.Z, {
             loadId: this.loadId,
-            title: z.Z.Messages.GUILD_DISCOVERY_FEATURED_HEADER,
+            title: W.Z.Messages.GUILD_DISCOVERY_FEATURED_HEADER,
             guildsData: e.featured,
             analyticsContext: D.P1.POPULAR,
             onViewGuild: this.handleViewGuild,
@@ -231,7 +231,7 @@ class J extends a.PureComponent {
             { loadingGuildId: a } = this.state;
         return (0, i.jsx)(B.Z, {
             loadId: this.loadId,
-            title: z.Z.Messages.GUILD_DISCOVERY_POPULAR_HEADER,
+            title: W.Z.Messages.GUILD_DISCOVERY_POPULAR_HEADER,
             guildsData: e[n],
             loadingGuildId: a,
             analyticsContext: D.P1.POPULAR,
@@ -253,9 +253,9 @@ class J extends a.PureComponent {
             d = s.length > 0;
         y.w.trackExposure({ location: '54961b_3' });
         let { shouldDisplayRecommendedSearchTags: _ } = y.w.getCurrentConfig({ location: '54961b_4' }, { autoTrackExposure: !1 }),
-            h = l === Y.Hk ? (null === (e = c[W.Lcj.FEATURED]) || void 0 === e ? void 0 : e.guilds) : null === (t = c[l]) || void 0 === t ? void 0 : t.guilds;
+            h = l === Y.Hk ? (null === (e = c[z.Lcj.FEATURED]) || void 0 === e ? void 0 : e.guilds) : null === (t = c[l]) || void 0 === t ? void 0 : t.guilds;
         if (l === Y.U) return (0, i.jsx)(N.Z, { loadId: this.loadId });
-        let m = l === Y.Hk ? z.Z.Messages.GUILD_DISCOVERY_HOME_TITLE : z.Z.Messages.GUILD_DISCOVERY_CATEGORY_TITLE.format({ categoryName: n });
+        let m = l === Y.Hk ? W.Z.Messages.GUILD_DISCOVERY_HOME_TITLE : W.Z.Messages.GUILD_DISCOVERY_CATEGORY_TITLE.format({ categoryName: n });
         return (0, i.jsxs)('div', {
             className: K.pageWrapper,
             children: [
@@ -295,12 +295,12 @@ class J extends a.PureComponent {
                                                       (0, i.jsx)(E.Heading, {
                                                           variant: 'heading-xl/semibold',
                                                           className: K.searchTitle,
-                                                          children: l === Y.Hk ? z.Z.Messages.GUILD_DISCOVERY_HOME_TITLE : z.Z.Messages.GUILD_DISCOVERY_CATEGORY_TITLE.format({ categoryName: n })
+                                                          children: l === Y.Hk ? W.Z.Messages.GUILD_DISCOVERY_HOME_TITLE : W.Z.Messages.GUILD_DISCOVERY_CATEGORY_TITLE.format({ categoryName: n })
                                                       }),
                                                       (0, i.jsx)(E.Text, {
                                                           variant: 'text-md/normal',
                                                           className: K.searchSubtitle,
-                                                          children: l === Y.Hk && z.Z.Messages.GUILD_DISCOVERY_HOME_SUBTITLE
+                                                          children: l === Y.Hk && W.Z.Messages.GUILD_DISCOVERY_HOME_SUBTITLE
                                                       }),
                                                       this.renderSearchBar(),
                                                       _ &&
@@ -338,14 +338,14 @@ class J extends a.PureComponent {
                                               }),
                                               (0, i.jsx)(E.Heading, {
                                                   variant: 'heading-md/semibold',
-                                                  children: z.Z.Messages.GUILD_DISCOVERY_CATEGORY_FOOTER_TITLE
+                                                  children: W.Z.Messages.GUILD_DISCOVERY_CATEGORY_FOOTER_TITLE
                                               }),
                                               (0, i.jsx)(E.Button, {
                                                   look: E.Button.Looks.LINK,
                                                   color: E.Button.Colors.LINK,
                                                   size: E.Button.Sizes.MIN,
                                                   onClick: this.scrollToTop,
-                                                  children: z.Z.Messages.GUILD_DISCOVERY_FOOTER_BODY
+                                                  children: W.Z.Messages.GUILD_DISCOVERY_FOOTER_BODY
                                               })
                                           ]
                                       })
@@ -426,7 +426,7 @@ let $ = _.ZP.connectStores([O.Z, R.default, M.Z, x.Z, b.ZP, G.Z, P.Z], () => {
         n = R.default.locale,
         i = null !== (e = o().find(t, { code: n })) && void 0 !== e ? e : t[0],
         a = Object.keys(M.Z.applicationStatistics),
-        s = x.Z.hasConsented(W.pjP.PERSONALIZATION) && a.length > 0,
+        s = x.Z.hasConsented(z.pjP.PERSONALIZATION) && a.length > 0,
         r = b.ZP.getCurrentCategoryId(),
         l = b.ZP.getCurrentHomepageCategoryId();
     return {

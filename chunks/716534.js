@@ -253,9 +253,9 @@ function H(e) {
                 checkboxLabelClassname: r
             };
         })(null != e_ && e_, eZ, V),
-        e3 = F.Z.Messages.BILLING_SELECT_PLAN_GUILD_SUBSCRIPTION.format({ planName: eC.name });
+        e9 = F.Z.Messages.BILLING_SELECT_PLAN_GUILD_SUBSCRIPTION.format({ planName: eC.name });
     return (
-        eg && !ek ? (e3 = F.Z.Messages.PAYMENT_MODAL_SUBTITLE_PREMIUM_GIFT) : eg && ek ? (e3 = '') : (0, v.PV)(eC.id) && (e3 = v.ZP.getBillingReviewSubheader(null, eC)),
+        eg && !ek ? (e9 = F.Z.Messages.PAYMENT_MODAL_SUBTITLE_PREMIUM_GIFT) : eg && ek ? (e9 = '') : (0, v.PV)(eC.id) && (e9 = v.ZP.getBillingReviewSubheader(null, eC)),
         ez
             ? null
             : (0, i.jsxs)('div', {
@@ -310,7 +310,7 @@ function H(e) {
                       !e_ &&
                           (0, i.jsx)(u.FormTitle, {
                               tag: u.FormTitleTags.H5,
-                              children: e3
+                              children: e9
                           }),
                       ek &&
                           null != ev &&

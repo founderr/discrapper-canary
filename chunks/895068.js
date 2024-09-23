@@ -79,12 +79,12 @@ t.ZP = o.memo(function (e) {
         w = (0, A.GN)((e) => e.selectedTraits, u.Z),
         B = (0, A.GN)((e) => e.selectedGames, u.Z),
         H = (0, h.Z)(U),
-        { currentPage: V, updatePage: F, totalItems: Y, pageSize: W } = (0, N.a)(),
-        z = (0, _.e7)([I.default], () => I.default.getCurrentUser());
+        { currentPage: V, updatePage: F, totalItems: Y, pageSize: z } = (0, N.a)(),
+        W = (0, _.e7)([I.default], () => I.default.getCurrentUser());
     o.useEffect(() => {
         if (null != U && !!(0, L.Pw)(U)) (!(null != H && (0, L.Pw)(H)) || !(H.loadedAt >= U.loadedAt)) && (0, m.Oe)('top_picks', G);
     }, [G, U, H]);
-    let K = B.length > 0 || w.length > 0 ? R.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE : null != z ? R.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE_NO_PREFERENCES.format({ name: p.ZP.getName(z) }) : '';
+    let K = B.length > 0 || w.length > 0 ? R.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE : null != W ? R.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE_NO_PREFERENCES.format({ name: p.ZP.getName(W) }) : '';
     let q =
             ((t = j),
             (n = D),
@@ -164,7 +164,7 @@ t.ZP = o.memo(function (e) {
         $ = o.useCallback(
             (e, t, n, i) => {
                 let { items: a } = q[e],
-                    s = (V - 1) * W + (e * D + t),
+                    s = (V - 1) * z + (e * D + t),
                     r = a[t];
                 null != r && n
                     ? (i.current = setTimeout(
@@ -185,14 +185,14 @@ t.ZP = o.memo(function (e) {
                       ))
                     : clearTimeout(i.current);
             },
-            [q, X, D, V, W]
+            [q, X, D, V, z]
         ),
         ee = o.useContext(E.AccessibilityPreferencesContext).reducedMotion.enabled,
         et = o.useCallback(
             (e, t, n) => {
                 let { items: i } = q[e],
                     a = e * D + t,
-                    s = (V - 1) * W + a,
+                    s = (V - 1) * z + a,
                     r = i[t],
                     o = ee ? 0 : Math.min(125 * Math.floor(a / D) + (a % D) * 25, 1000);
                 return (0, l.jsx)(
@@ -211,7 +211,7 @@ t.ZP = o.memo(function (e) {
                     ''.concat(r.id, ':').concat(Z)
                 );
             },
-            [q, D, V, W, ee, Z, G, w, J, $]
+            [q, D, V, z, ee, Z, G, w, J, $]
         ),
         en = o.useCallback((e) => (0, l.jsx)(f.Z, { style: { transform: 'translateY(-6px)' } }, e), []),
         ei = o.useCallback(
@@ -229,11 +229,11 @@ t.ZP = o.memo(function (e) {
                     case 'pagination':
                         return (0, l.jsx)(l.Fragment, {
                             children:
-                                Y > W &&
+                                Y > z &&
                                 (0, l.jsx)(E.Paginator, {
                                     className: d()(O.paginationInput),
                                     totalCount: Y,
-                                    pageSize: W,
+                                    pageSize: z,
                                     disablePaginationGap: !0,
                                     hideMaxPage: !0,
                                     currentPage: V,
@@ -250,7 +250,7 @@ t.ZP = o.memo(function (e) {
                         });
                 }
             },
-            [V, Q, W, q, Y]
+            [V, Q, z, q, Y]
         ),
         ea = o.useMemo(
             () =>

@@ -54,7 +54,7 @@ function O(e) {
     }, [U, O]),
         i.useEffect(() => {
             let e = (e) => {
-                e.key === T.vn.ESCAPE && (e.stopPropagation(), D(), null == R || R());
+                e.key === T.vn.ESCAPE && (e.stopPropagation(), D());
             };
             return (
                 document.addEventListener('keydown', e),

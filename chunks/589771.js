@@ -16,9 +16,9 @@ function d(e) {
     let { initialStep: t, initialPlanId: n, guildId: d, setAnalyticsData: I, handleClose: _ } = e,
         { blockedPayments: h, setStep: f, hasFetchedSubscriptions: S, hasFetchedSubscriptionPlans: m, currencyLoading: E, selectedSkuId: p, setSelectedSkuId: T, setSelectedPlanId: C, priceOptions: N, setSubscriptionMetadataRequest: A } = (0, u.usePaymentContext)(),
         { isGift: O } = (0, o.wD)(),
-        [P, g] = a.useState(!S || !m || E);
+        [P, b] = a.useState(!S || !m || E);
     return (a.useEffect(() => {
-        g(!S || !m || E);
+        b(!S || !m || E);
     }, [E, m, S]),
     a.useEffect(() => {
         null != d && A({ guild_id: d });

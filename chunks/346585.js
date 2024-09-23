@@ -15,7 +15,7 @@ n.d(t, {
         return E;
     },
     ti: function () {
-        return b;
+        return C;
     },
     zV: function () {
         return _;
@@ -24,15 +24,15 @@ n.d(t, {
     n(757143),
     n(47120),
     n(627341);
-var i = n(913527),
-    r = n.n(i),
-    s = n(278074),
+var r = n(913527),
+    s = n.n(r),
+    i = n(278074),
     l = n(768581),
     a = n(709054),
     o = n(624138),
-    u = n(219496),
+    c = n(219496),
     d = n(801461),
-    c = n(689938);
+    u = n(689938);
 function _(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     return l.ZP.getUserAvatarURL(
@@ -50,14 +50,14 @@ function E(e) {
     let t = (0, o._I)(e.username).replace(d.RN, '').replace(d.iF, '.').toLowerCase();
     return ''.concat(t).concat(e.discriminator).substring(0, 32);
 }
-let h = ['@', '#', ':'],
-    p = ['```', 'discord', 'hypesquad', 'system message', 'system mesage', 'sustem message', 'sustem mesage', 'clyde'],
+let p = ['@', '#', ':'],
+    h = ['```', 'discord', 'hypesquad', 'system message', 'system mesage', 'sustem message', 'sustem mesage', 'clyde'],
     f = ['discordtag', 'everyone', 'here', 'discord nitro', 'discord', 'snowsgiving'];
 function S(e) {
     var t, n;
-    let i = e.username.toLowerCase();
+    let r = e.username.toLowerCase();
     if (
-        ((t = i),
+        ((t = r),
         (n = d.kt),
         t
             .split('')
@@ -65,9 +65,9 @@ function S(e) {
             .join('')).length < 2
     )
         return !0;
-    for (let e of h) if (i.includes(e)) return !0;
-    for (let e of f) if (i === e.toLowerCase()) return !0;
-    for (let e of p) if (i.includes(e.toLowerCase())) return !0;
+    for (let e of p) if (r.includes(e)) return !0;
+    for (let e of f) if (r === e.toLowerCase()) return !0;
+    for (let e of h) if (r.includes(e.toLowerCase())) return !0;
     return !1;
 }
 function m(e) {
@@ -76,33 +76,33 @@ function m(e) {
 function I(e) {
     let t = a.default.extractTimestamp(e);
     try {
-        return r()(new Date(t)).format('MMM DD, YYYY');
+        return s()(new Date(t)).format('MMM DD, YYYY');
     } catch (e) {}
     return null;
 }
-function b(e) {
-    return (0, s.EQ)(e)
+function C(e) {
+    return (0, i.EQ)(e)
         .with({ rateLimited: !0 }, () => ({
-            type: u.K.RATE_LIMIT,
-            message: c.Z.Messages.APPLICATION_STORE_LISTING_PURCHASE_RATE_LIMIT_ERROR_SHORT
+            type: c.K.RATE_LIMIT,
+            message: u.Z.Messages.APPLICATION_STORE_LISTING_PURCHASE_RATE_LIMIT_ERROR_SHORT
         }))
-        .with({ error: s.P.not(s.P.nullish) }, (e) => {
+        .with({ error: i.P.not(i.P.nullish) }, (e) => {
             let { error: t } = e;
             return {
-                type: u.K.ERROR,
+                type: c.K.ERROR,
                 message: t
             };
         })
         .with({ taken: !1 }, () => ({
-            type: u.K.AVAILABLE,
-            message: c.Z.Messages.POMELO_EXISTING_FLOW_AVAILABLE
+            type: c.K.AVAILABLE,
+            message: u.Z.Messages.POMELO_EXISTING_FLOW_AVAILABLE
         }))
         .with({ taken: !0 }, () => ({
-            type: u.K.ERROR,
-            message: c.Z.Messages.POMELO_EXISTING_FLOW_ERROR_UNAVAILABLE
+            type: c.K.ERROR,
+            message: u.Z.Messages.POMELO_EXISTING_FLOW_ERROR_UNAVAILABLE
         }))
-        .with({ error: s.P.nullish }, () => ({
-            type: u.K.INTERNAL_ERROR,
+        .with({ error: i.P.nullish }, () => ({
+            type: c.K.INTERNAL_ERROR,
             message: ''
         }))
         .otherwise(() => void 0);

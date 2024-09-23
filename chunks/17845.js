@@ -13,7 +13,7 @@ var a = n(120356),
     c = n(831565),
     d = n(61118);
 function u(e) {
-    let { title: t, description: n, button: a, className: u, background: _ } = e,
+    let { title: t, description: n, button: a, className: u, children: _ } = e,
         E = (0, o.ZP)(),
         h = (0, r.wj)(E),
         m = (0, c.v)({ location: 'QuestHomePage' });

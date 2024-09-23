@@ -27,7 +27,7 @@ var r = n(735250),
     N = n(748605);
 function A(e) {
     var t;
-    let { backButtonEligible: n, prevStep: i, showGuildPicker: A, handleStepChange: O, trialFooterMessageOverride: P, reviewWarningMessage: g, planGroup: b, openInvoiceId: R, analyticsData: v, analyticsLocation: L, eligibleApplicationSubscriptionGuilds: x, handleClose: M } = e,
+    let { backButtonEligible: n, prevStep: i, showGuildPicker: A, handleStepChange: O, trialFooterMessageOverride: P, reviewWarningMessage: b, planGroup: g, openInvoiceId: R, analyticsData: L, analyticsLocation: v, eligibleApplicationSubscriptionGuilds: x, handleClose: M } = e,
         { activeSubscription: k, application: B, setUpdatedSubscription: j, contextMetadata: U, currencies: Z, paymentSources: y, priceOptions: D, purchaseError: w, purchaseTokenAuthState: F, selectedPlan: H, selectedSku: V, setCurrency: G, setPaymentSourceId: W, setPurchaseState: K, setPurchaseError: Y, purchaseState: X, subscriptionMetadataRequest: z, setSubscriptionMetadataRequest: J, setHasAcceptedTerms: q } = (0, I.usePaymentContext)();
     l()(null != H, 'Expected plan to be selected'), l()(null != B, 'Expected application');
     let Q = a.useRef(null),
@@ -113,7 +113,7 @@ function A(e) {
                                     legalTermsNodeRef: eo,
                                     hasLegalTermsFlash: $,
                                     trialFooterMessageOverride: P,
-                                    reviewWarningMessage: g,
+                                    reviewWarningMessage: b,
                                     metadata: A || ei ? void 0 : z,
                                     purchaseState: X,
                                     hideSubscriptionDetails: !0,
@@ -134,7 +134,7 @@ function A(e) {
                                     onInvoiceError: (e) => {
                                         ea(e);
                                     },
-                                    planGroup: b,
+                                    planGroup: g,
                                     currencies: Z,
                                     onCurrencyChange: (e) => G(e),
                                     hasOpenInvoice: null != R,
@@ -152,10 +152,10 @@ function A(e) {
                           onPurchaseError: (e) => Y(e),
                           legalTermsNodeRef: eo,
                           flashLegalTerms: () => ee(!0),
-                          analyticsLocation: L,
-                          baseAnalyticsData: v,
+                          analyticsLocation: v,
+                          baseAnalyticsData: L,
                           flowStartTime: U.startTime,
-                          planGroup: b,
+                          planGroup: g,
                           purchaseTokenAuthState: F,
                           openInvoiceId: R,
                           metadata: ei ? void 0 : z,

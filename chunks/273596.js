@@ -90,8 +90,8 @@ function x(e) {
                 isTagSearch: !1
             });
         }, [D, h, t, M, y, b]);
-    let W = a.useCallback((e) => n(e, M), [n, M]),
-        z = a.useMemo(() => (x ? [h.length, 0] : [h.length]), [h.length, x]),
+    let z = a.useCallback((e) => n(e, M), [n, M]),
+        W = a.useMemo(() => (x ? [h.length, 0] : [h.length]), [h.length, x]),
         K = (0, I.NL)(),
         q = 0 === h.length && !x,
         Q = a.useCallback(
@@ -184,7 +184,7 @@ function x(e) {
                             children: (0, i.jsx)(C.Z, {
                                 guildId: e,
                                 onClick: async (e) => await ee(e, t, M),
-                                onView: (e) => W(e)
+                                onView: (e) => z(e)
                             })
                         },
                         a
@@ -192,7 +192,7 @@ function x(e) {
                 }
                 return null;
             },
-            [h, ee, W, M]
+            [h, ee, z, M]
         );
     a.useEffect(() => {
         let e = V.current;
@@ -241,7 +241,7 @@ function x(e) {
             (0, i.jsx)(o.MasonryList, {
                 ref: V,
                 className: A.masonryList,
-                sections: z,
+                sections: W,
                 columns: w,
                 itemGutter: 16,
                 padding: ei,

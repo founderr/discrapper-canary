@@ -174,7 +174,7 @@ class g extends (r = c.Component) {
     }
     render() {
         let e;
-        let { className: n, selectClassName: t, error: o, valueRenderer: r, optionRenderer: a, multiValueRenderer: c, options: l, value: p, autofocus: m, disabled: g, clearable: S, searchable: b, styleOverrides: E, isMulti: I, placeholder: P, filterOption: x, closeMenuOnSelect: T = !0, ...y } = this.props,
+        let { className: n, selectClassName: t, error: o, valueRenderer: r, optionRenderer: a, multiValueRenderer: c, options: l, value: p, autofocus: m, disabled: g, clearable: S, searchable: b, styleOverrides: E, isMulti: I, placeholder: P, filterOption: T, closeMenuOnSelect: x = !0, ...y } = this.props,
             M = { ...y };
         null != m && (M.autoFocus = m), null != g && (M.isDisabled = g), null != S && (M.isClearable = S), null != b && (M.isSearchable = b);
         let C = { IndicatorSeparator: () => null };
@@ -217,12 +217,12 @@ class g extends (r = c.Component) {
                         onBlur: this.handleBlur,
                         onMenuOpen: this.handleMenuOpen,
                         onMenuClose: this.handleMenuClose,
-                        closeMenuOnSelect: T,
+                        closeMenuOnSelect: x,
                         value: e,
                         onKeyDown: this.handleKeyDown,
                         placeholder: null != P ? P : _.Z.Messages.SELECT,
                         noOptionsMessage: () => _.Z.Messages.NO_RESULTS_FOUND,
-                        filterOption: x
+                        filterOption: T
                     }),
                     null != o
                         ? (0, i.jsx)('div', {

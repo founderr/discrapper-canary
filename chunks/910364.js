@@ -177,7 +177,7 @@ function U(e) {
                                                     channelId: D,
                                                     profileType: O.y0.FULL_SIZE,
                                                     hasEntered: W === l.ModalTransitionState.ENTERED,
-                                                    onClose: Y
+                                                    onCloseProfile: Y
                                                 }),
                                                 (0, t.jsxs)('div', {
                                                     className: y.headerButtons,

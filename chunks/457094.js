@@ -42,8 +42,8 @@ var i = n(735250),
     V = n(38618),
     F = n(972830),
     Y = n(981283),
-    W = n(584233),
-    z = n(15274),
+    z = n(584233),
+    W = n(15274),
     K = n(434404),
     q = n(543842),
     Q = n(879064),
@@ -96,8 +96,8 @@ var i = n(735250),
     eV = n(695103),
     eF = n(241890),
     eY = n(897607),
-    eW = n(417363),
-    ez = n(900974),
+    ez = n(417363),
+    eW = n(900974),
     eK = n(358085),
     eq = n(998502),
     eQ = n(346329),
@@ -146,7 +146,7 @@ let e4 = l.ZP.connectStores([V.Z, eU.Z, eD.default], () => ({
         class extends a.Component {
             componentDidMount() {
                 let { match: e } = this.props;
-                null != e && null != e.params.inviteCode && (0, W.x)({ code: e.params.inviteCode });
+                null != e && null != e.params.inviteCode && (0, z.x)({ code: e.params.inviteCode });
             }
             render() {
                 let { isConnected: e, defaultRoute: t, token: n, defaultRouteFallback: a } = this.props;
@@ -161,8 +161,8 @@ let e4 = l.ZP.connectStores([V.Z, eU.Z, eD.default], () => ({
     ),
     e7 = (0, v.e)(Z.Z, null, { passProps: !1 }),
     e5 = (0, v.e)(A.default, null, { passProps: !1 }),
-    e2 = [eX.Z5c.GUILD_BOOSTING_MARKETING(':guildId'), ...Array.from(eJ.Vg).map((e) => eX.Z5c.CHANNEL(':guildId', e))];
-function e3(e) {
+    e3 = [eX.Z5c.GUILD_BOOSTING_MARKETING(':guildId'), ...Array.from(eJ.Vg).map((e) => eX.Z5c.CHANNEL(':guildId', e))];
+function e2(e) {
     let { guildId: t, channelId: n = null, messageId: i = null, threadId: a = null } = e.params;
     return {
         guildId: null != t ? t : eX.ME,
@@ -211,7 +211,7 @@ let e9 = [
             let { match: t } = e,
                 { gameId: n, action: a } = t.params;
             return (
-                eW.Z.whenInitialized(() => {
+                ez.Z.whenInitialized(() => {
                     ew.Z.whenInitialized(() => {
                         switch (a) {
                             case 'launch': {
@@ -331,7 +331,7 @@ let e9 = [
                 { guildId: n, guildEventId: a } = t.params;
             return (
                 (0, F.h)(() => {
-                    (0, z.bO)({ eventId: a });
+                    (0, W.bO)({ eventId: a });
                 }),
                 (0, i.jsx)(r.l_, { to: eX.Z5c.CHANNEL(n) })
             );
@@ -404,7 +404,7 @@ class te extends a.PureComponent {
             Y.Z.init(),
             X.Z.init(),
             eY.Z.init(),
-            ez.Z.init(),
+            eW.Z.init(),
             p.Z.initialize(),
             eL.Z.init(),
             eF.Z.init(),
@@ -462,7 +462,7 @@ class te extends a.PureComponent {
             !(function (e, t) {
                 let n = e6(e);
                 if (null == n) return;
-                let { guildId: i, channelId: a, messageId: l, threadId: o } = e3(n),
+                let { guildId: i, channelId: a, messageId: l, threadId: o } = e2(n),
                     c = (0, em.S)(i),
                     d = (0, em.c)(a),
                     E = (0, em.c)(o),
@@ -509,7 +509,7 @@ class te extends a.PureComponent {
                     var I;
                     if (
                         ((I = e),
-                        !e2.some((e) => {
+                        !e3.some((e) => {
                             var t;
                             return (null === (t = (0, r.LX)(I, e)) || void 0 === t ? void 0 : t.isExact) === !0;
                         }))
@@ -523,7 +523,7 @@ class te extends a.PureComponent {
         let { pathname: t } = e,
             n = e6(t);
         if (null == n) return null;
-        let { guildId: i, channelId: a, threadId: s } = e3(n),
+        let { guildId: i, channelId: a, threadId: s } = e2(n),
             r = (0, em.S)(i) && i !== eX.ME && i !== eX.I_8;
         if (null != a && (0, em.c)(a) && !(0, eJ.AB)(a) && r) {
             let n = ej.Z.getChannel(a);

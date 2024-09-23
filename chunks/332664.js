@@ -18,8 +18,8 @@ var n = o(735250),
     c = o(600164),
     _ = o(313201),
     b = o(237617),
-    E = o(572539),
-    m = o(626135),
+    m = o(572539),
+    E = o(626135),
     O = o(63063),
     h = o(957115),
     C = o(871364),
@@ -76,17 +76,17 @@ function Z(e) {
     let { modalType: t, header: o, body: s, problemTitle: i, problems: O, transitionState: L, ratingConfigs: Z, feedbackProblems: I = [], otherKey: v, ratingsSelectorClassName: x, hideDontShowCheckbox: B, startRating: S = null, onSubmit: T, onClose: j } = e,
         M = (0, d.Z)(O),
         [k, R] = a.useState(!1),
-        [F, K] = a.useState(S),
-        [y, H] = a.useState(null),
+        [y, F] = a.useState(S),
+        [K, H] = a.useState(null),
         [P, U] = a.useState(r().shuffle(O)),
         [w, G] = a.useState(''),
         V = (0, _.Dt)(),
-        z = (0, b.Z)(F),
+        z = (0, b.Z)(y),
         Y = (0, b.Z)(k),
-        q = (0, b.Z)(y),
+        q = (0, b.Z)(K),
         W = (0, b.Z)(T),
         J = (0, b.Z)(w),
-        Q = null != y && I.includes(y),
+        Q = null != K && I.includes(K),
         { renderSkipButton: X } = C.w.useExperiment({ location: 'FeedbackModal' });
     return (
         a.useEffect(() => {
@@ -94,7 +94,7 @@ function Z(e) {
         }, [O, M, v]),
         a.useEffect(
             () => (
-                m.default.track(p.rMx.OPEN_MODAL, {
+                E.default.track(p.rMx.OPEN_MODAL, {
                     type: t,
                     source: 'Feedback Modal'
                 }),
@@ -134,9 +134,9 @@ function Z(e) {
                             ? null
                             : (0, n.jsx)(N, {
                                   className: l()(f.emojis, x),
-                                  selectedRating: F,
+                                  selectedRating: y,
                                   onChangeRating: function (e) {
-                                      K(e), e === A.aZ.GOOD && j();
+                                      F(e), e === A.aZ.GOOD && j();
                                   },
                                   ratingConfigs: Z
                               })
@@ -145,12 +145,12 @@ function Z(e) {
                 (0, n.jsxs)(u.ModalContent, {
                     className: f.__invalid_content,
                     children: [
-                        null == F || F === A.aZ.GOOD || Q
+                        null == y || y === A.aZ.GOOD || Q
                             ? null
                             : (0, n.jsx)(u.FormItem, {
                                   title: i,
                                   className: f.problemInfo,
-                                  children: (0, n.jsx)(E.Z, {
+                                  children: (0, n.jsx)(m.Z, {
                                       options: P,
                                       onClick: function (e) {
                                           let { value: t } = e;
@@ -214,8 +214,8 @@ function Z(e) {
                                           })
                                       }),
                                       X &&
-                                          null != F &&
-                                          F !== A.aZ.GOOD &&
+                                          null != y &&
+                                          y !== A.aZ.GOOD &&
                                           (0, n.jsx)(u.Button, {
                                               type: 'submit',
                                               size: u.Button.Sizes.SMALL,

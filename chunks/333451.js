@@ -23,8 +23,8 @@ var o = t(735250),
     E = t(930153),
     I = t(74538),
     P = t(937615),
-    x = t(981631),
-    T = t(474936),
+    T = t(981631),
+    x = t(474936),
     y = t(689938),
     M = t(75115);
 function C(e) {
@@ -36,12 +36,12 @@ function C(e) {
             (0, o.jsx)(h.Z, {
                 icon: S.Z,
                 iconClassName: M.perkIconGuild,
-                description: y.Z.Messages.PREMIUM_UPSELL_FEATURE_FREE_GUILD_SUBSCRIPTION.format({ numFreeGuildSubscriptions: T.cb })
+                description: y.Z.Messages.PREMIUM_UPSELL_FEATURE_FREE_GUILD_SUBSCRIPTION.format({ numFreeGuildSubscriptions: x.cb })
             }),
             (0, o.jsx)(h.Z, {
                 icon: S.Z,
                 iconClassName: M.perkIconGuild,
-                description: y.Z.Messages.PREMIUM_UPSELL_FEATURE_GUILD_SUBSCRIPTION_DISCOUNT.format({ percent: (0, E.T3)(t, T.Rr / 100) })
+                description: y.Z.Messages.PREMIUM_UPSELL_FEATURE_GUILD_SUBSCRIPTION_DISCOUNT.format({ percent: (0, E.T3)(t, x.Rr / 100) })
             }),
             n
                 ? (0, o.jsx)(h.Z, {
@@ -70,15 +70,15 @@ function v(e) {
         { theme: R } = (0, s.useThemeContext)(),
         L = (0, l.ap)(R) ? s.Button.Colors.PRIMARY : s.Button.Colors.WHITE,
         k = null == t || null == t.premiumSubscriptionType,
-        O = I.ZP.getPrice(T.Xh.PREMIUM_MONTH_TIER_2, !1, !1, v),
+        O = I.ZP.getPrice(x.Xh.PREMIUM_MONTH_TIER_2, !1, !1, v),
         B = (0, P.T4)(O.amount, O.currency),
         U = (0, f.N)(),
         w = null == U ? void 0 : U.trial_id,
-        D = (null == U ? void 0 : null === (n = U.subscription_trial) || void 0 === n ? void 0 : n.sku_id) === T.Si.TIER_2;
+        D = (null == U ? void 0 : null === (n = U.subscription_trial) || void 0 === n ? void 0 : n.sku_id) === x.Si.TIER_2;
     return (
         r.useEffect(() => {
-            b.default.track(x.rMx.PREMIUM_UPSELL_VIEWED, {
-                type: T.cd.GUILD_PREMIUM_UPSELL_MODAL,
+            b.default.track(T.rMx.PREMIUM_UPSELL_VIEWED, {
+                type: x.cd.GUILD_PREMIUM_UPSELL_MODAL,
                 location_stack: A
             });
         }, [A]),
@@ -120,11 +120,11 @@ function v(e) {
                                         a(),
                                             (0, _.Z)({
                                                 initialPlanId: null,
-                                                subscriptionTier: T.Si.TIER_2,
+                                                subscriptionTier: x.Si.TIER_2,
                                                 analyticsLocations: N,
                                                 analyticsObject: {
                                                     ...S,
-                                                    section: x.jXE.PREMIUM_GUILD_PURCHASE_MODAL
+                                                    section: T.jXE.PREMIUM_GUILD_PURCHASE_MODAL
                                                 },
                                                 analyticsSourceLocation: E,
                                                 onSubscriptionConfirmation: g,

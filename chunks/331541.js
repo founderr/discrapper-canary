@@ -46,8 +46,8 @@ var i = n(735250),
     V = n(70956),
     F = n(5192),
     Y = n(51144),
-    W = n(246133),
-    z = n(474376),
+    z = n(246133),
+    W = n(474376),
     K = n(435478),
     q = n(383832),
     Q = n(981631),
@@ -90,7 +90,7 @@ function en(e, t, n) {
                 {
                     id: ''.concat(e, '-').concat(a),
                     label: s(),
-                    action: () => (0, W.Z)(e, t, void 0, a),
+                    action: () => (0, z.Z)(e, t, void 0, a),
                     dontCloseOnAction: !0
                 },
                 a
@@ -125,7 +125,7 @@ function en(e, t, n) {
                 ]
             });
         },
-        action: () => (0, W.Z)(e, t),
+        action: () => (0, z.Z)(e, t),
         dontCloseOnAction: !0,
         children: e !== Q.Skl.ONLINE ? a : void 0
     });
@@ -157,13 +157,13 @@ function ei(e, t, n) {
                 ]
             });
         },
-        action: () => (0, W.Z)(e, t),
+        action: () => (0, z.Z)(e, t),
         dontCloseOnAction: !0
     });
 }
 function ea(e) {
     var t;
-    let { currentUser: V, onClose: W, setPopoutRef: ea } = e,
+    let { currentUser: V, onClose: z, setPopoutRef: ea } = e,
         es = __OVERLAY__,
         er = (0, v.ZP)(V.id),
         el = (0, u.O)(),
@@ -295,11 +295,11 @@ function ea(e) {
                 ]
             });
         })(e_),
-        ep = (0, z.g)(W),
+        ep = (0, W.g)(z),
         eT = (0, S.Z)({ analyticsLocations: eo }),
         { customStatusBubbleEditEnabled: eS } = (0, A.K)({ location: 'AccountProfilePopout' }),
         ef = (e) => {
-            null == W || W(),
+            null == z || z(),
                 (0, U.openUserProfileModal)({
                     sourceAnalyticsLocations: eo,
                     ...ec,
@@ -335,7 +335,7 @@ function ea(e) {
                                 profileType: X.y0.BITE_SIZE,
                                 children: (0, i.jsx)(j.Z, {
                                     userId: V.id,
-                                    onClose: W
+                                    onClose: z
                                 })
                             }),
                         (0, i.jsxs)('header', {
@@ -355,7 +355,7 @@ function ea(e) {
                                 (0, i.jsx)(O.Z, {
                                     user: V,
                                     profileType: X.y0.BITE_SIZE,
-                                    onClose: W
+                                    onCloseProfile: z
                                 })
                             ]
                         }),
@@ -377,7 +377,7 @@ function ea(e) {
                                     tags: (0, i.jsx)(Z.Z, {
                                         displayProfile: er,
                                         profileType: X.y0.BITE_SIZE,
-                                        onClose: W
+                                        onClose: z
                                     }),
                                     nicknameIcons: (0, i.jsxs)(i.Fragment, {
                                         children: [
@@ -393,12 +393,12 @@ function ea(e) {
                                     user: V,
                                     bio: null == er ? void 0 : er.bio,
                                     hidePersonalInformation: eE,
-                                    onClose: W
+                                    onClose: z
                                 }),
                                 (0, i.jsx)(x.Z, {
                                     user: V,
                                     currentUser: V,
-                                    onClose: W
+                                    onClose: z
                                 }),
                                 (0, i.jsxs)('div', {
                                     className: $.menus,
@@ -417,7 +417,7 @@ function ea(e) {
                                                                     label: J.Z.Messages.EDIT_PROFILE,
                                                                     icon: c.PencilIcon,
                                                                     onClick: () => {
-                                                                        eT(), W();
+                                                                        eT(), z();
                                                                     }
                                                                 }),
                                                                 (0, i.jsx)('div', { className: $.menuDivider })
@@ -447,7 +447,7 @@ function ea(e) {
                                                               },
                                                         onClick: r.tq
                                                             ? () => {
-                                                                  W(),
+                                                                  z(),
                                                                       (0, c.openModalLazy)(
                                                                           () =>
                                                                               new Promise((e) =>
@@ -486,7 +486,7 @@ function ea(e) {
                                                                           label: J.Z.Messages.CUSTOM_STATUS_SET_CUSTOM_STATUS_CTA,
                                                                           icon: () => (0, i.jsx)('div', { className: $.customEmojiPlaceholder }),
                                                                           onClick: () => {
-                                                                              W(), eC();
+                                                                              z(), eC();
                                                                           }
                                                                       })
                                                                     : (0, i.jsx)(K.Mv, {
@@ -518,7 +518,7 @@ function ea(e) {
                                                                               })
                                                                           }),
                                                                           onClick: () => {
-                                                                              W(), eC();
+                                                                              z(), eC();
                                                                           }
                                                                       })
                                                             ]
@@ -537,7 +537,7 @@ function ea(e) {
                                                         icon: c.UserCircleIcon,
                                                         label: J.Z.Messages.SWITCH_ACCOUNTS_MENU_ITEM_TITLE,
                                                         onClick: () => {
-                                                            W(), (0, q.Z)();
+                                                            z(), (0, q.Z)();
                                                         },
                                                         renderSubmenu: (e) => {
                                                             let { closePopout: t } = e;
@@ -561,7 +561,7 @@ function ea(e) {
                                                                     icon: c.IdIcon,
                                                                     label: J.Z.Messages.COPY_ID_USER,
                                                                     onClick: () => {
-                                                                        (0, l.J)(V.id), W();
+                                                                        (0, l.J)(V.id), z();
                                                                     }
                                                                 })
                                                             ]

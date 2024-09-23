@@ -25,30 +25,30 @@ function p(e) {
     let p,
         T,
         { showBenefits: C, handleClose: N, onSubscriptionConfirmation: A } = e,
-        { updatedSubscription: O, readySlideId: P, selectedSku: g, selectedStoreListing: b, application: R } = (0, d.usePaymentContext)(),
-        v = (0, i.Z)(m.i),
-        { createMultipleConfettiAt: L } = a.useContext(s.h),
-        x = null !== (t = null == g ? void 0 : g.name) && void 0 !== t ? t : '',
+        { updatedSubscription: O, readySlideId: P, selectedSku: b, selectedStoreListing: g, application: R } = (0, d.usePaymentContext)(),
+        L = (0, i.Z)(m.i),
+        { createMultipleConfettiAt: v } = a.useContext(s.h),
+        x = null !== (t = null == b ? void 0 : b.name) && void 0 !== t ? t : '',
         M = () => {
             N(), null == A || A();
         },
         k = P === I.h8.CONFIRM,
-        B = (0, o.KW)(null !== (n = null == g ? void 0 : g.flags) && void 0 !== n ? n : 0),
-        j = null != b && b.benefits.length > 0 ? E.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_BENEFITS_SUBTITLE.format({ benefitCount: b.benefits.length }) : null;
+        B = (0, o.KW)(null !== (n = null == b ? void 0 : b.flags) && void 0 !== n ? n : 0),
+        j = null != g && g.benefits.length > 0 ? E.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_BENEFITS_SUBTITLE.format({ benefitCount: g.benefits.length }) : null;
     return (
         C
-            ? v
+            ? L
                 ? (p = (0, r.jsx)(c.h, {
                       title: E.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_TITLE_V2.format({ tierName: x }),
-                      subtitle: null != b && b.benefits.length > 0 ? E.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_SUBTITLE.format({ benefits: j }) : null,
+                      subtitle: null != g && g.benefits.length > 0 ? E.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_SUBTITLE.format({ benefits: j }) : null,
                       onConfirm: M,
                       confirmCta: E.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_DONE_BUTTON
                   }))
                 : ((p =
-                      null != b && null != R
+                      null != g && null != R
                           ? (0, r.jsx)(u.Oc, {
-                                icon: b.thumbnail,
-                                storeListingBenefits: b.benefits,
+                                icon: g.thumbnail,
+                                storeListingBenefits: g.benefits,
                                 application: R,
                                 title: E.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_TITLE_V2.format({ tier: x }),
                                 subtitle: E.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_BENEFITS_PREVIEW,
@@ -60,7 +60,7 @@ function p(e) {
                       primaryCTA: _.g.CONTINUE,
                       primaryText: E.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_DONE_BUTTON
                   })))
-            : (p = v
+            : (p = L
                   ? (0, r.jsx)(c.m, {
                         tierName: x,
                         onConfirm: M,
@@ -72,8 +72,8 @@ function p(e) {
                         subscription: O
                     })),
         a.useEffect(() => {
-            l.Z.useReducedMotion && k && L(window.innerWidth / 2, window.innerHeight / 2);
-        }, [L, k]),
+            l.Z.useReducedMotion && k && v(window.innerWidth / 2, window.innerHeight / 2);
+        }, [v, k]),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)(f.C3, {

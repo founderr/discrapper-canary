@@ -27,14 +27,14 @@ var i = t(735250),
 function I(e) {
     let { channel: n, application: t, sectionName: I, primaryEntryPointCommand: g, buttonSize: P = o.ButtonSizes.MEDIUM } = e,
         L = a.useId(),
-        S = a.useCallback(() => {
+        b = a.useCallback(() => {
             C.y(h.ti.ACTIVITY);
         }, []),
-        { submitting: b, wasSubmitting: R } = (0, A.Z)({
+        { submitting: S, wasSubmitting: R } = (0, A.Z)({
             applicationId: t.id,
             channelId: n.id,
             launchingComponentId: L,
-            onSubmissionComplete: S
+            onSubmissionComplete: b
         }),
         [T, M] = a.useState(!1),
         y = (0, d.Qv)({
@@ -54,7 +54,7 @@ function I(e) {
             commandName: j,
             autoDismissOnClick: y === d.JS.LEAVE,
             launchingComponentId: L,
-            submitting: null != R ? R : b
+            submitting: null != R ? R : S
         }),
         { disabled: U, reason: B } = (function (e) {
             let { channel: n, application: t, activityAction: i } = e,

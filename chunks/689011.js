@@ -1,12 +1,12 @@
 t.d(n, {
     Oc: function () {
-        return j;
+        return N;
     },
     t: function () {
         return h;
     },
     xe: function () {
-        return v;
+        return j;
     }
 });
 var r = t(735250);
@@ -53,7 +53,7 @@ let h = (e) => {
                   ]
               });
     },
-    j = (e) => {
+    N = (e) => {
         let { icon: n, storeListingBenefits: t, skuBenefits: i, application: l, title: a, subtitle: s, description: o } = e;
         return null == l
             ? null
@@ -80,7 +80,7 @@ let h = (e) => {
                   })
               });
     };
-function v(e) {
+function j(e) {
     let { tierName: n, onConfirm: t, subscription: l } = e;
     return (0, r.jsxs)('div', {
         className: m.purchaseConfirmation,

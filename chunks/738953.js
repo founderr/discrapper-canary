@@ -150,7 +150,7 @@ function w(e) {
                                             guildId: w,
                                             channelId: x,
                                             profileType: b.y0.BITE_SIZE,
-                                            onClose: B
+                                            onCloseProfile: B
                                         })
                                     ]
                                 }),

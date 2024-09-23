@@ -30,8 +30,8 @@ var i = t(735250),
     g = t(148958),
     P = t(541099),
     L = t(827498),
-    S = t(87005),
-    b = t(106066),
+    b = t(87005),
+    S = t(106066),
     R = t(783097),
     T = t(695676),
     M = t(98880),
@@ -72,8 +72,8 @@ function Y(e) {
         [N, x] = $(_),
         [v, I] = $(C),
         [g, P] = $(h),
-        S = A && N && v && g,
-        b = (C || _) && !S,
+        b = A && N && v && g,
+        S = (C || _) && !b,
         T = h && u;
     a.useEffect(() => {
         (0, p.w1)({
@@ -128,12 +128,12 @@ function Y(e) {
                                       channel: n,
                                       onEmptyState: P
                                   }),
-                              S &&
+                              b &&
                                   (0, i.jsx)(Z.A, {
                                       type: L.LG.HOME_EMPTY,
                                       textContent: t === L._b.TEXT ? k.Z.Messages.APP_LAUNCHER_HOME_EMPTY_STATE_SEARCH_SUGGEST_BODY : k.Z.Messages.APP_LAUNCHER_HOME_EMPTY_STATE_ACTIVITIES_BODY
                                   }),
-                              b && (0, i.jsx)(H.Z, {})
+                              S && (0, i.jsx)(H.Z, {})
                           ]
                       })
             })
@@ -227,7 +227,7 @@ function z(e) {
 function q(e) {
     let { channel: n, entrypoint: t, onEmptyState: l } = e,
         o = t === L._b.VOICE,
-        { frecentApps: r, loading: s } = (0, S.f)(n, o),
+        { frecentApps: r, loading: s } = (0, b.f)(n, o),
         c = a.useMemo(() => {
             let e = [];
             for (let n of r) null != n.application && e.push({ application: n.application });
@@ -308,7 +308,7 @@ function X(e) {
             numItems: l.length,
             numVisibleItems: l.length
         }),
-        s = (0, b.s)('ActivitiesShelfSection'),
+        s = (0, S.s)('ActivitiesShelfSection'),
         c = 0 === l.length;
     return (a.useEffect(() => {
         t(c);

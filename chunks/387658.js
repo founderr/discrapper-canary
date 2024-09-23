@@ -28,8 +28,8 @@ var i = t(735250),
     g = t(660090),
     P = t(783097),
     L = t(845936),
-    S = t(176412),
-    b = t(870205),
+    b = t(176412),
+    S = t(870205),
     R = t(981631),
     T = t(689079),
     M = t(689938),
@@ -60,7 +60,7 @@ function H(e) {
                 A.S.dispatch(R.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: l.id });
         }, [l.id, o, s, c]),
         m = (null !== (t = null === (n = o.options) || void 0 === n ? void 0 : n.length) && void 0 !== t ? t : 0) > 0,
-        _ = a.useMemo(() => (0, S.ae)(o.displayDescription, void 0), [o.displayDescription]),
+        _ = a.useMemo(() => (0, b.ae)(o.displayDescription, void 0), [o.displayDescription]),
         C = a.useMemo(
             () =>
                 (0, i.jsxs)('div', {
@@ -301,7 +301,7 @@ function k(e) {
                       sectionName: o,
                       children:
                           E &&
-                          (0, i.jsx)(b.Z, {
+                          (0, i.jsx)(S.Z, {
                               sortOrder: h,
                               onSortOptionClick: f
                           })

@@ -81,7 +81,7 @@ function I(e) {
                                           })
                                       })
                                     : null,
-                                (0, i.jsx)(b, {
+                                (0, i.jsx)(S, {
                                     channel: n,
                                     application: t,
                                     sectionName: d,
@@ -177,7 +177,7 @@ function L(e) {
         ? (0, i.jsxs)('div', {
               className: x.tagsContainer,
               children: [
-                  (0, i.jsx)(S, { application: n }),
+                  (0, i.jsx)(b, { application: n }),
                   t.map((e, n) =>
                       (0, i.jsx)(
                           'div',
@@ -196,7 +196,7 @@ function L(e) {
           })
         : null;
 }
-function S(e) {
+function b(e) {
     var n;
     let { application: t } = e;
     if (!(0, h.ye)(t)) return null;
@@ -216,7 +216,7 @@ function S(e) {
         ]
     });
 }
-function b(e) {
+function S(e) {
     let { channel: n, application: t, sectionName: a, hasCommands: l, isDeveloperOfThisApp: o } = e,
         r = (0, m.Fs)(n, t.id);
     return (0, h.BQ)(t)

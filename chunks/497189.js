@@ -287,7 +287,7 @@ t.Z = a.memo(function (e) {
             },
             'animate-always'
         ),
-        W = (0, c.useSpring)(
+        z = (0, c.useSpring)(
             {
                 from: y ? { transform: 'translateY(0px)' } : { transform: 'translateY(240px)' },
                 to: { transform: 'translateY(0px)' },
@@ -297,7 +297,7 @@ t.Z = a.memo(function (e) {
             },
             'animate-always'
         ),
-        z = a.useMemo(() => (s ? L.Z.Messages.CLAN_DISCOVERY_UPSELL_ADMIN_LIST_SERVER : null == P ? L.Z.Messages.CLAN_DISCOVERY_UPSELL_RESERVE : L.Z.Messages.CLAN_DISCOVERY_UPSELL_CONTINUE_SETUP), [P, s]),
+        W = a.useMemo(() => (s ? L.Z.Messages.CLAN_DISCOVERY_UPSELL_ADMIN_LIST_SERVER : null == P ? L.Z.Messages.CLAN_DISCOVERY_UPSELL_RESERVE : L.Z.Messages.CLAN_DISCOVERY_UPSELL_CONTINUE_SETUP), [P, s]),
         K = a.useCallback(async () => {
             await (0, E.Zx)(C), d.Z.transitionToGuildSync('936317138904440892');
         }, [C]),
@@ -353,7 +353,7 @@ t.Z = a.memo(function (e) {
                                     className: Z.clanCardCenterContainer,
                                     style: { overflow: G ? 'hidden' : 'visible' },
                                     children: (0, i.jsx)(l.animated.div, {
-                                        style: W,
+                                        style: z,
                                         children: (0, i.jsx)(f.xV, {
                                             clan: j,
                                             className: Z.clanCardCenter,
@@ -394,7 +394,7 @@ t.Z = a.memo(function (e) {
                     setSelectedGuildId: R,
                     eligibleGuilds: t,
                     onButtonClick: D,
-                    buttonText: z,
+                    buttonText: W,
                     hasCompletedUpsell: r
                 })
             }),

@@ -42,8 +42,8 @@ var i = n(735250),
     V = n(899740),
     F = n(177033),
     Y = n(355350),
-    W = n(307947),
-    z = n(96479),
+    z = n(307947),
+    W = n(96479),
     K = n(480874),
     q = n(687683),
     Q = n(981631),
@@ -75,7 +75,7 @@ function en() {
                     c = null === (a = n[l + 1]) || void 0 === a ? void 0 : null === (t = a.channel) || void 0 === t ? void 0 : t.id,
                     d = o.channel.id;
                 return (0, i.jsx)(
-                    z.Z,
+                    W.Z,
                     {
                         index: l,
                         className: r()({
@@ -128,7 +128,7 @@ function en() {
             [t, I, c]
         );
     return (n.length !== t && v.Z.increment({ name: o.V.MESSAGE_REQUEST_COUNT_DRIFT }), 0 === n.length)
-        ? (0, i.jsx)(W.Z, { section: q.pS.REQUESTS })
+        ? (0, i.jsx)(z.Z, { section: q.pS.REQUESTS })
         : (0, i.jsx)(l.bG, {
               navigator: E,
               children: (0, i.jsx)(l.SJ, {

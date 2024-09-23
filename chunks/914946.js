@@ -30,13 +30,13 @@ n.d(t, {
         return B;
     },
     fy: function () {
-        return z;
+        return W;
     },
     s9: function () {
         return H;
     },
     t9: function () {
-        return W;
+        return z;
     },
     tr: function () {
         return Q;
@@ -231,11 +231,11 @@ function Y(e) {
         s = 0;
     return (n && (s |= O.xjy.INSTANCE), (null == i ? void 0 : i.join) != null && (s |= O.xjy.JOIN), t) ? ((s |= O.xjy.EMBEDDED), (s |= O.xjy.PARTY_PRIVACY_VOICE_CHANNEL)) : (((null == a ? void 0 : a.privacy) === O.RYY.PUBLIC || o.K.get('ACTIVITIES_FORCE_PUBLIC')) && (E.cP.getSetting() && (s |= O.xjy.PARTY_PRIVACY_FRIENDS), E.Ou.getSetting() && (s |= O.xjy.PARTY_PRIVACY_VOICE_CHANNEL)), s);
 }
-function W(e, t, n) {
+function z(e, t, n) {
     if (e === O.mFx.JOIN) return null != t && null != t.id && null != n.join;
     return !1;
 }
-function z(e, t, n) {
+function W(e, t, n) {
     return r.tn
         .get({
             url: O.ANM.APPLICATION_RPC(t),

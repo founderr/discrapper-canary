@@ -87,7 +87,7 @@ function j(e) {
                                             user: n,
                                             profileType: g.y0.FULL_SIZE,
                                             hasEntered: y === i.ModalTransitionState.ENTERED,
-                                            onClose: U
+                                            onCloseProfile: U
                                         }),
                                         (0, t.jsxs)('div', {
                                             className: L.headerButtons,
