@@ -9636,7 +9636,8 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 }
 
 .visual-refresh .container_fc4f04 {
-    --__header-bar-background: var(--bg-base-primary)
+    --__header-bar-background: var(--bg-base-primary);
+    min-height: 40px
 }
 
 .upperContainer_fc4f04 {
@@ -9727,17 +9728,14 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 }
 
 .visual-refresh .icon_fc4f04 {
-    width: 20px;
-    height: 20px
+    width: 18px;
+    height: 18px
 }
 
 .visual-refresh .iconWrapper_fc4f04 {
     display: flex;
     align-items: center;
-    justify-content: center;
-    height: 40px;
-    width: 40px;
-    margin: 0 2px
+    justify-content: center
 }
 
 .icon_fc4f04 {
