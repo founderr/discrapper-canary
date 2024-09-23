@@ -620,5 +620,10 @@ e.exports = Object.freeze({
     QUESTS_NITRO_ENROLL_FAILURE_TOAST: 'Something went wrong. You may not be elegible to enroll in this Quest.',
     GUILD_FRIENDS: 'Friends in Server',
     GUILD_FRIENDS_MODAL_HEADER: '{numFriends, plural, =0 {0 Friends} one {1 Friend} other {{numFriends} Friends}} in !!{guildName}!!',
-    GUILD_FRIENDS_MODAL_HEADER_LOADING: '{numFriends, plural, =0 {Friends} one {1+ Friend} other {{numFriends}+ Friends}} in !!{guildName}!!'
+    GUILD_FRIENDS_MODAL_HEADER_LOADING: '{numFriends, plural, =0 {Friends} one {1+ Friend} other {{numFriends}+ Friends}} in !!{guildName}!!',
+    LEADERBOARD_POPOUT_TITLE: '**!!{leaderboardName}!!** standings',
+    LEADERBOARD_TABLE_HEADER_PLAYER: 'Player',
+    LEADERBOARD_TABLE_HEADER_WEEKLY_KILLS: 'Weekly Kills',
+    MEMBER_LIST_CONTENT_FEED_LEADERBOARD_KILLS: '{value, number} Kills',
+    MEMBER_LIST_CONTENT_FEED_LEADERBOARD_MENU_REFRESH_MY_DATA: 'Refresh my game data'
 });

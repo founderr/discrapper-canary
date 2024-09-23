@@ -34,6 +34,7 @@ let E = {
     x = a.forwardRef(function (e, n) {
         let { isSelected: t, giftStyle: a, setSelectedGiftStyle: s, onFocus: o, onBlur: c } = e;
         return (0, i.jsx)(r.Clickable, {
+            className: l.button,
             innerRef: n,
             onClick: () => s(a),
             onFocus: o,
