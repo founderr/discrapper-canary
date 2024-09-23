@@ -1246,6 +1246,15 @@ B(
             tag: e.tag
         });
     }),
+    k(['REACTION_NOTIFICATION_SENT'], (e) => {
+        V({
+            type: 'REACTION_NOTIFICATION_SENT',
+            route: e.route,
+            message: e.message,
+            emoji: e.emoji,
+            reactorUserId: e.reactor_user_id
+        });
+    }),
     k(['NOTIFICATION_CENTER_ITEM_CREATE'], (e) => {
         V({
             type: 'NOTIFICATION_CENTER_ITEM_CREATE',
