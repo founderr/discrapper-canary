@@ -13,8 +13,8 @@ function l(e, t, o, l, i) {
         c = n.Z.getOutputDeviceId(),
         _ = n.Z.getOutputDevices()[c],
         b = n.Z.getVideoDeviceId(),
-        E = n.Z.getVideoDevices()[b],
-        m = n.Z.getNoiseCancellation(),
+        m = n.Z.getVideoDevices()[b],
+        E = n.Z.getNoiseCancellation(),
         O = n.Z.getMediaEngine().getAudioSubsystem(),
         h = n.Z.getMediaEngine().getAudioLayer();
     a.default.track(s.rMx.CALL_REPORT_PROBLEM, {
@@ -29,12 +29,13 @@ function l(e, t, o, l, i) {
         noise_suppression_enabled: r.noiseSuppression,
         automatic_gain_control_enabled: r.automaticGainControl,
         voice_output_volume: r.outputVolume,
-        noise_cancellation_enabled: m,
+        noise_cancellation_enabled: E,
         input_device_name: null == d ? void 0 : d.name,
         output_device_name: null == _ ? void 0 : _.name,
-        video_device_name: null == E ? void 0 : E.name,
+        video_device_name: null == m ? void 0 : m.name,
         audio_subsystem: O,
         audio_layer: h,
+        automatic_audio_subsystem: r.automaticAudioSubsystem,
         ...i
     });
 }

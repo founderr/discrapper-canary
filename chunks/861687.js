@@ -423,7 +423,8 @@ class eo extends E.Z {
                 num_fast_udp_reconnects: null != this._connection ? (null === (u = this._connection) || void 0 === u ? void 0 : u.getNumFastUdpReconnects()) : null,
                 parent_media_session_id: this.parentMediaSessionId,
                 audio_subsystem: w.Z.getMediaEngine().getAudioSubsystem(),
-                audio_layer: w.Z.getMediaEngine().getAudioLayer()
+                audio_layer: w.Z.getMediaEngine().getAudioLayer(),
+                automatic_audio_subsystem: n.automaticAudioSubsystem
             });
             let a = this.getMediaSessionId();
             w.Z.getMediaEngine()
