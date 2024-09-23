@@ -4122,6 +4122,7 @@ let ie = Object.freeze({
     (nf.PERK_DISCOVERABILITY_CARD_CTA_CLICKED = 'perk_discoverability_card_cta_clicked'),
     (nf.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED = 'premium_whats_new_box_cta_clicked'),
     (nf.PREMIUM_WHATS_NEW_VIEW_TIME = 'premium_whats_new_view_time'),
+    (nf.PREMIUM_BEST_OF_VIEW_TIME = 'premium_best_of_view_time'),
     (nf.VIDEO_STREAM_ENDED = 'video_stream_ended'),
     (nf.VIDEO_STREAM_STARTED = 'video_stream_started'),
     (nf.STREAM_WARNING_TRIGGERED = 'stream_warning_triggered'),

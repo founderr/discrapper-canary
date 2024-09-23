@@ -54,81 +54,86 @@ let Q = (e) => {
         return t || n ? (0, s.jsx)(L.Z, { lifted: !t && n }) : null;
     },
     X = (e) => {
-        let { isFullscreen: t, inOfferExperience: n, setIsAllPerksVisible: r, whatsNewV2Enabled: o, BestOfNitroV2Enabled: l, setIsWhatsNewBoxVisible: d, setIsBestOfNitroVisible: _, hasRenderedOnce: u } = e,
-            [E, T] = a.useState(!1),
+        let { isFullscreen: t, inOfferExperience: n, setIsAllPerksVisible: r, whatsNewV2Enabled: o, BestOfNitroV2Enabled: l, setIsWhatsNewBoxVisible: d, setIsBestOfNitroVisible: _, isWhatsNewBoxVisible: u, isBestOfNitroVisible: E, hasRenderedOnce: T } = e,
             I = a.useRef(0),
-            R = a.useRef(0);
+            R = a.useRef(0),
+            g = a.useRef(0),
+            N = a.useRef(0);
         return (a.useEffect(() => {
-            E ? (I.current = Date.now()) : 0 !== I.current && ((R.current = R.current + Date.now() - I.current), (I.current = 0));
+            u ? (I.current = Date.now()) : 0 !== I.current && ((R.current = R.current + Date.now() - I.current), (I.current = 0));
+        }, [u]),
+        a.useEffect(() => {
+            E ? (g.current = Date.now()) : 0 !== g.current && ((N.current = N.current + Date.now() - g.current), (g.current = 0));
         }, [E]),
         a.useEffect(
             () => () => {
                 0 !== I.current && (R.current = R.current + (Date.now() - I.current)),
+                    0 !== g.current && (N.current = N.current + (Date.now() - g.current)),
                     0 !== R.current &&
                         m.default.track(V.rMx.PREMIUM_WHATS_NEW_VIEW_TIME, {
                             view_time: R.current,
+                            is_v2: o
+                        }),
+                    0 !== N.current &&
+                        m.default.track(V.rMx.PREMIUM_BEST_OF_VIEW_TIME, {
+                            view_time: N.current,
                             is_v2: o
                         });
             },
             []
         ),
         t)
-            ? (0, s.jsx)(c.$, {
-                  onChange: (e) => T(e),
-                  threshold: 0,
-                  active: !0,
-                  children: (0, s.jsxs)('div', {
-                      className: i()(W.whatsNewSectionBackground, {
-                          [W.whatsNewSectionBackgroundV2]: o || l,
-                          [W.whatsNewSectionBackgroundNoGap]: o && l
-                      }),
-                      children: [
-                          !o &&
-                              (0, s.jsx)(B.Z, {
-                                  variant: y.R0.WHATS_NEW,
-                                  isFullScreen: t
-                              }),
-                          o &&
-                              (0, s.jsx)(c.$, {
-                                  onChange: (e) => d(e),
-                                  threshold: 0,
-                                  active: !0,
-                                  children: (0, s.jsx)(v.Z, { shouldLoadVideo: u })
-                              }),
-                          l &&
-                              (0, s.jsx)(c.$, {
-                                  onChange: (e) => _(e),
-                                  threshold: 0,
-                                  active: !0,
-                                  children: (0, s.jsx)(v.Z, {
-                                      isBestOfNitro: !0,
-                                      shouldLoadVideo: u
-                                  })
-                              }),
-                          !l &&
-                              (0, s.jsx)(B.Z, {
-                                  isFullScreen: t,
-                                  showAllPerksButton: t
-                                      ? (0, s.jsx)(k.Z, {
-                                            setIsAllPerksVisible: r,
-                                            previousComponent: y.MQ.MARKETING
-                                        })
-                                      : void 0
-                              }),
-                          n &&
-                              !o &&
-                              (0, s.jsx)(U.ZP, {
-                                  className: W.pdSparklesTop,
-                                  variant: U.u0.TOP
-                              }),
-                          n &&
-                              !o &&
-                              (0, s.jsx)(U.ZP, {
-                                  className: W.pdSparklesBottom,
-                                  variant: U.u0.BOTTOM
+            ? (0, s.jsxs)('div', {
+                  className: i()(W.whatsNewSectionBackground, {
+                      [W.whatsNewSectionBackgroundV2]: o || l,
+                      [W.whatsNewSectionBackgroundNoGap]: o && l
+                  }),
+                  children: [
+                      !o &&
+                          (0, s.jsx)(B.Z, {
+                              variant: y.R0.WHATS_NEW,
+                              isFullScreen: t
+                          }),
+                      o &&
+                          (0, s.jsx)(c.$, {
+                              onChange: (e) => d(e),
+                              threshold: 0,
+                              active: !0,
+                              children: (0, s.jsx)(v.Z, { shouldLoadVideo: T })
+                          }),
+                      l &&
+                          (0, s.jsx)(c.$, {
+                              onChange: (e) => _(e),
+                              threshold: 0,
+                              active: !0,
+                              children: (0, s.jsx)(v.Z, {
+                                  isBestOfNitro: !0,
+                                  shouldLoadVideo: T
                               })
-                      ]
-                  })
+                          }),
+                      !l &&
+                          (0, s.jsx)(B.Z, {
+                              isFullScreen: t,
+                              showAllPerksButton: t
+                                  ? (0, s.jsx)(k.Z, {
+                                        setIsAllPerksVisible: r,
+                                        previousComponent: y.MQ.MARKETING
+                                    })
+                                  : void 0
+                          }),
+                      n &&
+                          !o &&
+                          (0, s.jsx)(U.ZP, {
+                              className: W.pdSparklesTop,
+                              variant: U.u0.TOP
+                          }),
+                      n &&
+                          !o &&
+                          (0, s.jsx)(U.ZP, {
+                              className: W.pdSparklesBottom,
+                              variant: U.u0.BOTTOM
+                          })
+                  ]
               })
             : null;
     };
@@ -270,6 +275,8 @@ t.Z = (e) => {
                     BestOfNitroV2Enabled: L,
                     setIsWhatsNewBoxVisible: ee,
                     setIsBestOfNitroVisible: en,
+                    isWhatsNewBoxVisible: $,
+                    isBestOfNitroVisible: et,
                     hasRenderedOnce: er
                 }),
                 !v && !L && (0, s.jsx)(Q, { isFullscreen: n }),
