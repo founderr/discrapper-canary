@@ -17,9 +17,9 @@ var l = s(442837),
     d = s(430824);
 function u(e) {
     let { refToScroller: t } = e,
-        { channel: s } = (0, l.e7)([c.Z], () => c.Z.getProps(), []),
+        s = (0, l.e7)([c.Z], () => c.Z.getChannel(), []),
         i = (0, l.e7)([d.Z], () => (null != s ? d.Z.getGuild(s.getGuildId()) : null), [s]),
-        { section: a, sectionId: u, webhooks: h, editedWebhook: m, isFetching: g, errors: E } = (0, l.e7)([o.Z], () => o.Z.getProps(), []);
+        { section: a, sectionId: u, webhooks: h, editedWebhook: m, isFetching: g, errors: E } = (0, l.cj)([o.Z], () => o.Z.getProps(), []);
     return null == i || null == s
         ? null
         : (0, n.jsx)(r.Z, {
@@ -36,15 +36,16 @@ function u(e) {
           });
 }
 function h() {
-    let { channel: e, submitting: t } = (0, l.e7)([c.Z], () => c.Z.getProps()),
-        s = (0, l.e7)([d.Z], () => (null != e ? d.Z.getGuild(e.getGuildId()) : null), [e]);
+    let { channel: e, submitting: t } = (0, l.cj)([c.Z], () => c.Z.getProps()),
+        s = (0, l.e7)([o.Z], () => o.Z.editedWebhook),
+        r = (0, l.e7)([d.Z], () => (null != e ? d.Z.getGuild(e.getGuildId()) : null), [e]);
     return (0, n.jsx)(a.Z, {
         submitting: t,
         onReset: () => {
             i.Z.init();
         },
         onSave: () => {
-            if (null != s) null != o.Z.editedWebhook && i.Z.saveWebhook(s.id, o.Z.editedWebhook);
+            if (null != r) null != s && i.Z.saveWebhook(r.id, s);
         }
     });
 }
