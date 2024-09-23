@@ -233,7 +233,13 @@ class p extends s.Z {
                     average_outbound_want: t.outboundSinkWantNum > 0 ? t.outboundSinkWantSum / t.outboundSinkWantNum : null,
                     frames_dropped_rate_limiter: t.framesDroppedRateLimiter,
                     frames_dropped_encoder_queue: t.framesDroppedEncoderQueue,
-                    frames_dropped_congestion_window: t.framesDroppedCongestionWindow
+                    frames_dropped_congestion_window: t.framesDroppedCongestionWindow,
+                    frames_dropped_encoder: t.framesDroppedEncoder,
+                    duration_hq_simulcast_stream_encoded: f(this.hqSimulcastStreamEncoded.totalDurationSeconds()),
+                    duration_lq_simulcast_stream_encoded: f(this.lqSimulcastStreamEncoded.totalDurationSeconds()),
+                    duration_both_simulcast_streams_encoded: f(this.bothSimulcastStreamsEncoded.totalDurationSeconds()),
+                    duration_fps_bandwidth_limited: f(this.bandwidthLimitedFramerate.totalDurationSeconds()),
+                    duration_resolution_bandwidth_limited: f(this.bandwidthLimitedResolution.totalDurationSeconds())
                 });
             }),
             e
@@ -303,9 +309,6 @@ class p extends s.Z {
                 duration_paused: f(this.paused.totalDuration() / 1000),
                 duration_zero_receivers: f(this.zeroReceivers.totalDuration() / 1000),
                 duration_video_stopped: f(this.videoStopped.totalDuration() / 1000),
-                duration_hq_simulcast_stream_encoded: f(this.hqSimulcastStreamEncoded.totalDuration() / 1000),
-                duration_lq_simulcast_stream_encoded: f(this.lqSimulcastStreamEncoded.totalDuration() / 1000),
-                duration_both_simulcast_streams_encoded: f(this.bothSimulcastStreamsEncoded.totalDurationSeconds()),
                 duration_hq_simulcast_stream_watched: f(this.hqSimulcastStreamWatched.totalDurationSeconds()),
                 duration_lq_simulcast_stream_watched: f(this.lqSimulcastStreamWatched.totalDurationSeconds()),
                 duration_hq_simulcast_stream_eligible: f(this.hqSimulcastStreamEligible.totalDurationSeconds()),
@@ -397,10 +400,10 @@ class p extends s.Z {
                 .filter((e) => 'video' === e.type)
                 .forEach((t) => {
                     if (null != t) {
-                        let T = t.ssrc,
-                            S = this.outboundStats[T];
-                        null == S && (console.warn('Unknown outbound video stream with SSRC: '.concat(T)), (S = new _.nt(this.timestampProducer)), (this.outboundStats[T] = S)), null == S.timeToFirstFrame && (t.framesEncoded > 0 || (null !== (r = t.frameRateInput) && void 0 !== r ? r : 0) > 0) && (S.timeToFirstFrame = Math.max(0, e - S.startTime));
-                        let g = n.find((e) => e.ssrc === T);
+                        let A = t.ssrc,
+                            N = this.outboundStats[A];
+                        null == N && (console.warn('Unknown outbound video stream with SSRC: '.concat(A)), (N = new _.nt(this.timestampProducer)), (this.outboundStats[A] = N)), null == N.timeToFirstFrame && (t.framesEncoded > 0 || (null !== (r = t.frameRateInput) && void 0 !== r ? r : 0) > 0) && (N.timeToFirstFrame = Math.max(0, e - N.startTime));
+                        let O = n.find((e) => e.ssrc === A);
                         var r,
                             i,
                             a,
@@ -410,15 +413,18 @@ class p extends s.Z {
                             d,
                             f,
                             p,
-                            I = !0;
+                            I,
+                            m,
+                            T,
+                            S = !0;
                         if (this.connection.context === o.Yn.STREAM) {
-                            var m = this.connection.getRemoteVideoSinkWants(T);
-                            null == m && (null == g ? void 0 : g.quality) === h && (m = this.connection.getRemoteVideoSinkWants('any')), (I = (null != m ? m : 0) > 0);
+                            var g = this.connection.getRemoteVideoSinkWants(A);
+                            null == g && (null == O ? void 0 : O.quality) === h && (g = this.connection.getRemoteVideoSinkWants('any')), (S = (null != g ? g : 0) > 0);
                         }
-                        if (!this.videoStopped.value && I) {
-                            S.appendAndIncrementStats(_.z4.parseOutboundStats(t, e)), S.encoderCodec !== _.u7.UNKNOWN && E.add(S.encoderCodec);
-                            let n = null == g ? void 0 : g.maxBitrate;
-                            S.appendTargetRates(null == g ? void 0 : g.maxFrameRate, null !== (a = t.bitrateTarget) && void 0 !== a ? a : Math.min(null !== (i = c.availableOutgoingBitrate) && void 0 !== i ? i : 0, null != n ? n : 0), n, c.availableOutgoingBitrate), (S.averageEncodeTime = null !== (s = t.averageEncodeTime) && void 0 !== s ? s : 0), (S.framesDroppedRateLimiter = null !== (l = t.framesDroppedRateLimiter) && void 0 !== l ? l : null), (S.framesDroppedEncoderQueue = null !== (u = t.framesDroppedEncoderQueue) && void 0 !== u ? u : null), (S.framesDroppedCongestionWindow = null !== (d = t.framesDroppedCongestionWindow) && void 0 !== d ? d : null), (this.hqSimulcastStreamEncoded.value = null !== (f = t.hqSimulcastStreamEncoded) && void 0 !== f && f), (this.lqSimulcastStreamEncoded.value = null !== (p = t.lqSimulcastStreamEncoded) && void 0 !== p && p), (this.bothSimulcastStreamsEncoded.value = this.hqSimulcastStreamEncoded.value && this.lqSimulcastStreamEncoded.value);
+                        if (!this.videoStopped.value && S) {
+                            N.appendAndIncrementStats(_.z4.parseOutboundStats(t, e)), N.encoderCodec !== _.u7.UNKNOWN && E.add(N.encoderCodec);
+                            let n = null == O ? void 0 : O.maxBitrate;
+                            N.appendTargetRates(null == O ? void 0 : O.maxFrameRate, null !== (a = t.bitrateTarget) && void 0 !== a ? a : Math.min(null !== (i = c.availableOutgoingBitrate) && void 0 !== i ? i : 0, null != n ? n : 0), n, c.availableOutgoingBitrate), (N.averageEncodeTime = null !== (s = t.averageEncodeTime) && void 0 !== s ? s : 0), (N.framesDroppedRateLimiter = null !== (l = t.framesDroppedRateLimiter) && void 0 !== l ? l : null), (N.framesDroppedEncoderQueue = null !== (u = t.framesDroppedEncoderQueue) && void 0 !== u ? u : null), (N.framesDroppedCongestionWindow = null !== (d = t.framesDroppedCongestionWindow) && void 0 !== d ? d : null), (N.framesDroppedEncoder = null !== (f = t.framesDroppedEncoder) && void 0 !== f ? f : null), (this.hqSimulcastStreamEncoded.value = null !== (p = t.hqSimulcastStreamEncoded) && void 0 !== p && p), (this.lqSimulcastStreamEncoded.value = null !== (I = t.lqSimulcastStreamEncoded) && void 0 !== I && I), (this.bothSimulcastStreamsEncoded.value = this.hqSimulcastStreamEncoded.value && this.lqSimulcastStreamEncoded.value), (this.bandwidthLimitedResolution.value = null !== (m = t.bandwidthLimitedResolution) && void 0 !== m && m), (this.bandwidthLimitedFramerate.value = null !== (T = t.bandwidthLimitedFrameRate) && void 0 !== T && T);
                         }
                     }
                 }),
@@ -473,6 +479,8 @@ class p extends s.Z {
             E(this, 'streamEnd', void 0),
             E(this, 'symmetricCodecUpdates', void 0),
             E(this, 'asymmetricCodecUpdates', void 0),
+            E(this, 'bandwidthLimitedFramerate', void 0),
+            E(this, 'bandwidthLimitedResolution', void 0),
             E(this, 'statCollectionPausedUsers', void 0),
             E(this, 'sampleStats', void 0),
             (this.connection = e),
@@ -505,6 +513,8 @@ class p extends s.Z {
             (this.hqSimulcastStreamEligible = new h(!1, t)),
             (this.lqSimulcastStreamEligible = new h(!1, t)),
             (this.windowOccluded = new h(!1, t)),
-            (this.videoStoppedForOcclusion = new h(!1, t));
+            (this.videoStoppedForOcclusion = new h(!1, t)),
+            (this.bandwidthLimitedFramerate = new h(!1, t)),
+            (this.bandwidthLimitedResolution = new h(!1, t));
     }
 }

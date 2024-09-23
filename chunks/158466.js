@@ -79,6 +79,7 @@ function l(e, t) {
         framesDroppedRateLimiter: e.framesDroppedRateLimiter,
         framesDroppedEncoderQueue: e.framesDroppedEncoderQueue,
         framesDroppedCongestionWindow: e.framesDroppedCongestionWindow,
+        framesDroppedEncoder: e.framesDroppedEncoder,
         cpuLimitedResolution: e.cpuLimitedResolution,
         encoderQualityVmaf: null !== (A = null === (c = L.encoderQualityStats) || void 0 === c ? void 0 : c.imageQualityVmaf_v061) && void 0 !== A ? A : void 0,
         encoderQualityPsnr: null !== (N = null === (d = L.encoderQualityStats) || void 0 === d ? void 0 : d.imageQualityWebrtcPsnrDb) && void 0 !== N ? N : void 0,
@@ -95,7 +96,8 @@ function l(e, t) {
         encryptAttempts: e.encryptAttempts,
         encryptMaxAttempts: e.encryptMaxAttempts,
         hqSimulcastStreamEncoded: e.hqSimulcastStreamEncoded,
-        lqSimulcastStreamEncoded: e.lqSimulcastStreamEncoded
+        lqSimulcastStreamEncoded: e.lqSimulcastStreamEncoded,
+        bandwidthLimitedFrameRate: e.bwLimitedFrameRate
     };
 }
 function u(e, t, n, i) {
