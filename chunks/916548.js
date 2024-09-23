@@ -1,5 +1,12 @@
 e.exports = {
     boxBackdrop: 'boxBackdrop_dbabb4',
+    referralProgramBackground: 'referralProgramBackground_dbabb4',
+    serverProfilesBackground: 'serverProfilesBackground_dbabb4',
+    newStylesBackground: 'newStylesBackground_dbabb4',
+    yourStyleBackground: 'yourStyleBackground_dbabb4',
+    yourSpaceBackground: 'yourSpaceBackground_dbabb4',
+    noLimitsBackground: 'noLimitsBackground_dbabb4',
+    emojisBackground: 'emojisBackground_dbabb4',
     whatsNewBoxContainer: 'whatsNewBoxContainer_dbabb4',
     whatsNewArtContainer: 'whatsNewArtContainer_dbabb4',
     perkBoxVideo: 'perkBoxVideo_dbabb4',

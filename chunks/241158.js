@@ -3,8 +3,8 @@ var s = n(735250),
     a = n(470079),
     r = n(120356),
     i = n.n(r),
-    l = n(392711),
-    o = n(481060),
+    o = n(392711),
+    l = n(481060),
     c = n(70097),
     d = n(626135),
     _ = n(526167),
@@ -14,127 +14,154 @@ var s = n(735250),
     I = n(869783),
     R = n(689938),
     m = n(916548);
-let N = (e) => {
-    let { name: t, title: n, description: r, descriptionCta: E, previewImage: R, videoUrl: N, shouldLoadVideo: g, isCompact: C, onClick: p, index: f } = e,
-        A = (0, _.rO)(),
+let g = (e) => {
+    let { name: t, title: n, description: r, descriptionCta: R, previewImage: g, videoUrl: N, shouldLoadVideo: C, isCompact: p, onClick: f, index: A } = e,
+        S = (0, _.rO)(),
         h = a.useRef(null),
-        [S, M] = a.useState(0),
-        x = (0, l.debounce)(() => {
-            d.default.track(T.rMx.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, l.snakeCase)(t) });
+        [M, x] = a.useState(0),
+        b = (function (e) {
+            let t;
+            switch (e) {
+                case E.dm.EMOJIS:
+                    t = m.emojisBackground;
+                    break;
+                case E.dm.REFERRAL_PROGRAM:
+                    t = m.referralProgramBackground;
+                    break;
+                case E.dm.NO_LIMITS:
+                    t = m.noLimitsBackground;
+                    break;
+                case E.dm.NEW_APP_STYLES:
+                    t = m.newStylesBackground;
+                    break;
+                case E.dm.YOUR_SPACE:
+                    t = m.yourSpaceBackground;
+                    break;
+                case E.dm.SERVER_PROFILES:
+                    t = m.serverProfilesBackground;
+                    break;
+                case E.dm.SHOW_YOUR_STYLE:
+                    t = m.yourStyleBackground;
+            }
+            return t;
+        })(t),
+        O = (0, o.debounce)(() => {
+            d.default.track(T.rMx.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, o.snakeCase)(t) });
         }, 800),
-        b = () => {
-            null != h.current && ((h.current.currentTime = S), h.current.play());
+        v = () => {
+            null != h.current && ((h.current.currentTime = M), h.current.play());
         },
-        O = () => {
-            null != h.current && (M(h.current.currentTime), h.current.pause());
+        P = () => {
+            null != h.current && (x(h.current.currentTime), h.current.pause());
         },
-        v = () =>
+        L = () =>
             (0, s.jsxs)('div', {
                 className: i()({
-                    [m.whatsNewTextBoxOuter]: !C,
-                    [m.compactTextBox]: C
+                    [m.whatsNewTextBoxOuter]: !p,
+                    [m.compactTextBox]: p
                 }),
                 children: [
-                    (0, s.jsx)(o.Heading, {
+                    (0, s.jsx)(l.Heading, {
                         variant: 'display-md',
                         color: 'header-primary',
                         className: i()({
-                            [m.whatsNewBoxHeader]: !C,
-                            [m.compactBoxHeader]: C
+                            [m.whatsNewBoxHeader]: !p,
+                            [m.compactBoxHeader]: p
                         }),
                         children: n
                     }),
-                    (0, s.jsx)(o.Text, {
+                    (0, s.jsx)(l.Text, {
                         variant: 'text-sm/normal',
                         color: 'text-normal',
                         className: m.whatsNewBoxDescription,
                         children: r
                     }),
-                    null != E &&
-                        (null != p
-                            ? (0, s.jsx)(o.Button, {
+                    null != R &&
+                        (null != f
+                            ? (0, s.jsx)(l.Button, {
                                   className: m.whatsNewBoxButton,
                                   onClick: () => {
-                                      x(), p();
+                                      O(), f();
                                   },
-                                  children: E
+                                  children: R
                               })
                             : (0, s.jsx)(u.Z, {
                                   className: m.whatsNewBoxButton,
-                                  onClick: x,
-                                  buttonText: E,
-                                  color: o.Button.Colors.BRAND,
-                                  look: o.Button.Looks.FILLED,
+                                  onClick: O,
+                                  buttonText: R,
+                                  color: l.Button.Colors.BRAND,
+                                  look: l.Button.Looks.FILLED,
                                   showIcon: !1
                               }))
                 ]
             }),
-        P = (e) => {
+        Z = (e) => {
             let { isLeft: t } = e;
             return (0, s.jsx)('div', {
                 className: i()({
-                    [m.whatsNewArtContainer]: !C,
-                    [m.compactBoxArtContainer]: C
+                    [m.whatsNewArtContainer]: !p,
+                    [m.compactBoxArtContainer]: p
                 }),
                 children: (0, s.jsx)(c.Z, {
                     playsInline: !0,
-                    preload: g ? 'auto' : 'none',
+                    preload: C ? 'auto' : 'none',
                     muted: !0,
-                    poster: R,
+                    poster: g,
                     loop: !0,
                     className: i()({
-                        [m.perkBoxVideo]: !C,
-                        [m.leftSideArt]: t && !C,
-                        [m.compactBoxVideo]: C
+                        [m.perkBoxVideo]: !p,
+                        [m.leftSideArt]: t && !p,
+                        [m.compactBoxVideo]: p
                     }),
                     ref: h,
                     children: (0, s.jsx)('source', {
                         src: N,
-                        type: A ? I.m.MP4 : I.m.WEBM
+                        type: S ? I.m.MP4 : I.m.WEBM
                     })
                 })
             });
         };
-    return f % 2 != 0
+    return A % 2 != 0
         ? (0, s.jsxs)('div', {
-              className: i()({
-                  [m.whatsNewBoxContainer]: !C,
-                  [m.compactBoxContainer]: C
+              className: i()(b, {
+                  [m.whatsNewBoxContainer]: !p,
+                  [m.compactBoxContainer]: p
               }),
-              onMouseEnter: b,
-              onFocus: b,
-              onBlur: O,
-              onMouseLeave: O,
-              children: [(0, s.jsx)(v, {}), (0, s.jsx)(P, { isLeft: !1 })]
+              onMouseEnter: v,
+              onFocus: v,
+              onBlur: P,
+              onMouseLeave: P,
+              children: [(0, s.jsx)(L, {}), (0, s.jsx)(Z, { isLeft: !1 })]
           })
         : (0, s.jsxs)('div', {
-              className: i()({
-                  [m.whatsNewBoxContainer]: !C,
-                  [m.compactBoxContainer]: C
+              className: i()(b, {
+                  [m.whatsNewBoxContainer]: !p,
+                  [m.compactBoxContainer]: p,
+                  boxBackgroundColor: b
               }),
-              onMouseEnter: b,
-              onFocus: b,
-              onBlur: O,
-              onMouseLeave: O,
-              children: [(0, s.jsx)(P, { isLeft: !0 }), (0, s.jsx)(v, {})]
+              onMouseEnter: v,
+              onFocus: v,
+              onBlur: P,
+              onMouseLeave: P,
+              children: [(0, s.jsx)(Z, { isLeft: !0 }), (0, s.jsx)(L, {})]
           });
 };
 t.Z = a.memo(function (e) {
     let { className: t, shouldLoadVideo: n, isBestOfNitro: a = !1 } = e,
         r = Object.values((0, E.ZP)(a)),
-        l = a ? Object.values((0, E.__)()) : null;
+        o = a ? Object.values((0, E.__)()) : null;
     return (0, s.jsx)(s.Fragment, {
         children: (0, s.jsxs)('div', {
             className: i()(m.boxBackdrop, t),
             children: [
-                (0, s.jsx)(o.Heading, {
+                (0, s.jsx)(l.Heading, {
                     className: m.whatsNewHeader,
                     variant: 'heading-xxl/extrabold',
                     children: a ? R.Z.Messages.PREMIUM_MARKETING_BEST_OF_NITRO : R.Z.Messages.WHATS_NEW
                 }),
                 r.map((e, t) =>
                     (0, s.jsx)(
-                        N,
+                        g,
                         {
                             shouldLoadVideo: n,
                             ...e,
@@ -143,12 +170,12 @@ t.Z = a.memo(function (e) {
                         e.name
                     )
                 ),
-                null != l &&
+                null != o &&
                     (0, s.jsx)('div', {
                         className: m.compactBoxOuterContainer,
-                        children: l.map((e, t) =>
+                        children: o.map((e, t) =>
                             (0, s.jsx)(
-                                N,
+                                g,
                                 {
                                     shouldLoadVideo: n,
                                     ...e,
