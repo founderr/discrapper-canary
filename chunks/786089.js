@@ -26,113 +26,102 @@ t.Z = (0, a.memo)(function (e) {
     let { quest: L } = e,
         [Z, R] = (0, a.useState)(!1),
         [O, x] = (0, a.useState)(24),
-        [b, P] = (0, a.useState)(!1),
+        b = (0, a.useRef)(null),
+        P = (0, a.useRef)(null),
         M = (0, a.useRef)(null),
-        D = (0, a.useRef)(null),
-        y = (0, a.useRef)(null),
-        j = (0, o.e7)([I.default], () => I.default.getCurrentUser()),
-        { ref: U, height: G = 0 } = (0, u.Z)(),
-        k = (0, _.ZP)(),
-        w = (0, T.B6)(null === (t = L.userStatus) || void 0 === t ? void 0 : t.claimedAt, {
+        D = (0, o.e7)([I.default], () => I.default.getCurrentUser()),
+        { ref: y, height: j = 0 } = (0, u.Z)(),
+        U = (0, _.ZP)(),
+        G = (0, T.B6)(null === (t = L.userStatus) || void 0 === t ? void 0 : t.claimedAt, {
             month: 'numeric',
             day: 'numeric'
         }),
-        B = null !== (v = null === (n = L.userStatus) || void 0 === n ? void 0 : n.claimedTier) && void 0 !== v ? v : 0,
-        H = L.config.rewards[B],
-        V = (null == H ? void 0 : H.type) === l.w.COLLECTIBLE,
-        { product: F } = (0, h.T)(V && null != H ? H.skuId : null),
-        Y = null == F ? void 0 : null === (s = F.items) || void 0 === s ? void 0 : s[0];
+        w = null !== (v = null === (n = L.userStatus) || void 0 === n ? void 0 : n.claimedTier) && void 0 !== v ? v : 0,
+        k = L.config.rewards[w],
+        B = (null == k ? void 0 : k.type) === l.w.COLLECTIBLE,
+        { product: H } = (0, h.T)(B && null != k ? k.skuId : null),
+        V = null == H ? void 0 : null === (s = H.items) || void 0 === s ? void 0 : s[0];
     if (
-        ((0, u.P)(M, (e) => {
+        ((0, u.P)(b, (e) => {
             let { height: t } = e;
-            if (!V || null == t || null == D.current || null == M.current || null == y.current) return;
-            let n = M.current.getBoundingClientRect(),
-                i = D.current.getBoundingClientRect(),
-                a = y.current.getBoundingClientRect();
+            if (!B || null == t || null == P.current || null == b.current || null == M.current) return;
+            let n = b.current.getBoundingClientRect(),
+                i = P.current.getBoundingClientRect(),
+                a = M.current.getBoundingClientRect();
             x((i.top - n.top - a.height) / 2);
         }),
-        null == H || b)
+        null == k)
     )
         return null;
-    let W = (0, c.wj)(k),
-        z = (0, f.Sz)(L.id, L.config.assets.logotype, 'dark'),
-        K = (0, f.Sz)(L.id, null != H.assetVideo ? H.assetVideo : H.asset),
-        q = (0, f.nP)(K),
-        Q = Z ? G + 8 : 0,
-        X = () => {
+    let F = (0, c.wj)(U),
+        Y = (0, f.Sz)(L.id, L.config.assets.logotype, 'dark'),
+        W = (0, f.Sz)(L.id, null != k.assetVideo ? k.assetVideo : k.asset),
+        z = (0, f.nP)(W),
+        K = Z ? j + 8 : 0,
+        q = () => {
             R(!0),
                 g.default.track(C.rMx.QUEST_HOVER, {
                     quest_id: L.id,
                     ...(0, p.mH)(S.jn.TROPHY_CASE_CARD)
                 });
         },
-        J = () => R(!1),
-        $ = (e) => {
-            P(!0),
-                g.default.track(C.rMx.QUEST_ASSET_LOADING_FAILURE, {
-                    source: e,
-                    asset_id: e,
-                    quest_id: L.id
-                });
-        };
+        Q = () => R(!1);
     return (0, i.jsx)(d.FocusRing, {
         children: (0, i.jsxs)('div', {
-            ref: M,
+            ref: b,
             tabIndex: 0,
-            onFocus: X,
-            onBlur: J,
-            onMouseEnter: X,
-            onMouseLeave: J,
+            onFocus: q,
+            onBlur: Q,
+            onMouseEnter: q,
+            onMouseLeave: Q,
             className: r()(A.container, { [A.hovered]: Z }),
             children: [
-                null != j &&
-                    V &&
+                null != D &&
+                    B &&
                     (0, i.jsx)('div', {
-                        ref: y,
+                        ref: M,
                         className: A.decoWrapper,
                         style: { top: O },
                         children: (0, i.jsx)(E.Z, {
-                            avatarDecorationOverride: Y,
-                            user: j,
+                            avatarDecorationOverride: V,
+                            user: D,
                             guildId: null
                         })
                     }),
-                q
+                z
                     ? (0, i.jsx)(i.Fragment, {
                           children: (0, i.jsx)(m.Z, {
                               className: A.assetBlurred,
                               autoPlay: !1,
                               children: (0, i.jsx)('source', {
-                                  src: K,
-                                  type: (0, f.mN)(K),
-                                  onError: () => $(K)
+                                  src: W,
+                                  type: (0, f.mN)(W)
                               })
                           })
                       })
                     : (0, i.jsx)('img', {
                           className: A.image,
-                          src: K,
-                          alt: L.config.messages.questName,
-                          onError: () => $(K)
+                          src: W,
+                          alt: L.config.messages.questName
                       }),
                 (0, i.jsx)('div', {
                     className: r()(A.overlay, {
-                        [A.darkThemeGradient]: W,
-                        [A.lightThemeGradient]: !W
+                        [A.darkThemeGradient]: F,
+                        [A.lightThemeGradient]: !F
                     })
                 }),
                 (0, i.jsx)('div', {
-                    ref: D,
+                    ref: P,
                     className: A.logoContainer,
-                    style: { transform: 'translateY(-'.concat(Q, 'px)') },
+                    style: { transform: 'translateY(-'.concat(K, 'px)') },
                     children: (0, i.jsx)('img', {
                         className: A.logo,
-                        src: z,
+                        src: Y,
                         alt: L.config.messages.gameTitle
                     })
                 }),
                 (0, i.jsxs)('div', {
-                    ref: U,
+                    ref: y,
                     className: A.details,
                     children: [
                         (0, i.jsx)(d.Heading, {
@@ -143,11 +132,11 @@ t.Z = (0, a.memo)(function (e) {
                         }),
                         (0, i.jsx)(d.Text, {
                             variant: 'text-sm/medium',
-                            color: W ? 'text-muted' : 'always-white',
-                            style: { opacity: W ? 1 : 0.75 },
+                            color: F ? 'text-muted' : 'always-white',
+                            style: { opacity: F ? 1 : 0.75 },
                             children: N.Z.Messages.QUEST_REWARD_CLAIMED.format({
-                                reward: H.name,
-                                claimedDate: w
+                                reward: k.name,
+                                claimedDate: G
                             })
                         })
                     ]
