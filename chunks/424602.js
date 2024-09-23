@@ -59,35 +59,8 @@ let a = (0, r.B)({
                 }
             }
         ]
-    });
-(0, r.B)({
-    kind: 'user',
-    id: '2024-06_mobile_app_launcher_in_activities_shelf',
-    label: '[Mobile] App Launcher in Activities Shelf',
-    defaultConfig: {
-        enabled: !1,
-        clickOnHomeActivityOpensAppDetail: !1
-    },
-    treatments: [
-        {
-            id: 1,
-            label: 'Enable the activities shelf getting replaced by App Launcher on mobile',
-            config: {
-                enabled: !0,
-                clickOnHomeActivityOpensAppDetail: !1
-            }
-        },
-        {
-            id: 2,
-            label: 'On home screen, clicking activity card -> activity detail page',
-            config: {
-                enabled: !0,
-                clickOnHomeActivityOpensAppDetail: !0
-            }
-        }
-    ]
-});
-let o = (0, r.B)({
+    }),
+    o = (0, r.B)({
         kind: 'user',
         id: '2024-07_open_platform_app_launcher',
         label: 'Open Platform App Launcher',
