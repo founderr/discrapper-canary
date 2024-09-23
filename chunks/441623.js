@@ -3,17 +3,19 @@ var r,
     i,
     a,
     s,
-    o = n(442837),
-    l = n(570140),
-    u = n(353926),
-    c = n(814443),
-    d = n(480294),
-    _ = n(699516),
-    E = n(709054),
-    f = n(522558),
-    h = n(581025),
-    p = n(981631);
-function I(e, t) {
+    o = n(913527),
+    l = n.n(o),
+    u = n(442837),
+    c = n(570140),
+    d = n(353926),
+    _ = n(814443),
+    E = n(480294),
+    f = n(699516),
+    h = n(709054),
+    p = n(522558),
+    I = n(581025),
+    m = n(981631);
+function T(e, t) {
     let n = new Date(),
         r = new Date(e.getTime());
     r.setFullYear(t);
@@ -22,43 +24,56 @@ function I(e, t) {
     let a = new Date(r.getTime());
     return a.setDate(r.getDate() + 7), n > i && n < a;
 }
-let m = [],
-    T = {};
-function S() {
-    (m.length = 0), (T = {});
+let S = [],
+    g = new Set(),
+    A = {};
+function N() {
+    (S.length = 0), g.clear(), (A = {});
 }
-function g() {
-    if ((S(), !d.Z.hasConsented(p.pjP.PERSONALIZATION))) return;
-    let { enabled: e } = h.G.getCurrentConfig({ location: 'PremiumGiftingIntentStore updateFriendAnniversaries' }, { autoTrackExposure: !1 }),
-        { enabled: t } = f.w.getCurrentConfig({ location: 'PremiumGiftingIntentStore updateFriendAnniversaries' }, { autoTrackExposure: !1 });
+function O() {
+    if ((N(), !E.Z.hasConsented(m.pjP.PERSONALIZATION))) return;
+    let { enabled: e } = I.G.getCurrentConfig({ location: 'PremiumGiftingIntentStore updateFriendAnniversaries' }, { autoTrackExposure: !1 }),
+        { enabled: t } = p.w.getCurrentConfig({ location: 'PremiumGiftingIntentStore updateFriendAnniversaries' }, { autoTrackExposure: !1 });
     if (!(e || t)) return;
-    let n = _.Z.getRelationships();
-    E.default.keys(n).forEach((e) => {
-        let t = _.Z.getSince(e),
-            n = c.Z.getUserAffinity(e);
-        if (_.Z.getRelationshipType(e) === p.OGo.FRIEND && null != n && n.affinity > 0 && null != t) {
+    let n = f.Z.getRelationships();
+    h.default.keys(n).forEach((e) => {
+        let t = f.Z.getSince(e),
+            n = _.Z.getUserAffinity(e);
+        if (f.Z.getRelationshipType(e) === m.OGo.FRIEND && null != n && n.affinity > 0 && null != t) {
             var r;
             let n = new Date(t);
-            if (!I((r = n), r.getFullYear()) && I(r, new Date().getFullYear())) m.push(e), (T[e] = { friendsSince: n });
+            if (!T((r = n), r.getFullYear()) && T(r, new Date().getFullYear())) S.push(e), (A[e] = { friendsSince: n });
         }
     }),
-        m.sort((e, t) => {
-            let n = c.Z.getUserAffinity(e),
-                r = c.Z.getUserAffinity(t),
+        S.sort((e, t) => {
+            let n = _.Z.getUserAffinity(e),
+                r = _.Z.getUserAffinity(t),
                 i = null != n ? n.affinity : 0;
             return (null != r ? r.affinity : 0) - i;
-        });
+        }),
+        (g = new Set(S.slice(0, 5)));
 }
-class A extends (r = o.ZP.Store) {
+class R extends (r = u.ZP.Store) {
     initialize() {
-        this.syncWith([_.Z, c.Z, d.Z, u.Z], g);
+        this.syncWith([f.Z, _.Z, E.Z, d.Z], O);
     }
     getFriendAnniversaries() {
-        return m;
+        return S;
+    }
+    isTopAffinityFriendAnniversary(e) {
+        let { userId: t } = e,
+            { enabled: n } = p.w.getCurrentConfig({ location: 'PremiumGiftingIntentStore isTopAffinityFriendAnniversary' }, { autoTrackExposure: !1 });
+        return !!n && g.has(t);
+    }
+    getFriendAnniversaryYears(e) {
+        var t;
+        let n = A[e];
+        if (null == n) return 0;
+        return (t = n.friendsSince), Math.round(l()().diff(t, 'years', !0));
     }
 }
 (s = 'PremiumGiftingIntentStore'),
-    (a = 'displayName') in (i = A)
+    (a = 'displayName') in (i = R)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -66,11 +81,11 @@ class A extends (r = o.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new A(l.Z, {
+    (t.Z = new R(c.Z, {
         CONNECTION_OPEN: function () {
-            S();
+            N();
         },
         LOGOUT: function () {
-            S();
+            N();
         }
     }));
