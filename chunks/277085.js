@@ -27,7 +27,7 @@ let h = (e) =>
             });
     });
 function p(e) {
-    let { isVisible: t, isExpandable: n, onClose: i } = e,
+    let { isVisible: t, isExpandable: n, onCloseProfile: i } = e,
         { analyticsLocations: p } = (0, u.ZP)(),
         { trackUserProfileAction: I } = (0, _.KZ)(),
         [m, T] = (0, s.Wu)([l.Z], () => [l.Z.useReducedMotion, l.Z.keyboardModeEnabled]),
@@ -45,6 +45,7 @@ function p(e) {
                 children: (0, r.jsx)(c.zx, {
                     className: a()(f.button, f.left),
                     'aria-label': E.Z.Messages.CUSTOM_STATUS_EDIT_CUSTOM_STATUS_A11Y_LABEL,
+                    'aria-haspopup': 'dialog',
                     onClick: () => {
                         I({ action: 'PRESS_EDIT_CUSTOM_STATUS' }), h(p), null == i || i();
                     },

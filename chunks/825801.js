@@ -109,6 +109,7 @@ function g(e) {
                           },
                           className: a()(I.button, I.left),
                           'aria-label': S(h.P.REACT, n),
+                          'aria-haspopup': 'dialog',
                           children: (0, r.jsx)(l.ReactionIcon, {
                               size: 'xs',
                               className: I.icon
@@ -131,6 +132,7 @@ function g(e) {
                           },
                           className: a()(I.button, I.right),
                           'aria-label': S(h.P.REPLY, n),
+                          'aria-haspopup': 'dialog',
                           children: (0, r.jsx)(l.ArrowAngleLeftUpIcon, {
                               size: 'xs',
                               className: I.icon

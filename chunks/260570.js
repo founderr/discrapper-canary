@@ -32,7 +32,7 @@ let C = 'text-sm/medium',
     y = 36,
     L = 144;
 function D(e) {
-    let { statusActivity: t, user: a, guildId: h, channelId: I, profileType: T, hasEntered: D = !0, animate: b = !0, editEnabled: M, onClose: P } = e,
+    let { statusActivity: t, user: a, guildId: h, channelId: I, profileType: T, hasEntered: D = !0, animate: b = !0, editEnabled: M, onCloseProfile: P } = e,
         { analyticsLocations: U } = (0, f.ZP)(E.Z.PROFILE_CUSTOM_STATUS),
         { trackUserProfileAction: w } = (0, m.KZ)(),
         x = (0, l.e7)([_.Z], () => _.Z.useReducedMotion),
@@ -60,7 +60,8 @@ function D(e) {
         el = M && ee,
         [eu, ec] = i.useState(q),
         [ed, e_] = i.useState(!q),
-        [eE, ef] = i.useState(!1);
+        [eE, ef] = i.useState(!1),
+        eh = i.useRef(null);
     i.useLayoutEffect(() => {
         if (null == F.current || q) return;
         let e = F.current.getBoundingClientRect().height;
@@ -71,7 +72,7 @@ function D(e) {
             e_(!q && e > a), (V.current = e), (Z.current = a);
         }
     }, [D, q, X, $, J]);
-    let [eh, ep] = (0, c.useSpring)(() => ({
+    let [ep, eI] = (0, c.useSpring)(() => ({
         maxHeight: ''.concat(J, 'px'),
         config: {
             clamp: !0,
@@ -79,20 +80,20 @@ function D(e) {
         }
     }));
     i.useEffect(() => () => G.stop(), [G]);
-    let eI = i.useRef(t);
+    let em = i.useRef(t);
     if (
         (i.useEffect(() => {
-            en === O.n_.STATUS && (null == t || eI.current !== t) && er(), (eI.current = t);
+            en === O.n_.STATUS && (null == t || em.current !== t) && er(), (em.current = t);
         }, [t, en, er]),
         !ee && !eo)
     )
         return null;
-    let em = (e) => {
+    let eT = (e) => {
             var t, n;
             if (!!ed) {
                 if (e) {
                     let e = Math.min(null !== (t = V.current) && void 0 !== t ? t : $, $);
-                    ep({
+                    eI({
                         maxHeight: ''.concat(e, 'px'),
                         delay: x ? 0 : 300,
                         config: {
@@ -102,7 +103,7 @@ function D(e) {
                     });
                 } else {
                     let e = Math.min(null !== (n = Z.current) && void 0 !== n ? n : J, J);
-                    ep({
+                    eI({
                         maxHeight: ''.concat(e, 'px'),
                         delay: 0
                     });
@@ -116,7 +117,7 @@ function D(e) {
                 });
             }
         },
-        eT = () =>
+        eS = () =>
             z
                 ? (0, r.jsx)(d.I, {
                       className: K ? v.statusEmojiInline : v.statusEmojiOnly,
@@ -126,7 +127,7 @@ function D(e) {
                       tooltipDelay: O.vB
                   })
                 : null,
-        eS = () =>
+        eg = () =>
             K
                 ? (0, r.jsx)(c.Text, {
                       variant: C,
@@ -134,55 +135,31 @@ function D(e) {
                       children: W
                   })
                 : null,
-        eg = () => {
+        eA = () => {
             let e = s()(v.content, {
                 [v.clamp]: k,
                 [v.unclamp]: !k,
                 [v.singleLineAlign]: eu
             });
             return (0, r.jsxs)(o.animated.div, {
-                style: eh,
+                style: ep,
                 className: e,
-                children: [eT(), eS()]
+                children: [eS(), eg()]
             });
         },
-        eA = () =>
+        eN = () =>
             (0, r.jsxs)('div', {
                 className: s()(v.content, v.clamp, v.placeholderWidth, { [v.panel]: T === O.y0.PANEL }),
                 ref: H,
-                children: [eT(), eS()]
-            }),
-        eN = () =>
-            (0, r.jsxs)('div', {
-                className: s()(v.content, v.unclamp, v.placeholderWidth, v.incorporeal, { [v.panel]: T === O.y0.PANEL }),
-                ref: F,
-                children: [eT(), eS()]
+                children: [eS(), eg()]
             }),
         eO = () =>
             (0, r.jsxs)('div', {
-                className: v.content,
-                children: [
-                    (0, r.jsx)(c.CirclePlusIcon, {
-                        className: v.addStatusIcon,
-                        colorClass: v.addStatusIconColor
-                    }),
-                    (0, r.jsx)(c.Text, {
-                        variant: C,
-                        className: v.addStatusPrompt,
-                        children: R.Z.Messages.USER_SETTINGS_ADD_STATUS
-                    })
-                ]
+                className: s()(v.content, v.unclamp, v.placeholderWidth, v.incorporeal, { [v.panel]: T === O.y0.PANEL }),
+                ref: F,
+                children: [eS(), eg()]
             }),
         eR = () => {
-            var e;
-            return eo
-                ? R.Z.Messages.CUSTOM_STATUS_ADD_CUSTOM_STATUS_A11Y_LABEL
-                : R.Z.Messages.CUSTOM_STATUS_CUSTOM_STATUS_A11Y_LABEL.format({
-                      emoji: null !== (e = null == Y ? void 0 : Y.name) && void 0 !== e ? e : '',
-                      status: j
-                  });
-        },
-        ev = () => {
             w({ action: 'PRESS_ADD_CUSTOM_STATUS' }),
                 null == P || P(),
                 (0, c.openModalLazy)(async () => {
@@ -194,96 +171,134 @@ function D(e) {
                         });
                 });
         },
-        eC = {
+        ev = {
             [v.biteSize]: T === O.y0.BITE_SIZE,
             [v.fullSize]: T === O.y0.FULL_SIZE,
             [v.panel]: T === O.y0.PANEL
         },
-        ey = s()(v.background, { [v.editable]: el }),
-        eL = { [v.hoisted]: es },
-        eD = s()({
+        eC = s()(v.background, { [v.editable]: el }),
+        ey = { [v.hoisted]: es },
+        eL = s()({
             [v.statusBubbleShape]: (!K && z) || !eu,
             [v.statusBubbleSingleLineWithTextShape]: (eu && K) || eo
         }),
-        eb = s()(v.statusBubbleOuter, eC, eD, { [v.statusBubbleOuterAddStatusCursor]: eo }),
-        eM = s()(v.statusBubble, eD, {
+        eD = s()(v.statusBubbleOuter, ev, eL, { [v.statusBubbleOuterAddStatusCursor]: eo }),
+        eb = s()(v.statusBubble, eL, {
             [v.statusBubbleEmojiOnlyPadding]: q,
             [v.statusBubbleWithTextPadding]: K || eo,
             [v.statusBubbleWithTextMinWidth]: K,
             [v.statusBubbleCopyStatusCursor]: ee
         }),
-        eP = () =>
-            (0, r.jsxs)(c.ClickableContainer, {
-                className: s()(v.visibleContainer, eC, ey, eL),
-                'aria-label': eR(),
-                focusProps: { ringClassName: eD },
-                onClick: eo ? ev : void 0,
-                onFocus: () => {
-                    ef(!0), em(!0);
-                },
-                onBlur: (e) => {
-                    !e.currentTarget.contains(e.relatedTarget) && (ef(!1), em(!1));
-                },
-                onMouseOver: () => {
-                    w({ action: 'HOVER_CUSTOM_STATUS' }), ef(!0), em(!0);
-                },
-                onMouseLeave: () => {
-                    !ea && (ef(!1), em(!1));
-                },
-                children: [
-                    (0, r.jsx)('div', {
-                        className: eb,
-                        children: (0, r.jsxs)('span', {
-                            className: eM,
-                            children: [ee && eg(), eo && eO()]
-                        })
+        eM = () => {
+            var e;
+            return (0, r.jsx)(c.FocusRing, {
+                ringClassName: eL,
+                children: (0, r.jsxs)('div', {
+                    ref: eh,
+                    className: s()(v.visibleContainer, ev, eC, ey),
+                    role: 'tooltip',
+                    'aria-label': R.Z.Messages.CUSTOM_STATUS_CUSTOM_STATUS_A11Y_LABEL.format({
+                        emoji: null !== (e = null == Y ? void 0 : Y.name) && void 0 !== e ? e : '',
+                        status: j
                     }),
-                    ee &&
-                        (0, r.jsx)(N.ZP, {
-                            user: a,
-                            sourceType: O.n_.STATUS,
-                            isVisible: eE && !es,
-                            isExpandable: ed
+                    tabIndex: 0,
+                    onFocus: () => {
+                        ef(!0), eT(!0);
+                    },
+                    onBlur: (e) => {
+                        var t;
+                        !(null === (t = eh.current) || void 0 === t ? void 0 : t.contains(e.relatedTarget)) && !es && (ef(!1), eT(!1));
+                    },
+                    onMouseOver: () => {
+                        w({ action: 'HOVER_CUSTOM_STATUS' }), ef(!0), eT(!0);
+                    },
+                    onMouseLeave: () => {
+                        !es && (ef(!1), eT(!1));
+                    },
+                    children: [
+                        (0, r.jsx)('div', {
+                            className: eD,
+                            children: (0, r.jsx)('span', {
+                                className: eb,
+                                children: ee && eA()
+                            })
                         }),
-                    el &&
-                        (0, r.jsx)(g.Z, {
-                            isVisible: eE,
-                            isExpandable: ed,
-                            onClose: P
-                        })
-                ]
-            });
-    return (0, r.jsxs)('div', {
-        children: [
-            (0, r.jsx)('div', {
-                className: s()(v.invisibleContainer, eC),
-                children: (0, r.jsx)('div', {
-                    className: eb,
-                    children: (0, r.jsxs)('span', {
-                        className: eM,
-                        children: [eo && eO(), ee && eA(), ee && eN()]
-                    })
+                        el
+                            ? (0, r.jsx)(g.Z, {
+                                  isVisible: eE,
+                                  isExpandable: ed,
+                                  onCloseProfile: P
+                              })
+                            : (0, r.jsx)(N.ZP, {
+                                  user: a,
+                                  sourceType: O.n_.STATUS,
+                                  isVisible: eE && !es,
+                                  isExpandable: ed
+                              })
+                    ]
                 })
-            }),
-            (0, r.jsx)(A.Z, {
-                user: a,
-                guildId: h,
-                channelId: I,
-                profileType: T,
-                sourceDetails: (() => {
-                    if (z) {
-                        let e = null != Y.id ? '`' + ':'.concat(Y.name, ':') + '`' : p.ZP.translateSurrogatesToInlineEmoji(Y.name);
-                        return q ? ''.concat(e) : ''.concat(e, ' ').concat(j);
-                    }
-                    if (!q) return ''.concat(j);
-                })(),
-                sourceType: O.n_.STATUS,
-                onClose: () => {
-                    ef(!1), em(!1);
-                },
-                children: () => eP()
-            })
-        ]
+            });
+        };
+    return (0, r.jsx)('div', {
+        children: eo
+            ? (0, r.jsx)(c.Clickable, {
+                  'aria-label': R.Z.Messages.CUSTOM_STATUS_ADD_CUSTOM_STATUS_A11Y_LABEL,
+                  onClick: eR,
+                  className: s()(v.visibleContainer, ev, eC),
+                  focusProps: { ringClassName: eL },
+                  children: (0, r.jsx)('div', {
+                      className: eD,
+                      children: (0, r.jsx)('span', {
+                          className: eb,
+                          children: (0, r.jsxs)('div', {
+                              className: v.content,
+                              children: [
+                                  (0, r.jsx)(c.CirclePlusIcon, {
+                                      className: v.addStatusIcon,
+                                      colorClass: v.addStatusIconColor
+                                  }),
+                                  (0, r.jsx)(c.Text, {
+                                      variant: C,
+                                      className: v.addStatusPrompt,
+                                      children: R.Z.Messages.USER_SETTINGS_ADD_STATUS
+                                  })
+                              ]
+                          })
+                      })
+                  })
+              })
+            : (0, r.jsxs)(r.Fragment, {
+                  children: [
+                      (0, r.jsx)('div', {
+                          className: s()(v.invisibleContainer, ev),
+                          children: (0, r.jsx)('div', {
+                              className: eD,
+                              children: (0, r.jsxs)('span', {
+                                  className: eb,
+                                  children: [ee && eN(), ee && eO()]
+                              })
+                          })
+                      }),
+                      (0, r.jsx)(A.Z, {
+                          user: a,
+                          guildId: h,
+                          channelId: I,
+                          profileType: T,
+                          sourceDetails: (() => {
+                              if (z) {
+                                  let e = null != Y.id ? '`' + ':'.concat(Y.name, ':') + '`' : p.ZP.translateSurrogatesToInlineEmoji(Y.name);
+                                  return q ? ''.concat(e) : ''.concat(e, ' ').concat(j);
+                              }
+                              if (!q) return ''.concat(j);
+                          })(),
+                          sourceType: O.n_.STATUS,
+                          onClose: () => {
+                              ef(!1), eT(!1);
+                          },
+                          children: () => eM()
+                      })
+                  ]
+              })
     });
 }
 function b(e) {

@@ -69,9 +69,9 @@ function y(e) {
         F = i.useRef(null),
         V = i.useCallback(
             (e) => {
-                e.key === A.vn.ESCAPE && (e.stopPropagation(), M(), null == L || L());
+                e.key === A.vn.ESCAPE && (e.stopPropagation(), M());
             },
-            [M, L]
+            [M]
         );
     i.useEffect(() => {
         null == N || N(null == F ? void 0 : F.current);
@@ -129,14 +129,6 @@ function y(e) {
                 focused: B.current,
                 onFocus: () => {
                     B.current = !0;
-                },
-                onBlur: (e) => {
-                    var t;
-                    if (null === (t = F.current) || void 0 === t ? void 0 : t.contains(e.relatedTarget)) {
-                        B.current = !1;
-                        return;
-                    }
-                    null !== F.current && ((B.current = !1), M(), null == L || L());
                 },
                 onSubmit: async (e) => {
                     let { value: t } = e,

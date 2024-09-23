@@ -34,7 +34,9 @@ function c(e) {
                 setPopoutRef: t
             });
         },
-        onRequestClose: S,
+        onRequestClose: () => {
+            S(), null == p || p();
+        },
         shouldShow: A || N,
         ...((t = m),
         (n = E),
