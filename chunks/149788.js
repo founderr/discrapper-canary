@@ -8,13 +8,13 @@ var i = n(735250),
     s = n(481060),
     r = n(749210),
     l = n(17845),
-    o = n(422169),
-    c = n(748699),
+    o = n(374939),
+    c = n(283293),
     d = n(469988),
     u = n(526383),
     _ = n(900849),
     E = n(294330),
-    h = n(481685),
+    h = n(482543),
     m = n(731455),
     I = n(689938),
     g = n(417712),
@@ -31,23 +31,24 @@ function T(e) {
         });
     }, [t]);
     let S = a.useMemo(
-        () =>
-            T.map((e) => ({
-                ...e,
-                presenceCount: void 0,
-                memberCount: void 0,
-                premiumSubscriptionCount: void 0,
-                emojis: void 0
-            })),
-        [T]
-    );
+            () =>
+                T.map((e) => ({
+                    ...e,
+                    presenceCount: void 0,
+                    memberCount: void 0,
+                    premiumSubscriptionCount: void 0,
+                    emojis: void 0
+                })),
+            [T]
+        ),
+        f = (0, h.p)();
     return (0, i.jsxs)(c.Z, {
         onScroll: n,
         children: [
             (0, i.jsx)(l.Z, {
                 title: I.Z.Messages.GLOBAL_DISCOVERY_SERVERS_HUB_TITLE,
                 description: I.Z.Messages.GLOBAL_DISCOVERY_SERVERS_HUB_DESCRIPTION,
-                background: (0, i.jsx)(h.Z, {})
+                className: f
             }),
             (0, i.jsxs)(o.Z, {
                 children: [

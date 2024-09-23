@@ -1,14 +1,16 @@
 n.d(t, {
     Z: function () {
-        return s;
+        return r;
     }
 });
 var i = n(735250);
 n(470079);
-var a = n(716454);
-function s() {
+var a = n(482543),
+    s = n(716454);
+function r() {
+    let e = (0, a.p)();
     return (0, i.jsx)('div', {
-        className: a.background,
-        children: (0, i.jsx)('div', { className: a.gradient })
+        className: s.background,
+        children: (0, i.jsx)('div', { className: e })
     });
 }

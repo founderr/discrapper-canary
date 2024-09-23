@@ -9,9 +9,9 @@ var i = n(735250),
     d = n(650461),
     u = n(603839),
     _ = n(17845),
-    E = n(422169),
-    h = n(748699),
-    m = n(481685),
+    E = n(374939),
+    h = n(283293),
+    m = n(482543),
     I = n(84615),
     g = n(207796),
     p = n(895068),
@@ -133,7 +133,8 @@ t.Z = a.memo(function (e) {
                     showAdminGuildPicker: d
                 }),
             [T, d, u]
-        );
+        ),
+        v = (0, m.p)();
     return (0, i.jsxs)(h.Z, {
         ref: I,
         onScroll: c,
@@ -147,7 +148,7 @@ t.Z = a.memo(function (e) {
                 }),
                 description: T ? S.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_DESCRIPTION_NUX_COMPLETED : S.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_DESCRIPTION,
                 button: A,
-                background: (0, i.jsx)(m.Z, {})
+                className: v
             }),
             (0, i.jsx)(E.Z, {
                 children: (0, i.jsx)(p.ZP, {
