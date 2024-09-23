@@ -6,6 +6,7 @@ e.exports = {
     closeButton: 'closeButton_d0585c',
     footer: 'footer_d0585c',
     footerWithMessage: 'footerWithMessage_d0585c',
+    footerWarningWrapper: 'footerWarningWrapper_d0585c',
     footerButtons: 'footerButtons_d0585c',
     destinationRow: 'destinationRow_d0585c',
     disabled: 'disabled_d0585c',

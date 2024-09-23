@@ -1,6 +1,6 @@
 n.d(t, {
     n: function () {
-        return p;
+        return C;
     }
 }),
     n(47120);
@@ -17,96 +17,113 @@ var l = n(735250),
     _ = n(131704),
     f = n(592125),
     E = n(823379),
-    g = n(822869),
-    m = n(912332),
-    S = n(646746),
-    A = n(689938),
-    I = n(463061);
-function p(e) {
-    let { message: t, forwardOptions: n, sendLabel: p, canSend: C, selectedDestinations: N, isSending: L, onSend: v, showPreview: b } = e,
+    g = n(784384),
+    m = n(822869),
+    S = n(912332),
+    A = n(646746),
+    I = n(689938),
+    p = n(463061);
+function C(e) {
+    let { message: t, forwardOptions: n, sendLabel: C, canSend: N, selectedDestinations: v, isSending: L, onSend: b, showPreview: x } = e,
         T = (0, d.Z)(),
-        x = N.map(h.hl).find(E.lm),
-        Z = (0, i.e7)([f.Z], () => f.Z.getChannel(x), [x]),
-        y = a.useMemo(
+        Z = v.map(h.hl).find(E.lm),
+        y = (0, i.e7)([f.Z], () => f.Z.getChannel(Z), [Z]),
+        M = a.useMemo(
             () =>
-                null != Z
-                    ? Z
+                null != y
+                    ? y
                     : (0, _.kt)({
                           id: '1',
                           type: s.d.DM
                       }),
-            [Z]
+            [y]
         ),
-        M = (0, g.Ad)(),
-        [P, R] = a.useState(() => (0, c.H2)()),
-        { textValue: O, richValue: D } = P,
-        [w, G] = a.useState(!1),
-        j = a.useCallback(() => G(!0), []),
-        U = a.useCallback(() => G(!1), []),
-        k = a.useCallback(
+        R = (0, g.y)(v),
+        P = (0, m.Ad)(),
+        [O, D] = a.useState(() => (0, c.H2)()),
+        { textValue: w, richValue: G } = O,
+        [j, F] = a.useState(!1),
+        U = a.useCallback(() => F(!0), []),
+        k = a.useCallback(() => F(!1), []),
+        W = a.useCallback(
             (e, n, l) => {
-                R({
+                D({
                     textValue: n,
                     richValue: l
                 }),
-                    M(t.channel_id, t.id);
+                    P(t.channel_id, t.id);
             },
-            [M, t]
+            [P, t]
         ),
-        F = a.useCallback(() => {
-            v(O);
-        }, [O, v]),
-        H = a.useCallback(
+        H = a.useCallback(() => {
+            b(w);
+        }, [w, b]),
+        B = a.useCallback(
             () =>
-                !C || O.length > T
+                !N || w.length > T
                     ? Promise.resolve({
                           shouldClear: !1,
                           shouldRefocus: !0
                       })
-                    : (F(),
+                    : (H(),
                       Promise.resolve({
                           shouldClear: !1,
                           shouldRefocus: !0
                       })),
-            [F, O, T, C]
+            [H, w, T, N]
         );
     return (0, l.jsxs)(r.ModalFooter, {
-        className: I.footerWithMessage,
+        className: p.footerWithMessage,
         children: [
-            b &&
+            x &&
                 (0, l.jsx)('div', {
-                    className: I.forwardPreviewWrapper,
-                    children: (0, l.jsx)(S.O, {
+                    className: p.forwardPreviewWrapper,
+                    children: (0, l.jsx)(A.O, {
                         message: t,
                         forwardOptions: n
                     })
                 }),
             (0, l.jsxs)('div', {
-                className: I.footerButtons,
+                className: p.footerWarningWrapper,
                 children: [
-                    (0, l.jsx)(u.Z, {
-                        innerClassName: I.messageInput,
-                        onChange: k,
-                        placeholder: A.Z.Messages.MESSAGE_FORWARD_MESSAGE_PLACEHOLDER,
-                        channel: y,
-                        textValue: O,
-                        richValue: D,
-                        type: o.I.FORWARD_MESSAGE_INPUT,
-                        onBlur: U,
-                        onFocus: j,
-                        focused: w,
-                        onSubmit: H,
-                        parentModalKey: m.so,
-                        autoCompletePosition: 'bottom',
-                        emojiPickerCloseOnModalOuterClick: !0
+                    (0, l.jsxs)('div', {
+                        className: p.footerButtons,
+                        children: [
+                            (0, l.jsx)(u.Z, {
+                                innerClassName: p.messageInput,
+                                onChange: W,
+                                placeholder: I.Z.Messages.MESSAGE_FORWARD_MESSAGE_PLACEHOLDER,
+                                channel: M,
+                                textValue: w,
+                                richValue: G,
+                                type: o.I.FORWARD_MESSAGE_INPUT,
+                                onBlur: k,
+                                onFocus: U,
+                                focused: j,
+                                onSubmit: B,
+                                parentModalKey: S.so,
+                                autoCompletePosition: 'bottom',
+                                emojiPickerCloseOnModalOuterClick: !0
+                            }),
+                            (0, l.jsx)(r.Button, {
+                                className: p.sendWithMessage,
+                                submitting: L,
+                                disabled: !N || w.length > T,
+                                onClick: H,
+                                children: C
+                            })
+                        ]
                     }),
-                    (0, l.jsx)(r.Button, {
-                        className: I.sendWithMessage,
-                        submitting: L,
-                        disabled: !C || O.length > T,
-                        onClick: F,
-                        children: p
-                    })
+                    R.length > 0 &&
+                        w.length > 0 &&
+                        (0, l.jsx)(r.Text, {
+                            variant: 'text-sm/normal',
+                            color: 'text-warning',
+                            children: I.Z.Messages.MESSAGE_FORWARD_SLOWMODE_WARNING.format({
+                                count: R.length,
+                                channelNames: R.join(', ')
+                            })
+                        })
                 ]
             })
         ]
