@@ -1,9 +1,9 @@
 r.d(t, {
     Z: function () {
-        return N;
+        return O;
     },
     n: function () {
-        return S;
+        return L;
     }
 });
 var a = r(735250),
@@ -27,9 +27,10 @@ var a = r(735250),
     I = r(215023),
     x = r(474936),
     T = r(689938),
-    v = r(462972);
-let S = (0, C.IC)(96),
-    L = (e) => {
+    v = r(462972),
+    S = r(275001);
+let L = (0, C.IC)(96),
+    N = (e) => {
         let { category: t } = e,
             { analyticsLocations: r } = (0, d.ZP)(),
             s = n.useRef(null),
@@ -60,7 +61,7 @@ let S = (0, C.IC)(96),
                   })
               });
     };
-function N(e) {
+function O(e) {
     var t, r, n, s;
     let { category: l, className: d, hideLimitedTimeBadge: u = !1 } = e,
         { backgroundColors: f } = (0, _.Z)(l.styles),
@@ -78,6 +79,12 @@ function N(e) {
                         }
                       : void 0,
               children: [
+                  l.skuId === o.T.BAND &&
+                      (0, a.jsx)('img', {
+                          src: S,
+                          alt: '',
+                          className: v.animationAsset
+                      }),
                   (null === (r = I.Ve[l.skuId]) || void 0 === r ? void 0 : r.addAttributionLogo)
                       ? (0, a.jsxs)('div', {
                             className: v.discordLogo,
@@ -96,7 +103,7 @@ function N(e) {
                   (null === (n = I.Ve[l.skuId]) || void 0 === n ? void 0 : n.addLogo)
                       ? (0, a.jsx)('img', {
                             className: v.categoryLogo,
-                            src: (0, C.uV)(l.logo, { size: S }),
+                            src: (0, C.uV)(l.logo, { size: L }),
                             alt: l.name,
                             style: { maxWidth: null === (s = I.Ve[l.skuId]) || void 0 === s ? void 0 : s.logoMaxWidth }
                         })
@@ -104,7 +111,7 @@ function N(e) {
                   (0, a.jsx)(c.Text, {
                       className: i()(v.summary, { [v.blackSummary]: m }),
                       variant: 'text-md/normal',
-                      children: l.skuId === o.T.DISXCORE ? (0, a.jsx)(L, { category: l }) : l.summary
+                      children: l.skuId === o.T.DISXCORE ? (0, a.jsx)(N, { category: l }) : l.summary
                   }),
                   !u &&
                       (0, a.jsx)(h.Z, {

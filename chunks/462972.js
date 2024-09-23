@@ -1,5 +1,6 @@
 e.exports = {
     shopBanner: 'shopBanner_be5025',
+    animationAsset: 'animationAsset_be5025',
     categoryLogo: 'categoryLogo_be5025',
     discordLogo: 'discordLogo_be5025',
     discordIcon: 'discordIcon_be5025',
