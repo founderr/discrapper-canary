@@ -17,7 +17,7 @@ var a = n(481060),
 function m(e) {
     var t;
     let { user: n, guildId: m, channel: x, entry: E, onSelect: v, disableGameProfileLinks: _ } = e,
-        p = (0, u.Z)({
+        T = (0, u.Z)({
             userId: n.id,
             guildId: m,
             channelId: null == x ? void 0 : x.id
@@ -26,10 +26,10 @@ function m(e) {
             id: n.id,
             label: d.Z.Messages.COPY_ID_USER
         }),
-        T = (0, c.dX)(E),
+        p = (0, c.dX)(E),
         g = (0, o.Z)({
             location: 'ContentPopoutContextMenu',
-            applicationId: T && !0 !== _ ? (null === (t = E.extra) || void 0 === t ? void 0 : t.application_id) : void 0,
+            applicationId: p && !0 !== _ ? (null === (t = E.extra) || void 0 === t ? void 0 : t.application_id) : void 0,
             source: s.m1.ActivityCardContextMenu,
             trackEntryPointImpression: !0,
             sourceUserId: E.author_id
@@ -51,7 +51,7 @@ function m(e) {
                     children: [
                         (0, l.jsxs)(a.MenuGroup, {
                             children: [
-                                p,
+                                T,
                                 null != g &&
                                     (0, l.jsx)(a.MenuItem, {
                                         id: 'game-profile',

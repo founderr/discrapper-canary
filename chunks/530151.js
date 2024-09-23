@@ -54,8 +54,8 @@ let G = (e) => {
             children: n
         });
     },
-    w = [d.Z.unsafe_rawColors.BLUE_345.css, d.Z.colors.INTERACTIVE_NORMAL.css],
-    k = (e) => {
+    k = [d.Z.unsafe_rawColors.BLUE_345.css, d.Z.colors.INTERACTIVE_NORMAL.css],
+    w = (e) => {
         let { tooltip: t, onClick: n, icon: a } = e;
         return (0, i.jsx)(_.Tooltip, {
             text: t,
@@ -268,7 +268,7 @@ class K extends a.PureComponent {
                 (0, i.jsx)(_.StackedProgress, {
                     percents: t,
                     size: _.Progress.Sizes.SMALL,
-                    foregroundColors: w,
+                    foregroundColors: k,
                     animate: this.isFocused
                 }),
                 (0, i.jsx)('div', {
@@ -415,20 +415,20 @@ class K extends a.PureComponent {
     }
 }
 let q = () =>
-        (0, i.jsx)(k, {
+        (0, i.jsx)(w, {
             icon: _.PlayIcon,
             tooltip: y.Z.Messages.GAME_LIBRARY_UPDATES_ACTION_RESUME,
             onClick: () => m.v4()
         }),
     Q = () =>
-        (0, i.jsx)(k, {
+        (0, i.jsx)(w, {
             icon: _.PauseIcon,
             tooltip: y.Z.Messages.GAME_LIBRARY_UPDATES_ACTION_PAUSE,
             onClick: () => m.wO()
         }),
     X = (e) => {
         let { item: t } = e;
-        return (0, i.jsx)(k, {
+        return (0, i.jsx)(w, {
             icon: _.ArrowSmallUpIcon,
             tooltip: y.Z.Messages.GAME_LIBRARY_UPDATES_ACTION_MOVE_UP,
             onClick: () => m.A1(t.applicationId, t.branchId)
@@ -436,7 +436,7 @@ let q = () =>
     },
     J = (e) => {
         let { item: t } = e;
-        return (0, i.jsx)(k, {
+        return (0, i.jsx)(w, {
             icon: _.XSmallIcon,
             tooltip: y.Z.Messages.GAME_LIBRARY_UPDATES_ACTION_REMOVE,
             onClick: () => m.al(t.applicationId, t.branchId)

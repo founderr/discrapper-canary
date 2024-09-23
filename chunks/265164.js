@@ -47,8 +47,8 @@ let O = [],
     j = {},
     U = {},
     G = {},
-    w = {},
     k = {},
+    w = {},
     B = {},
     H = 0,
     V = !1,
@@ -77,7 +77,7 @@ function ee() {
         let e = I.Z.getGuildIds(),
             t = [];
         for (let i of e) {
-            if (null != k[i] && k[i] < 0) continue;
+            if (null != w[i] && w[i] < 0) continue;
             let e = u.ZP.getGuildScheduledEventsForGuild(i),
                 a = 0;
             for (let i of e) {
@@ -237,7 +237,7 @@ class ed extends (i = s.ZP.PersistedStore) {
             (O = null !== (t = e.dehydratedItems) && void 0 !== t ? t : []).forEach((e) => {
                 U[e.id] = e;
             }),
-                (k = null !== (n = e.customGuildScores) && void 0 !== n ? n : {}),
+                (w = null !== (n = e.customGuildScores) && void 0 !== n ? n : {}),
                 (B = null !== (i = e.customChannelScoresByGuild) && void 0 !== i ? i : {}),
                 (K = null !== (a = e.numOpens) && void 0 !== a ? a : 0),
                 (b = null !== (s = e.lastOpened) && void 0 !== s ? s : 0);
@@ -280,17 +280,17 @@ class ed extends (i = s.ZP.PersistedStore) {
         return X;
     }
     getMissingItems() {
-        return w;
+        return k;
     }
     getCustomChannelScore(e, t) {
         return null == B[e] || null == B[e][t] ? v.aL.UNKNOWN : (0, v.jv)(B[e][t]);
     }
     getCustomGuildScore(e) {
         var t;
-        return null !== (t = k[e]) && void 0 !== t ? t : 0;
+        return null !== (t = w[e]) && void 0 !== t ? t : 0;
     }
     getCustomGuildScores() {
-        return k;
+        return w;
     }
     hasNewContent() {
         return F;
@@ -314,7 +314,7 @@ class ed extends (i = s.ZP.PersistedStore) {
         return {
             dehydratedItems: O,
             numOpens: K,
-            customGuildScores: k,
+            customGuildScores: w,
             customChannelScoresByGuild: B,
             lastOpened: b
         };
@@ -341,7 +341,7 @@ R(ed, 'displayName', 'GravityStore'),
                         e.add(t.id);
                     }),
                         P.forEach((e) => {
-                            (U[e.id] = e), e.type === N.Rr.CUSTOM_STATUS && (T.Z.isBlocked(e.data.user_id) ? (w[e.id] = !0) : (G[e.id] = (0, v.mV)(e)));
+                            (U[e.id] = e), e.type === N.Rr.CUSTOM_STATUS && (T.Z.isBlocked(e.data.user_id) ? (k[e.id] = !0) : (G[e.id] = (0, v.mV)(e)));
                         });
                 })(),
                 (j = {
@@ -370,12 +370,12 @@ R(ed, 'displayName', 'GravityStore'),
             a.forEach((e) => {
                 let t = c[e.message_id];
                 if (null == t) {
-                    w[e.message_id] = !0;
+                    k[e.message_id] = !0;
                     return;
                 }
                 let n = U[e.message_id];
                 if (null == n) {
-                    w[e.message_id] = !0;
+                    k[e.message_id] = !0;
                     return;
                 }
                 null != g.Z.getMessage(t.channel_id, t.message.id)
@@ -391,12 +391,12 @@ R(ed, 'displayName', 'GravityStore'),
                 s.forEach((e) => {
                     let t = d[e.summary_id];
                     if (null == t) {
-                        w[e.summary_id] = !0;
+                        k[e.summary_id] = !0;
                         return;
                     }
                     let n = U[e.summary_id];
                     if (null == n || n.type !== N.Rr.SUMMARY || t.messages.length < 3) {
-                        w[e.summary_id] = !0;
+                        k[e.summary_id] = !0;
                         return;
                     }
                     G[t.id] = {
@@ -407,12 +407,12 @@ R(ed, 'displayName', 'GravityStore'),
                 r.forEach((e) => {
                     let t = u[e.content_id];
                     if (null == t) {
-                        w[e.content_id] = !0;
+                        k[e.content_id] = !0;
                         return;
                     }
                     let n = U[e.content_id];
                     if (null == n) {
-                        w[e.content_id] = !0;
+                        k[e.content_id] = !0;
                         return;
                     }
                     G[t.id] = {
@@ -424,12 +424,12 @@ R(ed, 'displayName', 'GravityStore'),
         },
         LOAD_GRAVITY_CUSTOM_SCORES: function (e) {
             let { scores: t } = e;
-            for (let e of t) for (let t of ((k[e.guild_id] = e.guild_score), el(e.guild_id, e.guild_score), Object.keys(e.custom_channel_scores))) null == B[e.guild_id] && (B[e.guild_id] = {}), (B[e.guild_id][t] = e.custom_channel_scores[t]), es(t, e.custom_channel_scores[t]);
-            (k = { ...k }), (B = { ...B });
+            for (let e of t) for (let t of ((w[e.guild_id] = e.guild_score), el(e.guild_id, e.guild_score), Object.keys(e.custom_channel_scores))) null == B[e.guild_id] && (B[e.guild_id] = {}), (B[e.guild_id][t] = e.custom_channel_scores[t]), es(t, e.custom_channel_scores[t]);
+            (w = { ...w }), (B = { ...B });
         },
         GRAVITY_CUSTOM_SCORES_UPDATED: function (e) {
             let { channelScores: t, guildId: n, guildScore: i } = e;
-            null != i && ((k[n] = i), el(n, i), (k = { ...k })),
+            null != i && ((w[n] = i), el(n, i), (w = { ...w })),
                 null == t ||
                     t.forEach((e) => {
                         let { channelId: t, score: i } = e;

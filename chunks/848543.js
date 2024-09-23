@@ -36,7 +36,7 @@ function v(e) {
         y = (0, p.sR)({ isSoundboardButtonDisabled: b }),
         [j, U] = (0, h.cv)(y),
         { analyticsLocations: G } = (0, E.ZP)(_.Z.SOUNDBOARD_BUTTON);
-    function w(e) {
+    function k(e) {
         null != D &&
             (0, u.jW)(e, async () => {
                 let { default: e } = await n.e('56049').then(n.bind(n, 338991));
@@ -48,7 +48,7 @@ function v(e) {
             });
     }
     let {
-            Component: k,
+            Component: w,
             play: B,
             events: { onMouseEnter: H, onMouseLeave: V }
         } = (0, c.j)(),
@@ -97,11 +97,11 @@ function v(e) {
                                 var n, i;
                                 null === (n = Z.onMouseLeave) || void 0 === n || n.call(Z, t), null == e || null === (i = e.onMouseLeave) || void 0 === i || i.call(e), V();
                             },
-                            onContextMenu: w,
+                            onContextMenu: k,
                             fullWidth: !0,
                             size: d.Button.Sizes.SMALL,
                             ...Z,
-                            children: (0, i.jsx)(k, {
+                            children: (0, i.jsx)(w, {
                                 className: s,
                                 size: 'sm',
                                 color: P ? 'white' : d.tokens.colors.INTERACTIVE_ACTIVE

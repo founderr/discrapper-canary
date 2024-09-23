@@ -12,7 +12,7 @@ n.d(t, {
         return G;
     },
     Xb: function () {
-        return w;
+        return k;
     },
     YK: function () {
         return q;
@@ -21,7 +21,7 @@ n.d(t, {
         return $;
     },
     aE: function () {
-        return k;
+        return w;
     },
     bu: function () {
         return J;
@@ -126,8 +126,8 @@ function G(e, t) {
             ),
         Promise.all(n).then(() => {
             var n;
-            let a = (!e.isNSFW() || (null === (n = f.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? T.Z.getMessages(e.id).toArray().map(w) : [],
-                s = Object.values(C.Z.getVoiceStatesForChannel(e.id)).map((t) => k(i, e.id, t));
+            let a = (!e.isNSFW() || (null === (n = f.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? T.Z.getMessages(e.id).toArray().map(k) : [],
+                s = Object.values(C.Z.getVoiceStatesForChannel(e.id)).map((t) => w(i, e.id, t));
             return {
                 id: e.id,
                 name: e.name,
@@ -143,7 +143,7 @@ function G(e, t) {
         })
     );
 }
-function w(e) {
+function k(e) {
     let t = u.Z.parseToAST(e.content, !0, { channelId: e.channel_id }).map(y),
         n = I.Z.getChannel(e.channel_id),
         i = null != e.author ? (0, _.ij)(new m.Z(e.author), n) : void 0;
@@ -168,7 +168,7 @@ function w(e) {
         type: e.type
     };
 }
-function k(e, t, n) {
+function w(e, t, n) {
     let { mute: i, deaf: a, selfMute: s, selfDeaf: r, suppress: l, userId: o } = n,
         c = f.default.getUser(o);
     if (null == c) throw Error('Invalid user id: '.concat(o));

@@ -41,8 +41,8 @@ var i = n(735250),
     j = n(427217),
     U = n(605236),
     G = n(243778),
-    w = n(730417),
-    k = n(524347),
+    k = n(730417),
+    w = n(524347),
     B = n(853197),
     H = n(810280),
     V = n(60762),
@@ -260,7 +260,7 @@ class ej extends a.PureComponent {
                           grow: 0,
                           className: eb.buttons,
                           children: [
-                              (0, i.jsx)(ew, {
+                              (0, i.jsx)(ek, {
                                   selfMute: n,
                                   serverMute: s,
                                   suppress: l,
@@ -273,7 +273,7 @@ class ej extends a.PureComponent {
                                   onClick: this.handleToggleSelfMute,
                                   onContextMenu: this.handleInputAudioContextMenu
                               }),
-                              (0, i.jsx)(ek, {
+                              (0, i.jsx)(ew, {
                                   selfDeaf: t,
                                   serverDeaf: r,
                                   onClick: this.handleToggleSelfDeaf,
@@ -511,7 +511,7 @@ class ej extends a.PureComponent {
 function eU() {
     var e, t;
     let n = (0, l.e7)([eh.default], () => eh.default.getCurrentUser()),
-        s = (0, w._g)(eO.X2.FORTNITE),
+        s = (0, k._g)(eO.X2.FORTNITE),
         r = (0, l.e7)([el.default], () => el.default.getId()),
         c = (0, y.a)(),
         { streaming: d, status: u } = (0, l.cj)([e_.Z], () => ({
@@ -537,8 +537,8 @@ function eU() {
         D = (0, E.useModalsStore)(E.hasAnyModalOpenSelector) || M || ef.s.isDisallowPopupsSet(),
         j = (0, W.b)(),
         G = (0, l.e7)([F.Z], () => null != F.Z.getAwaitingRemoteSessionInfo()),
-        H = (0, l.e7)([k.Z], () => k.Z.isCurrentQuestCompleted),
-        V = (0, l.e7)([k.Z], () => k.Z.currentDropQuestGameTitle),
+        H = (0, l.e7)([w.Z], () => w.Z.isCurrentQuestCompleted),
+        V = (0, l.e7)([w.Z], () => w.Z.currentDropQuestGameTitle),
         Y = (0, Q.D)(),
         q = (0, p.u)(),
         J = (0, X.t)(),
@@ -645,7 +645,7 @@ function eG(e) {
         })
     );
 }
-function ew(e) {
+function ek(e) {
     let { selfMute: t, serverMute: n, suppress: s, awaitingRemote: r, tooltipText: l, tooltipColor: o, tooltipForceOpen: c, onMouseEnter: d, onMouseLeave: _, onClick: h, onContextMenu: m } = e,
         I = t || s || n,
         { Component: g, play: p, events: T } = (0, u.O)(I ? 'unmute' : 'mute'),
@@ -686,7 +686,7 @@ function ew(e) {
         })
     });
 }
-function ek(e) {
+function ew(e) {
     let { selfDeaf: t, serverDeaf: n, awaitingRemote: s, onClick: l, onContextMenu: o } = e,
         c = t || n,
         {

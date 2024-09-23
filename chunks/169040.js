@@ -1,6 +1,6 @@
 n.d(t, {
     $S: function () {
-        return p;
+        return T;
     },
     As: function () {
         return m;
@@ -54,7 +54,7 @@ n.d(t, {
         return i;
     },
     kC: function () {
-        return T;
+        return p;
     },
     m2: function () {
         return I;
@@ -87,9 +87,9 @@ let l = 'M20.97 4.06c0 .18.08.35.24.43.55.28.9.82 1.04 1.42.3 1.24.75 3.7.75 7.0
     E = 120,
     v = 12,
     _ = 96,
-    p = 32,
+    T = 32,
     f = 120,
-    T = 260,
+    p = 260,
     g = 88,
     I = 99,
     C = 12,

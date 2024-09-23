@@ -37,22 +37,22 @@ async function A(e, t, n) {
     if (null == G ? void 0 : G.aborted) throw new S.Z({ errorCode: C.lTL.UNKNOWN_ERROR }, 'Request aborted');
     if (null == N) throw new S.Z({ errorCode: C.lTL.OAUTH2_ERROR }, 'No Client ID provided');
     if (null != v) throw new S.Z({ errorCode: C.lTL.OAUTH2_ERROR }, 'Redirect URI cannot be used in the RPC OAuth2 Authorization flow');
-    let w = [];
-    if (('string' == typeof x ? (w = x.split(' ').filter((e) => e.length > 0)) : Array.isArray(x) && (w = x), null == g.default.getCurrentUser())) throw new S.Z({ errorCode: C.lTL.OAUTH2_ERROR }, 'Client is not logged in');
-    let k = null !== (s = u.Z.getApplication(N)) && void 0 !== s ? s : null;
-    (null == k ||
+    let k = [];
+    if (('string' == typeof x ? (k = x.split(' ').filter((e) => e.length > 0)) : Array.isArray(x) && (k = x), null == g.default.getCurrentUser())) throw new S.Z({ errorCode: C.lTL.OAUTH2_ERROR }, 'Client is not logged in');
+    let w = null !== (s = u.Z.getApplication(N)) && void 0 !== s ? s : null;
+    (null == w ||
         (function (e) {
             var t;
             let n = null !== (t = u.Z.getApplicationLastUpdated(e)) && void 0 !== t ? t : 0;
             return n < Date.now() - 5000;
-        })(k.id)) &&
-        (k = I.Z.createFromServer(await (0, m.UM)(N, G)));
-    let B = null != k && (0, p.yE)(k.flags, C.udG.EMBEDDED) && (null === (i = k.integrationTypesConfig) || void 0 === i ? void 0 : i[a.Y.USER_INSTALL]) != null;
+        })(w.id)) &&
+        (w = I.Z.createFromServer(await (0, m.UM)(N, G)));
+    let B = null != w && (0, p.yE)(w.flags, C.udG.EMBEDDED) && (null === (i = w.integrationTypesConfig) || void 0 === i ? void 0 : i[a.Y.USER_INSTALL]) != null;
     o = null == j ? (B ? a.Y.USER_INSTALL : a.Y.GUILD_INSTALL) : Number(j);
     try {
         c = await (0, E.Ww)({
             clientId: N,
-            scopes: w,
+            scopes: k,
             responseType: A,
             redirectUri: v,
             codeChallenge: L,
@@ -77,7 +77,7 @@ async function A(e, t, n) {
                 await (0, E.Iq)({
                     authorize: !0,
                     clientId: N,
-                    scopes: w,
+                    scopes: k,
                     responseType: A,
                     redirectUri: v,
                     codeChallenge: L,
@@ -101,7 +101,7 @@ async function A(e, t, n) {
         t({
             clientId: N,
             authorizations: l,
-            scopes: w,
+            scopes: k,
             parsedPermissions: H,
             responseType: A,
             redirectUri: v,

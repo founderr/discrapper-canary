@@ -16,7 +16,7 @@ function v(e, t) {}
 function _() {
     E = {};
 }
-function p(e, t) {
+function T(e, t) {
     let n = d[e];
     return null != n && ((d[e] = n.filter((e) => e.id !== t)), delete h[t], delete m[t], n.length !== d[e].length);
 }
@@ -39,7 +39,7 @@ function f(e, t) {
             ...t
         });
 }
-class T extends (l = s.ZP.Store) {
+class p extends (l = s.ZP.Store) {
     initialize() {
         this.waitFor(u.Z);
     }
@@ -58,7 +58,7 @@ class T extends (l = s.ZP.Store) {
     }
 }
 (r = 'UploadStore'),
-    (i = 'displayName') in (a = T)
+    (i = 'displayName') in (a = p)
         ? Object.defineProperty(a, i, {
               value: r,
               enumerable: !0,
@@ -66,7 +66,7 @@ class T extends (l = s.ZP.Store) {
               writable: !0
           })
         : (a[i] = r),
-    (t.Z = new T(o.Z, {
+    (t.Z = new p(o.Z, {
         CONNECTION_OPEN: function () {
             E = {};
         },
@@ -97,11 +97,11 @@ class T extends (l = s.ZP.Store) {
         },
         UPLOAD_COMPLETE: function (e) {
             let { channelId: t, file: n } = e;
-            return p(t, n.id);
+            return T(t, n.id);
         },
         UPLOAD_FAIL: function (e) {
             let { channelId: t, file: n } = e;
-            return p(t, n.id);
+            return T(t, n.id);
         },
         UPLOAD_CANCEL_REQUEST: function (e) {
             let { file: t } = e,

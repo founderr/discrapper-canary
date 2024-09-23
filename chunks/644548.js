@@ -14,10 +14,10 @@ var l = n(735250),
     E = n(591853),
     v = n(410441),
     _ = n(797342),
-    p = n(689938);
+    T = n(689938);
 let f = (e, t, n, l) => {
         let a = (function (e) {
-                if (e === i._.WEEK) return p.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_GAME_WEEK_POPOUT;
+                if (e === i._.WEEK) return T.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_GAME_WEEK_POPOUT;
             })(l),
             r = s.ZP.getName(t.guild_id, t.id, n),
             o = e.extra.game_name;
@@ -28,8 +28,8 @@ let f = (e, t, n, l) => {
             })
             .replaceAll('*', '');
     },
-    T = (e, t) =>
-        p.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING.format({
+    p = (e, t) =>
+        T.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING.format({
             username: t.username,
             activity: e.extra.game_name
         });
@@ -37,39 +37,39 @@ t.Z = (e) => {
     let { channel: t, entry: n, disableGameProfileLinks: i, onReaction: s, onVoiceChannelPreview: g } = e,
         { largeImage: I } = (0, o.rv)({ entry: n }),
         { user: C, details: N, appName: P } = (0, _.n)(n),
-        { primaryColor: Z, secondaryColor: S } = (0, d.Z)(null == I ? void 0 : I.src),
-        M = (0, u.yA)(n),
-        A = (0, u.Nq)(n),
+        { primaryColor: Z, secondaryColor: A } = (0, d.Z)(null == I ? void 0 : I.src),
+        S = (0, u.yA)(n),
+        M = (0, u.Nq)(n),
         y = a.useCallback(
             (e) => {
-                if (null != t && null != C && null != M && null != A && !!(0, m.qy)(A))
+                if (null != t && null != C && null != S && null != M && !!(0, m.qy)(M))
                     return (0, c.SO)({
                         entry: n,
                         applicationImageSrc: null == I ? void 0 : I.src,
                         avatarSrcs: [C.getAvatarURL(null == t ? void 0 : t.guild_id, 128)],
-                        description: f(n, t, C, A),
-                        timestamp: p.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_HOURS.format({ hours: Math.round(M / r.Z.Seconds.HOUR) }),
-                        colors: [Z, S],
+                        description: f(n, t, C, M),
+                        timestamp: T.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_HOURS.format({ hours: Math.round(S / r.Z.Seconds.HOUR) }),
+                        colors: [Z, A],
                         channelId: e
                     });
             },
-            [null == I ? void 0 : I.src, t, M, n, Z, A, S, C]
+            [null == I ? void 0 : I.src, t, S, n, Z, M, A, C]
         );
-    if (null == C || null == M || null == A || !(0, m.qy)(A)) return null;
-    let R = null != n.extra.platform ? h.v[n.extra.platform] : null;
+    if (null == C || null == S || null == M || !(0, m.qy)(M)) return null;
+    let O = null != n.extra.platform ? h.v[n.extra.platform] : null;
     return (0, l.jsxs)(E.yR, {
         children: [
             (0, l.jsx)(E.wG, {
                 channel: t,
                 headerIcons:
-                    null == R
+                    null == O
                         ? null
                         : (0, l.jsx)(v.Z, {
-                              Icon: R,
-                              'aria-label': p.Z.Messages.GAME_LIBRARY_LIST_HEADER_PLATFORM
+                              Icon: O,
+                              'aria-label': T.Z.Messages.GAME_LIBRARY_LIST_HEADER_PLATFORM
                           }),
                 entry: n,
-                userDescription: p.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED_V2,
+                userDescription: T.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED_V2,
                 title: P,
                 subtitle: N,
                 badges: (0, l.jsx)(x.Gk, {
@@ -85,7 +85,7 @@ t.Z = (e) => {
                     user: C,
                     channel: t,
                     generateReactionImage: y,
-                    reactionImageAltText: T(n, C),
+                    reactionImageAltText: p(n, C),
                     entry: n
                 })
             })

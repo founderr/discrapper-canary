@@ -19,24 +19,24 @@ var l = n(735250),
     E = n(592125),
     v = n(757266),
     _ = n(650774),
-    p = n(430824),
+    T = n(430824),
     f = n(283595),
-    T = n(496675),
+    p = n(496675),
     g = n(699516),
     I = n(944486),
     C = n(594174),
     N = n(979651),
     P = n(181106),
     Z = n(417363),
-    S = n(358085),
-    M = n(804739),
-    A = n(317381),
+    A = n(358085),
+    S = n(804739),
+    M = n(317381),
     y = n(638880),
-    R = n(255621),
-    O = n(452634),
+    O = n(255621),
+    R = n(452634),
     j = n(527805),
-    w = n(620662),
-    L = n(275920),
+    L = n(620662),
+    w = n(275920),
     b = n(915863),
     D = n(701488),
     U = n(981631),
@@ -49,7 +49,7 @@ function k(e) {
         K = (0, i.e7)([C.default], () => C.default.getCurrentUser()),
         X = G.id === (null == K ? void 0 : K.id),
         $ = null !== (t = null == F ? void 0 : F.applicationId) && void 0 !== t ? t : null == k ? void 0 : k.application_id,
-        Q = (0, O.Z)({
+        Q = (0, R.Z)({
             channelId: null == F ? void 0 : F.channelId,
             userId: G.id,
             activity: k
@@ -59,7 +59,7 @@ function k(e) {
             () =>
                 V ||
                 (null != $ &&
-                    (0, M.t)({
+                    (0, S.t)({
                         LibraryApplicationStore: f.Z,
                         LaunchableGameStore: x.Z,
                         DispatchApplicationStore: Z.Z,
@@ -67,8 +67,8 @@ function k(e) {
                         applicationId: $
                     }))
         ),
-        et = (0, i.e7)([A.ZP], () =>
-            Array.from(A.ZP.getSelfEmbeddedActivities().values()).some((e) => {
+        et = (0, i.e7)([M.ZP], () =>
+            Array.from(M.ZP.getSelfEmbeddedActivities().values()).some((e) => {
                 let { applicationId: t, channelId: n } = e;
                 return (t === (null == k ? void 0 : k.application_id) || t === (null == F ? void 0 : F.applicationId)) && n === Q;
             })
@@ -81,11 +81,11 @@ function k(e) {
             channelId: Q,
             application: el
         }),
-        ei = (0, i.e7)([E.Z, p.Z, _.Z, g.Z, I.Z, N.Z, T.Z], () =>
+        ei = (0, i.e7)([E.Z, T.Z, _.Z, g.Z, I.Z, N.Z, p.Z], () =>
             null != F
                 ? ea === j.Fw.CAN_JOIN
                 : null != k
-                  ? (0, R.Z)({
+                  ? (0, O.Z)({
                         user: G,
                         activity: k,
                         application: el,
@@ -93,19 +93,19 @@ function k(e) {
                         currentUser: K,
                         isEmbedded: V,
                         ChannelStore: E.Z,
-                        GuildStore: p.Z,
+                        GuildStore: T.Z,
                         GuildMemberCountStore: _.Z,
                         RelationshipStore: g.Z,
                         SelectedChannelStore: I.Z,
                         VoiceStateStore: N.Z,
-                        PermissionStore: T.Z
+                        PermissionStore: p.Z
                     })
                   : void 0
         ),
-        er = (0, i.e7)([A.ZP], () => Array.from(A.ZP.getSelfEmbeddedActivities().values()).some((e) => e.applicationId === (null == F ? void 0 : F.applicationId) && e.channelId === (null == F ? void 0 : F.channelId))),
+        er = (0, i.e7)([M.ZP], () => Array.from(M.ZP.getSelfEmbeddedActivities().values()).some((e) => e.applicationId === (null == F ? void 0 : F.applicationId) && e.channelId === (null == F ? void 0 : F.channelId))),
         es = (0, c.O)(),
-        eo = !S.isPlatformEmbedded;
-    if (!((0, w.Z)(k, U.xjy.JOIN) || V) || null == $) return null;
+        eo = !A.isPlatformEmbedded;
+    if (!((0, L.Z)(k, U.xjy.JOIN) || V) || null == $) return null;
     let eu = !X || (V && !er),
         ec = eu && (eo || ee) && !q && !et && (!V || ei),
         ed = null;
@@ -114,7 +114,7 @@ function k(e) {
         em = async (e, t) => {
             var n, l;
             if (null == eh || null == $) return;
-            let a = (0, w.Z)(t, U.xjy.EMBEDDED),
+            let a = (0, L.Z)(t, U.xjy.EMBEDDED),
                 i = I.Z.getVoiceChannelId(),
                 r = E.Z.getChannel(i);
             await o.Z.join({
@@ -130,7 +130,7 @@ function k(e) {
                 analyticsLocations: W
             }),
                 !a &&
-                    (0, L.Z)({
+                    (0, w.Z)({
                         type: U.q5t.JOIN,
                         userId: e.id,
                         guildId: null == r ? void 0 : r.guild_id,

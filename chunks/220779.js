@@ -22,12 +22,12 @@ var l = n(735250),
     E = n(142550),
     v = n(981631),
     _ = n(689938),
-    p = n(793834);
+    T = n(793834);
 let f = (0, x.kt)({
         id: '1',
         type: v.d4z.DM
     }),
-    T = a.forwardRef(function (e, t) {
+    p = a.forwardRef(function (e, t) {
         let { placeholder: n, headerText: a, onEnter: i, showPopout: u, children: c, body: d, hide: h } = e,
             m = (0, o.ZP)();
         return (0, l.jsx)(s.Popout, {
@@ -40,7 +40,7 @@ let f = (0, x.kt)({
                     theme: m,
                     children: (e) =>
                         (0, l.jsx)('div', {
-                            className: r()([p.reply, e]),
+                            className: r()([T.reply, e]),
                             ref: t,
                             children: (0, l.jsx)(s.FocusLock, {
                                 containerRef: t,
@@ -48,7 +48,7 @@ let f = (0, x.kt)({
                                     children: [
                                         (0, l.jsx)(s.Text, {
                                             variant: 'text-xs/bold',
-                                            className: p.replyHeader,
+                                            className: T.replyHeader,
                                             children: null != a ? a : _.Z.Messages.CHAT
                                         }),
                                         d,
@@ -68,10 +68,10 @@ let f = (0, x.kt)({
     });
 function g(e) {
     let { placeholder: t, onEnter: n, setEditorRef: i, showEmojiButton: s = !1, renderAttachButton: o, autoFocus: h = !0, onFocus: m, channel: x, className: v } = e,
-        [_, T] = a.useState(''),
+        [_, p] = a.useState(''),
         [g, I] = a.useState((0, c.JM)('')),
         C = () => {
-            T(''), I((0, c.JM)(''));
+            p(''), I((0, c.JM)(''));
         },
         N = u.I.ATOMIC_REACTOR_REPLY_INPUT,
         P = a.useRef(null);
@@ -79,13 +79,13 @@ function g(e) {
         ref: P,
         placeholder: t,
         editorClassName: v,
-        className: r()(p.replyInput, v),
+        className: r()(T.replyInput, v),
         showRemainingCharsAfterCount: -1,
         allowNewLines: !1,
         maxCharacterCount: E.z,
         channel: null != x ? x : f,
         onChange: (e, t, n) => {
-            T(t), I(n);
+            p(t), I(n);
         },
         type: s
             ? {
@@ -179,7 +179,7 @@ let I = (e, t) => {
                         children: (e) =>
                             (0, l.jsx)('div', {
                                 ...e,
-                                className: p.reaction,
+                                className: T.reaction,
                                 children: (0, l.jsx)(h.Z, {
                                     active: !1,
                                     tabIndex: 0,
@@ -201,7 +201,7 @@ t.ZP = (e) => {
         I(() => m(!1), x),
         (0, l.jsx)(l.Fragment, {
             children: (0, l.jsxs)('div', {
-                className: p.reactions,
+                className: T.reactions,
                 children: [
                     n &&
                         (0, l.jsx)(C, {
@@ -223,7 +223,7 @@ t.ZP = (e) => {
                             }
                         }),
                     i &&
-                        (0, l.jsx)(T, {
+                        (0, l.jsx)(p, {
                             hide: () => m(!1),
                             ref: x,
                             headerText: u,
@@ -242,7 +242,7 @@ t.ZP = (e) => {
                                 children: (e) =>
                                     (0, l.jsx)('button', {
                                         ...e,
-                                        className: r()(p.reaction, p.emojiButton),
+                                        className: r()(T.reaction, T.emojiButton),
                                         onClick: () => {
                                             t({
                                                 interactionType: E.L.ReplyBegin,

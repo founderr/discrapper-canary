@@ -14,9 +14,9 @@ var l = n(735250),
     E = n(206295),
     v = n(278399),
     _ = n(297781),
-    p = n(591853),
+    T = n(591853),
     f = n(410441),
-    T = n(616922),
+    p = n(616922),
     g = n(689938);
 let I = (e, t, n, l) => {
         let a = (function (e) {
@@ -39,36 +39,36 @@ let I = (e, t, n, l) => {
 t.Z = (e) => {
     let { channel: t, entry: n, onReaction: i, onVoiceChannelPreview: h } = e,
         { parent_title: N, provider: P, image_url: Z } = n.extra.media,
-        S = n.extra.artist.name,
-        M = (0, s.e7)([u.default], () => u.default.getUser(n.author_id)),
-        { primaryColor: A, secondaryColor: y } = (0, E.Z)(Z),
-        R = (0, m.Nq)(n),
-        O = a.useCallback(() => {
-            if (null == t || null == M || !(0, d.Hi)(R, v.y9)) return;
-            let e = I(n, t, M, R);
+        A = n.extra.artist.name,
+        S = (0, s.e7)([u.default], () => u.default.getUser(n.author_id)),
+        { primaryColor: M, secondaryColor: y } = (0, E.Z)(Z),
+        O = (0, m.Nq)(n),
+        R = a.useCallback(() => {
+            if (null == t || null == S || !(0, d.Hi)(O, v.y9)) return;
+            let e = I(n, t, S, O);
             return (0, x.CR)({
-                user: M,
+                user: S,
                 channel: t,
                 mediaImageSrc: Z,
-                artist: S,
+                artist: A,
                 description: e,
-                colors: [A, y],
+                colors: [M, y],
                 badges: (0, x.UU)(n)
             });
-        }, [Z, S, t, n, A, R, y, M]);
-    if (null == M || !(0, d.Hi)(R, v.y9)) return null;
+        }, [Z, A, t, n, M, O, y, S]);
+    if (null == S || !(0, d.Hi)(O, v.y9)) return null;
     let j = () => {
-        let e = T.Hw.ALBUM,
-            t = o.Z.isProtocolRegistered() ? T.C7.PLAYER_OPEN(e, n.extra.media.external_parent_id) : T.C7.WEB_OPEN(e, n.extra.media.external_parent_id);
+        let e = p.Hw.ALBUM,
+            t = o.Z.isProtocolRegistered() ? p.C7.PLAYER_OPEN(e, n.extra.media.external_parent_id) : p.C7.WEB_OPEN(e, n.extra.media.external_parent_id);
         window.open(t);
     };
-    return (0, l.jsxs)(p.yR, {
+    return (0, l.jsxs)(T.yR, {
         children: [
-            (0, l.jsx)(p.wG, {
+            (0, l.jsx)(T.wG, {
                 onClickTitle: j,
                 onClickSubtitle: () => {
-                    let e = T.Hw.ARTIST,
-                        t = o.Z.isProtocolRegistered() ? T.C7.PLAYER_OPEN(e, n.extra.artist.external_id) : T.C7.WEB_OPEN(e, n.extra.artist.external_id);
+                    let e = p.Hw.ARTIST,
+                        t = o.Z.isProtocolRegistered() ? p.C7.PLAYER_OPEN(e, n.extra.artist.external_id) : p.C7.WEB_OPEN(e, n.extra.artist.external_id);
                     window.open(t);
                 },
                 onClickThumbnail: j,
@@ -83,20 +83,20 @@ t.Z = (e) => {
                         : null,
                 userDescription: g.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENED_V2,
                 title: N,
-                subtitle: S,
+                subtitle: A,
                 badges: (0, l.jsx)(_.Gk, {
                     location: _.Gt.POPOUT,
                     children: v.Ho.map((e, t) => (0, l.jsx)(e, { entry: n }, t))
                 })
             }),
-            (0, l.jsx)(p.St, {
-                children: (0, l.jsx)(p.WT, {
+            (0, l.jsx)(T.St, {
+                children: (0, l.jsx)(T.WT, {
                     onReaction: i,
                     onVoiceChannelPreview: h,
-                    user: M,
+                    user: S,
                     channel: t,
-                    generateReactionImage: O,
-                    reactionImageAltText: C(n, M),
+                    generateReactionImage: R,
+                    reactionImageAltText: C(n, S),
                     entry: n
                 })
             })

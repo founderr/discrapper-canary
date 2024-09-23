@@ -14,11 +14,11 @@ var l = n(735250),
     E = n(206295),
     v = n(335326),
     _ = n(297781),
-    p = n(591853),
+    T = n(591853),
     f = n(410441),
-    T = n(689938);
+    p = n(689938);
 let g = (e, t, n) => {
-        let l = T.Z.Messages.MEMBER_LIST_CONTENT_FEED_USER_WATCHED_MEDIA,
+        let l = p.Z.Messages.MEMBER_LIST_CONTENT_FEED_USER_WATCHED_MEDIA,
             a = c.ZP.getName(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, n),
             i = e.extra.media_title;
         return l
@@ -30,7 +30,7 @@ let g = (e, t, n) => {
             .replaceAll('*', '');
     },
     I = (e, t) =>
-        T.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_WATCHING.format({
+        p.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_WATCHING.format({
             username: t.username,
             activity: e.extra.media_title
         });
@@ -38,9 +38,9 @@ t.Z = (e) => {
     let { channel: t, entry: n, onReaction: c, onVoiceChannelPreview: C } = e,
         N = (0, i.e7)([o.default], () => o.default.getUser(n.author_id)),
         { largeImage: P } = (0, h.rv)({ entry: n }),
-        { primaryColor: Z, secondaryColor: S } = (0, E.Z)(null == P ? void 0 : P.src),
-        M = (0, i.e7)([s.default], () => s.default.locale),
-        A = (0, m.ap)(n.extra.media_assets_large_text),
+        { primaryColor: Z, secondaryColor: A } = (0, E.Z)(null == P ? void 0 : P.src),
+        S = (0, i.e7)([s.default], () => s.default.locale),
+        M = (0, m.ap)(n.extra.media_assets_large_text),
         y = a.useCallback(
             (e) => {
                 if (null != N && (null == P ? void 0 : P.src) != null)
@@ -49,15 +49,15 @@ t.Z = (e) => {
                         mediaImageSrc: null == P ? void 0 : P.src,
                         avatarSrc: N.getAvatarURL(null == t ? void 0 : t.guild_id, 128),
                         description: g(n, t, N),
-                        timestamp: (0, m.yh)(n, M),
-                        episodeDescription: A,
-                        colors: [Z, S],
+                        timestamp: (0, m.yh)(n, S),
+                        episodeDescription: M,
+                        colors: [Z, A],
                         channelId: e
                     });
             },
-            [t, n, A, M, null == P ? void 0 : P.src, Z, S, N]
+            [t, n, M, S, null == P ? void 0 : P.src, Z, A, N]
         ),
-        R = () => {
+        O = () => {
             if (null == n.extra.url) return;
             let e = d.Z.safeParseWithQuery(n.extra.url);
             if (null != e && null != e.protocol && null != e.hostname)
@@ -68,27 +68,27 @@ t.Z = (e) => {
         };
     return null == N
         ? null
-        : (0, l.jsxs)(p.yR, {
+        : (0, l.jsxs)(T.yR, {
               children: [
-                  (0, l.jsx)(p.wG, {
+                  (0, l.jsx)(T.wG, {
                       channel: t,
                       entry: n,
-                      userDescription: (0, m.kr)(n) ? T.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHING_V2 : T.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHED_V2,
+                      userDescription: (0, m.kr)(n) ? p.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHING_V2 : p.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHED_V2,
                       title: n.extra.media_title,
                       subtitle: n.extra.media_subtitle,
                       headerIcons: (0, l.jsx)(f.Z, {
                           Icon: r.CrunchyrollNeutralIcon,
-                          'aria-label': T.Z.Messages.CRUNCHYROLL
+                          'aria-label': p.Z.Messages.CRUNCHYROLL
                       }),
                       badges: (0, l.jsx)(_.Gk, {
                           location: _.Gt.POPOUT,
                           children: v.t.map((e, t) => (0, l.jsx)(e, { entry: n }, t))
                       }),
-                      onClickTitle: R,
-                      onClickThumbnail: R
+                      onClickTitle: O,
+                      onClickThumbnail: O
                   }),
-                  (0, l.jsx)(p.St, {
-                      children: (0, l.jsx)(p.WT, {
+                  (0, l.jsx)(T.St, {
+                      children: (0, l.jsx)(T.WT, {
                           onReaction: c,
                           onVoiceChannelPreview: C,
                           user: N,

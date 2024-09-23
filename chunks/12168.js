@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return M;
+        return S;
     },
     u: function () {
         return Z;
@@ -22,9 +22,9 @@ var l = n(735250),
     E = n(907040),
     v = n(633302),
     _ = n(806966),
-    p = n(176354),
+    T = n(176354),
     f = n(823379),
-    T = n(354459),
+    p = n(354459),
     g = n(185923),
     I = n(420212),
     C = n(264699);
@@ -63,7 +63,7 @@ function Z(e) {
         })
     });
 }
-function S(e) {
+function A(e) {
     let { otherAccessories: t, isEmojiPickerExpanded: n, onSetExpanded: a, onFocus: i } = e;
     return (0, l.jsxs)(l.Fragment, {
         children: [
@@ -82,41 +82,41 @@ function S(e) {
         ]
     });
 }
-function M(e) {
-    let { channel: t, title: n, closePopout: i, onFocus: o, onSelectEmoji: c, onSelectDisabledEmoji: d, onExpandedToggle: x, emojiSearchProps: v, recentlyUsedEmojis: f, analyticsOverride: M } = e,
-        A = (0, h.Dt)(),
-        [y, R] = a.useState(!1),
-        O = (0, m.wC)(t.guild_id),
-        j = (0, s.uniqBy)([...O, ...P], 'name')
+function S(e) {
+    let { channel: t, title: n, closePopout: i, onFocus: o, onSelectEmoji: c, onSelectDisabledEmoji: d, onExpandedToggle: x, emojiSearchProps: v, recentlyUsedEmojis: f, analyticsOverride: S } = e,
+        M = (0, h.Dt)(),
+        [y, O] = a.useState(!1),
+        R = (0, m.wC)(t.guild_id),
+        j = (0, s.uniqBy)([...R, ...P], 'name')
             .filter(
                 (e) =>
-                    !p.ZP.isEmojiFilteredOrLocked({
+                    !T.ZP.isEmojiFilteredOrLocked({
                         emoji: e,
                         channel: t,
                         intention: N
                     })
             )
-            .slice(0, T.e5);
+            .slice(0, p.e5);
     null != f && f.length > 0 && j.splice(j.length - 1, 1, f[0]);
-    let w = (e) => {
-            R(e), null == x || x(e);
+    let L = (e) => {
+            O(e), null == x || x(e);
         },
-        L = (e, t) => {
+        w = (e, t) => {
             if (null == e && t) {
                 i();
                 return;
             }
             null != e && c(e);
-            w(!t), t && _.kJ.setSearchPlaceholder(null);
+            L(!t), t && _.kJ.setSearchPlaceholder(null);
         };
     return (0, l.jsxs)(u.Dialog, {
-        'aria-labelledby': A,
+        'aria-labelledby': M,
         children: [
             (0, l.jsx)(u.HeadingLevel, {
                 forceLevel: 2,
                 children: (0, l.jsx)(u.HiddenVisually, {
                     children: (0, l.jsx)(u.H, {
-                        id: A,
+                        id: M,
                         children: n
                     })
                 })
@@ -125,25 +125,25 @@ function M(e) {
                 className: C.container,
                 children: [
                     (0, l.jsx)(E.Z, {
-                        analyticsOverride: M,
+                        analyticsOverride: S,
                         channel: t,
                         className: r()(C.animatedPicker, { [C.animatedPickerTall]: y }),
                         headerClassName: r()(C.emojiPickerHeader, { [C.emojiPickerHeaderExpanded]: y }),
                         closePopout: i,
-                        onSelectEmoji: y ? L : () => {},
+                        onSelectEmoji: y ? w : () => {},
                         shouldHidePickerActions: !y,
                         wrapper: 'div',
                         pickerIntention: N,
                         searchProps: {
                             ...v,
-                            accessory: (0, l.jsx)(S, {
+                            accessory: (0, l.jsx)(A, {
                                 otherAccessories: null == v ? void 0 : v.accessory,
                                 isEmojiPickerExpanded: y,
-                                onSetExpanded: w,
+                                onSetExpanded: L,
                                 onFocus: o
                             }),
                             onKeyDown: (e) => {
-                                null != e && e.key !== I.vn.TAB && (e.key !== I.vn.ENTER || e.shiftKey ? w(!0) : w(!y));
+                                null != e && e.key !== I.vn.TAB && (e.key !== I.vn.ENTER || e.shiftKey ? L(!0) : L(!y));
                             }
                         }
                     }),
@@ -152,7 +152,7 @@ function M(e) {
                         children: (0, l.jsx)('div', {
                             className: r()(C.slots, C.slotsWide),
                             children: j.map((e) => {
-                                let n = p.ZP.isEmojiDisabled({
+                                let n = T.ZP.isEmojiDisabled({
                                     emoji: e,
                                     channel: t,
                                     intention: g.Hz.CHAT
@@ -171,7 +171,7 @@ function M(e) {
                                                 emoji: e,
                                                 isDisabled: n,
                                                 onClick: () => {
-                                                    n ? null == d || d(e) : L(e, !0);
+                                                    n ? null == d || d(e) : w(e, !0);
                                                 }
                                             })
                                         })

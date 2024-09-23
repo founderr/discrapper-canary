@@ -1,12 +1,12 @@
 n.d(t, {
     Z: function () {
-        return a;
+        return l;
     }
 });
 var i = n(399606),
-    s = n(592125);
-function a(e) {
+    a = n(592125);
+function l(e) {
     var t;
-    let n = (0, i.e7)([s.Z], () => s.Z.getChannel(e));
+    let n = (0, i.e7)([a.Z], () => a.Z.getChannel(e));
     return null !== (t = null == n ? void 0 : n.isPrivate()) && void 0 !== t && t;
 }

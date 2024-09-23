@@ -2,8 +2,8 @@ var a = t(735250),
     r = t(470079),
     s = t(120356),
     o = t.n(s),
-    i = t(442837),
-    l = t(481060),
+    l = t(442837),
+    i = t(481060),
     c = t(178762),
     d = t(91140),
     u = t(297781),
@@ -16,19 +16,19 @@ var a = t(735250),
     T = t(501345),
     O = t(51527);
 n.Z = (e) => {
-    let { entry: n, viewId: t, officialGuildId: s, onClose: g } = e,
-        R = (0, i.e7)([E.Z, _.Z], () => _.Z.getChannel(E.Z.getChannelId())),
-        N = (0, i.e7)([I.default], () => I.default.getUser(n.author_id)),
+    let { entry: n, viewId: t, officialGuildId: s, onClose: R } = e,
+        g = (0, l.e7)([E.Z, _.Z], () => _.Z.getChannel(E.Z.getChannelId())),
+        N = (0, l.e7)([I.default], () => I.default.getUser(n.author_id)),
         { nick: P, avatar: h } = r.useMemo(() => {
-            let e = null == N ? void 0 : N.getAvatarURL(null == R ? void 0 : R.guild_id, 48, !1);
+            let e = null == N ? void 0 : N.getAvatarURL(null == g ? void 0 : g.guild_id, 48, !1);
             return {
-                nick: A.ZP.getName(null == R ? void 0 : R.guild_id, null == R ? void 0 : R.id, N),
+                nick: A.ZP.getName(null == g ? void 0 : g.guild_id, null == g ? void 0 : g.id, N),
                 avatar: e
             };
-        }, [N, R]);
+        }, [N, g]);
     return null == N
         ? null
-        : (0, a.jsx)(l.Popout, {
+        : (0, a.jsx)(i.Popout, {
               position: 'right',
               renderPopout: (e) => {
                   let { closePopout: r, updatePosition: o } = e;
@@ -45,7 +45,7 @@ n.Z = (e) => {
                               viewId: t,
                               officialGuildId: s
                           }),
-                              g(),
+                              R(),
                               r();
                       },
                       onUserPopoutClosed: () => r(),
@@ -64,10 +64,10 @@ n.Z = (e) => {
                   });
               },
               children: (e) =>
-                  (0, a.jsx)(l.Clickable, {
+                  (0, a.jsx)(i.Clickable, {
                       ...e,
                       className: T.profileEntryCard,
-                      children: (0, a.jsx)(l.FocusRing, {
+                      children: (0, a.jsx)(i.FocusRing, {
                           offset: {
                               top: 4,
                               bottom: 4,
@@ -86,7 +86,7 @@ n.Z = (e) => {
                                       children: (0, a.jsxs)('div', {
                                           className: o()(O.column, O.gapXs),
                                           children: [
-                                              (0, a.jsx)(l.Text, {
+                                              (0, a.jsx)(i.Text, {
                                                   variant: 'text-md/medium',
                                                   color: 'text-primary',
                                                   lineClamp: 1,
@@ -101,7 +101,7 @@ n.Z = (e) => {
                                   }),
                                   (0, a.jsx)('div', {
                                       className: T.reactions,
-                                      children: (0, a.jsx)(l.ArrowAngleLeftUpIcon, {})
+                                      children: (0, a.jsx)(i.ArrowAngleLeftUpIcon, {})
                                   })
                               ]
                           })
