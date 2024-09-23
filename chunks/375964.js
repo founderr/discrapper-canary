@@ -4562,6 +4562,7 @@ e.exports = Object.freeze({
     FRIEND_ACTIONS_MENU_LABEL: 'Friend Actions',
     FORUM_TAG_ACTIONS_MENU_LABEL: 'Forum Tag Actions',
     MORE_OPTIONS: 'More Options',
+    LEADERBOARD_ACTIONS_MENU_LABEL: 'Leaderboard Actions',
     SWITCH_TO_COZY_MODE: 'Switch to Cozy Mode',
     SWITCH_TO_COMPACT_MODE: 'Switch to Compact Mode',
     SWITCH_TO_PUSH_TO_TALK: 'Switch to Push to Talk',

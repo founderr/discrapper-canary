@@ -3,7 +3,7 @@ n.d(t, {
         return b;
     },
     YN: function () {
-        return O;
+        return R;
     },
     iZ: function () {
         return j;
@@ -25,34 +25,34 @@ var l = n(735250),
     E = n(439170),
     v = n(594174),
     _ = n(69259),
-    p = n(370370),
+    T = n(370370),
     f = n(107062),
-    T = n(91140),
+    p = n(91140),
     g = n(227172),
     I = n(551228),
     C = n(678869),
     N = n(278399),
     P = n(886217),
     Z = n(555672),
-    S = n(644548),
-    M = n(335326),
-    A = n(268010),
+    A = n(644548),
+    S = n(335326),
+    M = n(268010),
     y = n(797342),
-    R = n(206583);
-let O = 72;
+    O = n(206583);
+let R = 72;
 function j(e) {
-    return (null == e ? void 0 : e.type) === E.so.CONTENT_INVENTORY ? O : 0;
+    return (null == e ? void 0 : e.type) === E.so.CONTENT_INVENTORY ? R : 0;
 }
-let w = (e) => {
+let L = (e) => {
         let { entry: t, ...n } = e;
         switch (t.content_type) {
             case o.s.PLAYED_GAME:
-                return (0, l.jsx)(T.Z, {
+                return (0, l.jsx)(p.Z, {
                     ...n,
                     entry: t
                 });
             case o.s.WATCHED_MEDIA:
-                return (0, l.jsx)(M.Z, {
+                return (0, l.jsx)(S.Z, {
                     ...n,
                     entry: t
                 });
@@ -72,17 +72,20 @@ let w = (e) => {
                     entry: t
                 });
             case o.s.LAUNCHED_ACTIVITY:
-                return (0, l.jsx)(p.Z, {
+                return (0, l.jsx)(T.Z, {
                     ...n,
                     entry: t
                 });
             case o.s.LEADERBOARD:
-                return (0, l.jsx)(x.Z, { ...n });
+                return (0, l.jsx)(x.Z, {
+                    ...n,
+                    entry: t
+                });
             default:
                 return null;
         }
     },
-    L = (e) => {
+    w = (e) => {
         let { requestId: t, closePopout: n, ...a } = e;
         return (0, l.jsx)(b, {
             onReaction: (e, l) => {
@@ -98,7 +101,7 @@ let w = (e) => {
             },
             closePopout: n,
             onVoiceChannelPreview: (e, n) => {
-                (0, _.L)(R.xP.VOICE_CHANNEL_PREVIEWED, {
+                (0, _.L)(O.xP.VOICE_CHANNEL_PREVIEWED, {
                     entry: a.entry,
                     channelId: a.channel.id,
                     guildId: a.channel.guild_id,
@@ -120,12 +123,12 @@ let w = (e) => {
                     entry: t
                 });
             case o.s.WATCHED_MEDIA:
-                return (0, l.jsx)(A.Z, {
+                return (0, l.jsx)(M.Z, {
                     ...n,
                     entry: t
                 });
             case o.s.TOP_GAME:
-                return (0, l.jsx)(S.Z, {
+                return (0, l.jsx)(A.Z, {
                     ...n,
                     entry: t
                 });
@@ -155,25 +158,25 @@ t.ZP = a.memo((e) => {
     let { index: i, ...o } = e,
         [m, x] = a.useState('default'),
         E = (0, s.JA)(''.concat(i)),
-        p = null === (t = v.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff(),
-        { isRich: f, appName: T } = (0, y.n)(o.entry),
+        T = null === (t = v.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff(),
+        { isRich: f, appName: p } = (0, y.n)(o.entry),
         g = {
             entry: o.entry,
             channelId: o.channel.id,
             guildId: o.channel.guild_id,
             requestId: o.requestId,
-            richPresenceName: f ? T : void 0
+            richPresenceName: f ? p : void 0
         },
         I = a.useRef(!1),
         [C, N] = a.useState(!1),
         [P, Z] = a.useState(!1),
-        S = (0, u.e7)([h.Z], () => h.Z.keyboardModeEnabled);
+        A = (0, u.e7)([h.Z], () => h.Z.keyboardModeEnabled);
     a.useEffect(() => {
-        C && S && Z(!0);
-    }, [C, S]);
-    let M = a.useCallback(
+        C && A && Z(!0);
+    }, [C, A]);
+    let S = a.useCallback(
             (e) => {
-                if (!!p)
+                if (!!T)
                     (0, d.jW)(e, async () => {
                         let { default: e } = await n.e('153').then(n.bind(n, 330150));
                         return () =>
@@ -183,15 +186,15 @@ t.ZP = a.memo((e) => {
                             });
                     });
             },
-            [o, p]
+            [o, T]
         ),
-        A = a.useCallback(() => {
+        M = a.useCallback(() => {
             x(String(Date.now()));
         }, []),
-        O = a.useCallback(
+        R = a.useCallback(
             r().throttle(
                 (e) => {
-                    (0, _.L)(R.xP.CARD_POPOUT_OPEN, e);
+                    (0, _.L)(O.xP.CARD_POPOUT_OPEN, e);
                 },
                 2000,
                 {
@@ -204,30 +207,30 @@ t.ZP = a.memo((e) => {
         j = () => {
             (I.current = !1),
                 setTimeout(() => {
-                    !I.current && (N(!1), Z(S));
+                    !I.current && (N(!1), Z(A));
                 }, 100);
         };
     return (0, l.jsx)('div', {
         onMouseEnter: () => {
             (I.current = !0),
                 setTimeout(() => {
-                    I.current && N(!0), O(g);
+                    I.current && N(!0), R(g);
                 }, 100);
         },
         onMouseLeave: j,
         children: (0, l.jsx)(c.Popout, {
             renderPopout: (e) => {
                 let { closePopout: t } = e;
-                return (0, l.jsx)(L, {
+                return (0, l.jsx)(w, {
                     closePopout: t,
-                    updatePopoutPosition: A,
+                    updatePopoutPosition: M,
                     ...o
                 });
             },
             position: 'left',
             shouldShow: C,
             positionKey: m,
-            onRequestOpen: () => O(g),
+            onRequestOpen: () => R(g),
             onRequestClose: () => {
                 P && j();
             },
@@ -248,8 +251,8 @@ t.ZP = a.memo((e) => {
                     onClick: () => {
                         !C && N(!0);
                     },
-                    onContextMenu: M,
-                    children: (0, l.jsx)(w, {
+                    onContextMenu: S,
+                    children: (0, l.jsx)(L, {
                         ...o,
                         selected: n,
                         hovered: I.current
