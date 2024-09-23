@@ -11,16 +11,17 @@ var n = t(735250),
     l = t(726985),
     c = t(689938);
 function d() {
-    let e = a.xM.useSetting(),
-        s = (0, i.J)();
+    var e;
+    let s = a.xM.useSetting(),
+        t = null === (e = (0, i.J)()) || void 0 === e || e;
     return (0, n.jsx)(r.U, {
         setting: l.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS_AGE_RESTRICTED_APPS_V2,
         children: (0, n.jsx)(o.Z, {
-            value: !!s && e,
+            value: !!t && s,
             onChange: a.xM.updateSetting,
             title: c.Z.Messages.NSFW_DM_COMMANDS_HEADER,
             note: c.Z.Messages.NSFW_DM_COMMANDS_CAPTION,
-            disabled: !s
+            disabled: !t
         })
     });
 }

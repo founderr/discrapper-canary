@@ -1,14 +1,13 @@
 t.d(s, {
     J: function () {
-        return o;
+        return i;
     }
 });
-var n = t(512722),
-    a = t.n(n),
-    i = t(442837),
-    r = t(594174);
-let o = () =>
-    (0, i.e7)([r.default], () => {
-        let e = r.default.getCurrentUser();
-        return a()(null != e, 'useNSFWAllowed hook: currentUser cannot be undefined'), e.nsfwAllowed;
+var n = t(442837),
+    a = t(594174);
+let i = () =>
+    (0, n.e7)([a.default], () => {
+        var e;
+        let s = a.default.getCurrentUser();
+        return null !== (e = null == s ? void 0 : s.nsfwAllowed) && void 0 !== e ? e : null;
     });
