@@ -25,7 +25,7 @@ function C(e) {
         x = _.ZP.canUsePremiumProfileCustomization(s),
         { analyticsLocations: f } = (0, l.ZP)(),
         { pendingProfileEffectId: M, errors: D } = (0, u.bd)(t),
-        P = a.useCallback(
+        L = a.useCallback(
             () =>
                 (0, c.H)({
                     analyticsLocations: f,
@@ -41,7 +41,7 @@ function C(e) {
                 location_stack: f
             });
     }, [x, f]);
-    let L = null != t,
+    let P = null != t,
         b = O || void 0 !== M ? null != M : null != R,
         Z = g ? o.ShinyButton : o.Button;
     return (0, n.jsx)(E.Z, {
@@ -57,7 +57,7 @@ function C(e) {
             children: [
                 (0, n.jsx)(Z, {
                     size: o.Button.Sizes.SMALL,
-                    onClick: P,
+                    onClick: L,
                     className: r()({ [m.buttonHighlighted]: g }),
                     children: N.Z.Messages.USER_SETTINGS_CHANGE_PROFILE_EFFECT
                 }),
@@ -70,7 +70,7 @@ function C(e) {
                         onClick: function () {
                             (0, u.s6)(null, R, null == t ? void 0 : t.id);
                         },
-                        children: L ? N.Z.Messages.USER_SETTINGS_USE_DEFAULT_PROFILE_EFFECT : N.Z.Messages.USER_SETTINGS_REMOVE_PROFILE_EFFECT
+                        children: P ? N.Z.Messages.USER_SETTINGS_USE_DEFAULT_PROFILE_EFFECT : N.Z.Messages.USER_SETTINGS_REMOVE_PROFILE_EFFECT
                     })
             ]
         })

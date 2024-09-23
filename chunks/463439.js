@@ -11,8 +11,8 @@ var s,
     i = n(481060),
     c = n(442837),
     E = n(194359),
-    N = n(782568),
-    u = n(726521),
+    u = n(782568),
+    N = n(726521),
     T = n(485664),
     I = n(699516),
     _ = n(863653),
@@ -26,8 +26,8 @@ var s,
     P = n(149355);
 function h(e) {
     let { senderId: t, channelId: n, hasReported: s, onReport: o, trackAnalyticsEvent: h } = e,
-        f = (0, c.e7)([I.Z], () => I.Z.isBlocked(t)),
-        [M, p] = a.useState(f),
+        M = (0, c.e7)([I.Z], () => I.Z.isBlocked(t)),
+        [f, p] = a.useState(M),
         g = (0, T.o)(),
         m = (0, _.zF)('ic-take-action-web'),
         [b, L] = a.useState(!1),
@@ -48,7 +48,7 @@ function h(e) {
         B = async () => {
             if (null != x)
                 L(!0),
-                    await (0, u.J7)(
+                    await (0, N.J7)(
                         x,
                         () => {
                             (0, i.showToast)((0, i.createToast)(C.Z.Messages.INAPPROPRIATE_CONVERSATION_REPORT_TOAST, i.ToastType.SUCCESS)), o();
@@ -61,7 +61,7 @@ function h(e) {
                     h(l.NM.USER_TAKEOVER_MODAL_REPORT);
         },
         j = (e) => {
-            0 === e ? ((0, N.Z)(R.EI), h(l.NM.USER_TAKEOVER_MODAL_CTL)) : 2 === e ? ((0, N.Z)(R.$l), h(l.NM.USER_TAKEOVER_MODAL_THROUGHLINE)) : ((0, N.Z)(R.n4), h(l.NM.USER_TAKEOVER_MODAL_NO_FILTR));
+            0 === e ? ((0, u.Z)(R.EI), h(l.NM.USER_TAKEOVER_MODAL_CTL)) : 2 === e ? ((0, u.Z)(R.$l), h(l.NM.USER_TAKEOVER_MODAL_THROUGHLINE)) : ((0, u.Z)(R.n4), h(l.NM.USER_TAKEOVER_MODAL_NO_FILTR));
         },
         V = a.useMemo(() => {
             switch (Z) {
@@ -87,7 +87,7 @@ function h(e) {
                     className: S.button,
                     innerClassName: S.buttonInner,
                     onClick: () => {
-                        M ? D() : v();
+                        f ? D() : v();
                     },
                     children: [
                         (0, r.jsx)(i.CircleXIcon, {
@@ -97,7 +97,7 @@ function h(e) {
                             color: i.tokens.colors.WHITE,
                             className: S.buttonIcon
                         }),
-                        M ? C.Z.Messages.UNBLOCK : C.Z.Messages.BLOCK
+                        f ? C.Z.Messages.UNBLOCK : C.Z.Messages.BLOCK
                     ]
                 }),
                 (0, r.jsxs)(i.Button, {

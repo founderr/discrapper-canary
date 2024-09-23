@@ -79,16 +79,16 @@ function h() {
             return (0, S.fD)() ? (null === (s = T.C.getCurrentBuildOverride()) || void 0 === s ? void 0 : null === (e = s.overrides) || void 0 === e ? void 0 : e.discord_web) : null;
         }),
         [M, D] = (0, u.R)('playground-overrideText', null),
-        [P, L] = (0, u.R)('playground-defaultText', g[0].value),
+        [L, P] = (0, u.R)('playground-defaultText', g[0].value),
         b = a.useCallback(
             (e) => {
                 let s = g.find((s) => {
                     let { value: t } = s;
                     return t === e;
                 });
-                '' === e || null == e ? (L(g[0].value), D(null)) : null != s ? L(s.value) : (L('custom'), D(e));
+                '' === e || null == e ? (P(g[0].value), D(null)) : null != s ? P(s.value) : (P('custom'), D(e));
             },
-            [D, L]
+            [D, P]
         );
     return (0, n.jsx)('div', {
         className: A.fullscreen,
@@ -129,7 +129,7 @@ function h() {
                                 className: A.select,
                                 options: g,
                                 onChange: (e) => b(e),
-                                value: P
+                                value: L
                             })
                         }),
                         (0, n.jsx)(l.FormItem, {
@@ -238,7 +238,7 @@ function h() {
                                         ),
                                         p.map((s) => {
                                             var t;
-                                            let a = null !== (t = 'custom' === P ? M : P) && void 0 !== t ? t : '';
+                                            let a = null !== (t = 'custom' === L ? M : L) && void 0 !== t ? t : '';
                                             return (0, n.jsx)(
                                                 'div',
                                                 {

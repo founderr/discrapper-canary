@@ -26,8 +26,8 @@ var n = t(735250),
     f = t(869042),
     M = t(113207);
 let D = o.ZP.connectStores([g.Z], () => ({ theme: g.Z.theme }))(c.EmptyState),
-    P = (0, A.isWindows)();
-function L(e) {
+    L = (0, A.isWindows)();
+function P(e) {
     let { onClose: s } = e,
         t = (0, o.e7)([E.ZP], () => E.ZP.getCandidateGames()),
         [i, l] = a.useState(null),
@@ -90,7 +90,7 @@ function b(e) {
             [f.card]: !i,
             [p.nowPlaying]: null != C && i
         });
-    function L() {
+    function P() {
         d.Z.deleteEntry(C);
     }
     function b() {
@@ -229,7 +229,7 @@ function b(e) {
                 });
             })(),
             (function () {
-                if (!P) return null;
+                if (!L) return null;
                 let { overlay: e, overlayWarn: s } = C,
                     t = e
                         ? (0, n.jsx)(c.ScreenIcon, {
@@ -281,7 +281,7 @@ function b(e) {
             !i || T
                 ? (0, n.jsx)(_.Z, {
                       className: p.removeGame,
-                      onClick: L
+                      onClick: P
                   })
                 : null
         ]
@@ -356,7 +356,7 @@ s.Z = function (e) {
                         (0, n.jsx)(c.Popout, {
                             renderPopout: (e) => {
                                 let { closePopout: s } = e;
-                                return (0, n.jsx)(L, { onClose: s });
+                                return (0, n.jsx)(P, { onClose: s });
                             },
                             align: 'center',
                             position: 'bottom',

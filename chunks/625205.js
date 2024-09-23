@@ -79,7 +79,7 @@ function C() {
             r
         );
     }
-    function P(e) {
+    function L(e) {
         return D(e[0]);
     }
     return (0, n.jsxs)(d.Z, {
@@ -104,7 +104,7 @@ function C() {
                             };
                         }),
                         isDisabled: x,
-                        renderOptionValue: P,
+                        renderOptionValue: L,
                         renderOptionLabel: D
                     }),
                     e
@@ -129,7 +129,7 @@ function C() {
                             };
                         }),
                         isDisabled: M,
-                        renderOptionValue: P,
+                        renderOptionValue: L,
                         renderOptionLabel: D
                     }),
                     s

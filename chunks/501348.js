@@ -31,8 +31,8 @@ var n = t(735250),
     f = t(594174),
     M = t(358085),
     D = t(210887),
-    P = t(740492),
-    L = t(695346),
+    L = t(740492),
+    P = t(695346),
     b = t(329013),
     Z = t(333859),
     v = t(726985),
@@ -382,7 +382,7 @@ class Q extends a.Component {
             }),
             V(this, 'handleMessageDisplayModeChange', (e) => {
                 let { value: s } = e;
-                L.jU.updateSetting(s === Y.COMPACT), (0, T.ZZ)();
+                P.jU.updateSetting(s === Y.COMPACT), (0, T.ZZ)();
             });
     }
 }
@@ -394,24 +394,24 @@ let X = (e) => {
         });
 };
 function q() {
-    let e = L.jU.useSetting(),
-        s = L.RS.useSetting(),
-        t = L.NA.useSetting(),
-        i = L.L1.useSetting();
+    let e = P.jU.useSetting(),
+        s = P.RS.useSetting(),
+        t = P.NA.useSetting(),
+        i = P.L1.useSetting();
     a.useEffect(() => {
         X(l.z.CLIENT_THEMES_SETTINGS_BADGE), X(l.z.DEKSTOP_CUSTOM_APP_ICON_BADGE), X(l.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
     }, []);
-    let r = (0, o.cj)([D.Z, P.ZP, S.Z, f.default, N.Z], () => {
+    let r = (0, o.cj)([D.Z, L.ZP, S.Z, f.default, N.Z], () => {
         var e, s;
         return {
             theme: D.Z.theme,
             useForcedColors: S.Z.useForcedColors,
-            useSystemTheme: P.ZP.useSystemTheme,
+            useSystemTheme: L.ZP.useSystemTheme,
             darkSidebar: D.Z.darkSidebar,
             fontSize: S.Z.fontSize,
             zoom: S.Z.zoom,
             messageGroupSpacing: S.Z.messageGroupSpacing,
-            displayCompactAvatars: P.ZP.displayCompactAvatars,
+            displayCompactAvatars: L.ZP.displayCompactAvatars,
             isStaff: null !== (s = null === (e = f.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff) && void 0 !== s && s,
             gradientPreset: N.Z.gradientPreset
         };

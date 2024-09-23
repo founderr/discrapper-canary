@@ -26,16 +26,16 @@ n.Z = (e) => {
             channel: A,
             context: h
         }),
-        { commands: Z, sectionDescriptors: M, loading: G } = l.wi(A, { commandTypes: [t] }, { limit: f.lr }),
+        { commands: M, sectionDescriptors: Z, loading: G } = l.wi(A, { commandTypes: [t] }, { limit: f.lr }),
         { sections: g } = r.useMemo(() => {
             let e = {};
             return (
-                M.forEach((n) => {
+                Z.forEach((n) => {
                     e[n.id] = n;
                 }),
                 { sections: e }
             );
-        }, [M]),
+        }, [Z]),
         P = r.useRef(G.current);
     r.useEffect(() => {
         G.current !== P.current && ((P.current = G.current), null == C || C());
@@ -89,7 +89,7 @@ n.Z = (e) => {
                   'menu-commands-placeholder'
               ))
             : ((n =
-                  0 === Z.length
+                  0 === M.length
                       ? (0, i.jsx)(
                             s.MenuItem,
                             {
@@ -99,7 +99,7 @@ n.Z = (e) => {
                             },
                             'menu-commands-empty'
                         )
-                      : Z.map(y)),
+                      : M.map(y)),
               null != m &&
                   (n = (0, i.jsxs)(i.Fragment, {
                       children: [n, (0, i.jsx)(s.MenuSeparator, {}, 'separator'), m]

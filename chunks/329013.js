@@ -1,6 +1,6 @@
 t.d(s, {
     g: function () {
-        return P;
+        return L;
     },
     i: function () {
         return D;
@@ -54,7 +54,7 @@ let M = () => {
                     disable: O
                 }
             ),
-            P = () =>
+            L = () =>
                 !r || l
                     ? null
                     : (0, n.jsxs)('div', {
@@ -88,7 +88,7 @@ let M = () => {
                         children: D
                             ? (0, n.jsx)(E.ZP.BasicAndGradient, {
                                   className: x.basicThemeSelectors,
-                                  renderCTAButtons: P
+                                  renderCTAButtons: L
                               })
                             : (0, n.jsxs)(n.Fragment, {
                                   children: [
@@ -100,7 +100,7 @@ let M = () => {
                                           children: [
                                               (0, n.jsx)(E.ZP.Gradient, {
                                                   disabled: r,
-                                                  renderCTAButtons: P
+                                                  renderCTAButtons: L
                                               }),
                                               l &&
                                                   r &&
@@ -129,7 +129,7 @@ let M = () => {
             })
         );
     },
-    P = () =>
+    L = () =>
         (0, i.e7)([u.Z], () => u.Z.isPreview)
             ? null
             : (0, n.jsx)(o.Button, {

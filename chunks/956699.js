@@ -26,8 +26,8 @@ var n = t(735250),
     f = t(921801),
     M = t(857192),
     D = t(558724),
-    P = t(808506),
-    L = t(998502),
+    L = t(808506),
+    P = t(998502),
     b = t(210887),
     Z = t(601948),
     v = t(726985),
@@ -867,7 +867,7 @@ function X() {
         [t, i] = a.useState('');
     return (a.useEffect(() => {
         (async () => {
-            i(await (0, P.Y)());
+            i(await (0, L.Y)());
         })();
     }, []),
     e)
@@ -946,7 +946,7 @@ function X() {
                                               label: 'Out of Memory'
                                           }
                                       ],
-                                      onChange: (e) => null != e && L.ZP.crash(e)
+                                      onChange: (e) => null != e && P.ZP.crash(e)
                                   }),
                                   (0, n.jsx)(u.SingleSelect, {
                                       value: void 0,
@@ -970,7 +970,7 @@ function X() {
                                       ],
                                       onChange: (e) => {
                                           var s;
-                                          return null != e ? ((s = e), void L.ZP.triggerJSException(s)) : void 0;
+                                          return null != e ? ((s = e), void P.ZP.triggerJSException(s)) : void 0;
                                       }
                                   }),
                                   (0, n.jsx)(u.Button, {

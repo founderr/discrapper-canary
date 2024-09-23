@@ -32,8 +32,8 @@ var a = t(512722),
     M = t(944167);
 function D(e) {
     var s, t, a, D;
-    let { guild: P } = e,
-        L = (0, r.e7)([C.default], () => {
+    let { guild: L } = e,
+        P = (0, r.e7)([C.default], () => {
             let e = C.default.getCurrentUser();
             return i()(null != e, 'GuildIdentitySettingsPage: user cannot be undefined'), e;
         }),
@@ -59,12 +59,12 @@ function D(e) {
                 guild: O.Z.getGuild()
             };
         }),
-        y = null != P ? P : F;
+        y = null != L ? L : F;
     i()(null != y, 'guild should not be null');
     let V = (0, l.gS)(y.id),
-        Y = (0, r.e7)([m.ZP], () => (null == y.id ? null : m.ZP.getMember(y.id, L.id))),
-        w = (0, r.e7)([N.Z], () => N.Z.getGuildMemberProfile(L.id, y.id)),
-        k = A.ZP.canUsePremiumProfileCustomization(L),
+        Y = (0, r.e7)([m.ZP], () => (null == y.id ? null : m.ZP.getMember(y.id, P.id))),
+        w = (0, r.e7)([N.Z], () => N.Z.getGuildMemberProfile(P.id, y.id)),
+        k = A.ZP.canUsePremiumProfileCustomization(P),
         H = (0, c.gd)(b, null == Y ? void 0 : Y.avatar),
         W = (0, c.f$)(v, null == w ? void 0 : w.banner),
         K = (0, p.p)(U, null == w ? void 0 : w.themeColors),
@@ -80,7 +80,7 @@ function D(e) {
                 R.Z,
                 {
                     errors: null !== (a = null == G ? void 0 : G.nick) && void 0 !== a ? a : null == V ? void 0 : V.nick,
-                    username: g.ZP.getName(L),
+                    username: g.ZP.getName(P),
                     pendingNick: Z,
                     currentNick: null == Y ? void 0 : Y.nick,
                     guild: y
@@ -101,7 +101,7 @@ function D(e) {
                 'pronouns'
             ),
             (0, n.jsxs)(x.Z, {
-                user: L,
+                user: P,
                 showOverlay: !k,
                 children: [
                     (0, n.jsx)(
@@ -148,7 +148,7 @@ function D(e) {
                                     })
                                 ]
                             }),
-                            user: L,
+                            user: P,
                             guild: y
                         },
                         'decoration'
@@ -171,7 +171,7 @@ function D(e) {
                                     })
                                 ]
                             }),
-                            user: L,
+                            user: P,
                             guild: y
                         },
                         'effect'
@@ -188,7 +188,7 @@ function D(e) {
                         'banner'
                     ),
                     (0, n.jsx)(S.Z, {
-                        user: L,
+                        user: P,
                         pendingAvatar: b,
                         pendingColors: U,
                         onThemeColorsChange: (e) => {

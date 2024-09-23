@@ -120,7 +120,7 @@ function x(e) {
             autocompleterResultTypes: C,
             autocompleterBeforeCreateSearchContext: A
         }),
-        P = (function (e) {
+        L = (function (e) {
             let s = '' !== e,
                 t = (0, i.Wu)(
                     [u.ZP, _.Z, T.Z],
@@ -138,7 +138,7 @@ function x(e) {
                 );
             return s ? null : t;
         })(f),
-        { focusedIndex: L, setFocusedIndex: b } = (function (e) {
+        { focusedIndex: P, setFocusedIndex: b } = (function (e) {
             let [s, t] = a.useState(0),
                 n = a.useRef(e);
             return (
@@ -152,19 +152,19 @@ function x(e) {
         })(f);
     a.useEffect(() => {
         let { current: e } = m;
-        !(null == e || e.isItemVisible(0, L, !0)) &&
+        !(null == e || e.isItemVisible(0, P, !0)) &&
             e.scrollToIndex({
                 section: 0,
-                row: L
+                row: P
             });
-    }, [L]);
-    let Z = null != P ? P.length : D.length,
+    }, [P]);
+    let Z = null != L ? L.length : D.length,
         v = (() => {
-            if (null != P) {
+            if (null != L) {
                 var e;
-                return null === (e = P[L]) || void 0 === e ? void 0 : e.id;
+                return null === (e = L[P]) || void 0 === e ? void 0 : e.id;
             }
-            let s = D[L];
+            let s = D[P];
             if ((null == s ? void 0 : s.type) === S.h8.VOICE_CHANNEL) return s.record.id;
         })();
     return (0, n.jsx)('div', {
@@ -190,18 +190,18 @@ function x(e) {
                                         break;
                                     case 'enter': {
                                         let e = (() => {
-                                            if (null != P) return P[L];
-                                            let e = D[L];
+                                            if (null != L) return L[P];
+                                            let e = D[P];
                                             if ((null == e ? void 0 : e.type) === S.h8.VOICE_CHANNEL) return e.record;
                                         })();
                                         null == e ? o(void 0) : o(e.id), t();
                                         break;
                                     }
                                     case 'arrowup':
-                                        0 === L ? b(Z - 1) : b(L - 1);
+                                        0 === P ? b(Z - 1) : b(P - 1);
                                         break;
                                     case 'arrowdown':
-                                        L >= Z - 1 ? b(0) : b(L + 1);
+                                        P >= Z - 1 ? b(0) : b(P + 1);
                                 }
                         },
                         placeholder: I.Z.Messages.USER_SETTINGS_KEYBINDS_SEARCH_VOICE,
@@ -224,7 +224,7 @@ function x(e) {
                         renderRow: function (e) {
                             let { row: s } = e,
                                 a = (() => {
-                                    if (null != P) return P[s];
+                                    if (null != L) return L[s];
                                     let e = D[s];
                                     if ((null == e ? void 0 : e.type) === S.h8.VOICE_CHANNEL) return e.record;
                                 })();
@@ -237,7 +237,7 @@ function x(e) {
                                     id: a.id,
                                     channel: a,
                                     category: i,
-                                    focused: L === s,
+                                    focused: P === s,
                                     onMouseEnter: () => g.current && b(s),
                                     onClick: () => {
                                         o(a.id), t();

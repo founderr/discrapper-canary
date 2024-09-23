@@ -63,8 +63,8 @@ function M(e) {
             avatarSizeMode: g,
             displayNameMode: M,
             displayUserMode: D,
-            notificationPositionMode: P,
-            textChatNotificationMode: L,
+            notificationPositionMode: L,
+            textChatNotificationMode: P,
             shouldShowKeybindIndicators: b
         } = (0, l.cj)([C.Z], () => ({
             avatarSizeMode: C.Z.getAvatarSizeMode(),
@@ -245,18 +245,18 @@ function M(e) {
                             children: (0, n.jsx)('div', {
                                 className: p.notificationSettings,
                                 children: (0, n.jsx)(S.Z, {
-                                    position: P,
+                                    position: L,
                                     onChange: (e, s) => _.Z.setNotificationPositionMode(s)
                                 })
                             })
                         }),
                         (0, n.jsx)(f, {
                             children: (0, n.jsx)(c.FormSwitch, {
-                                value: P !== h._vf.DISABLED && L === h.Ypu.ENABLED,
-                                disabled: P === h._vf.DISABLED,
+                                value: L !== h._vf.DISABLED && P === h.Ypu.ENABLED,
+                                disabled: L === h._vf.DISABLED,
                                 onChange: function () {
                                     let { ENABLED: e, DISABLED: s } = h.Ypu;
-                                    _.Z.setTextChatNotificationMode(L === e ? s : e);
+                                    _.Z.setTextChatNotificationMode(P === e ? s : e);
                                 },
                                 hideBorder: !0,
                                 children: O.Z.Messages.FORM_LABEL_OVERLAY_TEXT_CHAT_NOTIFICATIONS

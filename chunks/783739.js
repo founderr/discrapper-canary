@@ -33,21 +33,21 @@ function p(e) {
         f = (0, i.e7)([_.Z], () => _.Z.affinities),
         M = (0, i.e7)([u.ZP], () => u.ZP.getFlattenedGuildIds()),
         D = f.length > 0 || M.length > 0,
-        P = p.length > 0,
-        L = a.useMemo(() => p.some((e) => null != e.premiumGuildSubscription), [p]),
+        L = p.length > 0,
+        P = a.useMemo(() => p.some((e) => null != e.premiumGuildSubscription), [p]),
         b = (0, i.e7)([d.Z], () => d.Z.getCurrentUserAppliedBoosts()),
         Z = (null == s ? void 0 : s.isPausedOrPausePending) === !0;
     return (0, n.jsxs)('div', {
         children: [
             (0, n.jsx)(r.oQ, { className: O.blockedPaymentsWarning }),
             (0, n.jsx)(N.Z, {
-                hasGuildBoostSlots: P,
-                hasAppliedGuildBoosts: L,
+                hasGuildBoostSlots: L,
+                hasAppliedGuildBoosts: P,
                 isUserPremiumTier2: x,
                 subscriptionIsPausedOrPausePending: Z
             }),
             (0, n.jsx)(A.Z, {
-                hasAppliedGuildBoosts: L,
+                hasAppliedGuildBoosts: P,
                 isUserPremiumTier2: x,
                 hasGuildAffinitiesOrInGuild: D,
                 subscriptionIsPausedOrPausePending: Z
@@ -64,7 +64,7 @@ function p(e) {
                   }),
             (0, n.jsx)(g.Z, { guildBoostSlots: p }),
             (0, n.jsx)(C.Z, {
-                hasAppliedGuildBoosts: L,
+                hasAppliedGuildBoosts: P,
                 subscriptionIsPausedOrPausePending: Z
             }),
             (0, n.jsx)(c.Z, {

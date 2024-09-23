@@ -31,15 +31,15 @@ function h(e) {
         [O, p] = a.useState(!0),
         [R, x] = a.useState(m.x.INIT),
         [f, M] = a.useState(''),
-        [D, P] = a.useState(null),
-        L = async () => {
+        [D, L] = a.useState(null),
+        P = async () => {
             let e;
             x(m.x.REGISTER);
             let s = E.isPlatformEmbedded && S.ZP.supportsFeature(C.eRX.WEBAUTHN) ? S.ZP.webAuthnRegister(c) : i.Ue(JSON.parse(c)).then((e) => JSON.stringify(e));
             try {
                 e = await s;
             } catch (e) {
-                T.Z.captureException(e), P(A.Z.Messages.MFA_V2_WEBAUTHN_GENERIC_ERROR), x(m.x.INIT);
+                T.Z.captureException(e), L(A.Z.Messages.MFA_V2_WEBAUTHN_GENERIC_ERROR), x(m.x.INIT);
                 return;
             }
             M(e), x(m.x.NAME);
@@ -99,7 +99,7 @@ function h(e) {
                             }),
                             (0, n.jsx)(o.ModalFooter, {
                                 children: (0, n.jsx)(o.Button, {
-                                    onClick: L,
+                                    onClick: P,
                                     children: A.Z.Messages.TWO_FA_WEBAUTHN_REGISTER_CONFIRM
                                 })
                             })
@@ -140,7 +140,7 @@ function h(e) {
                                         })
                                         .then(() => r())
                                         .catch(() => {
-                                            P(A.Z.Messages.ERROR_OCCURRED_TRY_AGAIN), x(m.x.INIT);
+                                            L(A.Z.Messages.ERROR_OCCURRED_TRY_AGAIN), x(m.x.INIT);
                                         });
                             },
                             children: [

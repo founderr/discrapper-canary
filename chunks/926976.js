@@ -67,7 +67,7 @@ function w(e) {
         ]
     });
 }
-let k = [
+let E = [
         {
             id: 'details',
             name: 'Details',
@@ -144,11 +144,11 @@ let k = [
             }
         }
     ],
-    E = {
+    k = {
         events: {
             label: 'Events',
             filter: (e) =>
-                Object.entries(E)
+                Object.entries(k)
                     .filter((e) => {
                         let [t] = e;
                         return 'events' !== t;
@@ -176,7 +176,7 @@ function R() {
     let e = a.useRef(null),
         [t, n] = a.useState(''),
         l = (0, d.e7)([g.Z], () => g.Z.loggedEvents),
-        [c, s] = a.useState(Object.keys(E)),
+        [c, s] = a.useState(Object.keys(k)),
         [h, m] = a.useState(l),
         x = a.useRef(null),
         p = a.useCallback(
@@ -206,7 +206,7 @@ function R() {
         v = a.useMemo(
             () =>
                 h.filter((e) => {
-                    for (let t of c) if (E[t].filter(e)) return !0;
+                    for (let t of c) if (k[t].filter(e)) return !0;
                     return !1;
                 }),
             [h, c]
@@ -216,7 +216,7 @@ function R() {
     }, [t, p, l]);
     let [I, w] = a.useState(void 0),
         R = v.find((e) => e.key === I),
-        { TabBar: O, renderSelectedTab: Z } = (0, C.Z)({ tabs: k }, []);
+        { TabBar: Z, renderSelectedTab: O } = (0, C.Z)({ tabs: E }, []);
     return (0, r.jsxs)('div', {
         ref: e,
         className: i()(N.panel, S.panel),
@@ -241,7 +241,7 @@ function R() {
                     (0, r.jsx)('div', { className: S.toolbarDivider }),
                     (0, r.jsx)('div', {
                         className: S.filters,
-                        children: Object.entries(E).map((e) => {
+                        children: Object.entries(k).map((e) => {
                             let [t, n] = e;
                             return (0, r.jsx)(
                                 u.Clickable,
@@ -281,8 +281,8 @@ function R() {
                     minHeight: 100,
                     initialHeight: null != e.current ? e.current.clientHeight / 2 : 300,
                     children: [
-                        (0, r.jsx)(O, {}),
-                        Z({
+                        (0, r.jsx)(Z, {}),
+                        O({
                             loggedEvent: R,
                             onClose: () => w(void 0)
                         })

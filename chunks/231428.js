@@ -31,7 +31,7 @@ var n,
     f = t(689938),
     M = t(486142),
     D = t(925477);
-function P(e, s, t) {
+function L(e, s, t) {
     return (
         s in e
             ? Object.defineProperty(e, s, {
@@ -44,7 +44,7 @@ function P(e, s, t) {
         e
     );
 }
-function L(e) {
+function P(e) {
     let { payments: s, locale: t, compactMode: n, numPages: r } = e,
         l = i.useRef(null),
         [c, _] = i.useState(0),
@@ -161,7 +161,7 @@ class b extends (n = i.PureComponent) {
                                                   ]
                                               })
                                           }),
-                                    (0, a.jsx)(L, {
+                                    (0, a.jsx)(P, {
                                         compactMode: e,
                                         locale: n,
                                         payments: s,
@@ -175,7 +175,7 @@ class b extends (n = i.PureComponent) {
             : null;
     }
     constructor(...e) {
-        super(...e), P(this, 'scrollerRef', i.createRef());
+        super(...e), L(this, 'scrollerRef', i.createRef());
     }
 }
 function Z(e) {
@@ -223,4 +223,4 @@ function v(e) {
         })
     );
 }
-P(b, 'defaultProps', { compactMode: !1 });
+L(b, 'defaultProps', { compactMode: !1 });

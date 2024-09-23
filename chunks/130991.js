@@ -80,7 +80,7 @@ function M(e) {
             analyticsLocations: k,
             analyticsLocation: c.Z.APP_SUBSCRIPTION_PAYMENT_SOURCE_WITH_INVOICE
         }),
-        W = P(I.currentPeriodEnd);
+        W = L(I.currentPeriodEnd);
     return (0, n.jsxs)('div', {
         className: f.wrapper,
         children: [
@@ -132,12 +132,12 @@ function M(e) {
                 className: f.content,
                 children: [
                     Y &&
-                        (0, n.jsx)(L, {
+                        (0, n.jsx)(P, {
                             type: 'warning',
                             title: V ? x.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_APP_CANCELLED.format({ subscriptionPeriodEnd: W }) : x.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_USER_CANCELLED.format({ subscriptionPeriodEnd: W })
                         }),
                     w &&
-                        (0, n.jsx)(L, {
+                        (0, n.jsx)(P, {
                             type: 'danger',
                             title: x.Z.Messages.APPLICATION_SUBSCRIPTION_USER_SUBSCRIPTION_PAST_DUE_WARNING
                         }),
@@ -182,7 +182,7 @@ function M(e) {
                                 }),
                             (0, n.jsx)(D, {
                                 title: x.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_START_DATE,
-                                content: P(null !== (l = I.createdAt) && void 0 !== l ? l : I.currentPeriodStart)
+                                content: L(null !== (l = I.createdAt) && void 0 !== l ? l : I.currentPeriodStart)
                             }),
                             (0, n.jsx)(D, {
                                 title: Y ? x.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_END_DATE : x.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_RENEWAL_DATE,
@@ -230,10 +230,10 @@ function D(e) {
         ]
     });
 }
-function P(e) {
+function L(e) {
     return e.toLocaleDateString(void 0, { dateStyle: 'long' });
 }
-function L(e) {
+function P(e) {
     let { type: s, title: t } = e;
     return (0, n.jsx)(o.HelpMessage, {
         messageType: 'warning' === s ? o.HelpMessageTypes.WARNING : o.HelpMessageTypes.ERROR,

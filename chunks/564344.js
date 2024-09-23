@@ -34,8 +34,8 @@ function x() {
         x = null != e ? e : s,
         f = (0, i.e7)([N.default], () => N.default.getCurrentUser()),
         { subsection: M, setSubsection: D } = (0, A.Z)(),
-        { analyticsLocations: P } = (0, l.ZP)(),
-        { hasSearchResults: L, searchResults: b } = (0, S.E)();
+        { analyticsLocations: L } = (0, l.ZP)(),
+        { hasSearchResults: P, searchResults: b } = (0, S.E)();
     function Z(s) {
         if (M !== s) {
             if (t) {
@@ -46,7 +46,7 @@ function x() {
                     m.S.dispatch(g.CkL.EMPHASIZE_NOTICE);
                 return;
             }
-            s === h.NB.GUILD && null == e && null != x && (0, d.Fq)(x, P), D(s);
+            s === h.NB.GUILD && null == e && null != x && (0, d.Fq)(x, L), D(s);
         }
     }
     a.useEffect(() => {
@@ -55,9 +55,9 @@ function x() {
     let v = !0,
         j = !0;
     return (
-        L && 1 === b.length && (b.includes(O.s6.PROFILE_SERVER_PROFILES) ? (Z(h.NB.GUILD), (j = !1)) : b.includes(O.s6.PROFILE_USER_PROFILE) && (Z(h.NB.USER_PROFILE), (v = !1))),
+        P && 1 === b.length && (b.includes(O.s6.PROFILE_SERVER_PROFILES) ? (Z(h.NB.GUILD), (j = !1)) : b.includes(O.s6.PROFILE_USER_PROFILE) && (Z(h.NB.USER_PROFILE), (v = !1))),
         (0, n.jsx)(l.Gt, {
-            value: P,
+            value: L,
             children: (0, n.jsxs)(r.HeadingLevel, {
                 component: (0, n.jsx)(r.Heading, {
                     variant: 'heading-lg/semibold',

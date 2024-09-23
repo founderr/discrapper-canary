@@ -108,7 +108,7 @@ class D extends a.PureComponent {
             });
     }
 }
-class P extends a.PureComponent {
+class L extends a.PureComponent {
     componentDidMount() {
         this._loadedAt = Date.now();
     }
@@ -275,4 +275,4 @@ s.Z = o.ZP.connectStores([A.Z, m.Z, N.Z, u.Z, C.Z, I.default], (e) => {
         subscriptionPlan: null != t ? (0, p.oE)(t) : null,
         giftCodes: i
     };
-})(P);
+})(L);

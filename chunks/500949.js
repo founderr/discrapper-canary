@@ -21,7 +21,7 @@ n.d(t, {
         return D;
     },
     KB: function () {
-        return G;
+        return H;
     },
     M3: function () {
         return y;
@@ -54,7 +54,7 @@ n.d(t, {
         return v;
     },
     rd: function () {
-        return H;
+        return G;
     },
     t4: function () {
         return F;
@@ -230,20 +230,20 @@ function w(e, t) {
     let { property: n, key: r } = I.find((e) => e.space === t);
     return e.to(t)[n][r];
 }
-function k(e, t, n) {
+function E(e, t, n) {
     let { property: r, key: a } = I.find((e) => e.space === t);
     e[r][a] = n;
 }
-let E = (e) => e,
+let k = (e) => e,
     R = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
         return Math.pow(e, t);
     },
-    O = function (e) {
+    Z = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
         return 1 - Math.pow(1 - e, t);
     },
-    Z = function (e) {
+    O = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
         return e < 0.5 ? Math.pow(2, t - 1) * Math.pow(e, t) : 1 - Math.pow(-2 * e + 2, t) / 2;
     };
@@ -270,7 +270,7 @@ function B(e) {
         f = w(h, a),
         x = new d.Z(n).to(a),
         p = new d.Z(n).to(a);
-    k(x, a, f), k(p, a, m);
+    E(x, a, f), E(p, a, m);
     let g = x.range(p, {
         space: a,
         outputSpace: l ? 'P3' : 'sRGB'
@@ -280,13 +280,13 @@ function B(e) {
             let a = (function (e, t, n) {
                 switch (e) {
                     case 'Linear':
-                        return E(t);
+                        return k(t);
                     case 'Ease In':
                         return R(t, n);
                     case 'Ease Out':
-                        return O(t, n);
-                    case 'Ease In Out':
                         return Z(t, n);
+                    case 'Ease In Out':
+                        return O(t, n);
                 }
             })(c, n / r, s);
             return [''.concat(t, '-').concat(n), g(a)];
@@ -353,7 +353,7 @@ function U(e, t, n) {
         n
     );
 }
-function H(e, t, n) {
+function G(e, t, n) {
     L(
         e,
         (e) => ({
@@ -363,7 +363,7 @@ function H(e, t, n) {
         n
     );
 }
-function G(e, t, n) {
+function H(e, t, n) {
     L(
         e,
         (e) => ({

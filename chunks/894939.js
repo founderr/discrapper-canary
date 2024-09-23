@@ -41,14 +41,14 @@ function f() {
         m = x(o),
         f = (0, i.e7)([E.Z], () => E.Z.hasFetchedAllSounds()),
         D = (null == o ? void 0 : o.type) === S.zx.GLOBAL,
-        P = f && null != o && null == m;
+        L = f && null != o && null == m;
     a.useEffect(() => {
-        P && (0, T.tt)({ location: e });
-    }, [P, e]),
+        L && (0, T.tt)({ location: e });
+    }, [L, e]),
         a.useEffect(() => {
             (0, u.w)();
         }, []);
-    let L = a.useCallback((e, s) => {
+    let P = a.useCallback((e, s) => {
         let { inDropdown: t } = s;
         return null == e ? null : t ? (0, n.jsx)(M, { guildId: e.value }) : null;
     }, []);
@@ -85,7 +85,7 @@ function f() {
                             value: h.hY
                         },
                         onChange: (e) => t(null == e ? h.hY : e.id),
-                        renderOptionSuffix: L,
+                        renderOptionSuffix: P,
                         hideDivider: !0
                     }),
                     (0, n.jsxs)(d.Z, {
@@ -107,7 +107,7 @@ function f() {
                                     null == t ? (0, T.aC)(s, e) : (0, T.SZ)(s, t, e);
                                 }
                             }),
-                            P &&
+                            L &&
                                 (0, n.jsx)(r.HelpMessage, {
                                     className: p.notice,
                                     messageType: r.HelpMessageTypes.WARNING,

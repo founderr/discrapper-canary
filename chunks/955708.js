@@ -12,8 +12,8 @@ var s,
     i = n(481060),
     c = n(378298),
     E = n(473092),
-    N = n(684471),
-    u = n(745982),
+    u = n(684471),
+    N = n(745982),
     T = n(463439),
     I = n(689938),
     _ = n(70119);
@@ -64,7 +64,7 @@ t.default = (e) => {
                     children: [
                         (0, r.jsx)(i.Slide, {
                             id: 0,
-                            children: (0, r.jsx)(N.Z, {
+                            children: (0, r.jsx)(u.Z, {
                                 warningId: t,
                                 senderId: s,
                                 trackAnalyticsEvent: O,
@@ -73,7 +73,7 @@ t.default = (e) => {
                         }),
                         (0, r.jsx)(i.Slide, {
                             id: 1,
-                            children: (0, r.jsx)(u.Z, {
+                            children: (0, r.jsx)(N.Z, {
                                 warningId: t,
                                 senderId: s,
                                 trackAnalyticsEvent: O

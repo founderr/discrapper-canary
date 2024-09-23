@@ -33,7 +33,7 @@ function N(e) {
             [g, A, t]
         ),
         D = A || void 0 !== R ? null != R : (h ? p : O) != null,
-        P = C ? o.ShinyButton : o.Button;
+        L = C ? o.ShinyButton : o.Button;
     return (0, n.jsxs)(T.Z, {
         className: i,
         forcedDivider: N,
@@ -44,7 +44,7 @@ function N(e) {
             (0, n.jsxs)('div', {
                 className: I.buttonsContainer,
                 children: [
-                    (0, n.jsx)(P, {
+                    (0, n.jsx)(L, {
                         size: o.Button.Sizes.SMALL,
                         onClick: M,
                         className: r()({ [I.buttonHighlighted]: C }),

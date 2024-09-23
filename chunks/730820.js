@@ -31,8 +31,8 @@ var n = t(735250),
     f = t(981631),
     M = t(815660),
     D = t(689938),
-    P = t(898005),
-    L = t(113207);
+    L = t(898005),
+    P = t(113207);
 function b(e, s, t) {
     return (
         s in e
@@ -62,18 +62,18 @@ function Z(e) {
             [i]
         );
     return (0, n.jsx)('li', {
-        className: L.marginBottom20,
+        className: P.marginBottom20,
         children: (0, n.jsx)(l.Clickable, {
             innerRef: r,
-            className: P.backupCode,
+            className: L.backupCode,
             onKeyDown: o,
             children: (0, n.jsx)(l.Checkbox, {
                 displayOnly: !0,
                 readOnly: !0,
-                className: P.codeCheckbox,
+                className: L.codeCheckbox,
                 value: t,
                 children: (0, n.jsx)('span', {
-                    className: P.code,
+                    className: L.code,
                     children: i
                 })
             })
@@ -94,12 +94,12 @@ class v extends a.PureComponent {
             let e = t ? a.phone : this.maskPhoneNumber(a.phone);
             s = (0, n.jsxs)(l.FormText, {
                 type: l.FormText.Types.DESCRIPTION,
-                className: L.marginBottom8,
+                className: P.marginBottom8,
                 children: [
                     D.Z.Messages.MFA_SMS_AUTH_CURRENT_PHONE.format({ phoneNumber: e }),
                     (0, n.jsx)(l.Anchor, {
                         onClick: this.togglePhoneNumberVisibility,
-                        className: P.phoneRevealer,
+                        className: L.phoneRevealer,
                         children: t ? D.Z.Messages.MFA_SMS_PHONE_NUMBER_HIDE : D.Z.Messages.MFA_SMS_PHONE_NUMBER_REVEAL
                     })
                 ]
@@ -107,7 +107,7 @@ class v extends a.PureComponent {
         }
         if (o)
             e = (0, n.jsx)(T.Z, {
-                className: r ? '' : L.marginTop8,
+                className: r ? '' : P.marginTop8,
                 children: (0, n.jsx)(l.Button, {
                     color: l.Button.Colors.RED,
                     look: l.Button.Looks.OUTLINED,
@@ -120,7 +120,7 @@ class v extends a.PureComponent {
         else {
             let s = (0, p.c)(a);
             e = (0, n.jsxs)(T.Z, {
-                className: r ? '' : L.marginTop8,
+                className: r ? '' : P.marginTop8,
                 children: [
                     (0, n.jsx)(l.Button, {
                         onClick: this.handleEnableSMS,
@@ -144,7 +144,7 @@ class v extends a.PureComponent {
         return (0, n.jsx)(I.F, {
             setting: x.s6.ACCOUNT_SMS_BACKUP,
             children: (0, n.jsxs)(l.FormSection, {
-                className: L.marginTop40,
+                className: P.marginTop40,
                 title: D.Z.Messages.MFA_SMS_AUTH,
                 children: [
                     (0, n.jsx)(l.FormText, {
@@ -184,20 +184,20 @@ class v extends a.PureComponent {
                 children: [
                     (0, n.jsx)(l.FormText, {
                         type: l.FormText.Types.DESCRIPTION,
-                        className: L.marginBottom20,
+                        className: P.marginBottom20,
                         children: D.Z.Messages.TWO_FA_BACKUP_CODES_BODY.format()
                     }),
                     (0, n.jsxs)(T.Z, {
                         children: [
                             (0, n.jsx)(T.Z.Child, {
                                 children: (0, n.jsx)('ul', {
-                                    className: P.checkboxGroup,
+                                    className: L.checkboxGroup,
                                     children: a(s.slice(0, s.length / 2))
                                 })
                             }),
                             (0, n.jsx)(T.Z.Child, {
                                 children: (0, n.jsx)('ul', {
-                                    className: P.checkboxGroup,
+                                    className: L.checkboxGroup,
                                     children: a(s.slice(s.length / 2))
                                 })
                             })
@@ -211,7 +211,7 @@ class v extends a.PureComponent {
                             children: D.Z.Messages.TWO_FA_GENERATE_CODES
                         })
                     }),
-                    (0, n.jsx)(l.FormDivider, { className: L.marginTop20 })
+                    (0, n.jsx)(l.FormDivider, { className: P.marginTop20 })
                 ]
             });
         }
@@ -220,12 +220,12 @@ class v extends a.PureComponent {
                 (0, n.jsx)(l.FormTitle, { children: D.Z.Messages.TWO_FA }),
                 (0, n.jsx)(l.FormText, {
                     type: l.FormText.Types.DESCRIPTION,
-                    className: L.marginBottom20,
+                    className: P.marginBottom20,
                     children: D.Z.Messages.TWO_FA_DESCRIPTION
                 }),
                 (0, n.jsxs)(T.Z, {
                     justify: T.Z.Justify.START,
-                    className: L.marginBottom20,
+                    className: P.marginBottom20,
                     children: [
                         (0, n.jsx)(T.Z.Child, {
                             wrap: !0,
@@ -272,7 +272,7 @@ class v extends a.PureComponent {
             children: [
                 (0, n.jsx)(l.FormText, {
                     type: l.FormText.Types.DESCRIPTION,
-                    className: L.marginBottom20,
+                    className: P.marginBottom20,
                     children: D.Z.Messages.TWO_FA_SALES_PITCH
                 }),
                 (0, n.jsx)(l.FormItem, {

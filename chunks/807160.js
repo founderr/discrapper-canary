@@ -33,8 +33,8 @@ var n,
     f = t(539290),
     M = t(336197),
     D = t(690221),
-    P = t(219929),
-    L = t(307643),
+    L = t(219929),
+    P = t(307643),
     b = t(378233),
     Z = t(419922),
     v = t(46141),
@@ -215,7 +215,7 @@ class ec extends (a = o.PureComponent) {
         let {
             payment: { paymentSource: e }
         } = this.props;
-        return e instanceof v.qo ? P.ZP.Types.PAYPAL : e instanceof v.dm ? P.ZP.getType(e.brand) : P.ZP.Types.UNKNOWN;
+        return e instanceof v.qo ? L.ZP.Types.PAYPAL : e instanceof v.dm ? L.ZP.getType(e.brand) : L.ZP.Types.UNKNOWN;
     }
     validateRefundRules() {
         return this.refundRules
@@ -778,7 +778,7 @@ function ed(e) {
         }),
         N = (0, T.e7)([m.Z], () => (null != _ ? m.Z.getApplication(_) : null));
     o.useEffect(() => {
-        u && null != _ && (0, L.UM)(_);
+        u && null != _ && (0, P.UM)(_);
     }, [_, u]);
     let C = (0, T.e7)([j.Z], () => j.Z.getGuild(null == S ? void 0 : S.guildId)),
         A = c ? S : void 0,

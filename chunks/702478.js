@@ -368,7 +368,7 @@ t.Z = () => {
             analytics: null != e ? L.Z.getOverviewAnalytics(e) : null,
             errorCode: L.Z.getError()
         })),
-        c = h.Z.enabled,
+        c = (0, l.e7)([h.Z], () => h.Z.getSettings().enabled),
         d = null == t || null == n || (null != t && t < 500 && null != n && !n.hasFeature(O.oNc.PARTNERED) && !n.hasFeature(O.oNc.VERIFIED));
     a.useEffect(() => {
         null != e && !d && ((0, R.Vk)(e), (0, R.SR)(e), (0, R.xl)(e));
@@ -429,11 +429,11 @@ t.Z = () => {
                 ]
             }),
             c
-                ? E
-                : (0, s.jsx)('div', {
+                ? (0, s.jsx)('div', {
                       className: v.streamerMode,
                       children: (0, s.jsx)(_.Z, {})
                   })
+                : E
         ]
     });
 };

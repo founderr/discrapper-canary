@@ -36,8 +36,8 @@ let M = {
         confettiEnabled: !1
     },
     D = (0, c.range)(0, 11),
-    P = (0, c.range)(0, 2.25, 0.25),
-    L = (0, c.range)(1, 11),
+    L = (0, c.range)(0, 2.25, 0.25),
+    P = (0, c.range)(1, 11),
     b = (0, c.range)(1, 26);
 ((i = n || (n = {}))[(i.CONFETTI = 0)] = 'CONFETTI'), (i[(i.SHAKE = 1)] = 'SHAKE'), ((r = a || (a = {}))[(r.USER_SETTINGS = 0)] = 'USER_SETTINGS'), (r[(r.ACHIEVEMENT_LIST = 1)] = 'ACHIEVEMENT_LIST');
 let Z = () => [
@@ -174,10 +174,10 @@ function G(e) {
                     (0, o.jsx)(B, { children: x.Z.Messages.POGGERMODE_CONFETTI_COUNT_DESCRIPTION }),
                     (0, o.jsx)(u.Slider, {
                         disabled: l,
-                        markers: L,
+                        markers: P,
                         stickToMarkers: !0,
-                        minValue: L[0],
-                        maxValue: L[L.length - 1],
+                        minValue: P[0],
+                        maxValue: P[P.length - 1],
                         initialValue: n,
                         onValueChange: (e) => r({ confettiCount: e }, 0),
                         onValueRender: (e) => ''.concat(e)
@@ -287,14 +287,14 @@ function y(e) {
                     (0, o.jsx)(B, { children: x.Z.Messages.POGGERMODE_SCREENSHAKE_DESCRIPTION }),
                     (0, o.jsx)(u.Slider, {
                         disabled: l,
-                        markers: P,
+                        markers: L,
                         equidistant: !0,
                         stickToMarkers: !0,
-                        minValue: P[0],
-                        maxValue: P[P.length - 1],
+                        minValue: L[0],
+                        maxValue: L[L.length - 1],
                         initialValue: n,
                         onValueChange: (e) => c({ shakeIntensity: e }, 1),
-                        onMarkerRender: (e) => (e === P[P.length - 1] ? x.Z.Messages.POGGERMODE_SCREENSHAKE_MAX : ''.concat(100 * e, '%'))
+                        onMarkerRender: (e) => (e === L[L.length - 1] ? x.Z.Messages.POGGERMODE_SCREENSHAKE_MAX : ''.concat(100 * e, '%'))
                     })
                 ]
             }),

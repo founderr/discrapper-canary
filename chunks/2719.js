@@ -31,8 +31,8 @@ var n = t(735250),
     f = t(25990),
     M = t(594174),
     D = t(572004),
-    P = t(51144),
-    L = t(998502),
+    L = t(51144),
+    P = t(998502),
     b = t(695346),
     Z = t(461877),
     v = t(726985),
@@ -41,7 +41,7 @@ var n = t(735250),
     U = t(801461),
     G = t(689938),
     F = t(529733);
-let y = L.ZP.getEnableHardwareAcceleration() ? _.AnimatedAvatar : _.Avatar;
+let y = P.ZP.getEnableHardwareAcceleration() ? _.AnimatedAvatar : _.Avatar;
 function V(e) {
     var s, i;
     let { className: o, user: l } = e,
@@ -158,7 +158,7 @@ function Y(e) {
     let { user: i, className: o } = e,
         l = (0, N.gS)(),
         c = null !== (t = null == l ? void 0 : null === (s = l.nick) || void 0 === s ? void 0 : s[0]) && void 0 !== t ? t : null,
-        u = P.ZP.getGlobalName(i),
+        u = L.ZP.getGlobalName(i),
         E = a.useRef(null),
         [T, S] = a.useState(!1);
     return (

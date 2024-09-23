@@ -25,8 +25,8 @@ var n = t(735250),
     f = t(351402),
     M = t(853872),
     D = t(78839),
-    P = t(580130),
-    L = t(626135),
+    L = t(580130),
+    P = t(626135),
     b = t(74538),
     Z = t(639056),
     v = t(52164),
@@ -58,7 +58,7 @@ function Y() {
     });
 }
 function w() {
-    let e = (0, o.e7)([P.Z], () => P.Z.getForApplication(B.CL));
+    let e = (0, o.e7)([L.Z], () => L.Z.getForApplication(B.CL));
     return (
         a.useEffect(() => {
             (0, u.yD)(B.CL);
@@ -96,7 +96,7 @@ s.Z = function () {
         u = (0, o.e7)([D.ZP], () => D.ZP.hasFetchedSubscriptions()),
         m = (0, o.e7)([f.Z], () => f.Z.isBusy),
         C = (0, N.V)(),
-        P = (0, o.e7)([x.Z], () => x.Z.getSubsection()),
+        L = (0, o.e7)([x.Z], () => x.Z.getSubsection()),
         b = (0, o.e7)([D.ZP], () => {
             var e, s;
             return null !== (s = null === (e = D.ZP.getActiveApplicationSubscriptions()) || void 0 === e ? void 0 : e.length) && void 0 !== s ? s : 0;
@@ -121,9 +121,9 @@ s.Z = function () {
     R.Z.enabled)
         ? (0, n.jsx)(S.Z, {})
         : u && C
-          ? P === G.cP
+          ? L === G.cP
               ? (0, n.jsx)(g.Z, { onGoBack: () => T.Z.clearSubsection() })
-              : P === G.XZ
+              : L === G.XZ
                 ? (0, n.jsx)(O.Z, { onGoBack: () => T.Z.clearSubsection() })
                 : (0, n.jsx)('div', {
                       className: V.container,
@@ -160,7 +160,7 @@ s.Z = function () {
                                           (0, n.jsx)(h.Z, {
                                               count: b,
                                               onClickManageSubscription: () => {
-                                                  T.Z.setSection(U.oAB.SUBSCRIPTIONS, G.XZ), L.default.track(U.rMx.PREMIUM_APPLICATION_SUBSCRIPTION_MANAGE_CTA_CLICKED);
+                                                  T.Z.setSection(U.oAB.SUBSCRIPTIONS, G.XZ), P.default.track(U.rMx.PREMIUM_APPLICATION_SUBSCRIPTION_MANAGE_CTA_CLICKED);
                                               }
                                           })
                                       ]

@@ -88,24 +88,24 @@ function y(e) {
             clearTimeout(e);
         };
     }, [j]);
-    let { id: I, expires_at: w, redeemed_at: k, trial_id: E, subscription_trial: R } = c,
-        O =
+    let { id: I, expires_at: w, redeemed_at: E, trial_id: k, subscription_trial: R } = c,
+        Z =
             null !==
                 (n =
                     null ===
                         (t = u.find((e) => {
                             let { value: t } = e;
-                            return t === E;
+                            return t === k;
                         })) || void 0 === t
                         ? void 0
                         : t.label) && void 0 !== n
                 ? n
                 : 'Unknown',
-        Z = null != w,
+        O = null != w,
         A = null != w && new Date(w).getTime() < Date.now(),
         B = (null == R ? void 0 : R.sku_id) === g.Si.TIER_0,
         L = async () => {
-            S(!0), Z ? await T(I, 'trial') : await (0, d.a)(c), h(), S(!1);
+            S(!0), O ? await T(I, 'trial') : await (0, d.a)(c), h(), S(!1);
         };
     a.useEffect(() => {
         if (x) {
@@ -127,7 +127,7 @@ function y(e) {
     }, [x, b]);
     let P = 'Active';
     return (
-        Z && (P = 'Acknowledged'),
+        O && (P = 'Acknowledged'),
         A && (P = 'Expired'),
         (0, r.jsxs)('div', {
             className: i()(v.card, B ? v.gradientWrapperTier0 : v.gradientWrapperTier2),
@@ -138,7 +138,7 @@ function y(e) {
                         (0, r.jsx)(s.Heading, {
                             variant: 'heading-lg/semibold',
                             color: 'always-white',
-                            children: O
+                            children: Z
                         }),
                         (0, r.jsx)(s.Clickable, {
                             onClick: async () => {
@@ -179,13 +179,13 @@ function y(e) {
                 (0, r.jsxs)(s.Clickable, {
                     className: i()(v.row, v.idRow),
                     onClick: () => {
-                        (0, m.JG)(E), _(!0);
+                        (0, m.JG)(k), _(!0);
                     },
                     children: [
                         (0, r.jsxs)(s.Text, {
                             variant: 'eyebrow',
                             color: 'always-white',
-                            children: ['Trial: ', E]
+                            children: ['Trial: ', k]
                         }),
                         b
                             ? (0, r.jsx)(s.CheckmarkLargeIcon, {
@@ -221,7 +221,7 @@ function y(e) {
                         (0, r.jsx)(s.Clickable, {
                             onClick: L,
                             className: i()(v.badge, v.clickable, {
-                                [v.acked]: Z,
+                                [v.acked]: O,
                                 [v.expired]: A
                             }),
                             children: (0, r.jsx)(s.Text, {
@@ -230,7 +230,7 @@ function y(e) {
                                 children: P
                             })
                         }),
-                        null != k &&
+                        null != E &&
                             (0, r.jsx)('div', {
                                 className: i()(v.badge, v.__invalid_badgeBottom, v.redeemed),
                                 children: (0, r.jsx)(s.Text, {
@@ -278,10 +278,10 @@ function I(e) {
                         : t.label) && void 0 !== n
                 ? n
                 : 'Unknown',
-        k = null != S,
-        E = null != S && new Date(S).getTime() < Date.now(),
+        E = null != S,
+        k = null != S && new Date(S).getTime() < Date.now(),
         R = async () => {
-            g(!0), k ? await T(j, 'discount') : await (0, d.a)(void 0, l), c(), g(!1);
+            g(!0), E ? await T(j, 'discount') : await (0, d.a)(void 0, l), c(), g(!1);
         };
     a.useEffect(() => {
         if (u) {
@@ -301,10 +301,10 @@ function I(e) {
             };
         }
     }, [u, f]);
-    let O = 'Active';
+    let Z = 'Active';
     return (
-        E && (O = 'Expired'),
-        k && (O = 'Acknowledged'),
+        k && (Z = 'Expired'),
+        E && (Z = 'Acknowledged'),
         (0, r.jsxs)('div', {
             className: i()(v.card, v.discount),
             children: [
@@ -389,13 +389,13 @@ function I(e) {
                         (0, r.jsx)(s.Clickable, {
                             onClick: R,
                             className: i()(v.badge, v.clickable, {
-                                [v.acked]: k,
-                                [v.expired]: E
+                                [v.acked]: E,
+                                [v.expired]: k
                             }),
                             children: (0, r.jsx)(s.Text, {
                                 variant: 'eyebrow',
-                                color: 'Acknowledged' === O ? void 0 : 'always-white',
-                                children: O
+                                color: 'Acknowledged' === Z ? void 0 : 'always-white',
+                                children: Z
                             })
                         }),
                         null != N &&
@@ -424,9 +424,9 @@ function w() {
         [f, p] = a.useState(),
         [g, C] = a.useState([]),
         [T, w] = a.useState([]),
-        [k, E] = a.useState(!0);
+        [E, k] = a.useState(!0);
     a.useEffect(() => {
-        (0 === e.length || 0 === n.length || k) &&
+        (0 === e.length || 0 === n.length || E) &&
             _().then((e) => {
                 let n = Object.keys(e.trial).map((t) => ({
                         label: t,
@@ -438,24 +438,24 @@ function w() {
                     }));
                 t(n), l(r), null == o && m(n[0].value), null == f && p(r[0].value);
             });
-    }, [e, n, o, f, k]),
+    }, [e, n, o, f, E]),
         a.useEffect(() => {
-            k &&
-                (E(!1),
+            E &&
+                (k(!1),
                 h.Z.forceReset(),
                 (0, d.T)(),
                 S().then((e) => {
                     C(e.trial.sort((e, t) => e.id.localeCompare(t.id))), w(e.discount.sort((e, t) => e.id.localeCompare(t.id)));
                 }));
-        }, [k]);
+        }, [E]);
     let R = async () => {
-            null != o && (await j(o, 'trial'), E(!0));
-        },
-        O = async () => {
-            null != f && (await j(f, 'discount'), E(!0));
+            null != o && (await j(o, 'trial'), k(!0));
         },
         Z = async () => {
-            await N(), E(!0);
+            null != f && (await j(f, 'discount'), k(!0));
+        },
+        O = async () => {
+            await N(), k(!0);
         };
     return (0, r.jsx)(s.ScrollerThin, {
         className: i()(b.panel),
@@ -474,7 +474,7 @@ function w() {
                             children: [
                                 (0, r.jsx)(s.Button, {
                                     size: s.Button.Sizes.SMALL,
-                                    onClick: Z,
+                                    onClick: O,
                                     children: 'Clear all User Offers'
                                 }),
                                 (0, r.jsx)(s.Button, {
@@ -484,7 +484,7 @@ function w() {
                                 }),
                                 (0, r.jsx)(s.Button, {
                                     size: s.Button.Sizes.SMALL,
-                                    onClick: () => E(!0),
+                                    onClick: () => k(!0),
                                     children: 'Refresh DevTools'
                                 })
                             ]
@@ -538,7 +538,7 @@ function w() {
                                     popoutLayerContext: x.O$
                                 }),
                                 (0, r.jsx)(s.Button, {
-                                    onClick: O,
+                                    onClick: Z,
                                     children: 'Create'
                                 })
                             ]
@@ -559,7 +559,7 @@ function w() {
                                     {
                                         offer: t,
                                         offerOptions: e,
-                                        forceRefetch: () => E(!0)
+                                        forceRefetch: () => k(!0)
                                     },
                                     t.id
                                 )
@@ -580,7 +580,7 @@ function w() {
                                     {
                                         offer: e,
                                         offerOptions: n,
-                                        forceRefetch: () => E(!0)
+                                        forceRefetch: () => k(!0)
                                     },
                                     e.id
                                 )
