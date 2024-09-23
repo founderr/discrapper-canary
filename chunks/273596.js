@@ -51,9 +51,9 @@ function x(e) {
         D = a.useContext(_.AnalyticsContext),
         [y, j] = a.useState((0, d.P)()),
         [U, G] = a.useState(!0),
-        k = a.useRef(U),
-        [w, B] = a.useState(3),
-        H = a.useRef(w),
+        w = a.useRef(U),
+        [k, B] = a.useState(3),
+        H = a.useRef(k),
         V = a.useRef(null),
         F = a.useCallback(
             (e) => {
@@ -67,7 +67,7 @@ function x(e) {
             let t = null == e ? void 0 : e.getBoundingClientRect();
             if (null == t) return;
             let n = t.width;
-            n < 1024 && k.current ? ((k.current = !1), G(!1)) : n > 1024 && !k.current && ((k.current = !0), G(!0));
+            n < 1024 && w.current ? ((w.current = !1), G(!1)) : n > 1024 && !w.current && ((w.current = !0), G(!0));
             let i = 1;
             for (n -= U ? 450 : 0, n -= 280; n > 0; ) (n -= 264), (i += 1);
             i !== H.current && ((H.current = i), B(i)), F(t);
@@ -242,7 +242,7 @@ function x(e) {
                 ref: V,
                 className: A.masonryList,
                 sections: z,
-                columns: w,
+                columns: k,
                 itemGutter: 16,
                 padding: ei,
                 renderItem: et,

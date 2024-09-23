@@ -28,8 +28,8 @@ var i = t(735250),
     g = t(41558),
     P = t(106771),
     L = t(79984),
-    b = t(314734),
-    S = t(981631),
+    S = t(314734),
+    b = t(981631),
     R = t(689938),
     T = t(454093);
 let M = Array(6)
@@ -144,12 +144,12 @@ function H(e) {
         key: r,
         isExpanded: M,
         durationMs: 200,
-        maxAnimationHeight: b.K7
+        maxAnimationHeight: S.K7
     });
     a.useEffect(() => {
         !v &&
             E &&
-            (0, c.yw)(S.rMx.APP_LAUNCHER_SECTION_VIEW_MORE, {
+            (0, c.yw)(b.rMx.APP_LAUNCHER_SECTION_VIEW_MORE, {
                 section_name: f.L3.SEARCH,
                 source: h.Z.entrypoint(),
                 num: o.length
@@ -198,7 +198,7 @@ function H(e) {
                                         searchResultsPosition: n,
                                         source: e
                                     }),
-                                    _.S.dispatch(S.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: l.id });
+                                    _.S.dispatch(b.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: l.id });
                             }
                         },
                         t.id

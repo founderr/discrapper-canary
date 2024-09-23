@@ -58,14 +58,14 @@ function v(e) {
             onStart: () => j(!0),
             onRest: () => j(1 === M)
         }),
-        k = (0, d.useSpring)(
+        w = (0, d.useSpring)(
             {
                 transform: 'translateX('.concat(1 === M ? 0 : (-1 * (b - 380)) / 2 + 47.5, 'px)'),
                 config: A
             },
             'respect-motion-settings'
         ),
-        w = (0, d.useTransition)(0 === M, {
+        k = (0, d.useTransition)(0 === M, {
             from: { opacity: 0 },
             enter: {
                 opacity: 1,
@@ -202,7 +202,7 @@ function v(e) {
                             })
                         }),
                         (0, i.jsx)(o.animated.div, {
-                            style: k,
+                            style: w,
                             className: r()(N.sidebar, { [N.sidebarResponsive]: y }),
                             children: (0, i.jsx)(T.Z, {
                                 guildId: t,
@@ -210,7 +210,7 @@ function v(e) {
                                 setSigned: y ? void 0 : x,
                                 sidebarWidth: 380,
                                 windowWidth: b,
-                                transition: w,
+                                transition: k,
                                 brandPrimaryColor: v.brandPrimaryColor
                             })
                         })

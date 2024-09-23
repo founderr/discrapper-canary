@@ -75,8 +75,8 @@ t.ZP = o.memo(function (e) {
                 i = M / t;
             return i > 360 ? Math.max(Math.floor(t - (t - e) / 2), 1) : n < 240 ? Math.max(Math.max(e, t), 1) : Math.max(e, 1);
         }, [M]),
-        { loaded: y, clans: j, searchResult: U, searchCriteria: G, hasError: k } = (0, C.ML)(D, 'saved_guilds' === Z),
-        w = (0, A.GN)((e) => e.selectedTraits, u.Z),
+        { loaded: y, clans: j, searchResult: U, searchCriteria: G, hasError: w } = (0, C.ML)(D, 'saved_guilds' === Z),
+        k = (0, A.GN)((e) => e.selectedTraits, u.Z),
         B = (0, A.GN)((e) => e.selectedGames, u.Z),
         H = (0, h.Z)(U),
         { currentPage: V, updatePage: F, totalItems: Y, pageSize: W } = (0, N.a)(),
@@ -84,7 +84,7 @@ t.ZP = o.memo(function (e) {
     o.useEffect(() => {
         if (null != U && !!(0, L.Pw)(U)) (!(null != H && (0, L.Pw)(H)) || !(H.loadedAt >= U.loadedAt)) && (0, m.Oe)('top_picks', G);
     }, [G, U, H]);
-    let K = B.length > 0 || w.length > 0 ? R.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE : null != z ? R.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE_NO_PREFERENCES.format({ name: p.ZP.getName(z) }) : '';
+    let K = B.length > 0 || k.length > 0 ? R.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE : null != z ? R.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE_NO_PREFERENCES.format({ name: p.ZP.getName(z) }) : '';
     let q =
             ((t = j),
             (n = D),
@@ -202,7 +202,7 @@ t.ZP = o.memo(function (e) {
                         index: a,
                         position: s,
                         searchCriteria: G,
-                        traitsToHighlight: w,
+                        traitsToHighlight: k,
                         prioritizedGameIds: J,
                         onVisibilityChange: (n, i) => $(e, t, n, i),
                         hide: n,
@@ -211,7 +211,7 @@ t.ZP = o.memo(function (e) {
                     ''.concat(r.id, ':').concat(Z)
                 );
             },
-            [q, D, V, W, ee, Z, G, w, J, $]
+            [q, D, V, W, ee, Z, G, k, J, $]
         ),
         en = o.useCallback((e) => (0, l.jsx)(f.Z, { style: { transform: 'translateY(-6px)' } }, e), []),
         ei = o.useCallback(
@@ -299,7 +299,7 @@ t.ZP = o.memo(function (e) {
                             ]
                         })
           })
-        : k && 0 === j.length
+        : w && 0 === j.length
           ? (0, l.jsxs)('div', {
                 className: O.errorPage,
                 children: [

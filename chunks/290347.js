@@ -75,8 +75,8 @@ function L(e) {
     let { className: t, renderModalProps: n, heroArt: s, heroArtClassName: A, modalDismissibleContent: L, modalTopExtra: Z, header: R, headerClassName: O, subHeader: x, subHeaderExtra: b, featureCards: P, changeLogId: M, button: D, body: y } = e,
         { onClose: j, transitionState: U } = n,
         G = (0, E.Dt)(),
-        k = P.length % 2 == 0,
-        w = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
+        w = P.length % 2 == 0,
+        k = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
         [B, H] = a.useState(Date.now()),
         [V, F] = a.useState(0),
         [Y, W] = a.useState(0),
@@ -187,7 +187,7 @@ function L(e) {
                         'video' === s.type
                             ? (0, i.jsx)(h.Z, {
                                   className: r()(C.video, A),
-                                  autoPlay: !w,
+                                  autoPlay: !k,
                                   loop: !0,
                                   muted: !0,
                                   controls: !0,
@@ -264,13 +264,13 @@ function L(e) {
                                 children: y
                             }),
                         (0, i.jsx)('div', {
-                            className: r()(C.featureCardGroup, { [C.wideStyle]: k }),
+                            className: r()(C.featureCardGroup, { [C.wideStyle]: w }),
                             children: P.map((e, t) =>
                                 (0, i.jsx)(
                                     v,
                                     {
                                         ...e,
-                                        wideStyle: k
+                                        wideStyle: w
                                     },
                                     ''.concat(e.header, '_').concat(t)
                                 )

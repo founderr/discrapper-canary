@@ -115,15 +115,15 @@ let S = {
 t.Z = function (e) {
     var t, n, s;
     let { backSrc: o, frontSrc: f, size: E, isTyping: A, status: I, style: p, className: C, ...N } = e,
-        { size: L } = c.AvatarSizeSpecs[E],
+        { size: v } = c.AvatarSizeSpecs[E],
         {
-            statusCoords: v,
+            statusCoords: L,
             frontAvatarOffsetPx: b,
-            frontAvatarSizePx: T,
-            backAvatarSizePx: x
+            frontAvatarSizePx: x,
+            backAvatarSizePx: T
         } = a.useMemo(() => {
             var e;
-            let t = ''.concat(L, '-').concat(A);
+            let t = ''.concat(v, '-').concat(A);
             return null !== (e = _[t]) && void 0 !== e
                 ? e
                 : (function (e, t, n) {
@@ -140,12 +140,12 @@ t.Z = function (e) {
                           };
                       return (_[n] = o), o;
                   })(E, A, t);
-        }, [L, A, E]);
+        }, [v, A, E]);
     let Z = ((t = null != I), (n = A), (s = E), n ? S[s].typing : t ? S[s].status : S[s].default);
     return (0, l.jsxs)('div', {
         style: {
-            width: L,
-            height: L,
+            width: v,
+            height: v,
             ...p
         },
         'aria-label': N['aria-label'],
@@ -154,14 +154,14 @@ t.Z = function (e) {
         children: [
             (0, l.jsxs)(u.ZP, {
                 mask: Z,
-                height: L,
-                width: L,
+                height: v,
+                width: v,
                 children: [
                     (0, l.jsx)('img', {
                         src: o,
                         alt: '',
-                        width: x,
-                        height: x
+                        width: T,
+                        height: T
                     }),
                     (0, l.jsx)('div', {
                         style: {
@@ -171,7 +171,7 @@ t.Z = function (e) {
                         },
                         children: (0, l.jsx)(m, {
                             src: f,
-                            size: T,
+                            size: x,
                             isTyping: A,
                             status: I
                         })
@@ -179,7 +179,7 @@ t.Z = function (e) {
                 ]
             }),
             (0, l.jsx)(g, {
-                statusCoords: v,
+                statusCoords: L,
                 status: I,
                 isTyping: A
             })

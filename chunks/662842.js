@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return k;
+        return w;
     }
 }),
     n(47120);
@@ -41,12 +41,12 @@ var i,
     U = n(689938),
     G = n(599293);
 ((a = i || (i = {}))[(a.STAGE = 0)] = 'STAGE'), (a[(a.EVENT_EXTERNAL = 1)] = 'EVENT_EXTERNAL'), (a[(a.EVENT_VOICE = 2)] = 'EVENT_VOICE'), (a[(a.STUDY_ROOM = 3)] = 'STUDY_ROOM');
-function k(e) {
+function w(e) {
     let { guild: t, isStudyRoomNotice: n = !1 } = e,
         i = (0, S.y)(t.id),
         a = (0, f.k5)(t.id),
         l = (0, c.e7)([R.Z], () => R.Z.getStageInstanceByChannel(null == i ? void 0 : i.id), [i]),
-        { isStageNoticeHidden: k, isEventNoticeHidden: w } = (0, c.cj)(
+        { isStageNoticeHidden: w, isEventNoticeHidden: k } = (0, c.cj)(
             [p.Z],
             () => ({
                 isStageNoticeHidden: p.Z.isLiveChannelNoticeHidden({ stageId: null == l ? void 0 : l.id }),
@@ -282,11 +282,11 @@ function k(e) {
                 eventCreator: z,
                 speakers: H,
                 listenerCount: V,
-                isEventNoticeHidden: w,
-                isStageNoticeHidden: k,
+                isEventNoticeHidden: k,
+                isStageNoticeHidden: w,
                 isStudyRoomNotice: n
             }),
-        [a, l, i, F, Y, z, H, V, w, k, n]
+        [a, l, i, F, Y, z, H, V, k, w, n]
     );
     return null == K
         ? null

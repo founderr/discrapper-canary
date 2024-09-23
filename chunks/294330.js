@@ -70,8 +70,8 @@ function O(e) {
             },
             [t]
         ),
-        k = (0, E.ZP)(),
-        w = t.features.has(N.oNc.HUB),
+        w = (0, E.ZP)(),
+        k = t.features.has(N.oNc.HUB),
         B = a.useMemo(() => {
             let e = f.ZP.getGuildDiscoverySplashURL({
                 id: t.id,
@@ -79,14 +79,14 @@ function O(e) {
                 size: 300 * (0, T.x_)()
             });
             if (null != e) return e;
-            if (w) return R;
-            switch (k) {
+            if (k) return R;
+            switch (w) {
                 case N.BRd.DARK:
                     return L;
                 case N.BRd.LIGHT:
                     return Z;
             }
-        }, [t.discoverySplash, t.id, w, k]),
+        }, [t.discoverySplash, t.id, k, w]),
         H = a.useMemo(
             () =>
                 f.ZP.getGuildIconURL({

@@ -1,9 +1,9 @@
 n.d(t, {
     Z: function () {
-        return v;
+        return j;
     },
     c: function () {
-        return j;
+        return E;
     }
 });
 var l = n(735250);
@@ -70,7 +70,7 @@ function S() {
         ]
     });
 }
-function j() {
+function E() {
     let e = (0, a.e7)([c.Z], () => c.Z.useReducedMotion);
     return (0, l.jsxs)('div', {
         className: i()(p.reverseTrialEducationBannerContainer, { [p.reducedMotion]: e }),
@@ -90,7 +90,7 @@ function j() {
         ]
     });
 }
-function v(e) {
+function j(e) {
     let { message: t, onClose: n, openStreamUpsellModal: s, glow: a = !1 } = e,
         c = {
             section: x.jXE.STREAM_SETTINGS,

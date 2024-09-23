@@ -39,8 +39,8 @@ var i = n(735250),
     j = n(969205),
     U = n(171368),
     G = n(420654),
-    k = n(695346),
-    w = n(158776),
+    w = n(695346),
+    k = n(158776),
     B = n(246946),
     H = n(572004),
     V = n(70956),
@@ -177,17 +177,17 @@ function ea(e) {
     a.useEffect(() => {
         null == ea || ea(ed.current);
     }, [ed, ea]);
-    let e_ = (0, o.e7)([w.Z], () => w.Z.getStatus(V.id)),
+    let e_ = (0, o.e7)([k.Z], () => k.Z.getStatus(V.id)),
         eE = (0, o.e7)([B.Z], () => B.Z.hidePersonalInformation),
         eh = (0, p.p)(),
-        em = k.Sb.useSetting(),
+        em = w.Sb.useSetting(),
         eI = (0, I.a)(),
         eg = (function (e) {
             let t = g.Y.useExperiment({ location: 'AccountProfilePopout' }).expiringStatus,
-                n = k.Cr.useSetting(),
+                n = w.Cr.useSetting(),
                 a = (0, p.p)(),
                 r = T.e.useExperiment({ location: 'AccountProfilePopout' }).allowQuietMode || a,
-                l = k.fv.useSetting(),
+                l = w.fv.useSetting(),
                 o = e === Q.Skl.DND,
                 d = (t) => {
                     let i =
@@ -510,7 +510,7 @@ function ea(e) {
                                                                                           action: 'PRESS_CLEAR_CUSTOM_STATUS',
                                                                                           analyticsLocations: eo
                                                                                       }),
-                                                                                      k.Ok.updateSetting(void 0);
+                                                                                      w.Ok.updateSetting(void 0);
                                                                               },
                                                                               children: (0, i.jsx)(c.CircleXIcon, {
                                                                                   size: 'sm',

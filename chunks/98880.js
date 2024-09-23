@@ -38,8 +38,8 @@ var i,
     g = t(695346),
     P = t(973616),
     L = t(695103),
-    b = t(880448),
-    S = t(768581),
+    S = t(880448),
+    b = t(768581),
     R = t(541099),
     T = t(783097),
     M = t(695676),
@@ -276,7 +276,7 @@ function Y() {
             (0, l.jsx)('div', {
                 className: B.devShelfBadge,
                 ...e,
-                children: (0, l.jsx)(b.Z, { className: B.devShelfIcon })
+                children: (0, l.jsx)(S.Z, { className: B.devShelfIcon })
             })
     });
 }
@@ -365,7 +365,7 @@ function q(e) {
 function X(e) {
     let { bot: n, fallbackColor: t, disableFadeIn: i } = e,
         a = (0, c.e7)([p.Z], () => p.Z.useReducedMotion),
-        o = (0, S.aN)({
+        o = (0, b.aN)({
             id: n.id,
             banner: n.banner,
             canAnimate: !a,

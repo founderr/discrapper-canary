@@ -26,7 +26,7 @@ function C(e) {
     r()(null != t, 'Camera capture device cannot be null');
     let a = (0, m.Z)(),
         C = (0, d.e7)([f.Z], () => f.Z.getInputDevices()),
-        [S, j] = s.useState(
+        [S, E] = s.useState(
             (function (e, t, n) {
                 if (null != t && null != n) {
                     let l = t.find((t) => t.id === e);
@@ -68,7 +68,7 @@ function C(e) {
                             value: S,
                             className: p.__invalid_marginaTop8,
                             onChange: (e) => {
-                                j(e), i(e);
+                                E(e), i(e);
                             },
                             options: o().map(C, (e) => {
                                 let { id: t, name: n } = e;

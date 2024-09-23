@@ -35,8 +35,8 @@ var i = n(735250),
     j = n(96051),
     U = n(750995),
     G = n(696287),
-    k = n(408026),
-    w = n(763916),
+    w = n(408026),
+    k = n(763916),
     B = n(306721),
     H = n(531551),
     V = n(38618),
@@ -89,8 +89,8 @@ var i = n(735250),
     ej = n(592125),
     eU = n(896797),
     eG = n(430824),
-    ek = n(819640),
-    ew = n(283595),
+    ew = n(819640),
+    ek = n(283595),
     eB = n(944486),
     eH = n(914010),
     eV = n(695103),
@@ -124,10 +124,10 @@ let e1 = !1;
     eg.Z.loadServer(),
     eK.isPlatformEmbedded &&
         (eq.ZP.on('USER_SETTINGS_OPEN', () => {
-            !ek.Z.getLayers().includes(eX.S9g.USER_SETTINGS) && h.Z.open(eX.oAB.ACCOUNT);
+            !ew.Z.getLayers().includes(eX.S9g.USER_SETTINGS) && h.Z.open(eX.oAB.ACCOUNT);
         }),
         eq.ZP.on('LAUNCH_APPLICATION', (e, t) => {
-            let n = ew.Z.getActiveLibraryApplication(t);
+            let n = ek.Z.getActiveLibraryApplication(t);
             eQ.playApplication(t, n, {
                 analyticsParams: {
                     location: {
@@ -212,10 +212,10 @@ let e9 = [
                 { gameId: n, action: a } = t.params;
             return (
                 eW.Z.whenInitialized(() => {
-                    ew.Z.whenInitialized(() => {
+                    ek.Z.whenInitialized(() => {
                         switch (a) {
                             case 'launch': {
-                                let e = ew.Z.getActiveLibraryApplication(n);
+                                let e = ek.Z.getActiveLibraryApplication(n);
                                 if (null == e) return;
                                 eQ.playApplication(e.id, e, {
                                     analyticsParams: {
@@ -231,7 +231,7 @@ let e9 = [
                                 eV.Z.whenInitialized(() => E.Wt(n));
                                 break;
                             case 'uninstall': {
-                                let e = ew.Z.getActiveLibraryApplication(n);
+                                let e = ek.Z.getActiveLibraryApplication(n);
                                 if (null == e) return;
                                 (0, d.W)(e.id, e.branchId, eX.Sbl.URI_SCHEME);
                             }
@@ -385,9 +385,9 @@ class te extends a.PureComponent {
             eg.Z.init(),
             L.Z.initialize(),
             ec.Z.initialize(),
-            k.Z.initialize(),
-            eM.Z.initialize(),
             w.Z.initialize(),
+            eM.Z.initialize(),
+            k.Z.initialize(),
             eu.Z.initialize(),
             $.Z.initialize(),
             I.Z.init(),

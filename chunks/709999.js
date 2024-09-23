@@ -29,14 +29,14 @@ var a = r(735250),
     k = r(1870),
     j = r(884697),
     R = r(664018),
-    P = r(890249),
-    Z = r(635552),
-    A = r(724994),
+    A = r(890249),
+    P = r(635552),
+    Z = r(724994),
     M = r(390698),
     y = r(813083),
     w = r(680942),
-    H = r(558060),
-    F = r(237031),
+    F = r(558060),
+    H = r(237031),
     D = r(616066),
     U = r(216541),
     W = r(832149),
@@ -72,12 +72,12 @@ let Y = (e) => {
         });
     };
 t.Z = function (e) {
-    let { product: t, user: r, category: s, onMount: o, isGiftEasterEggEnabled: $, isInFeedView: q } = e,
-        { analyticsLocations: X } = (0, E.ZP)([...(q ? [b.Z.COLLECTIBLES_SHOP_HOME_SCREEN] : []), b.Z.COLLECTIBLES_SHOP_CARD]),
-        J = n.useRef(null),
-        Q = (0, g.Z)(J),
+    let { product: t, user: r, category: s, onMount: o, isGiftEasterEggEnabled: X, isInFeedView: $ } = e,
+        { analyticsLocations: q } = (0, E.ZP)([...($ ? [b.Z.COLLECTIBLES_SHOP_HOME_SCREEN] : []), b.Z.COLLECTIBLES_SHOP_CARD]),
+        Q = n.useRef(null),
+        J = (0, g.Z)(Q),
         [ee, et] = n.useState(!1),
-        er = Q || ee,
+        er = J || ee,
         [ea] = t.items,
         en = (0, p.e7)([h.Z], () => h.Z.useReducedMotion),
         es = O.ZP.canUseCollectibles(r),
@@ -85,16 +85,16 @@ t.Z = function (e) {
         eo = n.useMemo(() => (0, j.BH)(t, es), [t, es]),
         el = (0, j.G1)(t),
         ec = (0, j.rN)(t),
-        { isPurchased: ed, isPartiallyPurchased: eu } = (0, A.L)(t),
+        { isPurchased: ed, isPartiallyPurchased: eu } = (0, Z.L)(t),
         [ef, ep] = (0, p.Wu)([k.Z], () => [k.Z.isClaiming === t.skuId, null != k.Z.isClaiming && k.Z.isClaiming !== t.skuId]),
         em = (0, p.e7)([N.Z], () => (0, m.wj)(N.Z.theme)),
-        eC = (0, P.m)('CollectiblesCollectedModal'),
+        eC = (0, A.m)('CollectiblesCollectedModal'),
         e_ = (0, j.x6)(t) || eC,
         eg = (0, j.Yq)(t.skuId),
         { hoverVariant: eh } = (0, R.E)('CollectiblesShopTallCard'),
         eb = s.skuId === u.T.STORM && '1268362891946627103' === t.skuId;
     n.useEffect(() => {
-        let { current: e } = J;
+        let { current: e } = Q;
         if (null == e) return;
         let t = () => et(!0);
         return (
@@ -106,32 +106,32 @@ t.Z = function (e) {
         );
     }, []),
         n.useEffect(() => {
-            null == o || o(J);
+            null == o || o(Q);
         }, [o]);
-    let eE = (0, v.Z)({ analyticsLocations: X }),
+    let eE = (0, v.Z)({ analyticsLocations: q }),
         eI = n.useRef(null),
-        { handleUseNow: ex, isApplying: eT } = (0, Z.W)({ product: t }),
+        { handleUseNow: ex, isApplying: eT } = (0, P.W)({ product: t }),
         ev = () => {
             if (((0, _.xf)(), eE(), t.type === f.Z.AVATAR_DECORATION && null != ea)) {
                 l()(ea.type === t.type, "product type is equivlant to first item's check for avatar deco"),
                     (0, I.ps)({
                         initialSelectedDecoration: ea,
-                        analyticsLocations: X
+                        analyticsLocations: q
                     });
                 return;
             }
             t.type === f.Z.PROFILE_EFFECT &&
                 (0, L.H)({
                     initialSelectedEffectId: ea.id,
-                    analyticsLocations: X
+                    analyticsLocations: q
                 });
         },
         eS = (e) => (r) => {
             (eI.current = r.currentTarget),
-                (0, F.T)({
+                (0, H.T)({
                     product: t,
                     category: s,
-                    analyticsLocations: X,
+                    analyticsLocations: q,
                     analyticsSource: e,
                     returnRef: eI
                 });
@@ -162,7 +162,7 @@ t.Z = function (e) {
                         className: z.priceTag,
                         children: V.Z.Messages.COLLECTIBLES_INCLUDED_WITH_PREMIUM
                     })
-                  : (0, a.jsx)(H.Z, {
+                  : (0, a.jsx)(F.Z, {
                         product: t,
                         discount: eo,
                         isPremiumUser: es,
@@ -175,8 +175,8 @@ t.Z = function (e) {
                   ? (0, a.jsx)(K, { onClick: eN })
                   : (0, a.jsx)(w.Z, {
                         product: t,
-                        returnRef: J,
-                        isGiftEasterEggEnabled: $,
+                        returnRef: Q,
+                        isGiftEasterEggEnabled: X,
                         disableCustomColor: !0,
                         tooltipDelay: 250
                     }),
@@ -191,7 +191,7 @@ t.Z = function (e) {
                           await (0, B.fK)(t.skuId),
                               (0, W.Z)({
                                   product: t,
-                                  analyticsLocations: X
+                                  analyticsLocations: q
                               });
                       }
                   }
@@ -199,8 +199,8 @@ t.Z = function (e) {
                       onClick: () =>
                           (0, x.Z)({
                               skuId: t.skuId,
-                              analyticsLocations: X,
-                              returnRef: J
+                              analyticsLocations: q,
+                              returnRef: Q
                           })
                   };
             return (0, a.jsxs)('div', {
@@ -229,7 +229,7 @@ t.Z = function (e) {
         ? null
         : (0, a.jsx)(C.FocusRing, {
               children: (0, a.jsxs)(C.Clickable, {
-                  innerRef: J,
+                  innerRef: Q,
                   className: i()(em ? z.shopCardDark : z.shopCard, {
                       [z.partiallyOwned]: eu,
                       [z.shopCardAnimation]: !en && eh !== R.D.NO_MOVEMENT,

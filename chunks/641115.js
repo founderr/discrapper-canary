@@ -22,9 +22,9 @@ var l = n(735250),
     p = n(1163),
     C = n(594174),
     S = n(78839),
-    j = n(74538),
-    v = n(451467),
-    E = n(122186),
+    E = n(74538),
+    j = n(451467),
+    v = n(122186),
     I = n(37113),
     Z = n(981631),
     T = n(474936),
@@ -115,10 +115,10 @@ function b(e) {
             let e = C.default.getCurrentUser();
             return o()(null != e, 'StreamSettings: user cannot be undefined'), e;
         }),
-        y = j.ZP.canStreamQuality(j.U2.MID, P),
+        y = E.ZP.canStreamQuality(E.U2.MID, P),
         { location: G } = (0, h.O)(),
         B = (0, m.Zq)({ autoTrackExposure: !1 }),
-        k = (0, j.I5)(P, T.p9.TIER_1);
+        k = (0, E.I5)(P, T.p9.TIER_1);
     p.Z.useExperiment(
         { location: 'Go Live Modal' },
         {
@@ -127,9 +127,9 @@ function b(e) {
         }
     );
     let U = (0, d.e7)([S.ZP], () => S.ZP.inReverseTrial()),
-        V = (0, g.So)(c.q.STREAM_HIGH_QUALITY),
-        H = (!y && !B) || V,
-        [W, F] = s.useState(!1),
+        H = (0, g.So)(c.q.STREAM_HIGH_QUALITY),
+        V = (!y && !B) || H,
+        [F, W] = s.useState(!1),
         z = D ? I.z8 : I.WC,
         Y = {
             ...G,
@@ -140,12 +140,12 @@ function b(e) {
                 w({
                     type: e,
                     selected: e.value === i,
-                    needsPremium: !(0, v.Z)(n, e.value, r, P, b),
-                    needsDemo: (V || U) && e.value !== I.LY.RESOLUTION_720,
+                    needsPremium: !(0, j.Z)(n, e.value, r, P, b),
+                    needsDemo: (H || U) && e.value !== I.LY.RESOLUTION_720,
                     analyticsLocation: Y,
                     onClick: () => a(e.value),
                     onClose: t,
-                    setIsHovering: F
+                    setIsHovering: W
                 })
             )
         }),
@@ -154,12 +154,12 @@ function b(e) {
                 w({
                     type: e,
                     selected: e.value === r,
-                    needsPremium: !(0, v.Z)(n, i, e.value, P, b),
-                    needsDemo: V && e.value === I.ws.FPS_60,
+                    needsPremium: !(0, j.Z)(n, i, e.value, P, b),
+                    needsDemo: H && e.value === I.ws.FPS_60,
                     analyticsLocation: Y,
                     onClick: () => _(e.value),
                     onClose: t,
-                    setIsHovering: F
+                    setIsHovering: W
                 })
             )
         }),
@@ -196,14 +196,14 @@ function b(e) {
                                   })
                               })
                           }),
-                          H
-                              ? (0, l.jsx)(E.Z, {
+                          V
+                              ? (0, l.jsx)(v.Z, {
                                     message: N.Z.Messages.STREAM_PREMIUM_UPSELL_BANNER_PRESET_DOCUMENTS,
                                     onClose: t,
                                     openStreamUpsellModal: O
                                 })
                               : null,
-                          U && (0, l.jsx)(E.c, {})
+                          U && (0, l.jsx)(v.c, {})
                       ]
                   })
                 : (0, l.jsxs)(l.Fragment, {
@@ -224,14 +224,14 @@ function b(e) {
                                   })
                               ]
                           }),
-                          H
-                              ? (0, l.jsx)(E.Z, {
+                          V
+                              ? (0, l.jsx)(v.Z, {
                                     onClose: t,
                                     openStreamUpsellModal: O,
-                                    glow: W
+                                    glow: F
                                 })
                               : null,
-                          U && (0, l.jsx)(E.c, {})
+                          U && (0, l.jsx)(v.c, {})
                       ]
                   });
     return (0, l.jsx)(f.Z, {

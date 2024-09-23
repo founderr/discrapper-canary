@@ -38,7 +38,7 @@ function b() {
         D = (0, f.lg)(P),
         y = !Z.MU.has(P),
         j = (0, d.iN)('global_discovery_servers_layout'),
-        { searchBarState: U, onTabsAvailableWidthChange: G, onCollapsedSearchBarClick: k, onSearchBarBlur: w, tabsClassName: B } = (0, m.U)({ isSearchBarVisible: y }),
+        { searchBarState: U, onTabsAvailableWidthChange: G, onCollapsedSearchBarClick: w, onSearchBarBlur: k, tabsClassName: B } = (0, m.U)({ isSearchBarVisible: y }),
         { searchQuery: H, onSearchTextChange: V, onClearSearch: F, onSearchSubmit: Y, isSearchVisible: W } = (0, N.H)({ loadId: e.current }),
         z = (0, E.GN)((e) => e.mode, l.Z),
         K = a.useCallback(
@@ -89,12 +89,12 @@ function b() {
                     onTextChange: V,
                     onClear: F,
                     onSubmit: Y,
-                    onCollapsedClick: k,
+                    onCollapsedClick: w,
                     state: U,
-                    onBlur: w
+                    onBlur: k
                 });
         }
-    }, [P, j, H, D, V, F, Y, k, U, w, Q]);
+    }, [P, j, H, D, V, F, Y, w, U, k, Q]);
     return (0, i.jsxs)('div', {
         className: x.container,
         children: [

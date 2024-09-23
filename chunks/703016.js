@@ -90,10 +90,10 @@ function G(e) {
     let { text: t, interrupt: n, maxLength: i, onStart: a, onEnd: s } = e;
     j(t, n, i, a, s);
 }
-function k() {
+function w() {
     return null !== x && x.removeEventListener('end', A.NB), r.M9(), (x = null), !0;
 }
-function w(e) {
+function k(e) {
     var t, n, i;
     let { message: a, channel: s } = e,
         r = a.type === Z.uaV.REPLY ? c.Z.getMessageByReference(a.messageReference) : null,
@@ -137,6 +137,6 @@ function V() {
 }
 t.Z = {
     init() {
-        s.Z.subscribe('SPEAK_TEXT', G), s.Z.subscribe('SPEAK_MESSAGE', w), s.Z.subscribe('STOP_SPEAKING', k), s.Z.subscribe('MESSAGE_CREATE', B), s.Z.subscribe('MESSAGE_DELETE', H), s.Z.subscribe('AUDIO_TOGGLE_SELF_DEAF', V), s.Z.subscribe('USER_SETTINGS_PROTO_UPDATE', y), s.Z.subscribe('I18N_LOAD_SUCCESS', y);
+        s.Z.subscribe('SPEAK_TEXT', G), s.Z.subscribe('SPEAK_MESSAGE', k), s.Z.subscribe('STOP_SPEAKING', w), s.Z.subscribe('MESSAGE_CREATE', B), s.Z.subscribe('MESSAGE_DELETE', H), s.Z.subscribe('AUDIO_TOGGLE_SELF_DEAF', V), s.Z.subscribe('USER_SETTINGS_PROTO_UPDATE', y), s.Z.subscribe('I18N_LOAD_SUCCESS', y);
     }
 };

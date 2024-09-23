@@ -21,9 +21,9 @@ var l = n(735250),
     p = n(494620),
     C = n(592125),
     S = n(650774),
-    j = n(430824),
-    v = n(131951),
-    E = n(944486),
+    E = n(430824),
+    j = n(131951),
+    v = n(944486),
     I = n(594174),
     Z = n(449224),
     T = n(626135),
@@ -42,10 +42,10 @@ var l = n(735250),
     B = n(70722),
     k = n(981631),
     U = n(526761),
-    V = n(689938),
-    H = n(264954),
-    W = n(410894);
-function F(e) {
+    H = n(689938),
+    V = n(264954),
+    F = n(410894);
+function W(e) {
     let { selectedSource: t, selectSource: n, sourceChanged: s, onChangeSource: i } = e,
         r = (0, a.e7)([h.ZP, Z.Z], () => ((0, R.isWindows)() ? (0, O.Z)(h.ZP, Z.Z) : null)),
         c = (0, a.e7)([d.Z], () => ((null == r ? void 0 : r.id) != null ? d.Z.getApplication(r.id) : null)),
@@ -62,29 +62,29 @@ function F(e) {
             : c,
         p = null != t && t.id.startsWith('screen') ? o.ScreenIcon : o.BrowserIcon;
     return (0, l.jsx)(o.FormItem, {
-        title: V.Z.Messages.GO_LIVE_MODAL_APPLICATION_FORM_TITLE,
-        className: W.modalContent,
-        titleClassName: W.formItemTitleVerySlim,
+        title: H.Z.Messages.GO_LIVE_MODAL_APPLICATION_FORM_TITLE,
+        className: F.modalContent,
+        titleClassName: F.formItemTitleVerySlim,
         children: (0, l.jsxs)(P.Z, {
             children: [
                 null != g
                     ? (0, l.jsx)(m.Z, {
                           game: g,
                           size: m.Z.Sizes.XSMALL,
-                          className: H.selectedIcon
+                          className: V.selectedIcon
                       })
-                    : (0, l.jsx)(p, { className: H.selectedIcon }),
+                    : (0, l.jsx)(p, { className: V.selectedIcon }),
                 (0, l.jsx)('span', {
-                    className: H.ellipsisText,
+                    className: V.ellipsisText,
                     children: x
                 }),
                 n
                     ? (0, l.jsx)(o.Button, {
-                          className: H.changeButton,
+                          className: V.changeButton,
                           color: o.Button.Colors.PRIMARY,
                           size: o.Button.Sizes.SMALL,
                           onClick: i,
-                          children: V.Z.Messages.CHANGE
+                          children: H.Z.Messages.CHANGE
                       })
                     : null
             ]
@@ -93,30 +93,30 @@ function F(e) {
 }
 function z(e) {
     let { onChange: t, guildId: n } = e,
-        s = (0, a.e7)([j.Z], () => j.Z.getGuild(n));
+        s = (0, a.e7)([E.Z], () => E.Z.getGuild(n));
     return null == s
         ? (t(), null)
         : (0, l.jsx)(o.FormItem, {
-              title: V.Z.Messages.GO_LIVE_MODAL_GUILD_FORM_TITLE,
-              className: W.modalContent,
-              titleClassName: W.formItemTitle,
+              title: H.Z.Messages.GO_LIVE_MODAL_GUILD_FORM_TITLE,
+              className: F.modalContent,
+              titleClassName: F.formItemTitle,
               children: (0, l.jsxs)(P.Z, {
                   children: [
                       (0, l.jsx)(x.Z, {
                           guild: s,
                           size: x.Z.Sizes.SMALLER,
-                          className: H.selectedIcon
+                          className: V.selectedIcon
                       }),
                       (0, l.jsx)('span', {
-                          className: H.ellipsisText,
+                          className: V.ellipsisText,
                           children: s.toString()
                       }),
                       (0, l.jsx)(o.Button, {
-                          className: H.changeButton,
+                          className: V.changeButton,
                           color: o.Button.Colors.PRIMARY,
                           size: o.Button.Sizes.SMALL,
                           onClick: t,
-                          children: V.Z.Messages.CHANGE
+                          children: H.Z.Messages.CHANGE
                       })
                   ]
               })
@@ -126,14 +126,14 @@ function Y(e) {
     let { text: t } = e;
     return (0, l.jsxs)(f.Z, {
         align: f.Z.Align.CENTER,
-        className: H.warning,
+        className: V.warning,
         children: [
             (0, l.jsx)(o.CircleWarningIcon, {
                 size: 'custom',
                 width: 20,
                 height: 20,
                 color: 'currentColor',
-                className: H.warningIcon
+                className: V.warningIcon
             }),
             (0, l.jsx)(o.Text, {
                 color: 'none',
@@ -155,14 +155,14 @@ function K(e) {
         }, []);
     return n >= 2 && n <= B.tB
         ? (0, l.jsx)(o.FormItem, {
-              className: r()(W.modalContent, H.checkboxRow),
+              className: r()(F.modalContent, V.checkboxRow),
               children: (0, l.jsx)(o.Checkbox, {
                   value: !!i,
                   type: o.Checkbox.Types.INVERTED,
                   onChange: c,
                   children: (0, l.jsx)(o.Text, {
                       variant: 'text-sm/normal',
-                      children: V.Z.Messages.GO_LIVE_MODAL_NOTIFY_FRIENDS_CHECKBOX_LABEL
+                      children: H.Z.Messages.GO_LIVE_MODAL_NOTIFY_FRIENDS_CHECKBOX_LABEL
                   })
               })
           })
@@ -177,14 +177,14 @@ function Q(e) {
             [n]
         );
     return (0, l.jsx)(o.FormItem, {
-        className: r()(W.modalContent, H.checkboxRow),
+        className: r()(F.modalContent, V.checkboxRow),
         children: (0, l.jsx)(o.Checkbox, {
             value: t,
             type: o.Checkbox.Types.INVERTED,
             onChange: a,
             children: (0, l.jsx)(o.Text, {
                 variant: 'text-sm/normal',
-                children: i ? V.Z.Messages.GO_LIVE_MODAL_ENABLE_SCREEN_SOUNDSHARE_LABEL : V.Z.Messages.GO_LIVE_MODAL_ENABLE_APP_SOUNDSHARE_LABEL
+                children: i ? H.Z.Messages.GO_LIVE_MODAL_ENABLE_SCREEN_SOUNDSHARE_LABEL : H.Z.Messages.GO_LIVE_MODAL_ENABLE_APP_SOUNDSHARE_LABEL
             })
         })
     });
@@ -198,30 +198,30 @@ function X(e) {
             [n]
         );
     return (0, l.jsx)(o.FormItem, {
-        className: r()(W.modalContent, H.checkboxRow),
+        className: r()(F.modalContent, V.checkboxRow),
         children: (0, l.jsx)(o.Checkbox, {
             value: t,
             type: o.Checkbox.Types.INVERTED,
             onChange: i,
             children: (0, l.jsx)(o.Text, {
                 variant: 'text-sm/normal',
-                children: V.Z.Messages.GO_LIVE_MODAL_DISABLE_STREAM_PREVIEWS
+                children: H.Z.Messages.GO_LIVE_MODAL_DISABLE_STREAM_PREVIEWS
             })
         })
     });
 }
 function q(e) {
-    let { selectedSource: t, selectedFPS: n, selectedChannelId: i, selectedPreset: r, selectedResolution: o, sourceChanged: d, selectedGuildId: f, targetGuildPremiumTier: h, selectSource: m, selectGuild: x, sound: g, previewDisabled: S, onClose: j, onChangeSelectedFPS: Z, onChangeSelectedResolution: T, onChangeSelectedPreset: N, onChangeSelectedChannelId: R, onChangeSource: O, onChangeAudioDevice: P, onChangeGuild: G, onChangeSound: B, onChangePreviewDisabled: W } = e,
-        q = (0, a.e7)([E.Z, C.Z], () => C.Z.getChannel(E.Z.getVoiceChannelId())),
+    let { selectedSource: t, selectedFPS: n, selectedChannelId: i, selectedPreset: r, selectedResolution: o, sourceChanged: d, selectedGuildId: f, targetGuildPremiumTier: h, selectSource: m, selectGuild: x, sound: g, previewDisabled: S, onClose: E, onChangeSelectedFPS: Z, onChangeSelectedResolution: T, onChangeSelectedPreset: N, onChangeSelectedChannelId: R, onChangeSource: O, onChangeAudioDevice: P, onChangeGuild: G, onChangeSound: B, onChangePreviewDisabled: F } = e,
+        q = (0, a.e7)([v.Z, C.Z], () => C.Z.getChannel(v.Z.getVoiceChannelId())),
         J = (0, a.e7)([A.Z], () => A.Z.GPUDriversOutdated),
         $ = (0, a.e7)([A.Z], () => A.Z.problematicGPUDriver),
         ee = (0, a.e7)([I.default], () => I.default.getCurrentUser()),
         et = (0, L.Z)();
-    null != t && t.id.startsWith('screen') && !v.Z.supportsScreenSoundshare() && (et = V.Z.Messages.GO_LIVE_SCREENSHARE_NO_SOUND);
+    null != t && t.id.startsWith('screen') && !j.Z.supportsScreenSoundshare() && (et = H.Z.Messages.GO_LIVE_SCREENSHARE_NO_SOUND);
     let en = !!(null == t ? void 0 : t.id.startsWith('camera')),
         el = null != ee && ee.verified && !ee.bot,
         es = null != q && !(0, u.Yk)(q),
-        ei = !(0, a.e7)([v.Z], () => v.Z.getHardwareEncoding()),
+        ei = !(0, a.e7)([j.Z], () => j.Z.getHardwareEncoding()),
         { enabled: er } = (0, _.S)({ location: 'GoLiveModal_Confirm' });
     return (0, l.jsxs)(s.Fragment, {
         children: [
@@ -233,7 +233,7 @@ function q(e) {
                   })
                 : (0, l.jsxs)('div', {
                       children: [
-                          (0, l.jsx)(F, {
+                          (0, l.jsx)(W, {
                               selectSource: m,
                               sourceChanged: d,
                               onChangeSource: O,
@@ -263,15 +263,15 @@ function q(e) {
                       onChangeSelectedChannelId: R
                   }),
             null != f && el && es ? (0, l.jsx)(K, { guildId: f }) : null,
-            J ? (0, l.jsx)(Y, { text: V.Z.Messages.GO_LIVE_VIDEO_DRIVERS_OUTDATED }) : null,
-            $ ? (0, l.jsx)(Y, { text: V.Z.Messages.PROBLEMATIC_GPU_DRIVER_DETECTED.format({ helpCenterLink: M.Z.getArticleURL(k.BhN.NVIDIA_DRIVER_ISSUES) }) }) : null,
+            J ? (0, l.jsx)(Y, { text: H.Z.Messages.GO_LIVE_VIDEO_DRIVERS_OUTDATED }) : null,
+            $ ? (0, l.jsx)(Y, { text: H.Z.Messages.PROBLEMATIC_GPU_DRIVER_DETECTED.format({ helpCenterLink: M.Z.getArticleURL(k.BhN.NVIDIA_DRIVER_ISSUES) }) }) : null,
             ei &&
                 (0, l.jsx)(p.Z, {
                     look: p.z.WARNING,
-                    className: H.hardwareWarning,
-                    children: V.Z.Messages.GO_LIVE_MODAL_HARDWARE_WARNING_INFOBOX.format({
+                    className: V.hardwareWarning,
+                    children: H.Z.Messages.GO_LIVE_MODAL_HARDWARE_WARNING_INFOBOX.format({
                         onClick: () => {
-                            j(), c.Z.open(k.oAB.VOICE, null, { scrollPosition: U.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION });
+                            E(), c.Z.open(k.oAB.VOICE, null, { scrollPosition: U.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION });
                         }
                     })
                 }),
@@ -280,7 +280,7 @@ function q(e) {
                 selectedFPS: n,
                 selectedResolution: o,
                 targetGuildPremiumTier: h,
-                onClose: j,
+                onClose: E,
                 onFPSChange: Z,
                 onResolutionChange: T,
                 onPresetChange: N,
@@ -289,7 +289,7 @@ function q(e) {
             er &&
                 (0, l.jsx)(X, {
                     enabled: S,
-                    onChange: W
+                    onChange: F
                 })
         ]
     });

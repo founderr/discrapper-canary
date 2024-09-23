@@ -17,7 +17,7 @@ var i = t(735250),
     _ = t(400963);
 function C(e) {
     let { channel: n, entrypoint: t, title: l, look: C, items: h, sectionName: f } = e,
-        { clickOnHomeActivityOpensAppDetail: A } = (0, d.s)('AppLauncherApplicationListViewScreen'),
+        A = (0, d.s)('AppLauncherApplicationListViewScreen'),
         E = a.useMemo(() => (t === c._b.TEXT ? u.kA : u.qR), [t]);
     return (0, i.jsxs)('section', {
         className: _.container,

@@ -1,15 +1,15 @@
 n.d(t, {
     $Z: function () {
-        return x;
+        return T;
     },
     Cp: function () {
         return Z;
     },
     F_: function () {
-        return v;
+        return L;
     },
     Se: function () {
-        return P;
+        return R;
     },
     tF: function () {
         return M;
@@ -48,11 +48,11 @@ let N = Object.freeze({
         [o.xQ.GUILD]: o.h8.GUILD,
         [o.xQ.APPLICATION]: o.h8.APPLICATION
     }),
-    L = new RegExp('^'.concat(o.xQ.USER, '|').concat(o.xQ.TEXT_CHANNEL, '|').concat(o.xQ.VOICE_CHANNEL, '|\\').concat(o.xQ.GUILD, '|\\').concat(o.xQ.APPLICATION));
-function v(e) {
+    v = new RegExp('^'.concat(o.xQ.USER, '|').concat(o.xQ.TEXT_CHANNEL, '|').concat(o.xQ.VOICE_CHANNEL, '|\\').concat(o.xQ.GUILD, '|\\').concat(o.xQ.APPLICATION));
+function L(e) {
     var t, n;
     let l;
-    let [a, s] = ((l = null !== (n = N[(t = e).charAt(0)]) && void 0 !== n ? n : null), [t.replace(L, ''), l]);
+    let [a, s] = ((l = null !== (n = N[(t = e).charAt(0)]) && void 0 !== n ? n : null), [t.replace(v, ''), l]);
     return {
         query: a,
         queryMode: s
@@ -111,10 +111,10 @@ function b(e, t) {
     }
     m.default.track(e, N);
 }
-function T() {
+function x() {
     l.Z.dispatch({ type: 'QUICKSWITCHER_HIDE' });
 }
-function x() {
+function T() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 'KEYBIND',
         t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : '';
     !(function (e) {
@@ -135,16 +135,16 @@ function x() {
     })(e),
         l.Z.dispatch({
             type: 'QUICKSWITCHER_SHOW',
-            ...v(t)
+            ...L(t)
         });
 }
 function Z() {
-    b(I.rMx.QUICKSWITCHER_CLOSED), T();
+    b(I.rMx.QUICKSWITCHER_CLOSED), x();
 }
 function y(e) {
     l.Z.dispatch({
         type: 'QUICKSWITCHER_SEARCH',
-        ...v(e)
+        ...L(e)
     });
 }
 function M(e) {
@@ -153,10 +153,10 @@ function M(e) {
         selectedIndex: e
     });
 }
-function P(e) {
+function R(e) {
     let t,
         n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    T(), b(I.rMx.QUICKSWITCHER_RESULT_SELECTED, e);
+    x(), b(I.rMx.QUICKSWITCHER_RESULT_SELECTED, e);
     let { type: h, record: E } = e,
         g = { page: I.ZY5.QUICK_SWITCHER };
     switch (h) {

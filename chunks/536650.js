@@ -38,11 +38,11 @@ function E(e) {
         g = a.useRef(null),
         P = a.useRef(null),
         L = a.useRef(null),
-        b = (0, r.useToken)(r.tokens.colors.BG_BASE_PRIMARY).hex(),
-        S = (0, c.ZP)('number' == typeof f ? '' : f, null != b ? b : ''),
+        S = (0, r.useToken)(r.tokens.colors.BG_BASE_PRIMARY).hex(),
+        b = (0, c.ZP)('number' == typeof f ? '' : f, null != S ? S : ''),
         R = a.useMemo(() => {
             var e, n;
-            let t = (0, l.compact)([d.Z.parseHexString(S), d.Z.parseHexString(v ? '#000000' : '#ffffff')]);
+            let t = (0, l.compact)([d.Z.parseHexString(b), d.Z.parseHexString(v ? '#000000' : '#ffffff')]);
             return null !==
                 (n =
                     null ===
@@ -54,8 +54,8 @@ function E(e) {
                         ? void 0
                         : e.toHexString()) && void 0 !== n
                 ? n
-                : S;
-        }, [S, v]),
+                : b;
+        }, [b, v]),
         T = A(I),
         M = A(g),
         y = a.useCallback(() => {
@@ -76,7 +76,7 @@ function E(e) {
                 if (
                     ((m.style.filter = 'brightness('.concat(1 + ((v ? 1.4 : 0.6) - (r = 1)) * N, ')')),
                     (m.style.backgroundColor = 'color-mix(in oklab,'
-                        .concat(S, ' ')
+                        .concat(b, ' ')
                         .concat((1 - N) * 100, '%, ')
                         .concat(R, ')')),
                     (p.style.opacity = ''.concat(0 + (1 - (s = 0)) * N)),
@@ -86,7 +86,7 @@ function E(e) {
                     _.style.opacity = ''.concat(1 + (0 - (d = 1)) * N);
                 }
             }
-        }, [R, S, null == M ? void 0 : M.height, v, E, null == T ? void 0 : T.height]);
+        }, [R, b, null == M ? void 0 : M.height, v, E, null == T ? void 0 : T.height]);
     return (
         a.useEffect(() => {
             y();
@@ -144,7 +144,7 @@ function E(e) {
                 (0, i.jsx)('div', {
                     ref: g,
                     className: h.bannerBackground,
-                    style: { backgroundColor: S }
+                    style: { backgroundColor: b }
                 })
             ]
         })

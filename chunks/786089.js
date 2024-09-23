@@ -36,13 +36,13 @@ t.Z = (0, a.memo)(function (e) {
         }),
         U = null !== (v = null === (n = L.userStatus) || void 0 === n ? void 0 : n.claimedTier) && void 0 !== v ? v : 0,
         G = L.config.rewards[U],
-        k = (null == G ? void 0 : G.type) === l.w.COLLECTIBLE,
-        { product: w } = (0, h.T)(k && null != G ? G.skuId : null),
-        B = null == w ? void 0 : null === (s = w.items) || void 0 === s ? void 0 : s[0];
+        w = (null == G ? void 0 : G.type) === l.w.COLLECTIBLE,
+        { product: k } = (0, h.T)(w && null != G ? G.skuId : null),
+        B = null == k ? void 0 : null === (s = k.items) || void 0 === s ? void 0 : s[0];
     if (
         ((0, u.P)(O, (e) => {
             let { height: t } = e;
-            if (!!k && null != t) t >= 230 && t < 280 ? y(d.AvatarSizes.SIZE_120) : t >= 280 && y(d.AvatarSizes.SIZE_152);
+            if (!!w && null != t) t >= 230 && t < 280 ? y(d.AvatarSizes.SIZE_120) : t >= 280 && y(d.AvatarSizes.SIZE_152);
         }),
         null == G)
     )
@@ -71,7 +71,7 @@ t.Z = (0, a.memo)(function (e) {
             className: r()(A.container, { [A.hovered]: Z }),
             children: [
                 null != x &&
-                    k &&
+                    w &&
                     (0, i.jsx)('div', {
                         className: A.decoWrapper,
                         children: (0, i.jsx)(E.Z, {

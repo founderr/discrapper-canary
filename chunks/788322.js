@@ -33,7 +33,7 @@ t.Z = (e) => {
     let { guild: s, theme: L, onView: Z, onTagClick: R } = e,
         { id: O, discoverySplash: x, icon: b, name: P, description: M, presenceCount: D, memberCount: y, keywords: j } = s,
         [U, G] = a.useState(!1),
-        [k, w] = a.useState(!1),
+        [w, k] = a.useState(!1),
         { analyticsLocations: B } = (0, c.ZP)(),
         H = m.ZP.getGuildDiscoverySplashURL({
             id: O,
@@ -74,11 +74,11 @@ t.Z = (e) => {
                     });
                     return;
                 }
-                w(!0);
+                k(!0);
                 try {
                     null != Z && (await Z(s.id));
                 } finally {
-                    w(!1);
+                    k(!1);
                 }
             }
         };
@@ -90,7 +90,7 @@ t.Z = (e) => {
             (0, i.jsxs)('div', {
                 className: N.card,
                 children: [
-                    k
+                    w
                         ? (0, i.jsx)(l.Spinner, {
                               type: l.Spinner.Type.PULSING_ELLIPSIS,
                               className: N.spinner
@@ -99,7 +99,7 @@ t.Z = (e) => {
                     (0, i.jsxs)(l.Clickable, {
                         className: r()(N.container, {
                             [N.hover]: U,
-                            [N.submitting]: k
+                            [N.submitting]: w
                         }),
                         onClick: Y,
                         onContextMenu: (e) => {

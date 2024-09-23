@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         ForwardModal: function () {
-            return x;
+            return T;
         }
     }),
     n(47120);
@@ -26,30 +26,30 @@ var l = n(735250),
     p = n(388275),
     C = n(912332),
     N = n(646746),
-    L = n(819727),
-    v = n(689938),
+    v = n(819727),
+    L = n(689938),
     b = n(463061),
-    T = n(621054);
-function x(e) {
-    let { channelId: t, messageId: x, initialSelectedDestinations: Z, forwardOptions: y, onClose: M, onRequestSent: P, ...R } = e,
+    x = n(621054);
+function T(e) {
+    let { channelId: t, messageId: T, initialSelectedDestinations: Z, forwardOptions: y, onClose: M, onRequestSent: R, ...P } = e,
         { hasOneTapSendButton: O, hasMessageInput: D, hasPreview: w } = (0, S.yk)({ location: 'ForwardModal' }),
         G = a.useMemo(() => (0, c.dL)(t), [t]),
-        [j, U] = a.useState(!1),
-        k = (0, i.e7)([h.Z], () => h.Z.getMessage(t, x), [t, x]),
-        F = (0, i.e7)([d.Z], () => d.Z.getChannel(t), [t]),
-        H = (0, m.ZF)(),
-        W = (0, m.mh)(),
+        [j, F] = a.useState(!1),
+        U = (0, i.e7)([h.Z], () => h.Z.getMessage(t, T), [t, T]),
+        k = (0, i.e7)([d.Z], () => d.Z.getChannel(t), [t]),
+        W = (0, m.ZF)(),
+        H = (0, m.mh)(),
         B = a.useRef(0),
         z = a.useRef(0),
         [Q, K] = a.useState(Z),
         V = Q.length,
-        q = V >= L.G,
+        q = V >= v.G,
         [Y, X] = a.useState(''),
         J = a.useCallback(
             (e) => {
-                X(e), (z.current += 1), '' !== e && W(t, x);
+                X(e), (z.current += 1), '' !== e && H(t, T);
             },
-            [t, x, W]
+            [t, T, H]
         ),
         $ = (0, u.s)({
             searchText: Y,
@@ -60,18 +60,18 @@ function x(e) {
         ee = a.useCallback(() => {
             (0, m.sF)({
                 channelId: t,
-                messageId: x,
+                messageId: T,
                 numDestinationChanges: B.current,
                 numQueryChanges: z.current
             }),
                 M();
-        }, [t, x, M]),
+        }, [t, T, M]),
         et = a.useCallback(() => {
             var e;
             let n = null === (e = d.Z.getChannel(t)) || void 0 === e ? void 0 : e.guild_id,
-                l = (0, _.wR)(n, t, x);
-            (0, r.showToast)((0, r.createToast)(v.Z.Messages.COPIED_LINK, r.ToastType.LINK)), (0, f.JG)(l), (0, m.xp)(t, x);
-        }, [t, x]),
+                l = (0, _.wR)(n, t, T);
+            (0, r.showToast)((0, r.createToast)(L.Z.Messages.COPIED_LINK, r.ToastType.LINK)), (0, f.JG)(l), (0, m.xp)(t, T);
+        }, [t, T]),
         en = a.useCallback(() => {
             X('');
         }, [X]),
@@ -86,7 +86,7 @@ function x(e) {
             () =>
                 (0, s.throttle)(
                     () => {
-                        (0, r.showToast)((0, r.createToast)(v.Z.Messages.MESSAGE_FORWARD_SUCCESS, r.ToastType.FORWARD));
+                        (0, r.showToast)((0, r.createToast)(L.Z.Messages.MESSAGE_FORWARD_SUCCESS, r.ToastType.FORWARD));
                     },
                     3000,
                     {
@@ -98,7 +98,7 @@ function x(e) {
         ),
         es = a.useCallback(
             (e) => {
-                H(t, x, '' !== Y),
+                W(t, T, '' !== Y),
                     K((t) => {
                         let n = t.findIndex((t) => {
                             let { type: n, id: l } = t;
@@ -109,17 +109,17 @@ function x(e) {
                         return l.splice(n, 1), (B.current += 1), l;
                     });
             },
-            [t, q, x, Y, H]
+            [t, q, T, Y, W]
         ),
         ei = a.useCallback(
             async function (e) {
                 let { withMessage: a, transitionToDestination: s, closeAfterSend: i } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                    u = h.Z.getMessage(t, x);
+                    u = h.Z.getMessage(t, T);
                 if (null == u) {
-                    (0, r.showToast)((0, r.createToast)(v.Z.Messages.ERROR_GENERIC_TITLE, r.ToastType.FAILURE));
+                    (0, r.showToast)((0, r.createToast)(L.Z.Messages.ERROR_GENERIC_TITLE, r.ToastType.FAILURE));
                     return;
                 }
-                U(!0);
+                F(!0);
                 let _ = (await Promise.all(e.map(c.qx))).filter(E.lm);
                 if (
                     (0, A.Z)(u, _) &&
@@ -135,10 +135,10 @@ function x(e) {
                         });
                     }))
                 ) {
-                    U(!1);
+                    F(!1);
                     return;
                 }
-                i && (0, C.mc)(), null == P || P(), s && (0, o.Kh)(_[0]);
+                i && (0, C.mc)(), null == R || R(), s && (0, o.Kh)(_[0]);
                 let f = await g.Z.sendForwards(u, _, {
                         ...y,
                         withMessage: a
@@ -155,7 +155,7 @@ function x(e) {
                 ) {
                     (0, m.gP)({
                         channelId: t,
-                        messageId: x,
+                        messageId: T,
                         hasError: !1,
                         hasContextMessage: null != a && '' !== a,
                         numDestinations: _.length,
@@ -168,7 +168,7 @@ function x(e) {
                 }
                 (0, m.gP)({
                     channelId: t,
-                    messageId: x,
+                    messageId: T,
                     hasError: !0,
                     hasContextMessage: null != a && '' !== a,
                     numDestinations: _.length,
@@ -178,13 +178,13 @@ function x(e) {
                 });
                 let I = e.filter((e, t) => 'rejected' === f[t].status);
                 (0, C.Np)({
-                    messageId: x,
+                    messageId: T,
                     channelId: t,
                     failedDestinations: I,
                     forwardOptions: y
                 });
             },
-            [t, y, x, P, ea]
+            [t, y, T, R, ea]
         ),
         er = a.useCallback(
             (e) => {
@@ -207,7 +207,7 @@ function x(e) {
             },
             [ei]
         );
-    if (null == k || null == F) return null;
+    if (null == U || null == k) return null;
     let eu =
             $.length > 0
                 ? (0, l.jsx)(I.F, {
@@ -215,8 +215,8 @@ function x(e) {
                       paddingTop: 16,
                       rowData: $,
                       rowMode: O ? I.G.SEND : I.G.TOGGLE,
-                      message: k,
-                      originChannel: F,
+                      message: U,
+                      originChannel: k,
                       handleToggleDestination: O ? ec : es,
                       selectedDestinations: Q,
                       disableSelection: q
@@ -226,21 +226,21 @@ function x(e) {
                       children: [
                           (0, l.jsx)('img', {
                               className: b.noResultsImg,
-                              src: T,
+                              src: x,
                               alt: ''
                           }),
                           (0, l.jsx)(r.Text, {
                               variant: 'text-md/normal',
                               color: 'text-muted',
-                              children: v.Z.Messages.SEARCH_NO_RESULTS
+                              children: L.Z.Messages.SEARCH_NO_RESULTS
                           })
                       ]
                   }),
-        ed = V <= 1 ? v.Z.Messages.SEND : v.Z.Messages.MESSAGES_SEND_SEPARATELY.format({ count: V });
+        ed = V <= 1 ? L.Z.Messages.SEND : L.Z.Messages.MESSAGES_SEND_SEPARATELY.format({ count: V });
     return (0, l.jsxs)(r.ModalRoot, {
         className: b.modal,
-        'aria-label': v.Z.Messages.MESSAGE_ACTION_FORWARD_TO,
-        ...R,
+        'aria-label': L.Z.Messages.MESSAGE_ACTION_FORWARD_TO,
+        ...P,
         children: [
             (0, l.jsxs)(r.ModalHeader, {
                 className: b.header,
@@ -253,19 +253,19 @@ function x(e) {
                                 children: (0, l.jsx)(r.HeadingLevel, {
                                     component: (0, l.jsx)(r.Heading, {
                                         variant: 'heading-lg/semibold',
-                                        children: v.Z.Messages.MESSAGE_ACTION_FORWARD_TO
+                                        children: L.Z.Messages.MESSAGE_ACTION_FORWARD_TO
                                     }),
                                     children: q
                                         ? (0, l.jsx)(r.Text, {
                                               variant: 'text-sm/normal',
                                               color: 'text-warning',
-                                              children: v.Z.Messages.MESSAGES_FORWARD_MAX_DESTINATION_COUNT.format({ count: L.G })
+                                              children: L.Z.Messages.MESSAGES_FORWARD_MAX_DESTINATION_COUNT.format({ count: v.G })
                                           })
                                         : (O || D) &&
                                           (0, l.jsx)(r.Heading, {
                                               variant: 'heading-sm/normal',
                                               color: 'header-muted',
-                                              children: v.Z.Messages.MESSAGE_FORWARD_SUBTITLE
+                                              children: L.Z.Messages.MESSAGE_FORWARD_SUBTITLE
                                           })
                                 })
                             }),
@@ -280,7 +280,7 @@ function x(e) {
                         (0, l.jsx)('div', {
                             className: b.forwardPreviewWrapperInset,
                             children: (0, l.jsx)(N.O, {
-                                message: k,
+                                message: U,
                                 forwardOptions: y
                             })
                         }),
@@ -290,8 +290,8 @@ function x(e) {
                         query: Y,
                         onChange: J,
                         onClear: en,
-                        placeholder: v.Z.Messages.SEARCH,
-                        'aria-label': v.Z.Messages.SEARCH,
+                        placeholder: L.Z.Messages.SEARCH,
+                        'aria-label': L.Z.Messages.SEARCH,
                         autoFocus: !0
                     })
                 ]
@@ -300,7 +300,7 @@ function x(e) {
             !O &&
                 (D
                     ? (0, l.jsx)(p.n, {
-                          message: k,
+                          message: U,
                           forwardOptions: y,
                           sendLabel: ed,
                           canSend: V > 0,
@@ -322,7 +322,7 @@ function x(e) {
                                   onClick: et,
                                   look: r.Button.Looks.OUTLINED,
                                   color: r.Button.Colors.PRIMARY,
-                                  children: v.Z.Messages.COPY_LINK
+                                  children: L.Z.Messages.COPY_LINK
                               })
                           ]
                       }))

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return ek;
+        return ew;
     }
 }),
     n(47120);
@@ -40,8 +40,8 @@ var i = n(735250),
     j = n(326145),
     U = n(269675),
     G = n(242601),
-    k = n(416568),
-    w = n(613609),
+    w = n(416568),
+    k = n(613609),
     B = n(160404),
     H = n(225675),
     V = n(745052),
@@ -232,7 +232,7 @@ let eI = 'resizable-sidebar-width',
     eO = (e) => {
         let { match: t } = e;
         return null != t.params.guildId
-            ? (0, i.jsx)(w.Z, {
+            ? (0, i.jsx)(k.Z, {
                   guildId: t.params.guildId,
                   inviteCode: t.params.inviteCode
               })
@@ -347,7 +347,7 @@ function eG(e) {
                   })
           });
 }
-function ek() {
+function ew() {
     var e;
     let t = (0, u.e7)([en.Z], () => en.Z.hasNotice()),
         n = (0, u.e7)([X.Z], () => (X.Z.darkSidebar ? e_.BRd.DARK : void 0)),
@@ -397,7 +397,7 @@ function ek() {
             children: [
                 E &&
                     !_ &&
-                    (0, i.jsx)(k.Z, {
+                    (0, i.jsx)(w.Z, {
                         className: em.guilds,
                         themeOverride: n
                     }),

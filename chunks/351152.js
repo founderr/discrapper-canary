@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return v;
+        return j;
     }
 }),
     n(390547);
@@ -23,7 +23,7 @@ var s = n(120356),
     p = n(689938),
     C = n(410894),
     S = n(939525);
-function j(e) {
+function E(e) {
     let { guildId: t, onClick: n } = e,
         s = (0, o.e7)([f.Z], () => f.Z.getGuild(t)),
         i = (0, o.e7)([u.ZP, f.Z, h.Z], () =>
@@ -55,7 +55,7 @@ function j(e) {
           })
         : null;
 }
-function v(e) {
+function j(e) {
     let { onSelectGuild: t } = e,
         n = (0, o.e7)([m.ZP], () => m.ZP.getGuildFolders());
     return (0, l.jsx)(g.Z, {
@@ -65,7 +65,7 @@ function v(e) {
             let { guildIds: n } = e;
             return n.map((e) =>
                 (0, l.jsx)(
-                    j,
+                    E,
                     {
                         guildId: e,
                         onClick: t
