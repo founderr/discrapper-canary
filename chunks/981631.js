@@ -3908,6 +3908,7 @@ let ie = Object.freeze({
     (nf.CHANNEL_LINK_PREVIEW_JOINED = 'channel_link_preview_joined'),
     (nf.CLIENT_HEARTBEAT = 'client_heartbeat'),
     (nf.HEADLESS_TASK_INVOKED = 'headless_task_invoked'),
+    (nf.HEADLESS_TASK_COMPLETED = 'headless_task_completed'),
     (nf.VERIFY_ACCOUNT_APP_OPENED = 'verify_account_app_opened'),
     (nf.QUICKSWITCHER_OPENED = 'quickswitcher_opened'),
     (nf.QUICKSWITCHER_CLOSED = 'quickswitcher_closed'),
