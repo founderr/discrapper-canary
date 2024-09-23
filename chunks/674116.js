@@ -65,8 +65,9 @@ function F() {
             silenceWarning: b,
             legacyAudioSubsystemSupported: F,
             experimentalAudioSubsystemSupported: y,
-            sidechainEnabled: V,
-            sidechainStrength: Y
+            automaticAudioSubsystemSupported: V,
+            sidechainEnabled: Y,
+            sidechainStrength: w
         } = (0, o.cj)([T.Z], () => ({
             inputMode: T.Z.getMode(),
             qosEnabled: T.Z.getQoS(),
@@ -77,18 +78,19 @@ function F() {
             silenceWarning: T.Z.getEnableSilenceWarning(),
             legacyAudioSubsystemSupported: T.Z.supports(Z.AN.LEGACY_AUDIO_SUBSYSTEM),
             experimentalAudioSubsystemSupported: T.Z.supports(Z.AN.EXPERIMENTAL_AUDIO_SUBSYSTEM),
+            automaticAudioSubsystemSupported: T.Z.supports(Z.AN.AUTOMATIC_AUDIO_SUBSYSTEM),
             sidechainEnabled: T.Z.getSidechainCompression(),
             sidechainStrength: T.Z.getSidechainCompressionStrength()
         })),
-        w = (0, o.e7)([S.Z], () => S.Z.getSubsection()),
-        k = a.createRef();
+        k = (0, o.e7)([S.Z], () => S.Z.getSubsection()),
+        H = a.createRef();
     a.useEffect(() => {
-        if (w === P.GA) {
+        if (k === P.GA) {
             var e;
-            null == k || null === (e = k.current) || void 0 === e || e.scrollIntoView(), d.Z.clearSubsection();
+            null == H || null === (e = H.current) || void 0 === e || e.scrollIntoView(), d.Z.clearSubsection();
         }
-    }, [k, w]);
-    let H = u.Z.getCurrentConfig({ location: 'UserSettingsVoiceProcessing' }).sidechainAvailable && !(0, N.isWeb)();
+    }, [H, k]);
+    let W = u.Z.getCurrentConfig({ location: 'UserSettingsVoiceProcessing' }).sidechainAvailable && !(0, N.isWeb)();
     return (0, n.jsxs)(l.FormSection, {
         tag: l.FormTitleTags.H1,
         title: v.Z.Messages.VOICE_SETTINGS,
@@ -125,7 +127,7 @@ function F() {
                 setting: L.s6.VOICE_AND_VIDEO_SOUNDBOARD,
                 children: (0, n.jsx)('div', {
                     style: { scrollMarginTop: '48px' },
-                    ref: k
+                    ref: H
                 })
             }),
             (0, n.jsx)(E.F, {
@@ -201,7 +203,7 @@ function F() {
                                 ]
                             })
                         }),
-                        H &&
+                        W &&
                             (0, n.jsx)(E.F, {
                                 setting: L.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_SIDECHAIN_COMPRESSION,
                                 children: (0, n.jsxs)(l.FormSection, {
@@ -209,7 +211,7 @@ function F() {
                                     children: [
                                         (0, n.jsx)(l.FormSwitch, {
                                             className: r()(j.marginTop8, j.marginBottom20),
-                                            value: V,
+                                            value: Y,
                                             onChange: (e) => c.Z.setSidechainCompression(e),
                                             note: v.Z.Messages.USER_SETTINGS_SIDECHAIN_COMPRESSION,
                                             children: v.Z.Messages.SIDECHAIN_COMPRESSION
@@ -220,7 +222,7 @@ function F() {
                                             children: v.Z.Messages.SIDECHAIN_COMPRESSION_STRENGTH
                                         }),
                                         (0, n.jsx)(l.Slider, {
-                                            initialValue: Y,
+                                            initialValue: w,
                                             minValue: 1,
                                             onValueChange: (e) => c.Z.setSidechainCompressionStrength(e)
                                         })
@@ -236,8 +238,8 @@ function F() {
                                     (0, n.jsx)(l.SingleSelect, {
                                         className: j.marginBottom20,
                                         value: I,
-                                        options: (function (e, s) {
-                                            let t = [
+                                        options: (function (e, s, t) {
+                                            let n = [
                                                 {
                                                     value: Z.iA.STANDARD,
                                                     label: 'Standard'
@@ -245,18 +247,23 @@ function F() {
                                             ];
                                             return (
                                                 e &&
-                                                    t.push({
+                                                    n.push({
                                                         value: Z.iA.LEGACY,
                                                         label: 'Legacy'
                                                     }),
                                                 s &&
-                                                    t.push({
+                                                    n.push({
                                                         value: Z.iA.EXPERIMENTAL,
                                                         label: 'Experimental'
                                                     }),
-                                                t
+                                                t &&
+                                                    n.push({
+                                                        value: Z.iA.AUTOMATIC,
+                                                        label: 'Automatic'
+                                                    }),
+                                                n
                                             );
-                                        })(F, y),
+                                        })(F, y, V),
                                         onChange: (e) => {
                                             G(v.Z.Messages.SWITCH_SUBSYSTEM, v.Z.Messages.SWITCH_SUBSYSTEM_BODY, () => c.Z.setAudioSubsystem(e));
                                         }

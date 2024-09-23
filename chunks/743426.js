@@ -55,6 +55,8 @@ class T extends s.Z {
                 return (0, d.eJ)(h.eR.VOICE_LEGACY_SUBSYSTEM);
             case h.AN.EXPERIMENTAL_AUDIO_SUBSYSTEM:
                 return (0, d.eJ)(h.eR.VOICE_EXPERIMENTAL_SUBSYSTEM);
+            case h.AN.AUTOMATIC_AUDIO_SUBSYSTEM:
+                return (0, d.eJ)(h.eR.VOICE_AUTOMATIC_SUBSYSTEM);
             case h.AN.DEBUG_LOGGING:
                 return (0, d.eJ)(h.eR.DEBUG_LOGGING);
             case h.AN.SOUNDSHARE:
