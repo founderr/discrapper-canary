@@ -166,12 +166,13 @@ function eD(e) {
         if (!n && !i) return !1;
     }
     if (n && !e._persisted) return !0;
-    if (!e.hasUnreadOrMentions() || (null == t ? void 0 : t.isForumLikeChannel()) === !0 || (!(n && !e._isJoinedThread) && !W.Z.isAtBottom(e.channelId))) return !1;
+    if (!e.hasUnreadOrMentions() || (null == t ? void 0 : t.isForumLikeChannel()) === !0) return !1;
+    if (!(n && !e._isJoinedThread) && !W.Z.isAtBottom(e.channelId)) return !1;
     let i = m.Z.getLayout(e.channelId),
         a = m.Z.getChatOpen(e.channelId);
     if ((!a && (i === er.AEg.NO_CHAT || i === er.AEg.FULL_SCREEN)) || null == em[e.channelId]) return !1;
     let s = Q.Z.getMessages(e.channelId);
-    return !!(null != s && s.ready && !s.loadingMore && ((0, b._)() || a)) || !1;
+    return null != s && !!s.ready && !s.loadingMore && (!!(0, b._)() || !!a || !1);
 }
 ((s = i || (i = {}))[(s.IS_GUILD_CHANNEL = 1)] = 'IS_GUILD_CHANNEL'), (s[(s.IS_THREAD = 2)] = 'IS_THREAD');
 class eb {
