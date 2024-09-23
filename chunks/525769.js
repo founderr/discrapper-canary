@@ -29,6 +29,7 @@ n.d(t, {
     (a.APPLICATION_LIBRARY = 'impression_application_library'),
     (a.APPLICATION_STORE = 'impression_application_store'),
     (a.APRIL_PREMIUM_MARKETING_DECO_CLAIMED_MODAL = 'impression_april_premium_marketing_deco_claimed_modal'),
+    (a.AUDIO_DEVICE_MENU = 'impression_audio_device_menu'),
     (a.AVATAR_UPLOAD = 'impression_avatar_upload'),
     (a.CHANNEL_ADD_INFO = 'impression_channel_add_info'),
     (a.CHANNEL_ADD_MEMBERS = 'impression_channel_add_members'),
