@@ -419,10 +419,9 @@ class p extends s.Z {
                             S = !0;
                         if (this.connection.context === o.Yn.STREAM) {
                             var g = this.connection.getRemoteVideoSinkWants(A);
-                            (null == g || 0 === g) && (null == O ? void 0 : O.quality) === h && (g = this.connection.getRemoteVideoSinkWants('any')), (S = (null != g ? g : 0) > 0);
+                            null == g && (null == O ? void 0 : O.quality) === h && (g = this.connection.getRemoteVideoSinkWants('any')), (S = (null != g ? g : 0) > 0);
                         }
-                        let R = this.videoStopped.value || !S;
-                        if ((R !== N.isVideoStopped && N.setVideoStopped(R, _.Mq.SenderStopped), !R)) {
+                        if (!this.videoStopped.value && S) {
                             N.appendAndIncrementStats(_.z4.parseOutboundStats(t, e)), N.encoderCodec !== _.u7.UNKNOWN && E.add(N.encoderCodec);
                             let n = null == O ? void 0 : O.maxBitrate;
                             N.appendTargetRates(null == O ? void 0 : O.maxFrameRate, null !== (a = t.bitrateTarget) && void 0 !== a ? a : Math.min(null !== (i = c.availableOutgoingBitrate) && void 0 !== i ? i : 0, null != n ? n : 0), n, c.availableOutgoingBitrate), (N.averageEncodeTime = null !== (s = t.averageEncodeTime) && void 0 !== s ? s : 0), (N.framesDroppedRateLimiter = null !== (l = t.framesDroppedRateLimiter) && void 0 !== l ? l : null), (N.framesDroppedEncoderQueue = null !== (u = t.framesDroppedEncoderQueue) && void 0 !== u ? u : null), (N.framesDroppedCongestionWindow = null !== (d = t.framesDroppedCongestionWindow) && void 0 !== d ? d : null), (N.framesDroppedEncoder = null !== (f = t.framesDroppedEncoder) && void 0 !== f ? f : null), (this.hqSimulcastStreamEncoded.value = null !== (p = t.hqSimulcastStreamEncoded) && void 0 !== p && p), (this.lqSimulcastStreamEncoded.value = null !== (I = t.lqSimulcastStreamEncoded) && void 0 !== I && I), (this.bothSimulcastStreamsEncoded.value = this.hqSimulcastStreamEncoded.value && this.lqSimulcastStreamEncoded.value), (this.bandwidthLimitedResolution.value = null !== (m = t.bandwidthLimitedResolution) && void 0 !== m && m), (this.bandwidthLimitedFramerate.value = null !== (T = t.bandwidthLimitedFrameRate) && void 0 !== T && T);
