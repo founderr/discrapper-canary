@@ -3,8 +3,8 @@ var s = n(735250),
     a = n(470079),
     r = n(120356),
     i = n.n(r),
-    l = n(442837),
-    o = n(780384),
+    o = n(442837),
+    l = n(780384),
     c = n(481060),
     d = n(634894),
     _ = n(410030),
@@ -14,14 +14,14 @@ var s = n(735250),
     I = n(594174),
     R = n(78839),
     m = n(74538),
-    N = n(775412),
-    g = n(104494),
+    g = n(775412),
+    N = n(104494),
     C = n(639119),
     p = n(230916),
     f = n(248042),
     A = n(823188),
-    h = n(21023),
-    S = n(318747),
+    S = n(21023),
+    h = n(318747),
     M = n(409100),
     x = n(474936),
     b = n(689938),
@@ -51,7 +51,7 @@ let D = () => {
         let t,
             { premiumType: n } = e,
             a = (0, _.ZP)();
-        t = n === x.p9.TIER_0 ? ((0, o.wj)(a) ? v : P) : (0, o.wj)(a) ? L : Z;
+        t = n === x.p9.TIER_0 ? ((0, l.wj)(a) ? v : P) : (0, l.wj)(a) ? L : Z;
         let r = (0, m.Px)(n);
         return (0, s.jsx)('img', {
             src: t,
@@ -83,12 +83,12 @@ let D = () => {
         });
     },
     G = (e) => {
-        let { label: t, column1: n, column2: a, withBottomBorder: r = !0, withTopBorderRadius: l = !1, withBottomBorderRadius: o = !1, buttonsRow: c = !1, shortRow: d = !1 } = e;
+        let { label: t, column1: n, column2: a, withBottomBorder: r = !0, withTopBorderRadius: o = !1, withBottomBorderRadius: l = !1, buttonsRow: c = !1, shortRow: d = !1 } = e;
         return (0, s.jsxs)('tr', {
             className: i()(O.row, {
                 [O.wideRow]: c,
-                [O.topBorderRadius]: l,
-                [O.bottomBorderRadius]: o,
+                [O.topBorderRadius]: o,
+                [O.bottomBorderRadius]: l,
                 [O.rowBottomBorder]: r,
                 [O.shortRow]: d
             }),
@@ -104,8 +104,8 @@ let D = () => {
                 }),
                 (0, s.jsx)('td', {
                     className: i()(O.cell, {
-                        [O.topBorderRadius]: l,
-                        [O.bottomBorderRadius]: o,
+                        [O.topBorderRadius]: o,
+                        [O.bottomBorderRadius]: l,
                         [O.buttonsCell]: c
                     }),
                     children: a
@@ -118,7 +118,7 @@ t.Z = (e) => {
     let n,
         { className: r, hideCTAs: v = !1, headingOverride: P, hidePill: L = !1, selectedPlanColumnClassName: Z, selectedPlanTier: w = x.p9.TIER_2 } = e,
         { analyticsLocations: y } = (0, E.ZP)(u.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
-        H = (0, l.e7)([R.ZP], () => R.ZP.hasFetchedSubscriptions()),
+        H = (0, o.e7)([R.ZP], () => R.ZP.hasFetchedSubscriptions()),
         k = (0, T.V)(),
         F = 'PlanComparisonTable';
     (0, d.j)({
@@ -130,19 +130,19 @@ t.Z = (e) => {
             autoTrackExposure: !1
         });
     let V = (0, _.ZP)(),
-        W = (0, o.ap)(V),
-        K = (0, l.e7)([I.default], () => I.default.getCurrentUser()),
+        W = (0, l.ap)(V),
+        K = (0, o.e7)([I.default], () => I.default.getCurrentUser()),
         Y = (0, m.M5)(K, x.p9.TIER_2),
         z = (0, C.N)(),
         Q = null == z ? void 0 : null === (t = z.subscription_trial) || void 0 === t ? void 0 : t.sku_id,
-        q = (0, N.rT)(),
-        X = (0, g.Ng)(),
-        J = null != X && (0, g.Wp)(X, x.Si.TIER_2),
+        q = (0, g.rT)(),
+        X = (0, N.Ng)(),
+        J = null != X && (0, N.Wp)(X, x.Si.TIER_2),
         $ = (0, p.A)(x.Xh.PREMIUM_MONTH_TIER_2),
         ee = ''.concat($, '/').concat((0, m.eP)(x.rV.MONTH)),
         et = (0, m.CY)(x.Xh.PREMIUM_MONTH_TIER_0),
         en = (0, m.CY)(x.Xh.PREMIUM_MONTH_TIER_2),
-        es = (0, h.n)(et, en, J, ee),
+        es = (0, S.n)(et, en, J, ee),
         ea = (0, f.Vi)();
     if (!H || !k) return null;
     let er = {
@@ -184,7 +184,7 @@ t.Z = (e) => {
                             }),
                       q === x.p9.TIER_2 || null != Q
                           ? null
-                          : (0, s.jsx)(S.Z, {
+                          : (0, s.jsx)(h.Z, {
                                 className: O.button,
                                 subscriptionTier: x.Si.TIER_0
                             })
@@ -209,7 +209,7 @@ t.Z = (e) => {
                             }),
                       q === x.p9.TIER_0 || null != Q
                           ? null
-                          : (0, s.jsx)(S.Z, {
+                          : (0, s.jsx)(h.Z, {
                                 className: O.button,
                                 subscriptionTier: x.Si.TIER_2
                             })

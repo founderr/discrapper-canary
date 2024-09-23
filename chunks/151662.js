@@ -2,14 +2,14 @@ var s,
     a,
     r,
     i,
-    l = n(442837),
-    o = n(570140);
+    o = n(442837),
+    l = n(570140);
 let c = {},
     d = null;
 function _() {
     (c = {}), (d = null);
 }
-class u extends (i = l.ZP.Store) {
+class u extends (i = o.ZP.Store) {
     getEmailSettings() {
         return {
             categories: c,
@@ -26,7 +26,7 @@ class u extends (i = l.ZP.Store) {
               writable: !0
           })
         : (s[a] = r),
-    (t.Z = new u(o.Z, {
+    (t.Z = new u(l.Z, {
         CONNECTION_OPEN: _,
         LOGOUT: _,
         EMAIL_SETTINGS_FETCH_SUCCESS: function (e) {

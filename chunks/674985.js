@@ -2,12 +2,12 @@ var s,
     a,
     r,
     i,
-    l = n(442837),
-    o = n(570140),
+    o = n(442837),
+    l = n(570140),
     c = n(594174),
     d = n(981631);
 let _ = null;
-class u extends (i = l.ZP.Store) {
+class u extends (i = o.ZP.Store) {
     getHouseMembership() {
         return _;
     }
@@ -21,7 +21,7 @@ class u extends (i = l.ZP.Store) {
               writable: !0
           })
         : (s[a] = r),
-    (t.Z = new u(o.Z, {
+    (t.Z = new u(l.Z, {
         CONNECTION_OPEN: function () {
             let e = c.default.getCurrentUser();
             null != e && (e.hasFlag(d.xW$.HYPESQUAD_ONLINE_HOUSE_1) ? (_ = d.gkr.HOUSE_1) : e.hasFlag(d.xW$.HYPESQUAD_ONLINE_HOUSE_2) ? (_ = d.gkr.HOUSE_2) : e.hasFlag(d.xW$.HYPESQUAD_ONLINE_HOUSE_3) && (_ = d.gkr.HOUSE_3));

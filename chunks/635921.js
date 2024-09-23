@@ -3,8 +3,8 @@ n(470079);
 var a = n(120356),
     r = n.n(a),
     i = n(442837),
-    l = n(481060),
-    o = n(100527),
+    o = n(481060),
+    l = n(100527),
     c = n(906732),
     d = n(535322),
     _ = n(357355),
@@ -14,65 +14,65 @@ var a = n(120356),
     I = n(105759),
     R = n(248042),
     m = n(422034),
-    N = n(206127),
-    g = n(710220),
+    g = n(206127),
+    N = n(710220),
     C = n(318747),
     p = n(409100),
     f = n(474936),
     A = n(689938),
-    h = n(679757);
-let S = (e) => {
+    S = n(679757);
+let h = (e) => {
         let { inOfferExperience: t, inTrial: n, subscriptionTier: a, buttonClassName: i } = e,
-            l = null;
+            o = null;
         !t &&
-            (l = (0, s.jsxs)('div', {
-                className: h.buttonContainer,
+            (o = (0, s.jsxs)('div', {
+                className: S.buttonContainer,
                 children: [
                     (0, s.jsx)(p.Z, {
                         forceInverted: !0,
-                        className: r()(h.button, i),
+                        className: r()(S.button, i),
                         subscriptionTier: a
                     }),
                     (0, s.jsx)(C.Z, {
-                        className: r()(h.button, i),
+                        className: r()(S.button, i),
                         forceWhite: !0
                     })
                 ]
             }));
-        let o = null;
+        let l = null;
         return (
             n &&
-                (o = (0, s.jsx)('div', {
-                    className: h.buttonContainer,
+                (l = (0, s.jsx)('div', {
+                    className: S.buttonContainer,
                     children: (0, s.jsx)(C.Z, {
-                        className: r()(h.button, i),
+                        className: r()(S.button, i),
                         forceWhite: !0
                     })
                 })),
             (0, s.jsxs)(s.Fragment, {
-                children: [l, ' ', o]
+                children: [o, ' ', l]
             })
         );
     },
     M = (e) => {
         let { isFullscreen: t } = e;
         return (0, s.jsxs)(s.Fragment, {
-            children: [(0, s.jsx)(d.A, { className: t ? h.fullscreenSparkleStar1 : h.settingsSparkleStar1 }), (0, s.jsx)(d.A, { className: t ? h.fullscreenSparkleStar2 : h.settingsSparkleStar2 }), (0, s.jsx)(d.A, { className: t ? h.fullscreenSparkleStar3 : h.settingsSparkleStar3 }), (0, s.jsx)(d.A, { className: t ? h.fullscreenSparkleStar4 : h.settingsSparkleStar4 })]
+            children: [(0, s.jsx)(d.A, { className: t ? S.fullscreenSparkleStar1 : S.settingsSparkleStar1 }), (0, s.jsx)(d.A, { className: t ? S.fullscreenSparkleStar2 : S.settingsSparkleStar2 }), (0, s.jsx)(d.A, { className: t ? S.fullscreenSparkleStar3 : S.settingsSparkleStar3 }), (0, s.jsx)(d.A, { className: t ? S.fullscreenSparkleStar4 : S.settingsSparkleStar4 })]
         });
     };
 function x(e) {
     let { variant: t = 'text-lg/normal', withBottomMargin: n = !0 } = e,
-        a = (0, N.$)();
-    return (0, s.jsx)(l.Text, {
+        a = (0, g.$)();
+    return (0, s.jsx)(o.Text, {
         variant: t,
         color: 'always-white',
-        className: r()(h.description, { [h.descriptionBottomMargin]: n }),
+        className: r()(S.description, { [S.descriptionBottomMargin]: n }),
         children: A.Z.Messages.PREMIUM_MARKETING_HERO_HEADER_DESCRIPTION.format({ cheapestMonthlyPrice: a })
     });
 }
 t.Z = (e) => {
-    let { isFullscreen: t, className: n, buttonClassName: a, subscriptionTier: d, hideSparkles: N, hideSubscribeAndGiftButton: p, entrypoint: b } = e,
-        { analyticsLocations: O } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_HERO_CTA),
+    let { isFullscreen: t, className: n, buttonClassName: a, subscriptionTier: d, hideSparkles: g, hideSubscribeAndGiftButton: p, entrypoint: b } = e,
+        { analyticsLocations: O } = (0, c.ZP)(l.Z.PREMIUM_MARKETING_HERO_CTA),
         v = (0, E._O)(),
         P = (0, u.Nx)(),
         L = (0, R.Vi)(),
@@ -84,25 +84,25 @@ t.Z = (e) => {
     return (0, s.jsx)(c.Gt, {
         value: O,
         children: (0, s.jsxs)('div', {
-            className: r()(h.container, n, {
-                [h.settingsContainer]: !t,
-                [h.affinityHeight]: !t && j
+            className: r()(S.container, n, {
+                [S.settingsContainer]: !t,
+                [S.affinityHeight]: !t && j
             }),
             'data-testid': 'v2-marketing-page-hero-header',
             children: [
                 (0, s.jsxs)('div', {
-                    className: t ? h.fullscreenTextContainer : h.settingsTextContainer,
+                    className: t ? S.fullscreenTextContainer : S.settingsTextContainer,
                     children: [
-                        (0, s.jsx)(l.Heading, {
+                        (0, s.jsx)(o.Heading, {
                             variant: t ? 'display-lg' : 'display-md',
                             color: 'always-white',
                             children: A.Z.Messages.PREMIUM_MARKETING_HERO_HEADER_TITLE_V3
                         }),
                         U
-                            ? (0, s.jsx)(g.Z, { referrer: D })
+                            ? (0, s.jsx)(N.Z, { referrer: D })
                             : j
                               ? (0, s.jsx)('div', {
-                                    className: r()(h.affinityDescription),
+                                    className: r()(S.affinityDescription),
                                     children: (0, s.jsx)(m.Z, {
                                         textColor: 'always-white',
                                         smallerText: !t
@@ -111,15 +111,15 @@ t.Z = (e) => {
                               : (0, s.jsx)(x, {}),
                         L
                             ? (0, s.jsx)('div', {
-                                  className: h.buttonContainer,
+                                  className: S.buttonContainer,
                                   children: (0, s.jsx)(C.Z, {
-                                      className: r()(h.button, a),
+                                      className: r()(S.button, a),
                                       forceWhite: !0
                                   })
                               })
                             : p
                               ? null
-                              : (0, s.jsx)(S, {
+                              : (0, s.jsx)(h, {
                                     subscriptionTier: d,
                                     inOfferExperience: P,
                                     inTrial: v,
@@ -133,7 +133,7 @@ t.Z = (e) => {
                             })
                     ]
                 }),
-                !(P || N) && (0, s.jsx)(M, { isFullscreen: t })
+                !(P || g) && (0, s.jsx)(M, { isFullscreen: t })
             ]
         })
     });

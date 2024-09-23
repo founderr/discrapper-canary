@@ -9,8 +9,8 @@ var s,
     a,
     r = n(735250),
     i = n(470079),
-    l = n(120356),
-    o = n.n(l),
+    o = n(120356),
+    l = n.n(o),
     c = n(526629),
     d = n(186325),
     _ = n(780384),
@@ -20,22 +20,22 @@ var s,
     I = n(44315),
     R = n(70097),
     m = n(113434),
-    N = n(497505),
-    g = n(918701),
+    g = n(497505),
+    N = n(918701),
     C = n(623249),
     p = n(78826),
     f = n(670638),
     A = n(642145),
-    h = n(981631),
-    S = n(689938),
+    S = n(981631),
+    h = n(689938),
     M = n(411702);
 function x(e) {
     var t;
-    let { quest: n, errorHints: s, warningHints: a, isDarkTheme: l } = e,
-        { ref: o, height: d = 0 } = (0, E.Z)([s]),
+    let { quest: n, errorHints: s, warningHints: a, isDarkTheme: o } = e,
+        { ref: l, height: d = 0 } = (0, E.Z)([s]),
         _ = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
         T = (0, m.z)(n),
-        { type: R, hints: N } = i.useMemo(
+        { type: R, hints: g } = i.useMemo(
             () =>
                 _ || T
                     ? {
@@ -58,20 +58,20 @@ function x(e) {
                           },
             [s, _, T, a]
         ),
-        g = 2 !== R,
+        N = 2 !== R,
         p = (0, u.useSpring)({
-            opacity: g ? 1 : 0,
-            height: g ? d : 0,
+            opacity: N ? 1 : 0,
+            height: N ? d : 0,
             config: A.Y
         }),
         f = 0 === R ? u.CircleWarningIcon : u.CircleInformationIcon,
-        S = (0, I.Lq)(h.Ilk.RED_345),
-        x = 0 === R ? S : l ? u.tokens.colors.TEXT_NORMAL : u.tokens.colors.WHITE;
+        h = (0, I.Lq)(S.Ilk.RED_345),
+        x = 0 === R ? h : o ? u.tokens.colors.TEXT_NORMAL : u.tokens.colors.WHITE;
     return (0, r.jsx)(r.Fragment, {
         children: (0, r.jsx)(c.animated.div, {
             style: p,
             children: (0, r.jsxs)('div', {
-                ref: o,
+                ref: l,
                 className: M.hints,
                 children: [
                     (0, r.jsxs)('div', {
@@ -83,8 +83,8 @@ function x(e) {
                             }),
                             (0, r.jsx)(u.Text, {
                                 variant: 'text-xs/medium',
-                                color: l ? 'text-muted' : 'always-white',
-                                children: N.at(0)
+                                color: o ? 'text-muted' : 'always-white',
+                                children: g.at(0)
                             })
                         ]
                     }),
@@ -98,7 +98,7 @@ function x(e) {
                             size: u.ButtonSizes.MIN,
                             look: u.ButtonLooks.LINK,
                             color: u.ButtonColors.CUSTOM,
-                            style: { color: (0, I.Lq)(h.Ilk.BLUE_345) },
+                            style: { color: (0, I.Lq)(S.Ilk.BLUE_345) },
                             children: 'See Details'
                         })
                 ]
@@ -108,13 +108,13 @@ function x(e) {
 }
 function b(e) {
     var t;
-    let { quest: n, isHovering: s, errorHints: a, warningHints: l, onCtxMenuClose: c, onCtxMenuOpen: E, onCtxMenuSelect: I } = e,
-        C = (0, g.j8)(n),
+    let { quest: n, isHovering: s, errorHints: a, warningHints: o, onCtxMenuClose: c, onCtxMenuOpen: E, onCtxMenuSelect: I } = e,
+        C = (0, N.j8)(n),
         A = (0, T.ZP)(),
-        b = ((0, _.wj)(A) ? h.BRd.DARK : h.BRd.LIGHT) === h.BRd.DARK,
-        O = i.useMemo(() => (0, g.nP)(C), [C]),
+        b = ((0, _.wj)(A) ? S.BRd.DARK : S.BRd.LIGHT) === S.BRd.DARK,
+        O = i.useMemo(() => (0, N.nP)(C), [C]),
         v = i.useContext(d.S).reducedMotion.enabled,
-        P = (0, g.Mi)(n, N.jn.GIFT_INVENTORY_FOR_YOU),
+        P = (0, N.Mi)(n, g.jn.GIFT_INVENTORY_FOR_YOU),
         L = (0, m.tP)(n),
         Z = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null,
         D = i.useRef(s),
@@ -155,7 +155,7 @@ function b(e) {
                                       controls: !1,
                                       children: (0, r.jsx)('source', {
                                           src: C,
-                                          type: (0, g.mN)(C)
+                                          type: (0, N.mN)(C)
                                       })
                                   })
                               )
@@ -172,7 +172,7 @@ function b(e) {
                           })
                 }),
                 (0, r.jsx)('div', {
-                    className: o()(M.overlay, {
+                    className: l()(M.overlay, {
                         [M.darkThemeGradient]: b,
                         [M.lightThemeGradient]: !b
                     })
@@ -195,14 +195,14 @@ function b(e) {
                                                     variant: 'eyebrow',
                                                     color: 'always-white',
                                                     className: M.eyebrowText,
-                                                    children: S.Z.Messages.RECOMMENDED
+                                                    children: h.Z.Messages.RECOMMENDED
                                                 })
                                             }),
                                         (0, r.jsx)(f.r, {
                                             onOpen: E,
                                             onClose: c,
                                             onSelect: I,
-                                            questContent: N.jn.QUEST_HOME_DESKTOP,
+                                            questContent: g.jn.QUEST_HOME_DESKTOP,
                                             quest: n,
                                             hideLearnMore: !0,
                                             shouldShowDisclosure: !0,
@@ -211,11 +211,11 @@ function b(e) {
                                                 (0, r.jsx)(u.Clickable, {
                                                     ...e,
                                                     className: M.submenuWrapper,
-                                                    'aria-label': S.Z.Messages.ACTIONS,
+                                                    'aria-label': h.Z.Messages.ACTIONS,
                                                     children: (0, r.jsx)(u.MoreHorizontalIcon, {
                                                         size: 'md',
                                                         color: 'currentColor',
-                                                        className: o()(M.submenuIcon)
+                                                        className: l()(M.submenuIcon)
                                                     })
                                                 })
                                         })
@@ -228,7 +228,7 @@ function b(e) {
                                             ref: e,
                                             className: M.partnerBranding,
                                             alt: n.config.messages.gameTitle,
-                                            src: (0, g.Gs)(n, 'dark')
+                                            src: (0, N.Gs)(n, 'dark')
                                         })
                                 }),
                                 (0, r.jsxs)('div', {
@@ -237,14 +237,14 @@ function b(e) {
                                         (0, r.jsx)(u.Text, {
                                             variant: 'text-sm/medium',
                                             color: b ? 'text-muted' : 'always-white',
-                                            children: S.Z.Messages.QUESTS_PROMOTED_BY_BRAND.format({ brandName: n.config.messages.gamePublisher })
+                                            children: h.Z.Messages.QUESTS_PROMOTED_BY_BRAND.format({ brandName: n.config.messages.gamePublisher })
                                         }),
                                         L || Z
                                             ? null
                                             : (0, r.jsx)(u.Text, {
                                                   variant: 'text-sm/medium',
                                                   color: b ? 'text-muted' : 'always-white',
-                                                  children: S.Z.Messages.QUESTS_TILE_BANNER_ENDS_DATE.format({ expiryDate: U })
+                                                  children: h.Z.Messages.QUESTS_TILE_BANNER_ENDS_DATE.format({ expiryDate: U })
                                               })
                                     ]
                                 })
@@ -253,7 +253,7 @@ function b(e) {
                         (0, r.jsx)(x, {
                             quest: n,
                             errorHints: a,
-                            warningHints: l,
+                            warningHints: o,
                             isDarkTheme: b
                         })
                     ]

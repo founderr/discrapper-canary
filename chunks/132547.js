@@ -3,8 +3,8 @@ var s = n(735250),
     a = n(470079),
     r = n(120356),
     i = n.n(r),
-    l = n(622535),
-    o = n(481060),
+    o = n(622535),
+    l = n(481060),
     c = n(100527),
     d = n(906732),
     _ = n(433811),
@@ -14,14 +14,14 @@ var s = n(735250),
     I = n(794484),
     R = n(536844),
     m = n(342414),
-    N = n(938736),
-    g = n(391110),
+    g = n(938736),
+    N = n(391110),
     C = n(71363),
     p = n(781800),
     f = n(981631),
     A = n(689938),
-    h = n(170367),
-    S = n(865215);
+    S = n(170367),
+    h = n(865215);
 let M = 'SubscriberNitroHome';
 t.Z = () => {
     (0, u.z)(_.X);
@@ -30,55 +30,55 @@ t.Z = () => {
         { analyticsLocations: r } = (0, d.ZP)(c.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
         [x, b] = a.useState(!1);
     (0, T.FM)();
-    let O = (0, N.bD)(M),
-        v = (0, N.TW)(M);
+    let O = (0, g.bD)(M),
+        v = (0, g.TW)(M);
     return (0, s.jsxs)(s.Fragment, {
         children: [
-            (0, s.jsx)(o.AdvancedScrollerAuto, {
-                className: h.mainPageScroller,
+            (0, s.jsx)(l.AdvancedScrollerAuto, {
+                className: S.mainPageScroller,
                 ref: e,
                 children: (0, s.jsx)('div', {
-                    className: h.container,
+                    className: S.container,
                     children: (0, s.jsxs)(d.Gt, {
                         value: r,
                         children: [
                             (0, s.jsx)(m.Z, {
-                                className: h.heroHeading,
-                                location: g.MQ.HOME
+                                className: S.heroHeading,
+                                location: N.MQ.HOME
                             }),
                             (0, s.jsx)(I.Z, {
-                                variant: g.R0.WHATS_NEW,
-                                className: i()(h.whatsNew, { [h.whatsNewWithOriginalHeroHeading]: !(O || v) }),
+                                variant: N.R0.WHATS_NEW,
+                                className: i()(S.whatsNew, { [S.whatsNewWithOriginalHeroHeading]: !(O || v) }),
                                 noBackground: !0,
                                 leftAlignHeaders: !0
                             }),
                             (0, s.jsx)(I.Z, {
-                                className: h.perksDiscoverability,
+                                className: S.perksDiscoverability,
                                 noBackground: !0,
                                 leftAlignHeaders: !0,
                                 showAllPerksButton: (0, s.jsx)(p.Z, {
                                     setIsAllPerksVisible: n,
-                                    previousComponent: g.MQ.HOME
+                                    previousComponent: N.MQ.HOME
                                 })
                             }),
                             (0, s.jsx)(R.Z, {
-                                className: h.giftNitro,
+                                className: S.giftNitro,
                                 location: c.Z.PREMIUM_MARKETING_GIFT_SECTION,
                                 analyticsLocation: {
                                     page: f.ZY5.NITRO_HOME,
                                     section: f.jXE.GIFT_BANNER
                                 }
                             }),
-                            (0, s.jsx)('div', { className: h.footerSpacing }),
-                            (0, s.jsx)(l.$, {
+                            (0, s.jsx)('div', { className: S.footerSpacing }),
+                            (0, s.jsx)(o.$, {
                                 onChange: (e) => {
                                     e && !x && (E.default.track(f.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: r }), b(!0));
                                 },
-                                children: (0, s.jsx)('div', { className: h.bottomOfPageVisibilitySensor })
+                                children: (0, s.jsx)('div', { className: S.bottomOfPageVisibilitySensor })
                             }),
                             (0, s.jsx)('img', {
-                                src: S,
-                                className: h.bottomIllustration,
+                                src: h,
+                                className: S.bottomIllustration,
                                 width: 112,
                                 height: 85,
                                 alt: A.Z.Messages.IMAGE
@@ -90,7 +90,7 @@ t.Z = () => {
             (0, s.jsx)(C.Z, {
                 isAllPerksVisible: t,
                 setIsAllPerksVisible: n,
-                previousComponent: g.MQ.HOME
+                previousComponent: N.MQ.HOME
             })
         ]
     });

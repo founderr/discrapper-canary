@@ -9,7 +9,7 @@ n.d(t, {
         return i;
     },
     as: function () {
-        return l;
+        return o;
     }
 });
 var s = n(818083);
@@ -40,4 +40,4 @@ let a = (0, s.B)({
             }
         ]
     }),
-    l = () => i.useExperiment({ location: 'experiment_hook' });
+    o = () => i.useExperiment({ location: 'experiment_hook' });

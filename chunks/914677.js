@@ -3,23 +3,23 @@ var s = n(735250),
     a = n(470079),
     r = n(780384),
     i = n(410030),
-    l = n(119269),
-    o = n(315566);
+    o = n(119269),
+    l = n(315566);
 let c = 'url(#gradient)',
     d = (e, t) => {
         switch (e) {
-            case l.Q.NITRO_LOGO:
+            case o.Q.NITRO_LOGO:
                 return t ? '0.3' : '0.2';
-            case l.Q.NITRO_GEM:
+            case o.Q.NITRO_GEM:
             default:
                 return;
         }
     },
     _ = (e) => {
         switch (e) {
-            case l.Q.NITRO_GEM:
+            case o.Q.NITRO_GEM:
                 return 'var(--background-primary)';
-            case l.Q.NITRO_LOGO:
+            case o.Q.NITRO_LOGO:
                 return 'var(--premium-tier-2-purple)';
             default:
                 return;
@@ -27,9 +27,9 @@ let c = 'url(#gradient)',
     },
     u = (e, t) => {
         switch (t) {
-            case l.Q.NITRO_GEM:
+            case o.Q.NITRO_GEM:
                 return c;
-            case l.Q.NITRO_LOGO:
+            case o.Q.NITRO_LOGO:
                 return e ? 'url(#gradient_nitro_logo)' : c;
             default:
                 return;
@@ -38,8 +38,8 @@ let c = 'url(#gradient)',
 t.Z = (e) => {
     let { percentage: t = 0, children: n, animationClassName: c, initialPercentage: E = 0, progressCircleStrokeSize: T = 2, progressCircleVariation: I, progressCircleStroke: R } = e,
         m = 43 + T / 2,
-        N = 2 * Math.PI * m,
-        [g, C] = a.useState(E);
+        g = 2 * Math.PI * m,
+        [N, C] = a.useState(E);
     a.useEffect(() => {
         let e = setTimeout(() => {
             C(t);
@@ -49,32 +49,32 @@ t.Z = (e) => {
     let p = (0, i.ZP)(),
         f = (0, r.ap)(p),
         A = _(I),
-        h = d(I, f),
-        S = null != R ? R : u(f, I);
+        S = d(I, f),
+        h = null != R ? R : u(f, I);
     return (0, s.jsxs)('div', {
-        className: o.circleContainer,
+        className: l.circleContainer,
         children: [
             (0, s.jsxs)('svg', {
                 viewBox: '0 0 100 100',
-                className: o.circleSVG,
+                className: l.circleSVG,
                 children: [
                     (0, s.jsx)('circle', {
-                        className: I === l.Q.NITRO_GEM ? o.baseProgressCircle : void 0,
+                        className: I === o.Q.NITRO_GEM ? l.baseProgressCircle : void 0,
                         fill: 'transparent',
                         strokeWidth: T,
                         r: ''.concat(m),
                         cx: '50%',
                         cy: '50%',
                         stroke: A,
-                        strokeOpacity: h
+                        strokeOpacity: S
                     }),
                     (0, s.jsx)('circle', {
-                        stroke: S,
+                        stroke: h,
                         strokeWidth: T,
                         strokeLinecap: 'round',
-                        strokeDasharray: ''.concat(N, ' ').concat(N),
+                        strokeDasharray: ''.concat(g, ' ').concat(g),
                         className: c,
-                        style: { strokeDashoffset: (1 - g / 100) * N },
+                        style: { strokeDashoffset: (1 - N / 100) * g },
                         r: ''.concat(m),
                         cx: '50%',
                         cy: '50%'
@@ -143,7 +143,7 @@ t.Z = (e) => {
                 ]
             }),
             (0, s.jsx)('div', {
-                className: o.childrenContainer,
+                className: l.childrenContainer,
                 children: n
             })
         ]

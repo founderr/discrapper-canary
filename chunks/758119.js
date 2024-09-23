@@ -3,10 +3,10 @@ n.d(t, {
         return d;
     },
     mN: function () {
-        return l;
+        return o;
     },
     qV: function () {
-        return o;
+        return l;
     },
     qq: function () {
         return c;
@@ -17,7 +17,7 @@ n(893776), n(703656);
 var a = n(626135),
     r = n(723359),
     i = n(981631);
-function l(e) {
+function o(e) {
     a.default.track(i.rMx.OPEN_MODAL, {
         type: 'Enter Your Birthday',
         source: { section: e }
@@ -27,7 +27,7 @@ function l(e) {
             source: e
         });
 }
-function o(e) {
+function l(e) {
     s.Z.wait(() => s.Z.dispatch({ type: 'AGE_GATE_MODAL_CLOSE' })),
         void 0 !== e &&
             a.default.track(i.rMx.AGE_GATE_ACTION, {

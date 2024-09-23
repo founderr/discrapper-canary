@@ -2,8 +2,8 @@ var s = n(735250),
     a = n(470079),
     r = n(120356),
     i = n.n(r),
-    l = n(613828),
-    o = n(435935),
+    o = n(613828),
+    l = n(435935),
     c = n(442837),
     d = n(481060),
     _ = n(37234),
@@ -13,8 +13,8 @@ var s = n(735250),
     I = n(981631),
     R = n(930441),
     m = n(689938),
-    N = n(35411),
-    g = n(113207);
+    g = n(35411),
+    N = n(113207);
 t.Z = () => {
     let e = T.Ex.useSetting(),
         { categories: t, initialized: n } = (0, c.cj)([E.Z], () => E.Z.getEmailSettings());
@@ -23,7 +23,7 @@ t.Z = () => {
             null == n && (0, u.Y7)();
         }, [n]),
         (0, s.jsxs)('div', {
-            className: N.container,
+            className: g.container,
             children: [
                 (0, s.jsx)(d.Text, {
                     variant: 'eyebrow',
@@ -31,7 +31,7 @@ t.Z = () => {
                     children: m.Z.Messages.FAMILY_CENTER_SETTINGS_FORM_TITLE
                 }),
                 (0, s.jsx)(d.FormSwitch, {
-                    className: i()(g.marginTop8, g.marginBottom20),
+                    className: i()(N.marginTop8, N.marginBottom20),
                     value: e,
                     note: m.Z.Messages.FAMILY_CENTER_SETTINGS_ENABLE_SWITCH_NOTE,
                     hideBorder: !0,
@@ -40,13 +40,13 @@ t.Z = () => {
                 }),
                 e
                     ? (0, s.jsx)(d.Card, {
-                          className: N.enableCard,
+                          className: g.enableCard,
                           type: d.Card.Types.CUSTOM,
                           outline: !0,
-                          children: (0, s.jsxs)(o.k, {
-                              justify: o.k.Justify.END,
+                          children: (0, s.jsxs)(l.k, {
+                              justify: l.k.Justify.END,
                               children: [
-                                  (0, s.jsx)(o.k.Child, {
+                                  (0, s.jsx)(l.k.Child, {
                                       children: (0, s.jsx)(d.Text, {
                                           variant: 'text-sm/semibold',
                                           color: 'text-normal',
@@ -54,7 +54,7 @@ t.Z = () => {
                                       })
                                   }),
                                   (0, s.jsx)(d.Clickable, {
-                                      children: (0, s.jsx)(l.rU, {
+                                      children: (0, s.jsx)(o.rU, {
                                           onClick: _.xf,
                                           to: {
                                               pathname: I.Z5c.FAMILY_CENTER,
@@ -65,7 +65,7 @@ t.Z = () => {
                                   }),
                                   (0, s.jsx)(d.IconBadge, {
                                       icon: d.ArrowSmallRightIcon,
-                                      className: N.arrow,
+                                      className: g.arrow,
                                       disableColor: !0
                                   })
                               ]
@@ -73,7 +73,7 @@ t.Z = () => {
                       })
                     : null,
                 (0, s.jsx)(d.FormSwitch, {
-                    className: i()(g.marginTop20, g.marginBottom20),
+                    className: i()(N.marginTop20, N.marginBottom20),
                     value: !!t[R.$Z.FAMILY_CENTER_DIGEST],
                     note: m.Z.Messages.FAMILY_CENTER_SETTINGS_EMAIL_DIGEST_ENABLE_SWITCH_NOTE,
                     hideBorder: !0,

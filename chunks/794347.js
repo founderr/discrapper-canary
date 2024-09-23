@@ -8,8 +8,8 @@ var s,
     a = n(735250),
     r = n(470079),
     i = n(120356),
-    l = n.n(i),
-    o = n(692547),
+    o = n.n(i),
+    l = n(692547),
     c = n(477690),
     d = n(162168),
     _ = n(624138),
@@ -64,7 +64,7 @@ class R extends (s = r.Component) {
             className: u.wrapper,
             ref: this.sizerRef,
             children: (0, a.jsxs)('div', {
-                className: l()(u.container, e),
+                className: o()(u.container, e),
                 style: this.getGradientStyles(),
                 children: [
                     (0, a.jsx)('div', {
@@ -74,7 +74,7 @@ class R extends (s = r.Component) {
                     0 !== n &&
                         (0, a.jsx)(d.Z, {
                             width: n,
-                            className: l()(u.notches, t)
+                            className: o()(u.notches, t)
                         })
                 ]
             })
@@ -91,7 +91,7 @@ class R extends (s = r.Component) {
     }
 }
 E(R, 'defaultProps', {
-    gradientStart: o.Z.unsafe_rawColors.YELLOW_260.css,
-    gradientEnd: o.Z.unsafe_rawColors.GREEN_360.css
+    gradientStart: l.Z.unsafe_rawColors.YELLOW_260.css,
+    gradientEnd: l.Z.unsafe_rawColors.GREEN_360.css
 }),
     (t.Z = R);

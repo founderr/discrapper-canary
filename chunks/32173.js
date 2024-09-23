@@ -8,8 +8,8 @@ var s,
     r = n(735250);
 n(470079);
 var i = n(399606),
-    l = n(704215),
-    o = n(481060),
+    o = n(704215),
+    l = n(481060),
     c = n(230711),
     d = n(410030),
     _ = n(100527),
@@ -19,14 +19,14 @@ var i = n(399606),
     I = n(703656),
     R = n(547972),
     m = n(131951),
-    N = n(78839),
-    g = n(626135),
+    g = n(78839),
+    N = n(626135),
     C = n(424218),
     p = n(63063),
     f = n(74538),
     A = n(860489),
-    h = n(471309),
-    S = n(494127),
+    S = n(471309),
+    h = n(494127),
     M = n(314684),
     x = n(687362),
     b = n(119269),
@@ -62,8 +62,8 @@ var i = n(399606),
     ea = n(572501),
     er = n(755590),
     ei = n(909910),
-    el = n(637810),
-    eo = n(570423),
+    eo = n(637810),
+    el = n(570423),
     ec = n(912429),
     ed = n(91394),
     e_ = n(209672),
@@ -74,19 +74,19 @@ t.Z = () => {
     let { analyticsLocations: e } = (0, u.ZP)(_.Z.PREMIUM_MARKETING_PERK_CARD),
         t = (0, d.ZP)(),
         s = (0, C.BU)(Z.Uq / 1024, { useKibibytes: !0 }),
-        a = (0, i.e7)([N.ZP], () => N.ZP.getPremiumTypeSubscription()),
+        a = (0, i.e7)([g.ZP], () => g.ZP.getPremiumTypeSubscription()),
         eT = null != a ? f.ZP.getPremiumPlanItem(a) : null,
         eI = null != eT ? f.ZP.getSkuIdForPlan(eT.planId) : null,
         eR = eI === Z.Si.TIER_2,
         em = eI === Z.Si.TIER_0,
-        { flipped: eN } = (0, S.JP)(),
-        { flipped: eg } = (0, S.as)(),
+        { flipped: eg } = (0, h.JP)(),
+        { flipped: eN } = (0, h.as)(),
         eC = (0, M.nY)({ showAnimations: !0 }),
         ep = null != eC ? eC.initialPercentage : void 0,
         ef = null != eC ? eC.percentage : void 0,
         eA = (0, E.Z)(m.Z),
-        eh = (0, x.Z)(),
-        eS = (0, T.Z)({
+        eS = (0, x.Z)(),
+        eh = (0, T.Z)({
             scrollPosition: B.Y_.TRY_IT_OUT,
             analyticsLocations: e
         }),
@@ -113,8 +113,8 @@ t.Z = () => {
                       onCtaClick: ex,
                       pillText: j.Z.Messages.EARLY_ACCESS,
                       perkImage: Y,
-                      canReveal: eN,
-                      dismissibleContentType: l.z.WHATS_NEW_AVATAR_DECOS_FLIP
+                      canReveal: eg,
+                      dismissibleContentType: o.z.WHATS_NEW_AVATAR_DECOS_FLIP
                   }
                 : {
                       name: 'avatarDecorations',
@@ -123,8 +123,8 @@ t.Z = () => {
                       description: j.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_DESCRIPTION_NON_SUB,
                       pillText: j.Z.Messages.EARLY_ACCESS,
                       perkImage: Y,
-                      canReveal: eN,
-                      dismissibleContentType: l.z.WHATS_NEW_AVATAR_DECOS_FLIP
+                      canReveal: eg,
+                      dismissibleContentType: o.z.WHATS_NEW_AVATAR_DECOS_FLIP
                   },
             clientThemes: {
                 name: 'clientThemes',
@@ -244,8 +244,8 @@ t.Z = () => {
                       onCtaClick: ex,
                       pillText: j.Z.Messages.EARLY_ACCESS,
                       perkImage: es,
-                      canReveal: eg,
-                      dismissibleContentType: l.z.WHATS_NEW_PROFILE_EFFECTS_FLIP
+                      canReveal: eN,
+                      dismissibleContentType: o.z.WHATS_NEW_PROFILE_EFFECTS_FLIP
                   }
                 : {
                       name: 'profileEffects',
@@ -254,8 +254,8 @@ t.Z = () => {
                       description: j.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_DESCRIPTION_NON_SUB,
                       pillText: j.Z.Messages.EARLY_ACCESS,
                       perkImage: es,
-                      canReveal: eg,
-                      dismissibleContentType: l.z.WHATS_NEW_PROFILE_EFFECTS_FLIP
+                      canReveal: eN,
+                      dismissibleContentType: o.z.WHATS_NEW_PROFILE_EFFECTS_FLIP
                   },
             profiles: {
                 name: 'profiles',
@@ -263,7 +263,7 @@ t.Z = () => {
                 subtitle: j.Z.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_PROFILES_SUBTITLE,
                 description: j.Z.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_PROFILES_DESCRIPTION,
                 descriptionCta: j.Z.Messages.TAKE_ME_THERE,
-                onCtaClick: eS,
+                onCtaClick: eh,
                 perkImage: V
             },
             remixing: eR
@@ -306,7 +306,7 @@ t.Z = () => {
                       description: j.Z.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_SUB,
                       descriptionCta: j.Z.Messages.VISIT_THE_SHOP_CTA,
                       onCtaClick: ex,
-                      perkImage: el
+                      perkImage: eo
                   }
                 : {
                       name: 'specialMemberPricing',
@@ -314,7 +314,7 @@ t.Z = () => {
                       subtitle: j.Z.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_SUBTITLE_V2,
                       description: j.Z.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_NON_SUB,
                       isPremiumGetCta: !0,
-                      perkImage: el
+                      perkImage: eo
                   },
             specialMemberPricingSeeAllVariant: eR
                 ? {
@@ -324,7 +324,7 @@ t.Z = () => {
                       description: j.Z.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_SUB,
                       descriptionCta: j.Z.Messages.VISIT_THE_SHOP_CTA,
                       onCtaClick: ex,
-                      perkImage: eo
+                      perkImage: el
                   }
                 : {
                       name: 'specialMemberPricingSeeAllVariant',
@@ -332,7 +332,7 @@ t.Z = () => {
                       subtitle: j.Z.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_SUBTITLE_V2,
                       description: j.Z.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_NON_SUB,
                       isPremiumGetCta: !0,
-                      perkImage: eo
+                      perkImage: el
                   },
             specialShopPerks: eR
                 ? {
@@ -342,7 +342,7 @@ t.Z = () => {
                       description: j.Z.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_SUB,
                       descriptionCta: j.Z.Messages.VISIT_THE_SHOP_CTA,
                       onCtaClick: ex,
-                      perkImage: el
+                      perkImage: eo
                   }
                 : {
                       name: 'specialShopPerks',
@@ -351,7 +351,7 @@ t.Z = () => {
                       description: j.Z.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_NON_SUB,
                       descriptionCta: j.Z.Messages.VISIT_THE_SHOP_CTA,
                       onCtaClick: ex,
-                      perkImage: el
+                      perkImage: eo
                   },
             unlimitedSuperReactions: eR
                 ? {
@@ -460,13 +460,13 @@ t.Z = () => {
                 subtitle: j.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_SERVER_PRORFILES_SUBTITLE,
                 descriptionCta: eR ? j.Z.Messages.TAKE_ME_THERE : j.Z.Messages.MARKETING_PAGE_CTA_GET_NITRO,
                 isPremiumGetCta: !eR,
-                onCtaClick: eR ? eS : void 0,
+                onCtaClick: eR ? eh : void 0,
                 perkImage: ei
             }
         };
-    if (null != eh) {
-        let { title: t, subtitle: n, description: s, pillText: a, ctaDescription: i, dismissibleContentType: l } = eh,
-            o = (0, r.jsx)('div', {
+    if (null != eS) {
+        let { title: t, subtitle: n, description: s, pillText: a, ctaDescription: i, dismissibleContentType: o } = eS,
+            l = (0, r.jsx)('div', {
                 className: G.cardComponent,
                 children: (0, r.jsx)(b.Z, {
                     showAnimations: !0,
@@ -479,26 +479,26 @@ t.Z = () => {
             title: t,
             subtitle: n,
             description: s,
-            perkComponent: o,
+            perkComponent: l,
             descriptionCta: i,
             onCtaClick: () => {
                 c.Z.open(D.oAB.GUILD_BOOSTING, null, { analyticsLocations: e });
             },
             cardVariant: v.zW.REWARD,
             pillText: a,
-            dismissibleContentType: l
+            dismissibleContentType: o
         };
     }
     let ev = (0, L.kG)(),
-        { enabled: eP } = (0, h.Z)(),
+        { enabled: eP } = (0, S.Z)(),
         eL = () => {
-            g.default.track(D.rMx.OPEN_MODAL, {
+            N.default.track(D.rMx.OPEN_MODAL, {
                 type: 'Tiered Tenure Badge Details',
                 location_stack: e,
                 location: _.Z.PREMIUM_MARKETING_PERK_CARD,
                 source: _.Z.PREMIUM_MARKETING_PERK_CARD
             }),
-                (0, o.openModalLazy)(async () => {
+                (0, l.openModalLazy)(async () => {
                     let { default: e } = await n.e('16133').then(n.bind(n, 743648));
                     return (t) => (0, r.jsx)(e, { ...t });
                 });

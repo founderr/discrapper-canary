@@ -3,34 +3,34 @@ n(470079);
 var a = n(120356),
     r = n.n(a),
     i = n(793030),
-    l = n(976465),
-    o = n(474936),
+    o = n(976465),
+    l = n(474936),
     c = n(689938),
     d = n(305675);
 let _ = (e) => {
     switch (e) {
-        case o.VU.PREMIUM_TENURE_1_MONTH:
+        case l.VU.PREMIUM_TENURE_1_MONTH:
             return d.badgeBronzeGlow;
-        case o.VU.PREMIUM_TENURE_3_MONTH:
+        case l.VU.PREMIUM_TENURE_3_MONTH:
             return d.badgeSilverGlow;
-        case o.VU.PREMIUM_TENURE_6_MONTH:
+        case l.VU.PREMIUM_TENURE_6_MONTH:
             return d.badgeGoldGlow;
-        case o.VU.PREMIUM_TENURE_12_MONTH:
+        case l.VU.PREMIUM_TENURE_12_MONTH:
             return d.badgePlatinumGlow;
-        case o.VU.PREMIUM_TENURE_24_MONTH:
+        case l.VU.PREMIUM_TENURE_24_MONTH:
             return d.badgeDiamondGlow;
-        case o.VU.PREMIUM_TENURE_36_MONTH:
+        case l.VU.PREMIUM_TENURE_36_MONTH:
             return d.badgeEmeraldGlow;
-        case o.VU.PREMIUM_TENURE_60_MONTH:
+        case l.VU.PREMIUM_TENURE_60_MONTH:
             return d.badgeRubyGlow;
-        case o.VU.PREMIUM_TENURE_72_MONTH:
+        case l.VU.PREMIUM_TENURE_72_MONTH:
             return d.badgeFireGlow;
         default:
             return;
     }
 };
 t.Z = () => {
-    let { badge: e, image: t, name: n, earnedOnDate: a } = (0, l.Rw)();
+    let { badge: e, image: t, name: n, earnedOnDate: a } = (0, o.Rw)();
     return null == e
         ? null
         : (0, s.jsxs)('div', {

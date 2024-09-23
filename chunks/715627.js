@@ -3,8 +3,8 @@ var s = n(735250),
     a = n(470079),
     r = n(887024),
     i = n(745510),
-    l = n(675654);
-let o = {
+    o = n(675654);
+let l = {
         xMin: -40,
         xMax: 40,
         yMin: -40,
@@ -12,13 +12,13 @@ let o = {
     },
     c = (e, t, n) => (null == n ? t : (e * n) / 100),
     d = a.memo(function (e) {
-        let { confettiTarget: t, colors: n, emojiURL: d, numBursts: _, particlesPerBurst: u, offsetXPercentageMax: E, offsetXPercentageMin: T, offsetYPercentageMax: I, offsetYPercentageMin: R, customConfettiCanvas: m, speedValues: N = o, dragCoefficientValue: g = 0.001, onAnimationEnd: C } = e,
+        let { confettiTarget: t, colors: n, emojiURL: d, numBursts: _, particlesPerBurst: u, offsetXPercentageMax: E, offsetXPercentageMin: T, offsetYPercentageMax: I, offsetYPercentageMin: R, customConfettiCanvas: m, speedValues: g = l, dragCoefficientValue: N = 0.001, onAnimationEnd: C } = e,
             [p, f] = a.useState(null),
             { confettiCanvas: A } = a.useContext(i.h),
-            h = (0, r.uR)(null != m ? m : A, p),
-            [S, M] = a.useState(!1);
+            S = (0, r.uR)(null != m ? m : A, p),
+            [h, M] = a.useState(!1);
         a.useEffect(() => {
-            S && (null == C || C());
+            h && (null == C || C());
         });
         let x = a.useMemo(() => {
             if (null != d)
@@ -36,9 +36,9 @@ let o = {
                 return (
                     (e = e.map((n, s) =>
                         setTimeout(() => {
-                            h.createMultipleConfetti(
+                            S.createMultipleConfetti(
                                 (function (e, t, n, s, a) {
-                                    let r = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : o,
+                                    let r = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : l,
                                         i = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 0.001,
                                         d = c(e.width, 100, n),
                                         _ = c(e.height, 75, a),
@@ -46,7 +46,7 @@ let o = {
                                         E = c(e.height, 75, s),
                                         { xMin: T, xMax: I, yMin: R, yMax: m } = r;
                                     return {
-                                        ...l.We,
+                                        ...o.We,
                                         position: {
                                             type: 'static-random',
                                             minValue: {
@@ -71,15 +71,15 @@ let o = {
                                         },
                                         size: {
                                             type: 'static-random',
-                                            minValue: l.Ko,
-                                            maxValue: l.Ko
+                                            minValue: o.Ko,
+                                            maxValue: o.Ko
                                         },
                                         dragCoefficient: {
                                             type: 'static',
                                             value: i
                                         }
                                     };
-                                })(t.getBoundingClientRect(), E, T, I, R, N, g),
+                                })(t.getBoundingClientRect(), E, T, I, R, g, N),
                                 null != u ? u : 50
                             ),
                                 s === e.length - 1 && null != C && M(!0);
@@ -89,13 +89,13 @@ let o = {
                         for (let t of e) clearTimeout(t);
                     }
                 );
-            }, [h, t, _, u, E, T, I, R, N, g, C]),
+            }, [S, t, _, u, E, T, I, R, g, N, C]),
             (0, s.jsx)(r.Ji, {
                 ref: f,
-                sprites: null != x ? x : l.CA,
-                colors: null != n ? n : l.Br,
-                spriteWidth: l.Ko,
-                spriteHeight: l.Ko
+                sprites: null != x ? x : o.CA,
+                colors: null != n ? n : o.Br,
+                spriteWidth: o.Ko,
+                spriteHeight: o.Ko
             })
         );
     });

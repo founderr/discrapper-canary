@@ -3,15 +3,15 @@ n(470079);
 var a = n(120356),
     r = n.n(a),
     i = n(481060),
-    l = n(977341);
+    o = n(977341);
 t.Z = (e) => {
-    var t, n, a, o;
+    var t, n, a, l;
     let { title: c, shouldShowElement: d, cardVariantStyleInfo: _, description: u, titleClassName: E = '', subtitle: T = '', subtitleClassName: I } = e;
     return (0, s.jsxs)(s.Fragment, {
         children: [
             (0, s.jsx)(i.Heading, {
                 variant: 'heading-xl/extrabold',
-                className: r()(l.cardHeading, E),
+                className: r()(o.cardHeading, E),
                 children: c
             }),
             0 !== T.length &&
@@ -26,7 +26,7 @@ t.Z = (e) => {
                             }),
                             null != u &&
                                 (0, s.jsx)(i.Text, {
-                                    variant: null !== (o = null == _ ? void 0 : null === (n = _.description) || void 0 === n ? void 0 : n.textVariant) && void 0 !== o ? o : 'text-sm/normal',
+                                    variant: null !== (l = null == _ ? void 0 : null === (n = _.description) || void 0 === n ? void 0 : n.textVariant) && void 0 !== l ? l : 'text-sm/normal',
                                     children: (0, s.jsxs)(s.Fragment, {
                                         children: [(0, s.jsx)('br', {}), u]
                                     })

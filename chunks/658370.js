@@ -3,8 +3,8 @@ n(470079);
 var a = n(120356),
     r = n.n(a),
     i = n(481060),
-    l = n(74538),
-    o = n(773104),
+    o = n(74538),
+    l = n(773104),
     c = n(104494),
     d = n(639119),
     _ = n(176782),
@@ -16,22 +16,22 @@ var a = n(120356),
 t.Z = (e) => {
     var t;
     let n;
-    let { title: a, titleClassName: m = '', buttonClassName: N = '', subtitle: g = '', description: C = '', descriptionCta: p = '', isPremiumGetCta: f, onCtaClick: A, cardVariant: h } = e,
-        S = (0, d.N)(),
-        M = null == S ? void 0 : S.subscription_trial,
+    let { title: a, titleClassName: m = '', buttonClassName: g = '', subtitle: N = '', description: C = '', descriptionCta: p = '', isPremiumGetCta: f, onCtaClick: A, cardVariant: S } = e,
+        h = (0, d.N)(),
+        M = null == h ? void 0 : h.subscription_trial,
         x = (0, c.Ng)(),
-        b = (0, l.Rt)({
+        b = (0, o.Rt)({
             intervalType: null == M ? void 0 : M.interval,
             intervalCount: null == M ? void 0 : M.interval_count
         }),
-        O = (0, o._)({
+        O = (0, l._)({
             defaultResponse: I.Z.Messages.PREMIUM_SETTINGS_GET,
             onNonTier2Subscriber: I.Z.Messages.BILLING_SWITCH_PLAN_UPGRADE,
             onTier2TrialOffer: b,
             onTier0TrialOffer: b,
             onDiscountOffer: I.Z.Messages.PREMIUM_DISCOUNT_CTA.format({ percent: null == x ? void 0 : x.discount.amount })
         }),
-        v = (0, _._)(h);
+        v = (0, _._)(S);
     return (0, s.jsxs)('div', {
         className: r()(R.cardDescription, null == v ? void 0 : null === (t = v.description) || void 0 === t ? void 0 : t.className),
         children: [
@@ -39,12 +39,12 @@ t.Z = (e) => {
                 title: a,
                 cardVariantStyleInfo: v,
                 titleClassName: m,
-                subtitle: g,
+                subtitle: N,
                 description: C
             }),
             f &&
                 (0, s.jsx)(E.Z, {
-                    className: N,
+                    className: g,
                     subscriptionTier: T.Si.TIER_2,
                     buttonText: O,
                     color: i.Button.Colors.GREEN,
@@ -54,7 +54,7 @@ t.Z = (e) => {
                 (null == (n = null == v ? void 0 : v.descriptionCta) ? void 0 : n.hideOnHoverComponent) !== !0 &&
                 null != A &&
                 (0, s.jsx)(i.Button, {
-                    className: N,
+                    className: g,
                     onClick: A,
                     children: p
                 })

@@ -3,8 +3,8 @@ n(470079);
 var a = n(120356),
     r = n.n(a),
     i = n(481060),
-    l = n(314684),
-    o = n(176782),
+    o = n(314684),
+    l = n(176782),
     c = n(743612),
     d = n(735825),
     _ = n(977341),
@@ -15,9 +15,9 @@ t.Z = (e) => {
     var t;
     let n,
         a,
-        { title: I, titleClassName: R, buttonClassName: m, perkImage: N, isCarousel: g, onCtaClick: C, perkComponent: p, subtitle: f = '', descriptionCta: A = '', cardVariant: h, subtitleClassName: S } = e,
-        M = (0, o._)(h),
-        x = (0, l.yQ)(),
+        { title: I, titleClassName: R, buttonClassName: m, perkImage: g, isCarousel: N, onCtaClick: C, perkComponent: p, subtitle: f = '', descriptionCta: A = '', cardVariant: S, subtitleClassName: h } = e,
+        M = (0, l._)(S),
+        x = (0, o.yQ)(),
         b = (null == x ? void 0 : x.nitroTenureStatus) === d.EB.REDEEMABLE;
     switch (null == x ? void 0 : x.nitroTenureStatus) {
         case d.EB.REDEEMABLE:
@@ -41,15 +41,15 @@ t.Z = (e) => {
                 cardVariantStyleInfo: M,
                 titleClassName: R,
                 subtitle: f,
-                subtitleClassName: S
+                subtitleClassName: h
             }),
-            null != N &&
+            null != g &&
                 (0, s.jsx)('img', {
-                    src: N,
+                    src: g,
                     alt: '',
                     className: r()({
-                        [_.cardImage]: !g,
-                        [_.carouselCardImage]: g
+                        [_.cardImage]: !N,
+                        [_.carouselCardImage]: N
                     })
                 }),
             null != p &&

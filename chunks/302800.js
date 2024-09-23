@@ -21,8 +21,8 @@ var s,
     a,
     r = n(278074),
     i = n(691324),
-    l = n(180650),
-    o = n(44315),
+    o = n(180650),
+    l = n(44315),
     c = n(410154),
     d = n(689938),
     _ = n(22344),
@@ -33,13 +33,13 @@ var s,
 ((a = s || (s = {}))[(a.NONE = 0)] = 'NONE'), (a[(a.TOOLTIP = 1)] = 'TOOLTIP'), (a[(a.COACHTIP = 2)] = 'COACHTIP'), (a[(a.COACHTIP_HEADLINE_ONLY = 3)] = 'COACHTIP_HEADLINE_ONLY'), (a[(a.BADGE = 4)] = 'BADGE');
 let R = (e) =>
         (0, r.EQ)(e)
-            .with(l.T.TIDE, () => ({
+            .with(o.T.TIDE, () => ({
                 label: () => d.Z.Messages.COLLECTIBLES_SHY_FOR_A_LIMITED_TIME,
                 iconSrc: I,
                 style: {
                     background: 'linear-gradient(180deg, #103A8B -7.5%, #3390FD 128.75%)',
                     boxShadow: '0px 0px 15.4px 0px rgba(23, 160, 236, 0.5)',
-                    color: (0, o.Lq)(i.I.WHITE_100)
+                    color: (0, l.Lq)(i.I.WHITE_100)
                 }
             }))
             .otherwise(() => null),
@@ -51,7 +51,7 @@ let R = (e) =>
             zIndex: 10
         }
     },
-    N = {
+    g = {
         imageSrc: u,
         style: {
             position: 'absolute',
@@ -60,7 +60,7 @@ let R = (e) =>
             zIndex: 10
         }
     },
-    g = {
+    N = {
         imageSrc: _,
         style: {
             position: 'absolute',
@@ -90,13 +90,13 @@ let R = (e) =>
             .with('1266493591207940133', () => C)
             .with('1266493591275044903', () => C)
             .with('1220432740638523543', () => C)
-            .with('1220513977683935373', () => g)
-            .with('1220432647453409384', () => g)
-            .with('1220432697718083614', () => g)
+            .with('1220513977683935373', () => N)
+            .with('1220432647453409384', () => N)
+            .with('1220432697718083614', () => N)
             .otherwise(() => null),
     f = (e) =>
         (0, r.EQ)(e)
-            .with('1262491137386614805', () => N)
+            .with('1262491137386614805', () => g)
             .otherwise(() => null),
     A = {
         [c.C5.TIDE]: {

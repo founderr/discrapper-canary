@@ -3,8 +3,8 @@ n(470079);
 var a = n(481060),
     r = n(626135),
     i = n(391110),
-    l = n(981631),
-    o = n(689938),
+    o = n(981631),
+    l = n(689938),
     c = n(170367);
 t.Z = (e) => {
     let { setIsAllPerksVisible: t, previousComponent: n } = e;
@@ -15,7 +15,7 @@ t.Z = (e) => {
         className: c.seeAllPerksButton,
         onClick: () => {
             t(!0),
-                r.default.track(l.rMx.NITRO_HOME_NAVIGATION, {
+                r.default.track(o.rMx.NITRO_HOME_NAVIGATION, {
                     current_component: n,
                     next_component: i.MQ.SEE_ALL,
                     interaction_component: 'See All Button'
@@ -23,7 +23,7 @@ t.Z = (e) => {
         },
         children: (0, s.jsxs)('div', {
             className: c.seeAllPerksButtonContent,
-            children: [o.Z.Messages.PREMIUM_MARKETING_PERKS_SEE_ALL, (0, s.jsx)(a.ChevronSmallRightIcon, { color: 'currentColor' })]
+            children: [l.Z.Messages.PREMIUM_MARKETING_PERKS_SEE_ALL, (0, s.jsx)(a.ChevronSmallRightIcon, { color: 'currentColor' })]
         })
     });
 };

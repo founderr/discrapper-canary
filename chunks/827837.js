@@ -7,14 +7,14 @@ var s = n(544891),
     a = n(570140),
     r = n(230307),
     i = n(70956),
-    l = n(981631);
-let o = 6 * i.Z.Millis.HOUR;
+    o = n(981631);
+let l = 6 * i.Z.Millis.HOUR;
 async function c() {
     let e = r.Z.lastFetched;
-    if (!(null != e && Date.now() - e < o))
+    if (!(null != e && Date.now() - e < l))
         try {
             let e = await s.tn.get({
-                url: l.ANM.USER_ACTIVITY_STATISTICS,
+                url: o.ANM.USER_ACTIVITY_STATISTICS,
                 oldFormErrors: !0
             });
             a.Z.dispatch({

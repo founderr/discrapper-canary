@@ -3,8 +3,8 @@ n(470079);
 var a = n(399606),
     r = n(481060),
     i = n(594174),
-    l = n(785681),
-    o = n(780985),
+    o = n(785681),
+    l = n(780985),
     c = n(631885),
     d = n(552045),
     _ = n(87792),
@@ -16,11 +16,11 @@ var a = n(399606),
     m = n(82484);
 t.Z = () => {
     let e = (0, c.mq)(I.ne.ACTIVE),
-        t = (0, o.c)(),
+        t = (0, l.c)(),
         n = (0, a.e7)([i.default], () => i.default.getCurrentUser()),
-        N = (0, l.o)(R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_MESSAGES_DESCRIPTION_TEEN, R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_MESSAGES_DESCRIPTION_PARENT),
-        g = (0, l.o)(R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_SHARING_DESCRIPTION_TEEN, R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_SHARING_DESCRIPTION_PARENT),
-        C = (0, l.o)(R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_PAIRING_DESCRIPTION_TEEN, R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_PAIRING_DESCRIPTION_PARENT),
+        g = (0, o.o)(R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_MESSAGES_DESCRIPTION_TEEN, R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_MESSAGES_DESCRIPTION_PARENT),
+        N = (0, o.o)(R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_SHARING_DESCRIPTION_TEEN, R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_SHARING_DESCRIPTION_PARENT),
+        C = (0, o.o)(R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_PAIRING_DESCRIPTION_TEEN, R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_PAIRING_DESCRIPTION_PARENT),
         p = (0, r.useRedesignIconContext)().enabled;
     return void 0 === n
         ? null
@@ -38,12 +38,12 @@ t.Z = () => {
                               iconClassName: m.chatCheckIcon,
                               icon: r.ChatCheckIcon,
                               header: R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_MESSAGES_HEADER,
-                              description: N
+                              description: g
                           }),
                           (0, s.jsx)(E.Z, {
                               icon: r.EyeIcon,
                               header: R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_SHARING_HEADER,
-                              description: g
+                              description: N
                           }),
                           (0, s.jsx)(E.Z, {
                               icon: p ? r.QrCodeIcon : (0, r.makeIconCompat)(T.Z),

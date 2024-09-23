@@ -1,6 +1,6 @@
 n.d(t, {
     n: function () {
-        return N;
+        return g;
     }
 }),
     n(653041);
@@ -9,8 +9,8 @@ var s,
     r = n(735250);
 n(470079);
 var i = n(481060),
-    l = n(706454),
-    o = n(74538),
+    o = n(706454),
+    l = n(74538),
     c = n(937615),
     d = n(734741),
     _ = n(474936),
@@ -60,12 +60,12 @@ let I = (e) => {
               });
     };
 ((a = s || (s = {}))[(a.PRICE = 0)] = 'PRICE'), (a[(a.EMOJI = 1)] = 'EMOJI'), (a[(a.STICKER = 2)] = 'STICKER'), (a[(a.CUSTOM_APP_ICONS = 3)] = 'CUSTOM_APP_ICONS'), (a[(a.SUPER_REACTIONS = 4)] = 'SUPER_REACTIONS'), (a[(a.UPLOAD = 5)] = 'UPLOAD'), (a[(a.STREAMING = 6)] = 'STREAMING'), (a[(a.BOOSTS = 7)] = 'BOOSTS'), (a[(a.PROFILE_THEMES = 8)] = 'PROFILE_THEMES'), (a[(a.SERVER_PROFILE = 9)] = 'SERVER_PROFILE'), (a[(a.SHOP_DISCOUNTS = 10)] = 'SHOP_DISCOUNTS'), (a[(a.CLIENT_THEME = 11)] = 'CLIENT_THEME'), (a[(a.BADGE = 12)] = 'BADGE'), (a[(a.VIDEO_BACKGROUND = 13)] = 'VIDEO_BACKGROUND'), (a[(a.CUSTOM_SOUNDS_ANYWHERE = 14)] = 'CUSTOM_SOUNDS_ANYWHERE'), (a[(a.CUSTOM_ENTRY_SOUNDS = 15)] = 'CUSTOM_ENTRY_SOUNDS'), (a[(a.SERVER_LIMIT = 16)] = 'SERVER_LIMIT'), (a[(a.MESSAGE_LENGTH = 17)] = 'MESSAGE_LENGTH'), (a[(a.CUSTOMIZATION_CATEGORY = 18)] = 'CUSTOMIZATION_CATEGORY'), (a[(a.FEATURE_UPGRADES_CATEGORY = 19)] = 'FEATURE_UPGRADES_CATEGORY'), (a[(a.PERSONALIZATION_CATEGORY = 20)] = 'PERSONALIZATION_CATEGORY'), (a[(a.AVATAR_AND_BANNER = 21)] = 'AVATAR_AND_BANNER'), (a[(a.REFERRAL_PROGRAM = 22)] = 'REFERRAL_PROGRAM');
-let N = (e, t, n, s) => {
+let g = (e, t, n, s) => {
     let a = {
             0: {
                 label: (0, r.jsx)(I, { text: E.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_PRICE }),
-                column1: (0, r.jsx)(r.Fragment, { children: (0, r.jsx)(R, { text: o.ZP.formatPriceString(e, _.rV.MONTH) }) }),
-                column2: (0, r.jsx)(r.Fragment, { children: (0, r.jsx)(R, { text: n ? s : o.ZP.formatPriceString(t, _.rV.MONTH) }) }),
+                column1: (0, r.jsx)(r.Fragment, { children: (0, r.jsx)(R, { text: l.ZP.formatPriceString(e, _.rV.MONTH) }) }),
+                column2: (0, r.jsx)(r.Fragment, { children: (0, r.jsx)(R, { text: n ? s : l.ZP.formatPriceString(t, _.rV.MONTH) }) }),
                 withBottomBorder: !0
             },
             1: {
@@ -90,8 +90,8 @@ let N = (e, t, n, s) => {
             },
             5: {
                 label: (0, r.jsx)(I, { text: E.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_UPLOAD }),
-                column1: (0, r.jsx)(R, { text: (0, o.v9)(_.p9.TIER_0) }),
-                column2: (0, r.jsx)(R, { text: (0, o.v9)(_.p9.TIER_2) })
+                column1: (0, r.jsx)(R, { text: (0, l.v9)(_.p9.TIER_0) }),
+                column2: (0, r.jsx)(R, { text: (0, l.v9)(_.p9.TIER_2) })
             },
             6: {
                 label: (0, r.jsx)(I, { text: E.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_STREAMING }),
@@ -102,7 +102,7 @@ let N = (e, t, n, s) => {
                 label: (0, r.jsx)(I, {
                     text: E.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_BOOSTS.format({
                         numBoosts: _.cb,
-                        percentageOff: (0, c.T3)(l.default.locale, _.Rr / 100)
+                        percentageOff: (0, c.T3)(o.default.locale, _.Rr / 100)
                     })
                 }),
                 column1: (0, r.jsx)(m, { includes: !1 }),
@@ -202,6 +202,6 @@ let N = (e, t, n, s) => {
                 withBottomBorder: !1
             }
         },
-        N = [a[0], a[1], a[2], a[3], a[4], a[5], a[6], a[7], a[8], a[9], a[10], a[11], a[12], a[13], a[14], a[15], a[16], a[17]];
-    return (0, d.V)() && N.push(a[22]), N;
+        g = [a[0], a[1], a[2], a[3], a[4], a[5], a[6], a[7], a[8], a[9], a[10], a[11], a[12], a[13], a[14], a[15], a[16], a[17]];
+    return (0, d.V)() && g.push(a[22]), g;
 };

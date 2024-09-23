@@ -3,8 +3,8 @@ var s = n(735250),
     a = n(470079),
     r = n(120356),
     i = n.n(r),
-    l = n(442837),
-    o = n(481060),
+    o = n(442837),
+    l = n(481060),
     c = n(570140),
     d = n(355467),
     _ = n(179360),
@@ -14,14 +14,14 @@ var s = n(735250),
     I = n(100527),
     R = n(906732),
     m = n(211242),
-    N = n(15640),
-    g = n(89057),
+    g = n(15640),
+    N = n(89057),
     C = n(433811),
     p = n(214852),
     f = n(621853),
     A = n(246946),
-    h = n(594174),
-    S = n(78839),
+    S = n(594174),
+    h = n(78839),
     M = n(626135),
     x = n(111361),
     b = n(357355),
@@ -40,19 +40,19 @@ t.Z = function (e) {
     (0, p.z)(C.X);
     let n = (0, m.Q)(),
         { sourceAnalyticsLocations: r, analyticsLocations: w } = (0, R.ZP)(I.Z.PREMIUM_MARKETING),
-        y = (0, l.e7)([S.ZP], () => S.ZP.hasFetchedSubscriptions()),
-        H = (0, l.e7)([h.default], () => h.default.getCurrentUser()),
+        y = (0, o.e7)([h.ZP], () => h.ZP.hasFetchedSubscriptions()),
+        H = (0, o.e7)([S.default], () => S.default.getCurrentUser()),
         k = (0, Z.N)(),
         F = (0, L.Ng)(),
-        V = (0, N.V)(),
+        V = (0, g.V)(),
         [W, K] = a.useState(!0),
         Y = a.useRef(0),
         z = (0, x.M5)(H, U.p9.TIER_2),
         Q = (0, P.n)(),
         q = null == Q ? void 0 : Q.countryCode,
         { enabled: X } = (0, v.Z)(),
-        J = (0, l.e7)([f.Z], () => (null != H ? f.Z.getUserProfile(H.id) : null)),
-        $ = (0, l.e7)([b.Z], () => b.Z.hasFetched);
+        J = (0, o.e7)([f.Z], () => (null != H ? f.Z.getUserProfile(H.id) : null)),
+        $ = (0, o.e7)([b.Z], () => b.Z.hasFetched);
     if (
         (a.useEffect(() => {
             !$ && d.MH();
@@ -73,15 +73,15 @@ t.Z = function (e) {
                     load_duration_ms: Y.current
                 });
         }, [r, W]),
-        (0, l.e7)([A.Z], () => A.Z.enabled))
+        (0, o.e7)([A.Z], () => A.Z.enabled))
     )
         return (0, s.jsx)(T.Z, {});
-    if (n) return (0, s.jsx)(g.c8, {});
+    if (n) return (0, s.jsx)(N.c8, {});
     if (t === U.EZ.ApplicationStoreHome && z)
         return X && null == J
             ? (0, s.jsx)('div', {
                   className: i()(G.container, G.loading),
-                  children: (0, s.jsx)(o.Spinner, {})
+                  children: (0, s.jsx)(l.Spinner, {})
               })
             : (0, s.jsx)(R.Gt, {
                   value: w,
@@ -94,6 +94,6 @@ t.Z = function (e) {
           })
         : (0, s.jsx)('div', {
               className: i()(G.container, G.loading),
-              children: (0, s.jsx)(o.Spinner, {})
+              children: (0, s.jsx)(l.Spinner, {})
           });
 };

@@ -8,13 +8,13 @@ var s,
     r = n(735250);
 n(470079);
 var i = n(780384),
-    l = n(410030);
+    o = n(410030);
 ((s = a || (a = {}))[(s.TOP = 0)] = 'TOP'), (s[(s.BOTTOM = 1)] = 'BOTTOM');
-let o = 'premium_tier_2_gradient',
+let l = 'premium_tier_2_gradient',
     c = 'premium_tier_2_fill',
     d = 'white_gradient',
     _ = (0, r.jsxs)('linearGradient', {
-        id: o,
+        id: l,
         x1: '0%',
         y1: '0%',
         x2: '100%',
@@ -159,8 +159,8 @@ let o = 'premium_tier_2_gradient',
     };
 t.ZP = (e) => {
     let { className: t, variant: n } = e,
-        s = (0, l.ZP)(),
-        a = (0, i.wj)(s) ? d : o,
+        s = (0, o.ZP)(),
+        a = (0, i.wj)(s) ? d : l,
         _ = (0, i.wj)(s) ? '#F2F3F5' : 'url(#'.concat(c, ')');
     switch (n) {
         case 0:

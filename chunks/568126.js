@@ -3,8 +3,8 @@ n(470079);
 var a = n(442837),
     r = n(481060),
     i = n(706454),
-    l = n(78839),
-    o = n(985754),
+    o = n(78839),
+    l = n(985754),
     c = n(222727),
     d = n(474494),
     _ = n(981631),
@@ -14,8 +14,8 @@ t.Z = function (e) {
         n = t.countryCode,
         E = (0, a.e7)([i.default], () => i.default.locale);
     (0, c.U)(_.jXE.SETTINGS_PREMIUM_BANNER, n);
-    let T = (0, a.e7)([l.ZP], () => l.ZP.getPremiumTypeSubscription()),
-        { localizedPricingBannerBody: I } = (0, o.vB)({
+    let T = (0, a.e7)([o.ZP], () => o.ZP.getPremiumTypeSubscription()),
+        { localizedPricingBannerBody: I } = (0, l.vB)({
             localizedPricingPromo: t,
             subscription: T,
             forceSingleLine: !0,

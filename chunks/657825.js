@@ -3,8 +3,8 @@ n(470079);
 var a = n(399606),
     r = n(481060),
     i = n(594174),
-    l = n(51144),
-    o = n(546791),
+    o = n(51144),
+    l = n(546791),
     c = n(198952),
     d = n(939941);
 t.Z = (e) => {
@@ -25,12 +25,12 @@ t.Z = (e) => {
                           children: [
                               (0, s.jsx)(r.Text, {
                                   variant: 'text-md/semibold',
-                                  children: l.ZP.getName(u)
+                                  children: o.ZP.getName(u)
                               }),
                               (0, s.jsx)(r.Text, {
                                   variant: 'text-xs/medium',
                                   color: 'text-muted',
-                                  children: (0, o.LI)(new Date(n).getTime(), _)
+                                  children: (0, l.LI)(new Date(n).getTime(), _)
                               })
                           ]
                       })

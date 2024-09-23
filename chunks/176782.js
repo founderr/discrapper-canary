@@ -7,12 +7,12 @@ var s = n(442837),
     a = n(607070),
     r = n(314684),
     i = n(391110),
-    l = n(180129);
-let o = {
+    o = n(180129);
+let l = {
         subtitle: { onlyShowOnHover: !1 },
         description: {
             onlyShowOnHover: !0,
-            className: l.cardDescription
+            className: o.cardDescription
         },
         descriptionCta: { onlyShowOnHover: !0 }
     },
@@ -20,7 +20,7 @@ let o = {
         let t = (0, s.e7)([a.Z], () => a.Z.useReducedMotion),
             n = (0, r.IB)() && !t,
             c = {
-                [i.zW.DEFAULT]: o,
+                [i.zW.DEFAULT]: l,
                 [i.zW.REWARD]: {
                     subtitle: {
                         onlyShowOnHover: !0,
@@ -28,16 +28,16 @@ let o = {
                     },
                     description: {
                         onlyShowOnHover: !0,
-                        className: l.cardDescriptionTenureReward
+                        className: o.cardDescriptionTenureReward
                     },
                     descriptionCta: {
                         onlyShowOnHover: !1,
                         hideOnHoverComponent: !0,
-                        className: l.descriptionCTATenureReward
+                        className: o.descriptionCTATenureReward
                     },
-                    cardContainer: { className: n ? l.glowingCardContainer : void 0 }
+                    cardContainer: { className: n ? o.glowingCardContainer : void 0 }
                 },
-                [i.zW.NITRO_GRADIENT_HOVER_BORDER]: { cardContainer: { className: l.nitroGradientBorderHover } }
+                [i.zW.NITRO_GRADIENT_HOVER_BORDER]: { cardContainer: { className: o.nitroGradientBorderHover } }
             };
         return null != e ? c[e] : c[i.zW.DEFAULT];
     };

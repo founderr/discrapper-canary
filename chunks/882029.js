@@ -2,8 +2,8 @@ var s,
     a = n(442837),
     r = n(570140),
     i = n(314897),
-    l = n(57562),
-    o = n(351780),
+    o = n(57562),
+    l = n(351780),
     c = n(843693);
 function d(e, t, n) {
     return (
@@ -43,7 +43,7 @@ d(E, 'displayName', 'PoggermodeAchievementStore'),
         POGGERMODE_ACHIEVEMENT_UNLOCK: function (e) {
             var t;
             let { achievementId: n } = e;
-            if (!o.Z.isEnabled()) return !1;
+            if (!l.Z.isEnabled()) return !1;
             (t = n),
                 null != u.unlockedAchievements[t] ||
                     ((u.unlockedAchievements = {
@@ -54,7 +54,7 @@ d(E, 'displayName', 'PoggermodeAchievementStore'),
                         }
                     }),
                     setTimeout(() => {
-                        (0, l.D)(t, !0);
+                        (0, o.D)(t, !0);
                     }, 2000));
         }
     }));

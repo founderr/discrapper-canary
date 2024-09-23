@@ -2,11 +2,11 @@ let s;
 var a,
     r,
     i,
-    l,
-    o = n(442837),
+    o,
+    l = n(442837),
     c = n(570140);
 let d = !1;
-class _ extends (l = o.ZP.Store) {
+class _ extends (o = l.ZP.Store) {
     get harvestType() {
         return s;
     }

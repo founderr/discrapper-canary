@@ -9,19 +9,19 @@ n.d(t, {
         return f;
     },
     k3: function () {
-        return N;
+        return g;
     },
     mN: function () {
         return x;
     },
     sP: function () {
-        return S;
+        return h;
     },
     t2: function () {
         return p;
     },
     vZ: function () {
-        return g;
+        return N;
     }
 }),
     n(653041),
@@ -30,8 +30,8 @@ var s = n(278074),
     a = n(442837),
     r = n(780384),
     i = n(410154),
-    l = n(594174),
-    o = n(78839),
+    o = n(594174),
+    l = n(78839),
     c = n(74538),
     d = n(331119),
     _ = n(575595),
@@ -41,7 +41,7 @@ var s = n(278074),
     I = n(474936),
     R = n(735825),
     m = n(689938);
-let N = (e) => {
+let g = (e) => {
         switch (e) {
             case R.EB.PENDING:
                 return m.Z.Messages.NITRO_HOME_REWARDING_LOCKED_STATE_TITLE;
@@ -53,7 +53,7 @@ let N = (e) => {
                 return '';
         }
     },
-    g = (e, t, n) => {
+    N = (e, t, n) => {
         switch (e) {
             case R.EB.PENDING:
                 return t === R.Ft.FREE_GUILD_BOOST_1_MONTH ? m.Z.Messages.NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_1_MONTH_VARIANT : m.Z.Messages.NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_3_MONTHS_VARIANT;
@@ -92,31 +92,31 @@ function p(e, t) {
 }
 let f = (e, t, n) => ((0, r.wj)(e) ? t : n),
     A = 'getWhatsNewRow',
-    h = (e) => {
+    S = (e) => {
         let { cards: t, perksCards: n, isFullScreen: s, showTenureCard: a, shopMarketingVariation: r } = e,
-            l = s ? 3 : 2,
-            o = (e) => {
+            o = s ? 3 : 2,
+            l = (e) => {
                 let { card: n } = e;
-                t.length < l && t.push(n);
+                t.length < o && t.push(n);
             },
             c = () => {
-                r !== i.C5.DEFAULT ? o({ card: n.specialShopPerks }) : o({ card: n.specialMemberPricing });
+                r !== i.C5.DEFAULT ? l({ card: n.specialShopPerks }) : l({ card: n.specialMemberPricing });
             },
             { enabled: u } = E._.getCurrentConfig({ location: A }, { autoTrackExposure: !1 }),
             { enabled: T } = _.r.getCurrentConfig({ location: A }, { autoTrackExposure: !1 }),
             { enabled: I } = d.C.getCurrentConfig({ location: A }, { autoTrackExposure: !1 }),
             R = u && !T && !I,
             m = b();
-        return null != n.tenureBadge && o({ card: n.tenureBadge }), null != n.freeBoost && !0 === a && o({ card: n.freeBoost }), null != n.shyProject && o({ card: n.shyProject }), s && m ? (0 === t.length && c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })) : s && !m && (R || null != n.shyProject ? R && o({ card: n.referralProgram }) : c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })), o({ card: n.earlyAccess }), c(), o({ card: n.unlimitedSuperReactions }), t;
+        return null != n.tenureBadge && l({ card: n.tenureBadge }), null != n.freeBoost && !0 === a && l({ card: n.freeBoost }), null != n.shyProject && l({ card: n.shyProject }), s && m ? (0 === t.length && c(), l({ card: n.newAppStylesUpdateJune2024 }), l({ card: n.serverProfiles })) : s && !m && (R || null != n.shyProject ? R && l({ card: n.referralProgram }) : c(), l({ card: n.newAppStylesUpdateJune2024 }), l({ card: n.serverProfiles })), l({ card: n.earlyAccess }), c(), l({ card: n.unlimitedSuperReactions }), t;
     },
-    S = (e) => {
-        let { perksCards: t, variant: n, shopMarketingVariation: a, isFullScreen: r, showTenureCard: i, tileOrderVariant: l, isPremiumSubscriber: o } = e,
+    h = (e) => {
+        let { perksCards: t, variant: n, shopMarketingVariation: a, isFullScreen: r, showTenureCard: i, tileOrderVariant: o, isPremiumSubscriber: l } = e,
             c = [];
         switch (n) {
             case T.R0.PERKS_DISCOVERABILITY:
                 c = (0, s.EQ)({
-                    tileOrderVariant: l,
-                    isPremiumSubscriber: o
+                    tileOrderVariant: o,
+                    isPremiumSubscriber: l
                 })
                     .with(
                         {
@@ -135,7 +135,7 @@ let f = (e, t, n) => ((0, r.wj)(e) ? t : n),
                     .otherwise(() => [t.profiles, t.clientThemes, t.serverBoosts]);
                 break;
             case T.R0.WHATS_NEW:
-                c = h({
+                c = S({
                     cards: c,
                     perksCards: t,
                     isFullScreen: r,
@@ -145,8 +145,8 @@ let f = (e, t, n) => ((0, r.wj)(e) ? t : n),
                 break;
             case T.R0.CARD_CAROUSEL_FIRST_ROW:
                 c = (0, s.EQ)({
-                    tileOrderVariant: l,
-                    isPremiumSubscriber: o
+                    tileOrderVariant: o,
+                    isPremiumSubscriber: l
                 })
                     .with(
                         {
@@ -166,8 +166,8 @@ let f = (e, t, n) => ((0, r.wj)(e) ? t : n),
                 break;
             case T.R0.CARD_CAROUSEL_SECOND_ROW:
                 c = (0, s.EQ)({
-                    tileOrderVariant: l,
-                    isPremiumSubscriber: o
+                    tileOrderVariant: o,
+                    isPremiumSubscriber: l
                 })
                     .with(
                         {
@@ -191,7 +191,7 @@ let f = (e, t, n) => ((0, r.wj)(e) ? t : n),
         return !r && (c = c.filter((e) => !e.hideOnNarrowScreen)), c;
     },
     M = (e) => {
-        let t = (0, a.e7)([o.ZP], () => o.ZP.getPremiumTypeSubscription()),
+        let t = (0, a.e7)([l.ZP], () => l.ZP.getPremiumTypeSubscription()),
             n = null != t ? c.ZP.getPremiumPlanItem(t) : null,
             s = (null != n ? c.ZP.getSkuIdForPlan(n.planId) : null) === I.Si.TIER_2;
         if (e)
@@ -210,10 +210,10 @@ let f = (e, t, n) => ((0, r.wj)(e) ? t : n),
         };
     },
     x = () => {
-        let e = (0, a.e7)([l.default], () => l.default.getCurrentUser());
+        let e = (0, a.e7)([o.default], () => o.default.getCurrentUser());
         return (0, c.I5)(e);
     },
     b = () => {
-        let e = l.default.getCurrentUser();
+        let e = o.default.getCurrentUser();
         return (0, c.M5)(e, I.p9.TIER_2);
     };

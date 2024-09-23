@@ -3,8 +3,8 @@ var s = n(735250),
     a = n(470079),
     r = n(120356),
     i = n.n(r),
-    l = n(330711),
-    o = n(442837),
+    o = n(330711),
+    l = n(442837),
     c = n(622535),
     d = n(481060),
     _ = n(634894),
@@ -14,14 +14,14 @@ var s = n(735250),
     I = n(214852),
     R = n(78839),
     m = n(626135),
-    N = n(74538),
-    g = n(140465),
+    g = n(74538),
+    N = n(140465),
     C = n(67645),
     p = n(257944),
     f = n(91802),
     A = n(104494),
-    h = n(639119),
-    S = n(8647),
+    S = n(639119),
+    h = n(8647),
     M = n(568126),
     x = n(605289),
     b = n(248042),
@@ -54,7 +54,7 @@ let Q = (e) => {
         return t || n ? (0, s.jsx)(L.Z, { lifted: !t && n }) : null;
     },
     X = (e) => {
-        let { isFullscreen: t, inOfferExperience: n, setIsAllPerksVisible: r, whatsNewV2Enabled: l, BestOfNitroV2Enabled: o, setIsWhatsNewBoxVisible: d, setIsBestOfNitroVisible: _, hasRenderedOnce: u } = e,
+        let { isFullscreen: t, inOfferExperience: n, setIsAllPerksVisible: r, whatsNewV2Enabled: o, BestOfNitroV2Enabled: l, setIsWhatsNewBoxVisible: d, setIsBestOfNitroVisible: _, hasRenderedOnce: u } = e,
             [E, T] = a.useState(!1),
             I = a.useRef(0),
             R = a.useRef(0);
@@ -67,7 +67,7 @@ let Q = (e) => {
                     0 !== R.current &&
                         m.default.track(V.rMx.PREMIUM_WHATS_NEW_VIEW_TIME, {
                             view_time: R.current,
-                            is_v2: l
+                            is_v2: o
                         });
             },
             []
@@ -79,23 +79,23 @@ let Q = (e) => {
                   active: !0,
                   children: (0, s.jsxs)('div', {
                       className: i()(W.whatsNewSectionBackground, {
-                          [W.whatsNewSectionBackgroundV2]: l || o,
-                          [W.whatsNewSectionBackgroundNoGap]: l && o
+                          [W.whatsNewSectionBackgroundV2]: o || l,
+                          [W.whatsNewSectionBackgroundNoGap]: o && l
                       }),
                       children: [
-                          !l &&
+                          !o &&
                               (0, s.jsx)(B.Z, {
                                   variant: y.R0.WHATS_NEW,
                                   isFullScreen: t
                               }),
-                          l &&
+                          o &&
                               (0, s.jsx)(c.$, {
                                   onChange: (e) => d(e),
                                   threshold: 0,
                                   active: !0,
                                   children: (0, s.jsx)(v.Z, { shouldLoadVideo: u })
                               }),
-                          o &&
+                          l &&
                               (0, s.jsx)(c.$, {
                                   onChange: (e) => _(e),
                                   threshold: 0,
@@ -105,7 +105,7 @@ let Q = (e) => {
                                       shouldLoadVideo: u
                                   })
                               }),
-                          !o &&
+                          !l &&
                               (0, s.jsx)(B.Z, {
                                   isFullScreen: t,
                                   showAllPerksButton: t
@@ -116,13 +116,13 @@ let Q = (e) => {
                                       : void 0
                               }),
                           n &&
-                              !l &&
+                              !o &&
                               (0, s.jsx)(U.ZP, {
                                   className: W.pdSparklesTop,
                                   variant: U.u0.TOP
                               }),
                           n &&
-                              !l &&
+                              !o &&
                               (0, s.jsx)(U.ZP, {
                                   className: W.pdSparklesBottom,
                                   variant: U.u0.BOTTOM
@@ -145,18 +145,18 @@ t.Z = (e) => {
         [et, en] = a.useState(!1),
         [es, ea] = a.useState(!1),
         [er, ei] = a.useState(!1),
-        el = (0, o.e7)([R.ZP], () => R.ZP.getPremiumTypeSubscription()),
-        eo = null != el ? (0, N.Af)(el) : null,
-        ec = null != eo ? N.ZP.getSkuIdForPlan(eo.planId) : null,
+        eo = (0, l.e7)([R.ZP], () => R.ZP.getPremiumTypeSubscription()),
+        el = null != eo ? (0, g.Af)(eo) : null,
+        ec = null != el ? g.ZP.getSkuIdForPlan(el.planId) : null,
         ed = null !== ec && ec !== F.Si.TIER_2 ? F.Si.TIER_2 : null,
         e_ = (0, f.n)(),
         eu = null != e_,
         [eE, eT] = a.useState(!1),
         eI = (0, A.Ng)(),
-        eR = (0, h.N)(),
+        eR = (0, S.N)(),
         em = null == eR ? void 0 : null === (t = eR.subscription_trial) || void 0 === t ? void 0 : t.sku_id,
-        eN = (0, g.Nx)(),
-        eg = (0, b.Vi)(),
+        eg = (0, N.Nx)(),
+        eN = (0, b.Vi)(),
         { analyticsLocations: eC } = (0, E.ZP)(u.Z.PREMIUM_MARKETING),
         ep = 'PremiumMarketingHome';
     (0, _.j)({
@@ -182,7 +182,7 @@ t.Z = (e) => {
                 children: (0, s.jsx)(O.ZP, {
                     showWumpus: !0,
                     tier0CTAButton:
-                        em === F.Si.TIER_2 || eg || null != eI
+                        em === F.Si.TIER_2 || eN || null != eI
                             ? (0, s.jsx)(w.Z, {
                                   forceInverted: !0,
                                   showIcon: !1,
@@ -215,7 +215,7 @@ t.Z = (e) => {
                                   showIcon: !1,
                                   subscriptionTier: F.Si.TIER_2,
                                   className: W.marginTopForButtons,
-                                  isEligibleForBogoPromotion: eg,
+                                  isEligibleForBogoPromotion: eN,
                                   buttonShineClassName: W.buttonShine
                               })
                 })
@@ -226,13 +226,13 @@ t.Z = (e) => {
             'data-cy': 'tier-0-marketing-page',
             children: [
                 (0, s.jsx)(P.Z, {
-                    premiumSubscription: el,
-                    className: i()(n ? W.fullscreenExistingSubscriberSpacing : W.existingSubscriberSpacing, { [W.zIndex1]: eN }),
+                    premiumSubscription: eo,
+                    className: i()(n ? W.fullscreenExistingSubscriberSpacing : W.existingSubscriberSpacing, { [W.zIndex1]: eg }),
                     isFullscreen: n
                 }),
                 (0, s.jsx)(q, {
                     isFullscreen: n,
-                    inOfferExperience: eN
+                    inOfferExperience: eg
                 }),
                 !n && eu
                     ? (0, s.jsx)(x.Z, {
@@ -245,26 +245,26 @@ t.Z = (e) => {
                           active: !0,
                           children: (0, s.jsx)(Z.Z, {
                               subscriptionTier: ed,
-                              isFullscreen: n || eN,
+                              isFullscreen: n || eg,
                               className: i()({
                                   [W.fullscreenHero]: n,
-                                  [W.settingsHeroNoBackground]: !n && eN,
-                                  [W.trialMarketingMargin]: eN,
-                                  [W.settingsHeroBogoHeight]: !n && eg,
-                                  [W.settingsHeroBogoMarginFullscreen]: n && eg,
-                                  [W.noTopPaddingOverride]: null != el
+                                  [W.settingsHeroNoBackground]: !n && eg,
+                                  [W.trialMarketingMargin]: eg,
+                                  [W.settingsHeroBogoHeight]: !n && eN,
+                                  [W.settingsHeroBogoMarginFullscreen]: n && eN,
+                                  [W.noTopPaddingOverride]: null != eo
                               }),
                               entrypoint: r
                           })
                       }),
                 (0, s.jsxs)('div', {
                     className: W.promoBannerContainer,
-                    children: [(0, s.jsx)(S.Z, { isFullScreen: n }), n && eu && (0, s.jsx)(M.Z, { localizedPricingPromo: e_ })]
+                    children: [(0, s.jsx)(h.Z, { isFullScreen: n }), n && eu && (0, s.jsx)(M.Z, { localizedPricingPromo: e_ })]
                 }),
                 ef,
                 (0, s.jsx)(X, {
                     isFullscreen: n,
-                    inOfferExperience: eN,
+                    inOfferExperience: eg,
                     setIsAllPerksVisible: eT,
                     whatsNewV2Enabled: v,
                     BestOfNitroV2Enabled: L,
@@ -288,14 +288,14 @@ t.Z = (e) => {
                                           className: W.tableLeftSideDecoration,
                                           width: 197,
                                           height: 486,
-                                          alt: l.Z.Messages.IMAGE
+                                          alt: o.Z.Messages.IMAGE
                                       }),
                                       (0, s.jsx)('img', {
                                           src: z,
                                           className: W.tableRightSideDecoration,
                                           width: 241,
                                           height: 552,
-                                          alt: l.Z.Messages.IMAGE
+                                          alt: o.Z.Messages.IMAGE
                                       })
                                   ]
                               })
@@ -319,7 +319,7 @@ t.Z = (e) => {
                     className: W.bottomIllustration,
                     width: 112,
                     height: 85,
-                    alt: l.Z.Messages.IMAGE
+                    alt: o.Z.Messages.IMAGE
                 })
             ]
         });

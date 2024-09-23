@@ -7,8 +7,8 @@ var s = n(735250),
     a = n(470079),
     r = n(120356),
     i = n.n(r),
-    l = n(526629),
-    o = n(442837),
+    o = n(526629),
+    l = n(442837),
     c = n(481060),
     d = n(393238),
     _ = n(607070),
@@ -18,13 +18,13 @@ var s = n(735250),
     I = n(644646),
     R = n(69439),
     m = n(46140),
-    N = n(642145),
-    g = n(689938),
+    g = n(642145),
+    N = n(689938),
     C = n(684688);
 let p = async () => await n.e('67963').then(n.t.bind(n, 145193, 19));
 function f(e) {
     var t, n, r;
-    let { quest: f, questContent: A, isHovering: h, contentPosition: S, rowIndex: M, onReceiveErrorHints: x } = e,
+    let { quest: f, questContent: A, isHovering: S, contentPosition: h, rowIndex: M, onReceiveErrorHints: x } = e,
         b = E.r.build(f.config),
         O = b.defaultReward.messages.name,
         v = b.defaultReward.messages.nameWithArticle,
@@ -32,9 +32,9 @@ function f(e) {
         { ref: L, scrollHeight: Z } = (0, d.Z)(),
         D = 104 !== Z,
         { expansionSpring: B } = (0, c.useSpring)({
-            expansionSpring: h ? 1 : 0,
+            expansionSpring: S ? 1 : 0,
             config: {
-                ...N.Y,
+                ...g.Y,
                 clamp: !0
             }
         }),
@@ -53,7 +53,7 @@ function f(e) {
                 }),
             []
         ),
-        k = a.useMemo(() => (j ? H(O) : g.Z.Messages.QUESTS_CLAIM_REWARD_HOOK.format({ rewardWithArticleHook: () => H(v) })), [O, v, j, H]),
+        k = a.useMemo(() => (j ? H(O) : N.Z.Messages.QUESTS_CLAIM_REWARD_HOOK.format({ rewardWithArticleHook: () => H(v) })), [O, v, j, H]),
         F = a.useMemo(() => {
             if (null != y)
                 return (0, s.jsx)(c.Text, {
@@ -63,11 +63,11 @@ function f(e) {
                     children: y
                 });
         }, [y]),
-        V = (0, o.e7)([_.Z], () => _.Z.useReducedMotion);
+        V = (0, l.e7)([_.Z], () => _.Z.useReducedMotion);
     return (0, s.jsxs)('div', {
         className: i()(C.container),
         children: [
-            (0, s.jsxs)(l.animated.div, {
+            (0, s.jsxs)(o.animated.div, {
                 style: {
                     maxHeight: B.to([0, 1], [104, (null != Z ? Z : 0) + 12])
                 },
@@ -93,7 +93,7 @@ function f(e) {
                                               quest: f,
                                               size: 76,
                                               percentComplete: G,
-                                              percentCompleteText: h ? w : void 0,
+                                              percentCompleteText: S ? w : void 0,
                                               children: (0, s.jsx)('div', {
                                                   className: C.circularRewardTileWrapper,
                                                   children: (0, s.jsx)(I.Z, {
@@ -108,7 +108,7 @@ function f(e) {
                                   })
                                 : (0, s.jsx)(I.Z, {
                                       quest: f,
-                                      autoplay: h,
+                                      autoplay: S,
                                       questContent: A,
                                       className: C.questRewardTileAsset,
                                       location: m.dr.QUEST_HOME_DESKTOP
@@ -123,7 +123,7 @@ function f(e) {
                                 variant: 'eyebrow',
                                 color: 'text-brand',
                                 className: C.questName,
-                                children: g.Z.Messages.QUEST.format({ questName: f.config.messages.questName })
+                                children: N.Z.Messages.QUEST.format({ questName: f.config.messages.questName })
                             }),
                             (0, s.jsx)(c.Text, {
                                 variant: 'text-md/semibold',
@@ -135,7 +135,7 @@ function f(e) {
                         ]
                     }),
                     D &&
-                        (0, s.jsx)(l.animated.div, {
+                        (0, s.jsx)(o.animated.div, {
                             style: {
                                 opacity: B.to([0, 1], [1, 0])
                             },
@@ -146,7 +146,7 @@ function f(e) {
             (0, s.jsx)(R.Z, {
                 quest: f,
                 location: A,
-                contentPosition: S,
+                contentPosition: h,
                 rowIndex: M,
                 onReceiveErrorHints: x
             })

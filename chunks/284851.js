@@ -1,6 +1,6 @@
 n.d(t, {
     U: function () {
-        return o;
+        return l;
     }
 });
 var s = n(735250);
@@ -8,12 +8,12 @@ n(470079);
 var a = n(481060),
     r = n(46140),
     i = n(689938);
-function l(e) {
-    let { onClose: t, onSelect: n, quest: l } = e;
+function o(e) {
+    let { onClose: t, onSelect: n, quest: o } = e;
     return (0, s.jsx)(a.Menu, {
         variant: 'fixed',
         onSelect: t,
-        navId: 'quest-home-platform-select-'.concat(l.id),
+        navId: 'quest-home-platform-select-'.concat(o.id),
         'aria-label': i.Z.Messages.GENERIC_ACTIONS_MENU_LABEL,
         onClose: t,
         children: (0, s.jsxs)(
@@ -38,14 +38,14 @@ function l(e) {
         )
     });
 }
-function o(e) {
+function l(e) {
     let { children: t, ...n } = e;
     return (0, s.jsx)(a.Popout, {
         position: 'bottom',
         align: 'right',
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, s.jsx)(l, {
+            return (0, s.jsx)(o, {
                 ...n,
                 onClose: t
             });
