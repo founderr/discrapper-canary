@@ -17,6 +17,8 @@ function d(e) {
     switch (e) {
         case l.F$.SERVERS:
             return c.Z.Messages.GLOBAL_DISCOVERY_SERVERS_TITLE;
+        case l.F$.APPS:
+            return c.Z.Messages.GLOBAL_DISCOVERY_APPS_TITLE;
         case l.F$.QUESTS:
             return c.Z.Messages.GLOBAL_DISCOVERY_QUESTS_TITLE;
         default:

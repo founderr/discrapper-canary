@@ -555,6 +555,15 @@ function eB() {
                                                         disableTrack: !0
                                                     }),
                                                     (0, i.jsx)(T.Z, {
+                                                        path: eE.Z5c.GLOBAL_DISCOVERY_APPS,
+                                                        render: (e) => {
+                                                            let { location: t } = e;
+                                                            return eR(t.search);
+                                                        },
+                                                        impressionName: o.ImpressionNames.GLOBAL_DISCOVERY_APPS,
+                                                        disableTrack: !0
+                                                    }),
+                                                    (0, i.jsx)(T.Z, {
                                                         path: eE.Z5c.QUEST_HOME,
                                                         render: (e) => {
                                                             let { location: t } = e;

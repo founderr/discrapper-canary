@@ -60,6 +60,7 @@ n.d(t, {
     (a.GAME_CONSOLE_DEVICE_LIST = 'impression_game_console_device_list'),
     (a.GDM_SETTINGS_INVITES = 'impression_gdm_settings_invites'),
     (a.GLOBAL_DISCOVERY = 'impression_global_discovery'),
+    (a.GLOBAL_DISCOVERY_APPS = 'impression_global_discovery_apps'),
     (a.GUILD_ADD_ACCEPT_INVITE = 'impression_guild_add_accept_invite'),
     (a.GUILD_ADD_CHANNEL_PROMPT = 'impression_guild_add_channel_prompt'),
     (a.GUILD_ADD_CUSTOMIZE = 'impression_guild_add_customize'),

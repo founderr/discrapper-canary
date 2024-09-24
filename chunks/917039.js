@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return o;
+        return c;
     }
 }),
     n(315314),
@@ -12,18 +12,28 @@ n.d(t, {
 var i = n(470079),
     a = n(143927),
     s = n(731965),
-    r = n(836768),
-    l = n(49898);
-function o() {
-    let e = (0, r.d)((e) => e.selectedTab, a.Z);
+    r = n(352057),
+    l = n(836768),
+    o = n(49898);
+function c() {
+    let e = (0, r.h)({ location: 'DiscoveryUISelectedTab' }),
+        t = (0, l.d)((e) => e.selectedTab, a.Z);
     return (
         i.useEffect(() => {
-            let e = (function (e) {
-                if ('/discovery/quests' === e) return l.F$.QUESTS;
-                return l.F$.SERVERS;
-            })(new URL(window.location.href).pathname);
-            (0, s.j)(() => r.d.setState({ selectedTab: e }));
-        }, []),
-        e
+            let t = (function (e, t) {
+                switch (e) {
+                    case '/discovery/quests':
+                        return o.F$.QUESTS;
+                    case '/discovery/apps':
+                        return t ? o.F$.APPS : o.D7;
+                    case '/discovery/servers':
+                        return o.F$.SERVERS;
+                    default:
+                        return o.D7;
+                }
+            })(new URL(window.location.href).pathname, e);
+            (0, s.j)(() => l.d.setState({ selectedTab: t }));
+        }, [e]),
+        t
     );
 }
