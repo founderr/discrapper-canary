@@ -11,16 +11,18 @@ var r = n(570140),
 function E() {
     (0, u.GN)('mention3');
 }
-function f(e, t, n, r, i) {
+function f(e, t, n, r) {
+    let { location: i, analyticsLocations: a } = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
     if (t === n) return;
-    let a = e[t],
-        o = e[n];
+    let o = e[t],
+        u = e[n];
     l.default.track(d.rMx.MEDIA_DEVICE_CHANGED, {
-        device_from_name: s.Z.getCertifiedDeviceName(t, null != a ? a.name : ''),
-        device_to_name: s.Z.getCertifiedDeviceName(n, null != o ? o.name : ''),
+        device_from_name: s.Z.getCertifiedDeviceName(t, null != o ? o.name : ''),
+        device_to_name: s.Z.getCertifiedDeviceName(n, null != u ? u.name : ''),
         device_type: r,
         device_is_certified: s.Z.isCertified(n),
-        location: i
+        location: i,
+        location_stack: a
     });
 }
 let h = {
@@ -150,11 +152,15 @@ t.Z = {
                 volume: e
             });
     },
-    setInputDevice(e, t) {
+    setInputDevice(e) {
+        let { location: t, analyticsLocations: n } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
         if (!I()) {
-            if (null != t) {
-                let n = o.Z.getInputDevices();
-                f(n, o.Z.getInputDeviceId(), e, 'Audio Input', t);
+            if (null != t || null != n) {
+                let r = o.Z.getInputDevices();
+                f(r, o.Z.getInputDeviceId(), e, 'Audio Input', {
+                    location: t,
+                    analyticsLocations: n
+                });
             }
             r.Z.dispatch({
                 type: 'AUDIO_SET_INPUT_DEVICE',
@@ -163,11 +169,15 @@ t.Z = {
                 E();
         }
     },
-    setOutputDevice(e, t) {
+    setOutputDevice(e) {
+        let { location: t, analyticsLocations: n } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
         if (!I()) {
-            if (null != t) {
-                let n = o.Z.getOutputDevices();
-                f(n, o.Z.getOutputDeviceId(), e, 'Audio Output', t);
+            if (null != t || null != n) {
+                let r = o.Z.getOutputDevices();
+                f(r, o.Z.getOutputDeviceId(), e, 'Audio Output', {
+                    location: t,
+                    analyticsLocations: n
+                });
             }
             r.Z.dispatch({
                 type: 'AUDIO_SET_OUTPUT_DEVICE',
@@ -176,11 +186,15 @@ t.Z = {
                 E();
         }
     },
-    setVideoDevice(e, t) {
+    setVideoDevice(e) {
+        let { location: t, analyticsLocations: n } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
         if (!I()) {
-            if (null != t) {
-                let n = o.Z.getVideoDevices();
-                f(n, o.Z.getVideoDeviceId(), e, 'Video', t);
+            if (null != t || null != n) {
+                let r = o.Z.getVideoDevices();
+                f(r, o.Z.getVideoDeviceId(), e, 'Video', {
+                    location: t,
+                    analyticsLocations: n
+                });
             }
             r.Z.dispatch({
                 type: 'MEDIA_ENGINE_SET_VIDEO_DEVICE',
