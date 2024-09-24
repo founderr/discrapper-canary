@@ -3619,8 +3619,8 @@ let { Themes: n } = r(15202).V,
                     opacity: 0.1
                 },
                 dark: {
-                    color: 'WHITE_500',
-                    opacity: 0.1
+                    color: 'BLACK_500',
+                    opacity: 0.3
                 }
             }
         },
@@ -3660,6 +3660,16 @@ let { Themes: n } = r(15202).V,
             [n.DARKER]: {
                 raw: 'PLUM_10',
                 opacity: 1
+            },
+            gradient: {
+                light: {
+                    color: 'BLACK_500',
+                    opacity: 0.6
+                },
+                dark: {
+                    color: 'WHITE_500',
+                    opacity: 0.55
+                }
             }
         },
         INTERACTIVE_ACTIVE: {
