@@ -44,6 +44,7 @@ function E(e, t, n) {
             )
         )
             return { label: f.Z.Messages.MESSAGE_CHANNEL_EXTERNAL_STICKERS_DISABLED };
+        if ((e.hasFlag(_.iLy.IS_VOICE_MESSAGE) || e.messageSnapshots.some((e) => e.message.hasFlag(_.iLy.IS_VOICE_MESSAGE))) && !c.Z.can(_.Plq.SEND_VOICE_MESSAGES, n)) return { label: f.Z.Messages.MESSAGE_CHANNEL_VOICE_MESSAGES_DISABLED };
     }
 }
 function g(e) {
