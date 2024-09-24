@@ -1,7 +1,6 @@
-var i;
 n.d(t, {
-    F: function () {
+    k: function () {
         return i;
     }
-}),
-    ((i || (i = {})).FEATURED = 'featured');
+});
+let i = 'featured';

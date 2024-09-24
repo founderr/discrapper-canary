@@ -21,8 +21,8 @@ var i = n(735250),
     g = n(290297),
     p = n(279240),
     T = n(765717),
-    f = n(358221),
-    S = n(823748),
+    S = n(358221),
+    f = n(823748),
     C = n(626421),
     N = n(963202),
     A = n(118379),
@@ -40,8 +40,8 @@ var i = n(735250),
     j = n(326145),
     U = n(269675),
     G = n(242601),
-    k = n(416568),
-    w = n(613609),
+    w = n(416568),
+    k = n(613609),
     B = n(160404),
     H = n(225675),
     V = n(745052),
@@ -84,13 +84,13 @@ let eg = 'resizable-sidebar-width',
         name: 'GuildShopPage',
         renderLoader: ep
     }),
-    ef = (0, c.Un)({
+    eS = (0, c.Un)({
         createPromise: () => n.e('44798').then(n.bind(n, 998420)),
         webpackId: 998420,
         name: 'GuildMemberApplicationReview',
         renderLoader: ep
     }),
-    eS = (0, c.Un)({
+    ef = (0, c.Un)({
         createPromise: () => n.e('60493').then(n.bind(n, 231588)),
         webpackId: 231588,
         name: 'GuildHomePage',
@@ -153,9 +153,9 @@ let eg = 'resizable-sidebar-width',
                         initialTab: c
                     });
                 case eh.oC.MEMBER_APPLICATIONS:
-                    return (0, i.jsx)(ef, { guildId: a });
-                case eh.oC.GUILD_HOME:
                     return (0, i.jsx)(eS, { guildId: a });
+                case eh.oC.GUILD_HOME:
+                    return (0, i.jsx)(ef, { guildId: a });
                 case eh.oC.CHANNEL_BROWSER:
                     return (0, i.jsx)(eN, {
                         guildId: a,
@@ -189,7 +189,7 @@ let eg = 'resizable-sidebar-width',
                 n.id
             );
         }
-        return (0, i.jsx)(S.Z, {});
+        return (0, i.jsx)(f.Z, {});
     },
     eL = a.memo(function () {
         let { guildId: e, channelId: t } = (0, q.Z)(),
@@ -233,7 +233,7 @@ let eg = 'resizable-sidebar-width',
     ex = (e) => {
         let { match: t } = e;
         return null != t.params.guildId
-            ? (0, i.jsx)(w.Z, {
+            ? (0, i.jsx)(k.Z, {
                   guildId: t.params.guildId,
                   inviteCode: t.params.inviteCode
               })
@@ -282,22 +282,22 @@ let eg = 'resizable-sidebar-width',
                 return (0, i.jsx)(l.l_, { to: eE.Z5c.ME });
         }
     };
-function ek(e) {
+function ew(e) {
     document.body.style.setProperty('--custom-guild-sidebar-width', ''.concat(e, 'px'));
 }
-function ew(e) {
+function ek(e) {
     let { hasNotice: t, sidebarTheme: n, hideSidebar: s, isSidebarOpen: l, isOnFullScreenCollectiblesShopRoute: o } = e;
     (0, m.t)(!0);
     let c = 'app view user trigger debugging';
     h.R6.useExperiment({ location: c }, { autoTrackExposure: !1 }), h.R6.trackExposure({ location: c });
-    let g = (0, u.e7)([f.Z], () => f.Z.isFullscreenInContext()),
+    let g = (0, u.e7)([S.Z], () => S.Z.isFullscreenInContext()),
         p = (0, Z.Q)('ChannelSidebar'),
         T = (0, er.A)((e) => !e.isOpen);
     a.useLayoutEffect(() => {
         if (p) {
             var e;
             let t = parseInt(null !== (e = _.K.get(eg)) && void 0 !== e ? e : '');
-            Number.isNaN(t) && (t = 268), ek((t = Math.min(Math.max(t, 240), 420)));
+            Number.isNaN(t) && (t = 268), ew((t = Math.min(Math.max(t, 240), 420)));
             let n = (e) => {
                 e.metaKey && 'b' === e.key && er.A.setState((e) => ({ isOpen: !e.isOpen }));
             };
@@ -310,33 +310,33 @@ function ew(e) {
         }
     }, [p]),
         a.useLayoutEffect(() => {
-            if (T) ek(76);
+            if (T) ew(76);
             else {
                 var e;
                 let t = parseInt(null !== (e = _.K.get(eg)) && void 0 !== e ? e : '');
-                Number.isNaN(t) && (t = 268), ek(t);
+                Number.isNaN(t) && (t = 268), ew(t);
             }
         }, [T]);
-    let S = a.useRef(null),
+    let f = a.useRef(null),
         C = a.useCallback((e, t) => {
             var n;
-            ek(e);
+            ew(e);
             let i = t < 80;
             er.A.setState({ isOpen: !i }), t < 240 ? document.body.classList.add(eI.collapsing) : document.body.classList.remove(eI.collapsing);
             let a = t - e;
-            null === (n = S.current) || void 0 === n || n.style.setProperty('--custom-overdrag', ''.concat(1 + Math.min(Math.abs(a / 76), 0.25))), i && ek(76);
+            null === (n = f.current) || void 0 === n || n.style.setProperty('--custom-overdrag', ''.concat(1 + Math.min(Math.abs(a / 76), 0.25))), i && ew(76);
         }, []),
         N = a.useCallback(() => {
             document.body.classList.add(eI.dragging);
         }, []),
         A = a.useCallback((e) => {
             var t;
-            document.body.classList.remove(eI.dragging), document.body.classList.remove(eI.collapsing), null === (t = S.current) || void 0 === t || t.style.setProperty('--custom-overdrag', '0px'), _.K.set(eg, e);
+            document.body.classList.remove(eI.dragging), document.body.classList.remove(eI.collapsing), null === (t = f.current) || void 0 === t || t.style.setProperty('--custom-overdrag', '0px'), _.K.set(eg, e);
         }, []),
         v = (0, I.Z)({
             minDimension: 240,
             maxDimension: 420,
-            resizableDomNodeRef: S,
+            resizableDomNodeRef: f,
             onElementResize: C,
             onElementResizeStart: N,
             onElementResizeEnd: A,
@@ -348,7 +348,7 @@ function ew(e) {
         }, []);
     if (
         (a.useLayoutEffect(() => {
-            T && ek(76);
+            T && ew(76);
         }, [T]),
         s)
     )
@@ -358,7 +358,7 @@ function ew(e) {
         theme: n,
         children: (e) =>
             (0, i.jsxs)('div', {
-                ref: p ? S : void 0,
+                ref: p ? f : void 0,
                 'data-collapsed': T,
                 className: r()(eI.sidebar, e, {
                     [eI.hasNotice]: t,
@@ -369,7 +369,7 @@ function ew(e) {
                     p &&
                         l &&
                         !o &&
-                        (0, i.jsx)(k.Z, {
+                        (0, i.jsx)(w.Z, {
                             className: eI.guilds,
                             themeOverride: n
                         }),
@@ -436,17 +436,17 @@ function eB() {
         m = (null == h ? void 0 : null === (e = h.params) || void 0 === e ? void 0 : e.channelId) === eh.oC.GUILD_ONBOARDING,
         I = s || r || c || _ || m,
         p = a.useCallback(() => F.Z.openSidebar(), []),
-        f = (0, Z.Q)('AppView');
+        S = (0, Z.Q)('AppView');
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            f && (0, i.jsx)(er.U, {}),
+            S && (0, i.jsx)(er.U, {}),
             (0, i.jsxs)('div', {
                 className: eI.container,
                 children: [
                     E &&
                         !_ &&
-                        !f &&
-                        (0, i.jsx)(k.Z, {
+                        !S &&
+                        (0, i.jsx)(w.Z, {
                             className: eI.guilds,
                             themeOverride: n
                         }),
@@ -460,7 +460,7 @@ function eB() {
                                     className: eI.content,
                                     children: [
                                         (0, i.jsx)(C.Z, {}),
-                                        (0, i.jsx)(ew, {
+                                        (0, i.jsx)(ek, {
                                             isOnFullScreenCollectiblesShopRoute: _,
                                             isSidebarOpen: E,
                                             hasNotice: t,
@@ -552,6 +552,15 @@ function eB() {
                                                             return eR(t.search);
                                                         },
                                                         impressionName: o.ImpressionNames.GLOBAL_DISCOVERY,
+                                                        disableTrack: !0
+                                                    }),
+                                                    (0, i.jsx)(T.Z, {
+                                                        path: eE.Z5c.GLOBAL_DISCOVERY_APPS,
+                                                        render: (e) => {
+                                                            let { location: t } = e;
+                                                            return eR(t.search);
+                                                        },
+                                                        impressionName: o.ImpressionNames.GLOBAL_DISCOVERY_APPS,
                                                         disableTrack: !0
                                                     }),
                                                     (0, i.jsx)(T.Z, {

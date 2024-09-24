@@ -1,27 +1,35 @@
-var i = n(735250);
-n(470079);
-var a = n(481060),
-    s = n(611928),
-    r = n(922122),
-    l = n(119014),
-    o = n(370648),
-    c = n(842221);
+var i = n(735250),
+    a = n(470079),
+    s = n(481060),
+    r = n(674588),
+    l = n(611928),
+    o = n(922122),
+    c = n(119014),
+    d = n(726941),
+    u = n(370648),
+    _ = n(979007),
+    E = n(842221);
 t.Z = function () {
-    let { tabs: e, selectedTab: t, onSelectTab: n } = (0, l.i)();
-    return (0, i.jsxs)('div', {
-        className: c.container,
-        children: [
-            (0, i.jsxs)(s.ZP, {
-                children: [
-                    (0, i.jsx)(s.aV, { icon: a.AppsIcon }),
-                    (0, i.jsx)(r.Z, {
-                        tabs: e,
-                        selectedTab: t,
-                        onTabSelect: n
-                    })
-                ]
-            }),
-            (0, i.jsx)(o.Z, {})
-        ]
-    });
+    let { tabs: e, selectedTab: t, onSelectTab: n } = (0, c.i)();
+    return (
+        a.useEffect(() => {
+            r.CP();
+        }, []),
+        (0, i.jsxs)('div', {
+            className: E.container,
+            children: [
+                (0, i.jsxs)(l.ZP, {
+                    children: [
+                        (0, i.jsx)(l.aV, { icon: s.AppsIcon }),
+                        (0, i.jsx)(o.Z, {
+                            tabs: e,
+                            selectedTab: t,
+                            onTabSelect: n
+                        })
+                    ]
+                }),
+                t === _.k ? (0, i.jsx)(u.Z, {}) : (0, i.jsx)(d.Z, { tabId: Number(t) })
+            ]
+        })
+    );
 };

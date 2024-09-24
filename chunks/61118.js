@@ -4,5 +4,7 @@ e.exports = {
     textContainer: 'textContainer_b97772',
     title: 'title_b97772',
     uppercase: 'uppercase_b97772',
-    description: 'description_b97772'
+    description: 'description_b97772',
+    gradient: 'gradient_b97772',
+    clientThemes: 'clientThemes_b97772'
 };
