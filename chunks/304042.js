@@ -225,17 +225,14 @@ function F(e) {
                     ref: z,
                     children: [
                         (0, r.jsx)(C.Z, {
-                            text: w.Z.Messages.USER_ACTIVITY_STREAMING,
-                            tags: (0, r.jsxs)(r.Fragment, {
-                                children: [
-                                    (0, r.jsx)(f.ZP, { size: f.OH.SMALL }),
-                                    (0, r.jsx)(M.Z, {
-                                        display: 'live',
-                                        user: t,
-                                        onClose: V,
-                                        onRequestOpen: n
-                                    })
-                                ]
+                            text: (0, r.jsxs)(r.Fragment, {
+                                children: [w.Z.Messages.USER_ACTIVITY_STREAMING, (0, r.jsx)(f.ZP, { size: f.OH.SMALL })]
+                            }),
+                            contextMenu: (0, r.jsx)(M.Z, {
+                                display: 'live',
+                                user: t,
+                                onClose: V,
+                                onRequestOpen: n
                             })
                         }),
                         (0, r.jsxs)('div', {
