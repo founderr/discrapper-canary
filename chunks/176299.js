@@ -216,10 +216,10 @@ let eg = 'resizable-sidebar-width',
             : (0, i.jsx)(ed.Z, {});
     }),
     eZ = (e) => (0, i.jsx)(ev, { ...e }),
-    eR = (e, t) => {
-        let n = null != e && e.length > 0 && e.startsWith('?') ? e.split('?')[1] : null,
-            a = (0, x.a)({ location: 'sidebar' });
-        return (0, N.rx)('game_discovery_entry_point') && a && null != t ? (0, i.jsx)(b.V, { gameId: t }) : a ? (0, i.jsx)(b.Z, {}) : (0, i.jsx)(R.Z, { searchRoute: n });
+    eR = (e) => {
+        let t = null != e && e.length > 0 && e.startsWith('?') ? e.split('?')[1] : null,
+            n = (0, x.a)({ location: 'sidebar' });
+        return (0, N.rx)('game_discovery_entry_point') && n && null != t ? (0, i.jsx)(b.V, { searchRoute: t }) : n ? (0, i.jsx)(b.Z, {}) : (0, i.jsx)(R.Z, { searchRoute: t });
     },
     eO = (e) => {
         let { match: t } = e;
@@ -544,15 +544,6 @@ function eB() {
                                                         impressionName: o.ImpressionNames.GLOBAL_DISCOVERY,
                                                         disableTrack: !0,
                                                         exact: !0
-                                                    }),
-                                                    (0, i.jsx)(T.Z, {
-                                                        path: eE.Z5c.DISCOVERY_GUILD_GAME_RESULTS(':gameId'),
-                                                        render: (e) => {
-                                                            let { location: t, match: n } = e;
-                                                            return eR(t.search, n.params.gameId);
-                                                        },
-                                                        impressionName: o.ImpressionNames.GLOBAL_DISCOVERY,
-                                                        disableTrack: !0
                                                     }),
                                                     (0, i.jsx)(T.Z, {
                                                         path: eE.Z5c.GLOBAL_DISCOVERY_SERVERS,

@@ -24022,22 +24022,17 @@ h3.improved_f017d0:after {
     align-items: center
 }
 
-.headerTags_ae1fa2 {
-    display: flex;
-    gap: 8px
-}
-
-.headerTags_ae1fa2:empty {
+.headerContextMenu_ae1fa2:empty {
     display: none
 }
 
-.headerTags_ae1fa2.absolute_ae1fa2 {
+.headerContextMenu_ae1fa2.absolute_ae1fa2 {
     position: absolute;
     top: 8px;
     right: 8px
 }
 
-.headerTags_ae1fa2.absolute_ae1fa2.panel_ae1fa2 {
+.headerContextMenu_ae1fa2.absolute_ae1fa2.panel_ae1fa2 {
     top: 12px;
     right: 12px
 }

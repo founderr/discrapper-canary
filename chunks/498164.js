@@ -40,6 +40,7 @@ function L(e, t) {
     (i.CHANNEL = 'channel'),
     (i.GUILD_SETTINGS = 'guild_settings'),
     (i.QUEST_HOME = 'quest_home'),
+    (i.DISCOVERY_GAME = 'discovery_game'),
     (t.Z = {
         [v.Etm.INVITE_BROWSER]: {
             scope: A.cE,
@@ -168,6 +169,14 @@ function L(e, t) {
                               }),
                               L(n.fingerprint, 'quest_home'))
                             : (0, m.dL)(v.Z5c.QUEST_HOME);
+                        break;
+                    case A.jE.DISCOVERY_GAME_RESULTS:
+                        null != n &&
+                            ((0, m.dL)({
+                                pathname: v.Z5c.GLOBAL_DISCOVERY_SERVERS,
+                                search: '?game='.concat(n.gameId)
+                            }),
+                            L(n.fingerprint, 'discovery_game'));
                 }
             }
         },

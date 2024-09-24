@@ -119,21 +119,26 @@ let L = (0, h.Un)({
         name: 'QuestsLandingPage'
     }),
     W = (0, h.Un)({
+        createPromise: () => Promise.all([n.e('19878'), n.e('7178')]).then(n.bind(n, 297511)),
+        webpackId: 297511,
+        name: 'DiscoveryEntrypointLandingPage'
+    }),
+    K = (0, h.Un)({
         createPromise: () => n.e('16547').then(n.bind(n, 531338)),
         webpackId: 531338,
         name: 'ConnectionsAuthorizeContinue'
     }),
-    K = (0, h.Un)({
+    z = (0, h.Un)({
         createPromise: () => n.e('54918').then(n.bind(n, 838134)),
         webpackId: 838134,
         name: 'ApplicationDirectoryRoutes'
     }),
-    z = () => (0, r.jsx)(k, {}),
-    q = new Set([v.Z5c.LOGIN, v.Z5c.LOGIN_HANDOFF, v.Z5c.INVITE_LOGIN(':inviteCode'), v.Z5c.GIFT_CODE_LOGIN(':giftCode'), v.Z5c.GUILD_TEMPLATE_LOGIN(':guildTemplateCode')]);
-function Q(e, t) {
-    return t ? e.filter((e) => !q.has(e)) : e;
+    q = () => (0, r.jsx)(k, {}),
+    Q = new Set([v.Z5c.LOGIN, v.Z5c.LOGIN_HANDOFF, v.Z5c.INVITE_LOGIN(':inviteCode'), v.Z5c.GIFT_CODE_LOGIN(':giftCode'), v.Z5c.GUILD_TEMPLATE_LOGIN(':guildTemplateCode')]);
+function X(e, t) {
+    return t ? e.filter((e) => !Q.has(e)) : e;
 }
-class X extends i.Component {
+class $ extends i.Component {
     componentDidMount() {
         R.ZP.cleanupDisplaySleep(), T.Z.initialize();
     }
@@ -162,7 +167,7 @@ class X extends i.Component {
                                         component: D
                                     }),
                                     (0, r.jsx)(s.AW, {
-                                        path: Q([v.Z5c.LOGIN, v.Z5c.REGISTER, v.Z5c.INVITE(':inviteCode'), v.Z5c.INVITE_LOGIN(':inviteCode'), v.Z5c.GIFT_CODE(':giftCode'), v.Z5c.GIFT_CODE_LOGIN(':giftCode'), v.Z5c.RESET], C.a),
+                                        path: X([v.Z5c.LOGIN, v.Z5c.REGISTER, v.Z5c.INVITE(':inviteCode'), v.Z5c.INVITE_LOGIN(':inviteCode'), v.Z5c.GIFT_CODE(':giftCode'), v.Z5c.GIFT_CODE_LOGIN(':giftCode'), v.Z5c.RESET], C.a),
                                         component: B
                                     }),
                                     (0, r.jsx)(f.Z, {
@@ -177,7 +182,7 @@ class X extends i.Component {
                                         from: v.Z5c.GIFT_CODE(''),
                                         to: v.Z5c.LOGIN
                                     }),
-                                    (0, r.jsx)(s.AW, { render: z })
+                                    (0, r.jsx)(s.AW, { render: q })
                                 ]
                             })
                           : (0, r.jsxs)(s.rs, {
@@ -188,7 +193,7 @@ class X extends i.Component {
                                         render: () => (0, r.jsx)(E.Z, {})
                                     }),
                                     (0, r.jsx)(s.AW, {
-                                        path: Q([v.Z5c.LOGIN, v.Z5c.LOGIN_HANDOFF, v.Z5c.REGISTER, v.Z5c.BILLING_PREFIX, v.Z5c.BILLING_PROMOTION_REDEMPTION(':code'), v.Z5c.INVITE(':inviteCode'), v.Z5c.INVITE_LOGIN(':inviteCode'), v.Z5c.GIFT_CODE(':giftCode'), v.Z5c.GIFT_CODE_LOGIN(':giftCode'), v.Z5c.GUILD_TEMPLATE(':guildTemplateCode'), v.Z5c.GUILD_TEMPLATE_LOGIN(':guildTemplateCode'), v.Z5c.DISABLE_EMAIL_NOTIFICATIONS, v.Z5c.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, v.Z5c.RESET, v.Z5c.REPORT, v.Z5c.REPORT_SECOND_LOOK], C.a),
+                                        path: X([v.Z5c.LOGIN, v.Z5c.LOGIN_HANDOFF, v.Z5c.REGISTER, v.Z5c.BILLING_PREFIX, v.Z5c.BILLING_PROMOTION_REDEMPTION(':code'), v.Z5c.INVITE(':inviteCode'), v.Z5c.INVITE_LOGIN(':inviteCode'), v.Z5c.GIFT_CODE(':giftCode'), v.Z5c.GIFT_CODE_LOGIN(':giftCode'), v.Z5c.GUILD_TEMPLATE(':guildTemplateCode'), v.Z5c.GUILD_TEMPLATE_LOGIN(':guildTemplateCode'), v.Z5c.DISABLE_EMAIL_NOTIFICATIONS, v.Z5c.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, v.Z5c.RESET, v.Z5c.REPORT, v.Z5c.REPORT_SECOND_LOOK], C.a),
                                         component: B
                                     }),
                                     t
@@ -225,6 +230,11 @@ class X extends i.Component {
                                         }
                                     }),
                                     (0, r.jsx)(f.Z, {
+                                        path: v.Z5c.DISCOVERY_GUILD_GAME_RESULTS(':gameId'),
+                                        component: W,
+                                        impressionName: o.ImpressionNames.GLOBAL_DISCOVERY
+                                    }),
+                                    (0, r.jsx)(f.Z, {
                                         path: v.Z5c.HANDOFF,
                                         component: V
                                     }),
@@ -246,7 +256,7 @@ class X extends i.Component {
                                     }),
                                     (0, r.jsx)(f.Z, {
                                         path: v.Z5c.CONNECTIONS_AUTHORIZE_CONTINUE(':type'),
-                                        component: W
+                                        component: K
                                     }),
                                     (0, r.jsx)(f.Z, {
                                         path: v.Z5c.CONNECTIONS_SUCCESS(':type'),
@@ -324,9 +334,9 @@ class X extends i.Component {
                                         ? null
                                         : (0, r.jsx)(s.AW, {
                                               path: v.Z5c.APPLICATION_DIRECTORY,
-                                              component: K
+                                              component: z
                                           }),
-                                    (0, r.jsx)(s.AW, { render: z })
+                                    (0, r.jsx)(s.AW, { render: q })
                                 ]
                             })
                       : (0, r.jsx)(s.rs, { children: (0, r.jsx)(f.Z, { component: L }) })),
@@ -349,7 +359,7 @@ t.Z = d.ZP.connectStores(
         let { pathname: e } = (0, s.TH)();
         return null != (0, s.LX)(e, { path: v.Z5c.APPLICATION_DIRECTORY });
     })();
-    return (0, r.jsx)(X, {
+    return (0, r.jsx)($, {
         ...e,
         skipsSettingDefaultPageTitle: t
     });
