@@ -80,14 +80,14 @@ function I(e) {
             lastVisibleIndex: g,
             onItemLayout: p,
             overflowItemsRef: T,
-            itemWidthsRef: S
+            itemWidthsRef: f
         } = (0, d.zP)({
             items: s,
             itemGapPx: 20,
             maxLines: 1,
             containerWidth: _
         }),
-        f = a.useMemo(() => s.slice(0, g + 1), [g, s]),
+        S = a.useMemo(() => s.slice(0, g + 1), [g, s]),
         C = a.useMemo(() => s.slice(g + 1), [g, s]),
         N = a.useRef(null),
         A = a.useCallback(() => {
@@ -95,51 +95,52 @@ function I(e) {
             let t = null === (e = N.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
             if (null == t || I.current === t.width) return;
             E(t.width), (I.current = t.width);
-            let n = S.current.reduce((e, t, n) => e + t + (0 === n ? 0 : 20)),
+            let n = f.current.reduce((e, t, n) => e + t + (0 === n ? 0 : 20)),
                 i = t.width - n;
             null == c || c(i);
-        }, [S, c]);
-    return (
-        a.useEffect(() => {
-            let e = (0, u.pP)(A);
-            return (0, u.YP)(e, document.body), () => (0, u.UC)(e, document.body);
-        }, [A]),
-        (0, i.jsxs)('div', {
-            className: r()(h.container, t),
-            ref: N,
-            children: [
-                (0, i.jsxs)('div', {
-                    className: h.measurements,
-                    children: [
-                        s.map((e, t) =>
-                            (0, i.jsx)(
-                                d.AJ,
-                                {
-                                    index: t,
-                                    onItemLayout: p,
-                                    children: (0, i.jsx)(o.TabBar.Item, {
-                                        id: e.id,
-                                        'aria-label': e.label,
-                                        className: h.tab,
-                                        children: (0, i.jsx)(o.Text, {
-                                            variant: 'text-md/medium',
-                                            children: e.label
-                                        })
+        }, [f, c]);
+    a.useEffect(() => {
+        let e = (0, u.pP)(A);
+        return (0, u.YP)(e, document.body), () => (0, u.UC)(e, document.body);
+    }, [A]);
+    let v = 0 !== _;
+    return (0, i.jsxs)('div', {
+        className: r()(h.container, t),
+        ref: N,
+        children: [
+            (0, i.jsxs)('div', {
+                className: h.measurements,
+                children: [
+                    s.map((e, t) =>
+                        (0, i.jsx)(
+                            d.AJ,
+                            {
+                                index: t,
+                                onItemLayout: p,
+                                children: (0, i.jsx)(o.TabBar.Item, {
+                                    id: e.id,
+                                    'aria-label': e.label,
+                                    className: h.tab,
+                                    children: (0, i.jsx)(o.Text, {
+                                        variant: 'text-md/medium',
+                                        children: e.label
                                     })
-                                },
-                                e.id
-                            )
-                        ),
-                        (0, i.jsx)('div', {
-                            ref: T,
-                            children: (0, i.jsx)(m, {
-                                tabs: C,
-                                onTabSelect: l,
-                                selectedTab: n
-                            })
+                                })
+                            },
+                            e.id
+                        )
+                    ),
+                    (0, i.jsx)('div', {
+                        ref: T,
+                        children: (0, i.jsx)(m, {
+                            tabs: C,
+                            onTabSelect: l,
+                            selectedTab: n
                         })
-                    ]
-                }),
+                    })
+                ]
+            }),
+            v &&
                 (0, i.jsxs)(o.TabBar, {
                     type: 'top',
                     look: 'brand',
@@ -147,7 +148,7 @@ function I(e) {
                     onItemSelect: l,
                     className: h.tabs,
                     children: [
-                        f.map((e) =>
+                        S.map((e) =>
                             (0, i.jsx)(
                                 o.TabBar.Item,
                                 {
@@ -168,7 +169,6 @@ function I(e) {
                             : null
                     ]
                 })
-            ]
-        })
-    );
+        ]
+    });
 }

@@ -19,11 +19,11 @@ var l = n(735250),
     m = n(894344),
     x = n(314897),
     E = n(908841),
-    v = n(5192),
-    _ = n(379357),
+    _ = n(5192),
+    v = n(379357),
     T = n(561308),
-    f = n(256726),
-    p = n(206295),
+    p = n(256726),
+    f = n(206295),
     g = n(551228),
     I = n(591853),
     C = n(371991),
@@ -36,7 +36,7 @@ var l = n(735250),
 let y = (e, t, n) => {
     let { artist: l, media: a } = e,
         i = A.Z.Messages.MEMBER_LIST_CONTENT_FEED_USER_LISTENING_TO_MEDIA_ARTIST,
-        r = v.ZP.getName(t.guild_id, t.id, n);
+        r = _.ZP.getName(t.guild_id, t.id, n);
     return i
         .plainFormat({
             artist: l,
@@ -85,21 +85,21 @@ function O(e) {
           });
 }
 function R(e) {
-    var t, n, v;
+    var t, n, _;
     let C,
         S,
         R,
         { channel: j, entry: L, closePopout: w, onReaction: b, onVoiceChannelPreview: D } = e,
-        { largeImage: U } = (0, _.rv)({ entry: L }),
+        { largeImage: U } = (0, v.rv)({ entry: L }),
         { activity: B, currentEntry: k, artist: F, title: G, user: H } = (0, g.pi)(L),
-        { primaryColor: V, secondaryColor: Y } = (0, p.Z)(null == U ? void 0 : U.src),
+        { primaryColor: V, secondaryColor: Y } = (0, f.Z)(null == U ? void 0 : U.src),
         z = (0, r.e7)([c.Z, x.default], () => ((null == B ? void 0 : B.type) === P.IIU.LISTENING && null != H ? (0, h.Z)(c.Z, x.default, H, B) : void 0), [B, H], s.Z),
         W = a.useCallback(() => {
             var e;
             if (null == j || null == H) return;
             let t = null === (e = B.timestamps) || void 0 === e ? void 0 : e.start,
                 n = (0, T.T_)(null != t ? { start: t } : L, Date.now());
-            return (0, f.CR)({
+            return (0, p.CR)({
                 user: H,
                 channel: j,
                 mediaImageSrc: null == U ? void 0 : U.src,
@@ -113,7 +113,7 @@ function R(e) {
                     H
                 ),
                 colors: [V, Y],
-                badges: (0, f.jE)({ timestamp: n })
+                badges: (0, p.jE)({ timestamp: n })
             });
         }, [B, F, j, L, null == U ? void 0 : U.src, V, Y, G, H]);
     if (null == B || null == k) return null;
@@ -183,9 +183,9 @@ function R(e) {
                     generateReactionImage: W,
                     reactionImageAltText:
                         ((n = F),
-                        (v = H),
+                        (_ = H),
                         A.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_LISTENING.format({
-                            username: v.username,
+                            username: _.username,
                             activity: n
                         })),
                     entry: L,

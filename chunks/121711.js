@@ -15,8 +15,8 @@ var i = n(735250),
     g = n(113434),
     p = n(833435),
     T = n(150560),
-    S = n(558652),
-    f = n(736683),
+    f = n(558652),
+    S = n(736683),
     C = n(452081),
     N = n(46140),
     A = n(981631),
@@ -26,7 +26,7 @@ t.Z = function () {
     let { tabs: e, selectedTab: t, onSelectTab: n } = (0, C.z)(),
         { onScroll: Z, scrollPosition: R } = (0, c.M)(),
         O = T.Z.getState().getUtmCurrentContext(),
-        x = (0, p._)({ location: N.dr.QUEST_HOME_DESKTOP }) ? f.Z : f.j;
+        x = (0, p._)({ location: N.dr.QUEST_HOME_DESKTOP }) ? S.Z : S.j;
     a.useEffect(() => {
         (0, l.h)({
             name: s.ImpressionNames.QUEST_HOME,
@@ -76,7 +76,7 @@ t.Z = function () {
                                 children: (0, i.jsx)('div', { className: L.bannerGradient })
                             })
                         }),
-                        (0, i.jsx)(_.Z, { children: t === g.e5.CLAIMED ? (0, i.jsx)(x, { onSelectTab: n }) : (0, i.jsx)(S.Z, {}) })
+                        (0, i.jsx)(_.Z, { children: t === g.e5.CLAIMED ? (0, i.jsx)(x, { onSelectTab: n }) : (0, i.jsx)(f.Z, {}) })
                     ]
                 })
             ]

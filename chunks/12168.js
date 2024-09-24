@@ -20,16 +20,16 @@ var l = n(735250),
     m = n(543241),
     x = n(318766),
     E = n(907040),
-    v = n(633302),
-    _ = n(806966),
+    _ = n(633302),
+    v = n(806966),
     T = n(176354),
-    f = n(823379),
-    p = n(354459),
+    p = n(823379),
+    f = n(354459),
     g = n(185923),
     I = n(420212),
     C = n(264699);
 let N = g.Hz.CHAT,
-    P = [v.ZP.getByName('thumbsup'), v.ZP.getByName('eyes'), v.ZP.getByName('laughing'), v.ZP.getByName('watermelon'), v.ZP.getByName('fork_and_knife'), v.ZP.getByName('yum')].filter(f.lm);
+    P = [_.ZP.getByName('thumbsup'), _.ZP.getByName('eyes'), _.ZP.getByName('laughing'), _.ZP.getByName('watermelon'), _.ZP.getByName('fork_and_knife'), _.ZP.getByName('yum')].filter(p.lm);
 function Z(e) {
     let { emoji: t, isDisabled: n = !1, onClick: i, className: s } = e,
         h = a.useRef(null),
@@ -83,7 +83,7 @@ function A(e) {
     });
 }
 function S(e) {
-    let { channel: t, title: n, closePopout: i, onFocus: o, onSelectEmoji: c, onSelectDisabledEmoji: d, onExpandedToggle: x, emojiSearchProps: v, recentlyUsedEmojis: f, analyticsOverride: S } = e,
+    let { channel: t, title: n, closePopout: i, onFocus: o, onSelectEmoji: c, onSelectDisabledEmoji: d, onExpandedToggle: x, emojiSearchProps: _, recentlyUsedEmojis: p, analyticsOverride: S } = e,
         M = (0, h.Dt)(),
         [y, O] = a.useState(!1),
         R = (0, m.wC)(t.guild_id),
@@ -96,8 +96,8 @@ function S(e) {
                         intention: N
                     })
             )
-            .slice(0, p.e5);
-    null != f && f.length > 0 && j.splice(j.length - 1, 1, f[0]);
+            .slice(0, f.e5);
+    null != p && p.length > 0 && j.splice(j.length - 1, 1, p[0]);
     let L = (e) => {
             O(e), null == x || x(e);
         },
@@ -107,7 +107,7 @@ function S(e) {
                 return;
             }
             null != e && c(e);
-            L(!t), t && _.kJ.setSearchPlaceholder(null);
+            L(!t), t && v.kJ.setSearchPlaceholder(null);
         };
     return (0, l.jsxs)(u.Dialog, {
         'aria-labelledby': M,
@@ -135,9 +135,9 @@ function S(e) {
                         wrapper: 'div',
                         pickerIntention: N,
                         searchProps: {
-                            ...v,
+                            ..._,
                             accessory: (0, l.jsx)(A, {
-                                otherAccessories: null == v ? void 0 : v.accessory,
+                                otherAccessories: null == _ ? void 0 : _.accessory,
                                 isEmojiPickerExpanded: y,
                                 onSetExpanded: L,
                                 onFocus: o

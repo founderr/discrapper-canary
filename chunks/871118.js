@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return v;
+        return _;
     }
 });
 var l = n(735250),
@@ -36,30 +36,30 @@ function E(e) {
               })
     });
 }
-function v(e) {
+function _(e) {
     let { stream: t, className: n, noText: i = !1 } = e,
         o = (0, s.e7)([c.Z], () => c.Z.getBasicChannel(t.channelId)),
-        v = (0, s.e7)([d.Z], () => null != o && d.Z.canBasicChannel(h.S7T.CONNECT, o)),
-        { url: _, isLoading: T } = (0, s.cj)([u.Z], () => ({
-            url: v ? u.Z.getPreviewURL(t.guildId, t.channelId, t.ownerId) : null,
-            isLoading: v && u.Z.getIsPreviewLoading(t.guildId, t.channelId, t.ownerId)
+        _ = (0, s.e7)([d.Z], () => null != o && d.Z.canBasicChannel(h.S7T.CONNECT, o)),
+        { url: v, isLoading: T } = (0, s.cj)([u.Z], () => ({
+            url: _ ? u.Z.getPreviewURL(t.guildId, t.channelId, t.ownerId) : null,
+            isLoading: _ && u.Z.getIsPreviewLoading(t.guildId, t.channelId, t.ownerId)
         })),
-        f = a.useRef(T ? null : _);
+        p = a.useRef(T ? null : v);
     a.useEffect(() => {
-        !T && (f.current = _);
-    }, [_, T]);
-    let p = null == _ || T ? f.current : _;
-    return null == p
+        !T && (p.current = v);
+    }, [v, T]);
+    let f = null == v || T ? p.current : v;
+    return null == f
         ? (0, l.jsx)(E, {
               className: n,
               isLoading: T,
               noText: i,
-              previewText: v ? void 0 : m.Z.Messages.STREAM_NO_PERMISSION_CTA
+              previewText: _ ? void 0 : m.Z.Messages.STREAM_NO_PERMISSION_CTA
           })
         : (0, l.jsx)('div', {
               className: r()(n, x.root),
               children: (0, l.jsx)('img', {
-                  src: p,
+                  src: f,
                   alt: '',
                   className: x.image
               })

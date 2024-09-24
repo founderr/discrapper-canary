@@ -30,7 +30,7 @@ function T(e) {
             categoryId: m.U
         });
     }, [t]);
-    let S = a.useMemo(
+    let f = a.useMemo(
             () =>
                 T.map((e) => ({
                     ...e,
@@ -41,14 +41,14 @@ function T(e) {
                 })),
             [T]
         ),
-        f = (0, h.p)();
+        S = (0, h.p)();
     return (0, i.jsxs)(c.Z, {
         onScroll: n,
         children: [
             (0, i.jsx)(l.Z, {
                 title: I.Z.Messages.GLOBAL_DISCOVERY_SERVERS_HUB_TITLE,
                 description: I.Z.Messages.GLOBAL_DISCOVERY_SERVERS_HUB_DESCRIPTION,
-                className: f
+                className: S
             }),
             (0, i.jsxs)(o.Z, {
                 children: [
@@ -64,9 +64,9 @@ function T(e) {
                                   (0, i.jsxs)('div', {
                                       className: g.content,
                                       children: [
-                                          S.map((e) =>
+                                          f.map((e) =>
                                               (0, i.jsx)(
-                                                  E.V,
+                                                  E.VD,
                                                   {
                                                       guild: e,
                                                       onClick: () => r.Z.transitionToGuildSync(e.id)

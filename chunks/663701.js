@@ -21,8 +21,8 @@ var i = n(735250),
     g = n(243778),
     p = n(922409),
     T = n(899740),
-    S = n(28476),
-    f = n(880257),
+    f = n(28476),
+    S = n(880257),
     C = n(631885),
     N = n(522558),
     A = n(457396),
@@ -108,7 +108,7 @@ let F = (e) => {
         let { selected: t } = e,
             n = (0, o.JA)('messageRequests'),
             { channelId: a } = (0, p._)();
-        if (!(0, S.a)()) return null;
+        if (!(0, f.a)()) return null;
         let s = null == a ? void 0 : () => h.Z.preload(w.ME, a);
         return (0, i.jsx)(U.Qj, {
             selected: t,
@@ -125,7 +125,7 @@ let F = (e) => {
             n = H.Z.Messages.FAMILY_CENTER_SIDEBAR_TITLE,
             s = (0, o.JA)('family-center'),
             r = x.Ex.useSetting(),
-            l = (0, f.Z)(),
+            l = (0, S.Z)(),
             [c, d] = a.useState(!0);
         return r && l
             ? (0, i.jsx)(U.Qj, {

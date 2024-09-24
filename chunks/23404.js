@@ -16,8 +16,8 @@ var i = n(735250),
     g = n(585500),
     p = n(566078),
     T = n(602667),
-    S = n(611855),
-    f = n(670638),
+    f = n(611855),
+    S = n(670638),
     C = n(667105),
     N = n(860151),
     A = n(341907),
@@ -130,8 +130,8 @@ t.Z = function (e) {
                           (0, i.jsxs)('div', {
                               className: R.utils,
                               children: [
-                                  G ? (0, i.jsx)(O, { quest: o }) : (0, i.jsx)(S.Z, { textOpacity: 0.5 }),
-                                  (0, i.jsx)(f.r, {
+                                  G ? (0, i.jsx)(O, { quest: o }) : (0, i.jsx)(f.Z, { textOpacity: 0.5 }),
+                                  (0, i.jsx)(S.r, {
                                       quest: o,
                                       questContent: m.jn.ACTIVITY_PANEL,
                                       shouldShowDisclosure: (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) == null,

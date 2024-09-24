@@ -1,6 +1,6 @@
 n.d(t, {
     V: function () {
-        return f;
+        return S;
     }
 }),
     n(773603);
@@ -21,8 +21,8 @@ var i = n(735250),
     g = n(766219),
     p = n(917039),
     T = n(49898),
-    S = n(909482);
-function f(e) {
+    f = n(909482);
+function S(e) {
     let { searchRoute: t } = e,
         { game: n } = s.parse(t),
         d = (0, l.e7)([c.Z], () => (null != n ? c.Z.getApplication(n) : null));
@@ -63,8 +63,8 @@ function C() {
             (0, m.RI)({ selectedTab: e });
         }, [e]),
         (0, i.jsxs)('section', {
-            className: S.container,
-            children: [(0, i.jsx)(d.yY, { location: (0, g.s)(e) }), (0, i.jsx)('div', { className: S.dragRegion }), t]
+            className: f.container,
+            children: [(0, i.jsx)(d.yY, { location: (0, g.s)(e) }), (0, i.jsx)('div', { className: f.dragRegion }), t]
         })
     );
 }

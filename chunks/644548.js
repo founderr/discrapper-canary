@@ -12,10 +12,10 @@ var l = n(735250),
     m = n(555672),
     x = n(297781),
     E = n(591853),
-    v = n(410441),
-    _ = n(797342),
+    _ = n(410441),
+    v = n(797342),
     T = n(689938);
-let f = (e, t, n, l) => {
+let p = (e, t, n, l) => {
         let a = (function (e) {
                 if (e === i._.WEEK) return T.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_GAME_WEEK_POPOUT;
             })(l),
@@ -28,7 +28,7 @@ let f = (e, t, n, l) => {
             })
             .replaceAll('*', '');
     },
-    p = (e, t) =>
+    f = (e, t) =>
         T.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING.format({
             username: t.username,
             activity: e.extra.game_name
@@ -36,7 +36,7 @@ let f = (e, t, n, l) => {
 t.Z = (e) => {
     let { channel: t, entry: n, disableGameProfileLinks: i, onReaction: s, onVoiceChannelPreview: g } = e,
         { largeImage: I } = (0, o.rv)({ entry: n }),
-        { user: C, details: N, appName: P } = (0, _.n)(n),
+        { user: C, details: N, appName: P } = (0, v.n)(n),
         { primaryColor: Z, secondaryColor: A } = (0, d.Z)(null == I ? void 0 : I.src),
         S = (0, u.yA)(n),
         M = (0, u.Nq)(n),
@@ -47,7 +47,7 @@ t.Z = (e) => {
                         entry: n,
                         applicationImageSrc: null == I ? void 0 : I.src,
                         avatarSrcs: [C.getAvatarURL(null == t ? void 0 : t.guild_id, 128)],
-                        description: f(n, t, C, M),
+                        description: p(n, t, C, M),
                         timestamp: T.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_HOURS.format({ hours: Math.round(S / r.Z.Seconds.HOUR) }),
                         colors: [Z, A],
                         channelId: e
@@ -64,7 +64,7 @@ t.Z = (e) => {
                 headerIcons:
                     null == O
                         ? null
-                        : (0, l.jsx)(v.Z, {
+                        : (0, l.jsx)(_.Z, {
                               Icon: O,
                               'aria-label': T.Z.Messages.GAME_LIBRARY_LIST_HEADER_PLATFORM
                           }),
@@ -85,7 +85,7 @@ t.Z = (e) => {
                     user: C,
                     channel: t,
                     generateReactionImage: y,
-                    reactionImageAltText: p(n, C),
+                    reactionImageAltText: f(n, C),
                     entry: n
                 })
             })

@@ -21,8 +21,8 @@ var i = n(735250),
     g = n(556017),
     p = n(879484),
     T = n(26580),
-    S = n(206887),
-    f = n(981631),
+    f = n(206887),
+    S = n(981631),
     C = n(689938),
     N = n(932901),
     A = n(129512),
@@ -45,9 +45,9 @@ t.Z = (e) => {
                 ? H
                 : (function (e) {
                       switch (e) {
-                          case f.BRd.DARK:
+                          case S.BRd.DARK:
                               return A;
-                          case f.BRd.LIGHT:
+                          case S.BRd.LIGHT:
                               return v;
                       }
                   })(L),
@@ -65,10 +65,10 @@ t.Z = (e) => {
             if (!t.includes('Menu')) {
                 if ((0, E.yU)()) {
                     (0, h.Z)({
-                        analyticsSource: { page: f.ZY5.GUILD_DISCOVERY },
+                        analyticsSource: { page: S.ZY5.GUILD_DISCOVERY },
                         analyticsLocation: {
-                            page: f.ZY5.GUILD_DISCOVERY,
-                            section: f.jXE.GUILD_CAP_UPSELL_MODAL
+                            page: S.ZY5.GUILD_DISCOVERY,
+                            section: S.jXE.GUILD_CAP_UPSELL_MODAL
                         },
                         analyticsLocations: B
                     });
@@ -207,7 +207,7 @@ t.Z = (e) => {
                             W
                                 ? (0, i.jsx)('div', {
                                       className: N.actionButtons,
-                                      children: (0, i.jsx)(S.Z, { guild: s })
+                                      children: (0, i.jsx)(f.Z, { guild: s })
                                   })
                                 : null
                         ]

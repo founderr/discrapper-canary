@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return E;
+        return x;
     }
 }),
     t(47120),
@@ -23,11 +23,11 @@ var i = t(735250),
     m = t(887706),
     I = t(214912),
     f = t(290247),
-    g = t(981631),
-    h = t(689938),
-    v = t(319333);
-let C = h.Z.getAvailableLocales();
-function x(e) {
+    h = t(981631),
+    g = t(689938),
+    C = t(319333);
+let v = g.Z.getAvailableLocales();
+function E(e) {
     var n, t, a;
     let { onClick: r, url: o, children: c } = e,
         _ = (0, d.ZP)(),
@@ -48,7 +48,7 @@ function b(e) {
         p = null;
     null != n
         ? (p = (0, i.jsx)(n, {
-              className: v.listIcon,
+              className: C.listIcon,
               color: null != a ? a : 'currentColor',
               width: 20,
               height: 20,
@@ -56,7 +56,7 @@ function b(e) {
           }))
         : null != t &&
           (p = (0, i.jsx)('img', {
-              className: v.listImage,
+              className: C.listImage,
               src: t,
               alt: ''
           }));
@@ -64,7 +64,7 @@ function b(e) {
         children: [
             p,
             (0, i.jsx)(s.Text, {
-                className: v.listText,
+                className: C.listText,
                 variant: 'text-md/normal',
                 selectable: !0,
                 children: d
@@ -73,28 +73,28 @@ function b(e) {
     });
     return (0, i.jsx)(c.Z, {
         href: r,
-        className: o()(v.listItem, v.linkItem),
+        className: o()(C.listItem, C.linkItem),
         onClick: () => (u(r, l), !1),
         trusted: !_,
         useDefaultUnderlineStyles: !1,
         children: I
     });
 }
-function E(e) {
+function x(e) {
     var n, t, r;
     let { application: l, guildId: c, className: d, onViewCategory: u, onClickGuildWidget: m } = e,
-        [E, S] = a.useState(null),
-        T = [],
-        P = null !== (t = null == l ? void 0 : null === (n = l.directory_entry) || void 0 === n ? void 0 : n.external_urls) && void 0 !== t ? t : [];
+        [x, T] = a.useState(null),
+        P = [],
+        S = null !== (t = null == l ? void 0 : null === (n = l.directory_entry) || void 0 === n ? void 0 : n.external_urls) && void 0 !== t ? t : [];
     a.useEffect(() => {
         var e;
         if ((null === (e = l.directory_entry) || void 0 === e ? void 0 : e.supported_locales) !== void 0) {
             let e = new Set(l.directory_entry.supported_locales);
-            S(C.filter((n) => e.has(n.value)).map((e) => e.localizedName));
+            T(v.filter((n) => e.has(n.value)).map((e) => e.localizedName));
         }
     }, [l.directory_entry]);
-    let N = (e, n) => {
-        _.default.track(g.rMx.APP_DIRECTORY_APPLICATION_EXTERNAL_LINK_CLICKED, {
+    let A = (e, n) => {
+        _.default.track(h.rMx.APP_DIRECTORY_APPLICATION_EXTERNAL_LINK_CLICKED, {
             application_id: l.id,
             guild_id: c,
             type: n,
@@ -104,16 +104,16 @@ function E(e) {
     return (
         null != l.categories &&
             l.categories.length > 0 &&
-            T.push(
+            P.push(
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(s.Heading, {
-                            className: v.sectionHeader,
+                            className: C.sectionHeader,
                             variant: 'eyebrow',
-                            children: h.Z.Messages.APP_DIRECTORY_PROFILE_CATEGORIES_HEADING
+                            children: g.Z.Messages.APP_DIRECTORY_PROFILE_CATEGORIES_HEADING
                         }),
                         (0, i.jsx)('div', {
-                            className: v.categories,
+                            className: C.categories,
                             children: (null !== (r = l.categories) && void 0 !== r ? r : []).map((e) => {
                                 let n = new URLSearchParams();
                                 return (
@@ -121,9 +121,9 @@ function E(e) {
                                     (0, i.jsx)(
                                         p.Z,
                                         {
-                                            href: ''.concat(g.Z5c.APPLICATION_DIRECTORY_SEARCH, '?').concat(n),
+                                            href: ''.concat(h.Z5c.APPLICATION_DIRECTORY_SEARCH, '?').concat(n),
                                             children: (0, i.jsx)(s.Clickable, {
-                                                className: v.category,
+                                                className: C.category,
                                                 onClick: () => u(e),
                                                 children: (0, i.jsx)(s.Text, {
                                                     variant: 'text-sm/normal',
@@ -140,35 +140,35 @@ function E(e) {
                     ]
                 })
             ),
-        null != E &&
-            E.length > 0 &&
-            T.push(
+        null != x &&
+            x.length > 0 &&
+            P.push(
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(s.Heading, {
-                            className: v.sectionHeader,
+                            className: C.sectionHeader,
                             variant: 'eyebrow',
-                            children: h.Z.Messages.APP_DIRECTORY_PROFILE_LANGUAGES_HEADING
+                            children: g.Z.Messages.APP_DIRECTORY_PROFILE_LANGUAGES_HEADING
                         }),
-                        (0, i.jsx)(f.Z, { supportedLanguages: E })
+                        (0, i.jsx)(f.Z, { supportedLanguages: x })
                     ]
                 })
             ),
-        (null != l.terms_of_service_url || null != l.privacy_policy_url || P.length > 0) &&
-            T.push(
+        (null != l.terms_of_service_url || null != l.privacy_policy_url || S.length > 0) &&
+            P.push(
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(s.Heading, {
-                            className: v.sectionHeader,
+                            className: C.sectionHeader,
                             variant: 'eyebrow',
-                            children: h.Z.Messages.APP_DIRECTORY_PROFILE_LINKS_HEADING
+                            children: g.Z.Messages.APP_DIRECTORY_PROFILE_LINKS_HEADING
                         }),
-                        P.map((e, n) =>
+                        S.map((e, n) =>
                             (0, i.jsx)(
-                                x,
+                                E,
                                 {
                                     url: e.url,
-                                    onClick: N,
+                                    onClick: A,
                                     children: e.name
                                 },
                                 n
@@ -177,33 +177,33 @@ function E(e) {
                         null != l.terms_of_service_url
                             ? (0, i.jsx)(b, {
                                   icon: s.LinkIcon,
-                                  onClick: N,
+                                  onClick: A,
                                   url: l.terms_of_service_url,
                                   type: 'tos',
-                                  children: h.Z.Messages.APP_DIRECTORY_PROFILE_TERMS_LINK
+                                  children: g.Z.Messages.APP_DIRECTORY_PROFILE_TERMS_LINK
                               })
                             : null,
                         null != l.privacy_policy_url
                             ? (0, i.jsx)(b, {
                                   icon: s.LockIcon,
-                                  onClick: N,
+                                  onClick: A,
                                   url: l.privacy_policy_url,
                                   type: 'policy',
-                                  children: h.Z.Messages.APP_DIRECTORY_PROFILE_PRIVACY_LINK
+                                  children: g.Z.Messages.APP_DIRECTORY_PROFILE_PRIVACY_LINK
                               })
                             : null
                     ]
                 })
             ),
         null != l.guild &&
-            l.guild.features.includes(g.oNc.DISCOVERABLE) &&
-            T.push(
+            l.guild.features.includes(h.oNc.DISCOVERABLE) &&
+            P.push(
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(s.Heading, {
-                            className: v.sectionHeader,
+                            className: C.sectionHeader,
                             variant: 'eyebrow',
-                            children: h.Z.Messages.APP_DIRECTORY_PROFILE_SERVER_HEADING
+                            children: g.Z.Messages.APP_DIRECTORY_PROFILE_SERVER_HEADING
                         }),
                         (0, i.jsx)(I.Z, {
                             guild: l.guild,
@@ -213,15 +213,15 @@ function E(e) {
                 })
             ),
         (0, i.jsx)('div', {
-            className: o()(v.sidebar, d),
+            className: o()(C.sidebar, d),
             children:
-                T.length > 0
+                P.length > 0
                     ? (0, i.jsx)(i.Fragment, {
-                          children: T.map((e, n) =>
+                          children: P.map((e, n) =>
                               (0, i.jsx)(
                                   'div',
                                   {
-                                      className: v.section,
+                                      className: C.section,
                                       children: e
                                   },
                                   n

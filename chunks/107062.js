@@ -12,11 +12,11 @@ var l = n(735250),
     m = n(706454),
     x = n(823379),
     E = n(5192),
-    v = n(379357),
-    _ = n(192918),
+    _ = n(379357),
+    v = n(192918),
     T = n(561308),
-    f = n(907152),
-    p = n(206295),
+    p = n(907152),
+    f = n(206295),
     g = n(297781),
     I = n(591853),
     C = n(797342),
@@ -49,11 +49,11 @@ let Z = (e, t) =>
     };
 t.ZP = (e) => {
     let { channel: t, entry: n, onReaction: E, onVoiceChannelPreview: M } = e,
-        { largeImage: y } = (0, v.rv)({ entry: n }),
+        { largeImage: y } = (0, _.rv)({ entry: n }),
         { user: O, details: R, activity: j, embeddedActivity: L } = (0, C.n)(n),
-        { primaryColor: w, secondaryColor: b } = (0, p.Z)(null == y ? void 0 : y.src),
+        { primaryColor: w, secondaryColor: b } = (0, f.Z)(null == y ? void 0 : y.src),
         D = (0, i.e7)([m.default], () => m.default.locale),
-        { displayParticipants: U, participant1: B, participant2: k, numOtherParticipants: F } = (0, _.Z)(n, 3),
+        { displayParticipants: U, participant1: B, participant2: k, numOtherParticipants: F } = (0, v.Z)(n, 3),
         G = () => {
             c._(d._b.TEXT, h.I.NORMAL, { applicationId: n.extra.application_id });
         },
@@ -69,7 +69,7 @@ t.ZP = (e) => {
                               countOthers: F
                           })
                         : A(n, t, O);
-                return (0, f.C4)({
+                return (0, p.C4)({
                     entry: n,
                     applicationImageSrc: null == y ? void 0 : y.src,
                     avatarSrcs: U.map((e) => e.getAvatarURL(t.guild_id, 128)),

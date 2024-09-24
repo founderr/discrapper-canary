@@ -6,7 +6,7 @@ n.d(t, {
         return C;
     },
     Qc: function () {
-        return f;
+        return S;
     }
 }),
     n(47120);
@@ -65,7 +65,7 @@ function T() {
         { loading: T }
     );
 }
-function S(e) {
+function f(e) {
     let [t, n] = i.useState(!1),
         a = i.useRef(),
         r = (0, l.Wu)([_.Z], () => e.filter((e) => _.Z.shouldFetchGuild(e)), [e]),
@@ -87,7 +87,7 @@ function S(e) {
         t && r.length > 0
     );
 }
-function f() {
+function S() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
         t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = p(),
@@ -129,7 +129,7 @@ function C(e) {
         { updatePaginationSettings: n, currentColumnCount: a, pageSize: s, chunkedPages: o, currentPage: c, fetchableGuildIds: d } = (0, h.a)(),
         g = c - 1,
         T = (0, m.GN)((e) => e.loadingGameApplication, r.Z),
-        f = (0, l.e7)([_.Z], () => _.Z.getSavedGuildIds()),
+        S = (0, l.e7)([_.Z], () => _.Z.getSavedGuildIds()),
         C = (0, m.GN)((e) => e.savedGuildIds, r.Z),
         N = p(),
         { searchResult: A, hasError: v } = (0, l.cj)(
@@ -143,11 +143,11 @@ function C(e) {
     i.useEffect(() => {
         n(e, h.$, { pageMemoryEnabled: !0 });
     }, [e, n, A]),
-        S(d),
+        f(d),
         i.useEffect(() => {
             (0, E.IS)();
         }, []),
-        S(C),
+        f(C),
         !(function () {
             let e = (0, l.e7)([_.Z], () => !_.Z.hasLoadedSavedGuilds());
             i.useEffect(() => {
@@ -156,8 +156,8 @@ function C(e) {
         })();
     let L = i.useMemo(() => {
             var e;
-            return null !== (e = t ? f : o[g]) && void 0 !== e ? e : [];
-        }, [f, o, g, t]),
+            return null !== (e = t ? S : o[g]) && void 0 !== e ? e : [];
+        }, [S, o, g, t]),
         Z = (0, l.Wu)([_.Z], () => L.map((e) => _.Z.getGuildProfile(e)).filter(u.lm), [L]),
         R = L.length === Z.length || t,
         O = Z.length === s || R,

@@ -16,25 +16,25 @@ var a = n(636977),
     g = n(889010),
     p = n(488905),
     T = n(347137),
-    S = n(731455),
-    f = n(981631),
+    f = n(731455),
+    S = n(981631),
     C = n(46140),
     N = n(689938),
     A = n(289505);
 let v = (e) => {
         switch (e) {
-            case S.Gj.Activity:
-                return S.fW.Activity;
-            case S.Gj.Music:
-                return S.fW.Music;
-            case S.Gj.Television:
-                return S.fW.Television;
-            case S.Gj.Science:
-                return S.fW.Science;
-            case S.Gj.Education:
-                return S.fW.Education;
+            case f.Gj.Activity:
+                return f.fW.Activity;
+            case f.Gj.Music:
+                return f.fW.Music;
+            case f.Gj.Television:
+                return f.fW.Television;
+            case f.Gj.Science:
+                return f.fW.Science;
+            case f.Gj.Education:
+                return f.fW.Education;
             default:
-                return S.fW.Discover;
+                return f.fW.Discover;
         }
     },
     L = () => {
@@ -51,7 +51,7 @@ let v = (e) => {
                           icon: v(e.categoryId)
                       })),
             T = (e) => {
-                (0, l.uY)(e, !0), d.Z.closeSidebar(), t && (0, l.AQ)(), (0, u.OG)() && e !== S.Gj.Quests && (0, h.uL)(f.Z5c.GUILD_DISCOVERY), !(0, u.OG)() && e === S.Gj.Quests && (0, E.navigateToQuestHome)(C.dr.DISCOVERY_SIDEBAR, a.j.DISCOVERY_SIDEBAR);
+                (0, l.uY)(e, !0), d.Z.closeSidebar(), t && (0, l.AQ)(), (0, u.OG)() && e !== f.Gj.Quests && (0, h.uL)(S.Z5c.GUILD_DISCOVERY), !(0, u.OG)() && e === f.Gj.Quests && (0, E.navigateToQuestHome)(C.dr.DISCOVERY_SIDEBAR, a.j.DISCOVERY_SIDEBAR);
             };
         return (0, i.jsxs)(r.Scroller, {
             className: A.sidebarContainer,
@@ -69,8 +69,8 @@ let v = (e) => {
                     shouldDisplaySelectedCategory: !t
                 }),
                 (0, i.jsx)(_.Z, {
-                    onClick: () => T(S.Gj.Quests),
-                    isSelected: e === S.Gj.Quests
+                    onClick: () => T(f.Gj.Quests),
+                    isSelected: e === f.Gj.Quests
                 })
             ]
         });

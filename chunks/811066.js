@@ -65,7 +65,7 @@ function T(e) {
     return m('QuantitativeValue', e);
 }
 ((c = a || (a = {})).DAMAGED = 'http://schema.org/DamagedCondition'), (c.NEW = 'http://schema.org/NewCondition'), (c.REFURBISHED = 'http://schema.org/RefurbishedCondition'), (c.USED = 'http://schema.org/UsedCondition'), ((d = s || (s = {})).DISCONTINUED = 'http://schema.org/Discontinued'), (d.IN_STOCK = 'http://schema.org/InStock'), (d.IN_STORE_ONLY = 'http://schema.org/InStoreOnly'), (d.LIMITED_AVAILABILITY = 'http://schema.org/LimitedAvailability'), (d.ONLINE_ONLY = 'http://schema.org/OnlineOnly'), (d.OUT_OF_STOCK = 'http://schema.org/OutOfStock'), (d.PREORDER = 'http://schema.org/PreOrder'), (d.PRESALE = 'http://schema.org/PreSale'), (d.SOLD_OUT = 'http://schema.org/SoldOut'), (p.ItemConditions = a), (p.ItemAvailability = s), ((u = r || (r = {})).YEARLY = 'ANN'), (u.MONTHLY = 'MON'), (T.UnitCodes = r);
-class S extends (l = E.Component) {
+class f extends (l = E.Component) {
     render() {
         let { debug: e, data: t } = this.props,
             n = JSON.stringify({
@@ -78,30 +78,30 @@ class S extends (l = E.Component) {
         });
     }
 }
-h(S, 'Thing', I),
-    h(S, 'Brand', I),
-    h(S, 'Person', function (e) {
+h(f, 'Thing', I),
+    h(f, 'Brand', I),
+    h(f, 'Person', function (e) {
         return m('Person', e);
     }),
-    h(S, 'Organization', function (e) {
+    h(f, 'Organization', function (e) {
         return m('Organization', e);
     }),
-    h(S, 'ItemPage', function (e) {
+    h(f, 'ItemPage', function (e) {
         return m('ItemPage', e);
     }),
-    h(S, 'Product', g),
-    h(S, 'Offer', p),
-    h(S, 'Rating', function (e) {
+    h(f, 'Product', g),
+    h(f, 'Offer', p),
+    h(f, 'Rating', function (e) {
         return m('Rating', e);
     }),
-    h(S, 'AggregateRating', function (e) {
+    h(f, 'AggregateRating', function (e) {
         return m('AggregateRating', e);
     }),
-    h(S, 'AggregateOffer', function (e) {
+    h(f, 'AggregateOffer', function (e) {
         return m('AggregateOffer', e);
     }),
-    h(S, 'QuantitativeValue', T),
-    h(S, 'UnitPriceSpecification', function (e) {
+    h(f, 'QuantitativeValue', T),
+    h(f, 'UnitPriceSpecification', function (e) {
         return m('UnitPriceSpecification', e);
     }),
-    (t.Z = S);
+    (t.Z = f);

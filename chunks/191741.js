@@ -1,6 +1,6 @@
 n.d(t, {
     A: function () {
-        return f;
+        return S;
     },
     U: function () {
         return C;
@@ -24,19 +24,19 @@ var a = n(652874),
     g = n(430824),
     p = n(944486),
     T = n(981631),
-    S = n(350133);
-let f = (0, a.Z)(() => ({ isOpen: !0 }));
+    f = n(350133);
+let S = (0, a.Z)(() => ({ isOpen: !0 }));
 function C() {
     let e = (0, s.e7)([p.Z], () => p.Z.getChannelId()),
         t = (0, s.e7)([I.Z], () => I.Z.getChannel(e), [e]),
         n = g.Z.getGuild(null == t ? void 0 : t.guild_id),
-        a = f((e) => e.isOpen),
+        a = S((e) => e.isOpen),
         { hasBugReporterAccess: C } = o.Z.useExperiment({ location: 'HeaderBar' }, { autoTrackExposure: !1 });
     return (0, i.jsxs)('div', {
-        className: S.bar,
+        className: f.bar,
         children: [
             (0, i.jsxs)('div', {
-                className: S.sidebar,
+                className: f.sidebar,
                 'data-sidebar-collapsed': !a,
                 children: [
                     !a &&
@@ -44,7 +44,7 @@ function C() {
                             children: [
                                 (0, i.jsx)(r.Clickable, {
                                     onClick: () => {
-                                        f.setState({ isOpen: !f.getState().isOpen });
+                                        S.setState({ isOpen: !S.getState().isOpen });
                                     },
                                     children: (0, i.jsx)(N, {})
                                 }),
@@ -71,17 +71,17 @@ function C() {
                 ]
             }),
             (0, i.jsx)('div', {
-                className: S.center,
+                className: f.center,
                 children:
                     null != n &&
                     (0, i.jsxs)('div', {
-                        className: S.guild,
+                        className: f.guild,
                         children: [
                             (0, i.jsx)(c.Z, {
                                 guild: n,
                                 size: c.Z.Sizes.SMALLER,
                                 active: !0,
-                                className: S.icon
+                                className: f.icon
                             }),
                             (0, i.jsx)(r.Text, {
                                 variant: 'text-sm/medium',
@@ -91,7 +91,7 @@ function C() {
                     })
             }),
             (0, i.jsxs)('div', {
-                className: S.right,
+                className: f.right,
                 children: [(0, i.jsx)(h.Z, {}), C ? (0, i.jsx)(u.Z, {}) : (0, i.jsx)(d.Z, {}), (0, i.jsx)(_.Z, {})]
             })
         ]
@@ -100,7 +100,7 @@ function C() {
 function N() {
     return (0, i.jsxs)('svg', {
         xmlns: 'http://www.w3.org/2000/svg',
-        className: S.icon,
+        className: f.icon,
         width: '24',
         height: '24',
         viewBox: '0 0 24 24',

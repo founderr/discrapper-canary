@@ -23,11 +23,11 @@ var l = n(735250),
     m = n(704041),
     x = n(475676),
     E = n(439170),
-    v = n(594174),
-    _ = n(69259),
+    _ = n(594174),
+    v = n(69259),
     T = n(370370),
-    f = n(107062),
-    p = n(91140),
+    p = n(107062),
+    f = n(91140),
     g = n(227172),
     I = n(551228),
     C = n(678869),
@@ -47,7 +47,7 @@ let L = (e) => {
         let { entry: t, ...n } = e;
         switch (t.content_type) {
             case o.s.PLAYED_GAME:
-                return (0, l.jsx)(p.Z, {
+                return (0, l.jsx)(f.Z, {
                     ...n,
                     entry: t
                 });
@@ -89,7 +89,7 @@ let L = (e) => {
         let { requestId: t, closePopout: n, ...a } = e;
         return (0, l.jsx)(b, {
             onReaction: (e, l) => {
-                (0, _.L)(e, {
+                (0, v.L)(e, {
                     entry: a.entry,
                     channelId: a.channel.id,
                     guildId: a.channel.guild_id,
@@ -101,7 +101,7 @@ let L = (e) => {
             },
             closePopout: n,
             onVoiceChannelPreview: (e, n) => {
-                (0, _.L)(O.xP.VOICE_CHANNEL_PREVIEWED, {
+                (0, v.L)(O.xP.VOICE_CHANNEL_PREVIEWED, {
                     entry: a.entry,
                     channelId: a.channel.id,
                     guildId: a.channel.guild_id,
@@ -143,7 +143,7 @@ let L = (e) => {
                     entry: t
                 });
             case o.s.LAUNCHED_ACTIVITY:
-                return (0, l.jsx)(f.ZP, {
+                return (0, l.jsx)(p.ZP, {
                     ...n,
                     entry: t
                 });
@@ -158,14 +158,14 @@ t.ZP = a.memo((e) => {
     let { index: i, ...o } = e,
         [m, x] = a.useState('default'),
         E = (0, s.JA)(''.concat(i)),
-        T = null === (t = v.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff(),
-        { isRich: f, appName: p } = (0, y.n)(o.entry),
+        T = null === (t = _.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff(),
+        { isRich: p, appName: f } = (0, y.n)(o.entry),
         g = {
             entry: o.entry,
             channelId: o.channel.id,
             guildId: o.channel.guild_id,
             requestId: o.requestId,
-            richPresenceName: f ? p : void 0
+            richPresenceName: p ? f : void 0
         },
         I = a.useRef(!1),
         [C, N] = a.useState(!1),
@@ -194,7 +194,7 @@ t.ZP = a.memo((e) => {
         R = a.useCallback(
             r().throttle(
                 (e) => {
-                    (0, _.L)(O.xP.CARD_POPOUT_OPEN, e);
+                    (0, v.L)(O.xP.CARD_POPOUT_OPEN, e);
                 },
                 2000,
                 {

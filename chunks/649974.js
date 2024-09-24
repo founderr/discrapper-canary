@@ -71,7 +71,7 @@ function T(e) {
         a
     );
 }
-function S() {
+function f() {
     let e = !1;
     if (!d.Z.needsRefresh() && !h) {
         let t;
@@ -91,9 +91,9 @@ function S() {
     }
     return (h = !d.Z.needsRefresh()), e;
 }
-class f extends (r = l.ZP.Store) {
+class S extends (r = l.ZP.Store) {
     initialize() {
-        this.waitFor(d.Z), this.syncWith([d.Z], S);
+        this.waitFor(d.Z), this.syncWith([d.Z], f);
     }
     get games() {
         return m;
@@ -112,7 +112,7 @@ class f extends (r = l.ZP.Store) {
     }
 }
 (s = 'NowPlayingStore'),
-    (a = 'displayName') in (i = f)
+    (a = 'displayName') in (i = S)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -120,7 +120,7 @@ class f extends (r = l.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new f(o.Z, {
+    (t.Z = new S(o.Z, {
         CONNECTION_OPEN: function () {
             (m = {}), (I = {});
         },

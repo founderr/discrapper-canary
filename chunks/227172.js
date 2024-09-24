@@ -16,11 +16,11 @@ var l = n(735250),
     m = n(706454),
     x = n(374129),
     E = n(639351),
-    v = n(823379),
-    _ = n(379357),
+    _ = n(823379),
+    v = n(379357),
     T = n(192918),
-    f = n(22211),
-    p = n(561308),
+    p = n(22211),
+    f = n(561308),
     g = n(919394),
     I = n(438226),
     C = n(206295),
@@ -43,11 +43,11 @@ let O = {
 };
 t.Z = (e) => {
     let { channel: t, entry: n, disableGameProfileLinks: i, onReaction: x, onVoiceChannelPreview: E, onUserPopoutClosed: R } = e,
-        { largeImage: j } = (0, _.rv)({ entry: n }),
+        { largeImage: j } = (0, v.rv)({ entry: n }),
         { user: L, details: w, appName: b, activity: D } = (0, S.n)(n),
         { primaryColor: U, secondaryColor: B } = (0, C.Z)(null == j ? void 0 : j.src),
         k = (0, r.e7)([m.default], () => m.default.locale),
-        { streamPreviewUrl: F, stream: G } = (0, f.Z)(n),
+        { streamPreviewUrl: F, stream: G } = (0, p.Z)(n),
         { displayParticipants: H, participant1: V, participant2: Y, numOtherParticipants: z } = (0, T.Z)(n, 3),
         W = a.useCallback(
             (e) => {
@@ -66,7 +66,7 @@ t.Z = (e) => {
                     applicationImageSrc: null == j ? void 0 : j.src,
                     avatarSrcs: H.map((e) => e.getAvatarURL(t.guild_id, 128)),
                     description: l,
-                    timestamp: (0, p.yh)(n, k),
+                    timestamp: (0, f.yh)(n, k),
                     colors: [U, B],
                     channelId: e
                 });
@@ -90,7 +90,7 @@ t.Z = (e) => {
                                     Icon: q,
                                     'aria-label': y.Z.Messages.GAME_LIBRARY_LIST_HEADER_PLATFORM
                                 }),
-                      userDescription: (0, p.kr)(n) ? y.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING_V2 : y.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED_V2,
+                      userDescription: (0, f.kr)(n) ? y.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING_V2 : y.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED_V2,
                       title: b,
                       subtitle: w,
                       badges: J,
@@ -133,7 +133,7 @@ t.Z = (e) => {
                           })
                   })
                 : null
-        ].filter(v.lm);
+        ].filter(_.lm);
     return (0, l.jsxs)(Z.yR, {
         children: [
             K,

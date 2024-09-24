@@ -129,12 +129,12 @@ function v(e) {
             (0, l.jsxs)('div', {
                 children: [
                     (0, l.jsx)(a.x, {
-                        variant: 'text-md/semibold',
+                        variant: 'text-sm/semibold',
                         children: t
                     }),
                     null != i &&
                         (0, l.jsx)(a.x, {
-                            variant: 'text-sm/medium',
+                            variant: 'text-sm/normal',
                             color: 'text-muted',
                             children: i
                         })

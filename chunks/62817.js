@@ -12,15 +12,15 @@ let c = Object.freeze([]),
     m = {},
     x = {},
     E = {};
-function v(e, t) {}
-function _() {
+function _(e, t) {}
+function v() {
     E = {};
 }
 function T(e, t) {
     let n = d[e];
     return null != n && ((d[e] = n.filter((e) => e.id !== t)), delete h[t], delete m[t], n.length !== d[e].length);
 }
-function f(e, t) {
+function p(e, t) {
     let n = d[e];
     if (null == n) return !1;
     d[e] = n.map((e) =>
@@ -39,7 +39,7 @@ function f(e, t) {
             ...t
         });
 }
-class p extends (l = s.ZP.Store) {
+class f extends (l = s.ZP.Store) {
     initialize() {
         this.waitFor(u.Z);
     }
@@ -58,7 +58,7 @@ class p extends (l = s.ZP.Store) {
     }
 }
 (r = 'UploadStore'),
-    (i = 'displayName') in (a = p)
+    (i = 'displayName') in (a = f)
         ? Object.defineProperty(a, i, {
               value: r,
               enumerable: !0,
@@ -66,7 +66,7 @@ class p extends (l = s.ZP.Store) {
               writable: !0
           })
         : (a[i] = r),
-    (t.Z = new p(o.Z, {
+    (t.Z = new f(o.Z, {
         CONNECTION_OPEN: function () {
             E = {};
         },
@@ -85,15 +85,15 @@ class p extends (l = s.ZP.Store) {
                     ...l,
                     items: s
                 }),
-                v(i.nonce, l);
+                _(i.nonce, l);
         },
         UPLOAD_COMPRESSION_PROGRESS: function (e) {
             let { channelId: t, file: n } = e;
-            f(t, n);
+            p(t, n);
         },
         UPLOAD_PROGRESS: function (e) {
             let { channelId: t, file: n } = e;
-            f(t, n);
+            p(t, n);
         },
         UPLOAD_COMPLETE: function (e) {
             let { channelId: t, file: n } = e;
@@ -121,7 +121,7 @@ class p extends (l = s.ZP.Store) {
         UPLOAD_FILE_UPDATE: function (e) {
             let { channelId: t, file: n } = e,
                 l = m[n.id];
-            null != l && v(l.nonce, n), f(t, n);
+            null != l && _(l.nonce, n), p(t, n);
         },
         UPLOAD_RESTORE_FAILED_UPLOAD: function (e) {
             let { file: t, messageId: n } = e;

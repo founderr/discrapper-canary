@@ -40,7 +40,7 @@ function _(e) {
               guildId: u,
               onClick: () => {
                   (0, a.openModalLazy)(async () => {
-                      let { default: e } = await Promise.all([n.e('29549'), n.e('31605'), n.e('81272'), n.e('98538'), n.e('45779')]).then(n.bind(n, 7225));
+                      let { default: e } = await Promise.all([n.e('29549'), n.e('31605'), n.e('81272'), n.e('77803'), n.e('24960')]).then(n.bind(n, 7225));
                       return (t) =>
                           (0, r.jsx)(e, {
                               appId: _.id,

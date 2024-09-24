@@ -15,7 +15,7 @@ var i = n(735250),
     g = n(46140),
     p = n(689938),
     T = n(696165);
-function S(e) {
+function f(e) {
     let { tab: t } = e,
         n = (0, E.d)((e) => e.selectedTab === t, l.Z),
         s = a.useMemo(
@@ -31,7 +31,7 @@ function S(e) {
             [t]
         ),
         p = a.useMemo(() => (0, h.s)(t), [t]),
-        S = a.useCallback(() => {
+        f = a.useCallback(() => {
             switch (((0, c.j)(() => E.d.setState({ selectedTab: t })), t)) {
                 case m.F$.QUESTS:
                     return (0, u.navigateToQuestHome)(g.dr.DISCOVERY_SIDEBAR, o.j.DISCOVERY_SIDEBAR);
@@ -40,7 +40,7 @@ function S(e) {
             }
         }, [t]);
     return (0, i.jsxs)(d.Clickable, {
-        onClick: S,
+        onClick: f,
         className: r()(T.navItem, { [T.selected]: n }),
         children: [
             (0, i.jsx)('div', {
@@ -68,7 +68,7 @@ t.Z = function () {
             }),
             (0, i.jsx)('nav', {
                 className: T.nav,
-                children: m.mc.map((e) => (0, i.jsx)(S, { tab: e }, e))
+                children: m.mc.map((e) => (0, i.jsx)(f, { tab: e }, e))
             })
         ]
     });

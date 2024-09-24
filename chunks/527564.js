@@ -1,6 +1,6 @@
 t.d(n, {
     M: function () {
-        return x;
+        return E;
     }
 }),
     t(789020);
@@ -18,25 +18,25 @@ var i = t(735250),
     m = t(171246),
     I = t(55563),
     f = t(147890),
-    g = t(272242),
-    h = t(981631),
-    v = t(689938),
-    C = t(778452);
-function x(e) {
+    h = t(272242),
+    g = t(981631),
+    C = t(689938),
+    v = t(778452);
+function E(e) {
     let { appId: n } = e,
         { subscriptions: t, otps: a } = (0, d.q)(n);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             t.length > 0 &&
                 (0, i.jsxs)('div', {
-                    className: C.productSection,
+                    className: v.productSection,
                     children: [
                         (0, i.jsx)(s.Heading, {
                             variant: 'heading-lg/semibold',
-                            children: v.Z.Messages.STOREFRONT_APP_SUBSCRIPTIONS
+                            children: C.Z.Messages.STOREFRONT_APP_SUBSCRIPTIONS
                         }),
                         (0, i.jsx)('div', {
-                            className: o()(C.productList, C.subList),
+                            className: o()(v.productList, v.subList),
                             children: t.map((e) =>
                                 (0, i.jsx)(
                                     u.zz,
@@ -59,14 +59,14 @@ function x(e) {
                 }),
             a.length > 0 &&
                 (0, i.jsxs)('div', {
-                    className: C.productSection,
+                    className: v.productSection,
                     children: [
                         (0, i.jsx)(s.Heading, {
                             variant: 'heading-lg/semibold',
-                            children: v.Z.Messages.STOREFRONT_APP_PRODUCTS
+                            children: C.Z.Messages.STOREFRONT_APP_PRODUCTS
                         }),
                         (0, i.jsx)('div', {
-                            className: o()(C.productList, C.itemList),
+                            className: o()(v.productList, v.itemList),
                             children: a.map((e) =>
                                 (0, i.jsx)(
                                     u.hd,
@@ -87,7 +87,7 @@ function x(e) {
                     ]
                 }),
             (0, i.jsx)(c.Z, {
-                path: h.Z5c.APPLICATION_DIRECTORY_PROFILE_STORE_SKU(':applicationId', ':skuId'),
+                path: g.Z5c.APPLICATION_DIRECTORY_PROFILE_STORE_SKU(':applicationId', ':skuId'),
                 exact: !0,
                 render: (e) => (0, i.jsx)(b, { ...e })
             })
@@ -106,8 +106,8 @@ function b(e) {
     return (
         a.useLayoutEffect(() => {
             switch (null == r ? void 0 : r.type) {
-                case h.epS.CONSUMABLE:
-                case h.epS.DURABLE:
+                case g.epS.CONSUMABLE:
+                case g.epS.DURABLE:
                     return (function (e, n, t) {
                         (0, s.openModal)(
                             (e) => {
@@ -122,16 +122,16 @@ function b(e) {
                             {
                                 modalKey: e,
                                 onCloseCallback() {
-                                    !E() &&
+                                    !x() &&
                                         (0, f.goToApplicationSection)({
                                             applicationId: n,
-                                            section: g.ApplicationDirectoryProfileSections.STORE
+                                            section: h.ApplicationDirectoryProfileSections.STORE
                                         });
                                 }
                             }
                         );
                     })(c, n, t);
-                case h.epS.SUBSCRIPTION:
+                case g.epS.SUBSCRIPTION:
                     if ((null == o ? void 0 : o.id) == null || (null == o ? void 0 : o.flags) == null) return;
                     return (function (e, n, t, a, r) {
                         (0, s.openModal)(
@@ -149,10 +149,10 @@ function b(e) {
                             {
                                 modalKey: e,
                                 onCloseCallback() {
-                                    !E() &&
+                                    !x() &&
                                         (0, f.goToApplicationSection)({
                                             applicationId: n,
-                                            section: g.ApplicationDirectoryProfileSections.STORE
+                                            section: h.ApplicationDirectoryProfileSections.STORE
                                         });
                                 }
                             }
@@ -169,6 +169,6 @@ function b(e) {
         null
     );
 }
-function E() {
+function x() {
     return window.location.pathname.startsWith('/login');
 }

@@ -12,7 +12,7 @@ n.d(t, {
         return L;
     },
     Io: function () {
-        return S;
+        return f;
     },
     LO: function () {
         return Z;
@@ -42,7 +42,7 @@ n.d(t, {
         return p;
     },
     sS: function () {
-        return f;
+        return S;
     },
     vb: function () {
         return h;
@@ -86,15 +86,15 @@ function m(e) {
         case u.vf.FEATURED:
             return E.Z.Messages.GUILD_DISCOVERY_HOME_TITLE;
         case u.vf.GAMING:
-            return E.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GAMING_TITLE;
+            return E.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GAMING_CATEGORY;
         case u.vf.MUSIC:
-            return E.Z.Messages.GLOBAL_DISCOVERY_SERVERS_MUSIC_TITLE;
+            return E.Z.Messages.GLOBAL_DISCOVERY_SERVERS_MUSIC_CATEGORY;
         case u.vf.ENTERTAINMENT:
-            return E.Z.Messages.GLOBAL_DISCOVERY_SERVERS_ENTERTAINMENT_TITLE;
+            return E.Z.Messages.GLOBAL_DISCOVERY_SERVERS_ENTERTAINMENT_CATEGORY;
         case u.vf.TECH:
-            return E.Z.Messages.GLOBAL_DISCOVERY_SERVERS_TECH_TITLE;
+            return E.Z.Messages.GLOBAL_DISCOVERY_SERVERS_TECH_CATEGORY;
         case u.vf.EDUCATION:
-            return E.Z.Messages.GLOBAL_DISCOVERY_SERVERS_EDUCATION_TITLE;
+            return E.Z.Messages.GLOBAL_DISCOVERY_SERVERS_EDUCATION_CATEGORY;
         case u.vf.HUBS:
             return E.Z.Messages.GLOBAL_DISCOVERY_SERVERS_HUB_TITLE;
         default:
@@ -164,11 +164,11 @@ function T(e) {
     let { categoryId: t, query: n } = e;
     return ''.concat(u.BP, '-').concat(n, '-').concat(u.t0, '-').concat(t);
 }
-function S(e) {
+function f(e) {
     let { categoryId: t } = e;
     return ''.concat(u.aQ, '-').concat(u.t0, '-').concat(t);
 }
-function f() {
+function S() {
     return ''.concat(u.aQ);
 }
 function C(e) {

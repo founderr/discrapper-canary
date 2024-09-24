@@ -17,11 +17,11 @@ var l = n(735250),
     m = n(835473),
     x = n(592745),
     E = n(592125),
-    v = n(757266),
-    _ = n(650774),
+    _ = n(757266),
+    v = n(650774),
     T = n(430824),
-    f = n(283595),
-    p = n(496675),
+    p = n(283595),
+    f = n(496675),
     g = n(699516),
     I = n(944486),
     C = n(594174),
@@ -55,15 +55,15 @@ function k(e) {
             activity: k
         }),
         ee = (0, i.e7)(
-            [f.Z, x.Z, Z.Z, v.Z],
+            [p.Z, x.Z, Z.Z, _.Z],
             () =>
                 V ||
                 (null != $ &&
                     (0, S.t)({
-                        LibraryApplicationStore: f.Z,
+                        LibraryApplicationStore: p.Z,
                         LaunchableGameStore: x.Z,
                         DispatchApplicationStore: Z.Z,
-                        ConnectedAppsStore: v.Z,
+                        ConnectedAppsStore: _.Z,
                         applicationId: $
                     }))
         ),
@@ -81,7 +81,7 @@ function k(e) {
             channelId: Q,
             application: el
         }),
-        ei = (0, i.e7)([E.Z, T.Z, _.Z, g.Z, I.Z, N.Z, p.Z], () =>
+        ei = (0, i.e7)([E.Z, T.Z, v.Z, g.Z, I.Z, N.Z, f.Z], () =>
             null != F
                 ? ea === j.Fw.CAN_JOIN
                 : null != k
@@ -94,11 +94,11 @@ function k(e) {
                         isEmbedded: V,
                         ChannelStore: E.Z,
                         GuildStore: T.Z,
-                        GuildMemberCountStore: _.Z,
+                        GuildMemberCountStore: v.Z,
                         RelationshipStore: g.Z,
                         SelectedChannelStore: I.Z,
                         VoiceStateStore: N.Z,
-                        PermissionStore: p.Z
+                        PermissionStore: f.Z
                     })
                   : void 0
         ),

@@ -6,40 +6,40 @@ t.d(n, {
 var i = t(735250);
 t(470079);
 var a = t(120356),
-    r = t.n(a),
-    o = t(481060),
-    l = t(422559),
-    s = t(594045);
+    s = t.n(a),
+    l = t(481060),
+    r = t(422559),
+    o = t(594045);
 function c(e) {
     let { grantedPermissions: n, disabledPermissions: t, grantedPermissionsHeader: a, disabledPermissionsHeader: c, className: d } = e;
     return (0, i.jsxs)('div', {
-        className: r()(s.list, d),
+        className: s()(o.list, d),
         children: [
             null != n && n.length > 0
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [
                           null != a
-                              ? (0, i.jsx)(o.FormTitle, {
-                                    className: s.permissionHeader,
+                              ? (0, i.jsx)(l.FormTitle, {
+                                    className: o.permissionHeader,
                                     children: a
                                 })
                               : null,
                           (0, i.jsx)('div', {
-                              className: s.container,
+                              className: o.container,
                               children: n.map((e) =>
                                   (0, i.jsxs)(
                                       'div',
                                       {
-                                          className: s.permission,
+                                          className: o.permission,
                                           children: [
-                                              (0, i.jsx)(o.CheckmarkLargeIcon, {
+                                              (0, i.jsx)(l.CheckmarkLargeIcon, {
                                                   size: 'xs',
                                                   color: 'currentColor',
-                                                  className: s.check
+                                                  className: o.check
                                               }),
-                                              (0, i.jsx)(o.Text, {
+                                              (0, i.jsx)(l.Text, {
                                                   variant: 'text-sm/normal',
-                                                  children: (0, l.wt)(e)
+                                                  children: (0, r.wt)(e)
                                               })
                                           ]
                                       },
@@ -54,27 +54,27 @@ function c(e) {
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [
                           null != c
-                              ? (0, i.jsx)(o.FormTitle, {
-                                    className: s.permissionHeader,
+                              ? (0, i.jsx)(l.FormTitle, {
+                                    className: o.permissionHeader,
                                     children: c
                                 })
                               : null,
                           (0, i.jsx)('div', {
-                              className: s.container,
+                              className: o.container,
                               children: t.map((e) =>
                                   (0, i.jsxs)(
                                       'div',
                                       {
-                                          className: s.permission,
+                                          className: o.permission,
                                           children: [
-                                              (0, i.jsx)(o.XSmallIcon, {
+                                              (0, i.jsx)(l.XSmallIcon, {
                                                   size: 'xs',
                                                   color: 'currentColor',
-                                                  className: s.cross
+                                                  className: o.cross
                                               }),
-                                              (0, i.jsx)(o.Text, {
+                                              (0, i.jsx)(l.Text, {
                                                   variant: 'text-sm/normal',
-                                                  children: (0, l.wt)(e)
+                                                  children: (0, r.wt)(e)
                                               })
                                           ]
                                       },

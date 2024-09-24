@@ -20,7 +20,7 @@ function d(e) {
             guildId: x,
             ...u.x
         })[0],
-        v = null !== (d = null == E ? void 0 : null === (n = E.statistics) || void 0 === n ? void 0 : null === (t = n[u.x.sortByStatisticId]) || void 0 === t ? void 0 : t.value) && void 0 !== d ? d : 0;
+        _ = null !== (d = null == E ? void 0 : null === (n = E.statistics) || void 0 === n ? void 0 : null === (t = n[u.x.sortByStatisticId]) || void 0 === t ? void 0 : t.value) && void 0 !== d ? d : 0;
     return (0, l.jsx)(r.Zb, {
         selected: h,
         children: (0, l.jsxs)(r.e$, {
@@ -34,7 +34,7 @@ function d(e) {
                 (0, l.jsx)(i.Gk, {
                     location: i.Gt.CARD,
                     children: (0, l.jsx)(o.D, {
-                        value: v,
+                        value: _,
                         statisticId: u.x.sortByStatisticId
                     })
                 })

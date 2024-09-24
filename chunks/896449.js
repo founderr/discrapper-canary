@@ -16,20 +16,20 @@ var a = n(481060),
     h = n(301698);
 function m(e) {
     var t;
-    let { user: n, guildId: m, channel: x, entry: E, onSelect: v, disableGameProfileLinks: _ } = e,
+    let { user: n, guildId: m, channel: x, entry: E, onSelect: _, disableGameProfileLinks: v } = e,
         T = (0, u.Z)({
             userId: n.id,
             guildId: m,
             channelId: null == x ? void 0 : x.id
         }),
-        f = (0, r.Z)({
+        p = (0, r.Z)({
             id: n.id,
             label: d.Z.Messages.COPY_ID_USER
         }),
-        p = (0, c.dX)(E),
+        f = (0, c.dX)(E),
         g = (0, o.Z)({
             location: 'ContentPopoutContextMenu',
-            applicationId: p && !0 !== _ ? (null === (t = E.extra) || void 0 === t ? void 0 : t.application_id) : void 0,
+            applicationId: f && !0 !== v ? (null === (t = E.extra) || void 0 === t ? void 0 : t.application_id) : void 0,
             source: s.m1.ActivityCardContextMenu,
             trackEntryPointImpression: !0,
             sourceUserId: E.author_id
@@ -46,7 +46,7 @@ function m(e) {
                     (0, i.Zy)(), t();
                 },
                 'aria-label': d.Z.Messages.USER_ACTIONS_MENU_LABEL,
-                onSelect: v,
+                onSelect: _,
                 children: (0, l.jsxs)(l.Fragment, {
                     children: [
                         (0, l.jsxs)(a.MenuGroup, {
@@ -60,7 +60,7 @@ function m(e) {
                                     })
                             ]
                         }),
-                        (0, l.jsx)(a.MenuGroup, { children: f })
+                        (0, l.jsx)(a.MenuGroup, { children: p })
                     ]
                 })
             });

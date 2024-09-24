@@ -31,7 +31,7 @@ function E(e) {
             },
             E ? 'respect-motion-settings' : 'animate-never'
         ),
-        S = (0, i.jsxs)(i.Fragment, {
+        f = (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(o.Text, {
                     variant: 'text-sm/medium',
@@ -47,7 +47,7 @@ function E(e) {
         });
     return (0, i.jsx)(o.Tooltip, {
         color: m ? o.Tooltip.Colors.GREY : o.Tooltip.Colors.BRAND,
-        text: m ? S : s,
+        text: m ? f : s,
         'aria-label': m ? u.Z.Messages.CLAN_SUBMIT_ERROR_TITLE : s,
         shouldShow: null != n,
         tooltipStyle: g,

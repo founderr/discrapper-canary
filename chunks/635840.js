@@ -6,8 +6,8 @@ s.d(t, {
     s(47120);
 var a = s(735250),
     n = s(470079),
-    i = s(481060),
-    C = s(153867),
+    C = s(481060),
+    i = s(153867),
     _ = s(626135),
     o = s(981631),
     l = s(689938),
@@ -51,41 +51,41 @@ function N(e) {
         }, [t.id, s, d, N, O]);
     return (
         n.useEffect(() => {
-            C.ZP.updatedUnsyncedSettings({ disableApplicationSubscriptionCancellationSurvey: c });
+            i.ZP.updatedUnsyncedSettings({ disableApplicationSubscriptionCancellationSurvey: c });
         }, [c]),
         (0, a.jsxs)(a.Fragment, {
             children: [
-                (0, a.jsxs)(i.ModalHeader, {
+                (0, a.jsxs)(C.ModalHeader, {
                     className: r.headerContainer,
                     separator: !1,
                     children: [
                         (0, a.jsxs)('div', {
                             className: r.titleContainer,
                             children: [
-                                (0, a.jsx)(i.Text, {
+                                (0, a.jsx)(C.Text, {
                                     className: r.headerTitle,
                                     variant: 'text-lg/semibold',
                                     children: l.Z.Messages.APPLICATION_SUBSCRIPTION_CANCELLATION_SURVEY_TITLE
                                 }),
-                                (0, a.jsx)(i.ModalCloseButton, {
+                                (0, a.jsx)(C.ModalCloseButton, {
                                     className: r.modalCloseButton,
                                     onClick: N
                                 })
                             ]
                         }),
-                        (0, a.jsx)(i.Spacer, { size: 8 }),
-                        (0, a.jsx)(i.Text, {
+                        (0, a.jsx)(C.Spacer, { size: 8 }),
+                        (0, a.jsx)(C.Text, {
                             className: r.headerSubtitle,
                             variant: 'text-md/medium',
                             children: l.Z.Messages.APPLICATION_SUBSCRIPTION_CANCELLATION_SURVEY_SUBTITLE
                         })
                     ]
                 }),
-                (0, a.jsxs)(i.ModalContent, {
+                (0, a.jsxs)(C.ModalContent, {
                     children: [
                         (0, a.jsx)('div', {
                             className: r.answerChoicesContainer,
-                            children: (0, a.jsx)(i.RadioGroup, {
+                            children: (0, a.jsx)(C.RadioGroup, {
                                 value: d,
                                 options: I.map((e) => {
                                     let { nameGetter: t, value: s } = e;
@@ -99,7 +99,7 @@ function N(e) {
                             })
                         }),
                         'APPLICATION_SUBSCRIPTION_CANCELLATION_SURVEY_ANSWER_CHOICE_OTHER' === d &&
-                            (0, a.jsx)(i.TextInput, {
+                            (0, a.jsx)(C.TextInput, {
                                 autoFocus: !0,
                                 className: r.otherField,
                                 placeholder: l.Z.Messages.APPLICATION_SUBSCRIPTION_CANCELLATION_SURVEY_OTHER_PLACEHOLDER,
@@ -108,22 +108,22 @@ function N(e) {
                             })
                     ]
                 }),
-                (0, a.jsxs)(i.ModalFooter, {
+                (0, a.jsxs)(C.ModalFooter, {
                     className: r.footer,
                     children: [
-                        (0, a.jsx)(i.Button, {
+                        (0, a.jsx)(C.Button, {
                             onClick: T,
-                            color: i.Button.Colors.BRAND,
+                            color: C.Button.Colors.BRAND,
                             disabled: null == d,
                             children: l.Z.Messages.SUBMIT
                         }),
-                        (0, a.jsx)(i.Checkbox, {
-                            type: i.Checkbox.Types.INVERTED,
+                        (0, a.jsx)(C.Checkbox, {
+                            type: C.Checkbox.Types.INVERTED,
                             value: c,
                             onChange: (e, t) => A(t),
                             size: 20,
                             className: r.__invalid_checkbox,
-                            children: (0, a.jsx)(i.Text, {
+                            children: (0, a.jsx)(C.Text, {
                                 variant: 'text-sm/medium',
                                 children: l.Z.Messages.APPLICATION_SUBSCRIPTION_CANCELLATION_SURVEY_DONT_SHOW_AGAIN
                             })

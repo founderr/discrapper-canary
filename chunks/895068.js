@@ -24,8 +24,8 @@ var i,
     g = n(823379),
     p = n(51144),
     T = n(945124),
-    S = n(231467),
-    f = n(301544),
+    f = n(231467),
+    S = n(301544),
     C = n(931515),
     N = n(286083),
     A = n(207796),
@@ -49,7 +49,7 @@ function P(e) {
         },
         className: O.animatedCard,
         children: (0, l.jsx)(
-            S.ZP,
+            f.ZP,
             {
                 clan: n,
                 affinity: null !== (t = n.affininty) && void 0 !== t ? t : (0, T.y)(n, s),
@@ -65,8 +65,8 @@ function P(e) {
 ((s = i || (i = {})).TOP_PICKS = 'top_picks'), (s.OTHER_GUILDS = 'other_guilds'), (s.PAGINATION = 'pagination'), (s.HEADER_SPACER = 'header_spacer'), ((r = a || (a = {})).DEFAULT = 'default'), (r.GLOBAL_DISCOVERY = 'global_discovery'), (r.SAVED_GUILDS = 'saved_guilds');
 t.ZP = o.memo(function (e) {
     var t, n, i, a, s, r;
-    let { width: c, paddingVertical: T = 16, paddingHorizontal: S = 32, variant: Z = 'default', onUpdatePage: b } = e,
-        M = o.useMemo(() => Math.max(Math.min(null != c ? c : 1024, 1300) - 2 * S, 0), [c, S]),
+    let { width: c, paddingVertical: T = 16, paddingHorizontal: f = 32, variant: Z = 'default', onUpdatePage: b } = e,
+        M = o.useMemo(() => Math.max(Math.min(null != c ? c : 1024, 1300) - 2 * f, 0), [c, f]),
         D = o.useMemo(() => {
             if (0 === M) return 1;
             let e = M / 256,
@@ -213,7 +213,7 @@ t.ZP = o.memo(function (e) {
             },
             [q, D, V, z, ee, Z, G, w, J, $]
         ),
-        en = o.useCallback((e) => (0, l.jsx)(f.Z, { style: { transform: 'translateY(-6px)' } }, e), []),
+        en = o.useCallback((e) => (0, l.jsx)(S.Z, { style: { transform: 'translateY(-6px)' } }, e), []),
         ei = o.useCallback(
             (e) => {
                 let { header: t, subtitle: n, section: i } = q[e];
@@ -323,10 +323,10 @@ t.ZP = o.memo(function (e) {
                 className: O.sectionContainer,
                 style: {
                     paddingTop: T,
-                    paddingLeft: S,
-                    paddingRight: S,
+                    paddingLeft: f,
+                    paddingRight: f,
                     paddingBottom: T,
-                    width: 'calc(100% - '.concat(2 * S, 'px)'),
+                    width: 'calc(100% - '.concat(2 * f, 'px)'),
                     gap: ''.concat(16, 'px')
                 },
                 children: ea.map((e, t) => {
