@@ -139,18 +139,28 @@ t.Z = {
             });
     },
     setInputVolume(e) {
+        let { analyticsLocations: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
         !I() &&
-            r.Z.dispatch({
+            (r.Z.dispatch({
                 type: 'AUDIO_SET_INPUT_VOLUME',
                 volume: e
-            });
+            }),
+            l.default.track(d.rMx.MEDIA_INPUT_VOLUME_CHANGED, {
+                volume: e,
+                location_stack: t
+            }));
     },
     setOutputVolume(e) {
+        let { analyticsLocations: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
         !I() &&
-            r.Z.dispatch({
+            (r.Z.dispatch({
                 type: 'AUDIO_SET_OUTPUT_VOLUME',
                 volume: e
-            });
+            }),
+            l.default.track(d.rMx.MEDIA_OUTPUT_VOLUME_CHANGED, {
+                volume: e,
+                location_stack: t
+            }));
     },
     setInputDevice(e) {
         let { location: t, analyticsLocations: n } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};

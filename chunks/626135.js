@@ -217,6 +217,14 @@ let A = {
     [f.rMx.KEYWORD_FILTER_MATCH]: {
         throttlePeriod: 900000,
         throttleKeys: (e) => [e.message_id]
+    },
+    [f.rMx.MEDIA_INPUT_VOLUME_CHANGED]: {
+        throttlePeriod: 300000,
+        throttleKeys: (e) => [e.location_stack]
+    },
+    [f.rMx.MEDIA_OUTPUT_VOLUME_CHANGED]: {
+        throttlePeriod: 300000,
+        throttleKeys: (e) => [e.location_stack]
     }
 };
 function N(e) {

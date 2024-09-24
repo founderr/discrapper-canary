@@ -4928,6 +4928,8 @@ let ie = Object.freeze({
     (nf.POST_ACTION_UPSELL_PRIMARY_ACTION_CLICKED = 'post_action_upsell_primary_action_clicked'),
     (nf.POST_ACTION_UPSELL_SECONDARY_ACTION_CLICKED = 'post_action_upsell_secondary_action_clicked'),
     (nf.FRIEND_ANNIVERSARIES_CHANNEL_VIEWED = 'friend_anniversaries_channel_viewed'),
+    (nf.MEDIA_INPUT_VOLUME_CHANGED = 'media_input_volume_changed'),
+    (nf.MEDIA_OUTPUT_VOLUME_CHANGED = 'media_output_volume_changed'),
     ((nS = eW || (eW = {})).CANARY = 'canary'),
     (nS.PTB = 'ptb'),
     (nS.STABLE = 'stable'),

@@ -605,13 +605,16 @@ class eV extends a.PureComponent {
                 o()(null != i, 'Channel is null during navigation click'), e.stopPropagation(), T.Z.channelListScrollTo(null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : eb.ME, i.id);
             }),
             ej(this, 'handleChannelLinkContextMenu', (e) => {
-                let { channel: t } = this.props;
+                let { channel: t, analyticsLocations: a } = this.props;
                 (0, p.jW)(e, async () => {
                     let { default: e } = await n.e('56944').then(n.bind(n, 600830));
                     return (n) =>
-                        (0, i.jsx)(e, {
-                            ...n,
-                            channel: t
+                        (0, i.jsx)(P.Gt, {
+                            value: a,
+                            children: (0, i.jsx)(e, {
+                                ...n,
+                                channel: t
+                            })
                         });
                 });
             }),
@@ -752,7 +755,8 @@ t.Z = (0, f.Z)(function (e) {
                     voiceStates: A,
                     showVoiceStates: S,
                     shouldShowVoicePanelIntroduction: E,
-                    isPrivateChannelWithEnabledActivities: M
+                    isPrivateChannelWithEnabledActivities: M,
+                    analyticsLocations: O
                 }),
                 !L && p && null != c
                     ? (0, i.jsxs)('div', {
