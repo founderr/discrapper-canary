@@ -378,6 +378,7 @@ function Y() {
                         renderPopout: C,
                         position: 'bottom',
                         autoInvert: !1,
+                        closeOnScroll: !0,
                         children: (t) =>
                             (0, n.jsx)(d.TabBar.Header, {
                                 ...t,
