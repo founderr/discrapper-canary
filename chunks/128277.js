@@ -136,7 +136,7 @@ function D(e) {
                         (0, r.jsx)(g.Z, {
                             text: G.text,
                             icon: G.icon,
-                            tags: (0, r.jsx)(C.Z, {
+                            contextMenu: (0, r.jsx)(C.Z, {
                                 display: 'live',
                                 user: t,
                                 activity: a,

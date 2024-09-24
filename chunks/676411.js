@@ -2,7 +2,7 @@ e.exports = {
     card: 'card_ae1fa2',
     header: 'header_ae1fa2',
     headerText: 'headerText_ae1fa2',
-    headerTags: 'headerTags_ae1fa2',
+    headerContextMenu: 'headerContextMenu_ae1fa2',
     absolute: 'absolute_ae1fa2',
     panel: 'panel_ae1fa2',
     platformIcon: 'platformIcon_ae1fa2',

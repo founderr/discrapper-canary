@@ -108,7 +108,7 @@ function u(e, t) {
         case r.x.PAYMENT_SOURCES_COUNTRY_CODE:
             return [i.Z.Messages.SCOPE_PAYMENT_SOURCES_COUNTRY_CODE];
         case r.x.SDK_SOCIAL_LAYER:
-            return [i.Z.Messages.SCOPE_SDK_SOCIAL_LAYER_1, i.Z.Messages.SCOPE_SDK_SOCIAL_LAYER_2, i.Z.Messages.SCOPE_SDK_SOCIAL_LAYER_3, i.Z.Messages.SCOPE_SDK_SOCIAL_LAYER_4, i.Z.Messages.SCOPE_SDK_SOCIAL_LAYER_5, i.Z.Messages.SCOPE_SDK_SOCIAL_LAYER_6];
+            return [i.Z.Messages.SCOPE_SDK_SOCIAL_LAYER_1, i.Z.Messages.SCOPE_SDK_SOCIAL_LAYER_2, i.Z.Messages.SCOPE_SDK_SOCIAL_LAYER_3, i.Z.Messages.SCOPE_SDK_SOCIAL_LAYER_4, i.Z.Messages.SCOPE_SDK_SOCIAL_LAYER_5];
         default:
             return [e];
     }

@@ -18,7 +18,7 @@ function d(e) {
         { accountScopes: n } = e,
         a = [];
     return (n.includes(i.x.SDK_SOCIAL_LAYER) &&
-        ((t = u.Z.Messages.AUTHORIZE_EDUCATION_SOCIAL_LAYER_HEADING.format({ learnMoreURL: o.Z.getArticleURL('') })),
+        ((t = u.Z.Messages.AUTHORIZE_EDUCATION_SOCIAL_LAYER_HEADING.format({ learnMoreURL: o.Z.getArticleURL(l.BhN.SOCIAL_LAYER_CONNECTIONS) })),
         a.push(
             {
                 icon: s.FriendsIcon,
@@ -29,12 +29,12 @@ function d(e) {
                 text: u.Z.Messages.AUTHORIZE_EDUCATION_SOCIAL_LAYER_MESSAGING
             },
             {
-                icon: s.RefreshIcon,
-                text: u.Z.Messages.AUTHORIZE_EDUCATION_SOCIAL_LAYER_HISTORY
-            },
-            {
                 icon: s.GameControllerIcon,
                 text: u.Z.Messages.AUTHORIZE_EDUCATION_SOCIAL_LAYER_ACTIVITY
+            },
+            {
+                icon: s.SettingsIcon,
+                text: u.Z.Messages.AUTHORIZE_EDUCATION_SOCIAL_LAYER_PROMOTIONS
             }
         )),
     0 === a.length)

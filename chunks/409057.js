@@ -268,7 +268,7 @@ function B(e) {
                         (0, r.jsx)(C.Z, {
                             text: X.text,
                             icon: X.icon,
-                            tags: (0, r.jsx)(M.Z, {
+                            contextMenu: (0, r.jsx)(M.Z, {
                                 display: 'live',
                                 user: t,
                                 activity: i,

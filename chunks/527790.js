@@ -331,7 +331,7 @@ function k(e) {
                           l = (e) =>
                               (0, r.jsx)(C.Z, {
                                   text: c === b.y0.FULL_SIZE ? null : e,
-                                  tags: s
+                                  contextMenu: s
                                       ? null
                                       : (0, r.jsx)(D.Z, {
                                             display: 'recent',

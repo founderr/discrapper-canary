@@ -23,8 +23,8 @@ function d(e) {
             (0, s.vE)(e);
     }
 }
-function u(e) {
-    let t = (0, r.a)({ location: 'discovery_history_util' }),
-        n = (0, i.rx)('discovery_history_util');
-    t && n && (1 === e.length ? (0, a.uL)(o.Z5c.DISCOVERY_GUILD_GAME_RESULTS(e[0])) : (0, a.uL)(o.Z5c.GLOBAL_DISCOVERY_SERVERS));
+function u() {
+    let e = (0, r.a)({ location: 'discovery_history_util' }),
+        t = (0, i.rx)('discovery_history_util');
+    e && t && (0, a.uL)(o.Z5c.GLOBAL_DISCOVERY_SERVERS);
 }

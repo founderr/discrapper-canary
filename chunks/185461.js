@@ -2053,8 +2053,8 @@ ${eQ}
     }),
     e0 = '/home/runner/work/sentry-javascript/sentry-javascript/packages/feedback/src/screenshot/components/ScreenshotEditor.tsx',
     e1 = 33,
-    e2 = s.devicePixelRatio,
-    e3 = (e) => ({
+    e3 = s.devicePixelRatio,
+    e2 = (e) => ({
         x: Math.min(e.startX, e.endX),
         y: Math.min(e.startY, e.endY),
         width: Math.abs(e.startX - e.endX),
@@ -2237,11 +2237,11 @@ ${eQ}
                             [N, p] = t.useState(!1);
                         function O() {
                             let e = l.current,
-                                t = e3(e6(r));
+                                t = e2(e6(r));
                             if (e) {
-                                (e.width = t.width * e2), (e.height = t.height * e2), (e.style.width = `${t.width}px`), (e.style.height = `${t.height}px`);
+                                (e.width = t.width * e3), (e.height = t.height * e3), (e.style.width = `${t.width}px`), (e.style.height = `${t.height}px`);
                                 let r = e.getContext('2d');
-                                r && r.scale(e2, e2);
+                                r && r.scale(e3, e3);
                             }
                             let n = u.current;
                             n && ((n.style.width = `${t.width}px`), (n.style.height = `${t.height}px`)),
@@ -2268,8 +2268,8 @@ ${eQ}
                                 if (!e) return;
                                 let t = e.getContext('2d');
                                 if (!t) return;
-                                let n = e3(e6(r)),
-                                    a = e3(R);
+                                let n = e2(e6(r)),
+                                    a = e2(R);
                                 t.clearRect(0, 0, n.width, n.height), (t.fillStyle = 'rgba(0, 0, 0, 0.5)'), t.fillRect(0, 0, n.width, n.height), t.clearRect(a.x, a.y, a.width, a.height), (t.strokeStyle = '#ffffff'), (t.lineWidth = 3), t.strokeRect(a.x + 1, a.y + 1, a.width - 2, a.height - 2), (t.strokeStyle = '#000000'), (t.lineWidth = 1), t.strokeRect(a.x + 3, a.y + 3, a.width - 6, a.height - 6);
                             }, [R]);
                         let S = t.useCallback(
@@ -2291,7 +2291,7 @@ ${eQ}
                                             case 'top-right':
                                                 A((e) => ({
                                                     ...e,
-                                                    endX: Math.max(Math.min(a, r.width / e2), e.startX + e1),
+                                                    endX: Math.max(Math.min(a, r.width / e3), e.startX + e1),
                                                     startY: Math.min(Math.max(0, o), e.endY - e1)
                                                 }));
                                                 break;
@@ -2299,14 +2299,14 @@ ${eQ}
                                                 A((e) => ({
                                                     ...e,
                                                     startX: Math.min(Math.max(0, a), e.endX - e1),
-                                                    endY: Math.max(Math.min(o, r.height / e2), e.startY + e1)
+                                                    endY: Math.max(Math.min(o, r.height / e3), e.startY + e1)
                                                 }));
                                                 break;
                                             case 'bottom-right':
                                                 A((e) => ({
                                                     ...e,
-                                                    endX: Math.max(Math.min(a, r.width / e2), e.startX + e1),
-                                                    endY: Math.max(Math.min(o, r.height / e2), e.startY + e1)
+                                                    endX: Math.max(Math.min(a, r.width / e3), e.startX + e1),
+                                                    endY: Math.max(Math.min(o, r.height / e3), e.startY + e1)
                                                 }));
                                         }
                                     },
@@ -2395,8 +2395,8 @@ ${eQ}
                                                         let r = e.clientX - L.current.initialX,
                                                             n = e.clientY - L.current.initialY;
                                                         A((a) => {
-                                                            let o = Math.max(0, Math.min(a.startX + r, t.width / e2 - (a.endX - a.startX))),
-                                                                i = Math.max(0, Math.min(a.startY + n, t.height / e2 - (a.endY - a.startY))),
+                                                            let o = Math.max(0, Math.min(a.startX + r, t.width / e3 - (a.endX - a.startX))),
+                                                                i = Math.max(0, Math.min(a.startY + n, t.height / e3 - (a.endY - a.startY))),
                                                                 _ = o + (a.endX - a.startX),
                                                                 E = i + (a.endY - a.startY);
                                                             return (
@@ -2495,8 +2495,8 @@ ${eQ}
                                                                 A({
                                                                     startX: 0,
                                                                     startY: 0,
-                                                                    endX: l.current.width / e2,
-                                                                    endY: l.current.height / e2
+                                                                    endX: l.current.width / e3,
+                                                                    endY: l.current.height / e3
                                                                 }),
                                                             d(!1);
                                                     },
@@ -2516,9 +2516,9 @@ ${eQ}
                                                         e.preventDefault(),
                                                             !(function () {
                                                                 let e = c.createElement('canvas'),
-                                                                    t = e3(e6(r)),
-                                                                    n = e3(R);
-                                                                (e.width = n.width * e2), (e.height = n.height * e2);
+                                                                    t = e2(e6(r)),
+                                                                    n = e2(R);
+                                                                (e.width = n.width * e3), (e.height = n.height * e3);
                                                                 let a = e.getContext('2d');
                                                                 a && r && a.drawImage(r, (n.x / t.width) * r.width, (n.y / t.height) * r.height, (n.width / t.width) * r.width, (n.height / t.height) * r.height, 0, 0, e.width, e.height);
                                                                 let o = r.getContext('2d');

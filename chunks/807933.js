@@ -120,7 +120,7 @@ let A = {
                 m = a.useMemo(() => !o()(E, h), [h, E]),
                 S = a.useCallback(() => {
                     var e;
-                    p.GN.getState().setSelectedGames(E.games), p.GN.getState().setSelectedPlaystyle(null !== (e = E.playstyle) && void 0 !== e ? e : null), p.GN.getState().setSelectedTraits(E.traits), (0, I.O)(E.games);
+                    p.GN.getState().setSelectedGames(E.games), p.GN.getState().setSelectedPlaystyle(null !== (e = E.playstyle) && void 0 !== e ? e : null), p.GN.getState().setSelectedTraits(E.traits), (0, I.O)();
                 }, [E.games, E.playstyle, E.traits]),
                 f = a.useCallback(() => {
                     r(new Set(h.games)), c(h.playstyle), _(new Set(h.traits));
