@@ -49,7 +49,7 @@ let s = (e) =>
             return (
                 (t.effects = t.effects.map((e) => {
                     var t;
-                    return (null === (t = e.randomizedSources) || void 0 === t ? void 0 : t.length) > 0 && (e.src = e.randomizedSources[n]), e;
+                    return (null === (t = e.randomizedSources) || void 0 === t ? void 0 : t.length) > 0 && (e.src = e.randomizedSources[n].src), e;
                 })),
                 t
             );

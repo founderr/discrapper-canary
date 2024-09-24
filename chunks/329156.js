@@ -19,7 +19,7 @@ s.Z = (e) => {
                 );
                 e > 0 &&
                     s.effects.forEach((s, n) => {
-                        null != s.randomizedSources && s.randomizedSources.length > 0 && (t.effects[n].src = s.randomizedSources[e - 1]);
+                        null != s.randomizedSources && s.randomizedSources.length > 0 && (t.effects[n].src = s.randomizedSources[e - 1].src);
                     });
             }
             return t;

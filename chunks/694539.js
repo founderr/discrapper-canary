@@ -320,7 +320,7 @@ s.Z = (e) => {
                                                   (0, n.jsx)(
                                                       'img',
                                                       {
-                                                          src: e,
+                                                          src: e.src,
                                                           className: N.layerPreview,
                                                           alt: ''
                                                       },
@@ -450,7 +450,7 @@ s.Z = (e) => {
                                                                           b((t) => {
                                                                               if (null == e.target || 'string' != typeof e.target.result) return t;
                                                                               let n = [...t];
-                                                                              return null == t[s].randomizedSources && (t[s].randomizedSources = []), t[s].randomizedSources.push(e.target.result), n;
+                                                                              return null == t[s].randomizedSources && (t[s].randomizedSources = []), t[s].randomizedSources.push({ src: e.target.result }), n;
                                                                           });
                                                                       }),
                                                                           a.readAsDataURL(n);

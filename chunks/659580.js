@@ -31,9 +31,9 @@ function g(e) {
     let v = (0, p.Z)(),
         N = (0, h.Z)(S),
         A = (0, m.Z)(S),
-        Z = (0, c.Z)(),
-        M = (0, u.Z)(),
-        b = (0, d.Z)();
+        Z = (0, c.Z)(S),
+        M = (0, u.Z)(S),
+        b = (0, d.Z)(S);
     return (0, i.jsx)(l.Z, {
         object: _.qAy.CONTEXT_MENU,
         children: (0, i.jsxs)(a.Menu, {

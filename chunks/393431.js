@@ -13,7 +13,7 @@ var i = t(481060),
 function r() {
     let { analyticsLocations: n } = (0, s.ZP)();
     return [
-        (0, u.jsx)(i.MenuGroup, { children: (0, o.Z)() }, 'input-mode-items'),
+        (0, u.jsx)(i.MenuGroup, { children: (0, o.Z)(n) }, 'input-mode-items'),
         (0, u.jsxs)(
             i.MenuGroup,
             {

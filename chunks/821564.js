@@ -12,20 +12,20 @@ var s = n(442837),
     o = n(358085),
     c = n(981631),
     u = n(689938);
-function d() {
-    let e = !o.isPlatformEmbedded,
-        t = (0, s.e7)([r.Z], () => r.Z.getMode()),
-        n = (e, n) =>
+function d(e) {
+    let t = !o.isPlatformEmbedded,
+        n = (0, s.e7)([r.Z], () => r.Z.getMode()),
+        d = (t, s) =>
             (0, i.jsx)(
                 a.MenuRadioItem,
                 {
-                    id: e,
+                    id: t,
                     group: 'input-modes',
-                    label: n,
-                    checked: t === e,
-                    action: () => l.Z.setMode(e)
+                    label: s,
+                    checked: n === t,
+                    action: () => l.Z.setMode(t, void 0, void 0, { analyticsLocations: e })
                 },
-                e
+                t
             );
-    return [n(c.pM4.VOICE_ACTIVITY, u.Z.Messages.INPUT_MODE_VAD), n(c.pM4.PUSH_TO_TALK, e ? u.Z.Messages.INPUT_MODE_PTT_LIMITED : u.Z.Messages.INPUT_MODE_PTT)];
+    return [d(c.pM4.VOICE_ACTIVITY, u.Z.Messages.INPUT_MODE_VAD), d(c.pM4.PUSH_TO_TALK, t ? u.Z.Messages.INPUT_MODE_PTT_LIMITED : u.Z.Messages.INPUT_MODE_PTT)];
 }
