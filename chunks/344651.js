@@ -1612,7 +1612,7 @@ B(
                     lastPinTimestamp: e.last_pin_timestamp
                 })),
                 voiceStates: e.updated_voice_states.map((e) => {
-                    var t;
+                    var t, n;
                     return {
                         channelId: e.channel_id,
                         deaf: e.deaf || !1,
@@ -1624,7 +1624,8 @@ B(
                         selfVideo: e.self_video || !1,
                         sessionId: e.session_id,
                         suppress: e.suppress,
-                        userId: e.user_id
+                        userId: e.user_id,
+                        discoverable: null === (n = e.discoverable) || void 0 === n || n
                     };
                 }),
                 removedVoiceStateUsers: e.removed_voice_states
