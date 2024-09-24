@@ -126,17 +126,24 @@ t.Z = {
     },
     setMode(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : _.Yn.DEFAULT;
-        !I() &&
-            r.Z.dispatch({
-                type: 'AUDIO_SET_MODE',
-                context: n,
-                mode: e,
-                options: {
-                    ...o.Z.getModeOptions(n),
-                    ...t
-                }
-            });
+            n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : _.Yn.DEFAULT,
+            { analyticsLocations: i } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+        if (I()) return;
+        let a = e !== o.Z.getMode();
+        r.Z.dispatch({
+            type: 'AUDIO_SET_MODE',
+            context: n,
+            mode: e,
+            options: {
+                ...o.Z.getModeOptions(n),
+                ...t
+            }
+        }),
+            a &&
+                l.default.track(d.rMx.VOICE_ACTIVATION_MODE_CHANGED, {
+                    mode: e,
+                    location_stack: i
+                });
     },
     setInputVolume(e) {
         let { analyticsLocations: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};

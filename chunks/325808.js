@@ -1,97 +1,80 @@
 t.d(s, {
     Z: function () {
-        return R;
+        return x;
     }
 });
-var n = t(735250);
-t(470079);
-var a = t(120356),
-    i = t.n(a),
-    r = t(442837),
-    o = t(481060),
-    l = t(846027),
-    c = t(230711),
-    d = t(825209),
-    _ = t(600164),
-    u = t(313201),
-    E = t(131951),
-    T = t(358085),
-    S = t(962100),
-    I = t(981631),
-    N = t(689938),
-    m = t(592142),
-    C = t(113207);
-let A = !T.isPlatformEmbedded,
-    g = (0, u.hQ)();
-function h(e) {
-    let { value: s } = e;
-    s === I.pM4.PUSH_TO_TALK &&
-        A &&
-        (0, o.openModalLazy)(async () => {
-            let { default: e } = await Promise.resolve().then(t.bind(t, 468026));
-            return (s) =>
-                (0, n.jsx)(e, {
-                    title: N.Z.Messages.PTT_LIMITED_TITLE,
-                    confirmText: N.Z.Messages.DOWNLOAD,
-                    cancelText: N.Z.Messages.OKAY,
-                    onConfirm: () => (0, S.y)('PTT Limited Modal'),
-                    body: N.Z.Messages.PTT_LIMITED_BODY,
-                    ...s
-                });
-        }),
-        l.Z.setMode(s);
-}
-function O(e) {
+var n = t(735250),
+    a = t(470079),
+    i = t(120356),
+    r = t.n(i),
+    o = t(442837),
+    l = t(481060),
+    c = t(846027),
+    d = t(230711),
+    _ = t(825209),
+    u = t(906732),
+    E = t(600164),
+    T = t(313201),
+    S = t(131951),
+    I = t(358085),
+    N = t(962100),
+    m = t(981631),
+    C = t(689938),
+    A = t(592142),
+    g = t(113207);
+let h = !I.isPlatformEmbedded,
+    O = (0, T.hQ)();
+function p(e) {
     return e >= 1000 ? ((e /= 1000), ''.concat(e.toFixed(2), 's')) : ''.concat(e.toFixed(0), ' ms');
 }
-function p(e) {
+function R(e) {
     let s,
         { inputMode: t } = e,
-        { shortcut: a, delay: u } = (0, r.cj)([E.Z], () => E.Z.getModeOptions());
+        { shortcut: a, delay: i } = (0, o.cj)([S.Z], () => S.Z.getModeOptions());
     return (
         (s =
-            T.isPlatformEmbedded || t !== I.pM4.PUSH_TO_TALK
-                ? (0, n.jsx)(o.FormText, {
-                      type: o.FormText.Types.DESCRIPTION,
-                      className: i()(m.pttToolsMessage, C.marginBottom8),
-                      children: N.Z.Messages.USER_SETTINGS_VOICE_ADD_MULTIPLE.format({ onClick: () => c.Z.setSection(I.oAB.KEYBINDS) })
+            I.isPlatformEmbedded || t !== m.pM4.PUSH_TO_TALK
+                ? (0, n.jsx)(l.FormText, {
+                      type: l.FormText.Types.DESCRIPTION,
+                      className: r()(A.pttToolsMessage, g.marginBottom8),
+                      children: C.Z.Messages.USER_SETTINGS_VOICE_ADD_MULTIPLE.format({ onClick: () => d.Z.setSection(m.oAB.KEYBINDS) })
                   })
-                : (0, n.jsx)(o.FormText, {
-                      type: o.FormText.Types.DESCRIPTION,
-                      className: i()(m.pttToolsMessage, m.pttToolsWarning, C.marginBottom8),
-                      children: N.Z.Messages.PTT_LIMITED_WARNING.format({ onDownloadClick: () => (0, S.y)('Help Text PTT') })
+                : (0, n.jsx)(l.FormText, {
+                      type: l.FormText.Types.DESCRIPTION,
+                      className: r()(A.pttToolsMessage, A.pttToolsWarning, g.marginBottom8),
+                      children: C.Z.Messages.PTT_LIMITED_WARNING.format({ onDownloadClick: () => (0, N.y)('Help Text PTT') })
                   })),
         (0, n.jsxs)('div', {
-            className: m.pttTools,
+            className: A.pttTools,
             children: [
-                (0, n.jsxs)(_.Z, {
+                (0, n.jsxs)(E.Z, {
                     children: [
-                        (0, n.jsx)(_.Z.Child, {
+                        (0, n.jsx)(E.Z.Child, {
                             basis: '50%',
-                            children: (0, n.jsx)(o.FormItem, {
-                                title: N.Z.Messages.FORM_LABEL_SHORTCUT,
-                                children: (0, n.jsx)(d.Z, {
+                            children: (0, n.jsx)(l.FormItem, {
+                                title: C.Z.Messages.FORM_LABEL_SHORTCUT,
+                                children: (0, n.jsx)(_.Z, {
                                     defaultValue: a,
-                                    onChange: (e) => l.Z.setMode(t, { shortcut: e })
+                                    onChange: (e) => c.Z.setMode(t, { shortcut: e })
                                 })
                             })
                         }),
-                        (0, n.jsx)(_.Z.Child, {
+                        (0, n.jsx)(E.Z.Child, {
                             basis: '50%',
-                            children: (0, n.jsxs)(o.FormItem, {
+                            children: (0, n.jsxs)(l.FormItem, {
                                 children: [
-                                    (0, n.jsx)(o.FormTitle, {
-                                        id: g,
-                                        tag: o.FormTitleTags.H5,
-                                        className: C.marginBottom8,
-                                        children: N.Z.Messages.INPUT_MODE_PTT_RELEASE_DELAY
+                                    (0, n.jsx)(l.FormTitle, {
+                                        id: O,
+                                        tag: l.FormTitleTags.H5,
+                                        className: g.marginBottom8,
+                                        children: C.Z.Messages.INPUT_MODE_PTT_RELEASE_DELAY
                                     }),
-                                    (0, n.jsx)(o.Slider, {
-                                        initialValue: u,
-                                        onValueChange: (e) => l.Z.setMode(t, { delay: e }),
-                                        onValueRender: O,
-                                        maxValue: I.qhL,
-                                        'aria-labelledby': g
+                                    (0, n.jsx)(l.Slider, {
+                                        initialValue: i,
+                                        onValueChange: (e) => c.Z.setMode(t, { delay: e }),
+                                        onValueRender: p,
+                                        maxValue: m.qhL,
+                                        'aria-labelledby': O
                                     })
                                 ]
                             })
@@ -103,30 +86,52 @@ function p(e) {
         })
     );
 }
-function R() {
-    let e = (0, r.e7)([E.Z], () => E.Z.getMode()),
-        s = [
+function x() {
+    let { analyticsLocations: e } = (0, u.ZP)(),
+        s = (0, o.e7)([S.Z], () => S.Z.getMode()),
+        i = [
             {
-                value: I.pM4.VOICE_ACTIVITY,
-                name: N.Z.Messages.INPUT_MODE_VAD
+                value: m.pM4.VOICE_ACTIVITY,
+                name: C.Z.Messages.INPUT_MODE_VAD
             },
             {
-                value: I.pM4.PUSH_TO_TALK,
-                name: A ? N.Z.Messages.INPUT_MODE_PTT_LIMITED : N.Z.Messages.INPUT_MODE_PTT
+                value: m.pM4.PUSH_TO_TALK,
+                name: h ? C.Z.Messages.INPUT_MODE_PTT_LIMITED : C.Z.Messages.INPUT_MODE_PTT
             }
-        ];
+        ],
+        r = a.useCallback(
+            (s) => {
+                let { value: a } = s;
+                a === m.pM4.PUSH_TO_TALK &&
+                    h &&
+                    (0, l.openModalLazy)(async () => {
+                        let { default: e } = await Promise.resolve().then(t.bind(t, 468026));
+                        return (s) =>
+                            (0, n.jsx)(e, {
+                                title: C.Z.Messages.PTT_LIMITED_TITLE,
+                                confirmText: C.Z.Messages.DOWNLOAD,
+                                cancelText: C.Z.Messages.OKAY,
+                                onConfirm: () => (0, N.y)('PTT Limited Modal'),
+                                body: C.Z.Messages.PTT_LIMITED_BODY,
+                                ...s
+                            });
+                    }),
+                    c.Z.setMode(a, void 0, void 0, { analyticsLocations: e });
+            },
+            [e]
+        );
     return (0, n.jsxs)(n.Fragment, {
         children: [
-            (0, n.jsx)(o.FormItem, {
-                title: N.Z.Messages.FORM_LABEL_INPUT_MODE,
-                className: C.marginBottom20,
-                children: (0, n.jsx)(o.RadioGroup, {
-                    onChange: h,
-                    options: s,
-                    value: e
+            (0, n.jsx)(l.FormItem, {
+                title: C.Z.Messages.FORM_LABEL_INPUT_MODE,
+                className: g.marginBottom20,
+                children: (0, n.jsx)(l.RadioGroup, {
+                    onChange: r,
+                    options: i,
+                    value: s
                 })
             }),
-            e === I.pM4.PUSH_TO_TALK && (0, n.jsx)(p, { inputMode: e })
+            s === m.pM4.PUSH_TO_TALK && (0, n.jsx)(R, { inputMode: s })
         ]
     });
 }

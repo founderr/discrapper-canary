@@ -4930,6 +4930,7 @@ let ie = Object.freeze({
     (nf.FRIEND_ANNIVERSARIES_CHANNEL_VIEWED = 'friend_anniversaries_channel_viewed'),
     (nf.MEDIA_INPUT_VOLUME_CHANGED = 'media_input_volume_changed'),
     (nf.MEDIA_OUTPUT_VOLUME_CHANGED = 'media_output_volume_changed'),
+    (nf.VOICE_ACTIVATION_MODE_CHANGED = 'voice_activation_mode_changed'),
     ((nS = eW || (eW = {})).CANARY = 'canary'),
     (nS.PTB = 'ptb'),
     (nS.STABLE = 'stable'),
