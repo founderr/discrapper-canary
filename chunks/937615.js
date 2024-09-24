@@ -7,6 +7,9 @@ n.d(t, {
     },
     og: function () {
         return l;
+    },
+    xg: function () {
+        return c;
     }
 }),
     n(411104);
@@ -34,4 +37,8 @@ function u(e, t) {
         style: 'percent',
         minimumFractionDigits: 0
     }).format(t);
+}
+function c(e) {
+    let t = 'interval_count' in e ? e.interval_count : e.intervalCount;
+    return l(o(e.price, e.currency), e.interval, t);
 }

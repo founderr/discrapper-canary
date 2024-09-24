@@ -1,337 +1,348 @@
 t.d(s, {
     Z: function () {
-        return M;
+        return L;
     }
 }),
     t(47120);
 var n = t(735250),
     a = t(470079),
-    i = t(269210),
-    r = t(442837),
-    o = t(481060),
-    l = t(355467),
-    c = t(100527),
-    d = t(906732),
-    _ = t(601911),
-    u = t(812206),
-    E = t(565138),
-    T = t(374649),
-    S = t(908951),
-    I = t(255078),
-    N = t(430824),
-    m = t(509545),
-    C = t(580130),
-    A = t(55563),
-    g = t(937615),
-    h = t(488915),
-    O = t(171246),
-    p = t(889989),
-    R = t(981631),
-    x = t(689938),
-    f = t(73282);
-function M(e) {
-    var s, t, a, i, l;
-    let { subscription: I } = e,
+    i = t(561537),
+    r = t(269210),
+    o = t(442837),
+    l = t(481060),
+    c = t(355467),
+    d = t(100527),
+    _ = t(906732),
+    u = t(601911),
+    E = t(283836),
+    T = t(812206),
+    S = t(565138),
+    I = t(374649),
+    N = t(908951),
+    m = t(255078),
+    C = t(430824),
+    A = t(509545),
+    g = t(580130),
+    h = t(55563),
+    O = t(551428),
+    p = t(937615),
+    R = t(171246),
+    x = t(889989),
+    f = t(547283),
+    M = t(981631),
+    D = t(689938),
+    P = t(73282);
+function L(e) {
+    var s, t, a, r;
+    let { subscription: c, navigateToSwitchPlan: E } = e,
         {
-            app: p,
-            appIcon: M,
-            plan: v,
-            listing: j,
-            price: B,
-            isGuildSubscription: U,
-            subscriptionForGuild: G,
-            sku: F
-        } = (0, r.cj)(
-            [C.Z, m.Z, h.Z, u.Z, N.Z, A.Z],
+            app: m,
+            appIcon: x,
+            plan: f,
+            storeListing: L,
+            price: U,
+            isGuildSubscription: G,
+            subscriptionForGuild: F,
+            sku: y
+        } = (0, o.cj)(
+            [g.Z, O.Z, A.Z, T.Z, C.Z, h.Z],
             () => {
-                let e = C.Z.getForSubscription(I.id),
+                let e = g.Z.getForSubscription(c.id),
                     s = null != e && e.size > 0 ? Array.from(e)[0] : null,
                     t = null == s ? void 0 : s.applicationId,
-                    n = I.planId,
-                    a = m.Z.get(n),
-                    i = null != t ? u.Z.getApplication(t) : null,
-                    r = null != i ? (0, _.y)(i, 100) : null,
-                    o = h.Z.getSubscriptionListingForPlan(n),
-                    l = null != a ? (0, g.og)((0, g.T4)(a.price, a.currency), a.interval, a.intervalCount) : null,
-                    c = null != o && (0, O.KK)(o.sku_flags),
-                    d = c && null != s ? N.Z.getGuild(s.guildId) : void 0,
-                    E = null != o ? A.Z.get(o.id) : null;
+                    n = c.planId,
+                    a = A.Z.get(n),
+                    i = null != t ? T.Z.getApplication(t) : null,
+                    r = null != i ? (0, u.y)(i, 100) : null,
+                    o = null != a ? O.Z.getForSKU(a.skuId) : null,
+                    l = null != a ? (0, p.og)((0, p.T4)(a.price, a.currency), a.interval, a.intervalCount) : null,
+                    d = null != o && (0, R.KK)(o.skuFlags),
+                    _ = d && null != s ? C.Z.getGuild(s.guildId) : void 0,
+                    E = null != o ? h.Z.get(o.skuId) : null;
                 return {
                     app: i,
                     appIcon: r,
+                    isGuildSubscription: d,
                     plan: a,
-                    listing: o,
                     price: l,
-                    isGuildSubscription: c,
-                    subscriptionForGuild: d,
-                    sku: null != E ? E : void 0
+                    sku: null != E ? E : void 0,
+                    storeListing: o,
+                    subscriptionForGuild: _
                 };
             },
-            [I]
+            [c]
         ),
-        y = null !== (t = null !== (s = null == j ? void 0 : j.soft_deleted) && void 0 !== s ? s : null == F ? void 0 : F.deleted) && void 0 !== t && t,
-        V = null != F && (0, O.OL)(F),
-        Y = (0, O.Jf)(I, F),
-        w = I.status === R.O0b.PAST_DUE,
-        { analyticsLocations: k } = (0, d.ZP)(),
-        [H] = (0, T.ED)({
-            subscriptionId: I.id,
+        V = null !== (s = null == y ? void 0 : y.deleted) && void 0 !== s && s,
+        Y = null != y && (0, R.OL)(y),
+        w = (0, R.Jf)(c, y),
+        k = c.status === M.O0b.PAST_DUE,
+        { analyticsLocations: H } = (0, _.ZP)(),
+        [W] = (0, I.ED)({
+            subscriptionId: c.id,
             renewal: !0,
-            analyticsLocations: k,
-            analyticsLocation: c.Z.APP_SUBSCRIPTION_PAYMENT_SOURCE_WITH_INVOICE
+            analyticsLocations: H,
+            analyticsLocation: d.Z.APP_SUBSCRIPTION_PAYMENT_SOURCE_WITH_INVOICE
         }),
-        W = P(I.currentPeriodEnd);
-    return (0, n.jsxs)('div', {
-        className: f.wrapper,
-        children: [
-            (0, n.jsxs)('div', {
-                className: f.header,
-                children: [
-                    (0, n.jsxs)('div', {
-                        className: f.headerContent,
-                        children: [
-                            null != M &&
-                                (0, n.jsx)(o.Image, {
-                                    src: M.href,
-                                    imageClassName: f.appIcon,
-                                    width: 40,
-                                    height: 40
+        K = Z(c.currentPeriodEnd);
+    return (0, n.jsxs)(i.l, {
+        header: (0, n.jsxs)(n.Fragment, {
+            children: [
+                (0, n.jsxs)('div', {
+                    className: P.headerContent,
+                    children: [
+                        null != x &&
+                            (0, n.jsx)(l.Image, {
+                                src: x.href,
+                                imageClassName: P.appIcon,
+                                width: 40,
+                                height: 40
+                            }),
+                        (0, n.jsxs)('div', {
+                            children: [
+                                (0, n.jsx)(l.Heading, {
+                                    variant: 'heading-md/semibold',
+                                    children: null !== (t = null == m ? void 0 : m.name) && void 0 !== t ? t : D.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_CARD_APPLICATION_NAME_UNAVAILABLE
                                 }),
-                            (0, n.jsxs)('div', {
-                                children: [
-                                    (0, n.jsx)(o.Heading, {
-                                        variant: 'heading-md/semibold',
-                                        children: null !== (a = null == p ? void 0 : p.name) && void 0 !== a ? a : x.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_CARD_APPLICATION_NAME_UNAVAILABLE
-                                    }),
-                                    (0, n.jsx)(o.Text, {
-                                        variant: 'text-sm/medium',
-                                        color: 'header-secondary',
-                                        children: null !== (i = null == v ? void 0 : v.name) && void 0 !== i ? i : x.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_PLAN_NAME_UNAVAILABLE
-                                    })
-                                ]
-                            })
-                        ]
+                                (0, n.jsx)(l.Text, {
+                                    variant: 'text-sm/medium',
+                                    color: 'header-secondary',
+                                    children: null !== (a = null == f ? void 0 : f.name) && void 0 !== a ? a : D.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_PLAN_NAME_UNAVAILABLE
+                                })
+                            ]
+                        })
+                    ]
+                }),
+                (0, n.jsx)('div', {
+                    className: P.headerButtons,
+                    children:
+                        null != m &&
+                        null != L &&
+                        null != y &&
+                        (0, n.jsx)(j, {
+                            subscription: c,
+                            app: m,
+                            sku: y,
+                            storeListing: L,
+                            isCancelled: w,
+                            navigateToSwitchPlan: E
+                        })
+                })
+            ]
+        }),
+        children: [
+            w &&
+                (0, n.jsx)(v, {
+                    type: 'warning',
+                    title: Y ? D.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_APP_CANCELLED.format({ subscriptionPeriodEnd: K }) : D.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_USER_CANCELLED.format({ subscriptionPeriodEnd: K })
+                }),
+            k &&
+                (0, n.jsx)(v, {
+                    type: 'danger',
+                    title: D.Z.Messages.APPLICATION_SUBSCRIPTION_USER_SUBSCRIPTION_PAST_DUE_WARNING
+                }),
+            (0, n.jsxs)('div', {
+                className: P.details,
+                children: [
+                    (0, n.jsx)(b, {
+                        title: D.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_SUBSCRIPTION_TYPE,
+                        content: G
+                            ? (0, n.jsxs)(n.Fragment, {
+                                  children: [
+                                      (0, n.jsxs)('span', {
+                                          className: P.subscriptionTypeRow,
+                                          children: [(0, n.jsx)(l.ServerIcon, { size: 'xs' }), D.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_SERVER_SUBSCRIPTION]
+                                      }),
+                                      null != F &&
+                                          (0, n.jsxs)('span', {
+                                              className: P.guildSubscriptionContentRow,
+                                              children: [
+                                                  (0, n.jsx)(l.Text, {
+                                                      variant: 'text-sm/normal',
+                                                      color: 'text-muted',
+                                                      children: D.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_SUBSCRIPTION_USED_IN.format({ guildName: F.name })
+                                                  }),
+                                                  (0, n.jsx)(S.Z, {
+                                                      guild: F,
+                                                      size: S.Z.Sizes.MINI
+                                                  })
+                                              ]
+                                          })
+                                  ]
+                              })
+                            : (0, n.jsxs)('span', {
+                                  className: P.subscriptionTypeRow,
+                                  children: [(0, n.jsx)(l.UserIcon, { size: 'xs' }), D.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_CARD_PERSONAL_SUBSCRIPTION]
+                              })
                     }),
-                    (0, n.jsx)('div', {
-                        className: f.headerButtons,
-                        children:
-                            null != p &&
-                            null != j &&
-                            null != F &&
-                            (0, n.jsx)(b, {
-                                subscription: I,
-                                app: p,
-                                listing: j,
-                                sku: F,
-                                isCancelled: Y
-                            })
+                    null != U &&
+                        (0, n.jsx)(b, {
+                            title: D.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_PRICE,
+                            content: U
+                        }),
+                    (0, n.jsx)(b, {
+                        title: D.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_START_DATE,
+                        content: Z(null !== (r = c.createdAt) && void 0 !== r ? r : c.currentPeriodStart)
+                    }),
+                    (0, n.jsx)(b, {
+                        title: w ? D.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_END_DATE : D.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_RENEWAL_DATE,
+                        content: K
                     })
                 ]
             }),
             (0, n.jsxs)('div', {
-                className: f.content,
+                className: P.payment,
                 children: [
-                    Y &&
-                        (0, n.jsx)(L, {
-                            type: 'warning',
-                            title: V ? x.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_APP_CANCELLED.format({ subscriptionPeriodEnd: W }) : x.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_USER_CANCELLED.format({ subscriptionPeriodEnd: W })
-                        }),
-                    w &&
-                        (0, n.jsx)(L, {
-                            type: 'danger',
-                            title: x.Z.Messages.APPLICATION_SUBSCRIPTION_USER_SUBSCRIPTION_PAST_DUE_WARNING
-                        }),
-                    (0, n.jsxs)('div', {
-                        className: f.details,
-                        children: [
-                            (0, n.jsx)(D, {
-                                title: x.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_SUBSCRIPTION_TYPE,
-                                content: U
-                                    ? (0, n.jsxs)(n.Fragment, {
-                                          children: [
-                                              (0, n.jsxs)('span', {
-                                                  className: f.subscriptionTypeRow,
-                                                  children: [(0, n.jsx)(o.ServerIcon, { size: 'xs' }), x.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_SERVER_SUBSCRIPTION]
-                                              }),
-                                              null != G &&
-                                                  (0, n.jsxs)('span', {
-                                                      className: f.guildSubscriptionContentRow,
-                                                      children: [
-                                                          (0, n.jsx)(o.Text, {
-                                                              variant: 'text-sm/normal',
-                                                              color: 'text-muted',
-                                                              children: x.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_SUBSCRIPTION_USED_IN.format({ guildName: G.name })
-                                                          }),
-                                                          (0, n.jsx)(E.Z, {
-                                                              guild: G,
-                                                              size: E.Z.Sizes.MINI
-                                                          })
-                                                      ]
-                                                  })
-                                          ]
-                                      })
-                                    : (0, n.jsxs)('span', {
-                                          className: f.subscriptionTypeRow,
-                                          children: [(0, n.jsx)(o.UserIcon, { size: 'xs' }), x.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_CARD_PERSONAL_SUBSCRIPTION]
-                                      })
-                            }),
-                            null != B &&
-                                (0, n.jsx)(D, {
-                                    title: x.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_PRICE,
-                                    content: B
-                                }),
-                            (0, n.jsx)(D, {
-                                title: x.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_START_DATE,
-                                content: P(null !== (l = I.createdAt) && void 0 !== l ? l : I.currentPeriodStart)
-                            }),
-                            (0, n.jsx)(D, {
-                                title: Y ? x.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_END_DATE : x.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_RENEWAL_DATE,
-                                content: W
-                            })
-                        ]
-                    }),
-                    (0, n.jsxs)('div', {
-                        className: f.payment,
-                        children: [
-                            (0, n.jsx)(o.FormTitle, { children: x.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_PAYMENT_METHOD_LABEL }),
-                            null != H &&
-                                (0, n.jsx)(S.Z, {
-                                    subscription: I,
-                                    currentInvoicePreview: H,
-                                    disabled: y || Y
-                                })
-                        ]
-                    }),
-                    null != p &&
-                        (null == j ? void 0 : j.store_listing_benefits) != null &&
-                        (0, n.jsx)(Z, {
-                            appId: p.id,
-                            listingBenefits: j.store_listing_benefits
+                    (0, n.jsx)(l.FormTitle, { children: D.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_PAYMENT_METHOD_LABEL }),
+                    null != W &&
+                        (0, n.jsx)(N.Z, {
+                            subscription: c,
+                            currentInvoicePreview: W,
+                            disabled: V || w
                         })
                 ]
-            })
+            }),
+            null != m &&
+                (null == L ? void 0 : L.benefits) != null &&
+                (0, n.jsx)(B, {
+                    appId: m.id,
+                    listingBenefits: L.benefits
+                })
         ]
     });
 }
-function D(e) {
+function b(e) {
     let { title: s, content: t } = e;
     return (0, n.jsxs)('div', {
-        className: f.row,
+        className: P.row,
         children: [
-            (0, n.jsx)(o.Text, {
+            (0, n.jsx)(l.Text, {
                 variant: 'text-sm/medium',
                 children: s
             }),
-            (0, n.jsx)(o.Text, {
+            (0, n.jsx)(l.Text, {
                 variant: 'text-sm/medium',
-                className: f.rowContent,
+                className: P.rowContent,
                 children: t
             })
         ]
     });
 }
-function P(e) {
+function Z(e) {
     return e.toLocaleDateString(void 0, { dateStyle: 'long' });
 }
-function L(e) {
+function v(e) {
     let { type: s, title: t } = e;
-    return (0, n.jsx)(o.HelpMessage, {
-        messageType: 'warning' === s ? o.HelpMessageTypes.WARNING : o.HelpMessageTypes.ERROR,
-        children: (0, n.jsx)(o.Text, {
+    return (0, n.jsx)(l.HelpMessage, {
+        messageType: 'warning' === s ? l.HelpMessageTypes.WARNING : l.HelpMessageTypes.ERROR,
+        children: (0, n.jsx)(l.Text, {
             variant: 'text-sm/normal',
             children: t
         })
     });
 }
-function b(e) {
-    let { app: s, listing: i, sku: r, subscription: c, isCancelled: _, guild: u } = e,
-        E = (0, O.OL)(r),
-        { analyticsLocations: T } = (0, d.ZP)(),
-        [S, N] = a.useState(!1),
-        m = async () => {
+function j(e) {
+    let { app: s, storeListing: i, sku: r, subscription: d, isCancelled: u, guild: T, navigateToSwitchPlan: S } = e,
+        I = (0, R.OL)(r),
+        { analyticsLocations: N } = (0, _.ZP)(),
+        [C, A] = a.useState(!1),
+        g = (0, E.q)(s.id),
+        O = (0, o.e7)([h.Z], () => h.Z.getParentSKU(i.skuId), [i.skuId]),
+        p = a.useMemo(() => (null == O ? [] : (0, f.$)(i.id, O, g)), [i.id, g, O]),
+        x = 0 !== p.length,
+        M = async () => {
             try {
-                N(!0);
-                let { subscription: e } = await (0, l.pl)(c, T);
+                A(!0);
+                let { subscription: e } = await (0, c.pl)(d, N);
                 if (null == e) return;
-                (0, o.openModalLazy)(async () => {
+                (0, l.openModalLazy)(async () => {
                     let { default: s } = await t.e('18879').then(t.bind(t, 535278));
                     return (t) =>
                         (0, n.jsx)(s, {
                             ...t,
-                            listing: i,
-                            subscription: I.Z.createFromServer(e)
+                            storeListing: i,
+                            subscription: m.Z.createFromServer(e)
                         });
                 });
             } finally {
-                N(!1);
+                A(!1);
             }
         };
-    return E
-        ? null
-        : _
-          ? (0, n.jsx)(o.Button, {
-                color: o.Button.Colors.PRIMARY,
-                size: o.Button.Sizes.SMALL,
-                onClick: m,
-                submitting: S,
-                children: x.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_RESUME_PLAN
-            })
-          : (0, n.jsx)(o.Button, {
-                color: o.Button.Colors.CUSTOM,
-                size: o.Button.Sizes.SMALL,
-                className: f.secondaryBtn,
-                onClick: () => {
-                    (0, o.openModalLazy)(async () => {
-                        let { default: e } = await t.e('6284').then(t.bind(t, 257514));
-                        return (t) =>
-                            (0, n.jsx)(e, {
-                                ...t,
-                                application: s,
-                                listing: i,
-                                subscription: c,
-                                guild: u
-                            });
-                    });
-                },
-                children: x.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_CANCEL_PLAN
-            });
-}
-function Z(e) {
-    let { appId: s, listingBenefits: t } = e,
-        [r, l] = a.useReducer((e) => !e, !1),
-        c = a.useMemo(
-            () =>
-                t.map((e) => ({
-                    id: e.id,
-                    title: e.name,
-                    description: e.description,
-                    icon: (0, p.n)(s, e.icon)
-                })),
-            [s, t]
-        ),
-        d = r ? o.ChevronSmallUpIcon : o.ChevronSmallDownIcon;
     return (0, n.jsxs)('div', {
-        className: f.benefits,
+        className: P.managementBtns,
+        children: [
+            I
+                ? null
+                : u
+                  ? (0, n.jsx)(l.Button, {
+                        color: l.Button.Colors.PRIMARY,
+                        size: l.Button.Sizes.SMALL,
+                        onClick: M,
+                        submitting: C,
+                        children: D.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_RESUME_PLAN
+                    })
+                  : (0, n.jsx)(l.Button, {
+                        color: l.Button.Colors.CUSTOM,
+                        size: l.Button.Sizes.SMALL,
+                        className: P.secondaryBtn,
+                        onClick: () => {
+                            (0, l.openModalLazy)(async () => {
+                                let { default: e } = await t.e('6284').then(t.bind(t, 257514));
+                                return (t) =>
+                                    (0, n.jsx)(e, {
+                                        ...t,
+                                        application: s,
+                                        storeListing: i,
+                                        subscription: d,
+                                        guild: T
+                                    });
+                            });
+                        },
+                        children: D.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_CANCEL_PLAN
+                    }),
+            x &&
+                null != O &&
+                (0, n.jsx)(l.Button, {
+                    color: l.Button.Colors.BRAND,
+                    size: l.Button.Sizes.SMALL,
+                    onClick: () => {
+                        S({
+                            alternativeSubscriptions: p,
+                            app: s,
+                            bundleSku: O,
+                            currentSubscription: i
+                        });
+                    },
+                    children: D.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_SWITCH_PLAN
+                })
+        ]
+    });
+}
+function B(e) {
+    let { appId: s, listingBenefits: t } = e,
+        [i, o] = a.useReducer((e) => !e, !1),
+        c = i ? l.ChevronSmallUpIcon : l.ChevronSmallDownIcon;
+    return (0, n.jsxs)('div', {
+        className: P.benefits,
         children: [
             (0, n.jsxs)('div', {
-                className: f.benefitsHeader,
+                className: P.benefitsHeader,
                 children: [
-                    r &&
-                        (0, n.jsx)(o.Text, {
+                    i &&
+                        (0, n.jsx)(l.Text, {
                             variant: 'text-sm/semibold',
-                            children: x.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_SUBSCRIPTION_BENEFITS
+                            children: D.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_SUBSCRIPTION_BENEFITS
                         }),
-                    (0, n.jsxs)(o.Clickable, {
-                        className: f.benefitsBtn,
-                        onClick: l,
+                    (0, n.jsxs)(l.Clickable, {
+                        className: P.benefitsBtn,
+                        onClick: o,
                         children: [
-                            (0, n.jsx)(o.Text, {
+                            (0, n.jsx)(l.Text, {
                                 variant: 'heading-sm/semibold',
                                 tag: 'div',
                                 color: 'currentColor',
-                                children: r ? x.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_HIDE_BENEFITS : x.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_SHOW_BENEFITS
+                                children: i ? D.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_HIDE_BENEFITS : D.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_SHOW_BENEFITS
                             }),
-                            (0, n.jsx)(d, {
+                            (0, n.jsx)(c, {
                                 size: 'sm',
                                 color: 'currentColor'
                             })
@@ -339,18 +350,19 @@ function Z(e) {
                     })
                 ]
             }),
-            r
-                ? c.map((e) =>
-                      (0, n.jsx)(
-                          i.G,
+            i
+                ? t.map((e) => {
+                      let { id: t, name: a, description: i, icon: o } = e;
+                      return (0, n.jsx)(
+                          r.G,
                           {
-                              name: e.title,
-                              icon: e.icon,
-                              description: e.description
+                              name: a,
+                              icon: (0, x.n)(s, o),
+                              description: i
                           },
-                          e.id
-                      )
-                  )
+                          t
+                      );
+                  })
                 : null
         ]
     });
