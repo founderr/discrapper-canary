@@ -47,7 +47,7 @@ function h(e) {
                 className: T.planOptionDiscount,
                 children: S.Z.Messages.BILLING_PLAN_SELECTION_DISCOUNT.format({ discount: (0, I.T3)(A, j / 100) })
             }),
-        k = () =>
+        F = () =>
             (M.interval === N.rV.YEAR && null != n) || (w && !R)
                 ? M.interval === N.rV.YEAR && null != n
                     ? (0, i.jsxs)('span', {
@@ -99,7 +99,7 @@ function h(e) {
                                             [T.optionSelected]: s || O,
                                             [T.updatedOptionSelected]: b && (s || O)
                                         }),
-                                        children: [(0, f.L7)(M.interval, y, D, M.intervalCount, O, (0, f.Rd)(M.id)), O && k()]
+                                        children: [(0, f.L7)(M.interval, y, D, M.intervalCount, O, (0, f.Rd)(M.id)), O && F()]
                                     }),
                                     O &&
                                         (0, i.jsx)('div', {
@@ -113,13 +113,23 @@ function h(e) {
                                     className: T.planOptionCurrentPlan,
                                     children: ['(', S.Z.Messages.BILLING_SWITCH_PLAN_CURRENT_PLAN, ')']
                                 }),
-                            !O && k()
+                            !O && F()
                         ]
                     }),
                     b
                         ? (0, i.jsx)('div', {
                               className: r()({ [T.optionPriceSelected]: s }),
-                              children: S.Z.Messages.BILLING_TRIAL_PRICE_NOW.format({ price: g && null != P && M.interval === N.rV.MONTH ? (0, E.T4)(Z.amount - P, Z.currency) : v ? (0, E.T4)(0, Z.currency, { maximumFractionDigits: 0 }) : (0, E.T4)(Z.amount, Z.currency) })
+                              children: S.Z.Messages.BILLING_TRIAL_PRICE_NOW.format({
+                                  price:
+                                      g && null != P && M.interval === N.rV.MONTH
+                                          ? (0, E.T4)(Z.amount - P, Z.currency)
+                                          : v
+                                            ? (0, E.T4)(0, Z.currency, {
+                                                  minimumFractionDigits: 0,
+                                                  maximumFractionDigits: 0
+                                              })
+                                            : (0, E.T4)(Z.amount, Z.currency)
+                              })
                           })
                         : (0, i.jsx)('div', {
                               className: r()({ [T.optionSelected]: s || O }),

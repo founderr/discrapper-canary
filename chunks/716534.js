@@ -42,8 +42,8 @@ var i = t(735250),
     G = t(251660),
     B = t(474936),
     U = t(981631),
-    k = t(231338),
-    F = t(689938),
+    F = t(231338),
+    k = t(689938),
     W = t(309951);
 function H(e) {
     var n, t, r, H, Y;
@@ -110,8 +110,8 @@ function H(e) {
     a.useEffect(() => {
         eT(eB);
     }, [eT, eB]);
-    let ek = eg && (0, g.pO)(eP),
-        eF = null !== (H = null !== (r = null != ej ? ej : eD) && void 0 !== r ? r : eG) && void 0 !== H ? H : eU,
+    let eF = eg && (0, g.pO)(eP),
+        ek = null !== (H = null !== (r = null != ej ? ej : eD) && void 0 !== r ? r : eG) && void 0 !== H ? H : eU,
         eW = (0, o.e7)([T.Z], () => T.Z.enabled),
         eH = J.paymentSourceId,
         { hasEntitlements: eY, entitlements: eV } = (0, w.H)(eC.id, eg),
@@ -144,15 +144,15 @@ function H(e) {
         ),
         e$ = (0, S.$g)(eX, eL, eC),
         e0 = a.useMemo(() => (e_ && null != eL ? eL : eb && null != eZ ? eZ : void 0), [eb, e_, eL, eZ]);
-    if (null != eF) {
+    if (null != ek) {
         let [e, n] = (function (e) {
-            if (e.code === I.SM.INVALID_CURRENCY_FOR_PAYMENT_SOURCE) return [F.Z.Messages.BILLING_ERROR_UNSUPPORTED_CURRENCY, null];
+            if (e.code === I.SM.INVALID_CURRENCY_FOR_PAYMENT_SOURCE) return [k.Z.Messages.BILLING_ERROR_UNSUPPORTED_CURRENCY, null];
             if (e.code !== I.SM.INVALID_BILLING_ADDRESS) return [e.message, null];
             {
-                let e = F.Z.Messages.LEARN_MORE_LINK.format({ helpdeskArticle: P.Z.getArticleURL(U.BhN.BILLING).concat(U.Bjg.INVALID_BILLING_ADDRESS) });
-                return [F.Z.Messages.BILLING_ERROR_INVALID_BILLING_ADDRESS, e];
+                let e = k.Z.Messages.LEARN_MORE_LINK.format({ helpdeskArticle: P.Z.getArticleURL(U.BhN.BILLING).concat(U.Bjg.INVALID_BILLING_ADDRESS) });
+                return [k.Z.Messages.BILLING_ERROR_INVALID_BILLING_ADDRESS, e];
             }
-        })(eF);
+        })(ek);
         K = (0, i.jsxs)(u.FormErrorBlock, {
             children: [e, ' ', n]
         });
@@ -161,7 +161,7 @@ function H(e) {
             plan: eC,
             className: W.invoice,
             isPrepaidPaymentSource: eK,
-            isCustomGift: ek,
+            isCustomGift: eF,
             invoicePreview: eB
         });
     else if (null != e0)
@@ -176,11 +176,16 @@ function H(e) {
                             children: [
                                 (0, i.jsx)(u.Text, {
                                     variant: 'text-md/bold',
-                                    children: F.Z.Messages.BILLING_PAYMENT_BREAKDOWN_TOTAL
+                                    children: k.Z.Messages.BILLING_PAYMENT_BREAKDOWN_TOTAL
                                 }),
                                 (0, i.jsx)(u.Text, {
                                     variant: 'text-md/normal',
-                                    children: F.Z.Messages.BILLING_TRIAL_PRICE_NOW.format({ price: (0, A.T4)(0, e0.currency, { maximumFractionDigits: 0 }) })
+                                    children: k.Z.Messages.BILLING_TRIAL_PRICE_NOW.format({
+                                        price: (0, A.T4)(0, e0.currency, {
+                                            minimumFractionDigits: 0,
+                                            maximumFractionDigits: 0
+                                        })
+                                    })
                                 })
                             ]
                         }),
@@ -205,7 +210,7 @@ function H(e) {
             (z = (0, i.jsxs)(R.PO, {
                 className: W.invoice,
                 children: [
-                    (0, i.jsx)(R.q9, { children: F.Z.Messages.BILLING_SWITCH_PLAN_PURCHASE_DETAILS }),
+                    (0, i.jsx)(R.q9, { children: k.Z.Messages.BILLING_SWITCH_PLAN_PURCHASE_DETAILS }),
                     (0, i.jsx)(D.Lu, {
                         invoice: eL,
                         newPlan: eC,
@@ -238,7 +243,7 @@ function H(e) {
                 let { intervalType: e, intervalCount: s } = v.ZP.getIntervalForInvoice(n),
                     l = (0, A.og)((0, A.T4)(n.total, n.currency), e, s),
                     o = null != t ? t : n.subscriptionPeriodEnd;
-                (i = F.Z.Messages.BILLING_LEGAL_MUMBO_JUMBO_TRIAL_TERMS_LABEL.format({
+                (i = k.Z.Messages.BILLING_LEGAL_MUMBO_JUMBO_TRIAL_TERMS_LABEL.format({
                     termsURL: U.EYA.TERMS,
                     paidURL: U.EYA.PAID_TERMS,
                     rate: l,
@@ -253,9 +258,9 @@ function H(e) {
                 checkboxLabelClassname: r
             };
         })(null != e_ && e_, eZ, V),
-        e9 = F.Z.Messages.BILLING_SELECT_PLAN_GUILD_SUBSCRIPTION.format({ planName: eC.name });
+        e9 = k.Z.Messages.BILLING_SELECT_PLAN_GUILD_SUBSCRIPTION.format({ planName: eC.name });
     return (
-        eg && !ek ? (e9 = F.Z.Messages.PAYMENT_MODAL_SUBTITLE_PREMIUM_GIFT) : eg && ek ? (e9 = '') : (0, v.PV)(eC.id) && (e9 = v.ZP.getBillingReviewSubheader(null, eC)),
+        eg && !eF ? (e9 = k.Z.Messages.PAYMENT_MODAL_SUBTITLE_PREMIUM_GIFT) : eg && eF ? (e9 = '') : (0, v.PV)(eC.id) && (e9 = v.ZP.getBillingReviewSubheader(null, eC)),
         ez
             ? null
             : (0, i.jsxs)('div', {
@@ -305,14 +310,14 @@ function H(e) {
                               variant: 'heading-md/normal',
                               color: 'always-white',
                               className: W.trialHeader,
-                              children: F.Z.Messages.REVERSE_TRIAL_PAYMENT_MODAL_INFO.format({ trialEnd: null == ef ? void 0 : ef.currentPeriodEnd })
+                              children: k.Z.Messages.REVERSE_TRIAL_PAYMENT_MODAL_INFO.format({ trialEnd: null == ef ? void 0 : ef.currentPeriodEnd })
                           }),
                       !e_ &&
                           (0, i.jsx)(u.FormTitle, {
                               tag: u.FormTitleTags.H5,
                               children: e9
                           }),
-                      ek &&
+                      eF &&
                           null != ev &&
                           (0, i.jsxs)(i.Fragment, {
                               children: [
@@ -333,11 +338,11 @@ function H(e) {
                                   ? (0, i.jsx)(u.FormTitle, {
                                         tag: u.FormTitleTags.H5,
                                         className: W.formTitle,
-                                        children: F.Z.Messages.BILLING_STEP_PAYMENT_METHOD
+                                        children: k.Z.Messages.BILLING_STEP_PAYMENT_METHOD
                                     })
                                   : (0, i.jsx)(u.FormTitle, {
                                         tag: u.FormTitleTags.H5,
-                                        children: F.Z.Messages.PAYMENT_SOURCE_PAYMENT_REQUEST_INFO_TITLE
+                                        children: k.Z.Messages.PAYMENT_SOURCE_PAYMENT_REQUEST_INFO_TITLE
                                     }),
                               (0, i.jsx)(p.Z, {
                                   paymentSources: Object.values(q),
@@ -345,7 +350,7 @@ function H(e) {
                                   prependOption:
                                       eY && !e_
                                           ? {
-                                                label: F.Z.Messages.ATTACH_PAYMENT_SOURCE_PROMPT_OPTION_OPTIONAL,
+                                                label: k.Z.Messages.ATTACH_PAYMENT_SOURCE_PROMPT_OPTION_OPTIONAL,
                                                 value: null
                                             }
                                           : null,
@@ -357,7 +362,7 @@ function H(e) {
                               eY && null == eH
                                   ? (0, i.jsx)('div', {
                                         className: W.paymentSourceOptionalWarning,
-                                        children: F.Z.Messages.ATTACH_PAYMENT_SOURCE_OPTIONAL_WITH_ENTITLEMENTS_WARNING.format({ months: eV.length })
+                                        children: k.Z.Messages.ATTACH_PAYMENT_SOURCE_OPTIONAL_WITH_ENTITLEMENTS_WARNING.format({ months: eV.length })
                                     })
                                   : null,
                               ep
@@ -368,7 +373,7 @@ function H(e) {
                                         children: [
                                             (0, i.jsx)(u.FormTitle, {
                                                 tag: u.FormTitleTags.H5,
-                                                children: F.Z.Messages.PAYMENT_CURRENCY
+                                                children: k.Z.Messages.PAYMENT_CURRENCY
                                             }),
                                             (0, i.jsx)(d.Z, {
                                                 selectedCurrency: J.currency,
@@ -400,7 +405,7 @@ function H(e) {
                                             isEmbeddedIAP: eI,
                                             basePrice: (0, v.aS)(eC.id, !1, eg, J)
                                         }),
-                              showPricingLink: eC.currency !== k.pK.USD,
+                              showPricingLink: eC.currency !== F.pK.USD,
                               showWithdrawalWaiver: e1,
                               disabled: eR,
                               isTrial: e_ && null == es,
