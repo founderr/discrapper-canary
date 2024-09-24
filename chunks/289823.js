@@ -115,15 +115,15 @@ let S = {
 t.Z = function (e) {
     var t, n, s;
     let { backSrc: o, frontSrc: f, size: E, isTyping: A, status: I, style: p, className: C, ...N } = e,
-        { size: v } = c.AvatarSizeSpecs[E],
+        { size: L } = c.AvatarSizeSpecs[E],
         {
-            statusCoords: L,
+            statusCoords: v,
             frontAvatarOffsetPx: b,
             frontAvatarSizePx: x,
             backAvatarSizePx: T
         } = a.useMemo(() => {
             var e;
-            let t = ''.concat(v, '-').concat(A);
+            let t = ''.concat(L, '-').concat(A);
             return null !== (e = _[t]) && void 0 !== e
                 ? e
                 : (function (e, t, n) {
@@ -140,12 +140,12 @@ t.Z = function (e) {
                           };
                       return (_[n] = o), o;
                   })(E, A, t);
-        }, [v, A, E]);
+        }, [L, A, E]);
     let Z = ((t = null != I), (n = A), (s = E), n ? S[s].typing : t ? S[s].status : S[s].default);
     return (0, l.jsxs)('div', {
         style: {
-            width: v,
-            height: v,
+            width: L,
+            height: L,
             ...p
         },
         'aria-label': N['aria-label'],
@@ -154,8 +154,8 @@ t.Z = function (e) {
         children: [
             (0, l.jsxs)(u.ZP, {
                 mask: Z,
-                height: v,
-                width: v,
+                height: L,
+                width: L,
                 children: [
                     (0, l.jsx)('img', {
                         src: o,
@@ -179,7 +179,7 @@ t.Z = function (e) {
                 ]
             }),
             (0, l.jsx)(g, {
-                statusCoords: L,
+                statusCoords: v,
                 status: I,
                 isTyping: A
             })

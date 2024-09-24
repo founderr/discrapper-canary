@@ -829,7 +829,7 @@ let { Themes: n } = r(15202).V,
             },
             [n.MIDNIGHT]: {
                 raw: 'PLUM_11',
-                opacity: 0.08
+                opacity: 0.16
             },
             [n.DARKER]: {
                 raw: 'PLUM_11',
@@ -1060,7 +1060,7 @@ let { Themes: n } = r(15202).V,
             },
             [n.MIDNIGHT]: {
                 raw: 'PLUM_11',
-                opacity: 0.06
+                opacity: 0.08
             },
             [n.DARKER]: {
                 raw: 'PLUM_11',
@@ -1098,7 +1098,7 @@ let { Themes: n } = r(15202).V,
             },
             [n.MIDNIGHT]: {
                 raw: 'PLUM_11',
-                opacity: 0.12
+                opacity: 0.14
             },
             [n.DARKER]: {
                 raw: 'PLUM_11',
@@ -5178,7 +5178,7 @@ let { Themes: n } = r(15202).V,
             },
             [n.MIDNIGHT]: {
                 raw: 'PLUM_11',
-                opacity: 0.12
+                opacity: 0.14
             },
             [n.DARKER]: {
                 raw: 'PLUM_11',
@@ -5293,7 +5293,7 @@ let { Themes: n } = r(15202).V,
             },
             [n.MIDNIGHT]: {
                 raw: 'PLUM_11',
-                opacity: 0.06
+                opacity: 0.08
             },
             [n.DARKER]: {
                 raw: 'PLUM_11',

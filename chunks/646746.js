@@ -45,9 +45,9 @@ function m(e) {
         p = s.length,
         C = null,
         N = null,
-        v = null;
+        L = null;
     if (p > 0 || m.length > 0) {
-        var L, b, x, T;
+        var v, b, x, T;
         let e = (0, r.countBy)(s, (e) => (0, d.aw)(e, !0)),
             t = null !== (x = e.IMAGE) && void 0 !== x ? x : 0,
             n = null !== (T = e.VIDEO) && void 0 !== T ? T : 0;
@@ -63,7 +63,7 @@ function m(e) {
                 ? ((C = E.Z.Messages.NUM_IMAGES.format({ count: t })), (N = 1 === t ? o.ImageIcon : o.ImagesIcon))
                 : ((C = E.Z.Messages.NUM_ATTACHMENTS.format({ count: p })), (N = o.AttachmentIcon)),
             n > 0 && p === n
-                ? (v = (0, l.jsxs)('div', {
+                ? (L = (0, l.jsxs)('div', {
                       className: i()(g.attachmentPreview, g.attachmentPreviewVideo),
                       children: [
                           (0, l.jsx)(u.Z, {
@@ -80,7 +80,7 @@ function m(e) {
                       ]
                   }))
                 : p > 0
-                  ? (v = (0, l.jsx)('div', {
+                  ? (L = (0, l.jsx)('div', {
                         className: g.attachmentPreview,
                         children: (0, l.jsx)(u.Z, {
                             src: s[0].proxy_url,
@@ -88,8 +88,8 @@ function m(e) {
                             height: 56
                         })
                     }))
-                  : (null === (b = m[0]) || void 0 === b ? void 0 : null === (L = b.thumbnail) || void 0 === L ? void 0 : L.proxyURL) != null &&
-                    (v = (0, l.jsx)('div', {
+                  : (null === (b = m[0]) || void 0 === b ? void 0 : null === (v = b.thumbnail) || void 0 === v ? void 0 : v.proxyURL) != null &&
+                    (L = (0, l.jsx)('div', {
                         className: g.attachmentPreview,
                         children: (0, l.jsx)(u.Z, {
                             src: m[0].thumbnail.proxyURL,
@@ -100,15 +100,15 @@ function m(e) {
     }
     return (
         p > 1 &&
-            null != v &&
-            (v = (0, l.jsxs)('div', {
+            null != L &&
+            (L = (0, l.jsxs)('div', {
                 className: g.attachmentPreviewOverflow,
                 children: [
                     (0, l.jsx)(c.ZP, {
                         mask: c.ZP.Masks.FORWARD_ATTACHMENT_PILE_OVERFLOW,
                         width: 56,
                         height: 56,
-                        children: v
+                        children: L
                     }),
                     (0, l.jsxs)(o.Text, {
                         className: g.overflowCount,
@@ -151,7 +151,7 @@ function m(e) {
                             })
                     ]
                 }),
-                v
+                L
             ]
         })
     );

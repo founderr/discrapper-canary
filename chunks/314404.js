@@ -45,7 +45,7 @@ var i = t(735250),
     G = t(133130);
 function B(e) {
     var n, t, r, m;
-    let { premiumSubscription: f, skuId: C, selectedPlanId: O, setSelectedPlanId: B, priceOptions: U, planOptions: k, eligibleForMultiMonthPlans: F, referralTrialOfferId: W, subscriptionPeriodEnd: H, showTotal: Y = !0, discountInvoiceItems: V, handleClose: K } = e,
+    let { premiumSubscription: f, skuId: C, selectedPlanId: O, setSelectedPlanId: B, priceOptions: U, planOptions: F, eligibleForMultiMonthPlans: k, referralTrialOfferId: W, subscriptionPeriodEnd: H, showTotal: Y = !0, discountInvoiceItems: V, handleClose: K } = e,
         { activeSubscription: z, setSelectedPlanId: X, selectedSkuId: q, selectedPlan: J, priceOptions: Q } = (0, p.usePaymentContext)(),
         { isGift: $, giftRecipient: ee, selectedGiftStyle: en, customGiftMessage: et, setCustomGiftMessage: ei } = (0, _.wD)(),
         ea = (0, E.MY)(ee),
@@ -66,21 +66,21 @@ function B(e) {
         em = null != U ? U : Q;
     s()(null != em, 'Price option has to be set');
     let eI = null != eo && j.nG[eo.trial_id].skus.includes(C),
-        ef = null != eu && k.some((e) => (null == ed ? void 0 : ed.includes(e))) && null != eu.discount,
+        ef = null != eu && F.some((e) => (null == ed ? void 0 : ed.includes(e))) && null != eu.discount,
         eE = (0, N.aS)(j.Xh.PREMIUM_MONTH_TIER_2, !1, $, em);
     a.useEffect(() => {
-        F && T.ZP.trackExposure({ location: '5f89bb_1' });
-    }, [F]);
-    let ex = (null == e_ ? void 0 : e_.id) != null && k.includes(e_.id);
+        k && T.ZP.trackExposure({ location: '5f89bb_1' });
+    }, [k]);
+    let ex = (null == e_ ? void 0 : e_.id) != null && F.includes(e_.id);
     a.useEffect(() => {
         if (!ex) {
-            if (null == es || $) ep(k[0]);
+            if (null == es || $) ep(F[0]);
             else if (null != es) {
-                let e = k.find((e) => e !== es.id);
+                let e = F.find((e) => e !== es.id);
                 null != e && ep(e);
             }
         }
-    }, [ex, $, k, es, ep]);
+    }, [ex, $, F, es, ep]);
     let eN = !er && ($ || (!eI && !ef)) && ex && Y,
         eS = (0, o.useRadioGroup)(),
         eT = (null == e_ ? void 0 : e_.id) != null ? (0, N.aS)(e_.id, !1, $, em) : void 0,
@@ -214,7 +214,7 @@ function B(e) {
                         })(eo, eI, ef),
                         (0, i.jsx)('div', {
                             ...eS,
-                            children: k.map((e) =>
+                            children: F.map((e) =>
                                 (0, i.jsx)(
                                     R.Z,
                                     {
@@ -272,7 +272,7 @@ function U(e) {
         (0, i.jsxs)(i.Fragment, {
             children: [
                 null != t && l.includes(t)
-                    ? (0, i.jsx)(k, {
+                    ? (0, i.jsx)(F, {
                           paymentSources: a,
                           onStepChange: n,
                           selectedPlanId: t,
@@ -289,7 +289,7 @@ function U(e) {
         })
     );
 }
-function k(e) {
+function F(e) {
     let { onStepChange: n, selectedPlanId: t, isGift: a, paymentSources: r, shouldRenderUpdatedPaymentModal: s, isTrial: c } = e,
         u = (0, l.e7)([f.ZP], () => f.ZP.getPremiumTypeSubscription()),
         { hasEntitlements: d } = (0, O.H)(t, a),

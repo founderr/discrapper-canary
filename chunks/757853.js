@@ -28,16 +28,16 @@ var l,
     p = n(448486),
     C = n(987509),
     N = n(592125),
-    v = n(430824),
-    L = n(158776),
+    L = n(430824),
+    v = n(158776),
     b = n(306680),
     x = n(699516),
     T = n(594174),
     Z = n(626135),
     y = n(55935),
     M = n(823379),
-    R = n(51144),
-    P = n(784384),
+    P = n(51144),
+    R = n(784384),
     O = n(981631),
     D = n(490897),
     w = n(689938),
@@ -66,7 +66,7 @@ function j(e) {
                         closeAfterSend: !0
                     });
         }, [t.channel_id, t.id, f, n]),
-        v = i.useCallback(() => {
+        L = i.useCallback(() => {
             I(!1),
                 (p.current = !1),
                 Z.default.track(O.rMx.FORWARD_ONE_TAP_UNDO, {
@@ -156,7 +156,7 @@ function j(e) {
                                     size: _.Button.Sizes.SMALL,
                                     color: _.Button.Colors.BRAND,
                                     look: _.Button.Looks.OUTLINED,
-                                    onClick: v,
+                                    onClick: L,
                                     children: w.Z.Messages.UNDO
                                 })
                         ]
@@ -167,10 +167,10 @@ function j(e) {
 }
 function F(e) {
     let { user: t, subLabel: n, ...l } = e,
-        a = R.ZP.useName(t),
-        i = R.ZP.useUserTag(t, { decoration: 'never' }),
+        a = P.ZP.useName(t),
+        i = P.ZP.useUserTag(t, { decoration: 'never' }),
         r = (0, h.e7)([x.Z], () => x.Z.getNickname(t.id)),
-        o = (0, h.e7)([L.Z], () => L.Z.getStatus(t.id));
+        o = (0, h.e7)([v.Z], () => v.Z.getStatus(t.id));
     return (0, s.jsx)(j, {
         ...l,
         icon: (0, s.jsx)(f.Z, {
@@ -201,7 +201,7 @@ function U(e) {
 }
 function k(e) {
     let { channel: t, subLabel: n, ...l } = e,
-        a = (0, h.e7)([v.Z], () => v.Z.getGuild(null == t ? void 0 : t.guild_id)),
+        a = (0, h.e7)([L.Z], () => L.Z.getGuild(null == t ? void 0 : t.guild_id)),
         i = (0, S.ZP)(t),
         r = (0, h.e7)([N.Z, T.default, x.Z], () => {
             let e = N.Z.getChannel(t.parent_id);
@@ -280,7 +280,7 @@ function W(e) {
                                   id: d.id
                               },
                     _ = (0, C.hC)(h),
-                    f = (0, P.H)(l, a, d),
+                    f = (0, R.H)(l, a, d),
                     g = E.includes(_),
                     S = {
                         key: _,

@@ -24,9 +24,9 @@ var l = n(735250),
     I = n(689938),
     p = n(463061);
 function C(e) {
-    let { message: t, forwardOptions: n, sendLabel: C, canSend: N, selectedDestinations: v, isSending: L, onSend: b, showPreview: x } = e,
+    let { message: t, forwardOptions: n, sendLabel: C, canSend: N, selectedDestinations: L, isSending: v, onSend: b, showPreview: x } = e,
         T = (0, d.Z)(),
-        Z = v.map(h.hl).find(E.lm),
+        Z = L.map(h.hl).find(E.lm),
         y = (0, i.e7)([f.Z], () => f.Z.getChannel(Z), [Z]),
         M = a.useMemo(
             () =>
@@ -38,8 +38,8 @@ function C(e) {
                       }),
             [y]
         ),
-        R = (0, g.y)(v),
-        P = (0, m.Ad)(),
+        P = (0, g.y)(L),
+        R = (0, m.Ad)(),
         [O, D] = a.useState(() => (0, c.H2)()),
         { textValue: w, richValue: G } = O,
         [j, F] = a.useState(!1),
@@ -51,9 +51,9 @@ function C(e) {
                     textValue: n,
                     richValue: l
                 }),
-                    P(t.channel_id, t.id);
+                    R(t.channel_id, t.id);
             },
-            [P, t]
+            [R, t]
         ),
         H = a.useCallback(() => {
             b(w);
@@ -107,21 +107,21 @@ function C(e) {
                             }),
                             (0, l.jsx)(r.Button, {
                                 className: p.sendWithMessage,
-                                submitting: L,
+                                submitting: v,
                                 disabled: !N || w.length > T,
                                 onClick: H,
                                 children: C
                             })
                         ]
                     }),
-                    R.length > 0 &&
+                    P.length > 0 &&
                         w.length > 0 &&
                         (0, l.jsx)(r.Text, {
                             variant: 'text-sm/normal',
                             color: 'text-warning',
                             children: I.Z.Messages.MESSAGE_FORWARD_SLOWMODE_WARNING.format({
-                                count: R.length,
-                                channelNames: R.join(', ')
+                                count: P.length,
+                                channelNames: P.join(', ')
                             })
                         })
                 ]

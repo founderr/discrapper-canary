@@ -88,7 +88,7 @@ function D(e) {
 }
 function w(e) {
     let { hasLegalTermsFlash: n, legalTermsNodeRef: t, onPaymentSourceChange: r, handlePaymentSourceAdd: f } = e,
-        { application: A, purchaseState: w, paymentSources: G, paymentSourceId: B, setHasAcceptedTerms: U, skusById: k, skuPricePreviewsById: F, selectedSkuId: W, isEmbeddedIAP: H, purchaseType: Y, purchasePreviewError: V } = (0, y.usePaymentContext)(),
+        { application: A, purchaseState: w, paymentSources: G, paymentSourceId: B, setHasAcceptedTerms: U, skusById: F, skuPricePreviewsById: k, selectedSkuId: W, isEmbeddedIAP: H, purchaseType: Y, purchasePreviewError: V } = (0, y.usePaymentContext)(),
         { isGift: K, giftRecipient: z } = (0, M.wD)(),
         X = K && (0, v.pO)(z),
         { defaultPaymentSourceId: q, hasFetchedPaymentSources: J } = (0, o.cj)([h.Z], () => ({
@@ -96,8 +96,8 @@ function w(e) {
             hasFetchedPaymentSources: h.Z.hasFetchedPaymentSources
         }));
     s()(null != W, 'Expected selectedSkuId');
-    let Q = k[W],
-        $ = F[W],
+    let Q = F[W],
+        $ = k[W],
         ee = null != B ? B : b.c,
         en = null != $ ? $[ee] : null;
     s()(null != Q, 'SKU must exist and be fetched.'), s()(null != A, 'Application must exist.');

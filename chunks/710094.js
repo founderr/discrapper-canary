@@ -34,7 +34,7 @@ function M(e) {
     var n, t;
     let r,
         { handleStepChange: M, trialId: y, trialFooterMessageOverride: C, reviewWarningMessage: O, planGroup: R, openInvoiceId: L, analyticsData: j, analyticsLocation: Z, referralTrialOfferId: D, initialPlanId: w, subscriptionTier: G, handleClose: B } = e,
-        { activeSubscription: U, setUpdatedSubscription: k, contextMetadata: F, currencies: W, paymentSourceId: H, paymentSources: Y, priceOptions: V, purchaseError: K, purchaseTokenAuthState: z, selectedPlan: X, selectedSkuId: q, setCurrency: J, setPaymentSourceId: Q, setPurchaseState: $, setPurchaseError: ee, step: en, purchaseState: et, isPremium: ei, setHasAcceptedTerms: ea, purchaseType: er, setEntitlementsGranted: es, startedPaymentFlowWithPaymentSourcesRef: el, invoicePreview: eo, inReverseTrial: ec } = (0, f.usePaymentContext)(),
+        { activeSubscription: U, setUpdatedSubscription: F, contextMetadata: k, currencies: W, paymentSourceId: H, paymentSources: Y, priceOptions: V, purchaseError: K, purchaseTokenAuthState: z, selectedPlan: X, selectedSkuId: q, setCurrency: J, setPaymentSourceId: Q, setPurchaseState: $, setPurchaseError: ee, step: en, purchaseState: et, isPremium: ei, setHasAcceptedTerms: ea, purchaseType: er, setEntitlementsGranted: es, startedPaymentFlowWithPaymentSourcesRef: el, invoicePreview: eo, inReverseTrial: ec } = (0, f.usePaymentContext)(),
         { isGift: eu, giftMessage: ed, giftRecipient: e_ } = (0, I.wD)();
     s()(null != en, 'Step should be set');
     let ep = a.useRef(null),
@@ -50,7 +50,7 @@ function M(e) {
     }, [K]);
     let eT = a.useCallback(
             (e, n) => {
-                k(e),
+                F(e),
                     null != n && es(n),
                     M(E.h8.CONFIRM, {
                         fulfillment: {
@@ -59,7 +59,7 @@ function M(e) {
                         }
                     });
             },
-            [M, k, es]
+            [M, F, es]
         ),
         eh = null != H ? Y[H] : null,
         eb = null != X && P.o4.has(X.id) && null != eh && !(0, o.aQ)(eh) ? Error(A.Z.Messages.BILLING_ERROR_INVALID_PLAN_FOR_PAYMENT_SOURCE) : null,
@@ -160,7 +160,7 @@ function M(e) {
                         planError: eb,
                         analyticsLocation: Z,
                         baseAnalyticsData: j,
-                        flowStartTime: F.startTime,
+                        flowStartTime: k.startTime,
                         trialId: eE,
                         planGroup: R,
                         purchaseTokenAuthState: z,
