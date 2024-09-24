@@ -22,8 +22,8 @@ var i = n(735250),
     g = n(28494),
     p = n(746728),
     T = n(140700),
-    S = n(665807),
-    f = n(882126),
+    f = n(665807),
+    S = n(882126),
     C = n(294330),
     N = n(689938),
     A = n(179596);
@@ -86,8 +86,7 @@ function x(e) {
                 query: b,
                 guildResults: h.map(m.Z.getGuild).filter(E.lm),
                 analyticsContext: D,
-                categoryId: M,
-                isTagSearch: !1
+                categoryId: M
             });
         }, [D, h, t, M, y, b]);
     let z = a.useCallback((e) => n(e, M), [n, M]),
@@ -114,9 +113,9 @@ function x(e) {
                                     !U &&
                                         (0, i.jsxs)('div', {
                                             className: A.headingFilters,
-                                            children: [(0, i.jsx)(T.Z, { loadId: t }), (0, i.jsx)(f.Z, { loadId: t })]
+                                            children: [(0, i.jsx)(T.Z, { loadId: t }), (0, i.jsx)(S.Z, { loadId: t })]
                                         }),
-                                    q && (0, i.jsx)(S.Z, { loadId: t })
+                                    q && (0, i.jsx)(f.Z, { loadId: t })
                                 ]
                             },
                             a
@@ -181,7 +180,7 @@ function x(e) {
                         'div',
                         {
                             style: n,
-                            children: (0, i.jsx)(C.Z, {
+                            children: (0, i.jsx)(C.ZP, {
                                 guildId: e,
                                 onClick: async (e) => await ee(e, t, M),
                                 onView: (e) => z(e)
@@ -220,13 +219,17 @@ function x(e) {
         }, []);
     let en = a.useMemo(
             () =>
-                (0, s.debounce)(() => {
-                    var e;
-                    let t = null === (e = V.current) || void 0 === e ? void 0 : e.getScrollerState();
-                    if (null == t) return;
-                    let n = t.scrollTop + t.offsetHeight;
-                    t.scrollHeight - n < 300 && P();
-                }, 250),
+                (0, s.debounce)(
+                    () => {
+                        var e;
+                        let t = null === (e = V.current) || void 0 === e ? void 0 : e.getScrollerState();
+                        if (null == t) return;
+                        let n = t.scrollTop + t.offsetHeight;
+                        t.scrollHeight - n < 300 && P();
+                    },
+                    100,
+                    { leading: !0 }
+                ),
             [P]
         ),
         ei = U ? Z : R;
@@ -262,7 +265,7 @@ function x(e) {
                                   children: [
                                       (0, i.jsx)('div', {
                                           className: A.sidebarLanguageSelect,
-                                          children: (0, i.jsx)(f.Z, { loadId: t })
+                                          children: (0, i.jsx)(S.Z, { loadId: t })
                                       }),
                                       (0, i.jsx)(p.Z, { loadId: t })
                                   ]

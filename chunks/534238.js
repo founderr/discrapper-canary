@@ -20,5 +20,7 @@ e.exports = {
     presenceCountDot: 'presenceCountDot_c73cee infoDot_c73cee',
     memberCountDot: 'memberCountDot_c73cee infoDot_c73cee',
     spinnerContainer: 'spinnerContainer_c73cee',
-    spinner: 'spinner_c73cee'
+    spinner: 'spinner_c73cee',
+    placeholder: 'placeholder_c73cee',
+    transitionGroup: 'transitionGroup_c73cee'
 };

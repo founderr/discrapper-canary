@@ -21,6 +21,10 @@ function m(e) {
         _ = (0, s.e7)([c.Z], () => {
             var e;
             return null !== (e = c.Z.getGuildIds(l)) && void 0 !== e ? e : h.q5;
+        }),
+        E = (0, s.e7)([c.Z], () => {
+            var e;
+            return null === (e = c.Z.getIsFetching(l)) || void 0 === e || e;
         });
     return (
         a.useEffect(() => {
@@ -29,6 +33,7 @@ function m(e) {
         (0, i.jsx)(u.Z, {
             tab: h.vf.FEATURED,
             guildIds: _,
+            loading: E,
             onScroll: t,
             onGuildCardSeen: n,
             onGuildCardClick: r
@@ -42,6 +47,10 @@ function I(e) {
         m = (0, s.e7)([c.Z], () => {
             var e;
             return null !== (e = c.Z.getGuildIds(E)) && void 0 !== e ? e : h.q5;
+        }),
+        I = (0, s.e7)([c.Z], () => {
+            var e;
+            return null === (e = c.Z.getIsFetching(E)) || void 0 === e || e;
         });
     return (
         a.useEffect(() => {
@@ -50,6 +59,7 @@ function I(e) {
         (0, i.jsx)(u.Z, {
             tab: t,
             guildIds: m,
+            loading: I,
             onScroll: n,
             onGuildCardSeen: r,
             onGuildCardClick: l

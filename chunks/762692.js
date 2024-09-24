@@ -16,12 +16,12 @@ var i = n(807034),
     g = n(731455);
 let p = window.GLOBAL_ENV.ALGOLIA_KEY,
     T = 'production' === window.GLOBAL_ENV.PROJECT_ENV ? 'prod_discoverable_guilds' : 'staging' === window.GLOBAL_ENV.PROJECT_ENV ? 'stg_discoverable_guilds' : 'dev_discoverable_guilds',
-    S = {
+    f = {
         'auto_removed:': !1,
         approximate_presence_count: '> 0',
         approximate_member_count: '> 0'
     };
-async function f(e) {
+async function S(e) {
     return (
         await o.tn.get({
             url: I.ANM.GUILD_DISCOVERY_VALID_TERM,
@@ -42,7 +42,7 @@ async function C(e, t, n) {
         type: 'GLOBAL_DISCOVERY_SERVERS_SEARCH_START',
         id: o
     });
-    let E = Object.assign({}, S, t.filters),
+    let E = Object.assign({}, f, t.filters),
         I = Object.keys(E).map((e) => ''.concat(e).concat(E[e]));
     i !== g.Hk && I.push('(primary_category_id='.concat(i, ' OR categories.id=').concat(i, ')'));
     let p = I.join(' AND ');
@@ -63,7 +63,7 @@ async function C(e, t, n) {
                     id: e.objectID
                 }))
             ],
-            total: Math.min(n, g.lA)
+            total: n
         });
     } catch (r) {
         var T;
@@ -95,7 +95,7 @@ async function N(e) {
         a = h.Z.getAlgoliaSearchIndex();
     if (null == a) return;
     let s = (0, m.BC)({ query: t }),
-        l = Object.assign({}, S, n),
+        l = Object.assign({}, f, n),
         o = Object.keys(l).map((e) => ''.concat(e).concat(l[e]));
     try {
         var c;
@@ -103,7 +103,7 @@ async function N(e) {
                 filters: o.join(' AND '),
                 facets: ['categories.id']
             }),
-            l = await f(t);
+            l = await S(t);
         if (null == n || !l) {
             d.Z.dispatch({
                 type: 'GLOBAL_DISCOVERY_SERVERS_SEARCH_COUNT_SUCCESS',
@@ -115,16 +115,15 @@ async function N(e) {
         let u = null !== (c = n['categories.id']) && void 0 !== c ? c : {};
         delete u[g.o3];
         let _ = (0, r.chain)(u)
-                .entries()
-                .map((e) => {
-                    let [t, n] = e;
-                    return [parseInt(t, 10), n];
-                })
-                .sort((e, t) => t[1] - e[1])
-                .slice(0, 7)
-                .value(),
-            E = Math.min(g.lA, e);
-        _.unshift([g.Hk, E]),
+            .entries()
+            .map((e) => {
+                let [t, n] = e;
+                return [parseInt(t, 10), n];
+            })
+            .sort((e, t) => t[1] - e[1])
+            .slice(0, 7)
+            .value();
+        _.unshift([g.Hk, e]),
             d.Z.dispatch({
                 type: 'GLOBAL_DISCOVERY_SERVERS_SEARCH_COUNT_SUCCESS',
                 id: s,
