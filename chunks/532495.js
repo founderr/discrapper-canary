@@ -31,8 +31,8 @@ var a = t(512722),
     f = t(25990),
     M = t(594174),
     D = t(74538),
-    L = t(689938),
-    P = t(221118);
+    P = t(689938),
+    L = t(221118);
 function b() {
     var e, s, t, a, b, Z, v, j;
     let B = (0, r.e7)([M.default], () => {
@@ -77,7 +77,7 @@ function b() {
         es = (0, c.Z)('user_profile'),
         et = (0, d.V)();
     return (0, n.jsxs)('div', {
-        className: P.sectionsContainer,
+        className: L.sectionsContainer,
         children: [
             (0, n.jsx)(N.Z, {
                 placeholder: B.username,
@@ -89,7 +89,7 @@ function b() {
             (0, n.jsx)(
                 O.Z,
                 {
-                    sectionTitle: L.Z.Messages.USER_SETTINGS_PRONOUNS,
+                    sectionTitle: P.Z.Messages.USER_SETTINGS_PRONOUNS,
                     errors: H.pronouns,
                     onPronounsChange: p.ID,
                     pendingPronouns: Y,
@@ -103,7 +103,7 @@ function b() {
                     onAvatarChange: o.I5,
                     showRemoveAvatarButton: z,
                     errors: H.avatar,
-                    sectionTitle: L.Z.Messages.USER_SETTINGS_AVATAR,
+                    sectionTitle: P.Z.Messages.USER_SETTINGS_AVATAR,
                     forcedDivider: !0
                 },
                 'avatar'
@@ -112,7 +112,7 @@ function b() {
                 S.Z,
                 {
                     user: B,
-                    sectionTitle: L.Z.Messages.USER_SETTINGS_AVATAR_DECORATION
+                    sectionTitle: P.Z.Messages.USER_SETTINGS_AVATAR_DECORATION
                 },
                 'decoration'
             ),
@@ -120,7 +120,7 @@ function b() {
                 g.Z,
                 {
                     user: B,
-                    sectionTitle: L.Z.Messages.USER_SETTINGS_PROFILE_EFFECT
+                    sectionTitle: P.Z.Messages.USER_SETTINGS_PROFILE_EFFECT
                 },
                 'effect'
             ),
@@ -159,7 +159,7 @@ function b() {
             (0, n.jsx)(
                 T.Z,
                 {
-                    sectionTitle: L.Z.Messages.USER_SETTINGS_ABOUT_ME,
+                    sectionTitle: P.Z.Messages.USER_SETTINGS_ABOUT_ME,
                     errors: ee,
                     onBioChange: (e) => (0, E.xQ)(e, null == U ? void 0 : U.bio),
                     pendingBio: V,

@@ -144,11 +144,11 @@ h(L, 'displayName', 'ConnectedDeviceStore'),
             !(function (e, t, n) {
                 if (t === _.aVf.INPUT || t === _.aVf.INPUT_AND_OUTPUT) {
                     let t = p[e];
-                    null != t && l.Z.wait(() => o.Z.setInputDevice(t, n));
+                    null != t && l.Z.wait(() => o.Z.setInputDevice(t, { location: n }));
                 }
                 if (t === _.aVf.OUTPUT || t === _.aVf.INPUT_AND_OUTPUT) {
                     let t = T[e];
-                    l.Z.wait(() => o.Z.setOutputDevice(t, n));
+                    l.Z.wait(() => o.Z.setOutputDevice(t, { location: n }));
                 }
             })(t, n, i),
                 delete S[t];

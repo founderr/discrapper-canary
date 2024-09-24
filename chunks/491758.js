@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return L;
+        return P;
     }
 });
 var n = t(735250),
@@ -30,9 +30,9 @@ var n = t(735250),
     f = t(703353),
     M = t(595362),
     D = t(113207);
-function L() {
+function P() {
     let e = (0, o.e7)([T.Z], () => T.Z.getHardwareEncoding()),
-        { clipsEnabled: s, remindersEnabled: t, decoupledClipsEnabled: i, clipsLength: L, clipsQuality: P } = (0, o.cj)([N.Z], () => N.Z.getSettings()),
+        { clipsEnabled: s, remindersEnabled: t, decoupledClipsEnabled: i, clipsLength: P, clipsQuality: L } = (0, o.cj)([N.Z], () => N.Z.getSettings()),
         b = (0, o.e7)([N.Z], () => N.Z.getHardwareClassification()),
         Z = (0, o.e7)([S.Z], () => S.Z.getKeybindForAction(O.kg4.SAVE_CLIP, !0)),
         v = N.Z.isDecoupledGameClippingEnabled(),
@@ -196,7 +196,7 @@ function L() {
                         select: A.eU,
                         title: x.Z.Messages.CLIPS_SETTINGS_LENGTH,
                         note: x.Z.Messages.CLIPS_SETTINGS_LENGTH_HELP,
-                        value: L,
+                        value: P,
                         options: G
                     }),
                     (0, n.jsx)(g.Q, {
@@ -204,23 +204,23 @@ function L() {
                         select: (e) =>
                             A.yi({
                                 resolution: e,
-                                frameRate: P.frameRate
+                                frameRate: L.frameRate
                             }),
                         title: x.Z.Messages.CLIPS_SETTINGS_RESOLUTION,
                         note: x.Z.Messages.CLIPS_SETTINGS_RESOLUTION_NOTE,
-                        value: P.resolution,
+                        value: L.resolution,
                         options: F
                     }),
                     (0, n.jsx)(g.Q, {
                         className: M.formItem,
                         select: (e) =>
                             A.yi({
-                                resolution: P.resolution,
+                                resolution: L.resolution,
                                 frameRate: e
                             }),
                         title: x.Z.Messages.CLIPS_SETTINGS_FRAMERATE,
                         note: x.Z.Messages.CLIPS_SETTINGS_FRAMERATE_NOTE,
-                        value: P.frameRate,
+                        value: L.frameRate,
                         options: y
                     }),
                     (0, n.jsx)(g.O, {

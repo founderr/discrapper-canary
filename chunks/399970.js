@@ -52,7 +52,7 @@ function C(e) {
     }
     r.useEffect(() => () => c.Z.wait(() => d.q$()), []);
     let D = null != n && n === A,
-        L = D
+        P = D
             ? function () {
                   d.mc(), g(''), R(null);
               }
@@ -90,7 +90,7 @@ function C(e) {
                           }),
                     (0, i.jsx)('form', {
                         onSubmit: (e) => {
-                            e.preventDefault(), L();
+                            e.preventDefault(), P();
                         },
                         children: (0, i.jsxs)(u.Z, {
                             direction: u.Z.Direction.VERTICAL,

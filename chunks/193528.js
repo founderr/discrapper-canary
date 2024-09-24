@@ -27,13 +27,13 @@ function N(e) {
         f = (0, l.Rf)(i),
         M = f === p ? R : f,
         D = (0, u.Lq)(x ? T.Ilk.WHITE_500 : T.Ilk.PRIMARY_530),
-        L = (0, _.Z)(A),
-        P = (0, _.Z)(g),
+        P = (0, _.Z)(A),
+        L = (0, _.Z)(g),
         [b, Z] = a.useState((0, o.Z)());
     return (
         a.useEffect(() => {
-            (L !== A || P !== g) && Z((0, o.Z)());
-        }, [g, A, P, L]),
+            (P !== A || L !== g) && Z((0, o.Z)());
+        }, [g, A, L, P]),
         (0, n.jsx)(d.Popout, {
             positionKey: b,
             renderPopout: (e) =>

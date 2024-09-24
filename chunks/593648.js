@@ -32,8 +32,8 @@ var n = t(735250),
     f = t(995774),
     M = t(921801),
     D = t(292959),
-    L = t(9156),
-    P = t(626135),
+    P = t(9156),
+    L = t(626135),
     b = t(912101),
     Z = t(358085),
     v = t(709054),
@@ -103,7 +103,7 @@ function K(e) {
                 let n = s.filter((s) => s !== e);
                 !t && n.push(e),
                     e === C.Z.ringtone &&
-                        P.default.track(y.rMx.EVENT_RINGTONE_TOGGLED, {
+                        L.default.track(y.rMx.EVENT_RINGTONE_TOGGLED, {
                             toggled_on: t,
                             sound_name: e
                         }),
@@ -504,7 +504,7 @@ let X = (0, I.B)({
 });
 function q() {
     let e = X.useExperiment({ location: 'settings' }, { autoTrackExposure: !1 }).enabled,
-        s = (0, c.e7)([L.ZP], () => L.ZP.mentionOnAllMessages);
+        s = (0, c.e7)([P.ZP], () => P.ZP.mentionOnAllMessages);
     return e
         ? (0, n.jsx)(M.F, {
               setting: F.s6.NOTIFICATIONS_MENTION_ON_ALL_MESSAGES,
@@ -523,7 +523,7 @@ function q() {
 function J() {
     let e = O.xT.useExperiment({ location: 'UserSettingsNotifications' }, { autoTrackExposure: !1 }).enabled,
         { manuallyOpen: s } = O.fs.useExperiment({ location: 'UserSettingsNotifications' }, { autoTrackExposure: !1 }),
-        t = (0, c.e7)([L.ZP], () => L.ZP.useNewNotifications),
+        t = (0, c.e7)([P.ZP], () => P.ZP.useNewNotifications),
         [i, o] = a.useState(!1);
     return e && (t || s)
         ? (0, n.jsxs)(n.Fragment, {

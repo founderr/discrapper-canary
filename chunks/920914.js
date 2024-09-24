@@ -26,8 +26,8 @@ var n = t(735250),
     f = t(430824),
     M = t(771845),
     D = t(246946),
-    L = t(626135),
-    P = t(63063),
+    P = t(626135),
+    L = t(63063),
     b = t(706454),
     Z = t(349728),
     v = t(494620),
@@ -119,7 +119,7 @@ function k(e) {
         [O, p] = a.useState(T.friendSync),
         [x, f] = a.useState(T.visibility),
         [M, D] = a.useState(T.metadataVisibility),
-        [L, b] = a.useState(T.showActivity),
+        [P, b] = a.useState(T.showActivity),
         [F, Y] = a.useState(null),
         [k, H] = a.useState(null),
         [W, K] = a.useState(!1),
@@ -342,7 +342,7 @@ function k(e) {
                             {
                                 variant: 'text-xs/normal',
                                 className: V.connectionMetadataUpsellDescription,
-                                children: y.Z.Messages.CONNECTED_ACCOUNT_ADD_DETAILS_DESCRIPTION.format({ helpdeskUrl: P.Z.getArticleURL(U.BhN.CONNECTION_DETAILS) })
+                                children: y.Z.Messages.CONNECTED_ACCOUNT_ADD_DETAILS_DESCRIPTION.format({ helpdeskUrl: L.Z.getArticleURL(U.BhN.CONNECTION_DETAILS) })
                             },
                             'label'
                         )
@@ -398,7 +398,7 @@ function k(e) {
                 (o = (0, n.jsx)(_.FormSwitch, {
                     className: V.connectionOptionSwitch,
                     hideBorder: !0,
-                    value: L,
+                    value: P,
                     onChange: en,
                     children: (0, n.jsx)(_.Text, {
                         variant: 'text-sm/semibold',
@@ -497,7 +497,7 @@ function H() {
 function W(e) {
     let s = m.Z.get(e);
     (0, g.Z)({ platformType: s.type }),
-        L.default.track(U.rMx.ACCOUNT_LINK_STEP, {
+        P.default.track(U.rMx.ACCOUNT_LINK_STEP, {
             previous_step: 'desktop connections',
             current_step: 'desktop oauth',
             platform_type: s.type

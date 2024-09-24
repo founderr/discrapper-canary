@@ -180,7 +180,7 @@ let I = l.ZP.connectStores([p.Z], (e) => {
                     className: R.marginBottom20,
                     children: (0, s.jsx)(a.SingleSelect, {
                         value: b,
-                        onChange: (e) => d.Z.setInputDevice(e, 'Voice Settings'),
+                        onChange: (e) => d.Z.setInputDevice(e, { location: 'Voice Settings' }),
                         options: o().map(p, (e) => {
                             let { id: t, name: n } = e;
                             return {
@@ -210,7 +210,7 @@ let I = l.ZP.connectStores([p.Z], (e) => {
                     className: R.marginBottom20,
                     children: (0, s.jsx)(a.SingleSelect, {
                         value: f,
-                        onChange: (e) => d.Z.setOutputDevice(e, 'Voice Settings'),
+                        onChange: (e) => d.Z.setOutputDevice(e, { location: 'Voice Settings' }),
                         options: o().map(I, (e) => {
                             let { id: t, name: n } = e;
                             return {

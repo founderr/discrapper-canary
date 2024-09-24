@@ -111,9 +111,9 @@ s.Z = function (e) {
         E = (null == u ? void 0 : u.isPausedOrPausePending) === !0,
         g = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
         h = (0, o.e7)([I.default], () => I.default.getCurrentUser()),
-        L = (0, S.Vp)(),
+        P = (0, S.Vp)(),
         {
-            appliedGuildBoostSlots: P,
+            appliedGuildBoostSlots: L,
             unappliedGuildBoostSlots: b,
             numActiveGuildBoostSlots: Z,
             hasCooldownBoosts: v,
@@ -137,8 +137,8 @@ s.Z = function (e) {
                 }
             );
         }, [i]),
-        B = null != u ? (0, d.G)(u, L) : 0,
-        U = Math.max(0, B - P.length),
+        B = null != u ? (0, d.G)(u, P) : 0,
+        U = Math.max(0, B - L.length),
         G = Z > B,
         F = B === i.length,
         y = F ? U : 1,
@@ -157,12 +157,12 @@ s.Z = function (e) {
                 );
             return e;
         }, [y, g]),
-        Y = null != L,
+        Y = null != P,
         w = a.useMemo(() => b.find((e) => e.isAvailable()), [b]);
     if (0 === b.length) return null;
     let k = b.length;
     if (((s = F ? (1 === k && Y ? R.Z.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_TITLE : (j ? R.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOSTS_ALL_COOLDOWN : R.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_HEADING_INCLUDED_WITH_SUBSCRIPTION).format({ numUnappliedGuildBoostSlots: k })) : (j ? R.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOSTS_ALL_COOLDOWN : R.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_HEADING_V2).format({ numUnappliedGuildBoostSlots: k })), C.ZP.isPremium(h))) {
-        if (F && 1 === k && Y) t = L.skuId === p.Ft.FREE_GUILD_BOOST_1_MONTH ? R.Z.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_1_MONTH_VARIANT : R.Z.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_3_MONTHS_VARIANT;
+        if (F && 1 === k && Y) t = P.skuId === p.Ft.FREE_GUILD_BOOST_1_MONTH ? R.Z.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_1_MONTH_VARIANT : R.Z.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_3_MONTHS_VARIANT;
         else {
             let e = (e, s) =>
                 (0, n.jsx)(

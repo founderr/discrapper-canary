@@ -26,8 +26,8 @@ var n = t(735250),
     f = t(330181),
     M = t(954821),
     D = t(980864),
-    L = t(981631),
-    P = t(176505),
+    P = t(981631),
+    L = t(176505),
     b = t(526761),
     Z = t(689938),
     v = t(48322);
@@ -124,10 +124,10 @@ s.Z = (e) => {
         G = (0, m.Dt)(),
         { analyticsLocations: F } = (0, S.ZP)(),
         { shouldHideGuildPurchaseEntryPoints: y } = (0, C.uP)(null == l ? void 0 : l.id),
-        V = (null == s ? void 0 : s.paymentGateway) === L.gg$.APPLE_PARTNER;
+        V = (null == s ? void 0 : s.paymentGateway) === P.gg$.APPLE_PARTNER;
     if (null == i || null == t || null == g) return null;
     let Y = () => {
-            null != l && ((0, O.uL)(L.Z5c.CHANNEL(l.id, P.oC.ROLE_SUBSCRIPTIONS)), (0, _.xf)(), u.Z.show(L.kVF.BACK_TO_PREVIOUS_SCREEN, void 0, Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_BACK_TO_SUBSCRIPTION_USER_SETTING_CTA, () => E.Z.open(L.oAB.SUBSCRIPTIONS, b.cP)));
+            null != l && ((0, O.uL)(P.Z5c.CHANNEL(l.id, L.oC.ROLE_SUBSCRIPTIONS)), (0, _.xf)(), u.Z.show(P.kVF.BACK_TO_PREVIOUS_SCREEN, void 0, Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_BACK_TO_SUBSCRIPTION_USER_SETTING_CTA, () => E.Z.open(P.oAB.SUBSCRIPTIONS, b.cP)));
         },
         w = () => {
             null != l &&

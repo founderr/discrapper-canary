@@ -49,21 +49,21 @@ function D(e) {
             return r()(null != e, 'GuildIdentitySettingsPage: user cannot be undefined'), e;
         }),
         D = (0, o.e7)([I.Z], () => !I.Z.isFetchingProfile(i.id, null == s ? void 0 : s.id)),
-        L = (0, o.e7)([N.Z], () => N.Z.hidePersonalInformation),
-        { source: P, ...b } = (0, o.cj)([h.Z], () => ({
+        P = (0, o.e7)([N.Z], () => N.Z.hidePersonalInformation),
+        { source: L, ...b } = (0, o.cj)([h.Z], () => ({
             ...h.Z.getAllPending(),
             source: h.Z.getSource()
         }));
     return (a.useEffect(() => () => c.Z.wait(g.W3), []),
     a.useEffect(() => {
-        null != P &&
+        null != L &&
             u.ZP.trackWithMetadata(x.rMx.SETTINGS_PANE_VIEWED, {
                 settings_type: 'guild',
                 destination_pane: x.jXE.SETTINGS_CUSTOMIZE_PROFILE,
-                source: P
+                source: L
             });
-    }, [P]),
-    L)
+    }, [L]),
+    P)
         ? (0, n.jsx)(d.Z, {})
         : D
           ? (0, n.jsxs)(E.Gt, {

@@ -31,8 +31,8 @@ var n,
     f = t(921813),
     M = t(935147),
     D = t(246946),
-    L = t(25990),
-    P = t(594174),
+    P = t(25990),
+    L = t(594174),
     b = t(74538),
     Z = t(695346),
     v = t(265159),
@@ -40,15 +40,15 @@ var n,
     B = t(689938),
     U = t(111265);
 function G() {
-    let e = (0, _.e7)([P.default], () => {
-        let e = P.default.getCurrentUser();
+    let e = (0, _.e7)([L.default], () => {
+        let e = L.default.getCurrentUser();
         return d()(null != e, 'UserSettingsProfileCustomization: user cannot be undefined'), e;
     });
     r.useEffect(() => {
         (0, S.In)(e.id);
     }, [e.id]);
     let s = (0, _.e7)([D.Z], () => D.Z.hidePersonalInformation),
-        { pendingBio: t, ...n } = (0, _.cj)([L.Z], () => L.Z.getAllPending()),
+        { pendingBio: t, ...n } = (0, _.cj)([P.Z], () => P.Z.getAllPending()),
         a = Z.dN.useSetting() && null != t ? h.ZP.parse(void 0, t).content : t,
         o = b.ZP.canUsePremiumProfileCustomization(e),
         { analyticsLocations: c } = (0, A.ZP)(C.Z.PROFILE);

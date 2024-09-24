@@ -38,8 +38,8 @@ function M(e, s, t) {
     );
 }
 let D = ['svg', 'png', 'gif', 'webp'],
-    L = [...D, 'jpg', 'jpeg'],
-    P = Array.from(new Set([...L, 'gif', 'mp4', 'webm']));
+    P = [...D, 'jpg', 'jpeg'],
+    L = Array.from(new Set([...P, 'gif', 'mp4', 'webm']));
 function b() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         { streamProgressSeconds: s = 0, completedAt: t = null, enrolledAt: n = null, claimedAt: a = null } = e;
@@ -275,35 +275,35 @@ function j() {
                         title: 'Hero',
                         assetKey: 'hero',
                         onFileChange: Y,
-                        filters: P,
+                        filters: L,
                         initialValue: l.config.assets.hero
                     }),
                     (0, n.jsx)(h.Z, {
                         title: 'Hero Video (optional)',
                         assetKey: 'heroVideo',
                         onFileChange: Y,
-                        filters: P,
+                        filters: L,
                         initialValue: null !== (t = l.config.assets.heroVideo) && void 0 !== t ? t : void 0
                     }),
                     (0, n.jsx)(h.Z, {
                         title: 'Quest Bar Hero',
                         assetKey: 'questBarHero',
                         onFileChange: Y,
-                        filters: P,
+                        filters: L,
                         initialValue: l.config.assets.questBarHero
                     }),
                     (0, n.jsx)(h.Z, {
                         title: 'Quest Bar Hero Video (optional)',
                         assetKey: 'questBarHeroVideo',
                         onFileChange: Y,
-                        filters: P,
+                        filters: L,
                         initialValue: null !== (r = l.config.assets.questBarHeroVideo) && void 0 !== r ? r : void 0
                     }),
                     (0, n.jsx)(h.Z, {
                         title: 'Game Tile',
                         assetKey: 'gameTile',
                         onFileChange: Y,
-                        filters: L,
+                        filters: P,
                         initialValue: l.config.assets.gameTile
                     }),
                     (0, n.jsx)(h.Z, {
@@ -371,7 +371,7 @@ function j() {
                                                                 .exhaustive())
                                                     });
                                             })(e, t, s),
-                                        filters: P,
+                                        filters: L,
                                         initialValue: e.asset
                                     })
                                 ]

@@ -32,7 +32,7 @@ var n = t(735250),
     f = t(348893),
     M = t(739017);
 function D(e) {
-    let { subscription: s, onPaymentSourceAdded: t, highlightAddPaymentMethodButton: i, dropdownClassName: o, analyticsLocation: D, currentInvoicePreview: P, disabled: b = !1 } = e,
+    let { subscription: s, onPaymentSourceAdded: t, highlightAddPaymentMethodButton: i, dropdownClassName: o, analyticsLocation: D, currentInvoicePreview: L, disabled: b = !1 } = e,
         Z = (0, c.e7)([m.Z], () => m.Z.hidePersonalInformation),
         [v, j] = (0, c.Wu)([C.Z], () => [C.Z.paymentSources, C.Z.hasFetchedPaymentSources]),
         B = (0, N.V)((0, O.yb)(s)),
@@ -54,8 +54,8 @@ function D(e) {
                 analyticsLocations: U,
                 analyticsLocation: D
             });
-            P.currency !== a.currency || (P.currency === a.currency && P.total !== a.total)
-                ? await L(
+            L.currency !== a.currency || (L.currency === a.currency && L.total !== a.total)
+                ? await P(
                       a,
                       () => {
                           n(e, t);
@@ -171,7 +171,7 @@ function D(e) {
         });
     }
 }
-let L = async (e, s, a) => {
+let P = async (e, s, a) => {
     let i = await (0, d.openModalLazy)(
         async () => {
             let { default: i } = await t.e('97516').then(t.bind(t, 358927));

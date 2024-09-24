@@ -9,22 +9,22 @@ var s = n(442837),
     a = n(481060),
     l = n(846027),
     r = n(131951);
-function o() {
-    let e = (0, s.e7)([r.Z], () => Object.values(r.Z.getOutputDevices())),
-        t = (0, s.e7)([r.Z], () => r.Z.getOutputDeviceId());
-    return e.map((e) => {
-        let { id: n, disabled: s, name: r } = e;
+function o(e) {
+    let t = (0, s.e7)([r.Z], () => Object.values(r.Z.getOutputDevices())),
+        n = (0, s.e7)([r.Z], () => r.Z.getOutputDeviceId());
+    return t.map((t) => {
+        let { id: s, disabled: r, name: o } = t;
         return (0, i.jsx)(
             a.MenuRadioItem,
             {
                 group: 'output-devices',
-                id: 'output-'.concat(n),
-                disabled: s,
-                label: r,
-                checked: n === t,
-                action: () => l.Z.setOutputDevice(n)
+                id: 'output-'.concat(s),
+                disabled: r,
+                label: o,
+                checked: s === n,
+                action: () => l.Z.setOutputDevice(s, { analyticsLocations: e })
             },
-            'output-'.concat(n)
+            'output-'.concat(s)
         );
     });
 }

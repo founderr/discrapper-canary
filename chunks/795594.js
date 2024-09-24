@@ -26,8 +26,8 @@ var n = t(735250),
     f = t(709054),
     M = t(706454),
     D = t(210887),
-    L = t(436267),
-    P = t(149418),
+    P = t(436267),
+    L = t(149418),
     b = t(494620),
     Z = t(981631),
     v = t(689938),
@@ -77,7 +77,7 @@ let F = (e) => {
             d = () => {
                 let e = v.Z.Messages.DELETE_APP_CONFIRM_MSG_V2.format({ applicationName: t.name });
                 return (
-                    (0, P.Z)(t) &&
+                    (0, L.Z)(t) &&
                         (e = (0, n.jsxs)(n.Fragment, {
                             children: [
                                 e,
@@ -88,7 +88,7 @@ let F = (e) => {
                                 })
                             ]
                         })),
-                    (0, L.Z)(t.id) &&
+                    (0, P.Z)(t.id) &&
                         (e = (0, n.jsxs)(n.Fragment, {
                             children: [
                                 e,
@@ -124,7 +124,7 @@ let F = (e) => {
                         shouldConfirm: !0
                     });
             },
-            S = (0, L.O)(t.id);
+            S = (0, P.O)(t.id);
         return (0, n.jsx)(E.Card, {
             className: r()(j.authedApp, B.marginBottom8),
             outline: !0,

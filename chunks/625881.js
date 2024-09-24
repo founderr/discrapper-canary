@@ -37,8 +37,8 @@ s.Z = function (e) {
             f(!1);
         },
         D = (0, d.ZP)(),
-        L = (0, l.wj)(D) ? A : g,
-        P = (0, T._)(s, I.Xh.PREMIUM_MONTH_TIER_2, O),
+        P = (0, l.wj)(D) ? A : g,
+        L = (0, T._)(s, I.Xh.PREMIUM_MONTH_TIER_2, O),
         b = (0, u.aS)(I.Xh.PREMIUM_MONTH_TIER_2),
         Z = (0, E.T4)(b.amount, b.currency);
     return null == O
@@ -63,7 +63,7 @@ s.Z = function (e) {
                                   children: [
                                       (0, n.jsx)('img', {
                                           alt: '',
-                                          src: L,
+                                          src: P,
                                           className: C.confirmDiscountIcon
                                       }),
                                       (0, n.jsx)(c.Text, {
@@ -82,7 +82,7 @@ s.Z = function (e) {
                                       variant: 'text-xs/semibold',
                                       className: C.confirmDiscountLegaleseText,
                                       children: m.Z.Messages.CHURN_DISCOUNT_CONFIRM_LEGALESE.format({
-                                          discountedPrice: P,
+                                          discountedPrice: L,
                                           billingPeriod: (0, u.JP)(O.discount.user_usage_limit_interval),
                                           numMonths: O.discount.user_usage_limit,
                                           fullPrice: Z,

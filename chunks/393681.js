@@ -26,8 +26,8 @@ var n = t(735250),
     f = t(246946),
     M = t(594174),
     D = t(709054),
-    L = t(706454),
-    P = t(210887),
+    P = t(706454),
+    L = t(210887),
     b = t(418632),
     Z = t(730820),
     v = t(888256),
@@ -327,10 +327,10 @@ s.Z = () => {
         }),
         s = (0, c.e7)([x.Z], () => x.Z.getBackupCodes()),
         t = (0, c.e7)([f.Z], () => f.Z.hidePersonalInformation),
-        a = (0, c.e7)([P.Z], () => P.Z.theme),
+        a = (0, c.e7)([L.Z], () => L.Z.theme),
         i = (0, g.b)(),
         r = (0, A.CC)(),
-        o = (0, c.e7)([L.default], () => L.default.locale);
+        o = (0, c.e7)([P.default], () => P.default.locale);
     return (0, n.jsx)(w, {
         theme: a,
         currentUser: e,

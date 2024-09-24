@@ -26,8 +26,8 @@ var n = t(735250),
     f = t(703656),
     M = t(246946),
     D = t(78839),
-    L = t(483444),
-    P = t(626135),
+    P = t(483444),
+    L = t(626135),
     b = t(74538),
     Z = t(140465),
     v = t(599659),
@@ -67,7 +67,7 @@ function J() {
             (0, n.jsxs)('div', {
                 className: W.tierInfo,
                 children: [
-                    (0, n.jsx)(L.Z, { className: W.tierTitle }),
+                    (0, n.jsx)(P.Z, { className: W.tierTitle }),
                     E
                         ? (0, n.jsxs)(n.Fragment, {
                               children: [
@@ -118,7 +118,7 @@ function J() {
                         className: W.tierCardButton,
                         color: u.Button.Colors.WHITE,
                         onClick: () => {
-                            P.default.track(k.rMx.PREMIUM_SETTINGS_INTERACTED, {
+                            L.default.track(k.rMx.PREMIUM_SETTINGS_INTERACTED, {
                                 cta_type: 'to_premium_home_button',
                                 target: 'premium home page'
                             }),
@@ -136,7 +136,7 @@ function J() {
                         look: u.Button.Looks.OUTLINED,
                         color: u.Button.Colors.WHITE,
                         onClick: () => {
-                            P.default.track(k.rMx.PREMIUM_SETTINGS_INTERACTED, {
+                            L.default.track(k.rMx.PREMIUM_SETTINGS_INTERACTED, {
                                 cta_type: 'to_subscriptions_button',
                                 target: 'subscriptions settings'
                             }),
@@ -199,7 +199,7 @@ function $() {
                         buttonTextClassName: W.giftButtonCTA,
                         color: u.Button.Colors.CUSTOM,
                         onClick: () => {
-                            P.default.track(k.rMx.PREMIUM_SETTINGS_INTERACTED, {
+                            L.default.track(k.rMx.PREMIUM_SETTINGS_INTERACTED, {
                                 cta_type: X,
                                 target: q
                             });
@@ -243,7 +243,7 @@ function ee() {
                               buttonTextClassName: W.giftButtonCTA,
                               color: u.Button.Colors.CUSTOM,
                               onClick: () => {
-                                  P.default.track(k.rMx.PREMIUM_SETTINGS_INTERACTED, {
+                                  L.default.track(k.rMx.PREMIUM_SETTINGS_INTERACTED, {
                                       cta_type: X,
                                       target: q
                                   });
@@ -275,7 +275,7 @@ s.Z = function () {
         }),
         (0, B.B)('PremiumManagementSettings');
     let f = (0, V.bD)('PremiumManagementSettings'),
-        L = (0, V.pn)('PremiumManagementSettings');
+        P = (0, V.pn)('PremiumManagementSettings');
     a.useEffect(() => {
         E.Z.wait(async () => {
             !N && !e && (await Promise.all([T.jg(), T.tZ(), (0, I.Y2)(S, null, k.JjL.DISCOVERY)])), l(!1);
@@ -299,7 +299,7 @@ s.Z = function () {
                     className: W.__invalid_container,
                     children: [
                         (0, n.jsx)(J, {}),
-                        (f || L) && (0, n.jsx)(Y.Z, { isInSettings: !0 }),
+                        (f || P) && (0, n.jsx)(Y.Z, { isInSettings: !0 }),
                         (0, n.jsx)(ee, {}),
                         (0, n.jsx)(y.Z, {
                             className: W.__invalid_planComparisonTable,
@@ -313,7 +313,7 @@ s.Z = function () {
                 }),
                 (0, n.jsx)(d.$, {
                     onChange: (e) => {
-                        e && !b && (P.default.track(k.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: s }), Z(!0));
+                        e && !b && (L.default.track(k.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: s }), Z(!0));
                     },
                     children: (0, n.jsx)('div', { className: W.bottomOfPageVisibilitySensor })
                 })

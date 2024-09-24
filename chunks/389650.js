@@ -32,8 +32,8 @@ var n = t(735250),
     f = t(210887),
     M = t(659947),
     D = t(981631),
-    L = t(420212),
-    P = t(689938),
+    P = t(420212),
+    L = t(689938),
     b = t(929481),
     Z = t(869042),
     v = t(113207);
@@ -55,7 +55,7 @@ function B(e) {
     return s([I.Q2.MESSAGE, I.Q2.NAVIGATION, I.Q2.DND, I.Q2.CHAT, I.Q2.VOICE_AND_VIDEO, I.Q2.MISCELLANEOUS]);
 }
 let U = l()((0, I.Rv)())
-        .filter((e) => e.description !== P.Z.Messages.KEYBIND_DESCRIPTION_MODAL_EASTER_EGG)
+        .filter((e) => e.description !== L.Z.Messages.KEYBIND_DESCRIPTION_MODAL_EASTER_EGG)
         .groupBy((e) => e.group)
         .value(),
     G = c.ZP.connectStores([f.Z], () => ({ theme: f.Z.theme }))(_.EmptyState);
@@ -68,14 +68,14 @@ class F extends a.PureComponent {
                   className: b.keybindMessage,
                   type: _.FormTextTypes.DESCRIPTION,
                   style: { color: d.Z.unsafe_rawColors.RED_400.css },
-                  children: P.Z.Messages.KEYBIND_CONFLICT
+                  children: L.Z.Messages.KEYBIND_CONFLICT
               })
-            : L.Sp.has(s)
+            : P.Sp.has(s)
               ? (0, n.jsx)(_.FormText, {
                     className: b.keybindMessage,
                     type: _.FormTextTypes.DESCRIPTION,
                     style: { color: d.Z.unsafe_rawColors.RED_400.css },
-                    children: P.Z.Messages.KEYBIND_NAVIGATION_CONFLICT.format({ keyboardNavArticle: p.Z.getArticleURL(D.BhN.KEYBOARD_NAVIGATION) })
+                    children: L.Z.Messages.KEYBIND_NAVIGATION_CONFLICT.format({ keyboardNavArticle: p.Z.getArticleURL(D.BhN.KEYBOARD_NAVIGATION) })
                 })
               : (0, n.jsx)(_.FormText, {
                     className: b.keybindMessage,
@@ -91,7 +91,7 @@ class F extends a.PureComponent {
             children: [
                 !e &&
                     (0, n.jsx)(E.Z, {
-                        'aria-label': P.Z.Messages.REMOVE_KEYBIND,
+                        'aria-label': L.Z.Messages.REMOVE_KEYBIND,
                         className: b.removeKeybind,
                         onClick: this.handleDeleteKeybind,
                         look: E.Z.Looks.FILLED
@@ -102,7 +102,7 @@ class F extends a.PureComponent {
                         (0, n.jsx)(C.Z.Child, {
                             basis: '45%',
                             children: (0, n.jsx)(_.FormItem, {
-                                title: P.Z.Messages.USER_SETTINGS_KEYBINDS_ACTION,
+                                title: L.Z.Messages.USER_SETTINGS_KEYBINDS_ACTION,
                                 className: b.item,
                                 children: (0, n.jsx)(_.SingleSelect, {
                                     value: this.props.keybind.action,
@@ -115,7 +115,7 @@ class F extends a.PureComponent {
                         (0, n.jsx)(C.Z.Child, {
                             basis: '45%',
                             children: (0, n.jsx)(_.FormItem, {
-                                title: P.Z.Messages.USER_SETTINGS_KEYBINDS_KEYBIND,
+                                title: L.Z.Messages.USER_SETTINGS_KEYBINDS_KEYBIND,
                                 className: b.item,
                                 children: (0, n.jsx)(T.Z, {
                                     defaultValue: this.props.keybind.shortcut,
@@ -129,7 +129,7 @@ class F extends a.PureComponent {
                             children: (0, n.jsx)(_.FormItem, {
                                 className: b.switch,
                                 children: (0, n.jsx)(_.Tooltip, {
-                                    text: P.Z.Messages.USER_SETTINGS_KEYBIND_ENABLE_DISABLE,
+                                    text: L.Z.Messages.USER_SETTINGS_KEYBIND_ENABLE_DISABLE,
                                     children: (e) =>
                                         (0, n.jsx)('div', {
                                             ...e,
@@ -190,91 +190,91 @@ class y extends a.PureComponent {
             a = [
                 {
                     value: D.kg4.UNASSIGNED,
-                    label: P.Z.Messages.KEYBIND_UNASSIGNED
+                    label: L.Z.Messages.KEYBIND_UNASSIGNED
                 },
                 {
                     value: D.kg4.PUSH_TO_TALK,
-                    label: P.Z.Messages.KEYBIND_PUSH_TO_TALK
+                    label: L.Z.Messages.KEYBIND_PUSH_TO_TALK
                 },
                 {
                     value: D.kg4.PUSH_TO_TALK_PRIORITY,
-                    label: P.Z.Messages.KEYBIND_PUSH_TO_TALK_PRIORITY
+                    label: L.Z.Messages.KEYBIND_PUSH_TO_TALK_PRIORITY
                 },
                 {
                     value: D.kg4.PUSH_TO_MUTE,
-                    label: P.Z.Messages.KEYBIND_PUSH_TO_MUTE
+                    label: L.Z.Messages.KEYBIND_PUSH_TO_MUTE
                 },
                 {
                     value: D.kg4.TOGGLE_MUTE,
-                    label: P.Z.Messages.KEYBIND_TOGGLE_MUTE
+                    label: L.Z.Messages.KEYBIND_TOGGLE_MUTE
                 },
                 {
                     value: D.kg4.TOGGLE_DEAFEN,
-                    label: P.Z.Messages.KEYBIND_TOGGLE_DEAFEN
+                    label: L.Z.Messages.KEYBIND_TOGGLE_DEAFEN
                 },
                 {
                     value: D.kg4.TOGGLE_VOICE_MODE,
-                    label: P.Z.Messages.KEYBIND_TOGGLE_VOICE_MODE
+                    label: L.Z.Messages.KEYBIND_TOGGLE_VOICE_MODE
                 },
                 {
                     value: D.kg4.TOGGLE_STREAMER_MODE,
-                    label: P.Z.Messages.KEYBIND_TOGGLE_STREAM_MODE
+                    label: L.Z.Messages.KEYBIND_TOGGLE_STREAM_MODE
                 }
             ];
         return (
             e &&
                 (a.push({
                     value: D.kg4.TOGGLE_OVERLAY,
-                    label: P.Z.Messages.KEYBIND_TOGGLE_OVERLAY
+                    label: L.Z.Messages.KEYBIND_TOGGLE_OVERLAY
                 }),
                 a.push({
                     value: D.kg4.TOGGLE_OVERLAY_INPUT_LOCK,
-                    label: P.Z.Messages.KEYBIND_TOGGLE_OVERLAY_INPUT_LOCK
+                    label: L.Z.Messages.KEYBIND_TOGGLE_OVERLAY_INPUT_LOCK
                 }),
                 a.push({
                     value: D.kg4.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET,
-                    label: P.Z.Messages.KEYBIND_ACTIVATE_OVERLAY_CHAT
+                    label: L.Z.Messages.KEYBIND_ACTIVATE_OVERLAY_CHAT
                 })),
             s &&
                 (0, R.isWindows)() &&
                 a.push({
                     value: D.kg4.TOGGLE_GO_LIVE_STREAMING,
-                    label: P.Z.Messages.KEYBIND_TOGGLE_GO_LIVE_STREAMING
+                    label: L.Z.Messages.KEYBIND_TOGGLE_GO_LIVE_STREAMING
                 }),
             (0, R.isDesktop)() &&
                 (a.push(
                     {
                         value: D.kg4.NAVIGATE_BACK,
-                        label: P.Z.Messages.KEYBIND_NAVIGATE_BACK
+                        label: L.Z.Messages.KEYBIND_NAVIGATE_BACK
                     },
                     {
                         value: D.kg4.NAVIGATE_FORWARD,
-                        label: P.Z.Messages.KEYBIND_NAVIGATE_FORWARD
+                        label: L.Z.Messages.KEYBIND_NAVIGATE_FORWARD
                     },
                     {
                         value: D.kg4.SWITCH_TO_VOICE_CHANNEL,
-                        label: P.Z.Messages.USER_SETTINGS_KEYBINDS_SWITCH_TO_VOICE_CHANNEL_LABEL
+                        label: L.Z.Messages.USER_SETTINGS_KEYBINDS_SWITCH_TO_VOICE_CHANNEL_LABEL
                     },
                     {
                         value: D.kg4.DISCONNECT_FROM_VOICE_CHANNEL,
-                        label: P.Z.Messages.USER_SETTINGS_KEYBINDS_VOICE_CHANNEL_DISCONNECT_LABEL
+                        label: L.Z.Messages.USER_SETTINGS_KEYBINDS_VOICE_CHANNEL_DISCONNECT_LABEL
                     }
                 ),
                 t &&
                     a.push(
                         {
                             value: D.kg4.SOUNDBOARD,
-                            label: P.Z.Messages.KEYBIND_SOUNDBOARD
+                            label: L.Z.Messages.KEYBIND_SOUNDBOARD
                         },
                         {
                             value: D.kg4.SOUNDBOARD_HOLD,
-                            label: P.Z.Messages.KEYBIND_SOUNDBOARD_HOLD
+                            label: L.Z.Messages.KEYBIND_SOUNDBOARD_HOLD
                         }
                     ),
                 n &&
                     a.push({
                         value: D.kg4.SAVE_CLIP,
-                        label: P.Z.Messages.CLIPS_SAVE
+                        label: L.Z.Messages.CLIPS_SAVE
                     })),
             a
         );
@@ -282,16 +282,16 @@ class y extends a.PureComponent {
     get keybindDescriptions() {
         let { overlaySupported: e, canGoLive: s, enableClips: t } = this.props,
             n = {
-                [D.kg4.UNASSIGNED]: P.Z.Messages.KEYBIND_DESCRIPTION_UNASSIGNED,
-                [D.kg4.PUSH_TO_MUTE]: P.Z.Messages.KEYBIND_DESCRIPTION_PUSH_TO_MUTE,
-                [D.kg4.PUSH_TO_TALK]: P.Z.Messages.KEYBIND_DESCRIPTION_PUSH_TO_TALK,
-                [D.kg4.PUSH_TO_TALK_PRIORITY]: P.Z.Messages.KEYBIND_DESCRIPTION_PUSH_TO_TALK_PRIORITY,
-                [D.kg4.TOGGLE_MUTE]: P.Z.Messages.KEYBIND_DESCRIPTION_TOGGLE_MUTE,
-                [D.kg4.TOGGLE_DEAFEN]: P.Z.Messages.KEYBIND_DESCRIPTION_TOGGLE_DEAFEN,
-                [D.kg4.TOGGLE_VOICE_MODE]: P.Z.Messages.KEYBIND_DESCRIPTION_TOGGLE_VOICE_MODE,
-                [D.kg4.TOGGLE_STREAMER_MODE]: P.Z.Messages.KEYBIND_DESCRIPTION_TOGGLE_STREAMER_MODE
+                [D.kg4.UNASSIGNED]: L.Z.Messages.KEYBIND_DESCRIPTION_UNASSIGNED,
+                [D.kg4.PUSH_TO_MUTE]: L.Z.Messages.KEYBIND_DESCRIPTION_PUSH_TO_MUTE,
+                [D.kg4.PUSH_TO_TALK]: L.Z.Messages.KEYBIND_DESCRIPTION_PUSH_TO_TALK,
+                [D.kg4.PUSH_TO_TALK_PRIORITY]: L.Z.Messages.KEYBIND_DESCRIPTION_PUSH_TO_TALK_PRIORITY,
+                [D.kg4.TOGGLE_MUTE]: L.Z.Messages.KEYBIND_DESCRIPTION_TOGGLE_MUTE,
+                [D.kg4.TOGGLE_DEAFEN]: L.Z.Messages.KEYBIND_DESCRIPTION_TOGGLE_DEAFEN,
+                [D.kg4.TOGGLE_VOICE_MODE]: L.Z.Messages.KEYBIND_DESCRIPTION_TOGGLE_VOICE_MODE,
+                [D.kg4.TOGGLE_STREAMER_MODE]: L.Z.Messages.KEYBIND_DESCRIPTION_TOGGLE_STREAMER_MODE
             };
-        return e && ((n[D.kg4.TOGGLE_OVERLAY] = P.Z.Messages.KEYBIND_DESCRIPTION_TOGGLE_OVERLAY), (n[D.kg4.TOGGLE_OVERLAY_INPUT_LOCK] = P.Z.Messages.KEYBIND_DESCRIPTION_TOGGLE_OVERLAY_INPUT_LOCK)), s && (0, R.isWindows)() && (n[D.kg4.TOGGLE_GO_LIVE_STREAMING] = P.Z.Messages.KEYBIND_DESCRIPTION_TOGGLE_GO_LIVE_STREAMING), (0, R.isDesktop)() && ((n[D.kg4.NAVIGATE_BACK] = P.Z.Messages.KEYBIND_DESCRIPTION_NAVIGATE_BACK), (n[D.kg4.NAVIGATE_FORWARD] = P.Z.Messages.KEYBIND_DESCRIPTION_NAVIGATE_FORWARD), (n[D.kg4.SOUNDBOARD] = (0, R.isWindows)() ? P.Z.Messages.KEYBIND_DESCRIPTION_SOUNDBOARD_NO_POPOUT_WHEEL_SUPPORT : P.Z.Messages.KEYBIND_DESCRIPTION_SOUNDBOARD), (n[D.kg4.SOUNDBOARD_HOLD] = (0, R.isWindows)() ? P.Z.Messages.KEYBIND_DESCRIPTION_SOUNDBOARD_HOLD_NO_POPOUT_WHEEL_SUPPORT : P.Z.Messages.KEYBIND_DESCRIPTION_SOUNDBOARD_HOLD), t && (n[D.kg4.SAVE_CLIP] = P.Z.Messages.CLIPS_KEYBIND_DESCRIPTION)), n;
+        return e && ((n[D.kg4.TOGGLE_OVERLAY] = L.Z.Messages.KEYBIND_DESCRIPTION_TOGGLE_OVERLAY), (n[D.kg4.TOGGLE_OVERLAY_INPUT_LOCK] = L.Z.Messages.KEYBIND_DESCRIPTION_TOGGLE_OVERLAY_INPUT_LOCK)), s && (0, R.isWindows)() && (n[D.kg4.TOGGLE_GO_LIVE_STREAMING] = L.Z.Messages.KEYBIND_DESCRIPTION_TOGGLE_GO_LIVE_STREAMING), (0, R.isDesktop)() && ((n[D.kg4.NAVIGATE_BACK] = L.Z.Messages.KEYBIND_DESCRIPTION_NAVIGATE_BACK), (n[D.kg4.NAVIGATE_FORWARD] = L.Z.Messages.KEYBIND_DESCRIPTION_NAVIGATE_FORWARD), (n[D.kg4.SOUNDBOARD] = (0, R.isWindows)() ? L.Z.Messages.KEYBIND_DESCRIPTION_SOUNDBOARD_NO_POPOUT_WHEEL_SUPPORT : L.Z.Messages.KEYBIND_DESCRIPTION_SOUNDBOARD), (n[D.kg4.SOUNDBOARD_HOLD] = (0, R.isWindows)() ? L.Z.Messages.KEYBIND_DESCRIPTION_SOUNDBOARD_HOLD_NO_POPOUT_WHEEL_SUPPORT : L.Z.Messages.KEYBIND_DESCRIPTION_SOUNDBOARD_HOLD), t && (n[D.kg4.SAVE_CLIP] = L.Z.Messages.CLIPS_KEYBIND_DESCRIPTION)), n;
     }
     renderKeybinds(e) {
         return e.map((e) =>
@@ -338,7 +338,7 @@ class y extends a.PureComponent {
             children: [
                 (0, n.jsx)(_.FormSection, {
                     tag: _.FormTitleTags.H1,
-                    title: P.Z.Messages.KEYBINDS,
+                    title: L.Z.Messages.KEYBINDS,
                     children: R.isPlatformEmbedded
                         ? (0, n.jsxs)(n.Fragment, {
                               children: [
@@ -350,7 +350,7 @@ class y extends a.PureComponent {
                                               grow: 0,
                                               children: (0, n.jsx)(_.HelpMessage, {
                                                   messageType: _.HelpMessageTypes.WARNING,
-                                                  children: P.Z.Messages.ADD_KEYBIND_WARNING
+                                                  children: L.Z.Messages.ADD_KEYBIND_WARNING
                                               })
                                           }),
                                           (0, n.jsx)(C.Z.Child, {
@@ -359,7 +359,7 @@ class y extends a.PureComponent {
                                               children: (0, n.jsx)(_.Button, {
                                                   size: _.ButtonSizes.LARGE,
                                                   onClick: this.handleAddKeybind,
-                                                  children: P.Z.Messages.ADD_KEYBIND
+                                                  children: L.Z.Messages.ADD_KEYBIND
                                               })
                                           })
                                       ]
@@ -374,13 +374,13 @@ class y extends a.PureComponent {
                               messageType: _.HelpMessageTypes.INFO,
                               textVariant: 'text-lg/medium',
                               className: b.browserNotice,
-                              children: P.Z.Messages.KEYBIND_IN_BROSWER_NOTICE.format({ downloadLink: D.EYA.DOWNLOAD })
+                              children: L.Z.Messages.KEYBIND_IN_BROSWER_NOTICE.format({ downloadLink: D.EYA.DOWNLOAD })
                           })
                 }),
                 (0, n.jsx)(_.FormDivider, {}),
                 (0, n.jsxs)(_.FormSection, {
                     tag: _.FormTitleTags.H1,
-                    title: P.Z.Messages.USER_SETTINGS_KEYBINDS_DEFAULT_KEYBINDS_TITLE,
+                    title: L.Z.Messages.USER_SETTINGS_KEYBINDS_DEFAULT_KEYBINDS_TITLE,
                     className: v.marginTop60,
                     children: [
                         (0, n.jsxs)('div', {
@@ -388,7 +388,7 @@ class y extends a.PureComponent {
                             children: [
                                 (0, n.jsx)(_.Text, {
                                     variant: 'text-md/normal',
-                                    children: P.Z.Messages.USER_SETTINGS_KEYBINDS_SHOW_LIST_TITLE
+                                    children: L.Z.Messages.USER_SETTINGS_KEYBINDS_SHOW_LIST_TITLE
                                 }),
                                 (0, n.jsx)('div', {
                                     className: b.defaultKeybindShortcutGroup,

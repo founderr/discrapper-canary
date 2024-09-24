@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return L;
+        return P;
     }
 }),
     t(653041);
@@ -117,7 +117,7 @@ function D() {
         })
     );
 }
-function L() {
+function P() {
     let {
             inputMode: e,
             inputDeviceId: s,

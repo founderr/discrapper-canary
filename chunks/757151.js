@@ -30,8 +30,8 @@ var n = t(735250),
     f = t(864239),
     M = t(190014),
     D = t(301812),
-    L = t(988043),
-    P = t(919539),
+    P = t(988043),
+    L = t(919539),
     b = t(266132),
     Z = t(726985),
     v = t(981631),
@@ -47,8 +47,8 @@ let U = () =>
                         setting: Z.s6.PRIVACY_AND_SAFETY_SERVER_SELECTOR,
                         children: (0, n.jsx)(p.Z, {})
                     }),
-                    (0, n.jsx)(L.Z, {}),
                     (0, n.jsx)(P.Z, {}),
+                    (0, n.jsx)(L.Z, {}),
                     (0, n.jsx)(D.Z, {}),
                     (0, n.jsx)(M.Z, {})
                 ]

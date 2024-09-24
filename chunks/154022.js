@@ -31,8 +31,8 @@ var n = t(735250),
     f = t(63063),
     M = t(695346),
     D = t(263937),
-    L = t(996073),
-    P = t(526761),
+    P = t(996073),
+    L = t(526761),
     b = t(726985),
     Z = t(981631),
     v = t(611480),
@@ -291,7 +291,7 @@ function q() {
     let e = (0, c.e7)([T.Z], () => T.Z.syncProfileThemeWithUserTheme),
         s = a.useRef(null);
     return (
-        (0, L.Z)(s, P.rP.SYNC_PROFILE_THEME_WITH_USER_THEME),
+        (0, P.Z)(s, L.rP.SYNC_PROFILE_THEME_WITH_USER_THEME),
         (0, n.jsx)(d.FormItem, {
             ref: s,
             title: B.Z.Messages.ACCESSIBILITY_SETTINGS_PROFILE_COLORS_TITLE,
@@ -355,7 +355,7 @@ function $() {
             animateEmojiOverrideReason: D.Z.getAppliedOverrideReasonKey('animateEmoji')
         })),
         u = a.useRef(null);
-    (0, L.Z)(u, P.rP.REDUCED_MOTION);
+    (0, P.Z)(u, L.rP.REDUCED_MOTION);
     let S = a.useCallback(
             (e, s) => {
                 (0, E.Zt)(s ? 'auto' : o);
@@ -459,7 +459,7 @@ function es() {
         s = M.dN.useSetting(),
         t = a.useRef(null);
     return (
-        (0, L.Z)(t, P.rP.LEGACY_CHAT_INPUT),
+        (0, P.Z)(t, L.rP.LEGACY_CHAT_INPUT),
         (0, n.jsxs)(d.FormItem, {
             ref: t,
             className: G.marginTop20,

@@ -30,8 +30,8 @@ var n = t(735250),
     f = t(433411),
     M = t(532432),
     D = t(504983),
-    L = t(134795),
-    P = t(513901),
+    P = t(134795),
+    L = t(513901),
     b = t(451392),
     Z = t(649700),
     v = t(981631),
@@ -131,7 +131,7 @@ function F(e) {
                                 showPremiumIcon: !1,
                                 preventDisabled: !0
                             }),
-                            (0, n.jsx)(L.Z, {
+                            (0, n.jsx)(P.Z, {
                                 className: G.customizationSection,
                                 isTryItOutFlow: !0,
                                 showRemoveBannerButton: null != k,
@@ -157,7 +157,7 @@ function F(e) {
                                 'decoration'
                             ),
                             (0, n.jsx)(
-                                P.Z,
+                                L.Z,
                                 {
                                     className: G.customizationSection,
                                     isTryItOutFlow: !0,

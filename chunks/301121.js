@@ -33,8 +33,8 @@ var n,
     f = t(856768),
     M = t(592204),
     D = t(712950),
-    L = t(880257),
-    P = t(16703),
+    P = t(880257),
+    L = t(16703),
     b = t(977059),
     Z = t(236289),
     v = t(518560),
@@ -83,7 +83,7 @@ function e_(e, s, t) {
 }
 function eu() {
     let e = (0, E.e7)([x.Z], () => x.Z.getGuild()),
-        s = (0, P.Z)(),
+        s = (0, L.Z)(),
         t = null != e ? e : s;
     r.useEffect(() => {
         w.default.track(ei.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, { action: et.Y.VIEW_SETTINGS_PAGE });
@@ -119,7 +119,7 @@ function eu() {
 }
 function eE() {
     var e;
-    let s = null === (e = (0, L.Z)()) || void 0 === e || e,
+    let s = null === (e = (0, P.Z)()) || void 0 === e || e,
         t = (0, j.y0)({ location: 'user_settings_web' }),
         n = (0, B.c)(),
         a = (0, X.a)(en.to.DM_SAFETY_ALERTS);
@@ -213,7 +213,7 @@ function eS() {
 }
 function eI() {
     var e;
-    let s = null === (e = (0, L.Z)()) || void 0 === e || e,
+    let s = null === (e = (0, P.Z)()) || void 0 === e || e,
         { explicitContentGuilds: t, explicitContentFriendDm: n, explicitContentNonFriendDm: a } = (0, R.B)(),
         r = (0, X.a)(en.to.EXPLICIT_MEDIA_REDACTION),
         o = [
@@ -958,7 +958,7 @@ function eg() {
         r = (0, M.Xo)({ location: 'web_user_privacy_and_safety_settings' }),
         { hasSearchResults: o, searchResults: l } = (0, ee.E)(),
         c = (0, D.p)(),
-        _ = (0, L.Z)(),
+        _ = (0, P.Z)(),
         { enabled: u } = (0, b.S)({ location: 'PrivacySafetySettings' });
     return (0, i.jsx)(eA, {
         currentUser: e,

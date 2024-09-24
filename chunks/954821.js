@@ -48,12 +48,12 @@ let m = (e) => {
                 (await R(C.id)) && A();
             },
             D = l.role_benefits.benefits.filter((e) => e.ref_type === S.Qs.CHANNEL),
-            L = l.role_benefits.benefits.filter((e) => e.ref_type === S.Qs.INTANGIBLE),
-            P = r()(C.currentPeriodEnd).format('MMMM Do, YYYY'),
+            P = l.role_benefits.benefits.filter((e) => e.ref_type === S.Qs.INTANGIBLE),
+            L = r()(C.currentPeriodEnd).format('MMMM Do, YYYY'),
             b = I.Z.Messages.GUILD_ROLE_CANCEL_SUBSCRIPTION_MODAL_DESCRIPTION.format({
                 numChannels: D.length,
-                numAdditionalBenefits: L.length,
-                subscriptionEndDate: P
+                numAdditionalBenefits: P.length,
+                subscriptionEndDate: L
             });
         return (0, n.jsxs)(o.ModalRoot, {
             transitionState: t,

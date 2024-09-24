@@ -28,8 +28,8 @@ function A(e) {
         x = a.useRef(null),
         [f, M] = a.useState(!1),
         D = (0, E._)(s, S.Xh.PREMIUM_MONTH_TIER_2, O),
-        L = (0, _.aS)(S.Xh.PREMIUM_MONTH_TIER_2),
-        P = (0, u.T4)(L.amount, L.currency),
+        P = (0, _.aS)(S.Xh.PREMIUM_MONTH_TIER_2),
+        L = (0, u.T4)(P.amount, P.currency),
         b = (0, i.e7)([c.Z], () => c.Z.useReducedMotion);
     if (
         (a.useEffect(() => {
@@ -41,7 +41,7 @@ function A(e) {
     let Z = I.Z.Messages.PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION_WITH_ACTIVE_SUB.format({
             numMonths: O.discount.user_usage_limit,
             discountedPrice: D,
-            regularPrice: P
+            regularPrice: L
         }),
         v = (0, n.jsx)('div', {
             className: N.whatYouLoseButtonContainer,
