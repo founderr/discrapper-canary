@@ -46624,10 +46624,6 @@ code {
 }
 
 :root {
-    --custom-drop-redemption-modal-art-height: 120px
-}
-
-:root {
     --custom-discover-static-guild-card-card-height: 258px;
     --custom-discover-featured-guilds-section-card-height: 320px;
     --custom-discover-featured-guilds-section-min-card-width: 248px;
