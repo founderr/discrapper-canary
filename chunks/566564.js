@@ -8,145 +8,149 @@ var a = r(735250),
     c = r(180650),
     d = r(442837),
     u = r(481060),
-    f = r(594174),
-    p = r(597688),
-    m = r(1870),
-    C = r(884697),
-    _ = r(997136),
-    g = r(223143),
-    h = r(823941),
-    b = r(38900),
-    E = r(709999),
-    I = r(215023),
-    x = r(689938),
-    T = r(632007),
-    v = r(367815),
-    S = r(454410),
-    L = r(170873),
-    N = r(562292),
-    O = r(80995),
-    B = r(725763);
-let k = { [c.T.AUTUMN_EQUINOX]: { hero: { left: T.darker } } },
-    j = (e) => (null == e ? {} : l()(k, e, {}));
+    f = r(25251),
+    p = r(594174),
+    m = r(597688),
+    C = r(1870),
+    _ = r(884697),
+    g = r(997136),
+    h = r(223143),
+    b = r(823941),
+    E = r(38900),
+    I = r(709999),
+    x = r(215023),
+    T = r(689938),
+    v = r(632007),
+    S = r(367815),
+    L = r(454410),
+    N = r(170873),
+    O = r(562292),
+    B = r(80995),
+    k = r(725763);
+let j = { [c.T.AUTUMN_EQUINOX]: { hero: { left: v.darker } } },
+    R = (e) => (null == e ? {} : l()(j, e, {}));
 t.Z = (e) => {
-    var t, r, s, o, k, R, A;
-    let { handleTransition: P, numVisibleItems: Z } = e,
-        { isFetchingCategories: M } = (0, g.Z)(),
-        y = (0, d.e7)([f.default], () => f.default.getCurrentUser()),
-        w = n.createRef(),
-        F = (0, _.x)('CollectiblesFeedShop'),
-        H = F ? c.T.BAND : c.T.AUTUMN_EQUINOX,
-        D = j(H),
-        U = (0, d.cj)([p.Z], () => ({ feature: p.Z.getCategory(H) })),
-        W = F ? I.WC : I.v7,
-        G = n.useMemo(
+    var t, r, s, o, j, A, P;
+    let { handleTransition: Z, numVisibleItems: M } = e,
+        { isFetchingCategories: y } = (0, h.Z)(),
+        w = (0, d.e7)([f.Z], () => f.Z.hasFetched() || !f.Z.isFetching),
+        F = y || !w,
+        H = (0, d.e7)([p.default], () => p.default.getCurrentUser()),
+        D = n.createRef(),
+        U = (0, g.x)('CollectiblesFeedShop'),
+        W = U ? c.T.BAND : c.T.AUTUMN_EQUINOX,
+        G = R(W),
+        V = (0, d.cj)([m.Z], () => ({ feature: m.Z.getCategory(W) })),
+        z = U ? x.WC : x.v7,
+        Y = n.useMemo(
             () =>
-                W.map((e) => p.Z.getProduct(e))
+                z
+                    .map((e) => m.Z.getProduct(e))
                     .filter((e) => null != e)
                     .map((e) => ({
                         ...e,
-                        category: p.Z.getCategoryForProduct(e.skuId)
+                        category: m.Z.getCategoryForProduct(e.skuId)
                     }))
                     .filter((e) => null != e.category)
                     .sort((e, t) => {
-                        let r = !!m.Z.getPurchase(e.skuId),
-                            a = !!m.Z.getPurchase(t.skuId);
+                        let r = !!C.Z.getPurchase(e.skuId),
+                            a = !!C.Z.getPurchase(t.skuId);
                         return Number(r) - Number(a);
                     })
                     .slice(0, 4),
-            [M, F]
+            [y, U]
         ),
-        V = n.useMemo(
+        K = n.useMemo(
             () =>
-                I.yo
-                    .map((e) => p.Z.getProduct(e))
+                x.yo
+                    .map((e) => m.Z.getProduct(e))
                     .filter((e) => null != e)
                     .map((e) => ({
                         ...e,
-                        category: p.Z.getCategoryForProduct(e.skuId)
+                        category: m.Z.getCategoryForProduct(e.skuId)
                     }))
                     .filter((e) => null != e.category)
                     .sort((e, t) => {
-                        let r = !!m.Z.getPurchase(e.skuId),
-                            a = !!m.Z.getPurchase(t.skuId);
+                        let r = !!C.Z.getPurchase(e.skuId),
+                            a = !!C.Z.getPurchase(t.skuId);
                         return Number(r) - Number(a);
                     }),
-            [M]
+            [y]
         );
-    if (null == y) return null;
-    let z = x.Z.Messages.COLLECTIBLES_SHOP_CATEGORY_COLLECTION.format({ category_name: null === (t = U.feature) || void 0 === t ? void 0 : t.name });
+    if (null == H) return null;
+    let X = T.Z.Messages.COLLECTIBLES_SHOP_CATEGORY_COLLECTION.format({ category_name: null === (t = V.feature) || void 0 === t ? void 0 : t.name });
     return (0, a.jsx)(a.Fragment, {
         children: (0, a.jsxs)('div', {
-            className: T.shop,
+            className: v.shop,
             children: [
                 (0, a.jsxs)('div', {
-                    className: T.banner,
+                    className: v.banner,
                     children: [
                         (0, a.jsx)('div', {
-                            className: T.bannerImage,
-                            style: { backgroundImage: 'url('.concat(F ? L : O, ')') }
+                            className: v.bannerImage,
+                            style: { backgroundImage: 'url('.concat(U ? N : B, ')') }
                         }),
-                        (0, a.jsx)('div', { className: i()(T.bannerShadow, T.left, l()(D, 'hero.left')) }),
-                        (0, a.jsx)('div', { className: i()(T.bannerShadow, T.right, l()(D, 'hero.right')) })
+                        (0, a.jsx)('div', { className: i()(v.bannerShadow, v.left, l()(G, 'hero.left')) }),
+                        (0, a.jsx)('div', { className: i()(v.bannerShadow, v.right, l()(G, 'hero.right')) })
                     ]
                 }),
                 (0, a.jsxs)('div', {
-                    className: i()(T.content, T.mainContent),
+                    className: i()(v.content, v.mainContent),
                     children: [
                         (0, a.jsxs)('div', {
-                            className: i()(T.heroHeaderContainer),
+                            className: i()(v.heroHeaderContainer),
                             children: [
-                                M
-                                    ? (0, a.jsx)('div', { className: i()(T.heroHeaderBadgeLogoSummaryContainer) })
+                                y
+                                    ? (0, a.jsx)('div', { className: i()(v.heroHeaderBadgeLogoSummaryContainer) })
                                     : (0, a.jsxs)('div', {
-                                          className: i()(T.heroHeaderBadgeLogoSummaryContainer),
+                                          className: i()(v.heroHeaderBadgeLogoSummaryContainer),
                                           children: [
-                                              (null === (s = U.feature) || void 0 === s ? void 0 : s.unpublishedAt) != null &&
+                                              (null === (s = V.feature) || void 0 === s ? void 0 : s.unpublishedAt) != null &&
                                                   (0, a.jsx)(u.TextBadge, {
                                                       disableColor: !0,
-                                                      text: x.Z.Messages.LIMITED_TIME,
-                                                      className: T.limitedTimeBadge
+                                                      text: T.Z.Messages.LIMITED_TIME,
+                                                      className: v.limitedTimeBadge
                                                   }),
                                               (0, a.jsx)('img', {
-                                                  className: T.heroHeaderLogo,
-                                                  src: (0, C.uV)(null !== (A = null === (o = U.feature) || void 0 === o ? void 0 : o.logo) && void 0 !== A ? A : '', { size: h.n }),
-                                                  alt: null === (k = U.feature) || void 0 === k ? void 0 : k.name
+                                                  className: v.heroHeaderLogo,
+                                                  src: (0, _.uV)(null !== (P = null === (o = V.feature) || void 0 === o ? void 0 : o.logo) && void 0 !== P ? P : '', { size: b.n }),
+                                                  alt: null === (j = V.feature) || void 0 === j ? void 0 : j.name
                                               }),
                                               (0, a.jsx)(u.Text, {
                                                   color: 'always-white',
                                                   variant: 'text-md/normal',
-                                                  className: T.subHeaderText,
-                                                  children: null === (R = U.feature) || void 0 === R ? void 0 : R.summary
+                                                  className: v.subHeaderText,
+                                                  children: null === (A = V.feature) || void 0 === A ? void 0 : A.summary
                                               })
                                           ]
                                       }),
                                 (0, a.jsx)('div', {
-                                    className: T.heroHeaderButtonContainer,
+                                    className: v.heroHeaderButtonContainer,
                                     children: (0, a.jsx)(u.Button, {
-                                        className: T.heroHeaderButton,
+                                        className: v.heroHeaderButton,
                                         color: u.ButtonColors.WHITE,
-                                        onClick: () => P('shop latest category hero', H),
-                                        children: z
+                                        onClick: () => Z('shop latest category hero', W),
+                                        children: X
                                     })
                                 })
                             ]
                         }),
                         (0, a.jsx)('div', {
-                            className: i()(T.row, T.feed, T.feedSingleRow),
-                            children: M
+                            className: i()(v.row, v.feed, v.feedSingleRow),
+                            children: F
                                 ? (0, a.jsx)(a.Fragment, {
-                                      children: [void 0, void 0, void 0, void 0].map((e, t) => (0, a.jsx)(b.K, {}, t))
+                                      children: [void 0, void 0, void 0, void 0].map((e, t) => (0, a.jsx)(E.K, {}, t))
                                   })
                                 : (0, a.jsx)(a.Fragment, {
-                                      children: G.map((e) => {
+                                      children: Y.map((e) => {
                                           if (null == e || null == e.category) return null;
                                           let { category: t, ...r } = e;
                                           return (0, a.jsx)(
-                                              E.Z,
+                                              I.Z,
                                               {
                                                   product: r,
                                                   category: t,
-                                                  user: y,
+                                                  user: H,
                                                   isInFeedView: !0
                                               },
                                               null == e ? void 0 : e.skuId
@@ -155,82 +159,82 @@ t.Z = (e) => {
                                   })
                         }),
                         (0, a.jsxs)('div', {
-                            className: i()(T.section, T.col2, T.featuredBlocksContainer),
+                            className: i()(v.section, v.col2, v.featuredBlocksContainer),
                             children: [
                                 (0, a.jsxs)(u.Clickable, {
-                                    className: i()(T.featuredBlock),
-                                    style: { backgroundImage: 'url('.concat(F ? N : B, ')') },
-                                    onClick: () => P('shop marketing tile', F ? c.T.AUTUMN_EQUINOX : c.T.FALL),
+                                    className: i()(v.featuredBlock),
+                                    style: { backgroundImage: 'url('.concat(U ? O : k, ')') },
+                                    onClick: () => Z('shop marketing tile', U ? c.T.AUTUMN_EQUINOX : c.T.FALL),
                                     children: [
-                                        (null === (r = p.Z.getCategory(F ? c.T.AUTUMN_EQUINOX : c.T.FALL)) || void 0 === r ? void 0 : r.unpublishedAt) != null &&
+                                        (null === (r = m.Z.getCategory(U ? c.T.AUTUMN_EQUINOX : c.T.FALL)) || void 0 === r ? void 0 : r.unpublishedAt) != null &&
                                             (0, a.jsx)(u.TextBadge, {
                                                 disableColor: !0,
-                                                text: x.Z.Messages.LIMITED_TIME,
-                                                className: T.featuredBlockBadge
+                                                text: T.Z.Messages.LIMITED_TIME,
+                                                className: v.featuredBlockBadge
                                             }),
                                         (0, a.jsx)(u.Button, {
-                                            className: T.featuredBlockButton,
+                                            className: v.featuredBlockButton,
                                             color: u.ButtonColors.WHITE,
                                             onClick: () => {},
-                                            children: x.Z.Messages.TAKE_ME_THERE
+                                            children: T.Z.Messages.TAKE_ME_THERE
                                         })
                                     ]
                                 }),
                                 (0, a.jsxs)(u.Clickable, {
-                                    className: i()(T.featuredBlock),
-                                    style: { backgroundImage: 'url('.concat(F ? S : v, ')') },
-                                    onClick: () => P('shop marketing tile', c.T.ANIME_V2),
+                                    className: i()(v.featuredBlock),
+                                    style: { backgroundImage: 'url('.concat(U ? L : S, ')') },
+                                    onClick: () => Z('shop marketing tile', c.T.ANIME_V2),
                                     children: [
                                         (0, a.jsx)(u.TextBadge, {
                                             disableColor: !0,
-                                            text: x.Z.Messages.MOST_POPULAR,
-                                            className: T.featuredBlockBadge
+                                            text: T.Z.Messages.MOST_POPULAR,
+                                            className: v.featuredBlockBadge
                                         }),
                                         (0, a.jsx)(u.Button, {
-                                            className: T.featuredBlockButton,
+                                            className: v.featuredBlockButton,
                                             color: u.ButtonColors.WHITE,
                                             onClick: () => {},
-                                            children: x.Z.Messages.TAKE_ME_THERE
+                                            children: T.Z.Messages.TAKE_ME_THERE
                                         })
                                     ]
                                 })
                             ]
                         }),
                         (0, a.jsxs)('div', {
-                            className: i()(T.row, T.between, T.section),
+                            className: i()(v.row, v.between, v.section),
                             children: [
                                 (0, a.jsx)(u.Heading, {
                                     variant: 'heading-lg/semibold',
-                                    children: x.Z.Messages.COLLECTIBLES_POPULAR_PICKS
+                                    children: T.Z.Messages.COLLECTIBLES_POPULAR_PICKS
                                 }),
                                 (0, a.jsxs)(u.Clickable, {
-                                    className: T.shopAll,
-                                    onClick: () => P('shop all top'),
+                                    className: v.shopAll,
+                                    onClick: () => Z('shop all top'),
                                     children: [
                                         (0, a.jsx)(u.ServerGridIcon, {}),
                                         (0, a.jsx)(u.Text, {
                                             variant: 'text-sm/medium',
-                                            children: x.Z.Messages.COLLECTIBLES_SHOP_ALL
+                                            children: T.Z.Messages.COLLECTIBLES_SHOP_ALL
                                         })
                                     ]
                                 })
                             ]
                         }),
                         (0, a.jsx)('div', {
-                            className: T.feed,
-                            ref: w,
-                            children: M
-                                ? (0, a.jsx)(a.Fragment, { children: [...Array(12)].map((e, t) => (0, a.jsx)(b.K, {}, t + 1)) })
+                            className: v.feed,
+                            ref: D,
+                            children: F
+                                ? (0, a.jsx)(a.Fragment, { children: [...Array(12)].map((e, t) => (0, a.jsx)(E.K, {}, t + 1)) })
                                 : (0, a.jsx)(a.Fragment, {
-                                      children: V.slice(0, Z).map((e) => {
+                                      children: K.slice(0, M).map((e) => {
                                           if (null == e || null == e.category) return null;
                                           let { category: t, ...r } = e;
                                           return (0, a.jsx)(
-                                              E.Z,
+                                              I.Z,
                                               {
                                                   product: r,
                                                   category: t,
-                                                  user: y,
+                                                  user: H,
                                                   isInFeedView: !0
                                               },
                                               null == e ? void 0 : e.skuId
@@ -238,23 +242,23 @@ t.Z = (e) => {
                                       })
                                   })
                         }),
-                        Z >= I.iA &&
+                        M >= x.iA &&
                             (0, a.jsxs)('div', {
-                                className: T.endOfFeed,
+                                className: v.endOfFeed,
                                 children: [
                                     (0, a.jsx)(u.Heading, {
                                         variant: 'heading-md/semibold',
-                                        children: x.Z.Messages.COLLECTIBLES_SHOP_FEED_END_OF_SCROLL_TEXT
+                                        children: T.Z.Messages.COLLECTIBLES_SHOP_FEED_END_OF_SCROLL_TEXT
                                     }),
                                     (0, a.jsx)(u.Button, {
-                                        className: T.endOfFeedButton,
+                                        className: v.endOfFeedButton,
                                         onClick: () => {
-                                            P('shop all bottom', void 0, !0);
+                                            Z('shop all bottom', void 0, !0);
                                         },
                                         children: (0, a.jsx)(u.Text, {
                                             variant: 'text-md/medium',
                                             color: 'always-white',
-                                            children: x.Z.Messages.COLLECTIBLES_SHOP_FEED_END_OF_SCROLL_BUTTON
+                                            children: T.Z.Messages.COLLECTIBLES_SHOP_FEED_END_OF_SCROLL_BUTTON
                                         })
                                     })
                                 ]
