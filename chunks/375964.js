@@ -11961,6 +11961,7 @@ e.exports = Object.freeze({
     STAGE_CHANNEL_USER_INVITE_TO_SPEAK: 'Invite to Speak',
     STAGE_CHANNEL_USER_INVITED_TO_SPEAK: 'Invite Sent',
     STAGE_CHANNEL_USER_SET_MYSELF_TO_SPEAKER: 'Speak on Stage',
+    STAGE_CHANNEL_USER_REMOVE_FROM_STAGE: 'Remove from Stage',
     STAGE_AUDIENCE: 'Audience',
     STAGE_SPEAKER: 'Speaker',
     STAGE_CHANNEL_START_TITLE: 'Start the Stage',
