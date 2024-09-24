@@ -32,7 +32,7 @@ n.Z = function (e) {
             isPrepaidPaymentSource: !1
         }),
         g = '',
-        Z = '';
+        x = '';
     if (P) {
         if (null != N && (null == R ? void 0 : R.subscriptionPeriodEnd) != null) g = T.Z.Messages.EMBEDDED_ACTIVITIES_IAP_NON_REFUNDABLE_SUBSCRIPTION_RATE_AND_RENEWAL_V2.format({ subtotalRate: M });
         else
@@ -44,7 +44,7 @@ n.Z = function (e) {
                     g = T.Z.Messages.EMBEDDED_ACTIVITIES_IAP_NON_REFUNDABLE_SUBSCRIPTION_YEARLY_V2.format({});
                     break;
                 case void 0:
-                    (Z = T.Z.Messages.BILLING_LEGAL_MUMBO_JUMBO_TERMS_LABEL_V2.format({
+                    (x = T.Z.Messages.BILLING_LEGAL_MUMBO_JUMBO_TERMS_LABEL_V2.format({
                         primaryText: f,
                         paidURL: _.EYA.PAID_TERMS
                     })),
@@ -54,7 +54,7 @@ n.Z = function (e) {
                     throw Error('Unexpected interval: '.concat(n));
             }
     } else if (U === _.GZQ.ONE_TIME)
-        (Z = T.Z.Messages.BILLING_LEGAL_MUMBO_JUMBO_TERMS_LABEL_V3.format({
+        (x = T.Z.Messages.BILLING_LEGAL_MUMBO_JUMBO_TERMS_LABEL_V3.format({
             primaryText: f,
             paidURL: _.EYA.PAID_TERMS
         })),
@@ -62,7 +62,7 @@ n.Z = function (e) {
     else if (null == A || L)
         switch (
             (L &&
-                (Z = T.Z.Messages.BILLING_LEGAL_MUMBO_JUMBO_TERMS_LABEL_V2.format({
+                (x = T.Z.Messages.BILLING_LEGAL_MUMBO_JUMBO_TERMS_LABEL_V2.format({
                     primaryText: f,
                     paidURL: _.EYA.PAID_TERMS
                 })),
@@ -127,9 +127,9 @@ n.Z = function (e) {
     }
     return (0, s.jsxs)(s.Fragment, {
         children: [
-            '' !== Z &&
+            '' !== x &&
                 (0, s.jsxs)('div', {
-                    children: [(0, s.jsx)('div', { children: Z }), (0, s.jsx)('div', { className: d.divider })]
+                    children: [(0, s.jsx)('div', { children: x }), (0, s.jsx)('div', { className: d.divider })]
                 }),
             '' !== g && (0, s.jsx)('div', { children: g }),
             m === _.HeQ.PAYSAFE_CARD &&

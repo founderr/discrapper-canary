@@ -9,14 +9,14 @@ var r = n(735250),
     l = n(120356),
     i = n.n(l),
     o = n(442837),
-    c = n(481060),
-    s = n(665149),
+    s = n(481060),
+    c = n(665149),
     d = n(428530),
     u = n(484036),
     h = n(681619),
     m = n(621060),
-    f = n(219299),
-    x = n(152622);
+    x = n(219299),
+    f = n(152622);
 function p(e, t) {
     return e.store.getName().localeCompare(t.store.getName());
 }
@@ -34,8 +34,8 @@ function g(e) {
                 }
             );
         }, [t, n]),
-        (0, r.jsx)(c.ScrollerThin, {
-            className: x.inspectorContainer,
+        (0, r.jsx)(s.ScrollerThin, {
+            className: f.inspectorContainer,
             children: (0, r.jsx)(d.Z, { data: l })
         })
     );
@@ -43,7 +43,7 @@ function g(e) {
 let b = [
         {
             key: 'name',
-            cellClassName: x.__invalid_eventColumn,
+            cellClassName: f.__invalid_eventColumn,
             render(e) {
                 let { store: t } = e;
                 return t.getName();
@@ -58,7 +58,7 @@ let b = [
                 let { store: t } = e;
                 return null == t.__getLocalVars
                     ? (0, r.jsxs)('div', {
-                          className: x.inspectorContainer,
+                          className: f.inspectorContainer,
                           children: ['Store is missing ', (0, r.jsx)('code', { children: '__getLocalVars' }), ' method.']
                       })
                     : (0, r.jsx)(g, {
@@ -83,19 +83,19 @@ function _(e) {
     let { store: t, initialHeight: n } = e,
         { TabBar: a, renderSelectedTab: l } = (0, m.Z)({ tabs: v }, []);
     return (0, r.jsxs)(u.Z, {
-        className: x.subPanel,
+        className: f.subPanel,
         minHeight: 100,
         initialHeight: n,
         children: [
             (0, r.jsx)(a, {}),
-            (0, r.jsxs)(s.ZP, {
-                className: i()(f.headerBar, x.subPanelHeaderBar),
+            (0, r.jsxs)(c.ZP, {
+                className: i()(x.headerBar, f.subPanelHeaderBar),
                 children: [
-                    (0, r.jsx)(s.ZP.Icon, {
-                        icon: c.TagIcon,
+                    (0, r.jsx)(c.ZP.Icon, {
+                        icon: s.TagIcon,
                         tooltip: t.getName()
                     }),
-                    (0, r.jsx)(s.ZP.Title, { children: t.getName() })
+                    (0, r.jsx)(c.ZP.Title, { children: t.getName() })
                 ]
             }),
             l({ store: t })
@@ -106,7 +106,7 @@ function j() {
     let e = a.useRef(null),
         [t, n] = a.useState(''),
         l = o.yh.getAll(),
-        s = a
+        c = a
             .useMemo(
                 () =>
                     l
@@ -127,13 +127,13 @@ function j() {
         m = l.find((e) => e._dispatchToken === d);
     return (0, r.jsxs)('div', {
         ref: e,
-        className: i()(f.panel, x.panel),
+        className: i()(x.panel, f.panel),
         children: [
             (0, r.jsx)('div', {
-                className: x.toolbar,
-                children: (0, r.jsx)(c.SearchBar, {
-                    className: x.searchBar,
-                    size: c.SearchBar.Sizes.SMALL,
+                className: f.toolbar,
+                children: (0, r.jsx)(s.SearchBar, {
+                    className: f.searchBar,
+                    size: s.SearchBar.Sizes.SMALL,
                     query: t,
                     onChange: n,
                     onClear: () => n(''),
@@ -143,7 +143,7 @@ function j() {
             }),
             (0, r.jsx)(h.Z, {
                 columns: b,
-                data: s,
+                data: c,
                 selectedRowKey: d,
                 onClickRow: (e) => u(e.key)
             }),

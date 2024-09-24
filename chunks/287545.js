@@ -261,7 +261,7 @@ class q extends c.Z {
                 if (i instanceof f.Z) {
                     (t = 0), (r = i.reason);
                     let e = L.Z.getFetchState();
-                    if ((I.Sb.getSetting() && 'loaded' !== e && (await (0, D.$h)()), i.reason === f.Z.Reasons.PRIMARY_APP_COMMAND_NOT_FOUND)) L.Z.inDevModeForApplication(l) && (d = F.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_MISSING_PRIMARY_APP_COMMAND);
+                    if ((I.Sb.getSetting() && e !== L.O.LOADED && (await (0, D.$h)()), i.reason === f.Z.Reasons.PRIMARY_APP_COMMAND_NOT_FOUND)) L.Z.inDevModeForApplication(l) && (d = F.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_MISSING_PRIMARY_APP_COMMAND);
                 } else if (i instanceof h.Z) {
                     var _;
                     (t = 1), (r = i.reason), (d = null !== (_ = (0, p.A0)(i.reason, l)) && void 0 !== _ ? _ : d);

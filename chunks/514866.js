@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return x;
     }
 });
 var r = n(735250);
@@ -9,8 +9,8 @@ var a = n(120356),
     l = n.n(a),
     i = n(481060),
     o = n(110478),
-    c = n(423932),
-    s = n(601948),
+    s = n(423932),
+    c = n(601948),
     d = n(594174),
     u = n(820756),
     h = n(113207);
@@ -40,14 +40,14 @@ let m = () => {
             );
         });
 };
-function f() {
+function x() {
     let e = d.default.getCurrentUser(),
         t = null == e ? void 0 : e.isStaff();
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)('div', {
                 className: l()(u.buttonsContainer, h.marginBottom20),
-                children: (0, r.jsx)(s.S, { isDevTools: !0 })
+                children: (0, r.jsx)(c.S, { isDevTools: !0 })
             }),
             (0, r.jsx)('div', {
                 className: l()(u.buttonsContainer, h.marginBottom20),
@@ -59,7 +59,7 @@ function f() {
             (0, r.jsx)('div', {
                 className: l()(u.buttonsContainer, h.marginBottom20),
                 children: (0, r.jsx)(i.Button, {
-                    onClick: () => (0, c.Z)(),
+                    onClick: () => (0, s.Z)(),
                     children: 'Launch Vibing Wumpus'
                 })
             }),

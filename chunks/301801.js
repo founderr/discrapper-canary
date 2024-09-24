@@ -16,19 +16,19 @@ function i(e, t, n) {
     let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         o = (0, r.uniqueId)();
     return new Promise((r) => {
-        let c = (t) => {
+        let s = (t) => {
             let {
                 data: { id: n, foundItemIndexes: i }
             } = t;
-            o === n && r(i.map((t) => e[t]).filter(a.lm)), null == l || l.removeEventListener('message', c);
+            o === n && r(i.map((t) => e[t]).filter(a.lm)), null == l || l.removeEventListener('message', s);
         };
-        null == l || l.addEventListener('message', c);
-        let s = {
+        null == l || l.addEventListener('message', s);
+        let c = {
             id: o,
             searchTerm: n,
             searchStrings: e.map(t),
             useRegex: i
         };
-        null == l || l.postMessage(s);
+        null == l || l.postMessage(c);
     });
 }

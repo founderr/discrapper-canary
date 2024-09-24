@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return C;
+        return y;
     }
 }),
     t(47120);
@@ -30,16 +30,16 @@ var i = t(735250),
     v = t(919778),
     A = t(612853),
     M = t(981631),
-    y = t(38569);
-function C(e) {
-    let { premiumSubscription: n, setPurchaseState: t, onBack: r, onNext: C, legalTermsNodeRef: O, flashLegalTerms: R, invoiceError: L, planError: j, onPurchaseError: Z, baseAnalyticsData: D, flowStartTime: w, trialId: G, planGroup: B, analyticsLocation: U, purchaseTokenAuthState: F, openInvoiceId: k, metadata: W, backButtonEligible: H, disablePurchase: Y, isTrial: V = !1 } = e,
+    C = t(38569);
+function y(e) {
+    let { premiumSubscription: n, setPurchaseState: t, onBack: r, onNext: y, legalTermsNodeRef: R, flashLegalTerms: O, invoiceError: L, planError: j, onPurchaseError: Z, baseAnalyticsData: D, flowStartTime: w, trialId: B, planGroup: G, analyticsLocation: U, purchaseTokenAuthState: F, openInvoiceId: k, metadata: H, backButtonEligible: W, disablePurchase: Y, isTrial: V = !1 } = e,
         { selectedPlan: K, priceOptions: z, setHasAcceptedTerms: X, setPurchaseError: q, purchaseType: J, paymentSourceId: Q, paymentSources: $, selectedSkuId: ee, skusById: en, skuPricePreviewsById: et, referralCode: ei, contextMetadata: ea, invoicePreview: er, inReverseTrial: es } = (0, b.usePaymentContext)(),
         { isGift: el, selectedGiftStyle: eo, customGiftMessage: ec, emojiConfetti: eu, soundEffect: ed, giftRecipient: e_ } = (0, h.wD)(),
         ep = (0, S.MY)(e_),
         em = {};
     (em.gift_style = eo), ep === S.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && (s()(null != e_, 'Gift recipient must be set at purchase review step for these gift options.'), (em.recipient_id = e_.id), (em.custom_message = ec), (em.emoji_id = null == eu ? void 0 : eu.id), (em.emoji_name = (null == eu ? void 0 : eu.id) == null ? (null == eu ? void 0 : eu.surrogates) : void 0), (em.sound_id = null == ed ? void 0 : ed.soundId));
     let eI = null == K ? void 0 : K.id,
-        ef = (0, v.sE)(G, z.paymentSourceId, eI),
+        ef = (0, v.sE)(B, z.paymentSourceId, eI),
         eE = (0, l.e7)([f.Z], () => f.Z.popupCallbackCalled),
         { analyticsLocations: ex } = (0, u.ZP)(),
         eN = null != Q ? $[Q] : null,
@@ -50,15 +50,15 @@ function C(e) {
         ev = eg || ef,
         eA = (0, _.U)(),
         eM = null,
-        ey = null;
+        eC = null;
     if (J === M.GZQ.ONE_TIME) {
-        var eC;
-        s()(null != ee, 'SKU must be selected for one-time purchases'), (eM = null !== (eC = en[ee]) && void 0 !== eC ? eC : null), s()(null != eM, 'SKU must exist and be fetched.');
+        var ey;
+        s()(null != ee, 'SKU must be selected for one-time purchases'), (eM = null !== (ey = en[ee]) && void 0 !== ey ? ey : null), s()(null != eM, 'SKU must exist and be fetched.');
         let e = et[ee],
             n = null != Q ? Q : x.c;
-        ey = null != e ? e[n] : null;
+        eC = null != e ? e[n] : null;
     }
-    let eO = async () => {
+    let eR = async () => {
         await (0, g.H)({
             setPurchaseState: t,
             setHasAcceptedTerms: X,
@@ -72,17 +72,17 @@ function C(e) {
             analyticsLocations: ex,
             flowStartTime: w,
             subscriptionPlan: K,
-            planGroup: B,
-            trialId: G,
+            planGroup: G,
+            trialId: B,
             priceOptions: z,
             paymentSource: eN,
             isPrepaidPaymentPastDue: eA,
             openInvoiceId: k,
             premiumSubscription: n,
-            onNext: C,
-            metadata: W,
+            onNext: y,
+            metadata: H,
             sku: eM,
-            skuPricePreview: ey,
+            skuPricePreview: eC,
             purchaseType: J,
             referralCode: ei,
             loadId: ea.loadId,
@@ -95,7 +95,7 @@ function C(e) {
             if (!0 === eE)
                 try {
                     if (null == f.Z.redirectedPaymentId) return;
-                    await (0, c.OP)(f.Z.redirectedPaymentId), t(P.A.COMPLETED), C();
+                    await (0, c.OP)(f.Z.redirectedPaymentId), t(P.A.COMPLETED), y();
                 } catch (e) {
                     t(P.A.FAIL),
                         Z(e),
@@ -109,39 +109,39 @@ function C(e) {
                 } finally {
                     eT(!1), (0, c.K2)();
                 }
-            else F === E.I.SUCCESS && (await eO());
+            else F === E.I.SUCCESS && (await eR());
         })();
     }, [eE]),
         a.useEffect(() => {
-            ef && !el && null == n && eO();
+            ef && !el && null == n && eR();
         }, [ef, el, n]);
-    let eR = null != k || (J === M.GZQ.ONE_TIME && !el);
+    let eO = null != k || (J === M.GZQ.ONE_TIME && !el);
     return ef
         ? null
         : (0, i.jsxs)(o.ModalFooter, {
               align: d.Z.Align.CENTER,
               children: [
                   (0, i.jsx)(I.Z, {
-                      legalTermsNodeRef: O,
+                      legalTermsNodeRef: R,
                       invoiceError: L,
                       planError: j,
                       disablePurchase: Y,
-                      flashLegalTerms: R,
+                      flashLegalTerms: O,
                       isSubmitting: eS,
                       premiumSubscription: n,
                       isGift: el,
-                      planGroup: B,
+                      planGroup: G,
                       isPrepaid: eP,
                       isTrial: V,
-                      makePurchase: eO,
+                      makePurchase: eR,
                       needsPaymentSource: null == eN && !ev,
-                      onNext: C,
+                      onNext: y,
                       inReverseTrial: es
                   }),
                   (0, i.jsx)(A.Z, {}),
-                  H && !eR
+                  W && !eO
                       ? (0, i.jsx)('div', {
-                            className: y.back,
+                            className: C.back,
                             children: (0, i.jsx)(p.Z, { onClick: r })
                         })
                       : null

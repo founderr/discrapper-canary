@@ -1,17 +1,17 @@
 n.d(t, {
     Z: function () {
-        return u;
+        return i;
     }
 }),
     n(47120);
 var E = n(470079),
     r = n(409813),
-    i = n(45572);
-function u(e) {
-    let [t, n] = E.useState(i.A.WAITING);
+    u = n(45572);
+function i(e) {
+    let [t, n] = E.useState(u.A.WAITING);
     return (
         E.useEffect(() => {
-            null != e && e !== r.h8.REVIEW && t !== i.A.WAITING && t !== i.A.COMPLETED && n(i.A.WAITING);
+            null != e && e !== r.h8.REVIEW && t !== u.A.WAITING && t !== u.A.COMPLETED && n(u.A.WAITING);
         }, [e, t, n]),
         [t, n]
     );

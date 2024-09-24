@@ -8,16 +8,16 @@ var E = n(470079);
 function r(e) {
     var t;
     let { stepConfigs: n, breadcrumbs: r } = e,
-        [i, u] = E.useState(null === (t = n[0]) || void 0 === t ? void 0 : t.key),
+        [u, i] = E.useState(null === (t = n[0]) || void 0 === t ? void 0 : t.key),
         S = E.useRef(null);
     E.useEffect(() => {
-        S.current = i;
-    }, [S, i]);
+        S.current = u;
+    }, [S, u]);
     let _ = n.map((e) => e.key).filter((e) => null != e);
     return {
         steps: _,
-        step: i,
-        setStep: u,
+        step: u,
+        setStep: i,
         breadcrumbsData: n
             .filter((e) => {
                 var t;

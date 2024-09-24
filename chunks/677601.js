@@ -728,7 +728,7 @@ t.Z = function (e) {
         ed = (0, c.e7)([v.Z], () => v.Z.getFetchState(), []),
         eh = (0, x.Z)(ed);
     s.useEffect(() => {
-        'errored' === ed && 'errored' !== eh && (0, h.showToast)((0, h.createToast)(eL.Z.Messages.EMBEDDED_ACTIVITIES_DEVELOPER_ACTIVITY_SHELF_FETCH_ERROR, h.ToastType.FAILURE));
+        ed === v.O.ERROR && eh !== v.O.ERROR && (0, h.showToast)((0, h.createToast)(eL.Z.Messages.EMBEDDED_ACTIVITIES_DEVELOPER_ACTIVITY_SHELF_FETCH_ERROR, h.ToastType.FAILURE));
     }, [ed, eh]);
     let em = (0, c.e7)([N.ZP], () => N.ZP.getSelfEmbeddedActivityForChannel(n.id), [n]);
     s.useEffect(() => {

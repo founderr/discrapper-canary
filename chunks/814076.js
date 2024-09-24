@@ -6,12 +6,12 @@ n.d(t, {
     n(47120);
 var E = n(470079),
     r = n(742280),
-    i = n(442837),
-    u = n(351402);
+    u = n(442837),
+    i = n(351402);
 function S() {
     let [e, t] = E.useState(!1),
         [n, S] = E.useState(!1),
-        _ = (0, i.e7)([u.Z], () => r.M.EEA_COUNTRIES.has(u.Z.ipCountryCodeWithFallback));
+        _ = (0, u.e7)([i.Z], () => r.M.EEA_COUNTRIES.has(i.Z.ipCountryCodeWithFallback));
     return {
         hasViewedPurchaseTerms: e,
         setHasViewedPurchaseTerms: t,

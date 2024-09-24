@@ -18,7 +18,7 @@ var i = t(512722),
     I = t(474936);
 function f(e) {
     let { analyticsData: n, initialPlanId: t, breadcrumbSteps: i, handleStepChange: f, referralTrialOfferId: E, onReturn: x, continueSession: N = !1 } = e,
-        { contextMetadata: S, step: T, paymentSources: h, paymentSourceId: b, setPaymentSourceId: g, purchaseError: P, setPurchaseError: v, purchaseErrorBlockRef: A, paymentAuthenticationState: M, selectedSkuId: y, activeSubscription: C, previousStepRef: O, setPurchaseState: R } = (0, u.usePaymentContext)(),
+        { contextMetadata: S, step: T, paymentSources: h, paymentSourceId: b, setPaymentSourceId: g, purchaseError: P, setPurchaseError: v, purchaseErrorBlockRef: A, paymentAuthenticationState: M, selectedSkuId: C, activeSubscription: y, previousStepRef: R, setPurchaseState: O } = (0, u.usePaymentContext)(),
         { isGift: L } = (0, c.wD)(),
         j = {
             ...(0, l.fL)(),
@@ -29,11 +29,11 @@ function f(e) {
             setPurchaseError: v,
             purchaseErrorBlockRef: A,
             paymentAuthenticationState: M,
-            selectedSkuId: y,
+            selectedSkuId: C,
             isGift: L
         },
         Z = (0, s.N)(E),
-        D = !L && null != Z && null != y && I.nG[Z.trial_id].skus.includes(y),
+        D = !L && null != Z && null != C && I.nG[Z.trial_id].skus.includes(C),
         w =
             null != x
                 ? x
@@ -41,10 +41,10 @@ function f(e) {
                       f(Object.values(h).length < 1 && null == t ? d.h8.PLAN_SELECT : d.h8.REVIEW, { trackedFromStep: d.h8.PAYMENT_TYPE });
                   };
     a()(T, 'Step should be set here');
-    let G = (0, r.Z)(() => Date.now(), [T]);
+    let B = (0, r.Z)(() => Date.now(), [T]);
     return (0, l.vP)({
         paymentModalArgs: j,
-        initialStep: N && null == O.current ? d.h8.CREDIT_CARD_INFORMATION : d.h8.PAYMENT_TYPE,
+        initialStep: N && null == R.current ? d.h8.CREDIT_CARD_INFORMATION : d.h8.PAYMENT_TYPE,
         prependSteps: [d.h8.PROMOTION_INFO],
         appendSteps: [d.h8.REVIEW, d.h8.CONFIRM],
         breadcrumpSteps: i,
@@ -52,7 +52,7 @@ function f(e) {
         usePaymentModalStep: !0,
         onReturn: w,
         onComplete: (e) => {
-            e === d.h8.AWAITING_BROWSER_CHECKOUT ? (R(_.A.COMPLETED), f(d.h8.CONFIRM, { trackedFromStep: e })) : f(d.h8.REVIEW, { trackedFromStep: e });
+            e === d.h8.AWAITING_BROWSER_CHECKOUT ? (O(_.A.COMPLETED), f(d.h8.CONFIRM, { trackedFromStep: e })) : f(d.h8.REVIEW, { trackedFromStep: e });
         },
         onStepChange: (e) => {
             let { currentStep: t, toStep: i } = e,
@@ -61,11 +61,11 @@ function f(e) {
                 ...n,
                 from_step: t,
                 to_step: i,
-                step_duration_ms: a - G,
+                step_duration_ms: a - B,
                 flow_duration_ms: a - S.startTime
             });
         },
         isEligibleForTrial: D,
-        allowDesktopRedirectPurchase: (0, p.tr)(y, L, C)
+        allowDesktopRedirectPurchase: (0, p.tr)(C, L, y)
     });
 }

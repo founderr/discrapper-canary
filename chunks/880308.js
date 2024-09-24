@@ -15,7 +15,7 @@ function c() {
         n = (0, l.e7)([o.Z], () => o.Z.getFetchState(), []);
     return (
         i.useEffect(() => {
-            e && t && null == n && (0, u.$h)();
+            e && t && n === o.O.INITIALIZED && (0, u.$h)();
         }, [e, n, t]),
         null
     );

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return x;
     }
 });
 var r = n(735250),
@@ -8,13 +8,13 @@ var r = n(735250),
     l = n(120356),
     i = n.n(l),
     o = n(481060),
-    c = n(931240),
-    s = n(207796),
+    s = n(931240),
+    c = n(207796),
     d = n(836768),
     u = n(859921),
     h = n(785287),
     m = n(219299);
-function f() {
+function x() {
     let e = a.useRef(null);
     return (0, r.jsxs)('div', {
         ref: e,
@@ -22,12 +22,12 @@ function f() {
         children: [
             (0, r.jsx)(o.Button, {
                 size: o.Button.Sizes.SMALL,
-                onClick: c.LX,
+                onClick: s.LX,
                 children: 'Reset Every Clan Setup State'
             }),
             (0, r.jsx)(o.Button, {
                 size: o.Button.Sizes.SMALL,
-                onClick: s.PJ,
+                onClick: c.PJ,
                 children: 'Reset Clan Discovery State'
             }),
             (0, r.jsx)(o.Button, {

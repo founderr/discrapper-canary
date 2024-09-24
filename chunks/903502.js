@@ -9,14 +9,14 @@ var r = n(735250),
     l = n(442837),
     i = n(481060),
     o = n(570140),
-    c = n(178635),
-    s = n(115470),
+    s = n(178635),
+    c = n(115470),
     d = n(511010),
     u = n(246992),
     h = n(501775);
 let m = 60000,
-    f = 3600000,
-    x = 86400000,
+    x = 3600000,
+    f = 86400000,
     p = [
         {
             label: 'second(s)',
@@ -40,11 +40,11 @@ function g() {
         [n, g] = a.useState(0),
         [b, v] = a.useState(1000),
         [_, j] = a.useState(0),
-        C = (0, l.e7)([s.Z], () => {
+        C = (0, l.e7)([c.Z], () => {
             var t;
-            return null === e ? null : null !== (t = s.Z.getFeedbackConfig(e)) && void 0 !== t ? t : c.R[e];
+            return null === e ? null : null !== (t = c.Z.getFeedbackConfig(e)) && void 0 !== t ? t : s.R[e];
         }),
-        T = Object.keys(c.R).map((e) => ({
+        T = Object.keys(s.R).map((e) => ({
             label: e,
             value: e
         })),
@@ -91,11 +91,11 @@ function g() {
                                 }),
                                 (0, r.jsx)(i.Text, {
                                     variant: 'text-sm/normal',
-                                    children: ''.concat(C.cooldown / f, ' hour(s) or')
+                                    children: ''.concat(C.cooldown / x, ' hour(s) or')
                                 }),
                                 (0, r.jsx)(i.Text, {
                                     variant: 'text-sm/normal',
-                                    children: ''.concat(C.cooldown / x, ' day(s)')
+                                    children: ''.concat(C.cooldown / f, ' day(s)')
                                 })
                             ]
                         }),

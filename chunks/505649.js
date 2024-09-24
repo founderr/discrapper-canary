@@ -1,8 +1,8 @@
 n(411104);
 var E,
     r,
-    i,
     u,
+    i,
     S = n(442837),
     _ = n(570140),
     o = n(366939),
@@ -52,15 +52,15 @@ class d extends (E = S.ZP.Store) {
         return C;
     }
 }
-(u = 'PaymentAuthenticationStore'),
-    (i = 'displayName') in (r = d)
-        ? Object.defineProperty(r, i, {
-              value: u,
+(i = 'PaymentAuthenticationStore'),
+    (u = 'displayName') in (r = d)
+        ? Object.defineProperty(r, u, {
+              value: i,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (r[i] = u),
+        : (r[u] = i),
     (t.Z = new d(_.Z, {
         BILLING_SUBSCRIPTION_UPDATE_START: s,
         PAYMENT_AUTHENTICATION_CLEAR_ERROR: s,

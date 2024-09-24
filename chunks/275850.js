@@ -143,8 +143,8 @@ function L(e) {
                 })
             };
         }),
-        Z = r.useMemo(() => P.find((e) => e.id === L), [P, L]);
-    let x = ((n = p), (t = Z), (i = null), n && null != t && !t.canRedeemTrial() ? (i = d.Z.Messages.PAYMENT_SOURCE_REDEMPTION_INVALID) : n && null != t && t.hasFlag(T.Cw.NEW) && (i = d.Z.Messages.BILLING_PAYMENT_AUTHORIZATION_CHARGE.format({ helpDeskArticle: _.Z.getArticleURL(E.BhN.PAYMENT_AUTHORIZATION_CHARGE) })), i);
+        x = r.useMemo(() => P.find((e) => e.id === L), [P, L]);
+    let Z = ((n = p), (t = x), (i = null), n && null != t && !t.canRedeemTrial() ? (i = d.Z.Messages.PAYMENT_SOURCE_REDEMPTION_INVALID) : n && null != t && t.hasFlag(T.Cw.NEW) && (i = d.Z.Messages.BILLING_PAYMENT_AUTHORIZATION_CHARGE.format({ helpDeskArticle: _.Z.getArticleURL(E.BhN.PAYMENT_AUTHORIZATION_CHARGE) })), i);
     return (0, s.jsxs)(s.Fragment, {
         children: [
             f
@@ -165,7 +165,7 @@ function L(e) {
                           }
                       },
                       isDisabled: O,
-                      className: l()({ [N.paymentSourceHasWarning]: null != x }, v),
+                      className: l()({ [N.paymentSourceHasWarning]: null != Z }, v),
                       optionClassName: C,
                       placeholder: d.Z.Messages.PAYMENT_SOURCE_TYPE_SELECT,
                       renderOptionValue: (e) => {
@@ -173,7 +173,7 @@ function L(e) {
                           return h ? (0, s.jsx)(c.Spinner, { type: c.SpinnerTypes.SPINNING_CIRCLE }) : n.label;
                       }
                   }),
-            null != x
+            null != Z
                 ? (0, s.jsxs)('div', {
                       className: N.paymentSourceWarning,
                       children: [
@@ -186,7 +186,7 @@ function L(e) {
                           }),
                           (0, s.jsx)(c.Text, {
                               variant: 'text-xs/normal',
-                              children: x
+                              children: Z
                           })
                       ]
                   })

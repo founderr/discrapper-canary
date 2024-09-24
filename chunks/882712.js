@@ -5,8 +5,8 @@ n.d(t, {
 });
 var E,
     r,
-    i,
     u,
+    i,
     S,
     _,
     o = n(442837),
@@ -36,15 +36,15 @@ class N extends (_ = o.ZP.Store) {
         return c;
     }
 }
-(u = 'PurchaseTokenAuthStore'),
-    (i = 'displayName') in (r = N)
-        ? Object.defineProperty(r, i, {
-              value: u,
+(i = 'PurchaseTokenAuthStore'),
+    (u = 'displayName') in (r = N)
+        ? Object.defineProperty(r, u, {
+              value: i,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (r[i] = u),
+        : (r[u] = i),
     (t.Z = new N(A.Z, {
         SKU_PURCHASE_FAIL: R,
         PREMIUM_PAYMENT_SUBSCRIBE_FAIL: R,
