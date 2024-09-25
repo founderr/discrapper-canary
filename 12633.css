@@ -34393,6 +34393,34 @@ div.popoutCloseButton_d523a2:hover {
     display: flex
 }
 
+.layoutContainer_c39d85 {
+    display: flex;
+    align-items: center
+}
+
+.channelHeader_c39d85 {
+    background-color: var(--bg-mod-faint);
+    padding: 12px 16px;
+    border-radius: var(--radius-md);
+    margin-top: 12px
+}
+
+.channelHeader_c39d85 .layoutContainer_c39d85 {
+    gap: var(--spacing-12)
+}
+
+.profile_c39d85 {
+    padding: 12px
+}
+
+.profile_c39d85 .layoutContainer_c39d85 {
+    gap: var(--spacing-8)
+}
+
+.icon_c39d85 {
+    flex-shrink: 0
+}
+
 .container_ecc1b2 {
     display: flex;
     flex-direction: column;
