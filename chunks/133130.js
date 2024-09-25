@@ -1,6 +1,7 @@
 e.exports = {
     stepBody: 'stepBody_d439ef',
     stepBodyCustomGift: 'stepBodyCustomGift_d439ef',
+    paddingForHalloweenBanner: 'paddingForHalloweenBanner_d439ef',
     bodyColumnMiddle: 'bodyColumnMiddle_d439ef',
     bodyColumnRight: 'bodyColumnRight_d439ef',
     bodyText: 'bodyText_d439ef',
