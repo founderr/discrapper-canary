@@ -1,4 +1,7 @@
 n.d(t, {
+    _: function () {
+        return l;
+    },
     p: function () {
         return s;
     }
@@ -19,6 +22,19 @@ let o = 900000,
                 ).body,
                 i = null !== (l = e.wait_ms_until_next_fetch) && void 0 !== l ? l : o;
             return null != i && (e.expires_at = Date.now() + i), e;
+        } catch (e) {
+            throw new i.Hx(e);
+        }
+    },
+    l = async (e, t) => {
+        try {
+            await r.tn.post({
+                url: a.ANM.UPDATE_MY_LOL_LEADERBOARD(),
+                body: {
+                    riot_connection_id: e,
+                    lol_connection_id: t
+                }
+            });
         } catch (e) {
             throw new i.Hx(e);
         }

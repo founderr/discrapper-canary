@@ -2426,7 +2426,8 @@ let aq = '@me',
         SIMILAR_GAMES: (e) => '/content-inventory/users/@me/similar-games/'.concat(e),
         VOICE_PUBLIC_KEYS: () => '/voice/public-keys',
         VOICE_MATCH_PUBLIC_KEY: (e) => '/voice/'.concat(e, '/match-public-key'),
-        GUILD_LEADERBOARD: (e, t) => '/guilds/'.concat(e, '/leaderboards/').concat(t)
+        GUILD_LEADERBOARD: (e, t) => '/guilds/'.concat(e, '/leaderboards/').concat(t),
+        UPDATE_MY_LOL_LEADERBOARD: () => '/users/@me/update-league-of-legends-leaderboard'
     }),
     a2 = Object.freeze({
         INDEX: '/',
