@@ -1,6 +1,6 @@
 n.d(t, {
     OV: function () {
-        return k;
+        return U;
     },
     ZP: function () {
         return w;
@@ -37,12 +37,12 @@ var i,
     R = n(819640),
     L = n(594174),
     j = n(823379),
-    O = n(5192),
-    P = n(689938),
+    P = n(5192),
+    O = n(689938),
     y = n(456608);
 ((s = i || (i = {}))[(s.SMALL = 0)] = 'SMALL'), (s[(s.MEDIUM = 1)] = 'MEDIUM'), (s[(s.LARGE = 2)] = 'LARGE');
 let D = ['embedded_background'];
-function k(e) {
+function U(e) {
     let { avatarSize: t, guildId: n, channelId: i, users: s } = e,
         l = null != t ? t : u.AvatarSizes.SIZE_32,
         r = (0, u.getAvatarSize)(l);
@@ -53,7 +53,7 @@ function k(e) {
         max: 4,
         renderUser: (e) => {
             if (null == e) return null;
-            let t = O.ZP.getName(n, i, e);
+            let t = P.ZP.getName(n, i, e);
             return (0, a.jsx)(
                 u.TooltipContainer,
                 {
@@ -74,7 +74,7 @@ function k(e) {
         }
     });
 }
-function U(e) {
+function k(e) {
     var t, n, i, s;
     let { participants: r, application: f, channel: E, width: g } = e;
     let C = (i = g) > 400 ? 2 : i > 300 ? 1 : 0;
@@ -87,7 +87,7 @@ function U(e) {
         x = (0, c.e7)([h.ZP], () => h.ZP.getEmbeddedActivitiesForChannel(E.id).find((e) => e.applicationId === f.id)),
         { analyticsLocations: v } = (0, S.ZP)(),
         Z = (0, d.O)(),
-        M = O.ZP.getName(E.getGuildId(), E.id, null == T ? void 0 : T[0]),
+        M = P.ZP.getName(E.getGuildId(), E.id, null == T ? void 0 : T[0]),
         R =
             (0, _.s5)({
                 userId: null === (t = L.default.getCurrentUser()) || void 0 === t ? void 0 : t.id,
@@ -95,18 +95,18 @@ function U(e) {
                 application: f
             }) === _.Fw.CAN_JOIN,
         D = null !== (n = E.getGuildId()) && void 0 !== n ? n : void 0,
-        U = l.useId(),
+        k = l.useId(),
         w = E.id,
         B = f.id,
         { submitting: H } = (0, N.Z)({
             applicationId: B,
             channelId: w,
-            launchingComponentId: U
+            launchingComponentId: k
         });
     return (0, a.jsxs)('div', {
         className: y.splash,
         children: [
-            (0, a.jsx)(k, {
+            (0, a.jsx)(U, {
                 avatarSize: I,
                 guildId: D,
                 channelId: E.id,
@@ -120,11 +120,11 @@ function U(e) {
                 variant: 'text-sm/normal',
                 children:
                     T.length > 1
-                        ? P.Z.Messages.EMBEDDED_ACTIVITIES_USERNAME_AND_OTHERS.format({
+                        ? O.Z.Messages.EMBEDDED_ACTIVITIES_USERNAME_AND_OTHERS.format({
                               username: M,
                               count: T.length - 1
                           })
-                        : P.Z.Messages.EMBEDDED_ACTIVITIES_IS_PLAYING.format({ username: M })
+                        : O.Z.Messages.EMBEDDED_ACTIVITIES_IS_PLAYING.format({ username: M })
             }),
             (0, a.jsx)(u.Text, {
                 className: o()(y.header, {
@@ -145,7 +145,7 @@ function U(e) {
                                       activityChannelId: E.id,
                                       locationObject: Z.location,
                                       analyticsLocations: v,
-                                      componentId: U,
+                                      componentId: k,
                                       commandOrigin: A.bB.VOICE_UI
                                   });
                           },
@@ -162,7 +162,7 @@ function U(e) {
                           })(C),
                           className: y.button,
                           color: u.Button.Colors.PRIMARY,
-                          children: P.Z.Messages.EMBEDDED_ACTIVITIES_JOIN_ACTIVITY
+                          children: O.Z.Messages.EMBEDDED_ACTIVITIES_JOIN_ACTIVITY
                       })
                     : null
             })
@@ -217,7 +217,7 @@ function w(e) {
                             : null,
                         N &&
                             null != m &&
-                            (0, a.jsx)(U, {
+                            (0, a.jsx)(k, {
                                 width: n,
                                 channel: r,
                                 participants: t.participants,

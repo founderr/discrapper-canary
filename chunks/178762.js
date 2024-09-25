@@ -1,17 +1,17 @@
 n.d(t, {
     J: function () {
-        return b;
+        return D;
     },
     YN: function () {
-        return R;
+        return j;
     },
     iZ: function () {
-        return j;
+        return y;
     }
 }),
     n(47120);
-var l = n(735250),
-    a = n(470079),
+var a = n(735250),
+    l = n(470079),
     i = n(392711),
     r = n.n(i),
     s = n(91192),
@@ -23,61 +23,61 @@ var l = n(735250),
     m = n(704041),
     x = n(475676),
     E = n(439170),
-    _ = n(594174),
-    v = n(69259),
-    T = n(370370),
-    p = n(107062),
-    f = n(91140),
+    v = n(594174),
+    _ = n(69259),
+    f = n(370370),
+    T = n(107062),
+    p = n(91140),
     g = n(227172),
     I = n(551228),
-    C = n(678869),
-    N = n(278399),
-    P = n(886217),
+    N = n(678869),
+    C = n(278399),
+    A = n(886217),
     Z = n(555672),
-    A = n(644548),
+    P = n(644548),
     S = n(335326),
     M = n(268010),
     O = n(797342),
-    y = n(206583);
-let R = 72;
-function j(e) {
-    return (null == e ? void 0 : e.type) === E.so.CONTENT_INVENTORY ? R : 0;
+    R = n(206583);
+let j = 72;
+function y(e) {
+    return (null == e ? void 0 : e.type) === E.so.CONTENT_INVENTORY ? j : 0;
 }
 let L = (e) => {
         let { entry: t, ...n } = e;
         switch (t.content_type) {
             case o.s.PLAYED_GAME:
-                return (0, l.jsx)(f.Z, {
+                return (0, a.jsx)(p.Z, {
                     ...n,
                     entry: t
                 });
             case o.s.WATCHED_MEDIA:
-                return (0, l.jsx)(S.Z, {
+                return (0, a.jsx)(S.Z, {
                     ...n,
                     entry: t
                 });
             case o.s.TOP_GAME:
-                return (0, l.jsx)(Z.ZP, {
+                return (0, a.jsx)(Z.ZP, {
                     ...n,
                     entry: t
                 });
             case o.s.TOP_ARTIST:
-                return (0, l.jsx)(N.ZP, {
+                return (0, a.jsx)(C.ZP, {
                     ...n,
                     entry: t
                 });
             case o.s.LISTENED_SESSION:
-                return (0, l.jsx)(I.ZP, {
+                return (0, a.jsx)(I.ZP, {
                     ...n,
                     entry: t
                 });
             case o.s.LAUNCHED_ACTIVITY:
-                return (0, l.jsx)(T.Z, {
+                return (0, a.jsx)(f.Z, {
                     ...n,
                     entry: t
                 });
             case o.s.LEADERBOARD:
-                return (0, l.jsx)(x.Z, {
+                return (0, a.jsx)(x.Z, {
                     ...n,
                     entry: t
                 });
@@ -86,115 +86,115 @@ let L = (e) => {
         }
     },
     w = (e) => {
-        let { requestId: t, closePopout: n, ...a } = e;
-        return (0, l.jsx)(b, {
-            onReaction: (e, l) => {
-                (0, v.L)(e, {
-                    entry: a.entry,
-                    channelId: a.channel.id,
-                    guildId: a.channel.guild_id,
+        let { requestId: t, closePopout: n, ...l } = e;
+        return (0, a.jsx)(D, {
+            onReaction: (e, a) => {
+                (0, _.L)(e, {
+                    entry: l.entry,
+                    channelId: l.channel.id,
+                    guildId: l.channel.guild_id,
                     requestId: t,
-                    destinationChannelId: l.id,
-                    destinationGuildId: l.guild_id
+                    destinationChannelId: a.id,
+                    destinationGuildId: a.guild_id
                 }),
                     n();
             },
             closePopout: n,
             onVoiceChannelPreview: (e, n) => {
-                (0, v.L)(y.xP.VOICE_CHANNEL_PREVIEWED, {
-                    entry: a.entry,
-                    channelId: a.channel.id,
-                    guildId: a.channel.guild_id,
+                (0, _.L)(R.xP.VOICE_CHANNEL_PREVIEWED, {
+                    entry: l.entry,
+                    channelId: l.channel.id,
+                    guildId: l.channel.guild_id,
                     requestId: t,
                     destinationChannelId: e.id,
                     destinationGuildId: e.guild_id,
                     richPresenceName: n
                 });
             },
-            ...a
+            ...l
         });
     },
-    b = (e) => {
+    D = (e) => {
         let { entry: t, ...n } = e;
         switch (t.content_type) {
             case o.s.PLAYED_GAME:
-                return (0, l.jsx)(g.Z, {
+                return (0, a.jsx)(g.Z, {
                     ...n,
                     entry: t
                 });
             case o.s.WATCHED_MEDIA:
-                return (0, l.jsx)(M.Z, {
+                return (0, a.jsx)(M.Z, {
                     ...n,
                     entry: t
                 });
             case o.s.TOP_GAME:
-                return (0, l.jsx)(A.Z, {
+                return (0, a.jsx)(P.Z, {
                     ...n,
                     entry: t
                 });
             case o.s.TOP_ARTIST:
-                return (0, l.jsx)(P.Z, {
+                return (0, a.jsx)(A.Z, {
                     ...n,
                     entry: t
                 });
             case o.s.LISTENED_SESSION:
-                return (0, l.jsx)(C.Z, {
+                return (0, a.jsx)(N.Z, {
                     ...n,
                     entry: t
                 });
             case o.s.LAUNCHED_ACTIVITY:
-                return (0, l.jsx)(p.ZP, {
+                return (0, a.jsx)(T.ZP, {
                     ...n,
                     entry: t
                 });
             case o.s.LEADERBOARD:
-                return (0, l.jsx)(m.Z, { channel: n.channel });
+                return (0, a.jsx)(m.Z, { channel: n.channel });
             default:
                 return null;
         }
     };
-t.ZP = a.memo((e) => {
+t.ZP = l.memo((e) => {
     var t;
     let { index: i, ...o } = e,
-        [m, x] = a.useState('default'),
+        [m, x] = l.useState('default'),
         E = (0, s.JA)(''.concat(i)),
-        T = null === (t = _.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff(),
-        { isRich: p, appName: f } = (0, O.n)(o.entry),
+        f = null === (t = v.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff(),
+        { isRich: T, appName: p } = (0, O.n)(o.entry),
         g = {
             entry: o.entry,
             channelId: o.channel.id,
             guildId: o.channel.guild_id,
             requestId: o.requestId,
-            richPresenceName: p ? f : void 0
+            richPresenceName: T ? p : void 0
         },
-        I = a.useRef(!1),
-        [C, N] = a.useState(!1),
-        [P, Z] = a.useState(!1),
-        A = (0, u.e7)([h.Z], () => h.Z.keyboardModeEnabled);
-    a.useEffect(() => {
-        C && A && Z(!0);
-    }, [C, A]);
-    let S = a.useCallback(
+        I = l.useRef(!1),
+        [N, C] = l.useState(!1),
+        [A, Z] = l.useState(!1),
+        P = (0, u.e7)([h.Z], () => h.Z.keyboardModeEnabled);
+    l.useEffect(() => {
+        N && P && Z(!0);
+    }, [N, P]);
+    let S = l.useCallback(
             (e) => {
-                if (!!T)
+                if (!!f)
                     (0, d.jW)(e, async () => {
                         let { default: e } = await n.e('153').then(n.bind(n, 330150));
                         return () =>
-                            (0, l.jsx)(e, {
+                            (0, a.jsx)(e, {
                                 entry: o.entry,
                                 requestId: o.requestId
                             });
                     });
             },
-            [o, T]
+            [o, f]
         ),
-        M = a.useCallback(() => {
+        M = l.useCallback(() => {
             x(String(Date.now()));
         }, []),
-        R = a.useCallback(
+        j = l.useCallback(
             r().throttle(
                 (e) => {
-                    (0, v.L)(y.xP.CARD_POPOUT_OPEN, e);
+                    (0, _.L)(R.xP.CARD_POPOUT_OPEN, e);
                 },
                 2000,
                 {
@@ -204,40 +204,40 @@ t.ZP = a.memo((e) => {
             ),
             []
         ),
-        j = () => {
+        y = () => {
             (I.current = !1),
                 setTimeout(() => {
-                    !I.current && (N(!1), Z(A));
+                    !I.current && (C(!1), Z(P));
                 }, 100);
         };
-    return (0, l.jsx)('div', {
+    return (0, a.jsx)('div', {
         onMouseEnter: () => {
             (I.current = !0),
                 setTimeout(() => {
-                    I.current && N(!0), R(g);
+                    I.current && C(!0), j(g);
                 }, 100);
         },
-        onMouseLeave: j,
-        children: (0, l.jsx)(c.Popout, {
+        onMouseLeave: y,
+        children: (0, a.jsx)(c.Popout, {
             renderPopout: (e) => {
                 let { closePopout: t } = e;
-                return (0, l.jsx)(w, {
+                return (0, a.jsx)(w, {
                     closePopout: t,
                     updatePopoutPosition: M,
                     ...o
                 });
             },
             position: 'left',
-            shouldShow: C,
+            shouldShow: N,
             positionKey: m,
-            onRequestOpen: () => R(g),
+            onRequestOpen: () => j(g),
             onRequestClose: () => {
-                P && j();
+                A && y();
             },
             spacing: 8,
             children: (e, t) => {
                 let { isShown: n } = t;
-                return (0, l.jsx)(c.Clickable, {
+                return (0, a.jsx)(c.Clickable, {
                     ...e,
                     ...E,
                     focusProps: {
@@ -249,10 +249,10 @@ t.ZP = a.memo((e) => {
                         }
                     },
                     onClick: () => {
-                        !C && N(!0);
+                        !N && C(!0);
                     },
                     onContextMenu: S,
-                    children: (0, l.jsx)(L, {
+                    children: (0, a.jsx)(L, {
                         ...o,
                         selected: n,
                         hovered: I.current

@@ -29,12 +29,12 @@ var i = n(735250),
     N = n(301439);
 function A(e) {
     let { participants: t, onClick: n, onDoubleClick: A, onContextMenu: Z, channel: M, className: b, inCall: R, totalNumberOfParticipants: L, paused: j = !1 } = e,
-        O = (0, c.bp)() === S.IlC.POPOUT,
-        P = (0, r.e7)([g.Z], () => g.Z.getGuild(M.guild_id), [M.guild_id]),
+        P = (0, c.bp)() === S.IlC.POPOUT,
+        O = (0, r.e7)([g.Z], () => g.Z.getGuild(M.guild_id), [M.guild_id]),
         { dismissedActivityEntryPointTileChannel: y } = (0, x.d)(),
         D = (0, r.e7)([m.Z], () => m.Z.getUserParticipantCount(M.id), [M]),
-        k = (0, E.bt)(M.id, t),
-        U = s.useCallback(() => {
+        U = (0, E.bt)(M.id, t),
+        k = s.useCallback(() => {
             (0, l.j)(() => {
                 x.d.setState({ dismissedActivityEntryPointTileChannel: M.id });
             });
@@ -46,14 +46,14 @@ function A(e) {
                 x.d.setState({ dismissedActivityEntryPointTileChannel: null });
             });
     }, [M.id, y]);
-    let w = (0, r.e7)([C.Z], () => M.isPrivate() || (0, _.b)(C.Z, P, M), [P, M]),
-        B = (null == P ? void 0 : P.afkChannelId) === M.id,
+    let w = (0, r.e7)([C.Z], () => M.isPrivate() || (0, _.b)(C.Z, O, M), [O, M]),
+        B = (null == O ? void 0 : O.afkChannelId) === M.id,
         H = M.userLimit <= 0 || M.userLimit > 1,
         G = (0, r.e7)([u.ZP], () => u.ZP.getEmbeddedActivitiesForChannel(M.id).length <= 0),
         V = (0, p.N)(o.z.VC_TILE_ACTIVITIES_ENTRY_POINT),
         F = (0, d.KF)(M.id) !== d.jy.CAN_LAUNCH,
         W = null != y && y === M.id,
-        z = k.map(
+        z = U.map(
             (e) => (t) =>
                 (0, i.jsx)(
                     T.ZP,
@@ -67,7 +67,7 @@ function A(e) {
                         onContextMenu: Z,
                         inCall: R,
                         width: t,
-                        inPopout: O
+                        inPopout: P
                     },
                     e.id
                 )
@@ -86,7 +86,7 @@ function A(e) {
         { trackOnInitialLoad: !0 },
         []
     ),
-        null != P &&
+        null != O &&
             !B &&
             (!(D >= 2) || !G || F || V || W
                 ? H &&
@@ -96,10 +96,10 @@ function A(e) {
                       ? z.push((e) =>
                             (0, i.jsx)(I.h, {
                                 channel: M,
-                                guild: P,
+                                guild: O,
                                 width: e,
-                                inPopout: O,
-                                handleClose: U,
+                                inPopout: P,
+                                handleClose: k,
                                 userParticipantCount: D
                             })
                         )
@@ -107,26 +107,26 @@ function A(e) {
                             (0, i.jsx)(v.Z, {
                                 width: e,
                                 channel: M,
-                                guild: P,
-                                inPopout: O
+                                guild: O,
+                                inPopout: P
                             })
                         ))
                 : z.push((e) =>
                       (0, i.jsx)(I.h, {
                           channel: M,
-                          guild: P,
+                          guild: O,
                           width: e,
-                          inPopout: O,
-                          handleClose: U,
+                          inPopout: P,
+                          handleClose: k,
                           userParticipantCount: D
                       })
                   ));
     let Y = s.useCallback(
         (e) => {
             var t, n;
-            return null !== (n = null === (t = k[e]) || void 0 === t ? void 0 : t.id) && void 0 !== n ? n : 'empty-tile';
+            return null !== (n = null === (t = U[e]) || void 0 === t ? void 0 : t.id) && void 0 !== n ? n : 'empty-tile';
         },
-        [k]
+        [U]
     );
     return (0, i.jsx)(f.Z, {
         className: b,

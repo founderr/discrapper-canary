@@ -1,4 +1,4 @@
-n.d(t, {
+r.d(t, {
     R: function () {
         return o;
     },
@@ -6,11 +6,11 @@ n.d(t, {
         return s;
     }
 }),
-    n(724458),
-    n(653041),
-    n(47120);
-var r = n(470079),
-    a = n(979554);
+    r(724458),
+    r(653041),
+    r(47120);
+var n = r(470079),
+    a = r(979554);
 class s {
     get firstAvatarDecoration() {
         return this.getFirstItemByType(a.Z.AVATAR_DECORATION);
@@ -20,34 +20,34 @@ class s {
     }
     getFirstItemByType(e) {
         var t;
-        let n = (null !== (t = this.itemsByTypes.get(e)) && void 0 !== t ? t : [])[0];
-        if (null != n) return n;
+        let r = (null !== (t = this.itemsByTypes.get(e)) && void 0 !== t ? t : [])[0];
+        if (null != r) return r;
     }
     sortByTypes(e) {
         return e.reduce((e, t) => {
-            let n = e.get(t.type);
-            return null != n ? n.push(t) : e.set(t.type, [t]), e;
+            let r = e.get(t.type);
+            return null != r ? r.push(t) : e.set(t.type, [t]), e;
         }, new Map());
     }
     constructor(e) {
-        var t, n, r;
+        var t, r, n;
         (t = this),
-            (r = void 0),
-            (n = 'itemsByTypes') in t
-                ? Object.defineProperty(t, n, {
-                      value: r,
+            (n = void 0),
+            (r = 'itemsByTypes') in t
+                ? Object.defineProperty(t, r, {
+                      value: n,
                       enumerable: !0,
                       configurable: !0,
                       writable: !0
                   })
-                : (t[n] = r),
+                : (t[r] = n),
             (this.itemsByTypes = this.sortByTypes(e));
     }
 }
 let o = (e) => {
-    let { firstProfileEffect: t, firstAvatarDecoration: n } = r.useMemo(() => new s(e.items), [e]);
+    let { firstProfileEffect: t, firstAvatarDecoration: r } = n.useMemo(() => new s(e.items), [e]);
     return {
         firstProfileEffect: t,
-        firstAvatarDecoration: n
+        firstAvatarDecoration: r
     };
 };

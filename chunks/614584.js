@@ -30,7 +30,7 @@ let v = s.memo(function (e) {
         R = (0, E.Uj)(b),
         L = (0, c.p)(),
         j = (0, u.A)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()),
-        O = s.useMemo(() => {
+        P = s.useMemo(() => {
             if (null == b) return null;
             let e = (0, r.Z)(b);
             if (e.type === T.uaV.USER_JOIN) {
@@ -95,11 +95,11 @@ let v = s.memo(function (e) {
             }
             return null;
         }, [b, R, S, j, L]),
-        P = (0, a.e7)([p.Z], () => null != b && p.Z.isBlockedForMessage(b), [b]),
+        O = (0, a.e7)([p.Z], () => null != b && p.Z.isBlockedForMessage(b), [b]),
         y = (0, I.wq)(null == b ? void 0 : b.author.id, S.id),
-        D = (0, I.$3)(n, b, P),
-        k = (0, I.Wl)(b, S, A, M),
-        U = (0, I.rY)(Z, M),
+        D = (0, I.$3)(n, b, O),
+        U = (0, I.Wl)(b, S, A, M),
+        k = (0, I.rY)(Z, M),
         w = s.useCallback(
             () =>
                 M({
@@ -115,14 +115,14 @@ let v = s.memo(function (e) {
         channel: S,
         baseAuthor: B,
         referencedMessage: v,
-        content: O,
+        content: P,
         compact: N,
-        isReplyAuthorBlocked: P,
+        isReplyAuthorBlocked: O,
         showAvatarPopout: Z,
         showUsernamePopout: A,
         renderPopout: C.Z,
-        onClickAvatar: U,
-        onClickUsername: k,
+        onClickAvatar: k,
+        onClickUsername: U,
         onClickReply: D,
         onContextMenu: y,
         onPopoutRequestClose: w

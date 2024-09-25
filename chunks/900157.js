@@ -46,11 +46,11 @@ function b(e) {
                 (0, C.ad)(e, { source: N.on.VOICE_AUTO_OPEN }));
         }, [t, e]);
     })(R);
-    let O = s.useRef(!1);
+    let P = s.useRef(!1);
     if (
         (s.useEffect(() => {
-            if (null == R || O.current) return;
-            O.current = !0;
+            if (null == R || P.current) return;
+            P.current = !0;
             let e = (0, h.K)(I.Z.getChannel(R.id), !0);
             (0, d.yw)(A.rMx.CHANNEL_OPENED, {
                 ...e,
@@ -62,7 +62,7 @@ function b(e) {
         null == R || null == L)
     )
         return null;
-    let P = (0, i.jsx)(S.Z, {
+    let O = (0, i.jsx)(S.Z, {
         channel: R,
         baseChannelId: a
     });
@@ -73,7 +73,7 @@ function b(e) {
                 draftType: T.d.ChannelMessage
             }),
             (0, i.jsx)(E.ZP, {
-                toolbar: P,
+                toolbar: O,
                 'aria-label': Z.Z.Messages.THREAD_HEADER_BAR_A11Y_LABEL,
                 children: (0, g.ud)({
                     channel: R,

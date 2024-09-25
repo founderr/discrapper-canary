@@ -57,7 +57,7 @@ function I(e) {
             [x, A, L]
         );
     s.useEffect(() => (u.Z.enable(), u.Z.enableTemp(j), () => u.Z.disableTemp()), [j]);
-    let O = (0, o.useTransition)(
+    let P = (0, o.useTransition)(
         A,
         {
             value: 0,
@@ -74,7 +74,7 @@ function I(e) {
             flex: 1,
             overflow: 'hidden'
         },
-        children: O((e, t, n) => {
+        children: P((e, t, n) => {
             var s, l, r;
             let { key: o } = n;
             return (0, i.jsx)(

@@ -34,12 +34,12 @@ var i = n(735250),
     R = n(496675),
     L = n(117530),
     j = n(459273),
-    O = n(838440),
-    P = n(127654),
+    P = n(838440),
+    O = n(127654),
     y = n(241309),
     D = n(928477),
-    k = n(456077),
-    U = n(488131),
+    U = n(456077),
+    k = n(488131),
     w = n(602034),
     B = n(981631),
     H = n(689938),
@@ -67,7 +67,7 @@ function W(e) {
                               toolbar: (0, i.jsx)(x.ZP.Icon, {
                                   icon: o.XSmallIcon,
                                   tooltip: H.Z.Messages.CLOSE,
-                                  onClick: () => (0, U.NK)(t)
+                                  onClick: () => (0, k.NK)(t)
                               }),
                               children: [
                                   (0, i.jsx)(x.ZP.Icon, {
@@ -160,7 +160,7 @@ function z(e) {
                     threadSettings: i,
                     privateThreadMode: a,
                     location: r,
-                    onThreadCreated: U.ok,
+                    onThreadCreated: k.ok,
                     useDefaultThreadName: !0
                 });
             return {
@@ -179,7 +179,7 @@ function z(e) {
                                 shouldRefocus: !0
                             };
                         if (null == n) {
-                            let { valid: n } = await (0, O.v)({
+                            let { valid: n } = await (0, P.v)({
                                 content: e,
                                 stickers: s,
                                 uploads: a,
@@ -352,10 +352,10 @@ function K(e) {
             placeholder: '' !== h ? h : H.Z.Messages.FORM_THREAD_NAME_PLACEHOLDER,
             maxLength: B.HN8,
             onChange: (e) => {
-                l({ name: (0, k.Z)(e, !1) }), '' !== e ? u.Z.startTyping(n.id) : u.Z.stopTyping(n.id);
+                l({ name: (0, U.Z)(e, !1) }), '' !== e ? u.Z.startTyping(n.id) : u.Z.stopTyping(n.id);
             },
             onBlur: () => {
-                let e = (0, k.Z)(c, !0);
+                let e = (0, U.Z)(c, !0);
                 e !== c && l({ name: e });
             },
             error: d
@@ -423,7 +423,7 @@ function q(e) {
                 onBlur: f,
                 onChange: E,
                 onSubmit: I,
-                promptToUpload: P.d
+                promptToUpload: O.d
             })
         ]
     });

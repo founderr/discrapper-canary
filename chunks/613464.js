@@ -32,26 +32,26 @@ function N(e) {
         b = (0, r.e7)([I.default], () => I.default.getUser(t), [t]),
         R = (0, r.e7)([C.ZP], () => C.ZP.getMember(n, t), [n, t]),
         [L, j] = s.useState(null == b || null == R),
-        O = (0, u.Z)(R),
-        P = s.useRef(null),
+        P = (0, u.Z)(R),
+        O = s.useRef(null),
         { analyticsLocations: y } = (0, p.ZP)(m.Z.GUILD_MEMBER_MOD_VIEW),
         D = (0, f.ZP)(t, n),
-        k = (0, d.ZP)();
+        U = (0, d.ZP)();
     return (s.useEffect(() => {
         !M && a();
     }, [M, a]),
     s.useEffect(() => {
-        null != O && null == R && !L && a();
-    }, [L, R, a, O]),
+        null != P && null == R && !L && a();
+    }, [L, R, a, P]),
     s.useEffect(() => {
         null != b && null != R && j(!1);
     }, [b, R]),
     s.useEffect(() => {
         let e = null == R;
         return (
-            !L && e && (P.current = window.setTimeout(a, 500)),
+            !L && e && (O.current = window.setTimeout(a, 500)),
             () => {
-                null != P.current && window.clearTimeout(P.current);
+                null != O.current && window.clearTimeout(O.current);
             }
         );
     }, [L, R, a]),
@@ -88,7 +88,7 @@ function N(e) {
                           user: b,
                           displayProfile: D,
                           profileType: null,
-                          themeOverride: k,
+                          themeOverride: U,
                           forceShowPremium: !0,
                           className: S.profileThemedContainer,
                           children: (0, i.jsxs)('div', {

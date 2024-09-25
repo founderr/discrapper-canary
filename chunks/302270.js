@@ -33,12 +33,12 @@ var i = n(735250),
     R = n(146085),
     L = n(427679),
     j = n(592473),
-    O = n(831002),
-    P = n(903108),
+    P = n(831002),
+    O = n(903108),
     y = n(981631),
     D = n(474936),
-    k = n(689938),
-    U = n(219912);
+    U = n(689938),
+    k = n(219912);
 function w(e) {
     let { inPopout: t, channel: n, toggleRequestToSpeakSidebar: a, showRequestToSpeakSidebar: o } = e,
         m = (0, d.bp)(),
@@ -57,7 +57,7 @@ function w(e) {
                     align: 'right',
                     renderPopout: (e) =>
                         (0, i.jsx)(T.Z, {
-                            children: (0, i.jsx)(O.Z, {
+                            children: (0, i.jsx)(P.Z, {
                                 ...e,
                                 channelId: n.id,
                                 appContext: m
@@ -70,26 +70,26 @@ function w(e) {
                             ...e,
                             key: 'more-options',
                             isActive: n,
-                            className: U.button,
-                            iconClassName: U.buttonIcon
+                            className: k.button,
+                            iconClassName: k.buttonIcon
                         });
                     }
                 },
                 'more-options-popout'
             ),
-            !t && (0, i.jsx)(p.Z, { className: U.button }, 'clips'),
+            !t && (0, i.jsx)(p.Z, { className: k.button }, 'clips'),
             (0, i.jsx)(
                 C.Z,
                 {
                     onOpen: S,
                     onClose: N,
-                    className: U.button
+                    className: k.button
                 },
                 'recents'
             ),
             !o && E
                 ? (0, i.jsx)('div', {
-                      className: U.button,
+                      className: k.button,
                       children: (0, i.jsx)(j.Z, {
                           toggleRequestToSpeakSidebar: () => {
                               f && u.Z.updateChatOpen(n.id, !1), a();
@@ -101,12 +101,12 @@ function w(e) {
                 : null,
             !f &&
                 (0, i.jsx)('div', {
-                    className: l()(U.button, { [U.sidebarOpen]: o }),
+                    className: l()(k.button, { [k.sidebarOpen]: o }),
                     children: (0, i.jsx)(x.T, {
                         channelId: n.id,
                         showRequestToSpeakSidebar: o,
                         toggleRequestToSpeakSidebar: a,
-                        iconClassName: U.buttonIcon
+                        iconClassName: k.buttonIcon
                     })
                 })
         ]
@@ -122,9 +122,9 @@ function B(e) {
         T = (0, r.e7)([S.Z], () => S.Z.getGuild(a.guild_id), [a.guild_id]),
         x = null !== (t = null == T ? void 0 : T.maxStageVideoChannelUsers) && void 0 !== t ? t : 0,
         v = (null == T ? void 0 : T.isCommunity()) ? x < y.TU7 : (null == T ? void 0 : T.premiumTier) !== y.Eu4.TIER_3 && x <= y.eez,
-        b = (0, P.Z)(a),
+        b = (0, O.Z)(a),
         j = (0, r.e7)([N.Z], () => N.Z.can(R.yP, a)),
-        O = () => {
+        P = () => {
             u.Z.updateStageVideoLimitBoostUpsellDismissed(a.id, !0),
                 A.default.track(y.rMx.BOOSTING_UPSELL_CLICKED, {
                     guild_id: a.guild_id,
@@ -155,21 +155,21 @@ function B(e) {
                 }),
                 onDoubleClick: g.O,
                 transparent: !0,
-                className: l()(e, U.participants),
+                className: l()(e, k.participants),
                 children: [
                     (0, i.jsx)(E.ZP.Icon, {
                         icon: c.StageIcon,
                         disabled: !0,
-                        'aria-label': k.Z.Messages.STAGE_CHANNEL,
-                        className: U.icon,
+                        'aria-label': U.Z.Messages.STAGE_CHANNEL,
+                        className: k.icon,
                         color: null != _ ? o.Z.unsafe_rawColors.GREEN_360.css : void 0
                     }),
                     (0, i.jsx)(E.ZP.Title, {
-                        className: U.channelName,
-                        wrapperClassName: U.channelNameWrapper,
+                        className: k.channelName,
+                        wrapperClassName: k.channelNameWrapper,
                         children: null !== (t = null == _ ? void 0 : _.topic) && void 0 !== t ? t : p
                     }),
-                    (0, i.jsx)(E.ZP.Divider, { className: U.divider }),
+                    (0, i.jsx)(E.ZP.Divider, { className: k.divider }),
                     (0, i.jsxs)(E.ZP.Title, {
                         children: [
                             (0, i.jsx)(c.MicrophoneIcon, {
@@ -179,8 +179,8 @@ function B(e) {
                             (0, i.jsx)(c.Text, {
                                 variant: 'text-xs/medium',
                                 color: 'header-secondary',
-                                className: U.speakerCount,
-                                children: k.Z.Messages.SPEAKING_COUNT.format({ count: C })
+                                className: k.speakerCount,
+                                children: U.Z.Messages.SPEAKING_COUNT.format({ count: C })
                             }),
                             (0, i.jsx)(c.GroupIcon, {
                                 size: 'xs',
@@ -189,8 +189,8 @@ function B(e) {
                             (0, i.jsx)(c.Text, {
                                 variant: 'text-xs/medium',
                                 color: 'header-secondary',
-                                className: U.speakerCount,
-                                children: k.Z.Messages.LISTENING_COUNT.format({ count: I })
+                                className: k.speakerCount,
+                                children: U.Z.Messages.LISTENING_COUNT.format({ count: I })
                             })
                         ]
                     })
@@ -203,35 +203,35 @@ function B(e) {
               children: [
                   B,
                   (0, i.jsxs)('div', {
-                      className: U.boostUpsell,
+                      className: k.boostUpsell,
                       children: [
                           (0, i.jsx)(H, {}),
                           (0, i.jsxs)('div', {
-                              className: U.text,
+                              className: k.text,
                               children: [
                                   (0, i.jsx)(c.Text, {
                                       variant: 'text-md/medium',
                                       color: 'header-primary',
-                                      children: v ? k.Z.Messages.STAGE_FULL_MODERATOR_TITLE : k.Z.Messages.STAGE_FULL_MODERATOR_MAX_TITLE
+                                      children: v ? U.Z.Messages.STAGE_FULL_MODERATOR_TITLE : U.Z.Messages.STAGE_FULL_MODERATOR_MAX_TITLE
                                   }),
                                   (0, i.jsx)(c.Text, {
                                       variant: 'text-xs/medium',
                                       color: 'text-normal',
-                                      children: v ? k.Z.Messages.STAGE_FULL_MODERATOR_BODY : k.Z.Messages.STAGE_FULL_MAX_BODY
+                                      children: v ? U.Z.Messages.STAGE_FULL_MODERATOR_BODY : U.Z.Messages.STAGE_FULL_MAX_BODY
                                   })
                               ]
                           }),
                           (0, i.jsx)('div', {
-                              className: U.buttons,
+                              className: k.buttons,
                               children: v
                                   ? (0, i.jsxs)(i.Fragment, {
                                         children: [
                                             (0, i.jsx)(c.Button, {
-                                                className: U.notNowButton,
-                                                onClick: O,
+                                                className: k.notNowButton,
+                                                onClick: P,
                                                 look: c.Button.Looks.BLANK,
                                                 size: c.Button.Sizes.SMALL,
-                                                children: k.Z.Messages.NOT_NOW
+                                                children: U.Z.Messages.NOT_NOW
                                             }),
                                             (0, i.jsx)(c.ShinyButton, {
                                                 size: c.Button.Sizes.SMALL,
@@ -247,17 +247,17 @@ function B(e) {
                                                             action: D.T7.BOOST
                                                         });
                                                 },
-                                                className: U.boostButton,
-                                                children: k.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION
+                                                className: k.boostButton,
+                                                children: U.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION
                                             })
                                         ]
                                     })
                                   : (0, i.jsx)(c.Button, {
-                                        className: U.notNowButton,
-                                        onClick: O,
+                                        className: k.notNowButton,
+                                        onClick: P,
                                         look: c.Button.Looks.BLANK,
                                         size: c.Button.Sizes.SMALL,
-                                        children: k.Z.Messages.DISMISS
+                                        children: U.Z.Messages.DISMISS
                                     })
                           })
                       ]

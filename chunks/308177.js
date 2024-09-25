@@ -55,20 +55,20 @@ t.Z = (0, o.Z)((e) => {
         R = (0, r.e7)([u.Z], () => (null != T ? u.Z.getParticipant(i.id, T) : null)),
         L = (0, d.w8)(i.id, h.pV.SPEAKER),
         j = L.filter(Z),
-        O = null != L.find((e) => e.type === h.Ui.STREAM),
-        P = A(s),
+        P = null != L.find((e) => e.type === h.Ui.STREAM),
+        O = A(s),
         y = N(s, v),
         D = {
             [h.pV.SPEAKER]: y,
-            [h.pV.AUDIENCE]: P,
+            [h.pV.AUDIENCE]: O,
             [h.pV.SELECTED]: 1
         },
-        k = (0, m.Dx)(i.id),
-        [U, w] = (0, m.aP)(i.id, D, k),
-        B = [Math.max(null !== (t = U[0]) && void 0 !== t ? t : 1, 1), Math.max(null !== (n = U[1]) && void 0 !== n ? n : 1, 1), U[2]],
+        U = (0, m.Dx)(i.id),
+        [k, w] = (0, m.aP)(i.id, D, U),
+        B = [Math.max(null !== (t = k[0]) && void 0 !== t ? t : 1, 1), Math.max(null !== (n = k[1]) && void 0 !== n ? n : 1, 1), k[2]],
         { speakerTileWidth: H, speakerTileHeight: G } = S(s, y),
         V = x ? s - 32 : Math.min(s - 64, 3 * H + 8),
-        F = (e) => e === U.length - 1 || (0 === b && 1 === e),
+        F = (e) => e === k.length - 1 || (0 === b && 1 === e),
         [W, z] = l.useState(!1),
         [Y, K] = l.useState(!1);
     return (0, a.jsx)(_.Z, {
@@ -88,7 +88,7 @@ t.Z = (0, o.Z)((e) => {
                               collapsed: W,
                               speakers: j,
                               channel: i,
-                              isStreamLive: O
+                              isStreamLive: P
                           },
                           'speaker-header-'.concat(t)
                       );
@@ -150,7 +150,7 @@ t.Z = (0, o.Z)((e) => {
                         {
                             channel: i,
                             participants: s,
-                            maxTiles: P
+                            maxTiles: O
                         },
                         'audience-'.concat(t, '-').concat(n)
                     );

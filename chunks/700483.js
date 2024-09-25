@@ -29,12 +29,12 @@ var i = n(735250),
     R = n(25827),
     L = n(314897),
     j = n(131951),
-    O = n(496675),
-    P = n(944486),
+    P = n(496675),
+    O = n(944486),
     y = n(594174),
     D = n(881824),
-    k = n(471253),
-    U = n(922482),
+    U = n(471253),
+    k = n(922482),
     w = n(200498),
     B = n(146085),
     H = n(88751),
@@ -63,7 +63,7 @@ function et(e) {
     let { channel: s } = e,
         a = (0, K.Z)(s.id),
         [l, c] = (0, X.Z)(s),
-        u = (0, r.e7)([O.Z], () => O.Z.can(J.Plq.REQUEST_TO_SPEAK, s));
+        u = (0, r.e7)([P.Z], () => P.Z.can(J.Plq.REQUEST_TO_SPEAK, s));
     if (a) return null;
     return (0, i.jsx)(M.d, {
         isActive: l,
@@ -81,7 +81,7 @@ function et(e) {
 }
 let en = s.memo(function (e) {
     let { channel: t } = e,
-        n = (0, r.e7)([P.Z], () => P.Z.getVoiceChannelId() === t.id, [t.id]);
+        n = (0, r.e7)([O.Z], () => O.Z.getVoiceChannelId() === t.id, [t.id]);
     return (0, i.jsxs)('div', {
         className: $.container,
         children: [(0, i.jsx)(el, { channelId: t.id }), n ? (0, i.jsx)(et, { channel: t }) : null, (0, i.jsx)(es, { channel: t })]
@@ -117,7 +117,7 @@ function es(e) {
         { canManageGuildEvent: a } = (0, I.X)(t),
         c = (0, r.e7)([G.Z], () => G.Z.getStageInstanceByChannel(t.id), [t.id]),
         d = (0, r.e7)([E.ZP], () => E.ZP.getGuildScheduledEvent(null == c ? void 0 : c.guild_scheduled_event_id)),
-        h = (0, r.e7)([P.Z], () => P.Z.getVoiceChannelId() === t.id, [t.id]),
+        h = (0, r.e7)([O.Z], () => O.Z.getVoiceChannelId() === t.id, [t.id]),
         { suppress: m } = (0, S.Z)(t),
         p = L.default.getId(),
         [_] = (0, X.Z)(t),
@@ -217,7 +217,7 @@ function es(e) {
               className: l()($.buttonSpacing, $.buttonWithTextButton),
               onClick: () => {
                   var e;
-                  return (e = t), void (0, U.TM)(e);
+                  return (e = t), void (0, k.TM)(e);
               },
               children: (0, i.jsxs)('div', {
                   className: $.buttonWithTextInnerContainer,
@@ -308,12 +308,12 @@ let er = s.memo(function (e) {
         C = (0, v.Z)(t),
         { limit: I, reachedLimit: M } = (0, x.Z)(t),
         L = (0, r.e7)([y.default], () => y.default.getCurrentUser()),
-        O = (0, r.e7)([j.Z], () => (0, f.Z)(j.Z)),
-        D = (0, r.e7)([P.Z], () => P.Z.getVoiceChannelId() === t.id, [t.id]),
-        U = (0, r.e7)([d.Z], () => d.Z.getStreamParticipants(t.id)[0], [t.id]),
+        P = (0, r.e7)([j.Z], () => (0, f.Z)(j.Z)),
+        D = (0, r.e7)([O.Z], () => O.Z.getVoiceChannelId() === t.id, [t.id]),
+        k = (0, r.e7)([d.Z], () => d.Z.getStreamParticipants(t.id)[0], [t.id]),
         B = (0, V.PK)(t.id),
         H = I > 0,
-        G = (M && !B) || (null != U && U.user.id !== (null == L ? void 0 : L.id));
+        G = (M && !B) || (null != k && k.user.id !== (null == L ? void 0 : L.id));
     if (null == L) return null;
     let F = (0, i.jsxs)(i.Fragment, {
         children: [
@@ -346,7 +346,7 @@ let er = s.memo(function (e) {
                 channel: t,
                 currentUser: L,
                 exitFullScreen: () => null,
-                canGoLive: O,
+                canGoLive: P,
                 hasPermission: C,
                 disabled: G
             })
@@ -394,8 +394,8 @@ let er = s.memo(function (e) {
                       ]
                   })
                 : null,
-            D && c && n && (0, i.jsx)(ei, { onClick: () => (0, k.RK)(t, !1) }),
-            D && !n && (0, i.jsx)(ea, { onClick: () => (0, k.yi)(t) }),
+            D && c && n && (0, i.jsx)(ei, { onClick: () => (0, U.RK)(t, !1) }),
+            D && !n && (0, i.jsx)(ea, { onClick: () => (0, U.yi)(t) }),
             (0, i.jsx)(es, { channel: t })
         ]
     });
@@ -411,7 +411,7 @@ t.Z = s.memo(function (e) {
     let { channel: t, isOnStartStageScreen: n } = e,
         s = (0, K.Z)(t.id),
         a = (0, w.B)(t.id),
-        l = (0, r.e7)([O.Z], () => O.Z.can(B.yP, t), [t]),
+        l = (0, r.e7)([P.Z], () => P.Z.can(B.yP, t), [t]),
         o = (0, q.Z)(t.id),
         c = (0, r.e7)([d.Z], () => (null != t ? d.Z.getSelectedParticipant(t.id) : null)),
         u = !o && null == c;

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return P;
+        return O;
     }
 }),
     n(47120);
@@ -34,18 +34,18 @@ var i = n(735250),
     R = n(981631),
     L = n(689938),
     j = n(314251),
-    O = n(96042);
-function P(e) {
-    let { postId: t, isFirstMessage: n, isLastItem: a = !1, parentChannelId: P } = e,
+    P = n(96042);
+function O(e) {
+    let { postId: t, isFirstMessage: n, isLastItem: a = !1, parentChannelId: O } = e,
         { ref: y, width: D } = (0, m.Z)(),
-        [k, U] = s.useState(3),
+        [U, k] = s.useState(3),
         [w, B] = s.useState(!n),
         [H, G] = (0, p.Z)(!1, 2000),
         V = (0, o.e7)([N.Z], () => N.Z.getChannel(t), [t]),
         { firstMessage: F } = (0, M.cl)(V),
         W = (0, o.e7)([v.Z], () => v.Z.hasJoined(t)),
         { disableReactionUpdates: z, disableReactionCreates: Y, isLurking: K, isGuest: q, isPendingMember: X } = (0, g.Z)(V),
-        J = (0, o.e7)([N.Z], () => N.Z.getChannel(P)),
+        J = (0, o.e7)([N.Z], () => N.Z.getChannel(O)),
         Q = (0, Z.Bs)(J),
         $ = (0, o.e7)([_.Z], () => _.Z.shouldDisplayPrompt(t) && !0 === n, [t, n]),
         ee = s.useCallback(
@@ -73,7 +73,7 @@ function P(e) {
     let [et, en] = s.useState(!0);
     if (
         (s.useEffect(() => {
-            if (null != D) U(Math.floor((D - 280) / 58)), en(!1);
+            if (null != D) k(Math.floor((D - 280) / 58)), en(!1);
         }, [D]),
         null == V || null == F)
     )
@@ -112,7 +112,7 @@ function P(e) {
                                 !Y &&
                                 null != Q &&
                                 (0, i.jsx)('div', {
-                                    className: O.reactions,
+                                    className: P.reactions,
                                     children: (0, i.jsx)(x.le, {
                                         message: F,
                                         readOnly: !1,
@@ -137,7 +137,7 @@ function P(e) {
                                 isLurking: K,
                                 isGuest: q,
                                 isPendingMember: X,
-                                maxReactions: k,
+                                maxReactions: U,
                                 className: j.reactions,
                                 useChatFontScaling: !1,
                                 isForumToolbar: !0,

@@ -31,13 +31,13 @@ t.Z = function (e) {
         }),
         L = (0, a.e7)([c.Z], () => c.Z.didAgree(M)) && !R,
         j = s.useMemo(() => !N && ((T.isPrivate() && !T.isManaged()) || (null != M && (!T.isNSFW() || L) && A && u.Z.canChatInGuild(M))), [A, L, T, M, N]),
-        O = b ? (C.TPd.GUILD_THREADS_ONLY.has(T.type) ? I.Z.Messages.UPLOAD_TO_NEW_POST : I.Z.Messages.UPLOAD_TO_NEW_THREAD) : v ? I.Z.Messages.UPLOAD_TO.format({ destination: (0, r.F6)(T, p.default, m.Z, !0) }) : I.Z.Messages.UPLOAD_AREA_TITLE_NO_CONFIRMATION;
+        P = b ? (C.TPd.GUILD_THREADS_ONLY.has(T.type) ? I.Z.Messages.UPLOAD_TO_NEW_POST : I.Z.Messages.UPLOAD_TO_NEW_THREAD) : v ? I.Z.Messages.UPLOAD_TO.format({ destination: (0, r.F6)(T, p.default, m.Z, !0) }) : I.Z.Messages.UPLOAD_AREA_TITLE_NO_CONFIRMATION;
     return Z || !j
         ? null
         : (0, i.jsx)(E.Z, {
               className: t,
               style: n,
-              title: O,
+              title: P,
               description: b ? I.Z.Messages.UPLOAD_AREA_NEW_THREAD_HELP : I.Z.Messages.UPLOAD_AREA_HELP,
               icons: g.J6,
               onDrop: (e) => {

@@ -11,8 +11,8 @@ n.d(t, {
 }),
     n(627494),
     n(757143);
-var l = n(884439),
-    a = n(55000),
+var a = n(884439),
+    l = n(55000),
     i = n(693824),
     r = n(690725),
     s = n(561308),
@@ -30,7 +30,7 @@ let d = (e) => {
     },
     h = (e) => {
         var t;
-        let n = null === (t = (0, s.PJ)(e, l.N.AGGREGATE_COUNT)) || void 0 === t ? void 0 : t.count;
+        let n = null === (t = (0, s.PJ)(e, a.N.AGGREGATE_COUNT)) || void 0 === t ? void 0 : t.count;
         return null == n
             ? []
             : [
@@ -48,10 +48,10 @@ let d = (e) => {
         };
     },
     x = async (e) => {
-        let { user: t, channel: n, mediaImageSrc: l, artist: s, description: c, colors: d, badges: h } = e,
+        let { user: t, channel: n, mediaImageSrc: a, artist: s, description: c, colors: d, badges: h } = e,
             x = m({
                 avatarSrc: t.getAvatarURL(n.guild_id, 128),
-                mediaImageSrc: l
+                mediaImageSrc: a
             }),
             E = s.replaceAll(/[^a-zA-Z0-9 ]/g, '').replaceAll(' ', '-');
         return await (0, r.f)({
@@ -103,7 +103,7 @@ let d = (e) => {
                             { fillMode: i.JU.Contain }
                         ) === i.vP.Failure &&
                             e.drawPath(
-                                a.Cv,
+                                l.Cv,
                                 {
                                     x: u.sB,
                                     y: u.sB

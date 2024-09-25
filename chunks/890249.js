@@ -1,9 +1,9 @@
-n.d(t, {
+r.d(t, {
     m: function () {
         return a;
     }
 });
-let r = (0, n(818083).B)({
+let n = (0, r(818083).B)({
         kind: 'user',
         id: '2024-06_collectibles_shop_use_now',
         label: 'Collectibles Shop Use Now',
@@ -16,4 +16,4 @@ let r = (0, n(818083).B)({
             }
         ]
     }),
-    a = (e) => r.useExperiment({ location: e }).realtimeUseNowEnabled;
+    a = (e) => n.useExperiment({ location: e }).realtimeUseNowEnabled;

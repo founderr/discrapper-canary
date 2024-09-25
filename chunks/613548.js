@@ -34,12 +34,12 @@ var i = n(735250),
     R = n(179424),
     L = n(786915),
     j = n(975146),
-    O = n(991617),
-    P = n(597998),
+    P = n(991617),
+    O = n(597998),
     y = n(606304),
     D = n(594174),
-    k = n(358221),
-    U = n(887012),
+    U = n(358221),
+    k = n(887012),
     w = n(444253),
     B = n(355827),
     H = n(354459),
@@ -49,9 +49,9 @@ var i = n(735250),
 function W(e) {
     let { channelId: t, guildId: n } = e,
         s = Date.now(),
-        a = (0, u.e7)([y.Z, k.Z], () =>
+        a = (0, u.e7)([y.Z, U.Z], () =>
             o()(y.Z.getSpeakers())
-                .map((e) => k.Z.getParticipant(t, e))
+                .map((e) => U.Z.getParticipant(t, e))
                 .filter((e) => null != e && e.type === H.fO.USER && e.speaking && !(0, S.ZP)(e))
                 .sortBy((e) => -y.Z.getSpeakingDuration(e.user.id, s))
                 .slice(0, 3)
@@ -68,7 +68,7 @@ function W(e) {
                           color: d.Tooltip.Colors.GREY,
                           text: V.Z.Messages.CHANNEL_CALL_CURRENT_SPEAKER.format({ username: e.user.username }),
                           children: (s) =>
-                              (0, i.jsx)(P.Z, {
+                              (0, i.jsx)(O.Z, {
                                   ...s,
                                   className: l()(F.speaker, { [F.last]: t === a.length - 1 }),
                                   user: e.user,
@@ -86,20 +86,20 @@ function z(e) {
     let { inPopout: t, channel: n, appContext: a, inCall: l, isChatOpen: r, exitFullScreen: o } = e,
         S = n.id,
         {
-            voiceParticipantsHidden: P,
+            voiceParticipantsHidden: O,
             selectedParticipant: y,
             userParticipantCount: V
         } = (0, u.cj)(
-            [k.Z],
+            [U.Z],
             () => ({
-                selectedParticipant: k.Z.getSelectedParticipant(S),
-                voiceParticipantsHidden: k.Z.getVoiceParticipantsHidden(S),
-                userParticipantCount: k.Z.getUserParticipantCount(S)
+                selectedParticipant: U.Z.getSelectedParticipant(S),
+                voiceParticipantsHidden: U.Z.getVoiceParticipantsHidden(S),
+                userParticipantCount: U.Z.getUserParticipantCount(S)
             }),
             [S]
         ),
         z = (0, u.e7)([D.default], () => D.default.getCurrentUser()),
-        Y = (0, U.Z)(n),
+        Y = (0, k.Z)(n),
         K = (0, I.So)(c.q.STREAM_HIGH_QUALITY),
         q = (0, C.o)(y, z),
         X = (0, g.lL)('CallHeader', !0, z, q),
@@ -125,7 +125,7 @@ function z(e) {
         );
     }
     return (
-        P &&
+        O &&
             et.push(
                 (0, i.jsx)(
                     W,
@@ -170,7 +170,7 @@ function z(e) {
                     'live-indicator'
                 )
             )),
-        P &&
+        O &&
             et.push(
                 (0, i.jsx)(
                     d.Popout,
@@ -203,7 +203,7 @@ function z(e) {
                           'deselect-participant'
                       )
                     : (0, i.jsx)(
-                          O.Z,
+                          P.Z,
                           {
                               className: F.button,
                               channelId: S,

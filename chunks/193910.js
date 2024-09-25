@@ -75,7 +75,7 @@ function L() {
     );
 }
 function j(e) {
-    let { channel: t, options: l, onFileUpload: c, onClose: p, onSelect: _, draftType: E, editorTextContent: j, setValue: O, openClips: P } = e,
+    let { channel: t, options: l, onFileUpload: c, onClose: p, onSelect: _, draftType: E, editorTextContent: j, setValue: P, openClips: O } = e,
         { analyticsLocations: y } = (0, h.ZP)();
     s.useEffect(() => {
         g.default.track(S.rMx.OPEN_POPOUT, {
@@ -87,11 +87,11 @@ function j(e) {
     function D() {
         (0, f.R6)(t, void 0, 'Plus Button');
     }
-    function k() {
-        g.default.track(S.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), O('/', (0, x.JM)('/'));
-    }
     function U() {
-        P();
+        g.default.track(S.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), P('/', (0, x.JM)('/'));
+    }
+    function k() {
+        O();
     }
     function w() {
         (0, m.EW)(r.z.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: N.L.TAKE_ACTION }),
@@ -191,7 +191,7 @@ function j(e) {
                         {
                             id: 'clips',
                             label: s,
-                            action: U
+                            action: k
                         },
                         'clips'
                     );
@@ -282,7 +282,7 @@ function j(e) {
                         {
                             id: 'SLASH_COMMAND',
                             label: s,
-                            action: k
+                            action: U
                         },
                         'SLASH_COMMAND'
                     );

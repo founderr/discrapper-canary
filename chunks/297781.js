@@ -89,7 +89,7 @@ let C = {
     [c.s.LAUNCHED_ACTIVITY]: [P, U, M, H, V, G]
 };
 !(function (e) {
-    (e[(e.CARD = 0)] = 'CARD'), (e[(e.POPOUT = 1)] = 'POPOUT'), (e[(e.STREAMING_POPOUT = 2)] = 'STREAMING_POPOUT'), (e[(e.GAME_PROFILE = 3)] = 'GAME_PROFILE'), (e[(e.USER_PROFILE = 4)] = 'USER_PROFILE'), (e[(e.EMBED = 5)] = 'EMBED');
+    (e[(e.CARD = 0)] = 'CARD'), (e[(e.POPOUT = 1)] = 'POPOUT'), (e[(e.STREAMING_POPOUT = 2)] = 'STREAMING_POPOUT'), (e[(e.GAME_PROFILE = 3)] = 'GAME_PROFILE'), (e[(e.USER_PROFILE = 4)] = 'USER_PROFILE'), (e[(e.EMBED = 5)] = 'EMBED'), (e[(e.LEADERBOARD_POPOUT = 6)] = 'LEADERBOARD_POPOUT');
 })(r || (r = {}));
 let y = a.createContext({});
 function b() {
@@ -356,7 +356,7 @@ function W(e) {
     let t,
         { location: n, children: r, className: a } = e;
     return (
-        (t = (0, p.Hi)(n, [1, 5])
+        (t = (0, p.Hi)(n, [1, 5, 6])
             ? {
                   defaultTextColor: 'content-inventory-overlay-text-secondary',
                   defaultIconColor: f.tokens.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY

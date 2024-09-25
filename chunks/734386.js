@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return O;
+        return P;
     }
 }),
     n(47120);
@@ -34,31 +34,31 @@ var i = n(735250),
     R = n(981631),
     L = n(689938),
     j = n(293081);
-function O(e) {
+function P(e) {
     let { channel: t } = e,
         [n, a] = s.useState(!1),
         r = (0, _.ZP)(t, !0),
-        O = t.guild_id,
-        P = (0, d.e7)([x.Z], () => (null != O ? x.Z.getRoles(O) : void 0)),
+        P = t.guild_id,
+        O = (0, d.e7)([x.Z], () => (null != P ? x.Z.getRoles(P) : void 0)),
         y = (0, d.e7)([S.default, x.Z], () => {
             var e;
-            return S.default.getUser(null === (e = x.Z.getGuild(O)) || void 0 === e ? void 0 : e.ownerId);
+            return S.default.getUser(null === (e = x.Z.getGuild(P)) || void 0 === e ? void 0 : e.ownerId);
         }),
         D = s.useMemo(
             () =>
-                null != O
-                    ? o()(P)
+                null != P
+                    ? o()(O)
                           .sortBy((e) => -e.position)
-                          .filter((e) => !(0, f.pM)(O, e.id))
+                          .filter((e) => !(0, f.pM)(P, e.id))
                           .value()
                     : [],
-            [O, P]
+            [P, O]
         ),
-        k = s.useMemo(
+        U = s.useMemo(
             () =>
                 o()(D)
                     .filter((e) => {
-                        if (null == O) return !1;
+                        if (null == P) return !1;
                         let n = N.I0({
                             forceRoles: { [e.id]: e },
                             context: t
@@ -66,9 +66,9 @@ function O(e) {
                         return c.e$(n, R.Plq.ADMINISTRATOR) || c.e$(n, R.Plq.VIEW_CHANNEL);
                     })
                     .value(),
-            [t, O, D]
+            [t, P, D]
         ),
-        U = (0, d.Wu)(
+        k = (0, d.Wu)(
             [S.default],
             () => {
                 let e = {};
@@ -139,14 +139,14 @@ function O(e) {
                 className: j.members,
                 children: [
                     (function () {
-                        if (1 !== U.length || k.length > 0)
+                        if (1 !== k.length || U.length > 0)
                             return (0, i.jsx)(b.Z, {
                                 guildId: t.guild_id,
                                 className: j.avatars,
                                 maxUsers: 5,
-                                users: U
+                                users: k
                             });
-                        let e = U[0],
+                        let e = k[0],
                             n = A.ZP.getName(e);
                         return (0, i.jsxs)('div', {
                             className: j.avatars,
@@ -172,7 +172,7 @@ function O(e) {
                             ]
                         });
                     })(),
-                    k.map((e, n) => {
+                    U.map((e, n) => {
                         var s, a;
                         let r = null !== (a = e.colorString) && void 0 !== a ? a : (0, u.Rf)(R.p6O),
                             o = (null === (s = e.tags) || void 0 === s ? void 0 : s.guild_connections) !== void 0;
@@ -180,7 +180,7 @@ function O(e) {
                             ? (0, i.jsx)(
                                   g.Z,
                                   {
-                                      className: l()(j.role, { [j.last]: n === k.length - 1 }),
+                                      className: l()(j.role, { [j.last]: n === U.length - 1 }),
                                       roleName: e.name,
                                       roleColor: r,
                                       disabled: !w,
@@ -194,7 +194,7 @@ function O(e) {
                             : (0, i.jsx)(
                                   C.Z,
                                   {
-                                      className: l()(j.role, { [j.last]: n === k.length - 1 }),
+                                      className: l()(j.role, { [j.last]: n === U.length - 1 }),
                                       roleName: e.name,
                                       roleColor: r,
                                       verified: o

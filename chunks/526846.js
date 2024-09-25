@@ -40,12 +40,12 @@ let N = 'vc-activities-'.concat((0, r.Z)()),
             s.useEffect(() => {
                 !a && r();
             }, [r, a]);
-        let O = (0, d.bp)(),
-            { analyticsLocations: P } = (0, p.ZP)(m.Z.ACTIVITIES_MINI_SHELF),
-            { analyticsLocations: y } = (0, p.ZP)([...P, m.Z.ACTIVITIES_MINI_SHELF_BANNER]),
-            D = O === x.IlC.POPOUT,
-            k = (0, u.O)(),
-            U = (function (e) {
+        let P = (0, d.bp)(),
+            { analyticsLocations: O } = (0, p.ZP)(m.Z.ACTIVITIES_MINI_SHELF),
+            { analyticsLocations: y } = (0, p.ZP)([...O, m.Z.ACTIVITIES_MINI_SHELF_BANNER]),
+            D = P === x.IlC.POPOUT,
+            U = (0, u.O)(),
+            k = (function (e) {
                 return (0, g.Z)({ guildId: e }).slice(0, 5);
             })(n.getGuildId());
         s.useEffect(() => {
@@ -57,14 +57,14 @@ let N = 'vc-activities-'.concat((0, r.Z)()),
                 (0, T.Z)({
                     channel: n,
                     guildId: null !== (e = n.getGuildId()) && void 0 !== e ? e : void 0,
-                    locationObject: k.location,
+                    locationObject: U.location,
                     openInPopout: D,
-                    analyticsLocations: P,
+                    analyticsLocations: O,
                     opensAppLauncherModal: !0
                 }),
                     Z(),
                     M();
-            }, [k, P, n, M, Z, D]),
+            }, [U, O, n, M, Z, D]),
             B = s.useCallback(
                 (e) => {
                     A(),
@@ -76,7 +76,7 @@ let N = 'vc-activities-'.concat((0, r.Z)()),
                 [A, n]
             );
         return (0, i.jsx)(p.Gt, {
-            value: P,
+            value: O,
             children: (0, i.jsx)(_.Z, {
                 children: (0, i.jsxs)(c.Dialog, {
                     ref: t,
@@ -140,7 +140,7 @@ let N = 'vc-activities-'.concat((0, r.Z)()),
                                 (0, i.jsxs)('div', {
                                     className: S.activityContainer,
                                     children: [
-                                        U.map((e) =>
+                                        k.map((e) =>
                                             (0, i.jsx)(
                                                 C.Y,
                                                 {

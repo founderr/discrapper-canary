@@ -76,7 +76,7 @@ function I(e) {
             },
             [Z, L, M]
         ),
-        O = s.useCallback(
+        P = s.useCallback(
             (e) => () => {
                 null != M && (e !== E.AEg.FULL_SCREEN ? ((A.current = e), L(e, E.AEg.FULL_SCREEN), (0, f.Dj)(M)) : j(e));
             },
@@ -84,7 +84,7 @@ function I(e) {
         );
     return (s.useEffect(() => {
         let e = () => {
-            null != M && !(0, f.rB)(M, Z) && v === E.AEg.FULL_SCREEN && O(v)();
+            null != M && !(0, f.rB)(M, Z) && v === E.AEg.FULL_SCREEN && P(v)();
         };
         return (
             Z.addEventListener(f.NO, e),
@@ -92,7 +92,7 @@ function I(e) {
                 Z.removeEventListener(f.NO, e);
             }
         );
-    }, [Z, v, O, M]),
+    }, [Z, v, P, M]),
     s.useEffect(
         () => (
             m.default.track(E.rMx.VIDEO_LAYOUT_TOGGLED, {
@@ -117,7 +117,7 @@ function I(e) {
               node: M,
               guestWindow: u,
               className: g.rightTrayIcon,
-              onClick: O(v)
+              onClick: P(v)
           })
         : null;
 }

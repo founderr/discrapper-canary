@@ -34,15 +34,15 @@ function Z(e) {
         M = (0, m.KF)(t.id),
         b = (0, m.g5)(M),
         R = M !== m.jy.CAN_LAUNCH || Z,
-        { isHovered: L, setIsHovered: j, onMouseEnter: O, onMouseLeave: P } = (0, T.Z)(200, 300),
+        { isHovered: L, setIsHovered: j, onMouseEnter: P, onMouseLeave: O } = (0, T.Z)(200, 300),
         y = (0, h.a)(),
         D = (0, d.Z)({ channelId: t.id }),
-        k = !R,
-        U = s.useCallback(
+        U = !R,
+        k = s.useCallback(
             (e) => {
-                'focus' !== e.type && O();
+                'focus' !== e.type && P();
             },
-            [O]
+            [P]
         ),
         w = (0, o.O)(),
         B = (0, c.bp)() === v.IlC.POPOUT,
@@ -84,13 +84,13 @@ function Z(e) {
                     },
                     renderPopout: (e) => {
                         let { closePopout: n, setPopoutRef: s } = e;
-                        return k
+                        return U
                             ? (0, i.jsx)(_.m, {
                                   ref: s,
                                   channel: t,
                                   closePopout: n,
-                                  onMouseEnter: O,
-                                  onMouseLeave: P,
+                                  onMouseEnter: P,
+                                  onMouseLeave: O,
                                   isHovered: L,
                                   onClick: () => a(S.L.UNKNOWN)
                               })
@@ -110,14 +110,14 @@ function Z(e) {
                                             children: (0, i.jsx)(x.Z, {
                                                 disabled: R,
                                                 'aria-label': b,
-                                                label: k ? void 0 : b,
+                                                label: U ? void 0 : b,
                                                 isActivityActive: D || L,
                                                 className: A.controlButton,
                                                 onClick: () => {
                                                     V(), (s === l.z.ACTIVITIES_MINI_SHELF_SPARKLES || s === l.z.ACTIVITY_GDM_ROCKET_SPARKLE || s === l.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES || s === l.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES || s === l.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP) && a(S.L.TAKE_ACTION);
                                                 },
-                                                onMouseEnter: U,
-                                                onMouseLeave: P
+                                                onMouseEnter: k,
+                                                onMouseLeave: O
                                             })
                                         })
                                 }),

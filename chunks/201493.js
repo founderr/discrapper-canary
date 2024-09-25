@@ -55,8 +55,8 @@ t.Z = (e) => {
     let L = s.useMemo(() => (null != Z ? (0, C.v)(Object.values(Z), A) : null), [Z, A]),
         {
             mostRecentQuery: j,
-            searchFetching: O,
-            searchResults: P
+            searchFetching: P,
+            searchResults: O
         } = (0, a.cj)([p.Z], () => {
             let { mostRecentQuery: e, fetching: t } = p.Z.getSearchState(S.id);
             return {
@@ -66,8 +66,8 @@ t.Z = (e) => {
             };
         }),
         [y, D] = s.useState(j),
-        k = '' !== j,
-        { showHubEventsList: U } = c.Z.useExperiment(
+        U = '' !== j,
+        { showHubEventsList: k } = c.Z.useExperiment(
             {
                 guildId: null !== (t = N.id) && void 0 !== t ? t : '',
                 location: '6f7fb0_1'
@@ -75,7 +75,7 @@ t.Z = (e) => {
             { autoTrackExposure: !1 }
         );
     s.useEffect(() => {
-        m.c$(S.id), m.YZ(S.id), U && h.c(S.id), D(j);
+        m.c$(S.id), m.YZ(S.id), k && h.c(S.id), D(j);
     }, [S.id]),
         s.useEffect(() => {
             d.default.track(x.rMx.GUILD_DIRECTORY_CHANNEL_VIEWED, {
@@ -111,7 +111,7 @@ t.Z = (e) => {
         H = () => {
             D(''), m.So(S.id);
         };
-    return k
+    return U
         ? (0, i.jsx)(I.Z, {
               searchQuery: y,
               setSearchQuery: D,
@@ -119,8 +119,8 @@ t.Z = (e) => {
               handleSearchKeyPress: B,
               handleClearSearch: H,
               handleCreateOrAddGuild: w,
-              searchResults: P,
-              searchFetching: O
+              searchResults: O,
+              searchFetching: P
           })
         : null == L && null == A
           ? (0, i.jsx)('div', {

@@ -35,24 +35,24 @@ var s = n(120356),
     R = n(613548),
     L = n(221888),
     j = n(339340),
-    O = n(354459),
-    P = n(981631),
+    P = n(354459),
+    O = n(981631),
     y = n(231338),
     D = n(689938),
-    k = n(652807),
-    U = n(554034);
+    U = n(652807),
+    k = n(554034);
 function w(e) {
     let { focusedParticipant: t, channel: n } = e,
         s = (0, c.bp)(),
         a = (0, l.e7)([Z.Z], () => Z.Z.getLayout(n.id, s));
     return (0, i.jsx)(A.Z, {
         children: (0, i.jsx)(L.Z, {
-            className: k.participants,
+            className: U.participants,
             participant: t,
             maxVisibleUsers: 5,
             guildId: n.getGuildId(),
             channelId: n.id,
-            disableInteraction: s === P.IlC.POPOUT || a === P.AEg.FULL_SCREEN
+            disableInteraction: s === O.IlC.POPOUT || a === O.AEg.FULL_SCREEN
         })
     });
 }
@@ -64,13 +64,13 @@ function B(e) {
         : (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsx)(o.Z, {
-                      className: k.avatar,
+                      className: U.avatar,
                       size: r.AvatarSizes.SIZE_24,
                       user: t,
                       animate: !1
                   }),
                   (0, i.jsx)(r.Text, {
-                      className: k.playingText,
+                      className: U.playingText,
                       variant: 'text-md/medium',
                       color: a,
                       children: l
@@ -85,17 +85,17 @@ function H(e) {
         o = (0, f.qY)(a.id),
         c = null != o ? (0, E.DK)(o) : null,
         d = null != o;
-    if ((null == s ? void 0 : s.type) === O.fO.ACTIVITY)
+    if ((null == s ? void 0 : s.type) === P.fO.ACTIVITY)
         null != n &&
             (t = (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsx)(C.ZP.Divider, { className: k.divider }),
+                    (0, i.jsx)(C.ZP.Divider, { className: U.divider }),
                     (0, i.jsx)(_.Z, {
                         game: n,
-                        className: k.activityIcon
+                        className: U.activityIcon
                     }),
                     (0, i.jsx)(r.Text, {
-                        className: k.playingText,
+                        className: U.playingText,
                         variant: 'text-md/normal',
                         color: 'none',
                         children: (0, u.Z)(n.name)
@@ -107,12 +107,12 @@ function H(e) {
                         })
                 ]
             }));
-    else if ((null == s ? void 0 : s.type) === O.fO.STREAM) {
+    else if ((null == s ? void 0 : s.type) === P.fO.STREAM) {
         let e = s.user,
             n = s.stream;
         t = (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(C.ZP.Divider, { className: k.divider }),
+                (0, i.jsx)(C.ZP.Divider, { className: U.divider }),
                 (0, i.jsx)(B, {
                     user: e,
                     channel: a,
@@ -133,7 +133,7 @@ function H(e) {
                 recurrenceId: c
             }));
     return (0, i.jsx)('div', {
-        className: k.container,
+        className: U.container,
         children: t
     });
 }
@@ -149,7 +149,7 @@ function G(e) {
         ),
         E = (0, m.ZP)(t),
         g = (0, p.KS)(t),
-        [N] = (0, d.Z)((null == f ? void 0 : f.type) === O.fO.ACTIVITY ? [f.id] : []),
+        [N] = (0, d.Z)((null == f ? void 0 : f.type) === P.fO.ACTIVITY ? [f.id] : []),
         A = D.Z.Messages.VOICE_CHANNEL;
     t.isDM() ? (A = D.Z.Messages.DM) : t.isGroupDM() && (A = D.Z.Messages.GROUP_DM);
     let b = (0, l.e7)([h.Z], () => h.Z.getChannelStatus(t)),
@@ -164,19 +164,19 @@ function G(e) {
                   children: (e) =>
                       (0, i.jsxs)(r.Clickable, {
                           ...e,
-                          className: a()(k.channelStatusClickable, { [k.hoverable]: w }),
+                          className: a()(U.channelStatusClickable, { [U.hoverable]: w }),
                           onClick: w ? G : void 0,
                           children: [
                               (0, i.jsx)(r.Text, {
                                   variant: 'text-xs/normal',
-                                  className: a()(k.channelStatus, U.markup, { [k.hoverable]: w }),
+                                  className: a()(U.channelStatus, k.markup, { [U.hoverable]: w }),
                                   children: x.Z.parseVoiceChannelStatus(b, !0, { channelId: t.id })
                               }),
                               w &&
                                   (0, i.jsx)(r.PencilIcon, {
                                       size: 'custom',
                                       color: 'currentColor',
-                                      className: a()(k.pencilIcon, k.hoverable),
+                                      className: a()(U.pencilIcon, U.hoverable),
                                       width: 14,
                                       height: 14
                                   })
@@ -202,7 +202,7 @@ function G(e) {
         location: 'ChannelCallHeader'
     });
     return (0, i.jsxs)('div', {
-        className: k.subtitleContainer,
+        className: U.subtitleContainer,
         children: [
             (0, i.jsx)(r.ThemeProvider, {
                 theme: y.BR.DARK,
@@ -213,7 +213,7 @@ function G(e) {
                         className: e,
                         childrenBottom: B,
                         toolbar: (0, i.jsx)(R.Z, {
-                            inPopout: o === P.IlC.POPOUT,
+                            inPopout: o === O.IlC.POPOUT,
                             channel: t,
                             appContext: o,
                             inCall: c,
@@ -241,7 +241,7 @@ function G(e) {
                                                         size: 'xs',
                                                         'aria-label': D.Z.Messages.E2EE_CALL_VERIFIED_A11Y,
                                                         color: r.tokens.colors.INTERACTIVE_NORMAL,
-                                                        className: k.secureFramesIcon
+                                                        className: U.secureFramesIcon
                                                     })
                                             })
                                     ]

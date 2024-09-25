@@ -79,12 +79,12 @@ function j(e) {
         a = (0, c.e7)([C.Z], () => (null != t ? C.Z.getGuild(t.getGuildId()) : null), [t]),
         h = null != a && N.default.extractTimestamp(a.id) < Date.now() - Z._8R,
         T = (0, c.e7)([g.default], () => (null == a ? void 0 : a.ownerId) === g.default.getId(), [a]),
-        { canInvite: j, canManageGuild: O, canMessage: P } = (0, _.TE)(t, a),
+        { canInvite: j, canManageGuild: P, canMessage: O } = (0, _.TE)(t, a),
         y = (0, c.e7)([I.default], () => {
             var e, t;
             return (null === (e = I.default.getCurrentUser()) || void 0 === e ? void 0 : e.desktop) === !0 || (null === (t = I.default.getCurrentUser()) || void 0 === t ? void 0 : t.mobile) === !0;
         }),
-        { guildPopulated: D, guildMessaged: k, guildPersonalized: U } = (0, _.h_)(a),
+        { guildPopulated: D, guildMessaged: U, guildPersonalized: k } = (0, _.h_)(a),
         {
             handleInvite: w,
             handleMessage: B,
@@ -165,7 +165,7 @@ function j(e) {
                 }, [e])
             };
         })(a),
-        F = !(y || D || k || U),
+        F = !(y || D || U || k),
         { titleAnimatedStyle: W, opacities: z } = (function (e) {
             let t = (0, r.Z)(() => new o.Z.Value(0)),
                 n = (0, r.Z)(() => new o.Z.Value(0)),
@@ -253,7 +253,7 @@ function j(e) {
                     'invite'
                 )
             ),
-        O &&
+        P &&
             K.push(
                 (0, i.jsx)(
                     o.Z.div,
@@ -263,14 +263,14 @@ function j(e) {
                         children: (0, i.jsx)(L, {
                             iconUrl: n(753033),
                             header: b.Z.Messages.WELCOME_CTA_PERSONALIZE_TITLE,
-                            completed: U,
+                            completed: k,
                             onClick: H
                         })
                     },
                     'customize'
                 )
             ),
-        P &&
+        O &&
             K.push(
                 (0, i.jsx)(
                     o.Z.div,
@@ -280,7 +280,7 @@ function j(e) {
                         children: (0, i.jsx)(L, {
                             iconUrl: n(15717),
                             header: b.Z.Messages.WELCOME_CTA_MESSAGE_TITLE,
-                            completed: k,
+                            completed: U,
                             onClick: B
                         })
                     },

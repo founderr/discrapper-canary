@@ -37,12 +37,12 @@ var i,
     R = n(243778),
     L = n(258609),
     j = n(446226),
-    O = n(569545),
-    P = n(74299),
+    P = n(569545),
+    O = n(74299),
     y = n(803647),
     D = n(554747),
-    k = n(95764),
-    U = n(459502),
+    U = n(95764),
+    k = n(459502),
     w = n(386542),
     B = n(746599),
     H = n(455961),
@@ -254,8 +254,8 @@ let eN = l.memo(function (e) {
         T() !== x && u(!0);
     }, [x, T]);
     let A = l.useCallback(() => {
-            if (null != p) (0, g.g)((0, O.V9)(p));
-            else for (let e of C) (0, g.g)((0, O.V9)(e));
+            if (null != p) (0, g.g)((0, P.V9)(p));
+            else for (let e of C) (0, g.g)((0, P.V9)(e));
         }, [C, p]),
         Z = (e, t) => {
             let l = {
@@ -291,7 +291,7 @@ let eN = l.memo(function (e) {
                         onPopoutClick: C.length > 0 ? t : null
                     });
                 case 'EVENT':
-                    return (0, a.jsx)(k.Z, {
+                    return (0, a.jsx)(U.Z, {
                         channelId: s.id,
                         onClick: () => {
                             E.default.disconnect(), null == i || i();
@@ -381,11 +381,11 @@ t.ZP = function (e) {
         { cameraUnavailable: d, enabled: h } = (0, er.Z)(),
         p = (0, ec.Z)(n),
         { suppress: f, selfMute: E, mute: g } = (0, eu.Z)(n),
-        { canGoLive: I } = (0, m.cj)([et.Z], () => ({ canGoLive: (0, P.Z)(et.Z) })),
+        { canGoLive: I } = (0, m.cj)([et.Z], () => ({ canGoLive: (0, O.Z)(et.Z) })),
         x = (0, j.Z)(),
         N = (0, m.e7)([L.Z], () => null != L.Z.getAwaitingRemoteSessionInfo()),
         R = null != x,
-        O = (0, m.e7)([en.Z], () => {
+        P = (0, m.e7)([en.Z], () => {
             var e;
             return (null !== (e = null == x ? void 0 : x.channelId) && void 0 !== e ? e : en.Z.getVoiceChannelId()) === n.id;
         }),
@@ -394,9 +394,9 @@ t.ZP = function (e) {
             let e = T.ZP.getSelfEmbeddedActivityForChannel(n.id);
             return null != e ? e.applicationId : null;
         }),
-        { reachedLimit: k, limit: w } = (0, eo.Z)(n),
+        { reachedLimit: U, limit: w } = (0, eo.Z)(n),
         { analyticsLocations: B } = (0, S.ZP)(v.Z.VOICE_CONTROL_TRAY);
-    if (!O)
+    if (!P)
         return (0, a.jsx)(S.Gt, {
             value: B,
             children: (0, a.jsx)(eA, {
@@ -421,7 +421,7 @@ t.ZP = function (e) {
             children: [
                 (0, a.jsx)('div', {
                     className: eT.eventPromptsContainer,
-                    children: (0, a.jsx)(U.Z, { channelId: n.id })
+                    children: (0, a.jsx)(k.Z, { channelId: n.id })
                 }),
                 (0, a.jsxs)('div', {
                     className: o()(eT.wrapper, i),
@@ -446,7 +446,7 @@ t.ZP = function (e) {
                                         cameraUnavailable: d,
                                         onChange: ex,
                                         onCameraUnavailable: ep.Z,
-                                        channelLimitReached: k,
+                                        channelLimitReached: U,
                                         channelLimit: w,
                                         popoutOpen: i,
                                         onPopoutClick: n

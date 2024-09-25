@@ -139,7 +139,7 @@ class b extends (i = a.Component) {
             : null;
     }
     renderIcons() {
-        let { mute: e, localMute: t, localVideoDisabled: n, serverMute: i, deaf: a, serverDeaf: l, collapsed: c, video: d, isStreaming: m, disabled: p, isWatching: _, iconClassName: f, embeddedApplication: I, otherClientSessionType: A, voicePlatform: Z, hangStatusActivity: b, showHangStatus: j, isSelf: O, application: P, guildId: y, channelId: D, user: k, handleHoverHangStatus: U, handleHoverIcons: w, disconnected: B } = this.props;
+        let { mute: e, localMute: t, localVideoDisabled: n, serverMute: i, deaf: a, serverDeaf: l, collapsed: c, video: d, isStreaming: m, disabled: p, isWatching: _, iconClassName: f, embeddedApplication: I, otherClientSessionType: A, voicePlatform: Z, hangStatusActivity: b, showHangStatus: j, isSelf: P, application: O, guildId: y, channelId: D, user: U, handleHoverHangStatus: k, handleHoverIcons: w, disconnected: B } = this.props;
         if (c || p) return null;
         let H = [],
             G = (0, s.jsx)(L, {
@@ -263,7 +263,7 @@ class b extends (i = a.Component) {
                           'watch'
                       )
                   );
-        let V = null != P && !(0, C.yE)(P.flags, T.udG.EMBEDDED),
+        let V = null != O && !(0, C.yE)(O.flags, T.udG.EMBEDDED),
             F = null == b && V;
         return 0 !== H.length || null != G || j || F
             ? (0, s.jsxs)('div', {
@@ -278,24 +278,24 @@ class b extends (i = a.Component) {
                       j || F
                           ? (0, s.jsx)('div', {
                                 className: N.iconGroup,
-                                onMouseEnter: () => (null == U ? void 0 : U(!0)),
-                                onMouseLeave: () => (null == U ? void 0 : U(!1)),
+                                onMouseEnter: () => (null == k ? void 0 : k(!0)),
+                                onMouseLeave: () => (null == k ? void 0 : k(!1)),
                                 children: F
                                     ? (0, s.jsx)(
                                           R,
                                           {
-                                              application: P,
+                                              application: O,
                                               iconClassName: f,
                                               guildId: y,
                                               channelId: D,
-                                              userId: k.id
+                                              userId: U.id
                                           },
-                                          ''.concat(k.id, '-game')
+                                          ''.concat(U.id, '-game')
                                       )
                                     : (0, s.jsx)(M, {
                                           hangStatusActivity: b,
                                           iconClassName: f,
-                                          isSelf: O
+                                          isSelf: P
                                       })
                             })
                           : null

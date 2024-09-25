@@ -33,12 +33,12 @@ t.Z = function (e, t, n) {
         (R.current = n),
         i.useCallback(
             (n) => {
-                var i, L, j, O, P;
+                var i, L, j, P, O;
                 if (!R.current || n.target !== n.currentTarget) return;
                 let y = !n.altKey && !n.ctrlKey && !n.metaKey && !n.shiftKey,
                     D = n.altKey && !(n.ctrlKey || n.metaKey || n.shiftKey),
-                    k = n.ctrlKey && !(n.altKey || n.metaKey || n.shiftKey),
-                    U = n.metaKey && !(n.altKey || n.ctrlKey || n.shiftKey),
+                    U = n.ctrlKey && !(n.altKey || n.metaKey || n.shiftKey),
+                    k = n.metaKey && !(n.altKey || n.ctrlKey || n.shiftKey),
                     w = n.shiftKey && !(n.altKey || n.ctrlKey || n.metaKey),
                     B = g.Z.getMessage(t, e),
                     H = p.Z.getChannel(t);
@@ -49,7 +49,7 @@ t.Z = function (e, t, n) {
                         y && (b(H) || B.canDeleteOwnMessage(G)) && (n.preventDefault(), (0, Z.$Z)(H, B, n));
                         break;
                     case 'c':
-                        ((0, x.isMac)() ? U : k) && I.wS && (n.preventDefault(), (0, I.JG)(B.content));
+                        ((0, x.isMac)() ? k : U) && I.wS && (n.preventDefault(), (0, I.JG)(B.content));
                         break;
                     case 'e':
                         if (y) {
@@ -58,7 +58,7 @@ t.Z = function (e, t, n) {
                         break;
                     case 'p':
                         if (y || w) {
-                            if (((O = H), (P = B), !O.isSystemDM() && !(0, N.Z)(P) && (b(O) || O.isPrivate()))) n.preventDefault(), (0, Z.rY)(H, B, n);
+                            if (((P = H), (O = B), !P.isSystemDM() && !(0, N.Z)(O) && (b(P) || P.isPrivate()))) n.preventDefault(), (0, Z.rY)(H, B, n);
                         }
                         break;
                     case '+':

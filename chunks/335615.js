@@ -35,12 +35,12 @@ var i = n(735250),
     R = n(313201),
     L = n(623624),
     j = n(518738),
-    O = n(155409),
-    P = n(184301),
+    P = n(155409),
+    O = n(184301),
     y = n(347475),
     D = n(439170),
-    k = n(430824),
-    U = n(111583),
+    U = n(430824),
+    k = n(111583),
     w = n(594174),
     B = n(585483),
     H = n(823379),
@@ -85,7 +85,7 @@ class J extends s.Component {
             C = null != f ? new Date(f) : null;
         return (0, i.jsx)(p.Popout, {
             preload: () =>
-                (0, P.Z)(a, {
+                (0, O.Z)(a, {
                     channelId: u.id,
                     guildId: h
                 }),
@@ -173,13 +173,13 @@ let Q = s.memo((e) => {
         let { colorRoleId: t, ...n } = e,
             { channel: s, user: a, index: l } = e,
             r = (0, c.JA)(''.concat(l)),
-            o = (0, h.e7)([U.Z], () => U.Z.isTyping(s.id, a.id)),
+            o = (0, h.e7)([k.Z], () => k.Z.isTyping(s.id, a.id)),
             u = (0, h.e7)([w.default], () => w.default.getCurrentUser()),
             d = (0, h.e7)(
-                [k.Z],
+                [U.Z],
                 () => {
                     var e;
-                    return null != t ? (null === (e = k.Z.getRole(s.guild_id, t)) || void 0 === e ? void 0 : e.name) : void 0;
+                    return null != t ? (null === (e = U.Z.getRole(s.guild_id, t)) || void 0 === e ? void 0 : e.name) : void 0;
                 },
                 [s, t]
             );
@@ -342,7 +342,7 @@ class et extends s.Component {
                       })
                     : 0 === t
                       ? (0, i.jsx)(
-                            O.Z,
+                            P.Z,
                             {
                                 tutorialId: 'whos-online',
                                 position: 'left',
