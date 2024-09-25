@@ -8,40 +8,31 @@ t(470079);
 var r = t(481060),
     s = t(239091),
     o = t(299206),
-    l = t(326103),
-    i = t(689938);
+    i = t(326103),
+    l = t(689938);
 function c(e) {
-    let { applicationId: n, className: t } = e,
-        c = (0, l.v)('GameProfileOverflowMenu'),
-        d = (0, o.Z)({
+    let { applicationId: n, className: c } = e,
+        d = (0, i.v)('GameProfileOverflowMenu'),
+        u = (0, o.Z)({
             id: n,
-            label: i.Z.Messages.COPY_ID_APPLICATION
+            label: l.Z.Messages.COPY_ID_APPLICATION
         }),
-        u = () => {},
-        _ = c
-            ? (0, a.jsxs)(r.MenuItem, {
+        _ = d
+            ? (0, a.jsx)(r.MenuItem, {
                   id: 'game-profile-something-wrong',
-                  label: i.Z.Messages.GAME_PROFILE_SOMETHING_WENT_WRONG,
-                  children: [
-                      (0, a.jsx)(r.MenuItem, {
-                          id: 'game-profile-wrong-name',
-                          label: i.Z.Messages.GAME_PROFILE_WRONG_GAME,
-                          action: u
-                      }),
-                      (0, a.jsx)(r.MenuItem, {
-                          id: 'game-profile-outdated-data',
-                          label: i.Z.Messages.GAME_PROFILE_OUTDATED_DATA,
-                          action: u
-                      }),
-                      (0, a.jsx)(r.MenuItem, {
-                          id: 'game-profile-other-problem',
-                          label: i.Z.Messages.GAME_PROFILE_OTHER_PROBLEM,
-                          action: u
+                  label: l.Z.Messages.GAME_PROFILE_SOMETHING_WENT_WRONG,
+                  action: () =>
+                      (0, r.openModalLazy)(async () => {
+                          let { GameProfileFeedbackModal: e } = await t.e('1011').then(t.bind(t, 943350));
+                          return (t) =>
+                              (0, a.jsx)(e, {
+                                  applicationId: n,
+                                  ...t
+                              });
                       })
-                  ]
               })
             : null;
-    return null == d && null == _
+    return null == u && null == _
         ? null
         : (0, a.jsx)(r.Popout, {
               align: 'top',
@@ -54,19 +45,19 @@ function c(e) {
                       onClose: () => {
                           (0, s.Zy)(), n();
                       },
-                      'aria-label': i.Z.Messages.GAME_PROFILE_VIEW_MORE,
+                      'aria-label': l.Z.Messages.GAME_PROFILE_VIEW_MORE,
                       onSelect: () => {},
                       children: (0, a.jsxs)(a.Fragment, {
-                          children: [(0, a.jsx)(r.MenuGroup, { children: d }), (0, a.jsx)(r.MenuGroup, { children: _ })]
+                          children: [(0, a.jsx)(r.MenuGroup, { children: u }), (0, a.jsx)(r.MenuGroup, { children: _ })]
                       })
                   });
               },
               children: (e) =>
                   (0, a.jsx)(r.Tooltip, {
-                      text: i.Z.Messages.MORE,
+                      text: l.Z.Messages.MORE,
                       children: (n) =>
                           (0, a.jsx)(r.Clickable, {
-                              className: t,
+                              className: c,
                               ...n,
                               ...e,
                               children: (0, a.jsx)(r.MoreHorizontalIcon, { size: 'xs' })
