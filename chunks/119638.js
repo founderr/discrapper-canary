@@ -1,14 +1,14 @@
 n.d(t, {
     m: function () {
-        return p;
+        return I;
     }
 });
 var r,
     i,
     a = n(735250),
-    s = n(470079),
-    o = n(120356),
-    l = n.n(o),
+    o = n(470079),
+    s = n(120356),
+    l = n.n(s),
     u = n(507274),
     c = n(770102),
     d = n(326452),
@@ -27,7 +27,15 @@ function f(e, t, n) {
         e
     );
 }
-class h extends (r = s.PureComponent) {
+let h = () => (0, a.jsx)(c.$, { className: E.divider }),
+    p = (e) => {
+        let { children: t } = e;
+        return (0, a.jsx)('div', {
+            className: E.popoutListEmpty,
+            children: t
+        });
+    };
+class m extends (r = o.PureComponent) {
     render() {
         let { className: e, ...t } = this.props;
         return (0, a.jsx)(d.E, {
@@ -36,8 +44,8 @@ class h extends (r = s.PureComponent) {
         });
     }
 }
-f(h, 'defaultProps', { autoFocus: !0 });
-class p extends (i = s.PureComponent) {
+f(m, 'defaultProps', { autoFocus: !0 });
+class I extends (i = o.PureComponent) {
     render() {
         let { className: e, children: t } = this.props;
         return (0, a.jsx)(u.V, {
@@ -47,13 +55,4 @@ class p extends (i = s.PureComponent) {
         });
     }
 }
-f(p, 'SearchBar', h),
-    f(p, 'Item', _.Z),
-    f(p, 'Divider', () => (0, a.jsx)(c.$, { className: E.divider })),
-    f(p, 'Empty', (e) => {
-        let { children: t } = e;
-        return (0, a.jsx)('div', {
-            className: E.popoutListEmpty,
-            children: t
-        });
-    });
+f(I, 'SearchBar', m), f(I, 'Item', _.Z), f(I, 'Divider', h), f(I, 'Empty', p);

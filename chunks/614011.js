@@ -1,50 +1,51 @@
 n.d(t, {
     O: function () {
-        return l;
+        return c;
     },
     W: function () {
-        return u;
+        return d;
     }
-}),
-    n(47120);
-var r = n(735250),
-    i = n(470079),
-    a = n(134432),
+});
+var r = n(47120);
+var i = n(735250),
+    a = n(470079),
+    o = n(134432),
     s = n(999534),
-    o = n(242493);
-function l() {
-    (0, a.po)(''.concat(o, '?query=true'));
+    l = n(242493);
+let u = 3000;
+function c() {
+    (0, o.po)(''.concat(l, '?query=true'));
 }
-function u(e) {
+function d(e) {
     let { onPlayed: t, played: n } = e,
-        [a, l] = i.useState(n),
-        u = i.useRef(0);
+        [r, o] = a.useState(n),
+        c = a.useRef(0);
     if (
-        (i.useEffect(
+        (a.useEffect(
             () => (
-                clearTimeout(u.current),
-                (u.current = setTimeout(() => {
+                clearTimeout(c.current),
+                (c.current = setTimeout(() => {
                     t();
-                }, 3000)),
+                }, u)),
                 () => {
-                    clearTimeout(u.current), t();
+                    clearTimeout(c.current), t();
                 }
             ),
             [t]
         ),
-        i.useEffect(() => {
-            l((e) => !e);
+        a.useEffect(() => {
+            o((e) => !e);
         }, [n]),
         n)
     )
         return null;
-    let c = ''.concat(o, '?query=').concat(a);
-    return (0, r.jsx)('div', {
+    let d = ''.concat(l, '?query=').concat(r);
+    return (0, i.jsx)('div', {
         className: s.demoEffectOverlay,
-        children: (0, r.jsx)('img', {
+        children: (0, i.jsx)('img', {
             alt: '',
             className: s.demoEffectImg,
-            src: c
+            src: d
         })
     });
 }

@@ -9,16 +9,16 @@ n.d(t, {
         return T;
     },
     P6: function () {
-        return L;
+        return b;
     },
     S2: function () {
-        return m;
+        return I;
     },
     UZ: function () {
-        return N;
+        return v;
     },
     V3: function () {
-        return g;
+        return S;
     },
     W3: function () {
         return y;
@@ -27,29 +27,29 @@ n.d(t, {
         return p;
     },
     b9: function () {
-        return v;
+        return R;
     },
     cV: function () {
-        return O;
+        return N;
     },
     ol: function () {
-        return S;
+        return g;
     },
     si: function () {
         return C;
     },
     ss: function () {
-        return I;
+        return m;
     },
     xn: function () {
-        return R;
+        return O;
     }
 });
 var r = n(544891),
     i = n(433517),
     a = n(780384),
-    s = n(570140),
-    o = n(703656),
+    o = n(570140),
+    s = n(703656),
     l = n(626135),
     u = n(768581),
     c = n(546796),
@@ -58,16 +58,15 @@ var r = n(544891),
     E = n(792101),
     f = n(689938);
 function h() {
-    s.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_INIT' });
+    o.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_INIT' });
 }
 function p() {
-    s.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_CLOSE' });
+    o.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_CLOSE' });
 }
-function I(e, t) {
+function m(e, t) {
     let n = t ? f.Z.Messages.DELETE_ACCOUNT : f.Z.Messages.DISABLE_ACCOUNT,
-        i = t ? _.ANM.DELETE_ACCOUNT : _.ANM.DISABLE_ACCOUNT;
-    return (0, c.Z)(
-        (t) =>
+        i = t ? _.ANM.DELETE_ACCOUNT : _.ANM.DISABLE_ACCOUNT,
+        a = (t) =>
             r.tn.post({
                 url: i,
                 body: {
@@ -75,16 +74,15 @@ function I(e, t) {
                     ...t
                 },
                 oldFormErrors: !0
-            }),
-        {
-            modalProps: { title: n },
-            checkEnabled: !1
-        }
-    ).then(() => {
-        d.Z.logoutInternal(), (0, o.uL)(_.Z5c.DEFAULT_LOGGED_OUT);
+            });
+    return (0, c.Z)(a, {
+        modalProps: { title: n },
+        checkEnabled: !1
+    }).then(() => {
+        d.Z.logoutInternal(), (0, s.uL)(_.Z5c.DEFAULT_LOGGED_OUT);
     });
 }
-async function m(e) {
+async function I(e) {
     let t = await r.tn.patch({
             url: _.ANM.ME,
             oldFormErrors: !0,
@@ -94,20 +92,20 @@ async function m(e) {
     if (n.token) {
         let t = n.token;
         delete n.token,
-            s.Z.dispatch({
+            o.Z.dispatch({
                 type: 'UPDATE_TOKEN',
                 token: t,
                 userId: n.id
             }),
             (null == e ? void 0 : e.password) != null &&
                 (null == e ? void 0 : e.new_password) != null &&
-                s.Z.dispatch({
+                o.Z.dispatch({
                     type: 'PASSWORD_UPDATED',
                     userId: n.id
                 });
     }
     return (
-        s.Z.dispatch({
+        o.Z.dispatch({
             type: 'CURRENT_USER_UPDATE',
             user: n
         }),
@@ -115,35 +113,35 @@ async function m(e) {
     );
 }
 function T(e) {
-    let { username: t, discriminator: n, email: r, emailToken: a, password: o, avatar: d, avatarDecoration: h, newPassword: p, globalName: I } = e;
+    let { username: t, discriminator: n, email: r, emailToken: a, password: s, avatar: d, avatarDecoration: h, newPassword: p, globalName: m } = e;
     return (
-        s.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_SUBMIT' }),
+        o.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_SUBMIT' }),
         (0, c.Z)(
             (e) => {
-                let s = {
+                let o = {
                     username: t,
                     email: r,
                     email_token: a,
-                    password: o,
+                    password: s,
                     avatar: d,
                     discriminator: n,
-                    global_name: I,
+                    global_name: m,
                     new_password: p,
                     ...e
                 };
-                null === h && (s.avatar_decoration_id = null), null != h && ((s.avatar_decoration_id = h.id), (s.avatar_decoration_sku_id = h.skuId));
+                null === h && (o.avatar_decoration_id = null), null != h && ((o.avatar_decoration_id = h.id), (o.avatar_decoration_sku_id = h.skuId));
                 let l = i.K.get(_.JkL),
                     u = (0, E.xJ)();
-                null != u && null != l && ((s.push_provider = u), (s.push_token = l));
+                null != u && null != l && ((o.push_provider = u), (o.push_token = l));
                 let c = i.K.get(_.scU);
-                return null != E.mv && null != c && ((s.push_voip_provider = E.mv), (s.push_voip_token = c)), m(s);
+                return null != E.mv && null != c && ((o.push_voip_provider = E.mv), (o.push_voip_token = c)), I(o);
             },
             {
                 checkEnabled: !1,
                 modalProps: { title: f.Z.Messages.TWO_FA_CHANGE_ACCOUNT },
                 hooks: {
                     onEarlyClose: () =>
-                        s.Z.dispatch({
+                        o.Z.dispatch({
                             type: 'USER_SETTINGS_ACCOUNT_SUBMIT_FAILURE',
                             errors: {}
                         })
@@ -152,10 +150,10 @@ function T(e) {
         ).then(
             (e) => {
                 let t = e.body;
-                return l.default.track(_.rMx.USER_AVATAR_UPDATED, { animated: (0, u.xR)(t.avatar) }), s.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS' }), e;
+                return l.default.track(_.rMx.USER_AVATAR_UPDATED, { animated: (0, u.xR)(t.avatar) }), o.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS' }), e;
             },
             (e) => (
-                s.Z.dispatch({
+                o.Z.dispatch({
                     type: 'USER_SETTINGS_ACCOUNT_SUBMIT_FAILURE',
                     errors: e.body
                 }),
@@ -164,13 +162,13 @@ function T(e) {
         )
     );
 }
-function S() {
+function g() {
     return r.tn.get({
         url: _.ANM.USER_HARVEST,
         oldFormErrors: !0
     });
 }
-function g(e) {
+function S(e) {
     return r.tn.post({
         url: _.ANM.USER_HARVEST,
         body: { backends: e },
@@ -178,39 +176,39 @@ function g(e) {
     });
 }
 function A(e) {
-    s.Z.dispatch({
+    o.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR',
         avatar: e
     }),
         null == e ? a.uv.announce(f.Z.Messages.A11Y_ANNOUNCEMENT_AVATAR_NONE) : a.uv.announce(f.Z.Messages.A11Y_ANNOUNCEMENT_AVATAR_CHANGED);
 }
-function N(e) {
-    s.Z.dispatch({
+function v(e) {
+    o.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_GLOBAL_NAME',
         globalName: e
     });
 }
-function O(e) {
-    s.Z.dispatch({
+function N(e) {
+    o.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR_DECORATION',
         avatarDecoration: e
     });
 }
-function R(e) {
-    s.Z.dispatch({
+function O(e) {
+    o.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_PROFILE_EFFECT_ID',
         profileEffectId: e
     });
 }
-function v() {
-    s.Z.dispatch({ type: 'USER_SETTINGS_CLEAR_ERRORS' });
+function R() {
+    o.Z.dispatch({ type: 'USER_SETTINGS_CLEAR_ERRORS' });
 }
 function C() {
-    s.Z.dispatch({ type: 'USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES' });
+    o.Z.dispatch({ type: 'USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES' });
 }
 function y() {
-    s.Z.dispatch({ type: 'USER_SETTINGS_RESET_ALL_PENDING' });
+    o.Z.dispatch({ type: 'USER_SETTINGS_RESET_ALL_PENDING' });
 }
-function L() {
-    s.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM' });
+function b() {
+    o.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM' });
 }

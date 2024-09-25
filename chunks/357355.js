@@ -4,7 +4,18 @@ let a = {
     fetched: !1,
     affinities: []
 };
-class s extends r.ZP.Store {
+function o(e) {
+    let {} = e;
+    a.fetched = !0;
+}
+function s(e) {
+    let { res: t } = e;
+    a.affinities = t;
+}
+function l() {
+    (a.fetched = !1), (a.affinities = []);
+}
+class u extends r.ZP.Store {
     get hasFetched() {
         return a.fetched;
     }
@@ -12,16 +23,8 @@ class s extends r.ZP.Store {
         return a.affinities;
     }
 }
-t.Z = new s(i.Z, {
-    BILLING_NITRO_AFFINITY_FETCHED: function (e) {
-        let {} = e;
-        a.fetched = !0;
-    },
-    BILLING_NITRO_AFFINITY_FETCH_SUCCEEDED: function (e) {
-        let { res: t } = e;
-        a.affinities = t;
-    },
-    LOGOUT: function () {
-        (a.fetched = !1), (a.affinities = []);
-    }
+t.Z = new u(i.Z, {
+    BILLING_NITRO_AFFINITY_FETCHED: o,
+    BILLING_NITRO_AFFINITY_FETCH_SUCCEEDED: s,
+    LOGOUT: l
 });

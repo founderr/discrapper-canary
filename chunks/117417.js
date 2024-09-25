@@ -1,8 +1,10 @@
 var t = (e.exports = {});
 (t.isIE = function (e) {
-    var t;
     return (
-        (-1 !== (t = navigator.userAgent.toLowerCase()).indexOf('msie') || -1 !== t.indexOf('trident') || -1 !== t.indexOf(' edge/')) &&
+        !!(function e() {
+            var e = navigator.userAgent.toLowerCase();
+            return -1 !== e.indexOf('msie') || -1 !== e.indexOf('trident') || -1 !== e.indexOf(' edge/');
+        })() &&
         (!e ||
             e ===
                 (function () {

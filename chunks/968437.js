@@ -1,38 +1,42 @@
 n.d(t, {
     WD: function () {
-        return l;
+        return E;
     },
     nt: function () {
-        return o;
+        return _;
     }
 });
 var r = n(404759),
-    i = n.n(r);
-n(913527);
-var a = n(124368),
+    i = n.n(r),
+    a = n(913527);
+var o = n(124368),
     s = n(689938);
-function o() {
+let l = 60,
+    u = 1440,
+    c = 4320,
+    d = 10080;
+function _() {
     return [
         {
             label: s.Z.Messages.AUTO_ARCHIVE_DURATION_1_HOUR,
-            value: 60
+            value: l
         },
         {
             label: s.Z.Messages.AUTO_ARCHIVE_DURATION_24_HOURS,
-            value: 1440
+            value: u
         },
         {
             label: s.Z.Messages.AUTO_ARCHIVE_DURATION_3_DAYS,
-            value: 4320
+            value: c
         },
         {
             label: s.Z.Messages.AUTO_ARCHIVE_DURATION_1_WEEK,
-            value: 10080
+            value: d
         }
     ];
 }
-function l(e, t) {
+i()(() => _().map((e) => e.value));
+function E(e, t) {
     var n;
-    return null !== (n = null != t ? t : null == e ? void 0 : e.defaultAutoArchiveDuration) && void 0 !== n ? n : a.AX;
+    return null !== (n = null != t ? t : null == e ? void 0 : e.defaultAutoArchiveDuration) && void 0 !== n ? n : o.AX;
 }
-i()(() => o().map((e) => e.value));

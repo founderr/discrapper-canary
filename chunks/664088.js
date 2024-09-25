@@ -1,4 +1,4 @@
-e.exports = function (e) {
+function t(e) {
     return {
         name: 'SML (Standard ML)',
         aliases: ['ml'],
@@ -43,4 +43,5 @@ e.exports = function (e) {
             { begin: /[-=]>/ }
         ]
     };
-};
+}
+e.exports = t;

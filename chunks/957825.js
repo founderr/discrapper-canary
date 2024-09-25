@@ -1,10 +1,10 @@
-var r, i, a, s;
+var r, i;
 n.d(t, {
     CT: function () {
-        return o;
+        return a;
     },
     Om: function () {
-        return l;
+        return o;
     },
     X1: function () {
         return r;
@@ -13,10 +13,11 @@ n.d(t, {
         return i;
     }
 }),
-    ((a = r || (r = {})).EMOJI = 'emoji'),
-    (a.GIF = 'gif'),
-    (a.STICKER = 'sticker'),
-    (a.SOUNDBOARD = 'soundboard');
-let o = 'expression-picker-chat-input-button',
-    l = 498;
-((s = i || (i = {})).MIN = 'min'), (s.MAX = 'max');
+    !(function (e) {
+        (e.EMOJI = 'emoji'), (e.GIF = 'gif'), (e.STICKER = 'sticker'), (e.SOUNDBOARD = 'soundboard');
+    })(r || (r = {}));
+let a = 'expression-picker-chat-input-button',
+    o = 498;
+!(function (e) {
+    (e.MIN = 'min'), (e.MAX = 'max');
+})(i || (i = {}));

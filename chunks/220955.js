@@ -1,14 +1,14 @@
 var r = n(112419),
     i = n(675717),
     a = n(906024),
-    s = 0 / 0,
-    o = /^[-+]0x[0-9a-f]+$/i,
+    o = 0 / 0,
+    s = /^[-+]0x[0-9a-f]+$/i,
     l = /^0b[01]+$/i,
     u = /^0o[0-7]+$/i,
     c = parseInt;
-t.Z = function (e) {
+function d(e) {
     if ('number' == typeof e) return e;
-    if ((0, a.Z)(e)) return s;
+    if ((0, a.Z)(e)) return o;
     if ((0, i.Z)(e)) {
         var t = 'function' == typeof e.valueOf ? e.valueOf() : e;
         e = (0, i.Z)(t) ? t + '' : t;
@@ -16,5 +16,6 @@ t.Z = function (e) {
     if ('string' != typeof e) return 0 === e ? e : +e;
     e = (0, r.Z)(e);
     var n = l.test(e);
-    return n || u.test(e) ? c(e.slice(2), n ? 2 : 8) : o.test(e) ? s : +e;
-};
+    return n || u.test(e) ? c(e.slice(2), n ? 2 : 8) : s.test(e) ? o : +e;
+}
+t.Z = d;

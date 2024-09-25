@@ -1,60 +1,62 @@
 n.d(t, {
     Z: function () {
-        return d;
+        return _;
     }
 });
 var r = n(735250),
     i = n(470079),
     a = n(25209),
-    s = n(794295),
-    o = n(865427),
+    o = n(794295),
+    s = n(865427),
     l = n(853425),
     u = n(49012),
     c = n(773352);
-function d(e) {
+let d = 1024;
+function _(e) {
     return {
-        react(t, n, d) {
-            if (e.enableBuildOverrides && (0, o._G)(t.target)) return (0, r.jsx)(i.Fragment, { children: (0, r.jsx)(l.Z, { url: t.target }, t.target) }, d.key);
-            let _ = n(t.content, d),
-                E = 'string' == typeof t.title && 0 !== t.title.length ? t.title : (0, a.Rp)(t.content),
-                f = (null == e ? void 0 : e.mustConfirmExternalLink)
+        react(t, n, _) {
+            if (e.enableBuildOverrides && (0, s._G)(t.target)) return (0, r.jsx)(i.Fragment, { children: (0, r.jsx)(l.Z, { url: t.target }, t.target) }, _.key);
+            let E = n(t.content, _),
+                f = 'string' == typeof t.title && 0 !== t.title.length ? t.title : (0, a.Rp)(t.content),
+                h = () => (0, c.r)(t),
+                p = (null == e ? void 0 : e.mustConfirmExternalLink)
                     ? (e) => (
                           null == e || e.stopPropagation(),
                           null == e || e.preventDefault(),
                           (0, u.q)({
                               href: t.target,
                               shouldConfirm: !0,
-                              messageId: d.messageId,
-                              channelId: d.channelId
+                              messageId: _.messageId,
+                              channelId: _.channelId
                           }),
                           null
                       )
                     : void 0;
-            if (d.previewLinkTarget && !(0, c.r)(t)) {
+            if (_.previewLinkTarget && !(0, c.r)(t)) {
                 let e = '\n\n('.concat(t.target, ')');
-                E.length + e.length > 1024 && ((e = '...' + e), (E = (E = E.substr(0, 1024 - e.length)).trimEnd())), (E += e);
+                f.length + e.length > d && ((e = '...' + e), (f = (f = f.substr(0, d - e.length)).trimEnd())), (f += e);
             }
-            return d.noStyleAndInteraction
+            return _.noStyleAndInteraction
                 ? (0, r.jsx)(
                       'span',
                       {
-                          title: E,
-                          children: _
+                          title: f,
+                          children: E
                       },
-                      d.key
+                      _.key
                   )
                 : (0, r.jsx)(
-                      s.Z,
+                      o.Z,
                       {
-                          title: E,
+                          title: f,
                           href: t.target,
-                          trusted: () => (0, c.r)(t),
-                          onClick: f,
-                          messageId: d.messageId,
-                          channelId: d.channelId,
-                          children: _
+                          trusted: h,
+                          onClick: p,
+                          messageId: _.messageId,
+                          channelId: _.channelId,
+                          children: E
                       },
-                      d.key
+                      _.key
                   );
         }
     };

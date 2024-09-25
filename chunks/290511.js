@@ -1,91 +1,88 @@
 n.d(t, {
     FN: function () {
-        return o;
+        return i;
     },
     M$: function () {
-        return p;
-    },
-    NE: function () {
         return E;
     },
+    NE: function () {
+        return c;
+    },
     NO: function () {
-        return f;
+        return d;
     },
     Oq: function () {
-        return y;
+        return O;
     },
     RF: function () {
-        return A;
-    },
-    Un: function () {
-        return l;
-    },
-    X: function () {
-        return S;
-    },
-    YW: function () {
-        return h;
-    },
-    ae: function () {
-        return N;
-    },
-    b3: function () {
-        return m;
-    },
-    cf: function () {
-        return C;
-    },
-    dr: function () {
-        return R;
-    },
-    fY: function () {
-        return g;
-    },
-    iU: function () {
-        return _;
-    },
-    l7: function () {
-        return s;
-    },
-    md: function () {
         return T;
     },
-    qm: function () {
+    Un: function () {
+        return a;
+    },
+    X: function () {
+        return m;
+    },
+    YW: function () {
+        return _;
+    },
+    ae: function () {
+        return g;
+    },
+    b3: function () {
+        return h;
+    },
+    cf: function () {
+        return N;
+    },
+    dr: function () {
+        return A;
+    },
+    fY: function () {
         return I;
     },
+    iU: function () {
+        return u;
+    },
+    l7: function () {
+        return r;
+    },
+    md: function () {
+        return p;
+    },
+    qm: function () {
+        return f;
+    },
     yZ: function () {
-        return O;
+        return S;
     }
 });
 var r,
     i,
     a,
-    s,
-    o,
-    l,
-    u = n(348327),
-    c = n.n(u),
-    d = n(689938);
-let _ = 100,
-    E = 50,
-    f = 100,
-    h = 15,
-    p = 12,
-    I = 50,
-    m = 4,
-    T = 7,
-    S = 5,
-    g = 13;
-function A(e) {
+    o = n(348327),
+    s = n.n(o),
+    l = n(689938);
+let u = 100,
+    c = 50,
+    d = 100,
+    _ = 15,
+    E = 12,
+    f = 50,
+    h = 4,
+    p = 7,
+    m = 5,
+    I = 13;
+function T(e) {
     if (e.options.length > 0) return !1;
-    let { id: t, ...n } = N(),
+    let { id: t, ...n } = g(),
         { id: r, ...i } = e;
-    return c()(n, i);
+    return s()(n, i);
 }
-function N() {
+function g() {
     return {
         id: String(Date.now()),
-        title: d.Z.Messages.ONBOARDING_PROMPT_DEFAULT_TITLE,
+        title: l.Z.Messages.ONBOARDING_PROMPT_DEFAULT_TITLE,
         options: [],
         singleSelect: !1,
         required: !1,
@@ -93,7 +90,7 @@ function N() {
         type: 0
     };
 }
-function O(e) {
+function S(e) {
     return {
         id: String(Date.now()),
         title: '',
@@ -104,7 +101,7 @@ function O(e) {
         type: 0
     };
 }
-function R(e) {
+function A(e) {
     return {
         id: e.id,
         options: e.options.map((e) => {
@@ -151,7 +148,7 @@ function v(e) {
         type: e.type
     };
 }
-function C(e) {
+function N(e) {
     var t, n, r;
     return {
         prompts: e.prompts.map(v),
@@ -164,7 +161,15 @@ function C(e) {
         belowRequirements: e.below_requirements
     };
 }
-function y(e) {
+function O(e) {
     return null == e || (null == e.id && null == e.name);
 }
-((r = s || (s = {}))[(r.CUSTOMIZE = 0)] = 'CUSTOMIZE'), (r[(r.BROWSE = 1)] = 'BROWSE'), ((i = o || (o = {}))[(i.MULTIPLE_CHOICE = 0)] = 'MULTIPLE_CHOICE'), (i[(i.DROPDOWN = 1)] = 'DROPDOWN'), ((a = l || (l = {}))[(a.ONBOARDING_DEFAULT = 0)] = 'ONBOARDING_DEFAULT'), (a[(a.ONBOARDING_ADVANCED = 1)] = 'ONBOARDING_ADVANCED');
+!(function (e) {
+    (e[(e.CUSTOMIZE = 0)] = 'CUSTOMIZE'), (e[(e.BROWSE = 1)] = 'BROWSE');
+})(r || (r = {})),
+    !(function (e) {
+        (e[(e.MULTIPLE_CHOICE = 0)] = 'MULTIPLE_CHOICE'), (e[(e.DROPDOWN = 1)] = 'DROPDOWN');
+    })(i || (i = {})),
+    !(function (e) {
+        (e[(e.ONBOARDING_DEFAULT = 0)] = 'ONBOARDING_DEFAULT'), (e[(e.ONBOARDING_ADVANCED = 1)] = 'ONBOARDING_ADVANCED');
+    })(a || (a = {}));

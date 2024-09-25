@@ -1,23 +1,23 @@
 n.d(t, {
     VK: function () {
-        return c;
+        return d;
     },
     rU: function () {
-        return p;
+        return I;
     }
 });
 var r = n(266067),
     i = n(919499),
     a = n(470079),
-    s = n(539528);
-n(476400);
-var o = n(599295),
-    l = n(781212),
-    u = n(568895),
-    c = (function (e) {
+    o = n(539528),
+    s = n(476400);
+var l = n(599295),
+    u = n(781212),
+    c = n(568895),
+    d = (function (e) {
         function t() {
             for (var t, n = arguments.length, r = Array(n), i = 0; i < n; i++) r[i] = arguments[i];
-            return ((t = e.call.apply(e, [this].concat(r)) || this).history = (0, s.lX)(t.props)), t;
+            return ((t = e.call.apply(e, [this].concat(r)) || this).history = (0, o.lX)(t.props)), t;
         }
         return (
             (0, i.Z)(t, e),
@@ -31,114 +31,115 @@ var o = n(599295),
         );
     })(a.Component);
 a.Component;
-var d = function (e, t) {
+var _ = function (e, t) {
         return 'function' == typeof e ? e(t) : e;
     },
-    _ = function (e, t) {
-        return 'string' == typeof e ? (0, s.ob)(e, null, null, t) : e;
+    E = function (e, t) {
+        return 'string' == typeof e ? (0, o.ob)(e, null, null, t) : e;
     },
-    E = function (e) {
+    f = function (e) {
         return e;
     },
-    f = a.forwardRef;
-void 0 === f && (f = E);
-var h = f(function (e, t) {
+    h = a.forwardRef;
+function p(e) {
+    return !!(e.metaKey || e.altKey || e.ctrlKey || e.shiftKey);
+}
+void 0 === h && (h = f);
+var m = h(function (e, t) {
         var n = e.innerRef,
             r = e.navigate,
             i = e.onClick,
-            s = (0, l.Z)(e, ['innerRef', 'navigate', 'onClick']),
-            u = s.target,
-            c = (0, o.Z)({}, s, {
+            o = (0, u.Z)(e, ['innerRef', 'navigate', 'onClick']),
+            s = o.target,
+            c = (0, l.Z)({}, o, {
                 onClick: function (e) {
-                    var t;
                     try {
                         i && i(e);
                     } catch (t) {
                         throw (e.preventDefault(), t);
                     }
-                    if (!e.defaultPrevented && 0 === e.button && (!u || '_self' === u) && !((t = e).metaKey || t.altKey || t.ctrlKey || t.shiftKey)) e.preventDefault(), r();
+                    !e.defaultPrevented && 0 === e.button && (!s || '_self' === s) && !p(e) && (e.preventDefault(), r());
                 }
             });
-        return E !== f ? (c.ref = t || n) : (c.ref = n), a.createElement('a', c);
+        return f !== h ? (c.ref = t || n) : (c.ref = n), a.createElement('a', c);
     }),
-    p = f(function (e, t) {
+    I = h(function (e, t) {
         var n = e.component,
-            i = void 0 === n ? h : n,
-            s = e.replace,
-            c = e.to,
-            p = e.innerRef,
-            I = (0, l.Z)(e, ['component', 'replace', 'to', 'innerRef']);
+            i = void 0 === n ? m : n,
+            o = e.replace,
+            s = e.to,
+            d = e.innerRef,
+            p = (0, u.Z)(e, ['component', 'replace', 'to', 'innerRef']);
         return a.createElement(r.s6.Consumer, null, function (e) {
-            e || (0, u.Z)(!1);
+            e || (0, c.Z)(!1);
             var n = e.history,
-                r = _(d(c, e.location), e.location),
-                l = r ? n.createHref(r) : '',
-                h = (0, o.Z)({}, I, {
-                    href: l,
+                r = E(_(s, e.location), e.location),
+                u = r ? n.createHref(r) : '',
+                m = (0, l.Z)({}, p, {
+                    href: u,
                     navigate: function () {
-                        var t = d(c, e.location);
-                        (s ? n.replace : n.push)(t);
+                        var t = _(s, e.location);
+                        (o ? n.replace : n.push)(t);
                     }
                 });
-            return E !== f ? (h.ref = t || p) : (h.innerRef = p), a.createElement(i, h);
+            return f !== h ? (m.ref = t || d) : (m.innerRef = d), a.createElement(i, m);
         });
     }),
-    I = function (e) {
+    T = function (e) {
         return e;
     },
-    m = a.forwardRef;
-void 0 === m && (m = I);
-m(function (e, t) {
-    var n = e['aria-current'],
-        i = void 0 === n ? 'page' : n,
-        s = e.activeClassName,
-        c = void 0 === s ? 'active' : s,
-        E = e.activeStyle,
-        f = e.className,
-        h = e.exact,
-        T = e.isActive,
-        S = e.location,
-        g = e.sensitive,
-        A = e.strict,
-        N = e.style,
-        O = e.to,
-        R = e.innerRef,
-        v = (0, l.Z)(e, ['aria-current', 'activeClassName', 'activeStyle', 'className', 'exact', 'isActive', 'location', 'sensitive', 'strict', 'style', 'to', 'innerRef']);
-    return a.createElement(r.s6.Consumer, null, function (e) {
-        e || (0, u.Z)(!1);
-        var n = S || e.location,
-            s = _(d(O, n), n),
-            l = s.pathname,
-            C = l && l.replace(/([.+*?=^!:${}()[\]|/\\])/g, '\\$1'),
-            y = C
-                ? (0, r.LX)(n.pathname, {
-                      path: C,
-                      exact: h,
-                      sensitive: g,
-                      strict: A
-                  })
-                : null,
-            L = !!(T ? T(y, n) : y),
-            D = L
-                ? (function () {
-                      for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-                      return t
-                          .filter(function (e) {
-                              return e;
-                          })
-                          .join(' ');
-                  })(f, c)
-                : f,
-            b = L ? (0, o.Z)({}, N, {}, E) : N,
-            M = (0, o.Z)(
-                {
-                    'aria-current': (L && i) || null,
-                    className: D,
-                    style: b,
-                    to: s
-                },
-                v
-            );
-        return I !== m ? (M.ref = t || R) : (M.innerRef = R), a.createElement(p, M);
+    g = a.forwardRef;
+function S() {
+    for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
+    return t
+        .filter(function (e) {
+            return e;
+        })
+        .join(' ');
+}
+void 0 === g && (g = T),
+    g(function (e, t) {
+        var n = e['aria-current'],
+            i = void 0 === n ? 'page' : n,
+            o = e.activeClassName,
+            s = void 0 === o ? 'active' : o,
+            d = e.activeStyle,
+            f = e.className,
+            h = e.exact,
+            p = e.isActive,
+            m = e.location,
+            A = e.sensitive,
+            v = e.strict,
+            N = e.style,
+            O = e.to,
+            R = e.innerRef,
+            C = (0, u.Z)(e, ['aria-current', 'activeClassName', 'activeStyle', 'className', 'exact', 'isActive', 'location', 'sensitive', 'strict', 'style', 'to', 'innerRef']);
+        return a.createElement(r.s6.Consumer, null, function (e) {
+            e || (0, c.Z)(!1);
+            var n = m || e.location,
+                o = E(_(O, n), n),
+                u = o.pathname,
+                y = u && u.replace(/([.+*?=^!:${}()[\]|/\\])/g, '\\$1'),
+                b = y
+                    ? (0, r.LX)(n.pathname, {
+                          path: y,
+                          exact: h,
+                          sensitive: A,
+                          strict: v
+                      })
+                    : null,
+                L = !!(p ? p(b, n) : b),
+                D = L ? S(f, s) : f,
+                M = L ? (0, l.Z)({}, N, {}, d) : N,
+                P = (0, l.Z)(
+                    {
+                        'aria-current': (L && i) || null,
+                        className: D,
+                        style: M,
+                        to: o
+                    },
+                    C
+                );
+            return T !== g ? (P.ref = t || R) : (P.innerRef = R), a.createElement(I, P);
+        });
     });
-});

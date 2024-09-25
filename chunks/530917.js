@@ -1,6 +1,13 @@
 var r = n(413135).Buffer,
     i = n(28704),
     a = n(706178);
+function o(e) {
+    var t = s(e);
+    return {
+        blinder: t.toRed(i.mont(e.modulus)).redPow(new i(e.publicExponent)).fromRed(),
+        unblinder: t.invm(e.modulus)
+    };
+}
 function s(e) {
     var t,
         n = e.modulus.byteLength();
@@ -8,23 +15,18 @@ function s(e) {
     while (t.cmp(e.modulus) >= 0 || !t.umod(e.prime1) || !t.umod(e.prime2));
     return t;
 }
-function o(e, t) {
-    var n,
-        a,
-        o = {
-            blinder: (a = s((n = t))).toRed(i.mont(n.modulus)).redPow(new i(n.publicExponent)).fromRed(),
-            unblinder: a.invm(n.modulus)
-        },
-        l = t.modulus.byteLength(),
-        u = new i(e).mul(o.blinder).umod(t.modulus),
-        c = u.toRed(i.mont(t.prime1)),
-        d = u.toRed(i.mont(t.prime2)),
-        _ = t.coefficient,
-        E = t.prime1,
-        f = t.prime2,
-        h = c.redPow(t.exponent1).fromRed(),
-        p = d.redPow(t.exponent2).fromRed(),
-        I = h.isub(p).imul(_).umod(E).imul(f);
-    return p.iadd(I).imul(o.unblinder).umod(t.modulus).toArrayLike(r, 'be', l);
+function l(e, t) {
+    var n = o(t),
+        a = t.modulus.byteLength(),
+        s = new i(e).mul(n.blinder).umod(t.modulus),
+        l = s.toRed(i.mont(t.prime1)),
+        u = s.toRed(i.mont(t.prime2)),
+        c = t.coefficient,
+        d = t.prime1,
+        _ = t.prime2,
+        E = l.redPow(t.exponent1).fromRed(),
+        f = u.redPow(t.exponent2).fromRed(),
+        h = E.isub(f).imul(c).umod(d).imul(_);
+    return f.iadd(h).imul(n.unblinder).umod(t.modulus).toArrayLike(r, 'be', a);
 }
-(o.getr = s), (e.exports = o);
+(l.getr = s), (e.exports = l);

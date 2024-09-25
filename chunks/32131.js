@@ -1,4 +1,14 @@
-e.exports = function (e) {
+function t(e) {
+    let t = {
+            className: 'string',
+            begin: '(~)?"',
+            end: '"',
+            illegal: '\\n'
+        },
+        n = {
+            className: 'symbol',
+            begin: '#[a-zA-Z_]\\w*\\$?'
+        };
     return {
         name: 'PureBASIC',
         aliases: ['pb', 'pbi'],
@@ -24,16 +34,9 @@ e.exports = function (e) {
                     e.UNDERSCORE_TITLE_MODE
                 ]
             },
-            {
-                className: 'string',
-                begin: '(~)?"',
-                end: '"',
-                illegal: '\\n'
-            },
-            {
-                className: 'symbol',
-                begin: '#[a-zA-Z_]\\w*\\$?'
-            }
+            t,
+            n
         ]
     };
-};
+}
+e.exports = t;

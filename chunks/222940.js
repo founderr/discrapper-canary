@@ -1,80 +1,82 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return p;
     }
-}),
-    n(47120);
+});
+var r = n(47120);
 var i = n(735250),
-    s = n(470079),
-    a = n(399606),
-    r = n(846519),
+    a = n(470079),
+    o = n(399606),
+    s = n(846519),
     l = n(481060),
-    o = n(317632),
+    u = n(317632),
     c = n(174767),
-    u = n(594174),
-    d = n(689938),
-    _ = n(695987);
-function E(e) {
+    d = n(594174),
+    _ = n(689938),
+    E = n(695987);
+let f = 5000,
+    h = 24;
+function p(e) {
     let { inboxIconRef: t, recentsPopoutShown: n } = e,
-        [E, I] = s.useState(!1),
-        m = (0, a.e7)([o.Z], () => o.Z.getLastUnseenInvite()),
-        T = (0, a.e7)([u.default], () => (null != m ? u.default.getUser(m.inviter_id) : null));
-    return (s.useEffect(() => {
-        n && I(!1);
+        [r, p] = a.useState(!1),
+        m = (0, o.e7)([u.Z], () => u.Z.getLastUnseenInvite()),
+        I = (0, o.e7)([d.default], () => (null != m ? d.default.getUser(m.inviter_id) : null));
+    return (a.useEffect(() => {
+        n && p(!1);
     }, [n]),
-    s.useEffect(() => {
+    a.useEffect(() => {
         if (null == m) {
-            I(!1);
+            p(!1);
             return;
         }
-        (0, c.Br)(m), I(!0);
-        let e = new r.V7();
+        (0, c.Br)(m), p(!0);
+        let e = new s.V7();
         return (
-            e.start(5000, () => {
-                I(!1);
+            e.start(f, () => {
+                p(!1);
             }),
             () => {
                 e.stop();
             }
         );
     }, [m]),
-    E && null != m && null != T)
+    r && null != m && null != I)
         ? (0, i.jsxs)(l.TooltipLayer, {
-              tooltipClassName: _.tooltip,
-              tooltipContentClassName: _.tooltipContent,
+              tooltipClassName: E.tooltip,
+              tooltipContentClassName: E.tooltipContent,
               targetElementRef: t,
               position: 'bottom',
               color: l.TooltipColors.BLACK,
               children: [
                   (0, i.jsxs)('div', {
-                      className: _.iconContainer,
+                      className: E.iconContainer,
                       children: [
                           (0, i.jsx)('img', {
-                              className: _.inviteImage,
+                              className: E.inviteImage,
                               src: m.application_asset,
                               alt: 'Game Invite'
                           }),
                           (0, i.jsx)('div', {
-                              className: _.offsetAvatarContainer,
+                              className: E.offsetAvatarContainer,
                               children: (0, i.jsx)(l.Avatar, {
                                   'aria-label': 'Inviter',
-                                  className: _.inviterImage,
-                                  src: T.getAvatarURL(null, 24),
+                                  className: E.inviterImage,
+                                  src: I.getAvatarURL(null, h),
                                   size: l.AvatarSizes.SIZE_24
                               })
                           })
                       ]
                   }),
                   (0, i.jsxs)('div', {
-                      className: _.titleContainer,
+                      className: E.titleContainer,
                       children: [
                           (0, i.jsx)(l.Text, {
-                              className: _.__invalid_title,
+                              className: E.__invalid_title,
                               variant: 'text-xs/semibold',
-                              children: d.Z.Messages.GAME_INVITES_INVITE_FROM.format({ username: T.username })
+                              children: _.Z.Messages.GAME_INVITES_INVITE_FROM.format({ username: I.username })
                           }),
                           (0, i.jsx)(l.Text, {
-                              className: _.__invalid_subtitle,
+                              className: E.__invalid_subtitle,
                               variant: 'text-xxs/medium',
                               children: m.application_name
                           })

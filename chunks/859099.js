@@ -1,34 +1,36 @@
-n(47120);
-var r = n(780384),
-    i = n(147913),
-    a = n(844070),
+var r = n(47120);
+var i = n(780384),
+    a = n(147913),
+    o = n(844070),
     s = n(981631),
-    o = n(689938);
-function l(e) {
-    e.relationship.type === s.OGo.PENDING_INCOMING && (r.uv.announce(o.Z.Messages.FRIEND_REQUEST_PENDING_A11Y_ANNOUNCEMENT.format({ username: e.relationship.user.username })), a.T(e.relationship.user));
+    l = n(689938);
+function u(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
 }
-function u(e) {
+function c(e) {
+    e.relationship.type === s.OGo.PENDING_INCOMING && (i.uv.announce(l.Z.Messages.FRIEND_REQUEST_PENDING_A11Y_ANNOUNCEMENT.format({ username: e.relationship.user.username })), o.T(e.relationship.user));
+}
+function d(e) {
     let { user: t } = e;
-    r.uv.announce(o.Z.Messages.FRIEND_REQUEST_ACCEPTED_A11Y_ANNOUNCEMENT.format({ username: t.username })), a.z(t);
+    i.uv.announce(l.Z.Messages.FRIEND_REQUEST_ACCEPTED_A11Y_ANNOUNCEMENT.format({ username: t.username })), o.z(t);
 }
-class c extends i.Z {
+class _ extends a.Z {
     constructor(...e) {
-        var t, n, r;
         super(...e),
-            (t = this),
-            (n = 'actions'),
-            (r = {
-                RELATIONSHIP_ADD: l,
-                FRIEND_REQUEST_ACCEPTED: u
-            }),
-            n in t
-                ? Object.defineProperty(t, n, {
-                      value: r,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (t[n] = r);
+            u(this, 'actions', {
+                RELATIONSHIP_ADD: c,
+                FRIEND_REQUEST_ACCEPTED: d
+            });
     }
 }
-t.Z = new c();
+t.Z = new _();

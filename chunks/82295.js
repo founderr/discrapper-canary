@@ -2,14 +2,15 @@ var r = n(735250);
 n(470079);
 var i = n(120356),
     a = n.n(i),
-    s = n(481060),
-    o = n(996479);
-t.Z = (e) => {
+    o = n(481060),
+    s = n(996479);
+let l = (e) => {
     let { className: t, children: n, 'aria-label': i, id: l } = e;
-    return (0, r.jsx)(s.H, {
-        className: a()(t, o.container),
+    return (0, r.jsx)(o.H, {
+        className: a()(t, s.container),
         'aria-label': i,
         id: l,
         children: n
     });
 };
+t.Z = l;

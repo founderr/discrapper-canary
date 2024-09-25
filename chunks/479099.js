@@ -1,144 +1,147 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
-        return N;
+        return g;
     },
     f: function () {
-        return A;
+        return S;
     }
-}),
-    t(47120);
-var i,
-    r,
-    l = t(735250),
-    o = t(470079),
-    u = t(120356),
-    s = t.n(u),
-    a = t(91192),
-    c = t(442837),
-    d = t(481060),
-    _ = t(239091),
-    E = t(596454),
-    f = t(607070),
-    I = t(339085),
-    S = t(695346),
-    T = t(572004),
-    C = t(689938),
-    p = t(813778);
-function N(e) {
-    let { tag: n, size: i = 1, disabled: r, className: u, onClick: N, onRemove: A, selected: g, ariaLabel: m } = e,
-        { name: L, emojiId: O, emojiName: R } = n,
-        h = null != A,
-        [v, M] = o.useState(!1),
-        D = (0, c.e7)([I.ZP], () => (null != O ? I.ZP.getUsableCustomEmojiById(O) : null)),
-        U = h || null != N,
-        Z = (!h || !v) && (null != O || null != R),
-        P = 0 === i,
-        b = o.useRef(null),
-        G = (0, c.e7)([f.Z], () => f.Z.keyboardModeEnabled),
-        y = (e) => {
-            let i = S.Sb.getSetting();
-            T.wS &&
-                i &&
+});
+var r,
+    i = n(47120);
+var a = n(735250),
+    o = n(470079),
+    s = n(120356),
+    l = n.n(s),
+    u = n(91192),
+    c = n(442837),
+    d = n(481060),
+    _ = n(239091),
+    E = n(596454),
+    f = n(607070),
+    h = n(339085),
+    p = n(695346),
+    m = n(572004),
+    I = n(689938),
+    T = n(813778);
+function g(e) {
+    let { tag: t, size: r = 1, disabled: i, className: s, onClick: g, onRemove: S, selected: A, ariaLabel: v } = e,
+        { name: N, emojiId: O, emojiName: R } = t,
+        C = null != S,
+        [y, b] = o.useState(!1),
+        L = (0, c.e7)([h.ZP], () => (null != O ? h.ZP.getUsableCustomEmojiById(O) : null)),
+        D = C || null != g,
+        M = (!C || !y) && (null != O || null != R),
+        P = 0 === r,
+        U = o.useRef(null),
+        w = (0, c.e7)([f.Z], () => f.Z.keyboardModeEnabled),
+        x = (e) => {
+            null == g || g(e), null == S || S(t), !w && null != U.current && U.current.blur();
+        },
+        G = (e) => {
+            let r = p.Sb.getSetting();
+            m.wS &&
+                r &&
                 (0, _.jW)(e, async () => {
-                    let { default: e } = await t.e('29646').then(t.bind(t, 955116));
-                    return (t) =>
-                        (0, l.jsx)(e, {
-                            ...t,
-                            tag: n
+                    let { default: e } = await n.e('29646').then(n.bind(n, 955116));
+                    return (n) =>
+                        (0, a.jsx)(e, {
+                            ...n,
+                            tag: t
                         });
                 });
         },
-        x = (0, l.jsxs)(l.Fragment, {
+        k = (0, a.jsxs)(a.Fragment, {
             children: [
-                Z
-                    ? (0, l.jsx)(E.Z, {
-                          className: s()(p.emoji, { [p.small]: P }),
+                M
+                    ? (0, a.jsx)(E.Z, {
+                          className: l()(T.emoji, { [T.small]: P }),
                           emojiId: O,
                           emojiName: R,
-                          animated: !!(null == D ? void 0 : D.animated),
+                          animated: !!(null == L ? void 0 : L.animated),
                           size: 'reaction'
                       })
                     : null,
-                v &&
-                    h &&
-                    (0, l.jsx)('div', {
-                        className: p.closeCircle,
-                        children: (0, l.jsx)(d.XSmallIcon, {
+                y &&
+                    C &&
+                    (0, a.jsx)('div', {
+                        className: T.closeCircle,
+                        children: (0, a.jsx)(d.XSmallIcon, {
                             size: 'md',
                             color: 'currentColor',
-                            className: p.close
+                            className: T.close
                         })
                     }),
-                (0, l.jsx)(d.Text, {
+                (0, a.jsx)(d.Text, {
                     variant: P ? 'text-xs/semibold' : 'text-sm/semibold',
                     lineClamp: 1,
-                    children: L
+                    children: N
                 })
             ]
         }),
-        F = {
-            key: n.id,
-            className: s()(
-                p.pill,
+        B = {
+            key: t.id,
+            className: l()(
+                T.pill,
                 {
-                    [p.disabled]: r,
-                    [p.clickable]: U,
-                    [p.small]: P,
-                    [p.selected]: g
+                    [T.disabled]: i,
+                    [T.clickable]: D,
+                    [T.small]: P,
+                    [T.selected]: A
                 },
-                u
+                s
             ),
-            onClick: (e) => {
-                null == N || N(e), null == A || A(n), !G && null != b.current && b.current.blur();
-            },
-            onContextMenu: (e) => y(e),
-            onMouseEnter: () => h && M(!0),
-            onMouseLeave: () => h && M(!1)
+            onClick: x,
+            onContextMenu: (e) => G(e),
+            onMouseEnter: () => C && b(!0),
+            onMouseLeave: () => C && b(!1)
         },
-        j = (0, a.JA)('forum-tag-'.concat(n.id));
-    return U
-        ? (0, l.jsx)(d.Clickable, {
-              ...j,
-              innerRef: b,
-              focusProps: { ringTarget: b },
-              'aria-label': null != m ? m : C.Z.Messages.FORUM_TAG_A11Y_FILTER_BY_TAG.format({ tagName: L }),
+        F = (0, u.JA)('forum-tag-'.concat(t.id));
+    return D
+        ? (0, a.jsx)(d.Clickable, {
+              ...F,
+              innerRef: U,
+              focusProps: { ringTarget: U },
+              'aria-label': null != v ? v : I.Z.Messages.FORUM_TAG_A11Y_FILTER_BY_TAG.format({ tagName: N }),
               role: 'button',
-              'aria-pressed': g,
-              ...F,
-              children: x
+              'aria-pressed': A,
+              ...B,
+              children: k
           })
-        : (0, l.jsx)('div', {
-              ...F,
-              children: x
+        : (0, a.jsx)('div', {
+              ...B,
+              children: k
           });
 }
-function A(e) {
-    let { tags: n, count: t, size: i = 1 } = e,
-        r = 0 === i;
-    return (0, l.jsx)(d.Tooltip, {
-        'aria-label': C.Z.Messages.FORUM_TAGS,
-        text: (0, l.jsx)(l.Fragment, {
-            children: n.map((e) =>
-                (0, l.jsx)(
-                    N,
+function S(e) {
+    let { tags: t, count: n, size: r = 1 } = e,
+        i = 0 === r;
+    return (0, a.jsx)(d.Tooltip, {
+        'aria-label': I.Z.Messages.FORUM_TAGS,
+        text: (0, a.jsx)(a.Fragment, {
+            children: t.map((e) =>
+                (0, a.jsx)(
+                    g,
                     {
                         tag: e,
-                        className: p.tooltipPill,
-                        size: N.Sizes.SMALL
+                        className: T.tooltipPill,
+                        size: g.Sizes.SMALL
                     },
                     e.id
                 )
             )
         }),
         children: (e) =>
-            (0, l.jsx)('div', {
+            (0, a.jsx)('div', {
                 ...e,
-                className: s()(p.pill, { [p.small]: r }),
-                children: (0, l.jsxs)(d.Text, {
-                    variant: r ? 'text-xs/semibold' : 'text-sm/semibold',
-                    children: ['+', t]
+                className: l()(T.pill, { [T.small]: i }),
+                children: (0, a.jsxs)(d.Text, {
+                    variant: i ? 'text-xs/semibold' : 'text-sm/semibold',
+                    children: ['+', n]
                 })
             })
     });
 }
-((r = i || (i = {}))[(r.SMALL = 0)] = 'SMALL'), (r[(r.MEDIUM = 1)] = 'MEDIUM'), (N.Sizes = i);
+!(function (e) {
+    (e[(e.SMALL = 0)] = 'SMALL'), (e[(e.MEDIUM = 1)] = 'MEDIUM');
+})(r || (r = {})),
+    (g.Sizes = r);

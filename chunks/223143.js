@@ -1,38 +1,38 @@
 n.d(t, {
     Z: function () {
-        return d;
+        return _;
     },
     c: function () {
-        return c;
+        return d;
     }
-}),
-    n(47120);
-var r = n(470079),
-    i = n(399606),
-    a = n(634894),
+});
+var r = n(47120);
+var i = n(470079),
+    a = n(399606),
+    o = n(634894),
     s = n(335131),
-    o = n(337679),
-    l = n(1870),
-    u = n(267097);
-function c() {
+    l = n(337679),
+    u = n(1870),
+    c = n(267097);
+function d() {
     let e = 'useFetchPurchases';
-    (0, a.j)({
+    (0, o.j)({
         location: e + ' auto on',
         autoTrackExposure: !0
     }),
-        (0, a.j)({
+        (0, o.j)({
             location: e + ' auto off',
             autoTrackExposure: !1
         });
-    let [t, n, u, c, d, _] = (0, i.Wu)([l.Z], () => [l.Z.isFetching, l.Z.isClaiming, l.Z.fetchError, l.Z.claimError, l.Z.purchases, l.Z.hasPreviouslyFetched]),
-        { shouldFakePurchaseSuccessFlowLocally: E } = (0, o.Z)({ location: 'useFetchPurchases' });
+    let [t, n, r, c, d, _] = (0, a.Wu)([u.Z], () => [u.Z.isFetching, u.Z.isClaiming, u.Z.fetchError, u.Z.claimError, u.Z.purchases, u.Z.hasPreviouslyFetched]),
+        { shouldFakePurchaseSuccessFlowLocally: E } = (0, l.Z)({ location: 'useFetchPurchases' });
     return (
-        (0, r.useEffect)(() => {
+        (0, i.useEffect)(() => {
             if (!E || !(d.size > 0)) (0, s.qg)();
         }, [E]),
         {
             isClaiming: n,
-            fetchError: u,
+            fetchError: r,
             claimError: c,
             isFetching: t,
             purchases: d,
@@ -40,28 +40,29 @@ function c() {
         }
     );
 }
-function d(e) {
+function _(e) {
     var t;
     let n = null == e ? void 0 : e.paymentGateway,
         r = 'useFetchCollectiblesCategoriesAndPurchases';
-    (0, a.j)({
+    (0, o.j)({
         location: r + ' auto on',
         autoTrackExposure: !0
     }),
-        (0, a.j)({
+        (0, o.j)({
             location: r + ' auto off',
             autoTrackExposure: !1
         });
-    let { isFetching: i, categories: s, error: o, refreshCategories: l } = (0, u.Z)({ paymentGateway: n }),
-        { isClaiming: d, fetchError: _, claimError: E, isFetching: f, purchases: h, hasPreviouslyFetched: p } = c();
+    let { isFetching: i, categories: a, error: s, refreshCategories: l } = (0, c.Z)({ paymentGateway: n }),
+        { isClaiming: u, fetchError: _, claimError: E, isFetching: f, purchases: h, hasPreviouslyFetched: p } = d(),
+        m = i || f;
     return {
-        isFetching: i || f,
+        isFetching: m,
         isFetchingCategories: i,
         isFetchingPurchases: f,
-        isClaiming: d,
-        categories: s,
+        isClaiming: u,
+        categories: a,
         purchases: h,
-        error: null !== (t = null != o ? o : _) && void 0 !== t ? t : E,
+        error: null !== (t = null != s ? s : _) && void 0 !== t ? t : E,
         refreshCategories: l,
         hasPreviouslyFetched: p
     };

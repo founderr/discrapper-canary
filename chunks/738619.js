@@ -2,48 +2,48 @@ n.d(t, {
     Z: function () {
         return z;
     }
-}),
-    n(653041),
-    n(47120);
-var i = n(735250),
-    s = n(470079),
-    o = n(120356),
-    a = n.n(o),
-    l = n(392711),
-    r = n.n(l),
-    c = n(913527),
-    d = n.n(c),
-    u = n(748780),
-    h = n(866442),
-    m = n(442837),
+});
+var r = n(653041);
+var i = n(47120);
+var a = n(735250),
+    o = n(470079),
+    s = n(120356),
+    l = n.n(s),
+    u = n(392711),
+    c = n.n(u),
+    d = n(913527),
+    _ = n.n(d),
+    E = n(748780),
+    f = n(866442),
+    h = n(442837),
     p = n(692547),
-    f = n(481060),
-    g = n(980568),
-    _ = n(560768),
-    T = n(812206),
-    v = n(11769),
-    E = n(243778),
-    b = n(843693),
-    I = n(246642),
-    C = n(921227),
-    S = n(314897),
-    R = n(430824),
-    x = n(496675),
-    N = n(699516),
-    O = n(885110),
-    Z = n(300429),
-    A = n(111583),
-    j = n(594174),
-    M = n(451478),
-    y = n(626135),
-    L = n(585483),
-    P = n(70956),
-    U = n(823379),
-    w = n(5192),
-    D = n(981631),
-    k = n(689938),
-    B = n(443236);
-function F(e, t, n) {
+    m = n(481060),
+    I = n(980568),
+    T = n(560768),
+    g = n(812206),
+    S = n(11769),
+    A = n(243778),
+    v = n(843693),
+    N = n(246642),
+    O = n(921227),
+    R = n(314897),
+    C = n(430824),
+    y = n(496675),
+    b = n(699516),
+    L = n(885110),
+    D = n(300429),
+    M = n(111583),
+    P = n(594174),
+    U = n(451478),
+    w = n(626135),
+    x = n(585483),
+    G = n(70956),
+    k = n(823379),
+    B = n(5192),
+    F = n(981631),
+    Z = n(689938),
+    V = n(443236);
+function H(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -56,8 +56,8 @@ function F(e, t, n) {
         e
     );
 }
-let V = [];
-class H extends s.PureComponent {
+let Y = [];
+class j extends o.PureComponent {
     componentDidMount() {
         this.timeout = setTimeout(() => {
             this.setState({ fadeIn: !0 }), (this.timeout = null), this.logShownEventIfNeeded();
@@ -69,24 +69,24 @@ class H extends s.PureComponent {
     logShownEventIfNeeded() {
         let e = this.props.activity.application_id;
         null != e &&
-            -1 === V.indexOf(e) &&
-            (y.default.track(D.rMx.SHOW_TUTORIAL, {
+            -1 === Y.indexOf(e) &&
+            (w.default.track(F.rMx.SHOW_TUTORIAL, {
                 tutorial: 'activity-invite-nux-inline',
                 application_id: e
             }),
-            V.push(e));
+            Y.push(e));
     }
     componentWillUnmount() {
         null !== this.timeout && clearTimeout(this.timeout);
     }
     render() {
         let { activity: e } = this.props;
-        return (0, i.jsxs)('div', {
-            className: a()(B.activityInviteEducation, { [B.activityInviteEducationFadeIn]: this.state.fadeIn }),
+        return (0, a.jsxs)('div', {
+            className: l()(V.activityInviteEducation, { [V.activityInviteEducationFadeIn]: this.state.fadeIn }),
             children: [
-                (0, i.jsx)('div', { className: B.activityInviteEducationArrow }),
-                (0, i.jsx)('span', {
-                    children: k.Z.Messages.USER_ACTIVITY_CHAT_INVITE_EDUCATION.format({
+                (0, a.jsx)('div', { className: V.activityInviteEducationArrow }),
+                (0, a.jsx)('span', {
+                    children: Z.Z.Messages.USER_ACTIVITY_CHAT_INVITE_EDUCATION.format({
                         game: e.name,
                         dismissOnClick: this.handleDismissInviteEducation
                     })
@@ -96,30 +96,31 @@ class H extends s.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            F(this, 'state', { fadeIn: !1 }),
-            F(this, 'timeout', null),
-            F(this, 'handleDismissInviteEducation', () => {
+            H(this, 'state', { fadeIn: !1 }),
+            H(this, 'timeout', null),
+            H(this, 'handleDismissInviteEducation', () => {
                 let { activity: e } = this.props;
-                null != e && null != e.application_id && g.Z.dismissForApplicationId(e.application_id);
+                null != e && null != e.application_id && I.Z.dismissForApplicationId(e.application_id);
             });
     }
 }
-function G(e) {
-    let { channel: t, guild: n } = e;
-    return (0, i.jsx)(E.ZP, {
-        contentTypes: [],
+function W(e) {
+    let { channel: t, guild: n } = e,
+        r = [];
+    return (0, a.jsx)(A.ZP, {
+        contentTypes: r,
         children: (e) => {
             let { visibleContent: t, markAsDismissed: n } = e;
             return null;
         }
     });
 }
-class W extends s.PureComponent {
+class K extends o.PureComponent {
     componentDidMount() {
-        L.S.subscribe(D.CkL.EMPHASIZE_SLOWMODE_COOLDOWN, this.emphasizeSlowmodeCooldown);
+        x.S.subscribe(F.CkL.EMPHASIZE_SLOWMODE_COOLDOWN, this.emphasizeSlowmodeCooldown);
     }
     componentWillUnmount() {
-        L.S.unsubscribe(D.CkL.EMPHASIZE_SLOWMODE_COOLDOWN, this.emphasizeSlowmodeCooldown);
+        x.S.unsubscribe(F.CkL.EMPHASIZE_SLOWMODE_COOLDOWN, this.emphasizeSlowmodeCooldown);
     }
     getCooldownTextStyle() {
         let { color: e } = this.state,
@@ -127,166 +128,166 @@ class W extends s.PureComponent {
         return {
             color: e.interpolate({
                 inputRange: [0, 1],
-                outputRange: [t, (0, h.wK)(n, 0.9)]
+                outputRange: [t, (0, f.wK)(n, 0.9)]
             })
         };
     }
     render() {
         let e;
-        let { guildId: t, activity: n, showInviteEducation: s, isFocused: o, typingUsers: l, className: c, slowmodeCooldownGuess: h, isBypassSlowmode: m, channel: p, isThreadCreation: g, renderDots: _, poggermodeEnabled: T, isComboing: E } = this.props,
-            { rateLimitPerUser: b } = p,
-            C = j.default.getCurrentUser(),
-            S = R.Z.getGuild(t),
-            x = b > 0,
-            O = g
+        let { guildId: t, activity: n, showInviteEducation: r, isFocused: i, typingUsers: o, className: s, slowmodeCooldownGuess: u, isBypassSlowmode: d, channel: f, isThreadCreation: h, renderDots: p, poggermodeEnabled: I, isComboing: T } = this.props,
+            { rateLimitPerUser: g } = f,
+            A = P.default.getCurrentUser(),
+            v = C.Z.getGuild(t),
+            O = g > 0,
+            R = h
                 ? []
-                : r()(l)
+                : c()(o)
                       .keys()
-                      .filter((e) => e !== (null == C ? void 0 : C.id))
-                      .reject((e) => N.Z.isBlocked(e))
-                      .map((e) => j.default.getUser(e))
-                      .filter(U.lm)
-                      .map((e) => w.ZP.getName(t, this.props.channel.id, e))
+                      .filter((e) => e !== (null == A ? void 0 : A.id))
+                      .reject((e) => b.Z.isBlocked(e))
+                      .map((e) => P.default.getUser(e))
+                      .filter(k.lm)
+                      .map((e) => B.ZP.getName(t, this.props.channel.id, e))
                       .value();
-        if (0 === O.length && !x && !E)
-            return s && null != n
-                ? (0, i.jsx)(H, {
+        if (0 === R.length && !O && !T)
+            return r && null != n
+                ? (0, a.jsx)(j, {
                       activity: n,
-                      isFocused: o
+                      isFocused: i
                   })
-                : (0, i.jsx)(G, {
-                      channel: p,
-                      guild: S
+                : (0, a.jsx)(W, {
+                      channel: f,
+                      guild: v
                   });
-        let Z = '',
-            A = null,
-            M = '';
-        if (x) {
+        let y = '',
+            L = null,
+            D = '';
+        if (O) {
             if (
-                ((A = (0, i.jsx)(f.TimerIcon, {
+                ((L = (0, a.jsx)(m.TimerIcon, {
                     size: 'xs',
                     color: 'currentColor',
-                    className: B.slowModeIcon
+                    className: V.slowModeIcon
                 })),
-                (M = (0, v.k)(b)),
-                !m && h > 0)
+                (D = (0, S.k)(g)),
+                !d && u > 0)
             ) {
-                let e = d().duration(h);
-                if (h > P.Z.Millis.HOUR) {
+                let e = _().duration(u);
+                if (u > G.Z.Millis.HOUR) {
                     let t = ''.concat(e.minutes()).padStart(2, '0'),
                         n = ''.concat(e.seconds()).padStart(2, '0');
-                    Z = ''.concat(e.hours(), ':').concat(t, ':').concat(n);
+                    y = ''.concat(e.hours(), ':').concat(t, ':').concat(n);
                 } else {
                     let t = ''.concat(e.seconds()).padStart(2, '0');
-                    Z = ''.concat(e.minutes(), ':').concat(t);
+                    y = ''.concat(e.minutes(), ':').concat(t);
                 }
-            } else 0 === O.length && (Z = m ? k.Z.Messages.CHANNEL_SLOWMODE_DESC_IMMUNE : k.Z.Messages.CHANNEL_SLOWMODE_DESC_SHORT);
+            } else 0 === R.length && (y = d ? Z.Z.Messages.CHANNEL_SLOWMODE_DESC_IMMUNE : Z.Z.Messages.CHANNEL_SLOWMODE_DESC_SHORT);
         }
-        let [y, L, D] = O;
+        let [M, U, w] = R;
         return (
             (e =
-                0 === O.length
+                0 === R.length
                     ? ''
-                    : 1 === O.length
-                      ? k.Z.Messages.ONE_USER_TYPING.format({ a: y })
-                      : 2 === O.length
-                        ? k.Z.Messages.TWO_USERS_TYPING.format({
-                              a: y,
-                              b: L
+                    : 1 === R.length
+                      ? Z.Z.Messages.ONE_USER_TYPING.format({ a: M })
+                      : 2 === R.length
+                        ? Z.Z.Messages.TWO_USERS_TYPING.format({
+                              a: M,
+                              b: U
                           })
-                        : 3 === O.length
-                          ? k.Z.Messages.THREE_USERS_TYPING.format({
-                                a: y,
-                                b: L,
-                                c: D
+                        : 3 === R.length
+                          ? Z.Z.Messages.THREE_USERS_TYPING.format({
+                                a: M,
+                                b: U,
+                                c: w
                             })
-                          : k.Z.Messages.SEVERAL_USERS_TYPING),
-            (0, i.jsxs)('div', {
-                className: a()(
-                    B.typing,
+                          : Z.Z.Messages.SEVERAL_USERS_TYPING),
+            (0, a.jsxs)('div', {
+                className: l()(
+                    V.typing,
                     {
-                        'stop-animation': !o,
-                        [B.isComboing]: T && E
+                        'stop-animation': !i,
+                        [V.isComboing]: I && T
                     },
-                    c
+                    s
                 ),
                 children: [
-                    (0, i.jsxs)('div', {
-                        className: B.typingDots,
+                    (0, a.jsxs)('div', {
+                        className: V.typingDots,
                         children: [
-                            O.length > 0 &&
-                                !1 !== _ &&
-                                (0, i.jsx)(f.Dots, {
-                                    className: B.ellipsis,
+                            R.length > 0 &&
+                                !1 !== p &&
+                                (0, a.jsx)(m.Dots, {
+                                    className: V.ellipsis,
                                     dotRadius: 3.5,
                                     themed: !0
                                 }),
-                            (0, i.jsx)('span', {
-                                className: B.text,
+                            (0, a.jsx)('span', {
+                                className: V.text,
                                 'aria-live': 'polite',
                                 'aria-atomic': !0,
                                 children: e
                             })
                         ]
                     }),
-                    x &&
-                        (0, i.jsx)(f.Tooltip, {
-                            text: M,
+                    O &&
+                        (0, a.jsx)(m.Tooltip, {
+                            text: D,
                             children: (e) =>
-                                (0, i.jsxs)(u.Z.div, {
+                                (0, a.jsxs)(E.Z.div, {
                                     style: this.getCooldownTextStyle(),
-                                    className: B.cooldownWrapper,
+                                    className: V.cooldownWrapper,
                                     ...e,
-                                    children: [Z, A]
+                                    children: [y, L]
                                 })
                         }),
-                    T && E && (0, i.jsx)(I.Z, { channelId: p.id })
+                    I && T && (0, a.jsx)(N.Z, { channelId: f.id })
                 ]
             })
         );
     }
     constructor(...e) {
         super(...e),
-            F(this, 'state', { color: new u.Z.Value(0) }),
-            F(this, 'emphasizeSlowmodeCooldown', () => {
+            H(this, 'state', { color: new E.Z.Value(0) }),
+            H(this, 'emphasizeSlowmodeCooldown', () => {
                 let { color: e } = this.state;
-                u.Z.sequence([
-                    u.Z.timing(e, {
+                E.Z.sequence([
+                    E.Z.timing(e, {
                         toValue: 1,
                         duration: 100,
-                        easing: u.Z.Easing.quad
+                        easing: E.Z.Easing.quad
                     }),
-                    u.Z.timing(e, {
+                    E.Z.timing(e, {
                         delay: 250,
                         toValue: 0,
                         duration: 100,
-                        easing: u.Z.Easing.quad
+                        easing: E.Z.Easing.quad
                     })
                 ]).start();
             });
     }
 }
 function z(e) {
-    let { channel: t, isThreadCreation: n = !1, ...s } = e,
-        o = (0, m.e7)([O.Z], () => O.Z.findActivity((e) => null != e.application_id)),
-        a = (0, m.e7)([b.ZP, S.default], () => b.ZP.getUserCombo(S.default.getId(), t.id)),
-        l = (0, m.e7)([C.Z, T.Z], () => (0, _.Z)(t, o, C.Z, T.Z)),
-        r = (0, m.e7)([Z.Z], () => Z.Z.getSlowmodeCooldownGuess(t.id, n ? Z.S.CreateThread : Z.S.SendMessage)),
-        c = (0, m.e7)([x.Z], () => (n ? x.Z.can(D.Plq.MANAGE_THREADS, t) : x.Z.can(D.Plq.MANAGE_CHANNELS, t) || x.Z.can(D.Plq.MANAGE_MESSAGES, t))),
-        d = {
-            ...s,
-            baseTextColor: (0, f.useToken)(p.Z.colors.INTERACTIVE_NORMAL).hex(),
-            activeTextColor: (0, f.useToken)(p.Z.colors.INTERACTIVE_NORMAL).hex(),
-            showInviteEducation: l,
-            activity: o,
-            typingUsers: (0, m.e7)([A.Z], () => A.Z.getTypingUsers(t.id)),
-            isFocused: (0, m.e7)([M.Z], () => M.Z.isFocused()),
+    let { channel: t, isThreadCreation: n = !1, ...r } = e,
+        i = (0, h.e7)([L.Z], () => L.Z.findActivity((e) => null != e.application_id)),
+        o = (0, h.e7)([v.ZP, R.default], () => v.ZP.getUserCombo(R.default.getId(), t.id)),
+        s = (0, h.e7)([O.Z, g.Z], () => (0, T.Z)(t, i, O.Z, g.Z)),
+        l = (0, h.e7)([D.Z], () => D.Z.getSlowmodeCooldownGuess(t.id, n ? D.S.CreateThread : D.S.SendMessage)),
+        u = (0, h.e7)([y.Z], () => (n ? y.Z.can(F.Plq.MANAGE_THREADS, t) : y.Z.can(F.Plq.MANAGE_CHANNELS, t) || y.Z.can(F.Plq.MANAGE_MESSAGES, t))),
+        c = {
+            ...r,
+            baseTextColor: (0, m.useToken)(p.Z.colors.INTERACTIVE_NORMAL).hex(),
+            activeTextColor: (0, m.useToken)(p.Z.colors.INTERACTIVE_NORMAL).hex(),
+            showInviteEducation: s,
+            activity: i,
+            typingUsers: (0, h.e7)([M.Z], () => M.Z.getTypingUsers(t.id)),
+            isFocused: (0, h.e7)([U.Z], () => U.Z.isFocused()),
             guildId: t.guild_id,
-            slowmodeCooldownGuess: r,
-            isComboing: null != a,
-            isBypassSlowmode: c,
+            slowmodeCooldownGuess: l,
+            isComboing: null != o,
+            isBypassSlowmode: u,
             channel: t,
             isThreadCreation: n
         };
-    return (0, i.jsx)(W, { ...d });
+    return (0, a.jsx)(K, { ...c });
 }

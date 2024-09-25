@@ -1,83 +1,84 @@
 n.d(t, {
     tS: function () {
-        return p;
+        return I;
     },
     x3: function () {
-        return I;
+        return T;
     }
-}),
-    n(47120);
-var r = n(735250),
-    i = n(470079),
-    a = n(120356),
-    s = n.n(a),
-    o = n(442837),
-    l = n(846519),
-    u = n(481060),
-    c = n(607070),
-    d = n(706454),
-    _ = n(70956),
-    E = n(506071),
-    f = n(561308),
-    h = n(910136);
-function p(e) {
-    let [t, n] = i.useState(Date.now()),
-        r = (0, E.n)(),
-        a = (0, o.e7)([c.Z], () => c.Z.useReducedMotion);
+});
+var r = n(47120);
+var i = n(735250),
+    a = n(470079),
+    o = n(120356),
+    s = n.n(o),
+    l = n(442837),
+    u = n(846519),
+    c = n(481060),
+    d = n(607070),
+    _ = n(706454),
+    E = n(70956),
+    f = n(506071),
+    h = n(561308),
+    p = n(910136);
+let m = (e) => {
+    let { entry: t, textColor: n, hovered: r = !1, bold: a = !1, scaleFontToUserSetting: o = !1 } = e,
+        s = (0, h.kr)(t),
+        u = (0, l.e7)([_.default], () => _.default.locale);
+    return s
+        ? (0, i.jsx)(T, {
+              entry: t,
+              textColor: n,
+              hovered: r,
+              bold: a,
+              scaleFontToUserSetting: o
+          })
+        : (0, i.jsx)(c.Text, {
+              variant: 'text-xs/normal',
+              color: n,
+              lineClamp: 1,
+              scaleFontToUserSetting: o,
+              children: (0, h.GL)(t, u)
+          });
+};
+function I(e) {
+    let [t, n] = a.useState(Date.now()),
+        r = (0, f.n)(),
+        i = (0, l.e7)([d.Z], () => d.Z.useReducedMotion);
     return (
-        i.useEffect(() => {
-            let t = new l.Xp();
+        a.useEffect(() => {
+            let t = new u.Xp();
             return (
-                t.start(_.Z.Millis.SECOND, () => {
+                t.start(E.Z.Millis.SECOND, () => {
                     n(Date.now());
                 }),
-                (!r || (a && !e)) && t.stop(),
+                (!r || (i && !e)) && t.stop(),
                 () => t.stop()
             );
-        }, [r, a, e]),
+        }, [r, i, e]),
         t
     );
 }
-let I = (e) => {
-    let { entry: t, inline: n = !1, textColor: a, hovered: o = !1, bold: l = !1, scaleFontToUserSetting: c = !1 } = e,
-        d = p(o),
-        _ = i.useMemo(() => (0, f.T_)(t, d), [t, d]),
-        E = i.useRef(_);
+let T = (e) => {
+    let { entry: t, inline: n = !1, textColor: r, hovered: o = !1, bold: l = !1, scaleFontToUserSetting: u = !1 } = e,
+        d = I(o),
+        _ = a.useMemo(() => (0, h.T_)(t, d), [t, d]),
+        E = a.useRef(_);
     return (
-        i.useEffect(() => {
+        a.useEffect(() => {
             E.current = _;
         }, [t]),
-        (0, r.jsx)(u.Text, {
-            className: s()(h.timestamp, {
-                [h.inlineTimestamp]: n,
-                [h.bold]: l
+        (0, i.jsx)(c.Text, {
+            className: s()(p.timestamp, {
+                [p.inlineTimestamp]: n,
+                [p.bold]: l
             }),
             variant: 'text-xs/medium',
             tabularNumbers: !0,
-            color: a,
-            scaleFontToUserSetting: c,
+            color: r,
+            scaleFontToUserSetting: u,
             'aria-label': E.current,
             children: _
         })
     );
 };
-t.ZP = (e) => {
-    let { entry: t, textColor: n, hovered: i = !1, bold: a = !1, scaleFontToUserSetting: s = !1 } = e,
-        l = (0, f.kr)(t),
-        c = (0, o.e7)([d.default], () => d.default.locale);
-    return l
-        ? (0, r.jsx)(I, {
-              entry: t,
-              textColor: n,
-              hovered: i,
-              bold: a,
-              scaleFontToUserSetting: s
-          })
-        : (0, r.jsx)(u.Text, {
-              variant: 'text-xs/normal',
-              color: n,
-              lineClamp: 1,
-              scaleFontToUserSetting: s,
-              children: (0, f.GL)(t, c)
-          });
-};
+t.ZP = m;

@@ -1,55 +1,55 @@
 n.d(t, {
     I1: function () {
-        return m;
+        return T;
     },
     eM: function () {
-        return p;
+        return m;
     },
     rK: function () {
         return I;
     },
     rj: function () {
-        return h;
+        return p;
     }
-}),
-    n(789020);
-var r = n(544891),
-    i = n(570140),
-    a = n(367907),
+});
+var r = n(789020);
+var i = n(544891),
+    a = n(570140),
+    o = n(367907),
     s = n(314897),
-    o = n(271383),
-    l = n(430824),
-    u = n(626135),
-    c = n(630388),
-    d = n(45966),
-    _ = n(290511),
-    E = n(981631),
-    f = n(372897);
-function h(e) {
-    u.default.track(E.rMx.GUILD_ONBOARDING_LOADED, {
-        ...(0, a.hH)(e),
+    l = n(271383),
+    u = n(430824),
+    c = n(626135),
+    d = n(630388),
+    _ = n(45966),
+    E = n(290511),
+    f = n(981631),
+    h = n(372897);
+function p(e) {
+    c.default.track(f.rMx.GUILD_ONBOARDING_LOADED, {
+        ...(0, o.hH)(e),
         has_new_prompts: !1,
         number_of_prompts: 0
     });
 }
-function p(e) {
+function m(e) {
     return (
-        i.Z.dispatch({
+        a.Z.dispatch({
             type: 'GUILD_ONBOARDING_PROMPTS_FETCH_START',
             guildId: e
         }),
-        r.tn.get({ url: E.ANM.GUILD_ONBOARDING(e) }).then(
+        i.tn.get({ url: f.ANM.GUILD_ONBOARDING(e) }).then(
             (t) => {
                 let { body: n } = t,
-                    r = (0, _.cf)(n);
-                return i.Z.dispatch({
+                    r = (0, E.cf)(n);
+                return a.Z.dispatch({
                     type: 'GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS',
                     guildId: e,
                     ...r
                 }).then(() => r.prompts);
             },
             (t) => (
-                i.Z.dispatch({
+                a.Z.dispatch({
                     type: 'GUILD_ONBOARDING_PROMPTS_FETCH_FAILURE',
                     guildId: e
                 }),
@@ -61,30 +61,31 @@ function p(e) {
 async function I(e) {
     var t, n;
     let r = s.default.getId(),
-        i = (0, c.yE)(null !== (n = null === (t = o.ZP.getMember(e, r)) || void 0 === t ? void 0 : t.flags) && void 0 !== n ? n : 0, f.q.COMPLETED_ONBOARDING),
-        a = l.Z.getGuild(e);
-    if (null == a || !a.hasFeature(E.oNc.GUILD_ONBOARDING)) return Promise.resolve();
-    let u = d.Z.shouldFetchPrompts(e),
-        _ = d.Z.getOnboardingPrompts(e);
-    if (!u && _.length > 0) return _.every((e) => !e.inOnboarding) ? (T(e), Promise.resolve()) : (!i && m(e), Promise.resolve());
-    let h = await p(e);
-    return Array.isArray(h) && h.every((e) => !e.inOnboarding) ? (T(e), Promise.resolve()) : (!i && m(e), h);
+        i = (0, d.yE)(null !== (n = null === (t = l.ZP.getMember(e, r)) || void 0 === t ? void 0 : t.flags) && void 0 !== n ? n : 0, h.q.COMPLETED_ONBOARDING),
+        a = u.Z.getGuild(e);
+    if (null == a || !a.hasFeature(f.oNc.GUILD_ONBOARDING)) return Promise.resolve();
+    let o = _.Z.shouldFetchPrompts(e),
+        c = _.Z.getOnboardingPrompts(e);
+    if (!o && c.length > 0) return c.every((e) => !e.inOnboarding) ? (S(e), Promise.resolve()) : (!i && T(e), Promise.resolve());
+    let E = await m(e);
+    return Array.isArray(E) && E.every((e) => !e.inOnboarding) ? (S(e), Promise.resolve()) : (!i && T(e), E);
 }
-function m(e) {
-    i.Z.dispatch({
+function T(e) {
+    a.Z.dispatch({
         type: 'GUILD_ONBOARDING_START',
         guildId: e
     });
 }
-function T(e) {
-    u.default.track(E.rMx.GUILD_ONBOARDING_STEP_VIEWED, {
-        ...(0, a.hH)(e),
-        step: -2,
+let g = -2;
+function S(e) {
+    c.default.track(f.rMx.GUILD_ONBOARDING_STEP_VIEWED, {
+        ...(0, o.hH)(e),
+        step: g,
         required: !0
     }),
-        u.default.track(E.rMx.GUILD_ONBOARDING_STEP_COMPLETED, {
-            ...(0, a.hH)(e),
-            step: -2,
+        c.default.track(f.rMx.GUILD_ONBOARDING_STEP_COMPLETED, {
+            ...(0, o.hH)(e),
+            step: g,
             skipped: !1,
             is_final_step: !0,
             in_onboarding: !0

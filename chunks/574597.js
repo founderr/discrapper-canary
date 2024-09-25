@@ -1,108 +1,111 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
-        return T;
+        return A;
     }
 });
-var l = t(735250),
-    i = t(470079),
-    a = t(866442),
-    r = t(481060),
-    o = t(129861),
-    s = t(91218),
-    c = t(829883),
-    u = t(518738),
-    d = t(14263),
-    m = t(592125),
-    f = t(430824),
-    _ = t(158776),
-    p = t(594174),
-    C = t(970184),
-    h = t(280501),
-    I = t(811654),
-    E = t(344991),
-    x = t(981631),
-    v = t(967831);
-function T(e) {
-    var n;
-    let t = (0, C.CJ)(),
-        T = null == t ? void 0 : null === (n = t.message) || void 0 === n ? void 0 : n.getChannelId(),
-        N = m.Z.getChannel(T),
-        b = f.Z.getGuild(null == N ? void 0 : N.getGuildId()),
-        g = (0, d.Z)(null == b ? void 0 : b.id, I.HI),
-        S = i.useMemo(() => (0, I.tx)(e.defaultValues, null == b ? void 0 : b.id), [e.defaultValues, b]);
-    return (0, l.jsx)(E.ZP, {
-        selectActionComponent: e,
-        queryOptions: (n) => (0, I._H)(e.type, n, T),
-        renderIcon: (e, n) => {
-            let t = n === E.tE.PILL_ICON_SIZE;
-            if ((null == e ? void 0 : e.type) === h.tM.USER) {
-                let i = p.default.getUser(e.value);
+var r = n(735250),
+    i = n(470079),
+    a = n(866442),
+    o = n(481060),
+    s = n(129861),
+    l = n(91218),
+    u = n(829883),
+    c = n(518738),
+    d = n(14263),
+    _ = n(592125),
+    E = n(430824),
+    f = n(158776),
+    h = n(594174),
+    p = n(970184),
+    m = n(280501),
+    I = n(811654),
+    T = n(344991),
+    g = n(981631),
+    S = n(967831);
+function A(e) {
+    var t;
+    let n = (0, p.CJ)(),
+        A = null == n ? void 0 : null === (t = n.message) || void 0 === t ? void 0 : t.getChannelId(),
+        v = _.Z.getChannel(A),
+        N = E.Z.getGuild(null == v ? void 0 : v.getGuildId()),
+        O = (0, d.Z)(null == N ? void 0 : N.id, I.HI),
+        R = (t) => (0, I._H)(e.type, t, A),
+        C = (e, t) => {
+            let n = t === T.tE.PILL_ICON_SIZE;
+            if ((null == e ? void 0 : e.type) === m.tM.USER) {
+                let i = h.default.getUser(e.value);
                 if (null == i) return;
-                return (0, l.jsx)(r.Avatar, {
-                    size: t ? r.AvatarSizes.SIZE_16 : r.AvatarSizes.SIZE_24,
-                    src: i.getAvatarURL(null == b ? void 0 : b.id, n),
-                    status: t ? null : _.Z.getStatus(i.id),
+                return (0, r.jsx)(o.Avatar, {
+                    size: n ? o.AvatarSizes.SIZE_16 : o.AvatarSizes.SIZE_24,
+                    src: i.getAvatarURL(null == N ? void 0 : N.id, t),
+                    status: n ? null : f.Z.getStatus(i.id),
                     'aria-hidden': !0
                 });
             }
-            if ((null == e ? void 0 : e.type) === h.tM.ROLE) {
+            if ((null == e ? void 0 : e.type) === m.tM.ROLE) {
                 var i;
-                let t = null != b ? f.Z.getRole(b.id, e.value) : void 0;
-                if (null == t || null == b) return;
-                let o = (0, c._b)(b, t) ? (0, u.Kz)(t, n) : null;
-                return null != o
-                    ? (0, l.jsx)(s.Z, { ...o })
-                    : (0, l.jsx)(r.ShieldUserIcon, {
+                let n = null != N ? E.Z.getRole(N.id, e.value) : void 0;
+                if (null == n || null == N) return;
+                let s = (0, u._b)(N, n) ? (0, c.Kz)(n, t) : null;
+                return null != s
+                    ? (0, r.jsx)(l.Z, { ...s })
+                    : (0, r.jsx)(o.ShieldUserIcon, {
                           size: 'custom',
-                          color: null !== (i = t.colorString) && void 0 !== i ? i : (0, a.Rf)(x.p6O),
-                          height: n,
-                          width: n
+                          color: null !== (i = n.colorString) && void 0 !== i ? i : (0, a.Rf)(g.p6O),
+                          height: t,
+                          width: t
                       });
             }
         },
-        renderOptionLabel: (e) => {
-            let n = null;
-            if (e.type === h.tM.USER) {
-                let t = p.default.getUser(e.value);
-                null != t &&
-                    (n = (0, l.jsx)(o.Z, {
-                        className: v.tag,
-                        usernameClass: v.username,
-                        discriminatorClass: v.discriminator,
-                        botClass: v.bot,
-                        user: t,
+        y = (e) => {
+            let t = null;
+            if (e.type === m.tM.USER) {
+                let n = h.default.getUser(e.value);
+                null != n &&
+                    (t = (0, r.jsx)(s.Z, {
+                        className: S.tag,
+                        usernameClass: S.username,
+                        discriminatorClass: S.discriminator,
+                        botClass: S.bot,
+                        user: n,
                         forceUsername: !0
                     }));
-            } else if (e.type === h.tM.ROLE) {
-                let t = null != b ? f.Z.getRole(b.id, e.value) : void 0,
-                    i = null == t ? null : null == g ? void 0 : g[t.id];
+            } else if (e.type === m.tM.ROLE) {
+                let n = null != N ? E.Z.getRole(N.id, e.value) : void 0,
+                    i = null == n ? null : null == O ? void 0 : O[n.id];
                 null != i &&
-                    (n = (0, l.jsxs)('div', {
-                        className: v.roleCountContainer,
+                    (t = (0, r.jsxs)('div', {
+                        className: S.roleCountContainer,
                         children: [
-                            (0, l.jsx)(r.UserIcon, {
+                            (0, r.jsx)(o.UserIcon, {
                                 size: 'sm',
                                 color: 'currentColor',
-                                className: v.roleCountIcon
+                                className: S.roleCountIcon
                             }),
-                            (0, l.jsx)('span', {
-                                className: v.roleCountText,
+                            (0, r.jsx)('span', {
+                                className: S.roleCountText,
                                 children: i
                             })
                         ]
                     }));
             }
-            return (0, l.jsxs)('span', {
-                className: v.label,
+            return (0, r.jsxs)('span', {
+                className: S.label,
                 children: [
-                    (0, l.jsx)('span', {
-                        className: v.labelText,
+                    (0, r.jsx)('span', {
+                        className: S.labelText,
                         children: e.label
                     }),
-                    n
+                    t
                 ]
             });
         },
-        defaultValues: S
+        b = i.useMemo(() => (0, I.tx)(e.defaultValues, null == N ? void 0 : N.id), [e.defaultValues, N]);
+    return (0, r.jsx)(T.ZP, {
+        selectActionComponent: e,
+        queryOptions: R,
+        renderIcon: C,
+        renderOptionLabel: y,
+        defaultValues: b
     });
 }

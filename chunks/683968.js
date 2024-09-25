@@ -9,34 +9,37 @@ var r = (function () {
         return n && e(t.prototype, n), r && e(t, r), t;
     };
 })();
+function i(e, t) {
+    if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
+}
+function a(e, t) {
+    if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
+    return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
+}
+function o(e, t) {
+    if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
+    (e.prototype = Object.create(t && t.prototype, {
+        constructor: {
+            value: e,
+            enumerable: !1,
+            writable: !0,
+            configurable: !0
+        }
+    })),
+        t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
+}
 n(968598);
-var i = n(261469),
-    a = n(118403),
-    s = n(59199),
-    o = (function (e) {
+var s = n(261469),
+    l = n(118403),
+    u = n(59199),
+    c = (function (e) {
         function t(e, n) {
-            !(function (e, t) {
-                if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
-            })(this, t);
-            var r = (function (e, t) {
-                if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
-                return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
-            })(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
+            i(this, t);
+            var r = a(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
             return (r._a = e), (r._modulus = n), (r._listeners = {}), r;
         }
         return (
-            !(function (e, t) {
-                if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
-                (e.prototype = Object.create(t && t.prototype, {
-                    constructor: {
-                        value: e,
-                        enumerable: !1,
-                        writable: !0,
-                        configurable: !0
-                    }
-                })),
-                    t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
-            })(t, e),
+            o(t, e),
             r(t, [
                 {
                     key: '__getValue',
@@ -65,7 +68,7 @@ var i = n(261469),
                 {
                     key: 'interpolate',
                     value: function (e) {
-                        return new a(this, s.create(e));
+                        return new l(this, u.create(e));
                     }
                 },
                 {
@@ -83,5 +86,5 @@ var i = n(261469),
             ]),
             t
         );
-    })(i);
-e.exports = o;
+    })(s);
+e.exports = c;

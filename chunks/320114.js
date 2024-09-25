@@ -1,4 +1,4 @@
-e.exports = function (e) {
+function t(e) {
     var t = -1,
         n = Array(e.size);
     return (
@@ -7,4 +7,5 @@ e.exports = function (e) {
         }),
         n
     );
-};
+}
+e.exports = t;

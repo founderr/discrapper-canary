@@ -1,68 +1,71 @@
-n(47120);
-var r = n(570140),
-    i = n(147913),
-    a = n(314897),
+var r = n(47120);
+var i = n(570140),
+    a = n(147913),
+    o = n(314897),
     s = n(967368),
-    o = n(592125),
-    l = n(944486),
-    u = n(631768),
-    c = n(981631);
-function d() {
-    !(function () {
-        let e = l.Z.getVoiceChannelId(),
-            t = s.Z.bitrate;
-        if (null == e) return;
-        let n = o.Z.getChannel(e);
-        if (null != n)
-            t !== n.bitrate &&
-                r.Z.dispatch({
-                    type: 'SET_CHANNEL_BITRATE',
-                    bitrate: n.bitrate
-                });
-    })(),
-        !(function () {
-            var e;
-            let t = l.Z.getVoiceChannelId(),
-                n = u.Z.mode;
-            if (null == t) return;
-            let i = o.Z.getChannel(t);
-            if (null == i) return;
-            let a = null !== (e = i.videoQualityMode) && void 0 !== e ? e : c.Ucd.AUTO;
-            n !== a &&
-                r.Z.dispatch({
-                    type: 'SET_CHANNEL_VIDEO_QUALITY_MODE',
-                    mode: a
-                });
-        })();
+    l = n(592125),
+    u = n(944486),
+    c = n(631768),
+    d = n(981631);
+function _(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
 }
-function _(e) {
+function E() {
+    let e = u.Z.getVoiceChannelId(),
+        t = s.Z.bitrate;
+    if (null == e) return;
+    let n = l.Z.getChannel(e);
+    if (null != n)
+        t !== n.bitrate &&
+            i.Z.dispatch({
+                type: 'SET_CHANNEL_BITRATE',
+                bitrate: n.bitrate
+            });
+}
+function f() {
+    var e;
+    let t = u.Z.getVoiceChannelId(),
+        n = c.Z.mode;
+    if (null == t) return;
+    let r = l.Z.getChannel(t);
+    if (null == r) return;
+    let a = null !== (e = r.videoQualityMode) && void 0 !== e ? e : d.Ucd.AUTO;
+    n !== a &&
+        i.Z.dispatch({
+            type: 'SET_CHANNEL_VIDEO_QUALITY_MODE',
+            mode: a
+        });
+}
+function h() {
+    E(), f();
+}
+function p(e) {
     let { channels: t } = e;
-    for (let e of t) l.Z.getVoiceChannelId() === e.id && d();
+    for (let e of t) u.Z.getVoiceChannelId() === e.id && h();
 }
-function E(e) {
+function m(e) {
     let { voiceStates: t } = e;
     t.forEach((e) => {
-        a.default.getSessionId() === e.sessionId && d();
+        o.default.getSessionId() === e.sessionId && h();
     });
 }
-class f extends i.Z {
+class I extends a.Z {
     constructor(...e) {
-        var t, n, r;
         super(...e),
-            (t = this),
-            (n = 'actions'),
-            (r = {
-                CHANNEL_UPDATES: _,
-                VOICE_STATE_UPDATES: E
-            }),
-            n in t
-                ? Object.defineProperty(t, n, {
-                      value: r,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (t[n] = r);
+            _(this, 'actions', {
+                CHANNEL_UPDATES: p,
+                VOICE_STATE_UPDATES: m
+            });
     }
 }
-t.Z = new f();
+t.Z = new I();

@@ -1,4 +1,4 @@
-e.exports = function (e) {
+function t(e) {
     return {
         name: 'Python profiler',
         contains: [
@@ -32,4 +32,5 @@ e.exports = function (e) {
             }
         ]
     };
-};
+}
+e.exports = t;

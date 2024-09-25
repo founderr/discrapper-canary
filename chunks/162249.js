@@ -1,8 +1,8 @@
 var r = n(470079),
     i = n(844303),
     a = n(230866),
-    s = n(827622),
-    o =
+    o = n(827622),
+    s =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -23,17 +23,30 @@ var r = n(470079),
         };
     })();
 function u(e, t) {
+    if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
+}
+function c(e, t) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
 }
-var c = (function (e) {
+function d(e, t) {
+    if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
+    (e.prototype = Object.create(t && t.prototype, {
+        constructor: {
+            value: e,
+            enumerable: !1,
+            writable: !0,
+            configurable: !0
+        }
+    })),
+        t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
+}
+var _ = (function (e) {
     function t() {
-        !(function (e, t) {
-            if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
-        })(this, t);
-        for (var e, n, r, i = arguments.length, s = Array(i), o = 0; o < i; o++) s[o] = arguments[o];
+        u(this, t);
+        for (var e, n, r, i = arguments.length, o = Array(i), s = 0; s < i; s++) o[s] = arguments[s];
         return (
-            (n = r = u(this, (e = t.__proto__ || Object.getPrototypeOf(t)).call.apply(e, [this].concat(s)))),
+            (n = r = c(this, (e = t.__proto__ || Object.getPrototypeOf(t)).call.apply(e, [this].concat(o)))),
             (r.handleChange = function (e) {
                 var t = a.T(e, r.props.hsl, r.props.direction, r.props.a, r.container);
                 t && 'function' == typeof r.props.onChange && r.props.onChange(t, e);
@@ -47,22 +60,11 @@ var c = (function (e) {
             (r.unbindEventListeners = function () {
                 window.removeEventListener('mousemove', r.handleChange), window.removeEventListener('mouseup', r.handleMouseUp);
             }),
-            u(r, n)
+            c(r, n)
         );
     }
     return (
-        !(function (e, t) {
-            if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
-            (e.prototype = Object.create(t && t.prototype, {
-                constructor: {
-                    value: e,
-                    enumerable: !1,
-                    writable: !0,
-                    configurable: !0
-                }
-            })),
-                t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
-        })(t, e),
+        d(t, e),
         l(t, [
             {
                 key: 'componentWillUnmount',
@@ -119,7 +121,7 @@ var c = (function (e) {
                                         top: 100 * t.a + '%'
                                     }
                                 },
-                                overwrite: o({}, this.props.style)
+                                overwrite: s({}, this.props.style)
                             },
                             {
                                 vertical: 'vertical' === this.props.direction,
@@ -129,7 +131,7 @@ var c = (function (e) {
                     return r.createElement(
                         'div',
                         { style: n.alpha },
-                        r.createElement('div', { style: n.checkboard }, r.createElement(s.Z, { renderers: this.props.renderers })),
+                        r.createElement('div', { style: n.checkboard }, r.createElement(o.Z, { renderers: this.props.renderers })),
                         r.createElement('div', { style: n.gradient }),
                         r.createElement(
                             'div',
@@ -151,4 +153,4 @@ var c = (function (e) {
         t
     );
 })(r.PureComponent || r.Component);
-t.Z = c;
+t.Z = _;

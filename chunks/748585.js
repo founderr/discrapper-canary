@@ -1,8 +1,9 @@
-var r, i;
+var r;
 n.d(t, {
     q: function () {
         return r;
     }
 }),
-    ((i = r || (r = {}))[(i.FILLED = 0)] = 'FILLED'),
-    (i[(i.CUSTOM = 1)] = 'CUSTOM');
+    !(function (e) {
+        (e[(e.FILLED = 0)] = 'FILLED'), (e[(e.CUSTOM = 1)] = 'CUSTOM');
+    })(r || (r = {}));

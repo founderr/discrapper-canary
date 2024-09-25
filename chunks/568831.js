@@ -9,6 +9,7 @@ var r = n(528734),
 function a(e) {
     (0, i.Z)(1, arguments);
     var t = (0, r.default)(e),
-        n = t.getMonth();
-    return t.setMonth(n - (n % 3), 1), t.setHours(0, 0, 0, 0), t;
+        n = t.getMonth(),
+        a = n - (n % 3);
+    return t.setMonth(a, 1), t.setHours(0, 0, 0, 0), t;
 }

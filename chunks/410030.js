@@ -3,7 +3,7 @@ n.d(t, {
         return a;
     },
     i6: function () {
-        return s;
+        return o;
     }
 });
 var r = n(780384),
@@ -12,14 +12,15 @@ function a() {
     let { theme: e } = (0, r.TC)();
     return e;
 }
-function s() {
-    return (function (e) {
-        switch (e) {
-            case i.BRd.DARK:
-                return 0;
-            case i.BRd.LIGHT:
-                return 1;
-        }
-    })(a());
+function o() {
+    return s(a());
+}
+function s(e) {
+    switch (e) {
+        case i.BRd.DARK:
+            return 0;
+        case i.BRd.LIGHT:
+            return 1;
+    }
 }
 t.ZP = a;

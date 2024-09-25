@@ -1,20 +1,19 @@
 n.d(t, {
     $1: function () {
-        return I;
+        return m;
     },
     YT: function () {
-        return T;
+        return g;
     },
     pn: function () {
         return S;
     }
-}),
-    n(411104);
+});
 var r,
-    i,
-    a = n(570140),
-    s = n(923928),
-    o = n(593472),
+    i = n(411104);
+var a = n(570140),
+    o = n(923928),
+    s = n(593472),
     l = n(594190),
     u = n(77498),
     c = n(594174),
@@ -29,30 +28,27 @@ let p = {
     ptb: [1, 0, 1005, 2],
     stable: [1, 0, 9001, 2]
 };
-function I() {
+function m() {
     var e;
     return !(null === E.ZP || void 0 === E.ZP ? void 0 : null === (e = E.ZP.isModuleVersionAtLeast) || void 0 === e ? void 0 : e.call(E.ZP, 'discord_hook', p));
 }
-async function m() {
+async function I() {
     if (!(0, _.isWindows)()) return Promise.reject(Error('Hook is only available on Windows'));
-    if (I()) return Promise.reject(Error('Hook module is too old'));
+    if (m()) return Promise.reject(Error('Hook module is too old'));
     await E.ZP.ensureModule('discord_hook');
     let e = await E.ZP.requireModule('discord_hook');
-    return (
-        (function (e) {
-            if (null == e.setFlags) return;
-            let t = 0,
-                n = f.Z.getCurrentConfig({ location: 'edd7d3_1' }, { autoTrackExposure: !1 });
-            n.enableCrashReporting && (console.log('Hook: Enabling crash reporting.'), (t |= 1));
-            let r = c.default.getCurrentUser();
-            null != r && (r.isStaff() || n.enableCrashTrigger) && (console.log('Hook: Enabling crash trigger.'), (t |= 2)), e.setFlags(t);
-        })(e),
-        e
-    );
+    return T(e), e;
 }
-((i = r || (r = {}))[(i.None = 0)] = 'None'), (i[(i.EnableCrashReporting = 1)] = 'EnableCrashReporting'), (i[(i.EnableCrashTrigger = 2)] = 'EnableCrashTrigger');
-function T(e, t) {
-    return m().then((n) => {
+function T(e) {
+    if (null == e.setFlags) return;
+    let t = 0,
+        n = f.Z.getCurrentConfig({ location: 'edd7d3_1' }, { autoTrackExposure: !1 });
+    n.enableCrashReporting && (console.log('Hook: Enabling crash reporting.'), (t |= 1));
+    let r = c.default.getCurrentUser();
+    null != r && (r.isStaff() || n.enableCrashTrigger) && (console.log('Hook: Enabling crash trigger.'), (t |= 2)), e.setFlags(t);
+}
+function g(e, t) {
+    return I().then((n) => {
         var r;
         let i = null === (r = l.ZP.getGameForPID(e)) || void 0 === r ? void 0 : r.name,
             c = u.Z.getGameByName(i),
@@ -71,7 +67,7 @@ function T(e, t) {
                 },
                 E = l.ZP.getOverlayOptionsForPID(e),
                 f = {
-                    ...o.r,
+                    ...s.r,
                     ...E,
                     elevate: l.ZP.shouldElevateProcessForPID(e)
                 };
@@ -80,13 +76,16 @@ function T(e, t) {
                       n.cancelAttachToProcess(e), u('Timed out waiting for hook response', !1);
                   }, 120000)),
                   n.attachToProcess(e, f, u),
-                  a.Z.wait(() => s.Z.clearElevatedProcess()))
+                  a.Z.wait(() => o.Z.clearElevatedProcess()))
                 : r('Hook is disabled for this game');
         });
     });
 }
 function S(e) {
-    return m().then((t) => {
+    return I().then((t) => {
         t.cancelAttachToProcess(e);
     });
 }
+!(function (e) {
+    (e[(e.None = 0)] = 'None'), (e[(e.EnableCrashReporting = 1)] = 'EnableCrashReporting'), (e[(e.EnableCrashTrigger = 2)] = 'EnableCrashTrigger');
+})(r || (r = {}));

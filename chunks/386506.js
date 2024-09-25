@@ -1,31 +1,33 @@
 let r;
 n.d(t, {
     M3: function () {
-        return _;
+        return f;
     },
     aD: function () {
-        return u;
-    },
-    bF: function () {
         return d;
     },
+    bF: function () {
+        return E;
+    },
     f0: function () {
-        return c;
+        return _;
     }
 });
 var i = n(544891),
     a = n(314897),
-    s = n(12647),
-    o = n(865427);
-let l = '/__development/build_overrides';
-async function u(e) {
+    o = n(12647),
+    s = n(865427);
+let l = '/__development/build_overrides',
+    u = '/__development/create_build_override_link',
+    c = '/__development/link';
+async function d(e) {
     try {
         var t;
         let n = await i.tn.put({
-            url: (0, o.pU)(l),
+            url: (0, s.pU)(l),
             body: {
                 overrides: e,
-                version: o.Ji
+                version: s.Ji
             },
             headers: { Authorization: null !== (t = a.default.getToken()) && void 0 !== t ? t : '' },
             oldFormErrors: !0
@@ -35,14 +37,14 @@ async function u(e) {
         return e;
     }
 }
-async function c(e) {
+async function _(e) {
     try {
         let t = await i.tn.put({
-            url: (0, o.pU)('/__development/link'),
+            url: (0, s.pU)(c),
             body: {
                 payload: e,
                 token: a.default.getToken(),
-                version: o.Ji
+                version: s.Ji
             },
             oldFormErrors: !0
         });
@@ -51,18 +53,18 @@ async function c(e) {
         return e;
     }
 }
-async function d() {
+async function E() {
     let e = await i.tn.del({
-        url: (0, o.pU)(l),
+        url: (0, s.pU)(l),
         oldFormErrors: !0
     });
     return await r(e), e;
 }
-function _(e) {
+function f(e) {
     var t;
     return i.tn
         .post({
-            url: (0, o.pU)('/__development/create_build_override_link'),
+            url: (0, s.pU)(u),
             body: e,
             headers: { Authorization: null !== (t = a.default.getToken()) && void 0 !== t ? t : '' },
             oldFormErrors: !0
@@ -86,6 +88,6 @@ function _(e) {
 }
 r = async (e) => {
     try {
-        await s.Z.flushCookies();
+        await o.Z.flushCookies();
     } catch (e) {}
 };

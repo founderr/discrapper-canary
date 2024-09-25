@@ -1,8 +1,8 @@
 var r = n(470079),
     i = n(476400),
     a = n.n(i),
-    s = n(844303),
-    o = n(829307),
+    o = n(844303),
+    s = n(829307),
     l = n(464854),
     u = n(781466),
     c = n(522082),
@@ -11,9 +11,11 @@ var r = n(470079),
             n = e.onChange,
             i = e.pointer,
             a = e.styles,
-            c = e.className,
-            d = (0, s.default)(
-                (0, o.Z)(
+            c = void 0 === a ? {} : a,
+            d = e.className,
+            _ = void 0 === d ? '' : d,
+            E = (0, o.default)(
+                (0, s.Z)(
                     {
                         default: {
                             hue: {
@@ -23,20 +25,20 @@ var r = n(470079),
                             Hue: { radius: '2px' }
                         }
                     },
-                    void 0 === a ? {} : a
+                    c
                 )
             );
         return r.createElement(
             'div',
             {
-                style: d.wrap || {},
-                className: 'slider-picker ' + (void 0 === c ? '' : c)
+                style: E.wrap || {},
+                className: 'slider-picker ' + _
             },
             r.createElement(
                 'div',
-                { style: d.hue },
+                { style: E.hue },
                 r.createElement(l.PS, {
-                    style: d.Hue,
+                    style: E.Hue,
                     hsl: t,
                     pointer: i,
                     onChange: n
@@ -44,7 +46,7 @@ var r = n(470079),
             ),
             r.createElement(
                 'div',
-                { style: d.swatches },
+                { style: E.swatches },
                 r.createElement(u.Z, {
                     hsl: t,
                     onClick: n

@@ -1,53 +1,53 @@
-var i = n(735250),
-    s = n(470079),
+var r = n(735250),
+    i = n(470079),
     a = n(442837),
-    r = n(481060),
-    l = n(528963),
-    o = n(143740),
-    c = n(528144),
-    u = n(212342),
+    o = n(481060),
+    s = n(528963),
+    l = n(143740),
+    u = n(528144),
+    c = n(212342),
     d = n(689938),
     _ = n(196273);
-t.Z = (e) => {
+let E = (e) => {
     let { channelId: t, messageId: n } = e,
-        E = (0, a.e7)([u.Z], () => u.Z.shouldShowBump(n), [n]),
-        I = s.useCallback(() => {
-            l.Z.dismissPublishBump(n), (0, o.Z)(t, n);
+        E = (0, a.e7)([c.Z], () => c.Z.shouldShowBump(n), [n]),
+        f = i.useCallback(() => {
+            s.Z.dismissPublishBump(n), (0, l.Z)(t, n);
         }, [t, n]),
-        m = s.useCallback(() => {
-            l.Z.dismissPublishBump(n);
+        h = i.useCallback(() => {
+            s.Z.dismissPublishBump(n);
         }, [n]),
-        T = s.useCallback(() => {
-            l.Z.permanentlyHidePublishBump(t);
+        p = i.useCallback(() => {
+            s.Z.permanentlyHidePublishBump(t);
         }, [t]);
     return E
-        ? (0, i.jsxs)('div', {
+        ? (0, r.jsxs)('div', {
               className: _.container,
               children: [
-                  (0, i.jsxs)('div', {
+                  (0, r.jsxs)('div', {
                       className: _.bumpBox,
                       children: [
-                          (0, i.jsx)(r.AnnouncementsIcon, {
+                          (0, r.jsx)(o.AnnouncementsIcon, {
                               size: 'xs',
                               color: 'currentColor',
                               className: _.icon
                           }),
-                          (0, i.jsx)(c.Z, {
+                          (0, r.jsx)(u.Z, {
                               className: _.tagline,
-                              size: c.Z.Sizes.SIZE_14,
+                              size: u.Z.Sizes.SIZE_14,
                               children: d.Z.Messages.NEWS_CHANNEL_PUBLISH_BUMP
                           }),
-                          (0, i.jsx)(r.Button, {
-                              color: r.Button.Colors.LINK,
-                              look: r.Button.Looks.LINK,
-                              size: r.Button.Sizes.MIN,
+                          (0, r.jsx)(o.Button, {
+                              color: o.Button.Colors.LINK,
+                              look: o.Button.Looks.LINK,
+                              size: o.Button.Sizes.MIN,
                               className: _.publish,
-                              onClick: I,
+                              onClick: f,
                               children: d.Z.Messages.NEWS_CHANNEL_PUBLISH
                           }),
-                          (0, i.jsx)(r.Clickable, {
-                              onClick: m,
-                              children: (0, i.jsx)(r.CircleXIcon, {
+                          (0, r.jsx)(o.Clickable, {
+                              onClick: h,
+                              children: (0, r.jsx)(o.CircleXIcon, {
                                   size: 'xs',
                                   color: 'currentColor',
                                   className: _.closeIcon
@@ -55,12 +55,12 @@ t.Z = (e) => {
                           })
                       ]
                   }),
-                  (0, i.jsx)(r.Text, {
+                  (0, r.jsx)(o.Text, {
                       color: 'text-muted',
                       className: _.hidePermanently,
                       variant: 'text-sm/normal',
-                      children: (0, i.jsx)(r.Clickable, {
-                          onClick: T,
+                      children: (0, r.jsx)(o.Clickable, {
+                          onClick: p,
                           children: d.Z.Messages.NEWS_CHANNEL_PUBLISH_BUMP_HIDE_PERMANENTLY
                       })
                   })
@@ -68,3 +68,4 @@ t.Z = (e) => {
           })
         : null;
 };
+t.Z = E;

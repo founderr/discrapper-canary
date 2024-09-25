@@ -1,10 +1,10 @@
 var r = n(735250),
     i = n(470079),
     a = n(392711),
-    s = n.n(a),
-    o = n(826298),
+    o = n.n(a),
+    s = n(826298),
     l = n(939751);
-t.Z = (e) => {
+let u = (e) => {
     let { showImage: t } = e,
         {
             usageWidth: n,
@@ -12,9 +12,9 @@ t.Z = (e) => {
             sourceWidth: u
         } = i.useMemo(
             () => ({
-                usageWidth: s().random(60, 120),
-                descriptionWidth: s().random(200, 600),
-                sourceWidth: s().random(45, 90)
+                usageWidth: o().random(60, 120),
+                descriptionWidth: o().random(200, 600),
+                sourceWidth: o().random(45, 90)
             }),
             []
         );
@@ -26,19 +26,20 @@ t.Z = (e) => {
                 className: l.infoWrapper,
                 children: [
                     (0, r.jsx)('div', {
-                        style: { maxWidth: (0, o.Q1)(n) },
+                        style: { maxWidth: (0, s.Q1)(n) },
                         className: l.usageWrapper
                     }),
                     (0, r.jsx)('div', {
-                        style: { maxWidth: (0, o.Q1)(a) },
+                        style: { maxWidth: (0, s.Q1)(a) },
                         className: l.description
                     })
                 ]
             }),
             (0, r.jsx)('div', {
-                style: { width: (0, o.Q1)(u) },
+                style: { width: (0, s.Q1)(u) },
                 className: l.source
             })
         ]
     });
 };
+t.Z = u;

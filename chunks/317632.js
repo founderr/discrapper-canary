@@ -1,94 +1,102 @@
-n(47120);
-var i,
-    s,
-    a,
-    r,
-    l = n(442837),
+var r,
+    i = n(47120);
+var a = n(442837),
     o = n(570140),
-    c = n(823379),
-    u = n(981631);
-let d = [],
-    _ = {},
-    E = null,
-    I = 0;
+    s = n(823379),
+    l = n(981631);
+function u(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+let c = [],
+    d = {},
+    _ = null,
+    E = 0;
+function f(e) {
+    let { gameInvites: t } = e;
+    c = t.map(T).filter(s.lm);
+}
+function h(e) {
+    let { gameInvite: t } = e,
+        n = T(t);
+    null != n && ((c = [n, ...c]), (_ = t), (E += 1));
+}
+function p(e) {
+    let { inviteId: t } = e;
+    c = c.filter((e) => e.invite_id !== t);
+}
 function m(e) {
+    let { inviteIds: t } = e;
+    c = c.filter((e) => !t.includes(e.invite_id));
+}
+function I(e) {
+    (d = { ...d })[e.inviteId] = {
+        installed: e.installed,
+        joinable: e.joinable
+    };
+}
+function T(e) {
     let t = null;
     try {
         t = JSON.parse(e.launch_parameters);
     } catch {
         return null;
     }
-    if (e.platform_type === u.ABu.XBOX) {
+    if (e.platform_type === l.ABu.XBOX) {
         let n = null == t ? void 0 : t.titleId,
-            i = null == t ? void 0 : t.inviteToken;
-        return null == n || null == i
+            r = null == t ? void 0 : t.inviteToken;
+        return null == n || null == r
             ? null
             : {
                   ...e,
                   parsed_launch_parameters: {
                       titleId: n,
-                      inviteToken: i
+                      inviteToken: r
                   }
               };
     }
     return null;
 }
-class T extends (i = l.ZP.Store) {
+function g(e) {
+    (_ = null), (E = 0);
+}
+class S extends (r = a.ZP.Store) {
     getInvites() {
-        return d;
+        return c;
     }
     getInviteStatuses() {
-        return _;
+        return d;
     }
     isInviteGameInstalled(e) {
         var t;
-        return null === (t = _[e.invite_id]) || void 0 === t ? void 0 : t.installed;
+        return null === (t = d[e.invite_id]) || void 0 === t ? void 0 : t.installed;
     }
     isInviteJoinable(e) {
         var t;
-        return null === (t = _[e.invite_id]) || void 0 === t ? void 0 : t.joinable;
+        return null === (t = d[e.invite_id]) || void 0 === t ? void 0 : t.joinable;
     }
     getLastUnseenInvite() {
-        return E;
+        return _;
     }
     getUnseenInviteCount() {
-        return I;
+        return E;
     }
 }
-(r = 'GameInviteStore'),
-    (a = 'displayName') in (s = T)
-        ? Object.defineProperty(s, a, {
-              value: r,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (s[a] = r),
-    (t.Z = new T(o.Z, {
-        CONNECTION_OPEN_SUPPLEMENTAL: function (e) {
-            let { gameInvites: t } = e;
-            d = t.map(m).filter(c.lm);
-        },
-        GAME_INVITE_CREATE: function (e) {
-            let { gameInvite: t } = e,
-                n = m(t);
-            null != n && ((d = [n, ...d]), (E = t), (I += 1));
-        },
-        GAME_INVITE_DELETE: function (e) {
-            let { inviteId: t } = e;
-            d = d.filter((e) => e.invite_id !== t);
-        },
-        GAME_INVITE_DELETE_MANY: function (e) {
-            let { inviteIds: t } = e;
-            d = d.filter((e) => !t.includes(e.invite_id));
-        },
-        GAME_INVITE_UPDATE_STATUS: function (e) {
-            (_ = { ..._ })[e.inviteId] = {
-                installed: e.installed,
-                joinable: e.joinable
-            };
-        },
-        GAME_INVITE_CLEAR_UNSEEN: function (e) {
-            (E = null), (I = 0);
-        }
+u(S, 'displayName', 'GameInviteStore'),
+    (t.Z = new S(o.Z, {
+        CONNECTION_OPEN_SUPPLEMENTAL: f,
+        GAME_INVITE_CREATE: h,
+        GAME_INVITE_DELETE: p,
+        GAME_INVITE_DELETE_MANY: m,
+        GAME_INVITE_UPDATE_STATUS: I,
+        GAME_INVITE_CLEAR_UNSEEN: g
     }));

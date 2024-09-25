@@ -1,6 +1,6 @@
 n.d(t, {
     pF: function () {
-        return a;
+        return o;
     }
 });
 var r = n(818083);
@@ -24,6 +24,10 @@ let i = (0, r.B)({
         ]
     }),
     a = (e) => {
+        let { location: t } = e;
+        return i.getCurrentConfig({ location: t }, { autoTrackExposure: !1 }).enabled;
+    },
+    o = (e) => {
         let { location: t } = e;
         return i.useExperiment({ location: t }, { autoTrackExposure: !1 }).enabled;
     };

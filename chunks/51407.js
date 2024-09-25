@@ -1,8 +1,9 @@
-var r, i;
+var r;
 n.d(t, {
     h: function () {
         return r;
     }
 }),
-    ((i = r || (r = {}))[(i.USER = 100)] = 'USER'),
-    (i[(i.STREAM = 18)] = 'STREAM');
+    !(function (e) {
+        (e[(e.USER = 100)] = 'USER'), (e[(e.STREAM = 18)] = 'STREAM');
+    })(r || (r = {}));

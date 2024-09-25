@@ -1,18 +1,18 @@
 n.d(t, {
     J2: function () {
-        return h;
+        return p;
     },
     V3: function () {
-        return f;
+        return h;
     },
     ZB: function () {
-        return m;
-    },
-    e4: function () {
         return T;
     },
+    e4: function () {
+        return g;
+    },
     fq: function () {
-        return E;
+        return f;
     },
     lM: function () {
         return S;
@@ -20,59 +20,59 @@ n.d(t, {
     wu: function () {
         return I;
     }
-}),
-    n(47120);
-var r = n(470079),
-    i = n(392711),
-    a = n(866442),
+});
+var r = n(47120);
+var i = n(470079),
+    a = n(392711);
+var o = n(866442),
     s = n(399606),
-    o = n(692547),
-    l = n(780384),
-    u = n(607070),
-    c = n(44315),
-    d = n(564334),
-    _ = n(981631);
-function E(e) {
-    let t = (0, s.e7)([u.Z], () => u.Z.saturation);
-    return (0, r.useMemo)(
+    l = n(692547),
+    u = n(780384),
+    c = n(607070),
+    d = n(44315),
+    _ = n(564334),
+    E = n(981631);
+function f(e) {
+    let t = (0, s.e7)([c.Z], () => c.Z.saturation);
+    return (0, i.useMemo)(
         () =>
             null == e
                 ? null
                 : {
-                      overlaySyncedWithUserTheme: o.Z.colors.PROFILE_GRADIENT_OVERLAY_SYNCED_WITH_USER_THEME.resolve({
+                      overlaySyncedWithUserTheme: l.Z.colors.PROFILE_GRADIENT_OVERLAY_SYNCED_WITH_USER_THEME.resolve({
                           theme: e,
                           saturation: t
                       }).hsl(),
-                      overlay: o.Z.colors.PROFILE_GRADIENT_OVERLAY.resolve({
+                      overlay: l.Z.colors.PROFILE_GRADIENT_OVERLAY.resolve({
                           theme: e,
                           saturation: t
                       }).hsl(),
-                      sectionBox: o.Z.colors.PROFILE_GRADIENT_SECTION_BOX.resolve({
+                      sectionBox: l.Z.colors.PROFILE_GRADIENT_SECTION_BOX.resolve({
                           theme: e,
                           saturation: t
                       }).hsl(),
-                      messageInputBorder: o.Z.colors.PROFILE_GRADIENT_MESSAGE_INPUT_BORDER.resolve({
+                      messageInputBorder: l.Z.colors.PROFILE_GRADIENT_MESSAGE_INPUT_BORDER.resolve({
                           theme: e,
                           saturation: t
                       }).hsl(),
-                      dividerOpacity: e === o.Z.themes.DARK ? 0.24 : 0.12,
-                      noteBackgroundColor: o.Z.colors.PROFILE_GRADIENT_NOTE_BACKGROUND.resolve({
+                      dividerOpacity: e === l.Z.themes.DARK ? 0.24 : 0.12,
+                      noteBackgroundColor: l.Z.colors.PROFILE_GRADIENT_NOTE_BACKGROUND.resolve({
                           theme: e,
                           saturation: t
                       }).hsl(),
-                      profileBodyBackgroundHover: o.Z.colors.PROFILE_GRADIENT_PROFILE_BODY_BACKGROUND_HOVER.resolve({
+                      profileBodyBackgroundHover: l.Z.colors.PROFILE_GRADIENT_PROFILE_BODY_BACKGROUND_HOVER.resolve({
                           theme: e,
                           saturation: t
                       }).hsl(),
-                      rolePillBackgroundColor: o.Z.colors.PROFILE_GRADIENT_ROLE_PILL_BACKGROUND.resolve({
+                      rolePillBackgroundColor: l.Z.colors.PROFILE_GRADIENT_ROLE_PILL_BACKGROUND.resolve({
                           theme: e,
                           saturation: t
                       }).hsl(),
-                      rolePillBorderColor: o.Z.colors.PROFILE_GRADIENT_ROLE_PILL_BORDER.resolve({
+                      rolePillBorderColor: l.Z.colors.PROFILE_GRADIENT_ROLE_PILL_BORDER.resolve({
                           theme: e,
                           saturation: t
                       }).hsl(),
-                      icon: o.Z.colors.INTERACTIVE_NORMAL.resolve({
+                      icon: l.Z.colors.INTERACTIVE_NORMAL.resolve({
                           theme: e,
                           saturation: t
                       }).hsl()
@@ -80,44 +80,48 @@ function E(e) {
         [e, t]
     );
 }
-function f(e) {
-    return null == e ? null : (0, a.Bd)(e) > 0.5 ? _.BRd.DARK : _.BRd.LIGHT;
+function h(e) {
+    return null == e ? null : (0, o.Bd)(e) > 0.5 ? E.BRd.DARK : E.BRd.LIGHT;
 }
-function h(e, t, n) {
+function p(e, t, n) {
     let r = n / 100,
         i = 1 - r;
     return [Math.round(e[0] * i + t[0] * r), Math.round(e[1] * i + t[1] * r), Math.round(e[2] * i + t[2] * r)];
 }
-function p(e, t) {
-    let n = (0, a.px)(e);
+function m(e, t) {
+    let n = (0, o.px)(e);
     if (null == t) return 0;
-    let r = d.Z.parseString(t);
+    let r = _.Z.parseString(t);
     if (null == r) return 0;
     let i = [r.red, r.green, r.blue],
-        s = [n[0], n[1], n[2]],
-        o = r.alpha,
-        [l, u, c] = i.map((e, t) => Math.floor(o * e + (1 - o) * s[t]));
-    return (0, a.QT)('rgba('.concat(l, ', ').concat(u, ', ').concat(c, ')'));
+        a = [n[0], n[1], n[2]],
+        s = r.alpha,
+        [l, u, c] = i.map((e, t) => Math.floor(s * e + (1 - s) * a[t]));
+    return (0, o.QT)('rgba('.concat(l, ', ').concat(u, ', ').concat(c, ')'));
 }
 function I(e, t, n) {
-    let r = E(e);
-    return null == r || null == t ? null : p(t, n ? r.overlaySyncedWithUserTheme : r.overlay);
+    let r = f(e);
+    return null == r || null == t ? null : m(t, n ? r.overlaySyncedWithUserTheme : r.overlay);
 }
-let m = (0, i.memoize)(
+let T = (0, a.memoize)(
     (e) => {
-        let t = (0, l.Qg)(e, {
+        let t = (0, u.Qg)(e, {
             base: '#ffffff',
-            contrastRatio: l.S3.HighContrastText
+            contrastRatio: u.S3.HighContrastText
         });
-        return (0, a._i)(t);
+        return (0, o._i)(t);
     },
     (e) => e
 );
-function T(e, t) {
-    let n = E(e);
-    return null != n && null != t ? p(t, null == n ? void 0 : n.messageInputBorder) : null;
+function g(e, t) {
+    let n = f(e);
+    return null != n && null != t ? m(t, null == n ? void 0 : n.messageInputBorder) : null;
 }
 function S(e, t) {
-    let n = (0, c.Sl)(_.Ilk.WHITE_500).hex;
-    return (0, l.wj)(e) ? (0, a._i)(n) : null != t ? m(t) : null;
+    let n = (0, d.Sl)(E.Ilk.WHITE_500).hex;
+    return (0, u.wj)(e) ? (0, o._i)(n) : null != t ? T(t) : null;
+}
+function A(e, t, n) {
+    let r = p(e, t, n);
+    return 'rgba('.concat(r[0], ', ').concat(r[1], ', ').concat(r[2], ', 1)');
 }

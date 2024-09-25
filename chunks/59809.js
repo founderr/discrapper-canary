@@ -1,8 +1,9 @@
-var r, i;
+var r;
 n.d(t, {
     O: function () {
         return r;
     }
 }),
-    ((i = r || (r = {}))[(i.DESKTOP_ACCOUNT_PANEL_AREA = 1)] = 'DESKTOP_ACCOUNT_PANEL_AREA'),
-    (i[(i.MOBILE_HOME_DOCK_AREA = 2)] = 'MOBILE_HOME_DOCK_AREA');
+    !(function (e) {
+        (e[(e.DESKTOP_ACCOUNT_PANEL_AREA = 1)] = 'DESKTOP_ACCOUNT_PANEL_AREA'), (e[(e.MOBILE_HOME_DOCK_AREA = 2)] = 'MOBILE_HOME_DOCK_AREA');
+    })(r || (r = {}));

@@ -2,49 +2,50 @@ var r = n(735250);
 n(470079);
 var i = n(120356),
     a = n.n(i),
-    s = n(646574),
-    o = n(543241),
+    o = n(646574),
+    s = n(543241),
     l = n(747613),
     u = n(533432),
     c = n(149203),
     d = n(185923),
     _ = n(74353);
-t.Z = (e) => {
-    let { accessory: t, pickerIntention: n, headerClassName: i, emojiListRef: E, onKeyDown: f, onFocus: h, autoFocus: p, searchBarRef: I, hasTabWrapper: m, diversitySurrogate: T, isBurstReaction: S, onBurstReactionToggle: g, renderHeader: A } = e,
-        N = (0, r.jsxs)(r.Fragment, {
+let E = (e) => {
+    let { accessory: t, pickerIntention: n, headerClassName: i, emojiListRef: E, onKeyDown: f, onFocus: h, autoFocus: p, searchBarRef: m, hasTabWrapper: I, diversitySurrogate: T, isBurstReaction: g, onBurstReactionToggle: S, renderHeader: A } = e,
+        v = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(u.Z, {
                     emojiListRef: E,
                     gridNavigatorId: c.Vr,
                     onKeyDown: f,
                     className: _.searchBar,
-                    ref: I,
+                    ref: m,
                     isFullRow: !1,
                     onFocus: h,
                     autoFocus: p,
-                    defaultSearchPlaceholder: (0, o.nV)(n, S)
+                    defaultSearchPlaceholder: (0, s.nV)(n, g)
                 }),
                 n === d.Hz.REACTION
                     ? (0, r.jsx)('div', {
                           className: _.burstToggle,
-                          children: (0, r.jsx)(s.Z, {
-                              checked: S,
-                              onClick: g
+                          children: (0, r.jsx)(o.Z, {
+                              checked: g,
+                              onClick: S
                           })
                       })
                     : null,
                 null != t
                     ? t
                     : (0, r.jsx)(l.Z, {
-                          searchBarRef: I,
+                          searchBarRef: m,
                           className: _.diversitySelector,
-                          hasTabWrapper: m,
+                          hasTabWrapper: I,
                           selectedSurrogate: T
                       })
             ]
         });
     return (0, r.jsx)('div', {
         className: a()(_.header, i),
-        children: null != A ? A(N) : N
+        children: null != A ? A(v) : v
     });
 };
+t.Z = E;

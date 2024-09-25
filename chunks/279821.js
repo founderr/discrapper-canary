@@ -1,10 +1,23 @@
 n.d(t, {
     d: function () {
-        return r;
+        return o;
     }
-}),
-    n(411104);
-let r = new (class e {
+});
+var r = n(411104);
+function i(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+class a {
     raise(e) {
         throw e;
     }
@@ -48,11 +61,12 @@ let r = new (class e {
     reply(e) {
         if (e.synchronous) return e.data;
         if (null != e.requestId) {
-            var t;
-            null === (t = this.callback) ||
+            var t, n;
+            let r = 0;
+            null === (t = (n = this).callback) ||
                 void 0 === t ||
                 t.call(
-                    this,
+                    n,
                     {
                         id: e.requestId,
                         ok: e.ok,
@@ -64,21 +78,12 @@ let r = new (class e {
                             totalTimeNanoseconds: 0
                         }
                     },
-                    0
+                    r
                 );
         }
     }
     constructor() {
-        var e, t, n;
-        (e = this),
-            (n = null),
-            (t = 'callback') in e
-                ? Object.defineProperty(e, t, {
-                      value: null,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (e[t] = n);
+        i(this, 'callback', null);
     }
-})();
+}
+let o = new a();

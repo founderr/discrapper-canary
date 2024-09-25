@@ -1,4 +1,4 @@
-e.exports = function (e) {
+function t(e) {
     let t = '[a-zA-Z_\\-+\\*\\/<=>&#][a-zA-Z0-9_\\-+*\\/<=>&#!]*',
         n = '\\|[^]*?\\|',
         r = '(-|\\+)?\\d+(\\.\\d+|\\/\\d+)?((d|e|f|l|s|D|E|F|L|S)(\\+|-)?\\d+)?',
@@ -22,8 +22,8 @@ e.exports = function (e) {
                 }
             ]
         },
-        s = e.inherit(e.QUOTE_STRING_MODE, { illegal: null }),
-        o = e.COMMENT(';', '$', { relevance: 0 }),
+        o = e.inherit(e.QUOTE_STRING_MODE, { illegal: null }),
+        s = e.COMMENT(';', '$', { relevance: 0 }),
         l = {
             begin: '\\*',
             end: '\\*'
@@ -36,19 +36,14 @@ e.exports = function (e) {
             begin: t,
             relevance: 0
         },
-        d = {
-            contains: [
-                a,
-                s,
-                l,
-                u,
-                {
-                    begin: '\\(',
-                    end: '\\)',
-                    contains: ['self', i, s, a, c]
-                },
-                c
-            ],
+        d = { begin: n },
+        _ = {
+            begin: '\\(',
+            end: '\\)',
+            contains: ['self', i, o, a, c]
+        },
+        E = {
+            contains: [a, o, l, u, _, c],
             variants: [
                 {
                     begin: "['`]\\(",
@@ -62,19 +57,19 @@ e.exports = function (e) {
                 { begin: "'" + n }
             ]
         },
-        _ = {
+        f = {
             variants: [{ begin: "'" + t }, { begin: "#'" + t + '(::' + t + ')*' }]
         },
-        E = {
+        h = {
             begin: '\\(\\s*',
             end: '\\)'
         },
-        f = {
+        p = {
             endsWithParent: !0,
             relevance: 0
         };
     return (
-        (E.contains = [
+        (h.contains = [
             {
                 className: 'name',
                 variants: [
@@ -85,13 +80,14 @@ e.exports = function (e) {
                     { begin: n }
                 ]
             },
-            f
+            p
         ]),
-        (f.contains = [d, _, E, i, a, s, o, l, u, { begin: n }, c]),
+        (p.contains = [E, f, h, i, a, o, s, l, u, d, c]),
         {
             name: 'Lisp',
             illegal: /\S/,
-            contains: [a, e.SHEBANG(), i, s, o, d, _, E, c]
+            contains: [a, e.SHEBANG(), i, o, s, E, f, h, c]
         }
     );
-};
+}
+e.exports = t;

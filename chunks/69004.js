@@ -1,22 +1,23 @@
-n(47120);
-class l extends Map {
+var r = n(47120);
+function i(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+class a extends Map {
     set(e, t) {
         return this.size >= this.maxSize && this.delete(this.keys().next().value), super.set(e, t);
     }
     constructor(e) {
-        var t, n, l;
-        super(),
-            (t = this),
-            (l = void 0),
-            (n = 'maxSize') in t
-                ? Object.defineProperty(t, n, {
-                      value: l,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (t[n] = l),
-            (this.maxSize = e);
+        super(), i(this, 'maxSize', void 0), (this.maxSize = e);
     }
 }
-t.Z = l;
+t.Z = a;

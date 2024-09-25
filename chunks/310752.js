@@ -2,25 +2,26 @@ var r = n(735250);
 n(470079);
 var i = n(120356),
     a = n.n(i),
-    s = n(731994),
-    o = n(570486);
-t.Z = function (e) {
+    o = n(731994),
+    s = n(570486);
+function l(e) {
     let { icons: t, className: n } = e;
     return (0, r.jsxs)('div', {
-        className: a()(o.icons, n),
+        className: a()(s.icons, n),
         children: [
             (0, r.jsx)('div', {
-                className: o.wrapOne,
-                children: (0, r.jsx)('div', { className: a()(o.icon, o.one, s.bd[t[0]]) })
+                className: s.wrapOne,
+                children: (0, r.jsx)('div', { className: a()(s.icon, s.one, o.bd[t[0]]) })
             }),
             (0, r.jsx)('div', {
-                className: o.wrapThree,
-                children: (0, r.jsx)('div', { className: a()(o.icon, o.three, s.bd[t[2]]) })
+                className: s.wrapThree,
+                children: (0, r.jsx)('div', { className: a()(s.icon, s.three, o.bd[t[2]]) })
             }),
             (0, r.jsx)('div', {
-                className: o.wrapTwo,
-                children: (0, r.jsx)('div', { className: a()(o.icon, o.two, s.bd[t[1]]) })
+                className: s.wrapTwo,
+                children: (0, r.jsx)('div', { className: a()(s.icon, s.two, o.bd[t[1]]) })
             })
         ]
     });
-};
+}
+t.Z = l;

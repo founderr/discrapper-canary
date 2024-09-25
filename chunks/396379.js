@@ -1,4 +1,4 @@
-t.Z = function (e) {
+function n(e) {
     var t = -1,
         n = Array(e.size);
     return (
@@ -7,4 +7,5 @@ t.Z = function (e) {
         }),
         n
     );
-};
+}
+t.Z = n;

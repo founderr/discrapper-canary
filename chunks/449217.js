@@ -1,12 +1,13 @@
-n(47120);
-var r = n(399606),
-    i = n(597688),
-    a = n(1870);
-t.Z = (e) => {
-    let [t, n] = (0, r.Wu)([i.Z], () => [i.Z.getCategoryForProduct(e), i.Z.getProduct(e)]);
+var r = n(47120);
+var i = n(399606),
+    a = n(597688),
+    o = n(1870);
+let s = (e) => {
+    let [t, n] = (0, i.Wu)([a.Z], () => [a.Z.getCategoryForProduct(e), a.Z.getProduct(e)]);
     return {
         category: t,
         product: n,
-        purchase: (0, r.e7)([a.Z], () => a.Z.getPurchase(e))
+        purchase: (0, i.e7)([o.Z], () => o.Z.getPurchase(e))
     };
 };
+t.Z = s;

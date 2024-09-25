@@ -1,78 +1,83 @@
 var r,
-    i,
-    a,
-    s,
-    o = n(442837),
-    l = n(570140),
-    u = n(752305),
-    c = n(957730),
-    d = n(695346),
-    _ = n(375954);
-let E = {},
-    f = {};
-class h extends (s = o.ZP.Store) {
+    i = n(442837),
+    a = n(570140),
+    o = n(752305),
+    s = n(957730),
+    l = n(695346),
+    u = n(375954);
+function c(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+let d = {},
+    _ = {};
+function E(e) {
+    let { channelId: t, messageId: n, content: r, source: i } = e,
+        a = l.dN.getSetting(),
+        u = s.ZP.unparse(r, t);
+    (d[t] = {
+        channelId: t,
+        messageId: n,
+        textValue: u,
+        richValue: (0, o.JM)(a ? u : r)
+    }),
+        (_[t] = i);
+}
+function f(e) {
+    let { channelId: t, textValue: n, richValue: r } = e,
+        i = d[t];
+    if (null == i) return !1;
+    d[t] = {
+        ...i,
+        textValue: n,
+        richValue: r
+    };
+}
+function h(e) {
+    let { channelId: t } = e;
+    if (null == t || null == d[t]) return !1;
+    delete d[t], delete _[t];
+}
+class p extends (r = i.ZP.Store) {
     isEditing(e, t) {
         var n;
-        return (null === (n = E[e]) || void 0 === n ? void 0 : n.messageId) === t;
+        return (null === (n = d[e]) || void 0 === n ? void 0 : n.messageId) === t;
     }
     isEditingAny(e) {
-        return null != E[e];
+        return null != d[e];
     }
     getEditingTextValue(e) {
         var t;
-        return null === (t = E[e]) || void 0 === t ? void 0 : t.textValue;
+        return null === (t = d[e]) || void 0 === t ? void 0 : t.textValue;
     }
     getEditingRichValue(e) {
         var t;
-        return null === (t = E[e]) || void 0 === t ? void 0 : t.richValue;
+        return null === (t = d[e]) || void 0 === t ? void 0 : t.richValue;
     }
     getEditingMessageId(e) {
         var t;
-        return null === (t = E[e]) || void 0 === t ? void 0 : t.messageId;
+        return null === (t = d[e]) || void 0 === t ? void 0 : t.messageId;
     }
     getEditingMessage(e) {
-        let t = E[e];
-        return null != t && null != t.messageId ? _.Z.getMessage(e, t.messageId) : null;
+        let t = d[e];
+        return null != t && null != t.messageId ? u.Z.getMessage(e, t.messageId) : null;
     }
     getEditActionSource(e) {
-        return f[e];
+        return _[e];
     }
 }
-(a = 'EditMessageStore'),
-    (i = 'displayName') in (r = h)
-        ? Object.defineProperty(r, i, {
-              value: a,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (r[i] = a),
-    (t.Z = new h(l.Z, {
-        MESSAGE_START_EDIT: function (e) {
-            let { channelId: t, messageId: n, content: r, source: i } = e,
-                a = d.dN.getSetting(),
-                s = c.ZP.unparse(r, t);
-            (E[t] = {
-                channelId: t,
-                messageId: n,
-                textValue: s,
-                richValue: (0, u.JM)(a ? s : r)
-            }),
-                (f[t] = i);
-        },
-        MESSAGE_UPDATE_EDIT: function (e) {
-            let { channelId: t, textValue: n, richValue: r } = e,
-                i = E[t];
-            if (null == i) return !1;
-            E[t] = {
-                ...i,
-                textValue: n,
-                richValue: r
-            };
-        },
-        MESSAGE_END_EDIT: function (e) {
-            let { channelId: t } = e;
-            if (null == t || null == E[t]) return !1;
-            delete E[t], delete f[t];
-        }
+c(p, 'displayName', 'EditMessageStore'),
+    (t.Z = new p(a.Z, {
+        MESSAGE_START_EDIT: E,
+        MESSAGE_UPDATE_EDIT: f,
+        MESSAGE_END_EDIT: h
     }));

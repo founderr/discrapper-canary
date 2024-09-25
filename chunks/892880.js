@@ -1,48 +1,49 @@
 let r;
-n(653041);
-var i = n(392711),
-    a = n.n(i),
+var i = n(653041);
+var a = n(392711),
+    o = n.n(a),
     s = n(31775),
-    o = n.n(s),
-    l = n(749210),
-    u = n(430824),
-    c = n(594174),
-    d = n(70956),
-    _ = n(51144),
-    E = n(689938);
-let f = new (o())({ maxAge: 1 * d.Z.Millis.MINUTE });
-function h(e, t, n) {
+    l = n.n(s),
+    u = n(749210),
+    c = n(430824),
+    d = n(594174),
+    _ = n(70956),
+    E = n(51144),
+    f = n(689938);
+let h = new (l())({ maxAge: 1 * _.Z.Millis.MINUTE });
+function p(e, t, n) {
     null != r && clearTimeout(r),
         (r = setTimeout(() => {
             let r = [],
                 i = (e) => {
                     r.push(e.id);
                 };
-            if (null == e) a().forEach(u.Z.getGuilds(), i);
+            if (null == e) o().forEach(c.Z.getGuilds(), i);
             else if (Array.isArray(e))
                 e.forEach((e) => {
-                    let t = u.Z.getGuild(e);
+                    let t = c.Z.getGuild(e);
                     null != t && i(t);
                 });
             else {
-                let t = u.Z.getGuild(e);
+                let t = c.Z.getGuild(e);
                 null != t && i(t);
             }
-            r.length > 0 && l.Z.requestMembers(r, t.toLocaleLowerCase(), n);
+            r.length > 0 && u.Z.requestMembers(r, t.toLocaleLowerCase(), n);
         }, 200));
 }
-function p(e, t) {
+function m(e, t) {
     let n = ''.concat(null != e ? e : '', ':').concat(t),
-        r = f.get(n);
+        r = h.get(n);
     if (null != r) return r;
-    f.set(n, !0);
+    h.set(n, !0);
+}
+function I(e) {
+    let t = d.default.getCurrentUser(),
+        n = E.oY(t);
+    return null == n || 0 === n.length ? '' : f.Z.Messages.CREATE_SERVER_DEFAULT_SERVER_NAME_FORMAT.format({ username: (null == e ? void 0 : e.truncateUsername) ? n.slice(0, 20) : n });
 }
 t.Z = {
-    getGuildNameSuggestion: function (e) {
-        let t = c.default.getCurrentUser(),
-            n = _.oY(t);
-        return null == n || 0 === n.length ? '' : E.Z.Messages.CREATE_SERVER_DEFAULT_SERVER_NAME_FORMAT.format({ username: (null == e ? void 0 : e.truncateUsername) ? n.slice(0, 20) : n });
-    },
+    getGuildNameSuggestion: I,
     requestMembers(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 10,
             r = Array.isArray(e),
@@ -50,9 +51,9 @@ t.Z = {
             a = !1;
         r
             ? e.forEach((e) => {
-                  null == p(e, t) && i.push(e);
+                  null == m(e, t) && i.push(e);
               })
-            : null == p(e, t) && (a = !0),
-            i.length > 0 && r ? h(i, t, n) : a && h(e, t, n);
+            : null == m(e, t) && (a = !0),
+            i.length > 0 && r ? p(i, t, n) : a && p(e, t, n);
     }
 };

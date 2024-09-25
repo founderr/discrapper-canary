@@ -1,4 +1,40 @@
-e.exports = function (e) {
+function t(e) {
+    let t = {
+            match: [/^\s*(?=\S)/, /[^:]+/, /:\s*/, /$/],
+            className: {
+                2: 'attribute',
+                3: 'punctuation'
+            }
+        },
+        n = {
+            match: [/^\s*(?=\S)/, /[^:]*[^: ]/, /[ ]*:/, /[ ]/, /.*$/],
+            className: {
+                2: 'attribute',
+                3: 'punctuation',
+                5: 'string'
+            }
+        },
+        r = {
+            match: [/^\s*/, />/, /[ ]/, /.*$/],
+            className: {
+                2: 'punctuation',
+                4: 'string'
+            }
+        },
+        i = {
+            variants: [
+                {
+                    match: [/^\s*/, /-/, /[ ]/, /.*$/]
+                },
+                {
+                    match: [/^\s*/, /-$/]
+                }
+            ],
+            className: {
+                2: 'bullet',
+                4: 'string'
+            }
+        };
     return {
         name: 'Nested Text',
         aliases: ['nt'],
@@ -7,42 +43,11 @@ e.exports = function (e) {
                 begin: /^\s*(?=#)/,
                 excludeBegin: !0
             }),
-            {
-                variants: [
-                    {
-                        match: [/^\s*/, /-/, /[ ]/, /.*$/]
-                    },
-                    {
-                        match: [/^\s*/, /-$/]
-                    }
-                ],
-                className: {
-                    2: 'bullet',
-                    4: 'string'
-                }
-            },
-            {
-                match: [/^\s*/, />/, /[ ]/, /.*$/],
-                className: {
-                    2: 'punctuation',
-                    4: 'string'
-                }
-            },
-            {
-                match: [/^\s*(?=\S)/, /[^:]+/, /:\s*/, /$/],
-                className: {
-                    2: 'attribute',
-                    3: 'punctuation'
-                }
-            },
-            {
-                match: [/^\s*(?=\S)/, /[^:]*[^: ]/, /[ ]*:/, /[ ]/, /.*$/],
-                className: {
-                    2: 'attribute',
-                    3: 'punctuation',
-                    5: 'string'
-                }
-            }
+            i,
+            r,
+            t,
+            n
         ]
     };
-};
+}
+e.exports = t;

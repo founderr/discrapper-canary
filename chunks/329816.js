@@ -1,220 +1,221 @@
-n(47120), n(653041);
-var r = n(735250),
-    i = n(470079),
-    a = n(120356),
-    s = n.n(a),
-    o = n(802498),
-    l = n(266067),
-    u = n(873546),
-    c = n(442837),
-    d = n(704215),
-    _ = n(335854),
-    E = n(481060),
-    f = n(570140),
-    h = n(721037),
-    p = n(490173),
-    I = n(114250),
-    m = n(315263),
-    T = n(40851),
-    S = n(607070),
-    g = n(899663),
-    A = n(793903),
-    N = n(213609),
-    O = n(613413),
-    R = n(94795),
-    v = n(327943),
-    C = n(907459),
-    y = n(559407),
-    L = n(556766),
-    D = n(514361),
-    b = n(724145),
-    M = n(260035),
-    P = n(482215),
-    U = n(947519),
-    w = n(243778),
-    x = n(314910),
-    G = n(84615),
-    k = n(429142),
-    B = n(813744),
-    F = n(311476),
-    V = n(892254),
-    H = n(210887),
-    Z = n(978781),
-    Y = n(819640),
-    j = n(594174),
-    W = n(451478),
-    K = n(358085),
-    z = n(74538),
-    q = n(663993),
-    Q = n(823453),
-    X = n(628123),
-    $ = n(436774),
-    J = n(962745),
-    ee = n(686546),
-    et = n(151851),
-    en = n(981631),
-    er = n(921944),
-    ei = n(971583);
+var r = n(47120);
+var i = n(653041);
+var a = n(735250),
+    o = n(470079),
+    s = n(120356),
+    l = n.n(s),
+    u = n(802498),
+    c = n(266067),
+    d = n(873546),
+    _ = n(442837),
+    E = n(704215),
+    f = n(335854),
+    h = n(481060),
+    p = n(570140),
+    m = n(721037),
+    I = n(490173),
+    T = n(114250),
+    g = n(315263),
+    S = n(40851),
+    A = n(607070),
+    v = n(899663),
+    N = n(793903),
+    O = n(213609),
+    R = n(613413),
+    C = n(94795),
+    y = n(327943),
+    b = n(907459),
+    L = n(559407),
+    D = n(556766),
+    M = n(514361),
+    P = n(724145),
+    U = n(260035),
+    w = n(482215),
+    x = n(947519),
+    G = n(243778),
+    k = n(314910),
+    B = n(84615),
+    F = n(429142),
+    Z = n(813744),
+    V = n(311476),
+    H = n(892254),
+    Y = n(210887),
+    j = n(978781),
+    W = n(819640),
+    K = n(594174),
+    z = n(451478),
+    q = n(358085),
+    Q = n(74538),
+    X = n(663993),
+    $ = n(823453),
+    J = n(628123),
+    ee = n(436774),
+    et = n(962745),
+    en = n(686546),
+    er = n(151851),
+    ei = n(981631),
+    ea = n(921944),
+    eo = n(971583);
 n(167666),
     Promise.resolve()
         .then(n.bind(n, 62883))
         .then((e) => {
-            K.isPlatformEmbedded ? window.addEventListener('contextmenu', e.contextMenuCallbackNative, !1) : window.addEventListener('contextmenu', e.contextMenuCallbackWeb, !1);
+            q.isPlatformEmbedded ? window.addEventListener('contextmenu', e.contextMenuCallbackNative, !1) : window.addEventListener('contextmenu', e.contextMenuCallbackWeb, !1);
         }),
-    (0, _.E)({ getDefaultLinkInterceptor: m.default }),
-    (0, q.Un)({
-        createPromise: () => Promise.all([n.e('77298'), n.e('80451'), n.e('30634'), n.e('54343')]).then(n.bind(n, 849493)),
+    (0, f.E)({ getDefaultLinkInterceptor: g.default }),
+    (0, X.Un)({
+        createPromise: () => Promise.all([n.e('80451'), n.e('30634'), n.e('54343')]).then(n.bind(n, 849493)),
         webpackId: 849493
     }),
-    (0, q.Un)({
-        createPromise: () => Promise.all([n.e('77298'), n.e('80451'), n.e('30634'), n.e('81811')]).then(n.bind(n, 80753)),
+    (0, X.Un)({
+        createPromise: () => Promise.all([n.e('80451'), n.e('30634'), n.e('81811')]).then(n.bind(n, 80753)),
         webpackId: 80753
     });
-let ea = (0, q.Un)({
+let es = (0, X.Un)({
         createPromise: () => n.e('46369').then(n.bind(n, 177741)),
         webpackId: 177741
     }),
-    es = i.memo(function (e) {
-        let t = (0, c.e7)([W.Z], () => W.Z.isFocused());
-        return (0, r.jsx)(et.Z, {
+    el = o.memo(function (e) {
+        let t = (0, _.e7)([z.Z], () => z.Z.isFocused());
+        return (0, a.jsx)(er.Z, {
             ...e,
             focused: t
         });
     });
-t.Z = function (e) {
+function eu(e) {
     let { children: t, skipsSettingDefaultPageTitle: n } = e,
-        { pathname: a } = (0, l.TH)(),
-        _ = (0, K.getPlatform)(),
-        m = u.tq || u.Em,
-        W = (0, c.e7)([H.Z], () => (H.Z.darkSidebar ? en.BRd.DARK : void 0)),
-        q = (0, c.e7)([S.Z], () => (S.Z.useForcedColors ? 'yes' : 'no')),
-        [et, eo, el] = (0, c.Wu)([D.Z], () => [D.Z.isEditorOpen, D.Z.isCoachmark, D.Z.isPreview]),
-        [eu, ec] = (0, c.Wu)([v.Z], () => [v.Z.isEditorOpen, v.Z.isUpsellPreview]),
-        ed = (0, c.e7)([Y.Z], () => Y.Z.getLayers().includes(en.S9g.USER_SETTINGS)),
-        e_ = (0, c.e7)([j.default], () => z.ZP.canUseClientThemes(j.default.getCurrentUser())),
-        eE = et && !ed,
-        ef = [];
-    eE && eo && !e_ && ef.push(d.z.CLIENT_THEMES_COACHMARK);
-    let [eh, ep] = (0, w.US)(ef, er.R.SIDEBAR, !0);
-    ef.push(d.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
-    let eI = eh === d.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK,
-        em = eh === d.z.CLIENT_THEMES_COACHMARK;
-    i.useEffect(() => {
+        { pathname: r } = (0, c.TH)(),
+        i = (0, q.getPlatform)(),
+        s = d.tq || d.Em,
+        f = (0, _.e7)([Y.Z], () => (Y.Z.darkSidebar ? ei.BRd.DARK : void 0)),
+        g = (0, _.e7)([A.Z], () => (A.Z.useForcedColors ? 'yes' : 'no')),
+        [z, X, er] = (0, _.Wu)([M.Z], () => [M.Z.isEditorOpen, M.Z.isCoachmark, M.Z.isPreview]),
+        [eu, ec] = (0, _.Wu)([y.Z], () => [y.Z.isEditorOpen, y.Z.isUpsellPreview]),
+        ed = (0, _.e7)([W.Z], () => W.Z.getLayers().includes(ei.S9g.USER_SETTINGS)),
+        e_ = (0, _.e7)([K.default], () => Q.ZP.canUseClientThemes(K.default.getCurrentUser())),
+        eE = z && !ed,
+        ef = eu && !ed,
+        eh = [];
+    eE && X && !e_ && eh.push(E.z.CLIENT_THEMES_COACHMARK);
+    let [ep, em] = (0, G.US)(eh, ea.R.SIDEBAR, !0);
+    eh.push(E.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
+    let eI = ep === E.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK,
+        eT = ep === E.z.CLIENT_THEMES_COACHMARK;
+    o.useEffect(() => {
         null ==
-            (0, l.LX)(a, {
+            (0, c.LX)(r, {
                 path: 'invite',
                 exact: !1,
                 strict: !1
             }) &&
             eI &&
-            !em &&
-            ((0, R.nJ)(),
-            f.Z.dispatch({
+            !eT &&
+            ((0, C.nJ)(),
+            p.Z.dispatch({
                 type: 'APP_ICON_TRACK_IMPRESSION',
-                markAsDismissed: ep
+                markAsDismissed: em
             }));
-    }, [eI, em, ep, a]);
-    let eT = i.useRef(document.body),
-        eS = (eE && !eo) || em,
-        eg = eu && !ed && !em,
-        eA = el || ec,
-        { enabled: eN } = F.Z.useExperiment(
+    }, [eI, eT, em, r]);
+    let eg = o.useRef(document.body),
+        eS = () => {
+            let e = (0, c.LX)(r, {
+                path: ei.Z5c.APPLICATION_DIRECTORY,
+                exact: !1,
+                strict: !1
+            });
+            return ((!!d.tq || !!d.Em) && null != e) || !1;
+        },
+        eA = (eE && !X) || eT,
+        ev = ef && !eT,
+        eN = er || ec,
+        { enabled: eO } = V.Z.useExperiment(
             { location: 'AppSkeleton' },
             {
-                autoTrackExposure: eA && (eS || eg),
-                disable: !eA
+                autoTrackExposure: eN && (eA || ev),
+                disable: !eN
             }
         );
-    return (0, r.jsx)(
-        V.Z,
+    return (0, a.jsx)(
+        H.Z,
         {
-            children: (0, r.jsx)(g.Z, {
-                children: (0, r.jsxs)(E.RedesignIconContextProvider, {
+            children: (0, a.jsx)(v.Z, {
+                children: (0, a.jsxs)(h.RedesignIconContextProvider, {
                     children: [
-                        (0, r.jsx)(Q.Z, { skipsSettingDefaultPageTitle: n }),
-                        (0, r.jsx)(J.Z, {
-                            children: (0, r.jsx)(X.Z, {
-                                children: (0, r.jsxs)(E.FocusRingScope, {
-                                    containerRef: eT,
+                        (0, a.jsx)($.Z, { skipsSettingDefaultPageTitle: n }),
+                        (0, a.jsx)(et.Z, {
+                            children: (0, a.jsx)(J.Z, {
+                                children: (0, a.jsxs)(h.FocusRingScope, {
+                                    containerRef: eg,
                                     children: [
-                                        (0, r.jsx)(ee.Co, {}),
-                                        (0, r.jsx)($.ZP, {}),
-                                        (0, r.jsx)(o.OU, {}),
-                                        null != _
-                                            ? (0, r.jsx)(es, {
-                                                  type: _,
-                                                  themeOverride: W
-                                              })
-                                            : null,
-                                        (0, r.jsx)(T.Wu, {
-                                            appContext: en.IlC.APP,
+                                        (0, a.jsx)(en.Co, {}),
+                                        (0, a.jsx)(ee.ZP, {}),
+                                        (0, a.jsx)(u.OU, {}),
+                                        (0, a.jsx)(S.Wu, {
+                                            appContext: ei.IlC.APP,
                                             renderWindow: window,
-                                            children: (0, r.jsxs)(x.yP, {
+                                            children: (0, a.jsxs)(k.yP, {
                                                 children: [
-                                                    (0, r.jsxs)('div', {
-                                                        className: s()(ei.appAsidePanelWrapper, m && ei.mobileAppAsidePanelWrapper, {
-                                                            [ei.allowsScrolling]: (() => {
-                                                                let e = (0, l.LX)(a, {
-                                                                    path: en.Z5c.APPLICATION_DIRECTORY,
-                                                                    exact: !1,
-                                                                    strict: !1
-                                                                });
-                                                                return ((!!u.tq || !!u.Em) && null != e) || !1;
-                                                            })()
-                                                        }),
+                                                    null != i
+                                                        ? (0, a.jsx)(el, {
+                                                              type: i,
+                                                              themeOverride: f
+                                                          })
+                                                        : null,
+                                                    (0, a.jsxs)('div', {
+                                                        className: l()(eo.appAsidePanelWrapper, s && eo.mobileAppAsidePanelWrapper, { [eo.allowsScrolling]: eS() }),
                                                         children: [
-                                                            (0, r.jsx)(P.K, {}),
-                                                            (0, r.jsx)('div', {
-                                                                className: ei.notAppAsidePanel,
+                                                            (0, a.jsx)(w.K, {}),
+                                                            (0, a.jsx)('div', {
+                                                                className: eo.notAppAsidePanel,
                                                                 'data-app-not-dev-tools': !0,
-                                                                children: (0, r.jsx)(M.m, {
-                                                                    children: (0, r.jsx)(k.OR, {
-                                                                        children: (0, r.jsxs)(A.Z.Provider, {
-                                                                            value: N.Z,
+                                                                children: (0, a.jsx)(U.m, {
+                                                                    children: (0, a.jsx)(F.OR, {
+                                                                        children: (0, a.jsxs)(N.Z.Provider, {
+                                                                            value: O.Z,
                                                                             children: [
-                                                                                (0, r.jsx)('div', {
-                                                                                    className: s()(m ? ei.mobileApp : ei.app),
+                                                                                (0, a.jsx)('div', {
+                                                                                    className: l()(s ? eo.mobileApp : eo.app),
                                                                                     children: t
                                                                                 }),
-                                                                                (0, r.jsx)(y.Z, {}),
-                                                                                (0, r.jsx)(p.Z, {}),
-                                                                                (0, r.jsx)(E.Modals, {}),
-                                                                                (0, r.jsx)(I.Z, {}),
-                                                                                (0, r.jsx)(G.Ox, {}),
-                                                                                (0, r.jsx)(x.Un, {}),
-                                                                                (0, r.jsx)(k.ot, {}),
-                                                                                (0, r.jsx)(E.ToastContainer, {}),
-                                                                                (0, r.jsx)(O.Z, {}),
-                                                                                (0, r.jsx)(B.Z, {}),
-                                                                                (0, r.jsx)(ea, {})
+                                                                                (0, a.jsx)(L.Z, {}),
+                                                                                (0, a.jsx)(I.Z, {}),
+                                                                                (0, a.jsx)(h.Modals, {}),
+                                                                                (0, a.jsx)(T.Z, {}),
+                                                                                (0, a.jsx)(B.Ox, {}),
+                                                                                (0, a.jsx)(k.Un, {}),
+                                                                                (0, a.jsx)(F.ot, {}),
+                                                                                (0, a.jsx)(h.ToastContainer, {}),
+                                                                                (0, a.jsx)(R.Z, {}),
+                                                                                (0, a.jsx)(Z.Z, {}),
+                                                                                (0, a.jsx)(es, {})
                                                                             ]
                                                                         })
                                                                     })
                                                                 })
                                                             }),
-                                                            (0, r.jsx)(L.Z, {}),
-                                                            (0, r.jsx)(h.Z, {}),
-                                                            eS && !eN && (0, r.jsx)(b.Z, { markAsDismissed: ep }),
-                                                            eg &&
-                                                                !eN &&
-                                                                (0, r.jsx)(C.Z, {
+                                                            (0, a.jsx)(D.Z, {}),
+                                                            (0, a.jsx)(m.Z, {}),
+                                                            eA && !eO && (0, a.jsx)(P.Z, { markAsDismissed: em }),
+                                                            ev &&
+                                                                !eO &&
+                                                                (0, a.jsx)(b.Z, {
                                                                     isCoachmark: eI,
-                                                                    markAsDismissed: ep
+                                                                    markAsDismissed: em
                                                                 }),
-                                                            (eS || eg) &&
-                                                                eN &&
-                                                                (0, r.jsx)(Z.Z, {
-                                                                    initialTab: eg ? Z._.APP_ICONS : Z._.CLIENT_THEMES,
-                                                                    markAsDismissed: ep
+                                                            (eA || ev) &&
+                                                                eO &&
+                                                                (0, a.jsx)(j.Z, {
+                                                                    initialTab: ev ? j._.APP_ICONS : j._.CLIENT_THEMES,
+                                                                    markAsDismissed: em
                                                                 }),
-                                                            (0, r.jsx)(U.Z, { mobile: m })
+                                                            (0, a.jsx)(x.Z, { mobile: s })
                                                         ]
                                                     }),
                                                     !1
                                                 ]
                                             })
                                         }),
-                                        (0, r.jsx)(o.OU, {})
+                                        (0, a.jsx)(u.OU, {})
                                     ]
                                 })
                             })
@@ -223,6 +224,7 @@ t.Z = function (e) {
                 })
             })
         },
-        q
+        g
     );
-};
+}
+t.Z = eu;

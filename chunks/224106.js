@@ -1,40 +1,43 @@
-var e,
-    o = n(28886),
-    i = n(930134),
-    u = n(459535),
+var r,
+    i = n(28886),
+    a = n(930134),
+    o = n(459535),
     s = n(511364),
-    c = n(439230),
-    f = n(535538),
-    a = n(964653),
-    p = 'prototype',
-    v = 'script',
-    l = a('IE_PROTO'),
-    y = function () {},
-    h = function (t) {
-        return '<' + v + '>' + t + '</' + v + '>';
+    l = n(439230),
+    u = n(535538),
+    c = n(964653),
+    d = '>',
+    _ = '<',
+    E = 'prototype',
+    f = 'script',
+    h = c('IE_PROTO'),
+    p = function () {},
+    m = function (e) {
+        return _ + f + d + e + _ + '/' + f + d;
     },
-    x = function (t) {
-        t.write(h('')), t.close();
-        var r = t.parentWindow.Object;
-        return (t = null), r;
+    I = function (e) {
+        e.write(m('')), e.close();
+        var t = e.parentWindow.Object;
+        return (e = null), t;
     },
-    d = function () {
-        var t,
-            r = f('iframe');
-        return (r.style.display = 'none'), c.appendChild(r), (r.src = String('java' + v + ':')), (t = r.contentWindow.document).open(), t.write(h('document.F=Object')), t.close(), t.F;
+    T = function () {
+        var e,
+            t = u('iframe'),
+            n = 'java' + f + ':';
+        return (t.style.display = 'none'), l.appendChild(t), (t.src = String(n)), (e = t.contentWindow.document).open(), e.write(m('document.F=Object')), e.close(), e.F;
     },
     g = function () {
         try {
-            e = new ActiveXObject('htmlfile');
-        } catch (t) {}
-        g = 'undefined' != typeof document ? (document.domain && e ? x(e) : d()) : x(e);
-        for (var t = u.length; t--; ) delete g[p][u[t]];
+            r = new ActiveXObject('htmlfile');
+        } catch (e) {}
+        g = 'undefined' != typeof document ? (document.domain && r ? I(r) : T()) : I(r);
+        for (var e = o.length; e--; ) delete g[E][o[e]];
         return g();
     };
-(s[l] = !0),
-    (t.exports =
+(s[h] = !0),
+    (e.exports =
         Object.create ||
-        function (t, r) {
+        function (e, t) {
             var n;
-            return null !== t ? ((y[p] = o(t)), (n = new y()), (y[p] = null), (n[l] = t)) : (n = g()), void 0 === r ? n : i.f(n, r);
+            return null !== e ? ((p[E] = i(e)), (n = new p()), (p[E] = null), (n[h] = e)) : (n = g()), void 0 === t ? n : a.f(n, t);
         });

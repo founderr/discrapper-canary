@@ -1,39 +1,40 @@
-var i,
-    s,
-    a = n(735250);
+var r,
+    i = n(735250);
 n(470079);
-var r = n(481060),
-    l = n(600164),
-    o = n(586383);
-((i = s || (s = {})).SMALL = 'SMALL'), (i.MEDIUM = 'MEDIUM'), (i.LARGE = 'LARGE');
-let c = {
-        SMALL: o.dropdownSmall,
-        MEDIUM: o.dropdownMedium,
-        LARGE: o.dropdownLarge
+var a = n(481060),
+    o = n(600164),
+    s = n(586383);
+!(function (e) {
+    (e.SMALL = 'SMALL'), (e.MEDIUM = 'MEDIUM'), (e.LARGE = 'LARGE');
+})(r || (r = {}));
+let l = {
+        SMALL: s.dropdownSmall,
+        MEDIUM: s.dropdownMedium,
+        LARGE: s.dropdownLarge
     },
     u = (e) => {
-        let { onDropdownClick: t, children: n, contentClassName: i, dropdownSize: s = 'MEDIUM', ...u } = e;
-        return (0, a.jsx)(r.Button, {
-            ...u,
-            children: (0, a.jsxs)(l.Z, {
-                align: l.Z.Align.CENTER,
+        let { onDropdownClick: t, children: n, contentClassName: r, dropdownSize: u = 'MEDIUM', ...c } = e;
+        return (0, i.jsx)(a.Button, {
+            ...c,
+            children: (0, i.jsxs)(o.Z, {
+                align: o.Z.Align.CENTER,
                 children: [
-                    (0, a.jsx)(l.Z.Child, {
-                        className: i,
+                    (0, i.jsx)(o.Z.Child, {
+                        className: r,
                         children: n
                     }),
                     null != t
-                        ? (0, a.jsxs)(r.Clickable, {
-                              className: c[s],
+                        ? (0, i.jsxs)(a.Clickable, {
+                              className: l[u],
                               onClick: (e) => {
                                   e.stopPropagation(), null != t && t(e);
                               },
                               children: [
-                                  (0, a.jsx)('div', { className: o.arrowSeparator }),
-                                  (0, a.jsx)(r.ChevronSmallDownIcon, {
+                                  (0, i.jsx)('div', { className: s.arrowSeparator }),
+                                  (0, i.jsx)(a.ChevronSmallDownIcon, {
                                       size: 'md',
                                       color: 'currentColor',
-                                      className: o.dropdownArrow
+                                      className: s.dropdownArrow
                                   })
                               ]
                           })
@@ -42,4 +43,4 @@ let c = {
             })
         });
     };
-(u.DropdownSizes = s), (u.Sizes = r.Button.Sizes), (u.Colors = r.Button.Colors), (u.Looks = r.Button.Looks), (t.Z = u);
+(u.DropdownSizes = r), (u.Sizes = a.Button.Sizes), (u.Colors = a.Button.Colors), (u.Looks = a.Button.Looks), (t.Z = u);

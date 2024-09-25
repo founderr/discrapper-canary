@@ -1,17 +1,18 @@
 n.d(t, {
     A: function () {
-        return o;
+        return s;
     }
 });
 var r = n(735250),
     i = n(470079),
     a = n(526629),
-    s = n(481060);
-function o(e) {
+    o = n(481060);
+function s(e) {
     let { shouldAnimate: t = 'respect-motion-settings', ...n } = e,
-        o = i.useContext(s.AccessibilityPreferencesContext).reducedMotion.enabled;
+        s = i.useContext(o.AccessibilityPreferencesContext).reducedMotion.enabled,
+        l = 'animate-always' === t || ('respect-motion-settings' === t && !s);
     return (0, r.jsx)(a.Spring, {
         ...n,
-        immediate: !('animate-always' === t || ('respect-motion-settings' === t && !o))
+        immediate: !l
     });
 }

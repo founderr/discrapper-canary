@@ -1,41 +1,47 @@
-var i,
-    s,
-    a,
-    r,
-    l = n(442837),
-    o = n(570140);
-let c = !1,
-    u = !1,
-    d = [];
-class _ extends (r = l.ZP.Store) {
+var r,
+    i = n(442837),
+    a = n(570140);
+function o(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+let s = !1,
+    l = !1,
+    u = [];
+function c(e) {
+    (l = !0), (s = !1), (u = e.campaignContexts);
+}
+function d() {
+    (l = !0), (s = !1);
+}
+function _() {
+    s = !0;
+}
+function E() {
+    (s = !1), (l = !1), (u = []);
+}
+class f extends (r = i.ZP.Store) {
     getForCampaign(e) {
-        let t = d.filter((t) => t.campaign === e);
+        let t = u.filter((t) => t.campaign === e);
         return 1 === t.length ? t[0] : null;
     }
     shouldFetchCampaignContext() {
-        return !c && !u;
+        return !s && !l;
     }
 }
-(a = 'CampaignContextStore'),
-    (s = 'displayName') in (i = _)
-        ? Object.defineProperty(i, s, {
-              value: a,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (i[s] = a),
-    (t.Z = new _(o.Z, {
-        CAMPAIGN_CONTEXT_FETCH_SUCCESS: function (e) {
-            (u = !0), (c = !1), (d = e.campaignContexts);
-        },
-        CAMPAIGN_CONTEXT_FETCH_FAILURE: function () {
-            (u = !0), (c = !1);
-        },
-        CAMPAIGN_CONTEXT_FETCH: function () {
-            c = !0;
-        },
-        LOGOUT: function () {
-            (c = !1), (u = !1), (d = []);
-        }
+o(f, 'displayName', 'CampaignContextStore'),
+    (t.Z = new f(a.Z, {
+        CAMPAIGN_CONTEXT_FETCH_SUCCESS: c,
+        CAMPAIGN_CONTEXT_FETCH_FAILURE: d,
+        CAMPAIGN_CONTEXT_FETCH: _,
+        LOGOUT: E
     }));

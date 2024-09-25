@@ -1,43 +1,45 @@
-var r, i;
+var r;
 n.d(t, {
     ED: function () {
-        return s;
+        return a;
     },
     Ht: function () {
-        return _;
+        return d;
     },
     Ks: function () {
-        return c;
+        return u;
     },
     OC: function () {
-        return E;
+        return _;
     },
     Vr: function () {
         return o;
     },
     Wt: function () {
-        return d;
+        return c;
     },
     c: function () {
-        return l;
+        return s;
     },
     lE: function () {
-        return u;
+        return l;
     },
     nZ: function () {
-        return a;
+        return i;
     },
     yr: function () {
         return r;
     }
 });
-let a = 'sticker-picker-tab-panel',
-    s = 'sticker-picker-tab',
+let i = 'sticker-picker-tab-panel',
+    a = 'sticker-picker-tab',
     o = 'sticker-picker-grid',
-    l = -1,
-    u = 160,
-    c = '710982414301790216',
-    d = ['781323769960202280', '809209266556764241', '818597810047680532', '819129296374595614'],
-    _ = 524288,
-    E = 1572864;
-((i = r || (r = {}))[(i.ALWAYS_ANIMATE = 0)] = 'ALWAYS_ANIMATE'), (i[(i.ANIMATE_ON_INTERACTION = 1)] = 'ANIMATE_ON_INTERACTION'), (i[(i.NEVER_ANIMATE = 2)] = 'NEVER_ANIMATE');
+    s = -1,
+    l = 160,
+    u = '710982414301790216',
+    c = ['781323769960202280', '809209266556764241', '818597810047680532', '819129296374595614'],
+    d = 524288,
+    _ = 1572864;
+!(function (e) {
+    (e[(e.ALWAYS_ANIMATE = 0)] = 'ALWAYS_ANIMATE'), (e[(e.ANIMATE_ON_INTERACTION = 1)] = 'ANIMATE_ON_INTERACTION'), (e[(e.NEVER_ANIMATE = 2)] = 'NEVER_ANIMATE');
+})(r || (r = {}));

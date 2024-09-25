@@ -1,29 +1,30 @@
-n(627341);
-var r = n(470079),
-    i = n(278074),
-    a = n(979554),
+var r = n(627341);
+var i = n(470079),
+    a = n(278074),
+    o = n(979554),
     s = n(399606),
-    o = n(626135),
-    l = n(597688),
-    u = n(884697),
-    c = n(981631),
-    d = n(474936);
-t.Z = (e) => {
-    let t = (0, s.e7)([l.Z], () => l.Z.products);
-    return (0, r.useCallback)(
+    l = n(626135),
+    u = n(597688),
+    c = n(884697),
+    d = n(981631),
+    _ = n(474936);
+let E = (e) => {
+    let t = (0, s.e7)([u.Z], () => u.Z.products);
+    return (0, i.useCallback)(
         (n) => {
-            let { type: r, skuId: s } = n,
-                l = t.get(s);
-            o.default.track(c.rMx.PREMIUM_FEATURE_TRY_OUT, {
-                feature_name: (0, i.EQ)(r)
-                    .with(a.Z.AVATAR_DECORATION, () => d.QP.AVATAR_DECORATION)
-                    .with(a.Z.PROFILE_EFFECT, () => d.QP.PROFILE_EFFECT)
+            let { type: r, skuId: i } = n,
+                s = t.get(i);
+            l.default.track(d.rMx.PREMIUM_FEATURE_TRY_OUT, {
+                feature_name: (0, a.EQ)(r)
+                    .with(o.Z.AVATAR_DECORATION, () => _.QP.AVATAR_DECORATION)
+                    .with(o.Z.PROFILE_EFFECT, () => _.QP.PROFILE_EFFECT)
                     .otherwise(() => void 0),
-                feature_tier: (0, u.G1)(l) ? d.h1.FREE : d.h1.PREMIUM_STANDARD,
-                feature_selection: null == l ? void 0 : l.name,
+                feature_tier: (0, c.G1)(s) ? _.h1.FREE : _.h1.PREMIUM_STANDARD,
+                feature_selection: null == s ? void 0 : s.name,
                 location_stack: e
             });
         },
         [t, e]
     );
 };
+t.Z = E;

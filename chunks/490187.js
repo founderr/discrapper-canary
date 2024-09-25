@@ -1,4 +1,4 @@
-e.exports = function (e) {
+function t(e) {
     return {
         name: 'Stata',
         aliases: ['do', 'ado'],
@@ -28,4 +28,5 @@ e.exports = function (e) {
             e.C_BLOCK_COMMENT_MODE
         ]
     };
-};
+}
+e.exports = t;

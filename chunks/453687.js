@@ -3,7 +3,7 @@ n.d(t, {
         return u;
     },
     Gq: function () {
-        return o;
+        return s;
     },
     Gx: function () {
         return E;
@@ -21,16 +21,16 @@ n.d(t, {
         return _;
     },
     ut: function () {
-        return s;
+        return o;
     }
 });
 var r = n(446108),
     i = n(901461),
     a = n(981631);
-function s(e) {
+function o(e) {
     return 'message-content-'.concat(e.id);
 }
-function o(e) {
+function s(e) {
     return 'message-reply-context-'.concat(e.id);
 }
 function l(e, t) {
@@ -53,27 +53,29 @@ function _(e, t, n) {
         f = e.stickerItems.length > 0,
         h = e.codedLinks.length > 0,
         p = e.hasFlag(a.iLy.HAS_THREAD),
-        I = _ || E || f || h || p || e.type === a.uaV.THREAD_CREATED,
-        m = _ && e.content === e.embeds[0].url && e.embeds[0].type === a.hBH.GIFV,
-        T = e.type !== a.uaV.DEFAULT || (!m && '' !== e.content),
-        S = (0, i.Z)(e),
-        g = !S && (null == n ? void 0 : n.hasTimestamp) !== !1,
-        A = l(e, t),
-        N = o(e),
-        O = S ? '' : ''.concat(c ? N : A, ' ').concat(r.Z0);
+        m = _ || E || f || h || p || e.type === a.uaV.THREAD_CREATED,
+        I = _ && e.content === e.embeds[0].url && e.embeds[0].type === a.hBH.GIFV,
+        T = e.type !== a.uaV.DEFAULT || (!I && '' !== e.content),
+        g = (0, i.Z)(e),
+        S = !g && (null == n ? void 0 : n.hasTimestamp) !== !1,
+        A = !g,
+        v = l(e, t),
+        N = s(e),
+        O = c ? N : v,
+        R = A ? ''.concat(O, ' ').concat(r.Z0) : '';
     if (T) {
-        let t = s(e);
-        O += ' '.concat(t);
+        let t = o(e);
+        R += ' '.concat(t);
     }
-    if (I) {
+    if (m) {
         let t = d(e);
-        O += ' '.concat(t);
+        R += ' '.concat(t);
     }
-    if (g) {
+    if (S) {
         let t = u(e);
-        O += ' '.concat(r.fy, ' ').concat(t);
+        R += ' '.concat(r.fy, ' ').concat(t);
     }
-    return O.trim();
+    return R.trim();
 }
 function E(e) {
     if (0 === e.reactions.length) return;

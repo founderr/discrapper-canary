@@ -1,7 +1,7 @@
 var r,
     i = n(442837),
     a = n(570140);
-function s(e, t, n) {
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -14,12 +14,23 @@ function s(e, t, n) {
         e
     );
 }
-let o = { topEmojisByGuildId: {} },
-    l = o,
+let s = { topEmojisByGuildId: {} },
+    l = s,
     u = {};
-class c extends (r = i.ZP.PersistedStore) {
+function c() {
+    (l = s), (u = {});
+}
+function d(e) {
+    let { guildId: t } = e;
+    u[t] = !0;
+}
+function _(e) {
+    let { guildId: t, topEmojisMetadata: n } = e;
+    (l.topEmojisByGuildId[t] = n.map((e) => e.emojiId)), (u[t] = !1);
+}
+class E extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        l = null != e ? e : o;
+        l = null != e ? e : s;
     }
     getState() {
         return l;
@@ -31,18 +42,10 @@ class c extends (r = i.ZP.PersistedStore) {
         return u[e];
     }
 }
-s(c, 'displayName', 'TopEmojiStore'),
-    s(c, 'persistKey', 'TopEmojiStore'),
-    (t.Z = new c(a.Z, {
-        LOGOUT: function () {
-            (l = o), (u = {});
-        },
-        TOP_EMOJIS_FETCH: function (e) {
-            let { guildId: t } = e;
-            u[t] = !0;
-        },
-        TOP_EMOJIS_FETCH_SUCCESS: function (e) {
-            let { guildId: t, topEmojisMetadata: n } = e;
-            (l.topEmojisByGuildId[t] = n.map((e) => e.emojiId)), (u[t] = !1);
-        }
+o(E, 'displayName', 'TopEmojiStore'),
+    o(E, 'persistKey', 'TopEmojiStore'),
+    (t.Z = new E(a.Z, {
+        LOGOUT: c,
+        TOP_EMOJIS_FETCH: d,
+        TOP_EMOJIS_FETCH_SUCCESS: _
     }));

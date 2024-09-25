@@ -1,59 +1,62 @@
-var r,
-    i,
-    a = n(926515),
-    s = n(581031),
-    o = n(714050),
-    l = n(572609),
-    u = n(489412),
-    c = n(972277),
-    d = n(803938),
-    _ = n(644659).get,
-    E = n(973326),
-    f = n(440196),
-    h = c('native-string-replace', String.prototype.replace),
-    p = RegExp.prototype.exec,
-    I = p,
-    m = s(''.charAt),
-    T = s(''.indexOf),
-    S = s(''.replace),
-    g = s(''.slice);
-var A = ((i = /b*/g), a(p, (r = /a/), 'a'), a(p, i, 'a'), 0 !== r.lastIndex || 0 !== i.lastIndex),
-    N = u.BROKEN_CARET,
-    O = void 0 !== /()??/.exec('')[1];
-(A || O || N || E || f) &&
-    (I = function (e) {
+var r = n(926515),
+    i = n(581031),
+    a = n(714050),
+    o = n(572609),
+    s = n(489412),
+    l = n(972277),
+    u = n(803938),
+    c = n(644659).get,
+    d = n(973326),
+    _ = n(440196),
+    E = l('native-string-replace', String.prototype.replace),
+    f = RegExp.prototype.exec,
+    h = f,
+    p = i(''.charAt),
+    m = i(''.indexOf),
+    I = i(''.replace),
+    T = i(''.slice),
+    g = (function () {
+        var e = /a/,
+            t = /b*/g;
+        return r(f, e, 'a'), r(f, t, 'a'), 0 !== e.lastIndex || 0 !== t.lastIndex;
+    })(),
+    S = s.BROKEN_CARET,
+    A = void 0 !== /()??/.exec('')[1];
+(g || A || S || d || _) &&
+    (h = function (e) {
         var t,
             n,
-            r,
             i,
             s,
-            u,
-            c,
-            E = _(this),
-            f = o(e),
-            R = E.raw;
-        if (R) return (R.lastIndex = this.lastIndex), (t = a(I, R, f)), (this.lastIndex = R.lastIndex), t;
-        var v = E.groups,
-            C = N && this.sticky,
-            y = a(l, this),
-            L = this.source,
+            l,
+            d,
+            _,
+            v = this,
+            N = c(v),
+            O = a(e),
+            R = N.raw;
+        if (R) return (R.lastIndex = v.lastIndex), (t = r(h, R, O)), (v.lastIndex = R.lastIndex), t;
+        var C = N.groups,
+            y = S && v.sticky,
+            b = r(o, v),
+            L = v.source,
             D = 0,
-            b = f;
+            M = O;
         if (
-            (C && (-1 === T((y = S(y, 'y', '')), 'g') && (y += 'g'), (b = g(f, this.lastIndex)), this.lastIndex > 0 && (!this.multiline || (this.multiline && '\n' !== m(f, this.lastIndex - 1))) && ((L = '(?: ' + L + ')'), (b = ' ' + b), D++), (n = RegExp('^(?:' + L + ')', y))),
-            O && (n = RegExp('^' + L + '$(?!\\s)', y)),
-            A && (r = this.lastIndex),
-            (i = a(p, C ? n : this, b)),
-            C ? (i ? ((i.input = g(i.input, D)), (i[0] = g(i[0], D)), (i.index = this.lastIndex), (this.lastIndex += i[0].length)) : (this.lastIndex = 0)) : A && i && (this.lastIndex = this.global ? i.index + i[0].length : r),
-            O &&
-                i &&
-                i.length > 1 &&
-                a(h, i[0], n, function () {
-                    for (s = 1; s < arguments.length - 2; s++) void 0 === arguments[s] && (i[s] = void 0);
+            (y && (-1 === m((b = I(b, 'y', '')), 'g') && (b += 'g'), (M = T(O, v.lastIndex)), v.lastIndex > 0 && (!v.multiline || (v.multiline && '\n' !== p(O, v.lastIndex - 1))) && ((L = '(?: ' + L + ')'), (M = ' ' + M), D++), (n = RegExp('^(?:' + L + ')', b))),
+            A && (n = RegExp('^' + L + '$(?!\\s)', b)),
+            g && (i = v.lastIndex),
+            (s = r(f, y ? n : v, M)),
+            y ? (s ? ((s.input = T(s.input, D)), (s[0] = T(s[0], D)), (s.index = v.lastIndex), (v.lastIndex += s[0].length)) : (v.lastIndex = 0)) : g && s && (v.lastIndex = v.global ? s.index + s[0].length : i),
+            A &&
+                s &&
+                s.length > 1 &&
+                r(E, s[0], n, function () {
+                    for (l = 1; l < arguments.length - 2; l++) void 0 === arguments[l] && (s[l] = void 0);
                 }),
-            i && v)
+            s && C)
         )
-            for (s = 0, i.groups = u = d(null); s < v.length; s++) u[(c = v[s])[0]] = i[c[1]];
-        return i;
+            for (l = 0, s.groups = d = u(null); l < C.length; l++) d[(_ = C[l])[0]] = s[_[1]];
+        return s;
     }),
-    (e.exports = I);
+    (e.exports = h);

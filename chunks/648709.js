@@ -1,18 +1,87 @@
 n.d(t, {
     Kx: function () {
-        return o;
+        return u;
     },
     l8: function () {
-        return l;
+        return d;
     },
     s: function () {
-        return u;
+        return E;
     }
 });
 var r = n(470079);
-class i {
+function i(e) {
+    return null != e.hasChildItems ? e.hasChildItems : !!(e.childItems || (e.title && r.Children.count(e.children) > 0)) || !1;
+}
+(function e(e) {
+    return null;
+}).getCollectionNode = function* (e, t) {
+    let { childItems: n, title: a, children: o } = e,
+        s = e.title || e.children,
+        l = e.textValue || ('string' == typeof s ? s : '') || e['aria-label'] || '';
+    !l && !(null == t ? void 0 : t.suppressTextValueWarning) && console.warn('<Item> with non-plain text contents is unsupported by type to select for accessibility. Please add a `textValue` prop.'),
+        yield {
+            type: 'item',
+            props: e,
+            rendered: s,
+            textValue: l,
+            'aria-label': e['aria-label'],
+            hasChildNodes: i(e),
+            *childNodes() {
+                if (n)
+                    for (let e of n)
+                        yield {
+                            type: 'item',
+                            value: e
+                        };
+                else if (a) {
+                    let e = [];
+                    r.Children.forEach(o, (t) => {
+                        e.push({
+                            type: 'item',
+                            element: t
+                        });
+                    }),
+                        yield* e;
+                }
+            }
+        };
+};
+(function e(e) {
+    return null;
+}).getCollectionNode = function* (e) {
+    let { children: t, title: n, items: i } = e;
+    yield {
+        type: 'section',
+        props: e,
+        hasChildNodes: !0,
+        rendered: n,
+        'aria-label': e['aria-label'],
+        *childNodes() {
+            if ('function' == typeof t) {
+                if (!i) throw Error('props.children was a function but props.items is missing');
+                for (let e of i)
+                    yield {
+                        type: 'item',
+                        value: e,
+                        renderer: t
+                    };
+            } else {
+                let e = [];
+                r.Children.forEach(t, (t) => {
+                    e.push({
+                        type: 'item',
+                        element: t
+                    });
+                }),
+                    yield* e;
+            }
+        }
+    };
+};
+class a {
     build(e, t) {
-        return (this.context = t), a(() => this.iterateCollection(e));
+        return (this.context = t), o(() => this.iterateCollection(e));
     }
     *iterateCollection(e) {
         let { children: t, items: n } = e;
@@ -52,55 +121,53 @@ class i {
         return { renderer: t.renderer || e.renderer };
     }
     *getFullNode(e, t, n, i) {
-        let o = e.element;
-        if (!o && e.value && t && t.renderer) {
+        let a = e.element;
+        if (!a && e.value && t && t.renderer) {
             let n = this.cache.get(e.value);
             if (n && (!n.shouldInvalidate || !n.shouldInvalidate(this.context))) {
                 (n.index = e.index), (n.parentKey = i ? i.key : null), yield n;
                 return;
             }
-            o = t.renderer(e.value);
+            a = t.renderer(e.value);
         }
-        if (r.isValidElement(o)) {
-            let r = o.type;
+        if (r.isValidElement(a)) {
+            let r = a.type;
             if ('function' != typeof r && 'function' != typeof r.getCollectionNode) {
-                let e = 'function' == typeof o.type ? o.type.name : o.type;
+                let e = 'function' == typeof a.type ? a.type.name : a.type;
                 throw Error(`Unknown element <${e}> in collection.`);
             }
-            let a = r.getCollectionNode(o.props, this.context),
-                l = e.index,
-                u = a.next();
-            for (; !u.done && u.value; ) {
-                let r = u.value;
-                e.index = l;
-                let c = r.key;
-                !c && (c = r.element ? null : this.getKey(o, e, t, n));
-                let d = [
+            let o = r.getCollectionNode(a.props, this.context),
+                u = e.index,
+                c = o.next();
+            for (; !c.done && c.value; ) {
+                let r = c.value;
+                e.index = u;
+                let d = r.key;
+                !d && (d = r.element ? null : this.getKey(a, e, t, n));
+                let _ = [
                     ...this.getFullNode(
                         {
                             ...r,
-                            key: c,
-                            index: l,
-                            wrapper: (function (e, t) {
-                                return e && t ? (n) => e(t(n)) : e ? e : t ? t : void 0;
-                            })(e.wrapper, r.wrapper)
+                            key: d,
+                            index: u,
+                            wrapper: s(e.wrapper, r.wrapper)
                         },
                         this.getChildState(t, r),
-                        n ? `${n}${o.key}` : o.key,
+                        n ? `${n}${a.key}` : a.key,
                         i
                     )
                 ];
-                for (let t of d) {
-                    if (((t.value = r.value || e.value), t.value && this.cache.set(t.value, t), e.type && t.type !== e.type)) throw Error(`Unsupported type <${s(t.type)}> in <${s(i.type)}>. Only <${s(e.type)}> is supported.`);
-                    l++, yield t;
+                for (let t of _) {
+                    if (((t.value = r.value || e.value), t.value && this.cache.set(t.value, t), e.type && t.type !== e.type)) throw Error(`Unsupported type <${l(t.type)}> in <${l(i.type)}>. Only <${l(e.type)}> is supported.`);
+                    u++, yield t;
                 }
-                u = a.next(d);
+                c = o.next(_);
             }
             return;
         }
         if (null == e.key) return;
-        let l = this,
-            u = {
+        let u = this,
+            c = {
                 type: e.type,
                 props: e.props,
                 key: e.key,
@@ -114,19 +181,19 @@ class i {
                 wrapper: e.wrapper,
                 shouldInvalidate: e.shouldInvalidate,
                 hasChildNodes: e.hasChildNodes,
-                childNodes: a(function* () {
+                childNodes: o(function* () {
                     if (!e.hasChildNodes) return;
                     let n = 0;
-                    for (let r of e.childNodes()) for (let e of (null != r.key && (r.key = `${u.key}${r.key}`), (r.index = n), l.getFullNode(r, l.getChildState(t, r), u.key, u))) n++, yield e;
+                    for (let r of e.childNodes()) for (let e of (null != r.key && (r.key = `${c.key}${r.key}`), (r.index = n), u.getFullNode(r, u.getChildState(t, r), c.key, c))) n++, yield e;
                 })
             };
-        yield u;
+        yield c;
     }
     constructor() {
         this.cache = new WeakMap();
     }
 }
-function a(e) {
+function o(e) {
     let t = [],
         n = null;
     return {
@@ -136,41 +203,53 @@ function a(e) {
         }
     };
 }
-function s(e) {
+function s(e, t) {
+    return e && t ? (n) => e(t(n)) : e ? e : t ? t : void 0;
+}
+function l(e) {
     return e[0].toUpperCase() + e.slice(1);
 }
-function o(e, t, n) {
-    let a = (0, r.useMemo)(() => new i(), []),
-        { children: s, items: o, collection: l } = e;
+function u(e, t, n) {
+    let i = (0, r.useMemo)(() => new a(), []),
+        { children: o, items: s, collection: l } = e;
     return (0, r.useMemo)(
         () =>
             l
                 ? l
                 : t(
-                      a.build(
+                      i.build(
                           {
-                              children: s,
-                              items: o
+                              children: o,
+                              items: s
                           },
                           n
                       )
                   ),
-        [a, s, o, l, n, t]
+        [i, o, s, l, n, t]
     );
 }
-function l(e) {
-    return (function (e, t) {
-        if (t < 0) return;
-        let n = 0;
-        for (let r of e) {
-            if (n === t) return r;
-            n++;
-        }
-    })(e, 0);
+function c(e, t) {
+    return 'function' == typeof t.getChildren ? t.getChildren(e.key) : e.childNodes;
 }
-function u(e) {
+function d(e) {
+    return _(e, 0);
+}
+function _(e, t) {
+    if (t < 0) return;
+    let n = 0;
+    for (let r of e) {
+        if (n === t) return r;
+        n++;
+    }
+}
+function E(e) {
     let t;
     for (let n of e) t = n;
     return t;
 }
-new WeakMap();
+function f(e, t) {
+    let n = [];
+    for (; (null == t ? void 0 : t.parentKey) != null; ) (t = e.getItem(t.parentKey)), n.unshift(t);
+    return n;
+}
+let h = new WeakMap();

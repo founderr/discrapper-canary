@@ -1,60 +1,61 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return f;
     }
 });
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var s = n(442837),
+var i = n(442837),
     a = n(144144),
-    r = n(955415),
-    l = n(314897),
-    o = n(944486),
-    c = n(585483),
-    u = n(51144),
+    o = n(955415),
+    s = n(314897),
+    l = n(944486),
+    u = n(585483),
+    c = n(51144),
     d = n(981631),
     _ = n(689938),
     E = n(691784);
-function I(e) {
+function f(e) {
     let t,
         n,
-        I,
-        { author: m, banned: T } = e,
-        h = (0, s.e7)([l.default], () => l.default.getId()),
-        N = (0, s.e7)([o.Z], () => o.Z.getChannelId()),
-        f = u.ZP.useName(m),
-        C = h === m.id;
+        f,
+        { author: h, banned: p } = e,
+        m = (0, i.e7)([s.default], () => s.default.getId()),
+        I = (0, i.e7)([l.Z], () => l.Z.getChannelId()),
+        T = c.ZP.useName(h);
+    function g() {
+        let { id: e } = h,
+            t = '@'.concat(c.ZP.getUserTag(h, { decoration: 'never' })),
+            n = '<@'.concat(e, '>');
+        u.S.dispatchToLastSubscribed(d.CkL.INSERT_TEXT, {
+            plainText: t,
+            rawText: n
+        }),
+            null != I && a.Z.startTyping(I);
+    }
     return (
-        C
-            ? ((t = _.Z.Messages.INVITE_BUTTON_INVALID_OWNER), (I = _.Z.Messages.INVITE_BUTTON_TITLE_INVITER_INVALID))
-            : ((I = _.Z.Messages.INVITE_BUTTON_TITLE_INVITED_INVALID),
-              T
+        m === h.id
+            ? ((t = _.Z.Messages.INVITE_BUTTON_INVALID_OWNER), (f = _.Z.Messages.INVITE_BUTTON_TITLE_INVITER_INVALID))
+            : ((f = _.Z.Messages.INVITE_BUTTON_TITLE_INVITED_INVALID),
+              p
                   ? (t = _.Z.Messages.INSTANT_INVITE_BANNED_INFO)
-                  : null != f
-                    ? ((t = _.Z.Messages.INSTANT_INVITE_ASK_USER_FOR_NEW_INVITE.format({ username: f })),
-                      (n = (0, i.jsx)(r.Z.Button, {
-                          onClick: function () {
-                              let { id: e } = m,
-                                  t = '@'.concat(u.ZP.getUserTag(m, { decoration: 'never' }));
-                              c.S.dispatchToLastSubscribed(d.CkL.INSERT_TEXT, {
-                                  plainText: t,
-                                  rawText: '<@'.concat(e, '>')
-                              }),
-                                  null != N && a.Z.startTyping(N);
-                          },
+                  : null != T
+                    ? ((t = _.Z.Messages.INSTANT_INVITE_ASK_USER_FOR_NEW_INVITE.format({ username: T })),
+                      (n = (0, r.jsx)(o.Z.Button, {
+                          onClick: g,
                           children: _.Z.Messages.MENTION
                       })))
                     : (t = _.Z.Messages.INSTANT_INVITE_ASK_FOR_NEW_INVITE)),
-        (0, i.jsxs)(r.Z, {
+        (0, r.jsxs)(o.Z, {
             children: [
-                (0, i.jsx)(r.Z.Header, { text: I }),
-                (0, i.jsxs)(r.Z.Body, {
+                (0, r.jsx)(o.Z.Header, { text: f }),
+                (0, r.jsxs)(o.Z.Body, {
                     children: [
-                        (0, i.jsxs)('div', {
+                        (0, r.jsxs)('div', {
                             className: E.headerLine,
                             children: [
-                                (0, i.jsx)(r.Z.Icon, { expired: !0 }),
-                                (0, i.jsx)(r.Z.Info, {
+                                (0, r.jsx)(o.Z.Icon, { expired: !0 }),
+                                (0, r.jsx)(o.Z.Info, {
                                     expired: !0,
                                     title: _.Z.Messages.INVITE_BUTTON_INVALID,
                                     children: t

@@ -1,16 +1,17 @@
 var r = n(470079),
     i = n(476400),
     a = n.n(i),
-    s = n(844303),
-    o = n(829307),
+    o = n(844303),
+    s = n(829307),
     l = function (e) {
         var t = e.zDepth,
             n = e.radius,
             i = e.background,
             a = e.children,
             l = e.styles,
-            u = (0, s.default)(
-                (0, o.Z)(
+            u = void 0 === l ? {} : l,
+            c = (0, o.default)(
+                (0, s.Z)(
                     {
                         default: {
                             wrap: {
@@ -34,11 +35,11 @@ var r = n(470079),
                         square: { bg: { borderRadius: '0' } },
                         circle: { bg: { borderRadius: '50%' } }
                     },
-                    void 0 === l ? {} : l
+                    u
                 ),
                 { 'zDepth-1': 1 === t }
             );
-        return r.createElement('div', { style: u.wrap }, r.createElement('div', { style: u.bg }), r.createElement('div', { style: u.content }, a));
+        return r.createElement('div', { style: c.wrap }, r.createElement('div', { style: c.bg }), r.createElement('div', { style: c.content }, a));
     };
 (l.propTypes = {
     background: a().string,

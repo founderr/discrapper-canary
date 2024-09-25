@@ -1,8 +1,8 @@
 var r,
     i = n(392711),
     a = n.n(i),
-    s = n(442837),
-    o = n(433517),
+    o = n(442837),
+    s = n(433517),
     l = n(570140),
     u = n(981631);
 function c(e, t, n) {
@@ -19,7 +19,28 @@ function c(e, t, n) {
     );
 }
 let d = {};
-class _ extends (r = s.ZP.PersistedStore) {
+function _(e) {
+    let { changes: t } = e;
+    for (let e in t) {
+        var n;
+        let r = e,
+            { shouldSync: i, settings: a } = t[r];
+        if (!0 === i) {
+            delete d[r];
+            continue;
+        }
+        !1 === i &&
+            (d[r] = {
+                shouldSync: i,
+                settings: {}
+            });
+        if ((null === (n = d[r]) || void 0 === n ? void 0 : n.shouldSync) === !1) for (let e in a) d[r].settings[e] = a[e];
+    }
+}
+function E() {
+    d = {};
+}
+class f extends (r = o.ZP.PersistedStore) {
     initialize(e) {
         d = null != e ? e : {};
     }
@@ -39,14 +60,14 @@ class _ extends (r = s.ZP.PersistedStore) {
         return null === (e = d.appearance) || void 0 === e ? void 0 : e.settings;
     }
 }
-c(_, 'displayName', 'SelectivelySyncedUserSettingsStore'),
-    c(_, 'persistKey', 'SelectivelySyncedUserSettingsStore'),
-    c(_, 'migrations', [
+c(f, 'displayName', 'SelectivelySyncedUserSettingsStore'),
+    c(f, 'persistKey', 'SelectivelySyncedUserSettingsStore'),
+    c(f, 'migrations', [
         () => {
             var e, t;
-            let n = null !== (e = o.K.get('UserSettingsSync')) && void 0 !== e ? e : {},
-                r = null !== (t = o.K.get('UserSettingsStore')) && void 0 !== t ? t : {};
-            o.K.remove('UserSettingsSync');
+            let n = null !== (e = s.K.get('UserSettingsSync')) && void 0 !== e ? e : {},
+                r = null !== (t = s.K.get('UserSettingsStore')) && void 0 !== t ? t : {};
+            s.K.remove('UserSettingsSync');
             let i = {};
             return (
                 !1 === n[u.oAB.TEXT] &&
@@ -77,25 +98,7 @@ c(_, 'displayName', 'SelectivelySyncedUserSettingsStore'),
                 };
         }
     ]),
-    (t.Z = new _(l.Z, {
-        SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: function (e) {
-            let { changes: t } = e;
-            for (let e in t) {
-                var n;
-                let { shouldSync: r, settings: i } = t[e];
-                if (!0 === r) {
-                    delete d[e];
-                    continue;
-                }
-                !1 === r &&
-                    (d[e] = {
-                        shouldSync: r,
-                        settings: {}
-                    });
-                if ((null === (n = d[e]) || void 0 === n ? void 0 : n.shouldSync) === !1) for (let t in i) d[e].settings[t] = i[t];
-            }
-        },
-        LOGOUT: function () {
-            d = {};
-        }
+    (t.Z = new f(l.Z, {
+        SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: _,
+        LOGOUT: E
     }));

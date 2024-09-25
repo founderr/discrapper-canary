@@ -1,31 +1,34 @@
 n.d(t, {
     y6: function () {
-        return E;
+        return m;
     }
-}),
-    n(47120);
+});
+var r = n(47120);
 var i = n(470079),
-    s = n(442837),
-    a = n(45114),
-    r = n(733427),
+    a = n(442837),
+    o = n(45114),
+    s = n(733427),
     l = n(455199),
-    o = n(833592),
+    u = n(833592),
     c = n(140155),
-    u = n(774807),
-    d = n(490897);
-let _ = (e) => {
-        let { isFocused: t, navigatedAway: n, isDesktop: _, withMentions: E = !1, initialPageSize: I } = e,
-            m = (0, s.e7)([u.Z], () => u.Z.shouldReload()),
+    d = n(774807),
+    _ = n(490897);
+let E = 100,
+    f = 8,
+    h = 20,
+    p = (e) => {
+        let { isFocused: t, navigatedAway: n, isDesktop: r, withMentions: p = !1, initialPageSize: m } = e,
+            I = (0, a.e7)([d.Z], () => d.Z.shouldReload()),
             T = i.useRef(!1),
-            [h, N] = i.useState(!1),
+            [g, S] = i.useState(!1),
             {
-                initialized: f,
-                loading: C,
-                items: p,
-                hasMore: g,
-                cursor: A,
-                errored: S
-            } = (0, s.cj)([c.Z], () => ({
+                initialized: A,
+                loading: v,
+                items: N,
+                hasMore: O,
+                cursor: R,
+                errored: C
+            } = (0, a.cj)([c.Z], () => ({
                 initialized: c.Z.initialized,
                 loading: c.Z.loading,
                 items: c.Z.items,
@@ -33,77 +36,77 @@ let _ = (e) => {
                 cursor: c.Z.cursor,
                 errored: c.Z.errored
             })),
-            { roleFilter: x, everyoneFilter: R } = (0, s.cj)([l.Z], () => ({
+            { roleFilter: y, everyoneFilter: b } = (0, a.cj)([l.Z], () => ({
                 everyoneFilter: l.Z.everyoneFilter,
                 roleFilter: l.Z.roleFilter
             }));
-        i.useEffect(() => ((0, o.Vk)(!0), () => (0, o.Vk)(!1)), []),
+        i.useEffect(() => ((0, u.Vk)(!0), () => (0, u.Vk)(!1)), []),
             i.useEffect(() => {
-                f && t && (0, a.FT)(d.W.NOTIFICATION_CENTER);
-            }, [t, f]);
-        let O = (0, r.Z)();
+                A && t && (0, o.FT)(_.W.NOTIFICATION_CENTER);
+            }, [t, A]);
+        let L = (0, s.Z)();
         i.useEffect(
             () => () => {
-                _ ? !O() && (S || p.length > 100) && (0, o.jF)() : n && p.length > 100 && (0, o.jF)();
+                r ? !L() && (C || N.length > E) && (0, u.jF)() : n && N.length > E && (0, u.jF)();
             },
-            [n, p, _, O, S]
+            [n, N, r, L, C]
         ),
             i.useEffect(() => {
-                let e = m && t;
-                (!f || e) &&
-                    (0, o.jk)({
-                        limit: null != I ? I : E ? 8 : 20,
-                        with_mentions: E,
-                        roles_filter: x,
-                        everyone_filter: R
+                let e = I && t;
+                (!A || e) &&
+                    (0, u.jk)({
+                        limit: null != m ? m : p ? f : h,
+                        with_mentions: p,
+                        roles_filter: y,
+                        everyone_filter: b
                     });
-            }, [f, m, t, E, x, R, I]);
-        let M = i.useCallback(
+            }, [A, I, t, p, y, b, m]);
+        let D = i.useCallback(
             async (e) => {
                 !T.current &&
-                    f &&
-                    g &&
-                    null != A &&
-                    (e || !S) &&
+                    A &&
+                    O &&
+                    null != R &&
+                    (e || !C) &&
                     ((T.current = !0),
-                    N(!0),
-                    await (0, o.jk)(
+                    S(!0),
+                    await (0, u.jk)(
                         {
-                            after: A,
-                            with_mentions: E,
-                            roles_filter: x,
-                            everyone_filter: R,
-                            limit: E ? 8 : 20
+                            after: R,
+                            with_mentions: p,
+                            roles_filter: y,
+                            everyone_filter: b,
+                            limit: p ? f : h
                         },
                         () => {
                             T.current = !1;
                         }
                     ),
-                    N(!1));
+                    S(!1));
             },
-            [f, g, A, S, E, x, R]
+            [A, O, R, C, p, y, b]
         );
         return {
-            initialized: f,
-            loading: C,
-            items: p,
-            hasMore: g,
-            loadMore: M,
-            loadingMore: h,
+            initialized: A,
+            loading: v,
+            items: N,
+            hasMore: O,
+            loadMore: D,
+            loadingMore: g,
             setReadNotifItemToAcked: (e) => {
                 !e.acked && (e.acked = !0);
             },
-            errored: S
+            errored: C
         };
     },
-    E = () => {
+    m = () => {
         let {
             initialized: e,
             loading: t,
             items: n,
-            hasMore: i,
-            loadMore: s
-        } = _({
+            hasMore: r,
+            loadMore: i
+        } = p({
             isFocused: !0,
             isDesktop: !0
         });
@@ -111,7 +114,7 @@ let _ = (e) => {
             initialized: e,
             loading: t,
             items: n.filter((e) => 'notification-center-item' === e.kind),
-            hasMore: i,
-            loadMore: s
+            hasMore: r,
+            loadMore: i
         };
     };

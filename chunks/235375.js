@@ -1,62 +1,67 @@
 n.r(t),
     n.d(t, {
         baseRules: function () {
-            return S;
+            return v;
         },
         customRules: function () {
-            return g;
+            return N;
         }
-    }),
-    n(47120);
-var r = n(735250),
-    i = n(470079),
-    a = n(120356),
-    s = n.n(a),
-    o = n(302454),
-    l = n.n(o),
-    u = n(481060),
-    c = n(37234),
-    d = n(230711),
-    _ = n(454585),
-    E = n(703656),
-    f = n(626135),
-    h = n(981631),
-    p = n(596401);
-let I = l().defaultRules.link,
-    m = { section: h.jXE.SETTINGS_CHANGELOG },
-    T = (e) => {
-        var t, n;
-        let { level: r, children: a, className: o = null, styleSheet: l = {} } = e,
-            c = (0, u.usePrivateHeadingLevel)(),
-            d = parseInt(r, 10),
-            _ = isNaN(d) ? 1 : d;
-        return i.createElement('h'.concat(c + _ - 1), { className: s()(...((t = l), null == (n = o) ? [] : n.split(' ').map((e) => t[e]))) }, a);
+    });
+var r = n(47120);
+var i = n(735250),
+    a = n(470079),
+    o = n(120356),
+    s = n.n(o),
+    l = n(302454),
+    u = n.n(l),
+    c = n(481060),
+    d = n(37234),
+    _ = n(230711),
+    E = n(454585),
+    f = n(703656),
+    h = n(626135),
+    p = n(981631),
+    m = n(596401);
+let I = u().defaultRules.link,
+    T = { section: p.jXE.SETTINGS_CHANGELOG };
+function g() {
+    h.default.track(p.rMx.PREMIUM_PROMOTION_OPENED, { location: T });
+}
+function S(e, t) {
+    return null == t ? [] : t.split(' ').map((t) => e[t]);
+}
+let A = (e) => {
+        let { level: t, children: n, className: r = null, styleSheet: i = {} } = e,
+            o = (0, c.usePrivateHeadingLevel)(),
+            l = parseInt(t, 10),
+            u = o + (isNaN(l) ? 1 : l) - 1;
+        return a.createElement('h'.concat(u), { className: s()(...S(i, r)) }, n);
     },
-    S = null != _.Z ? _.Z.defaultRules : null,
-    g = {
+    v = null != E.Z ? E.Z.defaultRules : null,
+    N = {
         link: {
             parse(e, t, n) {
                 let r;
                 let i = e[2],
                     a = i.startsWith('https://discordapp.com/nitro') || i.startsWith('https://discord.com/nitro'),
-                    s = i.startsWith('https://discordapp.com/hypesquad') || i.startsWith('https://discord.com/hypesquad'),
-                    o = i.startsWith('/shop/fullscreen?source=1') || i.startsWith('/activities');
+                    o = i.startsWith('https://discordapp.com/hypesquad') || i.startsWith('https://discord.com/hypesquad'),
+                    s = i.startsWith('/shop/fullscreen?source=1') || i.startsWith('/activities');
                 return (
                     (r =
-                        a || s
+                        a || o
                             ? (e) => {
-                                  f.default.track(h.rMx.PREMIUM_PROMOTION_OPENED, { location: m }), a ? d.Z.open(h.oAB.PREMIUM) : s && d.Z.open(h.oAB.HYPESQUAD_ONLINE), n.changeLog.track(h.rMx.CHANGE_LOG_CTA_CLICKED, { cta_type: 'nitro' }), (0, u.closeModal)(p.Xd), e.preventDefault();
+                                  g(), a ? _.Z.open(p.oAB.PREMIUM) : o && _.Z.open(p.oAB.HYPESQUAD_ONLINE), n.changeLog.track(p.rMx.CHANGE_LOG_CTA_CLICKED, { cta_type: 'nitro' }), (0, c.closeModal)(m.Xd), e.preventDefault();
                               }
-                            : o
+                            : s
                               ? (e) => {
-                                    (0, E.uL)(i), n.changeLog.track(h.rMx.CHANGE_LOG_CTA_CLICKED, { ...f.default.getCampaignParams(i) }), (0, c.Ou)(), (0, u.closeModal)(p.Xd), e.preventDefault();
+                                    (0, f.uL)(i), n.changeLog.track(p.rMx.CHANGE_LOG_CTA_CLICKED, { ...h.default.getCampaignParams(i) }), (0, d.Ou)(), (0, c.closeModal)(m.Xd), e.preventDefault();
                                 }
                               : () => {
                                     n && 'function' == typeof n.onLinkClick && n.onLinkClick(i),
-                                        n.changeLog.track(h.rMx.CHANGE_LOG_CTA_CLICKED, {
+                                        n.changeLog.track(p.rMx.CHANGE_LOG_CTA_CLICKED, {
                                             target: i,
                                             cta_type: 'inline_link',
-                                            ...f.default.getCampaignParams(i)
+                                            ...h.default.getCampaignParams(i)
                                         });
                                 }),
                     {
@@ -66,10 +71,10 @@ let I = l().defaultRules.link,
                 );
             },
             react: (e, t, n) =>
-                (0, r.jsx)(
-                    u.Anchor,
+                (0, i.jsx)(
+                    c.Anchor,
                     {
-                        href: l().sanitizeUrl(e.target),
+                        href: u().sanitizeUrl(e.target),
                         title: e.title,
                         onClick: e.callToAction,
                         target: '_blank',
@@ -80,22 +85,22 @@ let I = l().defaultRules.link,
                 )
         },
         lheading: (e) => ({
-            react: (t, n, i) =>
-                (0, r.jsx)(
-                    T,
+            react: (t, n, r) =>
+                (0, i.jsx)(
+                    A,
                     {
                         level: t.level,
                         className: t.className,
                         styleSheet: e,
-                        children: n(t.content, i)
+                        children: n(t.content, r)
                     },
-                    i.key
+                    r.key
                 )
         }),
         heading: {
             react: (e, t, n) =>
-                (0, r.jsx)(
-                    T,
+                (0, i.jsx)(
+                    A,
                     {
                         level: e.level,
                         children: t(e.content, n)
@@ -104,18 +109,18 @@ let I = l().defaultRules.link,
                 )
         },
         image: {
-            react(e, t, i) {
+            react(e, t, r) {
                 let a = n(595173)('./'.concat(e.target));
-                return (0, r.jsx)(
+                return (0, i.jsx)(
                     'img',
                     {
                         alt: e.alt,
                         src: a
                     },
-                    i.key
+                    r.key
                 );
             }
         },
-        blockQuote: { react: null == S ? void 0 : S.blockQuote.react },
-        paragraph: { react: (e, t, n) => (0, r.jsx)('p', { children: t(e.content, n) }, n.key) }
+        blockQuote: { react: null == v ? void 0 : v.blockQuote.react },
+        paragraph: { react: (e, t, n) => (0, i.jsx)('p', { children: t(e.content, n) }, n.key) }
     };

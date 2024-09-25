@@ -2,13 +2,13 @@ var r = n(735250);
 n(470079);
 var i = n(442837),
     a = n(481060),
-    s = n(565138),
-    o = n(430824),
+    o = n(565138),
+    s = n(430824),
     l = n(689938),
     u = n(69563);
-t.Z = (e) => {
+let c = (e) => {
     let { event: t } = e,
-        n = (0, i.e7)([o.Z], () => o.Z.getGuild(t.guild_id));
+        n = (0, i.e7)([s.Z], () => s.Z.getGuild(t.guild_id));
     return null == n
         ? null
         : (0, r.jsxs)('div', {
@@ -25,9 +25,9 @@ t.Z = (e) => {
                           (0, r.jsxs)('div', {
                               className: u.guildInfo,
                               children: [
-                                  (0, r.jsx)(s.Z, {
+                                  (0, r.jsx)(o.Z, {
                                       guild: n,
-                                      size: s.Z.Sizes.MINI,
+                                      size: o.Z.Sizes.MINI,
                                       className: u.guildIcon
                                   }),
                                   (0, r.jsx)(a.Text, {
@@ -47,3 +47,4 @@ t.Z = (e) => {
               ]
           });
 };
+t.Z = c;

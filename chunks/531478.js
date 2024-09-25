@@ -1,17 +1,21 @@
-var t = {};
-function n(e, n, r) {
-    !r && (r = Error);
-    var i = (function (e) {
-        var t, r;
-        function i(t, r, i) {
-            var a, s, o;
-            return e.call(this, ((a = t), (s = r), (o = i), 'string' == typeof n ? n : n(a, s, o))) || this;
-        }
-        return (t = i), (r = e), (t.prototype = Object.create(r.prototype)), (t.prototype.constructor = t), (t.__proto__ = r), i;
-    })(r);
-    (i.prototype.name = r.name), (i.prototype.code = e), (t[e] = i);
+function t(e, t) {
+    (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t);
 }
-function r(e, t) {
+var n = {};
+function r(e, r, i) {
+    function a(e, t, n) {
+        return 'string' == typeof r ? r : r(e, t, n);
+    }
+    !i && (i = Error);
+    var o = (function (e) {
+        function n(t, n, r) {
+            return e.call(this, a(t, n, r)) || this;
+        }
+        return t(n, e), n;
+    })(i);
+    (o.prototype.name = i.name), (o.prototype.code = e), (n[e] = o);
+}
+function i(e, t) {
     if (!Array.isArray(e)) return 'of '.concat(t, ' ').concat(String(e));
     var n = e.length;
     return ((e = e.map(function (e) {
@@ -23,55 +27,54 @@ function r(e, t) {
           ? 'one of '.concat(t, ' ').concat(e[0], ' or ').concat(e[1])
           : 'of '.concat(t, ' ').concat(e[0]);
 }
-n(
+function a(e, t, n) {
+    return e.substr(!n || n < 0 ? 0 : +n, t.length) === t;
+}
+function o(e, t, n) {
+    return (void 0 === n || n > e.length) && (n = e.length), e.substring(n - t.length, n) === t;
+}
+function s(e, t, n) {
+    return 'number' != typeof n && (n = 0), !(n + t.length > e.length) && -1 !== e.indexOf(t, n);
+}
+r(
     'ERR_INVALID_OPT_VALUE',
     function (e, t) {
         return 'The value "' + t + '" is invalid for option "' + e + '"';
     },
     TypeError
 ),
-    n(
+    r(
         'ERR_INVALID_ARG_TYPE',
         function (e, t, n) {
-            if ('string' == typeof t && ((i = 'not '), t.substr(0, i.length) === i)) (_ = 'must not be'), (t = t.replace(/^not /, ''));
-            else _ = 'must be';
-            if (((s = e), (o = ' argument'), (void 0 === l || l > s.length) && (l = s.length), s.substring(l - o.length, l) === o)) E = 'The '.concat(e, ' ').concat(_, ' ').concat(r(t, 'type'));
+            if (('string' == typeof t && a(t, 'not ') ? ((r = 'must not be'), (t = t.replace(/^not /, ''))) : (r = 'must be'), o(e, ' argument'))) l = 'The '.concat(e, ' ').concat(r, ' ').concat(i(t, 'type'));
             else {
-                var i,
-                    a,
-                    s,
-                    o,
+                var r,
                     l,
-                    u,
-                    c,
-                    d,
-                    _,
-                    E,
-                    f = ((u = e), (c = '.'), 'number' != typeof d && (d = 0), d + 1 > u.length || -1 === u.indexOf(c, d)) ? 'argument' : 'property';
-                E = 'The "'.concat(e, '" ').concat(f, ' ').concat(_, ' ').concat(r(t, 'type'));
+                    u = s(e, '.') ? 'property' : 'argument';
+                l = 'The "'.concat(e, '" ').concat(u, ' ').concat(r, ' ').concat(i(t, 'type'));
             }
-            return (E += '. Received type '.concat(typeof n));
+            return (l += '. Received type '.concat(typeof n));
         },
         TypeError
     ),
-    n('ERR_STREAM_PUSH_AFTER_EOF', 'stream.push() after EOF'),
-    n('ERR_METHOD_NOT_IMPLEMENTED', function (e) {
+    r('ERR_STREAM_PUSH_AFTER_EOF', 'stream.push() after EOF'),
+    r('ERR_METHOD_NOT_IMPLEMENTED', function (e) {
         return 'The ' + e + ' method is not implemented';
     }),
-    n('ERR_STREAM_PREMATURE_CLOSE', 'Premature close'),
-    n('ERR_STREAM_DESTROYED', function (e) {
+    r('ERR_STREAM_PREMATURE_CLOSE', 'Premature close'),
+    r('ERR_STREAM_DESTROYED', function (e) {
         return 'Cannot call ' + e + ' after a stream was destroyed';
     }),
-    n('ERR_MULTIPLE_CALLBACK', 'Callback called multiple times'),
-    n('ERR_STREAM_CANNOT_PIPE', 'Cannot pipe, not readable'),
-    n('ERR_STREAM_WRITE_AFTER_END', 'write after end'),
-    n('ERR_STREAM_NULL_VALUES', 'May not write null values to stream', TypeError),
-    n(
+    r('ERR_MULTIPLE_CALLBACK', 'Callback called multiple times'),
+    r('ERR_STREAM_CANNOT_PIPE', 'Cannot pipe, not readable'),
+    r('ERR_STREAM_WRITE_AFTER_END', 'write after end'),
+    r('ERR_STREAM_NULL_VALUES', 'May not write null values to stream', TypeError),
+    r(
         'ERR_UNKNOWN_ENCODING',
         function (e) {
             return 'Unknown encoding: ' + e;
         },
         TypeError
     ),
-    n('ERR_STREAM_UNSHIFT_AFTER_END_EVENT', 'stream.unshift() after end event'),
-    (e.exports.codes = t);
+    r('ERR_STREAM_UNSHIFT_AFTER_END_EVENT', 'stream.unshift() after end event'),
+    (e.exports.codes = n);

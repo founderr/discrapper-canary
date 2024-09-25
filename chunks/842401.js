@@ -2,25 +2,25 @@ var r = n(735250);
 n(470079);
 var i = n(481060),
     a = n(99690),
-    s = n(689938),
-    o = n(686374);
-t.Z = (e) => {
+    o = n(689938),
+    s = n(686374);
+let l = (e) => {
     let { user: t } = e;
     return (0, r.jsxs)('div', {
-        className: o.container,
+        className: s.container,
         children: [
             (0, r.jsx)(i.Heading, {
-                className: o.header,
+                className: s.header,
                 variant: 'heading-sm/semibold',
-                children: s.Z.Messages.REPORTS_USER_PREVIEW_TITLE
+                children: o.Z.Messages.REPORTS_USER_PREVIEW_TITLE
             }),
             (0, r.jsx)('div', {
-                className: o.userContainer,
+                className: s.userContainer,
                 children: (0, r.jsxs)('div', {
-                    className: o.userInfo,
+                    className: s.userInfo,
                     children: [
                         (0, r.jsx)(a.Z, {
-                            className: o.userIcon,
+                            className: s.userIcon,
                             user: t,
                             size: i.AvatarSizes.SIZE_40
                         }),
@@ -45,3 +45,4 @@ t.Z = (e) => {
         ]
     });
 };
+t.Z = l;

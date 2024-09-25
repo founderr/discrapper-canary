@@ -1,13 +1,16 @@
-var n = Date.now;
-t.Z = function (e) {
+var n = 800,
+    r = 16,
+    i = Date.now;
+function a(e) {
     var t = 0,
-        r = 0;
+        a = 0;
     return function () {
-        var i = n(),
-            a = 16 - (i - r);
-        if (((r = i), a > 0)) {
-            if (++t >= 800) return arguments[0];
+        var o = i(),
+            s = r - (o - a);
+        if (((a = o), s > 0)) {
+            if (++t >= n) return arguments[0];
         } else t = 0;
         return e.apply(void 0, arguments);
     };
-};
+}
+t.Z = a;

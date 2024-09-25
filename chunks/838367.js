@@ -1,63 +1,69 @@
-var a,
+var r,
     i,
-    t,
-    n,
-    c,
-    d,
-    r = s(442837),
-    o = s(570140),
-    u = s(314897),
-    h = s(900849);
-((a = c || (c = {})).UNSET = 'unset'), (a.FETCHING = 'fetching'), (a.FAILED = 'failed'), (a.SUCCEEDED = 'succeeded');
-let m = {};
-class x extends (d = r.ZP.Store) {
+    a = n(442837),
+    o = n(570140),
+    s = n(314897),
+    l = n(900849);
+function u(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+!(function (e) {
+    (e.UNSET = 'unset'), (e.FETCHING = 'fetching'), (e.FAILED = 'failed'), (e.SUCCEEDED = 'succeeded');
+})(r || (r = {}));
+let c = {};
+function d(e) {
+    let { guildId: t } = e;
+    c[t] = {
+        ...c[t],
+        fetchState: 'fetching'
+    };
+}
+function _(e) {
+    let { guildId: t, guild: n } = e,
+        r = (0, l.PP)(n);
+    c[t] = {
+        ...c[t],
+        guild: r,
+        fetchState: 'succeeded'
+    };
+}
+function E(e) {
+    let { guildId: t } = e;
+    c[t] = {
+        ...c[t],
+        fetchState: 'failed'
+    };
+}
+class f extends (i = a.ZP.Store) {
     initialize() {
-        this.waitFor(u.default);
+        this.waitFor(s.default);
     }
     isFetchingGuild(e) {
-        let l = m[e];
-        return null != l && 'fetching' === l.fetchState;
+        let t = c[e];
+        return null != t && 'fetching' === t.fetchState;
     }
     getGuild(e) {
-        let l = m[e];
-        return null != l ? l.guild : null;
+        let t = c[e];
+        return null != t ? t.guild : null;
     }
     hasFetchFailed(e) {
-        let l = m[e];
-        return null != l && 'failed' === l.fetchState;
+        let t = c[e];
+        return null != t && 'failed' === t.fetchState;
     }
 }
-(n = 'GuildPopoutStore'),
-    (t = 'displayName') in (i = x)
-        ? Object.defineProperty(i, t, {
-              value: n,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (i[t] = n),
-    (l.Z = new x(o.Z, {
-        GUILD_POPOUT_FETCH_START: function (e) {
-            let { guildId: l } = e;
-            m[l] = {
-                ...m[l],
-                fetchState: 'fetching'
-            };
-        },
-        GUILD_POPOUT_FETCH_SUCCESS: function (e) {
-            let { guildId: l, guild: s } = e,
-                a = (0, h.PP)(s);
-            m[l] = {
-                ...m[l],
-                guild: a,
-                fetchState: 'succeeded'
-            };
-        },
-        GUILD_POPOUT_FETCH_FAILURE: function (e) {
-            let { guildId: l } = e;
-            m[l] = {
-                ...m[l],
-                fetchState: 'failed'
-            };
-        }
+u(f, 'displayName', 'GuildPopoutStore'),
+    (t.Z = new f(o.Z, {
+        GUILD_POPOUT_FETCH_START: d,
+        GUILD_POPOUT_FETCH_SUCCESS: _,
+        GUILD_POPOUT_FETCH_FAILURE: E
     }));

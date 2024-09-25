@@ -1,17 +1,16 @@
-var r, i;
+var r;
 n.d(t, {
     Y: function () {
-        return a;
+        return i;
     },
     k: function () {
         return r;
     }
 }),
-    ((i = r || (r = {}))[(i.UNKNOWN = 0)] = 'UNKNOWN'),
-    (i[(i.INFO = 1)] = 'INFO'),
-    (i[(i.MESSAGE_HISTORY = 2)] = 'MESSAGE_HISTORY'),
-    (i[(i.PERMISSIONS = 3)] = 'PERMISSIONS');
-let a = {
+    !(function (e) {
+        (e[(e.UNKNOWN = 0)] = 'UNKNOWN'), (e[(e.INFO = 1)] = 'INFO'), (e[(e.MESSAGE_HISTORY = 2)] = 'MESSAGE_HISTORY'), (e[(e.PERMISSIONS = 3)] = 'PERMISSIONS');
+    })(r || (r = {}));
+let i = {
     0: 'UNKNOWN',
     1: 'INFO',
     2: 'MESSAGE_HISTORY',

@@ -1,7 +1,12 @@
 n.d(t, {
     $L: function () {
-        return i;
+        return s;
     }
 });
-let r = new (n(226351).o)();
-function i() {}
+var r = n(226351);
+let i = 1000,
+    a = new r.o(),
+    o = null;
+function s() {
+    null != o && (a.resolve(), clearTimeout(o));
+}

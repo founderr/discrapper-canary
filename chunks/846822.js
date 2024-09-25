@@ -1,6 +1,6 @@
 n.d(t, {
     I: function () {
-        return o;
+        return u;
     }
 });
 var r = n(470079),
@@ -24,20 +24,33 @@ var r = n(470079),
             return n && e(t.prototype, n), r && e(t, r), t;
         };
     })();
+function o(e, t) {
+    if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
+}
 function s(e, t) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
 }
-var o = function (e) {
+function l(e, t) {
+    if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
+    (e.prototype = Object.create(t && t.prototype, {
+        constructor: {
+            value: e,
+            enumerable: !1,
+            writable: !0,
+            configurable: !0
+        }
+    })),
+        t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
+}
+var u = function (e) {
     var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'span';
     return (function (n) {
-        function o() {
-            !(function (e, t) {
-                if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
-            })(this, o);
+        function u() {
+            o(this, u);
             for (var e, t, n, r = arguments.length, i = Array(r), a = 0; a < r; a++) i[a] = arguments[a];
             return (
-                (t = n = s(this, (e = o.__proto__ || Object.getPrototypeOf(o)).call.apply(e, [this].concat(i)))),
+                (t = n = s(this, (e = u.__proto__ || Object.getPrototypeOf(u)).call.apply(e, [this].concat(i)))),
                 (n.state = { focus: !1 }),
                 (n.handleFocus = function () {
                     return n.setState({ focus: !0 });
@@ -49,19 +62,8 @@ var o = function (e) {
             );
         }
         return (
-            !(function (e, t) {
-                if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
-                (e.prototype = Object.create(t && t.prototype, {
-                    constructor: {
-                        value: e,
-                        enumerable: !1,
-                        writable: !0,
-                        configurable: !0
-                    }
-                })),
-                    t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
-            })(o, n),
-            a(o, [
+            l(u, n),
+            a(u, [
                 {
                     key: 'render',
                     value: function () {
@@ -76,7 +78,7 @@ var o = function (e) {
                     }
                 }
             ]),
-            o
+            u
         );
     })(r.Component);
 };

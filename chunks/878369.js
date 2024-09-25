@@ -4,6 +4,8 @@ n.d(t, {
     }
 });
 var r = n(721056),
-    i = function (e, t) {
-        (this.inlineSize = e), (this.blockSize = t), (0, r.v)(this);
-    };
+    i = (function () {
+        return function e(e, t) {
+            (this.inlineSize = e), (this.blockSize = t), (0, r.v)(this);
+        };
+    })();

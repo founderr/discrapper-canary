@@ -1,40 +1,39 @@
-n(47120);
-var r = n(735250),
-    i = n(470079),
-    a = n(120356),
-    s = n.n(a),
-    o = n(143927),
-    l = n(318766),
-    u = n(28546),
-    c = n(957825),
-    d = n(933283);
-t.Z = i.memo(
-    i.forwardRef(function (e, t) {
-        let { disabled: n, type: a } = e,
-            [_, E, f] = (0, u.Iu)((e) => [e.activeView, e.activeViewType, e.pickerId], o.Z),
-            h = i.useCallback(() => {
-                (0, u.RO)(c.X1.EMOJI, a);
-            }, [a]);
-        return n
-            ? null
-            : (0, r.jsx)('div', {
-                  className: s()(c.CT, d.buttonContainer),
-                  ref: t,
-                  children: (0, r.jsx)(l.Z, {
-                      className: d.emojiButton,
-                      onClick: h,
-                      active: _ === c.X1.EMOJI && E === a,
-                      'aria-controls': f,
-                      tabIndex: 0,
-                      focusProps: {
-                          offset: {
-                              top: 4,
-                              bottom: 4,
-                              left: -4,
-                              right: -4
-                          }
+var r = n(47120);
+var i = n(735250),
+    a = n(470079),
+    o = n(120356),
+    s = n.n(o),
+    l = n(143927),
+    u = n(318766),
+    c = n(28546),
+    d = n(957825),
+    _ = n(933283);
+function E(e, t) {
+    let { disabled: n, type: r } = e,
+        [o, E, f] = (0, c.Iu)((e) => [e.activeView, e.activeViewType, e.pickerId], l.Z),
+        h = a.useCallback(() => {
+            (0, c.RO)(d.X1.EMOJI, r);
+        }, [r]);
+    return n
+        ? null
+        : (0, i.jsx)('div', {
+              className: s()(d.CT, _.buttonContainer),
+              ref: t,
+              children: (0, i.jsx)(u.Z, {
+                  className: _.emojiButton,
+                  onClick: h,
+                  active: o === d.X1.EMOJI && E === r,
+                  'aria-controls': f,
+                  tabIndex: 0,
+                  focusProps: {
+                      offset: {
+                          top: 4,
+                          bottom: 4,
+                          left: -4,
+                          right: -4
                       }
-                  })
-              });
-    })
-);
+                  }
+              })
+          });
+}
+t.Z = a.memo(a.forwardRef(E));

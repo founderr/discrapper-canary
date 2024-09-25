@@ -1,7 +1,7 @@
-var r, i, a, s, o, l, u, c;
+var r, i, a, o;
 n.d(t, {
     D2: function () {
-        return E;
+        return u;
     },
     LU: function () {
         return a;
@@ -10,16 +10,27 @@ n.d(t, {
         return r;
     },
     Xd: function () {
-        return d;
+        return s;
     },
     h3: function () {
         return i;
     },
     sP: function () {
-        return _;
+        return l;
     }
 });
-let d = 'CHANGELOG_MODAL',
-    _ = '1232523165893132288',
-    E = 'https://discord.com/category/product';
-((o = r || (r = {}))[(o.DESKTOP = 0)] = 'DESKTOP'), (o[(o.MOBILE = 1)] = 'MOBILE'), ((l = i || (i = {}))[(l.YOUTUBE_VIDEO_ID = 0)] = 'YOUTUBE_VIDEO_ID'), (l[(l.IMAGE = 1)] = 'IMAGE'), ((u = a || (a = {}))[(u.NOT_LOADED = 0)] = 'NOT_LOADED'), (u[(u.LOADED_SUCCESS = 1)] = 'LOADED_SUCCESS'), (u[(u.LOADED_FAILURE = 2)] = 'LOADED_FAILURE'), ((c = s || (s = {})).SPECIAL = 'special'), (c.STANDARD = 'standard');
+let s = 'CHANGELOG_MODAL',
+    l = '1232523165893132288',
+    u = 'https://discord.com/category/product';
+!(function (e) {
+    (e[(e.DESKTOP = 0)] = 'DESKTOP'), (e[(e.MOBILE = 1)] = 'MOBILE');
+})(r || (r = {})),
+    !(function (e) {
+        (e[(e.YOUTUBE_VIDEO_ID = 0)] = 'YOUTUBE_VIDEO_ID'), (e[(e.IMAGE = 1)] = 'IMAGE');
+    })(i || (i = {})),
+    !(function (e) {
+        (e[(e.NOT_LOADED = 0)] = 'NOT_LOADED'), (e[(e.LOADED_SUCCESS = 1)] = 'LOADED_SUCCESS'), (e[(e.LOADED_FAILURE = 2)] = 'LOADED_FAILURE');
+    })(a || (a = {})),
+    !(function (e) {
+        (e.SPECIAL = 'special'), (e.STANDARD = 'standard');
+    })(o || (o = {}));

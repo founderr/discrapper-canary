@@ -1,4 +1,4 @@
-e.exports = function (e) {
+function t(e) {
     return {
         name: 'Leaf',
         contains: [
@@ -38,4 +38,5 @@ e.exports = function (e) {
             }
         ]
     };
-};
+}
+e.exports = t;

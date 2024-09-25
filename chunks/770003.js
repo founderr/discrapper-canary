@@ -1,17 +1,18 @@
 n.d(t, {
     gb: function () {
-        return a;
+        return o;
     },
     xQ: function () {
-        return i;
+        return a;
     }
 });
-let r = null;
-function i(e, t = 'assertive', n = 7000) {
-    !r && (r = new s()), r.announce(e, t, n);
+let r = 7000,
+    i = null;
+function a(e, t = 'assertive', n = r) {
+    !i && (i = new s()), i.announce(e, t, n);
 }
-function a(e) {
-    r && r.clear(e);
+function o(e) {
+    i && i.clear(e);
 }
 class s {
     createLog(e) {
@@ -21,14 +22,14 @@ class s {
     destroy() {
         this.node && (document.body.removeChild(this.node), (this.node = null));
     }
-    announce(e, t = 'assertive', n = 7000) {
+    announce(e, t = 'assertive', n = r) {
         if (!this.node) return;
-        let r = document.createElement('div');
-        (r.textContent = e),
-            'assertive' === t ? this.assertiveLog.appendChild(r) : this.politeLog.appendChild(r),
+        let i = document.createElement('div');
+        (i.textContent = e),
+            'assertive' === t ? this.assertiveLog.appendChild(i) : this.politeLog.appendChild(i),
             '' !== e &&
                 setTimeout(() => {
-                    r.remove();
+                    i.remove();
                 }, n);
     }
     clear(e) {

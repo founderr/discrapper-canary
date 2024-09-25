@@ -1,8 +1,8 @@
 var r = n(197187),
     i = n(926515),
     a = n(581031),
-    s = n(527221),
-    o = n(936940),
+    o = n(527221),
+    s = n(936940),
     l = n(24033),
     u = n(354848),
     c = n(35179),
@@ -12,21 +12,28 @@ var r = n(197187),
     f = n(676125),
     h = n(344597),
     p = n(995739),
-    I = n(115726),
-    m = n(651673),
+    m = n(115726),
+    I = n(651673),
     T = n(641236)('replace'),
-    S = Math.max,
-    g = Math.min,
+    g = Math.max,
+    S = Math.min,
     A = a([].concat),
-    N = a([].push),
-    O = a(''.indexOf),
-    R = a(''.slice),
-    v = '$0' === 'a'.replace(/./, '$0'),
-    C = !!/./[T] && '' === /./[T]('a', '$0');
-s(
+    v = a([].push),
+    N = a(''.indexOf),
+    O = a(''.slice),
+    R = function (e) {
+        return void 0 === e ? e : String(e);
+    },
+    C = (function () {
+        return '$0' === 'a'.replace(/./, '$0');
+    })(),
+    y = (function () {
+        return !!/./[T] && '' === /./[T]('a', '$0');
+    })();
+o(
     'replace',
     function (e, t, n) {
-        var a = C ? '$' : '$0';
+        var a = y ? '$' : '$0';
         return [
             function (e, n) {
                 var r = f(this),
@@ -34,36 +41,34 @@ s(
                 return a ? i(a, e, r, n) : i(t, E(r), e, n);
             },
             function (e, i) {
-                var s = l(this),
-                    o = E(e);
-                if ('string' == typeof i && -1 === O(i, a) && -1 === O(i, '$<')) {
-                    var c = n(t, s, o, i);
+                var o = l(this),
+                    s = E(e);
+                if ('string' == typeof i && -1 === N(i, a) && -1 === N(i, '$<')) {
+                    var c = n(t, o, s, i);
                     if (c.done) return c.value;
                 }
                 var f = u(i);
                 !f && (i = E(i));
-                var p = s.global;
-                p && ((D = s.unicode), (s.lastIndex = 0));
-                for (var T = []; null !== (b = m(s, o)); ) {
-                    if ((N(T, b), !p)) break;
-                    '' === E(b[0]) && (s.lastIndex = h(o, _(s.lastIndex), D));
+                var p = o.global;
+                p && ((L = o.unicode), (o.lastIndex = 0));
+                for (var T = []; null !== (D = I(o, s)); ) {
+                    if ((v(T, D), !p)) break;
+                    '' === E(D[0]) && (o.lastIndex = h(s, _(o.lastIndex), L));
                 }
-                for (var v = '', C = 0, y = 0; y < T.length; y++) {
-                    for (var L, D, b, M, P = E((b = T[y])[0]), U = S(g(d(b.index), o.length), 0), w = [], x = 1; x < b.length; x++) {
-                        N(w, void 0 === (L = b[x]) ? L : String(L));
-                    }
-                    var G = b.groups;
+                for (var C = '', y = 0, b = 0; b < T.length; b++) {
+                    for (var L, D, M, P = E((D = T[b])[0]), U = g(S(d(D.index), s.length), 0), w = [], x = 1; x < D.length; x++) v(w, R(D[x]));
+                    var G = D.groups;
                     if (f) {
-                        var k = A([P], w, U, o);
-                        void 0 !== G && N(k, G), (M = E(r(i, void 0, k)));
-                    } else M = I(P, o, U, w, G, i);
-                    U >= C && ((v += R(o, C, U) + M), (C = U + P.length));
+                        var k = A([P], w, U, s);
+                        void 0 !== G && v(k, G), (M = E(r(i, void 0, k)));
+                    } else M = m(P, s, U, w, G, i);
+                    U >= y && ((C += O(s, y, U) + M), (y = U + P.length));
                 }
-                return v + R(o, C);
+                return C + O(s, y);
             }
         ];
     },
-    !!o(function () {
+    !!s(function () {
         var e = /./;
         return (
             (e.exec = function () {
@@ -73,6 +78,6 @@ s(
             '7' !== ''.replace(e, '$<a>')
         );
     }) ||
-        !v ||
-        C
+        !C ||
+        y
 );

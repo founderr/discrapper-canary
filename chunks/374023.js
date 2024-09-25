@@ -1,28 +1,38 @@
 n.d(t, {
     s: function () {
-        return o;
+        return a;
     }
 });
-var r,
-    i,
-    a,
-    s = n(579806);
-class o {
+var r = n(579806);
+function i(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+class a {
     static get() {
-        if (null == o.cached) {
+        if (null == a.cached) {
             var e, t;
-            let n = null === s.Z || void 0 === s.Z ? void 0 : null === (t = s.Z.processUtils) || void 0 === t ? void 0 : null === (e = t.getMainArgvSync) || void 0 === e ? void 0 : e.call(t);
-            null != n && n.length > 1 && n.shift(), (o.cached = null != n ? n : []);
+            let n = null === r.Z || void 0 === r.Z ? void 0 : null === (t = r.Z.processUtils) || void 0 === t ? void 0 : null === (e = t.getMainArgvSync) || void 0 === e ? void 0 : e.call(t);
+            null != n && n.length > 1 && n.shift(), (a.cached = null != n ? n : []);
         }
-        return o.cached;
+        return a.cached;
     }
     static contains(e) {
-        return o.get().includes(e);
+        return a.get().includes(e);
     }
     static isEnvVariableTrue(e) {
         var t, n;
-        if (void 0 === s.Z) return !1;
-        switch (null === s.Z || void 0 === s.Z ? void 0 : null === (n = s.Z.process) || void 0 === n ? void 0 : null === (t = n.env) || void 0 === t ? void 0 : t[e]) {
+        if (void 0 === r.Z) return !1;
+        switch (null === r.Z || void 0 === r.Z ? void 0 : null === (n = r.Z.process) || void 0 === n ? void 0 : null === (t = n.env) || void 0 === t ? void 0 : t[e]) {
             case '1':
             case 'true':
                 return !0;
@@ -30,21 +40,13 @@ class o {
         return !1;
     }
     static isDisallowPopupsSet() {
-        return o.contains('--disallow-popups') || o.isEnvVariableTrue('DISCORD_DISALLOW_POPUPS');
+        return a.contains('--disallow-popups') || a.isEnvVariableTrue('DISCORD_DISALLOW_POPUPS');
     }
     static isDiscordTestSet() {
-        return o.isEnvVariableTrue('DISCORD_TEST');
+        return a.isEnvVariableTrue('DISCORD_TEST');
     }
     static isDiscordGatewayPlaintextSet() {
         return !1;
     }
 }
-(a = void 0),
-    (i = 'cached') in (r = o)
-        ? Object.defineProperty(r, i, {
-              value: a,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (r[i] = a);
+i(a, 'cached', void 0);

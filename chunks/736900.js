@@ -1,4 +1,4 @@
-e.exports = function (e) {
+function t(e) {
     let t = e.regex,
         n = {
             className: 'variable',
@@ -96,4 +96,5 @@ e.exports = function (e) {
         ],
         illegal: '[^\\s\\}\\{]'
     };
-};
+}
+e.exports = t;

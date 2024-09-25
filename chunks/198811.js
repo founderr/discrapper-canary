@@ -7,7 +7,8 @@ var r = Date.prototype.getDay,
         }
     },
     a = Object.prototype.toString,
+    o = '[object Date]',
     s = n(703825)();
 e.exports = function (e) {
-    return 'object' == typeof e && null !== e && (s ? i(e) : '[object Date]' === a.call(e));
+    return 'object' == typeof e && null !== e && (s ? i(e) : a.call(e) === o);
 };

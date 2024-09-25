@@ -1,51 +1,52 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return p;
     },
     q: function () {
-        return f;
+        return h;
     }
-}),
-    n(47120);
-var r = n(735250);
+});
+var r = n(47120);
+var i = n(735250);
 n(470079);
-var i = n(442837),
-    a = n(481060),
+var a = n(442837),
+    o = n(481060),
     s = n(144144),
-    o = n(592125),
-    l = n(496675),
-    u = n(944486),
-    c = n(585483),
-    d = n(51144),
-    _ = n(981631),
-    E = n(689938);
-function f(e, t) {
+    l = n(592125),
+    u = n(496675),
+    c = n(944486),
+    d = n(585483),
+    _ = n(51144),
+    E = n(981631),
+    f = n(689938);
+function h(e, t) {
     let { id: n } = e,
-        r = '@'.concat(d.ZP.getUserTag(e, { decoration: 'never' }));
-    c.S.dispatchToLastSubscribed(_.CkL.INSERT_TEXT, {
+        r = '@'.concat(_.ZP.getUserTag(e, { decoration: 'never' })),
+        i = '<@'.concat(n, '>');
+    d.S.dispatchToLastSubscribed(E.CkL.INSERT_TEXT, {
         plainText: r,
-        rawText: '<@'.concat(n, '>')
+        rawText: i
     }),
         null != t && s.Z.startTyping(t);
 }
-function h(e, t, n) {
-    let [s, c] = (0, i.Wu)(
-            [u.Z, o.Z, l.Z],
+function p(e, t, n) {
+    let [r, s] = (0, a.Wu)(
+            [c.Z, l.Z, u.Z],
             () => {
-                let e = u.Z.getChannelId(t),
-                    n = o.Z.getChannel(e);
-                return [e, null != n && (n.isMultiUserDM() || l.Z.can(_.Plq.SEND_MESSAGES, n))];
+                let e = c.Z.getChannelId(t),
+                    n = l.Z.getChannel(e);
+                return [e, null != n && (n.isMultiUserDM() || u.Z.can(E.Plq.SEND_MESSAGES, n))];
             },
             [t]
         ),
-        d = n === _.IlC.POPOUT;
-    return !c || d
-        ? null
-        : (0, r.jsx)(a.MenuItem, {
-              id: 'mention',
-              label: E.Z.Messages.MENTION,
-              action: function () {
-                  f(e, s);
-              }
-          });
+        d = n === E.IlC.POPOUT;
+    if (!s || d) return null;
+    function _() {
+        h(e, r);
+    }
+    return (0, i.jsx)(o.MenuItem, {
+        id: 'mention',
+        label: f.Z.Messages.MENTION,
+        action: _
+    });
 }

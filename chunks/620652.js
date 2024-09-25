@@ -1,38 +1,40 @@
 n.d(t, {
     M: function () {
-        return s;
+        return r;
     },
     Z: function () {
-        return T;
+        return m;
     }
 });
-var i,
-    s,
-    o = n(735250),
+var r,
+    i = n(735250),
     a = n(470079),
-    l = n(120356),
-    r = n.n(l),
-    c = n(500923),
-    d = n.n(c),
-    u = n(570140),
-    h = n(960020),
-    m = n(831244),
-    p = n(815605),
+    o = n(120356),
+    s = n.n(o),
+    l = n(500923),
+    u = n.n(l),
+    c = n(570140),
+    d = n(960020),
+    _ = n(831244),
+    E = n(815605),
     f = n(981631),
-    g = n(153190);
-((i = s || (s = {}))[(i.NORMAL = 16)] = 'NORMAL'), (i[(i.LARGE = 32)] = 'LARGE');
-let _ = async (e) => {
+    h = n(153190);
+!(function (e) {
+    (e[(e.NORMAL = 16)] = 'NORMAL'), (e[(e.LARGE = 32)] = 'LARGE');
+})(r || (r = {}));
+let p = async (e) => {
     var t;
     let { effect: n } = e,
-        i = await (0, m.T)(n.channelId, null !== (t = n.messageId) && void 0 !== t ? t : f.lds, n.emoji.name),
-        s = await (0, p.aB)(''.concat(n.channelId, ':').concat(n.messageId, ':').concat(n.emoji.name), n.url, i, n.color);
-    return (s.assets[0].p = n.url), s;
+        r = await (0, _.T)(n.channelId, null !== (t = n.messageId) && void 0 !== t ? t : f.lds, n.emoji.name),
+        i = await (0, E.aB)(''.concat(n.channelId, ':').concat(n.messageId, ':').concat(n.emoji.name), n.url, r, n.color);
+    return (i.assets[0].p = n.url), i;
 };
-function T(e) {
-    let { className: t, effect: n, onComplete: i, emojiSize: s = 16 } = e,
+function m(e) {
+    let { className: t, effect: n, onComplete: r, emojiSize: o = 16 } = e,
         l = a.useRef(null),
-        c = s * p.Vz,
-        m = (c + s) / 2;
+        _ = o * E.Vz,
+        f = (_ + o) / 2,
+        m = 'translateY('.concat(f, 'px)');
     return (
         a.useEffect(() => {
             let e;
@@ -40,21 +42,21 @@ function T(e) {
                 return (
                     !(async function () {
                         if (null != l.current) {
-                            let t = await _({ effect: n });
-                            (e = d().loadAnimation({
+                            let t = await p({ effect: n });
+                            (e = u().loadAnimation({
                                 container: l.current,
                                 renderer: 'svg',
                                 loop: !1,
                                 autoplay: !0,
                                 animationData: t
                             })).addEventListener('complete', () => {
-                                null == i || i(), e.destroy();
+                                null == r || r(), e.destroy();
                             }),
                                 null != n.channelId &&
                                     null != n.messageId &&
                                     null != n.emoji &&
-                                    n.key === h.I.HOVER &&
-                                    u.Z.dispatch({
+                                    n.key === d.I.HOVER &&
+                                    c.Z.dispatch({
                                         type: 'BURST_REACTION_ANIMATION_ADD',
                                         channelId: n.channelId,
                                         messageId: n.messageId,
@@ -67,15 +69,15 @@ function T(e) {
                         null != e && e.destroy();
                     }
                 );
-        }, [i, n, s]),
-        (0, o.jsx)('div', {
-            className: g.effectsWrapper,
-            children: (0, o.jsx)('div', {
-                className: r()(g.effect, t),
+        }, [r, n, o]),
+        (0, i.jsx)('div', {
+            className: h.effectsWrapper,
+            children: (0, i.jsx)('div', {
+                className: s()(h.effect, t),
                 style: {
-                    transform: 'translateY('.concat(m, 'px)'),
-                    height: c,
-                    width: c
+                    transform: m,
+                    height: _,
+                    width: _
                 },
                 ref: l
             })

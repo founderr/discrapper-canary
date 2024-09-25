@@ -1,5 +1,5 @@
 var t = Function.prototype.toString;
-e.exports = function (e) {
+function n(e) {
     if (null != e) {
         try {
             return t.call(e);
@@ -9,4 +9,5 @@ e.exports = function (e) {
         } catch (e) {}
     }
     return '';
-};
+}
+e.exports = n;

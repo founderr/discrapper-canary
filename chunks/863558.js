@@ -1,14 +1,34 @@
-e.exports = function (e) {
+function t(e) {
     let t = e.regex,
-        n = /\d{1,2}\/\d{1,2}\/\d{4}/,
-        r = /\d{4}-\d{1,2}-\d{1,2}/,
-        i = /(\d|1[012])(:\d+){0,2} *(AM|PM)/,
-        a = /\d{1,2}(:\d{1,2}){1,2}/,
-        s = {
-            className: 'literal',
-            variants: [{ begin: t.concat(/# */, t.either(r, n), / *#/) }, { begin: t.concat(/# */, a, / *#/) }, { begin: t.concat(/# */, i, / *#/) }, { begin: t.concat(/# */, t.either(r, n), / +/, t.either(i, a), / *#/) }]
+        n = {
+            className: 'string',
+            begin: /"(""|[^/n])"C\b/
         },
-        o = e.COMMENT(/'''/, /$/, {
+        r = {
+            className: 'string',
+            begin: /"/,
+            end: /"/,
+            illegal: /\n/,
+            contains: [{ begin: /""/ }]
+        },
+        i = /\d{1,2}\/\d{1,2}\/\d{4}/,
+        a = /\d{4}-\d{1,2}-\d{1,2}/,
+        o = /(\d|1[012])(:\d+){0,2} *(AM|PM)/,
+        s = /\d{1,2}(:\d{1,2}){1,2}/,
+        l = {
+            className: 'literal',
+            variants: [{ begin: t.concat(/# */, t.either(a, i), / *#/) }, { begin: t.concat(/# */, s, / *#/) }, { begin: t.concat(/# */, o, / *#/) }, { begin: t.concat(/# */, t.either(a, i), / +/, t.either(o, s), / *#/) }]
+        },
+        u = {
+            className: 'number',
+            relevance: 0,
+            variants: [{ begin: /\b\d[\d_]*((\.[\d_]+(E[+-]?[\d_]+)?)|(E[+-]?[\d_]+))[RFD@!#]?/ }, { begin: /\b\d[\d_]*((U?[SIL])|[%&])?/ }, { begin: /&H[\dA-F_]+((U?[SIL])|[%&])?/ }, { begin: /&O[0-7_]+((U?[SIL])|[%&])?/ }, { begin: /&B[01_]+((U?[SIL])|[%&])?/ }]
+        },
+        c = {
+            className: 'label',
+            begin: /^\w+:/
+        },
+        d = e.COMMENT(/'''/, /$/, {
             contains: [
                 {
                     className: 'doctag',
@@ -17,9 +37,16 @@ e.exports = function (e) {
                 }
             ]
         }),
-        l = e.COMMENT(null, /$/, {
+        _ = e.COMMENT(null, /$/, {
             variants: [{ begin: /'/ }, { begin: /([\t ]|^)REM(?=\s)/ }]
-        });
+        }),
+        E = {
+            className: 'meta',
+            begin: /[\t ]*#(const|disable|else|elseif|enable|end|externalsource|if|region)\b/,
+            end: /$/,
+            keywords: { keyword: 'const disable else elseif enable end externalsource if region then' },
+            contains: [_]
+        };
     return {
         name: 'Visual Basic .NET',
         aliases: ['vb'],
@@ -32,37 +59,7 @@ e.exports = function (e) {
             literal: 'true false nothing'
         },
         illegal: '//|\\{|\\}|endif|gosub|variant|wend|^\\$ ',
-        contains: [
-            {
-                className: 'string',
-                begin: /"(""|[^/n])"C\b/
-            },
-            {
-                className: 'string',
-                begin: /"/,
-                end: /"/,
-                illegal: /\n/,
-                contains: [{ begin: /""/ }]
-            },
-            s,
-            {
-                className: 'number',
-                relevance: 0,
-                variants: [{ begin: /\b\d[\d_]*((\.[\d_]+(E[+-]?[\d_]+)?)|(E[+-]?[\d_]+))[RFD@!#]?/ }, { begin: /\b\d[\d_]*((U?[SIL])|[%&])?/ }, { begin: /&H[\dA-F_]+((U?[SIL])|[%&])?/ }, { begin: /&O[0-7_]+((U?[SIL])|[%&])?/ }, { begin: /&B[01_]+((U?[SIL])|[%&])?/ }]
-            },
-            {
-                className: 'label',
-                begin: /^\w+:/
-            },
-            o,
-            l,
-            {
-                className: 'meta',
-                begin: /[\t ]*#(const|disable|else|elseif|enable|end|externalsource|if|region)\b/,
-                end: /$/,
-                keywords: { keyword: 'const disable else elseif enable end externalsource if region then' },
-                contains: [l]
-            }
-        ]
+        contains: [n, r, l, u, c, d, _, E]
     };
-};
+}
+e.exports = t;

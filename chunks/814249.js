@@ -1,55 +1,60 @@
 n.d(t, {
     DZ: function () {
-        return o;
+        return i;
     },
     Dc: function () {
-        return s;
+        return r;
     },
     R7: function () {
-        return l;
+        return a;
     },
     cS: function () {
-        return d;
+        return l;
     },
     iq: function () {
-        return _;
+        return u;
     }
 });
 var r,
     i,
     a,
-    s,
-    o,
-    l,
-    u = n(70956),
-    c = n(689938);
-let d = 5 * u.Z.Millis.SECOND;
-function _() {
+    o = n(70956),
+    s = n(689938);
+let l = 5 * o.Z.Millis.SECOND;
+function u() {
     return [
         {
             value: 'DUPLICATED',
-            label: c.Z.Messages.SUMMARIES_FEEDBACK_OPTION_DUPLICATED
+            label: s.Z.Messages.SUMMARIES_FEEDBACK_OPTION_DUPLICATED
         },
         {
             value: 'TOO_GENERIC',
-            label: c.Z.Messages.SUMMARIES_FEEDBACK_OPTION_TOO_GENERIC
+            label: s.Z.Messages.SUMMARIES_FEEDBACK_OPTION_TOO_GENERIC
         },
         {
             value: 'TOO_MANY',
-            label: c.Z.Messages.SUMMARIES_FEEDBACK_OPTION_TOO_MANY
+            label: s.Z.Messages.SUMMARIES_FEEDBACK_OPTION_TOO_MANY
         },
         {
             value: 'INACCURATE',
-            label: c.Z.Messages.SUMMARIES_FEEDBACK_OPTION_INACCURATE
+            label: s.Z.Messages.SUMMARIES_FEEDBACK_OPTION_INACCURATE
         },
         {
             value: 'NOT_USEFUL',
-            label: c.Z.Messages.SUMMARIES_FEEDBACK_OPTION_NOT_USEFUL
+            label: s.Z.Messages.SUMMARIES_FEEDBACK_OPTION_NOT_USEFUL
         },
         {
             value: 'OTHER',
-            label: c.Z.Messages.SUMMARIES_FEEDBACK_OPTION_OTHER
+            label: s.Z.Messages.SUMMARIES_FEEDBACK_OPTION_OTHER
         }
     ];
 }
-((r = s || (s = {})).TOOLBAR_BUTTON = 'toolbar button'), (r.PILL = 'pill'), ((i = o || (o = {})).SIDEBAR = 'sidebar'), (i.PILL_DROPDOWN = 'pill dropdown'), (i.PILL_NEXT_ARROW = 'pill next arrow'), (i.PILL_PREVIOUS_ARROW = 'pill previous arrow'), ((a = l || (l = {})).DUPLICATED = 'DUPLICATED'), (a.TOO_GENERIC = 'TOO_GENERIC'), (a.TOO_MANY = 'TOO_MANY'), (a.INACCURATE = 'INACCURATE'), (a.NOT_USEFUL = 'NOT_USEFUL'), (a.OTHER = 'OTHER');
+!(function (e) {
+    (e.TOOLBAR_BUTTON = 'toolbar button'), (e.PILL = 'pill');
+})(r || (r = {})),
+    !(function (e) {
+        (e.SIDEBAR = 'sidebar'), (e.PILL_DROPDOWN = 'pill dropdown'), (e.PILL_NEXT_ARROW = 'pill next arrow'), (e.PILL_PREVIOUS_ARROW = 'pill previous arrow');
+    })(i || (i = {})),
+    !(function (e) {
+        (e.DUPLICATED = 'DUPLICATED'), (e.TOO_GENERIC = 'TOO_GENERIC'), (e.TOO_MANY = 'TOO_MANY'), (e.INACCURATE = 'INACCURATE'), (e.NOT_USEFUL = 'NOT_USEFUL'), (e.OTHER = 'OTHER');
+    })(a || (a = {}));

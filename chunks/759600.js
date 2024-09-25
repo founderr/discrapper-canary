@@ -1,6 +1,6 @@
 var r = n(625898),
     i = n(771701);
-e.exports = function (e, t) {
+function a(e, t) {
     var n = -1,
         a = i(e) ? Array(e.length) : [];
     return (
@@ -9,4 +9,5 @@ e.exports = function (e, t) {
         }),
         a
     );
-};
+}
+e.exports = a;

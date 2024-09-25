@@ -1,4 +1,4 @@
-e.exports = function (e) {
+function t(e) {
     return {
         name: 'Awk',
         keywords: { keyword: 'BEGIN END if else while do for in break continue delete next nextfile function func exit|10' },
@@ -48,4 +48,5 @@ e.exports = function (e) {
             e.NUMBER_MODE
         ]
     };
-};
+}
+e.exports = t;

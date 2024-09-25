@@ -1,46 +1,50 @@
-n(47120);
 var r,
-    i,
-    a,
-    s,
-    o = n(106351),
-    l = n(442837),
-    u = n(570140),
-    c = n(38618);
-let d = new Set(),
-    _ = {};
-function E() {
-    d.clear();
+    i = n(47120);
+var a = n(106351),
+    o = n(442837),
+    s = n(570140),
+    l = n(38618);
+function u(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+let c = new Set(),
+    d = {};
+function _() {
+    c.clear();
+}
+function E(e) {
+    c.delete(e.guild.id);
 }
 function f(e) {
-    d.delete(e.guild.id);
+    null == d[e.guildId] && (d[e.guildId] = {}), (d[e.guildId][e.id] = e.status);
 }
-class h extends (r = l.ZP.Store) {
+function h(e) {
+    for (let { id: t, status: n } of ((d[e.guildId] = {}), e.channels)) d[e.guildId][t] = n;
+}
+class p extends (r = o.ZP.Store) {
     getChannelStatus(e) {
         var t;
         if (null != e && null != e.guild_id) {
-            if (e.type === o.d.GUILD_VOICE) return !d.has(e.guild_id) && (d.add(e.guild_id), c.Z.getSocket().requestChannelStatuses(e.guild_id)), null === (t = _[e.guild_id]) || void 0 === t ? void 0 : t[e.id];
+            if (e.type === a.d.GUILD_VOICE) return !c.has(e.guild_id) && (c.add(e.guild_id), l.Z.getSocket().requestChannelStatuses(e.guild_id)), null === (t = d[e.guild_id]) || void 0 === t ? void 0 : t[e.id];
         }
     }
 }
-(s = 'ChannelStatusStore'),
-    (a = 'displayName') in (i = h)
-        ? Object.defineProperty(i, a, {
-              value: s,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (i[a] = s),
-    (t.Z = new h(u.Z, {
-        GUILD_CREATE: f,
-        GUILD_DELETE: f,
-        CONNECTION_RESUMED: E,
-        CONNECTION_OPEN: E,
-        VOICE_CHANNEL_STATUS_UPDATE: function (e) {
-            null == _[e.guildId] && (_[e.guildId] = {}), (_[e.guildId][e.id] = e.status);
-        },
-        CHANNEL_STATUSES: function (e) {
-            for (let { id: t, status: n } of ((_[e.guildId] = {}), e.channels)) _[e.guildId][t] = n;
-        }
+u(p, 'displayName', 'ChannelStatusStore'),
+    (t.Z = new p(s.Z, {
+        GUILD_CREATE: E,
+        GUILD_DELETE: E,
+        CONNECTION_RESUMED: _,
+        CONNECTION_OPEN: _,
+        VOICE_CHANNEL_STATUS_UPDATE: f,
+        CHANNEL_STATUSES: h
     }));

@@ -1,4 +1,4 @@
-var r, i, a, s;
+var r, i;
 n.d(t, {
     Jx: function () {
         return i;
@@ -7,18 +7,16 @@ n.d(t, {
         return r;
     },
     r: function () {
-        return o;
+        return a;
     }
 }),
-    ((a = r || (r = {})).ANIMATED = 'ANIMATED'),
-    (a.INSTANT = 'INSTANT'),
-    ((s = i || (i = {}))[(s.UNKNOWN = 0)] = 'UNKNOWN'),
-    (s[(s.WINDOWED = 1)] = 'WINDOWED'),
-    (s[(s.MAXIMIZED = 2)] = 'MAXIMIZED'),
-    (s[(s.BORDERLESS_FULLSCREEN = 3)] = 'BORDERLESS_FULLSCREEN'),
-    (s[(s.FULLSCREEN = 4)] = 'FULLSCREEN'),
-    (s[(s.MINIMIZED = 5)] = 'MINIMIZED');
-let o = {
+    !(function (e) {
+        (e.ANIMATED = 'ANIMATED'), (e.INSTANT = 'INSTANT');
+    })(r || (r = {})),
+    !(function (e) {
+        (e[(e.UNKNOWN = 0)] = 'UNKNOWN'), (e[(e.WINDOWED = 1)] = 'WINDOWED'), (e[(e.MAXIMIZED = 2)] = 'MAXIMIZED'), (e[(e.BORDERLESS_FULLSCREEN = 3)] = 'BORDERLESS_FULLSCREEN'), (e[(e.FULLSCREEN = 4)] = 'FULLSCREEN'), (e[(e.MINIMIZED = 5)] = 'MINIMIZED');
+    })(i || (i = {}));
+let a = {
     compatibilityHook: !1,
     warn: !1,
     enabled: !1,

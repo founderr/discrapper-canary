@@ -1,55 +1,56 @@
-n(47120);
-var r = n(735250),
-    i = n(470079),
-    a = n(120356),
-    s = n.n(a),
-    o = n(481060),
-    l = n(686546),
-    u = n(90837);
-t.Z = (e) => {
-    let { className: t, guild: n, isSelected: a = !0, width: c = 32, height: d = 32, shouldAnimate: _ = !0, isLocked: E = !1 } = e,
-        [f, h] = i.useState(!1),
-        p = n.getIconURL(32, _ && a),
-        I = () => h(!0),
-        m = () => h(!1);
-    return (0, r.jsxs)('div', {
-        onFocus: I,
-        onBlur: m,
-        onMouseOver: I,
-        onMouseLeave: m,
+var r = n(47120);
+var i = n(735250),
+    a = n(470079),
+    o = n(120356),
+    s = n.n(o),
+    l = n(481060),
+    u = n(686546),
+    c = n(90837);
+let d = (e) => {
+    let { className: t, guild: n, isSelected: r = !0, width: o = 32, height: d = 32, shouldAnimate: _ = !0, isLocked: E = !1 } = e,
+        [f, h] = a.useState(!1),
+        p = n.getIconURL(32, _ && r),
+        m = () => h(!0),
+        I = () => h(!1);
+    return (0, i.jsxs)('div', {
+        onFocus: m,
+        onBlur: I,
+        onMouseOver: m,
+        onMouseLeave: I,
         children: [
-            (0, r.jsx)(l.ZP, {
-                className: s()(u.mask, t),
-                mask: a || f ? l.QS.SQUIRCLE : l.QS.AVATAR_DEFAULT,
-                width: c,
+            (0, i.jsx)(u.ZP, {
+                className: s()(c.mask, t),
+                mask: r || f ? u.QS.SQUIRCLE : u.QS.AVATAR_DEFAULT,
+                width: o,
                 height: d,
                 children:
                     null == p
-                        ? (0, r.jsx)('div', {
-                              className: s()(u.guildIcon, u.guildIconWithoutImage),
-                              children: (0, r.jsx)('div', {
-                                  className: u.guildAcronym,
+                        ? (0, i.jsx)('div', {
+                              className: s()(c.guildIcon, c.guildIconWithoutImage),
+                              children: (0, i.jsx)('div', {
+                                  className: c.guildAcronym,
                                   children: n.acronym
                               })
                           })
-                        : (0, r.jsx)('img', {
+                        : (0, i.jsx)('img', {
                               alt: n.toString(),
                               src: p,
-                              className: u.guildIcon
+                              className: c.guildIcon
                           })
             }),
             E
-                ? (0, r.jsx)('div', {
-                      className: u.categoryItemLockIconContainer,
-                      children: (0, r.jsx)(o.LockIcon, {
+                ? (0, i.jsx)('div', {
+                      className: c.categoryItemLockIconContainer,
+                      children: (0, i.jsx)(l.LockIcon, {
                           size: 'custom',
                           color: 'currentColor',
                           width: 10,
                           height: 10,
-                          className: u.categoryItemLockIcon
+                          className: c.categoryItemLockIcon
                       })
                   })
                 : null
         ]
     });
 };
+t.Z = d;

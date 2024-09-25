@@ -1,12 +1,12 @@
 n.d(t, {
     w: function () {
-        return s;
+        return u;
     }
-}),
-    n(47120),
-    n(724458);
-var r = n(356659);
-let i = [
+});
+var r = n(47120);
+var i = n(724458);
+var a = n(356659);
+let o = [
         (e) => {
             let t = {
                 ...e,
@@ -27,49 +27,50 @@ let i = [
             name: '' === e.name ? void 0 : e.name
         })
     ],
-    a = null;
-async function s(e) {
-    var t;
-    let s = (await n.e('56268').then(n.t.bind(n, 826753, 23))).default;
-    let o =
-        ((t = s),
-        null != a
-            ? a
-            : (a = t
-                  .object({
-                      id: t.string().required(),
-                      version: t.number().positive().integer().min(0).max(r.Bg).optional(),
-                      name: t.string().when('version', {
-                          is: t.number().less(3),
-                          then: t.string().allow('')
-                      }),
-                      gameName: t.string().when('version', {
-                          is: t.number().greater(0).required(),
-                          then: t.forbidden(),
-                          otherwise: t.required()
-                      }),
-                      applicationName: t.string().when('version', {
-                          is: t.number().greater(0).required(),
-                          then: t.required(),
-                          otherwise: t.forbidden()
-                      }),
-                      applicationId: t.string(),
-                      users: t.array().items(t.string()).required(),
-                      filepath: t.string().required(),
-                      length: t.number().required(),
-                      thumbnail: t.string().required().allow(''),
-                      editMetadata: t.object().keys({
-                          start: t.number(),
-                          end: t.number(),
-                          applicationAudio: t.boolean(),
-                          voiceAudio: t.boolean()
-                      }),
-                      clipMethod: t.string().allow('auto', 'manual').required()
-                  })
-                  .required()));
+    s = null;
+function l(e) {
+    return null != s
+        ? s
+        : (s = e
+              .object({
+                  id: e.string().required(),
+                  version: e.number().positive().integer().min(0).max(a.Bg).optional(),
+                  name: e.string().when('version', {
+                      is: e.number().less(3),
+                      then: e.string().allow('')
+                  }),
+                  gameName: e.string().when('version', {
+                      is: e.number().greater(0).required(),
+                      then: e.forbidden(),
+                      otherwise: e.required()
+                  }),
+                  applicationName: e.string().when('version', {
+                      is: e.number().greater(0).required(),
+                      then: e.required(),
+                      otherwise: e.forbidden()
+                  }),
+                  applicationId: e.string(),
+                  users: e.array().items(e.string()).required(),
+                  filepath: e.string().required(),
+                  length: e.number().required(),
+                  thumbnail: e.string().required().allow(''),
+                  editMetadata: e.object().keys({
+                      start: e.number(),
+                      end: e.number(),
+                      applicationAudio: e.boolean(),
+                      voiceAudio: e.boolean()
+                  }),
+                  clipMethod: e.string().allow('auto', 'manual').required()
+              })
+              .required());
+}
+async function u(e) {
+    let t = (await n.e('56268').then(n.t.bind(n, 826753, 23))).default,
+        r = l(t);
     try {
-        s.assert(e, o);
-        return null == e.version && (e.version = 0), i.slice(e.version).reduce((e, t) => t(e), e);
+        t.assert(e, r);
+        let n = e;
+        return null == n.version && (n.version = 0), o.slice(n.version).reduce((e, t) => t(e), n);
     } catch (e) {
         return null;
     }

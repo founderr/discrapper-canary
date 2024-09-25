@@ -12,18 +12,19 @@ n.d(t, {
 var r = n(442837),
     i = n(570140),
     a = n(238514),
-    s = n(675478),
-    o = n(581883),
+    o = n(675478),
+    s = n(581883),
     l = n(526761);
 function u(e, t, n, i) {
     let a = () => {
-        var r;
-        return n(null === (r = o.Z.settings[e]) || void 0 === r ? void 0 : r[t]);
-    };
+            var r;
+            return n(null === (r = s.Z.settings[e]) || void 0 === r ? void 0 : r[t]);
+        },
+        u = () => (0, r.e7)([s.Z], a);
     return {
         getSetting: a,
         updateSetting: _(a, (n) =>
-            s.hW.updateAsync(
+            o.hW.updateAsync(
                 e,
                 (e) => {
                     e[t] = i(n, e[t]);
@@ -31,26 +32,26 @@ function u(e, t, n, i) {
                 l.fy.INFREQUENT_USER_ACTION
             )
         ),
-        useSetting: () => (0, r.e7)([o.Z], a)
+        useSetting: u
     };
 }
 function c(e, t, n) {
-    let s = () => {
+    let o = () => {
         var r;
         let i = a.Z.getState()[t];
         return null !== (r = null == i ? void 0 : i.settings[n]) && void 0 !== r ? r : e.getSetting();
     };
     return {
-        getSetting: s,
+        getSetting: o,
         useSetting: () => {
             let i = e.useSetting(),
-                s = (0, r.e7)([a.Z], () => {
+                o = (0, r.e7)([a.Z], () => {
                     let e = a.Z.getState()[t];
                     return null == e ? void 0 : e.settings[n];
                 });
-            return null != s ? s : i;
+            return null != o ? o : i;
         },
-        updateSetting: _(s, (r) =>
+        updateSetting: _(o, (r) =>
             a.Z.shouldSync(t)
                 ? e.updateSetting(r)
                 : (i.Z.dispatch({

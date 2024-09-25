@@ -1,8 +1,9 @@
-var r, i;
+var r;
 n.d(t, {
     P: function () {
         return r;
     }
 }),
-    ((i = r || (r = {}))[(i.PROD = 0)] = 'PROD'),
-    (i[(i.BETA = 1)] = 'BETA');
+    !(function (e) {
+        (e[(e.PROD = 0)] = 'PROD'), (e[(e.BETA = 1)] = 'BETA');
+    })(r || (r = {}));

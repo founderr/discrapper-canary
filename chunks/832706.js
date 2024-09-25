@@ -1,22 +1,28 @@
 var r = n(781212),
     i = n(599295),
     a = n(919499),
-    s = n(15393);
-n(476400);
-var o = n(470079),
-    l = n(717588),
-    u = n(46121),
-    c =
+    o = n(15393),
+    s = n(476400);
+var l = n(470079),
+    u = n(717588),
+    c = n(46121),
+    d =
         Object.values ||
         function (e) {
             return Object.keys(e).map(function (t) {
                 return e[t];
             });
         },
-    d = (function (e) {
+    _ = {
+        component: 'div',
+        childFactory: function (e) {
+            return e;
+        }
+    },
+    E = (function (e) {
         function t(t, n) {
             var r,
-                i = (r = e.call(this, t, n) || this).handleExited.bind((0, s.Z)((0, s.Z)(r)));
+                i = (r = e.call(this, t, n) || this).handleExited.bind((0, o.Z)((0, o.Z)(r)));
             return (
                 (r.state = {
                     contextValue: { isMounting: !0 },
@@ -39,12 +45,12 @@ var o = n(470079),
                 var n = t.children,
                     r = t.handleExited;
                 return {
-                    children: t.firstRender ? (0, u.Kg)(e, r) : (0, u.Rp)(e, n, r),
+                    children: t.firstRender ? (0, c.Kg)(e, r) : (0, c.Rp)(e, n, r),
                     firstRender: !1
                 };
             }),
             (n.handleExited = function (e, t) {
-                var n = (0, u.n)(this.props.children);
+                var n = (0, c.n)(this.props.children);
                 !(e.key in n) &&
                     (e.props.onExited && e.props.onExited(t),
                     this.mounted &&
@@ -59,17 +65,10 @@ var o = n(470079),
                     n = e.childFactory,
                     i = (0, r.Z)(e, ['component', 'childFactory']),
                     a = this.state.contextValue,
-                    s = c(this.state.children).map(n);
-                return (delete i.appear, delete i.enter, delete i.exit, null === t) ? o.createElement(l.Z.Provider, { value: a }, s) : o.createElement(l.Z.Provider, { value: a }, o.createElement(t, i, s));
+                    o = d(this.state.children).map(n);
+                return (delete i.appear, delete i.enter, delete i.exit, null === t) ? l.createElement(u.Z.Provider, { value: a }, o) : l.createElement(u.Z.Provider, { value: a }, l.createElement(t, i, o));
             }),
             t
         );
-    })(o.Component);
-(d.propTypes = {}),
-    (d.defaultProps = {
-        component: 'div',
-        childFactory: function (e) {
-            return e;
-        }
-    }),
-    (t.Z = d);
+    })(l.Component);
+(E.propTypes = {}), (E.defaultProps = _), (t.Z = E);

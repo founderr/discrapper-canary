@@ -1,7 +1,11 @@
 var t = Object.getOwnPropertySymbols,
     n = Object.prototype.hasOwnProperty,
     r = Object.prototype.propertyIsEnumerable;
-e.exports = !(function () {
+function i(e) {
+    if (null == e) throw TypeError('Object.assign cannot be called with null or undefined');
+    return Object(e);
+}
+function a() {
     try {
         if (!Object.assign) return !1;
         var e = new String('abc');
@@ -23,25 +27,16 @@ e.exports = !(function () {
     } catch (e) {
         return !1;
     }
-})()
-    ? function (e, i) {
-          for (
-              var a,
-                  s,
-                  o = (function (e) {
-                      if (null == e) throw TypeError('Object.assign cannot be called with null or undefined');
-                      return Object(e);
-                  })(e),
-                  l = 1;
-              l < arguments.length;
-              l++
-          ) {
-              for (var u in ((a = Object(arguments[l])), a)) n.call(a, u) && (o[u] = a[u]);
+}
+e.exports = a()
+    ? Object.assign
+    : function (e, a) {
+          for (var o, s, l = i(e), u = 1; u < arguments.length; u++) {
+              for (var c in ((o = Object(arguments[u])), o)) n.call(o, c) && (l[c] = o[c]);
               if (t) {
-                  s = t(a);
-                  for (var c = 0; c < s.length; c++) r.call(a, s[c]) && (o[s[c]] = a[s[c]]);
+                  s = t(o);
+                  for (var d = 0; d < s.length; d++) r.call(o, s[d]) && (l[s[d]] = o[s[d]]);
               }
           }
-          return o;
-      }
-    : Object.assign;
+          return l;
+      };

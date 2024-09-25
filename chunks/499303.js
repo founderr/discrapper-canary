@@ -1,9 +1,22 @@
+function r(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
 n.d(t, {
     I: function () {
-        return r;
+        return i;
     }
 });
-class r {
+class i {
     schedule(e, t) {
         this.unschedule(),
             (this.timeoutId = setTimeout(() => {
@@ -17,16 +30,6 @@ class r {
         return null !== this.timeoutId;
     }
     constructor() {
-        var e, t, n;
-        (e = this),
-            (n = null),
-            (t = 'timeoutId') in e
-                ? Object.defineProperty(e, t, {
-                      value: null,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (e[t] = n);
+        r(this, 'timeoutId', null);
     }
 }

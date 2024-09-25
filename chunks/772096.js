@@ -1,66 +1,105 @@
 n.d(t, {
     yw: function () {
-        return A;
+        return D;
     }
-}),
-    n(47120),
-    n(315314),
-    n(610138),
-    n(216116),
-    n(78328),
-    n(815648),
-    n(411104);
-var r = n(392711),
-    i = n.n(r),
-    a = n(31775),
-    s = n.n(a);
-n(711739);
-var o = n(302454),
-    l = n.n(o),
-    u = n(830121),
-    c = n(823379),
-    d = n(172244),
-    _ = n(571989);
-let E = new (s())({ max: 50 });
-function f(e) {
-    let t = E.get(e);
-    if (null != t) return t;
-    let n = (0, _.yx)(e),
-        r = (0, _.zq)(n),
-        i = {
-            whitespaceSanitized: n,
-            fullySanitized: r
+});
+var r = n(47120);
+var i = n(315314);
+var a = n(610138);
+var o = n(216116);
+var s = n(78328);
+var l = n(815648);
+var u = n(411104);
+var c = n(392711),
+    d = n.n(c),
+    _ = n(31775),
+    E = n.n(_),
+    f = n(711739);
+var h = n(302454),
+    p = n.n(h),
+    m = n(830121),
+    I = n(823379),
+    T = n(172244),
+    g = n(571989);
+let S = new (E())({ max: 50 });
+function A(e) {
+    let t = e,
+        n = S.get(t);
+    if (null != n) return n;
+    let r = (0, g.yx)(e),
+        i = (0, g.zq)(r),
+        a = {
+            whitespaceSanitized: r,
+            fullySanitized: i
         };
-    return E.set(e, i), i;
+    return S.set(t, a), a;
 }
-let h = ['http:', 'https:', 'discord:'],
-    p = [d.b.TEXT, d.b.UNDERLINE, d.b.STRONG, d.b.ITALICS, d.b.STRIKETHROUGH, d.b.INLINE_CODE, d.b.SPOILER, d.b.LINE_BREAK, d.b.TIMESTAMP],
-    I = [...p, d.b.EMOJI, d.b.CUSTOM_EMOJI],
-    m = [d.b.LIST, d.b.HEADING, d.b.BLOCK_QUOTE, d.b.SUBTEXT],
-    T = [d.b.TEXT],
-    S = [d.b.UNDERLINE, d.b.STRONG, d.b.ITALICS, d.b.STRIKETHROUGH, d.b.INLINE_CODE, d.b.SPOILER, d.b.LINE_BREAK, d.b.TIMESTAMP, d.b.EMOJI, d.b.CUSTOM_EMOJI, d.b.LIST, d.b.HEADING, d.b.BLOCK_QUOTE, d.b.SUBTEXT];
-function g(e, t) {
+let v = ['http:', 'https:', 'discord:'],
+    N = [T.b.TEXT, T.b.UNDERLINE, T.b.STRONG, T.b.ITALICS, T.b.STRIKETHROUGH, T.b.INLINE_CODE, T.b.SPOILER, T.b.LINE_BREAK, T.b.TIMESTAMP],
+    O = [...N, T.b.EMOJI, T.b.CUSTOM_EMOJI],
+    R = [T.b.LIST, T.b.HEADING, T.b.BLOCK_QUOTE, T.b.SUBTEXT],
+    C = [T.b.TEXT],
+    y = [T.b.UNDERLINE, T.b.STRONG, T.b.ITALICS, T.b.STRIKETHROUGH, T.b.INLINE_CODE, T.b.SPOILER, T.b.LINE_BREAK, T.b.TIMESTAMP, T.b.EMOJI, T.b.CUSTOM_EMOJI, T.b.LIST, T.b.HEADING, T.b.BLOCK_QUOTE, T.b.SUBTEXT];
+function b(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
     for (let r of (!Array.isArray(e) && (e = [e]), e)) {
         if (void 0 === r || !t.includes(r.type)) return null;
-        if (r.type === d.b.INLINE_CODE) {
+        if (r.type === T.b.INLINE_CODE) {
             let e = [...t, ...n];
-            if (null == g(r.validationChildContent, e)) return null;
+            if (null == b(r.validationChildContent, e)) return null;
         }
-        if (Array.isArray(r.content) && null == g(r.content, t)) return null;
+        if (Array.isArray(r.content) && null == b(r.content, t)) return null;
     }
     return e;
 }
-function A(e) {
+function L(e) {
+    let t = '';
+    for (let n of e)
+        switch (n.type) {
+            case T.b.TEXT:
+            case T.b.INLINE_CODE:
+                t += n.content;
+                break;
+            case T.b.CUSTOM_EMOJI:
+                t += n.name;
+                break;
+            case T.b.EMOJI:
+                t += n.surrogate;
+                break;
+            case T.b.LINE_BREAK:
+                t += '\n';
+                break;
+            case T.b.STRONG:
+            case T.b.ITALICS:
+            case T.b.UNDERLINE:
+            case T.b.STRIKETHROUGH:
+            case T.b.SPOILER:
+                t += L(n.content);
+                break;
+            case T.b.TIMESTAMP:
+                t += '<timestamp>';
+                break;
+            case T.b.BLOCK_QUOTE:
+            case T.b.LIST:
+            case T.b.HEADING:
+            case T.b.SUBTEXT:
+                t += '<'.concat(n.type, 'Content>');
+                break;
+            default:
+                (0, I.vE)(n.type);
+        }
+    return t;
+}
+function D(e) {
     try {
         var t;
         let n = new URL(e),
             r = null !== (t = n.protocol) && void 0 !== t ? t : '';
-        if (!h.includes(r.toLowerCase())) throw Error('Provided protocol is not allowed: ' + r);
+        if (!v.includes(r.toLowerCase())) throw Error('Provided protocol is not allowed: ' + r);
         if (('http:' === r || 'https:' === r) && (null == n.hostname || 0 === n.hostname.length)) throw Error('no hostname');
-        let i = (0, _.MO)(n);
+        let i = (0, g.MO)(n);
         (n.username = ''), (n.password = '');
-        let a = (0, _.MO)(n);
+        let a = (0, g.MO)(n);
         return {
             target: i,
             displayTarget: a
@@ -70,87 +109,45 @@ function A(e) {
     }
 }
 t.ZP = {
-    ...l().defaultRules.link,
-    match: (e, t, n) => (t.allowLinks ? l().defaultRules.link.match(e, t, n) : null),
+    ...p().defaultRules.link,
+    match: (e, t, n) => (t.allowLinks ? p().defaultRules.link.match(e, t, n) : null),
     parse(e, t, n) {
-        let [r, a, s, o] = e,
-            _ = () => ({
-                type: d.b.TEXT,
+        let [r, i, a, o] = e,
+            s = () => ({
+                type: T.b.TEXT,
                 content: r
             }),
-            E = f(s),
-            h = f(a),
-            N = f(null != o ? o : ''),
-            O = E.whitespaceSanitized,
-            R = h.fullySanitized,
-            v = N.fullySanitized,
-            C = R.trim();
-        if (0 === O.trim().length || 0 === C.length) return _();
-        let y = A(l().unescapeUrl(s)),
-            L = (0, u.ZP)(a).length > 0 || (0, u.ZP)(o).length > 0;
-        if (null == y || L) return _();
-        let D = {
+            l = A(a),
+            u = A(i),
+            c = A(null != o ? o : ''),
+            _ = l.whitespaceSanitized,
+            E = u.fullySanitized,
+            f = c.fullySanitized,
+            h = E.trim();
+        if (0 === _.trim().length || 0 === h.length) return s();
+        let I = D(p().unescapeUrl(a)),
+            g = null == I,
+            S = (0, m.ZP)(i).length > 0 || (0, m.ZP)(o).length > 0;
+        if (g || S) return s();
+        let v = {
                 ...n,
                 allowEscape: !1,
                 parseInlineCodeChildContent: !0
             },
-            b = n.allowEmojiLinks ? I : p,
-            M = [...b, ...m],
-            P = [...T, ...S],
-            U = g(t(R, D), M, [d.b.EMOJI]),
-            w = g(t(v, D), P);
-        if (
-            null == U ||
-            null == w ||
-            0 ===
-                (function e(t) {
-                    let n = '';
-                    for (let r of t)
-                        switch (r.type) {
-                            case d.b.TEXT:
-                            case d.b.INLINE_CODE:
-                                n += r.content;
-                                break;
-                            case d.b.CUSTOM_EMOJI:
-                                n += r.name;
-                                break;
-                            case d.b.EMOJI:
-                                n += r.surrogate;
-                                break;
-                            case d.b.LINE_BREAK:
-                                n += '\n';
-                                break;
-                            case d.b.STRONG:
-                            case d.b.ITALICS:
-                            case d.b.UNDERLINE:
-                            case d.b.STRIKETHROUGH:
-                            case d.b.SPOILER:
-                                n += e(r.content);
-                                break;
-                            case d.b.TIMESTAMP:
-                                n += '<timestamp>';
-                                break;
-                            case d.b.BLOCK_QUOTE:
-                            case d.b.LIST:
-                            case d.b.HEADING:
-                            case d.b.SUBTEXT:
-                                n += '<'.concat(r.type, 'Content>');
-                                break;
-                            default:
-                                (0, c.vE)(r.type);
-                        }
-                    return n;
-                })(U).trim().length
-        )
-            return _();
-        let x = i().pick(t.rules, b),
-            G = l().parserFor(x)(h.whitespaceSanitized, D),
-            k = N.whitespaceSanitized,
-            { target: B } = y;
+            M = n.allowEmojiLinks ? O : N,
+            P = [...M, ...R],
+            U = [...C, ...y],
+            w = b(t(E, v), P, [T.b.EMOJI]),
+            x = b(t(f, v), U);
+        if (null == w || null == x || 0 === L(w).trim().length) return s();
+        let G = d().pick(t.rules, M),
+            k = p().parserFor(G)(u.whitespaceSanitized, v),
+            B = c.whitespaceSanitized,
+            { target: F } = I;
         return {
-            content: G,
-            target: B,
-            title: k
+            content: k,
+            target: F,
+            title: B
         };
     }
 };

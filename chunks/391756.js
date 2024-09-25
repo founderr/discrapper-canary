@@ -6,6 +6,9 @@ n.d(t, {
 var r = n(644387),
     i = n(219845),
     a = n(383466),
+    o = function (e) {
+        return !(0, a.zd)(e) && !(0, a.jD)(e) && 'inline' === getComputedStyle(e).display;
+    },
     s = (function () {
         function e(e, t) {
             (this.target = e),
@@ -17,10 +20,8 @@ var r = n(644387),
         }
         return (
             (e.prototype.isActive = function () {
-                var e,
-                    t = (0, i.Y9)(this.target, this.observedBox);
-                if (((e = this.target), !(0, a.zd)(e) && !(0, a.jD)(e) && 'inline' === getComputedStyle(e).display)) this.lastReportedSize = t;
-                return this.lastReportedSize.inlineSize !== t.inlineSize || this.lastReportedSize.blockSize !== t.blockSize || !1;
+                var e = (0, i.Y9)(this.target, this.observedBox);
+                return o(this.target) && (this.lastReportedSize = e), this.lastReportedSize.inlineSize !== e.inlineSize || this.lastReportedSize.blockSize !== e.blockSize || !1;
             }),
             e
         );

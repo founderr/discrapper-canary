@@ -1,4 +1,4 @@
-e.exports = function (e) {
+function t(e) {
     let t = '\\[=*\\[',
         n = '\\]=*\\]',
         r = {
@@ -48,4 +48,5 @@ e.exports = function (e) {
             }
         ])
     };
-};
+}
+e.exports = t;

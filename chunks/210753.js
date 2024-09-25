@@ -1,18 +1,18 @@
 n.d(t, {
     $: function () {
-        return _;
+        return p;
     }
-}),
-    n(653041),
-    n(47120);
-var r = n(470079),
-    i = n(392711),
-    a = n.n(i),
-    s = n(442837),
-    o = n(846519),
-    l = n(224706),
-    u = n(669764);
-function c(e, t, n) {
+});
+var r = n(653041);
+var i = n(47120);
+var a = n(470079),
+    o = n(392711),
+    s = n.n(o),
+    l = n(442837),
+    u = n(846519),
+    c = n(224706),
+    d = n(669764);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,7 +25,8 @@ function c(e, t, n) {
         e
     );
 }
-let d = new (class e {
+let E = 20;
+class f {
     request(e) {
         !(this._pending.has(e) || this._fetched.has(e)) && (this._pending.add(e), this._flushHandler.delay(!1));
     }
@@ -34,21 +35,22 @@ let d = new (class e {
         this._pending.forEach((t) => {
             this._fetched.add(t), e.push(t);
         }),
-            a()
-                .chunk(e, 20)
+            s()
+                .chunk(e, E)
                 .forEach((e) => {
-                    l.Z.getDetectableGamesSupplemental(e);
+                    c.Z.getDetectableGamesSupplemental(e);
                 });
     }
     constructor() {
-        c(this, '_fetched', new Set()), c(this, '_pending', new Set()), c(this, '_flushHandler', new o.sW(0, () => this._flush()));
+        _(this, '_fetched', new Set()), _(this, '_pending', new Set()), _(this, '_flushHandler', new u.sW(0, () => this._flush()));
     }
-})();
-function _(e, t) {
-    r.useEffect(() => {
-        null != e && d.request(e);
+}
+let h = new f();
+function p(e, t) {
+    a.useEffect(() => {
+        null != e && h.request(e);
     }, [e]);
-    let n = r.useMemo(
+    let n = a.useMemo(
         () =>
             null != t
                 ? {
@@ -58,7 +60,7 @@ function _(e, t) {
                 : void 0,
         [t]
     );
-    return (0, s.cj)([u.Z], () =>
+    return (0, l.cj)([d.Z], () =>
         null == e
             ? {
                   isFetching: !1,
@@ -67,10 +69,10 @@ function _(e, t) {
                   coverImageUrl: void 0
               }
             : {
-                  isFetching: u.Z.isFetching(e),
-                  localizedName: u.Z.getLocalizedName(e),
-                  themes: u.Z.getThemes(e),
-                  coverImageUrl: u.Z.getCoverImageUrl(e, n)
+                  isFetching: d.Z.isFetching(e),
+                  localizedName: d.Z.getLocalizedName(e),
+                  themes: d.Z.getThemes(e),
+                  coverImageUrl: d.Z.getCoverImageUrl(e, n)
               }
     );
 }

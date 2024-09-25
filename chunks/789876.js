@@ -1,12 +1,13 @@
-var r;
-(r = function () {
+!(function (t) {
+    'function' == typeof define && define.amd ? define([], t) : e.exports ? (e.exports = t()) : (window.idleCallbackShim = t());
+})(function () {
     var e,
         t,
         r,
         i,
         a = 'undefined' != typeof window ? window : (n.g, n.g),
-        s = (a.cancelRequestAnimationFrame && a.requestAnimationFrame) || setTimeout,
-        o = a.cancelRequestAnimationFrame || clearTimeout,
+        o = (a.cancelRequestAnimationFrame && a.requestAnimationFrame) || setTimeout,
+        s = a.cancelRequestAnimationFrame || clearTimeout,
         l = [],
         u = 0,
         c = !1,
@@ -16,7 +17,7 @@ var r;
         f = 0,
         h = 0,
         p = 0,
-        I = {
+        m = {
             get didTimeout() {
                 return !1;
             },
@@ -25,43 +26,48 @@ var r;
                 return e < 0 ? 0 : e;
             }
         },
-        m = (function (e) {
-            var t,
-                n,
-                r = function () {
-                    var i = Date.now() - n;
-                    i < 99 ? (t = setTimeout(r, 99 - i)) : ((t = null), e());
-                };
-            return function () {
-                (n = Date.now()), !t && (t = setTimeout(r, 99));
-            };
-        })(function () {
+        I = T(function () {
             (d = 22), (E = 66), (_ = 0);
         });
-    function T() {
-        125 != E && ((d = 7), (E = 125), (_ = 35), c && (c && (i && o(i), r && clearTimeout(r), (c = !1)), A())), m();
-    }
-    function S() {
-        (i = null), (r = setTimeout(N, 0));
+    function T(e) {
+        var t,
+            n,
+            r = 99,
+            i = function () {
+                var a = Date.now() - n;
+                a < r ? (t = setTimeout(i, r - a)) : ((t = null), e());
+            };
+        return function () {
+            (n = Date.now()), !t && (t = setTimeout(i, r));
+        };
     }
     function g() {
-        (r = null), s(S);
+        c && (i && s(i), r && clearTimeout(r), (c = !1));
+    }
+    function S() {
+        125 != E && ((d = 7), (E = 125), (_ = 35), c && (g(), N())), I();
     }
     function A() {
-        if (!c) (t = E - (Date.now() - h)), (e = Date.now()), (c = !0), _ && t < _ && (t = _), t > 9 ? (r = setTimeout(g, t)) : ((t = 0), g());
+        (i = null), (r = setTimeout(O, 0));
+    }
+    function v() {
+        (r = null), o(A);
     }
     function N() {
+        if (!c) (t = E - (Date.now() - h)), (e = Date.now()), (c = !0), _ && t < _ && (t = _), t > 9 ? (r = setTimeout(v, t)) : ((t = 0), v());
+    }
+    function O() {
         var n,
             i,
             a,
-            s = d > 9 ? 9 : 1;
-        if (((h = Date.now()), (c = !1), (r = null), u > 2 || h - t - 50 < e)) for (i = 0, a = l.length; i < a && I.timeRemaining() > s; i++) (n = l.shift()), p++, n && n(I);
-        l.length ? A() : (u = 0);
-    }
-    function O(e) {
-        return f++, l.push(e), A(), f;
+            o = d > 9 ? 9 : 1;
+        if (((h = Date.now()), (c = !1), (r = null), u > 2 || h - t - 50 < e)) for (i = 0, a = l.length; i < a && m.timeRemaining() > o; i++) (n = l.shift()), p++, n && n(m);
+        l.length ? N() : (u = 0);
     }
     function R(e) {
+        return f++, l.push(e), N(), f;
+    }
+    function C(e) {
         var t = e - 1 - p;
         l[t] && (l[t] = null);
     }
@@ -89,29 +95,28 @@ var r;
             })(a.requestIdleCallback);
         }
     else
-        (a.requestIdleCallback = O),
-            (a.cancelIdleCallback = R),
+        (a.requestIdleCallback = R),
+            (a.cancelIdleCallback = C),
             a.document &&
                 document.addEventListener &&
-                (a.addEventListener('scroll', T, !0),
-                a.addEventListener('resize', T),
-                document.addEventListener('focus', T, !0),
-                document.addEventListener('mouseover', T, !0),
+                (a.addEventListener('scroll', S, !0),
+                a.addEventListener('resize', S),
+                document.addEventListener('focus', S, !0),
+                document.addEventListener('mouseover', S, !0),
                 ['click', 'keypress', 'touchstart', 'mousedown'].forEach(function (e) {
-                    document.addEventListener(e, T, {
+                    document.addEventListener(e, S, {
                         capture: !0,
                         passive: !0
                     });
                 }),
                 a.MutationObserver &&
-                    new MutationObserver(T).observe(document.documentElement, {
+                    new MutationObserver(S).observe(document.documentElement, {
                         childList: !0,
                         subtree: !0,
                         attributes: !0
                     }));
     return {
-        request: O,
-        cancel: R
+        request: R,
+        cancel: C
     };
-}),
-    'function' == typeof define && define.amd ? define([], r) : e.exports ? (e.exports = r()) : (window.idleCallbackShim = r());
+});

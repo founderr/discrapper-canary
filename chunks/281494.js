@@ -1,9 +1,9 @@
 n.d(t, {
     C$: function () {
-        return m;
+        return S;
     },
     Eo: function () {
-        return g;
+        return N;
     },
     Fe: function () {
         return r;
@@ -12,28 +12,26 @@ n.d(t, {
         return i;
     },
     IB: function () {
-        return A;
+        return O;
     },
     Ve: function () {
-        return T;
+        return A;
     },
     bq: function () {
-        return p;
+        return T;
     },
     iF: function () {
-        return I;
+        return g;
     },
     jy: function () {
-        return S;
+        return v;
     }
-}),
-    n(47120),
-    n(653041);
+});
 var r,
     i,
-    a,
-    s,
-    o = n(544891),
+    a = n(47120);
+var o = n(653041);
+var s = n(544891),
     l = n(570140),
     u = n(904245),
     c = n(598077),
@@ -53,27 +51,35 @@ function f(e, t, n) {
         e
     );
 }
-((a = r || (r = {}))[(a.REDEEMED = 1)] = 'REDEEMED'), (a[(a.PENDING = 2)] = 'PENDING'), (a[(a.CONVERTED = 3)] = 'CONVERTED'), ((s = i || (i = {}))[(s.SUCCESS = 1)] = 'SUCCESS'), (s[(s.FAIL = 2)] = 'FAIL');
-let h = new (class e {
-        set(e, t) {
-            this.cache.set(e, t);
-        }
-        get(e) {
-            return this._checkExpiration(), this.cache.get(e);
-        }
-        has(e) {
-            return this._checkExpiration(), this.cache.has(e);
-        }
-        _checkExpiration() {
-            this.expiration < Date.now() && this.cache.clear();
-        }
-        constructor() {
-            f(this, 'cache', void 0), f(this, 'expiration', void 0), (this.cache = new Map()), (this.expiration = Date.now() + 600000);
-        }
-    })(),
-    p = () => (
+let h = 10,
+    p = 600000;
+!(function (e) {
+    (e[(e.REDEEMED = 1)] = 'REDEEMED'), (e[(e.PENDING = 2)] = 'PENDING'), (e[(e.CONVERTED = 3)] = 'CONVERTED');
+})(r || (r = {})),
+    !(function (e) {
+        (e[(e.SUCCESS = 1)] = 'SUCCESS'), (e[(e.FAIL = 2)] = 'FAIL');
+    })(i || (i = {}));
+class m {
+    set(e, t) {
+        this.cache.set(e, t);
+    }
+    get(e) {
+        return this._checkExpiration(), this.cache.get(e);
+    }
+    has(e) {
+        return this._checkExpiration(), this.cache.has(e);
+    }
+    _checkExpiration() {
+        this.expiration < Date.now() && this.cache.clear();
+    }
+    constructor() {
+        f(this, 'cache', void 0), f(this, 'expiration', void 0), (this.cache = new Map()), (this.expiration = Date.now() + p);
+    }
+}
+let I = new m(),
+    T = () => (
         l.Z.dispatch({ type: 'BILLING_GET_REFERRAL_INCENTIVE_STATUS_START' }),
-        o.tn
+        s.tn
             .get({
                 url: E.ANM.GET_REFERRAL_INCENTIVE_ELIGIBILITY,
                 oldFormErrors: !0
@@ -90,18 +96,18 @@ let h = new (class e {
                 }
             )
     );
-async function I(e, t) {
+async function g(e, t) {
     let n = JSON.stringify({
         index: e,
         searchQuery: t
     });
-    if (h.has(n)) return h.get(n);
+    if (I.has(n)) return I.get(n);
     let { users: r, next_index: i } = (
-            await o.tn.post({
+            await s.tn.post({
                 url: E.ANM.GET_REFERRAL_ELIGIBLE_USERS,
                 body: {
                     index: e,
-                    limit: 10,
+                    limit: h,
                     search_query: t
                 },
                 oldFormErrors: !0
@@ -111,11 +117,11 @@ async function I(e, t) {
             users: r.map((e) => new c.Z(e)),
             nextIndex: i
         };
-    return h.set(n, a), a;
+    return I.set(n, a), a;
 }
-let m = () => (
+let S = () => (
         l.Z.dispatch({ type: 'BILLING_REFERRALS_REMAINING_FETCH_START' }),
-        o.tn
+        s.tn
             .get({
                 url: E.ANM.GET_REFERRALS_REMAINING,
                 oldFormErrors: !0
@@ -146,12 +152,12 @@ let m = () => (
                 }
             )
     ),
-    T = (e) => (
+    A = (e) => (
         l.Z.dispatch({
             type: 'BILLING_CREATE_REFERRAL_PREVIEW_START',
             recipientId: e
         }),
-        o.tn
+        s.tn
             .post({
                 url: E.ANM.CREATE_REFERRAL_PREVIEW(e),
                 oldFormErrors: !0
@@ -172,13 +178,13 @@ let m = () => (
                 }
             )
     );
-async function S(e) {
+async function v(e) {
     let t = [],
         n = new Map();
     for (let i of e)
         try {
             var r;
-            let e = await o.tn.post({
+            let e = await s.tn.post({
                     url: E.ANM.CREATE_REFERRAL(i),
                     oldFormErrors: !0
                 }),
@@ -195,10 +201,10 @@ async function S(e) {
         n
     );
 }
-async function g(e) {
+async function N(e) {
     try {
         var t;
-        let n = await o.tn.post({
+        let n = await s.tn.post({
                 url: E.ANM.CREATE_REFERRAL(e),
                 oldFormErrors: !0
             }),
@@ -217,10 +223,10 @@ async function g(e) {
         }
     }
 }
-async function A(e) {
+async function O(e) {
     try {
         var t;
-        let n = await o.tn.get({
+        let n = await s.tn.get({
                 url: E.ANM.REFERRAL_OFFER_ID_RESOLVE(e),
                 oldFormErrors: !0
             }),

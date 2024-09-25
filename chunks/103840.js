@@ -17,33 +17,36 @@ var r =
         return function (t, n, r) {
             return n && e(t.prototype, n), r && e(t, r), t;
         };
-    })(),
-    a = n(968598);
+    })();
+function a(e, t) {
+    if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
+}
+function o(e, t) {
+    if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
+    return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
+}
+function s(e, t) {
+    if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
+    (e.prototype = Object.create(t && t.prototype, {
+        constructor: {
+            value: e,
+            enumerable: !1,
+            writable: !0,
+            configurable: !0
+        }
+    })),
+        t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
+}
+var l = n(968598);
 n(592093);
-var s = (function (e) {
-    function t(e, n, r, i, a) {
-        !(function (e, t) {
-            if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
-        })(this, t);
-        var s = (function (e, t) {
-            if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
-            return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
-        })(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
-        return (s._value = e), (s._parent = n), (s._animationClass = r), (s._animationConfig = i), (s._callback = a), s.__attach(), s;
+var u = (function (e) {
+    function t(e, n, r, i, s) {
+        a(this, t);
+        var l = o(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
+        return (l._value = e), (l._parent = n), (l._animationClass = r), (l._animationConfig = i), (l._callback = s), l.__attach(), l;
     }
     return (
-        !(function (e, t) {
-            if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
-            (e.prototype = Object.create(t && t.prototype, {
-                constructor: {
-                    value: e,
-                    enumerable: !1,
-                    writable: !0,
-                    configurable: !0
-                }
-            })),
-                t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
-        })(t, e),
+        s(t, e),
         i(t, [
             {
                 key: '__getValue',
@@ -72,5 +75,5 @@ var s = (function (e) {
         ]),
         t
     );
-})(a);
-e.exports = s;
+})(l);
+e.exports = u;

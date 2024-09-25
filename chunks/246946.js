@@ -1,8 +1,8 @@
 var r,
     i = n(442837),
     a = n(570140),
-    s = n(626135),
-    o = n(314897),
+    o = n(626135),
+    s = n(314897),
     l = n(981631);
 function u(e, t, n) {
     return (
@@ -18,7 +18,7 @@ function u(e, t, n) {
     );
 }
 function c(e, t) {
-    s.default.track(l.rMx.STREAMER_MODE_TOGGLE, {
+    o.default.track(l.rMx.STREAMER_MODE_TOGGLE, {
         enabled: e,
         automatic: t
     });
@@ -34,14 +34,54 @@ let d = {
     },
     _ = {},
     E = { ...d };
-class f extends (r = i.ZP.PersistedStore) {
+function f(e) {
+    let t = _[e];
+    return null == t && (t = _[e] = { ...d }), t;
+}
+function h(e) {
+    !e.isSwitchingAccount && (_ = {});
+}
+function p(e) {
+    e.userId in _ && delete _[e.userId];
+}
+function m(e) {
+    let t = { ...E };
+    return (
+        (E[e.key] = e.value),
+        'enabled' === e.key
+            ? c(e.value, !1)
+            : o.default.track(l.rMx.UPDATE_STREAMER_MODE_SETTINGS, {
+                  enabled: E.enabled,
+                  automatic: E.autoToggle,
+                  disable_notifications: E.disableNotifications,
+                  disable_sounds: E.disableSounds,
+                  hide_instant_invites: E.hideInstantInvites,
+                  hide_personal_info: E.hidePersonalInformation,
+                  enable_content_protection: E.enableContentProtection,
+                  old_enabled: t.enabled,
+                  old_automatic: t.autoToggle,
+                  old_disable_notifications: t.disableNotifications,
+                  old_disable_sounds: t.disableSounds,
+                  old_hide_instant_invites: t.hideInstantInvites,
+                  old_hide_personal_info: t.hidePersonalInformation,
+                  old_enable_content_protection: t.enableContentProtection
+              }),
+        !0
+    );
+}
+function I(e) {
+    if (!E.autoToggle) return !1;
+    {
+        let t = e.count > 0;
+        return (E.enabled = t), c(t, !0), !0;
+    }
+}
+class T extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         Object.assign(_, e),
-            this.syncWith([o.default], () => {
-                var e;
-                let t,
-                    n = o.default.getId();
-                E = null != n ? (null == (t = _[(e = n)]) && (t = _[e] = { ...d }), t) : { ...d };
+            this.syncWith([s.default], () => {
+                let e = s.default.getId();
+                E = null != e ? f(e) : { ...d };
             });
     }
     getState() {
@@ -72,51 +112,17 @@ class f extends (r = i.ZP.PersistedStore) {
         return this.enabled && E.enableContentProtection;
     }
 }
-u(f, 'displayName', 'StreamerModeStore'),
-    u(f, 'persistKey', 'StreamerModeStore'),
-    u(f, 'migrations', [
+u(T, 'displayName', 'StreamerModeStore'),
+    u(T, 'persistKey', 'StreamerModeStore'),
+    u(T, 'migrations', [
         (e) => {
-            let t = o.default.getId();
+            let t = s.default.getId();
             return null == e || null == t ? {} : { [t]: { ...e } };
         }
     ]),
-    (t.Z = new f(a.Z, {
-        LOGOUT: function (e) {
-            !e.isSwitchingAccount && (_ = {});
-        },
-        MULTI_ACCOUNT_REMOVE_ACCOUNT: function (e) {
-            e.userId in _ && delete _[e.userId];
-        },
-        STREAMER_MODE_UPDATE: function (e) {
-            let t = { ...E };
-            return (
-                (E[e.key] = e.value),
-                'enabled' === e.key
-                    ? c(e.value, !1)
-                    : s.default.track(l.rMx.UPDATE_STREAMER_MODE_SETTINGS, {
-                          enabled: E.enabled,
-                          automatic: E.autoToggle,
-                          disable_notifications: E.disableNotifications,
-                          disable_sounds: E.disableSounds,
-                          hide_instant_invites: E.hideInstantInvites,
-                          hide_personal_info: E.hidePersonalInformation,
-                          enable_content_protection: E.enableContentProtection,
-                          old_enabled: t.enabled,
-                          old_automatic: t.autoToggle,
-                          old_disable_notifications: t.disableNotifications,
-                          old_disable_sounds: t.disableSounds,
-                          old_hide_instant_invites: t.hideInstantInvites,
-                          old_hide_personal_info: t.hidePersonalInformation,
-                          old_enable_content_protection: t.enableContentProtection
-                      }),
-                !0
-            );
-        },
-        RUNNING_STREAMER_TOOLS_CHANGE: function (e) {
-            if (!E.autoToggle) return !1;
-            {
-                let t = e.count > 0;
-                return (E.enabled = t), c(t, !0), !0;
-            }
-        }
+    (t.Z = new T(a.Z, {
+        LOGOUT: h,
+        MULTI_ACCOUNT_REMOVE_ACCOUNT: p,
+        STREAMER_MODE_UPDATE: m,
+        RUNNING_STREAMER_TOOLS_CHANGE: I
     }));

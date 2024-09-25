@@ -1,16 +1,17 @@
 n.d(t, {
     V: function () {
-        return o;
+        return l;
     }
 });
 var r = n(735250);
 n(470079);
 var i = n(481060),
     a = n(522474),
-    s = n(981631);
-function o(e) {
-    let { application: t, onAgree: o, onDisagree: l } = e,
-        u = a.Z.getWindowOpen(s.KJ3.CHANNEL_CALL_POPOUT) ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT;
+    o = n(981631);
+let s = 'activity-age-gate';
+function l(e) {
+    let { application: t, onAgree: l, onDisagree: u } = e,
+        c = a.Z.getWindowOpen(o.KJ3.CHANNEL_CALL_POPOUT) ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT;
     return (
         (0, i.openModalLazy)(
             async () => {
@@ -19,13 +20,13 @@ function o(e) {
                     (0, r.jsx)(e, {
                         ...n,
                         application: t,
-                        onAgree: o,
-                        onDisagree: l
+                        onAgree: l,
+                        onDisagree: u
                     });
             },
             {
-                modalKey: 'activity-age-gate',
-                contextKey: u
+                modalKey: s,
+                contextKey: c
             }
         ),
         Promise.resolve()

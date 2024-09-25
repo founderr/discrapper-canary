@@ -1,106 +1,109 @@
 n.d(t, {
     K: function () {
-        return x;
+        return L;
     }
-}),
-    n(47120),
-    n(627341);
-var i = n(735250),
-    s = n(470079),
-    a = n(120356),
-    r = n.n(a),
-    l = n(297821),
-    o = n(526629),
-    c = n(278074),
-    u = n(748780),
-    d = n(481060),
-    _ = n(313201),
-    E = n(542578),
-    I = n(203143),
+});
+var r = n(47120);
+var i = n(627341);
+var a = n(735250),
+    o = n(470079),
+    s = n(120356),
+    l = n.n(s),
+    u = n(297821),
+    c = n(526629),
+    d = n(278074),
+    _ = n(748780),
+    E = n(481060),
+    f = n(313201),
+    h = n(542578),
+    p = n(203143),
     m = n(79390),
-    T = n(839963),
-    h = n(139256),
-    N = n(294608),
-    f = n(689938),
-    C = n(490351);
-function p(e) {
-    let { percentage: t, label: n, canShowVoterDetails: a, answerId: r } = e,
-        o = (0, _.Dt)(),
-        { channelId: c, messageId: u } = (0, N.pE)(),
-        [T, h] = s.useState(''),
-        [f, p] = s.useState(!1),
-        g = '' !== T && f,
-        A = s.useCallback(() => {
-            h((0, m.e1)(u, c, r));
-        }, [u, c, r]),
-        S = s.useCallback(() => {
-            A(), p(!0);
-        }, [A]),
-        x = s.useCallback(() => {
-            p(!1);
+    I = n(839963),
+    T = n(139256),
+    g = n(294608),
+    S = n(689938),
+    A = n(490351);
+let v = 24,
+    N = 24,
+    O = 20;
+function R(e) {
+    let { percentage: t, label: n, canShowVoterDetails: r, answerId: i } = e,
+        s = (0, f.Dt)(),
+        { channelId: l, messageId: c } = (0, g.pE)(),
+        [d, _] = o.useState(''),
+        [I, T] = o.useState(!1),
+        S = '' !== d && I,
+        v = o.useCallback(() => {
+            _((0, m.e1)(c, l, i));
+        }, [c, l, i]),
+        N = o.useCallback(() => {
+            v(), T(!0);
+        }, [v]),
+        O = o.useCallback(() => {
+            T(!1);
         }, []),
-        R = s.useCallback(() => {
-            (0, I.n)({
-                channelId: c,
-                messageId: u,
-                answerId: r
+        R = o.useCallback(() => {
+            (0, p.n)({
+                channelId: l,
+                messageId: c,
+                answerId: i
             });
-        }, [c, u, r]);
-    s.useEffect(() => {
-        if (!!f)
+        }, [l, c, i]);
+    o.useEffect(() => {
+        if (!!I)
             return (
-                E.Z.addReactChangeListener(A),
+                h.Z.addReactChangeListener(v),
                 () => {
-                    E.Z.removeReactChangeListener(A);
+                    h.Z.removeReactChangeListener(v);
                 }
             );
-    }, [f, A]);
-    let O = (0, i.jsx)(d.Text, {
+    }, [I, v]);
+    let C = (0, a.jsx)(E.Text, {
         variant: 'text-xs/semibold',
         color: 'none',
-        className: C.voteCount,
+        className: A.voteCount,
         scaleFontToUserSetting: !0,
         children: n
     });
-    return (0, i.jsxs)('div', {
-        className: C.votesData,
+    return (0, a.jsxs)('div', {
+        className: A.votesData,
         children: [
-            a
-                ? (0, i.jsxs)(i.Fragment, {
+            r
+                ? (0, a.jsxs)(a.Fragment, {
                       children: [
-                          (0, i.jsx)(d.Tooltip, {
-                              text: (0, i.jsx)(d.Text, {
+                          (0, a.jsx)(E.Tooltip, {
+                              text: (0, a.jsx)(E.Text, {
                                   variant: 'text-sm/normal',
                                   color: 'text-muted',
                                   scaleFontToUserSetting: !0,
-                                  children: T
+                                  children: d
                               }),
-                              forceOpen: g,
+                              forceOpen: S,
                               'aria-label': !1,
                               children: (e) =>
-                                  (0, i.jsx)(d.Button, {
+                                  (0, a.jsx)(E.Button, {
                                       ...e,
-                                      onMouseEnter: S,
-                                      onMouseLeave: x,
-                                      onFocus: S,
-                                      onBlur: x,
+                                      onMouseEnter: N,
+                                      onMouseLeave: O,
+                                      onFocus: N,
+                                      onBlur: O,
                                       onClick: R,
-                                      className: C.voteCountButton,
-                                      'aria-describedby': g ? o : void 0,
-                                      look: d.Button.Looks.BLANK,
-                                      size: d.Button.Sizes.NONE,
-                                      children: O
+                                      className: A.voteCountButton,
+                                      'aria-describedby': S ? s : void 0,
+                                      look: E.Button.Looks.BLANK,
+                                      size: E.Button.Sizes.NONE,
+                                      children: C
                                   })
                           }),
-                          g &&
-                              (0, i.jsx)(l.T, {
-                                  id: o,
-                                  children: T
+                          S &&
+                              (0, a.jsx)(u.T, {
+                                  id: s,
+                                  children: d
                               })
                       ]
                   })
-                : (0, i.jsx)(i.Fragment, { children: O }),
-            (0, i.jsxs)(d.Text, {
+                : (0, a.jsx)(a.Fragment, { children: C }),
+            (0, a.jsxs)(E.Text, {
                 variant: 'text-md/bold',
                 color: 'none',
                 scaleFontToUserSetting: !0,
@@ -109,126 +112,126 @@ function p(e) {
         ]
     });
 }
-function g(e) {
+function C(e) {
     let { percentage: t, shouldAnimate: n } = e,
-        s = (0, d.useSpring)(
+        r = (0, E.useSpring)(
             {
                 from: { width: n ? '0%' : ''.concat(t, '%') },
                 to: { width: ''.concat(t, '%') },
                 config: {
                     duration: 1200,
-                    easing: u.Z.Easing.inOut(u.Z.Easing.ease)
+                    easing: _.Z.Easing.inOut(_.Z.Easing.ease)
                 }
             },
             'animate-always'
         );
-    return (0, i.jsx)(o.animated.span, {
-        className: C.votePercentageBar,
-        style: s,
+    return (0, a.jsx)(c.animated.span, {
+        className: A.votePercentageBar,
+        style: r,
         'aria-hidden': !0
     });
 }
-function A(e) {
-    let { answersInteraction: t, isSelected: n, didSelfVote: s, isVictor: a, isExpired: r, className: l } = e;
-    return (0, c.EQ)({
+function y(e) {
+    let { answersInteraction: t, isSelected: n, didSelfVote: r, isVictor: i, isExpired: o, className: s } = e;
+    return (0, d.EQ)({
         answersInteraction: t,
-        didSelfVote: s
+        didSelfVote: r
     })
-        .with({ answersInteraction: T.Y7.RADIO_BUTTONS }, () =>
-            (0, i.jsx)(h.Og, {
+        .with({ answersInteraction: I.Y7.RADIO_BUTTONS }, () =>
+            (0, a.jsx)(T.Og, {
                 isSelected: n,
-                size: 24,
-                className: l
+                size: N,
+                className: s
             })
         )
-        .with({ answersInteraction: T.Y7.CHECKBOXES }, () =>
-            (0, i.jsx)(h.zs, {
+        .with({ answersInteraction: I.Y7.CHECKBOXES }, () =>
+            (0, a.jsx)(T.zs, {
                 isSelected: n,
-                size: 20,
-                className: l
+                size: O,
+                className: s
             })
         )
         .with(
             {
-                answersInteraction: T.Y7.LIST,
+                answersInteraction: I.Y7.LIST,
                 didSelfVote: !0
             },
             () =>
-                (0, i.jsx)(h.ZY, {
-                    isVictor: a,
-                    isExpired: r,
-                    size: 24,
-                    className: l
+                (0, a.jsx)(T.ZY, {
+                    isVictor: i,
+                    isExpired: o,
+                    size: v,
+                    className: s
                 })
         )
         .otherwise(() => null);
 }
-function S(e) {
-    let { answer: t, isExpired: n, answersInteraction: s, canShowVoteCounts: a, canShowVoterDetails: o } = e,
-        c = !0 === t.isSelected,
-        u = !0 === t.didSelfVote,
-        _ = !0 === t.isVictor,
-        E = t.shouldAnimateTransition;
-    return (0, i.jsx)(i.Fragment, {
-        children: (0, i.jsxs)('div', {
-            className: r()(C.answerInner, {
-                [C.currentlyVoting]: s !== T.Y7.LIST,
-                [C.selected]: c
+function b(e) {
+    let { answer: t, isExpired: n, answersInteraction: r, canShowVoteCounts: i, canShowVoterDetails: o } = e,
+        s = !0 === t.isSelected,
+        c = !0 === t.didSelfVote,
+        d = !0 === t.isVictor,
+        _ = t.shouldAnimateTransition;
+    return (0, a.jsx)(a.Fragment, {
+        children: (0, a.jsxs)('div', {
+            className: l()(A.answerInner, {
+                [A.currentlyVoting]: r !== I.Y7.LIST,
+                [A.selected]: s
             }),
             children: [
-                a
-                    ? (0, i.jsx)(g, {
+                i
+                    ? (0, a.jsx)(C, {
                           percentage: t.votesPercentage,
-                          shouldAnimate: E
+                          shouldAnimate: _
                       })
                     : null,
                 null != t.pollMedia.emoji &&
-                    (0, i.jsx)(h.sc, {
-                        className: C.emoji,
+                    (0, a.jsx)(T.sc, {
+                        className: A.emoji,
                         emoji: t.pollMedia.emoji
                     }),
-                (0, i.jsx)(d.Text, {
-                    className: C.label,
+                (0, a.jsx)(E.Text, {
+                    className: A.label,
                     variant: 'text-sm/semibold',
                     color: 'none',
                     scaleFontToUserSetting: !0,
                     children: t.pollMedia.text
                 }),
-                t.didSelfVote && (0, i.jsx)(l.T, { children: f.Z.Messages.POLL_ANSWER_VOTED_ARIA }),
-                a &&
-                    (0, i.jsx)(p, {
+                t.didSelfVote && (0, a.jsx)(u.T, { children: S.Z.Messages.POLL_ANSWER_VOTED_ARIA }),
+                i &&
+                    (0, a.jsx)(R, {
                         percentage: t.votesPercentage,
                         label: t.votes,
                         canShowVoterDetails: o,
                         answerId: t.answerId
                     }),
-                (0, i.jsx)(A, {
-                    answersInteraction: s,
-                    isSelected: c,
-                    didSelfVote: u,
-                    isVictor: _,
+                (0, a.jsx)(y, {
+                    answersInteraction: r,
+                    isSelected: s,
+                    didSelfVote: c,
+                    isVictor: d,
                     isExpired: n,
-                    className: C.answerSelectionIcon
+                    className: A.answerSelectionIcon
                 })
             ]
         })
     });
 }
-function x(e) {
-    let { isExpired: t, answersInteraction: n, canShowVoteCounts: s, canTapAnswers: a, ...r } = e;
-    return (0, i.jsx)(h.$e, {
-        className: C.answersContainer,
-        answerClassName: C.answer,
+function L(e) {
+    let { isExpired: t, answersInteraction: n, canShowVoteCounts: r, canTapAnswers: i, ...o } = e;
+    return (0, a.jsx)(T.$e, {
+        className: A.answersContainer,
+        answerClassName: A.answer,
         answersInteraction: n,
-        canTapAnswers: a,
+        canTapAnswers: i,
         renderAnswerContent: (e) =>
-            (0, i.jsx)(S, {
+            (0, a.jsx)(b, {
                 answer: e,
                 isExpired: t,
                 answersInteraction: n,
-                canShowVoteCounts: s,
-                canShowVoterDetails: a
+                canShowVoteCounts: r,
+                canShowVoterDetails: i
             }),
-        ...r
+        ...o
     });
 }

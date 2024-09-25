@@ -1,27 +1,41 @@
-n(47120), n(653041);
-var i = n(735250),
-    s = n(470079),
-    a = n(120356),
-    r = n.n(a),
-    l = n(215569),
-    o = n(481060),
-    c = n(140710),
-    u = n(566006),
-    d = n(60174),
-    _ = n(453687),
-    E = n(434624),
-    I = n(287151),
+var r = n(47120);
+var i = n(653041);
+var a = n(735250),
+    o = n(470079),
+    s = n(120356),
+    l = n.n(s),
+    u = n(215569),
+    c = n(481060),
+    d = n(140710),
+    _ = n(566006),
+    E = n(60174),
+    f = n(453687),
+    h = n(434624),
+    p = n(287151),
     m = n(689938),
-    T = n(96042),
-    h = n(968661);
-let N = (e, t) => (null == e && null == t) || e === t,
-    f = (e, t) => e.findIndex((e) => N(e.emoji.id, null == t ? void 0 : t.id) && N(e.emoji.name, null == t ? void 0 : t.name)),
-    C = (e, t) => {
+    I = n(96042),
+    T = n(968661);
+function g(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+let S = (e, t) => (null == e && null == t) || e === t,
+    A = (e, t) => e.findIndex((e) => S(e.emoji.id, null == t ? void 0 : t.id) && S(e.emoji.name, null == t ? void 0 : t.name)),
+    v = (e, t) => {
         if (null == t) return e;
-        let n = f(e, t);
+        let n = A(e, t);
         return n < 0 ? e : [e[n], ...e.slice(0, n), ...e.slice(n + 1)];
     };
-class p extends s.PureComponent {
+class N extends o.PureComponent {
     static getDerivedStateFromProps(e, t) {
         let n = e.message.reactions.length;
         return 0 === t.reactionsCount && n > 0
@@ -34,122 +48,112 @@ class p extends s.PureComponent {
               : null;
     }
     render() {
-        let { message: e, disableReactionCreates: t, disableReactionUpdates: n, isLurking: s, isGuest: a, isPendingMember: N, isForumToolbar: f, channel: C, className: p, forceAddReactions: g, reactionClassName: A, useChatFontScaling: S, forceHideReactionCreates: x, remainingReactions: R, combinedReactions: O, visibleReactionsCount: M } = this.props,
-            { disableTransitionAppear: v } = this.state,
-            L = S ? h : T,
-            Z = M > 0;
-        if (!Z && !g) return null;
-        let { enabled: P } = c.Z.getCurrentConfig({ location: 'message_reactions' }, { autoTrackExposure: !0 }),
-            b = P && Z,
-            D = (g && !Z) || b;
-        return (0, i.jsxs)(l.W, {
+        let { message: e, disableReactionCreates: t, disableReactionUpdates: n, isLurking: r, isGuest: i, isPendingMember: o, isForumToolbar: s, channel: g, className: S, forceAddReactions: A, reactionClassName: v, useChatFontScaling: N, forceHideReactionCreates: O, remainingReactions: R, combinedReactions: C, visibleReactionsCount: y } = this.props,
+            { disableTransitionAppear: b } = this.state,
+            L = N ? T : I,
+            D = y > 0;
+        if (!D && !A) return null;
+        let { enabled: M } = d.Z.getCurrentConfig({ location: 'message_reactions' }, { autoTrackExposure: !0 }),
+            P = M && D,
+            U = (A && !D) || P;
+        return (0, a.jsxs)(u.W, {
             component: 'div',
-            className: r()(L.reactions, p),
-            transitionAppear: !v,
+            className: l()(L.reactions, S),
+            transitionAppear: !b,
             role: 'group',
             transitionLeave: !1,
-            id: (0, _.bY)(e),
+            id: (0, f.bY)(e),
             onMouseEnter: () => this.setState({ isHovered: !0 }),
             onMouseLeave: () => this.setState({ isHovered: !1 }),
             children: [
-                (0, i.jsx)(E.l, {
-                    reactions: O,
+                (0, a.jsx)(h.l, {
+                    reactions: C,
                     message: e,
                     readOnly: n,
-                    isLurking: s,
-                    isGuest: a,
-                    isPendingMember: N,
-                    isForumToolbar: f,
-                    useChatFontScaling: S,
-                    className: A
+                    isLurking: r,
+                    isGuest: i,
+                    isPendingMember: o,
+                    isForumToolbar: s,
+                    useChatFontScaling: N,
+                    className: v
                 }),
                 R > 0 &&
-                    (0, i.jsx)(o.Clickable, {
+                    (0, a.jsx)(c.Clickable, {
                         onClick: (t) => {
-                            t.stopPropagation(), (0, I.op)(C, e);
+                            t.stopPropagation(), (0, p.op)(g, e);
                         },
-                        className: r()(L.reaction, A, L.remainingReactions),
+                        className: l()(L.reaction, v, L.remainingReactions),
                         'aria-label': m.Z.Messages.ADD_REACTION,
-                        children: (0, i.jsxs)(o.Text, {
+                        children: (0, a.jsxs)(c.Text, {
                             className: L.reactionInner,
                             variant: 'text-sm/normal',
                             children: ['+', R]
                         })
                     }),
                 !t &&
-                    !x &&
-                    (0, i.jsx)(d.X, {
-                        tabIndex: D || this.state.isHovered ? 0 : -1,
-                        type: u.O.NORMAL,
+                    !O &&
+                    (0, a.jsx)(E.X, {
+                        tabIndex: U || this.state.isHovered ? 0 : -1,
+                        type: _.O.NORMAL,
                         message: e,
-                        channel: C,
-                        useChatFontScaling: S,
+                        channel: g,
+                        useChatFontScaling: N,
                         isHovered: this.state.isHovered,
-                        className: r()({
-                            [L.forceShow]: D,
-                            [L.forceShowLook]: g || b
+                        className: l()({
+                            [L.forceShow]: U,
+                            [L.forceShowLook]: A || P
                         })
                     })
             ]
         });
     }
     constructor(...e) {
-        var t, n, i;
         super(...e),
-            (t = this),
-            (n = 'state'),
-            (i = {
+            g(this, 'state', {
                 disableTransitionAppear: !0,
                 reactionsCount: this.props.message.reactions.length,
                 isHovered: !1
-            }),
-            n in t
-                ? Object.defineProperty(t, n, {
-                      value: i,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (t[n] = i);
+            });
     }
 }
-t.Z = (e) => {
-    let { message: t, maxReactions: n, hoistReaction: a } = e,
+let O = (e) => {
+    let { message: t, maxReactions: n, hoistReaction: r } = e,
         {
-            combinedReactions: r,
-            remainingReactions: l,
-            visibleReactionsCount: o
-        } = s.useMemo(() => {
+            combinedReactions: i,
+            remainingReactions: s,
+            visibleReactionsCount: l
+        } = o.useMemo(() => {
             let e = [],
-                i = C(t.reactions, a),
-                s = null != n && n < i.length ? i.slice(0, n) : i,
-                r = i.length - s.length,
-                l = i.length;
+                i = v(t.reactions, r),
+                a = null != n && n < i.length ? i.slice(0, n) : i,
+                o = i.length - a.length,
+                s = i.length;
             return (
-                s.forEach((t) => {
+                a.forEach((t) => {
                     t.burst_count > 0 &&
                         e.push({
                             ...t,
-                            type: u.O.BURST
+                            type: _.O.BURST
                         }),
                         t.count > 0 &&
                             e.push({
                                 ...t,
-                                type: u.O.NORMAL
+                                type: _.O.NORMAL
                             }),
-                        null != t.me_vote && --l;
+                        null != t.me_vote && --s;
                 }),
                 {
                     combinedReactions: e,
-                    visibleReactionsCount: l,
-                    remainingReactions: r
+                    visibleReactionsCount: s,
+                    remainingReactions: o
                 }
             );
-        }, [a, n, t.reactions]);
-    return (0, i.jsx)(p, {
+        }, [r, n, t.reactions]);
+    return (0, a.jsx)(N, {
         ...e,
-        visibleReactionsCount: o,
-        combinedReactions: r,
-        remainingReactions: l
+        visibleReactionsCount: l,
+        combinedReactions: i,
+        remainingReactions: s
     });
 };
+t.Z = O;

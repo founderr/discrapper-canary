@@ -1,19 +1,18 @@
 n.d(t, {
     X: function () {
-        return i;
+        return r;
     },
     Z: function () {
-        return _;
+        return d;
     }
 });
 var r,
-    i,
-    a = n(259443),
-    s = n(47770),
+    i = n(259443),
+    a = n(47770),
     o = n(740197),
-    l = n(376398),
-    u = n(65154);
-function c(e, t, n) {
+    s = n(376398),
+    l = n(65154);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,16 +25,18 @@ function c(e, t, n) {
         e
     );
 }
-let d = new a.Y('Output');
-((r = i || (i = {})).InteractionRequired = 'interactionrequired'), (r.Speaking = 'speaking'), (r.Video = 'video');
-class _ extends s.Z {
+let c = new i.Y('Output');
+!(function (e) {
+    (e.InteractionRequired = 'interactionrequired'), (e.Speaking = 'speaking'), (e.Video = 'video');
+})(r || (r = {}));
+class d extends a.Z {
     play() {
         var e;
         null === (e = this.audioElement) || void 0 === e || e.play();
     }
     destroy() {
         var e;
-        null === (e = this.audioElement) || void 0 === e || e.pause(), null != this.videoStreamId && (0, l.jC)(this.videoStreamId), null != this.streamSourceNode && (this.streamSourceNode.disconnect(), (this.streamSourceNode = null)), null != this.levelNode && (this.levelNode.disconnect(), this.levelNode.port.postMessage('close'), (this.levelNode = null)), this.setSpeakingFlags(u.Dg.NONE), this.removeAllListeners();
+        null === (e = this.audioElement) || void 0 === e || e.pause(), null != this.videoStreamId && (0, s.jC)(this.videoStreamId), null != this.streamSourceNode && (this.streamSourceNode.disconnect(), (this.streamSourceNode = null)), null != this.levelNode && (this.levelNode.disconnect(), this.levelNode.port.postMessage('close'), (this.levelNode = null)), this.setSpeakingFlags(l.Dg.NONE), this.removeAllListeners();
     }
     addTrack(e) {
         if (this.stream.getTracks().includes(e)) return this.stream.getTracks().length;
@@ -54,16 +55,16 @@ class _ extends s.Z {
                     }),
                     null != this.streamSourceNode && this.streamSourceNode.connect(this.levelNode);
             } catch (e) {
-                d.warn('Output#Failed to setup speaking indicator: '.concat(e));
+                c.warn('Output#Failed to setup speaking indicator: '.concat(e));
             }
         }
         return (
             'video' === e.kind &&
-                (null != this.videoStreamId && (0, l.jC)(this.videoStreamId),
+                (null != this.videoStreamId && (0, s.jC)(this.videoStreamId),
                 this.stream.getVideoTracks().forEach((t) => {
                     e !== t && ((t.discordIsTearingDown = !0), this.stream.removeTrack(t));
                 }),
-                (this.videoStreamId = (0, l.N7)(this.stream)),
+                (this.videoStreamId = (0, s.N7)(this.stream)),
                 this.emit('video', this.videoStreamId)),
             'audio' === e.kind &&
                 this.stream.getAudioTracks().forEach((t) => {
@@ -73,7 +74,7 @@ class _ extends s.Z {
         );
     }
     removeTrack(e) {
-        return this.stream.removeTrack(e), 'video' === e.kind && (null != this.videoStreamId && (0, l.jC)(this.videoStreamId), this.emit('video', null)), this.stream.getTracks().length;
+        return this.stream.removeTrack(e), 'video' === e.kind && (null != this.videoStreamId && (0, s.jC)(this.videoStreamId), this.emit('video', null)), this.stream.getTracks().length;
     }
     setSinkId(e) {
         (this.sinkId = e), this.updateAudioElement();
@@ -85,13 +86,13 @@ class _ extends s.Z {
         (this._mute = e || !1), this.updateAudioElement();
     }
     get priority() {
-        return (this._speakingFlags & u.Dg.PRIORITY) === u.Dg.PRIORITY;
+        return (this._speakingFlags & l.Dg.PRIORITY) === l.Dg.PRIORITY;
     }
     get volume() {
         return this._volume;
     }
     set volume(e) {
-        (this._volume = Math.max(0, Math.min(Math.round(e), u.Qx))), this.updateAudioElement();
+        (this._volume = Math.max(0, Math.min(Math.round(e), l.Qx))), this.updateAudioElement();
     }
     get speakingFlags() {
         return this._speakingFlags;
@@ -108,6 +109,6 @@ class _ extends s.Z {
         }
     }
     constructor(e, t) {
-        super(), c(this, 'id', void 0), c(this, '_speakingFlags', u.Dg.NONE), c(this, '_mute', !1), c(this, '_volume', u.Qx), c(this, 'sinkId', null), c(this, 'audioElement', null), c(this, 'stream', new MediaStream()), c(this, 'videoStreamId', null), c(this, 'levelNode', null), c(this, 'streamSourceNode', null), c(this, 'audioContext', void 0), (this.id = e), (this.audioContext = t);
+        super(), u(this, 'id', void 0), u(this, '_speakingFlags', l.Dg.NONE), u(this, '_mute', !1), u(this, '_volume', l.Qx), u(this, 'sinkId', null), u(this, 'audioElement', null), u(this, 'stream', new MediaStream()), u(this, 'videoStreamId', null), u(this, 'levelNode', null), u(this, 'streamSourceNode', null), u(this, 'audioContext', void 0), (this.id = e), (this.audioContext = t);
     }
 }

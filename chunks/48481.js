@@ -1,95 +1,97 @@
 n.d(t, {
     Uc: function () {
-        return _;
-    },
-    ac: function () {
-        return p;
-    },
-    cv: function () {
-        return I;
-    },
-    d5: function () {
         return h;
     },
-    i7: function () {
-        return g;
-    },
-    kI: function () {
-        return f;
-    },
-    re: function () {
+    ac: function () {
         return T;
     },
-    tU: function () {
+    cv: function () {
+        return g;
+    },
+    d5: function () {
+        return I;
+    },
+    i7: function () {
         return O;
     },
-    u0: function () {
-        return S;
-    },
-    uL: function () {
-        return A;
-    },
-    xU: function () {
+    kI: function () {
         return m;
     },
-    xt: function () {
+    re: function () {
+        return A;
+    },
+    tU: function () {
+        return y;
+    },
+    u0: function () {
         return N;
+    },
+    uL: function () {
+        return R;
+    },
+    xU: function () {
+        return S;
+    },
+    xt: function () {
+        return C;
     }
-}),
-    n(411104),
-    n(47120),
-    n(653041);
-var r = n(647943),
-    i = n(581282),
-    a = n(392711),
-    s = n.n(a),
-    o = n(377108),
-    l = n(524437),
-    u = n(397696),
-    c = n(526761),
-    d = n(981631);
-let _ = { readerFactory: (e) => new r.o(e, new TextDecoder('utf-8')) },
-    E = {
-        [c.yP.PRELOADED_USER_SETTINGS]: l.o8,
-        [c.yP.FRECENCY_AND_FAVORITES_SETTINGS]: o.ji
+});
+var r = n(411104);
+var i = n(47120);
+var a = n(653041);
+var o = n(647943),
+    s = n(581282),
+    l = n(392711),
+    u = n.n(l),
+    c = n(377108),
+    d = n(524437),
+    _ = n(397696),
+    E = n(526761),
+    f = n(981631);
+let h = { readerFactory: (e) => new o.o(e, new TextDecoder('utf-8')) },
+    p = {
+        [E.yP.PRELOADED_USER_SETTINGS]: d.o8,
+        [E.yP.FRECENCY_AND_FAVORITES_SETTINGS]: c.ji
     };
-function f(e, t) {
-    return null != t && e in E ? h(E[e], t) : null;
+function m(e, t) {
+    return null != t && e in p ? I(p[e], t) : null;
 }
-function h(e, t) {
+function I(e, t) {
     if (null == t) return null;
-    let n = (0, i.c)(t);
+    let n = (0, s.c)(t);
     try {
-        return e.fromBinary(n, _);
+        return e.fromBinary(n, h);
     } catch (e) {
         throw Error('Settings proto failed to deserialize (potentially corrupt): '.concat(e));
     }
 }
-function p(e) {
-    return h(l.o8, e);
+function T(e) {
+    return I(d.o8, e);
 }
-function I(e, t) {
-    return m(E[e], t);
+function g(e, t) {
+    return S(p[e], t);
 }
-function m(e, t) {
-    return (0, i.m)(e.toBinary(t));
+function S(e, t) {
+    return (0, s.m)(e.toBinary(t));
 }
-function T(e, t, n) {
+function A(e, t, n) {
     for (let e in ((t = { ...t }), n)) delete t[e];
     return e.mergePartial(t, n), t;
 }
-function S(e, t, n) {
-    return (null == t || 'null' === t) && (t = d.aIL), !(t in e.guilds) && (e.guilds[t] = l.C4.create()), n(e.guilds[t]);
+function v(e, t, n) {
+    return null == e.guilds && (e.guilds = d.os.create()), N(e.guilds, t, n);
 }
-function g(e, t, n, r) {
-    var i, a, s;
-    return (i = e), (a = t), (s = (e) => A(e, n, r)), null == i.guilds && (i.guilds = l.os.create()), S(i.guilds, a, s);
+function N(e, t, n) {
+    return (null == t || 'null' === t) && (t = f.aIL), !(t in e.guilds) && (e.guilds[t] = d.C4.create()), n(e.guilds[t]);
 }
-function A(e, t, n) {
-    return !(t in e.channels) && (e.channels[t] = l.p5.create()), n(e.channels[t]);
+function O(e, t, n, r) {
+    return v(e, t, (e) => R(e, n, r));
 }
-function N(e, t) {
-    null == e.versions && (e.versions = u.L.create());
+function R(e, t, n) {
+    return !(t in e.channels) && (e.channels[t] = d.p5.create()), n(e.channels[t]);
+}
+function C(e, t) {
+    null == e.versions && (e.versions = _.L.create());
     let n = 0;
     for (let e of t) {
         if (e.version <= n) throw Error('Migrations are out of order or there is a duplicate version');
@@ -99,14 +101,14 @@ function N(e, t) {
         i = !1,
         a = [];
     for (let n of t) {
-        var s, o;
+        var o, s;
         if (n.version <= e.versions.clientVersion) {
-            r && (null === (s = n.cleanup) || void 0 === s || s.call(n));
+            r && (null === (o = n.cleanup) || void 0 === o || o.call(n));
             continue;
         }
         let t = n.run(e);
         if (((e.versions.clientVersion = n.version), !1 === t)) {
-            null === (o = n.cleanup) || void 0 === o || o.call(n);
+            null === (s = n.cleanup) || void 0 === s || s.call(n);
             continue;
         }
         (i = !0), null != n.cleanup && a.push(n.cleanup);
@@ -117,11 +119,11 @@ function N(e, t) {
         cleanupFuncs: a
     };
 }
-function O(e, t) {
+function y(e, t) {
     let n = Object.entries(e);
     if (n.length > t)
         for (
-            n = s()
+            n = u()
                 .sortBy(n, (e) => {
                     let [t, n] = e;
                     return n.recentUses[n.recentUses.length - 1];
@@ -133,7 +135,7 @@ function O(e, t) {
             n.pop();
     let r = {};
     for (let [e, t] of n) {
-        let n = o._F.create();
+        let n = c._F.create();
         (n.frecency = t.frecency), (n.recentUses = t.recentUses.filter((e) => null != e && e > 0).map(String)), (n.score = Math.round(t.score)), (n.totalUses = t.totalUses), (r[e] = n);
     }
     return r;

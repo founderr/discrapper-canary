@@ -1,10 +1,15 @@
-e.exports = function (e) {
+function t(e) {
     let t = e.regex,
-        n = /(_[a-z_\d]+)?/,
-        r = /([de][+-]?\d+)?/,
-        i = {
+        n = {
+            className: 'params',
+            begin: '\\(',
+            end: '\\)'
+        },
+        r = /(_[a-z_\d]+)?/,
+        i = /([de][+-]?\d+)?/,
+        a = {
             className: 'number',
-            variants: [{ begin: t.concat(/\b\d+/, /\.(\d*)/, r, n) }, { begin: t.concat(/\b\d+/, r, n) }, { begin: t.concat(/\.\d+/, r, n) }],
+            variants: [{ begin: t.concat(/\b\d+/, /\.(\d*)/, i, r) }, { begin: t.concat(/\b\d+/, i, r) }, { begin: t.concat(/\.\d+/, i, r) }],
             relevance: 0
         };
     return {
@@ -29,18 +34,12 @@ e.exports = function (e) {
                 className: 'function',
                 beginKeywords: 'subroutine function program',
                 illegal: '[${=\\n]',
-                contains: [
-                    e.UNDERSCORE_TITLE_MODE,
-                    {
-                        className: 'params',
-                        begin: '\\(',
-                        end: '\\)'
-                    }
-                ]
+                contains: [e.UNDERSCORE_TITLE_MODE, n]
             },
             e.COMMENT('!', '$', { relevance: 0 }),
             e.COMMENT('begin_doc', 'end_doc', { relevance: 10 }),
-            i
+            a
         ]
     };
-};
+}
+e.exports = t;

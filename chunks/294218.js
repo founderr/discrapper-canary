@@ -1,91 +1,92 @@
-n(789020);
+var r = n(789020);
 var i = n(735250),
-    s = n(470079),
-    a = n(120356),
-    r = n.n(a),
+    a = n(470079),
+    o = n(120356),
+    s = n.n(o),
     l = n(91192),
-    o = n(442837),
+    u = n(442837),
     c = n(518738),
-    u = n(628238),
-    d = n(869765),
-    _ = n(592125),
-    E = n(496675),
-    I = n(630388),
-    m = n(709054),
-    T = n(900164),
-    h = n(739566),
-    N = n(492593),
-    f = n(453687),
-    C = n(25015),
-    p = n(689674),
-    g = n(438075),
-    A = n(963550),
-    S = n(845080),
-    x = n(295790),
-    R = n(145807),
-    O = n(56744),
-    M = n(981631),
-    v = n(916315);
-t.Z = s.memo(function (e) {
+    d = n(628238),
+    _ = n(869765),
+    E = n(592125),
+    f = n(496675),
+    h = n(630388),
+    p = n(709054),
+    m = n(900164),
+    I = n(739566),
+    T = n(492593),
+    g = n(453687),
+    S = n(25015),
+    A = n(689674),
+    v = n(438075),
+    N = n(963550),
+    O = n(845080),
+    R = n(295790),
+    C = n(145807),
+    y = n(56744),
+    b = n(981631),
+    L = n(916315);
+function D(e) {
     var t, n;
-    let { message: s, compact: a = !1, className: L, onContextMenu: Z, onClick: P, hideSimpleEmbedContent: b = !0, channel: D, isGroupStart: j, animateAvatar: U, subscribeToComponentDispatch: y, renderThreadAccessory: B, trackAnnouncementViews: k = !1, ...F } = e,
-        G = s.type === M.uaV.POLL_RESULT || (null !== (t = e.disableInteraction) && void 0 !== t && t),
-        w = s.isFirstMessageInForumPost(D),
-        V = (0, u.A)((null !== (n = s.editedTimestamp) && void 0 !== n ? n : s.timestamp).valueOf()),
-        { content: H, hasSpoilerEmbeds: Y } = (0, C.Z)(s, {
-            hideSimpleEmbedContent: b,
-            allowList: w || V,
-            allowHeading: w || V,
+    let { message: r, compact: a = !1, className: o, onContextMenu: D, onClick: M, hideSimpleEmbedContent: P = !0, channel: U, isGroupStart: w, animateAvatar: x, subscribeToComponentDispatch: G, renderThreadAccessory: k, trackAnnouncementViews: B = !1, ...F } = e,
+        Z = r.type === b.uaV.POLL_RESULT || (null !== (t = e.disableInteraction) && void 0 !== t && t),
+        V = r.isFirstMessageInForumPost(U),
+        H = (0, d.A)((null !== (n = r.editedTimestamp) && void 0 !== n ? n : r.timestamp).valueOf()),
+        { content: Y, hasSpoilerEmbeds: j } = (0, S.Z)(r, {
+            hideSimpleEmbedContent: P,
+            allowList: V || H,
+            allowHeading: V || H,
             allowLinks: !0,
             previewLinkTarget: !0
         }),
-        W = s.type === M.uaV.REPLY ? s.messageReference : void 0,
-        K = (0, o.e7)([d.Z], () => d.Z.getMessageByReference(W)),
-        z = (0, l.JA)(s.id),
-        Q = (0, h.ZP)(s),
-        q = (0, o.e7)([_.Z], () => s.hasFlag(M.iLy.HAS_THREAD) && _.Z.getChannel(m.default.castMessageIdAsChannelId(s.id))),
+        W = r.type === b.uaV.REPLY ? r.messageReference : void 0,
+        K = (0, u.e7)([_.Z], () => _.Z.getMessageByReference(W)),
+        z = (0, l.JA)(r.id),
+        q = (0, I.ZP)(r),
+        Q = (0, u.e7)([E.Z], () => r.hasFlag(b.iLy.HAS_THREAD) && E.Z.getChannel(p.default.castMessageIdAsChannelId(r.id))),
         X = (0, c.p9)({
-            guildId: D.guild_id,
-            roleId: Q.iconRoleId
+            guildId: U.guild_id,
+            roleId: q.iconRoleId
         }),
-        J = (0, o.e7)([E.Z], () => E.Z.can(M.Plq.CREATE_INSTANT_INVITE, D)),
-        $ = (0, p.Z)({
-            message: s,
-            channel: D,
-            enabled: k
+        $ = (0, u.e7)([f.Z], () => f.Z.can(b.Plq.CREATE_INSTANT_INVITE, U)),
+        J = (0, A.Z)({
+            message: r,
+            channel: U,
+            enabled: B
         });
-    if ((0, T.Z)(s, J)) return null;
-    let ee = (0, f.iG)(s),
-        et = (0, f.Gx)(s);
-    return (0, i.jsx)(N.Z, {
+    if ((0, m.Z)(r, $)) return null;
+    let ee = (0, g.iG)(r),
+        et = (0, g.Gx)(r);
+    return (0, i.jsx)(T.Z, {
         compact: a,
-        className: r()(L, {
-            [v.ephemeral]: (0, I.yE)(s.flags, M.iLy.EPHEMERAL),
-            [v.disableInteraction]: G
+        className: s()(o, {
+            [L.ephemeral]: (0, h.yE)(r.flags, b.iLy.EPHEMERAL),
+            [L.disableInteraction]: Z
         }),
-        disableInteraction: G,
-        childrenRepliedMessage: (0, O.Z)(s, D, W, K, a),
-        childrenExecutedCommand: (0, R.Z)(s, D, a),
-        childrenHeader: (0, S.Z)({
+        disableInteraction: Z,
+        childrenRepliedMessage: (0, y.Z)(r, U, W, K, a),
+        childrenExecutedCommand: (0, C.Z)(r, U, a),
+        childrenHeader: (0, O.Z)({
             ...e,
-            guildId: D.guild_id,
-            author: Q,
+            guildId: U.guild_id,
+            author: q,
             roleIcon: X
         }),
-        childrenAccessories: e.hideAccessories ? void 0 : (0, g.Q)(e, Y),
-        childrenMessageContent: (0, A.Z)(e, H),
-        childrenSystemMessage: (0, x.Z)({
+        childrenAccessories: e.hideAccessories ? void 0 : (0, v.Q)(e, j),
+        childrenMessageContent: (0, N.Z)(e, Y),
+        childrenSystemMessage: (0, R.Z)({
             ...e,
-            disableInteraction: G
+            disableInteraction: Z
         }),
-        onContextMenu: Z,
-        onClick: P,
-        hasThread: B && null != q && s.hasFlag(M.iLy.HAS_THREAD),
-        hasReply: s.type === M.uaV.REPLY,
+        onContextMenu: D,
+        onClick: M,
+        hasThread: k && null != Q && r.hasFlag(b.iLy.HAS_THREAD),
+        hasReply: r.type === b.uaV.REPLY,
         'aria-labelledby': ee,
         'aria-describedby': et,
-        messageRef: $,
+        messageRef: J,
         ...z,
         ...F
     });
-});
+}
+t.Z = a.memo(D);

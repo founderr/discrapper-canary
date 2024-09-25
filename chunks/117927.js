@@ -1,4 +1,4 @@
-e.exports = function (e) {
+function t(e) {
     return {
         name: 'FIX',
         contains: [
@@ -28,4 +28,5 @@ e.exports = function (e) {
         ],
         case_insensitive: !0
     };
-};
+}
+e.exports = t;

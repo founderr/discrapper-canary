@@ -1,51 +1,53 @@
-n(47120);
-var r = n(735250);
+var r = n(47120);
+var i = n(735250);
 n(470079);
-var i = n(525654),
-    a = n.n(i),
+var a = n(525654),
+    o = n.n(a),
     s = n(481060),
-    o = n(570140),
-    l = n(468026),
-    u = n(317770),
-    c = n(63063),
-    d = n(981631),
-    _ = n(689938);
-class E extends u.Z {
+    l = n(570140),
+    u = n(468026),
+    c = n(317770),
+    d = n(63063),
+    _ = n(981631),
+    E = n(689938);
+function f(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+class h extends c.Z {
     _initialize() {
-        o.Z.subscribe('MEDIA_ENGINE_PERMISSION', this.handlePermission);
+        l.Z.subscribe('MEDIA_ENGINE_PERMISSION', this.handlePermission);
     }
     _terminate() {
-        o.Z.unsubscribe('MEDIA_ENGINE_PERMISSION', this.handlePermission);
+        l.Z.unsubscribe('MEDIA_ENGINE_PERMISSION', this.handlePermission);
     }
     constructor(...e) {
-        var t, n, i;
         super(...e),
-            (t = this),
-            (n = 'handlePermission'),
-            (i = (e) => {
+            f(this, 'handlePermission', (e) => {
                 let { kind: t, granted: n } = e,
-                    i = 'Firefox' === a().name ? d.BhN.ENABLE_MIC_FIREFOX : d.BhN.ENABLE_MIC_CHROME;
+                    r = 'Firefox' === o().name ? _.BhN.ENABLE_MIC_FIREFOX : _.BhN.ENABLE_MIC_CHROME;
                 if (!n) {
                     let e = 'audio' !== t;
                     (0, s.openModal)((t) =>
-                        (0, r.jsx)(l.default, {
-                            title: e ? _.Z.Messages.NO_CAMERA_TITLE : _.Z.Messages.NO_MIC_TITLE,
-                            body: e ? _.Z.Messages.NO_CAMERA_BODY : _.Z.Messages.NO_MIC_BODY,
-                            onConfirm: () => window.open(c.Z.getArticleURL(i), '_blank'),
-                            confirmText: _.Z.Messages.HELP_DESK,
+                        (0, i.jsx)(u.default, {
+                            title: e ? E.Z.Messages.NO_CAMERA_TITLE : E.Z.Messages.NO_MIC_TITLE,
+                            body: e ? E.Z.Messages.NO_CAMERA_BODY : E.Z.Messages.NO_MIC_BODY,
+                            onConfirm: () => window.open(d.Z.getArticleURL(r), '_blank'),
+                            confirmText: E.Z.Messages.HELP_DESK,
                             ...t
                         })
                     );
                 }
-            }),
-            n in t
-                ? Object.defineProperty(t, n, {
-                      value: i,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (t[n] = i);
+            });
     }
 }
-t.Z = new E();
+t.Z = new h();

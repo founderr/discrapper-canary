@@ -1,16 +1,17 @@
 n.d(t, {
     IH: function () {
-        return i;
+        return o;
     },
     qC: function () {
-        return a;
+        return s;
     }
-}),
-    n(653041);
-let r = [];
-function i(e) {
-    for (r.push(e); r.length > 10; ) r.shift();
+});
+var r = n(653041);
+let i = 10,
+    a = [];
+function o(e) {
+    for (a.push(e); a.length > i; ) a.shift();
 }
-function a() {
-    return r.join(' -> ');
+function s() {
+    return a.join(' -> ');
 }

@@ -1,9 +1,9 @@
-n(47120);
-var r = n(668781),
-    i = n(998502),
-    a = n(58406),
+var r = n(47120);
+var i = n(668781),
+    a = n(998502),
+    o = n(58406),
     s = n(761274);
-function o(e, t, n) {
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -16,7 +16,7 @@ function o(e, t, n) {
         e
     );
 }
-class l extends a.g {
+class u extends o.g {
     requestPermissionCore(e, t) {
         var n;
         return this.asyncify(null === (n = this.nativeUtils) || void 0 === n ? void 0 : n.nativePermssionRequestAuthorization, e, t);
@@ -26,37 +26,39 @@ class l extends a.g {
         return this.asyncify(null === (n = this.nativeUtils) || void 0 === n ? void 0 : n.nativePermssionHasAuthorization, e, t);
     }
     asyncify(e, t, n) {
-        let r = l.requestTypeLookup[t];
-        return void 0 === r ? Promise.resolve(!0) : this.requestAuthorization(t, () => (null == e ? Promise.resolve(s.NZ.AUTHORIZED) : new Promise((t, n) => e(t, r))), n);
+        let r = u.requestTypeLookup[t];
+        if (void 0 === r) return Promise.resolve(!0);
+        let i = () => (null == e ? Promise.resolve(s.NZ.AUTHORIZED) : new Promise((t, n) => e(t, r)));
+        return this.requestAuthorization(t, i, n);
     }
     openSettings(e) {
         var t;
         if ((null === (t = this.nativeUtils) || void 0 === t ? void 0 : t.nativePermissionOpenSettings) == null) return;
-        let n = l.requestTypeLookup[e];
+        let n = u.requestTypeLookup[e];
         void 0 !== n && this.nativeUtils.nativePermissionOpenSettings(n);
     }
     didHavePermission(e) {
         return this.storage.hasPermission(e);
     }
     openAlertModal(e) {
-        let { title: t, body: n, onConfirm: i, cancelText: a, confirmText: s } = e;
-        r.Z.show({
+        let { title: t, body: n, onConfirm: r, cancelText: a, confirmText: o } = e;
+        i.Z.show({
             title: t,
             body: n,
-            onConfirm: i,
+            onConfirm: r,
             cancelText: a,
-            confirmText: s
+            confirmText: o
         });
     }
     constructor(...e) {
-        super(...e), o(this, 'nativeUtils', i.ZP.getDiscordUtils());
+        super(...e), l(this, 'nativeUtils', a.ZP.getDiscordUtils());
     }
 }
-o(l, 'requestTypeLookup', {
-    [s.Eu.CAMERA]: i.jK.Camera,
-    [s.Eu.AUDIO]: i.jK.Microphone,
-    [s.Eu.PHOTOS]: i.jK.Photo,
-    [s.Eu.INPUT_MONITORING]: i.jK.InputMonitoring,
-    [s.Eu.SCREEN_RECORDING]: i.jK.ScreenRecording
+l(u, 'requestTypeLookup', {
+    [s.Eu.CAMERA]: a.jK.Camera,
+    [s.Eu.AUDIO]: a.jK.Microphone,
+    [s.Eu.PHOTOS]: a.jK.Photo,
+    [s.Eu.INPUT_MONITORING]: a.jK.InputMonitoring,
+    [s.Eu.SCREEN_RECORDING]: a.jK.ScreenRecording
 }),
-    (t.Z = new l());
+    (t.Z = new u());

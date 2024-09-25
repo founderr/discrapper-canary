@@ -1,13 +1,13 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return D;
     }
 });
 var r = n(735250),
     i = n(470079),
     a = n(120356),
-    s = n.n(a),
-    o = n(442837),
+    o = n.n(a),
+    s = n(442837),
     l = n(481060),
     u = n(230711),
     c = n(351773),
@@ -17,39 +17,39 @@ var r = n(735250),
     f = n(639119),
     h = n(197115),
     p = n(587446),
-    I = n(594174),
-    m = n(626135),
+    m = n(594174),
+    I = n(626135),
     T = n(74538),
-    S = n(94795),
-    g = n(327943),
+    g = n(94795),
+    S = n(327943),
     A = n(539873),
-    N = n(981631),
-    O = n(921944),
-    R = n(474936),
-    v = n(689938),
+    v = n(981631),
+    N = n(921944),
+    O = n(474936),
+    R = n(689938),
     C = n(891304);
 let y = () => {
         var e, t, n;
-        let i = (0, o.e7)([I.default], () => T.ZP.isPremium(I.default.getCurrentUser())),
+        let i = (0, s.e7)([m.default], () => T.ZP.isPremium(m.default.getCurrentUser())),
             a = (0, f.N)(),
-            s = (null == a ? void 0 : null === (e = a.subscription_trial) || void 0 === e ? void 0 : e.sku_id) === R.Si.TIER_2;
+            o = (null == a ? void 0 : null === (e = a.subscription_trial) || void 0 === e ? void 0 : e.sku_id) === O.Si.TIER_2;
         return (0, r.jsx)(h.Z, {
             size: l.Button.Sizes.MEDIUM,
             buttonText: i
-                ? v.Z.Messages.BILLING_SWITCH_PLAN_UPGRADE
-                : s
+                ? R.Z.Messages.BILLING_SWITCH_PLAN_UPGRADE
+                : o
                   ? (0, T.Rt)({
                         intervalType: null == a ? void 0 : null === (t = a.subscription_trial) || void 0 === t ? void 0 : t.interval,
                         intervalCount: null == a ? void 0 : null === (n = a.subscription_trial) || void 0 === n ? void 0 : n.interval_count
                     })
-                  : v.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL,
-            subscriptionTier: R.Si.TIER_2
+                  : R.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL,
+            subscriptionTier: O.Si.TIER_2
         });
     },
-    L = (e) => {
+    b = (e) => {
         let { markAsDismissed: t } = e,
             n = () => {
-                null == t || t(O.L.DISMISS), (0, S.G8)();
+                null == t || t(N.L.DISMISS), (0, g.G8)();
             };
         return (0, r.jsxs)('div', {
             className: C.editorHeader,
@@ -68,7 +68,7 @@ let y = () => {
                     children: [
                         (0, r.jsx)(l.Heading, {
                             variant: 'heading-lg/extrabold',
-                            children: v.Z.Messages.APP_ICON_PREVIEW_TITLE
+                            children: R.Z.Messages.APP_ICON_PREVIEW_TITLE
                         }),
                         (0, r.jsx)(p.Z, { className: C.premiumIcon })
                     ]
@@ -76,48 +76,49 @@ let y = () => {
             ]
         });
     },
-    D = (e) => {
+    L = (e) => {
         let { isCoachmark: t, markAsDismissed: n } = e,
-            i = (0, o.e7)([g.Z], () => g.Z.isUpsellPreview);
+            i = (0, s.e7)([S.Z], () => S.Z.isUpsellPreview),
+            a = () => {
+                null == n || n(N.L.DISMISS), (0, g.G8)(), !t && u.Z.open();
+            };
         return (0, r.jsxs)('div', {
             className: C.editorFooter,
             children: [
                 i && (0, r.jsx)(y, {}),
                 (0, r.jsx)(l.Button, {
                     className: C.footerButton,
-                    onClick: () => {
-                        null == n || n(O.L.DISMISS), (0, S.G8)(), !t && u.Z.open();
-                    },
+                    onClick: a,
                     color: l.Button.Colors.PRIMARY,
                     size: l.Button.Sizes.MEDIUM,
-                    children: i || t ? v.Z.Messages.CLIENT_THEMES_EDITOR_EXIT_PREVIEW : v.Z.Messages.CLIENT_THEMES_EDITOR_RETURN_TO_SETTINGS
+                    children: i || t ? R.Z.Messages.CLIENT_THEMES_EDITOR_EXIT_PREVIEW : R.Z.Messages.CLIENT_THEMES_EDITOR_RETURN_TO_SETTINGS
                 })
             ]
         });
     };
-function b(e) {
+function D(e) {
     let { isCoachmark: t, markAsDismissed: n } = e,
         { analyticsLocations: a } = (0, E.ZP)(_.Z.APP_ICON_EDITOR),
-        u = (0, o.e7)([I.default], () => I.default.getCurrentUser()),
+        u = (0, s.e7)([m.default], () => m.default.getCurrentUser()),
         {
             isUpsellPreview: f,
             isEditorOpen: h,
             shouldEditorAnimate: p
-        } = (0, o.cj)([g.Z, d.Z], () => ({
-            isUpsellPreview: g.Z.isUpsellPreview,
-            isEditorOpen: g.Z.isEditorOpen,
+        } = (0, s.cj)([S.Z, d.Z], () => ({
+            isUpsellPreview: S.Z.isUpsellPreview,
+            isEditorOpen: S.Z.isEditorOpen,
             shouldEditorAnimate: t && !d.Z.useReducedMotion
         }));
     i.useEffect(() => {
         if (!!f)
-            m.default.track(N.rMx.PREMIUM_UPSELL_VIEWED, {
-                type: R.cd.APP_ICON_UPSELL,
+            I.default.track(v.rMx.PREMIUM_UPSELL_VIEWED, {
+                type: O.cd.APP_ICON_UPSELL,
                 location_stack: a
             });
     }, [f, a]);
-    let T = (0, c.Z)(null, f ? S.O7 : N.dG4);
+    let T = (0, c.Z)(null, f ? g.O7 : v.dG4);
     return (i.useEffect(() => {
-        if (!!f && !h) return S.O7;
+        if (!!f && !h) return g.O7;
     }, [f, h]),
     null == u)
         ? null
@@ -125,10 +126,10 @@ function b(e) {
               value: a,
               children: (0, r.jsx)('div', {
                   ref: T,
-                  className: s()(C.editor, p ? C.editorAnimate : null),
+                  className: o()(C.editor, p ? C.editorAnimate : null),
                   children: (0, r.jsxs)(l.HeadingLevel, {
                       children: [
-                          (0, r.jsx)(L, { markAsDismissed: n }),
+                          (0, r.jsx)(b, { markAsDismissed: n }),
                           (0, r.jsx)(l.Scroller, {
                               className: C.editorBody,
                               children: (0, r.jsx)(A.Z, {
@@ -136,7 +137,7 @@ function b(e) {
                                   isEditor: !0
                               })
                           }),
-                          (0, r.jsx)(D, {
+                          (0, r.jsx)(L, {
                               markAsDismissed: n,
                               isCoachmark: t
                           })

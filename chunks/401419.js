@@ -1,56 +1,59 @@
 n.d(t, {
     Z: function () {
-        return c;
+        return p;
     },
     j: function () {
-        return m;
+        return f;
     }
 });
-var l = n(735250);
+var r = n(735250);
 n(470079);
-var r = n(120356),
-    i = n.n(r),
-    a = n(729594),
-    o = n(689938),
-    s = n(413224);
-let d = ['sessionshare.sp-int.playstation.com', 'session-share.playstation.com'],
-    u = (e, t, n) => 'https://'.concat(e, '/embed/').concat(t, '?locale=').concat(n),
-    m = ['PlayStation'],
+var i = n(120356),
+    a = n.n(i),
+    o = n(729594),
+    s = n(689938),
+    l = n(413224);
+let u = ['sessionshare.sp-int.playstation.com', 'session-share.playstation.com'],
+    c = (e, t, n) => 'https://'.concat(e, '/embed/').concat(t, '?locale=').concat(n),
+    d = 400,
+    _ = 300,
+    E = 6,
+    f = ['PlayStation'],
     h = (e, t) => {
-        let { host: n, pathname: l } = t,
-            r = [];
-        switch ((null != l && (r = l.split('/')), e)) {
+        let { host: n, pathname: r } = t,
+            i = [];
+        switch ((null != r && (i = r.split('/')), e)) {
             case 'PlayStation':
-                if (null == n || !d.includes(n) || 2 !== r.length) break;
+                if (null == n || !u.includes(n) || 2 !== i.length) break;
                 return {
-                    embedUrl: u(n, r[1], o.Z.getLocale()),
+                    embedUrl: c(n, i[1], s.Z.getLocale()),
                     style: {
-                        width: 400,
-                        height: 300,
-                        borderRadius: 6
+                        width: d,
+                        height: _,
+                        borderRadius: E
                     }
                 };
         }
         return null;
     };
-function c(e) {
+function p(e) {
     var t;
     let n = e.embed.url,
-        r = null === (t = e.embed.provider) || void 0 === t ? void 0 : t.name;
-    if (null == n || null == r) return null;
-    let o = null;
+        i = null === (t = e.embed.provider) || void 0 === t ? void 0 : t.name;
+    if (null == n || null == i) return null;
+    let s = null;
     try {
-        o = a.parse(n, !0);
+        s = o.parse(n, !0);
     } catch (e) {
         return null;
     }
-    let d = h(r, o);
-    return null == d
+    let u = h(i, s);
+    return null == u
         ? null
-        : (0, l.jsx)('iframe', {
-              src: d.embedUrl,
-              className: i()(s.embedIFrame, e.className),
-              style: d.style,
+        : (0, r.jsx)('iframe', {
+              src: u.embedUrl,
+              className: a()(l.embedIFrame, e.className),
+              style: u.style,
               sandbox: 'allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts'
           });
 }

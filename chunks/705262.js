@@ -1,58 +1,59 @@
 n.d(t, {
     Yk: function () {
-        return F;
+        return Z;
     },
     yH: function () {
         return r;
     }
-}),
-    n(627341),
-    n(47120);
+});
 var r,
-    i,
-    a = n(735250),
+    i = n(627341);
+var a = n(47120);
+var o = n(735250),
     s = n(470079),
-    o = n(120356),
-    l = n.n(o),
-    u = n(278074),
-    c = n(442837),
-    d = n(524437),
-    _ = n(481060),
-    E = n(153867),
-    f = n(607070),
-    h = n(100527),
-    p = n(906732),
+    l = n(120356),
+    u = n.n(l),
+    c = n(278074),
+    d = n(442837),
+    _ = n(524437),
+    E = n(481060),
+    f = n(153867),
+    h = n(607070),
+    p = n(100527),
+    m = n(906732),
     I = n(313201),
-    m = n(540059),
-    T = n(98278),
+    T = n(540059),
+    g = n(98278),
     S = n(639119),
-    g = n(311476),
-    A = n(165583),
+    A = n(311476),
+    v = n(165583),
     N = n(587446),
     O = n(210887),
     R = n(740492),
-    v = n(626135),
-    C = n(238302),
-    y = n(514361),
+    C = n(626135),
+    y = n(238302),
+    b = n(514361),
     L = n(583901),
     D = n(469115),
-    b = n(981631),
-    M = n(474936),
-    P = n(874893),
-    U = n(526761),
-    w = n(231338),
-    x = n(689938),
-    G = n(767023);
-((i = r || (r = {})).EDITOR = 'EDITOR'), (i.SETTINGS = 'SETTINGS');
-let k = Object.freeze({
-        EDITOR: U.fy.SLOW_USER_ACTION,
-        SETTINGS: U.fy.INFREQUENT_USER_ACTION
+    M = n(981631),
+    P = n(474936),
+    U = n(874893),
+    w = n(526761),
+    x = n(231338),
+    G = n(689938),
+    k = n(767023);
+!(function (e) {
+    (e.EDITOR = 'EDITOR'), (e.SETTINGS = 'SETTINGS');
+})(r || (r = {}));
+let B = Object.freeze({
+        EDITOR: w.fy.SLOW_USER_ACTION,
+        SETTINGS: w.fy.INFREQUENT_USER_ACTION
     }),
-    B = s.createContext({}),
-    F = (e) => {
+    F = s.createContext({}),
+    Z = (e) => {
         let { isPersisted: t, themeName: n, analyticsLocations: r } = e;
-        v.default.track(b.rMx.CLIENT_THEME_UPDATED, {
-            feature_name: M.QP.CLIENT_THEME,
+        C.default.track(M.rMx.CLIENT_THEME_UPDATED, {
+            feature_name: P.QP.CLIENT_THEME,
             theme_name: n,
             is_persisted: t,
             location_stack: r
@@ -60,14 +61,14 @@ let k = Object.freeze({
     },
     V = (e) => {
         let { type: t, isPreview: n, isCoachmark: r } = e,
-            { enabled: i } = g.Z.useExperiment(
+            { enabled: i } = A.Z.useExperiment(
                 { location: 'GradientSelectorsTitle' },
                 {
                     autoTrackExposure: !1,
                     disable: !n
                 }
             ),
-            s = (0, u.EQ)({
+            a = (0, c.EQ)({
                 type: t,
                 isPreview: n,
                 isCoachmark: r,
@@ -79,121 +80,121 @@ let k = Object.freeze({
                         isCoachmark: !0,
                         isPreview: !0
                     },
-                    () => x.Z.Messages.CLIENT_THEMES_EDITOR_PREVIEW_A_THEME_HEADER
+                    () => G.Z.Messages.CLIENT_THEMES_EDITOR_PREVIEW_A_THEME_HEADER
                 )
                 .with(
                     {
                         type: 'EDITOR',
                         isCoachmark: !0
                     },
-                    () => x.Z.Messages.CLIENT_THEMES_EDITOR_PICK_A_THEME_HEADER
+                    () => G.Z.Messages.CLIENT_THEMES_EDITOR_PICK_A_THEME_HEADER
                 )
-                .with({ appearanceUpsellExperimentEnabled: !0 }, () => x.Z.Messages.THEME)
-                .otherwise(() => x.Z.Messages.USER_SETTINGS_APPEARANCE_GRADIENT_THEME_TITLE);
-        return (0, a.jsxs)('div', {
-            className: G.title,
+                .with({ appearanceUpsellExperimentEnabled: !0 }, () => G.Z.Messages.THEME)
+                .otherwise(() => G.Z.Messages.USER_SETTINGS_APPEARANCE_GRADIENT_THEME_TITLE);
+        return (0, o.jsxs)('div', {
+            className: k.title,
             children: [
-                (0, a.jsx)(_.Heading, {
-                    'aria-label': s,
+                (0, o.jsx)(E.Heading, {
+                    'aria-label': a,
                     variant: 'text-md/medium',
-                    children: s
+                    children: a
                 }),
-                (!i || 'EDITOR' === t) && (0, a.jsx)(N.Z, { className: G.premiumIcon })
+                (!i || 'EDITOR' === t) && (0, o.jsx)(N.Z, { className: k.premiumIcon })
             ]
         });
     },
     H = (e) => {
         var t, n;
-        let { type: r, isPreview: i, isCoachmark: s } = e,
-            o = (null === (n = (0, S.N)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === M.Si.TIER_2,
-            { enabled: l } = g.Z.useExperiment(
+        let { type: r, isPreview: i, isCoachmark: a } = e,
+            s = (null === (n = (0, S.N)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === P.Si.TIER_2,
+            { enabled: l } = A.Z.useExperiment(
                 { location: 'GradientSelectorsTitle' },
                 {
                     autoTrackExposure: !1,
                     disable: !i
                 }
             );
-        if (o && i) return null;
-        let c = (0, u.EQ)({
+        if (s && i) return null;
+        let u = (0, c.EQ)({
             type: r,
             isPreview: i,
-            isCoachmark: s
+            isCoachmark: a
         })
             .with(
                 {
                     type: 'EDITOR',
                     isPreview: !0
                 },
-                () => x.Z.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_PREVIEW_WITH_LINK.format({ onPremiumClick: T.z })
+                () => G.Z.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_PREVIEW_WITH_LINK.format({ onPremiumClick: g.z })
             )
             .with(
                 {
                     type: 'EDITOR',
                     isCoachmark: !0
                 },
-                () => x.Z.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_COACHMARK
+                () => G.Z.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_COACHMARK
             )
             .with(
                 {
                     type: 'EDITOR',
                     isPreview: !1
                 },
-                () => x.Z.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION
+                () => G.Z.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION
             )
-            .with({ isPreview: !0 }, () => x.Z.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_WITH_LINK.format({ onPremiumClick: T.z }))
-            .otherwise(() => x.Z.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_SETTINGS);
+            .with({ isPreview: !0 }, () => G.Z.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_WITH_LINK.format({ onPremiumClick: g.z }))
+            .otherwise(() => G.Z.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_SETTINGS);
         return l
-            ? (0, a.jsxs)('div', {
-                  className: G.description,
+            ? (0, o.jsxs)('div', {
+                  className: k.description,
                   children: [
-                      (0, a.jsx)(_.NitroWheelIcon, {
+                      (0, o.jsx)(E.NitroWheelIcon, {
                           size: 'md',
                           color: 'currentColor',
-                          className: G.nitroWheel
+                          className: k.nitroWheel
                       }),
-                      (0, a.jsx)(_.Heading, {
+                      (0, o.jsx)(E.Heading, {
                           variant: 'text-sm/normal',
-                          children: x.Z.Messages.PREMIUM_UPSELL_MAKE_DISCORD_YOURS.format({
+                          children: G.Z.Messages.PREMIUM_UPSELL_MAKE_DISCORD_YOURS.format({
                               onClick: () => {
-                                  (0, T.$)();
+                                  (0, g.$)();
                               }
                           })
                       })
                   ]
               })
-            : (0, a.jsx)(_.Heading, {
+            : (0, o.jsx)(E.Heading, {
                   variant: 'text-sm/normal',
-                  children: c
+                  children: u
               });
     },
-    Z = (e) => {
+    Y = (e) => {
         var t, n;
         let { renderCTAButtons: r } = e,
-            { type: i } = s.useContext(B),
-            [o, l] = (0, c.Wu)([y.Z], () => [y.Z.isPreview, y.Z.isCoachmark]),
-            u = (null === (n = (0, S.N)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === M.Si.TIER_2;
-        return (0, a.jsx)(a.Fragment, {
+            { type: i } = s.useContext(F),
+            [a, l] = (0, d.Wu)([b.Z], () => [b.Z.isPreview, b.Z.isCoachmark]),
+            u = (null === (n = (0, S.N)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === P.Si.TIER_2;
+        return (0, o.jsx)(o.Fragment, {
             children:
-                'EDITOR' === i && o && u
-                    ? (0, a.jsx)(A.ZP, {
-                          type: M.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
-                          subscriptionTier: M.Si.TIER_2,
-                          children: x.Z.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_PREVIEW_WITH_LINK.format({ onPremiumClick: T.z })
+                'EDITOR' === i && a && u
+                    ? (0, o.jsx)(v.ZP, {
+                          type: P.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
+                          subscriptionTier: P.Si.TIER_2,
+                          children: G.Z.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_PREVIEW_WITH_LINK.format({ onPremiumClick: g.z })
                       })
-                    : (0, a.jsxs)('div', {
-                          className: G.header,
+                    : (0, o.jsxs)('div', {
+                          className: k.header,
                           children: [
-                              (0, a.jsxs)('div', {
-                                  className: G.headings,
+                              (0, o.jsxs)('div', {
+                                  className: k.headings,
                                   children: [
-                                      (0, a.jsx)(V, {
+                                      (0, o.jsx)(V, {
                                           type: i,
-                                          isPreview: o,
+                                          isPreview: a,
                                           isCoachmark: l
                                       }),
-                                      (0, a.jsx)(H, {
+                                      (0, o.jsx)(H, {
                                           type: i,
-                                          isPreview: o,
+                                          isPreview: a,
                                           isCoachmark: l
                                       })
                                   ]
@@ -203,235 +204,236 @@ let k = Object.freeze({
                       })
         });
     },
-    Y = (e) => {
+    j = (e) => {
         let { disabled: t } = e,
-            { type: r, delay: i } = s.useContext(B),
-            { analyticsLocations: o } = (0, p.ZP)(h.Z.CLIENT_THEMES_THEME_SELECTOR),
-            [l, u] = (0, c.Wu)([y.Z], () => {
+            { type: r, delay: i } = s.useContext(F),
+            { analyticsLocations: a } = (0, m.ZP)(p.Z.CLIENT_THEMES_THEME_SELECTOR),
+            [l, u] = (0, d.Wu)([b.Z], () => {
                 var e;
-                return [y.Z.isPreview, null === (e = y.Z.gradientPreset) || void 0 === e ? void 0 : e.id];
+                return [b.Z.isPreview, null === (e = b.Z.gradientPreset) || void 0 === e ? void 0 : e.id];
             }),
-            [I, m] = s.useState(!1),
-            [T, S] = s.useState(-1),
-            A = (0, c.e7)([f.Z], () => f.Z.useReducedMotion);
+            [c, I] = s.useState(!1),
+            [T, g] = s.useState(-1),
+            S = (0, d.e7)([h.Z], () => h.Z.useReducedMotion);
         s.useEffect(() => {
-            ((T === D.XV.length - 2 && 'EDITOR' === r) || u === d.Us.EASTER_EGG) && m(!0);
+            ((T === D.XV.length - 2 && 'EDITOR' === r) || u === _.Us.EASTER_EGG) && I(!0);
         }, [T, r, u]);
-        let { enabled: N } = g.Z.useExperiment({ location: 'useGradientSelectors' }, { autoTrackExposure: !1 }),
-            O = (e, t) => {
+        let { enabled: v } = A.Z.useExperiment({ location: 'useGradientSelectors' }, { autoTrackExposure: !1 }),
+            N = (e, t) => {
                 if (
-                    ((0, C.zO)(e.id),
-                    F({
+                    ((0, y.zO)(e.id),
+                    Z({
                         isPersisted: !l,
-                        analyticsLocations: o,
-                        themeName: d.Us[e.id]
+                        analyticsLocations: a,
+                        themeName: _.Us[e.id]
                     }),
-                    l && 'SETTINGS' === r && N)
+                    l && 'SETTINGS' === r && v)
                 ) {
-                    (0, _.openModalLazy)(
+                    (0, E.openModalLazy)(
                         async () => {
                             let { default: e } = await n.e('68192').then(n.bind(n, 742234));
                             return (t) =>
-                                (0, a.jsx)(e, {
-                                    analyticsSource: h.Z.CLIENT_THEMES_THEME_SELECTOR,
+                                (0, o.jsx)(e, {
+                                    analyticsSource: p.Z.CLIENT_THEMES_THEME_SELECTOR,
                                     analyticsLocation: {
-                                        section: b.jXE.SETTINGS_APPEARANCE_THEME_PICKER,
-                                        object: b.qAy.BUTTON_ICON
+                                        section: M.jXE.SETTINGS_APPEARANCE_THEME_PICKER,
+                                        object: M.qAy.BUTTON_ICON
                                     },
                                     ...t,
-                                    onClose: () => ((0, C.kj)(), t.onClose())
+                                    onClose: () => ((0, y.kj)(), t.onClose())
                                 });
                         },
-                        { onCloseCallback: C.kj }
+                        { onCloseCallback: y.kj }
                     );
                     return;
                 }
                 if (
-                    ((0, E.ZI)(
+                    ((0, f.ZI)(
                         {
                             backgroundGradientPresetId: e.id,
                             theme: e.theme,
-                            useSystemTheme: l ? P.K.OFF : void 0
+                            useSystemTheme: l ? U.K.OFF : void 0
                         },
                         i
                     ),
                     null != t)
                 ) {
-                    if ((I && m(!1), t <= T || 0 === t)) {
-                        S(0);
+                    if ((c && I(!1), t <= T || 0 === t)) {
+                        g(0);
                         return;
                     }
-                    S((e) => e + 1);
+                    g((e) => e + 1);
                 }
+            },
+            O = () => {
+                if (!c) return null;
+                let e = D.qt[_.Us.EASTER_EGG];
+                if (null == e) return null;
+                async function t() {
+                    let { default: e } = await n.e('5217').then(n.t.bind(n, 801048, 19));
+                    return e;
+                }
+                return (0, o.jsxs)('div', {
+                    className: k.easterEggSelection,
+                    children: [
+                        (0, o.jsx)(L.DR, {
+                            preset: e,
+                            isSelected: u === _.Us.EASTER_EGG,
+                            onSelect: () => N(e)
+                        }),
+                        (0, o.jsx)(E.LottieAnimation, {
+                            importData: t,
+                            shouldAnimate: !S,
+                            className: k.sparkles
+                        })
+                    ]
+                });
             };
-        return (0, a.jsxs)(a.Fragment, {
+        return (0, o.jsxs)(o.Fragment, {
             children: [
                 D.XV.filter((e) => {
                     let { id: t } = e;
-                    return t !== d.Us.EASTER_EGG;
+                    return t !== _.Us.EASTER_EGG;
                 }).map((e, n) =>
-                    (0, a.jsx)(
+                    (0, o.jsx)(
                         L.DR,
                         {
                             preset: e,
                             isSelected: u === e.id,
-                            onSelect: () => O(e, n),
+                            onSelect: () => N(e, n),
                             disabled: t,
                             tabIndex: 0 !== n || t ? void 0 : 0,
                             showBadge: !1,
-                            showLockedBadge: 'SETTINGS' === r && N && l
+                            showLockedBadge: 'SETTINGS' === r && v && l
                         },
                         e.id
                     )
                 ),
-                (() => {
-                    if (!I) return null;
-                    let e = D.qt[d.Us.EASTER_EGG];
-                    if (null == e) return null;
-                    async function t() {
-                        let { default: e } = await n.e('5217').then(n.t.bind(n, 801048, 19));
-                        return e;
-                    }
-                    return (0, a.jsxs)('div', {
-                        className: G.easterEggSelection,
-                        children: [
-                            (0, a.jsx)(L.DR, {
-                                preset: e,
-                                isSelected: u === d.Us.EASTER_EGG,
-                                onSelect: () => O(e)
-                            }),
-                            (0, a.jsx)(_.LottieAnimation, {
-                                importData: t,
-                                shouldAnimate: !A,
-                                className: G.sparkles
-                            })
-                        ]
-                    });
-                })()
+                O()
             ]
         });
     },
-    j = (e) => {
+    W = (e) => {
+        let { className: t, renderCTAButtons: n, disabled: r = !1 } = e;
+        return (0, o.jsxs)('section', {
+            className: t,
+            children: [
+                (0, o.jsx)(Y, { renderCTAButtons: n }),
+                (0, o.jsx)('div', {
+                    className: k.presets,
+                    children: (0, o.jsx)(j, { disabled: r })
+                })
+            ]
+        });
+    },
+    K = (e) => {
         let { systemSelectorFirst: t, hideSystemSelector: n = !1 } = e,
-            { delay: r } = s.useContext(B),
-            { analyticsLocations: i } = (0, p.ZP)(h.Z.CLIENT_THEMES_THEME_SELECTOR),
-            [o, l, u] = (0, c.Wu)([O.Z, R.ZP, y.Z], () => [O.Z.theme, null == y.Z.gradientPreset, R.ZP.useSystemTheme === P.K.ON]),
-            d = (e) => {
-                (0, C.xs)(),
-                    F({
+            { delay: r } = s.useContext(F),
+            { analyticsLocations: i } = (0, m.ZP)(p.Z.CLIENT_THEMES_THEME_SELECTOR),
+            [a, l, u] = (0, d.Wu)([O.Z, R.ZP, b.Z], () => [O.Z.theme, null == b.Z.gradientPreset, R.ZP.useSystemTheme === U.K.ON]),
+            c = (e) => {
+                (0, y.xs)(),
+                    Z({
                         isPersisted: !0,
                         analyticsLocations: i,
                         themeName: 'default '.concat(e)
                     }),
-                    (0, E.ZI)({ theme: e }, r);
+                    (0, f.ZI)({ theme: e }, r);
             },
-            _ = (0, m.Q)('appearance_settings');
-        return (0, a.jsxs)(a.Fragment, {
+            _ = (0, T.Q)('appearance_settings');
+        return (0, o.jsxs)(o.Fragment, {
             children: [
                 !n &&
                     t &&
-                    (0, a.jsx)(L.bD, {
+                    (0, o.jsx)(L.bD, {
                         theme: 'system',
                         isSelected: l && u,
-                        onSelect: () => d('system')
+                        onSelect: () => c('system')
                     }),
-                (0, a.jsx)(L.bD, {
-                    theme: w.BR.LIGHT,
-                    isSelected: l && !u && o === w.BR.LIGHT,
-                    onSelect: () => d(w.BR.LIGHT)
+                (0, o.jsx)(L.bD, {
+                    theme: x.BR.LIGHT,
+                    isSelected: l && !u && a === x.BR.LIGHT,
+                    onSelect: () => c(x.BR.LIGHT)
                 }),
-                (0, a.jsx)(L.bD, {
-                    theme: w.BR.DARK,
-                    isSelected: l && !u && o === w.BR.DARK,
-                    onSelect: () => d(w.BR.DARK)
+                (0, o.jsx)(L.bD, {
+                    theme: x.BR.DARK,
+                    isSelected: l && !u && a === x.BR.DARK,
+                    onSelect: () => c(x.BR.DARK)
                 }),
                 _ &&
-                    (0, a.jsxs)(a.Fragment, {
+                    (0, o.jsxs)(o.Fragment, {
                         children: [
-                            (0, a.jsx)(L.bD, {
-                                theme: w.BR.DARKER,
-                                isSelected: l && !u && o === w.BR.DARKER,
-                                onSelect: () => d(w.BR.DARKER)
+                            (0, o.jsx)(L.bD, {
+                                theme: x.BR.DARKER,
+                                isSelected: l && !u && a === x.BR.DARKER,
+                                onSelect: () => c(x.BR.DARKER)
                             }),
-                            (0, a.jsx)(L.bD, {
-                                theme: w.BR.MIDNIGHT,
-                                isSelected: l && !u && o === w.BR.MIDNIGHT,
-                                onSelect: () => d(w.BR.MIDNIGHT)
+                            (0, o.jsx)(L.bD, {
+                                theme: x.BR.MIDNIGHT,
+                                isSelected: l && !u && a === x.BR.MIDNIGHT,
+                                onSelect: () => c(x.BR.MIDNIGHT)
                             })
                         ]
                     }),
                 !n &&
                     !t &&
-                    (0, a.jsx)(L.bD, {
+                    (0, o.jsx)(L.bD, {
                         theme: 'system',
                         isSelected: l && u,
-                        onSelect: () => d('system')
+                        onSelect: () => c('system')
                     })
             ]
         });
     },
-    W = (e) => {
+    z = (e) => {
+        let { className: t, hideSystemSelector: n } = e;
+        return (0, o.jsx)('section', {
+            className: u()(k.presets, t),
+            children: (0, o.jsx)(K, { hideSystemSelector: n })
+        });
+    },
+    q = (e) => {
+        let { isEditor: t, className: n, renderCTAButtons: r } = e,
+            i = (0, d.e7)([b.Z], () => b.Z.isCoachmark);
+        return (0, o.jsxs)('section', {
+            className: n,
+            children: [
+                !t && (0, o.jsx)(Y, { renderCTAButtons: r }),
+                t &&
+                    i &&
+                    (0, o.jsx)(E.Heading, {
+                        className: k.upsellText,
+                        variant: 'heading-sm/semibold',
+                        children: G.Z.Messages.CLIENT_THEMES_EDITOR_UPSELL_HEADER
+                    }),
+                (0, o.jsxs)('div', {
+                    className: u()(k.presets, { [k.presetsJustify]: t }),
+                    children: [(0, o.jsx)(K, { systemSelectorFirst: !0 }), (0, o.jsx)(j, { disabled: !1 })]
+                })
+            ]
+        });
+    },
+    Q = (e) => {
         let { type: t, children: n } = e,
             r = (0, I.Dt)(),
-            i = (0, _.useRadioGroup)({
+            i = (0, E.useRadioGroup)({
                 orientation: 'horizontal',
                 labelledBy: r
             }),
-            o = s.useMemo(
+            a = s.useMemo(
                 () => ({
                     type: t,
-                    delay: k[t]
+                    delay: B[t]
                 }),
                 [t]
             );
-        return (0, a.jsx)(B.Provider, {
-            value: o,
-            children: (0, a.jsx)('div', {
+        return (0, o.jsx)(F.Provider, {
+            value: a,
+            children: (0, o.jsx)('div', {
                 ...i,
-                className: G.__invalid_container,
+                className: k.__invalid_container,
                 children: n
             })
         });
     };
-(W.Basic = (e) => {
-    let { className: t, hideSystemSelector: n } = e;
-    return (0, a.jsx)('section', {
-        className: l()(G.presets, t),
-        children: (0, a.jsx)(j, { hideSystemSelector: n })
-    });
-}),
-    (W.Gradient = (e) => {
-        let { className: t, renderCTAButtons: n, disabled: r = !1 } = e;
-        return (0, a.jsxs)('section', {
-            className: t,
-            children: [
-                (0, a.jsx)(Z, { renderCTAButtons: n }),
-                (0, a.jsx)('div', {
-                    className: G.presets,
-                    children: (0, a.jsx)(Y, { disabled: r })
-                })
-            ]
-        });
-    }),
-    (W.BasicAndGradient = (e) => {
-        let { isEditor: t, className: n, renderCTAButtons: r } = e,
-            i = (0, c.e7)([y.Z], () => y.Z.isCoachmark);
-        return (0, a.jsxs)('section', {
-            className: n,
-            children: [
-                !t && (0, a.jsx)(Z, { renderCTAButtons: r }),
-                t &&
-                    i &&
-                    (0, a.jsx)(_.Heading, {
-                        className: G.upsellText,
-                        variant: 'heading-sm/semibold',
-                        children: x.Z.Messages.CLIENT_THEMES_EDITOR_UPSELL_HEADER
-                    }),
-                (0, a.jsxs)('div', {
-                    className: l()(G.presets, { [G.presetsJustify]: t }),
-                    children: [(0, a.jsx)(j, { systemSelectorFirst: !0 }), (0, a.jsx)(Y, { disabled: !1 })]
-                })
-            ]
-        });
-    }),
-    (t.ZP = W);
+(Q.Basic = z), (Q.Gradient = W), (Q.BasicAndGradient = q), (t.ZP = Q);

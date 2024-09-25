@@ -1,9 +1,9 @@
-n(47120);
-var r = n(445346),
-    i = n(570140),
-    a = n(710845),
+var r = n(47120);
+var i = n(445346),
+    a = n(570140),
+    o = n(710845),
     s = n(93093);
-function o(e, t, n) {
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -16,8 +16,9 @@ function o(e, t, n) {
         e
     );
 }
-let l = new a.Z('BasicChannelCacheStore');
-class u extends r.y {
+let u = new o.Z('BasicChannelCacheStore'),
+    c = !1;
+class d extends i.y {
     hasChannel(e) {
         return this.channels.has(e);
     }
@@ -26,11 +27,11 @@ class u extends r.y {
     }
     getBasicChannel(e) {
         var t;
-        return null !== (t = this.channels.get(e)) && void 0 !== t ? t : null;
+        return c && u.verbose('getting basic_channel (channel: '.concat(e, ', exists: ').concat(this.channels.has(e), ')')), null !== (t = this.channels.get(e)) && void 0 !== t ? t : null;
     }
     getGuildBasicChannels(e) {
         var t;
-        return null !== (t = this.guilds.get(e)) && void 0 !== t ? t : null;
+        return c && u.verbose('getting guild_basic_channels (guild: '.concat(e, ', exists: ').concat(this.guilds.has(e), ')')), null !== (t = this.guilds.get(e)) && void 0 !== t ? t : null;
     }
     invalidate(e) {
         this.delete(e);
@@ -56,18 +57,18 @@ class u extends r.y {
     }
     delete(e) {
         var t;
-        for (let n in null !== (t = this.guilds.get(e)) && void 0 !== t ? t : {}) this.channels.delete(n);
+        for (let n in (c && u.verbose('deleting basic_channels (guild: '.concat(e, ', exists: ').concat(this.guilds.has(e), ')')), null !== (t = this.guilds.get(e)) && void 0 !== t ? t : {})) this.channels.delete(n);
         this.guilds.delete(e);
     }
     constructor() {
-        super(i.Z, {
+        super(a.Z, {
             CACHE_LOADED_LAZY_NO_CACHE: (e) => this.handleCacheLoadedLazyNoCache(e),
             CACHE_LOADED_LAZY: (e) => this.handleCacheLoadedLazy(e),
             CONNECTION_OPEN: (e) => this.handleConnectionOpen(e),
             LOGOUT: (e) => this.handleLogout(e)
         }),
-            o(this, 'channels', new Map()),
-            o(this, 'guilds', new Map());
+            l(this, 'channels', new Map()),
+            l(this, 'guilds', new Map());
     }
 }
-t.Z = new u();
+t.Z = new d();

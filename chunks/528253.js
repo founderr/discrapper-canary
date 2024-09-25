@@ -1,8 +1,18 @@
-e.exports = function (e) {
+function t(e) {
     let t = '[ \\t\\f]*',
         n = t + '[:=]' + t,
         r = '[ \\t\\f]+',
-        i = '([^\\\\:= \\t\\f\\n]|\\\\.)+';
+        i = '([^\\\\:= \\t\\f\\n]|\\\\.)+',
+        a = {
+            end: '(' + n + '|' + r + ')',
+            relevance: 0,
+            starts: {
+                className: 'string',
+                end: /$/,
+                relevance: 0,
+                contains: [{ begin: '\\\\\\\\' }, { begin: '\\\\\\n' }]
+            }
+        };
     return {
         name: '.properties',
         disableAutodetect: !0,
@@ -20,16 +30,7 @@ e.exports = function (e) {
                         endsParent: !0
                     }
                 ],
-                starts: {
-                    end: '(' + n + '|' + r + ')',
-                    relevance: 0,
-                    starts: {
-                        className: 'string',
-                        end: /$/,
-                        relevance: 0,
-                        contains: [{ begin: '\\\\\\\\' }, { begin: '\\\\\\n' }]
-                    }
-                }
+                starts: a
             },
             {
                 className: 'attr',
@@ -37,4 +38,5 @@ e.exports = function (e) {
             }
         ]
     };
-};
+}
+e.exports = t;

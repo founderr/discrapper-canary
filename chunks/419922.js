@@ -1,71 +1,74 @@
 n.d(t, {
     Co: function () {
-        return v;
+        return L;
     }
-}),
-    n(47120);
-var r = n(735250),
-    i = n(470079),
-    a = n(120356),
-    s = n.n(a),
-    o = n(512722),
-    l = n.n(o),
-    u = n(526629),
-    c = n(442837),
-    d = n(622535),
-    _ = n(481060),
-    E = n(607070),
-    f = n(134432),
-    h = n(314910),
-    p = n(506071),
+});
+var r = n(47120);
+var i = n(735250),
+    a = n(470079),
+    o = n(120356),
+    s = n.n(o),
+    l = n(512722),
+    u = n.n(l),
+    c = n(526629),
+    d = n(442837),
+    _ = n(622535),
+    E = n(481060),
+    f = n(607070),
+    h = n(134432),
+    p = n(314910),
+    m = n(506071),
     I = n(453070),
-    m = n(373228),
-    T = n(378233),
+    T = n(373228),
+    g = n(378233),
     S = n(689938),
-    g = n(131345);
-let A = (e) => e.preventDefault(),
-    N = {
+    A = n(131345);
+let v = (e) => e.preventDefault(),
+    N = 0.7,
+    O = 33,
+    R = 1.55,
+    C = {
         tension: 1100,
         friction: 40
     },
-    O = {
+    y = {
         tension: 1600,
         friction: 60
     };
-function R(e, t) {
-    return i.cloneElement(e, {
+function b(e, t) {
+    return a.cloneElement(e, {
         'data-type': 'sticker',
         'data-id': t
     });
 }
-function v(e) {
+function L(e) {
     let t = 'description' in e && null != e.description ? ''.concat(e.name, ', ').concat(e.description) : e.name;
     return S.Z.Messages.STICKER_A11Y_LABEL.format({ stickerName: t });
 }
-let C = (e) => {
-        let { children: t, hasError: n, isLoading: i, maskAsset: a, size: o, withLoadingIndicator: l = !0 } = e,
-            u = o >= 33;
-        return (0, r.jsxs)('div', {
-            className: s()(g.assetWrapper, { [g.assetWrapperMasked]: n || a }),
+let D = (e) => {
+        let { children: t, hasError: n, isLoading: r, maskAsset: a, size: o, withLoadingIndicator: l = !0 } = e,
+            u = o >= O;
+        return (0, i.jsxs)('div', {
+            className: s()(A.assetWrapper, { [A.assetWrapperMasked]: n || a }),
             style: {
                 height: o,
                 width: o
             },
             children: [
                 n
-                    ? (0, r.jsxs)('div', {
-                          className: g.error,
+                    ? (0, i.jsxs)('div', {
+                          className: A.error,
                           children: [
-                              (0, r.jsx)(_.StickerSadIcon, {
+                              (0, i.jsx)(E.StickerSadIcon, {
                                   size: 'custom',
                                   width: 20,
                                   height: 20,
                                   color: 'currentColor',
-                                  className: g.errorIcon
+                                  className: A.errorIcon
                               }),
                               u &&
-                                  (0, r.jsx)(_.Text, {
-                                      className: g.errorText,
+                                  (0, i.jsx)(E.Text, {
+                                      className: A.errorText,
                                       color: 'header-secondary',
                                       variant: 'text-sm/normal',
                                       children: S.Z.Messages.STICKER_ASSET_LOAD_ERROR
@@ -73,131 +76,131 @@ let C = (e) => {
                           ]
                       })
                     : t,
-                l && i && (0, r.jsx)('div', { className: g.loadingIndicator })
+                l && r && (0, i.jsx)('div', { className: A.loadingIndicator })
             ]
         });
     },
-    y = (e) => {
-        let { shouldAnimate: t, size: a, sticker: s, fileUri: o, assetData: u, isFocused: c, className: d, maskAsset: _, positionRef: E, withLoadingIndicator: h, onError: p } = e,
-            I = i.useRef(null),
-            m = i.useRef(null),
-            [A, N] = i.useState(!0),
-            [O, y] = i.useState(!1),
-            L = i.useRef(!1);
-        L.current = t && c;
-        let D = null == o ? (0, T.Q6)(s) : o;
-        return (l()(null != D, 'Unable to determine sticker asset URL. Sticker ID: '.concat(s.id)),
-        i.useEffect(() => {
-            if (null == I.current || null == D) return;
-            let e = Math.min(2, (0, f.x_)());
-            (I.current.width = a * e), (I.current.height = a * e);
+    M = (e) => {
+        let { shouldAnimate: t, size: r, sticker: o, fileUri: s, assetData: l, isFocused: c, className: d, maskAsset: _, positionRef: E, withLoadingIndicator: f, onError: p } = e,
+            m = a.useRef(null),
+            I = a.useRef(null),
+            [T, v] = a.useState(!0),
+            [N, O] = a.useState(!1),
+            R = a.useRef(!1);
+        R.current = t && c;
+        let C = null == s ? (0, g.Q6)(o) : s;
+        return (u()(null != C, 'Unable to determine sticker asset URL. Sticker ID: '.concat(o.id)),
+        a.useEffect(() => {
+            if (null == m.current || null == C) return;
+            let e = Math.min(2, (0, h.x_)());
+            (m.current.width = r * e), (m.current.height = r * e);
             let t = !1;
             return (
                 (async () => {
                     let { default: e } = await n.e('21617').then(n.bind(n, 186952));
-                    null != I.current &&
-                        ((m.current = new e({
-                            canvas: I.current,
-                            animationId: s.id,
-                            assetUrl: D,
-                            assetData: u,
+                    null != m.current &&
+                        ((I.current = new e({
+                            canvas: m.current,
+                            animationId: o.id,
+                            assetUrl: C,
+                            assetData: l,
                             onInitialDraw: () => {
-                                !t && N(!1);
+                                !t && v(!1);
                             },
                             onError: () => {
-                                !t && (N(!1), y(!0), null == p || p());
+                                !t && (v(!1), O(!0), null == p || p());
                             }
                         })),
-                        L.current && m.current.setState(!0));
+                        R.current && I.current.setState(!0));
                 })(),
                 () => {
                     var e;
-                    null === (e = m.current) || void 0 === e || e.drop(), (m.current = null), (t = !0);
+                    null === (e = I.current) || void 0 === e || e.drop(), (I.current = null), (t = !0);
                 }
             );
-        }, [D, a, s.id, u, p]),
-        i.useEffect(() => {
+        }, [C, r, o.id, l, p]),
+        a.useEffect(() => {
             var e;
             let n;
-            !t && (n = 0), null === (e = m.current) || void 0 === e || e.setState(t && c, n);
-        }, [s, t, c]),
-        null == D)
+            !t && (n = 0), null === (e = I.current) || void 0 === e || e.setState(t && c, n);
+        }, [o, t, c]),
+        null == C)
             ? null
-            : (0, r.jsx)('div', {
+            : (0, i.jsx)('div', {
                   role: 'img',
                   className: d,
-                  'aria-label': O ? S.Z.Messages.ERROR_LOADING_STICKER : v(s),
+                  'aria-label': N ? S.Z.Messages.ERROR_LOADING_STICKER : L(o),
                   ref: E,
-                  children: (0, r.jsx)(C, {
-                      hasError: O,
-                      isLoading: A,
+                  children: (0, i.jsx)(D, {
+                      hasError: N,
+                      isLoading: T,
                       maskAsset: _,
-                      size: a,
-                      withLoadingIndicator: h,
-                      children: R(
-                          (0, r.jsx)('canvas', {
-                              className: g.lottieCanvas,
-                              ref: I
+                      size: r,
+                      withLoadingIndicator: f,
+                      children: b(
+                          (0, i.jsx)('canvas', {
+                              className: A.lottieCanvas,
+                              ref: m
                           }),
-                          s.id
+                          o.id
                       )
                   })
               });
     },
-    L = (e) => {
-        let { shouldAnimate: t, sticker: n, isFocused: a, size: o, className: l, maskAsset: u, positionRef: c, withLoadingIndicator: _, fileUri: E } = e,
-            [f, h] = i.useState(!1),
-            [p, I] = i.useState(!0),
-            [m, S] = i.useState(!1),
-            N = i.useRef(null),
-            O = i.useRef(null),
-            y =
+    P = (e) => {
+        let { shouldAnimate: t, sticker: n, isFocused: r, size: o, className: l, maskAsset: u, positionRef: c, withLoadingIndicator: d, fileUri: E } = e,
+            [f, h] = a.useState(!1),
+            [p, m] = a.useState(!0),
+            [I, T] = a.useState(!1),
+            S = a.useRef(null),
+            O = a.useRef(null),
+            R =
                 null != E
                     ? E
-                    : (0, T.Q6)(n, {
-                          isPreview: !t || !f || !a,
+                    : (0, g.Q6)(n, {
+                          isPreview: !t || !f || !r,
                           size: o
                       }),
-            L = i.useCallback(() => {
-                I(!1);
+            C = a.useCallback(() => {
+                m(!1);
             }, []),
-            D = i.useCallback(() => {
-                S(!0);
+            y = a.useCallback(() => {
+                T(!0);
             }, []);
-        return (i.useEffect(() => {
-            if (null != N.current) {
-                let { isVisible: e } = N.current;
+        return (a.useEffect(() => {
+            if (null != S.current) {
+                let { isVisible: e } = S.current;
                 h(e);
             }
         }, []),
-        i.useLayoutEffect(() => {
+        a.useLayoutEffect(() => {
             var e;
-            (null === (e = O.current) || void 0 === e ? void 0 : e.complete) === !0 && I(!1);
+            (null === (e = O.current) || void 0 === e ? void 0 : e.complete) === !0 && m(!1);
         }, []),
-        null == y)
+        null == R)
             ? null
-            : (0, r.jsx)(d.$, {
-                  ref: N,
+            : (0, i.jsx)(_.$, {
+                  ref: S,
                   onChange: h,
-                  threshold: 0.7,
-                  children: (0, r.jsx)('div', {
-                      className: s()(l, g.__invalid_pngImageWrapper),
+                  threshold: N,
+                  children: (0, i.jsx)('div', {
+                      className: s()(l, A.__invalid_pngImageWrapper),
                       ref: c,
-                      children: (0, r.jsx)(C, {
-                          hasError: m,
+                      children: (0, i.jsx)(D, {
+                          hasError: I,
                           isLoading: p,
                           maskAsset: u,
                           size: o,
-                          withLoadingIndicator: _,
-                          children: R(
-                              (0, r.jsx)('img', {
-                                  className: g.pngImage,
-                                  alt: v(n),
-                                  src: y,
+                          withLoadingIndicator: d,
+                          children: b(
+                              (0, i.jsx)('img', {
+                                  className: A.pngImage,
+                                  alt: L(n),
+                                  src: R,
                                   draggable: !1,
-                                  onError: D,
-                                  onLoad: L,
-                                  onContextMenu: A,
+                                  onError: y,
+                                  onLoad: C,
+                                  onContextMenu: v,
                                   ref: O
                               }),
                               n.id
@@ -206,71 +209,71 @@ let C = (e) => {
                   })
               });
     },
-    D = (e) => {
-        let { disableAnimation: t, enlargeScaleFactor: n, enlargeWithName: a, isInteracting: s, positionRef: o, size: l, sticker: d } = e,
-            f = (0, c.e7)([E.Z], () => E.Z.useReducedMotion),
-            p = i.useRef(null),
-            I = {
-                transform: 'scale('.concat(f ? 1 : 1 / n, ')'),
+    U = (e) => {
+        let { disableAnimation: t, enlargeScaleFactor: n, enlargeWithName: r, isInteracting: o, positionRef: s, size: l, sticker: u } = e,
+            _ = (0, d.e7)([f.Z], () => f.Z.useReducedMotion),
+            h = a.useRef(null),
+            m = {
+                transform: 'scale('.concat(_ ? 1 : 1 / n, ')'),
                 opacity: 0
             },
-            m = (0, _.useTransition)(s, {
-                ref: p,
-                from: I,
+            I = (0, E.useTransition)(o, {
+                ref: h,
+                from: m,
                 enter: {
                     transform: 'scale(1)',
                     opacity: 1
                 },
-                leave: I,
-                config: N
+                leave: m,
+                config: C
             }),
-            T = i.useRef(null),
-            S = (0, _.useSpring)(
+            T = a.useRef(null),
+            g = (0, E.useSpring)(
                 {
                     ref: T,
-                    transform: s || f ? 'translateY(0)' : 'translateY(-25px)',
-                    opacity: s ? 1 : 0,
-                    config: O
+                    transform: o || _ ? 'translateY(0)' : 'translateY(-25px)',
+                    opacity: o ? 1 : 0,
+                    config: y
                 },
                 'animate-always'
             );
         return (
-            (0, u.useChain)(s ? [p, T] : [T, p], s ? [0, 0.0625] : [0, 0]),
-            m(
-                (e, i) =>
-                    i &&
-                    (0, r.jsx)(h.W5, {
-                        className: g.positionedLayer,
+            (0, c.useChain)(o ? [h, T] : [T, h], o ? [0, 0.0625] : [0, 0]),
+            I(
+                (e, a) =>
+                    a &&
+                    (0, i.jsx)(p.W5, {
+                        className: A.positionedLayer,
                         fixed: !0,
                         align: 'center',
                         position: 'center',
-                        targetRef: o,
+                        targetRef: s,
                         children: () =>
-                            (0, r.jsxs)('div', {
-                                className: g.overlayWrapper,
+                            (0, i.jsxs)('div', {
+                                className: A.overlayWrapper,
                                 children: [
-                                    (0, r.jsx)(u.animated.div, {
-                                        className: g.overlayStickerWrapper,
+                                    (0, i.jsx)(c.animated.div, {
+                                        className: A.overlayStickerWrapper,
                                         style: e,
-                                        children: (0, r.jsx)(b, {
-                                            className: g.__invalid_overlaySticker,
+                                        children: (0, i.jsx)(w, {
+                                            className: A.__invalid_overlaySticker,
                                             disableAnimation: t,
                                             enlargeOnInteraction: !1,
-                                            isInteracting: s,
+                                            isInteracting: o,
                                             maskAsset: !1,
-                                            sticker: d,
+                                            sticker: u,
                                             size: Math.round(l * n),
                                             withLoadingIndicator: !1
                                         })
                                     }),
-                                    a &&
-                                        (0, r.jsx)(u.animated.div, {
-                                            className: g.overlayLabelWrapper,
-                                            style: S,
-                                            children: (0, r.jsx)(_.Text, {
+                                    r &&
+                                        (0, i.jsx)(c.animated.div, {
+                                            className: A.overlayLabelWrapper,
+                                            style: g,
+                                            children: (0, i.jsx)(E.Text, {
                                                 variant: 'text-sm/medium',
-                                                className: g.overlayLabel,
-                                                children: d.name
+                                                className: A.overlayLabel,
+                                                children: u.name
                                             })
                                         })
                                 ]
@@ -279,37 +282,37 @@ let C = (e) => {
             )
         );
     },
-    b = (e) => {
-        let { isInteracting: t = !1, disableAnimation: n = !1, enlargeOnInteraction: a = !1, enlargeWithName: s = !0, enlargeScaleFactor: o = 1.55, maskAsset: l = !1, size: u, sticker: c, className: d, withLoadingIndicator: _, assetData: E, fileUri: f, onError: h } = e,
-            T = (0, p.n)(),
-            S = (0, I.t$)(t) && !n,
-            g = i.useRef(null);
+    w = (e) => {
+        let { isInteracting: t = !1, disableAnimation: n = !1, enlargeOnInteraction: r = !1, enlargeWithName: o = !0, enlargeScaleFactor: s = R, maskAsset: l = !1, size: u, sticker: c, className: d, withLoadingIndicator: _, assetData: E, fileUri: f, onError: h } = e,
+            p = (0, m.n)(),
+            g = (0, I.t$)(t) && !n,
+            S = a.useRef(null);
         if (null == c) return null;
-        let A = c.format_type === m.u3.LOTTIE ? y : L;
-        return (0, r.jsxs)(
-            i.Fragment,
+        let A = c.format_type === T.u3.LOTTIE ? M : P;
+        return (0, i.jsxs)(
+            a.Fragment,
             {
                 children: [
-                    (0, r.jsx)(A, {
-                        shouldAnimate: S,
-                        isFocused: T,
+                    (0, i.jsx)(A, {
+                        shouldAnimate: g,
+                        isFocused: p,
                         size: u,
                         sticker: c,
                         className: d,
                         maskAsset: l,
-                        positionRef: g,
+                        positionRef: S,
                         withLoadingIndicator: _,
                         assetData: E,
                         fileUri: f,
                         onError: h
                     }),
-                    a &&
-                        (0, r.jsx)(D, {
+                    r &&
+                        (0, i.jsx)(U, {
                             disableAnimation: n,
-                            enlargeScaleFactor: o,
-                            enlargeWithName: s,
+                            enlargeScaleFactor: s,
+                            enlargeWithName: o,
                             isInteracting: t,
-                            positionRef: g,
+                            positionRef: S,
                             size: u,
                             sticker: c
                         })
@@ -318,4 +321,4 @@ let C = (e) => {
             ''.concat(c.id, ',').concat(u)
         );
     };
-t.ZP = b;
+t.ZP = w;

@@ -1,42 +1,48 @@
 n.d(t, {
     CO: function () {
-        return o;
+        return l;
     },
     NU: function () {
-        return E;
+        return S;
     },
     X2: function () {
-        return f;
+        return A;
     },
     cb: function () {
-        return _;
+        return g;
     },
     d$: function () {
-        return c;
+        return d;
     },
     tw: function () {
-        return l;
+        return u;
     }
-}),
-    n(47120);
-var r = n(358085);
-let i = (e, t) => {
+});
+var r = n(47120);
+var i = n(358085);
+let a = (e, t) => {
         if (null == e) return !1;
         let [n, r] = e.split(/\?/, 1);
         return t.test(n);
     },
-    a = (e, t) => {
+    o = (e, t) => {
         if (null == e) return !1;
         let [n, r] = e.split('/');
         return n === t;
     },
     s = /\.(png|jpe?g|webp|gif|heic|heif|dng)$/i,
-    o = (e) => null != e && s.test(e),
-    l = (e) => a(e, 'image'),
-    u = /\.(webp|gif)$/i,
-    c = (e) => i(e, u);
-(0, r.isIOS)() || (0, r.isAndroid)();
-let d = (0, r.isIOS)() ? /\.(mp4|mov)$/i : ((0, r.isAndroid)(), /\.(mp4|webm|mov)$/i),
-    _ = (e) => i(e, d),
-    E = (e) => null != e && d.test(e),
-    f = (e) => a(e, 'video');
+    l = (e) => null != e && s.test(e),
+    u = (e) => o(e, 'image'),
+    c = /\.(webp|gif)$/i,
+    d = (e) => a(e, c),
+    _ = /\.(mp3|m4a|wav|aif|aiff|ogg)$/i,
+    E = /\.(mp3|m4a|wav|ogg|opus|flac)$/i,
+    f = /\.(mp3|m4a|wav|aif|aiff|ogg|opus|flac)$/i,
+    h = (0, i.isIOS)() ? _ : (0, i.isAndroid)() ? E : f,
+    p = /\.(mp4|mov)$/i,
+    m = /\.(mp4|webm|mov)$/i,
+    I = /\.(mp4|webm|mov)$/i,
+    T = (0, i.isIOS)() ? p : (0, i.isAndroid)() ? m : I,
+    g = (e) => a(e, T),
+    S = (e) => null != e && T.test(e),
+    A = (e) => o(e, 'video');

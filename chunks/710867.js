@@ -2,15 +2,15 @@ var r = n(735250);
 n(470079);
 var i = n(366040),
     a = n(293335),
-    s = n(831748);
-t.Z = (e) => {
+    o = n(831748);
+let s = (e) => {
     let { profileEffectConfig: t, onReady: n } = e,
-        { pendingRef: o, setPending: l } = (0, a.Z)(t.effects, n);
+        { pendingRef: s, setPending: l } = (0, a.Z)(t.effects, n);
     return (0, i.nY)('Profile Effect - Web')
         ? (0, r.jsx)('div', {
-              className: s.profileEffects,
+              className: o.profileEffects,
               children: (0, r.jsx)('div', {
-                  className: s.inner,
+                  className: o.inner,
                   children: t.effects.map((e) =>
                       (0, r.jsx)(
                           'video',
@@ -24,7 +24,7 @@ t.Z = (e) => {
                                   position: 'absolute'
                               },
                               onLoadedData: () => {
-                                  l(o.current - 1), (o.current = o.current - 1);
+                                  l(s.current - 1), (s.current = s.current - 1);
                               }
                           },
                           e.src
@@ -33,9 +33,9 @@ t.Z = (e) => {
               })
           })
         : (0, r.jsx)('div', {
-              className: s.profileEffects,
+              className: o.profileEffects,
               children: (0, r.jsx)('div', {
-                  className: s.inner,
+                  className: o.inner,
                   children: t.effects.map((e) =>
                       (0, r.jsx)(
                           'img',
@@ -48,7 +48,7 @@ t.Z = (e) => {
                                   position: 'absolute'
                               },
                               onLoad: () => {
-                                  l(o.current - 1), (o.current = o.current - 1);
+                                  l(s.current - 1), (s.current = s.current - 1);
                               }
                           },
                           e.src
@@ -57,3 +57,4 @@ t.Z = (e) => {
               })
           });
 };
+t.Z = s;

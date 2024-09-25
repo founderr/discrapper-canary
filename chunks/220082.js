@@ -1,39 +1,41 @@
 n.d(t, {
     Cf: function () {
-        return p;
+        return I;
     },
     SR: function () {
-        return _;
+        return E;
     },
     ZP: function () {
-        return h;
+        return m;
     },
     vM: function () {
-        return E;
+        return h;
     }
-}),
-    n(47120);
-var r = n(470079),
-    i = n(979590),
-    a = n.n(i),
+});
+var r = n(47120);
+var i = n(470079),
+    a = n(979590),
+    o = n.n(a),
     s = n(652874),
-    o = n(731965),
-    l = n(442837),
-    u = n(607070),
-    c = n(302221),
-    d = n(956664);
-let _ = (0, s.Z)(() => ({
+    l = n(731965),
+    u = n(442837),
+    c = n(607070),
+    d = n(302221),
+    _ = n(956664);
+let E = (0, s.Z)(() => ({
     palette: {},
     fetching: {}
 }));
-async function E(e) {
-    var t;
-    if (((t = e), null == _.getState().palette[t])) await f(e);
+function f(e) {
+    return null != E.getState().palette[e];
 }
-async function f(e) {
-    if (!_.getState().fetching[e]) {
-        (0, o.j)(() =>
-            _.setState((t) => ({
+async function h(e) {
+    !f(e) && (await p(e));
+}
+async function p(e) {
+    if (!E.getState().fetching[e]) {
+        (0, l.j)(() =>
+            E.setState((t) => ({
                 fetching: {
                     ...t.fetching,
                     [e]: !0
@@ -41,10 +43,10 @@ async function f(e) {
             }))
         );
         try {
-            let t = await (0, d.OF)(e),
-                n = (0, c.WY)(t[0]);
-            (0, o.j)(() => {
-                _.setState((r) => ({
+            let t = await (0, _.OF)(e),
+                n = (0, d.WY)(t[0]);
+            (0, l.j)(() => {
+                E.setState((r) => ({
                     fetching: {
                         ...r.fetching,
                         [e]: !1
@@ -56,8 +58,8 @@ async function f(e) {
                 }));
             });
         } catch (t) {
-            (0, o.j)(() =>
-                _.setState((t) => ({
+            (0, l.j)(() =>
+                E.setState((t) => ({
                     fetching: {
                         ...t.fetching,
                         [e]: !1
@@ -67,40 +69,40 @@ async function f(e) {
         }
     }
 }
-function h(e, t) {
+function m(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-        [r] = p(e, t, n);
+        [r] = I(e, t, n);
     return r;
 }
-function p(e, t) {
+function I(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-        i = _((t) => (null == e ? void 0 : t.palette[e])),
-        s = (0, l.e7)([u.Z], () => (n && u.Z.desaturateUserColors ? u.Z.saturation : 1));
-    r.useEffect(() => {
-        if (null != e && null == i) f(e);
-    }, [e, i]);
-    let o = r.useMemo(
+        r = E((t) => (null == e ? void 0 : t.palette[e])),
+        a = (0, u.e7)([c.Z], () => (n && c.Z.desaturateUserColors ? c.Z.saturation : 1));
+    i.useEffect(() => {
+        if (null != e && null == r) p(e);
+    }, [e, r]);
+    let s = i.useMemo(
         () =>
-            null == i
+            null == r
                 ? void 0
-                : i.map((e) => {
+                : r.map((e) => {
                       let [t, n, r] = e,
                           {
                               h: i,
-                              s: o,
+                              s,
                               l
-                          } = a()({
+                          } = o()({
                               r: t,
                               g: n,
                               b: r
                           }).toHsl();
-                      return a()({
+                      return o()({
                           h: i,
-                          s: o * s,
+                          s: s * a,
                           l
                       }).toHexString();
                   }),
-        [i, s]
+        [r, a]
     );
-    return null != o ? o : [t, t];
+    return null != s ? s : [t, t];
 }

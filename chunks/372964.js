@@ -1,4 +1,4 @@
-e.exports = function (e) {
+function t(e) {
     let t = e.regex,
         n = /[a-zA-Z_][a-zA-Z0-9_]*/,
         r = {
@@ -45,4 +45,5 @@ e.exports = function (e) {
             r
         ]
     };
-};
+}
+e.exports = t;

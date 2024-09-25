@@ -1,22 +1,23 @@
 function n(e, t, n, r) {
-    var a = [],
-        s = {};
-    return function o(l) {
-        (s[l] = !0),
-            a.push(l),
+    var i = [],
+        o = {};
+    return function s(l) {
+        (o[l] = !0),
+            i.push(l),
             e[l].forEach(function (e) {
-                if (s[e]) {
-                    if (a.indexOf(e) >= 0 && (a.push(e), !r)) throw new i(a);
-                } else o(e);
+                if (o[e]) {
+                    if (i.indexOf(e) >= 0 && (i.push(e), !r)) throw new a(i);
+                } else s(e);
             }),
-            a.pop(),
+            i.pop(),
             (!t || 0 === e[l].length) && -1 === n.indexOf(l) && n.push(l);
     };
 }
-var r = (t.DepGraph = function (e) {
-    (this.nodes = {}), (this.outgoingEdges = {}), (this.incomingEdges = {}), (this.circular = e && !!e.circular);
-});
-r.prototype = {
+var r,
+    i = (t.DepGraph = function (e) {
+        (this.nodes = {}), (this.outgoingEdges = {}), (this.incomingEdges = {}), (this.circular = e && !!e.circular);
+    });
+i.prototype = {
     size: function () {
         return Object.keys(this.nodes).length;
     },
@@ -57,7 +58,7 @@ r.prototype = {
     },
     clone: function () {
         var e = this,
-            t = new r();
+            t = new i();
         return (
             Object.keys(e.nodes).forEach(function (n) {
                 (t.nodes[n] = e.nodes[n]), (t.outgoingEdges[n] = e.outgoingEdges[n].slice(0)), (t.incomingEdges[n] = e.incomingEdges[n].slice(0));
@@ -92,24 +93,24 @@ r.prototype = {
         i.forEach(function (e) {
             a(e);
         });
-        var s = n(this.outgoingEdges, e, r, this.circular);
+        var o = n(this.outgoingEdges, e, r, this.circular);
         return (
             i
                 .filter(function (e) {
                     return 0 === t.incomingEdges[e].length;
                 })
                 .forEach(function (e) {
-                    s(e);
+                    o(e);
                 }),
             r
         );
     }
 };
-var i = function (e) {
+var a = (r = function (e) {
     var t = Error('Dependency Cycle Found: ' + e.join(' -> '));
-    return (t.cyclePath = e), Object.setPrototypeOf(t, Object.getPrototypeOf(this)), Error.captureStackTrace && Error.captureStackTrace(t, i), t;
-};
-(i.prototype = Object.create(Error.prototype, {
+    return (t.cyclePath = e), Object.setPrototypeOf(t, Object.getPrototypeOf(this)), Error.captureStackTrace && Error.captureStackTrace(t, a), t;
+});
+(a.prototype = Object.create(Error.prototype, {
     constructor: {
         value: Error,
         enumerable: !1,
@@ -117,4 +118,4 @@ var i = function (e) {
         configurable: !0
     }
 })),
-    Object.setPrototypeOf(i, Error);
+    Object.setPrototypeOf(a, Error);

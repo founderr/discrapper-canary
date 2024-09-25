@@ -1,75 +1,74 @@
-t.d(n, {
+n.d(t, {
     ZP: function () {
-        return x;
+        return S;
     },
     xX: function () {
-        return E;
+        return T;
     }
 });
-var l = t(735250);
-t(470079);
-var i = t(120356),
-    a = t.n(i),
-    r = t(911969),
-    o = t(970184),
-    s = t(987106),
-    c = t(927057),
-    u = t(574597),
-    d = t(378975),
-    m = t(413991),
-    f = t(12067),
-    _ = t(676149),
-    p = t(861529),
-    C = t(770009),
-    h = t(889515),
-    I = t(915689);
-function E(e) {
-    return e.map((e, n) =>
-        (function (e, n) {
-            switch (e.type) {
-                case r.re.ACTION_ROW:
-                    return (0, l.jsx)(
-                        h.Z,
-                        {
-                            ...e,
-                            renderComponents: E
-                        },
-                        n
-                    );
-                case r.re.BUTTON:
-                    return (0, l.jsx)(s.Z, { ...e }, n);
-                case r.re.STRING_SELECT:
-                    return (0, l.jsx)(d.Z, { ...e }, n);
-                case r.re.CHANNEL_SELECT:
-                    return (0, l.jsx)(c.Z, { ...e }, n);
-                case r.re.USER_SELECT:
-                case r.re.ROLE_SELECT:
-                case r.re.MENTIONABLE_SELECT:
-                    return (0, l.jsx)(u.Z, { ...e }, n);
-                case r.re.INPUT_TEXT:
-                    return (0, l.jsx)(m.Z, { ...e }, n);
-                case r.re.TEXT:
-                    return (0, l.jsx)(p.Z, { ...e }, n);
-                case r.re.MEDIA_GALLERY:
-                    return (0, l.jsx)(f.Z, { ...e }, n);
-                case r.re.SEPARATOR:
-                    return (0, l.jsx)(_.Z, { ...e }, n);
-                case r.re.CONTENT_INVENTORY_ENTRY:
-                    return (0, l.jsx)(C.Z, { ...e }, n);
-            }
-        })(e, n.toString())
-    );
+var r = n(735250);
+n(470079);
+var i = n(120356),
+    a = n.n(i),
+    o = n(911969),
+    s = n(970184),
+    l = n(987106),
+    u = n(927057),
+    c = n(574597),
+    d = n(378975),
+    _ = n(413991),
+    E = n(12067),
+    f = n(676149),
+    h = n(861529),
+    p = n(770009),
+    m = n(889515),
+    I = n(915689);
+function T(e) {
+    return e.map((e, t) => g(e, t.toString()));
 }
-function x(e) {
-    let { message: n } = e,
-        { components: t } = n;
-    return 0 === t.length
+function g(e, t) {
+    switch (e.type) {
+        case o.re.ACTION_ROW:
+            return (0, r.jsx)(
+                m.Z,
+                {
+                    ...e,
+                    renderComponents: T
+                },
+                t
+            );
+        case o.re.BUTTON:
+            return (0, r.jsx)(l.Z, { ...e }, t);
+        case o.re.STRING_SELECT:
+            return (0, r.jsx)(d.Z, { ...e }, t);
+        case o.re.CHANNEL_SELECT:
+            return (0, r.jsx)(u.Z, { ...e }, t);
+        case o.re.USER_SELECT:
+        case o.re.ROLE_SELECT:
+        case o.re.MENTIONABLE_SELECT:
+            return (0, r.jsx)(c.Z, { ...e }, t);
+        case o.re.INPUT_TEXT:
+            return (0, r.jsx)(_.Z, { ...e }, t);
+        case o.re.TEXT:
+            return (0, r.jsx)(h.Z, { ...e }, t);
+        case o.re.MEDIA_GALLERY:
+            return (0, r.jsx)(E.Z, { ...e }, t);
+        case o.re.SEPARATOR:
+            return (0, r.jsx)(f.Z, { ...e }, t);
+        case o.re.CONTENT_INVENTORY_ENTRY:
+            return (0, r.jsx)(p.Z, { ...e }, t);
+    }
+}
+function S(e) {
+    let { message: t } = e,
+        { components: n } = t;
+    return 0 === n.length
         ? null
-        : (0, l.jsx)('div', {
-              className: a()([I.container, { [I.containerUikit]: n.isUIKitComponents() }]),
-              children: (0, l.jsx)(o.Il, {
-                  message: n,
-                  children: E(t)
+        : (0, r.jsx)('div', {
+              className: a()([I.container, { [I.containerUikit]: t.isUIKitComponents() }]),
+              children: (0, r.jsx)(s.Il, {
+                  message: t,
+                  children: T(n)
               })
           });
 }

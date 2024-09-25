@@ -1,4 +1,4 @@
-e.exports = function (e) {
+function t(e) {
     let t = '[a-z][a-zA-Z0-9_]*',
         n = {
             className: 'string',
@@ -41,4 +41,5 @@ e.exports = function (e) {
             }
         ]
     };
-};
+}
+e.exports = t;

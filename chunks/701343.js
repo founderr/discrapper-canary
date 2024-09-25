@@ -1,4 +1,5 @@
 var r = n(98958);
-e.exports = function (e) {
+function i(e) {
     return 'function' == typeof e ? e : r;
-};
+}
+e.exports = i;

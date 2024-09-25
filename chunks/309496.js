@@ -1,28 +1,27 @@
-function t(e, t, n, r, i, a, s) {
+function t(e, t, n, r, i, a, o) {
     try {
-        var o = e[a](s),
-            l = o.value;
+        var s = e[a](o),
+            l = s.value;
     } catch (e) {
         n(e);
         return;
     }
-    o.done ? t(l) : Promise.resolve(l).then(r, i);
+    s.done ? t(l) : Promise.resolve(l).then(r, i);
 }
-(e.exports = function (e) {
+function n(e) {
     return function () {
         var n = this,
             r = arguments;
         return new Promise(function (i, a) {
-            var s = e.apply(n, r);
-            function o(e) {
-                t(s, i, a, o, l, 'next', e);
+            var o = e.apply(n, r);
+            function s(e) {
+                t(o, i, a, s, l, 'next', e);
             }
             function l(e) {
-                t(s, i, a, o, l, 'throw', e);
+                t(o, i, a, s, l, 'throw', e);
             }
-            o(void 0);
+            s(void 0);
         });
     };
-}),
-    (e.exports.__esModule = !0),
-    (e.exports.default = e.exports);
+}
+(e.exports = n), (e.exports.__esModule = !0), (e.exports.default = e.exports);

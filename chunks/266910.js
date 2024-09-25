@@ -1,8 +1,8 @@
 var r = n(735250),
     i = n(470079),
     a = n(692547),
-    s = n(481060),
-    o = n(220082),
+    o = n(481060),
+    s = n(220082),
     l = n(420596),
     u = n(880563),
     c = n(687158),
@@ -10,16 +10,16 @@ var r = n(735250),
     _ = n(695346),
     E = n(981631),
     f = n(67996);
-t.Z = function (e) {
-    let { style: t, src: n, backgroundSrc: h, userId: p, pulseSpeakingIndicator: I = !1, speaking: m = !1, ...T } = e,
-        S = null != h ? h : n,
-        g = (0, o.ZP)(S, a.Z.unsafe_rawColors.PRIMARY_800.css),
+function h(e) {
+    let { style: t, src: n, backgroundSrc: h, userId: p, pulseSpeakingIndicator: m = !1, speaking: I = !1, ...T } = e,
+        g = null != h ? h : n,
+        S = (0, s.ZP)(g, a.Z.unsafe_rawColors.PRIMARY_800.css),
         A = (0, l.c)(!0, 'VideoBackground-web').enabled,
-        N = (0, c.ZP)(null != p ? p : E.lds),
-        O =
-            null == N
+        v = (0, c.ZP)(null != p ? p : E.lds),
+        N =
+            null == v
                 ? void 0
-                : N.getBannerURL({
+                : v.getBannerURL({
                       size: 1024,
                       canAnimate: _.QK.getSetting()
                   });
@@ -30,26 +30,27 @@ t.Z = function (e) {
         null == n)
     )
         return null;
-    let R = (0, r.jsx)(s.Avatar, {
+    let O = (0, r.jsx)(o.Avatar, {
             className: f.avatarWrapper,
             src: n,
             ...T
         }),
-        v = {
+        R = {
             ...t,
-            backgroundColor: g
+            backgroundColor: S
         };
     return (
-        null != O && m && A && ((v.backgroundImage = 'url('.concat(O, ')')), (v.backgroundSize = 'cover')),
+        null != N && I && A && ((R.backgroundImage = 'url('.concat(N, ')')), (R.backgroundSize = 'cover')),
         (0, r.jsx)('div', {
-            style: v,
+            style: R,
             className: f.background,
-            children: I
+            children: m
                 ? (0, r.jsx)(u.Z, {
-                      shouldAnimate: m,
-                      children: R
+                      shouldAnimate: I,
+                      children: O
                   })
-                : R
+                : O
         })
     );
-};
+}
+t.Z = h;

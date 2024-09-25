@@ -1,59 +1,61 @@
 n.d(t, {
     N4: function () {
-        return p;
+        return m;
     },
     Pn: function () {
         return I;
     },
     RS: function () {
-        return f;
-    },
-    Us: function () {
         return h;
     },
+    Us: function () {
+        return p;
+    },
     X2: function () {
-        return l;
+        return u;
     },
     XN: function () {
-        return c;
+        return d;
     },
     au: function () {
-        return _;
+        return E;
     },
     fn: function () {
-        return u;
+        return c;
     },
     hZ: function () {
         return s;
     },
     lI: function () {
-        return a;
-    },
-    mb: function () {
-        return d;
-    },
-    nx: function () {
         return o;
     },
+    mb: function () {
+        return _;
+    },
+    nx: function () {
+        return l;
+    },
     tL: function () {
-        return E;
+        return f;
     }
-}),
-    n(47120);
+});
 var r,
-    i = n(246364);
-i.QJ.VERIFICATION;
-let a = new Set([i.QJ.TERMS]),
-    s = new Set([i.QJ.MULTIPLE_CHOICE, i.QJ.TEXT_INPUT, i.QJ.PARAGRAPH]),
-    o = 5,
-    l = 16,
-    u = 300,
+    i = n(47120);
+var a = n(246364);
+a.QJ.VERIFICATION;
+let o = new Set([a.QJ.TERMS]),
+    s = new Set([a.QJ.MULTIPLE_CHOICE, a.QJ.TEXT_INPUT, a.QJ.PARAGRAPH]),
+    l = 5,
+    u = 16,
     c = 300,
-    d = 8,
-    _ = 150,
+    d = 300,
+    _ = 8,
     E = 150,
-    f = 1000,
-    h = 300,
-    p = 'Membership Gating',
+    f = 150,
+    h = 1000,
+    p = 300,
+    m = 'Membership Gating',
     I = 'in-app-member-verification';
-(r || (r = {})).VERIFICATION_INFO = 'VERIFICATION_INFO';
+!(function (e) {
+    e.VERIFICATION_INFO = 'VERIFICATION_INFO';
+})(r || (r = {}));

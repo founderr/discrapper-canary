@@ -1,22 +1,23 @@
 n.d(t, {
     E: function () {
-        return i;
+        return o;
     },
     Z: function () {
-        return a;
+        return s;
     }
 });
-var l = n(729594),
-    r = n(981631);
-function i(e) {
-    return null != e && 'open.spotify.com' === e;
+var r = n(729594),
+    i = n(981631);
+let a = 'open.spotify.com';
+function o(e) {
+    return null != e && e === a;
 }
-function a(e) {
+function s(e) {
     var t;
-    if (null == e.url || (null === (t = e.provider) || void 0 === t ? void 0 : t.name) !== 'Spotify' || e.type !== r.hBH.LINK) return !1;
+    if (null == e.url || (null === (t = e.provider) || void 0 === t ? void 0 : t.name) !== 'Spotify' || e.type !== i.hBH.LINK) return !1;
     try {
-        let t = l.parse(e.url, !0).host;
-        return i(t);
+        let t = r.parse(e.url, !0).host;
+        return o(t);
     } catch (e) {
         return !1;
     }

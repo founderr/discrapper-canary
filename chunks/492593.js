@@ -2,9 +2,9 @@ var r = n(735250);
 n(470079);
 var i = n(120356),
     a = n.n(i),
-    s = n(481060),
-    o = n(825193);
-t.Z = function (e) {
+    o = n(481060),
+    s = n(825193);
+function l(e) {
     let {
             className: t,
             compact: n = !1,
@@ -18,50 +18,51 @@ t.Z = function (e) {
             childrenButtons: f,
             childrenMessageContent: h,
             childrenAccessories: p,
-            messageRef: I,
-            focusProps: m = {
+            messageRef: m,
+            focusProps: I = {
                 offset: {
                     left: 4,
                     right: 4
                 }
             },
             hasThread: T,
-            isSystemMessage: S,
-            hasReply: g,
+            isSystemMessage: g,
+            hasReply: S,
             ...A
         } = e,
-        N = (0, r.jsx)(s.FocusRing, {
-            ...m,
+        v = (0, r.jsx)(o.FocusRing, {
+            ...I,
             children: (0, r.jsxs)('div', {
                 className: a()(t, {
-                    [o.wrapper]: !0,
-                    [o.contentOnly]: i,
-                    [o.compact]: n,
-                    [o.cozy]: !n,
-                    [o.zalgo]: l,
-                    [o.hasThread]: T,
-                    [o.isSystemMessage]: S,
-                    [o.hasReply]: g
+                    [s.wrapper]: !0,
+                    [s.contentOnly]: i,
+                    [s.compact]: n,
+                    [s.cozy]: !n,
+                    [s.zalgo]: l,
+                    [s.hasThread]: T,
+                    [s.isSystemMessage]: g,
+                    [s.hasReply]: S
                 }),
-                ref: I,
+                ref: m,
                 ...A,
                 role: 'article',
                 children: [
                     c,
                     d,
                     (0, r.jsxs)('div', {
-                        className: o.contents,
+                        className: s.contents,
                         children: [E, _, null == E && h]
                     }),
                     p,
                     null != f
                         ? (0, r.jsx)('div', {
-                              className: o.buttonContainer,
+                              className: s.buttonContainer,
                               children: f
                           })
                         : null
                 ]
             })
         });
-    return u ? (0, r.jsx)(s.FocusBlock, { children: N }) : N;
-};
+    return u ? (0, r.jsx)(o.FocusBlock, { children: v }) : v;
+}
+t.Z = l;

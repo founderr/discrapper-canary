@@ -1,31 +1,34 @@
 var r = n(261168),
     i = {
+        full: 'EEEE, MMMM do, y',
+        long: 'MMMM do, y',
+        medium: 'MMM d, y',
+        short: 'MM/dd/yyyy'
+    },
+    a = {
+        full: 'h:mm:ss a zzzz',
+        long: 'h:mm:ss a z',
+        medium: 'h:mm:ss a',
+        short: 'h:mm a'
+    },
+    o = {
+        full: "{{date}} 'at' {{time}}",
+        long: "{{date}} 'at' {{time}}",
+        medium: '{{date}}, {{time}}',
+        short: '{{date}}, {{time}}'
+    },
+    s = {
         date: (0, r.Z)({
-            formats: {
-                full: 'EEEE, MMMM do, y',
-                long: 'MMMM do, y',
-                medium: 'MMM d, y',
-                short: 'MM/dd/yyyy'
-            },
+            formats: i,
             defaultWidth: 'full'
         }),
         time: (0, r.Z)({
-            formats: {
-                full: 'h:mm:ss a zzzz',
-                long: 'h:mm:ss a z',
-                medium: 'h:mm:ss a',
-                short: 'h:mm a'
-            },
+            formats: a,
             defaultWidth: 'full'
         }),
         dateTime: (0, r.Z)({
-            formats: {
-                full: "{{date}} 'at' {{time}}",
-                long: "{{date}} 'at' {{time}}",
-                medium: '{{date}}, {{time}}',
-                short: '{{date}}, {{time}}'
-            },
+            formats: o,
             defaultWidth: 'full'
         })
     };
-t.Z = i;
+t.Z = s;

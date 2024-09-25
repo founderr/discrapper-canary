@@ -1,25 +1,26 @@
-var s = n(735250);
+var r = n(735250);
 n(470079);
-var o = n(120356),
-    a = n.n(o),
-    i = n(481060),
-    r = n(689938),
+var i = n(120356),
+    a = n.n(i),
+    o = n(481060),
+    s = n(689938),
     l = n(967979);
-t.Z = function (e) {
-    let { className: t, color: n = 'header-primary', textOpacity: o = 0.9, bgOpacity: u = 0.4 } = e;
-    return (0, s.jsxs)(i.Text, {
+function u(e) {
+    let { className: t, color: n = 'header-primary', textOpacity: i = 0.9, bgOpacity: u = 0.4 } = e;
+    return (0, r.jsxs)(o.Text, {
         variant: 'text-xxs/medium',
         color: n,
         className: a()(l.promotedTag, t),
         children: [
-            (0, s.jsx)('span', {
+            (0, r.jsx)('span', {
                 className: l.promotedTagBackground,
                 style: { opacity: u }
             }),
-            (0, s.jsx)('span', {
-                style: { opacity: o },
-                children: r.Z.Messages.QUESTS_PROMOTED
+            (0, r.jsx)('span', {
+                style: { opacity: i },
+                children: s.Z.Messages.QUESTS_PROMOTED
             })
         ]
     });
-};
+}
+t.Z = u;

@@ -10,8 +10,8 @@ var r = n(735250);
 n(470079);
 var i = n(442837),
     a = n(481060),
-    s = n(287734),
-    o = n(111028),
+    o = n(287734),
+    s = n(111028),
     l = n(318374),
     u = n(565138),
     c = n(769654),
@@ -21,14 +21,17 @@ var i = n(442837),
     f = n(676411);
 let h = 3;
 function p(e) {
-    let { user: t, guild: n, channel: p, onAction: I, onClose: m } = e,
+    let { user: t, guild: n, channel: p, onAction: m, onClose: I } = e,
         { profileType: T } = (0, _.z)(),
-        S = (0, i.Wu)([d.ZP], () =>
+        g = (0, i.Wu)([d.ZP], () =>
             d.ZP.getVoiceStatesForChannel(p).map((e) => {
                 let { user: t } = e;
                 return t;
             })
-        );
+        ),
+        S = () => {
+            o.default.selectVoiceChannel(p.id), (0, c.X)(n.id), null == m || m({ action: 'OPEN_VOICE_CHANNEL' }), null == I || I();
+        };
     return (0, r.jsxs)('div', {
         className: f.voiceChannel,
         children: [
@@ -51,26 +54,24 @@ function p(e) {
                         className: f.voiceIcon
                     }),
                     (0, r.jsx)(a.Clickable, {
-                        onClick: () => {
-                            s.default.selectVoiceChannel(p.id), (0, c.X)(n.id), null == I || I({ action: 'OPEN_VOICE_CHANNEL' }), null == m || m();
-                        },
+                        onClick: S,
                         className: f.clickable,
                         children: (0, r.jsx)(a.Text, {
                             variant: 'text-xs/normal',
                             color: 'interactive-normal',
                             lineClamp: 1,
-                            children: (0, r.jsx)(o.Z, { children: p.name })
+                            children: (0, r.jsx)(s.Z, { children: p.name })
                         })
                     })
                 ]
             }),
             (0, r.jsx)(l.Z, {
-                users: S,
+                users: g,
                 guildId: n.id,
                 channelId: p.id,
                 maxUsers: h,
                 size: a.AvatarSizes.SIZE_16,
-                onClick: () => (null == I ? void 0 : I({ action: 'PRESS_VOICE_CHANNEL_AVATARS' })),
+                onClick: () => (null == m ? void 0 : m({ action: 'PRESS_VOICE_CHANNEL_AVATARS' })),
                 disableUserPopout: T !== E.y0.FULL_SIZE || ((e) => e === t.id),
                 overflowCountVariant: 'text-xs/normal'
             })

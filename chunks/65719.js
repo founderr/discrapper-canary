@@ -1,7 +1,7 @@
 var r = n(470079),
     i = n(924102),
     a = n(13942),
-    s =
+    o =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -10,7 +10,7 @@ var r = n(470079),
             }
             return e;
         },
-    o = (function () {
+    s = (function () {
         function e(e, t) {
             for (var n = 0; n < t.length; n++) {
                 var r = t[n];
@@ -21,16 +21,30 @@ var r = n(470079),
             return n && e(t.prototype, n), r && e(t, r), t;
         };
     })();
-t.Z = function (e) {
+function l(e, t) {
+    if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
+}
+function u(e, t) {
+    if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
+    return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
+}
+function c(e, t) {
+    if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
+    (e.prototype = Object.create(t && t.prototype, {
+        constructor: {
+            value: e,
+            enumerable: !1,
+            writable: !0,
+            configurable: !0
+        }
+    })),
+        t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
+}
+var d = function (e) {
     var t = (function (t) {
         function n(e) {
-            !(function (e, t) {
-                if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
-            })(this, n);
-            var t = (function (e, t) {
-                if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
-                return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
-            })(this, (n.__proto__ || Object.getPrototypeOf(n)).call(this));
+            l(this, n);
+            var t = u(this, (n.__proto__ || Object.getPrototypeOf(n)).call(this));
             return (
                 (t.handleChange = function (e, n) {
                     if (a.LX(e)) {
@@ -44,7 +58,7 @@ t.Z = function (e) {
                         t.props.onSwatchHover && t.props.onSwatchHover(r, n);
                     }
                 }),
-                (t.state = s({}, a.jH(e.color, 0))),
+                (t.state = o({}, a.jH(e.color, 0))),
                 (t.debounce = (0, i.Z)(function (e, t, n) {
                     e(t, n);
                 }, 100)),
@@ -52,26 +66,15 @@ t.Z = function (e) {
             );
         }
         return (
-            !(function (e, t) {
-                if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
-                (e.prototype = Object.create(t && t.prototype, {
-                    constructor: {
-                        value: e,
-                        enumerable: !1,
-                        writable: !0,
-                        configurable: !0
-                    }
-                })),
-                    t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
-            })(n, t),
-            o(
+            c(n, t),
+            s(
                 n,
                 [
                     {
                         key: 'render',
                         value: function () {
                             var t = {};
-                            return this.props.onSwatchHover && (t.onSwatchHover = this.handleSwatchHover), r.createElement(e, s({}, this.props, this.state, { onChange: this.handleChange }, t));
+                            return this.props.onSwatchHover && (t.onSwatchHover = this.handleSwatchHover), r.createElement(e, o({}, this.props, this.state, { onChange: this.handleChange }, t));
                         }
                     }
                 ],
@@ -79,7 +82,7 @@ t.Z = function (e) {
                     {
                         key: 'getDerivedStateFromProps',
                         value: function (e, t) {
-                            return s({}, a.jH(e.color, t.oldHue));
+                            return o({}, a.jH(e.color, t.oldHue));
                         }
                     }
                 ]
@@ -88,8 +91,8 @@ t.Z = function (e) {
         );
     })(r.PureComponent || r.Component);
     return (
-        (t.propTypes = s({}, e.propTypes)),
-        (t.defaultProps = s({}, e.defaultProps, {
+        (t.propTypes = o({}, e.propTypes)),
+        (t.defaultProps = o({}, e.defaultProps, {
             color: {
                 h: 250,
                 s: 0.5,
@@ -100,3 +103,4 @@ t.Z = function (e) {
         t
     );
 };
+t.Z = d;

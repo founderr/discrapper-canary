@@ -1,13 +1,13 @@
-n(47120);
-var i,
-    s = n(442837),
-    a = n(570140);
+var r,
+    i = n(47120);
+var a = n(442837),
+    o = n(570140);
 n(57132);
-var r = n(455199),
+var s = n(455199),
     l = n(70956),
-    o = n(709054),
+    u = n(709054),
     c = n(497089);
-function u(e, t, n) {
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,78 +20,83 @@ function u(e, t, n) {
         e
     );
 }
-let d = 90 * l.Z.Millis.DAY,
-    _ = {
+let _ = 90 * l.Z.Millis.DAY,
+    E = {
         tab: null,
         localItemAcks: {},
         hasNewMentions: !1,
         isDataStale: !1,
         isRefreshing: !1
     };
-class E extends (i = s.ZP.PersistedStore) {
+function f(e) {
+    let t = {};
+    for (let [n, r] of Object.entries(e)) Date.now() - r < _ && (t[n] = r);
+    return t;
+}
+class h extends (r = a.ZP.PersistedStore) {
     initialize(e) {
-        if ((this.waitFor(r.Z), null != e)) {
+        if ((this.waitFor(s.Z), null != e)) {
             var t;
-            ((_ = e).localItemAcks = (function (e) {
-                let t = {};
-                for (let [n, i] of Object.entries(e)) Date.now() - i < d && (t[n] = i);
-                return t;
-            })(null !== (t = _.localItemAcks) && void 0 !== t ? t : {})),
-                (_.isDataStale = !0);
+            ((E = e).localItemAcks = f(null !== (t = E.localItemAcks) && void 0 !== t ? t : {})), (E.isDataStale = !0);
         }
     }
     getState() {
-        return _;
+        return E;
     }
     getTab() {
         var e;
-        return null !== (e = _.tab) && void 0 !== e ? e : c.b1.ForYou;
+        return null !== (e = E.tab) && void 0 !== e ? e : c.b1.ForYou;
     }
     isLocalItemAcked(e) {
-        return null != e.local_id && (null != _.localItemAcks[e.local_id] || o.default.age(e.id) > d);
+        return null != e.local_id && (null != E.localItemAcks[e.local_id] || u.default.age(e.id) > _);
     }
     hasNewMentions() {
-        return _.hasNewMentions;
+        return E.hasNewMentions;
     }
     isDataStale() {
-        return _.isDataStale;
+        return E.isDataStale;
     }
     isRefreshing() {
-        return _.isRefreshing;
+        return E.isRefreshing;
     }
     shouldReload() {
-        return _.hasNewMentions || _.isDataStale || _.isRefreshing;
+        return E.hasNewMentions || E.isDataStale || E.isRefreshing;
     }
 }
-u(E, 'displayName', 'NotificationCenterStore'), u(E, 'persistKey', 'NotificationCenterStore');
-function I() {
-    (_.hasNewMentions = !1), (_.isDataStale = !1), (_.isRefreshing = !1);
+function p(e) {
+    let { message: t } = e;
 }
-t.Z = new E(a.Z, {
-    MESSAGE_CREATE: function (e) {
-        let { message: t } = e;
-    },
-    NOTIFICATION_CENTER_SET_TAB: function (e) {
-        _ = {
-            ..._,
-            tab: e.tab
+function m() {
+    (E.hasNewMentions = !1), (E.isDataStale = !1), (E.isRefreshing = !1);
+}
+function I(e) {
+    E = {
+        ...E,
+        tab: e.tab
+    };
+}
+function T(e) {
+    let { localIds: t } = e;
+    t.forEach((e) => {
+        E = {
+            ...E,
+            localItemAcks: {
+                ...E.localItemAcks,
+                [e]: Date.now()
+            }
         };
-    },
-    NOTIFICATION_CENTER_ITEMS_LOCAL_ACK: function (e) {
-        let { localIds: t } = e;
-        t.forEach((e) => {
-            _ = {
-                ..._,
-                localItemAcks: {
-                    ..._.localItemAcks,
-                    [e]: Date.now()
-                }
-            };
-        });
-    },
-    NOTIFICATION_CENTER_REFRESH: function () {
-        _.isRefreshing = !0;
-    },
-    LOAD_NOTIFICATION_CENTER_ITEMS_FAILURE: I,
-    LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: I
-});
+    });
+}
+function g() {
+    E.isRefreshing = !0;
+}
+d(h, 'displayName', 'NotificationCenterStore'),
+    d(h, 'persistKey', 'NotificationCenterStore'),
+    (t.Z = new h(o.Z, {
+        MESSAGE_CREATE: p,
+        NOTIFICATION_CENTER_SET_TAB: I,
+        NOTIFICATION_CENTER_ITEMS_LOCAL_ACK: T,
+        NOTIFICATION_CENTER_REFRESH: g,
+        LOAD_NOTIFICATION_CENTER_ITEMS_FAILURE: m,
+        LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: m
+    }));

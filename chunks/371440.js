@@ -1,4 +1,4 @@
-e.exports = function (e) {
+function t(e) {
     let t = ['bool', 'byte', 'i16', 'i32', 'i64', 'double', 'string', 'binary'];
     return {
         name: 'Thrift',
@@ -36,4 +36,5 @@ e.exports = function (e) {
             }
         ]
     };
-};
+}
+e.exports = t;

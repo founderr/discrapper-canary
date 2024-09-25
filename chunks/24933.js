@@ -1,7 +1,7 @@
 var r,
     i = n(442837),
     a = n(570140);
-function s(e, t, n) {
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -14,17 +14,20 @@ function s(e, t, n) {
         e
     );
 }
-function o() {
+function s() {
     return {
         usageByApplicationId: {},
         shelfOrder: []
     };
 }
-let l = o();
-class u extends (r = i.ZP.PersistedStore) {
+let l = s();
+function u() {
+    l = s();
+}
+class c extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         l = {
-            ...o(),
+            ...s(),
             ...(null != e ? e : {})
         };
     }
@@ -32,10 +35,4 @@ class u extends (r = i.ZP.PersistedStore) {
         return l;
     }
 }
-s(u, 'displayName', 'ActivityShelfStore'),
-    s(u, 'persistKey', 'ActivityShelfStore'),
-    (t.Z = new u(a.Z, {
-        LOGOUT: function () {
-            l = o();
-        }
-    }));
+o(c, 'displayName', 'ActivityShelfStore'), o(c, 'persistKey', 'ActivityShelfStore'), (t.Z = new c(a.Z, { LOGOUT: u }));

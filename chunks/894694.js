@@ -1,10 +1,9 @@
-var r, i;
+var r;
 n.d(t, {
     x: function () {
         return r;
     }
 }),
-    ((i = r || (r = {})).UNKNOWN = 'unknown'),
-    (i.BELOW_MINIMUM = 'below_minimum'),
-    (i.MEETS_MINIMUM = 'meets_minimum'),
-    (i.MEETS_AUTO_ENABLE = 'meets_auto_enable');
+    !(function (e) {
+        (e.UNKNOWN = 'unknown'), (e.BELOW_MINIMUM = 'below_minimum'), (e.MEETS_MINIMUM = 'meets_minimum'), (e.MEETS_AUTO_ENABLE = 'meets_auto_enable');
+    })(r || (r = {}));

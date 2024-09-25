@@ -1,13 +1,13 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return v;
     }
 });
 var r = n(735250),
     i = n(470079),
     a = n(120356),
-    s = n.n(a),
-    o = n(442837),
+    o = n.n(a),
+    s = n(442837),
     l = n(481060),
     u = n(100527),
     c = n(906732),
@@ -17,11 +17,11 @@ var r = n(735250),
     f = n(165583),
     h = n(592125),
     p = n(944486),
-    I = n(626135),
-    m = n(981631),
+    m = n(626135),
+    I = n(981631),
     T = n(474936),
-    S = n(689938),
-    g = n(228095);
+    g = n(689938),
+    S = n(228095);
 function A() {
     (0, l.openModalLazy)(async () => {
         let { default: e } = await n.e('3289').then(n.bind(n, 682609));
@@ -32,66 +32,70 @@ function A() {
             });
     });
 }
-function N(e) {
+function v(e) {
     var t;
-    let { className: n, iconOnly: a, remaining: N } = e,
-        O = (0, o.e7)([p.Z, h.Z], () => {
+    let { className: n, iconOnly: a, remaining: v } = e,
+        N = (0, s.e7)([p.Z, h.Z], () => {
             let e = h.Z.getChannel(p.Z.getChannelId());
-            return (null == e ? void 0 : e.isPrivate()) ? m.ZY5.DM_CHANNEL : m.ZY5.GUILD_CHANNEL;
+            return (null == e ? void 0 : e.isPrivate()) ? I.ZY5.DM_CHANNEL : I.ZY5.GUILD_CHANNEL;
         }),
-        { analyticsLocations: R } = (0, c.ZP)(u.Z.PREMIUM_UPSELL),
-        v = (0, _.Ng)(),
+        { analyticsLocations: O } = (0, c.ZP)(u.Z.PREMIUM_UPSELL),
+        R = (0, _.Ng)(),
         C = (0, E.N)(),
-        y = (0, _.Wp)(v, T.Si.TIER_2),
-        L = (null == C ? void 0 : null === (t = C.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === T.Si.TIER_2;
-    return (i.useEffect(() => {
-        I.default.track(m.rMx.PREMIUM_UPSELL_VIEWED, {
+        y = (0, _.Wp)(R, T.Si.TIER_2),
+        b = (null == C ? void 0 : null === (t = C.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === T.Si.TIER_2 || y;
+    i.useEffect(() => {
+        m.default.track(I.rMx.PREMIUM_UPSELL_VIEWED, {
             type: 'longer messages inline',
             location: {
-                location_page: O,
-                location_section: m.jXE.CHANNEL_TEXT_AREA
+                location_page: N,
+                location_section: I.jXE.CHANNEL_TEXT_AREA
             },
-            location_stack: R
+            location_stack: O
         });
-    }, [O, R]),
-    (L || y) && N < 0)
-        ? (0, r.jsx)(f.ZP, {
-              type: T.cd.MESSAGE_LENGTH_IN_EDITOR_UPSELL,
-              subscriptionTier: T.Si.TIER_2,
-              context: N,
-              discountOffer: v,
-              trialOffer: C,
-              children: S.Z.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP.format({ onLearnMore: A })
-          })
-        : a
-          ? (0, r.jsx)(l.Clickable, {
-                className: g.iconOnly,
+    }, [N, O]);
+    let L = () =>
+            (0, r.jsxs)('div', {
+                className: o()(S.root, n),
+                children: [
+                    (0, r.jsx)(l.NitroWheelIcon, {
+                        size: 'md',
+                        className: S.premium,
+                        color: d.JX.PREMIUM_TIER_2
+                    }),
+                    (0, r.jsx)(l.Text, {
+                        className: S.text,
+                        variant: 'text-sm/normal',
+                        children: g.Z.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP.format({ onLearnMore: A })
+                    })
+                ]
+            }),
+        D = () =>
+            (0, r.jsx)(l.Clickable, {
+                className: S.iconOnly,
                 onClick: () => A(),
                 children: (0, r.jsx)(l.Tooltip, {
-                    text: S.Z.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP_WITHOUT_LINK,
+                    text: g.Z.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP_WITHOUT_LINK,
                     position: 'top',
                     children: (e) =>
                         (0, r.jsx)(l.NitroWheelIcon, {
                             size: 'md',
                             color: 'currentColor',
-                            className: g.premium,
+                            className: S.premium,
                             ...e
                         })
                 })
-            })
-          : (0, r.jsxs)('div', {
-                className: s()(g.root, n),
-                children: [
-                    (0, r.jsx)(l.NitroWheelIcon, {
-                        size: 'md',
-                        className: g.premium,
-                        color: d.JX.PREMIUM_TIER_2
-                    }),
-                    (0, r.jsx)(l.Text, {
-                        className: g.text,
-                        variant: 'text-sm/normal',
-                        children: S.Z.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP.format({ onLearnMore: A })
-                    })
-                ]
             });
+    return b && v < 0
+        ? (0, r.jsx)(f.ZP, {
+              type: T.cd.MESSAGE_LENGTH_IN_EDITOR_UPSELL,
+              subscriptionTier: T.Si.TIER_2,
+              context: v,
+              discountOffer: R,
+              trialOffer: C,
+              children: g.Z.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP.format({ onLearnMore: A })
+          })
+        : a
+          ? D()
+          : L();
 }

@@ -1,4 +1,4 @@
-var r, i, a, s;
+var r, i;
 n.d(t, {
     I: function () {
         return i;
@@ -7,8 +7,9 @@ n.d(t, {
         return r;
     }
 }),
-    ((a = r || (r = {}))[(a.USE_NEW_NOTIFICATIONS = 16)] = 'USE_NEW_NOTIFICATIONS'),
-    (a[(a.MENTION_ON_ALL_MESSAGES = 32)] = 'MENTION_ON_ALL_MESSAGES'),
-    ((s = i || (i = {})).GUILD = 'guild'),
-    (s.CHANNEL = 'channel'),
-    (s.ACCOUNT = 'account');
+    !(function (e) {
+        (e[(e.USE_NEW_NOTIFICATIONS = 16)] = 'USE_NEW_NOTIFICATIONS'), (e[(e.MENTION_ON_ALL_MESSAGES = 32)] = 'MENTION_ON_ALL_MESSAGES');
+    })(r || (r = {})),
+    !(function (e) {
+        (e.GUILD = 'guild'), (e.CHANNEL = 'channel'), (e.ACCOUNT = 'account');
+    })(i || (i = {}));

@@ -1,4 +1,6 @@
-var r =
+r = { value: !0 };
+var r,
+    i =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -7,37 +9,44 @@ var r =
             }
             return e;
         },
-    i = (function (e) {
-        return e && e.__esModule ? e : { default: e };
-    })(n(470079));
+    a = o(n(470079));
+function o(e) {
+    return e && e.__esModule ? e : { default: e };
+}
+function s(e, t) {
+    var n = {};
+    for (var r in e) {
+        if (!(t.indexOf(r) >= 0)) Object.prototype.hasOwnProperty.call(e, r) && (n[r] = e[r]);
+    }
+    return n;
+}
+var l = 24;
 t.default = function (e) {
     var t = e.fill,
-        n = e.width,
-        a = e.height,
-        s = e.style,
-        o = (function (e, t) {
-            var n = {};
-            for (var r in e) {
-                if (!(t.indexOf(r) >= 0)) Object.prototype.hasOwnProperty.call(e, r) && (n[r] = e[r]);
-            }
-            return n;
-        })(e, ['fill', 'width', 'height', 'style']);
-    return i.default.createElement(
+        n = void 0 === t ? 'currentColor' : t,
+        r = e.width,
+        o = void 0 === r ? l : r,
+        u = e.height,
+        c = void 0 === u ? l : u,
+        d = e.style,
+        _ = void 0 === d ? {} : d,
+        E = s(e, ['fill', 'width', 'height', 'style']);
+    return a.default.createElement(
         'svg',
-        r(
+        i(
             {
-                viewBox: '0 0 24 24',
-                style: r(
+                viewBox: '0 0 ' + l + ' ' + l,
+                style: i(
                     {
-                        fill: void 0 === t ? 'currentColor' : t,
-                        width: void 0 === n ? 24 : n,
-                        height: void 0 === a ? 24 : a
+                        fill: n,
+                        width: o,
+                        height: c
                     },
-                    void 0 === s ? {} : s
+                    _
                 )
             },
-            o
+            E
         ),
-        i.default.createElement('path', { d: 'M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z' })
+        a.default.createElement('path', { d: 'M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z' })
     );
 };

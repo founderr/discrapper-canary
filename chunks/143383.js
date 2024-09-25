@@ -1,4 +1,4 @@
-e.exports = function (e) {
+function t(e) {
     let t = {
             className: 'number',
             begin: '[1-9][0-9]*',
@@ -9,6 +9,12 @@ e.exports = function (e) {
             begin: ':[^\\]]+'
         },
         r = {
+            className: 'built_in',
+            begin: '(AR|P|PAYLOAD|PR|R|SR|RSR|LBL|VR|UALM|MESSAGE|UTOOL|UFRAME|TIMER|TIMER_OVERFLOW|JOINT_MAX_SPEED|RESUME_PROG|DIAG_REC)\\[',
+            end: '\\]',
+            contains: ['self', t, n]
+        },
+        i = {
             className: 'built_in',
             begin: '(AI|AO|DI|DO|F|RI|RO|UI|UO|GI|GO|SI|SO)\\[',
             end: '\\]',
@@ -21,13 +27,8 @@ e.exports = function (e) {
             literal: ['ON', 'OFF', 'max_speed', 'LPOS', 'JPOS', 'ENABLE', 'DISABLE', 'START', 'STOP', 'RESET']
         },
         contains: [
-            {
-                className: 'built_in',
-                begin: '(AR|P|PAYLOAD|PR|R|SR|RSR|LBL|VR|UALM|MESSAGE|UTOOL|UFRAME|TIMER|TIMER_OVERFLOW|JOINT_MAX_SPEED|RESUME_PROG|DIAG_REC)\\[',
-                end: '\\]',
-                contains: ['self', t, n]
-            },
             r,
+            i,
             {
                 className: 'keyword',
                 begin: '/(PROG|ATTR|MN|POS|END)\\b'
@@ -61,4 +62,5 @@ e.exports = function (e) {
             }
         ]
     };
-};
+}
+e.exports = t;

@@ -3,123 +3,121 @@ n.d(t, {
         return _;
     },
     g3: function () {
-        return h;
+        return T;
     },
     jF: function () {
         return E;
     },
     jk: function () {
-        return I;
+        return f;
     },
     wt: function () {
-        return m;
+        return h;
     }
 });
-var i = n(990547),
-    s = n(544891),
+var r = n(990547),
+    i = n(544891),
     a = n(283693),
-    r = n(570140),
-    l = n(695346),
-    o = n(573261),
-    c = n(140155),
-    u = n(178480),
+    o = n(570140),
+    s = n(695346),
+    l = n(573261),
+    u = n(140155),
+    c = n(178480),
     d = n(981631);
 function _(e) {
-    r.Z.dispatch({
+    o.Z.dispatch({
         type: 'NOTIFICATION_CENTER_SET_ACTIVE',
         active: e
     });
 }
 function E() {
-    r.Z.dispatch({ type: 'RESET_NOTIFICATION_CENTER' });
+    o.Z.dispatch({ type: 'RESET_NOTIFICATION_CENTER' });
 }
-async function I(e, t) {
-    if (c.Z.loading) return;
-    await r.Z.dispatch({ type: 'LOAD_NOTIFICATION_CENTER_ITEMS' });
-    let n = Math.ceil(c.Z.items.length / e.limit);
+async function f(e, t) {
+    if (u.Z.loading) return;
+    await o.Z.dispatch({ type: 'LOAD_NOTIFICATION_CENTER_ITEMS' });
+    let n = Math.ceil(u.Z.items.length / e.limit);
     try {
-        let s = await o.Z.get({
+        let i = await l.Z.get({
             url: d.ANM.NOTIF_CENTER_ITEMS(),
             trackedActionData: {
-                event: i.NetworkActionNames.NOTIFICATION_CENTER_PAGE_FETCH,
+                event: r.NetworkActionNames.NOTIFICATION_CENTER_PAGE_FETCH,
                 properties: (e) => {
                     var t;
-                    let i = ((null === (t = e.body) || void 0 === t ? void 0 : t.items) || []).map((e) => e.type);
+                    let r = ((null === (t = e.body) || void 0 === t ? void 0 : t.items) || []).map((e) => e.type);
                     return (0, a.iG)({
                         page: n,
-                        items: i,
-                        item_count: i.length
+                        items: r,
+                        item_count: r.length
                     });
                 }
             },
             query: { ...e }
         });
         null == t || t(),
-            await r.Z.dispatch({
+            await o.Z.dispatch({
                 type: 'LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS',
-                items: s.body.items,
-                cursor: s.body.cursor,
-                hasMore: s.body.has_more
+                items: i.body.items,
+                cursor: i.body.cursor,
+                hasMore: i.body.has_more
             });
     } catch (e) {
-        null == t || t(), await r.Z.dispatch({ type: 'LOAD_NOTIFICATION_CENTER_ITEMS_FAILURE' });
+        null == t || t(), await o.Z.dispatch({ type: 'LOAD_NOTIFICATION_CENTER_ITEMS_FAILURE' });
     }
 }
-function m(e) {
-    null != e.local_id
-        ? (function (e) {
-              r.Z.dispatch({
-                  type: 'NOTIFICATION_CENTER_ITEMS_LOCAL_ACK',
-                  localIds: e
-              });
-          })([e.local_id])
-        : (0, u.RB)(e)
-          ? (function (e) {
-                r.Z.dispatch({
-                    type: 'NOTIFICATION_CENTER_ITEMS_ACK',
-                    optimistic: !0,
-                    ids: [e]
-                });
-            })(e.id)
-          : T(e.id);
+function h(e) {
+    null != e.local_id ? p([e.local_id]) : (0, c.RB)(e) ? I(e.id) : m(e.id);
 }
-async function T(e) {
+function p(e) {
+    o.Z.dispatch({
+        type: 'NOTIFICATION_CENTER_ITEMS_LOCAL_ACK',
+        localIds: e
+    });
+}
+async function m(e) {
     try {
-        r.Z.dispatch({
+        o.Z.dispatch({
             type: 'NOTIFICATION_CENTER_ITEMS_ACK',
             optimistic: !0,
             ids: [e]
         }),
-            await s.tn.post({ url: d.ANM.NOTIF_CENTER_ITEMS_ACK(e) });
+            await i.tn.post({ url: d.ANM.NOTIF_CENTER_ITEMS_ACK(e) });
     } catch (t) {
-        r.Z.dispatch({
+        o.Z.dispatch({
             type: 'NOTIFICATION_CENTER_ITEMS_ACK_FAILURE',
             ids: [e]
         });
     }
 }
-async function h(e) {
-    let t = l.d$.getSetting();
+function I(e) {
+    o.Z.dispatch({
+        type: 'NOTIFICATION_CENTER_ITEMS_ACK',
+        optimistic: !0,
+        ids: [e]
+    });
+}
+async function T(e) {
+    let t = s.d$.getSetting();
     try {
-        r.Z.dispatch({
+        o.Z.dispatch({
             type: 'NOTIFICATION_CENTER_ITEM_DELETE',
             id: e.id
         }),
-            await o.Z.delete({
+            await l.Z.delete({
                 url: d.ANM.NOTIF_CENTER_ITEMS(e.id),
-                body: { item_type: (0, u.RB)(e) ? 'mention' : 'regular' },
+                body: { item_type: (0, c.RB)(e) ? 'mention' : 'regular' },
                 trackedActionData: {
-                    event: i.NetworkActionNames.NOTIFICATION_CENTER_ITEM_DELETE,
+                    event: r.NetworkActionNames.NOTIFICATION_CENTER_ITEM_DELETE,
                     properties: {
                         notification_center_id: e.id,
-                        acked: (0, u.r)(e, t),
+                        acked: (0, c.r)(e, t),
                         item_type: e.type
                     }
                 }
             });
     } catch (t) {
         throw (
-            (r.Z.dispatch({
+            (o.Z.dispatch({
                 type: 'NOTIFICATION_CENTER_ITEM_DELETE_FAILURE',
                 item: e
             }),

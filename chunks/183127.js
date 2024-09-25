@@ -1,6 +1,10 @@
-e.exports = function (e) {
+function t(e) {
     let t = e.regex,
         n = {
+            className: 'meta',
+            begin: '@[A-Za-z]+'
+        },
+        r = {
             className: 'subst',
             variants: [
                 { begin: '\\$[A-Za-z0-9_]+' },
@@ -10,7 +14,7 @@ e.exports = function (e) {
                 }
             ]
         },
-        r = {
+        i = {
             className: 'string',
             variants: [
                 {
@@ -27,23 +31,23 @@ e.exports = function (e) {
                     begin: '[a-z]+"',
                     end: '"',
                     illegal: '\\n',
-                    contains: [e.BACKSLASH_ESCAPE, n]
+                    contains: [e.BACKSLASH_ESCAPE, r]
                 },
                 {
                     className: 'string',
                     begin: '[a-z]+"""',
                     end: '"""',
-                    contains: [n],
+                    contains: [r],
                     relevance: 10
                 }
             ]
         },
-        i = {
+        a = {
             className: 'type',
             begin: '\\b[A-Z][A-Za-z0-9_]*',
             relevance: 0
         },
-        a = {
+        o = {
             className: 'title',
             begin: /[^0-9\n\t "'(),.`{}\[\]:;][^\n\t "'(),.`{}\[\]:;]+|[^0-9\n\t "'(),.`{}\[\]:;=]/,
             relevance: 0
@@ -66,7 +70,7 @@ e.exports = function (e) {
                     excludeBegin: !0,
                     excludeEnd: !0,
                     relevance: 0,
-                    contains: [i]
+                    contains: [a]
                 },
                 {
                     className: 'params',
@@ -75,16 +79,38 @@ e.exports = function (e) {
                     excludeBegin: !0,
                     excludeEnd: !0,
                     relevance: 0,
-                    contains: [i]
+                    contains: [a]
                 },
-                a
+                o
             ]
         },
-        o = {
+        l = {
             className: 'function',
             beginKeywords: 'def',
             end: t.lookahead(/[:={\[(\n;]/),
-            contains: [a]
+            contains: [o]
+        },
+        u = {
+            begin: [/^\s*/, 'extension', /\s+(?=[[(])/],
+            beginScope: { 2: 'keyword' }
+        },
+        c = {
+            begin: [/^\s*/, /end/, /\s+/, /(extension\b)?/],
+            beginScope: {
+                2: 'keyword',
+                4: 'keyword'
+            }
+        },
+        d = [
+            { match: /\.inline\b/ },
+            {
+                begin: /\binline(?=\s)/,
+                keywords: 'inline'
+            }
+        ],
+        _ = {
+            begin: [/\(\s*/, /using/, /\s+(?!\))/],
+            beginScope: { 2: 'keyword' }
         };
     return {
         name: 'Scala',
@@ -92,38 +118,7 @@ e.exports = function (e) {
             literal: 'true false null',
             keyword: 'type yield lazy override def with val var sealed abstract private trait object if then forSome for while do throw finally protected extends import final return else break new catch super class case package default try this match continue throws implicit export enum given transparent'
         },
-        contains: [
-            e.C_LINE_COMMENT_MODE,
-            e.C_BLOCK_COMMENT_MODE,
-            r,
-            i,
-            o,
-            s,
-            e.C_NUMBER_MODE,
-            {
-                begin: [/^\s*/, 'extension', /\s+(?=[[(])/],
-                beginScope: { 2: 'keyword' }
-            },
-            {
-                begin: [/^\s*/, /end/, /\s+/, /(extension\b)?/],
-                beginScope: {
-                    2: 'keyword',
-                    4: 'keyword'
-                }
-            },
-            { match: /\.inline\b/ },
-            {
-                begin: /\binline(?=\s)/,
-                keywords: 'inline'
-            },
-            {
-                begin: [/\(\s*/, /using/, /\s+(?!\))/],
-                beginScope: { 2: 'keyword' }
-            },
-            {
-                className: 'meta',
-                begin: '@[A-Za-z]+'
-            }
-        ]
+        contains: [e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, i, a, l, s, e.C_NUMBER_MODE, u, c, ...d, _, n]
     };
-};
+}
+e.exports = t;

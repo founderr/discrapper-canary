@@ -1,56 +1,57 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return N;
     }
 });
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var s = n(120356),
-    a = n.n(s),
-    r = n(91192),
-    l = n(442837),
-    o = n(481060),
-    c = n(788307),
-    u = n(43267),
+var i = n(120356),
+    a = n.n(i),
+    o = n(91192),
+    s = n(442837),
+    l = n(481060),
+    u = n(788307),
+    c = n(43267),
     d = n(933557),
     _ = n(471445),
     E = n(790145),
-    I = n(313201),
-    m = n(565138),
-    T = n(199902),
-    h = n(592125),
-    N = n(430824),
-    f = n(158776),
-    C = n(594174),
-    p = n(689938),
-    g = n(699420);
-let A = {
+    f = n(313201),
+    h = n(565138),
+    p = n(199902),
+    m = n(592125),
+    I = n(430824),
+    T = n(158776),
+    g = n(594174),
+    S = n(689938),
+    A = n(699420);
+let v = {
     top: 8,
     bottom: 8,
     left: -4,
     right: -4
 };
-function S(e) {
-    let { channel: t, children: n, gotoChannel: s, mentionCount: a, channelState: l, toggleCollapsed: c } = e,
-        u = (0, r.JA)('recents-header-'.concat(t.id, '-').concat((0, I.Dt)()));
-    return (0, i.jsx)(o.FocusRing, {
-        offset: A,
-        children: (0, i.jsxs)('div', {
-            className: g.channelHeader,
-            ...u,
+function N(e) {
+    let { channel: t, children: n, gotoChannel: i, mentionCount: a, channelState: s, toggleCollapsed: u } = e,
+        c = (0, o.JA)('recents-header-'.concat(t.id, '-').concat((0, f.Dt)()));
+    function d(e) {
+        null != u && null != s && (('ArrowRight' === e.key && s.collapsed) || ('ArrowLeft' === e.key && !s.collapsed)) && (null == u || u(s));
+    }
+    return (0, r.jsx)(l.FocusRing, {
+        offset: v,
+        children: (0, r.jsxs)('div', {
+            className: A.channelHeader,
+            ...c,
             tabIndex: 0,
             'data-recents-channel': t.id,
-            onKeyDown: function (e) {
-                null != c && null != l && (('ArrowRight' === e.key && l.collapsed) || ('ArrowLeft' === e.key && !l.collapsed)) && (null == c || c(l));
-            },
+            onKeyDown: d,
             children: [
-                (0, i.jsx)(x, {
+                (0, r.jsx)(O, {
                     channel: t,
-                    gotoChannel: s
+                    gotoChannel: i
                 }),
-                (0, i.jsx)(M, {
+                (0, r.jsx)(y, {
                     channel: t,
-                    gotoChannel: s,
+                    gotoChannel: i,
                     mentionCount: a
                 }),
                 n
@@ -58,125 +59,125 @@ function S(e) {
         })
     });
 }
-function x(e) {
+function O(e) {
     let { channel: t, gotoChannel: n } = e;
     return t.isPrivate()
-        ? (0, i.jsx)(R, {
+        ? (0, r.jsx)(R, {
               channel: t,
               gotoChannel: n
           })
-        : (0, i.jsx)(O, {
+        : (0, r.jsx)(C, {
               channel: t,
               gotoChannel: n
           });
 }
 function R(e) {
     let { channel: t, gotoChannel: n } = e,
-        s = (0, l.e7)([C.default], () => (t.isDM() ? C.default.getUser(t.getRecipientId()) : null)),
-        a = null == s ? (0, u.x)(t) : s.getAvatarURL(void 0, 40);
-    return (0, i.jsx)(o.Clickable, {
+        i = (0, s.e7)([g.default], () => (t.isDM() ? g.default.getUser(t.getRecipientId()) : null)),
+        a = null == i ? (0, c.x)(t) : i.getAvatarURL(void 0, 40);
+    return (0, r.jsx)(l.Clickable, {
         onClick: n,
         tabIndex: -1,
-        children: (0, i.jsx)('img', {
-            className: g.dmIcon,
+        children: (0, r.jsx)('img', {
+            className: A.dmIcon,
             src: a,
             alt: '',
             'aria-hidden': !0
         })
     });
 }
-function O(e) {
+function C(e) {
     let { channel: t, gotoChannel: n } = e,
-        s = (0, l.e7)([N.Z], () => N.Z.getGuild(t.guild_id));
-    return null == s
+        i = (0, s.e7)([I.Z], () => I.Z.getGuild(t.guild_id));
+    return null == i
         ? null
-        : (0, i.jsx)(m.Z, {
+        : (0, r.jsx)(h.Z, {
               'aria-hidden': !0,
-              className: g.guildIcon,
-              guild: s,
-              size: m.Z.Sizes.MEDIUM,
+              className: A.guildIcon,
+              guild: i,
+              size: h.Z.Sizes.MEDIUM,
               active: !0,
               onClick: n,
               tabIndex: -1
           });
 }
-function M(e) {
-    let { channel: t, gotoChannel: n, mentionCount: s } = e,
-        r = (0, l.e7)([N.Z], () => N.Z.getGuild(t.guild_id)),
-        c = (0, l.e7)([h.Z], () => h.Z.getChannel(t.parent_id)),
-        u = (0, _.KS)(t, r),
-        I = (0, d.ZP)(t, !1),
-        m = null == c ? (null == r ? void 0 : r.name) : ''.concat(null == r ? void 0 : r.name, ' \u203A ').concat(c.name),
-        T = t.isMultiUserDM()
-            ? p.Z.Messages.MEMBERS_HEADER.format({ members: t.recipients.length + 1 })
+function y(e) {
+    let { channel: t, gotoChannel: n, mentionCount: i } = e,
+        o = (0, s.e7)([I.Z], () => I.Z.getGuild(t.guild_id)),
+        u = (0, s.e7)([m.Z], () => m.Z.getChannel(t.parent_id)),
+        c = (0, _.KS)(t, o),
+        f = (0, d.ZP)(t, !1),
+        h = null == u ? (null == o ? void 0 : o.name) : ''.concat(null == o ? void 0 : o.name, ' \u203A ').concat(u.name),
+        p = t.isMultiUserDM()
+            ? S.Z.Messages.MEMBERS_HEADER.format({ members: t.recipients.length + 1 })
             : t.isPrivate()
-              ? (0, i.jsx)(v, { channel: t })
-              : (0, i.jsx)(o.Clickable, {
-                    className: a()(g.subtext, g.guildName),
+              ? (0, r.jsx)(b, { channel: t })
+              : (0, r.jsx)(l.Clickable, {
+                    className: a()(A.subtext, A.guildName),
                     onClick: n,
-                    children: m
+                    children: h
                 });
-    return (0, i.jsxs)('div', {
-        className: g.channelNameSection,
+    return (0, r.jsxs)('div', {
+        className: A.channelNameSection,
         children: [
-            (0, i.jsx)(o.Heading, {
+            (0, r.jsx)(l.Heading, {
                 variant: 'heading-md/semibold',
-                className: g.channelNameHeader,
-                children: (0, i.jsxs)(o.Clickable, {
-                    className: g.channelName,
+                className: A.channelNameHeader,
+                children: (0, r.jsxs)(l.Clickable, {
+                    className: A.channelName,
                     onClick: n,
                     children: [
-                        t.isThread() || t.isGroupDM() || null == u
+                        t.isThread() || t.isGroupDM() || null == c
                             ? null
-                            : (0, i.jsx)(u, {
-                                  className: t.isForumLikeChannel() ? g.forumIcon : void 0,
+                            : (0, r.jsx)(c, {
+                                  className: t.isForumLikeChannel() ? A.forumIcon : void 0,
                                   width: 18,
                                   height: 18,
                                   size: 'custom',
                                   color: 'currentColor'
                               }),
-                        (0, i.jsx)('span', {
-                            className: g.channelNameSpan,
-                            children: I
+                        (0, r.jsx)('span', {
+                            className: A.channelNameSpan,
+                            children: f
                         }),
-                        null != s && s > 0
-                            ? (0, i.jsx)(E.Z, {
-                                  value: s,
-                                  className: g.badge
+                        null != i && i > 0
+                            ? (0, r.jsx)(E.Z, {
+                                  value: i,
+                                  className: A.badge
                               })
                             : null
                     ]
                 })
             }),
-            (0, i.jsx)(o.Text, {
+            (0, r.jsx)(l.Text, {
                 color: 'header-secondary',
                 variant: 'text-xs/normal',
-                className: g.subtextContainer,
-                children: T
+                className: A.subtextContainer,
+                children: p
             })
         ]
     });
 }
-function v(e) {
+function b(e) {
     let { channel: t } = e,
         {
             user: n,
-            activities: s,
+            activities: i,
             applicationStream: a
-        } = (0, l.cj)([C.default, f.Z, T.Z], () => {
-            let e = C.default.getUser(t.getRecipientId());
+        } = (0, s.cj)([g.default, T.Z, p.Z], () => {
+            let e = g.default.getUser(t.getRecipientId());
             return {
                 user: e,
-                activities: null != e ? f.Z.getActivities(e.id) : null,
-                applicationStream: null != e ? T.Z.getAnyStreamForUser(e.id) : null
+                activities: null != e ? T.Z.getActivities(e.id) : null,
+                applicationStream: null != e ? p.Z.getAnyStreamForUser(e.id) : null
             };
         });
-    return null == s
+    return null == i
         ? null
-        : (0, i.jsx)(c.Z, {
-              className: g.activityStatus,
-              emojiClassName: g.activityEmoji,
-              activities: s,
+        : (0, r.jsx)(u.Z, {
+              className: A.activityStatus,
+              emojiClassName: A.activityEmoji,
+              activities: i,
               applicationStream: a,
               hideTooltip: !0,
               user: n

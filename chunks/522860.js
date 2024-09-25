@@ -3,46 +3,47 @@ n.d(t, {
         return c;
     }
 });
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var s = n(481060),
+var i = n(481060),
     a = n(194082),
-    r = n(739566),
-    l = n(834129),
-    o = n(689938);
+    o = n(739566),
+    s = n(834129),
+    l = n(689938);
+let u = 20;
 function c(e) {
     var t;
-    let { message: n, channel: c, playingActivity: u, onJoinStream: d, usernameHook: _, compact: E } = e,
-        I = (0, r.ZP)(n),
-        m = null === (t = n.call) || void 0 === t ? void 0 : t.duration,
-        T = _(I),
-        h = o.Z.Messages.SYSTEM_MESSAGE_GUILD_STREAM_ACTIVE.format({
-            username: I.nick,
-            activityName: null != u ? u.name : 'unknown',
-            onJoinStream: d,
-            usernameHook: T
+    let { message: n, channel: c, playingActivity: d, onJoinStream: _, usernameHook: E, compact: f } = e,
+        h = (0, o.ZP)(n),
+        p = null === (t = n.call) || void 0 === t ? void 0 : t.duration,
+        m = E(h),
+        I = l.Z.Messages.SYSTEM_MESSAGE_GUILD_STREAM_ACTIVE.format({
+            username: h.nick,
+            activityName: null != d ? d.name : 'unknown',
+            onJoinStream: _,
+            usernameHook: m
         });
     return (
-        null != m &&
-            (h = o.Z.Messages.SYSTEM_MESSAGE_GUILD_STREAM_ENDED.format({
-                username: I.nick,
-                duration: m.humanize(),
+        null != p &&
+            (I = l.Z.Messages.SYSTEM_MESSAGE_GUILD_STREAM_ENDED.format({
+                username: h.nick,
+                duration: p.humanize(),
                 channelName: c.name,
-                usernameHook: T
+                usernameHook: m
             })),
-        (0, i.jsx)(l.Z, {
+        (0, r.jsx)(s.Z, {
             iconNode:
-                null != m
-                    ? (0, i.jsx)(s.ScreenXIcon, {
+                null != p
+                    ? (0, r.jsx)(i.ScreenXIcon, {
                           size: 'custom',
                           color: 'currentColor',
-                          width: 20,
-                          height: 20
+                          width: u,
+                          height: u
                       })
-                    : (0, i.jsx)(a.ZP, { size: a.ZP.Sizes.SMALL }),
+                    : (0, r.jsx)(a.ZP, { size: a.ZP.Sizes.SMALL }),
             timestamp: n.timestamp,
-            compact: E,
-            children: h
+            compact: f,
+            children: I
         })
     );
 }

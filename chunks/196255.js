@@ -1,29 +1,30 @@
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var s = n(120356),
-    o = n.n(s),
-    a = n(481060),
-    l = n(942951),
-    r = n(456269),
-    c = n(689938),
-    d = n(921428);
-t.Z = (e) => {
+var i = n(120356),
+    a = n.n(i),
+    o = n(481060),
+    s = n(942951),
+    l = n(456269),
+    u = n(689938),
+    c = n(921428);
+let d = (e) => {
     var t, n;
-    let { message: s, channel: u, renderColon: h, hasUnreads: m } = e,
-        { user: p, author: f } = (0, r.AJ)(u),
-        g = null !== (n = null !== (t = null == f ? void 0 : f.nick) && void 0 !== t ? t : null == p ? void 0 : p.username) && void 0 !== n ? n : '',
-        _ = (0, l.l)({
-            user: null == s ? void 0 : s.author,
-            channelId: u.id,
-            guildId: u.guild_id,
-            messageId: null == s ? void 0 : s.id,
+    let { message: i, channel: d, renderColon: _, hasUnreads: E } = e,
+        { user: f, author: h } = (0, l.AJ)(d),
+        p = null !== (n = null !== (t = null == h ? void 0 : h.nick) && void 0 !== t ? t : null == f ? void 0 : f.username) && void 0 !== n ? n : '',
+        m = (0, s.l)({
+            user: null == i ? void 0 : i.author,
+            channelId: d.id,
+            guildId: d.guild_id,
+            messageId: null == i ? void 0 : i.id,
             stopPropagation: !0,
-            ariaLabel: c.Z.Messages.FORUM_POST_AUTHOR_A11Y_LABEL.format({ name: g })
-        })(null != f ? f : void 0)((0, i.jsx)(i.Fragment, { children: g }), u.id);
-    return (0, i.jsxs)(a.Text, {
+            ariaLabel: u.Z.Messages.FORUM_POST_AUTHOR_A11Y_LABEL.format({ name: p })
+        })(null != h ? h : void 0)((0, r.jsx)(r.Fragment, { children: p }), d.id);
+    return (0, r.jsxs)(o.Text, {
         tag: 'span',
-        className: o()(d.author, { [d.hasUnreads]: m }),
+        className: a()(c.author, { [c.hasUnreads]: E }),
         variant: 'text-sm/semibold',
-        children: [_, !0 === h ? ': ' : null]
+        children: [m, !0 === _ ? ': ' : null]
     });
 };
+t.Z = d;

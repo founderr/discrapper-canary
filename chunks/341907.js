@@ -1,45 +1,47 @@
 n.r(t),
     n.d(t, {
         navigateToQuestHome: function () {
-            return p;
+            return I;
         },
         openDisclosureModal: function () {
-            return h;
+            return m;
         },
         openQuestInGameRewardModal: function () {
-            return f;
+            return p;
         },
         openQuestsNitroRewardModal: function () {
-            return E;
+            return h;
         },
         openQuestsRewardCodeModal: function () {
-            return _;
+            return f;
         }
     });
 var r = n(735250);
 n(470079);
 var i = n(481060),
     a = n(212093),
-    s = n(703656),
-    o = n(617136),
+    o = n(703656),
+    s = n(617136),
     l = n(497505),
     u = n(150560),
     c = n(981631),
     d = n(731455);
-function _(e) {
-    let { questId: t, location: a, questContentPosition: s } = e;
+let _ = 'in-app',
+    E = 'Discord Widget';
+function f(e) {
+    let { questId: t, location: a, questContentPosition: o } = e;
     (0, i.openModalLazy)(async () => {
-        let { default: e } = await Promise.all([n.e('26138'), n.e('54535'), n.e('84928')]).then(n.bind(n, 985866));
+        let { default: e } = await Promise.all([n.e('54535'), n.e('61624')]).then(n.bind(n, 985866));
         return (n) =>
             (0, r.jsx)(e, {
                 ...n,
                 questId: t,
-                questContentPosition: s,
+                questContentPosition: o,
                 location: a
             });
     });
 }
-function E(e, t) {
+function h(e, t) {
     (0, i.openModalLazy)(async () => {
         let { default: i } = await n.e('838').then(n.bind(n, 824393));
         return (n) =>
@@ -50,7 +52,7 @@ function E(e, t) {
             });
     });
 }
-function f(e, t) {
+function p(e, t) {
     (0, i.openModalLazy)(async () => {
         let { default: i } = await n.e('88938').then(n.bind(n, 390238));
         return (n) =>
@@ -61,8 +63,8 @@ function f(e, t) {
             });
     });
 }
-function h(e, t) {
-    (0, o._3)({
+function m(e, t) {
+    (0, s._3)({
         questId: e.id,
         questContent: t.content,
         questContentPosition: t.position,
@@ -78,14 +80,14 @@ function h(e, t) {
                 });
         });
 }
-function p(e, t, n) {
+function I(e, t, n) {
     let r = u.Z.getState().setUtmCurrentContext;
     r({
-        utmSourceCurrent: 'Discord Widget',
-        utmMediumCurrent: 'in-app',
+        utmSourceCurrent: E,
+        utmMediumCurrent: _,
         utmCampaignCurrent: n,
         utmContentCurrent: Object.keys(l.jn).find((e) => l.jn[e] === t)
     });
     let i = null != n ? '#'.concat(n) : '';
-    (0, a.uY)(d.Gj.Quests), (0, s.uL)(c.Z5c.QUEST_HOME + i);
+    (0, a.uY)(d.Gj.Quests), (0, o.uL)(c.Z5c.QUEST_HOME + i);
 }

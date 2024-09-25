@@ -1,20 +1,21 @@
 n.d(t, {
     Z: function () {
-        return d;
+        return _;
     }
 });
 var r = n(735250);
 n(470079);
 var i = n(149765),
     a = n(260034),
-    s = n(993365),
-    o = n(481060),
+    o = n(993365),
+    s = n(481060),
     l = n(981631),
     u = n(689938),
     c = n(507119);
-function d(e) {
-    let { error: t, selectedGuildId: n, onGuildChange: d, guilds: _, disabled: E = !1 } = e,
-        f = _.filter((e) => i.e$(e.permissions, l.Plq.MANAGE_GUILD)).map((e) => ({
+let d = 5;
+function _(e) {
+    let { error: t, selectedGuildId: n, onGuildChange: _, guilds: E, disabled: f = !1 } = e,
+        h = E.filter((e) => i.e$(e.permissions, l.Plq.MANAGE_GUILD)).map((e) => ({
             value: e.id,
             label: e.name
         }));
@@ -27,22 +28,22 @@ function d(e) {
                 children: u.Z.Messages.OAUTH2_ADD_TO_GUILD
             }),
             null != t && '' !== t
-                ? (0, r.jsx)(s.x, {
+                ? (0, r.jsx)(o.x, {
                       variant: 'text-xs/normal',
                       color: 'text-danger',
                       children: t
                   })
                 : null,
-            (0, r.jsx)(o.SearchableSelect, {
+            (0, r.jsx)(s.SearchableSelect, {
                 wrapperClassName: c.select,
-                maxVisibleItems: 5,
+                maxVisibleItems: d,
                 placeholder: u.Z.Messages.OAUTH2_ADD_TO_GUILD_PLACEHOLDER,
-                options: f,
-                onChange: d,
-                isDisabled: E,
+                options: h,
+                onChange: _,
+                isDisabled: f,
                 value: n
             }),
-            (0, r.jsx)(s.x, {
+            (0, r.jsx)(o.x, {
                 variant: 'text-xs/medium',
                 color: 'header-secondary',
                 className: c.label,

@@ -3,6 +3,8 @@ n.d(t, {
         return r;
     }
 });
-var r = function (e, t) {
-    (this.activeTargets = []), (this.skippedTargets = []), (this.observationTargets = []), (this.observer = e), (this.callback = t);
-};
+var r = (function () {
+    return function e(e, t) {
+        (this.activeTargets = []), (this.skippedTargets = []), (this.observationTargets = []), (this.observer = e), (this.callback = t);
+    };
+})();

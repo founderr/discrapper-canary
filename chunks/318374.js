@@ -1,52 +1,52 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return h;
     }
-}),
-    n(47120);
-var r = n(735250),
-    i = n(470079),
-    a = n(120356),
-    s = n.n(a),
-    o = n(392711),
-    l = n.n(o),
-    u = n(481060),
-    c = n(239091),
-    d = n(751688),
-    _ = n(51144),
-    E = n(711258);
-function f(e) {
-    let { users: t, maxUsers: a, guildId: o, channelId: f, className: h, avatarClassName: p, onClick: I, onFocus: m, size: T = u.AvatarSizes.SIZE_24, overflowCountVariant: S = 'text-xs/medium', overflowCountColor: g = 'interactive-normal', hideOverflowCount: A = !1, disableUsernameTooltip: N = !1, disableUserPopout: O = !1, onUserPopoutClosed: R } = e,
-        [v, C] = i.useState(!1);
+});
+var r = n(47120);
+var i = n(735250),
+    a = n(470079),
+    o = n(120356),
+    s = n.n(o),
+    l = n(392711),
+    u = n.n(l),
+    c = n(481060),
+    d = n(239091),
+    _ = n(751688),
+    E = n(51144),
+    f = n(711258);
+function h(e) {
+    let { users: t, maxUsers: r, guildId: o, channelId: l, className: h, avatarClassName: p, onClick: m, onFocus: I, size: T = c.AvatarSizes.SIZE_24, overflowCountVariant: g = 'text-xs/medium', overflowCountColor: S = 'interactive-normal', hideOverflowCount: A = !1, disableUsernameTooltip: v = !1, disableUserPopout: N = !1, onUserPopoutClosed: O } = e,
+        [R, C] = a.useState(!1);
     function y() {
-        return (0, r.jsx)(u.Dialog, {
-            className: E.popoutWrapper,
-            children: (0, r.jsx)(u.Scroller, {
-                className: E.scroller,
+        return (0, i.jsx)(c.Dialog, {
+            className: f.popoutWrapper,
+            children: (0, i.jsx)(c.Scroller, {
+                className: f.scroller,
                 children: t.map((e) =>
-                    (0, r.jsx)(
-                        d.Z,
+                    (0, i.jsx)(
+                        _.Z,
                         {
                             user: e,
                             guildId: o,
-                            channelId: f,
-                            nick: _.ZP.getName(e),
-                            disablePopout: 'function' == typeof O ? O(e.id) : O,
+                            channelId: l,
+                            nick: E.ZP.getName(e),
+                            disablePopout: 'function' == typeof N ? N(e.id) : N,
                             ignoreModalClicks: !0,
                             onPopoutClose: () => {
-                                C(!1), null == R || R();
+                                C(!1), null == O || O();
                             },
                             onContextMenu: (t) =>
-                                (0, c.jW)(
+                                (0, d.jW)(
                                     t,
                                     async () => {
-                                        let { default: t } = await Promise.all([n.e('79695'), n.e('69220'), n.e('50261')]).then(n.bind(n, 881351));
+                                        let { default: t } = await Promise.all([n.e('79695'), n.e('69220')]).then(n.bind(n, 881351));
                                         return (n) =>
-                                            (0, r.jsx)(t, {
+                                            (0, i.jsx)(t, {
                                                 ...n,
                                                 user: e,
                                                 guildId: o,
-                                                channelId: f
+                                                channelId: l
                                             });
                                     },
                                     { onClose: () => C(!1) }
@@ -58,74 +58,75 @@ function f(e) {
             })
         });
     }
+    function b() {
+        let e = u()(t)
+                .take(r)
+                .map((e) => {
+                    let t = E.ZP.getName(e);
+                    return v
+                        ? (0, i.jsx)(
+                              'div',
+                              {
+                                  className: s()(f.avatar, p),
+                                  children: (0, i.jsx)(c.Avatar, {
+                                      src: e.getAvatarURL(o, 24),
+                                      'aria-label': t,
+                                      size: T
+                                  })
+                              },
+                              e.id
+                          )
+                        : (0, i.jsx)(
+                              c.TooltipContainer,
+                              {
+                                  text: t,
+                                  className: s()(f.avatar, p),
+                                  children: (0, i.jsx)(c.Avatar, {
+                                      src: e.getAvatarURL(o, 24),
+                                      'aria-label': t,
+                                      size: T
+                                  })
+                              },
+                              e.id
+                          );
+                })
+                .value(),
+            n = t.length - r;
+        return (
+            n > 0 &&
+                !A &&
+                (e[e.length - 1] = (0, i.jsx)(
+                    c.Popout,
+                    {
+                        renderPopout: y,
+                        shouldShow: R,
+                        position: 'bottom',
+                        onRequestClose: () => C(!1),
+                        children: () =>
+                            (0, i.jsx)(c.Button, {
+                                className: s()(f.avatar, f.overflow),
+                                onFocus: I,
+                                onClick: (e) => {
+                                    null == m || m(e), C(!0);
+                                },
+                                look: c.Button.Looks.BLANK,
+                                size: c.Button.Sizes.NONE,
+                                children: (0, i.jsxs)(c.Text, {
+                                    variant: g,
+                                    color: S,
+                                    children: ['+', n + 1]
+                                })
+                            })
+                    },
+                    'overflow'
+                )),
+            e
+        );
+    }
     return t.length <= 0
         ? null
-        : (0, r.jsx)('div', {
-              className: s()(h, E.avatars),
-              children: (function () {
-                  let e = l()(t)
-                          .take(a)
-                          .map((e) => {
-                              let t = _.ZP.getName(e);
-                              return N
-                                  ? (0, r.jsx)(
-                                        'div',
-                                        {
-                                            className: s()(E.avatar, p),
-                                            children: (0, r.jsx)(u.Avatar, {
-                                                src: e.getAvatarURL(o, 24),
-                                                'aria-label': t,
-                                                size: T
-                                            })
-                                        },
-                                        e.id
-                                    )
-                                  : (0, r.jsx)(
-                                        u.TooltipContainer,
-                                        {
-                                            text: t,
-                                            className: s()(E.avatar, p),
-                                            children: (0, r.jsx)(u.Avatar, {
-                                                src: e.getAvatarURL(o, 24),
-                                                'aria-label': t,
-                                                size: T
-                                            })
-                                        },
-                                        e.id
-                                    );
-                          })
-                          .value(),
-                      n = t.length - a;
-                  return (
-                      n > 0 &&
-                          !A &&
-                          (e[e.length - 1] = (0, r.jsx)(
-                              u.Popout,
-                              {
-                                  renderPopout: y,
-                                  shouldShow: v,
-                                  position: 'bottom',
-                                  onRequestClose: () => C(!1),
-                                  children: () =>
-                                      (0, r.jsx)(u.Button, {
-                                          className: s()(E.avatar, E.overflow),
-                                          onFocus: m,
-                                          onClick: (e) => {
-                                              null == I || I(e), C(!0);
-                                          },
-                                          look: u.Button.Looks.BLANK,
-                                          size: u.Button.Sizes.NONE,
-                                          children: (0, r.jsxs)(u.Text, {
-                                              variant: S,
-                                              color: g,
-                                              children: ['+', n + 1]
-                                          })
-                                      })
-                              },
-                              'overflow'
-                          )),
-                      e
-                  );
-              })()
+        : (0, i.jsx)('div', {
+              className: s()(h, f.avatars),
+              children: b()
           });
 }

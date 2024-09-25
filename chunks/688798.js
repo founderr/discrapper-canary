@@ -1,24 +1,24 @@
-n(47120);
-var r = n(913527),
-    i = n.n(r),
-    a = n(570140),
+var r = n(47120);
+var i = n(913527),
+    a = n.n(i),
+    o = n(570140),
     s = n(661111),
-    o = n(493683),
-    l = n(904245),
-    u = n(232567),
-    c = n(147913),
-    d = n(3148),
-    _ = n(960412),
-    E = n(706454),
-    f = n(695346),
-    h = n(375954),
-    p = n(306680),
+    l = n(493683),
+    u = n(904245),
+    c = n(232567),
+    d = n(147913),
+    _ = n(3148),
+    E = n(960412),
+    f = n(706454),
+    h = n(695346),
+    p = n(375954),
+    m = n(306680),
     I = n(709054),
-    m = n(839627),
-    T = n(802098),
+    T = n(839627),
+    g = n(802098),
     S = n(128014),
-    g = n(163379),
-    A = n(596401),
+    A = n(163379),
+    v = n(596401),
     N = n(981631),
     O = n(930441);
 function R(e, t, n) {
@@ -34,80 +34,81 @@ function R(e, t, n) {
         e
     );
 }
-async function v(e, t) {
-    let n = f.l4.getSetting(),
+function C(e, t) {
+    let n = 0,
+        r = null;
+    for (var [i, { min_version: a }] of Object.entries(e)) a <= t && a > n && ((n = a), (r = i));
+    return r;
+}
+async function y(e, t) {
+    let n = h.l4.getSetting(),
         r = I.default.extractTimestamp(e);
-    if ((n >= e || i()().diff(r, 'days') > 30) && !t) return;
-    let a = await (0, _.Y7)();
-    if (!(null == a ? void 0 : a.categories[O.$Z.UPDATES_AND_ANNOUNCEMENTS])) return;
-    let s = await o.Z.getOrEnsurePrivateChannel(A.sP);
-    if (null == s) return;
-    await l.Z.fetchMessages({
-        channelId: s,
+    if ((n >= e || a()().diff(r, 'days') > 30) && !t) return;
+    let i = await (0, E.Y7)();
+    if (!(null == i ? void 0 : i.categories[O.$Z.UPDATES_AND_ANNOUNCEMENTS])) return;
+    let o = await l.Z.getOrEnsurePrivateChannel(v.sP);
+    if (null == o) return;
+    await u.Z.fetchMessages({
+        channelId: o,
         limit: 1
     });
-    let u = h.Z.getLastMessage(s),
-        c = p.ZP.getOldestUnreadMessageId(s),
-        E = p.ZP.hasUnread(s);
-    if (null == u || null == c || E || u.id > c) return;
-    let m = (0, d.ZP)({
-        ...u,
-        channelId: s,
+    let s = p.Z.getLastMessage(o),
+        c = m.ZP.getOldestUnreadMessageId(o),
+        d = m.ZP.hasUnread(o);
+    if (null == s || null == c || d || s.id > c) return;
+    let f = (0, _.ZP)({
+        ...s,
+        channelId: o,
         messageReference: void 0,
         poll: void 0,
-        changelogId: u.changelogId
+        changelogId: s.changelogId
     });
-    l.Z.receiveMessage(
-        s,
+    u.Z.receiveMessage(
+        o,
         {
-            ...m,
+            ...f,
             state: N.yb.SENT,
-            channel_id: s
+            channel_id: o
         },
         !0,
         {}
     );
 }
-class C extends c.Z {
+class b extends d.Z {
     constructor(...e) {
         super(...e),
             R(this, 'actions', { POST_CONNECTION_OPEN: (e) => this.handleConnectionOpen(e) }),
             R(this, 'handleConnectionOpen', async (e) => {
-                let { canReceiveMessage: t, canReceiveUnpublishedMessages: n } = m.Z.getCurrentConfig({ location: 'changelog_manager' }, { autoTrackExposure: !1 }),
+                let { canReceiveMessage: t, canReceiveUnpublishedMessages: n } = T.Z.getCurrentConfig({ location: 'changelog_manager' }, { autoTrackExposure: !1 }),
                     r = await s.Z.fetchChangelogConfig(),
                     i = r.body,
-                    o = (function (e, t) {
-                        let n = 0,
-                            r = null;
-                        for (var [i, { min_version: a }] of Object.entries(e)) a <= t && a > n && ((n = a), (r = i));
-                        return r;
-                    })(i, (0, S.b)());
+                    a = C(i, (0, S.b)());
                 if (
-                    (a.Z.dispatch({
+                    (o.Z.dispatch({
                         type: 'CHANGE_LOG_SET_CONFIG',
                         config: r.body,
-                        latestChangelogId: o
+                        latestChangelogId: a
                     }),
-                    null == o)
+                    null == a)
                 )
                     return;
                 if (t) {
-                    (0, u.PR)(A.sP), v(o, n);
+                    (0, c.PR)(v.sP), y(a, n);
                     return;
                 }
-                if (!0 !== i[o].show_on_startup) return;
-                let l = T.Z.lastSeenChangelogId(),
-                    c = T.Z.lastSeenChangelogDate();
-                if (null != l && 0 >= I.default.compare(o, l)) return;
-                let d = await s.Z.fetchChangelog(o, E.default.locale);
+                if (!0 !== i[a].show_on_startup) return;
+                let l = g.Z.lastSeenChangelogId(),
+                    u = g.Z.lastSeenChangelogDate();
+                if (null != l && 0 >= I.default.compare(a, l)) return;
+                let d = await s.Z.fetchChangelog(a, f.default.locale);
                 if (null != d) {
-                    if (null == c || null == T.Z.lastSeenChangelogDate()) {
-                        s.Z.markChangelogAsSeen(o, d.date);
+                    if (null == u || null == g.Z.lastSeenChangelogDate()) {
+                        s.Z.markChangelogAsSeen(a, d.date);
                         return;
                     }
-                    !T.Z.isLocked() && new Date(d.date) > new Date(c) && (0, g.Z)();
+                    !g.Z.isLocked() && new Date(d.date) > new Date(u) && (0, A.Z)();
                 }
             });
     }
 }
-t.Z = new C();
+t.Z = new b();

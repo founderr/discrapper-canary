@@ -1,33 +1,34 @@
 n.d(t, {
     A: function () {
-        return o;
+        return s;
     },
     h: function () {
-        return s;
+        return r;
     }
 });
-var i,
-    s,
-    a = n(913527),
-    r = n.n(a),
-    l = n(689938);
-function o(e) {
-    let { dueAt: t, now: n, type: i } = e;
+var r,
+    i = n(913527),
+    a = n.n(i),
+    o = n(689938);
+function s(e) {
+    let { dueAt: t, now: n, type: r } = e;
     if (null == t)
         return {
             string: '',
             isOverdue: !1
         };
-    let s = 0 === i ? l.Z.Messages.MESSAGE_REMINDERS_REMINDER_DUE_IN : l.Z.Messages.MESSAGE_REMINDERS_DUE_IN,
-        a = 0 === i ? l.Z.Messages.MESSAGE_REMINDERS_REMINDER_OVERDUE : l.Z.Messages.MESSAGE_REMINDERS_OVERDUE,
-        o = n > t;
+    let i = 0 === r ? o.Z.Messages.MESSAGE_REMINDERS_REMINDER_DUE_IN : o.Z.Messages.MESSAGE_REMINDERS_DUE_IN,
+        s = 0 === r ? o.Z.Messages.MESSAGE_REMINDERS_REMINDER_OVERDUE : o.Z.Messages.MESSAGE_REMINDERS_OVERDUE,
+        l = n > t;
     return {
-        dueInText: (o ? a : s).format({
-            duration: r()
+        dueInText: (l ? s : i).format({
+            duration: a()
                 .duration(t.getTime() - n.getTime(), 'millisecond')
                 .humanize()
         }),
-        isOverdue: o
+        isOverdue: l
     };
 }
-((i = s || (s = {}))[(i.LONG = 0)] = 'LONG'), (i[(i.SHORT = 1)] = 'SHORT');
+!(function (e) {
+    (e[(e.LONG = 0)] = 'LONG'), (e[(e.SHORT = 1)] = 'SHORT');
+})(r || (r = {}));

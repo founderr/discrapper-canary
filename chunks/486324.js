@@ -1,91 +1,93 @@
 n.d(t, {
     C5: function () {
-        return A;
-    },
-    Ff: function () {
-        return R;
-    },
-    Ij: function () {
-        return m;
-    },
-    L0: function () {
-        return u;
-    },
-    MY: function () {
-        return I;
-    },
-    N8: function () {
-        return h;
-    },
-    PB: function () {
-        return v;
-    },
-    SW: function () {
-        return O;
-    },
-    Uo: function () {
-        return p;
-    },
-    WV: function () {
-        return N;
-    },
-    X_: function () {
-        return d;
-    },
-    _T: function () {
-        return _;
-    },
-    d6: function () {
-        return E;
-    },
-    f: function () {
-        return c;
-    },
-    pC: function () {
-        return a;
-    },
-    qj: function () {
         return g;
     },
-    sX: function () {
-        return S;
+    Ff: function () {
+        return v;
     },
-    u: function () {
+    Ij: function () {
+        return p;
+    },
+    L0: function () {
         return s;
     },
-    ut: function () {
-        return T;
+    MY: function () {
+        return h;
     },
-    vJ: function () {
+    N8: function () {
+        return E;
+    },
+    PB: function () {
+        return N;
+    },
+    SW: function () {
+        return A;
+    },
+    Uo: function () {
+        return f;
+    },
+    WV: function () {
+        return S;
+    },
+    X_: function () {
+        return u;
+    },
+    _T: function () {
+        return c;
+    },
+    d6: function () {
+        return d;
+    },
+    f: function () {
         return l;
     },
+    pC: function () {
+        return r;
+    },
+    qj: function () {
+        return T;
+    },
+    sX: function () {
+        return I;
+    },
+    u: function () {
+        return i;
+    },
+    ut: function () {
+        return m;
+    },
+    vJ: function () {
+        return o;
+    },
     xT: function () {
-        return f;
+        return _;
     }
 });
 var r,
     i,
-    a,
-    s,
-    o = n(678916);
-((r = a || (a = {}))[(r.AVATAR = 0)] = 'AVATAR'), (r[(r.BANNER = 1)] = 'BANNER'), (r[(r.GUILD_BANNER = 2)] = 'GUILD_BANNER'), (r[(r.VIDEO_BACKGROUND = 3)] = 'VIDEO_BACKGROUND'), (r[(r.SCHEDULED_EVENT_IMAGE = 4)] = 'SCHEDULED_EVENT_IMAGE'), (r[(r.HOME_HEADER = 5)] = 'HOME_HEADER'), (r[(r.AVATAR_DECORATION = 6)] = 'AVATAR_DECORATION');
-let l = 568,
+    a = n(678916);
+!(function (e) {
+    (e[(e.AVATAR = 0)] = 'AVATAR'), (e[(e.BANNER = 1)] = 'BANNER'), (e[(e.GUILD_BANNER = 2)] = 'GUILD_BANNER'), (e[(e.VIDEO_BACKGROUND = 3)] = 'VIDEO_BACKGROUND'), (e[(e.SCHEDULED_EVENT_IMAGE = 4)] = 'SCHEDULED_EVENT_IMAGE'), (e[(e.HOME_HEADER = 5)] = 'HOME_HEADER'), (e[(e.AVATAR_DECORATION = 6)] = 'AVATAR_DECORATION');
+})(r || (r = {}));
+let o = 568,
+    s = 2400,
+    l = 848,
     u = 2400,
-    c = 848,
+    c = 1350,
     d = 2400,
-    _ = 1350,
+    _ = 960,
     E = 2400,
-    f = 960,
-    h = 2400,
-    p = 600,
-    I = 17 / 6,
-    m = 16 / 9,
-    T = 2.5,
-    S = 4,
-    g = 568 / (17 / 6),
-    A = 568 / (16 / 9),
-    N = 227.2,
-    O = 142,
-    R = o.HE.width / o.HE.height,
-    v = l / R;
-((i = s || (s = {}))[(i.CROP_GIF_START = 0)] = 'CROP_GIF_START'), (i[(i.CROP_GIF_COMPLETE = 1)] = 'CROP_GIF_COMPLETE'), (i[(i.CROP_GIF_ERROR = 2)] = 'CROP_GIF_ERROR');
+    f = 600,
+    h = 17 / 6,
+    p = 16 / 9,
+    m = 2.5,
+    I = 4,
+    T = 568 / (17 / 6),
+    g = 568 / (16 / 9),
+    S = 227.2,
+    A = 142,
+    v = a.HE.width / a.HE.height,
+    N = o / v;
+!(function (e) {
+    (e[(e.CROP_GIF_START = 0)] = 'CROP_GIF_START'), (e[(e.CROP_GIF_COMPLETE = 1)] = 'CROP_GIF_COMPLETE'), (e[(e.CROP_GIF_ERROR = 2)] = 'CROP_GIF_ERROR');
+})(i || (i = {}));

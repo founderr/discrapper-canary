@@ -1,35 +1,36 @@
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var s = n(120356),
-    a = n.n(s),
-    r = n(481060),
-    l = n(300995);
-t.Z = (e) => {
-    let { renderTitle: t, renderTagline: n, renderActions: s, renderMedia: o, className: c, isHorizontal: u = !1 } = e;
-    return (0, i.jsxs)('div', {
-        className: a()(l.tile, { [l.tileHorizontal]: u }, c),
+var i = n(120356),
+    a = n.n(i),
+    o = n(481060),
+    s = n(300995);
+let l = (e) => {
+    let { renderTitle: t, renderTagline: n, renderActions: i, renderMedia: l, className: u, isHorizontal: c = !1 } = e;
+    return (0, r.jsxs)('div', {
+        className: a()(s.tile, { [s.tileHorizontal]: c }, u),
         children: [
-            (0, i.jsx)('div', {
-                className: a()(l.media, { [l.mediaHorizontal]: u }),
-                children: null == o ? void 0 : o()
+            (0, r.jsx)('div', {
+                className: a()(s.media, { [s.mediaHorizontal]: c }),
+                children: null == l ? void 0 : l()
             }),
-            (0, i.jsxs)('div', {
-                className: l.description,
+            (0, r.jsxs)('div', {
+                className: s.description,
                 children: [
-                    (0, i.jsx)(r.H, {
-                        className: l.title,
+                    (0, r.jsx)(o.H, {
+                        className: s.title,
                         children: null == t ? void 0 : t()
                     }),
-                    (0, i.jsx)('div', {
-                        className: l.tagline,
+                    (0, r.jsx)('div', {
+                        className: s.tagline,
                         children: null == n ? void 0 : n()
                     }),
-                    (0, i.jsx)('div', {
-                        className: l.actions,
-                        children: null == s ? void 0 : s()
+                    (0, r.jsx)('div', {
+                        className: s.actions,
+                        children: null == i ? void 0 : i()
                     })
                 ]
             })
         ]
     });
 };
+t.Z = l;

@@ -1,10 +1,10 @@
-n(47120);
-var r = n(570140),
-    i = n(147913),
-    a = n(70956),
+var r = n(47120);
+var i = n(570140),
+    a = n(147913),
+    o = n(70956),
     s = n(2818),
-    o = n(768943);
-function l(e, t, n) {
+    l = n(768943);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -17,44 +17,40 @@ function l(e, t, n) {
         e
     );
 }
-let u = null;
-function c() {
+let c = null;
+function d(e) {
+    let { enabled: t } = s.Z.getCurrentConfig({ location: 'MessageRemindersNotificationManager' }, { autoTrackExposure: !1 });
+    if (!!t)
+        i.Z.dispatch({
+            type: 'MESSAGE_REMINDER_DUE',
+            savedMessage: e
+        }),
+            _();
+}
+function _() {
     var e;
     let { enabled: t } = s.Z.getCurrentConfig({ location: 'MessageRemindersNotificationManager' }, { autoTrackExposure: !1 });
     if (!t) return;
-    null != u && clearTimeout(u);
-    let n = o.Z.getMessageReminders().find((e) => null != e.saveData.dueAt && e.saveData.dueAt > new Date());
+    null != c && clearTimeout(c);
+    let n = l.Z.getMessageReminders().find((e) => null != e.saveData.dueAt && e.saveData.dueAt > new Date());
     if ((null == n ? void 0 : null === (e = n.saveData) || void 0 === e ? void 0 : e.dueAt) == null) {
-        u = null;
+        c = null;
         return;
     }
-    let i = Date.now() + a.Z.Millis.WEEK;
-    if (!(n.saveData.dueAt.getTime() > i))
-        u = setTimeout(
-            () =>
-                (function (e) {
-                    let { enabled: t } = s.Z.getCurrentConfig({ location: 'MessageRemindersNotificationManager' }, { autoTrackExposure: !1 });
-                    if (!!t)
-                        r.Z.dispatch({
-                            type: 'MESSAGE_REMINDER_DUE',
-                            savedMessage: e
-                        }),
-                            c();
-                })(n),
-            n.saveData.dueAt.getTime() - Date.now()
-        );
+    let r = Date.now() + o.Z.Millis.WEEK;
+    if (!(n.saveData.dueAt.getTime() > r)) c = setTimeout(() => d(n), n.saveData.dueAt.getTime() - Date.now());
 }
-class d extends i.Z {
+class E extends a.Z {
     constructor(...e) {
         super(...e),
-            l(this, 'actions', {
+            u(this, 'actions', {
                 SAVED_MESSAGES_UPDATE: () => this.handleUpdates(),
                 SAVED_MESSAGE_CREATE: () => this.handleUpdates(),
                 SAVED_MESSAGE_DELETE: () => this.handleUpdates()
             }),
-            l(this, 'handleUpdates', () => {
-                c();
+            u(this, 'handleUpdates', () => {
+                _();
             });
     }
 }
-t.Z = new d();
+t.Z = new E();

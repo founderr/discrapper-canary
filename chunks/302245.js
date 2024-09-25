@@ -1,25 +1,26 @@
 n.d(t, {
     Hp: function () {
-        return u;
-    },
-    PW: function () {
-        return i;
-    },
-    WV: function () {
         return l;
     },
+    PW: function () {
+        return r;
+    },
+    WV: function () {
+        return s;
+    },
     vI: function () {
-        return c;
+        return u;
     }
 });
 var r,
-    i,
-    a = n(470079),
-    s = n(818083),
+    i = n(470079),
+    a = n(818083),
     o = n(46140);
-((r = i || (i = {}))[(r.CONTROL = 0)] = 'CONTROL'), (r[(r.REWARD_AVAILABLE = 1)] = 'REWARD_AVAILABLE'), (r[(r.EARN_A_REWARD = 2)] = 'EARN_A_REWARD'), (r[(r.EARN_A_REWARD_EXCLAMATION = 3)] = 'EARN_A_REWARD_EXCLAMATION');
-let l = 60,
-    u = (0, s.B)({
+!(function (e) {
+    (e[(e.CONTROL = 0)] = 'CONTROL'), (e[(e.REWARD_AVAILABLE = 1)] = 'REWARD_AVAILABLE'), (e[(e.EARN_A_REWARD = 2)] = 'EARN_A_REWARD'), (e[(e.EARN_A_REWARD_EXCLAMATION = 3)] = 'EARN_A_REWARD_EXCLAMATION');
+})(r || (r = {}));
+let s = 60,
+    l = (0, a.B)({
         id: '2024-07_quest_bar_v2_reward_highlighting',
         kind: 'user',
         label: 'Quest Bar V2 Reward Highlighting',
@@ -62,8 +63,8 @@ let l = 60,
             }
         ]
     }),
-    c = function (e, t) {
+    u = function (e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-            r = a.useMemo(() => e.config.features.includes(o.S7.REWARD_HIGHLIGHTING), [e]);
-        return u.useExperiment({ location: t }, { autoTrackExposure: n }).enabled && r;
+            r = i.useMemo(() => e.config.features.includes(o.S7.REWARD_HIGHLIGHTING), [e]);
+        return l.useExperiment({ location: t }, { autoTrackExposure: n }).enabled && r;
     };

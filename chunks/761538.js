@@ -1,36 +1,37 @@
 n.d(t, {
     Z: function () {
-        return l;
+        return s;
     }
 });
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var s = n(481060),
+var i = n(481060),
     a = n(689938),
-    r = n(128037);
-function l(e) {
-    let { message: t } = e;
-    return (0, i.jsxs)(s.Clickable, {
-        onClick: () => {
-            (0, s.openModalLazy)(async () => {
+    o = n(128037);
+function s(e) {
+    let { message: t } = e,
+        s = () => {
+            (0, i.openModalLazy)(async () => {
                 let { default: e } = await n.e('14021').then(n.bind(n, 910673));
                 return (n) =>
-                    (0, i.jsx)(e, {
+                    (0, r.jsx)(e, {
                         channelId: t.channel_id,
                         messageId: t.id,
                         ...n
                     });
             });
-        },
-        className: r.accessory,
+        };
+    return (0, r.jsxs)(i.Clickable, {
+        onClick: s,
+        className: o.accessory,
         children: [
-            (0, i.jsx)(s.CircleInformationIcon, {
+            (0, r.jsx)(i.CircleInformationIcon, {
                 size: 'xs',
                 color: 'currentColor'
             }),
-            (0, i.jsx)(s.Text, {
+            (0, r.jsx)(i.Text, {
                 variant: 'text-xs/normal',
-                className: r.accessoryText,
+                className: o.accessoryText,
                 children: a.Z.Messages.OBSCURED_CONTENT_LEARN_MORE_MESSAGE_LABEL
             })
         ]

@@ -1,7 +1,7 @@
-var r, i, a, s, o, l, u, c;
+var r, i, a, o;
 n.d(t, {
     J: function () {
-        return E;
+        return u;
     },
     Nw: function () {
         return a;
@@ -10,24 +10,35 @@ n.d(t, {
         return r;
     },
     YG: function () {
-        return f;
+        return c;
     },
     hW: function () {
-        return _;
+        return l;
     },
     tB: function () {
-        return d;
+        return s;
     },
     wB: function () {
-        return s;
+        return o;
     }
 });
-let d = 25,
-    _ = 4;
-function E(e) {
+let s = 25,
+    l = 4;
+function u(e) {
     return null != e && 'TERMS' === e.field_type;
 }
-function f(e) {
-    return null != e && e.some((e) => !E(e));
+function c(e) {
+    return null != e && e.some((e) => !u(e));
 }
-((o = r || (r = {})).TERMS = 'TERMS'), (o.TEXT_INPUT = 'TEXT_INPUT'), (o.PARAGRAPH = 'PARAGRAPH'), (o.MULTIPLE_CHOICE = 'MULTIPLE_CHOICE'), (o.VERIFICATION = 'VERIFICATION'), ((l = i || (i = {})).EMAIL = 'email'), (l.PHONE = 'phone'), ((u = a || (a = {})).TIMESTAMP_DESC = 'NEWEST'), (u.TIMESTAMP_ASC = 'OLDEST'), ((c = s || (s = {})).STARTED = 'STARTED'), (c.SUBMITTED = 'SUBMITTED'), (c.REJECTED = 'REJECTED'), (c.APPROVED = 'APPROVED');
+!(function (e) {
+    (e.TERMS = 'TERMS'), (e.TEXT_INPUT = 'TEXT_INPUT'), (e.PARAGRAPH = 'PARAGRAPH'), (e.MULTIPLE_CHOICE = 'MULTIPLE_CHOICE'), (e.VERIFICATION = 'VERIFICATION');
+})(r || (r = {})),
+    !(function (e) {
+        (e.EMAIL = 'email'), (e.PHONE = 'phone');
+    })(i || (i = {})),
+    !(function (e) {
+        (e.TIMESTAMP_DESC = 'NEWEST'), (e.TIMESTAMP_ASC = 'OLDEST');
+    })(a || (a = {})),
+    !(function (e) {
+        (e.STARTED = 'STARTED'), (e.SUBMITTED = 'SUBMITTED'), (e.REJECTED = 'REJECTED'), (e.APPROVED = 'APPROVED');
+    })(o || (o = {}));

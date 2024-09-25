@@ -1,27 +1,29 @@
-n(47120);
-var r = n(355467),
-    i = n(147913),
-    a = n(400407);
-class s extends i.Z {
+var r = n(47120);
+var i = n(355467),
+    a = n(147913),
+    o = n(400407);
+function s(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+class l extends a.Z {
     constructor(...e) {
-        var t, n, i;
         super(...e),
-            (t = this),
-            (n = 'actions'),
-            (i = {
+            s(this, 'actions', {
                 POST_CONNECTION_OPEN: () => {
-                    let { enabled: e } = a.A.getCurrentConfig({ location: 'cd74f0_1' }, { autoTrackExposure: !1 });
-                    e && (0, r.B$)();
+                    let { enabled: e } = o.A.getCurrentConfig({ location: 'cd74f0_1' }, { autoTrackExposure: !1 });
+                    e && (0, i.B$)();
                 }
-            }),
-            n in t
-                ? Object.defineProperty(t, n, {
-                      value: i,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (t[n] = i);
+            });
     }
 }
-t.Z = new s();
+t.Z = new l();

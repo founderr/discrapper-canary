@@ -1,30 +1,32 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return p;
     }
 });
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var s = n(120356),
-    a = n.n(s),
-    r = n(297821),
-    l = n(481060),
-    o = n(839963),
-    c = n(139256),
-    u = n(689938),
+var i = n(120356),
+    a = n.n(i),
+    o = n(297821),
+    s = n(481060),
+    l = n(839963),
+    u = n(139256),
+    c = n(689938),
     d = n(829932);
-function _(e) {
-    let { didSelfVote: t, label: n, percentage: s } = e;
-    return (0, i.jsxs)('div', {
+let _ = 40,
+    E = 18;
+function f(e) {
+    let { didSelfVote: t, label: n, percentage: i } = e;
+    return (0, r.jsxs)('div', {
         className: d.votesData,
         children: [
-            t && (0, i.jsx)(r.T, { children: u.Z.Messages.POLL_ANSWER_VOTED_ARIA }),
-            (0, i.jsxs)(l.Text, {
+            t && (0, r.jsx)(o.T, { children: c.Z.Messages.POLL_ANSWER_VOTED_ARIA }),
+            (0, r.jsxs)(s.Text, {
                 variant: 'text-md/semibold',
                 color: 'none',
-                children: [s, '%']
+                children: [i, '%']
             }),
-            (0, i.jsx)(l.Text, {
+            (0, r.jsx)(s.Text, {
                 variant: 'text-xs/semibold',
                 color: 'none',
                 children: n
@@ -32,39 +34,39 @@ function _(e) {
         ]
     });
 }
-function E(e) {
-    let { answer: t, isExpired: n, myAvatarUrl: s, canShowVoteCounts: r } = e,
-        l = !0 === t.isSelected,
-        o = !0 === t.didSelfVote,
-        u = !0 === t.isVictor;
-    return (0, i.jsxs)(i.Fragment, {
+function h(e) {
+    let { answer: t, isExpired: n, myAvatarUrl: i, canShowVoteCounts: o } = e,
+        s = !0 === t.isSelected,
+        l = !0 === t.didSelfVote,
+        c = !0 === t.isVictor;
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, i.jsx)(c.$w, {
-                attachmentClassName: a()(d.attachment, { [d.attachmentWithResults]: r }),
+            (0, r.jsx)(u.$w, {
+                attachmentClassName: a()(d.attachment, { [d.attachmentWithResults]: o }),
                 emojiClassName: d.emoji,
                 media: t.pollMedia,
-                fallback: (0, i.jsx)('div', { className: a()(d.attachment, d.mediaMissing) })
+                fallback: (0, r.jsx)('div', { className: a()(d.attachment, d.mediaMissing) })
             }),
-            l &&
-                (0, i.jsx)(c.ZY, {
-                    size: 40,
-                    isVictor: u,
+            s &&
+                (0, r.jsx)(u.ZY, {
+                    size: _,
+                    isVictor: c,
                     isExpired: n,
                     className: d.selectedIcon
                 }),
-            r &&
-                (0, i.jsxs)(i.Fragment, {
+            o &&
+                (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, i.jsx)(_, {
-                            didSelfVote: o,
+                        (0, r.jsx)(f, {
+                            didSelfVote: l,
                             percentage: t.votesPercentage,
                             label: t.votes,
-                            myAvatarUrl: o ? s : void 0
+                            myAvatarUrl: l ? i : void 0
                         }),
-                        ((!n && o) || u) &&
-                            (0, i.jsx)(c.ZY, {
-                                size: 18,
-                                isVictor: u,
+                        ((!n && l) || c) &&
+                            (0, r.jsx)(u.ZY, {
+                                size: E,
+                                isVictor: c,
                                 isExpired: n,
                                 className: d.pollAnswerIcon
                             })
@@ -73,21 +75,21 @@ function E(e) {
         ]
     });
 }
-function I(e) {
-    let { isExpired: t, myAvatarUrl: n, answersInteraction: s, canShowVoteCounts: r, ...l } = e;
-    return (0, i.jsx)(c.$e, {
+function p(e) {
+    let { isExpired: t, myAvatarUrl: n, answersInteraction: i, canShowVoteCounts: o, ...s } = e;
+    return (0, r.jsx)(u.$e, {
         className: d.answersContainer,
-        answerClassName: a()(d.answer, { [d.currentlyVoting]: s !== o.Y7.LIST }),
+        answerClassName: a()(d.answer, { [d.currentlyVoting]: i !== l.Y7.LIST }),
         myAvatarUrl: n,
-        answersInteraction: s,
+        answersInteraction: i,
         renderAnswerContent: (e) =>
-            (0, i.jsx)(E, {
+            (0, r.jsx)(h, {
                 answer: e,
                 isExpired: t,
                 myAvatarUrl: n,
-                answersInteraction: s,
-                canShowVoteCounts: r
+                answersInteraction: i,
+                canShowVoteCounts: o
             }),
-        ...l
+        ...s
     });
 }

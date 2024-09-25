@@ -1,37 +1,47 @@
 n.d(t, {
     Kq: function () {
-        return T;
+        return A;
     },
     L0: function () {
-        return v;
+        return b;
     },
     Ux: function () {
-        return N;
-    },
-    Xe: function () {
         return R;
     },
+    Xe: function () {
+        return y;
+    },
     aQ: function () {
-        return g;
+        return N;
     },
     bU: function () {
-        return I;
+        return T;
     },
     qb: function () {
-        return S;
+        return v;
     }
 });
 var r = n(470079),
     i = n(230012),
     a = n(133886),
-    s = n(387103),
-    o = n(182823),
+    o = n(387103),
+    s = n(182823),
     l = n(881085);
 let u = new Set(['Arab', 'Syrc', 'Samr', 'Mand', 'Thaa', 'Mend', 'Nkoo', 'Adlm', 'Rohg', 'Hebr']),
-    c = new Set(['ae', 'ar', 'arc', 'bcc', 'bqi', 'ckb', 'dv', 'fa', 'glk', 'he', 'ku', 'mzn', 'nqo', 'pnb', 'ps', 'sd', 'ug', 'ur', 'yi']),
-    d = Symbol.for('react-aria.i18n.locale');
-function _() {
-    let e = ('undefined' != typeof window && window[d]) || ('undefined' != typeof navigator && (navigator.language || navigator.userLanguage)) || 'en-US';
+    c = new Set(['ae', 'ar', 'arc', 'bcc', 'bqi', 'ckb', 'dv', 'fa', 'glk', 'he', 'ku', 'mzn', 'nqo', 'pnb', 'ps', 'sd', 'ug', 'ur', 'yi']);
+function d(e) {
+    if (Intl.Locale) {
+        let t = new Intl.Locale(e).maximize(),
+            n = 'function' == typeof t.getTextInfo ? t.getTextInfo() : t.textInfo;
+        if (n) return 'rtl' === n.direction;
+        if (t.script) return u.has(t.script);
+    }
+    let t = e.split('-')[0];
+    return c.has(t);
+}
+let _ = Symbol.for('react-aria.i18n.locale');
+function E() {
+    let e = ('undefined' != typeof window && window[_]) || ('undefined' != typeof navigator && (navigator.language || navigator.userLanguage)) || 'en-US';
     try {
         Intl.DateTimeFormat.supportedLocalesOf([e]);
     } catch (t) {
@@ -39,66 +49,58 @@ function _() {
     }
     return {
         locale: e,
-        direction: !(function (e) {
-            if (Intl.Locale) {
-                let t = new Intl.Locale(e).maximize(),
-                    n = 'function' == typeof t.getTextInfo ? t.getTextInfo() : t.textInfo;
-                if (n) return 'rtl' === n.direction;
-                if (t.script) return u.has(t.script);
-            }
-            let t = e.split('-')[0];
-            return c.has(t);
-        })(e)
-            ? 'ltr'
-            : 'rtl'
+        direction: d(e) ? 'rtl' : 'ltr'
     };
 }
-let E = _(),
-    f = new Set();
-function h() {
-    for (let e of ((E = _()), f)) e(E);
+let f = E(),
+    h = new Set();
+function p() {
+    for (let e of ((f = E()), h)) e(f);
 }
-let p = r.createContext(null);
-function I() {
-    let e = (function () {
-        let e = (0, i.Av)(),
-            [t, n] = (0, r.useState)(E);
-        return ((0, r.useEffect)(
-            () => (
-                0 === f.size && window.addEventListener('languagechange', h),
-                f.add(n),
-                () => {
-                    f.delete(n), 0 === f.size && window.removeEventListener('languagechange', h);
-                }
-            ),
-            []
+function m() {
+    let e = (0, i.Av)(),
+        [t, n] = (0, r.useState)(f);
+    return ((0, r.useEffect)(
+        () => (
+            0 === h.size && window.addEventListener('languagechange', p),
+            h.add(n),
+            () => {
+                h.delete(n), 0 === h.size && window.removeEventListener('languagechange', p);
+            }
         ),
-        e)
-            ? {
-                  locale: 'en-US',
-                  direction: 'ltr'
-              }
-            : t;
-    })();
-    return (0, r.useContext)(p) || e;
+        []
+    ),
+    e)
+        ? {
+              locale: 'en-US',
+              direction: 'ltr'
+          }
+        : t;
 }
-let m = new WeakMap();
-function T(e, t) {
-    var n;
-    let r;
-    return (t && (0, a.J).getGlobalDictionaryForPackage(t)) || ((n = e), !(r = m.get(n)) && ((r = new a.J(n)), m.set(n, r)), r);
+let I = r.createContext(null);
+function T() {
+    let e = m();
+    return (0, r.useContext)(I) || e;
 }
-function S(e, t) {
-    let { locale: n } = I(),
-        i = T(e, t);
-    return (0, r.useMemo)(() => new a.E(n, i), [n, i]);
-}
-function g(e) {
-    e = (0, o.vE)(null != e ? e : {}, A);
-    let { locale: t } = I();
-    return (0, r.useMemo)(() => new s.CN(t, e), [t, e]);
+let g = new WeakMap();
+function S(e) {
+    let t = g.get(e);
+    return !t && ((t = new a.J(e)), g.set(e, t)), t;
 }
 function A(e, t) {
+    return (t && (0, a.J).getGlobalDictionaryForPackage(t)) || S(e);
+}
+function v(e, t) {
+    let { locale: n } = T(),
+        i = A(e, t);
+    return (0, r.useMemo)(() => new a.E(n, i), [n, i]);
+}
+function N(e) {
+    e = (0, s.vE)(null != e ? e : {}, O);
+    let { locale: t } = T();
+    return (0, r.useMemo)(() => new o.CN(t, e), [t, e]);
+}
+function O(e, t) {
     if (e === t) return !0;
     let n = Object.keys(e),
         r = Object.keys(t);
@@ -106,13 +108,13 @@ function A(e, t) {
     for (let r of n) if (t[r] !== e[r]) return !1;
     return !0;
 }
-function N(e = {}) {
-    let { locale: t } = I();
+function R(e = {}) {
+    let { locale: t } = T();
     return (0, r.useMemo)(() => new l.e(t, e), [t, e]);
 }
-let O = new Map();
-function R(e) {
-    let { locale: t } = I(),
+let C = new Map();
+function y(e) {
+    let { locale: t } = T(),
         n =
             t +
             (e
@@ -120,12 +122,12 @@ function R(e) {
                       .sort((e, t) => (e[0] < t[0] ? -1 : 1))
                       .join()
                 : '');
-    if (O.has(n)) return O.get(n);
+    if (C.has(n)) return C.get(n);
     let r = new Intl.Collator(t, e);
-    return O.set(n, r), r;
+    return C.set(n, r), r;
 }
-function v(e) {
-    let t = R({
+function b(e) {
+    let t = y({
             usage: 'search',
             ...e
         }),

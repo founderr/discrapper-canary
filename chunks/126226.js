@@ -1,14 +1,14 @@
 n.d(t, {
     K: function () {
-        return R;
+        return O;
     }
 });
 var r = n(735250);
 n(470079);
 var i = n(693789),
     a = n(952265),
-    s = n(911969),
-    o = n(555573),
+    o = n(911969),
+    s = n(555573),
     l = n(254711),
     u = n(213459),
     c = n(10718),
@@ -18,30 +18,30 @@ var i = n(693789),
     f = n(581364),
     h = n(826298),
     p = n(588468),
-    I = n(496675),
-    m = n(226951),
+    m = n(496675),
+    I = n(226951),
     T = n(877565),
-    S = n(590921),
-    g = n(665692),
+    g = n(590921),
+    S = n(665692),
     A = n(689079),
-    N = n(689938),
-    O = n(239114);
-let R = { results: { entries: [] } };
-function v() {
+    v = n(689938),
+    N = n(239114);
+let O = { results: { entries: [] } };
+function R() {
     (0, a.ZD)(async () => {
         let { default: e } = await n.e('87549').then(n.bind(n, 913962));
         return (t) => (0, r.jsx)(e, { ...t });
     });
 }
 let C = {
-    sentinel: g.GI,
-    stores: [_.Z, u.ZP, I.Z],
-    matches: (e, t, n, r, i) => i.commands !== S.L8.DISABLED && null == _.Z.getActiveCommand(e.id) && (r || i.commands !== S.L8.OLD_BUILT_INS),
+    sentinel: S.GI,
+    stores: [_.Z, u.ZP, m.Z],
+    matches: (e, t, n, r, i) => i.commands !== g.L8.DISABLED && null == _.Z.getActiveCommand(e.id) && (r || i.commands !== g.L8.OLD_BUILT_INS),
     queryResults(e, t, n, r, i) {
-        if (0 === n.length && r.commands !== S.L8.OLD_BUILT_INS) return R;
-        if (r.commands === S.L8.OLD_BUILT_INS) {
-            let r = (0, l.Kh)([s.yU.CHAT], !1, !1),
-                i = RegExp('^'.concat(m.Z.escape(n)), 'i'),
+        if (0 === n.length && r.commands !== g.L8.OLD_BUILT_INS) return O;
+        if (r.commands === g.L8.OLD_BUILT_INS) {
+            let r = (0, l.Kh)([o.yU.CHAT], !1, !1),
+                i = RegExp('^'.concat(I.Z.escape(n)), 'i'),
                 a = (0, f.Dd)(
                     r,
                     i,
@@ -49,46 +49,46 @@ let C = {
                         channel: e,
                         guild: t
                     },
-                    S.AQ
+                    g.AQ
                 ),
-                o = l.Tm[A.bi.BUILT_IN];
+                s = l.Tm[A.bi.BUILT_IN];
             return 0 === a.length
-                ? R
+                ? O
                 : {
                       results: {
                           entries: a.map((e) => ({
                               command: e,
-                              section: o
+                              section: s
                           }))
                       }
                   };
         }
         let a = (0, h.hV)(e, n),
-            { commands: o, sections: u } = c.JT(
+            { commands: s, sections: u } = c.JT(
                 e,
                 {
-                    commandTypes: [s.yU.CHAT],
+                    commandTypes: [o.yU.CHAT],
                     text: a.text
                 },
                 {
-                    limit: S.AQ,
-                    placeholderCount: S.YP,
+                    limit: g.AQ,
+                    placeholderCount: g.YP,
                     scoreMethod: d.p.COMMAND_OR_APPLICATION,
                     allowFetch: i
                 }
             );
-        if (null == o) return R;
-        let _ = o;
+        if (null == s) return O;
+        let _ = s;
         if (a.hasSpaceTerminator) {
             let e = a.text.trim(),
                 t = e + ' ';
             _ = _.filter((n) => n.displayName === e || n.displayName.startsWith(t));
         }
         return 0 === _.length
-            ? R
+            ? O
             : {
                   results: {
-                      entries: _.slice(0, S.AQ).map((e) => ({
+                      entries: _.slice(0, g.AQ).map((e) => ({
                           command: e,
                           section: null == u ? void 0 : u.find((t) => t.id === e.applicationId)
                       }))
@@ -100,22 +100,22 @@ let C = {
                 results: { entries: t },
                 selectedIndex: n,
                 channel: a,
-                query: s,
-                options: o,
+                query: o,
+                options: s,
                 onHover: l,
                 onClick: u
             } = e,
-            c = (0, h.hV)(a, s),
-            d = o.commands === S.L8.OLD_BUILT_INS;
+            c = (0, h.hV)(a, o),
+            d = s.commands === g.L8.OLD_BUILT_INS;
         return (0, T.HI)({
             query: c.text,
             selectedIndex: n,
             autocompletes: t,
             onHover: l,
             onClick: u,
-            titleWithQuery: N.Z.Messages.COMMANDS_MATCHING,
-            titleWithoutQuery: N.Z.Messages.COMMANDS,
-            getQuery: (e) => ''.concat(g.GI).concat(e),
+            titleWithQuery: v.Z.Messages.COMMANDS_MATCHING,
+            titleWithoutQuery: v.Z.Messages.COMMANDS,
+            getQuery: (e) => ''.concat(S.GI).concat(e),
             Component: d ? p.ZP.Command : p.ZP.NewCommand,
             getProps: (e) => {
                 let { command: t, section: n } = e;
@@ -129,15 +129,15 @@ let C = {
                 };
             },
             key: 'commands',
-            headerClassName: d ? O.legacyInputCommandHeader : null,
+            headerClassName: d ? N.legacyInputCommandHeader : null,
             headerTrailingContent: d
                 ? (0, r.jsx)(i.zx, {
                       type: 'button',
                       look: i.zx.Looks.LINK,
                       color: i.zx.Colors.BRAND,
                       size: i.zx.Sizes.MIN,
-                      onClick: v,
-                      children: N.Z.Messages.LEGACY_CHAT_INPUT_SLASH_COMMAND_MISSING_HELP_MESSAGE
+                      onClick: R,
+                      children: v.Z.Messages.LEGACY_CHAT_INPUT_SLASH_COMMAND_MISSING_HELP_MESSAGE
                   })
                 : null
         });
@@ -149,21 +149,16 @@ let C = {
                 queryText: r,
                 options: i,
                 channel: a,
-                location: s,
+                location: o,
                 tabOrEnter: l
             } = e,
             { command: u, section: c } = t[n];
         if (u.inputType === E.iw.PLACEHOLDER) return null;
-        if (i.commands === S.L8.OLD_BUILT_INS)
-            i.insertText(
-                (function (e) {
-                    return ''.concat(g.GI).concat(e.displayName);
-                })(u)
-            );
+        if (i.commands === g.L8.OLD_BUILT_INS) i.insertText(y(u));
         else {
-            let e = s;
+            let e = o;
             null == e && (e = l ? E.Vh.QUERY : E.Vh.DISCOVERY),
-                o.Po({
+                s.Po({
                     channelId: a.id,
                     command: u,
                     section: null != c ? c : null,
@@ -171,7 +166,10 @@ let C = {
                     queryLength: null == r ? void 0 : r.length
                 });
         }
-        return { type: S.z2.COMMAND };
+        return { type: g.z2.COMMAND };
     }
 };
+function y(e) {
+    return ''.concat(S.GI).concat(e.displayName);
+}
 t.Z = C;

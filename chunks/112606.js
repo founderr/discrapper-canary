@@ -1,10 +1,11 @@
-n(47120);
-var r = n(392711),
-    i = n.n(r),
-    a = n(626135),
+var r = n(47120);
+var i = n(392711),
+    a = n.n(i),
+    o = n(626135),
     s = n(524484),
-    o = n(981631);
-function l(e) {
+    l = n(981631);
+let u = 5000;
+function c(e) {
     switch (e) {
         case s.oZ.CHAT_INPUT:
             return 'chat_input';
@@ -14,7 +15,7 @@ function l(e) {
             return 'voice_user';
     }
 }
-function u(e) {
+function d(e) {
     switch (e) {
         case s.Hn.CHAT_INPUT:
             return 'chat_input';
@@ -26,7 +27,7 @@ function u(e) {
             return 'call_tile';
     }
 }
-function c(e, t) {
+function _(e, t) {
     return Object.entries(e)
         .filter((e) => {
             let [t, n] = e;
@@ -37,19 +38,19 @@ function c(e, t) {
             return t(Number.parseInt(n));
         });
 }
-let d = i().throttle((e) => {
-    let { enabled: t, combosEnabled: n, combosRequiredCount: r, screenshakeEnabled: i, shakeIntensity: s, screenshakeEnabledLocations: d, confettiEnabled: _, confettiSize: E, confettiCount: f, confettiEnabledLocations: h } = e;
-    a.default.track(o.rMx.POGGERMODE_SETTINGS_UPDATED, {
+let E = a().throttle((e) => {
+    let { enabled: t, combosEnabled: n, combosRequiredCount: r, screenshakeEnabled: i, shakeIntensity: a, screenshakeEnabledLocations: s, confettiEnabled: u, confettiSize: E, confettiCount: f, confettiEnabledLocations: h } = e;
+    o.default.track(l.rMx.POGGERMODE_SETTINGS_UPDATED, {
         enabled: t,
         combos_enabled: n,
         combos_required_count: r,
         screenshake_enabled: i,
-        shake_intensity: s,
-        screenshake_enabled_locations: c(d, l),
-        confetti_enabled: _,
+        shake_intensity: a,
+        screenshake_enabled_locations: _(s, c),
+        confetti_enabled: u,
         confetti_size: E,
         confetti_count: f,
-        confetti_enabled_locations: c(h, u)
+        confetti_enabled_locations: _(h, d)
     });
-}, 5000);
-t.Z = d;
+}, u);
+t.Z = E;

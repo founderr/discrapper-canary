@@ -1,70 +1,72 @@
-n(47120);
+var r = n(47120);
 var i = n(735250),
-    s = n(470079),
-    a = n(120356),
-    r = n.n(a),
+    a = n(470079),
+    o = n(120356),
+    s = n.n(o),
     l = n(442837),
-    o = n(481060),
+    u = n(481060),
     c = n(749210),
-    u = n(703656),
-    d = n(430824),
-    _ = n(914010),
-    E = n(900849),
-    I = n(41776),
-    m = n(981631),
-    T = n(689938),
-    h = n(331781),
-    N = n(250812);
-t.Z = () => {
-    let e = (0, l.e7)([_.Z], () => _.Z.getGuildId(), []),
-        t = (0, l.e7)([d.Z], () => d.Z.getGuild(e), [e]),
-        n = (0, l.e7)([I.Z], () => I.Z.getHistorySnapshot(), []),
-        [a, f] = s.useState(!1);
+    d = n(703656),
+    _ = n(430824),
+    E = n(914010),
+    f = n(900849),
+    h = n(41776),
+    p = n(981631),
+    m = n(689938),
+    I = n(331781),
+    T = n(250812);
+let g = () => {
+    let e = (0, l.e7)([E.Z], () => E.Z.getGuildId(), []),
+        t = (0, l.e7)([_.Z], () => _.Z.getGuild(e), [e]),
+        n = (0, l.e7)([h.Z], () => h.Z.getHistorySnapshot(), []),
+        [r, o] = a.useState(!1);
     if (null == t) return null;
-    let C = async () => {
-        f(!0);
-        try {
-            E.mT(t.id), await c.Z.joinGuild(t.id, { source: m.vtS.NOTICE_BAR });
-        } catch {
-            f(!1);
-        }
-    };
+    let g = () => {
+            let e = (0, d.s1)();
+            null != n && null != n.location ? (0, d.dL)({ ...n.location }) : e.goBack();
+        },
+        S = async () => {
+            o(!0);
+            try {
+                f.mT(t.id), await c.Z.joinGuild(t.id, { source: p.vtS.NOTICE_BAR });
+            } catch {
+                o(!1);
+            }
+        };
     return (0, i.jsxs)('div', {
-        className: r()(h.notice, N.notice),
+        className: s()(I.notice, T.notice),
         children: [
-            (0, i.jsxs)(o.Button, {
-                look: o.Button.Looks.OUTLINED,
-                color: o.Button.Colors.WHITE,
-                size: o.Button.Sizes.NONE,
-                className: r()(h.button, h.back),
-                innerClassName: h.iconButton,
-                onClick: () => {
-                    let e = (0, u.s1)();
-                    null != n && null != n.location ? (0, u.dL)({ ...n.location }) : e.goBack();
-                },
+            (0, i.jsxs)(u.Button, {
+                look: u.Button.Looks.OUTLINED,
+                color: u.Button.Colors.WHITE,
+                size: u.Button.Sizes.NONE,
+                className: s()(I.button, I.back),
+                innerClassName: I.iconButton,
+                onClick: g,
                 children: [
-                    (0, i.jsx)(o.ArrowSmallLeftIcon, {
+                    (0, i.jsx)(u.ArrowSmallLeftIcon, {
                         size: 'xs',
                         color: 'currentColor',
-                        className: h.arrow
+                        className: I.arrow
                     }),
-                    T.Z.Messages.BACK
+                    m.Z.Messages.BACK
                 ]
             }),
-            (0, i.jsx)(o.Text, {
-                className: h.header,
+            (0, i.jsx)(u.Text, {
+                className: I.header,
                 variant: 'text-sm/normal',
-                children: T.Z.Messages.LURKER_MODE_NAG_BAR_HEADER
+                children: m.Z.Messages.LURKER_MODE_NAG_BAR_HEADER
             }),
-            (0, i.jsx)(o.Button, {
-                className: h.button,
-                look: o.Button.Looks.OUTLINED,
-                color: o.Button.Colors.WHITE,
-                size: o.Button.Sizes.NONE,
-                submitting: a,
-                onClick: C,
-                children: T.Z.Messages.LURKER_MODE_NAG_BAR_BUTTON.format({ guild: t.name })
+            (0, i.jsx)(u.Button, {
+                className: I.button,
+                look: u.Button.Looks.OUTLINED,
+                color: u.Button.Colors.WHITE,
+                size: u.Button.Sizes.NONE,
+                submitting: r,
+                onClick: S,
+                children: m.Z.Messages.LURKER_MODE_NAG_BAR_BUTTON.format({ guild: t.name })
             })
         ]
     });
 };
+t.Z = g;

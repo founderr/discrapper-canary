@@ -2,13 +2,12 @@ n.d(t, {
     F: function () {
         return c;
     }
-}),
-    n(47120);
+});
 var r,
     i,
-    a,
-    s = n(735250),
-    o = n(470079),
+    a = n(47120);
+var o = n(735250),
+    s = n(470079),
     l = n(846519);
 function u(e, t, n) {
     return (
@@ -23,8 +22,10 @@ function u(e, t, n) {
         e
     );
 }
-((a = r || (r = {})).SVG = 'svg'), (a.CANVAS = 'canvas');
-class c extends (i = o.Component) {
+!(function (e) {
+    (e.SVG = 'svg'), (e.CANVAS = 'canvas');
+})(r || (r = {}));
+class c extends (i = s.Component) {
     componentDidMount() {
         (null == this.props.versionKey || !(this.props.versionKey < 0)) && this.loadAnimation();
     }
@@ -38,28 +39,28 @@ class c extends (i = o.Component) {
         if (null != this.animation) this.props.shouldAnimate && (null == e || !e.shouldAnimate) ? (this.props.resetOnPlay ? this.animation.goToAndPlay(0) : this.animation.play()) : !this.props.shouldAnimate && (null == e || e.shouldAnimate) && (this.animation.pause(), null != this.props.pauseAtFrame && this.animation.goToAndStop(this.props.pauseAtFrame, !0));
     }
     render() {
-        return (0, s.jsx)('div', {
+        return (0, o.jsx)('div', {
             className: this.props.className,
             ref: this.animationRef
         });
     }
     constructor(...e) {
         super(...e),
-            u(this, 'animationRef', o.createRef()),
+            u(this, 'animationRef', s.createRef()),
             u(this, 'animation', void 0),
             u(this, 'delayTimeout', new l.V7()),
             u(this, 'loadAnimation', async () => {
-                let { importData: e, loop: t, autoplay: r, delay: i, renderer: a, rendererSettings: s, shouldAnimate: o } = this.props;
+                let { importData: e, loop: t, autoplay: r, delay: i, renderer: a, rendererSettings: o, shouldAnimate: s } = this.props;
                 null != this.animation && this.animation.destroy();
-                let [l, { default: u }] = await Promise.all([e(), n.e('23755').then(n.t.bind(n, 500923, 23))]);
+                let [l, { default: u }] = await Promise.all([e(), Promise.resolve().then(n.t.bind(n, 500923, 23))]);
                 if (null != this.animationRef.current)
                     (this.animation = u.loadAnimation({
                         container: this.animationRef.current,
                         renderer: a,
                         loop: t,
-                        autoplay: r && null == i && o,
+                        autoplay: r && null == i && s,
                         animationData: l,
-                        rendererSettings: s
+                        rendererSettings: o
                     })),
                         null != i
                             ? this.delayTimeout.start(i, () => {

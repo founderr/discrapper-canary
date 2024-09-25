@@ -1,59 +1,55 @@
-var r, i, a, s;
 n.d(t, {
     $x: function () {
-        return _;
+        return d;
     },
     AB: function () {
-        return l;
+        return s;
     },
     EC: function () {
-        return f;
+        return E;
     },
     HY: function () {
         return i;
     },
     ME: function () {
-        return c;
-    },
-    Qk: function () {
         return u;
     },
+    Qk: function () {
+        return l;
+    },
     V: function () {
-        return h;
+        return f;
     },
     Vg: function () {
         return o;
     },
     Z7: function () {
-        return E;
+        return _;
     },
     oC: function () {
         return r;
     },
     zZ: function () {
-        return d;
+        return c;
     }
-}),
-    n(47120),
-    ((a = r || (r = {})).ROLE_SUBSCRIPTIONS = 'role-subscriptions'),
-    (a.GUILD_SHOP = 'shop'),
-    (a.MEMBER_APPLICATIONS = 'member-applications'),
-    (a.GUILD_HOME = '@home'),
-    (a.CHANNEL_BROWSER = 'channel-browser'),
-    (a.GUILD_ONBOARDING = 'onboarding'),
-    (a.CUSTOMIZE_COMMUNITY = 'customize-community'),
-    (a.MEMBER_SAFETY = 'member-safety');
+});
+var r,
+    i,
+    a = n(47120);
+!(function (e) {
+    (e.ROLE_SUBSCRIPTIONS = 'role-subscriptions'), (e.GUILD_SHOP = 'shop'), (e.MEMBER_APPLICATIONS = 'member-applications'), (e.GUILD_HOME = '@home'), (e.CHANNEL_BROWSER = 'channel-browser'), (e.GUILD_ONBOARDING = 'onboarding'), (e.CUSTOMIZE_COMMUNITY = 'customize-community'), (e.MEMBER_SAFETY = 'member-safety');
+})(r || (r = {}));
 let o = new Set(Object.values(r));
-function l(e) {
+function s(e) {
     return o.has(e);
 }
-function u(e, t) {
+function l(e, t) {
     return ''.concat(e, '-').concat(t);
 }
-function c(e) {
+function u(e) {
     return !!(null == e ? void 0 : e.includes('@home'));
 }
-let d = Object.freeze({
+let c = Object.freeze({
         GUILD_FEED_REMOVED: 1,
         PINNED: 2,
         ACTIVE_CHANNELS_REMOVED: 4,
@@ -69,8 +65,10 @@ let d = Object.freeze({
         HIDE_MEDIA_DOWNLOAD_OPTIONS: 32768,
         IS_JOIN_REQUEST_INTERVIEW_CHANNEL: 65536
     }),
-    _ = 1024,
-    E = 4096;
-((s = i || (i = {})).GUILD_HOME = 'home'), (s.SERVER_GUIDE = 'guide'), (s.CHANNEL_BROWSER = 'browse'), (s.CUSTOMIZE_COMMUNITY = 'customize'), (s.LINKED_ROLES = 'linked-roles');
-let f = new Set(Object.values(i)),
-    h = '131';
+    d = 1024,
+    _ = 4096;
+!(function (e) {
+    (e.GUILD_HOME = 'home'), (e.SERVER_GUIDE = 'guide'), (e.CHANNEL_BROWSER = 'browse'), (e.CUSTOMIZE_COMMUNITY = 'customize'), (e.LINKED_ROLES = 'linked-roles');
+})(i || (i = {}));
+let E = new Set(Object.values(i)),
+    f = '131';

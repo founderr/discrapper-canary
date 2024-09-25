@@ -1,9 +1,9 @@
 var r = n(470079),
     i = n(580747),
     a = n(607789);
-t.Z = (e, t) => {
+let o = (e, t) => {
     let n = (0, i.Z)('profile_effect_debug_controls'),
-        { id: s, preset: o, increment: l, decrement: u } = (0, a.Z)(e);
+        { id: o, preset: s, increment: l, decrement: u } = (0, a.Z)(e);
     return (
         r.useEffect(() => {
             if (!n) return;
@@ -18,8 +18,9 @@ t.Z = (e, t) => {
             );
         }, []),
         {
-            id: null != s ? s : null,
-            preset: o
+            id: null != o ? o : null,
+            preset: s
         }
     );
 };
+t.Z = o;

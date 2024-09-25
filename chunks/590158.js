@@ -1,4 +1,6 @@
-e.exports = function (e) {
+function t(e) {
+    let t = '\\[',
+        n = '\\]';
     return {
         name: 'Inform 7',
         aliases: ['i7'],
@@ -13,8 +15,8 @@ e.exports = function (e) {
                 contains: [
                     {
                         className: 'subst',
-                        begin: '\\[',
-                        end: '\\]'
+                        begin: t,
+                        end: n
                     }
                 ]
             },
@@ -35,10 +37,11 @@ e.exports = function (e) {
             },
             {
                 className: 'comment',
-                begin: '\\[',
-                end: '\\]',
+                begin: t,
+                end: n,
                 contains: ['self']
             }
         ]
     };
-};
+}
+e.exports = t;

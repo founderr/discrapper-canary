@@ -1,4 +1,4 @@
-e.exports = function (e, t, n) {
+function t(e, t, n) {
     switch (n.length) {
         case 0:
             return e.call(t);
@@ -10,4 +10,5 @@ e.exports = function (e, t, n) {
             return e.call(t, n[0], n[1], n[2]);
     }
     return e.apply(t, n);
-};
+}
+e.exports = t;

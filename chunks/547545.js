@@ -1,10 +1,23 @@
 n.d(t, {
     Z: function () {
-        return i;
+        return a;
     }
 });
 var r = n(689938);
-class i {
+function i(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+class a {
     announce(e, t, n) {
         this.announcer.announce(e, t, n);
     }
@@ -30,21 +43,7 @@ class i {
         return null !== (r = null !== (n = e.getAttribute('data-dnd-name')) && void 0 !== n ? n : e.getAttribute('aria-label')) && void 0 !== r ? r : t;
     }
     constructor(e) {
-        var t, r, i;
-        if (
-            ((t = this),
-            (i = void 0),
-            (r = 'announcer') in t
-                ? Object.defineProperty(t, r, {
-                      value: i,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (t[r] = i),
-            null != e)
-        )
-            this.announcer = e;
+        if ((i(this, 'announcer', void 0), null != e)) this.announcer = e;
         else {
             let e = n(408160);
             this.announcer = {

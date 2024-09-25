@@ -1,4 +1,5 @@
 var r = n(675717);
-t.Z = function (e) {
+function i(e) {
     return e == e && !(0, r.Z)(e);
-};
+}
+t.Z = i;

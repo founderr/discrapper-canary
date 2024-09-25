@@ -1,4 +1,5 @@
-e.exports = function (e) {
+function t(e) {
+    let t = 'if eq ne lt lte gt gte select default math sep';
     return {
         name: 'Dust',
         aliases: ['dst'],
@@ -27,8 +28,9 @@ e.exports = function (e) {
                 begin: /\{/,
                 end: /\}/,
                 illegal: /;/,
-                keywords: 'if eq ne lt lte gt gte select default math sep'
+                keywords: t
             }
         ]
     };
-};
+}
+e.exports = t;

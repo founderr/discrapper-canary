@@ -1,28 +1,41 @@
 n.d(t, {
     s: function () {
-        return l;
+        return d;
     }
-}),
-    n(47120),
-    n(627341);
-var r = n(278074),
-    i = n(264181),
-    a = n(178185),
-    s = n(272280),
-    o = n(806185);
-class l {
+});
+var r = n(47120);
+var i = n(627341);
+var a = n(278074),
+    o = n(264181),
+    s = n(178185),
+    l = n(272280),
+    u = n(806185);
+function c(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+class d {
     static fromServer(e) {
         var t;
-        return new l(
+        return new d(
             Object.fromEntries(
                 Object.entries(null !== (t = e.marketings) && void 0 !== t ? t : {}).map((e) => {
                     let [t, n] = e;
                     return [
                         t,
-                        (0, r.EQ)(n)
-                            .with({ type: i.Z.COACHTIP }, (e) => o.Z.fromServer(e))
-                            .with({ type: i.Z.BADGE }, (e) => a.E.fromServer(e))
-                            .with({ type: i.Z.BANNER }, (e) => s.I.fromServer(e))
+                        (0, a.EQ)(n)
+                            .with({ type: o.Z.COACHTIP }, (e) => u.Z.fromServer(e))
+                            .with({ type: o.Z.BADGE }, (e) => s.E.fromServer(e))
+                            .with({ type: o.Z.BANNER }, (e) => l.I.fromServer(e))
                             .otherwise(() => void 0)
                     ];
                 })
@@ -30,17 +43,6 @@ class l {
         );
     }
     constructor(e) {
-        var t, n, r;
-        (t = this),
-            (r = void 0),
-            (n = 'marketingsBySurfaces') in t
-                ? Object.defineProperty(t, n, {
-                      value: r,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (t[n] = r),
-            (this.marketingsBySurfaces = e);
+        c(this, 'marketingsBySurfaces', void 0), (this.marketingsBySurfaces = e);
     }
 }

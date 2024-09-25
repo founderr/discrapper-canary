@@ -1,4 +1,4 @@
-e.exports = function (e) {
+function t(e) {
     let t = e.regex;
     return {
         name: 'Diff',
@@ -36,4 +36,5 @@ e.exports = function (e) {
             }
         ]
     };
-};
+}
+e.exports = t;

@@ -1,15 +1,15 @@
 n.d(t, {
     r: function () {
-        return u;
+        return E;
     }
-}),
-    n(653041),
-    n(47120),
-    n(411104);
-var r = n(259443),
-    i = n(198584),
-    a = n(444675);
-function s(e, t, n) {
+});
+var r = n(653041);
+var i = n(47120);
+var a = n(411104);
+var o = n(259443),
+    s = n(198584),
+    l = n(444675);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,9 +22,10 @@ function s(e, t, n) {
         e
     );
 }
-let o = '1' === a.env.KV_STORAGE_LOGGING,
-    l = new r.Y('Runtime');
-class u {
+let c = 1000000,
+    d = '1' === l.env.KV_STORAGE_LOGGING,
+    _ = new o.Y('Runtime');
+class E {
     static nextId() {
         return ++this.counter;
     }
@@ -75,10 +76,10 @@ class u {
                 ok: t.ok,
                 value: t.data,
                 timings: {
-                    queue: t.timings.queueTimeNanoseconds / 1000000,
-                    execution: t.timings.executionTimeNanoseconds / 1000000,
-                    materialization: t.timings.materializationTimeNanoseconds / 1000000,
-                    ccTotal: t.timings.totalTimeNanoseconds / 1000000,
+                    queue: t.timings.queueTimeNanoseconds / c,
+                    execution: t.timings.executionTimeNanoseconds / c,
+                    materialization: t.timings.materializationTimeNanoseconds / c,
+                    ccTotal: t.timings.totalTimeNanoseconds / c,
                     jsTotal: n - e.started
                 }
             };
@@ -87,18 +88,18 @@ class u {
     }
     static initialize() {
         if (!this.initialized)
-            i.d.setCallbacks({
+            s.d.setCallbacks({
                 status: (e) => this.onStatus(e),
                 response: (e, t) => this.onResponse(e, t)
             }),
-                o &&
+                d &&
                     (this.addCompletionCallback((e) => {
                         let t = e.ok ? 'completed' : 'failed',
                             n = [''.concat(e.timings.execution.toFixed(3), 'ms execution'), ''.concat(e.timings.materialization.toFixed(3), 'ms js materialization'), ''.concat(e.timings.ccTotal.toFixed(3), 'ms cc completion'), ''.concat(e.timings.jsTotal.toFixed(3), 'ms js reception')].join(', ');
-                        l.info(''.concat(e.tag, ' (#').concat(e.id, ') ').concat(t, ' in ').concat(e.timings.ccTotal.toFixed(3), 'ms (').concat(n, ').'));
+                        _.info(''.concat(e.tag, ' (#').concat(e.id, ') ').concat(t, ' in ').concat(e.timings.ccTotal.toFixed(3), 'ms (').concat(n, ').'));
                     }),
-                    this.addDatabaseStateCallback((e, t) => l.info(''.concat(e, ' (state: ').concat(t, ')')))),
+                    this.addDatabaseStateCallback((e, t) => _.info(''.concat(e, ' (state: ').concat(t, ')')))),
                 (this.initialized = !0);
     }
 }
-s(u, 'counter', 0), s(u, 'pending', new Map()), s(u, 'initialized', !1), s(u, 'dbStateCallbacks', []), s(u, 'completionCallbacks', []);
+u(E, 'counter', 0), u(E, 'pending', new Map()), u(E, 'initialized', !1), u(E, 'dbStateCallbacks', []), u(E, 'completionCallbacks', []);

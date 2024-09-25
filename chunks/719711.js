@@ -1,13 +1,17 @@
-var r, i, a, s;
+var r, i;
 n.d(t, {
     SV: function () {
-        return o;
+        return a;
     }
 }),
-    ((a = r || (r = {}))[(a.SKIP_MIGRATION = 0)] = 'SKIP_MIGRATION'),
-    (a[(a.SEND_DATA = 1)] = 'SEND_DATA'),
-    (a[(a.DATA_MIGRATED = 2)] = 'DATA_MIGRATED'),
-    (a[(a.DATA_MIGRATED_CONFIRMED = 3)] = 'DATA_MIGRATED_CONFIRMED'),
-    ((s = i || (i = {}))[(s.MIGRATION_SOURCE_DOMAIN = 0)] = 'MIGRATION_SOURCE_DOMAIN'),
-    (s[(s.MIGRATION_DESTINATION_DOMAIN = 1)] = 'MIGRATION_DESTINATION_DOMAIN');
-let o = 'domainMigrationSuccess';
+    !(function (e) {
+        (e[(e.SKIP_MIGRATION = 0)] = 'SKIP_MIGRATION'), (e[(e.SEND_DATA = 1)] = 'SEND_DATA'), (e[(e.DATA_MIGRATED = 2)] = 'DATA_MIGRATED'), (e[(e.DATA_MIGRATED_CONFIRMED = 3)] = 'DATA_MIGRATED_CONFIRMED');
+    })(r || (r = {})),
+    !(function (e) {
+        (e[(e.MIGRATION_SOURCE_DOMAIN = 0)] = 'MIGRATION_SOURCE_DOMAIN'), (e[(e.MIGRATION_DESTINATION_DOMAIN = 1)] = 'MIGRATION_DESTINATION_DOMAIN');
+    })(i || (i = {}));
+let a = 'domainMigrationSuccess';
+function o(e, t) {
+    let n = 0 === t ? window.GLOBAL_ENV.MIGRATION_DESTINATION_ORIGIN : window.GLOBAL_ENV.MIGRATION_SOURCE_ORIGIN;
+    return e.origin === n && null != e.data.domainMigrationEvent && !0;
+}

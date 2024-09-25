@@ -1,82 +1,84 @@
 n.d(t, {
     NL: function () {
-        return c;
+        return l;
     }
 });
-var i,
-    s,
-    a = n(470079),
-    r = n(595519),
-    l = n(527805),
-    o = n(689938);
-function c(e) {
-    let { embeddedActivity: t, joinability: n, currentEmbeddedActivity: i, channel: s } = e;
-    return a.useMemo(
+var r,
+    i = n(470079),
+    a = n(595519),
+    o = n(527805),
+    s = n(689938);
+function l(e) {
+    let { embeddedActivity: t, joinability: n, currentEmbeddedActivity: r, channel: a } = e;
+    return i.useMemo(
         () =>
-            (function (e) {
-                let { embeddedActivity: t, joinability: n, currentEmbeddedActivity: i, channel: s } = e,
-                    a = null == t,
-                    c = {
-                        disabled: !1,
-                        isJoinAction: !a,
-                        text: a ? o.Z.Messages.START : o.Z.Messages.EMBEDDED_ACTIVITIES_JOIN,
-                        tooltip: void 0
-                    },
-                    u = (0, r.WS)(s);
-                if (null != t && null != i && t.launchId === i.launchId)
-                    return {
-                        ...c,
-                        disabled: !0,
-                        text: o.Z.Messages.EMBEDDED_ACTIVITIES_JOINED,
-                        tooltip: o.Z.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY
-                    };
-                if (a)
-                    return {
-                        ...c,
-                        disabled: !u,
-                        tooltip: u ? void 0 : o.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_DISABLED_START
-                    };
-                if (null != n && n !== l.Fw.CAN_JOIN) {
-                    let e;
-                    switch (n) {
-                        case l.Fw.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION:
-                            e = o.Z.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS;
-                            break;
-                        case l.Fw.ACTIVITY_AGE_GATED:
-                            e = o.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_AGE_GATE;
-                            break;
-                        case l.Fw.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS:
-                            e = o.Z.Messages.EMBEDDED_ACTIVITIES_APPLICATION_UNSUPPORTED_OS;
-                            break;
-                        case l.Fw.ACTIVITY_NOT_SUPPORTED_ON_OS:
-                            e = o.Z.Messages.EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS;
-                            break;
-                        case l.Fw.CHANNEL_FULL:
-                            e = o.Z.Messages.UNABLE_TO_JOIN_CHANNEL_FULL;
-                            break;
-                        case l.Fw.NO_CHANNEL_CONNECT_PERMISSION:
-                            e = o.Z.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_VOICE_PERMISSION;
-                            break;
-                        case l.Fw.NO_CHANNEL:
-                        case l.Fw.NO_GUILD:
-                        case l.Fw.NO_USER:
-                        case l.Fw.IS_AFK_CHANNEL:
-                            e = o.Z.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_INVALID_CHANNEL;
-                    }
-                    return {
-                        ...c,
-                        disabled: !0,
-                        tooltip: e
-                    };
-                }
-                return c;
-            })({
+            u({
                 embeddedActivity: t,
                 joinability: n,
-                currentEmbeddedActivity: i,
-                channel: s
+                currentEmbeddedActivity: r,
+                channel: a
             }),
-        [t, n, i, s]
+        [t, n, r, a]
     );
 }
-((i = s || (s = {}))[(i.ACTIVE = 0)] = 'ACTIVE'), (i[(i.ENDED = 1)] = 'ENDED');
+function u(e) {
+    let { embeddedActivity: t, joinability: n, currentEmbeddedActivity: r, channel: i } = e,
+        l = null == t,
+        u = {
+            disabled: !1,
+            isJoinAction: !l,
+            text: l ? s.Z.Messages.START : s.Z.Messages.EMBEDDED_ACTIVITIES_JOIN,
+            tooltip: void 0
+        },
+        c = (0, a.WS)(i);
+    if (null != t && null != r && t.launchId === r.launchId)
+        return {
+            ...u,
+            disabled: !0,
+            text: s.Z.Messages.EMBEDDED_ACTIVITIES_JOINED,
+            tooltip: s.Z.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY
+        };
+    if (l)
+        return {
+            ...u,
+            disabled: !c,
+            tooltip: c ? void 0 : s.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_DISABLED_START
+        };
+    if (null != n && n !== o.Fw.CAN_JOIN) {
+        let e;
+        switch (n) {
+            case o.Fw.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION:
+                e = s.Z.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS;
+                break;
+            case o.Fw.ACTIVITY_AGE_GATED:
+                e = s.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_AGE_GATE;
+                break;
+            case o.Fw.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS:
+                e = s.Z.Messages.EMBEDDED_ACTIVITIES_APPLICATION_UNSUPPORTED_OS;
+                break;
+            case o.Fw.ACTIVITY_NOT_SUPPORTED_ON_OS:
+                e = s.Z.Messages.EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS;
+                break;
+            case o.Fw.CHANNEL_FULL:
+                e = s.Z.Messages.UNABLE_TO_JOIN_CHANNEL_FULL;
+                break;
+            case o.Fw.NO_CHANNEL_CONNECT_PERMISSION:
+                e = s.Z.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_VOICE_PERMISSION;
+                break;
+            case o.Fw.NO_CHANNEL:
+            case o.Fw.NO_GUILD:
+            case o.Fw.NO_USER:
+            case o.Fw.IS_AFK_CHANNEL:
+                e = s.Z.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_INVALID_CHANNEL;
+        }
+        return {
+            ...u,
+            disabled: !0,
+            tooltip: e
+        };
+    }
+    return u;
+}
+!(function (e) {
+    (e[(e.ACTIVE = 0)] = 'ACTIVE'), (e[(e.ENDED = 1)] = 'ENDED');
+})(r || (r = {}));

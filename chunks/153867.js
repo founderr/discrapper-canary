@@ -3,14 +3,14 @@ n.d(t, {
         return E;
     },
     ZI: function () {
-        return h;
+        return p;
     }
 });
 var r = n(524437),
     i = n(381499),
     a = n(570140),
-    s = n(514361),
-    o = n(238514),
+    o = n(514361),
+    s = n(238514),
     l = n(210887),
     u = n(695346),
     c = n(675478),
@@ -43,13 +43,17 @@ function f(e) {
     }
 }
 function h(e) {
+    return { backgroundGradientPresetId: null != e.backgroundGradientPresetId ? i.yC.create({ value: e.backgroundGradientPresetId }) : void 0 };
+}
+function p(e) {
     let { backgroundGradientPresetId: t, theme: n, useSystemTheme: r } = e,
-        s = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.fy.INFREQUENT_USER_ACTION,
-        l = 'system' === n ? _.K.ON : _.K.OFF;
+        i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.fy.INFREQUENT_USER_ACTION,
+        o = 'system' === n ? _.K.ON : _.K.OFF,
+        l = null != r ? r : o;
     if (
         (a.Z.dispatch({
             type: 'UNSYNCED_USER_SETTINGS_UPDATE',
-            settings: { useSystemTheme: null != r ? r : l }
+            settings: { useSystemTheme: l }
         }),
         a.Z.dispatch({
             type: 'SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE',
@@ -62,15 +66,14 @@ function h(e) {
                 }
             }
         }),
-        o.Z.shouldSync('appearance'))
+        s.Z.shouldSync('appearance'))
     )
         return c.hW.updateAsync(
             'appearance',
             (e) => {
-                var r;
-                (e.theme = f(n)), (e.clientThemeSettings = { backgroundGradientPresetId: null != (r = { backgroundGradientPresetId: t }).backgroundGradientPresetId ? i.yC.create({ value: r.backgroundGradientPresetId }) : void 0 });
+                (e.theme = f(n)), (e.clientThemeSettings = h({ backgroundGradientPresetId: t }));
             },
-            s
+            i
         );
 }
 t.ZP = {
@@ -118,7 +121,7 @@ t.ZP = {
                         ? {}
                         : {
                               theme: l.Z.theme,
-                              clientThemeSettings: { backgroundGradientPresetId: null === (t = s.Z.gradientPreset) || void 0 === t ? void 0 : t.id },
+                              clientThemeSettings: { backgroundGradientPresetId: null === (t = o.Z.gradientPreset) || void 0 === t ? void 0 : t.id },
                               developerMode: u.Sb.getSetting()
                           }
                 }
@@ -151,7 +154,7 @@ t.ZP = {
             type: 'SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE',
             changes: { appearance: { settings: { theme: e } } }
         }),
-            o.Z.shouldSync('appearance') &&
+            s.Z.shouldSync('appearance') &&
                 c.hW.updateAsync(
                     'appearance',
                     (t) => {

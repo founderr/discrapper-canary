@@ -22,7 +22,7 @@ if ('function' == typeof i && 'function' == typeof Object.defineProperty)
     }
 else i = null;
 var a = /^\s*class\b/,
-    s = function (e) {
+    o = function (e) {
         try {
             var t = r.call(e);
             return a.test(t);
@@ -30,48 +30,54 @@ var a = /^\s*class\b/,
             return !1;
         }
     },
-    o = function (e) {
+    s = function (e) {
         try {
-            if (s(e)) return !1;
+            if (o(e)) return !1;
             return r.call(e), !0;
         } catch (e) {
             return !1;
         }
     },
     l = Object.prototype.toString,
-    u = 'function' == typeof Symbol && !!Symbol.toStringTag,
-    c = !(0 in [,]),
-    d = function () {
+    u = '[object Object]',
+    c = '[object Function]',
+    d = '[object GeneratorFunction]',
+    _ = '[object HTMLAllCollection]',
+    E = '[object HTML document.all class]',
+    f = '[object HTMLCollection]',
+    h = 'function' == typeof Symbol && !!Symbol.toStringTag,
+    p = !(0 in [,]),
+    m = function () {
         return !1;
     };
 if ('object' == typeof document) {
-    var _ = document.all;
-    l.call(_) === l.call(document.all) &&
-        (d = function (e) {
-            if ((c || !e) && (void 0 === e || 'object' == typeof e))
+    var I = document.all;
+    l.call(I) === l.call(document.all) &&
+        (m = function (e) {
+            if ((p || !e) && (void 0 === e || 'object' == typeof e))
                 try {
                     var t = l.call(e);
-                    return ('[object HTMLAllCollection]' === t || '[object HTML document.all class]' === t || '[object HTMLCollection]' === t || '[object Object]' === t) && null == e('');
+                    return (t === _ || t === E || t === f || t === u) && null == e('');
                 } catch (e) {}
             return !1;
         });
 }
 e.exports = i
     ? function (e) {
-          if (d(e)) return !0;
+          if (m(e)) return !0;
           if (!e || ('function' != typeof e && 'object' != typeof e)) return !1;
           try {
               i(e, null, t);
           } catch (e) {
               if (e !== n) return !1;
           }
-          return !s(e) && o(e);
+          return !o(e) && s(e);
       }
     : function (e) {
-          if (d(e)) return !0;
+          if (m(e)) return !0;
           if (!e || ('function' != typeof e && 'object' != typeof e)) return !1;
-          if (u) return o(e);
-          if (s(e)) return !1;
+          if (h) return s(e);
+          if (o(e)) return !1;
           var t = l.call(e);
-          return !!('[object Function]' === t || '[object GeneratorFunction]' === t || /^\[object HTML/.test(t)) && o(e);
+          return !!(t === c || t === d || /^\[object HTML/.test(t)) && s(e);
       };

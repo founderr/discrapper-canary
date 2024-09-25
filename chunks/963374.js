@@ -1,66 +1,70 @@
 n.d(t, {
     nC: function () {
-        return u;
+        return m;
     }
-}),
-    n(47120),
-    n(757143),
-    n(653041);
-var i = n(392711),
-    s = n.n(i),
-    o = n(697741);
-let a = new Set(['a', 'an', 'and', 'are', 'as', 'at', 'be', 'but', 'by', 'for', 'if', 'in', 'into', 'is', 'it', 'no', 'not', 'of', 'on', 'or', 'such', 'that', 'the', 'their', 'then', 'there', 'these', 'they', 'this', 'to', 'was', 'will', 'with']);
-function l(e) {
+});
+var r = n(47120);
+var i = n(757143);
+var a = n(653041);
+var o = n(392711),
+    s = n.n(o),
+    l = n(697741);
+let u = new Set(['a', 'an', 'and', 'are', 'as', 'at', 'be', 'but', 'by', 'for', 'if', 'in', 'into', 'is', 'it', 'no', 'not', 'of', 'on', 'or', 'such', 'that', 'the', 'their', 'then', 'there', 'these', 'they', 'this', 'to', 'was', 'will', 'with']);
+function c(e) {
     return e.replace(/('|\u2019|\uFF07)(s|S)$/, '');
 }
-function r(e) {
+function d(e) {
     return e.toLowerCase();
 }
-function c(e) {
-    return a.has(e);
+function _(e) {
+    return u.has(e);
 }
-function d(e) {
+function E(e) {
     return 0 === e.length;
 }
-function u(e) {
-    var t;
-    let n = new Set(((t = e), s()(t.split(/\W+/)).map(l).reject(d).map(r).reject(c).map(o.$).value()));
-    return (e) =>
-        (function e(t, n) {
-            if (Array.isArray(t)) t.forEach((t) => e(t, n));
-            else if ('string' == typeof t.content && 'codeBlock' !== t.type) {
-                let e = [],
-                    i = '';
-                t.content.split(/(\W+)/g).forEach((t) => {
-                    var s, a;
-                    if (((s = t), (a = n), !d((s = r(l(s)))) && !c(s) && a.has((0, o.$)(s))))
-                        i.length > 0 &&
-                            e.push({
-                                type: 'text',
-                                content: i
-                            }),
-                            e.push({
-                                type: 'highlight',
-                                content: t
-                            }),
-                            (i = '');
-                    else i += t;
-                }),
-                    e.length > 0 &&
-                        (i.length > 0 &&
-                            e.push({
-                                type: 'text',
-                                content: i
-                            }),
-                        'text' === t.type
-                            ? (t.content = e)
-                            : (t.content = [
-                                  {
-                                      type: 'text',
-                                      content: e
-                                  }
-                              ]));
-            } else null != t.content && e(t.content, n);
-            return t;
-        })(e, n);
+function f(e) {
+    return s()(e.split(/\W+/)).map(c).reject(E).map(d).reject(_).map(l.$).value();
+}
+function h(e, t) {
+    return !E((e = d(c(e)))) && !_(e) && t.has((0, l.$)(e));
+}
+function p(e, t) {
+    if (Array.isArray(e)) e.forEach((e) => p(e, t));
+    else if ('string' == typeof e.content && 'codeBlock' !== e.type) {
+        let n = [],
+            r = '';
+        e.content.split(/(\W+)/g).forEach((e) => {
+            h(e, t)
+                ? (r.length > 0 &&
+                      n.push({
+                          type: 'text',
+                          content: r
+                      }),
+                  n.push({
+                      type: 'highlight',
+                      content: e
+                  }),
+                  (r = ''))
+                : (r += e);
+        }),
+            n.length > 0 &&
+                (r.length > 0 &&
+                    n.push({
+                        type: 'text',
+                        content: r
+                    }),
+                'text' === e.type
+                    ? (e.content = n)
+                    : (e.content = [
+                          {
+                              type: 'text',
+                              content: n
+                          }
+                      ]));
+    } else null != e.content && p(e.content, t);
+    return e;
+}
+function m(e) {
+    let t = new Set(f(e));
+    return (e) => p(e, t);
 }

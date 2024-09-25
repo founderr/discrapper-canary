@@ -1,86 +1,85 @@
 n.d(t, {
     HH: function () {
-        return N;
+        return A;
     },
     O9: function () {
-        return h;
+        return f;
     },
     Vu: function () {
         return m;
     },
     W4: function () {
-        return _;
+        return c;
     },
     Wz: function () {
-        return E;
-    },
-    Z3: function () {
-        return f;
-    },
-    ZR: function () {
         return d;
     },
+    Z3: function () {
+        return _;
+    },
+    ZR: function () {
+        return u;
+    },
     am: function () {
-        return I;
-    },
-    av: function () {
-        return v;
-    },
-    cq: function () {
-        return S;
-    },
-    j: function () {
-        return s;
-    },
-    k3: function () {
-        return y;
-    },
-    kb: function () {
-        return L;
-    },
-    n: function () {
         return p;
     },
-    oi: function () {
-        return a;
-    },
-    pw: function () {
-        return R;
-    },
-    rk: function () {
+    av: function () {
         return O;
     },
+    cq: function () {
+        return T;
+    },
+    j: function () {
+        return i;
+    },
+    k3: function () {
+        return C;
+    },
+    kb: function () {
+        return y;
+    },
+    n: function () {
+        return h;
+    },
+    oi: function () {
+        return r;
+    },
+    pw: function () {
+        return N;
+    },
+    rk: function () {
+        return v;
+    },
     tB: function () {
-        return A;
+        return S;
     },
     uo: function () {
-        return C;
+        return R;
     },
     vD: function () {
         return g;
     },
     x3: function () {
-        return T;
+        return I;
     }
 });
 var r,
     i,
-    a,
-    s,
-    o = n(592125),
-    l = n(823379),
-    u = n(700785),
-    c = n(981631);
-let d = 7,
-    _ = 300,
-    E = 7,
-    f = 60,
-    h = 5,
-    p = 1,
-    I = 30,
+    a = n(592125),
+    o = n(823379),
+    s = n(700785),
+    l = n(981631);
+let u = 7,
+    c = 300,
+    d = 7,
+    _ = 60,
+    E = 3,
+    f = 5,
+    h = 1,
+    p = 30,
     m = 200,
-    T = 7;
-function S(e) {
+    I = 7;
+function T(e) {
     var t;
     return {
         channelId: e.channel_id,
@@ -115,33 +114,33 @@ function g(e) {
         icon: null !== (n = e.icon) && void 0 !== n ? n : null
     };
 }
-function A(e) {
+function S(e) {
     if (null == e) return null;
     let { welcome_message: t, new_member_actions: n, resource_channels: r, enabled: i } = e,
-        a = {
+        s = {
             authorIds: t.author_ids,
             message: t.message
         },
-        s = n.filter((e) => (0, l.lm)(o.Z.getChannel(e.channel_id))).map(S);
+        l = n.filter((e) => (0, o.lm)(a.Z.getChannel(e.channel_id))).map(T);
     return {
-        welcomeMessage: a,
-        newMemberActions: s,
-        resourceChannels: r.filter((e) => (0, l.lm)(o.Z.getChannel(e.channel_id))).map(g),
+        welcomeMessage: s,
+        newMemberActions: l,
+        resourceChannels: r.filter((e) => (0, o.lm)(a.Z.getChannel(e.channel_id))).map(g),
         enabled: i
     };
 }
-function N(e, t) {
+function A(e, t) {
     var n, r;
     if (null == t) return null;
-    let { welcomeMessage: i, newMemberActions: a, resourceChannels: s, enabled: u } = t,
+    let { welcomeMessage: i, newMemberActions: s, resourceChannels: l, enabled: u } = t,
         c = {
             author_ids: null !== (n = null == i ? void 0 : i.authorIds) && void 0 !== n ? n : [],
             message: null !== (r = null == i ? void 0 : i.message) && void 0 !== r ? r : ''
         },
-        d = (null != a ? a : [])
-            .filter((e) => (0, l.lm)(o.Z.getChannel(e.channelId)))
+        d = (null != s ? s : [])
+            .filter((e) => (0, o.lm)(a.Z.getChannel(e.channelId)))
             .map((e) => {
-                var t, n, r, i, a, s, o;
+                var t, n, r, i, a, o, s;
                 return {
                     channel_id: e.channelId,
                     action_type: e.actionType,
@@ -150,19 +149,19 @@ function N(e, t) {
                     emoji: {
                         id: null !== (i = null === (t = e.emoji) || void 0 === t ? void 0 : t.id) && void 0 !== i ? i : void 0,
                         name: null !== (a = null === (n = e.emoji) || void 0 === n ? void 0 : n.name) && void 0 !== a ? a : void 0,
-                        animated: null !== (s = null === (r = e.emoji) || void 0 === r ? void 0 : r.animated) && void 0 !== s ? s : void 0
+                        animated: null !== (o = null === (r = e.emoji) || void 0 === r ? void 0 : r.animated) && void 0 !== o ? o : void 0
                     },
-                    icon: null !== (o = e.icon) && void 0 !== o ? o : void 0
+                    icon: null !== (s = e.icon) && void 0 !== s ? s : void 0
                 };
             });
     return {
         guild_id: e,
         welcome_message: c,
         new_member_actions: d,
-        resource_channels: (null != s ? s : [])
-            .filter((e) => (0, l.lm)(o.Z.getChannel(e.channelId)))
+        resource_channels: (null != l ? l : [])
+            .filter((e) => (0, o.lm)(a.Z.getChannel(e.channelId)))
             .map((e) => {
-                var t, n, r, i, a, s, o;
+                var t, n, r, i, a, o, s;
                 return {
                     channel_id: e.channelId,
                     title: e.title,
@@ -170,43 +169,47 @@ function N(e, t) {
                     emoji: {
                         id: null !== (i = null === (t = e.emoji) || void 0 === t ? void 0 : t.id) && void 0 !== i ? i : void 0,
                         name: null !== (a = null === (n = e.emoji) || void 0 === n ? void 0 : n.name) && void 0 !== a ? a : void 0,
-                        animated: null !== (s = null === (r = e.emoji) || void 0 === r ? void 0 : r.animated) && void 0 !== s ? s : void 0
+                        animated: null !== (o = null === (r = e.emoji) || void 0 === r ? void 0 : r.animated) && void 0 !== o ? o : void 0
                     },
-                    icon: null !== (o = e.icon) && void 0 !== o ? o : void 0
+                    icon: null !== (s = e.icon) && void 0 !== s ? s : void 0
                 };
             }),
         enabled: u
     };
 }
-((r = a || (a = {}))[(r.VIEW = 0)] = 'VIEW'), (r[(r.CHAT = 1)] = 'CHAT');
-let O = (e) => {
+!(function (e) {
+    (e[(e.VIEW = 0)] = 'VIEW'), (e[(e.CHAT = 1)] = 'CHAT');
+})(r || (r = {}));
+let v = (e) => {
     if (null == e) return null;
     let t = {};
     for (let n in e.channel_actions) t[n] = e.channel_actions[n].completed;
     return t;
 };
-function R(e) {
+function N(e) {
     return null == e || ((null == e.message || !(e.message.length > 0)) && (null == e.authorIds || !(e.authorIds.length > 0)) && !0);
 }
-function v(e) {
-    return null == e || (!!R(e.welcomeMessage) && (null == e.newMemberActions || !(e.newMemberActions.length > 0)) && (null == e.resourceChannels || !(e.resourceChannels.length > 0)) && !0);
+function O(e) {
+    return null == e || (!!N(e.welcomeMessage) && (null == e.newMemberActions || !(e.newMemberActions.length > 0)) && (null == e.resourceChannels || !(e.resourceChannels.length > 0)) && !0);
+}
+function R(e) {
+    var t, n;
+    return null != e && (!!O(e) || ((null === (t = e.welcomeMessage) || void 0 === t ? void 0 : t.message) != null && !(e.welcomeMessage.message.length < u) && (null === (n = e.welcomeMessage) || void 0 === n ? void 0 : n.authorIds) != null && 0 !== e.welcomeMessage.authorIds.length && null != e.newMemberActions && !(e.newMemberActions.length < E) && !0));
 }
 function C(e) {
-    var t, n;
-    return null != e && (!!v(e) || ((null === (t = e.welcomeMessage) || void 0 === t ? void 0 : t.message) != null && !(e.welcomeMessage.message.length < d) && (null === (n = e.welcomeMessage) || void 0 === n ? void 0 : n.authorIds) != null && 0 !== e.welcomeMessage.authorIds.length && null != e.newMemberActions && !(e.newMemberActions.length < 3) && !0));
+    return e.type === l.d4z.GUILD_TEXT && !s.Uu(l.Plq.SEND_MESSAGES, e) && s.Uu(l.Plq.VIEW_CHANNEL, e);
 }
 function y(e) {
-    return e.type === c.d4z.GUILD_TEXT && !u.Uu(c.Plq.SEND_MESSAGES, e) && u.Uu(c.Plq.VIEW_CHANNEL, e);
-}
-function L(e) {
     switch (e.type) {
-        case c.d4z.GUILD_TEXT:
-        case c.d4z.GUILD_ANNOUNCEMENT:
-        case c.d4z.GUILD_FORUM:
-        case c.d4z.GUILD_MEDIA:
-            return u.Uu(c.Plq.VIEW_CHANNEL, e);
+        case l.d4z.GUILD_TEXT:
+        case l.d4z.GUILD_ANNOUNCEMENT:
+        case l.d4z.GUILD_FORUM:
+        case l.d4z.GUILD_MEDIA:
+            return s.Uu(l.Plq.VIEW_CHANNEL, e);
         default:
             return !1;
     }
 }
-((i = s || (s = {}))[(i.DEFAULT = 0)] = 'DEFAULT'), (i[(i.TODO = 1)] = 'TODO'), (i[(i.RESOURCE = 2)] = 'RESOURCE');
+!(function (e) {
+    (e[(e.DEFAULT = 0)] = 'DEFAULT'), (e[(e.TODO = 1)] = 'TODO'), (e[(e.RESOURCE = 2)] = 'RESOURCE');
+})(i || (i = {}));

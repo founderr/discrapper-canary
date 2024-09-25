@@ -5,8 +5,15 @@ function i(e, t, n) {
 function a(e, t) {
     return e.mean > t.mean ? 1 : e.mean < t.mean ? -1 : 0;
 }
-function s(e, t) {
+function o(e, t) {
     return e.mean_cumn - t.mean_cumn;
+}
+function s(e) {
+    var t = Math.floor(Math.random() * e.length);
+    return e.splice(t, 1)[0];
+}
+function l(e) {
+    (this.config = e || {}), (this.mode = this.config.mode || 'auto'), i.call(this, 'cont' === this.mode && e.delta), (this.digest_ratio = this.config.ratio || 0.9), (this.digest_thresh = this.config.thresh || 1000), (this.n_unique = 0);
 }
 (i.prototype.reset = function () {
     this.centroids.clear(), (this.n = 0), (this.nreset += 1), (this.last_cumulate = 0);
@@ -108,7 +115,7 @@ function s(e, t) {
         }
     }),
     (i.prototype.bound_mean_cumn = function (e) {
-        this.centroids._comparator = s;
+        this.centroids._comparator = o;
         var t = this.centroids.upperBound({ mean_cumn: e });
         this.centroids._comparator = a;
         var n = t.prev(),
@@ -131,38 +138,29 @@ function s(e, t) {
             if (t <= r.cumn) return r.mean;
             else return i.mean;
         }
-    });
-function o(e) {
-    (this.config = e || {}), (this.mode = this.config.mode || 'auto'), i.call(this, 'cont' === this.mode && e.delta), (this.digest_ratio = this.config.ratio || 0.9), (this.digest_thresh = this.config.thresh || 1000), (this.n_unique = 0);
-}
-(i.prototype.compress = function () {
-    if (!this.compressing) {
-        var e = this.toArray();
-        for (this.reset(), this.compressing = !0; e.length > 0; )
-            this.push_centroid(
-                (function (e) {
-                    var t = Math.floor(Math.random() * e.length);
-                    return e.splice(t, 1)[0];
-                })(e)
-            );
-        this._cumulate(!0), (this.compressing = !1);
-    }
-}),
-    (o.prototype = Object.create(i.prototype)),
-    (o.prototype.constructor = o),
-    (o.prototype.push = function (e) {
+    }),
+    (i.prototype.compress = function () {
+        if (!this.compressing) {
+            var e = this.toArray();
+            for (this.reset(), this.compressing = !0; e.length > 0; ) this.push_centroid(s(e));
+            this._cumulate(!0), (this.compressing = !1);
+        }
+    }),
+    (l.prototype = Object.create(i.prototype)),
+    (l.prototype.constructor = l),
+    (l.prototype.push = function (e) {
         i.prototype.push.call(this, e), this.check_continuous();
     }),
-    (o.prototype._new_centroid = function (e, t, n) {
+    (l.prototype._new_centroid = function (e, t, n) {
         (this.n_unique += 1), i.prototype._new_centroid.call(this, e, t, n);
     }),
-    (o.prototype._addweight = function (e, t, n) {
+    (l.prototype._addweight = function (e, t, n) {
         1 === e.n && (this.n_unique -= 1), i.prototype._addweight.call(this, e, t, n);
     }),
-    (o.prototype.check_continuous = function () {
+    (l.prototype.check_continuous = function () {
         return !('auto' !== this.mode || this.size() < this.digest_thresh) && !!(this.n_unique / this.size() > this.digest_ratio) && ((this.mode = 'cont'), (this.discrete = !1), (this.delta = this.config.delta || 0.01), this.compress(), !0);
     }),
     (e.exports = {
         TDigest: i,
-        Digest: o
+        Digest: l
     });

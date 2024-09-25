@@ -1,3 +1,5 @@
-e.exports = function (e) {
-    return this.__data__.set(e, '__lodash_hash_undefined__'), this;
-};
+var t = '__lodash_hash_undefined__';
+function n(e) {
+    return this.__data__.set(e, t), this;
+}
+e.exports = n;

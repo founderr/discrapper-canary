@@ -1,33 +1,37 @@
-var i,
-    s,
-    a,
-    r,
-    l = n(442837),
-    o = n(570140),
-    c = n(186901);
-let u = null,
-    d = [c.ff.REDISTRIBUTABLE_INSTALL_FAILED, c.ff.POST_INSTALL_FAILED, c.ff.POST_INSTALL_CANCELLED],
-    _ = [c.ff.APPLICATION_NOT_FOUND, c.ff.APPLICATION_LOAD_FAILED, c.ff.INTERRUPTED, c.ff.DESERIALIZATION_FAILED];
-class E extends (r = l.ZP.Store) {
+var r,
+    i = n(442837),
+    a = n(570140),
+    o = n(186901);
+function s(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+let l = null,
+    u = [o.ff.REDISTRIBUTABLE_INSTALL_FAILED, o.ff.POST_INSTALL_FAILED, o.ff.POST_INSTALL_CANCELLED],
+    c = [o.ff.APPLICATION_NOT_FOUND, o.ff.APPLICATION_LOAD_FAILED, o.ff.INTERRUPTED, o.ff.DESERIALIZATION_FAILED];
+function d(e) {
+    let { error: t } = e;
+    l = null != t.code && c.includes(t.code) ? null : t;
+}
+function _() {
+    null != l && null != l.code && u.includes(l.code) && (l = null);
+}
+class E extends (r = i.ZP.Store) {
     getLastError() {
-        return u;
+        return l;
     }
 }
-(a = 'DispatchApplicationErrorStore'),
-    (s = 'displayName') in (i = E)
-        ? Object.defineProperty(i, s, {
-              value: a,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (i[s] = a),
-    (t.Z = new E(o.Z, {
-        DISPATCH_APPLICATION_LAUNCH_SETUP_START: function () {
-            null != u && null != u.code && d.includes(u.code) && (u = null);
-        },
-        DISPATCH_APPLICATION_ERROR: function (e) {
-            let { error: t } = e;
-            u = null != t.code && _.includes(t.code) ? null : t;
-        }
+s(E, 'displayName', 'DispatchApplicationErrorStore'),
+    (t.Z = new E(a.Z, {
+        DISPATCH_APPLICATION_LAUNCH_SETUP_START: _,
+        DISPATCH_APPLICATION_ERROR: d
     }));

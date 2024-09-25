@@ -1,73 +1,76 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return I;
     }
-}),
-    n(47120);
-var r = n(735250);
+});
+var r = n(47120);
+var i = n(735250);
 n(470079);
-var i = n(120356),
-    a = n.n(i),
+var a = n(120356),
+    o = n.n(a),
     s = n(442837),
-    o = n(481060),
-    l = n(607070),
-    u = n(906732),
-    c = n(951394),
-    d = n(695346),
-    _ = n(785717),
-    E = n(689938),
-    f = n(332102);
-let h = (e) =>
-    (0, o.openModalLazy)(async () => {
-        let { default: t } = await n.e('51714').then(n.bind(n, 211065));
-        return (n) =>
-            (0, r.jsx)(t, {
-                ...n,
-                sourceAnalyticsLocations: e
-            });
-    });
-function p(e) {
-    let { isVisible: t, isExpandable: n, onCloseProfile: i } = e,
-        { analyticsLocations: p } = (0, u.ZP)(),
-        { trackUserProfileAction: I } = (0, _.KZ)(),
-        [m, T] = (0, s.Wu)([l.Z], () => [l.Z.useReducedMotion, l.Z.keyboardModeEnabled]),
-        S = !n || m || T ? 0 : 300;
-    return (0, r.jsxs)(c.ZP, {
-        className: a()(f.popover, {
-            [f.visible]: t,
-            [f.expandable]: n
+    l = n(481060),
+    u = n(607070),
+    c = n(906732),
+    d = n(951394),
+    _ = n(695346),
+    E = n(785717),
+    f = n(689938),
+    h = n(332102);
+let p = 300,
+    m = (e) =>
+        (0, l.openModalLazy)(async () => {
+            let { default: t } = await n.e('51714').then(n.bind(n, 211065));
+            return (n) =>
+                (0, i.jsx)(t, {
+                    ...n,
+                    sourceAnalyticsLocations: e
+                });
+        });
+function I(e) {
+    let { isVisible: t, isExpandable: n, onCloseProfile: r } = e,
+        { analyticsLocations: a } = (0, c.ZP)(),
+        { trackUserProfileAction: I } = (0, E.KZ)(),
+        [T, g] = (0, s.Wu)([u.Z], () => [u.Z.useReducedMotion, u.Z.keyboardModeEnabled]),
+        S = !n || T || g ? 0 : p,
+        A = () => {
+            I({ action: 'PRESS_EDIT_CUSTOM_STATUS' }), m(a), null == r || r();
+        },
+        v = () => {
+            I({ action: 'PRESS_CLEAR_CUSTOM_STATUS' }), _.Ok.updateSetting(void 0);
+        };
+    return (0, i.jsxs)(d.ZP, {
+        className: o()(h.popover, {
+            [h.visible]: t,
+            [h.expandable]: n
         }),
         children: [
-            (0, r.jsx)(o.TooltipContainer, {
-                text: E.Z.Messages.EDIT,
+            (0, i.jsx)(l.TooltipContainer, {
+                text: f.Z.Messages.EDIT,
                 delay: S,
                 'aria-label': !1,
-                children: (0, r.jsx)(c.zx, {
-                    className: a()(f.button, f.left),
-                    'aria-label': E.Z.Messages.CUSTOM_STATUS_EDIT_CUSTOM_STATUS_A11Y_LABEL,
+                children: (0, i.jsx)(d.zx, {
+                    className: o()(h.button, h.left),
+                    'aria-label': f.Z.Messages.CUSTOM_STATUS_EDIT_CUSTOM_STATUS_A11Y_LABEL,
                     'aria-haspopup': 'dialog',
-                    onClick: () => {
-                        I({ action: 'PRESS_EDIT_CUSTOM_STATUS' }), h(p), null == i || i();
-                    },
-                    children: (0, r.jsx)(o.PencilIcon, {
+                    onClick: A,
+                    children: (0, i.jsx)(l.PencilIcon, {
                         size: 'xs',
-                        colorClass: f.icon
+                        colorClass: h.icon
                     })
                 })
             }),
-            (0, r.jsx)(o.TooltipContainer, {
-                text: E.Z.Messages.CLEAR,
+            (0, i.jsx)(l.TooltipContainer, {
+                text: f.Z.Messages.CLEAR,
                 delay: S,
                 'aria-label': !1,
-                children: (0, r.jsx)(c.zx, {
-                    className: a()(f.button, f.right),
-                    'aria-label': E.Z.Messages.CUSTOM_STATUS_CLEAR_CUSTOM_STATUS_A11Y_LABEL,
-                    onClick: () => {
-                        I({ action: 'PRESS_CLEAR_CUSTOM_STATUS' }), d.Ok.updateSetting(void 0);
-                    },
-                    children: (0, r.jsx)(o.TrashIcon, {
+                children: (0, i.jsx)(d.zx, {
+                    className: o()(h.button, h.right),
+                    'aria-label': f.Z.Messages.CUSTOM_STATUS_CLEAR_CUSTOM_STATUS_A11Y_LABEL,
+                    onClick: v,
+                    children: (0, i.jsx)(l.TrashIcon, {
                         size: 'xs',
-                        colorClass: f.icon
+                        colorClass: h.icon
                     })
                 })
             })

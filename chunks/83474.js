@@ -1,225 +1,231 @@
-s.d(l, {
+n.d(t, {
     SK: function () {
-        return L;
+        return U;
     },
     ZP: function () {
-        return C;
+        return x;
     },
     sK: function () {
-        return Z;
+        return w;
     }
-}),
-    s(47120);
-var a = s(735250),
-    i = s(470079),
-    t = s(120356),
-    n = s.n(t),
-    c = s(442837),
-    d = s(692547),
-    r = s(780384),
-    o = s(481060),
-    u = s(410030),
-    h = s(686546),
-    m = s(372769),
-    x = s(134432),
-    g = s(703656),
-    j = s(314897),
-    N = s(271383),
-    P = s(768581),
-    f = s(900849),
-    v = s(249842),
-    I = s(838367),
-    _ = s(981631),
-    p = s(689938),
-    E = s(208052),
-    b = s(892561),
-    T = s(494536);
-function U() {
-    return (0, a.jsxs)(a.Fragment, {
+});
+var r = n(47120);
+var i = n(735250),
+    a = n(470079),
+    o = n(120356),
+    s = n.n(o),
+    l = n(442837),
+    u = n(692547),
+    c = n(780384),
+    d = n(481060),
+    _ = n(410030),
+    E = n(686546),
+    f = n(372769),
+    h = n(134432),
+    p = n(703656),
+    m = n(314897),
+    I = n(271383),
+    T = n(768581),
+    g = n(900849),
+    S = n(249842),
+    A = n(838367),
+    v = n(981631),
+    N = n(689938),
+    O = n(208052),
+    R = n(892561),
+    C = n(494536);
+let y = 80,
+    b = 4,
+    L = 250,
+    D = 6,
+    M = 24;
+function P() {
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, a.jsx)('div', { className: E.splashPlaceholder }),
-            (0, a.jsxs)('div', {
-                className: n()(E.body, E.hasSplash),
+            (0, i.jsx)('div', { className: O.splashPlaceholder }),
+            (0, i.jsxs)('div', {
+                className: s()(O.body, O.hasSplash),
                 children: [
-                    (0, a.jsx)('div', { className: E.iconPlaceholder }),
-                    (0, a.jsx)('div', {
-                        className: E.__invalid_headerText,
-                        children: (0, a.jsx)('div', { className: E.namePlaceholder })
+                    (0, i.jsx)('div', { className: O.iconPlaceholder }),
+                    (0, i.jsx)('div', {
+                        className: O.__invalid_headerText,
+                        children: (0, i.jsx)('div', { className: O.namePlaceholder })
                     }),
-                    (0, a.jsxs)('div', {
-                        className: E.memberInfo,
+                    (0, i.jsxs)('div', {
+                        className: O.memberInfo,
                         children: [
-                            (0, a.jsx)('div', {
-                                className: E.memberCount,
-                                children: (0, a.jsx)('div', { className: E.memberInfoPlaceholder })
+                            (0, i.jsx)('div', {
+                                className: O.memberCount,
+                                children: (0, i.jsx)('div', { className: O.memberInfoPlaceholder })
                             }),
-                            (0, a.jsx)('div', {
-                                className: E.memberCount,
-                                children: (0, a.jsx)('div', { className: E.memberInfoPlaceholder })
+                            (0, i.jsx)('div', {
+                                className: O.memberCount,
+                                children: (0, i.jsx)('div', { className: O.memberInfoPlaceholder })
                             })
                         ]
                     }),
-                    (0, a.jsx)('div', { className: E.viewButtonPlaceholder })
+                    (0, i.jsx)('div', { className: O.viewButtonPlaceholder })
                 ]
             })
         ]
     });
 }
-function L() {
-    let e = (0, u.ZP)();
-    return (0, a.jsx)(o.Dialog, {
-        'aria-label': p.Z.Messages.GUILD_UNAVAILABLE_HEADER,
-        className: E.guildPopout,
-        children: (0, a.jsxs)('div', {
-            className: E.body,
+function U() {
+    let e = (0, _.ZP)();
+    return (0, i.jsx)(d.Dialog, {
+        'aria-label': N.Z.Messages.GUILD_UNAVAILABLE_HEADER,
+        className: O.guildPopout,
+        children: (0, i.jsxs)('div', {
+            className: O.body,
             children: [
-                (0, a.jsx)('img', {
-                    src: (0, r.wj)(e) ? b : T,
-                    className: E.unavailableIcon,
-                    width: 80,
-                    height: 80,
+                (0, i.jsx)('img', {
+                    src: (0, c.wj)(e) ? R : C,
+                    className: O.unavailableIcon,
+                    width: y,
+                    height: y,
                     alt: ''
                 }),
-                (0, a.jsx)(o.Heading, {
-                    className: E.unavailableHeader,
+                (0, i.jsx)(d.Heading, {
+                    className: O.unavailableHeader,
                     variant: 'heading-md/semibold',
-                    children: p.Z.Messages.GUILD_POPOUT_UNAVAILABLE_HEADER
+                    children: N.Z.Messages.GUILD_POPOUT_UNAVAILABLE_HEADER
                 }),
-                (0, a.jsx)(o.Text, {
+                (0, i.jsx)(d.Text, {
                     variant: 'text-sm/normal',
-                    children: p.Z.Messages.GUILD_POPOUT_UNAVAILABLE_FLAVOR
+                    children: N.Z.Messages.GUILD_POPOUT_UNAVAILABLE_FLAVOR
                 })
             ]
         })
     });
 }
-function Z(e) {
-    var l, s;
-    let { guild: t, channelId: r, messageId: u } = e,
-        { name: v, id: I, discoverySplash: b, icon: T, description: U, presenceCount: L, memberCount: Z, emojis: C } = t,
-        S = (0, c.e7)([j.default], () => j.default.getId()),
-        O = (0, c.e7)([N.ZP], () => N.ZP.isMember(I, S), [I, S]),
-        [A, D] = i.useState(!1),
-        F = (e) => {
-            if ((e.stopPropagation(), O)) (0, g.XU)(I, r, u);
+function w(e) {
+    var t, n;
+    let { guild: r, channelId: o, messageId: c } = e,
+        { name: _, id: S, discoverySplash: A, icon: R, description: C, presenceCount: P, memberCount: U, emojis: w } = r,
+        x = S,
+        G = (0, l.e7)([m.default], () => m.default.getId()),
+        k = (0, l.e7)([I.ZP], () => I.ZP.isMember(x, G), [x, G]),
+        [B, F] = a.useState(!1),
+        Z = (e) => {
+            if ((e.stopPropagation(), k)) (0, p.XU)(x, o, c);
             else {
                 let e = {
-                    page: _.ZY5.GUILD_CHANNEL,
-                    section: _.jXE.GUILD_POPOUT,
-                    object: _.qAy.CARD
+                    page: v.ZY5.GUILD_CHANNEL,
+                    section: v.jXE.GUILD_POPOUT,
+                    object: v.qAy.CARD
                 };
-                (0, f.Ub)(I, e);
+                (0, g.Ub)(x, e);
             }
-            D(!0);
+            F(!0);
         },
-        G = P.ZP.getGuildDiscoverySplashURL({
-            id: I,
-            splash: b,
-            size: 250 * (0, x.x_)()
+        V = T.ZP.getGuildDiscoverySplashURL({
+            id: S,
+            splash: A,
+            size: L * (0, h.x_)()
         }),
-        R =
+        H =
             null !==
-                (l = P.ZP.getGuildIconURL({
-                    id: I,
-                    icon: T,
-                    size: 80
-                })) && void 0 !== l
-                ? l
+                (t = T.ZP.getGuildIconURL({
+                    id: S,
+                    icon: R,
+                    size: y
+                })) && void 0 !== t
+                ? t
                 : void 0,
-        M = C,
-        y = null;
+        Y = w,
+        j = null;
     return (
-        null != M && M.length > 6 && null != C && ((M = null !== (s = null == C ? void 0 : C.slice(Math.max((null == C ? void 0 : C.length) - 6, 0))) && void 0 !== s ? s : []), (y = C.length - 6)),
-        (0, a.jsxs)(o.Dialog, {
-            'aria-label': v,
-            className: E.guildPopout,
+        null != Y && Y.length > D && null != w && ((Y = null !== (n = null == w ? void 0 : w.slice(Math.max((null == w ? void 0 : w.length) - D, 0))) && void 0 !== n ? n : []), (j = w.length - D)),
+        (0, i.jsxs)(d.Dialog, {
+            'aria-label': _,
+            className: O.guildPopout,
             children: [
-                null != G
-                    ? (0, a.jsx)('img', {
-                          src: G,
+                null != V
+                    ? (0, i.jsx)('img', {
+                          src: V,
                           alt: '',
-                          className: E.splashImage
+                          className: O.splashImage
                       })
                     : null,
-                (0, a.jsxs)('div', {
-                    className: n()(E.body, { [E.hasSplash]: null != G }),
+                (0, i.jsxs)('div', {
+                    className: s()(O.body, { [O.hasSplash]: null != V }),
                     children: [
-                        (0, a.jsx)('div', {
-                            className: n()({ [E.iconWithSplash]: null != G }),
-                            children: (0, a.jsx)(o.Clickable, {
-                                onClick: F,
-                                children: (0, a.jsx)(h.ZP, {
-                                    mask: h.ZP.Masks.SQUIRCLE,
-                                    width: 88,
-                                    height: 88,
-                                    children: (0, a.jsx)('div', {
-                                        className: E.iconMask,
-                                        children: (0, a.jsx)(h.ZP, {
-                                            mask: h.ZP.Masks.SQUIRCLE,
-                                            width: 80,
-                                            height: 80,
-                                            children: (0, a.jsx)('img', {
-                                                src: R,
+                        (0, i.jsx)('div', {
+                            className: s()({ [O.iconWithSplash]: null != V }),
+                            children: (0, i.jsx)(d.Clickable, {
+                                onClick: Z,
+                                children: (0, i.jsx)(E.ZP, {
+                                    mask: E.ZP.Masks.SQUIRCLE,
+                                    width: y + 2 * b,
+                                    height: y + 2 * b,
+                                    children: (0, i.jsx)('div', {
+                                        className: O.iconMask,
+                                        children: (0, i.jsx)(E.ZP, {
+                                            mask: E.ZP.Masks.SQUIRCLE,
+                                            width: y,
+                                            height: y,
+                                            children: (0, i.jsx)('img', {
+                                                src: H,
                                                 alt: '',
-                                                className: E.avatar
+                                                className: O.avatar
                                             })
                                         })
                                     })
                                 })
                             })
                         }),
-                        null != v
-                            ? (0, a.jsxs)('div', {
-                                  className: E.guildNameWrapper,
+                        null != _
+                            ? (0, i.jsxs)('div', {
+                                  className: O.guildNameWrapper,
                                   children: [
-                                      (0, a.jsx)(m.Z, {
-                                          className: E.badge,
-                                          guild: t,
+                                      (0, i.jsx)(f.Z, {
+                                          className: O.badge,
+                                          guild: r,
                                           tooltipPosition: 'top',
-                                          tooltipColor: o.Tooltip.Colors.PRIMARY,
-                                          badgeColor: d.Z.unsafe_rawColors.PRIMARY_500.css
+                                          tooltipColor: d.Tooltip.Colors.PRIMARY,
+                                          badgeColor: u.Z.unsafe_rawColors.PRIMARY_500.css
                                       }),
-                                      (0, a.jsx)(o.Text, {
+                                      (0, i.jsx)(d.Text, {
                                           variant: 'text-md/semibold',
-                                          className: E.guildName,
-                                          children: v
+                                          className: O.guildName,
+                                          children: _
                                       })
                                   ]
                               })
                             : null,
-                        null != U
-                            ? (0, a.jsx)(o.Text, {
+                        null != C
+                            ? (0, i.jsx)(d.Text, {
                                   color: 'header-secondary',
-                                  className: E.description,
+                                  className: O.description,
                                   variant: 'text-sm/normal',
-                                  children: U
+                                  children: C
                               })
                             : null,
-                        (0, a.jsxs)('div', {
-                            className: E.memberInfo,
+                        (0, i.jsxs)('div', {
+                            className: O.memberInfo,
                             children: [
-                                null != L
-                                    ? (0, a.jsxs)('div', {
-                                          className: E.memberCount,
+                                null != P
+                                    ? (0, i.jsxs)('div', {
+                                          className: O.memberCount,
                                           children: [
-                                              (0, a.jsx)('div', { className: E.dotOnline }),
-                                              (0, a.jsx)(o.Text, {
+                                              (0, i.jsx)('div', { className: O.dotOnline }),
+                                              (0, i.jsx)(d.Text, {
                                                   variant: 'text-xs/normal',
-                                                  className: E.memberText,
-                                                  children: p.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({ membersOnline: L })
+                                                  className: O.memberText,
+                                                  children: N.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({ membersOnline: P })
                                               })
                                           ]
                                       })
                                     : null,
-                                null != Z
-                                    ? (0, a.jsxs)('div', {
-                                          className: E.memberCount,
+                                null != U
+                                    ? (0, i.jsxs)('div', {
+                                          className: O.memberCount,
                                           children: [
-                                              (0, a.jsx)('div', { className: E.dotOffline }),
-                                              (0, a.jsx)(o.Text, {
+                                              (0, i.jsx)('div', { className: O.dotOffline }),
+                                              (0, i.jsx)(d.Text, {
                                                   variant: 'text-xs/normal',
-                                                  className: E.memberText,
-                                                  children: p.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({ count: Z })
+                                                  className: O.memberText,
+                                                  children: N.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({ count: U })
                                               })
                                           ]
                                       })
@@ -228,50 +234,50 @@ function Z(e) {
                         })
                     ]
                 }),
-                (0, a.jsxs)('div', {
-                    className: E.footer,
+                (0, i.jsxs)('div', {
+                    className: O.footer,
                     children: [
-                        null != M && M.length > 0
-                            ? (0, a.jsxs)(a.Fragment, {
+                        null != Y && Y.length > 0
+                            ? (0, i.jsxs)(i.Fragment, {
                                   children: [
-                                      (0, a.jsx)(o.Heading, {
+                                      (0, i.jsx)(d.Heading, {
                                           variant: 'heading-deprecated-12/semibold',
-                                          className: E.emojiHeader,
+                                          className: O.emojiHeader,
                                           color: 'header-secondary',
-                                          children: p.Z.Messages.SERVER_EMOJI
+                                          children: N.Z.Messages.SERVER_EMOJI
                                       }),
-                                      (0, a.jsxs)('div', {
-                                          className: n()(E.emojiContainer, { [E.withCounter]: null != y }),
+                                      (0, i.jsxs)('div', {
+                                          className: s()(O.emojiContainer, { [O.withCounter]: null != j }),
                                           children: [
-                                              M.map((e) => {
-                                                  let l = P.ZP.getEmojiURL({
+                                              Y.map((e) => {
+                                                  let t = T.ZP.getEmojiURL({
                                                       id: e.id,
                                                       animated: !1,
-                                                      size: 24
+                                                      size: M
                                                   });
-                                                  return (0, a.jsx)(
-                                                      o.Tooltip,
+                                                  return (0, i.jsx)(
+                                                      d.Tooltip,
                                                       {
                                                           text: ':'.concat(e.name, ':'),
                                                           children: (e) =>
-                                                              (0, a.jsx)('img', {
+                                                              (0, i.jsx)('img', {
                                                                   ...e,
-                                                                  width: 24,
-                                                                  height: 24,
-                                                                  src: l,
-                                                                  className: n()({ [E.emoji]: null == y }),
+                                                                  width: M,
+                                                                  height: M,
+                                                                  src: t,
+                                                                  className: s()({ [O.emoji]: null == j }),
                                                                   alt: ''
                                                               })
                                                       },
                                                       e.id
                                                   );
                                               }),
-                                              null != y
-                                                  ? (0, a.jsx)(o.Heading, {
+                                              null != j
+                                                  ? (0, i.jsx)(d.Heading, {
                                                         variant: 'heading-deprecated-12/semibold',
-                                                        className: E.emojiCounter,
+                                                        className: O.emojiCounter,
                                                         color: 'header-secondary',
-                                                        children: '+'.concat(y)
+                                                        children: '+'.concat(j)
                                                     })
                                                   : null
                                           ]
@@ -279,14 +285,14 @@ function Z(e) {
                                   ]
                               })
                             : null,
-                        (0, a.jsx)(o.Button, {
-                            look: o.Button.Looks.FILLED,
-                            color: o.Button.Colors.BRAND,
-                            size: o.Button.Sizes.SMALL,
-                            onClick: F,
-                            submitting: A,
+                        (0, i.jsx)(d.Button, {
+                            look: d.Button.Looks.FILLED,
+                            color: d.Button.Colors.BRAND,
+                            size: d.Button.Sizes.SMALL,
+                            onClick: Z,
+                            submitting: B,
                             autoFocus: !0,
-                            children: p.Z.Messages.GUILD_POPOUT_VIEW_SERVER_BUTTON
+                            children: N.Z.Messages.GUILD_POPOUT_VIEW_SERVER_BUTTON
                         })
                     ]
                 })
@@ -294,35 +300,35 @@ function Z(e) {
         })
     );
 }
-function C(e) {
-    let { guildId: l, channelId: s, messageId: t } = e,
+function x(e) {
+    let { guildId: t, channelId: n, messageId: r } = e,
         {
-            loading: n,
-            unavailable: d,
-            guild: r
-        } = (0, c.cj)(
-            [I.Z],
+            loading: o,
+            unavailable: s,
+            guild: u
+        } = (0, l.cj)(
+            [A.Z],
             () => ({
-                guild: I.Z.getGuild(l),
-                loading: I.Z.isFetchingGuild(l),
-                unavailable: I.Z.hasFetchFailed(l)
+                guild: A.Z.getGuild(t),
+                loading: A.Z.isFetchingGuild(t),
+                unavailable: A.Z.hasFetchFailed(t)
             }),
-            [l]
+            [t]
         );
-    return (i.useEffect(() => {
-        null == r && !n && !d && (0, v.P)(l);
-    }, [r, l, n, d]),
-    n)
-        ? (0, a.jsx)(o.Dialog, {
-              'aria-label': p.Z.Messages.LOADING,
-              className: E.guildPopout,
-              children: (0, a.jsx)(U, {})
+    return (a.useEffect(() => {
+        null == u && !o && !s && (0, S.P)(t);
+    }, [u, t, o, s]),
+    o)
+        ? (0, i.jsx)(d.Dialog, {
+              'aria-label': N.Z.Messages.LOADING,
+              className: O.guildPopout,
+              children: (0, i.jsx)(P, {})
           })
-        : null == r || d
-          ? (0, a.jsx)(L, {})
-          : (0, a.jsx)(Z, {
-                guild: r,
-                channelId: s,
-                messageId: t
+        : null == u || s
+          ? (0, i.jsx)(U, {})
+          : (0, i.jsx)(w, {
+                guild: u,
+                channelId: n,
+                messageId: r
             });
 }

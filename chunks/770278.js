@@ -1,75 +1,80 @@
 n.d(t, {
     f: function () {
-        return i;
+        return r;
     }
 });
 var r,
-    i,
-    a = n(735250),
-    s = n(470079),
+    i = n(735250),
+    a = n(470079),
     o = n(120356),
-    l = n.n(o),
-    u = n(526629),
-    c = n(481060),
-    d = n(110924),
-    _ = n(247224);
-((r = i || (i = {})).SUBTLE = 'SUBTLE'), (r.DARK = 'DARK'), (r.BLUR = 'BLUR');
-let E = s.forwardRef(function (e, t) {
-    let { backdropStyle: n = 'SUBTLE', backdropInstant: r = !1, zIndexBoost: i = 0, LayerComponent: s, isVisible: o, onClose: E } = e,
-        f = (function () {
-            let e = (0, c.useToken)(c.tokens.colors.BG_BACKDROP_NO_OPACITY).spring({ opacity: 0.25 }),
-                t = (0, c.useToken)(c.tokens.colors.BG_BACKDROP).spring();
-            return {
-                SUBTLE: e,
-                DARK: t,
-                BLUR: t
-            };
-        })()[n],
-        h = (0, c.useToken)(c.tokens.colors.BG_BACKDROP_NO_OPACITY).spring({ opacity: 0 }),
-        p = {
-            background: h,
+    s = n.n(o),
+    l = n(526629),
+    u = n(481060),
+    c = n(110924),
+    d = n(247224);
+let _ = 8;
+function E() {
+    let e = (0, u.useToken)(u.tokens.colors.BG_BACKDROP_NO_OPACITY).spring({ opacity: 0.25 }),
+        t = (0, u.useToken)(u.tokens.colors.BG_BACKDROP).spring();
+    return {
+        SUBTLE: e,
+        DARK: t,
+        BLUR: t
+    };
+}
+!(function (e) {
+    (e.SUBTLE = 'SUBTLE'), (e.DARK = 'DARK'), (e.BLUR = 'BLUR');
+})(r || (r = {}));
+let f = a.forwardRef(function (e, t) {
+    let { backdropStyle: n = 'SUBTLE', backdropInstant: r = !1, zIndexBoost: a = 0, LayerComponent: o, isVisible: f, onClose: h } = e,
+        p = E()[n],
+        m = (0, u.useToken)(u.tokens.colors.BG_BACKDROP_NO_OPACITY).spring({ opacity: 0 }),
+        I = 'BLUR' === n ? _ : 0,
+        T = {
+            background: m,
             backdropFilter: 'blur(0px)'
         },
-        I = (0, d.Z)(r),
-        m = (0, c.useTransition)(
-            o,
+        g = {
+            background: p,
+            backdropFilter: 'blur('.concat(I, 'px)')
+        },
+        S = (0, c.Z)(r),
+        A = (0, u.useTransition)(
+            f,
             {
                 keys: (e) => (e ? 'backdrop' : 'empty'),
-                config: { duration: r || I ? 0 : 300 },
-                from: p,
-                enter: {
-                    background: f,
-                    backdropFilter: 'blur('.concat('BLUR' === n ? 8 : 0, 'px)')
-                },
-                leave: p
+                config: { duration: r || S ? 0 : 300 },
+                from: T,
+                enter: g,
+                leave: T
             },
             'animate-always'
         );
-    if (null == s) {
-        let e = { zIndex: 1000 + i };
-        return m((t, n) =>
+    if (null == o) {
+        let e = { zIndex: 1000 + a };
+        return A((t, n) =>
             n
-                ? (0, a.jsx)(u.animated.div, {
-                      className: _.backdrop,
+                ? (0, i.jsx)(l.animated.div, {
+                      className: d.backdrop,
                       style: {
                           ...t,
                           ...e
                       },
-                      onClick: E
+                      onClick: h
                   })
                 : null
         );
     }
-    return (0, a.jsx)(s, {
-        children: m((e, t) =>
+    return (0, i.jsx)(o, {
+        children: A((e, t) =>
             t
-                ? (0, a.jsx)(u.animated.div, {
-                      className: l()(_.backdrop, _.withLayer),
+                ? (0, i.jsx)(l.animated.div, {
+                      className: s()(d.backdrop, d.withLayer),
                       style: e,
-                      onClick: E
+                      onClick: h
                   })
                 : null
         )
     });
 });
-t.Z = E;
+t.Z = f;

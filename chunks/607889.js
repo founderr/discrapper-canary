@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return a;
+        return s;
     }
 });
 var r = n(217942);
@@ -17,11 +17,13 @@ function i(e, t, n) {
         e
     );
 }
-class a {
+let a = 500,
+    o = 150;
+class s {
     getCurrentValue() {
         if (null == this.animationDetails) return this.value;
         let e = performance.now() - this.animationDetails.animationStart,
-            t = this.value < this.animationDetails.lastValue ? 150 : 500;
+            t = this.value < this.animationDetails.lastValue ? o : a;
         return e > t ? ((this.animationDetails = null), this.value) : this.value < this.animationDetails.lastValue ? r.easeOutQuint(e, this.animationDetails.lastValue, this.value, t) : r.easeOutBack(e, this.animationDetails.lastValue, this.value, t, 4);
     }
     animateTo(e) {

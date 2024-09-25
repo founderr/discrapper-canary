@@ -1,16 +1,15 @@
-var i, s, a, r, l, o;
+var r, i, a;
 n.d(t, {
     Y7: function () {
         return a;
     }
 }),
-    ((r = i || (i = {}))[(r.NONE = 0)] = 'NONE'),
-    (r[(r.LOW = 1)] = 'LOW'),
-    (r[(r.HIGH = 2)] = 'HIGH'),
-    ((l = s || (s = {}))[(l.NONE = 0)] = 'NONE'),
-    (l[(l.HOLLOW = 1)] = 'HOLLOW'),
-    (l[(l.FILLED = 2)] = 'FILLED'),
-    (l[(l.CHECKMARK = 3)] = 'CHECKMARK'),
-    ((o = a || (a = {}))[(o.LIST = 1)] = 'LIST'),
-    (o[(o.CHECKBOXES = 2)] = 'CHECKBOXES'),
-    (o[(o.RADIO_BUTTONS = 3)] = 'RADIO_BUTTONS');
+    !(function (e) {
+        (e[(e.NONE = 0)] = 'NONE'), (e[(e.LOW = 1)] = 'LOW'), (e[(e.HIGH = 2)] = 'HIGH');
+    })(r || (r = {})),
+    !(function (e) {
+        (e[(e.NONE = 0)] = 'NONE'), (e[(e.HOLLOW = 1)] = 'HOLLOW'), (e[(e.FILLED = 2)] = 'FILLED'), (e[(e.CHECKMARK = 3)] = 'CHECKMARK');
+    })(i || (i = {})),
+    !(function (e) {
+        (e[(e.LIST = 1)] = 'LIST'), (e[(e.CHECKBOXES = 2)] = 'CHECKBOXES'), (e[(e.RADIO_BUTTONS = 3)] = 'RADIO_BUTTONS');
+    })(a || (a = {}));

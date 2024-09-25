@@ -6,24 +6,25 @@ n.d(t, {
 var r = n(735250),
     i = n(470079),
     a = n(803997),
-    s = n.n(a),
-    o = n(696689),
-    l = n.n(o),
+    o = n.n(a),
+    s = n(696689),
+    l = n.n(s),
     u = n(692547),
     c = n(56077),
     d = n(654165);
 let _ = Object.fromEntries(Object.keys(u.Z.colors).map((e) => [l()(e), e])),
     E = i.forwardRef(function (e, t) {
         let n,
-            { variant: i, tag: a = 'div', selectable: o = !1, className: l, lineClamp: E, color: f, tabularNumbers: h = !1, scaleFontToUserSetting: p = !1, ...I } = e,
-            m = '',
-            T = {};
+            { variant: i, tag: a = 'div', selectable: s = !1, className: l, lineClamp: E, color: f, tabularNumbers: h = !1, scaleFontToUserSetting: p = !1, ...m } = e,
+            I = a,
+            T = '',
+            g = {};
         if (
             (null != E &&
                 (1 === E
-                    ? (m = c.lineClamp1)
-                    : ((m = c.lineClamp2Plus),
-                      (T = {
+                    ? (T = c.lineClamp1)
+                    : ((T = c.lineClamp2Plus),
+                      (g = {
                           lineClamp: E,
                           WebkitLineClamp: E
                       }))),
@@ -43,26 +44,26 @@ let _ = Object.fromEntries(Object.keys(u.Z.colors).map((e) => [l()(e), e])),
                     var S;
                     n = null === (S = u.Z.colors[_[f]]) || void 0 === S ? void 0 : S.css;
             }
-        let g = {
+        let A = {
             color: n,
-            ...T,
-            ...I.style
+            ...g,
+            ...m.style
         };
-        return (0, r.jsx)(a, {
+        return (0, r.jsx)(I, {
             ref: t,
-            className: s()(
+            className: o()(
                 {
                     [c.defaultColor]: void 0 === f,
-                    [c.selectable]: o,
+                    [c.selectable]: s,
                     [c.tabularNumbers]: h,
                     [d.fontScaling]: p
                 },
-                m,
+                T,
                 d[i],
                 l
             ),
-            ...I,
-            style: Object.values(g).filter(Boolean).length > 0 ? g : void 0,
+            ...m,
+            style: Object.values(A).filter(Boolean).length > 0 ? A : void 0,
             'data-text-variant': i
         });
     });

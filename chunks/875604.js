@@ -1,2 +1,2 @@
-var e = n(96403);
-t.exports = e({}.isPrototypeOf);
+var r = n(96403);
+e.exports = r({}.isPrototypeOf);

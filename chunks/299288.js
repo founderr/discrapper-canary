@@ -1,4 +1,4 @@
-e.exports = function (e) {
+function t(e) {
     let t = e.regex,
         n = /[dualxmsipngr]{0,12}/,
         r = {
@@ -15,7 +15,7 @@ e.exports = function (e) {
             begin: /->\{/,
             end: /\}/
         },
-        s = {
+        o = {
             variants: [
                 { begin: /\$\d/ },
                 { begin: t.concat(/[$%@](\^\w\b|#\w+(::\w+)*|\{\w+\}|\w+(::\w*)*)/, '(?![A-Za-z])(?![@$%])') },
@@ -25,7 +25,7 @@ e.exports = function (e) {
                 }
             ]
         },
-        o = [e.BACKSLASH_ESCAPE, i, s],
+        s = [e.BACKSLASH_ESCAPE, i, o],
         l = [/!/, /\//, /\|/, /\?/, /'/, /"/, /#/],
         u = (e, r, i = '\\1') => {
             let a = '\\1' === i ? i : t.concat(i, r);
@@ -33,13 +33,13 @@ e.exports = function (e) {
         },
         c = (e, r, i) => t.concat(t.concat('(?:', e, ')'), r, /(?:\\.|[^\\\/])*?/, i, n),
         d = [
-            s,
+            o,
             e.HASH_COMMENT_MODE,
             e.COMMENT(/^=\w/, /=cut/, { endsWithParent: !0 }),
             a,
             {
                 className: 'string',
-                contains: o,
+                contains: s,
                 variants: [
                     {
                         begin: 'q[qwxr]?\\s*\\(',
@@ -162,4 +162,5 @@ e.exports = function (e) {
             contains: d
         }
     );
-};
+}
+e.exports = t;

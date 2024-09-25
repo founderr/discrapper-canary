@@ -1,14 +1,18 @@
 n.d(t, {
     qk: function () {
-        return a;
+        return o;
     },
     vh: function () {
-        return i;
+        return a;
     },
     yJ: function () {
-        return r;
+        return i;
     }
 });
-var r = 60000,
-    i = 3600000,
-    a = 1000;
+var r = 365.2425,
+    i = 60000,
+    a = 3600000,
+    o = 1000,
+    s = 3600,
+    l = 24 * s,
+    u = l * r;

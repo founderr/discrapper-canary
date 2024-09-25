@@ -1,23 +1,37 @@
-n(47120);
-var r = n(443296),
-    i = n(873741),
-    a = n(866960),
+var r = n(47120);
+var i = n(443296),
+    a = n(873741),
+    o = n(866960),
     s = n(626135),
-    o = n(981631);
-function l(e) {
-    if (Math.random() > 0.1) return;
+    l = n(981631);
+function u(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+let c = 0.1;
+function d(e) {
+    if (Math.random() > c) return;
     let t = null == e.apiResponseTimestamp ? null : e.apiResponseTimestamp - e.initialSendTimestamp,
-        n = (0, i.d)();
-    s.default.track(o.rMx.QUEST_DECISION_ROUNDTRIP, {
-        ...(0, r.Z)(),
+        n = (0, a.d)();
+    s.default.track(l.rMx.QUEST_DECISION_ROUNDTRIP, {
+        ...(0, i.Z)(),
         endpoint: e.endpoint,
         was_successful: e.wasSuccessful,
         api_latency_ms: t,
-        mobile_network_type: a.Z.getType(),
+        mobile_network_type: o.Z.getType(),
         ...(null != n && { mobile_signal_strength_level: n })
     });
 }
-t.Z = new (class e {
+class _ {
     recordQuestRequestAttempt(e) {
         let t = {
             initialSendTimestamp: Date.now(),
@@ -28,14 +42,14 @@ t.Z = new (class e {
         this.pendingRequests.set(e, t),
             setTimeout(() => {
                 let t = this.pendingRequests.get(e);
-                null != t && (l(t), this.pendingRequests.delete(e));
+                null != t && (d(t), this.pendingRequests.delete(e));
             }, 30000);
     }
     recordQuestRequestApiResponse(e, t) {
         let { wasSuccessful: n } = t,
             r = this.pendingRequests.get(e);
         null != r &&
-            (l({
+            (d({
                 ...r,
                 apiResponseTimestamp: Date.now(),
                 wasSuccessful: n
@@ -43,17 +57,7 @@ t.Z = new (class e {
             this.pendingRequests.delete(e));
     }
     constructor() {
-        var e, t, n;
-        (e = this),
-            (t = 'pendingRequests'),
-            (n = new Map()),
-            t in e
-                ? Object.defineProperty(e, t, {
-                      value: n,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (e[t] = n);
+        u(this, 'pendingRequests', new Map());
     }
-})();
+}
+t.Z = new _();

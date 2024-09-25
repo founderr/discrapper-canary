@@ -8,21 +8,20 @@ n.d(t, {
     s8: function () {
         return r;
     }
-}),
-    n(627341);
+});
 var r,
-    i,
-    a = n(278074),
-    s = n(981631),
-    o = n(490897),
+    i = n(627341);
+var a = n(278074),
+    o = n(981631),
+    s = n(490897),
     l = n(689938);
 function u(e, t) {
     return (0, a.EQ)([t, e])
-        .with([s.bL.ALL_MESSAGES, o.i.ALL_MESSAGES], () => 'all_messages')
-        .with([s.bL.ONLY_MENTIONS, o.i.UNSET], () => 'mentions')
-        .with([s.bL.ONLY_MENTIONS, o.i.ONLY_MENTIONS], () => 'mentions')
-        .with([s.bL.NO_MESSAGES, o.i.UNSET], () => 'nothing')
-        .with([s.bL.NO_MESSAGES, o.i.ONLY_MENTIONS], () => 'nothing')
+        .with([o.bL.ALL_MESSAGES, s.i.ALL_MESSAGES], () => 'all_messages')
+        .with([o.bL.ONLY_MENTIONS, s.i.UNSET], () => 'mentions')
+        .with([o.bL.ONLY_MENTIONS, s.i.ONLY_MENTIONS], () => 'mentions')
+        .with([o.bL.NO_MESSAGES, s.i.UNSET], () => 'nothing')
+        .with([o.bL.NO_MESSAGES, s.i.ONLY_MENTIONS], () => 'nothing')
         .otherwise(() => 'custom');
 }
 function c(e) {
@@ -33,4 +32,6 @@ function c(e) {
         .with('custom', () => l.Z.Messages.NOTIFICATION_PRESET_CUSTOM)
         .exhaustive();
 }
-((i = r || (r = {})).ALL_MESSAGES = 'all_messages'), (i.MENTIONS = 'mentions'), (i.NOTHING = 'nothing'), (i.CUSTOM = 'custom');
+!(function (e) {
+    (e.ALL_MESSAGES = 'all_messages'), (e.MENTIONS = 'mentions'), (e.NOTHING = 'nothing'), (e.CUSTOM = 'custom');
+})(r || (r = {}));

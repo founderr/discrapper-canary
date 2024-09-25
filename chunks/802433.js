@@ -1,4 +1,4 @@
-var r, i, a, s;
+var r, i;
 n.d(t, {
     Q: function () {
         return i;
@@ -7,8 +7,9 @@ n.d(t, {
         return r;
     }
 }),
-    ((a = r || (r = {})).FromLoop = 'fromLoop'),
-    (a.FromStart = 'fromStart'),
-    ((s = i || (i = {}))[(s.UNSPECIFIED = 0)] = 'UNSPECIFIED'),
-    (s[(s.PERSISTENT = 1)] = 'PERSISTENT'),
-    (s[(s.INTERMITTENT = 2)] = 'INTERMITTENT');
+    !(function (e) {
+        (e.FromLoop = 'fromLoop'), (e.FromStart = 'fromStart');
+    })(r || (r = {})),
+    !(function (e) {
+        (e[(e.UNSPECIFIED = 0)] = 'UNSPECIFIED'), (e[(e.PERSISTENT = 1)] = 'PERSISTENT'), (e[(e.INTERMITTENT = 2)] = 'INTERMITTENT');
+    })(i || (i = {}));

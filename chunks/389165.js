@@ -5,27 +5,28 @@ function a(e) {
     return e && e.__esModule ? e : { default: e };
 }
 t.simpleCheckForValidColor = function (e) {
-    var t = 0,
-        n = 0;
+    var t = ['r', 'g', 'b', 'a', 'h', 's', 'l', 'v'],
+        n = 0,
+        i = 0;
     return (
-        (0, r.default)(['r', 'g', 'b', 'a', 'h', 's', 'l', 'v'], function (r) {
-            e[r] && ((t += 1), !isNaN(e[r]) && (n += 1), ('s' === r || 'l' === r) && /^\d+%$/.test(e[r]) && (n += 1));
+        (0, r.default)(t, function (t) {
+            e[t] && ((n += 1), isNaN(e[t]) || (i += 1), ('s' === t || 'l' === t) && /^\d+%$/.test(e[t]) && (i += 1));
         }),
-        t === n && e
+        n === i && e
     );
 };
-var s = (t.toState = function (e, t) {
+var o = (t.toState = function (e, t) {
     var n = e.hex ? (0, i.default)(e.hex) : (0, i.default)(e),
         r = n.toHsl(),
         a = n.toHsv(),
-        s = n.toRgb(),
-        o = n.toHex();
+        o = n.toRgb(),
+        s = n.toHex();
     return (
         0 === r.s && ((r.h = t || 0), (a.h = t || 0)),
         {
             hsl: r,
-            hex: '000000' === o && 0 === s.a ? 'transparent' : '#' + o,
-            rgb: s,
+            hex: '000000' === s && 0 === o.a ? 'transparent' : '#' + s,
+            rgb: o,
             hsv: a,
             oldHue: e.h || t || r.h,
             source: e.source
@@ -39,7 +40,7 @@ var s = (t.toState = function (e, t) {
 }),
     (t.getContrastingColor = function (e) {
         if (!e) return '#fff';
-        var t = s(e);
+        var t = o(e);
         return 'transparent' === t.hex ? 'rgba(0,0,0,0.4)' : (299 * t.rgb.r + 587 * t.rgb.g + 114 * t.rgb.b) / 1000 >= 128 ? '#000' : '#fff';
     }),
     (t.red = {

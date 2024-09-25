@@ -9,15 +9,16 @@ var r = (function () {
     }
     return (
         (e.prototype.toJSON = function () {
+            var e = this;
             return {
-                x: this.x,
-                y: this.y,
-                top: this.top,
-                right: this.right,
-                bottom: this.bottom,
-                left: this.left,
-                width: this.width,
-                height: this.height
+                x: e.x,
+                y: e.y,
+                top: e.top,
+                right: e.right,
+                bottom: e.bottom,
+                left: e.left,
+                width: e.width,
+                height: e.height
             };
         }),
         (e.fromRect = function (t) {

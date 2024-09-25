@@ -1,8 +1,8 @@
 var r = n(735250),
     i = n(470079),
     a = n(996146),
-    s = n(481060),
-    o = n(100527),
+    o = n(481060),
+    s = n(100527),
     l = n(906732),
     u = n(963249),
     c = n(51144),
@@ -10,11 +10,11 @@ var r = n(735250),
     _ = n(981631),
     E = n(689938),
     f = n(933283);
-t.Z = i.memo(function (e) {
+function h(e) {
     let { disabled: t, channel: n } = e,
-        { analyticsLocations: i } = (0, l.ZP)(o.Z.GIFT_BUTTON),
+        { analyticsLocations: i } = (0, l.ZP)(s.Z.GIFT_BUTTON),
         h = (0, c.Ft)(n),
-        { Component: p, events: I, play: m } = (0, a.$)();
+        { Component: p, events: m, play: I } = (0, a.$)();
     if (t) return null;
     let T = () => {
         (0, u.Z)({
@@ -30,7 +30,7 @@ t.Z = i.memo(function (e) {
             }
         });
     };
-    return (0, r.jsx)(s.Tooltip, {
+    return (0, r.jsx)(o.Tooltip, {
         text: E.Z.Messages.PREMIUM_GIFT_BUTTON_TOOLTIP,
         children: (e) =>
             (0, r.jsx)(d.Z, {
@@ -40,10 +40,11 @@ t.Z = i.memo(function (e) {
                 'aria-label': E.Z.Messages.PREMIUM_GIFT_BUTTON_LABEL,
                 'aria-haspopup': 'dialog',
                 onClick: () => {
-                    T(), m();
+                    T(), I();
                 },
-                ...I,
+                ...m,
                 children: (0, r.jsx)(p, { color: 'currentColor' })
             })
     });
-});
+}
+t.Z = i.memo(h);

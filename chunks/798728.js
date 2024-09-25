@@ -1,6 +1,6 @@
 var r = n(735250);
 n(470079);
-t.Z = (e) => {
+let i = (e) => {
     let { fill: t, className: n } = e;
     return (0, r.jsxs)('svg', {
         className: n,
@@ -41,3 +41,4 @@ t.Z = (e) => {
         ]
     });
 };
+t.Z = i;

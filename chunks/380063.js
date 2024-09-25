@@ -1,6 +1,8 @@
-e.exports = function (e) {
+function t(e) {
     let t = ['assembly', 'module', 'package', 'import', 'alias', 'class', 'interface', 'object', 'given', 'value', 'assign', 'void', 'function', 'new', 'of', 'extends', 'satisfies', 'abstracts', 'in', 'out', 'return', 'break', 'continue', 'throw', 'assert', 'dynamic', 'if', 'else', 'switch', 'case', 'for', 'while', 'try', 'catch', 'finally', 'then', 'let', 'this', 'outer', 'super', 'is', 'exists', 'nonempty'],
-        n = {
+        n = ['shared', 'abstract', 'formal', 'default', 'actual', 'variable', 'late', 'native', 'deprecated', 'final', 'sealed', 'annotation', 'suppressWarnings', 'small'],
+        r = ['doc', 'by', 'license', 'see', 'throws', 'tagged'],
+        i = {
             className: 'subst',
             excludeBegin: !0,
             excludeEnd: !0,
@@ -9,7 +11,7 @@ e.exports = function (e) {
             keywords: t,
             relevance: 10
         },
-        r = [
+        a = [
             {
                 className: 'string',
                 begin: '"""',
@@ -20,7 +22,7 @@ e.exports = function (e) {
                 className: 'string',
                 begin: '"',
                 end: '"',
-                contains: [n]
+                contains: [i]
             },
             {
                 className: 'string',
@@ -34,12 +36,12 @@ e.exports = function (e) {
             }
         ];
     return (
-        (n.contains = r),
+        (i.contains = a),
         {
             name: 'Ceylon',
             keywords: {
-                keyword: t.concat(['shared', 'abstract', 'formal', 'default', 'actual', 'variable', 'late', 'native', 'deprecated', 'final', 'sealed', 'annotation', 'suppressWarnings', 'small']),
-                meta: ['doc', 'by', 'license', 'see', 'throws', 'tagged']
+                keyword: t.concat(n),
+                meta: r
             },
             illegal: '\\$[^01]|#[^0-9a-fA-F]',
             contains: [
@@ -49,7 +51,8 @@ e.exports = function (e) {
                     className: 'meta',
                     begin: '@[a-z]\\w*(?::"[^"]*")?'
                 }
-            ].concat(r)
+            ].concat(a)
         }
     );
-};
+}
+e.exports = t;

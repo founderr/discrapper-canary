@@ -1,76 +1,73 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return v;
     }
-}),
-    n(47120);
+});
+var r = n(47120);
 var i = n(735250),
-    s = n(470079),
-    a = n(442837),
-    r = n(524437),
+    a = n(470079),
+    o = n(442837),
+    s = n(524437),
     l = n(481060),
-    o = n(140155),
+    u = n(140155),
     c = n(497089),
-    u = n(178480),
-    d = n(11799),
-    _ = n(632523),
-    E = n(695346),
-    I = n(626135),
-    m = n(709054),
-    T = n(791914),
-    h = n(981631),
-    N = n(689938),
-    f = n(802840),
-    C = n(811304);
-function p(e) {
+    d = n(178480),
+    _ = n(11799),
+    E = n(632523),
+    f = n(695346),
+    h = n(626135),
+    p = n(709054),
+    m = n(791914),
+    I = n(981631),
+    T = n(689938),
+    g = n(802840),
+    S = n(811304);
+function A(e) {
     let { onClick: t } = e;
     return (0, i.jsx)(l.CircleIconButton, {
-        tooltip: N.Z.Messages.MARK_ALL_AS_READ,
+        tooltip: T.Z.Messages.MARK_ALL_AS_READ,
         color: l.CircleIconButtonColors.TERTIARY,
         icon: (0, i.jsx)(l.DoubleCheckmarkIcon, {
             size: 'xs',
             color: 'currentColor'
         }),
-        className: C.controlButton,
+        className: S.controlButton,
         onClick: t
     });
 }
-function g(e) {
-    let { setTab: t, badgeState: n, closePopout: l } = e,
-        { initialized: N, items: C, loading: g, loadMore: A } = (0, d.y6)(),
-        S = (0, a.e7)([o.Z], () => o.Z.localItems),
-        x = s.useMemo(() => [...[...C, ...S].sort((e, t) => -1 * m.default.compare(e.id, t.id))], [C, S]),
-        R = C.length > 0 ? C[0] : null,
-        O = E.d$.useSetting(),
-        M = s.useMemo(() => {
-            if (null != R && 0 >= m.default.compare(R.id, O)) return !1;
-            for (let e of x) {
-                if (0 >= m.default.compare(e.id, O)) break;
-                if (!(0, u.r)(e, O)) return !0;
+function v(e) {
+    let { setTab: t, badgeState: n, closePopout: r } = e,
+        { initialized: l, items: T, loading: S, loadMore: v } = (0, _.y6)(),
+        N = (0, o.e7)([u.Z], () => u.Z.localItems),
+        O = a.useMemo(() => [...[...T, ...N].sort((e, t) => -1 * p.default.compare(e.id, t.id))], [T, N]),
+        R = T.length > 0 ? T[0] : null,
+        C = f.d$.useSetting(),
+        y = a.useMemo(() => {
+            if (null != R && 0 >= p.default.compare(R.id, C)) return !1;
+            for (let e of O) {
+                if (0 >= p.default.compare(e.id, C)) break;
+                if (!(0, d.r)(e, C)) return !0;
             }
             return !1;
-        }, [R, O, x]);
+        }, [R, C, O]),
+        b = () => {
+            null != R && (f.d$.updateSetting(R.id), h.default.track(I.rMx.NOTIFICATION_CENTER_ACTION, { action_type: c.ud.MARK_ALL_READ }));
+        };
     return (0, i.jsxs)('div', {
-        className: f.container,
+        className: g.container,
         children: [
-            (0, i.jsx)(T.Z, {
-                tab: r.X.FOR_YOU,
+            (0, i.jsx)(m.Z, {
+                tab: s.X.FOR_YOU,
                 setTab: t,
                 badgeState: n,
-                closePopout: l,
-                children: M
-                    ? (0, i.jsx)(p, {
-                          onClick: () => {
-                              null != R && (E.d$.updateSetting(R.id), I.default.track(h.rMx.NOTIFICATION_CENTER_ACTION, { action_type: c.ud.MARK_ALL_READ }));
-                          }
-                      })
-                    : null
+                closePopout: r,
+                children: y ? (0, i.jsx)(A, { onClick: b }) : null
             }),
-            (0, i.jsx)(_.Z, {
-                initialized: N,
-                items: x,
-                loading: g,
-                loadMore: A
+            (0, i.jsx)(E.Z, {
+                initialized: l,
+                items: O,
+                loading: S,
+                loadMore: v
             })
         ]
     });

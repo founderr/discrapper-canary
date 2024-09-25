@@ -1,114 +1,111 @@
 n.d(t, {
     CZ: function () {
-        return h;
-    },
-    FT: function () {
-        return m;
-    },
-    In: function () {
-        return d;
-    },
-    Ju: function () {
         return I;
     },
+    FT: function () {
+        return S;
+    },
+    In: function () {
+        return E;
+    },
+    Ju: function () {
+        return g;
+    },
     U6: function () {
-        return _;
+        return h;
     },
     iV: function () {
-        return f;
+        return m;
     },
     jT: function () {
-        return p;
+        return T;
     },
     y5: function () {
-        return E;
+        return p;
     }
-}),
-    n(47120),
-    n(653041);
-var r = n(570140),
-    i = n(601070),
-    a = n(131704),
-    s = n(592125),
-    o = n(324067),
-    l = n(594174),
-    u = n(709054),
-    c = n(981631);
-function d(e) {
+});
+var r = n(47120);
+var i = n(653041);
+var a = n(570140),
+    o = n(601070),
+    s = n(131704),
+    l = n(592125),
+    u = n(324067),
+    c = n(594174),
+    d = n(709054),
+    _ = n(981631);
+function E(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        i = arguments.length > 3 ? arguments[3] : void 0,
-        a = arguments.length > 4 ? arguments[4] : void 0;
-    r.Z.dispatch({
+        r = arguments.length > 3 ? arguments[3] : void 0,
+        i = arguments.length > 4 ? arguments[4] : void 0;
+    a.Z.dispatch({
         type: 'CHANNEL_ACK',
         channelId: e,
-        messageId: i,
+        messageId: r,
         immediate: t,
         force: n,
-        context: c.e3s,
-        location: a
-    });
-}
-function _(e) {
-    e.isCategory()
-        ? !(function (e) {
-              let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-                  n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-                  r = s.Z.getChannel(e);
-              if (null == r || null == r.guild_id) return;
-              let l = o.Z.getCategories(r.guild_id);
-              if (null == l[e]) return;
-              let u = l[e]
-                      .filter((e) => {
-                          let { channel: t } = e;
-                          return (0, a.Em)(t.type);
-                      })
-                      .map((e) => {
-                          let { channel: t } = e;
-                          return t.id;
-                      }),
-                  c = [...u];
-              for (let e of (u.forEach((e) => {
-                  let t = i.Z.getActiveJoinedThreadsForParent(r.guild_id, e);
-                  for (let e in t) c.push(e);
-              }),
-              c))
-                  d(e, t, n);
-          })(e.id, !0, !0)
-        : e.isForumLikeChannel()
-          ? d(e.id, !0, !0, u.default.fromTimestamp(Date.now()))
-          : d(e.id, !0, !0);
-}
-function E(e, t) {
-    r.Z.dispatch({
-        type: 'BULK_ACK',
-        channels: e,
-        context: c.e3s,
-        onFinished: t
+        context: _.e3s,
+        location: i
     });
 }
 function f(e) {
-    r.Z.dispatch({
+    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+        n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        r = l.Z.getChannel(e);
+    if (null == r || null == r.guild_id) return;
+    let i = u.Z.getCategories(r.guild_id);
+    if (null == i[e]) return;
+    let a = i[e]
+            .filter((e) => {
+                let { channel: t } = e;
+                return (0, s.Em)(t.type);
+            })
+            .map((e) => {
+                let { channel: t } = e;
+                return t.id;
+            }),
+        c = [...a];
+    for (let e of (a.forEach((e) => {
+        let t = o.Z.getActiveJoinedThreadsForParent(r.guild_id, e);
+        for (let e in t) c.push(e);
+    }),
+    c))
+        E(e, t, n);
+}
+function h(e) {
+    e.isCategory() ? f(e.id, !0, !0) : e.isForumLikeChannel() ? E(e.id, !0, !0, d.default.fromTimestamp(Date.now())) : E(e.id, !0, !0);
+}
+function p(e, t) {
+    a.Z.dispatch({
+        type: 'BULK_ACK',
+        channels: e,
+        context: _.e3s,
+        onFinished: t
+    });
+}
+function m(e) {
+    a.Z.dispatch({
         type: 'CHANNEL_LOCAL_ACK',
         channelId: e
     });
 }
-function h(e, t) {
-    r.Z.dispatch({
+function I(e, t) {
+    a.Z.dispatch({
         type: 'ENABLE_AUTOMATIC_ACK',
         channelId: e,
         windowId: t
     });
 }
-function p(e, t) {
-    r.Z.dispatch({
+function T(e, t) {
+    a.Z.dispatch({
         type: 'DISABLE_AUTOMATIC_ACK',
         channelId: e,
         windowId: t
     });
 }
-function I(e, t, n) {
-    r.Z.dispatch({
+function g(e, t, n) {
+    a.Z.dispatch({
         type: 'GUILD_FEATURE_ACK',
         id: e,
         ackType: t,
@@ -116,10 +113,10 @@ function I(e, t, n) {
         local: !1
     });
 }
-function m(e, t) {
+function S(e, t) {
     var n;
-    if (null != (null === (n = l.default.getCurrentUser()) || void 0 === n ? void 0 : n.id))
-        r.Z.dispatch({
+    if (null != (null === (n = c.default.getCurrentUser()) || void 0 === n ? void 0 : n.id))
+        a.Z.dispatch({
             type: 'USER_NON_CHANNEL_ACK',
             ackType: e,
             ackedId: t,

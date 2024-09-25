@@ -21,28 +21,29 @@ n.d(t, {
         return c.pF;
     },
     yh: function () {
-        return o.y;
+        return s.y;
     }
 });
 var r = n(250919),
     i = n(613568),
     a = n(153102),
-    s = n(727438),
-    o = n(445346),
+    o = n(727438),
+    s = n(445346),
     l = n(441244),
     u = n(827299),
     c = n(399606);
+function d() {
+    s.y.initialize();
+}
 t.ZP = {
     Emitter: a.Z,
-    Store: o.y,
-    PersistedStore: s.g5,
-    DeviceSettingsStore: s.gc,
-    OfflineCacheStore: s.AT,
+    Store: s.y,
+    PersistedStore: o.g5,
+    DeviceSettingsStore: o.gc,
+    OfflineCacheStore: o.AT,
     connectStores: l.Z,
-    initialize: function () {
-        o.y.initialize();
-    },
+    initialize: d,
     get initialized() {
-        return o.y.initialized;
+        return s.y.initialized;
     }
 };

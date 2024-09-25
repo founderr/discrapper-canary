@@ -1,48 +1,51 @@
 n.d(t, {
     Qg: function () {
-        return o;
+        return d;
     },
     S3: function () {
-        return a;
+        return u;
     },
     r5: function () {
-        return l;
+        return _;
     }
-}),
-    n(47120),
-    n(411104);
-var r = n(688619),
-    i = n.n(r);
-let a = {
-    NonText: 3,
-    Text: 4.5,
-    HighContrastText: 7
-};
-function s(e) {
+});
+var r = n(47120);
+var i = n(411104);
+var a = n(688619),
+    o = n.n(a);
+let s = 3,
+    l = 100,
+    u = {
+        NonText: 3,
+        Text: 4.5,
+        HighContrastText: 7
+    };
+function c(e) {
     let [t, n, r, i] = e.rgba();
     return 'rgba('.concat(t, ', ').concat(n, ', ').concat(r, ', ').concat(i, ')');
 }
-function o(e) {
+function d(e) {
     var t, n, r;
-    let o = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        l = null !== (t = o.contrastRatio) && void 0 !== t ? t : a.NonText,
-        u = null !== (n = o.tolerance) && void 0 !== n ? n : 3,
-        c = i()(null !== (r = o.base) && void 0 !== r ? r : e),
-        d = i()(e),
-        _ = c.luminance(),
-        E = d,
-        f = l + u,
-        h = i().contrast(c, d),
-        p = 100;
-    for (; p-- > 0; ) {
-        let e = h < l,
-            t = h > f;
+    let i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        a = null !== (t = i.contrastRatio) && void 0 !== t ? t : u.NonText,
+        d = null !== (n = i.tolerance) && void 0 !== n ? n : s,
+        _ = o()(null !== (r = i.base) && void 0 !== r ? r : e),
+        E = o()(e),
+        f = _.luminance(),
+        h = E,
+        p = a,
+        m = a + d,
+        I = o().contrast(_, E),
+        T = l;
+    for (; T-- > 0; ) {
+        let e = I < p,
+            t = I > m;
         if (!e && !t) break;
-        let n = E.luminance() > _;
-        (E = (t && n) || (e && !n) ? E.darken() : E.brighten()), (h = i().contrast(c, E));
+        let n = h.luminance() > f;
+        (h = (t && n) || (e && !n) ? h.darken() : h.brighten()), (I = o().contrast(_, h));
     }
-    return s(E);
+    return c(h);
 }
-function l(e, t) {
-    return s(i()(e).darken(t));
+function _(e, t) {
+    return c(o()(e).darken(t));
 }

@@ -1,20 +1,21 @@
 var r = (function () {
-        function e(e, t) {
-            for (var n = 0; n < t.length; n++) {
-                var r = t[n];
-                (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
-            }
+    function e(e, t) {
+        for (var n = 0; n < t.length; n++) {
+            var r = t[n];
+            (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
         }
-        return function (t, n, r) {
-            return n && e(t.prototype, n), r && e(t, r), t;
-        };
-    })(),
-    i = n(870391),
-    a = (function () {
+    }
+    return function (t, n, r) {
+        return n && e(t.prototype, n), r && e(t, r), t;
+    };
+})();
+function i(e, t) {
+    if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
+}
+var a = n(870391),
+    o = (function () {
         function e() {
-            !(function (e, t) {
-                if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
-            })(this, e);
+            i(this, e);
         }
         return (
             r(e, null, [
@@ -110,7 +111,7 @@ var r = (function () {
                 {
                     key: 'bezier',
                     value: function (e, t, n, r) {
-                        return i(e, t, n, r);
+                        return a(e, t, n, r);
                     }
                 },
                 {
@@ -139,5 +140,5 @@ var r = (function () {
             e
         );
     })(),
-    s = a.bezier(0.42, 0, 1, 1);
-e.exports = a;
+    s = o.bezier(0.42, 0, 1, 1);
+e.exports = o;

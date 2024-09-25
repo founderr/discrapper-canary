@@ -1,4 +1,4 @@
-e.exports = function (e) {
+function t(e) {
     return {
         name: 'ERB',
         subLanguage: 'xml',
@@ -13,4 +13,5 @@ e.exports = function (e) {
             }
         ]
     };
-};
+}
+e.exports = t;

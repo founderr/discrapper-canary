@@ -1,13 +1,14 @@
 let r, i, a;
-n(47120), n(177593);
-var s,
-    o = n(442837),
-    l = n(570140),
-    u = n(238514),
-    c = n(695346),
-    d = n(581883),
-    _ = n(283595);
-function E(e, t, n) {
+var o,
+    s = n(47120);
+var l = n(177593);
+var u = n(442837),
+    c = n(570140),
+    d = n(238514),
+    _ = n(695346),
+    E = n(581883),
+    f = n(283595);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,27 +21,43 @@ function E(e, t, n) {
         e
     );
 }
-let f = {
+let p = {
         applicationId: null,
         originURL: null
     },
-    h = f,
-    p = new Set(),
-    I = !1;
-function m() {
+    m = p,
+    I = new Set(),
+    T = !1;
+function g() {
     a = null;
 }
-function T() {
-    (r = null), (i = null), (p = new Set()), (h.applicationId = null), (h.originURL = null), m();
+function S() {
+    (r = null), (i = null), (I = new Set()), (m.applicationId = null), (m.originURL = null), g();
 }
-class S extends (s = o.ZP.PersistedStore) {
+function A(e) {
+    let { applicationId: t } = e;
+    I.add(t), (a = null);
+}
+function v(e) {
+    let { applicationId: t, originURL: n } = e;
+    (r = t), (i = n), I.delete(t), (a = null), (m.applicationId = t), (m.originURL = n);
+}
+function N(e) {
+    let { applicationId: t, error: n } = e;
+    I.delete(t), (a = n);
+}
+function O(e) {
+    let { testModeApplicationId: t } = e;
+    r = t;
+}
+class R extends (o = u.ZP.PersistedStore) {
     initialize(e) {
-        (r = (h = { ...(null != e ? e : f) }).applicationId),
-            (i = h.originURL),
-            this.waitFor(d.Z, u.Z),
-            this.syncWith([d.Z, u.Z], () => !0),
-            _.Z.whenInitialized(() => {
-                I = !0;
+        (r = (m = { ...(null != e ? e : p) }).applicationId),
+            (i = m.originURL),
+            this.waitFor(E.Z, d.Z),
+            this.syncWith([E.Z, d.Z], () => !0),
+            f.Z.whenInitialized(() => {
+                T = !0;
             });
     }
     inTestModeForApplication(e) {
@@ -50,16 +67,16 @@ class S extends (s = o.ZP.PersistedStore) {
         return r === e && null != i;
     }
     shouldDisplayTestMode(e) {
-        return c.Sb.getSetting() && this.inTestModeForApplication(e);
+        return _.Sb.getSetting() && this.inTestModeForApplication(e);
     }
     getState() {
-        return h;
+        return m;
     }
     get isTestMode() {
         return null != r;
     }
     get isFetchingAuthorization() {
-        return p.size > 0;
+        return I.size > 0;
     }
     get testModeEmbeddedApplicationId() {
         return null != i ? r : null;
@@ -75,30 +92,18 @@ class S extends (s = o.ZP.PersistedStore) {
     }
     whenInitialized(e) {
         this.addConditionalChangeListener(() => {
-            if (I) return setImmediate(e), !1;
+            if (T) return setImmediate(e), !1;
         });
     }
 }
-E(S, 'displayName', 'TestModeStore'),
-    E(S, 'persistKey', 'TestModeStore'),
-    (t.Z = new S(l.Z, {
-        DEVELOPER_TEST_MODE_AUTHORIZATION_START: function (e) {
-            let { applicationId: t } = e;
-            p.add(t), (a = null);
-        },
-        DEVELOPER_TEST_MODE_AUTHORIZATION_SUCCESS: function (e) {
-            let { applicationId: t, originURL: n } = e;
-            (r = t), (i = n), p.delete(t), (a = null), (h.applicationId = t), (h.originURL = n);
-        },
-        DEVELOPER_TEST_MODE_AUTHORIZATION_FAIL: function (e) {
-            let { applicationId: t, error: n } = e;
-            p.delete(t), (a = n);
-        },
-        OVERLAY_INITIALIZE: function (e) {
-            let { testModeApplicationId: t } = e;
-            r = t;
-        },
-        DEVELOPER_TEST_MODE_RESET_ERROR: m,
-        LOGOUT: T,
-        DEVELOPER_TEST_MODE_RESET: T
+h(R, 'displayName', 'TestModeStore'),
+    h(R, 'persistKey', 'TestModeStore'),
+    (t.Z = new R(c.Z, {
+        DEVELOPER_TEST_MODE_AUTHORIZATION_START: A,
+        DEVELOPER_TEST_MODE_AUTHORIZATION_SUCCESS: v,
+        DEVELOPER_TEST_MODE_AUTHORIZATION_FAIL: N,
+        OVERLAY_INITIALIZE: O,
+        DEVELOPER_TEST_MODE_RESET_ERROR: g,
+        LOGOUT: S,
+        DEVELOPER_TEST_MODE_RESET: S
     }));

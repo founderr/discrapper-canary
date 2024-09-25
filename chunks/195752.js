@@ -1,4 +1,4 @@
-e.exports = function (e) {
+function t(e) {
     return {
         name: 'HAML',
         case_insensitive: !0,
@@ -94,4 +94,5 @@ e.exports = function (e) {
             }
         ]
     };
-};
+}
+e.exports = t;

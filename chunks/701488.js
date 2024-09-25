@@ -1,63 +1,63 @@
 n.d(t, {
     AC: function () {
-        return Q;
+        return et;
     },
     Cb: function () {
-        return F;
+        return w;
     },
     Ec: function () {
-        return U;
+        return b;
     },
     Es: function () {
-        return W;
+        return X;
     },
     Ev: function () {
-        return N;
+        return p;
     },
     Fr: function () {
-        return A;
+        return h;
     },
     Fu: function () {
-        return j;
+        return F;
     },
     GR: function () {
-        return D;
+        return O;
     },
     Gv: function () {
-        return B;
+        return U;
     },
     IF: function () {
-        return G;
+        return M;
     },
     In: function () {
-        return Z;
+        return k;
     },
     JT: function () {
-        return Y;
+        return B;
     },
     K8: function () {
         return r;
     },
     MO: function () {
-        return C;
+        return S;
     },
     OF: function () {
-        return en;
+        return es;
     },
     P9: function () {
-        return q;
+        return ee;
     },
     PD: function () {
-        return b;
+        return R;
     },
     Pc: function () {
-        return X;
+        return en;
     },
     S4: function () {
         return a;
     },
     Si: function () {
-        return K;
+        return $;
     },
     W0: function () {
         return u;
@@ -66,135 +66,161 @@ n.d(t, {
         return i;
     },
     Zc: function () {
-        return k;
+        return P;
     },
     ag: function () {
         return l;
     },
     am: function () {
-        return P;
+        return y;
     },
     cE: function () {
         return c;
     },
     cc: function () {
-        return g;
+        return f;
     },
     eB: function () {
-        return z;
+        return J;
     },
     f9: function () {
-        return H;
+        return G;
     },
     fE: function () {
-        return x;
+        return D;
     },
     jT: function () {
-        return M;
+        return C;
     },
     js: function () {
-        return y;
+        return A;
     },
     l4: function () {
-        return w;
-    },
-    mI: function () {
         return L;
     },
+    mI: function () {
+        return N;
+    },
     qG: function () {
-        return V;
+        return x;
     },
     qm: function () {
-        return O;
+        return m;
     },
     um: function () {
-        return $;
+        return er;
     },
     wP: function () {
-        return et;
+        return eo;
     },
     wT: function () {
-        return ee;
+        return ea;
     },
     xK: function () {
-        return o;
+        return s;
     }
-}),
-    n(47120);
+});
 var r,
     i,
     a,
-    s,
     o,
+    s,
     l,
     u,
     c,
-    d,
-    _,
-    E,
-    f,
-    h,
-    p,
-    I,
-    m,
-    T = n(911969),
-    S = n(981631);
-let g = 160,
-    A = /^https?:\/\/(?:www\.)?(twitch\.tv\/(.+)|youtube.com\/watch\?v=)/,
-    N = '438122941302046720',
-    O = '773336526917861400',
-    R = '880218832743055411',
-    v = '1050941315912835122',
-    C = '1070087967294631976',
-    y = '1007373802981822582',
-    L = '1039835161136746497',
-    D = '852509694341283871',
-    b = '903769130790969345',
-    M = '880218394199220334',
-    P = '1078728822972764312',
-    U = '947957217959759964',
-    w = '832013003968348200',
-    x = '832012774040141894',
-    G = '832025144389533716',
-    k = '755827207812677713',
-    B = '879863686565621790',
-    F = '902271654783242291',
-    V = '1037680572660727838',
-    H = '945737671223947305',
-    Z = '1011683823555199066',
-    Y = '1234546995360694434',
-    j = '1214629548377768066',
-    W = 'https://discord.sjc1.qualtrics.com/jfe/form/SV_6SvWAOxlcSRWiEu',
-    K = {
+    d = n(47120);
+var _ = n(911969),
+    E = n(981631);
+let f = 160,
+    h = /^https?:\/\/(?:www\.)?(twitch\.tv\/(.+)|youtube.com\/watch\?v=)/,
+    p = '438122941302046720',
+    m = '773336526917861400',
+    I = '755600276941176913',
+    T = '880218832743055411',
+    g = '1050941315912835122',
+    S = '1070087967294631976',
+    A = '1007373802981822582',
+    v = '1067803140071620628',
+    N = '1039835161136746497',
+    O = '852509694341283871',
+    R = '903769130790969345',
+    C = '880218394199220334',
+    y = '1078728822972764312',
+    b = '947957217959759964',
+    L = '832013003968348200',
+    D = '832012774040141894',
+    M = '832025144389533716',
+    P = '755827207812677713',
+    U = '879863686565621790',
+    w = '902271654783242291',
+    x = '1037680572660727838',
+    G = '945737671223947305',
+    k = '1011683823555199066',
+    B = '1234546995360694434',
+    F = '1214629548377768066',
+    Z = '235088799074484224',
+    V = '1235205910863806484',
+    H = '1220052815590723654',
+    Y = '1222080278672179220',
+    j = '1227719606223765687',
+    W = '1194351737264406548',
+    K = '1245041113882955918',
+    z = '1245040907732910201',
+    q = '1245040436427489471',
+    Q = '1208090049871351890',
+    X = 'https://discord.sjc1.qualtrics.com/jfe/form/SV_6SvWAOxlcSRWiEu',
+    $ = {
         SMALL: 64,
         LARGE: 160
     },
-    z = ['in_development', 'activities_team', 'employee_release'],
-    q = [V, '235088799074484224', y, '1067803140071620628', '1194351737264406548', '1245041113882955918', '1245040907732910201', '1245040436427489471', '1208090049871351890', '1235205910863806484', '1220052815590723654', '1222080278672179220', '1227719606223765687'];
-((d = r || (r = {})).ADS = 'ADS'), (d.FAILED_LOAD = 'FAILED_LOAD'), (d.LAGGING = 'LAGGING'), (d.CONFUSING = 'CONFUSING'), (d.NOT_FUN = 'NOT_FUN'), (d.OTHER = 'OTHER'), ((_ = i || (i = {}))[(_.PLAY = 0)] = 'PLAY'), (_[(_.SPECTATE = 1)] = 'SPECTATE'), ((E = a || (a = {})).DESKTOP = 'desktop'), (E.MOBILE = 'mobile'), ((f = s || (s = {})).BETRAYAL_MARKETING_TOOLTIP = 'BETRAYAL_MARKETING_TOOLTIP'), (f.FISHINGTON_MARKETING_TOOLTIP = 'FISHINGTON_MARKETING_TOOLTIP'), (f.POKER_MARKETING_TOOLTIP = 'POKER_MARKETING_TOOLTIP'), (f.YOUTUBE_MARKETING_TOOLTIP = 'YOUTUBE_MARKETING_TOOLTIP'), ((h = o || (o = {}))[(h.UNLOCKED = 1)] = 'UNLOCKED'), (h[(h.PORTRAIT = 2)] = 'PORTRAIT'), (h[(h.LANDSCAPE = 3)] = 'LANDSCAPE'), ((p = l || (l = {}))[(p.DIRECTORY = 0)] = 'DIRECTORY'), (p[(p.SELECT_CHANNEL = 1)] = 'SELECT_CHANNEL'), (p[(p.DETAIL_PAGE = 2)] = 'DETAIL_PAGE');
-let Q = 'activity-shelf',
-    X = new Set(['755600276941176913', R, v, M]),
-    $ = new Set([R, v, M]);
-((I = u || (u = {}))[(I.PORTRAIT = 0)] = 'PORTRAIT'), (I[(I.LANDSCAPE = 1)] = 'LANDSCAPE'), ((m = c || (c = {}))[(m.FOCUSED = 0)] = 'FOCUSED'), (m[(m.PIP = 1)] = 'PIP'), (m[(m.GRID = 2)] = 'GRID');
-let J = {
-        label_type: T.ww.NONE,
+    J = ['in_development', 'activities_team', 'employee_release'],
+    ee = [x, Z, A, v, W, K, z, q, Q, V, H, Y, j];
+!(function (e) {
+    (e.ADS = 'ADS'), (e.FAILED_LOAD = 'FAILED_LOAD'), (e.LAGGING = 'LAGGING'), (e.CONFUSING = 'CONFUSING'), (e.NOT_FUN = 'NOT_FUN'), (e.OTHER = 'OTHER');
+})(r || (r = {})),
+    !(function (e) {
+        (e[(e.PLAY = 0)] = 'PLAY'), (e[(e.SPECTATE = 1)] = 'SPECTATE');
+    })(i || (i = {})),
+    !(function (e) {
+        (e.DESKTOP = 'desktop'), (e.MOBILE = 'mobile');
+    })(a || (a = {})),
+    !(function (e) {
+        (e.BETRAYAL_MARKETING_TOOLTIP = 'BETRAYAL_MARKETING_TOOLTIP'), (e.FISHINGTON_MARKETING_TOOLTIP = 'FISHINGTON_MARKETING_TOOLTIP'), (e.POKER_MARKETING_TOOLTIP = 'POKER_MARKETING_TOOLTIP'), (e.YOUTUBE_MARKETING_TOOLTIP = 'YOUTUBE_MARKETING_TOOLTIP');
+    })(o || (o = {})),
+    !(function (e) {
+        (e[(e.UNLOCKED = 1)] = 'UNLOCKED'), (e[(e.PORTRAIT = 2)] = 'PORTRAIT'), (e[(e.LANDSCAPE = 3)] = 'LANDSCAPE');
+    })(s || (s = {})),
+    !(function (e) {
+        (e[(e.DIRECTORY = 0)] = 'DIRECTORY'), (e[(e.SELECT_CHANNEL = 1)] = 'SELECT_CHANNEL'), (e[(e.DETAIL_PAGE = 2)] = 'DETAIL_PAGE');
+    })(l || (l = {}));
+let et = 'activity-shelf',
+    en = new Set([I, T, g, C]),
+    er = new Set([T, g, C]);
+!(function (e) {
+    (e[(e.PORTRAIT = 0)] = 'PORTRAIT'), (e[(e.LANDSCAPE = 1)] = 'LANDSCAPE');
+})(u || (u = {})),
+    !(function (e) {
+        (e[(e.FOCUSED = 0)] = 'FOCUSED'), (e[(e.PIP = 1)] = 'PIP'), (e[(e.GRID = 2)] = 'GRID');
+    })(c || (c = {}));
+let ei = {
+        label_type: _.ww.NONE,
         release_phase: '',
         label_until: null
     },
-    ee = {
+    ea = {
         application_id: '',
         requires_age_gate: !1,
         legacy_responsive_aspect_ratio: !1,
         default_orientation_lock_state: 1,
         tablet_default_orientation_lock_state: 1,
-        supported_platforms: [T.C3.WEB],
+        supported_platforms: [_.C3.WEB],
         client_platform_config: {
-            [T.C3.WEB]: J,
-            [T.C3.IOS]: J,
-            [T.C3.ANDROID]: J
+            [_.C3.WEB]: ei,
+            [_.C3.IOS]: ei,
+            [_.C3.ANDROID]: ei
         },
         has_csp_exception: !1,
         displays_advertisements: !1
     },
-    et = [S.d4z.GUILD_TEXT, S.d4z.DM, S.d4z.GROUP_DM],
-    en = 'https://support-dev.discord.com/hc/en-us/articles/21692628851351-Private-Activity-Safety';
+    eo = [E.d4z.GUILD_TEXT, E.d4z.DM, E.d4z.GROUP_DM],
+    es = 'https://support-dev.discord.com/hc/en-us/articles/21692628851351-Private-Activity-Safety';

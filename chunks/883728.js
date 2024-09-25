@@ -1,22 +1,23 @@
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var s = n(374470),
-    o = n(239091);
-t.Z = (e) => {
-    let { facepileRef: t, goToThread: a, channel: l } = e;
+var i = n(374470),
+    a = n(239091);
+let o = (e) => {
+    let { facepileRef: t, goToThread: o, channel: s } = e;
     return {
         handleLeftClick: (e) => {
             var n;
-            !((0, s.k)(e.target) && (null === (n = t.current) || void 0 === n ? void 0 : n.contains(e.target))) && a(l, e.shiftKey);
+            !((0, i.k)(e.target) && (null === (n = t.current) || void 0 === n ? void 0 : n.contains(e.target))) && o(s, e.shiftKey);
         },
         handleRightClick: (e) =>
-            (0, o.jW)(e, async () => {
-                let { default: e } = await Promise.all([n.e('39285'), n.e('48800'), n.e('94612')]).then(n.bind(n, 422200));
+            (0, a.jW)(e, async () => {
+                let { default: e } = await Promise.all([n.e('39285'), n.e('40157')]).then(n.bind(n, 422200));
                 return (t) =>
-                    (0, i.jsx)(e, {
+                    (0, r.jsx)(e, {
                         ...t,
-                        channel: l
+                        channel: s
                     });
             })
     };
 };
+t.Z = o;

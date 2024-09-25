@@ -1,4 +1,5 @@
 var r = n(965537);
-t.Z = function (e) {
+function i(e) {
     return 'function' == typeof e ? e : r.Z;
-};
+}
+t.Z = i;

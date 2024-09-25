@@ -1,11 +1,11 @@
-n(47120);
-var r = n(570140),
-    i = n(317770),
-    a = n(280837),
+var r = n(47120);
+var i = n(570140),
+    a = n(317770),
+    o = n(280837),
     s = n(592125),
-    o = n(914010),
-    l = n(823379);
-function u(e, t, n) {
+    l = n(914010),
+    u = n(823379);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,31 +18,32 @@ function u(e, t, n) {
         e
     );
 }
-class c extends i.Z {
+class d extends a.Z {
     _initialize() {
-        r.Z.subscribe('VOICE_CHANNEL_SELECT', this.handleVoiceChannelSelect), r.Z.subscribe('LOGOUT', this.handleLogout);
+        i.Z.subscribe('VOICE_CHANNEL_SELECT', this.handleVoiceChannelSelect), i.Z.subscribe('LOGOUT', this.handleLogout);
     }
     _terminate() {
-        r.Z.unsubscribe('VOICE_CHANNEL_SELECT', this.handleVoiceChannelSelect), r.Z.unsubscribe('LOGOUT', this.handleLogout);
+        i.Z.unsubscribe('VOICE_CHANNEL_SELECT', this.handleVoiceChannelSelect), i.Z.unsubscribe('LOGOUT', this.handleLogout);
     }
     constructor(...e) {
         super(...e),
-            u(this, 'handleVoiceChannelSelect', (e) => {
+            c(this, 'handleVoiceChannelSelect', (e) => {
                 let { channelId: t, guildId: n } = e;
                 if (null != t) {
                     let e = s.Z.getChannel(t);
                     if (null == e || e.isGuildStageVoice()) return;
                 }
                 this.terminate();
-                this.handleDisconnectFromStageChannel(null == t ? null : null != n ? n : null);
+                let r = null == t ? null : null != n ? n : null;
+                this.handleDisconnectFromStageChannel(r);
             }),
-            u(this, 'handleDisconnectFromStageChannel', (e) => {
-                let t = o.Z.getGuildId();
-                (0, a.O)([t, e].filter(l.lm));
+            c(this, 'handleDisconnectFromStageChannel', (e) => {
+                let t = l.Z.getGuildId();
+                (0, o.O)([t, e].filter(u.lm));
             }),
-            u(this, 'handleLogout', () => {
+            c(this, 'handleLogout', () => {
                 this.terminate(), this.handleDisconnectFromStageChannel(null);
             });
     }
 }
-t.Z = new c();
+t.Z = new d();

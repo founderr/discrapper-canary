@@ -1,134 +1,133 @@
 n.d(t, {
     Z: function () {
-        return w;
+        return x;
     },
     _: function () {
         return r;
     }
-}),
-    n(627341),
-    n(47120);
+});
 var r,
-    i,
-    a = n(735250),
+    i = n(627341);
+var a = n(47120);
+var o = n(735250),
     s = n(470079),
-    o = n(120356),
-    l = n.n(o),
-    u = n(278074),
-    c = n(442837),
-    d = n(481060),
-    _ = n(230711),
-    E = n(351773),
-    f = n(100527),
-    h = n(94795),
-    p = n(327943),
+    l = n(120356),
+    u = n.n(l),
+    c = n(278074),
+    d = n(442837),
+    _ = n(481060),
+    E = n(230711),
+    f = n(351773),
+    h = n(100527),
+    p = n(94795),
+    m = n(327943),
     I = n(539873),
-    m = n(207164),
-    T = n(238302),
+    T = n(207164),
+    g = n(238302),
     S = n(514361),
-    g = n(572397),
-    A = n(705262),
+    A = n(572397),
+    v = n(705262),
     N = n(436774),
     O = n(768762),
     R = n(197115),
-    v = n(727939),
-    C = n(981631),
-    y = n(921944),
+    C = n(727939),
+    y = n(981631),
+    b = n(921944),
     L = n(474936),
     D = n(689938),
-    b = n(556120);
-function M() {
-    let e = (0, g.q)();
+    M = n(556120);
+function P() {
+    let e = (0, A.q)();
     return (
-        s.useEffect(() => ((0, T.Kq)(), e(C.rMx.CLIENT_THEME_PREVIEW_VIEWED), () => e(C.rMx.CLIENT_THEME_PREVIEW_CLOSED)), [e]),
-        (0, a.jsx)(A.ZP, {
-            type: A.yH.EDITOR,
-            children: (0, a.jsx)(A.ZP.BasicAndGradient, { isEditor: !0 })
+        s.useEffect(() => ((0, g.Kq)(), e(y.rMx.CLIENT_THEME_PREVIEW_VIEWED), () => e(y.rMx.CLIENT_THEME_PREVIEW_CLOSED)), [e]),
+        (0, o.jsx)(v.ZP, {
+            type: v.yH.EDITOR,
+            children: (0, o.jsx)(v.ZP.BasicAndGradient, { isEditor: !0 })
         })
     );
 }
-function P() {
-    let e = (0, m.Z)();
+function U() {
+    let e = (0, T.Z)();
     return (
         s.useEffect(() => {
-            (0, h.nJ)(), e();
+            (0, p.nJ)(), e();
         }, [e]),
-        (0, a.jsx)(I.Z, { isEditor: !0 })
+        (0, o.jsx)(I.Z, { isEditor: !0 })
     );
 }
-function U(e) {
-    let { tab: t, isPreview: r, isCoachmark: i, onClose: o } = e,
-        c = s.useCallback(() => {
-            o(), !i && _.Z.open();
-        }, [o, i]),
-        E = (0, u.EQ)({
+function w(e) {
+    let { tab: t, isPreview: r, isCoachmark: i, onClose: a } = e,
+        l = s.useCallback(() => {
+            a(), !i && E.Z.open();
+        }, [a, i]),
+        d = (0, c.EQ)({
             isPreview: r,
             isCoachmark: i
         })
             .with({ isCoachmark: !0 }, () => D.Z.Messages.CLOSE)
             .with({ isPreview: !0 }, () => D.Z.Messages.CLIENT_THEMES_EDITOR_EXIT_PREVIEW)
             .otherwise(() => D.Z.Messages.CLIENT_THEMES_EDITOR_RETURN_TO_SETTINGS),
-        h = s.useCallback(() => {
+        f = s.useCallback(() => {
             if (1 === t) {
-                (0, d.openModalLazy)(async () => {
+                (0, _.openModalLazy)(async () => {
                     let { default: e } = await n.e('69052').then(n.bind(n, 184250));
                     return (t) =>
-                        (0, a.jsx)(e, {
-                            analyticsSource: f.Z.APP_ICON_EDITOR,
-                            analyticsLocation: { section: C.jXE.SETTINGS_APP_ICONS },
+                        (0, o.jsx)(e, {
+                            analyticsSource: h.Z.APP_ICON_EDITOR,
+                            analyticsLocation: { section: y.jXE.SETTINGS_APP_ICONS },
                             ...t
                         });
                 });
                 return;
             }
             if (0 === t) {
-                (0, d.openModalLazy)(async () => {
+                (0, _.openModalLazy)(async () => {
                     let { default: e } = await n.e('68192').then(n.bind(n, 742234));
                     return (t) =>
-                        (0, a.jsx)(e, {
-                            analyticsSource: f.Z.CLIENT_THEMES_EDITOR,
-                            analyticsLocation: { section: C.jXE.SETTINGS_CLIENT_THEMES },
+                        (0, o.jsx)(e, {
+                            analyticsSource: h.Z.CLIENT_THEMES_EDITOR,
+                            analyticsLocation: { section: y.jXE.SETTINGS_CLIENT_THEMES },
                             ...t
                         });
                 });
                 return;
             }
         }, [t]);
-    return (0, a.jsxs)('div', {
-        className: b.footerContainer,
+    return (0, o.jsxs)('div', {
+        className: M.footerContainer,
         children: [
             r &&
-                (0, a.jsxs)('div', {
-                    className: b.footerLabelContainer,
+                (0, o.jsxs)('div', {
+                    className: M.footerLabelContainer,
                     children: [
-                        (0, a.jsx)(d.NitroWheelIcon, {
-                            className: b.footerNitro,
+                        (0, o.jsx)(_.NitroWheelIcon, {
+                            className: M.footerNitro,
                             size: 'xs',
                             color: N.JX.PREMIUM_TIER_2
                         }),
-                        (0, a.jsx)(d.Text, {
-                            className: b.footerText,
+                        (0, o.jsx)(_.Text, {
+                            className: M.footerText,
                             variant: 'text-sm/medium',
-                            children: D.Z.Messages.PREMIUM_UPSELL_MAKE_DISCORD_YOURS.format({ onClick: h })
+                            children: D.Z.Messages.PREMIUM_UPSELL_MAKE_DISCORD_YOURS.format({ onClick: f })
                         })
                     ]
                 }),
-            (0, a.jsxs)('div', {
-                className: b.footerButtonContainer,
+            (0, o.jsxs)('div', {
+                className: M.footerButtonContainer,
                 children: [
-                    (0, a.jsx)('div', {
-                        children: (0, a.jsx)(d.Button, {
-                            className: l()(b.footerButton, b.footerButtonBack),
-                            color: d.ButtonColors.PRIMARY,
-                            size: d.Button.Sizes.NONE,
-                            onClick: c,
-                            'aria-label': E,
-                            children: (0, a.jsx)(O.Z, { direction: O.Z.Directions.LEFT })
+                    (0, o.jsx)('div', {
+                        children: (0, o.jsx)(_.Button, {
+                            className: u()(M.footerButton, M.footerButtonBack),
+                            color: _.ButtonColors.PRIMARY,
+                            size: _.Button.Sizes.NONE,
+                            onClick: l,
+                            'aria-label': d,
+                            children: (0, o.jsx)(O.Z, { direction: O.Z.Directions.LEFT })
                         })
                     }),
                     r &&
-                        (0, a.jsx)(R.Z, {
-                            className: b.footerButton,
+                        (0, o.jsx)(R.Z, {
+                            className: M.footerButton,
                             subscriptionTier: L.Si.TIER_2,
                             showGradient: !0,
                             fullWidth: !0,
@@ -139,10 +138,10 @@ function U(e) {
         ]
     });
 }
-function w(e) {
+function x(e) {
     let { initialTab: t, markAsDismissed: n } = e,
         [r, i] = s.useState(t),
-        o = s.useMemo(
+        a = s.useMemo(
             () => [
                 {
                     name: D.Z.Messages.THEME,
@@ -155,43 +154,43 @@ function w(e) {
             ],
             []
         ),
-        l = (0, c.e7)([S.Z], () => S.Z.isPreview),
-        u = (0, c.e7)([p.Z], () => p.Z.isUpsellPreview),
-        _ = l || u,
-        f = (0, g.J)(),
-        I = s.useCallback(() => {
-            l && f(), u && (0, h.O7)();
-        }, [l, u, f]),
-        m = (0, E.Z)(null, _ ? I : C.dG4),
-        A = s.useCallback(() => {
-            (0, h.G8)(), (0, T.Mo)(), I(), null == n || n(y.L.DISMISS);
-        }, [I, n]);
-    return (0, a.jsx)(v.Z, {
-        className: b.draggableContainer,
-        children: (0, a.jsxs)('div', {
-            ref: m,
-            className: b.container,
+        l = (0, d.e7)([S.Z], () => S.Z.isPreview),
+        u = (0, d.e7)([m.Z], () => m.Z.isUpsellPreview),
+        c = l || u,
+        E = (0, A.J)(),
+        h = s.useCallback(() => {
+            l && E(), u && (0, p.O7)();
+        }, [l, u, E]),
+        I = (0, f.Z)(null, c ? h : y.dG4),
+        T = s.useCallback(() => {
+            (0, p.G8)(), (0, g.Mo)(), h(), null == n || n(b.L.DISMISS);
+        }, [h, n]);
+    return (0, o.jsx)(C.Z, {
+        className: M.draggableContainer,
+        children: (0, o.jsxs)('div', {
+            ref: I,
+            className: M.container,
             children: [
-                (0, a.jsxs)('div', {
-                    className: b.headerParentContainer,
+                (0, o.jsxs)('div', {
+                    className: M.headerParentContainer,
                     children: [
-                        (0, a.jsxs)('div', {
-                            className: b.headerContainer,
+                        (0, o.jsxs)('div', {
+                            className: M.headerContainer,
                             children: [
-                                (0, a.jsx)(d.Heading, {
+                                (0, o.jsx)(_.Heading, {
                                     variant: 'heading-lg/extrabold',
                                     children: D.Z.Messages.PREMIUM_UPSELL_FEATURE_CLIENT_THEMES_APP_ICONS_PREVIEW_TITLE
                                 }),
-                                (0, a.jsx)(d.ModalCloseButton, {
-                                    className: b.closeContainer,
-                                    innerClassName: b.closeInner,
+                                (0, o.jsx)(_.ModalCloseButton, {
+                                    className: M.closeContainer,
+                                    innerClassName: M.closeInner,
                                     withCircleBackground: !0,
-                                    onClick: A
+                                    onClick: T
                                 })
                             ]
                         }),
-                        (0, a.jsx)(d.SegmentedControl, {
-                            options: o,
+                        (0, o.jsx)(_.SegmentedControl, {
+                            options: a,
                             value: r,
                             onChange: (e) => {
                                 let { value: t } = e;
@@ -201,18 +200,20 @@ function w(e) {
                         })
                     ]
                 }),
-                (0, a.jsxs)(d.Scroller, {
-                    className: b.scrollContainer,
-                    children: [0 === r && (0, a.jsx)(M, {}), 1 === r && (0, a.jsx)(P, {})]
+                (0, o.jsxs)(_.Scroller, {
+                    className: M.scrollContainer,
+                    children: [0 === r && (0, o.jsx)(P, {}), 1 === r && (0, o.jsx)(U, {})]
                 }),
-                (0, a.jsx)(U, {
+                (0, o.jsx)(w, {
                     tab: r,
-                    isPreview: _,
-                    onClose: A,
+                    isPreview: c,
+                    onClose: T,
                     isCoachmark: !1
                 })
             ]
         })
     });
 }
-((i = r || (r = {}))[(i.CLIENT_THEMES = 0)] = 'CLIENT_THEMES'), (i[(i.APP_ICONS = 1)] = 'APP_ICONS');
+!(function (e) {
+    (e[(e.CLIENT_THEMES = 0)] = 'CLIENT_THEMES'), (e[(e.APP_ICONS = 1)] = 'APP_ICONS');
+})(r || (r = {}));

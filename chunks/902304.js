@@ -1,24 +1,24 @@
-n(47120);
-var r = n(512722),
-    i = n.n(r),
-    a = n(846519),
+var r = n(47120);
+var i = n(512722),
+    a = n.n(i),
+    o = n(846519),
     s = n(668781),
-    o = n(846027),
-    l = n(147913),
-    u = n(710845),
-    c = n(314897),
-    d = n(131951),
-    _ = n(19780),
-    E = n(797258),
-    f = n(979651),
-    h = n(823379),
-    p = n(254238),
+    l = n(846027),
+    u = n(147913),
+    c = n(710845),
+    d = n(314897),
+    _ = n(131951),
+    E = n(19780),
+    f = n(797258),
+    h = n(979651),
+    p = n(823379),
+    m = n(254238),
     I = n(607214),
-    m = n(258609),
-    T = n(565473),
+    T = n(258609),
+    g = n(565473),
     S = n(444092),
-    g = n(927923),
-    A = n(65154),
+    A = n(927923),
+    v = n(65154),
     N = n(689938);
 function O(e, t, n) {
     return (
@@ -33,16 +33,28 @@ function O(e, t, n) {
         e
     );
 }
-let R = new u.Z('GameConsoleManager');
-async function v(e) {
-    let t = _.Z.getChannelId();
-    i()(null == t, 'Syncing to remote while in voice!'), e.selfMute !== d.Z.isSelfMute() && (await o.Z.toggleSelfMute({ syncRemote: !1 })), e.selfDeaf !== d.Z.isSelfDeaf() && o.Z.toggleSelfDeaf({ syncRemote: !1 });
+let R = new c.Z('GameConsoleManager'),
+    C = 3000,
+    y = 60000,
+    b = 180000;
+async function L(e) {
+    let t = E.Z.getChannelId();
+    a()(null == t, 'Syncing to remote while in voice!'), e.selfMute !== _.Z.isSelfMute() && (await l.Z.toggleSelfMute({ syncRemote: !1 })), e.selfDeaf !== _.Z.isSelfDeaf() && l.Z.toggleSelfDeaf({ syncRemote: !1 });
 }
-class C extends l.Z {
+function D(e) {
+    let t = T.Z.getAwaitingRemoteSessionInfo();
+    return e.find((e) => {
+        let n = A.al.has(e.clientInfo.os),
+            r = null != h.Z.getVoiceStateForSession(d.default.getId(), e.sessionId),
+            i = null == t || (0, g.y)(t.type) === e.clientInfo.os;
+        return n && i && r;
+    });
+}
+class M extends u.Z {
     constructor(...e) {
         super(...e),
-            O(this, 'rollbackCommandTimeout', new a.V7()),
-            O(this, 'awaitRemoteTimeout', new a.V7()),
+            O(this, 'rollbackCommandTimeout', new o.V7()),
+            O(this, 'awaitRemoteTimeout', new o.V7()),
             O(this, 'actions', {
                 WAIT_FOR_REMOTE_SESSION: () => this.handleWaitForRemoteSession(),
                 POST_CONNECTION_OPEN: () => this.handleSessionsChanged(),
@@ -55,64 +67,56 @@ class C extends l.Z {
                 REMOTE_SESSION_DISCONNECT: () => this.handleRemoteSessionDisconnect()
             }),
             O(this, 'maybeConnect', (e) => {
-                let t = (function (e) {
-                    let t = m.Z.getAwaitingRemoteSessionInfo();
-                    return e.find((e) => {
-                        let n = g.al.has(e.clientInfo.os),
-                            r = null != f.Z.getVoiceStateForSession(c.default.getId(), e.sessionId),
-                            i = null == t || (0, T.y)(t.type) === e.clientInfo.os;
-                        return n && i && r;
-                    });
-                })(e);
+                let t = D(e);
                 if (null == t) return null;
-                this.awaitRemoteTimeout.stop(), (0, p.ef)(t.sessionId);
-                let n = f.Z.getVoiceStateForSession(c.default.getId(), t.sessionId);
-                null != n && v(n);
+                this.awaitRemoteTimeout.stop(), (0, m.ef)(t.sessionId);
+                let n = h.Z.getVoiceStateForSession(d.default.getId(), t.sessionId);
+                null != n && L(n);
             }),
             O(this, 'handleAudioStateToggle', (e) => {
                 let { syncRemote: t, context: n } = e;
-                if (!t || n !== A.Yn.DEFAULT) return;
-                let r = d.Z.isSelfDeaf(),
-                    i = d.Z.isSelfMute(),
-                    a = c.default.getId(),
-                    s = m.Z.getRemoteSessionId();
-                if (null == s) return;
-                let o = f.Z.getVoiceStateForSession(a, s);
-                if (null != o)
-                    (o.selfDeaf !== r || o.selfMute !== i) &&
-                        ((0, p.Vv)(s, {
+                if (!t || n !== v.Yn.DEFAULT) return;
+                let r = _.Z.isSelfDeaf(),
+                    i = _.Z.isSelfMute(),
+                    a = d.default.getId(),
+                    o = T.Z.getRemoteSessionId();
+                if (null == o) return;
+                let s = h.Z.getVoiceStateForSession(a, o);
+                if (null != s)
+                    (s.selfDeaf !== r || s.selfMute !== i) &&
+                        ((0, m.Vv)(o, {
                             selfDeaf: r,
                             selfMute: i
                         }),
-                        this.rollbackCommandTimeout.start(3000, () => {
-                            v(o);
+                        this.rollbackCommandTimeout.start(C, () => {
+                            L(s);
                         }));
             }),
             O(this, 'handleVoiceStateUpdates', (e) => {
                 let t = e.voiceStates,
-                    n = m.Z.getRemoteSessionId();
+                    n = T.Z.getRemoteSessionId();
                 if (null == n) {
                     let e = t
                         .map((e) => {
                             let { sessionId: t } = e;
-                            return null != t ? E.Z.getSessionById(t) : null;
+                            return null != t ? f.Z.getSessionById(t) : null;
                         })
-                        .filter(h.lm);
+                        .filter(p.lm);
                     return this.maybeConnect(e);
                 }
                 let r = t.find((e) => {
                     let { sessionId: t } = e;
                     return t === n;
                 });
-                null != r && (this.rollbackCommandTimeout.stop(), v(r));
+                null != r && (this.rollbackCommandTimeout.stop(), L(r));
             }),
             O(this, 'handleSessionsChanged', () => {
-                let e = m.Z.getRemoteSessionId();
-                null != e && null == E.Z.getSessionById(e) && (0, p.s6)(), null == e && this.maybeConnect(Object.values(E.Z.getSessions()));
+                let e = T.Z.getRemoteSessionId();
+                null != e && null == f.Z.getSessionById(e) && (0, m.s6)(), null == e && this.maybeConnect(Object.values(f.Z.getSessions()));
             }),
             O(this, 'handleWaitForRemoteSession', () => {
-                this.awaitRemoteTimeout.start(60000, () => {
-                    (0, p.s6)(),
+                this.awaitRemoteTimeout.start(y, () => {
+                    (0, m.s6)(),
                         s.Z.show({
                             title: N.Z.Messages.GAME_CONSOLE_TRANSFER_TIMEOUT_TITLE,
                             body: N.Z.Messages.GAME_CONSOLE_TRANSFER_TIMEOUT_BODY
@@ -124,12 +128,12 @@ class C extends l.Z {
                 let { id: n, result: r, error: i } = e;
                 if (('failed' !== r && 'n/a' !== r) || null == i) return;
                 R.info('Console command Error result:', r, i);
-                let a = m.Z.getAwaitingRemoteSessionInfo();
+                let a = T.Z.getAwaitingRemoteSessionInfo();
                 if ((null == a ? void 0 : a.commandId) !== n) return;
-                let s = m.Z.getDevice(a.type, null !== (t = a.deviceId) && void 0 !== t ? t : ''),
-                    o = (0, S.Z)(
-                        null != s
-                            ? s
+                let o = T.Z.getDevice(a.type, null !== (t = a.deviceId) && void 0 !== t ? t : ''),
+                    s = (0, S.Z)(
+                        null != o
+                            ? o
                             : {
                                   id: 'id',
                                   platform: N.Z.Messages.STATUS_UNKNOWN,
@@ -138,18 +142,18 @@ class C extends l.Z {
                         r,
                         i
                     );
-                null != o &&
+                null != s &&
                     I.Z.showSelfDismissableAlert({
-                        title: o.title,
-                        body: o.body,
-                        errorCodeMessage: o.errorCodeMessage,
-                        reconnectPlatformType: o.isAccountLinkError ? a.type : void 0
+                        title: s.title,
+                        body: s.body,
+                        errorCodeMessage: s.errorCodeMessage,
+                        reconnectPlatformType: s.isAccountLinkError ? a.type : void 0
                     }),
-                    g.e8.has(i.code) && this.awaitRemoteTimeout.isStarted() ? this.awaitRemoteTimeout.start(180000, () => (0, p.s6)(), !0) : 'failed' === r && (0, p.s6)();
+                    A.e8.has(i.code) && this.awaitRemoteTimeout.isStarted() ? this.awaitRemoteTimeout.start(b, () => (0, m.s6)(), !0) : 'failed' === r && (0, m.s6)();
             }),
             O(this, 'handleRemoteSessionDisconnect', () => {
                 this.awaitRemoteTimeout.stop();
             });
     }
 }
-t.Z = new C();
+t.Z = new M();

@@ -1,4 +1,5 @@
 var r = n(779518);
-e.exports = function (e, t) {
+function i(e, t) {
     return r(e, t);
-};
+}
+e.exports = i;

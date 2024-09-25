@@ -1,8 +1,8 @@
 var r = n(470079),
     i = n(476400),
     a = n.n(i),
-    s = n(844303),
-    o = n(329022),
+    o = n(844303),
+    s = n(329022),
     l = n(829307),
     u = n(464854),
     c = n(844515),
@@ -13,8 +13,10 @@ var r = n(470079),
             a = e.onSwatchHover,
             u = e.triangle,
             d = e.styles,
-            _ = e.className,
-            E = (0, s.default)(
+            _ = void 0 === d ? {} : d,
+            E = e.className,
+            f = void 0 === E ? '' : E,
+            h = (0, o.default)(
                 (0, l.Z)(
                     {
                         default: {
@@ -89,7 +91,7 @@ var r = n(470079),
                             }
                         }
                     },
-                    void 0 === d ? {} : d
+                    _
                 ),
                 {
                     'hide-triangle': 'hide' === u,
@@ -99,7 +101,7 @@ var r = n(470079),
                     'bottom-right-triangle': 'bottom-right' === u
                 }
             ),
-            f = function (e, t) {
+            p = function (e, t) {
                 return i(
                     {
                         hex: e,
@@ -111,16 +113,16 @@ var r = n(470079),
         return r.createElement(
             'div',
             {
-                style: E.card,
-                className: 'github-picker ' + (void 0 === _ ? '' : _)
+                style: h.card,
+                className: 'github-picker ' + f
             },
-            r.createElement('div', { style: E.triangleShadow }),
-            r.createElement('div', { style: E.triangle }),
-            (0, o.Z)(n, function (e) {
+            r.createElement('div', { style: h.triangleShadow }),
+            r.createElement('div', { style: h.triangle }),
+            (0, s.Z)(n, function (e) {
                 return r.createElement(c.Z, {
                     color: e,
                     key: e,
-                    onClick: f,
+                    onClick: p,
                     onSwatchHover: a
                 });
             })

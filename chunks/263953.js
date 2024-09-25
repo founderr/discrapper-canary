@@ -1,24 +1,22 @@
 n.d(t, {
     q: function () {
-        return T;
+        return I;
     }
-}),
-    n(47120);
+});
 var r,
     i,
     a,
-    s,
     o,
-    l,
-    u = n(735250),
-    c = n(470079),
-    d = n(120356),
-    _ = n.n(d),
-    E = n(748780),
-    f = n(215569),
-    h = n(186325),
-    p = n(753625);
-function I(e, t, n) {
+    s = n(47120);
+var l = n(735250),
+    u = n(470079),
+    c = n(120356),
+    d = n.n(c),
+    _ = n(748780),
+    E = n(215569),
+    f = n(186325),
+    h = n(753625);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -31,8 +29,13 @@ function I(e, t, n) {
         e
     );
 }
-((o = r || (r = {}))[(o.ENTERING = 0)] = 'ENTERING'), (o[(o.LEAVING = 1)] = 'LEAVING'), (o[(o.APPEARING = 2)] = 'APPEARING'), (o[(o.STATIC = 3)] = 'STATIC'), ((l = i || (i = {})).SLIDE = 'slide'), (l.LIFT = 'lift');
-class m extends (a = c.PureComponent) {
+!(function (e) {
+    (e[(e.ENTERING = 0)] = 'ENTERING'), (e[(e.LEAVING = 1)] = 'LEAVING'), (e[(e.APPEARING = 2)] = 'APPEARING'), (e[(e.STATIC = 3)] = 'STATIC');
+})(r || (r = {})),
+    !(function (e) {
+        (e.SLIDE = 'slide'), (e.LIFT = 'lift');
+    })(i || (i = {}));
+class m extends (a = u.PureComponent) {
     componentDidMount() {
         if (null != this._measureRef.current) {
             let { height: e } = this._measureRef.current.getBoundingClientRect();
@@ -61,7 +64,7 @@ class m extends (a = c.PureComponent) {
             { animationProgress: n } = this.state;
         this.setState({ animationState: 0 }),
             this.props.setHeight(this.state.targetHeight),
-            E.Z.timing(n, {
+            _.Z.timing(n, {
                 toValue: 2,
                 duration: t,
                 delay: t / 2
@@ -75,7 +78,7 @@ class m extends (a = c.PureComponent) {
             { duration: n, getDirection: r } = this.props;
         (this.direction = r()),
             this.setState({ animationState: 1 }),
-            E.Z.timing(t, {
+            _.Z.timing(t, {
                 toValue: 0,
                 duration: n
             }).start(e);
@@ -98,7 +101,7 @@ class m extends (a = c.PureComponent) {
                                 inputRange: [0, 2],
                                 outputRange: [''.concat(150 * i, '%'), '0%'],
                                 extrapolate: 'clamp',
-                                easing: E.Z.Easing.inOut(E.Z.Easing.ease)
+                                easing: _.Z.Easing.inOut(_.Z.Easing.ease)
                             })
                         }
                     ]
@@ -111,7 +114,7 @@ class m extends (a = c.PureComponent) {
                                 inputRange: [0, 2],
                                 outputRange: [''.concat(10 * i, '%'), '0%'],
                                 extrapolate: 'clamp',
-                                easing: E.Z.Easing.inOut(E.Z.Easing.ease)
+                                easing: _.Z.Easing.inOut(_.Z.Easing.ease)
                             })
                         }
                     ]
@@ -123,8 +126,8 @@ class m extends (a = c.PureComponent) {
     getAnimatedStyle() {
         var e, t;
         let { fillParent: n } = this.props,
-            { animationProgress: r, animationState: i, baseHeight: a, targetHeight: s } = this.state,
-            o = null !== (e = this.props.sideMargin) && void 0 !== e ? e : 0,
+            { animationProgress: r, animationState: i, baseHeight: a, targetHeight: o } = this.state,
+            s = null !== (e = this.props.sideMargin) && void 0 !== e ? e : 0,
             l = null !== (t = this.props.verticalMargin) && void 0 !== t ? t : 0,
             u = 1 === i,
             c = 0 === i;
@@ -132,22 +135,22 @@ class m extends (a = c.PureComponent) {
             overflow: c || u ? 'hidden' : 'visible',
             position: u ? 'absolute' : void 0,
             top: u ? l : void 0,
-            left: u ? o : void 0,
-            right: u ? o : void 0,
+            left: u ? s : void 0,
+            right: u ? s : void 0,
             bottom: u ? l : void 0,
             ...this.getMotionAnimation(),
             opacity: r.interpolate({
                 inputRange: [0, 2],
                 outputRange: [0, 1],
                 extrapolate: 'clamp',
-                easing: E.Z.Easing.inOut(E.Z.Easing.ease)
+                easing: _.Z.Easing.inOut(_.Z.Easing.ease)
             }),
             height: c
                 ? r.interpolate({
                       inputRange: [0, 1],
-                      outputRange: [a, s],
+                      outputRange: [a, o],
                       extrapolate: 'clamp',
-                      easing: E.Z.Easing.inOut(E.Z.Easing.ease)
+                      easing: _.Z.Easing.inOut(_.Z.Easing.ease)
                   })
                 : n
                   ? '100%'
@@ -158,20 +161,20 @@ class m extends (a = c.PureComponent) {
         let { fillParent: e, className: t, animatedNodeClassName: n, staticClassName: r } = this.props,
             { animationState: i } = this.state;
         return e
-            ? (0, u.jsx)('div', {
+            ? (0, l.jsx)('div', {
                   ref: this._measureRef,
-                  className: _()(p.measurementFill, t, { [_()(p.measurementFillStatic, r)]: 3 === i }),
-                  children: (0, u.jsx)(E.Z.div, {
-                      className: _()(p.animatedNode, n),
+                  className: d()(h.measurementFill, t, { [d()(h.measurementFillStatic, r)]: 3 === i }),
+                  children: (0, l.jsx)(_.Z.div, {
+                      className: d()(h.animatedNode, n),
                       style: this.getAnimatedStyle(),
                       children: this.props.children
                   })
               })
-            : (0, u.jsx)('div', {
+            : (0, l.jsx)('div', {
                   ref: this._measureRef,
-                  className: _()(p.measurement, t),
-                  children: (0, u.jsx)(E.Z.div, {
-                      className: _()(p.animatedNode, n),
+                  className: d()(h.measurement, t),
+                  children: (0, l.jsx)(_.Z.div, {
+                      className: d()(h.animatedNode, n),
                       style: this.getAnimatedStyle(),
                       children: this.props.children
                   })
@@ -179,18 +182,18 @@ class m extends (a = c.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            I(this, 'state', {
-                animationProgress: new E.Z.Value(0),
+            p(this, 'state', {
+                animationProgress: new _.Z.Value(0),
                 targetHeight: 0,
                 baseHeight: 0,
                 animationState: null
             }),
-            I(this, 'direction', this.props.getDirection()),
-            I(this, '_measureRef', c.createRef());
+            p(this, 'direction', this.props.getDirection()),
+            p(this, '_measureRef', u.createRef());
     }
 }
-I(m, 'contextType', h.S), I(m, 'defaultProps', { duration: 300 });
-class T extends (s = c.Component) {
+p(m, 'contextType', f.S), p(m, 'defaultProps', { duration: 300 });
+class I extends (o = u.Component) {
     componentDidMount() {
         this.setPrevSteps();
     }
@@ -202,24 +205,24 @@ class T extends (s = c.Component) {
         (this.prevStep = e), (this.prevSteps = t);
     }
     render() {
-        let { step: e, className: t, innerClassName: n, animatedNodeClassName: r, staticClassName: i, sideMargin: a, verticalMargin: s, children: o, fillParent: l, animationMotionType: c } = this.props;
-        return (0, u.jsx)(f.W, {
+        let { step: e, className: t, innerClassName: n, animatedNodeClassName: r, staticClassName: i, sideMargin: a, verticalMargin: o, children: s, fillParent: u, animationMotionType: c } = this.props;
+        return (0, l.jsx)(E.W, {
             component: 'div',
-            className: _()(p.transitionGroup, t),
-            children: (0, u.jsx)(
+            className: d()(h.transitionGroup, t),
+            children: (0, l.jsx)(
                 m,
                 {
-                    fillParent: l,
+                    fillParent: u,
                     sideMargin: a,
                     animationMotionType: null != c ? c : 'slide',
-                    verticalMargin: s,
+                    verticalMargin: o,
                     getDirection: this.getDirection,
                     getBaseHeight: this.getBaseHeight,
                     className: n,
                     animatedNodeClassName: r,
                     staticClassName: i,
                     setHeight: this.setHeight,
-                    children: o
+                    children: s
                 },
                 ''.concat(e)
             )
@@ -227,23 +230,23 @@ class T extends (s = c.Component) {
     }
     constructor(...e) {
         super(...e),
-            I(this, 'stepHeights', {}),
-            I(this, 'prevStep', null),
-            I(this, 'prevSteps', []),
-            I(this, 'getBaseHeight', () => (null != this.prevStep && null != this.stepHeights[this.prevStep] ? this.stepHeights[this.prevStep] : 0)),
-            I(this, 'getDirection', () => {
+            p(this, 'stepHeights', {}),
+            p(this, 'prevStep', null),
+            p(this, 'prevSteps', []),
+            p(this, 'getBaseHeight', () => (null != this.prevStep && null != this.stepHeights[this.prevStep] ? this.stepHeights[this.prevStep] : 0)),
+            p(this, 'getDirection', () => {
                 let { steps: e, step: t } = this.props,
                     n = null != this.prevStep ? e.indexOf(this.prevStep) : -1,
                     r = -1 === n && null != this.prevStep ? this.prevSteps.indexOf(this.prevStep) : -1;
                 return Math.max(n, r) > e.indexOf(t) ? -1 : 1;
             }),
-            I(this, 'setHeight', (e) => {
+            p(this, 'setHeight', (e) => {
                 let { step: t } = this.props;
                 this.stepHeights[t] = e;
             });
     }
 }
-I(T, 'defaultProps', {
+p(I, 'defaultProps', {
     fillParent: !1,
     animationMotionType: 'slide'
 });

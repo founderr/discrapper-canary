@@ -3,14 +3,14 @@ n.d(t, {
         return E;
     },
     MG: function () {
-        return f;
+        return h;
     }
 });
 var r = n(182823),
     i = n(470079),
     a = n(148836),
-    s = n(612001),
-    o = n(616073),
+    o = n(612001),
+    s = n(616073),
     l = n(251433),
     u = n(370225),
     c = n(705782),
@@ -18,12 +18,12 @@ var r = n(182823),
 let _ = new WeakMap();
 function E(e, t, n) {
     let { keyboardDelegate: c, isDisabled: d, isRequired: E, name: f, validationBehavior: h = 'aria' } = e,
-        p = (0, o.Xe)({
+        p = (0, s.Xe)({
             usage: 'search',
             sensitivity: 'base'
         }),
-        I = (0, i.useMemo)(() => c || new a.dp(t.collection, t.disabledKeys, null, p), [c, t.collection, t.disabledKeys, p]),
-        { menuTriggerProps: m, menuProps: T } = (0, u.u4)(
+        m = (0, i.useMemo)(() => c || new a.dp(t.collection, t.disabledKeys, null, p), [c, t.collection, t.disabledKeys, p]),
+        { menuTriggerProps: I, menuProps: T } = (0, u.u4)(
             {
                 isDisabled: d,
                 type: 'listbox'
@@ -31,28 +31,43 @@ function E(e, t, n) {
             t,
             n
         ),
+        g = (e) => {
+            switch (e.key) {
+                case 'ArrowLeft': {
+                    e.preventDefault();
+                    let n = null != t.selectedKey ? m.getKeyAbove(t.selectedKey) : m.getFirstKey();
+                    n && t.setSelectedKey(n);
+                    break;
+                }
+                case 'ArrowRight': {
+                    e.preventDefault();
+                    let n = null != t.selectedKey ? m.getKeyBelow(t.selectedKey) : m.getFirstKey();
+                    n && t.setSelectedKey(n);
+                }
+            }
+        },
         { typeSelectProps: S } = (0, a.ip)({
-            keyboardDelegate: I,
+            keyboardDelegate: m,
             selectionManager: t.selectionManager,
             onTypeSelect(e) {
                 t.setSelectedKey(e);
             }
         }),
-        { isInvalid: g, validationErrors: A, validationDetails: N } = t.displayValidation,
+        { isInvalid: A, validationErrors: v, validationDetails: N } = t.displayValidation,
         {
             labelProps: O,
             fieldProps: R,
-            descriptionProps: v,
-            errorMessageProps: C
+            descriptionProps: C,
+            errorMessageProps: y
         } = (0, l.U)({
             ...e,
             labelElementType: 'span',
-            isInvalid: g,
-            errorMessage: e.errorMessage || A
+            isInvalid: A,
+            errorMessage: e.errorMessage || v
         });
     (S.onKeyDown = S.onKeyDownCapture), delete S.onKeyDownCapture;
-    let y = (0, r.zL)(e, { labelable: !0 }),
-        L = (0, r.dG)(S, m, R),
+    let b = (0, r.zL)(e, { labelable: !0 }),
+        L = (0, r.dG)(S, I, R),
         D = (0, r.Me)();
     return (
         _.set(t, {
@@ -65,31 +80,13 @@ function E(e, t, n) {
             labelProps: {
                 ...O,
                 onClick: () => {
-                    !e.isDisabled && (n.current.focus(), (0, s._w)('keyboard'));
+                    !e.isDisabled && (n.current.focus(), (0, o._w)('keyboard'));
                 }
             },
-            triggerProps: (0, r.dG)(y, {
+            triggerProps: (0, r.dG)(b, {
                 ...L,
                 isDisabled: d,
-                onKeyDown: (0, r.tS)(
-                    L.onKeyDown,
-                    (e) => {
-                        switch (e.key) {
-                            case 'ArrowLeft': {
-                                e.preventDefault();
-                                let n = null != t.selectedKey ? I.getKeyAbove(t.selectedKey) : I.getFirstKey();
-                                n && t.setSelectedKey(n);
-                                break;
-                            }
-                            case 'ArrowRight': {
-                                e.preventDefault();
-                                let n = null != t.selectedKey ? I.getKeyBelow(t.selectedKey) : I.getFirstKey();
-                                n && t.setSelectedKey(n);
-                            }
-                        }
-                    },
-                    e.onKeyDown
-                ),
+                onKeyDown: (0, r.tS)(L.onKeyDown, g, e.onKeyDown),
                 onKeyUp: e.onKeyUp,
                 'aria-labelledby': [D, L['aria-labelledby'], L['aria-label'] && !L['aria-labelledby'] ? L.id : null].filter(Boolean).join(' '),
                 onFocus(n) {
@@ -112,88 +109,89 @@ function E(e, t, n) {
                 },
                 'aria-labelledby': [R['aria-labelledby'], L['aria-label'] && !R['aria-labelledby'] ? L.id : null].filter(Boolean).join(' ')
             },
-            descriptionProps: v,
-            errorMessageProps: C,
-            isInvalid: g,
-            validationErrors: A,
+            descriptionProps: C,
+            errorMessageProps: y,
+            isInvalid: A,
+            validationErrors: v,
             validationDetails: N
         }
     );
 }
-function f(e) {
-    var t;
-    let { state: n, triggerRef: a, label: o, name: l, isDisabled: u } = e,
-        E = (0, i.useRef)(null),
+function f(e, t, n) {
+    var i;
+    let a = _.get(t) || {},
+        { autoComplete: s, name: l = a.name, isDisabled: u = a.isDisabled } = e,
+        { validationBehavior: E, isRequired: f } = a,
+        h = (0, o.Kf)(),
+        { visuallyHiddenProps: p } = (0, d.S)();
+    return (
+        (0, r.y$)(e.selectRef, t.selectedKey, t.setSelectedKey),
+        (0, c.Q)(
+            {
+                validationBehavior: E,
+                focus: () => n.current.focus()
+            },
+            t,
+            e.selectRef
+        ),
         {
-            containerProps: f,
-            inputProps: h,
-            selectProps: p
-        } = (function (e, t, n) {
-            var i;
-            let a = _.get(t) || {},
-                { autoComplete: o, name: l = a.name, isDisabled: u = a.isDisabled } = e,
-                { validationBehavior: E, isRequired: f } = a,
-                h = (0, s.Kf)(),
-                { visuallyHiddenProps: p } = (0, d.S)();
-            return (
-                (0, r.y$)(e.selectRef, t.selectedKey, t.setSelectedKey),
-                (0, c.Q)(
-                    {
-                        validationBehavior: E,
-                        focus: () => n.current.focus()
-                    },
-                    t,
-                    e.selectRef
-                ),
-                {
-                    containerProps: {
-                        ...p,
-                        'aria-hidden': !0,
-                        'data-a11y-ignore': 'aria-hidden-focus'
-                    },
-                    inputProps: {
-                        type: 'text',
-                        tabIndex: null == h || t.isFocused || t.isOpen ? -1 : 0,
-                        style: { fontSize: 16 },
-                        onFocus: () => n.current.focus(),
-                        disabled: u
-                    },
-                    selectProps: {
-                        tabIndex: -1,
-                        autoComplete: o,
-                        disabled: u,
-                        required: 'native' === E && f,
-                        name: l,
-                        value: null !== (i = t.selectedKey) && void 0 !== i ? i : '',
-                        onChange: (e) => t.setSelectedKey(e.target.value)
-                    }
-                }
-            );
-        })(
+            containerProps: {
+                ...p,
+                'aria-hidden': !0,
+                'data-a11y-ignore': 'aria-hidden-focus'
+            },
+            inputProps: {
+                type: 'text',
+                tabIndex: null == h || t.isFocused || t.isOpen ? -1 : 0,
+                style: { fontSize: 16 },
+                onFocus: () => n.current.focus(),
+                disabled: u
+            },
+            selectProps: {
+                tabIndex: -1,
+                autoComplete: s,
+                disabled: u,
+                required: 'native' === E && f,
+                name: l,
+                value: null !== (i = t.selectedKey) && void 0 !== i ? i : '',
+                onChange: (e) => t.setSelectedKey(e.target.value)
+            }
+        }
+    );
+}
+function h(e) {
+    var t;
+    let { state: n, triggerRef: r, label: a, name: o, isDisabled: s } = e,
+        l = (0, i.useRef)(null),
+        {
+            containerProps: u,
+            inputProps: c,
+            selectProps: d
+        } = f(
             {
                 ...e,
-                selectRef: E
+                selectRef: l
             },
             n,
-            a
+            r
         );
     return n.collection.size <= 300
         ? i.createElement(
               'div',
               {
-                  ...f,
+                  ...u,
                   'data-testid': 'hidden-select-container'
               },
-              i.createElement('input', h),
+              i.createElement('input', c),
               i.createElement(
                   'label',
                   null,
-                  o,
+                  a,
                   i.createElement(
                       'select',
                       {
-                          ...p,
-                          ref: E
+                          ...d,
+                          ref: l
                       },
                       i.createElement('option', null),
                       [...n.collection.getKeys()].map((e) => {
@@ -211,12 +209,12 @@ function f(e) {
                   )
               )
           )
-        : l
+        : o
           ? i.createElement('input', {
                 type: 'hidden',
-                autoComplete: p.autoComplete,
-                name: l,
-                disabled: u,
+                autoComplete: d.autoComplete,
+                name: o,
+                disabled: s,
                 value: null !== (t = n.selectedKey) && void 0 !== t ? t : ''
             })
           : null;

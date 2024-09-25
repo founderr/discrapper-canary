@@ -1,4 +1,4 @@
-e.exports = function (e) {
+function t(e) {
     return {
         name: 'Clojure REPL',
         contains: [
@@ -12,4 +12,5 @@ e.exports = function (e) {
             }
         ]
     };
-};
+}
+e.exports = t;

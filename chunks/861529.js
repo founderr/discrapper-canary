@@ -1,38 +1,39 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
         return f;
     }
 });
-var l = t(735250),
-    i = t(470079),
-    a = t(120356),
-    r = t.n(a),
-    o = t(454585),
-    s = t(937889),
-    c = t(970184),
-    u = t(870456),
-    d = t(662762),
-    m = t(554034);
+var r = n(735250),
+    i = n(470079),
+    a = n(120356),
+    o = n.n(a),
+    s = n(454585),
+    l = n(937889),
+    u = n(970184),
+    c = n(870456),
+    d = n(662762),
+    _ = n(554034);
+function E(e) {
+    let t = (0, u.CJ)();
+    return (0, i.useMemo)(() => {
+        let n;
+        return null === t
+            ? null
+            : ((n =
+                  null != t.message
+                      ? (0, l.rs)(t.message, c.u)
+                      : (0, l.p6)({
+                            channelId: t.channelId,
+                            renderOptions: c.u
+                        })),
+              s.Z.parse(e, !0, n));
+    }, [e, t]);
+}
 function f(e) {
-    let { content: n, className: t } = e,
-        a = (function (e) {
-            let n = (0, c.CJ)();
-            return (0, i.useMemo)(() => {
-                let t;
-                return null === n
-                    ? null
-                    : ((t =
-                          null != n.message
-                              ? (0, s.rs)(n.message, u.u)
-                              : (0, s.p6)({
-                                    channelId: n.channelId,
-                                    renderOptions: u.u
-                                })),
-                      o.Z.parse(e, !0, t));
-            }, [e, n]);
-        })(n);
-    return (0, l.jsx)('div', {
-        className: r()([t, m.markup, d.markdownContainer]),
-        children: a
+    let { content: t, className: n } = e,
+        i = E(t);
+    return (0, r.jsx)('div', {
+        className: o()([n, _.markup, d.markdownContainer]),
+        children: i
     });
 }

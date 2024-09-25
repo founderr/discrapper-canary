@@ -1,26 +1,26 @@
 var r = n(735250),
     i = n(470079),
     a = n(335854),
-    s = n(481060),
-    o = n(626135),
+    o = n(481060),
+    s = n(626135),
     l = n(981631),
     u = n(689938);
-t.Z = (e) => {
-    let { href: t, className: n, iconClassName: c, rel: d, target: _, mimeType: E, fileName: f, focusProps: h, onClick: p, ...I } = e,
-        m = i.useMemo(() => a.X.getDefaultLinkInterceptor(t), [t]),
+let c = (e) => {
+    let { href: t, className: n, iconClassName: c, rel: d, target: _, mimeType: E, fileName: f, focusProps: h, onClick: p, ...m } = e,
+        I = i.useMemo(() => a.X.getDefaultLinkInterceptor(t), [t]),
         T = i.useCallback(
             (e) => {
-                o.default.track(l.rMx.MEDIA_DOWNLOAD_BUTTON_TAPPED, {
+                s.default.track(l.rMx.MEDIA_DOWNLOAD_BUTTON_TAPPED, {
                     attachment_type: null == E ? void 0 : E[0],
                     attachment_subtype: null == E ? void 0 : E[1]
                 }),
                     null == p || p(),
-                    null == m || m(e);
+                    null == I || I(e);
             },
-            [m, E, p]
+            [I, E, p]
         );
     return null != f
-        ? (0, r.jsx)(s.Anchor, {
+        ? (0, r.jsx)(o.Anchor, {
               href: t,
               onClick: T,
               target: _,
@@ -28,10 +28,10 @@ t.Z = (e) => {
               className: n,
               'aria-label': u.Z.Messages.DOWNLOAD,
               focusProps: h,
-              ...I,
+              ...m,
               children: f
           })
-        : (0, r.jsx)(s.Anchor, {
+        : (0, r.jsx)(o.Anchor, {
               href: t,
               onClick: T,
               target: _,
@@ -39,11 +39,12 @@ t.Z = (e) => {
               className: n,
               'aria-label': u.Z.Messages.DOWNLOAD,
               focusProps: h,
-              ...I,
-              children: (0, r.jsx)(s.DownloadIcon, {
+              ...m,
+              children: (0, r.jsx)(o.DownloadIcon, {
                   size: 'md',
                   color: 'currentColor',
                   className: c
               })
           });
 };
+t.Z = c;

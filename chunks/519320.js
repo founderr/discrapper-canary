@@ -1,39 +1,40 @@
-t.d(n, {
+n.d(t, {
     EW: function () {
-        return l;
-    },
-    Np: function () {
         return s;
     },
+    Np: function () {
+        return l;
+    },
     tb: function () {
-        return r;
+        return o;
     }
 });
-var i,
-    o,
-    a = t(626135),
-    c = t(981631);
-function r(e, n, t, i) {
-    a.default.track(c.rMx.VOICE_MESSAGE_PLAYBACK_STARTED, {
+var r,
+    i = n(626135),
+    a = n(981631);
+function o(e, t, n, r) {
+    i.default.track(a.rMx.VOICE_MESSAGE_PLAYBACK_STARTED, {
         message_id: e,
-        total_duration_secs: n,
-        start_duration_secs: Math.min(null != n ? n : t, t),
-        sender_user_id: i
+        total_duration_secs: t,
+        start_duration_secs: Math.min(null != t ? t : n, n),
+        sender_user_id: r
     });
 }
-function l(e, n, t, i, o) {
-    a.default.track(c.rMx.VOICE_MESSAGE_PLAYBACK_ENDED, {
+function s(e, t, n, r, o) {
+    i.default.track(a.rMx.VOICE_MESSAGE_PLAYBACK_ENDED, {
         message_id: e,
-        total_duration_secs: n,
-        end_duration_secs: Math.min(null != n ? n : t, t),
-        sender_user_id: i,
+        total_duration_secs: t,
+        end_duration_secs: Math.min(null != t ? t : n, n),
+        sender_user_id: r,
         duration_listening_secs: o
     });
 }
-function s(e, n) {
-    a.default.track(c.rMx.VOICE_MESSAGE_PLAYBACK_FAILED, {
+function l(e, t) {
+    i.default.track(a.rMx.VOICE_MESSAGE_PLAYBACK_FAILED, {
         message_id: e,
-        error_message: n
+        error_message: t
     });
 }
-((i = o || (o = {})).SENT = 'sent'), (i.CANCELLED_DURATION = 'cancelled_duration'), (i.CANCELLED_USER_REQUESTED = 'cancelled_user_requested'), (i.CANCELLED_GESTURE_CONFLICT = 'cancelled_gesture_conflict'), (i.CANCELLED_ON_BACKGROUND = 'cancelled_on_background');
+!(function (e) {
+    (e.SENT = 'sent'), (e.CANCELLED_DURATION = 'cancelled_duration'), (e.CANCELLED_USER_REQUESTED = 'cancelled_user_requested'), (e.CANCELLED_GESTURE_CONFLICT = 'cancelled_gesture_conflict'), (e.CANCELLED_ON_BACKGROUND = 'cancelled_on_background');
+})(r || (r = {}));

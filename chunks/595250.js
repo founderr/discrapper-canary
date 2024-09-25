@@ -1,4 +1,5 @@
-var r = n(195168);
-t.Z = function () {
-    return r.Z.Date.now();
-};
+var r = n(195168),
+    i = function () {
+        return r.Z.Date.now();
+    };
+t.Z = i;

@@ -1,36 +1,37 @@
 n.d(t, {
     $E: function () {
-        return o;
+        return u;
     },
     Ky: function () {
-        return a;
+        return s;
     },
     RF: function () {
-        return s;
+        return l;
     }
-}),
-    n(47120);
-let r = {};
-function i(e, t) {
+});
+var r = n(47120);
+let i = {};
+function a(e, t) {
     return ''.concat(e, ':').concat(t);
 }
-function a(e, t) {
-    return r[i(e, t)];
+function o(e) {
+    let [t, n] = e.split(':');
+    return [t, n];
 }
-function s(e, t, n) {
-    let a = i(e, t);
-    r[a] = {
-        ...r[a],
+function s(e, t) {
+    return i[a(e, t)];
+}
+function l(e, t, n) {
+    let r = a(e, t);
+    i[r] = {
+        ...i[r],
         ...n
     };
 }
-function o(e) {
-    for (let t in r) {
-        let [n, i] = (function (e) {
-            let [t, n] = e.split(':');
-            return [t, n];
-        })(t);
-        e(n, i, r[t]);
+function u(e) {
+    for (let t in i) {
+        let [n, r] = o(t);
+        e(n, r, i[t]);
     }
-    r = {};
+    i = {};
 }

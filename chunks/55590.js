@@ -1,59 +1,50 @@
-e.exports = function (e) {
+function t(e) {
     let t = {
+            begin: /[a-z][A-Za-z0-9_]*/,
+            relevance: 0
+        },
+        n = {
+            className: 'symbol',
+            variants: [{ begin: /[A-Z][a-zA-Z0-9_]*/ }, { begin: /_[A-Za-z0-9_]*/ }],
+            relevance: 0
+        },
+        r = {
             begin: /\(/,
             end: /\)/,
             relevance: 0
         },
-        n = {
+        i = {
             begin: /\[/,
             end: /\]/
         },
-        r = {
+        a = {
             className: 'comment',
             begin: /%/,
             end: /$/,
             contains: [e.PHRASAL_WORDS_MODE]
         },
-        i = {
+        o = {
             className: 'string',
             begin: /`/,
             end: /`/,
             contains: [e.BACKSLASH_ESCAPE]
         },
-        a = [
-            {
-                begin: /[a-z][A-Za-z0-9_]*/,
-                relevance: 0
-            },
-            {
-                className: 'symbol',
-                variants: [{ begin: /[A-Z][a-zA-Z0-9_]*/ }, { begin: /_[A-Za-z0-9_]*/ }],
-                relevance: 0
-            },
-            t,
-            { begin: /:-/ },
-            n,
-            r,
-            e.C_BLOCK_COMMENT_MODE,
-            e.QUOTE_STRING_MODE,
-            e.APOS_STRING_MODE,
-            i,
-            {
-                className: 'string',
-                begin: /0'(\\'|.)/
-            },
-            {
-                className: 'string',
-                begin: /0'\\s/
-            },
-            e.C_NUMBER_MODE
-        ];
+        s = {
+            className: 'string',
+            begin: /0'(\\'|.)/
+        },
+        l = {
+            className: 'string',
+            begin: /0'\\s/
+        },
+        u = [t, n, r, { begin: /:-/ }, i, a, e.C_BLOCK_COMMENT_MODE, e.QUOTE_STRING_MODE, e.APOS_STRING_MODE, o, s, l, e.C_NUMBER_MODE];
     return (
-        (t.contains = a),
-        (n.contains = a),
+        (r.contains = u),
+        (i.contains = u),
         {
             name: 'Prolog',
-            contains: a.concat([{ begin: /\.$/ }])
+            contains: u.concat([{ begin: /\.$/ }])
         }
     );
-};
+}
+e.exports = t;

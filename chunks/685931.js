@@ -1,7 +1,5 @@
 Object.defineProperty(t, '__esModule', { value: !0 }), (t.autoprefix = void 0);
-var r = (function (e) {
-        return e && e.__esModule ? e : { default: e };
-    })(n(320403)),
+var r = a(n(320403)),
     i =
         Object.assign ||
         function (e) {
@@ -10,8 +8,11 @@ var r = (function (e) {
                 for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
             }
             return e;
-        },
-    a = {
+        };
+function a(e) {
+    return e && e.__esModule ? e : { default: e };
+}
+var o = {
         borderRadius: function (e) {
             return {
                 msBorderRadius: e,
@@ -98,12 +99,12 @@ var r = (function (e) {
         var t = {};
         return (
             (0, r.default)(e, function (e, n) {
-                var s = {};
+                var a = {};
                 (0, r.default)(e, function (e, t) {
-                    var n = a[t];
-                    n ? (s = i({}, s, n(e))) : (s[t] = e);
+                    var n = o[t];
+                    n ? (a = i({}, a, n(e))) : (a[t] = e);
                 }),
-                    (t[n] = s);
+                    (t[n] = a);
             }),
             t
         );

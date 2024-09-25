@@ -1,16 +1,18 @@
 n.d(t, {
     s: function () {
-        return l;
+        return u;
     }
 });
 var r = n(149765);
 n(442837);
 var i = n(430198),
     a = n(592125),
-    s = n(700785),
-    o = n(981631);
-function l(e, t) {
-    var n;
-    let l = null != (n = a.Z.getChannel(t)) && o.TPd.GUILD_VOCAL.has(n.type) ? r.$e(o.Plq.VIEW_CHANNEL, o.Plq.CONNECT) : o.Plq.VIEW_CHANNEL;
-    return i.Z.isChannelGated(e, t) || s.Uu(l, a.Z.getChannel(t));
+    o = n(700785),
+    s = n(981631);
+function l(e) {
+    return null != e && s.TPd.GUILD_VOCAL.has(e.type) ? r.$e(s.Plq.VIEW_CHANNEL, s.Plq.CONNECT) : s.Plq.VIEW_CHANNEL;
+}
+function u(e, t) {
+    let n = l(a.Z.getChannel(t));
+    return i.Z.isChannelGated(e, t) || o.Uu(n, a.Z.getChannel(t));
 }

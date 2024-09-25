@@ -9,8 +9,8 @@ function i() {
     var t,
         n = {},
         a = Object.prototype,
-        s = a.hasOwnProperty,
-        o =
+        o = a.hasOwnProperty,
+        s =
             Object.defineProperty ||
             function (e, t, n) {
                 e[t] = n.value;
@@ -37,59 +37,9 @@ function i() {
             return (e[t] = n);
         };
     }
-    function E(e, n, r, i) {
-        var a = Object.create((n && n.prototype instanceof T ? n : T).prototype);
-        return (
-            o(a, '_invoke', {
-                value: (function (e, n, r) {
-                    var i = h;
-                    return function (a, s) {
-                        if (i === p) throw Error('Generator is already running');
-                        if (i === I) {
-                            if ('throw' === a) throw s;
-                            return {
-                                value: t,
-                                done: !0
-                            };
-                        }
-                        for (r.method = a, r.arg = s; ; ) {
-                            var o = r.delegate;
-                            if (o) {
-                                var l = (function e(n, r) {
-                                    var i = r.method,
-                                        a = n.iterator[i];
-                                    if (a === t) return (r.delegate = null), ('throw' === i && n.iterator.return && ((r.method = 'return'), (r.arg = t), e(n, r), 'throw' === r.method)) || ('return' !== i && ((r.method = 'throw'), (r.arg = TypeError("The iterator does not provide a '" + i + "' method")))), m;
-                                    var s = f(a, n.iterator, r.arg);
-                                    if ('throw' === s.type) return (r.method = 'throw'), (r.arg = s.arg), (r.delegate = null), m;
-                                    var o = s.arg;
-                                    return o ? (o.done ? ((r[n.resultName] = o.value), (r.next = n.nextLoc), 'return' !== r.method && ((r.method = 'next'), (r.arg = t)), (r.delegate = null), m) : o) : ((r.method = 'throw'), (r.arg = TypeError('iterator result is not an object')), (r.delegate = null), m);
-                                })(o, r);
-                                if (l) {
-                                    if (l === m) continue;
-                                    return l;
-                                }
-                            }
-                            if ('next' === r.method) r.sent = r._sent = r.arg;
-                            else if ('throw' === r.method) {
-                                if (i === h) throw ((i = I), r.arg);
-                                r.dispatchException(r.arg);
-                            } else 'return' === r.method && r.abrupt('return', r.arg);
-                            i = p;
-                            var u = f(e, n, r);
-                            if ('normal' === u.type) {
-                                if (((i = r.done ? I : 'suspendedYield'), u.arg === m)) continue;
-                                return {
-                                    value: u.arg,
-                                    done: r.done
-                                };
-                            }
-                            'throw' === u.type && ((i = I), (r.method = 'throw'), (r.arg = u.arg));
-                        }
-                    };
-                })(e, r, new D(i || []))
-            }),
-            a
-        );
+    function E(e, t, n, r) {
+        var i = Object.create((t && t.prototype instanceof g ? t : g).prototype);
+        return s(i, '_invoke', { value: b(e, n, new P(r || [])) }), i;
     }
     function f(e, t, n) {
         try {
@@ -106,76 +56,125 @@ function i() {
     }
     n.wrap = E;
     var h = 'suspendedStart',
-        p = 'executing',
+        p = 'suspendedYield',
+        m = 'executing',
         I = 'completed',
-        m = {};
-    function T() {}
-    function S() {}
+        T = {};
     function g() {}
-    var A = {};
-    _(A, u, function () {
+    function S() {}
+    function A() {}
+    var v = {};
+    _(v, u, function () {
         return this;
     });
     var N = Object.getPrototypeOf,
-        O = N && N(N(b([])));
-    O && O !== a && s.call(O, u) && (A = O);
-    var R = (g.prototype = T.prototype = Object.create(A));
-    function v(e) {
+        O = N && N(N(U([])));
+    O && O !== a && o.call(O, u) && (v = O);
+    var R = (A.prototype = g.prototype = Object.create(v));
+    function C(e) {
         ['next', 'throw', 'return'].forEach(function (t) {
             _(e, t, function (e) {
                 return this._invoke(t, e);
             });
         });
     }
-    function C(e, t) {
+    function y(e, t) {
         var n;
-        o(this, '_invoke', {
-            value: function (i, a) {
-                function o() {
-                    return new t(function (n, o) {
-                        !(function n(i, a, o, l) {
-                            var u = f(e[i], e, a);
-                            if ('throw' !== u.type) {
-                                var c = u.arg,
-                                    d = c.value;
-                                return d && 'object' == r(d) && s.call(d, '__await')
-                                    ? t.resolve(d.__await).then(
-                                          function (e) {
-                                              n('next', e, o, l);
-                                          },
-                                          function (e) {
-                                              n('throw', e, o, l);
-                                          }
-                                      )
-                                    : t.resolve(d).then(
-                                          function (e) {
-                                              (c.value = e), o(c);
-                                          },
-                                          function (e) {
-                                              return n('throw', e, o, l);
-                                          }
-                                      );
-                            }
-                            l(u.arg);
-                        })(i, a, n, o);
+        function i(n, a, s, l) {
+            var u = f(e[n], e, a);
+            if ('throw' !== u.type) {
+                var c = u.arg,
+                    d = c.value;
+                return d && 'object' == r(d) && o.call(d, '__await')
+                    ? t.resolve(d.__await).then(
+                          function (e) {
+                              i('next', e, s, l);
+                          },
+                          function (e) {
+                              i('throw', e, s, l);
+                          }
+                      )
+                    : t.resolve(d).then(
+                          function (e) {
+                              (c.value = e), s(c);
+                          },
+                          function (e) {
+                              return i('throw', e, s, l);
+                          }
+                      );
+            }
+            l(u.arg);
+        }
+        s(this, '_invoke', {
+            value: function (e, r) {
+                function a() {
+                    return new t(function (t, n) {
+                        i(e, r, t, n);
                     });
                 }
-                return (n = n ? n.then(o, o) : o());
+                return (n = n ? n.then(a, a) : a());
             }
         });
     }
-    function y(e) {
+    function b(e, n, r) {
+        var i = h;
+        return function (a, o) {
+            if (i === m) throw Error('Generator is already running');
+            if (i === I) {
+                if ('throw' === a) throw o;
+                return {
+                    value: t,
+                    done: !0
+                };
+            }
+            for (r.method = a, r.arg = o; ; ) {
+                var s = r.delegate;
+                if (s) {
+                    var l = L(s, r);
+                    if (l) {
+                        if (l === T) continue;
+                        return l;
+                    }
+                }
+                if ('next' === r.method) r.sent = r._sent = r.arg;
+                else if ('throw' === r.method) {
+                    if (i === h) throw ((i = I), r.arg);
+                    r.dispatchException(r.arg);
+                } else 'return' === r.method && r.abrupt('return', r.arg);
+                i = m;
+                var u = f(e, n, r);
+                if ('normal' === u.type) {
+                    if (((i = r.done ? I : p), u.arg === T)) continue;
+                    return {
+                        value: u.arg,
+                        done: r.done
+                    };
+                }
+                'throw' === u.type && ((i = I), (r.method = 'throw'), (r.arg = u.arg));
+            }
+        };
+    }
+    function L(e, n) {
+        var r = n.method,
+            i = e.iterator[r];
+        if (i === t) return (n.delegate = null), ('throw' === r && e.iterator.return && ((n.method = 'return'), (n.arg = t), L(e, n), 'throw' === n.method)) || ('return' !== r && ((n.method = 'throw'), (n.arg = TypeError("The iterator does not provide a '" + r + "' method")))), T;
+        var a = f(i, e.iterator, n.arg);
+        if ('throw' === a.type) return (n.method = 'throw'), (n.arg = a.arg), (n.delegate = null), T;
+        var o = a.arg;
+        return o ? (o.done ? ((n[e.resultName] = o.value), (n.next = e.nextLoc), 'return' !== n.method && ((n.method = 'next'), (n.arg = t)), (n.delegate = null), T) : o) : ((n.method = 'throw'), (n.arg = TypeError('iterator result is not an object')), (n.delegate = null), T);
+    }
+    function D(e) {
         var t = { tryLoc: e[0] };
         1 in e && (t.catchLoc = e[1]), 2 in e && ((t.finallyLoc = e[2]), (t.afterLoc = e[3])), this.tryEntries.push(t);
     }
-    function L(e) {
+    function M(e) {
         var t = e.completion || {};
         (t.type = 'normal'), delete t.arg, (e.completion = t);
     }
-    function D(e) {
-        (this.tryEntries = [{ tryLoc: 'root' }]), e.forEach(y, this), this.reset(!0);
+    function P(e) {
+        (this.tryEntries = [{ tryLoc: 'root' }]), e.forEach(D, this), this.reset(!0);
     }
-    function b(e) {
+    function U(e) {
         if (e || '' === e) {
             var n = e[u];
             if (n) return n.call(e);
@@ -183,7 +182,7 @@ function i() {
             if (!isNaN(e.length)) {
                 var i = -1,
                     a = function n() {
-                        for (; ++i < e.length; ) if (s.call(e, i)) return (n.value = e[i]), (n.done = !1), n;
+                        for (; ++i < e.length; ) if (o.call(e, i)) return (n.value = e[i]), (n.done = !1), n;
                         return (n.value = t), (n.done = !0), n;
                     };
                 return (a.next = a);
@@ -192,41 +191,41 @@ function i() {
         throw TypeError(r(e) + ' is not iterable');
     }
     return (
-        (S.prototype = g),
-        o(R, 'constructor', {
-            value: g,
+        (S.prototype = A),
+        s(R, 'constructor', {
+            value: A,
             configurable: !0
         }),
-        o(g, 'constructor', {
+        s(A, 'constructor', {
             value: S,
             configurable: !0
         }),
-        (S.displayName = _(g, d, 'GeneratorFunction')),
+        (S.displayName = _(A, d, 'GeneratorFunction')),
         (n.isGeneratorFunction = function (e) {
             var t = 'function' == typeof e && e.constructor;
             return !!t && (t === S || 'GeneratorFunction' === (t.displayName || t.name));
         }),
         (n.mark = function (e) {
-            return Object.setPrototypeOf ? Object.setPrototypeOf(e, g) : ((e.__proto__ = g), _(e, d, 'GeneratorFunction')), (e.prototype = Object.create(R)), e;
+            return Object.setPrototypeOf ? Object.setPrototypeOf(e, A) : ((e.__proto__ = A), _(e, d, 'GeneratorFunction')), (e.prototype = Object.create(R)), e;
         }),
         (n.awrap = function (e) {
             return { __await: e };
         }),
-        v(C.prototype),
-        _(C.prototype, c, function () {
+        C(y.prototype),
+        _(y.prototype, c, function () {
             return this;
         }),
-        (n.AsyncIterator = C),
+        (n.AsyncIterator = y),
         (n.async = function (e, t, r, i, a) {
             void 0 === a && (a = Promise);
-            var s = new C(E(e, t, r, i), a);
+            var o = new y(E(e, t, r, i), a);
             return n.isGeneratorFunction(t)
-                ? s
-                : s.next().then(function (e) {
-                      return e.done ? e.value : s.next();
+                ? o
+                : o.next().then(function (e) {
+                      return e.done ? e.value : o.next();
                   });
         }),
-        v(R),
+        C(R),
         _(R, d, 'Generator'),
         _(R, u, function () {
             return this;
@@ -249,11 +248,11 @@ function i() {
                 }
             );
         }),
-        (n.values = b),
-        (D.prototype = {
-            constructor: D,
+        (n.values = U),
+        (P.prototype = {
+            constructor: P,
             reset: function (e) {
-                if (((this.prev = 0), (this.next = 0), (this.sent = this._sent = t), (this.done = !1), (this.delegate = null), (this.method = 'next'), (this.arg = t), this.tryEntries.forEach(L), !e)) for (var n in this) 't' === n.charAt(0) && s.call(this, n) && !isNaN(+n.slice(1)) && (this[n] = t);
+                if (((this.prev = 0), (this.next = 0), (this.sent = this._sent = t), (this.done = !1), (this.delegate = null), (this.method = 'next'), (this.arg = t), this.tryEntries.forEach(M), !e)) for (var n in this) 't' === n.charAt(0) && o.call(this, n) && !isNaN(+n.slice(1)) && (this[n] = t);
             },
             stop: function () {
                 this.done = !0;
@@ -265,15 +264,15 @@ function i() {
                 if (this.done) throw e;
                 var n = this;
                 function r(r, i) {
-                    return (o.type = 'throw'), (o.arg = e), (n.next = r), i && ((n.method = 'next'), (n.arg = t)), !!i;
+                    return (s.type = 'throw'), (s.arg = e), (n.next = r), i && ((n.method = 'next'), (n.arg = t)), !!i;
                 }
                 for (var i = this.tryEntries.length - 1; i >= 0; --i) {
                     var a = this.tryEntries[i],
-                        o = a.completion;
+                        s = a.completion;
                     if ('root' === a.tryLoc) return r('end');
                     if (a.tryLoc <= this.prev) {
-                        var l = s.call(a, 'catchLoc'),
-                            u = s.call(a, 'finallyLoc');
+                        var l = o.call(a, 'catchLoc'),
+                            u = o.call(a, 'finallyLoc');
                         if (l && u) {
                             if (this.prev < a.catchLoc) return r(a.catchLoc, !0);
                             if (this.prev < a.finallyLoc) return r(a.finallyLoc);
@@ -289,23 +288,23 @@ function i() {
             abrupt: function (e, t) {
                 for (var n = this.tryEntries.length - 1; n >= 0; --n) {
                     var r = this.tryEntries[n];
-                    if (r.tryLoc <= this.prev && s.call(r, 'finallyLoc') && this.prev < r.finallyLoc) {
+                    if (r.tryLoc <= this.prev && o.call(r, 'finallyLoc') && this.prev < r.finallyLoc) {
                         var i = r;
                         break;
                     }
                 }
                 i && ('break' === e || 'continue' === e) && i.tryLoc <= t && t <= i.finallyLoc && (i = null);
                 var a = i ? i.completion : {};
-                return (a.type = e), (a.arg = t), i ? ((this.method = 'next'), (this.next = i.finallyLoc), m) : this.complete(a);
+                return (a.type = e), (a.arg = t), i ? ((this.method = 'next'), (this.next = i.finallyLoc), T) : this.complete(a);
             },
             complete: function (e, t) {
                 if ('throw' === e.type) throw e.arg;
-                return 'break' === e.type || 'continue' === e.type ? (this.next = e.arg) : 'return' === e.type ? ((this.rval = this.arg = e.arg), (this.method = 'return'), (this.next = 'end')) : 'normal' === e.type && t && (this.next = t), m;
+                return 'break' === e.type || 'continue' === e.type ? (this.next = e.arg) : 'return' === e.type ? ((this.rval = this.arg = e.arg), (this.method = 'return'), (this.next = 'end')) : 'normal' === e.type && t && (this.next = t), T;
             },
             finish: function (e) {
                 for (var t = this.tryEntries.length - 1; t >= 0; --t) {
                     var n = this.tryEntries[t];
-                    if (n.finallyLoc === e) return this.complete(n.completion, n.afterLoc), L(n), m;
+                    if (n.finallyLoc === e) return this.complete(n.completion, n.afterLoc), M(n), T;
                 }
             },
             catch: function (e) {
@@ -315,7 +314,7 @@ function i() {
                         var r = n.completion;
                         if ('throw' === r.type) {
                             var i = r.arg;
-                            L(n);
+                            M(n);
                         }
                         return i;
                     }
@@ -325,12 +324,12 @@ function i() {
             delegateYield: function (e, n, r) {
                 return (
                     (this.delegate = {
-                        iterator: b(e),
+                        iterator: U(e),
                         resultName: n,
                         nextLoc: r
                     }),
                     'next' === this.method && (this.arg = t),
-                    m
+                    T
                 );
             }
         }),

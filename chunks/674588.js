@@ -1,65 +1,70 @@
 n.d(t, {
     CP: function () {
-        return m;
+        return N;
     },
     T4: function () {
-        return T;
+        return O;
     },
     bG: function () {
-        return g;
+        return C;
     },
     g5: function () {
-        return A;
+        return y;
     },
     gZ: function () {
-        return p;
+        return A;
     },
     i6: function () {
-        return I;
+        return v;
     },
     yC: function () {
-        return S;
+        return R;
     }
-}),
-    n(47120);
-var r = n(261470),
-    i = n(288385),
-    a = n(544891),
+});
+var r = n(47120);
+var i = n(261470),
+    a = n(288385),
+    o = n(544891),
     s = n(570140),
-    o = n(706454),
-    l = n(264043),
-    u = n(894653),
-    c = n(368862),
-    d = n(809547),
-    _ = n(303383),
-    E = n(973001),
-    f = n(981631);
-let h = new Map();
-async function p(e) {
+    l = n(706454),
+    u = n(264043),
+    c = n(894653),
+    d = n(368862),
+    _ = n(809547),
+    E = n(303383),
+    f = n(973001),
+    h = n(981631);
+let p = 1000,
+    m = 5000,
+    I = 10,
+    T = 86400000,
+    g = 600000,
+    S = new Map();
+async function A(e) {
     var t;
     let n = Date.now(),
-        i = null !== (t = h.get(e)) && void 0 !== t ? t : 0;
-    if (l.Z.getApplicationFetchState(e) === l.M.FETCHING || l.Z.isInvalidApplication(e) || n < i + 600000) return;
-    h.set(e, n),
+        r = null !== (t = S.get(e)) && void 0 !== t ? t : 0;
+    if (u.Z.getApplicationFetchState(e) === u.M.FETCHING || u.Z.isInvalidApplication(e) || n < r + g) return;
+    S.set(e, n),
         s.Z.dispatch({
             type: 'APPLICATION_DIRECTORY_FETCH_APPLICATION',
             applicationId: e
         });
-    let o = new r.Z(1000, 5000),
-        u = (e, t) =>
+    let a = new i.Z(p, m),
+        l = (e, t) =>
             429 === e.status &&
-            !!(o.fails < 10) &&
-            (o.fail(() => {
-                t(void 0, u);
+            !!(a.fails < I) &&
+            (a.fail(() => {
+                t(void 0, l);
             }),
             !0);
     try {
         let t = (
-            await a.tn.get({
-                url: f.ANM.APPLICATION_DIRECTORY_EMBED_APPLICATION(e),
-                backoff: o,
-                retries: 10,
-                interceptResponse: u
+            await o.tn.get({
+                url: h.ANM.APPLICATION_DIRECTORY_EMBED_APPLICATION(e),
+                backoff: a,
+                retries: I,
+                interceptResponse: l
             })
         ).body;
         s.Z.dispatch({
@@ -74,21 +79,22 @@ async function p(e) {
         });
     }
 }
-async function I(e) {
+async function v(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         n = Date.now(),
-        r = l.Z.getApplicationFetchState(e),
-        i = l.Z.getApplicationLastFetchTime(e),
-        { dontRefetchMs: u } = t;
-    if (r !== l.M.FETCHING && (null == i || !(i + (null != u ? u : 600000) > n))) {
+        r = u.Z.getApplicationFetchState(e),
+        i = u.Z.getApplicationLastFetchTime(e),
+        { dontRefetchMs: a } = t,
+        c = null != i && i + (null != a ? a : g) > n;
+    if (r !== u.M.FETCHING && !c) {
         s.Z.dispatch({
             type: 'APPLICATION_DIRECTORY_FETCH_APPLICATION',
             applicationId: e
         });
         try {
-            let t = await a.tn.get({
-                url: f.ANM.APPLICATION_DIRECTORY_APPLICATION(e),
-                query: { locale: o.default.locale }
+            let t = await o.tn.get({
+                url: h.ANM.APPLICATION_DIRECTORY_APPLICATION(e),
+                query: { locale: l.default.locale }
             });
             s.Z.dispatch({
                 type: 'APPLICATION_DIRECTORY_FETCH_APPLICATION_SUCCESS',
@@ -103,50 +109,50 @@ async function I(e) {
         }
     }
 }
-async function m() {
+async function N() {
     let e = Date.now(),
-        t = u.Z.getLastFetchTimeMs();
-    if (null != t && t + 600000 > e) return;
-    let n = await a.tn.get({
-        url: f.ANM.APPLICATION_DIRECTORY_CATEGORIES,
-        query: { locale: o.default.locale }
+        t = c.Z.getLastFetchTimeMs();
+    if (null != t && t + g > e) return;
+    let n = await o.tn.get({
+        url: h.ANM.APPLICATION_DIRECTORY_CATEGORIES,
+        query: { locale: l.default.locale }
     });
     s.Z.dispatch({
         type: 'APPLICATION_DIRECTORY_FETCH_CATEGORIES_SUCCESS',
         categories: n.body
     });
 }
-async function T(e) {
+async function O(e) {
     var t;
     let { applicationId: n, guildId: r, options: i } = e,
-        { page: l } = null != i ? i : {},
+        { page: a } = null != i ? i : {},
         u = Date.now(),
-        c = _.Z.getFetchState({
+        c = E.Z.getFetchState({
             applicationId: n,
             guildId: r
         }),
         { lastFetchTimeMs: d } =
             null !==
-                (t = _.Z.getSimilarApplications({
+                (t = E.Z.getSimilarApplications({
                     applicationId: n,
                     guildId: r
                 })) && void 0 !== t
                 ? t
                 : {};
-    if (c !== _.M.FETCHING && (null == d || !(d + 600000 > u))) {
+    if (c !== E.M.FETCHING && (null == d || !(d + g > u))) {
         s.Z.dispatch({
             type: 'APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS',
             applicationId: n,
             guildId: r,
-            page: l
+            page: a
         });
         try {
-            let e = await a.tn.get({
-                url: f.ANM.APPLICATION_DIRECTORY_SIMILAR(n),
+            let e = await o.tn.get({
+                url: h.ANM.APPLICATION_DIRECTORY_SIMILAR(n),
                 query: {
                     guild_id: r,
-                    page: l,
-                    locale: o.default.locale
+                    page: a,
+                    locale: l.default.locale
                 }
             });
             s.Z.dispatch({
@@ -155,7 +161,7 @@ async function T(e) {
                 guildId: r,
                 similarApplications: e.body.applications,
                 loadId: e.body.load_id,
-                page: l,
+                page: a,
                 totalPages: e.body.num_pages
             });
         } catch (e) {
@@ -163,62 +169,62 @@ async function T(e) {
                 type: 'APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS_FAILURE',
                 applicationId: n,
                 guildId: r,
-                page: l
+                page: a
             });
         }
     }
 }
-async function S(e) {
+async function R(e) {
     var t;
-    let { query: n, guildId: r, options: l, onSuccessCallback: u } = e,
-        { page: c, categoryId: _, integrationType: E, minUserInstallCommandCount: h, excludeAppsWithCustomInstallUrl: p, excludeNonEmbeddedApps: I, excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: m, source: T = i.F.APP_DIRECTORY } = null != l ? l : {},
+    let { query: n, guildId: r, options: i, onSuccessCallback: u } = e,
+        { page: c, categoryId: d, integrationType: E, minUserInstallCommandCount: f, excludeAppsWithCustomInstallUrl: p, excludeNonEmbeddedApps: m, excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: I, source: T = a.F.APP_DIRECTORY } = null != i ? i : {},
         S = Date.now(),
-        g = d.Z.getFetchState({
+        A = _.Z.getFetchState({
             query: n,
             guildId: r,
             page: c,
-            categoryId: _,
+            categoryId: d,
             integrationType: E
         }),
-        { lastFetchTimeMs: A } =
+        { lastFetchTimeMs: v } =
             null !==
-                (t = d.Z.getSearchResults({
+                (t = _.Z.getSearchResults({
                     query: n,
                     guildId: r,
                     page: c,
-                    categoryId: _,
+                    categoryId: d,
                     integrationType: E
                 })) && void 0 !== t
                 ? t
                 : {};
-    if (g !== d.M.FETCHING && (null == A || !(A + 600000 > S))) {
+    if (A !== _.M.FETCHING && (null == v || !(v + g > S))) {
         s.Z.dispatch({
             type: 'APPLICATION_DIRECTORY_FETCH_SEARCH',
             query: n,
             guildId: r,
             page: c,
-            categoryId: _,
+            categoryId: d,
             integrationType: E,
-            minUserInstallCommandCount: h,
+            minUserInstallCommandCount: f,
             excludeAppsWithCustomInstallUrl: p,
-            excludeNonEmbeddedApps: I,
-            excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: m,
+            excludeNonEmbeddedApps: m,
+            excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: I,
             source: T
         });
         try {
-            let e = await a.tn.get({
-                url: f.ANM.APPLICATION_DIRECTORY_SEARCH,
+            let e = await o.tn.get({
+                url: h.ANM.APPLICATION_DIRECTORY_SEARCH,
                 query: {
                     query: n,
                     guild_id: r,
                     page: c,
-                    category_id: _,
-                    locale: o.default.locale,
+                    category_id: d,
+                    locale: l.default.locale,
                     integration_type: E,
-                    min_user_install_command_count: h,
+                    min_user_install_command_count: f,
                     exclude_apps_with_custom_install_url: p,
-                    exclude_non_embedded_apps: I,
-                    exclude_embedded_apps_without_primary_entry_point_app_command: m,
+                    exclude_non_embedded_apps: m,
+                    exclude_embedded_apps_without_primary_entry_point_app_command: I,
                     source: T
                 }
             });
@@ -227,7 +233,7 @@ async function S(e) {
                 query: n,
                 guildId: r,
                 page: c,
-                categoryId: _,
+                categoryId: d,
                 integrationType: E,
                 result: {
                     results: e.body.results,
@@ -237,10 +243,10 @@ async function S(e) {
                     type: e.body.type,
                     loadId: e.body.load_id
                 },
-                minUserInstallCommandCount: h,
+                minUserInstallCommandCount: f,
                 excludeAppsWithCustomInstallUrl: p,
-                excludeNonEmbeddedApps: I,
-                excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: m,
+                excludeNonEmbeddedApps: m,
+                excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: I,
                 source: T
             }),
                 null == u || u(e.body.result_count);
@@ -250,33 +256,33 @@ async function S(e) {
                 query: n,
                 guildId: r,
                 page: c,
-                categoryId: _,
+                categoryId: d,
                 integrationType: E,
-                minUserInstallCommandCount: h,
+                minUserInstallCommandCount: f,
                 excludeAppsWithCustomInstallUrl: p,
-                excludeNonEmbeddedApps: I,
-                excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: m,
+                excludeNonEmbeddedApps: m,
+                excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: I,
                 source: T
             });
         }
     }
 }
-async function g() {
+async function C() {
     let { includesInactive: e = !1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         t = Date.now(),
-        n = c.Z.getFetchState({ includesInactive: e }),
-        r = c.Z.getLastFetchTimeMs({ includesInactive: e });
-    if (n !== c.M.FETCHING && (null == r || !(r + 600000 > t))) {
+        n = d.Z.getFetchState({ includesInactive: e }),
+        r = d.Z.getLastFetchTimeMs({ includesInactive: e });
+    if (n !== d.M.FETCHING && (null == r || !(r + g > t))) {
         s.Z.dispatch({
             type: 'APPLICATION_DIRECTORY_FETCH_COLLECTIONS',
             includesInactive: e
         });
         try {
-            let t = await a.tn.get({
-                url: f.ANM.APPLICATION_DIRECTORY_COLLECTIONS,
+            let t = await o.tn.get({
+                url: h.ANM.APPLICATION_DIRECTORY_COLLECTIONS,
                 query: {
                     includes_inactive: e,
-                    locale: o.default.locale
+                    locale: l.default.locale
                 }
             });
             s.Z.dispatch({
@@ -292,15 +298,15 @@ async function g() {
         }
     }
 }
-async function A() {
+async function y() {
     let e = Date.now(),
-        t = E.Z.getFetchState(),
-        n = E.Z.getLastFetchTimeMs(),
-        r = E.Z.getNextFetchRetryTimeMs();
-    if (t !== E.M.FETCHING && (null == n || !(n + 86400000 > e)) && (null == r || !(e < r))) {
+        t = f.Z.getFetchState(),
+        n = f.Z.getLastFetchTimeMs(),
+        r = f.Z.getNextFetchRetryTimeMs();
+    if (t !== f.M.FETCHING && (null == n || !(n + T > e)) && (null == r || !(e < r))) {
         s.Z.dispatch({ type: 'FETCH_INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS' });
         try {
-            let e = await a.tn.get({ url: f.ANM.INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS });
+            let e = await o.tn.get({ url: h.ANM.INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS });
             s.Z.dispatch({
                 type: 'FETCH_INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS_SUCCESS',
                 guildIdToApplicationIds: e.body

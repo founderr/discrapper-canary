@@ -1,27 +1,26 @@
 var r,
-    i,
-    a,
-    s,
-    o = n(442837),
-    l = n(570140),
-    u = n(65154);
-let c = u.dX;
-class d extends (s = o.ZP.Store) {
+    i = n(442837),
+    a = n(570140);
+function o(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+let s = n(65154).dX;
+function l(e) {
+    s = e.bitrate;
+}
+class u extends (r = i.ZP.Store) {
     get bitrate() {
-        return c;
+        return s;
     }
 }
-(a = 'BitRateStore'),
-    (i = 'displayName') in (r = d)
-        ? Object.defineProperty(r, i, {
-              value: a,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (r[i] = a),
-    (t.Z = new d(l.Z, {
-        SET_CHANNEL_BITRATE: function (e) {
-            c = e.bitrate;
-        }
-    }));
+o(u, 'displayName', 'BitRateStore'), (t.Z = new u(a.Z, { SET_CHANNEL_BITRATE: l }));

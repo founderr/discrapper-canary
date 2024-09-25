@@ -1,38 +1,41 @@
-n(177593), n(47120);
-var r = n(147913),
-    i = n(695346);
-let a = !1;
-class s extends r.Z {
+var r = n(177593);
+var i = n(47120);
+var a = n(147913),
+    o = n(695346);
+function s(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+let l = !1;
+class u extends a.Z {
     maybeShowChangeLanguageToast() {}
     setVerifyTimezone() {
-        a = !0;
+        l = !0;
     }
     ensureTimezoneUpdated() {
-        if (!a) return;
-        a = !1;
+        if (!l) return;
+        l = !1;
         let e = new Date().getTimezoneOffset();
-        i.rN.getSetting() !== e && setImmediate(() => i.rN.updateSetting(e));
+        o.rN.getSetting() !== e && setImmediate(() => o.rN.updateSetting(e));
     }
     constructor(...e) {
-        var t, n, r;
         super(...e),
-            (t = this),
-            (n = 'actions'),
-            (r = {
+            s(this, 'actions', {
                 POST_CONNECTION_OPEN: () => {
                     this.setVerifyTimezone(), this.maybeShowChangeLanguageToast();
                 },
                 OVERLAY_INITIALIZE: this.setVerifyTimezone,
                 USER_SETTINGS_PROTO_UPDATE: this.ensureTimezoneUpdated
-            }),
-            n in t
-                ? Object.defineProperty(t, n, {
-                      value: r,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (t[n] = r);
+            });
     }
 }
-t.Z = new s();
+t.Z = new u();

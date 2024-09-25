@@ -1,4 +1,4 @@
-e.exports = function (e) {
+function t(e) {
     let t = {
             className: 'string',
             contains: [e.BACKSLASH_ESCAPE],
@@ -71,4 +71,5 @@ e.exports = function (e) {
             r
         ]
     };
-};
+}
+e.exports = t;

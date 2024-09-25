@@ -1,19 +1,32 @@
-n(47120);
-var r = n(147913),
-    i = n(592125),
-    a = n(944486),
+var r = n(47120);
+var i = n(147913),
+    a = n(592125),
+    o = n(944486),
     s = n(116347),
-    o = n(237292),
-    l = n(118910);
-function u(e) {
+    l = n(237292),
+    u = n(118910);
+function c(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function d(e) {
     let { channelId: t } = e;
-    if (null == t || !(0, o.mG)({ location: 'channel_select' }) || !(0, s.dg)()) return !1;
-    let n = i.Z.getChannel(t);
+    if (null == t || !(0, l.mG)({ location: 'channel_select' }) || !(0, s.dg)()) return !1;
+    let n = a.Z.getChannel(t);
     if (null == n || !n.isDM()) return !1;
     let r = (0, s.uu)(t);
     return (
         null != r &&
-        ((0, l.a)({
+        ((0, u.a)({
             warningId: r.id,
             warningType: r.type,
             senderId: n.getRecipientId(),
@@ -22,17 +35,17 @@ function u(e) {
         !0)
     );
 }
-function c(e) {
+function _(e) {
     let { channels: t } = e;
-    if (!(0, o.mG)({ location: 'channel_updates' }) || !(0, s.dg)()) return !1;
-    let n = a.Z.getCurrentlySelectedChannelId();
+    if (!(0, l.mG)({ location: 'channel_updates' }) || !(0, s.dg)()) return !1;
+    let n = o.Z.getCurrentlySelectedChannelId();
     if (null == n) return !1;
     let r = t.find((e) => e.id === n);
     if (null == r) return !1;
     let i = (0, s.uu)(r.id);
     return (
         !!(null != i && r.isDM()) &&
-        ((0, l.a)({
+        ((0, u.a)({
             warningId: i.id,
             warningType: i.type,
             senderId: r.getRecipientId(),
@@ -41,24 +54,13 @@ function c(e) {
         !0)
     );
 }
-class d extends r.Z {
+class E extends i.Z {
     constructor(...e) {
-        var t, n, r;
         super(...e),
-            (t = this),
-            (n = 'actions'),
-            (r = {
-                CHANNEL_SELECT: u,
-                CHANNEL_UPDATES: c
-            }),
-            n in t
-                ? Object.defineProperty(t, n, {
-                      value: r,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (t[n] = r);
+            c(this, 'actions', {
+                CHANNEL_SELECT: d,
+                CHANNEL_UPDATES: _
+            });
     }
 }
-t.Z = new d();
+t.Z = new E();

@@ -10,7 +10,7 @@
     }
     var n = [];
     function r(e) {
-        (this.time = e.time), (this.target = e.target), (this.rootBounds = e.rootBounds), (this.boundingClientRect = e.boundingClientRect), (this.intersectionRect = e.intersectionRect || l()), (this.isIntersecting = !!e.intersectionRect);
+        (this.time = e.time), (this.target = e.target), (this.rootBounds = e.rootBounds), (this.boundingClientRect = e.boundingClientRect), (this.intersectionRect = e.intersectionRect || d()), (this.isIntersecting = !!e.intersectionRect);
         var t = this.boundingClientRect,
             n = t.width * t.height,
             r = this.intersectionRect,
@@ -21,15 +21,7 @@
         var n = t || {};
         if ('function' != typeof e) throw Error('callback must be a function');
         if (n.root && 1 != n.root.nodeType) throw Error('root must be an Element');
-        (this._checkForIntersections = (function (e, t) {
-            var n = null;
-            return function () {
-                !n &&
-                    (n = setTimeout(function () {
-                        e(), (n = null);
-                    }, t));
-            };
-        })(this._checkForIntersections.bind(this), this.THROTTLE_TIMEOUT)),
+        (this._checkForIntersections = o(this._checkForIntersections.bind(this), this.THROTTLE_TIMEOUT)),
             (this._callback = e),
             (this._observationTargets = []),
             (this._queuedEntries = []),
@@ -41,6 +33,82 @@
                     return e.value + e.unit;
                 })
                 .join(' '));
+    }
+    function a() {
+        return e.performance && performance.now && performance.now();
+    }
+    function o(e, t) {
+        var n = null;
+        return function () {
+            !n &&
+                (n = setTimeout(function () {
+                    e(), (n = null);
+                }, t));
+        };
+    }
+    function s(e, t, n, r) {
+        'function' == typeof e.addEventListener ? e.addEventListener(t, n, r || !1) : 'function' == typeof e.attachEvent && e.attachEvent('on' + t, n);
+    }
+    function l(e, t, n, r) {
+        'function' == typeof e.removeEventListener ? e.removeEventListener(t, n, r || !1) : 'function' == typeof e.detatchEvent && e.detatchEvent('on' + t, n);
+    }
+    function u(e, t) {
+        var n = Math.max(e.top, t.top),
+            r = Math.min(e.bottom, t.bottom),
+            i = Math.max(e.left, t.left),
+            a = Math.min(e.right, t.right),
+            o = a - i,
+            s = r - n;
+        return (
+            o >= 0 &&
+            s >= 0 && {
+                top: n,
+                bottom: r,
+                left: i,
+                right: a,
+                width: o,
+                height: s
+            }
+        );
+    }
+    function c(e) {
+        var t;
+        try {
+            t = e.getBoundingClientRect();
+        } catch (e) {}
+        return t
+            ? (!(t.width && t.height) &&
+                  (t = {
+                      top: t.top,
+                      right: t.right,
+                      bottom: t.bottom,
+                      left: t.left,
+                      width: t.right - t.left,
+                      height: t.bottom - t.top
+                  }),
+              t)
+            : d();
+    }
+    function d() {
+        return {
+            top: 0,
+            bottom: 0,
+            left: 0,
+            right: 0,
+            width: 0,
+            height: 0
+        };
+    }
+    function _(e, t) {
+        for (var n = t; n; ) {
+            if (n == e) return !0;
+            n = E(n);
+        }
+        return !1;
+    }
+    function E(e) {
+        var t = e.parentNode;
+        return t && 11 == t.nodeType && t.host ? t.host : t;
     }
     (i.prototype.THROTTLE_TIMEOUT = 100),
         (i.prototype.POLL_INTERVAL = null),
@@ -100,8 +168,8 @@
                 ((this._monitoringIntersections = !0),
                 this.POLL_INTERVAL
                     ? (this._monitoringInterval = setInterval(this._checkForIntersections, this.POLL_INTERVAL))
-                    : (a(e, 'resize', this._checkForIntersections, !0),
-                      a(t, 'scroll', this._checkForIntersections, !0),
+                    : (s(e, 'resize', this._checkForIntersections, !0),
+                      s(t, 'scroll', this._checkForIntersections, !0),
                       this.USE_MUTATION_OBSERVER &&
                           'MutationObserver' in e &&
                           ((this._domObserver = new MutationObserver(this._checkForIntersections)),
@@ -113,68 +181,43 @@
                           }))));
         }),
         (i.prototype._unmonitorIntersections = function () {
-            this._monitoringIntersections && ((this._monitoringIntersections = !1), clearInterval(this._monitoringInterval), (this._monitoringInterval = null), s(e, 'resize', this._checkForIntersections, !0), s(t, 'scroll', this._checkForIntersections, !0), this._domObserver && (this._domObserver.disconnect(), (this._domObserver = null)));
+            this._monitoringIntersections && ((this._monitoringIntersections = !1), clearInterval(this._monitoringInterval), (this._monitoringInterval = null), l(e, 'resize', this._checkForIntersections, !0), l(t, 'scroll', this._checkForIntersections, !0), this._domObserver && (this._domObserver.disconnect(), (this._domObserver = null)));
         }),
         (i.prototype._checkForIntersections = function () {
-            var t = this._rootIsInDom(),
-                n = t ? this._getRootRect() : l();
-            this._observationTargets.forEach(function (i) {
-                var a = i.element,
-                    s = o(a),
-                    l = this._rootContainsTarget(a),
-                    u = i.entry,
-                    c = t && l && this._computeTargetAndRootIntersection(a, n),
-                    d = (i.entry = new r({
-                        time: (function () {
-                            return e.performance && performance.now && performance.now();
-                        })(),
-                        target: a,
-                        boundingClientRect: s,
-                        rootBounds: n,
-                        intersectionRect: c
+            var e = this._rootIsInDom(),
+                t = e ? this._getRootRect() : d();
+            this._observationTargets.forEach(function (n) {
+                var i = n.element,
+                    o = c(i),
+                    s = this._rootContainsTarget(i),
+                    l = n.entry,
+                    u = e && s && this._computeTargetAndRootIntersection(i, t),
+                    d = (n.entry = new r({
+                        time: a(),
+                        target: i,
+                        boundingClientRect: o,
+                        rootBounds: t,
+                        intersectionRect: u
                     }));
-                u ? (t && l ? this._hasCrossedThreshold(u, d) && this._queuedEntries.push(d) : u && u.isIntersecting && this._queuedEntries.push(d)) : this._queuedEntries.push(d);
+                l ? (e && s ? this._hasCrossedThreshold(l, d) && this._queuedEntries.push(d) : l && l.isIntersecting && this._queuedEntries.push(d)) : this._queuedEntries.push(d);
             }, this),
                 this._queuedEntries.length && this._callback(this.takeRecords(), this);
         }),
         (i.prototype._computeTargetAndRootIntersection = function (n, r) {
             if ('none' != e.getComputedStyle(n).display) {
-                for (var i = o(n), a = c(n), s = !1; !s; ) {
+                for (var i = c(n), a = i, o = E(n), s = !1; !s; ) {
                     var l = null,
-                        u = 1 == a.nodeType ? e.getComputedStyle(a) : {};
-                    if ('none' == u.display) return;
-                    if (
-                        (a == this.root || a == t ? ((s = !0), (l = r)) : a != t.body && a != t.documentElement && 'visible' != u.overflow && (l = o(a)),
-                        l &&
-                            !(i = (function (e, t) {
-                                var n = Math.max(e.top, t.top),
-                                    r = Math.min(e.bottom, t.bottom),
-                                    i = Math.max(e.left, t.left),
-                                    a = Math.min(e.right, t.right),
-                                    s = a - i,
-                                    o = r - n;
-                                return (
-                                    s >= 0 &&
-                                    o >= 0 && {
-                                        top: n,
-                                        bottom: r,
-                                        left: i,
-                                        right: a,
-                                        width: s,
-                                        height: o
-                                    }
-                                );
-                            })(l, i)))
-                    )
-                        break;
-                    a = c(a);
+                        d = 1 == o.nodeType ? e.getComputedStyle(o) : {};
+                    if ('none' == d.display) return;
+                    if ((o == this.root || o == t ? ((s = !0), (l = r)) : o != t.body && o != t.documentElement && 'visible' != d.overflow && (l = c(o)), l && !(a = u(l, a)))) break;
+                    o = E(o);
                 }
-                return i;
+                return a;
             }
         }),
         (i.prototype._getRootRect = function () {
             var e;
-            if (this.root) e = o(this.root);
+            if (this.root) e = c(this.root);
             else {
                 var n = t.documentElement,
                     r = t.body;
@@ -211,10 +254,10 @@
                 }
         }),
         (i.prototype._rootIsInDom = function () {
-            return !this.root || u(t, this.root);
+            return !this.root || _(t, this.root);
         }),
         (i.prototype._rootContainsTarget = function (e) {
-            return u(this.root || t, e);
+            return _(this.root || t, e);
         }),
         (i.prototype._registerInstance = function () {
             0 > n.indexOf(this) && n.push(this);
@@ -222,51 +265,7 @@
         (i.prototype._unregisterInstance = function () {
             var e = n.indexOf(this);
             -1 != e && n.splice(e, 1);
-        });
-    function a(e, t, n, r) {
-        'function' == typeof e.addEventListener ? e.addEventListener(t, n, r || !1) : 'function' == typeof e.attachEvent && e.attachEvent('on' + t, n);
-    }
-    function s(e, t, n, r) {
-        'function' == typeof e.removeEventListener ? e.removeEventListener(t, n, r || !1) : 'function' == typeof e.detatchEvent && e.detatchEvent('on' + t, n);
-    }
-    function o(e) {
-        var t;
-        try {
-            t = e.getBoundingClientRect();
-        } catch (e) {}
-        return t
-            ? (!(t.width && t.height) &&
-                  (t = {
-                      top: t.top,
-                      right: t.right,
-                      bottom: t.bottom,
-                      left: t.left,
-                      width: t.right - t.left,
-                      height: t.bottom - t.top
-                  }),
-              t)
-            : l();
-    }
-    function l() {
-        return {
-            top: 0,
-            bottom: 0,
-            left: 0,
-            right: 0,
-            width: 0,
-            height: 0
-        };
-    }
-    function u(e, t) {
-        for (var n = t; n; ) {
-            if (n == e) return !0;
-            n = c(n);
-        }
-        return !1;
-    }
-    function c(e) {
-        var t = e.parentNode;
-        return t && 11 == t.nodeType && t.host ? t.host : t;
-    }
-    (e.IntersectionObserver = i), (e.IntersectionObserverEntry = r);
+        }),
+        (e.IntersectionObserver = i),
+        (e.IntersectionObserverEntry = r);
 })(window, document);

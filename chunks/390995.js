@@ -1,4 +1,4 @@
-e.exports = function (e) {
+function t(e) {
     let t = e.regex,
         n = '([a-zA-Z_]\\w*[!?=]?|[-+~]@|<<|>>|=~|===?|<=>|[<>]=?|\\*\\*|[-/+%^&*~`|]|\\[\\]=?)',
         r = t.either(/\b([A-Z]+[a-z0-9]+)+/, /\b([A-Z]+[a-z0-9]+)+[A-Z]+/),
@@ -10,18 +10,18 @@ e.exports = function (e) {
             built_in: ['proc', 'lambda', 'attr_accessor', 'attr_reader', 'attr_writer', 'define_method', 'private_constant', 'module_function'],
             literal: ['true', 'false', 'nil']
         },
-        s = {
+        o = {
             className: 'doctag',
             begin: '@[A-Za-z]+'
         },
-        o = {
+        s = {
             begin: '#<',
             end: '>'
         },
         l = [
-            e.COMMENT('#', '$', { contains: [s] }),
+            e.COMMENT('#', '$', { contains: [o] }),
             e.COMMENT('^=begin', '^=end', {
-                contains: [s],
+                contains: [o],
                 relevance: 10
             }),
             e.COMMENT('^__END__', e.MATCH_NOTHING_RE)
@@ -98,13 +98,14 @@ e.exports = function (e) {
                 }
             ]
         },
-        d = '[0-9](_?[0-9])*',
-        _ = {
+        d = '[1-9](_?[0-9])*|0',
+        _ = '[0-9](_?[0-9])*',
+        E = {
             className: 'number',
             relevance: 0,
-            variants: [{ begin: `\\b([1-9](_?[0-9])*|0)(\\.(${d}))?([eE][+-]?(${d})|r)?i?\\b` }, { begin: '\\b0[dD][0-9](_?[0-9])*r?i?\\b' }, { begin: '\\b0[bB][0-1](_?[0-1])*r?i?\\b' }, { begin: '\\b0[oO][0-7](_?[0-7])*r?i?\\b' }, { begin: '\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*r?i?\\b' }, { begin: '\\b0(_?[0-7])+r?i?\\b' }]
+            variants: [{ begin: `\\b(${d})(\\.(${_}))?([eE][+-]?(${_})|r)?i?\\b` }, { begin: '\\b0[dD][0-9](_?[0-9])*r?i?\\b' }, { begin: '\\b0[bB][0-1](_?[0-1])*r?i?\\b' }, { begin: '\\b0[oO][0-7](_?[0-7])*r?i?\\b' }, { begin: '\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*r?i?\\b' }, { begin: '\\b0(_?[0-7])+r?i?\\b' }]
         },
-        E = {
+        f = {
             variants: [
                 { match: /\(\)/ },
                 {
@@ -117,7 +118,12 @@ e.exports = function (e) {
                 }
             ]
         },
-        f = [
+        h = {
+            match: [/(include|extend)\s+/, i],
+            scope: { 2: 'title.class' },
+            keywords: a
+        },
+        p = [
             c,
             {
                 variants: [
@@ -134,11 +140,7 @@ e.exports = function (e) {
                 },
                 keywords: a
             },
-            {
-                match: [/(include|extend)\s+/, i],
-                scope: { 2: 'title.class' },
-                keywords: a
-            },
+            h,
             {
                 relevance: 0,
                 match: [i, /\.new[. (]/],
@@ -160,7 +162,7 @@ e.exports = function (e) {
                     1: 'keyword',
                     3: 'title.function'
                 },
-                contains: [E]
+                contains: [f]
             },
             { begin: e.IDENT_RE + '::' },
             {
@@ -174,7 +176,7 @@ e.exports = function (e) {
                 contains: [c, { begin: n }],
                 relevance: 0
             },
-            _,
+            E,
             {
                 className: 'variable',
                 begin: "(\\$\\W)|((\\$|@@?)(\\w+))(?=[^@$?])(?![A-Za-z])(?![@$?'])"
@@ -219,17 +221,17 @@ e.exports = function (e) {
                             }
                         ]
                     }
-                ].concat(o, l),
+                ].concat(s, l),
                 relevance: 0
             }
-        ].concat(o, l);
-    (u.contains = f), (E.contains = f);
-    let h = [
+        ].concat(s, l);
+    (u.contains = p), (f.contains = p);
+    let m = [
         {
             begin: /^\s*=>/,
             starts: {
                 end: '$',
-                contains: f
+                contains: p
             }
         },
         {
@@ -238,18 +240,19 @@ e.exports = function (e) {
             starts: {
                 end: '$',
                 keywords: a,
-                contains: f
+                contains: p
             }
         }
     ];
     return (
-        l.unshift(o),
+        l.unshift(s),
         {
             name: 'Ruby',
             aliases: ['rb', 'gemspec', 'podspec', 'thor', 'irb'],
             keywords: a,
             illegal: /\/\*/,
-            contains: [e.SHEBANG({ binary: 'ruby' })].concat(h).concat(l).concat(f)
+            contains: [e.SHEBANG({ binary: 'ruby' })].concat(m).concat(l).concat(p)
         }
     );
-};
+}
+e.exports = t;

@@ -1,11 +1,12 @@
-e.exports = function (e) {
+function t(e) {
     let t = e.regex,
         n = t.concat(/[\p{L}_]/u, t.optional(/[\p{L}0-9_.-]*:/u), /[\p{L}0-9_.-]*/u),
-        r = {
+        r = /[\p{L}0-9._:-]+/u,
+        i = {
             className: 'symbol',
             begin: /&[a-z]+;|&#[0-9]+;|&#x[a-f0-9]+;/
         },
-        i = {
+        a = {
             begin: /\s/,
             contains: [
                 {
@@ -15,20 +16,20 @@ e.exports = function (e) {
                 }
             ]
         },
-        a = e.inherit(i, {
+        o = e.inherit(a, {
             begin: /\(/,
             end: /\)/
         }),
         s = e.inherit(e.APOS_STRING_MODE, { className: 'string' }),
-        o = e.inherit(e.QUOTE_STRING_MODE, { className: 'string' }),
-        l = {
+        l = e.inherit(e.QUOTE_STRING_MODE, { className: 'string' }),
+        u = {
             endsWithParent: !0,
             illegal: /</,
             relevance: 0,
             contains: [
                 {
                     className: 'attr',
-                    begin: /[\p{L}0-9._:-]+/u,
+                    begin: r,
                     relevance: 0
                 },
                 {
@@ -42,12 +43,12 @@ e.exports = function (e) {
                                 {
                                     begin: /"/,
                                     end: /"/,
-                                    contains: [r]
+                                    contains: [i]
                                 },
                                 {
                                     begin: /'/,
                                     end: /'/,
-                                    contains: [r]
+                                    contains: [i]
                                 },
                                 { begin: /[^\s"'=<>`]+/ }
                             ]
@@ -68,10 +69,10 @@ e.exports = function (e) {
                 end: />/,
                 relevance: 10,
                 contains: [
-                    i,
-                    o,
-                    s,
                     a,
+                    l,
+                    s,
+                    o,
                     {
                         begin: /\[/,
                         end: /\]/,
@@ -80,7 +81,7 @@ e.exports = function (e) {
                                 className: 'meta',
                                 begin: /<![a-z]/,
                                 end: />/,
-                                contains: [i, a, o, s]
+                                contains: [a, o, l, s]
                             }
                         ]
                     }
@@ -92,7 +93,7 @@ e.exports = function (e) {
                 end: /\]\]>/,
                 relevance: 10
             },
-            r,
+            i,
             {
                 className: 'meta',
                 end: /\?>/,
@@ -100,7 +101,7 @@ e.exports = function (e) {
                     {
                         begin: /<\?xml/,
                         relevance: 10,
-                        contains: [o]
+                        contains: [l]
                     },
                     { begin: /<\?[a-z][a-z0-9]+/ }
                 ]
@@ -110,7 +111,7 @@ e.exports = function (e) {
                 begin: /<style(?=\s|>)/,
                 end: />/,
                 keywords: { name: 'style' },
-                contains: [l],
+                contains: [u],
                 starts: {
                     end: /<\/style>/,
                     returnEnd: !0,
@@ -122,7 +123,7 @@ e.exports = function (e) {
                 begin: /<script(?=\s|>)/,
                 end: />/,
                 keywords: { name: 'script' },
-                contains: [l],
+                contains: [u],
                 starts: {
                     end: /<\/script>/,
                     returnEnd: !0,
@@ -142,7 +143,7 @@ e.exports = function (e) {
                         className: 'name',
                         begin: n,
                         relevance: 0,
-                        starts: l
+                        starts: u
                     }
                 ]
             },
@@ -164,4 +165,5 @@ e.exports = function (e) {
             }
         ]
     };
-};
+}
+e.exports = t;

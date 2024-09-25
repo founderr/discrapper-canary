@@ -1,4 +1,4 @@
-e.exports = function (e) {
+function t(e) {
     let t = e.regex,
         n = ['GET', 'POST', 'HEAD', 'PUT', 'DELETE', 'CONNECT', 'OPTIONS', 'PATCH', 'TRACE'];
     return {
@@ -57,4 +57,5 @@ e.exports = function (e) {
             }
         ]
     };
-};
+}
+e.exports = t;

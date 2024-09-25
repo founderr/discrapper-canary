@@ -1,4 +1,4 @@
-e.exports = function (e) {
+function t(e) {
     return {
         name: 'STEP Part 21',
         aliases: ['p21', 'step', 'stp'],
@@ -41,4 +41,5 @@ e.exports = function (e) {
             }
         ]
     };
-};
+}
+e.exports = t;

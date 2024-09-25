@@ -1,49 +1,51 @@
 n.d(t, {
     Ng: function () {
-        return S;
+        return v;
     },
     OC: function () {
-        return O;
+        return y;
     },
     dg: function () {
-        return g;
+        return N;
     },
     dp: function () {
-        return p;
-    },
-    f3: function () {
-        return m;
-    },
-    nA: function () {
-        return A;
-    },
-    qF: function () {
-        return h;
-    },
-    uV: function () {
         return T;
     },
+    f3: function () {
+        return S;
+    },
+    nA: function () {
+        return O;
+    },
+    qF: function () {
+        return I;
+    },
+    uV: function () {
+        return A;
+    },
     vY: function () {
-        return N;
+        return C;
     }
-}),
-    n(47120);
-var r = n(112456),
-    i = n.n(r),
-    a = n(392711),
-    s = n.n(a),
-    o = n(206744),
-    l = n(948350),
-    u = n(430824),
-    c = n(594174),
-    d = n(380684),
-    _ = n(74538),
-    E = n(981631),
-    f = n(474936);
-function h(e, t) {
-    return e instanceof File ? e : p(e.data, e.filename, t);
+});
+var r = n(47120);
+var i = n(112456),
+    a = n.n(i),
+    o = n(392711),
+    s = n.n(o),
+    l = n(206744),
+    u = n(948350),
+    c = n(430824),
+    d = n(594174),
+    _ = n(380684),
+    E = n(74538),
+    f = n(981631),
+    h = n(474936);
+let p = 524288000,
+    m = 524288000;
+function I(e, t) {
+    return e instanceof File ? e : T(e.data, e.filename, t);
 }
-function p(e, t, r) {
+function T(e, t, r) {
     let i = n(643907);
     if (null == t && ((t = 'unknown'), 'type' in e)) {
         let n = i.extension(e.type);
@@ -51,7 +53,7 @@ function p(e, t, r) {
     }
     return null == r && ('type' in e && (r = e.type), (r = null != r ? r : i.lookup(t))), new File([e], t, { type: r });
 }
-let I = [
+let g = [
     {
         reType: /^image\/vnd.adobe.photoshop/,
         klass: 'photoshop'
@@ -109,41 +111,40 @@ let I = [
         klass: 'audio'
     }
 ];
-function m(e) {
-    return T(e.name, e.type);
-}
-function T(e, t) {
-    var n;
-    e = null !== (n = null == e ? void 0 : e.toLowerCase()) && void 0 !== n ? n : '';
-    let r = s().find(I, (n) => (null != n.reType && null != t ? n.reType.test(t) : null != n.reName && '' !== e && n.reName.test(e)));
-    return null != r ? r.klass : 'unknown';
-}
 function S(e) {
-    return i().filesize(e);
-}
-function g(e) {
-    let t = c.default.getCurrentUser();
-    o.Z.trackExposure({ location: 'de18ec_1' }), l.Z.trackExposure({ location: 'de18ec_2' });
-    let n = _.ZP.getUserMaxFileSize(t);
-    if (null == e) return n;
-    let r = u.Z.getGuild(e),
-        i = null != r ? f.HO[r.premiumTier].limits.fileSize : E.mBz;
-    return (0, d.XS)() && null != r && r.premiumTier < 2 && n < i ? n : Math.max(i, n);
+    return A(e.name, e.type);
 }
 function A(e, t) {
-    let n = g(t);
-    return Array.from(e).some((e) => e.size > n);
+    var n;
+    e = null !== (n = null == e ? void 0 : e.toLowerCase()) && void 0 !== n ? n : '';
+    let r = s().find(g, (n) => (null != n.reType && null != t ? n.reType.test(t) : null != n.reName && '' !== e && n.reName.test(e)));
+    return null != r ? r.klass : 'unknown';
+}
+function v(e) {
+    return a().filesize(e);
 }
 function N(e) {
-    return (
-        (function (e) {
-            let t = 0;
-            for (let n of e) t += n.size;
-            return t;
-        })(e) > O()
-    );
+    let t = d.default.getCurrentUser();
+    l.Z.trackExposure({ location: 'de18ec_1' }), u.Z.trackExposure({ location: 'de18ec_2' });
+    let n = E.ZP.getUserMaxFileSize(t);
+    if (null == e) return n;
+    let r = c.Z.getGuild(e),
+        i = null != r ? h.HO[r.premiumTier].limits.fileSize : f.mBz;
+    return (0, _.XS)() && null != r && r.premiumTier < 2 && n < i ? n : Math.max(i, n);
 }
-function O() {
-    let e = c.default.getCurrentUser();
-    return null != e && e.isStaff() ? 524288000 : 524288000;
+function O(e, t) {
+    let n = N(t);
+    return Array.from(e).some((e) => e.size > n);
+}
+function R(e) {
+    let t = 0;
+    for (let n of e) t += n.size;
+    return t;
+}
+function C(e) {
+    return R(e) > y();
+}
+function y() {
+    let e = d.default.getCurrentUser();
+    return null != e && e.isStaff() ? m : p;
 }

@@ -1,55 +1,61 @@
 let r, i;
-n(724458);
 var a,
-    s,
-    o,
-    l,
-    u = n(442837),
-    c = n(433517),
-    d = n(570140),
-    _ = n(592125),
-    E = n(430824);
-let f = 'hideSuppressWarning',
-    h = !1,
-    p = !0,
-    I = !1;
-class m extends (a = u.ZP.Store) {
+    o = n(724458);
+var s = n(442837),
+    l = n(433517),
+    u = n(570140),
+    c = n(592125),
+    d = n(430824);
+function _(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+let E = 'hideSuppressWarning',
+    f = !1,
+    h = !0,
+    p = !1;
+function m(e) {
+    (r = e.sessionId), (f = !1);
+}
+function I() {
+    (r = null), (i = null), (h = !0);
+}
+function T(e) {
+    let { voiceStates: t } = e;
+    return t.reduce((e, t) => (r !== t.sessionId ? e : (f !== t.suppress && (h = !(f = t.suppress)), i !== t.channelId && ((i = t.channelId), (h = !f)), (p || null == t.channelId) && (h = !0), !0)), !1);
+}
+function g(e) {
+    let { forever: t } = e;
+    (h = !0), t && ((p = !0), l.K.set(E, p));
+}
+class S extends (a = s.ZP.Store) {
     initialize() {
-        I = c.K.get(f) || I;
+        p = l.K.get(E) || p;
     }
     isAFKChannel() {
-        let e = _.Z.getChannel(i);
+        let e = c.Z.getChannel(i);
         if (null == e) return !1;
-        let t = E.Z.getGuild(e.getGuildId());
+        let t = d.Z.getGuild(e.getGuildId());
         return null != t && e.id === t.afkChannelId;
     }
     shouldShowWarning() {
         var e;
-        return !(null === (e = _.Z.getChannel(i)) || void 0 === e ? void 0 : e.isGuildStageVoice()) && !p;
+        return !(null === (e = c.Z.getChannel(i)) || void 0 === e ? void 0 : e.isGuildStageVoice()) && !h;
     }
 }
-(l = 'PermissionSpeakStore'),
-    (o = 'displayName') in (s = m)
-        ? Object.defineProperty(s, o, {
-              value: l,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (s[o] = l),
-    (t.Z = new m(d.Z, {
-        CONNECTION_OPEN: function (e) {
-            (r = e.sessionId), (h = !1);
-        },
-        CONNECTION_CLOSED: function () {
-            (r = null), (i = null), (p = !0);
-        },
-        VOICE_STATE_UPDATES: function (e) {
-            let { voiceStates: t } = e;
-            return t.reduce((e, t) => (r !== t.sessionId ? e : (h !== t.suppress && (p = !(h = t.suppress)), i !== t.channelId && ((i = t.channelId), (p = !h)), (I || null == t.channelId) && (p = !0), !0)), !1);
-        },
-        PERMISSION_CLEAR_SUPPRESS_WARNING: function (e) {
-            let { forever: t } = e;
-            (p = !0), t && ((I = !0), c.K.set(f, I));
-        }
+_(S, 'displayName', 'PermissionSpeakStore'),
+    (t.Z = new S(u.Z, {
+        CONNECTION_OPEN: m,
+        CONNECTION_CLOSED: I,
+        VOICE_STATE_UPDATES: T,
+        PERMISSION_CLEAR_SUPPRESS_WARNING: g
     }));

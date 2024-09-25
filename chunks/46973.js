@@ -1,54 +1,59 @@
 n.d(t, {
     Mt: function () {
-        return f;
+        return d;
     },
     Sh: function () {
-        return u.S;
+        return o.S;
     },
     TO: function () {
-        return l;
+        return a;
     },
     W$: function () {
-        return s;
+        return r;
     },
     Yn: function () {
-        return d.Yn;
+        return l.Yn;
     },
     aB: function () {
-        return c.a;
+        return s.a;
     },
     jj: function () {
-        return E;
+        return c;
     },
     zZ: function () {
-        return o;
+        return i;
     }
 });
 var r,
     i,
     a,
-    s,
-    o,
-    l,
-    u = n(839548),
-    c = n(946695),
-    d = n(65154);
-function _(e) {
+    o = n(839548),
+    s = n(946695),
+    l = n(65154);
+function u(e) {
     switch (e) {
-        case d.AS.NATIVE:
+        case l.AS.NATIVE:
             return n(743426).Z;
-        case d.AS.WEBRTC:
+        case l.AS.WEBRTC:
             return n(959856).Z;
-        case d.AS.DUMMY:
+        case l.AS.DUMMY:
         default:
             return n(135670).Z;
     }
 }
-function E() {
+function c() {
     var e;
-    return null !== (e = [d.AS.NATIVE, d.AS.WEBRTC].find((e) => _(e).supported())) && void 0 !== e ? e : d.AS.DUMMY;
+    return null !== (e = [l.AS.NATIVE, l.AS.WEBRTC].find((e) => u(e).supported())) && void 0 !== e ? e : l.AS.DUMMY;
 }
-function f(e) {
-    return new (_(e))();
+function d(e) {
+    return new (u(e))();
 }
-((r = s || (s = {})).INPUT_DEVICE = 'input_device'), (r.STREAM = 'stream'), ((i = o || (o = {})).NONE = ''), (i.BACKGROUND_BLUR = 'background_blur'), (i.BACKGROUND_REPLACEMENT = 'background_replacement'), ((a = l || (l = {})).CAMERA_BACKGROUND_PREVIEW = 'cameraBackgroundPreview'), (a.CAMERA_BACKGROUND_LIVE = 'cameraBackgroundLive');
+!(function (e) {
+    (e.INPUT_DEVICE = 'input_device'), (e.STREAM = 'stream');
+})(r || (r = {})),
+    !(function (e) {
+        (e.NONE = ''), (e.BACKGROUND_BLUR = 'background_blur'), (e.BACKGROUND_REPLACEMENT = 'background_replacement');
+    })(i || (i = {})),
+    !(function (e) {
+        (e.CAMERA_BACKGROUND_PREVIEW = 'cameraBackgroundPreview'), (e.CAMERA_BACKGROUND_LIVE = 'cameraBackgroundLive');
+    })(a || (a = {}));

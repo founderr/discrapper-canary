@@ -1,14 +1,15 @@
 n.d(t, {
     Z: function () {
-        return function e(t, n, i, a) {
-            let { length: s } = i,
-                o = a,
-                l = n;
-            if (0 === s) return 0;
-            if (null == o) o = l;
-            else if (o === l) return l;
-            return (l += t === r.a8.UP ? -1 : 1) < 0 || l >= s ? e(t, l < 0 ? s : -1, i, o) : i[l].type === r.h8.HEADER ? e(t, l, i, o) : l;
-        };
+        return i;
     }
 });
 var r = n(727785);
+function i(e, t, n, a) {
+    let { length: o } = n,
+        s = a,
+        l = t;
+    if (0 === o) return 0;
+    if (null == s) s = l;
+    else if (s === l) return l;
+    return (l += e === r.a8.UP ? -1 : 1) < 0 || l >= o ? i(e, l < 0 ? o : -1, n, s) : n[l].type === r.h8.HEADER ? i(e, l, n, s) : l;
+}

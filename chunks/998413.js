@@ -1,4 +1,4 @@
-e.exports = function (e) {
+function t(e) {
     let t = e.regex;
     return {
         name: 'Erlang REPL',
@@ -34,4 +34,5 @@ e.exports = function (e) {
             }
         ]
     };
-};
+}
+e.exports = t;

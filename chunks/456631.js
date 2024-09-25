@@ -1,39 +1,88 @@
 let r;
 n.d(t, {
     H: function () {
-        return m;
+        return I;
     }
-}),
-    n(47120),
-    n(733860);
+});
 var i,
-    a,
-    s,
-    o,
-    l = n(392711),
-    u = n(442837),
-    c = n(780384),
-    d = n(570140),
-    _ = n(70956),
-    E = n(963838),
-    f = n(354459);
+    a = n(47120);
+var o = n(733860);
+var s = n(392711);
+var l = n(442837),
+    u = n(780384),
+    c = n(570140),
+    d = n(70956),
+    _ = n(963838),
+    E = n(354459);
+function f(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
 let h = [],
     p = {},
-    I = [],
-    m = (e) => {
+    m = [],
+    I = (e) => {
         null != e &&
-            d.Z.dispatch({
+            c.Z.dispatch({
                 type: 'VOICE_CHANNEL_EFFECT_CLEAR',
                 userId: e
             });
     },
     T = [],
-    S = 10 * _.Z.Millis.SECOND,
-    g = (0, l.debounce)(() => {
-        let e = (0, E.cX)(I);
-        c.uv.announce(e, 'polite'), (I = []);
-    }, 500);
-class A extends (i = u.ZP.Store) {
+    g = 20,
+    S = 10 * d.Z.Millis.SECOND,
+    A = () => {
+        let e = new Date();
+        if ((T = [e, ...T].slice(0, g)).length >= g) {
+            let t = T[T.length - 1],
+                n = e.getTime() - t.getTime();
+            n < S && (r = new Date(e.getTime() + S - n));
+        }
+    },
+    v = (e) => {
+        let { cooldownEndsAtMs: t } = e;
+        r = new Date(Date.now() + t);
+    },
+    N = (0, s.debounce)(() => {
+        let e = (0, _.cX)(m);
+        u.uv.announce(e, 'polite'), (m = []);
+    }, 500),
+    O = (e) => {
+        let { emoji: t, userId: n, animationType: r } = e;
+        null != t &&
+            null != r &&
+            ((p[n] = {
+                emoji: t,
+                sentAt: Date.now(),
+                animationType: r
+            }),
+            (m = [
+                ...m,
+                {
+                    emojiName: t.name,
+                    userId: n
+                }
+            ]),
+            N());
+    },
+    R = (e) => {
+        let { emoji: t } = e;
+        if (null != t) h.unshift(t), (h = (0, s.uniqBy)(h, 'name')).length > E.e5 + 1 && h.pop();
+    },
+    C = (e) => {
+        let { userId: t } = e;
+        null != p[t] && delete p[t];
+    };
+class y extends (i = l.ZP.Store) {
     get recentlyUsedEmojis() {
         return h;
     }
@@ -47,52 +96,11 @@ class A extends (i = u.ZP.Store) {
         return p[e];
     }
 }
-(o = 'VoiceChannelEffectsStore'),
-    (s = 'displayName') in (a = A)
-        ? Object.defineProperty(a, s, {
-              value: o,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (a[s] = o),
-    (t.Z = new A(d.Z, {
-        VOICE_CHANNEL_EFFECT_CLEAR: (e) => {
-            let { userId: t } = e;
-            null != p[t] && delete p[t];
-        },
-        VOICE_CHANNEL_EFFECT_RECENT_EMOJI: (e) => {
-            let { emoji: t } = e;
-            if (null != t) h.unshift(t), (h = (0, l.uniqBy)(h, 'name')).length > f.e5 + 1 && h.pop();
-        },
-        VOICE_CHANNEL_EFFECT_SEND: (e) => {
-            let { emoji: t, userId: n, animationType: r } = e;
-            null != t &&
-                null != r &&
-                ((p[n] = {
-                    emoji: t,
-                    sentAt: Date.now(),
-                    animationType: r
-                }),
-                (I = [
-                    ...I,
-                    {
-                        emojiName: t.name,
-                        userId: n
-                    }
-                ]),
-                g());
-        },
-        VOICE_CHANNEL_EFFECT_SENT_LOCAL: () => {
-            let e = new Date();
-            if ((T = [e, ...T].slice(0, 20)).length >= 20) {
-                let t = T[T.length - 1],
-                    n = e.getTime() - t.getTime();
-                n < S && (r = new Date(e.getTime() + S - n));
-            }
-        },
-        VOICE_CHANNEL_EFFECT_UPDATE_TIME_STAMP: (e) => {
-            let { cooldownEndsAtMs: t } = e;
-            r = new Date(Date.now() + t);
-        }
+f(y, 'displayName', 'VoiceChannelEffectsStore'),
+    (t.Z = new y(c.Z, {
+        VOICE_CHANNEL_EFFECT_CLEAR: C,
+        VOICE_CHANNEL_EFFECT_RECENT_EMOJI: R,
+        VOICE_CHANNEL_EFFECT_SEND: O,
+        VOICE_CHANNEL_EFFECT_SENT_LOCAL: A,
+        VOICE_CHANNEL_EFFECT_UPDATE_TIME_STAMP: v
     }));

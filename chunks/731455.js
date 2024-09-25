@@ -1,89 +1,89 @@
 n.d(t, {
     Gj: function () {
-        return o;
+        return r;
     },
     Hk: function () {
-        return h;
+        return d;
     },
     L3: function () {
-        return m;
-    },
-    U: function () {
-        return p;
-    },
-    U2: function () {
-        return T;
-    },
-    Vb: function () {
         return f;
     },
-    b0: function () {
-        return N;
-    },
-    dU: function () {
-        return A;
-    },
-    dc: function () {
-        return E;
-    },
-    fW: function () {
-        return c;
-    },
-    jb: function () {
-        return g;
-    },
-    lA: function () {
-        return I;
-    },
-    md: function () {
-        return O;
-    },
-    o3: function () {
+    U: function () {
         return _;
     },
+    U2: function () {
+        return h;
+    },
+    Vb: function () {
+        return c;
+    },
+    b0: function () {
+        return T;
+    },
+    dU: function () {
+        return I;
+    },
+    dc: function () {
+        return u;
+    },
+    fW: function () {
+        return o;
+    },
+    jb: function () {
+        return m;
+    },
+    lA: function () {
+        return E;
+    },
+    md: function () {
+        return g;
+    },
+    o3: function () {
+        return l;
+    },
     zo: function () {
-        return R;
+        return S;
     }
 });
 var r,
     i,
     a,
-    s,
     o,
-    l,
-    u,
-    c,
-    d = n(689938);
-let _ = 0,
-    E = 13,
-    f = !0,
-    h = -1,
-    p = -2;
-((r = o || (o = {}))[(r.Quests = -4)] = 'Quests'), (r[(r.Clans = -3)] = 'Clans'), (r[(r.Hub = p)] = 'Hub'), (r[(r.Communities = h)] = 'Communities'), (r[(r.Activity = 1)] = 'Activity'), (r[(r.Music = 2)] = 'Music'), (r[(r.Television = 3)] = 'Television'), (r[(r.Science = 5)] = 'Science'), (r[(r.Education = 6)] = 'Education');
-let I = 1000,
-    m = [1, 2, 3, 5, 6];
-((i = l || (l = {}))[(i.GENERAL_CHATTING = 14)] = 'GENERAL_CHATTING'), (i[(i.GAMING = 1)] = 'GAMING'), (i[(i.MUSIC = 2)] = 'MUSIC'), (i[(i.ENTERTAINMENT = 3)] = 'ENTERTAINMENT'), (i[(i.CREATIVE_ARTS = 4)] = 'CREATIVE_ARTS'), (i[(i.SCIENCE_AND_TECH = 5)] = 'SCIENCE_AND_TECH'), (i[(i.EDUCATION = 6)] = 'EDUCATION'), (i[(i.SPORTS = 7)] = 'SPORTS'), (i[(i.FASHION_AND_BEAUTY = 8)] = 'FASHION_AND_BEAUTY'), (i[(i.RELATIONSHIPS_AND_IDENTITY = 9)] = 'RELATIONSHIPS_AND_IDENTITY'), (i[(i.TRAVEL_AND_FOOD = 10)] = 'TRAVEL_AND_FOOD'), (i[(i.FITNESS_AND_HEALTH = 11)] = 'FITNESS_AND_HEALTH'), (i[(i.FINANCE = 12)] = 'FINANCE'), (i[(i.OTHER = 13)] = 'OTHER'), (i[(i.EMOJI = 43)] = 'EMOJI'), (i[(i.BOTS = 49)] = 'BOTS');
-let T = {
-        14: [() => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_GAMING, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ROBLOX, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_YOUTUBE, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_TWITCH, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_MINECRAFT, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_COMMUNITY, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_STREAMER, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_FORTNITE, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ANIME, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ROLEPLAY],
-        1: [() => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_MINECRAFT, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ROBLOX, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_TWITCH, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_YOUTUBE, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_FORTNITE, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ESPORTS, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ROLEPLAY, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_VALORANT, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_LEAGUEOFLEGENDS, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_FIVEM],
-        2: [() => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_EDM, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_RAP, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_KPOP, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_YOUTUBE, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_MUSIC_PRODUCTION, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_HIPHOP, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_SINGING, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_GAMING, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_BTS, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_METAL],
-        3: [() => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ANIME, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_YOUTUBE, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_GAMING, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_TWITCH, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_MANGA, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_MEMES, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_STREAMER, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_SOCIAL, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_REDDIT],
-        4: [() => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ART, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ANIME, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_DESIGN, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_YOUTUBE, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ANIMATION, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_3D, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_NFT, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_MANGA, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_DRAWING, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_PHOTOGRAPHY],
-        5: [() => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_PROGRAMMING, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_TECH, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_CODING, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_GITHUB, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_OPENSOURCE, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_JAVASCRIPT, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_CRYPTOCURRENCY, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_HARDWARE, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_SOFTWARE, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_LINUX],
-        6: [() => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_STUDY, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_LANGUAGE, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_SCHOOL, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ENGLISH, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_LEARNING, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_HOMEWORK, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_PROGRAMMING, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_COLLEGE, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_STOCKS, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_YOUTUBE],
-        7: [() => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_FOOTBALL, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_NBA, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_NFL, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_SOCCER, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_BASKETBALL, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_FORMULA1, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_PREMIER_LEAGUE, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_RACING, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_REDDIT, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_FANTASY_FOOTBALL],
-        8: [() => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_FASHION, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_STREETWEAR, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_SNEAKERS, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_CLOTHING, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_REDDIT, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_YEEZY, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_SUPREME, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_HYPEBEAST, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_STYLE],
-        9: [() => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_LGBTQ, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ANIME, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_SOCIAL, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_FRIENDS, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_COMMUNITY],
-        10: [() => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_FOOD, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_DISNEY, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_BEVERAGE, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_SNACKS, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_YOUTUBE, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_TRAVEL, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_DISNEYWORLD],
-        11: [() => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_GYM, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_BODYBUILDING, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_EXERCISE, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_CALISTHENICS, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_MENTAL_HEALTH, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_SELF_IMPROVEMENT, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_EDUCATION, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_CROSSFIT, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_NUTRITION, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_SPORTS],
-        12: [() => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_STOCKS, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_TRADING, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_INVESTING, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_BITCOIN, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_CRYPTOCURRENCY, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ETHEREUM, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_OPTIONS, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_DEFI, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_FOREX],
-        13: [() => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_GAMING, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_YOUTUBE, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_TWITCH, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_COMMUNITY, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ANIME, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_EVENTS, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_SOCIAL, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_MEMES],
-        43: [() => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_EMOJI, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_EMOTES, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_NITRO, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ANIME, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_CUTE, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_GIVEAWAYS, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_AESTHETIC, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ART, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_MEMES],
-        49: [() => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_APPS, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_BOTS, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_DISCORD_BOT, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_GIVEAWAYS, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_SUPPORT, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_FUN, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_MEMES]
+    s = n(689938);
+let l = 0,
+    u = 13,
+    c = !0,
+    d = -1,
+    _ = -2;
+!(function (e) {
+    (e[(e.Quests = -4)] = 'Quests'), (e[(e.Clans = -3)] = 'Clans'), (e[(e.Hub = _)] = 'Hub'), (e[(e.Communities = d)] = 'Communities'), (e[(e.Activity = 1)] = 'Activity'), (e[(e.Music = 2)] = 'Music'), (e[(e.Television = 3)] = 'Television'), (e[(e.Science = 5)] = 'Science'), (e[(e.Education = 6)] = 'Education');
+})(r || (r = {}));
+let E = 1000,
+    f = [1, 2, 3, 5, 6];
+!(function (e) {
+    (e[(e.GENERAL_CHATTING = 14)] = 'GENERAL_CHATTING'), (e[(e.GAMING = 1)] = 'GAMING'), (e[(e.MUSIC = 2)] = 'MUSIC'), (e[(e.ENTERTAINMENT = 3)] = 'ENTERTAINMENT'), (e[(e.CREATIVE_ARTS = 4)] = 'CREATIVE_ARTS'), (e[(e.SCIENCE_AND_TECH = 5)] = 'SCIENCE_AND_TECH'), (e[(e.EDUCATION = 6)] = 'EDUCATION'), (e[(e.SPORTS = 7)] = 'SPORTS'), (e[(e.FASHION_AND_BEAUTY = 8)] = 'FASHION_AND_BEAUTY'), (e[(e.RELATIONSHIPS_AND_IDENTITY = 9)] = 'RELATIONSHIPS_AND_IDENTITY'), (e[(e.TRAVEL_AND_FOOD = 10)] = 'TRAVEL_AND_FOOD'), (e[(e.FITNESS_AND_HEALTH = 11)] = 'FITNESS_AND_HEALTH'), (e[(e.FINANCE = 12)] = 'FINANCE'), (e[(e.OTHER = 13)] = 'OTHER'), (e[(e.EMOJI = 43)] = 'EMOJI'), (e[(e.BOTS = 49)] = 'BOTS');
+})(i || (i = {}));
+let h = {
+        14: [() => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_GAMING, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ROBLOX, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_YOUTUBE, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_TWITCH, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_MINECRAFT, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_COMMUNITY, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_STREAMER, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_FORTNITE, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ANIME, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ROLEPLAY],
+        1: [() => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_MINECRAFT, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ROBLOX, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_TWITCH, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_YOUTUBE, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_FORTNITE, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ESPORTS, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ROLEPLAY, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_VALORANT, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_LEAGUEOFLEGENDS, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_FIVEM],
+        2: [() => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_EDM, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_RAP, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_KPOP, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_YOUTUBE, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_MUSIC_PRODUCTION, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_HIPHOP, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_SINGING, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_GAMING, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_BTS, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_METAL],
+        3: [() => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ANIME, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_YOUTUBE, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_GAMING, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_TWITCH, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_MANGA, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_MEMES, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_STREAMER, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_SOCIAL, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_REDDIT],
+        4: [() => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ART, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ANIME, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_DESIGN, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_YOUTUBE, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ANIMATION, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_3D, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_NFT, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_MANGA, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_DRAWING, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_PHOTOGRAPHY],
+        5: [() => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_PROGRAMMING, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_TECH, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_CODING, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_GITHUB, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_OPENSOURCE, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_JAVASCRIPT, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_CRYPTOCURRENCY, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_HARDWARE, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_SOFTWARE, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_LINUX],
+        6: [() => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_STUDY, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_LANGUAGE, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_SCHOOL, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ENGLISH, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_LEARNING, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_HOMEWORK, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_PROGRAMMING, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_COLLEGE, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_STOCKS, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_YOUTUBE],
+        7: [() => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_FOOTBALL, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_NBA, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_NFL, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_SOCCER, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_BASKETBALL, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_FORMULA1, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_PREMIER_LEAGUE, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_RACING, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_REDDIT, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_FANTASY_FOOTBALL],
+        8: [() => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_FASHION, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_STREETWEAR, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_SNEAKERS, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_CLOTHING, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_REDDIT, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_YEEZY, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_SUPREME, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_HYPEBEAST, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_STYLE],
+        9: [() => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_LGBTQ, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ANIME, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_SOCIAL, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_FRIENDS, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_COMMUNITY],
+        10: [() => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_FOOD, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_DISNEY, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_BEVERAGE, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_SNACKS, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_YOUTUBE, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_TRAVEL, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_DISNEYWORLD],
+        11: [() => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_GYM, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_BODYBUILDING, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_EXERCISE, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_CALISTHENICS, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_MENTAL_HEALTH, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_SELF_IMPROVEMENT, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_EDUCATION, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_CROSSFIT, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_NUTRITION, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_SPORTS],
+        12: [() => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_STOCKS, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_TRADING, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_INVESTING, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_BITCOIN, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_CRYPTOCURRENCY, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ETHEREUM, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_OPTIONS, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_DEFI, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_FOREX],
+        13: [() => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_GAMING, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_YOUTUBE, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_TWITCH, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_COMMUNITY, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ANIME, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_EVENTS, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_SOCIAL, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_MEMES],
+        43: [() => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_EMOJI, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_EMOTES, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_NITRO, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ANIME, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_CUTE, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_GIVEAWAYS, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_AESTHETIC, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ART, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_MEMES],
+        49: [() => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_APPS, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_BOTS, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_DISCORD_BOT, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_GIVEAWAYS, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_SUPPORT, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_FUN, () => s.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_MEMES]
     },
-    S = ['en-GB'];
-function g() {
-    return d.Z.getAvailableLocales()
+    p = ['en-GB'];
+function m() {
+    return s.Z.getAvailableLocales()
         .map((e) => {
             let t;
             let { value: r, name: i } = e;
@@ -95,7 +95,7 @@ function g() {
             return 'en-US' === r
                 ? {
                       value: r,
-                      label: d.Z.Messages.ENGLISH_LANGUAGE,
+                      label: s.Z.Messages.ENGLISH_LANGUAGE,
                       image: t
                   }
                 : {
@@ -104,23 +104,28 @@ function g() {
                       image: t
                   };
         })
-        .filter((e) => !S.includes(e.value));
+        .filter((e) => !p.includes(e.value));
 }
-g();
-let A = d.Z.getLanguages()
-        .filter((e) => !S.includes(e.code))
+m();
+let I = s.Z.getLanguages()
+        .filter((e) => !p.includes(e.code))
         .map((e) =>
             'en-US' === e.code
                 ? {
                       ...e,
-                      name: d.Z.Messages.en
+                      name: s.Z.Messages.en
                   }
                 : e
         ),
-    N = 40,
-    O = 20;
-((a = u || (u = {})).GAME_RECOMMENDATIONS = 'Game Recommendations'), (a.SERVER_RECOMMENDATIONS = 'Server Recommendations'), ((s = c || (c = {}))[(s.Activity = 0)] = 'Activity'), (s[(s.Discover = 1)] = 'Discover'), (s[(s.Education = 2)] = 'Education'), (s[(s.Music = 3)] = 'Music'), (s[(s.Science = 4)] = 'Science'), (s[(s.Stage = 5)] = 'Stage'), (s[(s.Television = 6)] = 'Television'), (s[(s.Server = 7)] = 'Server'), (s[(s.Quest = 8)] = 'Quest');
-let R = {
+    T = 40,
+    g = 20;
+!(function (e) {
+    (e.GAME_RECOMMENDATIONS = 'Game Recommendations'), (e.SERVER_RECOMMENDATIONS = 'Server Recommendations');
+})(a || (a = {})),
+    !(function (e) {
+        (e[(e.Activity = 0)] = 'Activity'), (e[(e.Discover = 1)] = 'Discover'), (e[(e.Education = 2)] = 'Education'), (e[(e.Music = 3)] = 'Music'), (e[(e.Science = 4)] = 'Science'), (e[(e.Stage = 5)] = 'Stage'), (e[(e.Television = 6)] = 'Television'), (e[(e.Server = 7)] = 'Server'), (e[(e.Quest = 8)] = 'Quest');
+    })(o || (o = {}));
+let S = {
     facebook: {
         presentation: 'Facebook',
         baseUrl: 'https://facebook.com'

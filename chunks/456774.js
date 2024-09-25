@@ -1,197 +1,202 @@
 n.d(t, {
     Z: function () {
-        return M;
+        return G;
     }
-}),
-    n(653041),
-    n(47120);
-var r = n(735250),
-    i = n(470079),
-    a = n(442837),
-    s = n(481060),
-    o = n(367907),
-    l = n(372900),
-    u = n(666188),
-    c = n(372769),
-    d = n(523751),
-    _ = n(549817),
-    E = n(819553),
-    f = n(17181),
-    h = n(303737),
-    p = n(965638),
-    I = n(434404),
-    m = n(962086),
-    T = n(160404),
-    S = n(703656),
-    g = n(814443),
-    A = n(592125),
-    N = n(626135),
-    O = n(912787),
-    R = n(272709),
-    v = n(718582),
-    C = n(126134),
-    y = n(981631),
-    L = n(689938),
-    D = n(206248);
-function b(e) {
+});
+var r = n(653041);
+var i = n(47120);
+var a = n(735250),
+    o = n(470079),
+    s = n(442837),
+    l = n(481060),
+    u = n(367907),
+    c = n(372900),
+    d = n(666188),
+    _ = n(372769),
+    E = n(523751),
+    f = n(549817),
+    h = n(819553),
+    p = n(17181),
+    m = n(303737),
+    I = n(965638),
+    T = n(434404),
+    g = n(962086),
+    S = n(160404),
+    A = n(703656),
+    v = n(814443),
+    N = n(592125),
+    O = n(626135),
+    R = n(912787),
+    C = n(272709),
+    y = n(718582),
+    b = n(126134),
+    L = n(981631),
+    D = n(689938),
+    M = n(206248);
+let P = 12,
+    U = 14,
+    w = 8;
+function x(e) {
     let { guild: t } = e,
-        n = -1,
-        a = (0, v.V1)(t),
-        s = i.useMemo(
+        n = !0,
+        r = -1,
+        i = (0, y.V1)(t),
+        s = o.useMemo(
             () =>
-                a.map((e) => {
-                    {
-                        let i = null;
+                i.map((e) => {
+                    if (n) {
+                        let n = null;
                         return (
-                            e.category === C.L.EMBEDDED_ACTIVITY ? (i = e.embeddedActivities[0].channelId) : e.category === C.L.HANGOUT || e.category === C.L.GAMING ? (i = e.channelId) : e.category === C.L.EVENT && (i = e.event.channel_id),
-                            n++,
-                            (0, r.jsx)(
-                                R.Z,
+                            e.category === b.L.EMBEDDED_ACTIVITY ? (n = e.embeddedActivities[0].channelId) : e.category === b.L.HANGOUT || e.category === b.L.GAMING ? (n = e.channelId) : e.category === b.L.EVENT && (n = e.event.channel_id),
+                            r++,
+                            (0, a.jsx)(
+                                C.Z,
                                 {
                                     cardData: e,
                                     guildId: t.id,
-                                    cardIndex: n
+                                    cardIndex: r
                                 },
-                                ''.concat(e.category, '-').concat(i)
+                                ''.concat(e.category, '-').concat(n)
                             )
                         );
                     }
                 }),
-            [a, t.id, n, !0]
+            [i, t.id, r, n]
         );
-    return (i.useEffect(() => {
+    return (o.useEffect(() => {
         let e = [],
             n = [],
             r = [],
-            i = [],
+            a = [],
+            o = [],
             s = [],
-            l = [],
-            u = {};
-        for (let o of a) {
+            l = {};
+        for (let u of i) {
             var c, d, _, E, f;
             if (3 === e.length) break;
-            let a = null !== (_ = (0, O.i)(o)) && void 0 !== _ ? _ : '',
-                h = (0, v.bA)(a, t.id),
+            let i = null !== (_ = (0, R.i)(u)) && void 0 !== _ ? _ : '',
+                h = (0, y.bA)(i, t.id),
                 p = e.length;
-            e.push(o.category),
+            e.push(u.category),
                 r.push(h.length),
-                i.push(h.length > 0 ? h[0].id : '0'),
-                s.push(h.length > 0 && null !== (E = null === (c = g.Z.getUserAffinity(h[0].id)) || void 0 === c ? void 0 : c.affinity) && void 0 !== E ? E : 0),
+                a.push(h.length > 0 ? h[0].id : '0'),
+                o.push(h.length > 0 && null !== (E = null === (c = v.Z.getUserAffinity(h[0].id)) || void 0 === c ? void 0 : c.affinity) && void 0 !== E ? E : 0),
                 n.push(Math.min(h.length, 6)),
-                l.push(null !== (f = null === (d = A.Z.getChannel(a)) || void 0 === d ? void 0 : d.type) && void 0 !== f ? f : y.d4z.UNKNOWN),
-                (u['position_'.concat(p + 1, '_affinity_user_ids')] = h.slice(0, 6).map((e) => e.id)),
-                (u['position_'.concat(p + 1, '_user_affinity_scores')] = h.slice(0, 6).map((e) => {
+                s.push(null !== (f = null === (d = N.Z.getChannel(i)) || void 0 === d ? void 0 : d.type) && void 0 !== f ? f : L.d4z.UNKNOWN),
+                (l['position_'.concat(p + 1, '_affinity_user_ids')] = h.slice(0, 6).map((e) => e.id)),
+                (l['position_'.concat(p + 1, '_user_affinity_scores')] = h.slice(0, 6).map((e) => {
                     var t, n;
-                    return null !== (n = null === (t = g.Z.getUserAffinity(e.id)) || void 0 === t ? void 0 : t.affinity) && void 0 !== n ? n : 0;
+                    return null !== (n = null === (t = v.Z.getUserAffinity(e.id)) || void 0 === t ? void 0 : t.affinity) && void 0 !== n ? n : 0;
                 }));
         }
         0 !== e.length &&
-            ((u.card_types = e),
-            (u.affinity_users_counts = n),
-            (u.total_users_counts = r),
-            (u.max_affinity_user_ids = i),
-            (u.max_affinity_user_scores = s),
-            (u.channel_types = l),
-            (u.guild_id = t.id),
-            N.default.track(y.rMx.GUILD_TOOLTIP_SHOWN, {
-                ...u,
-                ...(0, o.hH)(t.id)
+            ((l.card_types = e),
+            (l.affinity_users_counts = n),
+            (l.total_users_counts = r),
+            (l.max_affinity_user_ids = a),
+            (l.max_affinity_user_scores = o),
+            (l.channel_types = s),
+            (l.guild_id = t.id),
+            O.default.track(L.rMx.GUILD_TOOLTIP_SHOWN, {
+                ...l,
+                ...(0, u.hH)(t.id)
             }));
     }, []),
-    0 === a.length)
+    0 === i.length)
         ? null
-        : (0, r.jsx)('div', {
-              className: D.cards,
+        : (0, a.jsx)('div', {
+              className: M.cards,
               children: s
           });
 }
-function M(e) {
+function G(e) {
     var t;
-    let { guild: n, closePopout: o, nudge: g } = e,
-        A = i.useRef(null),
-        N = (0, u.Z)(n),
-        O = (0, p.I)(n),
-        { isViewingRoles: R, backNavigationSection: v } = (0, a.cj)([T.Z], () => ({
-            isViewingRoles: T.Z.isViewingRoles(n.id),
-            backNavigationSection: T.Z.getBackNavigationSection(n.id)
+    let { guild: n, closePopout: r, nudge: i } = e,
+        u = o.useRef(null),
+        v = (0, d.Z)(n),
+        N = (0, I.I)(n),
+        { isViewingRoles: O, backNavigationSection: R } = (0, s.cj)([S.Z], () => ({
+            isViewingRoles: S.Z.isViewingRoles(n.id),
+            backNavigationSection: S.Z.getBackNavigationSection(n.id)
         })),
         C = () => {
-            T.Z.isFullServerPreview(n.id) && (0, S.uL)(y.Z5c.CHANNEL(n.id)), E.ZP.shouldShowOnboarding(n.id) && (_.Z.finishOnboarding(n.id), (0, f.discardOnboardingPromise)(n.id)), (0, m.mL)(n.id), I.Z.open(n.id, v), v === y.pNK.ROLE_SUBSCRIPTIONS && (0, h.GN)(n.id);
+            S.Z.isFullServerPreview(n.id) && (0, A.uL)(L.Z5c.CHANNEL(n.id)), h.ZP.shouldShowOnboarding(n.id) && (f.Z.finishOnboarding(n.id), (0, p.discardOnboardingPromise)(n.id)), (0, g.mL)(n.id), T.Z.open(n.id, R), R === L.pNK.ROLE_SUBSCRIPTIONS && (0, m.GN)(n.id);
         },
-        M = null === (t = A.current) || void 0 === t ? void 0 : t.clientHeight,
-        P = g + 14;
-    return (0, r.jsx)(l.Z.Provider, {
+        y = null === (t = u.current) || void 0 === t ? void 0 : t.clientHeight,
+        b = i + U,
+        G = null != y ? y - (U + w) : b;
+    return (0, a.jsx)(c.Z.Provider, {
         value: n.id,
-        children: (0, r.jsxs)('div', {
-            className: D.container,
-            ref: A,
+        children: (0, a.jsxs)('div', {
+            className: M.container,
+            ref: u,
             children: [
-                (0, r.jsx)('div', {
-                    className: D.tooltipPointer,
-                    style: { top: Math.min(P, null != M ? M - 22 : P) }
+                (0, a.jsx)('div', {
+                    className: M.tooltipPointer,
+                    style: { top: Math.min(b, G) }
                 }),
-                (0, r.jsxs)('div', {
-                    className: D.header,
+                (0, a.jsxs)('div', {
+                    className: M.header,
                     children: [
-                        N
-                            ? (0, r.jsx)(d.Z, {
+                        v
+                            ? (0, a.jsx)(E.Z, {
                                   guild: n,
-                                  className: D.rowIconV2,
-                                  tooltipColor: s.Tooltip.Colors.PRIMARY
+                                  className: M.rowIconV2,
+                                  tooltipColor: l.Tooltip.Colors.PRIMARY
                               })
-                            : (0, r.jsx)(c.Z, {
+                            : (0, a.jsx)(_.Z, {
                                   guild: n,
                                   size: 20,
-                                  className: D.rowIcon
+                                  className: M.rowIcon
                               }),
-                        (0, r.jsx)(s.Text, {
+                        (0, a.jsx)(l.Text, {
                             variant: 'text-md/semibold',
                             color: 'header-primary',
                             children: n.name
                         })
                     ]
                 }),
-                (0, r.jsx)(b, { guild: n }),
-                O
-                    ? (0, r.jsxs)('div', {
-                          className: D.footer,
+                (0, a.jsx)(x, { guild: n }),
+                N
+                    ? (0, a.jsxs)('div', {
+                          className: M.footer,
                           children: [
-                              (0, r.jsx)(s.CircleInformationIcon, {
+                              (0, a.jsx)(l.CircleInformationIcon, {
                                   size: 'custom',
                                   color: 'currentColor',
-                                  width: 12,
-                                  height: 12,
-                                  className: D.infoIcon
+                                  width: P,
+                                  height: P,
+                                  className: M.infoIcon
                               }),
-                              (0, r.jsx)(s.Text, {
+                              (0, a.jsx)(l.Text, {
                                   color: 'text-muted',
                                   variant: 'text-xs/medium',
-                                  children: L.Z.Messages.GUILD_POPOUT_INVITES_PAUSED.format({
+                                  children: D.Z.Messages.GUILD_POPOUT_INVITES_PAUSED.format({
                                       onClick: () => {
-                                          o(), I.Z.open(n.id, y.pNK.INSTANT_INVITES);
+                                          r(), T.Z.open(n.id, L.pNK.INSTANT_INVITES);
                                       }
                                   })
                               })
                           ]
                       })
                     : null,
-                R
-                    ? (0, r.jsxs)('div', {
-                          className: D.footer,
+                O
+                    ? (0, a.jsxs)('div', {
+                          className: M.footer,
                           children: [
-                              (0, r.jsx)(s.CircleInformationIcon, {
+                              (0, a.jsx)(l.CircleInformationIcon, {
                                   size: 'custom',
                                   color: 'currentColor',
-                                  width: 12,
-                                  height: 12,
-                                  className: D.infoIcon
+                                  width: P,
+                                  height: P,
+                                  className: M.infoIcon
                               }),
-                              (0, r.jsx)(s.Text, {
+                              (0, a.jsx)(l.Text, {
                                   color: 'text-muted',
                                   variant: 'text-xs/medium',
-                                  children: L.Z.Messages.GUILD_POPOUT_VIEWING_AS_ROLES.format({
+                                  children: D.Z.Messages.GUILD_POPOUT_VIEWING_AS_ROLES.format({
                                       onClick: () => {
-                                          o(), C();
+                                          r(), C();
                                       }
                                   })
                               })

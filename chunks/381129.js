@@ -1,12 +1,17 @@
-n(47120);
-var r = n(512722),
-    i = n.n(r),
-    a = n(957730),
+var r = n(47120);
+var i = n(512722),
+    a = n.n(i),
+    o = n(957730),
     s = n(439170),
-    o = n(496675),
-    l = n(981631);
-let u = new RegExp(/@(:?everyone|here)/);
-function c(e, t) {
+    l = n(496675),
+    u = n(981631);
+let c = new RegExp(/@(:?everyone|here)/),
+    d = 30;
+function _(e, t) {
+    let n = t.getGuildId();
+    return a()(n, 'isGuildChannel with null guildId'), E(e, t) > d && l.Z.can(u.Plq.MENTION_EVERYONE, t);
+}
+function E(e, t) {
     let n = 0;
     if (t.isThread()) {
         var r;
@@ -14,37 +19,36 @@ function c(e, t) {
     }
     return (
         s.ZP.getProps(t.getGuildId(), t.id).groups.forEach((t) => {
-            ('@everyone' === e || t.id !== l.Skl.OFFLINE) && (n += t.count);
+            ('@everyone' === e || t.id !== u.Skl.OFFLINE) && (n += t.count);
         }),
         n
     );
 }
-t.Z = {
-    shouldShowEveryoneGuard: function (e, t) {
-        let n = t.getGuildId();
-        return i()(n, 'isGuildChannel with null guildId'), c(e, t) > 30 && o.Z.can(l.Plq.MENTION_EVERYONE, t);
-    },
-    everyoneMemberCount: c,
-    extractEveryoneRole: function (e, t) {
-        for (let n of a.ZP.parsePreprocessor(t, e)) {
-            let e = (function e(t) {
-                if ('string' == typeof t.content) {
-                    var n;
-                    if ('inlineCode' === t.type || 'codeBlock' === t.type) return null;
-                    let e = null === (n = t.content) || void 0 === n ? void 0 : n.match(u);
-                    if (null != e) {
-                        let [t] = e;
-                        return t;
-                    }
-                } else if (Array.isArray(t.content))
-                    for (let n of t.content) {
-                        let t = e(n);
-                        if (null != t) return t;
-                    }
-                return null;
-            })(n);
+function f(e) {
+    if ('string' == typeof e.content) {
+        var t;
+        if ('inlineCode' === e.type || 'codeBlock' === e.type) return null;
+        let n = null === (t = e.content) || void 0 === t ? void 0 : t.match(c);
+        if (null != n) {
+            let [e] = n;
+            return e;
+        }
+    } else if (Array.isArray(e.content))
+        for (let t of e.content) {
+            let e = f(t);
             if (null != e) return e;
         }
-        return null;
+    return null;
+}
+function h(e, t) {
+    for (let n of o.ZP.parsePreprocessor(t, e)) {
+        let e = f(n);
+        if (null != e) return e;
     }
+    return null;
+}
+t.Z = {
+    shouldShowEveryoneGuard: _,
+    everyoneMemberCount: E,
+    extractEveryoneRole: h
 };

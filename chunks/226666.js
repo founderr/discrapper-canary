@@ -1,7 +1,7 @@
 var r = n(470079),
     i = n(844303),
     a = n(557011),
-    s = (function () {
+    o = (function () {
         function e(e, t) {
             for (var n = 0; n < t.length; n++) {
                 var r = t[n];
@@ -12,18 +12,31 @@ var r = n(470079),
             return n && e(t.prototype, n), r && e(t, r), t;
         };
     })();
-function o(e, t) {
+function s(e, t) {
+    if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
+}
+function l(e, t) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
 }
-var l = (function (e) {
+function u(e, t) {
+    if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
+    (e.prototype = Object.create(t && t.prototype, {
+        constructor: {
+            value: e,
+            enumerable: !1,
+            writable: !0,
+            configurable: !0
+        }
+    })),
+        t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
+}
+var c = (function (e) {
     function t() {
-        !(function (e, t) {
-            if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
-        })(this, t);
-        for (var e, n, r, i = arguments.length, s = Array(i), l = 0; l < i; l++) s[l] = arguments[l];
+        s(this, t);
+        for (var e, n, r, i = arguments.length, o = Array(i), u = 0; u < i; u++) o[u] = arguments[u];
         return (
-            (n = r = o(this, (e = t.__proto__ || Object.getPrototypeOf(t)).call.apply(e, [this].concat(s)))),
+            (n = r = l(this, (e = t.__proto__ || Object.getPrototypeOf(t)).call.apply(e, [this].concat(o)))),
             (r.handleChange = function (e) {
                 var t = a.T(e, r.props.direction, r.props.hsl, r.container);
                 t && 'function' == typeof r.props.onChange && r.props.onChange(t, e);
@@ -34,23 +47,12 @@ var l = (function (e) {
             (r.handleMouseUp = function () {
                 r.unbindEventListeners();
             }),
-            o(r, n)
+            l(r, n)
         );
     }
     return (
-        !(function (e, t) {
-            if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
-            (e.prototype = Object.create(t && t.prototype, {
-                constructor: {
-                    value: e,
-                    enumerable: !1,
-                    writable: !0,
-                    configurable: !0
-                }
-            })),
-                t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
-        })(t, e),
-        s(t, [
+        u(t, e),
+        o(t, [
             {
                 key: 'componentWillUnmount',
                 value: function () {
@@ -131,4 +133,4 @@ var l = (function (e) {
         t
     );
 })(r.PureComponent || r.Component);
-t.Z = l;
+t.Z = c;

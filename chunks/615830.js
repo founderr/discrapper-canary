@@ -1,8 +1,9 @@
-n(653041), n(47120);
 var r,
-    i = n(442837),
-    a = n(570140);
-function s(e, t, n) {
+    i = n(653041);
+var a = n(47120);
+var o = n(442837),
+    s = n(570140);
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,42 +16,45 @@ function s(e, t, n) {
         e
     );
 }
-let o = [],
-    l = !1,
-    u = o;
-class c extends (r = i.ZP.PersistedStore) {
+let u = [],
+    c = !1,
+    d = u;
+function _(e) {
+    c = e.persistentCodesEnabled;
+}
+function E(e) {
+    let t = [];
+    for (let n of d) {
+        if (n === e.keyVersion) return;
+        t.push(n);
+    }
+    t.push(e.keyVersion), (d = t);
+}
+function f() {
+    d = u;
+}
+class h extends (r = o.ZP.PersistedStore) {
     initialize(e) {
         var t, n;
-        (l = null !== (t = null == e ? void 0 : e.persistentCodesEnabled) && void 0 !== t && t), (u = null !== (n = null == e ? void 0 : e.uploadedKeyVersions) && void 0 !== n ? n : o);
+        (c = null !== (t = null == e ? void 0 : e.persistentCodesEnabled) && void 0 !== t && t), (d = null !== (n = null == e ? void 0 : e.uploadedKeyVersions) && void 0 !== n ? n : u);
     }
     getState() {
         return {
-            persistentCodesEnabled: l,
-            uploadedKeyVersions: u
+            persistentCodesEnabled: c,
+            uploadedKeyVersions: d
         };
     }
     getPersistentCodesEnabled() {
-        return l;
+        return c;
     }
     getUploadedKeyVersionsCached() {
-        return u;
+        return d;
     }
 }
-s(c, 'displayName', 'SecureFramesPersistedStore'),
-    s(c, 'persistKey', 'SecureFramesPersistedStore'),
-    (t.Z = new c(a.Z, {
-        SECURE_FRAMES_SETTINGS_UPDATE: function (e) {
-            l = e.persistentCodesEnabled;
-        },
-        SECURE_FRAMES_UPLOADED_KEY_VERSION_ADD: function (e) {
-            let t = [];
-            for (let n of u) {
-                if (n === e.keyVersion) return;
-                t.push(n);
-            }
-            t.push(e.keyVersion), (u = t);
-        },
-        SECURE_FRAMES_UPLOADED_KEY_VERSION_CLEAR: function () {
-            u = o;
-        }
+l(h, 'displayName', 'SecureFramesPersistedStore'),
+    l(h, 'persistKey', 'SecureFramesPersistedStore'),
+    (t.Z = new h(s.Z, {
+        SECURE_FRAMES_SETTINGS_UPDATE: _,
+        SECURE_FRAMES_UPLOADED_KEY_VERSION_ADD: E,
+        SECURE_FRAMES_UPLOADED_KEY_VERSION_CLEAR: f
     }));

@@ -1,86 +1,92 @@
 var r,
-    i,
-    a,
-    s,
-    o = n(442837),
-    l = n(902704),
-    u = n(570140);
-let c = {},
-    d = {},
-    _ = { scrollTop: 0 };
-function E(e) {
+    i = n(442837),
+    a = n(902704),
+    o = n(570140);
+function s(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+let l = {},
+    u = {},
+    c = { scrollTop: 0 };
+function d(e) {
     return {
         guildId: e,
         scrollTop: null,
         scrollTo: null
     };
 }
+function _(e) {
+    let { channelId: t, scrollTop: n, scrollHeight: r, offsetHeight: i } = e,
+        o = l[t];
+    if (null == n || null == r || null == i) {
+        if (null == o) return !1;
+        delete l[t];
+    } else {
+        let e = {
+            channelId: t,
+            scrollTop: n,
+            scrollHeight: r,
+            offsetHeight: i
+        };
+        if (null != o && (0, a.Z)(o, e)) return !1;
+        l[t] = e;
+    }
+}
+function E(e) {
+    let { scrollTop: t } = e;
+    c.scrollTop = t;
+}
 function f(e) {
-    if (null == c[e]) return;
-    let { scrollTop: t, scrollHeight: n, offsetHeight: r } = c[e];
+    let { channelId: t } = e;
+    h(t) && delete l[t];
+}
+function h(e) {
+    if (null == l[e]) return;
+    let { scrollTop: t, scrollHeight: n, offsetHeight: r } = l[e];
     return t === n - r;
 }
-class h extends (s = o.ZP.Store) {
+function p(e) {
+    let { guildId: t, scrollTop: n, scrollTo: r } = e;
+    null == u[t] && (u[t] = d(t)), void 0 !== n && (u[t].scrollTop = n);
+    let i = !1;
+    return void 0 !== r && ((i = u[t].scrollTo !== r), (u[t].scrollTo = r)), null != r || i;
+}
+class m extends (r = i.ZP.Store) {
     percentageScrolled(e) {
-        if (null != c[e]) {
-            let { scrollTop: t, scrollHeight: n } = c[e];
+        if (null != l[e]) {
+            let { scrollTop: t, scrollHeight: n } = l[e];
             return t / n;
         }
         return 1;
     }
     getChannelDimensions(e) {
-        return c[e];
+        return l[e];
     }
     getGuildDimensions(e) {
         var t;
-        return null !== (t = d[e]) && void 0 !== t ? t : E(e);
+        return null !== (t = u[e]) && void 0 !== t ? t : d(e);
     }
     getGuildListDimensions() {
-        return _;
+        return c;
     }
     isAtBottom(e) {
-        return f(e);
+        return h(e);
     }
 }
-(a = 'DimensionStore'),
-    (i = 'displayName') in (r = h)
-        ? Object.defineProperty(r, i, {
-              value: a,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (r[i] = a),
-    (t.Z = new h(u.Z, {
-        UPDATE_CHANNEL_DIMENSIONS: function (e) {
-            let { channelId: t, scrollTop: n, scrollHeight: r, offsetHeight: i } = e,
-                a = c[t];
-            if (null == n || null == r || null == i) {
-                if (null == a) return !1;
-                delete c[t];
-            } else {
-                let e = {
-                    channelId: t,
-                    scrollTop: n,
-                    scrollHeight: r,
-                    offsetHeight: i
-                };
-                if (null != a && (0, l.Z)(a, e)) return !1;
-                c[t] = e;
-            }
-        },
-        UPDATE_CHANNEL_LIST_DIMENSIONS: function (e) {
-            let { guildId: t, scrollTop: n, scrollTo: r } = e;
-            null == d[t] && (d[t] = E(t)), void 0 !== n && (d[t].scrollTop = n);
-            let i = !1;
-            return void 0 !== r && ((i = d[t].scrollTo !== r), (d[t].scrollTo = r)), null != r || i;
-        },
-        UPDATE_GUILD_LIST_DIMENSIONS: function (e) {
-            let { scrollTop: t } = e;
-            _.scrollTop = t;
-        },
-        CALL_CREATE: function (e) {
-            let { channelId: t } = e;
-            f(t) && delete c[t];
-        }
+s(m, 'displayName', 'DimensionStore'),
+    (t.Z = new m(o.Z, {
+        UPDATE_CHANNEL_DIMENSIONS: _,
+        UPDATE_CHANNEL_LIST_DIMENSIONS: p,
+        UPDATE_GUILD_LIST_DIMENSIONS: E,
+        CALL_CREATE: f
     }));

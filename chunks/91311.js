@@ -1,7 +1,7 @@
-n(47120);
 var r,
-    i = n(442837),
-    a = n(570140);
+    i = n(47120);
+var a = n(442837),
+    o = n(570140);
 function s(e, t, n) {
     return (
         t in e
@@ -15,7 +15,7 @@ function s(e, t, n) {
         e
     );
 }
-let o = {
+let l = {
         use_topic_dividers_in_chat: 'Use summary topics as divider content in chat instead of string formatted dates.',
         highlight_redesigned_icons: 'Highlight redesigned icons',
         alt_clips_1: 'Use alt clip icon 1',
@@ -30,39 +30,36 @@ let o = {
         ss03: 'Italic - full height forms (W,M)',
         ss04: 'Italic - alternate figures (3,4,5,6,7,8,9)'
     },
-    l = {};
-class u extends (r = i.ZP.DeviceSettingsStore) {
+    u = {};
+function c(e) {
+    u[e.toggle] = e.value;
+}
+class d extends (r = a.ZP.DeviceSettingsStore) {
     getUserAgnosticState() {
-        return { toggleStates: l };
+        return { toggleStates: u };
     }
     initialize(e) {
-        for (var t in o) {
+        for (var t in l) {
             var n, r;
             let i = null !== (r = null == e ? void 0 : null === (n = e.toggleStates) || void 0 === n ? void 0 : n[t]) && void 0 !== r && r;
-            l[t] = i;
+            u[t] = i;
         }
     }
     get(e) {
         var t;
-        return null !== (t = l[e]) && void 0 !== t && t;
+        return null !== (t = u[e]) && void 0 !== t && t;
     }
     set(e, t) {
-        return (l[e] = t), t;
+        return (u[e] = t), t;
     }
     all() {
-        return l;
+        return u;
     }
     allWithDescriptions() {
-        return Object.entries(l).map((e) => {
+        return Object.entries(u).map((e) => {
             let [t, n] = e;
-            return [t, n, o[t]];
+            return [t, n, l[t]];
         });
     }
 }
-s(u, 'displayName', 'DevToolsDesignTogglesStore'),
-    s(u, 'persistKey', 'DevToolsDesignTogglesStore'),
-    (t.Z = new u(a.Z, {
-        DEV_TOOLS_DESIGN_TOGGLE_WEB_SET: function (e) {
-            l[e.toggle] = e.value;
-        }
-    }));
+s(d, 'displayName', 'DevToolsDesignTogglesStore'), s(d, 'persistKey', 'DevToolsDesignTogglesStore'), (t.Z = new d(o.Z, { DEV_TOOLS_DESIGN_TOGGLE_WEB_SET: c }));

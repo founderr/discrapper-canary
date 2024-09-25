@@ -1,81 +1,80 @@
 n.d(t, {
     l: function () {
-        return h;
+        return E;
     }
 });
-var i = n(735250),
-    s = n(470079),
-    o = n(481060),
-    a = n(100527),
-    l = n(906732),
-    r = n(184301),
-    c = n(347475),
-    d = n(592125),
-    u = n(91047);
-function h(e) {
-    var t, n;
-    let { user: h, channelId: m, guildId: p, messageId: f, stopPropagation: g = !1, ariaLabel: _ } = e,
-        { analyticsLocations: T } = (0, l.ZP)(a.Z.USERNAME);
-    let v =
-        ((t = h),
-        (n = m),
-        s.useCallback(
-            (e) => {
-                let i = d.Z.getChannel(n);
-                null != i && null != t && (0, u.Pv)(e, t, i);
-            },
-            [t, n]
-        ));
-    return s.useCallback(
-        (e) => (t, n) => {
-            let a = (n, i) =>
-                    (0, s.createElement)(o.NameWithRoleAnchor, {
-                        ...(null != n ? n : {}),
-                        key: i,
-                        onContextMenu: v,
-                        name: t,
+var r = n(735250),
+    i = n(470079),
+    a = n(481060),
+    o = n(100527),
+    s = n(906732),
+    l = n(184301),
+    u = n(347475),
+    c = n(592125),
+    d = n(91047);
+function _(e, t) {
+    return i.useCallback(
+        (n) => {
+            let r = c.Z.getChannel(t);
+            null != r && null != e && (0, d.Pv)(n, e, r);
+        },
+        [e, t]
+    );
+}
+function E(e) {
+    let { user: t, channelId: n, guildId: c, messageId: d, stopPropagation: E = !1, ariaLabel: f } = e,
+        { analyticsLocations: h } = (0, s.ZP)(o.Z.USERNAME),
+        p = _(t, n);
+    return i.useCallback(
+        (e) => (o, _) => {
+            let m = (t, n) =>
+                    (0, i.createElement)(a.NameWithRoleAnchor, {
+                        ...(null != t ? t : {}),
+                        key: n,
+                        onContextMenu: p,
+                        name: o,
                         color: null == e ? void 0 : e.colorString,
                         roleName: null == e ? void 0 : e.colorRoleName,
-                        'aria-label': _
+                        'aria-label': f
                     }),
-                d = (e) => (t) => {
-                    g && t.stopPropagation(), e(t);
+                I = (e) => (t) => {
+                    E && t.stopPropagation(), e(t);
                 };
-            return (0, i.jsx)(l.Gt, {
-                value: T,
+            return (0, r.jsx)(s.Gt, {
+                value: h,
                 children:
-                    null != h
-                        ? (0, i.jsx)(
-                              o.Popout,
+                    null != t
+                        ? (0, r.jsx)(
+                              a.Popout,
                               {
                                   position: 'right',
                                   preload: () =>
-                                      (0, r.Z)(h.id, h.getAvatarURL(p, 80), {
-                                          guildId: p,
-                                          channelId: m
+                                      (0, l.Z)(t.id, t.getAvatarURL(c, 80), {
+                                          guildId: c,
+                                          channelId: n
                                       }),
-                                  renderPopout: (t) =>
-                                      (0, i.jsx)(c.Z, {
-                                          ...t,
-                                          userId: h.id,
-                                          guildId: p,
-                                          channelId: m,
-                                          messageId: f,
+                                  renderPopout: (i) =>
+                                      (0, r.jsx)(u.Z, {
+                                          ...i,
+                                          userId: t.id,
+                                          guildId: c,
+                                          channelId: n,
+                                          messageId: d,
                                           roleId: null == e ? void 0 : e.colorRoleId
                                       }),
                                   children: (e) => {
                                       let { onClick: t, ...n } = e;
-                                      return a({
-                                          onClick: d(t),
+                                      return m({
+                                          onClick: I(t),
                                           ...n
                                       });
                                   }
                               },
-                              n
+                              _
                           )
-                        : a(void 0, n)
+                        : m(void 0, _)
             });
         },
-        [T, h, m, p, f, v, g, _]
+        [h, t, n, c, d, p, E, f]
     );
 }

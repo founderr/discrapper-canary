@@ -1,11 +1,12 @@
 n.d(t, {
     Z: function () {
-        return function e(t) {
-            return ['html', 'body', '#document'].indexOf((0, a.Z)(t)) >= 0 ? t.ownerDocument.body : (0, s.Re)(t) && (0, i.Z)(t) ? t : e((0, r.Z)(t));
-        };
+        return s;
     }
 });
 var r = n(660027),
     i = n(538018),
     a = n(316138),
-    s = n(882159);
+    o = n(882159);
+function s(e) {
+    return ['html', 'body', '#document'].indexOf((0, a.Z)(e)) >= 0 ? e.ownerDocument.body : (0, o.Re)(e) && (0, i.Z)(e) ? e : s((0, r.Z)(e));
+}

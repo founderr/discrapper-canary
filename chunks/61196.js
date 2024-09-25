@@ -3,7 +3,7 @@ n.d(t, {
         return r;
     },
     aW: function () {
-        return i;
+        return a;
     }
 });
 let r = (0, n(818083).B)({
@@ -21,9 +21,10 @@ let r = (0, n(818083).B)({
     }),
     i = function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        return r.useExperiment({ location: '489551_1' }, { autoTrackExposure: e });
+    },
+    a = function () {
+        let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         return r.getCurrentConfig({ location: '489551_2' }, { autoTrackExposure: e });
     };
-t.ZP = function () {
-    let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    return r.useExperiment({ location: '489551_1' }, { autoTrackExposure: e });
-};
+t.ZP = i;

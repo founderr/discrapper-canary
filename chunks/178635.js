@@ -1,22 +1,22 @@
 n.d(t, {
     R: function () {
-        return f;
+        return p;
     },
     Z: function () {
-        return m;
+        return v;
     }
-}),
-    n(47120);
-var r = n(392711),
-    i = n.n(r),
-    a = n(433517),
+});
+var r = n(47120);
+var i = n(392711),
+    a = n.n(i),
+    o = n(433517),
     s = n(147913),
-    o = n(536442),
-    l = n(810788),
-    u = n(19780),
-    c = n(115470),
-    d = n(531578);
-function _(e, t, n) {
+    l = n(536442),
+    u = n(810788),
+    c = n(19780),
+    d = n(115470),
+    _ = n(531578);
+function E(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -29,92 +29,88 @@ function _(e, t, n) {
         e
     );
 }
-let E = {
+let f = 200,
+    h = {
         chance: 0.2,
         cooldown: 86400000
     },
-    f = {
-        [d.nw.VOICE]: {
-            ...E,
-            hotspot: o.v6.VOICE_CALL_FEEDBACK,
+    p = {
+        [_.nw.VOICE]: {
+            ...h,
+            hotspot: l.v6.VOICE_CALL_FEEDBACK,
             storageKey: 'lastVoiceFeedback',
-            eligibilityChecks: [
-                function (e) {
-                    return !u.Z.getWasEverRtcConnected() || u.Z.getWasEverMultiParticipant();
-                }
-            ]
+            eligibilityChecks: [S]
         },
-        [d.nw.STREAM]: {
-            ...E,
-            hotspot: o.v6.REPORT_PROBLEM_POST_STREAM,
+        [_.nw.STREAM]: {
+            ...h,
+            hotspot: l.v6.REPORT_PROBLEM_POST_STREAM,
             storageKey: 'lastStreamFeedback'
         },
-        [d.nw.VIDEO_BACKGROUND]: {
-            ...E,
-            hotspot: o.v6.VIDEO_BACKGROUND_FEEDBACK,
+        [_.nw.VIDEO_BACKGROUND]: {
+            ...h,
+            hotspot: l.v6.VIDEO_BACKGROUND_FEEDBACK,
             storageKey: 'lastVideoBackgroundFeedback'
         },
-        [d.nw.ACTIVITY]: {
+        [_.nw.ACTIVITY]: {
             cooldown: 0,
             chance: 0.5,
-            hotspot: o.v6.POST_ACTIVITY_FEEDBACK,
+            hotspot: l.v6.POST_ACTIVITY_FEEDBACK,
             storageKey: 'lastActivityFeedback'
         },
-        [d.nw.IN_APP_REPORTS]: {
+        [_.nw.IN_APP_REPORTS]: {
             cooldown: 172800000,
             chance: 0.5,
-            hotspot: o.v6.IN_APP_REPORTS_FEEDBACK,
+            hotspot: l.v6.IN_APP_REPORTS_FEEDBACK,
             storageKey: 'inAppReportsFeedback'
         },
-        [d.nw.USER_DM_MUTE]: {
+        [_.nw.USER_DM_MUTE]: {
             cooldown: 604800000,
             chance: 1,
-            hotspot: o.v6.USER_DM_MUTE_FEEDBACK,
+            hotspot: l.v6.USER_DM_MUTE_FEEDBACK,
             storageKey: 'userDmMute'
         }
     };
-function h(e) {
-    return l.Z.hasHotspot(e.hotspot);
-}
-function p(e) {
-    return Math.random() < e.chance;
+function m(e) {
+    var t, n;
+    if (__OVERLAY__) return !1;
+    let r = null !== (t = d.Z.getFeedbackConfig(e)) && void 0 !== t ? t : p[e],
+        i = [g, T, I],
+        a = null !== (n = r.eligibilityChecks) && void 0 !== n ? n : [];
+    return i.every((e) => e(r)) && a.every((e) => e(r));
 }
 function I(e) {
+    return u.Z.hasHotspot(e.hotspot);
+}
+function T(e) {
+    return Math.random() < e.chance;
+}
+function g(e) {
     if (null != e.storageKey) {
-        let t = a.K.get(e.storageKey);
+        let t = o.K.get(e.storageKey);
         if (null != t && Date.now() - t < e.cooldown) return !1;
     }
     return !0;
 }
-class m extends s.Z {
+function S(e) {
+    return !c.Z.getWasEverRtcConnected() || c.Z.getWasEverMultiParticipant();
+}
+function A(e) {
+    let t = p[e];
+    null != t.storageKey && o.K.set(t.storageKey, Date.now());
+}
+class v extends s.Z {
     possiblyShowFeedbackModal(e, t) {
-        if (
-            !!(function (e) {
-                var t, n;
-                if (__OVERLAY__) return !1;
-                let r = null !== (t = c.Z.getFeedbackConfig(e)) && void 0 !== t ? t : f[e],
-                    i = null !== (n = r.eligibilityChecks) && void 0 !== n ? n : [];
-                return [I, p, h].every((e) => e(r)) && i.every((e) => e(r));
-            })(e) &&
-            (null == this.feedbackTypeToShow || !(d.b5[this.feedbackTypeToShow] < d.b5[e]))
-        )
-            (this.feedbackTypeToShow = e), this.showFeedbackModalDebounced(t);
+        if (!!m(e) && (null == this.feedbackTypeToShow || !(_.b5[this.feedbackTypeToShow] < _.b5[e]))) (this.feedbackTypeToShow = e), this.showFeedbackModalDebounced(t);
     }
     constructor(...e) {
         super(...e),
-            _(this, 'feedbackTypeToShow', null),
-            _(
+            E(this, 'feedbackTypeToShow', null),
+            E(
                 this,
                 'showFeedbackModalDebounced',
-                i().debounce((e) => {
-                    null != this.feedbackTypeToShow &&
-                        (!(function (e) {
-                            let t = f[e];
-                            null != t.storageKey && a.K.set(t.storageKey, Date.now());
-                        })(this.feedbackTypeToShow),
-                        (this.feedbackTypeToShow = null),
-                        e());
-                }, 200)
+                a().debounce((e) => {
+                    null != this.feedbackTypeToShow && (A(this.feedbackTypeToShow), (this.feedbackTypeToShow = null), e());
+                }, f)
             );
     }
 }

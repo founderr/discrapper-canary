@@ -1,40 +1,40 @@
 n.d(t, {
     e: function () {
-        return B;
+        return H;
     }
-}),
-    n(47120),
-    n(653041);
-var r = n(735250),
-    i = n(470079),
-    a = n(526629),
-    s = n(442837),
-    o = n(704215),
-    l = n(780384),
-    u = n(481060),
-    c = n(845538),
-    d = n(410030),
-    _ = n(100527),
-    E = n(906732),
-    f = n(605236),
-    h = n(243778),
-    p = n(963249),
-    I = n(646476),
-    m = n(819640),
-    T = n(594174),
-    S = n(965645),
-    g = n(362061),
-    A = n(70956),
-    N = n(709054),
-    O = n(51144),
-    R = n(443603),
-    v = n(981631),
-    C = n(921944),
-    y = n(474936),
-    L = n(689938),
-    D = n(746734),
-    b = n(933283);
-let M = [
+});
+var r = n(47120);
+var i = n(653041);
+var a = n(735250),
+    o = n(470079),
+    s = n(526629),
+    l = n(442837),
+    u = n(704215),
+    c = n(780384),
+    d = n(481060),
+    _ = n(845538),
+    E = n(410030),
+    f = n(100527),
+    h = n(906732),
+    p = n(605236),
+    m = n(243778),
+    I = n(963249),
+    T = n(646476),
+    g = n(819640),
+    S = n(594174),
+    A = n(965645),
+    v = n(362061),
+    N = n(70956),
+    O = n(709054),
+    R = n(51144),
+    C = n(443603),
+    y = n(981631),
+    b = n(921944),
+    L = n(474936),
+    D = n(689938),
+    M = n(746734),
+    P = n(933283);
+let U = [
         {
             box: '#FFD89E',
             ribbon: '#FF7476'
@@ -64,7 +64,7 @@ let M = [
             ribbon: '#67DA9C'
         }
     ],
-    P = [
+    w = [
         {
             box: '#EABB75',
             ribbon: '#E4595C'
@@ -94,40 +94,42 @@ let M = [
             ribbon: '#81C29F'
         }
     ],
-    U = 1 / 300,
-    w = A.Z.Millis.DAYS_30,
-    x = (0, a.animated)(S.Z),
-    G = (0, a.animated)(g.Z),
-    k = (0, a.animated)(u.GiftIcon);
+    x = 7,
+    G = 1 / 300,
+    k = N.Z.Millis.DAYS_30;
 function B(e) {
+    let [t, n] = o.useState(!1),
+        [r, i] = o.useState(Math.floor(Math.random() * x));
+    return (
+        o.useEffect(() => {
+            if (e) return;
+            let t = Math.random() <= G;
+            if ((n(t), !t)) {
+                let e;
+                do e = Math.floor(Math.random() * x);
+                while (e === r);
+                i(e);
+            }
+        }, [e]),
+        [t, r]
+    );
+}
+let F = (0, s.animated)(A.Z),
+    Z = (0, s.animated)(v.Z),
+    V = (0, s.animated)(d.GiftIcon);
+function H(e) {
     let {
             themeOverride: t,
             hovered: n,
-            isContentDismissed: a,
-            boxColors: s = {
-                dark: M,
-                light: P
+            isContentDismissed: r,
+            boxColors: i = {
+                dark: U,
+                light: w
             }
         } = e,
-        o = (0, d.ZP)(),
-        [c, _] = (function (e) {
-            let [t, n] = i.useState(!1),
-                [r, a] = i.useState(Math.floor(7 * Math.random()));
-            return (
-                i.useEffect(() => {
-                    if (e) return;
-                    let t = Math.random() <= U;
-                    if ((n(t), !t)) {
-                        let e;
-                        do e = Math.floor(7 * Math.random());
-                        while (e === r);
-                        a(e);
-                    }
-                }, [e]),
-                [t, r]
-            );
-        })(n),
-        E = (0, u.useSpring)({
+        o = (0, E.ZP)(),
+        [s, l] = B(n),
+        u = (0, d.useSpring)({
             reverse: !n,
             reset: !0,
             from: { scale: 1 },
@@ -137,90 +139,92 @@ function B(e) {
                 friction: 24
             }
         }),
-        f = a ? _ : 0,
-        h = (0, l.wj)(null != t ? t : o) ? s.dark[f] : s.light[f];
-    return !n && a
-        ? (0, r.jsx)(k, {})
-        : a && c
-          ? (0, r.jsx)(G, {
-                isDark: (0, l.wj)(o),
-                style: E
+        _ = !!r && s,
+        f = r ? l : 0,
+        h = (0, c.wj)(null != t ? t : o) ? i.dark[f] : i.light[f];
+    return !n && r
+        ? (0, a.jsx)(V, {})
+        : _
+          ? (0, a.jsx)(Z, {
+                isDark: (0, c.wj)(o),
+                style: u
             })
-          : (0, r.jsx)(x, {
+          : (0, a.jsx)(F, {
                 boxColor: h.box,
                 ribbonColor: h.ribbon,
-                style: E
+                style: u
             });
 }
-t.Z = i.memo(function (e) {
+function Y(e) {
     let { disabled: t, channel: n } = e,
-        { analyticsLocations: a } = (0, E.ZP)(_.Z.GIFT_BUTTON),
-        [l, d] = i.useState(!1),
-        S = (0, s.e7)([m.Z], () => !(null === m.Z || void 0 === m.Z ? void 0 : m.Z.hasLayers())),
-        g = (0, s.e7)([T.default], () => T.default.getCurrentUser()),
-        A = null != g ? N.default.age(g.id) : 0,
-        M = !t && S && A >= w,
-        { enabled: P } = I.RO.useExperiment({ location: 'ChannelPremiumGiftButton' }, { autoTrackExposure: M }),
+        { analyticsLocations: r } = (0, h.ZP)(f.Z.GIFT_BUTTON),
+        [i, s] = o.useState(!1),
+        c = (0, l.e7)([g.Z], () => !(null === g.Z || void 0 === g.Z ? void 0 : g.Z.hasLayers())),
+        E = (0, l.e7)([S.default], () => S.default.getCurrentUser()),
+        A = null != E ? O.default.age(E.id) : 0,
+        v = !t && c && A >= k,
+        { enabled: N } = T.RO.useExperiment({ location: 'ChannelPremiumGiftButton' }, { autoTrackExposure: v }),
         U = [];
-    P && M && U.push(o.z.SEASONAL_GIFTING_COACHMARK_2023);
-    let [x, G] = (0, h.US)(U),
-        k = null != x,
-        F = (0, O.Ft)(n),
-        V = null != F;
+    N && v && U.push(u.z.SEASONAL_GIFTING_COACHMARK_2023);
+    let [w, x] = (0, m.US)(U),
+        G = null != w,
+        B = (0, R.Ft)(n),
+        F = null != B;
     if (t) return null;
-    let H = () => {
-            (0, p.Z)({
+    let Z = () => {
+            (0, I.Z)({
                 isGift: !0,
-                giftRecipient: null == F ? void 0 : F,
+                giftRecipient: null == B ? void 0 : B,
                 initialPlanId: null,
-                subscriptionTier: y.Si.TIER_2,
-                analyticsLocations: a,
+                subscriptionTier: L.Si.TIER_2,
+                analyticsLocations: r,
                 analyticsObject: {
-                    page: n.isPrivate() ? v.ZY5.DM_CHANNEL : v.ZY5.GUILD_CHANNEL,
-                    section: v.jXE.CHANNEL_TEXT_AREA,
-                    object: v.qAy.SEASONAL_BUTTON_ICON,
-                    objectType: v.Qqv.GIFT
+                    page: n.isPrivate() ? y.ZY5.DM_CHANNEL : y.ZY5.GUILD_CHANNEL,
+                    section: y.jXE.CHANNEL_TEXT_AREA,
+                    object: y.qAy.SEASONAL_BUTTON_ICON,
+                    objectType: y.Qqv.GIFT
                 }
             });
         },
-        Z = (0, r.jsxs)('div', {
-            className: D.container,
+        V = (0, a.jsxs)('div', {
+            className: M.container,
             onMouseEnter: () => {
-                !l && d(!0);
+                !i && s(!0);
             },
             onMouseLeave: () => {
-                d(!1);
+                s(!1);
             },
             children: [
-                k &&
-                    (0, r.jsx)(c.Z, {
-                        onComplete: () => d(!1),
-                        onDMCheckItOutClick: H,
-                        markAsDismissed: G,
-                        isDM: V
+                G &&
+                    (0, a.jsx)(_.Z, {
+                        onComplete: () => s(!1),
+                        onDMCheckItOutClick: Z,
+                        markAsDismissed: x,
+                        isDM: F
                     }),
-                (0, r.jsx)(R.Z, {
-                    innerClassName: b.button,
-                    'aria-label': L.Z.Messages.PREMIUM_GIFT_BUTTON_LABEL,
+                (0, a.jsx)(C.Z, {
+                    innerClassName: P.button,
+                    'aria-label': D.Z.Messages.PREMIUM_GIFT_BUTTON_LABEL,
                     isActive: !1,
                     onClick: () => {
-                        d(!1), (0, f.EW)(o.z.SEASONAL_GIFTING_COACHMARK_2023, { dismissAction: C.L.TAKE_ACTION }), H();
+                        s(!1), (0, p.EW)(u.z.SEASONAL_GIFTING_COACHMARK_2023, { dismissAction: b.L.TAKE_ACTION }), Z();
                     },
-                    children: (0, r.jsx)('div', {
-                        className: D.noPointerEvents,
-                        children: (0, r.jsx)(B, {
-                            hovered: l,
-                            isContentDismissed: !k
+                    children: (0, a.jsx)('div', {
+                        className: M.noPointerEvents,
+                        children: (0, a.jsx)(H, {
+                            hovered: i,
+                            isContentDismissed: !G
                         })
                     })
                 })
             ]
         });
-    return k
-        ? Z
-        : (0, r.jsx)(u.TooltipContainer, {
-              className: D.container,
-              text: (0, c.i)(V),
-              children: Z
+    return G
+        ? V
+        : (0, a.jsx)(d.TooltipContainer, {
+              className: M.container,
+              text: (0, _.i)(F),
+              children: V
           });
-});
+}
+t.Z = o.memo(Y);

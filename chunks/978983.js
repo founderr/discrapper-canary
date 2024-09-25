@@ -1,12 +1,13 @@
-var i = t(735250);
-t(470079);
-var r = t(481060),
-    o = t(53304);
-n.Z = () =>
-    (0, i.jsx)('div', {
-        className: o.loadingWrapper,
-        children: (0, i.jsx)(r.Dots, {
+var r = n(735250);
+n(470079);
+var i = n(481060),
+    a = n(53304);
+let o = () =>
+    (0, r.jsx)('div', {
+        className: a.loadingWrapper,
+        children: (0, r.jsx)(i.Dots, {
             dotRadius: 4,
             themed: !0
         })
     });
+t.Z = o;

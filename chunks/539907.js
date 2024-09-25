@@ -1,29 +1,29 @@
 n.d(t, {
     j: function () {
-        return R;
+        return D;
     },
     t: function () {
-        return S;
+        return A;
     }
-}),
-    n(47120),
-    n(411104);
+});
 var r,
-    i = n(735250),
-    a = n(470079),
-    s = n(120356),
-    o = n.n(s),
-    l = n(512722),
+    i = n(47120);
+var a = n(411104);
+var o = n(735250),
+    s = n(470079),
+    l = n(120356),
     u = n.n(l),
-    c = n(84735),
-    d = n(801787),
-    _ = n(663002),
-    E = n(585483),
-    f = n(872801),
-    h = n(302901),
-    p = n(981631),
-    I = n(136753);
-function m(e, t, n) {
+    c = n(512722),
+    d = n.n(c),
+    _ = n(84735),
+    E = n(801787),
+    f = n(663002),
+    h = n(585483),
+    p = n(872801),
+    m = n(302901),
+    I = n(981631),
+    T = n(136753);
+function g(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -36,40 +36,69 @@ function m(e, t, n) {
         e
     );
 }
-let T = new WeakMap();
-function S(e, t) {
+let S = new WeakMap();
+function A(e, t) {
     if (e.contains(t)) return !0;
-    let n = (0, f.Z)(t, I.layer);
+    let n = (0, p.Z)(t, T.layer);
     for (; null != n; ) {
-        let t = T.get(n);
+        let t = S.get(n);
         if (null == t) break;
         if (e.contains(t)) return !0;
-        n = (0, f.Z)(t, I.layer);
+        n = (0, p.Z)(t, T.layer);
     }
     return !1;
 }
-function g(e) {
+let v = 12;
+function N(e) {
     let { positionKey: t, position: n, align: r } = e;
     return null != t ? t : ''.concat(n, ':').concat(r);
 }
-function A(e, t, n, r) {
+function O(e, t, n, r) {
     switch (e) {
         case 'top':
-            return u()(null != t.bottom, 'Missing bottom'), r.offsetHeight - (t.bottom + n.offsetHeight);
+            return d()(null != t.bottom, 'Missing bottom'), r.offsetHeight - (t.bottom + n.offsetHeight);
         case 'bottom':
-            return u()(null != t.top, 'Missing top'), r.offsetHeight - (t.top + n.offsetHeight);
+            return d()(null != t.top, 'Missing top'), r.offsetHeight - (t.top + n.offsetHeight);
         case 'left':
-            return u()(null != t.right, 'Missing right'), r.offsetWidth - (t.right + n.offsetWidth);
+            return d()(null != t.right, 'Missing right'), r.offsetWidth - (t.right + n.offsetWidth);
         case 'right':
-            return u()(null != t.left, 'Missing left'), r.offsetWidth - (t.left + n.offsetWidth);
+            return d()(null != t.left, 'Missing left'), r.offsetWidth - (t.left + n.offsetWidth);
         case 'center':
         case 'window_center':
-            return u()(null != t.left, 'Missing left'), r.offsetWidth - (t.left + n.offsetWidth / 2);
+            return d()(null != t.left, 'Missing left'), r.offsetWidth - (t.left + n.offsetWidth / 2);
         default:
             throw Error('Unexpected position: '.concat(e));
     }
 }
-function N(e, t, n) {
+function R(e, t, n) {
+    return {
+        top: e.top - n,
+        left: e.left - t,
+        bottom: e.bottom - n,
+        right: e.right - t,
+        width: e.width,
+        height: e.height
+    };
+}
+function C(e) {
+    switch (e) {
+        case 'top':
+            return 'bottom';
+        case 'bottom':
+            return 'top';
+        case 'left':
+            return 'right';
+        case 'right':
+            return 'left';
+        case 'center':
+            return 'center';
+        case 'window_center':
+            return 'window_center';
+        default:
+            throw Error();
+    }
+}
+function y(e, t, n) {
     if (null != e && e < 0 && ('top' === n.position || 'bottom' === n.position) && null != t && Math.abs(e) < (null == t ? void 0 : t.offsetHeight) && null != n.style) {
         let t = 'top' === n.position ? 'bottom' : 'top',
             r = n.style[t];
@@ -83,11 +112,16 @@ function N(e, t, n) {
     }
     return n;
 }
-function O(e) {
+function b(e) {
     let { targetRef: t, overrideTargetRect: n } = e;
-    return null != n ? n : (u()(null != t.current, 'Invalid ref'), t.current.getBoundingClientRect());
+    return null != n ? n : (d()(null != t.current, 'Invalid ref'), t.current.getBoundingClientRect());
 }
-class R extends (r = a.Component) {
+function L(e, t) {
+    let n = b(e),
+        r = b(t);
+    return n.top === r.top && n.left === r.left;
+}
+class D extends (r = s.Component) {
     formatDimension(e) {
         return this.props.useRawTargetDimensions ? e : Math.ceil(e);
     }
@@ -95,8 +129,8 @@ class R extends (r = a.Component) {
         let { nudgeAlignIntoViewport: r } = this.props;
         if (!r) return e;
         let i = n.offsetWidth,
-            a = e + t.offsetWidth - i + 12;
-        return a > 0 ? Math.max(12, e - a) : e;
+            a = e + t.offsetWidth - i + v;
+        return a > 0 ? Math.max(v, e - a) : e;
     }
     getHorizontalAlignmentStyle(e, t, n, r) {
         let { align: i } = this.props;
@@ -125,13 +159,13 @@ class R extends (r = a.Component) {
             case 'center': {
                 let i = e.left + (e.width - t.offsetWidth) / 2,
                     a = this.formatDimension(this.nudgeLeftAlignment(i, t, n)),
-                    s = this.formatDimension(i) - a;
+                    o = this.formatDimension(i) - a;
                 return {
                     style: {
                         ...r,
                         left: a
                     },
-                    nudge: s
+                    nudge: o
                 };
             }
             default:
@@ -144,16 +178,16 @@ class R extends (r = a.Component) {
         if (e < 0) return 0;
         let i = t.getBoundingClientRect().height,
             a = n.offsetHeight,
-            s = e + i - a + 12;
-        return s > 0 ? Math.max(12, e - s) : e;
+            o = e + i - a + v;
+        return o > 0 ? Math.max(v, e - o) : e;
     }
     nudgeBottomAlignment(e, t, n) {
         let { nudgeAlignIntoViewport: r } = this.props,
             i = n.offsetHeight,
             a = i - e;
         if (!r) return a;
-        let s = a + t.offsetHeight - i + 12;
-        return s > 0 ? Math.max(12, a - s) : a;
+        let o = a + t.offsetHeight - i + v;
+        return o > 0 ? Math.max(v, a - o) : a;
     }
     getVerticalAlignmentStyle(e, t, n, r) {
         let { align: i } = this.props;
@@ -183,13 +217,13 @@ class R extends (r = a.Component) {
             case 'center': {
                 let i = e.top + (e.height - t.offsetHeight) / 2,
                     a = this.formatDimension(this.nudgeTopAlignment(i, t, n)),
-                    s = this.formatDimension(i) - a;
+                    o = this.formatDimension(i) - a;
                 return {
                     style: {
                         ...r,
                         top: a
                     },
-                    nudge: s
+                    nudge: o
                 };
             }
             default:
@@ -197,35 +231,23 @@ class R extends (r = a.Component) {
         }
     }
     calculatePositionStyle(e, t, n) {
-        var r, i, a;
-        let { spacing: s = 0 } = this.props,
-            o = O(this.props),
-            l = n.getBoundingClientRect();
-        let u =
-            ((r = o),
-            (i = l.left),
-            (a = l.top),
-            {
-                top: r.top - a,
-                left: r.left - i,
-                bottom: r.bottom - a,
-                right: r.right - i,
-                width: r.width,
-                height: r.height
-            });
+        let { spacing: r = 0 } = this.props,
+            i = b(this.props),
+            a = n.getBoundingClientRect(),
+            o = R(i, a.left, a.top);
         switch (e) {
             case 'top':
-                return this.getHorizontalAlignmentStyle(u, t, n, { bottom: n.offsetHeight - u.top + s });
+                return this.getHorizontalAlignmentStyle(o, t, n, { bottom: n.offsetHeight - o.top + r });
             case 'bottom':
-                return this.getHorizontalAlignmentStyle(u, t, n, { top: u.bottom + s });
+                return this.getHorizontalAlignmentStyle(o, t, n, { top: o.bottom + r });
             case 'left':
-                return this.getVerticalAlignmentStyle(u, t, n, { right: n.offsetWidth - u.left + s });
+                return this.getVerticalAlignmentStyle(o, t, n, { right: n.offsetWidth - o.left + r });
             case 'right':
-                return this.getVerticalAlignmentStyle(u, t, n, { left: u.right + s });
+                return this.getVerticalAlignmentStyle(o, t, n, { left: o.right + r });
             case 'center':
-                return this.getVerticalAlignmentStyle(u, t, n, { left: u.left + u.width / 2 - t.offsetWidth / 2 + s });
+                return this.getVerticalAlignmentStyle(o, t, n, { left: o.left + o.width / 2 - t.offsetWidth / 2 + r });
             case 'window_center':
-                return this.getVerticalAlignmentStyle(u, t, n, { left: Math.max((window.innerWidth - t.offsetWidth) / 2, 0) });
+                return this.getVerticalAlignmentStyle(o, t, n, { left: Math.max((window.innerWidth - t.offsetWidth) / 2, 0) });
             default:
                 throw Error('Unexpected position: '.concat(e));
         }
@@ -233,39 +255,22 @@ class R extends (r = a.Component) {
     calculateState() {
         let { position: e, autoInvert: t } = this.props,
             n = this.elementRef.current;
-        u()(null != n, 'Unexpected null element');
-        let r = (0, h.wL)(n),
+        d()(null != n, 'Unexpected null element');
+        let r = (0, m.wL)(n),
             { style: i, nudge: a } = this.calculatePositionStyle(e, n, r),
-            s = null,
-            o = null;
-        if (t && (s = A(e, i, n, r)) < 0) {
-            let t = (function (e) {
-                    switch (e) {
-                        case 'top':
-                            return 'bottom';
-                        case 'bottom':
-                            return 'top';
-                        case 'left':
-                            return 'right';
-                        case 'right':
-                            return 'left';
-                        case 'center':
-                            return 'center';
-                        case 'window_center':
-                            return 'window_center';
-                        default:
-                            throw Error();
-                    }
-                })(e),
+            o = null,
+            s = null;
+        if (t && (o = O(e, i, n, r)) < 0) {
+            let t = C(e),
                 { style: i, nudge: a } = this.calculatePositionStyle(t, n, r);
-            if ((o = A(t, i, n, r)) > s)
-                return N(o, n, {
+            if ((s = O(t, i, n, r)) > o)
+                return y(s, n, {
                     position: t,
                     nudge: a,
                     style: i
                 });
         }
-        return N(s, n, {
+        return y(o, n, {
             position: e,
             nudge: a,
             style: i
@@ -279,19 +284,10 @@ class R extends (r = a.Component) {
             ...this.calculateState()
         });
         let i = this.elementRef.current;
-        u()(null != i, 'Missing elementRef'), null != n.current && T.set(i, n.current), E.S.subscribe(p.CkL.LAYER_POP_START, this.handleLayerPopStart), E.S.subscribe(p.CkL.LAYER_POP_COMPLETE, this.handleLayerPopComplete), null == i || null === (t = i.ownerDocument) || void 0 === t || null === (e = t.defaultView) || void 0 === e || e.addEventListener('resize', this.handleLayerPopComplete), null == r || r();
+        d()(null != i, 'Missing elementRef'), null != n.current && S.set(i, n.current), h.S.subscribe(I.CkL.LAYER_POP_START, this.handleLayerPopStart), h.S.subscribe(I.CkL.LAYER_POP_COMPLETE, this.handleLayerPopComplete), null == i || null === (t = i.ownerDocument) || void 0 === t || null === (e = t.defaultView) || void 0 === e || e.addEventListener('resize', this.handleLayerPopComplete), null == r || r();
     }
     componentDidUpdate(e, t) {
-        if (
-            ((g(e) !== g(this.props) ||
-                !(function (e, t) {
-                    let n = O(e),
-                        r = O(t);
-                    return n.top === r.top && n.left === r.left;
-                })(e, this.props)) &&
-                this.updatePosition(),
-            t.position !== this.state.position)
-        ) {
+        if (((N(e) !== N(this.props) || !L(e, this.props)) && this.updatePosition(), t.position !== this.state.position)) {
             var n, r;
             null === (n = (r = this.props).onPositionChange) || void 0 === n || n.call(r, this.state.position);
         }
@@ -299,33 +295,33 @@ class R extends (r = a.Component) {
     componentWillUnmount() {
         var e, t, n, r;
         let i = this.elementRef.current;
-        u()(null != i, 'Missing elementRef'), T.delete(i), E.S.unsubscribe(p.CkL.LAYER_POP_START, this.handleLayerPopStart), E.S.unsubscribe(p.CkL.LAYER_POP_COMPLETE, this.handleLayerPopComplete), null == i || null === (t = i.ownerDocument) || void 0 === t || null === (e = t.defaultView) || void 0 === e || e.removeEventListener('resize', this.handleLayerPopComplete), null === (n = (r = this.props).onUnmount) || void 0 === n || n.call(r);
+        d()(null != i, 'Missing elementRef'), S.delete(i), h.S.unsubscribe(I.CkL.LAYER_POP_START, this.handleLayerPopStart), h.S.unsubscribe(I.CkL.LAYER_POP_COMPLETE, this.handleLayerPopComplete), null == i || null === (t = i.ownerDocument) || void 0 === t || null === (e = t.defaultView) || void 0 === e || e.removeEventListener('resize', this.handleLayerPopComplete), null === (n = (r = this.props).onUnmount) || void 0 === n || n.call(r);
     }
     render() {
-        let { id: e, className: t, children: n, fixed: r, disablePointerEvents: a } = this.props,
-            { position: s, isPositioned: l, isSettingsLayerTransitioning: u, nudge: E } = this.state;
-        return (0, i.jsx)(d.C1, {
+        let { id: e, className: t, children: n, fixed: r, disablePointerEvents: i } = this.props,
+            { position: a, isPositioned: s, isSettingsLayerTransitioning: l, nudge: c } = this.state;
+        return (0, o.jsx)(E.C1, {
             children: (d) => {
-                let { theme: f } = d;
-                return (0, i.jsx)('div', {
+                let { theme: E } = d;
+                return (0, o.jsx)('div', {
                     id: e,
-                    className: o()(t, (0, _.Qe)(f), I.layer, {
-                        [I.emptyError]: !1,
-                        [I.layerHidden]: u,
-                        [I.disabledPointerEvents]: a
+                    className: u()(t, (0, f.Qe)(E), T.layer, {
+                        [T.emptyError]: !1,
+                        [T.layerHidden]: l,
+                        [T.disabledPointerEvents]: i
                     }),
                     style: {
                         position: r ? 'fixed' : 'absolute',
                         ...this.state.style
                     },
                     ref: this.elementRef,
-                    children: (0, i.jsx)(c.J, {
+                    children: (0, o.jsx)(_.J, {
                         containerRef: this.elementRef,
                         children: n(
                             {
-                                position: s,
-                                nudge: E,
-                                isPositioned: l
+                                position: a,
+                                nudge: c,
+                                isPositioned: s
                             },
                             this.updatePosition
                         )
@@ -336,30 +332,30 @@ class R extends (r = a.Component) {
     }
     constructor(...e) {
         super(...e),
-            m(this, 'elementRef', a.createRef()),
-            m(this, 'state', {
+            g(this, 'elementRef', s.createRef()),
+            g(this, 'state', {
                 style: Object.freeze({}),
                 position: this.props.autoInvert ? null : this.props.position,
                 nudge: 0,
                 isPositioned: !1,
                 isSettingsLayerTransitioning: !1
             }),
-            m(this, 'handleLayerPopStart', () => {
+            g(this, 'handleLayerPopStart', () => {
                 this.setState({ isSettingsLayerTransitioning: !0 });
             }),
-            m(this, 'handleLayerPopComplete', () => {
+            g(this, 'handleLayerPopComplete', () => {
                 let e = this.calculateState();
                 this.setState({
                     ...e,
                     isSettingsLayerTransitioning: !1
                 });
             }),
-            m(this, 'updatePosition', () => {
+            g(this, 'updatePosition', () => {
                 this.setState(this.calculateState());
             });
     }
 }
-m(R, 'defaultProps', {
+g(D, 'defaultProps', {
     nudgeAlignIntoViewport: !1,
     spacing: 0,
     autoInvert: !1,

@@ -1,11 +1,11 @@
-n(47120);
-var r = n(544891),
-    i = n(147913),
-    a = n(680089),
+var r = n(47120);
+var i = n(544891),
+    a = n(147913),
+    o = n(680089),
     s = n(592125),
-    o = n(70956),
-    l = n(981631);
-function u(e, t, n) {
+    l = n(70956),
+    u = n(981631);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,73 +18,74 @@ function u(e, t, n) {
         e
     );
 }
-let c = {},
-    d = 0,
-    _ = 15 * o.Z.Millis.SECOND;
-function E() {
-    c = { ...a.Z.getCollapsedCategories() };
-}
+let d = {},
+    _ = 0,
+    E = 15 * l.Z.Millis.SECOND;
 function f() {
-    !__OVERLAY__ && (clearTimeout(d), (d = setTimeout(() => p({}), _)));
+    d = { ...o.Z.getCollapsedCategories() };
 }
-async function h(e, t) {
-    null == e || e === l.ME
-        ? await r.tn.patch({
-              url: l.ANM.USER_GUILD_SETTINGS(l.ME),
+function h() {
+    !__OVERLAY__ && (clearTimeout(_), (_ = setTimeout(() => m({}), E)));
+}
+async function p(e, t) {
+    null == e || e === u.ME
+        ? await i.tn.patch({
+              url: u.ANM.USER_GUILD_SETTINGS(u.ME),
               body: t
           })
-        : await p(null != t ? { [null != e ? e : l.ME]: t } : {});
+        : await m(null != t ? { [null != e ? e : u.ME]: t } : {});
 }
-async function p(e) {
-    clearTimeout(d);
+async function m(e) {
+    clearTimeout(_);
     let t = 0 !== Object.keys(e).length,
-        n = a.Z.getCollapsedCategories(),
-        i = (function () {
-            let e = {},
-                t = a.Z.getCollapsedCategories();
-            for (let n in t) t[n] !== c[n] && (e[n] = !0);
-            for (let n in c) t[n] !== c[n] && (e[n] = !0);
-            return e;
-        })();
-    for (let r in i) {
-        let i = s.Z.getChannel(r);
-        null != i &&
-            null != i.guild_id &&
-            (!(i.guild_id in e) && (e[i.guild_id] = {}),
-            null == e[i.guild_id].channel_overrides && (e[i.guild_id].channel_overrides = {}),
-            (e[i.guild_id].channel_overrides[i.id] = {
-                ...e[i.guild_id].channel_overrides[i.id],
-                collapsed: i.id in n
+        n = o.Z.getCollapsedCategories(),
+        r = I();
+    for (let i in r) {
+        let r = s.Z.getChannel(i);
+        null != r &&
+            null != r.guild_id &&
+            (!(r.guild_id in e) && (e[r.guild_id] = {}),
+            null == e[r.guild_id].channel_overrides && (e[r.guild_id].channel_overrides = {}),
+            (e[r.guild_id].channel_overrides[r.id] = {
+                ...e[r.guild_id].channel_overrides[r.id],
+                collapsed: r.id in n
             }),
             (t = !0));
     }
     return t
-        ? ((c = { ...n }),
-          delete e[l.I_8],
+        ? ((d = { ...n }),
+          delete e[u.I_8],
           (
-              await r.tn.patch({
-                  url: l.ANM.USER_GUILD_SETTINGS_BULK,
+              await i.tn.patch({
+                  url: u.ANM.USER_GUILD_SETTINGS_BULK,
                   body: { guilds: e }
               })
           ).body)
         : [];
 }
 function I() {
-    c = { ...a.Z.getCollapsedCategories() };
+    let e = {},
+        t = o.Z.getCollapsedCategories();
+    for (let n in t) t[n] !== d[n] && (e[n] = !0);
+    for (let n in d) t[n] !== d[n] && (e[n] = !0);
+    return e;
 }
-class m extends i.Z {
+function T() {
+    d = { ...o.Z.getCollapsedCategories() };
+}
+class g extends a.Z {
     constructor(...e) {
         super(...e),
-            u(this, 'actions', {
-                CATEGORY_COLLAPSE: f,
-                CATEGORY_EXPAND: f,
-                CATEGORY_COLLAPSE_ALL: f,
-                CATEGORY_EXPAND_ALL: f,
-                POST_CONNECTION_OPEN: E,
-                USER_GUILD_SETTINGS_FULL_UPDATE: I
+            c(this, 'actions', {
+                CATEGORY_COLLAPSE: h,
+                CATEGORY_EXPAND: h,
+                CATEGORY_COLLAPSE_ALL: h,
+                CATEGORY_EXPAND_ALL: h,
+                POST_CONNECTION_OPEN: f,
+                USER_GUILD_SETTINGS_FULL_UPDATE: T
             }),
-            u(this, 'saveUserGuildSettings', h),
-            u(this, 'saveUserGuildSettingsBulk', p);
+            c(this, 'saveUserGuildSettings', p),
+            c(this, 'saveUserGuildSettingsBulk', m);
     }
 }
-t.Z = new m();
+t.Z = new g();

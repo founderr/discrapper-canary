@@ -1,13 +1,14 @@
 n.d(t, {
     P: function () {
-        return i;
+        return r;
     }
 });
 var r,
-    i,
-    a = n(818083);
-((r = i || (i = {}))[(r.None = 0)] = 'None'), (r[(r.DefaultOn = 1)] = 'DefaultOn'), (r[(r.DefaultOff = 2)] = 'DefaultOff'), (r[(r.ComingSoon = 3)] = 'ComingSoon'), (r[(r.ClydeProfiles = 4)] = 'ClydeProfiles');
-let s = (0, a.B)({
+    i = n(818083);
+!(function (e) {
+    (e[(e.None = 0)] = 'None'), (e[(e.DefaultOn = 1)] = 'DefaultOn'), (e[(e.DefaultOff = 2)] = 'DefaultOff'), (e[(e.ComingSoon = 3)] = 'ComingSoon'), (e[(e.ClydeProfiles = 4)] = 'ClydeProfiles');
+})(r || (r = {}));
+let a = (0, i.B)({
     kind: 'guild',
     id: '2023-03_clyde_ai',
     label: 'ClydeAI',
@@ -35,4 +36,4 @@ let s = (0, a.B)({
         }
     ]
 });
-t.Z = s;
+t.Z = a;

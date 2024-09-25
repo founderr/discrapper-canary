@@ -1,26 +1,27 @@
 var r = n(781212),
-    i = n(919499);
-n(476400);
-var a = n(470079),
+    i = n(919499),
+    a = n(476400);
+var o = n(470079),
     s = n(699581),
-    o = n(956060),
-    l = n(717588),
-    u = 'unmounted',
-    c = 'exited',
-    d = 'entering',
-    _ = 'entered',
-    E = 'exiting',
-    f = (function (e) {
+    l = n(956060),
+    u = n(717588),
+    c = 'unmounted',
+    d = 'exited',
+    _ = 'entering',
+    E = 'entered',
+    f = 'exiting',
+    h = (function (e) {
         function t(t, n) {
             r = e.call(this, t, n) || this;
             var r,
                 i,
-                a = n && !n.isMounting ? t.enter : t.appear;
-            return (r.appearStatus = null), t.in ? (a ? ((i = c), (r.appearStatus = d)) : (i = _)) : (i = t.unmountOnExit || t.mountOnEnter ? u : c), (r.state = { status: i }), (r.nextCallback = null), r;
+                a = n,
+                o = a && !a.isMounting ? t.enter : t.appear;
+            return (r.appearStatus = null), t.in ? (o ? ((i = d), (r.appearStatus = _)) : (i = E)) : (i = t.unmountOnExit || t.mountOnEnter ? c : d), (r.state = { status: i }), (r.nextCallback = null), r;
         }
         (0, i.Z)(t, e),
             (t.getDerivedStateFromProps = function (e, t) {
-                return e.in && t.status === u ? { status: c } : null;
+                return e.in && t.status === c ? { status: d } : null;
             });
         var n = t.prototype;
         return (
@@ -31,7 +32,7 @@ var a = n(470079),
                 var t = null;
                 if (e !== this.props) {
                     var n = this.state.status;
-                    this.props.in ? n !== d && n !== _ && (t = d) : (n === d || n === _) && (t = E);
+                    this.props.in ? n !== _ && n !== E && (t = _) : (n === _ || n === E) && (t = f);
                 }
                 this.updateStatus(!1, t);
             }),
@@ -57,26 +58,26 @@ var a = n(470079),
                 if ((void 0 === e && (e = !1), null !== t)) {
                     this.cancelNextCallback();
                     var n = s.findDOMNode(this);
-                    t === d ? this.performEnter(n, e) : this.performExit(n);
-                } else this.props.unmountOnExit && this.state.status === c && this.setState({ status: u });
+                    t === _ ? this.performEnter(n, e) : this.performExit(n);
+                } else this.props.unmountOnExit && this.state.status === d && this.setState({ status: c });
             }),
             (n.performEnter = function (e, t) {
                 var n = this,
                     r = this.props.enter,
                     i = this.context ? this.context.isMounting : t,
                     a = this.getTimeouts(),
-                    s = i ? a.appear : a.enter;
-                if ((!t && !r) || o.Z.disabled) {
-                    this.safeSetState({ status: _ }, function () {
+                    o = i ? a.appear : a.enter;
+                if ((!t && !r) || l.Z.disabled) {
+                    this.safeSetState({ status: E }, function () {
                         n.props.onEntered(e);
                     });
                     return;
                 }
                 this.props.onEnter(e, i),
-                    this.safeSetState({ status: d }, function () {
+                    this.safeSetState({ status: _ }, function () {
                         n.props.onEntering(e, i),
-                            n.onTransitionEnd(e, s, function () {
-                                n.safeSetState({ status: _ }, function () {
+                            n.onTransitionEnd(e, o, function () {
+                                n.safeSetState({ status: E }, function () {
                                     n.props.onEntered(e, i);
                                 });
                             });
@@ -86,17 +87,17 @@ var a = n(470079),
                 var t = this,
                     n = this.props.exit,
                     r = this.getTimeouts();
-                if (!n || o.Z.disabled) {
-                    this.safeSetState({ status: c }, function () {
+                if (!n || l.Z.disabled) {
+                    this.safeSetState({ status: d }, function () {
                         t.props.onExited(e);
                     });
                     return;
                 }
                 this.props.onExit(e),
-                    this.safeSetState({ status: E }, function () {
+                    this.safeSetState({ status: f }, function () {
                         t.props.onExiting(e),
                             t.onTransitionEnd(e, r.exit, function () {
-                                t.safeSetState({ status: c }, function () {
+                                t.safeSetState({ status: d }, function () {
                                     t.props.onExited(e);
                                 });
                             });
@@ -132,37 +133,37 @@ var a = n(470079),
             }),
             (n.render = function () {
                 var e = this.state.status;
-                if (e === u) return null;
+                if (e === c) return null;
                 var t = this.props,
                     n = t.children,
                     i = (0, r.Z)(t, ['children']);
-                if ((delete i.in, delete i.mountOnEnter, delete i.unmountOnExit, delete i.appear, delete i.enter, delete i.exit, delete i.timeout, delete i.addEndListener, delete i.onEnter, delete i.onEntering, delete i.onEntered, delete i.onExit, delete i.onExiting, delete i.onExited, 'function' == typeof n)) return a.createElement(l.Z.Provider, { value: null }, n(e, i));
-                var s = a.Children.only(n);
-                return a.createElement(l.Z.Provider, { value: null }, a.cloneElement(s, i));
+                if ((delete i.in, delete i.mountOnEnter, delete i.unmountOnExit, delete i.appear, delete i.enter, delete i.exit, delete i.timeout, delete i.addEndListener, delete i.onEnter, delete i.onEntering, delete i.onEntered, delete i.onExit, delete i.onExiting, delete i.onExited, 'function' == typeof n)) return o.createElement(u.Z.Provider, { value: null }, n(e, i));
+                var a = o.Children.only(n);
+                return o.createElement(u.Z.Provider, { value: null }, o.cloneElement(a, i));
             }),
             t
         );
-    })(a.Component);
-function h() {}
-(f.contextType = l.Z),
-    (f.propTypes = {}),
-    (f.defaultProps = {
+    })(o.Component);
+function p() {}
+(h.contextType = u.Z),
+    (h.propTypes = {}),
+    (h.defaultProps = {
         in: !1,
         mountOnEnter: !1,
         unmountOnExit: !1,
         appear: !1,
         enter: !0,
         exit: !0,
-        onEnter: h,
-        onEntering: h,
-        onEntered: h,
-        onExit: h,
-        onExiting: h,
-        onExited: h
+        onEnter: p,
+        onEntering: p,
+        onEntered: p,
+        onExit: p,
+        onExiting: p,
+        onExited: p
     }),
-    (f.UNMOUNTED = 0),
-    (f.EXITED = 1),
-    (f.ENTERING = 2),
-    (f.ENTERED = 3),
-    (f.EXITING = 4),
-    (t.ZP = f);
+    (h.UNMOUNTED = 0),
+    (h.EXITED = 1),
+    (h.ENTERING = 2),
+    (h.ENTERED = 3),
+    (h.EXITING = 4),
+    (t.ZP = h);

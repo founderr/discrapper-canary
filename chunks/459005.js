@@ -6,22 +6,19 @@ n.d(t, {
         return a;
     },
     mA: function () {
-        return h;
+        return f;
     },
     ug: function () {
         return r;
     }
-}),
-    n(47120),
-    n(724458);
+});
 var r,
     i,
     a,
-    s,
-    o,
-    l,
-    u = n(392711);
-function c(e, t, n) {
+    o = n(47120);
+var s = n(724458);
+var l = n(392711);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -34,33 +31,41 @@ function c(e, t, n) {
         e
     );
 }
-((s = r || (r = {})).LONGER_DISPATCH = 'longer_dispatch'), (s.EXCEEDED_MAX_CONSECUTIVE_FLUSHES = 'exceeded_max_consecutive_flushes'), (s.FIRED_DUE_TO_MAX_TIMEOUT = 'fired_due_to_max_timeout'), (s.SKIP_IDLE_CALLBACK_DUE_TO_BACKGROUNDED = 'skip_idle_callback_due_to_backgrounded'), ((o = i || (i = {})).TIME_TO_FIRE_IDLE_CALLBACK = 'time_to_fire_idle_callback'), (o.TIME_TO_QUEUE_EMPTY = 'time_to_flush_all_work'), (o.TIME_OVER_DEADLINE = 'time_over_deadline'), (o.DEADLINE_INITIAL_TIME_REMAINING = 'initial_time_of_deadline'), ((l = a || (a = {})).COUNT_DISPATCHES_LEFT_AFTER_YIELD = 'count_dispatches_left_after_yield'), (l.COUNT_FLUSH_BEFORE_QUEUE_EMPTY = 'count_flush_before_queue_empty'), (l.COUNT_INITIAL_DISPATCHS_LENGTH = 'count_initial_dispatches_length');
-let d = Object.freeze({
+!(function (e) {
+    (e.LONGER_DISPATCH = 'longer_dispatch'), (e.EXCEEDED_MAX_CONSECUTIVE_FLUSHES = 'exceeded_max_consecutive_flushes'), (e.FIRED_DUE_TO_MAX_TIMEOUT = 'fired_due_to_max_timeout'), (e.SKIP_IDLE_CALLBACK_DUE_TO_BACKGROUNDED = 'skip_idle_callback_due_to_backgrounded');
+})(r || (r = {})),
+    !(function (e) {
+        (e.TIME_TO_FIRE_IDLE_CALLBACK = 'time_to_fire_idle_callback'), (e.TIME_TO_QUEUE_EMPTY = 'time_to_flush_all_work'), (e.TIME_OVER_DEADLINE = 'time_over_deadline'), (e.DEADLINE_INITIAL_TIME_REMAINING = 'initial_time_of_deadline');
+    })(i || (i = {})),
+    !(function (e) {
+        (e.COUNT_DISPATCHES_LEFT_AFTER_YIELD = 'count_dispatches_left_after_yield'), (e.COUNT_FLUSH_BEFORE_QUEUE_EMPTY = 'count_flush_before_queue_empty'), (e.COUNT_INITIAL_DISPATCHS_LENGTH = 'count_initial_dispatches_length');
+    })(a || (a = {}));
+let c = Object.freeze({
         time_to_fire_idle_callback: null,
         time_to_flush_all_work: null,
         time_over_deadline: null,
         initial_time_of_deadline: null
     }),
-    _ = Object.freeze({
+    d = Object.freeze({
         time_to_fire_idle_callback: [0, 0],
         time_to_flush_all_work: [0, 0],
         time_over_deadline: [0, 0],
         initial_time_of_deadline: [0, 0]
     }),
-    E = Object.freeze({
+    _ = Object.freeze({
         count_flush_before_queue_empty: [0, 0],
         count_dispatches_left_after_yield: [0, 0],
         count_initial_dispatches_length: [0, 0]
     }),
-    f = Object.freeze({
+    E = Object.freeze({
         longer_dispatch: 0,
         exceeded_max_consecutive_flushes: 0,
         fired_due_to_max_timeout: 0,
         skip_idle_callback_due_to_backgrounded: 0
     });
-class h {
+class f {
     reset() {
-        (this._timeTracking = (0, u.cloneDeep)(d)), (this._timingStats = (0, u.cloneDeep)(_)), (this._measurements = (0, u.cloneDeep)(E)), (this._eventCounts = (0, u.cloneDeep)(f));
+        (this._timeTracking = (0, l.cloneDeep)(c)), (this._timingStats = (0, l.cloneDeep)(d)), (this._measurements = (0, l.cloneDeep)(_)), (this._eventCounts = (0, l.cloneDeep)(E));
     }
     clearTime(e) {
         this._timeTracking[e] = null;
@@ -115,6 +120,6 @@ class h {
         };
     }
     constructor() {
-        c(this, '_timeTracking', (0, u.cloneDeep)(d)), c(this, '_timingStats', (0, u.cloneDeep)(_)), c(this, '_measurements', (0, u.cloneDeep)(E)), c(this, '_eventCounts', (0, u.cloneDeep)(f)), c(this, '_enabled', !1);
+        u(this, '_timeTracking', (0, l.cloneDeep)(c)), u(this, '_timingStats', (0, l.cloneDeep)(d)), u(this, '_measurements', (0, l.cloneDeep)(_)), u(this, '_eventCounts', (0, l.cloneDeep)(E)), u(this, '_enabled', !1);
     }
 }

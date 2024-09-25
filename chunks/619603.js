@@ -1,4 +1,4 @@
-e.exports = function (e) {
+function t(e) {
     let t = [
         e.C_NUMBER_MODE,
         {
@@ -45,4 +45,5 @@ e.exports = function (e) {
             e.COMMENT('//', '$')
         ].concat(t)
     };
-};
+}
+e.exports = t;

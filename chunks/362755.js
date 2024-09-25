@@ -1,41 +1,46 @@
 n.d(t, {
     Y: function () {
-        return S;
+        return r;
     }
 });
-var E,
-    r,
-    u,
+var r,
     i,
-    S,
-    _,
-    o = n(442837),
-    A = n(570140);
-((E = S || (S = {}))[(E.UNKNOWN = 0)] = 'UNKNOWN'), (E[(E.PENDING = 1)] = 'PENDING'), (E[(E.DONE = 2)] = 'DONE');
+    a = n(442837),
+    o = n(570140);
+function s(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+!(function (e) {
+    (e[(e.UNKNOWN = 0)] = 'UNKNOWN'), (e[(e.PENDING = 1)] = 'PENDING'), (e[(e.DONE = 2)] = 'DONE');
+})(r || (r = {}));
 let l = 0,
-    a = null;
-class T extends (_ = o.ZP.Store) {
+    u = null;
+function c(e) {
+    (l = 1), (u = e.loadId);
+}
+function d(e) {
+    u === e.loadId && (l = 2);
+}
+class _ extends (i = a.ZP.Store) {
     get browserCheckoutState() {
         return l;
     }
     get loadId() {
-        return a;
+        return u;
     }
 }
-(i = 'BrowserCheckoutStateStore'),
-    (u = 'displayName') in (r = T)
-        ? Object.defineProperty(r, u, {
-              value: i,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (r[u] = i),
-    (t.Z = new T(A.Z, {
-        USER_PAYMENT_BROWSER_CHECKOUT_STARTED: function (e) {
-            (l = 1), (a = e.loadId);
-        },
-        USER_PAYMENT_BROWSER_CHECKOUT_DONE: function (e) {
-            a === e.loadId && (l = 2);
-        }
+s(_, 'displayName', 'BrowserCheckoutStateStore'),
+    (t.Z = new _(o.Z, {
+        USER_PAYMENT_BROWSER_CHECKOUT_STARTED: c,
+        USER_PAYMENT_BROWSER_CHECKOUT_DONE: d
     }));

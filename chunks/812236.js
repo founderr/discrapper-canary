@@ -1,79 +1,80 @@
 n.d(t, {
     Fs: function () {
-        return _;
+        return E;
     },
     Xu: function () {
-        return d;
+        return _;
     },
     ZP: function () {
-        return c;
+        return d;
     },
     sV: function () {
-        return u;
+        return c;
     }
-}),
-    n(411104);
-var r = n(470079),
-    i = n(911969),
-    a = n(592125),
+});
+var r = n(411104);
+var i = n(470079),
+    a = n(911969),
+    o = n(592125),
     s = n(963456),
-    o = n(213459),
-    l = n(367790);
-let u = 'no primary app command for application';
-async function c(e, t) {
+    l = n(213459),
+    u = n(367790);
+let c = 'no primary app command for application';
+async function d(e, t) {
     let n,
-        r = a.Z.getChannel(e);
+        r = o.Z.getChannel(e);
     if (
         (null != r &&
-            null == (n = d(r, t)) &&
-            (await (0, o.FN)({
+            null == (n = _(r, t)) &&
+            (await (0, l.FN)({
                 type: 'application',
                 applicationId: t
             }),
-            (n = d(r, t))),
+            (n = _(r, t))),
         null != n)
     )
         return n;
-    throw Error(u);
+    throw Error(c);
 }
-function d(e, t) {
-    return o.ZP.query(
+function _(e, t) {
+    return l.ZP.query(
         e,
-        { commandTypes: [i.yU.PRIMARY_ENTRY_POINT] },
+        { commandTypes: [a.yU.PRIMARY_ENTRY_POINT] },
         {
             placeholderCount: 1,
-            scoreMethod: l.p.COMMAND_ONLY,
+            scoreMethod: u.p.COMMAND_ONLY,
             applicationId: t,
             allowFetch: !1,
             allowApplicationState: !0
         }
     ).commands[0];
 }
-function _(e, t) {
-    let { commands: n, loading: a } = (function (e, t) {
-            return (0, o.v1)(
-                e,
-                { commandTypes: [i.yU.PRIMARY_ENTRY_POINT] },
-                {
-                    placeholderCount: 1,
-                    scoreMethod: l.p.COMMAND_ONLY,
-                    applicationId: t,
-                    allowFetch: !1,
-                    allowApplicationState: !0
-                }
-            );
-        })(e, t),
-        u = n[0],
-        c = null != u;
+function E(e, t) {
+    let { commands: n, loading: r } = f(e, t),
+        a = n[0],
+        o = null != a;
     return (
-        r.useEffect(() => {
-            !c &&
-                !a &&
+        i.useEffect(() => {
+            !o &&
+                !r &&
                 (0, s.j)({
                     type: 'application',
                     applicationId: t
                 });
-        }, [t, c, a]),
-        u
+        }, [t, o, r]),
+        a
+    );
+}
+function f(e, t) {
+    return (0, l.v1)(
+        e,
+        { commandTypes: [a.yU.PRIMARY_ENTRY_POINT] },
+        {
+            placeholderCount: 1,
+            scoreMethod: u.p.COMMAND_ONLY,
+            applicationId: t,
+            allowFetch: !1,
+            allowApplicationState: !0
+        }
     );
 }

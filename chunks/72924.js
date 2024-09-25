@@ -1,64 +1,69 @@
 n.d(t, {
     S: function () {
-        return h;
+        return I;
     }
 });
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var s = n(512722),
-    a = n.n(s),
-    r = n(481060),
-    l = n(558381),
-    o = n(821849),
-    c = n(15640),
-    u = n(724870),
+var i = n(512722),
+    a = n.n(i),
+    o = n(481060),
+    s = n(558381),
+    l = n(821849),
+    u = n(15640),
+    c = n(724870),
     d = n(87484),
     _ = n(928518),
     E = n(106976),
-    I = n(689011),
-    m = n(55563),
-    T = n(981631);
-async function h(e) {
-    let { applicationId: t, skuId: n, initialPlanId: s, analyticsLocations: h, analyticsLocationObject: N } = e,
-        f = m.Z.get(n);
-    if (null == f) {
-        let e = (await (0, l.oJ)(t)).find((e) => e.sku.id === n);
-        a()(null != e, 'Could not find store listing for sku'), e.sku.type === T.epS.SUBSCRIPTION_GROUP && (await (0, E.rx)(t, e.id));
+    f = n(689011),
+    h = n(55563),
+    p = n(981631);
+function m() {
+    let e = _.Z.getWindow(p.KJ3.CHANNEL_CALL_POPOUT);
+    return null == e || e.closed ? o.DEFAULT_MODAL_CONTEXT : o.POPOUT_MODAL_CONTEXT;
+}
+async function I(e) {
+    let { applicationId: t, skuId: n, initialPlanId: r, analyticsLocations: i, analyticsLocationObject: o } = e,
+        c = h.Z.get(n);
+    if (null == c) {
+        let e = (await (0, s.oJ)(t)).find((e) => e.sku.id === n);
+        a()(null != e, 'Could not find store listing for sku'), e.sku.type === p.epS.SUBSCRIPTION_GROUP && (await (0, E.rx)(t, e.id));
     }
-    (f = null != f ? f : m.Z.get(n)), a()(null != f && f.applicationId === t, 'SKU must belong to application'), f.type === T.epS.SUBSCRIPTION && !(0, c.a)([f.id]) && (await (0, o.GZ)(f.id));
-    let C = (function () {
-        let e = _.Z.getWindow(T.KJ3.CHANNEL_CALL_POPOUT);
-        return null == e || e.closed ? r.DEFAULT_MODAL_CONTEXT : r.POPOUT_MODAL_CONTEXT;
-    })();
-    if (f.type !== T.epS.SUBSCRIPTION)
-        return new Promise((e, i) => {
-            (0, d.Z)({
-                applicationId: t,
-                skuId: n,
-                analyticsLocationObject: N,
-                analyticsLocations: h,
-                contextKey: C,
-                onComplete: (t) => {
+    (c = null != c ? c : h.Z.get(n)), a()(null != c && c.applicationId === t, 'SKU must belong to application'), c.type === p.epS.SUBSCRIPTION && !(0, u.a)([c.id]) && (await (0, l.GZ)(c.id));
+    let _ = m();
+    if (c.type !== p.epS.SUBSCRIPTION)
+        return new Promise((e, r) => {
+            let a = (t) => {
                     var n;
                     e(null !== (n = null == t ? void 0 : t.entitlements) && void 0 !== n ? n : []);
                 },
-                onClose: (e) => {
-                    !e && i();
-                }
+                s = (e) => {
+                    !e && r();
+                };
+            (0, d.Z)({
+                applicationId: t,
+                skuId: n,
+                analyticsLocationObject: o,
+                analyticsLocations: i,
+                contextKey: _,
+                onComplete: a,
+                onClose: s
             });
         });
-    await (function (e, t, n, s, a) {
-        return (0, u.m)({
-            applicationId: e,
-            skuId: t,
-            initialPlanId: n,
-            analyticsLocationObject: s,
-            analyticsLocations: a,
-            renderHeader: (e, t, n) =>
-                (0, i.jsx)(I.t, {
-                    step: n,
-                    onClose: () => t(!1)
-                })
+    await T(t, n, r, o, i);
+}
+function T(e, t, n, i, a) {
+    let o = (e, t, n) =>
+        (0, r.jsx)(f.t, {
+            step: n,
+            onClose: () => t(!1)
         });
-    })(t, n, s, N, h);
+    return (0, c.m)({
+        applicationId: e,
+        skuId: t,
+        initialPlanId: n,
+        analyticsLocationObject: i,
+        analyticsLocations: a,
+        renderHeader: o
+    });
 }

@@ -1,12 +1,12 @@
-n(47120);
-var r = n(735250);
+var r = n(47120);
+var i = n(735250);
 n(470079);
-var i = n(392711),
-    a = n(481060),
+var a = n(392711);
+var o = n(481060),
     s = n(689938),
-    o = n(508483);
-t.Z = (e) => {
-    let t = (0, i.flatMap)(e.history, (e) => {
+    l = n(508483);
+let u = (e) => {
+    let t = (0, a.flatMap)(e.history, (e) => {
         var t;
         let {
                 destination: [n],
@@ -18,25 +18,25 @@ t.Z = (e) => {
     }).filter((e) => null != e);
     return 0 === t.length
         ? null
-        : (0, r.jsxs)('div', {
-              className: o.container,
+        : (0, i.jsxs)('div', {
+              className: l.container,
               children: [
-                  (0, r.jsx)(a.Heading, {
-                      className: o.breadcrumbsHeader,
+                  (0, i.jsx)(o.Heading, {
+                      className: l.breadcrumbsHeader,
                       color: 'header-secondary',
                       variant: 'heading-sm/semibold',
                       children: s.Z.Messages.MOBILE_REPORTS_BREADCRUMBS_TITLE
                   }),
                   t.map((e, t) =>
-                      (0, r.jsxs)(
+                      (0, i.jsxs)(
                           'div',
                           {
-                              className: o.breadcrumbContainer,
+                              className: l.breadcrumbContainer,
                               children: [
-                                  (0, r.jsx)('div', { className: o.breadcrumbDot }),
-                                  (0, r.jsx)(a.Text, {
+                                  (0, i.jsx)('div', { className: l.breadcrumbDot }),
+                                  (0, i.jsx)(o.Text, {
                                       variant: 'text-md/normal',
-                                      className: o.breadcrumbText,
+                                      className: l.breadcrumbText,
                                       children: e
                                   })
                               ]
@@ -47,3 +47,4 @@ t.Z = (e) => {
               ]
           });
 };
+t.Z = u;

@@ -1,68 +1,69 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return T;
     }
 });
-var i = n(735250),
-    s = n(470079),
+var r = n(735250),
+    i = n(470079),
     a = n(512722),
-    r = n.n(a),
-    l = n(481060),
-    o = n(976255),
-    c = n(230711),
-    u = n(409813),
+    o = n.n(a),
+    s = n(481060),
+    l = n(976255),
+    u = n(230711),
+    c = n(409813),
     d = n(594174),
     _ = n(74538),
     E = n(212895),
-    I = n(559725),
-    m = n(439041),
-    T = n(981631),
-    h = n(689938);
-function N(e) {
+    f = n(559725),
+    h = n(439041),
+    p = n(981631),
+    m = n(689938);
+let I = 1000;
+function T(e) {
     let { onClose: t } = e,
         a = d.default.getCurrentUser();
-    r()(void 0 !== a, 'User must not be null');
-    let N = (0, _.I5)(a),
-        f = N ? T.oAB.SUBSCRIPTIONS : T.oAB.BILLING;
+    o()(void 0 !== a, 'User must not be null');
+    let T = (0, _.I5)(a),
+        g = T ? p.oAB.SUBSCRIPTIONS : p.oAB.BILLING;
     return (
-        s.useEffect(() => {
-            null == m.Z.cashAppPayComponent && (0, I.eI)();
+        i.useEffect(() => {
+            null == h.Z.cashAppPayComponent && (0, f.eI)();
         }, []),
-        (0, i.jsxs)(l.Notice, {
-            color: l.NoticeColors.DEFAULT,
+        (0, r.jsxs)(s.Notice, {
+            color: s.NoticeColors.DEFAULT,
             children: [
-                (0, i.jsx)(l.NoticeCloseButton, {
+                (0, r.jsx)(s.NoticeCloseButton, {
                     onClick: t,
-                    noticeType: T.kVF.CASH_APP_PAY_AWARENESS_NAGBAR
+                    noticeType: p.kVF.CASH_APP_PAY_AWARENESS_NAGBAR
                 }),
-                N ? h.Z.Messages.CASH_APP_PAY_AWARENESS_SUBSCRIBER_CONTENT : h.Z.Messages.CASH_APP_PAY_AWARENESS_NON_SUBSCRIBER_CONTENT,
-                (0, i.jsx)(l.PrimaryCTANoticeButton, {
+                T ? m.Z.Messages.CASH_APP_PAY_AWARENESS_SUBSCRIBER_CONTENT : m.Z.Messages.CASH_APP_PAY_AWARENESS_NON_SUBSCRIBER_CONTENT,
+                (0, r.jsx)(s.PrimaryCTANoticeButton, {
                     onClick: () => {
-                        c.Z.open(f),
+                        u.Z.open(g),
                             setTimeout(() => {
-                                (0, l.openModalLazy)(
+                                (0, s.openModalLazy)(
                                     async () => {
                                         let { default: e } = await Promise.all([n.e('96427'), n.e('54803'), n.e('52619'), n.e('61275')]).then(n.bind(n, 623573));
                                         return (t) =>
-                                            (0, i.jsx)(e, {
+                                            (0, r.jsx)(e, {
                                                 ...t,
-                                                initialStep: u.h8.CASH_APP_INFORMATION,
-                                                analyticsLocation: T.Sbl.CASH_APP_PAY_AWARENESS_NAGBAR,
+                                                initialStep: c.h8.CASH_APP_INFORMATION,
+                                                analyticsLocation: p.Sbl.CASH_APP_PAY_AWARENESS_NAGBAR,
                                                 onAddPaymentSource: (e) => (0, E.i1)(e.id),
-                                                toastContent: N ? h.Z.Messages.CASH_APP_PAY_AWARENESS_UPDATE_NITRO_PAYMENT_METHOD_TOAST : h.Z.Messages.CASH_APP_PAY_AWARENESS_UPDATE_NON_NITRO_PAYMENT_METHOD_TOAST,
-                                                overwriteSubscriptionPaymentSource: N
+                                                toastContent: T ? m.Z.Messages.CASH_APP_PAY_AWARENESS_UPDATE_NITRO_PAYMENT_METHOD_TOAST : m.Z.Messages.CASH_APP_PAY_AWARENESS_UPDATE_NON_NITRO_PAYMENT_METHOD_TOAST,
+                                                overwriteSubscriptionPaymentSource: T
                                             });
                                     },
                                     {
-                                        onCloseCallback: () => (0, o.fw)(),
-                                        onCloseRequest: T.dG4
+                                        onCloseCallback: () => (0, l.fw)(),
+                                        onCloseRequest: p.dG4
                                     }
                                 );
-                            }, 1000),
+                            }, I),
                             t();
                     },
-                    noticeType: T.kVF.CASH_APP_PAY_AWARENESS_NAGBAR,
-                    children: N ? h.Z.Messages.CASH_APP_PAY_AWARENESS_SUBSCRIBER_CTA : h.Z.Messages.CASH_APP_PAY_AWARENESS_NON_SUBSCRIBER_CTA
+                    noticeType: p.kVF.CASH_APP_PAY_AWARENESS_NAGBAR,
+                    children: T ? m.Z.Messages.CASH_APP_PAY_AWARENESS_SUBSCRIBER_CTA : m.Z.Messages.CASH_APP_PAY_AWARENESS_NON_SUBSCRIBER_CTA
                 })
             ]
         })

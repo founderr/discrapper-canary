@@ -1,4 +1,4 @@
-e.exports = function (e) {
+function t(e) {
     return {
         name: 'CSP',
         case_insensitive: !1,
@@ -20,4 +20,5 @@ e.exports = function (e) {
             }
         ]
     };
-};
+}
+e.exports = t;

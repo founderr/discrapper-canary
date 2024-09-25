@@ -1,31 +1,31 @@
 n.d(t, {
     $l: function () {
-        return v;
+        return P;
     },
     G1: function () {
-        return m;
-    },
-    JR: function () {
         return A;
     },
+    JR: function () {
+        return C;
+    },
     U$: function () {
-        return N;
+        return b;
     },
     e7: function () {
-        return S;
+        return N;
     },
     wv: function () {
-        return g;
+        return O;
     },
     yK: function () {
-        return T;
+        return v;
     }
 });
 var r = n(470079),
     i = n(392711),
     a = n.n(i),
-    s = n(399606),
-    o = n(544891),
+    o = n(399606),
+    s = n(544891),
     l = n(570140),
     u = n(881052),
     c = n(902840),
@@ -34,8 +34,12 @@ var r = n(470079),
     E = n(70956),
     f = n(765104),
     h = n(981631);
-let p = 30 * E.Z.Millis.SECOND;
-async function I(e, t) {
+let p = 75,
+    m = 50,
+    I = 30 * E.Z.Millis.SECOND,
+    T = null,
+    g = null;
+async function S(e, t) {
     let n, r;
     if (!f.Z.shouldFetch(e, t)) return;
     let i = Date.now();
@@ -46,7 +50,7 @@ async function I(e, t) {
         requestedAt: i
     });
     try {
-        let n = await o.tn.get(h.Z5c.CHANNEL_SUMMARY(e, t));
+        let n = await s.tn.get(h.Z5c.CHANNEL_SUMMARY(e, t));
         r = null == n ? void 0 : n.body;
     } catch (e) {
         n = new u.Hx(e);
@@ -60,65 +64,75 @@ async function I(e, t) {
         receivedAt: Date.now()
     });
 }
-async function m(e) {
+async function A(e) {
     var t, n;
     let r, i;
     if (!f.Z.shouldFetch(e)) return;
-    let s = Date.now();
+    let o = Date.now();
     l.Z.dispatch({
         type: 'REQUEST_CHANNEL_SUMMARIES',
         channelId: e,
-        requestedAt: s
+        requestedAt: o
     });
     try {
-        i = await o.tn.get(h.Z5c.CHANNEL_SUMMARIES(e));
+        i = await s.tn.get(h.Z5c.CHANNEL_SUMMARIES(e));
     } catch (e) {
         r = new u.Hx(e);
     }
     let c = (null == i ? void 0 : null === (t = i.body) || void 0 === t ? void 0 : t.summaries) instanceof Array ? i.body.summaries : null !== (n = null == i ? void 0 : i.body) && void 0 !== n ? n : [];
-    (c = a().takeRight(c, 75)),
+    (c = a().takeRight(c, p)),
         l.Z.dispatch({
             type: 'RECEIVE_CHANNEL_SUMMARIES',
             channelId: e,
             summaries: c,
             error: null != r ? r : void 0,
-            requestedAt: s,
+            requestedAt: o,
             receivedAt: Date.now()
         });
 }
-function T(e, t) {
+function v(e, t) {
     l.Z.dispatch({
         type: 'SET_HIGHLIGHTED_SUMMARY',
         channelId: e,
         summaryId: null != t ? t : null
     });
 }
-function S() {
+function N() {
     l.Z.dispatch({ type: 'TOGGLE_TOPICS_BAR' });
 }
-function g(e, t) {
-    null != e && null != t && I(e, t),
+function O(e, t) {
+    null != e && null != t && S(e, t),
         l.Z.dispatch({
             type: 'SET_SELECTED_SUMMARY',
             channelId: e,
             summaryId: null != t ? t : null
         });
 }
-function A(e, t) {
+function R(e, t) {
+    l.Z.dispatch({
+        type: 'SET_GRAVITY_SELECTED_SUMMARY',
+        channelId: e,
+        summaryId: null != t ? t : null
+    });
+}
+function C(e, t) {
     l.Z.dispatch({
         type: 'UPDATE_VISIBLE_MESSAGES',
         topVisibleMessage: null != e ? e : null,
         bottomVisibleMessage: null != t ? t : null
     });
 }
-function N(e, t) {
+function y(e, t) {
+    return null == T[e] && (T[e] = 0), null === t ? (T[e] = 0) : (T[e] += t), T[e];
+}
+function b(e, t) {
     l.Z.dispatch({
         type: 'SET_SUMMARY_FEEDBACK',
         summary: e,
         rating: t
     });
 }
-async function O() {
+async function L() {
     var e;
     let t, n;
     if (!f.Z.shouldFetchChannelAffinities()) return Promise.resolve(null);
@@ -128,7 +142,7 @@ async function O() {
         requestedAt: r
     });
     try {
-        n = await o.tn.get('/users/@me/affinities/channels');
+        n = await s.tn.get('/users/@me/affinities/channels');
     } catch (e) {
         t = new u.Hx(e);
     }
@@ -141,7 +155,7 @@ async function O() {
         receivedAt: Date.now()
     });
 }
-async function R(e) {
+async function D(e) {
     let t,
         n,
         { useQuickSwitcher: r = !0, useChannelAffinities: i = !0 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
@@ -165,9 +179,9 @@ async function R(e) {
                     n = f.Z.status(e);
                 if (null == n ? void 0 : n.fetching) return !1;
                 let r = null == n ? void 0 : n.lastReceivedAt;
-                return null == r || t - r > p;
+                return null == r || t - r > I;
             })
-            .slice(0, 50)).length
+            .slice(0, m)).length
     )
         return Promise.resolve(null);
     l.Z.dispatch({
@@ -176,26 +190,40 @@ async function R(e) {
         requestedAt: a
     });
     try {
-        n = await o.tn.post({
+        n = await s.tn.post({
             url: h.Z5c.USER_SUMMARIES,
             body: { channel_ids: e }
         });
     } catch (e) {
         t = new u.Hx(e);
     }
-    let s = null == n ? void 0 : n.body.summaries;
+    let o = null == n ? void 0 : n.body.summaries;
     l.Z.dispatch({
         type: 'RECEIVE_CHANNEL_SUMMARIES_BULK',
         requestedAt: a,
         receivedAt: Date.now(),
-        summaries: s,
+        summaries: o,
         requestArgs: { channelIds: e },
         error: t
     });
 }
-async function v(e) {
+function M() {
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
+        t = (0, o.e7)([d.Z], () => d.Z.isConnected()),
+        n = r.useMemo(() => e.join(','), [e]);
+    r.useEffect(() => {
+        t && e();
+        async function e() {
+            try {
+                await L();
+            } catch (e) {}
+            await D(n.split(','));
+        }
+    }, [n, t]);
+}
+async function P(e) {
     try {
-        await o.tn.del(h.Z5c.CHANNEL_SUMMARY(e.channelId, e.id)),
+        await s.tn.del(h.Z5c.CHANNEL_SUMMARY(e.channelId, e.id)),
             l.Z.dispatch({
                 type: 'DELETE_SUMMARY',
                 summary: e
@@ -204,39 +232,18 @@ async function v(e) {
         throw new u.Hx(e);
     }
 }
-t.ZP = {
-    setSummaryFeedback: N,
-    updateVisibleMessages: A,
-    setSelectedSummary: g,
-    setGravitySelectedSummary: function (e, t) {
-        l.Z.dispatch({
-            type: 'SET_GRAVITY_SELECTED_SUMMARY',
-            channelId: e,
-            summaryId: null != t ? t : null
-        });
-    },
-    setHighlightedSummary: T,
-    fetchSummaries: m,
-    fetchSummariesBulk: R,
-    useChannelSummaries: function (e) {
+let U = {
+    setSummaryFeedback: b,
+    updateVisibleMessages: C,
+    setSelectedSummary: O,
+    setGravitySelectedSummary: R,
+    setHighlightedSummary: v,
+    fetchSummaries: A,
+    fetchSummariesBulk: D,
+    useChannelSummaries: function e(e) {
         let { channelIds: t = [] } = e;
-        return (
-            !(function () {
-                let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
-                    t = (0, s.e7)([d.Z], () => d.Z.isConnected()),
-                    n = r.useMemo(() => e.join(','), [e]);
-                r.useEffect(() => {
-                    t && e();
-                    async function e() {
-                        try {
-                            await O();
-                        } catch (e) {}
-                        await R(n.split(','));
-                    }
-                }, [n, t]);
-            })(t),
-            (0, s.Wu)([f.Z], () => f.Z.topSummaries(), [])
-        );
+        return M(t), (0, o.Wu)([f.Z], () => f.Z.topSummaries(), []);
     },
-    deleteSummary: v
+    deleteSummary: P
 };
+t.ZP = U;

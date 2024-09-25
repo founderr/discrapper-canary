@@ -6,8 +6,8 @@ n.d(t, {
 var r = n(685516),
     i = n(285363),
     a = n(175922),
-    s = n(406434),
-    o = n(6138),
+    o = n(406434),
+    s = n(6138),
     l = n(740078),
     u = n(882159),
     c = n(544338),
@@ -20,42 +20,43 @@ function _(e, t) {
         f = n.strategy,
         h = void 0 === f ? e.strategy : f,
         p = n.boundary,
-        I = void 0 === p ? l.zV : p,
-        m = n.rootBoundary,
-        T = void 0 === m ? l.Pj : m,
-        S = n.elementContext,
-        g = void 0 === S ? l.k5 : S,
+        m = void 0 === p ? l.zV : p,
+        I = n.rootBoundary,
+        T = void 0 === I ? l.Pj : I,
+        g = n.elementContext,
+        S = void 0 === g ? l.k5 : g,
         A = n.altBoundary,
+        v = void 0 !== A && A,
         N = n.padding,
         O = void 0 === N ? 0 : N,
         R = (0, c.Z)('number' != typeof O ? O : (0, d.Z)(O, l.mv)),
-        v = g === l.k5 ? l.YP : l.k5,
-        C = e.rects.popper,
-        y = e.elements[void 0 !== A && A ? v : g],
-        L = (0, r.Z)((0, u.kK)(y) ? y : y.contextElement || (0, i.Z)(e.elements.popper), I, T, h),
+        C = S === l.k5 ? l.YP : l.k5,
+        y = e.rects.popper,
+        b = e.elements[v ? C : S],
+        L = (0, r.Z)((0, u.kK)(b) ? b : b.contextElement || (0, i.Z)(e.elements.popper), m, T, h),
         D = (0, a.Z)(e.elements.reference),
-        b = (0, s.Z)({
+        M = (0, o.Z)({
             reference: D,
-            element: C,
+            element: y,
             strategy: 'absolute',
             placement: E
         }),
-        M = (0, o.Z)(Object.assign({}, C, b)),
-        P = g === l.k5 ? M : D,
-        U = {
-            top: L.top - P.top + R.top,
-            bottom: P.bottom - L.bottom + R.bottom,
-            left: L.left - P.left + R.left,
-            right: P.right - L.right + R.right
+        P = (0, s.Z)(Object.assign({}, y, M)),
+        U = S === l.k5 ? P : D,
+        w = {
+            top: L.top - U.top + R.top,
+            bottom: U.bottom - L.bottom + R.bottom,
+            left: L.left - U.left + R.left,
+            right: U.right - L.right + R.right
         },
-        w = e.modifiersData.offset;
-    if (g === l.k5 && w) {
-        var x = w[E];
-        Object.keys(U).forEach(function (e) {
+        x = e.modifiersData.offset;
+    if (S === l.k5 && x) {
+        var G = x[E];
+        Object.keys(w).forEach(function (e) {
             var t = [l.F2, l.I].indexOf(e) >= 0 ? 1 : -1,
                 n = [l.we, l.I].indexOf(e) >= 0 ? 'y' : 'x';
-            U[e] += x[n] * t;
+            w[e] += G[n] * t;
         });
     }
-    return U;
+    return w;
 }

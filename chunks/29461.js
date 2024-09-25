@@ -1,58 +1,60 @@
-var e,
-    o,
+var r,
     i,
-    u = n(723455),
+    a,
+    o = n(723455),
     s = n(668530),
-    c = n(982665),
-    f = n(948634),
-    a = n(141603),
-    p = n(980277),
-    v = n(964653),
-    l = n(511364),
-    y = 'Object already initialized',
+    l = n(982665),
+    u = n(948634),
+    c = n(141603),
+    d = n(980277),
+    _ = n(964653),
+    E = n(511364),
+    f = 'Object already initialized',
     h = s.TypeError,
-    x = s.WeakMap;
-if (u || p.state) {
-    var d = p.state || (p.state = new x());
-    (d.get = d.get),
-        (d.has = d.has),
-        (d.set = d.set),
-        (e = function (t, r) {
-            if (d.has(t)) throw new h(y);
-            return (r.facade = t), d.set(t, r), r;
-        }),
-        (o = function (t) {
-            return d.get(t) || {};
-        }),
-        (i = function (t) {
-            return d.has(t);
-        });
-} else {
-    var g = v('state');
-    (l[g] = !0),
-        (e = function (t, r) {
-            if (a(t, g)) throw new h(y);
-            return (r.facade = t), f(t, g, r), r;
-        }),
-        (o = function (t) {
-            return a(t, g) ? t[g] : {};
-        }),
-        (i = function (t) {
-            return a(t, g);
-        });
-}
-t.exports = {
-    set: e,
-    get: o,
-    has: i,
-    enforce: function (t) {
-        return i(t) ? o(t) : e(t, {});
+    p = s.WeakMap,
+    m = function (e) {
+        return a(e) ? i(e) : r(e, {});
     },
-    getterFor: function (t) {
-        return function (r) {
+    I = function (e) {
+        return function (t) {
             var n;
-            if (!c(r) || (n = o(r)).type !== t) throw new h('Incompatible receiver, ' + t + ' required');
+            if (!l(t) || (n = i(t)).type !== e) throw new h('Incompatible receiver, ' + e + ' required');
             return n;
         };
-    }
+    };
+if (o || d.state) {
+    var T = d.state || (d.state = new p());
+    (T.get = T.get),
+        (T.has = T.has),
+        (T.set = T.set),
+        (r = function (e, t) {
+            if (T.has(e)) throw new h(f);
+            return (t.facade = e), T.set(e, t), t;
+        }),
+        (i = function (e) {
+            return T.get(e) || {};
+        }),
+        (a = function (e) {
+            return T.has(e);
+        });
+} else {
+    var g = _('state');
+    (E[g] = !0),
+        (r = function (e, t) {
+            if (c(e, g)) throw new h(f);
+            return (t.facade = e), u(e, g, t), t;
+        }),
+        (i = function (e) {
+            return c(e, g) ? e[g] : {};
+        }),
+        (a = function (e) {
+            return c(e, g);
+        });
+}
+e.exports = {
+    set: r,
+    get: i,
+    has: a,
+    enforce: m,
+    getterFor: I
 };

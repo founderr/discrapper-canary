@@ -1,12 +1,12 @@
 let r, i, a;
-n(47120);
-var s,
-    o = n(392711),
-    l = n.n(o),
-    u = n(442837),
-    c = n(570140),
-    d = n(981631);
-function _(e, t, n) {
+var o,
+    s = n(47120);
+var l = n(392711),
+    u = n.n(l),
+    c = n(442837),
+    d = n(570140),
+    _ = n(981631);
+function E(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,22 +19,90 @@ function _(e, t, n) {
         e
     );
 }
-let E = f();
-function f() {
+let f = 7,
+    h = 28800000,
+    p = m();
+function m() {
     return {
         recentCustomStatuses: [],
         currentDefaultStatus: null
     };
 }
-class h extends (s = u.ZP.PersistedStore) {
+function I() {
+    p = m();
+}
+function T(e) {
+    let { status: t, saveAsDefault: n } = e;
+    (r = t),
+        (i = null),
+        n &&
+            (p.currentDefaultStatus = {
+                status: t,
+                customHangStatus: i,
+                expiresAt: Date.now() + h
+            }),
+        (a = {
+            type: _.IIU.HANG_STATUS,
+            name: 'Hang Status',
+            state: r
+        });
+}
+function g(e) {
+    let { status: t, emoji: n, saveAsDefault: o } = e;
+    (r = _.tNA.CUSTOM),
+        (i = {
+            status: t,
+            emoji: n
+        });
+    let s = [...p.recentCustomStatuses],
+        l = s.findIndex((e) => e.status === t && u().isEqual(e.emoji, n));
+    -1 !== l ? s.splice(l, 1) : s.length === f && s.splice(f - 1, 1),
+        (p.recentCustomStatuses = [i, ...s]),
+        o &&
+            (p.currentDefaultStatus = {
+                status: r,
+                customHangStatus: i,
+                expiresAt: Date.now() + h
+            }),
+        (a = {
+            type: _.IIU.HANG_STATUS,
+            name: 'Hang Status',
+            state: r,
+            details: t,
+            emoji: n
+        });
+}
+function S(e) {
+    let { saveAsDefault: t } = e;
+    (r = null),
+        (i = null),
+        t &&
+            (p.currentDefaultStatus = {
+                status: null,
+                customHangStatus: null,
+                expiresAt: Date.now() + h
+            }),
+        (a = null);
+}
+function A(e) {
+    let { statuses: t } = e,
+        n = [...p.recentCustomStatuses];
+    t.forEach((e) => {
+        let { status: t, emoji: o } = e,
+            s = n.findIndex((e) => e.status === t && u().isEqual(e.emoji, o));
+        -1 !== s && n.splice(s, 1), t === (null == i ? void 0 : i.status) && u().isEqual(o, null == i ? void 0 : i.emoji) && ((r = null), (i = null), (p.currentDefaultStatus = null), (a = null));
+    }),
+        (p.recentCustomStatuses = n);
+}
+class v extends (o = c.ZP.PersistedStore) {
     initialize(e) {
-        E = {
-            ...f(),
+        p = {
+            ...m(),
             ...(null != e ? e : {})
         };
     }
     getState() {
-        return E;
+        return p;
     }
     getCurrentHangStatus() {
         return r;
@@ -43,82 +111,21 @@ class h extends (s = u.ZP.PersistedStore) {
         return i;
     }
     getRecentCustomStatuses() {
-        return E.recentCustomStatuses;
+        return p.recentCustomStatuses;
     }
     getCurrentDefaultStatus() {
-        return E.currentDefaultStatus;
+        return p.currentDefaultStatus;
     }
     getHangStatusActivity() {
         return null == r ? null : a;
     }
 }
-_(h, 'displayName', 'HangStatusStore'),
-    _(h, 'persistKey', 'HangStatusStore'),
-    (t.Z = new h(c.Z, {
-        LOGOUT: function () {
-            E = f();
-        },
-        UPDATE_HANG_STATUS: function (e) {
-            let { status: t, saveAsDefault: n } = e;
-            (r = t),
-                (i = null),
-                n &&
-                    (E.currentDefaultStatus = {
-                        status: t,
-                        customHangStatus: i,
-                        expiresAt: Date.now() + 28800000
-                    }),
-                (a = {
-                    type: d.IIU.HANG_STATUS,
-                    name: 'Hang Status',
-                    state: r
-                });
-        },
-        UPDATE_HANG_STATUS_CUSTOM: function (e) {
-            let { status: t, emoji: n, saveAsDefault: s } = e;
-            (r = d.tNA.CUSTOM),
-                (i = {
-                    status: t,
-                    emoji: n
-                });
-            let o = [...E.recentCustomStatuses],
-                u = o.findIndex((e) => e.status === t && l().isEqual(e.emoji, n));
-            -1 !== u ? o.splice(u, 1) : 7 === o.length && o.splice(6, 1),
-                (E.recentCustomStatuses = [i, ...o]),
-                s &&
-                    (E.currentDefaultStatus = {
-                        status: r,
-                        customHangStatus: i,
-                        expiresAt: Date.now() + 28800000
-                    }),
-                (a = {
-                    type: d.IIU.HANG_STATUS,
-                    name: 'Hang Status',
-                    state: r,
-                    details: t,
-                    emoji: n
-                });
-        },
-        DELETE_INVALID_HANG_STATUSES: function (e) {
-            let { statuses: t } = e,
-                n = [...E.recentCustomStatuses];
-            t.forEach((e) => {
-                let { status: t, emoji: s } = e,
-                    o = n.findIndex((e) => e.status === t && l().isEqual(e.emoji, s));
-                -1 !== o && n.splice(o, 1), t === (null == i ? void 0 : i.status) && l().isEqual(s, null == i ? void 0 : i.emoji) && ((r = null), (i = null), (E.currentDefaultStatus = null), (a = null));
-            }),
-                (E.recentCustomStatuses = n);
-        },
-        CLEAR_HANG_STATUS: function (e) {
-            let { saveAsDefault: t } = e;
-            (r = null),
-                (i = null),
-                t &&
-                    (E.currentDefaultStatus = {
-                        status: null,
-                        customHangStatus: null,
-                        expiresAt: Date.now() + 28800000
-                    }),
-                (a = null);
-        }
+E(v, 'displayName', 'HangStatusStore'),
+    E(v, 'persistKey', 'HangStatusStore'),
+    (t.Z = new v(d.Z, {
+        LOGOUT: I,
+        UPDATE_HANG_STATUS: T,
+        UPDATE_HANG_STATUS_CUSTOM: g,
+        DELETE_INVALID_HANG_STATUSES: A,
+        CLEAR_HANG_STATUS: S
     }));

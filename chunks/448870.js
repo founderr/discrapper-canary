@@ -1,4 +1,4 @@
-e.exports = function (e) {
+function t(e) {
     let t = e.regex,
         n = /[\p{XID_Start}_]\p{XID_Continue}*/u,
         r = ['and', 'as', 'assert', 'async', 'await', 'break', 'case', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'match', 'nonlocal|10', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield'],
@@ -13,14 +13,14 @@ e.exports = function (e) {
             className: 'meta',
             begin: /^(>>>|\.\.\.) /
         },
-        s = {
+        o = {
             className: 'subst',
             begin: /\{/,
             end: /\}/,
             keywords: i,
             illegal: /#/
         },
-        o = {
+        s = {
             begin: /\{\{/,
             relevance: 0
         },
@@ -43,12 +43,12 @@ e.exports = function (e) {
                 {
                     begin: /([fF][rR]|[rR][fF]|[fF])'''/,
                     end: /'''/,
-                    contains: [e.BACKSLASH_ESCAPE, a, o, s]
+                    contains: [e.BACKSLASH_ESCAPE, a, s, o]
                 },
                 {
                     begin: /([fF][rR]|[rR][fF]|[fF])"""/,
                     end: /"""/,
-                    contains: [e.BACKSLASH_ESCAPE, a, o, s]
+                    contains: [e.BACKSLASH_ESCAPE, a, s, o]
                 },
                 {
                     begin: /([uU]|[rR])'/,
@@ -71,12 +71,12 @@ e.exports = function (e) {
                 {
                     begin: /([fF][rR]|[rR][fF]|[fF])'/,
                     end: /'/,
-                    contains: [e.BACKSLASH_ESCAPE, o, s]
+                    contains: [e.BACKSLASH_ESCAPE, s, o]
                 },
                 {
                     begin: /([fF][rR]|[rR][fF]|[fF])"/,
                     end: /"/,
-                    contains: [e.BACKSLASH_ESCAPE, o, s]
+                    contains: [e.BACKSLASH_ESCAPE, s, o]
                 },
                 e.APOS_STRING_MODE,
                 e.QUOTE_STRING_MODE
@@ -123,7 +123,7 @@ e.exports = function (e) {
             ]
         };
     return (
-        (s.contains = [l, _, a]),
+        (o.contains = [l, _, a]),
         {
             name: 'Python',
             aliases: ['py', 'gyp', 'ipython'],
@@ -173,4 +173,5 @@ e.exports = function (e) {
             ]
         }
     );
-};
+}
+e.exports = t;

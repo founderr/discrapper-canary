@@ -1,15 +1,17 @@
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var s = n(792766),
+var i = n(792766),
     a = n(955415);
-t.Z = (e) => {
-    let { stageInstance: t, guild: n, isMember: r, onTransitionToInviteChannel: l, onAcceptInstantInvite: o } = e;
-    return (0, i.jsx)(a.Z, {
-        children: (0, i.jsx)(s.Z, {
+let o = (e) => {
+    let { stageInstance: t, guild: n, isMember: o, onTransitionToInviteChannel: s, onAcceptInstantInvite: l } = e,
+        u = o ? s : l;
+    return (0, r.jsx)(a.Z, {
+        children: (0, r.jsx)(i.Z, {
             isEmbed: !0,
             stageInstance: t,
             guild: n,
-            onClick: r ? l : o
+            onClick: u
         })
     });
 };
+t.Z = o;

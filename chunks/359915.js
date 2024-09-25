@@ -1,19 +1,32 @@
-n(47120);
-var r = n(442837),
-    i = n(570140),
-    a = n(147913),
+var r = n(47120);
+var i = n(442837),
+    a = n(570140),
+    o = n(147913),
     s = n(883429),
-    o = n(314897),
-    l = n(592125);
-class u extends a.Z {
+    l = n(314897),
+    u = n(592125);
+function c(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+class d extends o.Z {
     handleChannelDelete(e) {
         let { channel: t } = e;
         if (null != t.guild_id) {
-            let e = l.Z.getAllThreadsForParent(t.id);
+            let e = u.Z.getAllThreadsForParent(t.id);
             e.length > 0 &&
-                r.ZP.Emitter.batched(() => {
+                i.ZP.Emitter.batched(() => {
                     for (let t of e)
-                        i.Z.dispatch({
+                        a.Z.dispatch({
                             type: 'THREAD_DELETE',
                             channel: t
                         });
@@ -23,28 +36,17 @@ class u extends a.Z {
     handleMessageCreate(e) {
         var t, n, r;
         let { channelId: i, message: a } = e,
-            u = l.Z.getChannel(i);
-        if ((null === (t = a.author) || void 0 === t ? void 0 : t.id) !== o.default.getId() || !(null == u ? void 0 : u.isActiveThread())) return;
-        let c = new Date(null !== (r = null === (n = u.threadMetadata) || void 0 === n ? void 0 : n.archiveTimestamp) && void 0 !== r ? r : 0).getTime();
-        Date.now() - c < 5000 && s.Z.resort(u.parent_id);
+            o = u.Z.getChannel(i);
+        if ((null === (t = a.author) || void 0 === t ? void 0 : t.id) !== l.default.getId() || !(null == o ? void 0 : o.isActiveThread())) return;
+        let c = new Date(null !== (r = null === (n = o.threadMetadata) || void 0 === n ? void 0 : n.archiveTimestamp) && void 0 !== r ? r : 0).getTime();
+        Date.now() - c < 5000 && s.Z.resort(o.parent_id);
     }
     constructor(...e) {
-        var t, n, r;
         super(...e),
-            (t = this),
-            (n = 'actions'),
-            (r = {
+            c(this, 'actions', {
                 CHANNEL_DELETE: this.handleChannelDelete,
                 MESSAGE_CREATE: this.handleMessageCreate
-            }),
-            n in t
-                ? Object.defineProperty(t, n, {
-                      value: r,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (t[n] = r);
+            });
     }
 }
-t.Z = new u();
+t.Z = new d();

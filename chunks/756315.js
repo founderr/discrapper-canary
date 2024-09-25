@@ -1,13 +1,13 @@
 n.d(t, {
     Z: function () {
-        return u;
+        return c;
     }
 });
 var r = n(379649),
     i = n(846519),
     a = n(361291),
-    s = n(981631);
-function o(e, t, n) {
+    o = n(981631);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,14 +20,15 @@ function o(e, t, n) {
         e
     );
 }
-function l(e) {
+let l = 1000;
+function u(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
     return null != e ? Math.round(e) : t;
 }
-class u {
+class c {
     start() {
         let { resolution: e, fps: t } = a.Z.getState();
-        (this._targetResolution = e), (this._targetFPS = t), this._statInterval.start(1000, this._sampleStats), (this._lastLayoutChanged = (0, r.zO)());
+        (this._targetResolution = e), (this._targetFPS = t), this._statInterval.start(l, this._sampleStats), (this._lastLayoutChanged = (0, r.zO)());
     }
     stop() {
         this._statInterval.stop(), (this._streamEnd = (0, r.zO)()), this._incrementLayout(this._lastLayout, (this._streamEnd - this._lastLayoutChanged) / 1000);
@@ -43,13 +44,13 @@ class u {
     getStats() {
         let e = {
             num_layout_changes: this._layoutChanges,
-            duration_layout_fullscreen: l(this._layoutBuckets[s.hVg.FULL_SCREEN]),
-            duration_layout_theatre: l(this._layoutBuckets[s.hVg.THEATRE]),
-            duration_layout_pip: l(this._layoutBuckets[s.hVg.PIP]),
-            duration_layout_popout: l(this._layoutBuckets[s.hVg.POPOUT]),
-            duration_layout_portrait: l(this._layoutBuckets[s.hVg.PORTRAIT]),
-            duration_layout_landscape: l(this._layoutBuckets[s.hVg.LANDSCAPE]),
-            duration_layout_minimized: l(this._layoutBuckets[s.hVg.MINIMIZED])
+            duration_layout_fullscreen: u(this._layoutBuckets[o.hVg.FULL_SCREEN]),
+            duration_layout_theatre: u(this._layoutBuckets[o.hVg.THEATRE]),
+            duration_layout_pip: u(this._layoutBuckets[o.hVg.PIP]),
+            duration_layout_popout: u(this._layoutBuckets[o.hVg.POPOUT]),
+            duration_layout_portrait: u(this._layoutBuckets[o.hVg.PORTRAIT]),
+            duration_layout_landscape: u(this._layoutBuckets[o.hVg.LANDSCAPE]),
+            duration_layout_minimized: u(this._layoutBuckets[o.hVg.MINIMIZED])
         };
         return this._isSender
             ? {
@@ -61,20 +62,20 @@ class u {
             : e;
     }
     constructor(e, t) {
-        o(this, '_statInterval', void 0),
-            o(this, '_isSender', void 0),
-            o(this, '_streamEnd', void 0),
-            o(this, '_targetResolution', 0),
-            o(this, '_targetFPS', 0),
-            o(this, '_streamSettingsChanged', !1),
-            o(this, '_lastLayout', void 0),
-            o(this, '_lastLayoutChanged', 0),
-            o(this, '_layoutChanges', 0),
-            o(this, '_layoutBuckets', void 0),
-            o(this, '_incrementLayout', (e, t) => {
+        s(this, '_statInterval', void 0),
+            s(this, '_isSender', void 0),
+            s(this, '_streamEnd', void 0),
+            s(this, '_targetResolution', 0),
+            s(this, '_targetFPS', 0),
+            s(this, '_streamSettingsChanged', !1),
+            s(this, '_lastLayout', void 0),
+            s(this, '_lastLayoutChanged', 0),
+            s(this, '_layoutChanges', 0),
+            s(this, '_layoutBuckets', void 0),
+            s(this, '_incrementLayout', (e, t) => {
                 null == this._layoutBuckets[e] && (this._layoutBuckets[e] = 0), (this._layoutBuckets[e] += t);
             }),
-            o(this, '_sampleStats', () => {
+            s(this, '_sampleStats', () => {
                 let { resolution: e, fps: t } = a.Z.getState();
                 this._streamSettingsChanged = e !== this._targetResolution || t !== this._targetFPS;
             }),

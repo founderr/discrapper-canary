@@ -1,4 +1,4 @@
-e.exports = function (e) {
+function t(e) {
     let t = {
             className: 'built_in',
             begin: '\\b(void|bool|int8|int16|int32|int64|int|uint8|uint16|uint32|uint64|uint|string|ref|array|double|float|auto|dictionary)'
@@ -97,4 +97,5 @@ e.exports = function (e) {
             ]
         }
     );
-};
+}
+e.exports = t;

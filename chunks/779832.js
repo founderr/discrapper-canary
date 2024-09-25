@@ -1,8 +1,12 @@
+let n = -1,
+    r = (e) => new Promise((e) => e(n)),
+    i = (e) => {};
+function a(e, t) {
+    return e;
+}
 t.ZP = {
-    backgroundTaskIdentifierInvalid: -1,
-    backgroundify: function (e, t) {
-        return e;
-    },
-    startBackgroundTask: (e) => new Promise((e) => e(-1)),
-    endBackgroundTask: (e) => {}
+    backgroundTaskIdentifierInvalid: n,
+    backgroundify: a,
+    startBackgroundTask: r,
+    endBackgroundTask: i
 };

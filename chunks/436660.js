@@ -1,72 +1,72 @@
 n.d(t, {
     Q: function () {
-        return o;
+        return c;
     }
-}),
-    n(571269),
-    n(298267),
-    n(47120);
-var r = n(327432),
-    i = n(91313),
-    a = n(887490),
-    s = n(42530);
-let o = {
-    ...r.YR,
+});
+var r = n(571269);
+var i = n(298267);
+var a = n(47120);
+var o = n(327432),
+    s = n(91313),
+    l = n(887490),
+    u = n(42530);
+let c = {
+    ...o.YR,
     resetSelectionToStart(e) {
-        r.YR.select(e, a.bN.start(e, []));
+        o.YR.select(e, l.bN.start(e, []));
     },
     resetSelectionToEnd(e) {
-        r.YR.select(e, a.bN.end(e, []));
+        o.YR.select(e, l.bN.end(e, []));
     },
     delete(e, t) {
-        let { at: n, distance: i, unit: s, reverse: o = !1, select: l = !1, bounds: u, voids: c } = t;
+        let { at: n, distance: r, unit: i, reverse: a = !1, select: s = !1, bounds: u, voids: c } = t;
         if (null == n) {
             if (null == e.selection) return;
             n = e.selection;
         }
-        let [d, _] = a.M8.isRange(n) ? a.M8.edges(n) : a.bN.edges(e, n);
-        if (null != i || null != s) {
+        let [d, _] = l.M8.isRange(n) ? l.M8.edges(n) : l.bN.edges(e, n);
+        if (null != r || null != i) {
             var E, f, h;
-            if (o) {
+            if (a) {
                 let t =
                     null !==
-                        (E = a.bN.before(e, d, {
-                            distance: i,
-                            unit: s
+                        (E = l.bN.before(e, d, {
+                            distance: r,
+                            unit: i
                         })) && void 0 !== E
                         ? E
-                        : a.bN.start(e, []);
-                if ('character' === s && (null != i ? i : 1) === 1 && a.C0.equals(d.path, _.path)) {
-                    let n = a.bN.leaf(e, d.path),
-                        r = null != n ? n[0].text : '';
-                    r.length > 0 &&
-                        null != r[r.length - 1].match(/[\u0E00-\u0E7F]/) &&
+                        : l.bN.start(e, []);
+                if ('character' === i && (null != r ? r : 1) === 1 && l.C0.equals(d.path, _.path)) {
+                    let n = l.bN.leaf(e, d.path),
+                        i = null != n ? n[0].text : '';
+                    i.length > 0 &&
+                        null != i[i.length - 1].match(/[\u0E00-\u0E7F]/) &&
                         (t =
                             null !==
-                                (f = a.bN.before(e, d, {
-                                    distance: i,
+                                (f = l.bN.before(e, d, {
+                                    distance: r,
                                     unit: 'offset'
                                 })) && void 0 !== f
                                 ? f
-                                : a.bN.start(e, []));
+                                : l.bN.start(e, []));
                 }
                 d = t;
             } else
                 _ =
                     null !==
-                        (h = a.bN.after(e, _, {
-                            distance: i,
-                            unit: s
+                        (h = l.bN.after(e, _, {
+                            distance: r,
+                            unit: i
                         })) && void 0 !== h
                         ? h
-                        : a.bN.end(e, []);
+                        : l.bN.end(e, []);
         }
         if (null != u) {
-            let [e, t] = a.M8.edges(u);
-            a.Jz.isBefore(d, e) && (d = e), a.Jz.isAfter(_, t) && (_ = t);
+            let [e, t] = l.M8.edges(u);
+            l.Jz.isBefore(d, e) && (d = e), l.Jz.isAfter(_, t) && (_ = t);
         }
-        !a.Jz.equals(d, _) &&
-            (r.YR.delete(e, {
+        !l.Jz.equals(d, _) &&
+            (o.YR.delete(e, {
                 at: {
                     anchor: d,
                     focus: _
@@ -74,134 +74,134 @@ let o = {
                 hanging: !0,
                 voids: c
             }),
-            l && a.bN.hasPath(e, d.path) && r.YR.select(e, d));
+            s && l.bN.hasPath(e, d.path) && o.YR.select(e, d));
     },
     textToText(e, t, n) {
-        var i;
-        let s = a.bN.getSelectionOverlap(e, n),
-            [o, l] = a.M8.edges(n),
-            c = null !== (i = a.bN.before(e, o)) && void 0 !== i ? i : a.bN.start(e, []),
-            d = a.bN.after(e, l);
-        a.M8.isExpanded(n) &&
-            r.YR.delete(e, {
+        var r;
+        let i = l.bN.getSelectionOverlap(e, n),
+            [a, s] = l.M8.edges(n),
+            u = null !== (r = l.bN.before(e, a)) && void 0 !== r ? r : l.bN.start(e, []),
+            c = l.bN.after(e, s);
+        l.M8.isExpanded(n) &&
+            o.YR.delete(e, {
                 at: n,
                 voids: !0
             }),
-            r.YR.insertText(e, t, { at: c }),
-            (c = null != c ? c : a.bN.start(e, [])),
-            (d = null != d ? d : a.bN.end(e, [])),
-            u(e, s, c, d, d);
+            o.YR.insertText(e, t, { at: u }),
+            (u = null != u ? u : l.bN.start(e, [])),
+            (c = null != c ? c : l.bN.end(e, [])),
+            _(e, i, u, c, c);
     },
     textToVoid(e, t, n) {
-        let i = a.bN.getSelectionOverlap(e, n),
-            s = a.M8.start(n),
-            o = a.C0.next(s.path),
-            l = {
-                path: a.C0.next(o),
+        let r = l.bN.getSelectionOverlap(e, n),
+            i = l.M8.start(n),
+            a = l.C0.next(i.path),
+            s = {
+                path: l.C0.next(a),
                 offset: 0
             };
-        r.YR.delete(e, {
+        o.YR.delete(e, {
             at: n,
             voids: !0
         }),
-            0 === s.offset && r.YR.insertNodes(e, [{ text: '' }], { at: s.path }),
-            r.YR.insertNodes(e, [t], { at: s }),
-            (!a.bN.hasPath(e, l.path) || !a.LC.isText(a.bN.node(e, l.path)[0])) && r.YR.insertNodes(e, [{ text: '' }], { at: l.path }),
-            u(e, i, s, l, l);
+            0 === i.offset && o.YR.insertNodes(e, [{ text: '' }], { at: i.path }),
+            o.YR.insertNodes(e, [t], { at: i }),
+            (!l.bN.hasPath(e, s.path) || !l.LC.isText(l.bN.node(e, s.path)[0])) && o.YR.insertNodes(e, [{ text: '' }], { at: s.path }),
+            _(e, r, i, s, s);
     },
     textToInline(e, t, n) {
-        let i = a.bN.getSelectionOverlap(e, n),
-            s = t.children[t.children.length - 1],
-            o = a.M8.start(n),
-            l = a.C0.next(o.path),
-            c = {
-                path: a.C0.child(l, t.children.length - 1),
-                offset: a.LC.isText(s) ? s.text.length : 0
+        let r = l.bN.getSelectionOverlap(e, n),
+            i = t.children[t.children.length - 1],
+            a = l.M8.start(n),
+            s = l.C0.next(a.path),
+            u = {
+                path: l.C0.child(s, t.children.length - 1),
+                offset: l.LC.isText(i) ? i.text.length : 0
             };
-        r.YR.delete(e, {
+        o.YR.delete(e, {
             at: n,
             voids: !0
         }),
-            0 === o.offset && r.YR.insertNodes(e, [{ text: '' }], { at: o.path }),
-            r.YR.insertNodes(e, [t], { at: o }),
-            u(e, i, o, c, c);
+            0 === a.offset && o.YR.insertNodes(e, [{ text: '' }], { at: a.path }),
+            o.YR.insertNodes(e, [t], { at: a }),
+            _(e, r, a, u, u);
     },
     voidToText(e, t, n) {
-        var i;
-        let s = a.bN.getSelectionOverlap(e, n),
-            o = null !== (i = a.bN.before(e, n)) && void 0 !== i ? i : a.bN.start(e, []),
-            l = {
-                path: o.path,
-                offset: o.offset + t.length
+        var r;
+        let i = l.bN.getSelectionOverlap(e, n),
+            a = null !== (r = l.bN.before(e, n)) && void 0 !== r ? r : l.bN.start(e, []),
+            s = {
+                path: a.path,
+                offset: a.offset + t.length
             };
-        r.YR.delete(e, {
+        o.YR.delete(e, {
             at: n,
             voids: !0
         }),
-            r.YR.insertText(e, t, { at: o }),
-            u(e, s, o, o, l);
+            o.YR.insertText(e, t, { at: a }),
+            _(e, i, a, a, s);
     },
     removeInline(e, t) {
         var n;
-        let i = a.bN.getSelectionOverlap(e, t),
-            s = null !== (n = a.bN.before(e, t)) && void 0 !== n ? n : a.bN.start(e, []);
-        r.YR.delete(e, {
+        let r = l.bN.getSelectionOverlap(e, t),
+            i = null !== (n = l.bN.before(e, t)) && void 0 !== n ? n : l.bN.start(e, []);
+        o.YR.delete(e, {
             at: t,
             voids: !0
         }),
-            u(e, i, s, s, s);
+            _(e, r, i, i, i);
     },
     removeInlineChildren(e, t) {
-        let [n, i] = t,
-            s = a.bN.getSelectionOverlap(e, i),
-            o = {
-                path: a.C0.child(i, 0),
+        let [n, r] = t,
+            i = l.bN.getSelectionOverlap(e, r),
+            a = {
+                path: l.C0.child(r, 0),
                 offset: 0
             };
-        a.bN.withoutNormalizing(e, () => {
+        l.bN.withoutNormalizing(e, () => {
             for (let t = n.children.length - 1; t >= 0; t--)
-                r.YR.removeNodes(e, {
-                    at: a.C0.child(i, t),
+                o.YR.removeNodes(e, {
+                    at: l.C0.child(r, t),
                     voids: !0
                 });
         }),
-            u(e, s, null, o, null);
+            _(e, i, null, a, null);
     },
     selectCommandOption(e, t) {
         let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-            s = i.cr(e);
-        if (null != s)
-            for (let i = 0; i < s[0].children.length; i++) {
-                let o = s[0].children[i];
-                if (a.aj.isType(o, 'applicationCommandOption') && o.optionName === t) {
-                    n ? r.YR.select(e, [0, i]) : r.YR.select(e, a.bN.end(e, [0, i]));
+            r = s.cr(e);
+        if (null != r)
+            for (let i = 0; i < r[0].children.length; i++) {
+                let a = r[0].children[i];
+                if (l.aj.isType(a, 'applicationCommandOption') && a.optionName === t) {
+                    n ? o.YR.select(e, [0, i]) : o.YR.select(e, l.bN.end(e, [0, i]));
                     return;
                 }
             }
     },
     selectPreviousCommandOption(e) {
-        if (null == i.cr(e)) return;
-        let t = null != e.selection ? e.selection.focus.path : a.bN.end(e, s.YD).path,
-            n = i.HZ(e),
-            o = a.bN.previous(e, {
+        if (null == s.cr(e)) return;
+        let t = null != e.selection ? e.selection.focus.path : l.bN.end(e, u.YD).path,
+            n = s.HZ(e),
+            r = l.bN.previous(e, {
                 at: t,
-                match: (e) => e !== (null == n ? void 0 : n[0]) && a.aj.isType(e, 'applicationCommandOption')
+                match: (e) => e !== (null == n ? void 0 : n[0]) && l.aj.isType(e, 'applicationCommandOption')
             });
-        null != o ? r.YR.select(e, o[1]) : a.C0.isAfter(t, s.u9) && r.YR.select(e, a.bN.end(e, s.u9));
+        null != r ? o.YR.select(e, r[1]) : l.C0.isAfter(t, u.u9) && o.YR.select(e, l.bN.end(e, u.u9));
     },
     selectNextCommandOption(e) {
-        if (null == i.cr(e)) return;
-        let t = null != e.selection ? e.selection.focus.path : a.bN.start(e, s.YD).path,
-            n = i.HZ(e),
-            l = a.bN.next(e, {
+        if (null == s.cr(e)) return;
+        let t = null != e.selection ? e.selection.focus.path : l.bN.start(e, u.YD).path,
+            n = s.HZ(e),
+            r = l.bN.next(e, {
                 at: t,
-                match: (e) => e !== (null == n ? void 0 : n[0]) && a.aj.isType(e, 'applicationCommandOption')
+                match: (e) => e !== (null == n ? void 0 : n[0]) && l.aj.isType(e, 'applicationCommandOption')
             });
-        null != l ? r.YR.select(e, l[1]) : o.resetSelectionToEnd(e);
+        null != r ? o.YR.select(e, r[1]) : c.resetSelectionToEnd(e);
     },
     insertCommandOption(e, t) {
-        o.resetSelectionToEnd(e),
-            o.insertNodes(e, [
+        c.resetSelectionToEnd(e),
+            c.insertNodes(e, [
                 {
                     type: 'applicationCommandOption',
                     optionName: t.name,
@@ -212,37 +212,37 @@ let o = {
             ]);
     },
     keyboardMove(e, t) {
-        let { reverse: n = !1, unit: i = 'character', edge: s } = null != t ? t : {},
-            o = e.selection;
-        if (null == o) return;
-        if (void 0 === s && a.M8.isExpanded(o)) {
-            r.YR.collapse(e, { edge: n ? 'start' : 'end' });
+        let { reverse: n = !1, unit: r = 'character', edge: i } = null != t ? t : {},
+            a = e.selection;
+        if (null == a) return;
+        if (void 0 === i && l.M8.isExpanded(a)) {
+            o.YR.collapse(e, { edge: n ? 'start' : 'end' });
             return;
         }
-        let l = a.bN.leaf(e, o.anchor.path);
-        if (null == l) return;
-        let u = n ? a.bN.before : a.bN.after,
-            c = o.focus;
+        let s = l.bN.leaf(e, a.anchor.path);
+        if (null == s) return;
+        let u = n ? l.bN.before : l.bN.after,
+            c = a.focus;
         for (; null != c; ) {
-            let t = i;
-            n || o.focus.offset !== l[0].text.length ? n && 0 === o.focus.offset && (t = 'offset') : (t = 'offset');
-            let r = u(e, c, { unit: t });
-            if (null == r || a.Jz.equals(c, r)) {
+            let t = r;
+            n || a.focus.offset !== s[0].text.length ? n && 0 === a.focus.offset && (t = 'offset') : (t = 'offset');
+            let i = u(e, c, { unit: t });
+            if (null == i || l.Jz.equals(c, i)) {
                 c = void 0;
                 break;
             }
-            if (((c = r), null == a.bN.getParentVoid(e, c))) break;
+            if (((c = i), null == l.bN.getParentVoid(e, c))) break;
         }
         null != c &&
-            ('focus' === s
-                ? r.YR.setSelection(e, { focus: c })
-                : r.YR.setSelection(e, {
+            ('focus' === i
+                ? o.YR.setSelection(e, { focus: c })
+                : o.YR.setSelection(e, {
                       focus: c,
                       anchor: c
                   }));
     }
 };
-function l(e, t, n, r, i) {
+function d(e, t, n, r, i) {
     switch (t) {
         case 'start':
             return n;
@@ -253,14 +253,15 @@ function l(e, t, n, r, i) {
     }
     return e;
 }
-function u(e, t, n, r, i) {
-    var a, s;
+function _(e, t, n, r, i) {
+    var a, o;
     if (null == t.anchor && null == t.focus) return;
-    let u = l(null === (a = e.selection) || void 0 === a ? void 0 : a.anchor, t.anchor, n, r, i),
-        c = l(null === (s = e.selection) || void 0 === s ? void 0 : s.focus, t.focus, n, r, i);
-    if (null != u && null != c)
-        o.select(e, {
-            anchor: u,
-            focus: c
-        });
+    let s = d(null === (a = e.selection) || void 0 === a ? void 0 : a.anchor, t.anchor, n, r, i),
+        l = d(null === (o = e.selection) || void 0 === o ? void 0 : o.focus, t.focus, n, r, i);
+    if (null == s || null == l) return;
+    let u = {
+        anchor: s,
+        focus: l
+    };
+    c.select(e, u);
 }

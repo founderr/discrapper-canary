@@ -1,39 +1,46 @@
-e.exports = function (e) {
+function t(e) {
     let t = e.regex,
-        n = e.COMMENT(/;/, /$/),
-        r = {
+        n = /^[a-zA-Z][a-zA-Z0-9-]*/,
+        r = ['ALPHA', 'BIT', 'CHAR', 'CR', 'CRLF', 'CTL', 'DIGIT', 'DQUOTE', 'HEXDIG', 'HTAB', 'LF', 'LWSP', 'OCTET', 'SP', 'VCHAR', 'WSP'],
+        i = e.COMMENT(/;/, /$/),
+        a = {
+            scope: 'symbol',
+            match: /%b[0-1]+(-[0-1]+|(\.[0-1]+)+)?/
+        },
+        o = {
+            scope: 'symbol',
+            match: /%d[0-9]+(-[0-9]+|(\.[0-9]+)+)?/
+        },
+        s = {
+            scope: 'symbol',
+            match: /%x[0-9A-F]+(-[0-9A-F]+|(\.[0-9A-F]+)+)?/
+        },
+        l = {
+            scope: 'symbol',
+            match: /%[si](?=".*")/
+        },
+        u = {
             scope: 'attribute',
-            match: t.concat(/^[a-zA-Z][a-zA-Z0-9-]*/, /(?=\s*=)/)
+            match: t.concat(n, /(?=\s*=)/)
         };
     return {
         name: 'Augmented Backus-Naur Form',
         illegal: /[!@#$^&',?+~`|:]/,
-        keywords: ['ALPHA', 'BIT', 'CHAR', 'CR', 'CRLF', 'CTL', 'DIGIT', 'DQUOTE', 'HEXDIG', 'HTAB', 'LF', 'LWSP', 'OCTET', 'SP', 'VCHAR', 'WSP'],
+        keywords: r,
         contains: [
             {
                 scope: 'operator',
                 match: /=\/?/
             },
-            r,
-            n,
-            {
-                scope: 'symbol',
-                match: /%b[0-1]+(-[0-1]+|(\.[0-1]+)+)?/
-            },
-            {
-                scope: 'symbol',
-                match: /%d[0-9]+(-[0-9]+|(\.[0-9]+)+)?/
-            },
-            {
-                scope: 'symbol',
-                match: /%x[0-9A-F]+(-[0-9A-F]+|(\.[0-9A-F]+)+)?/
-            },
-            {
-                scope: 'symbol',
-                match: /%[si](?=".*")/
-            },
+            u,
+            i,
+            a,
+            o,
+            s,
+            l,
             e.QUOTE_STRING_MODE,
             e.NUMBER_MODE
         ]
     };
-};
+}
+e.exports = t;

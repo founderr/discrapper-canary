@@ -2,8 +2,8 @@ var r = n(735250);
 n(470079);
 var i = n(120356),
     a = n.n(i),
-    s = n(913527),
-    o = n.n(s),
+    o = n(913527),
+    s = n.n(o),
     l = n(442837),
     u = n(481060),
     c = n(835473),
@@ -13,29 +13,29 @@ var i = n(120356),
     f = n(823379),
     h = n(689938),
     p = n(789909);
-t.Z = function (e) {
-    let { createdAt: t, participantIds: n, applicationId: i, title: s, guildId: I, className: m } = e,
+function m(e) {
+    let { createdAt: t, participantIds: n, applicationId: i, title: o, guildId: m, className: I } = e,
         T = (0, c.q)(i),
-        S = (0, l.Wu)([E.default], () => {
+        g = (0, l.Wu)([E.default], () => {
             var e;
             return null !== (e = n.map((e) => E.default.getUser(e)).filter(f.lm)) && void 0 !== e ? e : [];
         }),
-        g = null == T ? void 0 : T.name,
-        A = o()(t).fromNow();
+        S = null == T ? void 0 : T.name,
+        A = s()(t).fromNow();
     return null == t
         ? null
         : (0, r.jsxs)('div', {
-              className: a()(m, p.container),
+              className: a()(I, p.container),
               children: [
                   (0, r.jsx)(_.Z, { game: T }),
                   (0, r.jsxs)('div', {
                       className: p.textSection,
                       children: [
-                          null != s && '' !== s
+                          null != o && '' !== o
                               ? (0, r.jsx)(u.Text, {
                                     variant: 'text-md/semibold',
                                     color: 'interactive-active',
-                                    children: s
+                                    children: o
                                 })
                               : (0, r.jsx)(u.Text, {
                                     variant: 'text-md/semibold',
@@ -46,7 +46,7 @@ t.Z = function (e) {
                               variant: 'text-xs/medium',
                               color: 'text-muted',
                               className: p.__invalid_subtitle,
-                              children: [null != g ? ''.concat(g, ' \u2022 ') : null, A]
+                              children: [null != S ? ''.concat(S, ' \u2022 ') : null, A]
                           }),
                           (0, r.jsx)(u.Text, {
                               variant: 'text-xs/medium',
@@ -55,14 +55,15 @@ t.Z = function (e) {
                           })
                       ]
                   }),
-                  null != S &&
-                      S.length > 0 &&
+                  null != g &&
+                      g.length > 0 &&
                       (0, r.jsx)(d.Z, {
                           maxUsers: 4,
-                          users: S,
+                          users: g,
                           className: p.__invalid_facePile,
-                          guildId: I
+                          guildId: m
                       })
               ]
           });
-};
+}
+t.Z = m;

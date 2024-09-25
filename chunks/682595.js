@@ -1,5 +1,5 @@
 var r = n(718043).default;
-(e.exports = function (e, t) {
+function i(e, t) {
     if ('object' != r(e) || !e) return e;
     var n = e[Symbol.toPrimitive];
     if (void 0 !== n) {
@@ -8,6 +8,5 @@ var r = n(718043).default;
         throw TypeError('@@toPrimitive must return a primitive value.');
     }
     return ('string' === t ? String : Number)(e);
-}),
-    (e.exports.__esModule = !0),
-    (e.exports.default = e.exports);
+}
+(e.exports = i), (e.exports.__esModule = !0), (e.exports.default = e.exports);

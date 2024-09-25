@@ -1,3 +1,4 @@
-e.exports = function () {
+function t() {
     (this.__data__ = []), (this.size = 0);
-};
+}
+e.exports = t;

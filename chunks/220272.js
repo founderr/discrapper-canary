@@ -1,4 +1,5 @@
 var r = n(927258);
-t.Z = function () {
+function i() {
     (this.__data__ = r.Z ? (0, r.Z)(null) : {}), (this.size = 0);
-};
+}
+t.Z = i;

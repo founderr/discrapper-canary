@@ -3,13 +3,13 @@ n.d(t, {
         return I;
     },
     Ye: function () {
-        return m;
+        return T;
     },
     bp: function () {
-        return p;
+        return m;
     },
     ml: function () {
-        return h;
+        return p;
     },
     nG: function () {
         return E;
@@ -21,8 +21,8 @@ n.d(t, {
 var r = n(430824),
     i = n(19780),
     a = n(594174),
-    s = n(626135),
-    o = n(981631),
+    o = n(626135),
+    s = n(981631),
     l = n(37113),
     u = n(474936),
     c = n(65154),
@@ -41,10 +41,13 @@ function E(e) {
 function f(e) {
     return null != e.quality || null != e.guildPremiumTier;
 }
-function h(e) {
-    return e.type === c.uA.SOURCE ? d.Z.Messages.SCREENSHARE_SOURCE : d.Z.Messages.SCREENSHARE_RESOLUTION_ABBREVIATED.format({ resolution: e.height });
+function h(e, t, n) {
+    return l.ND.find((r) => (null == r.preset || r.preset === e) && r.resolution === t && r.fps === n);
 }
 function p(e) {
+    return e.type === c.uA.SOURCE ? d.Z.Messages.SCREENSHARE_SOURCE : d.Z.Messages.SCREENSHARE_RESOLUTION_ABBREVIATED.format({ resolution: e.height });
+}
+function m(e) {
     return d.Z.Messages.SCREENSHARE_FPS_ABBREVIATED.format({ fps: e });
 }
 function I(e) {
@@ -55,17 +58,16 @@ function I(e) {
               maxResolution: e.maxResolution
           };
 }
-function m(e, t, n) {
-    var c, d, _;
-    let E = ((c = e), (d = t), (_ = n), l.ND.find((e) => (null == e.preset || e.preset === c) && e.resolution === d && e.fps === _)),
-        f = a.default.getCurrentUser(),
-        h = i.Z.getGuildId(),
-        p = null != h ? r.Z.getGuild(h) : null;
-    s.default.track(o.rMx.STREAM_SETTINGS_UPDATE, {
-        user_premium_tier: null == f ? void 0 : f.premiumType,
-        guild_premium_tier: null == p ? void 0 : p.premiumTier,
-        stream_quality_user_premium_tier: (null == E ? void 0 : E.quality) != null ? u.bg[E.quality] : null,
-        stream_quality_guild_premium_tier: null == E ? void 0 : E.guildPremiumTier,
+function T(e, t, n) {
+    let l = h(e, t, n),
+        c = a.default.getCurrentUser(),
+        d = i.Z.getGuildId(),
+        _ = null != d ? r.Z.getGuild(d) : null;
+    o.default.track(s.rMx.STREAM_SETTINGS_UPDATE, {
+        user_premium_tier: null == c ? void 0 : c.premiumType,
+        guild_premium_tier: null == _ ? void 0 : _.premiumTier,
+        stream_quality_user_premium_tier: (null == l ? void 0 : l.quality) != null ? u.bg[l.quality] : null,
+        stream_quality_guild_premium_tier: null == l ? void 0 : l.guildPremiumTier,
         stream_quality_preset: e,
         stream_quality_resolution: t,
         stream_quality_frame_rate: n

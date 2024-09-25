@@ -1,43 +1,45 @@
 n.d(t, {
     S: function () {
-        return _;
+        return f;
     }
-}),
-    n(47120);
-var r = n(470079),
-    i = n(392711),
-    a = n.n(i),
+});
+var r = n(47120);
+var i = n(470079),
+    a = n(392711),
+    o = n.n(a),
     s = n(941028),
-    o = n(509848),
-    l = n(849522),
-    u = n(439170);
-let c = '@here';
-function d(e) {
+    l = n(509848),
+    u = n(849522),
+    c = n(439170);
+let d = '@here';
+function _(e) {
     return !!(e.length > 1) || !(1 === e.length && 'GROUP' === e[0].type && 'unknown' === e[0].id);
 }
-function _(e, t, n) {
-    let i = (0, l.Z)(),
-        [_, E] = r.useState(!1),
-        f = r.useMemo(
+function E(e, t, n, r) {
+    return !!_(c.ZP.getProps(n, r).groups) || (!(e.length < d.length) && !(e.length > t) && -1 !== e.indexOf(d) && ((0, s.b8)(n, r, l.KV), !0));
+}
+function f(e, t, n) {
+    let r = (0, u.Z)(),
+        [a, s] = i.useState(!1),
+        l = i.useMemo(
             () =>
-                a().debounce(
+                o().debounce(
                     (e) => {
-                        var r, a, l, _;
-                        if (((r = e), (a = i), (l = t), (_ = n), d(u.ZP.getProps(l, _).groups) || (!(r.length < c.length) && !(r.length > a) && -1 !== r.indexOf(c) && ((0, s.b8)(l, _, o.KV), 1)))) E(!0);
+                        E(e, r, t, n) && s(!0);
                     },
                     200,
                     { maxWait: 500 }
                 ),
-            [i, t, n]
+            [r, t, n]
         );
-    r.useEffect(() => {
-        let r = u.ZP.getProps(t, n).groups;
-        if (null != t && !d(r) && !_)
+    i.useEffect(() => {
+        let r = c.ZP.getProps(t, n).groups;
+        if (null != t && !_(r) && !a)
             return (
-                e.addListener('text-changed', f),
+                e.addListener('text-changed', l),
                 () => {
-                    e.removeListener('text-changed', f), f.cancel();
+                    e.removeListener('text-changed', l), l.cancel();
                 }
             );
-    }, [_, f, e, t, n]);
+    }, [a, l, e, t, n]);
 }

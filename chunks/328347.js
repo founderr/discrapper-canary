@@ -1,50 +1,54 @@
 let r;
 var i,
-    a,
-    s,
-    o,
-    l = n(442837),
-    u = n(570140);
-let c = [],
-    d = c,
-    _ = null,
+    a = n(442837),
+    o = n(570140);
+function s(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+let l = [],
+    u = l,
+    c = null,
+    d = (e) => {
+        var t, n;
+        (u = null !== (t = e.analyticsLocations) && void 0 !== t ? t : l), (c = null !== (n = e.analyticsSource) && void 0 !== n ? n : null), (r = e.initialProductSkuId);
+    },
+    _ = (e) => {
+        (u = l), (c = null);
+    },
     E = (e) => {
-        (d = c), (_ = null);
+        e.item.skuId === r && (r = void 0);
     };
-class f extends (o = l.ZP.Store) {
+class f extends (i = a.ZP.Store) {
     get analyticsLocations() {
-        return d;
+        return u;
     }
     get analyticsSource() {
-        return _;
+        return c;
     }
     get initialProductSkuId() {
         return r;
     }
     getAnalytics() {
         return {
-            analyticsLocations: d,
-            analyticsSource: _
+            analyticsLocations: u,
+            analyticsSource: c
         };
     }
 }
-(s = 'CollectiblesShopStore'),
-    (a = 'displayName') in (i = f)
-        ? Object.defineProperty(i, a, {
-              value: s,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (i[a] = s),
-    (t.Z = new f(u.Z, {
-        COLLECTIBLES_SHOP_OPEN: (e) => {
-            var t, n;
-            (d = null !== (t = e.analyticsLocations) && void 0 !== t ? t : c), (_ = null !== (n = e.analyticsSource) && void 0 !== n ? n : null), (r = e.initialProductSkuId);
-        },
-        COLLECTIBLES_SHOP_CLOSE: E,
-        COLLECTIBLES_PRODUCT_DETAILS_OPEN: (e) => {
-            e.item.skuId === r && (r = void 0);
-        },
-        LOGOUT: E
+s(f, 'displayName', 'CollectiblesShopStore'),
+    (t.Z = new f(o.Z, {
+        COLLECTIBLES_SHOP_OPEN: d,
+        COLLECTIBLES_SHOP_CLOSE: _,
+        COLLECTIBLES_PRODUCT_DETAILS_OPEN: E,
+        LOGOUT: _
     }));

@@ -1,105 +1,107 @@
-n(653041);
+var r = n(653041);
 var i = n(735250);
 n(470079);
-var s = n(392711),
-    a = n.n(s),
-    r = n(481060),
+var a = n(392711),
+    o = n.n(a),
+    s = n(481060),
     l = n(100527),
-    o = n(184301),
+    u = n(184301),
     c = n(347475),
-    u = n(463618),
-    d = n(823379),
-    _ = n(960987);
-let E = (e) => {
-    let { member: t, empty: n, guildId: s } = e;
-    return n
-        ? (0, i.jsx)('div', { className: _.partyMemberEmpty })
-        : null == t
-          ? (0, i.jsx)('div', {
-                className: _.partyMemberUnknown,
-                children: (0, i.jsx)(u.Z, { className: _.partyMemberUnknownIcon })
-            })
-          : (0, i.jsx)('div', {
-                className: _.partyMemberKnown,
-                children: (0, i.jsx)(r.Popout, {
-                    preload: () => (0, o.Z)(t.id, t.getAvatarURL(s, 80), { guildId: s }),
-                    renderPopout: (e) =>
-                        (0, i.jsx)(c.Z, {
-                            ...e,
-                            userId: t.id,
-                            guildId: s,
-                            newAnalyticsLocations: [l.Z.AVATAR]
-                        }),
-                    position: 'left',
-                    children: (e) =>
-                        (0, i.jsx)(r.Avatar, {
-                            ...e,
-                            src: t.getAvatarURL(s, 24),
-                            'aria-label': t.username,
-                            size: r.AvatarSizes.SIZE_24,
-                            className: _.partyMember
-                        })
+    d = n(463618),
+    _ = n(823379),
+    E = n(960987);
+let f = 99,
+    h = (e) => {
+        let { member: t, empty: n, guildId: r } = e;
+        return n
+            ? (0, i.jsx)('div', { className: E.partyMemberEmpty })
+            : null == t
+              ? (0, i.jsx)('div', {
+                    className: E.partyMemberUnknown,
+                    children: (0, i.jsx)(d.Z, { className: E.partyMemberUnknownIcon })
                 })
-            });
-};
-t.Z = (e) => {
-    let { partySize: t, members: n, minAvatarsShown: s = 1, maxAvatarsShown: r = 2, guildId: l } = e,
-        { unknownSize: o, totalSize: c, knownSize: u } = t;
-    if (c < s) return null;
-    let I = a()(n)
-        .filter(d.lm)
-        .take(r)
-        .map((e) =>
-            (0, i.jsx)(
-                E,
-                {
-                    member: e,
-                    guildId: l
-                },
-                e.id
+              : (0, i.jsx)('div', {
+                    className: E.partyMemberKnown,
+                    children: (0, i.jsx)(s.Popout, {
+                        preload: () => (0, u.Z)(t.id, t.getAvatarURL(r, 80), { guildId: r }),
+                        renderPopout: (e) =>
+                            (0, i.jsx)(c.Z, {
+                                ...e,
+                                userId: t.id,
+                                guildId: r,
+                                newAnalyticsLocations: [l.Z.AVATAR]
+                            }),
+                        position: 'left',
+                        children: (e) =>
+                            (0, i.jsx)(s.Avatar, {
+                                ...e,
+                                src: t.getAvatarURL(r, 24),
+                                'aria-label': t.username,
+                                size: s.AvatarSizes.SIZE_24,
+                                className: E.partyMember
+                            })
+                    })
+                });
+    },
+    p = (e) => {
+        let { partySize: t, members: n, minAvatarsShown: r = 1, maxAvatarsShown: a = 2, guildId: s } = e,
+            { unknownSize: l, totalSize: u, knownSize: c } = t;
+        if (u < r) return null;
+        let d = o()(n)
+            .filter(_.lm)
+            .take(a)
+            .map((e) =>
+                (0, i.jsx)(
+                    h,
+                    {
+                        member: e,
+                        guildId: s
+                    },
+                    e.id
+                )
             )
-        )
-        .value();
-    for (let e = 0; e < o && I.length < r; e++) I.push((0, i.jsx)(E, { guildId: l }, 'unknown-member-'.concat(e)));
-    let m = c - u - o;
-    for (let e = 0; e < m && I.length < r; e++)
-        I.push(
-            (0, i.jsx)(
-                E,
-                {
-                    empty: !0,
-                    guildId: l
-                },
-                'empty-member-'.concat(e)
-            )
-        );
-    let T = Math.max(Math.min(c - I.length, 99), 0);
-    if (1 === T) {
-        let e = n[r];
-        I.push(
-            (0, i.jsx)(
-                E,
-                {
-                    member: e,
-                    guildId: l
-                },
-                e.id
-            )
-        );
-    }
-    return (0, i.jsx)('div', {
-        className: _.wrapper,
-        children: (0, i.jsxs)('div', {
-            className: _.partyMembers,
-            children: [
-                I,
-                T > 1
-                    ? (0, i.jsxs)('div', {
-                          className: _.partyMemberOverflow,
-                          children: ['+', T]
-                      })
-                    : null
-            ]
-        })
-    });
-};
+            .value();
+        for (let e = 0; e < l && d.length < a; e++) d.push((0, i.jsx)(h, { guildId: s }, 'unknown-member-'.concat(e)));
+        let p = u - c - l;
+        for (let e = 0; e < p && d.length < a; e++)
+            d.push(
+                (0, i.jsx)(
+                    h,
+                    {
+                        empty: !0,
+                        guildId: s
+                    },
+                    'empty-member-'.concat(e)
+                )
+            );
+        let m = Math.max(Math.min(u - d.length, f), 0);
+        if (1 === m) {
+            let e = n[a];
+            d.push(
+                (0, i.jsx)(
+                    h,
+                    {
+                        member: e,
+                        guildId: s
+                    },
+                    e.id
+                )
+            );
+        }
+        return (0, i.jsx)('div', {
+            className: E.wrapper,
+            children: (0, i.jsxs)('div', {
+                className: E.partyMembers,
+                children: [
+                    d,
+                    m > 1
+                        ? (0, i.jsxs)('div', {
+                              className: E.partyMemberOverflow,
+                              children: ['+', m]
+                          })
+                        : null
+                ]
+            })
+        });
+    };
+t.Z = p;

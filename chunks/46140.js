@@ -1,44 +1,46 @@
 n.d(t, {
     Ot: function () {
-        return d;
+        return u;
     },
     R4: function () {
-        return E;
+        return d;
     },
     S7: function () {
-        return c.S;
+        return l.S;
     },
     XZ: function () {
-        return _;
+        return c;
     },
     a_: function () {
-        return u.a;
+        return s.a;
     },
     cd: function () {
-        return s;
+        return i;
     },
     dr: function () {
-        return a;
+        return r;
     }
 });
 var r,
     i,
-    a,
-    s,
-    o = n(758846),
-    l = n(70956),
-    u = n(438954),
-    c = n(670081);
-((r = a || (a = {})).ACTIVITY_PANEL = 'quests_bar_activity_panel'), (r.QUESTS_MANAGER = 'quests_manager'), (r.QUESTS_CONSOLE_OPTIMISTIC_UPDATES_MANAGER = 'quests_console_optimistic_updates_manager'), (r.USER_SETTINGS_GIFT_INVENTORY = 'user_settings_gift_inventory'), (r.USER_SETTINGS_SEARCH_GIFT_INVENTORY = 'user_settings_search_gift_inventory'), (r.USE_QUESTS = 'use_quests'), (r.STREAM_SOURCE_SELECT = 'stream_source_select'), (r.MEMBERS_LIST = 'members_list'), (r.QUESTS_BAR = 'quests_bar'), (r.QUESTS_BAR_MOBILE = 'quests_bar_mobile'), (r.REWARD_CODE_MODAL = 'reward_code_modal'), (r.INGAME_REWARD_MODAL = 'ingame_reward_modal'), (r.QUEST_PREVIEW_TOOL = 'quest_preview_tool'), (r.QUESTS_CARD = 'quests_card'), (r.QUESTS_STORE = 'quests_store'), (r.QUEST_CHANNEL_CALL_HEADER = 'quests_channel_call_header'), (r.QUEST_HOME_DESKTOP = 'quest_home_desktop'), (r.QUEST_HOME_MOBILE = 'quest_home_mobile'), (r.QUEST_PROGRESS_BAR = 'quest_progress_bar'), (r.EMBED_MOBILE = 'embed_mobile'), (r.EMBED_DESKTOP = 'embed_desktop'), (r.QUEST_CONTEXT_MENU = 'context_menu'), (r.CODED_LINK = 'coded_link'), (r.QUEST_DISCLOSURE_MODAL = 'quest_disclosure_modal'), (r.DISCOVERY_SIDEBAR = 'discovery_sidebar'), (r.DISCOVERY_COMPASS = 'discovery_compass');
-let d = l.Z.Millis.MINUTE * o.c.ConsecutiveHeartbeatPeriodMinutes,
-    _ = {
+    a = n(758846),
+    o = n(70956),
+    s = n(438954),
+    l = n(670081);
+!(function (e) {
+    (e.ACTIVITY_PANEL = 'quests_bar_activity_panel'), (e.QUESTS_MANAGER = 'quests_manager'), (e.QUESTS_CONSOLE_OPTIMISTIC_UPDATES_MANAGER = 'quests_console_optimistic_updates_manager'), (e.USER_SETTINGS_GIFT_INVENTORY = 'user_settings_gift_inventory'), (e.USER_SETTINGS_SEARCH_GIFT_INVENTORY = 'user_settings_search_gift_inventory'), (e.USE_QUESTS = 'use_quests'), (e.STREAM_SOURCE_SELECT = 'stream_source_select'), (e.MEMBERS_LIST = 'members_list'), (e.QUESTS_BAR = 'quests_bar'), (e.QUESTS_BAR_MOBILE = 'quests_bar_mobile'), (e.REWARD_CODE_MODAL = 'reward_code_modal'), (e.INGAME_REWARD_MODAL = 'ingame_reward_modal'), (e.QUEST_PREVIEW_TOOL = 'quest_preview_tool'), (e.QUESTS_CARD = 'quests_card'), (e.QUESTS_STORE = 'quests_store'), (e.QUEST_CHANNEL_CALL_HEADER = 'quests_channel_call_header'), (e.QUEST_HOME_DESKTOP = 'quest_home_desktop'), (e.QUEST_HOME_MOBILE = 'quest_home_mobile'), (e.QUEST_PROGRESS_BAR = 'quest_progress_bar'), (e.EMBED_MOBILE = 'embed_mobile'), (e.EMBED_DESKTOP = 'embed_desktop'), (e.QUEST_CONTEXT_MENU = 'context_menu'), (e.CODED_LINK = 'coded_link'), (e.QUEST_DISCLOSURE_MODAL = 'quest_disclosure_modal'), (e.DISCOVERY_SIDEBAR = 'discovery_sidebar'), (e.DISCOVERY_COMPASS = 'discovery_compass');
+})(r || (r = {}));
+let u = o.Z.Millis.MINUTE * a.c.ConsecutiveHeartbeatPeriodMinutes,
+    c = {
         tension: 900,
         friction: 45,
         clamp: !0
     },
-    E = {
+    d = {
         tension: 360,
         friction: 30,
         clamp: !0
     };
-((i = s || (s = {})).CONSOLE = 'CONSOLE'), (i.DESKTOP = 'DESKTOP');
+!(function (e) {
+    (e.CONSOLE = 'CONSOLE'), (e.DESKTOP = 'DESKTOP');
+})(i || (i = {}));

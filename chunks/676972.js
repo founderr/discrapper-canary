@@ -4,9 +4,9 @@ function i(e, t) {
 }
 (i.prototype.update = function (e, t) {
     'string' == typeof e && ((t = t || 'utf8'), (e = r.from(e, t)));
-    for (var n = this._block, i = this._blockSize, a = e.length, s = this._len, o = 0; o < a; ) {
-        for (var l = s % i, u = Math.min(a - o, i - l), c = 0; c < u; c++) n[l + c] = e[o + c];
-        (s += u), (o += u), s % i == 0 && this._update(n);
+    for (var n = this._block, i = this._blockSize, a = e.length, o = this._len, s = 0; s < a; ) {
+        for (var l = o % i, u = Math.min(a - s, i - l), c = 0; c < u; c++) n[l + c] = e[s + c];
+        (o += u), (s += u), o % i == 0 && this._update(n);
     }
     return (this._len += a), this;
 }),
@@ -16,12 +16,13 @@ function i(e, t) {
         var n = 8 * this._len;
         if (n <= 4294967295) this._block.writeUInt32BE(n, this._blockSize - 4);
         else {
-            var r = (4294967295 & n) >>> 0;
-            this._block.writeUInt32BE((n - r) / 4294967296, this._blockSize - 8), this._block.writeUInt32BE(r, this._blockSize - 4);
+            var r = (4294967295 & n) >>> 0,
+                i = (n - r) / 4294967296;
+            this._block.writeUInt32BE(i, this._blockSize - 8), this._block.writeUInt32BE(r, this._blockSize - 4);
         }
         this._update(this._block);
-        var i = this._hash();
-        return e ? i.toString(e) : i;
+        var a = this._hash();
+        return e ? a.toString(e) : a;
     }),
     (i.prototype._update = function () {
         throw Error('_update must be implemented by subclass');

@@ -1,64 +1,63 @@
-n(47120);
-var r = n(735250),
-    i = n(470079),
-    a = n(143927),
+var r = n(47120);
+var i = n(735250),
+    a = n(470079),
+    o = n(143927),
     s = n(260866),
-    o = n(461745),
-    l = n(806966),
-    u = n(28546),
-    c = n(324889);
-let d = i.forwardRef(function (e, t) {
-    let { store: n, hasSendableExpressions: d, onKeyDown: _, gridNavigatorId: E, expressionsListRef: f, defaultSearchPlaceholder: h, emptySearchPlaceholder: p } = e,
-        I = i.useRef(null),
-        [m, T] = (0, u.Iu)((e) => [e.searchQuery, e.isSearchSuggestion], a.Z),
-        S = n.useStore((e) => e.searchPlaceholder),
-        g = n.useStore((e) => e.inspectedExpressionPosition, a.Z),
-        A = i.useCallback(
+    l = n(461745),
+    u = n(806966),
+    c = n(28546),
+    d = n(324889);
+let _ = a.forwardRef(function (e, t) {
+    let { store: n, hasSendableExpressions: r, onKeyDown: _, gridNavigatorId: E, expressionsListRef: f, defaultSearchPlaceholder: h, emptySearchPlaceholder: p } = e,
+        m = a.useRef(null),
+        [I, T] = (0, c.Iu)((e) => [e.searchQuery, e.isSearchSuggestion], o.Z),
+        g = n.useStore((e) => e.searchPlaceholder),
+        S = n.useStore((e) => e.inspectedExpressionPosition, o.Z),
+        A = a.useCallback(
             (e) => {
                 var t;
-                n.setActiveCategoryIndex('' === e ? 0 : l.c), n.setInspectedExpressionPosition(0, 0), n.setSearchPlaceholder(null), (0, u.ql)(e), null === (t = f.current) || void 0 === t || t.scrollTo(0);
+                n.setActiveCategoryIndex('' === e ? 0 : u.c), n.setInspectedExpressionPosition(0, 0), n.setSearchPlaceholder(null), (0, c.ql)(e), null === (t = f.current) || void 0 === t || t.scrollTo(0);
             },
             [f, n]
         ),
-        N = i.useCallback(() => {
-            (0, u.ql)('');
+        v = a.useCallback(() => {
+            (0, c.ql)('');
         }, []);
-    return (
-        i.useImperativeHandle(t, () => ({
-            focus: () => {
-                var e;
-                return null === (e = I.current) || void 0 === e ? void 0 : e.focus();
-            }
-        })),
-        i.useLayoutEffect(() => {
+    a.useImperativeHandle(t, () => ({
+        focus: () => {
+            var e;
+            return null === (e = m.current) || void 0 === e ? void 0 : e.focus();
+        }
+    })),
+        a.useLayoutEffect(() => {
             if (T) {
                 var e;
-                null === (e = I.current) || void 0 === e || e.focus();
+                null === (e = m.current) || void 0 === e || e.focus();
             }
-        }, [T]),
-        (0, r.jsx)('div', {
-            className: c.wrapper,
-            children: (0, r.jsx)(o.ZP, {
-                autoFocus: d,
-                disabled: !d,
-                query: m,
-                ref: I,
-                size: o.ZP.Sizes.MEDIUM,
-                placeholder: null != S ? S : d || null == p ? h : p,
-                onClear: N,
-                onKeyDown: _,
-                onQueryChange: A,
-                className: c.__invalid_searchBar,
-                preventEscapePropagation: !1,
-                useKeyboardNavigation: !1,
-                inputProps: {
-                    'aria-haspopup': 'grid',
-                    'aria-controls': E,
-                    'aria-expanded': !0,
-                    'aria-activedescendant': (0, s.NE)(E, g.columnIndex, g.rowIndex)
-                }
-            })
+        }, [T]);
+    let N = () => (null != g ? g : r || null == p ? h : p);
+    return (0, i.jsx)('div', {
+        className: d.wrapper,
+        children: (0, i.jsx)(l.ZP, {
+            autoFocus: r,
+            disabled: !r,
+            query: I,
+            ref: m,
+            size: l.ZP.Sizes.MEDIUM,
+            placeholder: N(),
+            onClear: v,
+            onKeyDown: _,
+            onQueryChange: A,
+            className: d.__invalid_searchBar,
+            preventEscapePropagation: !1,
+            useKeyboardNavigation: !1,
+            inputProps: {
+                'aria-haspopup': 'grid',
+                'aria-controls': E,
+                'aria-expanded': !0,
+                'aria-activedescendant': (0, s.NE)(E, S.columnIndex, S.rowIndex)
+            }
         })
-    );
+    });
 });
-t.Z = d;
+t.Z = _;

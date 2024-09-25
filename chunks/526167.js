@@ -1,12 +1,12 @@
 n.d(t, {
     hY: function () {
-        return h;
+        return p;
     },
     og: function () {
-        return I;
+        return T;
     },
     rO: function () {
-        return m;
+        return g;
     },
     vu: function () {
         return _;
@@ -15,8 +15,8 @@ n.d(t, {
 var r,
     i,
     a,
-    s,
     o,
+    s,
     l = n(525654),
     u = n.n(l);
 let c = (null !== (r = u().name) && void 0 !== r ? r : 'unknown').toLowerCase(),
@@ -24,16 +24,22 @@ let c = (null !== (r = u().name) && void 0 !== r ? r : 'unknown').toLowerCase(),
 function _() {
     return d;
 }
-let E = 'electron' === c.toLowerCase() ? parseInt(null !== (a = u().version) && void 0 !== a ? a : '', 10) : -1,
-    f = 'firefox' === c.toLowerCase() ? parseInt(null !== (s = u().version) && void 0 !== s ? s : '', 10) : -1;
-function h() {
-    return f;
+let E = 'electron' === c.toLowerCase() ? parseInt(null !== (a = u().version) && void 0 !== a ? a : '', 10) : -1;
+function f() {
+    return E;
 }
-let p = 'edge' === c.toLowerCase() ? parseInt(null !== (o = u().version) && void 0 !== o ? o : '', 10) : -1;
+let h = 'firefox' === c.toLowerCase() ? parseInt(null !== (o = u().version) && void 0 !== o ? o : '', 10) : -1;
+function p() {
+    return h;
+}
+let m = 'edge' === c.toLowerCase() ? parseInt(null !== (s = u().version) && void 0 !== s ? s : '', 10) : -1;
 function I() {
-    return -1 !== d || -1 !== E || -1 !== f || -1 !== p;
+    return m;
 }
-function m() {
+function T() {
+    return -1 !== _() || -1 !== f() || -1 !== p() || -1 !== I();
+}
+function g() {
     var e;
     let t = window.navigator,
         n = t.userAgent.toLowerCase(),

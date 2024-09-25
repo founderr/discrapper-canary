@@ -1,8 +1,8 @@
 var r = n(470079),
     i = n(476400),
     a = n.n(i),
-    s = n(844303),
-    o = n(829307),
+    o = n(844303),
+    s = n(829307),
     l = n(464854),
     u = n(353144),
     c =
@@ -22,9 +22,11 @@ var r = n(470079),
             u = e.direction,
             d = e.pointer,
             _ = e.styles,
-            E = e.className,
-            f = (0, s.default)(
-                (0, o.Z)(
+            E = void 0 === _ ? {} : _,
+            f = e.className,
+            h = void 0 === f ? '' : f,
+            p = (0, o.default)(
+                (0, s.Z)(
                     {
                         default: {
                             picker: {
@@ -35,28 +37,29 @@ var r = n(470079),
                             hue: { radius: '2px' }
                         }
                     },
-                    void 0 === _ ? {} : _
+                    E
                 )
-            );
+            ),
+            m = function (e) {
+                return i({
+                    a: 1,
+                    h: e.h,
+                    l: 0.5,
+                    s: 1
+                });
+            };
         return r.createElement(
             'div',
             {
-                style: f.picker,
-                className: 'hue-picker ' + (void 0 === E ? '' : E)
+                style: p.picker,
+                className: 'hue-picker ' + h
             },
             r.createElement(
                 l.PS,
-                c({}, f.hue, {
+                c({}, p.hue, {
                     hsl: a,
                     pointer: d,
-                    onChange: function (e) {
-                        return i({
-                            a: 1,
-                            h: e.h,
-                            l: 0.5,
-                            s: 1
-                        });
-                    },
+                    onChange: m,
                     direction: u
                 })
             )

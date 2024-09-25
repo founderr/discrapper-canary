@@ -1,18 +1,19 @@
 n.d(t, {
     Z: function () {
-        return r;
+        return i;
     }
-}),
-    n(47120);
-class r {
+});
+var r = n(47120);
+class i {
     toJS() {
         return { ...this };
     }
     set(e, t) {
-        let n = this[e];
-        return t instanceof Date && n instanceof Date && t.getTime() === n.getTime()
+        let n = this,
+            r = n[e];
+        return t instanceof Date && r instanceof Date && t.getTime() === r.getTime()
             ? this
-            : n !== t
+            : r !== t
               ? new this.constructor({
                     ...this,
                     [e]: t
@@ -20,18 +21,20 @@ class r {
               : this;
     }
     merge(e) {
-        let t = null;
-        for (let n in e) {
-            if (!e.hasOwnProperty(n)) continue;
-            let r = this[n],
-                i = e[n];
-            if (!(i instanceof Date) || !(r instanceof Date) || i.getTime() !== r.getTime()) r !== i && (null == t && (t = { ...this }), (t[n] = e[n]));
+        let t = this,
+            n = null;
+        for (let r in e) {
+            if (!e.hasOwnProperty(r)) continue;
+            let i = t[r],
+                a = e[r];
+            if (!(a instanceof Date) || !(i instanceof Date) || a.getTime() !== i.getTime()) i !== a && (null == n && (n = { ...this }), (n[r] = e[r]));
         }
-        return null != t ? new this.constructor(t) : this;
+        return null != n ? new this.constructor(n) : this;
     }
     update(e, t, n) {
         null == n && ((n = t), (t = void 0));
-        let i = this[e];
-        return i instanceof r || (i instanceof Array ? (i = [...i]) : i instanceof Object && (i = { ...i })), void 0 === i && (i = t), this.set(e, n(i));
+        let r = this,
+            a = r[e];
+        return a instanceof i || (a instanceof Array ? (a = [...a]) : a instanceof Object && (a = { ...a })), void 0 === a && (a = t), this.set(e, n(a));
     }
 }

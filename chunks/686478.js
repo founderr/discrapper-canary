@@ -1,21 +1,20 @@
 n.d(t, {
     $_: function () {
-        return l;
+        return s;
     },
     _l: function () {
-        return i;
+        return r;
     },
     jk: function () {
         return o;
     },
     vL: function () {
-        return s;
+        return a;
     }
 });
 var r,
-    i,
-    a = n(786761);
-function s(e) {
+    i = n(786761);
+function a(e) {
     return {
         channelId: e.channel_id,
         messageId: e.message_id,
@@ -31,14 +30,16 @@ function s(e) {
 }
 function o(e) {
     return {
-        message: null != e.message ? (0, a.e5)(e.message) : null,
-        saveData: s(e.save_data)
+        message: null != e.message ? (0, i.e5)(e.message) : null,
+        saveData: a(e.save_data)
     };
 }
-function l(e) {
+function s(e) {
     return {
         channelId: e.channel_id,
         messageId: e.message_id
     };
 }
-((r = i || (i = {})).ALL = 'ALL'), (r.REMINDER = 'REMINDER'), (r.BOOKMARK = 'BOOKMARK');
+!(function (e) {
+    (e.ALL = 'ALL'), (e.REMINDER = 'REMINDER'), (e.BOOKMARK = 'BOOKMARK');
+})(r || (r = {}));

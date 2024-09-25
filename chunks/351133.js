@@ -1,8 +1,8 @@
 var r = n(911969),
     i = n(465343),
     a = n(706454),
-    s = n(117530),
-    o = n(174212),
+    o = n(117530),
+    s = n(174212),
     l = n(456007),
     u = n(581364),
     c = n(689079),
@@ -11,54 +11,16 @@ let _ = {
         [r.jw.SUB_COMMAND]: () => ({ success: !1 }),
         [r.jw.SUB_COMMAND_GROUP]: () => ({ success: !1 }),
         [r.jw.STRING]: (e, t, n) => {
-            var i, a, s;
-            let l =
-                null ===
-                    (i = (function (e) {
-                        switch (e.type) {
-                            case 'emoji':
-                                return e.surrogate;
-                            case 'text':
-                                return e.text;
-                        }
-                    })(e)) || void 0 === i
-                    ? void 0
-                    : i.trim();
+            var i, a, o;
+            let l = null === (i = f(e)) || void 0 === i ? void 0 : i.trim();
             if (t.autocomplete) {
-                let e = o.Z.getAutocompleteLastChoices(n, t.name);
-                null != e && (l = String(null !== (s = null === (a = e.find((e) => e.name === l)) || void 0 === a ? void 0 : a.value) && void 0 !== s ? s : l));
+                let e = s.Z.getAutocompleteLastChoices(n, t.name);
+                null != e && (l = String(null !== (o = null === (a = e.find((e) => e.name === l)) || void 0 === a ? void 0 : a.value) && void 0 !== o ? o : l));
             }
             return null == t.choices || (null != l && t.choices.map((e) => e.displayName).includes(l))
                 ? t.type === r.jw.STRING && (void 0 !== t.minLength || void 0 !== t.maxLength)
                     ? void 0 !== l
-                        ? (function (e, t, n) {
-                              if ((void 0 !== t.minLength && e.length < t.minLength) || (void 0 !== t.maxLength && e.length > t.maxLength)) {
-                                  if (void 0 !== t.maxLength && void 0 !== t.minLength && t.minLength === t.maxLength)
-                                      return {
-                                          success: !1,
-                                          error: n.exactRangeErrorMessage.format({ value: h(t.minLength) })
-                                      };
-                                  if (void 0 !== t.maxLength && void 0 !== t.minLength)
-                                      return {
-                                          success: !1,
-                                          error: n.rangeErrorMessage.format({
-                                              minimum: h(t.minLength),
-                                              maximum: h(t.maxLength)
-                                          })
-                                      };
-                                  else if (void 0 !== t.minLength)
-                                      return {
-                                          success: !1,
-                                          error: n.minErrorMessage.format({ minimum: h(t.minLength) })
-                                      };
-                                  else if (void 0 !== t.maxLength)
-                                      return {
-                                          success: !1,
-                                          error: n.maxErrorMessage.format({ maximum: h(t.maxLength) })
-                                      };
-                              }
-                              return { success: !0 };
-                          })(l, t, {
+                        ? p(l, t, {
                               exactRangeErrorMessage: d.Z.Messages.COMMAND_VALIDATION_STRING_EXACT_RANGE_ERROR,
                               rangeErrorMessage: d.Z.Messages.COMMAND_VALIDATION_STRING_RANGE_ERROR,
                               minErrorMessage: d.Z.Messages.COMMAND_VALIDATION_STRING_MINIMUM_ERROR,
@@ -78,20 +40,20 @@ let _ = {
             let i = e.text.trim();
             if (0 === i.length) return { success: !1 };
             if (null != t.choices) return t.choices.map((e) => e.displayName).includes(i) ? { success: !0 } : { success: !1 };
-            let s = o.Z.getAutocompleteLastChoices(n, t.name);
-            if (null != s && s.map((e) => e.displayName).includes(i)) return { success: !0 };
+            let o = s.Z.getAutocompleteLastChoices(n, t.name);
+            if (null != o && o.map((e) => e.displayName).includes(i)) return { success: !0 };
             let u = Number(l.AS(a.default.locale, i));
-            return !isNaN(u) && Number.isInteger(u) && Number.isSafeInteger(u) ? f(u, t, d.Z.Messages.COMMAND_VALIDATION_NUMBER_RANGE_ERROR, d.Z.Messages.COMMAND_VALIDATION_NUMBER_MINIMUM_ERROR, d.Z.Messages.COMMAND_VALIDATION_NUMBER_MAXIMUM_ERROR) : { success: !1 };
+            return !isNaN(u) && Number.isInteger(u) && Number.isSafeInteger(u) ? h(u, t, d.Z.Messages.COMMAND_VALIDATION_NUMBER_RANGE_ERROR, d.Z.Messages.COMMAND_VALIDATION_NUMBER_MINIMUM_ERROR, d.Z.Messages.COMMAND_VALIDATION_NUMBER_MAXIMUM_ERROR) : { success: !1 };
         },
         [r.jw.NUMBER]: (e, t, n) => {
             if ('text' !== e.type || t.type !== r.jw.NUMBER) return { success: !1 };
             let i = e.text.trim();
             if (0 === i.length) return { success: !1 };
             if (null != t.choices) return t.choices.map((e) => e.displayName).includes(i) ? { success: !0 } : { success: !1 };
-            let s = o.Z.getAutocompleteLastChoices(n, t.name);
-            if (null != s && s.map((e) => e.displayName).includes(i)) return { success: !0 };
+            let o = s.Z.getAutocompleteLastChoices(n, t.name);
+            if (null != o && o.map((e) => e.displayName).includes(i)) return { success: !0 };
             let u = Number(l.AS(a.default.locale, i));
-            return isNaN(u) || u > Number.MAX_SAFE_INTEGER || u < Number.MIN_SAFE_INTEGER ? { success: !1 } : f(u, t, d.Z.Messages.COMMAND_VALIDATION_NUMBER_RANGE_ERROR, d.Z.Messages.COMMAND_VALIDATION_NUMBER_MINIMUM_ERROR, d.Z.Messages.COMMAND_VALIDATION_NUMBER_MAXIMUM_ERROR);
+            return isNaN(u) || u > Number.MAX_SAFE_INTEGER || u < Number.MIN_SAFE_INTEGER ? { success: !1 } : h(u, t, d.Z.Messages.COMMAND_VALIDATION_NUMBER_RANGE_ERROR, d.Z.Messages.COMMAND_VALIDATION_NUMBER_MINIMUM_ERROR, d.Z.Messages.COMMAND_VALIDATION_NUMBER_MAXIMUM_ERROR);
         },
         [r.jw.USER]: (e, t, n, r) => {
             if ('text' !== e.type) return { success: 'userMention' === e.type };
@@ -127,35 +89,71 @@ let _ = {
         },
         [r.jw.ATTACHMENT]: (e, t, n, r, i) => {
             if ('text' !== e.type) return { success: !1 };
-            let a = s.Z.getUpload(n, t.name, (0, u.D7)(i));
+            let a = o.Z.getUpload(n, t.name, (0, u.D7)(i));
             return { success: null != a && a.filename === e.text };
         }
     },
     E = (e) => 'roleMention' === e.type || ('textMention' === e.type && '@everyone' === e.text);
-function f(e, t, n, r, i) {
+function f(e) {
+    switch (e.type) {
+        case 'emoji':
+            return e.surrogate;
+        case 'text':
+            return e.text;
+    }
+}
+function h(e, t, n, r, i) {
     if ((null != t.minValue && e < t.minValue) || (null != t.maxValue && e > t.maxValue)) {
         if (null != t.maxValue && null != t.minValue)
             return {
                 success: !1,
                 error: n.format({
-                    minimum: h(t.minValue),
-                    maximum: h(t.maxValue)
+                    minimum: m(t.minValue),
+                    maximum: m(t.maxValue)
                 })
             };
         if (null != t.minValue)
             return {
                 success: !1,
-                error: r.format({ minimum: h(t.minValue) })
+                error: r.format({ minimum: m(t.minValue) })
             };
         else if (null != t.maxValue)
             return {
                 success: !1,
-                error: i.format({ maximum: h(t.maxValue) })
+                error: i.format({ maximum: m(t.maxValue) })
             };
     }
     return { success: !0 };
 }
-function h(e) {
+function p(e, t, n) {
+    if ((void 0 !== t.minLength && e.length < t.minLength) || (void 0 !== t.maxLength && e.length > t.maxLength)) {
+        if (void 0 !== t.maxLength && void 0 !== t.minLength && t.minLength === t.maxLength)
+            return {
+                success: !1,
+                error: n.exactRangeErrorMessage.format({ value: m(t.minLength) })
+            };
+        if (void 0 !== t.maxLength && void 0 !== t.minLength)
+            return {
+                success: !1,
+                error: n.rangeErrorMessage.format({
+                    minimum: m(t.minLength),
+                    maximum: m(t.maxLength)
+                })
+            };
+        else if (void 0 !== t.minLength)
+            return {
+                success: !1,
+                error: n.minErrorMessage.format({ minimum: m(t.minLength) })
+            };
+        else if (void 0 !== t.maxLength)
+            return {
+                success: !1,
+                error: n.maxErrorMessage.format({ maximum: m(t.maxLength) })
+            };
+    }
+    return { success: !0 };
+}
+function m(e) {
     return e.toLocaleString(d.Z.getLocale(), { useGrouping: !1 });
 }
 t.Z = _;

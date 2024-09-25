@@ -1,97 +1,98 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return I;
     }
-}),
-    n(47120);
+});
+var r = n(47120);
 var i = n(735250),
-    s = n(470079),
-    a = n(392711),
-    r = n.n(a),
+    a = n(470079),
+    o = n(392711),
+    s = n.n(o),
     l = n(442837),
-    o = n(524437),
+    u = n(524437),
     c = n(481060),
-    u = n(317632),
-    d = n(174767),
-    _ = n(240126),
-    E = n(791914),
-    I = n(326838),
-    m = n(689938),
-    T = n(706897);
-function h(e) {
-    let { setTab: t, badgeState: a, closePopout: h } = e,
-        f = (0, l.Wu)([u.Z], () => u.Z.getInvites()),
-        C = (0, l.e7)([u.Z], () => u.Z.getInviteStatuses()),
-        [p, g] = s.useMemo(
+    d = n(317632),
+    _ = n(174767),
+    E = n(240126),
+    f = n(791914),
+    h = n(326838),
+    p = n(689938),
+    m = n(706897);
+function I(e) {
+    let { setTab: t, badgeState: r, closePopout: o } = e,
+        I = (0, l.Wu)([d.Z], () => d.Z.getInvites()),
+        g = (0, l.e7)([d.Z], () => d.Z.getInviteStatuses()),
+        [S, A] = a.useMemo(
             () =>
-                r().partition(f, (e) => {
+                s().partition(I, (e) => {
                     var t;
-                    return (null === (t = C[e.invite_id]) || void 0 === t ? void 0 : t.joinable) !== !1 && (Date.now() - new Date(e.created_at).getTime()) / 1000 < e.ttl;
+                    return (null === (t = g[e.invite_id]) || void 0 === t ? void 0 : t.joinable) !== !1 && (Date.now() - new Date(e.created_at).getTime()) / 1000 < e.ttl;
                 }),
-            [f, C]
+            [I, g]
         );
-    return (s.useEffect(() => {
-        (0, d.sJ)();
+    function v() {
+        (0, c.openModalLazy)(async () => {
+            let { default: e } = await n.e('13111').then(n.bind(n, 93756));
+            return (t) =>
+                (0, i.jsx)(e, {
+                    ...t,
+                    onDelete: async () => {
+                        await t.onClose();
+                    }
+                });
+        });
+    }
+    return (a.useEffect(() => {
+        (0, _.sJ)();
     }),
-    0 === f.length)
+    0 === I.length)
         ? (0, i.jsxs)('div', {
-              className: T.container,
+              className: m.container,
               children: [
-                  (0, i.jsx)(E.Z, {
-                      tab: o.X.GAME_INVITES,
+                  (0, i.jsx)(f.Z, {
+                      tab: u.X.GAME_INVITES,
                       setTab: t,
-                      badgeState: a,
-                      closePopout: h
+                      badgeState: r,
+                      closePopout: o
                   }),
                   (0, i.jsx)('div', {
-                      className: T.__invalid_emptyStateContainer,
-                      children: (0, i.jsx)(_.Z, {
+                      className: m.__invalid_emptyStateContainer,
+                      children: (0, i.jsx)(E.Z, {
                           Icon: c.GameControllerIcon,
-                          header: m.Z.Messages.GAME_INVITES_EMPTY_STATE_TITLE,
-                          tip: m.Z.Messages.GAME_INVITES_EMPTY_STATE_SUBTITLE
+                          header: p.Z.Messages.GAME_INVITES_EMPTY_STATE_TITLE,
+                          tip: p.Z.Messages.GAME_INVITES_EMPTY_STATE_SUBTITLE
                       })
                   })
               ]
           })
         : (0, i.jsxs)('div', {
-              className: T.container,
+              className: m.container,
               children: [
-                  (0, i.jsx)(E.Z, {
-                      tab: o.X.GAME_INVITES,
+                  (0, i.jsx)(f.Z, {
+                      tab: u.X.GAME_INVITES,
                       setTab: t,
-                      badgeState: a,
-                      closePopout: h,
+                      badgeState: r,
+                      closePopout: o,
                       children: (0, i.jsx)(c.CircleIconButton, {
-                          className: T.__invalid_deleteButton,
-                          tooltip: m.Z.Messages.GAME_INVITES_DELETE_ALL,
+                          className: m.__invalid_deleteButton,
+                          tooltip: p.Z.Messages.GAME_INVITES_DELETE_ALL,
                           color: c.CircleIconButtonColors.SECONDARY,
                           icon: (0, i.jsx)(c.TrashIcon, { size: 'xs' }),
-                          onClick: function () {
-                              (0, c.openModalLazy)(async () => {
-                                  let { default: e } = await n.e('13111').then(n.bind(n, 93756));
-                                  return (t) =>
-                                      (0, i.jsx)(e, {
-                                          ...t,
-                                          onDelete: async () => {
-                                              await t.onClose();
-                                          }
-                                      });
-                              });
-                          }
+                          onClick: v
                       })
                   }),
                   (0, i.jsx)(c.AdvancedScrollerThin, {
                       children: (0, i.jsxs)('div', {
-                          className: T.invitesContainer,
+                          className: m.invitesContainer,
                           children: [
-                              p.length > 0 &&
+                              S.length > 0 &&
                                   (0, i.jsxs)(i.Fragment, {
                                       children: [
-                                          (0, i.jsx)(N, { title: m.Z.Messages.GAME_INVITES_RECENT_HEADER }),
+                                          (0, i.jsx)(T, { title: p.Z.Messages.GAME_INVITES_RECENT_HEADER }),
                                           (0, i.jsx)(i.Fragment, {
-                                              children: p.map((e) =>
+                                              children: S.map((e) =>
                                                   (0, i.jsx)(
-                                                      I.Z,
+                                                      h.Z,
                                                       {
                                                           invite: e,
                                                           expired: !1
@@ -102,14 +103,14 @@ function h(e) {
                                           })
                                       ]
                                   }),
-                              g.length > 0 &&
+                              A.length > 0 &&
                                   (0, i.jsxs)(i.Fragment, {
                                       children: [
-                                          (0, i.jsx)(N, { title: m.Z.Messages.GAME_INVITES_EXPIRED_HEADER }),
+                                          (0, i.jsx)(T, { title: p.Z.Messages.GAME_INVITES_EXPIRED_HEADER }),
                                           (0, i.jsx)(i.Fragment, {
-                                              children: g.map((e) =>
+                                              children: A.map((e) =>
                                                   (0, i.jsx)(
-                                                      I.Z,
+                                                      h.Z,
                                                       {
                                                           invite: e,
                                                           expired: !0
@@ -126,18 +127,18 @@ function h(e) {
               ]
           });
 }
-function N(e) {
+function T(e) {
     let { title: t } = e;
     return (0, i.jsxs)('div', {
-        className: T.headerContainer,
+        className: m.headerContainer,
         children: [
             (0, i.jsx)(c.Text, {
-                className: T.headerTitle,
+                className: m.headerTitle,
                 variant: 'text-xs/semibold',
                 color: 'interactive-normal',
                 children: t
             }),
-            (0, i.jsx)('div', { className: T.headerDivider })
+            (0, i.jsx)('div', { className: m.headerDivider })
         ]
     });
 }

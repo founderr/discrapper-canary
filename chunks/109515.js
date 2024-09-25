@@ -1,86 +1,98 @@
 var r = n(475637),
     i = n(925300),
-    a = {
+    a = /^(\d+)(th|st|nd|rd)?/i,
+    o = /\d+/i,
+    s = {
+        narrow: /^(b|a)/i,
+        abbreviated: /^(b\.?\s?c\.?|b\.?\s?c\.?\s?e\.?|a\.?\s?d\.?|c\.?\s?e\.?)/i,
+        wide: /^(before christ|before common era|anno domini|common era)/i
+    },
+    l = {
+        any: [/^b/i, /^(a|c)/i]
+    },
+    u = {
+        narrow: /^[1234]/i,
+        abbreviated: /^q[1234]/i,
+        wide: /^[1234](th|st|nd|rd)? quarter/i
+    },
+    c = {
+        any: [/1/i, /2/i, /3/i, /4/i]
+    },
+    d = {
+        narrow: /^[jfmasond]/i,
+        abbreviated: /^(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)/i,
+        wide: /^(january|february|march|april|may|june|july|august|september|october|november|december)/i
+    },
+    _ = {
+        narrow: [/^j/i, /^f/i, /^m/i, /^a/i, /^m/i, /^j/i, /^j/i, /^a/i, /^s/i, /^o/i, /^n/i, /^d/i],
+        any: [/^ja/i, /^f/i, /^mar/i, /^ap/i, /^may/i, /^jun/i, /^jul/i, /^au/i, /^s/i, /^o/i, /^n/i, /^d/i]
+    },
+    E = {
+        narrow: /^[smtwf]/i,
+        short: /^(su|mo|tu|we|th|fr|sa)/i,
+        abbreviated: /^(sun|mon|tue|wed|thu|fri|sat)/i,
+        wide: /^(sunday|monday|tuesday|wednesday|thursday|friday|saturday)/i
+    },
+    f = {
+        narrow: [/^s/i, /^m/i, /^t/i, /^w/i, /^t/i, /^f/i, /^s/i],
+        any: [/^su/i, /^m/i, /^tu/i, /^w/i, /^th/i, /^f/i, /^sa/i]
+    },
+    h = {
+        narrow: /^(a|p|mi|n|(in the|at) (morning|afternoon|evening|night))/i,
+        any: /^([ap]\.?\s?m\.?|midnight|noon|(in the|at) (morning|afternoon|evening|night))/i
+    },
+    p = {
+        any: {
+            am: /^a/i,
+            pm: /^p/i,
+            midnight: /^mi/i,
+            noon: /^no/i,
+            morning: /morning/i,
+            afternoon: /afternoon/i,
+            evening: /evening/i,
+            night: /night/i
+        }
+    },
+    m = {
         ordinalNumber: (0, i.Z)({
-            matchPattern: /^(\d+)(th|st|nd|rd)?/i,
-            parsePattern: /\d+/i,
+            matchPattern: a,
+            parsePattern: o,
             valueCallback: function (e) {
                 return parseInt(e, 10);
             }
         }),
         era: (0, r.Z)({
-            matchPatterns: {
-                narrow: /^(b|a)/i,
-                abbreviated: /^(b\.?\s?c\.?|b\.?\s?c\.?\s?e\.?|a\.?\s?d\.?|c\.?\s?e\.?)/i,
-                wide: /^(before christ|before common era|anno domini|common era)/i
-            },
+            matchPatterns: s,
             defaultMatchWidth: 'wide',
-            parsePatterns: {
-                any: [/^b/i, /^(a|c)/i]
-            },
+            parsePatterns: l,
             defaultParseWidth: 'any'
         }),
         quarter: (0, r.Z)({
-            matchPatterns: {
-                narrow: /^[1234]/i,
-                abbreviated: /^q[1234]/i,
-                wide: /^[1234](th|st|nd|rd)? quarter/i
-            },
+            matchPatterns: u,
             defaultMatchWidth: 'wide',
-            parsePatterns: {
-                any: [/1/i, /2/i, /3/i, /4/i]
-            },
+            parsePatterns: c,
             defaultParseWidth: 'any',
             valueCallback: function (e) {
                 return e + 1;
             }
         }),
         month: (0, r.Z)({
-            matchPatterns: {
-                narrow: /^[jfmasond]/i,
-                abbreviated: /^(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)/i,
-                wide: /^(january|february|march|april|may|june|july|august|september|october|november|december)/i
-            },
+            matchPatterns: d,
             defaultMatchWidth: 'wide',
-            parsePatterns: {
-                narrow: [/^j/i, /^f/i, /^m/i, /^a/i, /^m/i, /^j/i, /^j/i, /^a/i, /^s/i, /^o/i, /^n/i, /^d/i],
-                any: [/^ja/i, /^f/i, /^mar/i, /^ap/i, /^may/i, /^jun/i, /^jul/i, /^au/i, /^s/i, /^o/i, /^n/i, /^d/i]
-            },
+            parsePatterns: _,
             defaultParseWidth: 'any'
         }),
         day: (0, r.Z)({
-            matchPatterns: {
-                narrow: /^[smtwf]/i,
-                short: /^(su|mo|tu|we|th|fr|sa)/i,
-                abbreviated: /^(sun|mon|tue|wed|thu|fri|sat)/i,
-                wide: /^(sunday|monday|tuesday|wednesday|thursday|friday|saturday)/i
-            },
+            matchPatterns: E,
             defaultMatchWidth: 'wide',
-            parsePatterns: {
-                narrow: [/^s/i, /^m/i, /^t/i, /^w/i, /^t/i, /^f/i, /^s/i],
-                any: [/^su/i, /^m/i, /^tu/i, /^w/i, /^th/i, /^f/i, /^sa/i]
-            },
+            parsePatterns: f,
             defaultParseWidth: 'any'
         }),
         dayPeriod: (0, r.Z)({
-            matchPatterns: {
-                narrow: /^(a|p|mi|n|(in the|at) (morning|afternoon|evening|night))/i,
-                any: /^([ap]\.?\s?m\.?|midnight|noon|(in the|at) (morning|afternoon|evening|night))/i
-            },
+            matchPatterns: h,
             defaultMatchWidth: 'any',
-            parsePatterns: {
-                any: {
-                    am: /^a/i,
-                    pm: /^p/i,
-                    midnight: /^mi/i,
-                    noon: /^no/i,
-                    morning: /morning/i,
-                    afternoon: /afternoon/i,
-                    evening: /evening/i,
-                    night: /night/i
-                }
-            },
+            parsePatterns: p,
             defaultParseWidth: 'any'
         })
     };
-t.Z = a;
+t.Z = m;

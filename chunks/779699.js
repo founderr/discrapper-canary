@@ -2,16 +2,16 @@ var r = n(735250);
 n(470079);
 var i = n(120356),
     a = n.n(i),
-    s = n(481060),
-    o = n(457926),
+    o = n(481060),
+    s = n(457926),
     l = n(689938),
     u = n(578786);
-t.Z = function (e) {
+function c(e) {
     let { iconType: t, children: n } = e,
         i = null;
     switch (t) {
         case 'voice':
-            i = (0, r.jsx)(s.VoiceNormalIcon, {
+            i = (0, r.jsx)(o.VoiceNormalIcon, {
                 size: 'md',
                 color: 'currentColor',
                 className: u.icon,
@@ -19,7 +19,7 @@ t.Z = function (e) {
             });
             break;
         case 'voice-locked':
-            i = (0, r.jsx)(s.LockIcon, {
+            i = (0, r.jsx)(o.LockIcon, {
                 size: 'md',
                 color: 'currentColor',
                 className: u.icon,
@@ -27,7 +27,7 @@ t.Z = function (e) {
             });
             break;
         case 'stage':
-            i = (0, r.jsx)(s.StageIcon, {
+            i = (0, r.jsx)(o.StageIcon, {
                 size: 'lg',
                 color: 'currentColor',
                 className: u.icon,
@@ -35,7 +35,7 @@ t.Z = function (e) {
             });
             break;
         case 'stage-locked':
-            i = (0, r.jsx)(s.LockIcon, {
+            i = (0, r.jsx)(o.LockIcon, {
                 size: 'md',
                 color: 'currentColor',
                 className: u.icon,
@@ -43,7 +43,7 @@ t.Z = function (e) {
             });
             break;
         case 'thread':
-            i = (0, r.jsx)(s.ThreadIcon, {
+            i = (0, r.jsx)(o.ThreadIcon, {
                 size: 'md',
                 color: 'currentColor',
                 className: u.icon,
@@ -51,7 +51,7 @@ t.Z = function (e) {
             });
             break;
         case 'text':
-            i = (0, r.jsx)(s.TextIcon, {
+            i = (0, r.jsx)(o.TextIcon, {
                 size: 'md',
                 color: 'currentColor',
                 className: u.icon,
@@ -59,7 +59,7 @@ t.Z = function (e) {
             });
             break;
         case 'forum':
-            i = (0, r.jsx)(s.ForumIcon, {
+            i = (0, r.jsx)(o.ForumIcon, {
                 size: 'md',
                 color: 'currentColor',
                 className: u.icon,
@@ -67,7 +67,7 @@ t.Z = function (e) {
             });
             break;
         case 'post':
-            i = (0, r.jsx)(s.ChatIcon, {
+            i = (0, r.jsx)(o.ChatIcon, {
                 size: 'md',
                 color: 'currentColor',
                 className: u.icon,
@@ -76,7 +76,7 @@ t.Z = function (e) {
             break;
         case 'home':
         case 'guide':
-            i = (0, r.jsx)(s.SignPostIcon, {
+            i = (0, r.jsx)(o.SignPostIcon, {
                 size: 'md',
                 color: 'currentColor',
                 className: u.icon,
@@ -85,7 +85,7 @@ t.Z = function (e) {
             break;
         case 'browse':
         case 'customize':
-            i = (0, r.jsx)(s.ChannelListMagnifyingGlassIcon, {
+            i = (0, r.jsx)(o.ChannelListMagnifyingGlassIcon, {
                 size: 'md',
                 color: 'currentColor',
                 className: u.icon,
@@ -93,7 +93,7 @@ t.Z = function (e) {
             });
             break;
         case 'message':
-            i = (0, r.jsx)(s.ChatIcon, {
+            i = (0, r.jsx)(o.ChatIcon, {
                 size: 'md',
                 color: 'currentColor',
                 className: u.icon,
@@ -101,7 +101,7 @@ t.Z = function (e) {
             });
             break;
         case 'locked':
-            i = (0, r.jsx)(s.LockIcon, {
+            i = (0, r.jsx)(o.LockIcon, {
                 size: 'md',
                 color: 'currentColor',
                 className: u.icon,
@@ -109,7 +109,7 @@ t.Z = function (e) {
             });
             break;
         case 'media':
-            i = (0, r.jsx)(s.ImageIcon, {
+            i = (0, r.jsx)(o.ImageIcon, {
                 size: 'md',
                 color: 'currentColor',
                 className: u.icon,
@@ -117,7 +117,7 @@ t.Z = function (e) {
             });
             break;
         case 'linked-roles':
-            i = (0, r.jsx)(s.LinkIcon, {
+            i = (0, r.jsx)(o.LinkIcon, {
                 size: 'md',
                 color: 'currentColor',
                 className: u.icon,
@@ -127,7 +127,7 @@ t.Z = function (e) {
     return (0, r.jsxs)('span', {
         className: a()('channelWithIcon', { [u.iconMentionText]: 'text' === t }),
         children: [
-            (0, r.jsx)(o.Z, { children: i }),
+            (0, r.jsx)(s.Z, { children: i }),
             null != n && '' !== n
                 ? (0, r.jsx)('span', {
                       className: u.name,
@@ -136,4 +136,5 @@ t.Z = function (e) {
                 : null
         ]
     });
-};
+}
+t.Z = c;

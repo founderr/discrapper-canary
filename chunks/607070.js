@@ -1,8 +1,8 @@
 var r,
     i = n(442837),
     a = n(433517),
-    s = n(780384),
-    o = n(570140),
+    o = n(780384),
+    s = n(570140),
     l = n(695346),
     u = n(581883),
     c = n(12647),
@@ -55,7 +55,131 @@ let f = {
         20: 'font-size-20',
         24: 'font-size-24'
     };
-class I extends (r = i.ZP.DeviceSettingsStore) {
+function m(e) {
+    return d.yqN.FONT_SIZES.indexOf(e) >= 0 ? e : d.yqN.FONT_SIZE_DEFAULT;
+}
+function I(e) {
+    let t = m(e.fontSize);
+    if (t > d.yqN.FONT_SIZE_MAX || t < d.yqN.FONT_SIZE_MIN || h.fontSize === t) return !1;
+    (h = { ...h }).fontSize = t;
+}
+function T(e) {
+    if (e.zoom < d.yqN.ZOOM_MIN || e.zoom > d.yqN.ZOOM_MAX || h.zoom === e.zoom) return !1;
+    ((h = { ...h }).zoom = e.zoom), c.Z.setZoomFactor(h.zoom);
+}
+function g() {
+    let e = h.fontSize !== d.yqN.FONT_SIZE_DEFAULT,
+        t = h.zoom !== d.yqN.ZOOM_DEFAULT;
+    if (!e && !t) return !1;
+    (h = { ...h }).fontSize !== d.yqN.FONT_SIZE_DEFAULT && (h.fontSize = d.yqN.FONT_SIZE_DEFAULT), h.zoom !== d.yqN.ZOOM_DEFAULT && ((h.zoom = d.yqN.ZOOM_DEFAULT), c.Z.setZoomFactor(h.zoom));
+}
+function S() {
+    if (h.keyboardModeEnabled) return !1;
+    (h = { ...h }).keyboardModeEnabled = !0;
+}
+function A() {
+    if (!h.keyboardModeEnabled) return !1;
+    (h = { ...h }).keyboardModeEnabled = !1;
+}
+function v() {
+    (h = { ...h }).colorblindMode = !h.colorblindMode;
+}
+function N() {
+    (h = { ...h }).lowContrastMode = !h.lowContrastMode;
+}
+function O(e) {
+    h.syncForcedColors = e.syncForcedColors;
+}
+function R(e) {
+    (h = { ...h }).saturation = e.saturation;
+}
+function C() {
+    (h = { ...h }).desaturateUserColors = !h.desaturateUserColors;
+}
+function y(e) {
+    h.roleStyle = e.roleStyle;
+}
+function b() {
+    (h = { ...h }).submitButtonEnabled = !h.submitButtonEnabled;
+}
+function L() {
+    (h = { ...h }).syncProfileThemeWithUserTheme = !h.syncProfileThemeWithUserTheme;
+}
+function D(e) {
+    if (h.systemPrefersReducedMotion === e.systemPrefersReducedMotion) return !1;
+    h = {
+        ...h,
+        systemPrefersReducedMotion: e.systemPrefersReducedMotion
+    };
+}
+function M(e) {
+    if (h.systemPrefersCrossfades === e.systemPrefersCrossfades) return !1;
+    h = {
+        ...h,
+        systemPrefersCrossfades: e.systemPrefersCrossfades
+    };
+}
+function P(e) {
+    if (h.prefersReducedMotion === e.prefersReducedMotion) return !1;
+    h = {
+        ...h,
+        prefersReducedMotion: e.prefersReducedMotion
+    };
+}
+function U(e) {
+    if (h.systemPrefersContrast === e.systemPrefersContrast) return !1;
+    h = {
+        ...h,
+        systemPrefersContrast: e.systemPrefersContrast
+    };
+}
+function w(e) {
+    h = {
+        ...h,
+        alwaysShowLinkDecorations: e.alwaysShowLinkDecorations
+    };
+}
+function x(e) {
+    var t;
+    return (
+        (h = {
+            ...h,
+            systemForcedColors: null !== (t = e.systemForcedColors) && void 0 !== t ? t : 'none'
+        }),
+        !0
+    );
+}
+function G() {
+    h.forcedColorsModalSeen = !0;
+}
+function k() {
+    h = {
+        ...h,
+        keyboardNavigationExplainerModalSeen: !0
+    };
+}
+function B(e) {
+    let { messageGroupSpacing: t } = e;
+    h = {
+        ...h,
+        messageGroupSpacing: t
+    };
+}
+function F(e) {
+    let { contrast: t } = e;
+    h = {
+        ...h,
+        contrast: t
+    };
+}
+function Z(e) {
+    let { hideTags: t } = e;
+    h = {
+        ...h,
+        hideGuildTags: t
+    };
+}
+class V extends (r = i.ZP.DeviceSettingsStore) {
     initialize(e) {
         this.waitFor(u.Z),
             isNaN(
@@ -177,16 +301,16 @@ class I extends (r = i.ZP.DeviceSettingsStore) {
         return h;
     }
 }
-E(I, 'displayName', 'AccessibilityStore'),
-    E(I, 'persistKey', 'AccessibilityStore'),
-    E(I, 'migrations', [
+E(V, 'displayName', 'AccessibilityStore'),
+    E(V, 'persistKey', 'AccessibilityStore'),
+    E(V, 'migrations', [
         () => {
             let e = 'a11yFontScale',
                 t = 'a11yZoom',
                 n = 'a11yColorblindMode',
                 r = a.K.get(e) || 100,
                 i = a.K.get(t) || d.yqN.ZOOM_DEFAULT,
-                s = a.K.get(n) || !1;
+                o = a.K.get(n) || !1;
             return (
                 a.K.remove(e),
                 a.K.remove(t),
@@ -194,7 +318,7 @@ E(I, 'displayName', 'AccessibilityStore'),
                 {
                     fontScale: r,
                     zoom: i,
-                    colorblindMode: s,
+                    colorblindMode: o,
                     keyboardModeEnabled: !1
                 }
             );
@@ -241,7 +365,7 @@ E(I, 'displayName', 'AccessibilityStore'),
         }),
         (e) => ({
             ...e,
-            alwaysShowLinkDecorations: e.saturation <= s.AE
+            alwaysShowLinkDecorations: e.saturation <= o.AE
         }),
         (e) => ({
             ...e,
@@ -254,128 +378,30 @@ E(I, 'displayName', 'AccessibilityStore'),
             return e;
         }
     ]);
-let m = new I(o.Z, {
-    ACCESSIBILITY_SET_FONT_SIZE: function (e) {
-        var t;
-        let n = ((t = e.fontSize), d.yqN.FONT_SIZES.indexOf(t) >= 0 ? t : d.yqN.FONT_SIZE_DEFAULT);
-        if (n > d.yqN.FONT_SIZE_MAX || n < d.yqN.FONT_SIZE_MIN || h.fontSize === n) return !1;
-        (h = { ...h }).fontSize = n;
-    },
-    ACCESSIBILITY_SET_ZOOM: function (e) {
-        if (e.zoom < d.yqN.ZOOM_MIN || e.zoom > d.yqN.ZOOM_MAX || h.zoom === e.zoom) return !1;
-        ((h = { ...h }).zoom = e.zoom), c.Z.setZoomFactor(h.zoom);
-    },
-    ACCESSIBILITY_RESET_TO_DEFAULT: function () {
-        let e = h.fontSize !== d.yqN.FONT_SIZE_DEFAULT,
-            t = h.zoom !== d.yqN.ZOOM_DEFAULT;
-        if (!e && !t) return !1;
-        (h = { ...h }).fontSize !== d.yqN.FONT_SIZE_DEFAULT && (h.fontSize = d.yqN.FONT_SIZE_DEFAULT), h.zoom !== d.yqN.ZOOM_DEFAULT && ((h.zoom = d.yqN.ZOOM_DEFAULT), c.Z.setZoomFactor(h.zoom));
-    },
-    ACCESSIBILITY_KEYBOARD_MODE_ENABLE: function () {
-        if (h.keyboardModeEnabled) return !1;
-        (h = { ...h }).keyboardModeEnabled = !0;
-    },
-    ACCESSIBILITY_KEYBOARD_MODE_DISABLE: function () {
-        if (!h.keyboardModeEnabled) return !1;
-        (h = { ...h }).keyboardModeEnabled = !1;
-    },
-    ACCESSIBILITY_COLORBLIND_TOGGLE: function () {
-        (h = { ...h }).colorblindMode = !h.colorblindMode;
-    },
-    ACCESSIBILITY_LOW_CONTRAST_TOGGLE: function () {
-        (h = { ...h }).lowContrastMode = !h.lowContrastMode;
-    },
-    ACCESSIBILITY_SET_SATURATION: function (e) {
-        (h = { ...h }).saturation = e.saturation;
-    },
-    ACCESSIBILITY_DESATURATE_ROLES_TOGGLE: function () {
-        (h = { ...h }).desaturateUserColors = !h.desaturateUserColors;
-    },
-    ACCESSIBILITY_SYSTEM_COLOR_PREFERENCES_CHANGED: function (e) {
-        var t;
-        return (
-            (h = {
-                ...h,
-                systemForcedColors: null !== (t = e.systemForcedColors) && void 0 !== t ? t : 'none'
-            }),
-            !0
-        );
-    },
-    ACCESSIBILITY_SYSTEM_PREFERS_CONTRAST_CHANGED: function (e) {
-        if (h.systemPrefersContrast === e.systemPrefersContrast) return !1;
-        h = {
-            ...h,
-            systemPrefersContrast: e.systemPrefersContrast
-        };
-    },
-    ACCESSIBILITY_SYSTEM_PREFERS_REDUCED_MOTION_CHANGED: function (e) {
-        if (h.systemPrefersReducedMotion === e.systemPrefersReducedMotion) return !1;
-        h = {
-            ...h,
-            systemPrefersReducedMotion: e.systemPrefersReducedMotion
-        };
-    },
-    ACCESSIBILITY_SYSTEM_PREFERS_CROSSFADES_CHANGED: function (e) {
-        if (h.systemPrefersCrossfades === e.systemPrefersCrossfades) return !1;
-        h = {
-            ...h,
-            systemPrefersCrossfades: e.systemPrefersCrossfades
-        };
-    },
-    ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION: function (e) {
-        if (h.prefersReducedMotion === e.prefersReducedMotion) return !1;
-        h = {
-            ...h,
-            prefersReducedMotion: e.prefersReducedMotion
-        };
-    },
-    ACCESSIBILITY_SET_SYNC_FORCED_COLORS: function (e) {
-        h.syncForcedColors = e.syncForcedColors;
-    },
-    ACCESSIBILITY_SET_ALWAYS_SHOW_LINK_DECORATIONS: function (e) {
-        h = {
-            ...h,
-            alwaysShowLinkDecorations: e.alwaysShowLinkDecorations
-        };
-    },
-    ACCESSIBILITY_SET_ROLE_STYLE: function (e) {
-        h.roleStyle = e.roleStyle;
-    },
-    ACCESSIBILITY_FORCED_COLORS_MODAL_SEEN: function () {
-        h.forcedColorsModalSeen = !0;
-    },
-    KEYBOARD_NAVIGATION_EXPLAINER_MODAL_SEEN: function () {
-        h = {
-            ...h,
-            keyboardNavigationExplainerModalSeen: !0
-        };
-    },
-    ACCESSIBILITY_SET_MESSAGE_GROUP_SPACING: function (e) {
-        let { messageGroupSpacing: t } = e;
-        h = {
-            ...h,
-            messageGroupSpacing: t
-        };
-    },
-    ACCESSIBILITY_SUBMIT_BUTTON_TOGGLE: function () {
-        (h = { ...h }).submitButtonEnabled = !h.submitButtonEnabled;
-    },
-    ACCESSIBILITY_SYNC_PROFILE_THEME_WITH_USER_THEME_TOGGLE: function () {
-        (h = { ...h }).syncProfileThemeWithUserTheme = !h.syncProfileThemeWithUserTheme;
-    },
-    ACCESSIBILITY_SET_CONTRAST: function (e) {
-        let { contrast: t } = e;
-        h = {
-            ...h,
-            contrast: t
-        };
-    },
-    ACCESSIBILITY_SET_HIDE_TAGS: function (e) {
-        let { hideTags: t } = e;
-        h = {
-            ...h,
-            hideGuildTags: t
-        };
-    }
+let H = new V(s.Z, {
+    ACCESSIBILITY_SET_FONT_SIZE: I,
+    ACCESSIBILITY_SET_ZOOM: T,
+    ACCESSIBILITY_RESET_TO_DEFAULT: g,
+    ACCESSIBILITY_KEYBOARD_MODE_ENABLE: S,
+    ACCESSIBILITY_KEYBOARD_MODE_DISABLE: A,
+    ACCESSIBILITY_COLORBLIND_TOGGLE: v,
+    ACCESSIBILITY_LOW_CONTRAST_TOGGLE: N,
+    ACCESSIBILITY_SET_SATURATION: R,
+    ACCESSIBILITY_DESATURATE_ROLES_TOGGLE: C,
+    ACCESSIBILITY_SYSTEM_COLOR_PREFERENCES_CHANGED: x,
+    ACCESSIBILITY_SYSTEM_PREFERS_CONTRAST_CHANGED: U,
+    ACCESSIBILITY_SYSTEM_PREFERS_REDUCED_MOTION_CHANGED: D,
+    ACCESSIBILITY_SYSTEM_PREFERS_CROSSFADES_CHANGED: M,
+    ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION: P,
+    ACCESSIBILITY_SET_SYNC_FORCED_COLORS: O,
+    ACCESSIBILITY_SET_ALWAYS_SHOW_LINK_DECORATIONS: w,
+    ACCESSIBILITY_SET_ROLE_STYLE: y,
+    ACCESSIBILITY_FORCED_COLORS_MODAL_SEEN: G,
+    KEYBOARD_NAVIGATION_EXPLAINER_MODAL_SEEN: k,
+    ACCESSIBILITY_SET_MESSAGE_GROUP_SPACING: B,
+    ACCESSIBILITY_SUBMIT_BUTTON_TOGGLE: b,
+    ACCESSIBILITY_SYNC_PROFILE_THEME_WITH_USER_THEME_TOGGLE: L,
+    ACCESSIBILITY_SET_CONTRAST: F,
+    ACCESSIBILITY_SET_HIDE_TAGS: Z
 });
-t.Z = m;
+t.Z = H;

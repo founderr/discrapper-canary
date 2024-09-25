@@ -1,7 +1,7 @@
-n(724458);
 var r,
-    i = n(442837),
-    a = n(570140);
+    i = n(724458);
+var a = n(442837),
+    o = n(570140);
 function s(e, t, n) {
     return (
         t in e
@@ -15,54 +15,58 @@ function s(e, t, n) {
         e
     );
 }
-let o = {},
-    l = null,
-    u = null;
-function c(e, t) {
-    null == t ? e in o && delete o[e] : null != e && (o[e] = t);
+let l = {},
+    u = null,
+    c = null;
+function d(e, t) {
+    null == t ? e in l && delete l[e] : null != e && (l[e] = t);
 }
-function d(e) {
+function _(e) {
+    let { required_actions: t, user_id: n } = e;
+    d((u = n), t);
+}
+function E(e) {
     let { user: t } = e;
-    u = t.id;
+    c = t.id;
 }
-class _ extends (r = i.ZP.PersistedStore) {
+function f(e) {
+    let { userId: t } = e;
+    d(t, null);
+}
+function h(e) {
+    let { isSwitchingAccount: t } = e;
+    !t && null != c && d(c, null);
+}
+function p(e) {
+    let { userId: t } = e;
+    d(t, null);
+}
+class m extends (r = a.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (o = e);
+        null != e && (l = e);
     }
     requiredActions(e) {
         var t;
-        return null !== (t = o[e]) && void 0 !== t ? t : null;
+        return null !== (t = l[e]) && void 0 !== t ? t : null;
     }
     requiredActionsIncludes(e, t) {
         let n = this.requiredActions(e);
         return null != n && t.reduce((e, t) => e || n.includes(t), !1);
     }
     wasLoginAttemptedInSession(e) {
-        return l === e;
+        return u === e;
     }
     getState() {
-        return o;
+        return l;
     }
 }
-s(_, 'displayName', 'LoginRequiredActionStore'),
-    s(_, 'persistKey', 'LoginRequiredActionStore'),
-    (t.Z = new _(a.Z, {
-        LOGIN_ATTEMPTED: function (e) {
-            let { required_actions: t, user_id: n } = e;
-            c((l = n), t);
-        },
-        CONNECTION_OPEN: d,
-        CURRENT_USER_UPDATE: d,
-        LOGOUT: function (e) {
-            let { isSwitchingAccount: t } = e;
-            !t && null != u && c(u, null);
-        },
-        PASSWORD_UPDATED: function (e) {
-            let { userId: t } = e;
-            c(t, null);
-        },
-        MULTI_ACCOUNT_REMOVE_ACCOUNT: function (e) {
-            let { userId: t } = e;
-            c(t, null);
-        }
+s(m, 'displayName', 'LoginRequiredActionStore'),
+    s(m, 'persistKey', 'LoginRequiredActionStore'),
+    (t.Z = new m(o.Z, {
+        LOGIN_ATTEMPTED: _,
+        CONNECTION_OPEN: E,
+        CURRENT_USER_UPDATE: E,
+        LOGOUT: h,
+        PASSWORD_UPDATED: f,
+        MULTI_ACCOUNT_REMOVE_ACCOUNT: p
     }));

@@ -2,16 +2,15 @@ n.d(t, {
     Z: function () {
         return l;
     }
-}),
-    n(47120);
+});
 var r,
-    i,
-    a = n(470079),
-    s = n(695346),
-    o = n(768581);
+    i = n(47120);
+var a = n(470079),
+    o = n(695346),
+    s = n(768581);
 function l(e) {
     let { displayProfile: t, size: n, canAnimate: r, pendingBanner: i } = e,
-        l = s.QK.getSetting(),
+        l = o.QK.getSetting(),
         u = null == t ? void 0 : t.getPreviewBanner(i, r, n),
         [c, d] = (0, a.useState)((null == t ? void 0 : t.banner) == null ? 'COMPLETE' : 'SHOULD_LOAD');
     return (
@@ -24,7 +23,7 @@ function l(e) {
         (0, a.useEffect)(() => {
             if (l) return;
             let e = null == t ? void 0 : t.getPreviewBanner(i, !0, n);
-            if (null != e && !!(0, o.F8)(e)) new Image().src = e;
+            if (null != e && !!(0, s.F8)(e)) new Image().src = e;
         }, [l, t, n, i]),
         {
             bannerSrc: u,
@@ -32,4 +31,6 @@ function l(e) {
         }
     );
 }
-((i = r || (r = {})).SHOULD_LOAD = 'SHOULD_LOAD'), (i.LOADING = 'LOADING'), (i.COMPLETE = 'COMPLETE');
+!(function (e) {
+    (e.SHOULD_LOAD = 'SHOULD_LOAD'), (e.LOADING = 'LOADING'), (e.COMPLETE = 'COMPLETE');
+})(r || (r = {}));

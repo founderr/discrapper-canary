@@ -1,21 +1,22 @@
 var r = n(620014),
     i = n(525425),
     a = n(51431),
-    s = n(36572),
-    o = n(706627),
+    o = n(36572),
+    s = n(706627),
     l = n(453342),
     u = n(292065);
-e.exports = function e(t, n, c, d, _) {
-    if (t !== n)
+function c(e, t, n, d, _) {
+    if (e !== t)
         a(
-            n,
+            t,
             function (a, l) {
-                if ((_ || (_ = new r()), o(a))) s(t, n, l, c, e, d, _);
+                if ((_ || (_ = new r()), s(a))) o(e, t, l, n, c, d, _);
                 else {
-                    var E = d ? d(u(t, l), a, l + '', t, n, _) : void 0;
-                    void 0 === E && (E = a), i(t, l, E);
+                    var E = d ? d(u(e, l), a, l + '', e, t, _) : void 0;
+                    void 0 === E && (E = a), i(e, l, E);
                 }
             },
             l
         );
-};
+}
+e.exports = c;

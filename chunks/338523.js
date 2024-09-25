@@ -1,4 +1,4 @@
-e.exports = function (e) {
+function t(e) {
     let t = '[a-zA-Z-_][^\\n{]+\\{',
         n = {
             className: 'attribute',
@@ -47,4 +47,5 @@ e.exports = function (e) {
             e.HASH_COMMENT_MODE
         ]
     };
-};
+}
+e.exports = t;

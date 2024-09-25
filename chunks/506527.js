@@ -1,4 +1,4 @@
-e.exports = function (e) {
+function t(e) {
     let t = e.regex,
         n = {
             className: 'title.function.invoke',
@@ -6,17 +6,19 @@ e.exports = function (e) {
             begin: t.concat(/\b/, /(?!let\b)/, e.IDENT_RE, t.lookahead(/\s*\(/))
         },
         r = '([ui](8|16|32|64|128|size)|f(32|64))?',
-        i = ['drop ', 'Copy', 'Send', 'Sized', 'Sync', 'Drop', 'Fn', 'FnMut', 'FnOnce', 'ToOwned', 'Clone', 'Debug', 'PartialEq', 'PartialOrd', 'Eq', 'Ord', 'AsRef', 'AsMut', 'Into', 'From', 'Default', 'Iterator', 'Extend', 'IntoIterator', 'DoubleEndedIterator', 'ExactSizeIterator', 'SliceConcatExt', 'ToString', 'assert!', 'assert_eq!', 'bitflags!', 'bytes!', 'cfg!', 'col!', 'concat!', 'concat_idents!', 'debug_assert!', 'debug_assert_eq!', 'env!', 'panic!', 'file!', 'format!', 'format_args!', 'include_bytes!', 'include_str!', 'line!', 'local_data_key!', 'module_path!', 'option_env!', 'print!', 'println!', 'select!', 'stringify!', 'try!', 'unimplemented!', 'unreachable!', 'vec!', 'write!', 'writeln!', 'macro_rules!', 'assert_ne!', 'debug_assert_ne!'],
-        a = ['i8', 'i16', 'i32', 'i64', 'i128', 'isize', 'u8', 'u16', 'u32', 'u64', 'u128', 'usize', 'f32', 'f64', 'str', 'char', 'bool', 'Box', 'Option', 'Result', 'String', 'Vec'];
+        i = ['abstract', 'as', 'async', 'await', 'become', 'box', 'break', 'const', 'continue', 'crate', 'do', 'dyn', 'else', 'enum', 'extern', 'false', 'final', 'fn', 'for', 'if', 'impl', 'in', 'let', 'loop', 'macro', 'match', 'mod', 'move', 'mut', 'override', 'priv', 'pub', 'ref', 'return', 'self', 'Self', 'static', 'struct', 'super', 'trait', 'true', 'try', 'type', 'typeof', 'unsafe', 'unsized', 'use', 'virtual', 'where', 'while', 'yield'],
+        a = ['true', 'false', 'Some', 'None', 'Ok', 'Err'],
+        o = ['drop ', 'Copy', 'Send', 'Sized', 'Sync', 'Drop', 'Fn', 'FnMut', 'FnOnce', 'ToOwned', 'Clone', 'Debug', 'PartialEq', 'PartialOrd', 'Eq', 'Ord', 'AsRef', 'AsMut', 'Into', 'From', 'Default', 'Iterator', 'Extend', 'IntoIterator', 'DoubleEndedIterator', 'ExactSizeIterator', 'SliceConcatExt', 'ToString', 'assert!', 'assert_eq!', 'bitflags!', 'bytes!', 'cfg!', 'col!', 'concat!', 'concat_idents!', 'debug_assert!', 'debug_assert_eq!', 'env!', 'panic!', 'file!', 'format!', 'format_args!', 'include_bytes!', 'include_str!', 'line!', 'local_data_key!', 'module_path!', 'option_env!', 'print!', 'println!', 'select!', 'stringify!', 'try!', 'unimplemented!', 'unreachable!', 'vec!', 'write!', 'writeln!', 'macro_rules!', 'assert_ne!', 'debug_assert_ne!'],
+        s = ['i8', 'i16', 'i32', 'i64', 'i128', 'isize', 'u8', 'u16', 'u32', 'u64', 'u128', 'usize', 'f32', 'f64', 'str', 'char', 'bool', 'Box', 'Option', 'Result', 'String', 'Vec'];
     return {
         name: 'Rust',
         aliases: ['rs'],
         keywords: {
             $pattern: e.IDENT_RE + '!?',
-            type: a,
-            keyword: ['abstract', 'as', 'async', 'await', 'become', 'box', 'break', 'const', 'continue', 'crate', 'do', 'dyn', 'else', 'enum', 'extern', 'false', 'final', 'fn', 'for', 'if', 'impl', 'in', 'let', 'loop', 'macro', 'match', 'mod', 'move', 'mut', 'override', 'priv', 'pub', 'ref', 'return', 'self', 'Self', 'static', 'struct', 'super', 'trait', 'true', 'try', 'type', 'typeof', 'unsafe', 'unsized', 'use', 'virtual', 'where', 'while', 'yield'],
-            literal: ['true', 'false', 'Some', 'None', 'Ok', 'Err'],
-            built_in: i
+            type: s,
+            keyword: i,
+            literal: a,
+            built_in: o
         },
         illegal: '</',
         contains: [
@@ -92,8 +94,8 @@ e.exports = function (e) {
                 begin: e.IDENT_RE + '::',
                 keywords: {
                     keyword: 'Self',
-                    built_in: i,
-                    type: a
+                    built_in: o,
+                    type: s
                 }
             },
             {
@@ -103,4 +105,5 @@ e.exports = function (e) {
             n
         ]
     };
-};
+}
+e.exports = t;

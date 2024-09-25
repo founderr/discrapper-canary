@@ -1,34 +1,35 @@
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var s = n(442837),
+var i = n(442837),
     a = n(481060),
-    r = n(204418),
-    l = n(594174),
-    o = n(113434),
-    c = n(46140),
-    u = n(182294),
+    o = n(204418),
+    s = n(594174),
+    l = n(113434),
+    u = n(46140),
+    c = n(182294),
     d = n(52539);
-let _ = () => (0, i.jsx)('div', { className: d.questsCollectibleReward }),
+let _ = () => (0, r.jsx)('div', { className: d.questsCollectibleReward }),
     E = (e) => {
-        let { questConfig: t, fallback: n, isFocused: c } = e,
-            _ = (0, s.e7)([l.default], () => l.default.getCurrentUser()),
-            { avatarDecoration: E, isFetching: I } = (0, o.DU)(t);
-        return I
-            ? (0, i.jsx)('div', {
+        let { questConfig: t, fallback: n, isFocused: u } = e,
+            _ = (0, i.e7)([s.default], () => s.default.getCurrentUser()),
+            { avatarDecoration: E, isFetching: f } = (0, l.DU)(t);
+        return f
+            ? (0, r.jsx)('div', {
                   className: d.questsCollectibleReward,
-                  children: (0, i.jsx)(a.Spinner, {})
+                  children: (0, r.jsx)(a.Spinner, {})
               })
             : null == _ || null == E
               ? n
-              : (0, i.jsx)('div', {
+              : (0, r.jsx)('div', {
                     className: d.questsCollectibleReward,
-                    children: (0, i.jsx)(r.Z, {
-                        avatarSize: u.EF.SIZE_56,
+                    children: (0, r.jsx)(o.Z, {
+                        avatarSize: c.EF.SIZE_56,
                         user: _,
                         guildId: null,
                         avatarDecorationOverride: E,
-                        animateOnHover: !c
+                        animateOnHover: !u
                     })
                 });
-    };
-t.Z = (e) => (e.questConfig.features.includes(c.S7.FRACTIONS_QUEST) ? (0, i.jsx)(_, {}) : (0, i.jsx)(E, { ...e }));
+    },
+    f = (e) => (e.questConfig.features.includes(u.S7.FRACTIONS_QUEST) ? (0, r.jsx)(_, {}) : (0, r.jsx)(E, { ...e }));
+t.Z = f;

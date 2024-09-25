@@ -1,16 +1,17 @@
 n.d(t, {
     Z: function () {
-        return u;
+        return _;
     }
-}),
-    n(47120);
+});
+var r = n(47120);
 var i = n(735250),
-    s = n(470079),
-    a = n(887024);
-let r = [n(123353)],
+    a = n(470079),
+    o = n(887024);
+let s = [n(123353)],
     l = ['#FFFFFF'],
-    o = 1000 / 60,
-    c = {
+    u = 6,
+    c = 1000 / 60,
+    d = {
         velocity: {
             type: 'static-random',
             minValue: {
@@ -62,50 +63,50 @@ let r = [n(123353)],
             value: 0.3
         }
     };
-function u(e) {
-    let { className: t, firing: n = !0, wind: u = 2, sprites: d = r, spriteColors: _ = l, confettiConfig: E } = e,
-        [I, m] = s.useState(null),
-        [T, h] = s.useState(null),
-        N = (0, a.uR)(T, I),
-        f = s.useMemo(() => new a.qA({ wind: u }), [u]),
-        C = s.useCallback(() => {
-            let e = null == T ? void 0 : T.getCanvas();
+function _(e) {
+    let { className: t, firing: n = !0, wind: r = 2, sprites: _ = s, spriteColors: E = l, confettiConfig: f } = e,
+        [h, p] = a.useState(null),
+        [m, I] = a.useState(null),
+        T = (0, o.uR)(m, h),
+        g = a.useMemo(() => new o.qA({ wind: r }), [r]),
+        S = a.useCallback(() => {
+            let e = null == m ? void 0 : m.getCanvas();
             if (null == e) return;
             let t = e.getBoundingClientRect();
-            N.createConfetti({
-                ...c,
-                ...E,
+            T.createConfetti({
+                ...d,
+                ...f,
                 position: {
                     type: 'static-random',
                     minValue: {
                         x: -t.width / 2,
-                        y: -6
+                        y: -u
                     },
                     maxValue: {
                         x: t.width,
-                        y: -6
+                        y: -u
                     }
                 }
             });
-        }, [N, T, E]);
+        }, [T, m, f]);
     return (
-        s.useEffect(() => {
-            let e = n ? setInterval(C, o) : null;
+        a.useEffect(() => {
+            let e = n ? setInterval(S, c) : null;
             return () => clearInterval(e);
-        }, [n, C]),
+        }, [n, S]),
         (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(a.O_, {
-                    ref: h,
+                (0, i.jsx)(o.O_, {
+                    ref: I,
                     className: t,
-                    environment: f
+                    environment: g
                 }),
-                (0, i.jsx)(a.Ji, {
-                    ref: m,
-                    colors: _,
-                    sprites: d,
-                    spriteWidth: 6,
-                    spriteHeight: 6
+                (0, i.jsx)(o.Ji, {
+                    ref: p,
+                    colors: E,
+                    sprites: _,
+                    spriteWidth: u,
+                    spriteHeight: u
                 })
             ]
         })

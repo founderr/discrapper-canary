@@ -2,13 +2,12 @@ n.d(t, {
     zU: function () {
         return r;
     }
-}),
-    n(47120);
+});
 var r,
     i,
-    a,
-    s = n(442837),
-    o = n(570140);
+    a = n(47120);
+var o = n(442837),
+    s = n(570140);
 function l(e, t, n) {
     return (
         t in e
@@ -22,7 +21,9 @@ function l(e, t, n) {
         e
     );
 }
-((a = r || (r = {}))[(a.MESSAGING = 0)] = 'MESSAGING'), (a[(a.OVERLAYS = 1)] = 'OVERLAYS'), (a[(a.PREMIUM = 2)] = 'PREMIUM'), (a[(a.REPORTING = 3)] = 'REPORTING');
+!(function (e) {
+    (e[(e.MESSAGING = 0)] = 'MESSAGING'), (e[(e.OVERLAYS = 1)] = 'OVERLAYS'), (e[(e.PREMIUM = 2)] = 'PREMIUM'), (e[(e.REPORTING = 3)] = 'REPORTING');
+})(r || (r = {}));
 let u = {
         visual_effect_view_overrides: {
             label: 'Blur view overrides for designers to test with',
@@ -58,7 +59,10 @@ let u = {
         }
     },
     c = {};
-class d extends (i = s.ZP.DeviceSettingsStore) {
+function d(e) {
+    c[e.toggle] = e.value;
+}
+class _ extends (i = o.ZP.DeviceSettingsStore) {
     getUserAgnosticState() {
         return { toggleStates: c };
     }
@@ -91,10 +95,4 @@ class d extends (i = s.ZP.DeviceSettingsStore) {
             });
     }
 }
-l(d, 'displayName', 'DevToolsDevSettingsStore'),
-    l(d, 'persistKey', 'DevToolsDevSettingsStore'),
-    (t.ZP = new d(o.Z, {
-        DEV_TOOLS_DEV_SETTING_SET: function (e) {
-            c[e.toggle] = e.value;
-        }
-    }));
+l(_, 'displayName', 'DevToolsDevSettingsStore'), l(_, 'persistKey', 'DevToolsDevSettingsStore'), (t.ZP = new _(s.Z, { DEV_TOOLS_DEV_SETTING_SET: d }));

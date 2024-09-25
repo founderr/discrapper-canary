@@ -1,61 +1,67 @@
 n.d(t, {
     ZP: function () {
-        return p;
+        return M;
     }
-}),
-    n(724458),
-    n(653041),
-    n(47120);
-var r = n(658722),
-    i = n.n(r),
-    a = n(954955),
-    s = n.n(a),
-    o = n(339085),
-    l = n(633302),
-    u = n(626135),
-    c = n(697426),
-    d = n(242291),
-    _ = n(981631);
-let E = [],
-    f = s()(function (e, t) {
-        u.default.track(_.rMx.SEARCH_STARTED, {
-            channel_id: t,
-            search_type: _.aib.SOUNDBOARD,
-            location_stack: e
-        });
-    }, 350),
-    h = s()(function (e, t, n, r) {
-        u.default.track(_.rMx.SEARCH_RESULT_VIEWED, {
-            search_type: _.aib.SOUNDBOARD,
-            channel_id: n,
-            query: r,
-            total_results: e.length,
-            location_stack: t
-        });
-    }, 350);
-function p(e, t, n, r, a) {
-    if (0 === e.length) return E;
-    let s = t.reduce((e, t) => {
-            for (let n of t.items) t.categoryInfo.type !== c.bg.FAVORITES && n.type === c.vB.SOUND && e.push(n.sound);
+});
+var r = n(724458);
+var i = n(653041);
+var a = n(47120);
+var o = n(658722),
+    s = n.n(o),
+    l = n(954955),
+    u = n.n(l),
+    c = n(339085),
+    d = n(633302),
+    _ = n(626135),
+    E = n(697426),
+    f = n(242291),
+    h = n(981631);
+let p = 100,
+    m = 8,
+    I = 7,
+    T = 6,
+    g = 5,
+    S = 4,
+    A = 3,
+    v = 2,
+    N = 1,
+    O = [],
+    R = 350,
+    C = u()(b, R),
+    y = u()(L, R);
+function b(e, t) {
+    _.default.track(h.rMx.SEARCH_STARTED, {
+        channel_id: t,
+        search_type: h.aib.SOUNDBOARD,
+        location_stack: e
+    });
+}
+function L(e, t, n, r) {
+    _.default.track(h.rMx.SEARCH_RESULT_VIEWED, {
+        search_type: h.aib.SOUNDBOARD,
+        channel_id: n,
+        query: r,
+        total_results: e.length,
+        location_stack: t
+    });
+}
+function D(e, t, n, r) {
+    var i;
+    let a = 0,
+        o = t.name.toLocaleLowerCase(),
+        l = null != t.emojiId ? c.ZP.getCustomEmojiById(t.emojiId) : null,
+        u = null != t.emojiName ? d.ZP.convertSurrogateToName(t.emojiName, !1) : null,
+        _ = null != u ? d.ZP.getByName(u) : null,
+        E = null != l ? [l.name] : null !== (i = null == _ ? void 0 : _.names) && void 0 !== i ? i : [];
+    return e === o && (a += m), E.includes(e) && (a += I), o.startsWith(e) && (a += T), E.some((t) => t.startsWith(e)) && (a += g), o.endsWith(e) && (a += S), E.some((t) => t.endsWith(e)) && (a += A), s()(e, t.name.toLocaleLowerCase()) && (a += v), E.some((t) => s()(e, t)) && (a += N), a > 0 && (0, f.Nq)(n, t, r) && (a += p), a;
+}
+function M(e, t, n, r, i) {
+    if (0 === e.length) return O;
+    let a = t.reduce((e, t) => {
+            for (let n of t.items) t.categoryInfo.type !== E.bg.FAVORITES && n.type === E.vB.SOUND && e.push(n.sound);
             return e;
         }, []),
-        u = s.reduce(
-            (t, s) => (
-                f(a, null == r ? void 0 : r.id),
-                (t[s.soundId] = (function (e, t, n, r) {
-                    var a;
-                    let s = 0,
-                        u = t.name.toLocaleLowerCase(),
-                        c = null != t.emojiId ? o.ZP.getCustomEmojiById(t.emojiId) : null,
-                        _ = null != t.emojiName ? l.ZP.convertSurrogateToName(t.emojiName, !1) : null,
-                        E = null != _ ? l.ZP.getByName(_) : null,
-                        f = null != c ? [c.name] : null !== (a = null == E ? void 0 : E.names) && void 0 !== a ? a : [];
-                    return e === u && (s += 8), f.includes(e) && (s += 7), u.startsWith(e) && (s += 6), f.some((t) => t.startsWith(e)) && (s += 5), u.endsWith(e) && (s += 4), f.some((t) => t.endsWith(e)) && (s += 3), i()(e, t.name.toLocaleLowerCase()) && (s += 2), f.some((t) => i()(e, t)) && (s += 1), s > 0 && (0, d.Nq)(n, t, r) && (s += 100), s;
-                })(e.toLocaleLowerCase(), s, n, r)),
-                t
-            ),
-            {}
-        ),
-        _ = s.filter((e) => u[e.soundId] > 0).sort((e, t) => u[t.soundId] - u[e.soundId]);
-    return h(_, a, null == r ? void 0 : r.id, e), _;
+        o = a.reduce((t, a) => (C(i, null == r ? void 0 : r.id), (t[a.soundId] = D(e.toLocaleLowerCase(), a, n, r)), t), {}),
+        s = a.filter((e) => o[e.soundId] > 0).sort((e, t) => o[t.soundId] - o[e.soundId]);
+    return y(s, i, null == r ? void 0 : r.id, e), s;
 }

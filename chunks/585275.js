@@ -1,166 +1,181 @@
 let r;
-n(242167), n(970173), n(520712), n(268111), n(941497), n(32026), n(480839), n(744285), n(492257), n(873817), n(411104), n(773603);
-var i = n(512722),
-    a = n.n(i),
-    s = n(392711),
-    o = n.n(s),
-    l = n(544891),
-    u = n(992774),
-    c = n(649754),
-    d = n(376398),
-    _ = n(846519),
-    E = n(570140),
-    f = n(710845),
-    h = n(977059),
-    p = n(695346),
-    I = n(199902),
-    m = n(314897),
-    T = n(358085),
-    S = n(998502),
-    g = n(569545),
-    A = n(70722),
-    N = n(981631),
-    O = n(65154);
-let R = {},
-    v = new _.V7(),
-    C = !1,
-    y = window.document.createElement('canvas');
-(y.width = 512), (y.height = 288);
-let L = y.getContext('2d');
-function D() {
-    v.stop(), null != r && (c.Z.removeSink(r, R), (r = null));
+var i = n(242167);
+var a = n(970173);
+var o = n(520712);
+var s = n(268111);
+var l = n(941497);
+var u = n(32026);
+var c = n(480839);
+var d = n(744285);
+var _ = n(492257);
+var E = n(873817);
+var f = n(411104);
+var h = n(773603);
+var p = n(512722),
+    m = n.n(p),
+    I = n(392711),
+    T = n.n(I),
+    g = n(544891),
+    S = n(992774),
+    A = n(649754),
+    v = n(376398),
+    N = n(846519),
+    O = n(570140),
+    R = n(710845),
+    C = n(977059),
+    y = n(695346),
+    b = n(199902),
+    L = n(314897),
+    D = n(358085),
+    M = n(998502),
+    P = n(569545),
+    U = n(70722),
+    w = n(981631),
+    x = n(65154);
+let G = 300000,
+    k = 60000,
+    B = {},
+    F = new N.V7(),
+    Z = !1,
+    V = window.document.createElement('canvas'),
+    H = 512,
+    Y = 288;
+(V.width = H), (V.height = Y);
+let j = V.getContext('2d');
+function W() {
+    F.stop(), null != r && (A.Z.removeSink(r, B), (r = null));
 }
-let b = o().debounce((e, t, n, r) => {
-    M(
+let K = T().debounce((e, t, n, r) => {
+    q(
         e,
-        (0, g.V9)({
-            streamType: null != t ? A.lo.GUILD : A.lo.CALL,
+        (0, P.V9)({
+            streamType: null != t ? U.lo.GUILD : U.lo.CALL,
             guildId: t,
             channelId: n,
             ownerId: r
         })
     );
 }, 500);
-async function M(e, t) {
+function z(e) {
+    let t = H / e.width,
+        n = Math.min(t, Y / e.height),
+        r = e.width * n,
+        i = e.height * n;
+    (V.width = r), (V.height = i);
+    let a = window.document.createElement('canvas'),
+        o = a.getContext('2d');
+    (a.width = e.width), (a.height = e.height);
+    let s = new ImageData(e.data, e.width, e.height);
+    return (
+        null == o || o.putImageData(s, 0, 0),
+        new Promise((t) => {
+            null == j || j.drawImage(a, 0, 0, e.width, e.height, 0, 0, r, i), t();
+        })
+    );
+}
+async function q(e, t) {
     if (r !== e) return;
-    let { enabled: n } = (0, h.R)({ location: 'uploadStreamPreviews' }),
-        i = ((0, T.isWeb)() && p.I0.getSetting()) || I.Z.getIsActiveStreamPreviewDisabled(t);
+    let { enabled: n } = (0, C.R)({ location: 'uploadStreamPreviews' }),
+        i = ((0, D.isWeb)() && y.I0.getSetting()) || b.Z.getIsActiveStreamPreviewDisabled(t);
     if (n && i) return;
-    let s = () => M(e, t);
-    if (!C)
+    let a = () => q(e, t);
+    if (!Z)
         try {
-            let n = await (function (e, t) {
-                let n = 0;
-                return (
-                    T.isPlatformEmbedded
-                        ? function (e, t) {
-                              let n = (0, u.zS)(),
-                                  i = (null == n ? void 0 : n.getNextVideoOutputFrame) != null;
-                              return new Promise((a, s) => {
-                                  let o = (e) => {
-                                      try {
-                                          null != e && t(e) && a(e);
-                                      } catch (e) {
-                                          s(e);
-                                      }
-                                  };
-                                  i
-                                      ? n.getNextVideoOutputFrame(e).then(o, (t) => {
-                                            if (r === e) throw t;
-                                        })
-                                      : c.Z.addSink(e, R, o);
-                              }).finally(() => {
-                                  !i && c.Z.removeSink(e, R);
-                              });
-                          }
-                        : function (e, t) {
-                              let n = (0, d.aG)(e);
-                              if (null == n) return Promise.resolve(new ImageData(0, 0));
-                              let { width: r, height: i } = n.getVideoTracks()[0].getSettings(),
-                                  a = document.createElement('video'),
-                                  s = document.createElement('canvas');
-                              (a.width = s.width = null != r ? r : 512), (a.height = s.height = null != i ? i : 288), (a.srcObject = n), a.play();
-                              let o = s.getContext('2d');
-                              return new Promise((e, n) => {
-                                  a.ontimeupdate = () => {
-                                      null == o || o.drawImage(a, 0, 0, s.width, s.height);
-                                      let r = null == o ? void 0 : o.getImageData(0, 0, s.width, s.height);
-                                      try {
-                                          null != r && t(r) && e(r);
-                                      } catch (e) {
-                                          n(e);
-                                      }
-                                  };
-                              }).finally(() => {
-                                  (a.ontimeupdate = null), a.removeAttribute('srcObject'), a.load();
-                              });
-                          }
-                )(e, (e) => {
-                    if (new Uint32Array(e.data.buffer).some((e) => 0 !== e)) return !0;
-                    if (++n > t) throw Error('Timed out awaiting non-black frame after '.concat(t, ' frames'));
-                    return !1;
-                });
-            })(e, 60);
-            await (function (e) {
-                let t = 512 / e.width,
-                    n = Math.min(t, 288 / e.height),
-                    r = e.width * n,
-                    i = e.height * n;
-                (y.width = r), (y.height = i);
-                let a = window.document.createElement('canvas'),
-                    s = a.getContext('2d');
-                (a.width = e.width), (a.height = e.height);
-                let o = new ImageData(e.data, e.width, e.height);
-                return (
-                    null == s || s.putImageData(o, 0, 0),
-                    new Promise((t) => {
-                        null == L || L.drawImage(a, 0, 0, e.width, e.height, 0, 0, r, i), t();
-                    })
-                );
-            })(n);
-            let i = y.toDataURL('image/jpeg');
+            let n = await Q(e, 60);
+            await z(n);
+            let r = V.toDataURL('image/jpeg');
             if (
-                (E.Z.dispatch({
+                (O.Z.dispatch({
                     type: 'STREAM_PREVIEW_FETCH_SUCCESS',
                     streamKey: t,
-                    previewURL: i
+                    previewURL: r
                 }),
-                T.isPlatformEmbedded)
+                D.isPlatformEmbedded)
             ) {
-                let e = m.default.getToken();
-                a()(null != e, 'Auth token was null while sending screenshot.'),
-                    await S.ZP.makeChunkedRequest(
-                        N.ANM.STREAM_PREVIEW(t),
-                        { thumbnail: i },
+                let e = L.default.getToken();
+                m()(null != e, 'Auth token was null while sending screenshot.'),
+                    await M.ZP.makeChunkedRequest(
+                        w.ANM.STREAM_PREVIEW(t),
+                        { thumbnail: r },
                         {
                             method: 'POST',
                             token: e
                         }
                     );
             } else
-                await l.tn.post({
-                    url: N.ANM.STREAM_PREVIEW(t),
-                    body: { thumbnail: i },
+                await g.tn.post({
+                    url: w.ANM.STREAM_PREVIEW(t),
+                    body: { thumbnail: r },
                     oldFormErrors: !0
                 });
         } catch (t) {
-            new f.Z('ApplicationStreamPreviewUploadManager').error('Failed to post stream preview', t), r === e && v.start(60000, s);
+            new R.Z('ApplicationStreamPreviewUploadManager').error('Failed to post stream preview', t), r === e && F.start(k, a);
             return;
         }
-    r === e && (C ? v.start(60000, s) : v.start(300000, s));
+    r === e && (Z ? F.start(k, a) : F.start(G, a));
+}
+function Q(e, t) {
+    let n = 0;
+    return (D.isPlatformEmbedded ? $ : X)(e, (e) => {
+        if (new Uint32Array(e.data.buffer).some((e) => 0 !== e)) return !0;
+        if (++n > t) throw Error('Timed out awaiting non-black frame after '.concat(t, ' frames'));
+        return !1;
+    });
+}
+function X(e, t) {
+    let n = (0, v.aG)(e);
+    if (null == n) return Promise.resolve(new ImageData(0, 0));
+    let { width: r, height: i } = n.getVideoTracks()[0].getSettings(),
+        a = document.createElement('video'),
+        o = document.createElement('canvas');
+    (a.width = o.width = null != r ? r : H), (a.height = o.height = null != i ? i : Y), (a.srcObject = n), a.play();
+    let s = o.getContext('2d');
+    return new Promise((e, n) => {
+        a.ontimeupdate = () => {
+            null == s || s.drawImage(a, 0, 0, o.width, o.height);
+            let r = null == s ? void 0 : s.getImageData(0, 0, o.width, o.height);
+            try {
+                null != r && t(r) && e(r);
+            } catch (e) {
+                n(e);
+            }
+        };
+    }).finally(() => {
+        (a.ontimeupdate = null), a.removeAttribute('srcObject'), a.load();
+    });
+}
+function $(e, t) {
+    let n = (0, S.zS)(),
+        i = (null == n ? void 0 : n.getNextVideoOutputFrame) != null;
+    return new Promise((a, o) => {
+        let s = (e) => {
+            try {
+                null != e && t(e) && a(e);
+            } catch (e) {
+                o(e);
+            }
+        };
+        i
+            ? n.getNextVideoOutputFrame(e).then(s, (t) => {
+                  if (r === e) throw t;
+              })
+            : A.Z.addSink(e, B, s);
+    }).finally(() => {
+        !i && A.Z.removeSink(e, B);
+    });
 }
 t.Z = {
     init() {
-        E.Z.subscribe('CONNECTION_OPEN', D),
-            E.Z.subscribe('LOGOUT', D),
-            E.Z.subscribe('STREAM_DELETE', D),
-            E.Z.subscribe('RTC_CONNECTION_VIDEO', (e) => {
-                let { guildId: t, channelId: n, userId: i, streamId: a, context: s } = e;
-                !(null == a || s !== O.Yn.STREAM || i !== m.default.getId() || __OVERLAY__) && (D(), (r = a), b(a, t, n, i));
+        O.Z.subscribe('CONNECTION_OPEN', W),
+            O.Z.subscribe('LOGOUT', W),
+            O.Z.subscribe('STREAM_DELETE', W),
+            O.Z.subscribe('RTC_CONNECTION_VIDEO', (e) => {
+                let { guildId: t, channelId: n, userId: i, streamId: a, context: o } = e;
+                !(null == a || o !== x.Yn.STREAM || i !== L.default.getId() || __OVERLAY__) && (W(), (r = a), K(a, t, n, i));
             }),
-            E.Z.subscribe('MEDIA_ENGINE_VIDEO_STATE_CHANGED', (e) => {
+            O.Z.subscribe('MEDIA_ENGINE_VIDEO_STATE_CHANGED', (e) => {
                 let { videoState: t } = e;
-                C = t === N.FQ1.PAUSED || !1;
+                Z = t === w.FQ1.PAUSED || !1;
             });
     }
 };

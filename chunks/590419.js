@@ -11,27 +11,42 @@ var r = (function () {
         };
     })(),
     i = n(470079),
-    a = u(i),
-    s = u(n(844303)),
-    o = u(n(123763)),
-    l = (function (e) {
-        if (e && e.__esModule) return e;
-        var t = {};
-        if (null != e) for (var n in e) Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n]);
-        return (t.default = e), t;
-    })(n(269153));
+    a = c(i),
+    o = c(n(844303)),
+    s = c(n(123763)),
+    l = u(n(269153));
 function u(e) {
+    if (e && e.__esModule) return e;
+    var t = {};
+    if (null != e) for (var n in e) Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n]);
+    return (t.default = e), t;
+}
+function c(e) {
     return e && e.__esModule ? e : { default: e };
 }
-var c = (t.Saturation = (function (e) {
+function d(e, t) {
+    if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
+}
+function _(e, t) {
+    if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
+    return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
+}
+function E(e, t) {
+    if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
+    (e.prototype = Object.create(t && t.prototype, {
+        constructor: {
+            value: e,
+            enumerable: !1,
+            writable: !0,
+            configurable: !0
+        }
+    })),
+        t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
+}
+var f = (t.Saturation = (function (e) {
     function t(e) {
-        !(function (e, t) {
-            if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
-        })(this, t);
-        var n = (function (e, t) {
-            if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
-            return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
-        })(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this, e));
+        d(this, t);
+        var n = _(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this, e));
         return (
             (n.handleChange = function (e) {
                 'function' == typeof n.props.onChange && n.throttle(n.props.onChange, l.calculateChange(e, n.props.hsl, n.container), e);
@@ -44,25 +59,14 @@ var c = (t.Saturation = (function (e) {
             (n.handleMouseUp = function () {
                 n.unbindEventListeners();
             }),
-            (n.throttle = (0, o.default)(function (e, t, n) {
+            (n.throttle = (0, s.default)(function (e, t, n) {
                 e(t, n);
             }, 50)),
             n
         );
     }
     return (
-        !(function (e, t) {
-            if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
-            (e.prototype = Object.create(t && t.prototype, {
-                constructor: {
-                    value: e,
-                    enumerable: !1,
-                    writable: !0,
-                    configurable: !0
-                }
-            })),
-                t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
-        })(t, e),
+        E(t, e),
         r(t, [
             {
                 key: 'componentWillUnmount',
@@ -92,9 +96,9 @@ var c = (t.Saturation = (function (e) {
                         n = t.color,
                         r = t.white,
                         i = t.black,
-                        o = t.pointer,
+                        s = t.pointer,
                         l = t.circle,
-                        u = (0, s.default)(
+                        u = (0, o.default)(
                             {
                                 default: {
                                     color: {
@@ -130,7 +134,7 @@ var c = (t.Saturation = (function (e) {
                                     color: n,
                                     white: r,
                                     black: i,
-                                    pointer: o,
+                                    pointer: s,
                                     circle: l
                                 }
                             },
@@ -167,4 +171,4 @@ var c = (t.Saturation = (function (e) {
         t
     );
 })(i.PureComponent || i.Component));
-t.default = c;
+t.default = f;

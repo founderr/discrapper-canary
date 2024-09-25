@@ -1,27 +1,27 @@
 n.d(t, {
     B: function () {
-        return o;
-    },
-    Fm: function () {
-        return c;
-    },
-    Lc: function () {
         return u;
     },
+    Fm: function () {
+        return _;
+    },
+    Lc: function () {
+        return d;
+    },
     U4: function () {
-        return l;
+        return c;
     },
     hn: function () {
-        return d;
+        return E;
     },
     zz: function () {
         return s;
     }
-}),
-    n(411104);
-var r = n(830496),
-    i = n(959517);
-let a = [
+});
+var r = n(411104);
+var i = n(830496),
+    a = n(959517);
+let o = [
         {
             reName: /\.jpe?g$/i,
             name: (e) => 'image'.concat(e, '.jpg'),
@@ -79,19 +79,20 @@ let a = [
         }
     ],
     s = 524288000;
-function o(e) {
+function l(e) {
+    let { spoiler: t } = e;
+    return t ? a._j : '';
+}
+function u(e) {
     var t;
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-        a = arguments.length > 2 ? arguments[2] : void 0,
-        s = { id: null !== (t = null == n ? void 0 : n.toString()) && void 0 !== t ? t : e.id };
-    null != e.description && (s.description = e.description);
-    let o = (function (e) {
-        let { spoiler: t } = e;
-        return t ? i._j : '';
-    })({ spoiler: e.spoiler });
-    return (s.filename = ''.concat(o).concat(null != a ? a : e.filename)), (s.uploaded_filename = e.uploadedFilename), 'durationSecs' in e && null != e.durationSecs && (s.duration_secs = e.durationSecs), 'waveform' in e && null != e.waveform && (s.waveform = e.waveform), 'isThumbnail' in e && !0 === e.isThumbnail && (s.is_thumbnail = e.isThumbnail), 'isRemix' in e && !0 === e.isRemix && (s.is_remix = e.isRemix), 'clip' in e && null != e.clip && ((s.is_clip = !0), (s.title = e.clip.name), (s.application_id = e.clip.applicationId), (s.clip_created_at = (0, r.U)(e.clip.id)), (s.clip_participant_ids = (0, r.Z)(e.clip.users))), s;
+        r = arguments.length > 2 ? arguments[2] : void 0,
+        a = { id: null !== (t = null == n ? void 0 : n.toString()) && void 0 !== t ? t : e.id };
+    null != e.description && (a.description = e.description);
+    let o = l({ spoiler: e.spoiler });
+    return (a.filename = ''.concat(o).concat(null != r ? r : e.filename)), (a.uploaded_filename = e.uploadedFilename), 'durationSecs' in e && null != e.durationSecs && (a.duration_secs = e.durationSecs), 'waveform' in e && null != e.waveform && (a.waveform = e.waveform), 'isThumbnail' in e && !0 === e.isThumbnail && (a.is_thumbnail = e.isThumbnail), 'isRemix' in e && !0 === e.isRemix && (a.is_remix = e.isRemix), 'clip' in e && null != e.clip && ((a.is_clip = !0), (a.title = e.clip.name), (a.application_id = e.clip.applicationId), (a.clip_created_at = (0, i.U)(e.clip.id)), (a.clip_participant_ids = (0, i.Z)(e.clip.users))), a;
 }
-function l(e, t, n) {
+function c(e, t, n) {
     let r = new XMLHttpRequest();
     return new Promise((i, a) => {
         r.open('GET', e, !0),
@@ -106,7 +107,7 @@ function l(e, t, n) {
             r.send();
     });
 }
-function u(e) {
+function d(e) {
     let t = new XMLHttpRequest();
     return new Promise((n, r) => {
         t.open('GET', e, !0),
@@ -121,7 +122,7 @@ function u(e) {
             t.send();
     });
 }
-function c(e) {
+function _(e) {
     return new Promise((t, n) => {
         let r = new XMLHttpRequest();
         r.open('HEAD', e, !0),
@@ -137,15 +138,15 @@ function c(e) {
             r.send();
     });
 }
-function d(e) {
-    var t, n, r, i, s, o;
+function E(e) {
+    var t, n, r, i, a, s;
     let l,
         { uri: u, i: c, overrideFilename: d, overrideType: _ } = e,
         E = u.split('/'),
         f = E[E.length - 1];
     f = null !== (r = null === (n = f.split('?')) || void 0 === n ? void 0 : null === (t = n[0]) || void 0 === t ? void 0 : t.toLowerCase()) && void 0 !== r ? r : '';
-    let h = a.find((e) => e.reName.test(f));
-    if ((null == h && null != d && (h = a.find((e) => e.reName.test(d))), null != h && null != d)) {
+    let h = o.find((e) => e.reName.test(f));
+    if ((null == h && null != d && (h = o.find((e) => e.reName.test(d))), null != h && null != d)) {
         let e = h.name(c).split('.').pop(),
             t = d.lastIndexOf('.');
         l = -1 !== t ? ''.concat(d.substr(0, t), '.').concat(e) : ''.concat(d, '.').concat(e);
@@ -154,7 +155,7 @@ function d(e) {
         uri: u,
         filename: l,
         type: null !== (i = null != _ ? _ : null == h ? void 0 : h.type) && void 0 !== i ? i : 'unknown',
-        isVideo: -1 !== (null !== (s = null != _ ? _ : null == h ? void 0 : h.name(c)) && void 0 !== s ? s : '').indexOf('video'),
-        isImage: -1 !== (null !== (o = null != _ ? _ : null == h ? void 0 : h.name(c)) && void 0 !== o ? o : '').indexOf('image')
+        isVideo: -1 !== (null !== (a = null != _ ? _ : null == h ? void 0 : h.name(c)) && void 0 !== a ? a : '').indexOf('video'),
+        isImage: -1 !== (null !== (s = null != _ ? _ : null == h ? void 0 : h.name(c)) && void 0 !== s ? s : '').indexOf('image')
     };
 }

@@ -1,4 +1,4 @@
-e.exports = function (e) {
+function t(e) {
     let t = {
         variants: [
             e.COMMENT('^[ \\t]*(?=#)', '$', {
@@ -51,4 +51,5 @@ e.exports = function (e) {
             }
         ]
     };
-};
+}
+e.exports = t;

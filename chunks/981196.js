@@ -6,13 +6,13 @@ n.d(t, {
 var r = n(812975),
     i = n(686942),
     a = n(713267),
-    s = n(695170),
-    o = n(829105);
+    o = n(695170),
+    s = n(829105);
 function l(e) {
-    for (var t = [], n = '', l = Object.keys(e), u = Object.keys(r.WN), c = 0; c < l.length; c++) {
-        if ('tzid' !== l[c] && !!(0, i.q9)(u, l[c])) {
-            var d = l[c].toUpperCase(),
-                _ = e[l[c]],
+    for (var t = [], n = '', s = Object.keys(e), l = Object.keys(r.WN), c = 0; c < s.length; c++) {
+        if ('tzid' !== s[c] && !!(0, i.q9)(l, s[c])) {
+            var d = s[c].toUpperCase(),
+                _ = e[s[c]],
                 E = '';
             if (!(!(0, i.EN)(_) || ((0, i.kJ)(_) && !_.length))) {
                 switch (d) {
@@ -31,12 +31,10 @@ function l(e) {
                                 .toString());
                         break;
                     case 'DTSTART':
-                        n = (function (e, t) {
-                            return e ? 'DTSTART' + new o.M(new Date(e), t).toString() : '';
-                        })(_, e.tzid);
+                        n = u(_, e.tzid);
                         break;
                     case 'UNTIL':
-                        E = (0, s.Od)(_, !e.tzid);
+                        E = (0, o.Od)(_, !e.tzid);
                         break;
                     default:
                         if ((0, i.kJ)(_)) {
@@ -55,13 +53,16 @@ function l(e) {
                 return ''.concat(t, '=').concat(n.toString());
             })
             .join(';'),
-        I = '';
+        m = '';
     return (
-        '' !== p && (I = 'RRULE:'.concat(p)),
-        [n, I]
+        '' !== p && (m = 'RRULE:'.concat(p)),
+        [n, m]
             .filter(function (e) {
                 return !!e;
             })
             .join('\n')
     );
+}
+function u(e, t) {
+    return e ? 'DTSTART' + new s.M(new Date(e), t).toString() : '';
 }

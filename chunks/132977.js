@@ -1,83 +1,86 @@
 n.d(t, {
     ZX: function () {
-        return S;
+        return m;
     },
     gt: function () {
-        return g;
+        return I;
     },
     rH: function () {
-        return o;
+        return r;
     }
 });
 var r,
     i,
-    a,
-    s,
-    o,
-    l,
-    u = n(735250),
-    c = n(470079),
-    d = n(120356),
-    _ = n.n(d),
-    E = n(748780),
-    f = n(481060),
-    h = n(727637),
-    p = n(600164),
-    I = n(604547);
-((r = o || (o = {})).DEFAULT = 'default'), (r.SMALL = 'small');
-let m = {
-        default: I.shineDefault,
-        small: I.shineSmall
+    a = n(735250),
+    o = n(470079),
+    s = n(120356),
+    l = n.n(s),
+    u = n(748780),
+    c = n(481060),
+    d = n(727637),
+    _ = n(600164),
+    E = n(604547);
+function f(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+!(function (e) {
+    (e.DEFAULT = 'default'), (e.SMALL = 'small');
+})(r || (r = {}));
+let h = {
+        default: E.shineDefault,
+        small: E.shineSmall
     },
-    T = {
-        default: I.shineInnerDefault,
-        small: I.shineInnerSmall
+    p = {
+        default: E.shineInnerDefault,
+        small: E.shineInnerSmall
     };
-class S extends (l = c.PureComponent) {
+class m extends (i = o.PureComponent) {
     render() {
         let { className: e, shineSize: t, shinePaused: n, ...r } = this.props;
-        return (0, u.jsx)(E.Z.div, {
+        return (0, a.jsx)(u.Z.div, {
             ...r,
-            className: _()(I.shineContainer, e, { [I.shinePaused]: n }),
-            children: (0, u.jsx)(p.Z, {
-                align: p.Z.Align.CENTER,
-                justify: p.Z.Justify.CENTER,
-                className: m[t],
-                children: (0, u.jsx)('div', { className: T[t] })
+            className: l()(E.shineContainer, e, { [E.shinePaused]: n }),
+            children: (0, a.jsx)(_.Z, {
+                align: _.Z.Align.CENTER,
+                justify: _.Z.Justify.CENTER,
+                className: h[t],
+                children: (0, a.jsx)('div', { className: p[t] })
             })
         });
     }
 }
-(s = { shineSize: 'default' }),
-    (a = 'defaultProps') in (i = S)
-        ? Object.defineProperty(i, a, {
-              value: s,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (i[a] = s);
-let g = (e) => {
-    let { children: t, className: n, disabled: r, submitting: i, pauseAnimation: a, shineSize: s = 'default', shinePaused: o, buttonShineClassName: l, onlyShineOnHover: d, ...E } = e,
-        p = c.createRef(),
-        m = (0, h.Z)(p),
-        T = !r && !i && !0 !== a && (!d || m);
-    return (0, u.jsxs)(f.Button, {
-        buttonRef: p,
-        ...E,
-        className: _()(I.shinyButton, n),
+f(m, 'defaultProps', { shineSize: 'default' });
+let I = (e) => {
+    let { children: t, className: n, disabled: r, submitting: i, pauseAnimation: s, shineSize: u = 'default', shinePaused: _, buttonShineClassName: f, onlyShineOnHover: h, ...p } = e,
+        I = o.createRef(),
+        T = (0, d.Z)(I),
+        g = !r && !i && !0 !== s && (!h || T);
+    return (0, a.jsxs)(c.Button, {
+        buttonRef: I,
+        ...p,
+        className: l()(E.shinyButton, n),
         disabled: r,
         submitting: i,
         children: [
             t,
-            T
-                ? (0, u.jsx)(S, {
-                      shinePaused: o,
-                      className: _()(I.buttonShine, d ? I.onlyShineOnHover : void 0, l),
-                      shineSize: s
+            g
+                ? (0, a.jsx)(m, {
+                      shinePaused: _,
+                      className: l()(E.buttonShine, h ? E.onlyShineOnHover : void 0, f),
+                      shineSize: u
                   })
                 : null
         ]
     });
 };
-g.ShineSizes = o;
+I.ShineSizes = r;

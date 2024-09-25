@@ -1,4 +1,4 @@
-e.exports = function (e) {
+function t(e) {
     let t = "('|\\.')+",
         n = {
             relevance: 0,
@@ -71,4 +71,5 @@ e.exports = function (e) {
             e.COMMENT('%', '$')
         ]
     };
-};
+}
+e.exports = t;

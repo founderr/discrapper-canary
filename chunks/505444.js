@@ -1,54 +1,56 @@
 var t = {
-        animationIterationCount: !0,
-        borderImageOutset: !0,
-        borderImageSlice: !0,
-        borderImageWidth: !0,
-        boxFlex: !0,
-        boxFlexGroup: !0,
-        boxOrdinalGroup: !0,
-        columnCount: !0,
-        columns: !0,
-        flex: !0,
-        flexGrow: !0,
-        flexPositive: !0,
-        flexShrink: !0,
-        flexNegative: !0,
-        flexOrder: !0,
-        gridRow: !0,
-        gridRowEnd: !0,
-        gridRowSpan: !0,
-        gridRowStart: !0,
-        gridColumn: !0,
-        gridColumnEnd: !0,
-        gridColumnSpan: !0,
-        gridColumnStart: !0,
-        fontWeight: !0,
-        lineClamp: !0,
-        lineHeight: !0,
-        opacity: !0,
-        order: !0,
-        orphans: !0,
-        tabSize: !0,
-        widows: !0,
-        zIndex: !0,
-        zoom: !0,
-        fillOpacity: !0,
-        floodOpacity: !0,
-        stopOpacity: !0,
-        strokeDasharray: !0,
-        strokeDashoffset: !0,
-        strokeMiterlimit: !0,
-        strokeOpacity: !0,
-        strokeWidth: !0
-    },
-    n = ['Webkit', 'ms', 'Moz', 'O'];
+    animationIterationCount: !0,
+    borderImageOutset: !0,
+    borderImageSlice: !0,
+    borderImageWidth: !0,
+    boxFlex: !0,
+    boxFlexGroup: !0,
+    boxOrdinalGroup: !0,
+    columnCount: !0,
+    columns: !0,
+    flex: !0,
+    flexGrow: !0,
+    flexPositive: !0,
+    flexShrink: !0,
+    flexNegative: !0,
+    flexOrder: !0,
+    gridRow: !0,
+    gridRowEnd: !0,
+    gridRowSpan: !0,
+    gridRowStart: !0,
+    gridColumn: !0,
+    gridColumnEnd: !0,
+    gridColumnSpan: !0,
+    gridColumnStart: !0,
+    fontWeight: !0,
+    lineClamp: !0,
+    lineHeight: !0,
+    opacity: !0,
+    order: !0,
+    orphans: !0,
+    tabSize: !0,
+    widows: !0,
+    zIndex: !0,
+    zoom: !0,
+    fillOpacity: !0,
+    floodOpacity: !0,
+    stopOpacity: !0,
+    strokeDasharray: !0,
+    strokeDashoffset: !0,
+    strokeMiterlimit: !0,
+    strokeOpacity: !0,
+    strokeWidth: !0
+};
+function n(e, t) {
+    return e + t.charAt(0).toUpperCase() + t.substring(1);
+}
+var r = ['Webkit', 'ms', 'Moz', 'O'];
 Object.keys(t).forEach(function (e) {
-    n.forEach(function (n) {
-        var r;
-        t[n + (r = e).charAt(0).toUpperCase() + r.substring(1)] = t[e];
+    r.forEach(function (r) {
+        t[n(r, e)] = t[e];
     });
 });
-var r = {
+var i = {
         isUnitlessNumber: t,
         shorthandPropertyExpansions: {
             background: {
@@ -103,59 +105,60 @@ var r = {
             }
         }
     },
-    i = !!('undefined' != typeof window && window.document && window.document.createElement),
-    a = {
-        canUseDOM: i,
+    a = !!('undefined' != typeof window && window.document && window.document.createElement),
+    o = {
+        canUseDOM: a,
         canUseWorkers: 'undefined' != typeof Worker,
-        canUseEventListeners: i && !!(window.addEventListener || window.attachEvent),
-        canUseViewport: i && !!window.screen,
-        isInWorker: !i
+        canUseEventListeners: a && !!(window.addEventListener || window.attachEvent),
+        canUseViewport: a && !!window.screen,
+        isInWorker: !a
     },
-    s = r.isUnitlessNumber;
-function o(e) {
+    s = i.isUnitlessNumber;
+function l(e, t, n) {
+    return null == t || 'boolean' == typeof t || '' === t ? '' : n || 'number' != typeof t || 0 === t || (s.hasOwnProperty(e) && s[e]) ? ('' + t).trim() : t + 'px';
+}
+function u(e) {
     return function () {
         return e;
     };
 }
-var l = function () {};
-(l.thatReturns = o),
-    (l.thatReturnsFalse = o(!1)),
-    (l.thatReturnsTrue = o(!0)),
-    (l.thatReturnsNull = o(null)),
-    (l.thatReturnsThis = function () {
+var c = function () {};
+(c.thatReturns = u),
+    (c.thatReturnsFalse = u(!1)),
+    (c.thatReturnsTrue = u(!0)),
+    (c.thatReturnsNull = u(null)),
+    (c.thatReturnsThis = function () {
         return this;
     }),
-    (l.thatReturnsArgument = function (e) {
+    (c.thatReturnsArgument = function (e) {
         return e;
     });
-var u = !1;
-if (a.canUseDOM) {
-    var c = document.createElement('div').style;
+var d = !1;
+if (o.canUseDOM) {
+    var _ = document.createElement('div').style;
     try {
-        c.font = '';
+        _.font = '';
     } catch (e) {
-        u = !0;
+        d = !0;
     }
 }
-e.exports = {
+var E = {
     createDangerousStringForStyles: function (e) {},
     setValueForStyles: function (e, t, n) {
-        var i = e.style;
+        var r = e.style;
         for (var a in t) {
             if (!!t.hasOwnProperty(a)) {
-                var o,
-                    l,
-                    c,
-                    d = 0 === a.indexOf('--');
-                var _ = ((o = a), (l = t[a]), (c = d), null == l || 'boolean' == typeof l || '' === l ? '' : c || 'number' != typeof l || 0 === l || (s.hasOwnProperty(o) && s[o]) ? ('' + l).trim() : l + 'px');
-                if (('float' === a && (a = 'cssFloat'), d)) i.setProperty(a, _);
-                else if (_) i[a] = _;
+                var o = 0 === a.indexOf('--'),
+                    s = l(a, t[a], o);
+                if (('float' === a && (a = 'cssFloat'), o)) r.setProperty(a, s);
+                else if (s) r[a] = s;
                 else {
-                    var E = u && r.shorthandPropertyExpansions[a];
-                    if (E) for (var f in E) i[f] = '';
-                    else i[a] = '';
+                    var u = d && i.shorthandPropertyExpansions[a];
+                    if (u) for (var c in u) r[c] = '';
+                    else r[a] = '';
                 }
             }
         }
     }
 };
+e.exports = E;

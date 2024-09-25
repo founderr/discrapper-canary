@@ -1,6 +1,6 @@
 n.d(t, {
     u: function () {
-        return l;
+        return u;
     }
 });
 var r = n(964742),
@@ -17,21 +17,12 @@ function a(e, t) {
     }
     return n;
 }
-function s(e) {
+function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {};
         t % 2
             ? a(Object(n), !0).forEach(function (t) {
-                  (function (e, t, n) {
-                      t in e
-                          ? Object.defineProperty(e, t, {
-                                value: n,
-                                enumerable: !0,
-                                configurable: !0,
-                                writable: !0
-                            })
-                          : (e[t] = n);
-                  })(e, t, n[t]);
+                  s(e, t, n[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
@@ -41,13 +32,26 @@ function s(e) {
     }
     return e;
 }
-var o = {
+function s(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+var l = {
     initialSourceClientOffset: null,
     initialClientOffset: null,
     clientOffset: null
 };
-function l() {
-    var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : o,
+function u() {
+    var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : l,
         t = arguments.length > 1 ? arguments[1] : void 0,
         n = t.payload;
     switch (t.type) {
@@ -60,10 +64,10 @@ function l() {
             };
         case r.$T:
             if ((0, i.YJ)(e.clientOffset, n.clientOffset)) return e;
-            return s(s({}, e), {}, { clientOffset: n.clientOffset });
+            return o(o({}, e), {}, { clientOffset: n.clientOffset });
         case r.Bs:
         case r.rp:
-            return o;
+            return l;
         default:
             return e;
     }

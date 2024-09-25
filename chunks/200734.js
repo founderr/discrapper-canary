@@ -9,8 +9,8 @@ n.d(t, {
 var r = n(146150),
     i = n(707908),
     a = n(713267),
-    s = n(695170),
-    o = n(812975);
+    o = n(695170),
+    s = n(812975);
 function l(e) {
     var t = e
         .split('\n')
@@ -26,7 +26,7 @@ function u(e) {
     if (!n) return t;
     var r = n[1],
         i = n[2];
-    return r && (t.tzid = r), (t.dtstart = (0, s.gE)(i)), t;
+    return r && (t.tzid = r), (t.dtstart = (0, o.gE)(i)), t;
 }
 function c(e) {
     if (!(e = e.replace(/^\s+|\s+$/, '')).length) return null;
@@ -51,14 +51,14 @@ function d(e) {
             .split(';')
             .forEach(function (n) {
                 var r = n.split('='),
-                    l = r[0],
-                    c = r[1];
-                switch (l.toUpperCase()) {
+                    a = r[0],
+                    l = r[1];
+                switch (a.toUpperCase()) {
                     case 'FREQ':
-                        t.freq = i.D[c.toUpperCase()];
+                        t.freq = i.D[l.toUpperCase()];
                         break;
                     case 'WKST':
-                        t.wkst = o.hn[c.toUpperCase()];
+                        t.wkst = s.hn[l.toUpperCase()];
                         break;
                     case 'COUNT':
                     case 'INTERVAL':
@@ -70,43 +70,45 @@ function d(e) {
                     case 'BYHOUR':
                     case 'BYMINUTE':
                     case 'BYSECOND':
-                        var d = (function (e) {
-                            return -1 !== e.indexOf(',') ? e.split(',').map(_) : _(e);
-                        })(c);
-                        t[l.toLowerCase()] = d;
+                        var c = _(l);
+                        t[a.toLowerCase()] = c;
                         break;
                     case 'BYWEEKDAY':
                     case 'BYDAY':
-                        t.byweekday = (function (e) {
-                            return e.split(',').map(function (e) {
-                                if (2 === e.length) return o.hn[e];
-                                var t = e.match(/^([+-]?\d{1,2})([A-Z]{2})$/);
-                                if (!t || t.length < 3) throw SyntaxError('Invalid weekday string: '.concat(e));
-                                var n = Number(t[1]),
-                                    r = t[2],
-                                    i = o.hn[r].weekday;
-                                return new a.O(i, n);
-                            });
-                        })(c);
+                        t.byweekday = f(l);
                         break;
                     case 'DTSTART':
                     case 'TZID':
-                        var E = u(e);
-                        (t.tzid = E.tzid), (t.dtstart = E.dtstart);
+                        var d = u(e);
+                        (t.tzid = d.tzid), (t.dtstart = d.dtstart);
                         break;
                     case 'UNTIL':
-                        t.until = (0, s.gE)(c);
+                        t.until = (0, o.gE)(l);
                         break;
                     case 'BYEASTER':
-                        t.byeaster = Number(c);
+                        t.byeaster = Number(l);
                         break;
                     default:
-                        throw Error("Unknown RRULE property '" + l + "'");
+                        throw Error("Unknown RRULE property '" + a + "'");
                 }
             }),
         t
     );
 }
 function _(e) {
+    return -1 !== e.indexOf(',') ? e.split(',').map(E) : E(e);
+}
+function E(e) {
     return /^[+-]?\d+$/.test(e) ? Number(e) : e;
+}
+function f(e) {
+    return e.split(',').map(function (e) {
+        if (2 === e.length) return s.hn[e];
+        var t = e.match(/^([+-]?\d{1,2})([A-Z]{2})$/);
+        if (!t || t.length < 3) throw SyntaxError('Invalid weekday string: '.concat(e));
+        var n = Number(t[1]),
+            r = t[2],
+            i = s.hn[r].weekday;
+        return new a.O(i, n);
+    });
 }

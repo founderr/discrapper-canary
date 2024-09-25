@@ -1,16 +1,16 @@
 n.d(t, {
     BA: function () {
-        return l;
+        return u;
     },
     DC: function () {
-        return o;
+        return s;
     }
 });
 var r = n(721535),
     i = n(470079),
     a = n(275857),
-    s = n(882932);
-class o {
+    o = n(882932);
+class s {
     *[Symbol.iterator]() {
         yield* this.iterable;
     }
@@ -58,77 +58,78 @@ class o {
     }
 }
 function l(e) {
-    var t;
-    let [n, l] = (0, s.zk)(e.selectedKey, null !== (t = e.defaultSelectedKey) && void 0 !== t ? t : null, e.onSelectionChange),
-        u = (0, i.useMemo)(() => (null != n ? [n] : []), [n]),
+    let { filter: t } = e,
+        n = (0, r.q)(e),
+        o = (0, i.useMemo)(() => (e.disabledKeys ? new Set(e.disabledKeys) : new Set()), [e.disabledKeys]),
+        l = (0, i.useCallback)((e) => new s(t ? t(e) : e), [t]),
+        u = (0, i.useMemo)(() => ({ suppressTextValueWarning: e.suppressTextValueWarning }), [e.suppressTextValueWarning]),
+        c = (0, a.Kx)(e, l, u),
+        d = (0, i.useMemo)(() => new r.Z(c, n), [c, n]),
+        _ = (0, i.useRef)(null);
+    return (
+        (0, i.useEffect)(() => {
+            if (null != n.focusedKey && !c.getItem(n.focusedKey)) {
+                let e;
+                let t = _.current.getItem(n.focusedKey),
+                    r = [..._.current.getKeys()]
+                        .map((e) => {
+                            let t = _.current.getItem(e);
+                            return 'item' === t.type ? t : null;
+                        })
+                        .filter((e) => null !== e),
+                    i = [...c.getKeys()]
+                        .map((e) => {
+                            let t = c.getItem(e);
+                            return 'item' === t.type ? t : null;
+                        })
+                        .filter((e) => null !== e),
+                    a = r.length - i.length,
+                    o = Math.min(a > 1 ? Math.max(t.index - a + 1, 0) : t.index, i.length - 1);
+                for (; o >= 0; ) {
+                    if (!d.isDisabled(i[o].key)) {
+                        e = i[o];
+                        break;
+                    }
+                    o < i.length - 1 ? o++ : (o > t.index && (o = t.index), o--);
+                }
+                n.setFocusedKey(e ? e.key : null);
+            }
+            _.current = c;
+        }, [c, d, n, n.focusedKey]),
         {
             collection: c,
-            disabledKeys: d,
-            selectionManager: _
-        } = (function (e) {
-            let { filter: t } = e,
-                n = (0, r.q)(e),
-                s = (0, i.useMemo)(() => (e.disabledKeys ? new Set(e.disabledKeys) : new Set()), [e.disabledKeys]),
-                l = (0, i.useCallback)((e) => new o(t ? t(e) : e), [t]),
-                u = (0, i.useMemo)(() => ({ suppressTextValueWarning: e.suppressTextValueWarning }), [e.suppressTextValueWarning]),
-                c = (0, a.Kx)(e, l, u),
-                d = (0, i.useMemo)(() => new r.Z(c, n), [c, n]),
-                _ = (0, i.useRef)(null);
-            return (
-                (0, i.useEffect)(() => {
-                    if (null != n.focusedKey && !c.getItem(n.focusedKey)) {
-                        let e;
-                        let t = _.current.getItem(n.focusedKey),
-                            r = [..._.current.getKeys()]
-                                .map((e) => {
-                                    let t = _.current.getItem(e);
-                                    return 'item' === t.type ? t : null;
-                                })
-                                .filter((e) => null !== e),
-                            i = [...c.getKeys()]
-                                .map((e) => {
-                                    let t = c.getItem(e);
-                                    return 'item' === t.type ? t : null;
-                                })
-                                .filter((e) => null !== e),
-                            a = r.length - i.length,
-                            s = Math.min(a > 1 ? Math.max(t.index - a + 1, 0) : t.index, i.length - 1);
-                        for (; s >= 0; ) {
-                            if (!d.isDisabled(i[s].key)) {
-                                e = i[s];
-                                break;
-                            }
-                            s < i.length - 1 ? s++ : (s > t.index && (s = t.index), s--);
-                        }
-                        n.setFocusedKey(e ? e.key : null);
-                    }
-                    _.current = c;
-                }, [c, d, n, n.focusedKey]),
-                {
-                    collection: c,
-                    disabledKeys: s,
-                    selectionManager: d
-                }
-            );
-        })({
+            disabledKeys: o,
+            selectionManager: d
+        }
+    );
+}
+function u(e) {
+    var t;
+    let [n, r] = (0, o.zk)(e.selectedKey, null !== (t = e.defaultSelectedKey) && void 0 !== t ? t : null, e.onSelectionChange),
+        a = (0, i.useMemo)(() => (null != n ? [n] : []), [n]),
+        {
+            collection: s,
+            disabledKeys: u,
+            selectionManager: c
+        } = l({
             ...e,
             selectionMode: 'single',
             disallowEmptySelection: !0,
             allowDuplicateSelectionEvents: !0,
-            selectedKeys: u,
+            selectedKeys: a,
             onSelectionChange: (t) => {
-                var r;
-                let i = null !== (r = t.values().next().value) && void 0 !== r ? r : null;
-                i === n && e.onSelectionChange && e.onSelectionChange(i), l(i);
+                var i;
+                let a = null !== (i = t.values().next().value) && void 0 !== i ? i : null;
+                a === n && e.onSelectionChange && e.onSelectionChange(a), r(a);
             }
         }),
-        E = null != n ? c.getItem(n) : null;
+        d = null != n ? s.getItem(n) : null;
     return {
-        collection: c,
-        disabledKeys: d,
-        selectionManager: _,
+        collection: s,
+        disabledKeys: u,
+        selectionManager: c,
         selectedKey: n,
-        setSelectedKey: l,
-        selectedItem: E
+        setSelectedKey: r,
+        selectedItem: d
     };
 }

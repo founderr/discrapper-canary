@@ -1,5 +1,6 @@
-t.Z = function (e) {
+function n(e) {
     return function (t) {
         return e(t);
     };
-};
+}
+t.Z = n;

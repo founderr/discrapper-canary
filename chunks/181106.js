@@ -1,64 +1,69 @@
 var r,
-    i,
-    a,
-    s,
-    o = n(442837),
-    l = n(846519),
-    u = n(570140),
-    c = n(981631);
-let d = {},
-    _ = {};
+    i = n(442837),
+    a = n(846519),
+    o = n(570140),
+    s = n(981631);
+function l(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+let u = {},
+    c = {},
+    d = 120000;
+function _(e) {
+    let { applicationId: t, activityType: n } = e,
+        r = u[t];
+    if (null == r || r[n] !== s.OcF.FAILED) return !1;
+    delete r[n];
+}
 function E(e, t, n) {
     var r;
     let { applicationId: i } = n,
-        a = null !== (r = d[i]) && void 0 !== r ? r : {};
-    if (((a[t] = e), (d[i] = a), !__OVERLAY__ && e === c.OcF.FAILED)) {
-        null != _[i] && _[i].stop();
-        let e = new l.V7();
-        e.start(120000, () =>
-            u.Z.dispatch({
+        l = null !== (r = u[i]) && void 0 !== r ? r : {};
+    if (((l[t] = e), (u[i] = l), !__OVERLAY__ && e === s.OcF.FAILED)) {
+        null != c[i] && c[i].stop();
+        let e = new a.V7();
+        e.start(d, () =>
+            o.Z.dispatch({
                 type: 'ACTIVITY_LAUNCH_FAIL',
                 applicationId: i,
                 activityType: t
             })
         ),
-            (_[i] = e);
+            (c[i] = e);
     }
 }
 function f(e) {
-    return E(c.OcF.COMPLETE, c.mFx.JOIN, e);
+    let { activityLauncherStates: t } = e;
+    u = { ...t };
 }
-class h extends (s = o.ZP.Store) {
+function h(e) {
+    return E(s.OcF.COMPLETE, s.mFx.JOIN, e);
+}
+class p extends (r = i.ZP.Store) {
     getState(e, t) {
-        let n = d[e];
+        let n = u[e];
         return null == n ? void 0 : n[t];
     }
     getStates() {
-        return d;
+        return u;
     }
 }
-(a = 'ActivityLauncherStore'),
-    (i = 'displayName') in (r = h)
-        ? Object.defineProperty(r, i, {
-              value: a,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (r[i] = a),
-    (t.Z = new h(u.Z, {
-        OVERLAY_INITIALIZE: function (e) {
-            let { activityLauncherStates: t } = e;
-            d = { ...t };
-        },
-        ACTIVITY_JOIN_LOADING: (e) => E(c.OcF.LOADING, c.mFx.JOIN, e),
-        ACTIVITY_JOIN_FAILED: (e) => E(c.OcF.FAILED, c.mFx.JOIN, e),
-        ACTIVITY_JOIN: f,
-        EMBEDDED_ACTIVITY_CLOSE: f,
-        ACTIVITY_LAUNCH_FAIL: function (e) {
-            let { applicationId: t, activityType: n } = e,
-                r = d[t];
-            if (null == r || r[n] !== c.OcF.FAILED) return !1;
-            delete r[n];
-        }
+l(p, 'displayName', 'ActivityLauncherStore'),
+    (t.Z = new p(o.Z, {
+        OVERLAY_INITIALIZE: f,
+        ACTIVITY_JOIN_LOADING: (e) => E(s.OcF.LOADING, s.mFx.JOIN, e),
+        ACTIVITY_JOIN_FAILED: (e) => E(s.OcF.FAILED, s.mFx.JOIN, e),
+        ACTIVITY_JOIN: h,
+        EMBEDDED_ACTIVITY_CLOSE: h,
+        ACTIVITY_LAUNCH_FAIL: _
     }));

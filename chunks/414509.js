@@ -1,39 +1,40 @@
-n(47120);
-var r = n(147913),
-    i = n(592125),
-    a = n(699516),
+var r = n(47120);
+var i = n(147913),
+    a = n(592125),
+    o = n(699516),
     s = n(280006),
-    o = n(189275);
-function l(e) {
+    l = n(189275);
+function u(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function c(e) {
     let { channelId: t } = e;
     if (null == t) return;
-    let n = i.Z.getChannel(t);
+    let n = a.Z.getChannel(t);
     if (null != n && n.isGroupDM()) {
-        let e = n.recipients.filter((e) => a.Z.isBlocked(e));
+        let e = n.recipients.filter((e) => o.Z.isBlocked(e));
         e.length > 0 &&
             s.E.getCurrentConfig({ location: 'channel_select' }, { autoTrackExposure: !0 }).showAsModal &&
             !n.blockedUserWarningDismissed &&
-            (0, o.O)({
+            (0, l.O)({
                 channelId: t,
                 blockedUserIds: e
             });
     }
 }
-class u extends r.Z {
+class d extends i.Z {
     constructor(...e) {
-        var t, n, r;
-        super(...e),
-            (t = this),
-            (n = 'actions'),
-            (r = { CHANNEL_SELECT: l }),
-            n in t
-                ? Object.defineProperty(t, n, {
-                      value: r,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (t[n] = r);
+        super(...e), u(this, 'actions', { CHANNEL_SELECT: c });
     }
 }
-t.Z = new u();
+t.Z = new d();

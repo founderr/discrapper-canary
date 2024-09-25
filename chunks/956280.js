@@ -1,8 +1,8 @@
 var r = n(470079),
     i = n(476400),
     a = n.n(i),
-    s = n(844303),
-    o = n(329022),
+    o = n(844303),
+    s = n(329022),
     l = n(829307),
     u = n(13942),
     c = n(464854),
@@ -17,7 +17,8 @@ var r = n(470079),
             f = e.styles,
             h = void 0 === f ? {} : f,
             p = e.className,
-            I = (0, s.default)(
+            m = void 0 === p ? '' : p,
+            I = (0, o.default)(
                 (0, l.Z)(
                     {
                         default: {
@@ -37,7 +38,7 @@ var r = n(470079),
                     h
                 )
             ),
-            m = function (e, n) {
+            T = function (e, n) {
                 e.hex
                     ? u.FX(e.hex) &&
                       t(
@@ -59,17 +60,17 @@ var r = n(470079),
                 'div',
                 {
                     style: I.compact,
-                    className: 'compact-picker ' + (void 0 === p ? '' : p)
+                    className: 'compact-picker ' + m
                 },
                 r.createElement(
                     'div',
                     null,
-                    (0, o.Z)(i, function (e) {
+                    (0, s.Z)(i, function (e) {
                         return r.createElement(d.Z, {
                             key: e,
                             color: e,
                             active: e.toLowerCase() === a,
-                            onClick: m,
+                            onClick: T,
                             onSwatchHover: n
                         });
                     }),
@@ -78,7 +79,7 @@ var r = n(470079),
                 r.createElement(_.Z, {
                     hex: a,
                     rgb: E,
-                    onChange: m
+                    onChange: T
                 })
             )
         );

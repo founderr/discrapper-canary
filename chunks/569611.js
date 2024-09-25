@@ -1,53 +1,55 @@
 n.d(t, {
     Hj: function () {
-        return s;
+        return c;
     },
     Pz: function () {
-        return l;
+        return E;
     },
     ZH: function () {
-        return o;
+        return d;
     }
-}),
-    n(653041),
-    n(411104),
-    n(47120);
-var r = n(427786),
-    i = n.n(r);
-let a = new (i())(5000);
-function s(e) {
+});
+var r = n(653041);
+var i = n(411104);
+var a = n(47120);
+var o = n(427786),
+    s = n.n(o);
+let l = 5000,
+    u = new (s())(l);
+function c(e) {
     for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
-    let i = (function (e) {
-        let t = '';
-        for (let n of e) {
-            let e = typeof n;
-            'string' === e || 'number' === e || 'boolean' === e ? (t += n + ' ') : n instanceof Error ? (t += n.message + '\n' + n.stack + ' ') : (t += JSON.stringify(n) + ' ');
-        }
-        return t;
-    })(n);
+    let i = _(n);
     for (
         'string' == typeof e
-            ? a.push({
+            ? u.push({
                   time: Date.now(),
                   category: e,
                   message: i
               })
-            : a.push({
+            : u.push({
                   time: Date.now(),
                   category: e.name,
                   timing: e.timing,
                   message: i
               });
-        a.length > 5000;
+        u.length > l;
 
     )
-        a.shift();
+        u.shift();
 }
-function o() {
-    a.clear();
+function d() {
+    u.clear();
 }
-function l(e) {
-    return a
+function _(e) {
+    let t = '';
+    for (let n of e) {
+        let e = typeof n;
+        'string' === e || 'number' === e || 'boolean' === e ? (t += n + ' ') : n instanceof Error ? (t += n.message + '\n' + n.stack + ' ') : (t += JSON.stringify(n) + ' ');
+    }
+    return t;
+}
+function E(e) {
+    return u
         .toArray()
         .filter((t) => null == e || e.includes(t.category))
         .map((e) => {

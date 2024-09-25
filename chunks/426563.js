@@ -1,13 +1,13 @@
 n.d(t, {
     j: function () {
-        return O;
+        return y;
     }
 });
 var r = n(526167),
     i = n(621554),
     a = n(328756),
-    s = n(639525),
-    o = n(131812),
+    o = n(639525),
+    s = n(131812),
     l = n(265174),
     u = n(926425),
     c = n(844049),
@@ -17,27 +17,31 @@ var r = n(526167),
     f = n(859500),
     h = n(484542),
     p = n(881500),
-    I = n(910826),
-    m = n(307244),
+    m = n(910826),
+    I = n(307244),
     T = n(669730),
-    S = n(666828),
-    g = n(131999),
+    g = n(666828),
+    S = n(131999),
     A = n(185672),
-    N = n(235731);
-function O() {
+    v = n(235731);
+let N = [a, o, s, l, u, c],
+    O = [d, _, E, f, h, p, m, I],
+    R = {
+        clyde: A,
+        nitro: g,
+        nitro_wumpus: S
+    };
+function C() {
+    return r.og();
+}
+function y() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    return e ? N : i;
+    return e ? v : i;
 }
 t.Z = {
-    DEFAULT_AVATARS: [a, s, o, l, u, c],
-    DEFAULT_GROUP_DM_AVATARS: [d, _, E, f, h, p, I, m],
-    BOT_AVATARS: {
-        clyde: A,
-        nitro: S,
-        nitro_wumpus: g
-    },
+    DEFAULT_AVATARS: N,
+    DEFAULT_GROUP_DM_AVATARS: O,
+    BOT_AVATARS: R,
     DEFAULT_CHANNEL_ICON: T,
-    canUseWebp: function () {
-        return r.og();
-    }
+    canUseWebp: C
 };

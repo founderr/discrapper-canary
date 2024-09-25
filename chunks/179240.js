@@ -1,14 +1,14 @@
 let r;
 n.d(t, {
     l: function () {
-        return f;
+        return h;
     }
 });
 var i,
     a = n(735250),
-    s = n(470079),
-    o = n(120356),
-    l = n.n(o),
+    o = n(470079),
+    s = n(120356),
+    l = n.n(s),
     u = n(58654),
     c = n(84735),
     d = n(112864);
@@ -25,8 +25,9 @@ function _(e, t, n) {
         e
     );
 }
-let E = ['letter-spacing', 'line-height', 'padding-top', 'padding-bottom', 'font-family', 'font-weight', 'font-size', 'text-transform', 'width', 'padding-left', 'padding-right', 'border-width', 'box-sizing'];
-class f extends (i = s.PureComponent) {
+let E = '\n  visibility:hidden;\n  overflow:hidden;\n  position:absolute;\n  z-index:-1000;\n  top:0;\n  right:0;\n',
+    f = ['letter-spacing', 'line-height', 'padding-top', 'padding-bottom', 'font-family', 'font-weight', 'font-size', 'text-transform', 'width', 'padding-left', 'padding-right', 'border-width', 'box-sizing'];
+class h extends (i = o.PureComponent) {
     componentDidMount() {
         var e, t;
         null === (e = (t = this.props).onResize) || void 0 === e || e.call(t, void 0), Promise.resolve().then(() => this.calculateSize());
@@ -49,10 +50,10 @@ class f extends (i = s.PureComponent) {
             return;
         }
         null == r && null != document.body && ((r = document.createElement('textarea')), document.body.appendChild(r));
-        let { paddingSize: s, borderSize: o, boxSizing: l, sizingStyle: u } = this.calculateNodeStyling(t);
-        r.setAttribute('style', u + ';\n  visibility:hidden;\n  overflow:hidden;\n  position:absolute;\n  z-index:-1000;\n  top:0;\n  right:0;\n'), (r.value = a), null != i ? r.setAttribute('rows', ''.concat(i)) : r.removeAttribute('rows');
+        let { paddingSize: o, borderSize: s, boxSizing: l, sizingStyle: u } = this.calculateNodeStyling(t);
+        r.setAttribute('style', u + ';' + E), (r.value = a), null != i ? r.setAttribute('rows', ''.concat(i)) : r.removeAttribute('rows');
         let c = r.scrollHeight;
-        'border-box' === l ? (c += o) : 'content-box' === l && (c -= s), this.setState({ height: c });
+        'border-box' === l ? (c += s) : 'content-box' === l && (c -= o), this.setState({ height: c });
     }
     calculateNodeStyling(e) {
         let t = window.getComputedStyle(e),
@@ -60,7 +61,7 @@ class f extends (i = s.PureComponent) {
             r = parseFloat(t.getPropertyValue('padding-bottom')) + parseFloat(t.getPropertyValue('padding-top')),
             i = parseFloat(t.getPropertyValue('border-bottom-width')) + parseFloat(t.getPropertyValue('border-top-width'));
         return {
-            sizingStyle: E.map((e) => ''.concat(e, ':').concat(t.getPropertyValue(e))).join(';'),
+            sizingStyle: f.map((e) => ''.concat(e, ':').concat(t.getPropertyValue(e))).join(';'),
             paddingSize: r,
             borderSize: i,
             boxSizing: n
@@ -122,7 +123,7 @@ class f extends (i = s.PureComponent) {
             (this.state = { height: void 0 });
     }
 }
-_(f, 'defaultProps', {
+_(h, 'defaultProps', {
     autoFocus: !1,
     disabled: !1,
     autoCorrect: 'off'

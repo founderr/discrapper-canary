@@ -1,6 +1,5 @@
 e.exports = {
     typeMacOS: 'typeMacOS_a934d8 titleBar_a934d8',
-    macDragRegion: 'macDragRegion_a934d8',
     typeMacOSWithFrame: 'typeMacOSWithFrame_a934d8 withFrame_a934d8 titleBar_a934d8',
     macButtons: 'macButtons_a934d8',
     typeWindows: 'typeWindows_a934d8 withFrame_a934d8 titleBar_a934d8',

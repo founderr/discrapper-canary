@@ -3,48 +3,53 @@ var r = n(735250);
 n(470079);
 var i = n(120356),
     a = n.n(i),
-    s = n(693789),
-    o = n(1561),
+    o = n(693789),
+    s = n(1561),
     l = n(512983),
     u = n(466377),
     c = n(993365),
     d = n(600164),
     _ = n(689938),
     E = n(149536);
-t.default = (e) => {
+let f = (e) => {
     let t,
         n,
         i,
-        { body: f, cancelText: h, className: p, confirmColor: I, confirmText: m = _.Z.Messages.OKAY, secondaryConfirmText: T, onCancel: S, onClose: g, onConfirm: A, onConfirmSecondary: N, title: O, transitionState: R, titleClassName: v } = e;
+        { body: f, cancelText: h, className: p, confirmColor: m, confirmText: I = _.Z.Messages.OKAY, secondaryConfirmText: T, onCancel: g, onClose: S, onConfirm: A, onConfirmSecondary: v, title: N, transitionState: O, titleClassName: R } = e,
+        C = () => {
+            null == S || S(), null == g || g();
+        },
+        y = (e) => {
+            null != e && e.preventDefault(), null == S || S(), null == A || A();
+        },
+        b = () => {
+            null == S || S(), null == v || v();
+        };
     return (
         null != h &&
             '' !== h &&
-            (t = (0, r.jsx)(s.zx, {
+            (t = (0, r.jsx)(o.zx, {
                 type: 'button',
-                size: s.zx.Sizes.LARGE,
-                color: s.zx.Colors.PRIMARY,
-                onClick: () => {
-                    null == g || g(), null == S || S();
-                },
+                size: o.zx.Sizes.LARGE,
+                color: o.zx.Colors.PRIMARY,
+                onClick: C,
                 className: E.secondaryButton,
                 children: h
             })),
-        null != m &&
-            '' !== m &&
-            (n = (0, r.jsx)(s.zx, {
+        null != I &&
+            '' !== I &&
+            (n = (0, r.jsx)(o.zx, {
                 type: 'submit',
-                color: I,
-                size: s.zx.Sizes.LARGE,
+                color: m,
+                size: o.zx.Sizes.LARGE,
                 className: a()(E.primaryButton, null != t ? E.gutter : null),
                 autoFocus: !0,
-                children: m
+                children: I
             })),
         null != T &&
             '' !== T &&
-            (i = (0, r.jsx)(o.P, {
-                onClick: () => {
-                    null == g || g(), null == N || N();
-                },
+            (i = (0, r.jsx)(s.P, {
+                onClick: b,
                 className: E.minorContainer,
                 children: (0, r.jsx)(c.x, {
                     className: E.secondaryAction,
@@ -53,13 +58,11 @@ t.default = (e) => {
                 })
             })),
         (0, r.jsx)(u.Y0, {
-            transitionState: R,
+            transitionState: O,
             className: a()(p, E.container),
-            'aria-label': O,
+            'aria-label': N,
             children: (0, r.jsxs)('form', {
-                onSubmit: (e) => {
-                    null != e && e.preventDefault(), null == g || g(), null == A || A();
-                },
+                onSubmit: y,
                 className: E.form,
                 children: [
                     (0, r.jsx)(u.hz, {
@@ -69,11 +72,11 @@ t.default = (e) => {
                             justify: d.Z.Justify.CENTER,
                             className: E.content,
                             children: [
-                                null != O &&
+                                null != N &&
                                     (0, r.jsx)(l.v, {
                                         tag: 'h2',
-                                        className: a()(E.title, v),
-                                        children: O
+                                        className: a()(E.title, R),
+                                        children: N
                                     }),
                                 null != f &&
                                     (0, r.jsx)(c.x, {
@@ -94,3 +97,4 @@ t.default = (e) => {
         })
     );
 };
+t.default = f;

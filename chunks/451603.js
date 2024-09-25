@@ -5,12 +5,13 @@ n.d(t, {
 }),
     n(442837),
     n(536442);
-var i = n(430824),
-    s = n(594174),
+var r = n(430824),
+    i = n(594174),
     a = n(74538),
-    r = n(981631);
+    o = n(981631);
+let s = 95;
 function l() {
-    let e = i.Z.getGuildCount() >= r.DZw,
-        t = a.ZP.canUseIncreasedGuildCap(s.default.getCurrentUser());
+    let e = r.Z.getGuildCount() >= o.DZw,
+        t = a.ZP.canUseIncreasedGuildCap(i.default.getCurrentUser());
     return e && !t;
 }

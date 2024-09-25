@@ -1,4 +1,4 @@
-e.exports = function (e) {
+function t(e) {
     return {
         name: 'VBScript in HTML',
         subLanguage: 'xml',
@@ -10,4 +10,5 @@ e.exports = function (e) {
             }
         ]
     };
-};
+}
+e.exports = t;

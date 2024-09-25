@@ -1,9 +1,10 @@
 var r = n(670097);
-t.Z = function (e, t) {
+function i(e, t) {
     return function (n, i) {
         if (null == n) return n;
         if (!(0, r.Z)(n)) return e(n, i);
-        for (var a = n.length, s = t ? a : -1, o = Object(n); (t ? s-- : ++s < a) && !1 !== i(o[s], s, o); );
+        for (var a = n.length, o = t ? a : -1, s = Object(n); (t ? o-- : ++o < a) && !1 !== i(s[o], o, s); );
         return n;
     };
-};
+}
+t.Z = i;

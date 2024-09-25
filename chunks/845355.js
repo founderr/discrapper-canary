@@ -1,8 +1,8 @@
 var r = n(42848),
     i = 4294967294,
     a = Math.floor,
-    s = Math.min;
-e.exports = function (e, t, n, o) {
+    o = Math.min;
+function s(e, t, n, s) {
     var l = 0,
         u = null == e ? 0 : e.length;
     if (0 === u) return 0;
@@ -10,12 +10,13 @@ e.exports = function (e, t, n, o) {
         var f = a((l + u) / 2),
             h = n(e[f]),
             p = void 0 !== h,
-            I = null === h,
-            m = h == h,
+            m = null === h,
+            I = h == h,
             T = r(h);
-        if (c) var S = o || m;
-        else S = E ? m && (o || p) : d ? m && p && (o || !I) : _ ? m && p && !I && (o || !T) : !I && !T && (o ? h <= t : h < t);
-        S ? (l = f + 1) : (u = f);
+        if (c) var g = s || I;
+        else g = E ? I && (s || p) : d ? I && p && (s || !m) : _ ? I && p && !m && (s || !T) : !m && !T && (s ? h <= t : h < t);
+        g ? (l = f + 1) : (u = f);
     }
-    return s(u, i);
-};
+    return o(u, i);
+}
+e.exports = s;

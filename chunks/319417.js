@@ -1,12 +1,12 @@
 var r = n(735250),
     i = n(470079),
     a = n(120356),
-    s = n.n(a),
-    o = n(481060),
+    o = n.n(a),
+    s = n(481060),
     l = n(443603),
     u = n(689938),
     c = n(115791);
-t.Z = i.memo(function (e) {
+function d(e) {
     let { onClick: t, disabled: n = !1 } = e;
     return (0, r.jsx)('div', {
         className: c.separator,
@@ -15,7 +15,7 @@ t.Z = i.memo(function (e) {
             children: (0, r.jsx)(l.Z, {
                 className: c.button,
                 innerClassName: c.innerButton,
-                childClassName: s()(c.buttonChild, {
+                childClassName: o()(c.buttonChild, {
                     [c.disabled]: n,
                     [c.activeButtonChild]: !n
                 }),
@@ -23,7 +23,7 @@ t.Z = i.memo(function (e) {
                 disabled: n,
                 isActive: !1,
                 'aria-label': u.Z.Messages.SEND_MESSAGE,
-                children: (0, r.jsx)(o.SendMessageIcon, {
+                children: (0, r.jsx)(s.SendMessageIcon, {
                     size: 'xs',
                     color: 'currentColor',
                     className: c.sendIcon
@@ -31,4 +31,5 @@ t.Z = i.memo(function (e) {
             })
         })
     });
-});
+}
+t.Z = i.memo(d);

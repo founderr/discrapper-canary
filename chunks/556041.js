@@ -1,53 +1,54 @@
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var s = n(481060),
+var i = n(481060),
     a = n(600164),
-    r = n(245315),
-    l = n(689938),
-    o = n(905702);
-t.Z = () =>
-    (0, i.jsxs)(a.Z, {
+    o = n(245315),
+    s = n(689938),
+    l = n(905702);
+let u = () =>
+    (0, r.jsxs)(a.Z, {
         align: a.Z.Align.CENTER,
         justify: a.Z.Justify.CENTER,
         direction: a.Z.Direction.VERTICAL,
-        className: o.popout,
+        className: l.popout,
         children: [
-            (0, i.jsx)('img', {
+            (0, r.jsx)('img', {
                 alt: '',
-                src: (0, r.QA)(),
-                className: o.avatar
+                src: (0, o.QA)(),
+                className: l.avatar
             }),
-            (0, i.jsxs)(a.Z, {
+            (0, r.jsxs)(a.Z, {
                 align: a.Z.Align.CENTER,
                 justify: a.Z.Justify.CENTER,
-                className: o.nameWrapper,
+                className: l.nameWrapper,
                 children: [
-                    (0, i.jsx)(s.Tooltip, {
-                        text: l.Z.Messages.STAFF_BADGE_TOOLTIP,
+                    (0, r.jsx)(i.Tooltip, {
+                        text: s.Z.Messages.STAFF_BADGE_TOOLTIP,
                         children: (e) =>
-                            (0, i.jsx)('div', {
+                            (0, r.jsx)('div', {
                                 ...e,
-                                className: o.staffBadge
+                                className: l.staffBadge
                             })
                     }),
-                    (0, i.jsx)(s.Heading, {
-                        className: o.header,
+                    (0, r.jsx)(i.Heading, {
+                        className: l.header,
                         variant: 'heading-md/semibold',
-                        children: l.Z.Messages.ANNOUNCEMENT_GUILD_POPOUT_NAME
+                        children: s.Z.Messages.ANNOUNCEMENT_GUILD_POPOUT_NAME
                     })
                 ]
             }),
-            (0, i.jsx)(s.Text, {
-                className: o.description,
+            (0, r.jsx)(i.Text, {
+                className: l.description,
                 color: 'header-secondary',
                 variant: 'text-sm/normal',
-                children: l.Z.Messages.ANNOUNCEMENT_GUILD_DESCRIPTION
+                children: s.Z.Messages.ANNOUNCEMENT_GUILD_DESCRIPTION
             }),
-            (0, i.jsx)(s.Text, {
-                className: o.description,
+            (0, r.jsx)(i.Text, {
+                className: l.description,
                 color: 'header-secondary',
                 variant: 'text-sm/normal',
-                children: l.Z.Messages.ANNOUNCEMENT_GUILD_HERE_TO_HELP
+                children: s.Z.Messages.ANNOUNCEMENT_GUILD_HERE_TO_HELP
             })
         ]
     });
+t.Z = u;

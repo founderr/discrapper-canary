@@ -1,7 +1,24 @@
-e.exports = function (e) {
+function t(e) {
     let t = 'true false yes no null',
         n = "[\\w#;/?:@&=+$,.~*'()[\\]]+",
         r = {
+            className: 'attr',
+            variants: [{ begin: '\\w[\\w :\\/.-]*:(?=[ \t]|$)' }, { begin: '"\\w[\\w :\\/.-]*":(?=[ \t]|$)' }, { begin: "'\\w[\\w :\\/.-]*':(?=[ \t]|$)" }]
+        },
+        i = {
+            className: 'template-variable',
+            variants: [
+                {
+                    begin: /\{\{/,
+                    end: /\}\}/
+                },
+                {
+                    begin: /%\{/,
+                    end: /\}/
+                }
+            ]
+        },
+        a = {
             className: 'string',
             relevance: 0,
             variants: [
@@ -15,24 +32,9 @@ e.exports = function (e) {
                 },
                 { begin: /\S+/ }
             ],
-            contains: [
-                e.BACKSLASH_ESCAPE,
-                {
-                    className: 'template-variable',
-                    variants: [
-                        {
-                            begin: /\{\{/,
-                            end: /\}\}/
-                        },
-                        {
-                            begin: /%\{/,
-                            end: /\}/
-                        }
-                    ]
-                }
-            ]
+            contains: [e.BACKSLASH_ESCAPE, i]
         },
-        i = e.inherit(r, {
+        o = e.inherit(a, {
             variants: [
                 {
                     begin: /'/,
@@ -45,18 +47,33 @@ e.exports = function (e) {
                 { begin: /[^\s,{}[\]]+/ }
             ]
         }),
-        a = {
+        s = {
+            className: 'number',
+            begin: '\\b[0-9]{4}(-[0-9][0-9]){0,2}([Tt \\t][0-9][0-9]?(:[0-9][0-9]){2})?(\\.[0-9]*)?([ \\t])*(Z|[-+][0-9][0-9]?(:[0-9][0-9])?)?\\b'
+        },
+        l = {
             end: ',',
             endsWithParent: !0,
             excludeEnd: !0,
             keywords: t,
             relevance: 0
         },
-        s = [
-            {
-                className: 'attr',
-                variants: [{ begin: '\\w[\\w :\\/.-]*:(?=[ \t]|$)' }, { begin: '"\\w[\\w :\\/.-]*":(?=[ \t]|$)' }, { begin: "'\\w[\\w :\\/.-]*':(?=[ \t]|$)" }]
-            },
+        u = {
+            begin: /\{/,
+            end: /\}/,
+            contains: [l],
+            illegal: '\\n',
+            relevance: 0
+        },
+        c = {
+            begin: '\\[',
+            end: '\\]',
+            contains: [l],
+            illegal: '\\n',
+            relevance: 0
+        },
+        d = [
+            r,
             {
                 className: 'meta',
                 begin: '^---\\s*$',
@@ -108,41 +125,27 @@ e.exports = function (e) {
                 beginKeywords: t,
                 keywords: { literal: t }
             },
-            {
-                className: 'number',
-                begin: '\\b[0-9]{4}(-[0-9][0-9]){0,2}([Tt \\t][0-9][0-9]?(:[0-9][0-9]){2})?(\\.[0-9]*)?([ \\t])*(Z|[-+][0-9][0-9]?(:[0-9][0-9])?)?\\b'
-            },
+            s,
             {
                 className: 'number',
                 begin: e.C_NUMBER_RE + '\\b',
                 relevance: 0
             },
-            {
-                begin: /\{/,
-                end: /\}/,
-                contains: [a],
-                illegal: '\\n',
-                relevance: 0
-            },
-            {
-                begin: '\\[',
-                end: '\\]',
-                contains: [a],
-                illegal: '\\n',
-                relevance: 0
-            },
-            r
+            u,
+            c,
+            a
         ],
-        o = [...s];
+        _ = [...d];
     return (
-        o.pop(),
-        o.push(i),
-        (a.contains = o),
+        _.pop(),
+        _.push(o),
+        (l.contains = _),
         {
             name: 'YAML',
             case_insensitive: !0,
             aliases: ['yml'],
-            contains: s
+            contains: d
         }
     );
-};
+}
+e.exports = t;

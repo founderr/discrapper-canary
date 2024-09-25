@@ -1,41 +1,41 @@
 n.d(t, {
     An: function () {
-        return S;
-    },
-    C3: function () {
-        return m;
-    },
-    It: function () {
-        return R;
-    },
-    St: function () {
-        return T;
-    },
-    YH: function () {
-        return L;
-    },
-    iN: function () {
-        return _;
-    },
-    nk: function () {
         return N;
     },
-    r3: function () {
+    C3: function () {
+        return A;
+    },
+    It: function () {
+        return b;
+    },
+    St: function () {
+        return v;
+    },
+    YH: function () {
+        return U;
+    },
+    iN: function () {
+        return E;
+    },
+    nk: function () {
         return C;
     },
+    r3: function () {
+        return M;
+    },
     rx: function () {
-        return E;
+        return f;
     }
-}),
-    n(47120);
-var r = n(470079),
-    i = n(442837),
-    a = n(818083),
+});
+var r = n(47120);
+var i = n(470079),
+    a = n(442837),
+    o = n(818083),
     s = n(430824),
-    o = n(496675),
-    l = n(308083),
-    u = n(981631);
-let c = (0, a.B)({
+    l = n(496675),
+    u = n(308083),
+    c = n(981631);
+let d = (0, o.B)({
         kind: 'guild',
         id: '2024-07_rapidash_m3_guilds',
         label: 'Rapidash M3 Guilds',
@@ -53,7 +53,7 @@ let c = (0, a.B)({
             }
         ]
     }),
-    d = (0, a.B)({
+    _ = (0, o.B)({
         kind: 'user',
         id: '2024-07_rapidash_m3_joiners',
         label: 'Rapidash M3 Users',
@@ -66,15 +66,15 @@ let c = (0, a.B)({
             }
         ]
     });
-function _(e) {
-    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    return d.useExperiment({ location: e }, { autoTrackExposure: t }).enableM3Experience;
-}
 function E(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    return d.getCurrentConfig({ location: e }, { autoTrackExposure: t }).enableM3Experience;
+    return _.useExperiment({ location: e }, { autoTrackExposure: t }).enableM3Experience;
 }
-let f = (0, a.B)({
+function f(e) {
+    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
+    return _.getCurrentConfig({ location: e }, { autoTrackExposure: t }).enableM3Experience;
+}
+let h = (0, o.B)({
         kind: 'user',
         id: '2024-05_clans_valorant_prepilot',
         label: 'Clans Valorant Prepilot',
@@ -88,12 +88,12 @@ let f = (0, a.B)({
                 label: 'Enable creation of clan guilds - Valorant',
                 config: {
                     enableClanCreation: !0,
-                    defaultGameId: l.nJ
+                    defaultGameId: u.nJ
                 }
             }
         ]
     }),
-    h = (0, a.B)({
+    p = (0, o.B)({
         kind: 'user',
         id: '2024-05_clans_genshin_prepilot',
         label: 'Clans Genshin Prepilot',
@@ -107,123 +107,120 @@ let f = (0, a.B)({
                 label: 'Enable creation of clan guilds - Genshin',
                 config: {
                     enableClanCreation: !0,
-                    defaultGameId: l.xn
+                    defaultGameId: u.xn
                 }
             }
         ]
     });
-function p(e) {
+function m(e) {
     var t, n;
     let { valorantConfig: r, genshinConfig: i } = e;
     return null !== (n = null !== (t = null == i ? void 0 : i.defaultGameId) && void 0 !== t ? t : null == r ? void 0 : r.defaultGameId) && void 0 !== n ? n : null;
 }
 function I(e) {
-    let { guilds: t, valorantConfig: n, genshinConfig: r, m3GuildConfig: a, includeConverted: s } = e,
-        l = (0, i.Wu)([o.Z], () => t.filter((e) => o.Z.can(u.Plq.ADMINISTRATOR, e))),
-        d = l.filter((e) =>
-            (function (e) {
-                let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-                return null != e && e.hasFeature(u.oNc.CLAN_PILOT_GENSHIN) && (t || !e.hasFeature(u.oNc.CLAN));
-            })(e, s)
-        ),
-        _ = l.filter((e) =>
-            (function (e) {
-                let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-                return null != e && e.hasFeature(u.oNc.CLAN_PILOT_VALORANT) && (t || !e.hasFeature(u.oNc.CLAN));
-            })(e, s)
-        ),
-        E = l.filter((e) =>
-            (function (e) {
-                let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-                return (
-                    null != e &&
-                    e.hasFeature(u.oNc.RAPIDASH_TEST) &&
-                    c.getCurrentConfig(
-                        {
-                            guildId: e.id,
-                            location: 'isM3TargetedGuild'
-                        },
-                        { autoTrackExposure: !1 }
-                    ).enableClanCreation &&
-                    (t || !e.hasFeature(u.oNc.CLAN))
-                );
-            })(e, s)
-        ),
-        f = d.length > 0 && r.enableClanCreation,
-        h = _.length > 0 && n.enableClanCreation,
-        I = E.length > 0 && a.enableClanCreation,
-        m = new Map();
+    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+    return null != e && e.hasFeature(c.oNc.CLAN_PILOT_VALORANT) && (t || !e.hasFeature(c.oNc.CLAN));
+}
+function T(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+    return null != e && e.hasFeature(c.oNc.CLAN_PILOT_GENSHIN) && (t || !e.hasFeature(c.oNc.CLAN));
+}
+function g(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return (
-        f && d.forEach((e) => m.set(e.id, e)),
-        h && _.forEach((e) => m.set(e.id, e)),
-        I && E.forEach((e) => m.set(e.id, e)),
+        null != e &&
+        e.hasFeature(c.oNc.RAPIDASH_TEST) &&
+        d.getCurrentConfig(
+            {
+                guildId: e.id,
+                location: 'isM3TargetedGuild'
+            },
+            { autoTrackExposure: !1 }
+        ).enableClanCreation &&
+        (t || !e.hasFeature(c.oNc.CLAN))
+    );
+}
+function S(e) {
+    let { guilds: t, valorantConfig: n, genshinConfig: r, m3GuildConfig: i, includeConverted: o } = e,
+        s = (0, a.Wu)([l.Z], () => t.filter((e) => l.Z.can(c.Plq.ADMINISTRATOR, e))),
+        u = s.filter((e) => T(e, o)),
+        d = s.filter((e) => I(e, o)),
+        _ = s.filter((e) => g(e, o)),
+        E = u.length > 0 && r.enableClanCreation,
+        f = d.length > 0 && n.enableClanCreation,
+        h = _.length > 0 && i.enableClanCreation,
+        p = new Map();
+    return (
+        E && u.forEach((e) => p.set(e.id, e)),
+        f && d.forEach((e) => p.set(e.id, e)),
+        h && _.forEach((e) => p.set(e.id, e)),
         {
-            guilds: [...m.values()],
-            enableClanCreation: f || h || I,
-            defaultGameId: p({
-                genshinConfig: f ? r : void 0,
-                valorantConfig: h ? n : void 0
+            guilds: [...p.values()],
+            enableClanCreation: E || f || h,
+            defaultGameId: m({
+                genshinConfig: E ? r : void 0,
+                valorantConfig: f ? n : void 0
             })
         }
     );
 }
-function m(e) {
-    let { location: t, includeConverted: n, autoTrackExposure: a = !0 } = e,
-        o = (0, i.Wu)([s.Z], () => Object.values(s.Z.getGuilds())),
-        l = f.useExperiment({ location: t }, { autoTrackExposure: a }),
-        u = h.useExperiment({ location: t }, { autoTrackExposure: a }),
-        d = r.useMemo(() => {
+function A(e) {
+    let { location: t, includeConverted: n, autoTrackExposure: r = !0 } = e,
+        o = (0, a.Wu)([s.Z], () => Object.values(s.Z.getGuilds())),
+        l = h.useExperiment({ location: t }, { autoTrackExposure: r }),
+        u = p.useExperiment({ location: t }, { autoTrackExposure: r }),
+        c = i.useMemo(() => {
             let e = { enableClanCreation: !1 };
             return (
                 o.forEach((n) => {
-                    let r = c.getCurrentConfig(
+                    let i = d.getCurrentConfig(
                         {
                             guildId: n.id,
                             location: t
                         },
-                        { autoTrackExposure: a }
+                        { autoTrackExposure: r }
                     );
-                    e.enableClanCreation = e.enableClanCreation || r.enableClanCreation;
+                    e.enableClanCreation = e.enableClanCreation || i.enableClanCreation;
                 }),
                 e
             );
-        }, [o, t, a]);
-    return I({
+        }, [o, t, r]);
+    return S({
         guilds: o,
         valorantConfig: l,
         genshinConfig: u,
-        m3GuildConfig: d,
+        m3GuildConfig: c,
         includeConverted: n
     });
 }
-function T(e) {
+function v(e) {
     let { guild: t, location: n, includeConverted: r, autoTrackExposure: i = !0 } = e,
-        a = f.useExperiment({ location: n }, { autoTrackExposure: i }),
-        s = h.useExperiment({ location: n }, { autoTrackExposure: i }),
-        o = c.useExperiment(
+        a = h.useExperiment({ location: n }, { autoTrackExposure: i }),
+        o = p.useExperiment({ location: n }, { autoTrackExposure: i }),
+        s = d.useExperiment(
             {
                 guildId: null == t ? void 0 : t.id,
                 location: n
             },
             { autoTrackExposure: i }
         );
-    return I({
+    return S({
         guilds: [t],
         valorantConfig: a,
-        genshinConfig: s,
-        m3GuildConfig: o,
+        genshinConfig: o,
+        m3GuildConfig: s,
         includeConverted: r
     });
 }
-function S(e) {
+function N(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
-        r = f.useExperiment({ location: t }, { autoTrackExposure: n });
-    return p({
+        r = h.useExperiment({ location: t }, { autoTrackExposure: n });
+    return m({
         valorantConfig: r,
-        genshinConfig: h.useExperiment({ location: t }, { autoTrackExposure: n })
+        genshinConfig: p.useExperiment({ location: t }, { autoTrackExposure: n })
     });
 }
-let g = (0, a.B)({
+let O = (0, o.B)({
         kind: 'user',
         id: '2024-05_clans_valorant_pilot',
         label: 'Clans Valorant Pilot',
@@ -237,12 +234,12 @@ let g = (0, a.B)({
                 label: 'Show clan discovery (Valorant)',
                 config: {
                     clanDiscoveryEnabled: !0,
-                    defaultGameId: l.nJ
+                    defaultGameId: u.nJ
                 }
             }
         ]
     }),
-    A = (0, a.B)({
+    R = (0, o.B)({
         kind: 'user',
         id: '2024-05_clans_genshin_pilot',
         label: 'Clans Genshin Pilot',
@@ -256,23 +253,23 @@ let g = (0, a.B)({
                 label: 'Show clan discovery (Genshin Impact)',
                 config: {
                     clanDiscoveryEnabled: !0,
-                    defaultGameId: l.xn
+                    defaultGameId: u.xn
                 }
             }
         ]
     });
-function N(e) {
+function C(e) {
     var t, n;
     let r = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        i = g.useExperiment({ location: e }, { autoTrackExposure: r }),
-        a = A.useExperiment({ location: e }, { autoTrackExposure: r }),
-        s = _(e, r);
+        i = O.useExperiment({ location: e }, { autoTrackExposure: r }),
+        a = R.useExperiment({ location: e }, { autoTrackExposure: r }),
+        o = E(e, r);
     return {
-        clanDiscoveryEnabled: i.clanDiscoveryEnabled || a.clanDiscoveryEnabled || s,
+        clanDiscoveryEnabled: i.clanDiscoveryEnabled || a.clanDiscoveryEnabled || o,
         defaultGameId: null !== (n = null !== (t = i.defaultGameId) && void 0 !== t ? t : a.defaultGameId) && void 0 !== n ? n : null
     };
 }
-let O = (0, a.B)({
+let y = (0, o.B)({
     kind: 'user',
     id: '2024-05_clans_general',
     label: 'Clans General',
@@ -285,43 +282,43 @@ let O = (0, a.B)({
         }
     ]
 });
-function R(e) {
+function b(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        n = _(e, t),
-        r = O.useExperiment({ location: e }, { autoTrackExposure: t });
+        n = E(e, t),
+        r = y.useExperiment({ location: e }, { autoTrackExposure: t });
     return n ? { clanTagsVisible: !0 } : r;
 }
-(0, a.B)({
-    kind: 'user',
-    id: '2024-06_clans_mobile_tags',
-    label: 'Clans - Mobile',
-    defaultConfig: { clanTagsVisible: !1 },
-    treatments: [
-        {
-            id: 1,
-            label: 'Show tags on mobile',
-            config: { clanTagsVisible: !0 }
-        }
-    ]
-});
-let v = (0, a.B)({
-    kind: 'user',
-    id: '2024-08_load_test_guild_recs',
-    label: 'Guild Recs Load Testing',
-    defaultConfig: { enabled: !1 },
-    treatments: [
-        {
-            id: 1,
-            label: 'Enable',
-            config: { enabled: !0 }
-        }
-    ]
-});
-function C(e) {
+let L = (0, o.B)({
+        kind: 'user',
+        id: '2024-06_clans_mobile_tags',
+        label: 'Clans - Mobile',
+        defaultConfig: { clanTagsVisible: !1 },
+        treatments: [
+            {
+                id: 1,
+                label: 'Show tags on mobile',
+                config: { clanTagsVisible: !0 }
+            }
+        ]
+    }),
+    D = (0, o.B)({
+        kind: 'user',
+        id: '2024-08_load_test_guild_recs',
+        label: 'Guild Recs Load Testing',
+        defaultConfig: { enabled: !1 },
+        treatments: [
+            {
+                id: 1,
+                label: 'Enable',
+                config: { enabled: !0 }
+            }
+        ]
+    });
+function M(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    return v.useExperiment({ location: e }, { autoTrackExposure: t }).enabled;
+    return D.useExperiment({ location: e }, { autoTrackExposure: t }).enabled;
 }
-let y = (0, a.B)({
+let P = (0, o.B)({
     kind: 'user',
     id: '2024-07_rapidash_m3_admins_browse',
     label: 'Rapidash M3 Admins Browse',
@@ -334,6 +331,6 @@ let y = (0, a.B)({
         }
     ]
 });
-function L(e) {
-    return y.useExperiment({ location: e }).canAdminsBrowse;
+function U(e) {
+    return P.useExperiment({ location: e }).canAdminsBrowse;
 }

@@ -1,11 +1,11 @@
 n.d(t, {
     Z: function () {
-        return a;
+        return l;
     }
-}),
-    n(411104);
-var r = n(998502);
-function i(e, t, n) {
+});
+var r = n(411104);
+var i = n(998502);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,7 +18,25 @@ function i(e, t, n) {
         e
     );
 }
-class a {
+let o = 256;
+function s(e, t) {
+    return i.ZP.ensureModule('discord_spellcheck').then(() => {
+        let { cld: n } = i.ZP.requireModule('discord_spellcheck');
+        return new Promise((r, i) => {
+            n.detect(
+                e,
+                {
+                    httpHint: t,
+                    encodingHint: 'UTF8'
+                },
+                (e, t) => {
+                    null != e ? i(Error(e.message)) : !t.reliable || t.languages[0].percent < 90 || t.languages[0].score < 500 ? i(Error('Not enough reliable text.')) : r(t.languages[0].code);
+                }
+            );
+        });
+    });
+}
+class l {
     get language() {
         return this._language;
     }
@@ -32,29 +50,12 @@ class a {
         !this._processing &&
             ((this._processing = !0),
             requestIdleCallback((t) => {
-                var n, i;
                 if (t.timeRemaining() <= this._minimumTimeRemaining) {
                     this._processEnd();
                     return;
                 }
-                e.length > 256 && (e = e.slice(0, 256)),
-                    ((n = e),
-                    (i = this._languageHint),
-                    r.ZP.ensureModule('discord_spellcheck').then(() => {
-                        let { cld: e } = r.ZP.requireModule('discord_spellcheck');
-                        return new Promise((t, r) => {
-                            e.detect(
-                                n,
-                                {
-                                    httpHint: i,
-                                    encodingHint: 'UTF8'
-                                },
-                                (e, n) => {
-                                    null != e ? r(Error(e.message)) : !n.reliable || n.languages[0].percent < 90 || n.languages[0].score < 500 ? r(Error('Not enough reliable text.')) : t(n.languages[0].code);
-                                }
-                            );
-                        });
-                    })).then(
+                e.length > o && (e = e.slice(0, o)),
+                    s(e, this._languageHint).then(
                         (e) => {
                             (this.language = e), this._processEnd(t.didTimeout);
                         },
@@ -69,6 +70,6 @@ class a {
         (this._processing = !1), e && this._minimumTimeRemaining++;
     }
     constructor(e, t) {
-        i(this, '_language', void 0), i(this, '_onChange', void 0), i(this, '_languageHint', void 0), i(this, '_shouldProcess', !1), i(this, '_processing', !1), i(this, '_minimumTimeRemaining', 5), (this._language = e), (this._languageHint = e), (this._onChange = t), t(e);
+        a(this, '_language', void 0), a(this, '_onChange', void 0), a(this, '_languageHint', void 0), a(this, '_shouldProcess', !1), a(this, '_processing', !1), a(this, '_minimumTimeRemaining', 5), (this._language = e), (this._languageHint = e), (this._onChange = t), t(e);
     }
 }

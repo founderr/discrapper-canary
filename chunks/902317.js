@@ -1,4 +1,4 @@
-e.exports = function (e) {
+function t(e) {
     return {
         name: 'LDIF',
         contains: [
@@ -18,4 +18,5 @@ e.exports = function (e) {
             e.HASH_COMMENT_MODE
         ]
     };
-};
+}
+e.exports = t;

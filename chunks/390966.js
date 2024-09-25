@@ -1,211 +1,216 @@
 n.d(t, {
     z: function () {
-        return L;
+        return C;
     }
-}),
-    n(47120);
-var s,
-    a,
-    l = n(735250),
-    r = n(470079),
-    i = n(120356),
-    u = n.n(i),
-    c = n(913527),
-    o = n.n(c),
-    E = n(692547),
-    d = n(481060),
-    N = n(44315),
-    _ = n(894017),
-    T = n(854698),
-    m = n(849464),
-    D = n(765305),
-    v = n(231338),
-    x = n(689938),
-    h = n(205569);
-((a = s || (s = {}))[(a.SCHEDULED = 0)] = 'SCHEDULED'), (a[(a.STARTING_SOON = 1)] = 'STARTING_SOON'), (a[(a.READY = 2)] = 'READY'), (a[(a.STARTED = 3)] = 'STARTED'), (a[(a.ENDED = 4)] = 'ENDED'), (a[(a.CANCELED = 5)] = 'CANCELED');
-function g() {
-    return (0, l.jsx)(d.TextBadge, {
-        className: h.newBadge,
-        color: E.Z.unsafe_rawColors.BRAND_260.css,
-        text: (0, l.jsx)(d.Text, {
-            className: h.newBadgeText,
+});
+var r,
+    i = n(47120);
+var a = n(735250),
+    o = n(470079),
+    s = n(120356),
+    l = n.n(s),
+    u = n(913527),
+    c = n.n(u),
+    d = n(692547),
+    _ = n(481060),
+    E = n(44315),
+    f = n(894017),
+    h = n(854698),
+    p = n(849464),
+    m = n(765305),
+    I = n(231338),
+    T = n(689938),
+    g = n(205569);
+let S = 20;
+function A(e, t) {
+    let n = t.toDate(),
+        r = n.toLocaleString(T.Z.getLocale(), { weekday: 'long' });
+    switch (e) {
+        case p.z.WEEKLY:
+            return T.Z.Messages.GUILD_SCHEDULED_EVENT_REPEATS_WEEKLY.format({ weekday: r });
+        case p.z.BIWEEKLY:
+            return T.Z.Messages.GUILD_SCHEDULED_EVENT_REPEATS_BIWEEKLY.format({ weekday: r });
+        case p.z.MONTHLY:
+            let i = Math.ceil(n.getDate() / 7);
+            return T.Z.Messages.GUILD_SCHEDULED_EVENT_REPEATS_MONTHLY.format({
+                weekday: r,
+                nth: i
+            });
+        case p.z.YEARLY:
+            return T.Z.Messages.GUILD_SCHEDULED_EVENT_REPEATS_YEARLY.format({
+                date: n.toLocaleString(T.Z.getLocale(), {
+                    month: 'short',
+                    day: '2-digit'
+                })
+            });
+        case p.z.WEEKDAY_ONLY:
+            return T.Z.Messages.GUILD_SCHEDULED_EVENT_REPEATS_WEEKDAYS;
+        case p.z.WEEKEND_ONLY:
+            return T.Z.Messages.GUILD_SCHEDULED_EVENT_REPEATS_WEEKENDS;
+        default:
+            return null;
+    }
+}
+function v(e, t, n, r, i) {
+    switch (e) {
+        case 1:
+            return i > 0 ? T.Z.Messages.STARTING_IN_MINUTES.format({ minutes: i }) : T.Z.Messages.STARTING_SOON;
+        case 2:
+            return T.Z.Messages.STARTING_SOON;
+        case 3:
+            return null != r && '' !== r
+                ? T.Z.Messages.START_DATE_TO_END_DATE_WITH_COLOR.format({
+                      start: n,
+                      startHook: (e) =>
+                          (0, a.jsx)(_.Text, {
+                              color: 'text-positive',
+                              variant: 'text-sm/semibold',
+                              className: g.liveEventEndTime,
+                              children: e
+                          }),
+                      end: r
+                  })
+                : null != n
+                  ? n
+                  : '';
+        default:
+            return t;
+    }
+}
+function N(e) {
+    let t,
+        { timeStatus: n, textBrand: r, textPositive: i, textDanger: a, endDateTimeString: o, startDateTimeString: s } = e,
+        l = _.CalendarIcon,
+        u = r,
+        c = 'header-secondary';
+    switch (n) {
+        case 3:
+            (u = i), (c = null != o ? void 0 : 'text-positive');
+            break;
+        case 4:
+            l = _.ClockIcon;
+            break;
+        case 2:
+        case 1:
+            (c = 'text-brand'), (t = s);
+            break;
+        case 5:
+            u = a;
+    }
+    return {
+        Icon: l,
+        iconColor: u.hex,
+        textColor: c,
+        tooltipText: t
+    };
+}
+function O() {
+    return (0, a.jsx)(_.TextBadge, {
+        className: g.newBadge,
+        color: d.Z.unsafe_rawColors.BRAND_260.css,
+        text: (0, a.jsx)(_.Text, {
+            className: g.newBadgeText,
             variant: 'text-xs/bold',
-            children: x.Z.Messages.NEW
+            children: T.Z.Messages.NEW
         })
     });
 }
-function f(e) {
-    let { children: t, className: n, tooltipText: s } = e;
-    return (0, l.jsx)('div', {
-        className: u()(h.eventStatusContainer, n),
-        children: (0, l.jsx)(d.Tooltip, {
+function R(e) {
+    let { children: t, className: n, tooltipText: r } = e;
+    return (0, a.jsx)('div', {
+        className: l()(g.eventStatusContainer, n),
+        children: (0, a.jsx)(_.Tooltip, {
             position: 'right',
-            text: s,
-            shouldShow: null != s,
+            text: r,
+            shouldShow: null != r,
             children: (e) =>
-                (0, l.jsx)('div', {
+                (0, a.jsx)('div', {
                     ...e,
-                    className: u()(h.eventStatusContainer, n),
+                    className: l()(g.eventStatusContainer, n),
                     children: t
                 })
         })
     });
 }
-function L(e) {
-    let { startTime: t, status: n, eventType: s, className: a, endTime: i, liveText: c, textVariant: E = 'text-sm/semibold', isNew: L, recurrenceRule: S, guildEventId: A, recurrenceId: I } = e,
-        Z = (0, N.O0)(v.tP.TEXT_BRAND),
-        C = (0, N.O0)(v.tP.TEXT_POSITIVE),
-        R = (0, N.O0)(v.tP.TEXT_DANGER);
-    null == c && (c = s === D.WX.EXTERNAL ? x.Z.Messages.STAGE_CHANNEL_HAPPENING_NOW : x.Z.Messages.STAGE_CHANNEL_LIVE_NOW);
-    let p = (0, _.Z)(I, A),
-        [{ startDateTimeString: j, endDateTimeString: O, currentOrPastEvent: M, upcomingEvent: U, diffMinutes: w }, G] = r.useState((0, T.ub)(t, i));
-    r.useEffect(() => {
-        G((0, T.ub)(t, i));
-        let e = setInterval(() => G((0, T.ub)(t, i)), 1000);
+function C(e) {
+    let { startTime: t, status: n, eventType: r, className: i, endTime: s, liveText: u, textVariant: d = 'text-sm/semibold', isNew: p, recurrenceRule: C, guildEventId: y, recurrenceId: b } = e,
+        L = (0, E.O0)(I.tP.TEXT_BRAND),
+        D = (0, E.O0)(I.tP.TEXT_POSITIVE),
+        M = (0, E.O0)(I.tP.TEXT_DANGER);
+    null == u && (u = r === m.WX.EXTERNAL ? T.Z.Messages.STAGE_CHANNEL_HAPPENING_NOW : T.Z.Messages.STAGE_CHANNEL_LIVE_NOW);
+    let P = (0, f.Z)(b, y),
+        [{ startDateTimeString: U, endDateTimeString: w, currentOrPastEvent: x, upcomingEvent: G, diffMinutes: k }, B] = o.useState((0, h.ub)(t, s));
+    o.useEffect(() => {
+        B((0, h.ub)(t, s));
+        let e = setInterval(() => B((0, h.ub)(t, s)), 1000);
         return () => {
             clearInterval(e);
         };
-    }, [t, i]);
-    let P = j;
-    null != O &&
-        '' !== O &&
-        (P = x.Z.Messages.START_DATE_TO_END_DATE.format({
-            start: j,
-            end: O
+    }, [t, s]);
+    let F = U;
+    null != w &&
+        '' !== w &&
+        (F = T.Z.Messages.START_DATE_TO_END_DATE.format({
+            start: U,
+            end: w
         }));
-    let b = r.useMemo(() => (n === D.p1.CANCELED || (null == p ? void 0 : p.is_canceled) ? 5 : n === D.p1.ACTIVE ? 3 : D.$I.has(n) ? 4 : M ? 2 : U ? 1 : 0), [n, null == p ? void 0 : p.is_canceled, M, U]),
-        H = (function (e, t, n, s, a) {
-            switch (e) {
-                case 1:
-                    return a > 0 ? x.Z.Messages.STARTING_IN_MINUTES.format({ minutes: a }) : x.Z.Messages.STARTING_SOON;
-                case 2:
-                    return x.Z.Messages.STARTING_SOON;
-                case 3:
-                    return null != s && '' !== s
-                        ? x.Z.Messages.START_DATE_TO_END_DATE_WITH_COLOR.format({
-                              start: n,
-                              startHook: (e) =>
-                                  (0, l.jsx)(d.Text, {
-                                      color: 'text-positive',
-                                      variant: 'text-sm/semibold',
-                                      className: h.liveEventEndTime,
-                                      children: e
-                                  }),
-                              end: s
-                          })
-                        : null != n
-                          ? n
-                          : '';
-                default:
-                    return t;
-            }
-        })(b, P, c, O, w),
+    let Z = o.useMemo(() => (n === m.p1.CANCELED || (null == P ? void 0 : P.is_canceled) ? 5 : n === m.p1.ACTIVE ? 3 : m.$I.has(n) ? 4 : x ? 2 : G ? 1 : 0), [n, null == P ? void 0 : P.is_canceled, x, G]),
+        V = v(Z, F, u, w, k),
         {
-            Icon: V,
+            Icon: H,
             iconColor: Y,
-            textColor: k,
-            tooltipText: z
-        } = r.useMemo(
+            textColor: j,
+            tooltipText: W
+        } = o.useMemo(
             () =>
-                (function (e) {
-                    let t,
-                        { timeStatus: n, textBrand: s, textPositive: a, textDanger: l, endDateTimeString: r, startDateTimeString: i } = e,
-                        u = d.CalendarIcon,
-                        c = s,
-                        o = 'header-secondary';
-                    switch (n) {
-                        case 3:
-                            (c = a), (o = null != r ? void 0 : 'text-positive');
-                            break;
-                        case 4:
-                            u = d.ClockIcon;
-                            break;
-                        case 2:
-                        case 1:
-                            (o = 'text-brand'), (t = i);
-                            break;
-                        case 5:
-                            c = l;
-                    }
-                    return {
-                        Icon: u,
-                        iconColor: c.hex,
-                        textColor: o,
-                        tooltipText: t
-                    };
-                })({
-                    timeStatus: b,
-                    textBrand: Z,
-                    textPositive: C,
-                    textDanger: R,
-                    endDateTimeString: O,
-                    startDateTimeString: j
+                N({
+                    timeStatus: Z,
+                    textBrand: L,
+                    textPositive: D,
+                    textDanger: M,
+                    endDateTimeString: w,
+                    startDateTimeString: U
                 }),
-            [b, Z, C, R, O, j]
+            [Z, L, D, M, w, U]
         ),
-        W = null;
-    if (null != S) {
-        let e = (0, T.Ho)(S);
-        W = x.Z.Messages.GUILD_SCHEDULED_EVENT_RECURRENCE_RULE.format({ recurrenceRule: e.toText() });
-        let n = o()(t);
-        W = (function (e, t) {
-            let n = t.toDate(),
-                s = n.toLocaleString(x.Z.getLocale(), { weekday: 'long' });
-            switch (e) {
-                case m.z.WEEKLY:
-                    return x.Z.Messages.GUILD_SCHEDULED_EVENT_REPEATS_WEEKLY.format({ weekday: s });
-                case m.z.BIWEEKLY:
-                    return x.Z.Messages.GUILD_SCHEDULED_EVENT_REPEATS_BIWEEKLY.format({ weekday: s });
-                case m.z.MONTHLY:
-                    let a = Math.ceil(n.getDate() / 7);
-                    return x.Z.Messages.GUILD_SCHEDULED_EVENT_REPEATS_MONTHLY.format({
-                        weekday: s,
-                        nth: a
-                    });
-                case m.z.YEARLY:
-                    return x.Z.Messages.GUILD_SCHEDULED_EVENT_REPEATS_YEARLY.format({
-                        date: n.toLocaleString(x.Z.getLocale(), {
-                            month: 'short',
-                            day: '2-digit'
-                        })
-                    });
-                case m.z.WEEKDAY_ONLY:
-                    return x.Z.Messages.GUILD_SCHEDULED_EVENT_REPEATS_WEEKDAYS;
-                case m.z.WEEKEND_ONLY:
-                    return x.Z.Messages.GUILD_SCHEDULED_EVENT_REPEATS_WEEKENDS;
-                default:
-                    return null;
-            }
-        })((0, T.zi)(n, S), n);
+        K = null;
+    if (null != C) {
+        let e = (0, h.Ho)(C);
+        K = T.Z.Messages.GUILD_SCHEDULED_EVENT_RECURRENCE_RULE.format({ recurrenceRule: e.toText() });
+        let n = c()(t);
+        K = A((0, h.zi)(n, C), n);
     }
-    return (0, l.jsxs)(f, {
-        className: u()(a, { [h.isRecurring]: null != W }),
-        tooltipText: z,
+    return (0, a.jsxs)(R, {
+        className: l()(i, { [g.isRecurring]: null != K }),
+        tooltipText: W,
         children: [
-            L && n === D.p1.SCHEDULED
-                ? (0, l.jsx)(g, {})
-                : (0, l.jsx)(V, {
+            p && n === m.p1.SCHEDULED
+                ? (0, a.jsx)(O, {})
+                : (0, a.jsx)(H, {
                       color: Y,
                       size: 'custom',
-                      width: 20,
-                      height: 20
+                      width: S,
+                      height: S
                   }),
-            (0, l.jsxs)('div', {
-                className: h.eventStatusLabel,
+            (0, a.jsxs)('div', {
+                className: g.eventStatusLabel,
                 children: [
-                    (0, l.jsx)(d.Text, {
-                        color: k,
-                        variant: E,
-                        children: H
+                    (0, a.jsx)(_.Text, {
+                        color: j,
+                        variant: d,
+                        children: V
                     }),
-                    null != W &&
-                        (0, l.jsx)(d.Text, {
+                    null != K &&
+                        (0, a.jsx)(_.Text, {
                             color: 'header-secondary',
                             variant: 'text-xs/normal',
-                            children: W
+                            children: K
                         })
                 ]
             })
         ]
     });
 }
+!(function (e) {
+    (e[(e.SCHEDULED = 0)] = 'SCHEDULED'), (e[(e.STARTING_SOON = 1)] = 'STARTING_SOON'), (e[(e.READY = 2)] = 'READY'), (e[(e.STARTED = 3)] = 'STARTED'), (e[(e.ENDED = 4)] = 'ENDED'), (e[(e.CANCELED = 5)] = 'CANCELED');
+})(r || (r = {}));

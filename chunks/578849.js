@@ -45,15 +45,16 @@ function a(e, ...t) {
         n
     );
 }
-let s = (e) => !!e.scope || (e.sublanguage && e.language),
-    o = (e, { prefix: t }) => {
+let o = '</span>',
+    s = (e) => !!e.scope || (e.sublanguage && e.language),
+    l = (e, { prefix: t }) => {
         if (e.includes('.')) {
             let n = e.split('.');
             return [`${t}${n.shift()}`, ...n.map((e, t) => `${e}${'_'.repeat(t + 1)}`)].join(' ');
         }
         return `${t}${e}`;
     };
-class l {
+class u {
     constructor(e, t) {
         (this.buffer = ''), (this.classPrefix = t.classPrefix), e.walk(this);
     }
@@ -63,10 +64,10 @@ class l {
     openNode(e) {
         if (!s(e)) return;
         let t = '';
-        (t = e.sublanguage ? `language-${e.language}` : o(e.scope, { prefix: this.classPrefix })), this.span(t);
+        (t = e.sublanguage ? `language-${e.language}` : l(e.scope, { prefix: this.classPrefix })), this.span(t);
     }
     closeNode(e) {
-        s(e) && (this.buffer += '</span>');
+        s(e) && (this.buffer += o);
     }
     value() {
         return this.buffer;
@@ -75,13 +76,13 @@ class l {
         this.buffer += `<span class="${e}">`;
     }
 }
-let u = (e = {}) => {
+let c = (e = {}) => {
     let t = { children: [] };
     return Object.assign(t, e), t;
 };
-class c {
+class d {
     constructor() {
-        (this.rootNode = u()), (this.stack = [this.rootNode]);
+        (this.rootNode = c()), (this.stack = [this.rootNode]);
     }
     get top() {
         return this.stack[this.stack.length - 1];
@@ -93,7 +94,7 @@ class c {
         this.top.children.push(e);
     }
     openNode(e) {
-        let t = u({ scope: e });
+        let t = c({ scope: e });
         this.add(t), this.stack.push(t);
     }
     closeNode() {
@@ -117,11 +118,11 @@ class c {
                 (e.children.every((e) => 'string' == typeof e)
                     ? (e.children = [e.children.join('')])
                     : e.children.forEach((e) => {
-                          c._collapse(e);
+                          d._collapse(e);
                       }));
     }
 }
-class d extends c {
+class _ extends d {
     constructor(e) {
         super(), (this.options = e);
     }
@@ -136,53 +137,51 @@ class d extends c {
         (n.sublanguage = !0), (n.language = t), this.add(n);
     }
     toHTML() {
-        return new l(this, this.options).value();
+        return new u(this, this.options).value();
     }
     finalize() {
         return !0;
     }
 }
-function _(e) {
+function E(e) {
     return e ? ('string' == typeof e ? e : e.source) : null;
 }
-function E(e) {
-    return p('(?=', e, ')');
-}
 function f(e) {
-    return p('(?:', e, ')*');
+    return m('(?=', e, ')');
 }
 function h(e) {
-    return p('(?:', e, ')?');
+    return m('(?:', e, ')*');
 }
-function p(...e) {
-    return e.map((e) => _(e)).join('');
+function p(e) {
+    return m('(?:', e, ')?');
 }
-function I(...e) {
-    return (
-        '(' +
-        ((function (e) {
-            let t = e[e.length - 1];
-            return 'object' == typeof t && t.constructor === Object ? (e.splice(e.length - 1, 1), t) : {};
-        })(e).capture
-            ? ''
-            : '?:') +
-        e.map((e) => _(e)).join('|') +
-        ')'
-    );
+function m(...e) {
+    return e.map((e) => E(e)).join('');
 }
-function m(e) {
+function I(e) {
+    let t = e[e.length - 1];
+    return 'object' == typeof t && t.constructor === Object ? (e.splice(e.length - 1, 1), t) : {};
+}
+function T(...e) {
+    return '(' + (I(e).capture ? '' : '?:') + e.map((e) => E(e)).join('|') + ')';
+}
+function g(e) {
     return RegExp(e.toString() + '|').exec('').length - 1;
 }
-let T = /\[(?:[^\\\]]|\\.)*\]|\(\??|\\([1-9][0-9]*)|\\./;
-function S(e, { joinWith: t }) {
+function S(e, t) {
+    let n = e && e.exec(t);
+    return n && 0 === n.index;
+}
+let A = /\[(?:[^\\\]]|\\.)*\]|\(\??|\\([1-9][0-9]*)|\\./;
+function v(e, { joinWith: t }) {
     let n = 0;
     return e
         .map((e) => {
             let t = (n += 1),
-                r = _(e),
+                r = E(e),
                 i = '';
             for (; r.length > 0; ) {
-                let e = T.exec(r);
+                let e = A.exec(r);
                 if (!e) {
                     i += r;
                     break;
@@ -194,16 +193,51 @@ function S(e, { joinWith: t }) {
         .map((e) => `(${e})`)
         .join(t);
 }
-let g = '[a-zA-Z]\\w*',
-    A = '[a-zA-Z_]\\w*',
-    N = '\\b\\d+(\\.\\d+)?',
-    O = '(-?)(\\b0[xX][a-fA-F0-9]+|(\\b\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)',
-    R = '\\b(0b[01]+)',
-    v = {
+let N = /\b\B/,
+    O = '[a-zA-Z]\\w*',
+    R = '[a-zA-Z_]\\w*',
+    C = '\\b\\d+(\\.\\d+)?',
+    y = '(-?)(\\b0[xX][a-fA-F0-9]+|(\\b\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)',
+    b = '\\b(0b[01]+)',
+    L = '!|!=|!==|%|%=|&|&&|&=|\\*|\\*=|\\+|\\+=|,|-|-=|/=|/|:|;|<<|<<=|<=|<|===|==|=|>>>=|>>=|>=|>>>|>>|>|\\?|\\[|\\{|\\(|\\^|\\^=|\\||\\|=|\\|\\||~',
+    D = (e = {}) => {
+        let t = /^#![ ]*\//;
+        return (
+            e.binary && (e.begin = m(t, /.*\b/, e.binary, /\b.*/)),
+            a(
+                {
+                    scope: 'meta',
+                    begin: t,
+                    end: /$/,
+                    relevance: 0,
+                    'on:begin': (e, t) => {
+                        0 !== e.index && t.ignoreMatch();
+                    }
+                },
+                e
+            )
+        );
+    },
+    M = {
         begin: '\\\\[\\s\\S]',
         relevance: 0
     },
-    C = function (e, t, n = {}) {
+    P = {
+        scope: 'string',
+        begin: "'",
+        end: "'",
+        illegal: '\\n',
+        contains: [M]
+    },
+    U = {
+        scope: 'string',
+        begin: '"',
+        end: '"',
+        illegal: '\\n',
+        contains: [M]
+    },
+    w = { begin: /\b(a|an|the|are|I'm|isn't|don't|doesn't|won't|but|just|should|pretty|simply|enough|gonna|going|wtf|so|such|will|you|your|they|like|more)\b/ },
+    x = function (e, t, n = {}) {
         let r = a(
             {
                 scope: 'comment',
@@ -220,75 +254,28 @@ let g = '[a-zA-Z]\\w*',
             excludeBegin: !0,
             relevance: 0
         });
-        let i = I('I', 'a', 'is', 'so', 'us', 'to', 'at', 'if', 'in', 'it', 'on', /[A-Za-z]+['](d|ve|re|ll|t|s|n)/, /[A-Za-z]+[-][a-z]+/, /[A-Za-z][a-z]{2,}/);
-        return r.contains.push({ begin: p(/[ ]+/, '(', i, /[.]?[:]?([.][ ]|[ ])/, '){3}') }), r;
+        let i = T('I', 'a', 'is', 'so', 'us', 'to', 'at', 'if', 'in', 'it', 'on', /[A-Za-z]+['](d|ve|re|ll|t|s|n)/, /[A-Za-z]+[-][a-z]+/, /[A-Za-z][a-z]{2,}/);
+        return r.contains.push({ begin: m(/[ ]+/, '(', i, /[.]?[:]?([.][ ]|[ ])/, '){3}') }), r;
     },
-    y = C('//', '$'),
-    L = C('/\\*', '\\*/'),
-    D = C('#', '$');
-var b = Object.freeze({
-    __proto__: null,
-    MATCH_NOTHING_RE: /\b\B/,
-    IDENT_RE: g,
-    UNDERSCORE_IDENT_RE: A,
-    NUMBER_RE: N,
-    C_NUMBER_RE: O,
-    BINARY_NUMBER_RE: R,
-    RE_STARTERS_RE: '!|!=|!==|%|%=|&|&&|&=|\\*|\\*=|\\+|\\+=|,|-|-=|/=|/|:|;|<<|<<=|<=|<|===|==|=|>>>=|>>=|>=|>>>|>>|>|\\?|\\[|\\{|\\(|\\^|\\^=|\\||\\|=|\\|\\||~',
-    SHEBANG: (e = {}) => {
-        let t = /^#![ ]*\//;
-        return (
-            e.binary && (e.begin = p(t, /.*\b/, e.binary, /\b.*/)),
-            a(
-                {
-                    scope: 'meta',
-                    begin: t,
-                    end: /$/,
-                    relevance: 0,
-                    'on:begin': (e, t) => {
-                        0 !== e.index && t.ignoreMatch();
-                    }
-                },
-                e
-            )
-        );
-    },
-    BACKSLASH_ESCAPE: v,
-    APOS_STRING_MODE: {
-        scope: 'string',
-        begin: "'",
-        end: "'",
-        illegal: '\\n',
-        contains: [v]
-    },
-    QUOTE_STRING_MODE: {
-        scope: 'string',
-        begin: '"',
-        end: '"',
-        illegal: '\\n',
-        contains: [v]
-    },
-    PHRASAL_WORDS_MODE: { begin: /\b(a|an|the|are|I'm|isn't|don't|doesn't|won't|but|just|should|pretty|simply|enough|gonna|going|wtf|so|such|will|you|your|they|like|more)\b/ },
-    COMMENT: C,
-    C_LINE_COMMENT_MODE: y,
-    C_BLOCK_COMMENT_MODE: L,
-    HASH_COMMENT_MODE: D,
-    NUMBER_MODE: {
+    G = x('//', '$'),
+    k = x('/\\*', '\\*/'),
+    B = x('#', '$'),
+    F = {
         scope: 'number',
-        begin: N,
+        begin: C,
         relevance: 0
     },
-    C_NUMBER_MODE: {
+    Z = {
         scope: 'number',
-        begin: O,
+        begin: y,
         relevance: 0
     },
-    BINARY_NUMBER_MODE: {
+    V = {
         scope: 'number',
-        begin: R,
+        begin: b,
         relevance: 0
     },
-    REGEXP_MODE: {
+    H = {
         begin: /(?=\/[^/\n]*\/)/,
         contains: [
             {
@@ -297,31 +284,56 @@ var b = Object.freeze({
                 end: /\/[gimuy]*/,
                 illegal: /\n/,
                 contains: [
-                    v,
+                    M,
                     {
                         begin: /\[/,
                         end: /\]/,
                         relevance: 0,
-                        contains: [v]
+                        contains: [M]
                     }
                 ]
             }
         ]
     },
-    TITLE_MODE: {
+    Y = {
         scope: 'title',
-        begin: g,
+        begin: O,
         relevance: 0
     },
-    UNDERSCORE_TITLE_MODE: {
+    j = {
         scope: 'title',
-        begin: A,
+        begin: R,
         relevance: 0
     },
-    METHOD_GUARD: {
-        begin: '\\.\\s*' + A,
+    W = {
+        begin: '\\.\\s*' + R,
         relevance: 0
-    },
+    };
+var K = Object.freeze({
+    __proto__: null,
+    MATCH_NOTHING_RE: N,
+    IDENT_RE: O,
+    UNDERSCORE_IDENT_RE: R,
+    NUMBER_RE: C,
+    C_NUMBER_RE: y,
+    BINARY_NUMBER_RE: b,
+    RE_STARTERS_RE: L,
+    SHEBANG: D,
+    BACKSLASH_ESCAPE: M,
+    APOS_STRING_MODE: P,
+    QUOTE_STRING_MODE: U,
+    PHRASAL_WORDS_MODE: w,
+    COMMENT: x,
+    C_LINE_COMMENT_MODE: G,
+    C_BLOCK_COMMENT_MODE: k,
+    HASH_COMMENT_MODE: B,
+    NUMBER_MODE: F,
+    C_NUMBER_MODE: Z,
+    BINARY_NUMBER_MODE: V,
+    REGEXP_MODE: H,
+    TITLE_MODE: Y,
+    UNDERSCORE_TITLE_MODE: j,
+    METHOD_GUARD: W,
     END_SAME_AS_BEGIN: function (e) {
         return Object.assign(e, {
             'on:begin': (e, t) => {
@@ -333,28 +345,28 @@ var b = Object.freeze({
         });
     }
 });
-function M(e, t) {
+function z(e, t) {
     '.' === e.input[e.index - 1] && t.ignoreMatch();
 }
-function P(e, t) {
+function q(e, t) {
     void 0 !== e.className && ((e.scope = e.className), delete e.className);
 }
-function U(e, t) {
-    if (!!t) e.beginKeywords && ((e.begin = '\\b(' + e.beginKeywords.split(' ').join('|') + ')(?!\\.)(?=\\b|\\s)'), (e.__beforeBegin = M), (e.keywords = e.keywords || e.beginKeywords), delete e.beginKeywords, void 0 === e.relevance && (e.relevance = 0));
+function Q(e, t) {
+    if (!!t) e.beginKeywords && ((e.begin = '\\b(' + e.beginKeywords.split(' ').join('|') + ')(?!\\.)(?=\\b|\\s)'), (e.__beforeBegin = z), (e.keywords = e.keywords || e.beginKeywords), delete e.beginKeywords, void 0 === e.relevance && (e.relevance = 0));
 }
-function w(e, t) {
-    Array.isArray(e.illegal) && (e.illegal = I(...e.illegal));
+function X(e, t) {
+    Array.isArray(e.illegal) && (e.illegal = T(...e.illegal));
 }
-function x(e, t) {
+function $(e, t) {
     if (e.match) {
         if (e.begin || e.end) throw Error('begin & end are not supported with match');
         (e.begin = e.match), delete e.match;
     }
 }
-function G(e, t) {
+function J(e, t) {
     void 0 === e.relevance && (e.relevance = 1);
 }
-let k = (e, t) => {
+let ee = (e, t) => {
         if (!e.beforeMatch) return;
         if (e.starts) throw Error('beforeMatch cannot be used with starts');
         let n = Object.assign({}, e);
@@ -362,7 +374,7 @@ let k = (e, t) => {
             delete e[t];
         }),
             (e.keywords = n.keywords),
-            (e.begin = p(n.beforeMatch, E(n.begin))),
+            (e.begin = m(n.beforeMatch, f(n.begin))),
             (e.starts = {
                 relevance: 0,
                 contains: [Object.assign(n, { endsParent: !0 })]
@@ -370,64 +382,212 @@ let k = (e, t) => {
             (e.relevance = 0),
             delete n.beforeMatch;
     },
-    B = ['of', 'and', 'for', 'in', 'not', 'or', 'if', 'then', 'parent', 'list', 'value'],
-    F = {},
-    V = (e) => {
+    et = ['of', 'and', 'for', 'in', 'not', 'or', 'if', 'then', 'parent', 'list', 'value'],
+    en = 'keyword';
+function er(e, t, n = en) {
+    let r = Object.create(null);
+    return (
+        'string' == typeof e
+            ? i(n, e.split(' '))
+            : Array.isArray(e)
+              ? i(n, e)
+              : Object.keys(e).forEach(function (n) {
+                    Object.assign(r, er(e[n], t, n));
+                }),
+        r
+    );
+    function i(e, n) {
+        t && (n = n.map((e) => e.toLowerCase())),
+            n.forEach(function (t) {
+                let n = t.split('|');
+                r[n[0]] = [e, ei(n[0], n[1])];
+            });
+    }
+}
+function ei(e, t) {
+    return t ? Number(t) : ea(e) ? 0 : 1;
+}
+function ea(e) {
+    return et.includes(e.toLowerCase());
+}
+let eo = {},
+    es = (e) => {
         console.error(e);
     },
-    H = (e, ...t) => {
+    el = (e, ...t) => {
         console.log(`WARN: ${e}`, ...t);
     },
-    Z = (e, t) => {
-        !F[`${e}/${t}`] && (console.log(`Deprecated as of ${e}. ${t}`), (F[`${e}/${t}`] = !0));
+    eu = (e, t) => {
+        !eo[`${e}/${t}`] && (console.log(`Deprecated as of ${e}. ${t}`), (eo[`${e}/${t}`] = !0));
     },
-    Y = Error();
-function j(e, t, { key: n }) {
+    ec = Error();
+function ed(e, t, { key: n }) {
     let r = 0,
         i = e[n],
         a = {},
-        s = {};
-    for (let e = 1; e <= t.length; e++) (s[e + r] = i[e]), (a[e + r] = !0), (r += m(t[e - 1]));
-    (e[n] = s), (e[n]._emit = a), (e[n]._multi = !0);
+        o = {};
+    for (let e = 1; e <= t.length; e++) (o[e + r] = i[e]), (a[e + r] = !0), (r += g(t[e - 1]));
+    (e[n] = o), (e[n]._emit = a), (e[n]._multi = !0);
 }
-function W(e) {
-    var t;
-    (t = e).scope && 'object' == typeof t.scope && null !== t.scope && ((t.beginScope = t.scope), delete t.scope),
-        'string' == typeof e.beginScope && (e.beginScope = { _wrap: e.beginScope }),
-        'string' == typeof e.endScope && (e.endScope = { _wrap: e.endScope }),
-        !(function (e) {
-            if (Array.isArray(e.begin)) {
-                if (e.skip || e.excludeBegin || e.returnBegin) throw (V('skip, excludeBegin, returnBegin not compatible with beginScope: {}'), Y);
-                if ('object' != typeof e.beginScope || null === e.beginScope) throw (V('beginScope must be object'), Y);
-                j(e, e.begin, { key: 'beginScope' }), (e.begin = S(e.begin, { joinWith: '' }));
-            }
-        })(e),
-        !(function (e) {
-            if (Array.isArray(e.end)) {
-                if (e.skip || e.excludeEnd || e.returnEnd) throw (V('skip, excludeEnd, returnEnd not compatible with endScope: {}'), Y);
-                if ('object' != typeof e.endScope || null === e.endScope) throw (V('endScope must be object'), Y);
-                j(e, e.end, { key: 'endScope' }), (e.end = S(e.end, { joinWith: '' }));
-            }
-        })(e);
+function e_(e) {
+    if (Array.isArray(e.begin)) {
+        if (e.skip || e.excludeBegin || e.returnBegin) throw (es('skip, excludeBegin, returnBegin not compatible with beginScope: {}'), ec);
+        if ('object' != typeof e.beginScope || null === e.beginScope) throw (es('beginScope must be object'), ec);
+        ed(e, e.begin, { key: 'beginScope' }), (e.begin = v(e.begin, { joinWith: '' }));
+    }
 }
-class K extends Error {
+function eE(e) {
+    if (Array.isArray(e.end)) {
+        if (e.skip || e.excludeEnd || e.returnEnd) throw (es('skip, excludeEnd, returnEnd not compatible with endScope: {}'), ec);
+        if ('object' != typeof e.endScope || null === e.endScope) throw (es('endScope must be object'), ec);
+        ed(e, e.end, { key: 'endScope' }), (e.end = v(e.end, { joinWith: '' }));
+    }
+}
+function ef(e) {
+    e.scope && 'object' == typeof e.scope && null !== e.scope && ((e.beginScope = e.scope), delete e.scope);
+}
+function eh(e) {
+    ef(e), 'string' == typeof e.beginScope && (e.beginScope = { _wrap: e.beginScope }), 'string' == typeof e.endScope && (e.endScope = { _wrap: e.endScope }), e_(e), eE(e);
+}
+function ep(e) {
+    function t(t, n) {
+        return RegExp(E(t), 'm' + (e.case_insensitive ? 'i' : '') + (e.unicodeRegex ? 'u' : '') + (n ? 'g' : ''));
+    }
+    class n {
+        constructor() {
+            (this.matchIndexes = {}), (this.regexes = []), (this.matchAt = 1), (this.position = 0);
+        }
+        addRule(e, t) {
+            (t.position = this.position++), (this.matchIndexes[this.matchAt] = t), this.regexes.push([t, e]), (this.matchAt += g(e) + 1);
+        }
+        compile() {
+            0 === this.regexes.length && (this.exec = () => null);
+            let e = this.regexes.map((e) => e[1]);
+            (this.matcherRe = t(v(e, { joinWith: '|' }), !0)), (this.lastIndex = 0);
+        }
+        exec(e) {
+            this.matcherRe.lastIndex = this.lastIndex;
+            let t = this.matcherRe.exec(e);
+            if (!t) return null;
+            let n = t.findIndex((e, t) => t > 0 && void 0 !== e),
+                r = this.matchIndexes[n];
+            return t.splice(0, n), Object.assign(t, r);
+        }
+    }
+    class r {
+        constructor() {
+            (this.rules = []), (this.multiRegexes = []), (this.count = 0), (this.lastIndex = 0), (this.regexIndex = 0);
+        }
+        getMatcher(e) {
+            if (this.multiRegexes[e]) return this.multiRegexes[e];
+            let t = new n();
+            return this.rules.slice(e).forEach(([e, n]) => t.addRule(e, n)), t.compile(), (this.multiRegexes[e] = t), t;
+        }
+        resumingScanAtSamePosition() {
+            return 0 !== this.regexIndex;
+        }
+        considerAll() {
+            this.regexIndex = 0;
+        }
+        addRule(e, t) {
+            this.rules.push([e, t]), 'begin' === t.type && this.count++;
+        }
+        exec(e) {
+            let t = this.getMatcher(this.regexIndex);
+            t.lastIndex = this.lastIndex;
+            let n = t.exec(e);
+            if (this.resumingScanAtSamePosition()) {
+                if (n && n.index === this.lastIndex);
+                else {
+                    let t = this.getMatcher(0);
+                    (t.lastIndex = this.lastIndex + 1), (n = t.exec(e));
+                }
+            }
+            return n && ((this.regexIndex += n.position + 1), this.regexIndex === this.count && this.considerAll()), n;
+        }
+    }
+    function i(e) {
+        let t = new r();
+        return (
+            e.contains.forEach((e) =>
+                t.addRule(e.begin, {
+                    rule: e,
+                    type: 'begin'
+                })
+            ),
+            e.terminatorEnd && t.addRule(e.terminatorEnd, { type: 'end' }),
+            e.illegal && t.addRule(e.illegal, { type: 'illegal' }),
+            t
+        );
+    }
+    function o(n, r) {
+        let a = n;
+        if (n.isCompiled) return a;
+        [q, $, eh, ee].forEach((e) => e(n, r)), e.compilerExtensions.forEach((e) => e(n, r)), (n.__beforeBegin = null), [Q, X, J].forEach((e) => e(n, r)), (n.isCompiled = !0);
+        let s = null;
+        return (
+            'object' == typeof n.keywords && n.keywords.$pattern && ((n.keywords = Object.assign({}, n.keywords)), (s = n.keywords.$pattern), delete n.keywords.$pattern),
+            (s = s || /\w+/),
+            n.keywords && (n.keywords = er(n.keywords, e.case_insensitive)),
+            (a.keywordPatternRe = t(s, !0)),
+            r && (!n.begin && (n.begin = /\B|\b/), (a.beginRe = t(a.begin)), !n.end && !n.endsWithParent && (n.end = /\B|\b/), n.end && (a.endRe = t(a.end)), (a.terminatorEnd = E(a.end) || ''), n.endsWithParent && r.terminatorEnd && (a.terminatorEnd += (n.end ? '|' : '') + r.terminatorEnd)),
+            n.illegal && (a.illegalRe = t(n.illegal)),
+            !n.contains && (n.contains = []),
+            (n.contains = [].concat(
+                ...n.contains.map(function (e) {
+                    return eI('self' === e ? n : e);
+                })
+            )),
+            n.contains.forEach(function (e) {
+                o(e, a);
+            }),
+            n.starts && o(n.starts, r),
+            (a.matcher = i(a)),
+            a
+        );
+    }
+    if ((!e.compilerExtensions && (e.compilerExtensions = []), e.contains && e.contains.includes('self'))) throw Error('ERR: contains `self` is not supported at the top-level of a language.  See documentation.');
+    return (e.classNameAliases = a(e.classNameAliases || {})), o(e);
+}
+function em(e) {
+    return !!e && (e.endsWithParent || em(e.starts));
+}
+function eI(e) {
+    return (e.variants &&
+        !e.cachedVariants &&
+        (e.cachedVariants = e.variants.map(function (t) {
+            return a(e, { variants: null }, t);
+        })),
+    e.cachedVariants)
+        ? e.cachedVariants
+        : em(e)
+          ? a(e, { starts: e.starts ? a(e.starts) : null })
+          : Object.isFrozen(e)
+            ? a(e)
+            : e;
+}
+var eT = '11.7.0';
+class eg extends Error {
     constructor(e, t) {
         super(e), (this.name = 'HTMLInjectionError'), (this.html = t);
     }
 }
-let z = Symbol('nomatch');
-var q = (function (e) {
+let eS = i,
+    eA = a,
+    ev = Symbol('nomatch'),
+    eN = 7;
+var eO = (function (e) {
     let n = Object.create(null),
-        s = Object.create(null),
-        o = [],
-        l = !0,
-        u = "Could not find the language '{}', did you forget to load/include a language module?",
-        c = {
+        i = Object.create(null),
+        a = [],
+        o = !0,
+        s = "Could not find the language '{}', did you forget to load/include a language module?",
+        l = {
             disableAutodetect: !0,
             name: 'Plain text',
             contains: []
         },
-        T = {
+        u = {
             ignoreUnescapedHTML: !1,
             throwUnescapedHTML: !1,
             noHighlightRe: /^(no-?highlight)$/i,
@@ -435,67 +595,77 @@ var q = (function (e) {
             classPrefix: 'hljs-',
             cssSelector: 'pre code',
             languages: null,
-            __emitter: d
+            __emitter: _
         };
-    function g(e) {
-        return T.noHighlightRe.test(e);
+    function c(e) {
+        return u.noHighlightRe.test(e);
     }
-    function A(e, t, n) {
+    function d(e) {
+        let t = e.className + ' ';
+        t += e.parentNode ? e.parentNode.className : '';
+        let n = u.languageDetectRe.exec(t);
+        if (n) {
+            let t = M(n[1]);
+            return !t && (el(s.replace('{}', n[1])), el('Falling back to no-highlight mode for this block.', e)), t ? n[1] : 'no-highlight';
+        }
+        return t.split(/\s+/).find((e) => c(e) || M(e));
+    }
+    function E(e, t, n) {
         let r = '',
             i = '';
-        'object' == typeof t ? ((r = e), (n = t.ignoreIllegals), (i = t.language)) : (Z('10.7.0', 'highlight(lang, code, ...args) has been deprecated.'), Z('10.7.0', 'Please use highlight(code, options) instead.\nhttps://github.com/highlightjs/highlight.js/issues/2277'), (i = e), (r = t)), void 0 === n && (n = !0);
+        'object' == typeof t ? ((r = e), (n = t.ignoreIllegals), (i = t.language)) : (eu('10.7.0', 'highlight(lang, code, ...args) has been deprecated.'), eu('10.7.0', 'Please use highlight(code, options) instead.\nhttps://github.com/highlightjs/highlight.js/issues/2277'), (i = e), (r = t)), void 0 === n && (n = !0);
         let a = {
             code: r,
             language: i
         };
-        M('before:highlight', a);
-        let s = a.result ? a.result : N(a.language, a.code, n);
-        return (s.code = a.code), M('after:highlight', s), s;
+        x('before:highlight', a);
+        let o = a.result ? a.result : I(a.language, a.code, n);
+        return (o.code = a.code), x('after:highlight', o), o;
     }
-    function N(e, t, s, o) {
-        let c = Object.create(null);
+    function I(e, t, i, a) {
+        let l = Object.create(null);
+        function c(e, t) {
+            return e.keywords[t];
+        }
         function d() {
-            if (!v.keywords) {
-                L.addText(D);
+            if (!b.keywords) {
+                D.addText(P);
                 return;
             }
             let e = 0;
-            v.keywordPatternRe.lastIndex = 0;
-            let t = v.keywordPatternRe.exec(D),
+            b.keywordPatternRe.lastIndex = 0;
+            let t = b.keywordPatternRe.exec(P),
                 n = '';
             for (; t; ) {
-                var r, i;
-                n += D.substring(e, t.index);
-                let a = g.case_insensitive ? t[0].toLowerCase() : t[0];
-                let s = ((r = v), (i = a), r.keywords[i]);
-                if (s) {
-                    let [e, r] = s;
-                    if ((L.addText(n), (n = ''), (c[a] = (c[a] || 0) + 1), c[a] <= 7 && (b += r), e.startsWith('_'))) n += t[0];
+                n += P.substring(e, t.index);
+                let r = R.case_insensitive ? t[0].toLowerCase() : t[0],
+                    i = c(b, r);
+                if (i) {
+                    let [e, a] = i;
+                    if ((D.addText(n), (n = ''), (l[r] = (l[r] || 0) + 1), l[r] <= eN && (U += a), e.startsWith('_'))) n += t[0];
                     else {
-                        let n = g.classNameAliases[e] || e;
-                        L.addKeyword(t[0], n);
+                        let n = R.classNameAliases[e] || e;
+                        D.addKeyword(t[0], n);
                     }
                 } else n += t[0];
-                (e = v.keywordPatternRe.lastIndex), (t = v.keywordPatternRe.exec(D));
+                (e = b.keywordPatternRe.lastIndex), (t = b.keywordPatternRe.exec(P));
             }
-            (n += D.substring(e)), L.addText(n);
+            (n += P.substring(e)), D.addText(n);
+        }
+        function _() {
+            if ('' === P) return;
+            let e = null;
+            if ('string' == typeof b.subLanguage) {
+                if (!n[b.subLanguage]) {
+                    D.addText(P);
+                    return;
+                }
+                (e = I(b.subLanguage, P, !0, L[b.subLanguage])), (L[b.subLanguage] = e._top);
+            } else e = A(P, b.subLanguage.length ? b.subLanguage : null);
+            b.relevance > 0 && (U += e.relevance), D.addSublanguage(e._emitter, e.language);
         }
         function E() {
-            null != v.subLanguage
-                ? !(function () {
-                      if ('' === D) return;
-                      let e = null;
-                      if ('string' == typeof v.subLanguage) {
-                          if (!n[v.subLanguage]) {
-                              L.addText(D);
-                              return;
-                          }
-                          (e = N(v.subLanguage, D, !0, C[v.subLanguage])), (C[v.subLanguage] = e._top);
-                      } else e = O(D, v.subLanguage.length ? v.subLanguage : null);
-                      v.relevance > 0 && (b += e.relevance), L.addSublanguage(e._emitter, e.language);
-                  })()
-                : d(),
-                (D = '');
+            null != b.subLanguage ? _() : d(), (P = '');
         }
         function f(e, t) {
             let n = 1,
@@ -505,350 +675,198 @@ var q = (function (e) {
                     n++;
                     continue;
                 }
-                let r = g.classNameAliases[e[n]] || e[n],
+                let r = R.classNameAliases[e[n]] || e[n],
                     i = t[n];
-                r ? L.addKeyword(i, r) : ((D = i), d(), (D = '')), n++;
+                r ? D.addKeyword(i, r) : ((P = i), d(), (P = '')), n++;
             }
         }
         function h(e, t) {
-            return e.scope && 'string' == typeof e.scope && L.openNode(g.classNameAliases[e.scope] || e.scope), e.beginScope && (e.beginScope._wrap ? (L.addKeyword(D, g.classNameAliases[e.beginScope._wrap] || e.beginScope._wrap), (D = '')) : e.beginScope._multi && (f(e.beginScope, t), (D = ''))), (v = Object.create(e, { parent: { value: v } }));
+            return e.scope && 'string' == typeof e.scope && D.openNode(R.classNameAliases[e.scope] || e.scope), e.beginScope && (e.beginScope._wrap ? (D.addKeyword(P, R.classNameAliases[e.beginScope._wrap] || e.beginScope._wrap), (P = '')) : e.beginScope._multi && (f(e.beginScope, t), (P = ''))), (b = Object.create(e, { parent: { value: b } }));
         }
-        let p = {};
-        function I(n, i) {
-            let a = i && i[0];
-            if (((D += n), null == a)) return E(), 0;
-            if ('begin' === p.type && 'end' === i.type && p.index === i.index && '' === a) {
-                if (((D += t.slice(i.index, i.index + 1)), !l)) {
+        function p(e, t, n) {
+            let i = S(e.endRe, n);
+            if (i) {
+                if (e['on:end']) {
+                    let n = new r(e);
+                    e['on:end'](t, n), n.isMatchIgnored && (i = !1);
+                }
+                if (i) {
+                    for (; e.endsParent && e.parent; ) e = e.parent;
+                    return e;
+                }
+            }
+            if (e.endsWithParent) return p(e.parent, t, n);
+        }
+        function m(e) {
+            return 0 === b.matcher.regexIndex ? ((P += e[0]), 1) : ((G = !0), 0);
+        }
+        function T(e) {
+            let t = e[0],
+                n = e.rule,
+                i = new r(n);
+            for (let r of [n.__beforeBegin, n['on:begin']]) if (r && (r(e, i), i.isMatchIgnored)) return m(t);
+            return n.skip ? (P += t) : (n.excludeBegin && (P += t), E(), !n.returnBegin && !n.excludeBegin && (P = t)), h(n, e), n.returnBegin ? 0 : t.length;
+        }
+        function g(e) {
+            let n = e[0],
+                r = t.substring(e.index),
+                i = p(b, e, r);
+            if (!i) return ev;
+            let a = b;
+            b.endScope && b.endScope._wrap ? (E(), D.addKeyword(n, b.endScope._wrap)) : b.endScope && b.endScope._multi ? (E(), f(b.endScope, e)) : a.skip ? (P += n) : (!(a.returnEnd || a.excludeEnd) && (P += n), E(), a.excludeEnd && (P = n));
+            do b.scope && D.closeNode(), !b.skip && !b.subLanguage && (U += b.relevance), (b = b.parent);
+            while (b !== i.parent);
+            return i.starts && h(i.starts, e), a.returnEnd ? 0 : n.length;
+        }
+        function v() {
+            let e = [];
+            for (let t = b; t !== R; t = t.parent) t.scope && e.unshift(t.scope);
+            e.forEach((e) => D.openNode(e));
+        }
+        let N = {};
+        function O(n, r) {
+            let a = r && r[0];
+            if (((P += n), null == a)) return E(), 0;
+            if ('begin' === N.type && 'end' === r.type && N.index === r.index && '' === a) {
+                if (((P += t.slice(r.index, r.index + 1)), !o)) {
                     let t = Error(`0 width match regex (${e})`);
-                    throw ((t.languageName = e), (t.badRule = p.rule), t);
+                    throw ((t.languageName = e), (t.badRule = N.rule), t);
                 }
                 return 1;
             }
-            if (((p = i), 'begin' === i.type))
-                return (function (e) {
-                    let t = e[0],
-                        n = e.rule,
-                        i = new r(n);
-                    for (let r of [n.__beforeBegin, n['on:begin']])
-                        if (r && (r(e, i), i.isMatchIgnored)) {
-                            var a;
-                            return (a = t), 0 === v.matcher.regexIndex ? ((D += a[0]), 1) : ((H = !0), 0);
-                        }
-                    return n.skip ? (D += t) : (n.excludeBegin && (D += t), E(), !n.returnBegin && !n.excludeBegin && (D = t)), h(n, e), n.returnBegin ? 0 : t.length;
-                })(i);
-            if ('illegal' !== i.type || s) {
-                if ('end' === i.type) {
-                    let e = (function (e) {
-                        let n = e[0],
-                            i = t.substring(e.index),
-                            a = (function e(t, n, i) {
-                                let a = (function (e, t) {
-                                    let n = e && e.exec(t);
-                                    return n && 0 === n.index;
-                                })(t.endRe, i);
-                                if (a) {
-                                    if (t['on:end']) {
-                                        let e = new r(t);
-                                        t['on:end'](n, e), e.isMatchIgnored && (a = !1);
-                                    }
-                                    if (a) {
-                                        for (; t.endsParent && t.parent; ) t = t.parent;
-                                        return t;
-                                    }
-                                }
-                                if (t.endsWithParent) return e(t.parent, n, i);
-                            })(v, e, i);
-                        if (!a) return z;
-                        let s = v;
-                        v.endScope && v.endScope._wrap ? (E(), L.addKeyword(n, v.endScope._wrap)) : v.endScope && v.endScope._multi ? (E(), f(v.endScope, e)) : s.skip ? (D += n) : (!(s.returnEnd || s.excludeEnd) && (D += n), E(), s.excludeEnd && (D = n));
-                        do v.scope && L.closeNode(), !v.skip && !v.subLanguage && (b += v.relevance), (v = v.parent);
-                        while (v !== a.parent);
-                        return a.starts && h(a.starts, e), s.returnEnd ? 0 : n.length;
-                    })(i);
-                    if (e !== z) return e;
+            if (((N = r), 'begin' === r.type)) return T(r);
+            if ('illegal' !== r.type || i) {
+                if ('end' === r.type) {
+                    let e = g(r);
+                    if (e !== ev) return e;
                 }
             } else {
-                let e = Error('Illegal lexeme "' + a + '" for mode "' + (v.scope || '<unnamed>') + '"');
-                throw ((e.mode = v), e);
+                let e = Error('Illegal lexeme "' + a + '" for mode "' + (b.scope || '<unnamed>') + '"');
+                throw ((e.mode = b), e);
             }
-            if ('illegal' === i.type && '' === a) return 1;
-            if (F > 100000 && F > 3 * i.index) throw Error('potential infinite loop, way more iterations than matches');
-            return (D += a), a.length;
+            if ('illegal' === r.type && '' === a) return 1;
+            if (x > 100000 && x > 3 * r.index) throw Error('potential infinite loop, way more iterations than matches');
+            return (P += a), a.length;
         }
-        let g = y(e);
-        if (!g) throw (V(u.replace('{}', e)), Error('Unknown language: "' + e + '"'));
-        let A = (function (e) {
-                function t(t, n) {
-                    return RegExp(_(t), 'm' + (e.case_insensitive ? 'i' : '') + (e.unicodeRegex ? 'u' : '') + (n ? 'g' : ''));
-                }
-                class n {
-                    constructor() {
-                        (this.matchIndexes = {}), (this.regexes = []), (this.matchAt = 1), (this.position = 0);
-                    }
-                    addRule(e, t) {
-                        (t.position = this.position++), (this.matchIndexes[this.matchAt] = t), this.regexes.push([t, e]), (this.matchAt += m(e) + 1);
-                    }
-                    compile() {
-                        0 === this.regexes.length && (this.exec = () => null);
-                        let e = this.regexes.map((e) => e[1]);
-                        (this.matcherRe = t(S(e, { joinWith: '|' }), !0)), (this.lastIndex = 0);
-                    }
-                    exec(e) {
-                        this.matcherRe.lastIndex = this.lastIndex;
-                        let t = this.matcherRe.exec(e);
-                        if (!t) return null;
-                        let n = t.findIndex((e, t) => t > 0 && void 0 !== e),
-                            r = this.matchIndexes[n];
-                        return t.splice(0, n), Object.assign(t, r);
-                    }
-                }
-                class r {
-                    constructor() {
-                        (this.rules = []), (this.multiRegexes = []), (this.count = 0), (this.lastIndex = 0), (this.regexIndex = 0);
-                    }
-                    getMatcher(e) {
-                        if (this.multiRegexes[e]) return this.multiRegexes[e];
-                        let t = new n();
-                        return this.rules.slice(e).forEach(([e, n]) => t.addRule(e, n)), t.compile(), (this.multiRegexes[e] = t), t;
-                    }
-                    resumingScanAtSamePosition() {
-                        return 0 !== this.regexIndex;
-                    }
-                    considerAll() {
-                        this.regexIndex = 0;
-                    }
-                    addRule(e, t) {
-                        this.rules.push([e, t]), 'begin' === t.type && this.count++;
-                    }
-                    exec(e) {
-                        let t = this.getMatcher(this.regexIndex);
-                        t.lastIndex = this.lastIndex;
-                        let n = t.exec(e);
-                        if (this.resumingScanAtSamePosition()) {
-                            if (n && n.index === this.lastIndex);
-                            else {
-                                let t = this.getMatcher(0);
-                                (t.lastIndex = this.lastIndex + 1), (n = t.exec(e));
-                            }
-                        }
-                        return n && ((this.regexIndex += n.position + 1), this.regexIndex === this.count && this.considerAll()), n;
-                    }
-                }
-                if ((!e.compilerExtensions && (e.compilerExtensions = []), e.contains && e.contains.includes('self'))) throw Error('ERR: contains `self` is not supported at the top-level of a language.  See documentation.');
-                return (
-                    (e.classNameAliases = a(e.classNameAliases || {})),
-                    (function n(i, s) {
-                        if (i.isCompiled) return i;
-                        [P, x, W, k].forEach((e) => e(i, s)), e.compilerExtensions.forEach((e) => e(i, s)), (i.__beforeBegin = null), [U, w, G].forEach((e) => e(i, s)), (i.isCompiled = !0);
-                        let o = null;
-                        return (
-                            'object' == typeof i.keywords && i.keywords.$pattern && ((i.keywords = Object.assign({}, i.keywords)), (o = i.keywords.$pattern), delete i.keywords.$pattern),
-                            (o = o || /\w+/),
-                            i.keywords &&
-                                (i.keywords = (function e(t, n, r = 'keyword') {
-                                    let i = Object.create(null);
-                                    return (
-                                        'string' == typeof t
-                                            ? a(r, t.split(' '))
-                                            : Array.isArray(t)
-                                              ? a(r, t)
-                                              : Object.keys(t).forEach(function (r) {
-                                                    Object.assign(i, e(t[r], n, r));
-                                                }),
-                                        i
-                                    );
-                                    function a(e, t) {
-                                        n && (t = t.map((e) => e.toLowerCase())),
-                                            t.forEach(function (t) {
-                                                let n = t.split('|');
-                                                i[n[0]] = [
-                                                    e,
-                                                    (function (e, t) {
-                                                        return t
-                                                            ? Number(t)
-                                                            : (function (e) {
-                                                                    return B.includes(e.toLowerCase());
-                                                                })(e)
-                                                              ? 0
-                                                              : 1;
-                                                    })(n[0], n[1])
-                                                ];
-                                            });
-                                    }
-                                })(i.keywords, e.case_insensitive)),
-                            (i.keywordPatternRe = t(o, !0)),
-                            s && (!i.begin && (i.begin = /\B|\b/), (i.beginRe = t(i.begin)), !i.end && !i.endsWithParent && (i.end = /\B|\b/), i.end && (i.endRe = t(i.end)), (i.terminatorEnd = _(i.end) || ''), i.endsWithParent && s.terminatorEnd && (i.terminatorEnd += (i.end ? '|' : '') + s.terminatorEnd)),
-                            i.illegal && (i.illegalRe = t(i.illegal)),
-                            !i.contains && (i.contains = []),
-                            (i.contains = [].concat(
-                                ...i.contains.map(function (e) {
-                                    return (function (e) {
-                                        return (e.variants &&
-                                            !e.cachedVariants &&
-                                            (e.cachedVariants = e.variants.map(function (t) {
-                                                return a(e, { variants: null }, t);
-                                            })),
-                                        e.cachedVariants)
-                                            ? e.cachedVariants
-                                            : (function e(t) {
-                                                    return !!t && (t.endsWithParent || e(t.starts));
-                                                })(e)
-                                              ? a(e, { starts: e.starts ? a(e.starts) : null })
-                                              : Object.isFrozen(e)
-                                                ? a(e)
-                                                : e;
-                                    })('self' === e ? i : e);
-                                })
-                            )),
-                            i.contains.forEach(function (e) {
-                                n(e, i);
-                            }),
-                            i.starts && n(i.starts, s),
-                            (i.matcher = (function (e) {
-                                let t = new r();
-                                return (
-                                    e.contains.forEach((e) =>
-                                        t.addRule(e.begin, {
-                                            rule: e,
-                                            type: 'begin'
-                                        })
-                                    ),
-                                    e.terminatorEnd && t.addRule(e.terminatorEnd, { type: 'end' }),
-                                    e.illegal && t.addRule(e.illegal, { type: 'illegal' }),
-                                    t
-                                );
-                            })(i)),
-                            i
-                        );
-                    })(e)
-                );
-            })(g),
-            R = '',
-            v = o || A,
-            C = {},
-            L = new T.__emitter(T);
-        !(function () {
-            let e = [];
-            for (let t = v; t !== g; t = t.parent) t.scope && e.unshift(t.scope);
-            e.forEach((e) => L.openNode(e));
-        })();
-        let D = '',
-            b = 0,
-            M = 0,
-            F = 0,
-            H = !1;
+        let R = M(e);
+        if (!R) throw (es(s.replace('{}', e)), Error('Unknown language: "' + e + '"'));
+        let C = ep(R),
+            y = '',
+            b = a || C,
+            L = {},
+            D = new u.__emitter(u);
+        v();
+        let P = '',
+            U = 0,
+            w = 0,
+            x = 0,
+            G = !1;
         try {
-            for (v.matcher.considerAll(); ; ) {
-                F++, H ? (H = !1) : v.matcher.considerAll(), (v.matcher.lastIndex = M);
-                let e = v.matcher.exec(t);
+            for (b.matcher.considerAll(); ; ) {
+                x++, G ? (G = !1) : b.matcher.considerAll(), (b.matcher.lastIndex = w);
+                let e = b.matcher.exec(t);
                 if (!e) break;
-                let n = t.substring(M, e.index),
-                    r = I(n, e);
-                M = e.index + r;
+                let n = t.substring(w, e.index),
+                    r = O(n, e);
+                w = e.index + r;
             }
             return (
-                I(t.substring(M)),
-                L.closeAllNodes(),
-                L.finalize(),
-                (R = L.toHTML()),
+                O(t.substring(w)),
+                D.closeAllNodes(),
+                D.finalize(),
+                (y = D.toHTML()),
                 {
                     language: e,
-                    value: R,
-                    relevance: b,
+                    value: y,
+                    relevance: U,
                     illegal: !1,
-                    _emitter: L,
-                    _top: v
+                    _emitter: D,
+                    _top: b
                 }
             );
         } catch (n) {
             if (n.message && n.message.includes('Illegal'))
                 return {
                     language: e,
-                    value: i(t),
+                    value: eS(t),
                     illegal: !0,
                     relevance: 0,
                     _illegalBy: {
                         message: n.message,
-                        index: M,
-                        context: t.slice(M - 100, M + 100),
+                        index: w,
+                        context: t.slice(w - 100, w + 100),
                         mode: n.mode,
-                        resultSoFar: R
+                        resultSoFar: y
                     },
-                    _emitter: L
+                    _emitter: D
                 };
-            if (l)
+            if (o)
                 return {
                     language: e,
-                    value: i(t),
+                    value: eS(t),
                     illegal: !1,
                     relevance: 0,
                     errorRaised: n,
-                    _emitter: L,
-                    _top: v
+                    _emitter: D,
+                    _top: b
                 };
             else throw n;
         }
     }
-    function O(e, t) {
-        t = t || T.languages || Object.keys(n);
-        let r = (function (e) {
-                let t = {
-                    value: i(e),
-                    illegal: !1,
-                    relevance: 0,
-                    _top: c,
-                    _emitter: new T.__emitter(T)
-                };
-                return t._emitter.addText(e), t;
-            })(e),
-            a = t
-                .filter(y)
-                .filter(D)
-                .map((t) => N(t, e, !1));
-        a.unshift(r);
-        let [s, o] = a.sort((e, t) => {
-            if (e.relevance !== t.relevance) return t.relevance - e.relevance;
-            if (e.language && t.language) {
-                if (y(e.language).supersetOf === t.language) return 1;
-                if (y(t.language).supersetOf === e.language) return -1;
-            }
-            return 0;
-        });
+    function g(e) {
+        let t = {
+            value: eS(e),
+            illegal: !1,
+            relevance: 0,
+            _top: l,
+            _emitter: new u.__emitter(u)
+        };
+        return t._emitter.addText(e), t;
+    }
+    function A(e, t) {
+        t = t || u.languages || Object.keys(n);
+        let r = g(e),
+            i = t
+                .filter(M)
+                .filter(U)
+                .map((t) => I(t, e, !1));
+        i.unshift(r);
+        let [a, o] = i.sort((e, t) => {
+                if (e.relevance !== t.relevance) return t.relevance - e.relevance;
+                if (e.language && t.language) {
+                    if (M(e.language).supersetOf === t.language) return 1;
+                    if (M(t.language).supersetOf === e.language) return -1;
+                }
+                return 0;
+            }),
+            s = a;
         return (s.secondBest = o), s;
     }
-    function R(e) {
+    function v(e, t, n) {
+        let r = (t && i[t]) || n;
+        e.classList.add('hljs'), e.classList.add(`language-${r}`);
+    }
+    function N(e) {
         let t = null,
-            n = (function (e) {
-                let t = e.className + ' ';
-                t += e.parentNode ? e.parentNode.className : '';
-                let n = T.languageDetectRe.exec(t);
-                if (n) {
-                    let t = y(n[1]);
-                    return !t && (H(u.replace('{}', n[1])), H('Falling back to no-highlight mode for this block.', e)), t ? n[1] : 'no-highlight';
-                }
-                return t.split(/\s+/).find((e) => g(e) || y(e));
-            })(e);
-        if (g(n)) return;
+            n = d(e);
+        if (c(n)) return;
         if (
-            (M('before:highlightElement', {
+            (x('before:highlightElement', {
                 el: e,
                 language: n
             }),
-            e.children.length > 0 && (!T.ignoreUnescapedHTML && (console.warn('One of your code blocks includes unescaped HTML. This is a potentially serious security risk.'), console.warn('https://github.com/highlightjs/highlight.js/wiki/security'), console.warn('The element with unescaped HTML:'), console.warn(e)), T.throwUnescapedHTML))
+            e.children.length > 0 && (!u.ignoreUnescapedHTML && (console.warn('One of your code blocks includes unescaped HTML. This is a potentially serious security risk.'), console.warn('https://github.com/highlightjs/highlight.js/wiki/security'), console.warn('The element with unescaped HTML:'), console.warn(e)), u.throwUnescapedHTML))
         )
-            throw new K('One of your code blocks includes unescaped HTML.', e.innerHTML);
+            throw new eg('One of your code blocks includes unescaped HTML.', e.innerHTML);
         let r = (t = e).textContent,
             i = n
-                ? A(r, {
+                ? E(r, {
                       language: n,
                       ignoreIllegals: !0
                   })
-                : O(r);
+                : A(r);
         (e.innerHTML = i.value),
-            !(function (e, t, n) {
-                let r = (t && s[t]) || n;
-                e.classList.add('hljs'), e.classList.add(`language-${r}`);
-            })(e, n, i.language),
+            v(e, n, i.language),
             (e.result = {
                 language: i.language,
                 re: i.relevance,
@@ -859,116 +877,118 @@ var q = (function (e) {
                     language: i.secondBest.language,
                     relevance: i.secondBest.relevance
                 }),
-            M('after:highlightElement', {
+            x('after:highlightElement', {
                 el: e,
                 result: i,
                 text: r
             });
     }
-    let v = !1;
+    function O(e) {
+        u = eA(u, e);
+    }
+    let R = () => {
+        b(), eu('10.6.0', 'initHighlighting() deprecated.  Use highlightAll() now.');
+    };
     function C() {
+        b(), eu('10.6.0', 'initHighlightingOnLoad() deprecated.  Use highlightAll() now.');
+    }
+    let y = !1;
+    function b() {
         if ('loading' === document.readyState) {
-            v = !0;
+            y = !0;
             return;
         }
-        document.querySelectorAll(T.cssSelector).forEach(R);
+        document.querySelectorAll(u.cssSelector).forEach(N);
     }
-    'undefined' != typeof window &&
-        window.addEventListener &&
-        window.addEventListener(
-            'DOMContentLoaded',
-            function () {
-                v && C();
-            },
-            !1
-        );
-    function y(e) {
-        return n[(e = (e || '').toLowerCase())] || n[s[e]];
+    function L() {
+        y && b();
     }
-    function L(e, { languageName: t }) {
+    function D(t, r) {
+        let i = null;
+        try {
+            i = r(e);
+        } catch (e) {
+            if ((es("Language definition for '{}' could not be registered.".replace('{}', t)), o)) es(e);
+            else throw e;
+            i = l;
+        }
+        !i.name && (i.name = t), (n[t] = i), (i.rawDefinition = r.bind(null, e)), i.aliases && P(i.aliases, { languageName: t });
+    }
+    function M(e) {
+        return n[(e = (e || '').toLowerCase())] || n[i[e]];
+    }
+    function P(e, { languageName: t }) {
         'string' == typeof e && (e = [e]),
             e.forEach((e) => {
-                s[e.toLowerCase()] = t;
+                i[e.toLowerCase()] = t;
             });
     }
-    function D(e) {
-        let t = y(e);
+    function U(e) {
+        let t = M(e);
         return t && !t.disableAutodetect;
     }
-    function M(e, t) {
-        o.forEach(function (n) {
-            n[e] && n[e](t);
+    function w(e) {
+        e['before:highlightBlock'] &&
+            !e['before:highlightElement'] &&
+            (e['before:highlightElement'] = (t) => {
+                e['before:highlightBlock'](Object.assign({ block: t.el }, t));
+            }),
+            e['after:highlightBlock'] &&
+                !e['after:highlightElement'] &&
+                (e['after:highlightElement'] = (t) => {
+                    e['after:highlightBlock'](Object.assign({ block: t.el }, t));
+                });
+    }
+    function x(e, t) {
+        let n = e;
+        a.forEach(function (e) {
+            e[n] && e[n](t);
         });
     }
-    for (let r in (Object.assign(e, {
-        highlight: A,
-        highlightAuto: O,
-        highlightAll: C,
-        highlightElement: R,
-        highlightBlock: function (e) {
-            return Z('10.7.0', 'highlightBlock will be removed entirely in v12.0'), Z('10.7.0', 'Please use highlightElement now.'), R(e);
+    function G(e) {
+        return eu('10.7.0', 'highlightBlock will be removed entirely in v12.0'), eu('10.7.0', 'Please use highlightElement now.'), N(e);
+    }
+    for (let r in ('undefined' != typeof window && window.addEventListener && window.addEventListener('DOMContentLoaded', L, !1),
+    Object.assign(e, {
+        highlight: E,
+        highlightAuto: A,
+        highlightAll: b,
+        highlightElement: N,
+        highlightBlock: G,
+        configure: O,
+        initHighlighting: R,
+        initHighlightingOnLoad: C,
+        registerLanguage: D,
+        unregisterLanguage: function e(e) {
+            for (let t of (delete n[e], Object.keys(i))) i[t] === e && delete i[t];
         },
-        configure: function (e) {
-            T = a(T, e);
-        },
-        initHighlighting: () => {
-            C(), Z('10.6.0', 'initHighlighting() deprecated.  Use highlightAll() now.');
-        },
-        initHighlightingOnLoad: function () {
-            C(), Z('10.6.0', 'initHighlightingOnLoad() deprecated.  Use highlightAll() now.');
-        },
-        registerLanguage: function (t, r) {
-            let i = null;
-            try {
-                i = r(e);
-            } catch (e) {
-                if ((V("Language definition for '{}' could not be registered.".replace('{}', t)), l)) V(e);
-                else throw e;
-                i = c;
-            }
-            !i.name && (i.name = t), (n[t] = i), (i.rawDefinition = r.bind(null, e)), i.aliases && L(i.aliases, { languageName: t });
-        },
-        unregisterLanguage: function (e) {
-            for (let t of (delete n[e], Object.keys(s))) s[t] === e && delete s[t];
-        },
-        listLanguages: function () {
+        listLanguages: function e() {
             return Object.keys(n);
         },
-        getLanguage: y,
-        registerAliases: L,
-        autoDetection: D,
-        inherit: a,
-        addPlugin: function (e) {
-            var t;
-            (t = e)['before:highlightBlock'] &&
-                !t['before:highlightElement'] &&
-                (t['before:highlightElement'] = (e) => {
-                    t['before:highlightBlock'](Object.assign({ block: e.el }, e));
-                }),
-                t['after:highlightBlock'] &&
-                    !t['after:highlightElement'] &&
-                    (t['after:highlightElement'] = (e) => {
-                        t['after:highlightBlock'](Object.assign({ block: e.el }, e));
-                    }),
-                o.push(e);
+        getLanguage: M,
+        registerAliases: P,
+        autoDetection: U,
+        inherit: eA,
+        addPlugin: function e(e) {
+            w(e), a.push(e);
         }
     }),
     (e.debugMode = function () {
-        l = !1;
+        o = !1;
     }),
     (e.safeMode = function () {
-        l = !0;
+        o = !0;
     }),
-    (e.versionString = '11.7.0'),
+    (e.versionString = eT),
     (e.regex = {
-        concat: p,
-        lookahead: E,
-        either: I,
-        optional: h,
-        anyNumberOfTimes: f
+        concat: m,
+        lookahead: f,
+        either: T,
+        optional: p,
+        anyNumberOfTimes: h
     }),
-    b))
-        'object' == typeof b[r] && t.exports(b[r]);
-    return Object.assign(e, b), e;
+    K))
+        'object' == typeof K[r] && t.exports(K[r]);
+    return Object.assign(e, K), e;
 })({});
-(e.exports = q), (q.HighlightJS = q), (q.default = q);
+(e.exports = eO), (eO.HighlightJS = eO), (eO.default = eO);

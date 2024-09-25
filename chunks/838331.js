@@ -1,43 +1,44 @@
 n.d(t, {
     A7: function () {
-        return S;
+        return A;
     },
     hQ: function () {
-        return O;
+        return R;
     },
     lo: function () {
-        return v;
+        return y;
     },
     yn: function () {
-        return g;
+        return v;
     }
-}),
-    n(47120);
-var r = n(735250),
-    i = n(470079),
-    a = n(120356),
-    s = n.n(a),
-    o = n(924826),
-    l = n(91192),
-    u = n(178940),
-    c = n(1561),
-    d = n(260034),
-    _ = n(742746),
-    E = n(326452),
-    f = n(993365),
-    h = n(481060),
-    p = n(689938),
+});
+var r = n(47120);
+var i = n(735250),
+    a = n(470079),
+    o = n(120356),
+    s = n.n(o),
+    l = n(924826),
+    u = n(91192),
+    c = n(178940),
+    d = n(1561),
+    _ = n(260034),
+    E = n(742746),
+    f = n(326452),
+    h = n(993365),
+    p = n(481060),
+    m = n(689938),
     I = n(251887);
-let m = 'data-listbox-item-id',
-    T = Object.freeze({
+let T = 'data-listbox-item-id',
+    g = 40,
+    S = Object.freeze({
         STANDARD: I.selected,
         BRAND: I.selectedBrand
     });
-function S(e) {
-    let [t, n] = i.useState(() => new Set(e));
+function A(e) {
+    let [t, n] = a.useState(() => new Set(e));
     return [
         t,
-        i.useCallback((e) => {
+        a.useCallback((e) => {
             n((t) => {
                 let n = new Set(t);
                 return n.has(e) ? n.delete(e) : n.add(e), n;
@@ -45,34 +46,34 @@ function S(e) {
         }, [])
     ];
 }
-function g(e) {
-    let [t, n] = i.useState(() => new Set(null != e ? [e] : void 0));
+function v(e) {
+    let [t, n] = a.useState(() => new Set(null != e ? [e] : void 0));
     return [
         t,
-        i.useCallback((e) => {
+        a.useCallback((e) => {
             n(new Set([e]));
         }, [])
     ];
 }
-function A(e) {
+function N(e) {
     return String(e);
 }
-let N = i.createContext({
+let O = a.createContext({
     activeDescendant: null,
     selected: new Set(),
     setSelected: () => null,
-    itemToString: A
+    itemToString: N
 });
-function O(e) {
-    let { placeholder: t, children: n, value: a, onChange: u, className: c, listClassName: h, 'aria-label': T, multiSelect: S = !1, autoFocus: g = !1, maxVisibleItems: O = 5, itemToString: R = A, showScrollbar: v = !1 } = e,
-        [C, y] = i.useState(''),
-        [L] = i.useState(!0),
-        [D, b] = i.useState(null),
-        M = i.useId(),
-        P = i.useRef(null);
-    i.useLayoutEffect(() => {
-        let e = document.querySelector('['.concat(m, '="').concat(D, '"]')),
-            t = P.current;
+function R(e) {
+    let { placeholder: t, children: n, value: r, onChange: o, className: c, listClassName: d, 'aria-label': p, multiSelect: S = !1, autoFocus: A = !1, maxVisibleItems: v = 5, itemToString: R = N, showScrollbar: C = !1 } = e,
+        [y, b] = a.useState(''),
+        [L] = a.useState(!0),
+        [D, M] = a.useState(null),
+        P = a.useId(),
+        U = a.useRef(null);
+    a.useLayoutEffect(() => {
+        let e = document.querySelector('['.concat(T, '="').concat(D, '"]')),
+            t = U.current;
         null != t &&
             null != e &&
             t.scrollIntoViewNode({
@@ -80,110 +81,110 @@ function O(e) {
                 padding: 12
             });
     }, [D]);
-    let U = n(C),
-        w = 0 === U.length,
-        x = i.useId(),
-        G = i.useCallback(
+    let w = n(y),
+        x = 0 === w.length,
+        G = a.useId(),
+        k = a.useCallback(
             () =>
                 new Promise((e) => {
-                    let t = P.current;
+                    let t = U.current;
                     if (null == t) return e();
                     t.scrollToTop({ callback: () => requestAnimationFrame(() => e()) });
                 }),
             []
         ),
-        k = i.useCallback(
+        B = a.useCallback(
             () =>
                 new Promise((e) => {
-                    let t = P.current;
+                    let t = U.current;
                     if (null == t) return e();
                     t.scrollToTop({ callback: () => requestAnimationFrame(() => e()) });
                 }),
             []
         ),
-        B = i.useCallback((e, t) => {
-            b(t);
+        F = a.useCallback((e, t) => {
+            M(t);
             let n = document.querySelector(e),
-                r = P.current;
+                r = U.current;
             null != r && null != n && r.scrollIntoViewNode({ node: n });
         }, []),
-        F = (0, o.ZP)({
-            id: x,
+        Z = (0, l.ZP)({
+            id: G,
             isEnabled: !0,
             useVirtualFocus: !0,
-            scrollToStart: G,
-            scrollToEnd: k,
-            setFocus: B
+            scrollToStart: k,
+            scrollToEnd: B,
+            setFocus: F
         }),
-        V = v ? _.Tv : _.lW;
-    return (0, r.jsx)(l.bG, {
-        navigator: F,
-        children: (0, r.jsx)(l.SJ, {
+        V = C ? E.Tv : E.lW;
+    return (0, i.jsx)(u.bG, {
+        navigator: Z,
+        children: (0, i.jsx)(u.SJ, {
             children: (e) => {
-                let { ref: n, onKeyDown: i, ...o } = e;
-                return (0, r.jsxs)('div', {
+                let { ref: n, onKeyDown: a, ...l } = e;
+                return (0, i.jsxs)('div', {
                     ref: n,
                     role: 'combobox',
-                    'aria-label': T,
+                    'aria-label': p,
                     'aria-expanded': L,
-                    'aria-controls': L ? M : void 0,
-                    'aria-owns': M,
+                    'aria-controls': L ? P : void 0,
+                    'aria-owns': P,
                     'aria-haspopup': 'listbox',
                     className: s()(I.combobox, c),
                     children: [
-                        (0, r.jsx)(E.E, {
-                            autoFocus: g,
-                            size: E.E.Sizes.MEDIUM,
+                        (0, i.jsx)(f.E, {
+                            autoFocus: A,
+                            size: f.E.Sizes.MEDIUM,
                             placeholder: t,
-                            query: C,
-                            onChange: y,
-                            onKeyDown: i,
-                            onBlur: () => b(null),
-                            onClear: () => y(''),
-                            className: s()({ [I.searchWithScrollbar]: v }),
+                            query: y,
+                            onChange: b,
+                            onKeyDown: a,
+                            onBlur: () => M(null),
+                            onClear: () => b(''),
+                            className: s()({ [I.searchWithScrollbar]: C }),
                             inputProps: {
                                 'aria-multiline': !1,
                                 'aria-activedescendant': null != D ? D : void 0
                             }
                         }),
-                        (0, r.jsx)('div', {
+                        (0, i.jsx)('div', {
                             children:
                                 L &&
-                                (w
-                                    ? (0, r.jsxs)('div', {
+                                (x
+                                    ? (0, i.jsxs)('div', {
                                           className: I.empty,
                                           children: [
-                                              (0, r.jsx)(d.X, {
+                                              (0, i.jsx)(_.X, {
                                                   variant: 'heading-md/semibold',
-                                                  children: p.Z.Messages.AUTOCOMPLETE_NO_RESULTS_HEADER
+                                                  children: m.Z.Messages.AUTOCOMPLETE_NO_RESULTS_HEADER
                                               }),
-                                              (0, r.jsx)(f.x, {
+                                              (0, i.jsx)(h.x, {
                                                   color: 'text-muted',
                                                   variant: 'text-md/normal',
-                                                  children: p.Z.Messages.AUTOCOMPLETE_NO_RESULTS_BODY
+                                                  children: m.Z.Messages.AUTOCOMPLETE_NO_RESULTS_BODY
                                               })
                                           ]
                                       })
-                                    : (0, r.jsx)(N.Provider, {
+                                    : (0, i.jsx)(O.Provider, {
                                           value: {
                                               activeDescendant: D,
-                                              selected: a,
-                                              setSelected: u,
+                                              selected: r,
+                                              setSelected: o,
                                               itemToString: R
                                           },
-                                          children: (0, r.jsx)(V, {
-                                              ...o,
-                                              style: { maxHeight: 46 * O },
+                                          children: (0, i.jsx)(V, {
+                                              ...l,
+                                              style: { maxHeight: v * (g + 6) },
                                               'aria-multiselectable': S,
-                                              id: M,
-                                              ref: P,
-                                              className: s()(I.list, h, { [I.scroller]: v }),
-                                              sections: [U.length],
+                                              id: P,
+                                              ref: U,
+                                              className: s()(I.list, d, { [I.scroller]: C }),
+                                              sections: [w.length],
                                               sectionHeight: 0,
-                                              rowHeight: 40,
+                                              rowHeight: g,
                                               renderRow: (e) => {
                                                   let { row: t } = e;
-                                                  return U[t];
+                                                  return w[t];
                                               },
                                               renderSection: () => null
                                           })
@@ -195,71 +196,71 @@ function O(e) {
         })
     });
 }
-let R = i.createContext(null);
-function v(e) {
+let C = a.createContext(null);
+function y(e) {
     var t;
-    let { value: n, children: a, disabled: o = !1, selectedColor: u = T.STANDARD, ...d } = e,
-        { activeDescendant: _, selected: E, setSelected: f, itemToString: h } = i.useContext(N),
+    let { value: n, children: r, disabled: o = !1, selectedColor: l = S.STANDARD, ...c } = e,
+        { activeDescendant: _, selected: E, setSelected: f, itemToString: h } = a.useContext(O),
         p = h(n),
-        S = _ === p,
-        g = null !== (t = null == d ? void 0 : d.selected) && void 0 !== t ? t : E.has(n),
-        A = (0, l.JA)(p);
-    return (0, r.jsx)(c.P, {
+        m = _ === p,
+        g = null !== (t = null == c ? void 0 : c.selected) && void 0 !== t ? t : E.has(n),
+        A = (0, u.JA)(p);
+    return (0, i.jsx)(d.P, {
         tag: 'li',
         id: p,
         onClick: () => (o ? null : f(n)),
-        [m]: n,
+        [T]: n,
         className: s()(I.item, {
-            [I.focused]: S,
-            [u]: g,
+            [I.focused]: m,
+            [l]: g,
             [I.disabled]: o
         }),
         ...A,
         role: 'option',
         'aria-selected': g,
         'aria-disabled': o,
-        children: (0, r.jsx)(R.Provider, {
+        children: (0, i.jsx)(C.Provider, {
             value: n,
-            children: a
+            children: r
         })
     });
 }
-(v.Colors = T),
-    (v.Label = function (e) {
+(y.Colors = S),
+    (y.Label = function (e) {
         let { children: t } = e;
-        return (0, r.jsx)('span', {
+        return (0, i.jsx)('span', {
             className: I.itemLabel,
             children: t
         });
     }),
-    (v.Icon = function (e) {
+    (y.Icon = function (e) {
         let { children: t } = e;
-        return (0, r.jsx)('span', {
+        return (0, i.jsx)('span', {
             className: I.itemCheckbox,
             children: t
         });
     }),
-    (v.Checkbox = function (e) {
+    (y.Checkbox = function (e) {
         let { checked: t } = e,
-            { selected: n } = i.useContext(N),
-            a = i.useContext(R);
-        return (0, r.jsx)('span', {
+            { selected: n } = a.useContext(O),
+            r = a.useContext(C);
+        return (0, i.jsx)('span', {
             className: I.itemCheckbox,
-            children: (0, r.jsx)(u.X, {
+            children: (0, i.jsx)(c.X, {
                 displayOnly: !0,
-                value: null != t ? t : null != a && n.has(a),
-                type: u.X.Types.INVERTED,
+                value: null != t ? t : null != r && n.has(r),
+                type: c.X.Types.INVERTED,
                 size: 20
             })
         });
     }),
-    (v.Checkmark = function () {
-        let { selected: e } = i.useContext(N),
-            t = i.useContext(R);
+    (y.Checkmark = function () {
+        let { selected: e } = a.useContext(O),
+            t = a.useContext(C);
         return e.has(t)
-            ? (0, r.jsx)('span', {
+            ? (0, i.jsx)('span', {
                   className: I.itemCheckbox,
-                  children: (0, r.jsx)(h.CircleCheckIcon, {
+                  children: (0, i.jsx)(p.CircleCheckIcon, {
                       size: 'custom',
                       color: 'currentColor',
                       width: 20,

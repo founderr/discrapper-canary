@@ -1,25 +1,27 @@
 n.d(t, {
     l: function () {
-        return f;
+        return h;
     }
-}),
-    n(47120);
+});
 var r,
-    i,
-    a = n(735250),
-    s = n(470079),
-    o = n(120356),
-    l = n.n(o),
+    i = n(47120);
+var a = n(735250),
+    o = n(470079),
+    s = n(120356),
+    l = n.n(s),
     u = n(846519),
     c = n(186325),
     d = n(647338);
-((i = r || (r = {}))[(i.TRANSLATE = 1)] = 'TRANSLATE'), (i[(i.SCALE = 2)] = 'SCALE'), (i[(i.FADE = 3)] = 'FADE');
-let _ = Object.freeze({
+let _ = 200;
+!(function (e) {
+    (e[(e.TRANSLATE = 1)] = 'TRANSLATE'), (e[(e.SCALE = 2)] = 'SCALE'), (e[(e.FADE = 3)] = 'FADE');
+})(r || (r = {}));
+let E = Object.freeze({
         1: d.translate,
         2: d.scale,
         3: d.fade
     }),
-    E = Object.freeze({
+    f = Object.freeze({
         top: d.animatorTop,
         bottom: d.animatorBottom,
         left: d.animatorLeft,
@@ -27,38 +29,38 @@ let _ = Object.freeze({
         center: d.animatorCenter,
         window_center: d.animatorCenter
     });
-function f(e) {
+function h(e) {
     let { position: t, type: n, children: r } = e,
-        { reducedMotion: i } = s.useContext(c.S),
-        o = i.enabled ? 3 : n,
-        [f, h] = s.useState(null != t),
-        [p] = s.useState(() => new u.V7()),
-        [I, m] = s.useState(!0),
-        T = s.useRef(null);
+        { reducedMotion: i } = o.useContext(c.S),
+        s = i.enabled ? 3 : n,
+        [h, p] = o.useState(null != t),
+        [m] = o.useState(() => new u.V7()),
+        [I, T] = o.useState(!0),
+        g = o.useRef(null);
     return (
-        s.useLayoutEffect(() => {
+        o.useLayoutEffect(() => {
             var e;
-            null === (e = T.current) ||
+            null === (e = g.current) ||
                 void 0 === e ||
                 e.addEventListener('transitionend', () => {
-                    m(!1);
+                    T(!1);
                 }),
                 setTimeout(() => {
-                    m(!1);
-                }, 200);
+                    T(!1);
+                }, _);
         }, []),
-        s.useEffect(() => () => p.stop(), [p]),
-        s.useEffect(() => {
-            null != t && p.start(10, () => h(!0));
-        }, [t, p]),
+        o.useEffect(() => () => m.stop(), [m]),
+        o.useEffect(() => {
+            null != t && m.start(10, () => p(!0));
+        }, [t, m]),
         (0, a.jsx)('div', {
             'data-popout-animating': I,
-            className: l()(null != t ? E[t] : null, {
-                [_[o]]: null != t,
-                [d.didRender]: f
+            className: l()(null != t ? f[t] : null, {
+                [E[s]]: null != t,
+                [d.didRender]: h
             }),
             children: r
         })
     );
 }
-f.Types = r;
+h.Types = r;

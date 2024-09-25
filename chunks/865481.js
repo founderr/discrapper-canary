@@ -1,5 +1,5 @@
 n.r(t);
-t.default = {
+var r = {
     transparent: 0,
     aliceblue: 4042850303,
     antiquewhite: 4209760255,
@@ -151,3 +151,4 @@ t.default = {
     yellow: 4294902015,
     yellowgreen: 2597139199
 };
+t.default = r;

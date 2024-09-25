@@ -1,59 +1,61 @@
-l.d(n, {
+n.d(t, {
     Z: function () {
-        return m;
+        return E;
     }
-}),
-    l(47120);
-var s = l(735250),
-    t = l(470079),
-    a = l(481060),
-    i = l(482241),
-    o = l(124165),
-    r = l(765305),
-    u = l(689938),
-    c = l(196238);
-function d(e) {
-    let { event: n, recurrenceId: l, guildId: d, onRsvp: m, ...N } = e,
-        [v, C] = t.useState(o.KX.SERIES),
-        p = (0, o.X2)(n.id, null),
-        h = (null == p ? void 0 : p.response) === r.gv.INTERESTED ? r.gv.UNINTERESTED : r.gv.INTERESTED,
-        E = h === r.gv.INTERESTED ? u.Z.Messages.GUILD_SCHEDULED_EVENT_RSVP_PICKER_HEADER_INTERESTED : u.Z.Messages.GUILD_SCHEDULED_EVENT_RSVP_PICKER_HEADER_UNINTERESTED;
-    return (0, s.jsx)(a.ConfirmModal, {
-        ...N,
-        header: E,
-        confirmText: u.Z.Messages.OK,
-        cancelText: u.Z.Messages.CANCEL,
-        onConfirm: () => {
-            v === o.KX.SERIES ? i.Z.updateRsvp(n.id, null, d, h) : i.Z.updateRsvp(n.id, l, d, h), null == m || m(), N.onClose();
-        },
-        confirmButtonColor: a.Button.Colors.BRAND,
-        children: (0, s.jsx)(a.RadioGroup, {
-            className: c.responseOptions,
-            value: v,
-            options: (0, o.pF)(),
-            onChange: (e) => C(e.value)
+});
+var r = n(47120);
+var i = n(735250),
+    a = n(470079),
+    o = n(481060),
+    s = n(482241),
+    l = n(124165),
+    u = n(765305),
+    c = n(689938),
+    d = n(196238);
+function _(e) {
+    let { event: t, recurrenceId: n, guildId: r, onRsvp: _, ...E } = e,
+        [f, h] = a.useState(l.KX.SERIES),
+        p = (0, l.X2)(t.id, null),
+        m = (null == p ? void 0 : p.response) === u.gv.INTERESTED ? u.gv.UNINTERESTED : u.gv.INTERESTED,
+        I = m === u.gv.INTERESTED ? c.Z.Messages.GUILD_SCHEDULED_EVENT_RSVP_PICKER_HEADER_INTERESTED : c.Z.Messages.GUILD_SCHEDULED_EVENT_RSVP_PICKER_HEADER_UNINTERESTED,
+        T = () => {
+            f === l.KX.SERIES ? s.Z.updateRsvp(t.id, null, r, m) : s.Z.updateRsvp(t.id, n, r, m), null == _ || _(), E.onClose();
+        };
+    return (0, i.jsx)(o.ConfirmModal, {
+        ...E,
+        header: I,
+        confirmText: c.Z.Messages.OK,
+        cancelText: c.Z.Messages.CANCEL,
+        onConfirm: T,
+        confirmButtonColor: o.Button.Colors.BRAND,
+        children: (0, i.jsx)(o.RadioGroup, {
+            className: d.responseOptions,
+            value: f,
+            options: (0, l.pF)(),
+            onChange: (e) => h(e.value)
         })
     });
 }
-function m(e, n, l, t) {
-    (0, o.cg)({
+function E(e, t, n, r) {
+    let a = (e, t) => {
+        (0, o.openModalLazy)(() =>
+            Promise.resolve((a) =>
+                (0, i.jsx)(_, {
+                    ...a,
+                    event: e,
+                    recurrenceId: t,
+                    guildId: n,
+                    onRsvp: r
+                })
+            )
+        );
+    };
+    (0, l.cg)({
         eventId: e,
-        recurrenceId: n,
-        guildId: l,
-        updateRsvp: (n, s, t, a) => i.Z.updateRsvp(e, s, l, a),
-        openRsvpPicker: (e, n) => {
-            (0, a.openModalLazy)(() =>
-                Promise.resolve((a) =>
-                    (0, s.jsx)(d, {
-                        ...a,
-                        event: e,
-                        recurrenceId: n,
-                        guildId: l,
-                        onRsvp: t
-                    })
-                )
-            );
-        },
-        onRsvp: t
+        recurrenceId: t,
+        guildId: n,
+        updateRsvp: (t, r, i, a) => s.Z.updateRsvp(e, r, n, a),
+        openRsvpPicker: a,
+        onRsvp: r
     });
 }

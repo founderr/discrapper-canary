@@ -1,38 +1,39 @@
-n(653041), n(47120);
 var r,
-    i,
-    a,
-    s,
-    o = n(348327),
-    l = n.n(o),
-    u = n(442837),
-    c = n(570140),
-    d = n(742738);
-let _ = [d.Z],
-    E = [];
-function f() {
+    i = n(653041);
+var a = n(47120);
+var o = n(348327),
+    s = n.n(o),
+    l = n(442837),
+    u = n(570140);
+function c(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+let d = [n(742738).Z],
+    _ = [];
+function E() {
     let e = [];
-    for (let t of _) {
+    for (let t of d) {
         let n = t.getActivity();
         null != n && e.push(n);
     }
-    return !l()(e, E) && ((E = e), !0);
+    return !s()(e, _) && ((_ = e), !0);
 }
-class h extends (r = u.ZP.Store) {
+class f extends (r = l.ZP.Store) {
     initialize() {
-        this.syncWith(_, f);
+        this.syncWith(d, E);
     }
     getActivities() {
-        return E;
+        return _;
     }
 }
-(s = 'FirstPartyRichPresenceStore'),
-    (a = 'displayName') in (i = h)
-        ? Object.defineProperty(i, a, {
-              value: s,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (i[a] = s),
-    (t.Z = new h(c.Z));
+c(f, 'displayName', 'FirstPartyRichPresenceStore'), (t.Z = new f(u.Z));

@@ -1,23 +1,23 @@
-t.d(n, {
+n.d(t, {
     Qm: function () {
         return E;
     },
     hR: function () {
-        return _;
+        return f;
     },
     yJ: function () {
-        return s;
+        return d;
     }
 });
-var i = t(470079),
-    a = t(892814),
-    l = t(442837),
-    o = t(895924),
-    c = t(581364),
-    d = t(823379),
-    r = t(399654),
-    u = t(844439);
-let s = {
+var r = n(470079),
+    i = n(892814),
+    a = n(442837),
+    o = n(895924),
+    s = n(581364),
+    l = n(823379),
+    u = n(399654),
+    c = n(844439);
+let d = {
         '1181475143340539995': {
             imageOption: 'image',
             overrideSendCommandInfo: {
@@ -33,10 +33,10 @@ let s = {
         '1029794689932611625': { imageOption: 'image' },
         '1238332854602043454': { imageOption: 'image' }
     },
-    m = Object.keys(s);
+    _ = Object.keys(d);
 function E(e) {
-    let { contentType: n } = e;
-    switch (n) {
+    let { contentType: t } = e;
+    switch (t) {
         case 'image/jpeg':
         case 'image/jpg':
             return '.jpg';
@@ -49,82 +49,81 @@ function E(e) {
             return '';
     }
 }
-function _(e) {
-    let { channelId: n } = e,
-        { fetchState: t, recommendationsSections: E } = (function (e) {
-            let { channelId: n } = e,
-                t = a.I.CONTEXTUAL_IMAGE,
-                o = i.useMemo(
-                    () => ({
-                        channelId: n,
-                        location: t,
-                        withCommands: !0
-                    }),
-                    [n, t]
-                );
-            i.useEffect(() => {
-                (0, r.a)(o);
-            }, [o]);
-            let { fetchState: c, recommendationsSections: d } = (0, l.cj)([u.ZP], () => ({
-                fetchState: u.ZP.getFetchState(o),
-                recommendationsSections: u.ZP.getRecommendations(o)
-            }));
-            return {
-                fetchState: c,
-                recommendationsSections: d
-            };
-        })({ channelId: n });
+function f(e) {
+    let { channelId: t } = e,
+        { fetchState: n, recommendationsSections: i } = h({ channelId: t });
     return {
-        fetchState: t,
-        imageRecCommandContexts: i.useMemo(() => {
-            let e = E.length > 0 ? E[0].items : void 0;
+        fetchState: n,
+        imageRecCommandContexts: r.useMemo(() => {
+            let e = i.length > 0 ? i[0].items : void 0;
             return void 0 === e
                 ? []
-                : m
-                      .map((n) => {
-                          var t, i, a, l;
-                          let d, r;
-                          let u = e.find((e) => {
-                              var t;
-                              return null != (d = null === (t = e.commands) || void 0 === t ? void 0 : t.find((e) => e.id === n));
-                          });
-                          if (null == u) return null;
-                          let { application: m } = u;
-                          if (null == d) return null;
-                          let E = (0, c.Z8)({
-                                  rootCommand: d,
-                                  command: d,
-                                  applicationId: m.id
-                              }),
-                              _ = null === (t = s[n].overrideSendCommandInfo) || void 0 === t ? void 0 : t.commandId;
-                          if (null != _) {
-                              let e = null != _ ? (null === (a = u.commands) || void 0 === a ? void 0 : a.find((e) => e.id === _)) : void 0;
-                              null != e &&
-                                  (r = (0, c.Z8)({
-                                      rootCommand: e,
-                                      command: e,
-                                      applicationId: m.id
-                                  }));
+                : _.map((t) => {
+                      var n, r, i, a;
+                      let l, u;
+                      let c = e.find((e) => {
+                          var n;
+                          return null != (l = null === (n = e.commands) || void 0 === n ? void 0 : n.find((e) => e.id === t));
+                      });
+                      if (null == c) return null;
+                      let { application: _ } = c;
+                      if (null == l) return null;
+                      let E = (0, s.Z8)({
+                              rootCommand: l,
+                              command: l,
+                              applicationId: _.id
+                          }),
+                          f = null === (n = d[t].overrideSendCommandInfo) || void 0 === n ? void 0 : n.commandId;
+                      if (null != f) {
+                          let e = null != f ? (null === (i = c.commands) || void 0 === i ? void 0 : i.find((e) => e.id === f)) : void 0;
+                          null != e &&
+                              (u = (0, s.Z8)({
+                                  rootCommand: e,
+                                  command: e,
+                                  applicationId: _.id
+                              }));
+                      }
+                      return {
+                          command: {
+                              ...E,
+                              displayName: E.displayName
+                                  .split(/[_ ]/)
+                                  .map((e) => e.charAt(0).toUpperCase() + e.slice(1))
+                                  .join(' ')
+                          },
+                          overrideSendCommand: u,
+                          section: {
+                              type: o.Qi.APPLICATION,
+                              id: _.id,
+                              icon: _.icon,
+                              name: null !== (a = null == _ ? void 0 : null === (r = _.bot) || void 0 === r ? void 0 : r.username) && void 0 !== a ? a : _.name,
+                              application: _
                           }
-                          return {
-                              command: {
-                                  ...E,
-                                  displayName: E.displayName
-                                      .split(/[_ ]/)
-                                      .map((e) => e.charAt(0).toUpperCase() + e.slice(1))
-                                      .join(' ')
-                              },
-                              overrideSendCommand: r,
-                              section: {
-                                  type: o.Qi.APPLICATION,
-                                  id: m.id,
-                                  icon: m.icon,
-                                  name: null !== (l = null == m ? void 0 : null === (i = m.bot) || void 0 === i ? void 0 : i.username) && void 0 !== l ? l : m.name,
-                                  application: m
-                              }
-                          };
-                      })
-                      .filter(d.lm);
-        }, [E])
+                      };
+                  }).filter(l.lm);
+        }, [i])
+    };
+}
+function h(e) {
+    let { channelId: t } = e,
+        n = i.I.CONTEXTUAL_IMAGE,
+        o = r.useMemo(
+            () => ({
+                channelId: t,
+                location: n,
+                withCommands: !0
+            }),
+            [t, n]
+        );
+    r.useEffect(() => {
+        (0, u.a)(o);
+    }, [o]);
+    let { fetchState: s, recommendationsSections: l } = (0, a.cj)([c.ZP], () => ({
+        fetchState: c.ZP.getFetchState(o),
+        recommendationsSections: c.ZP.getRecommendations(o)
+    }));
+    return {
+        fetchState: s,
+        recommendationsSections: l
     };
 }

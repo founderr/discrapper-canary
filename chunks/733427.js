@@ -1,13 +1,14 @@
-var i = n(470079);
-t.Z = () => {
-    let e = i.useRef(!0);
+var r = n(470079);
+let i = () => {
+    let e = r.useRef(!0);
     return (
-        i.useEffect(
+        r.useEffect(
             () => () => {
                 e.current = !1;
             },
             []
         ),
-        i.useCallback(() => e.current, [])
+        r.useCallback(() => e.current, [])
     );
 };
+t.Z = i;

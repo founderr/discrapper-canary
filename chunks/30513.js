@@ -1,31 +1,31 @@
 n.d(t, {
     VF: function () {
-        return b;
+        return P;
     },
     WW: function () {
-        return y;
-    },
-    XO: function () {
-        return v;
-    },
-    Yp: function () {
-        return R;
-    },
-    hC: function () {
-        return D;
-    },
-    o9: function () {
         return L;
     },
-    zC: function () {
+    XO: function () {
+        return y;
+    },
+    Yp: function () {
         return C;
+    },
+    hC: function () {
+        return M;
+    },
+    o9: function () {
+        return D;
+    },
+    zC: function () {
+        return b;
     }
 });
 var r = n(692547),
     i = n(481060),
     a = n(15385),
-    s = n(709586),
-    o = n(123245),
+    o = n(709586),
+    s = n(123245),
     l = n(981631);
 n(474936);
 var u = n(689938);
@@ -65,7 +65,15 @@ let c = () => ({
             description: u.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_PERKS_STICKERS
         };
     },
-    p = function (e) {
+    p = function () {
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : tokens.unsafe_rawColors.PREMIUM_PERK_YELLOW.css;
+        return {
+            color: e,
+            icon: StickerIcon,
+            description: i18n.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_PERKS_STICKERS_UPLOAD.format({ numStickers: TotalStickerCountsByTier[BoostedGuildTiers.TIER_1] })
+        };
+    },
+    m = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r.Z.unsafe_rawColors.PREMIUM_PERK_PURPLE.css,
             n = 0,
             a = 0;
@@ -93,12 +101,12 @@ let c = () => ({
         icon: i.StarIcon,
         description: u.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_PERKS_VANITY_URL
     }),
-    m = () => ({
+    T = () => ({
         icon: a.Z,
         description: u.Z.Messages.PREMIUM_GUILD_USER_FEATURE_PROFILE_BADGE
     }),
-    T = () => ({
-        icon: s.Z,
+    g = () => ({
+        icon: o.Z,
         color: r.Z.unsafe_rawColors.PREMIUM_PERK_PINK.css,
         description: u.Z.Messages.PREMIUM_GUILD_USER_FEATURE_BOOST_CRYSTAL
     }),
@@ -107,12 +115,12 @@ let c = () => ({
         color: r.Z.unsafe_rawColors.PREMIUM_PERK_YELLOW.css,
         description: u.Z.Messages.PREMIUM_GUILD_USER_FEATURE_SPECIAL_ROLE
     }),
-    g = () => ({
+    A = () => ({
         color: r.Z.unsafe_rawColors.PREMIUM_PERK_BLUE.css,
         icon: i.ReactionIcon,
         description: u.Z.Messages.PREMIUM_GUILD_USER_FEATURE_OTHERS
     }),
-    A = function () {
+    v = function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : u.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_PERKS_OTHER;
         return {
             color: r.Z.unsafe_rawColors.PREMIUM_PERK_BLUE.css,
@@ -122,10 +130,15 @@ let c = () => ({
     },
     N = () => ({
         color: r.Z.unsafe_rawColors.PREMIUM_PERK_PURPLE.css,
-        icon: o.Z,
+        icon: s.Z,
         description: u.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_PERKS_FILE_UPLOAD_TIER_3
     }),
-    O = function () {
+    O = () => ({
+        color: tokens.unsafe_rawColors.PREMIUM_PERK_PURPLE.css,
+        icon: ScreenArrowIcon,
+        description: i18n.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_PERKS_SCREEN_SHARE_720P
+    }),
+    R = function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : r.Z.unsafe_rawColors.PREMIUM_PERK_GREEN.css;
         return {
             color: e,
@@ -133,24 +146,24 @@ let c = () => ({
             description: u.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_PERKS_SCREEN_SHARE_1080P
         };
     };
-function R() {
-    return [f(), _(), h(), A()];
-}
-function v() {
-    return [f(), p(l.Eu4.TIER_2), O(), A()];
-}
 function C() {
-    return [p(l.Eu4.TIER_3, r.Z.unsafe_rawColors.PREMIUM_PERK_GREEN.css), N(), I(), A()];
+    return [f(), _(), h(), v()];
 }
 function y() {
-    return [I(), E(), p(l.Eu4.TIER_3), A()];
-}
-function L() {
-    return [c(), h(), d(), A()];
-}
-function D() {
-    return [h(), A()];
+    return [f(), m(l.Eu4.TIER_2), R(), v()];
 }
 function b() {
-    return [T(), S(), m(), g()];
+    return [m(l.Eu4.TIER_3, r.Z.unsafe_rawColors.PREMIUM_PERK_GREEN.css), N(), I(), v()];
+}
+function L() {
+    return [I(), E(), m(l.Eu4.TIER_3), v()];
+}
+function D() {
+    return [c(), h(), d(), v()];
+}
+function M() {
+    return [h(), v()];
+}
+function P() {
+    return [g(), S(), T(), A()];
 }

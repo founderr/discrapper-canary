@@ -1,21 +1,21 @@
 n.d(t, {
     N: function () {
-        return T;
+        return N;
     }
-}),
-    n(757143),
-    n(47120);
-var r = n(623279),
-    i = n(392711),
-    a = n.n(i),
-    s = n(374470),
-    o = n(579806),
-    l = n(710845),
-    u = n(706454),
-    c = n(823379),
-    d = n(598105),
-    _ = n(643413);
-function E(e, t, n) {
+});
+var r = n(757143);
+var i = n(47120);
+var a = n(623279),
+    o = n(392711),
+    s = n.n(o),
+    l = n(374470),
+    u = n(579806),
+    c = n(710845),
+    d = n(706454),
+    _ = n(823379),
+    E = n(598105),
+    f = n(643413);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,20 +28,21 @@ function E(e, t, n) {
         e
     );
 }
-let f = new l.Z('Spellchecker'),
-    h = null === o.Z || void 0 === o.Z ? void 0 : o.Z.spellCheck;
-function p(e) {
+let p = 250,
+    m = new c.Z('Spellchecker'),
+    I = null === u.Z || void 0 === u.Z ? void 0 : u.Z.spellCheck;
+function T(e) {
     var t;
-    e = null !== (t = _.Z[e]) && void 0 !== t ? t : e;
-    let n = (0, r.parse)(e.replace(/[_-]/g, '-'));
+    e = null !== (t = f.Z[e]) && void 0 !== t ? t : e;
+    let n = (0, a.parse)(e.replace(/[_-]/g, '-'));
     if (null == n || null == n.langtag.language || null == n.langtag.region) {
-        f.error(''.concat(e, ' is not a valid locale.'));
+        m.error(''.concat(e, ' is not a valid locale.'));
         return;
     }
-    let { language: i, region: a } = n.langtag;
-    return ''.concat(i.language.toLowerCase(), '-').concat(a.toUpperCase());
+    let { language: r, region: i } = n.langtag;
+    return ''.concat(r.language.toLowerCase(), '-').concat(i.toUpperCase());
 }
-class I {
+class g {
     get enabled() {
         return this._enabled;
     }
@@ -49,14 +50,14 @@ class I {
         this._enabled = e;
     }
     setLearnedWords(e) {
-        h.setLearnedWords(e);
+        I.setLearnedWords(e);
     }
     setLocale(e) {
         var t;
-        null === (t = h.setLocale(e)) ||
+        null === (t = I.setLocale(e)) ||
             void 0 === t ||
             t.then((t) => {
-                f.info('Switching to '.concat(e), t ? '(available)' : '(unavailable)');
+                m.info('Switching to '.concat(e), t ? '(available)' : '(unavailable)');
             });
     }
     setAppLocale(e) {
@@ -83,35 +84,39 @@ class I {
         return this.isMisspelled(e, t) ? this.corrections : [];
     }
     replaceMisspelling(e) {
-        h.replaceMisspelling(e);
+        I.replaceMisspelling(e);
     }
     constructor(e) {
-        E(this, 'languageDetector', void 0), E(this, 'regionPreference', void 0), E(this, '_enabled', !0), E(this, 'misspelledWord', ''), E(this, 'corrections', []);
-        let [t, n] = u.default.locale.split('-');
+        h(this, 'languageDetector', void 0), h(this, 'regionPreference', void 0), h(this, '_enabled', !0), h(this, 'misspelledWord', ''), h(this, 'corrections', []);
+        let [t, n] = d.default.locale.split('-');
         this.regionPreference = n;
         let r = this.getAvailableLanguages(e);
-        (this.languageDetector = new d.Z(t, (n) => {
+        (this.languageDetector = new E.Z(t, (n) => {
             let i = ''.concat(n, '-').concat(this.regionPreference);
             if (-1 !== e.indexOf(i)) this.setLocale(i);
             else {
                 var a;
-                let e = null !== (a = r[n]) && void 0 !== a ? a : _.Z[t];
+                let e = null !== (a = r[n]) && void 0 !== a ? a : f.Z[t];
                 null != e && this.setLocale(e);
             }
         })),
-            h.on('spellcheck-result', (e, t) => {
+            I.on('spellcheck-result', (e, t) => {
                 (this.misspelledWord = null != e ? e : ''), (this.corrections = null != t ? t : []);
             });
     }
 }
-let m = a().debounce((e, t) => {
-    let n = (function (e) {
-        return null == e ? null : (0, s.k)(e, HTMLInputElement) || (0, s.k)(e, HTMLTextAreaElement) ? e.value : (0, s.k)(e) && e.hasAttribute('contenteditable') ? e.textContent : void 0;
-    })(t);
+let S = s().debounce((e, t) => {
+    let n = v(t);
     null != n && e.detectLanguage(n);
-}, 250);
-async function T() {
-    var e, t;
-    let n = new I((null !== (e = await h.getAvailableDictionaries()) && void 0 !== e ? e : []).map(p).filter(c.lm));
-    return (t = n), null != document.body && document.body.addEventListener('beforeinput', (e) => m(t, e.target), !0), n;
+}, p);
+function A(e) {
+    null != document.body && document.body.addEventListener('beforeinput', (t) => S(e, t.target), !0);
+}
+function v(e) {
+    return null == e ? null : (0, l.k)(e, HTMLInputElement) || (0, l.k)(e, HTMLTextAreaElement) ? e.value : (0, l.k)(e) && e.hasAttribute('contenteditable') ? e.textContent : void 0;
+}
+async function N() {
+    var e;
+    let t = new g((null !== (e = await I.getAvailableDictionaries()) && void 0 !== e ? e : []).map(T).filter(_.lm));
+    return A(t), t;
 }

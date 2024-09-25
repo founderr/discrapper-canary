@@ -1,15 +1,15 @@
-t.d(n, {
+n.d(t, {
     I3: function () {
-        return c;
+        return u;
     },
     Ic: function () {
-        return p;
+        return I;
     },
     Lg: function () {
-        return C;
+        return m;
     },
     OU: function () {
-        return S;
+        return h;
     },
     RH: function () {
         return s;
@@ -18,59 +18,66 @@ t.d(n, {
         return r;
     },
     VW: function () {
-        return d;
+        return c;
     },
     Vg: function () {
-        return T;
+        return p;
     },
     Vk: function () {
-        return E;
-    },
-    _6: function () {
-        return N;
-    },
-    aj: function () {
-        return I;
-    },
-    dc: function () {
-        return A;
-    },
-    fX: function () {
-        return u.f;
-    },
-    hu: function () {
         return _;
     },
+    _6: function () {
+        return T;
+    },
+    aj: function () {
+        return f;
+    },
+    dc: function () {
+        return g;
+    },
+    fX: function () {
+        return o.f;
+    },
+    hu: function () {
+        return d;
+    },
     jj: function () {
-        return l.j;
+        return i.j;
     },
     n4: function () {
-        return a;
+        return l;
     },
     q4: function () {
-        return o.q;
+        return a.q;
     },
     uE: function () {
-        return f;
+        return E;
     }
 });
-var i,
-    r,
-    l = t(401653),
-    o = t(95930),
-    u = t(41381);
-((i = r || (r = {}))[(i.PROFANITY = 1)] = 'PROFANITY'), (i[(i.SEXUAL_CONTENT = 2)] = 'SEXUAL_CONTENT'), (i[(i.SLURS = 3)] = 'SLURS'), u.f.USER_PROFILE, u.f.SERVER_POLICY, u.f.MENTION_SPAM, u.f.ML_SPAM, u.f.DEFAULT_KEYWORD_LIST, u.f.KEYWORD;
+var r,
+    i = n(401653),
+    a = n(95930),
+    o = n(41381);
+!(function (e) {
+    (e[(e.PROFANITY = 1)] = 'PROFANITY'), (e[(e.SEXUAL_CONTENT = 2)] = 'SEXUAL_CONTENT'), (e[(e.SLURS = 3)] = 'SLURS');
+})(r || (r = {})),
+    o.f.USER_PROFILE,
+    o.f.SERVER_POLICY,
+    o.f.MENTION_SPAM,
+    o.f.ML_SPAM,
+    o.f.DEFAULT_KEYWORD_LIST,
+    o.f.KEYWORD;
 let s = 1000,
-    a = 100,
-    c = 1000,
-    d = 10,
-    _ = 60,
+    l = 100,
+    u = 1000,
+    c = 10,
+    d = 60,
+    _ = 1,
     E = 1,
-    f = 1,
-    I = 260,
-    S = 100,
-    T = 1,
-    C = 50,
-    p = 20,
-    N = 150,
-    A = 'automod-profile-quarantine-alert';
+    f = 260,
+    h = 100,
+    p = 1,
+    m = 50,
+    I = 20,
+    T = 150,
+    g = 'automod-profile-quarantine-alert';

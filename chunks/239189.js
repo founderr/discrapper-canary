@@ -13,7 +13,7 @@ n.r(t),
             return r;
         },
         frameLoop: function () {
-            return o;
+            return s;
         },
         now: function () {
             return l;
@@ -34,8 +34,8 @@ n.r(t),
 var r,
     i,
     a = n(19784),
-    s = n(217348),
-    o = new a.V(),
+    o = n(217348),
+    s = new a.V(),
     l = function () {
         return performance.now();
     },
@@ -50,7 +50,7 @@ var r,
     _ = function (e) {
         return e();
     },
-    E = s.ZT,
+    E = o.ZT,
     f = function (e) {
         var t;
         return (
@@ -58,7 +58,7 @@ var r,
                 {
                     to: i,
                     now: l,
-                    frameLoop: o,
+                    frameLoop: s,
                     colorNames: u,
                     skipAnimation: c,
                     createStringInterpolator: r,
@@ -66,14 +66,10 @@ var r,
                     batchedUpdates: _,
                     willAdvance: E
                 },
-                (function (e) {
-                    var t = {};
-                    for (var n in e) void 0 !== e[n] && (t[n] = e[n]);
-                    return t;
-                })(e)
+                h(e)
             )).to),
             (l = t.now),
-            (o = t.frameLoop),
+            (s = t.frameLoop),
             (u = t.colorNames),
             (c = t.skipAnimation),
             (r = t.createStringInterpolator),
@@ -83,3 +79,8 @@ var r,
             t
         );
     };
+function h(e) {
+    var t = {};
+    for (var n in e) void 0 !== e[n] && (t[n] = e[n]);
+    return t;
+}

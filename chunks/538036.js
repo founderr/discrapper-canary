@@ -1,22 +1,39 @@
-n(653041);
-var r = n(981631);
-let i = [],
-    a = !1;
+var r = n(653041);
+var i = n(981631);
+let a = [],
+    o = !1;
 function s() {
     let e = window.navigator.connection;
     return null == e
         ? {
-              type: r.IWh.UNKNOWN,
-              effectiveSpeed: r.IyS.UNKNOWN
+              type: i.IWh.UNKNOWN,
+              effectiveSpeed: i.IyS.UNKNOWN
           }
         : {
-              type: null != e.type ? e.type : r.IWh.UNKNOWN,
+              type: null != e.type ? e.type : i.IWh.UNKNOWN,
               effectiveSpeed: e.effectiveType
           };
 }
-function o() {
+function l() {
+    if (!0 === o) return;
+    let e = window.navigator.connection;
+    null != e && ((o = !0), e.addEventListener('change', c));
+}
+function u() {
+    if (!1 === o) return;
+    let e = window.navigator.connection;
+    null != e && 0 === a.length && null != e && (e.removeEventListener('change', c), (o = !1));
+}
+function c() {
     let e = s();
-    i.forEach((t) => t(e));
+    a.forEach((t) => t(e));
+}
+function d(e) {
+    a.push(e), l();
+}
+function _(e) {
+    let t = a.indexOf(e);
+    -1 !== t && (a.splice(t, 1), u());
 }
 t.Z = {
     addOnlineCallback(e) {
@@ -32,26 +49,10 @@ t.Z = {
         window.removeEventListener('offline', e);
     },
     addChangeCallback(e) {
-        var t;
-        (t = e),
-            i.push(t),
-            (function () {
-                if (!0 === a) return;
-                let e = window.navigator.connection;
-                null != e && ((a = !0), e.addEventListener('change', o));
-            })();
+        d(e);
     },
     removeChangeCallback(e) {
-        !(function (e) {
-            let t = i.indexOf(e);
-            -1 !== t &&
-                (i.splice(t, 1),
-                !(function () {
-                    if (!1 === a) return;
-                    let e = window.navigator.connection;
-                    null != e && 0 === i.length && null != e && (e.removeEventListener('change', o), (a = !1));
-                })());
-        })(e);
+        _(e);
     },
     getNetworkInformation: () => Promise.resolve(s()),
     isOnline() {

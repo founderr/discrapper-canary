@@ -1,27 +1,31 @@
 n.d(t, {
     p: function () {
-        return d;
+        return E;
     },
     t: function () {
-        return _;
+        return f;
     }
 });
 var r = n(608748),
     i = n(388388),
     a = n(203731),
-    s = 0,
-    o = {
+    o = 0,
+    s = function () {
+        return !!o;
+    },
+    l = 250,
+    u = {
         attributes: !0,
         characterData: !0,
         childList: !0,
         subtree: !0
     },
-    l = ['resize', 'load', 'transitionend', 'animationend', 'animationstart', 'animationiteration', 'keyup', 'keydown', 'mouseup', 'mousedown', 'mouseover', 'mouseout', 'blur', 'focus'],
-    u = function (e) {
+    c = ['resize', 'load', 'transitionend', 'animationend', 'animationstart', 'animationiteration', 'keyup', 'keydown', 'mouseup', 'mousedown', 'mouseover', 'mouseout', 'blur', 'focus'],
+    d = function (e) {
         return void 0 === e && (e = 0), Date.now() + e;
     },
-    c = !1,
-    d = new ((function () {
+    _ = !1,
+    E = new ((function () {
         function e() {
             var e = this;
             (this.stopped = !0),
@@ -32,15 +36,15 @@ var r = n(608748),
         return (
             (e.prototype.run = function (e) {
                 var t = this;
-                if ((void 0 === e && (e = 250), !c)) {
-                    c = !0;
-                    var n = u(e);
+                if ((void 0 === e && (e = l), !_)) {
+                    _ = !0;
+                    var n = d(e);
                     (0, a.p)(function () {
                         var i = !1;
                         try {
                             i = (0, r.N)();
                         } finally {
-                            if (((c = !1), (e = n - u()), !s)) return;
+                            if (((_ = !1), (e = n - d()), !s())) return;
                             i ? t.run(1000) : e > 0 ? t.run(e) : t.start();
                         }
                     });
@@ -52,7 +56,7 @@ var r = n(608748),
             (e.prototype.observe = function () {
                 var e = this,
                     t = function () {
-                        return e.observer && e.observer.observe(document.body, o);
+                        return e.observer && e.observer.observe(document.body, u);
                     };
                 document.body ? t() : i.C.addEventListener('DOMContentLoaded', t);
             }),
@@ -62,7 +66,7 @@ var r = n(608748),
                     ((this.stopped = !1),
                     (this.observer = new MutationObserver(this.listener)),
                     this.observe(),
-                    l.forEach(function (t) {
+                    c.forEach(function (t) {
                         return i.C.addEventListener(t, e.listener, !0);
                     }));
             }),
@@ -70,7 +74,7 @@ var r = n(608748),
                 var e = this;
                 !this.stopped &&
                     (this.observer && this.observer.disconnect(),
-                    l.forEach(function (t) {
+                    c.forEach(function (t) {
                         return i.C.removeEventListener(t, e.listener, !0);
                     }),
                     (this.stopped = !0));
@@ -78,6 +82,6 @@ var r = n(608748),
             e
         );
     })())(),
-    _ = function (e) {
-        !s && e > 0 && d.start(), (s += e) || d.stop();
+    f = function (e) {
+        !o && e > 0 && E.start(), (o += e) || E.stop();
     };

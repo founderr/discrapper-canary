@@ -2,8 +2,8 @@ var r = n(735250);
 n(470079);
 var i = n(570140),
     a = n(367907),
-    s = n(998698),
-    o = n(895924),
+    o = n(998698),
+    s = n(895924),
     l = n(588468),
     u = n(285651),
     c = n(268350),
@@ -13,14 +13,15 @@ var i = n(570140),
     f = n(483360),
     h = n(877565),
     p = n(590921),
-    I = n(981631),
-    m = n(689938);
-let T = {
-    results: {
-        command: null,
-        stickers: []
-    }
-};
+    m = n(981631),
+    I = n(689938);
+let T = 8,
+    g = {
+        results: {
+            command: null,
+            stickers: []
+        }
+    };
 function S(e, t) {
     return (0, r.jsx)(E.ZP, {
         sticker: e,
@@ -28,25 +29,26 @@ function S(e, t) {
         size: 40
     });
 }
-let g = {
+let A = {
     stores: [d.Z],
     matches(e, t, n, r, i) {
         var a;
-        return i.commands !== p.L8.DISABLED && i.commands !== p.L8.OLD_BUILT_INS && (null === (a = s.Z.getActiveCommand(e.id)) || void 0 === a ? void 0 : a.integrationType) === I.q9n.STICKER && s.Z.getOptionStates(e.id).query.hasValue;
+        return i.commands !== p.L8.DISABLED && i.commands !== p.L8.OLD_BUILT_INS && (null === (a = o.Z.getActiveCommand(e.id)) || void 0 === a ? void 0 : a.integrationType) === m.q9n.STICKER && o.Z.getOptionStates(e.id).query.hasValue;
     },
     queryResults(e, t, n, r) {
         var i;
-        let a = null === (i = s.Z.getActiveCommand(e.id)) || void 0 === i ? void 0 : i.untranslatedName;
-        if (null == a) return T;
-        let o = [];
+        let a = null === (i = o.Z.getActiveCommand(e.id)) || void 0 === i ? void 0 : i.untranslatedName;
+        if (null == a) return g;
+        let s = [];
         (0, c.$p)();
-        let l = f.ZP.queryStickers([n], !0, [e, (e, t) => t === u.eb.SENDABLE]);
+        let l = f.ZP.queryStickers([n], !0, [e, (e, t) => t === u.eb.SENDABLE]),
+            d = Math.max(T);
         return {
             results: {
                 command: a,
-                stickers: (o = l.slice(0, 8))
+                stickers: (s = l.slice(0, d))
             },
-            metadata: { numStickerResults: o.length }
+            metadata: { numStickerResults: s.length }
         };
     },
     renderResults(e) {
@@ -55,7 +57,7 @@ let g = {
             selectedIndex: n,
             query: i,
             onHover: a,
-            onClick: s
+            onClick: o
         } = e;
         return (0, r.jsx)(r.Fragment, {
             children: (0, h.HI)({
@@ -63,9 +65,9 @@ let g = {
                 selectedIndex: n,
                 autocompletes: t,
                 onHover: a,
-                onClick: s,
-                titleWithQuery: m.Z.Messages.STICKERS_MATCHING,
-                titleWithoutQuery: m.Z.Messages.STICKER,
+                onClick: o,
+                titleWithQuery: I.Z.Messages.STICKERS_MATCHING,
+                titleWithoutQuery: I.Z.Messages.STICKER,
                 Component: l.ZP.Sticker,
                 getProps: (e) => {
                     let { comparator: t, sticker: n } = e;
@@ -92,8 +94,8 @@ let g = {
                 queryText: E
             } = e;
         if (null == n || l >= r.length) return { type: null };
-        let f = s.Z.getActiveCommand(c.id);
-        (null == f ? void 0 : f.inputType) === o.iw.BUILT_IN_INTEGRATION &&
+        let f = o.Z.getActiveCommand(c.id);
+        (null == f ? void 0 : f.inputType) === s.iw.BUILT_IN_INTEGRATION &&
             (i.Z.dispatch({
                 type: 'APPLICATION_COMMAND_USED',
                 context: {
@@ -101,21 +103,21 @@ let g = {
                     guild: d
                 },
                 command: f,
-                commandOrigin: o.bB.CHAT
+                commandOrigin: s.bB.CHAT
             }),
-            a.ZP.trackWithMetadata(I.rMx.APPLICATION_COMMAND_USED, {
+            a.ZP.trackWithMetadata(m.rMx.APPLICATION_COMMAND_USED, {
                 command_id: f.id,
                 application_id: f.applicationId,
                 command_type: f.type,
-                source: s.Z.getSource(c.id)
+                source: o.Z.getSource(c.id)
             }));
         let h = r[l];
         return (
             u.sendSticker(h.sticker, _.V0.BUILT_IN_INTEGRATION),
             h.sticker.type === _.n0.GUILD && (t = h.sticker.guild_id),
-            a.ZP.trackWithMetadata(I.rMx.SEARCH_RESULT_SELECTED, {
+            a.ZP.trackWithMetadata(m.rMx.SEARCH_RESULT_SELECTED, {
                 load_id: h.sticker.id,
-                search_type: I.aib.STICKER,
+                search_type: m.aib.STICKER,
                 source_object: '/'.concat(n),
                 total_results: r.length,
                 index_num: l,
@@ -133,4 +135,4 @@ let g = {
         );
     }
 };
-t.Z = g;
+t.Z = A;

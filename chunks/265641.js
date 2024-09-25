@@ -1,8 +1,8 @@
-n(47120);
+var r = n(47120);
 var i = n(470079);
-t.Z = (e) => {
+let a = (e) => {
     let [t, n] = i.useState(!1),
-        s = i.useCallback(
+        r = i.useCallback(
             (t) => {
                 e(t), n(!0);
             },
@@ -10,9 +10,10 @@ t.Z = (e) => {
         );
     return {
         isFocused: t,
-        handleFocus: s,
+        handleFocus: r,
         handleBlur: () => {
             n(!1);
         }
     };
 };
+t.Z = a;

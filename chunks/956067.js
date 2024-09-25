@@ -1,4 +1,6 @@
-function r(e, t, n) {
+var r = n(733860);
+var i = n(653041);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -11,12 +13,11 @@ function r(e, t, n) {
         e
     );
 }
-n(733860), n(653041);
-let i = null == n.g.__getTotalRequireTime ? () => 0 : () => n.g.__getTotalRequireTime(),
-    a = 'undefined' != typeof performance;
-t.Z = new (class e {
+let o = null == n.g.__getTotalRequireTime ? () => 0 : () => n.g.__getTotalRequireTime(),
+    s = 'undefined' != typeof performance;
+class l {
     get isTracing() {
-        return !!a && !!this.isTracing_ && (!(Date.now() > this.endTime_) || ((this.isTracing_ = !1), !1));
+        return !!s && !!this.isTracing_ && (!(Date.now() > this.endTime_) || ((this.isTracing_ = !1), !1));
     }
     get endTime() {
         return this.endTime_;
@@ -59,7 +60,7 @@ t.Z = new (class e {
                 this.addImportLogDetail());
     }
     addImportLogDetail() {
-        let e = i();
+        let e = o();
         e - this.lastImportDuration > 25 && (this.addDetail('JS Imports', Math.ceil(e) + 'ms'), (this.lastImportDuration = e));
     }
     markWithDelta(e, t) {
@@ -95,8 +96,8 @@ t.Z = new (class e {
         this.mark(e, 'Start '.concat(t)), (this.prefix += '| ');
         let i = Date.now(),
             a = n(),
-            s = Date.now() - i;
-        return (this.prefix = r), this.mark(e, 'Finish '.concat(t), s), a;
+            o = Date.now() - i;
+        return (this.prefix = r), this.mark(e, 'Finish '.concat(t), o), a;
     }
     async timeAsync(e, t, n) {
         if (!this.isTracing) return n();
@@ -110,10 +111,10 @@ t.Z = new (class e {
         this.logGroups[0].serverTrace = e;
     }
     constructor() {
-        r(this, 'isTracing_', !0),
-            r(this, 'endTime_', Date.now() + 15000),
-            r(this, 'lastImportDuration', 0),
-            r(this, 'logGroups', [
+        a(this, 'isTracing_', !0),
+            a(this, 'endTime_', Date.now() + 15000),
+            a(this, 'lastImportDuration', 0),
+            a(this, 'logGroups', [
                 {
                     index: 0,
                     timestamp: Date.now(),
@@ -121,7 +122,8 @@ t.Z = new (class e {
                     nativeLogs: []
                 }
             ]),
-            r(this, 'logs', this.logGroups[0].logs),
-            r(this, 'prefix', '');
+            a(this, 'logs', this.logGroups[0].logs),
+            a(this, 'prefix', '');
     }
-})();
+}
+t.Z = new l();

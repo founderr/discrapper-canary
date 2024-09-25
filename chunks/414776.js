@@ -3,10 +3,10 @@ n.d(t, {
         return u;
     },
     IP: function () {
-        return o;
+        return s;
     },
     Qb: function () {
-        return s;
+        return o;
     },
     UI: function () {
         return l;
@@ -20,23 +20,23 @@ n.d(t, {
 });
 var r = Symbol.for('FluidValue:config'),
     i = function (e) {
-        return !!s(e);
+        return !!o(e);
     };
 function a(e) {
-    var t = s(e);
+    var t = o(e);
     return t ? t.get() : e;
 }
-function s(e) {
+function o(e) {
     if (e) return e[r];
 }
-function o(e, t) {
+function s(e, t) {
     Object.defineProperty(e, r, {
         value: t,
         configurable: !0
     });
 }
 function l(e, t) {
-    var n = s(e);
+    var n = o(e);
     if (n)
         return (
             n.addChild(t),
@@ -45,6 +45,8 @@ function l(e, t) {
             }
         );
 }
-var u = function () {
-    o(this, this);
-};
+var u = (function () {
+    return function e() {
+        s(this, this);
+    };
+})();
