@@ -1,6 +1,6 @@
 t.d(s, {
     D: function () {
-        return m;
+        return C;
     }
 }),
     t(47120);
@@ -20,15 +20,18 @@ var n = t(735250),
     I = t(689938),
     N = t(265791),
     A = t(982404),
-    C = t(299156);
-function m(e) {
-    let { premiumSubscription: s, premiumType: t, onClose: m, confettiCanvas: g, userWasChurned: h = !1, userDiscountOffer: O } = e,
+    m = t(299156);
+function C(e) {
+    let { premiumSubscription: s, premiumType: t, onClose: C, confettiCanvas: g, userWasChurned: h = !1, userDiscountOffer: O } = e,
         p = (0, l.ZP)(),
-        R = (0, r.wj)(p) ? A : C,
+        R = (0, r.wj)(p) ? A : m,
         x = a.useRef(null),
         [f, M] = a.useState(!1),
         D = (0, E._)(s, S.Xh.PREMIUM_MONTH_TIER_2, O),
-        P = (0, _.aS)(S.Xh.PREMIUM_MONTH_TIER_2),
+        P = (0, _.aS)(S.Xh.PREMIUM_MONTH_TIER_2, !1, !1, {
+            currency: s.currency,
+            paymentSourceId: s.paymentSourceId
+        }),
         L = (0, u.T4)(P.amount, P.currency),
         b = (0, i.e7)([c.Z], () => c.Z.useReducedMotion);
     if (
@@ -47,7 +50,7 @@ function m(e) {
             className: N.whatYouLoseButtonContainer,
             children: (0, n.jsx)(o.Button, {
                 color: o.Button.Colors.BRAND,
-                onClick: m,
+                onClick: C,
                 children: I.Z.Messages.PREMIUM_DISCOUNT_SWEET
             })
         });
@@ -56,7 +59,7 @@ function m(e) {
             (0, n.jsx)(T.Z, {
                 premiumType: t,
                 className: N.cancellationHeader,
-                onClose: m
+                onClose: C
             }),
             (0, n.jsx)('div', {
                 ref: x,
