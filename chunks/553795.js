@@ -61,7 +61,17 @@ function O(e) {
     if (null == a) return !1;
     null != r && (a.revoked = r), null != i && (a.accessToken = i);
 }
-class R extends (r = a.ZP.Store) {
+function R(e) {
+    let { state: t, code: n, provider: r, openid_params: i } = e;
+    m.has(t) &&
+        (m.delete(t),
+        s.Z.callback(r, {
+            code: n,
+            state: t,
+            openid_params: i
+        }));
+}
+class C extends (r = a.ZP.Store) {
     isJoining(e) {
         return p[e] || !1;
     }
@@ -96,11 +106,12 @@ class R extends (r = a.ZP.Store) {
         return m.has(e);
     }
 }
-d(R, 'displayName', 'ConnectedAccountsStore'),
-    (t.Z = new R(o.Z, {
+d(C, 'displayName', 'ConnectedAccountsStore'),
+    (t.Z = new C(o.Z, {
         CONNECTION_OPEN: S,
         USER_CONNECTIONS_UPDATE: A,
         USER_CONNECTIONS_INTEGRATION_JOINING: v,
         USER_CONNECTION_UPDATE: O,
-        USER_CONNECTIONS_INTEGRATION_JOINING_ERROR: N
+        USER_CONNECTIONS_INTEGRATION_JOINING_ERROR: N,
+        USER_CONNECTIONS_CALLBACK: R
     }));
