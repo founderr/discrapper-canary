@@ -12825,24 +12825,28 @@ html.decorate-links .lowSaturationUnderline_c7819f {
     margin-bottom: var(--reply-spacing)
 }
 
-.cozy_f9f2ca .repliedMessage_f9f2ca:before {
+.cozy_f9f2ca .repliedMessageOriginalSpine_f9f2ca:before,
+.cozy_f9f2ca .repliedMessageSpine_f9f2ca {
     --avatar-size: 40px;
     --gutter: var(--custom-message-margin-horizontal)
 }
 
-.a11y-font-scaled-down .cozy_f9f2ca .repliedMessage_f9f2ca:before {
+.a11y-font-scaled-down .cozy_f9f2ca .repliedMessageOriginalSpine_f9f2ca:before,
+.a11y-font-scaled-down .cozy_f9f2ca .repliedMessageSpine_f9f2ca {
     --avatar-size: 2.5rem;
     --wrapper-padding-left: 4.5rem;
     --avatar-position-left: 1rem;
     --gutter: calc(var(--wrapper-padding-left) - var(--avatar-position-left) - var(--avatar-size))
 }
 
-.compact_f9f2ca .repliedMessage_f9f2ca:before {
+.compact_f9f2ca .repliedMessageOriginalSpine_f9f2ca:before,
+.compact_f9f2ca .repliedMessageSpine_f9f2ca {
     --avatar-size: var(--timestamp-width);
     --gutter: var(--custom-message-meta-space)
 }
 
-.repliedMessage_f9f2ca:before {
+.repliedMessageOriginalSpine_f9f2ca:before,
+.repliedMessageSpine_f9f2ca {
     --spine-width: 2px;
     content: "";
     display: block;
@@ -12865,8 +12869,22 @@ html.decorate-links .lowSaturationUnderline_c7819f {
     border-top-left-radius: 6px
 }
 
-.compact_f9f2ca .repliedMessage_f9f2ca:before {
+.compact_f9f2ca .repliedMessageOriginalSpine_f9f2ca:before,
+.compact_f9f2ca .repliedMessageSpine_f9f2ca {
     right: calc(100% - var(--custom-message-reply-indent))
+}
+
+.repliedMessageSpine_f9f2ca {
+    cursor: pointer;
+    transition: border 50ms
+}
+
+.repliedMessageSpine_f9f2ca:hover {
+    border-color: var(--interactive-normal)
+}
+
+.repliedMessageSpine_f9f2ca.repliedMessageContentHovered_f9f2ca {
+    border-color: var(--interactive-normal)
 }
 
 .threadMessageAccessoryAvatar_f9f2ca,
@@ -13062,7 +13080,8 @@ html.decorate-links .lowSaturationUnderline_c7819f {
     cursor: pointer
 }
 
-.repliedTextPreview_f9f2ca.clickable_f9f2ca:hover {
+.repliedTextPreview_f9f2ca.clickable_f9f2ca:hover,
+.repliedTextPreview_f9f2ca.repliedMessageSpineHovered_f9f2ca {
     color: var(--header-primary)
 }
 
@@ -48374,6 +48393,26 @@ html .progress_e5f4c6 {
     color: var(--text-warning);
     width: 16px;
     height: 16px
+}
+
+.content_b0fa9f p {
+    margin-top: 0;
+    margin-bottom: 0
+}
+
+.content_b0fa9f a:last-of-type {
+    color: var(--text-link)
+}
+
+.gameContainer_b0fa9f {
+    cursor: pointer;
+    color: var(--text-normal);
+    font-weight: 500
+}
+
+.inlineIcon_b0fa9f {
+    vertical-align: middle;
+    margin-bottom: 2px
 }
 
 .iconContainer_d83d5d {

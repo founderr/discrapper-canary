@@ -1,5 +1,8 @@
 n.d(t, {
     Z: function () {
+        return p;
+    },
+    j: function () {
         return h;
     }
 });
@@ -16,7 +19,7 @@ var a = n(913527),
     _ = n(689938),
     E = n(341383);
 function f(e) {
-    let { application: t, messageTimestamp: n } = e;
+    let { application: t, timestamp: n } = e;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(u.Z, {
@@ -43,30 +46,38 @@ function f(e) {
     });
 }
 function h(e) {
+    let { application: t, timestamp: n, children: r } = e;
+    return (0, i.jsx)(s.Tooltip, {
+        hideOnClick: !0,
+        position: 'top',
+        'aria-label': _.Z.Messages.MESSAGE_GAME_ICON_TOOLTIP,
+        tooltipClassName: E.gameMessageTooltip,
+        tooltipContentClassName: E.gameMessageTooltipContent,
+        text: (0, i.jsx)(f, {
+            application: t,
+            timestamp: n
+        }),
+        children: (e) =>
+            (0, i.jsx)(s.Clickable, {
+                tag: 'span',
+                ...e,
+                children: r
+            })
+    });
+}
+function p(e) {
     let { message: t } = e,
         n = (0, l.q)(t.applicationId);
     return null != n && (0, c.yE)(n.flags, d.udG.SOCIAL_LAYER_INTEGRATION)
-        ? (0, i.jsx)(s.Tooltip, {
-              hideOnClick: !0,
-              position: 'top',
-              'aria-label': _.Z.Messages.MESSAGE_GAME_ICON_TOOLTIP,
-              tooltipClassName: E.gameMessageTooltip,
-              tooltipContentClassName: E.gameMessageTooltipContent,
-              text: (0, i.jsx)(f, {
-                  application: n,
-                  messageTimestamp: t.timestamp
-              }),
-              children: (e) =>
-                  (0, i.jsx)(s.Clickable, {
-                      tag: 'span',
-                      ...e,
-                      children: (0, i.jsx)(s.GameControllerIcon, {
-                          className: E.gameIcon,
-                          size: 'custom',
-                          width: 14,
-                          height: 14
-                      })
-                  })
+        ? (0, i.jsx)(h, {
+              application: n,
+              timestamp: t.timestamp,
+              children: (0, i.jsx)(s.GameControllerIcon, {
+                  className: E.gameIcon,
+                  size: 'custom',
+                  width: 14,
+                  height: 14
+              })
           })
         : null;
 }
