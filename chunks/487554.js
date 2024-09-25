@@ -4,9 +4,10 @@ n.d(t, {
     }
 });
 var r,
-    i = n(442837),
-    a = n(570140);
-function o(e, t, n) {
+    i,
+    a = n(442837),
+    o = n(570140);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,47 +23,47 @@ function o(e, t, n) {
 !(function (e) {
     (e[(e.NOT_FETCHED = 0)] = 'NOT_FETCHED'), (e[(e.FETCHING = 1)] = 'FETCHING'), (e[(e.FETCHED = 2)] = 'FETCHED'), (e[(e.FAILED = 3)] = 'FAILED');
 })(r || (r = {}));
-let s = {},
-    l = {};
-function u() {
-    (s = {}), (l = {});
-}
-function c(e) {
-    let { threadId: t } = e;
-    l[t] = 1;
+let l = {},
+    u = {};
+function c() {
+    (l = {}), (u = {});
 }
 function d(e) {
-    let { threadId: t, mediaPostEmbed: n } = e;
-    (s = {
-        ...s,
-        [t]: n
-    }),
-        (l[t] = 2);
+    let { threadId: t } = e;
+    u[t] = 1;
 }
 function _(e) {
-    let { threadId: t } = e;
-    l[t] = 3;
+    let { threadId: t, mediaPostEmbed: n } = e;
+    (l = {
+        ...l,
+        [t]: n
+    }),
+        (u[t] = 2);
 }
 function E(e) {
-    !e.isSwitchingAccount && ((s = {}), (l = {}));
+    let { threadId: t } = e;
+    u[t] = 3;
 }
-class f extends i.yh {
+function f(e) {
+    !e.isSwitchingAccount && ((l = {}), (u = {}));
+}
+class h extends (i = a.ZP.Store) {
     getMediaPostEmbed(e) {
-        if (null != e) return s[e];
+        if (null != e) return l[e];
     }
     getEmbedFetchState(e) {
         var t;
-        return null !== (t = l[e]) && void 0 !== t ? t : 0;
+        return null !== (t = u[e]) && void 0 !== t ? t : 0;
     }
     getMediaPostEmbeds() {
-        return s;
+        return l;
     }
 }
-o(f, 'displayName', 'MediaPostEmbedStore'),
-    (t.Z = new f(a.Z, {
-        CONNECTION_OPEN: u,
-        MEDIA_POST_EMBED_FETCH: c,
-        MEDIA_POST_EMBED_FETCH_SUCCESS: d,
-        MEDIA_POST_EMBED_FETCH_FAILURE: _,
-        LOGOUT: E
+s(h, 'displayName', 'MediaPostEmbedStore'),
+    (t.Z = new h(o.Z, {
+        CONNECTION_OPEN: c,
+        MEDIA_POST_EMBED_FETCH: d,
+        MEDIA_POST_EMBED_FETCH_SUCCESS: _,
+        MEDIA_POST_EMBED_FETCH_FAILURE: E,
+        LOGOUT: f
     }));

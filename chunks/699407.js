@@ -44,23 +44,24 @@ let p = 1500,
     A = [],
     v = () => Promise.resolve({ sessionId: void 0 }),
     N = (e) => {
-        let { dispatcher: t, actionHandler: n, getFingerprint: o, getSessionId: s = v, TRACKING_URL: l, drainTimeoutOverride: u, waitFor: c } = e;
-        function f(e) {
+        var t;
+        let { dispatcher: n, actionHandler: o, getFingerprint: s, getSessionId: l = v, TRACKING_URL: u, drainTimeoutOverride: c, waitFor: f } = e;
+        function N(e) {
             if (null != i) return i;
-            let t = e.fingerprint || o();
+            let t = e.fingerprint || s();
             return null != t ? (0, d.s)(t) : null;
         }
-        function N() {
-            return 0 !== A.length && (null != i ? null != r : null != o());
-        }
         function O() {
-            null == a && N() && (a = T(R, { timeout: I }));
+            return 0 !== A.length && (null != i ? null != r : null != s());
         }
         function R() {
-            if (((a = null), !N())) return;
+            null == a && O() && (a = T(C, { timeout: I }));
+        }
+        function C() {
+            if (((a = null), !O())) return;
             let e = A.slice();
             (A = []),
-                C(e).then(
+                y(e).then(
                     () => {
                         e.forEach((e) => {
                             var t;
@@ -74,7 +75,7 @@ let p = 1500,
                     }
                 );
         }
-        function C(e) {
+        function y(e) {
             let t = Date.now(),
                 n = e.map((e) => ({
                     ...e,
@@ -84,7 +85,7 @@ let p = 1500,
                     }
                 }));
             return E.tn.post({
-                url: l,
+                url: u,
                 body: {
                     token: r,
                     events: n
@@ -92,21 +93,21 @@ let p = 1500,
                 retries: 3
             });
         }
-        (I = null != u ? u : p),
+        (I = null != c ? c : p),
             (S.handleConnectionOpen = function (e) {
                 let { analyticsToken: t, user: n } = e;
-                return null != t && (r = t), null != n.id && (i = n.id), O(), !1;
+                return null != t && (r = t), null != n.id && (i = n.id), R(), !1;
             }),
             (S.handleConnectionClosed = function () {
-                return R(), (r = null), (i = null), !1;
+                return C(), (r = null), (i = null), !1;
             }),
             (S.handleFingerprint = function () {
-                return R(), !1;
+                return C(), !1;
             }),
             (S.handleTrack = function (e) {
                 let { event: t, properties: n, flush: r, fingerprint: i, resolve: a } = e;
                 return (
-                    s().then((e) => {
+                    l().then((e) => {
                         let { sessionId: o } = e,
                             s = {
                                 type: t,
@@ -118,20 +119,20 @@ let p = 1500,
                                 },
                                 resolve: a
                             },
-                            l = f(s);
+                            l = N(s);
                         null != l && (s.properties.client_uuid = g.generate(l)), A.push(s);
-                        A.length > m && (A = A.slice(-m)), r ? R() : O();
+                        A.length > m && (A = A.slice(-m)), r ? C() : R();
                     }),
                     !1
                 );
             });
-        class y extends _.yh {
+        class b extends (t = _.ZP.Store) {
             initialize() {
-                null != c && this.waitFor(...c);
+                null != f && this.waitFor(...f);
             }
             constructor(...e) {
-                super(...e), h(this, 'submitEventsImmediately', C);
+                super(...e), h(this, 'submitEventsImmediately', y);
             }
         }
-        return h(y, 'displayName', 'AnalyticsTrackingStore'), new y(t, n);
+        return h(b, 'displayName', 'AnalyticsTrackingStore'), new b(n, o);
     };
