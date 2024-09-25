@@ -11,7 +11,6 @@ e.exports = {
     giftCardHalloween: 'giftCardHalloween_cf74b3',
     giftInfo: 'giftInfo_cf74b3',
     giftImage: 'giftImage_cf74b3',
-    giftImageHalloweenSpacer: 'giftImageHalloweenSpacer_cf74b3',
     giftImageHalloween: 'giftImageHalloween_cf74b3',
     giftTitle: 'giftTitle_cf74b3',
     giftText: 'giftText_cf74b3',
