@@ -166,7 +166,8 @@ class g extends i.EventEmitter {
                                 v: s.number().min(1).max(1).required(),
                                 encoding: s.string().equal('json').optional(),
                                 client_id: s.string().required(),
-                                frame_id: s.string().required()
+                                frame_id: s.string().required(),
+                                sdk_version: s.string().optional()
                             })
                     );
                 } catch (e) {
