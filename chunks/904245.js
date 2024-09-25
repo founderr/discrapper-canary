@@ -291,6 +291,33 @@ let ey = {
                 !0
             );
         },
+        sendGiftingPromptSystemMessage(e, t, n) {
+            let r = (0, w.ZP)({
+                channelId: e,
+                type: eh.uaV.GIFTING_PROMPT,
+                content: '',
+                flags: eh.iLy.EPHEMERAL,
+                author: {
+                    id: eh.LAt,
+                    username: 'Gifting Prompt',
+                    discriminator: eh.fo$,
+                    avatar: 'gifting_prompt',
+                    bot: !0
+                },
+                giftingPrompt: {
+                    giftIntentType: t,
+                    recipientUserId: n
+                }
+            });
+            eb.receiveMessage(
+                e,
+                {
+                    ...r,
+                    state: eh.yb.SENT
+                },
+                !0
+            );
+        },
         sendClydeError(e) {
             let t,
                 n,

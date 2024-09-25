@@ -1,5 +1,7 @@
 e.exports = {
     content: 'content_d76538',
+    contentGlow: 'contentGlow_d76538',
+    innerContent: 'innerContent_d76538',
     contentTextCTAPopout: 'contentTextCTAPopout_d76538',
     subContent: 'subContent_d76538',
     avatars: 'avatars_d76538',

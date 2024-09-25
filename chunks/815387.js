@@ -42,59 +42,60 @@ var i = n(735250),
     Y = n(960048),
     j = n(709054),
     W = n(937889),
-    K = n(930282),
-    z = n(818570),
-    q = n(942951),
-    Q = n(9423),
-    X = n(789267),
-    $ = n(262),
-    J = n(303135),
-    ee = n(673052),
-    et = n(385063),
-    en = n(253118),
-    er = n(54817),
-    ei = n(502115),
-    ea = n(27103),
-    eo = n(396252),
-    es = n(522860),
-    el = n(582298),
-    eu = n(73352),
-    ec = n(507962),
-    ed = n(857640),
-    e_ = n(614972),
-    eE = n(701181),
-    ef = n(29338),
-    eh = n(461135),
-    ep = n(296571),
-    em = n(587737),
-    eI = n(482239),
-    eT = n(328749),
-    eg = n(4305),
-    eS = n(910548),
-    eA = n(981631),
-    ev = n(70722),
-    eN = n(689938),
-    eO = n(437814);
-function eR(e) {
+    K = n(15642),
+    z = n(930282),
+    q = n(818570),
+    Q = n(942951),
+    X = n(9423),
+    $ = n(789267),
+    J = n(262),
+    ee = n(303135),
+    et = n(673052),
+    en = n(385063),
+    er = n(253118),
+    ei = n(54817),
+    ea = n(502115),
+    eo = n(27103),
+    es = n(396252),
+    el = n(522860),
+    eu = n(582298),
+    ec = n(73352),
+    ed = n(507962),
+    e_ = n(857640),
+    eE = n(614972),
+    ef = n(701181),
+    eh = n(29338),
+    ep = n(461135),
+    em = n(296571),
+    eI = n(587737),
+    eT = n(482239),
+    eg = n(328749),
+    eS = n(4305),
+    eA = n(910548),
+    ev = n(981631),
+    eN = n(70722),
+    eO = n(689938),
+    eR = n(437814);
+function eC(e) {
     Y.Z.captureException(e), new h.Z('SystemMessage').error('', e);
 }
-function eC(e) {
+function ey(e) {
     let { message: t, compact: n, channel: r } = e,
         { id: s, author: l } = t,
         u = P.default.getId(),
         d = t.getChannelId(),
         _ = (0, o.e7)([U.Z], () => U.Z.isCallActive(d, s), [d, s]),
-        E = (0, o.e7)([Z.Z], () => Z.Z.getVoiceState(eA.ME, u)),
+        E = (0, o.e7)([Z.Z], () => Z.Z.getVoiceState(ev.ME, u)),
         f = !_ && null != t.call && !t.call.participants.includes(u),
         h = _ && (null == E || E.channelId !== d),
         p = a.useCallback(() => c.default.selectVoiceChannel(d), [d]),
-        m = (0, q.l)({
+        m = (0, Q.l)({
             user: l,
             channelId: d,
             guildId: r.guild_id,
             messageId: t.id
         });
-    return (0, i.jsx)(X.Z, {
+    return (0, i.jsx)($.Z, {
         compact: n,
         message: t,
         missed: f,
@@ -103,40 +104,40 @@ function eC(e) {
         onClickJoinCall: p
     });
 }
-function ey(e) {
+function eb(e) {
     let { message: t, compact: n, channel: r } = e,
         { author: a } = t,
         o = t.getChannelId(),
-        s = (0, q.l)({
+        s = (0, Q.l)({
             user: a,
             channelId: o,
             guildId: r.guild_id,
             messageId: t.id
         });
-    return (0, i.jsx)(et.Z, {
+    return (0, i.jsx)(en.Z, {
         compact: n,
         message: t,
         usernameHook: s,
         isForumPost: r.isForumPost()
     });
 }
-function eb(e) {
+function eL(e) {
     let { message: t, compact: n, channel: r } = e,
         { author: a } = t,
         o = t.getChannelId(),
-        s = (0, q.l)({
+        s = (0, Q.l)({
             user: a,
             channelId: o,
             guildId: r.guild_id,
             messageId: t.id
         });
-    return (0, i.jsx)(J.Z, {
+    return (0, i.jsx)(ee.Z, {
         compact: n,
         message: t,
         usernameHook: s
     });
 }
-function eL(e) {
+function eD(e) {
     let { message: t, compact: n, channel: r } = e,
         { author: o } = t,
         s = t.getChannelId(),
@@ -145,41 +146,41 @@ function eL(e) {
                 let e = w.Z.getChannel(s);
                 null != e && (0, R.XU)(e.guild_id, e.id);
             }
-            setTimeout(() => V.S.dispatch(eA.CkL.TOGGLE_CHANNEL_PINS), 0);
+            setTimeout(() => V.S.dispatch(ev.CkL.TOGGLE_CHANNEL_PINS), 0);
         }, [s]),
-        u = (0, q.l)({
+        u = (0, Q.l)({
             user: o,
             channelId: s,
             guildId: r.guild_id,
             messageId: t.id
         });
-    return (0, i.jsx)(en.Z, {
+    return (0, i.jsx)(er.Z, {
         message: t,
         compact: n,
         usernameHook: u,
         onClickPins: __OVERLAY__ ? null : l
     });
 }
-function eD(e) {
+function eM(e) {
     let { message: t, channel: n, compact: r } = e,
         { author: a } = t,
         s = t.getChannelId(),
         l = (0, o.e7)([F.default], () => F.default.getUser(t.mentions[0]), [t]),
         u = H.ZP.getName(null, s, l),
-        c = (0, q.l)({
+        c = (0, Q.l)({
             user: a,
             channelId: s,
             guildId: n.guild_id,
             messageId: t.id
         }),
-        d = (0, q.l)({
+        d = (0, Q.l)({
             user: l,
             channelId: s,
             guildId: n.guild_id,
             messageId: t.id
         });
     return n.isThread()
-        ? (0, i.jsx)(em.Z, {
+        ? (0, i.jsx)(eI.Z, {
               message: t,
               channel: n,
               compact: r,
@@ -187,7 +188,7 @@ function eD(e) {
               actorUsernameHook: c,
               targetUsernameHook: d
           })
-        : (0, i.jsx)(eu.Z, {
+        : (0, i.jsx)(ec.Z, {
               message: t,
               compact: r,
               otherUsername: u,
@@ -195,9 +196,9 @@ function eD(e) {
               otherUsernameHook: d
           });
 }
-function eM(e) {
+function eP(e) {
     let { message: t, channel: r, compact: o } = e,
-        u = (0, q.l)({
+        u = (0, Q.l)({
             user: t.author,
             channelId: t.channel_id,
             guildId: r.guild_id,
@@ -241,7 +242,7 @@ function eM(e) {
             },
             [t]
         );
-    return (0, i.jsx)(ep.Z, {
+    return (0, i.jsx)(em.Z, {
         message: t,
         compact: o,
         usernameHook: u,
@@ -250,25 +251,25 @@ function eM(e) {
         onContextMenuThread: _
     });
 }
-function eP(e) {
+function eU(e) {
     let { message: t, channel: n, compact: r } = e,
         { author: a } = t,
         s = t.getChannelId(),
         l = (0, o.e7)([F.default], () => F.default.getUser(t.mentions[0]), [t]),
-        u = (0, q.l)({
+        u = (0, Q.l)({
             user: a,
             channelId: s,
             guildId: n.guild_id,
             messageId: t.id
         }),
-        c = (0, q.l)({
+        c = (0, Q.l)({
             user: l,
             channelId: s,
             guildId: n.guild_id,
             messageId: t.id
         });
     return n.isThread()
-        ? (0, i.jsx)(eI.Z, {
+        ? (0, i.jsx)(eT.Z, {
               message: t,
               channel: n,
               compact: r,
@@ -277,7 +278,7 @@ function eP(e) {
               targetUsernameHook: c
           })
         : null != l && l.id !== a.id
-          ? (0, i.jsx)(ec.Z, {
+          ? (0, i.jsx)(ed.Z, {
                 message: t,
                 channel: n,
                 compact: r,
@@ -285,17 +286,17 @@ function eP(e) {
                 otherUser: l,
                 otherUsernameHook: c
             })
-          : (0, i.jsx)(ec.Z, {
+          : (0, i.jsx)(ed.Z, {
                 message: t,
                 channel: n,
                 usernameHook: u
             });
 }
-function eU(e) {
+function ew(e) {
     let { message: t, compact: n, channel: r } = e,
         { author: a } = t,
         o = t.getChannelId(),
-        s = (0, q.l)({
+        s = (0, Q.l)({
             user: a,
             channelId: o,
             guildId: r.guild_id,
@@ -303,7 +304,7 @@ function eU(e) {
         });
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(eg.Z, {
+            (0, i.jsx)(eS.Z, {
                 message: t,
                 guildId: r.guild_id,
                 compact: n,
@@ -316,7 +317,7 @@ function eU(e) {
         ]
     });
 }
-function ew(e) {
+function ex(e) {
     let { message: t, channel: n, compact: r } = e,
         { author: s } = t,
         { guild_id: l } = n,
@@ -327,19 +328,19 @@ function ew(e) {
                 (0, m.f)({
                     guildId: c.id,
                     location: {
-                        section: eA.jXE.CHANNEL_TEXT_AREA,
-                        object: eA.qAy.BOOST_ANNOUNCEMENT_UPSELL
+                        section: ev.jXE.CHANNEL_TEXT_AREA,
+                        object: ev.qAy.BOOST_ANNOUNCEMENT_UPSELL
                     }
                 });
         }, [c]),
-        _ = (0, q.l)({
+        _ = (0, Q.l)({
             user: s,
             channelId: u,
             guildId: n.guild_id,
             messageId: t.id,
             stopPropagation: !0
         });
-    return (0, i.jsx)(eS.ZP, {
+    return (0, i.jsx)(eA.ZP, {
         message: t,
         compact: r,
         guild: c,
@@ -347,23 +348,23 @@ function ew(e) {
         onClickMessage: d
     });
 }
-function ex(e) {
+function eG(e) {
     let { message: t, compact: n, channel: r } = e,
         { author: a } = t,
         o = t.getChannelId(),
-        s = (0, q.l)({
+        s = (0, Q.l)({
             user: a,
             channelId: o,
             guildId: r.guild_id,
             messageId: t.id
         });
-    return (0, i.jsx)($.Z, {
+    return (0, i.jsx)(J.Z, {
         message: t,
         compact: n,
         usernameHook: s
     });
 }
-function eG(e) {
+function ek(e) {
     let { message: t, compact: n, channel: r } = e,
         {
             author: s,
@@ -371,10 +372,10 @@ function eG(e) {
             messageReference: u
         } = t,
         c = t.getChannelId(),
-        _ = (0, o.e7)([k.Z], () => k.Z.findActivity(l, (e) => e.type === eA.IIU.PLAYING), [l]),
+        _ = (0, o.e7)([k.Z], () => k.Z.findActivity(l, (e) => e.type === ev.IIU.PLAYING), [l]),
         E = (0, o.e7)([w.Z], () => (null != u ? w.Z.getChannel(u.channel_id) : null), [u]),
         f = null == u ? void 0 : u.guild_id,
-        h = (0, q.l)({
+        h = (0, Q.l)({
             user: s,
             channelId: c,
             guildId: r.guild_id,
@@ -383,14 +384,14 @@ function eG(e) {
         p = a.useCallback(() => {
             if (null != E && null != f)
                 (0, d.iV)({
-                    streamType: ev.lo.GUILD,
+                    streamType: eN.lo.GUILD,
                     ownerId: l,
                     channelId: E.id,
                     guildId: f
                 });
         }, [l, E, f]);
     return null != u && null != E && null != u.guild_id
-        ? (0, i.jsx)(es.Z, {
+        ? (0, i.jsx)(el.Z, {
               message: t,
               compact: n,
               channel: E,
@@ -400,61 +401,76 @@ function eG(e) {
           })
         : null;
 }
-function ek(e) {
+function eB(e) {
     let { message: t, compact: n } = e,
         r = t.getChannelId(),
         a = (0, o.e7)([w.Z], () => w.Z.getChannel(r), [r]),
         s = null != a ? a.getGuildId() : null,
         l = () => {
-            null != s && A.Z.open(s, eA.pNK.DISCOVERY);
+            null != s && A.Z.open(s, ev.pNK.DISCOVERY);
         };
-    return (0, i.jsx)(ei.FJ, {
+    return (0, i.jsx)(ea.FJ, {
         message: t,
         compact: n,
         onClick: l
     });
 }
-function eB(e) {
+function eF(e) {
     let { message: t, channel: n, compact: r } = e,
         a = (0, o.e7)([F.default], () => F.default.getCurrentUser()),
         s = (0, o.e7)([x.Z], () => {
             var e, t;
             return null !== (t = null === (e = x.Z.getGuild(n.getGuildId())) || void 0 === e ? void 0 : e.isOwner(a)) && void 0 !== t && t;
         });
-    return (0, i.jsx)(el.Z, {
+    return (0, i.jsx)(eu.Z, {
         message: t,
         compact: r,
         isOwner: s,
         channel: n
     });
 }
-function eF(e) {
+function eZ(e) {
     let { message: t, compact: n, channel: r } = e;
     return (0, p.nY)(t)
-        ? (0, i.jsx)(Q.Z, {
+        ? (0, i.jsx)(X.Z, {
               message: t,
               compact: n,
               channel: r
           })
         : null;
 }
-function eZ(e) {
+function eV(e) {
     let { message: t, compact: n, channel: r } = e,
-        a = (0, q.l)({
+        a = (0, Q.l)({
             user: t.author,
             channelId: r.id,
             guildId: r.guild_id,
             messageId: t.id
         });
-    return (0, i.jsx)(er.Z, {
+    return (0, i.jsx)(ei.Z, {
         message: t,
         compact: n,
         usernameHook: a
     });
 }
-function eV(e) {
+function eH(e) {
     let { message: t, compact: n, channel: r } = e,
-        a = (0, q.l)({
+        a = (0, Q.l)({
+            user: t.author,
+            channelId: r.id,
+            guildId: r.guild_id,
+            messageId: t.id
+        });
+    return (0, i.jsx)(es.Z, {
+        message: t,
+        compact: n,
+        channel: r,
+        usernameHook: a
+    });
+}
+function eY(e) {
+    let { message: t, compact: n, channel: r } = e,
+        a = (0, Q.l)({
             user: t.author,
             channelId: r.id,
             guildId: r.guild_id,
@@ -467,24 +483,9 @@ function eV(e) {
         usernameHook: a
     });
 }
-function eH(e) {
-    let { message: t, compact: n, channel: r } = e,
-        a = (0, q.l)({
-            user: t.author,
-            channelId: r.id,
-            guildId: r.guild_id,
-            messageId: t.id
-        });
-    return (0, i.jsx)(ea.Z, {
-        message: t,
-        compact: n,
-        channel: r,
-        usernameHook: a
-    });
-}
-function eY(e) {
+function ej(e) {
     let { message: t, channel: n, compact: r } = e,
-        a = (0, q.l)({
+        a = (0, Q.l)({
             user: t.author,
             channelId: n.id,
             guildId: n.guild_id,
@@ -493,7 +494,7 @@ function eY(e) {
         s = (0, o.e7)([g.ZP], () => g.ZP.getActiveEventByChannel(n.id), [n.id]);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(ef.Z, {
+            (0, i.jsx)(eh.Z, {
                 message: t,
                 compact: r,
                 usernameHook: a
@@ -502,29 +503,15 @@ function eY(e) {
         ]
     });
 }
-function ej(e) {
-    let { message: t, channel: n, compact: r } = e,
-        a = (0, q.l)({
-            user: t.author,
-            channelId: n.id,
-            guildId: n.guild_id,
-            messageId: t.id
-        });
-    return (0, i.jsx)(ed.Z, {
-        message: t,
-        compact: r,
-        usernameHook: a
-    });
-}
 function eW(e) {
     let { message: t, channel: n, compact: r } = e,
-        a = (0, q.l)({
+        a = (0, Q.l)({
             user: t.author,
             channelId: n.id,
             guildId: n.guild_id,
             messageId: t.id
         });
-    return (0, i.jsx)(eh.Z, {
+    return (0, i.jsx)(e_.Z, {
         message: t,
         compact: r,
         usernameHook: a
@@ -532,28 +519,42 @@ function eW(e) {
 }
 function eK(e) {
     let { message: t, channel: n, compact: r } = e,
-        a = (0, q.l)({
+        a = (0, Q.l)({
             user: t.author,
             channelId: n.id,
             guildId: n.guild_id,
             messageId: t.id
         });
-    return (0, i.jsx)(eE.Z, {
+    return (0, i.jsx)(ep.Z, {
         message: t,
         compact: r,
         usernameHook: a
     });
 }
 function ez(e) {
+    let { message: t, channel: n, compact: r } = e,
+        a = (0, Q.l)({
+            user: t.author,
+            channelId: n.id,
+            guildId: n.guild_id,
+            messageId: t.id
+        });
+    return (0, i.jsx)(ef.Z, {
+        message: t,
+        compact: r,
+        usernameHook: a
+    });
+}
+function eq(e) {
     var t, n;
     let { message: r, channel: a, compact: l } = e,
-        c = (0, q.l)({
+        c = (0, Q.l)({
             user: r.author,
             channelId: a.id,
             guildId: a.guild_id,
             messageId: r.id
         }),
-        d = (0, o.e7)([G.Z], () => G.Z.can(eA.Plq.MUTE_MEMBERS, a)),
+        d = (0, o.e7)([G.Z], () => G.Z.can(ev.Plq.MUTE_MEMBERS, a)),
         _ = () => {
             (0, C.DT)(a, r.author.id, !1), u.Z.deleteMessage(a.id, r.id, !0);
         },
@@ -562,15 +563,15 @@ function ez(e) {
         h = d && (null == E ? void 0 : E.rtsState) === b.xO.REQUESTED_TO_SPEAK && f;
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(e_.Z, {
+            (0, i.jsx)(eE.Z, {
                 message: r,
                 compact: l,
                 usernameHook: c
             }),
             h
                 ? (0, i.jsxs)(s.Button, {
-                      wrapperClassName: eO.inviteToSpeakButtonWrapper,
-                      innerClassName: eO.inviteToSpeakButtonInner,
+                      wrapperClassName: eR.inviteToSpeakButtonWrapper,
+                      innerClassName: eR.inviteToSpeakButtonInner,
                       look: s.Button.Looks.FILLED,
                       color: s.Button.Colors.PRIMARY,
                       onClick: _,
@@ -581,14 +582,14 @@ function ez(e) {
                               height: 20,
                               width: 20
                           }),
-                          eN.Z.Messages.REQUEST_TO_SPEAK_ACCEPT
+                          eO.Z.Messages.REQUEST_TO_SPEAK_ACCEPT
                       ]
                   })
                 : null
         ]
     });
 }
-function eq(e) {
+function eQ(e) {
     let { message: t, channel: n, compact: r } = e;
     return (0, i.jsx)(f.Z, {
         message: t,
@@ -596,7 +597,7 @@ function eq(e) {
         compact: r
     });
 }
-function eQ(e) {
+function eX(e) {
     let { message: t, channel: n, compact: r } = e;
     return (0, i.jsx)(E.Z, {
         message: t,
@@ -604,7 +605,7 @@ function eQ(e) {
         compact: r
     });
 }
-function eX(e) {
+function e$(e) {
     var t;
     let { message: n, channel: r, compact: a } = e;
     return (null === (t = n.purchaseNotification) || void 0 === t ? void 0 : t.type) === _.Eh.GUILD_PRODUCT
@@ -615,80 +616,92 @@ function eX(e) {
           })
         : null;
 }
-function e$(e) {
+function eJ(e) {
     let { message: t, channel: n } = e;
-    return (0, i.jsx)(z.Z, {
+    return (0, i.jsx)(q.Z, {
         message: t,
         channel: n
     });
 }
-function eJ(e) {
+function e0(e) {
+    let { message: t, channel: n } = e,
+        r = t.giftingPrompt,
+        a = (0, o.e7)([F.default], () => F.default.getUser(null == r ? void 0 : r.recipientUserId));
+    return null == r || null == a
+        ? null
+        : (0, i.jsx)(K.Z, {
+              giftIntentType: r.giftIntentType,
+              recipientUser: a,
+              channel: n
+          });
+}
+function e1(e) {
     let { message: t, channel: n, compact: r } = e;
-    return (0, i.jsx)(ee.Z, {
+    return (0, i.jsx)(et.Z, {
         message: t,
         channel: n,
         compact: r
     });
 }
-let e0 = Object.freeze({
-    [eA.uaV.DEFAULT]: void 0,
-    [eA.uaV.REPLY]: void 0,
-    [eA.uaV.CHAT_INPUT_COMMAND]: void 0,
-    [eA.uaV.CONTEXT_MENU_COMMAND]: void 0,
-    [eA.uaV.RECIPIENT_ADD]: eD,
-    [eA.uaV.RECIPIENT_REMOVE]: eP,
-    [eA.uaV.CALL]: eC,
-    [eA.uaV.CHANNEL_NAME_CHANGE]: ey,
-    [eA.uaV.CHANNEL_ICON_CHANGE]: eb,
-    [eA.uaV.CHANNEL_PINNED_MESSAGE]: eL,
-    [eA.uaV.USER_JOIN]: eU,
-    [eA.uaV.GUILD_BOOST]: ew,
-    [eA.uaV.GUILD_BOOST_TIER_1]: ew,
-    [eA.uaV.GUILD_BOOST_TIER_2]: ew,
-    [eA.uaV.GUILD_BOOST_TIER_3]: ew,
-    [eA.uaV.CHANNEL_FOLLOW_ADD]: ex,
-    [eA.uaV.GUILD_STREAM]: eG,
-    [eA.uaV.GUILD_DISCOVERY_DISQUALIFIED]: ek,
-    [eA.uaV.GUILD_DISCOVERY_REQUALIFIED]: ei.xe,
-    [eA.uaV.GUILD_DISCOVERY_GRACE_PERIOD_INITIAL_WARNING]: ei.HL,
-    [eA.uaV.GUILD_DISCOVERY_GRACE_PERIOD_FINAL_WARNING]: ei.Yc,
-    [eA.uaV.THREAD_CREATED]: eM,
-    [eA.uaV.THREAD_STARTER_MESSAGE]: eT.Z,
-    [eA.uaV.GUILD_INVITE_REMINDER]: eB,
-    [eA.uaV.AUTO_MODERATION_ACTION]: eF,
-    [eA.uaV.GUILD_INCIDENT_ALERT_MODE_ENABLED]: eZ,
-    [eA.uaV.GUILD_INCIDENT_ALERT_MODE_DISABLED]: eZ,
-    [eA.uaV.GUILD_INCIDENT_REPORT_RAID]: eV,
-    [eA.uaV.GUILD_INCIDENT_REPORT_FALSE_ALARM]: eH,
-    [eA.uaV.ROLE_SUBSCRIPTION_PURCHASE]: T.Z,
-    [eA.uaV.PURCHASE_NOTIFICATION]: eX,
-    [eA.uaV.INTERACTION_PREMIUM_UPSELL]: void 0,
-    [eA.uaV.STAGE_START]: eY,
-    [eA.uaV.STAGE_END]: ej,
-    [eA.uaV.STAGE_SPEAKER]: eK,
-    [eA.uaV.STAGE_RAISE_HAND]: ez,
-    [eA.uaV.STAGE_TOPIC]: eW,
-    [eA.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION]: N.Z,
-    [eA.uaV.PRIVATE_CHANNEL_INTEGRATION_ADDED]: O.P,
-    [eA.uaV.PRIVATE_CHANNEL_INTEGRATION_REMOVED]: O.e,
-    [eA.uaV.PREMIUM_REFERRAL]: void 0,
-    [eA.uaV.GUILD_DEADCHAT_REVIVE_PROMPT]: eq,
-    [eA.uaV.CUSTOM_GIFT]: void 0,
-    [eA.uaV.GUILD_GAMING_STATS_PROMPT]: eQ,
-    [eA.uaV.VOICE_HANGOUT_INVITE]: void 0,
-    [eA.uaV.POLL_RESULT]: v.Z,
-    [eA.uaV.CHANGELOG]: void 0,
-    [eA.uaV.NITRO_NOTIFICATION]: e$,
-    [eA.uaV.CHANNEL_LINKED_TO_LOBBY]: eJ,
-    [eA.uaV.GIFTING_PROMPT]: void 0
+let e2 = Object.freeze({
+    [ev.uaV.DEFAULT]: void 0,
+    [ev.uaV.REPLY]: void 0,
+    [ev.uaV.CHAT_INPUT_COMMAND]: void 0,
+    [ev.uaV.CONTEXT_MENU_COMMAND]: void 0,
+    [ev.uaV.RECIPIENT_ADD]: eM,
+    [ev.uaV.RECIPIENT_REMOVE]: eU,
+    [ev.uaV.CALL]: ey,
+    [ev.uaV.CHANNEL_NAME_CHANGE]: eb,
+    [ev.uaV.CHANNEL_ICON_CHANGE]: eL,
+    [ev.uaV.CHANNEL_PINNED_MESSAGE]: eD,
+    [ev.uaV.USER_JOIN]: ew,
+    [ev.uaV.GUILD_BOOST]: ex,
+    [ev.uaV.GUILD_BOOST_TIER_1]: ex,
+    [ev.uaV.GUILD_BOOST_TIER_2]: ex,
+    [ev.uaV.GUILD_BOOST_TIER_3]: ex,
+    [ev.uaV.CHANNEL_FOLLOW_ADD]: eG,
+    [ev.uaV.GUILD_STREAM]: ek,
+    [ev.uaV.GUILD_DISCOVERY_DISQUALIFIED]: eB,
+    [ev.uaV.GUILD_DISCOVERY_REQUALIFIED]: ea.xe,
+    [ev.uaV.GUILD_DISCOVERY_GRACE_PERIOD_INITIAL_WARNING]: ea.HL,
+    [ev.uaV.GUILD_DISCOVERY_GRACE_PERIOD_FINAL_WARNING]: ea.Yc,
+    [ev.uaV.THREAD_CREATED]: eP,
+    [ev.uaV.THREAD_STARTER_MESSAGE]: eg.Z,
+    [ev.uaV.GUILD_INVITE_REMINDER]: eF,
+    [ev.uaV.AUTO_MODERATION_ACTION]: eZ,
+    [ev.uaV.GUILD_INCIDENT_ALERT_MODE_ENABLED]: eV,
+    [ev.uaV.GUILD_INCIDENT_ALERT_MODE_DISABLED]: eV,
+    [ev.uaV.GUILD_INCIDENT_REPORT_RAID]: eH,
+    [ev.uaV.GUILD_INCIDENT_REPORT_FALSE_ALARM]: eY,
+    [ev.uaV.ROLE_SUBSCRIPTION_PURCHASE]: T.Z,
+    [ev.uaV.PURCHASE_NOTIFICATION]: e$,
+    [ev.uaV.INTERACTION_PREMIUM_UPSELL]: void 0,
+    [ev.uaV.STAGE_START]: ej,
+    [ev.uaV.STAGE_END]: eW,
+    [ev.uaV.STAGE_SPEAKER]: ez,
+    [ev.uaV.STAGE_RAISE_HAND]: eq,
+    [ev.uaV.STAGE_TOPIC]: eK,
+    [ev.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION]: N.Z,
+    [ev.uaV.PRIVATE_CHANNEL_INTEGRATION_ADDED]: O.P,
+    [ev.uaV.PRIVATE_CHANNEL_INTEGRATION_REMOVED]: O.e,
+    [ev.uaV.PREMIUM_REFERRAL]: void 0,
+    [ev.uaV.GUILD_DEADCHAT_REVIVE_PROMPT]: eQ,
+    [ev.uaV.CUSTOM_GIFT]: void 0,
+    [ev.uaV.GUILD_GAMING_STATS_PROMPT]: eX,
+    [ev.uaV.VOICE_HANGOUT_INVITE]: void 0,
+    [ev.uaV.POLL_RESULT]: v.Z,
+    [ev.uaV.CHANGELOG]: void 0,
+    [ev.uaV.NITRO_NOTIFICATION]: eJ,
+    [ev.uaV.CHANNEL_LINKED_TO_LOBBY]: e1,
+    [ev.uaV.GIFTING_PROMPT]: e0
 });
-function e1(e) {
+function e3(e) {
     let { message: t, channel: n, compact: r, disableInteraction: a } = e,
         { type: o } = t,
-        s = e0[o];
+        s = e2[o];
     return null == s
-        ? (eR(Error('unknown message type '.concat(t.type))), null)
-        : (0, i.jsx)(K.ZP, {
+        ? (eC(Error('unknown message type '.concat(t.type))), null)
+        : (0, i.jsx)(z.ZP, {
               message: t,
               content: (0, W.ZP)(t).content,
               children: (0, i.jsx)(s, {
@@ -699,4 +712,4 @@ function e1(e) {
               })
           });
 }
-t.Z = a.memo(e1);
+t.Z = a.memo(e3);

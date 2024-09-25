@@ -1,18 +1,22 @@
 var r = n(47120);
-var i = n(106351),
-    a = n(147913),
-    o = n(367907),
-    s = n(447003),
-    l = n(592125),
-    u = n(271383),
-    c = n(430824),
-    d = n(944486),
-    _ = n(626135),
-    E = n(522558),
-    f = n(581025),
-    h = n(441623),
-    p = n(981631);
-function m(e, t, n) {
+var i = n(392711);
+var a = n(106351),
+    o = n(904245),
+    s = n(147913),
+    l = n(367907),
+    u = n(447003),
+    c = n(592125),
+    d = n(271383),
+    _ = n(430824),
+    E = n(375954),
+    f = n(944486),
+    h = n(626135),
+    p = n(522558),
+    m = n(581025),
+    I = n(441623),
+    T = n(474936),
+    g = n(981631);
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,32 +29,42 @@ function m(e, t, n) {
         e
     );
 }
-let I = 50;
-class T extends a.Z {
+let A = 50,
+    v = 1000;
+class N extends s.Z {
     isChannelEligible(e, t, n) {
         switch (e.type) {
-            case i.d.DM:
-            case i.d.GROUP_DM:
+            case a.d.DM:
+            case a.d.GROUP_DM:
                 return !0;
-            case i.d.GUILD_TEXT:
-                return t.length <= I && (null == n ? void 0 : n.rulesChannelId) !== e.id && !e.isNSFW() && !(0, s.Z)(e) && null == e.linkedLobby;
+            case a.d.GUILD_TEXT:
+                return t.length <= A && (null == n ? void 0 : n.rulesChannelId) !== e.id && !e.isNSFW() && !(0, u.Z)(e) && null == e.linkedLobby;
             default:
                 return !1;
         }
     }
+    maybeSendGiftingPromptSystemMessageDebounced(e, t, n) {
+        (0, i.debounce)(() => {
+            e === f.Z.getChannelId() && E.Z.isReady(e) && o.Z.sendGiftingPromptSystemMessage(e, t, n);
+        }, v)();
+    }
     handleChannelSelect(e, t) {
-        let { enabled: n } = f.G.getCurrentConfig({ location: 'PremiumGiftingIntentManager handleChannelSelect' }, { autoTrackExposure: !1 }),
-            { enabled: r } = E.w.getCurrentConfig({ location: 'PremiumGiftingIntentManager handleChannelSelect' }, { autoTrackExposure: !1 }),
-            i = u.ZP.getMemberIds(e),
-            a = c.Z.getGuild(e),
-            s = l.Z.getChannel(t);
-        if ((n || r) && null != s && this.isChannelEligible(s, i, a)) {
-            let t = new Set(null != e ? i : s.recipients),
-                r = h.Z.getFriendAnniversaries().filter((e) => t.has(e));
+        let { enabled: n } = m.G.getCurrentConfig({ location: 'PremiumGiftingIntentManager handleChannelSelect' }, { autoTrackExposure: !1 }),
+            { enabled: r } = p.w.getCurrentConfig({ location: 'PremiumGiftingIntentManager handleChannelSelect' }, { autoTrackExposure: !1 }),
+            i = d.ZP.getMemberIds(e),
+            a = _.Z.getGuild(e),
+            o = c.Z.getChannel(t);
+        if ((n || r) && null != o && this.isChannelEligible(o, i, a)) {
+            let t = new Set(null != e ? i : o.recipients),
+                a = I.Z.getFriendAnniversaries().filter((e) => t.has(e));
+            if (r && a.length > 0) {
+                let e = a[0];
+                this.maybeSendGiftingPromptSystemMessageDebounced(o.id, T.hX.FRIEND_ANNIVERSARY, e);
+            }
             n &&
-                _.default.track(p.rMx.FRIEND_ANNIVERSARIES_CHANNEL_VIEWED, {
-                    friend_anniversaries_count: r.length,
-                    ...(0, o.v_)(s)
+                h.default.track(g.rMx.FRIEND_ANNIVERSARIES_CHANNEL_VIEWED, {
+                    friend_anniversaries_count: a.length,
+                    ...(0, l.v_)(o)
                 });
         }
     }
@@ -59,18 +73,18 @@ class T extends a.Z {
         this.handleChannelSelect(t, n);
     }
     onPostConnectionOpen() {
-        let e = d.Z.getChannelId();
+        let e = f.Z.getChannelId();
         if (null != e) {
-            let t = l.Z.getChannel(e);
+            let t = c.Z.getChannel(e);
             this.handleChannelSelect(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id);
         }
     }
     constructor(...e) {
         super(...e),
-            m(this, 'actions', {
+            S(this, 'actions', {
                 POST_CONNECTION_OPEN: () => this.onPostConnectionOpen(),
                 CHANNEL_SELECT: (e) => this.onChannelSelect(e)
             });
     }
 }
-t.Z = new T();
+t.Z = new N();

@@ -20,6 +20,9 @@ n.d(t, {
     jZ: function () {
         return L;
     },
+    mE: function () {
+        return H;
+    },
     oQ: function () {
         return b;
     },
@@ -227,4 +230,19 @@ function V(e, t, n, r) {
     let a = e.getGuildId(),
         o = (0, c.BC)(a, t);
     return (i = null != t && o ? Z(a, t.id, e.id, T.default.castChannelIdAsMessageId(e.id)) : null != r ? r : F(a, e.id, n));
+}
+function H(e) {
+    if (null == e) return null;
+    switch (e.type) {
+        case g.d4z.GUILD_ANNOUNCEMENT:
+        case g.d4z.GUILD_TEXT:
+        case g.d4z.GUILD_FORUM:
+        case g.d4z.GUILD_MEDIA:
+            return g.ZY5.GUILD_CHANNEL;
+        case g.d4z.GROUP_DM:
+        case g.d4z.DM:
+            return g.ZY5.DM_CHANNEL;
+        default:
+            return null;
+    }
 }

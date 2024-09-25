@@ -70,11 +70,12 @@ function y(e) {
         v = O(e),
         N = null,
         y = null == e ? void 0 : e.gift_info,
-        b = null != e.interaction ? d.Z.createFromServer(e.interaction) : null,
-        L = e.type === A.uaV.THREAD_STARTER_MESSAGE ? (null === (r = e.referenced_message) || void 0 === r ? void 0 : null === (n = r.author) || void 0 === n ? void 0 : n.id) : void 0,
-        D = e.type === A.uaV.PREMIUM_REFERRAL ? e.content : void 0,
-        P = e.content;
-    return (e.type === A.uaV.PREMIUM_REFERRAL && (P = ''), R(e))
+        b = e.gifting_prompt,
+        L = null != e.interaction ? d.Z.createFromServer(e.interaction) : null,
+        D = e.type === A.uaV.THREAD_STARTER_MESSAGE ? (null === (r = e.referenced_message) || void 0 === r ? void 0 : null === (n = r.author) || void 0 === n ? void 0 : n.id) : void 0,
+        P = e.type === A.uaV.PREMIUM_REFERRAL ? e.content : void 0,
+        x = e.content;
+    return (e.type === A.uaV.PREMIUM_REFERRAL && (x = ''), R(e))
         ? new _.ZP({
               ...N,
               id: e.id,
@@ -90,7 +91,7 @@ function y(e) {
               ...E.toJS(),
               author: v,
               webhookId: e.webhook_id,
-              blocked: h.Z.isBlockedForMessage(e) || (null != L && h.Z.isBlocked(L)),
+              blocked: h.Z.isBlockedForMessage(e) || (null != D && h.Z.isBlocked(D)),
               mentionEveryone: e.mention_everyone,
               mentions: p,
               mentionRoles: m,
@@ -104,18 +105,19 @@ function y(e) {
                   mentionRoles: m
               }),
               giftCodes: (0, I.Fp)(e) ? (0, I.Q_)(null == e ? void 0 : e.embeds[0].url) : (0, I.Q_)(e.content),
-              content: P,
-              referralTrialOfferId: D,
+              content: x,
+              referralTrialOfferId: P,
               call: M(e.call, E.timestamp),
               messageSnapshots: w(e),
               reactions: U(null != l ? l : e.reactions, e.poll),
-              interaction: b,
+              interaction: L,
               interactionData: null != c ? c : e.interaction_data,
               interactionMetadata: e.interaction_metadata,
               roleSubscriptionData: e.role_subscription_data,
               purchaseNotification: e.purchase_notification,
               poll: null == e.poll ? void 0 : (0, u.Z)(e.poll),
-              giftInfo: null == y ? void 0 : y
+              giftInfo: null == y ? void 0 : y,
+              giftingPrompt: b
           });
 }
 function b(e, t) {

@@ -38,12 +38,6 @@ function N(e) {
             [L]
         ),
         b = (e) => {
-            M(e, p.jXE.FRIENDS_LIST_FRIEND_ROW);
-        },
-        P = (e) => {
-            M(e, p.jXE.FRIENDS_LIST_FRIEND_ROW_GIFT_POPOUT);
-        },
-        M = (e, n) => {
             e.stopPropagation(),
                 (0, u.Z)({
                     isGift: !0,
@@ -52,25 +46,25 @@ function N(e) {
                     analyticsLocations: A,
                     analyticsObject: {
                         page: s,
-                        section: n,
+                        section: p.jXE.FRIENDS_LIST_FRIEND_ROW,
                         object: p.qAy.BUTTON_CTA,
                         objectType: p.Qqv.GIFT
                     },
-                    giftMessage: D()
+                    giftMessage: P()
                 });
         },
-        D = () => {
+        P = () => {
             if (n === g.hX.FRIEND_ANNIVERSARY) return T.Z.Messages.PREMIUM_GIFTING_INTENT_CUSTOM_GIFT_MESSAGE.format({ numberOfYears: m.Z.getFriendAnniversaryYears(t.id) });
             return (0, E.Ou)(n);
         },
-        y = () => {
+        M = () => {
             if (n === g.hX.FRIEND_ANNIVERSARY) return T.Z.Messages.PREMIUM_GIFTING_INTENT_FRIEND_ANNIVERSARY;
             return (0, E.Ou)(n);
         },
-        j = () =>
+        D = () =>
             O
                 ? (0, i.jsx)(c.Clickable, {
-                      'aria-label': y(),
+                      'aria-label': M(),
                       onClick: b,
                       className: r()(f.actionButton, S.popoutButton, {
                           [f.highlight]: N,
@@ -100,7 +94,7 @@ function N(e) {
                                   variant: 'text-sm/medium',
                                   color: 'always-white',
                                   className: S.pillButtonText,
-                                  children: y()
+                                  children: M()
                               })
                           ]
                       })
@@ -122,9 +116,10 @@ function N(e) {
                 recipientUser: t,
                 onMouseEnter: L,
                 onMouseLeave: R,
-                onClick: P,
-                popoutPosition: e.position
+                popoutPosition: e.position,
+                analyticsPage: s,
+                analyticsSection: p.jXE.FRIENDS_LIST_FRIEND_ROW_GIFT_POPOUT
             }),
-        children: () => j()
+        children: () => D()
     });
 }
