@@ -114,11 +114,6 @@ let i = {
         inlineRequire: () => n(495649).Z,
         neverLoadBeforeConnectionOpen: !0
     },
-    GuildOnboardingUpsellManager: {
-        actions: ['POST_CONNECTION_OPEN', 'CHANNEL_SELECT'],
-        inlineRequire: () => n(983529).Z,
-        neverLoadBeforeConnectionOpen: !0
-    },
     GameConsoleManager: {
         actions: ['WAIT_FOR_REMOTE_SESSION', 'POST_CONNECTION_OPEN', 'SESSIONS_REPLACE', 'AUDIO_TOGGLE_SELF_DEAF', 'AUDIO_TOGGLE_SELF_MUTE', 'VOICE_STATE_UPDATES', 'CONSOLE_COMMAND_UPDATE', 'PASSIVE_UPDATE_V2', 'REMOTE_SESSION_DISCONNECT'],
         inlineRequire: () => n(902304).Z
