@@ -6,7 +6,7 @@ n.d(t, {
         return U;
     },
     f9: function () {
-        return v;
+        return P;
     },
     g_: function () {
         return b;
@@ -98,7 +98,7 @@ let M = () => {
         }
     },
     O = () => b(M()),
-    v = (e) => {
+    P = (e) => {
         switch (e) {
             case R.VU.PREMIUM_TENURE_1_MONTH:
                 return m.Z.Messages.TIERED_TENURE_BADGE_BRONZE;
@@ -120,7 +120,7 @@ let M = () => {
                 return '';
         }
     },
-    P = () => v(M()),
+    v = () => P(M()),
     L = (e) => {
         switch (e) {
             case R.VU.PREMIUM_TENURE_1_MONTH:
@@ -147,7 +147,7 @@ let M = () => {
     B = () => ({
         badge: M(),
         image: O(),
-        name: P(),
+        name: v(),
         earnedOnDate: D(),
         tenureRequirement: Z()
     }),

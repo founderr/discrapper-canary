@@ -113,8 +113,8 @@ function b(e) {
         A = (0, T.ZP)(),
         b = ((0, _.wj)(A) ? S.BRd.DARK : S.BRd.LIGHT) === S.BRd.DARK,
         O = i.useMemo(() => (0, N.nP)(C), [C]),
-        v = i.useContext(d.S).reducedMotion.enabled,
-        P = (0, N.Mi)(n, g.jn.GIFT_INVENTORY_FOR_YOU),
+        P = i.useContext(d.S).reducedMotion.enabled,
+        v = (0, N.Mi)(n, g.jn.GIFT_INVENTORY_FOR_YOU),
         L = (0, m.tP)(n),
         Z = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null,
         D = i.useRef(s),
@@ -127,14 +127,14 @@ function b(e) {
         i.useEffect(() => {
             if (O && null != B.current)
                 return (
-                    D.current !== s && (s && !v ? B.current.play() : (B.current.pause(), (B.current.currentTime = 0))),
+                    D.current !== s && (s && !P ? B.current.play() : (B.current.pause(), (B.current.currentTime = 0))),
                     (D.current = s),
                     () => {
                         var e;
                         null === (e = B.current) || void 0 === e || e.pause();
                     }
                 );
-        }, [s, O, v]),
+        }, [s, O, P]),
         (0, r.jsxs)('div', {
             className: M.container,
             children: [
@@ -147,7 +147,7 @@ function b(e) {
                                   null != e.current && (B.current = e.current),
                                   (0, r.jsx)(R.Z, {
                                       ref: e,
-                                      autoPlay: !v && s,
+                                      autoPlay: !P && s,
                                       loop: !0,
                                       muted: !0,
                                       playsInline: !0,
@@ -186,7 +186,7 @@ function b(e) {
                                 (0, r.jsxs)('div', {
                                     className: M.topRow,
                                     children: [
-                                        P &&
+                                        v &&
                                             !L &&
                                             !Z &&
                                             (0, r.jsx)('div', {

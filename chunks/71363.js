@@ -30,14 +30,14 @@ t.Z = (e) => {
             let [n, s] = t;
             return !1 !== s.canReveal && 'upcomingDropUntimed' !== s.name && (e[n] = s), e;
         }, {}),
-        v = (0, I.HI)({ location: N.MQ.SEE_ALL }),
-        { analyticsLocations: P } = (0, u.ZP)(_.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
+        P = (0, I.HI)({ location: N.MQ.SEE_ALL }),
+        { analyticsLocations: v } = (0, u.ZP)(_.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
         [L, Z] = a.useState(!1),
         D = (0, E.ZP)('perks-discoverability'),
         B = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
         U = (0, C.mN)();
     return (
-        v === I.mJ.DEFAULT ? ((t = f.Z.Messages.MARKETING_PAGE_CAROUSEL_TITLE), (n = f.Z.Messages.NITRO_HOME_ENJOY_UPDATED_DISCORD)) : ((t = f.Z.Messages.NITRO_HOME_ENJOY_UPDATED_DISCORD), (n = f.Z.Messages.MARKETING_PAGE_CAROUSEL_TITLE)),
+        P === I.mJ.DEFAULT ? ((t = f.Z.Messages.MARKETING_PAGE_CAROUSEL_TITLE), (n = f.Z.Messages.NITRO_HOME_ENJOY_UPDATED_DISCORD)) : ((t = f.Z.Messages.NITRO_HOME_ENJOY_UPDATED_DISCORD), (n = f.Z.Messages.MARKETING_PAGE_CAROUSEL_TITLE)),
         (0, s.jsx)(c.AdvancedScrollerAuto, {
             className: i()(A.allPerksScroller, {
                 [A.open]: r,
@@ -47,7 +47,7 @@ t.Z = (e) => {
             children: (0, s.jsx)('div', {
                 className: A.container,
                 children: (0, s.jsxs)(u.Gt, {
-                    value: P,
+                    value: v,
                     children: [
                         (0, s.jsx)(R.Z, {
                             className: A.heroHeading,
@@ -75,7 +75,7 @@ t.Z = (e) => {
                                         perksCards: O,
                                         variant: N.R0.CARD_CAROUSEL_FIRST_ROW,
                                         shopMarketingVariation: D,
-                                        tileOrderVariant: v,
+                                        tileOrderVariant: P,
                                         isPremiumSubscriber: U,
                                         isFullScreen: x
                                     }),
@@ -93,7 +93,7 @@ t.Z = (e) => {
                                         perksCards: O,
                                         variant: N.R0.CARD_CAROUSEL_SECOND_ROW,
                                         shopMarketingVariation: D,
-                                        tileOrderVariant: v,
+                                        tileOrderVariant: P,
                                         isPremiumSubscriber: U,
                                         isFullScreen: x
                                     }),
@@ -111,7 +111,7 @@ t.Z = (e) => {
                                         perksCards: O,
                                         variant: N.R0.CARD_CAROUSEL_THIRD_ROW,
                                         shopMarketingVariation: D,
-                                        tileOrderVariant: v,
+                                        tileOrderVariant: P,
                                         isPremiumSubscriber: U,
                                         isFullScreen: x
                                     }),
@@ -122,7 +122,7 @@ t.Z = (e) => {
                         (0, s.jsx)('div', { className: A.footerSpacing }),
                         (0, s.jsx)(l.$, {
                             onChange: (e) => {
-                                e && !L && (T.default.track(p.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: P }), Z(!0));
+                                e && !L && (T.default.track(p.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: v }), Z(!0));
                             },
                             children: (0, s.jsx)('div', { className: A.bottomOfPageVisibilitySensor })
                         }),

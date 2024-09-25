@@ -97,15 +97,15 @@ function q(e, t) {
 }
 async function Q(e) {
     var t, n;
-    let { channelId: r, applicationId: i, isStart: s, analyticsLocations: o, locationObject: l, embeddedActivitiesManager: u, componentId: c, commandOrigin: m, sectionName: A, source: N, partyId: O } = e,
-        C = R.Z.getChannel(r),
-        L = null !== (t = null == C ? void 0 : C.getGuildId()) && void 0 !== t ? t : void 0;
-    if (null == L && !(null !== (n = null == C ? void 0 : C.isPrivate()) && void 0 !== n && n)) return !1;
-    let D = (0, g.r)();
+    let { channelId: r, applicationId: i, isStart: s, analyticsLocations: o, locationObject: l, embeddedActivitiesManager: u, componentId: c, commandOrigin: m, sectionName: A, source: N, partyId: O, forceCheckAuth: C = !1 } = e,
+        L = R.Z.getChannel(r),
+        D = null !== (t = null == L ? void 0 : L.getGuildId()) && void 0 !== t ? t : void 0;
+    if (null == D && !(null !== (n = null == L ? void 0 : L.isPrivate()) && void 0 !== n && n)) return !1;
+    let M = (0, g.r)();
     try {
         a.Z.dispatch({
             type: 'EMBEDDED_ACTIVITY_LAUNCH_START',
-            nonce: D,
+            nonce: M,
             applicationId: i,
             channelId: r,
             componentId: c,
@@ -117,9 +117,9 @@ async function Q(e) {
             (0, Z.Z)({
                 type: s ? j.q5t.LAUNCH : j.q5t.JOIN,
                 userId: null == e ? void 0 : e.id,
-                guildId: L,
+                guildId: D,
                 channelId: r,
-                channelType: null == C ? void 0 : C.type,
+                channelType: null == L ? void 0 : L.type,
                 applicationId: i,
                 locationObject: l,
                 analyticsLocations: null != o ? o : [],
@@ -136,14 +136,14 @@ async function Q(e) {
                         if (e.message === p.sV) return !1;
                         throw e;
                     }
-                    if (e.handler === _.VC.APP_HANDLER) {
+                    if (C || e.handler === _.VC.APP_HANDLER) {
                         let e =
-                                null != L
+                                null != D
                                     ? await (0, f.FN)({
                                           type: 'guild',
-                                          guildId: L
+                                          guildId: D
                                       })
-                                    : f.ZP.getGuildState(L),
+                                    : f.ZP.getGuildState(D),
                             t = await (0, f.FN)({ type: 'user' });
                         if (
                             !(await (0, E.L)({
@@ -155,7 +155,7 @@ async function Q(e) {
                             return !1;
                     }
                     let t = R.Z.getChannel(r),
-                        n = null != L ? v.Z.getGuild(L) : null;
+                        n = null != D ? v.Z.getGuild(D) : null;
                     return (
                         null != t &&
                         (await new Promise((r, i) => {
@@ -170,7 +170,7 @@ async function Q(e) {
                                 sectionName: A,
                                 source: N,
                                 interactionLifecycleOptionsFactory: () => ({
-                                    nonce: D,
+                                    nonce: M,
                                     onSuccess: () => r(),
                                     onFailure: (e, t, n, r) => {
                                         null != e && null != t && null != n
@@ -194,10 +194,10 @@ async function Q(e) {
                     );
                 },
                 n = W.Yq.includes(i),
-                a = (null == C ? void 0 : C.type) === j.d4z.GUILD_VOICE,
+                a = (null == L ? void 0 : L.type) === j.d4z.GUILD_VOICE,
                 s = I.Z.getApplication(i),
                 o = null != s && (0, b.yE)(s.flags, j.udG.EMBEDDED),
-                l = (0, U.l5)(C);
+                l = (0, U.l5)(L);
             if (n) {
                 if (((t = !1), !(await e()))) throw Error();
             } else if (a) {
@@ -215,13 +215,13 @@ async function Q(e) {
                 channelId: r,
                 embeddedActivitiesManager: u,
                 isStart: s,
-                guildId: L
+                guildId: D
             }))
         )
             throw new T.Z(T.Z.Reasons.LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED);
         a.Z.dispatch({
             type: 'EMBEDDED_ACTIVITY_LAUNCH_SUCCESS',
-            nonce: D,
+            nonce: M,
             applicationId: i,
             channelId: r
         });
@@ -229,8 +229,8 @@ async function Q(e) {
         return (
             a.Z.dispatch({
                 type: 'EMBEDDED_ACTIVITY_LAUNCH_FAIL',
-                nonce: D,
-                guildId: L,
+                nonce: M,
+                guildId: D,
                 applicationId: i,
                 channelId: r,
                 isStart: s,

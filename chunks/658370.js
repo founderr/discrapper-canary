@@ -31,13 +31,13 @@ t.Z = (e) => {
             onTier0TrialOffer: b,
             onDiscountOffer: I.Z.Messages.PREMIUM_DISCOUNT_CTA.format({ percent: null == x ? void 0 : x.discount.amount })
         }),
-        v = (0, _._)(S);
+        P = (0, _._)(S);
     return (0, s.jsxs)('div', {
-        className: r()(R.cardDescription, null == v ? void 0 : null === (t = v.description) || void 0 === t ? void 0 : t.className),
+        className: r()(R.cardDescription, null == P ? void 0 : null === (t = P.description) || void 0 === t ? void 0 : t.className),
         children: [
             (0, s.jsx)(u.Z, {
                 title: a,
-                cardVariantStyleInfo: v,
+                cardVariantStyleInfo: P,
                 titleClassName: m,
                 subtitle: N,
                 description: C
@@ -51,7 +51,7 @@ t.Z = (e) => {
                     look: i.Button.Looks.FILLED
                 }),
             0 !== p.length &&
-                (null == (n = null == v ? void 0 : v.descriptionCta) ? void 0 : n.hideOnHoverComponent) !== !0 &&
+                (null == (n = null == P ? void 0 : P.descriptionCta) ? void 0 : n.hideOnHoverComponent) !== !0 &&
                 null != A &&
                 (0, s.jsx)(i.Button, {
                     className: g,

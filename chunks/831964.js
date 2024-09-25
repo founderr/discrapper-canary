@@ -33,8 +33,8 @@ var s,
     x = n(386014),
     b = n(845571),
     O = n(220046),
-    v = n(385874),
-    P = n(371000),
+    P = n(385874),
+    v = n(371000),
     L = n(377679),
     Z = n(825087);
 ((s = a || (a = {})).NEW_APP_STYLES = 'newAppStyles'), (s.REFERRAL_PROGRAM = 'referralProgram'), (s.SERVER_PROFILES = 'serverProfiles'), (s.SHOW_YOUR_STYLE = 'showYourStyle'), (s.YOUR_SPACE = 'yourSpace'), (s.EMOJIS = 'emojis'), (s.NO_LIMITS = 'noLimits');
@@ -100,7 +100,7 @@ t.ZP = (e) => {
                 descriptionCta: u.Z.Messages.TAKE_ME_THERE,
                 previewImage: R,
                 onClick: n,
-                videoUrl: s ? v.Z : P.Z
+                videoUrl: s ? P.Z : v.Z
             },
             yourSpace: {
                 name: 'yourSpace',

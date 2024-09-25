@@ -48,10 +48,10 @@ let g = (e) => {
         O = (0, o.debounce)(() => {
             d.default.track(T.rMx.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, o.snakeCase)(t) });
         }, 800),
-        v = () => {
+        P = () => {
             null != h.current && ((h.current.currentTime = M), h.current.play());
         },
-        P = () => {
+        v = () => {
             null != h.current && (x(h.current.currentTime), h.current.pause());
         },
         L = () =>
@@ -127,10 +127,10 @@ let g = (e) => {
                   [m.whatsNewBoxContainer]: !p,
                   [m.compactBoxContainer]: p
               }),
-              onMouseEnter: v,
-              onFocus: v,
-              onBlur: P,
-              onMouseLeave: P,
+              onMouseEnter: P,
+              onFocus: P,
+              onBlur: v,
+              onMouseLeave: v,
               children: [(0, s.jsx)(L, {}), (0, s.jsx)(Z, { isLeft: !1 })]
           })
         : (0, s.jsxs)('div', {
@@ -139,10 +139,10 @@ let g = (e) => {
                   [m.compactBoxContainer]: p,
                   boxBackgroundColor: b
               }),
-              onMouseEnter: v,
-              onFocus: v,
-              onBlur: P,
-              onMouseLeave: P,
+              onMouseEnter: P,
+              onFocus: P,
+              onBlur: v,
+              onMouseLeave: v,
               children: [(0, s.jsx)(Z, { isLeft: !0 }), (0, s.jsx)(L, {})]
           });
 };

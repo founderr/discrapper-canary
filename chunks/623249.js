@@ -38,8 +38,8 @@ function f(e) {
             useReducedMotion: b,
             className: C.colorTransition
         }),
-        v = h.filter((e) => ['xbox', 'playstation'].includes(e.connected_account_type)),
-        P = (0, R.Bz)(S),
+        P = h.filter((e) => ['xbox', 'playstation'].includes(e.connected_account_type)),
+        v = (0, R.Bz)(S),
         L = (0, o.e7)([u.Z], () => u.Z.getState().theme),
         Z = (0, l.wj)(L) ? g.BRd.DARK : g.BRd.LIGHT,
         { startConsoleQuest: D, startingConsoleQuest: B } = (0, T.GI)({
@@ -131,8 +131,8 @@ function f(e) {
                             (0, s.jsx)(A, {
                                 icon: (0, s.jsx)(c.GameControllerIcon, { size: 'sm' }),
                                 text: N.Z.Messages.QUESTS_CONNECTED_CONSOLES,
-                                errors: P ? void 0 : v.map((e) => e.message),
-                                gameTile: P
+                                errors: v ? void 0 : P.map((e) => e.message),
+                                gameTile: v
                                     ? (0, s.jsx)(c.Tooltip, {
                                           'aria-label': S.config.messages.gameTitle,
                                           text: () =>

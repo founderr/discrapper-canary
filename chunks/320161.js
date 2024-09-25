@@ -38,7 +38,7 @@ function m(e) {
     let x = N >= R.length - 1,
         b = x ? o.TooltipColors.RED : o.TooltipColors.GREEN,
         O = p ? b : o.TooltipColors.PRIMARY,
-        v = () => {
+        P = () => {
             null == u || u(), (0, c.JG)(n), l.default.track(_.rMx.TEXT_COPIED), !A && C(N + 1), S(!0), f(!0), h.start(E, () => S(!1)), M.start(T, () => C(0));
         };
     return (0, s.jsx)(o.Tooltip, {
@@ -64,7 +64,7 @@ function m(e) {
             return d({
                 ...s,
                 onClick: () => {
-                    null == t || t(), v();
+                    null == t || t(), P();
                 },
                 onMouseEnter: () => {
                     if (!p) {

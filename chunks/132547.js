@@ -31,7 +31,7 @@ t.Z = () => {
         [x, b] = a.useState(!1);
     (0, T.FM)();
     let O = (0, g.bD)(M),
-        v = (0, g.TW)(M);
+        P = (0, g.TW)(M);
     return (0, s.jsxs)(s.Fragment, {
         children: [
             (0, s.jsx)(l.AdvancedScrollerAuto, {
@@ -48,7 +48,7 @@ t.Z = () => {
                             }),
                             (0, s.jsx)(I.Z, {
                                 variant: N.R0.WHATS_NEW,
-                                className: i()(S.whatsNew, { [S.whatsNewWithOriginalHeroHeading]: !(O || v) }),
+                                className: i()(S.whatsNew, { [S.whatsNewWithOriginalHeroHeading]: !(O || P) }),
                                 noBackground: !0,
                                 leftAlignHeaders: !0
                             }),

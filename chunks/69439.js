@@ -59,8 +59,8 @@ function f(e) {
     let { quest: A, location: S, onReceiveErrorHints: h, contentPosition: M, rowIndex: x } = e,
         b = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
         O = (0, I.g2)({ useReducedMotion: b }),
-        v = (0, _._s)({ quest: A }),
-        P = (0, _.z)(A),
+        P = (0, _._s)({ quest: A }),
+        v = (0, _.z)(A),
         L = (0, _.B6)(A.config.expiresAt, {
             month: 'numeric',
             day: 'numeric'
@@ -158,8 +158,8 @@ function f(e) {
                                   }
                               }
                           })
-                        : (0, T.$J)(A) && !P && V !== E.LI.DESKTOP
-                          ? v
+                        : (0, T.$J)(A) && !v && V !== E.LI.DESKTOP
+                          ? P
                               ? (0, s.jsx)(l.Button, {
                                     color: l.ButtonColors.PRIMARY,
                                     className: N.button,

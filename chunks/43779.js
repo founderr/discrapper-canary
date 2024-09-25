@@ -27,8 +27,8 @@ function f(e) {
     let { quest: f, questContent: A, isHovering: S, contentPosition: h, rowIndex: M, onReceiveErrorHints: x } = e,
         b = E.r.build(f.config),
         O = b.defaultReward.messages.name,
-        v = b.defaultReward.messages.nameWithArticle,
-        P = (null === (t = f.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
+        P = b.defaultReward.messages.nameWithArticle,
+        v = (null === (t = f.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
         { ref: L, scrollHeight: Z } = (0, d.Z)(),
         D = 104 !== Z,
         { expansionSpring: B } = (0, c.useSpring)({
@@ -53,7 +53,7 @@ function f(e) {
                 }),
             []
         ),
-        k = a.useMemo(() => (j ? H(O) : N.Z.Messages.QUESTS_CLAIM_REWARD_HOOK.format({ rewardWithArticleHook: () => H(v) })), [O, v, j, H]),
+        k = a.useMemo(() => (j ? H(O) : N.Z.Messages.QUESTS_CLAIM_REWARD_HOOK.format({ rewardWithArticleHook: () => H(P) })), [O, P, j, H]),
         F = a.useMemo(() => {
             if (null != y)
                 return (0, s.jsx)(c.Text, {
@@ -77,7 +77,7 @@ function f(e) {
                         className: C.assetWrapper,
                         children: [
                             !j && U && (0, s.jsx)('div', { className: C.completionAnimation }),
-                            P && !j
+                            v && !j
                                 ? (0, s.jsxs)('div', {
                                       className: C.progressWrapper,
                                       children: [

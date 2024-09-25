@@ -26,13 +26,13 @@ var s = n(735250),
     x = n(921944),
     b = n(689938),
     O = n(977341);
-let v = {
+let P = {
         xMin: -80,
         xMax: 80,
         yMin: -150,
         yMax: -20
     },
-    P = a.memo((e) => {
+    v = a.memo((e) => {
         let { name: t, canReveal: n = !0, dismissibleContentType: r, forceShadow: N, cardType: A, confettiCanvas: S } = e,
             Z = null == e ? void 0 : e.onCtaClick,
             D = (0, c.e7)([u.Z], () => u.Z.useReducedMotion),
@@ -158,7 +158,7 @@ let v = {
                                 }),
                                 F &&
                                     (0, s.jsx)(g.Z, {
-                                        speedValues: v,
+                                        speedValues: P,
                                         numBursts: 3,
                                         particlesPerBurst: 15,
                                         confettiTarget: en.current,
@@ -215,22 +215,22 @@ let v = {
                             ]
                         })
                     })
-            : (0, s.jsx)(P, {
+            : (0, s.jsx)(v, {
                   ...Y.upcomingDropUntimed,
                   forceShadow: N
               });
     });
-P.displayName = 'PerkDiscoverabilityCard';
+v.displayName = 'PerkDiscoverabilityCard';
 let L = a.forwardRef((e, t) => {
     var n;
     let { title: r, titleClassName: o = '', subtitle: l = '', description: c = '', descriptionCta: d = '', isPremiumGetCta: u, onCtaClick: E, onMouseEnter: T, className: I, perkComponent: R, cardVariant: g, cardType: C, onClick: p, backgroundImage: h, pillText: M, perkImage: x } = e,
         b = C === f.R0.CARD_CAROUSEL_FIRST_ROW || C === f.R0.CARD_CAROUSEL_SECOND_ROW || C === f.R0.CARD_CAROUSEL_THIRD_ROW,
-        v = 0 !== c.length || 0 !== d.length || (0 !== l.length && g === f.zW.REWARD),
-        P = (0, m.IB)(),
-        [L, Z] = a.useState(g !== f.zW.REWARD || P);
+        P = 0 !== c.length || 0 !== d.length || (0 !== l.length && g === f.zW.REWARD),
+        v = (0, m.IB)(),
+        [L, Z] = a.useState(g !== f.zW.REWARD || v);
     a.useEffect(() => {
-        P && Z(!0);
-    }, [P]);
+        v && Z(!0);
+    }, [v]);
     let D = (0, N._)(g);
     return (0, s.jsxs)(_.Clickable, {
         className: i()(O.card, I, !0 === L ? (null === (n = D.cardContainer) || void 0 === n ? void 0 : n.className) : void 0, {
@@ -260,7 +260,7 @@ let L = a.forwardRef((e, t) => {
                 subtitleClassName: O.cardSubtitle,
                 cardVariant: g
             }),
-            v &&
+            P &&
                 (0, s.jsx)(S.Z, {
                     title: r,
                     titleClassName: o,
@@ -279,4 +279,4 @@ let L = a.forwardRef((e, t) => {
         ]
     });
 });
-(L.displayName = 'PerkCardContent'), (t.Z = P);
+(L.displayName = 'PerkCardContent'), (t.Z = v);

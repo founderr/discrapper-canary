@@ -73,8 +73,8 @@ function x(e) {
 t.Z = (e) => {
     let { isFullscreen: t, className: n, buttonClassName: a, subscriptionTier: d, hideSparkles: g, hideSubscribeAndGiftButton: p, entrypoint: b } = e,
         { analyticsLocations: O } = (0, c.ZP)(l.Z.PREMIUM_MARKETING_HERO_CTA),
-        v = (0, E._O)(),
-        P = (0, u.Nx)(),
+        P = (0, E._O)(),
+        v = (0, u.Nx)(),
         L = (0, R.Vi)(),
         Z = (0, i.e7)([_.Z], () => _.Z.affinities),
         D = (0, I.Z)(),
@@ -121,8 +121,8 @@ t.Z = (e) => {
                               ? null
                               : (0, s.jsx)(h, {
                                     subscriptionTier: d,
-                                    inOfferExperience: P,
-                                    inTrial: v,
+                                    inOfferExperience: v,
+                                    inTrial: P,
                                     buttonClassName: a
                                 }),
                         j &&
@@ -133,7 +133,7 @@ t.Z = (e) => {
                             })
                     ]
                 }),
-                !(P || g) && (0, s.jsx)(M, { isFullscreen: t })
+                !(v || g) && (0, s.jsx)(M, { isFullscreen: t })
             ]
         })
     });

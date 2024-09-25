@@ -26,8 +26,8 @@ var s = n(735250),
     x = n(474936),
     b = n(689938),
     O = n(515846),
-    v = n(102655),
-    P = n(768236),
+    P = n(102655),
+    v = n(768236),
     L = n(314907),
     Z = n(826701);
 let D = () => {
@@ -51,7 +51,7 @@ let D = () => {
         let t,
             { premiumType: n } = e,
             a = (0, _.ZP)();
-        t = n === x.p9.TIER_0 ? ((0, l.wj)(a) ? v : P) : (0, l.wj)(a) ? L : Z;
+        t = n === x.p9.TIER_0 ? ((0, l.wj)(a) ? P : v) : (0, l.wj)(a) ? L : Z;
         let r = (0, m.Px)(n);
         return (0, s.jsx)('img', {
             src: t,
@@ -116,7 +116,7 @@ let D = () => {
 t.Z = (e) => {
     var t;
     let n,
-        { className: r, hideCTAs: v = !1, headingOverride: P, hidePill: L = !1, selectedPlanColumnClassName: Z, selectedPlanTier: w = x.p9.TIER_2 } = e,
+        { className: r, hideCTAs: P = !1, headingOverride: v, hidePill: L = !1, selectedPlanColumnClassName: Z, selectedPlanTier: w = x.p9.TIER_2 } = e,
         { analyticsLocations: y } = (0, E.ZP)(u.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
         H = (0, o.e7)([R.ZP], () => R.ZP.hasFetchedSubscriptions()),
         k = (0, T.V)(),
@@ -154,7 +154,7 @@ t.Z = (e) => {
         column1: (0, s.jsx)(U, { premiumType: x.p9.TIER_0 }),
         column2: (0, s.jsx)(U, { premiumType: x.p9.TIER_2 })
     };
-    v
+    P
         ? es.push({
               label: null,
               column1: null,
@@ -240,7 +240,7 @@ t.Z = (e) => {
                 (0, s.jsx)(c.Heading, {
                     className: i()(O.titleText, O.__invalid_textColor),
                     variant: 'heading-xxl/extrabold',
-                    children: null != P ? P : b.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_TITLE
+                    children: null != v ? v : b.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_TITLE
                 }),
                 (0, s.jsxs)('div', {
                     className: O.tableWrapper,

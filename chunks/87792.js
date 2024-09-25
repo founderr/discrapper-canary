@@ -26,7 +26,7 @@ var s = n(735250),
     x = n(981631),
     b = n(689938),
     O = n(555825);
-function v() {
+function P() {
     let e = a.useCallback(() => {
         (0, l.openModalLazy)(async () => {
             let { default: e } = await n.e('66462').then(n.bind(n, 756226));
@@ -45,7 +45,7 @@ function v() {
         })
     });
 }
-function P(e) {
+function v(e) {
     let { displayType: t } = e,
         n = a.useCallback(() => {
             (0, l.showToast)((0, l.createToast)(b.Z.Messages.FAMILY_CENTER_ERROR_GENERIC_TOAST, l.ToastType.FAILURE));
@@ -82,7 +82,7 @@ function P(e) {
             },
             [o, m.timestampFormatter]
         ),
-        v = a.useCallback(
+        P = a.useCallback(
             () =>
                 (0, s.jsxs)(s.Fragment, {
                     children: [
@@ -105,17 +105,17 @@ function P(e) {
             [h, m, r, A]
         );
     if (0 === o.length) return null;
-    let P = o.slice(0, N);
+    let v = o.slice(0, N);
     return (0, s.jsxs)('div', {
         className: O.actionSection,
         children: [
-            v(),
+            P(),
             (0, s.jsx)('div', {
                 className: O.actions,
-                style: { maxHeight: 65 * P.length },
-                children: P.map((e, t) => x({ row: t }))
+                style: { maxHeight: 65 * v.length },
+                children: v.map((e, t) => x({ row: t }))
             }),
-            P.length !== c
+            v.length !== c
                 ? (0, s.jsx)(l.Clickable, {
                       className: O.loadMoreBar,
                       onClick: S,
@@ -128,7 +128,7 @@ function P(e) {
                           : (0, s.jsx)(l.Text, {
                                 className: O.loadMore,
                                 variant: 'text-sm/bold',
-                                children: b.Z.Messages.FAMILY_CENTER_ACTIVITY_MORE.format({ pageSize: Math.min(c - P.length, M.iB) })
+                                children: b.Z.Messages.FAMILY_CENTER_ACTIVITY_MORE.format({ pageSize: Math.min(c - v.length, M.iB) })
                             })
                   })
                 : null
@@ -245,7 +245,7 @@ t.Z = (e) => {
         children: [
             (0, s.jsxs)('div', {
                 className: O.connectedCounter,
-                children: [(0, s.jsx)(L, {}), (0, s.jsx)(v, {})]
+                children: [(0, s.jsx)(L, {}), (0, s.jsx)(P, {})]
             }),
             (0, s.jsxs)('div', {
                 className: O.card,
@@ -276,7 +276,7 @@ t.Z = (e) => {
                                 children: a
                                     ? n.map((e) => {
                                           let [t] = e;
-                                          return (0, s.jsx)(P, { displayType: t }, ''.concat(t, '-list'));
+                                          return (0, s.jsx)(v, { displayType: t }, ''.concat(t, '-list'));
                                       })
                                     : (0, s.jsx)(h.Z, {
                                           className: O.emptyActivity,

@@ -37,7 +37,7 @@ t.Z = (e) => {
         x = null != S && n === S.sku_id,
         { enabled: b } = l._.useExperiment({ location: 'SubscribeButton' }, { autoTrackExposure: !1 }),
         O = b && (null == A ? void 0 : A.trial_id) === u.a7,
-        v = m
+        P = m
             ? E.Z.Messages.BOGO_CLAIM_OFFER
             : null != M
               ? R(n, N, g, M.discount.amount)
@@ -53,7 +53,7 @@ t.Z = (e) => {
     return (0, s.jsx)(_.Z, {
         color: f ? r.ButtonColors.BRAND_INVERTED : r.ButtonColors.BRAND,
         buttonShineClassName: 'buttonShineClassName' in C ? C.buttonShineClassName : f ? T.brandShine : void 0,
-        buttonText: v,
+        buttonText: P,
         buttonTextClassName: x ? T.freeTrialText : void 0,
         onlyShineOnHover: !0,
         subscriptionTier: n,

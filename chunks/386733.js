@@ -121,13 +121,13 @@ t.Z = (e) => {
         { isInSettings: u = !1 } = e,
         x = (0, o.Wu)([g.Z], () => g.Z.getSentUserIds()),
         b = (0, o.e7)([g.Z], () => g.Z.getRecipientStatus()),
-        v = (0, f.uv)('ReferralProgramProgressBar'),
-        P = (0, f.TW)('ReferralProgramProgressBar'),
+        P = (0, f.uv)('ReferralProgramProgressBar'),
+        v = (0, f.TW)('ReferralProgramProgressBar'),
         L = (0, o.Wu)([T.default], () => x.map((e) => T.default.getUser(e)).filter((e) => null != e)),
         Z = a.useMemo(() => L.map((e) => new E.Z(e)), [L]),
         D = (0, o.e7)([g.Z], () => g.Z.getRefreshAt()),
         { subscriberHomeVariant: B } = N.g.useExperiment({ location: 'ReferralProgramProgressBar' }, { autoTrackExposure: !1 }),
-        U = v === A.g2L.UNAPPLIED || v === A.g2L.QUALIFIED,
+        U = P === A.g2L.UNAPPLIED || P === A.g2L.QUALIFIED,
         j = B === N.p.VARIANT_2;
     a.useEffect(() => {
         x.forEach((e) => {
@@ -148,7 +148,7 @@ t.Z = (e) => {
         k = a.useRef(null),
         F = (G.sent / f.Q_) * 100,
         V = !1;
-    P && null != D && ((V = 0 < (t = Math.ceil((new Date(D).getTime() - new Date().getTime()) / 86400000)) && t < f.AV), (r = (100 * (f.AV - t)) / f.AV));
+    v && null != D && ((V = 0 < (t = Math.ceil((new Date(D).getTime() - new Date().getTime()) / 86400000)) && t < f.AV), (r = (100 * (f.AV - t)) / f.AV));
     let W = V && null != t,
         K = (0, s.jsxs)('div', {
             className: h.referralInfoContent,
@@ -168,7 +168,7 @@ t.Z = (e) => {
                             variant: u ? 'heading-xl/extrabold' : 'heading-xxl/extrabold',
                             className: h.expandedProgressBarHeader,
                             children: (0, f.$s)({
-                                referralIncentiveLifecycleState: v,
+                                referralIncentiveLifecycleState: P,
                                 hasSentAll: w,
                                 referralsStatuses: G
                             })
@@ -198,7 +198,7 @@ t.Z = (e) => {
                             variant: u ? 'text-sm/normal' : 'text-lg/medium',
                             children: (0, f.Hg)({
                                 helpdeskArticle: y,
-                                referralIncentiveLifecycleState: v,
+                                referralIncentiveLifecycleState: P,
                                 referralsStatuses: G,
                                 isWithinCountdownRange: V
                             })

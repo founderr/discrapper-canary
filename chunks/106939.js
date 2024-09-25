@@ -33,8 +33,8 @@ var s = n(735250),
     x = n(914788),
     b = n(841409),
     O = n(652262),
-    v = n(880257),
-    P = n(631885),
+    P = n(880257),
+    v = n(631885),
     L = n(830746),
     Z = n(731934),
     D = n(521450),
@@ -55,8 +55,8 @@ let H = {
     };
 function F(e) {
     let { section: t, handleItemSelect: n } = e,
-        a = (0, P.gU)(),
-        r = (0, v.Z)();
+        a = (0, v.gU)(),
+        r = (0, P.Z)();
     return (0, s.jsxs)(_.TabBar, {
         className: y.settingsTabBar,
         'aria-label': w.Z.Messages.FAMILY_CENTER_TITLE,
@@ -97,7 +97,7 @@ function F(e) {
 function V(e) {
     let { theme: t, section: n, handleItemSelect: a } = e,
         r = (0, m.Dt)(),
-        l = (0, P.gU)();
+        l = (0, v.gU)();
     return (0, s.jsx)(_.ThemeProvider, {
         theme: t,
         children: (e) =>
@@ -150,8 +150,8 @@ function V(e) {
     });
 }
 function W() {
-    let e = (0, v.Z)(),
-        t = (0, P.M8)(),
+    let e = (0, P.Z)(),
+        t = (0, v.M8)(),
         n = (0, g.wE)(d.z.FAMILY_CENTER_NEW_BADGE),
         r = (0, c.e7)([x.Z], () => x.Z.getIsInitialized()),
         o = (0, O.M)(),
@@ -205,8 +205,8 @@ function W() {
 }
 function K() {
     let { analyticsLocations: e } = (0, I.ZP)(T.Z.FAMILY_CENTER),
-        t = (0, v.Z)(),
-        n = (0, P.M8)(),
+        t = (0, P.Z)(),
+        n = (0, v.M8)(),
         r = (0, g.wE)(d.z.FAMILY_CENTER_NEW_BADGE),
         o = (0, c.e7)([x.Z], () => x.Z.getIsInitialized()),
         N = (0, O.M)(),

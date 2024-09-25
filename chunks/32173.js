@@ -31,8 +31,8 @@ var i = n(399606),
     x = n(687362),
     b = n(119269),
     O = n(467685),
-    v = n(391110),
-    P = n(75077),
+    P = n(391110),
+    v = n(75077),
     L = n(976465),
     Z = n(474936),
     D = n(981631),
@@ -411,14 +411,14 @@ t.Z = () => {
                 name: 'customSoundsEverywhere',
                 title: j.Z.Messages.NITRO_HOME_CARD_CUSTOM_SOUNDS_EVERYWHERE,
                 subtitle: j.Z.Messages.NITRO_HOME_CARD_USE_CUSTOM_SOUNDS,
-                perkImage: (0, P.gx)(t, y, H),
+                perkImage: (0, v.gx)(t, y, H),
                 description: j.Z.Messages.NITRO_HOME_CARD_INCLUDED_WITH_ONLY_NITRO
             },
             specialStickerAccess: {
                 name: 'specialStickerAccess',
                 title: j.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE,
                 subtitle: j.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_LONG_DESCRIPTION,
-                perkImage: (0, P.gx)(t, k, ec),
+                perkImage: (0, v.gx)(t, k, ec),
                 description: j.Z.Messages.NITRO_HOME_CARD_INCLUDED_WITH_BASIC_AND_NITRO
             },
             largeUploads: {
@@ -484,13 +484,13 @@ t.Z = () => {
             onCtaClick: () => {
                 c.Z.open(D.oAB.GUILD_BOOSTING, null, { analyticsLocations: e });
             },
-            cardVariant: v.zW.REWARD,
+            cardVariant: P.zW.REWARD,
             pillText: a,
             dismissibleContentType: o
         };
     }
-    let ev = (0, L.kG)(),
-        { enabled: eP } = (0, S.Z)(),
+    let eP = (0, L.kG)(),
+        { enabled: ev } = (0, S.Z)(),
         eL = () => {
             N.default.track(D.rMx.OPEN_MODAL, {
                 type: 'Tiered Tenure Badge Details',
@@ -504,14 +504,14 @@ t.Z = () => {
                 });
         };
     return (
-        null != ev &&
-            eP &&
+        null != eP &&
+            ev &&
             (eO.tenureBadge = {
                 name: 'tenureBadge',
                 title: j.Z.Messages.NITRO_HOME_TIERED_TENURE_BADGES_WHATS_NEW_CARD_HEADER,
                 pillText: j.Z.Messages.REWARD.toLocaleUpperCase(),
                 perkComponent: (0, r.jsx)(O.Z, {}),
-                cardVariant: v.zW.NITRO_GRADIENT_HOVER_BORDER,
+                cardVariant: P.zW.NITRO_GRADIENT_HOVER_BORDER,
                 onClick: () => eL()
             }),
         (0, A.ZP)('usePerksDiscoverabilityCard') === A.P0.SUMMER_2024 &&

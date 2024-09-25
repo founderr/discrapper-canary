@@ -1,6 +1,6 @@
 n.d(t, {
     $_: function () {
-        return P;
+        return v;
     },
     FM: function () {
         return B;
@@ -21,7 +21,7 @@ n.d(t, {
         return x;
     },
     rM: function () {
-        return v;
+        return P;
     },
     yQ: function () {
         return M;
@@ -136,7 +136,7 @@ function O() {
         });
     if (null != (0, f.kG)(e) || !!t) return (0, f.MR)([S.Ft.FREE_GUILD_BOOST_1_MONTH, S.Ft.FREE_GUILD_BOOST_3_MONTHS], e);
 }
-let v = (e) => {
+let P = (e) => {
         if (null == e || (null == e ? void 0 : e.showNotification) === !1) return [];
         switch (e.nitroTenureStatus) {
             case S.EB.PENDING:
@@ -147,12 +147,12 @@ let v = (e) => {
                 return [];
         }
     },
-    P = () => {
+    v = () => {
         let e = M(),
-            [t, n] = s.useState(v(e)),
+            [t, n] = s.useState(P(e)),
             a = (0, N.cG)({ location: 'Home' });
         s.useEffect(() => {
-            if (!1 !== a) n(v(e));
+            if (!1 !== a) n(P(e));
         }, [e, a]);
         let [r] = (0, u.US)(a ? t : []);
         return a ? (null != e && !0 === e.showNotification && (r === o.z.TENURE_REWARD_REDEEMABLE || r === o.z.TENURE_REWARD_PENDING) ? (0, f.Wb)(e.nitroTenureStatus) : null) : null;
@@ -166,7 +166,7 @@ let v = (e) => {
     },
     Z = () => {
         let e = M(),
-            t = s.useMemo(() => v(e), [e]),
+            t = s.useMemo(() => P(e), [e]),
             [n] = (0, _.cv)(t),
             a = s.useRef(!1);
         return s.useCallback(() => {

@@ -54,23 +54,23 @@ t.Z = (e) => {
         b = (0, c.ZP)('perks-discoverability');
     (0, u.I2)();
     let O = (0, d.HI)({ location: I.R0.PERKS_DISCOVERABILITY }),
-        v = r === I.R0.WHATS_NEW,
-        P = (0, _.IY)(),
+        P = r === I.R0.WHATS_NEW,
+        v = (0, _.IY)(),
         L = (0, T.x$)();
     a.useEffect(() => {
-        v && !x && (P(), L());
-    }, [P, L, v, x]),
+        P && !x && (v(), L());
+    }, [v, L, P, x]),
         a.useEffect(() => {
             let e = h.current;
-            if (null == e || !x || !v) return;
+            if (null == e || !x || !P) return;
             let t = requestAnimationFrame(() => {
-                e.scrollIntoView({ behavior: 'smooth' }), v && P();
+                e.scrollIntoView({ behavior: 'smooth' }), P && v();
             });
             return () => {
-                cancelAnimationFrame(t), v && P();
+                cancelAnimationFrame(t), P && v();
             };
-        }, [h, x, v, P]);
-    let Z = (0, R.Op)(v),
+        }, [h, x, P, v]);
+    let Z = (0, R.Op)(P),
         D = (0, E.Z)(),
         B = (0, R.mN)(),
         U = (0, R.sP)({
@@ -116,7 +116,7 @@ t.Z = (e) => {
                         className: i()(g.subtitle, {
                             [g.subtitle]: null == f || p,
                             [g.subtitleWithButton]: null != f && !p,
-                            [g.fullWidth]: v || p,
+                            [g.fullWidth]: P || p,
                             [g.moreSubtitleMargin]: j,
                             [g.leftAlignSubtitle]: p,
                             [g.centerAlignSubtitle]: !p

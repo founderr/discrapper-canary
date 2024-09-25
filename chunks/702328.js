@@ -26,8 +26,8 @@ var s = n(735250),
     x = n(605289),
     b = n(248042),
     O = n(823188),
-    v = n(241158),
-    P = n(135785),
+    P = n(241158),
+    v = n(135785),
     L = n(498765),
     Z = n(635921),
     D = n(177839),
@@ -99,14 +99,14 @@ let Q = (e) => {
                               onChange: (e) => d(e),
                               threshold: 0,
                               active: !0,
-                              children: (0, s.jsx)(v.Z, { shouldLoadVideo: T })
+                              children: (0, s.jsx)(P.Z, { shouldLoadVideo: T })
                           }),
                       l &&
                           (0, s.jsx)(c.$, {
                               onChange: (e) => _(e),
                               threshold: 0,
                               active: !0,
-                              children: (0, s.jsx)(v.Z, {
+                              children: (0, s.jsx)(P.Z, {
                                   isBestOfNitro: !0,
                                   shouldLoadVideo: T
                               })
@@ -141,7 +141,7 @@ t.Z = (e) => {
     var t;
     let { isFullscreen: n, entrypoint: r } = e;
     (0, I.z)(T.X);
-    let v = (0, p.z7)('PremiumMarketingHome'),
+    let P = (0, p.z7)('PremiumMarketingHome'),
         L = (0, C.g)('PremiumMarketingHome'),
         D = a.useRef(null),
         [B, U] = a.useState(!1),
@@ -230,7 +230,7 @@ t.Z = (e) => {
             className: i()(W.container, { [W.settingsContainer]: !n }),
             'data-cy': 'tier-0-marketing-page',
             children: [
-                (0, s.jsx)(P.Z, {
+                (0, s.jsx)(v.Z, {
                     premiumSubscription: eo,
                     className: i()(n ? W.fullscreenExistingSubscriberSpacing : W.existingSubscriberSpacing, { [W.zIndex1]: eg }),
                     isFullscreen: n
@@ -271,7 +271,7 @@ t.Z = (e) => {
                     isFullscreen: n,
                     inOfferExperience: eg,
                     setIsAllPerksVisible: eT,
-                    whatsNewV2Enabled: v,
+                    whatsNewV2Enabled: P,
                     BestOfNitroV2Enabled: L,
                     setIsWhatsNewBoxVisible: ee,
                     setIsBestOfNitroVisible: en,
@@ -279,7 +279,7 @@ t.Z = (e) => {
                     isBestOfNitroVisible: et,
                     hasRenderedOnce: er
                 }),
-                !v && !L && (0, s.jsx)(Q, { isFullscreen: n }),
+                !P && !L && (0, s.jsx)(Q, { isFullscreen: n }),
                 (0, s.jsxs)('div', {
                     className: W.planComparisonTableContainer,
                     children: [
