@@ -63,7 +63,8 @@ async function I(e) {
             commandOrigin: g,
             sectionName: A,
             source: N,
-            partyId: O
+            partyId: O,
+            forceCheckAuth: !1
         })
     );
 }
