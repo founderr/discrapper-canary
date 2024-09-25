@@ -22,8 +22,8 @@ var i = n(735250),
     N = n(925329),
     A = n(707409),
     v = n(210887),
-    L = n(283595),
-    Z = n(417363),
+    Z = n(283595),
+    L = n(417363),
     R = n(941128),
     O = n(451478),
     x = n(424218),
@@ -345,7 +345,7 @@ class K extends a.PureComponent {
     }
     renderProgressPatching() {
         return (0, i.jsx)(P.Z, {
-            getHistoricalTotalBytes: Z.Z.getHistoricalTotalBytesWritten,
+            getHistoricalTotalBytes: L.Z.getHistoricalTotalBytesWritten,
             updateInterval: 5000,
             children: this.renderProgressPatchingBody
         });
@@ -531,14 +531,14 @@ class ee extends a.PureComponent {
                               (0, i.jsx)(M.Z, {
                                   className: r()(j.headerCell, j.networkProgress),
                                   title: y.Z.Messages.GAME_LIBRARY_UPDATES_HEADER_NETWORK,
-                                  getHistoricalTotalBytes: Z.Z.getHistoricalTotalBytesDownloaded,
+                                  getHistoricalTotalBytes: L.Z.getHistoricalTotalBytesDownloaded,
                                   color: D.Ilk.GREEN_360,
                                   animate: a
                               }),
                               (0, i.jsx)(M.Z, {
                                   className: r()(j.headerCell, j.diskProgress),
                                   title: y.Z.Messages.GAME_LIBRARY_UPDATES_HEADER_DISK,
-                                  getHistoricalTotalBytes: Z.Z.getHistoricalTotalBytesWritten,
+                                  getHistoricalTotalBytes: L.Z.getHistoricalTotalBytesWritten,
                                   color: D.Ilk.BLUE_345,
                                   animate: a
                               })
@@ -610,7 +610,7 @@ function et(e, t, n, i) {
                     branchId: l,
                     state: c,
                     application: o,
-                    libraryApplication: L.Z.getLibraryApplication(r, l),
+                    libraryApplication: Z.Z.getLibraryApplication(r, l),
                     finished: t,
                     index: s
                 }),
@@ -619,10 +619,10 @@ function et(e, t, n, i) {
     }, []);
 }
 t.Z = (0, p.Z)(
-    c.ZP.connectStores([T.Z, Z.Z, R.Z, v.Z, O.Z], () => {
-        let e = et(R.Z.activeItems, !1, T.Z, Z.Z);
+    c.ZP.connectStores([T.Z, L.Z, R.Z, v.Z, O.Z], () => {
+        let e = et(R.Z.activeItems, !1, T.Z, L.Z);
         return {
-            applications: [...e, ...et(R.Z.finishedItems, !0, T.Z, Z.Z)],
+            applications: [...e, ...et(R.Z.finishedItems, !0, T.Z, L.Z)],
             paused: R.Z.paused,
             isFocused: O.Z.isFocused(),
             theme: v.Z.theme

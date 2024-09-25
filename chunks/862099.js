@@ -33,8 +33,8 @@ var i,
     N = n(938475),
     A = n(626135),
     v = n(823379),
-    L = n(15274),
-    Z = n(924301),
+    Z = n(15274),
+    L = n(924301),
     R = n(504160),
     O = n(151864),
     x = n(835184),
@@ -160,7 +160,7 @@ function V(e) {
 function F(e) {
     let { guildEvent: t, noticeType: n } = e,
         i = (0, j.DK)(t),
-        a = (0, c.e7)([Z.ZP], () => Z.ZP.isInterestedInEventRecurrence(t.id, i), [t.id, i]),
+        a = (0, c.e7)([L.ZP], () => L.ZP.isInterestedInEventRecurrence(t.id, i), [t.id, i]),
         r = (0, c.e7)([x.Z], () => x.Z.getUpcomingNoticeSeenTime(t.id), [t.id]);
     return (
         !a && null == r && (0, R._6)(t.id),
@@ -223,7 +223,7 @@ function Y(e) {
                     className: B.textBlock,
                     children: [
                         (0, s.jsx)(d.Clickable, {
-                            onClick: () => (0, L.bO)({ eventId: n.id }),
+                            onClick: () => (0, Z.bO)({ eventId: n.id }),
                             className: B.eventNameClickable,
                             children: (0, s.jsx)(d.Text, {
                                 color: 'header-primary',
@@ -322,7 +322,7 @@ function z(e) {
 function W(e) {
     let { guildEvent: t } = e,
         n = r.useCallback(() => {
-            (0, L.bO)({ eventId: t.id });
+            (0, Z.bO)({ eventId: t.id });
         }, [t]);
     return (0, s.jsx)(d.Button, {
         fullWidth: !0,

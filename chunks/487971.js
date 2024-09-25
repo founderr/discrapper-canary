@@ -29,13 +29,13 @@ let C = {
 function N(e) {
     let { recipientUser: t, giftIntentType: n, analyticsPage: s, shouldHighlight: N } = e,
         { analyticsLocations: A } = (0, d.ZP)(),
-        { isHovered: v, setIsHovered: L, onMouseEnter: Z, onMouseLeave: R } = (0, _.Z)(200, 300),
+        { isHovered: v, setIsHovered: Z, onMouseEnter: L, onMouseLeave: R } = (0, _.Z)(200, 300),
         { enableEmojiCTA: O } = h.w.useExperiment({ location: 'GiftIntentActionButton' }, { autoTrackExposure: !1 }),
         x = a.useCallback(
             (e) => {
-                'focus' !== e.type && Z();
+                'focus' !== e.type && L();
             },
-            [Z]
+            [L]
         ),
         b = (e) => {
             M(e, p.jXE.FRIENDS_LIST_FRIEND_ROW);
@@ -114,13 +114,13 @@ function N(e) {
         align: 'top',
         spacing: 9,
         onRequestClose: () => {
-            L(!1);
+            Z(!1);
         },
         renderPopout: (e) =>
             (0, i.jsx)(I.Z, {
                 giftIntentType: n,
                 recipientUser: t,
-                onMouseEnter: Z,
+                onMouseEnter: L,
                 onMouseLeave: R,
                 onClick: P,
                 popoutPosition: e.position

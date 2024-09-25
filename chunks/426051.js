@@ -40,8 +40,8 @@ function g(e) {
             onRejectSuccess: S,
             onError: T
         }),
-        L = N || A,
-        Z = L || v;
+        Z = N || A,
+        L = Z || v;
     return (0, i.jsxs)('div', {
         className: I.container,
         children: [
@@ -60,8 +60,8 @@ function g(e) {
                         onClick: (e) => {
                             C(g.id), e.stopPropagation();
                         },
-                        disabled: Z,
-                        submitting: L,
+                        disabled: L,
+                        submitting: Z,
                         children: m.Z.Messages.MESSAGE_REQUESTS_SPAM_ACCEPT
                     }),
                     (0, i.jsx)(h.Z, {

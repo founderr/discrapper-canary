@@ -120,7 +120,7 @@ let A = {
                 m = a.useMemo(() => !o()(E, h), [h, E]),
                 S = a.useCallback(() => {
                     var e;
-                    p.GN.getState().setSelectedGames(E.games), p.GN.getState().setSelectedPlaystyle(null !== (e = E.playstyle) && void 0 !== e ? e : null), p.GN.getState().setSelectedTraits(E.traits), (0, I.O)();
+                    p.GN.getState().setSelectedGames(E.games), p.GN.getState().setSelectedPlaystyle(null !== (e = E.playstyle) && void 0 !== e ? e : null), p.GN.getState().setSelectedTraits(E.traits), (0, I.Og)();
                 }, [E.games, E.playstyle, E.traits]),
                 f = a.useCallback(() => {
                     r(new Set(h.games)), c(h.playstyle), _(new Set(h.traits));
@@ -163,7 +163,7 @@ let A = {
             });
         }
     };
-function L(e) {
+function Z(e) {
     let { item: t, state: n, cleanUp: s } = e,
         r = a.useMemo(() => {
             let e = v[t];
@@ -182,12 +182,12 @@ function L(e) {
         children: r
     });
 }
-function Z(e) {
+function L(e) {
     return e;
 }
 function R(e, t, n, a) {
     return (0, i.jsx)(
-        L,
+        Z,
         {
             item: t,
             state: n,
@@ -202,6 +202,6 @@ t.Z = a.memo(function (e) {
     return (0, i.jsx)(u.TransitionGroup, {
         items: n,
         renderItem: R,
-        getItemKey: Z
+        getItemKey: L
     });
 });

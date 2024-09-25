@@ -25,7 +25,7 @@ function g(e) {
         { onClose: N } = p,
         A = null != g.button && '' !== g.button.copy ? g.button.copy : h.Z.Messages.BILLING_SUBSCRIBE_TO_PLAN,
         v = (null === (t = g.button) || void 0 === t ? void 0 : t.buttonAction) === s.Wc.OPEN_MARKETING_PAGE ? 'jump_to_mkt_button' : 'get_nitro_button',
-        L =
+        Z =
             (null === (n = g.button) || void 0 === n ? void 0 : n.buttonAction) === s.Wc.OPEN_MARKETING_PAGE
                 ? () => {
                       (0, o.uL)(E.Z5c.APPLICATION_STORE), N();
@@ -43,7 +43,7 @@ function g(e) {
                               e && N();
                           }
                       }),
-        Z =
+        L =
             '' !== g.helpArticleId
                 ? () =>
                       (0, i.jsx)(r.Anchor, {
@@ -82,7 +82,7 @@ function g(e) {
         header: g.header,
         modalTopExtra: x,
         subHeader: g.subheader,
-        subHeaderExtra: Z,
+        subHeaderExtra: L,
         body: g.body,
         heroArt: R,
         featureCards: g.featureCards.map((e) => ({
@@ -106,7 +106,7 @@ function g(e) {
                         seconds_open: Math.round((Date.now() - e) / 1000),
                         target: C
                     }),
-                        L();
+                        Z();
                 },
                 children: [
                     (0, i.jsx)('img', {

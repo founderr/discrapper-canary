@@ -36,8 +36,8 @@ function v(e) {
         s = (0, m.Wg)(),
         {
             progress: v,
-            errors: L,
-            submitting: Z
+            errors: Z,
+            submitting: L
         } = (0, c.cj)([m.ZP], () => {
             var e, n, i, a;
             return {
@@ -46,7 +46,7 @@ function v(e) {
                 submitting: null === (i = m.ZP.getStateForGuild(t)) || void 0 === i ? void 0 : i.submitting
             };
         }),
-        R = a.useMemo(() => (0, f.G)(L), [L]),
+        R = a.useMemo(() => (0, f.G)(Z), [Z]),
         [O, x] = a.useState(!1),
         [b, P] = a.useState(window.innerWidth),
         [M, D] = a.useState(1),
@@ -100,8 +100,8 @@ function v(e) {
             let e = (0, _.pP)((0, l.debounce)(() => P(window.innerWidth), 250));
             return (0, _.YP)(e, document.body), () => (0, _.UC)(e, document.body);
         }, [M, y]);
-    let V = a.useMemo(() => null != L && Object.values(L).some((e) => null != e), [L]),
-        F = a.useMemo(() => (null != L && Object.values(L).length > 0 ? (0, f.G)(L).find((e) => e.hasError) : null), [L]),
+    let V = a.useMemo(() => null != Z && Object.values(Z).some((e) => null != e), [Z]),
+        F = a.useMemo(() => (null != Z && Object.values(Z).length > 0 ? (0, f.G)(Z).find((e) => e.hasError) : null), [Z]),
         Y = a.useCallback(() => {
             D(1), E._9(t, { currentStep: null == F ? void 0 : F.index });
         }, [null == F ? void 0 : F.index, t]),
@@ -234,7 +234,7 @@ function v(e) {
                                         ...e,
                                         themeColor: v.brandPrimaryColor,
                                         disabled: !O || V,
-                                        submitting: Z,
+                                        submitting: L,
                                         look: d.Button.Looks.FILLED,
                                         size: d.Button.Sizes.MEDIUM,
                                         color: d.Button.Colors.BRAND,

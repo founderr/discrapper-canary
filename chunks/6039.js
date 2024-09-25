@@ -23,8 +23,8 @@ var i = n(735250),
 t.Z = (e) => {
     var t;
     let n, A;
-    let { guildId: v, inviteCode: L } = e,
-        [Z, R] = a.useState(f.hO.INITIAL),
+    let { guildId: v, inviteCode: Z } = e,
+        [L, R] = a.useState(f.hO.INITIAL),
         O = (0, s.e7)([h.Z], () => h.Z.get(v)),
         x = (0, s.e7)([I.Z], () => I.Z.getRequest(v)),
         b = (0, s.e7)([c.Z], () => c.Z.getGuild(v)),
@@ -50,7 +50,7 @@ t.Z = (e) => {
     let U =
             ((n = C.Z.Messages.MEMBER_VERIFICATION_WITHDRAW_APPLICATION_CONFIRMATION.format({ name: null == M ? void 0 : M.toString() })),
             (A = () => {
-                R(Math.max(Z, f.hO.FILLING)), _.Z.removeGuildJoinRequest(v), (0, o.uL)(S.Z5c.ME);
+                R(Math.max(L, f.hO.FILLING)), _.Z.removeGuildJoinRequest(v), (0, o.uL)(S.Z5c.ME);
             }),
             () => {
                 (0, r.openModal)((e) =>
@@ -81,7 +81,7 @@ t.Z = (e) => {
         children: (0, i.jsxs)(l.Z, {
             embedded: !0,
             splash: G,
-            waveState: Z,
+            waveState: L,
             showLogo: !1,
             updateWaveState: D,
             children: [
@@ -107,7 +107,7 @@ t.Z = (e) => {
                             default:
                                 return (0, i.jsx)(T.Z, {
                                     guildId: v,
-                                    inviteCode: L,
+                                    inviteCode: Z,
                                     onComplete: y,
                                     disableVerification: !0
                                 });

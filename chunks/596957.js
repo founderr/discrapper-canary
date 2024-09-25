@@ -22,8 +22,8 @@ var i = n(735250),
     N = n(163417),
     A = n(492347),
     v = n(42575),
-    L = n(617015),
-    Z = n(981631),
+    Z = n(617015),
+    L = n(981631),
     R = n(689938),
     O = n(522756);
 t.Z = function (e) {
@@ -34,7 +34,7 @@ t.Z = function (e) {
         D = (0, l.e7)([I.Z], () => I.Z.getRelationshipCount()),
         [y, j] = a.useState(() => {
             let e = {};
-            for (let t of Object.values(Z.pJs)) e[t] = '';
+            for (let t of Object.values(L.pJs)) e[t] = '';
             return e;
         }),
         U = () => {
@@ -58,7 +58,7 @@ t.Z = function (e) {
                 [t]: ''
             });
         }, [y, t]),
-        k = (0, m.A)({ location: 'people_list' }) && t === Z.pJs.PENDING && b.filter(Z.pJs.SPAM).length > 0,
+        k = (0, m.A)({ location: 'people_list' }) && t === L.pJs.PENDING && b.filter(L.pJs.SPAM).length > 0,
         B = b.filter(t, y[t]);
     if (0 === B.length && '' === y[t])
         return (0, i.jsx)('div', {
@@ -69,9 +69,9 @@ t.Z = function (e) {
                     type: t,
                     onClick: k
                         ? U
-                        : t !== Z.pJs.PENDING
+                        : t !== L.pJs.PENDING
                           ? () => {
-                                c.Z.setSection(Z.pJs.ADD_FRIEND);
+                                c.Z.setSection(L.pJs.ADD_FRIEND);
                             }
                           : void 0
                 },
@@ -80,12 +80,12 @@ t.Z = function (e) {
         });
     let H = [B],
         V = 0 === B.length && '' !== y[t],
-        F = B.filter((e) => e.type === Z.OGo.PENDING_INCOMING).length,
-        Y = t === Z.pJs.PENDING && F > 0 && F >= L.yf;
+        F = B.filter((e) => e.type === L.OGo.PENDING_INCOMING).length,
+        Y = t === L.pJs.PENDING && F > 0 && F >= Z.yf;
     return (0, i.jsx)(h.Gt, {
         value: x,
         children: (0, i.jsxs)(u.Z, {
-            section: Z.jXE.FRIENDS_LIST,
+            section: L.jXE.FRIENDS_LIST,
             children: [
                 (0, i.jsx)(o.SearchBar, {
                     className: r()(O.searchBar, V ? O.searchEmptyState : null),
@@ -101,13 +101,13 @@ t.Z = function (e) {
                             id: s,
                             title: (function (e, t) {
                                 switch (e) {
-                                    case Z.pJs.ONLINE:
+                                    case L.pJs.ONLINE:
                                         return R.Z.Messages.FRIENDS_ONLINE_HEADER.format({ online: t.toString() });
-                                    case Z.pJs.PENDING:
+                                    case L.pJs.PENDING:
                                         return R.Z.Messages.FRIENDS_PENDING_HEADER.format({ count: t.toString() });
-                                    case Z.pJs.SUGGESTIONS:
+                                    case L.pJs.SUGGESTIONS:
                                         return R.Z.Messages.FRIENDS_FRIEND_SUGGESTIONS_HEADER.format({ count: t.toString() });
-                                    case Z.pJs.BLOCKED:
+                                    case L.pJs.BLOCKED:
                                         return R.Z.Messages.FRIENDS_BLOCKED_HEADER.format({ count: t.toString() });
                                     default:
                                         return R.Z.Messages.FRIENDS_ALL_HEADER.format({ count: t.toString() });
@@ -138,23 +138,23 @@ t.Z = function (e) {
                           statusSections: H,
                           renderRow: function (e) {
                               switch (t) {
-                                  case Z.pJs.BLOCKED:
+                                  case L.pJs.BLOCKED:
                                       return (0, i.jsx)(T.Z, {
                                           ...e,
                                           isFocused: M
                                       });
-                                  case Z.pJs.PENDING:
+                                  case L.pJs.PENDING:
                                       return (0, i.jsx)(C.Z, {
                                           ...e,
                                           isFocused: M
                                       });
-                                  case Z.pJs.SUGGESTIONS:
+                                  case L.pJs.SUGGESTIONS:
                                       return (0, i.jsx)(v.Z, {
                                           ...e,
                                           isFocused: M
                                       });
-                                  case Z.pJs.ONLINE:
-                                  case Z.pJs.ALL:
+                                  case L.pJs.ONLINE:
+                                  case L.pJs.ALL:
                                   default:
                                       return (0, i.jsx)(S.Z, {
                                           ...e,

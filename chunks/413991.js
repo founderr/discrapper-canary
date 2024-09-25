@@ -16,8 +16,8 @@ function u(e) {
     let { type: t, style: u, label: d, placeholder: m, minLength: f, maxLength: _, required: p, value: C } = e,
         [h, I] = i.useState(null != C ? C : ''),
         {
-            state: x,
-            executeStateUpdate: E,
+            state: E,
+            executeStateUpdate: x,
             error: v
         } = (0, o.Ee)(
             e,
@@ -28,11 +28,11 @@ function u(e) {
                   }
                 : void 0
         ),
-        N = (0, s.hz)(e.id);
+        T = (0, s.hz)(e.id);
     i.useEffect(() => {
-        (null == x ? void 0 : x.type) === t && I(x.value);
-    }, [t, x]);
-    let T = {
+        (null == E ? void 0 : E.type) === t && I(E.value);
+    }, [t, E]);
+    let N = {
         name: d,
         value: h,
         placeholder: m,
@@ -41,21 +41,21 @@ function u(e) {
         required: p,
         onChange: (e) => {
             I(e),
-                E({
+                x({
                     type: t,
                     value: e
                 });
         },
-        autoFocus: N
+        autoFocus: T
     };
     switch (u) {
         case r.FO.SMALL:
-            n = (0, l.jsx)(a.TextInput, { ...T });
+            n = (0, l.jsx)(a.TextInput, { ...N });
             break;
         case r.FO.PARAGRAPH:
             n = (0, l.jsx)(a.TextArea, {
                 autosize: !0,
-                ...T
+                ...N
             });
     }
     return (0, l.jsx)(a.FormItem, {

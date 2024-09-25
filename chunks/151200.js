@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return x;
+        return E;
     }
 });
 var l = t(735250);
@@ -68,12 +68,12 @@ function I(e) {
         clickableClassName: C.clickable
     });
 }
-function x(e) {
-    let { entry: n, channel: t, title: i, subtitle: C, thumbnailUrl: x, titleClickable: E, subtitleClickable: v, thumbnailClickable: N, providerIconProps: T, style: b = {} } = e,
+function E(e) {
+    let { entry: n, channel: t, title: i, subtitle: C, thumbnailUrl: E, titleClickable: x, subtitleClickable: v, thumbnailClickable: T, providerIconProps: N, style: b = {} } = e,
         g = (0, m.Dt)(),
-        { primaryColor: S, secondaryColor: O } = (0, u.Z)(x);
+        { primaryColor: S, secondaryColor: O } = (0, u.Z)(E);
     return (
-        null != x && (b.background = 'linear-gradient(45deg, '.concat(S, ', ').concat(O, ')')),
+        null != E && (b.background = 'linear-gradient(45deg, '.concat(S, ', ').concat(O, ')')),
         (0, l.jsx)(r.ThemeProvider, {
             theme: f.BR.DARK,
             children: (e) =>
@@ -87,9 +87,9 @@ function x(e) {
                         (0, l.jsx)(h, {
                             className: p.thumbnailContainer,
                             clickableClassName: p.clickable,
-                            clickable: N,
+                            clickable: T,
                             children: (0, l.jsx)(s.f, {
-                                src: x,
+                                src: E,
                                 constrain: 'width',
                                 size: 64,
                                 'aria-hidden': !0
@@ -105,7 +105,7 @@ function x(e) {
                                 }),
                                 (0, l.jsx)(r.Spacer, { size: 2 }),
                                 (0, l.jsx)(I, {
-                                    clickable: E,
+                                    clickable: x,
                                     className: p.clickableText,
                                     children: (0, l.jsx)(r.Heading, {
                                         id: g,
@@ -143,7 +143,7 @@ function x(e) {
                         }),
                         (0, l.jsx)('div', {
                             className: p.headerIcons,
-                            children: null != T ? (0, l.jsx)(c.Z, { ...T }) : null
+                            children: null != N ? (0, l.jsx)(c.Z, { ...N }) : null
                         })
                     ]
                 })

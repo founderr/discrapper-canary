@@ -154,17 +154,17 @@ function C(e) {
                 e && (0, E.bO)();
             }, [e]);
         })();
-    let L = i.useMemo(() => {
+    let Z = i.useMemo(() => {
             var e;
             return null !== (e = t ? f : o[g]) && void 0 !== e ? e : [];
         }, [f, o, g, t]),
-        Z = (0, l.Wu)([_.Z], () => L.map((e) => _.Z.getGuildProfile(e)).filter(u.lm), [L]),
-        R = L.length === Z.length || t,
-        O = Z.length === s || R,
+        L = (0, l.Wu)([_.Z], () => Z.map((e) => _.Z.getGuildProfile(e)).filter(u.lm), [Z]),
+        R = Z.length === L.length || t,
+        O = L.length === s || R,
         x = (0, I.Pw)(A);
     return {
         loaded: e === a && x && O && !T,
-        clans: Z,
+        clans: L,
         searchCriteria: N,
         searchResult: A,
         hasError: v

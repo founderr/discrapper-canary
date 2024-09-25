@@ -113,20 +113,20 @@ function h(e) {
     });
 }
 function I(e) {
-    let { type: n, options: t, id: a, placeholder: r, maxValues: s, minValues: I, disabled: x } = e,
-        E = i.useMemo(() => t.filter((e) => e.default).map((e) => e.value), [t]),
+    let { type: n, options: t, id: a, placeholder: r, maxValues: s, minValues: I, disabled: E } = e,
+        x = i.useMemo(() => t.filter((e) => e.default).map((e) => e.value), [t]),
         {
             state: v,
-            executeStateUpdate: N,
-            visualState: T,
+            executeStateUpdate: T,
+            visualState: N,
             isDisabled: b,
             error: g
         } = (0, d.Ee)(e, {
             type: n,
-            values: E
+            values: x
         }),
         S = s > 1,
-        O = T === m.gH.LOADING,
+        O = N === m.gH.LOADING,
         [j, M] = i.useState(!1),
         [Z, y] = i.useState(() => new Set(t.filter((e) => e.default).map((e) => e.value))),
         [R, L] = i.useState(Z),
@@ -136,23 +136,23 @@ function I(e) {
             let e = new Set(v.values);
             y(e), L(e);
         } else {
-            let e = new Set(E);
+            let e = new Set(x);
             y(e), L(e);
         }
-    }, [a, E, v]);
+    }, [a, x, v]);
     let A = i.useCallback(() => {
         if (R !== Z)
-            N({
+            T({
                 type: c.re.STRING_SELECT,
                 values: Array.from(Z)
             }) && L(Z);
-    }, [Z, R, L, N]);
+    }, [Z, R, L, T]);
     i.useEffect(() => {
         if (!(j || (Z.size === R.size && Array.from(R).every((e) => Z.has(e))))) A();
     }, [j, Z, R, A]);
     let k = o.singleSelect;
     S ? (k = o.multiSelect) : 0 === I && (k = o.toggleSelect);
-    let B = (0, o.useVariableSelect)({
+    let U = (0, o.useVariableSelect)({
         value: Z,
         onChange: (e) => y(e),
         onSelectInteraction: k
@@ -163,7 +163,7 @@ function I(e) {
                 className: _.container,
                 children: [
                     (0, l.jsx)(o.Select, {
-                        isDisabled: x || b,
+                        isDisabled: E || b,
                         className: _.select,
                         options: t.map((e) => ({
                             ...e,
@@ -182,7 +182,7 @@ function I(e) {
                                 isOffset: P
                             }),
                         renderOptionValue: (e) => (S ? (0, l.jsx)(h, { options: e }) : (0, l.jsx)(C, { ...e[0] })),
-                        ...B
+                        ...U
                     }),
                     O
                         ? (0, l.jsx)('div', {

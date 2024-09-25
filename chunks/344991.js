@@ -34,8 +34,8 @@ function h(e) {
 }
 function I(e) {
     let { selectActionComponent: n, queryOptions: t, renderIcon: l, renderOptionLabel: i, defaultValues: o } = e,
-        { type: I, placeholder: x, maxValues: E, disabled: v } = n,
-        [N, T] = r.useState(!1),
+        { type: I, placeholder: E, maxValues: x, disabled: v } = n,
+        [T, N] = r.useState(!1),
         [b, g] = r.useState(!1),
         [S, O] = r.useState(new Map(null == o ? void 0 : o.map((e) => [e.value, e]))),
         [j, M] = r.useState(new Set(S.keys())),
@@ -52,39 +52,39 @@ function I(e) {
             state: P,
             executeStateUpdate: A,
             visualState: k,
-            isDisabled: B,
-            error: U
+            isDisabled: U,
+            error: B
         } = (0, m.Ee)(n, {
             type: I,
             selectedOptions: Array.from(S.values())
         }),
-        G = k === f.gH.LOADING;
+        w = k === f.gH.LOADING;
     r.useEffect(() => {
         if ((null == P ? void 0 : P.type) === u.re.USER_SELECT || (null == P ? void 0 : P.type) === u.re.ROLE_SELECT || (null == P ? void 0 : P.type) === u.re.MENTIONABLE_SELECT || (null == P ? void 0 : P.type) === u.re.CHANNEL_SELECT) {
             let e = new Map(P.selectedOptions.map((e) => [e.value, e]));
             O(e), M(new Set(e.keys()));
         }
     }, [P]);
-    let w = r.useCallback(() => {
+    let G = r.useCallback(() => {
         A({
             type: I,
             selectedOptions: Array.from(S.values())
         }) && M(new Set(S.keys()));
     }, [A, I, S]);
     r.useEffect(() => {
-        if (!(N || b || (S.size === j.size && Array.from(S.keys()).every((e) => j.has(e))))) w();
-    }, [N, b, j, S, w]);
-    let D = 0 === S.size || N,
+        if (!(T || b || (S.size === j.size && Array.from(S.keys()).every((e) => j.has(e))))) G();
+    }, [T, b, j, S, G]);
+    let D = 0 === S.size || T,
         V = {
-            isDisabled: v || B,
+            isDisabled: v || U,
             wrapperClassName: p.select,
             options: (e) =>
                 new Promise((n) => {
                     n(t(e));
                 }),
-            placeholder: D ? (null != x ? x : _.Z.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER) : void 0,
-            onClose: () => T(!1),
-            onOpen: () => T(!0),
+            placeholder: D ? (null != E ? E : _.Z.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER) : void 0,
+            onClose: () => N(!1),
+            onOpen: () => N(!0),
             onBlur: () => g(!1),
             maxVisibleItems: 5,
             optionClassName: p.__invalid_selectOption,
@@ -106,14 +106,14 @@ function I(e) {
             (0, a.jsxs)('div', {
                 className: p.container,
                 children: [
-                    E > 1
+                    x > 1
                         ? (0, a.jsx)(
                               c.SearchableSelect,
                               {
                                   className: p.badges,
                                   value: Array.from(S.values()),
                                   onChange: (e) => {
-                                      !N && g(!0), O(new Map(e.map((e) => [e.value, e])));
+                                      !T && g(!0), O(new Map(e.map((e) => [e.value, e])));
                                   },
                                   multi: !0,
                                   inputClassNames: s()({
@@ -139,7 +139,7 @@ function I(e) {
                               },
                               R
                           ),
-                    G
+                    w
                         ? (0, a.jsx)('div', {
                               className: p.loading,
                               children: (0, a.jsx)(c.Dots, {
@@ -150,9 +150,9 @@ function I(e) {
                         : null
                 ]
             }),
-            null != U
+            null != B
                 ? (0, a.jsx)(d.st, {
-                      ...(0, d.c4)(U),
+                      ...(0, d.c4)(B),
                       className: C.error
                   })
                 : null

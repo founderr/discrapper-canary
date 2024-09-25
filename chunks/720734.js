@@ -28,8 +28,8 @@ var i = n(735250),
     N = n(906732),
     A = n(676742),
     v = n(1585),
-    L = n(304761),
-    Z = n(865427),
+    Z = n(304761),
+    L = n(865427),
     R = n(571250),
     O = n(628581),
     x = n(55311),
@@ -82,7 +82,7 @@ var i = n(735250),
     eN = n(215023),
     eA = n(689938),
     ev = n(59923);
-function eL(e, t, n) {
+function eZ(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -95,7 +95,7 @@ function eL(e, t, n) {
         e
     );
 }
-let eZ = ep.ZP.getEnableHardwareAcceleration() ? E.AnimatedAvatar : E.Avatar,
+let eL = ep.ZP.getEnableHardwareAcceleration() ? E.AnimatedAvatar : E.Avatar,
     eR = 30 * eh.Z.Millis.DAY;
 function eO(e) {
     let { speaking: t, streaming: n, currentUser: a, status: s, handleMouseLeave: l, renderNameTag: o } = e,
@@ -138,7 +138,7 @@ function eO(e) {
                           'aria-label': eA.Z.Messages.SET_STATUS,
                           className: ev.avatarWrapper,
                           children: [
-                              (0, i.jsx)(eZ, {
+                              (0, i.jsx)(eL, {
                                   size: E.AvatarSizes.SIZE_32,
                                   src: a.getAvatarURL(void 0, 32, !1),
                                   avatarDecoration: d,
@@ -339,10 +339,10 @@ class ex extends a.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            eL(this, 'copiedTimeout', new c.V7()),
-            eL(this, 'copiedDecayTimeout', new c.V7()),
-            eL(this, 'speakingWhileMutedTooltipTimeout', new c.V7()),
-            eL(this, 'state', {
+            eZ(this, 'copiedTimeout', new c.V7()),
+            eZ(this, 'copiedDecayTimeout', new c.V7()),
+            eZ(this, 'speakingWhileMutedTooltipTimeout', new c.V7()),
+            eZ(this, 'state', {
                 hovered: !1,
                 copiedStreak: 0,
                 shouldShowNametagTooltip: !1,
@@ -350,24 +350,24 @@ class ex extends a.PureComponent {
                 shouldShowSpeakingWhileMutedTooltip: !1,
                 hoveringOnMute: !1
             }),
-            eL(this, 'handleToggleSelfMute', () => {
+            eZ(this, 'handleToggleSelfMute', () => {
                 let { serverMute: e, suppress: t } = this.props;
                 (0, b.Z)(e, t, eC.jXE.ACCOUNT_PANEL);
             }),
-            eL(this, 'handleToggleSelfDeaf', () => {
+            eZ(this, 'handleToggleSelfDeaf', () => {
                 let { serverDeaf: e } = this.props;
                 (0, x.Z)(e);
             }),
-            eL(this, 'handleOpenAccountSettings', () => {
+            eZ(this, 'handleOpenAccountSettings', () => {
                 this.handleOpenSettings();
             }),
-            eL(this, 'handleOpenSettings', function () {
+            eZ(this, 'handleOpenSettings', function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : eC.oAB.ACCOUNT,
                     t = arguments.length > 1 ? arguments[1] : void 0,
                     n = arguments.length > 2 ? arguments[2] : void 0;
                 I.Z.open(e, t, n);
             }),
-            eL(this, 'handleOpenSettingsContextMenu', (e) => {
+            eZ(this, 'handleOpenSettingsContextMenu', (e) => {
                 let { currentUser: t } = this.props;
                 null != t &&
                     (0, m.jW)(e, async () => {
@@ -381,7 +381,7 @@ class ex extends a.PureComponent {
                             });
                     });
             }),
-            eL(this, 'handleInputAudioContextMenu', (e, t) => {
+            eZ(this, 'handleInputAudioContextMenu', (e, t) => {
                 (0, m.jW)(e, async () => {
                     let { default: e } = await Promise.resolve().then(n.bind(n, 659580));
                     return () =>
@@ -396,7 +396,7 @@ class ex extends a.PureComponent {
                         });
                 });
             }),
-            eL(this, 'handleOutputAudioContextMenu', (e, t) => {
+            eZ(this, 'handleOutputAudioContextMenu', (e, t) => {
                 (0, m.jW)(e, async () => {
                     let { default: e } = await Promise.resolve().then(n.bind(n, 659580));
                     return () =>
@@ -410,23 +410,23 @@ class ex extends a.PureComponent {
                         });
                 });
             }),
-            eL(this, 'handleMouseEnter', () => {
+            eZ(this, 'handleMouseEnter', () => {
                 this.setState({ hovered: !0 });
             }),
-            eL(this, 'handleMouseLeave', () => {
+            eZ(this, 'handleMouseLeave', () => {
                 this.setState({ hovered: !1 });
             }),
-            eL(this, 'handleMouseEnterMute', () => {
+            eZ(this, 'handleMouseEnterMute', () => {
                 this.setState({
                     hoveringOnMute: !0,
                     shouldShowSpeakingWhileMutedTooltip: !1
                 }),
                     this.speakingWhileMutedTooltipTimeout.stop();
             }),
-            eL(this, 'handleMouseLeaveMute', () => {
+            eZ(this, 'handleMouseLeaveMute', () => {
                 this.setState({ hoveringOnMute: !1 });
             }),
-            eL(this, 'handleCopyTag', () => {
+            eZ(this, 'handleCopyTag', () => {
                 let { currentUser: e } = this.props,
                     { shouldShowNametagTooltip: t, copiedStreak: n } = this.state;
                 if (null == e) return;
@@ -446,7 +446,7 @@ class ex extends a.PureComponent {
                         this.copiedTimeout.start(1000, () => this.setState({ shouldShowNametagTooltip: !1 })), this.copiedDecayTimeout.start(2000, () => this.setState({ copiedStreak: 0 }));
                     });
             }),
-            eL(this, 'handleOccludedChanged', () => {
+            eZ(this, 'handleOccludedChanged', () => {
                 let { occluded: e } = this.props;
                 e &&
                     this.setState({
@@ -454,7 +454,7 @@ class ex extends a.PureComponent {
                         shouldShowSpeakingWhileMutedTooltip: !1
                     });
             }),
-            eL(this, 'handleSpeakingWhileMutedChanged', () => {
+            eZ(this, 'handleSpeakingWhileMutedChanged', () => {
                 let { selfMute: e, serverMute: t, suppress: n, speakingWhileMuted: i, occluded: a } = this.props,
                     { hoveringOnMute: s } = this.state;
                 i
@@ -468,7 +468,7 @@ class ex extends a.PureComponent {
                       })
                     : (this.setState({ shouldShowSpeakingWhileMutedTooltip: !1 }), this.speakingWhileMutedTooltipTimeout.stop());
             }),
-            eL(this, 'renderSettingsGear', () =>
+            eZ(this, 'renderSettingsGear', () =>
                 (0, i.jsx)(eP, {
                     isEligibleForPomelo: this.props.isEligibleForPomelo,
                     webBuildOverride: this.props.webBuildOverride,
@@ -496,9 +496,9 @@ function eb() {
         }),
         { mute: I, selfMute: g, suppress: f } = (0, et.Z)(m),
         { selfDeaf: A, deaf: v } = (0, ee.Z)(m),
-        R = (0, l.e7)([L.C], () => {
+        R = (0, l.e7)([Z.C], () => {
             var e;
-            return (0, Z.fD)() ? (null === (e = L.C.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web) : null;
+            return (0, L.fD)() ? (null === (e = Z.C.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web) : null;
         }),
         O = (0, l.e7)([ed.ZP], () => ed.ZP.getPremiumTypeSubscription()),
         x = (0, l.e7)([es.Z], () => es.Z.getEverSpeakingWhileMuted()),

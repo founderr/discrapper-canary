@@ -20,23 +20,23 @@ var i = t(442837),
 function C(e) {
     let { message: n } = (0, _.CJ)(),
         t = (0, i.e7)([d.Z], () => d.Z.getChannel(null == n ? void 0 : n.channel_id)),
-        { shouldHideMediaOptions: C, shouldRedactExplicitContent: h, gifAutoPlay: I, getGifFavButton: x, getOnMediaItemContextMenu: E } = (0, s.c)();
+        { shouldHideMediaOptions: C, shouldRedactExplicitContent: h, gifAutoPlay: I, getGifFavButton: E, getOnMediaItemContextMenu: x } = (0, s.c)();
     if (null == n || null == t) return null;
     let v = e.items.map((e) => (0, u.j0)(e.media, p.VqG, C, h)).filter(f.lm),
-        N = {
+        T = {
             source: 'Media Mosaic',
             guild_id: t.guild_id,
             channel_id: t.id,
             channel_type: t.type
         },
-        T = v.length > 1 ? (0, u.Cx)(v, N) : {};
+        N = v.length > 1 ? (0, u.Cx)(v, T) : {};
     function b(e, n) {
         let t = e.originalItem;
         return (0, a.lK)(t.media, n, t.spoiler);
     }
     let g = e.items.map((e) => {
         let t = e.media,
-            l = null == E ? void 0 : E(t),
+            l = null == x ? void 0 : x(t),
             i = {
                 message: n,
                 item: {
@@ -58,7 +58,7 @@ function C(e) {
                 renderPlaintextFilePreview: p.dG4,
                 renderGenericFileComponent: p.dG4,
                 renderMosaicItemFooter: p.dG4,
-                gifFavoriteButton: x(t),
+                gifFavoriteButton: E(t),
                 onPlay: (e, n, t) => {},
                 canRemoveItem: !1,
                 onRemoveItem: p.dG4
@@ -67,7 +67,7 @@ function C(e) {
                 proxyURL: t.proxyUrl,
                 url: t.url
             });
-        return a in T && (i.onClick = T[a]), i;
+        return a in N && (i.onClick = N[a]), i;
     });
     return (0, l.jsx)('div', { children: (0, l.jsx)(c.Z, { items: g }) });
 }

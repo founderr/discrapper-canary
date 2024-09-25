@@ -28,8 +28,8 @@ var r = n(91192),
     N = n(655525),
     A = n(314684),
     v = n(52188),
-    L = n(248042),
-    Z = n(924540),
+    Z = n(248042),
+    L = n(924540),
     R = n(649765),
     O = n(565626),
     x = n(976465),
@@ -57,7 +57,7 @@ let B = (e) => {
         q = (0, f.Ng)(),
         Q = (0, l.e7)([I.ZP], () => I.ZP.inReverseTrial()),
         X = (0, l.e7)([m.Z], () => m.Z.isLocalizedPromoEnabled) && null == K,
-        J = (0, L.Vi)(),
+        J = (0, Z.Vi)(),
         $ = (0, O.ZP)(),
         ee = (0, A.$_)(),
         et = (0, x.V6)(),
@@ -91,7 +91,7 @@ let B = (e) => {
                   : $
                     ? ((n = (0, s.jsx)(b.Z, {})), (i = 2))
                     : null != q
-                      ? ((n = (0, s.jsx)(Z.GN, {
+                      ? ((n = (0, s.jsx)(L.GN, {
                             userDiscount: q,
                             isTabSelected: a,
                             includesAmountOff: !1
@@ -105,7 +105,7 @@ let B = (e) => {
                               })),
                               (i = 6))
                             : X && ((n = (0, s.jsx)(v.k, { entryPoint: v.U.PrivateMessages })), !a && (t = G.localizeBadge), (i = 5))
-                        : ((n = (0, s.jsx)(Z.$H, {
+                        : ((n = (0, s.jsx)(L.$H, {
                               trialOffer: K,
                               isTabSelected: a
                           })),

@@ -64,7 +64,7 @@ let o = {
     USER_MESSAGE: new Set([0, 19, 20, 23, 26, 35, 41, 45, 47]),
     REPLYABLE: new Set([0, 7, 19, 20, 23, 24, 25, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 45, 46]),
     FORWARDABLE: new Set([0, 19, 20, 23]),
-    REFERENCED_MESSAGE_AVAILABLE: new Set([19, 21]),
+    REFERENCED_MESSAGE_AVAILABLE: new Set([19, 21, 23]),
     AVAILABLE_IN_GUILD_FEED: new Set([0, 19]),
     DEADCHAT_PROMPTS: new Set([40, 42]),
     NON_COLLAPSIBLE: new Set([24]),

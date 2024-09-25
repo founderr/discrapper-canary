@@ -27,8 +27,8 @@ var i = n(735250),
     N = n(522558),
     A = n(457396),
     v = n(108989),
-    L = n(51596),
-    Z = n(905423),
+    Z = n(51596),
+    L = n(905423),
     R = n(155409),
     O = n(210887),
     x = n(695346),
@@ -176,7 +176,7 @@ let F = (e) => {
                     }
                 });
     },
-    Q = () => (0, L.$Z)('DM_SEARCH');
+    Q = () => (0, Z.$Z)('DM_SEARCH');
 function X(e) {
     switch (e) {
         case k.Z5c.APPLICATION_LIBRARY:
@@ -191,7 +191,7 @@ function X(e) {
 }
 let J = (e) => {
     let { showLibrary: t, hasLibraryApplication: n, homeLink: a, storeLink: s, premiumTabSelected: o } = e,
-        [d, u] = (0, Z.Z)((e) => {
+        [d, u] = (0, L.Z)((e) => {
             let { channelId: t, path: n } = e;
             return [t, n];
         }, l.Z);

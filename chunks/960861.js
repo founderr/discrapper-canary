@@ -45,7 +45,7 @@ function w() {
     let e = b() && (A > 0 || (h && 0 === C));
     if (e !== I) {
         var t, n;
-        !(I = e) && (0, R.t)(), null === (n = S.Z.getMediaEngine()) || void 0 === n || null === (t = n.setNativeDesktopVideoSourcePickerActive) || void 0 === t || t.call(n, I);
+        (I = e), null === (n = S.Z.getMediaEngine()) || void 0 === n || null === (t = n.setNativeDesktopVideoSourcePickerActive) || void 0 === t || t.call(n, I);
     }
 }
 function T() {
@@ -54,7 +54,7 @@ function T() {
             C++,
             w(),
             () => {
-                0 == --C && ((0, R.t)(), w());
+                0 == --C && w();
             }
         ),
         []

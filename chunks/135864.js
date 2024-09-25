@@ -33,7 +33,7 @@ function f(e) {
                 })(t),
             [t]
         ),
-        u = a.useMemo(() => (0, m.s)(t), [t]),
+        u = a.useMemo(() => (0, m.sm)(t), [t]),
         T = a.useCallback(() => {
             switch (((0, c.j)(() => h.d.setState({ selectedTab: t })), t)) {
                 case I.F$.QUESTS:

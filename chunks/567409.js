@@ -8,8 +8,8 @@ var a = t(470079),
     r = t(392711),
     s = t.n(r),
     o = t(876215),
-    l = t(442837),
-    i = t(146282),
+    i = t(442837),
+    l = t(146282),
     c = t(897674),
     d = t(709054),
     u = t(206583);
@@ -29,7 +29,7 @@ function I() {
             [e, n]
         );
     return {
-        requestId: (0, l.e7)([i.Z], () => i.Z.getFeedRequestId(u.YN.GAME_PROFILE_FEED)),
+        requestId: (0, i.e7)([l.Z], () => l.Z.getFeedRequestId(u.YN.GAME_PROFILE_FEED)),
         entries: t
     };
 }

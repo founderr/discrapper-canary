@@ -80,7 +80,7 @@ function d(e, t) {
     return function () {
         for (var t = arguments.length, u = Array(t), d = 0; d < t; d++) u[d] = arguments[d];
         let _ = (0, r.useMemo)(() => o(...u), u),
-            E = s([e], () => n(...u), u),
+            E = s(Array.isArray(e) ? e : [e], () => n(...u), u),
             [f, h] = (0, r.useState)(),
             p = !0 === c.getState(_).isLoading,
             I = (0, r.useRef)(u),

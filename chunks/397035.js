@@ -21,15 +21,15 @@ function d(e) {
         C = t.extra.media_subtitle,
         h = (0, o.kr)(t) && !(0, o.n2)(t) ? u.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHING_V2 : u.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHED_V2,
         I = { type: s.kG.CRUNCHYROLL },
-        x = l.useMemo(() => {
+        E = l.useMemo(() => {
             if (null == t.extra.url) return;
             let e = r.Z.safeParseWithQuery(t.extra.url);
             if (null != e && null != e.protocol && null != e.hostname) return e;
         }, [t.extra.url]);
     return (
-        null != x &&
+        null != E &&
             (n = {
-                href: r.Z.format(x),
+                href: r.Z.format(E),
                 ariaDescription: u.Z.Messages.CONTENT_INVENTORY_OPEN_CRUNCHYROLL_ITEM_A11Y_DESCRIPTION.format({ title: p })
             }),
         {

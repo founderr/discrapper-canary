@@ -1,13 +1,13 @@
 t.d(n, {
     i: function () {
-        return l;
+        return i;
     }
 });
 var a = t(544891),
     r = t(570140),
     s = t(881052),
     o = t(981631);
-let l = async (e) => {
+let i = async (e) => {
     try {
         var n;
         let t = await a.tn.get({ url: o.ANM.SIMILAR_GAMES(e) }),

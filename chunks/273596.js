@@ -28,8 +28,8 @@ var i = n(735250),
     N = n(689938),
     A = n(179596);
 let v = 56,
-    L = 94,
-    Z = Object.freeze({
+    Z = 94,
+    L = Object.freeze({
         top: 0,
         bottom: 0,
         left: 32,
@@ -130,7 +130,7 @@ function x(e) {
             (e) => {
                 switch (e) {
                     case 0:
-                        let t = U ? v : L;
+                        let t = U ? v : Z;
                         return q ? t + 400 : t;
                     case 1:
                         return 120;
@@ -232,7 +232,7 @@ function x(e) {
                 ),
             [P]
         ),
-        ei = U ? Z : R;
+        ei = U ? L : R;
     return (0, i.jsxs)('div', {
         className: A.container,
         ref: Y,

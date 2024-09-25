@@ -21,8 +21,8 @@ var i = n(735250),
     N = n(981631),
     A = n(46140),
     v = n(689938),
-    L = n(1836);
-let Z = (e) => {
+    Z = n(1836);
+let L = (e) => {
     switch (e) {
         case C.Gj.Activity:
             return C.fW.Activity;
@@ -55,7 +55,7 @@ t.Z = function () {
                 ? void 0
                 : O.map((e) => ({
                       ...e,
-                      icon: Z(e.categoryId)
+                      icon: L(e.categoryId)
                   })),
         b = (e) => {
             (0, c.uY)(e, !0), E.Z.closeSidebar(), t && (0, c.AQ)(), (0, h.OG)() && e !== C.Gj.Quests && (0, r.uL)(N.Z5c.GUILD_DISCOVERY), !(0, h.OG)() && e === C.Gj.Quests && (0, I.navigateToQuestHome)(A.dr.DISCOVERY_SIDEBAR, s.j.DISCOVERY_SIDEBAR);
@@ -85,9 +85,9 @@ t.Z = function () {
                         onClick: () => b(C.Gj.Clans),
                         wrapContent: !0,
                         selected: e === C.Gj.Clans,
-                        className: L.categoryItem,
-                        selectedClassName: L.selectedCategoryItem,
-                        innerClassName: L.itemInner
+                        className: Z.categoryItem,
+                        selectedClassName: Z.selectedCategoryItem,
+                        innerClassName: Z.itemInner
                     },
                     'clan-discovery-home'
                 ),

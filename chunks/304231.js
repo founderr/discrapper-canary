@@ -63,11 +63,11 @@ t.Z = a.memo(function (e) {
         u = a.useRef(null),
         h = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
         [N, A] = a.useState(0),
-        [v, L] = a.useState(0),
-        Z = (0, m.GN)((e) => e.selectedPlaystyle, r.Z),
+        [v, Z] = a.useState(0),
+        L = (0, m.GN)((e) => e.selectedPlaystyle, r.Z),
         R = a.useCallback(
             (e) => {
-                A(e), v < e && L(e);
+                A(e), v < e && Z(e);
             },
             [v]
         ),
@@ -77,7 +77,7 @@ t.Z = a.memo(function (e) {
         x = a.useCallback(() => {
             2 === N ? t() : R(N + 1);
         }, [N, R, t]),
-        b = a.useMemo(() => 1 === N && null == Z, [Z, N]),
+        b = a.useMemo(() => 1 === N && null == L, [L, N]),
         P = a.useMemo(
             () => [
                 {

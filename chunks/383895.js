@@ -2,8 +2,8 @@ var a = t(735250),
     r = t(470079),
     s = t(120356),
     o = t.n(s),
-    l = t(442837),
-    i = t(481060),
+    i = t(442837),
+    l = t(481060),
     c = t(178762),
     d = t(91140),
     u = t(297781),
@@ -17,9 +17,9 @@ var a = t(735250),
     O = t(51527);
 n.Z = (e) => {
     let { entry: n, viewId: t, officialGuildId: s, onClose: R } = e,
-        g = (0, l.e7)([E.Z, _.Z], () => _.Z.getChannel(E.Z.getChannelId())),
-        N = (0, l.e7)([I.default], () => I.default.getUser(n.author_id)),
-        { nick: P, avatar: h } = r.useMemo(() => {
+        g = (0, i.e7)([E.Z, _.Z], () => _.Z.getChannel(E.Z.getChannelId())),
+        N = (0, i.e7)([I.default], () => I.default.getUser(n.author_id)),
+        { nick: h, avatar: P } = r.useMemo(() => {
             let e = null == N ? void 0 : N.getAvatarURL(null == g ? void 0 : g.guild_id, 48, !1);
             return {
                 nick: A.ZP.getName(null == g ? void 0 : g.guild_id, null == g ? void 0 : g.id, N),
@@ -28,7 +28,7 @@ n.Z = (e) => {
         }, [N, g]);
     return null == N
         ? null
-        : (0, a.jsx)(i.Popout, {
+        : (0, a.jsx)(l.Popout, {
               position: 'right',
               renderPopout: (e) => {
                   let { closePopout: r, updatePosition: o } = e;
@@ -64,10 +64,10 @@ n.Z = (e) => {
                   });
               },
               children: (e) =>
-                  (0, a.jsx)(i.Clickable, {
+                  (0, a.jsx)(l.Clickable, {
                       ...e,
                       className: T.profileEntryCard,
-                      children: (0, a.jsx)(i.FocusRing, {
+                      children: (0, a.jsx)(l.FocusRing, {
                           offset: {
                               top: 4,
                               bottom: 4,
@@ -78,19 +78,19 @@ n.Z = (e) => {
                               children: [
                                   (0, a.jsx)('img', {
                                       className: T.avatar,
-                                      src: h,
-                                      alt: m.Z.Messages.GAME_PROFILE_USER_AVATAR_ALT.format({ userName: P })
+                                      src: P,
+                                      alt: m.Z.Messages.GAME_PROFILE_USER_AVATAR_ALT.format({ userName: h })
                                   }),
                                   (0, a.jsx)('div', {
                                       className: o()(T.playerInfo),
                                       children: (0, a.jsxs)('div', {
                                           className: o()(O.column, O.gapXs),
                                           children: [
-                                              (0, a.jsx)(i.Text, {
+                                              (0, a.jsx)(l.Text, {
                                                   variant: 'text-md/medium',
                                                   color: 'text-primary',
                                                   lineClamp: 1,
-                                                  children: P
+                                                  children: h
                                               }),
                                               (0, a.jsx)(u.Gk, {
                                                   location: u.Gt.GAME_PROFILE,
@@ -101,7 +101,7 @@ n.Z = (e) => {
                                   }),
                                   (0, a.jsx)('div', {
                                       className: T.reactions,
-                                      children: (0, a.jsx)(i.ArrowAngleLeftUpIcon, {})
+                                      children: (0, a.jsx)(l.ArrowAngleLeftUpIcon, {})
                                   })
                               ]
                           })

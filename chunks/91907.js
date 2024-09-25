@@ -1,19 +1,19 @@
 t.d(n, {
     Z: function () {
-        return i;
+        return l;
     }
 });
 var a = t(735250),
     r = t(470079),
     s = t(793030),
     o = t(256139),
-    l = t(866040);
-function i(e) {
-    let { user: n, text: t, channel: i, textClassName: c, onPopoutClosed: d } = e,
+    i = t(866040);
+function l(e) {
+    let { user: n, text: t, channel: l, textClassName: c, onPopoutClosed: d } = e,
         u = (0, r.useMemo)(() => [n], [n]);
-    return (0, a.jsx)(l.Z, {
+    return (0, a.jsx)(i.Z, {
         participants: u,
-        channel: i,
+        channel: l,
         onPopoutClosed: d,
         children: (e) =>
             (0, a.jsx)(o.Z, {
