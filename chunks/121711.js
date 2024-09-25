@@ -21,10 +21,10 @@ var i = n(735250),
     N = n(46140),
     A = n(981631),
     v = n(689938),
-    L = n(431418);
+    Z = n(431418);
 t.Z = function () {
     let { tabs: e, selectedTab: t, onSelectTab: n } = (0, C.z)(),
-        { onScroll: Z, scrollPosition: R } = (0, c.M)(),
+        { onScroll: L, scrollPosition: R } = (0, c.M)(),
         O = T.Z.getState().getUtmCurrentContext(),
         x = (0, p._)({ location: N.dr.QUEST_HOME_DESKTOP }) ? f.Z : f.j;
     a.useEffect(() => {
@@ -43,43 +43,42 @@ t.Z = function () {
     let b = a.useCallback(() => {
         window.open(I.Z.getArticleURL(A.BhN.QUESTS_LEARN_MORE));
     }, []);
-    return (
-        (0, o.Tt)({ location: v.Z.Messages.QUESTS }),
-        (0, i.jsxs)('div', {
-            className: L.container,
-            children: [
-                (0, i.jsxs)(E.ZP, {
-                    children: [
-                        (0, i.jsx)('div', { className: L.dragRegion }),
-                        (0, i.jsx)(E.z6, { scrollPosition: R }),
-                        (0, i.jsx)(E.aV, { icon: r.QuestsIcon }),
-                        (0, i.jsx)(h.Z, {
-                            tabs: e,
-                            selectedTab: t,
-                            onTabSelect: n
-                        })
-                    ]
-                }),
-                (0, i.jsxs)(m.Z, {
-                    onScroll: Z,
-                    children: [
-                        (0, i.jsx)(u.Z, {
-                            title: v.Z.Messages.QUESTS_HOME_HERO_TITLE,
-                            description: v.Z.Messages.QUESTS_HOME_HERO_DESCRIPTION,
-                            button: (0, i.jsx)(d.u, {
-                                text: v.Z.Messages.LEARN_MORE,
-                                onClick: b
-                            }),
-                            className: L.bannerContainer,
-                            children: (0, i.jsx)('div', {
-                                className: L.bannerImage,
-                                children: (0, i.jsx)('div', { className: L.bannerGradient })
-                            })
+    (0, o.Tt)({ location: v.Z.Messages.QUESTS });
+    let P = a.useMemo(() => [v.Z.Messages.QUESTS_HOME_PART_ONE, v.Z.Messages.QUESTS_HOME_PART_TWO], []);
+    return (0, i.jsxs)('div', {
+        className: Z.container,
+        children: [
+            (0, i.jsxs)(E.ZP, {
+                children: [
+                    (0, i.jsx)('div', { className: Z.dragRegion }),
+                    (0, i.jsx)(E.z6, { scrollPosition: R }),
+                    (0, i.jsx)(E.aV, { icon: r.QuestsIcon }),
+                    (0, i.jsx)(h.Z, {
+                        tabs: e,
+                        selectedTab: t,
+                        onTabSelect: n
+                    })
+                ]
+            }),
+            (0, i.jsxs)(m.Z, {
+                onScroll: L,
+                children: [
+                    (0, i.jsx)(u.Z, {
+                        title: P,
+                        description: v.Z.Messages.QUESTS_HOME_HERO_DESCRIPTION,
+                        button: (0, i.jsx)(d.u, {
+                            text: v.Z.Messages.LEARN_MORE,
+                            onClick: b
                         }),
-                        (0, i.jsx)(_.Z, { children: t === g.e5.CLAIMED ? (0, i.jsx)(x, { onSelectTab: n }) : (0, i.jsx)(S.Z, {}) })
-                    ]
-                })
-            ]
-        })
-    );
+                        className: Z.bannerContainer,
+                        children: (0, i.jsx)('div', {
+                            className: Z.bannerImage,
+                            children: (0, i.jsx)('div', { className: Z.bannerGradient })
+                        })
+                    }),
+                    (0, i.jsx)(_.Z, { children: t === g.e5.CLAIMED ? (0, i.jsx)(x, { onSelectTab: n }) : (0, i.jsx)(S.Z, {}) })
+                ]
+            })
+        ]
+    });
 };

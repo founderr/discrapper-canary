@@ -1,47 +1,56 @@
 n.d(t, {
     Z: function () {
-        return u;
+        return E;
     }
 });
-var i = n(735250);
-n(470079);
-var a = n(120356),
-    s = n.n(a),
-    r = n(780384),
-    l = n(481060),
-    o = n(410030),
-    c = n(831565),
-    d = n(61118);
-function u(e) {
-    let { title: t, description: n, button: a, className: u, children: _ } = e,
-        E = (0, o.ZP)(),
-        h = (0, r.wj)(E),
-        m = (0, c.v)({ location: 'QuestHomePage' });
+var i = n(735250),
+    a = n(470079),
+    s = n(120356),
+    r = n.n(s),
+    l = n(780384),
+    o = n(481060),
+    c = n(410030),
+    d = n(831565),
+    u = n(61118);
+function _(e) {
+    let { title: t } = e,
+        n = (0, d.v)({ location: 'QuestHomePage' });
+    return (0, i.jsx)(o.Heading, {
+        className: r()(u.title, { [u.uppercase]: n }),
+        variant: n ? 'display-lg' : 'heading-xl/bold',
+        color: 'header-primary',
+        children: t
+    });
+}
+function E(e) {
+    let { title: t, description: n, button: s, className: d, children: E } = e,
+        h = (0, c.ZP)(),
+        m = (0, l.wj)(h),
+        I = a.useMemo(() => ('string' == typeof t ? (0, i.jsx)(_, { title: t }) : Array.isArray(t) && t.every((e) => 'string' == typeof e) ? t.map((e) => (0, i.jsx)(_, { title: e }, e)) : t), [t]);
     return (0, i.jsxs)('div', {
-        className: s()(d.container, u),
+        className: r()(u.container, d),
         children: [
             (0, i.jsx)('div', {
-                className: d.content,
+                className: u.content,
                 children: (0, i.jsxs)('div', {
-                    className: d.textContainer,
+                    className: u.textContainer,
                     children: [
-                        (0, i.jsx)(l.Text, {
-                            className: s()(d.title, { [d.uppercase]: m }),
-                            variant: m ? 'display-lg' : 'heading-lg/bold',
-                            color: 'header-primary',
-                            children: t
-                        }),
-                        (0, i.jsx)(l.Text, {
-                            className: d.description,
+                        I,
+                        (0, i.jsx)(o.Text, {
+                            className: u.description,
                             variant: 'text-md/medium',
-                            color: h ? 'text-muted' : 'header-primary',
+                            color: m ? 'text-muted' : 'header-primary',
                             children: n
                         }),
-                        a
+                        null != s &&
+                            (0, i.jsx)('div', {
+                                className: u.buttonContainer,
+                                children: s
+                            })
                     ]
                 })
             }),
-            _
+            E
         ]
     });
 }
