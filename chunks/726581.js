@@ -15,7 +15,7 @@ var i = n(735250),
     g = n(4962),
     p = n(689938),
     T = n(895997);
-class f extends a.Component {
+class S extends a.Component {
     renderReasons(e, t, n) {
         return 0 === e.length && 0 === t.length
             ? null
@@ -89,4 +89,4 @@ t.Z = l.ZP.connectStores([E.Z, u.default, h.Z, c.Z, _.Z, d.Z], (e) => {
         nonSocialReasons: (0, m.Ww)(t.id, E.Z, h.Z),
         hidePersonalInformation: d.Z.hidePersonalInformation
     };
-})(f);
+})(S);

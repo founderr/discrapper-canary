@@ -15,10 +15,10 @@ let u = {
     d = null,
     h = {},
     p = new Set();
-function _() {
+function f() {
     for (let e in ((d = null), h)) delete h[e];
 }
-class f extends (i = s.ZP.Store) {
+class _ extends (i = s.ZP.Store) {
     getActiveUserSignUp() {
         return d;
     }
@@ -31,7 +31,7 @@ class f extends (i = s.ZP.Store) {
     }
 }
 (a = 'SignUpStore'),
-    (r = 'displayName') in (l = f)
+    (r = 'displayName') in (l = _)
         ? Object.defineProperty(l, r, {
               value: a,
               enumerable: !0,
@@ -39,7 +39,7 @@ class f extends (i = s.ZP.Store) {
               writable: !0
           })
         : (l[r] = a),
-    (t.Z = new f(o.Z, {
+    (t.Z = new _(o.Z, {
         ENABLE_USER_SIGN_UP: function (e) {
             let { key: t } = e,
                 n = u[t];
@@ -52,7 +52,7 @@ class f extends (i = s.ZP.Store) {
         },
         COMPLETE_SIGN_UP: function (e) {
             let { targetKey: t } = e;
-            p.add(t), _();
+            p.add(t), f();
         },
-        DISMISS_SIGN_UP: _
+        DISMISS_SIGN_UP: f
     }));

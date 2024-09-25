@@ -1,6 +1,6 @@
 n.d(t, {
     F7: function () {
-        return E;
+        return m;
     },
     WA: function () {
         return _;
@@ -9,7 +9,7 @@ n.d(t, {
         return h;
     },
     wo: function () {
-        return m;
+        return E;
     },
     yp: function () {
         return p;
@@ -53,12 +53,12 @@ let _ = {
         renderStep: () => (0, r.jsx)(s.Z, {}),
         options: { renderHeader: !0 }
     },
-    m = {
+    E = {
         key: i.h8.REVIEW,
         renderStep: (e) => (0, r.jsx)(c.l, { ...e }),
         options: { useBreadcrumbLabel: () => I.Z.Messages.BILLING_STEP_REVIEW }
     },
-    E = {
+    m = {
         key: i.h8.CONFIRM,
         renderStep: (e) => (0, r.jsx)(u.w, { ...e })
     },

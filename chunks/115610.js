@@ -69,9 +69,9 @@ async function h(e, t) {
         });
         return;
     }
-    let S = C.filter((e) => e.type === c.n0.STANDARD),
-        A = [S[Math.floor(Math.random() * S.length)].id];
-    i.Z.sendStickers(t.id, A, '', {
+    let A = C.filter((e) => e.type === c.n0.STANDARD),
+        S = [A[Math.floor(Math.random() * A.length)].id];
+    i.Z.sendStickers(t.id, S, '', {
         messageReference: {
             guild_id: null !== (h = t.getGuildId()) && void 0 !== h ? h : void 0,
             channel_id: t.id,

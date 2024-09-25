@@ -16,12 +16,12 @@ var i = n(807034),
     g = n(731455);
 let p = window.GLOBAL_ENV.ALGOLIA_KEY,
     T = 'production' === window.GLOBAL_ENV.PROJECT_ENV ? 'prod_discoverable_guilds' : 'staging' === window.GLOBAL_ENV.PROJECT_ENV ? 'stg_discoverable_guilds' : 'dev_discoverable_guilds',
-    f = {
+    S = {
         'auto_removed:': !1,
         approximate_presence_count: '> 0',
         approximate_member_count: '> 0'
     };
-async function S(e) {
+async function f(e) {
     return (
         await o.tn.get({
             url: I.ANM.GUILD_DISCOVERY_VALID_TERM,
@@ -42,7 +42,7 @@ async function C(e, t, n) {
         type: 'GLOBAL_DISCOVERY_SERVERS_SEARCH_START',
         id: o
     });
-    let E = Object.assign({}, f, t.filters),
+    let E = Object.assign({}, S, t.filters),
         I = Object.keys(E).map((e) => ''.concat(e).concat(E[e]));
     i !== g.Hk && I.push('(primary_category_id='.concat(i, ' OR categories.id=').concat(i, ')'));
     let p = I.join(' AND ');
@@ -95,7 +95,7 @@ async function N(e) {
         a = h.Z.getAlgoliaSearchIndex();
     if (null == a) return;
     let s = (0, m.BC)({ query: t }),
-        l = Object.assign({}, f, n),
+        l = Object.assign({}, S, n),
         o = Object.keys(l).map((e) => ''.concat(e).concat(l[e]));
     try {
         var c;
@@ -103,7 +103,7 @@ async function N(e) {
                 filters: o.join(' AND '),
                 facets: ['categories.id']
             }),
-            l = await S(t);
+            l = await f(t);
         if (null == n || !l) {
             d.Z.dispatch({
                 type: 'GLOBAL_DISCOVERY_SERVERS_SEARCH_COUNT_SUCCESS',

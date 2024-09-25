@@ -6,25 +6,25 @@ n.d(t, {
         return m;
     },
     EY: function () {
-        return R;
+        return x;
     },
     I5: function () {
         return g;
     },
     JQ: function () {
-        return x;
+        return O;
     },
     RY: function () {
-        return S;
+        return A;
     },
     SU: function () {
         return u;
     },
     Sv: function () {
-        return A;
+        return S;
     },
     ZW: function () {
-        return O;
+        return R;
     },
     bK: function () {
         return I;
@@ -112,12 +112,12 @@ f(g, 'ICON_TYPE', 'icon_type'),
     (l[(l.TOO_STRICT_UNFAIR = 1)] = 'TOO_STRICT_UNFAIR'),
     (l[(l.DONT_AGREE_PENALTY = 2)] = 'DONT_AGREE_PENALTY'),
     (l[(l.SOMETHING_ELSE = 3)] = 'SOMETHING_ELSE');
-let S = [0, 1, 2, 3],
-    A = 372,
-    R = 279,
-    O = { impression_group: h.ImpressionGroups.APPEAL_INGESTION };
+let A = [0, 1, 2, 3],
+    S = 372,
+    x = 279,
+    R = { impression_group: h.ImpressionGroups.APPEAL_INGESTION };
 ((o = m || (m = {})).SPEED_BUMP = 'speed-bump'), (o.COLLECT_SIGNAL = 'collect-signal'), (o.CONFIRM_SUBMISSION = 'confirm-submission'), (o.REQUEST_SENT = 'request-sent'), (o.THANKS = 'thanks');
-let x = {
+let O = {
     'speed-bump': {
         next: 'collect-signal',
         prev: null

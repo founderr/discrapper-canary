@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return A;
+        return S;
     }
 });
 var i = n(735250);
@@ -24,17 +24,17 @@ var s = n(120356),
     C = n(594174),
     p = n(689938),
     g = n(699420);
-let S = {
+let A = {
     top: 8,
     bottom: 8,
     left: -4,
     right: -4
 };
-function A(e) {
+function S(e) {
     let { channel: t, children: n, gotoChannel: s, mentionCount: a, channelState: l, toggleCollapsed: c } = e,
         u = (0, r.JA)('recents-header-'.concat(t.id, '-').concat((0, I.Dt)()));
     return (0, i.jsx)(o.FocusRing, {
-        offset: S,
+        offset: A,
         children: (0, i.jsxs)('div', {
             className: g.channelHeader,
             ...u,
@@ -44,7 +44,7 @@ function A(e) {
                 null != c && null != l && (('ArrowRight' === e.key && l.collapsed) || ('ArrowLeft' === e.key && !l.collapsed)) && (null == c || c(l));
             },
             children: [
-                (0, i.jsx)(R, {
+                (0, i.jsx)(x, {
                     channel: t,
                     gotoChannel: s
                 }),
@@ -58,19 +58,19 @@ function A(e) {
         })
     });
 }
-function R(e) {
+function x(e) {
     let { channel: t, gotoChannel: n } = e;
     return t.isPrivate()
-        ? (0, i.jsx)(O, {
+        ? (0, i.jsx)(R, {
               channel: t,
               gotoChannel: n
           })
-        : (0, i.jsx)(x, {
+        : (0, i.jsx)(O, {
               channel: t,
               gotoChannel: n
           });
 }
-function O(e) {
+function R(e) {
     let { channel: t, gotoChannel: n } = e,
         s = (0, l.e7)([C.default], () => (t.isDM() ? C.default.getUser(t.getRecipientId()) : null)),
         a = null == s ? (0, u.x)(t) : s.getAvatarURL(void 0, 40);
@@ -85,7 +85,7 @@ function O(e) {
         })
     });
 }
-function x(e) {
+function O(e) {
     let { channel: t, gotoChannel: n } = e,
         s = (0, l.e7)([N.Z], () => N.Z.getGuild(t.guild_id));
     return null == s

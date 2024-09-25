@@ -82,7 +82,7 @@ function D(e) {
                       preventFetch: !1
                   })
                 : el
-                  ? (0, i.jsx)(U, {
+                  ? (0, i.jsx)(F, {
                         premiumSubscription: r,
                         onInvoiceError: H,
                         priceOptions: I,
@@ -97,7 +97,7 @@ function D(e) {
                           priceOptions: I,
                           preventFetch: er
                       })
-                    : (0, i.jsx)(F, {
+                    : (0, i.jsx)(U, {
                           premiumSubscription: r,
                           newPlan: et,
                           planGroup: W,
@@ -350,7 +350,7 @@ function G(e) {
                 planGroup: u
             });
 }
-function U(e) {
+function F(e) {
     let { premiumSubscription: n, priceOptions: t, preventFetch: r, onInvoiceError: s } = e,
         { analyticsLocations: l } = (0, I.ZP)(),
         [o, u] = (0, P.ED)({
@@ -407,7 +407,7 @@ function U(e) {
         ]
     });
 }
-function F(e) {
+function U(e) {
     let n,
         { premiumSubscription: t, newPlan: a, planGroup: r, priceOptions: s, preventFetch: l } = e,
         { analyticsLocations: o } = (0, I.ZP)(),

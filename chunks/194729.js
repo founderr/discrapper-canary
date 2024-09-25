@@ -16,8 +16,8 @@ var i = n(735250),
     g = n(785570),
     p = n(963202),
     T = n(252618),
-    f = n(571457),
-    S = n(440190),
+    S = n(571457),
+    f = n(440190),
     C = n(665149),
     N = n(5955),
     A = n(918701),
@@ -35,8 +35,8 @@ var i = n(735250),
     j = n(117496),
     U = n(296386),
     G = n(150192),
-    k = n(769727),
-    w = n(229765),
+    w = n(769727),
+    k = n(229765),
     B = n(584885),
     H = n(59222),
     V = n(749436),
@@ -98,7 +98,7 @@ class J extends a.PureComponent {
             });
         } else null != l && l !== Y.Hk && h.Z.wait(() => (0, m.uY)(l));
         let u = null !== (t = null === (e = (0, L.s1)().location.state) || void 0 === e ? void 0 : e.scrollTop) && void 0 !== t ? t : 0;
-        u > 0 && (null === (n = this._scroller.current) || void 0 === n || n.scrollTo({ to: u })), (0, Z.e)('guild_discovery'), (0, f.kR)({ selectedCategoryId: o });
+        u > 0 && (null === (n = this._scroller.current) || void 0 === n || n.scrollTo({ to: u })), (0, Z.e)('guild_discovery'), (0, S.kR)({ selectedCategoryId: o });
     }
     componentDidUpdate(e) {
         let {
@@ -122,7 +122,7 @@ class J extends a.PureComponent {
             var l;
             null === (l = this._scroller.current) || void 0 === l || l.scrollTo({ to: 0 });
         }
-        e.currentCategoryId !== r && D.Az(this.loadId, Array.from(this._guildIdsSeen)), e.currentCategoryId !== r && (0, f.kR)({ selectedCategoryId: r }), e.mostRecentQuery.length > 0 && a.length < 1 && s !== r && (0, m.uY)(null != s ? s : Y.Hk);
+        e.currentCategoryId !== r && D.Az(this.loadId, Array.from(this._guildIdsSeen)), e.currentCategoryId !== r && (0, S.kR)({ selectedCategoryId: r }), e.mostRecentQuery.length > 0 && a.length < 1 && s !== r && (0, m.uY)(null != s ? s : Y.Hk);
     }
     componentWillUnmount() {
         let { currentCategoryId: e, recommendationsLoadId: t, recommendationsGuilds: n } = this.props;
@@ -259,7 +259,7 @@ class J extends a.PureComponent {
         return (0, i.jsxs)('div', {
             className: K.pageWrapper,
             children: [
-                (0, i.jsx)(w.KY, {
+                (0, i.jsx)(k.KY, {
                     location: 'guild_discovery',
                     query: this._getLoadTestQuery()
                 }),
@@ -451,10 +451,10 @@ function ee(e) {
             fetching: n,
             loadId: a,
             recommendedGuilds: s
-        } = (0, _.cj)([S.Z], () => ({
-            recommendedGuilds: S.Z.getRecommendedGuilds(),
-            loadId: S.Z.getLoadId(),
-            fetching: S.Z.isFetching()
+        } = (0, _.cj)([f.Z], () => ({
+            recommendedGuilds: f.Z.getRecommendedGuilds(),
+            loadId: f.Z.getLoadId(),
+            fetching: f.Z.isFetching()
         }));
     return (0, i.jsx)($, {
         searchRoute: t,
@@ -479,7 +479,7 @@ t.Z = function (e) {
         c && (0, m.uY)(Y.Gj.Quests);
     }, [c]),
     (s || r) && (!o || l === Y.Gj.Clans))
-        ? (0, i.jsx)(k.Z, {})
+        ? (0, i.jsx)(w.Z, {})
         : l === Y.Gj.Quests
           ? (0, i.jsx)(v.Z, {})
           : (0, i.jsx)(ee, { searchRoute: t });

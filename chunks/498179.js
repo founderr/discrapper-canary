@@ -26,16 +26,16 @@ function d(e) {
             innerClassName: C
         },
         g = (0, s.e7)([r.Z], () => r.Z.getActiveLibraryApplication(t.id)),
-        S = null != g ? g.sku.id : null,
-        A = null != S ? S : t.primarySkuId,
-        R = (0, s.e7)([l.Z], () => null != A && !l.Z.didFetchingSkuFail(A));
+        A = null != g ? g.sku.id : null,
+        S = null != A ? A : t.primarySkuId,
+        x = (0, s.e7)([l.Z], () => null != S && !l.Z.didFetchingSkuFail(S));
     return null != g && (0, o.Je)(g)
         ? (0, i.jsx)(u.Z, {
               ...p,
               libraryApplication: g,
               source: N
           })
-        : R
+        : x
           ? (0, i.jsx)('div', { children: 'deprecated!' })
           : (0, i.jsx)(c.Z, {
                 ...p,

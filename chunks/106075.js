@@ -20,8 +20,8 @@ var i = n(735250),
     g = n(922122),
     p = n(680180),
     T = n(164991),
-    f = n(444324),
-    S = n(726115),
+    S = n(444324),
+    f = n(726115),
     C = n(750910),
     N = n(28494),
     A = n(29086),
@@ -35,10 +35,10 @@ function b() {
     let e = a.useRef((0, u.P)()),
         { onScroll: t, scrollPosition: n, resetScrollPosition: s } = (0, h.M)(),
         { tabs: b, selectedTab: P, setSelectedTab: M } = (0, A.Y)(),
-        D = (0, S.lg)(P),
+        D = (0, f.lg)(P),
         y = !Z.MU.has(P),
         j = (0, d.iN)('global_discovery_servers_layout'),
-        { searchBarState: U, onTabsAvailableWidthChange: G, onCollapsedSearchBarClick: k, onSearchBarBlur: w, tabsClassName: B } = (0, m.U)({ isSearchBarVisible: y }),
+        { searchBarState: U, onTabsAvailableWidthChange: G, onCollapsedSearchBarClick: w, onSearchBarBlur: k, tabsClassName: B } = (0, m.U)({ isSearchBarVisible: y }),
         { searchQuery: H, onSearchTextChange: V, onClearSearch: F, onSearchSubmit: Y, isSearchVisible: z } = (0, N.H)({ loadId: e.current }),
         W = (0, E.GN)((e) => e.mode, l.Z),
         K = a.useCallback(
@@ -58,7 +58,7 @@ function b() {
             [b, z]
         ),
         Q = W === E.v0.SAVED_GUILDS,
-        X = a.useRef(new f.Z(D)),
+        X = a.useRef(new S.Z(D)),
         { onGuildCardSeen: J, onGuildCardClick: $ } = (0, C.H)({
             guildDiscoveryCardSeenManager: X.current,
             loadId: e.current
@@ -85,16 +85,16 @@ function b() {
             default:
                 return (0, i.jsx)(p.Z, {
                     query: H,
-                    placeholder: D === R.Hk ? O.Z.Messages.SEARCH : O.Z.Messages.GLOBAL_DISCOVERY_SEARCH_PLACEHOLDER.format({ title: (0, S.vb)(P) }),
+                    placeholder: D === R.Hk ? O.Z.Messages.SEARCH : O.Z.Messages.GLOBAL_DISCOVERY_SEARCH_PLACEHOLDER.format({ title: (0, f.vb)(P) }),
                     onTextChange: V,
                     onClear: F,
                     onSubmit: Y,
-                    onCollapsedClick: k,
+                    onCollapsedClick: w,
                     state: U,
-                    onBlur: w
+                    onBlur: k
                 });
         }
-    }, [P, j, H, D, V, F, Y, k, U, w, Q]);
+    }, [P, j, H, D, V, F, Y, w, U, k, Q]);
     return (0, i.jsxs)('div', {
         className: x.container,
         children: [

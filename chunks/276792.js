@@ -20,7 +20,7 @@ var a = n(704215),
     I = n(74316);
 function g(e) {
     var t, n;
-    let { content: g, renderModalProps: p, analyticsLocations: T, analyticsLocation: f, isLightTheme: S } = e,
+    let { content: g, renderModalProps: p, analyticsLocations: T, analyticsLocation: S, isLightTheme: f } = e,
         C = 'AnnouncementModalVariant1_'.concat(a.z[Number(g.dismissKey)]),
         { onClose: N } = p,
         A = null != g.button && '' !== g.button.copy ? g.button.copy : h.Z.Messages.BILLING_SUBSCRIBE_TO_PLAN,
@@ -35,7 +35,7 @@ function g(e) {
                           subscriptionTier: _.Si.TIER_2,
                           analyticsLocations: T,
                           analyticsObject: {
-                              ...f,
+                              ...S,
                               object: E.qAy.BUTTON_CTA,
                               objectType: E.Qqv.TIER_2
                           },
@@ -54,7 +54,7 @@ function g(e) {
                 : void 0,
         R = {
             type: 'video',
-            src: S ? g.heroArtVideoLinkLightTheme : g.videoLink
+            src: f ? g.heroArtVideoLinkLightTheme : g.videoLink
         };
     null != g.heroArtVideoSubtitles &&
         (R.subtitles = g.heroArtVideoSubtitles.map((e) => ({
@@ -65,9 +65,9 @@ function g(e) {
         ('' !== g.heroArtImageLinkDarkTheme || '' !== g.heroArtImageLinkLightTheme) &&
             (R = {
                 type: 'image',
-                src: S ? g.heroArtImageLinkLightTheme : g.heroArtImageLinkDarkTheme
+                src: f ? g.heroArtImageLinkLightTheme : g.heroArtImageLinkDarkTheme
             });
-    let O = S ? u.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL : u.VE.PREMIUM_TIER_2_WHITE_FILL,
+    let O = f ? u.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL : u.VE.PREMIUM_TIER_2_WHITE_FILL,
         x =
             '' !== g.modalTopPill
                 ? () =>
@@ -88,7 +88,7 @@ function g(e) {
         featureCards: g.featureCards.map((e) => ({
             header: e.header,
             subHeader: e.body,
-            imageSrc: S ? e.imageLinkLightTheme : e.imageLink,
+            imageSrc: f ? e.imageLinkLightTheme : e.imageLink,
             tagText: '' !== e.pill ? e.pill : void 0
         })),
         changeLogId: C,

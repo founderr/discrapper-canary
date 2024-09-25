@@ -44,7 +44,7 @@ let h = {
     p = 86400000;
 ((a = i || (i = {})).IS_OWNER = 'is_owner'), (a.IS_ADMIN = 'is_admin'), (a.IS_COMMUNITY = 'is_community'), (a.GUILD_SIZE = 'guild_size'), (a.IS_HUB = 'is_hub'), (a.IS_VIEWING = 'is_viewing'), (a.GUILD_PERMISSIONS = 'guild_permissions'), (a.GUILD_SIZE_ALL = 'guild_size_all');
 let g = new Set(Object.values(i));
-function S(e) {
+function A(e) {
     return (
         (function (e) {
             return !0;
@@ -92,19 +92,19 @@ function S(e) {
         })(e)
     );
 }
-function A(e) {
+function S(e) {
     let { survey: t } = e;
     if (((N.lastFetched = Date.now()), null == N.hiddenSurveys && (N.hiddenSurveys = {}), null != t && null == N.hiddenSurveys[t.key])) {
-        if (!S(t)) return;
+        if (!A(t)) return;
         C = t;
     }
 }
-function R() {
-    if (null != C && (S(C) || ((C = null), 0))) return !1;
+function x() {
+    if (null != C && (A(C) || ((C = null), 0))) return !1;
     !(function () {
         let e = Object.values((f = null != f ? f : {}))[0];
-        if (null != e && S(e)) {
-            A({
+        if (null != e && A(e)) {
+            S({
                 type: 'SURVEY_FETCHED',
                 survey: e
             });
@@ -114,9 +114,9 @@ function R() {
         C = null;
     })();
 }
-class O extends (s = l.ZP.PersistedStore) {
+class R extends (s = l.ZP.PersistedStore) {
     initialize(e) {
-        (N = null != e ? e : h), this.syncWith([E.Z], R);
+        (N = null != e ? e : h), this.syncWith([E.Z], x);
     }
     getState() {
         return N;
@@ -131,9 +131,9 @@ class O extends (s = l.ZP.PersistedStore) {
         return N.lastSeen;
     }
 }
-T(O, 'displayName', 'SurveyStore'),
-    T(O, 'persistKey', 'SurveyStore'),
-    T(O, 'migrations', [
+T(R, 'displayName', 'SurveyStore'),
+    T(R, 'persistKey', 'SurveyStore'),
+    T(R, 'migrations', [
         (e) => {
             let t = { ...e };
             return delete t.validSurveys, delete t.currentSurvey, delete t.iosIsPushNotificationClicked, delete t.iosIsInviteShown, delete t.iosFirstRunDate, t;
@@ -153,12 +153,12 @@ T(O, 'displayName', 'SurveyStore'),
             };
         }
     ]),
-    (t.Z = new O(o.Z, {
+    (t.Z = new R(o.Z, {
         CONNECTION_OPEN: function () {
             var e;
             if (!(null != N.lastFetched && Date.now() - (null !== (e = N.lastFetched) && void 0 !== e ? e : 0) < p) || null != N.surveyOverride) (0, c.wk)(N.surveyOverride, !0);
         },
-        SURVEY_FETCHED: A,
+        SURVEY_FETCHED: S,
         SURVEY_HIDE: function (e) {
             let { key: t } = e;
             (N.hiddenSurveys[t] = !0), (C = null), (f = null != f ? f : {}), delete f[t];

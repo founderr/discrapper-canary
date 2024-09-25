@@ -16,7 +16,7 @@ var r = n(735250),
     I = n(981631);
 function _(e) {
     let { handleStepChange: t, handleClose: n } = e,
-        { blockedPayments: i, hasFetchedSkus: _, paymentSources: h, hasFetchedPaymentSources: f, application: S, skusById: m, selectedSkuId: E } = (0, u.usePaymentContext)(),
+        { blockedPayments: i, hasFetchedSkus: _, paymentSources: h, hasFetchedPaymentSources: f, application: S, skusById: E, selectedSkuId: m } = (0, u.usePaymentContext)(),
         { isGift: p } = (0, o.wD)(),
         [T, C] = a.useState(!0);
     return (a.useEffect(() => {
@@ -25,8 +25,8 @@ function _(e) {
     }, [_, f, S]),
     a.useEffect(() => {
         if (T || i) return;
-        l()(null != E, 'Expected selectedSkuId');
-        let e = m[E];
+        l()(null != m, 'Expected selectedSkuId');
+        let e = E[m];
         if (p && (null == e ? void 0 : e.productLine) === I.POd.COLLECTIBLES) {
             t(c.h8.GIFT_CUSTOMIZATION);
             return;
@@ -36,7 +36,7 @@ function _(e) {
             return;
         }
         t(c.h8.REVIEW);
-    }, [T, i, t, h, p, m, E]),
+    }, [T, i, t, h, p, E, m]),
     T)
         ? (0, r.jsx)(d.Z, {})
         : i

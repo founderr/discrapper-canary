@@ -22,9 +22,9 @@ function h(e) {
     let { tab: t, setTab: n, children: h, badgeState: N, closePopout: f } = e,
         { showReminders: C } = E.Z.useExperiment({ location: 'RecentsHeader' }, { autoTrackExposure: !1 }),
         { enabled: p, inInbox: g } = d.Z.useExperiment({ location: 'RecentsPopout' }),
-        { enabled: S } = u.Z.useExperiment({ location: 'RecentsHeader' }),
-        A = (0, s.e7)([c.Z], () => c.Z.getUnseenInviteCount()),
-        R = (0, s.e7)([_.Z], () => _.Z.getOverdueMessageReminderCount());
+        { enabled: A } = u.Z.useExperiment({ location: 'RecentsHeader' }),
+        S = (0, s.e7)([c.Z], () => c.Z.getUnseenInviteCount()),
+        x = (0, s.e7)([_.Z], () => _.Z.getOverdueMessageReminderCount());
     return (0, i.jsxs)(l.h4, {
         className: T.header,
         children: [
@@ -82,14 +82,14 @@ function h(e) {
                             className: T.tab,
                             children: m.Z.Messages.MENTIONS
                         }),
-                        S
+                        A
                             ? (0, i.jsxs)(r.TabBar.Item, {
                                   'aria-label': 'game_invites',
                                   id: a.X.GAME_INVITES,
                                   className: T.tab,
                                   children: [
                                       m.Z.Messages.GAME_INVITES,
-                                      A > 0
+                                      S > 0
                                           ? (0, i.jsx)(r.CircleBadge, {
                                                 color: o.Z.STATUS_DANGER,
                                                 className: T.iconBadge
@@ -103,7 +103,7 @@ function h(e) {
                                   'aria-label': m.Z.Messages.FOR_LATER,
                                   id: a.X.BOOKMARKS,
                                   className: T.tab,
-                                  children: 0 === R ? m.Z.Messages.FOR_LATER : m.Z.Messages.FOR_LATER_COUNT.format({ count: R })
+                                  children: 0 === x ? m.Z.Messages.FOR_LATER : m.Z.Messages.FOR_LATER_COUNT.format({ count: x })
                               })
                             : null,
                         C && !p
@@ -111,7 +111,7 @@ function h(e) {
                                   'aria-label': 'todos',
                                   id: a.X.TODOS,
                                   className: T.tab,
-                                  children: 0 === R ? m.Z.Messages.FOR_LATER_TAB_REMINDERS : m.Z.Messages.FOR_LATER_TAB_REMINDERS_COUNT.format({ count: R })
+                                  children: 0 === x ? m.Z.Messages.FOR_LATER_TAB_REMINDERS : m.Z.Messages.FOR_LATER_TAB_REMINDERS_COUNT.format({ count: x })
                               })
                             : null
                     ]

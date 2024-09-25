@@ -27,18 +27,18 @@ var i = n(735250),
     C = n(294218),
     p = n(373662),
     g = n(695346),
-    S = n(131704),
-    A = n(592125),
-    R = n(496675),
-    O = n(626135),
-    x = n(585483),
+    A = n(131704),
+    S = n(592125),
+    x = n(496675),
+    R = n(626135),
+    O = n(585483),
     M = n(70956),
     v = n(324701),
     L = n(768943),
     Z = n(686478),
     P = n(818260),
-    D = n(767893),
-    b = n(206697),
+    b = n(767893),
+    D = n(206697),
     j = n(74551),
     U = n(981631),
     y = n(689938),
@@ -89,7 +89,7 @@ function F(e) {
 function G(e) {
     let { savedMessages: t, closePopout: n, throttledNow: s } = e;
     return 0 === t.length
-        ? (0, i.jsx)(b.w, {})
+        ? (0, i.jsx)(D.w, {})
         : (0, i.jsx)(V, {
               savedMessages: t,
               closePopout: n,
@@ -105,7 +105,7 @@ function w(e) {
         d = s.useCallback(() => {
             c(!o), o ? null == n || n() : null == t || t();
         }, [n, t, o]);
-    s.useEffect(() => (x.S.subscribe(U.CkL.TOGGLE_FOR_LATER, d), () => void x.S.unsubscribe(U.CkL.TOGGLE_FOR_LATER, d)), [d]);
+    s.useEffect(() => (O.S.subscribe(U.CkL.TOGGLE_FOR_LATER, d), () => void O.S.unsubscribe(U.CkL.TOGGLE_FOR_LATER, d)), [d]);
     let [_, m] = s.useState(new Date());
     s.useEffect(() => {
         let e = setInterval(() => m(new Date()), M.Z.Millis.MINUTE);
@@ -168,11 +168,11 @@ function V(e) {
 }
 function H(e) {
     let { savedMessage: t, closePopout: n, throttledNow: a } = e,
-        l = (0, E.e7)([A.Z], () => A.Z.getChannel(t.saveData.channelId)),
+        l = (0, E.e7)([S.Z], () => S.Z.getChannel(t.saveData.channelId)),
         o = s.useMemo(
             () =>
                 null == l && null != t.message
-                    ? new S.mn({
+                    ? new A.mn({
                           id: t.saveData.channelId,
                           guild_id: null,
                           type: U.d4z.UNKNOWN,
@@ -186,7 +186,7 @@ function H(e) {
                 var i;
                 !e.shiftKey && n(),
                     (0, f.Z)(U.Z5c.CHANNEL(null == o ? void 0 : o.getGuildId(), t.saveData.channelId, t.saveData.messageId)),
-                    O.default.track(U.rMx.FOR_LATER_SAVED_MESSAGE_JUMP, {
+                    R.default.track(U.rMx.FOR_LATER_SAVED_MESSAGE_JUMP, {
                         channel_id: t.saveData.channelId,
                         message_id: t.saveData.messageId,
                         message_author_id: null === (i = t.message) || void 0 === i ? void 0 : i.author.id,
@@ -196,7 +196,7 @@ function H(e) {
             },
             [n, t, o]
         ),
-        d = (0, E.e7)([R.Z], () => (null == o ? !!void 0 : !!o.isPrivate()) || R.Z.can(U.Plq.VIEW_CHANNEL, o));
+        d = (0, E.e7)([x.Z], () => (null == o ? !!void 0 : !!o.isPrivate()) || x.Z.can(U.Plq.VIEW_CHANNEL, o));
     return null != o && null != t.message && d
         ? (0, i.jsxs)('div', {
               className: B.messageContainer,
@@ -212,7 +212,7 @@ function H(e) {
                             throttledNow: a
                         })
                       : null,
-                  (0, i.jsx)(D.Z, { channel: o }),
+                  (0, i.jsx)(b.Z, { channel: o }),
                   (0, i.jsx)(
                       C.Z,
                       {

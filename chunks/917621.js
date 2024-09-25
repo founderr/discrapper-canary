@@ -19,8 +19,8 @@ var i = n(735250),
     C = n(981631),
     p = n(616922),
     g = n(689938),
-    S = n(812301);
-function A(e, t, n) {
+    A = n(812301);
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +33,7 @@ function A(e, t, n) {
         e
     );
 }
-class R extends s.PureComponent {
+class x extends s.PureComponent {
     render() {
         let { member: e, className: t, guildId: n } = this.props;
         return (0, i.jsx)(o.Popout, {
@@ -46,13 +46,13 @@ class R extends s.PureComponent {
                     text: e.unknownUser ? null : null !== (a = e.nick) && void 0 !== a ? a : T.ZP.getName(e.user),
                     children: (a) =>
                         (0, i.jsx)(o.Clickable, {
-                            className: e.unknownUser ? S.partyMember : S.partyMemberKnown,
+                            className: e.unknownUser ? A.partyMember : A.partyMemberKnown,
                             ...a,
                             ...s,
                             children: (0, i.jsx)(o.Avatar, {
                                 src: e.user.getAvatarURL(n, 24),
                                 size: o.AvatarSizes.SIZE_24,
-                                className: r()(S.partyAvatar, t),
+                                className: r()(A.partyAvatar, t),
                                 'aria-label': e.user.username
                             })
                         })
@@ -62,13 +62,13 @@ class R extends s.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            A(this, 'renderUserPopout', (e) => {
+            S(this, 'renderUserPopout', (e) => {
                 let { renderUserPopout: t, member: n } = this.props;
                 return n.unknownUser ? null : t(n.user, e);
             });
     }
 }
-class O extends s.PureComponent {
+class R extends s.PureComponent {
     isDeadInvite() {
         let { isPreview: e, message: t, activity: n, applicationId: i } = this.props;
         return !e && !(null != t && (0, N.Z)(n, t, i));
@@ -146,9 +146,9 @@ class O extends s.PureComponent {
                       (0, i.jsx)(
                           'div',
                           {
-                              className: S.details,
+                              className: A.details,
                               children: (0, i.jsx)(o.Anchor, {
-                                  className: S.textLink,
+                                  className: A.textLink,
                                   onClick: this.handleOpenSpotifyTrack,
                                   children: l.details
                               })
@@ -158,7 +158,7 @@ class O extends s.PureComponent {
                       (0, i.jsx)(
                           'div',
                           {
-                              className: S.state,
+                              className: A.state,
                               children: g.Z.Messages.USER_ACTIVITY_LISTENING_ARTISTS.format({
                                   artists: l.state,
                                   artistsHook: (e, t) =>
@@ -167,7 +167,7 @@ class O extends s.PureComponent {
                                                 u.Z,
                                                 {
                                                     artists: l.state,
-                                                    linkClassName: S.textLink,
+                                                    linkClassName: A.textLink,
                                                     canOpen: null != l.sync_id,
                                                     onOpenSpotifyArtist: this.handleOpenSpotifyArtist
                                                 },
@@ -187,7 +187,7 @@ class O extends s.PureComponent {
     renderActionButton() {
         let { isInBrowser: e, isPreview: t, isGameLaunchable: n, isSender: s, partyId: a, activity: r, message: l, renderSpotifyJoinButton: c, renderCustomButton: u } = this.props,
             d = {
-                className: S.actionButton,
+                className: A.actionButton,
                 size: o.Button.Sizes.SMALL
             },
             _ = null != u ? u(d) : null;
@@ -236,7 +236,7 @@ class O extends s.PureComponent {
         return (0, i.jsx)(
             'div',
             {
-                className: S.moreUsers,
+                className: A.moreUsers,
                 children: e
             },
             n
@@ -258,7 +258,7 @@ class O extends s.PureComponent {
         for (; o.length < u; ) o.push(null);
         return (0, i.jsx)(_.Z, {
             guildId: s,
-            className: S.partyMembers,
+            className: A.partyMembers,
             users: o,
             max: r > 0 ? Math.min(r, 6) : 6,
             renderUser: this.renderUser,
@@ -271,11 +271,11 @@ class O extends s.PureComponent {
             u = this.isDeadInvite(),
             d = null;
         null == t || null == s || a
-            ? !a && u && (d = (0, i.jsx)('div', { className: S.artworkSpotifySessionEnded }))
+            ? !a && u && (d = (0, i.jsx)('div', { className: A.artworkSpotifySessionEnded }))
             : (d = (0, i.jsx)('img', {
                   alt: '',
                   src: t,
-                  className: (0, m.l)(S, 'artwork', this.getActionableMode())
+                  className: (0, m.l)(A, 'artwork', this.getActionableMode())
               }));
         let _ = null != s && null != d && null != s.assets && null != s.assets.large_text && '' !== s.assets.large_text && !u && (0, f.Z)(s) ? s.assets.large_text : null,
             E =
@@ -294,27 +294,27 @@ class O extends s.PureComponent {
                       })
                     : d;
         return (0, i.jsxs)('div', {
-            className: r()(S.invite, e),
+            className: r()(A.invite, e),
             children: [
                 (0, i.jsx)('div', {
-                    className: S.coverImageWrapper,
+                    className: A.coverImageWrapper,
                     children: (0, i.jsx)('div', {
-                        className: r()((0, m.l)(S, 'coverImage', this.getActionableMode()), null != d ? S.blurred : null),
+                        className: r()((0, m.l)(A, 'coverImage', this.getActionableMode()), null != d ? A.blurred : null),
                         style: { backgroundImage: null != t ? "url('".concat(t, "')") : void 0 }
                     })
                 }),
                 (0, i.jsxs)(c.Z, {
-                    className: S.fullHeight,
+                    className: A.fullHeight,
                     children: [
                         (0, i.jsxs)(c.Z, {
                             direction: c.Z.Direction.VERTICAL,
                             children: [
                                 (0, i.jsx)('div', {
-                                    className: S.header,
+                                    className: A.header,
                                     children: this.renderHeaderText()
                                 }),
                                 (0, i.jsx)(c.Z.Child, {
-                                    className: S.partyStatus,
+                                    className: A.partyStatus,
                                     children: this.renderPartyStatus()
                                 }),
                                 (0, i.jsxs)(c.Z, {
@@ -322,14 +322,14 @@ class O extends s.PureComponent {
                                     children: [
                                         (0, i.jsxs)(c.Z, {
                                             align: c.Z.Align.CENTER,
-                                            className: S.actionAndParty,
+                                            className: A.actionAndParty,
                                             basis: 0,
                                             style: { marginRight: 0 },
                                             children: [this.renderActionButton(), this.renderParty()]
                                         }),
                                         null == d && a
                                             ? (0, i.jsx)('div', {
-                                                  className: S.name,
+                                                  className: A.name,
                                                   children: n
                                               })
                                             : null
@@ -342,7 +342,7 @@ class O extends s.PureComponent {
                 }),
                 (0, i.jsx)(o.Anchor, {
                     href: I.Z.getArticleURL(this.getHelpdeskArticleURL()),
-                    className: S.helpIcon,
+                    className: A.helpIcon,
                     children: (0, i.jsx)(o.CircleQuestionIcon, {
                         color: l.Z.unsafe_rawColors.PRIMARY_300.css,
                         size: 'xxs'
@@ -353,39 +353,39 @@ class O extends s.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            A(this, 'handleJoin', () => {
+            S(this, 'handleJoin', () => {
                 let { onJoin: e } = this.props;
                 null == e || e();
             }),
-            A(this, 'handleInvite', () => {
+            S(this, 'handleInvite', () => {
                 let { onInvite: e } = this.props;
                 null == e || e();
             }),
-            A(this, 'handleSync', () => {
+            S(this, 'handleSync', () => {
                 let { onSync: e } = this.props;
                 null == e || e();
             }),
-            A(this, 'handleDownloadApp', () => {
+            S(this, 'handleDownloadApp', () => {
                 let { onDownloadApp: e } = this.props;
                 null == e || e();
             }),
-            A(this, 'handleOpenSpotifyTrack', () => {
+            S(this, 'handleOpenSpotifyTrack', () => {
                 let { activity: e, onOpenSpotifyTrack: t } = this.props;
                 null != e && (null == t || t(e));
             }),
-            A(this, 'handleOpenSpotifyArtist', (e) => {
+            S(this, 'handleOpenSpotifyArtist', (e) => {
                 let { activity: t, onOpenSpotifyArtist: n, message: i } = this.props;
                 null != t && null != i && (null == n || n(t, i.author.id, e));
             }),
-            A(this, 'handleOpenSpotifyAlbum', () => {
+            S(this, 'handleOpenSpotifyAlbum', () => {
                 let { activity: e, onOpenSpotifyAlbum: t, message: n } = this.props;
                 null != e && null != n && (null == t || t(e, n.author.id));
             }),
-            A(this, 'renderUser', (e, t, n) => {
+            S(this, 'renderUser', (e, t, n) => {
                 let { renderUserPopout: s, guildId: a } = this.props;
                 return null != e
                     ? (0, i.jsx)(
-                          R,
+                          x,
                           {
                               member: e,
                               renderUserPopout: s,
@@ -394,8 +394,8 @@ class O extends s.PureComponent {
                           },
                           n
                       )
-                    : (0, i.jsx)('div', { className: r()(S.partyMemberEmpty, t) }, n);
+                    : (0, i.jsx)('div', { className: r()(A.partyMemberEmpty, t) }, n);
             });
     }
 }
-t.Z = O;
+t.Z = R;

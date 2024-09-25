@@ -11,8 +11,8 @@ var l = n(120356),
     s = n(686546),
     o = n(904297);
 function c(e) {
-    let { tooltipText: t, children: n, onContextMenu: l, onClick: c, disabled: u, icon: d, iconForeground: h, innerClassName: p, tooltipClassName: _, onMouseEnter: f, onMouseLeave: m, 'aria-label': g, 'aria-checked': C, role: I, tooltipColor: E, tooltipForceOpen: N } = e,
-        x =
+    let { tooltipText: t, children: n, onContextMenu: l, onClick: c, disabled: u, icon: d, iconForeground: h, innerClassName: p, tooltipClassName: f, onMouseEnter: _, onMouseLeave: m, 'aria-label': g, 'aria-checked': C, role: I, tooltipColor: E, tooltipForceOpen: N } = e,
+        S =
             'function' == typeof d
                 ? (0, i.jsx)(d, {
                       width: 20,
@@ -23,15 +23,15 @@ function c(e) {
                   })
                 : d;
     return (0, i.jsx)(a.Tooltip, {
-        tooltipClassName: _,
+        tooltipClassName: f,
         text: t,
         'aria-label': g,
         color: E,
         forceOpen: N,
         children: (e) => {
-            let { onClick: t, onMouseEnter: d, onMouseLeave: h, ..._ } = e;
+            let { onClick: t, onMouseEnter: d, onMouseLeave: h, ...f } = e;
             return (0, i.jsxs)(a.Button, {
-                ..._,
+                ...f,
                 look: a.Button.Looks.BLANK,
                 size: a.Button.Sizes.NONE,
                 disabled: u,
@@ -45,7 +45,7 @@ function c(e) {
                     null != t && t(), null != c && c(e);
                 },
                 onMouseEnter: () => {
-                    null == d || d(), null == f || f();
+                    null == d || d(), null == _ || _();
                 },
                 onMouseLeave: () => {
                     null == h || h(), null == m || m();
@@ -59,9 +59,9 @@ function c(e) {
                               width: 20,
                               height: 20,
                               mask: s.ZP.Masks.PANEL_BUTTON,
-                              children: x
+                              children: S
                           })
-                        : x,
+                        : S,
                     n
                 ]
             });

@@ -34,18 +34,18 @@ var i,
     C = n(601070),
     p = n(344185),
     g = n(569471),
-    S = n(723170),
-    A = n(675478),
-    R = n(581883),
-    O = n(131704),
-    x = n(592125),
+    A = n(723170),
+    S = n(675478),
+    x = n(581883),
+    R = n(131704),
+    O = n(592125),
     M = n(984933),
     v = n(731290),
     L = n(430824),
     Z = n(375954),
     P = n(496675),
-    D = n(306680),
-    b = n(771845),
+    b = n(306680),
+    D = n(771845),
     j = n(9156),
     U = n(70956),
     y = n(823379),
@@ -246,13 +246,13 @@ class V extends o.EventEmitter {
                     l = i[r],
                     o = !l.collapsed;
                 (s[t] = o),
-                    (0, A.BU)(
+                    (0, S.BU)(
                         n,
                         t,
                         (e) => {
                             e.collapsedInInbox = o;
                         },
-                        A.fy.FREQUENT_USER_ACTION
+                        S.fy.FREQUENT_USER_ACTION
                     ),
                     this.setState({
                         scrollToChannelIndex: r,
@@ -310,10 +310,10 @@ function Y() {
     let e = (function () {
             var e, t;
             let n = {},
-                i = null !== (t = null === (e = R.Z.settings.guilds) || void 0 === e ? void 0 : e.guilds) && void 0 !== t ? t : {};
+                i = null !== (t = null === (e = x.Z.settings.guilds) || void 0 === e ? void 0 : e.guilds) && void 0 !== t ? t : {};
             for (let e in i)
                 for (let t in i[e].channels) {
-                    let s = x.Z.getChannel(t);
+                    let s = O.Z.getChannel(t);
                     (!(t in n) || (null == s ? void 0 : s.guild_id) === e) && (n[t] = i[e].channels[t].collapsedInInbox);
                 }
             return n;
@@ -321,8 +321,8 @@ function Y() {
         t = (function (e) {
             let t = [];
             return (
-                x.Z.getSortedPrivateChannels().forEach((n) => W(e, t, null, n.id)),
-                b.ZP.getFlattenedGuildIds().forEach((n) => {
+                O.Z.getSortedPrivateChannels().forEach((n) => W(e, t, null, n.id)),
+                D.ZP.getFlattenedGuildIds().forEach((n) => {
                     if (null == n) return;
                     let i = M.ZP.getSelectableChannelIds(n),
                         s = C.Z.getActiveJoinedUnreadThreadsForGuild(n);
@@ -354,21 +354,21 @@ function Y() {
 }
 function W(e, t, n, i) {
     if (null == i) return;
-    let s = x.Z.getChannel(i);
-    if (null == s || (!O.Ec.has(s.type) && j.ZP.isGuildOrCategoryOrChannelMuted(n, s.id))) return;
+    let s = O.Z.getChannel(i);
+    if (null == s || (!R.Ec.has(s.type) && j.ZP.isGuildOrCategoryOrChannelMuted(n, s.id))) return;
     if (s.isPrivate()) {
-        if (0 === D.ZP.getMentionCount(i)) return;
-    } else if (!(0, f.d)(s) && 0 === D.ZP.getMentionCount(i)) return;
+        if (0 === b.ZP.getMentionCount(i)) return;
+    } else if (!(0, f.d)(s) && 0 === b.ZP.getMentionCount(i)) return;
     if (!s.isPrivate() && !P.Z.can(k.Plq.READ_MESSAGE_HISTORY, s)) return;
-    let a = D.ZP.ackMessageId(i);
+    let a = b.ZP.ackMessageId(i);
     if (null == a) {
         let e = L.Z.getGuild(s.guild_id);
         if (null == e || null == e.joinedAt) return;
         a = B.default.fromTimestamp(e.joinedAt.getTime());
     }
-    let r = D.ZP.getOldestUnreadMessageId(i),
-        l = D.ZP.lastMessageId(i),
-        o = D.ZP.getMentionCount(i),
+    let r = b.ZP.getOldestUnreadMessageId(i),
+        l = b.ZP.lastMessageId(i),
+        o = b.ZP.getMentionCount(i),
         c = o > 0 || s.isPrivate();
     if (null == l || B.default.compare(a, l) >= 0) return;
     let u = {
@@ -385,17 +385,17 @@ function W(e, t, n, i) {
         hasMentionsOrUnreads: c,
         mentionCount: o,
         sortOrder: (function (e, t, n) {
-            let i = x.Z.getChannel(t);
+            let i = O.Z.getChannel(t);
             if (h.Z.isFavorite(t)) return 0;
             if (i.isPrivate()) return 1;
-            if (D.ZP.getMentionCount(t) > 0) return 2;
+            if (b.ZP.getMentionCount(t) > 0) return 2;
             if (null != n) {
                 let e = B.default.extractTimestamp(n);
                 if (Date.now() - e > z) return 7;
                 if (Date.now() - e > K) return 5;
             }
             if (i.isThread()) {
-                let e = (0, S.J)(i);
+                let e = (0, A.J)(i);
                 return e === F.iN.ALL_MESSAGES ? 3 : e === F.iN.NO_MESSAGES ? 6 : 4;
             }
             {

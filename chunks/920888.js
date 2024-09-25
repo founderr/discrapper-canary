@@ -34,14 +34,14 @@ class p extends s.PureComponent {
               : null;
     }
     render() {
-        let { message: e, disableReactionCreates: t, disableReactionUpdates: n, isLurking: s, isGuest: a, isPendingMember: N, isForumToolbar: f, channel: C, className: p, forceAddReactions: g, reactionClassName: S, useChatFontScaling: A, forceHideReactionCreates: R, remainingReactions: O, combinedReactions: x, visibleReactionsCount: M } = this.props,
+        let { message: e, disableReactionCreates: t, disableReactionUpdates: n, isLurking: s, isGuest: a, isPendingMember: N, isForumToolbar: f, channel: C, className: p, forceAddReactions: g, reactionClassName: A, useChatFontScaling: S, forceHideReactionCreates: x, remainingReactions: R, combinedReactions: O, visibleReactionsCount: M } = this.props,
             { disableTransitionAppear: v } = this.state,
-            L = A ? h : T,
+            L = S ? h : T,
             Z = M > 0;
         if (!Z && !g) return null;
         let { enabled: P } = c.Z.getCurrentConfig({ location: 'message_reactions' }, { autoTrackExposure: !0 }),
-            D = P && Z,
-            b = (g && !Z) || D;
+            b = P && Z,
+            D = (g && !Z) || b;
         return (0, i.jsxs)(l.W, {
             component: 'div',
             className: r()(L.reactions, p),
@@ -53,41 +53,41 @@ class p extends s.PureComponent {
             onMouseLeave: () => this.setState({ isHovered: !1 }),
             children: [
                 (0, i.jsx)(E.l, {
-                    reactions: x,
+                    reactions: O,
                     message: e,
                     readOnly: n,
                     isLurking: s,
                     isGuest: a,
                     isPendingMember: N,
                     isForumToolbar: f,
-                    useChatFontScaling: A,
-                    className: S
+                    useChatFontScaling: S,
+                    className: A
                 }),
-                O > 0 &&
+                R > 0 &&
                     (0, i.jsx)(o.Clickable, {
                         onClick: (t) => {
                             t.stopPropagation(), (0, I.op)(C, e);
                         },
-                        className: r()(L.reaction, S, L.remainingReactions),
+                        className: r()(L.reaction, A, L.remainingReactions),
                         'aria-label': m.Z.Messages.ADD_REACTION,
                         children: (0, i.jsxs)(o.Text, {
                             className: L.reactionInner,
                             variant: 'text-sm/normal',
-                            children: ['+', O]
+                            children: ['+', R]
                         })
                     }),
                 !t &&
-                    !R &&
+                    !x &&
                     (0, i.jsx)(d.X, {
-                        tabIndex: b || this.state.isHovered ? 0 : -1,
+                        tabIndex: D || this.state.isHovered ? 0 : -1,
                         type: u.O.NORMAL,
                         message: e,
                         channel: C,
-                        useChatFontScaling: A,
+                        useChatFontScaling: S,
                         isHovered: this.state.isHovered,
                         className: r()({
-                            [L.forceShow]: b,
-                            [L.forceShowLook]: g || D
+                            [L.forceShow]: D,
+                            [L.forceShowLook]: g || b
                         })
                     })
             ]

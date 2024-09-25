@@ -14,8 +14,8 @@ var i = n(735250),
     d = n(492162),
     h = n(237583),
     p = n(451478),
-    _ = n(934415),
-    f = n(968847),
+    f = n(934415),
+    _ = n(968847),
     m = n(689938),
     g = n(624113);
 let C = {
@@ -33,9 +33,9 @@ function I(e) {
             },
             [r]
         ),
-        f = null !== (t = null == s ? void 0 : s.getChannelRecords()) && void 0 !== t ? t : [],
-        C = (0, _.c4)({
-            channels: f,
+        _ = null !== (t = null == s ? void 0 : s.getChannelRecords()) && void 0 !== t ? t : [],
+        C = (0, f.c4)({
+            channels: _,
             selectedChannelId: null,
             selectedVoiceChannelId: null,
             voiceStates: o
@@ -70,22 +70,22 @@ function I(e) {
 }
 function E(e) {
     let { position: t, guildChannels: n, guildChannelsVersion: r, jumpToVoiceChannels: c, jumpToChannel: d } = e,
-        { bottomBar: h, topBar: _ } = (0, o.cj)([f.Z], () => f.Z.getUnreadStateForGuildId(n.id)),
+        { bottomBar: h, topBar: f } = (0, o.cj)([_.Z], () => _.Z.getUnreadStateForGuildId(n.id)),
         E = (0, o.e7)([p.Z], () => p.Z.isFocused()),
-        { mode: N, mentionCount: x, targetChannelId: S } = 'bottom' === t ? h : _,
-        v = N === f.x.HIDDEN,
-        Z = (0, u.useSpring)(
+        { mode: N, mentionCount: S, targetChannelId: x } = 'bottom' === t ? h : f,
+        v = N === _.x.HIDDEN,
+        T = (0, u.useSpring)(
             {
                 to: { transform: v ? ('bottom' === t ? 'translateY(180%)' : 'translateY(-180%)') : 'translateY(0%)' },
                 config: C
             },
             E ? 'respect-motion-settings' : 'animate-never'
         ),
-        T = l.useCallback(
+        Z = l.useCallback(
             (e) => {
-                e.preventDefault(), e.stopPropagation(), null != S && d(S);
+                e.preventDefault(), e.stopPropagation(), null != x && d(x);
             },
-            [d, S]
+            [d, x]
         );
     return (0, i.jsx)('div', {
         className: a()(g.container, {
@@ -94,15 +94,15 @@ function E(e) {
         }),
         children: (0, i.jsx)(s.animated.div, {
             className: g.containerPadding,
-            style: Z,
+            style: T,
             'aria-hidden': v,
             children:
-                N === f.x.HIDDEN
+                N === _.x.HIDDEN
                     ? (0, i.jsx)('div', { className: a()(g.bar, g.emptyBar) })
-                    : N === f.x.UNREAD
+                    : N === _.x.UNREAD
                       ? (0, i.jsxs)(u.Clickable, {
                             className: g.bar,
-                            onClick: T,
+                            onClick: Z,
                             children: [
                                 'bottom' === t
                                     ? (0, i.jsx)(u.ChevronSmallDownIcon, {
@@ -127,18 +127,18 @@ function E(e) {
                                 })
                             ]
                         })
-                      : N === f.x.MENTIONS
+                      : N === _.x.MENTIONS
                         ? (0, i.jsx)(u.Clickable, {
                               className: a()(g.bar, g.mentionsBar),
-                              onClick: T,
+                              onClick: Z,
                               children: (0, i.jsx)(u.Text, {
                                   variant: 'text-xs/semibold',
                                   color: 'status-danger-text',
                                   className: g.barText,
-                                  children: m.Z.Messages.NEW_MENTIONS_COUNT.format({ count: x })
+                                  children: m.Z.Messages.NEW_MENTIONS_COUNT.format({ count: S })
                               })
                           })
-                        : N === f.x.VOICE_CHANNELS
+                        : N === _.x.VOICE_CHANNELS
                           ? (0, i.jsx)(I, {
                                 jumpToVoiceChannels: c,
                                 guildChannels: n,

@@ -41,7 +41,7 @@ function N() {
             }),
             r.length > 0
                 ? r.map((s) => {
-                      let t = s.experiment.type === T.xY.GUILD ? C : m;
+                      let t = s.experiment.type === T.xY.GUILD ? A : m;
                       return (0, n.jsx)(
                           t,
                           {
@@ -67,10 +67,10 @@ function m(e) {
     let { experiment: t, experimentId: i, overrideDescriptor: _ } = e,
         [u, E] = a.useState(null != _),
         [N, m] = a.useState(!1),
-        C = a.useCallback(() => {
+        A = a.useCallback(() => {
             E((e) => !e);
         }, []),
-        A = (0, o.e7)([d.Z], () => d.Z.getUserExperimentDescriptor(i)),
+        C = (0, o.e7)([d.Z], () => d.Z.getUserExperimentDescriptor(i)),
         g = (0, o.e7)([d.Z], () => d.Z.getLoadedUserExperiment(i)),
         h = (0, o.e7)([d.Z], () =>
             r()
@@ -84,7 +84,7 @@ function m(e) {
                 })
         ),
         O = (0, n.jsx)(l.Clickable, {
-            onClick: C,
+            onClick: A,
             children: (0, n.jsxs)(l.FormTitle, {
                 tag: l.FormTitleTags.H3,
                 className: S.title,
@@ -142,7 +142,7 @@ function m(e) {
                               children: [
                                   (0, n.jsxs)(l.FormText, {
                                       type: l.FormTextTypes.DESCRIPTION,
-                                      children: ['Current assigned to bucket ', null !== (s = null == A ? void 0 : A.bucket) && void 0 !== s ? s : T.NZ.NOT_ELIGIBLE]
+                                      children: ['Current assigned to bucket ', null !== (s = null == C ? void 0 : C.bucket) && void 0 !== s ? s : T.NZ.NOT_ELIGIBLE]
                                   }),
                                   null == g
                                       ? (0, n.jsx)(l.FormText, {
@@ -204,14 +204,14 @@ function m(e) {
               children: (0, n.jsx)(l.FormSection, { children: O })
           });
 }
-function C(e) {
+function A(e) {
     let { experiment: s, experimentId: t, overrideDescriptor: i } = e,
         [u, E] = a.useState(null != i),
         [N, m] = a.useState(!1),
-        C = a.useCallback(() => {
+        A = a.useCallback(() => {
             E((e) => !e);
         }, []),
-        A = (0, o.e7)([d.Z], () => d.Z.getLoadedGuildExperiment(t)),
+        C = (0, o.e7)([d.Z], () => d.Z.getLoadedGuildExperiment(t)),
         g = (0, o.e7)([d.Z], () =>
             r()
                 .sortBy(d.Z.getRecentExposures(T.xY.GUILD, t), (e) => {
@@ -244,7 +244,7 @@ function C(e) {
             ];
         }),
         p = (0, n.jsx)(l.Clickable, {
-            onClick: C,
+            onClick: A,
             children: (0, n.jsxs)(l.FormTitle, {
                 tag: l.FormTitleTags.H3,
                 className: S.title,
@@ -304,7 +304,7 @@ function C(e) {
                                       type: l.FormTextTypes.DESCRIPTION,
                                       children: ['Current Assignments: ', O]
                                   }),
-                                  null == A
+                                  null == C
                                       ? (0, n.jsx)(l.FormText, {
                                             type: l.FormTextTypes.DESCRIPTION,
                                             children: 'Warning: Server did not send any experiment config. You may need to check the "Send to Client" box in the admin UI.'
@@ -333,7 +333,7 @@ function C(e) {
                                         (0, n.jsx)(l.Text, {
                                             variant: 'code',
                                             className: S.pre,
-                                            children: null == A ? 'None' : JSON.stringify(A, void 0, 2)
+                                            children: null == C ? 'None' : JSON.stringify(C, void 0, 2)
                                         }),
                                         (0, n.jsx)(l.FormTitle, {
                                             tag: 'h5',

@@ -19,8 +19,8 @@ var n = t(735250),
     I = t(567038),
     N = t(921801),
     m = t(246946),
-    C = t(594174),
-    A = t(351402),
+    A = t(594174),
+    C = t(351402),
     g = t(853872),
     h = t(78839),
     O = t(706454),
@@ -84,9 +84,9 @@ class M extends a.PureComponent {
     }
 }
 function D() {
-    let e = (0, o.cj)([O.default, A.Z, g.Z, C.default, m.Z, h.ZP], () => {
+    let e = (0, o.cj)([O.default, C.Z, g.Z, A.default, m.Z, h.ZP], () => {
         let e = h.ZP.getPremiumTypeSubscription(),
-            s = C.default.getCurrentUser();
+            s = A.default.getCurrentUser();
         return (
             r()(null != s, 'UserSettingsBilling: currentUser cannot be undefined'),
             {
@@ -97,9 +97,9 @@ function D() {
                 premiumSubscription: e,
                 defaultPaymentSourceId: g.Z.defaultPaymentSourceId,
                 paymentSources: g.Z.paymentSources,
-                syncing: A.Z.isSyncing,
-                isRemovingPaymentSource: A.Z.isRemovingPaymentSource,
-                isUpdatingPaymentSource: A.Z.isUpdatingPaymentSource
+                syncing: C.Z.isSyncing,
+                isRemovingPaymentSource: C.Z.isRemovingPaymentSource,
+                isUpdatingPaymentSource: C.Z.isUpdatingPaymentSource
             }
         );
     });

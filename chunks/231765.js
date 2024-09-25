@@ -20,8 +20,8 @@ var n,
     I = t(585483),
     N = t(557177),
     m = t(57562),
-    C = t(955204),
-    A = t(64078),
+    A = t(955204),
+    C = t(64078),
     g = t(351780),
     h = t(954794),
     O = t(112843),
@@ -121,7 +121,7 @@ function U(e) {
         value: s,
         note: x.Z.Messages.POGGERMODE_ENABLE_DESCRIPTION,
         onChange: (e) => {
-            !e && (0, m.T)(C.hn.DISABLE_POGGERMODE),
+            !e && (0, m.T)(A.hn.DISABLE_POGGERMODE),
                 e && (!t || a)
                     ? (0, u.openModal)((e) =>
                           (0, o.jsx)(u.ConfirmModal, {
@@ -265,7 +265,7 @@ function y(e) {
         r = (0, d.e7)([T.Z], () => T.Z.useReducedMotion),
         l = !s || !t || r,
         c = (e, s) => {
-            null != e.shakeIntensity && e.shakeIntensity > n && (0, m.T)(C.hn.MORE), i(e, s);
+            null != e.shakeIntensity && e.shakeIntensity > n && (0, m.T)(A.hn.MORE), i(e, s);
         };
     return (0, o.jsxs)(u.FormSection, {
         tag: u.FormTitleTags.H1,
@@ -408,7 +408,7 @@ function k(e) {
             }
         },
         E = (e, s) => {
-            if ((_(e), (0, A.AI)(e), null == s)) return;
+            if ((_(e), (0, C.AI)(e), null == s)) return;
             let t = c(n.confettiEnabled, e.confettiEnabled, n.enabled, e.enabled);
             0 === s && t && r.fire(a.x, a.y, { settings: e });
             let i = c(n.screenshakeEnabled, e.screenshakeEnabled, n.enabled, e.enabled);
@@ -488,7 +488,7 @@ function K() {
             return () => clearTimeout(s);
         }, [e]),
         l.useEffect(() => {
-            Math.random() > 0.99 && (0, m.T)(C.hn.VISITOR_100);
+            Math.random() > 0.99 && (0, m.T)(A.hn.VISITOR_100);
         }, []),
         (0, o.jsxs)(o.Fragment, {
             children: [

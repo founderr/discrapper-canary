@@ -21,7 +21,7 @@ var s = n(399606),
     h = n(226060),
     N = n(981631);
 function f(e) {
-    let { guildProductListing: t, guildId: n, location: f, shouldShowFullDescriptionButton: C = !0, hideRoleTag: p = !1, lineClamp: g = 1, cardWidth: S, cardHeight: A, thumbnailHeight: R, descriptionTextVariant: O = 'text-sm/normal', showOpaqueBackground: x = !1 } = e,
+    let { guildProductListing: t, guildId: n, location: f, shouldShowFullDescriptionButton: C = !0, hideRoleTag: p = !1, lineClamp: g = 1, cardWidth: A, cardHeight: S, thumbnailHeight: x, descriptionTextVariant: R = 'text-sm/normal', showOpaqueBackground: O = !1 } = e,
         M = (0, s.e7)([o.Z], () => o.Z.getGuild(n), [n]),
         v = (0, s.e7)([o.Z], () => {
             var e;
@@ -30,9 +30,9 @@ function f(e) {
         L = (0, a.U)(t, 600),
         Z = (0, I.C)(t),
         P = (0, u.SO)(M),
-        { shouldHideGuildPurchaseEntryPoints: D } = (0, l.uP)(n),
-        b = (0, I.k)(t);
-    if (null == M || D) return null;
+        { shouldHideGuildPurchaseEntryPoints: b } = (0, l.uP)(n),
+        D = (0, I.k)(t);
+    if (null == M || b) return null;
     let j = () =>
             (0, T.e)({
                 guildId: n,
@@ -69,7 +69,7 @@ function f(e) {
             imageUrl: L,
             name: t.name,
             description: t.description,
-            formattedPrice: b,
+            formattedPrice: D,
             role: v,
             ctaComponent: (0, i.jsx)(h.Z, {
                 guildId: n,
@@ -81,13 +81,13 @@ function f(e) {
             onShowFullDescription: j,
             onTapCard: j,
             actionMenu: U,
-            showOpaqueBackground: x,
+            showOpaqueBackground: O,
             hideRoleTag: p,
             lineClamp: g,
-            cardWidth: S,
-            cardHeight: A,
-            thumbnailHeight: R,
-            descriptionTextVariant: O,
+            cardWidth: A,
+            cardHeight: S,
+            thumbnailHeight: x,
+            descriptionTextVariant: R,
             isDraft: !t.published
         },
         t.id

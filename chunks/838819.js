@@ -30,8 +30,8 @@ var a = r(735250),
     j = r(307043),
     R = r(223143),
     A = r(298228),
-    P = r(937510),
-    Z = r(309956),
+    Z = r(937510),
+    P = r(309956),
     M = r(853748),
     y = r(426171),
     w = r(823941),
@@ -95,7 +95,7 @@ function ea(e) {
 }
 function en(e) {
     let { category: t, initialItemCardRef: r, ...s } = e,
-        i = (0, P.l)(t.products),
+        i = (0, Z.l)(t.products),
         l = (0, c.e7)([k.Z], () => k.Z.initialProductSkuId),
         d = n.useCallback(
             (e) => (t) => {
@@ -165,8 +165,8 @@ t.default = function (e) {
     let r = (0, j.u)('CollectiblesShop'),
         { analyticsSource: s, analyticsLocations: o } = (0, c.cj)([k.Z], () => k.Z.getAnalytics()),
         { analyticsLocations: m } = (0, _.ZP)([...o, C.Z.COLLECTIBLES_SHOP]),
-        { sessionId: I, scrollerRef: x, scrollHandler: P } = (0, g._)(Q.rMx.COLLECTIBLES_SHOP_SCROLLED, s),
-        { feedState: M, catalogState: w, transitionToCatalog: W, transitionToFeed: V } = (0, Z.B)(r, x),
+        { sessionId: I, scrollerRef: x, scrollHandler: Z } = (0, g._)(Q.rMx.COLLECTIBLES_SHOP_SCROLLED, s),
+        { feedState: M, catalogState: w, transitionToCatalog: W, transitionToFeed: V } = (0, P.B)(r, x),
         [z, $] = n.useState(!1),
         [ea, en] = n.useState(q.IV),
         [ei, eo] = n.useState(),
@@ -266,7 +266,7 @@ t.default = function (e) {
                     className: er.shopScroll,
                     ref: x,
                     onScroll: () => {
-                        if ((P(), null != x.current)) {
+                        if ((Z(), null != x.current)) {
                             let e = x.current.getDistanceFromBottom();
                             ea >= q.iA ? $(e < 20) : e <= 200 && en(ea + q.IV);
                         }

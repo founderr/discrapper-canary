@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return x;
     }
 }),
     n(47120);
@@ -15,8 +15,8 @@ var i = n(735250),
     d = n(571826),
     h = n(277642),
     p = n(441894),
-    _ = n(160038),
-    f = n(586646),
+    f = n(160038),
+    _ = n(586646),
     m = n(760373),
     g = n(689938),
     C = n(739949);
@@ -30,7 +30,7 @@ function I(e) {
             pings: u.Z.getPings(),
             outboundLossRate: u.Z.getOutboundLossRate(t)
         }));
-    return (0, i.jsx)(_.Z, {
+    return (0, i.jsx)(f.Z, {
         ...a,
         closePopout: l,
         connectionTypeText: n
@@ -46,7 +46,7 @@ function E(e) {
             outboundLossRate: o.Z.getOutboundLossRate(),
             pings: o.Z.getPings()
         }));
-    return (0, i.jsx)(_.Z, {
+    return (0, i.jsx)(f.Z, {
         ...l,
         closePopout: t,
         connectionTypeText: n
@@ -71,7 +71,7 @@ function N(e) {
               connectionTypeText: a
           });
 }
-function x(e) {
+function S(e) {
     let t = (0, r.e7)([c.Z], () => c.Z.hasVideo(e.channelId)),
         [n, o] = l.useState(m.tu.RTC_DEBUG_PANEL),
         u = (0, s.Dt)(),
@@ -80,7 +80,7 @@ function x(e) {
                 case m.tu.RTC_DEBUG_PANEL:
                     return (0, i.jsx)(N, { ...e });
                 case m.tu.RTC_SECURE_FRAMES:
-                    return (0, i.jsx)(f.Z, { channelId: e.channelId });
+                    return (0, i.jsx)(_.Z, { channelId: e.channelId });
             }
         }, [e, n]);
     l.useEffect(() => {
@@ -89,11 +89,11 @@ function x(e) {
             selectedTab: n
         });
     }, [e.channelId, n]);
-    let _ = (0, h.r)();
+    let f = (0, h.r)();
     return (
         l.useEffect(() => {
-            _ && o(m.tu.RTC_DEBUG_PANEL);
-        }, [_]),
+            f && o(m.tu.RTC_DEBUG_PANEL);
+        }, [f]),
         (0, i.jsxs)('div', {
             className: C.container,
             children: [
@@ -115,7 +115,7 @@ function x(e) {
                             className: C.tabBarItem,
                             children: g.Z.Messages.E2EE_CONNECTION
                         }),
-                        _
+                        f
                             ? null
                             : (0, i.jsx)(a.TabBar.Item, {
                                   id: m.tu.RTC_SECURE_FRAMES,
@@ -133,12 +133,12 @@ function x(e) {
         })
     );
 }
-function S(e) {
+function x(e) {
     return (0, p.J)({
         channelId: e.channelId,
         location: 'RTCConnectionPopout'
     })
-        ? (0, i.jsx)(x, { ...e })
+        ? (0, i.jsx)(S, { ...e })
         : (0, i.jsx)('div', {
               className: C.debugPanelStandalone,
               children: (0, i.jsx)('section', {

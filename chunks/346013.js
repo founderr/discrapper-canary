@@ -24,18 +24,18 @@ var i = n(735250),
     C = n(406432),
     p = n(348238),
     g = n(38267),
-    S = n(184301),
-    A = n(347475),
-    R = n(695346),
-    O = n(271383),
-    x = n(594174),
+    A = n(184301),
+    S = n(347475),
+    x = n(695346),
+    R = n(271383),
+    O = n(594174),
     M = n(768581),
     v = n(900849),
     L = n(506071),
     Z = n(495114),
     P = n(170140),
-    D = n(981631),
-    b = n(959517),
+    b = n(981631),
+    D = n(959517),
     j = n(689938),
     U = n(519644),
     y = n(527455);
@@ -43,22 +43,22 @@ function B(e) {
     var t, n, a;
     let { embedUrl: l, message: B, channel: k } = e,
         F = (0, P.J)(l, B),
-        { setPopout: G } = (0, g.Z)(B.id, b.d$),
+        { setPopout: G } = (0, g.Z)(B.id, D.d$),
         w = (0, p.qo)(B, k, G, !0),
-        V = R.QK.useSetting(),
+        V = x.QK.useSetting(),
         H = (0, L.n)(),
         [Y, W] = s.useState(!1),
         [K, z] = s.useState((null == F ? void 0 : F.coverImage) == null),
         Q = (0, d.e7)([E.Z], () => E.Z.useReducedMotion),
         q = (0, d.e7)(
-            [O.ZP, x.default],
+            [R.ZP, O.default],
             () => {
                 var e;
-                return O.ZP.isMember(null == F ? void 0 : F.guildId, null === (e = x.default.getCurrentUser()) || void 0 === e ? void 0 : e.id);
+                return R.ZP.isMember(null == F ? void 0 : F.guildId, null === (e = O.default.getCurrentUser()) || void 0 === e ? void 0 : e.id);
             },
             [F]
         ),
-        X = (0, d.e7)([O.ZP], () => ((null == F ? void 0 : F.authorId) != null ? O.ZP.getMember(F.guildId, F.authorId) : null)),
+        X = (0, d.e7)([R.ZP], () => ((null == F ? void 0 : F.authorId) != null ? R.ZP.getMember(F.guildId, F.authorId) : null)),
         J = (0, T.Z)((null == X ? void 0 : X.avatarDecoration) != null ? (null == X ? void 0 : X.avatarDecoration) : null == F ? void 0 : null === (t = F.user) || void 0 === t ? void 0 : t.avatarDecoration),
         [$, ee] = s.useMemo(() => {
             var e;
@@ -74,18 +74,18 @@ function B(e) {
         }, [W]),
         er = s.useCallback(async () => {
             null != F &&
-                ((0, m.yw)(D.rMx.MEDIA_POST_PREVIEW_EMBED_CLICKED, {
+                ((0, m.yw)(b.rMx.MEDIA_POST_PREVIEW_EMBED_CLICKED, {
                     media_post_id: F.threadId,
                     channel_id: k.id,
                     can_access: F.canAccess,
                     is_member: q
                 }),
-                F.canAccess ? (0, f.Z)(D.Z5c.CHANNEL(F.guildId, F.threadId, F.messageId)) : q ? (0, f.Z)(D.Z5c.CHANNEL(F.guildId, F.parentChannelId)) : await v.Ub(F.guildId, {}, { channelId: F.parentChannelId }));
+                F.canAccess ? (0, f.Z)(b.Z5c.CHANNEL(F.guildId, F.threadId, F.messageId)) : q ? (0, f.Z)(b.Z5c.CHANNEL(F.guildId, F.parentChannelId)) : await v.Ub(F.guildId, {}, { channelId: F.parentChannelId }));
         }, [F, k, q]),
         el = s.useCallback(
             () => (
                 o()((null == F ? void 0 : F.authorId) != null, 'Author Id cannot be null when loading user profile'),
-                (0, S.Z)(F.authorId, F.avatarUrl, {
+                (0, A.Z)(F.authorId, F.avatarUrl, {
                     guildId: F.guildId,
                     channelId: k.id
                 })
@@ -95,7 +95,7 @@ function B(e) {
     if (null == F) return null;
     let eo = (e, t) => (
             o()(null != F.authorId, 'Author Id cannot be null when rendering user popout'),
-            (0, i.jsx)(A.Z, {
+            (0, i.jsx)(S.Z, {
                 ...e,
                 userId: F.authorId,
                 guildId: F.guildId,

@@ -14,8 +14,8 @@ var i = n(735250),
     d = n(703656),
     h = n(259580),
     p = n(981631),
-    _ = n(176505),
-    f = n(689938),
+    f = n(176505),
+    _ = n(689938),
     m = n(813397);
 function g(e, t) {
     return (0, i.jsx)(
@@ -52,7 +52,7 @@ let C = l.memo(function (e) {
                 focusProps: { offset: { right: 4 } },
                 className: m.progressBarContainer,
                 onClick: function () {
-                    (0, d.uL)(p.Z5c.CHANNEL(t.id, _.oC.GUILD_HOME));
+                    (0, d.uL)(p.Z5c.CHANNEL(t.id, f.oC.GUILD_HOME));
                 },
                 children: [
                     (0, i.jsxs)('div', {
@@ -60,7 +60,7 @@ let C = l.memo(function (e) {
                         children: [
                             (0, i.jsx)(s.Heading, {
                                 variant: 'heading-sm/bold',
-                                children: f.Z.Messages.GUILD_ONBOARDING_NEW_MEMBER_PROGRESS_BAR_GET_STARTED
+                                children: _.Z.Messages.GUILD_ONBOARDING_NEW_MEMBER_PROGRESS_BAR_GET_STARTED
                             }),
                             (0, i.jsxs)('div', {
                                 className: m.rightContainer,
@@ -69,7 +69,7 @@ let C = l.memo(function (e) {
                                         variant: 'text-xs/medium',
                                         color: 'text-muted',
                                         className: m.rightText,
-                                        children: f.Z.Messages.GUILD_ONBOARDING_NEW_MEMBER_PROGRESS_BAR_COUNTER.format({
+                                        children: _.Z.Messages.GUILD_ONBOARDING_NEW_MEMBER_PROGRESS_BAR_COUNTER.format({
                                             numberHook: g,
                                             total: E.toString(),
                                             completed: I.toString()

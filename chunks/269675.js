@@ -20,8 +20,8 @@ var i = n(735250),
     g = n(351402),
     p = n(730647),
     T = n(772021),
-    f = n(396828),
-    S = n(293423),
+    S = n(396828),
+    f = n(293423),
     C = n(20967),
     N = n(504762),
     A = n(807152),
@@ -64,7 +64,7 @@ function R(e) {
                 className: Z.headerBar,
                 children: [
                     (0, i.jsx)(m.Z.Icon, {
-                        icon: (0, l.makeIconCompat)(f.Z),
+                        icon: (0, l.makeIconCompat)(S.Z),
                         'aria-hidden': !0
                     }),
                     (0, i.jsx)(m.Z.Title, { children: L.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE })
@@ -78,7 +78,7 @@ function R(e) {
                           className: Z.scroller,
                           children: (0, i.jsx)('div', {
                               className: Z.scrollerContent,
-                              children: y ? (0, i.jsx)(l.Spinner, {}) : (0, i.jsx)(S.Z, { guild: n })
+                              children: y ? (0, i.jsx)(l.Spinner, {}) : (0, i.jsx)(f.Z, { guild: n })
                           })
                       })
                     : (0, i.jsx)(N.Z, {})

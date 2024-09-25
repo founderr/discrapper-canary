@@ -16,8 +16,8 @@ var i = n(735250),
     g = n(626135),
     p = n(617136),
     T = n(113434),
-    f = n(497505),
-    S = n(918701),
+    S = n(497505),
+    f = n(918701),
     C = n(981631),
     N = n(689938),
     A = n(874976);
@@ -32,8 +32,8 @@ t.Z = (0, a.memo)(function (e) {
         y = (0, a.useRef)(null),
         j = (0, o.e7)([I.default], () => I.default.getCurrentUser()),
         { ref: U, height: G = 0 } = (0, u.Z)(),
-        k = (0, _.ZP)(),
-        w = (0, T.B6)(null === (t = L.userStatus) || void 0 === t ? void 0 : t.claimedAt, {
+        w = (0, _.ZP)(),
+        k = (0, T.B6)(null === (t = L.userStatus) || void 0 === t ? void 0 : t.claimedAt, {
             month: 'numeric',
             day: 'numeric'
         }),
@@ -54,16 +54,16 @@ t.Z = (0, a.memo)(function (e) {
         null == H || b)
     )
         return null;
-    let z = (0, c.wj)(k),
-        W = (0, S.Sz)(L.id, L.config.assets.logotype, 'dark'),
-        K = (0, S.Sz)(L.id, null != H.assetVideo ? H.assetVideo : H.asset),
-        q = (0, S.nP)(K),
+    let z = (0, c.wj)(w),
+        W = (0, f.Sz)(L.id, L.config.assets.logotype, 'dark'),
+        K = (0, f.Sz)(L.id, null != H.assetVideo ? H.assetVideo : H.asset),
+        q = (0, f.nP)(K),
         Q = Z ? G + 8 : 0,
         X = () => {
             R(!0),
                 g.default.track(C.rMx.QUEST_HOVER, {
                     quest_id: L.id,
-                    ...(0, p.mH)(f.jn.TROPHY_CASE_CARD)
+                    ...(0, p.mH)(S.jn.TROPHY_CASE_CARD)
                 });
         },
         J = () => R(!1),
@@ -104,7 +104,7 @@ t.Z = (0, a.memo)(function (e) {
                               autoPlay: !1,
                               children: (0, i.jsx)('source', {
                                   src: K,
-                                  type: (0, S.mN)(K),
+                                  type: (0, f.mN)(K),
                                   onError: () => $(K)
                               })
                           })
@@ -147,7 +147,7 @@ t.Z = (0, a.memo)(function (e) {
                             style: { opacity: z ? 1 : 0.75 },
                             children: N.Z.Messages.QUEST_REWARD_CLAIMED.format({
                                 reward: H.name,
-                                claimedDate: w
+                                claimedDate: k
                             })
                         })
                     ]

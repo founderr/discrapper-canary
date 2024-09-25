@@ -19,15 +19,15 @@ var n = t(735250),
     I = t(526761),
     N = t(726985),
     m = t(689938),
-    C = t(113207);
-let A = t(651714),
+    A = t(113207);
+let C = t(651714),
     g = t(297166);
 function h() {
     let { experimentalEncoders: e } = (0, o.cj)([E.Z], () => ({ experimentalEncoders: E.Z.getExperimentalEncoders() }));
     return (0, n.jsx)(u.F, {
         setting: N.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO_EXPERIMENTAL_ENCODERS,
         children: (0, n.jsx)(c.FormSwitch, {
-            className: r()(C.marginTop8, C.marginBottom20),
+            className: r()(A.marginTop8, A.marginBottom20),
             value: e,
             onChange: (e) => d.Z.setExperimentalEncoders(e),
             disabled: !1,
@@ -49,13 +49,13 @@ function O() {
                 (0, n.jsx)(u.F, {
                     setting: N.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_AUDIO,
                     children: (0, n.jsx)(c.FormSection, {
-                        className: C.marginBottom20,
+                        className: A.marginBottom20,
                         title: m.Z.Messages.USER_SETTINGS_VOICE_CODEC_TITLE,
                         children: (0, n.jsx)(c.FormNotice, {
-                            className: C.marginBottom20,
+                            className: A.marginBottom20,
                             type: c.FormNoticeTypes.PRIMARY,
                             imageData: {
-                                src: (0, l.ap)(e) ? A : g,
+                                src: (0, l.ap)(e) ? C : g,
                                 width: 70,
                                 height: 40
                             },
@@ -67,13 +67,13 @@ function O() {
                 (0, n.jsx)(u.F, {
                     setting: N.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO,
                     children: (0, n.jsxs)(c.FormSection, {
-                        className: C.marginBottom20,
+                        className: A.marginBottom20,
                         title: m.Z.Messages.USER_SETTINGS_VOICE_VIDEO_CODEC_TITLE,
                         children: [
                             (0, n.jsx)(u.F, {
                                 setting: N.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO_OPENH264,
                                 children: (0, n.jsx)(c.FormSwitch, {
-                                    className: r()(C.marginTop8, C.marginBottom20),
+                                    className: r()(A.marginTop8, A.marginBottom20),
                                     value: s,
                                     onChange: (e) => d.Z.setOpenH264(e),
                                     disabled: !1,
@@ -87,7 +87,7 @@ function O() {
                             (0, n.jsx)(u.F, {
                                 setting: N.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO_HARDWARE_ACCELERATION,
                                 children: (0, n.jsx)(c.FormSwitch, {
-                                    className: r()(C.marginTop8, C.marginBottom20),
+                                    className: r()(A.marginTop8, A.marginBottom20),
                                     value: t,
                                     onChange: (e) => d.Z.setHardwareEncoding(e),
                                     note: m.Z.Messages.FORM_HELP_HARDWARE_ENCODING,

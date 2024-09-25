@@ -1,6 +1,6 @@
 n.d(t, {
     H: function () {
-        return S;
+        return A;
     }
 });
 var i = n(735250);
@@ -24,8 +24,8 @@ var s = n(120356),
     C = n(981631),
     p = n(689938),
     g = n(64182);
-function S(e) {
-    var t, n, s, S, A, R, O, x, M, v;
+function A(e) {
+    var t, n, s, A, S, x, R, O, M, v;
     let { message: L, channel: Z } = e,
         P =
             null === (s = L.embeds[0]) || void 0 === s
@@ -39,23 +39,23 @@ function S(e) {
                           })) || void 0 === t
                     ? void 0
                     : t.rawValue,
-        D =
-            null === (R = L.embeds[0]) || void 0 === R
+        b =
+            null === (x = L.embeds[0]) || void 0 === x
                 ? void 0
-                : null === (A = R.fields) || void 0 === A
+                : null === (S = x.fields) || void 0 === S
                   ? void 0
                   : null ===
-                          (S = A.find((e) => {
+                          (A = S.find((e) => {
                               let { rawName: t } = e;
                               return 'channel_id' === t;
-                          })) || void 0 === S
+                          })) || void 0 === A
                     ? void 0
-                    : S.rawValue,
-        b = (0, r.e7)([T.Z], () => T.Z.getGuild(P)),
-        j = (0, r.e7)([m.Z], () => m.Z.getChannel(D)),
+                    : A.rawValue,
+        D = (0, r.e7)([T.Z], () => T.Z.getGuild(P)),
+        j = (0, r.e7)([m.Z], () => m.Z.getChannel(b)),
         U = (0, r.e7)([h.default], () => h.default.getCurrentUser()),
         y = (0, r.e7)([], () => L.author.id === (null == U ? void 0 : U.id)),
-        B = null === (O = Z.recipients) || void 0 === O ? void 0 : O.find((e) => e !== L.author.id),
+        B = null === (R = Z.recipients) || void 0 === R ? void 0 : R.find((e) => e !== L.author.id),
         k = (0, r.e7)([h.default], () => (null != B ? h.default.getUser(B) : null)),
         F = (0, d.ZP)(L),
         G = (0, f._T)(Z.getGuildId(), Z.id, k),
@@ -67,16 +67,16 @@ function S(e) {
                 : null === (M = v.fields) || void 0 === M
                   ? void 0
                   : null ===
-                          (x = M.find((e) => {
+                          (O = M.find((e) => {
                               let { rawName: t } = e;
                               return 'voice_user_ids' === t;
-                          })) || void 0 === x
+                          })) || void 0 === O
                     ? void 0
-                    : x.rawValue,
+                    : O.rawValue,
         Y = null != H ? H.split(',') : [],
         W = (0, r.Wu)([h.default], () => Y.map((e) => h.default.getUser(e)).filter(Boolean)),
         K = y && null != k ? p.Z.Messages.WAVED_AT_USER.format({ username: G }) : p.Z.Messages.WAVED_AT_YOU.format({ username: F.nick }),
-        z = null != b && null != j,
+        z = null != D && null != j,
         Q = null;
     (Q = z ? (y || V ? p.Z.Messages.YOU_ARE_IN_CHANNEL.format({ channelHook: (e, t) => (0, i.jsx)(_.Z, { channel: null != j ? j : void 0 }, t) }) : p.Z.Messages.THEY_ARE_IN_CHANNEL.format({ channelHook: (e, t) => (0, i.jsx)(_.Z, { channel: null != j ? j : void 0 }, t) })) : p.Z.Messages.CANNOT_ACCESS_HANGOUT), 0 === w.length && (Q = y ? p.Z.Messages.HANGOUT_OVER_SENDER : p.Z.Messages.HANGOUT_OVER_RECEIVER);
     let q = y ? p.Z.Messages.WAVE_AGAIN : p.Z.Messages.WAVE_BACK;
@@ -130,7 +130,7 @@ function S(e) {
                     (0, i.jsxs)(l.Button, {
                         color: l.Button.Colors.BRAND,
                         onClick: () => {
-                            null != D && null != P && ((0, I.uL)(C.Z5c.CHANNEL(P, D)), c.default.selectVoiceChannel(D));
+                            null != b && null != P && ((0, I.uL)(C.Z5c.CHANNEL(P, b)), c.default.selectVoiceChannel(b));
                         },
                         className: g.button,
                         innerClassName: g.buttonInner,

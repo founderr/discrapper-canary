@@ -1,6 +1,6 @@
 n.d(t, {
     OG: function () {
-        return x;
+        return S;
     },
     Zu: function () {
         return N;
@@ -18,8 +18,8 @@ var i = n(735250),
     d = n(626135),
     h = n(727258),
     p = n(662146),
-    _ = n(981631),
-    f = n(689938),
+    f = n(981631),
+    _ = n(689938),
     m = n(577837);
 function g(e) {
     let t = l.useRef(null),
@@ -45,7 +45,7 @@ function C(e, t) {
             canDrop: (e) => e.nodeId !== t.id && (!i || e.type !== h.eD.FOLDER || t.type !== h.eD.FOLDER) && (e.type !== h.eD.FOLDER || null == t.parentId) && !0,
             drop(e) {
                 let { nodeId: l } = e;
-                i && t.type !== h.eD.FOLDER && d.default.track(_.rMx.GUILD_FOLDER_CREATED), u.Z.moveById(l, t.id, n, i);
+                i && t.type !== h.eD.FOLDER && d.default.track(f.rMx.GUILD_FOLDER_CREATED), u.Z.moveById(l, t.id, n, i);
             },
             collect: (e) => ({
                 canDrop: e.canDrop(),
@@ -58,15 +58,15 @@ function I(e) {
     let { name: t, targetNode: n, combine: r, below: s } = e,
         o = l.useMemo(() => C([h.eD.GUILD, h.eD.FOLDER], n, s, r), [n, s, r]),
         [{ canDrop: u, isOver: d }, p] = (0, c.L)(o),
-        _ = g([
+        f = g([
             [u, m.autoPointerEvents],
             [d, m.dragOver]
         ]);
     return (0, i.jsx)('div', {
         ref: (e) => {
-            (_.current = e), p(e);
+            (f.current = e), p(e);
         },
-        'data-dnd-name': f.Z.Messages.DND_DROP_ABOVE.format({ itemName: t }),
+        'data-dnd-name': _.Z.Messages.DND_DROP_ABOVE.format({ itemName: t }),
         className: a()(m.target)
     });
 }
@@ -90,7 +90,7 @@ function E(e) {
             ref: (e) => {
                 (d.current = e), u(e);
             },
-            'data-dnd-name': f.Z.Messages.DND_DROP_COMBINE.format({ itemName: t }),
+            'data-dnd-name': _.Z.Messages.DND_DROP_COMBINE.format({ itemName: t }),
             className: a()(m.centerTarget, {})
         })
     });
@@ -119,7 +119,7 @@ function N(e) {
         })
     });
 }
-function x(e) {
+function S(e) {
     let { children: t } = e,
         [, n] = (0, c.L)({ accept: [] });
     return (0, i.jsx)('div', {

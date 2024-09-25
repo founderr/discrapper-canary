@@ -21,8 +21,8 @@ var i = n(735250),
     g = n(836768),
     p = n(766219),
     T = n(917039),
-    f = n(49898),
-    S = n(909482);
+    S = n(49898),
+    f = n(909482);
 function C(e) {
     let { searchRoute: t } = e,
         { game: n } = s.parse(t),
@@ -30,7 +30,7 @@ function C(e) {
     return (
         a.useEffect(() => {
             (0, r.j)(() => {
-                g.d.setState({ selectedTab: f.F$.SERVERS }), u.GN.setState({ mode: u.v0.DISCOVERY });
+                g.d.setState({ selectedTab: S.F$.SERVERS }), u.GN.setState({ mode: u.v0.DISCOVERY });
             }),
                 null != n &&
                     null == d &&
@@ -51,11 +51,11 @@ function N() {
     let e = (0, T.Z)(),
         t = (function (e) {
             switch (e) {
-                case f.F$.SERVERS:
+                case S.F$.SERVERS:
                     return (0, i.jsx)(E.Z, {});
-                case f.F$.APPS:
+                case S.F$.APPS:
                     return (0, i.jsx)(_.Z, {});
-                case f.F$.QUESTS:
+                case S.F$.QUESTS:
                     return (0, i.jsx)(h.Z, {});
                 default:
                     (0, m.vE)(e);
@@ -66,8 +66,8 @@ function N() {
             (0, I.RI)({ selectedTab: e });
         }, [e]),
         (0, i.jsxs)('section', {
-            className: S.container,
-            children: [(0, i.jsx)(d.yY, { location: (0, p.s)(e) }), (0, i.jsx)('div', { className: S.dragRegion }), t]
+            className: f.container,
+            children: [(0, i.jsx)(d.yY, { location: (0, p.s)(e) }), (0, i.jsx)('div', { className: f.dragRegion }), t]
         })
     );
 }

@@ -26,7 +26,7 @@ function N(e) {
             guildScheduledEvent: C,
             guild: p,
             channel: g,
-            isMember: S
+            isMember: A
         } = (0, a.cj)(
             [I.ZP, d.Z, c.Z, u.ZP, _.default],
             () => {
@@ -51,7 +51,7 @@ function N(e) {
             guild: p,
             channel: g,
             guildScheduledEvent: C,
-            isMember: S,
+            isMember: A,
             onAcceptInstantInvite: h.dG,
             onTransitionToInviteChannel: function () {
                 if ((0, l.n)(n)) {

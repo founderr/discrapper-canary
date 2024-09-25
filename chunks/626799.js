@@ -25,10 +25,10 @@ var i,
     C = n(55563),
     p = n(551428),
     g = n(73346),
-    S = n(981631),
-    A = n(689938),
-    R = n(232822);
-function O(e, t, n) {
+    A = n(981631),
+    S = n(689938),
+    x = n(232822);
+function R(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -41,7 +41,7 @@ function O(e, t, n) {
         e
     );
 }
-class x extends (i = a.Component) {
+class O extends (i = a.Component) {
     get analyticsLocation() {
         let {
             analyticsContext: { location: e },
@@ -49,8 +49,8 @@ class x extends (i = a.Component) {
         } = this.props;
         return {
             ...e,
-            section: null != t ? t : S.jXE.APPLICATION_EMBED,
-            object: S.qAy.CARD
+            section: null != t ? t : A.jXE.APPLICATION_EMBED,
+            object: A.qAy.CARD
         };
     }
     componentDidMount() {
@@ -60,23 +60,23 @@ class x extends (i = a.Component) {
     renderViewInStoreButton() {
         return (0, s.jsx)(o.Button.Link, {
             to: this.getStoreListingLocation(),
-            className: R.actionButton,
+            className: x.actionButton,
             color: o.Button.Colors.GREEN,
             size: o.Button.Sizes.SMALL,
-            children: A.Z.Messages.GAME_ACTION_BUTTON_VIEW_IN_STORE
+            children: S.Z.Messages.GAME_ACTION_BUTTON_VIEW_IN_STORE
         });
     }
     render() {
         let { sku: e, storeListing: t, width: n, fetchFailed: i, renderFallback: a } = this.props,
             l = n > I.aL;
         if (null == e || null == t) return i ? a() : (0, s.jsx)(I.OR, { isHorizontal: l });
-        return e.productLine === S.POd.COLLECTIBLES
+        return e.productLine === A.POd.COLLECTIBLES
             ? (0, s.jsx)(u.Z, {
-                  section: S.jXE.APPLICATION_EMBED,
+                  section: A.jXE.APPLICATION_EMBED,
                   children: this.renderApplicationTile(e, t)
               })
             : (0, s.jsx)(u.Z, {
-                  section: S.jXE.APPLICATION_EMBED,
+                  section: A.jXE.APPLICATION_EMBED,
                   children: (0, s.jsx)(r.rU, {
                       onClick: this.handleLinkClick,
                       to: this.getStoreListingLocation(),
@@ -88,20 +88,20 @@ class x extends (i = a.Component) {
     }
     constructor(...e) {
         super(...e),
-            O(this, 'state', {
+            R(this, 'state', {
                 playing: !1,
                 muted: !0
             }),
-            O(this, 'handleToggleMute', () => {
+            R(this, 'handleToggleMute', () => {
                 this.setState({ muted: !this.state.muted });
             }),
-            O(this, 'handleMouseEnter', () => {
+            R(this, 'handleMouseEnter', () => {
                 this.setState({ playing: !0 });
             }),
-            O(this, 'handleMouseLeave', () => {
+            R(this, 'handleMouseLeave', () => {
                 this.setState({ playing: !1 });
             }),
-            O(this, 'getStoreListingLocation', () => {
+            R(this, 'getStoreListingLocation', () => {
                 let { sku: e } = this.props;
                 if (null == e) throw Error('Should not be link to ApplicationStoreListing without SKU');
                 return (0, g.ZI)(e.id, {
@@ -109,13 +109,13 @@ class x extends (i = a.Component) {
                     analyticsSource: this.analyticsLocation
                 });
             }),
-            O(this, 'handleActionButtonClick', (e) => e.preventDefault()),
-            O(this, 'handleBuyButtonClick', (e) => e.preventDefault()),
-            O(this, 'handleLinkClick', (e) => {
+            R(this, 'handleActionButtonClick', (e) => e.preventDefault()),
+            R(this, 'handleBuyButtonClick', (e) => e.preventDefault()),
+            R(this, 'handleLinkClick', (e) => {
                 let { onEmbedClick: t } = this.props;
                 null != t && t(e);
             }),
-            O(this, 'renderApplicationTile', (e, t) => {
+            R(this, 'renderApplicationTile', (e, t) => {
                 let { inLibrary: n, width: i, renderCustomTitle: a, renderCustomTagline: r, renderCustomMedia: l } = this.props,
                     { playing: o, muted: c } = this.state,
                     u = i > I.aL;
@@ -134,18 +134,18 @@ class x extends (i = a.Component) {
                     isEmbed: !0
                 });
             }),
-            O(this, 'renderActions', (e) => {
+            R(this, 'renderActions', (e) => {
                 let { inLibrary: t, application: n, skuId: i, libraryApplication: a, renderCustomActions: r } = this.props;
                 if (null != r)
                     return (0, s.jsx)('div', {
-                        className: R.tileActions,
+                        className: x.tileActions,
                         children: r()
                     });
                 if (null == n) return null;
                 let l = null != n && n.primarySkuId === i,
-                    c = null != a && a.hasFlag(S.eHb.HIDDEN);
+                    c = null != a && a.hasFlag(A.eHb.HIDDEN);
                 return (0, s.jsxs)('div', {
-                    className: R.tileActions,
+                    className: x.tileActions,
                     children: [
                         !l || c
                             ? this.renderViewInStoreButton()
@@ -153,8 +153,8 @@ class x extends (i = a.Component) {
                                   application: n,
                                   customDisabledColor: o.Button.Colors.PRIMARY,
                                   size: o.Button.Sizes.SMALL,
-                                  className: R.actionButton,
-                                  source: S.Sbl.MESSAGE_EMBED,
+                                  className: x.actionButton,
+                                  source: A.Sbl.MESSAGE_EMBED,
                                   onClick: this.handleActionButtonClick
                               }),
                         (t && !c) || e.premium
@@ -169,7 +169,7 @@ class x extends (i = a.Component) {
             });
     }
 }
-O(x, 'defaultProps', { renderFallback: S.dG4 });
+R(O, 'defaultProps', { renderFallback: A.dG4 });
 let M = [C.Z, f.Z, N.Z, p.Z];
 function v(e) {
     let { skuId: t } = e,
@@ -184,6 +184,6 @@ function v(e) {
         libraryApplication: null != n ? N.Z.getLibraryApplication(n.applicationId, n.applicationId, !0) : null
     };
 }
-let L = (0, T.Z)((0, m.Z)(x));
+let L = (0, T.Z)((0, m.Z)(O));
 t.Z = l.ZP.connectStores(M, v)(L);
-let Z = (0, m.Z)(l.ZP.connectStores(M, v)(x));
+let Z = (0, m.Z)(l.ZP.connectStores(M, v)(O));

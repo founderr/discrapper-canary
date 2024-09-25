@@ -19,18 +19,18 @@ var i = n(735250),
     C = n(569984),
     p = n(497505),
     g = n(918701),
-    S = n(5881),
-    A = n(566078),
-    R = n(602667),
-    O = n(340100),
-    x = n(611855),
+    A = n(5881),
+    S = n(566078),
+    x = n(602667),
+    R = n(340100),
+    O = n(611855),
     M = n(644646),
     v = n(670638),
     L = n(667105),
     Z = n(860151),
     P = n(341907),
-    D = n(46140),
-    b = n(981631),
+    b = n(46140),
+    D = n(981631),
     j = n(354459),
     U = n(689938),
     y = n(869630);
@@ -43,7 +43,7 @@ t.Z = function (e) {
         Y = s.useContext(I.h9),
         W = (0, l.e7)([T.default], () => T.default.getCurrentUser()),
         K = (0, l.e7)([E.Z], () => E.Z.getState().theme),
-        z = (0, o.wj)(K) ? b.BRd.DARK : b.BRd.LIGHT,
+        z = (0, o.wj)(K) ? D.BRd.DARK : D.BRd.LIGHT,
         { isCurrentUserStreamingQuestApplication: Q, quest: q } = (0, l.cj)(
             [m.Z, u.Z, C.Z],
             () => {
@@ -88,7 +88,7 @@ t.Z = function (e) {
             },
             [B, W, k]
         ),
-        X = null != q ? A.r.build(q.config) : null,
+        X = null != q ? S.r.build(q.config) : null,
         J = null == X ? void 0 : X.application.id,
         $ = (0, l.e7)(
             [d.ZP, m.Z],
@@ -96,7 +96,7 @@ t.Z = function (e) {
                 if (null == q) return !1;
                 let e = d.ZP.getRunningGames().map((e) => e.id);
                 if ((0, g.$H)(q) && e.includes(J)) return !0;
-                let t = null != W ? m.Z.findActivity(W.id, (e) => e.type !== b.IIU.CUSTOM_STATUS) : null;
+                let t = null != W ? m.Z.findActivity(W.id, (e) => e.type !== D.IIU.CUSTOM_STATUS) : null;
                 return !!(null != t && (0, g.$J)(q) && (0, g._D)(t, q)) || !1;
             },
             [q, J, W]
@@ -120,7 +120,7 @@ t.Z = function (e) {
                     questContent: p.jn.QUEST_LIVE_STREAM,
                     questContentCTA: h.jZ.TRACK_PROGRESS
                 }),
-                (0, P.navigateToQuestHome)(D.dr.QUEST_CHANNEL_CALL_HEADER, p.jn.QUEST_LIVE_STREAM, q.id));
+                (0, P.navigateToQuestHome)(b.dr.QUEST_CHANNEL_CALL_HEADER, p.jn.QUEST_LIVE_STREAM, q.id));
         }, [q]),
         el = s.useCallback(() => {
             null != q &&
@@ -129,7 +129,7 @@ t.Z = function (e) {
                     questContent: p.jn.QUEST_LIVE_STREAM,
                     questContentCTA: h.jZ.LEARN_MORE
                 }),
-                (0, P.navigateToQuestHome)(D.dr.QUEST_CHANNEL_CALL_HEADER, p.jn.QUEST_LIVE_STREAM, q.id));
+                (0, P.navigateToQuestHome)(b.dr.QUEST_CHANNEL_CALL_HEADER, p.jn.QUEST_LIVE_STREAM, q.id));
         }, [q]),
         eo = (0, L.hf)({
             quest: q,
@@ -137,9 +137,9 @@ t.Z = function (e) {
         }),
         ec = s.useMemo(
             () =>
-                (0, S.T)({
+                (0, A.T)({
                     quest: q,
-                    location: D.dr.QUEST_CHANNEL_CALL_HEADER
+                    location: b.dr.QUEST_CHANNEL_CALL_HEADER
                 }),
             [q]
         ),
@@ -164,9 +164,9 @@ t.Z = function (e) {
             autoplay: G,
             quest: q,
             questContent: p.jn.QUEST_LIVE_STREAM,
-            location: D.dr.QUEST_CHANNEL_CALL_HEADER
+            location: b.dr.QUEST_CHANNEL_CALL_HEADER
         });
-    return (0, i.jsx)(R.A, {
+    return (0, i.jsx)(x.A, {
         questOrQuests: q,
         overrideVisibility: !Y,
         questContent: p.jn.QUEST_LIVE_STREAM,
@@ -184,7 +184,7 @@ t.Z = function (e) {
                             className: y.rewardTileWrapper,
                             children: [
                                 eN,
-                                (0, i.jsx)(x.Z, {
+                                (0, i.jsx)(O.Z, {
                                     bgOpacity: 0.32,
                                     className: y.promotedTag
                                 })
@@ -255,7 +255,7 @@ t.Z = function (e) {
                                     quest: q,
                                     questContent: p.jn.QUEST_LIVE_STREAM,
                                     taskDetails: eh,
-                                    location: D.dr.QUEST_CHANNEL_CALL_HEADER
+                                    location: b.dr.QUEST_CHANNEL_CALL_HEADER
                                 }),
                             (0, i.jsxs)('div', {
                                 className: y.ctas,
@@ -285,7 +285,7 @@ t.Z = function (e) {
                                     ed &&
                                         !e_ &&
                                         ee &&
-                                        (0, i.jsx)(O.Z, {
+                                        (0, i.jsx)(R.Z, {
                                             color: c.tokens.colors.BG_BRAND,
                                             quest: q
                                         }),

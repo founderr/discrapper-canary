@@ -23,8 +23,8 @@ var i,
     g = n(496675),
     p = n(541566),
     T = n(192513),
-    f = n(255791),
-    S = n(70956),
+    S = n(255791),
+    f = n(70956),
     C = n(267642),
     N = n(981631);
 function A(e) {
@@ -39,7 +39,7 @@ function A(e) {
             isGracePeriodVisible: p.Z.isVisible(n)
         })),
         v = (0, r.e7)([h.Z], () => h.Z.isVisible(e)),
-        L = (0, r.e7)([f.Z], () => f.Z.isVisible(e)),
+        L = (0, r.e7)([S.Z], () => S.Z.isVisible(e)),
         Z = (0, r.e7)([g.Z], () => g.Z.can(N.Plq.ADMINISTRATOR, e)),
         R = null != a && Date.now() - a <= N.Dge,
         O = null != e ? e.premiumSubscriberCount : 0,
@@ -52,8 +52,8 @@ function A(e) {
         j = (0, E.h6)(e),
         { enableStudyGroup: U } = (0, u.s)(e),
         G = j.length > 0,
-        k = U && !(null == e ? void 0 : e.hasFeature(N.oNc.HUB)),
-        w = (0, d.Vm)(n),
+        w = U && !(null == e ? void 0 : e.hasFeature(N.oNc.HUB)),
+        k = (0, d.Vm)(n),
         B = (0, r.e7)([m.Z], () => null != m.Z.getActiveGuildSignUp(n));
     if (
         (s.useEffect(() => {
@@ -67,7 +67,7 @@ function A(e) {
                         () => {
                             null != n && (0, l.C0)(n);
                         },
-                        30 * Math.random() * S.Z.Millis.SECOND
+                        30 * Math.random() * f.Z.Millis.SECOND
                     )),
                 () => {
                     window.clearTimeout(e);
@@ -79,11 +79,11 @@ function A(e) {
         return 0;
     if (A) return 1;
     if (L) return 2;
-    else if (M || null != w) return 3;
+    else if (M || null != k) return 3;
     else if (D) return 4;
     else if (y) return 5;
     else if (G) return 6;
-    else if (k) return 7;
+    else if (w) return 7;
     else if (B) return 8;
     return null;
 }

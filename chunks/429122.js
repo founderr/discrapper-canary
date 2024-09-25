@@ -1,9 +1,9 @@
 n.d(t, {
     dt: function () {
-        return _;
+        return f;
     },
     eo: function () {
-        return f;
+        return _;
     }
 });
 var i = n(735250),
@@ -21,7 +21,7 @@ let p = l.memo(function (e) {
         r = l.useMemo(() => t.getCategoryFromSection(t.voiceChannelsSectionNumber), [t, n]);
     return null == r ? null : (0, i.jsx)(u.Qo, { category: r });
 });
-function _(e) {
+function f(e) {
     let { sectionIndex: t, guildChannels: n, voiceStates: i, selectedChannelId: l, selectedVoiceChannelId: r, optInEnabled: a } = e;
     if (t === n.voiceChannelsSectionNumber) return 44;
     let { hasDivider: s, canHaveVoiceSummary: u } = (0, c.ie)(n, a, t),
@@ -39,7 +39,7 @@ function _(e) {
           ? d.Vf + h
           : h;
 }
-function f(e, t, n) {
+function _(e, t, n) {
     if (e === t.voiceChannelsSectionNumber) return 'voice-channels-button';
     let { hasDivider: i, canHaveVoiceSummary: l } = (0, c.ie)(t, n, e);
     return 'section-footer-'
@@ -48,7 +48,7 @@ function f(e, t, n) {
         .concat(l ? '-voice-summary' : '');
 }
 t.ZP = l.memo(function (e) {
-    let { sectionIndex: t, guildChannels: n, guildChannelsVersion: u, voiceStates: d, guildId: _, selectedChannelId: f, selectedVoiceChannelId: m, optInEnabled: g } = e,
+    let { sectionIndex: t, guildChannels: n, guildChannelsVersion: u, voiceStates: d, guildId: f, selectedChannelId: _, selectedVoiceChannelId: m, optInEnabled: g } = e,
         { hasDivider: C, canHaveVoiceSummary: I } = l.useMemo(() => (0, c.ie)(n, g, t), [n, g, t, u]),
         E = l.useMemo(() => (t === o.wZ ? null : n.getCategoryFromSection(t)), [n, t, u]),
         N = l.useMemo(
@@ -56,20 +56,20 @@ t.ZP = l.memo(function (e) {
                 null != E && E.isCollapsed
                     ? (0, s.c4)({
                           channels: E.getChannelRecords(),
-                          selectedChannelId: f,
+                          selectedChannelId: _,
                           selectedVoiceChannelId: m,
                           voiceStates: d
                       })
                     : [],
-            [E, f, m, d]
+            [E, _, m, d]
         ),
-        x = (0, a.Q)('ChannelListSectionFooter');
+        S = (0, a.Q)('ChannelListSectionFooter');
     if (t === n.voiceChannelsSectionNumber)
         return (0, i.jsx)(p, {
             guildChannels: n,
             guildChannelsVersion: u
         });
-    let S = C ? (0, i.jsx)('div', { className: h.sectionDivider }) : null;
+    let x = C ? (0, i.jsx)('div', { className: h.sectionDivider }) : null;
     return I && 0 !== N.length
         ? (0, i.jsxs)(i.Fragment, {
               children: [
@@ -80,13 +80,13 @@ t.ZP = l.memo(function (e) {
                           users: N,
                           max: 8,
                           showUserPopout: !0,
-                          guildId: _
+                          guildId: f
                       })
                   }),
-                  S
+                  x
               ]
           })
-        : x
+        : S
           ? null
-          : S;
+          : x;
 });

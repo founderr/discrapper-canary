@@ -1,6 +1,6 @@
 n.d(t, {
     c: function () {
-        return b;
+        return D;
     }
 }),
     n(47120);
@@ -24,11 +24,11 @@ var i = n(735250),
     C = n(971792),
     p = n(629262),
     g = n(761966),
-    S = n(893729),
-    A = n(838940),
-    R = n(882101),
-    O = n(11705),
-    x = n(81273),
+    A = n(893729),
+    S = n(838940),
+    x = n(882101),
+    R = n(11705),
+    O = n(81273),
     M = n(293810),
     v = n(981631),
     L = n(689938),
@@ -62,7 +62,7 @@ let P = (e) => {
                                   'li',
                                   {
                                       children: (0, i.jsx)(
-                                          A.Z,
+                                          S.Z,
                                           {
                                               guildId: a,
                                               benefit: e
@@ -83,7 +83,7 @@ let P = (e) => {
                   ]
               });
     },
-    D = (e) => {
+    b = (e) => {
         let { guildId: t, listingId: n } = e,
             s = (0, f.Z)(t),
             [a] = T.XZ(n, t),
@@ -134,7 +134,7 @@ let P = (e) => {
                   ]
               });
     },
-    b = (e) => {
+    D = (e) => {
         let { listingId: t, guildId: n, className: s } = e,
             a = (0, C.Z)(n, t),
             [l] = T.UE(t),
@@ -157,7 +157,7 @@ let P = (e) => {
                               }),
                               children: [
                                   (0, i.jsx)(o.Spacer, { size: 8 }),
-                                  (0, i.jsx)(S.Z, {
+                                  (0, i.jsx)(A.Z, {
                                       role: d,
                                       guildId: n,
                                       className: Z.roleMessagePreview
@@ -174,7 +174,7 @@ let P = (e) => {
                           benefits: u,
                           guildId: n
                       }),
-                      (0, i.jsx)(D, {
+                      (0, i.jsx)(b, {
                           guildId: n,
                           listingId: t
                       })
@@ -220,11 +220,11 @@ t.Z = (e) => {
     var t;
     let { listingId: n, guildId: a, groupListingId: u, analyticsLocation: E } = e,
         f = (0, m.jO)(n),
-        { openModal: C, canOpenModal: p, cannotOpenReason: S, isCheckingTrialEligibility: A } = (0, x.Z)(f, a, u, E),
+        { openModal: C, canOpenModal: p, cannotOpenReason: A, isCheckingTrialEligibility: S } = (0, O.Z)(f, a, u, E),
         P = (0, l.e7)([_.Z], () => _.Z.isSyncing),
-        { activeSubscription: D, activeSubscriptionListing: U } = (0, h.Z)(u),
+        { activeSubscription: b, activeSubscriptionListing: U } = (0, h.Z)(u),
         y = (null == U ? void 0 : U.id) === n,
-        B = (null == D ? void 0 : D.status) === v.O0b.CANCELED,
+        B = (null == b ? void 0 : b.status) === v.O0b.CANCELED,
         [k, F] = s.useState(!1),
         [G, w] = s.useState(!1),
         V = s.useCallback((e) => {
@@ -236,7 +236,7 @@ t.Z = (e) => {
         [W] = T.TT(n),
         [K] = T.F2(n),
         z = (0, N.Z)(a, n),
-        Q = null != W && null == D && z,
+        Q = null != W && null == b && z,
         q = (0, c.Z)(M.iP),
         [X, J] = s.useState(!1),
         $ = X || !q,
@@ -279,13 +279,13 @@ t.Z = (e) => {
                               className: Z.tierInfoContainer,
                               children: [
                                   q
-                                      ? (0, i.jsx)(O.e, {
+                                      ? (0, i.jsx)(R.e, {
                                             listingId: n,
                                             isListingPublished: et,
                                             expanded: $,
                                             onToggleExpanded: () => J((e) => !e)
                                         })
-                                      : (0, i.jsx)(R.xv, {
+                                      : (0, i.jsx)(x.xv, {
                                             listingId: n,
                                             isListingPublished: et
                                         }),
@@ -302,14 +302,14 @@ t.Z = (e) => {
                                                         children: B ? L.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_REVIEW_CANCELED_LABEL : L.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_REVIEW_SUBSCRIBED_LABEL
                                                     })
                                                   : (0, i.jsx)(o.Tooltip, {
-                                                        text: p ? null : S,
-                                                        'aria-label': null !== (t = p && S) && void 0 !== t && t,
+                                                        text: p ? null : A,
+                                                        'aria-label': null !== (t = p && A) && void 0 !== t && t,
                                                         children: (e) =>
                                                             (0, i.jsx)(g.Z, {
                                                                 ...e,
                                                                 fullWidth: !0,
                                                                 disabled: !p || P,
-                                                                submitting: A,
+                                                                submitting: S,
                                                                 onClick: C,
                                                                 onlyShineOnHover: !0,
                                                                 children: L.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_REVIEW_SUBSCRIBE_LABEL
@@ -337,7 +337,7 @@ t.Z = (e) => {
                           }),
                           $ &&
                               (0, i.jsx)(o.HeadingLevel, {
-                                  children: (0, i.jsx)(b, {
+                                  children: (0, i.jsx)(D, {
                                       listingId: n,
                                       guildId: a
                                   })

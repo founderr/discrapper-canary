@@ -50,7 +50,7 @@ function d(e) {
                 autoTrackExposure: !0
             }
         ).enabled,
-        S = (0, r.O)(p, 0, g);
+        A = (0, r.O)(p, 0, g);
     return (
         i.useEffect(
             () => () => {
@@ -58,6 +58,6 @@ function d(e) {
             },
             [N]
         ),
-        S
+        A
     );
 }

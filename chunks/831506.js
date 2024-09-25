@@ -62,7 +62,7 @@ function g() {
         t = E.Z.getActivities();
     return f(I.ME, e, t);
 }
-class S extends (i = c.ZP.Store) {
+class A extends (i = c.ZP.Store) {
     initialize() {
         this.syncWith([E.Z], g), this.waitFor(E.Z, _.Z);
     }
@@ -77,7 +77,7 @@ class S extends (i = c.ZP.Store) {
     }
 }
 (r = 'GamePartyStore'),
-    (a = 'displayName') in (s = S)
+    (a = 'displayName') in (s = A)
         ? Object.defineProperty(s, a, {
               value: r,
               enumerable: !0,
@@ -85,7 +85,7 @@ class S extends (i = c.ZP.Store) {
               writable: !0
           })
         : (s[a] = r),
-    (t.Z = new S(u.Z, {
+    (t.Z = new A(u.Z, {
         CONNECTION_OPEN_SUPPLEMENTAL: function (e) {
             let { guilds: t, presences: n } = e,
                 i = !1;

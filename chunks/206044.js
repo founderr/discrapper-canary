@@ -19,11 +19,11 @@ var i = n(735250),
     C = n(918701),
     p = n(566078),
     g = n(685613),
-    S = n(611855),
-    A = n(644646),
-    R = n(670638),
-    O = n(87894),
-    x = n(46140),
+    A = n(611855),
+    S = n(644646),
+    x = n(670638),
+    R = n(87894),
+    O = n(46140),
     M = n(689938),
     v = n(128175);
 let L = (0, l.animated)(d.ChevronSmallDownIcon),
@@ -39,7 +39,7 @@ let L = (0, l.animated)(d.ChevronSmallDownIcon),
                     e.stop();
                 };
             }, []),
-            (0, C.zK)(t, x.S7.FRACTIONS_QUEST))
+            (0, C.zK)(t, O.S7.FRACTIONS_QUEST))
         )
             return null;
         let _ = () => {
@@ -71,7 +71,7 @@ let L = (0, l.animated)(d.ChevronSmallDownIcon),
     };
 t.Z = (e) => {
     var t;
-    let { isFocused: n, isQuestExpired: a, quest: u, location: I, size: T, expansionSpring: D, isAnimating: b, isExpanded: j, isInConcurrentQuestExperiment: U, contentPosition: y, toggleExpanded: B } = e,
+    let { isFocused: n, isQuestExpired: a, quest: u, location: I, size: T, expansionSpring: b, isAnimating: D, isExpanded: j, isInConcurrentQuestExperiment: U, contentPosition: y, toggleExpanded: B } = e,
         { ref: k, height: F } = (0, _.Z)(),
         { ref: G, width: w, scrollWidth: V } = (0, _.Z)(),
         H = (0, c.e7)([m.Z], () => m.Z.getState().theme),
@@ -79,9 +79,9 @@ t.Z = (e) => {
         W = (0, C.j8)(u),
         K = s.useMemo(() => (0, C.nP)(W), [W]),
         z = s.useRef(null),
-        Q = (0, O.uq)(I),
+        Q = (0, R.uq)(I),
         q = I === f.jn.QUESTS_EMBED,
-        X = (0, N.t5)(u, x.dr.QUESTS_CARD, I),
+        X = (0, N.t5)(u, O.dr.QUESTS_CARD, I),
         J = (null === (t = u.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
         $ = (0, N.B6)(u.config.expiresAt, {
             year: 'numeric',
@@ -119,7 +119,7 @@ t.Z = (e) => {
             children: [
                 (0, i.jsx)(Z, {
                     style: {
-                        opacity: D.to({
+                        opacity: b.to({
                             range: [0, 1],
                             output: [0.25, 1]
                         })
@@ -148,9 +148,9 @@ t.Z = (e) => {
                             className: r()(v.headerContent, { [v.headerContentEmbed]: q }),
                             style: {
                                 y: Q
-                                    ? D.to({
+                                    ? b.to({
                                           range: [0, 1],
-                                          output: [O.DJ, 0]
+                                          output: [R.DJ, 0]
                                       })
                                     : void 0
                             },
@@ -159,13 +159,13 @@ t.Z = (e) => {
                                     (0, i.jsx)(l.animated.div, {
                                         className: v.headerCollapsedContent,
                                         style: {
-                                            opacity: D.to({
+                                            opacity: b.to({
                                                 range: [0, 1],
                                                 output: [1, 0]
                                             }),
-                                            visibility: b || !j ? 'inherit' : 'hidden'
+                                            visibility: D || !j ? 'inherit' : 'hidden'
                                         },
-                                        'aria-hidden': !b && j,
+                                        'aria-hidden': !D && j,
                                         children: (0, i.jsxs)(d.ClickableContainer, {
                                             'aria-label': M.Z.Messages.EXPAND,
                                             onClick: et,
@@ -173,11 +173,11 @@ t.Z = (e) => {
                                             children: [
                                                 (0, i.jsx)('div', {
                                                     className: v.headerCollapsedContentRewardWrapper,
-                                                    children: (0, i.jsx)(A.Z, {
+                                                    children: (0, i.jsx)(S.Z, {
                                                         quest: u,
                                                         questContent: I,
                                                         className: v.headerCollapsedRewardTile,
-                                                        location: x.dr.QUESTS_CARD
+                                                        location: O.dr.QUESTS_CARD
                                                     })
                                                 }),
                                                 (0, i.jsxs)('div', {
@@ -192,7 +192,7 @@ t.Z = (e) => {
                                                                     quest: u,
                                                                     theme: H
                                                                 }),
-                                                                (0, i.jsx)(S.Z, { color: 'always-white' })
+                                                                (0, i.jsx)(A.Z, { color: 'always-white' })
                                                             ]
                                                         }),
                                                         (0, i.jsx)(d.Text, {
@@ -213,13 +213,13 @@ t.Z = (e) => {
                                         [v.outerContainerEmbed]: q
                                     }),
                                     style: {
-                                        opacity: D.to({
+                                        opacity: b.to({
                                             range: [0, 1],
                                             output: [0, 1]
                                         }),
-                                        visibility: b || j ? 'inherit' : 'hidden'
+                                        visibility: D || j ? 'inherit' : 'hidden'
                                     },
-                                    'aria-hidden': !b && !j,
+                                    'aria-hidden': !D && !j,
                                     children: [
                                         (0, i.jsxs)('div', {
                                             className: v.headerExpandedWrapper,
@@ -233,7 +233,7 @@ t.Z = (e) => {
                                                             quest: u,
                                                             theme: H
                                                         }),
-                                                        q ? null : (0, i.jsx)(S.Z, { color: 'always-white' })
+                                                        q ? null : (0, i.jsx)(A.Z, { color: 'always-white' })
                                                     ]
                                                 }),
                                                 (0, i.jsxs)('div', {
@@ -274,14 +274,14 @@ t.Z = (e) => {
                             className: v.iconsContainer,
                             style: {
                                 top: Q
-                                    ? D.to({
+                                    ? b.to({
                                           range: [0, 1],
-                                          output: [O.DJ / 2 - O.Z$ / 2, O.jc]
+                                          output: [R.DJ / 2 - R.Z$ / 2, R.jc]
                                       })
-                                    : O.jc
+                                    : R.jc
                             },
                             children: [
-                                (0, i.jsx)(R.r, {
+                                (0, i.jsx)(x.r, {
                                     questContent: I,
                                     quest: u,
                                     questContentPosition: y,
@@ -291,10 +291,10 @@ t.Z = (e) => {
                                     children: (e) =>
                                         (0, i.jsx)(l.animated.div, {
                                             style: {
-                                                opacity: D,
-                                                visibility: b || j ? 'inherit' : 'hidden'
+                                                opacity: b,
+                                                visibility: D || j ? 'inherit' : 'hidden'
                                             },
-                                            'aria-hidden': !b && !j,
+                                            'aria-hidden': !D && !j,
                                             children: (0, i.jsx)(d.Clickable, {
                                                 ...e,
                                                 className: v.iconWrapper,
@@ -307,14 +307,14 @@ t.Z = (e) => {
                                         })
                                 }),
                                 U &&
-                                    !(0, O.W_)(I) &&
+                                    !(0, R.W_)(I) &&
                                     (0, i.jsx)(d.Clickable, {
                                         onClick: et,
                                         className: v.iconWrapper,
                                         'aria-label': j ? M.Z.Messages.COLLAPSE : M.Z.Messages.EXPAND,
                                         children: (0, i.jsx)(L, {
                                             style: {
-                                                rotate: D.to({
+                                                rotate: b.to({
                                                     range: [0, 1],
                                                     output: [0, 180]
                                                 })

@@ -32,18 +32,18 @@ function I() {
                 label: T.Z.Messages.OBSCURED_CONTENT_SETTINGS_OPTION_BLOCK
             }
         ],
-        C = [
+        A = [
             {
                 value: a.Q4.BLUR,
                 label: T.Z.Messages.OBSCURED_CONTENT_SETTINGS_OPTION_BLUR
             }
         ],
-        A = {
+        C = {
             value: a.Q4.SHOW,
             label: T.Z.Messages.OBSCURED_CONTENT_SETTINGS_OPTION_SHOW
         };
     return (
-        s && (m.unshift(A), C.unshift(A)),
+        s && (m.unshift(C), A.unshift(C)),
         (0, n.jsxs)(d.U, {
             setting: u.s6.PRIVACY_SENSITIVE_MEDIA_V2,
             scrollPosition: _.to.EXPLICIT_MEDIA_REDACTION_V2,
@@ -78,7 +78,7 @@ function I() {
                         title: T.Z.Messages.OBSCURED_CONTENT_SETTING_GUILDS,
                         titleClassName: S.selectItemTitle,
                         children: (0, n.jsx)(i.SingleSelect, {
-                            options: C,
+                            options: A,
                             value: t,
                             onChange: (e) => (0, r.zj)({ explicitContentGuilds: e })
                         })

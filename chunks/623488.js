@@ -76,7 +76,7 @@ function I(e) {
           });
 }
 function m(e) {
-    let { imageUrl: t, name: n, description: s, formattedPrice: c, role: m, ctaComponent: T, shouldShowFullDescriptionButton: h = !0, onShowFullDescription: N, productType: f, onTapCard: C, actionMenu: p, showOpaqueBackground: g = !1, hideRoleTag: S = !1, lineClamp: A = 1, cardWidth: R = 332, cardHeight: O, thumbnailHeight: x = 187, descriptionTextVariant: M = 'text-sm/normal', isDraft: v = !1 } = e,
+    let { imageUrl: t, name: n, description: s, formattedPrice: c, role: m, ctaComponent: T, shouldShowFullDescriptionButton: h = !0, onShowFullDescription: N, productType: f, onTapCard: C, actionMenu: p, showOpaqueBackground: g = !1, hideRoleTag: A = !1, lineClamp: S = 1, cardWidth: x = 332, cardHeight: R, thumbnailHeight: O = 187, descriptionTextVariant: M = 'text-sm/normal', isDraft: v = !1 } = e,
         L = (0, l.hQ)(),
         Z = (0, i.jsxs)(i.Fragment, {
             children: [
@@ -87,7 +87,7 @@ function m(e) {
                         alt: '',
                         src: t,
                         className: _.productThumbnail,
-                        style: { height: x }
+                        style: { height: O }
                     })
                 }),
                 (0, i.jsxs)('div', {
@@ -107,7 +107,7 @@ function m(e) {
                                     children: (0, i.jsx)(o.Z, {
                                         variant: M,
                                         color: 'text-muted',
-                                        lineClamp: A,
+                                        lineClamp: S,
                                         text: s
                                     })
                                 }),
@@ -116,7 +116,7 @@ function m(e) {
                                         onShowFullDescription: N,
                                         variant: M
                                     }),
-                                S || null == m || '' === m.name
+                                A || null == m || '' === m.name
                                     ? null
                                     : (0, i.jsxs)(i.Fragment, {
                                           children: [(0, i.jsx)(r.Spacer, { size: 16 }), (0, i.jsx)(u.Z, { role: m })]
@@ -160,8 +160,8 @@ function m(e) {
           })
         : (0, i.jsx)('div', {
               style: {
-                  width: R,
-                  height: O
+                  width: x,
+                  height: R
               },
               children: (0, i.jsx)(r.ClickableContainer, {
                   tag: 'article',

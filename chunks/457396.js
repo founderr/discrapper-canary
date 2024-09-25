@@ -22,8 +22,8 @@ var r = n(91192),
     g = n(626135),
     p = n(74538),
     T = n(502087),
-    f = n(650032),
-    S = n(104494),
+    S = n(650032),
+    f = n(104494),
     C = n(639119),
     N = n(655525),
     A = n(314684),
@@ -41,8 +41,8 @@ var r = n(91192),
     j = n(921944),
     U = n(689938),
     G = n(618226);
-let k = 'NitroTabButton',
-    w = 1209600000;
+let w = 'NitroTabButton',
+    k = 1209600000;
 ((a = i || (i = {}))[(a.BOGO_PROMOTION = 0)] = 'BOGO_PROMOTION'), (a[(a.TENURE_REWARD = 1)] = 'TENURE_REWARD'), (a[(a.NEW_PERKS_BADGE = 2)] = 'NEW_PERKS_BADGE'), (a[(a.DISCOUNT_OFFER = 3)] = 'DISCOUNT_OFFER'), (a[(a.TRIAL_OFFER = 4)] = 'TRIAL_OFFER'), (a[(a.LOCALIZED_PRICING = 5)] = 'LOCALIZED_PRICING'), (a[(a.REFERRAL_PROGRAM = 6)] = 'REFERRAL_PROGRAM'), (a[(a.REFERRAL_PROGRAM_INCENTIVE_FIRST_DISCOVERY = 7)] = 'REFERRAL_PROGRAM_INCENTIVE_FIRST_DISCOVERY'), (a[(a.REFERRAL_PROGRAM_INCENTIVE_AWARD = 8)] = 'REFERRAL_PROGRAM_INCENTIVE_AWARD');
 let B = (e) => {
     let t,
@@ -54,24 +54,24 @@ let B = (e) => {
         z = (0, p.Qo)(F, Y),
         W = (0, r.JA)('nitro'),
         K = (0, C.N)(),
-        q = (0, S.Ng)(),
+        q = (0, f.Ng)(),
         Q = (0, l.e7)([I.ZP], () => I.ZP.inReverseTrial()),
         X = (0, l.e7)([m.Z], () => m.Z.isLocalizedPromoEnabled) && null == K,
         J = (0, L.Vi)(),
         $ = (0, O.ZP)(),
         ee = (0, A.$_)(),
         et = (0, x.V6)(),
-        en = (0, P.Kn)(k),
-        ei = (0, P.vx)(k),
-        ea = (0, P.wG)(k),
+        en = (0, P.Kn)(w),
+        ei = (0, P.vx)(w),
+        ea = (0, P.wG)(w),
         es = (0, l.e7)([T.Z], () => T.Z.getCreatedAtOverride()),
         er = (0, l.e7)([E.Z], () => E.Z.hasLayers()),
         el = null != es ? es : null == F ? void 0 : F.createdAt,
         eo = a || null != K || null != q || J || ei || ea || $ || null != ee || null != et || z,
-        { enabled: ec } = f._.useExperiment({ location: k }, { autoTrackExposure: !1 }),
+        { enabled: ec } = S._.useExperiment({ location: w }, { autoTrackExposure: !1 }),
         ed = ec && (null == K ? void 0 : K.trial_id) === D.a7,
         [eu, e_] = (0, _.US)(Q ? [o.z.REVERSE_TRIAL_NITRO_TAB_BADGE] : [], void 0, !0);
-    if (!(eo = eo || (null != F && null != el && Date.now() - el.getTime() > w))) return null;
+    if (!(eo = eo || (null != F && null != el && Date.now() - el.getTime() > k))) return null;
     ei
         ? ((t = G.referralIncentive), (i = 7))
         : ea

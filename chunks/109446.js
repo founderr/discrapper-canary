@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return x;
     }
 }),
     n(47120);
@@ -15,27 +15,27 @@ var i = n(735250),
     d = n(601070),
     h = n(91159),
     p = n(488131),
-    _ = n(496675),
-    f = n(306680),
+    f = n(496675),
+    _ = n(306680),
     m = n(594174),
     g = n(768581),
     C = n(709054),
     I = n(981631),
     E = n(124368),
     N = n(689938),
-    x = n(462397);
-function S(e) {
+    S = n(462397);
+function x(e) {
     let { channel: t } = e,
-        r = (0, s.Wu)([d.Z, f.ZP, _.Z], () => {
+        r = (0, s.Wu)([d.Z, _.ZP, f.Z], () => {
             let e = d.Z.getActiveJoinedRelevantThreadsForParent(t.guild_id, t.id);
             return a()(d.Z.getActiveJoinedThreadsForParent(t.guild_id, t.id))
                 .values()
                 .map((e) => e.channel)
                 .concat(a().values(d.Z.getActiveUnjoinedThreadsForParent(t.guild_id, t.id)))
-                .filter((t) => !(t.id in e) && _.Z.can(I.Plq.VIEW_CHANNEL, t))
+                .filter((t) => !(t.id in e) && f.Z.can(I.Plq.VIEW_CHANNEL, t))
                 .sort((e, t) => {
-                    let n = f.ZP.lastMessageId(e.id),
-                        i = f.ZP.lastMessageId(t.id);
+                    let n = _.ZP.lastMessageId(e.id),
+                        i = _.ZP.lastMessageId(t.id);
                     return C.default.compare(n, i);
                 })
                 .reverse()
@@ -47,10 +47,10 @@ function S(e) {
             (0, h.q)();
         }, []),
         (0, i.jsxs)('div', {
-            className: x.popout,
+            className: S.popout,
             children: [
                 (0, i.jsx)(o.Text, {
-                    className: x.title,
+                    className: S.title,
                     variant: 'text-xs/bold',
                     color: 'header-secondary',
                     children: t.isForumLikeChannel() ? N.Z.Messages.ACTIVE_THREADS_POPOUT_HEADER_FORUM : N.Z.Messages.ACTIVE_THREADS_POPOUT_HEADER
@@ -61,7 +61,7 @@ function S(e) {
                     .filter((e) => l.isValidElement(e))
                     .slice(0, c),
                 (0, i.jsx)(o.Clickable, {
-                    className: x.more,
+                    className: S.more,
                     onClick: () => {
                         t.isForumLikeChannel()
                             ? (0, u.Kh)(t.id)
@@ -89,35 +89,35 @@ function v(e) {
         n = (0, s.e7)([m.default], () => m.default.getUser(t.ownerId)),
         l = (0, h.Ok)(t);
     return (0, i.jsxs)(o.Clickable, {
-        className: x.row,
+        className: S.row,
         onClick: (e) => {
             (0, p.ok)(t, t.isForumPost() ? e.shiftKey : !e.shiftKey, E.on.POPOUT);
         },
         children: [
             null == n
                 ? (0, i.jsx)('img', {
-                      className: x.avatar,
+                      className: S.avatar,
                       src: g.ZP.getDefaultAvatarURL(void 0, void 0),
                       alt: ''
                   })
                 : (0, i.jsx)(c.Z, {
-                      className: x.avatar,
+                      className: S.avatar,
                       user: n,
                       size: o.AvatarSizes.SIZE_16
                   }),
             (0, i.jsx)(o.Text, {
-                className: x.name,
+                className: S.name,
                 variant: 'text-sm/normal',
                 color: 'none',
                 children: t.name
             }),
             (0, i.jsxs)(o.Text, {
-                className: x.timestamp,
+                className: S.timestamp,
                 variant: 'text-sm/normal',
                 color: 'none',
                 children: [
                     (0, i.jsx)('span', {
-                        className: x.bullet,
+                        className: S.bullet,
                         children: '\u2022'
                     }),
                     (0, h.Ye)(l)

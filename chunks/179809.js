@@ -15,35 +15,35 @@ var i = n(735250),
     d = n(481060),
     h = n(153867),
     p = n(771845),
-    _ = n(624138),
-    f = n(727258),
+    f = n(624138),
+    _ = n(727258),
     m = n(276952),
     g = n(199540),
     C = n(40153),
     I = n(252686),
     E = n(682662),
     N = n(662146),
-    x = n(689938),
-    S = n(115376),
+    S = n(689938),
+    x = n(115376),
     v = n(767573);
-let Z = (0, _.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
-    T = (0, _.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_SIZE),
-    L = (0, _.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_MARGIN);
+let T = (0, f.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
+    Z = (0, f.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_SIZE),
+    b = (0, f.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_MARGIN);
 function A(e) {
-    let { folderNode: t, setNodeRef: n, selected: r, expanded: u, mediaState: _, mentionCount: A = 0, unread: b = !1, defaultFolderName: M, useCircleMask: R = !1, draggable: O = !1, sorting: P = !1, onDragStart: y, onDragEnd: j, onExpandCollapse: D, onContextMenu: w, renderChildNode: G, folderIconContent: U } = e,
-        { id: k, name: B, children: V } = t,
-        [H, F] = l.useState(!1),
+    let { folderNode: t, setNodeRef: n, selected: r, expanded: u, mediaState: f, mentionCount: A = 0, unread: R = !1, defaultFolderName: M, useCircleMask: L = !1, draggable: P = !1, sorting: y = !1, onDragStart: O, onDragEnd: j, onExpandCollapse: D, onContextMenu: w, renderChildNode: U, folderIconContent: G } = e,
+        { id: k, name: B, children: H } = t,
+        [V, F] = l.useState(!1),
         [W, z] = l.useState(!1),
-        Y = H || W;
+        Y = V || W;
     l.useEffect(() => {
-        P && F(!1);
-    }, [P]);
+        y && F(!1);
+    }, [y]);
     let [{ dragging: K }, q] = (0, s.c)({
-            type: f.eD.FOLDER,
+            type: _.eD.FOLDER,
             item: () => (
-                null == y || y(),
+                null == O || O(),
                 {
-                    type: f.eD.FOLDER,
+                    type: _.eD.FOLDER,
                     nodeId: t.id
                 }
             ),
@@ -61,33 +61,33 @@ function A(e) {
             },
             [D, u]
         ),
-        J = null != B && '' !== B ? B : null != M && '' !== M ? M : x.Z.Messages.SERVER_FOLDER_PLACEHOLDER,
+        J = null != B && '' !== B ? B : null != M && '' !== M ? M : S.Z.Messages.SERVER_FOLDER_PLACEHOLDER,
         $ = (0, c.Ie)(''.concat(k)),
         ee = 'folder-items-'.concat(k),
-        et = V.length * (T + L),
+        et = H.length * (Z + b),
         en = (0, d.useTransition)(!K && u, {
             from: { height: 0 },
             enter: { height: 1 },
             leave: { height: 0 },
-            config: { duration: Z }
+            config: { duration: T }
         }),
         ei = l.useCallback((e) => (null == n ? void 0 : n(k, e)), [n, k]),
         el = (0, i.jsxs)(E.H, {
             children: [
                 (0, i.jsx)(m.Z, {
                     disabled: K || u,
-                    hovered: H,
+                    hovered: V,
                     selected: r,
-                    unread: b,
+                    unread: R,
                     className: v.pill
                 }),
                 (0, i.jsx)(N.Z, {
                     text: J,
-                    disabled: P,
+                    disabled: y,
                     selected: r,
                     disableWrapper: !0,
                     children: (0, i.jsx)('div', {
-                        ref: O ? q : void 0,
+                        ref: P ? q : void 0,
                         className: a()({ [v.wobble]: !K && W && !u }),
                         'data-dnd-name': J,
                         children: K
@@ -95,9 +95,9 @@ function A(e) {
                             : (0, i.jsx)(g.Z, {
                                   folderNode: t,
                                   expanded: u,
-                                  forceCircular: R,
-                                  sorting: P,
-                                  mediaState: _,
+                                  forceCircular: L,
+                                  sorting: y,
+                                  mediaState: f,
                                   mentionCount: A,
                                   tooltipName: J,
                                   folderGroupId: ee,
@@ -106,11 +106,11 @@ function A(e) {
                                   onHoverChange: F,
                                   onKeyDown: X,
                                   treeItemProps: $,
-                                  folderIconContent: U
+                                  folderIconContent: G
                               })
                     })
                 }),
-                O
+                P
                     ? (0, i.jsx)(C.ZP, {
                           name: J,
                           targetNode: t,
@@ -121,13 +121,13 @@ function A(e) {
         });
     return (0, i.jsxs)('div', {
         ref: ei,
-        className: S.wrapper,
+        className: x.wrapper,
         children: [
             !K &&
                 (0, i.jsx)('span', {
-                    className: a()(S.expandedFolderBackground, {
-                        [S.collapsed]: !u,
-                        [S.hover]: Y
+                    className: a()(x.expandedFolderBackground, {
+                        [x.collapsed]: !u,
+                        [x.hover]: Y
                     })
                 }),
             el,
@@ -140,15 +140,15 @@ function A(e) {
                         {
                             id: ee,
                             style: { height: e.height.to((e) => e * et) },
-                            className: S.__invalid_expandedGuilds,
+                            className: x.__invalid_expandedGuilds,
                             role: 'group',
-                            children: V.map(G)
+                            children: H.map(U)
                         },
                         l
                     )
                 );
             }),
-            O && u
+            P && u
                 ? (0, i.jsx)(C.Zu, {
                       name: J,
                       targetNode: t

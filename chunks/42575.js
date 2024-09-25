@@ -20,8 +20,8 @@ var i = n(735250),
 function g(e) {
     let { user: t, nickname: n, status: g, isFocused: p } = e,
         T = a.useContext(d.AnalyticsContext),
-        { analyticsLocations: f } = (0, l.ZP)(),
-        S = (e) => {
+        { analyticsLocations: S } = (0, l.ZP)(),
+        f = (e) => {
             null == e || e.stopPropagation(),
                 r.Z.addRelationship({
                     userId: t.id,
@@ -41,7 +41,7 @@ function g(e) {
         onClick: () =>
             (0, c.openUserProfileModal)({
                 userId: t.id,
-                sourceAnalyticsLocations: f,
+                sourceAnalyticsLocations: S,
                 analyticsLocation: T.location
             }),
         children: (e) => {
@@ -51,7 +51,7 @@ function g(e) {
                         icon: s.CheckmarkLargeIcon,
                         actionType: u.Z.ActionTypes.ACCEPT,
                         tooltip: m.Z.Messages.FRIEND_REQUEST_ACCEPT,
-                        onClick: S,
+                        onClick: f,
                         shouldHighlight: e
                     }),
                     (0, i.jsx)(u.Z, {

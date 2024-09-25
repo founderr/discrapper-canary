@@ -58,28 +58,28 @@ let f = (e) => {
             children: (0, T.Z)(t, !1)
         });
     },
-    S = (e) => {
+    A = (e) => {
         let { sku: t, className: n } = e;
         return (0, d.jsx)('div', {
             className: n,
             children: (0, T.Z)(t)
         });
     },
-    A = (e) => {
+    S = (e) => {
         let { sku: t, className: n } = e;
         return (0, d.jsxs)('div', {
             className: I()(N.row, n),
-            children: [(0, d.jsx)(p, { sku: t }), (0, d.jsx)(g, { sku: t }), (0, d.jsx)(S, { sku: t })]
+            children: [(0, d.jsx)(p, { sku: t }), (0, d.jsx)(g, { sku: t }), (0, d.jsx)(A, { sku: t })]
         });
     },
-    R = (e) => {
+    x = (e) => {
         let { className: t } = e;
         return (0, d.jsx)('div', {
             className: t,
             children: h.Z.Messages.APPLICATION_STORE_FREE
         });
     };
-class O extends (a = _.PureComponent) {
+class R extends (a = _.PureComponent) {
     getState() {
         let { inLibrary: e, sku: t, hasEntitlementBranch: n } = this.props;
         if (n) return 5;
@@ -94,7 +94,7 @@ class O extends (a = _.PureComponent) {
         let { className: n, sku: i } = this.props;
         switch (e) {
             case 5:
-                return (0, d.jsx)(R, { className: I()(t, n) });
+                return (0, d.jsx)(x, { className: I()(t, n) });
             case 1:
                 return (0, d.jsx)(f, { className: I()(t, n) });
             case 3:
@@ -103,12 +103,12 @@ class O extends (a = _.PureComponent) {
                     className: I()(t, n)
                 });
             case 2:
-                return (0, d.jsx)(A, {
+                return (0, d.jsx)(S, {
                     sku: i,
                     className: I()(t, n)
                 });
             default:
-                return (0, d.jsx)(S, {
+                return (0, d.jsx)(A, {
                     className: I()(t, n),
                     sku: i
                 });
@@ -118,19 +118,19 @@ class O extends (a = _.PureComponent) {
         let { className: t, sku: n } = this.props;
         switch (e) {
             case 5:
-                return (0, d.jsx)(R, { className: I()(t) });
+                return (0, d.jsx)(x, { className: I()(t) });
             case 3:
                 return (0, d.jsx)(C, {
                     sku: n,
                     className: I()(N.directoryHeroPricePremium, t)
                 });
             case 2:
-                return (0, d.jsx)(A, {
+                return (0, d.jsx)(S, {
                     sku: n,
                     className: I()(N.directoryHeroPrice, t)
                 });
             default:
-                return (0, d.jsx)(S, {
+                return (0, d.jsx)(A, {
                     className: I()(N.directoryHeroPrice, t),
                     sku: n
                 });
@@ -141,21 +141,21 @@ class O extends (a = _.PureComponent) {
         let { className: n, sku: i } = this.props;
         switch (e) {
             case 5:
-                t = (0, d.jsx)(R, {});
+                t = (0, d.jsx)(x, {});
                 break;
             case 2:
                 t = (0, d.jsxs)(_.Fragment, {
                     children: [
                         (0, d.jsxs)('div', {
                             className: N.row,
-                            children: [(0, d.jsx)(S, { sku: i }), (0, d.jsx)(p, { sku: i })]
+                            children: [(0, d.jsx)(A, { sku: i }), (0, d.jsx)(p, { sku: i })]
                         }),
                         (0, d.jsx)(g, { sku: i })
                     ]
                 });
                 break;
             default:
-                t = (0, d.jsx)(S, { sku: i });
+                t = (0, d.jsx)(A, { sku: i });
         }
         return (0, d.jsx)('div', {
             className: I()(N.listingPrice, n),
@@ -181,7 +181,7 @@ class O extends (a = _.PureComponent) {
         }
     }
 }
-(o = O),
+(o = R),
     (c = 'Types'),
     (u = i),
     c in o
@@ -192,4 +192,4 @@ class O extends (a = _.PureComponent) {
               writable: !0
           })
         : (o[c] = u),
-    (t.Z = O);
+    (t.Z = R);

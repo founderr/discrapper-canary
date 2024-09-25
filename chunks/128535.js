@@ -72,7 +72,7 @@ t.Z = function (e) {
         {
             errorHints: d,
             startingConsoleQuest: m,
-            startConsoleQuest: S
+            startConsoleQuest: A
         } = (0, I.GI)({
             questId: e.quest.id,
             beforeRequest: () => {
@@ -121,7 +121,7 @@ t.Z = function (e) {
                 className: f.cta,
                 children: (0, i.jsx)(o.Button, {
                     color: o.ButtonColors.PRIMARY,
-                    onClick: S,
+                    onClick: A,
                     disabled: m,
                     children: (0, i.jsxs)('div', {
                         className: f.ctaInner,

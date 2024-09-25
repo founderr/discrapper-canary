@@ -19,15 +19,15 @@ var r = n(735250),
     h = n(45572),
     f = n(51499),
     S = n(678334),
-    m = n(456251),
-    E = n(614277),
+    E = n(456251),
+    m = n(614277),
     p = n(698708),
     T = n(43542),
     C = n(689938),
     N = n(748605);
 function A(e) {
     var t;
-    let { backButtonEligible: n, prevStep: i, showGuildPicker: A, handleStepChange: O, trialFooterMessageOverride: P, reviewWarningMessage: b, planGroup: g, openInvoiceId: R, analyticsData: L, analyticsLocation: v, eligibleApplicationSubscriptionGuilds: x, handleClose: M } = e,
+    let { backButtonEligible: n, prevStep: i, showGuildPicker: A, handleStepChange: O, trialFooterMessageOverride: P, reviewWarningMessage: b, planGroup: g, openInvoiceId: R, analyticsData: v, analyticsLocation: L, eligibleApplicationSubscriptionGuilds: x, handleClose: M } = e,
         { activeSubscription: k, application: B, setUpdatedSubscription: j, contextMetadata: U, currencies: Z, paymentSources: y, priceOptions: D, purchaseError: w, purchaseTokenAuthState: F, selectedPlan: H, selectedSku: V, setCurrency: G, setPaymentSourceId: W, setPurchaseState: K, setPurchaseError: Y, purchaseState: X, subscriptionMetadataRequest: z, setSubscriptionMetadataRequest: J, setHasAcceptedTerms: q } = (0, I.usePaymentContext)();
     l()(null != H, 'Expected plan to be selected'), l()(null != B, 'Expected application');
     let Q = a.useRef(null),
@@ -56,11 +56,11 @@ function A(e) {
         ),
         eo = a.useRef(null);
     return X === h.A.PURCHASING
-        ? (0, r.jsx)(m.Z, {})
+        ? (0, r.jsx)(E.Z, {})
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(f.Z, { className: N.breadcrumbs }),
-                  (0, r.jsxs)(E.C3, {
+                  (0, r.jsxs)(m.C3, {
                       children: [
                           (0, r.jsx)(p.Z, {}),
                           ei &&
@@ -143,7 +143,7 @@ function A(e) {
                                 })
                       ]
                   }),
-                  (0, r.jsx)(E.O3, {
+                  (0, r.jsx)(m.O3, {
                       children: (0, r.jsx)(S.Z, {
                           premiumSubscription: null != k ? k : null,
                           setPurchaseState: K,
@@ -152,8 +152,8 @@ function A(e) {
                           onPurchaseError: (e) => Y(e),
                           legalTermsNodeRef: eo,
                           flashLegalTerms: () => ee(!0),
-                          analyticsLocation: v,
-                          baseAnalyticsData: L,
+                          analyticsLocation: L,
+                          baseAnalyticsData: v,
                           flowStartTime: U.startTime,
                           planGroup: g,
                           purchaseTokenAuthState: F,

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return Z;
+        return T;
     }
 }),
     n(47120),
@@ -16,20 +16,20 @@ var i = n(735250),
     d = n(471445),
     h = n(430824),
     p = n(496675),
-    _ = n(158776),
-    f = n(979651),
+    f = n(158776),
+    _ = n(979651),
     m = n(823379),
     g = n(355363),
     C = n(737592),
     I = n(561788),
     E = n(135724),
     N = n(543432),
-    x = n(981631),
-    S = n(689938),
+    S = n(981631),
+    x = n(689938),
     v = n(289223);
-function Z(e) {
+function T(e) {
     var t, d;
-    let { channel: h, guild: p, onAction: f, voiceStates: g, isChannelSelected: I, shouldShowSettingNudge: E } = e;
+    let { channel: h, guild: p, onAction: _, voiceStates: g, isChannelSelected: I, shouldShowSettingNudge: E } = e;
     !(function (e, t) {
         let n = l.useMemo(() => {
             var n;
@@ -49,16 +49,16 @@ function Z(e) {
         (0, s.$)(n);
     })(h, g);
     let N = (0, o.ZP)(h),
-        Z = Array.from((0, o.uF)(N).values()),
-        L = null !== (t = null == g ? void 0 : g.filter(m.lm)) && void 0 !== t ? t : [],
-        A = (e) => (t) => ([x.IIU.PLAYING, x.IIU.WATCHING].includes(t.type) && (null != t.assets || null != t.state || null != t.details || null != t.party) && (null == t.session_id || t.session_id === e.voiceState.sessionId)) || t.type === x.IIU.LISTENING,
-        b = (0, r.e7)(
-            [_.Z],
+        T = Array.from((0, o.uF)(N).values()),
+        b = null !== (t = null == g ? void 0 : g.filter(m.lm)) && void 0 !== t ? t : [],
+        A = (e) => (t) => ([S.IIU.PLAYING, S.IIU.WATCHING].includes(t.type) && (null != t.assets || null != t.state || null != t.details || null != t.party) && (null == t.session_id || t.session_id === e.voiceState.sessionId)) || t.type === S.IIU.LISTENING,
+        R = (0, r.e7)(
+            [f.Z],
             () => {
                 let e = {};
                 return (
-                    L.forEach((t) => {
-                        let n = _.Z.findActivity(t.user.id, A(t));
+                    b.forEach((t) => {
+                        let n = f.Z.findActivity(t.user.id, A(t));
                         if (null != n && !(0, u.Z)(n)) {
                             var i, l, r, a;
                             let s = ''.concat(null !== (l = n.application_id) && void 0 !== l ? l : '', ':').concat(null !== (r = null === (i = n.party) || void 0 === i ? void 0 : i.id) && void 0 !== r ? r : t.user.id),
@@ -69,27 +69,27 @@ function Z(e) {
                                               members: [],
                                               activity: n
                                           };
-                            o.members.push(t), !(0, c.Z)(o.activity, x.xjy.JOIN) && (o.activity = n), (e[s] = o);
+                            o.members.push(t), !(0, c.Z)(o.activity, S.xjy.JOIN) && (o.activity = n), (e[s] = o);
                         }
                     }),
                     Object.values(e)
                 );
             },
-            [L],
+            [b],
             r.pF
         );
-    return b.length + Z.length === 0
+    return R.length + T.length === 0
         ? null
         : (0, i.jsxs)(a.Scroller, {
               className: v.container,
               children: [
-                  (0, i.jsx)(T, {
+                  (0, i.jsx)(Z, {
                       channel: h,
                       isChannelSelected: I,
                       voiceStatesCount: null !== (d = null == g ? void 0 : g.length) && void 0 !== d ? d : 0
                   }),
                   (0, i.jsx)('div', { className: v.headerDivider }),
-                  Z.map((e, t) => {
+                  T.map((e, t) => {
                       var n;
                       return (0, i.jsx)(
                           C.Z,
@@ -97,12 +97,12 @@ function Z(e) {
                               embeddedApp: e,
                               presenceActivity: null !== (n = e.presenceActivity) && void 0 !== n ? n : void 0,
                               channel: h,
-                              onAction: f
+                              onAction: _
                           },
                           t
                       );
                   }),
-                  b.map((e, t) => {
+                  R.map((e, t) => {
                       let { members: n, activity: l } = e;
                       return (0, i.jsx)(
                           C.Z,
@@ -110,7 +110,7 @@ function Z(e) {
                               presenceActivity: l,
                               channel: h,
                               members: n,
-                              onAction: f
+                              onAction: _
                           },
                           t
                       );
@@ -124,7 +124,7 @@ function Z(e) {
                                   children: (0, i.jsx)(a.Text, {
                                       variant: 'text-xs/normal',
                                       tag: 'span',
-                                      children: S.Z.Messages.VOICE_CHANNEL_ACTIVITY_STATUS_REDIRECT.format({
+                                      children: x.Z.Messages.VOICE_CHANNEL_ACTIVITY_STATUS_REDIRECT.format({
                                           onClick: () => {
                                               (0, a.openModalLazy)(async () => {
                                                   let { default: e } = await Promise.all([n.e('96427'), n.e('88223'), n.e('52249'), n.e('54803'), n.e('15685'), n.e('72652'), n.e('32776'), n.e('79915'), n.e('33053'), n.e('8016'), n.e('37581'), n.e('76540'), n.e('68136'), n.e('87624'), n.e('22646'), n.e('25183'), n.e('5528'), n.e('18146'), n.e('57674'), n.e('30419'), n.e('18824'), n.e('37229'), n.e('52619'), n.e('3955'), n.e('54535'), n.e('42112'), n.e('6294')]).then(n.bind(n, 241420));
@@ -143,10 +143,10 @@ function Z(e) {
               ]
           });
 }
-function T(e) {
+function Z(e) {
     let { channel: t, isChannelSelected: n, voiceStatesCount: l } = e,
-        a = (0, r.e7)([p.Z], () => !p.Z.can(x.Plq.CONNECT, t)),
-        s = (0, r.e7)([f.Z], () => f.Z.hasVideo(t.id)),
+        a = (0, r.e7)([p.Z], () => !p.Z.can(S.Plq.CONNECT, t)),
+        s = (0, r.e7)([_.Z], () => _.Z.hasVideo(t.id)),
         o = (0, g.ZP)({
             channel: t,
             locked: a,

@@ -18,11 +18,11 @@ var i = n(735250),
     C = n(509545),
     p = n(63063),
     g = n(817460),
-    S = n(584825),
-    A = n(697227),
-    R = n(934826),
-    O = n(896083),
-    x = n(939872),
+    A = n(584825),
+    S = n(697227),
+    x = n(934826),
+    R = n(896083),
+    O = n(939872),
     M = n(265985),
     v = n(293810),
     L = n(981631),
@@ -30,25 +30,25 @@ var i = n(735250),
 t.Z = (e, t, n, a) => {
     let l;
     let P = (0, c.e7)([N.Z], () => N.Z.isLurking(t)),
-        D = (0, h.J)(t),
-        b = (0, c.e7)([T.Z], () => (null != t ? T.Z.getRequest(t) : null)),
-        j = (null == b ? void 0 : b.applicationStatus) === m.wB.SUBMITTED,
+        b = (0, h.J)(t),
+        D = (0, c.e7)([T.Z], () => (null != t ? T.Z.getRequest(t) : null)),
+        j = (null == D ? void 0 : D.applicationStatus) === m.wB.SUBMITTED,
         U = null == e ? void 0 : e.subscription_plans[0],
         y = null == U ? void 0 : U.id,
         B = (null == e ? void 0 : e.published) === !0,
         k = null == U ? void 0 : U.sku_id,
         F = (0, c.e7)([C.Z], () => (null != y ? C.Z.get(y) : null)),
-        { activeSubscription: G, activeSubscriptionPlanFromStore: w } = (0, R.Z)(n),
+        { activeSubscription: G, activeSubscriptionPlanFromStore: w } = (0, x.Z)(n),
         V = null == G || null != w,
-        H = (0, S._k)(n, { includeSoftDeleted: !0 }).map((e) => e.subscription_plans[0].id),
-        Y = (0, A.V)(G),
+        H = (0, A._k)(n, { includeSoftDeleted: !0 }).map((e) => e.subscription_plans[0].id),
+        Y = (0, S.V)(G),
         W = null != Y,
         K = (null == G ? void 0 : G.trialId) != null,
-        { loading: z, getTrialPurchaseEligibility: Q } = (0, O.F)(),
-        q = (0, S.oC)(null == e ? void 0 : e.id),
+        { loading: z, getTrialPurchaseEligibility: Q } = (0, R.F)(),
+        q = (0, A.oC)(null == e ? void 0 : e.id),
         { analyticsLocations: X } = (0, E.ZP)(),
         J = (null == G ? void 0 : G.paymentGateway) === L.gg$.APPLE_PARTNER;
-    j ? (l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_REQUIRE_APPROVED_MEMBER) : P && !D ? (l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_REQUIRE_APPROVED_MEMBER) : Y === y ? (l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_HAS_PENDING_MUTATION_TO_CURRENT_LISTING.format({ changeDate: null != G ? o()(G.currentPeriodEnd).format('MMM DD, YYYY') : '' })) : W ? (l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_HAS_PENDING_MUTATION) : K ? (l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHANGE_TIER_DISABLED_IN_TRIAL) : J && (l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHANGE_TIER_DISABLED_IF_IAP);
+    j ? (l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_REQUIRE_APPROVED_MEMBER) : P && !b ? (l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_REQUIRE_APPROVED_MEMBER) : Y === y ? (l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_HAS_PENDING_MUTATION_TO_CURRENT_LISTING.format({ changeDate: null != G ? o()(G.currentPeriodEnd).format('MMM DD, YYYY') : '' })) : W ? (l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_HAS_PENDING_MUTATION) : K ? (l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHANGE_TIER_DISABLED_IN_TRIAL) : J && (l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHANGE_TIER_DISABLED_IF_IAP);
     let $ = (0, _.Z)(v.iP);
     s.useEffect(() => {
         B &&
@@ -97,7 +97,7 @@ t.Z = (e, t, n, a) => {
                 planGroup: H,
                 renderPurchaseConfirmation: (n, s) =>
                     $
-                        ? (0, i.jsx)(x.m, {
+                        ? (0, i.jsx)(O.m, {
                               listing: e,
                               onClose: s,
                               guildId: t
@@ -114,7 +114,7 @@ t.Z = (e, t, n, a) => {
             (0, I.hk)(t);
         }, [t]);
     return {
-        openModal: D ? et : ee,
+        openModal: b ? et : ee,
         canOpenModal: !P && null != F && V && !j && !W && !K && !J,
         cannotOpenReason: l,
         isCheckingTrialEligibility: z

@@ -24,11 +24,11 @@ function h(e) {
         s,
         { invite: h, currentUserId: N, guild: f, onTransitionToInviteChannel: C, onAcceptInstantInvite: p } = e,
         g = null == f ? void 0 : f.id,
-        S = (0, r.e7)([d.Z], () => d.Z.getGuildId()),
-        A = (0, r.e7)([u.Z], () => (null != h && null != h.target_user ? u.Z.getActiveStreamForUser(h.target_user.id, g) : null), [h, g]),
-        R = (0, r.e7)([u.Z], () => (null != h && null != h.target_user ? u.Z.getStreamForUser(h.target_user.id, g) : null), [h, g]),
-        O = null != h && h.target_type === I.Iq.STREAM && null != h.target_user && null != A,
-        x = null != h && null != R && null != h.channel && null != h.guild && R.channelId === h.channel.id && R.guildId === h.guild.id;
+        A = (0, r.e7)([d.Z], () => d.Z.getGuildId()),
+        S = (0, r.e7)([u.Z], () => (null != h && null != h.target_user ? u.Z.getActiveStreamForUser(h.target_user.id, g) : null), [h, g]),
+        x = (0, r.e7)([u.Z], () => (null != h && null != h.target_user ? u.Z.getStreamForUser(h.target_user.id, g) : null), [h, g]),
+        R = null != h && h.target_type === I.Iq.STREAM && null != h.target_user && null != S,
+        O = null != h && null != x && null != h.channel && null != h.guild && x.channelId === h.channel.id && x.guildId === h.guild.id;
     a()(null != h, 'Invite cannot be null');
     let { target_type: M, target_user: v } = h;
     a()(M === I.Iq.STREAM && null != v, 'invalid streaming invite');
@@ -39,10 +39,10 @@ function h(e) {
         if (null == h.guild) return (0, i.jsx)(_.Z, {});
         f = new c.ZP(h.guild);
     }
-    let D = null != h.channel ? (0, o.jD)(h.channel) : null,
-        b = O ? C : p;
-    P && !x ? (s = L ? m.Z.Messages.INVITE_BUTTON_STREAM_ENDED_STREAMER : m.Z.Messages.INVITE_BUTTON_STREAM_ENDED.format({ name: v.username })) : ((t = m.Z.Messages.WATCH), (n = l.Z.Button.Colors.GREEN), O && ((t = m.Z.Messages.INVITE_BUTTON_STREAM_WATCHING), (n = l.Z.Button.Colors.PRIMARY)), (s = L ? m.Z.Messages.INVITE_BUTTON_STREAMER : m.Z.Messages.INVITE_BUTTON_STREAMING.format({ name: v.username })));
-    let j = S === f.id && null != D ? (0, i.jsx)(l.Z.Channel, { channel: D }) : m.Z.Messages.INVITE_BUTTON_STREAMING_SUBTEXT.format({ guildName: f.name });
+    let b = null != h.channel ? (0, o.jD)(h.channel) : null,
+        D = R ? C : p;
+    P && !O ? (s = L ? m.Z.Messages.INVITE_BUTTON_STREAM_ENDED_STREAMER : m.Z.Messages.INVITE_BUTTON_STREAM_ENDED.format({ name: v.username })) : ((t = m.Z.Messages.WATCH), (n = l.Z.Button.Colors.GREEN), R && ((t = m.Z.Messages.INVITE_BUTTON_STREAM_WATCHING), (n = l.Z.Button.Colors.PRIMARY)), (s = L ? m.Z.Messages.INVITE_BUTTON_STREAMER : m.Z.Messages.INVITE_BUTTON_STREAMING.format({ name: v.username })));
+    let j = A === f.id && null != b ? (0, i.jsx)(l.Z.Channel, { channel: b }) : m.Z.Messages.INVITE_BUTTON_STREAMING_SUBTEXT.format({ guildName: f.name });
     return (0, i.jsxs)(l.Z, {
         children: [
             (0, i.jsx)(l.Z.Header, { text: m.Z.Messages.INVITE_BUTTON_TITLE_STREAMING }),
@@ -53,21 +53,21 @@ function h(e) {
                         children: [
                             (0, i.jsx)(l.Z.Icon, {
                                 guild: f,
-                                onClick: P && x ? b : void 0
+                                onClick: P && O ? D : void 0
                             }),
                             (0, i.jsx)(l.Z.Info, {
                                 title: s,
-                                onClick: P && x ? b : void 0,
+                                onClick: P && O ? D : void 0,
                                 children: j
                             })
                         ]
                     }),
-                    x
+                    O
                         ? (0, i.jsx)(l.Z.Button, {
-                              disabled: P && !x,
-                              onClick: b,
+                              disabled: P && !O,
+                              onClick: D,
                               submitting: Z,
-                              isDisabled: O && x,
+                              isDisabled: R && O,
                               color: n,
                               children: t
                           })

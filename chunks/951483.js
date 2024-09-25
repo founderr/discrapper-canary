@@ -1,12 +1,12 @@
 n.d(t, {
     Sr: function () {
-        return S;
+        return x;
     },
     Xq: function () {
         return v;
     },
     Zg: function () {
-        return Z;
+        return T;
     }
 }),
     n(411104);
@@ -21,23 +21,23 @@ var i = n(186070),
     d = n(337482),
     h = n(679080),
     p = n(510761),
-    _ = n(189509),
-    f = n(673553),
+    f = n(189509),
+    _ = n(673553),
     m = n(280492),
     g = n(746887),
     C = n(721383),
     I = n(743810),
     E = n(981631),
     N = n(689938);
-function x() {
+function S() {
     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
     return t.map((e) => {
-        let t = S[e];
+        let t = x[e];
         if (null == t) throw Error('getBindsFor(...): No bind for '.concat(t));
         return t.binds[0];
     });
 }
-let S = {
+let x = {
         [E.EkH.SERVER_NEXT]: p.nq,
         [E.EkH.SERVER_PREV]: p.X3,
         [E.EkH.CHANNEL_NEXT]: l.tQ,
@@ -50,8 +50,8 @@ let S = {
         [E.EkH.MENTION_CHANNEL_PREV]: I.uX,
         [E.EkH.TOGGLE_PREVIOUS_GUILD]: l.$c,
         [E.EkH.JUMP_TO_GUILD]: r.u,
-        [E.EkH.SUBMIT]: _.z,
-        [E.EkH.TEXTAREA_FOCUS]: f.U,
+        [E.EkH.SUBMIT]: f.z,
+        [E.EkH.TEXTAREA_FOCUS]: _.U,
         [E.EkH.MARK_CHANNEL_READ]: a.f,
         [E.EkH.MARK_SERVER_READ]: s.l,
         [E.EkH.TOGGLE_MUTE]: m.iN,
@@ -68,82 +68,82 @@ let S = {
         [E.EkH.QUICKSWITCHER_SHOW]: c.$
     },
     v = { [E.EkH.QUICKSWITCHER_SHOW]: c.$ };
-function Z() {
+function T() {
     return [
         {
             description: N.Z.Messages.KEYBIND_DESCRIPTION_MODAL_NAVIGATE_SERVERS,
-            binds: x(E.EkH.SERVER_PREV, E.EkH.SERVER_NEXT)
+            binds: S(E.EkH.SERVER_PREV, E.EkH.SERVER_NEXT)
         },
         {
             description: N.Z.Messages.KEYBIND_DESCRIPTION_MODAL_NAVIGATE_CHANNELS,
-            binds: x(E.EkH.CHANNEL_PREV, E.EkH.CHANNEL_NEXT)
+            binds: S(E.EkH.CHANNEL_PREV, E.EkH.CHANNEL_NEXT)
         },
         {
             description: N.Z.Messages.KEYBIND_DESCRIPTION_MODAL_NAVIGATE_BACK_FORWARD,
-            binds: x(E.EkH.NAVIGATE_BACK, E.EkH.NAVIGATE_FORWARD)
+            binds: S(E.EkH.NAVIGATE_BACK, E.EkH.NAVIGATE_FORWARD)
         },
         {
             description: N.Z.Messages.KEYBIND_DESCRIPTION_MODAL_UNREAD_CHANNELS,
-            binds: x(E.EkH.UNREAD_PREV, E.EkH.UNREAD_NEXT)
+            binds: S(E.EkH.UNREAD_PREV, E.EkH.UNREAD_NEXT)
         },
         {
             description: N.Z.Messages.KEYBIND_DESCRIPTION_MODAL_UNREAD_MENTION_CHANNELS,
-            binds: x(E.EkH.MENTION_CHANNEL_PREV, E.EkH.MENTION_CHANNEL_NEXT),
+            binds: S(E.EkH.MENTION_CHANNEL_PREV, E.EkH.MENTION_CHANNEL_NEXT),
             groupEnd: !0
         },
         {
             description: N.Z.Messages.KEYBIND_DESCRIPTION_MODAL_TOGGLE_PREVIOUS_GUILD,
-            binds: x(E.EkH.TOGGLE_PREVIOUS_GUILD)
+            binds: S(E.EkH.TOGGLE_PREVIOUS_GUILD)
         },
         {
             description: N.Z.Messages.KEYBIND_DESCRIPTION_MODAL_MARK_SERVER_READ,
-            binds: x(E.EkH.MARK_SERVER_READ)
+            binds: S(E.EkH.MARK_SERVER_READ)
         },
         {
             description: N.Z.Messages.KEYBIND_DESCRIPTION_MODAL_MARK_CHANNEL_READ,
-            binds: x(E.EkH.MARK_CHANNEL_READ)
+            binds: S(E.EkH.MARK_CHANNEL_READ)
         },
         {
             description: N.Z.Messages.KEYBIND_DESCRIPTION_MODAL_SEARCH_EMOJIS,
-            binds: x(E.EkH.SEARCH_EMOJIS),
+            binds: S(E.EkH.SEARCH_EMOJIS),
             groupEnd: !0
         },
         {
             description: N.Z.Messages.KEYBIND_DESCRIPTION_MODAL_TOGGLE_MUTE,
-            binds: x(E.EkH.TOGGLE_MUTE)
+            binds: S(E.EkH.TOGGLE_MUTE)
         },
         {
             description: N.Z.Messages.KEYBIND_DESCRIPTION_MODAL_TOGGLE_DEAFEN,
-            binds: x(E.EkH.TOGGLE_DEAFEN)
+            binds: S(E.EkH.TOGGLE_DEAFEN)
         },
         {
             description: N.Z.Messages.KEYBIND_DESCRIPTION_MODAL_CALL_ACCEPT,
-            binds: x(E.EkH.CALL_ACCEPT)
+            binds: S(E.EkH.CALL_ACCEPT)
         },
         {
             description: N.Z.Messages.KEYBIND_DESCRIPTION_MODAL_CALL_DECLINE,
-            binds: x(E.EkH.MARK_CHANNEL_READ)
+            binds: S(E.EkH.MARK_CHANNEL_READ)
         },
         {
             description: N.Z.Messages.KEYBIND_DESCRIPTION_MODAL_CALL_START,
-            binds: x(E.EkH.CALL_START),
+            binds: S(E.EkH.CALL_START),
             groupEnd: !0
         },
         {
             description: N.Z.Messages.KEYBIND_DESCRIPTION_MODAL_SCROLL_CHAT,
-            binds: x(E.EkH.SCROLL_UP, E.EkH.SCROLL_DOWN)
+            binds: S(E.EkH.SCROLL_UP, E.EkH.SCROLL_DOWN)
         },
         {
             description: N.Z.Messages.KEYBIND_DESCRIPTION_MODAL_JUMP_TO_FIRST_UNREAD,
-            binds: x(E.EkH.JUMP_TO_FIRST_UNREAD)
+            binds: S(E.EkH.JUMP_TO_FIRST_UNREAD)
         },
         {
             description: N.Z.Messages.KEYBIND_DESCRIPTION_MODAL_FOCUS_TEXT_AREA,
-            binds: x(E.EkH.TEXTAREA_FOCUS)
+            binds: S(E.EkH.TEXTAREA_FOCUS)
         },
         {
             description: N.Z.Messages.KEYBIND_DESCRIPTION_MODAL_QUICKSWITCHER,
-            binds: x(E.EkH.QUICKSWITCHER_SHOW)
+            binds: S(E.EkH.QUICKSWITCHER_SHOW)
         }
     ];
 }

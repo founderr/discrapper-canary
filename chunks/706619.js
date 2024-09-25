@@ -26,14 +26,14 @@ function o(e) {
     }, [t, u, p, h, d, c]),
         c.setPoints(e.dataPoints),
         null == n || n.updateEndDate();
-    let _ = {
+    let f = {
         width: e.width,
         height: e.height
     };
     return (0, i.jsx)(
         'canvas',
         {
-            style: _,
+            style: f,
             width: e.width,
             height: e.height,
             ref: t

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return x;
+        return S;
     }
 }),
     n(47120),
@@ -16,18 +16,18 @@ var i = n(735250),
     d = n(19780),
     h = n(709054),
     p = n(208049),
-    _ = n(763296),
-    f = n(242291),
+    f = n(763296),
+    _ = n(242291),
     m = n(174470),
     g = n(549771),
     C = n(964398),
     I = n(409673),
     E = n(710111),
     N = n(601539);
-function x(e) {
-    let { guildId: t, channel: n, width: x, height: S, keepOpen: v, interactive: Z = !0, analyticsSource: T, onClose: L } = e,
+function S(e) {
+    let { guildId: t, channel: n, width: S, height: x, keepOpen: v, interactive: T = !0, analyticsSource: Z, onClose: b } = e,
         A = (function (e) {
-            let [t, n] = (0, a.Wu)([_.Z], () => [_.Z.getSounds(), _.Z.getFavorites()]);
+            let [t, n] = (0, a.Wu)([f.Z], () => [f.Z.getSounds(), f.Z.getFavorites()]);
             return l.useMemo(() => {
                 let i = [],
                     l = [...e, E.X8],
@@ -41,23 +41,23 @@ function x(e) {
                 return l.forEach((e) => r(e, !0)), l.forEach((e) => r(e, !1)), i;
             }, [t, n, e]);
         })((0, g.h)(n, !0)),
-        b = (0, m.j)(),
+        R = (0, m.j)(),
         M = l.useRef(null),
-        [R, O] = l.useState(void 0),
-        P = (0, a.e7)([d.Z], () => d.Z.getMediaSessionId()),
-        { analyticsLocations: y } = (0, o.ZP)(s.Z.SOUNDBOARD_WHEEL),
+        [L, P] = l.useState(void 0),
+        y = (0, a.e7)([d.Z], () => d.Z.getMediaSessionId()),
+        { analyticsLocations: O } = (0, o.ZP)(s.Z.SOUNDBOARD_WHEEL),
         j = l.useCallback(
             (e) => {
-                (0, f.GN)(e, n.id, y), L();
+                (0, _.GN)(e, n.id, O), b();
             },
-            [y, n.id, L]
+            [O, n.id, b]
         );
     l.useEffect(() => {
         p.w(), u.DZ.loadIfNecessary();
     }, []),
         l.useEffect(() => {
-            0 === A.length && 0 === b.length && L();
-        }, [A.length, b, L]),
+            0 === A.length && 0 === R.length && b();
+        }, [A.length, R, b]),
         l.useEffect(
             () => () => {
                 let e = M.current;
@@ -70,15 +70,15 @@ function x(e) {
                 type: r.ImpressionTypes.POPOUT,
                 name: r.ImpressionNames.SOUNDBOARD_POPOUT,
                 properties: {
-                    source: T,
+                    source: Z,
                     guild_id: t,
-                    media_session_id: P
+                    media_session_id: y
                 }
             },
-            { disableTrack: !Z }
+            { disableTrack: !T }
         );
     let D = l.useCallback((e) => {
-            (M.current = e), O(null == e ? void 0 : e.soundId);
+            (M.current = e), P(null == e ? void 0 : e.soundId);
         }, []),
         w = l.useCallback(
             (e) => {
@@ -91,7 +91,7 @@ function x(e) {
             },
             [D, A]
         ),
-        G = l.useCallback(
+        U = l.useCallback(
             (e) => {
                 if (null == e) return;
                 let t = A[e];
@@ -99,38 +99,38 @@ function x(e) {
             },
             [A, j]
         ),
-        U = l.useMemo(
+        G = l.useMemo(
             () =>
                 A.map((e) =>
                     (0, i.jsx)(
                         I.ZP,
                         {
-                            interactive: Z,
+                            interactive: T,
                             className: N.soundButton,
                             sound: e,
-                            focused: R === e.soundId,
+                            focused: L === e.soundId,
                             channel: n
                         },
                         e.soundId
                     )
                 ),
-            [R, n, Z, A]
+            [L, n, T, A]
         );
     return 0 === A.length
         ? null
         : (0, i.jsx)(o.Gt, {
-              value: y,
+              value: O,
               children: (0, i.jsx)(C.Z, {
-                  wheelWidth: x,
-                  wheelHeight: S,
+                  wheelWidth: S,
+                  wheelHeight: x,
                   itemWidth: 96,
                   itemHeight: 52,
                   showDeadZoneIndicator: !v,
-                  activeItem: R,
+                  activeItem: L,
                   onItemSelect: w,
-                  onItemAction: G,
-                  interactive: Z,
-                  children: U
+                  onItemAction: U,
+                  interactive: T,
+                  children: G
               })
           });
 }

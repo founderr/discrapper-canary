@@ -25,23 +25,23 @@ function T(e) {
         C = s.useCallback(() => f(!0), []),
         p = s.useCallback(() => f(!1), []),
         g = (0, l.tP)(t),
-        { containerRef: S, size: A, height: R } = (0, E.h)(),
-        O = (0, r.q)({ location: I.dr.QUESTS_CARD }),
+        { containerRef: A, size: S, height: x } = (0, E.h)(),
+        R = (0, r.q)({ location: I.dr.QUESTS_CARD }),
         {
-            expansionSpring: x,
+            expansionSpring: O,
             isAnimating: M,
             isExpanded: v,
             toggleExpanded: L
         } = (0, E.O)({
             initiallyExpanded:
-                !O ||
+                !R ||
                 T ||
                 (0, u.iM)({
                     location: n,
                     quest: t
                 })
         }),
-        Z = null != R ? R : u.U0;
+        Z = null != x ? x : u.U0;
     return (0, i.jsx)(c.A, {
         questOrQuests: t,
         questContent: n,
@@ -54,7 +54,7 @@ function T(e) {
                         maxHeight:
                             n === o.jn.QUESTS_EMBED
                                 ? void 0
-                                : x.to({
+                                : O.to({
                                       range: [0, 1],
                                       output: [u.DJ, Z]
                                   })
@@ -66,7 +66,7 @@ function T(e) {
                     onMouseLeave: p,
                     children: (0, i.jsxs)('div', {
                         ref: (t) => {
-                            (e.current = t), (S.current = t);
+                            (e.current = t), (A.current = t);
                         },
                         children: [
                             (0, i.jsx)(_.Z, {
@@ -74,11 +74,11 @@ function T(e) {
                                 isQuestExpired: g,
                                 location: n,
                                 quest: t,
-                                size: A,
-                                expansionSpring: x,
+                                size: S,
+                                expansionSpring: O,
                                 isAnimating: M,
                                 isExpanded: v,
-                                isInConcurrentQuestExperiment: O,
+                                isInConcurrentQuestExperiment: R,
                                 contentPosition: h,
                                 toggleExpanded: L
                             }),
@@ -86,7 +86,7 @@ function T(e) {
                                 quest: t,
                                 isQuestExpired: g,
                                 location: n,
-                                size: A,
+                                size: S,
                                 isFocused: N,
                                 isExpanded: v,
                                 isAnimating: M,

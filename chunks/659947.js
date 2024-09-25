@@ -21,8 +21,8 @@ var n = t(735250),
     I = t(689938),
     N = t(179447);
 function m() {}
-let C = [S.h8.VOICE_CHANNEL];
-function A(e) {
+let A = [S.h8.VOICE_CHANNEL];
+function C(e) {
     e.setOptions({ voiceChannelGuildFilter: null }), e.setLimit(1 / 0);
 }
 function g(e) {
@@ -117,8 +117,8 @@ function x(e) {
             queryResults: D
         } = (0, l.Z)({
             visible: !0,
-            autocompleterResultTypes: C,
-            autocompleterBeforeCreateSearchContext: A
+            autocompleterResultTypes: A,
+            autocompleterBeforeCreateSearchContext: C
         }),
         P = (function (e) {
             let s = '' !== e,

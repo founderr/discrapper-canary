@@ -19,8 +19,8 @@ var i = n(735250),
     C = n(520116),
     p = n(981631),
     g = n(689938),
-    S = n(619933);
-let A = s.memo(function (e) {
+    A = n(619933);
+let S = s.memo(function (e) {
     let { channel: t, deleteChannel: n } = e,
         a = s.useRef(null),
         [[r, o], u] = s.useState([0, 0]),
@@ -60,11 +60,11 @@ let A = s.memo(function (e) {
     return (0, i.jsx)(l.animated.div, {
         ref: a,
         style: I,
-        children: (0, i.jsx)(R, { ...e })
+        children: (0, i.jsx)(x, { ...e })
     });
 });
-t.Z = A;
-let R = s.memo(function (e) {
+t.Z = S;
+let x = s.memo(function (e) {
     let { channel: t, onJump: n, deleteChannel: a, toggle: r } = e,
         l = (0, o.e7)([m.Z], () => m.Z.getChannel(t.channelId));
     if (
@@ -91,7 +91,7 @@ let R = s.memo(function (e) {
         (0, I.uL)(p.Z5c.CHANNEL(t.guildId, t.channelId, 'forum' === t.type ? null : s)), n(e);
     };
     return (0, i.jsx)('div', {
-        className: S.channel,
+        className: A.channel,
         children: (0, i.jsx)(c.HeadingLevel, {
             component: (0, i.jsxs)(N.Z, {
                 channel: l,
@@ -99,7 +99,7 @@ let R = s.memo(function (e) {
                 mentionCount: t.mentionCount,
                 toggleCollapsed: r,
                 channelState: t,
-                children: [(0, i.jsx)(h.Z, { channel: l }), (0, i.jsx)(O, { ...e }), 'nsfw' === t.type ? null : (0, i.jsx)(x, { ...e })]
+                children: [(0, i.jsx)(h.Z, { channel: l }), (0, i.jsx)(R, { ...e }), 'nsfw' === t.type ? null : (0, i.jsx)(O, { ...e })]
             }),
             children: t.collapsed
                 ? null
@@ -119,11 +119,11 @@ let R = s.memo(function (e) {
         })
     });
 });
-function O(e) {
+function R(e) {
     let { channel: t, markChannelRead: n, markGuildRead: s, getNumUnreadChannels: a } = e,
         r = (0, E.Z)() && null != t.guildId;
     return (0, i.jsx)(c.CircleIconButton, {
-        className: S.markReadButton,
+        className: A.markReadButton,
         tooltip: r ? g.Z.Messages.MARK_GUILD_AS_READ : g.Z.Messages.MARK_AS_READ,
         color: c.CircleIconButtonColors.TERTIARY,
         icon: r
@@ -146,7 +146,7 @@ function O(e) {
         }
     });
 }
-function x(e) {
+function O(e) {
     let { channel: t, toggle: n, getNumUnreadChannels: s } = e;
     function a() {
         n(t),
@@ -162,7 +162,7 @@ function x(e) {
         children: (e) =>
             (0, i.jsx)(c.Clickable, {
                 ...e,
-                className: r()(S.collapseButton, { [S.collapsed]: t.collapsed }),
+                className: r()(A.collapseButton, { [A.collapsed]: t.collapsed }),
                 onClick: a,
                 children: (0, i.jsx)(T.Z, {
                     width: 16,

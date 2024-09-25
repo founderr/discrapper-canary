@@ -28,7 +28,7 @@ function I() {
         m = a.useCallback((e) => {
             e ? (0, r.openModal)((e) => (0, n.jsx)(u.Z, { ...e })) : o.mc();
         }, []),
-        C = a.useCallback((e) => {
+        A = a.useCallback((e) => {
             (0, r.openModal)((s) =>
                 (0, n.jsx)(r.ConfirmModal, {
                     header: S.Z.Messages.SWITCH_HARDWARE_ACCELERATION,
@@ -60,7 +60,7 @@ function I() {
                 setting: E.s6.SETTINGS_ADVANCED_HARDWARE_ACCELERATION,
                 children: (0, n.jsx)(r.FormSwitch, {
                     value: e,
-                    onChange: C,
+                    onChange: A,
                     note: S.Z.Messages.HARDWARE_ACCELERATION_HELP_TEXT,
                     children: S.Z.Messages.HARDWARE_ACCELERATION
                 })

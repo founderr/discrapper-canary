@@ -90,7 +90,7 @@ function w(e) {
 }
 function B(e) {
     let { hasLegalTermsFlash: n, legalTermsNodeRef: t, onPaymentSourceChange: r, handlePaymentSourceAdd: f } = e,
-        { application: M, purchaseState: B, paymentSources: G, paymentSourceId: U, setHasAcceptedTerms: F, skusById: k, skuPricePreviewsById: H, selectedSkuId: W, isEmbeddedIAP: Y, purchaseType: V, purchasePreviewError: K, devShelfFetchState: z } = (0, y.usePaymentContext)(),
+        { application: M, purchaseState: B, paymentSources: G, paymentSourceId: F, setHasAcceptedTerms: U, skusById: k, skuPricePreviewsById: H, selectedSkuId: W, isEmbeddedIAP: Y, purchaseType: V, purchasePreviewError: K, devShelfFetchState: z } = (0, y.usePaymentContext)(),
         { isGift: X, giftRecipient: q } = (0, C.wD)(),
         J = X && (0, A.pO)(q),
         { defaultPaymentSourceId: Q, hasFetchedPaymentSources: $ } = (0, o.cj)([h.Z], () => ({
@@ -100,18 +100,18 @@ function B(e) {
     s()(null != W, 'Expected selectedSkuId');
     let ee = k[W],
         en = H[W],
-        et = null != U ? U : b.c,
+        et = null != F ? F : b.c,
         ei = null != en ? en[et] : null;
     s()(null != ee, 'SKU must exist and be fetched.'), s()(null != M, 'Application must exist.');
     let ea = (0, o.e7)([I.Z, g.Z], () => g.Z.inTestModeForApplication(M.id) || I.Z.inDevModeForApplication(M.id), [M.id]),
         er = (0, o.e7)([S.Z], () => S.Z.enabled),
         es = l.M.EEA_COUNTRIES.has(T.Z.ipCountryCodeWithFallback),
         el = B === R.A.PURCHASING || B === R.A.COMPLETED,
-        eo = null != U ? G[U].type : null;
+        eo = null != F ? G[F].type : null;
     return (
         a.useEffect(() => {
-            $ && U === Q && Q !== b.c && null == ei && (0, u.x2)(ee.applicationId, ee.id, Q, { isGift: X });
-        }, [Q, $, U, ee.applicationId, ee.id, ei, X]),
+            $ && F === Q && Q !== b.c && null == ei && (0, u.x2)(ee.applicationId, ee.id, Q, { isGift: X });
+        }, [Q, $, F, ee.applicationId, ee.id, ei, X]),
         (0, i.jsxs)('div', {
             className: Z.stepBody,
             children: [
@@ -179,7 +179,7 @@ function B(e) {
                         }),
                         (0, i.jsx)(p.Z, {
                             paymentSources: Object.values(G),
-                            selectedPaymentSourceId: U,
+                            selectedPaymentSourceId: F,
                             onChange: r,
                             onPaymentSourceAdd: f,
                             hidePersonalInformation: er
@@ -190,7 +190,7 @@ function B(e) {
                     isActive: n,
                     ref: t,
                     children: (0, i.jsx)(m.Z, {
-                        onChange: F,
+                        onChange: U,
                         forceShow: !0,
                         showWithdrawalWaiver: es,
                         disabled: el,

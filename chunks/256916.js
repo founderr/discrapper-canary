@@ -10,7 +10,7 @@ var i,
     d = n(902704),
     h = n(481060),
     p = n(888914);
-function _(e, t, n) {
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,7 +23,7 @@ function _(e, t, n) {
         e
     );
 }
-let f = {
+let _ = {
     friction: 10,
     tension: 300
 };
@@ -52,7 +52,7 @@ class m extends r.Component {
         this._timeout = setTimeout(() => {
             u.Z.spring(e, {
                 toValue: 0,
-                ...f
+                ..._
             }).start();
         }, 100);
     }
@@ -64,7 +64,7 @@ class m extends r.Component {
         }
         u.Z.spring(e, {
             toValue: 1,
-            ...f
+            ..._
         }).start();
     }
     render() {
@@ -96,7 +96,7 @@ class m extends r.Component {
     }
     constructor(e) {
         super(e),
-            _(this, '_timeout', void 0),
+            f(this, '_timeout', void 0),
             (this.state = {
                 translateY: new u.Z.Value(),
                 reduceMotion: !1
@@ -131,11 +131,11 @@ class g extends (i = r.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            _(this, 'state', {
+            f(this, 'state', {
                 unread: null,
                 mention: null
             }),
-            _(
+            f(
                 this,
                 'calculateState',
                 c()(() => {
@@ -175,7 +175,7 @@ class g extends (i = r.PureComponent) {
                         });
                 }, 200)
             ),
-            _(this, 'handleClick', (e) => {
+            f(this, 'handleClick', (e) => {
                 e.preventDefault(), e.stopPropagation();
                 let { unread: t, mention: n } = this.state,
                     { onJumpTo: i } = this.props,
@@ -184,8 +184,8 @@ class g extends (i = r.PureComponent) {
             });
     }
 }
-_(g, 'contextType', h.AccessibilityPreferencesContext),
-    _(g, 'defaultProps', {
+f(g, 'contextType', h.AccessibilityPreferencesContext),
+    f(g, 'defaultProps', {
         className: p.container,
         reverse: !1,
         hide: !1,

@@ -15,8 +15,8 @@ var n = t(735250),
     I = t(821849),
     N = t(230711),
     m = t(497321),
-    C = t(634894),
-    A = t(410030),
+    A = t(634894),
+    C = t(410030),
     g = t(100527),
     h = t(906732),
     O = t(211242),
@@ -53,7 +53,7 @@ function J() {
         s = (0, Z.t7)(),
         t = (0, Z.lr)(),
         a = (0, c.e7)([D.ZP], () => D.ZP.inReverseTrial()),
-        i = (0, A.ZP)();
+        i = (0, C.ZP)();
     if (null == e || null == e.planIdFromItems) return null;
     let o = null != e.trialId,
         d = e.planIdFromItems === w.Xh.PREMIUM_YEAR_TIER_2,
@@ -264,13 +264,13 @@ s.Z = function () {
         _ = (0, j.n)(),
         S = null == _ ? void 0 : _.countryCode,
         N = (0, c.e7)([M.Z], () => M.Z.enabled),
-        A = 'PremiumManagementSettings';
-    (0, C.j)({
-        location: A + ' auto on',
+        C = 'PremiumManagementSettings';
+    (0, A.j)({
+        location: C + ' auto on',
         autoTrackExposure: !0
     }),
-        (0, C.j)({
-            location: A + ' auto off',
+        (0, A.j)({
+            location: C + ' auto off',
             autoTrackExposure: !1
         }),
         (0, B.B)('PremiumManagementSettings');

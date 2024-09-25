@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return C;
+        return A;
     }
 }),
     t(47120);
@@ -21,22 +21,22 @@ var n,
     N = t(113207);
 let m = /^\d+$|^$/;
 ((a = n || (n = {})).LOCALHOST = 'localhost'), (a.PROXY = 'proxy');
-function C(e) {
+function A(e) {
     let { onClose: s, transitionState: t } = e,
         {
             authorizedApplicationId: n,
             authorizationError: a,
-            authorizing: C
+            authorizing: A
         } = (0, o.cj)([T.Z], () => ({
             authorizedApplicationId: T.Z.testModeApplicationId,
             authorizationError: T.Z.error,
             authorizing: T.Z.isFetchingAuthorization
         })),
-        [A, g] = r.useState(null != n ? n : ''),
+        [C, g] = r.useState(null != n ? n : ''),
         [h, O] = r.useState('8080'),
         [p, R] = r.useState('localhost'),
         x = (0, E.Dt)(),
-        f = m.test(A);
+        f = m.test(C);
     async function M() {
         d.q$();
         let e = (function (e, s, t) {
@@ -47,11 +47,11 @@ function C(e) {
                 case 'proxy':
                     return (0, _.Z)(t);
             }
-        })(p, h, A);
-        null != (await d.Wt(A, e)) && s();
+        })(p, h, C);
+        null != (await d.Wt(C, e)) && s();
     }
     r.useEffect(() => () => c.Z.wait(() => d.q$()), []);
-    let D = null != n && n === A,
+    let D = null != n && n === C,
         P = D
             ? function () {
                   d.mc(), g(''), R(null);
@@ -101,20 +101,20 @@ function C(e) {
                                     title: S.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_PLACEHOLDER,
                                     required: !0,
                                     children: (0, i.jsx)(l.TextInput, {
-                                        value: A,
+                                        value: C,
                                         maxLength: 19,
                                         error: f ? null : S.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_INVALID,
                                         onChange: function (e) {
                                             g(e);
                                         },
-                                        disabled: C
+                                        disabled: A
                                     })
                                 }),
                                 (0, i.jsx)(l.FormItem, {
                                     className: I.inputWrapper,
                                     title: S.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_ORIGIN_LABEL,
                                     children: (0, i.jsx)(l.SingleSelect, {
-                                        isDisabled: !f || '' === A,
+                                        isDisabled: !f || '' === C,
                                         value: p,
                                         options: [
                                             {
@@ -144,13 +144,13 @@ function C(e) {
                                               value: h,
                                               maxLength: 5,
                                               onChange: (e) => O(e),
-                                              disabled: C
+                                              disabled: A
                                           })
                                       }),
                                 (0, i.jsx)(l.Button, {
-                                    submitting: C,
+                                    submitting: A,
                                     type: 'submit',
-                                    disabled: !f || 0 === A.length || ('localhost' === p && 0 === h.length),
+                                    disabled: !f || 0 === C.length || ('localhost' === p && 0 === h.length),
                                     color: D ? l.Button.Colors.RED : l.Button.Colors.GREEN,
                                     children: D ? S.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_CLEAR : S.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_ACTIVATE
                                 })

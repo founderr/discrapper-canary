@@ -10,8 +10,8 @@ var l = n(120356),
     d = n(952164),
     h = n(237583),
     p = n(131704),
-    _ = n(314897),
-    f = n(594174),
+    f = n(314897),
+    _ = n(594174),
     m = n(768581),
     g = n(51144),
     C = n(754231),
@@ -66,16 +66,16 @@ t.Z = (e) => {
     let { channel: t, presenceActivity: n, members: l, embeddedApp: r, onAction: s } = e,
         h = null != r,
         m = h ? Array.from(r.embeddedActivity.userIds) : [],
-        g = (0, a.e7)([f.default, _.default], () => {
-            if (h) return f.default.getUser(m[0]);
+        g = (0, a.e7)([_.default, f.default], () => {
+            if (h) return _.default.getUser(m[0]);
             if (null != l) {
                 var e, t;
-                return l.length <= 0 ? null : null !== (t = null === (e = l.find((e) => e.user.id !== _.default.getId())) || void 0 === e ? void 0 : e.user) && void 0 !== t ? t : l[0].user;
+                return l.length <= 0 ? null : null !== (t = null === (e = l.find((e) => e.user.id !== f.default.getId())) || void 0 === e ? void 0 : e.user) && void 0 !== t ? t : l[0].user;
             }
         });
     if (null == g) return null;
     let E = h || (0, c.Z)(n),
-        x = (0, p.vd)(t.type);
+        S = (0, p.vd)(t.type);
     return (0, i.jsxs)('div', {
         className: I.activity,
         children: [
@@ -88,9 +88,9 @@ t.Z = (e) => {
                           user: g,
                           channel: t,
                           sortedVoiceStates: l,
-                          onOpenSpotifyTrack: x ? d.aG : void 0,
-                          onOpenSpotifyArtist: x ? d.d$ : void 0,
-                          onOpenSpotifyAlbum: x ? d.Z5 : void 0
+                          onOpenSpotifyTrack: S ? d.aG : void 0,
+                          onOpenSpotifyArtist: S ? d.d$ : void 0,
+                          onOpenSpotifyAlbum: S ? d.Z5 : void 0
                       })
                     : (0, i.jsx)(o.Z, {
                           type: o.P.VOICE_CHANNEL,

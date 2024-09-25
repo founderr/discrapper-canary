@@ -21,8 +21,8 @@ var n = t(735250),
     I = t(612226),
     N = t(714338),
     m = t(924557),
-    C = t(600164),
-    A = t(74299),
+    A = t(600164),
+    C = t(74299),
     g = t(131951),
     h = t(556296),
     O = t(808506),
@@ -85,8 +85,8 @@ class F extends a.PureComponent {
     }
     render() {
         let { managed: e, enabled: s } = this.props.keybind;
-        return (0, n.jsxs)(C.Z, {
-            direction: C.Z.Direction.VERTICAL,
+        return (0, n.jsxs)(A.Z, {
+            direction: A.Z.Direction.VERTICAL,
             className: r()(b.keybindGroup, Z.card),
             children: [
                 !e &&
@@ -96,10 +96,10 @@ class F extends a.PureComponent {
                         onClick: this.handleDeleteKeybind,
                         look: E.Z.Looks.FILLED
                     }),
-                (0, n.jsxs)(C.Z, {
+                (0, n.jsxs)(A.Z, {
                     className: v.marginBottom8,
                     children: [
-                        (0, n.jsx)(C.Z.Child, {
+                        (0, n.jsx)(A.Z.Child, {
                             basis: '45%',
                             children: (0, n.jsx)(_.FormItem, {
                                 title: L.Z.Messages.USER_SETTINGS_KEYBINDS_ACTION,
@@ -112,7 +112,7 @@ class F extends a.PureComponent {
                                 })
                             })
                         }),
-                        (0, n.jsx)(C.Z.Child, {
+                        (0, n.jsx)(A.Z.Child, {
                             basis: '45%',
                             children: (0, n.jsx)(_.FormItem, {
                                 title: L.Z.Messages.USER_SETTINGS_KEYBINDS_KEYBIND,
@@ -123,7 +123,7 @@ class F extends a.PureComponent {
                                 })
                             })
                         }),
-                        (0, n.jsx)(C.Z.Child, {
+                        (0, n.jsx)(A.Z.Child, {
                             grow: 0,
                             shrink: 0,
                             children: (0, n.jsx)(_.FormItem, {
@@ -143,7 +143,7 @@ class F extends a.PureComponent {
                         })
                     ]
                 }),
-                (0, n.jsx)(C.Z.Child, { children: this.renderMessage() }),
+                (0, n.jsx)(A.Z.Child, { children: this.renderMessage() }),
                 this.renderExtraSettings()
             ]
         });
@@ -342,18 +342,18 @@ class y extends a.PureComponent {
                     children: R.isPlatformEmbedded
                         ? (0, n.jsxs)(n.Fragment, {
                               children: [
-                                  (0, n.jsxs)(C.Z, {
-                                      justify: C.Z.Justify.BETWEEN,
+                                  (0, n.jsxs)(A.Z, {
+                                      justify: A.Z.Justify.BETWEEN,
                                       className: v.marginBottom20,
                                       children: [
-                                          (0, n.jsx)(C.Z.Child, {
+                                          (0, n.jsx)(A.Z.Child, {
                                               grow: 0,
                                               children: (0, n.jsx)(_.HelpMessage, {
                                                   messageType: _.HelpMessageTypes.WARNING,
                                                   children: L.Z.Messages.ADD_KEYBIND_WARNING
                                               })
                                           }),
-                                          (0, n.jsx)(C.Z.Child, {
+                                          (0, n.jsx)(A.Z.Child, {
                                               wrap: !0,
                                               grow: 0,
                                               children: (0, n.jsx)(_.Button, {
@@ -470,7 +470,7 @@ class y extends a.PureComponent {
 }
 function V() {
     let e = (0, c.e7)([h.Z], () => h.Z.getState()),
-        s = (0, c.e7)([g.Z], () => (0, A.Z)(g.Z)),
+        s = (0, c.e7)([g.Z], () => (0, C.Z)(g.Z)),
         t = (0, c.e7)([O.Z], () => O.Z.isSupported()),
         a = (0, m.Go)();
     return (0, n.jsx)(y, {

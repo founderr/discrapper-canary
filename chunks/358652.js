@@ -10,11 +10,11 @@ var i,
     d = n(592125),
     h = n(306680),
     p = n(944486),
-    _ = n(55589);
-let f = [];
+    f = n(55589);
+let _ = [];
 function m() {
-    let e = _.Z.getPrivateChannelIds().filter((e) => h.ZP.getMentionCount(e) > 0);
-    return e.length > 20 && (e.length = 20), !(0, u.EF)(e, f) && ((f = e), !0);
+    let e = f.Z.getPrivateChannelIds().filter((e) => h.ZP.getMentionCount(e) > 0);
+    return e.length > 20 && (e.length = 20), !(0, u.EF)(e, _) && ((_ = e), !0);
 }
 function g() {
     return m();
@@ -26,10 +26,10 @@ function C(e) {
 }
 class I extends (i = s.ZP.Store) {
     initialize() {
-        this.waitFor(_.Z, d.Z, p.Z, h.ZP);
+        this.waitFor(f.Z, d.Z, p.Z, h.ZP);
     }
     getUnreadPrivateChannelIds() {
-        return f;
+        return _;
     }
 }
 (a = 'PrivateChannelReadStateStore'),

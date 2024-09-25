@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return C;
+        return A;
     }
 });
 var n = t(735250),
@@ -19,8 +19,8 @@ var n = t(735250),
     I = t(474936),
     N = t(689938),
     m = t(492004);
-function C(e) {
-    let { user: s, guild: t, className: i, sectionTitle: C, forcedDivider: A = !1, withTutorial: g = !1, showBorder: h = !1, isTryItOutFlow: O = !1, initialSelectedEffectId: p } = e,
+function A(e) {
+    let { user: s, guild: t, className: i, sectionTitle: A, forcedDivider: C = !1, withTutorial: g = !1, showBorder: h = !1, isTryItOutFlow: O = !1, initialSelectedEffectId: p } = e,
         R = (0, u.Kg)(s, t),
         x = _.ZP.canUsePremiumProfileCustomization(s),
         { analyticsLocations: f } = (0, l.ZP)(),
@@ -45,10 +45,10 @@ function C(e) {
         b = O || void 0 !== M ? null != M : null != R,
         Z = g ? o.ShinyButton : o.Button;
     return (0, n.jsx)(E.Z, {
-        forcedDivider: A,
+        forcedDivider: C,
         borderType: T.Y.PREMIUM,
         hasBackground: !0,
-        title: C,
+        title: A,
         showBorder: h,
         errors: D,
         className: i,

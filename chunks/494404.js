@@ -31,11 +31,11 @@ var i = n(735250),
     C = n(375954),
     p = n(496675),
     g = n(933429),
-    S = n(451478),
-    A = n(626135),
-    R = n(585483),
-    O = n(981631),
-    x = n(689938),
+    A = n(451478),
+    S = n(626135),
+    x = n(585483),
+    R = n(981631),
+    O = n(689938),
     M = n(177387);
 function v(e, t, n) {
     return (
@@ -91,7 +91,7 @@ let Z = (e) => {
             ]
         });
     };
-class D extends s.PureComponent {
+class b extends s.PureComponent {
     renderJumpButton() {
         let { jumping: e } = this.props;
         return (0, i.jsxs)(d.Clickable, {
@@ -100,7 +100,7 @@ class D extends s.PureComponent {
             children: [
                 (0, i.jsx)('div', {
                     className: r()(M.__invalid_text, { hidden: e }),
-                    children: x.Z.Messages.JUMP
+                    children: O.Z.Messages.JUMP
                 }),
                 (0, i.jsx)(d.Spinner, {
                     type: d.Spinner.Type.PULSING_ELLIPSIS,
@@ -142,18 +142,18 @@ class D extends s.PureComponent {
             });
     }
 }
-let b = u.ZP.connectStores([p.Z], (e) => {
+let D = u.ZP.connectStores([p.Z], (e) => {
     let { channel: t } = e;
-    return { canManageMessages: null != t && p.Z.can(O.Plq.MANAGE_MESSAGES, t) };
-})(D);
+    return { canManageMessages: null != t && p.Z.can(R.Plq.MANAGE_MESSAGES, t) };
+})(b);
 function j(e) {
     let { analyticsName: t, items: n, hasMore: a, loading: l, loadMore: _, renderHeader: E, renderEmptyState: T, renderItem: h, getProTip: f, scrollerClassName: C, className: p, listName: v } = e,
         Z = s.useRef(null),
         P = (0, I.Z)(v, Z),
-        D = (0, u.e7)([g.Z], () => g.Z.hasNotice()),
-        b = (0, u.e7)([S.Z], () => S.Z.windowSize());
+        b = (0, u.e7)([g.Z], () => g.Z.hasNotice()),
+        D = (0, u.e7)([A.Z], () => A.Z.windowSize());
     s.useEffect(() => {
-        A.default.track(O.rMx.OPEN_POPOUT, { type: t });
+        S.default.track(R.rMx.OPEN_POPOUT, { type: t });
     }, [t]),
         s.useEffect(() => {
             function e() {
@@ -165,10 +165,10 @@ function j(e) {
                 null === (e = Z.current) || void 0 === e || e.scrollPageDown({ animate: !0 });
             }
             return (
-                R.S.subscribe(O.CkL.SCROLL_PAGE_DOWN, t),
-                R.S.subscribe(O.CkL.SCROLL_PAGE_UP, e),
+                x.S.subscribe(R.CkL.SCROLL_PAGE_DOWN, t),
+                x.S.subscribe(R.CkL.SCROLL_PAGE_UP, e),
                 () => {
-                    R.S.unsubscribe(O.CkL.SCROLL_PAGE_DOWN, t), R.S.unsubscribe(O.CkL.SCROLL_PAGE_UP, e);
+                    x.S.unsubscribe(R.CkL.SCROLL_PAGE_DOWN, t), x.S.unsubscribe(R.CkL.SCROLL_PAGE_UP, e);
                 }
             );
         }, []);
@@ -218,7 +218,7 @@ function j(e) {
                         color: d.Button.Colors.PRIMARY,
                         size: d.Button.Sizes.MAX,
                         onClick: _,
-                        children: x.Z.Messages.LOAD_MORE_MESSAGES
+                        children: O.Z.Messages.LOAD_MORE_MESSAGES
                     })
                 })
               : (0, i.jsx)('div', {
@@ -240,8 +240,8 @@ function j(e) {
                       })
                   })
                 : null,
-        G = { maxHeight: b.height - 43 - 25 };
-    D && (G.maxHeight -= 40);
+        G = { maxHeight: D.height - 43 - 25 };
+    b && (G.maxHeight -= 40);
     let w = null != _ && a;
     return (0, i.jsx)('div', {
         className: r()(p, M.messagesPopoutWrap),
@@ -279,7 +279,7 @@ function j(e) {
     });
 }
 function U(e) {
-    let { analyticsName: t, onFetch: n, channel: a, messages: r, hasMore: l, loading: o, loadMore: c, onJump: d, canCloseAllMessages: I = !1, renderHeader: m, renderEmptyState: N, renderMessage: p, getProTip: g, scrollerClassName: S, className: A, onCloseMessage: R, listName: v } = e,
+    let { analyticsName: t, onFetch: n, channel: a, messages: r, hasMore: l, loading: o, loadMore: c, onJump: d, canCloseAllMessages: I = !1, renderHeader: m, renderEmptyState: N, renderMessage: p, getProTip: g, scrollerClassName: A, className: S, onCloseMessage: x, listName: v } = e,
         L = (0, u.e7)([C.Z], () => {
             let e = null != a ? C.Z.getMessages(a.id) : null;
             return null != e && null != e.jumpTargetId && e.loadingMore && null == e.get(e.jumpTargetId);
@@ -288,13 +288,13 @@ function U(e) {
         let { id: i, blocked: s, author: a, channel_id: r } = e;
         if (s)
             _.Z.show({
-                title: x.Z.Messages.UNBLOCK_TO_JUMP_TITLE,
-                body: x.Z.Messages.UNBLOCK_TO_JUMP_BODY.format({ name: a.username }),
-                confirmText: x.Z.Messages.OKAY
+                title: O.Z.Messages.UNBLOCK_TO_JUMP_TITLE,
+                body: O.Z.Messages.UNBLOCK_TO_JUMP_BODY.format({ name: a.username }),
+                confirmText: O.Z.Messages.OKAY
             });
         else if (!L) {
             let e = f.Z.getChannel(r);
-            null != e && (E.Z.trackJump(r, i, t), (0, h.uL)(O.Z5c.CHANNEL(e.getGuildId(), r, i))), null == d || d(n);
+            null != e && (E.Z.trackJump(r, i, t), (0, h.uL)(R.Z5c.CHANNEL(e.getGuildId(), r, i))), null == d || d(n);
         }
     }
     s.useEffect(() => {
@@ -311,8 +311,8 @@ function U(e) {
         [r, a]
     );
     return (0, i.jsx)(j, {
-        className: A,
-        scrollerClassName: S,
+        className: S,
+        scrollerClassName: A,
         items: P,
         loading: o,
         analyticsName: t,
@@ -339,13 +339,13 @@ function U(e) {
                                       message: t,
                                       channel: n
                                   }),
-                                  (0, i.jsx)(b, {
+                                  (0, i.jsx)(D, {
                                       channel: a,
                                       message: t,
                                       jumping: L,
                                       canCloseAllMessages: I,
                                       jumpTo: Z,
-                                      onCloseMessage: R
+                                      onCloseMessage: x
                                   })
                               ]
                           },

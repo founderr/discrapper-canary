@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return A;
+        return C;
     }
 }),
     t(47120);
@@ -20,10 +20,10 @@ var n = t(735250),
     I = t(689938),
     N = t(205058);
 let m = 387,
-    C = 218;
-function A(e) {
+    A = 218;
+function C(e) {
     let { previewEnabled: s, onEnablePreview: t } = e,
-        A = E.Z.getCameraComponent(),
+        C = E.Z.getCameraComponent(),
         [g, h] = a.useState((0, c.P)(T.default.getCurrentUser())),
         O = a.useRef(!1),
         p = a.useRef(g),
@@ -48,10 +48,10 @@ function A(e) {
                           children: (0, n.jsxs)('div', {
                               className: N.camera,
                               children: [
-                                  (0, n.jsx)(A, {
+                                  (0, n.jsx)(C, {
                                       deviceId: e,
                                       width: m,
-                                      height: C,
+                                      height: A,
                                       disabled: !s
                                   }),
                                   (0, n.jsx)(u.S, {})

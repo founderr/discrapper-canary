@@ -10,8 +10,8 @@ var i,
     d = n(585483),
     h = n(981631),
     p = n(689938),
-    _ = n(903949);
-function f(e, t, n) {
+    f = n(903949);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -49,31 +49,31 @@ class g extends (i = r.PureComponent) {
     }
     renderArrowGroup(e) {
         return (0, l.jsxs)('div', {
-            className: s()(_.arrowGroup, e),
+            className: s()(f.arrowGroup, e),
             children: [
                 (0, l.jsx)(o.Z.div, {
-                    className: s()(_.arrowContainer, _.horizontal),
+                    className: s()(f.arrowContainer, f.horizontal),
                     style: this.getStyle(),
                     children: (0, l.jsx)('img', {
                         alt: '',
                         src: n(403756),
-                        className: _.arrowIcon
+                        className: f.arrowIcon
                     })
                 }),
                 (0, l.jsx)('div', {
-                    className: s()(_.arrowContainer, _.diag1),
+                    className: s()(f.arrowContainer, f.diag1),
                     children: (0, l.jsx)('img', {
                         alt: '',
                         src: n(536404),
-                        className: _.arrowIcon
+                        className: f.arrowIcon
                     })
                 }),
                 (0, l.jsx)('div', {
-                    className: s()(_.arrowContainer, _.diag2),
+                    className: s()(f.arrowContainer, f.diag2),
                     children: (0, l.jsx)('img', {
                         alt: '',
                         src: n(569347),
-                        className: _.arrowIcon
+                        className: f.arrowIcon
                     })
                 })
             ]
@@ -81,14 +81,14 @@ class g extends (i = r.PureComponent) {
     }
     renderContent() {
         return (0, l.jsxs)('div', {
-            className: _.tutorialMessages,
+            className: f.tutorialMessages,
             children: [
                 (0, l.jsx)('div', {
-                    className: _.searchMessage,
+                    className: f.searchMessage,
                     children: p.Z.Messages.QUICKSWITCHER_TUTORIAL_MESSAGE_SEARCH
                 }),
                 (0, l.jsx)('div', {
-                    className: _.selectMessage,
+                    className: f.selectMessage,
                     children: p.Z.Messages.QUICKSWITCHER_TUTORIAL_MESSAGE_SELECT
                 })
             ]
@@ -99,11 +99,11 @@ class g extends (i = r.PureComponent) {
             { shown: t } = this.state;
         return (0, l.jsxs)('div', {
             ref: this.rootRef,
-            className: s()(_.tutorial, {
-                [_.shown]: t,
-                [_.hasQuery]: e
+            className: s()(f.tutorial, {
+                [f.shown]: t,
+                [f.hasQuery]: e
             }),
-            children: [this.renderContent(), this.renderArrowGroup(_.__invalid_left), this.renderArrowGroup(_.right)]
+            children: [this.renderContent(), this.renderArrowGroup(f.__invalid_left), this.renderArrowGroup(f.right)]
         });
     }
     getStyle() {
@@ -125,13 +125,13 @@ class g extends (i = r.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            f(this, 'state', {
+            _(this, 'state', {
                 shown: !1,
                 translateY: new o.Z.Value(0)
             }),
-            f(this, 'rootRef', r.createRef()),
-            f(this, 'focusTimeout', new c.V7()),
-            f(this, 'handleResultFocus', (e) => {
+            _(this, 'rootRef', r.createRef()),
+            _(this, 'focusTimeout', new c.V7()),
+            _(this, 'handleResultFocus', (e) => {
                 let { node: t } = e;
                 this.focusTimeout.start(1, () => {
                     if (this.props.hasQuery && null != t && null != this.rootRef.current) {
@@ -144,4 +144,4 @@ class g extends (i = r.PureComponent) {
             });
     }
 }
-f(g, 'contextType', u.AccessibilityPreferencesContext), (t.Z = g);
+_(g, 'contextType', u.AccessibilityPreferencesContext), (t.Z = g);

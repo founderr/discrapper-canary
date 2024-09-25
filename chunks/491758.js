@@ -19,8 +19,8 @@ var n = t(735250),
     I = t(924557),
     N = t(435064),
     m = t(894694),
-    C = t(779618),
-    A = t(39604),
+    A = t(779618),
+    C = t(39604),
     g = t(442334),
     h = t(356659),
     O = t(981631),
@@ -36,7 +36,7 @@ function P() {
         b = (0, o.e7)([N.Z], () => N.Z.getHardwareClassification()),
         Z = (0, o.e7)([S.Z], () => S.Z.getKeybindForAction(O.kg4.SAVE_CLIP, !0)),
         v = N.Z.isDecoupledGameClippingEnabled(),
-        j = (0, C.Z)(T.Z),
+        j = (0, A.Z)(T.Z),
         { showClipsHeaderEntrypoint: B } = I.NV.useExperiment({ location: 'clips_recording_settings' }, { autoTrackExposure: !1 });
     r()(null != Z, 'Save clip keybind unset');
     let U = (0, o.e7)([u.default], () => u.default.locale),
@@ -133,7 +133,7 @@ function P() {
                         value: s,
                         note: x.Z.Messages.CLIPS_SETTINGS_ENABLE_CLIPS_HELP,
                         onChange: (e) =>
-                            A.em({
+                            C.em({
                                 clipsEnabled: e,
                                 trackAnalytics: !0
                             }),
@@ -161,7 +161,7 @@ function P() {
                                 value: i,
                                 note: x.Z.Messages.CLIPS_SETTINGS_ENABLE_DECOUPLED_CLIPS_HELP,
                                 onChange: (e) =>
-                                    A._Q({
+                                    C._Q({
                                         enabled: e,
                                         trackAnalytics: !0
                                     }),
@@ -181,7 +181,7 @@ function P() {
                                 className: M.formItem,
                                 value: t,
                                 note: x.Z.Messages.CLIPS_SETTINGS_ENABLE_REMINDERS_HELP,
-                                onChange: (e) => A.N0(e),
+                                onChange: (e) => C.N0(e),
                                 children: x.Z.Messages.CLIPS_SETTINGS_ENABLE_REMINDERS
                             })
                         })
@@ -193,7 +193,7 @@ function P() {
                 children: [
                     (0, n.jsx)(g.Q, {
                         className: M.formItem,
-                        select: A.eU,
+                        select: C.eU,
                         title: x.Z.Messages.CLIPS_SETTINGS_LENGTH,
                         note: x.Z.Messages.CLIPS_SETTINGS_LENGTH_HELP,
                         value: P,
@@ -202,7 +202,7 @@ function P() {
                     (0, n.jsx)(g.Q, {
                         className: M.formItem,
                         select: (e) =>
-                            A.yi({
+                            C.yi({
                                 resolution: e,
                                 frameRate: L.frameRate
                             }),
@@ -214,7 +214,7 @@ function P() {
                     (0, n.jsx)(g.Q, {
                         className: M.formItem,
                         select: (e) =>
-                            A.yi({
+                            C.yi({
                                 resolution: L.resolution,
                                 frameRate: e
                             }),

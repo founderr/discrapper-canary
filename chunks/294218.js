@@ -19,21 +19,21 @@ var i = n(735250),
     C = n(25015),
     p = n(689674),
     g = n(438075),
-    S = n(963550),
-    A = n(845080),
-    R = n(295790),
-    O = n(145807),
-    x = n(56744),
+    A = n(963550),
+    S = n(845080),
+    x = n(295790),
+    R = n(145807),
+    O = n(56744),
     M = n(981631),
     v = n(916315);
 t.Z = s.memo(function (e) {
     var t, n;
-    let { message: s, compact: a = !1, className: L, onContextMenu: Z, onClick: P, hideSimpleEmbedContent: D = !0, channel: b, isGroupStart: j, animateAvatar: U, subscribeToComponentDispatch: y, renderThreadAccessory: B, trackAnnouncementViews: k = !1, ...F } = e,
+    let { message: s, compact: a = !1, className: L, onContextMenu: Z, onClick: P, hideSimpleEmbedContent: b = !0, channel: D, isGroupStart: j, animateAvatar: U, subscribeToComponentDispatch: y, renderThreadAccessory: B, trackAnnouncementViews: k = !1, ...F } = e,
         G = s.type === M.uaV.POLL_RESULT || (null !== (t = e.disableInteraction) && void 0 !== t && t),
-        w = s.isFirstMessageInForumPost(b),
+        w = s.isFirstMessageInForumPost(D),
         V = (0, u.A)((null !== (n = s.editedTimestamp) && void 0 !== n ? n : s.timestamp).valueOf()),
         { content: H, hasSpoilerEmbeds: Y } = (0, C.Z)(s, {
-            hideSimpleEmbedContent: D,
+            hideSimpleEmbedContent: b,
             allowList: w || V,
             allowHeading: w || V,
             allowLinks: !0,
@@ -45,13 +45,13 @@ t.Z = s.memo(function (e) {
         Q = (0, h.ZP)(s),
         q = (0, o.e7)([_.Z], () => s.hasFlag(M.iLy.HAS_THREAD) && _.Z.getChannel(m.default.castMessageIdAsChannelId(s.id))),
         X = (0, c.p9)({
-            guildId: b.guild_id,
+            guildId: D.guild_id,
             roleId: Q.iconRoleId
         }),
-        J = (0, o.e7)([E.Z], () => E.Z.can(M.Plq.CREATE_INSTANT_INVITE, b)),
+        J = (0, o.e7)([E.Z], () => E.Z.can(M.Plq.CREATE_INSTANT_INVITE, D)),
         $ = (0, p.Z)({
             message: s,
-            channel: b,
+            channel: D,
             enabled: k
         });
     if ((0, T.Z)(s, J)) return null;
@@ -64,17 +64,17 @@ t.Z = s.memo(function (e) {
             [v.disableInteraction]: G
         }),
         disableInteraction: G,
-        childrenRepliedMessage: (0, x.Z)(s, b, W, K, a),
-        childrenExecutedCommand: (0, O.Z)(s, b, a),
-        childrenHeader: (0, A.Z)({
+        childrenRepliedMessage: (0, O.Z)(s, D, W, K, a),
+        childrenExecutedCommand: (0, R.Z)(s, D, a),
+        childrenHeader: (0, S.Z)({
             ...e,
-            guildId: b.guild_id,
+            guildId: D.guild_id,
             author: Q,
             roleIcon: X
         }),
         childrenAccessories: e.hideAccessories ? void 0 : (0, g.Q)(e, Y),
-        childrenMessageContent: (0, S.Z)(e, H),
-        childrenSystemMessage: (0, R.Z)({
+        childrenMessageContent: (0, A.Z)(e, H),
+        childrenSystemMessage: (0, x.Z)({
             ...e,
             disableInteraction: G
         }),

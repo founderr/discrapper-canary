@@ -7,30 +7,30 @@ var i = n(735250),
     a = n(470079),
     s = n(481060),
     r = n(749210),
-    l = n(17845),
-    o = n(374939),
-    c = n(283293),
-    d = n(469988),
-    u = n(526383),
-    _ = n(900849),
-    E = n(294330),
-    h = n(482543),
+    l = n(648113),
+    o = n(17845),
+    c = n(374939),
+    d = n(283293),
+    u = n(469988),
+    _ = n(526383),
+    E = n(900849),
+    h = n(294330),
     m = n(731455),
     I = n(689938),
     g = n(417712),
     p = n(157770);
 function T(e) {
     let { loadId: t, onScroll: n } = e,
-        T = (0, u.Z)();
+        T = (0, _.Z)();
     a.useEffect(() => {
-        _.Zt({
+        E.Zt({
             loadId: t,
             gamesYouPlayGuilds: [],
             allGuilds: [],
             categoryId: m.U
         });
     }, [t]);
-    let f = a.useMemo(
+    let S = a.useMemo(
             () =>
                 T.map((e) => ({
                     ...e,
@@ -41,16 +41,16 @@ function T(e) {
                 })),
             [T]
         ),
-        S = (0, h.p)();
-    return (0, i.jsxs)(c.Z, {
+        f = (0, l.C)();
+    return (0, i.jsxs)(d.Z, {
         onScroll: n,
         children: [
-            (0, i.jsx)(l.Z, {
+            (0, i.jsx)(o.Z, {
                 title: I.Z.Messages.GLOBAL_DISCOVERY_SERVERS_HUB_TITLE,
                 description: I.Z.Messages.GLOBAL_DISCOVERY_SERVERS_HUB_DESCRIPTION,
-                className: S
+                className: f
             }),
-            (0, i.jsxs)(o.Z, {
+            (0, i.jsxs)(c.Z, {
                 children: [
                     T.length > 0
                         ? (0, i.jsxs)(i.Fragment, {
@@ -64,9 +64,9 @@ function T(e) {
                                   (0, i.jsxs)('div', {
                                       className: g.content,
                                       children: [
-                                          f.map((e) =>
+                                          S.map((e) =>
                                               (0, i.jsx)(
-                                                  E.VD,
+                                                  h.VD,
                                                   {
                                                       guild: e,
                                                       onClick: () => r.Z.transitionToGuildSync(e.id)
@@ -74,14 +74,14 @@ function T(e) {
                                                   e.id
                                               )
                                           ),
-                                          (0, i.jsx)(d.Z, { hasHub: !0 })
+                                          (0, i.jsx)(u.Z, { hasHub: !0 })
                                       ]
                                   })
                               ]
                           })
                         : (0, i.jsx)('div', {
                               className: g.content,
-                              children: (0, i.jsx)(d.Z, { hasHub: !1 })
+                              children: (0, i.jsx)(u.Z, { hasHub: !1 })
                           }),
                     (0, i.jsx)('div', { className: p.divider }),
                     (0, i.jsxs)('div', {

@@ -24,7 +24,7 @@ function N(e) {
         C = s.useRef(null),
         p = (0, a.e7)([d.ZP], () => (null == f ? void 0 : f.id) != null && d.ZP.getMentionCount(f.id, m.W.NOTIFICATION_CENTER) > 0),
         { enabled: g } = o.Z.useExperiment({ location: 'RecentsButton' }, { autoTrackExposure: !1 }),
-        S = (0, a.e7)([l.Z], () => g && l.Z.getUnseenInviteCount() > 0);
+        A = (0, a.e7)([l.Z], () => g && l.Z.getUnseenInviteCount() > 0);
     return (0, i.jsx)(E.k, {
         onOpen: t,
         onClose: n,
@@ -51,7 +51,7 @@ function N(e) {
                             'aria-label': T.Z.Messages.INBOX,
                             tooltip: t ? null : T.Z.Messages.INBOX,
                             selected: t,
-                            showBadge: p || S || s
+                            showBadge: p || A || s
                         })
                     })
                 ]

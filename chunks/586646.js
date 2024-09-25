@@ -14,8 +14,8 @@ var i = n(735250),
     d = n(785792),
     h = n(190054),
     p = n(760373),
-    _ = n(689938),
-    f = n(64570);
+    f = n(689938),
+    _ = n(64570);
 function m(e) {
     let { channelId: t } = e,
         n = (0, r.e7)([s.Z], () => {
@@ -31,10 +31,10 @@ function m(e) {
             (0, o.PM)({ channelId: t });
         }, [t]);
     return (0, i.jsxs)('div', {
-        className: f.container,
+        className: _.container,
         children: [
             (0, i.jsxs)('div', {
-                className: f.tag,
+                className: _.tag,
                 children: [
                     (0, i.jsx)(a.LockIcon, {
                         size: 'xxs',
@@ -43,22 +43,22 @@ function m(e) {
                     (0, i.jsx)(a.Text, {
                         variant: 'text-xs/medium',
                         color: 'text-positive',
-                        children: _.Z.Messages.E2EE_END_TO_END_ENCRYPTED
+                        children: f.Z.Messages.E2EE_END_TO_END_ENCRYPTED
                     })
                 ]
             }),
             (0, i.jsx)(a.Text, {
                 variant: 'text-xs/normal',
                 color: 'text-secondary',
-                children: _.Z.Messages.E2EE_RTC_PANEL_CALL_VERIFICATION_SUBTITLE
+                children: f.Z.Messages.E2EE_RTC_PANEL_CALL_VERIFICATION_SUBTITLE
             }),
             (0, i.jsxs)('div', {
-                className: f.header,
+                className: _.header,
                 children: [
                     (0, i.jsx)(a.Heading, {
                         variant: 'text-sm/bold',
                         color: 'header-primary',
-                        children: _.Z.Messages.E2EE_VOICE_PRIVACY_CODE
+                        children: f.Z.Messages.E2EE_VOICE_PRIVACY_CODE
                     }),
                     null != m &&
                         (0, i.jsx)(h.H, {
@@ -69,14 +69,14 @@ function m(e) {
                 ]
             }),
             (0, i.jsx)(d.b, {
-                className: f.code,
+                className: _.code,
                 chunks: m,
                 columns: p.WK
             }),
             (0, i.jsx)(a.Text, {
                 variant: 'text-xs/normal',
                 color: 'text-secondary',
-                children: _.Z.Messages.E2EE_CALL_VERIFICATION_FOOTER_TEXT.format({ helpArticle: (0, c.uV)() })
+                children: f.Z.Messages.E2EE_CALL_VERIFICATION_FOOTER_TEXT.format({ helpArticle: (0, c.uV)() })
             })
         ]
     });

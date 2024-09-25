@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return A;
     }
 }),
     n(47120),
@@ -140,7 +140,7 @@ class g extends (i = a.PureComponent) {
             });
     }
 }
-function S(e) {
+function A(e) {
     let { applicationId: t, libraryApplication: n } = e,
         i = (0, d.O)(),
         [a, r] = (0, o.Wu)([I.Z, E.Z, m.Z], () => [I.Z.isConnected(t) || E.Z.isLaunchable(t) || (null != n && m.Z.isLaunchable(n.id, n.branchId)), E.Z.launchingGames.has(t)], [t, n]),

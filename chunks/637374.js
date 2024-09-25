@@ -19,18 +19,18 @@ var i = n(735250),
     C = n(981632),
     p = n(108989),
     g = n(703656),
-    S = n(314897),
-    A = n(82142),
-    R = n(283595),
-    O = n(594174),
-    x = n(509545),
+    A = n(314897),
+    S = n(82142),
+    x = n(283595),
+    R = n(594174),
+    O = n(509545),
     M = n(55563),
     v = n(199480),
     L = n(626135),
     Z = n(669079),
     P = n(74538),
-    D = n(296848),
-    b = n(51144),
+    b = n(296848),
+    D = n(51144),
     j = n(626799),
     U = n(981631),
     y = n(474936),
@@ -166,7 +166,7 @@ class V extends s.Component {
     }
     renderTitle(e) {
         let { currentUser: t, isSelfGift: n, sku: i } = this.props;
-        return this.isCustomGiftMessage() && !n ? B.Z.Messages.GIFT_RECIPIENT_NOTIFICATION.format({ recipientDisplayName: b.ZP.getName(t) }) : null == i ? null : e.isSubscription ? (n ? B.Z.Messages.GIFT_EMBED_TITLE_SUBSCRIPTION_SELF : B.Z.Messages.GIFT_EMBED_TITLE_SUBSCRIPTION) : n ? B.Z.Messages.GIFT_EMBED_TITLE_SELF : B.Z.Messages.GIFT_EMBED_TITLE;
+        return this.isCustomGiftMessage() && !n ? B.Z.Messages.GIFT_RECIPIENT_NOTIFICATION.format({ recipientDisplayName: D.ZP.getName(t) }) : null == i ? null : e.isSubscription ? (n ? B.Z.Messages.GIFT_EMBED_TITLE_SUBSCRIPTION_SELF : B.Z.Messages.GIFT_EMBED_TITLE_SUBSCRIPTION) : n ? B.Z.Messages.GIFT_EMBED_TITLE_SELF : B.Z.Messages.GIFT_EMBED_TITLE;
     }
     renderBody(e) {
         let { libraryApplication: t, isSelfGift: n, sku: i, gifter: s, subscriptionPlan: a, currentUser: r } = this.props;
@@ -193,12 +193,12 @@ class V extends s.Component {
             return null != s
                 ? e.isSubscription
                     ? B.Z.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_GIVEAWAY.format({
-                          username: b.ZP.getUserTag(s),
+                          username: D.ZP.getUserTag(s),
                           maxUses: e.maxUses,
                           skuName: l
                       })
                     : B.Z.Messages.GIFT_EMBED_BODY_GIVEAWAY.format({
-                          username: b.ZP.getUserTag(s),
+                          username: D.ZP.getUserTag(s),
                           totalCopies: e.maxUses,
                           skuName: l
                       })
@@ -216,7 +216,7 @@ class V extends s.Component {
                 ? B.Z.Messages.LOADING
                 : null != s
                   ? (a.interval === y.rV.MONTH ? B.Z.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_DEFAULT_MONTHS : B.Z.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_DEFAULT_YEARS).format({
-                        username: b.ZP.getUserTag(s),
+                        username: D.ZP.getUserTag(s),
                         skuName: l,
                         intervalCount: a.intervalCount
                     })
@@ -224,7 +224,7 @@ class V extends s.Component {
                         skuName: l,
                         intervalCount: a.intervalCount
                     });
-        return null != s ? B.Z.Messages.GIFT_EMBED_BODY_DEFAULT.format({ username: b.ZP.getUserTag(s) }) : B.Z.Messages.GIFT_EMBED_BODY_NO_USER_DEFAULT;
+        return null != s ? B.Z.Messages.GIFT_EMBED_BODY_DEFAULT.format({ username: D.ZP.getUserTag(s) }) : B.Z.Messages.GIFT_EMBED_BODY_NO_USER_DEFAULT;
     }
     renderPromotionActions() {
         return (0, i.jsx)(u.Button, {
@@ -348,21 +348,21 @@ class V extends s.Component {
     }
 }
 let H = (0, I.Z)((0, E.Z)(V));
-t.Z = c.ZP.connectStores([A.Z, M.Z, O.default, R.Z, x.Z, S.default, m.Z], (e) => {
+t.Z = c.ZP.connectStores([S.Z, M.Z, R.default, x.Z, O.Z, A.default, m.Z], (e) => {
     let { code: t, author: n, currentUser: i } = e,
-        s = A.Z.get(t),
+        s = S.Z.get(t),
         a = null != s ? M.Z.get(s.skuId) : null,
-        r = null != s && null != s.userId ? O.default.getUser(s.userId) : null,
+        r = null != s && null != s.userId ? R.default.getUser(s.userId) : null,
         l = m.Z.useReducedMotion;
     return {
         sku: a,
         giftCode: s,
         gifter: r,
         currentUser: i,
-        subscriptionPlan: null != s && null != s.subscriptionPlanId ? (0, D.oE)(s.subscriptionPlanId) : null,
-        isSelfGift: null != s ? S.default.getId() === s.userId : S.default.getId() === n.id,
-        resolved: A.Z.getIsResolved(t),
-        libraryApplication: null != a && (null == s ? void 0 : s.entitlementBranches) != null ? Z.z2(s.entitlementBranches, a, R.Z) : null,
+        subscriptionPlan: null != s && null != s.subscriptionPlanId ? (0, b.oE)(s.subscriptionPlanId) : null,
+        isSelfGift: null != s ? A.default.getId() === s.userId : A.default.getId() === n.id,
+        resolved: S.Z.getIsResolved(t),
+        libraryApplication: null != a && (null == s ? void 0 : s.entitlementBranches) != null ? Z.z2(s.entitlementBranches, a, x.Z) : null,
         useReducedMotion: l
     };
 })(H);

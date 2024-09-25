@@ -32,7 +32,7 @@ function p() {
         ),
         { location: p } = (0, c.O)(),
         { analyticsLocations: g } = (0, u.ZP)(),
-        S = s.useCallback(() => {
+        A = s.useCallback(() => {
             (0, d.Z)({
                 subscriptionTier: I.ZP.getSkuIdForPremiumType(h.p9.TIER_2),
                 analyticsLocations: g,
@@ -43,12 +43,12 @@ function p() {
                 }
             });
         }, [g, p]),
-        A = s.useCallback(() => {
+        S = s.useCallback(() => {
             o.Z.open(N.oAB.INVENTORY), T.ZP.dismissOutboundPromotionNotice();
         }, []),
-        R = s.useCallback(() => {
-            E.default.track(N.rMx.OUTBOUND_PROMOTION_NOTICE_CLICKED), n ? S() : A();
-        }, [n, S, A]);
+        x = s.useCallback(() => {
+            E.default.track(N.rMx.OUTBOUND_PROMOTION_NOTICE_CLICKED), n ? A() : S();
+        }, [n, A, S]);
     return (0, i.jsxs)(l.Notice, {
         color: l.NoticeColors.PREMIUM_TIER_2,
         children: [
@@ -68,13 +68,13 @@ function p() {
                     ? (0, i.jsxs)(a.x, {
                           variant: 'text-sm/normal',
                           className: C.text,
-                          children: [f.Z.Messages.OUTBOUND_PROMO_UPSELL_EXPERIMENT_NAG_BAR_TITLE_V2, ' ', f.Z.Messages.LEARN_MORE_CLICK.format({ onClick: A })]
+                          children: [f.Z.Messages.OUTBOUND_PROMO_UPSELL_EXPERIMENT_NAG_BAR_TITLE_V2, ' ', f.Z.Messages.LEARN_MORE_CLICK.format({ onClick: S })]
                       })
                     : f.Z.Messages.OUTBOUND_PROMO_UPSELL_EXPERIMENT_NAG_BAR_TITLE
                 : f.Z.Messages.OUTBOUND_PROMOTION_NOTICE,
             (0, i.jsx)(l.PrimaryCTANoticeButton, {
                 noticeType: N.kVF.OUTBOUND_PROMOTION,
-                onClick: R,
+                onClick: x,
                 children: n ? f.Z.Messages.PREMIUM_UPSELL_GET_NITRO : f.Z.Messages.TAKE_ME_THERE
             })
         ]

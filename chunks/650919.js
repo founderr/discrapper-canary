@@ -43,14 +43,14 @@ function I(e) {
             },
             [N]
         ),
-        C = (0, r.e7)(
+        A = (0, r.e7)(
             [l.Z],
             () => {
                 if (null != N) return l.Z.getGuild(N.guildId);
             },
             [N]
         ),
-        [A, g] = n.useState(!1),
+        [C, g] = n.useState(!1),
         h =
             null == t
                 ? void 0
@@ -78,8 +78,8 @@ function I(e) {
                   });
     return {
         application: m,
-        guild: C,
-        expanded: A,
+        guild: A,
+        expanded: C,
         handleToggleExpanded: () => g((e) => !e),
         listing: t,
         storeListing: a,

@@ -24,14 +24,14 @@ var i = n(735250),
     C = n(55935),
     p = n(655354),
     g = n(809780),
-    S = n(981631),
-    A = n(689938),
-    R = n(896845);
-let O = {
+    A = n(981631),
+    S = n(689938),
+    x = n(896845);
+let R = {
     left: 4,
     right: -12
 };
-function x(e) {
+function O(e) {
     var t;
     let { channel: n, message: a, compact: r, isGroupStart: o, treatSpam: u, gotoChannel: d } = e,
         _ = (0, l.JA)(null !== (t = a.id) && void 0 !== t ? t : ''),
@@ -45,23 +45,23 @@ function x(e) {
             [n.id]
         );
     return (0, i.jsx)(c.FocusRing, {
-        offset: O,
+        offset: R,
         children: (0, i.jsxs)(
             'div',
             {
-                className: R.messageContainer,
+                className: x.messageContainer,
                 onKeyDown: E,
                 ..._,
                 children: [
                     (0, i.jsx)(p.Z, {
-                        className: R.jumpButton,
+                        className: x.jumpButton,
                         onJump: (e) => d(e, a.id)
                     }),
                     (0, i.jsx)(m.Z, {
                         id: a.id,
                         message: a,
                         channel: n,
-                        className: R.message,
+                        className: x.message,
                         compact: r,
                         animateAvatar: !1,
                         isGroupStart: o,
@@ -79,25 +79,25 @@ function M(e) {
     let { channel: s, channelRecord: a, gotoChannel: l } = e,
         { enabled: m } = u.Z.useExperiment({ location: '20e3b0_1' }, { autoTrackExposure: !1 }),
         p = T.jU.useSetting(),
-        O = (0, o.e7)([N.Z], () => N.Z.can(S.Plq.CREATE_INSTANT_INVITE, a)),
+        R = (0, o.e7)([N.Z], () => N.Z.can(A.Plq.CREATE_INSTANT_INVITE, a)),
         M = (0, E.P1)(a),
         v = !1,
         L = 0 === s.messages.length || r()(s.messages[0].timestamp).isSame(r()(), 'day'),
-        Z = null !== (n = null === (t = f.default.getUser(h.default.getId())) || void 0 === t ? void 0 : t.hasFlag(S.xW$.SPAMMER)) && void 0 !== n && n,
+        Z = null !== (n = null === (t = f.default.getUser(h.default.getId())) || void 0 === t ? void 0 : t.hasFlag(A.xW$.SPAMMER)) && void 0 !== n && n,
         P = [];
     if (!s.collapsed) {
         let e = null,
             t = null,
             n = s.messages.slice(0, g.hC);
         n.forEach((n) => {
-            if (!(0, d.Z)(n, O)) {
+            if (!(0, d.Z)(n, R)) {
                 if (!L && (null == e || !e.isSame(n.timestamp, 'day'))) {
                     let t = (0, C.vc)(n.timestamp, 'LL');
                     P.push(
                         (0, i.jsx)(
                             I.Z,
                             {
-                                className: R.divider,
+                                className: x.divider,
                                 children: t
                             },
                             t
@@ -110,7 +110,7 @@ function M(e) {
                     (v = v || (0, E.DQ)(n)),
                     P.push(
                         (0, i.jsx)(
-                            x,
+                            O,
                             {
                                 channel: a,
                                 message: n,
@@ -132,7 +132,7 @@ function M(e) {
                             color: c.Button.Colors.LINK,
                             look: c.Button.Looks.LINK,
                             onClick: (e) => l(e, n[n.length - 1].id),
-                            children: [A.Z.Messages.UNREADS_VIEW_CHANNEL, ' \u203A']
+                            children: [S.Z.Messages.UNREADS_VIEW_CHANNEL, ' \u203A']
                         },
                         'view-all'
                     )
@@ -142,7 +142,7 @@ function M(e) {
     return (
         v && M && u.Z.trackExposure({ location: '20e3b0_2' }),
         (0, i.jsx)('div', {
-            className: R.messages,
+            className: x.messages,
             children: P
         })
     );

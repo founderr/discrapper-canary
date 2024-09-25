@@ -18,17 +18,17 @@ var i = t(512722),
     m = t(981631),
     I = t(474936);
 async function f(e) {
-    let { setPurchaseState: n, setHasAcceptedTerms: t, setIsSubmitting: i, setPurchaseError: f, hasRedirectURL: E, setHasRedirectURL: x, isGift: N, baseAnalyticsData: S, analyticsLocation: T, analyticsLocations: h, flowStartTime: b, subscriptionPlan: g, planGroup: P, trialId: v, priceOptions: A, paymentSource: M, isPrepaidPaymentPastDue: C, openInvoiceId: y, premiumSubscription: R, onNext: O, metadata: L, sku: j, skuPricePreview: Z, purchaseType: D, referralCode: w, loadId: B, giftInfoOptions: G, invoicePreview: U } = e;
+    let { setPurchaseState: n, setHasAcceptedTerms: t, setIsSubmitting: i, setPurchaseError: f, hasRedirectURL: E, setHasRedirectURL: x, isGift: N, baseAnalyticsData: S, analyticsLocation: T, analyticsLocations: h, flowStartTime: b, subscriptionPlan: g, planGroup: P, trialId: v, priceOptions: A, paymentSource: M, isPrepaidPaymentPastDue: C, openInvoiceId: y, premiumSubscription: R, onNext: O, metadata: L, sku: j, skuPricePreview: Z, purchaseType: D, referralCode: w, loadId: B, giftInfoOptions: G, invoicePreview: F } = e;
     n(p.A.PURCHASING), t(!0), i(!0), r.Z.wait(l.fw), f(null);
     try {
         let e, t, i;
         if (
             (d.default.track(m.rMx.PAYMENT_FLOW_COMPLETED, {
                 ...S,
-                subtotal: null == U ? void 0 : U.subtotal,
-                tax: null == U ? void 0 : U.tax,
-                expected_amount: null == U ? void 0 : U.total,
-                expected_currency: null == U ? void 0 : U.currency,
+                subtotal: null == F ? void 0 : F.subtotal,
+                tax: null == F ? void 0 : F.tax,
+                expected_amount: null == F ? void 0 : F.total,
+                expected_currency: null == F ? void 0 : F.currency,
                 duration_ms: Date.now() - b
             }),
             E)
@@ -46,9 +46,9 @@ async function f(e) {
                     giftInfoOptions: G
                 }));
         else if ((a()(null != g, 'Missing subscriptionPlan'), N)) {
-            a()(null != U, 'Missing invoicePreview');
-            let n = U.total,
-                t = U.currency;
+            a()(null != F, 'Missing invoicePreview');
+            let n = F.total,
+                t = F.currency;
             e = await (0, c.ZZ)(I.CL, g.skuId, {
                 expectedAmount: n,
                 expectedCurrency: t,

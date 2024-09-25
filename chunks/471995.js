@@ -14,16 +14,16 @@ var i = n(735250),
     d = n(31445),
     h = n(703656),
     p = n(650774),
-    _ = n(443063),
-    f = n(981631),
+    f = n(443063),
+    _ = n(981631),
     m = n(176505),
     g = n(689938),
     C = n(347354);
 function I(e) {
     let { guild: t, guildChannels: l, hasBanner: I } = e,
         N = l.getGuildActionSection(),
-        x = (0, d.Z)(t),
-        S = (0, r.e7)([p.Z], () => p.Z.getMemberCount(t.id)),
+        S = (0, d.Z)(t),
+        x = (0, r.e7)([p.Z], () => p.Z.getMemberCount(t.id)),
         v = async () => {
             let { default: e } = await n.e('46826').then(n.bind(n, 859432));
             return (n) => {
@@ -58,7 +58,7 @@ function I(e) {
                 children: (0, i.jsx)(s.Text, {
                     variant: 'text-xs/normal',
                     color: 'text-low-contrast',
-                    children: g.Z.Messages.MEMBERS_HEADER.format({ members: S })
+                    children: g.Z.Messages.MEMBERS_HEADER.format({ members: x })
                 })
             }),
             (0, i.jsxs)('div', {
@@ -66,15 +66,15 @@ function I(e) {
                 children: [
                     N.getRows().map((e, l) => {
                         switch (N.getRow(l)) {
-                            case _.z.CHANNELS_AND_ROLES:
+                            case f.z.CHANNELS_AND_ROLES:
                                 return (0, i.jsx)(E, {
                                     tooltip: g.Z.Messages.CHANNELS_AND_ROLES,
                                     onPress: () => {
-                                        (0, h.uL)(f.Z5c.CHANNEL(t.id, x ? m.oC.CUSTOMIZE_COMMUNITY : m.oC.CHANNEL_BROWSER));
+                                        (0, h.uL)(_.Z5c.CHANNEL(t.id, S ? m.oC.CUSTOMIZE_COMMUNITY : m.oC.CHANNEL_BROWSER));
                                     },
                                     children: (0, i.jsx)(s.ChannelListMagnifyingGlassIcon, { size: 'sm' })
                                 });
-                            case _.z.GUILD_SCHEDULED_EVENTS:
+                            case f.z.GUILD_SCHEDULED_EVENTS:
                                 return (0, i.jsx)(E, {
                                     tooltip: 'Events',
                                     onPress: async () => {
@@ -90,7 +90,7 @@ function I(e) {
                                     },
                                     children: (0, i.jsx)(s.CalendarIcon, { size: 'sm' })
                                 });
-                            case _.z.GUILD_MOD_DASH_MEMBER_SAFETY:
+                            case f.z.GUILD_MOD_DASH_MEMBER_SAFETY:
                                 return (0, i.jsx)(E, {
                                     tooltip: g.Z.Messages.MEMBERS,
                                     onPress: () => {

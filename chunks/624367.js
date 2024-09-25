@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return D;
+        return b;
     }
 }),
     n(47120),
@@ -26,34 +26,34 @@ var s = n(613828),
     C = n(624138),
     p = n(317381),
     g = n(638880),
-    S = n(122613),
-    A = n(147865),
-    R = n(778569),
-    O = n(884338),
-    x = n(403404),
+    A = n(122613),
+    S = n(147865),
+    x = n(778569),
+    R = n(884338),
+    O = n(403404),
     M = n(701488),
     v = n(981631),
     L = n(689938),
     Z = n(896219);
 let P = (0, C.Mg)(r.Z.ACTIVITY_BOOKMARK_EMBED_IMAGE_WIDTH);
-function D(e) {
+function b(e) {
     var t, n, r, C;
-    let { applicationId: D, message: b } = e,
+    let { applicationId: b, message: D } = e,
         { analyticsLocations: j } = (0, d.ZP)(u.Z.ACTIVITY_BOOKMARK),
         U = (0, c.O)(),
-        y = b.channel_id,
+        y = D.channel_id,
         B = (0, a.e7)([T.Z], () => T.Z.getChannel(y), [y]),
         k = null == B ? void 0 : B.guild_id,
         F = null != B && (B.isGuildVoice() || B.isPrivate()),
         G = (0, a.e7)([p.ZP], () => p.ZP.getSelfEmbeddedActivityForChannel(y)),
-        w = (null == G ? void 0 : G.applicationId) === D,
-        [V] = (0, E.Z)([D, null !== (n = null == G ? void 0 : G.applicationId) && void 0 !== n ? n : '']),
-        H = (0, A.ZP)(null !== (r = null == V ? void 0 : V.maxParticipants) && void 0 !== r ? r : 0),
-        [Y] = (0, a.Wu)([p.ZP], () => (F ? p.ZP.getEmbeddedActivitiesForChannel(y).filter((e) => e.applicationId === D) : []), [D, y, F]),
+        w = (null == G ? void 0 : G.applicationId) === b,
+        [V] = (0, E.Z)([b, null !== (n = null == G ? void 0 : G.applicationId) && void 0 !== n ? n : '']),
+        H = (0, S.ZP)(null !== (r = null == V ? void 0 : V.maxParticipants) && void 0 !== r ? r : 0),
+        [Y] = (0, a.Wu)([p.ZP], () => (F ? p.ZP.getEmbeddedActivitiesForChannel(y).filter((e) => e.applicationId === b) : []), [b, y, F]),
         W = Array.from(null !== (C = null == Y ? void 0 : Y.userIds) && void 0 !== C ? C : []),
         K = (0, a.Wu)([h.default], () => W.map((e) => h.default.getUser(e)).filter(f.lm), [W]),
-        z = (0, R.Z)({
-            applicationId: D,
+        z = (0, x.Z)({
+            applicationId: b,
             size: P,
             names: ['embedded_cover']
         }),
@@ -72,8 +72,8 @@ function D(e) {
                 else {
                     let e = B.isPrivate() && !m.Z.isCallActive(y),
                         t = async () =>
-                            await (0, S.Z)({
-                                targetApplicationId: D,
+                            await (0, A.Z)({
+                                targetApplicationId: b,
                                 channelId: y,
                                 analyticsLocations: j,
                                 commandOrigin: _.bB.ACTIVITY_BOOKMARK_EMBED
@@ -89,11 +89,11 @@ function D(e) {
                         : t();
                 }
             } else
-                (0, x.Z)({
+                (0, O.Z)({
                     guildId: k,
                     locationObject: U.location,
                     openInPopout: Q,
-                    initialSelectedApplicationId: D,
+                    initialSelectedApplicationId: b,
                     initialSlide: M.ag.SELECT_CHANNEL,
                     analyticsLocations: j
                 });
@@ -129,7 +129,7 @@ function D(e) {
                                   className: Z.learnMore,
                                   variant: 'heading-sm/medium',
                                   children: (0, i.jsx)(s.rU, {
-                                      to: v.Z5c.ACTIVITY_DETAILS(D),
+                                      to: v.Z5c.ACTIVITY_DETAILS(b),
                                       children: L.Z.Messages.LEARN_MORE
                                   })
                               }),
@@ -139,7 +139,7 @@ function D(e) {
                                       K.length > 0
                                           ? (0, i.jsx)('div', {
                                                 className: Z.avatars,
-                                                children: (0, i.jsx)(O.Z, {
+                                                children: (0, i.jsx)(R.Z, {
                                                     guildId: k,
                                                     users: K,
                                                     max: 4

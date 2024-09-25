@@ -3,13 +3,13 @@ n.d(t, {
         return g;
     },
     KQ: function () {
-        return f;
+        return _;
     },
     MU: function () {
         return d;
     },
     m0: function () {
-        return _;
+        return f;
     },
     rf: function () {
         return C;
@@ -34,10 +34,10 @@ var i = n(860911),
     u = n(689938);
 let d = 0,
     { API_ENDPOINT: h, CDN_HOST: p } = window.GLOBAL_ENV;
-function _(e) {
+function f(e) {
     return e.id === d;
 }
-function f() {
+function _() {
     return {
         id: d,
         name: u.Z.Messages.APP_DIRECTORY_ALL_CATEGORY

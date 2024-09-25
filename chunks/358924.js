@@ -16,8 +16,8 @@ var i,
     g = n(122810),
     p = n(833664),
     T = n(503438),
-    f = n(420660),
-    S = n(74433),
+    S = n(420660),
+    f = n(74433),
     C = n(906732),
     N = n(895924),
     A = n(812206),
@@ -35,8 +35,8 @@ var i,
     j = n(594174),
     U = n(395361),
     G = n(639351),
-    k = n(81063),
-    w = n(823379),
+    w = n(81063),
+    k = n(823379),
     B = n(51144),
     H = n(599706),
     V = n(981631),
@@ -389,7 +389,7 @@ let et = (e) => {
         let t,
             { activity: i, user: a, getAssetImage: r, guildId: l } = e,
             { name: c, details: d, assets: _, application_id: E } = i;
-        if (null != _ && (0, f.Z)(i)) {
+        if (null != _ && (0, S.Z)(i)) {
             var m;
             t = (0, s.jsx)(Z.Z, {
                 className: Y.twitchSectionPreviewWrapper,
@@ -465,7 +465,7 @@ let et = (e) => {
                     })
                 ]
             }),
-            m = null !== (n = null === (t = (0, S.Z)(i, r)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : F.Z.Messages.SHARING_SCREEN;
+            m = null !== (n = null === (t = (0, f.Z)(i, r)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : F.Z.Messages.SHARING_SCREEN;
         return (0, s.jsxs)(X, {
             children: [
                 (0, s.jsxs)('div', {
@@ -493,7 +493,7 @@ let et = (e) => {
             d = t.application_id;
         r.useEffect(() => {
             if (null != d)
-                (0, k.fetchAssetIds)(d, ['embedded_background']).then((e) => {
+                (0, w.fetchAssetIds)(d, ['embedded_background']).then((e) => {
                     let [t] = e;
                     return o(t);
                 });
@@ -501,7 +501,7 @@ let et = (e) => {
         let _ = (0, c.Wu)([j.default, D.default], () =>
                 Array.from(a)
                     .map((e) => (D.default.getId() === e ? null : j.default.getUser(e)))
-                    .filter(w.lm)
+                    .filter(k.lm)
             ),
             h = (0, E.O)(),
             { analyticsLocations: I } = (0, C.ZP)();
@@ -509,7 +509,7 @@ let et = (e) => {
         let g = A.Z.getApplication(d);
         if (null == g) return null;
         let p = null != t.created_at && t.created_at > 0 ? { start: t.created_at } : void 0,
-            T = (0, k.getAssetImage)(g.id, l, 300);
+            T = (0, w.getAssetImage)(g.id, l, 300);
         return (0, s.jsxs)(X, {
             children: [
                 (0, s.jsxs)('div', {

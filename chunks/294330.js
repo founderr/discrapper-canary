@@ -24,8 +24,8 @@ var i = n(735250),
     g = n(66637),
     p = n(782738),
     T = n(371260),
-    f = n(372769),
-    S = n(134432),
+    S = n(372769),
+    f = n(134432),
     C = n(695346),
     N = n(768581),
     A = n(356164),
@@ -76,11 +76,11 @@ function b(e) {
         ),
         U = (0, E.ZP)(),
         G = t.features.has(v.oNc.HUB),
-        k = a.useMemo(() => {
+        w = a.useMemo(() => {
             let e = N.ZP.getGuildDiscoverySplashURL({
                 id: t.id,
                 splash: t.discoverySplash,
-                size: 300 * (0, S.x_)()
+                size: 300 * (0, f.x_)()
             });
             if (null != e) return e;
             if (G) return x;
@@ -91,7 +91,7 @@ function b(e) {
                     return O;
             }
         }, [t.discoverySplash, t.id, G, U]),
-        w = a.useMemo(
+        k = a.useMemo(
             () =>
                 N.ZP.getGuildIconURL({
                     id: t.id,
@@ -130,7 +130,7 @@ function b(e) {
                                 (0, i.jsx)('div', {
                                     className: r()(Z.banner, { [Z.loaded]: P }),
                                     children: (0, i.jsx)('img', {
-                                        src: k,
+                                        src: w,
                                         alt: '',
                                         className: Z.bannerImage,
                                         onLoad: () => M(!0)
@@ -154,7 +154,7 @@ function b(e) {
                                                 width: 40,
                                                 height: 40,
                                                 children: (0, i.jsx)('img', {
-                                                    src: w,
+                                                    src: k,
                                                     alt: '',
                                                     className: Z.avatar
                                                 })
@@ -170,7 +170,7 @@ function b(e) {
                                 (0, i.jsxs)('div', {
                                     className: Z.title,
                                     children: [
-                                        (0, i.jsx)(f.Z, {
+                                        (0, i.jsx)(S.Z, {
                                             className: Z.guildBadge,
                                             guild: t,
                                             tooltipColor: c.Tooltip.Colors.PRIMARY

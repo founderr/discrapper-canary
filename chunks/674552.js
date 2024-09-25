@@ -3,10 +3,10 @@ n.d(t, {
         return p;
     },
     Ny: function () {
-        return _;
+        return f;
     },
     Or: function () {
-        return f;
+        return _;
     },
     jt: function () {
         return m;
@@ -30,14 +30,14 @@ function p(e, t) {
         color: t
     });
 }
-function _() {
+function f() {
     return (0, i.jsx)(a.IconBadge, {
         icon: (0, a.makeIconCompat)(c.Z),
         disableColor: !0,
         className: h.unavailableBadge
     });
 }
-function f(e) {
+function _(e) {
     let t,
         { audio: n, video: i, screenshare: l, isCurrentUserConnected: r, liveStage: s, activeEvent: o, activity: c, gaming: d } = e,
         h = (0, u.vg)('Guild Icon', !1);

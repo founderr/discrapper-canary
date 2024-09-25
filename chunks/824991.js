@@ -6,7 +6,7 @@ n.d(t, {
         return C;
     },
     YV: function () {
-        return f;
+        return _;
     },
     ZP: function () {
         return I;
@@ -26,19 +26,19 @@ var i = n(735250),
     d = n(981631),
     h = n(921944),
     p = n(689938),
-    _ = n(737116);
-function f() {
+    f = n(737116);
+function _() {
     return (0, i.jsxs)('div', {
-        className: _.inviteContainer,
+        className: f.inviteContainer,
         children: [
             (0, i.jsx)(r.EnvelopeIcon, {
                 size: 'xxs',
                 color: 'currentColor',
-                className: _.envelope
+                className: f.envelope
             }),
             (0, i.jsx)(r.Text, {
                 variant: 'text-xs/bold',
-                className: _.invite,
+                className: f.invite,
                 children: p.Z.Messages.CLAN_UPSELL_INVITE
             })
         ]
@@ -50,7 +50,7 @@ function m(e) {
         children: (0, i.jsx)(r.Heading, {
             variant: 'heading-md/semibold',
             color: 'header-primary',
-            className: _.title,
+            className: f.title,
             children: t
         })
     });
@@ -60,7 +60,7 @@ function g(e) {
     return (0, i.jsx)(r.Text, {
         variant: 'text-xs/normal',
         color: 'text-muted',
-        className: _.message,
+        className: f.message,
         children: t
     });
 }
@@ -71,7 +71,7 @@ function C(e) {
         look: r.ButtonLooks.FILLED,
         size: r.ButtonSizes.SMALL,
         color: r.ButtonColors.BRAND,
-        className: _.button,
+        className: f.button,
         onClick: t,
         children: (0, i.jsx)(r.Text, {
             variant: 'text-sm/semibold',
@@ -88,9 +88,9 @@ function I(e) {
             location: a.Z.GUILD_CHANNEL_LIST
         });
     }, [t.id]);
-    let f = r === u.xn ? p.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_GENSHIN_TITLE : r === u.nJ ? p.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_VALORANT_TITLE : p.Z.Messages.RAPIDASH_CHANNEL_LIST_ADMIN_UPSELL_TITLE,
+    let _ = r === u.xn ? p.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_GENSHIN_TITLE : r === u.nJ ? p.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_VALORANT_TITLE : p.Z.Messages.RAPIDASH_CHANNEL_LIST_ADMIN_UPSELL_TITLE,
         I = l.useCallback(() => (0, i.jsx)(g, { message: p.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_MESSAGE }), []),
-        E = l.useCallback(() => (0, i.jsx)(m, { title: f }), [f]),
+        E = l.useCallback(() => (0, i.jsx)(m, { title: _ }), [_]),
         N = l.useCallback(() => {
             (0, c._9)({
                 guildId: t.id,
@@ -98,14 +98,14 @@ function I(e) {
             }),
                 (0, o.uL)(d.Z5c.GUILD_DISCOVERY);
         }, [t.id]),
-        x = l.useCallback(() => (0, i.jsx)(C, { onClick: N }), [N]);
+        S = l.useCallback(() => (0, i.jsx)(C, { onClick: N }), [N]);
     return (0, i.jsx)(s.Z, {
-        className: _.notice,
+        className: f.notice,
         guild: t,
         onDismissed: () => n(h.L.DISMISS),
         title: E,
         message: I,
-        cta: x,
+        cta: S,
         trackingSource: d.PsQ.CLAN_ADMIN_UPSELL,
         type: d.vID.CLAN_ADMIN_UPSELL
     });

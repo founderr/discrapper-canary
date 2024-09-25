@@ -80,14 +80,14 @@ function I(e) {
             lastVisibleIndex: g,
             onItemLayout: p,
             overflowItemsRef: T,
-            itemWidthsRef: f
+            itemWidthsRef: S
         } = (0, d.zP)({
             items: s,
             itemGapPx: 20,
             maxLines: 1,
             containerWidth: _
         }),
-        S = a.useMemo(() => s.slice(0, g + 1), [g, s]),
+        f = a.useMemo(() => s.slice(0, g + 1), [g, s]),
         C = a.useMemo(() => s.slice(g + 1), [g, s]),
         N = a.useRef(null),
         A = a.useCallback(() => {
@@ -95,10 +95,10 @@ function I(e) {
             let t = null === (e = N.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
             if (null == t || I.current === t.width) return;
             E(t.width), (I.current = t.width);
-            let n = f.current.reduce((e, t, n) => e + t + (0 === n ? 0 : 20)),
+            let n = S.current.reduce((e, t, n) => e + t + (0 === n ? 0 : 20)),
                 i = t.width - n;
             null == c || c(i);
-        }, [f, c]);
+        }, [S, c]);
     a.useEffect(() => {
         let e = (0, u.pP)(A);
         return (0, u.YP)(e, document.body), () => (0, u.UC)(e, document.body);
@@ -148,7 +148,7 @@ function I(e) {
                     onItemSelect: l,
                     className: h.tabs,
                     children: [
-                        S.map((e) =>
+                        f.map((e) =>
                             (0, i.jsx)(
                                 o.TabBar.Item,
                                 {

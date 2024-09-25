@@ -19,18 +19,18 @@ var i,
     C = n(456432),
     p = n(347475),
     g = n(789407),
-    S = n(598077),
-    A = n(757266),
-    R = n(831506),
-    O = n(271383),
-    x = n(283595),
+    A = n(598077),
+    S = n(757266),
+    x = n(831506),
+    R = n(271383),
+    O = n(283595),
     M = n(293273),
     v = n(594174),
     L = n(181106),
     Z = n(417363),
     P = n(768581),
-    D = n(358085),
-    b = n(804739),
+    b = n(358085),
+    D = n(804739),
     j = n(410575),
     U = n(981631),
     y = n(701488);
@@ -74,7 +74,7 @@ class F extends (i = a.PureComponent) {
     }
     shouldRenderCustomButton() {
         let { isLaunchable: e, application: t } = this.props;
-        return null != t && null != t.primarySkuId && !e && D.isPlatformEmbedded;
+        return null != t && null != t.primarySkuId && !e && b.isPlatformEmbedded;
     }
     render() {
         return (0, s.jsx)(j.Z, {
@@ -190,7 +190,7 @@ class F extends (i = a.PureComponent) {
                     isGameLaunchable: h,
                     isLoading: o || this.state.sending,
                     activityActionType: u,
-                    isInBrowser: !D.isPlatformEmbedded,
+                    isInBrowser: !b.isPlatformEmbedded,
                     isSyncable: T,
                     isSender: c,
                     channelId: _,
@@ -212,20 +212,20 @@ class F extends (i = a.PureComponent) {
     }
 }
 B(F, 'defaultProps', { isPreview: !1 }),
-    (t.Z = r.ZP.connectStores([f.Z, R.Z, M.Z, x.Z, h.Z, Z.Z, A.Z, L.Z, v.default, O.ZP], (e) => {
+    (t.Z = r.ZP.connectStores([f.Z, x.Z, M.Z, O.Z, h.Z, Z.Z, S.Z, L.Z, v.default, R.ZP], (e) => {
         let { activity: t, analyticsLocations: n, application: i, partyId: s, userId: a, guildId: r } = e,
             { id: l } = null != i ? i : {},
-            o = null != t && null != t.party && t.party.id === s ? R.Z.getParty(t.party.id) : null,
+            o = null != t && null != t.party && t.party.id === s ? x.Z.getParty(t.party.id) : null,
             c = null != l ? M.Z.getApplicationActivity(l) : M.Z.findActivity((e) => e.type === U.IIU.LISTENING),
             u = !1;
         null != l && (u = L.Z.getState(l, U.mFx.JOIN) === U.OcF.LOADING);
         let d = Array.from(null != o ? o : []).map((e) => {
-                let t = null != r ? O.ZP.getMember(r, e) : null,
+                let t = null != r ? R.ZP.getMember(r, e) : null,
                     n = null != t ? t.nick : null,
                     i = v.default.getUser(e),
                     s = null == i;
                 return (
-                    null == i && (i = new S.Z({ discriminator: '0005' })),
+                    null == i && (i = new A.Z({ discriminator: '0005' })),
                     {
                         user: i,
                         unknownUser: s,
@@ -239,17 +239,17 @@ B(F, 'defaultProps', { isPreview: !1 }),
         return {
             analyticsLocations: n,
             partyMembers: d,
-            connectedApplication: null != l ? A.Z.getApplication(l) : null,
+            connectedApplication: null != l ? S.Z.getApplication(l) : null,
             myPartyId: null != c && null != c.party ? c.party.id : null,
             isLaunching: u,
             isSyncable: _ && !I,
             isLaunchable:
                 null != l &&
-                (0, b.t)({
-                    LibraryApplicationStore: x.Z,
+                (0, D.t)({
+                    LibraryApplicationStore: O.Z,
                     LaunchableGameStore: h.Z,
                     DispatchApplicationStore: Z.Z,
-                    ConnectedAppsStore: A.Z,
+                    ConnectedAppsStore: S.Z,
                     applicationId: l
                 })
         };

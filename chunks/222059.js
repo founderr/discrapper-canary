@@ -15,26 +15,26 @@ var i = n(735250),
     d = n(864682),
     h = n(899740),
     p = n(155409),
-    _ = n(699516),
-    f = n(944486),
+    f = n(699516),
+    _ = n(944486),
     m = n(594174),
     g = n(295226),
     C = n(774343),
     I = n(417363),
     E = n(941128),
     N = n(780570),
-    x = n(557177),
-    S = n(278464),
+    S = n(557177),
+    x = n(278464),
     v = n(276952),
-    Z = n(682662),
-    T = n(662146),
-    L = n(674552),
+    T = n(682662),
+    Z = n(662146),
+    b = n(674552),
     A = n(981631),
-    b = n(474936),
+    R = n(474936),
     M = n(871465),
-    R = n(689938),
-    O = n(342824);
-let P = {
+    L = n(689938),
+    P = n(342824);
+let y = {
     origin: {
         x: -16,
         y: 0
@@ -46,54 +46,54 @@ let P = {
         y: 0
     }
 };
-function y(e) {
-    let { selected: t, user: n, badge: h, link: _, showProgressBadge: f } = e,
+function O(e) {
+    let { selected: t, user: n, badge: h, link: f, showProgressBadge: _ } = e,
         m = (0, a.e7)([u.Z], () => u.Z.isEditorOpen),
         [g, C] = l.useState(!1),
         [I, E] = l.useState(!1),
-        [N, S] = l.useState(null),
-        [b, y] = l.useState(0),
+        [N, x] = l.useState(null),
+        [R, O] = l.useState(0),
         j = (0, r.Ie)('home'),
         D = () => {
-            S(null), y(0), clearTimeout(N);
+            x(null), O(0), clearTimeout(N);
         };
     if (null == n) return null;
-    let w = R.Z.Messages.DIRECT_MESSAGES;
-    I && (w = s.K.get(A.wli) ? R.Z.Messages.DISCODO_ENABLED : R.Z.Messages.DISCODO_DISABLED);
-    let G = null;
+    let w = L.Z.Messages.DIRECT_MESSAGES;
+    I && (w = s.K.get(A.wli) ? L.Z.Messages.DISCODO_ENABLED : L.Z.Messages.DISCODO_DISABLED);
+    let U = null;
     !t &&
-        f &&
-        (G = (0, i.jsx)(c.Z, {
-            className: O.downloadProgress,
+        _ &&
+        (U = (0, i.jsx)(c.Z, {
+            className: P.downloadProgress,
             determineOwnVisibility: !1
         }));
-    let U = t || g || m,
+    let G = t || g || m,
         k = (0, i.jsx)(o.BlobMask, {
-            selected: U,
-            lowerBadge: h > 0 ? (0, L.Ne)(h) : null,
-            upperBadge: G,
+            selected: G,
+            lowerBadge: h > 0 ? (0, b.Ne)(h) : null,
+            upperBadge: U,
             lowerBadgeSize: { width: (0, o.getBadgeWidthForValue)(h) },
             children: (0, i.jsx)(o.NavItem, {
                 onMouseEnter: () => C(!0),
                 onMouseLeave: () => C(!1),
                 onClick: () => {
-                    if (!__OVERLAY__ && (null != N && clearTimeout(N), S(setTimeout(D, 500)), y(b + 1), 15 === b)) {
+                    if (!__OVERLAY__ && (null != N && clearTimeout(N), x(setTimeout(D, 500)), O(R + 1), 15 === R)) {
                         D();
                         let e = !s.K.get(A.wli);
                         s.K.set(A.wli, e),
                             e && s.K.set(M.O5, !0),
-                            e ? (0, x.GN)('discodo') : (0, x.GN)('user_leave'),
+                            e ? (0, S.GN)('discodo') : (0, S.GN)('user_leave'),
                             E(!0),
                             setTimeout(() => {
                                 E(!1);
                             }, 1000);
                     }
                 },
-                selected: U,
-                ariaLabel: R.Z.Messages.DIRECT_MESSAGES,
+                selected: G,
+                ariaLabel: L.Z.Messages.DIRECT_MESSAGES,
                 ...j,
                 to: {
-                    pathname: _,
+                    pathname: f,
                     state: {
                         analyticsSource: {
                             page: A.ZY5.GUILD_CHANNEL,
@@ -106,19 +106,19 @@ function y(e) {
             })
         });
     return (0, i.jsx)('div', {
-        className: O.tutorialContainer,
+        className: P.tutorialContainer,
         children: (0, i.jsx)(p.Z, {
-            inlineSpecs: P,
+            inlineSpecs: y,
             tutorialId: 'friends-list',
             position: 'right',
-            children: (0, i.jsxs)(Z.H, {
+            children: (0, i.jsxs)(T.H, {
                 children: [
                     (0, i.jsx)(v.Z, {
                         selected: t,
                         hovered: g,
-                        className: O.pill
+                        className: P.pill
                     }),
-                    (0, i.jsx)(T.Z, {
+                    (0, i.jsx)(Z.Z, {
                         color: o.Tooltip.Colors.PRIMARY,
                         hideOnClick: !0,
                         text: w,
@@ -131,15 +131,15 @@ function y(e) {
     });
 }
 function j() {
-    let e = (0, S.n)(),
+    let e = (0, x.n)(),
         t = (0, a.e7)([E.Z, I.Z], () => {
             let e = (0, c.E)(E.Z.activeItems, I.Z),
                 { total: t, progress: n } = N.lK(e),
                 i = N.xI(n, t);
             return i > 0 && i < 100;
         }),
-        n = (0, a.e7)([_.Z], () => _.Z.getPendingCount()),
-        l = Object.keys(b.nG),
+        n = (0, a.e7)([f.Z], () => f.Z.getPendingCount()),
+        l = Object.keys(R.nG),
         { unviewedTrialCount: r, unviewedDiscountCount: s } = (0, a.cj)([g.Z], () => ({
             unviewedTrialCount: g.Z.getUnacknowledgedOffers(l).length,
             unviewedDiscountCount: g.Z.getUnacknowledgedDiscountOffers().length
@@ -148,14 +148,14 @@ function j() {
         u = (0, a.e7)([m.default], () => m.default.getCurrentUser()),
         d = (0, h.q)(),
         p = n + o + d,
-        x = p === o && o > 0 && n + d === 0,
+        S = p === o && o > 0 && n + d === 0,
         v = C.Z.getHomeLink();
     return (
-        x && (v = A.Z5c.APPLICATION_STORE),
-        (0, i.jsx)(y, {
+        S && (v = A.Z5c.APPLICATION_STORE),
+        (0, i.jsx)(O, {
             selected: e,
             user: u,
-            selectedChannelId: f.Z.getChannelId(A.ME),
+            selectedChannelId: _.Z.getChannelId(A.ME),
             badge: p,
             link: v,
             showProgressBadge: t

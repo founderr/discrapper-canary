@@ -23,8 +23,8 @@ var i = n(735250),
     g = n(598077),
     p = n(314897),
     T = n(271383),
-    f = n(430824),
-    S = n(626135),
+    S = n(430824),
+    f = n(626135),
     C = n(63063),
     N = n(134433),
     A = n(225104),
@@ -45,7 +45,7 @@ function O(e, t) {
 }
 t.default = function (e) {
     let { guildId: t, transitionState: s, onClose: x } = e,
-        b = (0, l.e7)([f.Z], () => f.Z.getRoles(t)),
+        b = (0, l.e7)([S.Z], () => S.Z.getRoles(t)),
         P = (0, l.e7)([p.default], () => p.default.getId()),
         M = (0, l.e7)([T.ZP], () => T.ZP.getMember(t, P)),
         [D, y] = a.useState([]),
@@ -54,7 +54,7 @@ t.default = function (e) {
     if (
         (a.useEffect(() => {
             if (0 !== D.length)
-                S.default.track(v.rMx.PASSPORT_ENTRY_VIEWED, {
+                f.default.track(v.rMx.PASSPORT_ENTRY_VIEWED, {
                     role_ids: D.map((e) => {
                         let { role_id: t } = e;
                         return t;

@@ -15,8 +15,8 @@ var n = t(735250),
     I = t(78826),
     N = t(37303),
     m = t(134483),
-    C = t(683650),
-    A = t(478977),
+    A = t(683650),
+    C = t(478977),
     g = t(456799),
     h = t(210851),
     O = t(602683),
@@ -393,13 +393,13 @@ function j() {
                         className: f.fields,
                         style: { marginBottom: 0 },
                         children: [
-                            (0, n.jsx)(A.Z, {
+                            (0, n.jsx)(C.Z, {
                                 title: 'Primary',
                                 colorKey: 'primary',
                                 onChange: H,
                                 value: l.config.colors.primary
                             }),
-                            (0, n.jsx)(A.Z, {
+                            (0, n.jsx)(C.Z, {
                                 title: 'Secondary',
                                 colorKey: 'secondary',
                                 onChange: H,
@@ -577,7 +577,7 @@ function j() {
                         children: [
                             (0, n.jsx)(d.FormTitle, { children: 'Quest Card Embed' }),
                             U
-                                ? (0, n.jsx)(C.o, {})
+                                ? (0, n.jsx)(A.o, {})
                                 : (0, n.jsx)(
                                       N.Z,
                                       {

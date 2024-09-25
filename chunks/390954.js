@@ -15,7 +15,7 @@ var n,
     I = t(981631),
     N = t(689938),
     m = t(736922);
-function C(e, s, t) {
+function A(e, s, t) {
     return (
         s in e
             ? Object.defineProperty(e, s, {
@@ -28,7 +28,7 @@ function C(e, s, t) {
         e
     );
 }
-class A extends (n = i.PureComponent) {
+class C extends (n = i.PureComponent) {
     render() {
         let { paymentSource: e, isDefault: s, isEditing: t, index: n, hideDivider: i, isForSubscription: r, locale: o, removing: c, submitting: d, onSubmit: u, onCancel: E, onDelete: I } = this.props;
         return t
@@ -76,12 +76,12 @@ class A extends (n = i.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            C(this, 'handleEditClick', () => {
+            A(this, 'handleEditClick', () => {
                 this.props.onEditClick(this.props.paymentSource.id);
             });
     }
 }
-C(A, 'defaultProps', {
+A(C, 'defaultProps', {
     isEditing: !1,
     hideDivider: !1,
     onEditClick: () => {}
@@ -123,7 +123,7 @@ class g extends i.PureComponent {
             u = c.findIndex((e) => e.id === d),
             T = c.map((s, o) =>
                 (0, a.jsx)(
-                    A,
+                    C,
                     {
                         locale: t,
                         paymentSource: s,
@@ -172,30 +172,30 @@ class g extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            C(this, 'state', { editingPayment: null }),
-            C(this, 'handleEditClick', async (e) => {
+            A(this, 'state', { editingPayment: null }),
+            A(this, 'handleEditClick', async (e) => {
                 try {
                     await c.lO(e), this.setState({ editingPayment: e });
                 } catch (e) {}
             }),
-            C(this, 'handleCancel', () => {
+            A(this, 'handleCancel', () => {
                 this.setState({ editingPayment: null });
             }),
-            C(this, 'handleDelete', async (e) => {
+            A(this, 'handleDelete', async (e) => {
                 try {
                     await c.xt(e), this.setState({ editingPayment: null });
                 } catch (e) {}
             }),
-            C(this, 'handleSubmit', async (e, s) => {
+            A(this, 'handleSubmit', async (e, s) => {
                 if (null != e)
                     try {
                         await c.LI(e, s), this.setState({ editingPayment: null });
                     } catch (e) {}
             }),
-            C(this, 'handlePaymentSourceAdded', async (e) => {
+            A(this, 'handlePaymentSourceAdded', async (e) => {
                 await (0, u.i1)(e.id);
             }),
-            C(this, 'handleAddPaymentMethod', () => {
+            A(this, 'handleAddPaymentMethod', () => {
                 (0, l.openModalLazy)(
                     async () => {
                         let { default: e } = await Promise.resolve().then(t.bind(t, 623573));

@@ -21,8 +21,8 @@ var i = n(735250),
     g = n(459273),
     p = n(242291),
     T = n(792165),
-    f = n(603074),
-    S = n(981631),
+    S = n(603074),
+    f = n(981631),
     C = n(921944),
     N = n(689938),
     A = n(663031);
@@ -36,7 +36,7 @@ function v(e) {
         y = (0, p.sR)({ isSoundboardButtonDisabled: b }),
         [j, U] = (0, h.cv)(y),
         { analyticsLocations: G } = (0, E.ZP)(_.Z.SOUNDBOARD_BUTTON);
-    function k(e) {
+    function w(e) {
         null != D &&
             (0, u.jW)(e, async () => {
                 let { default: e } = await n.e('56049').then(n.bind(n, 338991));
@@ -48,7 +48,7 @@ function v(e) {
             });
     }
     let {
-            Component: w,
+            Component: k,
             play: B,
             events: { onMouseEnter: H, onMouseLeave: V }
         } = (0, c.j)(),
@@ -60,7 +60,7 @@ function v(e) {
                 onRequestClose: () => M(!1),
                 renderPopout: (e) => {
                     let { closePopout: n } = e;
-                    return (0, i.jsx)(f.Z, {
+                    return (0, i.jsx)(S.Z, {
                         guildId: D,
                         channel: t,
                         onClose: n,
@@ -97,11 +97,11 @@ function v(e) {
                                 var n, i;
                                 null === (n = Z.onMouseLeave) || void 0 === n || n.call(Z, t), null == e || null === (i = e.onMouseLeave) || void 0 === i || i.call(e), V();
                             },
-                            onContextMenu: k,
+                            onContextMenu: w,
                             fullWidth: !0,
                             size: d.Button.Sizes.SMALL,
                             ...Z,
-                            children: (0, i.jsx)(w, {
+                            children: (0, i.jsx)(k, {
                                 className: s,
                                 size: 'sm',
                                 color: P ? 'white' : d.tokens.colors.INTERACTIVE_ACTIVE
@@ -114,7 +114,7 @@ function v(e) {
         }, [b, P]);
     return (
         (0, g.yp)({
-            event: S.CkL.TOGGLE_SOUNDBOARD,
+            event: f.CkL.TOGGLE_SOUNDBOARD,
             handler: Y
         }),
         (0, i.jsx)(E.Gt, {

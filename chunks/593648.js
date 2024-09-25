@@ -21,8 +21,8 @@ var n = t(735250),
     I = t(818083),
     N = t(688465),
     m = t(487419),
-    C = t(378364),
-    A = t(197344),
+    A = t(378364),
+    C = t(197344),
     g = t(734934),
     h = t(223683),
     O = t(312400),
@@ -92,7 +92,7 @@ function W(e) {
 }
 function K(e) {
     let { disabledSounds: s, disableAllSounds: t, notifyMessagesInSelectedChannel: i } = e,
-        r = A.Z.useIsRingtoneEligible(),
+        r = C.Z.useIsRingtoneEligible(),
         o = a.useRef(),
         l = (0, g.p)(),
         c = a.useCallback((e, s) => {
@@ -102,7 +102,7 @@ function K(e) {
             (e, t) => {
                 let n = s.filter((s) => s !== e);
                 !t && n.push(e),
-                    e === C.Z.ringtone &&
+                    e === A.Z.ringtone &&
                         L.default.track(y.rMx.EVENT_RINGTONE_TOGGLED, {
                             toggled_on: t,
                             sound_name: e
@@ -172,8 +172,8 @@ function K(e) {
         ...(r
             ? [
                   {
-                      label: C.Z.getRingtoneSettingsLabel(),
-                      sound: C.Z.ringtone,
+                      label: A.Z.getRingtoneSettingsLabel(),
+                      sound: A.Z.ringtone,
                       disabled: s.includes('call_ringing')
                   }
               ]

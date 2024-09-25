@@ -16,8 +16,8 @@ var i,
     g = n(556017),
     p = n(879484),
     T = n(26580),
-    f = n(206887),
-    S = n(981631),
+    S = n(206887),
+    f = n(981631),
     C = n(689938),
     N = n(717315),
     A = n(129512),
@@ -40,9 +40,9 @@ class R extends (i = s.PureComponent) {
     getDefaultSplashURL(e, t) {
         if (t) return L;
         switch (e) {
-            case S.BRd.DARK:
+            case f.BRd.DARK:
                 return A;
-            case S.BRd.LIGHT:
+            case f.BRd.LIGHT:
                 return v;
         }
     }
@@ -51,7 +51,7 @@ class R extends (i = s.PureComponent) {
         let { guild: t, className: n, theme: i, onTagClick: s } = this.props,
             { loaded: r, hasBeenSeen: d, isVisible: A, submitting: v } = this.state,
             { name: L, description: Z, presenceCount: R, memberCount: O, keywords: x } = t,
-            b = null === (e = t.features) || void 0 === e ? void 0 : e.has(S.oNc.HUB),
+            b = null === (e = t.features) || void 0 === e ? void 0 : e.has(f.oNc.HUB),
             P = m.ZP.getGuildDiscoverySplashURL({
                 id: t.id,
                 splash: t.discoverySplash,
@@ -112,7 +112,7 @@ class R extends (i = s.PureComponent) {
                                               U || j
                                                   ? (0, a.jsx)('div', {
                                                         className: N.actionButtons,
-                                                        children: (0, a.jsx)(f.Z, { guild: t })
+                                                        children: (0, a.jsx)(S.Z, { guild: t })
                                                     })
                                                   : null,
                                               (0, a.jsx)('div', {

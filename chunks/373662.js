@@ -19,8 +19,8 @@ var i = n(735250),
     u = n(689938),
     d = n(189265);
 function _(e) {
-    let { label: t, ariaLabel: n, tooltipText: s, tooltipColor: _, icon: E, iconProps: I, onClick: m, onTooltipShow: T, onTooltipHide: h, disabled: N, dangerous: f, separator: C, sparkle: p, showNewBadge: g, buttonClassName: S, children: A, ...R } = e,
-        { canShowReactionsOnMessageHover: O } = c.ZP.useExperiment({ location: 'HoverBarButton' }, { autoTrackExposure: !0 });
+    let { label: t, ariaLabel: n, tooltipText: s, tooltipColor: _, icon: E, iconProps: I, onClick: m, onTooltipShow: T, onTooltipHide: h, disabled: N, dangerous: f, separator: C, sparkle: p, showNewBadge: g, buttonClassName: A, children: S, ...x } = e,
+        { canShowReactionsOnMessageHover: R } = c.ZP.useExperiment({ location: 'HoverBarButton' }, { autoTrackExposure: !0 });
     return (0, i.jsx)(r.Tooltip, {
         text: null != s ? s : t,
         color: null != _ ? _ : r.TooltipColors.PRIMARY,
@@ -34,7 +34,7 @@ function _(e) {
             return (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsxs)(o.zx, {
-                        className: a()(S, { [d.hoverBarButton]: O }),
+                        className: a()(A, { [d.hoverBarButton]: R }),
                         onMouseEnter: s,
                         onMouseLeave: c,
                         onClick: (e) => {
@@ -43,7 +43,7 @@ function _(e) {
                         'aria-label': null != n ? n : t,
                         disabled: N,
                         dangerous: f,
-                        ...R,
+                        ...x,
                         children: [
                             null != E
                                 ? (0, i.jsx)(E, {
@@ -52,10 +52,10 @@ function _(e) {
                                       ...I
                                   })
                                 : null,
-                            null != A
+                            null != S
                                 ? (0, i.jsx)('div', {
                                       className: a()(d.icon, d.buttonContent),
-                                      children: A
+                                      children: S
                                   })
                                 : null,
                             p && (0, i.jsx)(r.LottieSparkle, {}),

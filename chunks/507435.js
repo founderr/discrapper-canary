@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return O;
+        return R;
     }
 });
 var i,
@@ -37,7 +37,7 @@ function g() {
         })
     });
 }
-function S(e) {
+function A(e) {
     let t,
         { hasNoVotes: n, victorEmoji: i } = e;
     if (n) t = (0, a.jsx)(g, {});
@@ -57,7 +57,7 @@ function S(e) {
         : null;
 }
 ((i = s || (s = {})).NO_VOTES = 'NO_VOTES'), (i.VICTOR = 'VICTOR'), (i.TIE = 'TIE');
-function A(e) {
+function S(e) {
     let t,
         { type: n, ...i } = e;
     switch (n) {
@@ -124,7 +124,7 @@ function A(e) {
         children: t
     });
 }
-function R(e) {
+function x(e) {
     let { className: t, data: n, onClickPollLink: i } = e,
         s = r.useMemo(
             () =>
@@ -149,11 +149,11 @@ function R(e) {
     return (0, a.jsxs)('div', {
         className: o()(p.container, { [p.containerWithImage]: l }, t),
         children: [
-            (0, a.jsx)(S, {
+            (0, a.jsx)(A, {
                 hasNoVotes: 'NO_VOTES' === s.type,
                 victorEmoji: n.victorEmoji
             }),
-            (0, a.jsx)(A, { ...s }),
+            (0, a.jsx)(S, { ...s }),
             null != i &&
                 (0, a.jsx)(u.Button, {
                     className: p.button,
@@ -170,7 +170,7 @@ function R(e) {
         ]
     });
 }
-function O(e) {
+function R(e) {
     var t;
     let { message: n, channel: i, compact: s, disableInteraction: l = !1 } = e,
         o = n.embeds[0],
@@ -183,16 +183,16 @@ function O(e) {
             guildId: i.guild_id,
             messageId: n.id
         }),
-        S = n.messageReference,
-        A = r.useCallback(() => {
-            null != S &&
+        A = n.messageReference,
+        S = r.useCallback(() => {
+            null != A &&
                 d.Z.jumpToMessage({
-                    channelId: S.channel_id,
-                    messageId: S.message_id,
+                    channelId: A.channel_id,
+                    messageId: A.message_id,
                     flash: !0,
                     returnMessageId: n.id
                 });
-        }, [n.id, S]);
+        }, [n.id, A]);
     return null == _
         ? null
         : (0, a.jsxs)(a.Fragment, {
@@ -205,13 +205,13 @@ function O(e) {
                           username: N.nick,
                           usernameHook: g(N),
                           title: E,
-                          titleOnClick: A
+                          titleOnClick: S
                       })
                   }),
-                  (0, a.jsx)(R, {
+                  (0, a.jsx)(x, {
                       className: p.embed,
                       data: _,
-                      onClickPollLink: l ? void 0 : A
+                      onClickPollLink: l ? void 0 : S
                   })
               ]
           });

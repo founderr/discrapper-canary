@@ -19,18 +19,18 @@ var i = n(735250),
     C = n(933557),
     p = n(471445),
     g = n(592125),
-    S = n(271383),
-    A = n(699516),
-    R = n(250758),
-    O = n(944486),
-    x = n(914010),
+    A = n(271383),
+    S = n(699516),
+    x = n(250758),
+    R = n(944486),
+    O = n(914010),
     M = n(246946),
     v = n(594174),
     L = n(585483),
     Z = n(63063),
     P = n(405656),
-    D = n(51144),
-    b = n(854709),
+    b = n(51144),
+    D = n(854709),
     j = n(981631),
     U = n(689938),
     y = n(973050);
@@ -58,8 +58,8 @@ let k = _()('2015-05-15').local(),
         if (null == l) return (0, i.jsx)('strong', { children: o });
         let c = v.default.getUser(l.id),
             u = g.Z.getChannel(e),
-            d = (null == u ? void 0 : u.isPrivate()) ? A.Z.getNickname(l.id) : null,
-            _ = null !== (a = null !== (s = S.ZP.getNick(e, l.id)) && void 0 !== s ? s : d) && void 0 !== a ? a : D.ZP.getName(l),
+            d = (null == u ? void 0 : u.isPrivate()) ? S.Z.getNickname(l.id) : null,
+            _ = null !== (a = null !== (s = A.ZP.getNick(e, l.id)) && void 0 !== s ? s : d) && void 0 !== a ? a : b.ZP.getName(l),
             E = null !== (r = null == c ? void 0 : c.getAvatarURL(e, 20)) && void 0 !== r ? r : l.getAvatarURL(null == u ? void 0 : u.guild_id, 20);
         return [
             (0, i.jsx)(
@@ -83,7 +83,7 @@ let k = _()('2015-05-15').local(),
                 'span',
                 {
                     className: y.displayUsername,
-                    children: D.ZP.getUserTag(l, { identifiable: M.Z.enabled && M.Z.hidePersonalInformation ? 'never' : 'always' })
+                    children: b.ZP.getUserTag(l, { identifiable: M.Z.enabled && M.Z.hidePersonalInformation ? 'never' : 'always' })
                 },
                 'display-username-'.concat(t, '-').concat(l.id)
             )
@@ -98,11 +98,11 @@ let k = _()('2015-05-15').local(),
             className: y.resultChannel,
             children: [
                 null != l ? (0, i.jsx)(l, { className: y.searchResultChannelIcon }) : null,
-                (0, i.jsx)('strong', { children: (0, C.F6)(s, v.default, A.Z) }),
+                (0, i.jsx)('strong', { children: (0, C.F6)(s, v.default, S.Z) }),
                 null != r
                     ? (0, i.jsx)('span', {
                           className: y.searchResultChannelCategory,
-                          children: (0, C.F6)(r, v.default, A.Z)
+                          children: (0, C.F6)(r, v.default, S.Z)
                       })
                     : null
             ]
@@ -311,7 +311,7 @@ class W extends s.PureComponent {
             onSelectQuery: this.performSearch,
             onSelectSearchEverywhere: () => this.performSearch({ searchEverywhere: !0 }),
             renderNoResults: () => null,
-            searchFavorites: a === j.I_8 && (0, b.X)()
+            searchFavorites: a === j.I_8 && (0, D.X)()
         });
     }
     constructor(...e) {
@@ -486,12 +486,12 @@ class W extends s.PureComponent {
     }
 }
 t.ZP = s.forwardRef((e, t) => {
-    let [n, s, a] = (0, I.Wu)([x.Z, O.Z, R.Z], () => {
-        let e = x.Z.getGuildId(),
-            t = O.Z.getChannelId(),
+    let [n, s, a] = (0, I.Wu)([O.Z, R.Z, x.Z], () => {
+        let e = O.Z.getGuildId(),
+            t = R.Z.getChannelId(),
             n = null != e ? e : t;
         o()(null != n, 'SearchPopout.getStateFromStores - invalid searchId');
-        let i = R.Z.getState(n),
+        let i = x.Z.getState(n),
             s = P.BU(i.autocompletes);
         return [n, i, s];
     });

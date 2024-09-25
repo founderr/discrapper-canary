@@ -14,12 +14,12 @@ var r = n(735250),
     c = n(456251);
 function d(e) {
     let { initialStep: t, initialPlanId: n, guildId: d, setAnalyticsData: I, handleClose: _ } = e,
-        { blockedPayments: h, setStep: f, hasFetchedSubscriptions: S, hasFetchedSubscriptionPlans: m, currencyLoading: E, selectedSkuId: p, setSelectedSkuId: T, setSelectedPlanId: C, priceOptions: N, setSubscriptionMetadataRequest: A } = (0, u.usePaymentContext)(),
+        { blockedPayments: h, setStep: f, hasFetchedSubscriptions: S, hasFetchedSubscriptionPlans: E, currencyLoading: m, selectedSkuId: p, setSelectedSkuId: T, setSelectedPlanId: C, priceOptions: N, setSubscriptionMetadataRequest: A } = (0, u.usePaymentContext)(),
         { isGift: O } = (0, o.wD)(),
-        [P, b] = a.useState(!S || !m || E);
+        [P, b] = a.useState(!S || !E || m);
     return (a.useEffect(() => {
-        b(!S || !m || E);
-    }, [E, m, S]),
+        b(!S || !E || m);
+    }, [m, E, S]),
     a.useEffect(() => {
         null != d && A({ guild_id: d });
     }, [d, A]),

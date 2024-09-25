@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return f;
     }
 }),
     n(47120),
@@ -25,7 +25,7 @@ function p(e) {
         comparator: l
     };
 }
-function _(e) {
+function f(e) {
     let [t] = (0, i.e7)(
         [u.Z, r.Z, l.Z],
         () => {

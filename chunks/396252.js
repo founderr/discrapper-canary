@@ -26,11 +26,11 @@ function h(e) {
         p = h(C),
         {
             avatarSrc: g,
-            eventHandlers: { onMouseEnter: S, onMouseLeave: A }
+            eventHandlers: { onMouseEnter: A, onMouseLeave: S }
         } = (0, _.m)(!0);
     return (0, i.jsx)('div', {
-        onMouseEnter: S,
-        onMouseLeave: A,
+        onMouseEnter: A,
+        onMouseLeave: S,
         children: (0, i.jsx)(E.Z, {
             className: a()(T.mainContainer, { [T.compact]: s }),
             iconNode: s ? null : (0, i.jsx)(_.S, { src: g }),

@@ -1,6 +1,6 @@
 n.d(t, {
     K: function () {
-        return R;
+        return x;
     }
 }),
     n(47120),
@@ -30,16 +30,16 @@ function p(e) {
         [T, h] = s.useState(''),
         [f, p] = s.useState(!1),
         g = '' !== T && f,
-        S = s.useCallback(() => {
+        A = s.useCallback(() => {
             h((0, m.e1)(u, c, r));
         }, [u, c, r]),
-        A = s.useCallback(() => {
-            S(), p(!0);
-        }, [S]),
-        R = s.useCallback(() => {
+        S = s.useCallback(() => {
+            A(), p(!0);
+        }, [A]),
+        x = s.useCallback(() => {
             p(!1);
         }, []),
-        O = s.useCallback(() => {
+        R = s.useCallback(() => {
             (0, I.n)({
                 channelId: c,
                 messageId: u,
@@ -49,13 +49,13 @@ function p(e) {
     s.useEffect(() => {
         if (!!f)
             return (
-                E.Z.addReactChangeListener(S),
+                E.Z.addReactChangeListener(A),
                 () => {
-                    E.Z.removeReactChangeListener(S);
+                    E.Z.removeReactChangeListener(A);
                 }
             );
-    }, [f, S]);
-    let x = (0, i.jsx)(d.Text, {
+    }, [f, A]);
+    let O = (0, i.jsx)(d.Text, {
         variant: 'text-xs/semibold',
         color: 'none',
         className: C.voteCount,
@@ -80,16 +80,16 @@ function p(e) {
                               children: (e) =>
                                   (0, i.jsx)(d.Button, {
                                       ...e,
-                                      onMouseEnter: A,
-                                      onMouseLeave: R,
-                                      onFocus: A,
-                                      onBlur: R,
-                                      onClick: O,
+                                      onMouseEnter: S,
+                                      onMouseLeave: x,
+                                      onFocus: S,
+                                      onBlur: x,
+                                      onClick: R,
                                       className: C.voteCountButton,
                                       'aria-describedby': g ? o : void 0,
                                       look: d.Button.Looks.BLANK,
                                       size: d.Button.Sizes.NONE,
-                                      children: x
+                                      children: O
                                   })
                           }),
                           g &&
@@ -99,7 +99,7 @@ function p(e) {
                               })
                       ]
                   })
-                : (0, i.jsx)(i.Fragment, { children: x }),
+                : (0, i.jsx)(i.Fragment, { children: O }),
             (0, i.jsxs)(d.Text, {
                 variant: 'text-md/bold',
                 color: 'none',
@@ -128,7 +128,7 @@ function g(e) {
         'aria-hidden': !0
     });
 }
-function S(e) {
+function A(e) {
     let { answersInteraction: t, isSelected: n, didSelfVote: s, isVictor: a, isExpired: r, className: l } = e;
     return (0, c.EQ)({
         answersInteraction: t,
@@ -163,7 +163,7 @@ function S(e) {
         )
         .otherwise(() => null);
 }
-function A(e) {
+function S(e) {
     let { answer: t, isExpired: n, answersInteraction: s, canShowVoteCounts: a, canShowVoterDetails: o } = e,
         c = !0 === t.isSelected,
         u = !0 === t.didSelfVote,
@@ -202,7 +202,7 @@ function A(e) {
                         canShowVoterDetails: o,
                         answerId: t.answerId
                     }),
-                (0, i.jsx)(S, {
+                (0, i.jsx)(A, {
                     answersInteraction: s,
                     isSelected: c,
                     didSelfVote: u,
@@ -214,7 +214,7 @@ function A(e) {
         })
     });
 }
-function R(e) {
+function x(e) {
     let { isExpired: t, answersInteraction: n, canShowVoteCounts: s, canTapAnswers: a, ...r } = e;
     return (0, i.jsx)(h.$e, {
         className: C.answersContainer,
@@ -222,7 +222,7 @@ function R(e) {
         answersInteraction: n,
         canTapAnswers: a,
         renderAnswerContent: (e) =>
-            (0, i.jsx)(A, {
+            (0, i.jsx)(S, {
                 answer: e,
                 isExpired: t,
                 answersInteraction: n,

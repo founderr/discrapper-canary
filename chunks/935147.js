@@ -19,8 +19,8 @@ var n = t(735250),
     I = t(81245),
     N = t(53691),
     m = t(165583),
-    C = t(197115),
-    A = t(267717),
+    A = t(197115),
+    C = t(267717),
     g = t(350327),
     h = t(996073),
     O = t(25990),
@@ -176,7 +176,7 @@ function F(e) {
                                             children: U.Z.Messages.USER_SETTINGS_TRY_OUT_PREMIUM_ALSO_INCLUDES
                                         }),
                                         !ee &&
-                                            (0, n.jsx)(C.Z, {
+                                            (0, n.jsx)(A.Z, {
                                                 onSubscribeModalClose: (e) => {
                                                     e && ((0, c.I5)(w), (0, g.g_)(k), (0, g.z5)(Y));
                                                 },
@@ -204,7 +204,7 @@ function F(e) {
                     (0, n.jsx)(N.p, {
                         className: G.floatingUpsell,
                         showUpsell: !0,
-                        text: U.Z.Messages.PREMIUM_UPSELL_PROFILE_TRY_IT_OUT_UPSELL.format({ onClick: A.openPremiumTryItOutProfileUpsell }),
+                        text: U.Z.Messages.PREMIUM_UPSELL_PROFILE_TRY_IT_OUT_UPSELL.format({ onClick: C.openPremiumTryItOutProfileUpsell }),
                         button: U.Z.Messages.PREMIUM_UPSELL_GET_NITRO,
                         position: 'inline',
                         showShadow: !1

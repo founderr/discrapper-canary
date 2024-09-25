@@ -11,13 +11,13 @@ var i = n(735250),
     _ = n(454515);
 t.Z = function (e) {
     let { index: t, children: s, user: E, channel: h, onClick: m, isFocused: I, isActive: g, onOtherHover: p, className: T } = e,
-        [f, S] = a.useState(!1),
+        [S, f] = a.useState(!1),
         [C, N] = a.useState(!1),
         A = () => {
-            S(!0), I && !g && !C && (null == p || p());
+            f(!0), I && !g && !C && (null == p || p());
         },
         v = () => {
-            S(!1);
+            f(!1);
         },
         L = (e, t) => {
             if (null != t)
@@ -61,7 +61,7 @@ t.Z = function (e) {
                         opacity: 1
                     },
                     ...e,
-                    children: s(f || g || C)
+                    children: s(S || g || C)
                 })
             })
     });

@@ -1,12 +1,12 @@
 n.d(t, {
     P: function () {
-        return T;
+        return Z;
     },
     Qo: function () {
-        return L;
+        return b;
     },
     kw: function () {
-        return b;
+        return R;
     },
     rj: function () {
         return A;
@@ -23,30 +23,30 @@ var i = n(735250),
     d = n(239091),
     h = n(146773),
     p = n(82295),
-    _ = n(111028),
-    f = n(680089),
+    f = n(111028),
+    _ = n(680089),
     m = n(430824),
     g = n(496675),
     C = n(9156),
     I = n(203818),
     E = n(438144),
     N = n(981631),
-    x = n(689938),
-    S = n(134743);
+    S = n(689938),
+    x = n(134743);
 function v(e) {
     e.stopPropagation();
 }
-let Z = l.memo(function (e) {
+let T = l.memo(function (e) {
     let t,
-        { channel: r, connectChannelDragSource: h, connectChannelDropTarget: I, disableManageChannels: E, position: Z, sortingPosition: T, hideIcon: L, children: A } = e,
-        b = (0, o.e7)([C.ZP], () => C.ZP.isChannelMuted(r.getGuildId(), r.id)),
-        M = (0, o.e7)([f.Z], () => f.Z.isCollapsed(r.id)),
-        R = (0, o.e7)([g.Z], () => g.Z.can(N.Plq.MANAGE_CHANNELS, r));
-    t = null != T ? (Z > T ? S.containerDragAfter : S.containerDragBefore) : S.containerDefault;
-    let O = l.useCallback(() => {
+        { channel: r, connectChannelDragSource: h, connectChannelDropTarget: I, disableManageChannels: E, position: T, sortingPosition: Z, hideIcon: b, children: A } = e,
+        R = (0, o.e7)([C.ZP], () => C.ZP.isChannelMuted(r.getGuildId(), r.id)),
+        M = (0, o.e7)([_.Z], () => _.Z.isCollapsed(r.id)),
+        L = (0, o.e7)([g.Z], () => g.Z.can(N.Plq.MANAGE_CHANNELS, r));
+    t = null != Z ? (T > Z ? x.containerDragAfter : x.containerDragBefore) : x.containerDefault;
+    let P = l.useCallback(() => {
             M ? (0, u.mJ)(r.id) : (0, u.c4)(r.id);
         }, [r.id, M]),
-        P = l.useCallback(
+        y = l.useCallback(
             (e) => {
                 if ('null' !== r.id) {
                     let t = m.Z.getGuild(r.getGuildId());
@@ -64,7 +64,7 @@ let Z = l.memo(function (e) {
             },
             [r]
         ),
-        y = l.useCallback(() => {
+        O = l.useCallback(() => {
             let e = r.type === N.d4z.GUILD_CATEGORY ? null : r.type,
                 t = r.getGuildId();
             null != t &&
@@ -80,66 +80,66 @@ let Z = l.memo(function (e) {
                 });
         }, [r]),
         { role: j, tabIndex: D, ...w } = (0, s.JA)(r.id),
-        G = l.useRef(null),
         U = l.useRef(null),
+        G = l.useRef(null),
         k = (0, i.jsxs)('li', {
             className: t,
             'data-dnd-name': r.name,
             children: [
                 (0, i.jsx)(c.FocusRing, {
-                    focusTarget: G,
-                    ringTarget: U,
+                    focusTarget: U,
+                    ringTarget: G,
                     offset: {
                         left: 4,
                         right: 4
                     },
                     children: (0, i.jsxs)('div', {
-                        ref: U,
-                        className: a()(S.iconVisibility, S.wrapper, {
-                            [S.collapsed]: M,
-                            [S.muted]: b,
-                            [S.clickable]: !0
+                        ref: G,
+                        className: a()(x.iconVisibility, x.wrapper, {
+                            [x.collapsed]: M,
+                            [x.muted]: R,
+                            [x.clickable]: !0
                         }),
-                        onContextMenu: P,
+                        onContextMenu: y,
                         children: [
                             (0, i.jsxs)(c.Clickable, {
-                                innerRef: G,
-                                className: S.mainContent,
+                                innerRef: U,
+                                className: x.mainContent,
                                 tabIndex: D,
                                 ...w,
-                                onClick: O,
-                                'aria-label': x.Z.Messages.CATEGORY_A11Y_LABEL.format({ categoryName: r.name }),
+                                onClick: P,
+                                'aria-label': S.Z.Messages.CATEGORY_A11Y_LABEL.format({ categoryName: r.name }),
                                 'aria-expanded': !M,
                                 focusProps: { enabled: !1 },
                                 children: [
-                                    L
+                                    b
                                         ? null
                                         : (0, i.jsx)(c.ChevronSmallDownIcon, {
                                               size: 'md',
                                               color: 'currentColor',
-                                              className: S.icon
+                                              className: x.icon
                                           }),
                                     (0, i.jsx)(p.Z, {
-                                        className: S.name,
-                                        children: (0, i.jsx)(_.Z, { children: r.name })
+                                        className: x.name,
+                                        children: (0, i.jsx)(f.Z, { children: r.name })
                                     })
                                 ]
                             }),
                             (0, i.jsx)('div', {
                                 onClick: v,
-                                className: S.children,
+                                className: x.children,
                                 children:
-                                    R && !E
+                                    L && !E
                                         ? (0, i.jsx)(c.Tooltip, {
-                                              text: x.Z.Messages.CREATE_CHANNEL,
+                                              text: S.Z.Messages.CREATE_CHANNEL,
                                               children: (e) => {
                                                   let { onMouseEnter: t, onMouseLeave: n } = e;
                                                   return (0, i.jsx)(c.Button, {
-                                                      'aria-label': x.Z.Messages.CREATE_CHANNEL,
+                                                      'aria-label': S.Z.Messages.CREATE_CHANNEL,
                                                       look: c.Button.Looks.BLANK,
                                                       size: c.Button.Sizes.NONE,
-                                                      className: a()(S.addButton, S.forceVisible),
-                                                      onClick: y,
+                                                      className: a()(x.addButton, x.forceVisible),
+                                                      onClick: O,
                                                       onMouseEnter: t,
                                                       onMouseLeave: n,
                                                       tabIndex: D,
@@ -154,7 +154,7 @@ let Z = l.memo(function (e) {
                                                       children: (0, i.jsx)(c.PlusSmallIcon, {
                                                           size: 'sm',
                                                           color: 'currentColor',
-                                                          className: S.addButtonIcon
+                                                          className: x.addButtonIcon
                                                       })
                                                   });
                                               }
@@ -169,32 +169,32 @@ let Z = l.memo(function (e) {
         });
     return null != I && null != h ? I(h(k)) : k;
 });
-t.ZP = (0, h.B)(Z);
-let T = l.memo(function (e) {
+t.ZP = (0, h.B)(T);
+let Z = l.memo(function (e) {
         let { name: t, onDismiss: n, className: l } = e;
         return (0, i.jsx)('li', {
-            className: a()(l, S.containerDefault),
+            className: a()(l, x.containerDefault),
             children: (0, i.jsxs)('div', {
-                className: a()(S.iconVisibility, S.wrapperStatic),
+                className: a()(x.iconVisibility, x.wrapperStatic),
                 children: [
                     (0, i.jsx)('div', {
-                        className: S.mainContent,
+                        className: x.mainContent,
                         children: (0, i.jsx)(p.Z, {
-                            className: S.name,
-                            children: (0, i.jsx)(_.Z, { children: t })
+                            className: x.name,
+                            children: (0, i.jsx)(f.Z, { children: t })
                         })
                     }),
                     null != n
                         ? (0, i.jsx)(c.TooltipContainer, {
-                              text: x.Z.Messages.CLEAR_RECENT_CHANNELS,
-                              className: S.dismissWrapper,
+                              text: S.Z.Messages.CLEAR_RECENT_CHANNELS,
+                              className: x.dismissWrapper,
                               children: (0, i.jsx)(c.Clickable, {
-                                  className: S.dismissButton,
+                                  className: x.dismissButton,
                                   onClick: n,
                                   children: (0, i.jsx)(c.CircleXIcon, {
                                       size: 'md',
                                       color: 'currentColor',
-                                      className: S.dismiss
+                                      className: x.dismiss
                                   })
                               })
                           })
@@ -203,7 +203,7 @@ let T = l.memo(function (e) {
             })
         });
     }),
-    L = l.memo(function (e) {
+    b = l.memo(function (e) {
         let { category: t } = e,
             n = (0, o.e7)([I.Z], () => I.Z.isVoiceCategoryCollapsed(t.guild.id)),
             r = l.useCallback(() => {
@@ -211,32 +211,32 @@ let T = l.memo(function (e) {
             }, [t.guild.id, n]);
         return n
             ? (0, i.jsxs)(c.Clickable, {
-                  className: S.voiceChannelsButton,
+                  className: x.voiceChannelsButton,
                   onClick: r,
                   children: [
                       (0, i.jsx)(c.VoiceNormalIcon, {
                           size: 'xs',
                           color: 'currentColor',
-                          className: S.voiceChannelsToggleIcon
+                          className: x.voiceChannelsToggleIcon
                       }),
                       (0, i.jsx)(c.Text, {
                           variant: 'text-sm/medium',
-                          children: x.Z.Messages.VOICE_CHANNELS_CATEGORY_BUTTON_EXPAND
+                          children: S.Z.Messages.VOICE_CHANNELS_CATEGORY_BUTTON_EXPAND
                       })
                   ]
               })
             : (0, i.jsxs)(c.Clickable, {
-                  className: S.voiceChannelsButton,
+                  className: x.voiceChannelsButton,
                   onClick: r,
                   children: [
                       (0, i.jsx)(c.VoiceNormalIcon, {
                           size: 'xs',
                           color: 'currentColor',
-                          className: S.voiceChannelsToggleIcon
+                          className: x.voiceChannelsToggleIcon
                       }),
                       (0, i.jsx)(c.Text, {
                           variant: 'text-sm/medium',
-                          children: x.Z.Messages.VOICE_CHANNELS_CATEGORY_BUTTON_COLLAPSE
+                          children: S.Z.Messages.VOICE_CHANNELS_CATEGORY_BUTTON_COLLAPSE
                       })
                   ]
               });
@@ -247,27 +247,27 @@ let T = l.memo(function (e) {
         return l || null == n || n.record.type === N.d4z.GUILD_CATEGORY
             ? l
                 ? (0, i.jsx)('li', {
-                      className: a()(S.containerDefault),
+                      className: a()(x.containerDefault),
                       children: (0, i.jsx)('div', {
-                          className: a()(S.iconVisibility, S.wrapperStatic),
+                          className: a()(x.iconVisibility, x.wrapperStatic),
                           children: (0, i.jsx)(p.Z, {
-                              className: S.name,
-                              children: (0, i.jsx)(_.Z, { children: x.Z.Messages.VOICE_CHANNELS_CATEGORY_HEADER })
+                              className: x.name,
+                              children: (0, i.jsx)(f.Z, { children: S.Z.Messages.VOICE_CHANNELS_CATEGORY_HEADER })
                           })
                       })
                   })
                 : null
             : (0, i.jsx)('div', { style: { height: 16 } });
     }),
-    b = l.memo(function (e) {
+    R = l.memo(function (e) {
         let { channel: t } = e;
         return (0, i.jsx)('li', {
-            className: a()(S.containerDefault),
+            className: a()(x.containerDefault),
             children: (0, i.jsx)('div', {
-                className: a()(S.iconVisibility, S.wrapperStatic),
+                className: a()(x.iconVisibility, x.wrapperStatic),
                 children: (0, i.jsx)(p.Z, {
-                    className: S.name,
-                    children: (0, i.jsx)(_.Z, { children: t.name })
+                    className: x.name,
+                    children: (0, i.jsx)(f.Z, { children: t.name })
                 })
             })
         });

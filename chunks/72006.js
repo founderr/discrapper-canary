@@ -6,7 +6,7 @@ n.d(t, {
         return B;
     },
     NJ: function () {
-        return b;
+        return D;
     },
     R8: function () {
         return U;
@@ -18,7 +18,7 @@ n.d(t, {
         return y;
     },
     Zn: function () {
-        return x;
+        return O;
     },
     c2: function () {
         return P;
@@ -30,7 +30,7 @@ n.d(t, {
         return k;
     },
     iK: function () {
-        return D;
+        return b;
     },
     lv: function () {
         return v;
@@ -42,13 +42,13 @@ n.d(t, {
         return a.a;
     },
     x0: function () {
-        return R;
+        return x;
     },
     xb: function () {
         return F;
     },
     yd: function () {
-        return O;
+        return R;
     }
 }),
     n(47120),
@@ -73,8 +73,8 @@ var i = n(371917),
     C = n(801539),
     p = n.n(C),
     g = n(887868),
-    S = n.n(g);
-function A(e, t, n, s) {
+    A = n.n(g);
+function S(e, t, n, s) {
     let a = s.getCurrentContent(),
         r = null;
     null != e && (r = (a = a.createEntity(...e)).getLastCreatedEntityKey());
@@ -87,7 +87,7 @@ function A(e, t, n, s) {
         });
     return (a = i.Modifier.applyEntity(a, o, r)), i.EditorState.set(s, { currentContent: a });
 }
-function R(e, t, n, s) {
+function x(e, t, n, s) {
     let a, r;
     let o = t.getCurrentContent(),
         c = o.getFirstBlock(),
@@ -106,7 +106,7 @@ function R(e, t, n, s) {
         _ = l()(o, a);
     return a.isCollapsed() ? ((o = i.Modifier.insertText(o, a, e, d, _)), (r = 'insert-characters')) : ((o = i.Modifier.replaceText(o, a, e, d, _)), (r = 'replace-characters')), i.EditorState.push(t, o, r);
 }
-function O(e, t) {
+function R(e, t) {
     switch (e) {
         case 'delete':
             return p()(t);
@@ -122,10 +122,10 @@ function O(e, t) {
             return t;
     }
 }
-function x(e, t) {
+function O(e, t) {
     switch (e) {
         case 'transpose-characters':
-            return S()(t);
+            return A()(t);
         case 'move-selection-to-start-of-block':
             return h()(t);
         case 'move-selection-to-end-of-block':
@@ -164,16 +164,16 @@ function v(e, t) {
                 (r.forEach((n) => {
                     let { type: s, start: a, end: r } = e,
                         l = e.getFullMatch();
-                    if (!n.processed) n.type === s && n.start === a && n.text === l ? ((n.processed = !0), (i = !0)) : ((a >= n.start && a < n.end) || (r > n.start && r <= n.end)) && ((n.processed = !0), (t = A(null, n.start, n.end, t)));
+                    if (!n.processed) n.type === s && n.start === a && n.text === l ? ((n.processed = !0), (i = !0)) : ((a >= n.start && a < n.end) || (r > n.start && r <= n.end)) && ((n.processed = !0), (t = S(null, n.start, n.end, t)));
                 }),
                 i)
             )
                 return;
             let s = n[e.type];
-            t = A([e.type, null != s && s.mutable ? 'MUTABLE' : 'IMMUTABLE', { token: e }], e.start, e.end, t);
+            t = S([e.type, null != s && s.mutable ? 'MUTABLE' : 'IMMUTABLE', { token: e }], e.start, e.end, t);
         }),
         r.forEach((e) => {
-            !e.processed && (t = A(null, e.start, e.end, t));
+            !e.processed && (t = S(null, e.start, e.end, t));
         }),
         t
     );
@@ -188,17 +188,17 @@ function Z(e) {
 }
 function P(e, t) {
     let n = M(t);
-    return R(e, t, 0, n.length);
+    return x(e, t, 0, n.length);
 }
-function D(e, t) {
+function b(e, t) {
     let n = t.getSelection();
     return (n = (n = n.set('focusOffset', e)).set('anchorOffset', e)), i.EditorState.forceSelection(t, n);
 }
-function b(e) {
-    return D(e.getCurrentContent().getFirstBlock().getText().length, e);
+function D(e) {
+    return b(e.getCurrentContent().getFirstBlock().getText().length, e);
 }
 function j(e) {
-    return D(0, e);
+    return b(0, e);
 }
 function U(e) {
     let t = e.getSelection();
@@ -214,7 +214,7 @@ function B(e) {
         n = M(e);
     if (n.length > t) {
         let s = e.getSelection();
-        (e = R('', e, t, n.length)), s.getAnchorOffset() > t && (s = s.set('anchorOffset', t)), s.getFocusOffset() > t && (s = s.set('focusOffset', t)), (e = i.EditorState.forceSelection(e, s));
+        (e = x('', e, t, n.length)), s.getAnchorOffset() > t && (s = s.set('anchorOffset', t)), s.getFocusOffset() > t && (s = s.set('focusOffset', t)), (e = i.EditorState.forceSelection(e, s));
     }
     return e;
 }

@@ -16,8 +16,8 @@ var i = n(735250),
     g = n(585500),
     p = n(566078),
     T = n(602667),
-    f = n(611855),
-    S = n(670638),
+    S = n(611855),
+    f = n(670638),
     C = n(667105),
     N = n(860151),
     A = n(341907),
@@ -98,8 +98,8 @@ t.Z = function (e) {
         }),
         U = (0, E.tP)(o),
         G = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
-        k = (null === (n = o.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
-        w = (null === (s = o.userStatus) || void 0 === s ? void 0 : s.claimedAt) != null,
+        w = (null === (n = o.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
+        k = (null === (s = o.userStatus) || void 0 === s ? void 0 : s.claimedAt) != null,
         B = (null == o ? void 0 : o.userStatus) == null || (0, I.zE)(o.userStatus, m.jn.ACTIVITY_PANEL),
         H = (0, E.Rf)(o),
         V = (0, g.D)({
@@ -108,7 +108,7 @@ t.Z = function (e) {
             location: v.dr.ACTIVITY_PANEL,
             questContent: m.jn.ACTIVITY_PANEL
         });
-    return B || U || w || !(0, I.dl)(o)
+    return B || U || k || !(0, I.dl)(o)
         ? null
         : (0, i.jsx)(T.A, {
               questOrQuests: o,
@@ -130,8 +130,8 @@ t.Z = function (e) {
                           (0, i.jsxs)('div', {
                               className: R.utils,
                               children: [
-                                  G ? (0, i.jsx)(O, { quest: o }) : (0, i.jsx)(f.Z, { textOpacity: 0.5 }),
-                                  (0, i.jsx)(S.r, {
+                                  G ? (0, i.jsx)(O, { quest: o }) : (0, i.jsx)(S.Z, { textOpacity: 0.5 }),
+                                  (0, i.jsx)(f.r, {
                                       quest: o,
                                       questContent: m.jn.ACTIVITY_PANEL,
                                       shouldShowDisclosure: (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) == null,
@@ -162,7 +162,7 @@ t.Z = function (e) {
                                   ]
                               }),
                           G &&
-                              !k &&
+                              !w &&
                               (0, i.jsx)(N.Z, {
                                   autoplay: p,
                                   className: R.rewardTileWithInstructions,
@@ -197,7 +197,7 @@ t.Z = function (e) {
                                           ]
                                       }),
                                   G &&
-                                      !k &&
+                                      !w &&
                                       (0, i.jsx)(c.Button, {
                                           className: R.cta,
                                           color: c.Button.Colors.BRAND,
@@ -206,7 +206,7 @@ t.Z = function (e) {
                                           size: c.Button.Sizes.SMALL,
                                           children: Z.Z.Messages.QUESTS_CHECK_PROGRESS
                                       }),
-                                  k &&
+                                  w &&
                                       (0, i.jsx)(c.Button, {
                                           className: R.cta,
                                           color: c.Button.Colors.BRAND,

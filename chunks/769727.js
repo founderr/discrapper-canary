@@ -16,8 +16,8 @@ var i,
     g = n(207796),
     p = n(543550),
     T = n(86014),
-    f = n(895068),
-    S = n(921944),
+    S = n(895068),
+    f = n(921944),
     C = n(866147);
 ((a = i || (i = {})).TOP_PICKS = 'top_picks'), (a.OTHER_GUILDS = 'other_guilds');
 let N = {
@@ -42,7 +42,7 @@ let N = {
             (r.useEffect(() => {
                 !_ &&
                     (0, E.EW)(c.z.GLOBAL_DISCOVERY_RAPIDASH_NOTIF, {
-                        dismissAction: S.L.TAKE_ACTION,
+                        dismissAction: f.L.TAKE_ACTION,
                         forceTrack: !0
                     });
             }, [_]),
@@ -77,7 +77,7 @@ let N = {
                                 inGlobalDiscovery: !1,
                                 width: n,
                                 onScroll: u,
-                                variant: (0, f.s)(t),
+                                variant: (0, S.s)(t),
                                 withAdminContent: i
                             })
                         }),
@@ -109,7 +109,7 @@ let N = {
                                 inGlobalDiscovery: !1,
                                 width: n,
                                 onScroll: u,
-                                variant: (0, f.s)(t),
+                                variant: (0, S.s)(t),
                                 withAdminContent: i
                             })
                         }),

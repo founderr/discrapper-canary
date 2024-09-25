@@ -3,7 +3,7 @@ n.d(t, {
         return M;
     },
     Z: function () {
-        return x;
+        return O;
     }
 }),
     n(47120);
@@ -27,19 +27,19 @@ var i = n(735250),
     C = n(696014),
     p = n(847033),
     g = n(544978),
-    S = n(893182),
-    A = n(689938),
-    R = n(687006);
-function O(e) {
+    A = n(893182),
+    S = n(689938),
+    x = n(687006);
+function R(e) {
     let { onClick: t } = e;
     return (0, i.jsxs)(o.Clickable, {
         onClick: t,
-        className: R.showMoreButton,
+        className: x.showMoreButton,
         children: [
             (0, i.jsx)(o.Text, {
                 variant: 'text-sm/medium',
                 color: 'header-primary',
-                children: A.Z.Messages.GUILD_STORE_HERO_SHOW_MORE_DESCRIPTION_LABEL
+                children: S.Z.Messages.GUILD_STORE_HERO_SHOW_MORE_DESCRIPTION_LABEL
             }),
             (0, i.jsx)(o.Spacer, {
                 size: 4,
@@ -47,12 +47,12 @@ function O(e) {
             }),
             (0, i.jsx)(h.Z, {
                 direction: h.Z.Directions.RIGHT,
-                className: R.showMoreArrow
+                className: x.showMoreArrow
             })
         ]
     });
 }
-function x(e) {
+function O(e) {
     let { coverImageAsset: t, isPreview: n = !1 } = e,
         s = I.QK.useSetting(),
         a = (0, f.n)() && s,
@@ -61,7 +61,7 @@ function x(e) {
             ? (0, i.jsx)(d.Z, {
                   autoPlay: !0,
                   loop: !0,
-                  className: R.coverImage,
+                  className: x.coverImage,
                   width: 655,
                   poster: (0, u.b)('server_products/storefront/default-header.png'),
                   src: (0, u.b)('server_products/storefront/default-header.mov')
@@ -69,18 +69,18 @@ function x(e) {
             : (0, i.jsx)('img', {
                   src: (0, u.b)('server_products/storefront/default-header.png'),
                   alt: '',
-                  className: R.coverImage
+                  className: x.coverImage
               });
     return (0, i.jsx)('div', {
         ref: r,
-        className: R.coverImageContainer,
+        className: x.coverImageContainer,
         children:
             null == l || n
                 ? o
                 : (0, i.jsx)('img', {
                       src: l,
                       alt: '',
-                      className: R.coverImage
+                      className: x.coverImage
                   })
     });
 }
@@ -107,14 +107,14 @@ function M(e) {
         { isTruncated: M, ExpandableTextContainer: v } = (0, C.s)(),
         L = (null !== (n = null == E ? void 0 : null === (t = E.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0,
         [Z, P] = s.useState(1),
-        D = (0, c.Z)('(max-width: 1439px)'),
-        { selectedTab: b, isPhantomPreview: j } = (0, p.m)(),
-        U = b === g.y.GUILD_PRODUCTS_PREVIEW ? A.Z.Messages.GUILD_STORE_HERO_PREVIEW_TAB_DESCRIPTION : A.Z.Messages.GUILD_STORE_HERO_PREVIEW_PAGE_DESCRIPTION,
+        b = (0, c.Z)('(max-width: 1439px)'),
+        { selectedTab: D, isPhantomPreview: j } = (0, p.m)(),
+        U = D === g.y.GUILD_PRODUCTS_PREVIEW ? S.Z.Messages.GUILD_STORE_HERO_PREVIEW_TAB_DESCRIPTION : S.Z.Messages.GUILD_STORE_HERO_PREVIEW_PAGE_DESCRIPTION,
         y = L
             ? (0, i.jsxs)(i.Fragment, {
                   children: [
                       (0, i.jsx)(v, {
-                          lineClamp: D || 2 === Z ? 2 : 3,
+                          lineClamp: b || 2 === Z ? 2 : 3,
                           children: (0, i.jsx)(o.Text, {
                               variant: 'text-sm/normal',
                               color: 'text-normal',
@@ -123,20 +123,20 @@ function M(e) {
                       }),
                       M &&
                           (0, i.jsxs)(i.Fragment, {
-                              children: [(0, i.jsx)(o.Spacer, { size: 4 }), (0, i.jsx)(O, { onClick: () => (0, S.Z)({ guildId: I }) })]
+                              children: [(0, i.jsx)(o.Spacer, { size: 4 }), (0, i.jsx)(R, { onClick: () => (0, A.Z)({ guildId: I }) })]
                           })
                   ]
               })
             : (0, i.jsx)(o.Text, {
                   variant: 'text-sm/normal',
                   color: 'text-normal',
-                  children: j ? U : A.Z.Messages.GUILD_STORE_HERO_DEFAULT_DESCRIPTION
+                  children: j ? U : S.Z.Messages.GUILD_STORE_HERO_DEFAULT_DESCRIPTION
               });
     return (0, i.jsxs)('div', {
-        className: R.container,
+        className: x.container,
         children: [
             (0, i.jsxs)('div', {
-                className: R.infoContainer,
+                className: x.infoContainer,
                 children: [
                     (0, i.jsx)('div', {
                         children: (0, i.jsx)(_.Z, {
@@ -159,7 +159,7 @@ function M(e) {
                                     variant: 'heading-xl/semibold',
                                     color: 'header-primary',
                                     lineClamp: 2,
-                                    children: j ? A.Z.Messages.GUILD_STORE_HERO_PREVIEW_TITLE : A.Z.Messages.GUILD_STORE_HERO_TITLE.format({ guildName: d.name })
+                                    children: j ? S.Z.Messages.GUILD_STORE_HERO_PREVIEW_TITLE : S.Z.Messages.GUILD_STORE_HERO_TITLE.format({ guildName: d.name })
                                 })
                             }),
                             (0, i.jsxs)(i.Fragment, {
@@ -168,7 +168,7 @@ function M(e) {
                                     (0, i.jsx)(o.Text, {
                                         variant: 'text-md/normal',
                                         color: 'text-normal',
-                                        children: A.Z.Messages.GUILD_STORE_HERO_DESCRIPTION_GREETING.format({
+                                        children: S.Z.Messages.GUILD_STORE_HERO_DESCRIPTION_GREETING.format({
                                             username: h,
                                             usernameHook: function (e, t) {
                                                 return (0, i.jsx)(
@@ -190,7 +190,7 @@ function M(e) {
                     })
                 ]
             }),
-            (0, i.jsx)(x, {
+            (0, i.jsx)(O, {
                 coverImageAsset: null == E ? void 0 : E.cover_image_asset,
                 isPreview: j
             })

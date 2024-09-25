@@ -28,15 +28,15 @@ var i = n(735250),
     C = n(504211),
     p = n(381961),
     g = n(970321),
-    S = n(680005),
-    A = n(981631),
-    R = n(272242),
-    O = n(689938),
-    x = n(738571);
+    A = n(680005),
+    S = n(981631),
+    x = n(272242),
+    R = n(689938),
+    O = n(738571);
 let M = Z(function (e) {
         let { appId: t, message: o } = e,
             d = (0, g.R)(t),
-            [E, m, T, N, p, S, M] = (0, a.Wu)(
+            [E, m, T, N, p, A, M] = (0, a.Wu)(
                 [c.Z, I.Z, _.Z],
                 () => {
                     var e;
@@ -55,19 +55,19 @@ let M = Z(function (e) {
             P = s.useMemo(
                 () =>
                     v > 0 && Z > 0
-                        ? O.Z.Messages.STOREFRONT_SUBSCRIPTION_AND_ITEMS_COUNT.format({
+                        ? R.Z.Messages.STOREFRONT_SUBSCRIPTION_AND_ITEMS_COUNT.format({
                               subCount: v,
                               itemCount: Z
                           })
                         : v > 0
-                          ? O.Z.Messages.STOREFRONT_SUBSCRIPTION_COUNT.format({ count: v })
+                          ? R.Z.Messages.STOREFRONT_SUBSCRIPTION_COUNT.format({ count: v })
                           : Z > 0
-                            ? O.Z.Messages.STOREFRONT_ITEM_COUNT.format({ count: Z })
-                            : O.Z.Messages.STOREFRONT_UNKNOWN_SUBSCRIPTIONS_OR_ITEMS,
+                            ? R.Z.Messages.STOREFRONT_ITEM_COUNT.format({ count: Z })
+                            : R.Z.Messages.STOREFRONT_UNKNOWN_SUBSCRIPTIONS_OR_ITEMS,
                 [Z, v]
             );
         if (!d || null == E) return null;
-        let D = () => {
+        let b = () => {
             (0, r.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([n.e('77803'), n.e('44797')]).then(n.bind(n, 7225));
                 return (n) =>
@@ -75,43 +75,43 @@ let M = Z(function (e) {
                         transitionState: n.transitionState,
                         onClose: n.onClose,
                         appId: t,
-                        onlySubscribeServerSubForGuildId: S
+                        onlySubscribeServerSubForGuildId: A
                     });
             });
         };
         return (0, i.jsx)(L, {
             appName: E.name,
-            title: O.Z.Messages.STOREFRONT_TITLE.format({ appName: E.name }),
+            title: R.Z.Messages.STOREFRONT_TITLE.format({ appName: E.name }),
             description: P,
-            link: ''.concat(location.protocol, '//').concat(location.host).concat(A.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(t, R.ApplicationDirectoryProfileSections.STORE)),
+            link: ''.concat(location.protocol, '//').concat(location.host).concat(S.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(t, x.ApplicationDirectoryProfileSections.STORE)),
             onLinkCopy: () => {
                 (0, C.X)(t, C.B.STORE_EMBED);
             },
             iconSrc: M,
             onIconClick: () => {
-                D(),
-                    h.default.track(A.rMx.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, {
+                b(),
+                    h.default.track(S.rMx.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, {
                         application_id: t,
                         area: 'app_icon'
                     });
             },
             children: (0, i.jsx)(r.Button, {
                 onClick: () => {
-                    D(),
-                        h.default.track(A.rMx.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, {
+                    b(),
+                        h.default.track(S.rMx.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, {
                             application_id: t,
                             area: 'open_store_button'
                         });
                 },
-                className: x.openStoreButton,
-                children: O.Z.Messages.STOREFRONT_OPEN_STORE
+                className: O.openStoreButton,
+                children: R.Z.Messages.STOREFRONT_OPEN_STORE
             })
         });
     }),
     v = Z(function (e) {
         var t, l;
         let { skuId: u, message: I } = e,
-            [N, p, M, v, Z, P, D, b] = (0, a.Wu)(
+            [N, p, M, v, Z, P, b, D] = (0, a.Wu)(
                 [m.Z, T.Z, E.Z, _.Z, c.Z],
                 () => {
                     var e, t, n, i;
@@ -134,7 +134,7 @@ let M = Z(function (e) {
             }, [null == p ? void 0 : p.id]);
         let U = (0, a.e7)([m.Z], () => (null != u ? m.Z.getParentSKU(u) : void 0), [u]);
         if (!j || null == p || null == N) return null;
-        let y = N.type === A.epS.SUBSCRIPTION,
+        let y = N.type === S.epS.SUBSCRIPTION,
             B = !!y && (0, d.KW)(N.flags),
             k = () => {
                 (0, r.openModalLazy)(async () => {
@@ -144,7 +144,7 @@ let M = Z(function (e) {
                             transitionState: t.transitionState,
                             onClose: t.onClose,
                             appId: p.id,
-                            onlySubscribeServerSubForGuildId: D
+                            onlySubscribeServerSubForGuildId: b
                         });
                 });
             },
@@ -188,7 +188,7 @@ let M = Z(function (e) {
                                   height: 12
                               }),
                               ' ',
-                              O.Z.Messages.STOREFRONT_USER_SUBSCRIPTION
+                              R.Z.Messages.STOREFRONT_USER_SUBSCRIPTION
                           ]
                       })
                     : (0, i.jsxs)(i.Fragment, {
@@ -199,7 +199,7 @@ let M = Z(function (e) {
                                   height: 12
                               }),
                               ' ',
-                              O.Z.Messages.STOREFRONT_SERVER_SUBSCRIPTION
+                              R.Z.Messages.STOREFRONT_SERVER_SUBSCRIPTION
                           ]
                       })
                 : null == M
@@ -209,7 +209,7 @@ let M = Z(function (e) {
                     : t.trim();
         '' === G && (G = void 0);
         let w = () => {
-            h.default.track(A.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
+            h.default.track(S.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
                 application_id: p.id,
                 sku_id: N.id,
                 area: 'purchase_button'
@@ -219,38 +219,38 @@ let M = Z(function (e) {
             appName: p.name,
             title: N.name,
             description: G,
-            link: ''.concat(location.protocol, '//').concat(location.host).concat(A.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(p.id, R.ApplicationDirectoryProfileSections.STORE)),
+            link: ''.concat(location.protocol, '//').concat(location.host).concat(S.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(p.id, x.ApplicationDirectoryProfileSections.STORE)),
             onLinkCopy: () => {
                 (0, C.X)(p.id, C.B.SKU_EMBED, u);
             },
-            iconSrc: b,
+            iconSrc: D,
             onIconClick: () => {
                 k(),
-                    h.default.track(A.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
+                    h.default.track(S.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
                         application_id: p.id,
                         sku_id: N.id,
                         area: 'app_icon'
                     });
             },
             children: (0, i.jsxs)('div', {
-                className: x.skuPurchaseButtons,
+                className: O.skuPurchaseButtons,
                 children: [
                     (0, i.jsx)(r.Button, {
                         color: r.ButtonColors.CUSTOM,
                         onClick: () => {
                             F(),
-                                h.default.track(A.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
+                                h.default.track(S.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
                                     application_id: p.id,
                                     sku_id: N.id,
                                     area: 'view_details'
                                 });
                         },
-                        className: x.viewDetailsButton,
-                        children: O.Z.Messages.STOREFRONT_DETAILS
+                        className: O.viewDetailsButton,
+                        children: R.Z.Messages.STOREFRONT_DETAILS
                     }),
                     y
                         ? null != P
-                            ? (0, i.jsx)(S.p, {
+                            ? (0, i.jsx)(A.p, {
                                   appId: p.id,
                                   groupListingId: null == U ? void 0 : U.id,
                                   subscriptionType: B ? 'user' : 'guild',
@@ -264,9 +264,9 @@ let M = Z(function (e) {
                               })
                             : (0, i.jsx)(r.Button, {
                                   onClick: F,
-                                  children: O.Z.Messages.STOREFRONT_SUBSCRIBE
+                                  children: R.Z.Messages.STOREFRONT_SUBSCRIBE
                               })
-                        : (0, i.jsx)(S.Y, {
+                        : (0, i.jsx)(A.Y, {
                               appId: p.id,
                               sku: N,
                               icon: (0, i.jsx)(r.ShopIcon, {
@@ -282,13 +282,13 @@ let M = Z(function (e) {
 function L(e) {
     let { appName: t, title: n, description: s, link: a, iconSrc: l, onIconClick: o, onLinkCopy: c, children: u } = e;
     return (0, i.jsxs)('div', {
-        className: x.wrapper,
+        className: O.wrapper,
         children: [
             (0, i.jsxs)('div', {
-                className: x.header,
+                className: O.header,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: x.headerTitle,
+                        className: O.headerTitle,
                         children: [
                             (0, i.jsx)(r.ShopIcon, { size: 'xxs' }),
                             (0, i.jsx)(r.Text, {
@@ -302,19 +302,19 @@ function L(e) {
                         (0, i.jsx)(r.Button, {
                             look: r.ButtonLooks.BLANK,
                             size: r.ButtonSizes.ICON,
-                            'aria-label': O.Z.Messages.COPY_LINK,
+                            'aria-label': R.Z.Messages.COPY_LINK,
                             onClick: () => {
-                                (0, N.JG)(a), (0, r.showToast)((0, r.createToast)(O.Z.Messages.COPIED_LINK, r.ToastType.SUCCESS)), c();
+                                (0, N.JG)(a), (0, r.showToast)((0, r.createToast)(R.Z.Messages.COPIED_LINK, r.ToastType.SUCCESS)), c();
                             },
                             children: (0, i.jsx)(r.LinkIcon, { size: 'xs' })
                         })
                 ]
             }),
             (0, i.jsxs)('div', {
-                className: x.content,
+                className: O.content,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: x.contentTextWrapper,
+                        className: O.contentTextWrapper,
                         children: [
                             null != l &&
                                 (0, i.jsx)(r.Button, {
@@ -324,11 +324,11 @@ function L(e) {
                                     children: (0, i.jsx)('img', {
                                         src: l.href,
                                         alt: '',
-                                        className: x.appIcon
+                                        className: O.appIcon
                                     })
                                 }),
                             (0, i.jsxs)('div', {
-                                className: x.contentText,
+                                className: O.contentText,
                                 style: null == s ? { justifyContent: 'space-evenly' } : void 0,
                                 children: [
                                     (0, i.jsx)(r.Text, {
@@ -341,7 +341,7 @@ function L(e) {
                                             variant: 'heading-md/medium',
                                             color: 'text-muted',
                                             tag: 'div',
-                                            className: x.description,
+                                            className: O.description,
                                             children: s
                                         })
                                 ]

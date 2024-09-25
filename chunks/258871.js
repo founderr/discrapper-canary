@@ -9,8 +9,8 @@ var i = n(735250),
     d = n(944486),
     h = n(147754),
     p = n(688438),
-    _ = n(981631),
-    f = n(689938);
+    f = n(981631),
+    _ = n(689938);
 let m = [
     {
         key: 'EVENTS',
@@ -22,7 +22,7 @@ let m = [
             }),
         getName: (e) => {
             let { numEvents: t } = e;
-            return t > 0 ? f.Z.Messages.GUILD_EVENTS_PLURAL.format({ number: t }) : f.Z.Messages.GUILD_EVENTS;
+            return t > 0 ? _.Z.Messages.GUILD_EVENTS_PLURAL.format({ number: t }) : _.Z.Messages.GUILD_EVENTS;
         },
         handler: (e) =>
             (0, a.openModalLazy)(async () => {
@@ -42,7 +42,7 @@ let m = [
                 color: 'currentColor',
                 className: e
             }),
-        getName: () => f.Z.Messages.HUB_SIDEBAR_JOIN_SERVERS,
+        getName: () => _.Z.Messages.HUB_SIDEBAR_JOIN_SERVERS,
         handler: (e, t) => (0, u.XU)(e.id, t.id)
     },
     {
@@ -53,7 +53,7 @@ let m = [
                 color: 'currentColor',
                 className: e
             }),
-        getName: () => f.Z.Messages.HUB_SIDEBAR_ADD_SERVERS,
+        getName: () => _.Z.Messages.HUB_SIDEBAR_ADD_SERVERS,
         handler: (e, t) =>
             (0, a.openModalLazy)(async () => {
                 let { default: l } = await n.e('79764').then(n.bind(n, 533202));
@@ -69,7 +69,7 @@ let m = [
     {
         key: 'INVITE_MEMBERS',
         renderIcon: (e) => (0, i.jsx)(a.GroupPlusIcon, { className: e }),
-        getName: () => f.Z.Messages.HUB_SIDEBAR_INVITE_MEMBERS,
+        getName: () => _.Z.Messages.HUB_SIDEBAR_INVITE_MEMBERS,
         handler: (e, t) =>
             (0, a.openModalLazy)(async () => {
                 let { default: l } = await Promise.all([n.e('7654'), n.e('85683')]).then(n.bind(n, 560114));
@@ -78,7 +78,7 @@ let m = [
                         ...n,
                         guild: e,
                         channel: t,
-                        source: _.t4x.HUB_SIDEBAR
+                        source: f.t4x.HUB_SIDEBAR
                     });
             })
     }
@@ -99,8 +99,8 @@ t.Z = (e) => {
             },
             { autoTrackExposure: !1 }
         ),
-        _ = (0, r.e7)([d.Z], () => null != n && d.Z.getChannelId() === n.id),
-        f = l.useMemo(() => ({ numEvents: a.length }), [a.length]),
+        f = (0, r.e7)([d.Z], () => null != n && d.Z.getChannelId() === n.id),
+        _ = l.useMemo(() => ({ numEvents: a.length }), [a.length]),
         g = (0, p.t)(n);
     return (0, i.jsx)(i.Fragment, {
         children: m.map((e) => {
@@ -112,8 +112,8 @@ t.Z = (e) => {
                 {
                     id: d,
                     renderIcon: s,
-                    text: r(f),
-                    selected: _ && 'JOIN_SERVERS' === l,
+                    text: r(_),
+                    selected: f && 'JOIN_SERVERS' === l,
                     onClick: null != n ? () => a(t, n) : void 0,
                     trailing: 'JOIN_SERVERS' === l && g > 0 ? (0, c.N)(g) : null
                 },

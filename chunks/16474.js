@@ -21,11 +21,11 @@ var a = n(120356),
     g = n(689938),
     p = n(186363);
 function T(e) {
-    let { giftIntentType: t, recipientUser: n, onMouseEnter: a, onMouseLeave: T, onClick: f, popoutPosition: S } = e,
+    let { giftIntentType: t, recipientUser: n, onMouseEnter: a, onMouseLeave: T, onClick: S, popoutPosition: f } = e,
         C = (0, r.e7)([d.default], () => d.default.getCurrentUser()),
         { enableEmojiCTA: N } = E.w.useExperiment({ location: 'GiftIntentCard' }, { autoTrackExposure: !1 });
     return (0, i.jsxs)('div', {
-        className: s()(p.content, { [p.contentTextCTAPopout]: null != S && !N }),
+        className: s()(p.content, { [p.contentTextCTAPopout]: null != f && !N }),
         onMouseEnter: a,
         onMouseLeave: T,
         children: [
@@ -75,7 +75,7 @@ function T(e) {
             }),
             (0, i.jsx)(o.Button, {
                 className: p.button,
-                onClick: f,
+                onClick: S,
                 size: o.Button.Sizes.MEDIUM,
                 color: o.Button.Colors.WHITE,
                 children: (0, i.jsxs)('div', {
@@ -95,11 +95,11 @@ function T(e) {
                     ]
                 })
             }),
-            null != S &&
+            null != f &&
                 (0, i.jsx)('div', {
                     className: s()(p.connector, {
-                        [p.leftPopoutConnector]: 'left' === S,
-                        [p.rightPopoutConnector]: 'right' === S
+                        [p.leftPopoutConnector]: 'left' === f,
+                        [p.rightPopoutConnector]: 'right' === f
                     })
                 })
         ]

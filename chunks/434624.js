@@ -20,19 +20,19 @@ var i = n(735250),
 let T = s.memo(function (e) {
         let t,
             n,
-            { useChatFontScaling: s, hideEmoji: a, emoji: c, className: T, count: h, me: N, me_burst: f, burst_count: C, burst_colors: p, readOnly: g, isLurking: S, isGuest: A, isPendingMember: R, type: O } = e,
-            x = O === _.O.BURST,
-            M = (0, E.y4)(N, f, O),
-            v = (0, d.v)(x && null != p ? p : []),
+            { useChatFontScaling: s, hideEmoji: a, emoji: c, className: T, count: h, me: N, me_burst: f, burst_count: C, burst_colors: p, readOnly: g, isLurking: A, isGuest: S, isPendingMember: x, type: R } = e,
+            O = R === _.O.BURST,
+            M = (0, E.y4)(N, f, R),
+            v = (0, d.v)(O && null != p ? p : []),
             L = s ? m : I,
-            Z = x ? C : h,
+            Z = O ? C : h,
             P = (0, u.y)(Z, E.aO),
-            D = {};
-        if (x && null != v) {
-            var b;
+            b = {};
+        if (O && null != v) {
+            var D;
             let { accentColor: e, backgroundColor: i, opacity: s } = v,
-                a = null !== (b = (0, l.wK)(null != i ? i : '', s)) && void 0 !== b ? b : '';
-            M && (D.borderColor = i), (D.background = a), (t = e), (n = e);
+                a = null !== (D = (0, l.wK)(null != i ? i : '', s)) && void 0 !== D ? D : '';
+            M && (b.borderColor = i), (b.background = a), (t = e), (n = e);
         }
         let j = {
             minWidth: P,
@@ -42,16 +42,16 @@ let T = s.memo(function (e) {
         return (0, i.jsxs)('div', {
             className: r()(L.reaction, L.reactionInner, T, {
                 [L.reactionMe]: M,
-                [L.reactionReadOnly]: g && !S && !R && !A
+                [L.reactionReadOnly]: g && !A && !x && !S
             }),
-            style: D,
+            style: b,
             children: [
                 (0, i.jsx)(o.Z, {
                     className: r()({ [L.hideEmoji]: a }),
                     emojiId: c.id,
                     emojiName: c.name,
                     size: 'reaction',
-                    animated: x && c.animated
+                    animated: O && c.animated
                 }),
                 (0, i.jsx)('div', {
                     className: L.reactionCount,

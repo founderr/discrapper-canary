@@ -23,25 +23,25 @@ var i = n(735250),
     C = n(699516),
     p = n(594174),
     g = n(100604),
-    S = n(694784),
-    A = n(39154),
-    R = n(245216),
-    O = n(689938),
-    x = n(85961);
+    A = n(694784),
+    S = n(39154),
+    x = n(245216),
+    R = n(689938),
+    O = n(85961);
 function M() {
     return (0, i.jsxs)('div', {
-        className: x.headerContainer,
+        className: O.headerContainer,
         children: [
-            (0, i.jsx)(R.Z, {
+            (0, i.jsx)(x.Z, {
                 size: 'xs',
-                className: x.headerIcon,
+                className: O.headerIcon,
                 color: o.Z.colors.TEXT_LOW_CONTRAST
             }),
             (0, i.jsx)(a.x, {
-                className: x.headerText,
+                className: O.headerText,
                 variant: 'text-sm/semibold',
                 color: 'text-low-contrast',
-                children: O.Z.Messages.MESSAGE_FORWARDED
+                children: R.Z.Messages.MESSAGE_FORWARDED
             })
         ]
     });
@@ -51,23 +51,23 @@ function v(e) {
         _ = s.useMemo(() => new g.r(t, n, d), [t, n, d]),
         E = (0, r.e7)([T.Z, p.default, C.Z, f.Z, N.Z, u.Z], () => _.getForwardInfo(T.Z, p.default, C.Z, f.Z, N.Z, u.Z).footerInfo, [_], l.Z),
         I = s.useCallback(() => {
-            (0, S.Z)(t);
+            (0, A.Z)(t);
         }, [t]);
     return null == E
         ? null
         : (0, i.jsxs)(c.Clickable, {
-              className: x.footerContainer,
+              className: O.footerContainer,
               onClick: I,
               children: [
                   null != E.originIconUrl
                       ? (0, i.jsx)('img', {
-                            className: x.originIcon,
+                            className: O.originIcon,
                             src: E.originIconUrl,
                             alt: ''
                         })
                       : null,
                   (0, i.jsx)(a.x, {
-                      className: x.footerText,
+                      className: O.footerText,
                       variant: 'text-sm/medium',
                       color: 'none',
                       children: ''.concat(E.originLabel, '  \u2022  ').concat(E.timestampLabel)
@@ -82,7 +82,7 @@ function v(e) {
 function L(e) {
     var t;
     let { message: n, snapshot: a, index: l } = e,
-        o = s.useMemo(() => (0, A.Z)(n, a), [n, a]),
+        o = s.useMemo(() => (0, S.Z)(n, a), [n, a]),
         c = m.RS.useSetting(),
         u = m.NA.useSetting(),
         N = (0, r.e7)([h.Z], () => h.Z.isDeveloper),
@@ -98,17 +98,17 @@ function L(e) {
             previewLinkTarget: !0
         }),
         g = (0, r.e7)([T.Z], () => T.Z.getChannel(n.channel_id)),
-        S = m.jU.useSetting();
+        A = m.jU.useSetting();
     return null == g
         ? null
         : (0, i.jsxs)(
               'div',
               {
-                  className: x.container,
+                  className: O.container,
                   children: [
-                      (0, i.jsx)('div', { className: x.quote }),
+                      (0, i.jsx)('div', { className: O.quote }),
                       (0, i.jsxs)('div', {
-                          className: x.content,
+                          className: O.content,
                           children: [
                               (0, i.jsx)(M, {}),
                               (0, i.jsx)(_.ZP, {
@@ -119,7 +119,7 @@ function L(e) {
                                   channelMessageProps: {
                                       message: o,
                                       channel: g,
-                                      compact: S
+                                      compact: A
                                   },
                                   hasSpoilerEmbeds: p,
                                   isInteracting: !1,

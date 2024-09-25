@@ -54,39 +54,39 @@ class h {
             C = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : l.Z,
             p = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : r.Z,
             g = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : s.Z,
-            { snapshotIndex: S, parentMessage: A, messageSnapshot: R } = this,
-            { useOldIcon: O } = (0, E.WT)({ location: 'GetForwardInfo' }, { autoTrackExposure: !1 }),
-            { showForwardBreadcrumb: x } = _.u.getCurrentConfig({ location: 'MessageForward' });
-        if (!x)
+            { snapshotIndex: A, parentMessage: S, messageSnapshot: x } = this,
+            { useOldIcon: R } = (0, E.WT)({ location: 'GetForwardInfo' }, { autoTrackExposure: !1 }),
+            { showForwardBreadcrumb: O } = _.u.getCurrentConfig({ location: 'MessageForward' });
+        if (!O)
             return {
-                snapshotIndex: S,
-                useOldIcon: O
+                snapshotIndex: A,
+                useOldIcon: R
             };
-        let M = (0, d.Xf)(R.message.timestamp),
+        let M = (0, d.Xf)(x.message.timestamp),
             v = h.getChannel(this.parentMessage.channel_id);
-        if (null != v && v.guild_id === (null === (e = A.messageReference) || void 0 === e ? void 0 : e.guild_id)) {
-            let e = h.getChannel(null === (u = A.messageReference) || void 0 === u ? void 0 : u.channel_id);
+        if (null != v && v.guild_id === (null === (e = S.messageReference) || void 0 === e ? void 0 : e.guild_id)) {
+            let e = h.getChannel(null === (u = S.messageReference) || void 0 === u ? void 0 : u.channel_id);
             if (null == e) {
                 let e = p.getGuild(v.guild_id);
                 return null == e
                     ? {
-                          snapshotIndex: S,
-                          useOldIcon: O
+                          snapshotIndex: A,
+                          useOldIcon: R
                       }
                     : {
-                          snapshotIndex: S,
+                          snapshotIndex: A,
                           footerInfo: T(e, M),
-                          useOldIcon: O
+                          useOldIcon: R
                       };
             }
             if (!C.can(e.accessPermissions, e))
                 return {
-                    snapshotIndex: S,
-                    useOldIcon: O
+                    snapshotIndex: A,
+                    useOldIcon: R
                 };
             let t = (0, i.F6)(e, N, f, !0);
             return {
-                snapshotIndex: S,
+                snapshotIndex: A,
                 footerInfo: {
                     originLabel: t,
                     timestampLabel: M,
@@ -95,31 +95,31 @@ class h {
                         timestamp: M
                     })
                 },
-                useOldIcon: O
+                useOldIcon: R
             };
         }
-        let L = null === (t = A.messageReference) || void 0 === t ? void 0 : t.guild_id;
+        let L = null === (t = S.messageReference) || void 0 === t ? void 0 : t.guild_id;
         if (null == L)
             return {
-                snapshotIndex: S,
-                useOldIcon: O
+                snapshotIndex: A,
+                useOldIcon: R
             };
         let Z = null !== (m = p.getGuild(L)) && void 0 !== m ? m : g.getGuild(L);
         if (null == Z)
             return {
-                snapshotIndex: S,
-                useOldIcon: O
+                snapshotIndex: A,
+                useOldIcon: R
             };
-        let P = h.getChannel(null === (n = A.messageReference) || void 0 === n ? void 0 : n.channel_id);
+        let P = h.getChannel(null === (n = S.messageReference) || void 0 === n ? void 0 : n.channel_id);
         return null == P || C.can(P.accessPermissions, P)
             ? {
-                  snapshotIndex: S,
+                  snapshotIndex: A,
                   footerInfo: T(Z, M),
-                  useOldIcon: O
+                  useOldIcon: R
               }
             : {
-                  snapshotIndex: S,
-                  useOldIcon: O
+                  snapshotIndex: A,
+                  useOldIcon: R
               };
     }
     constructor(e, t, n) {

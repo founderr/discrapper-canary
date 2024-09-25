@@ -26,7 +26,7 @@ function C(e) {
     let { onClose: n, markAsDismissed: C } = e,
         p = (0, s.e7)([_.default], () => _.default.getCurrentUser());
     let g = (t = null == p ? void 0 : p.premiumType) === T.p9.TIER_2 ? N.Z.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_TIER_2 : null == t ? N.Z.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_NON_SUB : N.Z.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_NON_TIER_2,
-        S = E.ZP.canUseCustomCallSounds(p);
+        A = E.ZP.canUseCustomCallSounds(p);
     return (0, i.jsxs)(d.Z, {
         isShown: !0,
         type: d.Y.PREMIUM,
@@ -63,7 +63,7 @@ function C(e) {
                 variant: 'text-sm/normal',
                 children: g
             }),
-            S
+            A
                 ? (0, i.jsx)(a.zx, {
                       onClick: function () {
                           c.Z.open(I.oAB.VOICE, h.GA), null == n || n(), null == C || C(m.L.PRIMARY);

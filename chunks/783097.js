@@ -6,7 +6,7 @@ n.d(t, {
         return N;
     },
     Cb: function () {
-        return x;
+        return O;
     },
     Hu: function () {
         return M;
@@ -21,7 +21,7 @@ n.d(t, {
         return L;
     },
     Y$: function () {
-        return R;
+        return x;
     },
     Yn: function () {
         return v;
@@ -30,19 +30,19 @@ n.d(t, {
         return C;
     },
     lf: function () {
-        return S;
+        return A;
     },
     pF: function () {
         return Z;
     },
     sl: function () {
-        return O;
+        return R;
     },
     vJ: function () {
         return g;
     },
     yJ: function () {
-        return A;
+        return S;
     },
     ye: function () {
         return p;
@@ -85,14 +85,14 @@ function g(e) {
     var t;
     return N(e) && (0, d.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, I.udG.PARTNER);
 }
-function S(e) {
+function A(e) {
     var t;
     return N(e) && (0, d.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, I.udG.PROMOTED);
 }
-function A(e) {
+function S(e) {
     return N(e) && p(e) ? (e instanceof c.Z ? e.embeddedActivityConfig : e.embedded_activity_config) : null;
 }
-function R(e) {
+function x(e) {
     let { command: t, optionValues: n, context: a, commandTargetId: c, maxSizeCallback: u, sectionName: d } = e,
         { channel: E } = a,
         I = async () => {
@@ -126,7 +126,7 @@ function R(e) {
         };
     return I();
 }
-function O(e) {
+function R(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { fakeAppIconURL: n, ...i } = t;
     return N(e)
@@ -145,11 +145,11 @@ function O(e) {
               description: T.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_DESCRIPTION
           };
 }
-function x(e) {
+function O(e) {
     return !!N(e) && (e instanceof c.Z ? e.isMonetized : e.is_monetized);
 }
 function M(e) {
-    let t = A(e);
+    let t = S(e);
     return null != t && t.displays_advertisements;
 }
 function v(e) {

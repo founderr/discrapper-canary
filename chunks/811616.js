@@ -38,7 +38,7 @@ function h(e) {
         w = null != j && !b,
         B = (0, x.Ng)(),
         G = M.interval === N.rV.YEAR ? S.Z.Messages.BILLING_TRIAL_YEARLY_PRICE_AFTER_TRIAL : S.Z.Messages.BILLING_TRIAL_MONTHLY_PRICE_AFTER_TRIAL,
-        U = () =>
+        F = () =>
             null != j &&
             (0, i.jsx)(u.Text, {
                 tag: 'span',
@@ -47,7 +47,7 @@ function h(e) {
                 className: T.planOptionDiscount,
                 children: S.Z.Messages.BILLING_PLAN_SELECTION_DISCOUNT.format({ discount: (0, I.T3)(A, j / 100) })
             }),
-        F = () =>
+        U = () =>
             (M.interval === N.rV.YEAR && null != n) || (w && !O)
                 ? M.interval === N.rV.YEAR && null != n
                     ? (0, i.jsxs)('span', {
@@ -55,7 +55,7 @@ function h(e) {
                           children: ['(', S.Z.Messages.BILLING_SWITCH_PLAN_YEARLY_FREE_MONTHS, ')']
                       })
                     : w && !O
-                      ? U()
+                      ? F()
                       : void 0
                 : null;
     return (0, i.jsxs)(u.Clickable, {
@@ -99,7 +99,7 @@ function h(e) {
                                             [T.optionSelected]: s || R,
                                             [T.updatedOptionSelected]: b && (s || R)
                                         }),
-                                        children: [(0, f.L7)(M.interval, C, D, M.intervalCount, R, (0, f.Rd)(M.id)), R && F()]
+                                        children: [(0, f.L7)(M.interval, C, D, M.intervalCount, R, (0, f.Rd)(M.id)), R && U()]
                                     }),
                                     R &&
                                         (0, i.jsx)('div', {
@@ -113,7 +113,7 @@ function h(e) {
                                     className: T.planOptionCurrentPlan,
                                     children: ['(', S.Z.Messages.BILLING_SWITCH_PLAN_CURRENT_PLAN, ')']
                                 }),
-                            !R && F()
+                            !R && U()
                         ]
                     }),
                     b

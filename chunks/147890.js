@@ -4,7 +4,7 @@ n.r(t),
             return u;
         },
         goSearch: function () {
-            return _;
+            return f;
         },
         goToAppDirectory: function () {
             return c;
@@ -19,7 +19,7 @@ n.r(t),
             return p;
         },
         goToCategory: function () {
-            return f;
+            return _;
         },
         replaceAppDirectoryURLWith: function () {
             return m;
@@ -37,7 +37,7 @@ var i = n(703656),
     s = n(272242),
     o = n(981631);
 let c = (e) => {
-        let { view: t = a.ApplicationDirectoryViews.HOME, guildId: n, applicationId: i, applicationSection: r, entrypoint: c, skuId: f } = e,
+        let { view: t = a.ApplicationDirectoryViews.HOME, guildId: n, applicationId: i, applicationSection: r, entrypoint: c, skuId: _ } = e,
             m = {
                 ...c,
                 pathname: window.location.pathname
@@ -47,15 +47,15 @@ let c = (e) => {
                 u();
                 break;
             case a.ApplicationDirectoryViews.SEARCH:
-                _();
+                f();
                 break;
             case a.ApplicationDirectoryViews.APPLICATION:
                 if (null != i) {
                     if (null != r) {
-                        if (r === s.ApplicationDirectoryProfileSections.STORE && null != f) {
+                        if (r === s.ApplicationDirectoryProfileSections.STORE && null != _) {
                             p({
                                 applicationId: i,
-                                skuId: f
+                                skuId: _
                             });
                             break;
                         }
@@ -88,7 +88,7 @@ let c = (e) => {
             l = { previousView: (0, a.getCurrentView)() };
         (0, i.uL)(o.Z5c.APPLICATION_DIRECTORY_PROFILE_STORE_SKU(t, n), { state: l });
     },
-    _ = function () {
+    f = function () {
         let { query: e, categoryId: t, page: n } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
             l = new URLSearchParams(),
             r = { previousView: (0, a.getCurrentView)() };
@@ -100,9 +100,9 @@ let c = (e) => {
                 state: r
             });
     },
-    f = (e) => {
+    _ = (e) => {
         let { categoryId: t } = e;
-        _({ categoryId: null != t ? t : r.MU });
+        f({ categoryId: null != t ? t : r.MU });
     },
     m = (e) => {
         let {

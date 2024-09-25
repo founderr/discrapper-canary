@@ -440,7 +440,7 @@ let l = [
                 darkSVG: n(605098),
                 whiteSVG: n(605098)
             },
-            enabled: !1
+            enabled: !0
         }
     ],
     u = i().keyBy(l, 'type'),

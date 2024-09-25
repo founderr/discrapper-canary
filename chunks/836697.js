@@ -16,8 +16,8 @@ var i = n(735250),
     d = n(914010),
     h = n(289090),
     p = n(727258),
-    _ = n(234383),
-    f = n(179809),
+    f = n(234383),
+    _ = n(179809),
     m = n(773182),
     g = n(588275),
     C = n(689938),
@@ -26,35 +26,35 @@ function E(e) {
     let { onActivate: t } = e,
         [n, E] = l.useState(!1),
         N = (0, r.e7)([d.Z], () => d.Z.getGuildId()),
-        x = (0, r.e7)([u.Z], () => u.Z.hasFetchedRequestToJoinGuilds),
-        S = (0, _.Z)(),
+        S = (0, r.e7)([u.Z], () => u.Z.hasFetchedRequestToJoinGuilds),
+        x = (0, f.Z)(),
         v = (0, s.Z)(N),
-        Z = l.useMemo(() => {
+        T = l.useMemo(() => {
             let e = (0, p.qQ)({
                 folderId: h.S.PENDING_JOIN_REQUESTS_FOLDER,
                 folderName: C.Z.Messages.MEMBER_VERIFICATION_FOLDER_NAME,
                 expanded: n,
                 guildIds: []
             });
-            for (let t of S) e.children.push((0, p.Mg)(t, e.id));
+            for (let t of x) e.children.push((0, p.Mg)(t, e.id));
             return e;
-        }, [S, n]);
+        }, [x, n]);
     l.useEffect(() => {
-        n && !x && o.Z.fetchRequestToJoinGuilds();
-    }, [n, x]);
-    let T = null != N && S.includes(N);
+        n && !S && o.Z.fetchRequestToJoinGuilds();
+    }, [n, S]);
+    let Z = null != N && x.includes(N);
     return (l.useEffect(() => {
-        !n && T && v !== N && E(!0);
-    }, [n, T, v, N]),
-    0 === S.length)
+        !n && Z && v !== N && E(!0);
+    }, [n, Z, v, N]),
+    0 === x.length)
         ? null
         : (0, i.jsx)(m.TH, {
               onActivate: t,
-              children: (0, i.jsx)(f.Z, {
-                  folderNode: Z,
+              children: (0, i.jsx)(_.Z, {
+                  folderNode: T,
                   expanded: n,
-                  useCircleMask: !n && !T,
-                  selected: T,
+                  useCircleMask: !n && !Z,
+                  selected: Z,
                   draggable: !1,
                   sorting: !1,
                   onExpandCollapse: () => {

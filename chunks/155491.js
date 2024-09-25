@@ -19,7 +19,7 @@ function o() {
     return e.get(a);
 }
 function l() {
-    let [e, t] = r.useState(!1),
+    let [e, t] = r.useState(),
         { purchases: n, hasPreviouslyFetched: s } = (0, i.c)(),
         o = r.useRef(!1);
     return (

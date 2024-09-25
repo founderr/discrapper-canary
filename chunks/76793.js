@@ -22,8 +22,8 @@ var n = t(735250),
     I = t(51144),
     N = t(689938),
     m = t(8007),
-    C = t(113207);
-function A(e) {
+    A = t(113207);
+function C(e) {
     let { userId: s, count: t } = e,
         c = (0, i.e7)([S.default], () => S.default.getUser(s)),
         d = I.ZP.getFormattedName(c),
@@ -112,7 +112,7 @@ function h(e) {
         t = (0, u._)(s);
     return (0, n.jsxs)(n.Fragment, {
         children: [
-            (0, n.jsx)(A, {
+            (0, n.jsx)(C, {
                 userId: s,
                 count: t.length
             }),
@@ -143,11 +143,11 @@ function O(e) {
         : (0, n.jsxs)(n.Fragment, {
               children: [
                   (0, n.jsxs)(r.FormItem, {
-                      className: C.marginBottom20,
+                      className: A.marginBottom20,
                       children: [
                           (0, n.jsx)(r.FormTitle, {
                               tag: r.FormTitleTags.H5,
-                              className: C.marginBottom8,
+                              className: A.marginBottom8,
                               children: N.Z.Messages.E2EE_VERIFIED_DEVICES
                           }),
                           (0, n.jsx)(r.FormText, {
@@ -180,14 +180,14 @@ function p() {
                 children: [
                     (0, n.jsx)(r.FormText, {
                         type: r.FormTextTypes.DESCRIPTION,
-                        className: C.marginBottom20,
+                        className: A.marginBottom20,
                         children: N.Z.Messages.E2EE_SETTINGS_SUBTITLE.format({ helpArticle: (0, _.uV)() })
                     }),
                     (0, n.jsxs)(r.FormItem, {
                         children: [
                             (0, n.jsx)(r.FormTitle, {
                                 tag: r.FormTitleTags.H5,
-                                className: C.marginBottom8,
+                                className: A.marginBottom8,
                                 children: N.Z.Messages.E2EE_VERIFICATION_CODES
                             }),
                             (0, n.jsx)(r.FormSwitch, {
